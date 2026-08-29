@@ -1,0 +1,100 @@
+== N
+
+@ naughty ; /ˈnɔːti/ ; 形 ; いたずらな
++lit: 「何も持たない（＝貧しい）」
++chain: ME <i>naughti</i>（<i>naught</i>「無」＜ OE <i>nāwiht</i>「no thing」）
++desc: 「無一物の」→「取るに足らない」→「邪悪な」→「（子どもが）いたずらな」と、強い意味から弱い意味へ移った（弱化、第7章）。欽定訳聖書には「naughty figs（悪い無花果）」という用例がある。
++der: naught, nought, nothing, aught
+
+@ nausea ; /ˈnɔːziə/ ; 名 ; 吐き気
++lit: 「船酔い」
++chain: Gk <i>naûs</i>「船」→ <i>nautíā</i>「船酔い」→ L <i>nausea</i>
++der: nautical, astronaut, nave, navy, naval, navigate
++note: 日本語の「船酔い」が一般語化しなかったのに対し、ギリシア語では吐き気一般を指すようになった。海洋民の語彙。
+
+@ nice ; /naɪs/ ; 形 ; よい、感じのよい
++lit: 「知らない、無知な」
++chain: L <i>nescius</i>「無知な」（<i>ne-</i>「非」+ <i>scīre</i>「知る」）→ OF <i>nice</i>「愚かな」→ ME
++desc: 意味変化の代表例。「愚かな」（13世紀）→「臆病な」→「気難しい・凝った」（14世紀）→「精密な」（16世紀）→「感じのよい」（18世紀）→「親切な」（19世紀）。OEDは十数の廃義を立てる。
++der: science, conscience, conscious, omniscient, prescient
++note: 「精密な」の古義は <i>a nice distinction</i>「微妙な区別」に残る。
+
+@ nickname ; /ˈnɪkneɪm/ ; 名 ; あだ名
++lit: 「追加の名」
++chain: ME <i>an eke-name</i>（<i>eke</i>「追加」）→ <i>a neke-name</i> → <i>a nickname</i>
++desc: 冠詞と名詞の境界の切り直し（異分析、第6章）。<i>eke</i> は「増す」の意で、<i>eke out</i>「やりくりする」に残る。
++der: eke, auction, augment, author（すべて *h₂ewg-「増す」）
+
+@ nightmare ; /ˈnaɪtmeə/ ; 名 ; 悪夢
++lit: 「夜の魔物」
++chain: <i>night</i> + OE <i>mære</i>「（人の胸に乗る）女悪魔」
++desc: 眠っている人の胸に乗って窒息させる魔物の伝承（金縛りの説明）による。<i>mare</i>「牝馬」とは無関係。
++cog: 独 <i>Nachtmahr</i>, 仏 <i>cauchemar</i>（<i>caucher</i>「踏む」+ ゲルマン語 <i>mare</i>）
++note: フュースリの絵画『夢魔』（1781）がこの伝承を視覚化した。
+
+@ noise ; /nɔɪz/ ; 名 ; 騒音
++chain: OF <i>noise</i>「喧噪、諍い」
++desc: 語源は不確実。L <i>nausea</i>「吐き気、船酔い」から「（船上の）喧騒」を経たとする説と、<i>noxia</i>「害」からとする説がある。
++note: 現代フランス語の <i>noise</i> は「諍い」（<i>chercher noise</i>「けんかを売る」）の意で、「騒音」は <i>bruit</i>。
+
+@ nostalgia ; /nɒˈstældʒə/ ; 名 ; 郷愁
++lit: 「帰郷の痛み」
++chain: Gk <i>nóstos</i>「帰郷」+ <i>álgos</i>「痛み」→ 近代ラテン語（ヨハネス・ホーファー, 1688）
++desc: スイス人傭兵が故郷を離れて患う病の名として、医学博士論文で造語された。「過去への憧憬」という現代的意味は20世紀から。
++der: neuralgia, analgesic（「痛みのない」）／<i>nóstos</i> は『オデュッセイア』の主題（帰郷譚）を表す文学用語でもある。
+
+@ noon ; /nuːn/ ; 名 ; 正午
++lit: 「第九時」
++chain: L <i>nōna (hōra)</i>「第九時」→ OE <i>nōn</i>
++desc: ローマ式の時法では日の出から数えて第九時（午後3時ごろ）で、修道院の「九時課」の祈りの時刻だった。それが次第に早まって正午を指すようになった。理由は、断食を終える時刻を早めたためとも、食事時が動いたためともいう。
++der: nine, noon, nones, afternoon
++note: 時刻を表す語が三時間分ずれた珍しい例。
+
+@ nostril ; /ˈnɒstrəl/ ; 名 ; 鼻孔
++lit: 「鼻の穴」
++chain: OE <i>nosþyrl</i>（<i>nosu</i>「鼻」+ <i>þyrel</i>「穴」）
++der: nose, thrill（「穴を開ける」→ ぞくぞくさせる）, through, thorough, nasal（ラテン系）
++note: <i>thrill</i>「スリル」がもと「穴を貫く」であることは、<i>a thrill went through me</i> という言い方に残響がある。
+
+@ November ; /nəʊˈvembə/ ; 名 ; 11月
++lit: 「第九の月」
++chain: L <i>novem</i>「九」+ <i>-ber</i>
++note: ローマ暦が3月始まりだったため、9〜12月の名が二つずつずれている（September＝7, October＝8, November＝9, December＝10）。
+
+@ nucleus ; /ˈnjuːkliəs/ ; 名 ; 核
++lit: 「小さな胡桃の実」
++chain: L <i>nux, nucis</i>「木の実」→ <i>nucleus</i>「核、実」
++der: nuclear, nucleic, nougat（プロヴァンス語「胡桃菓子」）, newel（螺旋階段の中心柱）, nut（本来語の同根語）
++note: 細胞核の意味は1831年ロバート・ブラウン、原子核は1912年ラザフォードの用法から。
+
+@ nun ; /nʌn/ ; 名 ; 修道女
++lit: 「（幼児語の）おばあさん」
++chain: 後期ラテン語 <i>nonna</i>「年長の女性への敬称」→ OE <i>nunne</i>
++desc: 幼児語起源の親愛語（<i>nonnus</i>「じいや」の女性形）が、修道院の年長者への呼びかけとなり、称号化した。
++der: nonna, nonno（伊「祖母・祖父」）
++note: 同型の語に <i>abbot</i>（アラム語 <i>abbā</i>「父ちゃん」）, <i>papa</i>／<i>pope</i>。宗教語彙には幼児語起源のものが多い。
+
+
+@ nasty ; /ˈnɑːsti/ ; 形 ; 不快な
++chain: 語源不確実。中期オランダ語 <i>nestich</i>「（巣のように）汚い」説、OF <i>nastre</i>「けちな」説がある
++note: 語源不明な口語の典型。
+
+@ neighbor ; /ˈneɪbə/ ; 名 ; 隣人
++lit: 「近くに住む者」
++chain: OE <i>nēahgebūr</i>（<i>nēah</i>「近い」+ <i>gebūr</i>「住む者、農民」）
++der: nigh, near, next（<i>nēah</i> の比較級・最上級）／boor, bower, byre, be, build（<i>būr</i> の同根語）
++note: <i>near</i> は本来 <i>nigh</i> の比較級、<i>next</i> は最上級だった。三語が独立した語に分かれた珍しい例。
+
+@ nepotism ; /ˈnepətɪzəm/ ; 名 ; 縁故主義
++lit: 「甥をひいきすること」
++chain: L <i>nepōs, nepōtis</i>「孫、甥」→ 伊 <i>nepotismo</i>
++desc: ルネサンス期の教皇が、独身であるため実子の代わりに甥（実は庶子であることも多かった）を要職に就けた慣行を指す。
++der: nephew（仏語経由の同語）, niece
++note: <i>nephew</i> と <i>nepotism</i> は同語源。
+
+@ nickel ; /ˈnɪkl/ ; 名 ; ニッケル
++lit: 「悪魔の銅」
++chain: 独 <i>Kupfernickel</i>（<i>Kupfer</i>「銅」+ <i>Nickel</i>「いたずら妖精」）
++desc: 銅鉱石に似ていながら銅が取れないため、鉱夫が「妖精の仕業」として名づけた。1751年クロンステットが新元素を分離し、名を <i>nickel</i> に短縮した。
++note: <i>cobalt</i>（独 <i>Kobold</i>「妖精」）も同型の命名。鉱山の民間信仰が周期表に残った。
+

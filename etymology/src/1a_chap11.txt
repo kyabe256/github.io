@@ -1,0 +1,106 @@
+# 第11章　語源と文体――語感はどこから来るか
+
+## 11.1　三層のレジスター
+
+英語の語彙が本来語・フランス語系・ラテン語系の三層をなすことは第5章で述べた。この三層は、単に歴史の産物であるだけでなく、現代英語における文体の目盛りとして機能している。
+
+| 意味 | 本来語（口語・具体） | フランス語系（中庸） | ラテン／ギリシア語系（硬・抽象） |
+|---|---|---|---|
+| 尋ねる | ask | question | interrogate |
+| 火 | fire | flame | conflagration |
+| 恐れ | fear | terror | trepidation |
+| 聖なる | holy | sacred | consecrated |
+| 王の | kingly | royal | regal |
+| 兄弟の | brotherly | fraternal | — |
+| 時 | time | age | epoch |
+| 終える | end | finish | conclude, terminate |
+| 助け | help | aid | assistance |
+| 始める | begin | commence | initiate |
+| 起こる | happen | occur | transpire |
+| 与える | give | grant | donate, bestow |
+| 買う | buy | purchase | procure |
+| 見る | see | view, regard | observe, perceive |
+| 考える | think | consider, ponder | cogitate, contemplate |
+| 話す | talk, speak | converse | communicate |
+| 行く | go | depart | proceed |
+| 来る | come | arrive | advent（名） |
+| 見せる | show | display | demonstrate, exhibit |
+| 選ぶ | choose | select | elect |
+| 働き | work | labour | operation |
+| 家 | house, home | mansion, residence | domicile |
+| 食べ物 | food | victuals | nutriment |
+| 腹 | belly, gut | stomach | abdomen |
+| 死ぬ | die | perish | decease, expire |
+| 眠い | sleepy | somnolent（ラ） | — |
+| 太った | fat | corpulent | obese |
+| 暗い | dark | obscure | tenebrous |
+| 速い | fast, swift | rapid | expeditious, celerity（名） |
+| 空の | empty | vacant | vacuous, void |
+| 汚い | dirty, filthy | soiled | contaminated, squalid |
+| 賢い | wise | sage, prudent | sapient |
+| 深い | deep | profound | — |
+| 強い | strong | powerful, robust | potent, vigorous |
+| 弱い | weak | feeble | debilitated |
+
+この目盛りを意識すると、英語の文体設計が明晰になる。演説やスピーチで聴衆の心を動かしたいときは本来語が効く。チャーチルの「われわれは浜辺で戦う」（<i>we shall fight on the beaches</i>）は、最後の <i>surrender</i>（仏語系）以外ほとんどすべて本来語である。逆に、法律文書や学術論文はラテン語系が支配する。
+
+## 11.2　名詞化と「重い」文体
+
+ラテン語系接尾辞 -tion, -ment, -ance は、動詞を名詞に変える。名詞化（nominalization）が過剰になると、文は重く抽象的になる。
+
+- 重い：<i>The implementation of the modification of the regulations resulted in the reduction of the utilization of the facility.</i>
+- 軽い：<i>After we changed the rules, fewer people used the building.</i>
+
+前者は9語中5語がラテン語系抽象名詞、後者はほぼすべて本来語である。英文ライティングの古典的助言「動詞を使え、名詞化するな」は、語源的に言い換えれば「ゲルマン系の骨格に戻せ」ということになる。
+
+一方で、抽象名詞なしには近代の思考は表現できない。<i>justice, liberty, equality, responsibility, consciousness, evolution, probability, information</i>——これらはすべてラテン語系である。要は使い分けである。
+
+## 11.3　句動詞と単一動詞
+
+英語には、同じ意味を「本来語の句動詞」と「ラテン語系の単一動詞」の二通りで表せるという特徴がある。句動詞は口語的、単一動詞は書き言葉的である。
+
+| 句動詞（本来語） | 単一動詞（ラテン語系） |
+|---|---|
+| put off | postpone, defer |
+| put up with | tolerate |
+| give up | abandon, relinquish |
+| find out | discover, ascertain |
+| look into | investigate, examine |
+| go on | continue, proceed |
+| carry out | execute, implement |
+| bring about | cause, effect |
+| get rid of | eliminate, dispose of |
+| leave out | omit, exclude |
+| make up | fabricate, invent |
+| set up | establish, install |
+| take in | comprehend, absorb, deceive |
+| turn down | reject, decline |
+| come across | encounter |
+| stand for | represent, signify |
+| break off | terminate, sever |
+| hold back | restrain, withhold |
+| speed up | accelerate |
+| think over | consider, contemplate |
+
+興味深いことに、句動詞の構造そのもの（動詞＋不変化詞）はゲルマン語的である。ドイツ語の分離動詞（<i>aufgeben</i>「give up」、<i>ausführen</i>「carry out」）と同じ発想で、しばしば要素ごとに対応する。<i>understand</i>（<i>under</i> + <i>stand</i>）はドイツ語 <i>verstehen</i>、<i>withstand</i> は <i>widerstehen</i> に対応する。
+
+## 11.4　語源が生む語感の陰影
+
+語源の違いは、意味の微妙な差として残ることがある。
+
+- <i>freedom</i>（本来語）と <i>liberty</i>（ラ）：前者は「束縛のない状態」という内的・情緒的な語感、後者は「法的に認められた自由」という制度的語感を帯びやすい。<i>Statue of Liberty</i>、<i>academic freedom</i>。
+- <i>begin</i> と <i>commence</i>：後者は儀式的（<i>commencement</i>＝卒業式）。
+- <i>deep</i> と <i>profound</i>：物理的な深さは <i>deep</i>、抽象的な深遠さは <i>profound</i>。
+- <i>motherly</i> と <i>maternal</i>：前者は情愛、後者は生物学的・制度的（<i>maternity leave</i>）。
+- <i>heavenly</i> と <i>celestial</i>：前者は宗教的・情緒的、後者は天文学的。
+- <i>childish</i>（本来語接尾辞、悪い含み）と <i>childlike</i>（同じく本来語だが良い含み）と <i>infantile</i>（ラ、臨床的）。
+- <i>smell</i>（中立〜悪い）、<i>odour</i>（ラ、中立〜悪い）、<i>scent</i>（仏、良い）、<i>fragrance</i>（ラ、良い）、<i>aroma</i>（ギ、良い）、<i>stench</i>（本来語、悪い）。
+
+## 11.5　語源を知っていることの実利
+
+- <b>未知語の推測</b>：<i>anthropomorphic</i>（人 + 形）＝擬人的、<i>omnivorous</i>（全 + 食う）＝雑食の、<i>circumnavigate</i>（周り + 航行）＝周航する。
+- <b>綴りの記憶</b>：<i>separate</i> の a は <i>parāre</i>「準備する」の a（*seperate は誤り）。<i>definite</i> の i は <i>fīnis</i>（*definate は誤り）。<i>privilege</i> は <i>prīvus</i>「個人の」+ <i>lēx</i>「法」。<i>necessary</i> の c と s の数は <i>ne-cess-</i>（<i>cēdere</i>「退く」）から。
+- <b>同義語の書き分け</b>：レジスターの目盛り（11.1）に従う。
+- <b>他言語への転移</b>：フランス語・スペイン語・イタリア語の語彙の大半は、英語のラテン語系語彙と同じ語源である。<i>develop</i> を知っていれば <i>développer</i>、<i>desarrollar</i> は近い。ドイツ語なら本来語のほうが手がかりになる（<i>Haus, Buch, Wasser, trinken, Vater</i>）。
+- <b>誤用の回避</b>：<i>decimate</i> は本来「10人に1人を殺す」（ローマ軍の刑罰）で、「全滅させる」ではない。<i>enormity</i> は「巨大さ」ではなく「凶悪さ」（<i>ē-</i>+<i>norma</i>「規範を外れた」）。<i>fulsome</i> は「たっぷりの」ではなく「不快なほど大げさな」。ただし言語は変化するものであり、語源をもって現用法を裁断してはならない（第1章）。
+

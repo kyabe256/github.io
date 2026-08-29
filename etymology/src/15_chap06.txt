@@ -1,0 +1,116 @@
+# 第6章　語はいかにして作られるか
+
+## 6.1　語形成の全体像
+
+新しい語は、無から生まれることはめったにない。既存の材料を組み替えるか、他言語から借りるかである。主な方式を挙げる。
+
+| 方式 | 説明 | 例 |
+|---|---|---|
+| 派生 derivation | 接辞を付ける | <i>happy → unhappiness</i> |
+| 複合 compounding | 語と語を結合 | <i>black + bird → blackbird</i> |
+| 転換 conversion | 品詞を変える（ゼロ派生） | <i>email</i>(n.) → <i>to email</i> |
+| 逆成 back-formation | 存在しない接辞を切り取る | <i>editor → edit</i> |
+| 混成 blending | 二語を切り貼り | <i>smoke + fog → smog</i> |
+| 切り取り clipping | 語を短くする | <i>laboratory → lab</i> |
+| 頭字語 acronym / initialism | 頭文字を並べる | <i>radar, NASA, FBI</i> |
+| 固有名詞化 eponym | 人名・地名から | <i>sandwich, boycott</i> |
+| 擬音 onomatopoeia | 音を模す | <i>buzz, hiss, cuckoo</i> |
+| 重複 reduplication | 語形を繰り返す | <i>zigzag, flip-flop</i> |
+| 民間語源 folk etymology | 未知語を既知語に寄せる | <i>crayfish, penthouse</i> |
+| 異分析 metanalysis | 語境界の切り直し | <i>an ewt → a newt</i> |
+
+## 6.2　複合語の意味は足し算ではない
+
+複合語の意味は、構成要素の合計を超える。<i>blackbird</i> は「黒い鳥」一般ではなくクロウタドリという特定の種であり、アクセントも前部要素に置かれる（BLACKbird / black BIRD）。この語彙化（lexicalization）が進むと、要素の意味が見えなくなる。
+
+- <i>lord</i> ＜ OE <i>hlāf-weard</i>「パンの番人」
+- <i>lady</i> ＜ OE <i>hlǣf-dīge</i>「パンをこねる者」（<i>dīge</i> は <i>dough</i> と同根）
+- <i>sheriff</i> ＜ OE <i>scīr-gerēfa</i>「州(shire)の長官(reeve)」
+- <i>gospel</i> ＜ OE <i>gōd-spell</i>「良い知らせ」（Gk <i>euangélion</i> の翻訳借用）
+- <i>window</i> ＜ ON <i>vind-auga</i>「風の目」
+- <i>nostril</i> ＜ OE <i>nos-þyrl</i>「鼻の穴（thrill と同根）」
+- <i>world</i> ＜ OE <i>wer-eld</i>「人(wer)の時代(eld)」＝人間の世
+- <i>barn</i> ＜ OE <i>bere-ærn</i>「大麦(barley)の家」
+- <i>daisy</i> ＜ OE <i>dæges ēage</i>「日の目」
+- <i>garlic</i> ＜ OE <i>gār-lēac</i>「槍のネギ」
+- <i>woman</i> ＜ OE <i>wīf-mann</i>「女の人」
+- <i>hussy</i> ＜ <i>housewife</i>（意味の悪化を伴う）
+- <i>marshal</i> ＜ ゲルマン語 *marha-skalk「馬の召使い」（→ 元帥）
+- <i>bonfire</i> ＜ <i>bone-fire</i>「骨を焼く火」
+- <i>holiday</i> ＜ <i>holy day</i>
+
+> <b>翻訳借用（calque, loan translation）</b>　外国語の複合語を要素ごとに訳す方式。<i>gospel</i>（＜ <i>euangélion</i>）、<i>almighty</i>（＜ L <i>omnipotēns</i>）、<i>Milky Way</i>（＜ L <i>via lactea</i>）、<i>superman</i>（＜ 独 <i>Übermensch</i>）、<i>worldview</i>（＜ <i>Weltanschauung</i>）、<i>loanword</i>（＜ <i>Lehnwort</i>）、<i>flea market</i>（＜ 仏 <i>marché aux puces</i>）、<i>skyscraper</i> の各国語版。日本語の「野球」「電話」も英語からの翻訳借用である。
+
+## 6.3　逆成（back-formation）
+
+実在しない接辞を切り取って新語を作る方式。歴史的には「派生語のほうが先」なのに、共時的には逆に見える。
+
+| 後からできた語 | もとの語 | 年代 |
+|---|---|---|
+| edit | editor（L <i>ēditor</i>） | 1791 |
+| beg | beggar | 中英語 |
+| burgle | burglar | 1872 |
+| peddle | peddler | 1532 |
+| donate | donation | 1795（米） |
+| diagnose | diagnosis | 1861 |
+| televise | television | 1927 |
+| babysit | babysitter | 1947 |
+| enthuse | enthusiasm | 1827 |
+| liaise | liaison | 1928（軍隊俗語） |
+| escalate | escalator | 1922 |
+| laze | lazy | 1592 |
+| sculpt | sculptor | 1864 |
+| emote | emotion | 1917 |
+| automate | automation | 1954 |
+| surveil | surveillance | 1949 |
+| pea | pease（もとは単数形） | 17世紀 |
+| cherry | OF <i>cherise</i>（単数形） | 中英語 |
+| kudos | （ギリシア語の単数形を複数と誤解） | 20世紀 |
+
+<i>pea</i> と <i>cherry</i> は特に面白い。中英語の <i>pease</i>（＜ L <i>pisum</i>）、<i>cherise</i>（＜ VL *ceresia）はどちらも単数形だったが、語末の -s が複数語尾と誤解され、単数形 <i>pea</i>, <i>cherry</i> が作られた。童謡 "Pease porridge hot" に古形が残る。
+
+## 6.4　異分析（metanalysis）
+
+冠詞と名詞の境界が引き直される現象。中英語期に頻発した。
+
+| 現代形 | もとの形 | 移動した n |
+|---|---|---|
+| a newt | an ewte | 冠詞 → 名詞 |
+| a nickname | an eke-name（「追加の名」） | 冠詞 → 名詞 |
+| an apron | a napron（＜ OF <i>naperon</i>, cf. <i>napkin</i>） | 名詞 → 冠詞 |
+| an adder | a nadder（cf. 独 <i>Natter</i>） | 名詞 → 冠詞 |
+| an umpire | a noumpere（「非対等者」＜ OF <i>nonper</i>） | 名詞 → 冠詞 |
+| an orange | a norange（＜ アラビア語 <i>nāranj</i>） | 名詞 → 冠詞 |
+| alone / lone | all one → a lone | |
+| alligator | el lagarto（スペイン語の冠詞ごと借用） | |
+
+同様の現象は他言語にもあり、アラビア語の定冠詞 <i>al-</i> ごと借用された <i>alcohol, algebra, alchemy, apricot</i>（＜ <i>al-barqūq</i>）などがその例である。
+
+## 6.5　混成語（blend, portmanteau）
+
+ルイス・キャロルが『鏡の国のアリス』でハンプティ・ダンプティに語らせた「かばん語」（portmanteau word）。<i>slithy</i> ＝ lithe + slimy、<i>chortle</i> ＝ chuckle + snort。
+
+<i>smog</i>（smoke+fog, 1905）, <i>brunch</i>（breakfast+lunch, 1896）, <i>motel</i>（motor+hotel, 1925）, <i>Oxbridge</i>, <i>guesstimate</i>, <i>sitcom</i>, <i>infomercial</i>, <i>emoticon</i>, <i>netizen</i>, <i>podcast</i>（iPod+broadcast）, <i>blog</i>（web+log）, <i>malware</i>, <i>bit</i>（binary+digit）, <i>pixel</i>（picture+element）, <i>modem</i>, <i>transistor</i>（transfer+resistor）, <i>gerrymander</i>（Gerry+salamander）, <i>Amerind</i>, <i>Eurasia</i>, <i>Chunnel</i>, <i>stagflation</i>, <i>Brexit</i>, <i>webinar</i>, <i>workaholic</i>（<i>alcoholic</i> の異分析 -holic から）。
+
+## 6.6　切り取り（clipping）と頭字語
+
+<b>切り取り</b>　語尾を落とす（back clipping）：<i>ad(vertisement), lab, exam, gym, memo, photo, piano(forte), pub(lic house), vet(erinary), fan(atic), mob</i>（L <i>mobile vulgus</i>「動く群衆」）, <i>zoo(logical garden), cell(ular phone), app, deli, limo, rehab</i>。語頭を落とす（fore clipping）：<i>(tele)phone, (om)bus, (al)ligator, (rac)coon, (es)quire, (peri)wig → wig, (de)fence → fence</i>。両端を落とす：<i>(in)flu(enza), (de)tec(tive), (re)frig(erator)</i>。
+
+<b>頭字語</b>　語として読むものを acronym、字母を読むものを initialism と呼ぶ。<i>radar</i>（radio detection and ranging）, <i>laser</i>（light amplification by stimulated emission of radiation）, <i>scuba</i>, <i>NATO</i>, <i>UNESCO</i>, <i>AIDS</i>, <i>NASA</i>, <i>zip</i>（zone improvement plan）, <i>GIF</i>, <i>PIN</i>。逆頭字語（backronym）は、既存語に後から語源を捏造したもので、第1章で挙げた <i>posh</i> や <i>golf</i> の俗説がこれにあたる。
+
+## 6.7　固有名詞由来語（eponym, toponym）
+
+<b>人名から</b>：<i>sandwich</i>（第4代サンドウィッチ伯ジョン・モンタギュー）, <i>boycott</i>（アイルランドの土地差配人チャールズ・ボイコット, 1880）, <i>lynch</i>（チャールズ・リンチ判事）, <i>guillotine</i>（ギヨタン博士。発明者ではなく提案者）, <i>silhouette</i>（財務総監エティエンヌ・ド・シルエット）, <i>nicotine</i>（ジャン・ニコ）, <i>saxophone</i>（アドルフ・サックス）, <i>diesel</i>, <i>pasteurize</i>, <i>volt</i>（ボルタ）, <i>watt</i>, <i>ampere</i>, <i>ohm</i>, <i>hertz</i>, <i>newton</i>, <i>kelvin</i>, <i>curie</i>, <i>bloomer</i>, <i>cardigan</i>（カーディガン伯）, <i>mackintosh</i>, <i>wellington</i>, <i>leotard</i>, <i>mesmerize</i>（メスマー）, <i>chauvinism</i>（ニコラ・ショーヴァン）, <i>sadism</i>（サド侯爵）, <i>masochism</i>（ザッヘル＝マゾッホ）, <i>maverick</i>（焼印を押さなかった牧場主）, <i>bowdlerize</i>（トマス・バウドラー）, <i>quisling</i>（ヴィドクン・クヴィスリング）, <i>shrapnel</i>, <i>derrick</i>（絞首刑執行人）, <i>hooligan</i>（諸説）。
+
+<b>神話から</b>：<i>panic</i>（牧神パーン）, <i>tantalize</i>（タンタロス）, <i>echo</i>（ニンフのエコー）, <i>narcissism</i>（ナルキッソス）, <i>chaos</i>, <i>cereal</i>（ケレース）, <i>jovial</i>（ユピテル）, <i>martial</i>（マルス）, <i>mercurial</i>, <i>venereal</i>, <i>volcano</i>（ウルカヌス）, <i>museum/music</i>（ムーサ）, <i>atlas</i>, <i>titanic</i>, <i>herculean</i>, <i>odyssey</i>, <i>siren</i>, <i>nemesis</i>, <i>aphrodisiac</i>, <i>erotic</i>, <i>hygiene</i>（ヒュギエイア）, <i>psyche</i>, <i>morphine</i>（モルペウス）, <i>fury</i>, <i>lethargy</i>（レーテー河）, <i>ocean</i>（オーケアノス）, <i>hypnosis</i>（ヒュプノス）。
+
+<b>地名から</b>：<i>jeans</i>（ジェノヴァ）, <i>denim</i>（<i>de Nîmes</i>ニーム産）, <i>cashmere</i>（カシミール）, <i>satin</i>（泉州の古名 Zayton か）, <i>damask</i>（ダマスカス）, <i>muslin</i>（モスル）, <i>gauze</i>（ガザ？）, <i>copper</i>（キプロス）, <i>magnet</i>（マグネシア）, <i>parchment</i>（ペルガモン）, <i>bayonet</i>（バイヨンヌ）, <i>cologne</i>, <i>currant</i>（コリントス）, <i>peach</i>（<i>persica</i>ペルシアの）, <i>turkey</i>（トルコ経由と誤解された鳥）, <i>tangerine</i>（タンジール）, <i>sardine</i>（サルデーニャ）, <i>hamburger, frankfurter, wiener</i>, <i>champagne</i>, <i>bourbon</i>, <i>marathon</i>, <i>spa</i>（ベルギーの町）, <i>badminton</i>（バドミントン・ハウス）, <i>rugby</i>, <i>bikini</i>（核実験の環礁）, <i>limerick</i>, <i>canary</i>（<i>Insula Canaria</i>「犬の島」＜ L <i>canis</i>）。
+
+## 6.8　語の死と再生
+
+語は生まれるだけでなく死ぬ。古英語の語彙のうち現代まで残ったのは1〜2割にすぎない。<i>niman</i>（取る、独 <i>nehmen</i>）は <i>take</i>（北欧語）に、<i>weorþan</i>（〜になる、独 <i>werden</i>）は <i>become</i> に、<i>ēam</i>（叔父）は <i>uncle</i> に取って代わられた。
+
+一方、死んだはずの語が復活することもある。ウォルター・スコットやスペンサーら文人が古語を掘り起こし、<i>glamour</i>（スコットランド語形の <i>grammar</i>）, <i>slogan</i>, <i>raid</i>（<i>road</i> の北方形）, <i>gruesome</i>, <i>uncanny</i>, <i>eerie</i> などを一般語彙に戻した。トールキンは <i>orc</i>（OE <i>orcnēas</i>）, <i>ent</i>（OE <i>ent</i>「巨人」）, <i>mathom</i>（OE <i>māþum</i>「宝」）を蘇らせた。
+
+化石化した語（fossil word）は、特定の慣用句のなかにだけ生き残っている語である。<i>to and fro</i> の <i>fro</i>（＜ ON <i>frá</i>）, <i>hue and cry</i> の <i>hue</i>, <i>kith and kin</i> の <i>kith</i>（「知り合い」、<i>uncouth</i> と同根）, <i>short shrift</i> の <i>shrift</i>（告解）, <i>in high dudgeon</i>, <i>spick and span</i>, <i>by dint of</i>, <i>at loggerheads</i>, <i>hem and haw</i>, <i>the whole kit and caboodle</i>, <i>run amok</i>（マレー語）, <i>vim and vigor</i>, <i>curry favor</i>（＜ <i>curry Favel</i>「（寓話の栗毛馬）ファヴェルを梳く」）。
+

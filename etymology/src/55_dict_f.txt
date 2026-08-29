@@ -1,0 +1,159 @@
+== F
+
+@ fabric ; /ˈfæbrɪk/ ; 名 ; 織物、構造
++lit: 「工房、作られたもの」
++chain: L <i>faber</i>「職人」→ <i>fabrica</i>「工房、製作物」→ 仏 <i>fabrique</i>
++desc: 英語では「建物の構造」（<i>the fabric of the church</i>）が古い語義で、「織物」の意味は18世紀以降。
++der: fabricate, forge（仏語経由の摩耗形）, fabrication
++note: <i>forge</i>「鍛冶場、偽造する」は <i>fabrica</i> の摩耗形。<i>fabricate</i> との二重語。
+
+@ fantasy ; /ˈfæntəsi/ ; 名 ; 空想
++lit: 「現れさせること」
++chain: Gk <i>phaínein</i>「現す」→ <i>phantasía</i>「心に現れる像」→ L <i>phantasia</i> → OF <i>fantaisie</i>
++dbl: <i>fancy</i>（<i>fantasy</i> の縮約形）
++der: phantom, phase, phenomenon, emphasis, diaphanous, phantasmagoria
++note: <i>fancy</i> は <i>fantasy</i> が16世紀に縮まった形。「空想」と「愛好」の両義を持つ。
+
+@ farm ; /fɑːm/ ; 名 ; 農場
++lit: 「（定額の）固定地代」
++chain: 中世ラテン語 <i>firma</i>「固定額の支払い」（<i>firmus</i>「堅い」）→ OF <i>ferme</i> → ME
++desc: 中世の土地保有は、定額地代（<i>firma</i>）を納める契約でなされた。契約が土地そのものを指すようになり、「農場」の意味が生じた。徴税請負制を <i>tax farming</i> というのはこの古義による。
++der: firm, affirm, confirm, infirm, firmament
+
+@ fascism ; /ˈfæʃɪzəm/ ; 名 ; ファシズム
++lit: 「束（ファスケス）」
++chain: L <i>fascis</i>「束」→ <i>fascēs</i>「（ローマの権威を示す）斧を束ねた棒」→ 伊 <i>fascio</i>「団結、結社」→ <i>fascismo</i>（1919）
++desc: ムッソリーニの運動が、古代ローマの権標ファスケス（団結と権威の象徴）を旗印にしたことによる。
++der: fascine, fasces
+
+@ February ; /ˈfebruəri/ ; 名 ; 2月
++lit: 「清めの（月）」
++chain: L <i>Februārius</i>（<i>februa</i>「浄化の祭儀」）
++desc: 2月15日のルペルカリア祭を含む浄化の月。r の連続が発音しにくく、異化により /ˈfebjuəri/ と発音されることが多い。
++note: ローマ暦では年末の月だったため、閏日がここに置かれる。
+
+@ fellow ; /ˈfeləʊ/ ; 名 ; 仲間
++lit: 「（財産を）共に置く者」
++chain: ON <i>félagi</i>（<i>fé</i>「家畜、財産」+ <i>lag</i>「置くこと」）→ OE <i>fēolaga</i>
++desc: 共同出資者、いわば「共同経営者」が原義。
++der: fee（本来語の同源）, law, lay, lie, ledger, feudal(?)
++note: <i>fé</i> は英語 <i>fee</i>「報酬」、ドイツ語 <i>Vieh</i>「家畜」、ラテン語 <i>pecūnia</i>「金銭」（＜ <i>pecus</i>「家畜」）と同根。家畜が富の単位だった時代の語彙。
+
+@ ferry ; /ˈferi/ ; 名 ; 渡し船
++root: *per-「渡す」
++chain: OE <i>ferian</i>「運ぶ」← PGmc *farjan
++der: fare（運賃、旅）, welfare, farewell, thoroughfare, ford, fjord, port, portal（ラテン系）, pore（ギ）
++note: <i>fare</i>「運賃」、<i>farewell</i>「よい旅を」、<i>ford</i>「浅瀬」、<i>fjord</i>「入江」がすべて「渡る」で結ばれる。
+
+@ fetish ; /ˈfetɪʃ/ ; 名 ; 呪物、フェティッシュ
++lit: 「作られたもの、まがいもの」
++chain: L <i>factīcius</i>「人工の」→ ポルトガル語 <i>feitiço</i>「呪物、まじない」→ 仏 <i>fétiche</i> → 英語
++desc: 西アフリカ沿岸のポルトガル商人が、現地の護符をこう呼んだ。19世紀に人類学・心理学の用語となった。
++der: fact, factitious, feat, feature（すべて <i>facere</i> 系）
+
+@ fiasco ; /fiˈæskəʊ/ ; 名 ; 大失敗
++lit: 「フラスコ、瓶」
++chain: 伊 <i>fare fiasco</i>「瓶を作る」＝「失敗する」→ 仏 → 英語
++desc: なぜ「瓶を作る」が失敗を意味するのかは不明。ヴェネツィアのガラス職人が、傷のある吹きガラスを普通の瓶に作り直したからという説がある。
++der: flask（同語源）, flagon
+
+@ filibuster ; /ˈfɪlɪbʌstə/ ; 名 ; 議事妨害
++lit: 「自由に略奪する者（海賊）」
++chain: オランダ語 <i>vrijbuiter</i>「自由に戦利品を得る者」→ 西 <i>filibustero</i> → 英語
++dbl: <i>freebooter</i>（英語で直接に組み立てた形）
++desc: 19世紀に中米で私兵を率いた冒険家を指し、そこから「（議会を）乗っ取る者」＝長時間演説による議事妨害の意味が米国で生じた。
++note: <i>freebooter</i>, <i>filibuster</i>, <i>flibustier</i>（仏）はすべて同一語の変形。
+
+@ flour ; /ˈflaʊə/ ; 名 ; 小麦粉
++lit: 「（穀物の）花＝精華」
++chain: OF <i>flor</i>「花」→ ME <i>flour</i>
++desc: 「花」と「小麦粉」は中英語では同一語で、綴りが分化したのは18世紀。「最良の部分」を「花」と呼ぶ発想（<i>the flower of the army</i>）から。
++der: flower, floral, flourish, effloresce, flora
++note: フランス語でも <i>fleur de farine</i>「小麦粉の花」＝上質の粉という。
+
+@ focus ; /ˈfəʊkəs/ ; 名 ; 焦点
++lit: 「炉、かまど」
++chain: L <i>focus</i>「炉」→ ケプラー『光学』（1604）が光の集まる点をこう呼んだ
++desc: レンズが光を集める点を「火が集まる炉」に見立てた比喩的命名。
++der: fuel（<i>focālia</i>「炉の材料」）, foyer（「炉のある部屋」）, curfew（「火を覆え」）, fusillade は別
++note: <i>focus</i>, <i>fuel</i>, <i>foyer</i>, <i>curfew</i> がすべて「炉」から出ている。
+
+@ fornication ; /fɔːnɪˈkeɪʃn/ ; 名 ; 姦淫
++lit: 「アーチ（の下でのこと）」
++chain: L <i>fornix</i>「アーチ、地下の穹窿」→ <i>fornicārī</i>
++desc: ローマの娼婦がアーチ型の地下室に居たことから。<i>fornix</i> は解剖学で「脳弓」の意でも使われる。
++der: furnace, fornix
+
+@ fortnight ; /ˈfɔːtnaɪt/ ; 名 ; 2週間
++lit: 「14夜」
++chain: OE <i>fēowertȳne niht</i>「14の夜」
++der: sennight（「7夜」＝1週間、古語）, night
++note: ゲルマン人は日ではなく夜で期間を数えた（タキトゥス『ゲルマニア』にも記述がある）。<i>Twelfth Night</i>, <i>a week from tonight</i> にも痕跡が残る。
+
+@ frank ; /fræŋk/ ; 形 ; 率直な
++lit: 「フランク族の（＝自由な）」
++chain: 中世ラテン語 <i>francus</i>「フランク族の、自由な」→ OF <i>franc</i>
++desc: ガリアを征服したフランク族だけが自由身分だったため、部族名が「自由な」を意味するようになり、さらに「（言うことに）遠慮のない」へ転じた。
++der: France, franchise（「自由を与えること」→ 選挙権・営業権）, enfranchise, frankincense（「上等の香」）, franc（通貨）
++note: <i>lingua franca</i>「共通語」の <i>franca</i> も同じ。地中海の商業共通語を、東方から見て「フランク人の言葉」と呼んだもの。
+
+@ frontier ; /ˈfrʌntɪə/ ; 名 ; 辺境
++lit: 「（軍の）前面」
++chain: L <i>frōns, frontis</i>「額、前面」→ OF <i>frontiere</i>
++der: front, affront（「額を突き合わせる」＝侮辱する）, confront, effrontery（「厚顔」）, frontispiece
++note: <i>effrontery</i>「ずうずうしさ」は「額（恥じらいの表れる場所）がないこと」。
+
+@ frankfurter ; /ˈfræŋkfɜːtə/ ; 名 ; フランクフルトソーセージ
++chain: 地名 Frankfurt am Main
++der: hamburger（ハンブルク）, wiener（ウィーン）, bologna/baloney（ボローニャ）
++note: <i>hamburger</i> は「ハンブルクの（肉）」だが、<i>ham</i>+<i>burger</i> と再分析されて <i>cheeseburger</i>, <i>veggie burger</i> を生んだ（異分析、第6章）。
+
+@ furlong ; /ˈfɜːlɒŋ/ ; 名 ; ハロン（約201m）
++lit: 「畝の長さ」
++chain: OE <i>furlang</i>（<i>furh</i>「畝、溝」+ <i>lang</i>「長い」）
++desc: 中世の耕地で、牛が休まずに耕せる一筋の長さ（約220ヤード）。<i>mile</i>（ローマの千歩）との換算のため、1マイル＝8ハロンと定められた。
++der: furrow, long, acre
+
+@ fun ; /fʌn/ ; 名 ; 楽しみ
++chain: 語源不確実。ME <i>fon</i>「ばか者、だます」から（1685年に名詞として初出）
++desc: 18世紀のジョンソン博士は <i>fun</i> を「低俗な俗語」として辞書に収めつつ非難した。今日もっとも普通の語のひとつが、三百年前には俗語だった。
++der: fond（もと「愚かな」＜ <i>fonned</i>）
+
+
+@ fee ; /fiː/ ; 名 ; 料金
++lit: 「家畜」
++chain: OE <i>feoh</i>「家畜、財産」← PGmc *fehu
++cog: L <i>pecus</i>「家畜」→ <i>pecūnia</i>「金銭」（→ pecuniary）, 独 <i>Vieh</i>「家畜」
++der: fellow（ON <i>félagi</i>「財産を共にする者」）, feud(?), fief, feudal(?)
++note: 家畜が富の単位だったことを、英語とラテン語がそれぞれ独立に証言している。ルーン文字の第一字 ᚠ（fehu）も「財」の意。
+
+@ fascinate ; /ˈfæsɪneɪt/ ; 動 ; 魅了する
++lit: 「呪いをかける」
++chain: L <i>fascinum</i>「呪い、まじない、男根形の護符」→ <i>fascināre</i>
++desc: 邪視（<i>malocchio</i>）による呪縛が原義。ローマでは男根形の護符（<i>fascinum</i>）が邪視除けとされた。
++note: <i>fasces</i>「束桿」（→ fascism）とは別語源。
+
+@ fetch ; /fetʃ/ ; 動 ; 取ってくる
++chain: OE <i>fetian</i>「取りに行く」
++der: foot（*ped-「足」からの派生とする説）, fetter, fetlock
++note: 「足で行って持ってくる」という説が有力だが確実ではない。
+
+@ flabbergast ; /ˈflæbəɡɑːst/ ; 動 ; 仰天させる
++chain: 1772年に「新流行語」として記録される。<i>flabby</i> + <i>aghast</i> の混成か
++note: 語源不明の口語が定着した例。18世紀の記事は「最近ロンドンで流行の語」と紹介している。
+
+@ fortune ; /ˈfɔːtʃuːn/ ; 名 ; 運、財産
++chain: L <i>Fortūna</i>（運命の女神）＜ <i>fors</i>「偶然」（<i>ferre</i>「もたらす」）
++der: fortunate, misfortune, fortuitous, bear（本来語の同根語）
++note: 「運」→「幸運」→「財産」と意味が特殊化した。運命の女神は車輪（<i>rota Fortūnae</i>）を回す姿で表され、中世文学の主要な主題となった。
+
+@ frantic ; /ˈfræntɪk/ ; 形 ; 半狂乱の
++lit: 「脳を病んだ」
++chain: Gk <i>phrḗn</i>「横隔膜、心」→ <i>phrenitis</i>「脳炎」→ L <i>phreneticus</i> → OF <i>frenetique</i>
++dbl: <i>frenetic</i>（同語源の二重語）
++der: frenzy, schizophrenia（「引き裂かれた心」）, phrenology
++note: ギリシア人は <i>phrḗn</i>（横隔膜）を思考の座と考えた。心の座を胸腹部に置く発想は日本語の「腹を決める」「肝が据わる」にも通じる。
+
+@ furniture ; /ˈfɜːnɪtʃə/ ; 名 ; 家具
++chain: 仏 <i>fourniture</i>「供給」（<i>fournir</i>「供給する」＜ ゲルマン語 *frumjan「進める」）
++note: フランス語 <i>fourniture</i> は今も「備品・供給」の意で、家具は <i>meuble</i>（「動かせるもの」＝動産）という。英語 <i>movables</i> にも同じ発想がある。

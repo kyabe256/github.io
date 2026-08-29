@@ -1,0 +1,33 @@
+== Q
+
+@ quarantine ; /ˈkwɒrəntiːn/ ; 名 ; 検疫
++lit: 「四十（日）」
++chain: 伊（ヴェネツィア方言）<i>quarantina</i>「四十日間」（<i>quaranta</i>「四十」）→ 英語（1660年代）
++desc: 14世紀のペスト流行時、ラグーサ（ドゥブロヴニク）とヴェネツィアが疫病流行地からの船を沖に停泊させた期間。当初は30日（<i>trentina</i>）だったが、40日に延長された。40という数は、キリストの荒野の40日など聖書的な象徴数でもある。
++der: quarter, quart, four（本来語）, square, quadrant
+
+@ quarry ; /ˈkwɒri/ ; 名 ; 採石場／獲物
++desc: 二つの別語が同綴になった例。（1）採石場：L <i>quadrāre</i>「四角に切る」→ OF <i>quarriere</i>。（2）獲物：OF <i>cuiree</i>「（狩りの後、猟犬に与える）獣の内臓（を皮 <i>cuir</i> に載せたもの）」。
++der: (1) square, quadrant, quarter／(2) cuirass, curry（革をなめす）
+
+@ quick ; /kwɪk/ ; 形 ; 速い
++lit: 「生きている」
++root: *gʷeyh₃w-「生きる」
++chain: OE <i>cwic</i>「生きた」
++desc: 「生きている」→「活発な」→「速い」。<i>the quick and the dead</i>「生者と死者」（使徒信条）、<i>cut to the quick</i>「生身まで切る」、<i>quicksilver</i>「水銀＝生きた銀」、<i>quicksand</i>「動く（生きた）砂」に古義が残る。
++der: vital, vivid, survive, revive, biology, zoo（同根語）
+
+@ quiz ; /kwɪz/ ; 名 ; クイズ
++chain: 語源不明（1780年代、「変人」の意で初出）
++note: 「ダブリンの劇場支配人デイリーが、無意味な語を一晩で流行らせられるという賭けをして街中に QUIZ と落書きさせた」という有名な逸話があるが、初出年代と合わず、作り話とされる。語源不明の語に付きまとう典型的な創作説（第1章）。
+
+@ quixotic ; /kwɪkˈsɒtɪk/ ; 形 ; 空想的な
++chain: 人名 Don Quixote（セルバンテス『ドン・キホーテ』1605）
++note: 文学作品の登場人物に由来する形容詞（<i>Kafkaesque</i>, <i>Orwellian</i>, <i>Dickensian</i>, <i>Machiavellian</i>, <i>platonic</i>, <i>sadistic</i>）の一例。
+
+@ quintessence ; /kwɪnˈtesns/ ; 名 ; 真髄
++lit: 「第五の実体」
++chain: 中世ラテン語 <i>quīnta essentia</i>（アリストテレスの <i>pémptē ousíā</i> の訳）
++desc: 地水火風の四元素に加え、天界を構成する第五の元素（エーテル）。錬金術ではこれを抽出することが目標とされ、「精髄」の意味になった。
++der: five, quintet, essence, entity
+

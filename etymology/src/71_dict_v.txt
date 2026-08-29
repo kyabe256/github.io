@@ -1,0 +1,106 @@
+== V
+
+@ vaccine ; /ˈvæksiːn/ ; 名 ; ワクチン
++lit: 「雌牛の」
++chain: L <i>vacca</i>「雌牛」→ <i>variolae vaccīnae</i>「牛痘」→ 英語（ジェンナー, 1798）
++desc: エドワード・ジェンナーが牛痘を用いた種痘法を確立したことによる。パストゥールが1881年、ジェンナーへの敬意から、あらゆる免疫原に <i>vaccin</i> の語を拡張した。
++der: vaccination, vaccinate, vaquero/buckaroo（西「牛飼い」）
++note: 語源に「牛」が刻まれたまま、あらゆる感染症の予防接種を指す語になった。
+
+@ vandal ; /ˈvændl/ ; 名 ; 破壊者
++chain: 民族名 Vandals（455年にローマを略奪したゲルマン系部族）
++desc: <i>vandalisme</i> はフランス革命期の1794年、ブロワ司教グレゴワールが芸術破壊を非難して造った語。実際のヴァンダル族の略奪が特に破壊的だったという証拠は乏しく、後世の評判による。
++note: 民族名の普通名詞化（<i>slave</i>, <i>frank</i>, <i>bohemian</i>, <i>philistine</i>, <i>gothic</i>）の一例。
+
+@ vanilla ; /vəˈnɪlə/ ; 名 ; バニラ
++lit: 「小さな鞘」
++chain: L <i>vāgīna</i>「鞘」→ 西 <i>vainilla</i>（縮小形）→ 英語
++desc: 細長い莢の形から。<i>vagina</i>「膣」と同語源で、こちらは解剖学のラテン語命名（1680年代）。
++note: <i>plain vanilla</i>「基本仕様の」の用法は20世紀後半のアメリカ英語から。
+
+@ vaudeville ; /ˈvɔːdəvɪl/ ; 名 ; 寄席演芸
++chain: 仏 <i>chanson du Vau de Vire</i>「ヴィール谷の歌」（ノルマンディーの地名）
++desc: 15世紀にヴィール谷で流行した風刺歌に由来するとされる。<i>voix de ville</i>「街の声」との混同もあった。
++note: 地名由来語で、途中に民間語源による形の変化が加わった例。
+
+@ verdict ; /ˈvɜːdɪkt/ ; 名 ; 評決
++lit: 「真実を言われたこと」
++chain: L <i>vērē dictum</i> → アングロ・フランス語 <i>verdit</i>
++der: verify, very（もと「真の」）, veritable, aver／dictate, diction, predict, contradict, judge
++note: <i>very</i> が「真の」であることは <i>the very man</i>「まさにその人」に残る（文法化、第7章）。
+
+@ vermilion ; /vəˈmɪliən/ ; 名 ; 朱色
++lit: 「小さな虫」
++chain: L <i>vermis</i>「虫」→ <i>vermiculus</i>「小さな虫（＝カイガラムシ）」→ OF <i>vermeillon</i>
++desc: 深紅の染料はカイガラムシ（<i>kermes</i>）から採られた。<i>crimson</i>（＜アラビア語 <i>qirmiz</i>）も同じ虫の名。
++der: worm（本来語）, vermin, vermicelli（「小さな虫」＝細いパスタ）, vermiform
++note: <i>crimson</i>, <i>carmine</i>, <i>kermes</i>, <i>vermilion</i> がすべて虫由来。染色史が語彙に刻まれている。
+
+@ villain ; /ˈvɪlən/ ; 名 ; 悪党
++lit: 「農園（<i>vīlla</i>）の労働者」
++chain: L <i>vīllānus</i>「農園に属する者」→ OF <i>vilein</i>
++desc: 「農奴」→「粗野な者」→「悪党」と悪化した（第7章）。支配層の言語における階級的偏見が語義に沈殿した典型例。
++der: villa, village, villein, vicinity(?)
++note: 同型の悪化に <i>churl</i>（自由農民→無礼者）, <i>boor</i>（農民→粗野な人）, <i>peasant</i>。
+
+@ virtue ; /ˈvɜːtʃuː/ ; 名 ; 美徳
++lit: 「男らしさ」
++chain: L <i>vir</i>「男」→ <i>virtūs</i>「男らしさ、勇気、卓越」→ OF <i>vertu</i>
++desc: ローマにおける <i>virtūs</i> は軍人的な勇気を核とする。キリスト教化のなかで「徳」一般へ、さらに（女性について）「貞節」へと意味が移った。マキャヴェッリの <i>virtù</i> は古義に近い政治的力量を指す。
++der: virile, virtual（もと「潜在的な力を持つ」）, triumvirate, werewolf（本来語 <i>wer</i>「男」）
++note: <i>virtual reality</i> の <i>virtual</i> は「（実体はないが）力としては実在する」という中世スコラ哲学の用語法に遡る。
+
+@ volume ; /ˈvɒljuːm/ ; 名 ; 巻、体積、音量
++lit: 「巻いたもの」
++chain: L <i>volvere</i>「転がす、巻く」→ <i>volūmen</i>「巻物」→ OF
++desc: 巻物の書物が原義。「本の一巻」→「（巻いた）かさ＝体積」→「（響きの）大きさ＝音量」と三方向に分岐した。
++der: revolve, revolution, involve, evolve, devolve, vault, valve, walk（本来語）, helix（ギ）
+
+@ vulgar ; /ˈvʌlɡə/ ; 形 ; 下品な
++lit: 「民衆の」
++chain: L <i>vulgus</i>「民衆」→ <i>vulgāris</i>
++desc: 「一般民衆の」→「ありふれた」→「粗野な」。<i>Vulgate</i>（ラテン語訳聖書）は「民衆の（版）」の意で、原義を保つ。数学の <i>vulgar fraction</i>「普通分数」も中立的な古義。
++der: divulge（「民衆に広める」＝漏らす）, Vulgate, vulgarity
+
+@ vogue ; /vəʊɡ/ ; 名 ; 流行
++lit: 「（船の）進み」
++chain: 伊 <i>voga</i>「漕ぐこと、進行」→ 仏 <i>vogue</i>「流行」→ 英語
++note: 「（時流に）乗っていること」という航海の比喩。<i>in vogue</i>。
+
+@ voice ; /vɔɪs/ ; 名 ; 声
++chain: L <i>vōx, vōcis</i> → OF <i>vois</i>
++der: vocal, vocation（「（神の）呼びかけ」＝天職）, advocate, evoke, invoke, provoke, revoke, vocabulary, vowel（「声の（文字）」）, equivocal
++note: 文法の <i>voice</i>「態（能動態・受動態）」は、ギリシア語 <i>diáthesis</i> のラテン語訳 <i>vōx</i> による用語法。
+
+
+@ vagabond ; /ˈvæɡəbɒnd/ ; 名 ; 放浪者
++chain: L <i>vagārī</i>「さまよう」→ <i>vagābundus</i>
++der: vague（「さまよう＝定まらない」）, vagary, extravagant（「外へさまよい出る」）, vagrant
++note: <i>vague</i>「曖昧な」の原義は「（意味が）さまよう」。
+
+@ vermin ; /ˈvɜːmɪn/ ; 名 ; 害虫
++chain: L <i>vermis</i>「虫」→ 俗ラテン語 *<i>verminum</i>
++der: worm（本来語）, vermilion, vermicelli, vermiform, vermouth（独 <i>Wermut</i>「ニガヨモギ」、同根とする説あり）
+
+@ veto ; /ˈviːtəʊ/ ; 名 ; 拒否権
++lit: 「私は禁じる」
++chain: L <i>vetō</i>（<i>vetāre</i>「禁じる」の一人称単数現在）
++desc: ローマの護民官（<i>tribūnus plēbis</i>）が元老院の決議を差し止めるときに発した一語。動詞の活用形がそのまま名詞化した。
++note: <i>recipe</i>（取れ）, <i>credo</i>（我信ず）, <i>exit</i>（彼は去る）, <i>affidavit</i>（彼は誓約した）, <i>caveat</i>（用心せよ）, <i>tenet</i>（彼は保持する）, <i>habeas corpus</i>（身体を持て）と同じく、ラテン語の動詞形がそのまま英語の名詞になった例。
+
+@ vinegar ; /ˈvɪnɪɡə/ ; 名 ; 酢
++lit: 「酸っぱいワイン」
++chain: OF <i>vin aigre</i>（<i>vin</i>「ワイン」+ <i>aigre</i>「鋭い、酸っぱい」）
++der: wine, vine, vintage／acid, acute, acrid, eager, oxygen（ギ）
++note: <i>eager</i>「熱心な」も <i>aigre</i>「鋭い」と同語源。<i>eager</i> の古義「鋭い」はハムレットの "a nipping and an eager air" に残る。
+
+@ virus ; /ˈvaɪrəs/ ; 名 ; ウイルス
++lit: 「毒液、粘液」
++chain: L <i>vīrus</i>「毒、粘液」
++desc: 18世紀まで「感染性の毒素」一般を指した。細菌より小さい濾過性病原体の意味は1898年から。計算機の <i>computer virus</i> は1972年のSFに現れ、1984年に学術用語として定着した。
++note: ラテン語 <i>vīrus</i> は中性の物質名詞で複数形を持たなかった。英語 <i>viruses</i> は英語式の複数形である。
+
+@ volcano ; /vɒlˈkeɪnəʊ/ ; 名 ; 火山
++chain: L <i>Volcānus</i>（火と鍛冶の神ウルカヌス）→ 伊 <i>volcano</i>
++desc: シチリア沖のヴルカーノ島（神の鍛冶場と考えられた）の名から。
++der: vulcanize（加硫。グッドイヤー, 1839）, Vulcan

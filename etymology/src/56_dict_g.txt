@@ -1,0 +1,130 @@
+== G
+
+@ galaxy ; /ˈɡæləksi/ ; 名 ; 銀河
++lit: 「乳の（環）」
++chain: Gk <i>gála, gálaktos</i>「乳」→ <i>galaxías kýklos</i>「乳の輪」→ L <i>galaxias</i>
++desc: ギリシア神話では、ヘラの乳が天にこぼれてできたとされる。ラテン語訳の <i>via lactea</i> が英語 <i>Milky Way</i> の直訳元（翻訳借用、第6章）。
++der: lactose, lactic, lettuce（<i>lactūca</i>「乳の出る草」）, latte, galactose
++note: <i>lettuce</i>「レタス」が「乳」と同根なのは、茎を折ると白い液が出るため。
+
+@ gargoyle ; /ˈɡɑːɡɔɪl/ ; 名 ; ガーゴイル
++lit: 「喉」
++chain: OF <i>gargouille</i>「喉、樋口」（擬音語根 *garg-）
++der: gargle, gurgle, gorge, gorgeous は別
++note: 雨水を吐き出す装置なので「喉」。同じ擬音根から <i>gargle</i>「うがいする」。
+
+@ gerrymander ; /ˈdʒerimændə/ ; 名・動 ; 恣意的選挙区割り
++chain: 人名 Elbridge Gerry（マサチューセッツ州知事）+ <i>salamander</i>
++desc: 1812年、ゲリー知事が承認した選挙区の形がサンショウウオに似ていると『ボストン・ガゼット』紙が風刺したことから。混成語（第6章）の代表例。
++note: 本人の名は /ˈɡeri/（硬い g）だが、語は /ˈdʒeri/ と発音される。
+
+@ ghost ; /ɡəʊst/ ; 名 ; 幽霊
++chain: OE <i>gāst</i>「霊、息」← PGmc *gaistaz
++desc: 綴りの h は、15世紀にキャクストンがフランドル人植字工を用いた際、オランダ語 <i>gheest</i> の影響で入ったとされる。<i>ghastly</i>, <i>aghast</i> も同源。
++cog: 独 <i>Geist</i>「精神」
++note: 「聖霊」を <i>Holy Ghost</i> と呼ぶのは古い訳語。<i>Holy Spirit</i>（ラテン語系）と二本立てになっている。
+
+@ glamour ; /ˈɡlæmə/ ; 名 ; 魅惑
++lit: 「文法（＝学問＝魔術）」
++chain: L <i>grammatica</i>「文法、学問」→ スコットランド語 <i>gramarye</i>「魔術」→ <i>glamour</i>
++desc: 中世において、読み書きのできる学者は魔術師と見なされた。<i>grammar</i> の方言形が「魔法」を意味し、19世紀にウォルター・スコットが文語に持ち込んだ。
++dbl: <i>grammar</i>
++der: gramarye, grimoire（仏「魔道書」、同語源）
+
+@ gossip ; /ˈɡɒsɪp/ ; 名 ; うわさ話
++lit: 「神における親族＝名づけ親」
++chain: OE <i>godsibb</i>（<i>god</i>「神」+ <i>sibb</i>「親族」）
++desc: 洗礼の代父母を指す語が、「（出産に立ち会う）親しい女友達」→「おしゃべりな女」→「うわさ話」へと転じた。
++der: sibling, sib, god
+
+@ grocer ; /ˈɡrəʊsə/ ; 名 ; 食料品店
++lit: 「大口で（卸売りで）売る者」
++chain: 中世ラテン語 <i>grossārius</i>（<i>grossus</i>「太い、大きい」）→ アングロ・フランス語
++der: gross（総額の、粗野な）, grocery, engross（「大文字で書く／独占する」）, grossly
++note: <i>gross</i>「12ダース＝144」も「大きな（数）」から。小売店なのに「卸売り」の語であるのは、もと大量に仕入れて売ったことによる。
+
+@ gymnasium ; /dʒɪmˈneɪziəm/ ; 名 ; 体育館
++lit: 「裸で鍛える場所」
++chain: Gk <i>gymnós</i>「裸の」→ <i>gymnásion</i>
++desc: 古代ギリシアでは競技も訓練も裸で行われた。ドイツ語圏で <i>Gymnasium</i> が「進学校」を意味するのは、古代の体育場が同時に知的教育の場でもあったため。
++der: gymnast, gymnastics, gymnosperm（「裸子植物」＝種が裸）
+
+@ guy ; /ɡaɪ/ ; 名 ; 男、やつ
++chain: 人名 Guy Fawkes（1570–1606）
++desc: 1605年の火薬陰謀事件の首謀者ガイ・フォークス。毎年11月5日に彼を模した人形（<i>guy</i>）を焼く風習から、「奇妙な服装の人形」→「変な男」→「男一般」→（複数形で）「みんな」と、四段階で意味が拡大した。米語では <i>you guys</i> のように性別を問わず用いる。
++note: 綱の <i>guy</i>（張り綱）は別語源（低地ドイツ語）。
+
+@ guest ; /ɡest/ ; 名 ; 客
++root: *gʰostis
++chain: PIE *gʰostis → PGmc *gastiz → ON <i>gestr</i> → ME（OE <i>giest</i> を置換）
++cog: L <i>hostis</i>「敵」, <i>hospes</i>「客／主人」, 露 <i>гость</i>
++der: host, hostile, hostage, hospital, hospice, hostel, hotel
++note: 印欧語の「よそ者」は、迎えれば客、拒めば敵。この両義性が <i>guest</i> と <i>hostile</i> に分裂した。古代の客人歓待（<i>xenía</i>）の掟が背景にある。
+
+@ gorilla ; /ɡəˈrɪlə/ ; 名 ; ゴリラ
++chain: Gk <i>Górillai</i>（カルタゴの航海者ハンノの航海記に登場する「毛深い人々」）→ 1847年、宣教師サヴェッジが新種の類人猿に命名
++note: 古代の文献の一語が、二千年以上を隔てて動物名として復活した珍しい例。
+
+@ gauntlet ; /ˈɡɔːntlət/ ; 名 ; 籠手／笞刑
++desc: 二つの別語が同綴になった例。（1）<i>throw down the gauntlet</i>「挑戦する」の <i>gauntlet</i> は仏 <i>gantelet</i>「小さな手袋」。（2）<i>run the gauntlet</i>「板挟みの試練を受ける」の <i>gauntlet</i> はスウェーデン語 <i>gatlopp</i>「通路を走ること」（三十年戦争期の軍隊刑罰）で、<i>gantelet</i> に引かれて綴りが変わった。
++note: 民間語源による綴りの同化の好例（第1章）。
+
+@ grotesque ; /ɡrəʊˈtesk/ ; 形 ; 怪奇な
++lit: 「洞窟の（様式の）」
++chain: 伊 <i>grottesca</i>（<i>grotta</i>「洞窟」）
++desc: 15世紀末、ローマでネロの「黄金宮」（<i>Domus Aurea</i>）の遺構が地下から発見され、洞窟（<i>grotta</i>）と呼ばれた。その壁画の奇怪な装飾文様が <i>grottesca</i> と呼ばれ、様式名になった。
++der: grotto, crypt（同語源。Gk <i>kryptḗ</i>「隠された（部屋）」）
+
+@ gaudy ; /ˈɡɔːdi/ ; 形 ; けばけばしい
++chain: L <i>gaudium</i>「喜び」→ 中世英語で数珠の大玉（<i>gaudy</i>、主祷文の位置を示す装飾玉）
++desc: 装飾的な数珠玉から「派手な」の意へ、というのが有力説。
++der: joy, rejoice, gaudeamus（学生歌「喜ばん」）
+
+@ gauge ; /ɡeɪdʒ/ ; 名 ; 計器、規格
++chain: 北仏 <i>gauge</i>（語源不確実。ゲルマン語 *galgo「棒」説）
++note: <i>gage</i>（担保、挑戦）とは別語源だが、綴りが混同されてきた。
+
+@ genuine ; /ˈdʒenjuɪn/ ; 形 ; 本物の
++lit: 「生まれつきの」
++chain: L <i>genuīnus</i>（<i>gignere</i>「生む」）
++note: 「父が新生児を膝（L <i>genū</i>）に載せて嫡出子と認めた習慣に由来する」という説が広く流布しているが、これは俗説の色彩が濃い。<i>genū</i>「膝」（→ knee）と *ǵenh₁-「生む」は別語根であり、形が似ているのは偶然である。主説は「生まれつきの、血統の正しい」。
+
+@ grenade ; /ɡrəˈneɪd/ ; 名 ; 手榴弾
++lit: 「ザクロ」
++chain: L <i>grānātum</i>「種の多い（果実）」→ 仏 <i>grenade</i>「ザクロ」→「手榴弾」
++desc: 破片が飛び散るさまがザクロの種に見立てられた。
++der: grain, granule, pomegranate（「種の多いリンゴ」）, garnet（ザクロ石）, Granada, grenadier
++note: 日本語の「手榴弾」の「榴」も石榴（ザクロ）である。同じ比喩が独立に成立した。
+
+
+@ gazette ; /ɡəˈzet/ ; 名 ; 官報
++chain: ヴェネツィア方言 <i>gazeta</i>（16世紀の小銭の名。新聞一部の値段）
++note: 硬貨の名が新聞の名になった換喩。<i>magazine</i>（倉庫）, <i>journal</i>（日々の）, <i>bulletin</i>（小さな印章）と並び、報道媒体の名はいずれも物からの転用である。
+
+@ genius ; /ˈdʒiːniəs/ ; 名 ; 天才
++lit: 「（生まれについた）守護霊」
++chain: L <i>gignere</i>「生む」→ <i>genius</i>「人に生まれつき付き添う霊」
++desc: ローマでは各人に守護霊が付くと考えられた。「生まれつきの才能」→「並外れた才能」→「天才（人）」と意味が移った。<i>genie</i>（アラビア語 <i>jinnī</i>）は別語源だが、フランス語訳で <i>génie</i> と訳されて混同された。
++der: gene, genus, general, genuine, ingenious, engine, nature, native
+
+@ gerund ; /ˈdʒerənd/ ; 名 ; 動名詞
++chain: L <i>gerundium</i>（<i>gerere</i>「行う」）
++note: 文法用語の多くはギリシア語の術語をラテン語に訳したもの。<i>case</i>（落ちること）, <i>accusative</i>（<i>aitiātikē</i>「原因の」の誤訳とされる）, <i>genitive</i>（「生まれの」）, <i>nominative</i>（「名づけの」）, <i>preposition</i>（「前に置くもの」）。
+
+@ gossamer ; /ˈɡɒsəmə/ ; 名 ; 蜘蛛の糸、薄い織物
++lit: 「がちょうの夏」
++chain: ME <i>gossomer</i>（<i>goose</i> + <i>summer</i>）
++desc: 小春日和（がちょうを食べる季節）に空中を漂う蜘蛛の糸から。ドイツ語 <i>Sommerfäden</i>「夏の糸」、<i>Altweibersommer</i>「老婆の夏」も同じ季節の現象を指す。
+
+@ gospel ; /ˈɡɒspl/ ; 名 ; 福音
++lit: 「よい知らせ」
++chain: OE <i>gōdspel</i>（<i>gōd</i>「よい」+ <i>spel</i>「知らせ、話」）
++desc: ギリシア語 <i>euangélion</i>「よい知らせ」の翻訳借用（第6章）。<i>evangelist</i> は同じギリシア語からの借用形。
++der: spell（「呪文、話」）, evangelist, angel（<i>ángelos</i>「使者」）
+
+@ granite ; /ˈɡrænɪt/ ; 名 ; 花崗岩
++lit: 「粒状の」
++chain: 伊 <i>granito</i>「粒だった」（<i>grano</i>「粒」）
++der: grain, granule, granary, pomegranate, grenade, corn（本来語）
++note: 結晶の粒が見えることによる命名。
+

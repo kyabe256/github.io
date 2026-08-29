@@ -1,0 +1,170 @@
+== M
+
+@ magazine ; /mæɡəˈziːn/ ; 名 ; 雑誌、弾倉
++lit: 「倉庫」
++chain: アラビア語 <i>makhāzin</i>「倉庫（複数）」→ 伊 <i>magazzino</i> → 仏 <i>magasin</i> → 英語
++desc: 「倉庫」→「火薬庫・弾倉」→（比喩的に）「知識の倉」＝雑誌。1731年創刊の <i>The Gentleman's Magazine</i> が「雑誌」の語義を確立した。
++note: フランス語 <i>magasin</i> は今も「店」。同じ語が英語では「雑誌」、フランス語では「商店」になった。
+
+@ malaria ; /məˈleəriə/ ; 名 ; マラリア
++lit: 「悪い空気」
++chain: 伊 <i>mala aria</i>「悪い空気」→ 英語（1740）
++desc: 湿地の瘴気が原因と考えられたことによる命名。1880年に病原虫、1897年に蚊による媒介が判明したが、語だけが残った。
++der: malice, malign, dismal, malady／air, aerial, aerobic
+
+@ mall ; /mɔːl/ ; 名 ; ショッピングモール
++lit: 「木槌（で球を打つ遊び）」
++chain: 伊 <i>palla-maglio</i>「球－槌」→ 仏 <i>pall-mall</i> → ロンドンのその競技場 <i>The Mall</i> → 「並木の遊歩道」→「商店街」
++desc: 17世紀ロンドンのペルメル競技場が遊歩道になり、その名が「歩行者専用の通り」を意味するようになった。20世紀アメリカで「屋内商店街」へ。
++der: mallet, maul, malleable（すべて L <i>malleus</i>「槌」）
+
+@ manure ; /məˈnjʊə/ ; 名 ; 肥料
++lit: 「手で働くこと」
++chain: L <i>manū operārī</i>「手で働く」→ アングロ・フランス語 <i>mainoverer</i> → ME <i>manouren</i>「耕す」
++dbl: <i>manoeuvre/maneuver</i>（同一語の後代の借用）
++der: manual, manufacture, manage, manifest
++note: 「手作業で耕す」→「土に施す」→「肥料」。<i>maneuver</i>「作戦行動」と <i>manure</i>「糞尿」が同語源であるのは驚きに値する。
+
+@ marmalade ; /ˈmɑːməleɪd/ ; 名 ; マーマレード
++lit: 「蜜のリンゴ（＝マルメロ）」
++chain: Gk <i>melímēlon</i>（<i>méli</i>「蜜」+ <i>mêlon</i>「リンゴ」）→ ポルトガル語 <i>marmelo</i>「マルメロ」→ <i>marmelada</i> → 仏 → 英語
++desc: 本来はマルメロの砂糖漬け。オレンジのものを指すようになったのは17世紀の英国から。
++note: 「スコットランド女王メアリーが病のとき（<i>Marie est malade</i>）に食べたから」という説は完全な作り話。
+
+@ mesmerize ; /ˈmezməraɪz/ ; 動 ; 魅了する
++chain: 人名 Franz Anton Mesmer（1734–1815）
++desc: 「動物磁気」による治療を唱えたウィーンの医師。その施術（メスメリズム）は後に催眠術の研究へつながった。
++der: mesmerism
+
+@ melancholy ; /ˈmelənkɒli/ ; 名 ; 憂鬱
++lit: 「黒い胆汁」
++chain: Gk <i>mélās</i>「黒い」+ <i>kholḗ</i>「胆汁」→ <i>melankholíā</i>
++desc: ヒポクラテス以来の四体液説で、黒胆汁の過多が憂鬱を生むとされた。他の三体液も語彙を残している。<i>sanguine</i>（血液質＝陽気）, <i>phlegmatic</i>（粘液質＝冷静）, <i>choleric</i>（胆汁質＝短気）。
++der: melanin, melanoma, cholera, choler
++note: 医学理論は否定されても、性格語彙として四つとも生き残った。
+
+@ mile ; /maɪl/ ; 名 ; マイル
++lit: 「千（歩）」
++chain: L <i>mīlia passuum</i>「千歩」→ OE <i>mīl</i>
++desc: ローマの一歩（<i>passus</i>）は左右二歩分（約1.48m）で、千歩は約1480m。現在の1マイル（1609m）は1593年の英国法で8ハロンと定められた結果。
++der: million（伊「大きな千」）, mill（千分の一）, millennium, mile
+
+@ money ; /ˈmʌni/ ; 名 ; 金銭
++lit: 「（女神）ユノ・モネタの（神殿で鋳造された）」
++chain: L <i>monēta</i>（ユノの称号）→ OF <i>moneie</i>
++desc: ローマの造幣所はカピトリヌスの丘のユノ・モネタ神殿にあった。<i>Monēta</i> は <i>monēre</i>「警告する」からで、ガリア人襲来を鵞鳥の鳴き声で警告した伝説にちなむとされる。
++der: mint（同語源の二重語。「造幣所」→「貨幣」）, monetary, monitor, admonish, mind
++note: <i>mint</i>（造幣所）と <i>money</i> は二重語。<i>mint</i>（ハッカ）は別語源（Gk <i>mínthē</i>）。
+
+@ mortgage ; /ˈmɔːɡɪdʒ/ ; 名 ; 抵当
++lit: 「死んだ質」
++chain: OF <i>mort</i>「死んだ」+ <i>gage</i>「質、担保」
++desc: 債務が完済されれば担保が「死ぬ（効力を失う）」、期限が切れれば債務者にとって土地が「死ぬ」——中世法学者コークの説明による。
++der: mortal, mortify, murder（本来語）／wage, wed（<i>gage</i> の同根語）
++note: <i>gage</i> は <i>wage</i>, <i>wed</i> と同根で、原義は「誓約の担保」。<i>wedding</i> も「誓約すること」。
+
+@ muscle ; /ˈmʌsl/ ; 名 ; 筋肉
++lit: 「小さなねずみ」
++chain: L <i>mūsculus</i>（<i>mūs</i>「ねずみ」の縮小形）
++desc: 皮下で動く上腕二頭筋が、小鼠の走るさまに見えたことによる。ギリシア語 <i>mŷs</i> も「ねずみ」と「筋肉」の両義を持ち、同じ比喩が独立に成立した。
++dbl: <i>mussel</i>（ムール貝。同じ <i>mūsculus</i> から）
++der: mouse（本来語）, marmot（「山のねずみ」）, musk（サンスクリット <i>muṣka-</i>「睾丸、小さなねずみ」）
++note: <i>mouse</i>, <i>muscle</i>, <i>mussel</i>, <i>musk</i> がすべて「ねずみ」に遡る。
+
+@ museum ; /mjuːˈziːəm/ ; 名 ; 博物館
++lit: 「ムーサたちの座所」
++chain: Gk <i>Mouseîon</i>（<i>Moûsa</i>「詩神ムーサ」）→ L <i>mūsēum</i>
++desc: 前3世紀のアレクサンドリアの学術機関（ムセイオン）が原型。英語で「収集品を展示する建物」の意になったのは17世紀。
++der: music（「ムーサの技」）, muse, amuse は別, mosaic（「ムーサに捧げられた（装飾）」説）
+
+@ mystery ; /ˈmɪstri/ ; 名 ; 神秘
++lit: 「（口を）閉じること」
++chain: Gk <i>mýein</i>「（目や口を）閉じる」→ <i>mystḗrion</i>「秘儀」
++desc: エレウシスの秘儀に入信した者は口外を禁じられた。<i>mystic</i>「秘儀参入者」も同根。
++der: mystic, mysticism, mute は別
++note: 中世の「聖史劇」を <i>mystery play</i> というが、この <i>mystery</i> は L <i>ministerium</i>「職業、同業組合」由来の別語で、同業組合が上演したことによる。
+
+@ mob ; /mɒb/ ; 名 ; 群衆
++lit: 「動きやすい群衆」
++chain: L <i>mōbile vulgus</i> → 短縮形 <i>mob</i>（1680年代）
++desc: 当時「下品な新造語」として非難された。ジョナサン・スウィフトは <i>mob</i>, <i>banter</i>, <i>bamboozle</i> などの短縮語を槍玉に挙げた（1712）。
++der: mobile, motion, move, motor, momentum, remote
+
+@ moment ; /ˈməʊmənt/ ; 名 ; 瞬間、重要性
++lit: 「（天秤を）動かすもの」
++chain: L <i>mōmentum</i>（<i>movēre</i>「動かす」+ <i>-mentum</i>）「動き、重み、決め手」
++desc: 天秤を傾かせるわずかな重みが原義。そこから「決定的な要因」→「重要性」（<i>of great moment</i>）と「（傾く）一瞬」→「瞬間」の二方向に分岐した。物理学の <i>momentum</i>「運動量」「モーメント」は原義に近い。
++der: move, motion, motive, emotion, promote, remote, mobile, mob
+
+@ mausoleum ; /mɔːsəˈliːəm/ ; 名 ; 霊廟
++chain: 人名 Mausolos（前4世紀、カリアの太守）
++desc: 妻アルテミシアが夫マウソロスのために築いた壮大な墓（ハリカルナッソスのマウソロス霊廟）は、世界の七不思議のひとつに数えられた。以後、壮大な墓の代名詞となった。
+
+
+@ manager ; /ˈmænɪdʒə/ ; 名 ; 管理者
++lit: 「馬を手で御する者」
++chain: 伊 <i>maneggiare</i>「（馬を）手で扱う」（L <i>manus</i>「手」）→ 仏 <i>manège</i>／英 <i>manage</i>
++der: manual, manufacture, manner, maneuver, manifest, manure, mandate, maintain
++note: 馬術用語が経営用語になった。<i>manège</i> は今も「馬場、馬術」の意。
+
+@ maroon ; /məˈruːn/ ; 動・形 ; 置き去りにする／栗色の
++desc: 二つの別語。（1）「置き去りにする」＝西 <i>cimarrón</i>「（家畜が）野生化した、逃亡奴隷」→ 仏 <i>marron</i>。（2）色の <i>maroon</i>＝仏 <i>marron</i>「栗」（伊 <i>marrone</i>）。
++note: 同綴だが起源は異なる。
+
+@ mattress ; /ˈmætrəs/ ; 名 ; マットレス
++lit: 「（クッションを）投げるところ」
++chain: アラビア語 <i>maṭraḥ</i>「投げる場所、クッション」→ 伊 <i>materasso</i> → OF <i>materas</i>
++note: 十字軍時代にアラブの床に座る習慣とともに伝わった語。
+
+@ meander ; /miˈændə/ ; 動 ; 曲がりくねる
++chain: 地名 Gk <i>Maíandros</i>（小アジアの蛇行する川、現メンデレス川）
++note: 地名が普通名詞・動詞になった例。地理学で「蛇行」を <i>meander</i> と呼ぶのも同じ。
+
+@ mediocre ; /miːdiˈəʊkə/ ; 形 ; 平凡な
++lit: 「山の中ほど（にある）」
++chain: L <i>medius</i>「中間の」+ <i>ocris</i>「険しい山」
++der: medium, median, middle（本来語）, mediate, immediate, meridian
++note: 「頂上にも麓にも達しない」という比喩。
+
+@ melody ; /ˈmelədi/ ; 名 ; 旋律
++lit: 「歌の歌」
++chain: Gk <i>mélos</i>「歌、旋律」+ <i>ōidḗ</i>「歌」→ <i>melōidíā</i>
++der: ode, comedy, tragedy, parody, rhapsody, prosody, palinode
+
+@ mercy ; /ˈmɜːsi/ ; 名 ; 慈悲
++lit: 「（神からの）報酬、代価」
++chain: L <i>merces, mercēdis</i>「報酬、代価」→ 後期ラテン語で「（善行に対する）天の報い」→ OF <i>merci</i>
++der: merchant, market, commerce, mercenary, Mercury, merci（仏「ありがとう」）
++note: 「商取引の代価」から「慈悲」へ移ったのは、教会ラテン語での用法による。仏語 <i>merci</i>「ありがとう」も同語。
+
+@ midwife ; /ˈmɪdwaɪf/ ; 名 ; 助産婦
++lit: 「（産婦と）ともにいる女」
++chain: ME <i>mid</i>「〜とともに」（独 <i>mit</i>）+ <i>wif</i>「女」
++note: <i>mid</i> は古い前置詞で、<i>with</i> に置き換えられて消えた。この語に化石として残る。<i>wife</i> はここでは「女」（原義）。
+
+@ minister ; /ˈmɪnɪstə/ ; 名 ; 大臣、牧師
++lit: 「より小さい者＝奉仕者」
++chain: L <i>minus</i>「より少ない」→ <i>minister</i>「召使い」
++der: minor, minus, minute, diminish, administer, ministry
++note: <i>magister</i>「より大きい者」（→ master）と対をなす。国家の <i>minister</i>「大臣」が「奉仕者」であるのは、王への奉仕者だったから。
+
+@ moot ; /muːt/ ; 形 ; 議論の余地のある
++lit: 「集会（で論じる）」
++chain: OE <i>mōt</i>「集会」（<i>gemōt</i>、<i>witenagemot</i>「賢人会議」）
++desc: 法学教育での模擬裁判（<i>moot court</i>）から「議論のための（実際的でない）問題」の意になり、さらに米語で「無意味な」の意味も生じた。
++der: meet（本来語の同根語）
+
+@ mortar ; /ˈmɔːtə/ ; 名 ; 乳鉢、モルタル、迫撃砲
++chain: L <i>mortārium</i>「乳鉢、（そこで作る）漆喰」
++note: 一語が「臼」「漆喰」「臼型の砲」の三義に分岐した。<i>mortarboard</i>「角帽」は漆喰を載せる板の形から。
+
+@ mosaic ; /məʊˈzeɪɪk/ ; 名 ; モザイク
++chain: 中世ラテン語 <i>mūsaicum</i>「ムーサに捧げられた（装飾）」（Gk <i>Moûsa</i>）
++der: museum, music, muse
++note: <i>Mosaic</i>「モーセの」（<i>Moses</i>）とは無関係な同綴語。
+
+@ mustard ; /ˈmʌstəd/ ; 名 ; マスタード
++lit: 「（新酒の）ぶどう果汁で練ったもの」
++chain: L <i>mustum</i>「新しいぶどう果汁」→ OF <i>mostarde</i>
++der: must（ぶどう果汁）, mustang は別
++note: からし種を <i>must</i> で練って作ったことによる。原料ではなく調製法による命名。

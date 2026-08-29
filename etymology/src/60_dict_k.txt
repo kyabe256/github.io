@@ -1,0 +1,42 @@
+== K
+
+@ ketchup ; /ˈketʃʌp/ ; 名 ; ケチャップ
++chain: 閩南語（アモイ方言）<i>kê-tsiap</i>「魚醤」→ マレー語 <i>kicap</i> → 英語（1690年代）
++desc: 本来は東南アジアの発酵魚醤。イギリスではキノコやクルミで作られ、トマトを用いるようになったのは19世紀初頭のアメリカから。
++note: 語だけが残り、中身が完全に入れ替わった例。
+
+@ kidnap ; /ˈkɪdnæp/ ; 動 ; 誘拐する
++lit: 「子どもをかっぱらう」
++chain: <i>kid</i>「子ども」+ <i>nap</i>「かすめ取る」（<i>nab</i> の異形）
++desc: 17世紀末の犯罪者俗語。アメリカ植民地に年季奉公人として売るため子どもをさらう行為を指した。名詞 <i>kidnapper</i> が先で、動詞は逆成である（第6章）。
++der: nab, kid（もと「子山羊」＜ ON <i>kið</i>）
+
+@ kindergarten ; /ˈkɪndəɡɑːtn/ ; 名 ; 幼稚園
++lit: 「子どもの庭」
++chain: 独 <i>Kindergarten</i>（フリードリヒ・フレーベル, 1840）
++der: kind, kin（英語の同根語）, garden, yard
++note: <i>Kinder</i> は英語 <i>kind</i>「種類」「親切」と同根で、原義は「生まれ」。<i>Garten</i> は <i>garden</i>, <i>yard</i> と同根。ドイツ語の複合語がそのまま英語に入った例。
+
+@ knight ; /naɪt/ ; 名 ; 騎士
++lit: 「少年、召使い」
++chain: OE <i>cniht</i>「少年、従者」
++cog: 独 <i>Knecht</i>「下男」
++desc: 「少年」→「従者」→「（領主に仕える）武装した従者」→「騎士」と、五百年かけて社会的地位が上昇した（良化、第7章）。ドイツ語では逆に <i>Knecht</i> が「下僕」のまま残った。
++note: 語頭の /kn/ は17世紀まで発音された。綴りの gh は古英語の /ç/ 音の名残。
+
+@ know ; /nəʊ/ ; 動 ; 知る
++root: *ǵneh₃-
++chain: PIE *ǵneh₃- → PGmc *knēanan → OE <i>cnāwan</i>
++cog: L <i>(g)nōscere</i>, Gk <i>gignṓskein</i>, Skt <i>jñā-</i>, 露 <i>знать</i>
++der: can, ken, cunning, uncouth（「知られていない」→ 無作法な）, acknowledge／ラテン系 notice, notion, notorious, noble, ignore, cognition, recognize, narrate, normal／ギリシア系 gnostic, diagnosis, prognosis, physiognomy
++note: <i>uncouth</i>「無骨な」は <i>un-</i> + <i>cūth</i>（<i>cunnan</i>「知る」の過去分詞）＝「（世に）知られていない」。<i>kith and kin</i> の <i>kith</i> も同根で「知り合い」。
+
+@ kowtow ; /kaʊˈtaʊ/ ; 動 ; 平伏する、へつらう
++lit: 「叩頭」
++chain: 中国語「叩頭」（kòutóu）→ 英語（1804）
++desc: 清朝の宮廷儀礼で、額を床に打ちつける最敬礼。マカートニー使節団（1793）がこれを拒否した事件で西欧に知られた。
+
+@ kudos ; /ˈkjuːdɒs/ ; 名 ; 称賛
++chain: Gk <i>kŷdos</i>「名声、栄光」→ 英語（19世紀初、大学俗語）
++note: ギリシア語では単数形だが、英語では語尾の -s から複数と誤解され、逆成によって単数形 <i>kudo</i> が作られた（第6章）。同様の例に <i>pea</i>（＜ <i>pease</i>）, <i>cherry</i>（＜ <i>cherise</i>）。
+

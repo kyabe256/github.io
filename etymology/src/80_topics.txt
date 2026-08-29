@@ -1,0 +1,234 @@
+# 第VII部　主題別語源誌
+
+## 1　曜日の名――ローマの神とゲルマンの神
+
+英語の曜日名は、ローマの七曜（惑星に対応する神々の日）をゲルマンの神々に置き換えた「解釈翻訳」（<i>interpretatio germanica</i>）の産物である。
+
+| 英語 | 古英語 | ラテン語 | 対応 |
+|---|---|---|---|
+| Sunday | <i>Sunnandæg</i> | <i>diēs Sōlis</i> | 太陽 |
+| Monday | <i>Mōnandæg</i> | <i>diēs Lūnae</i> | 月 |
+| Tuesday | <i>Tīwesdæg</i> | <i>diēs Martis</i> | 軍神 Tīw ＝ Mars |
+| Wednesday | <i>Wōdnesdæg</i> | <i>diēs Mercuriī</i> | Wōden（Odin）＝ Mercurius |
+| Thursday | <i>Þunresdæg</i> | <i>diēs Iovis</i> | 雷神 Þunor（Thor）＝ Iuppiter |
+| Friday | <i>Frīgedæg</i> | <i>diēs Veneris</i> | 女神 Frīg ＝ Venus |
+| Saturday | <i>Sæternesdæg</i> | <i>diēs Saturnī</i> | Saturnus（置換されず） |
+
+Tīw は印欧祖語 *dyeus「天空神」に遡り、ギリシアの Zeus、ローマの Iuppiter（*dyeu-ph₂ter「天なる父」）と同語源である。皮肉なことに、語源的には Zeus と同じ神が、ローマ側の Mars に対応させられたことになる。
+
+土曜日だけがゲルマンの神に置き換えられなかったのは、対応する神が見つからなかったためとされる。ロマンス諸語では土曜日は <i>sabbatum</i>（ヘブライ語「安息日」）由来（仏 <i>samedi</i>, 西 <i>sábado</i>）、日曜日は <i>diēs dominica</i>「主の日」由来（仏 <i>dimanche</i>）に置き換わった。ポルトガル語だけは、月〜金を <i>segunda-feira</i>（第二の祭日）〜<i>sexta-feira</i> と番号で呼び、異教の神名を完全に排除した。
+
+日本語の七曜も、同じ惑星＝神の体系が中国・インドを経由して伝わったもので、英語と対応が一致する（日・月・火＝Mars・水＝Mercury・木＝Jupiter・金＝Venus・土＝Saturn）。
+
+## 2　月名――ローマ暦のずれ
+
+| 月 | 語源 |
+|---|---|
+| January | 門の神 <i>Iānus</i>（<i>iānua</i>「扉」）。<i>janitor</i>「門番」と同根 |
+| February | <i>februa</i>「浄化の祭儀」。年末の清めの月 |
+| March | 軍神 <i>Mārs</i>。ローマ暦の年始で、軍事行動の再開する月 |
+| April | 不確実。<i>aperīre</i>「開く」説と <i>Aphrodite</i> 説 |
+| May | 女神 <i>Maia</i>（成長の女神）。<i>magnus</i> と同根か |
+| June | 女神 <i>Iūnō</i>、または <i>iuniōrēs</i>「若者たち」 |
+| July | <i>Iūlius</i> Caesar（前44年に <i>Quīntīlis</i>「第五月」から改称） |
+| August | <i>Augustus</i>（前8年に <i>Sextīlis</i>「第六月」から改称） |
+| September | <i>septem</i>「七」 |
+| October | <i>octō</i>「八」 |
+| November | <i>novem</i>「九」 |
+| December | <i>decem</i>「十」 |
+
+9月から12月の名が二か月ずれているのは、ローマ暦がもともと3月始まりの10か月暦で、後に1月・2月が年頭に追加されたためである。ユリウス暦の改革（前46年）で1月1日が年始と定められたが、月名は変えられなかった。
+
+英語圏で1月1日が年始として定着したのは、グレゴリオ暦を採用した1752年である。それ以前のイングランドでは3月25日（受胎告知の日）が年始だった。
+
+## 3　惑星と神々
+
+| 天体 | 神 | 派生語 |
+|---|---|---|
+| Mercury | ヘルメス（伝令、商業） | mercurial（気まぐれな）, merchant, market, mercy |
+| Venus | アフロディテ（愛） | venereal, venerate, venom（「媚薬」）, venison(?) |
+| Mars | アレス（戦争） | martial, march（行進）, March |
+| Jupiter | ゼウス（天空） | jovial（陽気な＝木星の影響下の）, Jove |
+| Saturn | クロノス（農耕） | saturnine（陰鬱な）, Saturday, saturnalia |
+| Uranus | ウラノス（天） | uranium, uranography |
+| Neptune | ポセイドン（海） | neptunium, Neptunian |
+| Pluto | ハデス（冥界） | plutonium, plutocracy（別語源 <i>ploûtos</i>「富」だが古代から関連づけられた） |
+
+占星術は、各惑星が人間の気質に影響を与えると考えた。<i>mercurial</i>（快活・気まぐれ）, <i>jovial</i>（陽気）, <i>saturnine</i>（陰気）, <i>martial</i>（好戦的）, <i>venereal</i>（性愛の）, <i>lunatic</i>（狂気の）——性格語彙のかなりの部分が、この占星術的世界観に由来している。<i>disaster</i>（凶星）, <i>influence</i>（星の霊気）, <i>consider</i>（<i>sīdus</i>「星」を見る＝熟慮する）も同じ地層に属する。
+
+## 4　数詞の語源
+
+| 数 | 英語 | ラテン語 | ギリシア語 | 派生語 |
+|---|---|---|---|---|
+| 1 | one | <i>ūnus</i> | <i>heîs/mónos</i> | unit, union, unique／monopoly, monk（「独りの者」） |
+| 2 | two | <i>duo</i> | <i>dýo</i> | dual, double, doubt（「二つに迷う」）／dilemma, diploma |
+| 3 | three | <i>trēs</i> | <i>treîs</i> | trio, trivial（「三叉路」）／tripod |
+| 4 | four | <i>quattuor</i> | <i>téttares</i> | quart, quarantine（40日）／tetrahedron |
+| 5 | five | <i>quīnque</i> | <i>pénte</i> | quintessence（第五元素）／pentagon, punch（飲料） |
+| 6 | six | <i>sex</i> | <i>héx</i> | sextet, semester（「六か月」）／hexagon |
+| 7 | seven | <i>septem</i> | <i>heptá</i> | September／heptathlon |
+| 8 | eight | <i>octō</i> | <i>oktṓ</i> | October, octave／octopus |
+| 9 | nine | <i>novem</i> | <i>ennéa</i> | November, noon（「第九時」）／ennead |
+| 10 | ten | <i>decem</i> | <i>déka</i> | decimal, dean（十人隊長）／decade |
+| 100 | hundred | <i>centum</i> | <i>hekatón</i> | cent, century／hecatomb（「百頭の犠牲」） |
+| 1000 | thousand | <i>mīlle</i> | <i>khīlioi</i> | mile, million, millennium／kilogram |
+
+<i>eleven</i> と <i>twelve</i> だけがゲルマン語独自の「一つ残る／二つ残る」構造を持つ（第VI部 eleven の項）。<i>hundred</i> の -red は「数」（OE <i>rād</i>）で、「百の数」の意。
+
+「ゼロ」の語だけは印欧語起源でなく、インドからアラビア経由で伝わった（<i>zero</i>, <i>cipher</i>）。ゼロという概念そのものが後から来たことを、語彙が証言している。
+
+## 5　身体の語彙
+
+身体語は基礎語彙であり、本来語（ゲルマン系）とラテン語系・ギリシア語系の三層が最も鮮やかに対比される領域である。
+
+| 部位 | 本来語 | ラテン系（形容詞・術語） | ギリシア系（医学） |
+|---|---|---|---|
+| head | head | capital, decapitate | cephalic, encephalitis |
+| brain | brain | cerebral | encephalo- |
+| eye | eye | ocular, binocular | ophthalmic, optic |
+| ear | ear | auricular, aural | otitis |
+| nose | nose | nasal | rhinoplasty |
+| mouth | mouth | oral | stomatitis |
+| tooth | tooth | dental | orthodontics |
+| tongue | tongue | lingual, language | glossary, glottis |
+| neck | neck | cervical, collar | trachelo- |
+| heart | heart | cordial, courage | cardiac |
+| blood | blood | sanguine | hemoglobin |
+| lung | lung | pulmonary | pneumonia |
+| liver | liver | （<i>iecur</i> は廃れた） | hepatitis |
+| kidney | kidney | renal | nephritis |
+| stomach | maw, belly | ventral, gastric は ギ | gastric |
+| bone | bone | osseous | osteoporosis |
+| skin | skin, hide | cutaneous | dermatology |
+| hand | hand | manual | chiropractic |
+| foot | foot | pedal, pedestrian | podiatry |
+| knee | knee | genuflect | gonio- |
+| finger | finger | digital | dactyl（詩の「長短短格」） |
+| hair | hair | capillary | trichology |
+| flesh | flesh | carnal | sarcasm, sarcophagus |
+| body | body | corporal | somatic |
+
+本来語のほとんどは印欧祖語まで遡る最古層の語彙であり、ラテン語形とグリムの法則で対応する（<i>heart</i> : <i>cor(dis)</i>、<i>tooth</i> : <i>dent-</i>、<i>foot</i> : <i>ped-</i>、<i>knee</i> : <i>genū</i>）。
+
+## 6　動物の語彙
+
+<b>本来語と学名の対</b>：cow : bovine, sheep : ovine, pig : porcine, horse : equine, dog : canine, cat : feline, bird : avian, fish : piscine, bear : ursine, wolf : lupine, mouse : murine, snake : serpentine。
+
+<b>肉と家畜</b>（第5章）：ox/cow → beef、calf → veal、sheep → mutton、pig/swine → pork、deer → venison。飼う者と食べる者の言語が違った社会構造の化石。
+
+<b>忌み名と迂言</b>：<i>bear</i>「熊」はゲルマン語の婉曲語で「褐色のもの」（*bʰerH-）。本来の印欧語形 *h₂ŕ̥tḱos（Gk <i>árktos</i>, L <i>ursus</i>）はゲルマン語から失われた。狩猟民が獲物の真名を口にすることを避けた結果とされる。スラヴ語では「蜜を食べる者」（露 <i>медведь</i>）と呼ぶ。<i>Arctic</i>「北極」は「熊（座）の（方角）」で、失われた本来語が学術語として戻ってきた形である。
+
+<b>誤解による命名</b>：<i>turkey</i>「七面鳥」は、アフリカのホロホロチョウがトルコ経由で輸入されたため <i>turkey-cock</i> と呼ばれ、その名が新大陸産の別種に転用された。トルコ語ではこの鳥を <i>hindi</i>「インドの」と呼び、フランス語も <i>dinde</i>（<i>d'Inde</i>「インドの」）。誰もが自国以外の遠い場所の名で呼んでいる。<i>guinea pig</i>「モルモット」も南米産でギニアとは無関係。<i>koala bear</i>, <i>panda bear</i> は熊ではない。
+
+<b>身体部位からの命名</b>：<i>rhinoceros</i>（鼻・角）, <i>hippopotamus</i>（川・馬）, <i>platypus</i>（平たい・足）, <i>octopus</i>（八・足）, <i>chameleon</i>（地の・獅子）, <i>crocodile</i>（<i>krokódīlos</i>「小石の虫」＝石の上で日光浴するトカゲ）。
+
+## 7　食べ物の語彙
+
+<b>塩から</b>：salt, salary, salad（「塩をした野菜」）, sauce, saucer, sausage, salami, salsa, sal ammoniac。
+<b>パンから</b>：lord（パンの番人）, lady（パンをこねる者）, companion（パンを共にする者）, company, pantry, lammas。
+<b>穀物から</b>：corn（本来語）, grain, granary, granite, pomegranate, garner, kernel。
+<b>果物・野菜</b>：<i>orange</i>（サンスクリット）, <i>lemon</i>（ペルシア語）, <i>apricot</i>（「早熟の」ラテン語がアラビア語を経て戻る）, <i>peach</i>（<i>persica</i>「ペルシアの」）, <i>cherry</i>（<i>cherise</i> の逆成）, <i>pea</i>（<i>pease</i> の逆成）, <i>avocado</i>（ナワトル語 <i>āhuacatl</i>）, <i>tomato</i>（<i>tomatl</i>）, <i>chocolate</i>（<i>xocolātl</i>）, <i>potato</i>（タイノ語 <i>batata</i>）, <i>coffee</i>（アラビア語 <i>qahwa</i>）, <i>tea</i>（閩南語）, <i>sugar</i>（サンスクリット <i>śarkarā</i>「砂利」）, <i>candy</i>（アラビア語 <i>qandī</i>）, <i>ginger</i>（サンスクリット <i>śṛṅgavera</i>「角の形の根」）。
+<b>料理法</b>：<i>biscuit</i>（「二度焼いた」）, <i>toast</i>（「焼いて乾かす」＜ <i>torrēre</i>）, <i>roast</i>, <i>fry</i>, <i>boil</i>（<i>bulla</i>「泡」）, <i>barbecue</i>（タイノ語）, <i>casserole</i>（「小さな鍋」）, <i>gratin</i>（「削り取ったもの」）, <i>sauté</i>（「跳ばせた」）, <i>fondue</i>（「溶かした」）。
+
+<i>restaurant</i>「レストラン」は仏語 <i>restaurer</i>「回復させる」から。18世紀パリで「体を回復させるスープ」を出す店が現れ、その看板の語が店を指すようになった。<i>restore</i> と同語源である。
+
+## 8　色の語彙
+
+印欧祖語で確実に再建される色語は少なく、明度（明るい／暗い）の対立が中心だったと考えられる。
+
+- <b>black と blanc</b>：*bʰel-「輝く、焼ける」から、英語 <i>black</i>「黒」（焼けたもの）と仏語 <i>blanc</i>「白」（＜ ゲルマン語 *blank「輝く」）が分かれた。同じ語根から <i>blaze</i>, <i>bleach</i>, <i>blank</i>, <i>blind</i>, <i>blond</i>, <i>flame</i>, <i>flagrant</i> も出る。
+- <b>red</b>：*reudʰ- は色語のうち最も安定して残ったもの。L <i>ruber</i>, Gk <i>erythrós</i>, Skt <i>rudhira-</i>, 露 <i>рудый</i>。<i>ruby</i>, <i>rubric</i>, <i>rouge</i>, <i>russet</i>, <i>rust</i>, <i>erythrocyte</i>。
+- <b>white</b>：*ḱweit-「輝く」。<i>wheat</i>「小麦」（白い粉を挽く穀物）と同根。
+- <b>green</b> と <b>grow</b> と <b>grass</b> は同根（*gʰreh₁-「育つ」）。「植物の色」が色名になった。
+- <b>yellow</b>, <b>gold</b>, <b>gall</b>（胆汁）はいずれも *ǵʰel-「輝く、黄色い」から。<i>chlorine</i>（Gk <i>khlōrós</i>「黄緑」）も同根。
+- <b>blue</b> はゲルマン語がフランス語を経由して戻った形。L <i>flāvus</i>「黄色い」と同根で、印欧祖語段階では明度を表したとみられる。
+- <b>brown</b> は <i>bear</i>（褐色のもの）, <i>beaver</i>（褐色の動物）と同根。
+- <b>orange</b>, <b>violet</b>, <b>lilac</b>, <b>pink</b>, <b>indigo</b>, <b>crimson</b>, <b>scarlet</b>, <b>maroon</b>（栗）, <b>turquoise</b>（トルコ石）はすべて事物の名からの転用で、比較的新しい。
+
+言語学者バーリンとケイの研究（1969）は、諸言語の基本色彩語が「黒白 → 赤 → 黄／緑 → 青 → 茶 → 紫・桃・橙・灰」という順序で増えていくと論じた。英語の色語の語源的な新旧は、この序列とよく対応している。
+
+## 9　金融と法律の語彙
+
+<b>金融</b>：<i>bank</i>（両替台）, <i>bankrupt</i>（壊れた台）, <i>credit</i>（信じる）, <i>debt</i>（持たない）, <i>finance</i>（決済）, <i>fee</i>（家畜）, <i>pecuniary</i>（<i>pecus</i>「家畜」）, <i>capital</i>（頭数）, <i>cattle</i>（同）, <i>stock</i>（切り株→元手）, <i>salary</i>（塩）, <i>wage</i>（担保）, <i>mortgage</i>（死んだ質）, <i>interest</i>（「間にあるもの」＝関与）, <i>invest</i>（衣を着せる）, <i>dividend</i>（分けられるべきもの）, <i>tax</i>（触れる→評価する）, <i>tariff</i>（アラビア語「通知」）, <i>average</i>（アラビア語「海損」）, <i>cash</i>（金箱）, <i>coin</i>（<i>cuneus</i>「楔」＝刻印の型）, <i>money</i>（女神モネタ）, <i>mint</i>（同）, <i>dollar</i>（ヨアヒムの谷）, <i>budget</i>（革袋）。
+
+家畜が富の単位だったことを示す語群（<i>fee</i>, <i>pecuniary</i>, <i>capital</i>, <i>cattle</i>, <i>chattel</i>, <i>stock</i>）が特に印象的である。
+
+<b>法律</b>：ノルマン征服以後、法廷用語はフランス語で運用された。<i>judge, jury, justice, court, attorney, plaintiff, defendant, bail, verdict, plea, evidence, felony, larceny, arrest, indict, sue, tort, lease, mortgage, estate, heir, chattel, void</i>。ラテン語も直接に残る（<i>habeas corpus, prima facie, subpoena, amicus curiae, mens rea, actus reus, de facto, ultra vires, obiter dictum</i>）。
+
+英米法の文書に多い二語一組の言い方（<i>legal doublets</i>）は、フランス語系と本来語を並べて意味の漏れを防いだ名残である。<i>breaking and entering</i>, <i>fit and proper</i>, <i>goods and chattels</i>, <i>will and testament</i>, <i>cease and desist</i>, <i>null and void</i>, <i>aid and abet</i>, <i>free and clear</i>, <i>terms and conditions</i>。
+
+## 10　科学の語彙
+
+<b>物理</b>：<i>energy</i>（内なる働き）, <i>force</i>（強さ）, <i>mass</i>（<i>mâza</i>「練り粉の塊」）, <i>momentum</i>（動かすもの）, <i>inertia</i>（技のなさ＝不活発）, <i>gravity</i>（重さ）, <i>quantum</i>（どれだけ）, <i>spin</i>, <i>quark</i>（ジョイス『フィネガンズ・ウェイク』の一語, ゲルマン命名）, <i>lepton</i>（軽い）, <i>hadron</i>（重い）, <i>boson</i>（ボース）, <i>fermion</i>（フェルミ）, <i>entropy</i>（変換）, <i>plasma</i>（形作られたもの）, <i>laser</i>／<i>maser</i>（頭字語）。
+
+<b>化学</b>：<i>chemistry</i>（アラビア語 <i>al-kīmiyāʾ</i> ＜ Gk <i>khēmeíā</i>、あるいはエジプトの古名 <i>Kēme</i>「黒い土地」）, <i>alcohol</i>, <i>alkali</i>, <i>elixir</i>, <i>gas</i>（ヘルモントが Gk <i>kháos</i> から造語, 1640頃）, <i>molecule</i>（「小さな塊」）, <i>atom</i>, <i>ion</i>（「行くもの」）, <i>electron</i>（琥珀）, <i>catalyst</i>（解き放つもの）, <i>polymer</i>（多くの部分）, <i>isotope</i>（同じ場所）。
+
+<b>生物</b>：<i>cell</i>（小部屋。フックが1665年、コルクの構造を修道院の個室に見立てた）, <i>nucleus</i>（木の実）, <i>chromosome</i>（色に染まる体）, <i>gene</i>（生む）, <i>protein</i>（第一のもの）, <i>enzyme</i>（酵母の中に）, <i>hormone</i>（駆り立てるもの）, <i>mitochondria</i>（糸＋粒）, <i>virus</i>（毒液）, <i>bacteria</i>（小さな杖）, <i>vaccine</i>（雌牛）, <i>antibiotic</i>（生に反する）, <i>metabolism</i>（変化させること）。
+
+<b>地学・天文</b>：<i>geology</i>, <i>fossil</i>（掘り出されたもの）, <i>magma</i>（練ったもの）, <i>lava</i>（伊「洗い流すもの」）, <i>crater</i>（混酒器）, <i>tsunami</i>（津波）, <i>tectonic</i>（大工の）, <i>comet</i>（「長い髪の（星）」）, <i>meteor</i>（「空高く上がったもの」）, <i>eclipse</i>（見捨てる）, <i>satellite</i>（<i>satelles</i>「随員、護衛」）, <i>galaxy</i>（乳）, <i>nebula</i>（霧）, <i>quasar</i>（quasi-stellar の混成）, <i>pulsar</i>。
+
+## 11　英語のなかの日本語
+
+| 英語 | 日本語 | 備考 |
+|---|---|---|
+| tycoon | 大君 | 1857年、幕末の将軍の対外称号から |
+| honcho | 班長 | 朝鮮戦争期に米兵が持ち帰った |
+| rickshaw | 人力車 | <i>jinrikisha</i> の短縮 |
+| skosh | 少し | 同じく米兵経由の口語 |
+| soy | 醤油 | オランダ語 <i>soja</i> 経由（17世紀） |
+| tsunami | 津波 | 1896年の三陸地震の報道から |
+| karaoke | カラオケ | 「空」+ orchestra の混成 |
+| emoji | 絵文字 | <i>emotion</i>+<i>icon</i> との偶然の類似が普及を助けた |
+| umami | 旨味 | 1908年池田菊苗の命名、2000年代に国際的定着 |
+| karoshi | 過労死 | 1990年代 |
+| kaizen, kanban | 改善、看板 | 経営学用語として |
+| futon, kimono, sushi, sashimi, tofu, ramen, wasabi, sake, miso, bento | | 食・生活 |
+| judo, karate, aikido, sumo, kendo, ninja, samurai, katana | | 武道 |
+| haiku, origami, bonsai, ikebana, manga, anime, otaku, kawaii | | 文化 |
+| zen, koan, satori | 禅、公案、悟り | 中国語経由の語を日本語音で借用 |
+| kudzu | 葛 | 米国南部の侵略的外来種 |
+| shiitake, matsutake, enoki, edamame, yuzu, koji | | 食材 |
+| honcho, hibachi, sudoku, shibui | | |
+
+<i>emoji</i> は「絵文字」であって <i>emotion</i> とは無関係だが、英語話者には <i>emoticon</i> との類似が語感を支えている。偶然の音の一致が借用を助けた例である。
+
+## 12　地名に残る言語の地層
+
+| 要素 | 由来 | 例 |
+|---|---|---|
+| -chester, -caster, -cester | L <i>castra</i>「陣営」 | Manchester, Lancaster, Gloucester, Chester |
+| -wich, -wick | L <i>vīcus</i>「集落」 | Norwich, Ipswich, Warwick |
+| -port | L <i>portus</i> | Portsmouth, Newport |
+| -coln | L <i>colōnia</i> | Lincoln |
+| -burgh, -borough, -bury | OE <i>burh</i>「砦」 | Edinburgh, Peterborough, Canterbury |
+| -ham | OE <i>hām</i>「村」 | Birmingham, Nottingham |
+| -ton | OE <i>tūn</i>「囲い、村」 | Brighton, Preston |
+| -ford | OE <i>ford</i>「浅瀬」 | Oxford, Bradford |
+| -field | OE <i>feld</i> | Sheffield, Huddersfield |
+| -by | ON <i>býr</i>「村」 | Derby, Rugby, Grimsby |
+| -thorpe | ON <i>þorp</i>「集落」 | Scunthorpe, Mablethorpe |
+| -thwaite | ON <i>þveit</i>「開墾地」 | Braithwaite |
+| -ness | ON <i>nes</i>「岬」 | Skegness, Inverness |
+| -combe | ケルト語 <i>cwm</i>「谷」 | Ilfracombe |
+| Pen-, -pen | ケルト語「頭、丘」 | Penrith, Pennines |
+| Aber- | ケルト語「河口」 | Aberdeen, Aberystwyth |
+| Inver- | ゲール語「河口」 | Inverness |
+| Kirk- | ON <i>kirkja</i>「教会」 | Kirkby, Kirkwall |
+
+イングランド北東部に -by, -thorpe, -thwaite が集中することは、デーンローの範囲を地図上に描き出す。地名は、文献の残らない時代の言語接触を証言する第一級の史料である。
+
+<i>Oxford</i>「牛の渡る浅瀬」, <i>Cambridge</i>「グランタ川（後にケム川）の橋」, <i>Liverpool</i>「濁った入江」, <i>London</i>（ケルト語起源、意味不確実）, <i>York</i>（ケルト語 <i>Eburākon</i>「イチイの地」→ ローマ <i>Eboracum</i> → 古英語 <i>Eoforwīc</i>「猪の集落」と民間語源化 → ON <i>Jórvík</i> → York）。<i>York</i> の変遷は、ケルト・ローマ・アングロサクソン・ヴァイキングの四層がひとつの地名に畳み込まれた見事な例である。
+
+## 13　あいさつと日常語の来歴
+
+- <i>goodbye</i> ＜ <i>God be with ye</i>「神が汝と共にあらんことを」の縮約（16世紀）。<i>good</i> になったのは <i>good day</i>, <i>good night</i> の類推。
+- <i>hello</i> は19世紀の新しい語。<i>holla</i>「おーい」の異形で、電話の呼びかけとしてエジソンが推奨したことで一般化した（ベルは <i>ahoy</i> を主張した）。
+- <i>hi</i> ＜ <i>hey</i>、<i>hey</i> ＜ 中英語の間投詞。
+- <i>OK</i> は1839年ボストンの新聞に現れた <i>oll korrect</i>（<i>all correct</i> のふざけた綴り）の頭字語が定説。翌1840年の大統領選でヴァン・ビューレン（愛称 Old Kinderhook）の支持団体 "OK Club" が普及を後押しした。
+- <i>please</i> ＜ <i>if it please you</i>「あなたのお気に召すなら」の省略。
+- <i>thank</i> ＜ <i>think</i> と同根（「思う」→「（恩を）思う」）。<i>thought</i> と <i>thank</i> は同じ語根の別階梯。
+- <i>sorry</i> ＜ OE <i>sārig</i>「痛みのある」（<i>sore</i> と同根）。<i>sorrow</i> は別語源だが、形と意味の近さから互いに影響した。
+- <i>welcome</i> ＜ OE <i>wilcuma</i>「望まれた客」（<i>will</i> + <i>come</i>）。<i>well</i> になったのは古ノルド語の影響。
+- <i>farewell</i> ＜ <i>fare well</i>「よい旅を」。<i>fare</i> は「行く」（独 <i>fahren</i>）。
+- <i>cheers</i> ＜ OF <i>chiere</i>「顔つき」（＜ Gk <i>kára</i>「頭」）。「顔つき」→「機嫌」→「元気づけ」→「乾杯」。
+

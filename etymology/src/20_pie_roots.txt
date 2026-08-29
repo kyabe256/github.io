@@ -1,0 +1,819 @@
+# 第II部　印欧祖語語根辞典
+
+印欧祖語（PIE）の語根から、英語の語彙がどのように派生したかを一覧する。配列は再建形のアルファベット順（喉音 h₁ h₂ h₃ は、伝統的表記の a, e, o の位置に置いたものもある）。
+
+各項の見方：<b>+語形</b>＝アプラウトの各階梯や異形、<b>+同根語</b>＝他言語における反映形、<b>+英語への流入</b>＝英語に現れた語（本来語／ラテン語経由／ギリシア語経由に分けて示す）、<b>+ノート</b>＝補足。
+
+記号：L＝ラテン語、Gk＝ギリシア語、Skt＝サンスクリット語、PGmc＝ゲルマン祖語、OE＝古英語、ON＝古ノルド語、OF＝古フランス語、Goth＝ゴート語、OHG＝古高ドイツ語、Av＝アヴェスター語、OCS＝古教会スラヴ語、Lith＝リトアニア語、W＝ウェールズ語、OIr＝古アイルランド語。
+
+:: index root
+
+== A – B
+
+@ *h₂eǵ- ; 「駆る、動かす、導く」
++form: *h₂eǵ- / *h₂oǵ- / *h₂ǵ-
++cog: L <i>agere, āctum</i>「行う、駆る」; Gk <i>ágein</i>「導く」; Skt <i>ajati</i>; ON <i>aka</i>「（車で）行く」
++eng: <b>ラテン系</b> act, action, agent, agenda, agile, agitate, ambiguous（両方へ駆る）, cogent, exact, exigent, essay/assay（<i>exagium</i> 秤量）, navigate, litigate, mitigate, prodigal, transact, castigate, fumigate, purge（<i>pūrigāre</i>）／<b>ギリシア系</b> pedagogue（子を導く）, demagogue, synagogue（集める所）, agony（＜競技会 <i>agōn</i>）, antagonist, strategy（軍を導く術）, axiom（＜「重み」）
++note: L <i>agere</i> の完了分詞 <i>āctum</i> から act 系、現在幹から agent 系が出る（第9章）。<i>ambiguous</i> は「あちこちへ駆り立てる」＝定まらない。
+
+@ *h₂eḱ- ; 「鋭い、尖った」
++form: *h₂eḱ- / *h₂ḱ-
++cog: L <i>acer</i>「鋭い」, <i>acus</i>「針」, <i>aciēs</i>「刃」; Gk <i>akís</i>「先端」, <i>ákros</i>「頂上」, <i>oxýs</i>「鋭い、酸い」
++eng: <b>本来語</b> edge, egg on（＜ ON <i>eggja</i>「けしかける」）, ear（穀物の穂）／<b>ラテン系</b> acid, acute, acumen, acerbic, acrid, exacerbate, eager（＜「鋭い」）, vinegar（酸い酒）, acupuncture, ague／<b>ギリシア系</b> acrobat（先端を歩く）, acropolis, acronym, acrophobia, oxygen（酸を生む）, oxymoron（鋭くて愚か）, paroxysm, amphioxus
++note: <i>oxygen</i> はラヴォアジエが「酸を作るもの」と考えて命名したが、酸の本質は水素イオンであり、命名は誤りだった。
+
+@ *aiw- / *h₂eyu- ; 「生命力、長い時間、永遠」
++cog: L <i>aevum</i>「時代」, <i>aetās</i>「年齢」; Gk <i>aiṓn</i>「永劫」; Skt <i>āyu-</i>「寿命」; Goth <i>aiws</i>
++eng: <b>本来語</b> ever, never, aye（「常に」）, each（OE <i>ǣlc</i> ＜ <i>ā</i>+<i>gelīc</i>）／<b>ラテン系</b> age, eternal（<i>aeternus</i>）, coeval, medieval（中世＝<i>medium aevum</i>）, primeval, longevity, utopia は別語源／<b>ギリシア系</b> eon/aeon
++note: <i>ever</i> と <i>eternal</i> が同根であることは、意味からは自然だが形からは見えにくい。
+
+@ *al- ; 「養う、育つ」
++cog: L <i>alere</i>「養う」, <i>altus</i>「高い＝育った」, <i>alumnus</i>「養い子」, <i>adulēscēns</i>
++eng: <b>本来語</b> old, elder, alderman（OE <i>ealdorman</i>）, world（＜「人の齢」）／<b>ラテン系</b> adult, adolescent, alimony, aliment, altitude, exalt, enhance（＜ <i>altiāre</i>）, coalesce, proletarian（＜「子を産む者」）, alma mater（「育ての母」）, alumnus, abolish
++note: <i>altus</i> は「高い」と「深い」の両義を持つ（育った方向による）。<i>altitude</i> と英語 <i>old</i> は同根。
+
+@ *al- ; 「他の、向こうの」
++cog: L <i>alius</i>「他の」, <i>alter</i>「二者のうち他方」; Gk <i>állos</i>; Goth <i>aljis</i>
++eng: <b>本来語</b> else, other（＜ *an-tero-, 別語根）／<b>ラテン系</b> alias, alibi（「他の場所に」）, alien, alter, alternate, altruism, adulterate（他物を混ぜる）, ultra は別／<b>ギリシア系</b> allegory（別の場で語る）, allergy（別の働き）, allele, parallel, allophone, allopathy
++note: <i>alibi</i> は「（犯行時に）他の場所にいた」というラテン語の副詞そのもの。
+
+@ *ambʰi / *h₂mbʰi ; 「両側、周り」
++cog: L <i>ambi-</i>; Gk <i>amphí</i>; Gaulish <i>ambi-</i>; OHG <i>umbi</i>（＝ <i>um</i>）
++eng: <b>本来語</b> by(?), um- は消失／<b>ラテン系</b> ambition（票を求めて歩き回る）, ambient, ambiguous, ambulance（＜ <i>hôpital ambulant</i> 移動病院）, amputate（周りを切る）／<b>ギリシア系</b> amphibian（両方の生を生きる）, amphitheater（両側に観客席）, amphora（両側に取っ手）
++note: <i>ambition</i> はローマの選挙運動で候補者が有権者のあいだを「歩き回った」ことに由来する。
+
+@ *h₂enh₁- ; 「息をする」
++cog: L <i>animus</i>「心、気息」, <i>anima</i>「魂」; Gk <i>ánemos</i>「風」; Skt <i>ániti</i>「呼吸する」; Goth <i>uz-anan</i>「息を吐く」
++eng: <b>ラテン系</b> animal, animate, animosity, unanimous（心を一つに）, magnanimous, equanimity, pusillanimous（小さい心＝臆病）／<b>ギリシア系</b> anemone（「風の花」）, anemometer
++note: 「息＝魂」の連想は諸言語に共通する（L <i>spīritus</i>, Gk <i>psȳkhḗ</i>, ヘブライ語 <i>rūaḥ</i>, 日本語「息」と「生き」）。
+
+@ *ant- / *h₂ent- ; 「額、前面」
++cog: L <i>ante</i>「前に」; Gk <i>antí</i>「向かい合って」; Skt <i>ánti</i>; Hitt <i>ḫant-</i>「額」
++eng: <b>本来語</b> and(?), along（OE <i>andlang</i>）, answer（OE <i>andswaru</i>「向かって誓う」）／<b>ラテン系</b> ante-, anterior, ancient, antique, advance（＜ <i>abante</i>）, advantage, vanguard, vintage は別／<b>ギリシア系</b> anti-, antagonist, antibiotic, antidote（対抗して与えるもの）
++note: <i>answer</i> の <i>and-</i> は「向かって」で、<i>anti-</i> と同根。<i>advance</i> の d は語源的に誤った挿入（<i>ab ante</i> であって <i>ad-</i> ではない）。
+
+@ *h₂er- ; 「はめ合わせる、組み立てる」
++cog: L <i>ars, artis</i>「技」, <i>arma</i>「武具」, <i>ōrdō</i>「順序」; Gk <i>harmós</i>「継ぎ目」, <i>arithmós</i>「数」, <i>áristos</i>「最良の」; Skt <i>ṛtá-</i>「秩序、真理」
++eng: <b>本来語</b> arm（腕、はめ合わさる部分）, article は別経路／<b>ラテン系</b> art, artisan, artifice, artillery, arm(s)（武器）, army, armistice, inert（技のない→不活発）, order, ordinary, ordain, subordinate, coordinate, adorn（整える）／<b>ギリシア系</b> harmony, arithmetic, aristocracy（最良の者の支配）, rhyme(?)
++note: 「腕(arm)」と「武器(arms)」は同音異義に見えて、実は同じ語根の別経路（前者は本来語、後者はラテン語経由）。
+
+@ *h₂ews- ; 「輝く、暁」
++cog: L <i>aurōra</i>「暁」, <i>aurum</i>「金」; Gk <i>ēṓs</i>「暁」; Skt <i>uṣás</i>; Lith <i>auksas</i>「金」
++eng: <b>本来語</b> east（日の昇る方）, Easter（＜ 女神 <i>Ēostre</i>）／<b>ラテン系</b> aurora, austral, Australia（「南の地」）, aureate, oriole, auriferous／<b>ギリシア系</b> eosin
++note: <i>Easter</i> はベーダによれば春の女神エオストレの名から。他のヨーロッパ諸語ではヘブライ語 <i>pesaḥ</i>「過越」由来（仏 <i>Pâques</i>）。
+
+@ *bʰeh₂- ; 「話す、語る」
++cog: L <i>fārī</i>「話す」, <i>fāma</i>「評判」, <i>fābula</i>「話」, <i>fātum</i>「（神が）語ったこと＝運命」; Gk <i>phēmí</i>「言う」, <i>phōnḗ</i>「声」
++eng: <b>本来語</b> ban（＜「布告する」）, banns, banish, abandon, bandit（追放された者）／<b>ラテン系</b> fable, fabulous, fate, fatal, fairy（＜ <i>fāta</i>）, fame, infamous, infant（「まだ話さない者」）, preface, confess, profess, professor, ineffable（言い表せない）, affable, nefarious（言うも憚る）／<b>ギリシア系</b> phone, symphony, euphemism, blasphemy, prophet（前もって語る者）, aphasia, phase は別語根
++note: <i>infant</i>「幼児」は <i>in-</i>（非）+ <i>fārī</i>（話す）＝「まだ言葉を話さぬ者」。<i>infantry</i>「歩兵」は同じ語がイタリア語で「若者、従者」を経た形。
+
+@ *bʰel- ; 「輝く、白い」
++cog: L <i>flagrāre</i>「燃える」(別説), <i>fulgēre</i>「光る」; Gk <i>phalós</i>「白い」; OE <i>blæc</i>「黒い」/ <i>blāc</i>「青白い」
++eng: <b>本来語</b> bald（白い斑のある）, blaze, blank, bleach, bleak, blind, blond(?), blush, black（「焼けた」）, blank／<b>ラテン系</b> flame, flagrant, conflagration, flamingo（炎の色）, effulgent, refulgent, fulminate（雷）／<b>ギリシア系</b> phalanx(?)
++note: <i>black</i>「黒」と <i>blank/blanc</i>「白」が同じ語根から出る。焼けたものは黒く、火は白く輝く——反対の色が同源になる好例。
+
+@ *bʰel- ; 「膨らむ、吹く」
++cog: L <i>follis</i>「ふいご、革袋」, <i>flōs</i>「花」（*bʰleh₃-）; Gk <i>phallós</i>
++eng: <b>本来語</b> ball, balloon, bowl, bloat, bold, bull(?), belly, bellows, billow, bulge, boulder(?), blow（花が咲く）, bloom, blossom, blade, bladder, bless(?)／<b>ラテン系</b> follicle, fool（＜ <i>follis</i>「ふいご＝空気袋」→ 中身のない者）, flower, floral, flourish, flour（花＝最良の部分）, effloresce
++note: <i>flour</i> と <i>flower</i> は同一語の綴り分化（18世紀に定着）。小麦粉は「小麦の花＝精華」。<i>fool</i> は「ふいご」で、中身が空気だけの者。
+
+@ *bʰendʰ- ; 「縛る」
++cog: Skt <i>bandh-</i>; Goth <i>bindan</i>; L <i>offendix</i>
++eng: <b>本来語</b> bind, band, bond, bundle, bend（弓に弦を張る）, bandage は仏経由, ribbon(?)／<b>その他</b> bandana（ヒンディー語、同根）, cummerbund（ペルシア語 <i>kamar-band</i>「腰帯」）
++note: <i>bend</i> はもと「弓に弦を張る」で、そこから「弓を曲げる」→「曲げる」に転じた。<i>bend</i> と <i>band</i> と <i>bond</i> はアプラウトの三階梯。
+
+@ *bʰer- ; 「運ぶ、もたらす、産む」
++form: e階梯 *bʰer-、o階梯 *bʰor-、零階梯 *bʰr̥-
++cog: L <i>ferre</i>「運ぶ」; Gk <i>phérein</i>; Skt <i>bharati</i>; Goth <i>bairan</i>; OCS <i>bĭrati</i>; Arm <i>berem</i>
++eng: <b>本来語</b> bear（運ぶ・産む）, birth, born, borne, bairn, burden, bier（死体を運ぶ台）, barrow（手押し車）, bring(?), forbear／<b>ラテン系</b> fertile, transfer, refer, prefer, confer, differ, offer, suffer, infer, defer, circumference, vociferous, Lucifer（光を運ぶ者＝明けの明星）, Christopher, -ferous（carboniferous）／<b>ギリシア系</b> metaphor（意味を運び越す）, periphery, euphoria（よく運ぶ＝快い状態）, phosphorus（光を運ぶ）, amphora, paraphernalia（＜ 花嫁が「持参する」財）
++note: ラテン語 <i>ferre</i> の完了分詞は不規則に <i>lātum</i>（別語根 *telh₂-）で、そこから relate, translate, dilate, oblate, prelate, superlative が出る。
+
+@ *bʰerǵʰ- ; 「高い」
++cog: OHG <i>berg</i>「山」; Skt <i>bṛhánt-</i>「高い」; Hitt <i>parku-</i>
++eng: <b>本来語</b> barrow（古墳）, iceberg（「氷の山」オランダ語経由）, borough/burgh/-bury（丘の砦→町）, burgess, burglar(?)／<b>その他</b> bourgeois, burgher（独・仏経由）, belfry は別語源
++note: 地名の -burgh（Edinburgh）, -borough（Peterborough）, -bury（Canterbury）, 独 -burg（Hamburg）, 仏 -bourg（Strasbourg）はすべて同源。
+
+@ *bʰeh₂ǵ- ; 「ブナ」
++cog: L <i>fāgus</i>「ブナ」; Gk <i>phēgós</i>「樫」; OHG <i>buohha</i>
++eng: <b>本来語</b> beech, book（ブナ材の板に文字を刻んだことから、とされる）, buckwheat（ブナの実に似た穀）
++note: <i>book</i> ＜ OE <i>bōc</i> と <i>beech</i> ＜ OE <i>bēce</i> の関係は通説だが、異論もある。第2章の「ブナ論争」も参照。
+
+@ *bʰeudʰ- ; 「目覚める、気づく」
++cog: Skt <i>bodhati</i>「目覚める」, <i>buddha-</i>「目覚めた者」; Lith <i>budėti</i>; OCS <i>bŭděti</i>
++eng: <b>本来語</b> bid（＜ OE <i>bēodan</i>「告げる、命じる」）, forbid, bode, forebode, beadle（触れ役）／<b>その他</b> Buddha, bodhisattva（サンスクリット）
++note: <i>Buddha</i>「仏陀」と英語 <i>bid</i>「命じる」は同根。<i>bid</i>（競売で値をつける）はもと別語 OE <i>biddan</i>「請う」（＝ <i>bead</i>「祈り→数珠玉」と同根）と混同した結果である。
+
+@ *bʰeh₂wH- / *bʰeu- ; 「なる、成長する、存在する」
++cog: L <i>fuī</i>「私はあった」, <i>futūrus</i>; Gk <i>phýein</i>「生じる」, <i>phýsis</i>「本性」; Skt <i>bhavati</i>
++eng: <b>本来語</b> be, been, boor（農夫＝耕す者）, neighbor（近くに住む者）, bower, byre, build, booth／<b>ラテン系</b> future, futile(?)／<b>ギリシア系</b> physics, physique, physiology, imp（＜ <i>emphytos</i> 接ぎ木）, euphuism
++note: 英語 <i>be</i> の活用は三つの異なる語根の混成である。<i>be, being, been</i> ＜ *bʰeu-、<i>am, is, are</i> ＜ *h₁es-、<i>was, were</i> ＜ *h₂wes-「留まる」。
+
+@ *bʰrāter- / *bʰréh₂tēr ; 「兄弟」
++cog: L <i>frāter</i>; Gk <i>phrā́tēr</i>「同族員」; Skt <i>bhrā́tṛ</i>; Goth <i>brōþar</i>; OCS <i>bratrŭ</i>
++eng: <b>本来語</b> brother／<b>ラテン系</b> fraternal, fraternity, fratricide, friar（＜ <i>frère</i>）, confrere／<b>ギリシア系</b> phratry
++note: グリムの法則で *bʰ → b、語頭アクセントゆえ *t → þ が保たれた（<i>father</i> の d と対照。第3章）。
+
+
+== C – D
+
+@ *deh₃- ; 「与える」
++cog: L <i>dare, datum</i>「与える」, <i>dōnum</i>「贈り物」; Gk <i>dídōmi</i>, <i>dôron</i>「贈り物」; Skt <i>dadāti</i>; OCS <i>dati</i>
++eng: <b>ラテン系</b> date（手紙の「与えられた日」<i>datum</i> より）, data, donate, donor, pardon, condone, edition, tradition（引き渡し）, treason（同語源の二重語）, betray, render, surrender, rent, vend（<i>vēnum dare</i>「売りに出す」）, add（<i>ad-dere</i>）, dose／<b>ギリシア系</b> dose, antidote, anecdote（「公にされなかったもの」）, Dorothy/Theodore（「神の贈り物」）
++note: <i>date</i>（日付）はローマの書簡の定型句 <i>datum Rōmae</i>「ローマにて与えられた（書かれた）」から。<i>date</i>（ナツメヤシ）は Gk <i>dáktylos</i>「指」で別語源。
+
+@ *deḱ- ; 「取る、受け入れる、適する」
++cog: L <i>decēre</i>「ふさわしい」, <i>decus</i>「飾り」, <i>doctus</i>「教えられた」, <i>dignus</i>「値する」; Gk <i>dékhomai</i>「受け取る」, <i>dokeîn</i>「思われる」
++eng: <b>本来語</b> teach(?), token(?)（*deiḱ- 系）／<b>ラテン系</b> decent, decorate, decorum, dignity, dainty（二重語）, deign, disdain, indignant, doctor, doctrine, document, docile, disciple, discipline／<b>ギリシア系</b> dogma, orthodox（正しく思われる）, paradox（通念に反する）, doxology
++note: <i>doctor</i> は「教える者」（<i>docēre</i>）で、もと学位の称号。医師の意味は後発（意味の縮小、第7章）。
+
+@ *deḱm̥ ; 「十」
++cog: L <i>decem</i>; Gk <i>déka</i>; Skt <i>dáśa</i>; Goth <i>taíhun</i>; OCS <i>desętĭ</i>; Lith <i>dešimt</i>
++eng: <b>本来語</b> ten, -teen, -ty（thirteen, thirty）, hundred（＜ *ḱm̥tóm）／<b>ラテン系</b> decimal, decade, December（もとローマ暦の第10月）, decimate, dean（<i>decānus</i> 十人隊長）, dime（<i>decima</i> 十分の一）, denary／<b>ギリシア系</b> decathlon, dodecahedron
++note: <i>December</i> が12月なのは、ローマ暦が3月始まりだったため。<i>September</i>（7）, <i>October</i>（8）, <i>November</i>（9）も二か月ずれている。
+
+@ *dei- / *dyeu- ; 「輝く、天、昼、神」
++cog: L <i>diēs</i>「日」, <i>deus</i>「神」, <i>Iuppiter</i>（＜ *dyeu-ph₂ter「天なる父」）; Gk <i>Zeús</i>; Skt <i>dyaus</i>, <i>deva-</i>「神」; ON <i>Týr</i>
++eng: <b>本来語</b> Tuesday（＜ 軍神 <i>Tīw</i>＝<i>Týr</i>の日）／<b>ラテン系</b> deity, divine, diva, adieu/adios（「神に（委ねる）」）, journal, journey（<i>diurnus</i> 一日の）, diary, dial, meridian（<i>medius diēs</i> 正午）, quotidian, jovial（ユピテル的＝陽気）, psalm は別／<b>ギリシア系</b> Zeus
++note: 英語 <i>day</i> は <i>diēs</i> とは<b>同根ではない</b>（音対応が合わない）。<i>day</i> ＜ PGmc *dagaz、おそらく *dʰegʷʰ-「燃える」。よくある誤解である。
+
+@ *deiḱ- ; 「示す、厳かに告げる」
++cog: L <i>dīcere</i>「言う」, <i>index</i>「指し示すもの」, <i>iūdex</i>「裁く者」; Gk <i>deiknýnai</i>「示す」, <i>díkē</i>「正義」; Skt <i>diśáti</i>
++eng: <b>本来語</b> teach, token, toe(?)／<b>ラテン系</b> dictate, diction, dictionary, edict, predict, verdict（真実を言う）, contradict, indicate, index, judge, judicial, prejudice, abdicate, dedicate, condition, indict, vindicate, avenge/revenge（<i>vindicāre</i>）, digit は別／<b>ギリシア系</b> paradigm（並べて示す）, apodictic, theodicy
++note: <i>teach</i> は本来語で「示す」が原義。<i>token</i>「しるし」も同根。
+
+@ *dem- ; 「家、建てる」
++cog: L <i>domus</i>「家」, <i>dominus</i>「家長、主人」; Gk <i>dómos</i>, <i>démein</i>「建てる」; Skt <i>dama-</i>; OCS <i>domŭ</i>
++eng: <b>本来語</b> timber（建築材＝建てるもの）／<b>ラテン系</b> dome, domestic, domicile, dominate, dominion, don（尊称）, dame, madam, madonna, damsel, danger（＜「主人の権力」<i>dominiārium</i>）, dungeon, demesne/domain, predominant／<b>ギリシア系</b> ？
++note: <i>danger</i>「危険」は本来「領主の支配権」で、「支配下にある＝危うい」から意味が転じた。<i>timber</i> は「木材」だが、原義は「建てるためのもの」。
+
+@ *dem(h₂)- ; 「馴らす」
++cog: L <i>domāre</i>「馴らす」; Gk <i>damáō</i>; Skt <i>dāmyati</i>
++eng: <b>本来語</b> tame／<b>ラテン系</b> indomitable（馴らしがたい）, daunt, dauntless／<b>ギリシア系</b> Diomedes, adamant（「征服されない」→ 金剛石）, diamond（<i>adamant</i> の変形）
++note: <i>diamond</i> と <i>adamant</i> は二重語。「征服されざるもの」＝この上なく硬いもの。
+
+@ *der- ; 「裂く、剥ぐ」
++cog: Gk <i>dérein</i>「皮を剥ぐ」, <i>dérma</i>「皮」; Skt <i>dṛṇāti</i>
++eng: <b>本来語</b> tear（裂く）, tar（樹皮から採る）, turd／<b>ギリシア系</b> dermatology, epidermis, taxidermy（皮を配置する術）, pachyderm（厚い皮）
++note: <i>tear</i>（裂く）と <i>tear</i>（涙、*dakru-）は同綴異音異義語。
+
+@ *deru- / *dóru ; 「木、堅い、真実の」
++cog: Gk <i>drŷs</i>「樫」, <i>dóry</i>「槍」; Skt <i>dāru</i>「木」; OCS <i>drĕvo</i>; Goth <i>triu</i>
++eng: <b>本来語</b> tree, true（「堅い、頼れる」）, truth, trust, betroth, troth, trough, tray, tar／<b>ギリシア系</b> dryad（樹の精）, druid（＜ケルト語「樫の賢者」とされる）, dendrite, rhododendron（薔薇の木）
++note: 「木」→「堅い」→「信頼できる」→「真実」という意味の連鎖が <i>true</i>, <i>trust</i>, <i>truth</i> を生んだ。ドイツ語 <i>treu</i>「忠実な」も同根。
+
+@ *dʰeh₁- ; 「置く、なす」
++cog: L <i>facere</i>「作る」, <i>-dere</i>（<i>condere</i>）; Gk <i>tithénai</i>「置く」, <i>thḗkē</i>「置き場」; Skt <i>dadhāti</i>; OCS <i>děti</i>
++eng: <b>本来語</b> do, deed, doom（定められたこと）, -dom（kingdom, freedom）, deem, misdeed／<b>ラテン系</b> fact, factory, facile, affect, effect, perfect, defect, infect, sufficient, edifice, artifice, benefit, profit, -fy（simplify）, feature, feat, defeat, forfeit, counterfeit, difficult, faculty, facsimile／<b>ギリシア系</b> theme, thesis, thesaurus（宝の置き場）, apothecary（倉庫番→薬屋）, bodega/boutique（同語源、西・仏経由）, epithet, hypothesis, parenthesis, anathema
++note: 英語の規則動詞過去形 -ed は、この語根（＝<i>do</i>）が助動詞として融合したものとする説が有力（第3章）。<i>boutique</i> と <i>apothecary</i> が同語源であるのは意外に思われる。
+
+@ *dʰeigʰ- ; 「こねる、形づくる」
++cog: L <i>fingere</i>「形づくる」, <i>figūra</i>, <i>fictus</i>; Gk <i>teîkhos</i>「壁」; Skt <i>dehī</i>「堤」; Goth <i>daigs</i>「練り粉」
++eng: <b>本来語</b> dough, lady（＜ <i>hlǣf-dīge</i>「パンをこねる者」）, dairy（＜ <i>dey</i>「こねる女」）／<b>ラテン系</b> figure, figment, fiction, fictitious, feign, feint, effigy, faint(?), configuration, transfigure, paradise は別
++note: 「こねる」から「形を作る」→「作り話を作る」（fiction）へ。<i>lady</i> と <i>dough</i> と <i>fiction</i> が同根である。
+
+@ *dʰer- ; 「支える、しっかり保つ」
++cog: L <i>firmus</i>「堅固な」, <i>fortis</i>(?)「強い」; Skt <i>dhárma-</i>「法、秩序」; Gk <i>thrónos</i>「座」
++eng: <b>ラテン系</b> firm, affirm, confirm, infirm, farm（＜ <i>firma</i> 固定地代）, firmament／<b>ギリシア系</b> throne, enthrone／<b>その他</b> dharma（サンスクリット）
++note: <i>farm</i>「農場」は、もと「固定額で賃借する土地」の意で、<i>firm</i>「堅い」と同根。<i>firm</i>「会社」は別経路（イタリア語 <i>firma</i> 署名）だが結局同源。
+
+@ *dʰers- ; 「敢えてする」
++cog: Gk <i>thrasýs</i>「大胆な」; Skt <i>dhṛṣṇóti</i>; Goth <i>ga-dars</i>
++eng: <b>本来語</b> dare, durst
++note: <i>dare</i> は過去現在動詞（第2章）の名残で、<i>he dare not</i> のように -s が付かない用法が残る。
+
+@ *dʰǵʰem- ; 「地、大地」
++cog: L <i>humus</i>「土」, <i>homō</i>「人（＝地の者）」; Gk <i>khthṓn</i>「大地」, <i>khamaí</i>「地上に」; Skt <i>kṣam-</i>; Goth <i>guma</i>「人」
++eng: <b>本来語</b> (bride)groom（＜ OE <i>guma</i>「男」）／<b>ラテン系</b> human, humane, humble（地に近い）, humility, humus, exhume, inhume, homage, homicide, hominid, Homo sapiens／<b>ギリシア系</b> chthonic, chamomile（「地のリンゴ」）, autochthonous
++note: 「人間＝地から作られた者」という観念は、ヘブライ語 <i>ādām</i>「人」と <i>adāmāh</i>「土」の関係にも並行する。
+
+@ *dʰugh₂tḗr ; 「娘」
++cog: Gk <i>thygátēr</i>; Skt <i>duhitṛ́</i>; Goth <i>daúhtar</i>; OCS <i>dŭšti</i>; Lith <i>duktė̃</i>
++eng: <b>本来語</b> daughter
++note: 印欧語族の親族名称のうち、もっとも広く保存された語のひとつ。ラテン語では失われ、<i>fīlia</i> に置き換わった。
+
+@ *dʰwer- ; 「戸、門」
++cog: L <i>forēs</i>「戸」, <i>forum</i>「（家の外の）広場」, <i>forīs</i>「外に」; Gk <i>thýra</i>; Skt <i>dvā́r</i>; OCS <i>dvĭrĭ</i>
++eng: <b>本来語</b> door／<b>ラテン系</b> forum, forensic（広場＝法廷での）, foreign（戸の外の）, forest（「囲いの外の地」）, faubourg
++note: <i>foreign</i> の g は語源的に根拠のない挿入（<i>reign</i>, <i>sovereign</i> の類推）。<i>forensic</i>「法廷の、科学捜査の」は、ローマの <i>forum</i> が裁判の場だったことによる。
+
+@ *dwóh₁ ; 「二」
++cog: L <i>duo</i>, <i>bis</i>（＜ *dwis）; Gk <i>dýo</i>, <i>di-</i>; Skt <i>dvā</i>; Goth <i>twai</i>; OCS <i>dŭva</i>
++eng: <b>本来語</b> two, twice, twin, twelve（「二を残す」＝10+2）, twenty, between, betwixt, twist, twig, twill, doubt（「二つに迷う」ラ経由）, dozen（仏経由）／<b>ラテン系</b> dual, duet, duplex, duplicate, double, doubt, dubious, biscuit（「二度焼いた」）, binary, bicycle, combine, balance（<i>bilanx</i>「二皿の」）／<b>ギリシア系</b> dilemma, dioxide, diploma（「二つ折りの書面」）, diphthong
++note: <i>doubt</i> と <i>dubious</i> はともに「二つのあいだで揺れる」。<i>doubt</i> の b はラテン語 <i>dubitāre</i> に合わせた綴り直しで発音されない（第4章）。
+
+== E – G
+
+@ *h₁ed- ; 「食べる」
++cog: L <i>edere</i>「食べる」, <i>dēns</i>(?); Gk <i>édein</i>; Skt <i>atti</i>; Goth <i>itan</i>; Lith <i>ėsti</i>
++eng: <b>本来語</b> eat, ate, etch(?), fret（＜ OE <i>fretan</i>「食い尽くす」＝ ドイツ語 <i>fressen</i>）／<b>ラテン系</b> edible, comestible, obese（「食べ尽くされた」→ 太った）, prandial は別
++note: <i>fret</i>「いらだつ」は「（心を）食う」から。ドイツ語では人間が食べるのが <i>essen</i>、獣が食べるのが <i>fressen</i> と区別する。
+
+@ *h₁eḱwos ; 「馬」
++cog: L <i>equus</i>; Gk <i>híppos</i>; Skt <i>áśva-</i>; OE <i>eoh</i>; OIr <i>ech</i>
++eng: <b>ラテン系</b> equestrian, equine／<b>ギリシア系</b> hippopotamus（「河の馬」）, hippodrome, Philip（「馬を愛する者」）, eohippus
++note: 本来語 <i>eoh</i> は古英語期に失われ、<i>horse</i>（PGmc *hrussa-、語源不確実）に置き換わった。
+
+@ *h₁es- ; 「ある、である」
++cog: L <i>esse</i>, <i>est</i>; Gk <i>eînai</i>, <i>estí</i>; Skt <i>asti</i>; Goth <i>ist</i>; OCS <i>jestĭ</i>
++eng: <b>本来語</b> is, are(?), am, sin(?)（「（罪ある）状態にある」説）, yes（＜ <i>gēa sī</i>「そうあれ」）, soothe, sooth（「真実の＝あるがままの」）／<b>ラテン系</b> essence, present, absent, interest（「間にある」）, entity, quintessence, proud/prowess(?)／<b>ギリシア系</b> ontology, parousia
++note: <i>sooth</i>「真実」（*h₁s-ont-「あるところの」）は <i>soothsayer</i>「真実を語る者＝予言者」に残る。
+
+@ *h₁eu-, *h₁weh₂- ; 「空の、欠く」
++cog: L <i>vacāre</i>「空である」, <i>vānus</i>「空虚な」, <i>vastus</i>「荒涼とした」
++eng: <b>ラテン系</b> vacant, vacuum, vacation, evacuate, vain, vanity, vanish, vaunt, void, avoid, devoid, waste（北仏語経由）, vast, devastate, want(?)
++note: <i>vacation</i>「休暇」は「（仕事から）空けること」。<i>waste</i> と <i>vast</i> は二重語。
+
+@ *gel- ; 「冷たい、凍る」
++cog: L <i>gelū</i>「霜」, <i>glaciēs</i>「氷」
++eng: <b>本来語</b> cold, cool, chill, congeal は仏経由／<b>ラテン系</b> gelid, gelatin, jelly, congeal, glacier, glacial, glacé
++note: グリムの法則で *g → k（cold）。<i>jelly</i> と <i>gelatin</i> と <i>cold</i> が同根。
+
+@ *ǵenh₁- ; 「生む、生じる」
++cog: L <i>gignere, genitus</i>「生む」, <i>genus</i>「種族」, <i>nātus</i>（＜ *gnātus）; Gk <i>gígnesthai</i>, <i>génos</i>; Skt <i>janati</i>
++eng: <b>本来語</b> kin, kind（「生まれつき」→種類・親切）, king（<i>cyning</i>「一族の長」）, kindred／<b>ラテン系</b> genus, gene, general, generate, genius（守護霊→天賦の才）, genuine, gentle, gentile, genital, indigenous, congenital, ingenious, ingenuous, engine（＜ <i>ingenium</i>）, nation, native, nature, naive, innate, nascent, renaissance, pregnant, cognate, benign, malign, germ（＜ <i>germen</i> 芽）／<b>ギリシア系</b> genesis, genetic, gonad, cosmogony, hydrogen, oxygen, -gen, epigone, homogeneous
++note: <i>kin</i>（本来語）と <i>gene</i>（ラテン系）と <i>genesis</i>（ギリシア系）が同根。グリムの法則 *ǵ → k の好例。
+
+@ *ǵénu- ; 「膝」
++cog: L <i>genū</i>; Gk <i>góny</i>; Skt <i>jā́nu</i>; Hitt <i>genu</i>
++eng: <b>本来語</b> knee, kneel／<b>ラテン系</b> genuflect（膝を曲げる）／<b>ギリシア系</b> gonio-（角度）, diagonal（「角から角へ」）, polygon, pentagon
++note: <i>genuine</i>「本物の」を「父が新生児を膝(<i>genū</i>)に載せて認知した」ことに由来するとする有名な説は、たしかにアウルス・ゲッリウスに近い記述はあるものの、語源としては疑わしい。<i>genuinus</i> は *ǵenh₁-「生む」から「生まれつきの」と見るのが主流である。
+
+@ *ǵeus- ; 「味わう、選ぶ」
++cog: L <i>gustāre</i>「味わう」; Gk <i>geúesthai</i>; Skt <i>juṣate</i>「好む」; Goth <i>kiusan</i>「選ぶ」
++eng: <b>本来語</b> choose, choice（仏経由）／<b>ラテン系</b> gusto, gustatory, disgust, ragout
++note: 「味わう」→「吟味する」→「選ぶ」。<i>choose</i> の s ~ 過去分詞 <i>chosen</i> の z は文法的交替（第3章）。
+
+@ *gʰabʰ- / *kap- ; 「つかむ、取る」
++cog: L <i>capere</i>「取る」, <i>habēre</i>「持つ」（別語根とされる）; Goth <i>haban</i>
++eng: <b>本来語</b> have, heave, heavy（持ち上げるのが重い）, haft, behave, hawk(?)／<b>ラテン系</b> capture, captive, capable, accept, except, receive, deceive, conceive, perceive, anticipate, participate, occupy, municipal, emancipate, prince, principal, recover, escape（マントを脱ぐ）, catch, chase, cop（俗語「捕まえる」）／<b>ギリシア系</b> ？
++note: 英語 <i>have</i> とラテン語 <i>habēre</i>「持つ」は<b>同根ではない</b>（音対応が合わない）。<i>have</i> の同根語は <i>capere</i> のほうである。第1章参照。
+
+@ *gʰer- ; 「囲む、つかむ」
++cog: L <i>hortus</i>「園」, <i>cohors</i>「囲い、隊」; Gk <i>khórtos</i>「囲い地」, <i>khorós</i>「舞踏場」
++eng: <b>本来語</b> yard（囲い地）, garden（北仏語経由の同源）, garth, orchard（＜ <i>wort-yard</i>）, girdle, gird, girth／<b>ラテン系</b> horticulture, cohort, court（＜ <i>cohors</i>）, courtesy, courtesan, curtain は別／<b>ギリシア系</b> chorus, choir, choreography
++note: <i>yard</i>（庭）と <i>garden</i> は同根の二重語（本来語 vs 北フランス語経由）。<i>yard</i>（長さの単位）は別語源 *ǵʰasto-「棒」。
+
+@ *gʰostis ; 「よそ者、客、主人」
++cog: L <i>hostis</i>「敵、よそ者」, <i>hospes</i>「客・主人」（＜ *gʰosti-potis「客の主」）; OCS <i>gostĭ</i>「客」; Goth <i>gasts</i>
++eng: <b>本来語</b> guest／<b>ラテン系</b> host（主人）, host（軍勢）, hostile, hostage, hospital, hospice, hostel, hotel, hospitality
++note: 「よそ者」が、迎えれば客、敵対すれば敵になる。この両義性が <i>guest</i>「客」と <i>hostile</i>「敵意ある」の分裂を生んだ。<i>host</i>（聖体）は別語源（L <i>hostia</i>「犠牲」）。
+
+@ *gʷeih₃w- ; 「生きる」
++cog: L <i>vīvere</i>「生きる」, <i>vīta</i>「生命」; Gk <i>bíos</i>「生」, <i>zōḗ</i>; Skt <i>jīvati</i>; OCS <i>živŭ</i>
++eng: <b>本来語</b> quick（原義「生きている」→速い）, quicksilver（水銀＝生きた銀）, quicken, the quick and the dead, revive は仏経由／<b>ラテン系</b> vital, vivid, vivacious, survive, revive, convivial, viand, victual, vitamin（＜ <i>vīta</i>+<i>amine</i>）, viper（＜ <i>vīvipara</i> 生きた子を産む）／<b>ギリシア系</b> biology, biography, symbiosis, antibiotic, amphibian, zoo, zodiac（「動物の輪」）, protozoa, azo-
++note: <i>quick</i>「速い」の原義は「生きている」。<i>cut to the quick</i>「生身まで切る＝深く傷つける」に古義が残る。
+
+@ *gʷem- ; 「行く、来る」
++cog: L <i>venīre</i>「来る」; Gk <i>baínein</i>「歩く」; Skt <i>gámati</i>; Goth <i>qiman</i>
++eng: <b>本来語</b> come, become, welcome（「良い客」）／<b>ラテン系</b> venue, avenue, advent, adventure, convene, convenient, convent, coven, event, invent, prevent, intervene, circumvent, contravene, revenue, souvenir, provenance, parvenu／<b>ギリシア系</b> base, basis, acrobat, diabetes（「通り抜ける（多尿）」）, anabasis
++note: グリムの法則で *gʷ → kʷ → k（come）。<i>come</i> と <i>venue</i> と <i>basis</i> が同根。
+
+@ *gʷḗn ; 「女」
++cog: Gk <i>gynḗ</i>; Skt <i>gnā́</i>; OCS <i>žena</i>; OIr <i>ben</i>; Goth <i>qinō</i>
++eng: <b>本来語</b> queen, quean（古語「女、あばずれ」）／<b>ギリシア系</b> gynecology, misogyny, androgynous, gynoecium
++note: <i>queen</i> はもと単に「女、妻」で、王妃の意に高まった（良化、第7章）。同語源の <i>quean</i> は逆に悪化した。
+
+@ *gʷerh₃- ; 「飲み込む、貪る」
++cog: L <i>vorāre</i>「貪り食う」, <i>gula</i>「喉」; Gk <i>borá</i>「餌」; Skt <i>giráti</i>
++eng: <b>本来語</b> ？／<b>ラテン系</b> voracious, devour, carnivore, herbivore, omnivore, insectivore, gullet, gully, gulf は別, gorge は別系／<b>ギリシア系</b> ？
++note: -vore/-vorous（食べる者）は生物学の語彙で活躍する。
+
+@ *gʷʰer- ; 「暖かい、熱い」
++cog: L <i>formus</i>「暖かい」, <i>fornāx</i>「炉」; Gk <i>thermós</i>; Skt <i>gharmá-</i>
++eng: <b>本来語</b> warm(?), burn は別語根／<b>ラテン系</b> furnace, fornication（＜ <i>fornix</i>「アーチ、（売春の行われた）地下室」）, forceps(?)／<b>ギリシア系</b> thermometer, thermal, thermos, hypothermia, isotherm
++note: <i>fornication</i> は、ローマの売春婦がアーチ型の地下室（<i>fornix</i>）に居たことによる。
+
+@ *gʷṓus ; 「牛」
++cog: L <i>bōs, bovis</i>; Gk <i>boûs</i>; Skt <i>gáus</i>; OCS <i>govędo</i>; OIr <i>bó</i>
++eng: <b>本来語</b> cow, cattle は別（<i>caput</i> 系）／<b>ラテン系</b> bovine, beef（仏経由）, bugle（＜「若い雄牛（の角笛）」）, bulimia は ギ／<b>ギリシア系</b> boustrophedon（「牛が耕すように」＝右往左往する書法）, butter（<i>boútȳron</i>「牛のチーズ」）, bulimia（「牛の飢え」）
++note: <i>cow</i>（本来語）と <i>beef</i>（仏経由）は同根の二重語である（第5章の「家畜と肉」の対）。
+
+
+== H – K
+
+@ *ḱad- ; 「落ちる」
++cog: L <i>cadere</i>「落ちる」, <i>cāsus</i>「落下、偶然、格」
++eng: <b>ラテン系</b> cadence, cadaver（倒れたもの）, case（出来事・格）, casual, casualty, accident, incident, coincide, occasion, decay, decadence, deciduous（葉が落ちる）, chance（＜ <i>cadentia</i>）, cascade, chute
++note: 文法用語の「格」（case）は、主格から「落ちる」（<i>cāsus</i>＝ Gk <i>ptôsis</i> の訳）という比喩による。<i>accident</i> は「（偶然）降りかかること」。
+
+@ *ḱan- ; 「歌う」
++cog: L <i>canere</i>「歌う」, <i>carmen</i>「歌、呪文」; Gk <i>ēïkanós</i>「雄鶏」; OIr <i>canid</i>
++eng: <b>本来語</b> hen（「歌う（鳴く）者」の女性形）／<b>ラテン系</b> chant, cant, canticle, cantata, canto, incantation, enchant, accent（<i>ad-cantus</i>「（言葉に）添える歌」）, charm（＜ <i>carmen</i>）, recant, descant
++note: <i>charm</i>「魅力」は本来「呪文」。<i>hen</i> と <i>chant</i> が同根であるのは、グリムの法則 *ḱ → h による。
+
+@ *kap-ut- ; 「頭」
++cog: L <i>caput, capitis</i>; Skt <i>kapucchala-</i>; Goth <i>haubiþ</i>
++eng: <b>本来語</b> head／<b>ラテン系</b> capital, capitol, captain, chief, chef, chieftain, cape（岬）, cap, cattle, chattel, chapter（<i>capitulum</i> 小見出し）, cadet（<i>capitellum</i> 小さい頭＝末子）, cadre, decapitate, precipitate（頭から落ちる）, biceps/triceps, achieve（＜ <i>à chief venir</i>「頭＝終わりに至る」）, mischief, kerchief, corporal は別
++note: 一つの語根から chief, chef, cape, cap, cattle, chattel, capital, captain と八つ以上の英語が出る。第8章の多重語の代表例。
+
+@ *ḱerd- ; 「心臓」
++cog: L <i>cor, cordis</i>; Gk <i>kardíā</i>; Skt <i>hṛd</i>; OCS <i>srĭdĭce</i>; Lith <i>širdis</i>
++eng: <b>本来語</b> heart, hearty／<b>ラテン系</b> cordial（心からの）, accord, concord, discord, record（「心に戻す」＝記憶する）, courage（＜ <i>cor</i>）, encourage, discourage, core(?)／<b>ギリシア系</b> cardiac, cardiology, tachycardia, myocardium
++note: <i>record</i>「記録する」は本来「心に呼び戻す」。書き記す以前は、記憶が記録だった。<i>credo</i>「信じる」も <i>*ḱred-dʰeh₁-</i>「心を置く」で同根とされる。
+
+@ *ḱer- ; 「角、頭」
++cog: L <i>cornū</i>「角」, <i>cerebrum</i>「脳」, <i>cervus</i>「鹿」; Gk <i>kéras</i>「角」, <i>kránion</i>「頭蓋」
++eng: <b>本来語</b> horn, hornet, hart（雄鹿）, reindeer(?), harvest は別／<b>ラテン系</b> cornea, corner, cornet, cornucopia（豊穣の角）, unicorn, Capricorn（山羊の角）, cerebral, cervical, carrot（ギ経由）／<b>ギリシア系</b> keratin, cranium, migraine（＜ <i>hēmikrāníā</i>「半分の頭」）, rhinoceros（鼻角）, triceratops
++note: <i>migraine</i>「片頭痛」は Gk <i>hēmi-krānion</i>「頭の半分」がフランス語で摩耗した形。
+
+@ *ḱei- ; 「横たわる、寝床」
++cog: Gk <i>keîmai</i>「横たわる」, <i>koimân</i>「眠らせる」; L <i>cīvis</i>「市民（＝定住者）」
++eng: <b>本来語</b> home（＜ *ḱoi-mo-「住まい」）, hide(?), hive(?)／<b>ラテン系</b> city, civil, civilization, civic, citizen／<b>ギリシア系</b> cemetery（「眠る場所」）, coma は別
++note: <i>home</i> と <i>city</i> と <i>cemetery</i> が同根。「横になる場所」から「住む」「共同体」へ。
+
+@ *kʷel- ; 「回る、動き回る、住む」
++cog: L <i>colere</i>「耕す、住む」, <i>colōnus</i>「農民」; Gk <i>kýklos</i>「輪」, <i>pólos</i>「軸」; Skt <i>cárati</i>「動く」
++eng: <b>本来語</b> wheel（＜ *kʷekʷlos）, welkin(?)／<b>ラテン系</b> cult, culture, cultivate, colony, agriculture, silviculture, inquiline／<b>ギリシア系</b> cycle, cyclone, encyclopedia（「円環的な教育」）, bicycle, pole（極）, palindrome（「再び走る」）, bucolic（牛飼いの）, telos は別
++note: <i>wheel</i> ＜ *kʷe-kʷl-o- は語根の重複形。<i>cycle</i> と <i>wheel</i> は同根。<i>culture</i> はもと「耕作」で、「精神の耕作」（<i>cultura animi</i>, キケロ）から現代の意味へ。
+
+@ *kʷo- / *kʷi- ; 「疑問・関係の代名詞語幹」
++cog: L <i>quis, quid, quod</i>; Gk <i>tís</i>; Skt <i>kas</i>; Goth <i>ƕas</i>; OCS <i>kŭto</i>
++eng: <b>本来語</b> who, what, when, where, why, whether, which, how（OE <i>hū</i>）, whither, whence／<b>ラテン系</b> quality, quantity, quorum（「〜のうち誰が」）, quiddity, quibble, ubiquitous（「どこにでも」）, cue(?)
++note: 英語の疑問詞が wh- で揃うのはグリムの法則 *kʷ → hʷ の結果である。<i>how</i> だけ w を失った。
+
+@ *kʷetwóres ; 「四」
++cog: L <i>quattuor</i>; Gk <i>téttares</i>; Skt <i>catvā́ras</i>; Goth <i>fidwōr</i>; OCS <i>četyre</i>
++eng: <b>本来語</b> four, fourteen, forty, farthing（四分の一ペニー）／<b>ラテン系</b> quart, quarter, quarantine（40日）, quadrant, square（＜ <i>exquadra</i>）, squadron, cadre は別／<b>ギリシア系</b> tetrahedron, tessera
++note: <i>quarantine</i>「検疫」は、14世紀ヴェネツィアで疫病流行地からの船を40日間（伊 <i>quaranta giorni</i>）停泊させたことに由来する。
+
+@ *kleu- ; 「聞く、名声」
++cog: Gk <i>klýein</i>「聞く」, <i>kléos</i>「名声」; Skt <i>śṛṇóti</i>, <i>śrávas</i>; OCS <i>slovo</i>「言葉」, <i>slava</i>「栄光」
++eng: <b>本来語</b> loud（＜ *ḱlu-to-「聞かれた」）, listen, list（古語「聞く」）／<b>その他</b> Slav(?)（<i>slovo</i>「言葉」説と <i>slava</i>「栄光」説）, Ludwig/Louis/Clovis（「名高い戦士」）, Hloðwig
++note: <i>loud</i> の原義は「（よく）聞かれる」。人名 <i>Louis</i>, <i>Ludwig</i> はゲルマン語 <i>Hlūdawīg</i>「名高い戦い」で、同じ語根を含む。
+
+@ *kʷer- ; 「作る」
++cog: Skt <i>karóti</i>「なす」, <i>karma-</i>「行為」
++eng: <b>その他</b> karma, Sanskrit（<i>saṃskṛta-</i>「完成された、整えられた」）
++note: サンスクリット語の <i>karma</i>「業」は「なされたこと」。
+
+== L – M
+
+@ *leg- ; 「集める、拾う、読む」
++cog: L <i>legere</i>「集める、読む」, <i>lēx</i>「法」; Gk <i>légein</i>「言う、集める」, <i>lógos</i>「言葉、理」
++eng: <b>ラテン系</b> legend（読まれるべきもの）, lecture, legible, collect, elect, select, neglect（拾わない）, intellect（間から選び取る）, diligent（選り分ける→勤勉）, elegant, sacrilege（聖物を掠め取る）, legion, lesson, legal, legislate, legitimate, loyal, privilege, college, colleague／<b>ギリシア系</b> logic, logo, -logy, dialogue, prologue, apology, analogy, catalogue, eclectic, lexicon, dyslexia, dialect
++note: 「集める」→「（文字を）拾い読む」→「言う」という意味の広がりが、<i>lecture</i> と <i>logic</i> の両方を生んだ。<i>religion</i> の語源は <i>re-legere</i>「読み返す」（キケロ）と <i>re-ligāre</i>「縛り直す」（ラクタンティウス、アウグスティヌス）の二説があり、決着していない。
+
+@ *legʰ- ; 「横たわる」
++cog: Gk <i>lékhos</i>「寝床」; OCS <i>ležati</i>; Goth <i>ligan</i>
++eng: <b>本来語</b> lie（横たわる）, lay（横たえる、使役形）, law（＜ ON <i>lag</i>「定められたもの」）, low（＜ ON）, ledge, ledger, lair, layer, belay, fellow（＜ ON <i>félagi</i>「共同出資者」）／<b>ギリシア系</b> lochia
++note: <i>lie</i>（横たわる）と <i>lie</i>（嘘をつく、*leugʰ-）は別語源の同綴語。<i>law</i> は北欧語からの借用で「置かれたもの」。
+
+@ *leikʷ- ; 「残す、去る」
++cog: L <i>linquere, līctum</i>; Gk <i>leípein</i>; Skt <i>riṇákti</i>; Goth <i>leiƕan</i>「貸す」
++eng: <b>本来語</b> lend, loan（＜ ON）／<b>ラテン系</b> relinquish, relic（残されたもの）, delinquent（義務を残す）, derelict, eclipse は ギ／<b>ギリシア系</b> ellipse（「欠けている」）, eclipse（「見捨てる、消える」）, lipogram
++note: <i>ellipse</i>「楕円」は円に「足りない」形、<i>eclipse</i>「食」は天体が「見捨てる＝隠れる」こと。
+
+@ *leubʰ- ; 「愛する、好む」
++cog: L <i>libet/lubet</i>「気に入る」, <i>libīdō</i>「欲望」; Skt <i>lúbhyati</i>; OCS <i>ljubŭ</i>
++eng: <b>本来語</b> love, lief（古語「喜んで」）, belief, believe, leave（許可）, furlough（オランダ語経由「休暇」）／<b>ラテン系</b> libido, libidinous
++note: <i>believe</i> の原義は「心にかなうとする」。<i>leave</i>（許可）と <i>leave</i>（去る、*leikʷ-）は別語源。
+
+@ *leuk- ; 「光、輝く」
++cog: L <i>lūx</i>「光」, <i>lūmen</i>「灯」, <i>lūna</i>「月」（＜ *louksnā）; Gk <i>leukós</i>「白い」; Skt <i>rócate</i>
++eng: <b>本来語</b> light（明るさ）, lightning, lea(?)／<b>ラテン系</b> lucid, elucidate, translucent, Lucifer, lucubrate, luminous, illuminate, luminary, lunar, lunatic（月に憑かれた）, luster, illustrate, lynx(?)／<b>ギリシア系</b> leukemia（白血病）, leukocyte
++note: <i>light</i>「軽い」（*h₁lengʷʰ-）は別語源。<i>lunatic</i>「狂気の」は、月の満ち欠けが精神に影響すると信じられたことによる。
+
+@ *magʰ- ; 「できる、力がある」
++cog: Gk <i>mēkhanḗ</i>「装置」; OCS <i>mogǫ</i>「できる」; Goth <i>magan</i>
++eng: <b>本来語</b> may, might（力）, main（力、<i>with might and main</i>）, dismay／<b>ギリシア系</b> machine, mechanic, machination
++note: 助動詞 <i>may</i> の原義は「〜する力がある」。<i>machine</i> と <i>may</i> が同根である。
+
+@ *méh₂tēr ; 「母」
++cog: L <i>māter</i>; Gk <i>mḗtēr</i>; Skt <i>mātṛ́</i>; OCS <i>mati</i>; OIr <i>máthair</i>
++eng: <b>本来語</b> mother／<b>ラテン系</b> maternal, matron, matrimony, matrix（母体）, matriculate（名簿＝母体に登録する）, material（母なる素材）, matter, alma mater, madrigal(?)／<b>ギリシア系</b> metropolis（母なる都市）, metropolitan
++note: <i>material</i>「物質」と <i>matter</i> は <i>māteria</i>「木の芯、素材」＜「母なるもの」から。<i>matrix</i> はもと「子宮」。
+
+@ *med- ; 「測る、適切に処置する」
++cog: L <i>medērī</i>「治療する」, <i>modus</i>「尺度」; Gk <i>médomai</i>「配慮する」; Goth <i>mitan</i>
++eng: <b>本来語</b> mete（測る）, meet（適切な、<i>it is meet</i>）, must(?)／<b>ラテン系</b> medicine, medical, remedy, meditate, modest, moderate, mode, model, modern（＜ <i>modo</i>「今しがた」）, modify, mold, accommodate, commodity, empty は別／<b>ギリシア系</b> Medea, medimnus
++note: 「測る」→「適切に処置する」→「治療する」。<i>medicine</i> と <i>modest</i> と <i>mete</i> が同根。
+
+@ *medʰu- ; 「蜂蜜、蜜酒」
++cog: Gk <i>méthy</i>「酒」; Skt <i>mádhu</i>「蜜」; OCS <i>medŭ</i>; OIr <i>mid</i>
++eng: <b>本来語</b> mead（蜂蜜酒）／<b>ギリシア系</b> methyl（「木の酒」<i>méthy</i>+<i>hýlē</i>）, amethyst（「酔わない」石＝二日酔い除けの護符）
++note: <i>amethyst</i> は「酔わせない」。紫水晶の杯で飲めば酔わないという俗信があった。<i>methyl</i>, <i>methane</i> も同根。
+
+@ *meg- ; 「大きい」
++cog: L <i>magnus</i>; Gk <i>mégas</i>; Skt <i>mahā́nt-</i>; Goth <i>mikils</i>
++eng: <b>本来語</b> much（＜ <i>mickle</i>）, mickle／<b>ラテン系</b> magnify, magnificent, magnitude, magnate, magnanimous, master（<i>magister</i>「より大きい者」）, mister, mistress, maestro, major, mayor, majesty, maximum, maxim, May(?)／<b>ギリシア系</b> mega-, megaphone, megalopolis, omega（「大きなO」）, Almagest（アラビア語 <i>al-majisṭī</i> ＜ Gk <i>megístē</i>）
++note: <i>master</i>（<i>magis-ter</i>「より大」）と <i>minister</i>（<i>minus-ter</i>「より小」＝奉仕者）は対をなす。
+
+@ *mel- ; 「柔らかい、挽く」
++cog: L <i>molere</i>「挽く」, <i>mollis</i>「柔らかい」; Gk <i>mýlē</i>「臼」; Goth <i>malan</i>
++eng: <b>本来語</b> meal（挽いた粉。<i>oatmeal</i>）, mill, mold（かび）, melt, mild, smelt／<b>ラテン系</b> mollify, emollient, mollusk（柔らかい体）, molar（臼歯）, immolate（供物に粉を撒く）
++note: <i>meal</i>（食事）は別語源（OE <i>mǣl</i>「定まった時」＝独 <i>Mal</i>）。<i>meal</i>（粉）とは同綴異語。
+
+@ *men- ; 「思う、心」
++cog: L <i>mēns, mentis</i>「心」, <i>meminī</i>「覚えている」, <i>monēre</i>「警告する」; Gk <i>ménos</i>「意気」, <i>mnḗmē</i>「記憶」, <i>manía</i>; Skt <i>mányate</i>
++eng: <b>本来語</b> mind, mean（意図する）, moan(?)／<b>ラテン系</b> mental, mention, comment, reminisce, memory, memorial, monument, monitor, admonish, premonition, summon, demonstrate, monster（前兆）, remonstrate, mnemonic は ギ／<b>ギリシア系</b> mania, maniac, amnesia, amnesty（「忘れること」）, mnemonic, automatic(?), Mentor（『オデュッセイア』の助言者）
++note: <i>monster</i>「怪物」は <i>monēre</i>「警告する」から「（神が示す）前兆・凶兆」。<i>amnesty</i>「恩赦」は「忘れること」で <i>amnesia</i>「記憶喪失」と同根。
+
+@ *mer- ; 「死ぬ」
++cog: L <i>morī</i>「死ぬ」, <i>mors, mortis</i>; Gk <i>brotós</i>「死すべき者」（＜ *mrotos）; Skt <i>marati</i>
++eng: <b>本来語</b> murder, mordant は別／<b>ラテン系</b> mortal, immortal, mortality, mortgage（「死の質」＝債務が死ぬまで続く）, mortify, mortuary, mortician, amortize, morbid は別／<b>ギリシア系</b> ambrosia（「不死の（食物）」）, ambrosial
++note: <i>ambrosia</i>「神々の食物」は <i>a-</i>（非）+ <i>brotos</i>（死すべき）＝「不死をもたらすもの」。<i>mortgage</i> は「死の誓約」——債務が果たされれば誓約が「死ぬ」との解釈が有力。
+
+@ *meh₁- ; 「測る」
++cog: L <i>mētīrī</i>「測る」, <i>mēnsis</i>「月（暦）」, <i>lūna</i> は別; Gk <i>métron</i>「尺度」, <i>mḗn</i>「月」; Skt <i>mā́ti</i>
++eng: <b>本来語</b> moon, month, meal(?)／<b>ラテン系</b> measure, immense（測れない）, dimension, commensurate, menstrual, semester（「六か月」）, trimester／<b>ギリシア系</b> meter, metric, diameter, symmetry, geometry, barometer, isometric
++note: 「月」は最古の「測るもの」——暦の単位だった。<i>moon</i>, <i>month</i>, <i>measure</i>, <i>meter</i> はすべて同根。
+
+@ *mei- ; 「変える、交換する」
++cog: L <i>mūtāre</i>「変える」, <i>mūnus</i>「務め、贈り物」, <i>commūnis</i>「共通の」; Skt <i>máyate</i>
++eng: <b>本来語</b> mad(?)（OE <i>gemǣd</i>「変えられた」）, mis-(?)／<b>ラテン系</b> mutate, mutual, commute, permute, molt, common, community, communicate, municipal, immune（務めを免れた）, remunerate, mad
++note: <i>immune</i>「免疫の」の原義は「公の務め（<i>mūnus</i>）を免除された」。医学用語になったのは19世紀末。
+
+@ *melg- ; 「乳を搾る」
++cog: L <i>mulgēre</i>; Gk <i>amélgein</i>; OCS <i>mlěko</i>
++eng: <b>本来語</b> milk, milch／<b>ラテン系</b> emulsion（搾り出されたもの）
++note: ラテン語 <i>lac, lactis</i>「乳」（→ lactose, lettuce, latte）は別語根。
+
+@ *mel-it- ; 「蜜」
++cog: L <i>mel</i>「蜜」; Gk <i>méli</i>; Hitt <i>milit</i>
++eng: <b>ラテン系</b> mellifluous（蜜の流れる）, marmalade（ポルトガル語 <i>marmelo</i> マルメロ ＜ Gk <i>melímēlon</i>「蜜のリンゴ」）, molasses／<b>ギリシア系</b> melissa（蜜蜂）
++note: <i>marmalade</i> は本来マルメロのジャムで、オレンジのものではなかった。
+
+
+== N – R
+
+@ *neh₂u- ; 「船」
++cog: L <i>nāvis</i>; Gk <i>naûs</i>; Skt <i>nāú-</i>; OIr <i>náu</i>
++eng: <b>ラテン系</b> naval, navy, navigate, nave（教会の身廊＝船の形）／<b>ギリシア系</b> nautical, astronaut（星の船乗り）, cosmonaut, aeronaut, nausea（「船酔い」）, noise(?)（<i>nausea</i> 説）
++note: <i>nausea</i>「吐き気」は「船酔い」が原義。<i>noise</i> をこの語に結びつける説があるが確実ではない。
+
+@ *nekʷ-t- ; 「夜」
++cog: L <i>nox, noctis</i>; Gk <i>nýx</i>; Skt <i>nákt-</i>; Goth <i>nahts</i>; OCS <i>noštĭ</i>
++eng: <b>本来語</b> night, fortnight（14夜）, sennight（7夜、古語）／<b>ラテン系</b> nocturnal, nocturne, equinox（昼夜が等しい）, noctambulist／<b>ギリシア系</b> nyctalopia
++note: ゲルマン語では「夜」を数えて期間を表した（<i>fortnight</i> ＝ fourteen nights）。ラテン語系は「日」で数える（<i>quinze jours</i>）。
+
+@ *neḱ- ; 「死、消滅」
++cog: L <i>nex, necis</i>「殺害」, <i>nocēre</i>「害する」; Gk <i>nekrós</i>「死体」; Av <i>nasu-</i>
++eng: <b>ラテン系</b> innocent（害さない）, noxious, obnoxious, nuisance, pernicious, internecine, nectar は ギ／<b>ギリシア系</b> necropolis, necrosis, necromancy（死者による占い）, nectar（「死を克服するもの」＝神々の飲料）
++note: <i>innocent</i> は「害を与えない」が原義で、「無罪の」は法廷での転義。
+
+@ *nem- ; 「割り当てる、取る」
++cog: Gk <i>némein</i>「分配する」, <i>nómos</i>「法、慣習」, <i>nomós</i>「牧地」; Goth <i>niman</i>「取る」
++eng: <b>本来語</b> nimble（＜「よく取る」）, numb（＜ <i>nim</i> の過去分詞「取られた」）, benumb／<b>ギリシア系</b> economy（家の管理）, autonomy, astronomy, taxonomy, gastronomy, antinomy, nomad（牧地を移る者）, Deuteronomy（「第二の法」）, numismatic（<i>nómisma</i> 法定の貨幣）
++note: 古英語 <i>niman</i>「取る」（＝独 <i>nehmen</i>）は北欧語 <i>take</i> に取って代わられたが、<i>numb</i>「（感覚を）取られた」と <i>nimble</i> に痕跡が残る。
+
+@ *néwos ; 「新しい」
++cog: L <i>novus</i>; Gk <i>néos</i>; Skt <i>návas</i>; Goth <i>niujis</i>; OCS <i>novŭ</i>
++eng: <b>本来語</b> new, news(?)／<b>ラテン系</b> novel, novelty, novice, innovate, renovate, novena, nova, November は別（9）／<b>ギリシア系</b> neo-, neon（「新しい（気体）」）, neophyte, neolithic
++note: <i>news</i> は <i>new</i> の複数形（仏 <i>nouvelles</i> の写し）で、「東西南北」の頭字語だとする説は俗説（第1章）。
+
+@ *h₃nomn̥ ; 「名」
++cog: L <i>nōmen</i>; Gk <i>ónoma</i>; Skt <i>nā́man</i>; Goth <i>namō</i>; OCS <i>imę</i>
++eng: <b>本来語</b> name／<b>ラテン系</b> nominate, nominal, noun, pronoun, denominate, ignominy（名を失う）, nomenclature, misnomer, renown（＜「名を告げる」）／<b>ギリシア系</b> synonym, antonym, homonym, pseudonym, anonymous, eponym, onomatopoeia（「名を作ること」）, onomastics
++note: <i>noun</i>「名詞」も <i>nōmen</i> から。文法用語の多くはギリシア語の術語をラテン語に訳したものである。
+
+@ *h₃dónts ; 「歯」
++cog: L <i>dēns, dentis</i>; Gk <i>odoús, odóntos</i>; Skt <i>dán</i>; Lith <i>dantis</i>
++eng: <b>本来語</b> tooth, tusk(?), tine(?)／<b>ラテン系</b> dental, dentist, dentine, indent（歯形をつける→字下げ）, trident（三つ歯）, dandelion（仏 <i>dent de lion</i>「獅子の歯」）／<b>ギリシア系</b> orthodontics, mastodon（「乳頭の歯」）, periodontal
++note: <i>tooth</i>（本来語）と <i>dental</i>（ラテン系）はグリムの法則 *d → t の対応。語根はもともと *h₁ed-「食べる」の現在分詞「食べるもの」とする説がある。
+
+@ *h₃ekʷ- ; 「見る、目」
++cog: L <i>oculus</i>「目」; Gk <i>ṓps</i>「目、顔」, <i>ómma</i>; Skt <i>ákṣi</i>; OCS <i>oko</i>; Goth <i>augō</i>
++eng: <b>本来語</b> eye, daisy（「日の目」）, window（「風の目」）／<b>ラテン系</b> ocular, oculist, binocular, monocle, inoculate（「芽（＝目）を接ぐ」）, atrocious(?)／<b>ギリシア系</b> optic, optics, synopsis（「一望」）, autopsy（「自分の目で見ること」）, myopia, biopsy, panoptic, cyclops（「丸い目」）
++note: <i>inoculate</i>「接種する」は、もと園芸用語で「芽を接ぐ」（芽 <i>oculus</i>）。<i>autopsy</i>「検死」は「自ら見ること」。
+
+@ *oktṓ ; 「八」
++cog: L <i>octō</i>; Gk <i>oktṓ</i>; Skt <i>aṣṭā́</i>; Goth <i>ahtau</i>
++eng: <b>本来語</b> eight, eighty／<b>ラテン系</b> octave, October（もと第8月）, octagon, octopus は ギ／<b>ギリシア系</b> octopus（八本足）, octahedron
++note: 音楽の <i>octave</i> は「八度」。
+
+@ *pekʷ- ; 「料理する、熟す」
++cog: L <i>coquere</i>「料理する」（*p→kʷ の同化）; Gk <i>péssein</i>; Skt <i>pácati</i>; OCS <i>peką</i>
++eng: <b>本来語</b> cook は借用, ？／<b>ラテン系</b> cook（OE <i>cōc</i> ＜ L <i>cocus</i>）, kitchen（＜ <i>coquīna</i>）, cuisine, culinary, precocious（「早く熟す」）, biscuit（「二度焼いた」）, concoct, decoct, apricot（「早熟の」→ アラビア語経由で戻った）／<b>ギリシア系</b> peptic, dyspepsia, pepsin
++note: <i>apricot</i> は L <i>praecoquus</i>「早熟の」→ ギリシア語 → アラビア語 <i>al-barqūq</i> → スペイン語 <i>albaricoque</i> → 英語という長い旅の末、アラビア語の冠詞 al- を伴って戻ってきた。
+
+@ *ped- ; 「足」
++cog: L <i>pēs, pedis</i>; Gk <i>poús, podós</i>; Skt <i>pád-</i>; Goth <i>fōtus</i>; Hitt <i>pata-</i>
++eng: <b>本来語</b> foot, fetch(?), fetter, fetlock／<b>ラテン系</b> pedal, pedestrian, pedestal, pedigree（<i>pied de grue</i>「鶴の足」＝家系図の分岐記号）, pedicure, biped, quadruped, impede（足かせをはめる）, expedite（足かせを外す）, expedition, impediment, pawn（歩兵）, peon, pioneer（歩兵→開拓者）, pilot(?)／<b>ギリシア系</b> podium, tripod, antipodes（「足が反対」）, octopus, platypus（「平たい足」）, chiropodist
++note: <i>pedigree</i>「家系図」は、系図の分岐する線が鶴の足跡に似ていたことによる。<i>pedagogy</i> の ped- は <i>paîs, paidós</i>「子ども」で別語源（<i>pediatrics</i>, <i>encyclopedia</i>）。
+
+@ *peh₂- ; 「守る、養う」
++cog: L <i>pāscere</i>「牧する」, <i>pānis</i>「パン」, <i>pābulum</i>; Skt <i>pā́ti</i>「守る」; Hitt <i>pahs-</i>
++eng: <b>本来語</b> food, feed, fodder, foster, father(?)／<b>ラテン系</b> pastor（牧者）, pasture, pastoral, repast, company（パンを共にする者）, companion, pantry, pannier, appanage, pester(?)
++note: <i>company</i>「仲間、会社」は <i>com-</i>（共に）+ <i>pānis</i>（パン）＝「パンを分かち合う者」。<i>pastor</i>「牧師」は「羊飼い」。
+
+@ *peh₂wr̥ ; 「火」
++cog: Gk <i>pŷr</i>; Hitt <i>paḫḫur</i>; Umbrian <i>pir</i>
++eng: <b>本来語</b> fire／<b>ギリシア系</b> pyre, pyromania, pyrotechnics, pyrite, empyrean, antipyretic
++note: 印欧祖語には「火」を表す語が二つあった。無生の *peh₂wr̥（＝ fire, pyr）と、有生・人格的な *h₁ngʷnis（L <i>ignis</i> → ignite、Skt <i>agni</i> 火の神アグニ）である。
+
+@ *penkʷe ; 「五」
++cog: L <i>quīnque</i>; Gk <i>pénte</i>; Skt <i>páñca</i>; Goth <i>fimf</i>; Lith <i>penki</i>
++eng: <b>本来語</b> five, fifty, fist(?)（「五本の指」）, finger(?)／<b>ラテン系</b> quintet, quintessence（「第五元素」）, quinary, cinque／<b>ギリシア系</b> pentagon, pentathlon, Pentecost（「50日目」）, punch（飲料。ヒンディー語 <i>pāñč</i>「五（種の材料）」）
++note: 飲み物の <i>punch</i> は五種類の材料（酒・砂糖・レモン・水・香辛料）から。ヒンディー語だが印欧語なので <i>five</i> と同根である。
+
+@ *per- ; 「前へ、通って、越えて」
++cog: L <i>per, prō, prae, prīmus</i>; Gk <i>perí, pró, prôtos</i>; Skt <i>pári, prá</i>
++eng: <b>本来語</b> for, fore, first, forth, from, far, fro, before, forward／<b>ラテン系</b> per-, per se, perfect, prime, primary, prince, principal, pro-, proceed, produce, prior, priority, private, prove, approve, improve, pre-, prepare, present, president, prejudice, paramount, prowess／<b>ギリシア系</b> peri-, perimeter, period, protocol, prototype, protagonist, proton, protein（「第一のもの」）
++note: この語根は英語のもっとも生産的な接頭辞群（for-, fore-, per-, pro-, pre-, peri-, proto-）をすべて生んだ。
+
+@ *pleh₁- ; 「満たす」
++cog: L <i>plēnus</i>「満ちた」, <i>plūs</i>「より多く」, <i>populus</i>(?); Gk <i>plḗthein</i>, <i>polýs</i>「多くの」; Skt <i>pūrṇá-</i>
++eng: <b>本来語</b> full, fill, folk(?)／<b>ラテン系</b> plenty, plenary, plenitude, complete, deplete, replete, supply, implement, plus, plural, surplus, complement, compliment（同語源の二重語）, accomplish, expletive／<b>ギリシア系</b> poly-, polygon, plethora, hoi polloi
++note: <i>complement</i>（補完するもの）と <i>compliment</i>（賛辞）は同語源の二重語。後者はイタリア語・スペイン語経由で「礼儀を満たすこと」の意になった。
+
+@ *plek- / *pleḱ- ; 「編む、折る」
++cog: L <i>plicāre</i>「折る」, <i>plectere</i>「編む」; Gk <i>plékein</i>; OCS <i>plesti</i>
++eng: <b>本来語</b> fold, -fold（twofold）, flax(?)／<b>ラテン系</b> ply, apply, imply, reply, comply, supply(別), complicate, duplicate, multiply, explicate, explicit, implicit, complex, perplex, pliable, pliers, plait, pleat, deploy, display, employ, exploit, simple, double, triple, plywood／<b>ギリシア系</b> plectrum, symplectic
++note: <i>display</i>（＜ <i>dis-plicāre</i>「広げる」）と <i>deploy</i> と <i>explicit</i>（「折り目を開いた」＝明白な）と <i>implicit</i>（「折り込まれた」＝暗黙の）が同根。
+
+@ *pleu- ; 「流れる、浮かぶ」
++cog: L <i>pluere</i>「雨が降る」; Gk <i>pleîn</i>「航海する」, <i>plýnein</i>「洗う」; Skt <i>plávate</i>
++eng: <b>本来語</b> flow, flood, float, fleet, flit, fly(?), flee(?), fowl(?), pluvial は ラ／<b>ラテン系</b> pluvial, fluvial は別（*bʰleu-）／<b>ギリシア系</b> pneumonia は別
++note: ラテン語 <i>fluere</i>「流れる」（→ fluid, influence, fluent, flux, affluent, superfluous）は別語根 *bʰleu- とされるが、関連を認める説もある。
+
+@ *poti- ; 「力ある者、主人」
++cog: L <i>potis</i>「できる」, <i>potestās</i>; Gk <i>pósis</i>「夫」, <i>despótēs</i>「主人」; Skt <i>páti-</i>
++eng: <b>ラテン系</b> potent, potential, power, possible, possess（「主として座る」）, puissant, omnipotent, impotent／<b>ギリシア系</b> despot（「家の主」）, hospodar
++note: <i>despot</i> ＜ *dems-potis「家の主」で、<i>domestic</i> の <i>dem-</i> と同根の複合語。
+
+@ *preḱ- ; 「問う、請う」
++cog: L <i>precārī</i>「祈る」, <i>rogāre</i>(?)「尋ねる」, <i>poscere</i>「要求する」; Skt <i>pṛcchati</i>; OHG <i>frāgēn</i>
++eng: <b>本来語</b> ？／<b>ラテン系</b> pray, prayer, precarious（「祈るしかない」＝不安定な）, deprecate, imprecate, postulate
++note: <i>precarious</i>「不安定な」の原義は「（他人の）好意に祈って得た」。法律用語から一般語へ。
+
+@ *reg- ; 「まっすぐ動かす、導く、支配する」
++cog: L <i>regere, rēctum</i>「導く」, <i>rēx, rēgis</i>「王」, <i>rogāre</i>「尋ねる」; Skt <i>rā́j-</i>「王」; OIr <i>rí</i>
++eng: <b>本来語</b> right（まっすぐ→正しい）, rich（＜ケルト語経由の <i>rīx</i>）, reckon(?), rack(?), -ric（bishopric）／<b>ラテン系</b> regal, royal, reign, regent, region, regiment, regular, rule, ruler, correct, direct, erect, rectangle, rectify, rector, rectum（「まっすぐな腸」）, address, dress, adroit, escort, resource／<b>その他</b> Reich, raj, maharaja（「大王」）
++note: 「まっすぐ」から「正しい」「支配する」へ。<i>right</i>（右）も「正しい側」から。多くの言語で「右」＝「正しい」（仏 <i>droit</i>, 独 <i>recht</i>, 露 <i>právyj</i>）。
+
+@ *reudʰ- ; 「赤い」
++cog: L <i>ruber</i>, <i>rūfus</i>; Gk <i>erythrós</i>; Skt <i>rudhirá-</i>; OCS <i>rŭdrŭ</i>
++eng: <b>本来語</b> red, ruddy, rust, rowan(?)／<b>ラテン系</b> ruby, rubric（赤字の見出し）, rubella, rouge, russet, robust(?)／<b>ギリシア系</b> erythrocyte（赤血球）
++note: <i>rubric</i>「規定、項目」は、中世写本で章題を赤インクで書いたことに由来する。
+
+
+== S – T
+
+@ *sed- ; 「座る」
++cog: L <i>sedēre</i>「座る」, <i>sēdēs</i>「座」; Gk <i>hézesthai</i>, <i>hédra</i>「座席」; Skt <i>sī́dati</i>; OCS <i>sěsti</i>
++eng: <b>本来語</b> sit, set（座らせる）, seat（＜ON）, settle, saddle, soot（「（煤が）付着する」）, nest（*ni-sd-o-「下に座る所」）, sedge(?)／<b>ラテン系</b> sedentary, session, sediment, siege（「座ること」＝包囲）, preside, president, reside, subside, subsidy, assess, assiduous, obsess, possess, dissident, insidious（「待ち伏せる」）, supersede, size（＜ <i>assise</i>）／<b>ギリシア系</b> cathedral（<i>kathédrā</i>「座席」＝司教座）, polyhedron, tetrahedron, ephedrine
++note: <i>cathedral</i>「大聖堂」は「司教の座（<i>cathedra</i>）のある教会」。<i>chair</i> も同語源（<i>cathedra</i> → 仏 <i>chaire</i> → <i>chair</i>）。<i>nest</i> は「下に(*ni)座る(*sd)場所」の複合。
+
+@ *seh₂g- ; 「探し求める、追跡する」
++cog: L <i>sāgīre</i>「感じ取る」, <i>sagāx</i>「鋭敏な」; Gk <i>hēgeîsthai</i>「導く」
++eng: <b>本来語</b> seek, sake（「訴訟、事由」）, forsake, beseech, ransack(?)／<b>ラテン系</b> sagacious, presage, exegesis は ギ／<b>ギリシア系</b> exegesis（「導き出すこと」＝解釈）, hegemony（「導くこと」）
++note: <i>for the sake of</i> の <i>sake</i> は「訴訟、事柄」で、<i>seek</i> と同根。日本語の「酒」とは無関係。
+
+@ *seh₁- ; 「蒔く」
++cog: L <i>serere, satum</i>「蒔く」, <i>sēmen</i>「種」; OCS <i>sěti</i>; Goth <i>saian</i>
++eng: <b>本来語</b> sow（蒔く）, seed, season（＜ <i>satiō</i>「蒔く時」）／<b>ラテン系</b> semen, seminar（「苗床」）, seminary, disseminate, inseminate, season
++note: <i>season</i>「季節」の原義は「種蒔きの時」。<i>seminar</i>「演習」は「苗床」。
+
+@ *sekʷ- ; 「従う」
++cog: L <i>sequī, secūtum</i>; Gk <i>hépesthai</i>; Skt <i>sácate</i>; Lith <i>sekti</i>
++eng: <b>本来語</b> see(?)（別語源説が有力）／<b>ラテン系</b> sequence, sequel, subsequent, consequence, consecutive, execute, prosecute, persecute, pursue, ensue, sue, suit, suite, second（「（一に）続くもの」）, sect(?), social, society, associate（「ついていく者」）／<b>ギリシア系</b> ？
++note: <i>second</i>「二番目」の原義は「（一番に）従うもの」。それ以前の英語は <i>other</i> を用いた（<i>every other day</i> に痕跡）。時間の「秒」は「（分を）二度目に分割したもの」（<i>pars minuta secunda</i>）。
+
+@ *sekʷ- ; 「言う、見せる」
++cog: Gk <i>énnepe</i>「語れ」; OHG <i>sagēn</i>; Lith <i>sakýti</i>
++eng: <b>本来語</b> say, saga（＜ON）, saw（古語「格言」）
++note: 前項の「従う」とは別語根（同形だが別語）とされる。
+
+@ *sek- ; 「切る」
++cog: L <i>secāre</i>「切る」, <i>sīca</i>「短剣」; OCS <i>sěšti</i>
++eng: <b>本来語</b> saw（鋸）, scythe, sedge（「切る草」）, skin(?)／<b>ラテン系</b> section, sector, segment, dissect, insect（「切り込まれた（体）」）, intersect, secant, sickle, secateurs
++note: <i>insect</i>「昆虫」は「体に切れ目のあるもの」（Gk <i>éntomon</i> の翻訳借用。<i>entomology</i> も同義）。
+
+@ *sem- ; 「一、共に」
++cog: L <i>semel</i>「一度」, <i>similis</i>「似た」, <i>simul</i>「同時に」, <i>singulī</i>; Gk <i>heîs</i>「一」, <i>homós</i>「同じ」, <i>háma</i>; Skt <i>sam-</i>
++eng: <b>本来語</b> same（＜ON）, some, -some, seem, sundry は別／<b>ラテン系</b> similar, simulate, simultaneous, assemble, resemble, simple（「一重の」）, single, singular, sincere(?), semper（<i>semper fidelis</i>）／<b>ギリシア系</b> homogeneous, homonym, homosexual, anomaly（「均しくない」）, hyphen（<i>hyph' hén</i>「一つのもとに」）
++note: <i>homo-</i>（ギ「同じ」）と <i>homo</i>（ラ「人」＜ *dʰǵʰem-）は無関係な別語根。<i>homosexual</i> の homo- は前者である。
+
+@ *septm̥ ; 「七」
++cog: L <i>septem</i>; Gk <i>heptá</i>; Skt <i>saptá</i>; Goth <i>sibun</i>
++eng: <b>本来語</b> seven, seventy／<b>ラテン系</b> September（もと第7月）, septet, septennial／<b>ギリシア系</b> heptagon, Heptateuch
++note: 週が七日なのはバビロニア起源で、印欧語族固有ではない。
+
+@ *ser- ; 「並べる、繋ぐ」
++cog: L <i>serere</i>「繋ぐ」, <i>seriēs</i>「連なり」, <i>sermō</i>「話（＝言葉の連なり）」; Gk <i>eírein</i>「繋ぐ」
++eng: <b>ラテン系</b> series, serial, sermon, assert, desert（見捨てる＝繋ぎを解く）, insert, exert, dissertation, sort(?), consort
++note: <i>desert</i>（見捨てる／砂漠）と <i>dessert</i>（食後の菓子、<i>des-servir</i>「（食卓を）片付ける」）は別語源。
+
+@ *swe- / *se- ; 「自己、自分の」
++cog: L <i>sē</i>「自分を」, <i>suus</i>「彼自身の」, <i>sōlus</i>(?); Gk <i>heaútou</i>, <i>éthos</i>; Goth <i>swēs</i>
++eng: <b>本来語</b> self, sibling（＜ OE <i>sibb</i>「親族」）, gossip（<i>god-sibb</i>）, swain, sullen(?)／<b>ラテン系</b> suicide, sui generis, secede, secret（「離して分ける」）, secure, select, separate, sever, sober(?), custom（<i>consuētūdō</i>「自分のものにすること」）, costume（同語源の二重語）／<b>ギリシア系</b> ethic, ethos, idiom は別
++note: 接頭辞 <i>se-</i>「離れて」は「自分だけで」が原義。<i>custom</i> と <i>costume</i> は同語源の二重語（ともに <i>consuētūdō</i>「習慣」から）。
+
+@ *sker- ; 「切る」
++cog: L <i>caro, carnis</i>「肉（＝切り分けたもの）」, <i>cortex</i>「樹皮」, <i>scortum</i>「皮」; Gk <i>keírein</i>「刈る」
++eng: <b>本来語</b> shear, share, shard, shore（「切れ目」）, score（刻み目→20、得点）, short, shirt, skirt, scar(?), screen(?), sharp, scrape, scrap, scrub, shrub(?), skirmish／<b>ラテン系</b> carnal, carnage, carnival（「肉を取り去る（謝肉祭）」）, carnation, incarnation, carrion, cortex, corium, curt, cuirass, decorticate／<b>ギリシア系</b> ？
++note: <i>carnival</i> は中世ラテン語 <i>carnem levāre</i>「肉を取り除く」（四旬節前の祝祭）とされる。「さらば肉よ」（<i>carne vale</i>）とする説は民間語源。
+
+@ *(s)kel- ; 「覆う、隠す」
++cog: L <i>cēlāre</i>「隠す」, <i>occultus</i>, <i>cella</i>「小部屋」, <i>color</i>(?); Gk <i>kalýptein</i>「覆う」
++eng: <b>本来語</b> hell（「覆われた場所」）, hall, hull, helm, helmet, holster, hole, hollow, holl, conceal は仏経由／<b>ラテン系</b> cell, cellar, conceal, occult, clandestine(?), color, apocalypse は ギ／<b>ギリシア系</b> apocalypse（「覆いを取ること」＝黙示）, Calypso, eucalyptus（「よく覆われた」＝萼が蓋になる）
++note: <i>hell</i>「地獄」の原義は「覆い隠された場所」で、キリスト教以前のゲルマン語の冥界観に由来する。<i>apocalypse</i> は「覆いを取ること」＝啓示。
+
+@ *(s)teg- ; 「覆う」
++cog: L <i>tegere</i>「覆う」, <i>toga</i>, <i>tēctum</i>「屋根」; Gk <i>stégein</i>, <i>tégos</i>「屋根」
++eng: <b>本来語</b> thatch, deck（オランダ語経由）, tile（ラ経由）／<b>ラテン系</b> protect, detect, integument, toga, tegument, tectonic は ギ／<b>ギリシア系</b> stegosaurus（「屋根トカゲ」）, tectonic（<i>tektōn</i>「大工」は別語根 *tetḱ-）
++note: 語頭の s- が付いたり付かなかったりする「s-mobile」の例（第8章）。<i>thatch</i>（葺く）と <i>protect</i>（覆って守る）が同根。
+
+@ *speḱ- ; 「観察する、見る」
++cog: L <i>specere</i>「見る」, <i>speciēs</i>「外見、種」, <i>speculum</i>「鏡」; Gk <i>skopeîn</i>「見る」（音位転換）; Skt <i>páśyati</i>
++eng: <b>本来語</b> spy（仏経由のゲルマン語）, espy／<b>ラテン系</b> spectacle, spectator, spectrum, specter, specimen, species, special, specific, specious（「見かけ倒しの」）, speculate, inspect, respect, expect, suspect, prospect, aspect, circumspect, introspect, retrospect, perspective, conspicuous, despise, despicable, auspice（「鳥を見る」＝鳥占い）／<b>ギリシア系</b> scope, telescope, microscope, episcopal, bishop（＜ <i>epískopos</i>「監督者」）, skeptic（「よく見る者」→懐疑論者）, horoscope（「時を見る」）
++note: ギリシア語 <i>skopeîn</i> は *spek- の音位転換（metathesis）形。<i>bishop</i>（本来語化した形）と <i>episcopal</i>（学術借用形）は二重語。
+
+@ *sneh₁- / *(s)nē- ; 「紡ぐ、縫う」
++cog: L <i>nēre</i>「紡ぐ」, <i>nervus</i>「腱」; Gk <i>nêma</i>「糸」, <i>neûron</i>「腱、神経」
++eng: <b>本来語</b> needle, sinew, snare, nerve は ラ／<b>ラテン系</b> nerve, nervous, enervate／<b>ギリシア系</b> neuron, neurology, neurosis, nematode
++note: <i>sinew</i>（本来語）と <i>nerve</i>（ラ）と <i>neuron</i>（ギ）が同根。s-mobile の例。
+
+@ *stā- / *steh₂- ; 「立つ」
++cog: L <i>stāre</i>「立つ」, <i>status</i>, <i>sistere</i>; Gk <i>hístēmi</i>, <i>stásis</i>; Skt <i>tíṣṭhati</i>; OCS <i>stati</i>
++eng: <b>本来語</b> stand, stead, steady, stall, stallion, stool, still, stem, stud, understand, withstand, stow, staff(?)／<b>ラテン系</b> state, status, statue, statute, stable, station, stationary, stationery（「常設の店の（文具）」）, estate, establish, constant, constitute, institute, substitute, destitute, distance, instant, circumstance, obstacle, substance, assist, consist, exist, insist, persist, resist, subsist, rest（<i>restāre</i>）, arrest, contrast, cost（<i>constāre</i>）, armistice, solstice（「太陽が立ち止まる」）, superstition／<b>ギリシア系</b> static, statics, stasis, system, ecstasy（「（正気の）外に立つ」）, apostasy, prostate（「前に立つ（腺）」）
++note: この語根から出る英語は200語を超え、印欧語根中もっとも生産的なもののひとつ。<i>stationery</i>「文具」が <i>stationary</i>「静止した」と同源なのは、中世大学の周りで「常設の店（stationer）」が本や紙を売ったから。
+
+@ *ster- ; 「広げる」
++cog: L <i>sternere, strātum</i>「敷く」; Gk <i>stórnymi</i>; Skt <i>str̥ṇā́ti</i>
++eng: <b>本来語</b> strew, straw（敷くもの）, street（<i>via strāta</i>「敷石の道」）／<b>ラテン系</b> stratum, stratify, structure は別, prostrate, consternation, stratosphere
++note: <i>street</i> は大陸期のラテン語借用（第5章の第0期）。<i>straw</i> は「敷き藁」。
+
+@ *h₂stḗr ; 「星」
++cog: L <i>stella</i>（＜ *ster-la）; Gk <i>astḗr</i>, <i>ástron</i>; Skt <i>tā́rā</i>; Hitt <i>ḫasterza</i>
++eng: <b>本来語</b> star／<b>ラテン系</b> stellar, constellation, Stella／<b>ギリシア系</b> astronomy, astrology, asterisk（「小さな星」）, asteroid, disaster（「凶星」）, astronaut
++note: <i>disaster</i>「災害」はイタリア語 <i>disastro</i>「星回りが悪い」から。占星術的世界観の化石である。
+
+@ *swep- ; 「眠る」
++cog: L <i>somnus</i>「眠り」（＜ *swep-no-）, <i>sopor</i>; Gk <i>hýpnos</i>; Skt <i>svápiti</i>
++eng: <b>本来語</b> sleep は別語源, swoon(?)／<b>ラテン系</b> somnolent, insomnia, somnambulist, soporific／<b>ギリシア系</b> hypnosis, hypnotic
++note: 英語 <i>sleep</i> は西ゲルマン語独自の語で、この語根とは無関係である。
+
+@ *swésōr ; 「姉妹」
++cog: L <i>soror</i>; Gk <i>éor</i>; Skt <i>svásṛ</i>; Goth <i>swistar</i>; OCS <i>sestra</i>
++eng: <b>本来語</b> sister（＜ON <i>systir</i>。OE <i>sweostor</i> を置換）／<b>ラテン系</b> sorority, sororal, cousin（<i>consobrīnus</i>「母方のいとこ」）
++note: <i>cousin</i> は <i>con-</i> + <i>soror</i> で「姉妹をともにする者」＝母方のいとこが原義。
+
+@ *tap-/*tep- ; 「熱い」
++cog: L <i>tepēre</i>「ぬるい」; Skt <i>tápati</i>; OCS <i>teplŭ</i>
++eng: <b>ラテン系</b> tepid, tepefy
++note: 短いが確実な語根。
+
+@ *telh₂- ; 「持ち上げる、担う」
++cog: L <i>tollere</i>「持ち上げる」, <i>lātum</i>「運ばれた」, <i>tolerāre</i>; Gk <i>tlênai</i>「耐える」, <i>Átlās</i>; Goth <i>þulan</i>
++eng: <b>本来語</b> thole（古語「耐える」）／<b>ラテン系</b> tolerate, extol, relate, translate, dilate, oblate, prelate, superlative, legislator, elate, collate, ablative／<b>ギリシア系</b> Atlas（天を担ぐ巨人）, atlas（地図帳。メルカトルの表紙にアトラス像）, Atlantic, talent（<i>tálanton</i>「秤の皿→重量単位→貨幣→（聖書の比喩から）才能」）
++note: <i>talent</i>「才能」は、マタイ伝の「タラントンの譬え」（預けられた貨幣を活かす話）から、16世紀に「天賦の能力」の意味を得た。<i>atlas</i>「地図帳」はメルカトルの地図帳の表紙にアトラス像が描かれたことによる。
+
+@ *ten- ; 「引き伸ばす、張る」
++cog: L <i>tendere</i>「伸ばす」, <i>tenēre</i>「保つ」, <i>tenuis</i>「薄い」; Gk <i>teínein</i>, <i>tónos</i>「張り、音調」; Skt <i>tanóti</i>
++eng: <b>本来語</b> thin, thunder(?)/donner は別／<b>ラテン系</b> tend, tendency, extend, intend, pretend, contend, attend, distend, tension, tense, intense, ostensible, tenant, tenacious, tenable, tenure, tenor, contain, obtain, retain, sustain, detain, maintain, abstain, entertain, pertain, continent, content, countenance, lieutenant, tenement, tenuous, attenuate, thin／<b>ギリシア系</b> tone, tonic, monotone, baritone, tetanus（「引きつり」）, hypotenuse（「下に張る（線）」）
++note: <i>hypotenuse</i>「斜辺」は「（直角を）下に張るもの」。<i>lieutenant</i>「中尉」は仏 <i>lieu tenant</i>「（上官の）場所を保つ者」＝代理。
+
+@ *terh₂- ; 「越える、通り抜ける」
++cog: L <i>trāns</i>「越えて」, <i>terminus</i>「境界」, <i>intrāre</i>; Skt <i>tarati</i>; Hitt <i>tarḫ-</i>
++eng: <b>本来語</b> through, thorough, nostril（「鼻の穴」＜ <i>nos-þyrl</i>）, thrill（「穴を開ける」→ぞくぞくさせる）／<b>ラテン系</b> trans-, transit, transfer, translate, trance, entrance, nostrum(?), term, terminal, determine, exterminate, avatar は別／<b>ギリシア系</b> ？
++note: <i>thrill</i>「ぞくぞくさせる」の原義は「（穴を）貫く」。<i>nostril</i> は「鼻(nose)の穴(thrill)」。
+
+@ *treies ; 「三」
++cog: L <i>trēs</i>; Gk <i>treîs</i>; Skt <i>tráyas</i>; Goth <i>þreis</i>; OCS <i>trije</i>
++eng: <b>本来語</b> three, thirteen, thirty, third, thrice／<b>ラテン系</b> trio, triple, trinity, trivial（「三叉路の」＝ありふれた）, trivium, testify(?)（<i>testis</i> ＜「三人目＝第三者」）／<b>ギリシア系</b> tripod, triad, triathlon
++note: <i>trivial</i>「些細な」は <i>trivium</i>「三叉路」から。人々が行き交う辻で交わされる話＝ありふれた話。
+
+@ *tres- ; 「震える」
++cog: L <i>terrēre</i>「怖がらせる」; Gk <i>trémein</i>; Skt <i>trásati</i>
++eng: <b>ラテン系</b> terror, terrible, terrific, deter, terrify, tremble, tremendous, tremor, trepidation, intrepid
++note: <i>terrific</i>「素晴らしい」ともとは「恐怖を起こす」。意味の良化（第7章）。<i>terrible</i> と <i>terrific</i> が正反対の価値を持つに至ったのは英語の妙味。
+
+
+== U – Z
+
+@ *upér ; 「上に、越えて」
++cog: L <i>super</i>; Gk <i>hypér</i>; Skt <i>upári</i>; Goth <i>ufar</i>
++eng: <b>本来語</b> over, above(?)／<b>ラテン系</b> super-, superior, supreme, sum, summit, sovereign, soprano, sober(?), insuperable, surplus, surface, surname, sirloin（「腰の上の肉」。「サー・ロイン」の逸話は俗説）／<b>ギリシア系</b> hyper-, hyperbole（「投げ越す」＝誇張）, hypertension
++note: <i>sirloin</i> をイングランド王が肉を騎士に叙したという話は完全な民間語源。仏 <i>surlonge</i>「腰(longe)の上(sur)」である。
+
+@ *upo ; 「下に、下から上へ」
++cog: L <i>sub</i>; Gk <i>hypó</i>; Skt <i>úpa</i>; Goth <i>uf</i>
++eng: <b>本来語</b> up, open（「上に上げる」）, above／<b>ラテン系</b> sub-, subject, submit, suffer, support, suspect, sudden(?), souvenir, supple, sombre／<b>ギリシア系</b> hypo-, hypothesis（「下に置くこと」）, hypocrisy（「下から答える」＝役者の演技）, hypodermic
++note: <i>hypocrisy</i>「偽善」は、ギリシア劇で仮面をつけた役者が「（合唱隊に）応答する」ことから、「演技する」→「本心を隠す」へ。
+
+@ *wed- ; 「水、濡れる」
++cog: Gk <i>hýdōr</i>「水」; Skt <i>udán-</i>; Hitt <i>watar</i>; OCS <i>voda</i>; L <i>unda</i>「波」
++eng: <b>本来語</b> water, wet, winter(?), otter（「水の動物」）, wash／<b>ラテン系</b> undulate, abound, redundant（「波が溢れる」）, surround(?), inundate／<b>ギリシア系</b> hydrogen, hydrant, hydraulic, dropsy（＜ <i>hydrōpsis</i>）／<b>その他</b> vodka（ロシア語「小さな水」）, whisk(e)y（ゲール語 <i>uisce beatha</i>「命の水」）
++note: <i>whisky</i> も <i>vodka</i> も「水」の語である。<i>otter</i> は「水のもの」で、Gk <i>hýdrā</i>「水蛇（ヒュドラ）」と同根。
+
+@ *weǵʰ- ; 「運ぶ、行く」
++cog: L <i>vehere</i>「運ぶ」, <i>via</i>(?)「道」; Gk <i>ókhos</i>「車」; Skt <i>váhati</i>; OCS <i>vesti</i>
++eng: <b>本来語</b> wagon, wain（荷車。<i>Charles's Wain</i>＝北斗七星）, way, weigh, weight, wag, wiggle／<b>ラテン系</b> vehicle, vehement(?), convex は別, convey, convoy, deviate, obviate, previous, trivial（*trei-と合成）, viaduct, voyage, invoice／<b>ギリシア系</b> ochlocracy は別
++note: <i>weigh</i>「重さを量る」と <i>way</i>「道」が同根。荷を「運ぶ」ことから、「秤で持ち上げる」「通り道」の両方に分岐した。
+
+@ *weid- ; 「見る」→「知る」
++cog: L <i>vidēre</i>「見る」; Gk <i>eidénai</i>「知る」, <i>idéā</i>, <i>historía</i>; Skt <i>véda</i>「知識」; OCS <i>viděti</i>
++eng: <b>本来語</b> wit, wise, wisdom, wizard, witness, guide（仏経由、ゲルマン語 *wītan）, twit(?), unwitting／<b>ラテン系</b> vision, visible, visit, video, visual, vista, view, provide, prudent（<i>prōvidēns</i> の短縮）, evident, review, revise, supervise, advise, survey, envy（「にらむ」）, improvise, invidious, clairvoyant, interview／<b>ギリシア系</b> idea, ideal, idol, history, story／<b>その他</b> Veda（サンスクリット）
++note: 「見る」＝「知る」の等式は普遍的である（英 <i>I see</i>＝「わかった」）。<i>history</i> は Gk <i>hístōr</i>「知る者、目撃者」から。<i>wit</i>, <i>wise</i>, <i>idea</i>, <i>history</i>, <i>vision</i>, <i>Veda</i> がすべて同根。
+
+@ *weiḱ- ; 「氏族、集落」
++cog: L <i>vīcus</i>「村」, <i>vīlla</i>「農園」; Gk <i>oîkos</i>「家」; Skt <i>viś-</i>; Goth <i>weihs</i>
++eng: <b>本来語</b> -wich/-wick（Norwich, Warwick）／<b>ラテン系</b> vicinity, village, villa, villain（「農園の下男」→悪党）, villein／<b>ギリシア系</b> economy（<i>oikonomíā</i>「家政」）, ecology（「家の学」）, ecumenical（「人の住む全世界の」）, diocese, parish（<i>paroikíā</i>「近隣」）
++note: <i>economy</i> と <i>ecology</i> の eco- は「家」。<i>villain</i> の悪化は第7章参照。
+
+@ *wel- ; 「望む、意志する」
++cog: L <i>velle</i>「望む」, <i>voluptās</i>「快楽」; Gk <i>élpomai</i>(?); Skt <i>vṛṇīté</i>; OCS <i>voliti</i>
++eng: <b>本来語</b> will, well（「望みどおりに」）, weal, wealth, welcome, well-being, wale(?)／<b>ラテン系</b> voluntary, volunteer, volition, benevolent（善を望む）, malevolent, voluptuous
++note: 助動詞 <i>will</i> はもと「欲する」（独 <i>wollen</i>）。未来を表すようになったのは文法化（第7章）。副詞 <i>well</i> も「望ましく」から。
+
+@ *wel- ; 「回す、巻く」
++cog: L <i>volvere</i>「転がす」, <i>vallis</i>(?); Gk <i>eilýein</i>; Skt <i>válate</i>
++eng: <b>本来語</b> walk（もと「転がる、こねる」）, wallow, welter, waltz（独）, well（泉＝湧き出る）, willow(?), helix は ギ／<b>ラテン系</b> volume（「巻物」）, revolve, revolution, involve, evolve, evolution, devolve, convolute, vault, volt(?), voluble, valve, vulva／<b>ギリシア系</b> helix, helicopter（「螺旋の翼」）
++note: <i>volume</i>「巻、量」は本来「巻物」。<i>helicopter</i> は <i>helico-</i>+<i>pter</i>（翼）であって、<i>heli-</i>+<i>copter</i> ではないが、異分析により <i>copter</i>, <i>heliport</i> という語が生まれた。
+
+@ *wer- ; 「話す」
++cog: Gk <i>eírein</i>「言う」, <i>rhḗtōr</i>「弁論家」; L <i>verbum</i>「語」; Goth <i>waúrd</i>; Lith <i>vardas</i>「名」
++eng: <b>本来語</b> word, answer は別／<b>ラテン系</b> verb, verbal, verbose, adverb, proverb, verve／<b>ギリシア系</b> rhetoric, rhetorical, irony（<i>eirōneíā</i>「とぼけて言うこと」）
++note: <i>word</i>（本来語）と <i>verb</i>（ラテン系）が同根。グリムの法則 *w は変化しないが、*d → t、*t → þ の交替がある。
+
+@ *wer- ; 「回す、曲げる」
++cog: L <i>vertere, versum</i>「回す」; Skt <i>vartate</i>; OCS <i>vrĭtěti</i>; Lith <i>ver̃sti</i>
++eng: <b>本来語</b> -ward（toward, forward, backward）, worth（「〜に向かう価値」）, weird（＜ <i>wyrd</i>「運命＝巡ってくるもの」）, wreath, writhe, wrist, wrath, wrong（「ねじれた」）, worm(?), wrap(?)／<b>ラテン系</b> convert, divert, invert, revert, avert, advert, advertise, subvert, pervert, introvert, extrovert, versus, version, versatile, verse（「（鋤の）折り返し」＝詩行）, vertigo, vortex, anniversary, universe, controversy, divorce, adverse, prose（<i>prōversa ōrātiō</i>「まっすぐな言葉」）
++note: <i>verse</i>「詩行」は、耕作で鋤が畑の端で「向きを変える」ことの比喩（<i>boustrophedon</i> も同じ発想）。<i>prose</i>「散文」は「（折り返さず）前へ向かう言葉」。
+
+@ *werǵ- ; 「働く、なす」
++cog: Gk <i>érgon</i>「仕事」, <i>órganon</i>「道具」; Av <i>varəz-</i>; OHG <i>werc</i>
++eng: <b>本来語</b> work, wright（<i>playwright</i>, <i>wheelwright</i>）, wrought, bulwark(?), irk(?)／<b>ギリシア系</b> energy（「内なる働き」）, ergonomics, erg, surgery（<i>kheirourgíā</i>「手の働き」）, organ, organize, orgy（<i>órgia</i> 儀式）, allergy（「別の働き」）, synergy, liturgy（「公の働き」）, metallurgy
++note: <i>surgery</i>「外科」は「手仕事」。<i>work</i> と <i>energy</i> と <i>organ</i> が同根であることは、物理学の用語法（仕事とエネルギー）とも響き合う。
+
+@ *wes- ; 「着る」
++cog: L <i>vestis</i>「衣」; Gk <i>hénnymi</i>; Skt <i>váste</i>; Hitt <i>weš-</i>
++eng: <b>本来語</b> wear／<b>ラテン系</b> vest, vestment, invest（「（職服を）着せる」→ 授与する→ 投資する）, divest, travesty（「変装させる」）, transvestite, vesture
++note: <i>invest</i>「投資する」は、もと「（官職の印として）衣を着せる」。イタリアの商業で「資金に職務を着せる」の比喩から金融用語になった。
+
+@ *wes-r̥ / *wesn̥- ; 「春」
++cog: L <i>vēr</i>; Gk <i>éar</i>; Skt <i>vasantá-</i>; OCS <i>vesna</i>
++eng: <b>ラテン系</b> vernal, vernacular は別（<i>verna</i>「家生まれの奴隷」）
++note: 英語 <i>spring</i>「春」は「（草木が）跳ね出る」の比喩で、この語根とは無関係。
+
+@ *wī-ro- ; 「男、人」
++cog: L <i>vir</i>「男」; Skt <i>vīrá-</i>; Goth <i>waír</i>; OIr <i>fer</i>; Lith <i>výras</i>
++eng: <b>本来語</b> werewolf（「男狼」）, world（<i>wer-eld</i>「人の齢」）, wergild（「人命金」）／<b>ラテン系</b> virile, virtue（もと「男らしさ、勇気」）, virtual, triumvirate, decemvir
++note: <i>virtue</i>「美徳」は <i>vir</i>「男」から「男らしさ」→「勇気」→「徳」。マキァヴェッリの <i>virtù</i> は古義に近い。
+
+@ *wl̥kʷos ; 「狼」
++cog: L <i>lupus</i>; Gk <i>lýkos</i>; Skt <i>vṛ́ka-</i>; Lith <i>vil̃kas</i>; OCS <i>vlŭkŭ</i>
++eng: <b>本来語</b> wolf, werewolf／<b>ラテン系</b> lupine, lupus（皮膚病。「狼が食ったような」）／<b>ギリシア系</b> lycanthropy（「狼人間になる病」）, Lyceum（アポロン・リュケイオスの神域。アリストテレスの学園）
++note: ラテン語 <i>lupus</i> は規則どおりなら *luquus となるはずで、サビニ方言からの借用とされる。<i>Lyceum</i>（仏 <i>lycée</i>）は「狼の（アポロン）」に由来する。
+
+@ *yeug- ; 「結ぶ、くびきをかける」
++cog: L <i>iungere, iūnctum</i>「結ぶ」, <i>iugum</i>「くびき」; Gk <i>zeugnýnai</i>, <i>zygón</i>; Skt <i>yunákti</i>, <i>yoga-</i>
++eng: <b>本来語</b> yoke, yokel(?)／<b>ラテン系</b> join, joint, junction, juncture, conjunction, adjunct, subjugate, jugular, injunction, adjust(?), jostle, joust, conjugal（「くびきを共にする」＝夫婦の）, conjugate／<b>ギリシア系</b> zygote（「結ばれたもの」＝受精卵）, syzygy, zeugma／<b>その他</b> yoga（サンスクリット「結合」）
++note: <i>yoga</i>「ヨーガ」と <i>yoke</i>「くびき」と <i>junction</i>「接合」は同根。ヨーガは「心身を結ぶこと」。
+
+@ *ǵʰes-r- ; 「手」
++cog: Gk <i>kheír</i>「手」; Hitt <i>keššar</i>; Arm <i>jeṙn</i>
++eng: <b>ギリシア系</b> chiropractic（「手で行う」）, chiropodist, chirography, surgery（<i>kheir</i>+<i>ergon</i>）, enchiridion
++note: ラテン語 <i>manus</i>「手」は別語根 *man-（→ manual, manufacture, manuscript, manner, manage, maintain, emancipate, manifest）。
+
+@ *gʰeu- ; 「注ぐ」
++cog: L <i>fundere, fūsum</i>「注ぐ」; Gk <i>khéein</i>; Skt <i>juhóti</i>; Goth <i>giutan</i>
++eng: <b>本来語</b> gut(?), geyser（アイスランド語）, ingot(?)／<b>ラテン系</b> fuse, fusion, confuse, refuse, diffuse, effusive, profuse, transfusion, found（鋳造する）, foundry, funnel, futile（「（水を）漏らす（器）」説）／<b>ギリシア系</b> chyle, chyme, alchemy(?)
++note: <i>found</i> には三つの同綴異義語がある。(1)「見つける」（<i>find</i> の過去形）、(2)「設立する」（L <i>fundāre</i> ＜ <i>fundus</i>「底」）、(3)「鋳造する」（L <i>fundere</i>「注ぐ」）。
+
+@ *dʰreugʰ- ; 「欺く」
++cog: Skt <i>druhyati</i>; OHG <i>triogan</i>「欺く」; ON <i>draugr</i>「亡霊」
++eng: <b>本来語</b> dream(?)（「幻」説）, dreary(?)
++note: 英語 <i>dream</i> の語源は不確実。古英語 <i>drēam</i> は「喜び、音楽」を意味し、「夢」の意味は中英語期に現れる。北欧語の影響とする説が有力。
+
+@ *bʰeh₂ǵʰus ; 「腕」
++cog: Gk <i>pêkhys</i>「前腕」; Skt <i>bāhú-</i>; OE <i>bōg</i>「肩、枝」
++eng: <b>本来語</b> bough（枝）, bow（船首）
++note: 「腕」から「（木の）枝」「（船の）舳」へ。身体語彙の比喩的拡張（第7章）。
+
+@ *sneigʷʰ- ; 「雪」
++cog: L <i>nix, nivis</i>; Gk <i>nípha</i>; Av <i>snaēža-</i>; Lith <i>sniẽgas</i>; OCS <i>sněgŭ</i>
++eng: <b>本来語</b> snow／<b>ラテン系</b> nival, niveous, Nevada（西「雪の（山脈）」）
++note: 「雪」の語が全語派に共通することは、印欧祖語の故地が雪の降る地域だったことを示す。
+
+@ *h₂welh₁- ; 「支配する、強い」
++cog: L <i>valēre</i>「強い、価値がある」; OCS <i>vlasti</i>; Goth <i>waldan</i>
++eng: <b>本来語</b> wield, -wald（人名 Harold, Oswald）／<b>ラテン系</b> valid, value, valor, valiant, avail, prevail, convalesce, equivalent, invalid, valedictorian（<i>valē dīcere</i>「別れを告げる」＝「健やかであれ」）
++note: ラテン語の別れの挨拶 <i>valē</i> は「強くあれ、健やかであれ」。<i>farewell</i> と発想が同じ。
+
+@ *derḱ- ; 「見る」
++cog: Gk <i>dérkomai</i>「見る」, <i>drákōn</i>「竜（＝鋭い目のもの）」; Skt <i>dṛśáti</i>; OIr <i>derc</i>「目」
++eng: <b>ギリシア系</b> dragon, drake(?), dragoon（竜騎兵）, tarragon(?)
++note: <i>dragon</i>「竜」の原義は「（睨みつける）見るもの」。宝を「見張る」竜の観念と通じる。
+
+@ *ǵʰer- ; 「望む、好む」
++cog: L <i>hortārī</i>「励ます」; Gk <i>khaírein</i>「喜ぶ」, <i>kháris</i>「恵み」; Skt <i>háryati</i>
++eng: <b>本来語</b> yearn／<b>ラテン系</b> exhort, hortatory／<b>ギリシア系</b> charisma, charity は別（L <i>cāritās</i>）, Eucharist（「よい感謝」＝聖餐）, eucharistic
++note: <i>charity</i>「慈愛」は L <i>cārus</i>「愛しい」から。<i>charisma</i> とは別語源だが、意味的には近い。
+
+@ *bʰreu- ; 「煮る、発酵する」
++cog: L <i>fervēre</i>「沸く」, <i>fermentum</i>; Gk <i>phrear</i>(?); Goth <i>brunna</i>「泉」
++eng: <b>本来語</b> brew, broth, bread(?), burn(?), bourn/burn（小川）, braise は仏／<b>ラテン系</b> ferment, fervent, fervor, effervescent, fervid, brood(?), barm
++note: <i>fervent</i>「熱烈な」は「沸騰している」。<i>brew</i>（本来語）と <i>ferment</i>（ラ）が同根。
+
+@ *ḱwṓ, *ḱun- ; 「犬」
++cog: L <i>canis</i>; Gk <i>kýōn, kynós</i>; Skt <i>śvā́</i>; Lith <i>šuõ</i>; Goth <i>hunds</i>
++eng: <b>本来語</b> hound／<b>ラテン系</b> canine, kennel, canary（「犬の島」＝大きな犬がいたカナリア諸島）, chenille（仏「毛虫」＜「小さな犬」）／<b>ギリシア系</b> cynic（「犬のような」＝キュニコス派）, cynosure（「犬の尾」＝小熊座＝北極星）
++note: <i>cynic</i>「皮肉屋」は、犬のように無恥に生きたキュニコス派（ディオゲネス）から。<i>dog</i> は語源不明の語で、古英語 <i>docga</i> の出所は分からない。
+
+@ *ǵerh₂- ; 「老いる、熟する」
++cog: Gk <i>gérōn</i>「老人」, <i>gêras</i>「老い」; Skt <i>járati</i>; OCS <i>zĭrěti</i>「熟す」
++eng: <b>本来語</b> corn（穀粒。「すり減ったもの」＜ *ǵr̥h₂-no-）, kernel, grain は ラ／<b>ラテン系</b> grain, granule, granary, granite, pomegranate（「種の多いリンゴ」）, garner, filigree／<b>ギリシア系</b> geriatric, gerontology
++note: <i>corn</i>（本来語）と <i>grain</i>（ラテン系）は同根の二重語。グリムの法則 *ǵ → k。
+

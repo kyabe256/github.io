@@ -1,0 +1,231 @@
+# 付録
+
+## 付録A　印欧語族系統図
+
+印欧祖語（Proto-Indo-European, 前4500〜前2500頃）
+
+- <b>アナトリア語派</b>（最初に分岐）── ヒッタイト語、ルウィ語、パラー語、リュディア語、リュキア語　※すべて死語
+- <b>トカラ語派</b> ── トカラ語A（焉耆語）、トカラ語B（亀茲語）　※死語
+- <b>インド・イラン語派</b>
+  - インド・アーリア語群 ── サンスクリット語 → プラークリット諸語 → ヒンディー語、ウルドゥー語、ベンガル語、パンジャーブ語、マラーティー語、ネパール語、シンハラ語、ロマ語
+  - イラン語群 ── アヴェスター語、古代ペルシア語 → 中期ペルシア語 → ペルシア語（ファールシー）、クルド語、パシュトー語、バローチー語、オセット語
+- <b>ギリシア語派</b> ── ミュケナイ・ギリシア語 → 古典ギリシア語（アッティカ、イオニア、ドーリス、アイオリス） → コイネー → 中世ギリシア語 → 現代ギリシア語
+- <b>アルメニア語派</b> ── 古典アルメニア語（グラバル） → 現代アルメニア語
+- <b>アルバニア語派</b> ── アルバニア語（ゲグ方言、トスク方言）
+- <b>イタリック語派</b>
+  - オスク・ウンブリア語群 ── オスク語、ウンブリア語　※死語
+  - ラテン・ファリスキ語群 ── ラテン語 → 俗ラテン語 → ロマンス諸語（イタリア語、フランス語、スペイン語、ポルトガル語、ルーマニア語、カタルーニャ語、ガリシア語、オック語、サルデーニャ語、ロマンシュ語）
+- <b>ケルト語派</b>
+  - 大陸ケルト語 ── ガリア語、ケルティベリア語、レポント語　※死語
+  - ゴイデル語群 ── 古アイルランド語 → アイルランド語、スコットランド・ゲール語、マン島語
+  - ブリソン語群 ── ウェールズ語、コーンウォール語、ブルトン語
+- <b>ゲルマン語派</b>
+  - 東ゲルマン語群 ── ゴート語、ヴァンダル語、ブルグント語　※死語
+  - 北ゲルマン語群 ── 古ノルド語 → アイスランド語、フェロー語、ノルウェー語、デンマーク語、スウェーデン語
+  - 西ゲルマン語群
+    - 北海ゲルマン語（Ingvaeonic）── 古英語 → <b>英語</b>／古フリジア語 → フリジア語／古サクソン語 → 低地ドイツ語
+    - 低地フランク語 ── 古低フランク語 → オランダ語、アフリカーンス語
+    - 高地ドイツ語 ── 古高ドイツ語 → 中高ドイツ語 → ドイツ語、イディッシュ語
+- <b>バルト・スラヴ語派</b>
+  - バルト語群 ── リトアニア語、ラトビア語、（古プロシア語 ※死語）
+  - スラヴ語群 ── 古教会スラヴ語／東（ロシア語、ウクライナ語、ベラルーシ語）／西（ポーランド語、チェコ語、スロヴァキア語、ソルブ語）／南（セルビア・クロアチア語、ブルガリア語、スロヴェニア語、マケドニア語）
+
+## 付録B　音対応総覧
+
+### B-1　グリムの法則（印欧祖語 → ゲルマン祖語）
+
+| PIE | PGmc | ラテン語（非推移）の例 | 英語（推移後）の例 |
+|---|---|---|---|
+| *p | f | <i>pater, pēs, piscis, plēnus, prō</i> | father, foot, fish, full, for |
+| *t | θ (th) | <i>trēs, tenuis, tū, torrēre</i> | three, thin, thou, thirst |
+| *ḱ, *k | h, x | <i>centum, cor, canis, cornū, capere</i> | hundred, heart, hound, horn, have |
+| *kʷ | hʷ (wh) | <i>quod, quis, quandō</i> | what, who, when |
+| *b | p | <i>labium, turba</i> | lip, thorp |
+| *d | t | <i>duo, decem, dentem, domāre, edere</i> | two, ten, tooth, tame, eat |
+| *ǵ, *g | k | <i>genus, grānum, gelū, ager</i> | kin, corn, cold, acre |
+| *gʷ | kʷ (qu, c) | <i>vīvus</i>(＜*gʷih₃-), <i>venīre</i>(＜*gʷem-) | quick, come |
+| *bʰ | b | <i>ferre, frāter, fāgus, fluere</i> | bear, brother, beech, flow(?) |
+| *dʰ | d | <i>facere</i>(＜*dʰeh₁-), <i>forēs, fingere</i> | do, door, dough |
+| *ǵʰ, *gʰ | g | <i>hostis, hortus, hiems</i> | guest, yard, （<i>gimmer</i>） |
+| *gʷʰ | g, w, b | <i>formus, fendere</i> | warm, bane(?) |
+
+### B-2　ヴェルナーの法則
+
+アクセントが直前の音節にない場合、グリムの法則で生じた f θ h hʷ s が有声化して b̄ ð ɣ ɣʷ z となる。
+
+| 現象 | 例 |
+|---|---|
+| θ → ð → d | *ph₂tḗr → <i>father</i>（cf. *bʰréh₂tēr → <i>brother</i>） |
+| s → z → r（ロタシズム） | <i>was</i> : <i>were</i>；L <i>flōs</i> : <i>flōris</i>；<i>genus</i> : <i>generis</i> |
+| 文法的交替 | <i>freeze</i> : <i>frozen</i>；<i>seethe</i> : <i>sodden</i>；<i>choose</i> : <i>chosen</i>；<i>lose</i> : <i>forlorn</i> |
+
+### B-3　第二次子音推移（ゲルマン語 → 高地ドイツ語）
+
+| 変化 | 英語 | ドイツ語 |
+|---|---|---|
+| p → pf / ff | apple, pipe, ship, open, help | Apfel, Pfeife, Schiff, offen, helfen |
+| t → z /ts/ , ss | ten, two, tongue, water, eat, foot | zehn, zwei, Zunge, Wasser, essen, Fuß |
+| k → ch | make, book, break, I, seek | machen, Buch, brechen, ich, suchen |
+| d → t | day, door, deep, dream, drink | Tag, Tür, tief, Traum, trinken |
+| þ → d | thing, three, thou, thick, thank | Ding, drei, du, dick, danken |
+| v/f → b | give, have, seven, love | geben, haben, sieben, lieben |
+
+### B-4　i-ウムラウト（古英語期以前）
+
+| 変化 | 例（原形 → ウムラウト形） |
+|---|---|
+| a → e | <i>lang</i> → <i>lengþu</i>（long → length）；<i>tale</i> → <i>tell</i> |
+| ā → ǣ | <i>hāl</i> → <i>hǣlan</i>（whole → heal） |
+| o → e | <i>fōt</i> → <i>fēt</i>（foot → feet）；<i>dōm</i> → <i>dēman</i>（doom → deem） |
+| u → y | <i>mūs</i> → <i>mȳs</i>（mouse → mice）；<i>full</i> → <i>fyllan</i>（full → fill） |
+| ea → ie | <i>eald</i> → <i>ieldra</i>（old → elder） |
+
+<b>i-ウムラウトの化石一覧</b>：foot/feet, tooth/teeth, goose/geese, man/men, woman/women, mouse/mice, louse/lice, brother/brethren；long/length, strong/strength, broad/breadth, deep/depth, foul/filth, hale/health, whole/heal, full/fill, blood/bleed, food/feed, brood/breed, doom/deem, gold/gild, old/elder；sit/set, lie/lay, fall/fell, rise/rear, drink/drench, tale/tell。
+
+### B-5　大母音推移（15〜18世紀）
+
+| 中英語 | 現代英語 | 例 |
+|---|---|---|
+| /iː/ | /aɪ/ | time, mine, wine, ride, life |
+| /eː/ | /iː/ | see, feet, green, deep |
+| /ɛː/ | /iː/ | sea, meat, clean, east |
+| /aː/ | /eɪ/ | name, take, make, lane |
+| /ɔː/ | /oʊ/ | boat, road, stone, home |
+| /oː/ | /uː/ | moon, food, tooth, root |
+| /uː/ | /aʊ/ | house, mouse, out, town |
+
+<b>GVSの化石</b>（同一語根内の母音差）：divine/divinity, serene/serenity, sane/sanity, profound/profundity, please/pleasant, nation/national, crime/criminal, school/scholar, wide/width, wise/wisdom, child/children, five/fifth, break/breakfast, Christ/Christmas, know/knowledge, holy/holiday, south/southern。
+
+## 付録C　英語史年表
+
+| 年代 | 事項 |
+|---|---|
+| 前4500〜2500頃 | 印欧祖語が話される（ポントス・カスピ海草原） |
+| 前500〜後200頃 | ゲルマン祖語（グリムの法則が完了） |
+| 43 | ローマのブリテン侵攻 |
+| 410 | ローマ軍のブリテン撤退 |
+| 449頃 | アングル人・サクソン人・ジュート人の渡来（ベーダの記述） |
+| 597 | 聖アウグスティヌスの布教開始（ラテン語第2期借用の始まり） |
+| 731 | ベーダ『イングランド教会史』 |
+| 793 | リンディスファーン襲撃（ヴァイキング時代の始まり） |
+| 878 | ウェドモアの和議（デーンローの成立、古ノルド語との接触） |
+| 1000頃 | 『ベーオウルフ』写本 |
+| 1066 | ノルマン征服（フランス語の流入開始） |
+| 1204 | ノルマンディー喪失（中央フランス語の威信化） |
+| 1362 | 訴答手続法（法廷で英語の使用が認められる） |
+| 1380年代 | チョーサー『カンタベリー物語』／ウィクリフ聖書 |
+| 1400頃〜 | 大母音推移の開始 |
+| 1476 | キャクストンが英国で印刷を開始（綴りの固定化） |
+| 1526 | ティンダル訳新約聖書 |
+| 1550〜1650 | インク壺語論争、ラテン語彙の大量流入 |
+| 1590〜1613 | シェイクスピアの活動期 |
+| 1604 | 最初の英語辞書（コードリー『アルファベット順の表』） |
+| 1611 | 欽定訳聖書 |
+| 1755 | ジョンソン『英語辞典』 |
+| 1786 | ジョーンズ卿のカルカッタ講演（比較言語学の出発点） |
+| 1822 | グリム『ドイツ語文法』第2版（グリムの法則） |
+| 1828 | ウェブスター『アメリカ英語辞典』（米式綴りの確立） |
+| 1875 | ヴェルナーの法則 |
+| 1879 | ソシュール『印欧語の原初母音体系に関する覚書』（喉音の予言） |
+| 1884〜1928 | 『オックスフォード英語辞典』初版の刊行 |
+| 1915 | ヒッタイト語の印欧語族への帰属が判明（喉音理論の実証） |
+| 1957 | チョムスキー『統辞構造論』 |
+| 1989 | OED第2版／2000年〜オンライン改訂 |
+| 2015 | 古代DNA研究がクルガン仮説を支持 |
+
+## 付録D　ラテン語動詞の語幹対照表
+
+英語で -tion, -sion, -ture の名詞と動詞形を結びつけるための一覧。
+
+| 不定詞 | 意味 | 完了分詞 | 英語（現在幹系） | 英語（分詞幹系） |
+|---|---|---|---|---|
+| <i>agere</i> | 行う | āctum | agent, agile, exigent | act, exact, transact |
+| <i>capere</i> | 取る | captum | capable, anticipate | capture, accept, concept |
+| <i>cēdere</i> | 行く | cessum | precede, concede | process, access, cession |
+| <i>cernere</i> | 分ける | crētum | discern, concern | discrete, secret, excrete |
+| <i>claudere</i> | 閉じる | clausum | include, exclude | clause, closure, recluse |
+| <i>currere</i> | 走る | cursum | occur, concur | course, cursor, excursion |
+| <i>dīcere</i> | 言う | dictum | — | dictate, verdict, predict |
+| <i>dūcere</i> | 導く | ductum | produce, reduce | product, conduct, duct |
+| <i>facere</i> | 作る | factum | efficient, deficient | fact, effect, perfect |
+| <i>ferre</i> | 運ぶ | lātum | transfer, refer, offer | relate, translate, oblate |
+| <i>fundere</i> | 注ぐ | fūsum | refund, found | fusion, confuse, diffuse |
+| <i>frangere</i> | 砕く | frāctum | infringe | fracture, fragment |
+| <i>gerere</i> | 行う | gestum | belligerent | gesture, digest, suggest |
+| <i>iacere</i> | 投げる | iactum | — | eject, project, subject |
+| <i>legere</i> | 集める | lēctum | diligent, eligible | collect, select, lecture |
+| <i>loquī</i> | 話す | locūtum | eloquent, colloquial | elocution, interlocutor |
+| <i>mittere</i> | 送る | missum | admit, permit, submit | mission, dismiss, promise |
+| <i>movēre</i> | 動かす | mōtum | remove, mobile | motion, emotion, promote |
+| <i>pellere</i> | 押す | pulsum | compel, expel, propel | pulse, impulse, expulsion |
+| <i>pōnere</i> | 置く | positum | postpone, component | position, compose, deposit |
+| <i>premere</i> | 押す | pressum | — | press, express, oppress |
+| <i>rumpere</i> | 破る | ruptum | — | rupture, erupt, corrupt |
+| <i>scrībere</i> | 書く | scrīptum | describe, subscribe | script, description |
+| <i>sedēre</i> | 座る | sessum | preside, reside | session, obsession |
+| <i>sentīre</i> | 感じる | sēnsum | consent, resent | sense, consensus |
+| <i>sequī</i> | 従う | secūtum | sequence, consequent | execute, prosecute |
+| <i>solvere</i> | 解く | solūtum | solve, dissolve | solution, absolute |
+| <i>spondēre</i> | 誓う | spōnsum | respond, correspond | response, spouse |
+| <i>stāre</i> | 立つ | statum | constant, instant | state, statue, station |
+| <i>stringere</i> | 締める | strictum | stringent, astringent | strict, district, restrict |
+| <i>struere</i> | 積む | strūctum | construe | structure, instrument |
+| <i>tangere</i> | 触れる | tāctum | contingent, contiguous | contact, tactile, intact |
+| <i>tegere</i> | 覆う | tēctum | — | protect, detect, architect |
+| <i>tendere</i> | 伸ばす | tēnsum | extend, intend, pretend | tension, extent, intense |
+| <i>tenēre</i> | 保つ | tentum | contain, retain, sustain | content, retention |
+| <i>trahere</i> | 引く | tractum | — | tract, attract, contract |
+| <i>vertere</i> | 回す | versum | convert, divert, invert | version, universe, adverse |
+| <i>vidēre</i> | 見る | vīsum | provide, evident, prudent | vision, revise, supervise |
+| <i>vincere</i> | 勝つ | victum | convince, invincible | victory, convict, evict |
+| <i>volvere</i> | 転がす | volūtum | revolve, involve, evolve | volume, revolution |
+
+## 付録E　二重語・三重語総覧
+
+| 語群 | 共通の起源 | 経路の違い |
+|---|---|---|
+| cattle / chattel / capital | L <i>capitāle</i> | 北仏／中央仏／ラテン直輸入 |
+| chief / chef / cape / cap | L <i>caput</i> | 中英語仏語／近代仏語／ラテン系 |
+| guard / ward；guardian / warden；guarantee / warranty；guile / wile | ゲルマン語 *wardōn, *wīsa | 中央仏／北仏 |
+| royal / regal / real(m) | L <i>rēgālis</i> | 仏／ラテン直／古仏 |
+| hostel / hospital / hotel / hospice | L <i>hospitāle</i> | 時代差 |
+| frail / fragile | L <i>fragilis</i> | 仏経由／ラテン直 |
+| poison / potion | L <i>pōtiōnem</i> | 仏経由／ラテン直 |
+| reason / ration / ratio | L <i>ratiō</i> | 仏／ラテン／ラテン |
+| sure / secure | L <i>sēcūrus</i> | 仏／ラテン |
+| loyal / legal | L <i>lēgālis</i> | 仏／ラテン |
+| treason / tradition | L <i>trāditiō</i> | 仏／ラテン |
+| respite / respect | L <i>respectus</i> | 仏／ラテン |
+| history / story | Gk <i>historíā</i> | ラテン／古仏 |
+| dish / desk / dais / disc / discus | Gk <i>dískos</i> | 古英語／中世ラテン／古仏／近代 |
+| shirt / skirt | ゲルマン語 *skurtjōn | 古英語／古ノルド語 |
+| shatter / scatter；shriek / screech；church / kirk；no / nay；from / fro；whole / hale；rear / raise | ゲルマン語 | 古英語／古ノルド語 |
+| guest / host / hostile | PIE *gʰostis | ゲルマン／ラテン |
+| yard / garden | PIE *gʰer- | 古英語／北仏 |
+| corn / grain | PIE *ǵr̥h₂-no- | 本来語／ラテン |
+| cow / beef | PIE *gʷōus | 本来語／仏 |
+| wheel / cycle | PIE *kʷekʷlos | 本来語／ギリシア |
+| fire / pyre | PIE *peh₂wr̥ | 本来語／ギリシア |
+| tooth / dental；heart / cordial；foot / pedal；know / gnostic | PIE 各語根 | 本来語／ラテン・ギリシア |
+| abbreviate / abridge；separate / sever；compute / count；secure / sure | ラテン | ラテン直／仏経由 |
+| bishop / episcopal | Gk <i>epískopos</i> | 本来語化／学術借用 |
+| adamant / diamond | Gk <i>adámas</i> | ラテン／中世ラテン |
+| paper / papyrus | Gk <i>pápȳros</i> | 仏経由／学術 |
+| zero / cipher | Ar <i>ṣifr</i> | 伊経由／仏経由 |
+| tulip / turban | Pers <i>dulband</i> | 仏経由／トルコ語経由 |
+| custom / costume | L <i>consuētūdō</i> | 仏／伊 |
+| ransom / redemption | L <i>redēmptiō</i> | 仏／ラテン |
+| example / sample；estate / state；special / especial | ラテン | 語頭母音の脱落の有無 |
+| gentle / genteel / gentile / jaunty | L <i>gentīlis</i> | 借用時期の差 |
+| complement / compliment | L <i>complēmentum</i> | ラテン／伊・西 |
+| discrete / discreet | L <i>discrētus</i> | 同一語の綴り分化 |
+| stationary / stationery；flour / flower；metal / mettle；draft / draught | 同一語 | 綴りによる意味の分化 |
+
+## 付録F　語源不明・不確実な語
+
+日常語のなかにも、起源の分からない語は少なくない。
+
+<i>dog, big, bad, boy, girl, pig, bird(?), job, jump, jaw, curse, fun, kick, lad, lass, pimp, prank, puzzle, quiz, slang, tantrum, toad, tot, gadget, gimmick, blizzard, condom, gizmo, hunch, jazz, bloke, dodge, fudge, gawk, gawky, jolly(?), niche(?), pun, rat(?), skulk, slum, snob, spree, stunt, tag, tote, trek(?), zest(?)</i>
+
+これらは、（1）方言や隠語からの浮上、（2）擬音・擬態からの発生、（3）記録の欠落、のいずれかによると考えられる。語源辞典の「of unknown origin」という記述は、探究の放棄ではなく、証拠の限界を示す誠実な表現である。
+

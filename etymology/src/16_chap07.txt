@@ -1,0 +1,111 @@
+# 第7章　意味はいかにして変わるか
+
+## 7.1　意味変化の類型
+
+語の音形は規則的に変化するが、意味の変化には音法則のような厳密な規則性がない。しかし、繰り返し現れる型（type）は存在する。
+
+| 型 | 定義 | 例 |
+|---|---|---|
+| 拡大 widening | 適用範囲が広がる | <i>bird</i>（雛→鳥全般） |
+| 縮小 narrowing | 適用範囲が狭まる | <i>meat</i>（食物全般→肉） |
+| 良化 amelioration | 価値が上がる | <i>nice</i>（無知な→よい） |
+| 悪化 pejoration | 価値が下がる | <i>silly</i>（幸福な→愚かな） |
+| 強化 intensification | 意味が強まる | <i>kill</i>（打つ→殺す） |
+| 弱化 weakening | 意味が弱まる | <i>terrible</i>（恐怖の→ひどい） |
+| 比喩 metaphor | 類似による転用 | <i>crane</i>（鶴→起重機） |
+| 換喩 metonymy | 隣接による転用 | <i>the Crown</i>（王冠→王権） |
+| 提喩 synecdoche | 部分と全体 | <i>hands</i>（手→人手） |
+| 婉曲 euphemism | 忌避による言い換え | <i>bathroom, pass away</i> |
+| 文法化 grammaticalization | 内容語→機能語 | <i>going to</i> → <i>gonna</i> |
+
+## 7.2　拡大（widening / generalization）
+
+- <i>bird</i> ＜ OE <i>bridd</i>「雛鳥」。鳥一般は <i>fugol</i>（＝ <i>fowl</i>）だったが、両者の担当範囲が入れ替わった。
+- <i>dog</i> ＜ OE <i>docga</i>。特定の頑丈な犬種を指す語が犬一般に広がり、一般語 <i>hund</i> が <i>hound</i>（猟犬）に狭まった。
+- <i>holiday</i> ＜ <i>holy day</i>「聖日」→ 休日一般。
+- <i>picture</i>「絵」→ 写真・映像も。
+- <i>arrive</i> ＜ VL *arripāre「岸(<i>rīpa</i>)に着く」→ 到着一般。
+- <i>place</i> ＜ Gk <i>plateîa</i>「広い（道）」→ 場所一般。
+- <i>barn</i>「大麦の倉」→ 納屋一般。
+- <i>manuscript</i>「手書き（原稿）」→ タイプ原稿にも。
+- <i>salary</i> ＜ L <i>salārium</i>「塩の手当」→ 給料一般。
+- <i>butcher</i> ＜ OF <i>bouchier</i>「山羊(<i>bouc</i>)を屠る者」→ 肉屋一般。
+
+## 7.3　縮小（narrowing / specialization）
+
+- <i>meat</i> ＜ OE <i>mete</i>「食物」。<i>sweetmeat</i>（砂糖菓子）, <i>meat and drink</i> に古義が残る。
+- <i>deer</i> ＜ OE <i>dēor</i>「動物」（独 <i>Tier</i>）→ 鹿。シェイクスピア『リア王』の "mice and rats, and such small deer" に古義。
+- <i>hound</i>「犬」→ 猟犬。
+- <i>starve</i> ＜ OE <i>steorfan</i>「死ぬ」（独 <i>sterben</i>）→ 餓死する→ 飢える。
+- <i>fowl</i>「鳥」→ 家禽。
+- <i>corn</i>「穀粒」→ 英で小麦、米でトウモロコシ（地域による特殊化）。
+- <i>girl</i> 中英語「若者（性別を問わず）」→ 少女。
+- <i>wife</i> ＜ OE <i>wīf</i>「女」→ 妻。<i>midwife</i>（「（産婦と）ともにいる女」）, <i>fishwife</i>, <i>old wives' tale</i> に古義。
+- <i>disease</i> ＜ <i>dis-</i> + <i>ease</i>「不快」→ 病気。
+- <i>liquor</i>「液体」→ 酒。
+- <i>accident</i>「起こったこと」→ 事故。
+- <i>undertaker</i>「引き受ける者」→ 葬儀屋。
+- <i>doctor</i>「教える者」（L <i>docēre</i>）→ 医師。
+
+## 7.4　悪化（pejoration）
+
+- <i>silly</i> ＜ OE <i>sǣlig</i>「幸福な、祝福された」（独 <i>selig</i>）→ 無垢な → 単純な → 愚かな。
+- <i>villain</i> ＜ L <i>vīllānus</i>「農園(<i>vīlla</i>)の労働者」→ 悪党。
+- <i>vulgar</i> ＜ L <i>vulgāris</i>「民衆の」→ 下品な。
+- <i>notorious</i>「よく知られた」→ 悪名高い。
+- <i>crafty</i>「熟練した」→ ずる賢い。<i>cunning</i>「知識のある」も同様。
+- <i>knave</i> ＜ OE <i>cnafa</i>「少年」（独 <i>Knabe</i>）→ 悪漢。
+- <i>lewd</i> ＜ OE <i>lǣwede</i>「俗人の（聖職者でない）」→ 無学な → 猥褻な。
+- <i>counterfeit</i>「模造する」→ 偽造する。
+- <i>sanction</i>, <i>censure</i>, <i>propaganda</i>（もと「布教すべき事柄」）, <i>officious</i>（「奉仕熱心な」）, <i>egregious</i>（「群を抜いた」→ ひどい）, <i>garble</i>（「ふるい分ける」→ 歪曲する）, <i>impertinent</i>（「無関係な」→ 生意気な）。
+- <i>gossip</i> ＜ OE <i>godsibb</i>「名づけ親（神の親族）」→ おしゃべり → 噂話。
+
+女性を指す語が悪化しやすいことは、社会言語学でしばしば指摘される。<i>hussy</i>（＜housewife）, <i>wench</i>（「子ども」）, <i>spinster</i>（「糸を紡ぐ人」）, <i>madam</i>, <i>mistress</i>, <i>queen</i>（＜ <i>cwene</i>「女」は俗語で悪化）と、対応する男性語（<i>master, lord, king</i>）を比べると差は明瞭である。
+
+## 7.5　良化（amelioration）
+
+- <i>nice</i> ＜ L <i>nescius</i>「無知な」→ 内気な → 繊細な → 精密な → 感じのよい。OEDは <i>nice</i> に十数の廃義を立てる。「精密な」の義は <i>a nice distinction</i> に残る。
+- <i>knight</i> ＜ OE <i>cniht</i>「少年、召使い」（独 <i>Knecht</i>）→ 騎士。
+- <i>marshal</i>「馬の世話係」→ 元帥。<i>constable</i>（L <i>comes stabulī</i>「厩舎の長官」）→ 巡査／総督。<i>steward</i>（OE <i>stigweard</i>「豚小屋の番人」）→ 執事（→ スチュアート家）。
+- <i>fond</i>「愚かな」（＜ <i>fonned</i>）→ 好んで。
+- <i>pretty</i> ＜ OE <i>prættig</i>「狡猾な」→ 巧みな → きれいな。
+- <i>shrewd</i>「意地の悪い」（＜ <i>shrew</i>）→ 抜け目のない。
+- <i>fantastic, terrific, tremendous</i>：もとは「幻覚の」「恐怖を起こす」「震えさせる」で、強い否定的意味が単なる強調に転じた。
+
+## 7.6　比喩と換喩
+
+<b>比喩（metaphor）</b>は類似にもとづく転用である。身体語彙が事物へ広がる型が普遍的に見られる。<i>head</i>（頭→長、先端）, <i>foot</i>（麓）, <i>mouth</i>（河口）, <i>eye</i>（針の穴）, <i>arm</i>（腕木）, <i>leg</i>（脚部）, <i>neck</i>（地峡）, <i>tongue</i>（言語、舌状部）, <i>hand</i>（針、人手）, <i>face</i>（面）, <i>spine</i>（背骨→本の背）, <i>vein</i>（鉱脈）。
+
+逆に、事物から抽象へ広がる型も多い。<i>grasp</i>（つかむ→理解する）, <i>see</i>（見る→わかる）, <i>bright</i>（明るい→賢い）, <i>sharp</i>, <i>dull</i>, <i>warm</i>, <i>cold</i>, <i>deep</i>, <i>high</i>, <i>connect</i>, <i>weigh</i>（<i>consider</i> も L <i>sīdus</i>「星」を見る→熟慮する）。抽象語のほぼすべては、もとをたどれば具体的な身体経験の比喩である。この事実はレイコフとジョンソンの認知言語学が強調した。
+
+<b>換喩（metonymy）</b>は隣接にもとづく転用。<i>the White House</i>（政権）, <i>Downing Street</i>, <i>the press</i>（印刷機→報道機関）, <i>the bar</i>（法廷の柵→弁護士業）, <i>the bench</i>（判事席→裁判官）, <i>the crown</i>, <i>dish</i>（皿→料理）, <i>a glass</i>（グラス→一杯）, <i>Champagne</i>, <i>china</i>（磁器）, <i>silver</i>（銀器）, <i>Shakespeare</i>（作品）。
+
+<b>提喩（synecdoche）</b>は部分と全体の関係。<i>hands</i>（乗組員）, <i>head</i>（家畜の頭数）, <i>wheels</i>（車）, <i>sail</i>（帆→船）, <i>bread</i>（食物一般）, <i>roof</i>（家）。
+
+## 7.7　婉曲語法と「呪われた語」の循環
+
+忌避される対象（死・排泄・性・病・超自然）を指す語は、次々に新しい婉曲表現に置き換えられる。しかし婉曲語もやがて対象の汚れを吸収し、また新語が必要になる。これを「婉曲語のトレッドミル」（euphemism treadmill, スティーヴン・ピンカー）と呼ぶ。
+
+<i>privy → toilet</i>（＜仏 <i>toilette</i>「小さな布」）<i>→ lavatory</i>（「洗う場所」）<i>→ bathroom → restroom → washroom</i>。<i>die → pass away → pass on</i>。<i>graveyard → cemetery</i>（Gk「眠る場所」）。<i>undertaker → mortician → funeral director</i>。
+
+超自然的存在の名は、口にすること自体が危険と考えられ、迂言に置き換えられる。<i>bear</i> はゲルマン語で「褐色のもの」（*bʰerH-「茶色」）と呼んだ婉曲語で、本来の印欧語形 *h₂ŕ̥tḱos（Gk <i>árktos</i>, L <i>ursus</i>）はゲルマン語から失われた。スラヴ語では「蜂蜜を食べるもの」（露 <i>medved'</i>）と呼ぶ。同じ理由で <i>wolf</i> にも迂言があった。日本語の「まむし」「山の神」も同型の忌み言葉である。
+
+## 7.8　意味の漂白と文法化
+
+内容語が機能語へと変わり、意味が薄まる過程を文法化（grammaticalization）、意味の希薄化を意味の漂白（semantic bleaching）と呼ぶ。
+
+- <i>will</i>「欲する」（独 <i>wollen</i>）→ 未来の助動詞。
+- <i>shall</i>「負っている」（独 <i>sollen</i>）→ 未来・義務。
+- <i>have</i>「持つ」→ 完了の助動詞。<i>I have written</i> はもと「私は書かれたものを持っている」。
+- <i>be going to</i>「〜しに行く」→ 未来。さらに <i>gonna</i> へ音形も融合。
+- <i>very</i> ＜ OF <i>verai</i>「真実の」（→ <i>verify</i>）→ 強調副詞。
+- <i>quite</i> ＜「完全に」→ 「かなり」（弱化）。
+- <i>-ly</i> ＜ OE <i>-līċ</i>「体・姿」（＝ <i>like</i>）→ 副詞語尾。
+- <i>-hood</i> ＜ OE <i>hād</i>「状態、身分」→ 接尾辞。<i>-dom</i> ＜ <i>dōm</i>「判断、法」（＝ <i>doom</i>）→ 接尾辞。<i>-ship</i> ＜ <i>-scipe</i>「形づくること」（<i>shape</i> と同根）。
+
+## 7.9　意味変化を追跡する難しさ
+
+語義の変遷を復元するには、実際の用例を年代順に並べるほかない。この作業を大規模に行ったのが『オックスフォード英語辞典』（OED）で、各語義に初出年と引用文を付す。たとえば <i>nice</i> の項には14世紀の「愚かな」から19世紀の「感じのよい」まで、20を超える語義が年代順に並ぶ。
+
+意味変化の説明として提出される「もっともらしい物語」には注意が必要である。第1章の <i>sincere</i>「蝋なしで」の例のように、語源譚は語られやすく、検証されにくい。証拠の階層は、（1）年代の確かな用例、（2）他言語における並行例、（3）意味論的な一般法則、（4）もっともらしい物語、の順に信頼度が下がる。
+

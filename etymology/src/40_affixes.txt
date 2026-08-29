@@ -1,0 +1,471 @@
+# 第V部　接辞辞典
+
+接頭辞（prefix）・接尾辞（suffix）・結合形（combining form）を配列する。接頭辞の同化については第9章、ギリシア語系結合形については第10章も参照されたい。
+
+:: index aff
+
+== 接頭辞（ラテン語系）
+
+@ ab- / abs- / a- ; 「離れて、〜から」
++form: L <i>ab</i>。c, t の前で abs-、v, m の前で a-
++der: abduct, abhor, abnormal, absent, abstain, abstract, abuse, avert, avocation, aversion, abrupt, abdicate, ablution
++note: 英語の <i>of</i>, <i>off</i>、ギリシア語 <i>apo-</i> と同根（*h₂epo）。
+
+@ ad- ; 「〜へ、方向、付加、強意」
++form: 後続子音に同化して ac-, af-, ag-, al-, an-, ap-, ar-, as-, at-；sc, sp, st の前で a-
++der: adapt, adhere, admire, advance, accept, affect, aggregate, allocate, announce, approve, arrive, assist, attend, ascend, aspire
++note: 英語の <i>at</i> と同根。もっとも見分けにくい接頭辞なので、同化形を暗記しておくとよい（第9章）。
+
+@ ante- ; 「前に（時間・空間）」
++form: L <i>ante</i>
++der: antecedent, anterior, antechamber, antedate, antebellum, anticipate, ancient, advance（<i>ab ante</i>）
++note: ギリシア語系の <i>anti-</i>「反対」と混同しやすい。<i>anticipate</i> は「前に取る」で ante- 系。
+
+@ bene- ; 「よく」
++form: L <i>bene</i>
++der: benefit, benefactor, beneficial, beneficiary, benediction, benevolent, benign
++note: 対義は <i>mal-</i>。ギリシア語系の対応は <i>eu-</i>。
+
+@ bi- / bin- ; 「二」
++form: L <i>bis</i>「二度」
++der: bicycle, bilateral, bilingual, bisect, biannual, biennial, binary, binocular, combine, balance（<i>bilanx</i>「二皿の秤」）
++note: <i>biweekly</i> は「隔週」とも「週二回」とも解されうる悪名高い曖昧語。
+
+@ circum- ; 「周りに」
++form: L <i>circum</i>
++der: circumference, circumstance, circumvent, circumspect, circumcise, circumnavigate, circumlocution, circuit
++note: ギリシア語系の対応は <i>peri-</i>。
+
+@ com- / con- ; 「共に、完全に（強意）」
++form: co-（母音・h の前）, col-（l）, cor-（r）, com-（b, m, p）, con-（その他）
++der: cooperate, coalesce, collect, correct, combine, compose, connect, conclude, contact, commit
++note: 強意用法も多い（<i>commence</i>, <i>consume</i>, <i>condense</i>）。英語 <i>with</i> とは無関係で、<i>cum</i>「共に」から。
+
+@ contra- / counter- ; 「反対に」
++form: L <i>contrā</i>。仏語経由で counter-
++der: contradict, contrast, contrary, contravene, contraband, counteract, counterpart, counterfeit, encounter, country（<i>contrāta terra</i>「向かいに広がる土地」）
++note: <i>country</i>「国」は「（目の前に）向かい合って広がる土地」。
+
+@ de- ; 「下へ、離れて、逆に、完全に」
++form: L <i>dē</i>
++der: descend, deduct, depart, detach, defrost, decode, deforest, denude（強意）, declare（強意）, delight（強意、<i>light</i> とは無関係）
++note: 三つの用法（下降・除去・強意）を文脈で見分ける。<i>delight</i> の綴りは <i>light</i> への民間語源的な引き寄せ。
+
+@ dis- / di- / dif- ; 「離れて、否定、逆」
++form: 有声子音の前で di-、f の前で dif-
++der: disagree, disappear, discourage, dislike, dismiss, divert, divorce, differ, diffuse, digest
++note: <i>dis-</i> が強意になる例もある（<i>disgruntled</i>, <i>disannul</i>）。
+
+@ ex- / e- / ef- ; 「外へ、以前の、完全に」
++form: f の前で ef-、有声子音の前で e-
++der: exit, export, expel, extract, emit, elect, evade, efficient, effort, ex-president
++note: ギリシア語系の対応は <i>ec-/ex-</i>（exodus, ecstasy）。
+
+@ extra- / extro- ; 「外の、範囲外の」
++form: L <i>extrā</i>
++der: extraordinary, extracurricular, extraterrestrial, extravagant（「さまよい出る」）, extrovert
++note: <i>extravagant</i>「浪費する」は「（道を）踏み外してさまよう」が原義。
+
+@ in- / im- / il- / ir- ; 「中へ、上に」
++form: b, m, p の前で im-、l の前で il-、r の前で ir-
++der: include, import, invade, immerse, illuminate, irrigate, insert, inscribe
++note: 次項の否定の in- と同形で紛らわしい。<i>inflammable</i> は「燃えやすい」（in-＝中へ）であって「不燃性」ではない。危険な曖昧さのため <i>flammable</i> が作られた。
+
+@ in- / im- / il- / ir- ; 「〜でない（否定）」
++form: 同上
++der: incredible, inevitable, impossible, immature, illegal, illiterate, irregular, irrational, injustice
++note: 判定の目安：後続要素が独立した形容詞・名詞なら否定、動詞語根なら「中へ」であることが多い。
+
+@ inter- ; 「〜のあいだに」
++form: L <i>inter</i>
++der: international, interact, intervene, interrupt, interfere, intersect, interval（「柵のあいだ」）, intelligent（<i>inter-legere</i>）, enterprise, entertain
++note: ギリシア語系の対応は <i>meta-</i> の一部。
+
+@ intra- / intro- ; 「内部に」
++form: L <i>intrā</i>
++der: intramural, intravenous, intranet, introduce, introvert, introspect
++note: <i>inter-</i>（あいだ）と <i>intra-</i>（内部）の区別に注意。
+
+@ mal- / male- ; 「悪い」
++form: L <i>male</i>
++der: malfunction, malice, malicious, malign, malignant, malady, malaria（「悪い空気」）, malnutrition, maltreat, malevolent, dismal（<i>diēs malī</i>「凶日」）
++note: <i>dismal</i>「陰気な」は中世の暦の「凶日」から。
+
+@ multi- ; 「多くの」
++form: L <i>multus</i>
++der: multiply, multiple, multitude, multicultural, multimedia, multinational
++note: ギリシア語系の対応は <i>poly-</i>。
+
+@ non- ; 「〜でない（単純否定）」
++form: L <i>nōn</i>
++der: nonsense, nonfiction, nonprofit, nonentity, nonchalant（「熱くならない」）
++note: <i>un-</i>, <i>in-</i> が価値判断を含むのに対し、<i>non-</i> は中立的な否定である（<i>unscientific</i>「非科学的（悪い）」対 <i>nonscientific</i>「科学の分野でない」）。
+
+@ ob- ; 「〜に対して、向かって、塞いで」
++form: oc-, of-, op- に同化
++der: object, obstacle, obstruct, obvious（「道の前にある」）, occur, occupy, offer, oppose, oppress, omit（<i>ob-mittere</i>）
++note: <i>obvious</i>「明白な」は <i>ob viam</i>「道の前に（ある）」＝出会わずにいられない。
+
+@ per- ; 「通して、完全に、〜を通じて」
++form: L <i>per</i>
++der: perfect（完全に作る）, perform, permit, persist, perspire, pervade, perennial, persuade, peruse
++note: 化学では「過〜」（perchlorate＝過塩素酸塩）。
+
+@ post- ; 「後に」
++form: L <i>post</i>
++der: postpone, postscript, postwar, posterity, posterior, postmortem, post meridiem（p.m.）
++note: 郵便の <i>post</i>（駅逓）は <i>pōnere</i>「置く」由来で別語源。
+
+@ pre- / prae- ; 「前に（時間・空間）」
++form: L <i>prae</i>
++der: predict, prepare, prevent, precede, preface, prejudice, premature, preview, precaution
++note: ギリシア語系の対応は <i>pro-</i>（時間）, <i>pre-</i> は「あらかじめ」の含みが強い。
+
+@ pro- ; 「前へ、代わりに、賛成して」
++form: L <i>prō</i>／ギ <i>pró</i>
++der: proceed, produce, progress, project, promote, propose, pronoun（名詞の代わり）, proconsul, pro-democracy
++note: ラテン語系は「前へ」、ギリシア語系は「前の・第一の」（prologue, prototype）。
+
+@ re- / red- ; 「再び、戻って、反対に、強意」
++form: 母音の前で red-
++der: return, review, revive, rebuild, react, redeem, redundant, research, resist, remain
++note: 強意用法も多い（<i>research</i> は「徹底的に探す」、<i>refine</i> は「すっかり仕上げる」）。<i>recreation</i>（気晴らし）と <i>re-creation</i>（再創造）はハイフンで書き分ける。
+
+@ retro- ; 「後ろへ、遡って」
++form: L <i>retrō</i>
++der: retrospect, retroactive, retrograde, retrofit, retrovirus
++note: <i>retrovirus</i> は逆転写（RNA→DNA）を行うことから1974年に命名。
+
+@ se- ; 「離れて、別に」
++form: L <i>sē</i>
++der: separate, secede, seclude, secure, seduce, select, segregate, sedition
++note: 「自分だけで」が原義（*swe-「自己」、第II部）。
+
+@ semi- ; 「半分」
++form: L <i>sēmi-</i>
++der: semicircle, semicolon, semiconductor, semifinal, semantics は別語源
++note: ギリシア語系の対応は <i>hemi-</i>、本来語は <i>half</i>（demi- は仏語経由）。
+
+@ sub- ; 「下に、副次的に、やや」
++form: suc-, suf-, sug-, sum-, sup-, sur-, sus- に同化
++der: submarine, subway, subtitle, succeed, suffer, suggest, support, suspect, sustain, surrogate
++note: <i>sub-</i> は「下から上へ」の含みもある（<i>suggest</i>＝下から持ち出す、<i>support</i>＝下から支える）。
+
+@ super- / sur- ; 「上に、超えて」
++form: 仏語経由で sur-
++der: superior, supervise, supernatural, supersede, surface, surname, surplus, survive, surrender, sovereign
++note: ギリシア語系の対応は <i>hyper-</i>。
+
+@ trans- / tra- / tran- ; 「越えて、横切って、変えて」
++form: L <i>trāns</i>
++der: transport, transfer, translate, transform, transmit, transparent, traverse, tradition, trance, transcend
++note: <i>tradition</i>「伝統」は <i>trāns-dare</i>「（世代を）越えて与える」。
+
+@ ultra- ; 「〜を超えて」
++form: L <i>ultrā</i>
++der: ultraviolet, ultrasonic, ultramodern, ultimate, outrage（仏 <i>outrage</i> ＜ <i>ultrā</i>+<i>-age</i>。<i>rage</i> とは無関係）
++note: <i>outrage</i>「憤慨」は <i>out</i>+<i>rage</i> と分析するのが民間語源で、実は「度を越すこと」。
+
+== 接頭辞（ギリシア語系）
+
+@ amphi- ; 「両方の、周りの」
++der: amphibian, amphitheater, amphora, amphibious
++note: ラテン語系の対応は <i>ambi-</i>。
+
+@ ana- ; 「上へ、逆に、再び」
++der: analysis（「解きほぐす」）, anatomy（「切り開く」）, analogy, anachronism, anabolism
++note: <i>analysis</i> は <i>ana-</i>（バラバラに）+ <i>lýein</i>（解く）。
+
+@ anti- / ant- ; 「反対の、対抗する」
++der: antibiotic, antidote, antipathy, antithesis, antagonist, antarctic（「北極の反対」）, antonym
++note: ラテン語系の対応は <i>contra-</i>。<i>ante-</i>「前に」と混同注意。
+
+@ apo- / aph- ; 「離れて、〜から」
++der: apology, apostle（「遣わされた者」）, apostrophe, apogee, apocalypse, aphorism, apostasy
++note: ラテン語 <i>ab-</i>、英語 <i>of/off</i> と同根。
+
+@ cata- / cat- ; 「下へ、完全に、逆に」
++der: catastrophe（「下へ転じる」）, catalogue, cataract, catalyst（「解き放つ」）, catacomb, cathode
++note: <i>catastrophe</i> は劇の「大詰めの急転」が原義。
+
+@ dia- ; 「通して、横切って、別々に」
++der: diameter, diagonal, diagnosis（「見分ける」）, dialogue, dialect, diaspora（「まき散らす」）, diabetes
++note: <i>dialogue</i> は「二人の」ではなく「（言葉が）行き交う」。<i>di-</i>「二」との混同に注意。
+
+@ dys- ; 「悪い、困難な」
++der: dysfunction, dyslexia, dyspepsia, dystopia, dysentery, dystrophy
++note: 対義は <i>eu-</i>。ラテン語系の対応は <i>mal-</i>。
+
+@ ec- / ex- / ecto- ; 「外へ」
++der: eccentric（「中心を外れた」）, ecstasy（「外に立つ」）, exodus, ectoderm, ectopic
++note: ラテン語系の対応は <i>ex-</i>。
+
+@ en- / em- ; 「中に」
++der: energy, enthusiasm, endemic, emphasis, empathy, encephalitis
++note: 英語の <i>en-</i>（enable, enrich）は仏語経由のラテン語 <i>in-</i> で、こちらとは別系統。
+
+@ endo- ; 「内部の」
++der: endocrine, endoscope, endogenous, endoskeleton, endothermic
++note: 対義は <i>exo-</i>。
+
+@ epi- / ep- ; 「上に、後に、〜に加えて」
++der: epidemic, epidermis, epilogue, epitaph（「墓の上の（銘）」）, epicenter, episode, epithet, epoch
++note: <i>episode</i> は劇の「合間に入る挿話」。
+
+@ eu- ; 「よい、うまく」
++der: eulogy, euphemism, euphoria, euthanasia（「よい死」）, eugenics, euphony, evangelist（「よい知らせ」）, Europe(?)
++note: ラテン語系の対応は <i>bene-</i>。<i>gospel</i> は <i>euangélion</i> の翻訳借用（第6章）。
+
+@ hemi- ; 「半分」
++der: hemisphere, hemistich, hemiplegia, migraine（<i>hēmikrāníā</i>）
++note: ラテン語系 <i>semi-</i>、仏語経由 <i>demi-</i>。三者が揃うと <i>demisemihemi-</i> という冗談も可能になる。
+
+@ hyper- ; 「上に、超えて、過度に」
++der: hyperactive, hyperbole（「投げ越す」＝誇張）, hypertension, hypertext, hyperlink
++note: ラテン語系 <i>super-</i>、英語 <i>over</i> と同根。
+
+@ hypo- / hyp- ; 「下に、不足して」
++der: hypothesis, hypocrisy, hypodermic, hypothermia, hypotension, hyphen
++note: ラテン語系 <i>sub-</i>、英語 <i>up</i> と同根。
+
+@ meta- / met- ; 「後に、越えて、変化して、〜についての」
++der: metaphor, metamorphosis, metabolism, metaphysics, method（「（道を）追う」）, metonymy, meta-analysis
++note: 現代英語では「自己言及的な」の意で生産的（<i>metadata</i>, <i>metacognition</i>）。
+
+@ para- / par- ; 「そばに、越えて、逸れて」
++der: parallel, paragraph, paradox, paradigm, parasite（「そばで食べる者」）, paramedic, parody, paralysis
++note: <i>parachute</i>, <i>parasol</i>, <i>parapet</i> の para- はイタリア語 <i>parare</i>「防ぐ」で別語源。
+
+@ peri- ; 「周りに、近くに」
++der: perimeter, periscope, peripheral, periphery, period（「巡り」）, perigee, pericardium
++note: ラテン語系の対応は <i>circum-</i>。
+
+@ syn- / sym- / syl- / sy- ; 「共に、同時に」
++form: b, m, p の前で sym-、l の前で syl-、s の前で sy-
++der: synthesis, synonym, synchronize, symphony, symbol（「投げ合わせる（割符）」）, sympathy, syllable, system, syzygy
++note: <i>symbol</i>「象徴」は、割符（<i>sýmbolon</i>）を「合わせて」身元を確認したことに由来する。
+
+== 接頭辞（本来語）
+
+@ a- ; 「〜の状態で、〜に（弱化した前置詞）」
++form: OE <i>on</i>, <i>of</i>, <i>ā-</i> の弱化形
++der: asleep, awake, ashore, aboard, aside, ahead, afoot, alive（<i>on life</i>）, away（<i>on weg</i>）, anew
++note: ギリシア語系の否定の a-（<i>atypical</i>）とは別物。
+
+@ be- ; 「周りに、すっかり、〜にする」
++form: OE <i>be-</i>（＝ <i>by</i>）
++der: become, before, behind, beside, between, bewitch, befriend, belittle, bereave, beware, behead（「頭を取り去る」）
++note: <i>behead</i> の be- は「奪い去る」の意（<i>bereave</i> と同じ）。
+
+@ for- ; 「離れて、完全に、否定的に」
++form: OE <i>for-</i>（独 <i>ver-</i>）
++der: forbid, forget, forgive, forgo, forsake, forlorn, forfeit は別（仏）
++note: <i>fore-</i>「前に」（forecast, foresee）とは別の接頭辞。<i>forgo</i>（差し控える）と <i>forego</i>（先行する）の綴り分けはこの区別による。
+
+@ mis- ; 「誤って、悪く」
++form: OE <i>mis-</i>（本来語）／OF <i>mes-</i>（＜ゲルマン語）
++der: mistake, misunderstand, misuse, misfortune, mischief, mislead, misgiving
++note: <i>mischief</i>, <i>mischance</i> はフランス語経由の同源要素。
+
+@ over- ; 「上に、越えて、過度に」
++form: OE <i>ofer</i>
++der: overcome, overlook, oversee, overturn, overwhelm, overt は別（仏）
++note: <i>oversee</i>（監督する）と <i>overlook</i>（見落とす／見渡す）の意味の差は、同じ「上から見る」からの分岐。
+
+@ un- ; 「〜でない」／「逆の動作」
++form: OE <i>un-</i>（形容詞に）／OE <i>on-</i>（動詞に）
++der: unhappy, unfair, unable, unknown／undo, untie, unlock, unfold, unwrap
++note: 二つの un- は起源が異なる。形容詞に付く否定の un- は L <i>in-</i>, Gk <i>a-</i> と同根。動詞に付く逆転の un- は別語源（独 <i>ent-</i>）。
+
+@ with- ; 「〜に対して、離れて」
++form: OE <i>wiþ</i>「〜に対して」
++der: withstand, withdraw, withhold
++note: <i>with</i> は本来「〜に対して」であり、「〜と共に」の意は古英語 <i>mid</i>（独 <i>mit</i>）から引き継いだもの。<i>withstand</i>「抵抗する」に古義が残る。
+
+== 接尾辞（名詞を作る）
+
+@ -tion / -sion / -ation ; 「動作・状態・結果」
++form: L <i>-tiō, -tiōnem</i>
++der: action, decision, information, education, revolution, admission, tension
++note: ラテン語の完了分詞幹に付く（第9章）。英語の抽象名詞のもっとも標準的な作り方。
+
+@ -ment ; 「動作・結果・手段」
++form: L <i>-mentum</i>（仏語経由）
++der: government, movement, argument, judgment, development, equipment, instrument
++note: 動詞に付いて名詞を作る。仏語経由のため、ラテン語直輸入の -men（<i>specimen</i>, <i>regimen</i>）と対をなす。
+
+@ -ity / -ty ; 「性質・状態」
++form: L <i>-itās, -itātem</i>
++der: ability, equality, purity, reality, gravity, city, cruelty, liberty
++note: 形容詞から抽象名詞を作る。本来語の対応は <i>-ness</i>。
+
+@ -ness ; 「性質・状態」（本来語）
++form: OE <i>-nes(s)</i>
++der: happiness, kindness, darkness, business（<i>busy</i>+<i>-ness</i>）, witness, illness
++note: <i>business</i> は「忙しさ」が原義で、発音も綴りも大きく変化した。
+
+@ -ance / -ence, -ancy / -ency ; 「動作・状態」
++form: L 現在分詞 <i>-ant-</i>（第1変化）/<i>-ent-</i>（第2〜4変化）
++der: importance, difference, agency, tendency, resistance, existence
++note: -ance/-ence の綴り分けはラテン語の活用に由来する（第9章）。<i>dependent</i>（形）/<i>dependant</i>（名、英）の英米差も同根。
+
+@ -er / -or / -ar ; 「動作主・道具」
++form: -er は本来語（OE <i>-ere</i>）、-or はラテン語 <i>-or</i>
++der: teacher, worker, singer／actor, doctor, editor, indicator／liar, beggar, burglar
++note: ラテン語系動詞には -or、本来語には -er が付く傾向がある（<i>advisor/adviser</i> は揺れる）。
+
+@ -ist ; 「〜する人、〜主義者」
++form: Gk <i>-istḗs</i>
++der: artist, scientist, tourist, dentist, novelist, capitalist, pianist
++note: <i>-ism</i> と対をなす。
+
+@ -ism ; 「主義・状態・特徴」
++form: Gk <i>-ismós</i>
++der: capitalism, criticism, realism, racism, tourism, rheumatism, Americanism
++note: 19世紀以降きわめて生産的になった。
+
+@ -age ; 「動作・集合・料金」
++form: L <i>-āticum</i>（仏語経由）
++der: marriage, package, mileage, storage, postage, luggage, village, courage
++note: 仏語経由のため、対応するラテン語直輸入形はない。
+
+@ -ure ; 「動作・結果」
++form: L <i>-ūra</i>
++der: pressure, failure, culture, nature, measure, structure, mixture, tenure
++note: 完了分詞幹に付く。
+
+@ -cy ; 「状態・地位」
++form: L <i>-cia</i>／Gk <i>-kia</i>
++der: accuracy, privacy, democracy, diplomacy, infancy, presidency, bankruptcy
++note: -ance/-ence の名詞から作られることが多い（<i>fluent → fluency</i>）。
+
+@ -ery / -ry ; 「場所・集合・行為」
++form: OF <i>-erie</i>
++der: bakery, brewery, nursery, bravery, jewelry, machinery, slavery, rivalry
++note: 動作主名詞 -er に -y が付いた形が起源とされる。
+
+@ -hood ; 「状態・身分」（本来語）
++form: OE <i>hād</i>「状態、身分」
++der: childhood, neighborhood, brotherhood, likelihood, falsehood, priesthood
++note: 独立した名詞 <i>hād</i> が接尾辞化したもの（文法化、第7章）。
+
+@ -dom ; 「領域・状態」（本来語）
++form: OE <i>dōm</i>「判断、法、支配」（＝ <i>doom</i>）
++der: kingdom, freedom, wisdom, boredom, stardom, officialdom
++note: <i>doom</i>「運命」と同語。「定められたもの」が原義。
+
+@ -ship ; 「状態・技能・身分」（本来語）
++form: OE <i>-scipe</i>（<i>shape</i> と同根）
++der: friendship, hardship, leadership, scholarship, championship, worship（<i>worth</i>+<i>-ship</i>）
++note: <i>worship</i>「崇拝」はもと「価値ある状態、尊敬」。
+
+@ -ling ; 「小さいもの、〜に属するもの」（本来語、しばしば軽蔑的）
++der: duckling, gosling, seedling, underling, hireling, darling（<i>dear</i>+<i>-ling</i>）, sibling
++note: <i>sibling</i>「きょうだい」は古英語の <i>sibb</i>「親族」に -ling が付いた語で、20世紀初頭に遺伝学の用語として復活した。
+
+@ -let ; 「小さいもの」
++form: OF <i>-elet</i>
++der: booklet, droplet, leaflet, piglet, streamlet, bracelet, hamlet
++note: 縮小辞。他に -ette（cigarette, kitchenette）, -ie/-y（doggie, Johnny）, -kin（napkin, lambkin）, -icle（particle, cubicle）, -ule（globule, capsule）。
+
+== 接尾辞（形容詞を作る）
+
+@ -ous / -ious / -eous ; 「〜に富む、〜の性質の」
++form: L <i>-ōsus</i>
++der: dangerous, famous, curious, gorgeous, courageous, nervous, various
++note: <i>-ose</i>（<i>verbose</i>, <i>morose</i>）はラテン語直輸入形。
+
+@ -al / -ial ; 「〜に関する」
++form: L <i>-ālis</i>
++der: natural, national, essential, personal, formal, central, legal, royal
++note: -al の名詞形もある（<i>arrival</i>, <i>refusal</i>, <i>proposal</i>）。
+
+@ -ive ; 「〜する傾向の」
++form: L <i>-īvus</i>
++der: active, creative, sensitive, negative, expensive, native, massive
++note: 完了分詞幹に付く（<i>act-ive</i>, <i>expens-ive</i>）。
+
+@ -able / -ible ; 「〜できる、〜されうる」
++form: L <i>-ābilis</i>（第1変化）/<i>-ibilis</i>（その他）
++der: readable, drinkable, comfortable, dependable／visible, audible, credible, terrible, tangible, legible, flexible
++note: 実用則は「語根が英語で独立した語として立つなら -able、立たないなら -ible」。<i>read</i>→readable、<i>vis-</i>→visible。ただし例外は多い（digestible, collectible, resistible）。英語内部で新造される語は必ず -able。
+
+@ -ic / -ical ; 「〜的な」
++form: Gk <i>-ikos</i>
++der: basic, historic, atomic, economic／historical, economical, classical
++note: -ic と -ical で意味が分かれる対がある。<i>historic</i>「歴史的に重要な」対 <i>historical</i>「歴史に関する」、<i>economic</i>「経済の」対 <i>economical</i>「節約になる」、<i>classic</i> 対 <i>classical</i>。
+
+@ -ary / -ory ; 「〜に関する、〜する場所」
++form: L <i>-ārius</i>, <i>-ōrius</i>
++der: ordinary, necessary, military, literary／sensory, obligatory, satisfactory, laboratory
++note: 名詞用法も多い（<i>library</i>, <i>dictionary</i>, <i>factory</i>, <i>dormitory</i>）。
+
+@ -ant / -ent ; 「〜する（性質の）」
++form: L 現在分詞 <i>-ant-</i>/<i>-ent-</i>
++der: important, significant, relevant, pleasant／different, excellent, evident, patient
++note: 名詞化すると動作主（<i>assistant</i>, <i>student</i>, <i>president</i>）。
+
+@ -ful / -less ; 「〜に満ちた／〜のない」（本来語）
++der: hopeful/hopeless, careful/careless, useful/useless, beautiful, fearless
++note: <i>-ful</i> は <i>full</i> の弱化形。<i>priceless</i>（値がつけられないほど貴重）と <i>valueless</i>（無価値）のように、対義にならない例に注意。
+
+@ -ish ; 「〜のような、やや〜」（本来語）
++der: childish, foolish, reddish, Spanish, English, selfish, sheepish
++note: 民族名に付く用法（English, Danish）と、「やや」の用法（<i>fiftyish</i>）がある。
+
+@ -like / -ly ; 「〜のような」（本来語）
++form: OE <i>-līċ</i>「体、姿」（＝ <i>like</i>）
++der: childlike, businesslike／friendly, lovely, manly, daily, yearly
++note: <i>-ly</i> は形容詞にも副詞にも付く同形異機能の接尾辞。<i>friendly</i>, <i>lovely</i>, <i>lonely</i>, <i>likely</i> は名詞＋-ly で形容詞。
+
+@ -y ; 「〜に満ちた、〜の性質の」（本来語）
++form: OE <i>-iġ</i>
++der: sunny, rainy, dirty, sleepy, hungry, greedy
++note: 名詞を作る -y（<i>difficulty</i>, <i>jealousy</i>）は仏語・ラテン語系で別系統。
+
+@ -esque ; 「〜風の」
++form: 伊 <i>-esco</i>（ゲルマン語 <i>-isk</i> ＝ 英 -ish）
++der: picturesque, grotesque, arabesque, Kafkaesque, statuesque
++note: 本来語 <i>-ish</i> とは同じゲルマン語要素が、イタリア語・フランス語を経由して戻ってきたもの。
+
+== 接尾辞（動詞・副詞を作る）
+
+@ -ize / -ise ; 「〜化する」
++form: Gk <i>-izein</i>
++der: realize, organize, modernize, apologize, criticize, colonize
++note: -ize は語源に忠実な綴り（オックスフォード式）、-ise は仏語式。英国でも学術出版では -ize が用いられることが多い。ただし <i>advertise, advise, surprise, exercise, revise, supervise, compromise, televise</i> は語源上 -ise で固定。
+
+@ -ify / -fy ; 「〜にする」
++form: L <i>-ficāre</i>（<i>facere</i>「作る」）
++der: simplify, clarify, classify, justify, satisfy, terrify, magnify, purify
++note: <i>-fy</i> 動詞の名詞形は -fication（<i>simplification</i>）。
+
+@ -en ; 「〜にする、〜になる」（本来語）
++der: strengthen, widen, darken, sharpen, deepen, hasten, frighten
++note: 過去分詞の -en（<i>taken</i>, <i>broken</i>）や複数の -en（<i>children</i>, <i>oxen</i>）とは別。
+
+@ -ate ; 「〜する」
++form: L 完了分詞 <i>-ātus</i>
++der: activate, create, separate, dominate, calculate, indicate
++note: 形容詞・名詞にもなる（<i>separate</i> 形容詞は /-ət/、動詞は /-eɪt/ と発音が分かれる。<i>estimate</i>, <i>graduate</i>, <i>advocate</i>, <i>delegate</i> なども同様）。
+
+@ -ly ; 「〜のように」（副詞）
++form: OE <i>-līċe</i>
++der: quickly, slowly, happily, really, hardly, lately
++note: <i>hard/hardly</i>, <i>late/lately</i>, <i>near/nearly</i> のように、-ly が付くと意味が変わる対がある。
+
+@ -ward(s) ; 「〜の方向へ」（本来語）
++form: OE <i>-weard</i>（*wert-「回す」）
++der: forward, backward, toward, homeward, upward, awkward（「逆向きの」）
++note: <i>awkward</i> は北欧語 <i>afugr</i>「後ろ向きの」+ <i>-ward</i>。
+
+@ -wise ; 「〜のやり方で、〜に関して」（本来語）
++form: OE <i>wīse</i>「やり方」（＝ <i>wise</i>「賢い」とは別語）
++der: clockwise, likewise, otherwise, lengthwise, moneywise
++note: 「〜に関して言えば」の用法（<i>budget-wise</i>）は20世紀アメリカで生産的になり、しばしば俗な語法とされる。
+
+@ -ee ; 「〜される人」
++form: OF 過去分詞 <i>-é</i>
++der: employee, trainee, refugee, nominee, addressee, escapee, absentee
++note: -er（する人）と対をなす（<i>employer/employee</i>）。ただし <i>escapee</i>, <i>attendee</i> のように能動的な意味の語もある。
+

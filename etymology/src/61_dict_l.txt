@@ -1,0 +1,105 @@
+== L
+
+@ laconic ; /ləˈkɒnɪk/ ; 形 ; 簡潔な
++lit: 「ラコニア（スパルタ）風の」
++chain: Gk <i>Lakōnikós</i>「ラコニア人の」
++desc: スパルタ人の寡黙で切り詰めた話しぶりから。ピリッポス2世が「もし私がラコニアに入れば、諸君を滅ぼす」と脅したのに対し、スパルタ人は一語「もし（αἴκα）」とだけ返したという逸話が伝わる。
++note: 地名由来の性質形容詞（<i>spartan</i>, <i>attic</i>, <i>byzantine</i>, <i>bohemian</i>, <i>philistine</i> など）の一例。
+
+@ lady ; /ˈleɪdi/ ; 名 ; 婦人
++lit: 「パンをこねる者」
++chain: OE <i>hlǣfdīge</i>（<i>hlāf</i>「パン」+ *<i>dīge</i>「こねる女」）
++der: lord（<i>hlāf-weard</i>「パンの番人」）, loaf, dough, dairy（<i>dey</i>「こねる女」＋ -ery）, lammas（<i>hlāf-mæsse</i>「パンのミサ」）, fiction（ラテン系の同根語）
++note: <i>lady</i>, <i>lord</i>, <i>dough</i>, <i>dairy</i>, <i>fiction</i> がすべて *dʰeigʰ-「こねる」に遡る。
+
+@ lampoon ; /læmˈpuːn/ ; 名 ; 風刺文
++lit: 「（酒宴の）飲めよ！」
++chain: 仏 <i>lampons</i>「飲もうぜ」（<i>lamper</i>「がぶ飲みする」の一人称複数命令）
++desc: 17世紀フランスの風刺歌の囃子詞が、そのままジャンル名になった。
+
+@ larva ; /ˈlɑːvə/ ; 名 ; 幼虫
++lit: 「幽霊、仮面」
++chain: L <i>lārva</i>「悪霊、仮面」→ リンネが1691年以降の用法を確立
++desc: 成虫が「仮面」をかぶって隠れている状態、という見立てによるリンネの命名。
++der: larval, larvae
+
+@ lens ; /lenz/ ; 名 ; レンズ
++lit: 「レンズ豆」
++chain: L <i>lēns, lentis</i>「レンズ豆（ヒラマメ）」
++desc: 両凸レンズの形がレンズ豆に似ていることから、17世紀に命名された。
++der: lentil（同語源）, lenticular
++note: 日本語の「レンズ」はオランダ語 <i>lens</i> 経由。豆の名であることは意識されない。
+
+@ lewd ; /luːd/ ; 形 ; みだらな
++lit: 「（聖職者でない）俗人の」
++chain: OE <i>lǣwede</i>「平信徒の」
++desc: 「俗人の」→「無学な」→「粗野な」→「みだらな」と、四段階で悪化した（第7章）。
++der: lay（<i>layman</i>, <i>lay brother</i> の lay。Gk <i>laós</i>「民」→ <i>lāikós</i> ＜ 別語源だが意味的に対応）
+
+@ lieutenant ; /lefˈtenənt/ ; 名 ; 中尉
++lit: 「（上官の）場所を保つ者」
++chain: 仏 <i>lieu</i>「場所」+ <i>tenant</i>「保つ者」
++desc: 「代理」が原義。英国式発音 /lefˈtenənt/ の f は、中英語期に <i>lieu</i> の u が v/f と読まれたことによる（諸説あり）。米国式は /luːˈtenənt/。
++der: locate, local, milieu, tenant, contain, maintain, tenacious
++note: <i>lieutenant governor</i>「副知事」に「代理」の原義が明瞭。
+
+@ lord ; /lɔːd/ ; 名 ; 主君
++lit: 「パンを守る者」
++chain: OE <i>hlāfweard</i>（<i>hlāf</i>「パン」+ <i>weard</i>「守り手」）→ <i>hlāford</i> → ME <i>loverd</i> → <i>lord</i>
++der: lady, loaf, ward, warden, guard, guardian
++note: 三音節が一音節に摩耗した、英語史上もっとも劇的な短縮の例。
+
+@ lukewarm ; /luːkˈwɔːm/ ; 形 ; 生ぬるい
++lit: 「ぬるく暖かい」
++chain: ME <i>luke</i>「ぬるい」（＜ OE <i>hlēow</i>「暖かい」）+ <i>warm</i>
++der: lee（風下＝暖かい側）, calorie は別
++note: 同義語を重ねた冗語的複合。人名 Luke とは無関係。
+
+@ lunatic ; /ˈluːnətɪk/ ; 形・名 ; 狂気の（人）
++lit: 「月に憑かれた」
++chain: L <i>lūna</i>「月」→ 後期ラテン語 <i>lūnāticus</i>
++desc: 月の満ち欠けが精神に影響するという古代からの信念による。<i>moonstruck</i> も同じ発想の本来語表現。
++der: lunar, lunacy, luminous, lucid, illustrate, light（本来語）
++note: <i>lūna</i> ＜ *louksnā「輝くもの」で、<i>light</i> と同根。
+
+@ lyceum ; /laɪˈsiːəm/ ; 名 ; 学園
++lit: 「（アポロン）リュケイオスの（神域）」
++chain: Gk <i>Lýkeion</i>
++desc: アテナイのアポロン・リュケイオス神域にあった体育場で、アリストテレスが講義した。フランス語 <i>lycée</i>「リセ（高校）」もここから。
++der: <i>lýkos</i>「狼」（アポロンの別名の由来とされる）, lycanthropy, wolf（本来語）
+
+@ ledger ; /ˈledʒə/ ; 名 ; 元帳
++lit: 「（決まった場所に）横たえて置く（帳簿）」
++chain: ME <i>leggen</i>／<i>liggen</i>「置く、横たわる」（オランダ語 <i>legger</i> の影響）
++desc: 持ち歩かず、常に一定の場所に据え置く帳簿の意。
++der: lie, lay, law, low, fellow, ledge
++note: ブロックチェーンの <i>distributed ledger</i>「分散台帳」もこの語。
+
+@ luxury ; /ˈlʌkʃəri/ ; 名 ; 贅沢
++lit: 「過剰、放縦」
++chain: L <i>luxus</i>「過度、奢侈」→ <i>luxuria</i>「放縦」→ OF <i>luxurie</i>
++desc: 中英語では「好色、淫蕩」を意味する強い否定語だった。「贅沢」への軟化は17世紀以降。
++der: luxuriant, luxurious, luxate（「関節を外す」＝ <i>luxus</i>「外れた」）
++note: 現代フランス語 <i>luxure</i> は今も「淫蕩」の意で、「贅沢」は <i>luxe</i> と語形が分かれている。
+
+
+@ labyrinth ; /ˈlæbərɪnθ/ ; 名 ; 迷宮
++chain: Gk <i>labýrinthos</i>（クレタ島のミノス王の迷宮）
++desc: 語源は前ギリシア語の基層語とされ、リュディア語 <i>labrys</i>「双斧」との関連説がある（クノッソス宮殿の双斧の意匠）。ただし確証はない。
++note: <i>maze</i>（本来語、「当惑させる」）とは別語源。厳密には <i>labyrinth</i> は一本道、<i>maze</i> は分岐路を指す区別がある。
+
+@ lace ; /leɪs/ ; 名 ; レース、靴ひも
++lit: 「輪縄、罠」
++chain: L <i>laqueus</i>「輪縄」→ OF <i>laz</i>
++der: lasso（西 <i>lazo</i>）, latchet, delight は別, entice は別
++note: 「罠の縄」→「ひも」→「編んだ飾り」。<i>shoelace</i> は原義に近い。
+
+@ limbo ; /ˈlɪmbəʊ/ ; 名 ; 中間の状態
++lit: 「（地獄の）縁」
++chain: L <i>limbus</i>「縁、へり」→ <i>in limbō</i>「辺獄に」
++desc: 洗礼を受けずに死んだ者の魂が留まる、天国と地獄の境界（辺獄）。ダンテ『神曲』地獄篇第四歌に描かれる。
++note: ダンス（<i>limbo dance</i>）の <i>limbo</i> は西インド諸島の語で別語源。
+
+@ lunch ; /lʌntʃ/ ; 名 ; 昼食
++chain: <i>luncheon</i> の短縮（語源不確実。<i>lump</i>「塊」の異形 <i>lunch</i>「一切れ」から）
++note: 19世紀までは <i>dinner</i> が正午の主食事で、<i>lunch</i> は間食だった。産業化により食事時間が後ろ倒しになり、現在の体系ができた。<i>supper</i>（＜ <i>sup</i>「すする」）は軽い夜食が原義。

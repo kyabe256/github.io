@@ -1,0 +1,74 @@
+== O
+
+@ ostracize ; /ˈɒstrəsaɪz/ ; 動 ; 追放する
++lit: 「陶片（で投票する）」
++chain: Gk <i>óstrakon</i>「陶片、貝殻」→ <i>ostrakízein</i>
++desc: 古代アテナイの陶片追放（オストラキスモス）。市民が僭主になりそうな人物の名を陶片に刻んで投票し、規定数に達すると10年間の国外追放とした。
++der: oyster（<i>óstreon</i>「牡蠣」）, osteo-（骨）は関連語根
++note: 実際に出土した陶片には、テミストクレスやアリステイデスの名が刻まれている。
+
+@ orange ; /ˈɒrɪndʒ/ ; 名 ; オレンジ
++chain: サンスクリット語 <i>nāraṅga</i> → ペルシア語 <i>nārang</i> → アラビア語 <i>nāranj</i> → 伊 <i>arancia</i> → OF <i>orenge</i> → 英語
++desc: 語頭の n は、冠詞との境界の切り直し（<i>una narancia</i> → <i>un'arancia</i>）で失われた。フランス語では <i>or</i>「金」の連想でさらに o- が定着したとされる。
++note: 色名としての <i>orange</i> は果実の名から（16世紀）。それ以前、英語にこの色を指す固有語はなく、<i>ġeolurēad</i>「黄赤」などと表現された。
+
+@ orchestra ; /ˈɔːkɪstrə/ ; 名 ; 管弦楽団
++lit: 「踊る場所」
++chain: Gk <i>orkheîsthai</i>「踊る」→ <i>orkhḗstrā</i>
++desc: ギリシア劇場で、舞台と客席のあいだにある合唱隊の踊り場。ローマでは元老院席、近代では楽団席となり、やがて楽団そのものを指すようになった（換喩、第7章）。
+
+@ ordeal ; /ɔːˈdiːl/ ; 名 ; 厳しい試練
++lit: 「（神の）裁き」
++chain: OE <i>ordāl</i>「神判」（*uz-「外へ」+ <i>dāl</i>「分配、判決」）
++desc: 中世の神明裁判——熱した鉄を握らせる、水に沈める——を指した語。1215年の第四ラテラノ公会議で聖職者の関与が禁じられ、制度は衰退したが語は残った。
++cog: 独 <i>Urteil</i>「判決」
++der: deal, dole（本来語の同根語）
+
+@ orient ; /ˈɔːrient/ ; 名・動 ; 東洋、方向づける
++lit: 「（日の）昇るところ」
++chain: L <i>orīrī</i>「昇る」→ <i>oriēns</i>「昇る（太陽）、東」
++desc: 中世の地図と教会堂は東を上・正面としたため、「東に向ける」ことが「正しく位置づける」を意味した。ここから <i>orientation</i>「方位決定、適応指導」が生じた。
++der: origin, original, abort（「昇らない」＝流産する）, orient
++note: 対語の <i>occident</i>「西洋」は <i>occidere</i>「（日が）落ちる」から（<i>cadere</i> 系）。
+
+@ ounce ; /aʊns/ ; 名 ; オンス
++lit: 「十二分の一」
++chain: L <i>uncia</i>「（ローマポンドの）十二分の一」
++dbl: <i>inch</i>（「（フィートの）十二分の一」。同じ <i>uncia</i> の別経路）
++note: 重さの <i>ounce</i> と長さの <i>inch</i> が同語源であるのは、いずれも「十二分の一」だから。
+
+@ ostrich ; /ˈɒstrɪtʃ/ ; 名 ; ダチョウ
++lit: 「鳥のスズメ」
++chain: L <i>avis</i>「鳥」+ Gk <i>strouthíōn</i>「（大きな）スズメ、ダチョウ」→ 俗ラテン語 <i>avis struthio</i> → OF <i>ostrusce</i>
++note: ギリシア語で <i>strouthós</i> は「スズメ」で、ダチョウは <i>megálē strouthós</i>「大きなスズメ」と呼ばれた。<i>ostrich</i> は「鳥・スズメ」という同義反復の複合。
+
+@ outrage ; /ˈaʊtreɪdʒ/ ; 名 ; 憤慨、暴虐
++lit: 「度を越すこと」
++chain: L <i>ultrā</i>「越えて」+ <i>-āticum</i> → OF <i>outrage</i>
++note: <i>out</i> + <i>rage</i> と分析するのは民間語源。語源的には <i>ultra</i> の派生語で、<i>rage</i>（＜ L <i>rabiēs</i>）とは無関係。ただしこの誤分析が現代の語感を強く規定している。
+
+@ ovation ; /əʊˈveɪʃn/ ; 名 ; 大喝采
++lit: 「小凱旋式」
++chain: L <i>ovāre</i>「歓呼する」→ <i>ovātiō</i>
++desc: ローマで、正式の凱旋式（<i>triumphus</i>）に値しない小さな勝利に与えられた略式の祝典。将軍は馬でなく徒歩で入城し、羊（<i>ovis</i>）を犠牲に捧げた——この語源説は民間語源とされるが、古代から言われていた。
++note: <i>standing ovation</i> の用法は20世紀。
+
+@ ozone ; /ˈəʊzəʊn/ ; 名 ; オゾン
++lit: 「におうもの」
++chain: Gk <i>ózein</i>「におう」→ 独 <i>Ozon</i>（シェーンバイン, 1840）
++desc: 放電時の特有の刺激臭から命名された。
++der: osmium（「におう」金属）, odor（ラテン系の同根語）, olfactory
+
+@ opportunity ; /ɒpəˈtjuːnəti/ ; 名 ; 好機
++lit: 「港に向かって（吹く風）」
++chain: L <i>ob portum (veniens)</i>「港に向かう」→ <i>opportūnus</i>「都合のよい」
++desc: 帆船時代、港へ吹き入れる順風こそが好機だった。対語の <i>importune</i>「しつこくせがむ」は「港に入れない（＝不都合な）」から。
++der: port, portal, import, export, transport, opportune, importunate
+
+@ orgy ; /ˈɔːdʒi/ ; 名 ; 乱痴気騒ぎ
++lit: 「（秘儀の）祭儀」
++chain: Gk <i>órgia</i>「秘儀、祭礼」→ L <i>orgia</i> → 仏 <i>orgie</i>
++desc: ディオニュソス（バッコス）の密儀を指した語。儀式の熱狂的性格から意味が悪化した。
++der: work, energy, organ, surgery（同根語）
++note: <i>érgon</i>「仕事」と同根で、原義は「（神への）働きかけ・儀式」。
+

@@ -1,0 +1,165 @@
+# 第10章　ギリシア語と学術語彙の設計
+
+## 10.1　三つの流入経路
+
+ギリシア語の語彙が英語に入る経路は三つある。
+
+1. <b>ラテン語経由の古層</b>：<i>church, bishop, priest, devil, angel, school, paper, alms, monk</i>。すっかり英語化して原形をとどめない。
+2. <b>ルネサンス以降の学術借用</b>：<i>analysis, criterion, dogma, ethos, hypothesis, phenomenon, thesis, crisis, basis, drama, idea, energy, character</i>。ラテン語式に綴り直されて入る（<i>κ</i>→c、<i>υ</i>→y、<i>χ</i>→ch、<i>φ</i>→ph、<i>θ</i>→th、<i>-ος</i>→-us、<i>-ον</i>→-um）。
+3. <b>近代の新造語（neoclassical compounds）</b>：<i>telephone, biology, chromosome, antibiotic, dinosaur, helicopter</i>。古代ギリシア人には理解できない「現代人のギリシア語」である。
+
+> <b>綴りの換字表</b>　ギリシア文字 → ラテン式綴り：α a、β b、γ g（γγ→ng：<i>angel</i>）、δ d、ε e、ζ z、η ē、θ th、ι i、κ c、λ l、μ m、ν n、ξ x、ο o、π p、ρ r（語頭は rh：<i>rhythm</i>）、σ s、τ t、υ y（二重母音では u：<i>eu-</i>）、φ ph、χ ch、ψ ps、ω ō。気息記号（有気）は h として現れる（<i>ἱστορία</i> → <i>history</i>、<i>ὑπέρ</i> → <i>hyper-</i>）。
+
+## 10.2　なぜ学術語はギリシア語なのか
+
+18〜19世紀、科学が急速に発達したとき、新しい概念に名を与える必要が生じた。ギリシア語が選ばれた理由は次の通りである。
+
+- <b>造語力</b>：ギリシア語は要素を自由に連結できる（<i>elektron</i> + <i>kardia</i> + <i>graphein</i> → <i>electrocardiograph</i>）。ラテン語は複合が苦手である。
+- <b>中立性</b>：どの近代語の母語話者にも「外国語」なので、国際的に受け入れやすい。
+- <b>一義性</b>：日常語ではないので、意味の揺れが少ない。
+- <b>伝統</b>：ヒポクラテス以来、医学の術語がギリシア語だった。
+
+その結果、分野ごとに使う語源が分かれた。医学はギリシア語（<i>cardiology, nephritis, hepatitis</i>）、法学はラテン語（<i>habeas corpus, prima facie, subpoena</i>）、生物分類はラテン語文法（<i>Homo sapiens</i>）、音楽はイタリア語、バレエはフランス語、といった具合である。
+
+## 10.3　ラテン系とギリシア系の同義語根対応
+
+同じ概念に、本来語・ラテン語系・ギリシア語系の三つの語根が存在するのが英語の特徴である。文体の階層（register）はこの三層に対応する。
+
+| 概念 | 本来語 | ラテン語系 | ギリシア語系 |
+|---|---|---|---|
+| 見る | see, watch, behold | spec-/spect-, vid-/vis- | scop-（scope, skeptic）, opt-（optic） |
+| 言う | say, tell, speak | dic-/dict-, loqu-/locut- | phe-/pha-（prophet, aphasia）, log- |
+| 書く | write | scrib-/script- | graph-/gram- |
+| 聞く | hear | aud-/audit- | acou-（acoustic） |
+| 知る | know, wit | cogn-/gno-, sci- | gnos-（diagnosis） |
+| 感じる | feel | sens-/sent- | path-（sympathy, pathos） |
+| 水 | water | aqu- | hydr- |
+| 火 | fire | ign-（ignite） | pyr-（pyre） |
+| 地 | earth | terr- | geo- |
+| 空・天 | heaven | cael-（celestial） | uran-（Uranus） |
+| 太陽 | sun | sol-（solar） | heli-（helium） |
+| 月 | moon | lun-（lunar） | selen-（selenium） |
+| 星 | star | stell-（stellar） | astr-（astronomy） |
+| 人 | man, folk | homin-（human）, popul- | anthrop-（anthropology）, dem-（democracy） |
+| 命 | life, quick | vit-/viv- | bio- |
+| 死 | death | mort- | necr-, thanat- |
+| 体 | body | corp- | som-（somatic） |
+| 心 | mind, mood | ment-, anim- | psych-, phren-（schizophrenia） |
+| 心臓 | heart | cord-（cordial） | cardi-（cardiac） |
+| 血 | blood | sangui-（sanguine） | hem-/haem-（hemoglobin） |
+| 骨 | bone | oss-（ossify） | oste-（osteoporosis） |
+| 手 | hand | man-（manual） | chir-（chiropractic） |
+| 足 | foot | ped- | pod-（tripod） |
+| 歯 | tooth | dent- | odont-（orthodontics） |
+| 目 | eye | ocul- | ophthalm-, opt- |
+| 耳 | ear | aur-（auricle） | ot-（otitis） |
+| 鼻 | nose | nas-（nasal） | rhin-（rhinoceros） |
+| 皮 | skin, hide | cut-（cuticle） | derm-（dermatology） |
+| 胃 | maw | ventr-（ventral） | gastr-（gastric） |
+| 肝 | liver | hepat- はギ | hepat-（hepatitis） |
+| 腎 | kidney | ren-（renal） | nephr-（nephritis） |
+| 名 | name | nomin-（nominate） | onym-（synonym） |
+| 数 | tale（古義） | numer- | arithm-（arithmetic） |
+| 時 | time, tide | tempor- | chron- |
+| 年 | year | ann-/enn- | et-（etesian） |
+| 光 | light | luc-/lumin- | phot-/phos- |
+| 音 | sound | son-（sonic） | phon- |
+| 形 | shape | form- | morph- |
+| 測る | mete | mens-（dimension） | metr-（meter） |
+| 作る | make, do, work | fac-/fact-, oper- | erg-/urg-（energy, surgery） |
+| 導く | lead | duc-/duct- | agog-（demagogue, pedagogue） |
+| 運ぶ | bear | fer-/lat-, port- | phor-（metaphor） |
+| 曲げる | bend | flect-/flex-, curv- | campt-, cycl-（円） |
+| 切る | cut, shear | sec-/sect-, cid-/cis- | tom-（atom, anatomy） |
+| 一 | one | uni- | mon- |
+| 二 | two | bi-, du- | di-, dy- |
+| 全 | all | omni-, tot- | pan-, hol-（holistic） |
+| 多 | many | multi- | poly- |
+| 大 | big | magn-, grand- | mega-, macro- |
+| 小 | little, small | mini-, parv- | micro-, olig-（少数） |
+| 上 | over, up | super-, supra- | hyper-, epi- |
+| 下 | under | sub-, infra- | hypo-, cata- |
+| 前 | fore, before | pre-, ante-, pro- | pro-, proto- |
+| 後 | after | post- | meta-（後・変化） |
+| 反・対抗 | with-（withstand）, gain-（gainsay） | contra-, ob- | anti- |
+| 共に | together, with | com-/con- | syn-/sym- |
+| 離れて | off, un-, a- | dis-, se-, ab- | apo-, dia- |
+| 周り | about | circum- | peri- |
+| 中 | in, inner | in-, intra-, intro- | en-, endo-, eso- |
+| 外 | out, ut(most) | ex-, extra- | ec-/ex-, exo- |
+| 間 | between | inter- | meta-（中間） |
+| 遠 | far | dist-（distant） | tele- |
+| 新 | new | nov-（novel） | neo- |
+| 古 | old | vetus（veteran）, antiqu- | palae-/paleo-, archae- |
+| 良 | good, well | bene- | eu-（euphoria） |
+| 悪 | bad, ill | mal- | dys-（dysfunction）, caco-（cacophony） |
+| 真 | true, sooth | ver-（verify） | eteo-, ortho-（正しい） |
+| 偽 | lie | fals- | pseud- |
+| 同 | same | simil-, equ- | homo-, iso-, tauto- |
+| 異 | other | alter-, vari- | hetero-, allo-, xen-（異国） |
+| 自 | self | ipse, se- | auto- |
+| 他 | | alter- | allo- |
+
+> <b>使い方</b>　この対応表は、和文の概念からラテン系・ギリシア系の術語を「作る」ためにも使える。「多くの形をもつ」＝ poly + morph → <i>polymorphic</i>、「同じ形」＝ iso + morph → <i>isomorphic</i>、「時を測るもの」＝ chrono + meter → <i>chronometer</i>。なお、ラテン系とギリシア系を混ぜた語（<i>television</i> ＝ ギ tele + ラ vision、<i>automobile</i> ＝ ギ auto + ラ mobilis、<i>sociology</i> ＝ ラ socius + ギ logos）は「混血語」（hybrid）と呼ばれ、19世紀には純粋主義者に非難されたが、今日ではごく普通である。
+
+## 10.4　ギリシア語由来語の複数形
+
+学術語はギリシア語・ラテン語の屈折を保つことが多い。
+
+| 単数 | 複数 | 由来 |
+|---|---|---|
+| phenomenon | phenomena | Gk -on / -a |
+| criterion | criteria | 同上 |
+| analysis, basis, crisis, thesis, hypothesis | analyses, bases, crises, theses | Gk -is / -es |
+| schema | schemata | Gk -ma / -mata |
+| stigma | stigmata | 同上 |
+| index | indices / indexes | L -ex / -icēs |
+| matrix | matrices | 同上 |
+| datum | data | L -um / -a |
+| medium | media | 同上 |
+| stimulus | stimuli | L -us / -ī |
+| alumnus / alumna | alumni / alumnae | 同上 |
+| genus | genera | L 中性 -us / -era |
+| corpus | corpora | 同上 |
+| appendix | appendices | |
+| vertebra | vertebrae | L -a / -ae |
+
+<i>data</i> や <i>media</i> は英語では単数扱いも一般化した（<i>the data is clear</i>）。<i>agenda</i>（「なされるべき事柄」、<i>agendum</i> の複数）は完全に単数化し、<i>agendas</i> という複数形まで生まれた。同様に <i>candelabra, insignia, opera</i>（<i>opus</i> の複数）も単数化した例である。逆に <i>kudos</i>（Gk <i>kŷdos</i>「名声」、単数）を複数と誤解して <i>kudo</i> という単数形が作られた。
+
+## 10.5　化学元素と天体の命名
+
+<b>元素名</b>は語源の宝庫である。<i>hydrogen</i>（水を生む）, <i>oxygen</i>（酸を生む。誤解にもとづく命名）, <i>nitrogen</i>（硝石を生む）, <i>helium</i>（太陽 <i>hēlios</i>。太陽スペクトルで発見）, <i>chlorine</i>（<i>khlōros</i> 黄緑）, <i>bromine</i>（<i>brōmos</i> 悪臭）, <i>iodine</i>（<i>iōdēs</i> 菫色）, <i>phosphorus</i>（光を運ぶもの）, <i>argon</i>（<i>argos</i> 不活発）, <i>chromium</i>（<i>khrōma</i> 色）, <i>iridium</i>（虹）, <i>rhodium</i>（薔薇）, <i>barium</i>（<i>barys</i> 重い）, <i>lithium</i>（<i>lithos</i> 石）, <i>cesium</i>（L <i>caesius</i> 青灰色）, <i>rubidium</i>（赤）, <i>selenium</i>（月）, <i>tellurium</i>（地）, <i>uranium/neptunium/plutonium</i>（天王星・海王星・冥王星）, <i>cobalt</i>（独 <i>Kobold</i> 妖精。鉱夫が銀を盗む妖精のせいにした）, <i>nickel</i>（<i>Kupfernickel</i>「悪魔の銅」）, <i>tungsten</i>（瑞 「重い石」）, <i>antimony</i>（諸説）。
+
+元素記号が名前と合わないものは、ラテン語名の名残である。Fe（<i>ferrum</i>）, Cu（<i>cuprum</i>「キプロスの」）, Ag（<i>argentum</i>）, Au（<i>aurum</i>）, Pb（<i>plumbum</i>→<i>plumber</i>, <i>plumb</i>）, Sn（<i>stannum</i>）, Hg（<i>hydrargyrum</i>「水銀」）, Na（<i>natrium</i>）, K（<i>kalium</i>＜アラビア語 <i>al-qalī</i>→<i>alkali</i>）, Sb（<i>stibium</i>）, W（<i>Wolfram</i>）。
+
+<b>惑星と曜日</b>は第VI部の主題別語源誌で詳述する。
+
+## 10.6　医学用語の組み立て
+
+医学用語は「部位＋病態」の機械的な合成である。組み合わせを知れば未知の語も読める。
+
+| 接尾要素 | 意味 | 例 |
+|---|---|---|
+| -itis | 炎症 | appendicitis, arthritis, hepatitis, bronchitis |
+| -osis | 状態・異常増加 | thrombosis, neurosis, fibrosis, osteoporosis |
+| -oma | 腫瘍 | carcinoma, melanoma, lymphoma, hematoma |
+| -algia | 痛み | neuralgia, myalgia, nostalgia（「帰郷の痛み」） |
+| -pathy | 病・感情 | neuropathy, homeopathy, sympathy |
+| -ectomy | 切除 | appendectomy, tonsillectomy, mastectomy |
+| -otomy | 切開 | tracheotomy, lobotomy |
+| -ostomy | 造瘻 | colostomy |
+| -scopy | 観察 | endoscopy, colonoscopy |
+| -graphy | 記録 | radiography, angiography |
+| -plasty | 形成 | rhinoplasty, angioplasty |
+| -emia | 血の状態 | anemia（血が無い）, leukemia（白い血）, hypoxemia |
+| -uria | 尿の状態 | hematuria, polyuria |
+| -penia | 減少 | leukopenia, osteopenia |
+| -megaly | 肥大 | cardiomegaly, splenomegaly |
+| -sclerosis | 硬化 | arteriosclerosis, multiple sclerosis |
+
+したがって <i>hepatosplenomegaly</i> は「肝(hepat)脾(splen)肥大(megaly)」、<i>electroencephalography</i> は「電気(electro)脳(encephalo)記録(graphy)」＝脳波検査、<i>otorhinolaryngology</i> は「耳(oto)鼻(rhino)喉頭(laryngo)学」＝耳鼻咽喉科である。
+
+## 10.7　数学・情報科学の語彙
+
+<i>algebra</i>（アラビア語 <i>al-jabr</i>「（骨の）接合、復元」。移項による方程式の整理を指した）、<i>algorithm</i>（数学者アル＝フワーリズミー <i>al-Khwārizmī</i> の名のラテン語形 <i>algorismus</i> が、ギリシア語 <i>arithmos</i>「数」に引かれて綴りを変えた）、<i>zero</i> と <i>cipher</i>（ともにアラビア語 <i>ṣifr</i>「空」＜ サンスクリット <i>śūnya</i>「空」の翻訳借用。二重語）、<i>sine</i>（サンスクリット <i>jyā</i>「弦」→ アラビア語 <i>jayb</i> → ラテン語で <i>sinus</i>「湾、ふところ」と誤訳された）、<i>tangent</i>（「触れる」）、<i>secant</i>（「切る」）、<i>matrix</i>（「母体」＜ <i>māter</i>）、<i>vector</i>（「運ぶもの」）、<i>scalar</i>（「梯子の」＜ <i>scāla</i>）、<i>tensor</i>（「引き伸ばすもの」）、<i>calculus</i>（「小石」。ローマ人は小石で計算した。<i>calculate</i>, <i>calcium</i>, <i>chalk</i> と同根）、<i>digit</i>（「指」。指で数えた）、<i>random</i>（古仏語 <i>randon</i>「疾走」→「でたらめに」）、<i>stochastic</i>（Gk <i>stokhos</i>「的」→「推測する」）、<i>ergodic</i>（<i>ergon</i> 仕事 + <i>hodos</i> 道）、<i>entropy</i>（<i>en-</i>+<i>tropē</i>「変換」、クラウジウスの造語で <i>energy</i> と韻を踏ませた）、<i>bit</i>（binary digit）、<i>byte</i>（<i>bite</i> の綴り替え）、<i>robot</i>（チェコ語 <i>robota</i>「賦役」）、<i>bug</i>（機械の不具合。グレース・ホッパーの蛾の逸話は有名だが、<i>bug</i> の用法自体はエジソンの時代からある）、<i>spam</i>（モンティ・パイソンのコント由来）、<i>cookie</i>（<i>magic cookie</i> から）、<i>daemon</i>（<i>demon</i> と同語源、ギリシアの守護霊）、<i>kernel</i>（<i>corn</i> の縮小形「核」）、<i>avatar</i>（サンスクリット <i>avatāra</i>「（神の）下降、化身」）。
+

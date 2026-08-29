@@ -1,0 +1,139 @@
+# 第5章　借用語の地層
+
+## 5.1　英語語彙の構成
+
+現代英語の語彙を語源別に見ると、およそ次のような比率になる（『オックスフォード英語辞典』の見出し語ベースの概算）。
+
+| 起源 | 割合 |
+|---|---|
+| ラテン語（直接・後期借用を含む） | 約29% |
+| フランス語（ノルマン・中央フランス語） | 約29% |
+| ゲルマン系本来語（古英語・古ノルド語） | 約26% |
+| ギリシア語 | 約6% |
+| その他の言語 | 約6% |
+| 固有名詞由来・語源不明 | 約4% |
+
+しかし使用頻度で見ると様相は一変する。日常会話の語の8割以上、頻度上位1000語の半分以上がゲルマン系本来語である。<i>the, be, of, and, a, in, to, have, it, I, that, for, you, he, with, on, do, say, this, they</i>——上位20語はすべて本来語だ。英語は「借り物の語彙を、本来語の骨組みに載せた言語」なのである。
+
+この二重構造は、文体の階層を生んだ。同じ内容を言うのに、本来語は短く直接的で情緒的、ラテン・フランス語系は長く形式的で抽象的になる。
+
+| 本来語（口語的） | フランス語系（中間） | ラテン語系（格式） |
+|---|---|---|
+| rise | mount | ascend |
+| ask | question | interrogate |
+| fire | flame | conflagration |
+| holy | sacred | consecrated |
+| kingly | royal | regal |
+| time | age | epoch |
+| gut | entrails | intestines |
+| help | aid | assistance |
+| end | finish | conclude |
+| goodness | virtue | probity |
+
+## 5.2　第一層：ケルト語
+
+アングロ・サクソン人が渡来する以前のブリテン島にはブリソン系ケルト語が話されていたが、英語に入ったケルト系語彙はごく少ない。<i>crag</i>（岩）、<i>bin</i>、<i>brock</i>（穴熊）、<i>dun</i>（くすんだ茶色）、<i>tor</i>（岩山）、<i>bannock</i>、<i>coomb</i>（谷）程度である。後代にアイルランド語・スコットランド・ゲール語から <i>whiskey</i>（<i>uisce beatha</i>「命の水」）、<i>clan</i>、<i>slogan</i>（<i>sluagh-ghairm</i>「軍勢の叫び」）、<i>galore</i>、<i>trousers</i>、<i>bog</i>、<i>brogue</i>、<i>banshee</i>、<i>leprechaun</i>、ウェールズ語から <i>corgi</i>（「小人の犬」）、<i>penguin</i>（諸説）、<i>flannel</i> が入った。
+
+一方、地名にはケルト語が濃く残る。<i>Thames, Avon</i>（「川」そのもの）、<i>Dover</i>（「水」）、<i>Kent, London, York, Devon</i>、<i>-combe</i>（谷）、<i>Pen-</i>（頭・丘：Penrith, Pennines）など。
+
+## 5.3　第二層：ラテン語（四期に分けて）
+
+ラテン語からの借用は、時期によって性格がまったく異なる。
+
+<b>第0期（大陸期、5世紀以前）</b>　アングロ・サクソン人がまだ大陸にいたころ、ローマ帝国との交易を通じて入った語。物質文化の語が多く、すっかりゲルマン語化している。
+
+<i>wine</i>（L <i>vīnum</i>）, <i>street</i>（<i>via strāta</i>「敷石の道」）, <i>wall</i>（<i>vallum</i>）, <i>mile</i>（<i>mīlia passuum</i>「千歩」）, <i>cheese</i>（<i>cāseus</i>）, <i>butter</i>（<i>būtȳrum</i>）, <i>kitchen</i>（<i>coquīna</i>）, <i>cup</i>（<i>cuppa</i>）, <i>dish</i>（<i>discus</i>）, <i>kettle</i>（<i>catillus</i>）, <i>pound</i>（<i>pondō</i>）, <i>inch</i>・<i>ounce</i>（<i>uncia</i>「12分の1」）, <i>pepper</i>（<i>piper</i>）, <i>mint</i>（<i>monēta</i>）, <i>camp</i>（<i>campus</i>）, <i>sack</i>, <i>pit</i>, <i>chalk</i>, <i>copper</i>, <i>tile</i>, <i>-chester/-caster</i>（<i>castra</i>「陣営」：Manchester, Lancaster, Chester）。
+
+<b>第1期（ブリテン移住直後）</b>　ローマン・ブリテンの遺物に関わる少数の語。
+
+<b>第2期（キリスト教化、597年〜）</b>　アウグスティヌスの布教以降、宗教・学問の語が流入。ギリシア語起源のものもラテン語経由で入る。
+
+<i>angel</i>, <i>bishop</i>（Gk <i>epískopos</i>「監督者」）, <i>church</i>（Gk <i>kūriakón</i>「主の家」）, <i>priest</i>（<i>presbyter</i>「長老」）, <i>monk</i>（<i>monachus</i>「独居者」）, <i>nun</i>, <i>abbot</i>, <i>candle</i>, <i>altar</i>, <i>mass</i>, <i>psalm</i>, <i>hymn</i>, <i>creed</i>, <i>devil</i>（<i>diábolos</i>「中傷者」）, <i>apostle</i>, <i>martyr</i>, <i>school</i>（Gk <i>scholḗ</i>「余暇」）, <i>master</i>（<i>magister</i>）, <i>verse</i>, <i>paper</i>, <i>plant</i>, <i>fever</i>, <i>circle</i>, <i>Sabbath</i>。
+
+<b>第3期（ルネサンス、1500〜1700）</b>　人文主義者が古典語から直接、大量に借用した。抽象語・学術語が中心で、ラテン語の形をほぼそのまま保つ。
+
+<i>abdomen, area, census, circus, complex, exit, focus, genius, index, interim, item, maximum, medium, memorandum, radius, series, species, specimen, stimulus, terminus, ultimatum, vacuum, veto, agenda, data, propaganda, alumnus, curriculum</i>——さらに動詞・形容詞では <i>educate, eradicate, exaggerate, extol, harass（仏経由）, meditate, appropriate, conspicuous, dexterity, disability, expensive, external, halo, insane, jocular, malignant, obstruction, relaxation, submerge, susceptible</i> など。
+
+> <b>インク壺語（inkhorn terms）</b>　16世紀にはラテン語かぶれの造語が氾濫し、批判を浴びた。<i>adnichilate</i>（無に帰す）, <i>eximious</i>（卓越した）, <i>illecebrous</i>（魅惑的な）, <i>deruncinate</i>（草刈りする）などは定着せず消えた。生き残ったものと消えたものを分けたのは、必要性と語感である。トマス・ウィルソン『修辞学の技法』（1553）は「われらは母の言葉を怪物にしてはならぬ」と論じた。
+
+## 5.4　第三層：古ノルド語
+
+793年のリンディスファーン襲撃に始まるヴァイキング時代、デーン人はイングランド北東部に定住し「デーンロー」（Danelaw）を築いた。古ノルド語と古英語は近縁で相互理解が可能だったため、借用は日常語の深部にまで及んだ。これは英語史上、唯一「文法語まで借りた」事例である。
+
+<b>もっとも驚くべき借用は人称代名詞である。</b>　古英語の三人称複数 <i>hīe, hiera, him</i> は、古ノルド語の <i>þeir, þeira, þeim</i> に置き換わり、現代の <i>they, their, them</i> となった。代名詞の借用は世界的にも稀で、両言語の接触の密度を物語る。同様に <i>are</i>（OE <i>sind/bēoþ</i> に代わる）、<i>both</i>, <i>same</i>, <i>till</i>, <i>though</i> も北欧語起源とされる。
+
+日常語の例：<i>sky, skin, skirt, skill, scrape, scrub, scatter, score, scowl, egg, knife, leg, neck, root, wing, window, husband, fellow, gift, guest（音形）, law, outlaw, sister, bag, bank, birth, bloom, bull, cake, call, cast, crawl, die, dirt, dregs, gap, gasp, get, give, happy, hit, keel, kid, kindle, knot, lift, link, loan, loose, low, muck, race, raise, ransack, reindeer, rid, rive, rotten, rug, sale, scab, scald, scale, seat, seem, sly, snare, sprint, steak, take, thrust, thrive, tight, trust, ugly, want, weak, whisk, wrong</i>。
+
+<b>sk- の見分け方</b>　古英語では *sk が /ʃ/（sh）に口蓋化した。したがって現代英語で /sk/ と発音される語の多くは北欧語からの借用である。この結果、同じ語根から二重語が生まれた。
+
+| 本来語（sh-） | 北欧語（sk-） | 意味の分化 |
+|---|---|---|
+| shirt | skirt | 上着 / 下衣 |
+| shatter | scatter | 砕く / 散らす |
+| ship | skipper | 船 / 船長（オランダ語経由） |
+| shriek | screech | ほぼ同義 |
+| shell | scale | 殻 / 鱗 |
+| shabby | scabby | |
+
+また、<i>whole/hale</i>, <i>no/nay</i>, <i>from/fro</i>, <i>rear/raise</i>, <i>church/kirk</i> の対も英語形と北欧語形の二重語である。
+
+## 5.5　第四層：フランス語（二段階）
+
+<b>ノルマン・フランス語（1066〜1250頃）</b>　征服者の言語として、支配・軍事・法・料理の語彙が入った。北ノルマン方言の特徴（ca- の保持、w- の保持）を示す。
+
+<i>castle, court, prince, baron, noble, servant, war（＜ <i>werre</i>）, warden, warranty, catch, cattle, candle（再借用）, carpenter, chattel, guarantee</i>。
+
+- 有名な対：家畜の名は英語（<i>ox, cow, calf, sheep, swine, deer</i>）、その肉は仏語（<i>beef, veal, mutton, pork, venison</i>）。飼育する農民は英語話者、食卓につく領主は仏語話者だったという、ウォルター・スコット『アイヴァンホー』以来しばしば語られる図式である。
+
+<b>中央フランス語（パリ方言、1250〜1400頃）</b>　13世紀にノルマンディーがフランス王に奪われた後、威信言語はパリのフランス語となる。この段階の借用は ch- や g- の形をとる。
+
+同じラテン語源が、ノルマン方言経由と中央方言経由で二度入り、二重語となった例：
+
+| ラテン語源 | ノルマン形 | 中央フランス形 |
+|---|---|---|
+| <i>capitāle</i> | cattle | chattel（および capital はラテン直輸入） |
+| <i>captiāre</i> | catch | chase |
+| <i>cancer</i> | canker | chancre |
+| <i>warantia</i> | warranty | guarantee |
+| <i>wardan</i> | warden, ward | guardian, guard |
+| <i>wile</i> | wile | guile |
+| <i>Willelm</i> | William | Guillaume |
+| <i>rejectāre</i> | reject | — |
+| <i>convey</i> | convey | convoy |
+
+チョーサーの時代（14世紀後半）までに約1万語のフランス語が英語に入り、そのうち約75%が今日まで生き残っている。分野別には、法（<i>judge, jury, justice, court, crime, felony, evidence, verdict, attorney, plaintiff, bail, arrest, perjury, plea</i>）、統治（<i>government, parliament, reign, sovereign, authority, council, treaty, tax, revenue, mayor, chancellor</i>）、軍事（<i>army, navy, battle, soldier, lieutenant, sergeant, siege, retreat, enemy, peace</i>）、宗教（<i>religion, sermon, prayer, saint, virgin, clergy, sacrament, trinity, confession</i>）、衣食住（<i>dinner, supper, feast, appetite, boil, fry, roast, toast, sauce, sugar, salad, jelly, tart, mustard, cream, gown, robe, cloak, garment, fashion, jewel, palace, chamber, chimney, curtain, cushion, tower</i>）、芸術・学問（<i>art, beauty, colour, image, music, poet, romance, story, chapter, paper, pen, study, grammar, logic, physician, surgeon, anatomy</i>）。
+
+## 5.6　ギリシア語
+
+ギリシア語からの語彙は、（1）ラテン語経由の古い層（<i>church, bishop, devil, school, paper</i>）、（2）ルネサンス以降の学術借用、（3）近代の科学造語、の三層からなる。
+
+近代の科学語彙はほとんどがギリシア語要素の新造語（neoclassical compound）である。<i>telephone</i>（遠い＋音）, <i>photograph</i>（光＋書く）, <i>telegraph</i>, <i>microscope</i>, <i>thermometer</i>, <i>biology</i>, <i>psychology</i>, <i>chromosome</i>, <i>antibiotic</i>, <i>dinosaur</i>（恐ろしい＋トカゲ、1841年オーウェンの造語）, <i>helicopter</i>（螺旋＋翼）。これらは古代ギリシア人には通じない「現代人のギリシア語」である。
+
+## 5.7　その他の言語から
+
+<b>アラビア語</b>（多くはスペイン語・イタリア語・中世ラテン語経由）：<i>algebra</i>（<i>al-jabr</i>「（骨折の）接合」）, <i>algorithm</i>（数学者アル＝フワーリズミーの名）, <i>alcohol</i>（<i>al-kuḥl</i>「アンチモン粉」）, <i>alkali, almanac, alchemy, azure, admiral</i>（<i>amīr al-baḥr</i>「海の司令官」）, <i>arsenal</i>（<i>dār aṣ-ṣināʿa</i>「製造所」）, <i>assassin</i>（<i>ḥashīshīn</i>）, <i>candy</i>（<i>qandī</i>）, <i>coffee</i>（<i>qahwa</i>）, <i>cotton</i>（<i>quṭn</i>）, <i>ghoul, hazard, lemon, lilac, magazine</i>（<i>makhāzin</i>「倉庫」）, <i>mattress</i>（<i>maṭraḥ</i>「投げるところ」）, <i>orange, safari, saffron, sherbet, sofa, sugar, syrup, talc, tariff, zenith, nadir, zero/cipher</i>（<i>ṣifr</i>「空」）。
+
+<b>オランダ語・低地ドイツ語</b>（航海・商業・絵画）：<i>deck, dock, skipper, yacht, cruise, freight, sloop, buoy, keelhaul, smuggle, boss</i>（<i>baas</i>）, <i>cookie, coleslaw, waffle, brandy, gin, landscape, easel, sketch, etch, still life</i>（訳語）, <i>knapsack, wagon, dam, dike, pump, snack, split, stove</i>。
+
+<b>イタリア語</b>（音楽・芸術・軍事・金融）：<i>piano, opera, soprano, tempo, allegro, sonata, concerto, violin, studio, fresco, model, replica, balcony, umbrella, cupola, ghetto, bank</i>（<i>banca</i>「台」）, <i>bankrupt</i>（<i>banca rotta</i>「壊れた台」）, <i>bandit, brigade, cavalry, gazette, influenza, malaria</i>（<i>mala aria</i>「悪い空気」）, <i>volcano, pasta, pizza, broccoli, zucchini</i>。
+
+<b>スペイン語・ポルトガル語</b>：<i>armada, cargo, embargo, cork, sherry, siesta, patio, plaza, ranch, rodeo, canyon, mosquito, alligator</i>（<i>el lagarto</i>「トカゲ」）, <i>cockroach</i>（<i>cucaracha</i>）, <i>tornado, guitar, cigar, vanilla, marmalade, molasses, flamingo, breeze, caste, veranda, fetish</i>。
+
+<b>アメリカ先住民諸語</b>：<i>moose, raccoon, skunk, opossum, moccasin, tomahawk, totem, wigwam, squash, hickory, persimmon, caribou, toboggan</i>（以上北米）、<i>tomato, chocolate, chili, avocado, coyote, ocelot</i>（ナワトル語）、<i>potato, canoe, hurricane, barbecue, hammock, maize, cannibal, iguana</i>（カリブ語・タイノ語）、<i>llama, condor, quinine, puma, coca, pampas, jaguar, piranha, tapioca, cashew, toucan</i>（ケチュア語・トゥピ語）。
+
+<b>インド諸語</b>：<i>jungle</i>（<i>jaṅgal</i>）, <i>bungalow</i>（「ベンガル風の」）, <i>shampoo</i>（<i>chāmpo</i>「押せ」）, <i>pyjamas, thug, loot, pundit, guru, karma, nirvana, yoga, avatar, mantra, juggernaut</i>（ジャガンナート神の山車）, <i>cot, dinghy, veranda, chintz, cashmere, curry</i>（タミル語）, <i>catamaran, pariah, mango</i>。
+
+<b>ペルシア語</b>：<i>bazaar, caravan, checkmate</i>（<i>shāh māt</i>「王は無力だ」）, <i>chess, divan, khaki, kiosk, lilac, magic, orange, paradise</i>（「囲われた園」）, <i>pyjama, shawl, spinach, tiger, turban, jasmine, scarlet, tulip</i>。
+
+<b>ヘブライ語</b>：<i>amen, hallelujah, sabbath, jubilee, cherub, seraph, messiah, rabbi, kosher, shibboleth, behemoth, leviathan, camel</i>（経由）。
+
+<b>中国語</b>：<i>tea</i>（閩南語 <i>tê</i>、オランダ語経由）, <i>ketchup</i>（<i>kê-tsiap</i>「魚醤」）, <i>typhoon</i>（諸説：<i>大風</i> とギリシア語 <i>Tȳphôn</i> の混淆）, <i>silk</i>（経由）, <i>kowtow, kung fu, tofu</i>（日本語経由）, <i>ginseng, lychee, wok, feng shui</i>。
+
+<b>日本語</b>：<i>tycoon</i>（大君）, <i>tsunami, karaoke, sushi, samurai, kimono, futon, judo, karate, origami, haiku, bonsai, emoji, karoshi, umami, honcho</i>（班長）, <i>rickshaw</i>（人力車）, <i>skosh</i>（少し）, <i>soy</i>（醤油、オランダ語経由）, <i>hibachi, kudzu, sudoku, anime, manga, zen</i>（禅、中国語経由の音）。
+
+<b>ロシア語</b>：<i>vodka, tsar, steppe, mammoth, sable, samovar, sputnik, gulag, pogrom, intelligentsia, troika, babushka, borscht, glasnost, perestroika</i>。
+
+<b>その他</b>：<i>taboo, tattoo</i>（ポリネシア語）, <i>kangaroo, boomerang</i>（オーストラリア先住民語）, <i>zebra, banana, yam, jazz</i>（諸説、アフリカ諸語の可能性）, <i>chimpanzee, gorilla, safari</i>（スワヒリ語）, <i>coffee, gnu, trek, apartheid, aardvark, commando, veld</i>（アフリカーンス語）, <i>sauna</i>（フィンランド語）, <i>ski, fjord, ombudsman, slalom</i>（ノルウェー語・スウェーデン語）, <i>horde, yogurt, coffee, kiosk, bosh, yashmak</i>（トルコ語）, <i>paprika, goulash, coach</i>（ハンガリー語 <i>kocsi</i>「コチ村の馬車」）, <i>robot</i>（チェコ語、チャペック『R.U.R.』1920）, <i>polka, pistol, howitzer</i>（チェコ語）, <i>mazurka, horde</i>（ポーランド語）。
+
+> <b>英語はなぜこれほど借りたか</b>　しばしば「英語は寛容だから」と言われるが、より現実的な理由は、（1）ノルマン征服により威信言語を失って規範が緩んだこと、（2）大英帝国と米国の世界的展開によって接触面が広かったこと、（3）ラテン語系の学術語彙を受け入れる文体的階層がすでに用意されていたこと、である。
+

@@ -1,0 +1,127 @@
+# 第4章　英語史と音変化の通観
+
+## 4.1　英語史の区分
+
+| 期 | 年代 | 画期となる出来事 |
+|---|---|---|
+| 古英語（Old English, OE） | 449〜1100頃 | アングロ・サクソン人の渡来、キリスト教化、ヴァイキング侵入 |
+| 中英語（Middle English, ME） | 1100〜1500頃 | ノルマン征服（1066）、屈折の崩壊、フランス語の大量流入 |
+| 初期近代英語（Early Modern English, EModE） | 1500〜1700頃 | 大母音推移、印刷術（1476）、ルネサンスのラテン語彙、シェイクスピア、欽定訳聖書（1611） |
+| 後期近代英語（Late Modern English） | 1700〜1900頃 | 規範文法、辞書（ジョンソン1755）、産業革命語彙、帝国拡大による世界語彙 |
+| 現代英語（Present-day English） | 1900〜 | 米語の優位、科学技術語彙、国際語化 |
+
+## 4.2　古英語の姿
+
+古英語は今日の英語とは似ても似つかない、屈折の豊かなゲルマン語であった。名詞は4格（主・対・属・与）と3性、定冠詞は <i>se, sēo, þæt</i> と変化し、動詞は人称・数・法によって屈折した。
+
+『ベーオウルフ』冒頭の一節を挙げる。
+
+> Hwæt! Wē Gār-Dena in geārdagum, þēodcyninga þrym gefrūnon, hū ðā æþelingas ellen fremedon.（聞け、我らは槍のデーン人の、いにしえの日の、民の王たちの栄光を聞き知った、貴人たちがいかに勇を成したかを。）
+
+ここに現れる語のうち現代英語に直接残るものは <i>we</i>, <i>in</i>, <i>how</i>, <i>the</i> 程度である。しかし <i>gēar</i>「年」→ <i>year</i>、<i>dagum</i>「日々に（複数与格）」→ <i>day</i>、<i>cyning</i>「王」→ <i>king</i>、<i>þrym</i>「栄光」、<i>æþeling</i>「貴族」（<i>æþele</i>「高貴な」は <i>Ethel-</i> という人名要素に残る）と見ていけば、輪郭は現れる。
+
+古英語の文字には現代英語にない字母があった。
+
+| 字母 | 名称 | 音価 | 後の運命 |
+|---|---|---|---|
+| þ | thorn（ソーン） | /θ/, /ð/ | th に置換。印刷所で y で代用され「Ye Olde」の偽古語を生んだ |
+| ð | eth（エズ） | /θ/, /ð/ | th に置換 |
+| ƿ | wynn（ウィン） | /w/ | uu → w に置換 |
+| ȝ | yogh（ヨッホ） | /ɡ/, /j/, /x/ | g, y, gh に分裂（<i>night</i> の gh） |
+| æ | ash（アッシュ） | /æ/ | a, e に置換 |
+
+## 4.3　i-ウムラウト（i-mutation）
+
+古英語期以前（6世紀ごろ）に起きた、英語の語形にもっとも深い痕跡を残した変化のひとつが i-ウムラウトである。後続音節に i または j があるとき、先行する後舌母音が前舌化する。その後 i/j 自体は弱化・消失したため、母音交替だけが残った。
+
+| 変化 | 例 |
+|---|---|
+| a → e | PGmc *taljan → OE <i>tellan</i>（tell）／cf. <i>tale</i> |
+| o → e | *fōti(z) → OE <i>fēt</i>（feet）／<i>fōt</i>（foot） |
+| u → y | *mūsiz → OE <i>mȳs</i>（mice）／<i>mūs</i>（mouse） |
+| a → e | *langiþō → OE <i>lengþu</i>（length）／<i>lang</i>（long） |
+
+英語の不規則複数（<i>foot/feet, tooth/teeth, goose/geese, man/men, mouse/mice, louse/lice</i>）は、すべてこの i-ウムラウトの化石である。また次のような語対も同じ原理で結ばれている。
+
+- <i>full</i> : <i>fill</i>、<i>whole</i> : <i>heal</i>、<i>blood</i> : <i>bleed</i>、<i>food</i> : <i>feed</i>
+- <i>doom</i> : <i>deem</i>、<i>gold</i> : <i>gild</i>、<i>brood</i> : <i>breed</i>、<i>strong</i> : <i>strength</i>
+- <i>long</i> : <i>length</i>、<i>broad</i> : <i>breadth</i>、<i>foul</i> : <i>filth</i>、<i>hale</i> : <i>health</i>
+- <i>old</i> : <i>elder</i>、<i>tale</i> : <i>tell</i>、<i>sit</i> : <i>set</i>、<i>lie</i> : <i>lay</i>、<i>fall</i> : <i>fell</i>、<i>drink</i> : <i>drench</i>
+
+> <b>使役動詞のパターン</b>　自動詞に *-jan（＝原因を作る）を付けると他動詞・使役動詞になる。この *-jan の i が i-ウムラウトを起こした。<i>sit</i>（座る）→ <i>set</i>（座らせる＝置く）、<i>lie</i>（横たわる）→ <i>lay</i>（横たえる）、<i>rise</i>（昇る）→ <i>raise</i>（古ノルド語形）／<i>rear</i>（英語形）、<i>fall</i>（倒れる）→ <i>fell</i>（倒す）、<i>drink</i> → <i>drench</i>（浸す）。
+
+## 4.4　中英語期の変動
+
+1066年のノルマン征服により、英語は約300年にわたって支配層の言語ではなくなった。行政・法・宮廷はフランス語、学問・教会はラテン語、庶民は英語という三層構造ができる。英語は「書かれない言語」となったため、規範の圧力から解放され、変化が加速した。
+
+<b>屈折の崩壊</b>　語頭アクセントによる語末音節の弱化が進み、-an, -um, -es などの語尾が一様に -e /ə/ に合流し（levelling）、やがて脱落した。格の区別は失われ、語順（SVO）と前置詞が文法機能を担うようになる。名詞の性も消滅した。この過程は北部（古ノルド語との接触が濃い地域）で早く進み、南部で遅かった。
+
+<b>母音の量の変化</b>　中英語期には二つの重要な量的変化が起きた。
+
+1. <b>開音節長化</b>（Open Syllable Lengthening, 13世紀）：開音節の短母音が長くなる。OE <i>nama</i> → ME <i>nāme</i>（→ name）、OE <i>stelan</i> → ME <i>stēlen</i>（steal）、OE <i>hopa</i> → ME <i>hōpe</i>（hope）。
+2. <b>子音群前の短化</b>：長母音が二つ以上の子音の前で短くなる。<i>keep</i> : <i>kept</i>、<i>hide</i> : <i>hid</i>、<i>five</i> : <i>fifth</i>、<i>wise</i> : <i>wisdom</i>、<i>Christ</i> : <i>Christmas</i>、<i>break</i> : <i>breakfast</i> の母音差はこれによる。
+
+## 4.5　大母音推移（Great Vowel Shift）
+
+15〜18世紀にかけて、英語の長母音が一斉に調音位置を上げた（あるいは二重母音化した）。これが大母音推移（GVS）で、英語の綴りと発音の乖離を決定的にした。
+
+| 中英語 | 現代英語 | 例語（ME → PDE） |
+|---|---|---|
+| iː | aɪ | <i>tīme</i> /tiːmə/ → time /taɪm/ |
+| eː | iː | <i>see</i> /seː/ → /siː/ |
+| ɛː | iː | <i>sea</i> /sɛː/ → /siː/ |
+| aː | eɪ | <i>name</i> /naːmə/ → /neɪm/ |
+| ɔː | oʊ | <i>boat</i> /bɔːt/ → /boʊt/ |
+| oː | uː | <i>moon</i> /moːn/ → /muːn/ |
+| uː | aʊ | <i>hous</i> /huːs/ → /haʊs/ |
+
+推移の途中で綴りが固定されたため（キャクストンの印刷開始は1476年）、綴りは中英語の発音を、音は近代の発音を表す状態になった。<i>i</i> が /aɪ/、<i>a</i> が /eɪ/、<i>ou</i> が /aʊ/ と読まれるのはこのためである。ヨーロッパ大陸の言語で <i>i</i> が /i/、<i>a</i> が /a/ と読まれるのと英語が異なるのは、ひとえにGVSの結果である。
+
+その帰結として、同じ語根から派生した語のあいだに大きな母音差が生まれた。
+
+- <i>divine</i> /dɪˈvaɪn/ : <i>divinity</i> /dɪˈvɪnɪti/
+- <i>serene</i> : <i>serenity</i>、<i>sane</i> : <i>sanity</i>、<i>profound</i> : <i>profundity</i>
+- <i>please</i> : <i>pleasant</i>、<i>nation</i> : <i>national</i>、<i>crime</i> : <i>criminal</i>
+- <i>school</i> : <i>scholar</i>、<i>child</i> : <i>children</i>、<i>wide</i> : <i>width</i>
+
+## 4.6　黙字（silent letters）はなぜ生じたか
+
+英語の綴りに残る「読まない字」には、それぞれ歴史的理由がある。
+
+| 綴り | 例 | 理由 |
+|---|---|---|
+| kn- | knee, knight, know | 17世紀までは /kn/ と発音。ドイツ語 <i>Knie</i> 参照 |
+| gn- | gnaw, gnat, gnome | 同様に /gn/ を発音していた |
+| wr- | write, wrong, wrist | /wr/ を発音。<i>wr-</i> は「ねじれ」の意味を持つ語群を作る |
+| -mb | lamb, comb, thumb, climb | 語末の b が15世紀ごろ脱落。<i>thumb</i> の b は語源的には無い（<i>thimble</i> の類推） |
+| -gh- | night, light, though, daughter | OE の /x/ /ç/ 音。消失するか /f/ になった（<i>laugh, rough, cough</i>） |
+| l | half, calf, walk, talk, folk, palm | /l/ が後舌母音の前で消失（16世紀） |
+| t | castle, listen, often, whistle | /stl/ /stn/ の t が脱落。<i>often</i> は綴り字発音で復活 |
+| w | two, sword, answer, who | 後舌母音・子音の前で /w/ が消失 |
+| h | hour, honest, heir, honor | フランス語経由で h を発音しないまま借用 |
+
+## 4.7　語源的綴り直し（etymological respelling）
+
+ルネサンス期の学者たちは、フランス語経由で入った語を「本来のラテン語の姿」に近づけようとして、発音されない文字を挿入した。
+
+| 現代綴り | 中英語形 | 挿入の根拠 | 発音への影響 |
+|---|---|---|---|
+| debt | dette | L <i>debitum</i> | b は無音のまま |
+| doubt | doute | L <i>dubitāre</i> | b は無音のまま |
+| receipt | receite | L <i>recepta</i> | p は無音のまま |
+| island | iland | L <i>insula</i>（誤り。本来はOE <i>īegland</i>） | s は無音 |
+| scissors | sisoures | L <i>scindere</i>（誤り。実は <i>caedere</i> 系） | sc は /s/ |
+| salmon | samoun | L <i>salmō</i> | l は無音 |
+| fault | faute | L <i>fallere</i> | l を発音するようになった |
+| adventure | aventure | L <i>ad-</i> | d を発音するようになった |
+| perfect | parfit | L <i>perfectus</i> | 発音も変わった |
+| victual | vitaille | L <i>victuālia</i> | 綴りだけ変わり /ˈvɪtl/ のまま |
+
+<i>island</i> の s はまったくの誤挿入である。この語は古英語 <i>īegland</i>（<i>īeg</i>「島」+ <i>land</i>）で、ラテン語 <i>insula</i> とは無縁だった。<i>isle</i>（＜ L <i>insula</i>）に引かれて s が入り、そのまま定着した。
+
+## 4.8　綴り字発音と類推
+
+一度無音になった文字が、綴りに引かれて再び発音されるようになることがある。これを綴り字発音（spelling pronunciation）と呼ぶ。<i>often</i> の t、<i>forehead</i> の h、<i>waistcoat</i>、<i>author</i>（元は /t/、L <i>auctor</i> ではなく OF <i>autor</i> 由来）、<i>Anthony</i>（本来 t）。逆方向の変化として、綴りの h に引かれて <i>hotel</i> や <i>herb</i> の発音が揺れる現象もある（英 /hɜːb/、米 /ɜːrb/）。
+
+また、類推（analogy）は語形を強力に作り直す。<i>help – holp – holpen</i> は <i>help – helped</i> に、<i>climb – clomb</i> は <i>climbed</i> に規則化した。逆に <i>dive – dived</i> から <i>dove</i> が（アメリカで <i>drive – drove</i> の類推により）生じた例もあり、規則化は一方通行ではない。
+

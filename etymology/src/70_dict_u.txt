@@ -1,0 +1,47 @@
+== U
+
+@ umbrella ; /ʌmˈbrelə/ ; 名 ; 傘
++lit: 「小さな影」
++chain: L <i>umbra</i>「影」→ <i>umbella</i>（縮小形）→ 伊 <i>ombrella</i> → 英語
++desc: 本来は日傘。雨傘としての用法は18世紀の英国から（ジョナス・ハンウェイが街中で使い嘲笑された逸話が知られる）。
++der: umbrage（「日陰→気を悪くすること」<i>take umbrage</i>）, somber（「影の下」）, penumbra, adumbrate, umbel（植物の散形花序）
++note: 仏語 <i>parapluie</i>「雨を防ぐもの」、<i>parasol</i>「日を防ぐもの」は機能で命名。
+
+@ umpire ; /ˈʌmpaɪə/ ; 名 ; 審判
++lit: 「対等でない者（＝第三者）」
++chain: OF <i>nonper</i>（<i>non</i>「非」+ <i>per</i>「同輩」）→ ME <i>a noumpere</i> → <i>an umpire</i>
++desc: 冠詞との境界の切り直し（異分析、第6章）。同じ現象で <i>a napron</i> → <i>an apron</i>、<i>a nadder</i> → <i>an adder</i>。
++der: par, pair, peer, nonpareil, compare, disparage
+
+@ uncouth ; /ʌnˈkuːθ/ ; 形 ; 無骨な
++lit: 「知られていない」
++chain: OE <i>uncūþ</i>（<i>un-</i> + <i>cūþ</i>「知られた」＜ <i>cunnan</i>「知る」）
++desc: 「未知の」→「なじみのない」→「異様な」→「粗野な」。
++der: know, can, ken, cunning, kith（<i>kith and kin</i>「知人と親族」）, couth（20世紀の逆成による戯語）
++note: <i>couth</i>「洗練された」は、<i>uncouth</i> から un- を外して20世紀に作られた冗談めいた逆成語。
+
+@ university ; /juːnɪˈvɜːsəti/ ; 名 ; 大学
++lit: 「（教師と学生の）全体としての組合」
++chain: L <i>ūniversitās</i>「全体、団体」（<i>ūnus</i>「一」+ <i>vertere</i>「向ける」）
++desc: 中世の <i>ūniversitās magistrōrum et scholārium</i>「教師と学生の組合」の略。建物ではなく人の団体を指す語だった。
++der: universe（「一つに向けられたもの」＝万物）, universal, verse, version, convert, divert
++note: <i>college</i>（共に規約を持つ団体）も同様に、人の集団を指す語である。
+
+@ utopia ; /juːˈtəʊpiə/ ; 名 ; 理想郷
++lit: 「どこにもない場所」
++chain: Gk <i>ou</i>「ない」+ <i>tópos</i>「場所」→ トマス・モアの造語（1516）
++desc: モアは同時に <i>eu-tópos</i>「良い場所」との掛詞を意図しており、著書の付録詩でその両義性を明示している。
++der: dystopia（19世紀。J.S.ミルの議会演説, 1868）, topic, topography, isotope
++note: 造語者が意識的に多義性を仕込んだ稀な例。
+
+@ urchin ; /ˈɜːtʃɪn/ ; 名 ; わんぱく小僧
++lit: 「ハリネズミ」
++chain: L <i>ēricius</i>「ハリネズミ」→ 北仏 <i>herichon</i> → ME
++desc: 「ハリネズミ」→（比喩で）「（髪の逆立った）小僧」。<i>sea urchin</i>「ウニ」に原義が残る。
++der: hedgehog（本来語の別表現）, echinoderm（ギ <i>ekhînos</i>「ハリネズミ、ウニ」）
+
+@ utensil ; /juːˈtensl/ ; 名 ; 器具
++lit: 「使えるもの」
++chain: L <i>ūtī</i>「使う」→ <i>ūtēnsilia</i>「必需品」
++der: use, useful, utility, utilize, usual, abuse, usury（「使用料」）, utensil
+

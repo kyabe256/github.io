@@ -1,0 +1,130 @@
+== H
+
+@ handicap ; /ˈhændikæp/ ; 名 ; ハンディキャップ
++lit: 「帽子の中の手」
++chain: <i>hand in cap</i>（賭けの一種）
++desc: 17世紀の物々交換の賭博で、審判が決めた差額を、当事者が帽子の中に手を入れて賛否の金を握り、同時に出して判定した。競馬で有利な馬に重りを課す制度に転用され、「不利な条件」の意味になった。障害を指す用法は20世紀初頭から。
+
+@ harbinger ; /ˈhɑːbɪndʒə/ ; 名 ; 先触れ
++lit: 「宿営を用意する者」
++chain: 古フランク語 *<i>heriberga</i>「軍の宿営」（<i>heri</i>「軍」+ <i>berga</i>「守り」）→ OF <i>herbergere</i> → ME <i>herbergeour</i>
++desc: 軍や貴人の一行に先んじて宿を手配する役の者。そこから「先ぶれ」の比喩へ。
++der: harbor（「軍の避難所」）, harbour, harry, herald（「軍を統べる者」）
++note: 挿入された n は語中音添加（epenthesis）による（<i>messenger</i>, <i>passenger</i>, <i>nightingale</i> も同じ）。
+
+@ hazard ; /ˈhæzəd/ ; 名 ; 危険
++lit: 「（サイコロの）賭け」
++chain: アラビア語 <i>az-zahr</i>「サイコロ」（説）→ 西 <i>azar</i> → OF <i>hasard</i>
++desc: 中世のサイコロ賭博の名。十字軍時代にシリアの城 <i>Hasart</i> で考案されたという伝承もある。「偶然」→「危険」へ。
++note: 語源に定説はないが、アラビア語起源説が有力。
+
+@ hearse ; /hɜːs/ ; 名 ; 霊柩車
++lit: 「（狼の歯のような）まぐわ」
++chain: L <i>hirpex</i>「まぐわ（農具）」→ OF <i>herse</i>「（蝋燭を立てる）三角形の枠」→ 英語
++desc: 棺の上に置いて蝋燭を立てた鋸歯状の枠が、農具のまぐわに似ていたことから。やがて棺を運ぶ車そのものを指すようになった。
++der: rehearse（「（まぐわで）繰り返し掻く」→ 復唱する→ 稽古する）
++note: <i>rehearsal</i>「リハーサル」は「（土を）何度も掻き返す」が原義。
+
+@ hippopotamus ; /hɪpəˈpɒtəməs/ ; 名 ; カバ
++lit: 「川の馬」
++chain: Gk <i>híppos</i>「馬」+ <i>potamós</i>「川」
++der: hippodrome, Philip（「馬を愛する者」）, Mesopotamia（「川のあいだの地」）, equine（ラテン系の同根語）
++note: 日本語「河馬」も同じ発想の翻訳借用。
+
+@ history ; /ˈhɪstri/ ; 名 ; 歴史
++lit: 「知っている者（の語ること）」
++chain: Gk <i>hístōr</i>「知る者、目撃者」（＜ *weid-「見る・知る」）→ <i>historíā</i>「探究、記述」→ L → OF <i>estoire</i>
++dbl: <i>story</i>（仏語経由の摩耗形）
++der: wit, wise, witness, guide, idea, vision, video, visit, prudent
++note: <i>history</i> と <i>story</i> は同語源の二重語。英語 <i>wit</i>「知恵」とも同根で、「見る＝知る」という印欧語的発想に発している。「his + story」という分析は誤り。
+
+@ honeymoon ; /ˈhʌnimuːn/ ; 名 ; 新婚旅行
++lit: 「蜜の月」
++chain: 英語内での複合（1546年初出）
++desc: 蜜のように甘い時期が、月のように満ちてやがて欠ける、という含意の警句的表現だった。新婚旅行の意味は19世紀から。<i>honeymoon period</i>「（新政権などの）蜜月期」に原義の含みが残る。
++note: 「北欧で新婚一か月間、蜂蜜酒を飲んだから」という説は後代の作り話とされる。
+
+@ hospital ; /ˈhɒspɪtl/ ; 名 ; 病院
++lit: 「客をもてなす場所」
++chain: L <i>hospes</i>「客・主人」→ <i>hospitāle</i>「宿泊所」→ OF
++dbl: <i>hostel</i>, <i>hotel</i>（同一語の異なる時代の借用）
++der: host, hospice, hospitality, hostage(?), guest（本来語）
++note: 中世の <i>hospitāle</i> は巡礼宿・救貧院・病院を兼ねた。<i>hospice</i> が終末期医療施設を指すのは20世紀の再特殊化。
+
+@ humble ; /ˈhʌmbl/ ; 形 ; 謙虚な
++lit: 「地面に近い」
++chain: L <i>humilis</i>（<i>humus</i>「土」）→ OF <i>umble</i>
++der: humus, human, homage, exhume, humiliate, posthumous（民間語源で <i>humus</i> に引かれた綴り。本来は <i>postumus</i>「最後の」）
++note: <i>eat humble pie</i>「甘んじて屈辱を受ける」の <i>humble</i> は本来 <i>umble</i>「鹿の臓物」で別語源。h の脱落と民間語源が生んだ洒落である。
+
+@ husband ; /ˈhʌzbənd/ ; 名 ; 夫
++lit: 「家の主人」
++chain: ON <i>húsbóndi</i>（<i>hús</i>「家」+ <i>bóndi</i>「（土地に）住む者」＜ <i>búa</i>「住む」）→ OE <i>hūsbonda</i>
++desc: 古英語では「夫」は <i>wer</i> で、これが失われて北欧語の借用形が残った（<i>wer</i> は <i>werewolf</i>, <i>world</i> に痕跡）。
++der: husbandry（「（家産の）管理」→ 農業）, bond（束縛のそれとは別）, boor, neighbor, be, build
++note: <i>animal husbandry</i>「畜産」に古義が残る。
+
+@ hysteria ; /hɪˈstɪəriə/ ; 名 ; ヒステリー
++lit: 「子宮（の病）」
++chain: Gk <i>hystérā</i>「子宮」→ 近代ラテン語 <i>hysteria</i>（1801）
++desc: 古代医学では、女性特有の精神症状は子宮が体内を移動することで起こると考えられた（プラトン『ティマイオス』にも記述がある）。誤った病理観が語の中に化石化した例。
++der: uterus（ラテン系の同根語）, hysterectomy
++note: 現在この診断名は用いられない。
+
+@ hyphen ; /ˈhaɪfn/ ; 名 ; ハイフン
++lit: 「一つのもとに（＝つないで）」
++chain: Gk <i>hyph' hén</i>（<i>hypó</i>「下に」+ <i>hén</i>「一つ」）→ 後期ギリシア語 <i>hyphén</i>
++desc: 古代の写本で、二語を一語として読むべきことを示すために語の下に引いた弧状の記号。
++der: hypo-, same, simple, single, homogeneous
+
+@ hobby ; /ˈhɒbi/ ; 名 ; 趣味
++lit: 「小馬（の玩具）」
++chain: 人名 Robin/Hob の愛称 → <i>hobby</i>「小馬」→ <i>hobby-horse</i>「竹馬、木馬」→「（乗り回す）お気に入りの話題」→「趣味」
++desc: 17〜18世紀に「一人で乗り回すもの＝個人的な熱中」の比喩が定着した。
++der: hobbyhorse, hobgoblin（Hob＋goblin）
+
+@ hoax ; /həʊks/ ; 名 ; 悪ふざけ、でっちあげ
++chain: <i>hocus</i>（<i>hocus pocus</i> の短縮）＜ 疑似ラテン語の呪文
++desc: <i>hocus pocus</i> は17世紀の奇術師の呪文で、ミサの聖別句 <i>hoc est corpus meum</i>「これは私の体である」のもじりとする説が有力（ティロットソン大主教, 1694）。
++der: hocus-pocus, hokum(?)
+
+@ hurricane ; /ˈhʌrɪkən/ ; 名 ; ハリケーン
++chain: タイノ語 <i>hurakán</i>（嵐の神の名）→ 西 <i>huracán</i> → 英語
++der: 同系統の借用に <i>canoe</i>, <i>hammock</i>, <i>maize</i>, <i>tobacco</i>, <i>barbecue</i>, <i>cannibal</i>
++note: <i>typhoon</i> は別語源で、アラビア語・ギリシア語 <i>Tȳphôn</i>（怪物テュポン）と中国語「大風」の混淆とされる。
+
+
+@ halcyon ; /ˈhælsiən/ ; 形 ; 平穏な
++lit: 「かわせみ（の日々）」
++chain: Gk <i>alkyṓn</i>「かわせみ」→ <i>halkyṓn</i>（<i>háls</i>「海」+ <i>kýōn</i>「はらむ」との民間語源で h が付いた）
++desc: 冬至のころ、かわせみが海上に巣を作る二週間は海が凪ぐという伝承から、<i>halcyon days</i>「平穏な日々」。
++note: 語頭の h は民間語源による付加。
+
+@ hamburger ; /ˈhæmbɜːɡə/ ; 名 ; ハンバーガー
++chain: 地名 Hamburg → <i>Hamburg steak</i> → <i>hamburger</i>
++desc: 「ハンブルクの（肉料理）」が <i>ham</i>「ハム」+ <i>burger</i> と再分析され、<i>cheeseburger</i>, <i>fishburger</i>, <i>veggie burger</i> という語群を生んだ（異分析、第6章）。実際にはハムは入っていない。
+
+@ handkerchief ; /ˈhæŋkətʃɪf/ ; 名 ; ハンカチ
++lit: 「手の・頭を覆うもの」
++chain: <i>hand</i> + <i>kerchief</i>（OF <i>couvrechief</i>「頭を覆うもの」）
++der: cover, chief, chef, capital（<i>chief</i> ＜ <i>caput</i>「頭」）
++note: 本来は頭巾。それを手に持つようになって <i>hand-</i> が付いた。三つの言語層（本来語＋仏語＋ラテン語）が一語に積み重なっている。
+
+@ hierarchy ; /ˈhaɪərɑːki/ ; 名 ; 階層
++lit: 「聖なるものの支配」
++chain: Gk <i>hierós</i>「聖なる」+ <i>árkhein</i>「支配する」→ <i>hierarkhíā</i>
++desc: 偽ディオニュシオスの天使の位階論に由来する語。世俗の組織構造を指すようになったのは19世紀。
++der: hieroglyph（「聖なる刻み」）, hieratic, monarch, anarchy, archive
+
+@ horizon ; /həˈraɪzn/ ; 名 ; 地平線
++lit: 「境界を定めるもの」
++chain: Gk <i>horízein</i>「境を定める」（<i>hóros</i>「境界」）→ <i>horízōn kýklos</i>「限界の円」
++der: aphorism（「境界づけること」＝定義→箴言）, horoscope は別語源（<i>hōra</i>「時」）
++note: <i>horoscope</i>「星占い」は <i>hōra</i>「時」+ <i>skopeîn</i>「見る」で、<i>horizon</i> とは無関係。
+
+@ humor ; /ˈhjuːmə/ ; 名 ; ユーモア、体液
++lit: 「湿り気、体液」
++chain: L <i>ūmor</i>「液体」→ <i>hūmor</i>（<i>hūmus</i>「土」の影響で h が付いた）
++desc: ヒポクラテス以来の四体液説で、血液・粘液・黄胆汁・黒胆汁の配合が気質を決めるとされた。「体液」→「気質」→「機嫌」→「滑稽味」。<i>good humor</i>「上機嫌」に中間段階が残る。
++der: humid, humidity／melancholy, phlegmatic, sanguine, choleric（四体液の派生語）
++note: 医学理論が消えた後も、性格語彙として英語に深く残った。

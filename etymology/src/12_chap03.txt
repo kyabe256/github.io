@@ -1,0 +1,124 @@
+# 第3章　ゲルマン語派とグリムの法則
+
+## 3.1　ゲルマン祖語という中間駅
+
+英語の語源をたどるとき、多くの語はまずゲルマン祖語（Proto-Germanic, PGmc）に行き着く。ゲルマン祖語は紀元前500年ごろから紀元後200年ごろにかけて、北欧・北ドイツ一帯で話されていたと推定される。直接の記録はないが、ゴート語（4世紀、ウルフィラの聖書訳）、古ノルド語、古英語、古サクソン語、古高ドイツ語などの比較から精密に再建される。
+
+ゲルマン語派は三群に分けられる。
+
+| 群 | 言語 |
+|---|---|
+| 東ゲルマン語群 | ゴート語、ヴァンダル語、ブルグント語（すべて死語） |
+| 北ゲルマン語群 | 古ノルド語 → アイスランド語、フェロー語、ノルウェー語、デンマーク語、スウェーデン語 |
+| 西ゲルマン語群 | 古英語、古フリジア語、古サクソン語（→低地ドイツ語）、古低フランク語（→オランダ語）、古高ドイツ語（→ドイツ語、イディッシュ語） |
+
+英語は西ゲルマン語群のうち、北海ゲルマン語（Ingvaeonic）と呼ばれる下位群に属し、フリジア語ともっとも近い。「アングロ・フリジア語」というまとまりを立てることもある。フリジア語の <i>brea, buter, tsiis</i>（bread, butter, cheese）と英語のそっくりさは有名である。
+
+## 3.2　グリムの法則（第一次子音推移）
+
+ゲルマン語派を他の印欧語派から分かつ最大の特徴が、第一次子音推移（First Germanic Sound Shift）、通称グリムの法則である。ヤーコプ・グリム（『グリム童話』の兄）が1822年に体系化した。ラスムス・ラスクが先に指摘していたため、ラスク＝グリムの法則とも呼ばれる。
+
+推移は三段階の連鎖からなる。
+
+| 段階 | 変化 | 例 |
+|---|---|---|
+| 第1段階 | 無声閉鎖音 *p *t *k *kʷ → 無声摩擦音 f θ h hʷ | L <i>pēs</i> : E <i>foot</i>；L <i>trēs</i> : E <i>three</i>；L <i>cor</i> : E <i>heart</i>；L <i>quod</i> : E <i>what</i> |
+| 第2段階 | 有声閉鎖音 *b *d *g *gʷ → 無声閉鎖音 p t k kʷ | L <i>labium</i> : E <i>lip</i>；L <i>decem</i> : E <i>ten</i>；L <i>genus</i> : E <i>kin</i>；L <i>venīre</i>(＜*gʷem-) : E <i>come</i> |
+| 第3段階 | 有声帯気音 *bʰ *dʰ *gʰ *gʷʰ → 有声閉鎖音/摩擦音 b d g w | Skt <i>bhrātā</i> : E <i>brother</i>；Skt <i>dhā-</i> : E <i>do</i>；L <i>hostis</i>(＜*gʰ-) : E <i>guest</i> |
+
+この連鎖は押し出し（push chain）または引きずり（drag chain）として理解される。すなわち *b→p が空いた *b の位置に *bʰ→b が入り、*p→f が空けた位置に *b→p が入る、という玉突きである。
+
+<b>結果として何が起きたか。</b>　英語の本来語とラテン・ギリシア語由来の借用語のあいだに、体系的な「ずれ」が生じた。この「ずれ」を知っていると、次のような対が瞬時に見抜ける。
+
+| 英語本来語 | ラテン/ギリシア語由来語 | 共通語根 |
+|---|---|---|
+| foot | pedal, podium, octopus | *ped- |
+| father | paternal, patron | *ph₂tēr |
+| fire | pyre, pyromania | *péh₂wr̥ |
+| few | paucity, poor | *pau- |
+| for, fore | pro-, per-, para- | *per |
+| three | trio, triple | *trei- |
+| tooth | dental, dentist | *h₃dónt- |
+| thin | tenuous, extend | *ten- |
+| heart | cardiac, courage, cordial | *ḱerd- |
+| horn | cornea, cornet, unicorn | *ḱer- |
+| hundred | century, cent | *ḱm̥tóm |
+| head | capital, chief, chef | *kaput- |
+| who, what | quorum, quality | *kʷis |
+| two | duo, dual, double | *dwoh₁ |
+| ten | decimal, decade | *deḱm̥ |
+| tame | domestic, dominate | *dem- |
+| know, can | gnostic, cognition, notice | *ǵneh₃- |
+| corn, kernel | grain, granule | *ǵr̥h₂-no- |
+| cold | gelid, gelatin, glacier | *gel- |
+| queen | gynecology | *gʷḗn |
+| kin, kind | genus, gene, nature | *ǵenh₁- |
+| bear（運ぶ） | fertile, transfer, offer | *bʰer- |
+| brother | fraternal, friar | *bʰréh₂tēr |
+| do, deed | fact, theme, thesis | *dʰeh₁- |
+| door | forum, foreign | *dʰwer- |
+| guest | hostile, host | *gʰostis |
+| garden, yard | horticulture, cohort | *gʰer- |
+
+> <b>使い方</b>　英語の本来語（短く、日常的で、ゲルマン系）とラテン語系の術語が「f : p」「h : c」「t : d」「th : t」の関係にあれば、まず同根を疑ってよい。<i>fish</i> : <i>piscine</i>、<i>full</i> : <i>plenty</i>、<i>hound</i> : <i>canine</i>、<i>wheel</i> : <i>cycle</i>、<i>yoke</i> : <i>junction</i>。
+
+## 3.3　グリムの法則の例外とヴェルナーの法則
+
+グリムの法則には、長らく説明できない例外があった。たとえば PIE *ph₂tḗr「父」からは、規則どおりなら PGmc *faþēr が期待されるのに、実際のゲルマン諸語は *fadēr を示す（OE <i>fæder</i>, ON <i>faðir</i>, Goth <i>fadar</i>）。第二子音が θ ではなく d になっているのだ。
+
+1875年、デンマークの言語学者カール・ヴェルナー（Karl Verner）がこの謎を解いた。鍵はサンスクリット語やギリシア語に保存されたアクセントの位置であった。
+
+> <b>ヴェルナーの法則</b>　グリムの法則で生じた無声摩擦音 f θ h hʷ および *s は、直前の音節にPIEのアクセントがない場合、有声化して b̄ ð ɣ ɣʷ z となる。
+
+*ph₂tḗr はアクセントが第二音節にあるから、θ が ð（→ d）に有声化した。一方 *bʰréh₂tēr「兄弟」は第一音節にアクセントがあるので θ が保たれ、OE <i>brōþor</i>, E <i>brother</i> となる。この二語の -th- と -d- の違いが、数千年前のアクセント位置の化石なのである。
+
+ゲルマン語では後にアクセントが第一音節に固定されたため、この条件は表面から消え、結果だけが残った。その痕跡が、強変化動詞の語幹交替に見られる<b>文法的交替</b>（grammatischer Wechsel）である。
+
+| 不定詞 | 過去単数 | 過去複数 | 過去分詞 | 現代英語への名残 |
+|---|---|---|---|---|
+| OE <i>weorþan</i> | wearþ | wurdon | worden | <i>worth</i>（ドイツ語 <i>werden</i>） |
+| OE <i>cēosan</i> | cēas | curon | coren | <i>choose</i> : <i>chose</i>（cf. ドイツ語 <i>kiesen/gekoren</i>） |
+| OE <i>frēosan</i> | frēas | fruron | froren | <i>freeze</i> : <i>frozen</i>（s ~ z） |
+| OE <i>sēoþan</i> | sēaþ | sudon | soden | <i>seethe</i> : <i>sodden</i> |
+| OE <i>wesan</i> | wæs | wǣron | — | <i>was</i> : <i>were</i>（s ~ r, ロタシズム） |
+
+<i>was</i> と <i>were</i> の s と r の交替は、ヴェルナーの法則で有声化した z が北ゲルマン・西ゲルマンで r に変わった（ロタシズム, rhotacism）結果である。同じ現象がラテン語にもあり、<i>flōs</i> : <i>flōris</i>、<i>genus</i> : <i>generis</i>、<i>honōs</i> : <i>honōris</i> の s ~ r 交替を生んだ（<i>flora</i>, <i>general</i>, <i>honor</i>）。
+
+## 3.4　ゲルマン語派のその他の特徴
+
+グリムの法則以外にも、ゲルマン語派を特徴づける革新がある。
+
+1. <b>アクセントの語頭固定</b>　PIEの自由アクセントが語幹の第一音節に固定された。これにより語末の音節が弱化・脱落し、屈折体系の崩壊が始まる。英語が今日ほとんど屈折を持たないことの遠因である。
+2. <b>弱変化過去（歯音過去）の創出</b>　-ed による過去形。その起源は *dʰeh₁-「置く、なす」（＝ <i>do</i>）の融合とする説が有力（<i>I work-did</i> → <i>I worked</i>）。
+3. <b>形容詞の強弱二重変化</b>　定冠詞的な限定を受けるときの弱変化と、そうでないときの強変化。現代ドイツ語に残り、英語では失われた。
+4. <b>語彙の三分の一が非印欧起源？</b>　<i>sea, ship, strand, keel, sword, shield, helmet, wife, bone, drink, leap</i> など、他の語派に対応語のない基礎語が多い。北欧の先住民言語（基層, substrate）からの借用とする説があるが、決定的な証拠はない。
+
+## 3.5　第二次子音推移とドイツ語
+
+高地ドイツ語（現代標準ドイツ語の基礎）は、6〜8世紀にさらにもう一段の子音推移（第二次子音推移, High German consonant shift）を経た。英語とドイツ語の語形の差の多くはこれで説明できる。
+
+| 変化 | 英語 | ドイツ語 |
+|---|---|---|
+| p → pf / ff | apple, pepper, ship, open | Apfel, Pfeffer, Schiff, offen |
+| t → z /ts/, ss | ten, two, water, eat, that | zehn, zwei, Wasser, essen, das |
+| k → ch | make, book, break, I | machen, Buch, brechen, ich |
+| d → t | day, door, dream, deep | Tag, Tür, Traum, tief |
+| þ → d | thing, three, thou, thick | Ding, drei, du, dick |
+
+この表を頭に入れておくと、ドイツ語と英語の対応が驚くほど機械的に見えてくる。<i>Pfad</i> : <i>path</i>、<i>Zunge</i> : <i>tongue</i>、<i>Herz</i> : <i>heart</i>、<i>weiß</i> : <i>white</i>、<i>Zaun</i>「垣根」: <i>town</i>（もと「囲い」）。
+
+## 3.6　ゴート語という定点
+
+ゴート語は、4世紀に西ゴート族の司教ウルフィラ（Wulfila）がギリシア語聖書を訳した際の言語で、ゲルマン諸語のなかで飛び抜けて古い記録を持つ。『銀写本』（Codex Argenteus, ウプサラ大学蔵）に残る。ゲルマン祖語の姿を推定するうえでの定点として、語源辞典に頻繁に登場する。
+
+| ゴート語 | 古英語 | 現代英語 | 備考 |
+|---|---|---|---|
+| <i>brōþar</i> | brōþor | brother | 一致 |
+| <i>daúhtar</i> | dohtor | daughter | |
+| <i>fadar</i> | fæder | father | ヴェルナーの法則 |
+| <i>hlaifs</i> | hlāf | loaf | 「パン」→ <i>lord</i>, <i>lady</i> の第1要素 |
+| <i>guma</i> | guma | (bride)groom | 「人」*dʰǵʰomon-「地の者」、L <i>homō</i> と同根 |
+| <i>weitwōþs</i> | witega | (witness) | *weid-「見る」 |
+
+なお現代英語 <i>bridegroom</i> の -groom は、古英語 <i>brȳdguma</i>「花嫁の男」の <i>guma</i>「男」が、16世紀に <i>grome</i>「少年、下男」に取り違えられた民間語源の産物である。本来の意味は「馬丁」とは無関係だった。
+

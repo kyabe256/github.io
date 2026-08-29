@@ -1,0 +1,257 @@
+== C
+
+@ calculate ; /ˈkælkjuleɪt/ ; 動 ; 計算する
++lit: 「小石を使う」
++chain: L <i>calculus</i>「小石」（<i>calx</i>「石灰石」の縮小形）→ <i>calculāre</i>
++desc: ローマ人は算盤の珠として小石を用いた。医学の <i>calculus</i>「結石」も同じ語で、こちらは原義に近い。ニュートン・ライプニッツの「微積分学」も <i>calculus</i>（「計算法」）である。
++der: calcium, calcify, chalk（本来語化した借用）, causeway（「石灰を敷いた道」）
++note: 「小石」→「計算」の連想は、日本語の「算木」やインカの <i>quipu</i> にも通じる普遍的な発想。
+
+@ calendar ; /ˈkælɪndə/ ; 名 ; 暦
++lit: 「（新月を）呼ばわる日の帳簿」
++chain: L <i>kalendae</i>「朔日（月の第一日）」（<i>calāre</i>「呼ばわる」）→ <i>kalendārium</i>「利息の帳簿」
++desc: ローマでは朔日に新月を告げ、借金の利息を支払った。その台帳が <i>kalendārium</i> で、これが「暦」の語源となった。
++der: claim, clamor, council は別, ecclesiastic, nomenclature, class（「召集された市民の等級」）
++note: 「ギリシアの朔日に」（<i>ad kalendas Graecas</i>）はアウグストゥスの言葉で、「決して来ない日に」の意。ギリシア暦に kalendae はないため。
+
+@ candidate ; /ˈkændɪdət/ ; 名 ; 候補者
++lit: 「白く輝く衣を着た者」
++chain: L <i>candēre</i>「白く輝く」→ <i>candidātus</i>
++desc: ローマの公職志願者は、清廉を示すため白墨で真っ白にしたトガ（<i>toga candida</i>）を着て市中を回った。<i>ambition</i>（歩き回ること）と対になる。
++der: candle, candid, candor, incandescent, chandelier, incendiary は別
+
+@ cancel ; /ˈkænsl/ ; 動 ; 取り消す
++lit: 「格子（の線）を引く」
++chain: L <i>cancellī</i>「格子、柵」→ <i>cancellāre</i>「×印を引いて無効にする」
++der: chancel（内陣。格子で仕切られた部分）, chancellor（「格子の番人」→ 高官）, chancery, incarcerate（「柵に閉じ込める」）
++note: 文書を無効にするとき、格子状に線を引いて消したことから。<i>chancellor</i>（首相・学長）が同語源であるのは、法廷の柵のそばに座る書記官が起源だから。
+
+@ cannibal ; /ˈkænɪbl/ ; 名 ; 人食い
++chain: スペイン語 <i>Caníbales</i>（コロンブスが記録したカリブ人の自称 <i>Caniba</i>／<i>Cariba</i> の異形）
++der: Caribbean, Carib
++note: <i>Caribbean</i>「カリブ海」と <i>cannibal</i> は同語源。<i>Caliban</i>（シェイクスピア『テンペスト』）も <i>cannibal</i> のアナグラムとされる。
+
+@ canvas ; /ˈkænvəs/ ; 名 ; 帆布、カンバス
++lit: 「大麻（の布）」
++chain: Gk <i>kánnabis</i>「大麻」→ L <i>cannabis</i> → 俗ラテン語 *<i>cannapāceus</i> → OF → 英語
++dbl: <i>cannabis</i>（学術借用形）
++der: canvass（動詞「くまなく調べる、選挙運動をする」。もと「帆布でふるいにかける」）
++note: <i>canvas</i>（布）と <i>canvass</i>（遊説する）は綴り分けされた同一語。
+
+@ carnival ; /ˈkɑːnɪvl/ ; 名 ; 謝肉祭
++lit: 「肉を取り除くこと」
++chain: 中世ラテン語 <i>carnelevāmen</i>／<i>carnem levāre</i>「肉を除く」→ 伊 <i>carnevale</i>
++desc: 四旬節（肉断ちの40日）の直前に行う祝祭。
++note: 「肉よ、さらば」（<i>carne vale</i>）という説明は語形的に成り立たず、民間語源である。
+
+@ cartoon ; /kɑːˈtuːn/ ; 名 ; 漫画
++lit: 「厚紙（に描いた下絵）」
++chain: 伊 <i>cartone</i>「厚紙」（<i>carta</i>「紙」の拡大形）→ 仏 <i>carton</i> → 英語
++desc: フレスコやタペストリーの原寸下絵を指す美術用語だった。1843年、『パンチ』誌が議事堂壁画の下絵公募を風刺した挿絵を <i>cartoon</i> と称したことから、「風刺画」の意味が生まれた。
++der: card, chart, carton, charter, cartridge, cartel
+
+@ cash ; /kæʃ/ ; 名 ; 現金
++lit: 「金箱」
++chain: L <i>capsa</i>「箱」→ 伊 <i>cassa</i>／仏 <i>casse</i> → 英語「金箱」→「手元の現金」
++der: case（容器）, capsule, cassette, chassis, casket
++note: <i>case</i>「場合」（＜ <i>cadere</i>「落ちる」）とは別語源の同綴語。
+
+@ castle ; /ˈkɑːsl/ ; 名 ; 城
++lit: 「小さな砦」
++chain: L <i>castrum</i>「砦」→ 縮小形 <i>castellum</i> → 北仏 <i>castel</i> → OE <i>castel</i>
++der: chateau（中央仏語形の二重語）, castellan, Chester/-caster/-cester（Manchester, Lancaster, Gloucester）, castrametation
++note: 英国の地名の -chester, -caster, -cester はローマ軍団の駐屯地（<i>castra</i>）の跡である。
+
+@ cattle ; /ˈkætl/ ; 名 ; 牛
++lit: 「（頭数で数える）財産」
++chain: L <i>capitāle</i>「（頭 <i>caput</i> による）財産」→ 北仏 <i>catel</i> → ME
++dbl: <i>chattel</i>（中央仏語経由「動産」）, <i>capital</i>（ラテン直輸入「資本」）
++note: 動産の代表が家畜だったため、「財産」を意味する語が「牛」に特化した（意味の縮小、第7章）。<i>capital</i>「資本」と <i>cattle</i>「牛」が同語であることは、経済史的にも示唆に富む。
+
+@ chapel ; /ˈtʃæpl/ ; 名 ; 礼拝堂
++lit: 「（聖マルティヌスの）小さな外套」
++chain: 後期ラテン語 <i>cappella</i>「小さな外套」（<i>cappa</i>「外套」の縮小形）
++desc: フランク王家は聖マルティヌスの外套を聖遺物として保管し、その安置所を <i>cappella</i> と呼んだ。転じて小礼拝堂一般を指すようになり、そこに仕える聖職者が <i>chaplain</i>「礼拝堂付き司祭」となった。
++der: chaplain, cape, cap, cope, chaperone（「頭巾」→ 付き添い役）, a cappella（「礼拝堂式に＝無伴奏で」）
+
+@ cheat ; /tʃiːt/ ; 動 ; だます
++lit: 「（領主に）財産を没収する」
++chain: OF <i>escheoite</i>「（相続人不在で領主に）復帰する財産」→ ME <i>chete</i>
++der: escheat, cadence, accident, chance, decay（すべて <i>cadere</i>「落ちる」系）
++note: 没収を扱う役人の不正から「詐取する」の意味が生じた。
+
+@ chess ; /tʃes/ ; 名 ; チェス
++lit: 「王たち」
++chain: ペルシア語 <i>shāh</i>「王」→ OF <i>esches</i>（<i>eschec</i> の複数）→ ME <i>ches</i>
++der: check（「王手」→ 阻止・照合・小切手）, checkmate（<i>shāh māt</i>「王は無力だ」）, exchequer（市松模様の布を敷いた計算台＝財務府）, chequered/checkered
++note: <i>check</i>「小切手」も「照合」も、すべてチェスの「王手」から。<i>exchequer</i>「英国財務省」は、計算に用いた市松模様の布に由来する。
+
+@ chivalry ; /ˈʃɪvlri/ ; 名 ; 騎士道
++lit: 「馬に乗ること」
++chain: 後期ラテン語 <i>caballus</i>「駄馬」→ <i>caballārius</i>「騎手」→ OF <i>chevalerie</i>
++der: cavalry（伊経由の二重語）, cavalier, chevalier, cavalcade, caballero
++note: <i>cavalry</i>（騎兵隊、イタリア語経由）と <i>chivalry</i>（騎士道、フランス語経由）は同語源の二重語。ラテン語の上品な <i>equus</i> ではなく俗語の <i>caballus</i> が生き残り、ロマンス諸語の「馬」となった（仏 <i>cheval</i>, 西 <i>caballo</i>）。
+
+@ clue ; /kluː/ ; 名 ; 手がかり
++lit: 「毛糸の玉」
++chain: OE <i>cliwen</i>「糸玉」→ ME <i>clewe</i> → <i>clue</i>
++desc: ギリシア神話で、テセウスがミノタウロスの迷宮から脱出するためアリアドネの糸玉をたどった故事から、「（謎を解く）手がかり」の意味が生じた（16世紀）。
++der: clew（帆の隅、糸玉）
+
+@ coach ; /kəʊtʃ/ ; 名 ; 馬車、指導者
++chain: ハンガリー語 <i>kocsi</i>「コチ村の（馬車）」→ 独 <i>Kutsche</i>／仏 <i>coche</i> → 英語
++desc: ハンガリーのコチ（Kocs）村で作られた優れた四輪馬車の名。「家庭教師」の意味は19世紀オックスフォードの学生俗語で、「（学生を試験まで）運んでくれる人」という洒落から。
++note: 地名由来語（第6章）。
+
+@ cocktail ; /ˈkɒkteɪl/ ; 名 ; カクテル
++chain: 語源不確実（1806年、米国の新聞が初出）
++desc: 諸説が乱立する。（1）雑種馬の尾を短く切って立てた「コックテール」から「混ぜ物」の意、（2）樽の底の残り酒 <i>cock-tailings</i>、（3）メキシコ・ニューオーリンズ起源説など。いずれも決定的でない。
++note: 語源不明の語について「確かな説」を語る資料には注意が必要である。
+
+@ companion ; /kəmˈpænjən/ ; 名 ; 仲間
++lit: 「パンを共にする者」
++chain: 後期ラテン語 <i>compāniō</i>（<i>com-</i>「共に」+ <i>pānis</i>「パン」）→ OF <i>compaignon</i>
++desc: ゴート語 <i>gahlaiba</i>「パンを共にする者」（<i>hlaifs</i>「パン」＝英 <i>loaf</i>）の翻訳借用と考えられる。
++der: company, accompany, pantry, pannier, pastor, pasture, food, feed（本来語）
++note: <i>lord</i>（パンの番人）、<i>lady</i>（パンをこねる者）と合わせ、パンをめぐる語彙は社会構造を映す。
+
+@ compute ; /kəmˈpjuːt/ ; 動 ; 計算する
++lit: 「刈り込んで整える」
++chain: L <i>com-</i> + <i>putāre</i>「刈り込む、勘定する、考える」
++dbl: <i>count</i>（仏語経由の摩耗形）
++der: count, account, discount, dispute, repute, deputy, impute, amputate
++note: <i>putāre</i> の原義は「（枝を）刈り込む」。整理する→勘定する→考える、と意味が展開した。<i>computer</i> は本来「計算する人」で、19〜20世紀前半には天文台や弾道計算室で働く人（多くは女性）を指した。
+
+@ conclave ; /ˈkɒŋkleɪv/ ; 名 ; 教皇選挙会議
++lit: 「鍵をかけた（部屋）」
++chain: L <i>com-</i> + <i>clāvis</i>「鍵」
++desc: 1268〜71年の教皇空位が3年に及んだ反省から、枢機卿を施錠した部屋に閉じ込めて選挙させる制度が生まれた。
++der: clavicle（鎖骨）, clavier, clef, close, include, exclude
+
+@ contest ; /ˈkɒntest/ ; 名 ; 競争
++lit: 「共に証人を立てる」
++chain: L <i>com-</i> + <i>testārī</i>「証言する」（<i>testis</i>「証人」）
++der: testify, testimony, protest, detest, attest, testament, intestate
++note: <i>testis</i>「証人」は *tri-st-「第三者として立つ者」とされる。ローマの法廷では、争いは証拠の応酬だった。
+
+@ copper ; /ˈkɒpə/ ; 名 ; 銅
++lit: 「キプロス（産）の金属」
++chain: L <i>aes Cyprium</i>「キプロスの銅」→ <i>cuprum</i> → OE <i>copor</i>
++desc: 古代地中海世界における銅の主産地キプロス島の名から。元素記号 Cu はこの <i>cuprum</i> による。
++note: 警官の <i>copper/cop</i> は別語源（<i>cop</i>「捕まえる」＜ L <i>capere</i>）。
+
+@ cosmetic ; /kɒzˈmetɪk/ ; 形・名 ; 化粧の、化粧品
++lit: 「秩序づける（技）」
++chain: Gk <i>kósmos</i>「秩序、宇宙、飾り」→ <i>kosmētikós</i>
++der: cosmos, cosmic, cosmopolitan, microcosm
++note: ギリシア人にとって「宇宙」と「化粧」は同じ語だった。いずれも「整えられたもの」である。
+
+@ crisis ; /ˈkraɪsɪs/ ; 名 ; 危機
++lit: 「分岐点、決断」
++chain: Gk <i>krínein</i>「分ける、判断する」→ <i>krísis</i>「決定、（病気の）峠」
++der: critic, criterion, critical, hypocrite, secret, discriminate, certain, crime（ラテン系の同根語）
++note: 医学用語として「病状が快方か死かに分かれる転換点」を指したのが原義。<i>critic</i>「批評家」も「判断する者」である。
+
+@ curfew ; /ˈkɜːfjuː/ ; 名 ; 夜間外出禁止令
++lit: 「火を覆え」
++chain: OF <i>cuevrefeu</i>（<i>covrir</i>「覆う」+ <i>feu</i>「火」）→ ME <i>curfeu</i>
++desc: 中世、火災防止のため夜に炉の火を覆うよう鐘で合図した。その鐘の時刻が、やがて「外出禁止時刻」の意味になった。
++der: cover, covert, kerchief, focus, fuel, foyer
++note: 第12章の調査例で詳述。
+
+@ curious ; /ˈkjʊəriəs/ ; 形 ; 好奇心の強い
++lit: 「気を配る」
++chain: L <i>cūra</i>「配慮」→ <i>cūriōsus</i>「注意深い、詮索好きな」
++der: cure, curator, accurate, secure, sure, sinecure, procure, manicure
++note: 「注意深い」→「詮索好きな」→「好奇心のある」。<i>curiosity</i>「珍品」（<i>cabinet of curiosities</i>）の用法もここから。
+
+@ cynic ; /ˈsɪnɪk/ ; 名 ; 皮肉屋
++lit: 「犬のような」
++chain: Gk <i>kýōn, kynós</i>「犬」→ <i>kynikós</i>
++desc: アンティステネスとディオゲネスに始まるキュニコス派（犬儒派）は、慣習を無視して「犬のように」生きることを説いた。アテナイの <i>Kynósarges</i> 体育場で教えたことによるとの説もある。
++der: hound（本来語）, canine, kennel, cynosure（「犬の尾」＝小熊座＝北極星→注目の的）
+
+@ czar / tsar ; /zɑː/ ; 名 ; ツァーリ
++lit: 「カエサル」
++chain: L <i>Caesar</i> → 古教会スラヴ語 <i>cěsarĭ</i> → 露 <i>царь</i>
++der: Kaiser（独）, kaiser, Caesarean, cesarean
++note: ローマ皇帝の家名が、ドイツ語では <i>Kaiser</i>、ロシア語では <i>tsar</i> となった。<i>Caesarean section</i>「帝王切開」は、カエサルがこの方法で生まれたという（史実でない）伝説による命名。
+
+
+@ canary ; /kəˈneəri/ ; 名 ; カナリア
++lit: 「犬の島の（鳥）」
++chain: L <i>Īnsula Cānāria</i>「犬の島」（<i>canis</i>「犬」）→ カナリア諸島 → その原産の鳥
++desc: 大プリニウスによれば、島に大型の犬が多数いたことによる命名。鳥の名は島から、色名 <i>canary yellow</i> は鳥から。
++der: canine, kennel, hound（本来語）, cynic（ギ）
+
+@ candid ; /ˈkændɪd/ ; 形 ; 率直な
++lit: 「白く輝く」
++chain: L <i>candidus</i>「純白の」
++der: candle, candidate, candor, incandescent, chandelier
++note: 「白い＝混じり気のない＝率直な」。<i>candid camera</i>「隠し撮り」は「（演技のない）ありのままの」から。
+
+@ carpet ; /ˈkɑːpɪt/ ; 名 ; 絨毯
++lit: 「（ぼろ布を）むしり取ったもの」
++chain: 中世ラテン語 <i>carpīta</i>「粗い布」（L <i>carpere</i>「摘む、むしる」）
++der: carpe diem（「日を摘め」ホラティウス）, excerpt（「摘み出す」）, harvest（本来語の同根語）, scarce(?)
++note: <i>carpe diem</i> の <i>carpere</i> と同じ語根。<i>on the carpet</i>「叱責されて」は、上司の部屋（絨毯敷き）に呼ばれることから。
+
+@ cemetery ; /ˈsemətri/ ; 名 ; 墓地
++lit: 「眠る場所」
++chain: Gk <i>koimētḗrion</i>「寝室」（<i>koimân</i>「眠らせる」）→ 後期ラテン語
++desc: キリスト教が「死は眠り」という観念を強調し、この語を墓地の意味で用いた。
++der: home, city, civil（同根語 *ḱei-「横たわる」）
++note: <i>graveyard</i>（本来語）との対比は、婉曲語法の階層（第7章）を示す。
+
+@ chagrin ; /ˈʃæɡrɪn/ ; 名 ; 無念
++chain: 仏 <i>chagrin</i>「悲嘆」
++note: 同綴の <i>chagrin</i>「鮫皮（シャグリーン革）」はトルコ語 <i>sağrı</i> 由来の別語で、「ざらざらした革が肌を刺す」からの比喩とする説もあるが確実ではない。
+
+@ chameleon ; /kəˈmiːliən/ ; 名 ; カメレオン
++lit: 「地の獅子」
++chain: Gk <i>khamaí</i>「地上の」+ <i>léōn</i>「獅子」→ <i>khamailéōn</i>
++der: chamomile（「地のリンゴ」）, humus, human, humble（<i>khamaí</i> の同根語）
+
+@ chocolate ; /ˈtʃɒklət/ ; 名 ; チョコレート
++chain: ナワトル語 <i>xocolātl</i>（<i>xococ</i>「苦い」+ <i>ātl</i>「水」か）→ 西 <i>chocolate</i>
++desc: マヤ・アステカでは苦い飲料。砂糖を加えて甘くしたのはヨーロッパでの改変で、固形チョコレートは19世紀の発明。
++note: 語形にはマヤ語 <i>chokol</i>「熱い」との混淆説もあり、確定していない。
+
+@ ciao ; /tʃaʊ/ ; 間投 ; チャオ
++lit: 「（あなたの）奴隷です」
++chain: ヴェネツィア方言 <i>s-ciào vostro</i>「あなたの奴隷」（<i>schiavo</i> ＜ 中世ラテン語 <i>sclāvus</i>）
++der: slave, Slav
++note: <i>servus</i>（オーストリア）, <i>servus</i>（ハンガリー <i>szervusz</i>）も同じ「僕（しもべ）です」型の挨拶。
+
+@ clerk ; /klɑːk/ ; 名 ; 事務員
++lit: 「（神に）割り当てられた者＝聖職者」
++chain: Gk <i>klêros</i>「籤、割り当て、聖職」→ 後期ラテン語 <i>clēricus</i> → OE <i>clerc</i>
++desc: 中世において読み書きができるのは聖職者だけだったため、「書記」の意味が生じた。
++der: clergy, cleric, clerical
++note: 英国音 /klɑːk/ は、17世紀の er → ar の変化の名残（<i>Derby</i>, <i>Berkeley</i>, <i>sergeant</i>, <i>heart</i> も同型）。
+
+@ coconut ; /ˈkəʊkənʌt/ ; 名 ; ココヤシの実
++lit: 「しかめ面の実」
++chain: ポルトガル語 <i>coco</i>「しかめ面、お化け」+ <i>nut</i>
++desc: 実の三つの穴が顔に見えることから、ポルトガル人が子どもを脅かす妖怪の名で呼んだ。
++note: <i>cocoa</i>（カカオ）は別語源（ナワトル語 <i>cacahuatl</i>）で、綴りの混同から生じた形。
+
+@ comrade ; /ˈkɒmreɪd/ ; 名 ; 同志
++lit: 「同室の者」
++chain: 西 <i>camarada</i>「同室者」（L <i>camera</i>「部屋」）→ 仏 → 英語
++der: camera（「（丸天井の）部屋」）, chamber, chamberlain, camaraderie, comrade
++note: <i>camera</i>「写真機」は <i>camera obscura</i>「暗い部屋」の略。同じ語が「同志」と「カメラ」になった。
+
+@ cottage ; /ˈkɒtɪdʒ/ ; 名 ; 小屋
++chain: OE <i>cot</i>「小屋」+ 仏語系接尾辞 <i>-age</i>
++note: 本来語の語幹にフランス語の接尾辞が付いた混成語。同型に <i>shortage</i>, <i>mileage</i>, <i>breakage</i>, <i>talkative</i>, <i>starvation</i>, <i>bakery</i>。語源的純粋主義者はこれらを非難したが、すべて定着している。
+
+@ crocodile ; /ˈkrɒkədaɪl/ ; 名 ; ワニ
++lit: 「小石の虫」
++chain: Gk <i>krokódīlos</i>（<i>krókē</i>「小石」+ <i>drîlos</i>「虫」）
++desc: ヘロドトスによれば、石の上で日光浴をするトカゲの名から。
++note: <i>crocodile tears</i>「偽りの涙」は、ワニが獲物を食べながら泣くという中世の伝承（マンデヴィル『東方旅行記』）から。
+
+@ cue ; /kjuː/ ; 名 ; きっかけ
++desc: 語源不確実。16〜17世紀の台本で、次の役者の出番を示す記号として <i>Q</i> と書かれ、これがラテン語 <i>quandō</i>「いつ」の略だとする説が古くからある。確証はない。
++note: ビリヤードの <i>cue</i>（キュー）は仏 <i>queue</i>「尾」で別語源。

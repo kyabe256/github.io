@@ -1,0 +1,68 @@
+# 参考文献
+
+## 語源辞典
+
+- Onions, C. T. (ed.), <i>The Oxford Dictionary of English Etymology</i>, Oxford University Press, 1966.
+- Skeat, W. W., <i>An Etymological Dictionary of the English Language</i>, 4th ed., Oxford, 1910.
+- Klein, E., <i>A Comprehensive Etymological Dictionary of the English Language</i>, Elsevier, 1966–67.
+- Barnhart, R. K. (ed.), <i>The Barnhart Dictionary of Etymology</i>, H. W. Wilson, 1988.
+- Ayto, J., <i>Dictionary of Word Origins</i>, Arcade, 1990.
+- 寺澤芳雄（編）『英語語源辞典』研究社、1997年（縮刷版 2019年）。
+
+## 印欧語・比較言語学
+
+- Watkins, C., <i>The American Heritage Dictionary of Indo-European Roots</i>, 3rd ed., Houghton Mifflin Harcourt, 2011.
+- Pokorny, J., <i>Indogermanisches etymologisches Wörterbuch</i>, Francke, 1959.
+- Mallory, J. P. &amp; Adams, D. Q., <i>The Oxford Introduction to Proto-Indo-European and the Proto-Indo-European World</i>, Oxford University Press, 2006.
+- Fortson, B. W., <i>Indo-European Language and Culture: An Introduction</i>, 2nd ed., Wiley-Blackwell, 2010.
+- Beekes, R. S. P., <i>Comparative Indo-European Linguistics: An Introduction</i>, 2nd ed., John Benjamins, 2011.
+- Anthony, D. W., <i>The Horse, the Wheel, and Language</i>, Princeton University Press, 2007.
+
+## ライデン印欧語語源辞典シリーズ
+
+- de Vaan, M., <i>Etymological Dictionary of Latin and the Other Italic Languages</i>, Brill, 2008.
+- Kroonen, G., <i>Etymological Dictionary of Proto-Germanic</i>, Brill, 2013.
+- Beekes, R. S. P., <i>Etymological Dictionary of Greek</i>, Brill, 2010.
+- Derksen, R., <i>Etymological Dictionary of the Slavic Inherited Lexicon</i>, Brill, 2008.
+
+## 英語史
+
+- Baugh, A. C. &amp; Cable, T., <i>A History of the English Language</i>, 6th ed., Routledge, 2013.
+- Hogg, R. M. (ed.), <i>The Cambridge History of the English Language</i>, 6 vols., Cambridge University Press, 1992–2001.
+- Lass, R., <i>Old English: A Historical Linguistic Companion</i>, Cambridge University Press, 1994.
+- Crystal, D., <i>The Stories of English</i>, Penguin, 2004.
+- Crystal, D., <i>Spell It Out: The Singular Story of English Spelling</i>, Profile, 2012.
+- 中島文雄『英語発達史』改訂版、岩波書店、1979年。
+- 渡部昇一『英語の歴史』大修館書店、1983年。
+- 寺澤盾『英語の歴史――過去から未来への物語』中公新書、2008年。
+- 唐澤一友『英語のルーツ』春風社、2011年。
+
+## 意味変化・語形成
+
+- Ullmann, S., <i>Semantics: An Introduction to the Science of Meaning</i>, Blackwell, 1962.
+- Traugott, E. C. &amp; Dasher, R. B., <i>Regularity in Semantic Change</i>, Cambridge University Press, 2002.
+- Bauer, L., <i>English Word-Formation</i>, Cambridge University Press, 1983.
+- Marchand, H., <i>The Categories and Types of Present-Day English Word-Formation</i>, 2nd ed., Beck, 1969.
+- Lakoff, G. &amp; Johnson, M., <i>Metaphors We Live By</i>, University of Chicago Press, 1980.
+
+## 辞書史・語源をめぐる文化
+
+- Winchester, S., <i>The Surgeon of Crowthorne</i>, Viking, 1998.（邦訳『博士と狂人』）
+- Mugglestone, L., <i>Lost for Words: The Hidden History of the Oxford English Dictionary</i>, Yale University Press, 2005.
+- Liberman, A., <i>Word Origins and How We Know Them</i>, Oxford University Press, 2005.
+- Liberman, A., <i>An Analytic Dictionary of English Etymology: An Introduction</i>, University of Minnesota Press, 2008.
+
+## オンライン資料
+
+- <i>Oxford English Dictionary Online</i>（oed.com）── 語源学の第一次参照先。各語義の初出年と用例が年代順に示される。
+- <i>Online Etymology Dictionary</i>（etymonline.com）── ダグラス・ハーパー編。無料。出典表示が比較的丁寧だが二次資料であり、留保表現（"said to be", "perhaps"）に注意して読む必要がある。
+- <i>Wiktionary</i>── 語源欄が充実してきているが、編集者による質のばらつきが大きい。再建形は Leiden シリーズなどで裏を取ること。
+- <i>Indo-European Lexicon</i>（University of Texas at Austin, Linguistics Research Center）── 印欧語根と各語派の反映形を対照できる。
+- <i>Google Books Ngram Viewer</i>── 語の使用頻度の通時的変化を確認するのに有用。ただし OCR の誤りと書籍コーパスの偏りに注意。
+
+## 本書の記述方針について
+
+本書の語源記述は、上記のうち主として ODEE、Barnhart、Watkins、de Vaan、Kroonen、Beekes、および寺澤『英語語源辞典』の一致する見解を基礎とした。諸説が分かれる場合には、複数の説を併記するか「不確実」と明記した。年代（初出年）については OED および etymonline の記載に依拠している。
+
+俗説の判定にあたっては、（1）一次史料の有無、（2）初出年代との整合、（3）音変化の規則性、（4）他言語における並行例、の四点を基準とした。第VIII部の「誤り」「裏づけなし」の判定は、この基準による。
+

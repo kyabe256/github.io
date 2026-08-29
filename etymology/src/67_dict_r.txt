@@ -1,0 +1,110 @@
+== R
+
+@ rehearse ; /rɪˈhɜːs/ ; 動 ; 稽古する
++lit: 「（まぐわで）繰り返し掻く」
++chain: OF <i>rehercier</i>（<i>re-</i> + <i>hercier</i>「まぐわで掻く」＜ <i>herse</i>「まぐわ」）
++der: hearse（霊柩車）, hirsute は別
++note: 農具の比喩が芸能用語になった。日本語の「浚（さら）う」（稽古する）とも発想が近い。
+
+@ rival ; /ˈraɪvl/ ; 名 ; 競争相手
++lit: 「同じ川を使う者」
++chain: L <i>rīvus</i>「小川」→ <i>rīvālis</i>「同じ流れを共有する者」
++desc: 水利権を争う隣人が原義とされる。
++der: river, riparian, arrive, derive（「川から引く」）, rivulet
+
+@ robot ; /ˈrəʊbɒt/ ; 名 ; ロボット
++lit: 「賦役、強制労働」
++chain: チェコ語 <i>robota</i>「賦役」→ カレル・チャペック『R.U.R.』（1920）
++desc: チャペックは当初 <i>labori</i> と名づけようとしたが、兄ヨゼフの助言で <i>robot</i> に決めたと自ら記している。
++der: 独 <i>Arbeit</i>「労働」, 露 <i>работа</i>（同根）
++note: <i>robotics</i>「ロボット工学」はアイザック・アシモフの造語（1941）。
+
+@ rosary ; /ˈrəʊzəri/ ; 名 ; ロザリオ
++lit: 「薔薇園」
++chain: L <i>rosārium</i>「薔薇園」
++desc: 聖母への祈りを「薔薇の花輪」に見立てた中世の比喩による。<i>rosarium</i> はまた「詞華集」の題名にも用いられた。
++der: rose, rosette
++note: 「花を集める」比喩は <i>anthology</i>（詞華集）にも見られる。
+
+@ rubric ; /ˈruːbrɪk/ ; 名 ; 規定、項目
++lit: 「赤い（文字）」
++chain: L <i>ruber</i>「赤い」→ <i>rubrīca</i>「赤土、（赤字の）標題」
++desc: 中世写本で、典礼書の指示や章題を赤インクで記したことから。
++der: red（本来語）, ruby, rubella, rouge, russet, erythrocyte（ギ）
+
+@ rummage ; /ˈrʌmɪdʒ/ ; 動 ; かき回して探す
++lit: 「船倉に積み込むこと」
++chain: OF <i>arrumage</i>「積み荷の配置」（<i>run</i>「船倉」＜ ゲルマン語 *rūmaz「空間」）
++der: room, roomy（本来語の同根語）
++note: <i>rummage sale</i> はもと「（税関で処分される）未引き取り貨物の競売」。
+
+@ ridiculous ; /rɪˈdɪkjələs/ ; 形 ; ばかげた
++chain: L <i>rīdēre</i>「笑う」→ <i>rīdiculus</i>
++der: deride, derision, risible
++note: 「崇高から滑稽まで一歩」（<i>from the sublime to the ridiculous</i>）はナポレオンの言葉として知られる。
+
+@ rifle ; /ˈraɪfl/ ; 名 ; ライフル銃
++lit: 「溝を刻む」
++chain: OF <i>rifler</i>「引っ掻く、略奪する」→ 英語 <i>rifle</i>「銃身に施条する」→ <i>rifled gun</i> → <i>rifle</i>
++desc: 銃身内部の螺旋溝（施条, rifling）が弾丸を回転させて命中精度を高める。この技術の名が銃そのものの名になった。
++note: 動詞 <i>rifle</i>「（物色して）盗む」は同語源の別義。
+
+@ robust ; /rəʊˈbʌst/ ; 形 ; 頑健な
++lit: 「オークの（ように堅い）」
++chain: L <i>rōbur</i>「オーク、堅材、力」→ <i>rōbustus</i>
++der: corroborate（「（証拠で）強める」）, robustness
++note: 統計学・工学の <i>robust</i>「頑健な（外れ値に強い）」も同じ語。オークは古代地中海世界で最も堅い木の代表だった。
+
+@ romance ; /rəʊˈmæns/ ; 名 ; 恋愛物語
++lit: 「ローマ（俗語）で書かれたもの」
++chain: 俗ラテン語 <i>rōmānicē (scrībere)</i>「ローマ風（俗語）で書く」→ OF <i>romanz</i>
++desc: ラテン語ではなく俗語（フランス語）で書かれた物語を指した。その多くが騎士の冒険と恋を扱ったため、内容の名になった。
++der: Romance languages（ロマンス諸語）, roman（仏「長編小説」）, romantic
++note: 「言語の名」から「文学ジャンル」へ、さらに「感情の質」へと三段跳びした語。
+
+@ rostrum ; /ˈrɒstrəm/ ; 名 ; 演壇
++lit: 「（船の）嘴」
++chain: L <i>rōstrum</i>「くちばし、（軍船の）衝角」
++desc: ローマのフォルムにあった演壇は、鹵獲した敵船の衝角（<i>rōstra</i>）で飾られていた。ここから「演壇」の意味が生じた。
++der: rodent（<i>rōdere</i>「かじる」）, erode, corrode
+
+
+@ radical ; /ˈrædɪkl/ ; 形 ; 根本的な、急進的な
++lit: 「根の」
++chain: L <i>rādīx, rādīcis</i>「根」→ 後期ラテン語 <i>rādīcālis</i>
++der: radish（「根菜」）, eradicate（「根こそぎにする」）, root（本来語の同根語）, race（血統）は別
++note: 「根本から変える」→「急進的な」。数学の <i>radical</i>「根号」、化学の <i>radical</i>「基」も同語。
+
+@ recipe ; /ˈresəpi/ ; 名 ; 調理法
++lit: 「取れ」
++chain: L <i>recipe</i>（<i>recipere</i>「取る」の命令形）
++desc: 処方箋の冒頭に「（以下を）取れ」と書いた定型句が名詞化した。薬局の記号 ℞ はこの語の略記。
++der: receive, receipt, recipient, capture, accept（*kap-）
++note: <i>dirge</i>, <i>eureka</i>, <i>shampoo</i>, <i>tennis</i> と同じく、命令形が名詞化した語。
+
+@ restaurant ; /ˈrestrɒnt/ ; 名 ; レストラン
++lit: 「（体力を）回復させるもの」
++chain: 仏 <i>restaurer</i>「回復させる」（L <i>restaurāre</i>）→ <i>restaurant</i>「滋養スープ」→ それを供する店
++desc: 1765年ごろパリで、ブーランジェという店主が滋養スープ（<i>restaurant</i>）を出す店を開いたのが起源とされる（この逸話には異論もある）。
++der: restore, store, instaurate
+
+@ rob ; /rɒb/ ; 動 ; 強奪する
++chain: ゲルマン語 *raubōn → OF <i>rober</i>
++der: robe（略奪した衣服）, rubber は別, bereave, reave, rupture（ラテン系の同根語）
++note: <i>robe</i>「長衣」と <i>rob</i>「奪う」が同語源。戦利品としての衣服が原義。
+
+@ rocket ; /ˈrɒkɪt/ ; 名 ; ロケット
++lit: 「小さな糸巻き棒」
++chain: 伊 <i>rocchetta</i>「小さな紡錘」（<i>rocca</i>「糸巻き棒」）
++note: 形状からの命名。植物の <i>rocket</i>（ルッコラ）は L <i>ērūca</i> 由来の別語源。
+
+@ rhubarb ; /ˈruːbɑːb/ ; 名 ; ルバーブ
++lit: 「蛮地の（ヴォルガ川の）根」
++chain: Gk <i>rhâ</i>（ヴォルガ川の古名 Rha）+ <i>bárbaron</i>「蛮地の」→ 後期ラテン語 <i>rheubarbarum</i>
++der: barbarian, Barbary, Berber
++note: 演劇で群衆のざわめきを表すため役者が "rhubarb, rhubarb" と繰り返した慣行から、「がやがや」「口論」の意味も生じた。
+
+@ rosemary ; /ˈrəʊzməri/ ; 名 ; ローズマリー
++lit: 「海の露」
++chain: L <i>rōs marīnus</i>（<i>rōs</i>「露」+ <i>marīnus</i>「海の」）
++note: <i>rose</i>「薔薇」とも <i>Mary</i>「マリア」とも無関係だが、英語形は両者に引き寄せられた民間語源的な綴りである（中英語では <i>rosmarine</i>）。

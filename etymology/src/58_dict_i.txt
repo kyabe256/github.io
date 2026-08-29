@@ -1,0 +1,139 @@
+== I
+
+@ idea ; /aɪˈdɪə/ ; 名 ; 考え
++lit: 「見られた形」
++chain: Gk <i>ideîn</i>「見る」→ <i>idéā</i>「形、姿、種」→ L → 英語
++desc: プラトンの「イデア」は「（心の目に）見られた真の形」。<i>weid-</i>「見る＝知る」の系統で、英語 <i>wit</i>, <i>wise</i>, <i>vision</i>, <i>history</i> と同根。
++der: ideal, idol（「像」）, idyll は別
+
+@ idiot ; /ˈɪdiət/ ; 名 ; ばか
++lit: 「私人、公務に携わらない者」
++chain: Gk <i>ídios</i>「自分自身の、私的な」→ <i>idiṓtēs</i>「私人、素人」→ L <i>idiōta</i>
++desc: 民主政のアテナイでは、公共の議論に加わらない者は無能とみなされた。「素人」→「無知な者」→「白痴」と悪化した。
++der: idiom（「その言語に固有の言い方」）, idiosyncrasy, idiopathic
+
+@ infant ; /ˈɪnfənt/ ; 名 ; 幼児
++lit: 「まだ話さない者」
++chain: L <i>in-</i>（非）+ <i>fārī</i>「話す」→ <i>īnfāns</i>
++der: fate, fable, fame, preface, confess, profess, ineffable, phone, prophet, ban（本来語）
++note: <i>infantry</i>「歩兵」は、同じ語がイタリア語で「若者、従者」を意味したことから。若い従卒が徒歩で従軍したため。
+
+@ influence ; /ˈɪnfluəns/ ; 名 ; 影響
++lit: 「（星から）流れ込むもの」
++chain: L <i>in-</i> + <i>fluere</i>「流れる」→ 中世ラテン語 <i>īnfluentia</i>
++desc: 占星術で、天体から発して人間の運命に作用する霊気を指した。<i>influenza</i>「インフルエンザ」も同語で、星の影響による流行と考えられたイタリア語から。
++der: fluid, fluent, flux, affluent, confluence, superfluous, influx, mellifluous
+
+@ ink ; /ɪŋk/ ; 名 ; インク
++lit: 「焼き付けられたもの」
++chain: Gk <i>en-kaustós</i>「焼き付けた」→ 後期ラテン語 <i>encaustum</i>「（皇帝の署名用の）紫のインク」→ OF <i>enque</i>
++desc: ビザンツ皇帝が用いた紫インクの名。<i>encaustic</i>「蝋画法」と同語源。
++der: caustic（「焼く」）, holocaust（「全部焼く」）, encaustic, calm(?)
+
+@ insult ; /ɪnˈsʌlt/ ; 動 ; 侮辱する
++lit: 「（上に）跳びかかる」
++chain: L <i>in-</i> + <i>salīre</i>「跳ぶ」→ <i>īnsultāre</i>「跳びかかる、あざける」
++der: assault, result, exult, salient, resilient, desultory, somersault, salmon
++note: 医学で <i>insult</i> は「（組織への）損傷」を意味し、原義に近い。
+
+@ intoxicate ; /ɪnˈtɒksɪkeɪt/ ; 動 ; 酔わせる
++lit: 「（矢の）毒を塗る」
++chain: Gk <i>tóxon</i>「弓」→ <i>toxikón (phármakon)</i>「矢に塗る毒」→ 中世ラテン語 <i>intoxicāre</i>
++desc: 「弓」の語が「毒」の意味を担ったのは、毒矢の慣習による。
++der: toxic, toxin, toxicology, antitoxin
++note: <i>toxophilite</i>「弓術愛好家」は原義の「弓」を保った稀な語。
+
+@ island ; /ˈaɪlənd/ ; 名 ; 島
++lit: 「水に囲まれた土地」
++chain: OE <i>īegland</i>（<i>īeg</i>「島、水に囲まれた地」+ <i>land</i>）→ ME <i>iland</i>
++desc: 綴りの s は16世紀に、ラテン語 <i>īnsula</i> 由来の <i>isle</i> に引かれて誤って挿入されたもの。語源的にはまったく無関係である（第4章）。
++der: <i>-ey</i>（Anglesey, Jersey などの地名）, aquatic(?)
++note: 英語の綴りにおける誤挿入の代表例。<i>isle</i>, <i>insular</i>, <i>peninsula</i>（「ほとんど島」）はラテン語系で別系統。
+
+@ item ; /ˈaɪtəm/ ; 名 ; 項目
++lit: 「同様に、また」
++chain: L <i>item</i>「同様に」（副詞）
++desc: 中世の目録や勘定書で、各項目の冒頭に <i>item</i>「またひとつ」と書いた。この定型句が名詞化して「項目」の意味になった。
++der: iterate（「繰り返す」＜ <i>iterum</i>「再び」）, identity は別
++note: 典礼句や定型句の名詞化（<i>dirge</i>, <i>credo</i>, <i>requiem</i>）と同型の現象。
+
+@ ivory ; /ˈaɪvəri/ ; 名 ; 象牙
++chain: エジプト語 <i>ābu</i>「象、象牙」→ L <i>ebur</i> → OF <i>ivurie</i>
++der: eburnean
++note: <i>elephant</i> はギリシア語 <i>eléphās</i>（同じくエジプト語起源の可能性）。<i>ivory tower</i>「象牙の塔」は『雅歌』7章のフランス語訳（サント＝ブーヴ, 1837）に由来する。
+
+@ iota ; /aɪˈəʊtə/ ; 名 ; ごくわずか
++lit: 「ギリシア文字イオタ」
++chain: Gk <i>iôta</i>（ヘブライ語 <i>yōd</i>）
++desc: ギリシア文字でもっとも小さい字。マタイ伝5章18節「一点一画も廃れることはない」の「一点」が <i>iôta</i>。
++der: jot（同語源。「ちょっと書き留める」）
++note: <i>jot</i> と <i>iota</i> は同語源の二重語。
+
+@ inaugurate ; /ɪˈnɔːɡjəreɪt/ ; 動 ; 就任させる
++lit: 「鳥占いによって承認する」
++chain: L <i>augur</i>「鳥占い師」→ <i>inaugurāre</i>
++desc: ローマでは公職就任にあたり、鳥の飛翔を観察して神意を問う儀式が行われた。<i>augur</i> の語源は <i>avis</i>「鳥」+ <i>garrīre</i>「さえずる」説と、<i>augēre</i>「増やす」説がある。
++der: augury, auspicious（「鳥を見ること」<i>avis</i>+<i>specere</i>）, aviation, augment
++note: <i>auspicious</i>「めでたい」も鳥占い由来。政治語彙に占卜の記憶が残っている。
+
+@ investigate ; /ɪnˈvestɪɡeɪt/ ; 動 ; 調査する
++lit: 「足跡を追う」
++chain: L <i>in-</i> + <i>vestīgium</i>「足跡」→ <i>investīgāre</i>
++der: vestige（「痕跡」）, vestigial
++note: 狩猟の語彙が知的活動の比喩になった例。<i>trace</i>, <i>track down</i>, <i>on the trail of</i> も同じ発想。
+
+@ isolate ; /ˈaɪsəleɪt/ ; 動 ; 孤立させる
++lit: 「島にする」
++chain: L <i>īnsula</i>「島」→ 伊 <i>isolato</i> → 仏 <i>isolé</i> → 英語（1800年ごろ動詞化）
++der: insular, peninsula, isle, insulate（同語源の二重語）
++note: <i>insulate</i>（絶縁する）と <i>isolate</i>（孤立させる）は同語源で、前者はラテン語から直接、後者はイタリア語・フランス語経由。
+
+
+@ imbecile ; /ˈɪmbəsiːl/ ; 名 ; 愚か者
++lit: 「杖のない＝支えのない」
++chain: L <i>imbēcillus</i>（<i>in-</i>「非」+ <i>baculum</i>「杖」）→ 仏 <i>imbécile</i>
++der: bacillus（「小さな杖」）, bacterium（Gk <i>baktḗrion</i>「小さな杖」）, debacle は別
++note: 「体が弱い」→「頭が弱い」。19世紀末〜20世紀前半には知能分類の医学用語（<i>idiot</i>, <i>imbecile</i>, <i>moron</i>）として用いられ、その後すべて侮蔑語に転落した（婉曲語のトレッドミル、第7章）。
+
+@ inch ; /ɪntʃ/ ; 名 ; インチ
++lit: 「十二分の一」
++chain: L <i>uncia</i>「十二分の一」→ OE <i>ynce</i>
++dbl: <i>ounce</i>（同じ <i>uncia</i> の仏語経由形）
++note: フィートの十二分の一。<i>ounce</i>（ローマポンドの十二分の一）と同語源。
+
+@ index ; /ˈɪndeks/ ; 名 ; 索引、指標
++lit: 「指し示すもの」
++chain: L <i>indicāre</i>「示す」→ <i>index</i>「人差し指、目録」
++der: indicate, indicative, dictate, judge, teach（本来語）
++note: <i>index finger</i>「人差し指」に原義が残る。<i>Index Librorum Prohibitorum</i>「禁書目録」（1559–1966）も同語。複数形は <i>indices</i>（数学）／<i>indexes</i>（書物）と用途で使い分ける。
+
+@ indigo ; /ˈɪndɪɡəʊ/ ; 名 ; 藍
++lit: 「インドの（染料）」
++chain: Gk <i>Indikón (phármakon)</i>「インドの染料」→ L <i>indicum</i> → ポルトガル語 <i>endego</i> → 英語
++der: India, Indian, Indus（サンスクリット <i>sindhu</i>「川」→ ペルシア語 <i>hindu</i>）
++note: <i>India</i>, <i>Hindu</i>, <i>Sindh</i>, <i>indigo</i> はすべて「（インダス）川」に遡る。
+
+@ infantry ; /ˈɪnfəntri/ ; 名 ; 歩兵
++lit: 「若者たち」
++chain: L <i>īnfāns</i>「話さない者、幼児」→ 伊 <i>infante</i>「若者、従者」→ <i>infanteria</i> → 仏 → 英語
++der: infant, ineffable, fable, fate, preface, prophet
++note: 騎士に徒歩で従う若い従者の集団が原義。<i>infant</i>「幼児」と同語源であることは意外に見えるが、意味の橋は「若さ」である。
+
+@ insulin ; /ˈɪnsjəlɪn/ ; 名 ; インスリン
++lit: 「島の（物質）」
++chain: L <i>īnsula</i>「島」→ <i>insulin</i>（1916年シャーピー＝シェーファーの命名）
++desc: 膵臓のランゲルハンス島（<i>islets of Langerhans</i>）から分泌されることによる。
++der: isle, island（誤挿入の s）, isolate, insulate, peninsula
+
+@ intelligent ; /ɪnˈtelɪdʒənt/ ; 形 ; 知的な
++lit: 「（多くの中から）選び取る」
++chain: L <i>inter-</i>「間から」+ <i>legere</i>「選ぶ、集める」
++der: intellect, elect, select, collect, diligent, legend, lecture, logic（ギ）
++note: 「知性」を「選別能力」と捉える発想。<i>discern</i>（ふるい分ける）, <i>discriminate</i>, <i>judge</i>（分ける）も同型。
+
+@ interest ; /ˈɪntrəst/ ; 名 ; 関心、利子
++lit: 「間にある」
++chain: L <i>inter-</i>「間に」+ <i>esse</i>「ある」→ <i>interest</i>「重要である（非人称動詞）」
++desc: 「（当事者の）間にあること」＝利害関係。中世に、利息を取ることが教会法で禁じられたため、「損害賠償」の名目で <i>interesse</i> と呼んだのが「利子」の語義の起源とされる。
++der: essence, present, absent, entity, is（本来語）
+

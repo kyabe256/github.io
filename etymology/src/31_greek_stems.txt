@@ -1,0 +1,327 @@
+# 第IV部　ギリシア語語幹辞典
+
+ギリシア語由来の要素は、学術語・医学語・科学語の骨格をなす。ラテン語系と異なり、要素を自由に連結して新語を作れることが特徴である（第10章）。ここでは英語に現れる形を見出しとし、アルファベット順に配列する。
+
+:: index root
+
+== A – C
+
+@ a- / an- ; Gk <i>a-, an-</i>「〜がない」（欠如の a）
++root: *n̥-（英語 <i>un-</i>, ラ <i>in-</i> と同根）
++der: atheist（神なき）, atom（分割できない）, anonymous（名がない）, amnesia, apathy, anarchy, anemia, anesthesia, asymmetry, atypical, amoral, aphasia, abyss（底なし）, adamant, amorphous, anhydrous, aseptic
++note: 母音の前では an-。英語の <i>un-</i>、ラテン語の <i>in-</i> と同じ印欧祖語の否定辞に遡る。
+
+@ agog- ; Gk <i>agōgós</i>「導く者」（<i>ágein</i>「導く」）
++root: *h₂eǵ-
++der: pedagogue（子を導く者＝教師）, demagogue（民衆を導く者）, synagogue（集める所）, hypnagogic, cholagogue
++note: ラテン系の対応は <i>duc-</i>（educate, conduct）。
+
+@ agon- ; Gk <i>agṓn</i>「競技会、闘い」
++root: *h₂eǵ-
++der: agony（もと「競技での苦闘」）, agonize, antagonist（「対抗して戦う者」）, protagonist（「第一の演者」）
++note: <i>protagonist</i> は「主人公」。<i>pro-</i> は「前・第一」であり「賛成」ではないので、*「主人公は一人」の原則から「複数の protagonist」は本来矛盾だが、現代では容認される。
+
+@ andr- ; Gk <i>anḗr, andrós</i>「男」
++root: *h₂nḗr
++der: android（「人の形をした」）, androgen, polyandry, misandry, androgynous, Alexander（「人を守る者」）, Andrew
++note: <i>anthrop-</i>「人間（一般）」と <i>andr-</i>「男」は区別される。
+
+@ anthrop- ; Gk <i>ánthrōpos</i>「人間」
++root: 語源不確実
++der: anthropology, anthropomorphic, philanthropy, misanthrope, anthropocentric, Anthropocene, lycanthropy
++note: <i>philanthropy</i>「博愛」＝「人を愛すること」。対義は <i>misanthropy</i>。
+
+@ arch- / archi- ; Gk <i>arkhḗ</i>「始まり、支配」, <i>árkhein</i>「支配する」
++root: 語源不確実
++der: archaic, archaeology, archetype（原型）, archive, monarch, oligarchy, anarchy, hierarchy（「聖なる支配」）, patriarch, matriarch, architect（「棟梁の大工」）, archangel, archbishop, archipelago（「主要な海」）
++note: <i>arch-</i> には「第一の・主要な」（archbishop）と「古い」（archaic）の二つの用法があり、前者は <i>árkhein</i>、後者は <i>arkhaîos</i> による。
+
+@ aster- / astr- ; Gk <i>astḗr</i>「星」
++root: *h₂stḗr
++der: asterisk（小さい星）, asteroid, astronomy, astrology, astronaut, astrophysics, disaster（星回りの悪さ）, aster
++note: 本来語 <i>star</i>、ラテン系 <i>stellar</i> と同根。
+
+@ auto- ; Gk <i>autós</i>「自身」
++root: 語源不確実
++der: automatic, automaton, automobile, autonomy（自ら法を持つ）, autograph, autopsy（自分の目で見る）, autobiography, authentic（「自ら行う」）, autocrat, autism, autarky
++note: <i>authentic</i>「本物の」は「自らの手による」から。
+
+@ bar- ; Gk <i>báros</i>「重さ」
++root: *gʷreh₂-「重い」
++der: barometer, barometric, baritone（「重い音」＝低音）, barium, isobar, baryon, bariatric
++note: ラテン系 <i>grav-</i>（gravity）と同根。
+
+@ bibl- ; Gk <i>bíblos</i>「書物」（フェニキアの港 Byblos から。パピルスの輸出港）
++der: Bible, bibliography, bibliophile, bibliotheca, bibliomania
++note: レバノンの都市ビブロスがパピルスの集散地だったため、その名が「書物」を意味するようになった。地名由来語（第6章）。
+
+@ bio- ; Gk <i>bíos</i>「生」
++root: *gʷeyh₃w-
++der: biology, biography, biosphere, biopsy, antibiotic, symbiosis, aerobic, microbe, biome, probiotic, amphibian
++note: 本来語 <i>quick</i>（もと「生きている」）、ラテン系 <i>vit-/viv-</i> と同根。
+
+@ cardi- ; Gk <i>kardíā</i>「心臓」
++root: *ḱerd-
++der: cardiac, cardiology, cardiogram, tachycardia, bradycardia, myocardium, pericardium, endocarditis
++note: 本来語 <i>heart</i>、ラテン系 <i>cord-</i> と同根。
+
+@ chrom- ; Gk <i>khrôma</i>「色」
++der: chrome, chromium, chromosome（「色に染まる体」）, monochrome, polychrome, chromatic, achromatic, chromatography
++note: <i>chromosome</i> は染色液によく染まることから1888年に命名された。
+
+@ chron- ; Gk <i>khrónos</i>「時」
++der: chronic, chronicle, chronology, chronometer, synchronize, anachronism（「時代錯誤」）, diachronic, crony(?)
++note: ギリシア語には <i>khrónos</i>（量的な時間）と <i>kairós</i>（好機としての時）の区別があった。
+
+@ cosm- ; Gk <i>kósmos</i>「秩序、世界、飾り」
++der: cosmos, cosmic, cosmology, cosmopolitan（「世界市民」）, microcosm, macrocosm, cosmetic（「整えるもの」）
++note: <i>cosmetic</i>「化粧品」と <i>cosmos</i>「宇宙」が同語であるのは、「秩序づけ・飾ること」という原義による。
+
+@ crat- / cracy ; Gk <i>krátos</i>「力、支配」
++root: *kret-「強い」
++der: democracy（民衆の支配）, aristocracy, autocracy, bureaucracy（「事務机の支配」仏語との混成）, theocracy, plutocracy（富の支配）, meritocracy, technocracy, aristocrat
++note: <i>bureaucracy</i> は仏 <i>bureau</i>（もと「机を覆う粗布」）とギリシア語要素の混成語。
+
+@ crypt- ; Gk <i>kryptós</i>「隠された」
++der: crypt, cryptic, cryptography, cryptogram, encrypt, decrypt, apocrypha（「隠された（書）」）, krypton
++note: <i>krypton</i>「クリプトン」は「隠れていた（元素）」の意で1898年に命名。
+
+@ cycl- ; Gk <i>kýklos</i>「輪」
++root: *kʷel-「回る」
++der: cycle, bicycle, cyclone, encyclopedia（「円環的教育」）, cyclic, recycle, cyclotron, Cyclops
++note: 本来語 <i>wheel</i> と同根。
+
+== D – H
+
+@ dem- ; Gk <i>dêmos</i>「民衆、区」
++root: *deh₂-「分ける」
++der: democracy, demographic, demagogue, epidemic（「民の間に来る」）, pandemic, endemic, demotic
++note: <i>epidemic</i>「流行病」は「（外から）民の間に入る」、<i>endemic</i>「風土病」は「民の中にある」。
+
+@ derm- ; Gk <i>dérma</i>「皮」
++root: *der-「裂く、剥ぐ」
++der: dermatology, epidermis, hypodermic, taxidermy（「皮を並べる術」）, pachyderm, dermatitis
++note: 本来語 <i>tear</i>（裂く）と同根。
+
+@ dox- / dog- ; Gk <i>dóxa</i>「意見、栄光」, <i>dokeîn</i>「思われる」
++root: *deḱ-
++der: orthodox（正しい意見）, heterodox, paradox（通念に反する）, doxology, dogma, dogmatic
++note: <i>paradox</i> は <i>para-</i>（反して）+ <i>dóxa</i>（通念）。
+
+@ dyn- ; Gk <i>dýnamis</i>「力」
++der: dynamic, dynamo, dynamite（ノーベルの命名, 1867）, dynasty, aerodynamics, thermodynamics
++note: <i>dynasty</i>「王朝」は「支配力」から。
+
+@ erg- / urg- ; Gk <i>érgon</i>「仕事」
++root: *werǵ-
++der: energy（内なる働き）, ergonomics, erg, synergy, allergy（別の働き）, metallurgy, liturgy（公の働き）, surgery（手の働き）, demiurge（民のために働く者）, organ, organic, organize, orgy
++note: 本来語 <i>work</i> と同根。<i>surgery</i>「外科」＝ <i>kheir</i>（手）+ <i>érgon</i>（仕事）。
+
+@ ethn- ; Gk <i>éthnos</i>「民族」
++der: ethnic, ethnicity, ethnography, ethnology, ethnocentric
++note: 聖書ギリシア語では「異邦人」を指し、ラテン語 <i>gentīlis</i> と訳された（→ gentile）。
+
+@ gam- ; Gk <i>gámos</i>「結婚」
++der: monogamy, polygamy, bigamy, misogamy, gamete（配偶子）, endogamy, exogamy
++note: <i>gamete</i>「配偶子」は1878年の生物学用語。
+
+@ ge- / geo- ; Gk <i>gê</i>「大地」
++der: geography（地を描く）, geology, geometry（地を測る）, geopolitics, geothermal, apogee（「地から遠い点」）, perigee, Pangaea（「全大地」）, George（「土を耕す者」）
++note: <i>geometry</i>「幾何学」は本来「土地測量術」。ナイル氾濫後の耕地再区画に起源があるとヘロドトスは伝える。
+
+@ gen- / gon- ; Gk <i>génos</i>「種族」, <i>-genēs</i>「生じる」
++root: *ǵenh₁-
++der: genesis, genetic, genocide（ラとの混成）, gene, -gen（hydrogen, oxygen, pathogen, carcinogen）, homogeneous, heterogeneous, cosmogony, gonad, epigone
++note: ラテン系 <i>gen-</i>（generate）、本来語 <i>kin</i> と同根。
+
+@ glyph- / gram- / graph- ; Gk <i>gráphein</i>「引っかく、書く」
++root: *gerbʰ-「刻む」
++der: graph, graphic, graphite, graffiti（伊）, autograph, biography, photograph, telegraph, calligraphy, orthography, paragraph, epigraph, geography／<b>gram-</b> grammar, gram, telegram, diagram, program（「前もって書くこと」）, anagram, epigram, monogram, parallelogram／<b>glyph-</b> hieroglyph（聖なる刻み）, glyph
++note: 本来語 <i>carve</i> と同根。<i>glamour</i> は <i>grammar</i> のスコットランド方言形（「学問＝魔術」）。
+
+@ gyn- ; Gk <i>gynḗ</i>「女」
++root: *gʷḗn
++der: gynecology, misogyny, androgynous, polygyny, gynoecium
++note: 本来語 <i>queen</i> と同根。
+
+@ hem- / haem- ; Gk <i>haîma</i>「血」
++der: hemoglobin, hemorrhage（「血が流れ出る」）, hemophilia, anemia, leukemia, hematology, hemostasis
++note: 米式綴りは hem-、英式は haem-。
+
+@ hetero- ; Gk <i>héteros</i>「他方の、異なる」
++der: heterogeneous, heterodox, heterosexual, heterodyne, heteronym
++note: 対義は <i>homo-</i>「同じ」。
+
+@ homo- ; Gk <i>homós</i>「同じ」
++root: *sem-「一」
++der: homogeneous, homonym, homophone, homosexual, homeopathy, homeostasis, anomaly（「均しくない」）
++note: ラテン語 <i>homō</i>「人」（→ human, homicide）とは<b>別語源</b>。<i>homo sapiens</i> の homo は後者。
+
+@ hydr- ; Gk <i>hýdōr</i>「水」
++root: *wed-
++der: hydrogen, hydrant, hydraulic, hydrate, dehydrate, hydrophobia（恐水病＝狂犬病）, hydroelectric, hydra, dropsy
++note: 本来語 <i>water</i> と同根。
+
+== I – O
+
+@ icon- ; Gk <i>eikṓn</i>「像」
++der: icon, iconic, iconoclast（「像を打ち砕く者」）, iconography
++note: <i>iconoclast</i> は8〜9世紀ビザンツの聖像破壊運動から。
+
+@ idio- ; Gk <i>ídios</i>「自分自身の、私的な」
++der: idiom（その言語固有の言い方）, idiosyncrasy, idiot（「私人＝公務に関わらぬ者」→ 無知な者）, idiopathic
++note: <i>idiot</i> の意味の悪化は、ギリシアの民主政において「公事に参加しない私人」が軽んじられたことによる。
+
+@ kine- / cine- ; Gk <i>kīneîn</i>「動かす」
++der: kinetic, kinematics, cinema（＜ <i>cinématographe</i>）, kinesthesia, telekinesis, hyperkinetic
++note: <i>cinema</i> はリュミエール兄弟の <i>cinématographe</i>「運動を書くもの」の略。
+
+@ lith- ; Gk <i>líthos</i>「石」
++der: lithography（石版画）, monolith, megalith, Neolithic, Paleolithic, lithium, lithosphere, aerolite
++note: <i>lithium</i>「リチウム」は鉱物から発見されたため「石の（元素）」。
+
+@ log- / -logy ; Gk <i>lógos</i>「言葉、理、比」
++root: *leǵ-「集める」
++der: logic, logical, logo, logistics(?), dialogue, monologue, prologue, epilogue, eulogy, analogy, apology（「弁明」）, catalogue, decalogue, -logy（biology, geology, psychology…）, syllogism, neologism
++note: <i>apology</i> はもと「弁明」（プラトン『ソクラテスの弁明』）。「謝罪」の意味は16世紀以降。
+
+@ macro- ; Gk <i>makrós</i>「長い、大きい」
++der: macroscopic, macroeconomics, macrocosm, macron（長音記号）, macro
++note: 対義は <i>micro-</i>。
+
+@ mania ; Gk <i>manía</i>「狂気」
++root: *men-「思う」
++der: mania, maniac, manic, kleptomania, pyromania, megalomania, Beatlemania
++note: ラテン系 <i>ment-</i>（mental）と同根。
+
+@ meter / metr- ; Gk <i>métron</i>「尺度」
++root: *meh₁-「測る」
++der: meter, metric, metronome, diameter, perimeter, parameter, symmetry, geometry, barometer, thermometer, isometric, trigonometry
++note: 本来語 <i>moon</i>, <i>month</i> と同根（月が最古の尺度）。
+
+@ micro- ; Gk <i>mikrós</i>「小さい」
++der: microscope, microbe, microphone, microcosm, microwave, micron, microbiology
++note: 接頭辞として国際単位系では10⁻⁶。
+
+@ morph- ; Gk <i>morphḗ</i>「形」
++der: morphology, morpheme, amorphous, metamorphosis, anthropomorphic, polymorphic, isomorphic, morphine（夢の神モルペウス）
++note: <i>morphine</i> は眠りをもたらすことから、ギリシア神話の夢の神モルペウス（<i>Morpheús</i>、「形を作る者」）にちなむ。
+
+@ nom- ; Gk <i>nómos</i>「法、慣習」, <i>némein</i>「分配する」
++root: *nem-
++der: economy, autonomy, astronomy, taxonomy, gastronomy, agronomy, antinomy, nomad（「牧地を巡る者」）, Deuteronomy
++note: <i>-nomy</i>（法則の学）と <i>-logy</i>（言説の学）は、術語の系統として区別される。
+
+@ onym- / onom- ; Gk <i>ónoma</i>「名」
++root: *h₃nomn̥
++der: synonym, antonym, homonym, pseudonym, acronym, anonymous, eponym, toponym, patronymic, onomatopoeia, onomastics
++note: 本来語 <i>name</i>、ラテン系 <i>nomin-</i>（nominate）と同根。
+
+@ ortho- ; Gk <i>orthós</i>「まっすぐな、正しい」
++der: orthodox, orthography（正書法）, orthopedic（「子どもをまっすぐにする」）, orthodontics, orthogonal（直角の）
++note: <i>orthopedic</i> は1741年、小児の骨格矯正を意味する仏語の造語に由来する。
+
+== P – Z
+
+@ path- ; Gk <i>páthos</i>「受難、感情」
++root: *kʷentʰ-「苦しむ」
++der: pathos, pathetic, pathology, pathogen, sympathy, empathy, antipathy, apathy, telepathy, homeopathy, psychopath, -pathy
++note: ラテン系 <i>pass-</i>（passion, patient）と発想が同じ（「被る」）。
+
+@ phag- ; Gk <i>phageîn</i>「食べる」
++der: esophagus, sarcophagus（「肉を食う（石棺）」）, phagocyte, anthropophagy, bacteriophage, dysphagia
++note: <i>sarcophagus</i>「石棺」は、遺体を早く分解する石灰岩で作られたことから。
+
+@ phil- ; Gk <i>phílos</i>「愛する」
++der: philosophy（知を愛する）, philanthropy, philology, philharmonic, bibliophile, Anglophile, Francophile, pedophile, Philadelphia（「兄弟愛」）, philter
++note: ラテン系の対応は <i>am-</i>（amateur, amiable）。
+
+@ phon- ; Gk <i>phōnḗ</i>「声、音」
++root: *bʰeh₂-「話す」
++der: phone, telephone, microphone, symphony, cacophony, euphony, phonetics, phoneme, phonograph, megaphone, homophone, saxophone, xylophone
++note: 本来語 <i>ban</i>, ラテン系 <i>fā-</i>（fable, fame, infant）と同根。
+
+@ phos- / phot- ; Gk <i>phôs, phōtós</i>「光」
++root: *bʰeh₂-「輝く」
++der: photograph, photography, photon, photosynthesis, phosphorus（「光を運ぶもの」）, phosphate, photoelectric
++note: <i>phosphorus</i> はもと「明けの明星（金星）」の名。ラテン語 <i>Lucifer</i> と同義の翻訳。
+
+@ physi- ; Gk <i>phýsis</i>「自然、本性」
++root: *bʰuH-「生じる」
++der: physics, physical, physician, physique, physiology, metaphysics, physiognomy
++note: <i>metaphysics</i>「形而上学」は、アリストテレス全集で『自然学』（<i>ta physika</i>）の「後に置かれた」（<i>meta ta physika</i>）巻という編集上の呼称に由来する。
+
+@ pod- / pus ; Gk <i>poús, podós</i>「足」
++root: *ped-
++der: podium, tripod, antipodes, octopus, platypus, chiropodist, podiatry, arthropod, cephalopod
++note: 本来語 <i>foot</i>、ラテン系 <i>ped-</i> と同根。<i>octopus</i> の複数は本来 <i>octopodes</i>、慣用では <i>octopuses</i>。
+
+@ poli- / polit- ; Gk <i>pólis</i>「都市国家」
++root: *pleh₁-「満たす」（諸説）
++der: politics, political, policy, police, polity, metropolis, cosmopolitan, acropolis, megalopolis, necropolis, Constantinople, Naples（<i>Neápolis</i>「新しい町」）
++note: <i>police</i> と <i>policy</i> は同語源の二重語。
+
+@ poly- ; Gk <i>polýs</i>「多い」
++root: *pleh₁-
++der: polygon, polygamy, polyglot（「多くの舌」）, polymer, polynomial, polyphony, polytheism, polyp（「多くの足」）
++note: ラテン系の対応は <i>multi-</i>。
+
+@ prot- ; Gk <i>prôtos</i>「第一の」
++root: *per-
++der: protocol（「（巻物の）最初に貼る紙」）, prototype, protagonist, proton, protein（「第一のもの」）, protoplasm, protozoa
++note: <i>protein</i> は1838年ムルダーの命名で、生命に「第一に重要な物質」の意。
+
+@ psych- ; Gk <i>psȳkhḗ</i>「息、魂」
++der: psyche, psychology, psychiatry, psychic, psychoanalysis, psychedelic（「魂を現す」）, metempsychosis
++note: <i>psȳkhḗ</i> は本来「息」で、そこから「魂」へ（<i>anima</i>, <i>spiritus</i> と同じ発想）。
+
+@ pyr- ; Gk <i>pŷr</i>「火」
++root: *peh₂wr̥
++der: pyre, pyromania, pyrotechnics, pyrite, pyrexia, empyrean, antipyretic
++note: 本来語 <i>fire</i> と同根。
+
+@ scop- ; Gk <i>skopeîn</i>「見る」
++root: *speḱ-（音位転換）
++der: scope, telescope, microscope, periscope, stethoscope, endoscope, horoscope, kaleidoscope（「美しい形を見る」）, episcopal, bishop, skeptic
++note: ラテン系 <i>spec-</i>（inspect, spectacle）と同一語根。<i>bishop</i> は <i>epískopos</i>「上から見る者＝監督」の本来語化形。
+
+@ soph- ; Gk <i>sophía</i>「知恵」
++der: philosophy, sophist, sophisticated（「詭弁を弄する」→ 洗練された）, sophomore（「賢い愚か者」<i>sophos</i>+<i>mōros</i>）, theosophy, Sophia
++note: <i>sophisticated</i> は本来「粗悪品を混ぜて誤魔化した」という否定的な語だったが、20世紀に「洗練された」へ良化した（第7章）。
+
+@ tele- ; Gk <i>têle</i>「遠く」
++der: telephone, telegraph, television（ギ＋ラの混成）, telescope, telepathy, telemetry, teleport
++note: <i>television</i> は混成語（hybrid）の代表例。
+
+@ therm- ; Gk <i>thermós</i>「熱い」
++root: *gʷʰer-
++der: thermometer, thermal, thermos, thermodynamics, hypothermia, isotherm, thermostat, thermonuclear
++note: 本来語 <i>warm</i> と同根とされる。
+
+@ the- / theo- ; Gk <i>theós</i>「神」
++root: 語源不確実（ラテン語 <i>deus</i> とは<b>別語源</b>）
++der: theology, theocracy, atheist, polytheism, monotheism, apotheosis, pantheon, enthusiasm（「神が内にある」）, Theodore, Dorothy, Timothy
++note: ギリシア語 <i>theós</i> とラテン語 <i>deus</i> は音対応が合わず、同根ではない。よくある誤解である。
+
+@ therap- ; Gk <i>therapeíā</i>「奉仕、治療」
++der: therapy, therapeutic, chemotherapy, physiotherapy, psychotherapy
++note: 原義は「（神や人への）奉仕、世話」。
+
+@ tom- ; Gk <i>témnein</i>「切る」
++root: *temh₁-
++der: atom（「切り分けられない」）, anatomy（「切り開くこと」）, tome（「（巻物を）切った一巻」）, epitome（「切り詰めたもの」＝要約）, dichotomy, appendectomy, lobotomy, microtome
++note: <i>atom</i>「原子」はデモクリトスの「これ以上分割できないもの」。20世紀に分割されて語義と実体が乖離した。
+
+@ top- ; Gk <i>tópos</i>「場所」
++der: topic（「（論の）場」）, topical, topography, topology, utopia（「どこにもない場所」<i>ou-topos</i>）, dystopia, isotope（「同じ場所（周期表上の）」）
++note: <i>utopia</i> はトマス・モアの造語（1516）。<i>ou-tópos</i>「無い場所」と <i>eu-tópos</i>「良い場所」の掛詞になっている。
+
+@ trop- ; Gk <i>trópos</i>「向き、転換」, <i>trépein</i>「向ける」
++der: tropic（回帰線＝太陽が向きを変える線）, tropical, trope, entropy, heliotrope, phototropism, apotropaic
++note: <i>entropy</i> はクラウジウスが1865年、<i>energy</i> と韻を踏ませて造った語。
+
+@ zo- ; Gk <i>zôion</i>「動物」
++root: *gʷeyh₃w-「生きる」
++der: zoo, zoology, zodiac（「動物の輪」）, protozoa, spermatozoon, azo-, zoophyte
++note: <i>zodiac</i>「黄道十二宮」は、星座の多くが動物にちなむため「動物の環」。
+

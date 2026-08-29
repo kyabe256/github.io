@@ -1,0 +1,90 @@
+== W
+
+@ wardrobe ; /ˈwɔːdrəʊb/ ; 名 ; 衣装だんす
++lit: 「衣服を守る（場所）」
++chain: 北仏 <i>warderobe</i>（<i>warder</i>「守る」+ <i>robe</i>「衣服」）
++der: ward, warden, guard, guardian（中央仏語形）, robe, rob（「略奪する」＝衣服を剥ぐ）
++note: <i>robe</i>「衣服」と <i>rob</i>「奪う」は同語源。略奪品としての衣服が原義。
+
+@ werewolf ; /ˈweəwʊlf/ ; 名 ; 狼男
++lit: 「男狼」
++chain: OE <i>werewulf</i>（<i>wer</i>「男」+ <i>wulf</i>「狼」）
++der: virile, virtue（ラテン系の同根語 <i>vir</i>）, world（<i>wer-eld</i>「人の齢」）, wergild（「人命金」）
++note: 古英語の「男」<i>wer</i> は失われ、<i>man</i>（もと「人間一般」）がその位置を占めた。<i>wīfmann</i>「女の人」が <i>woman</i> となる。
+
+@ whisky / whiskey ; /ˈwɪski/ ; 名 ; ウイスキー
++lit: 「命の水」
++chain: ゲール語 <i>uisce beatha</i>「命の水」→ 英語 <i>usquebaugh</i> → <i>whisky</i>
++desc: ラテン語 <i>aqua vītae</i>「生命の水」の翻訳借用。同じ発想が北欧の <i>akvavit</i>、フランスの <i>eau-de-vie</i>、ロシアの <i>vodka</i>「小さな水」にも見られる。
++der: <i>uisce</i> は英語 <i>water</i>, ギリシア語 <i>hýdōr</i> と同根／<i>beatha</i> は <i>vital</i>, <i>bio-</i> と同根
++note: スコットランドは <i>whisky</i>、アイルランドとアメリカは <i>whiskey</i> と綴り分ける慣習がある。
+
+@ window ; /ˈwɪndəʊ/ ; 名 ; 窓
++lit: 「風の目」
++chain: ON <i>vindauga</i>（<i>vindr</i>「風」+ <i>auga</i>「目」）→ ME
++desc: ガラス以前の、風と光の通る開口部。古英語には <i>ēagþyrl</i>「目の穴」、<i>ēagduru</i>「目の戸」という語もあった。
++der: wind, eye, ocular, optic, daisy（「日の目」）
++note: 開口部を「目」と呼ぶ発想は、<i>oculus</i>（丸窓）、日本語の「窓」（「間戸」説）にも通じる。
+
+@ wine ; /waɪn/ ; 名 ; ぶどう酒
++chain: L <i>vīnum</i> → PGmc *wīnam → OE <i>wīn</i>
++desc: 大陸期のラテン語借用（第5章の第0期）。地中海文化とともに北方へ伝わった。ラテン語 <i>vīnum</i> 自体は印欧語起源か地中海の基層語かで議論がある。
++der: vine, vineyard, vintage（<i>vīndēmia</i>「ぶどうの取り入れ」）, vinegar（「酸い酒」）, vintner
++note: <i>vintage</i>「ヴィンテージ」はもと「ぶどうの収穫（年）」。<i>age</i> とは無関係だが、民間語源的な連想が「年代物」の語感を支えている。
+
+@ wife ; /waɪf/ ; 名 ; 妻
++lit: 「女」
++chain: OE <i>wīf</i>「女」
++desc: 「女」から「妻」への意味の縮小。<i>midwife</i>「助産婦」（「（産婦と）ともにいる女」）, <i>fishwife</i>, <i>old wives' tale</i>, <i>housewife</i> に古義が残る。
++der: woman（<i>wīfmann</i>「女の人」）, wifely
++note: 語源は不確実。ゲルマン語独自の語で、他の印欧語に対応形がない。
+
+@ wizard ; /ˈwɪzəd/ ; 名 ; 魔法使い
++lit: 「賢い者」
++chain: ME <i>wysard</i>（<i>wys</i>「賢い」+ <i>-ard</i>）
++der: wise, wit, witness, vision, idea, history（同根語）
++note: 接尾辞 <i>-ard</i>（ゲルマン語 <i>hard</i>「強い」由来）は軽蔑的な含みを持つことが多い（<i>drunkard</i>, <i>sluggard</i>, <i>coward</i>, <i>bastard</i>）。
+
+@ world ; /wɜːld/ ; 名 ; 世界
++lit: 「人の齢（よ）」
++chain: OE <i>weorold</i>（<i>wer</i>「人、男」+ <i>ield</i>「時代、齢」）
++desc: もとは時間的な概念で、「人間の時代＝この世」を意味した。<i>world without end</i>（『祈祷書』）は「永遠に」で、時間的原義に近い。
++cog: 独 <i>Welt</i>, オランダ語 <i>wereld</i>
++der: werewolf, virile（ラ）, old, elder, adult（*h₂el-）
++note: ゲルマン語独自の複合語で、ラテン語 <i>mundus</i>、ギリシア語 <i>kósmos</i>（ともに「秩序」）とは発想が異なる。
+
+@ wrong ; /rɒŋ/ ; 形 ; 間違った
++lit: 「ねじれた」
++chain: ON <i>rangr</i>「曲がった、不正な」→ OE <i>wrang</i>
++der: wring, wrangle, wrench, wrist, writhe, wreath, wrap（<i>wr-</i> はいずれも「ねじれ」を含意する語群）
++note: 英語の <i>wr-</i> で始まる語は、多くが「ねじれ・ゆがみ」の意味を共有する（<i>wriggle</i>, <i>wrinkle</i>, <i>wrestle</i>, <i>wry</i>）。音象徴の一例。<i>right</i>「正しい」が「まっすぐ」であることと対をなす。
+
+
+@ walrus ; /ˈwɔːlrəs/ ; 名 ; セイウチ
++chain: オランダ語 <i>walrus</i>（<i>wal</i>「鯨」+ <i>ros</i>「馬」の転倒か）← 北欧語 <i>hrosshvalr</i>「馬鯨」
++note: 古英語には <i>horschwæl</i>「馬鯨」という形があり、<i>hwæl</i>「鯨」が <i>whale</i>。要素の順序が入れ替わった珍しい例。
+
+@ wage ; /weɪdʒ/ ; 名 ; 賃金
++lit: 「担保、誓約」
++chain: 北仏 <i>wage</i>（ゲルマン語 *wadi「誓約」）→ ME
++dbl: <i>gage</i>（中央フランス語形）
++der: wed（「誓約する」）, wedding, engage, mortgage, wager
++note: <i>wedding</i>「結婚式」も同根で、「誓約すること」が原義。<i>wage war</i>「戦争を行う」の <i>wage</i> も「（挑戦を）誓う」から。
+
+@ walnut ; /ˈwɔːlnʌt/ ; 名 ; クルミ
++lit: 「異国の木の実」
++chain: OE <i>walh-hnutu</i>（<i>wealh</i>「外国の、ケルト人の、ローマ人の」+ <i>hnutu</i>「木の実」）
++der: Wales, Welsh, Cornwall, walnut, Wallace, Walloon
++note: ゲルマン語 *walhaz は「ローマ化した外国人」の意で、ゲルマン人が接した非ゲルマン人を指した。<i>Wales</i>, <i>Welsh</i>, <i>Wallachia</i>, <i>Walloon</i>, スイスの <i>Welsch</i> はすべて同語。ハシバミ（土着）に対して「外来の木の実」だったことによる。
+
+@ witch ; /wɪtʃ/ ; 名 ; 魔女
++chain: OE <i>wicce</i>（女性形）／<i>wicca</i>（男性形）
++desc: 語源は不確実。<i>wīcian</i>「（呪術を）行う」、あるいは *weik-「聖別する」（L <i>victima</i>「犠牲」と同根）とする説がある。
++der: wicked（「魔法にかけられた」）, wile(?)
++note: 現代の新異教主義 <i>Wicca</i> は、古英語の男性形をそのまま名称に採ったもの（1950年代）。
+
+@ wrist ; /rɪst/ ; 名 ; 手首
++lit: 「ねじれるところ」
++chain: OE <i>wrist</i>（*wreiþ-「ねじる」）
++der: wring, writhe, wreath, wrestle, wrong, wrap, wry, wriggle, wrench
++note: <i>wr-</i> で始まる語群が共有する「ねじれ」の意味（第VI部 wrong の項）。関節を「ねじれる場所」と捉えた命名。

@@ -1,0 +1,154 @@
+# 第9章　ラテン語系語彙を解読する三つの規則
+
+英語語彙の約6割はラテン語に由来する。しかしその6割は、見た目がばらばらである。<i>accept</i>, <i>except</i>, <i>perceive</i>, <i>capture</i>, <i>occupy</i>, <i>municipal</i>, <i>prince</i> が同じ語根から出ているとは、普通は気づかない。この章では、ラテン語系語彙を機械的に分解するための三つの規則を扱う。この三つを身につければ、数千語が丸暗記なしに導出できる。
+
+## 9.1　規則1：接頭辞の同化（assimilation）
+
+ラテン語では、接頭辞の末尾子音が後続の語根初頭子音に同化する。綴りが変わるだけで、意味は同じである。
+
+<b>ad-「〜へ、方向、付加」</b>の変身。
+
+| 同化形 | 後続子音 | 例 |
+|---|---|---|
+| ac- | c, q | accept, access, accuse, acquire, acclaim |
+| af- | f | affect, affirm, afflict, affluent, affinity |
+| ag- | g | aggregate, aggression, aggravate |
+| al- | l | allude, allocate, alleviate, allot, alliance |
+| an- | n | announce, annex, annihilate, annotate |
+| ap- | p | apply, approve, appeal, appoint, apparatus |
+| ar- | r | arrive, arrange, arrest, arrogant |
+| as- | s | assist, assign, assemble, associate, assume |
+| at- | t | attend, attract, attain, attribute |
+| a- | sc, sp, st, gn | ascend, aspire, astonish, agnate |
+| ad- | 母音・その他 | adapt, admire, adopt, advance, adhere |
+
+<b>in-「中へ」および in-「非」</b>：il-（allude と混同注意）, im-, ir-。<i>illuminate, illegal, immerse, impossible, irrigate, irregular</i>。b, m, p の前では im-（<i>import, immigrate, impress</i>）、l の前では il-、r の前では ir-。
+
+<b>com-「共に、完全に」</b>：co-, col-, con-, cor-。<i>cooperate, collect, connect, correct, combine, compose</i>。母音と h の前は co-（<i>coalesce, cohere</i>）、l の前は col-、r の前は cor-、b/m/p の前は com-、それ以外は con-。
+
+<b>sub-「下に」</b>：suc-, suf-, sug-, sum-, sup-, sur-, sus-。<i>succeed, suffer, suggest, summon, support, surrogate, sustain</i>。
+
+<b>ex-「外へ」</b>：e-, ef-。<i>emit, elect, evade, efficient, effort</i>。f の前は ef-、有声子音の前は e-。
+
+<b>ob-「向かって、対して」</b>：oc-, of-, op-。<i>occur, offer, oppose, occupy, oppress</i>。
+
+<b>dis-「離れて、否定」</b>：di-, dif-。<i>divert, differ, digest, diffuse</i>。
+
+<b>trans-「越えて」</b>：tra-, tran-。<i>traverse, tradition, transcend</i>。
+
+<b>syn-（ギリシア語）「共に」</b>：sym-, syl-, sy-。<i>symphony, syllable, system, synthesis</i>。
+
+> <b>実践</b>　未知の長い語に出会ったら、まず語頭2〜3文字を接頭辞として切り離し、同化を戻してみる。<i>irascible</i> → in-（非？）ではなく <i>īra</i>「怒り」+ -scible。<i>succinct</i> → sub- + cinctus「帯を締めた」→「引き締まった」。<i>oppugn</i> → ob- + pugnāre「戦う」→「攻撃する」。
+
+## 9.2　規則2：母音弱化（vowel weakening）
+
+ラテン語では、複合語の内部で語根の母音が弱化する。これが同一語根の姿を大きく変える最大の原因である。
+
+<b>基本則</b>　開音節では a, e → i、閉音節では a → e、完了分詞では a → e。
+
+| 単独形 | 複合形（現在幹） | 完了分詞幹 | 英語での現れ |
+|---|---|---|---|
+| <i>capere</i>「取る」 | -cipere | -ceptus | cap- / cip- / cept- / -ceive |
+| <i>facere</i>「作る」 | -ficere | -fectus | fac- / fic- / fect- / -fy |
+| <i>tenēre</i>「保つ」 | -tinēre | -tentus | ten- / tin- / tent- / -tain |
+| <i>tangere</i>「触る」 | -tingere | -tactus | tang- / ting- / tact- |
+| <i>salīre</i>「跳ぶ」 | -silīre | -sultus | sal- / sil- / sult- |
+| <i>premere</i>「押す」 | -primere | -pressus | prem- / prim- / press- |
+| <i>damnāre</i>「罰する」 | -demnāre | -demnātus | damn- / demn- |
+| <i>caedere</i>「切る」 | -cīdere | -cīsus | caes- / cid- / cis- |
+| <i>claudere</i>「閉じる」 | -clūdere | -clūsus | claus- / clud- / clus- |
+| <i>quaerere</i>「求める」 | -quīrere | -quīsītus | quer- / quir- / quis- |
+| <i>sedēre</i>「座る」 | -sidēre | -sessus | sed- / sid- / sess- |
+| <i>statuere</i>「立てる」 | -stituere | -stitūtus | statu- / stitu- |
+| <i>iacere</i>「投げる」 | -icere | -iectus | jac- / -ject |
+| <i>legere</i>「集める・読む」 | -ligere | -lēctus | leg- / lig- / lect- |
+| <i>emere</i>「取る・買う」 | -imere | -emptus | em- / im- / empt- |
+| <i>rapere</i>「奪う」 | -ripere | -reptus | rap- / rip- / rept- |
+| <i>sacer</i>「聖なる」 | -secr- | — | sacr- / secr-（consecrate） |
+| <i>arma</i>「武器」 | -erm- | — | arm- / -erm（inerm） |
+
+この規則を知っていれば、次の語群が一望できる。
+
+- <b>capere 系</b>：capture, captive, caption, capable, capacity / accept, except, intercept, precept, concept, deceptive, receipt, susceptible / perceive, receive, conceive, deceive / anticipate, participate, municipal, principal, prince, emancipate, occupy, recuperate, recover, escape（ex- + cappa「マント」＝マントを脱ぐ、別語源）
+- <b>facere 系</b>：fact, faculty, facile, factory, facsimile / affect, effect, infect, perfect, defect, confection / efficient, deficient, proficient, sufficient / benefit, profit, edifice, artifice, sacrifice / -fy 動詞（simplify, magnify, classify, satisfy）/ 仏語経由 feat, feature, defeat, forfeit, counterfeit, surfeit
+- <b>tenēre 系</b>：tenant, tenable, tenacious, tenure, tenor / contain, obtain, retain, sustain, detain, maintain, abstain, entertain, pertain / content, continent, tenet, lieutenant（「代理で保持する者」）, tenement
+- <b>premere 系</b>：press, pressure / compress, depress, express, impress, oppress, repress, suppress / print（＜ OF <i>preinte</i>）, imprint, reprimand
+
+## 9.3　規則3：語幹交替（現在幹と完了分詞幹）
+
+ラテン語の動詞は、現在幹と完了分詞（supine）幹で形が異なる。英語はこの両方を別々に借用したため、一つの語根が二つの姿で英語に現れる。
+
+| 不定詞 | 完了分詞 | 現在幹由来の英語 | 分詞幹由来の英語 |
+|---|---|---|---|
+| <i>agere</i> 行う | <i>āctum</i> | agent, agenda, agile, cogent | act, action, exact, transact |
+| <i>ferre</i> 運ぶ | <i>lātum</i> | transfer, refer, offer, fertile | relate, translate, dilate, oblate |
+| <i>mittere</i> 送る | <i>missum</i> | admit, commit, permit, submit | mission, missile, promise, dismiss |
+| <i>cēdere</i> 行く・譲る | <i>cessum</i> | precede, recede, concede | process, access, success, cession |
+| <i>vidēre</i> 見る | <i>vīsum</i> | provide, evident, prudent | vision, visit, revise, supervise |
+| <i>scrībere</i> 書く | <i>scrīptum</i> | describe, subscribe, ascribe | script, description, manuscript |
+| <i>dūcere</i> 導く | <i>ductum</i> | produce, reduce, induce | product, conduct, duct, aqueduct |
+| <i>currere</i> 走る | <i>cursum</i> | occur, concur, current | course, cursor, excursion, discourse |
+| <i>trahere</i> 引く | <i>tractum</i> | — | tract, attract, contract, treat |
+| <i>vertere</i> 回す | <i>versum</i> | convert, divert, invert | version, reverse, universe, adverse |
+| <i>pōnere</i> 置く | <i>positum</i> | postpone, component（分詞現在） | position, deposit, compose, expose |
+| <i>sentīre</i> 感じる | <i>sēnsum</i> | sentiment, consent, resent | sense, sensation, consensus |
+| <i>tendere</i> 伸ばす | <i>tēnsum/tentum</i> | extend, pretend, intend | tension, extent, intense, ostensible |
+| <i>solvere</i> 解く | <i>solūtum</i> | solve, dissolve, absolve | solution, resolute, absolute |
+| <i>fundere</i> 注ぐ | <i>fūsum</i> | fund, refund, found（鋳造） | fusion, confuse, refuse, diffuse |
+| <i>frangere</i> 砕く | <i>frāctum</i> | frangible, infringe | fraction, fracture, fragment |
+| <i>gerere</i> 運ぶ・行う | <i>gestum</i> | belligerent, congeries | gesture, digest, suggest, register |
+| <i>pellere</i> 押す | <i>pulsum</i> | compel, expel, repel, propel | pulse, impulse, expulsion |
+| <i>capere</i> 取る | <i>captum</i> | (前節) | (前節) |
+| <i>loquī</i> 話す | <i>locūtum</i> | eloquent, colloquial, soliloquy | locution, elocution, interlocutor |
+| <i>sequī</i> 従う | <i>secūtum</i> | sequence, consequence, subsequent | execute, prosecute, persecute |
+| <i>spondēre</i> 誓う | <i>spōnsum</i> | respond, correspond | response, spouse, sponsor |
+| <i>struere</i> 積む | <i>strūctum</i> | construe | structure, construct, instrument |
+| <i>tegere</i> 覆う | <i>tēctum</i> | integument | protect, detect, architect |
+| <i>vincere</i> 勝つ | <i>victum</i> | invincible, convince | victory, convict, evict |
+| <i>rumpere</i> 破る | <i>ruptum</i> | — | rupture, erupt, corrupt, bankrupt |
+| <i>stringere</i> 締める | <i>strictum</i> | stringent, astringent | strict, district, restrict, strain |
+
+> <b>要点</b>　英語で -tion, -sion, -ture, -or で終わる名詞は、ほぼ例外なくラテン語の完了分詞幹から作られている。したがって「動詞形が思い出せない名詞」は、-tion を外して現在幹に戻せばよい。<i>concession</i> → <i>concede</i>、<i>ascension</i> → <i>ascend</i>、<i>emission</i> → <i>emit</i>、<i>compulsion</i> → <i>compel</i>、<i>retention</i> → <i>retain</i>、<i>recognition</i> → <i>recognize</i>。
+
+## 9.4　フランス語経由での摩耗
+
+ラテン語が民衆ラテン語（Vulgar Latin）を経てフランス語になる過程で、音は大きく摩耗した。同じラテン語が、直接借用形と仏語経由形で別語になる（第8章）。摩耗の主なパターンを知っておくと、対応が見える。
+
+| 変化 | ラテン語 | フランス語 | 英語 |
+|---|---|---|---|
+| 語中の無声閉鎖音の有声化・消失 | <i>vīta</i> | <i>vie</i> | vital / — |
+| ca- → cha- | <i>cantāre</i> | <i>chanter</i> | chant / cantata |
+| -ct- → -it- | <i>factum</i> | <i>fait</i> | feat / fact |
+| -ct- → -it- | <i>lactem</i> | <i>lait</i> | lactic / — |
+| pl-, cl-, fl- → 口蓋化 | <i>plēnum</i> | <i>plein</i> | plenty / plenum |
+| au → o | <i>causa</i> | <i>chose</i> | cause / — |
+| 語末音節の脱落 | <i>homō, hominem</i> | <i>homme, on</i> | homicide / — |
+| -s- 消失（16世紀に ˆ で表示） | <i>hospitāle</i> | <i>hôtel</i> | hotel / hospital |
+| | <i>bestia</i> | <i>bête</i> | beast / bestial |
+| | <i>īnsula</i> | <i>île</i> | isle / insular |
+| | <i>fenestra</i> | <i>fenêtre</i> | (defenestrate) |
+| | <i>castellum</i> | <i>château</i> | castle / château |
+
+フランス語の曲折アクセント記号（ˆ）は、多くの場合「かつてここに s があった」ことの標識である。<i>forêt</i>（forest）, <i>pâte</i>（paste）, <i>maître</i>（master）, <i>coût</i>（cost）, <i>août</i>（August）。この知識は、フランス語経由の英単語とラテン語形を結びつけるのに役立つ。
+
+## 9.5　分解の実践演習
+
+長い語を分解する手順は、（1）接尾辞を外す、（2）接頭辞を外して同化を戻す、（3）残った語根を母音弱化から復元する、である。
+
+| 語 | 分解 | 原義 → 現代語義 |
+|---|---|---|
+| <i>incomprehensible</i> | in-（非）+ com-（共に）+ prehend-（つかむ）+ -ible | 「すっかりつかむことができない」 |
+| <i>circumlocution</i> | circum-（周り）+ locūt-（話す）+ -ion | 「周りを回って話すこと」→ 遠回しな表現 |
+| <i>surreptitious</i> | sub-（下）+ rept-（＜ rapere 奪う）+ -itious | 「下からかすめ取る」→ 内密の |
+| <i>perspicacious</i> | per-（通して）+ spic-（見る）+ -acious | 「見通す」→ 洞察力のある |
+| <i>indefatigable</i> | in-（非）+ de-（強意）+ fatīg-（疲れさせる）+ -able | 「疲れさせられない」→ 不屈の |
+| <i>supercilious</i> | super-（上）+ cilium（まぶた）+ -ous | 「眉を吊り上げた」→ 横柄な |
+| <i>obstreperous</i> | ob-（に対して）+ strep-（音を立てる）+ -erous | 「逆らって騒ぐ」→ 手に負えない |
+| <i>procrastinate</i> | pro-（前へ）+ crāstinus（明日の）+ -āte | 「明日へ送る」→ 先延ばしにする |
+| <i>recalcitrant</i> | re-（後ろへ）+ calc-（かかと）+ -itrant | 「後ろに蹴る」→ 反抗的な |
+| <i>expostulate</i> | ex-（外へ）+ postulāre（要求する） | 「言い立てる」→ 諫める |
+| <i>inexorable</i> | in-（非）+ ex-（外）+ ōrāre（祈る）+ -able | 「祈っても動かせない」→ 容赦ない |
+| <i>vituperate</i> | vitium（欠点）+ parāre（用意する） | 「欠点をあげつらう」→ 罵倒する |
+| <i>defenestration</i> | de-（外へ）+ fenestra（窓）+ -ation | 「窓から投げ出すこと」（1618年プラハ窓外投擲事件） |
+| <i>antidisestablishmentarianism</i> | anti-+dis-+establish+-ment+-ari-+-an+-ism | 「国教廃止反対主義」 |
+

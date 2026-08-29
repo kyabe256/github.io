@@ -1,0 +1,283 @@
+# 第VI部　英語語源辞典 A–Z
+
+日常語・学術語・意外な来歴を持つ語を中心に、見出し語を五十音ならぬアルファベット順に配列する。発音は代表的なもの（英・米で異なる場合は英音を優先）を示した。
+
+各項の見方：<b>+原義</b>＝語源にさかのぼった文字通りの意味、<b>+印欧語根</b>＝第II部への参照、<b>+語源系統</b>＝借用・変化の経路、<b>+同根語</b>＝他言語の同源語、<b>+派生・関連語</b>＝同じ語根から出た英語、<b>+二重語</b>＝同一起源の別語、<b>+ノート</b>＝俗説の訂正・逸話・用法。
+
+:: index en
+
+== A
+
+@ abacus ; /ˈæbəkəs/ ; 名 ; そろばん
++lit: 「（砂を撒いた）板」
++chain: ヘブライ語/フェニキア語 <i>ābāq</i>「塵、砂」→ Gk <i>ábax</i>「板」→ L <i>abacus</i> → 英語
++desc: 古代の計算は、砂を撒いた板に指や棒で数字を書いて行われた。<i>calculus</i>「小石」も同じ計算文化の名残である。
++cf: → calculate
+
+@ abandon ; /əˈbændən/ ; 動 ; 見捨てる
++lit: 「（人の）意のままに任せる」
++chain: OF <i>mettre à bandon</i>「自由裁量に委ねる」（<i>bandon</i>「権限、布告」＜ ゲルマン語 *bannan「布告する」）→ ME
++der: ban, banish, banal（「（領主の）布告に従う共有物」→ ありふれた）, bandit, contraband
++note: <i>banal</i>「陳腐な」は、領主が村人全員に使用を命じた共同のパン焼き窯（<i>four banal</i>）から「誰にでも共通の」→「ありふれた」へ。
+
+@ abbreviate ; /əˈbriːvieɪt/ ; 動 ; 短縮する
++root: *mreǵʰu-「短い」
++chain: L <i>ad-</i> + <i>brevis</i>「短い」→ <i>abbreviāre</i>
++dbl: <i>abridge</i>（古仏語経由の摩耗形）
++der: brief, brevity, breve, abridge
++note: 同じラテン語動詞が、直輸入では <i>abbreviate</i>、フランス語経由では <i>abridge</i> となった典型的二重語。
+
+@ abet ; /əˈbet/ ; 動 ; 教唆する
++lit: 「（犬を）けしかける」
++chain: OF <i>abeter</i>「唆す」（<i>a-</i> + <i>beter</i>「（犬を）嗾ける」＜ ゲルマン語 *baitan「噛ませる」）
++der: bait, bite, bitter（「噛むような」）, beetle（「噛むもの」）
++note: <i>aid and abet</i> は法律用語の対句。<i>bait</i>「餌」と同根で、もとは熊いじめ（bear-baiting）の語彙だった。
+
+@ abhor ; /əbˈhɔː/ ; 動 ; ひどく嫌う
++lit: 「（身の毛がよだって）縮み上がる」
++chain: L <i>ab-</i>（離れて）+ <i>horrēre</i>「毛が逆立つ、震える」
++der: horror, horrible, horrid, horrific, abhorrent, ordure は別
++note: <i>horrēre</i> は本来「（毛が）ざわざわ立つ」という身体感覚の語。
+
+@ abstract ; /ˈæbstrækt/ ; 形・名 ; 抽象的な、要約
++lit: 「引き離された」
++root: *tragʰ-「引く」
++chain: L <i>abs-</i>（離れて）+ <i>trahere, tractum</i>「引く」
++der: tract, tractor, attract, extract, contract, subtract, distract, treat, trace, train
++note: 「抽象」とは、個々の事物から共通性質を「引き抜く」こと。対義の <i>concrete</i> は「共に固まった」（第III部 cresc-）。
+
+@ absurd ; /əbˈsɜːd/ ; 形 ; ばかげた
++lit: 「調子外れの、耳障りな」
++chain: L <i>ab-</i>（強意）+ <i>surdus</i>「聞こえない、鈍い音の」
++der: surd（数学の「無理数」）, sordid は別
++note: 数学用語の <i>surd</i>（無理数）は、ギリシア語 <i>álogos</i>「言葉にならない＝比で表せない」をアラビア語で「唖の」と訳し、それをラテン語 <i>surdus</i> で写した二重の翻訳の産物である。
+
+@ accolade ; /ˈækəleɪd/ ; 名 ; 称賛、栄誉
++lit: 「首に抱きつくこと」
++chain: L <i>ad-</i> + <i>collum</i>「首」→ プロヴァンス語 <i>acolada</i> → 仏 <i>accolade</i>
++der: collar, decollete, collet
++note: 騎士叙任の儀で、首に手を回して抱擁するか、肩に剣を当てたことから。
+
+@ acre ; /ˈeɪkə/ ; 名 ; エーカー
++lit: 「（家畜を追う）放牧地」
++root: *h₂éǵros
++chain: PIE *h₂éǵros → PGmc *akraz → OE <i>æcer</i>「耕地」
++cog: L <i>ager</i>（→ agriculture）, Gk <i>agrós</i>, Skt <i>ájras</i>
++note: 面積の単位としては「一頭の牛が一日で耕せる広さ」が起源で、地域により大きさが違った。
+
+@ adamant ; /ˈædəmənt/ ; 形 ; 断固とした
++lit: 「征服されないもの」
++chain: Gk <i>a-</i>（非）+ <i>damân</i>「馴らす」→ <i>adámas</i>「もっとも硬い金属・金剛石」→ L <i>adamantem</i>
++dbl: <i>diamond</i>（中世ラテン語 <i>diamantem</i> を経た形）
++der: tame, indomitable, daunt, dominate は別
++note: <i>diamond</i> と <i>adamant</i> は同語。英語 <i>tame</i>「飼い慣らす」とも同根。
+
+@ agnostic ; /æɡˈnɒstɪk/ ; 名・形 ; 不可知論者（の）
++lit: 「知りえない（とする者）」
++chain: Gk <i>a-</i>（非）+ <i>gnōstós</i>「知られた」
++desc: 1869年、生物学者トマス・ヘンリー・ハクスリーが自らの立場を表すために造った語。使徒行伝17章の「知られざる神」（<i>agnōstos theos</i>）を踏まえるという。
++der: know, can, cunning, diagnosis, prognosis, ignore, notice, noble
+
+@ alcohol ; /ˈælkəhɒl/ ; 名 ; アルコール
++lit: 「（アイシャドウ用の）微細な粉末」
++chain: アラビア語 <i>al-kuḥl</i>「アンチモンの粉（コホル）」→ 中世ラテン語 <i>alcohol</i>「精製された粉」→「（蒸留による）精髄」→「酒精」
++desc: 錬金術で「昇華・蒸留によって得た純粋なもの」を指すようになり、17世紀に酒の成分の意味に定着した。定冠詞 <i>al-</i> ごと借用された典型例。
++cf: → algebra, alkali, almanac
+
+@ algorithm ; /ˈælɡərɪðəm/ ; 名 ; アルゴリズム
++lit: 「アル＝フワーリズミー（の方式）」
++chain: 人名 <i>al-Khwārizmī</i>（9世紀の数学者、「ホラズム出身の人」）→ 中世ラテン語 <i>algorismus</i>「アラビア数字による計算法」→ Gk <i>arithmós</i>「数」に引かれて <i>algorithm</i> へ
++desc: 綴りの -th- は、ギリシア語 <i>arithmos</i> との民間語源的な混同によって生じた。本来は k のみである。
++cf: → algebra（<i>al-jabr</i>「（骨の）整復、移項」）
+
+@ alone ; /əˈləʊn/ ; 形・副 ; ひとりで
++lit: 「まったく一つで」
++chain: ME <i>al one</i>（<i>all</i> + <i>one</i>）→ <i>alone</i>
++der: lone, lonely, lonesome, only（<i>one</i>+<i>-ly</i>）, atone（<i>at one</i>「一致して」→ 贖罪する）
++note: <i>lone</i> は <i>alone</i> の a- を冠詞と誤解した異分析（第6章）。<i>atone</i>「贖う」も <i>at one</i> から。
+
+@ alphabet ; /ˈælfəbet/ ; 名 ; アルファベット
++lit: 「アルファ・ベータ」
++chain: Gk <i>álpha</i> + <i>bêta</i>（ギリシア文字の最初の二字）→ 後期ラテン語 <i>alphabētum</i>
++desc: ギリシア文字の名はフェニキア文字に由来し、<i>álpha</i> はセム語 <i>ʾālep</i>「雄牛」、<i>bêta</i> は <i>bēt</i>「家」。頭字語的な命名法としては最古の部類。
++cf: → 日本語の「いろは」、ロシア語の <i>азбука</i>（az-buki）も同じ発想。
+
+@ ambulance ; /ˈæmbjələns/ ; 名 ; 救急車
++lit: 「歩く（病院）」
++chain: L <i>ambulāre</i>「歩く」→ 仏 <i>hôpital ambulant</i>「移動野戦病院」→ <i>ambulance</i>
++der: amble, preamble, perambulate, somnambulist
++note: ナポレオン戦争期の軍医ラレーが考案した移動野戦病院に由来する。
+
+@ amateur ; /ˈæmətə/ ; 名 ; 愛好家
++lit: 「愛する者」
++chain: L <i>amātor</i>「愛する者」→ 仏 <i>amateur</i> → 英語（1784）
++der: amiable, amicable, amorous, enemy（「友でない者」）, enamored, paramour
++note: 本来は「（報酬でなく）愛のためにする人」という肯定的な語。「素人＝下手」という含みは19世紀以降。
+
+@ ambition ; /æmˈbɪʃn/ ; 名 ; 野心
++lit: 「（票を求めて）歩き回ること」
++chain: L <i>ambi-</i>（周りを）+ <i>īre, itum</i>「行く」→ <i>ambitiō</i>
++desc: ローマの選挙運動で、候補者が有権者のあいだを歩き回って支持を求めたことに由来する。<i>candidate</i>（白いトガ）と対になる政治語彙。
++der: exit, initial, transit, circuit, itinerary, ambient
+
+@ anatomy ; /əˈnætəmi/ ; 名 ; 解剖学
++lit: 「切り開くこと」
++chain: Gk <i>ana-</i>（上へ、分けて）+ <i>témnein</i>「切る」→ <i>anatomḗ</i>
++der: atom（「切り分けられない」）, tome, epitome, dichotomy, appendectomy
++note: <i>atom</i>「原子」と <i>anatomy</i>「解剖」は「切る」で結ばれている。前者は切れないもの、後者は切ること。
+
+@ anthology ; /ænˈθɒlədʒi/ ; 名 ; 詞華集
++lit: 「花を集めたもの」
++chain: Gk <i>ánthos</i>「花」+ <i>-logia</i>「集めること」→ <i>anthología</i>
++der: anther（葯）, chrysanthemum（「金の花」）, anthozoan
++note: ラテン語の <i>flōrilegium</i>「花摘み集」も同じ発想の語で、日本語の「詞華集」もその訳語である。
+
+@ April ; /ˈeɪprəl/ ; 名 ; 4月
++chain: L <i>Aprīlis</i>
++desc: 語源は不確実。ラテン語 <i>aperīre</i>「開く」（蕾が開く月）とする古来の説と、ギリシア語 <i>Aphrodítē</i>（エトルリア語経由）に結びつける説がある。
++cf: → 月名は第VII部で一括して扱う。
+
+@ arena ; /əˈriːnə/ ; 名 ; 競技場
++lit: 「砂」
++chain: L <i>harēna</i>「砂」→「（血を吸わせるため砂を撒いた）闘技場の中央」
++der: arenaceous
++note: 剣闘士の流す血を吸わせるために砂を撒いたことから、闘技場そのものの名になった（換喩、第7章）。
+
+@ arrive ; /əˈraɪv/ ; 動 ; 到着する
++lit: 「岸に着く」
++chain: 俗ラテン語 *<i>arripāre</i>（<i>ad</i> + <i>rīpa</i>「岸」）→ OF <i>ariver</i>
++der: river, riparian, rival（「同じ川を使う者」→ 競争相手）, rip は別
++note: <i>rival</i>「競争相手」は「同じ川（<i>rīvus</i>）の水を争う者」。水利権をめぐる争いが原義とされる。
+
+@ assassin ; /əˈsæsɪn/ ; 名 ; 暗殺者
++lit: 「ハシシを摂る者たち」
++chain: アラビア語 <i>ḥashshāshīn</i> → 中世ラテン語 <i>assassinus</i> → 伊 → 仏 → 英語
++desc: 十字軍時代、シリア山岳地帯のニザール派イスマイル派に付けられたあだ名から。ただし、この教団が実際に大麻を用いたという同時代の証拠はなく、蔑称としての誇張だった可能性が高い。マルコ・ポーロの伝える「山の老人」の物語が西欧に広まった。
++note: 語源としての「ハシシ」由来は諸辞典が認めるが、教団の実際の薬物使用は裏づけられていない。ここを混同しないこと。
+
+@ astonish ; /əˈstɒnɪʃ/ ; 動 ; 驚かせる
++lit: 「雷に打たれたようにする」
++chain: 俗ラテン語 *<i>extonāre</i>（<i>ex-</i> + <i>tonāre</i>「雷鳴を発する」）→ OF <i>estoner</i> → ME <i>astonen</i>
++der: thunder（本来語）, detonate, stun, astound, tornado は別
++note: <i>stun</i>, <i>astound</i>, <i>astonish</i> はいずれも同語源の変種。<i>thunder</i> とも遠く同根。
+
+@ atlas ; /ˈætləs/ ; 名 ; 地図帳
++chain: ギリシア神話の巨人 <i>Átlās</i>（天空を担う者）→ メルカトルの地図帳（1595）の表紙
++desc: メルカトルは自分の地図帳に、天ではなく地球を担ぐアトラス（実際はモーリタニアの伝説的王アトラス）の図を掲げた。以後「地図帳」の普通名詞となった。第一頸椎を <i>atlas</i> と呼ぶのも「頭を支える」ため。
++der: Atlantic（「アトラスの（山の向こうの）海」）, telamon
++cf: → *telh₂-「担う」（talent と同根）
+
+@ atom ; /ˈætəm/ ; 名 ; 原子
++lit: 「切り分けられないもの」
++chain: Gk <i>a-</i>（非）+ <i>tomós</i>「切られる」→ <i>átomos</i>
++desc: デモクリトスとレウキッポスの原子論に由来する哲学用語を、1808年にドルトンが化学に転用した。20世紀に原子が分割可能と判明し、語義と実体が乖離した。<i>atomic</i> は今日「究極の・分割不能の」の意で計算機科学でも使われる。
++cf: → anatomy, epitome
+
+@ auction ; /ˈɔːkʃn/ ; 名 ; 競売
++lit: 「増やすこと」
++chain: L <i>augēre, auctum</i>「増やす」→ <i>auctiō</i>「せり上げ」
++der: augment, author, authority, auxiliary, august, eke（本来語）, nickname
++note: 値段が「増えていく」ことから。逆に値を下げていく方式は <i>Dutch auction</i> と呼ばれる。
+
+@ audit ; /ˈɔːdɪt/ ; 名・動 ; 会計監査（する）
++lit: 「（帳簿を）聞くこと」
++chain: L <i>audīre</i>「聞く」→ <i>audītus</i>
++desc: 中世の会計検査は、識字率の低さから帳簿を読み上げて聞かせる形で行われた。ここから「監査」の語義が生じた。
++der: audio, audience, auditorium, audition, obey, obedient
+
+@ average ; /ˈævərɪdʒ/ ; 名 ; 平均
++lit: 「（海損の）分担金」
++chain: アラビア語 <i>ʿawārīya</i>「損傷した商品」→ 伊 <i>avaria</i> → 仏 <i>avarie</i> → 英語
++desc: 海上輸送で積荷を投棄した場合の損害を、荷主たちが公平に分担する慣行（共同海損）を <i>average</i> と呼んだ。ここから「割り前」「平均」の数学的意味が生じた。
++note: <i>every</i> や <i>aver</i> とは無関係である。
+
+@ awkward ; /ˈɔːkwəd/ ; 形 ; ぎこちない
++lit: 「後ろ向きの方へ」
++chain: ON <i>afugr</i>「後ろ向きの、逆の」+ OE <i>-weard</i>「〜の方向へ」
++der: -ward（forward, toward）, worth, verse, versus
++note: <i>-ward</i> は *wert-「回す」から（第II部）。
+
+@ axiom ; /ˈæksiəm/ ; 名 ; 公理
++lit: 「（重みがあって）ふさわしいもの」
++chain: Gk <i>áxios</i>「価値ある」（＜ <i>ágein</i>「（秤を）動かす」）→ <i>axíōma</i>
++desc: 「（証明なしに）認めるに値する命題」。ユークリッド以来の数学用語。
++der: axiology, act, agent, ambiguous, exact
+
+
+@ admiral ; /ˈædmərəl/ ; 名 ; 提督
++lit: 「海の司令官」
++chain: アラビア語 <i>amīr al-baḥr</i>「海の司令官」→ <i>amīr al-</i> の部分のみが伝わり、中世ラテン語 <i>admīrālis</i>（<i>admīrārī</i>「感嘆する」に引かれた綴り）→ OF <i>amiral</i>
++der: emir, emirate（同じ <i>amīr</i>「司令官」から）
++note: 語頭の d は、ラテン語 <i>admīrārī</i>「驚嘆する」との民間語源的な混同で入った。<i>admire</i> とは無関係。
+
+@ agenda ; /əˈdʒendə/ ; 名 ; 議題
++lit: 「なされるべき事柄（複数）」
++chain: L <i>agenda</i>（<i>agere</i>「行う」の動形容詞中性複数）
++note: ラテン語では複数形だが、英語では単数扱いが定着し、さらに複数形 <i>agendas</i> が作られた。同型の例に <i>data</i>, <i>media</i>, <i>opera</i>, <i>candelabra</i>, <i>insignia</i>。
+
+@ alarm ; /əˈlɑːm/ ; 名 ; 警報
++lit: 「武器を取れ！」
++chain: 伊 <i>all'arme!</i>（<i>alle arme</i>「武器へ」）→ OF <i>alarme</i>
++der: arm(s), army, armor, armistice, alert（伊 <i>all'erta</i>「見張り台へ」）
++note: <i>alert</i> も同型の号令由来（「高みへ！」）。軍事の掛け声が名詞化した対の例。
+
+@ alcove ; /ˈælkəʊv/ ; 名 ; 床の間、くぼみ
++chain: アラビア語 <i>al-qubba</i>「丸天井、円蓋の部屋」→ 西 <i>alcoba</i> → 仏 <i>alcôve</i>
++note: 定冠詞 <i>al-</i> ごと借用されたアラビア語系の語（<i>alcohol</i>, <i>algebra</i>, <i>alkali</i>, <i>almanac</i>, <i>alchemy</i>, <i>apricot</i>）の一つ。
+
+@ ally ; /əˈlaɪ/ ; 動 ; 同盟する
++lit: 「（互いを）縛る」
++chain: L <i>ad-</i> + <i>ligāre</i>「縛る」→ OF <i>alier</i>
++der: alliance, ligament, oblige, religion(?), rely, liable, alloy, rally
++note: 同盟が「結びつき」であるのは多くの言語に共通する比喩（日本語「同盟」の「盟」も血をすする誓約）。
+
+@ ambiguous ; /æmˈbɪɡjuəs/ ; 形 ; 曖昧な
++lit: 「あちこちへ駆り立てる」
++chain: L <i>ambi-</i>「両方へ」+ <i>agere</i>「駆る」→ <i>ambiguus</i>
++der: act, agent, agile, exact, ambition, agenda
++note: 二つの方向へ引っ張られて定まらない状態。<i>ambivalent</i>（両方の価値）は20世紀の心理学用語（ブロイラー, 1910）。
+
+@ anecdote ; /ˈænɪkdəʊt/ ; 名 ; 逸話
++lit: 「公にされなかったもの」
++chain: Gk <i>an-</i>（非）+ <i>ékdotos</i>「公刊された」→ <i>anékdota</i>
++desc: プロコピオスの『秘史』（<i>Anekdota</i>、ユスティニアヌス帝の宮廷の醜聞を記した未公刊の書）の題名に由来する。
++der: dose, antidote, donate, date, tradition（すべて *deh₃-「与える」）
+
+@ anxious ; /ˈæŋkʃəs/ ; 形 ; 不安な
++lit: 「（喉を）締めつけられた」
++chain: L <i>angere</i>「絞める」→ <i>anxius</i>
++der: anger（＜ ON <i>angr</i>「悲嘆」）, anguish, angina（狭心症）, anxiety, agony は別
++note: 不安を「胸苦しさ」で表す語は多い（独 <i>Angst</i>、日本語「胸が締めつけられる」）。<i>narrow</i> の意の語根 *h₂enǵʰ- による。
+
+@ apology ; /əˈpɒlədʒi/ ; 名 ; 謝罪、弁明
++lit: 「（非難に対して）返す言葉」
++chain: Gk <i>apo-</i>（〜から離れて）+ <i>lógos</i>「言葉」→ <i>apologíā</i>「弁明」
++desc: プラトン『ソクラテスの弁明』（<i>Apologíā Sōkrátous</i>）の <i>apologia</i>。英語でも16世紀までは「弁明」の意で、「謝罪」の意味は後発である。<i>apologia</i>（弁明書）は今も原義を保つ。
++der: logic, dialogue, catalogue, -logy
+
+@ arithmetic ; /əˈrɪθmətɪk/ ; 名 ; 算術
++chain: Gk <i>arithmós</i>「数」→ <i>arithmētikḗ (tékhnē)</i>「数の技」
++root: *h₂er-「はめ合わせる」
++der: art, order, harmony, rhythm(?), logarithm（<i>lógos</i>+<i>arithmós</i>「比の数」ネイピア, 1614）, algorithm（別語源だが綴りが影響を受けた）
+
+@ attic ; /ˈætɪk/ ; 名 ; 屋根裏
++lit: 「アッティカ（風）の」
++chain: Gk <i>Attikós</i>「アテナイの」→ 仏 <i>attique</i>
++desc: 建築で、主要な柱列の上に載せる低い装飾層を「アッティカ式」と呼んだ。この階が屋根裏部屋として使われたことから、現在の意味になった。
++note: 地名由来の建築用語（<i>doric</i>, <i>ionic</i>, <i>corinthian</i>, <i>gothic</i>, <i>byzantine</i>）の一つ。
+
+@ auspicious ; /ɔːˈspɪʃəs/ ; 形 ; 幸先のよい
++lit: 「鳥を見ること（の結果がよい）」
++chain: L <i>avis</i>「鳥」+ <i>specere</i>「見る」→ <i>auspicium</i>「鳥占い」
++der: aviation, aviary, augur, inaugurate／spectacle, inspect, suspect
++note: ローマの公的決定は鳥占いの承認を要した。<i>under the auspices of</i>「〜の後援で」に「保護・承認」の含みが残る。
+
+@ avocado ; /ævəˈkɑːdəʊ/ ; 名 ; アボカド
++chain: ナワトル語 <i>āhuacatl</i> → 西 <i>aguacate</i>／<i>avocado</i>（西語 <i>abogado</i>「弁護士」に引かれた民間語源形）→ 英語
++note: <i>guacamole</i> は <i>āhuacamōlli</i>「アボカドのソース」。ナワトル語からの借用には <i>tomato</i>, <i>chocolate</i>, <i>chili</i>, <i>coyote</i>, <i>ocelot</i>, <i>mescal</i>, <i>peyote</i> がある。
+
+@ awful ; /ˈɔːfl/ ; 形 ; ひどい
++lit: 「畏敬に満ちた」
++chain: OE <i>eġefull</i>（<i>eġe</i>「畏怖」+ <i>-full</i>）
++desc: 「畏敬すべき」（<i>the awful majesty of God</i>）→「恐ろしい」→「ひどい」→（副詞で）単なる強調へ。<i>awesome</i> が20世紀後半に「素晴らしい」へ良化したのと対照的な、同じ語根からの正反対の分岐である。
++der: awe, awesome, ugly（＜ ON <i>uggligr</i>「恐ろしい」、別語源）

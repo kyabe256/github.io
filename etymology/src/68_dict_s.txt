@@ -1,0 +1,215 @@
+== S
+
+@ salary ; /ˈsæləri/ ; 名 ; 給料
++lit: 「塩の（手当）」
++chain: L <i>sāl</i>「塩」→ <i>salārium</i>「（兵士への）塩手当」→ OF <i>salaire</i>
++desc: 塩は古代において貴重な保存材であり、その購入のための手当が <i>salārium</i> だったとされる。
++note: ただし「ローマ兵は塩そのものを給与として受け取った」という広く流布した説は、一次史料の裏づけを欠く。<i>salārium</i> は貨幣による手当だったとみられ、大プリニウスの記述も曖昧である。「塩に値する（<i>worth one's salt</i>）」という慣用句は、この俗説から後代に作られた可能性が高い。
++der: salt, salad, sauce, sausage, salami, salsa, salient は別
+
+@ sabotage ; /ˈsæbətɑːʒ/ ; 名 ; 妨害工作
++lit: 「木靴で（ガタガタ）音を立てる」
++chain: 仏 <i>sabot</i>「木靴」→ <i>saboter</i>「乱暴に扱う、下手にやる」→ <i>sabotage</i>（1897）
++note: 「労働者が機械に木靴を投げ込んだ」という説は魅力的だが後付けで、フランス語の <i>saboter</i> はもと「乱雑に仕事をする」の意である。
+
+@ sandwich ; /ˈsænwɪdʒ/ ; 名 ; サンドイッチ
++chain: 人名 John Montagu, 4th Earl of Sandwich（1718–92）
++desc: 賭博（または執務）の最中に食事の手を止めずに済むよう、肉をパンに挟ませたという逸話による（1762年、グロースリーの記録）。地名 Sandwich（ケント州）は「砂の（sand）交易地（wich ＜ L <i>vīcus</i>）」。
++der: -wich/-wick（Norwich, Ipswich）, vicinity, village, economy（<i>oîkos</i>）
+
+@ sarcasm ; /ˈsɑːkæzəm/ ; 名 ; 皮肉
++lit: 「肉を引き裂くこと」
++chain: Gk <i>sárx, sarkós</i>「肉」→ <i>sarkázein</i>「肉を裂く、唇を噛む、嘲る」→ <i>sarkasmós</i>
++der: sarcoma（肉腫）, sarcophagus（「肉を食う（石棺）」）, sarcopenia
++note: 「肉を切り裂くような言葉」という激しい比喩。
+
+@ scapegoat ; /ˈskeɪpɡəʊt/ ; 名 ; 身代わり
++lit: 「逃げる山羊」
++chain: <i>(e)scape</i> + <i>goat</i>（ティンダル訳聖書, 1530）
++desc: レビ記16章の贖罪日の儀式で、民の罪を負わせて荒野に放つ山羊。ヘブライ語 <i>ʿazāzēl</i> を「（罪を負って）逃れる山羊」と解した訳語だが、現在では <i>Azazel</i> は悪霊の固有名とする説が有力。
++note: 誤訳から生まれた語が英語の重要語彙になった例。
+
+@ school ; /skuːl/ ; 名 ; 学校
++lit: 「余暇」
++chain: Gk <i>skholḗ</i>「余暇、閑暇」→「余暇に行う討論」→「講義」→「学派、学校」→ L <i>schola</i> → OE <i>scōl</i>
++desc: 労働を免れた者だけが学問をなしえた古代社会の反映。ラテン語 <i>lūdus</i>「遊び」も「学校」を意味した。
++der: scholar, scholastic, scholium
++note: 魚の <i>school</i>「群れ」は別語源（中期オランダ語 <i>schole</i>「群れ」＝英 <i>shoal</i>）。
+
+@ shampoo ; /ʃæmˈpuː/ ; 名・動 ; シャンプー
++lit: 「押せ」
++chain: ヒンディー語 <i>cāmpo</i>（<i>cāmpnā</i>「押す、揉む」の命令形）→ 英語（1762）
++desc: 当初は「マッサージする」の意で、インド帰りの英国人が持ち帰った。「頭髪を洗う」の意味は19世紀半ばから。
++note: 命令形がそのまま借用された例（<i>dirge</i>, <i>eureka</i>, <i>hocus</i> も同型）。
+
+@ silhouette ; /sɪluˈet/ ; 名 ; シルエット
++chain: 人名 Étienne de Silhouette（1709–67、フランス財務総監）
++desc: 七年戦争後の財政難で極端な緊縮策をとり不評を買った。「シルエット風」は「安上がりの、間に合わせの」を意味する流行語となり、安価な影絵肖像の名として定着した。
++note: 本人が影絵の趣味を持っていたからだ、とする説もある。
+
+@ sincere ; /sɪnˈsɪə/ ; 形 ; 誠実な
++chain: L <i>sincērus</i>「純粋な、混じり気のない」
++note: 「<i>sine cērā</i>（蝋なしで）＝ひび割れを蝋で埋めない誠実な彫刻家」という有名な説は、語形成の点で成り立たない民間語源である。第二要素の語源は不確実で、<i>crēscere</i>「育つ」に関連づける説がある。
+
+@ sinister ; /ˈsɪnɪstə/ ; 形 ; 不吉な
++lit: 「左の」
++chain: L <i>sinister</i>「左の」
++desc: ローマの鳥占いでは左からの前兆を不吉とした（ギリシアでは逆に左が吉だったともいう）。紋章学では今も <i>dexter</i>／<i>sinister</i> が盾の右／左を指す（着用者から見ての左右）。
++der: sinistral／dexter, dexterity, ambidextrous（対語）
++note: 左を負とする語彙は多言語に共通する。仏 <i>gauche</i>「左＝ぎこちない」, 英 <i>left</i>（OE <i>lyft</i>「弱い」）。
+
+@ slave ; /sleɪv/ ; 名 ; 奴隷
++chain: 中世ラテン語 <i>sclāvus</i>「スラヴ人、奴隷」→ OF <i>esclave</i>
++desc: 10世紀ごろ、神聖ローマ帝国の東方拡大で多数のスラヴ人が捕虜として売られたため、民族名が「奴隷」を意味するようになった。
++der: Slav, Slavic, Yugoslavia
++note: 民族名が普通名詞化した重い例。逆に <i>frank</i>（フランク族）は「自由な」を意味するようになった。
+
+@ sponsor ; /ˈspɒnsə/ ; 名 ; 保証人、後援者
++lit: 「（神に）誓う者」
++chain: L <i>spondēre</i>「厳かに約束する」→ <i>spōnsor</i>
++der: spouse（「誓約された者」）, espouse, respond, response, correspond, despondent
++note: <i>spouse</i>「配偶者」が「約束された人」であるのは、婚約が誓約であったから。
+
+@ starve ; /stɑːv/ ; 動 ; 飢える
++lit: 「死ぬ」
++chain: OE <i>steorfan</i>「死ぬ」
++cog: 独 <i>sterben</i>「死ぬ」, オランダ語 <i>sterven</i>
++desc: 「死ぬ」→「（飢えや寒さで）死ぬ」→「飢える」と意味が縮小した。北部方言では今も「凍える」の意で使う。
++der: starvation（1778年の造語。ラテン語系接尾辞を本来語に付けたため当時批判された）
+
+@ stationery ; /ˈsteɪʃnri/ ; 名 ; 文房具
++lit: 「常設の店の（商品）」
++chain: 中世ラテン語 <i>statiōnārius</i>「定位置にいる（商人）」（<i>stāre</i>「立つ」）
++desc: 中世大学の周りには、行商人と違って定位置に店を構える書籍商（<i>stationer</i>）がいた。彼らの扱う紙・筆記具が <i>stationery</i>。
++der: station, stationary（同語源。綴りで意味を区別する）, state, status, stand（本来語）
++note: <i>stationary</i>（静止した、-ary）と <i>stationery</i>（文房具、-ery）の綴り分けは19世紀に定着した。
+
+@ sterling ; /ˈstɜːlɪŋ/ ; 形 ; 純良な、英貨の
++chain: 語源に諸説。OE <i>steorra</i>「星」+ <i>-ling</i>（初期ノルマン銀貨に星の刻印があった）とする説が有力。
++note: 「東方の人（Easterling）＝ハンザ商人の貨幣」からとする説は、記録上の裏づけが乏しい。
+
+@ stigma ; /ˈstɪɡmə/ ; 名 ; 汚名
++lit: 「刺青、焼き印」
++chain: Gk <i>stízein</i>「刺す」→ <i>stígma</i>「刺した印」→ L
++desc: 古代ギリシア・ローマで奴隷や犯罪者に押した焼き印。<i>stigmata</i>「聖痕」（キリストの傷の再現）は宗教的用法。
++der: stick, stitch, sting（本来語の同根語）, instigate, distinguish, extinguish, style は別
+
+@ sycophant ; /ˈsɪkəfænt/ ; 名 ; おべっか使い
++lit: 「無花果を見せる者」
++chain: Gk <i>sŷkon</i>「無花果」+ <i>phaínein</i>「見せる」→ <i>sȳkophántēs</i>「密告者」
++desc: アテナイで無花果の密輸を告発する者を指したという古代の説明があるが、確実ではない。「無花果を見せる」は侮辱的な手振りを指すとの説も。ギリシア語では「職業的密告者」の意で、「へつらう者」の意味は英語で17世紀以降に生じた。
++note: 語源が不確実なまま、意味も英語独自に変化した例。
+
+@ symposium ; /sɪmˈpəʊziəm/ ; 名 ; 討論会
++lit: 「共に飲むこと」
++chain: Gk <i>sýn</i>「共に」+ <i>pínein</i>「飲む」→ <i>sympósion</i>
++desc: 古代ギリシアの酒宴。プラトンの『饗宴』（<i>Symposion</i>）が名高い。学術会議の意味は19世紀から。
++der: potion, poison, potable（ラテン系の同根語）
++note: 酒宴と知的討論が同一だった文化の記憶。
+
+@ sinecure ; /ˈsaɪnɪkjʊə/ ; 名 ; 閑職
++lit: 「（魂の）世話のない（聖職禄）」
++chain: 中世ラテン語 <i>beneficium sine cūrā</i>「司牧の務めのない聖職禄」
++der: cure, curate, curious, accurate, secure, procure
++note: <i>cure</i>「治療」はもと「（魂の）配慮」で、<i>curate</i>「助任司祭」に古義が残る。
+
+@ silly ; /ˈsɪli/ ; 形 ; 愚かな
++lit: 「幸福な、祝福された」
++chain: OE <i>gesǣliġ</i>「幸運な、祝福された」
++cog: 独 <i>selig</i>「至福の」
++desc: 「祝福された」→「敬虔な」→「無垢な」→「哀れむべき」→「弱い」→「愚かな」。悪化（pejoration）の代表例で、五段階の変化が用例で追える（第7章）。
++note: <i>seely</i>（古形）は方言に残る。<i>silly season</i>「ニュースの少ない夏枯れ時」は19世紀の新聞用語。
+
+@ spam ; /spæm/ ; 名 ; 迷惑メール
++chain: 商標 SPAM（Hormel 社の缶詰肉、1937。<i>spiced ham</i> の混成語とされる）→ モンティ・パイソンのコント（1970）→ ネット俗語（1990年代）
++desc: コントで「スパム、スパム、スパム…」と連呼される歌が、同じ内容を大量に反復することの比喩となった。
++note: 商標が普通名詞化した例（<i>escalator</i>, <i>thermos</i>, <i>aspirin</i>, <i>heroin</i>, <i>zipper</i>, <i>xerox</i>, <i>google</i>）。
+
+@ salt ; /sɔːlt/ ; 名 ; 塩
++root: *seh₂l-
++chain: PIE *seh₂l- → PGmc *saltan → OE <i>sealt</i>
++cog: L <i>sāl</i>, Gk <i>háls</i>, 露 <i>соль</i>, W <i>halen</i>
++der: salary, salad, sauce, sausage, salami, saline, halogen（「塩を生む」）, halite
++note: <i>sauce</i>, <i>salad</i>, <i>sausage</i>, <i>salsa</i> がすべて「塩」から。塩漬けが基本的な保存法だった時代の語彙。
+
+
+@ salon ; /ˈsælɒn/ ; 名 ; 客間、サロン
++chain: 伊 <i>salone</i>「大広間」（<i>sala</i>「広間」＜ ゲルマン語 *sal-）→ 仏 <i>salon</i>
++der: saloon（同語の別綴り）, hall（本来語の同根語か）
++note: <i>saloon</i>（酒場）と <i>salon</i>（社交場）は同一語の綴り分化。アメリカで前者が酒場に特化した。
+
+@ satellite ; /ˈsætəlaɪt/ ; 名 ; 衛星
++lit: 「随員、護衛」
++chain: L <i>satelles, satellitis</i>「護衛、取り巻き」→ ケプラーが1611年、木星の衛星に転用
++note: 人工衛星の意味は1936年（SFでの用法）、実用は1957年のスプートニク以降。
+
+@ scandal ; /ˈskændl/ ; 名 ; 醜聞
++lit: 「（罠の）仕掛け棒、つまずきの石」
++chain: Gk <i>skándalon</i>「罠の引き金、つまずきの元」→ 教会ラテン語 <i>scandalum</i>
++dbl: <i>slander</i>（古フランス語経由の摩耗形）
++desc: 新約聖書で「信仰のつまずき」を指す語。<i>stumbling block</i> は同じ語の訳。
++note: <i>scandal</i> と <i>slander</i> が二重語であることは、形からは見えにくい。
+
+@ scavenger ; /ˈskævɪndʒə/ ; 名 ; 腐肉食動物、清掃人
++lit: 「（輸入品への）関税取立人」
++chain: OF <i>escauwage</i>「検査」→ ME <i>scavager</i>「関税徴収吏」→ 街路清掃の監督も担ったため「清掃人」へ
++note: n は語中音添加（<i>messenger</i>, <i>passenger</i>, <i>harbinger</i>, <i>nightingale</i> と同型）。
+
+@ shibboleth ; /ˈʃɪbələθ/ ; 名 ; 合い言葉
++lit: 「（川の）流れ／穀物の穂」
++chain: ヘブライ語 <i>šibbōleṯ</i>
++desc: 士師記12章。ギレアデ人がエフライム人を見分けるため、この語を言わせた。エフライム方言では /ʃ/ が /s/ となり <i>sibboleth</i> と発音してしまったため、四万二千人が殺されたという。
++note: 発音の差が生死を分けた記録として、社会言語学でしばしば引かれる。
+
+@ sirloin ; /ˈsɜːlɔɪn/ ; 名 ; サーロイン
++lit: 「腰の上（の肉）」
++chain: OF <i>surlonge</i>（<i>sur</i>「上」+ <i>longe</i>「腰肉」）
++note: 英国王（ヘンリー8世、ジェームズ1世、チャールズ2世と諸説）が旨さに感激して肉に「サー」の称号を与えた、という逸話は完全な民間語源。ただしこの俗説が綴り <i>sir-</i> を定着させた。
+
+@ ski ; /skiː/ ; 名 ; スキー
++chain: ノルウェー語 <i>ski</i>「薪、割った木」← ON <i>skíð</i>
++der: shide（英方言「薄板」）, sheath, skid, shed（本来語の同根語）
++note: <i>slalom</i>（ノルウェー語 <i>slalåm</i>「傾いた道」）, <i>fjord</i>, <i>ombudsman</i> と並ぶ北欧語からの近代借用。
+
+@ soldier ; /ˈsəʊldʒə/ ; 名 ; 兵士
++lit: 「給金で雇われた者」
++chain: 後期ラテン語 <i>solidus</i>（金貨）→ <i>soldārius</i>「傭兵」→ OF <i>soudier</i>
++der: solid, soldier, sold（伊「給料」）, subsidy は別
++note: ローマ後期の金貨 <i>solidus</i>「堅い（金貨）」が語源。仏語 <i>sou</i>（銭）、伊語 <i>soldo</i>（給料）も同語。
+
+@ sophomore ; /ˈsɒfəmɔː/ ; 名 ; 大学2年生
++lit: 「賢い愚か者」
++chain: Gk <i>sophós</i>「賢い」+ <i>mōrós</i>「愚かな」
++desc: 生半可な知識を得て得意になる時期、という自嘲を含む学生語。17世紀のケンブリッジで生まれ、アメリカの大学に定着した。
++der: sophist, philosophy／moron, oxymoron（「鋭くて鈍い」）
++note: <i>oxymoron</i>「撞着語法」自体が撞着語法になっている（鋭い＋愚か）。
+
+@ spinster ; /ˈspɪnstə/ ; 名 ; 独身女性
++lit: 「糸を紡ぐ女」
++chain: <i>spin</i> + <i>-ster</i>（女性を表す接尾辞）
++desc: 未婚の女性が家で糸を紡いだことから、法律文書で未婚女性の身分を示す語となり、やがて「行き遅れ」の含みを帯びた（悪化、第7章）。
++note: 接尾辞 <i>-ster</i> はもと女性形（<i>webster</i>「女の織り手」→ 姓 Webster、<i>brewster</i>, <i>baxter</i>「女のパン焼き」→ 姓 Baxter）。後に性の区別を失い、<i>gangster</i>, <i>trickster</i>, <i>youngster</i> のように用いられるようになった。
+
+@ stamina ; /ˈstæmɪnə/ ; 名 ; 体力
++lit: 「（運命の女神が紡ぐ）縦糸」
++chain: L <i>stāmen</i>「縦糸」の複数 <i>stāmina</i>
++desc: ローマの運命の三女神（パルカエ）が紡ぐ命の糸。「生命力の根本」の比喩から「持久力」へ。
++der: stamen（植物の雄しべ）
++note: 複数形が英語で単数化した例（<i>agenda</i>, <i>data</i> と同型）。
+
+@ sullen ; /ˈsʌlən/ ; 形 ; むっつりした
++lit: 「ひとりの」
++chain: L <i>sōlus</i>「ひとりの」→ アングロ・フランス語 <i>sulein</i>
++der: sole, solitary, solo, soliloquy, desolate
++note: 「ひとりでいる」→「人を避ける」→「不機嫌な」。
+
+@ syllabus ; /ˈsɪləbəs/ ; 名 ; 講義概要
++chain: キケロ書簡の写本で、ギリシア語 <i>sittybas</i>「（巻物の）題箋」が <i>syllabos</i> と誤読された形
++note: 誤読が定着して学術用語になった例。<i>zenith</i>（誤写）と同型。
+
+@ sky ; /skaɪ/ ; 名 ; 空
++lit: 「雲」
++chain: ON <i>ský</i>「雲」→ ME
++desc: 北欧語の「雲」が英語で「空」に転じた。古英語の <i>heofon</i>（＝ <i>heaven</i>）は宗教的な意味に特化した。
++der: scum(?), obscure（ラテン系の同根語 <i>obscūrus</i>「覆われた」）
++note: <i>sky</i>, <i>skin</i>, <i>skirt</i>, <i>skill</i>, <i>scatter</i> など sk- 語の多くは北欧語起源（第5章）。

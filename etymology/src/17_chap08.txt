@@ -1,0 +1,140 @@
+# 第8章　二重語――同じ語が二度入ってくるとき
+
+## 8.1　二重語（doublet）とは
+
+同一の起源を持ちながら、異なる経路・異なる時代に借用されたために別語となった語のペアを二重語（doublet）と呼ぶ。三つあれば三重語（triplet）である。英語は借用の層が厚いため、二重語の宝庫になっている。
+
+二重語が生じる典型的な経路は次の三つである。
+
+1. <b>ラテン語から直接／フランス語経由</b>：<i>fragile</i>（L 直）と <i>frail</i>（OF 経由）。
+2. <b>ノルマン方言経由／中央フランス語経由</b>：<i>warranty</i> と <i>guarantee</i>。
+3. <b>本来語／借用語</b>：<i>shirt</i>（OE）と <i>skirt</i>（ON）。
+
+一般に、直接借用形は原形に近く堅い語感を持ち、フランス語経由形は音が摩耗し日常的である。
+
+## 8.2　ラテン語直接借用 対 フランス語経由
+
+| ラテン語源 | フランス語経由（早） | ラテン語直接（遅） | 意味の分化 |
+|---|---|---|---|
+| <i>fragilis</i> | frail | fragile | もろい（人）/ 壊れやすい（物） |
+| <i>ratiō</i> | reason | ration | 理性 / 配給（＜「計算」） |
+| <i>sēcūrus</i> | sure | secure | 確かな / 安全な |
+| <i>pauper</i> | poor | pauper | 貧しい / 貧民 |
+| <i>fēcerit</i> 系 <i>factum</i> | feat | fact | 功業 / 事実 |
+| <i>hospitāle</i> | hostel, hotel | hospital | 宿 / 病院 |
+| <i>rēgālis</i> | royal | regal | 王の（一般）/ 王者らしい |
+| <i>lēgālis</i> | loyal, leal | legal | 忠実な / 法的な |
+| <i>fīdēlitās</i> | fealty | fidelity | 臣従 / 忠実 |
+| <i>traditiō</i> | treason | tradition | 裏切り（引き渡し）/ 伝統 |
+| <i>respectus</i> | respite | respect | 猶予 / 尊敬 |
+| <i>gentīlis</i> | gentle, genteel | gentile | 上品な / 異邦人 |
+| <i>dēbitum</i> | debt | debit | 借金 / 借方 |
+| <i>potiōnem</i> | poison | potion | 毒 / 水薬 |
+| <i>corōna</i> | crown | corona | 王冠 / コロナ |
+| <i>redemptiō</i> | ransom | redemption | 身代金 / 贖罪 |
+| <i>species</i> | spice | species | 香辛料 / 種 |
+| <i>strictus</i> | strait, strict | — | 狭い / 厳格な |
+| <i>computāre</i> | count | compute | 数える / 計算する |
+| <i>historia</i> | story | history | 話 / 歴史 |
+| <i>caput</i> | chief, chef | capital, cape | 長 / 首都・岬 |
+| <i>captīvus</i> | caitiff | captive | 卑劣漢 / 捕虜 |
+| <i>dignitātem</i> | dainty | dignity | 上品な / 尊厳 |
+| <i>quiētus</i> | quit, coy | quiet | やめる・内気な / 静かな |
+| <i>separāre</i> | sever | separate | 断ち切る / 分ける |
+| <i>secūtus</i> 系 | sue, suit | second, sect | 訴える / 続く |
+| <i>vīnum aigre</i> | vinegar | — | 酸い酒 |
+| <i>nātūra</i> | — | nature, native, naive | |
+| <i>persecūtus</i> | pursue | prosecute | 追う / 起訴する |
+| <i>abbreviāre</i> | abridge | abbreviate | 要約する / 短縮する |
+| <i>examen</i> | — | exam, examine | |
+| <i>discus</i> | dish, desk, dais | disc/disk, discus | 皿・机・壇 / 円盤 |
+| <i>cadere</i> 系 <i>cadentia</i> | chance | cadence | 偶然 / 抑揚 |
+| <i>āmygdala</i> | almond | amygdala | アーモンド / 扁桃体 |
+
+<i>discus</i> の子孫は五重語である。ギリシア語 <i>dískos</i>「円盤」→ ラテン語 <i>discus</i> → 古英語 <i>disc</i>「皿」（→ <i>dish</i>）、中世ラテン語 <i>desca</i>（→ <i>desk</i>）、イタリア語 <i>desco</i>、古フランス語 <i>deis</i>（→ <i>dais</i>「上段」）、そして近代の学術借用 <i>disc/disk</i>、<i>discus</i>（競技用円盤）。
+
+## 8.3　ノルマン方言 対 中央フランス方言
+
+北ノルマン方言はラテン語の /k/ を保ち（ca-）、中央（パリ）方言はそれを /tʃ/ に変えた（cha-）。また、ゲルマン語起源の w- を、ノルマン方言は w- のまま、中央方言は gu- とした。
+
+| 語源 | ノルマン形 | 中央形 |
+|---|---|---|
+| L <i>captiāre</i> | catch | chase |
+| L <i>cattus</i> | cat（本来語系） | chat（仏） |
+| L <i>capitāle</i> | cattle | chattel |
+| L <i>candēla</i> | candle | chandelier, chandler |
+| L <i>cancellī</i> | cancel | chancel, chancellor |
+| L <i>carrus</i> | car, carry | charge, chariot |
+| L <i>camera</i> | camera（ラテン直） | chamber |
+| L <i>calidus</i> | cauldron | chowder（＜ <i>chaudière</i>） |
+| Gmc <i>wardōn</i> | ward, warden | guard, guardian |
+| Gmc <i>warjan</i> | warranty, warrant | guarantee, garage(?) |
+| Gmc <i>wīsa</i> | wise, wile | guise, guile |
+| Gmc <i>werra</i> | war | guerrilla（西） |
+| Frank <i>wīsa</i> | — | guide |
+| Gmc <i>wīpan</i> | — | guipure |
+| Gmc <i>Willahelm</i> | William | Guillaume |
+| L <i>rewardāre</i> | reward | regard |
+| L <i>warda</i> | wardrobe | garderobe |
+
+## 8.4　本来語 対 借用語の二重語
+
+| 本来語（OE） | 借用語 | 借用元 |
+|---|---|---|
+| shirt | skirt | 古ノルド語 |
+| shatter | scatter | 古ノルド語 |
+| whole | hale | 古ノルド語系 |
+| no | nay | 古ノルド語 |
+| from | fro | 古ノルド語 |
+| rear | raise | 古ノルド語 |
+| church | kirk | 古ノルド語 |
+| shriek | screech, screak | 古ノルド語 |
+| yard（囲い） | garden | 古北仏語（ゲルマン系語彙の再借用） |
+| yard（棒） | — | 別語源 *ǵʰasto- |
+| ward | guard | 仏（ゲルマン系の再借用） |
+| wight | — | |
+| tile | — | ラテン第0期 |
+| wain（荷車） | wagon | オランダ語 |
+| eatable | edible | ラテン語 |
+| forehead | front | ラテン語（同じ *bʰrū- ではなく別語根） |
+| fatherly | paternal | ラテン語（同根語） |
+| ox | — | |
+| thorp | troop(?) | |
+
+## 8.5　三重語・多重語
+
+| 起源 | 語群 |
+|---|---|
+| L <i>capitulum/caput</i> | chief, chef, chieftain, cape, capital, captain, cattle, chattel, cadet, cap, chapter, achieve, biceps, precipitate |
+| L <i>discus</i> | dish, desk, dais, disc, discus, disco |
+| L <i>gentīlis/gēns</i> | gentle, genteel, gentile, jaunty, gendarme |
+| L <i>ratiō</i> | reason, ration, rate, ratio |
+| L <i>sēcūrus</i> | sure, secure, sicker(方言) |
+| L <i>hospes</i> | host, hospital, hostel, hotel, hospice, hostage(?) |
+| L <i>pēs/pedem</i> | pedal, pawn, peon, pioneer, pedestrian, pedigree（<i>pied de grue</i>「鶴の足」） |
+| Gk <i>presbýteros</i> | priest, presbyter, presbyterian |
+| Gk <i>episkopos</i> | bishop, episcopal |
+| L <i>cōgitāre</i> | cogitate, coy(?) |
+| L <i>pōtiō</i> | poison, potion, potable |
+| L <i>persōna</i> | person, parson, persona |
+| L <i>senior</i> | senior, sir, sire, señor, monsieur, signor |
+| L <i>domin(us)</i> | dominate, don, dame, madam, madonna, danger, dungeon |
+| L <i>vitium</i> | vice, vitiate |
+| L <i>focus</i> | focus, fuel, foyer, curfew（<i>couvre-feu</i>「火を覆え」） |
+| L <i>fābula</i> | fable, fib(?), affable, ineffable |
+| L <i>plicāre</i> | ply, apply, employ, deploy, display, exploit, pliant, plight, simple, double, complex |
+| Gk <i>khárisma</i> | charisma, charity(別語源), Eucharist |
+| L <i>tractāre</i> | treat, tract, trace, track(?), portray, retreat, train |
+
+## 8.6　同根語をどう見抜くか
+
+英語のなかで、見た目の似ていない語が同根であることは珍しくない。手がかりは次の通りである。
+
+1. <b>グリムの法則の対応</b>を当てる（第3章）。<i>heart</i> と <i>cardiac</i>、<i>kin</i> と <i>genetic</i>。
+2. <b>ラテン語の語幹交替</b>を知る。ラテン動詞は現在幹と完了分詞幹で形が変わる（<i>agere/āctum</i>, <i>ferre/lātum</i>, <i>ferre</i> の完了分詞は <i>lātum</i>）。<i>act</i> と <i>agent</i>、<i>refer</i> と <i>relate</i>、<i>mit</i> と <i>miss</i>（<i>mittere/missum</i>：<i>transmit/transmission</i>）、<i>ced</i> と <i>cess</i>（<i>cēdere/cessum</i>）、<i>vid</i> と <i>vis</i>（<i>vidēre/vīsum</i>）、<i>scrib</i> と <i>script</i>、<i>duc</i> と <i>duct</i>、<i>fer</i> と <i>lat</i>、<i>fac</i>/<i>fic</i> と <i>fact</i>。
+3. <b>母音交替（アプラウト・i-ウムラウト）</b>を疑う。<i>sit/set/seat/settle/soot(?)/nest</i>（*ni-sd-o-「下に座る所」）。
+4. <b>接頭辞の同化</b>を戻す。<i>ad-</i> は後続子音に同化して <i>ac-, af-, ag-, al-, an-, ap-, ar-, as-, at-</i> になる（<i>accept, affect, aggregate, allude, annex, apply, arrive, assign, attend</i>）。<i>in-</i> は <i>il-, im-, ir-</i> に、<i>com-</i> は <i>col-, con-, cor-, co-</i> に、<i>sub-</i> は <i>suc-, suf-, sug-, sup-, sur-, sus-</i> になる。
+5. <b>語頭の s-（s-mobile）</b>を疑う。印欧祖語には、同じ語根に付いたり付かなかったりする語頭の *s があった。<i>(s)tegō</i>「覆う」：<i>thatch</i>（覆う物）と <i>protect</i>／<i>toga</i>。<i>(s)mer-</i>：<i>memory</i> と <i>mourn</i>。<i>(s)neu-</i>：<i>nerve</i> と <i>sinew</i>。
+
+> <b>練習</b>　次の各組は同根である。理由を考えてみよう。<i>guest / hostile</i>、<i>cow / beef</i>、<i>wheel / cycle / collar(?)</i>、<i>five / punch(飲料) / pentagon</i>、<i>tooth / dentist</i>、<i>eight / octopus</i>、<i>naked / nude</i>、<i>day / diary(?)</i>（最後は同根ではない、が答え）。
+

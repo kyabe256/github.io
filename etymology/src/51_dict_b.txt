@@ -1,0 +1,190 @@
+== B
+
+@ bank ; /bæŋk/ ; 名 ; 銀行、土手
++lit: 「（両替商の）台」
++chain: ゲルマン語 *bankiz「台、ベンチ」→ 伊 <i>banca</i>「両替台」→ 仏 <i>banque</i> → 英語
++der: bench, bank（土手）, embankment, bankrupt（伊 <i>banca rotta</i>「壊された台」）
++note: 中世イタリアの両替商は市場に台を出して業務を行った。破産すると、その台が壊されたことから <i>bankrupt</i>。<i>bank</i>「土手」も同じゲルマン語（「盛り上がったもの」）に遡る。
+
+@ barbarian ; /bɑːˈbeəriən/ ; 名 ; 野蛮人
++lit: 「バルバルと訳の分からぬことを言う者」
++chain: Gk <i>bárbaros</i>「異国語を話す者」→ L <i>barbarus</i>
++desc: ギリシア人には外国語が「バルバル」という無意味な音に聞こえた、という擬音起源。サンスクリット語 <i>barbara-</i>「どもる」にも並行形がある。
++der: Barbary, Berber, rhubarb（「野蛮な（地の）根」）, Barbara
++note: <i>rhubarb</i>「ルバーブ」は「ロー川（ヴォルガ）の蛮地の根」。
+
+@ bead ; /biːd/ ; 名 ; ビーズ
++lit: 「祈り」
++chain: OE <i>gebed</i>「祈り」（＜ <i>biddan</i>「請う」）→ ME <i>bede</i>
++desc: ロザリオの珠を繰りながら祈りを数えたため、「祈り」を表す語が「珠」の意味に転じた（換喩、第7章）。<i>to count one's beads</i>「数珠を繰る＝祈る」に古義が残る。
++der: bid（請う）, bidding
+
+@ berserk ; /bəˈzɜːk/ ; 形 ; 狂乱した
++lit: 「熊の（毛皮の）上着（を着た者）」
++chain: ON <i>berserkr</i>（<i>ber-</i>「熊」+ <i>serkr</i>「上着」）→ 英語（1822、スコットによる紹介）
++desc: 古ノルドの伝承で、熊の毛皮をまとい、鎧をつけずに狂乱状態で戦った戦士。「上着なし（bare-sark）」とする別説もある。
++der: bear（動物）, sark（方言「シャツ」）
+
+@ bishop ; /ˈbɪʃəp/ ; 名 ; 司教
++lit: 「上から見る者、監督者」
++chain: Gk <i>epískopos</i>（<i>epi-</i>「上」+ <i>skopós</i>「見る者」）→ 俗ラテン語 <i>ebiscopus</i> → OE <i>biscop</i>
++dbl: <i>episcopal</i>（後代の学術借用形）
++der: scope, telescope, skeptic, spectacle（ラテン系）, spy
++note: 語頭の e- が脱落し、p → b と変化した、徹底的に英語化された借用語。
+
+@ bless ; /bles/ ; 動 ; 祝福する
++lit: 「血で聖別する」
++chain: OE <i>blētsian</i>（＜ *blōdisōjan「血を注ぐ」＜ <i>blōd</i>「血」）
++desc: ゲルマン異教の犠牲儀礼で、祭壇に血を振りかけて聖別した。キリスト教化の際、ラテン語 <i>benedīcere</i>「よく言う」の訳語に転用され、意味が上書きされた。さらに <i>bliss</i>「至福」との連想も加わった。
++der: blood, bliss（別語源だが影響）
+
+@ blockbuster ; /ˈblɒkbʌstə/ ; 名 ; 大ヒット作
++lit: 「街区を吹き飛ばす（爆弾）」
++chain: 第二次大戦期の空軍俗語（1942）→ 演劇・映画の大成功作（1950年代）
++note: もとは一街区を破壊できる大型爆弾。比喩が定着して原義が忘れられた例。
+
+@ bonfire ; /ˈbɒnfaɪə/ ; 名 ; たき火
++lit: 「骨の火」
++chain: ME <i>bonefire</i>（<i>bone</i> + <i>fire</i>）
++desc: 中世に聖ヨハネ祭などで獣骨を焼いた慣習に由来する。後に <i>bon</i>「良い」（仏語）と誤解されたが、初期の綴りは <i>banefyre</i> であり骨で確定している。
+
+@ book ; /bʊk/ ; 名 ; 本
++chain: OE <i>bōc</i> ← PGmc *bōks
++desc: ゲルマン語の <i>bōk</i>「ブナ」との関連が古くから説かれる。ブナ材の板にルーン文字を刻んだためとされるが、異論もある。
++cog: 独 <i>Buch</i>, ゴート語 <i>bōka</i>「文字」
++der: beech(?), bookkeeper（英語で唯一、三組の連続同字（oo-kk-ee）を持つ語として知られる）
+
+@ boycott ; /ˈbɔɪkɒt/ ; 動・名 ; ボイコット（する）
++chain: 人名 Charles C. Boycott（1832–97）
++desc: アイルランド、メイヨー州の土地差配人。1880年、小作料引き下げを拒んだため土地連盟に絶交・排斥され、その名が「集団的排斥」の代名詞になった。同年のうちに新聞で普通名詞化し、フランス語・ドイツ語・日本語にも広まった。
++cf: → 固有名詞由来語（第6章）
+
+@ brand ; /brænd/ ; 名 ; 銘柄、焼き印
++lit: 「燃えるもの」
++chain: OE <i>brand</i>「炎、燃え木」→「焼き印」→「商標」
++der: burn, brandy（オランダ語 <i>brandewijn</i>「焼いた（蒸留した）ワイン」）, brindled, brandish（「（剣を）ひらめかす」）
++note: 家畜への焼き印から、19世紀に商品の「銘柄」へ。マーケティング用語の <i>brand</i> はここから。
+
+@ bribe ; /braɪb/ ; 名・動 ; 賄賂（を贈る）
++lit: 「（乞食に与える）パン切れ」
++chain: OF <i>bribe</i>「物乞いに与えるパン」→ ME「たかり、強奪」→「賄賂」
++note: 「施し」から「たかり」を経て「賄賂」へ悪化した（第7章）。
+
+@ budget ; /ˈbʌdʒɪt/ ; 名 ; 予算
++lit: 「小さな革袋」
++chain: L <i>bulga</i>「革袋」（ケルト語起源）→ OF <i>bougette</i>（縮小形）→ 英語
++desc: 英国の大蔵大臣が議会に財政案を持参する革鞄を <i>budget</i> と呼び、「鞄を開ける」（to open the budget）が財政演説を意味した。ここから「予算」へ。
++der: bulge, bilge, budge は別
+
+@ bureau ; /ˈbjʊərəʊ/ ; 名 ; 事務局、机
++lit: 「（机を覆う）粗い毛織物」
++chain: 後期ラテン語 <i>burra</i>「粗毛」→ OF <i>burel</i>「粗布」→ 仏 <i>bureau</i>「机」→「執務室」→「官庁」
++der: bureaucracy（仏＋ギの混成語, 1818）, burlesque(?)
++note: 布 → 布を掛けた机 → 机のある部屋 → 役所、と換喩が四段重なった語。
+
+@ butterfly ; /ˈbʌtəflaɪ/ ; 名 ; 蝶
++chain: OE <i>butorflēoge</i>（<i>butere</i>「バター」+ <i>flēoge</i>「蠅」）
++desc: 語源の理由は不明。（1）黄色い種（モンキチョウ）の色から、（2）ミルクやバターを盗むという民間信仰から、（3）オランダ語 <i>boterschijte</i>「糞の色」からの婉曲、などの説がある。
++note: 各言語で蝶の名は一致せず、独 <i>Schmetterling</i>（＜「クリーム」）, 仏 <i>papillon</i>（＜ L <i>pāpiliō</i>）, 露 <i>бабочка</i>（＜「おばあさん」＝死者の霊）と、それぞれ独自である。
+
+@ bug ; /bʌɡ/ ; 名 ; 虫、不具合
++chain: 語源不確実。ME <i>bugge</i>「幽霊、お化け」（ウェールズ語 <i>bwg</i> と関係か）
++desc: 機械の不具合を <i>bug</i> と呼ぶ用法は、1870年代のエジソンの書簡にすでに見られる。1947年にハーヴァード Mark II のリレーに挟まった蛾が「実際の bug」として日誌に貼られた逸話は有名だが、これは既存の語法を踏まえた洒落であり、語源ではない。
++der: bugbear, bogey, bogeyman, humbug(?)
+
+@ bulletin ; /ˈbʊlətɪn/ ; 名 ; 公報
++lit: 「小さな封印（のついた文書）」
++chain: L <i>bulla</i>「泡、金属の印章」→ 伊 <i>bullettino</i> → 仏 → 英語
++der: bull（教皇勅書）, bill（証書・請求書）, billet, boil は別, bulla
++note: 教皇勅書 <i>papal bull</i> の <i>bull</i> は雄牛ではなく、文書に付けられた鉛の印章のこと。
+
+@ bureaucracy ; /bjʊəˈrɒkrəsi/ ; 名 ; 官僚制
++chain: 仏 <i>bureau</i>（机、役所）+ Gk <i>-kratia</i>「支配」
++desc: 1745年ごろフランスの経済学者ヴァンサン・ド・グルネーが皮肉として造った語 <i>bureaucratie</i>。当初から批判的な含みを持つ。
++note: 仏語とギリシア語の混成語（hybrid）で、19世紀の純粋主義者からは非難された。
+
+@ business ; /ˈbɪznɪs/ ; 名 ; 仕事、事業
++lit: 「忙しさ」
++chain: OE <i>bisignes</i>（<i>bisig</i>「忙しい」+ <i>-nes</i>）
++desc: 「忙しい状態」→「用事」→「職業・商売」。発音・綴りともに大きく変化し、<i>busy</i> との関係が見えにくくなった（<i>busy</i> /ˈbɪzi/ の綴りの u も歴史的な異形）。
+
+
+@ barbecue ; /ˈbɑːbɪkjuː/ ; 名 ; バーベキュー
++chain: タイノ語（カリブ）<i>barbakoa</i>「木の枠組み（の焼き台）」→ スペイン語 <i>barbacoa</i> → 英語（1697）
++note: 仏語 <i>barbe à queue</i>「顎から尾まで」に由来するという俗説があるが、記録上の裏づけはない。
+
+@ blackmail ; /ˈblækmeɪl/ ; 名 ; 恐喝
++lit: 「黒い（不正な）年貢」
++chain: <i>black</i> + スコットランド語 <i>mail</i>「地代、貢納」（＜ ON <i>mál</i>「協定」）
++desc: 16世紀のスコットランド国境地帯で、盗賊が保護料として農民から取り立てた貢納。正規の銀貨で払う <i>white rent</i> に対して「黒い」と呼ばれた。
++note: 郵便の <i>mail</i>（＜ OF <i>male</i>「袋」）とは無関係。
+
+@ blue ; /bluː/ ; 形 ; 青い
++chain: PGmc *blēwaz → OF <i>bleu</i> → ME <i>blew</i>
++desc: 本来語の古英語 <i>blǣwen</i> は残らず、同じゲルマン語がフランス語を経由して戻ってきた形が定着した。ラテン語 <i>flāvus</i>「黄色い」と同根で、印欧祖語段階では明度を表す語だったとみられる。
++note: 憂鬱の意（<i>feel blue</i>）は18世紀以降。<i>blues</i>（音楽）は <i>blue devils</i>「憂鬱」から。
+
+@ bonus ; /ˈbəʊnəs/ ; 名 ; 賞与
++lit: 「良いもの」
++chain: L <i>bonus</i>「良い（男性形）」→ 英語（1773、ロンドン株式市場の俗語）
++note: 文法的には中性の <i>bonum</i> であるべきところ、ラテン語を生かじりした株屋が男性形を使ったとされる。
+
+@ brave ; /breɪv/ ; 形 ; 勇敢な
++chain: 伊 <i>bravo</i>／西 <i>bravo</i>「勇敢な、野性の」→ 仏 <i>brave</i> → 英語
++desc: 語源には L <i>barbarus</i>「野蛮な」説と <i>prāvus</i>「曲がった、悪い」説がある。いずれにせよ、もとは否定的な語が良化したことになる。
++der: bravo, bravado, bravery, brave（インディアンの戦士）
+
+@ brothel ; /ˈbrɒθl/ ; 名 ; 娼館
++lit: 「落ちぶれた者」
++chain: OE <i>brēoþan</i>「衰える」→ ME <i>brothel</i>「堕落した人」→ <i>brothel-house</i> → <i>brothel</i>
++note: 建物を指すようになったのは、同義の <i>bordel</i>（仏「小屋」）との混同による。
+
+@ buxom ; /ˈbʌksəm/ ; 形 ; 豊満な
++lit: 「（意のままに）曲がる、従順な」
++chain: ME <i>buhsum</i>（<i>būgan</i>「曲がる」+ <i>-som</i>）
++desc: 「従順な」→「快活な」→「（健康的に）ふくよかな」→「胸の豊かな」と、五百年かけて意味が移動した。
++der: bow（お辞儀する）, bight, bagel は別
+
+@ ballot ; /ˈbælət/ ; 名 ; 投票
++lit: 「小さな球」
++chain: 伊 <i>ballotta</i>「小球」（<i>balla</i>「玉」の縮小形）
++desc: ヴェネツィアなどで、壺に小球を投じて秘密投票を行った。<i>blackball</i>「（黒球を投じて）排斥する」も同じ慣行から。
++der: ball, balloon, bullet（仏 <i>boulette</i>「小さな玉」）
+
+@ bigot ; /ˈbɪɡət/ ; 名 ; 偏狭な人
++chain: 語源不確実。OF <i>bigot</i>（ノルマン人への蔑称）
++note: 「ノルマン公ロロが臣従の礼を拒み <i>bi got</i>（by God）と叫んだ」という逸話が古くから伝わるが、後代の作り話とされる。
+
+@ boss ; /bɒs/ ; 名 ; 上司
++chain: オランダ語 <i>baas</i>「親方」→ 米語（1640年代のニューアムステルダム）
++desc: <i>master</i> が奴隷制を連想させたため、共和国アメリカで好まれた語とされる。
++der: 同時期のオランダ語借用に <i>cookie</i>, <i>coleslaw</i>, <i>stoop</i>, <i>waffle</i>, <i>Yankee</i>, <i>Santa Claus</i>（<i>Sinterklaas</i>）
+
+@ bugle ; /ˈbjuːɡl/ ; 名 ; ラッパ
++lit: 「若い雄牛（の角）」
++chain: L <i>būculus</i>「若い雄牛」（<i>bōs</i>「牛」の縮小形）→ OF <i>bugle</i>
++der: cow（本来語）, beef, bovine, buffalo(?), bugler
++note: 角笛が原義。<i>horn</i> が「角」と「楽器」の両義を持つのと同じ発想。
+
+@ bury ; /ˈberi/ ; 動 ; 埋葬する
++chain: OE <i>byrgan</i>「隠す、埋める」
++der: borrow（「担保を（差し出して）守る」）, burial（<i>byrgels</i> が複数と誤解されて逆成された形）, borough は別語源
++note: <i>burial</i> は古英語 <i>byrgels</i>（単数）の -s が複数語尾と誤解され、単数形 <i>burial</i> が作られた（逆成、第6章）。<i>pea</i>, <i>cherry</i> と同型。
+
+@ bastard ; /ˈbɑːstəd/ ; 名 ; 私生児
++chain: OF <i>bastard</i>（<i>bast</i>「駄鞍」+ <i>-ard</i>、「駄鞍の上で生まれた子」説）
++note: 古フランス語 <i>fils de bast</i>「荷鞍の子」＝旅の宿での間に合わせの結びつきによる子、という説明が古くからあるが確実ではない。接尾辞 <i>-ard</i> は軽蔑を含む（<i>drunkard</i>, <i>coward</i>, <i>sluggard</i>）。
+
+@ bloody ; /ˈblʌdi/ ; 形・副 ; ひどく（英俗）
++desc: 強意語としての用法（17世紀）の由来には諸説ある。（1）文字通り「血まみれの」からの強意化、（2）<i>by our Lady</i> の縮約、（3）貴族の放蕩者（<i>bloods</i>）の振る舞いから。（2）は音韻的に無理があり、（1）が有力。
++note: 20世紀前半の英国では活字にできないほどの禁忌語だった。ショー『ピグマリオン』（1914）でイライザが口にした場面が有名。
+
+@ breakfast ; /ˈbrekfəst/ ; 名 ; 朝食
++lit: 「断食を破る」
++chain: <i>break</i> + <i>fast</i>「断食」
++desc: 一夜の断食を破る食事。仏 <i>déjeuner</i>（<i>dis-</i>+<i>jējūnāre</i>「断食する」）、西 <i>desayuno</i> も同じ構成。
++note: 母音が /brek-/ と短いのは、二子音の前での短化（第4章）。<i>break</i> /breɪk/ との差はこれによる。
+
+@ bizarre ; /bɪˈzɑː/ ; 形 ; 奇妙な
++chain: 伊 <i>bizzarro</i>「気短な、風変わりな」→ 仏 <i>bizarre</i>
++note: バスク語 <i>bizar</i>「ひげ」に由来し、ひげ面のバスク兵が異様に見えたから、という説が広く流布したが、現在では支持されない。イタリア語内での発生とみられる。

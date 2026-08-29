@@ -1,0 +1,137 @@
+== E
+
+@ eavesdrop ; /ˈiːvzdrɒp/ ; 動 ; 立ち聞きする
++lit: 「軒からの雨だれ（の落ちる場所に立つ）」
++chain: OE <i>yfesdrype</i>「軒の雨だれ」→ <i>eavesdropper</i>「軒下に立つ者」
++desc: 家の軒（<i>eaves</i>）から雨が落ちる範囲を <i>eavesdrip</i> といい、隣家との境界として法的意味を持った。そこに立って中の話を聞く者が <i>eavesdropper</i>。動詞 <i>eavesdrop</i> は名詞からの逆成である。
++der: eaves（単数形に見えるが古英語では単数 <i>efes</i>）
+
+@ economy ; /ɪˈkɒnəmi/ ; 名 ; 経済
++lit: 「家政」
++chain: Gk <i>oîkos</i>「家」+ <i>némein</i>「管理する」→ <i>oikonomíā</i>「家政術」→ L → 仏 → 英語
++desc: アリストテレス『家政論』の主題は文字通り家産の管理だった。「一国の経済」の意味は17世紀の <i>political economy</i>「政治的家政」から生じ、19世紀に <i>political</i> が落ちた。
++der: ecology（1866年ヘッケルの造語「家の学」）, ecumenical（「人の住む全世界の」）, parish, diocese, autonomy, nomad, astronomy
+
+@ ecstasy ; /ˈekstəsi/ ; 名 ; 恍惚
++lit: 「（自分の）外に立つこと」
++chain: Gk <i>ek-</i>（外）+ <i>hístanai</i>「立たせる」→ <i>ékstasis</i>
++der: stand（本来語）, static, system, apostasy, stasis, state
++note: 日本語の「我を忘れる」「有頂天」と同じ発想。
+
+@ egregious ; /ɪˈɡriːdʒəs/ ; 形 ; とんでもない
++lit: 「群れから抜きん出た」
++chain: L <i>ē-</i>（外へ）+ <i>grex, gregis</i>「群れ」→ <i>ēgregius</i>
++desc: 16世紀には「傑出した」という褒め言葉だったが、皮肉な用法が定着して17世紀に「ひどい」へ反転した（悪化、第7章）。
++der: gregarious, congregate, segregate, aggregate
+
+@ electric ; /ɪˈlektrɪk/ ; 形 ; 電気の
++lit: 「琥珀の（ような）」
++chain: Gk <i>ḗlektron</i>「琥珀、琥珀金」→ 近代ラテン語 <i>ēlectricus</i>（ウィリアム・ギルバート, 1600）
++desc: 琥珀を摩擦すると軽いものを引きつけることが古代から知られていた。ギルバートはこの性質を「琥珀的」と名づけた。<i>electron</i>「電子」は1891年ストーニーの命名。
++note: ギリシア語 <i>ḗlektōr</i> は「輝く太陽」の意で、琥珀の輝きから来ているとみられる。
+
+@ eleven ; /ɪˈlevn/ ; 数 ; 11
++lit: 「（十を数えて）一つ残る」
++chain: PGmc *ainlif（*ain「一」+ *lif「残る」）→ OE <i>endleofan</i>
++der: twelve（*twa-lif「二つ残る」）, leave, eleven
++note: ゲルマン語では11と12だけが「十を超えて残る数」という古い数え方を保存している。13以降は <i>thirteen</i>（3＋10）と規則的。リトアニア語も同じ構造（<i>vienuolika</i>）を持つ。
+
+@ embarrass ; /ɪmˈbærəs/ ; 動 ; 当惑させる
++lit: 「（丸太で）ふさぐ」
++chain: ポルトガル語 <i>embaraçar</i>（<i>baraço</i>「綱、輪縄」）→ 西 → 仏 <i>embarrasser</i> → 英語
++desc: 「行く手をふさぐ」から「困らせる」「きまり悪くさせる」へ。<i>embarrassment of riches</i>「贅沢な悩み」に「ありすぎて困る」の原義が残る。
++der: bar, barrier, barricade, barrel（すべて <i>barra</i>「棒」系）
+
+@ enthusiasm ; /ɪnˈθjuːziæzəm/ ; 名 ; 熱意
++lit: 「神が内に宿ること」
++chain: Gk <i>en-</i>（中に）+ <i>theós</i>「神」→ <i>enthousiasmós</i>「神憑り」
++desc: 17〜18世紀のイングランドでは「（狂信的な）宗教的興奮」を指す否定的な語だった。ヒュームやスウィフトはこれを冷ややかに論じた。19世紀に「熱心さ」へ良化した。
++der: theology, atheist, pantheon, Theodore, apotheosis
++note: ラテン語 <i>deus</i> とギリシア語 <i>theós</i> は同根ではない（第IV部）。
+
+@ etiquette ; /ˈetɪket/ ; 名 ; 礼儀作法
++lit: 「（貼り付ける）札」
++chain: OF <i>estiquette</i>「貼り札」（＜ ゲルマン語 *stikan「刺す」）→ 仏 <i>étiquette</i>
++desc: 宮廷で守るべき作法を書いた札を配ったから、あるいは兵舎の宿割札から、といった説がある。同じ語がフランス語では「ラベル」の意味も保った。
++der: ticket（同語源の二重語）, stick, stitch, etiquette
++note: <i>ticket</i>「切符」と <i>etiquette</i>「礼儀」は同語源。
+
+@ etymology ; /etɪˈmɒlədʒi/ ; 名 ; 語源学
++lit: 「真の（意味）についての学」
++chain: Gk <i>étymos</i>「真実の」→ <i>etymología</i> → L → OF → 英語
++desc: 古代の言語観では語の「真の意味」を探ることが語源探究だった。近代語源学は「真の意味」ではなく「歴史的由来」を扱う（第1章）。
++der: etymon, -logy, logic, dialogue
+
+@ eureka ; /jʊəˈriːkə/ ; 間投 ; 分かった！
++lit: 「私は見つけた」
++chain: Gk <i>heúrēka</i>（<i>heurískein</i>「見つける」の完了形）
++desc: アルキメデスが浮力の原理を発見して浴場から裸で飛び出した際に叫んだとされる（ウィトルウィウスの伝承）。カリフォルニア州の標語。
++der: heuristic（「発見を助ける」）
+
+@ exam / examine ; /ɪɡˈzæmɪn/ ; 動 ; 調べる
++lit: 「（秤の）舌（で量る）」
++chain: L <i>exāmen</i>「秤の指針、検査」（＜ <i>exigere</i>「量る」＜ <i>agere</i>）→ <i>exāmināre</i>
++der: act, agent, exact, exigent, agile, ambiguous
++note: 秤の針が中央で静止するかどうかを見る、という具体的な動作が原義。
+
+@ exorbitant ; /ɪɡˈzɔːbɪtənt/ ; 形 ; 法外な
++lit: 「軌道を外れた」
++chain: L <i>ex-</i>（外へ）+ <i>orbita</i>「車輪の轍、軌道」
++der: orbit, orb, exorbitance
++note: <i>orbita</i> はもと「車輪（<i>orbis</i>）の跡」。天体の軌道の意味は17世紀から。
+
+@ explode ; /ɪkˈspləʊd/ ; 動 ; 爆発する
++lit: 「（拍手で役者を）舞台から追い出す」
++chain: L <i>ex-</i>（外へ）+ <i>plaudere</i>「手を打つ」→ <i>explōdere</i>
++desc: ローマの劇場で、下手な役者を野次と手拍子で追い出すことを指した。英語では「（説を）論破して退ける」の意で使われ（<i>an exploded theory</i>）、18世紀に物理的な「爆発」の意味が生じた。
++der: applaud, plaudit, applause, implode（19世紀の <i>explode</i> からの類推造語）
+
+@ expensive ; /ɪkˈspensɪv/ ; 形 ; 高価な
++lit: 「（金を）量り出す」
++chain: L <i>ex-</i> + <i>pendere</i>「量る、支払う」
++der: pension, pendant, pendulum, suspend, depend, compensate, ponder, poise, spend, peso, pound
++note: 貨幣が秤で量られた時代の名残（第III部 pend-）。
+
+@ eye ; /aɪ/ ; 名 ; 目
++root: *h₃ekʷ-
++chain: PIE *h₃ekʷ- → PGmc *augô → OE <i>ēage</i>
++cog: L <i>oculus</i>, Gk <i>ómma/ṓps</i>, 露 <i>око</i>, Skt <i>akṣi</i>
++der: ocular, monocle, inoculate, optic, autopsy, synopsis, myopia, daisy, window
++note: ゲルマン語形の -g- は、他の印欧語と対応しない不規則な要素で、<i>ear</i>（*h₂ows-）との類推による変形とされる。
+
+
+@ egg ; /eɡ/ ; 名 ; 卵
++chain: ON <i>egg</i> → ME（OE の <i>ǣġ</i> を置換）
++desc: キャクストンが1490年の序文で、北部の <i>egges</i> と南部の <i>eyren</i>（OE 由来）のどちらを用いるべきか迷った逸話を記している。北欧語形が勝った。
++cog: L <i>ōvum</i>, Gk <i>ōión</i>（→ oval, ovary, ovum）
++note: 英語史における方言競合の記録として名高い証言。
+
+@ eloquent ; /ˈeləkwənt/ ; 形 ; 雄弁な
++lit: 「外へ話す」
++chain: L <i>ē-</i>（外へ）+ <i>loquī</i>「話す」
++der: colloquial, soliloquy, ventriloquism, loquacious, elocution, interlocutor, circumlocution
+
+@ enemy ; /ˈenəmi/ ; 名 ; 敵
++lit: 「友でない者」
++chain: L <i>in-</i>（非）+ <i>amīcus</i>「友」→ <i>inimīcus</i> → OF <i>enemi</i>
++der: amiable, amicable, amateur, amorous, enamored, inimical, amity, enmity
++note: <i>hostile</i>（＜ <i>hostis</i>「よそ者」）とは発想が異なる。ラテン語には「敵」を表す語が二系統あった。
+
+@ escape ; /ɪˈskeɪp/ ; 動 ; 逃れる
++lit: 「（相手の手に）マントを残して脱ぐ」
++chain: 俗ラテン語 *<i>excappāre</i>（<i>ex-</i>「外へ」+ <i>cappa</i>「マント」）
++der: cape, cap, chapel, chaperone, escapade, scapegoat（<i>escape</i>+<i>goat</i>）
++note: 捕まれた外套を脱ぎ捨てて逃げる、という具体的な情景が語源。
+
+@ exchequer ; /ɪksˈtʃekə/ ; 名 ; 財務省
++lit: 「市松模様の（布を敷いた台）」
++chain: OF <i>eschequier</i>「チェス盤」→ 英王室の会計台
++desc: 12世紀イングランドの会計は、市松模様の布を敷いた台の上で計算具を動かして行われた。その部署が <i>Exchequer</i>。
++der: chess, check, checkmate, chequered, checkbook
+
+@ exuberant ; /ɪɡˈzjuːbərənt/ ; 形 ; 溢れんばかりの
++lit: 「乳が豊かに出る」
++chain: L <i>ex-</i> + <i>ūber</i>「乳房、豊かさ」
++der: udder（本来語の同根語）, exuberance
++note: <i>ūber</i> は英語 <i>udder</i>「乳房」と同根。豊かさを乳で表す発想。
+

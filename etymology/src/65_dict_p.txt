@@ -1,0 +1,197 @@
+== P
+
+@ pandemonium ; /pændəˈməʊniəm/ ; 名 ; 大混乱
++lit: 「すべての悪魔（の館）」
++chain: Gk <i>pân</i>「すべて」+ <i>daimōn</i>「霊、悪魔」→ ミルトン『失楽園』（1667）の造語
++desc: ミルトンが地獄の首都の名として造った語 <i>Pandæmonium</i>。18世紀に「大混乱」の普通名詞となった。
++der: demon, pantheon, panorama, pandemic
+
+@ panic ; /ˈpænɪk/ ; 名 ; 恐慌
++lit: 「牧神パーンの（引き起こす）」
++chain: Gk <i>Pānikós</i>「パーンの」→ 仏 <i>panique</i> → 英語
++desc: 山野に住む牧神パーンは、旅人や家畜に突然の理由なき恐怖を吹き込むとされた。<i>panic</i> はもと形容詞（<i>panic fear</i>）で、名詞化は18世紀。
++note: 経済用語の <i>bank panic</i>「取り付け騒ぎ」も同じ語。
+
+@ paradise ; /ˈpærədaɪs/ ; 名 ; 楽園
++lit: 「（壁で）囲われた庭園」
++chain: アヴェスター語 <i>pairi-daēza</i>（<i>pairi</i>「周りに」+ <i>daēza</i>「壁」）→ Gk <i>parádeisos</i>「（ペルシア王の）猟園」→ L → OF
++desc: クセノフォンがペルシア王の庭園を指して用いた語。七十人訳聖書がエデンの園の訳語に採用し、「天国」の意味を得た。
++der: peri-（周りに）, paries（ラ「壁」）, dough（*dʰeigʰ-「こねる」＝土を積む）
++note: 第一要素は Gk <i>perí</i>、英語 <i>far</i>, <i>for</i> と同根。
+
+@ parasite ; /ˈpærəsaɪt/ ; 名 ; 寄生者
++lit: 「そばで食べる者」
++chain: Gk <i>pará</i>「そばに」+ <i>sîtos</i>「食物」→ <i>parásītos</i>
++desc: 本来は神殿で供物を食べる役の神官、後に「食客、太鼓持ち」を指す劇の類型となった。生物学用語としての用法は18世紀から。
++der: sitology, parasitism
+
+@ pedigree ; /ˈpedɪɡriː/ ; 名 ; 家系
++lit: 「鶴の足」
++chain: OF <i>pié de grue</i>「鶴の足」→ ME <i>pedegru</i>
++desc: 系図で分岐を示す三叉の記号が、鶴の足跡に似ていたことによる。
++der: pedal, pedestrian, biped／crane（本来語）, geranium（「鶴の（嘴）」）
++note: 同じ形からの命名に <i>crowbar</i>（烏のくちばし）, <i>crane</i>（起重機）がある。
+
+@ person ; /ˈpɜːsn/ ; 名 ; 人
++lit: 「（劇の）仮面」
++chain: エトルリア語 <i>phersu</i>「仮面」（説）→ L <i>persōna</i>「仮面、役、人格」→ OF
++desc: 「仮面」→「劇中の役」→「法律上の資格」→「人格」→「人」。ラテン語 <i>per-sonāre</i>「（仮面を）通して響かせる」とする古来の説は民間語源とされる。
++dbl: <i>parson</i>（「（教区を代表する）人格」＝教区司祭）, <i>persona</i>
++der: personal, personality, impersonate, personnel
+
+@ pilgrim ; /ˈpɪlɡrɪm/ ; 名 ; 巡礼者
++lit: 「畑を越えて行く者＝異国人」
++chain: L <i>per</i>（越えて）+ <i>ager</i>「畑」→ <i>peregrīnus</i>「外国の」→ プロヴァンス語 <i>pelegrin</i>（r → l の異化）→ ME
++dbl: <i>peregrine</i>（ハヤブサ。「渡りをする鳥」）
++der: agriculture, acre（本来語）, peregrination
+
+@ planet ; /ˈplænɪt/ ; 名 ; 惑星
++lit: 「さまようもの」
++chain: Gk <i>planâsthai</i>「さまよう」→ <i>planḗtēs (astḗr)</i>「さまよう星」→ L <i>planēta</i>
++desc: 恒星（<i>fixed stars</i>）に対して、天球上を不規則に動く天体を指した。日本語「惑星」（本木良永の訳語）も同じ発想の翻訳借用。
++der: aberrant は別／planetarium, planetary
+
+@ plumber ; /ˈplʌmə/ ; 名 ; 配管工
++lit: 「鉛を扱う者」
++chain: L <i>plumbum</i>「鉛」→ <i>plumbārius</i> → OF → ME
++desc: ローマ以来、水道管は鉛で作られた。元素記号 Pb もこの語による。
++der: plumb（測鉛）, plumb line, aplomb（仏「垂直に＝落ち着き」）, plunge（「鉛のように沈める」）
++note: 綴りの b は発音されない。<i>plumb</i>「垂直の」から「まったく」（<i>plumb crazy</i>）の副詞用法も生じた。
+
+@ posthumous ; /ˈpɒstjʊməs/ ; 形 ; 死後の
++lit: 「最後の（子）」
++chain: L <i>postumus</i>「最後の」（<i>post</i> の最上級）
++desc: 父の死後に生まれた子を指すようになり、<i>humus</i>「土（＝埋葬）」との民間語源的な連想から h が挿入された。
++der: post-, posterior／humus, humble, human（誤って結びつけられた語）
++note: 綴りの h は語源的に誤りだが、意味の理解を助けたために定着した。
+
+@ pretty ; /ˈprɪti/ ; 形 ; きれいな
++lit: 「狡猾な」
++chain: OE <i>prættig</i>「策略に富む」（<i>prætt</i>「策略」）
++desc: 「ずるい」→「巧妙な」→「よくできた」→「かわいらしい」と、五百年かけて良化した（第7章）。
++note: 副詞用法 <i>pretty good</i>「かなり」は16世紀から。
+
+@ punch ; /pʌntʃ/ ; 名 ; パンチ（飲料）
++lit: 「五」
++chain: ヒンディー語／サンスクリット語 <i>pāñč</i>「五」→ 英語（1632）
++desc: 酒・砂糖・レモン・水・香辛料の五種の材料から。インドの英国人が本国に持ち帰った。
++der: five, fist（本来語）, pentagon, quintet（同根語）
++note: 拳の <i>punch</i>、道具の <i>punch</i>、人形劇の <i>Punch</i> はいずれも別語源。
+
+@ pupil ; /ˈpjuːpl/ ; 名 ; 生徒、瞳孔
++lit: 「小さな人形／少女」
++chain: L <i>pūpus/pūpa</i>「子ども、人形」→ <i>pūpillus/pūpilla</i>
++desc: 二つの意味は同一語。「生徒」は「未成年の被後見人」から。「瞳孔」は、人の瞳に映る自分の小さな姿を「人形」に見立てたことによる。ギリシア語 <i>kórē</i>「少女／瞳」、ヘブライ語「目の中の小さな人」も同じ比喩を持つ。
++der: puppet, puppy, pupa（さなぎ）, puberty は別
+
+@ pyjamas / pajamas ; /pəˈdʒɑːməz/ ; 名 ; パジャマ
++lit: 「脚の衣」
++chain: ペルシア語／ウルドゥー語 <i>pāy-jāma</i>（<i>pāy</i>「脚」+ <i>jāma</i>「衣」）→ 英語（1800年ごろ）
++der: <i>pāy</i> は L <i>pēs</i>, 英 <i>foot</i> と同根（*ped-）
++note: インド在住の英国人が現地の緩やかなズボンを寝間着に採用した。
+
+@ pandemic ; /pænˈdemɪk/ ; 形・名 ; 世界的流行（の）
++lit: 「すべての民の」
++chain: Gk <i>pân</i>「すべて」+ <i>dêmos</i>「民」→ <i>pandēmos</i>
++der: epidemic（「民の間に来る」）, endemic（「民の中にある」）, democracy, demagogue, demography
++note: 三語の接頭辞の違い（pan-/epi-/en-）が、そのまま疫学の定義の違いに対応している。
+
+@ pencil ; /ˈpensl/ ; 名 ; 鉛筆
++lit: 「小さな尾（＝筆）」
++chain: L <i>pēnis</i>「尾」→ <i>pēnicillus</i>「小さな筆」→ OF <i>pincel</i>
++desc: 本来は細い絵筆。黒鉛の筆記具を指すようになったのは16世紀、ボローデール鉱山の発見以降。
++der: penicillin（1929年フレミング。菌の房が筆状であることから）, pencil
++note: <i>pen</i>「ペン」は別語源（L <i>penna</i>「羽根」）。<i>pencil</i> と <i>pen</i> は無関係である。
+
+@ paper ; /ˈpeɪpə/ ; 名 ; 紙
++chain: Gk <i>pápȳros</i>「パピルス」（エジプト語起源）→ L <i>papȳrus</i> → OF <i>papier</i>
++dbl: <i>papyrus</i>（学術借用形）
++note: 紙そのものは中国起源だが、名は地中海の書写材料から受け継いだ。日本語「紙」とは無関係。
+
+@ pen ; /pen/ ; 名 ; ペン
++lit: 「羽根」
++chain: L <i>penna</i>「羽根」→ OF <i>penne</i>
++desc: 羽根ペン（quill）の時代の名が、金属ペン・ボールペンにまで受け継がれた。
++der: pennant, pinnate, pinnacle, feather（本来語の同根語）
++note: <i>penknife</i>「小刀」は、もと羽根ペンの先を削るための刃物。
+
+@ police ; /pəˈliːs/ ; 名 ; 警察
++lit: 「都市の統治」
++chain: Gk <i>pólis</i>「都市国家」→ <i>politeíā</i>「国制」→ L <i>polītīa</i> → 仏 <i>police</i>
++dbl: <i>policy</i>（同語源の二重語）
++desc: 「国家の統治」一般を指す語だったが、18世紀に「治安機構」に特殊化した。<i>policy</i>（保険証券）はギリシア語 <i>apódeixis</i>「証明」由来の別語で、同綴の混同がある。
++der: politics, polity, metropolis, cosmopolitan, acropolis
+
+
+@ palace ; /ˈpæləs/ ; 名 ; 宮殿
++chain: 地名 <i>Palātium</i>（ローマのパラティヌスの丘。アウグストゥス以後、皇帝の邸宅が置かれた）→ L <i>palātium</i>「宮殿」→ OF <i>palais</i>
++der: paladin, palatine, palatial
++note: 丘の名が「宮殿」を意味する普通名詞になり、独 <i>Pfalz</i>、仏 <i>palais</i>、伊 <i>palazzo</i> として全ヨーロッパに広がった。
+
+@ pamphlet ; /ˈpæmflət/ ; 名 ; 小冊子
++chain: 12世紀ラテン語の恋愛詩『パンフィルス』（<i>Pamphilus, seu de Amore</i>）の愛称 <i>Pamphilet</i>
++desc: 中世に広く読まれた綴じられていない小冊子の詩の題名から、「（小さな）冊子」一般の名になった。
++note: <i>Pamphilus</i> は「あらゆるものを愛する者」（Gk <i>pân</i>+<i>phílos</i>）。
+
+@ pants ; /pænts/ ; 名 ; ズボン
++chain: <i>pantaloons</i> の短縮 ← 伊 <i>Pantalone</i>（コメディア・デラルテの登場人物、細身のズボンをはくヴェネツィア商人）
++desc: 人物名 → 衣装名 → 衣類一般。<i>Pantalone</i> はヴェネツィアの守護聖人パンタレオンにちなむ。
++note: 英国では <i>pants</i> は下着を指し、ズボンは <i>trousers</i>（アイルランド語 <i>triubhas</i> 由来）。
+
+@ paragraph ; /ˈpærəɡrɑːf/ ; 名 ; 段落
++lit: 「傍らに書かれた（印）」
++chain: Gk <i>pará</i>「傍らに」+ <i>gráphein</i>「書く」
++desc: 古代の写本で、段落の切れ目を示すために行の脇に書き入れた記号。記号の名が単位の名になった。
++note: 現在の段落記号 ¶（pilcrow）は、この記号の子孫で、<i>paragraph</i> の語形が中世に訛ったもの（<i>pilcrow</i> ＜ <i>paragraph</i>）。
+
+@ pariah ; /pəˈraɪə/ ; 名 ; のけ者
++lit: 「太鼓を打つ者」
++chain: タミル語 <i>paṟaiyar</i>（<i>paṟai</i>「太鼓」）→ 英語（1610年代）
++desc: 南インドの、祭礼で太鼓を打つ役を担った低カースト集団の名から。
+
+@ pastor ; /ˈpɑːstə/ ; 名 ; 牧師
++lit: 「羊飼い」
++chain: L <i>pāscere</i>「牧する」→ <i>pāstor</i>
++der: pasture, pastoral, repast, company, companion, pantry, food, feed（本来語）
++note: 「牧師」「司牧」「羊の群れ（flock）」という比喩体系は、ヨハネ福音書10章の「よい羊飼い」に発する。
+
+@ pedagogue ; /ˈpedəɡɒɡ/ ; 名 ; 教育者
++lit: 「子どもを（学校へ）導く者」
++chain: Gk <i>paîs, paidós</i>「子ども」+ <i>agōgós</i>「導く者」
++desc: 古代ギリシアで、子どもを学校へ送り迎えする奴隷を指した。教師そのものではなかった。
++der: pediatrics, encyclopedia, pedophile／demagogue, synagogue, act, agent
++note: <i>ped-</i> には「子ども」（ギ）と「足」（ラ）の二系統がある。<i>pedagogy</i> は前者、<i>pedal</i> は後者。
+
+@ phony ; /ˈfəʊni/ ; 形 ; いんちきの
++chain: アイルランド語 <i>fáinne</i>「指輪」（詐欺の手口「金の指輪」<i>fawney rig</i> から）とする説が有力
++note: <i>phone</i>「電話」とは無関係。綴りが ph- なのは後代の類推による。
+
+@ pioneer ; /paɪəˈnɪə/ ; 名 ; 開拓者
++lit: 「歩兵」
++chain: OF <i>paonier</i>「歩兵」（<i>peon</i> ＜ 後期ラテン語 <i>pedō</i>「足の大きい者、歩兵」）
++der: pawn（チェスの歩）, peon, pedal, pedestrian, foot（本来語）
++note: 本隊に先立って道を開く工兵が原義。
+
+@ plagiarism ; /ˈpleɪdʒərɪzəm/ ; 名 ; 剽窃
++lit: 「誘拐」
++chain: L <i>plagiārius</i>「人さらい」（<i>plaga</i>「網」）
++desc: 詩人マルティアリスが、自作を盗用した者を「私の詩を誘拐した」と非難した（『エピグラム』1巻52）のが、この語義の起源とされる。
++note: 比喩が定着して術語になった好例。
+
+@ plot ; /plɒt/ ; 名 ; 筋書き、区画
++desc: 二つの語の合流。（1）OE <i>plot</i>「小さな土地」、（2）仏 <i>complot</i>「陰謀」の頭音消失形。「土地の図面」→「設計図」→「筋書き」という展開に、（2）の「陰謀」が重なった。
++note: <i>plot</i>「グラフを描く」も（1）の系統。
+
+@ posh ; /pɒʃ/ ; 形 ; 上流の
++chain: 語源不確実。19世紀の俗語 <i>posh</i>「金、洒落者」から
++note: "Port Out, Starboard Home" の頭字語だとする有名な説は、船会社の記録にも初期の用例にも裏づけがなく、<b>誤り</b>とされる（第VIII部）。
+
+@ pundit ; /ˈpʌndɪt/ ; 名 ; 評論家
++lit: 「学者」
++chain: サンスクリット語 <i>paṇḍita-</i>「学識ある」→ ヒンディー語 <i>paṇḍit</i> → 英語（1670年代）
++note: 英領インドで、ヒンドゥー法の学者を指した語。20世紀に「専門家、評論家」の意味で一般化した。
+
+@ puppet ; /ˈpʌpɪt/ ; 名 ; 操り人形
++chain: L <i>pūpa</i>「少女、人形」→ OF <i>poupette</i>
++der: pupil（瞳孔・生徒）, puppy, pupa（さなぎ）, poppet
++note: <i>puppy</i>「子犬」も同語源で、もと「愛玩用の小犬」。

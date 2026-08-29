@@ -1,0 +1,53 @@
+== J
+
+@ January ; /ˈdʒænjuəri/ ; 名 ; 1月
++chain: L <i>Iānuārius</i>（門の神 <i>Iānus</i>「ヤヌス」）
++desc: 前後に二つの顔を持ち、始まりと終わり、出入り口を司る神。年の境目にふさわしいとして月名になった。<i>iānua</i> は「扉」。
++der: janitor（「門番」）, janitress
++note: <i>janitor</i>「用務員」が同語源であるのは、もと「門番」だったから。
+
+@ jargon ; /ˈdʒɑːɡən/ ; 名 ; 専門用語、たわごと
++lit: 「小鳥のさえずり」
++chain: OF <i>jargon</i>「鳥のさえずり、わけの分からぬ言葉」（擬音）
++note: 「理解できない音」という擬音起源は、<i>barbarian</i>（バルバル）と同じ発想。
+
+@ jeans ; /dʒiːnz/ ; 名 ; ジーンズ
++lit: 「ジェノヴァ（産の綾織り）」
++chain: 中世ラテン語 <i>Genua</i>「ジェノヴァ」→ OF <i>Janne</i> → 英語 <i>jean fustian</i>「ジェノヴァ産の綾織り」
++der: denim（仏 <i>serge de Nîmes</i>「ニーム産のサージ」）
++note: 生地の名は産地由来が多い（damask＝ダマスカス、muslin＝モスル、cashmere＝カシミール、satin、calico＝カリカット、duffel＝ベルギーの町）。
+
+@ jeopardy ; /ˈdʒepədi/ ; 名 ; 危険
++lit: 「（勝敗の）分かれた勝負」
++chain: OF <i>jeu parti</i>「（勝ち目が）二分された勝負」→ ME <i>jeupardie</i>
++desc: チェスの用語で、どちらが勝つか分からない局面を指した。そこから「不確実で危うい状況」へ。
++der: joke（<i>iocus</i>「戯れ」）, part, party, partition, portion
+
+@ jubilee ; /ˈdʒuːbɪliː/ ; 名 ; 記念祭
++lit: 「雄羊の角笛（を吹く年）」
++chain: ヘブライ語 <i>yōbēl</i>「雄羊の角笛」→ Gk <i>iōbēlaîos</i> → 後期ラテン語 <i>iūbilaeus</i>
++desc: レビ記25章の「ヨベルの年」（50年ごとに奴隷を解放し土地を返す年）。ラテン語 <i>iūbilāre</i>「歓呼する」（別語源）と混同されて綴りが影響を受けた。
++note: 語源の異なる二語が形の上で融合した例。
+
+@ juggernaut ; /ˈdʒʌɡənɔːt/ ; 名 ; 圧倒的な力
++chain: サンスクリット語 <i>Jagannātha</i>「世界の主」（クリシュナの称号）
++desc: 東インド、プリーの神像を載せた巨大な山車。信者がその下に身を投じて死ぬという（誇張された）報告が中世以来ヨーロッパに伝わり、「すべてを轢き潰す力」の比喩となった。
++der: <i>jagat</i>「世界」（＜ *gʷeh₂-「行く」）, <i>nātha</i>「主」
++note: 事実誤認にもとづく比喩が定着した例。
+
+@ jumbo ; /ˈdʒʌmbəʊ/ ; 形 ; 巨大な
++chain: ロンドン動物園の象「ジャンボ」（1860年代、後にバーナムのサーカスへ）
++desc: 象の名が普通名詞化した。名の由来はスワヒリ語 <i>jambo</i>「こんにちは」または <i>jumbe</i>「族長」とされるが確実ではない。
++der: jumbo jet
+
+@ jury ; /ˈdʒʊəri/ ; 名 ; 陪審
++lit: 「誓った者たち」
++chain: L <i>iūrāre</i>「誓う」（<i>iūs</i>「法」）→ アングロ・フランス語 <i>jurée</i>
++der: just, justice, judge, injury, perjury（「偽って誓う」）, conjure, abjure, jurisdiction
++note: <i>jury-rigged</i>「間に合わせの」の <i>jury</i> は別語源（航海用語、語源不確実）で、<i>jerry-built</i> との混同もある。
+
+@ junk ; /dʒʌŋk/ ; 名 ; がらくた
++chain: ME <i>jonke</i>「古綱」（語源不確実、OF <i>jonc</i>「藺草」か）
++desc: 船の古綱をほぐして填隙材にしたことから「廃品」の意味へ。<i>junk food</i>, <i>junk mail</i>, <i>junk bond</i> と現代でも生産的。
++note: 船の <i>junk</i>「ジャンク船」はマレー語 <i>jong</i> 由来で別語源。
+

@@ -1,0 +1,199 @@
+== D
+
+@ daisy ; /ˈdeɪzi/ ; 名 ; ヒナギク
++lit: 「日の目」
++chain: OE <i>dæges ēage</i>（<i>dæg</i>「日」+ <i>ēage</i>「目」）
++desc: 朝に花弁を開き、夕に閉じる性質から。<i>eye</i> は *h₃ekʷ-「目」で、<i>window</i>（風の目）とも通じる命名法。
++der: eye, ocular, optic, window
+
+@ danger ; /ˈdeɪndʒə/ ; 名 ; 危険
++lit: 「領主の権力」
++chain: 俗ラテン語 *<i>dominiārium</i>（<i>dominus</i>「主人」）→ OF <i>dangier</i>「支配力」→ ME
++desc: 「（領主の）支配下にあること」から「危害を加えられうる状態」へ。中英語では <i>in danger of</i>「〜の支配下に」の意で使われた。
++der: dominate, domain, dungeon, dame, madam, don, domestic
+
+@ debt ; /det/ ; 名 ; 借金
++lit: 「持っていないもの」
++chain: L <i>dēbitum</i>（<i>dē-</i> + <i>habēre</i>「持つ」）→ OF <i>dette</i> → ME <i>dette</i> → <i>debt</i>
++desc: 綴りの b は、16世紀にラテン語形に合わせて挿入されたもので、発音されない（語源的綴り直し、第4章）。
++der: debit, due, duty, endeavor, devoir, habit, exhibit, prohibit
++dbl: <i>debit</i>（ラテン直輸入）
+
+@ decimate ; /ˈdesɪmeɪt/ ; 動 ; 大量に殺す
++lit: 「十分の一を（罰として）殺す」
++chain: L <i>decimāre</i>（<i>decimus</i>「第十の」）
++desc: ローマ軍で反乱・敵前逃亡を犯した部隊に科された刑罰。籤で十人に一人を選び、残りの九人が撲殺した。
++note: 現代英語では「壊滅させる」の意で広く使われる。語源を根拠に「10%しか減らないはずだ」と論じるのは語源論的誤謬（第1章）。
+
+@ deer ; /dɪə/ ; 名 ; 鹿
++lit: 「動物」
++chain: OE <i>dēor</i>「動物、獣」→ ME → 現代英語で「鹿」に特化
++cog: 独 <i>Tier</i>「動物」, オランダ語 <i>dier</i>, ON <i>dýr</i>
++note: 『リア王』の "mice and rats, and such small deer"（小さな獣たち）に古義が残る。意味の縮小（第7章）の代表例。
+
+@ desultory ; /ˈdesltri/ ; 形 ; 散漫な
++lit: 「（馬から馬へ）跳び移る」
++chain: L <i>dēsultor</i>「曲馬の跳び乗り芸人」（<i>dē-</i> + <i>salīre</i>「跳ぶ」）
++der: salient, assault, insult, result, exult, resilient, somersault, salmon
++note: ローマの競技場で、走る馬から馬へ乗り移る芸人がいた。
+
+@ diaper ; /ˈdaɪəpə/ ; 名 ; おむつ
++lit: 「（全体が）白い（布）」
++chain: 中世ギリシア語 <i>díaspros</i>（<i>dia-</i>「すっかり」+ <i>áspros</i>「白い」）→ 中世ラテン語 <i>diasprum</i> → OF <i>diaspre</i>
++note: もとは高級な白麻の紋織物。英国では <i>nappy</i>（<i>napkin</i> の縮小形）を用いる。
+
+@ dilapidated ; /dɪˈlæpɪdeɪtɪd/ ; 形 ; 荒廃した
++lit: 「石が散らばった」
++chain: L <i>dis-</i>（離れて）+ <i>lapis, lapidis</i>「石」
++der: lapidary, lapis lazuli
++note: 語源的には石造建築についてのみ使うべきだ、という主張が19世紀にあったが、今日では木造にも用いる。
+
+@ dinosaur ; /ˈdaɪnəsɔː/ ; 名 ; 恐竜
++lit: 「恐ろしいトカゲ」
++chain: Gk <i>deinós</i>「恐ろしい」+ <i>saûros</i>「トカゲ」→ <i>Dinosauria</i>（リチャード・オーウェン, 1841）
++der: dinothere, saurian, tyrannosaur, dinoflagellate
++note: 日本語の「恐竜」は明治期の訳語で、原語に忠実。<i>deinós</i> は「畏怖すべき、途方もない」という両義的な語で、単に「怖い」ではない。
+
+@ dismal ; /ˈdɪzml/ ; 形 ; 陰気な
++lit: 「凶日」
++chain: L <i>diēs malī</i>「悪い日々」→ アングロ・ノルマン語 <i>dis mal</i>
++desc: 中世の暦には、毎月二日ずつ「エジプトの日」（<i>diēs Aegyptiacī</i>）と呼ばれる凶日があった。この語がやがて形容詞化した。
++note: 「経済学は陰鬱な科学（the dismal science）」はカーライルの造語（1849）。
+
+@ disaster ; /dɪˈzɑːstə/ ; 名 ; 災害
++lit: 「星回りの悪さ」
++chain: 伊 <i>disastro</i>（<i>dis-</i>「悪い」+ <i>astro</i>「星」）→ 仏 <i>désastre</i> → 英語
++der: astronomy, astrology, asterisk, asteroid, star（本来語）
++note: 占星術的世界観の化石。<i>ill-starred</i>, <i>lucky star</i> などの表現にも同じ発想が残る。
+
+@ dollar ; /ˈdɒlə/ ; 名 ; ドル
++lit: 「ヨアヒムの谷（の銀貨）」
++chain: 独 <i>Joachimsthaler</i>（ボヘミアのヨアヒムスタールで鋳造された銀貨）→ <i>Thaler</i> → 低地ドイツ語 <i>daler</i> → 英語
++der: dale（谷、本来語）, dell
++note: 現在のチェコ、ヤーヒモフ産の銀貨が、スペイン・ドル（ペソ）を経てアメリカの通貨単位となった。<i>dale</i>「谷」と同根。
+
+@ doom ; /duːm/ ; 名 ; 破滅、運命
++lit: 「定められたもの、判決」
++chain: OE <i>dōm</i>「判決、法、運命」
++der: deem（判断する）, -dom（kingdom, freedom, wisdom）, Doomsday（最後の審判の日）, Domesday Book
++note: 接尾辞 -dom はこの語の文法化した形（第7章）。<i>Domesday Book</i>（1086年の土地台帳）は「最後の審判のように覆せない記録」の意。
+
+@ dunce ; /dʌns/ ; 名 ; 劣等生
++chain: 人名 John Duns Scotus（1266頃–1308、スコットランドの神学者）
++desc: ドゥンス・スコトゥスの学派（<i>Dunses</i>）は、16世紀の人文主義者から「屁理屈をこねる時代遅れの徒」として嘲笑された。ここから「愚か者」の普通名詞となった。中世随一の精緻な思索家（<i>doctor subtilis</i>）に対する、あまりに酷い後世の扱いである。
++note: 三角帽子の <i>dunce cap</i> は19世紀の創作。
+
+@ dexterity ; /dekˈsterəti/ ; 名 ; 器用さ
++lit: 「右側の（性質）」
++chain: L <i>dexter</i>「右の」→ <i>dexteritās</i>
++der: dexterous, ambidextrous（「両手とも右手」）, dextrose（右旋性の糖）
++note: 対義語 <i>sinister</i>「左の」は「不吉な」の意になった。右利き多数派の言語では、右＝正しい・巧み、左＝不吉・不器用という価値づけが普遍的に見られる（仏 <i>gauche</i>「左の→ぎこちない」、<i>adroit</i>「右へ＝巧みな」）。
+
+@ dictionary ; /ˈdɪkʃənri/ ; 名 ; 辞書
++lit: 「言い回しの集成」
++chain: 中世ラテン語 <i>dictiōnārium</i>（<i>dictiō</i>「言うこと、語」）
++desc: 1225年ごろ、イングランドのジョン・オブ・ガーランドがラテン語の語彙集に付けた題名が最初期の用例とされる。
++der: dictate, diction, edict, verdict, predict, indicate, judge, teach（本来語）
+
+@ divan ; /dɪˈvæn/ ; 名 ; 長椅子、（トルコの）政務会議
++chain: ペルシア語 <i>dīvān</i>「書き付け、帳簿、役所」→ トルコ語 → 仏 → 英語
++desc: 「帳簿」→「役所」→「（役所の壁際に並ぶ）長椅子」と、意味が場所から家具へ移った。
++der: douane（仏「税関」）, duana（西）
++note: 同じ語が「税関」と「ソファ」の両方になった。
+
+@ dog ; /dɒɡ/ ; 名 ; 犬
++chain: OE <i>docga</i>（語源不明）
++desc: 古英語では犬の一般語は <i>hund</i>（＝ <i>hound</i>）で、<i>docga</i> は特定の頑健な犬種を指す稀な語だった。中英語期にこれが一般語に昇格し、<i>hound</i> は「猟犬」に狭まった。同種の交替はヨーロッパ諸語で英語だけに起きており、なぜ、どこから来た語かは分かっていない。
++note: 語源不明の基礎語の代表例（第12章）。
+
+@ dungeon ; /ˈdʌndʒən/ ; 名 ; 地下牢
++lit: 「主君の（塔）」
++chain: 俗ラテン語 *<i>dominiōnem</i>（<i>dominus</i>「主人」）→ OF <i>donjon</i>「城の主塔」
++desc: 城の中心をなす主塔（天守）が原義で、その地下が牢として使われたため意味が下降した。
++der: dominate, domain, danger, dame, don
+
+@ drink ; /drɪŋk/ ; 動 ; 飲む
++chain: OE <i>drincan</i> ← PGmc *drinkanan（語源不確実、非印欧起源の可能性）
++der: drench（「浸す」＝飲ませる。使役形）, drunk, drown(?)
++note: <i>drink</i>–<i>drank</i>–<i>drunk</i> はアプラウトの三階梯（第2章）。<i>drench</i> は i-ウムラウトを伴う使役動詞（第4章）。
+
+@ dirge ; /dɜːdʒ/ ; 名 ; 挽歌
++lit: 「導きたまえ」
++chain: L <i>dīrige</i>（<i>dīrigere</i>「導く」の命令形）
++desc: 死者のための朝課の交唱「<i>Dirige, Domine, Deus meus...</i>（主よ、わが神よ、導きたまえ）」の冒頭語が、そのまま歌の名になった。
++der: direct, direction, dirigible（「操縦できる（飛行船）」）, regal, right
++note: 典礼文の冒頭語が名詞化した例は多い（<i>requiem</i>「安息を」, <i>credo</i>「我信ず」, <i>magnificat</i>「あがめます」, <i>placebo</i>「私は喜ばせよう」）。
+
+@ dismantle ; /dɪsˈmæntl/ ; 動 ; 解体する
++lit: 「外套を脱がせる」
++chain: OF <i>desmanteler</i>（<i>des-</i> + <i>mantel</i>「外套」）
++der: mantle, mantelpiece, manteau
++note: 「城壁を取り去る」の軍事用語から一般化した。
+
+@ doctor ; /ˈdɒktə/ ; 名 ; 医師、博士
++lit: 「教える者」
++chain: L <i>docēre</i>「教える」→ <i>doctor</i>
++desc: 中世大学で「教える資格を持つ者」に与えられた称号。医師の意味は14世紀以降の英語での特殊化で、フランス語 <i>médecin</i>、ドイツ語 <i>Arzt</i> のように他言語では別語を用いる。
++der: doctrine, document, docile, indoctrinate, disciple, discipline, decent, dignity
+
+
+@ dandelion ; /ˈdændɪlaɪən/ ; 名 ; タンポポ
++lit: 「獅子の歯」
++chain: 仏 <i>dent de lion</i>「獅子の歯」→ ME
++desc: 鋸歯状の葉の形から。フランス語では現在 <i>pissenlit</i>（「寝床でおしっこ」＝利尿作用から）と呼ぶのが普通で、英語のほうが古形を保存している。
++der: dental, dentist, tooth（本来語）／lion, leonine
+
+@ debonair ; /debəˈneə/ ; 形 ; 愛想のよい
++lit: 「よい血筋の（鷹）」
++chain: OF <i>de bon aire</i>「よい素性の」
++note: <i>aire</i> は鷹の巣（<i>eyrie</i>）を指す鷹狩り用語で、「良い巣の出の鷹＝性質のよい鷹」から。中世の宮廷文化と鷹狩りの語彙が結びついた例。
+
+@ deluge ; /ˈdeljuːdʒ/ ; 名 ; 大洪水
++chain: L <i>dīluvium</i>（<i>dis-</i>+<i>luere</i>「洗う」）→ OF <i>deluge</i>
++der: dilute, ablution, lavatory, launder, lotion, latrine（すべて *lewh₃-「洗う」）
++note: 「われ亡きあとに洪水よ来たれ」（<i>Après moi, le déluge</i>）はポンパドゥール夫人の言葉とされる。
+
+@ dessert ; /dɪˈzɜːt/ ; 名 ; デザート
++lit: 「（食卓を）片づけること」
++chain: 仏 <i>desservir</i>「食卓を片づける」→ <i>dessert</i>
++note: <i>desert</i>「砂漠」（<i>dēserere</i>「見捨てる」）とは別語源。綴りの s の数で区別される。
+
+@ digit ; /ˈdɪdʒɪt/ ; 名 ; 数字、指
++lit: 「指」
++chain: L <i>digitus</i>「指」
++desc: 指で数えたことから「一桁の数」の意味が生じた。<i>digital</i>「デジタルの」は「指で数えられる＝離散的な」で、<i>analog</i>（連続的）と対をなす。
++der: digital, digitize, prestidigitation（「素早い指」＝手品）
++note: 10進法が普及したのも指の数による。フランス語の20進法の名残（<i>quatre-vingts</i>「四つの二十」）は、手足の指の合計とされる。
+
+@ dilemma ; /dɪˈlemə/ ; 名 ; ジレンマ
++lit: 「二つの前提」
++chain: Gk <i>di-</i>「二」+ <i>lêmma</i>「（議論で）取られたもの、前提」
++der: two, dual（*dwo-）／lemma, epilepsy, syllable（<i>lambánein</i>「取る」）
++note: 論理学で、どちらの前提を選んでも不都合な結論に至る論法。<i>on the horns of a dilemma</i>「ジレンマの角の上に」という古い比喩がある。
+
+@ diploma ; /dɪˈpləʊmə/ ; 名 ; 卒業証書
++lit: 「二つに折ったもの」
++chain: Gk <i>diplóos</i>「二重の」→ <i>díplōma</i>「二つ折りの公文書」→ L
++der: diplomat（「公文書を扱う者」）, diplomacy, double, duplex, diploid
++note: <i>diplomacy</i>「外交」が同語源であるのは、外交官が公文書（信任状）を携えたから。
+
+@ disciple ; /dɪˈsaɪpl/ ; 名 ; 弟子
++lit: 「学ぶ者」
++chain: L <i>discere</i>「学ぶ」→ <i>discipulus</i>
++der: discipline（「学ぶこと」→ 訓練→ 規律→ 学問分野）, docile, doctor, doctrine
++note: <i>discipline</i> が「学問分野」と「規律」と「懲罰」の三義を持つのは、「学ばせること」からの分岐。
+
+@ druid ; /ˈdruːɪd/ ; 名 ; ドルイド僧
++chain: ガリア語 <i>druides</i>（ケルト語 *dru-wid-「樫を知る者」または「深く知る者」）
++der: tree, true, trust（*deru-「木、堅い」）／wit, wise, vision（*weid-「知る」）
++note: 樫を神聖視したというプリニウスの記述と整合する語源説だが、第一要素を強意の接頭辞とみる説もある。
+
+@ dumbbell ; /ˈdʌmbel/ ; 名 ; ダンベル
++lit: 「音の出ない鐘」
++chain: <i>dumb</i>「口のきけない」+ <i>bell</i>
++desc: 教会の鐘を鳴らす練習用に、音の出ない錘を吊るした装置が起源。そこから重量挙げの器具の名になった。
++note: <i>dumb</i>「愚かな」の意味は、ドイツ語 <i>dumm</i>／イディッシュ語の影響を受けた19世紀アメリカ英語での発達。
+
+@ dude ; /djuːd/ ; 名 ; やつ
++chain: 語源不確実。1883年ニューヨークで「気取った伊達男」を指す新語として現れた
++note: <i>Yankee Doodle</i> の <i>doodle</i> からの短縮とする説が有力視されている。20世紀後半に「男一般」へ意味が広がった（<i>guy</i> と同じ経路）。

@@ -1,0 +1,150 @@
+== T
+
+@ tabloid ; /ˈtæblɔɪd/ ; 名 ; タブロイド紙
++chain: 商標 <i>Tabloid</i>（Burroughs Wellcome 社の圧縮錠剤, 1884）
++desc: 「錠剤のように圧縮された」の比喩から、要約された記事を載せる小型新聞を指すようになった（1901）。
++der: table, tablet, tabular
+
+@ tantalize ; /ˈtæntəlaɪz/ ; 動 ; じらす
++chain: ギリシア神話のタンタロス（Tántalos）
++desc: 神々の秘密を漏らした罰として、水に首まで浸かりながら飲もうとすると水が引き、頭上の果実に手を伸ばすと枝が逃げる、という永劫の責め苦を受けた。
++der: tantalum（元素名。酸に溶けず「何も吸収しない」性質から, 1802）
+
+@ tawdry ; /ˈtɔːdri/ ; 形 ; 安っぽい
++lit: 「（聖）オードリーの（レース）」
++chain: <i>St. Audrey's lace</i> → <i>t'Audrey</i> → <i>tawdry</i>
++desc: イーリーの聖オードリー（エセルドレダ）の祭日の市で売られた安物のレース襟から。聖女は喉の腫瘍を、若い頃に首飾りを好んだ罰と考えたという伝承がある。
++note: 語境界の切り直し（異分析）を含む語形成。
+
+@ tea ; /tiː/ ; 名 ; 茶
++chain: 閩南語（アモイ方言）<i>tê</i> → マレー語 → オランダ語 <i>thee</i> → 英語
++desc: 世界の「茶」の語は二系統に分かれる。海路（福建・アモイ経由）で伝わった地域は <i>te</i> 系（英 tea, 仏 thé, 独 Tee, 西 té）、陸路（北方方言 <i>chá</i> 経由）で伝わった地域は <i>cha</i> 系（露 чай, ペルシア語 chāy, トルコ語 çay, ポルトガル語 chá, 日本語「茶」）。
++note: 語形の分布が交易路の地図になっている好例。ポルトガルはマカオ（広東語 <i>cha</i>）経由のため例外的に <i>chá</i>。
+
+@ tennis ; /ˈtenɪs/ ; 名 ; テニス
++chain: 仏 <i>tenez!</i>「（さあ）取れ！」（<i>tenir</i>「保つ」の命令形）
++desc: 中世フランスのジュ・ド・ポーム（掌球技）で、サーブの際に相手にかけた掛け声とされる。確実ではないが有力な説。
++der: tenant, contain, maintain, tenacious
++note: <i>love</i>「0点」の語源も不確実で、仏 <i>l'œuf</i>「卵（＝ゼロの形）」説が知られるが裏づけは弱い。「愛のために（無得点でも）プレーする」からとする説もある。
+
+@ testify ; /ˈtestɪfaɪ/ ; 動 ; 証言する
++chain: L <i>testis</i>「証人」+ <i>facere</i>「する」
++desc: <i>testis</i> は *tri-st-「第三者として立つ者」とされる。
++der: testimony, testament, attest, contest, protest, detest, intestate
++note: 「ローマ人は睾丸（<i>testis</i>）に手を置いて誓った」という有名な俗説があるが、証拠はない。同音は、<i>testis</i>「証人」からの比喩的用法（「男らしさの証人」）とみられる。
+
+@ thug ; /θʌɡ/ ; 名 ; 暴漢
++chain: ヒンディー語 <i>ṭhag</i>「詐欺師」→ 英語（1810）
++desc: 19世紀インドで、旅人に近づいて絞殺し金品を奪ったとされる集団（タギー）の名。英領当局の記録が誇張を含むことは今日指摘されている。
++der: thuggery, thuggish
+
+@ tragedy ; /ˈtrædʒədi/ ; 名 ; 悲劇
++lit: 「山羊の歌」
++chain: Gk <i>trágos</i>「山羊」+ <i>ōidḗ</i>「歌」→ <i>tragōidíā</i>
++desc: 理由には諸説がある。（1）合唱隊が山羊の皮をまとった、（2）優勝賞品が山羊だった、（3）山羊を犠牲に捧げる儀礼で歌われた。いずれも古代からの推測で、確証はない。
++der: ode, comedy（<i>kômos</i>「浮かれ騒ぎ」+ <i>ōidḗ</i>）, melody, parody, rhapsody, prosody
++note: <i>comedy</i>「喜劇」の <i>kômos</i> はディオニュソス祭の練り歩き。
+
+@ travel ; /ˈtrævl/ ; 動 ; 旅行する
++lit: 「拷問する」
++chain: 後期ラテン語 <i>trepālium</i>「三本の杭の拷問具」→ OF <i>travailler</i>「苦しめる、苦労する」→ ME <i>travailen</i>「骨折る、旅する」
++desc: 中世の旅が苦役であったことを示す語。<i>travail</i>「苦役、陣痛」と <i>travel</i>「旅」は同一語の綴り分化。
++der: travail
++note: <i>trepālium</i> の語源説には異論もあるが、<i>travail</i> と <i>travel</i> が同語であることは確実。
+
+@ treacle ; /ˈtriːkl/ ; 名 ; 糖蜜
++lit: 「野獣（に噛まれた傷）の（解毒薬）」
++chain: Gk <i>thērion</i>「野獣」→ <i>thēriakḗ</i>「毒蛇の咬傷の薬」→ L → OF <i>triacle</i>
++desc: 蜜で練った万能解毒薬（テリアカ）を指し、その甘さから「糖蜜」の意味に転じた。
++der: theriac
+
+@ trivial ; /ˈtrɪviəl/ ; 形 ; 些細な
++lit: 「三叉路の」
++chain: L <i>trivium</i>（<i>tri-</i>「三」+ <i>via</i>「道」）「三叉路」→ <i>triviālis</i>「街角でありふれた」
++desc: 人の行き交う辻で交わされる話＝ありふれた話。中世の学芸では <i>trivium</i>（文法・修辞・弁証）が下位三科、<i>quadrivium</i>（算術・幾何・音楽・天文）が上位四科で、合わせて自由七科（liberal arts）。
++der: three, via, viaduct, obvious, deviate, previous
+
+@ trophy ; /ˈtrəʊfi/ ; 名 ; 戦利品、優勝杯
++lit: 「（敵の）敗走（の記念）」
++chain: Gk <i>tropḗ</i>「転回、敗走」→ <i>trópaion</i>「戦勝記念碑」→ L <i>tropaeum</i> → 仏 <i>trophée</i>
++desc: 敵が向きを変えて逃げた地点に、鹵獲した武具を掛けて立てた記念物。
++der: trope, tropic（回帰線）, entropy, heliotrope
+
+@ tuxedo ; /tʌkˈsiːdəʊ/ ; 名 ; タキシード
++chain: 地名 Tuxedo Park（ニューヨーク州の高級住宅地）
++desc: 1886年、同地のクラブの舞踏会で着用されたことから。地名自体はレナペ語（アルゴンキン系）の氏族名に由来するとされる。
++note: 英国では <i>dinner jacket</i> という。
+
+@ typhoon ; /taɪˈfuːn/ ; 名 ; 台風
++desc: 二つの系統が合流した語。（1）ギリシア語 <i>Tȳphôn</i>（神話の怪物、「旋風」）→ アラビア語 <i>ṭūfān</i>「大洪水」→ ポルトガル語経由。（2）中国語「大風」（広東語 <i>tai fung</i>）。現在の英語形はこの二つの混淆とされる。
++note: 日本語「台風」は明治期に定着した表記で、中国語「颱風」による。語源をめぐる東西の合流が、そのまま語形に残っている。
+
+@ tulip ; /ˈtjuːlɪp/ ; 名 ; チューリップ
++lit: 「ターバン」
++chain: ペルシア語 <i>dulband</i>「ターバン」→ トルコ語 <i>tülbend</i> → 仏 <i>tulipe</i>
++dbl: <i>turban</i>（同語源）
++desc: 花の形がターバンに似ていることから。オスマン帝国から伝わり、17世紀オランダの「チューリップ狂時代」を引き起こした。
++note: <i>tulip</i> と <i>turban</i> が同語源であるのは、意外だが確実。
+
+@ tycoon ; /taɪˈkuːn/ ; 名 ; 大物、実業界の大立者
++lit: 「大君」
++chain: 日本語「大君」（たいくん）→ 英語（1857）
++desc: 幕末、将軍の対外的称号として用いられた「大君」を、ハリスら米国側が持ち帰った。南北戦争期にリンカーンの愛称として使われ、20世紀に「業界の大物」の意味で定着した。
++note: 日本語からの借用語のうち、もっとも早く英語に定着したものの一つ。
+
+@ tariff ; /ˈtærɪf/ ; 名 ; 関税
++chain: アラビア語 <i>taʿrīf</i>「通知、（料金の）表示」→ 伊 <i>tariffa</i> → 英語
++note: 地中海交易の語彙がアラビア語からイタリア語を経由して入った典型例（<i>arsenal</i>, <i>magazine</i>, <i>admiral</i>, <i>average</i> も同系統）。
+
+@ tribulation ; /trɪbjʊˈleɪʃn/ ; 名 ; 苦難
++lit: 「（脱穀の）そりで押しつぶすこと」
++chain: L <i>trībulum</i>「脱穀そり」→ <i>trībulāre</i>「押しつぶす、苦しめる」
++der: tribulate, trite（「すり減らされた」）, attrition, detriment, contrite（「打ち砕かれた（心）」）
++note: <i>trite</i>「陳腐な」は「（使い古して）すり減った」。同じ語根 *terh₁-「こする」から。
+
+@ tabby ; /ˈtæbi/ ; 名 ; トラ猫
++chain: アラビア語 <i>ʿattābī</i>（バグダードの地区 al-ʿAttābiyya 産の縞織物）→ 仏 <i>tabis</i> → 英語
++desc: 縞模様の絹織物の名が、縞模様の猫に転用された。地区名はウマイヤ朝の王子アッターブに由来する。
+
+
+@ talent ; /ˈtælənt/ ; 名 ; 才能
++lit: 「秤の皿、重量単位」
++chain: Gk <i>tálanton</i>「秤、重量単位」→ L <i>talentum</i>「貨幣単位」→ OE
++desc: マタイ伝25章の「タラントンの譬え」（主人から預かった貨幣を活かした僕と、埋めて隠した僕）から、中世に「神から与えられた能力」の比喩が生まれ、16世紀に「才能」の語義が定着した。
++der: tolerate, extol, relate, translate, atlas, Atlantic（*telh₂-「担う」）
++note: 聖書の一つの譬えが、ヨーロッパ諸語すべてに同じ意味の語を生んだ（仏 <i>talent</i>, 独 <i>Talent</i>, 伊 <i>talento</i>）。
+
+@ tally ; /ˈtæli/ ; 名 ; 勘定
++lit: 「刻み目を入れた棒」
++chain: L <i>tālea</i>「切った枝、挿し木」→ アングロ・フランス語 <i>tallie</i>
++desc: 中世イングランドの財務では、割符棒（tally stick）に刻みを入れ、縦に割って債権者と債務者が半分ずつ持った。1834年、不要になった大量の割符棒を焼却した際の火事で旧ウェストミンスター宮殿が焼失した。
++der: tailor（「裁つ人」）, retail（「切り分けて売る」）, detail（「細かく切る」）, entail
+
+@ theory ; /ˈθɪəri/ ; 名 ; 理論
++lit: 「見ること、観照」
++chain: Gk <i>theōreîn</i>「眺める」（<i>théā</i>「眺め」+ <i>horân</i>「見る」）→ <i>theōríā</i>「観照、思弁」
++der: theater（「見る場所」）, theorem, theoretical
++note: <i>theory</i> と <i>theater</i> は同語源。ギリシア哲学では「観照」（<i>theōríā</i>）が最高の生の形とされた。<i>theo-</i>「神」（<i>theós</i>）とは別語源。
+
+@ thing ; /θɪŋ/ ; 名 ; もの
++lit: 「集会、訴訟」
++chain: OE <i>þing</i>「集会、議案、事柄」
++desc: ゲルマン諸部族の民会（アイスランドの <i>Alþingi</i> は現存する最古の議会の一つ）。「議題」→「事柄」→「もの」と抽象化・一般化した。
++cog: 独 <i>Ding</i>, ON <i>þing</i>
++note: ラテン語 <i>rēs</i>「もの」も「訴訟」の意を持つ（<i>rēs pūblica</i>「公事」→ republic）。同じ意味の道筋を独立にたどった並行例である。
+
+@ tip ; /tɪp/ ; 名 ; チップ
++chain: 17世紀の犯罪者俗語 <i>tip</i>「渡す、与える」から
++note: "To Insure Promptness" の頭字語だとする説は<b>誤り</b>（第VIII部）。
+
+@ toast ; /təʊst/ ; 名 ; 乾杯、トースト
++lit: 「焼いて乾かす」
++chain: L <i>torrēre, tostum</i>「焼く、乾かす」→ OF <i>toster</i>
++desc: 17世紀、ワインに香りづけのため焼いたパンを浮かべる習慣があり、「（宴席で）杯を挙げて讃える対象」を <i>toast</i> と呼ぶようになった。
++der: torrid（「灼けた」）, torrent（「激流」＝沸き立つもの）, thirst（本来語の同根語）, terra（「乾いた土地」）
++note: <i>thirst</i>, <i>terrain</i>, <i>torrid</i>, <i>toast</i> がすべて「乾く」に遡る。
+
+@ tribe ; /traɪb/ ; 名 ; 部族
++chain: L <i>tribus</i>「（ローマの）三分割された市民団の一つ」（<i>tri-</i>「三」説）
++der: tribune（護民官）, tribute（貢納）, contribute, attribute, distribute, tributary, tribunal
++note: <i>tribute</i>「貢ぎ物」は「部族への割り当て」から。<i>contribute</i>, <i>distribute</i> も同じ語根。

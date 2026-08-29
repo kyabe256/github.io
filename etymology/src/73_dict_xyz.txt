@@ -1,0 +1,57 @@
+== X – Z
+
+@ xerox ; /ˈzɪərɒks/ ; 動・名 ; 複写（する）
++lit: 「乾いた書写」
++chain: Gk <i>xērós</i>「乾いた」+ <i>graphein</i>「書く」→ <i>xerography</i>（1948）→ 商標 Xerox
++desc: 湿式の写真製版に対し、乾式であることを示す命名。商標が普通名詞化・動詞化した例。
++der: xerophyte（乾生植物）, elixir（アラビア語 <i>al-iksīr</i> ＜ Gk <i>xḗrion</i>「乾いた粉薬」）
++note: <i>elixir</i>「霊薬」が「乾いた粉」に遡るのは、傷に振りかける粉薬が原義だったため。
+
+@ xylophone ; /ˈzaɪləfəʊn/ ; 名 ; 木琴
++lit: 「木の音」
++chain: Gk <i>xýlon</i>「木材」+ <i>phōnḗ</i>「音」（1866）
++der: xylem（木部）, xylitol（キシリトール。木から得られる糖アルコール）
++note: 日本語「木琴」も同じ構成の翻訳借用。
+
+@ yankee ; /ˈjæŋki/ ; 名 ; ヤンキー
++chain: 語源不確実。オランダ語 <i>Janke</i>「ヤンちゃん（Jan の縮小形）」説が有力
++desc: ニューアムステルダム（現ニューヨーク）のオランダ人が、ニューイングランドの英国系入植者を呼んだあだ名とされる。<i>Yankee Doodle</i> は英国側の嘲弄歌が、独立戦争で当のアメリカ側に愛唱歌として奪い返されたもの。
++note: 日本語の「ヤンキー（不良）」は英語の語義とは無関係な和製用法。
+
+@ yoga ; /ˈjəʊɡə/ ; 名 ; ヨーガ
++lit: 「結合、くびき」
++chain: サンスクリット語 <i>yoga-</i>（<i>yuj-</i>「結ぶ」）→ 英語（1820）
++root: *yewg-「結ぶ」
++der: yoke（本来語）, join, junction, conjugal, subjugate, jugular（ラテン系）, zygote（ギリシア系）
++note: 「心身を結ぶ修行」の意。英語 <i>yoke</i>「くびき」と同根。
+
+@ zeal ; /ziːl/ ; 名 ; 熱意
++chain: Gk <i>zêlos</i>「熱心、競争心、嫉妬」→ 後期ラテン語 <i>zēlus</i> → OF
++dbl: <i>jealous</i>（同語源。仏語経由の摩耗形）
++der: zealot（熱心党。1世紀ユダヤの反ローマ集団）, zealous, jealousy
++note: <i>zeal</i>「熱意」と <i>jealousy</i>「嫉妬」が同語源であるのは、ギリシア語 <i>zêlos</i> が「熱烈な思い」の両面（憧れと妬み）を含んでいたため。
+
+@ zenith ; /ˈzenɪθ/ ; 名 ; 天頂
++lit: 「（頭上の）道」
++chain: アラビア語 <i>samt (ar-raʾs)</i>「（頭の）方向」→ 中世ラテン語での誤写 <i>senit</i> → <i>zenith</i>
++desc: 写本の m が ni と誤読されたことによる、誤写が定着した稀な例。
++der: azimuth（同じ <i>as-samt</i> から）, nadir（<i>naẓīr</i>「（天頂の）対応点」＝天底）
++note: 中世の天文学がアラビア語からラテン語へ移された過程の痕跡。
+
+@ zero ; /ˈzɪərəʊ/ ; 名 ; 零
++lit: 「空」
++chain: サンスクリット語 <i>śūnya</i>「空」→ アラビア語 <i>ṣifr</i>「空、零」→ 中世ラテン語 <i>zephirum</i> → 伊 <i>zero</i>
++dbl: <i>cipher</i>（同じ <i>ṣifr</i> からの別経路。「零」→「暗号」）
++desc: インドで発明された零の概念が、アラビア語で「空」と訳され、ヨーロッパへ伝わった。フィボナッチ『算板の書』（1202）が導入に大きな役割を果たした。
++note: <i>cipher</i> が「暗号」を意味するようになったのは、零を用いた記数法が一般人には理解できない「秘密の記号」に見えたためとされる。
+
+@ zodiac ; /ˈzəʊdiæk/ ; 名 ; 黄道十二宮
++lit: 「動物たちの（輪）」
++chain: Gk <i>zōidion</i>「小さな動物、（星座の）像」→ <i>zōidiakòs kýklos</i>「動物の輪」→ L
++der: zoo, zoology, biology, quick（本来語）
++note: 十二宮のうち動物でないもの（天秤座、乙女座、水瓶座、射手座）もあるが、多数が動物であることから名づけられた。
+
+@ zombie ; /ˈzɒmbi/ ; 名 ; ゾンビ
++chain: 西アフリカのキコンゴ語 <i>nzambi</i>「神」／<i>zumbi</i>「呪物」→ ハイチ・クレオール語 → 英語（1819）
++desc: ハイチのヴードゥー信仰における、呪術で蘇らされた死者。1929年のシーブルック『魔法の島』と1932年の映画で大衆化した。計算機科学の <i>zombie process</i>「ゾンビプロセス」もこの比喩。
+
