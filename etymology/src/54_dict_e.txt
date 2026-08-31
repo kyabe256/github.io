@@ -135,3 +135,134 @@
 +der: udder（本来語の同根語）, exuberance
 +note: <i>ūber</i> は英語 <i>udder</i>「乳房」と同根。豊かさを乳で表す発想。
 
+
+@ eager ; /ˈiːɡə/ ; 形 ; 熱心な
++lit: 「鋭い」
++chain: L <i>acer</i>「鋭い」→ OF <i>aigre</i> → ME <i>egre</i>
++der: acid, acute, acrid, vinegar（<i>vin aigre</i>「酸い酒」）, oxygen（ギ）
++note: ハムレットの "a nipping and an eager air"「刺すように鋭い空気」に古義が残る。
+
+@ earn ; /ɜːn/ ; 動 ; 稼ぐ
++chain: OE <i>earnian</i>「（労働で）得る」
++cog: 独 <i>Ernte</i>「収穫」
++note: 収穫の語彙から労働報酬へ。
+
+@ earth ; /ɜːθ/ ; 名 ; 地球、土
++chain: OE <i>eorþe</i> ← PGmc *erþō
++cog: 独 <i>Erde</i>, オランダ語 <i>aarde</i>
++note: ラテン系は <i>terr-</i>（「乾いた土地」）、ギリシア系は <i>geo-</i>。三系統が英語に揃っている。惑星名で唯一、ギリシア・ローマ神話に由来しない。
+
+@ easel ; /ˈiːzl/ ; 名 ; 画架
++lit: 「ろば」
++chain: オランダ語 <i>ezel</i>「ろば」（L <i>asinus</i>）
++der: ass（本来語化した借用）, asinine
++note: 荷を背負う道具を「ろば」と呼ぶ比喩。ドイツ語 <i>Esel</i>、フランス語 <i>chevalet</i>「小さな馬」も同型の命名。
+
+@ east ; /iːst/ ; 名 ; 東
++root: *h₂ews-「輝く、暁」
++chain: OE <i>ēast</i>
++der: Easter（女神 <i>Ēostre</i>）, aurora, austral, Australia, oriole
++note: 「日の昇る方」。<i>orient</i>（ラ「昇る」）と発想が同じ。
+
+@ edit ; /ˈedɪt/ ; 動 ; 編集する
++chain: L <i>ēdere</i>「世に出す」→ <i>ēditor</i> → 英語 <i>editor</i>（1712）→ 逆成 <i>edit</i>（1791）
++der: edition, editorial, date, data, tradition, betray（*deh₃- 系）
++note: 名詞が先で動詞が後の逆成（第6章）。
+
+@ educate ; /ˈedjukeɪt/ ; 動 ; 教育する
++lit: 「引き出す」
++chain: L <i>ē-</i>（外へ）+ <i>dūcere</i>「導く」→ <i>ēdūcere</i>
++der: duke, conduct, produce, reduce, introduce, aqueduct, tug（本来語）
++note: 「（内にあるものを）引き出す」という教育観がこの語に込められている。
+
+@ effort ; /ˈefət/ ; 名 ; 努力
++chain: L <i>ex-</i> + <i>fortis</i>「強い」→ OF <i>esforcier</i>
++der: force, fort, comfort, enforce, reinforce, fortitude
++note: 「力を外へ出すこと」。
+
+@ elbow ; /ˈelbəʊ/ ; 名 ; 肘
++lit: 「腕の曲がり」
++chain: OE <i>elnboga</i>（<i>eln</i>「前腕、尺」+ <i>boga</i>「弓、曲がり」）
++der: ell（長さの単位）, bow（弓）, elbow room
++note: <i>ell</i> は前腕の長さに由来する古い長さの単位。ラテン語 <i>ulna</i>「尺骨」と同根。
+
+@ elephant ; /ˈelɪfənt/ ; 名 ; 象
++chain: Gk <i>eléphās, eléphantos</i>「象、象牙」→ L <i>elephantus</i>
++conf: 一説　語源はエジプト語またはセム語からの借用とされるが確定しない
++der: ivory は別語源（エジプト語 <i>ābu</i>）
++note: 古英語には <i>elpend</i> という形もあった。<i>white elephant</i>「無用の長物」はシャム王が厄介払いに白象を贈った伝承から。
+
+@ emergency ; /ɪˈmɜːdʒənsi/ ; 名 ; 緊急事態
++lit: 「（水面から）浮かび出ること」
++chain: L <i>ē-</i>（外へ）+ <i>mergere</i>「沈める」→ <i>ēmergere</i>
++der: emerge, merge, submerge, immerse, merger
++note: <i>merge</i>「合併する」の原義は「沈める」。<i>emergency</i> は「（事態が）突然浮上すること」。
+
+@ empire ; /ˈempaɪə/ ; 名 ; 帝国
++chain: L <i>imperāre</i>「命じる」（<i>in-</i>+<i>parāre</i>「用意する」）→ <i>imperium</i> → OF <i>empire</i>
++der: emperor, imperial, imperative, imperious
++note: <i>imperative</i>「命令法」も同語。<i>parāre</i>「用意する」（prepare, repair）が語根。
+
+@ engine ; /ˈendʒɪn/ ; 名 ; エンジン
++lit: 「生まれつきの才、工夫」
++chain: L <i>ingenium</i>「生まれつきの性質、才能」→ OF <i>engin</i>「工夫、仕掛け」
++der: ingenious, genius, gene, genus, generate, kin（本来語）
++note: 「才知」→「巧妙な仕掛け」→「機械」。<i>engineer</i>「技師」も同語。<i>ingenious</i>「巧妙な」と同根。
+
+@ enjoy ; /ɪnˈdʒɔɪ/ ; 動 ; 楽しむ
++chain: OF <i>enjoir</i>（<i>en-</i>+<i>joir</i>「喜ぶ」＜ L <i>gaudēre</i>）
++der: joy, rejoice, jewel(?), gaudy
++note: 法律用語の <i>enjoy a right</i>「権利を享有する」に古義（「所有して用いる」）が残る。
+
+@ enormous ; /ɪˈnɔːməs/ ; 形 ; 巨大な
++lit: 「規範を外れた」
++chain: L <i>ē-</i>（外へ）+ <i>norma</i>「物差し、規範」
++der: norm, normal, abnormal, enormity
++note: <i>enormity</i> は「巨大さ」ではなく「凶悪さ」を意味する（規範を外れた行い）。混同されやすい語（第11章）。
+
+@ envelope ; /ˈenvələʊp/ ; 名 ; 封筒
++chain: OF <i>envoluper</i>「包む」
++der: develop（「包みを開く」）, envelop
++note: <i>develop</i> と正反対の対をなす。
+
+@ envy ; /ˈenvi/ ; 名 ; 妬み
++lit: 「（悪意をもって）見つめる」
++chain: L <i>in-</i>（〜に対して）+ <i>vidēre</i>「見る」→ <i>invidēre</i>
++der: invidious, vision, video, evident, provide, wit（本来語）
++note: 「邪視」（evil eye）の観念に基づく。妬みは視線として表現される。
+
+@ equal ; /ˈiːkwəl/ ; 形 ; 等しい
++chain: L <i>aequus</i>「平らな、等しい」→ <i>aequālis</i>
++der: equation, equator, equilibrium, equity, adequate, iniquity, equanimity, equinox
++note: <i>equestrian</i>「馬術の」（<i>equus</i>「馬」）とは別語源。綴りが紛らわしい。
+
+@ evening ; /ˈiːvnɪŋ/ ; 名 ; 夕方
++chain: OE <i>ǣfnung</i>（<i>ǣfen</i>「夕」）
++der: eve, even（夕、<i>Christmas Eve</i>）, eventide
++note: <i>even</i>「平らな」とは別語源の同綴語。
+
+@ evidence ; /ˈevɪdəns/ ; 名 ; 証拠
++lit: 「はっきり見えること」
++chain: L <i>ē-</i>（外へ）+ <i>vidēre</i>「見る」→ <i>ēvidēns</i>
++der: evident, vision, provide, prudent, envy, wit, wise（本来語）
++note: 「見えること」が証拠であるという、視覚中心の認識観。
+
+@ example ; /ɪɡˈzɑːmpl/ ; 名 ; 例
++lit: 「取り出されたもの」
++chain: L <i>ex-</i>（外へ）+ <i>emere</i>「取る」→ <i>exemplum</i>
++dbl: <i>sample</i>（頭音消失形）
++der: exemplary, exempt, redeem, ransom, premium, prompt
++note: <i>sample</i>「見本」と <i>example</i>「例」は同語源の二重語。
+
+@ exercise ; /ˈeksəsaɪz/ ; 名・動 ; 運動、行使する
++lit: 「（家畜を）追い出す」
++chain: L <i>ex-</i> + <i>arcēre</i>「囲い込む」→ <i>exercēre</i>「働かせる」
++der: coerce（「共に囲い込む」＝強制する）, exert は別
++note: 家畜を囲いから出して働かせることが原義。<i>coerce</i>「強制する」と同根。
+
+@ exit ; /ˈeksɪt/ ; 名 ; 出口
++lit: 「彼は去る」
++chain: L <i>exit</i>（<i>exīre</i>「出て行く」の三人称単数現在）
++der: initial, transit, circuit, itinerary, ambition, perish
++note: 戯曲のト書き「（登場人物が）退場する」がそのまま名詞化した。複数は <i>exeunt</i>。
+

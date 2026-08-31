@@ -325,3 +325,430 @@
 +der: zoo, zoology, zodiac（「動物の輪」）, protozoa, spermatozoon, azo-, zoophyte
 +note: <i>zodiac</i>「黄道十二宮」は、星座の多くが動物にちなむため「動物の環」。
 
+
+== 補遺 A – K
+
+@ acou- ; Gk <i>akoúein</i>「聞く」
++der: acoustic, acoustics, anacusis, hyperacusis
++note: ラテン系の対応は <i>aud-</i>（audio）、本来語は <i>hear</i>。
+
+@ aer- ; Gk <i>aḗr</i>「空気」
++der: aerial, aerobic（「空気のある」）, anaerobic, aeronautics, aerosol, aerodynamics, air, malaria（「悪い空気」）
++note: <i>air</i> はラテン語 <i>āēr</i> 経由。<i>aerobics</i>「エアロビクス」は1968年の造語。
+
+@ agr- ; Gk <i>ágrios</i>「野生の」
++der: agrostology／ラテン系 <i>ager</i>（agriculture）と同根
++note: 本来語 <i>acre</i> と同根。
+
+@ alg- ; Gk <i>álgos</i>「痛み」
++der: analgesic（「痛みのない」）, neuralgia, myalgia, nostalgia（「帰郷の痛み」）, cephalalgia
++note: <i>nostalgia</i> は1688年に医学用語として造られた（第VI部）。
+
+@ all- ; Gk <i>állos</i>「他の」
++root: *h₂el-
++der: allegory（「別の場で語る」）, allergy（「別の働き」）, allele, allophone, allomorph, allopathy, parallel
++note: 言語学の <i>allophone</i>「異音」、<i>allomorph</i>「異形態」はこの要素。
+
+@ ang- ; Gk <i>ángelos</i>「使者」
++der: angel, evangelist（「よい知らせを告げる者」）, evangelical, angelic
++note: 「天使」は本来「使者」。<i>gospel</i> は <i>euangélion</i> の翻訳借用。
+
+@ anth- ; Gk <i>ánthos</i>「花」
++der: anthology（「花を集めたもの」）, anther, chrysanthemum（「金の花」）, anthozoan, exanthema
++note: <i>anthology</i>「詞華集」は文字通り「花摘み」。
+
+@ arthr- ; Gk <i>árthron</i>「関節」
++root: *h₂er-「合わせる」
++der: arthritis, arthropod（「関節のある足」）, arthroscopy, arthrosis
++note: ラテン語 <i>articulus</i>（article）と同根。
+
+@ atm- ; Gk <i>atmós</i>「蒸気」
++der: atmosphere（「蒸気の球」）, atmospheric
++note: 1638年の造語。
+
+@ audi- ; → ラテン系
++cf: ギリシア系の「聞く」は <b>acou-</b>。
+
+@ balan- ; Gk <i>bállein</i>「投げる」
++cf: → <b>*gʷelH-</b>（投げる）。symbol, problem, devil, ballistic。
+
+@ bar- / bary- ; → 前掲
++cf: → <b>bar-</b>（重さ）。barometer, baritone, barium。
+
+@ blast- ; Gk <i>blastós</i>「芽」
++der: blastula, fibroblast, osteoblast, blastoma
++note: 発生学の術語を作る要素。
+
+@ brachi- ; Gk <i>brakhíōn</i>「腕」
++der: brachial, brachiate, brace（仏経由）, bracelet, embrace（「腕で抱く」）, pretzel(?)
++note: <i>embrace</i>「抱きしめる」は「腕の中に」。<i>bracelet</i>「腕輪」も同根。
+
+@ bront- ; Gk <i>brontḗ</i>「雷」
++der: brontosaurus（「雷トカゲ」）, brontide
++note: 1879年マーシュの命名。現在は <i>Apatosaurus</i> とされることが多い。
+
+@ carcin- ; Gk <i>karkínos</i>「蟹」
++der: carcinoma, carcinogen, carcinogenic／ラテン系 cancer（同義の「蟹」）
++note: 腫瘍の周囲に伸びる血管を蟹の脚に見立てたヒポクラテスの命名。<i>cancer</i>（ラ）も「蟹」。
+
+@ cephal- ; Gk <i>kephalḗ</i>「頭」
++der: cephalic, encephalitis, hydrocephalus, cephalopod（「頭足類」）, brachycephalic, acephalous
++note: <i>encephalo-</i>「脳」は「頭の中の」。
+
+@ chir- ; → 前掲
++cf: → <b>*ǵʰes-r-</b>（手）。chiropractic, surgery。
+
+@ chlor- ; Gk <i>khlōrós</i>「黄緑の」
++der: chlorine, chlorophyll（「緑の葉」）, chloroform, chloride, chlorosis
++note: 塩素は黄緑色の気体であることから1810年デービーが命名。
+
+@ chondr- ; Gk <i>khóndros</i>「軟骨、粒」
++der: chondrite, mitochondria（「糸＋粒」）, hypochondria（「肋軟骨の下」）
++note: <i>hypochondria</i>「心気症」は、憂鬱の座が肋骨下の内臓にあると考えられたため。
+
+@ cine- ; → 前掲
++cf: → <b>kine-</b>（動かす）。cinema, kinetic。
+
+@ clast- ; Gk <i>klān</i>「折る」
++der: iconoclast（「像を打ち砕く者」）, clastic, osteoclast
++note: 8〜9世紀ビザンツの聖像破壊運動から。
+
+@ cocc- ; Gk <i>kókkos</i>「実、粒」
++der: coccus, streptococcus（「連鎖の粒」）, staphylococcus（「ぶどうの房の粒」）, cochineal
++note: 細菌の形状による命名。連鎖球菌・ブドウ球菌の名は語源に忠実。
+
+@ crin- ; Gk <i>krínein</i>「分ける、判断する」
++cf: → <b>crisis</b>（第VI部）。critic, criterion, endocrine（「内に分泌する」）。
+
+@ cyt- ; Gk <i>kýtos</i>「うつわ、細胞」
++der: cytology, cytoplasm, leukocyte（白血球）, erythrocyte（赤血球）, phagocyte, cytokine
++note: <i>-cyte</i> は細胞、<i>cyto-</i> は「細胞の」。
+
+@ dactyl- ; Gk <i>dáktylos</i>「指」
++der: pterodactyl（「翼の指」）, dactyl（詩の長短短格）, polydactyly, date（ナツメヤシ）
++note: ナツメヤシの実 <i>date</i> は形が指に似ることから。日付の <i>date</i> とは別語源。
+
+@ dendr- ; Gk <i>déndron</i>「木」
++root: *deru-「木」
++der: dendrite, rhododendron（「薔薇の木」）, dendrochronology, philodendron
++note: 本来語 <i>tree</i>, <i>true</i> と同根。
+
+@ derm- ; → 前掲
++cf: → <b>derm-</b>（皮）。dermatology, epidermis, taxidermy。
+
+@ dyn- ; → 前掲
++cf: → <b>dyn-</b>（力）。dynamic, dynamite, dynasty。
+
+@ ec- / eco- ; → 前掲
++cf: → <b>*weyḱ-</b>（家・集落）。economy, ecology, parish。
+
+@ enter- ; Gk <i>énteron</i>「腸」
++der: enteric, enteritis, gastroenteritis, dysentery（「腸の不調」）, mesentery
++note: <i>entero-</i> は腸、<i>gastro-</i> は胃。
+
+@ erg- ; → 前掲
++cf: → <b>erg-</b>（仕事）。energy, surgery, organ, allergy。
+
+@ eu- ; → 接辞編
++cf: → <b>eu-</b>（よい）。eulogy, euphoria, euthanasia。
+
+@ gastr- ; Gk <i>gastḗr</i>「胃」
++der: gastric, gastritis, gastronomy（「胃の法則」＝美食学）, gastropod（「腹足類」）, gastroenterology
++note: <i>gastronomy</i>「美食学」は1801年の仏語造語。
+
+@ gen- ; → 前掲
++cf: → <b>*ǵenh₁-</b>（生む）。genesis, gene, -gen, gonad。
+
+@ gloss- / glott- ; Gk <i>glôssa</i>「舌、言語」
++der: glossary（「難語の注釈」）, gloss, glottis, polyglot（「多くの舌」）, epiglottis, isogloss, diglossia
++note: <i>gloss</i>「注釈」は、写本の行間に書き込んだ難語の説明から。
+
+@ hal- ; Gk <i>háls</i>「塩、海」
++root: *seh₂l-
++der: halogen（「塩を生む」）, halite, halophyte, halcyon（民間語源で h が付いた）
++note: 本来語 <i>salt</i> と同根。ハロゲン元素は塩を作ることから1826年の命名。
+
+@ hepat- ; Gk <i>hêpar, hḗpatos</i>「肝臓」
++der: hepatitis, hepatic, heparin, hepatology
++note: ラテン語の <i>iecur</i>「肝」は英語に残らず、ギリシア語形が医学用語を独占した。
+
+@ heli- ; Gk <i>hḗlios</i>「太陽」
++der: helium, heliocentric, heliotrope（「太陽に向く花」）, perihelion, aphelion, heliograph
++note: ヘリウムは1868年、太陽のスペクトルで先に発見されたため「太陽の元素」と命名された。
+
+@ hem- ; → 前掲
++cf: → <b>hem-</b>（血）。hemoglobin, anemia, leukemia。
+
+@ hepta- / hexa- ; Gk <i>heptá</i>「七」, <i>héx</i>「六」
++der: heptagon, Heptateuch, heptathlon／hexagon, hexameter, hexadecimal
++note: 情報科学の <i>hex</i>「16進」は <i>hexa-</i>（6）+ <i>deca-</i>（10）。
+
+@ hier- ; → 前掲
++cf: → <b>hier-</b>（聖なる）。hierarchy, hieroglyph。
+
+@ hipp- ; Gk <i>híppos</i>「馬」
++root: *h₁eḱwos
++der: hippopotamus（「河の馬」）, hippodrome, Philip（「馬を愛する者」）, eohippus, hippocampus（「海馬」）
++note: 脳の <i>hippocampus</i>「海馬」は形がタツノオトシゴ（＝「馬の怪物」）に似ることから。
+
+@ hod- ; Gk <i>hodós</i>「道」
++der: method（「（道を）追うこと」）, exodus（「出て行く道」）, period（「巡る道」）, episode, anode, cathode, odometer, synod
++note: 電池の <i>anode</i>「陽極」・<i>cathode</i>「陰極」は「上る道」「下る道」。ファラデーの命名。
+
+@ hydr- ; → 前掲
++cf: → <b>hydr-</b>（水）。hydrogen, hydraulic, dropsy。
+
+@ hygr- ; Gk <i>hygrós</i>「湿った」
++der: hygrometer, hygroscopic
++note: <i>hygiene</i>「衛生」は健康の女神ヒュギエイアで別語源。
+
+@ hyps- ; Gk <i>hýpsos</i>「高さ」
++der: hypsometer, hypsography
++note: 稀な要素。
+
+@ iatr- ; Gk <i>iatrós</i>「医者」
++der: pediatrics（「子どもの医術」）, psychiatry, geriatrics, iatrogenic（「医原性の」）
++note: <i>iatrogenic</i>「医療行為が原因の」は20世紀の術語。
+
+@ is- / iso- ; Gk <i>ísos</i>「等しい」
++der: isotope（「同じ場所」）, isobar, isotherm, isosceles（「等しい脚」）, isomer, isometric, isolate は別語源
++note: <i>isotope</i>「同位体」は周期表で「同じ場所」を占めることから1913年ソディの命名。
+
+@ kilo- ; Gk <i>khīlioi</i>「千」
++der: kilogram, kilometer, kilobyte, kilowatt
++note: メートル法の接頭辞として1795年に採用された。
+
+== 補遺 L – Z
+
+@ lept- ; Gk <i>leptós</i>「細い、軽い」
++der: lepton（素粒子）, leptin, leptospirosis
++note: 素粒子の <i>lepton</i>「軽粒子」は1948年の命名。
+
+@ leuk- / leuc- ; → 前掲
++cf: → <b>*lewk-</b>（光・白）。leukemia, leukocyte, light。
+
+@ lip- ; Gk <i>lípos</i>「脂肪」
++der: lipid, liposuction, lipoprotein, lipoma
++note: <i>lipo-</i>「脂肪」と、<i>leipein</i>「残す」（ellipse）は別語源。
+
+@ lys- / lyt- ; Gk <i>lýein</i>「解く」
++der: analysis（「解きほぐす」）, paralysis（「傍らで緩む」）, catalyst（「解き放つもの」）, electrolysis, hydrolysis, dialysis, lysosome
++note: <i>analysis</i>「分析」の原義は「ほどくこと」。<i>catalyst</i>「触媒」は1836年ベルセリウスの造語。
+
+@ macr- / megal- ; → 前掲
++cf: → <b>macro-</b>（大きい）、<b>*meg-</b>（大）。megaphone, megalomania。
+
+@ mast- ; Gk <i>mastós</i>「乳房」
++der: mastectomy, mastitis, mastodon（「乳頭状の歯」）
++note: <i>mastodon</i>「マストドン」は臼歯の突起が乳首状であることから1806年キュヴィエの命名。
+
+@ mening- ; Gk <i>mênigx</i>「膜」
++der: meningitis, meninges, meningeal
++note: 髄膜炎の名。
+
+@ mes- ; Gk <i>mésos</i>「中間の」
++root: *médʰyos
++der: Mesopotamia（「川の間の地」）, Mesozoic, mesosphere, meson, mesentery
++note: ラテン語 <i>medius</i>、本来語 <i>middle</i> と同根。
+
+@ metr- / mater- ; → 前掲
++cf: → <b>*méh₂tēr</b>（母）。metropolis, matrix, mother。
+
+@ my- / myo- ; Gk <i>mŷs</i>「ねずみ、筋肉」
++der: myocardium, myalgia, myopathy, myosin, mussel は ラ
++note: ギリシア語 <i>mŷs</i> もラテン語 <i>mūsculus</i> も「ねずみ＝筋肉」の両義（第VI部 muscle）。
+
+@ myc- ; Gk <i>mýkēs</i>「きのこ」
++der: mycology, mycorrhiza, streptomycin, mycosis
++note: 抗生物質の名に多い <i>-mycin</i> は放線菌（<i>Streptomyces</i>）由来のもの。
+
+@ myel- ; Gk <i>myelós</i>「髄」
++der: myelin, myeloma, osteomyelitis, poliomyelitis（「灰白髄炎」＝ポリオ）
++note: <i>polio</i> は <i>poliomyelitis</i> の略で、<i>poliós</i>「灰色の」＋<i>myelós</i>。
+
+@ nau- / naus- ; → 前掲
++cf: → <b>*neh₂u-</b>（船）。nautical, nausea, astronaut。
+
+@ necr- ; → 前掲
++cf: → <b>*neḱ-</b>（死）。necropolis, necrosis, necromancy。
+
+@ nephr- ; Gk <i>nephrós</i>「腎臓」
++der: nephritis, nephron, nephrology, nephrectomy
++note: ラテン系は <i>ren-</i>（renal）。医学では両方が併用される。
+
+@ neur- ; → 前掲
++cf: → <b>*(s)neh₁-</b>（紡ぐ・腱）。neuron, nerve, sinew。
+
+@ ocul- ; → ラテン系
++cf: ギリシア系の「目」は <b>ophthalm-</b> と <b>opt-</b>。
+
+@ odont- ; → 前掲
++cf: → <b>*h₃dónts</b>（歯）。orthodontics, mastodon, tooth。
+
+@ olig- ; Gk <i>olígos</i>「少ない」
++der: oligarchy（「少数者の支配」）, oligopoly, oligarch, Oligocene
++note: <i>oligopoly</i>「寡占」は <i>monopoly</i>「独占」の対。
+
+@ ophthalm- ; Gk <i>ophthalmós</i>「目」
++der: ophthalmology, ophthalmic, exophthalmos, ophthalmoscope
++note: 綴りが難しい語の代表。<i>ph-th</i> の連続に注意。
+
+@ orch- ; Gk <i>órkhis</i>「睾丸、ラン」
++der: orchid（球根の形から）, orchitis, orchiectomy
++note: <i>orchid</i>「ラン」は塊根の形が睾丸に似ることによる命名。
+
+@ orn- ; Gk <i>órnis, órnīthos</i>「鳥」
++der: ornithology, ornithopter, dinornis
++note: ラテン系は <i>avi-</i>（aviation）。
+
+@ ost- / oste- ; Gk <i>ostéon</i>「骨」
++der: osteoporosis, osteopathy, osteoarthritis, periosteum, ossify は ラ
++note: ラテン系は <i>oss-</i>（ossify）。
+
+@ ot- ; Gk <i>oûs, ōtós</i>「耳」
++der: otitis, otology, otorhinolaryngology（「耳鼻咽喉科」）, parotid（「耳のそばの」）
++note: ラテン系は <i>aur-</i>（auricle）。
+
+@ paed- / ped- ; → 前掲
++cf: → <b>pedagogue</b>（子どもを導く）。pediatrics, encyclopedia。
+
+@ pan- ; → 接辞編
++cf: → <b>pan-</b>（すべて）。pandemic, panorama, pantheon。
+
+@ pept- / peps- ; Gk <i>péptein</i>「消化する、煮る」
++root: *pekʷ-
++der: peptic, dyspepsia, pepsin, peptide, peptone
++note: ラテン語 <i>coquere</i>（cook, kitchen）と同根。
+
+@ petr- ; Gk <i>pétrā</i>「岩」
++der: petroleum（「岩の油」）, petrify, petrology, saltpetre（「岩の塩」）, Peter（「岩」）
++note: <i>petroleum</i>「石油」は中世ラテン語の造語。使徒ペトロの名も「岩」（マタイ16章）。
+
+@ phag- ; → 前掲
++cf: → <b>phag-</b>（食べる）。esophagus, sarcophagus, phagocyte。
+
+@ pharmac- ; Gk <i>phármakon</i>「薬、毒」
++der: pharmacy, pharmacology, pharmaceutical, pharmacopoeia
++note: <i>phármakon</i> は「薬」と「毒」の両義を持つ。デリダが哲学的に論じた語。
+
+@ phas- / phen- ; Gk <i>phaínein</i>「現す」
++der: phase, phenomenon（「現れるもの」）, phenotype, emphasis, diaphanous, phantom, fantasy, epiphany（「現れ出ること」）
++note: <i>fantasy</i>, <i>phantom</i>, <i>phenomenon</i> がすべて「現れる」から。
+
+@ phleb- ; Gk <i>phléps, phlebós</i>「静脈」
++der: phlebitis, phlebotomy（「瀉血」）, phlebotomist
++note: <i>phlebotomy</i>「採血」は文字通り「静脈を切ること」。
+
+@ phob- ; Gk <i>phóbos</i>「恐怖」
++der: phobia, claustrophobia, agoraphobia（「広場恐怖」）, hydrophobia, xenophobia, arachnophobia, -phobe
++note: 対義の <i>-philia</i> と対をなす。火星の衛星フォボス（「恐怖」）も同語。
+
+@ phor- ; → 前掲
++cf: → <b>*bʰer-</b>（運ぶ）。metaphor, euphoria, phosphorus。
+
+@ phyll- ; Gk <i>phýllon</i>「葉」
++der: chlorophyll（「緑の葉」）, phyllotaxis, podophyllum
++note: ラテン語 <i>folium</i>（foliage, folio）と同根。
+
+@ phyt- ; Gk <i>phytón</i>「植物」
++root: *bʰuH-「生じる」
++der: phytoplankton, neophyte（「新しく植えられた者」＝新参者）, epiphyte, zoophyte, phytochemical
++note: <i>neophyte</i>「初心者」の原義は「新たに植えられた（信者）」。
+
+@ plas- ; Gk <i>plássein</i>「形づくる」
++der: plastic（「形づくれる」）, plasma, protoplasm, cytoplasm, plaster, rhinoplasty, angioplasty, -plasty
++note: <i>plastic</i>「プラスチック」は本来「可塑性のある」という形容詞。
+
+@ pneum- ; Gk <i>pneûma</i>「息、霊」, <i>pneúmōn</i>「肺」
++der: pneumatic, pneumonia, pneumothorax, pneuma
++note: 「息＝霊」の観念（第VI部 psych- 参照）。<i>pneumatic</i>「空気圧の」も同語。
+
+@ pol- / poli- ; → 前掲
++cf: → <b>poli-</b>（都市）。politics, police, metropolis。
+
+@ psych- ; → 前掲
++cf: → <b>psych-</b>（息・魂）。psychology, psychiatry。
+
+@ pyel- ; Gk <i>pýelos</i>「盤、腎盂」
++der: pyelitis, pyelonephritis
++note: 医学の専門要素。
+
+@ rheo- / rrhe- ; Gk <i>rheîn</i>「流れる」
++root: *srew-「流れる」
++der: rheum, rheumatism, rhythm（「流れ」）, diarrhea（「通り抜けて流れる」）, hemorrhage, catarrh, rheostat
++note: <i>rhythm</i>「リズム」の原義は「流れ」。<i>stream</i>（本来語）と同根。
+
+@ rhin- ; → 前掲
++cf: → <b>rhin-</b>（鼻）。rhinoplasty, rhinoceros。
+
+@ sarc- ; → 前掲
++cf: → <b>sarcasm</b>（肉を裂く）。sarcoma, sarcophagus。
+
+@ schis- / schiz- ; Gk <i>skhízein</i>「裂く」
++root: *skey-「切る」
++der: schism, schizophrenia（「引き裂かれた心」）, schist, schizoid
++note: ラテン語 <i>scindere</i>（rescind）と同根。<i>science</i> の <i>scīre</i> も同じ語根とされる。
+
+@ scler- ; Gk <i>sklērós</i>「硬い」
++der: sclerosis, arteriosclerosis, multiple sclerosis, sclera（強膜）
++note: 「多発性硬化症」は組織が硬くなることから。
+
+@ sept- ; Gk <i>sēpein</i>「腐らせる」
++der: septic, antiseptic, aseptic, sepsis, septicemia
++note: ラテン語の <i>septem</i>「七」（September）とは無関係。
+
+@ som- / somat- ; Gk <i>sôma</i>「体」
++der: somatic, psychosomatic, chromosome（「色に染まる体」）, ribosome, lysosome, somatotype
++note: 細胞小器官の名 <i>-some</i> はこの要素。
+
+@ sphere- ; Gk <i>sphaîra</i>「球」
++der: sphere, atmosphere, hemisphere, biosphere, spherical, spheroid
++note: <i>sphere of influence</i>「勢力圏」も同語。
+
+@ spir- ; → ラテン系
++cf: ラテン系の「息」は <b>spir-</b>（spirit）、ギリシア系は <b>pneum-</b>。
+
+@ stat- ; → 前掲
++cf: → <b>*steh₂-</b>（立つ）。static, system, ecstasy。
+
+@ sten- ; Gk <i>stenós</i>「狭い」
++der: stenosis, stenography（「速記＝詰めて書く」）, stenotype
++note: <i>stenographer</i>「速記者」は「狭く書く者」。
+
+@ stom- ; Gk <i>stóma</i>「口」
++der: stomach（<i>stómakhos</i>「胃の入口」）, stomatitis, colostomy（「結腸の口を作る」）, -stomy
++note: <i>stomach</i>「胃」の原義は「口、喉」。
+
+@ tach- ; Gk <i>takhýs</i>「速い」
++der: tachycardia（「速い心臓」）, tachometer, tachyon
++note: <i>tachyon</i>「タキオン」は光速を超える仮説的粒子（1967年の造語）。
+
+@ tax- ; Gk <i>táxis</i>「配列、秩序」
++der: taxonomy（「配列の法則」）, taxidermy（「皮を並べる」）, syntax（「共に配列すること」）, ataxia, phototaxis
++note: <i>syntax</i>「統語論」の原義は「語を配列すること」。<i>tax</i>「税」は別語源（<i>taxāre</i>）。
+
+@ therm- ; → 前掲
++cf: → <b>*gʷʰer-</b>（暖かい）。thermometer, warm。
+
+@ thromb- ; Gk <i>thrómbos</i>「塊」
++der: thrombosis, thrombus, thrombocyte, antithrombotic
++note: 血栓症の名。
+
+@ topo- ; → 前掲
++cf: → <b>top-</b>（場所）。topic, utopia, isotope。
+
+@ trich- ; Gk <i>thríx, trikhós</i>「毛」
++der: trichology, trichome, trichinosis
++note: ラテン系は <i>capill-</i>（capillary）。
+
+@ troph- ; Gk <i>trophḗ</i>「栄養」
++der: atrophy（「栄養不足」＝萎縮）, hypertrophy, dystrophy, eutrophication（「富栄養化」）, trophic
++note: <i>atrophy</i>「萎縮」と <i>hypertrophy</i>「肥大」は対。
+
+@ xen- ; Gk <i>xénos</i>「よそ者、客」
++der: xenophobia（「外国人恐怖」）, xenon（「見知らぬもの」）, xenophile, xenograft
++note: 希ガスのキセノンは1898年、「見慣れない気体」として命名された。
+
+@ zym- ; → 前掲
++cf: → <b>*yes-</b>（沸く）。enzyme, yeast。
+

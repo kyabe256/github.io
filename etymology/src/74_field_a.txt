@@ -1,0 +1,286 @@
+# 第VII部　分野別語源辞典
+
+分野ごとに語彙をまとめて配列する。同じ分野の語は、しばしば同じ時代に同じ言語から一括して入っている。個々の語を単独で覚えるより、その分野の語彙全体がどこから来たかを知るほうが、はるかに速く、忘れにくい。
+
+各分野の冒頭に「この分野の語彙はどの言語から来たか」の見取り図を置いた。見出し語は第VI部と重複することがあるが、そこでは語そのものを、ここでは分野の中での位置づけを述べている。
+
+:: index field
+
+== 1　医学・身体
+
+<b>この分野はどこから来たか。</b>身体の部位を指す日常語（<i>head, hand, foot, eye, ear, mouth, nose, tooth, heart, blood, bone, skin, liver</i>）はほぼすべて古英語＝ゲルマン系で、印欧祖語まで遡れる最古層である。これに対して、同じ部位を指す<b>専門語</b>はギリシア語（<i>cardio-, hepato-, derma-, osteo-, gastro-, nephro-, encephalo-</i>）とラテン語（<i>cor, hepar は Gk, cutis, os, venter, ren, cerebrum</i>）から来ている。つまり英語の医学語彙は<b>三層構造</b>をなす——日常語はゲルマン系、臨床・解剖の術語はラテン語、病名と学理の術語はギリシア語。<i>heart / cardiac / cordial</i> のような三つ組はこの構造の縮図である。
+
+@ anatomy ; /əˈnætəmi/ ; 名 ; 解剖学
++lit: 「切り分けること」
++chain: Gk <i>aná</i>「上へ、すっかり」＋<i>témnein</i>「切る」→ <i>anatomḗ</i>
++der: atom（「これ以上切れないもの」）, tome, epitome, tonsil は別, appendectomy, -tomy
++note: <i>atom</i> と <i>anatomy</i> が同根で、「切る」の否定形と強調形にあたる。
+
+@ antibiotic ; /ˌæntibaɪˈɒtɪk/ ; 形名 ; 抗生物質
++chain: Gk <i>antí</i>「対して」＋<i>bíos</i>「生命」（ワクスマン、1942）
++der: biology, biography, symbiosis, amphibian（「両方の生を生きる」）, antibiotic
++note: フレミングのペニシリン発見（1928）より後に作られた語。<i>penicillin</i> は L <i>pēnicillus</i>「小筆」＝筆状の菌糸から。
++see: pencil
+
+@ artery ; /ˈɑːtəri/ ; 名 ; 動脈
++lit: 「空気を運ぶ管」
++chain: Gk <i>aer</i>「空気」＋<i>tēreîn</i>「保つ」（一説）→ <i>artēría</i>
++conf: 一説
++desc: 死体では動脈が空になっているため、古代の医学は動脈が空気（プネウマ）を運ぶと考えた。誤った生理学が語に固定した例。
++see: malaria
+
+@ cancer ; /ˈkænsə/ ; 名 ; 癌
++lit: 「蟹」
++chain: L <i>cancer</i>「蟹」（Gk <i>karkínos</i> の訳）
++desc: ヒッポクラテスが腫瘍から放射状に広がる血管を蟹の脚に見立てた。ギリシア語からラテン語への直訳がそのまま病名になった。
++dbl: canker, chancre
++der: carcinoma, carcinogen（Gk 側）／cancer, canker（L 側）
++note: 星座の蟹座も同語。
+
+@ diabetes ; /ˌdaɪəˈbiːtiːz/ ; 名 ; 糖尿病
++lit: 「通り抜けるもの、サイフォン」
++chain: Gk <i>diá</i>「通って」＋<i>baínein</i>「行く」→ <i>diabḗtēs</i>
++desc: 水が体を素通りするように大量の尿が出ることから。<i>mellitus</i>「蜜のような」は17世紀、尿が甘いことによる追加。
++see: venue
+
+@ diagnosis ; /ˌdaɪəɡˈnəʊsɪs/ ; 名 ; 診断
++lit: 「見分けて知ること」
++chain: Gk <i>diá</i>「別々に」＋<i>gignṓskein</i>「知る」
++der: prognosis（「あらかじめ知ること」＝予後）, gnostic, know, notice
++see: know
++lvl: ★★
+
+@ hospital ; /ˈhɒspɪtl/ ; 名 ; 病院
++chain: L <i>hospes</i>「客、主人」→ <i>hospitāle</i>「客をもてなす場所」
++dbl: hotel, hostel, hospice
++der: host, hostage は別, hospitality, hospice, hotel, hostel
++note: <i>hospes</i> は *<i>ghos-ti-</i>「よそ者」＋<i>pot-</i>「主」の合成で、<i>hostis</i>「敵」とも同根。<i>host</i>（もてなす人）と <i>hostile</i>（敵意ある）が同一の根から出ている。英語 <i>guest</i> も同根。
++see: xenophobia
++lvl: ★★★
+
+@ hygiene ; /ˈhaɪdʒiːn/ ; 名 ; 衛生
++chain: Gk <i>Hygieía</i>「健康の女神」← <i>hygiḗs</i>「健康な」
++note: 医神アスクレピオスの娘。姉妹の <i>Panacea</i>「万能薬」も普通名詞になった。
+
+@ influenza ; /ˌɪnfluˈenzə/ ; 名 ; インフルエンザ
++lit: 「（天体の）影響」
++chain: 伊 <i>influenza</i>「影響、（星の）感応」→ 英語（1743）
++desc: 病気は星の配置の影響で起こるという占星医学の観念。1743年のイタリアでの流行の際に英語に入った。<i>influence</i> と同一語。
++see: malaria, jovial
++lvl: ★★
+
+@ pharmacy ; /ˈfɑːməsi/ ; 名 ; 薬局
++chain: Gk <i>phármakon</i>「薬、毒、呪薬」→ <i>pharmakeía</i>
++note: ギリシア語 <i>phármakon</i> は「薬」と「毒」の両義。デリダがこの両義性を論じて以後、哲学の術語にもなった。日本語「くすり」に対する「薬物」の語感差に近い。
+
+@ physician ; /fɪˈzɪʃn/ ; 名 ; 内科医
++chain: Gk <i>phýsis</i>「自然」→ <i>physikḗ</i>「自然学」→ L <i>physica</i>
++der: physics, physical, physiology, physique
++note: 「自然（＝人体の本性）を学んだ者」。<i>physics</i>「物理学」と同語で、中世には医学と自然学が未分化だった。外科医（<i>surgeon</i>）が「手の職人」と呼ばれたのと身分差が対応する。
++see: surgeon
++lvl: ★★
+
+@ plague ; /pleɪɡ/ ; 名 ; 疫病
++lit: 「打撃」
++chain: L <i>plāga</i>「打撃、傷」（Gk <i>plēgḗ</i>）
++der: plangent, complain（「胸を打つ」）, apoplexy（「打ちのめされること」＝卒中）
++note: 神が下す「打撃」という宗教的観念。出エジプト記の「十の災い」も <i>plagues</i>。
+
+@ symptom ; /ˈsɪmptəm/ ; 名 ; 症状
++lit: 「ともに落ちること＝偶発事」
++chain: Gk <i>sýn</i>「ともに」＋<i>píptein</i>「落ちる」→ <i>sýmptōma</i>
++der: symptom, asymptote（「落ち合わない線」＝漸近線）, ptosis
++note: 「病とともに起こる出来事」。<i>syndrome</i>「症候群」は「ともに走ること」。
+
+@ vein ; /veɪn/ ; 名 ; 静脈
++chain: L <i>vēna</i>（語源不確実）
++der: venous, intravenous
++note: <i>artery</i>（ギリシア語）と <i>vein</i>（ラテン語）で語源言語が分かれる。
+
+@ chronic ; /ˈkrɒnɪk/ ; 形 ; 慢性の
++chain: Gk <i>khrónos</i>「時間」→ <i>khronikós</i>
++der: chronicle, chronology, anachronism, synchronize
++note: 「時間の（かかる）」。対義の <i>acute</i> は L <i>acūtus</i>「鋭い」で、語源言語が異なる。
+
+@ clinic ; /ˈklɪnɪk/ ; 名 ; 診療所
++lit: 「寝台の（そばでの）」
++chain: Gk <i>klínē</i>「寝台」← <i>klínein</i>「傾ける」
++der: lean, incline, decline, recline, climate（「（太陽の）傾き＝緯度帯」）, climax（「梯子」）
++note: 英語 <i>lean</i> と <i>climate</i> と <i>clinic</i> が同根。「傾く」から。
+
+@ epidemic ; /ˌepɪˈdemɪk/ ; 形名 ; 流行の（病）
++lit: 「民衆の上に（ある）」
++chain: Gk <i>epí</i>「上に」＋<i>dêmos</i>「民衆」
++der: democracy, demographic, pandemic, endemic, demagogue
++note: <i>pandemic</i>「すべての民衆の」、<i>endemic</i>「民衆の中に（常在する）」と接頭辞だけで区別する三つ組。
++lvl: ★★
+
+@ fever ; /ˈfiːvə/ ; 名 ; 熱
++chain: L <i>febris</i> → OE <i>fefor</i>
++der: febrile, February（<i>Februārius</i>「清めの月」は別語）
++note: 古英語期に借用された数少ない医学語のひとつ。
+
+@ hormone ; /ˈhɔːməʊn/ ; 名 ; ホルモン
++lit: 「駆り立てるもの」
++chain: Gk <i>hormân</i>「駆り立てる」の現在分詞（スターリング、1905）
++der: hormone, hormesis
+
+@ sanity ; /ˈsænəti/ ; 名 ; 正気
++chain: L <i>sānus</i>「健康な」→ <i>sānitās</i>
++der: sane, sanitary, sanitation, insane, sanatorium
++note: <i>mēns sāna in corpore sānō</i>「健全な精神は健全な身体に」（ユウェナリス）。原文は「〜であってほしいと祈るべきだ」という願望文で、断定ではない。
+
+@ therapy ; /ˈθerəpi/ ; 名 ; 治療
++chain: Gk <i>therápōn</i>「従者、世話をする者」→ <i>therapeía</i>
++note: 「仕えること」が原義。<i>-therapy</i> は現在も生産的（<i>chemotherapy, psychotherapy, physiotherapy</i>）。
+
+@ toxic ; /ˈtɒksɪk/ ; 形 ; 有毒な
++lit: 「弓の（毒）」
++chain: Gk <i>tóxon</i>「弓」→ <i>toxikón (phármakon)</i>「矢に塗る毒」→ L <i>toxicum</i>
++desc: 毒矢の文化が語源。<i>intoxicate</i> は「毒を盛る」→「酔わせる」。
++der: intoxicate, toxin, antitoxin
++lvl: ★★
+
+== 2　法律・政治
+
+<b>この分野はどこから来たか。</b>英国法の語彙は、ノルマン征服（1066）以後およそ300年にわたって法廷で用いられた<b>アングロ・ノルマン語（法律フランス語）</b>から来ている。<i>court, judge, jury, plaintiff, defendant, attorney, plea, verdict, felony, larceny, arrest, warrant, bail, tort, estate, tenant, lease, heir</i>——ほぼすべてフランス語である。これに対し、<i>law, right, wrong, oath, doom, guilt, steal, murder, theft, ward, writ, deed</i> は古英語系。すなわち<b>制度の語はフランス語、原初的な観念の語はゲルマン語</b>という分業が、ここでもきれいに現れる。さらに <i>de facto, prima facie, habeas corpus, subpoena, alibi, affidavit</i> のようなラテン語がそのまま術語として残っている。法律英語の二語重ね（<i>aid and abet, will and testament, breaking and entering</i>）は、フランス語系と英語系の同義語を並べて誤解を防いだ中世の慣行の名残である。
+
+@ alibi ; /ˈæləbaɪ/ ; 名 ; アリバイ
++lit: 「他の場所で」
++chain: L <i>alibī</i>（<i>alius</i>「他の」の場所格）
++der: alias（「別の時に」＝別名）, alien, alter, altruism, else, ultra は別
++note: 副詞がそのまま名詞になったラテン語法律用語。<i>alias</i> も同型。
++lvl: ★★
+
+@ arrest ; /əˈrest/ ; 動 ; 逮捕する
++chain: L <i>ad</i>＋<i>restāre</i>「止まる」→ OF <i>arester</i>
++der: rest（残り）, arrest, stay は別
++note: 「止めること」。<i>cardiac arrest</i>「心停止」に原義が生きる。
++lvl: ★★
+
+@ attorney ; /əˈtɜːni/ ; 名 ; 代理人、弁護士
++lit: 「（事務に）向けられた者」
++chain: OF <i>atorné</i>（<i>atorner</i>「向ける、任命する」）
++note: <i>power of attorney</i>「委任状」。米語で弁護士一般を指すのに対し、英国では <i>solicitor</i>／<i>barrister</i> の区別がある。
+
+@ bail ; /beɪl/ ; 名 ; 保釈（金）
++chain: L <i>bāiulāre</i>「運ぶ、預かる」→ OF <i>baillier</i>「引き渡す」
++der: bailiff, bail, bailment
++note: 「身柄を（保証人に）預ける」。船の <i>bail out</i>「水を汲み出す」は別語（仏 <i>baille</i>「桶」）で、金融の「救済」はこちら。
+
+@ candidate ; /ˈkændɪdeɪt/ ; 名 ; 候補者
++lit: 「白く輝く（トガを着た者）」
++chain: L <i>candidus</i>「純白の」→ <i>candidātus</i>
++desc: ローマの公職志願者は白く漂白したトガを着て選挙運動をした。服装が身分名になった。
++der: candid（「純白な＝率直な」）, candle, incandescent, incense, candour
++note: <i>candid</i>「率直な」と <i>candidate</i> が同根。<i>candid camera</i>「隠しカメラ」は「飾らない姿」の意。
++lvl: ★★★
+
+@ court ; /kɔːt/ ; 名 ; 法廷、宮廷、中庭
++chain: L <i>cohors</i>（属格 <i>cohortis</i>）「囲い、中庭、歩兵隊」→ OF <i>cort</i>
++der: cohort, courteous, courtesy, curtsy, courtier, courtship
++note: 「囲われた場所」→「そこに集う人々」→「宮廷」→「法廷」。<i>cohort</i>「軍団の一分隊」と同語。<i>courtesy</i>「礼儀」は「宮廷風」。
++lvl: ★★★
+
+@ crime ; /kraɪm/ ; 名 ; 犯罪
++chain: L <i>crīmen</i>「告発、罪状」← <i>cernere</i>「ふるい分ける、判断する」
++root: *krei-「ふるい分ける」
++der: discern, discreet, secret, certain, concern／critic, crisis, criterion, hypocrite（Gk <i>krínein</i>）
++note: <i>crisis</i>「危機」はもと医学用語で「病状が決する分かれ目」。<i>critic</i>「批評家」は「判断する者」。
++see: secretary
++lvl: ★★★
+
+@ defendant ; /dɪˈfendənt/ ; 名 ; 被告
++chain: L <i>dēfendere</i>「（打撃を）払いのける」
++see: offend
++note: <i>plaintiff</i>「原告」は <i>plaindre</i>「嘆く」（L <i>plangere</i>「胸を打つ」）から。訴える側が「嘆く者」、訴えられる側が「防ぐ者」。
++lvl: ★★
+
+@ felony ; /ˈfeləni/ ; 名 ; 重罪
++chain: 中世ラテン語 <i>fellō</i>「悪人、裏切り者」（語源不確実）
++conf: 不確実
++note: <i>misdemeanor</i>「軽罪」は <i>mis-</i>＋<i>demean</i>「振る舞う」。
+
+@ franchise ; /ˈfræntʃaɪz/ ; 名 ; 参政権、営業権
++lit: 「自由にすること」
++chain: OF <i>franc</i>「自由な」→ <i>franchise</i>
++der: frank（率直な）, France, Frank, franc, enfranchise, disenfranchise
++desc: フランク族が征服者として自由身分だったため、部族名が「自由な」の形容詞になった。<i>France</i> も同じ。
++note: <i>frankly speaking</i>「率直に言えば」の <i>frank</i> も、「自由に（ものを言える身分の）」から。
++see: slave（対照）
++lvl: ★★
+
+@ judge ; /dʒʌdʒ/ ; 名動 ; 裁判官、判断する
++lit: 「法を語る者」
++chain: L <i>iūs</i>「法」＋<i>dīcere</i>「言う」→ <i>iūdex</i> → OF <i>juge</i>
++der: just, justice, judicial, prejudice（「前もっての判断」）, judicious, jury, injury, perjury
++note: <i>prejudice</i>「偏見」は「審理前の判断」。法廷手続きの語が心理学の語になった。
++lvl: ★★★
+
+@ legislature ; /ˈledʒɪslətʃə/ ; 名 ; 立法府
++chain: L <i>lēx</i>「法」＋<i>lātus</i>「運ばれた」→ <i>lēgis lātor</i>「法を提案する者」
++see: legacy
++der: legal, legitimate, loyal, privilege, delegate, relegate, colleague
+
+@ parole ; /pəˈrəʊl/ ; 名 ; 仮釈放
++lit: 「（名誉にかけた）言葉」
++chain: 仏 <i>parole d'honneur</i>「名誉の誓言」
++see: parliament
++desc: 捕虜が「再び戦わない」と誓って釈放される軍事慣行から。
+
+@ probate ; /ˈprəʊbeɪt/ ; 名 ; 検認
++chain: L <i>probāre</i>「証明する、試す」（<i>probus</i>「良質の」）
++der: prove, proof, probe, probable, approve, reprobate, probity
++note: <i>the exception proves the rule</i> の <i>prove</i> は「試す」の古義。「例外が規則を証明する」ではなく「例外が規則を試す」。
++lvl: ★★
+
+@ sue ; /suː/ ; 動 ; 訴える
++chain: L <i>sequī</i>「従う」→ OF <i>suivre</i>／<i>sivre</i>
++root: *sek<sup>w</sup>-「従う」
++der: sequence, consequence, subsequent, pursue, prosecute, execute, sect, second, suit, suite, ensue, obsequious, sue
++note: <i>suit</i>「訴訟」「スーツ」「一組」がすべて「（そろって）続くもの」。トランプの <i>suit</i>「組札」も同語。
++see: *sek<sup>w</sup>-
++lvl: ★★★
+
+@ testament ; /ˈtestəmənt/ ; 名 ; 遺言、（聖書の）約
++see: testify
++note: 「旧約・新約聖書」の「約」は、ヘブライ語 <i>berīth</i>「契約」→ Gk <i>diathḗkē</i>「遺言、取り決め」→ L <i>testāmentum</i> という訳の連鎖。ギリシア語 <i>diathḗkē</i> の両義性が「遺言（testament）」の訳語を招き、本来の「契約（covenant）」の含みが薄れた。翻訳が概念をずらした重要な例。
++lvl: ★★
+
+@ tort ; /tɔːt/ ; 名 ; 不法行為
++lit: 「ねじれた（もの）」
++chain: L <i>torquēre</i>「ねじる」→ <i>tortum</i>
++der: torture, torment, distort, contort, extort, retort, torch（ねじった松明）, torque, nasturtium（「鼻をねじるもの」）
++note: 「まっすぐでない行い」。<i>wrong</i>「ねじれた」と同じ比喩を、ラテン語側で繰り返している。
++see: wrong
++lvl: ★★
+
+@ warrant ; /ˈwɒrənt/ ; 名 ; 令状、保証
++chain: フランク語 *<i>warjan</i>「守る」→ 古北仏 <i>warant</i>
++dbl: guarantee
++see: wardrobe
++lvl: ★★
+
+@ chancellor ; /ˈtʃɑːnsələ/ ; 名 ; 大臣、学長
++lit: 「格子のそばに立つ者」
++chain: L <i>cancellī</i>「格子」→ <i>cancellārius</i>「法廷の仕切り係」
++der: cancel（「格子模様に線を引いて消す」）, chancel（教会の内陣）, chancellor
++note: <i>cancel</i>「取り消す」と <i>chancellor</i>「大臣」が同根。書類に×印を引く動作から。
++lvl: ★★
+
+@ constitution ; /ˌkɒnstɪˈtjuːʃn/ ; 名 ; 憲法、体質
++chain: L <i>cōnstituere</i>「共に立てる」（<i>com-</i>＋<i>statuere</i>）
++der: statue, status, institute, substitute, prostitute, destitute, restitution, stand, state
++note: 「（国家を）立て組んだもの」と「（身体を）組み立てたもの」＝体質の二義が同居。
++lvl: ★★★
+
+@ democracy ; /dɪˈmɒkrəsi/ ; 名 ; 民主主義
++chain: Gk <i>dêmos</i>「民衆、区」＋<i>krátos</i>「力」
++der: aristocracy（「最良の者の支配」）, autocracy, bureaucracy（仏 <i>bureau</i>「事務机」＋<i>-cracy</i>、1818の造語）, plutocracy, theocracy, epidemic
++note: <i>bureaucracy</i> はフランス語とギリシア語の混成で、造語当時から皮肉を込めた語だった。<i>bureau</i> はもと机を覆う粗布（<i>burel</i>）。
++lvl: ★★★
+
+@ tyrant ; /ˈtaɪərənt/ ; 名 ; 暴君
++chain: Gk <i>týrannos</i>（前ギリシア語起源）
++note: 本来「非世襲の単独支配者」という中立の政治用語で、必ずしも悪政を意味しなかった。プラトン・アリストテレス以後に悪義が固定した。
++see: 第8章

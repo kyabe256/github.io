@@ -5,25 +5,6 @@
 +desc: 本来は東南アジアの発酵魚醤。イギリスではキノコやクルミで作られ、トマトを用いるようになったのは19世紀初頭のアメリカから。
 +note: 語だけが残り、中身が完全に入れ替わった例。
 
-@ kidnap ; /ˈkɪdnæp/ ; 動 ; 誘拐する
-+lit: 「子どもをかっぱらう」
-+chain: <i>kid</i>「子ども」+ <i>nap</i>「かすめ取る」（<i>nab</i> の異形）
-+desc: 17世紀末の犯罪者俗語。アメリカ植民地に年季奉公人として売るため子どもをさらう行為を指した。名詞 <i>kidnapper</i> が先で、動詞は逆成である（第6章）。
-+der: nab, kid（もと「子山羊」＜ ON <i>kið</i>）
-
-@ kindergarten ; /ˈkɪndəɡɑːtn/ ; 名 ; 幼稚園
-+lit: 「子どもの庭」
-+chain: 独 <i>Kindergarten</i>（フリードリヒ・フレーベル, 1840）
-+der: kind, kin（英語の同根語）, garden, yard
-+note: <i>Kinder</i> は英語 <i>kind</i>「種類」「親切」と同根で、原義は「生まれ」。<i>Garten</i> は <i>garden</i>, <i>yard</i> と同根。ドイツ語の複合語がそのまま英語に入った例。
-
-@ knight ; /naɪt/ ; 名 ; 騎士
-+lit: 「少年、召使い」
-+chain: OE <i>cniht</i>「少年、従者」
-+cog: 独 <i>Knecht</i>「下男」
-+desc: 「少年」→「従者」→「（領主に仕える）武装した従者」→「騎士」と、五百年かけて社会的地位が上昇した（良化、第7章）。ドイツ語では逆に <i>Knecht</i> が「下僕」のまま残った。
-+note: 語頭の /kn/ は17世紀まで発音された。綴りの gh は古英語の /ç/ 音の名残。
-
 @ know ; /nəʊ/ ; 動 ; 知る
 +root: *ǵneh₃-
 +chain: PIE *ǵneh₃- → PGmc *knēanan → OE <i>cnāwan</i>
@@ -40,3 +21,113 @@
 +chain: Gk <i>kŷdos</i>「名声、栄光」→ 英語（19世紀初、大学俗語）
 +note: ギリシア語では単数形だが、英語では語尾の -s から複数と誤解され、逆成によって単数形 <i>kudo</i> が作られた（第6章）。同様の例に <i>pea</i>（＜ <i>pease</i>）, <i>cherry</i>（＜ <i>cherise</i>）。
 
+@ kaleidoscope ; /kəˈlaɪdəskəʊp/ ; 名 ; 万華鏡
++lit: 「美しい形を見るもの」
++chain: Gk <i>kalós</i>「美しい」＋ <i>eîdos</i>「形」＋ <i>skopeîn</i>「見る」
++desc: 1817年にブルースターが発明と同時に造語した、典型的な近代ギリシア語源合成。
++der: calligraphy, callisthenics（<i>kalós</i>）／idol, kaleidoscope, -oid（<i>eîdos</i>）／telescope, microscope, bishop（<i>skopeîn</i>）
++see: -scope
+
+@ karaoke ; /ˌkæriˈəʊki/ ; 名 ; カラオケ
++lit: 「空のオーケストラ」
++chain: 日本語「空オケ」（「空」＋ orchestra の略）→ 英語（1979頃）
++note: 英語からの借用語を日本語で切り詰めて合成し、それが再び英語に戻った往復借用。<i>anime</i>（＜ animation）、<i>cosplay</i>（＜ costume play）も同型。
++see: 第VIII部 日本語
+
+@ kindergarten ; /ˈkɪndəɡɑːtn/ ; 名 ; 幼稚園
++lit: 「子どもの庭」
++chain: 独 <i>Kinder</i>「子どもたち」＋ <i>Garten</i>「庭」（フレーベル、1840）
++cog: child は別系、<i>kin</i>「親族」は同根
++note: 英語 <i>kin</i>, <i>kind</i>「種類」と独 <i>Kind</i> は同根で、根は *ǵenh₁-「生む」。<i>garden</i>, <i>yard</i>, <i>orchard</i> は *gher-「囲む」。
+
+@ khaki ; /ˈkɑːki/ ; 名形 ; カーキ色（の）
++lit: 「埃色の」
++chain: ウルドゥー語／ペルシア語 <i>khākī</i>（<i>khāk</i>「土、埃」）
++desc: 1848年、英領インドのガイド軍団が白い制服を泥で染めたのが起源。ボーア戦争で全軍に採用され、迷彩服の時代を開いた。
+
+@ kiosk ; /ˈkiːɒsk/ ; 名 ; 売店
++chain: トルコ語 <i>köşk</i>「あずまや」← ペルシア語 <i>kūshk</i>「宮殿、亭」
++desc: もとオスマン様式の開放型あずまや。18世紀フランスで庭園建築の語となり、19世紀に新聞売り場、20世紀末に端末装置へ。
+
+@ knight ; /naɪt/ ; 名 ; 騎士
++lit: 「少年、従者」
++chain: OE <i>cniht</i>「少年、従者」→ ME <i>knight</i>
++cog: 独 <i>Knecht</i>「下男」
++desc: ゲルマン語では一貫して「下働きの若者」だったが、英語だけが封建制の下で「騎士」に上昇した。同じ地位をフランス語系では <i>chevalier</i>（＜ <i>caballus</i>「馬」）と呼ぶ。
++note: 語頭の <i>kn-</i> は17世紀まで /kn/ と発音された。<i>knee, knife, knot, know, knuckle</i> も同様。
++see: 第5章 綴りと発音の乖離
+
+@ knave ; /neɪv/ ; 名 ; 悪党、（トランプの）ジャック
++chain: OE <i>cnafa</i>「少年」
++cog: 独 <i>Knabe</i>「少年」
++note: <i>knight</i> が上昇したのに対し、<i>knave</i> は同じ「少年」から「悪党」へ下降した。同じ意味場の語が正反対に動いた対照例。
++see: 意味の上昇と下降（第8章）
+
+@ kettle ; /ˈketl/ ; 名 ; やかん
++chain: L <i>catīnus</i>「鉢」→ <i>catillus</i> → PGmc *katilaz → OE <i>cetel</i>
++note: ゲルマン語がローマから借りた最古層の生活語彙のひとつ（<i>cheese, wine, street, wall, kitchen, cup, dish</i> と同期）。
++see: 第3章 ゲルマン語期のラテン借用
+
+@ kidnap ; /ˈkɪdnæp/ ; 動 ; 誘拐する
++lit: 「子どもをかっさらう」
++chain: <i>kid</i>「子ども（もと子ヤギ）」＋ <i>nap</i>「掠め取る」（<i>nab</i> の異形）
++desc: 17世紀末、アメリカ植民地へ年季奉公人として売るために子どもをさらった犯罪を指す語として成立。
++note: <i>kidnap</i> から逆成で動詞 <i>kidnap</i>→名詞 <i>kidnapper</i> ではなく、<i>kidnapper</i> が先に生まれ、そこから <i>kidnap</i> が逆成された。
++see: 逆成（第6章）
+
+@ kiln ; /kɪln/ ; 名 ; 窯
++chain: L <i>culīna</i>「台所、かまど」→ OE <i>cyln</i>
++dbl: culinary, kitchen
++note: 同じ <i>culīna</i> から、古英語期の借用が <i>kiln</i>、俗ラテン語 <i>coquīna</i> 経由が <i>kitchen</i>、近代の学術借用が <i>culinary</i>。時代の異なる三重語。
+
+@ king ; /kɪŋ/ ; 名 ; 王
++lit: 「氏族の出の者」
++chain: PGmc *kuningaz（*kunja-「一族」＋ *-ingaz「〜に属する者」）→ OE <i>cyning</i>
++root: *ǵenh₁-「生む」
++cog: 独 <i>König</i>, 蘭 <i>koning</i>
++der: kin, kind, kindred（同根）／L系 genus, gene, gentle, nation, native, pregnant, genius
++note: 「血統ある者」が原義。フィンランド語 <i>kuningas</i> はゲルマン祖語の形をほぼそのまま保存した借用で、比較言語学の重要証拠。
++lvl: ★★★
+
+@ knowledge ; /ˈnɒlɪdʒ/ ; 名 ; 知識
++chain: ME <i>knawlechen</i>「認める」（<i>knaw</i>＋接尾辞 <i>-leche</i>、由来不詳）
++conf: 不確実　<i>-ledge</i> の起源は定説がない。
++see: know
+
+@ kaput ; /kəˈpʊt/ ; 形 ; 壊れた
++chain: 仏 <i>capot</i>（カードゲームで「一勝もできない」）→ 独 <i>kaputt</i> → 英語（第一次大戦期）
++note: 第一次大戦の塹壕を通じて英語に入ったドイツ語のひとつ。<i>ersatz, blitz, flak, strafe</i> も同時期。
+
+@ kernel ; /ˈkɜːnl/ ; 名 ; 核、要点
++chain: OE <i>cyrnel</i>（<i>corn</i>「粒」の指小形）
++root: *ǵr̥h₂-nom「熟したもの」
++der: corn, grain, granule, granary, pomegranate, garner
++note: 「小さな粒」。<i>corn</i>（ゲルマン系）と <i>grain</i>（ラテン系）は同根の二重語。計算機の <i>kernel</i>「中核」は1940年代の比喩。
+
+@ kill ; /kɪl/ ; 動 ; 殺す
++chain: ME <i>cullen</i>「打つ」（語源不確実。<i>quell</i> と同源か）
++conf: 一説
++note: 古英語には <i>slēan</i>（→ slay）と <i>cwellan</i>（→ quell）があり、<i>kill</i> は中英語期に台頭した新参語。基本語彙が入れ替わった例。
+
+@ knapsack ; /ˈnæpsæk/ ; 名 ; リュックサック
++chain: 低地ドイツ語 <i>knappsack</i>（<i>knappen</i>「かじる」＋ <i>sack</i>）
++lit: 「食料袋」
++note: <i>rucksack</i>（独 <i>Rücken</i>「背」）は19世紀の別借用。
+
+@ knot ; /nɒt/ ; 名 ; 結び目、ノット（速度）
++chain: OE <i>cnotta</i>
++desc: 速度の単位は、一定間隔で結び目を付けた縄（log line）を船尾から流し、砂時計で流れた結び目数を数えた測定法に由来。装置がそのまま単位名になった。
+
+@ krypton ; /ˈkrɪptɒn/ ; 名 ; クリプトン
++chain: Gk <i>kryptós</i>「隠された」
++der: crypt, cryptic, cryptography, apocrypha, grotto（<i>crypta</i> の俗形）
++note: 1898年ラムゼーらが発見。同時期の新元素は <i>neon</i>「新しい」, <i>argon</i>「働かない」, <i>xenon</i>「よそ者」と、いずれもギリシア語形容詞をそのまま名にした。
+
+@ kitsch ; /kɪtʃ/ ; 名 ; まがい物の芸術
++chain: 独 <i>Kitsch</i>（19世紀ミュンヘンの美術商の隠語。語源不確実）
++conf: 不確実
+
+@ karat ; /ˈkærət/ ; 名 ; カラット
++chain: Gk <i>kerátion</i>「いなご豆の実」（<i>kéras</i>「角」の指小形）→ アラビア語 <i>qīrāṭ</i> → 中世ラテン語
++der: carat, carrot は別, keratin, rhinoceros, triceratops（<i>kéras</i>）
++note: いなご豆の種子が重さの揃った天然の分銅として使われた。<i>carat</i>（宝石の重さ）と <i>karat</i>（金の純度）は米語で綴り分けられる。

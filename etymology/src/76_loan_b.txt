@@ -1,0 +1,179 @@
+== 5　インド諸語（サンスクリット・ヒンディー語・タミル語）
+
+<b>いつ・なぜ入ったか。</b>二層ある。第一は<b>古代の交易</b>——<i>pepper, ginger, sugar, rice</i> は古代・中世に地中海世界を経由して入っており、印欧語族の遠い親戚から回り道をして届いた語である。第二は<b>英領インド（1600–1947）</b>——東インド会社と植民地行政が大量の語を持ち込んだ。<i>bungalow, veranda, pyjamas, shampoo, jungle, loot, thug, pundit, guru, karma, nirvana, avatar, juggernaut, cot, dinghy, chintz, calico, cashmere, khaki, bangle, dungarees, punch, curry, chutney, mango</i>。行政・軍事・生活の全域に及ぶ。
+
+@ bungalow ; /ˈbʌŋɡələʊ/ ; 名 ; バンガロー
++lit: 「ベンガル風の（家）」
++chain: ヒンディー語 <i>baṅglā</i>「ベンガルの」→ 英語（1676）
++note: 平屋にベランダを巡らせたベンガル様式の家。地名形容詞が建築様式名になった。
+
+@ jungle ; /ˈdʒʌŋɡl/ ; 名 ; ジャングル
++lit: 「荒地」
++chain: サンスクリット <i>jaṅgala</i>「乾いた荒地」→ ヒンディー語 <i>jaṅgal</i>
++note: 原義は「乾燥した不毛の地」で、「密林」はまったく逆。英語で意味が反転した。
++see: 第8章
+
+@ karma ; /ˈkɑːmə/ ; 名 ; 業
++lit: 「行為」
++chain: サンスクリット <i>karman</i>「行為」
++root: *k<sup>w</sup>er-「作る」
++der: 露 <i>чары</i> は別, ceremony は別
++note: サンスクリット <i>karman</i> の語根 <i>kṛ-</i>「作る」は印欧祖語 *k<sup>w</sup>er- で、英語には直接の同源語がない。
+
+@ loot ; /luːt/ ; 名動 ; 略奪（する）
++chain: ヒンディー語 <i>lūṭ</i> ← サンスクリット <i>luṇṭh-</i>「奪う」
++note: 1788年の英軍記録が初出。植民地の軍事語彙が本国に逆流した例。
+
+@ nirvana ; /nɪəˈvɑːnə/ ; 名 ; 涅槃
++lit: 「吹き消すこと」
++chain: サンスクリット <i>nirvāṇa</i>（<i>nis-</i>「外へ」＋<i>vā-</i>「吹く」）
++see: weather
++note: 英語 <i>wind</i>, <i>ventilate</i> と同根。灯火を吹き消すように煩悩が消える状態。
+
+@ guru ; /ˈɡʊruː/ ; 名 ; 導師
++lit: 「重い」
++chain: サンスクリット <i>guru</i>「重い、尊い」
++root: *g<sup>w</sup>reh₂-「重い」
++cog: L <i>gravis</i>「重い」, Gk <i>barýs</i>
++der: grave, gravity, grief, aggravate, brigade は別, baritone, barometer
++note: 英語 <i>grave</i>「重大な」とサンスクリット <i>guru</i> が同根。「重み（＝権威）のある人」という比喩が両言語で共通する。
+
+@ chintz ; /tʃɪnts/ ; 名 ; 更紗
++chain: ヒンディー語 <i>chī̃ṭ</i>「斑点のある布」の複数 <i>chints</i>
++note: 複数形が単数として借用された。<i>chintzy</i>「安っぽい」は、大量輸入で価値が下がったことによる。
+
+@ cashmere ; /ˈkæʃmɪə/ ; 名 ; カシミア
++chain: 地名 Kashmir
++see: suede（地名由来の素材名）
+
+@ mango ; /ˈmæŋɡəʊ/ ; 名 ; マンゴー
++chain: タミル語 <i>mān-kāy</i>「マンゴーの実」→ マレー語 <i>mangga</i> → ポルトガル語 <i>manga</i>
+
+== 6　日本語
+
+<b>いつ・なぜ入ったか。</b>三つの波がある。第一は<b>16〜17世紀の南蛮・オランダ交易</b>（<i>bonze, kimono, sake, tycoon, soy</i>——<i>soy</i> は「醤油」がオランダ語 <i>soja</i> を経て英語へ）。第二は<b>明治以降の文化紹介</b>（<i>samurai, geisha, harakiri, jujitsu, judo, banzai, tsunami, haiku, kabuki, futon, tofu, rickshaw</i>）。第三は<b>1980年代以降の産業・大衆文化</b>（<i>karaoke, sushi, ramen, anime, manga, emoji, umami, kaizen, tsunami の再普及, otaku, karoshi</i>）。日本語からの借用は英語の全借用語のごく一部だが、20世紀後半以降の増加率は際立って高い。
+
+@ emoji ; /ɪˈməʊdʒi/ ; 名 ; 絵文字
++chain: 日本語「絵文字」→ 英語（1997年の携帯電話、2010年の Unicode 採用で世界語に）
++note: <i>emotion</i>＋<i>-icon</i> の <i>emoticon</i> と語源上は無関係だが、音の類似で結びつけられている。偶然の一致が定着を助けた例。
++conf: 確実
+
+@ honcho ; /ˈhɒntʃəʊ/ ; 名 ; 責任者
++chain: 日本語「班長」→ 米軍兵士の俗語（1945頃、占領期・朝鮮戦争）
++note: 占領期の接触で入った語。<i>skosh</i>（「少し」）, <i>hooch</i>（「家」＝日本語「家」から、一説）も同時期。
+
+@ rickshaw ; /ˈrɪkʃɔː/ ; 名 ; 人力車
++chain: 日本語「人力車」→ <i>jinrikisha</i> → 短縮 <i>rickshaw</i>
++note: 「人＋力＋車」の三語合成が、英語では中間だけを残して短縮された。
+
+@ soy ; /sɔɪ/ ; 名 ; 醤油、大豆
++chain: 日本語「醤油」（近世の発音 shōyu／soyu）→ 蘭 <i>soja</i> → 英語（1679）
++note: 英語で最も古い日本語借用のひとつ。オランダ商館経由。<i>soybean</i> は「醤油の豆」という逆方向の造語。
+
+@ tsunami ; /tsuːˈnɑːmi/ ; 名 ; 津波
++chain: 日本語「津波」→ 英語（1897、ラフカディオ・ハーンの記述）
++note: 英語の <i>tidal wave</i> が潮汐と無関係な現象に誤用されていたため、専門用語として日本語形が採用された。2004年のスマトラ島沖地震以降、完全に一般語化した。
++lvl: ★★
+
+@ umami ; /uːˈmɑːmi/ ; 名 ; うま味
++chain: 日本語「うま味」（池田菊苗、1908）→ 英語（1979、学術語として）
++note: 味覚の第五の基本味。概念そのものが日本語からの輸入で、対応する英語がなかった。
+
+@ zen ; /zen/ ; 名 ; 禅
++chain: サンスクリット <i>dhyāna</i>「静慮」→ 中国語「禅」→ 日本語「禅」→ 英語（1727、一般化は1950年代のビート世代）
++note: インド→中国→日本→西欧という四段階の伝播が語形に残る。
+
+== 7　中国語
+
+<b>いつ・なぜ入ったか。</b>広東語・閩南語からの交易語（<i>tea, ketchup, typhoon, kowtow, chop suey, wok, dim sum, kumquat, cheongsam</i>）と、北京官話からの近代語（<i>feng shui, tai chi, kung fu, gung ho, mahjong, yin and yang, qi</i>）に分かれる。海路で入った語が南方方言、20世紀以降の語が官話という対応が明瞭である。
+
+@ gung ho ; /ˌɡʌŋ ˈhəʊ/ ; 形 ; 熱狂的な
++chain: 中国語「工合」（工業合作社の略）→ 米海兵隊のスローガン（1942）
++note: カールソン中佐が中国で見た協同組合運動の標語を部隊訓練に採用した。誤解に基づく短縮が定着した例。
+
+@ feng shui ; /ˌfʌŋ ˈʃuːi/ ; 名 ; 風水
++lit: 「風と水」
++chain: 中国語「風水」→ 英語（1797）
+
+@ silk ; /sɪlk/ ; 名 ; 絹
++conf: 一説　中国語「絲」（sī）が、中央アジア諸語を経てギリシア語 <i>sērikón</i>「セレス人の（布）」となり、バルト・スラヴ経由で古英語 <i>seolc</i> に至ったとされる。
++der: sericulture, Seres（「絹の民」＝中国）
++note: ラテン語 <i>sēricum</i> 経由の形が仏 <i>soie</i>、独 <i>Seide</i>。英語だけが l をもつのは、バルト語経由（リトアニア語 <i>šilkai</i>）で入ったためとされる。絹の道が語形の分岐にも残っている。
+
+== 8　ヘブライ語・ペルシア語・トルコ語
+
+@ amen ; /ɑːˈmen/ ; 間投 ; アーメン
++chain: ヘブライ語 <i>āmēn</i>「確かに」← <i>āman</i>「堅固である」
++note: 翻訳されずに音のまま伝わった数少ない語。<i>hallelujah</i>（「主を賛美せよ」）, <i>hosanna</i>, <i>sabbath</i>, <i>jubilee</i>, <i>messiah</i>, <i>seraph</i>, <i>behemoth</i>, <i>leviathan</i> も同様。
+
+@ bazaar ; /bəˈzɑː/ ; 名 ; バザール
++chain: ペルシア語 <i>bāzār</i>「市場」→ トルコ語 → 伊 <i>bazarro</i>
+
+@ caravan ; /ˈkærəvæn/ ; 名 ; 隊商
++chain: ペルシア語 <i>kārwān</i> → 仏 <i>caravane</i>
++der: van（車両。<i>caravan</i> の短縮、1829）
++note: <i>van</i>「バン」は <i>caravan</i> の後半だけを切り出した短縮。<i>vanguard</i>「前衛」の <i>van</i> とは別語。
+
+@ divan ; /dɪˈvæn/ ; 名 ; 長椅子、（オスマンの）評議会
++chain: ペルシア語 <i>dīwān</i>「記録簿、政庁」→ トルコ語
++der: douane（仏「税関」）, dogana（伊）
++note: 「政庁」→「評議会の間」→「そこに置かれた長椅子」。仏語の「税関」まで同語。
+
+@ horde ; /hɔːd/ ; 名 ; 大群
++chain: テュルク語 <i>ordu</i>「陣営」→ ポーランド語 <i>horda</i> → 独 <i>Horde</i>
++note: 「金帳汗国（Golden Horde）」の名から。<i>Urdu</i>「ウルドゥー語」も同語で、「軍営の言葉」の意。
+
+@ turquoise ; /ˈtɜːkwɔɪz/ ; 名 ; トルコ石
++lit: 「トルコの（石）」
++chain: 仏 <i>pierre turquoise</i>
++note: 産地はペルシアだが、トルコ経由で入ったため。<i>turkey</i>「七面鳥」も同じ誤認による命名で、実際は新大陸原産。産地の誤認が名に残る例が二つある。
+
+== 9　ロシア語・スラヴ語
+
+@ mammoth ; /ˈmæməθ/ ; 名 ; マンモス
++chain: ロシア語 <i>мамонт</i>（マンシ語など北方語起源か）→ 英語（1706）
++note: シベリアの凍土から出土した遺体の報告とともに入った。「巨大な」の形容詞用法は1802年の米国から。
+
+@ sable ; /ˈseɪbl/ ; 名 ; クロテン
++chain: スラヴ語 *<i>sobolь</i> → 中世ラテン語 <i>sabelum</i>
++note: 中世の毛皮交易語。紋章学で「黒」を意味するのは、この毛皮の色から。
+
+@ vodka ; /ˈvɒdkə/ ; 名 ; ウォッカ
++lit: 「小さな水」
++chain: 露 <i>водка</i>（<i>вода</i>「水」の指小形）
++cog: 英 <i>water</i>, Gk <i>hýdōr</i>（同根 *wed-）
++see: whisky
++note: 英語 <i>water</i> とロシア語 <i>вода</i> は同根。<i>whisky</i>（命の水）、<i>eau-de-vie</i> と同じ命名法。
+
+@ czar ; /zɑː/ ; 名 ; 皇帝
++chain: L <i>Caesar</i> → ゴート語／スラヴ語 <i>цьсарь</i> → 露 <i>царь</i>
++der: Caesar, kaiser（独）, Kaiserschnitt, caesarean
++note: ローマ皇帝の家名が、ドイツ語 <i>Kaiser</i> とロシア語 <i>tsar</i> の両方になった。米語で「〜担当長官」（<i>drug czar</i>）の意で使う。
+
+== 10　ケルト語・アメリカ先住民諸語・アフリカ諸語
+
+<b>ケルト語からの借用は驚くほど少ない。</b>ブリテン島の先住民の言語であるにもかかわらず、英語に入ったケルト語は <i>bin, brock, crag, dun, tor</i> と地名（<i>Thames, Avon, Kent, London, Dover, Cornwall</i>）程度で、日常語彙にほとんど痕跡がない。これは征服の性格（住民の置換）を示す社会史的証拠として重視される。後代のアイルランド・スコットランド・ウェールズ語からは <i>whisky, clan, slogan, brogue, galore, banshee, bog, trousers, penguin（一説）, hooligan, leprechaun, shamrock, glen, loch, cairn, corgi, flannel</i> が入った。
+
+@ clan ; /klæn/ ; 名 ; 氏族
++chain: ゲール語 <i>clann</i>「子孫」← L <i>planta</i>「若木、苗」
++note: ラテン語がゲール語を経て英語に戻ってきた。<i>plant</i> と同語。
+
+@ galore ; /ɡəˈlɔː/ ; 副 ; たくさん
++chain: アイルランド語 <i>go leór</i>「十分に」
++note: 名詞の後に置く珍しい副詞（<i>whisky galore</i>）。ゲール語の語順をそのまま保存している。
+
+@ hooligan ; /ˈhuːlɪɡən/ ; 名 ; ならず者
++conf: 一説　ロンドンのアイルランド系一家 Houlihan の名からとされる。
+
+@ penguin ; /ˈpeŋɡwɪn/ ; 名 ; ペンギン
++conf: 一説　ウェールズ語 <i>pen gwyn</i>「白い頭」から、北大西洋のオオウミガラスを指した語が、南半球の別の鳥に転用されたとされる。
++note: オオウミガラスは頭部に白斑があるが、ペンギンの頭は黒い。転用の際に名の根拠が失われた。
+
+@ moccasin ; /ˈmɒkəsɪn/ ; 名 ; モカシン
++chain: ポーハタン語（アルゴンキン語族）<i>mockasin</i>
++note: 英語に入ったアルゴンキン語には <i>raccoon, opossum, moose, skunk, squash, hickory, persimmon, terrapin, totem, powwow, caucus, tomahawk, wigwam, papoose, squaw</i> がある。北米の動植物名の多くがこの語族から来ている。
+
+@ banjo ; /ˈbændʒəʊ/ ; 名 ; バンジョー
++conf: 一説　キンブンドゥ語 <i>mbanza</i> など西アフリカの弦楽器名からとされる。
++note: 英語に入った西アフリカ諸語には <i>yam, okra, gumbo, goober, jazz（諸説）, banjo, zombie, chigger, tote（一説）, juke（<i>juke joint</i>→<i>jukebox</i>）</i> がある。多くが大西洋奴隷貿易を通じてアメリカ南部の英語に入り、そこから一般化した。
+

@@ -84,12 +84,6 @@
 +der: mystic, mysticism, mute は別
 +note: 中世の「聖史劇」を <i>mystery play</i> というが、この <i>mystery</i> は L <i>ministerium</i>「職業、同業組合」由来の別語で、同業組合が上演したことによる。
 
-@ mob ; /mɒb/ ; 名 ; 群衆
-+lit: 「動きやすい群衆」
-+chain: L <i>mōbile vulgus</i> → 短縮形 <i>mob</i>（1680年代）
-+desc: 当時「下品な新造語」として非難された。ジョナサン・スウィフトは <i>mob</i>, <i>banter</i>, <i>bamboozle</i> などの短縮語を槍玉に挙げた（1712）。
-+der: mobile, motion, move, motor, momentum, remote
-
 @ moment ; /ˈməʊmənt/ ; 名 ; 瞬間、重要性
 +lit: 「（天秤を）動かすもの」
 +chain: L <i>mōmentum</i>（<i>movēre</i>「動かす」+ <i>-mentum</i>）「動き、重み、決め手」
@@ -99,7 +93,6 @@
 @ mausoleum ; /mɔːsəˈliːəm/ ; 名 ; 霊廟
 +chain: 人名 Mausolos（前4世紀、カリアの太守）
 +desc: 妻アルテミシアが夫マウソロスのために築いた壮大な墓（ハリカルナッソスのマウソロス霊廟）は、世界の七不思議のひとつに数えられた。以後、壮大な墓の代名詞となった。
-
 
 @ manager ; /ˈmænɪdʒə/ ; 名 ; 管理者
 +lit: 「馬を手で御する者」
@@ -131,23 +124,6 @@
 +chain: Gk <i>mélos</i>「歌、旋律」+ <i>ōidḗ</i>「歌」→ <i>melōidíā</i>
 +der: ode, comedy, tragedy, parody, rhapsody, prosody, palinode
 
-@ mercy ; /ˈmɜːsi/ ; 名 ; 慈悲
-+lit: 「（神からの）報酬、代価」
-+chain: L <i>merces, mercēdis</i>「報酬、代価」→ 後期ラテン語で「（善行に対する）天の報い」→ OF <i>merci</i>
-+der: merchant, market, commerce, mercenary, Mercury, merci（仏「ありがとう」）
-+note: 「商取引の代価」から「慈悲」へ移ったのは、教会ラテン語での用法による。仏語 <i>merci</i>「ありがとう」も同語。
-
-@ midwife ; /ˈmɪdwaɪf/ ; 名 ; 助産婦
-+lit: 「（産婦と）ともにいる女」
-+chain: ME <i>mid</i>「〜とともに」（独 <i>mit</i>）+ <i>wif</i>「女」
-+note: <i>mid</i> は古い前置詞で、<i>with</i> に置き換えられて消えた。この語に化石として残る。<i>wife</i> はここでは「女」（原義）。
-
-@ minister ; /ˈmɪnɪstə/ ; 名 ; 大臣、牧師
-+lit: 「より小さい者＝奉仕者」
-+chain: L <i>minus</i>「より少ない」→ <i>minister</i>「召使い」
-+der: minor, minus, minute, diminish, administer, ministry
-+note: <i>magister</i>「より大きい者」（→ master）と対をなす。国家の <i>minister</i>「大臣」が「奉仕者」であるのは、王への奉仕者だったから。
-
 @ moot ; /muːt/ ; 形 ; 議論の余地のある
 +lit: 「集会（で論じる）」
 +chain: OE <i>mōt</i>「集会」（<i>gemōt</i>、<i>witenagemot</i>「賢人会議」）
@@ -168,3 +144,273 @@
 +chain: L <i>mustum</i>「新しいぶどう果汁」→ OF <i>mostarde</i>
 +der: must（ぶどう果汁）, mustang は別
 +note: からし種を <i>must</i> で練って作ったことによる。原料ではなく調製法による命名。
+
+@ macabre ; /məˈkɑːbrə/ ; 形 ; death を思わせる、陰惨な
++chain: 仏 <i>danse macabre</i>「死の舞踏」（<i>Macabé</i>「マカベア（人）」からか）
++conf: 一説
++note: 中世末のペスト流行下で流行した図像「死の舞踏」の名から。
+
+@ machine ; /məˈʃiːn/ ; 名 ; 機械
++chain: ドーリス方言 <i>mākhaná</i>「工夫、装置」→ L <i>māchina</i> → 仏
++root: *maǵʰ-「できる」
++der: mechanic, mechanism, machination／ゲルマン系 may, might, main
++note: 英語の助動詞 <i>may</i>「できる」と <i>machine</i> は同根。<i>deus ex machina</i>「機械仕掛けの神」は劇の吊り装置。
++lvl: ★★★
+
+@ magnate ; /ˈmæɡneɪt/ ; 名 ; 有力者
++chain: L <i>magnus</i>「大きい」→ 後期ラテン語 <i>magnās</i>
++root: *meǵ-「大きい」
++der: magnify, magnitude, magnificent, major, mayor, majesty, maxim, maximum, master, mister, magistrate, much／Gk系 mega-, megaphone, omega
++cog: Gk <i>mégas</i>, Skt <i>mahā-</i>（<i>Mahatma</i>）
++note: <i>much</i>（＜ OE <i>micel</i>）もこの根。<i>master</i> は <i>magister</i>「より大きい者」、<i>minister</i> は <i>minus</i>「より小さい者」で対をなす。
++see: *meǵ-, minister
++lvl: ★★
+
+@ malice ; /ˈmælɪs/ ; 名 ; 悪意
++chain: L <i>malus</i>「悪い」→ <i>malitia</i>
++der: malicious, malign, malady, malaria, dismal, malefactor, malfunction, malnutrition, maltreat, malcontent, mauve は別
++note: 接頭辞的 <i>mal-</i> は現代英語で生産的（<i>malware</i>, 1990）。
++lvl: ★★
+
+@ mammal ; /ˈmæməl/ ; 名 ; 哺乳類
++chain: L <i>mamma</i>「乳房」→ <i>mammālis</i>
++desc: リンネが1758年に命名。それ以前は <i>Quadrupedia</i>「四足類」で、鯨やコウモリを含められなかった。授乳という一形質を分類基準に据えた革新。
++note: <i>mamma</i>「ママ」は世界の言語に共通する幼児語で、系統的な同源ではなく調音の易しさによる並行発生。
++see: mother
+
+@ mandate ; /ˈmændeɪt/ ; 名 ; 命令、委任
++lit: 「手に委ねること」
++chain: L <i>manus</i>「手」＋ <i>dare</i>「与える」→ <i>mandāre</i>
++root: *man-「手」／*deh₃-「与える」
++der: manual, manage, manufacture, manuscript, maintain, manipulate, manner, emancipate, command, demand, recommend, commando
++note: <i>Maundy Thursday</i>「聖木曜日」は「新しい戒め（<i>mandātum novum</i>）を与える」から。
++see: *man-
++lvl: ★★★
+
+@ manoeuvre ; /məˈnuːvə/ ; 名動 ; 作戦行動、巧みに動かす
++lit: 「手仕事」
++chain: L <i>manū operārī</i>「手で働く」→ 仏 <i>manœuvre</i>
++dbl: manure
++note: 同じ語が「手で（土地を）働かせる」→ <i>manure</i>「肥料をやる、肥料」に分かれた。高級な軍事語と農作業語が同一起源という劇的な二重語。
+
+@ marshal ; /ˈmɑːʃl/ ; 名 ; 元帥、保安官
++lit: 「馬の下男」
++chain: フランク語 *<i>marhskalk</i>（*<i>marh</i>「馬」＋*<i>skalk</i>「僕」）→ OF <i>mareschal</i>
++der: mare（牝馬）, seneschal（「年長の僕」）, constable（<i>comes stabulī</i>「厩舎の伯」）
++note: <i>marshal</i>, <i>constable</i>, <i>steward</i>（<i>stigweard</i>「豚小屋の守り手」）がそろって最高位の官職名に上昇した。宮廷の実務職が権力を握った中世の社会構造を映す。
++see: 意味の上昇（第8章）
+
+@ martial ; /ˈmɑːʃl/ ; 形 ; 軍事の
++chain: L <i>Mārs</i>（属格 <i>Mārtis</i>）「軍神マルス」→ <i>Mārtiālis</i>
++der: March（<i>Mārtius</i>「軍神の月」＝出征期）, martian
++see: jovial, weekdays（図）
+
+@ mask ; /mɑːsk/ ; 名 ; 仮面
++chain: アラビア語 <i>maskharah</i>「道化」→ 伊 <i>maschera</i> → 仏 <i>masque</i>
++conf: 一説　前ラテン語基層説もある。
++der: mascara, masquerade
+
+@ mayhem ; /ˈmeɪhem/ ; 名 ; 大混乱、傷害
++chain: OF <i>mahaignier</i>「傷つける」→ AF <i>mahaim</i>
++dbl: maim
++note: 法律用語では「身体を不具にする傷害罪」の意で今も使われる。
+
+@ medicine ; /ˈmedsn/ ; 名 ; 薬、医学
++chain: L <i>medērī</i>「治す、手当てする」→ <i>medicīna</i>
++root: *med-「測る、適切に処置する」
++der: medical, remedy, meditate, modest, moderate, mode, model, modern, mood は別／ゲルマン系 mete「測る」
++cog: Gk <i>médomai</i>, Av <i>vī-mad-</i>
++note: 「適切な尺度を当てる」が根の意味。<i>moderate</i>「節度ある」と <i>medicine</i> が同根なのは、古代医学が体液の均衡＝適量の学だったことと呼応する。
++see: *med-, humors（図）
++lvl: ★★★
+
+@ memory ; /ˈmeməri/ ; 名 ; 記憶
++chain: L <i>memor</i>「心にとどめる」→ <i>memoria</i>
++root: *(s)mer-「思い出す」
++der: memoir, memorial, memento, commemorate, remember, memorandum／Gk系 mourn は別
++note: <i>souvenir</i>（仏、<i>subvenīre</i>「心に浮かぶ」）、<i>reminisce</i>（<i>mens</i>「心」）と、記憶の語は「心に戻る」の比喩で作られる。
++lvl: ★★★
+
+@ mercy ; /ˈmɜːsi/ ; 名 ; 慈悲
++chain: L <i>mercēs</i>「報酬、代価」→ 教会ラテン語「（神の）恵み」
++der: merchant, merchandise, market, commerce, mercenary, Mercury
++note: 「代価」が「（見返りを求めない）恵み」に転じたのはキリスト教ラテン語の意味革新。<i>market</i> と <i>mercy</i> が同根なのはこのため。仏 <i>merci</i>「ありがとう」も同語。
++see: 第7章 キリスト教語彙
+
+@ mess ; /mes/ ; 名 ; 混乱、（軍隊の）食堂
++lit: 「（食卓に）置かれたもの」
++chain: L <i>mittere</i>「送る、置く」→ 後期 <i>missus</i>「一皿」→ OF <i>mes</i>
++root: *smeit-「投げる」
++der: mission, missile, message, admit, commit, permit, submit, transmit, promise, compromise, dismiss, omit, premise, surmise
++note: 「一皿の料理」→「（雑多に混ぜた）まかない」→「ごたまぜ」→「混乱」。<i>officers' mess</i> は原義を保つ。
++see: *mittere
++lvl: ★★
+
+@ metropolis ; /məˈtrɒpəlɪs/ ; 名 ; 大都市
++lit: 「母なる都市」
++chain: Gk <i>mḗtēr</i>「母」＋ <i>pólis</i>「都市」
++desc: 古代ギリシアで植民市（<i>apoikía</i>）に対する母市を指した語。
++der: metropolitan, mother, maternal, matrix, matriculate, matter（L <i>māteria</i>「木の幹＝母なるもの」）／politics, police, policy, cosmopolitan
++note: <i>matter</i>「物質」が「母」から来るのは、木材を「木を生む幹」と捉えたため。
++see: *meh₂tēr-
+
+@ midwife ; /ˈmɪdwaɪf/ ; 名 ; 助産師
++lit: 「（産婦と）ともにいる女」
++chain: ME <i>mid</i>「〜とともに」（独 <i>mit</i> と同源）＋ <i>wif</i>「女」
++note: <i>mid</i> は古英語の前置詞で、<i>with</i> に取って代わられ、この語と <i>midst</i> にだけ残った。<i>wife</i> は本来「女」一般（<i>fishwife</i>, <i>old wives' tale</i>）。
+
+@ minister ; /ˈmɪnɪstə/ ; 名 ; 大臣、聖職者
++lit: 「より小さい者＝従者」
++chain: L <i>minus</i>「より小さい」→ <i>minister</i>「召使い」
++root: *mey-「小さい」
++der: minor, minus, minute, diminish, minimum, administer, ministry, mince
++note: <i>magister</i>（大きい者→ master）と正確に対をなす。「僕」が「大臣」へ上昇したのは、キリスト教の「仕える者」の理念と宮廷職の実権化の両方による。
++see: magnate
++lvl: ★★
+
+@ mint ; /mɪnt/ ; 名 ; 造幣局／ハッカ
++chain: (1) L <i>monēta</i>「ユノ・モネタ神殿＝造幣所」→ OE <i>mynet</i>／(2) Gk <i>mínthē</i>「ハッカ」→ L <i>mentha</i>
++dbl: money（<i>monēta</i> のフランス語経由形）
++note: 同綴の別語。<i>mint</i>（造幣）と <i>money</i> は同一語源の二重語で、ローマの造幣所がユノ・モネタ（「警告する者」）の神殿にあったことによる。
++see: money
+
+@ mirror ; /ˈmɪrə/ ; 名 ; 鏡
++chain: L <i>mīrārī</i>「驚嘆する」→ 俗ラテン語 *<i>mīrāre</i>「見る」→ OF <i>mireor</i>
++root: *smei-「笑う、驚く」
++der: miracle, marvel, admire, smile（ゲルマン系）
++note: <i>smile</i> と <i>miracle</i> が同根。「見て驚く」という感情から「見る」道具の名へ。
+
+@ mob ; /mɒb/ ; 名 ; 群衆
++chain: L <i>mōbile vulgus</i>「移り気な大衆」の短縮（17世紀）
++der: mobile, motive, motor, emotion, remote, promote, moment, momentum, commotion
++root: *mew-「動く」
++note: スウィフトらが「下品な省略語」として非難した新語だが定着した。同時期の短縮語 <i>rep</i>（reputation）、<i>pos</i>（positive）は消えた。
++see: 短縮（第6章）
+
+@ monster ; /ˈmɒnstə/ ; 名 ; 怪物
++lit: 「（神意の）予兆」
++chain: L <i>monēre</i>「警告する」→ <i>mōnstrum</i>「凶兆となる異形」
++der: demonstrate（「はっきり示す」）, muster, monstrance
++note: 異常な出生を神の警告と見た古代の観念。<i>demonstrate</i> と <i>monster</i> が同根。
+
+@ mosquito ; /məˈskiːtəʊ/ ; 名 ; 蚊
++lit: 「小さいハエ」
++chain: L <i>musca</i>「ハエ」→ 西 <i>mosquito</i>（指小形）
++cog: OE <i>mycg</i> → midge
++note: 英語 <i>midge</i> と同根。<i>musket</i>「マスケット銃」も <i>musca</i> の指小形で、小型の砲を鳥や虫の名で呼ぶ慣習（<i>falconet</i>「小隼砲」）による。
+
+@ motto ; /ˈmɒtəʊ/ ; 名 ; 標語
++chain: L <i>muttum</i>「つぶやき」→ 伊 <i>motto</i>「短い言葉」
++der: mutter, mute, motto
++note: 紋章に添える短句を指す紋章学の用語から一般化。
+
+@ mad ; /mæd/ ; 形 ; 狂った、（米）怒った
++chain: OE <i>ġemǣdd</i>「変えられた、狂わされた」
++root: *mei-「変える」
++cog: 独 <i>Wahnsinn</i> は別
++der: mutate, mutual, common, municipal, immune, migrate, permeate（*mei- 系）
++note: 「怒っている」の意は英語本来の用法だが、英国では19世紀に廃れ、米語に残った。英米差の多くはこの型（米語が古形を保存）。
+
+@ magpie ; /ˈmæɡpaɪ/ ; 名 ; カササギ
++chain: <i>Mag</i>（<i>Margaret</i> の愛称）＋ <i>pie</i>（L <i>pīca</i>「カササギ」）
++note: 鳥に人名の愛称を付ける習慣（<i>robin</i>＜Robert, <i>jackdaw</i>＜Jack, <i>jenny wren</i>）。<i>pied</i>「まだらの」もカササギの白黒から。
+
+@ manual ; /ˈmænjuəl/ ; 形名 ; 手の、手引き書
++chain: L <i>manus</i>「手」→ <i>manuālis</i>
++see: mandate
++note: 「手に持てる大きさの本」→「手引き」。<i>handbook</i> は古英語 <i>handbōc</i> の復活形で、19世紀にドイツ語 <i>Handbuch</i> の影響で再生した。
+
+@ marathon ; /ˈmærəθən/ ; 名 ; マラソン
++chain: Gk <i>Marathṓn</i>（アッティカの地名、「ウイキョウの野」）
++desc: 前490年の戦勝報を走って伝えた伝説に基づき、第1回近代オリンピック（1896）で創設された競技。古代にこの競技は存在しない。
++note: <i>-athon</i> が接尾辞として切り出され、<i>telethon, walkathon</i> を生んだ（異分析）。
++see: 異分析（第6章）
+
+@ meager ; /ˈmiːɡə/ ; 形 ; 乏しい
++chain: L <i>macer</i>「痩せた」→ OF <i>maigre</i>
++cog: OE <i>mæger</i> → 廃, 独 <i>mager</i>
++note: 英語本来語 <i>mager</i> がフランス語形に置き換えられた。同源語の衝突では借用形が勝つことが多い。
+
+@ meat ; /miːt/ ; 名 ; 肉
++chain: OE <i>mete</i>「食物一般」
++desc: 古英語では食べ物全般を指し、「肉」は <i>flǣsc</i>（→ flesh）だった。<i>sweetmeat</i>「砂糖菓子」、<i>meat and drink</i>、<i>one man's meat is another man's poison</i> に古義が残る。
++see: 意味の縮小（第8章）
++lvl: ★★
+
+@ menu ; /ˈmenjuː/ ; 名 ; メニュー
++chain: L <i>minūtus</i>「小さくされた」→ 仏 <i>menu</i>「詳細な（一覧）」
++root: *mey-「小さい」
++der: minute（分・微細な）, diminish, minor
++note: 「細かく書き出したもの」。計算機の「メニュー」は1967年の転用。
+
+@ merit ; /ˈmerɪt/ ; 名 ; 功績
++chain: L <i>merēre</i>「値する、稼ぐ」→ <i>meritum</i>
++der: meritorious, emeritus（「勤めを終えた」）, demerit
++note: <i>professor emeritus</i>「名誉教授」は「務めを果たし終えた」の意で、称号ではなく状態の表示。
+
+@ mirage ; /ˈmɪrɑːʒ/ ; 名 ; 蜃気楼
++chain: 仏 <i>se mirer</i>「映る」（L <i>mīrārī</i>）
++see: mirror
+
+@ mnemonic ; /nɪˈmɒnɪk/ ; 形名 ; 記憶術の
++chain: Gk <i>Mnēmosýnē</i>「記憶の女神」← <i>mnâsthai</i>「思い出す」
++root: *men-「思う」
++der: amnesia（「記憶がない」）, amnesty（「（罪を）思い出さないこと」）, automatic は別
++see: money, mind
++note: <i>amnesty</i>「恩赦」は「忘却」が原義。
+
+@ mongrel ; /ˈmʌŋɡrəl/ ; 名 ; 雑種
++chain: OE <i>mengan</i>「混ぜる」＋指小・軽蔑の <i>-rel</i>
++der: among, mingle, monger は別
++note: <i>among</i>「〜の中に」は <i>on gemang</i>「混ざった中に」。
+
+@ moral ; /ˈmɒrəl/ ; 形名 ; 道徳の
++chain: L <i>mōs</i>（複 <i>mōrēs</i>）「慣習」→ <i>mōrālis</i>
++desc: キケロがギリシア語 <i>ēthikós</i>（<i>êthos</i>「習慣」）を訳すために造った語。<i>ethics</i> と <i>morals</i> はギリシア語とラテン語で同じ発想の対訳語。
++der: morale, mores, demoralize
++note: <i>morale</i>「士気」は仏語からの再借用で、綴りと意味を分けた。
++lvl: ★★
+
+@ mortify ; /ˈmɔːtɪfaɪ/ ; 動 ; 屈辱を与える、（肉体を）苦しめる
++chain: L <i>mors</i>「死」＋ <i>-ficāre</i>「〜にする」
++note: 「（欲望を）殺す」という宗教的禁欲の語が、17世紀に「面目を潰す」の世俗的意味へ。
++see: mortgage
+
+@ mosque ; /mɒsk/ ; 名 ; モスク
++chain: アラビア語 <i>masjid</i>「ひれ伏す場所」← <i>sajada</i>「ひれ伏す」→ 西 <i>mezquita</i> → 仏 <i>mosquée</i>
++see: 第VIII部 アラビア語
+
+@ motley ; /ˈmɒtli/ ; 形 ; 雑多な
++chain: 語源不確実（<i>mote</i>「塵」からか）
++conf: 不確実
++note: 道化の斑模様の衣装 <i>motley</i> から「寄せ集めの」。<i>a motley crew</i>。
+
+@ mount ; /maʊnt/ ; 動名 ; 登る、山
++chain: L <i>mōns</i>（属格 <i>montis</i>）「山」→ <i>montāre</i>
++root: *men-「突き出る」
++der: mountain, amount, paramount, surmount, dismount, promontory, eminent, prominent, imminent, menace
++note: <i>eminent</i>「突出した」, <i>imminent</i>「（頭上に）差し迫った」, <i>prominent</i>「前に突き出た」は接頭辞だけが違う三兄弟。
++lvl: ★★★
+
+@ mourn ; /mɔːn/ ; 動 ; 嘆く
++chain: OE <i>murnan</i>
++root: *(s)mer-「記憶する、思い悩む」
++see: memory
++note: <i>memory</i> と同根とする説が有力。悲嘆は「忘れられないこと」。
++conf: 通説
+
+@ mug ; /mʌɡ/ ; 名動 ; マグ、顔、襲う
++conf: 不確実
++desc: 「マグカップ」（16世紀、北欧語系か）→ 18世紀に人の顔を描いたマグが流行して「顔」の俗語→「顔を狙って襲う」→ <i>mugger</i>, <i>mugshot</i>。物→身体部位→行為という珍しい連鎖。
+
+@ mundane ; /mʌnˈdeɪn/ ; 形 ; 世俗的な、平凡な
++chain: L <i>mundus</i>「世界、（形容詞で）清らかな」→ <i>mundānus</i>
++note: <i>mundus</i> はギリシア語 <i>kósmos</i>（「秩序」かつ「装飾」）の対訳語で、二重の意味まで写した。<i>cosmetic</i> と <i>cosmos</i> の関係が、ラテン語では <i>mundane</i> と <i>immaculate</i> 系に対応する。
++see: cosmos
+
+@ mutual ; /ˈmjuːtʃuəl/ ; 形 ; 相互の
++chain: L <i>mūtāre</i>「変える、交換する」→ <i>mūtuus</i>
++root: *mei-「変える、交換する」
++der: mutate, commute, permutation, common（<i>com-</i>＋*mei-「義務を分かち合う」）, municipal, immune, migrate, mad
++note: <i>common</i>, <i>immune</i>, <i>municipal</i> はすべて「務めを負う／負わない」から。<i>immune</i> は「公役を免除された」が原義で、医学用語は19世紀の転用。
++lvl: ★★

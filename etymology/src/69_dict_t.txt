@@ -1,10 +1,5 @@
 == T
 
-@ tabloid ; /ˈtæblɔɪd/ ; 名 ; タブロイド紙
-+chain: 商標 <i>Tabloid</i>（Burroughs Wellcome 社の圧縮錠剤, 1884）
-+desc: 「錠剤のように圧縮された」の比喩から、要約された記事を載せる小型新聞を指すようになった（1901）。
-+der: table, tablet, tabular
-
 @ tantalize ; /ˈtæntəlaɪz/ ; 動 ; じらす
 +chain: ギリシア神話のタンタロス（Tántalos）
 +desc: 神々の秘密を漏らした罰として、水に首まで浸かりながら飲もうとすると水が引き、頭上の果実に手を伸ばすと枝が逃げる、という永劫の責め苦を受けた。
@@ -52,23 +47,11 @@
 +der: travail
 +note: <i>trepālium</i> の語源説には異論もあるが、<i>travail</i> と <i>travel</i> が同語であることは確実。
 
-@ treacle ; /ˈtriːkl/ ; 名 ; 糖蜜
-+lit: 「野獣（に噛まれた傷）の（解毒薬）」
-+chain: Gk <i>thērion</i>「野獣」→ <i>thēriakḗ</i>「毒蛇の咬傷の薬」→ L → OF <i>triacle</i>
-+desc: 蜜で練った万能解毒薬（テリアカ）を指し、その甘さから「糖蜜」の意味に転じた。
-+der: theriac
-
 @ trivial ; /ˈtrɪviəl/ ; 形 ; 些細な
 +lit: 「三叉路の」
 +chain: L <i>trivium</i>（<i>tri-</i>「三」+ <i>via</i>「道」）「三叉路」→ <i>triviālis</i>「街角でありふれた」
 +desc: 人の行き交う辻で交わされる話＝ありふれた話。中世の学芸では <i>trivium</i>（文法・修辞・弁証）が下位三科、<i>quadrivium</i>（算術・幾何・音楽・天文）が上位四科で、合わせて自由七科（liberal arts）。
 +der: three, via, viaduct, obvious, deviate, previous
-
-@ trophy ; /ˈtrəʊfi/ ; 名 ; 戦利品、優勝杯
-+lit: 「（敵の）敗走（の記念）」
-+chain: Gk <i>tropḗ</i>「転回、敗走」→ <i>trópaion</i>「戦勝記念碑」→ L <i>tropaeum</i> → 仏 <i>trophée</i>
-+desc: 敵が向きを変えて逃げた地点に、鹵獲した武具を掛けて立てた記念物。
-+der: trope, tropic（回帰線）, entropy, heliotrope
 
 @ tuxedo ; /tʌkˈsiːdəʊ/ ; 名 ; タキシード
 +chain: 地名 Tuxedo Park（ニューヨーク州の高級住宅地）
@@ -106,7 +89,6 @@
 +chain: アラビア語 <i>ʿattābī</i>（バグダードの地区 al-ʿAttābiyya 産の縞織物）→ 仏 <i>tabis</i> → 英語
 +desc: 縞模様の絹織物の名が、縞模様の猫に転用された。地区名はウマイヤ朝の王子アッターブに由来する。
 
-
 @ talent ; /ˈtælənt/ ; 名 ; 才能
 +lit: 「秤の皿、重量単位」
 +chain: Gk <i>tálanton</i>「秤、重量単位」→ L <i>talentum</i>「貨幣単位」→ OE
@@ -135,7 +117,7 @@
 
 @ tip ; /tɪp/ ; 名 ; チップ
 +chain: 17世紀の犯罪者俗語 <i>tip</i>「渡す、与える」から
-+note: "To Insure Promptness" の頭字語だとする説は<b>誤り</b>（第VIII部）。
++note: "To Insure Promptness" の頭字語だとする説は<b>誤り</b>（第X部）。
 
 @ toast ; /təʊst/ ; 名 ; 乾杯、トースト
 +lit: 「焼いて乾かす」
@@ -148,3 +130,132 @@
 +chain: L <i>tribus</i>「（ローマの）三分割された市民団の一つ」（<i>tri-</i>「三」説）
 +der: tribune（護民官）, tribute（貢納）, contribute, attribute, distribute, tributary, tribunal
 +note: <i>tribute</i>「貢ぎ物」は「部族への割り当て」から。<i>contribute</i>, <i>distribute</i> も同じ語根。
+
+@ tabloid ; /ˈtæblɔɪd/ ; 名 ; タブロイド紙
++chain: <i>tablet</i>＋<i>-oid</i>（バロウズ・ウェルカム社の錠剤の商標、1884）
++desc: 商標が「圧縮された」の意で一般化し、1901年に「要約版新聞」の意で使われた。商標由来語の代表例。
++see: aspirin, heroin, escalator, zipper, thermos（普通名詞化した商標）
+
+@ taboo ; /təˈbuː/ ; 名 ; 禁忌
++chain: トンガ語 <i>tabu</i>「禁じられた、聖別された」
++desc: クック船長の航海記（1777）で英語に入り、19世紀に人類学の基本概念になった。ポリネシア語からの数少ない借用語。
++see: 第VIII部
+
+@ tattoo ; /təˈtuː/ ; 名 ; 入れ墨／帰営ラッパ
++chain: (1) タヒチ語／サモア語 <i>tatau</i>（クック、1769）／(2) 蘭 <i>doe den tap toe</i>「酒樽の栓を閉めろ」
++note: まったく別語源の同綴語。(2) は駐屯地の酒場を閉めさせる合図の太鼓から。
+
+@ tax ; /tæks/ ; 動名 ; 課税（する）
++chain: L <i>tangere</i>「触れる」→ <i>taxāre</i>「評価する、責める」
++root: *teh₂g-「触れる」
++der: tangent, tactile, contact, contagion, intact, integer（「触れられていない＝完全な」）, entire, attain, contaminate, task, taste
++note: <i>task</i> と <i>tax</i> は同一語の二重語。<i>integer</i>「整数」と <i>entire</i> も同語で、「手つかず」が原義。
++lvl: ★★★
+
+@ terror ; /ˈterə/ ; 名 ; 恐怖
++chain: L <i>terrēre</i>「怯えさせる」→ <i>terror</i>
++der: terrible, terrific, deter, terrorism
++note: <i>terrific</i> は「恐ろしい」から「すばらしい」へ反転した。<i>awful</i>（「畏敬に満ちた」→「ひどい」）と正反対の移動。
++see: 第8章
++lvl: ★★
+
+@ thrill ; /θrɪl/ ; 動 ; ぞくぞくさせる
++lit: 「（穴を）貫く」
++chain: OE <i>þyrlian</i>「穴を開ける」（<i>þyrel</i>「穴」）
++der: nostril（<i>nosu</i>「鼻」＋<i>þyrel</i>「穴」＝鼻の穴）, through, thorough
++note: <i>nostril</i> が「鼻孔」であることは語源を知らないとわからない。「胸を貫かれるような感動」から現在の意味へ。
++lvl: ★★
+
+@ tide ; /taɪd/ ; 名 ; 潮
++lit: 「時、時期」
++chain: OE <i>tīd</i>「時」
++cog: 独 <i>Zeit</i>「時間」
++der: time, tidy（「時にかなった」→「きちんとした」）, Yuletide, Eastertide, betide, tidings
++note: 「時」が「潮の満ち引き（＝規則的な時）」に特化した。ドイツ語は原義を保つ。<i>time and tide wait for no man</i> は本来「時と時」の同義反復。
++see: 意味の縮小
+
+@ tinsel ; /ˈtɪnsl/ ; 名 ; 金銀のモール
++chain: L <i>scintilla</i>「火花」→ OF <i>estincelle</i>
++der: scintillate, stencil, tinsel
++note: 語頭音の脱落と異分析。<i>Tinseltown</i>「ハリウッド」。
+
+@ toilet ; /ˈtɔɪlət/ ; 名 ; トイレ
++lit: 「小さな布」
++chain: 仏 <i>toile</i>「布」（L <i>tēla</i>「織物」）→ <i>toilette</i>
++desc: 「化粧用の布」→「化粧台」→「身支度」→「化粧室」→「便所」。婉曲語が実質を指すようになって汚れ、また別の婉曲語（<i>bathroom</i>, <i>restroom</i>, <i>lavatory</i>, <i>WC</i>）が要る——婉曲語のトレッドミルの教科書例。
++see: subtle, 第8章
++lvl: ★★
+
+@ tornado ; /tɔːˈneɪdəʊ/ ; 名 ; 竜巻
++chain: 西 <i>tronada</i>「雷雨」（<i>tronar</i>「雷鳴」）＋<i>tornar</i>「回る」の混淆
++der: thunder（ゲルマン系同根 L <i>tonāre</i>）, detonate, astonish（「雷に打たれたようにする」）, stun
++note: <i>astonish</i>, <i>stun</i>, <i>thunder</i> が同根。
+
+@ tour ; /tʊə/ ; 名 ; 旅行
++lit: 「ろくろ、旋回」
++chain: Gk <i>tórnos</i>「旋盤、コンパス」→ L <i>tornus</i> → OF <i>tour</i>
++der: turn, tournament, return, detour, contour, attorney は別
++note: 円を描いて元に戻る動きが「周遊」に。<i>the Grand Tour</i>（17–18世紀の貴族子弟の欧州周遊）が現代の観光の原型。
++lvl: ★★
+
+@ treacle ; /ˈtriːkl/ ; 名 ; 糖蜜
++lit: 「野獣の（毒に効く薬）」
++chain: Gk <i>thēriakós</i>「野獣に関する」（<i>thēríon</i>「野獣」）→ L <i>thēriaca</i>「毒消し」
++desc: 蛇の毒に効くとされた甘い練り薬。甘味料としての性格が残り、17世紀に「糖蜜」へ。
++der: theriac, treacle
+
+@ trophy ; /ˈtrəʊfi/ ; 名 ; トロフィー
++lit: 「（敵の）敗走（の記念）」
++chain: Gk <i>tropḗ</i>「転回、敗走」→ <i>trópaion</i>
++der: trope, tropic（「（太陽が）転回する線」＝回帰線）, heliotrope, entropy, apostrophe
++note: 敵が向きを変えて逃げた地点に武具を掛けて建てた記念物。<i>tropic</i>「熱帯」も太陽の「折り返し」。
+
+@ tantrum ; /ˈtæntrəm/ ; 名 ; かんしゃく
++conf: 不確実
+
+@ tempt ; /tempt/ ; 動 ; 誘惑する
++chain: L <i>temptāre</i>「探る、試す」
++der: attempt, tentative, temptation
++note: 「試す」が「（誘惑して）試す」に特化。<i>lead us not into temptation</i>。
+
+@ tenant ; /ˈtenənt/ ; 名 ; 借家人
++lit: 「保持する者」
++chain: L <i>tenēre</i>「保つ」の現在分詞 <i>tenēns</i> → OF <i>tenant</i>
++der: tenure, tenant, contain, detain, maintain, obtain, retain, sustain, continue, content, tenacious, tenor, tenet
++note: TOEIC の不動産・契約文脈で頻出。<i>tenure</i>「終身在職権」も同語。
++see: 第XI部 TOEIC語彙
++lvl: ★★★
+
+@ terrace ; /ˈterəs/ ; 名 ; テラス
++chain: L <i>terra</i>「土地」→ 俗ラテン語 *<i>terrāceum</i>「盛り土」
++der: terrain, territory, terrestrial, inter（「土に入れる」＝埋葬する）, Mediterranean（「陸に囲まれた」）, subterranean
++note: <i>inter</i>「埋葬する」と <i>terrace</i> が同根。
++lvl: ★★
+
+@ text ; /tekst/ ; 名 ; 本文
++lit: 「織られたもの」
++chain: L <i>texere</i>「織る」→ <i>textus</i>
++see: subtle
++der: textile, texture, context, pretext, subtle, architect（Gk <i>tektōn</i>「大工」、同根）, technique（<i>tékhnē</i>）
++note: <i>technology</i> と <i>text</i> が同根で、共通の観念は「組み立てる技」。
++lvl: ★★★
+
+@ threshold ; /ˈθreʃhəʊld/ ; 名 ; 敷居
++chain: OE <i>þerscold</i>（<i>þerscan</i>「踏みつける、脱穀する」）
++conf: 一説　後半 <i>-old</i> の由来は不明。
++der: thresh, thrash
++note: 脱穀は穀物を踏む作業。「踏む場所」＝敷居。心理学・工学の「閾値」は比喩。
+
+@ tinker ; /ˈtɪŋkə/ ; 名動 ; 鋳掛け屋、いじくる
++conf: 不確実（金属を叩く音の擬音か）
+
+@ tuition ; /tjuˈɪʃn/ ; 名 ; 授業料、指導
++chain: L <i>tuērī</i>「見守る、保護する」→ <i>tuitiō</i>
++der: tutor, tutelage, intuition（「内側から見る」）
++note: <i>intuition</i>「直観」が「見守る」から来る。米語で「授業料」の意が定着したのは19世紀。
++lvl: ★★
+
+@ tweed ; /twiːd/ ; 名 ; ツイード
++chain: <i>tweel</i>（スコットランド語で <i>twill</i>「綾織り」）の誤読＋川名 Tweed の連想
++note: 商人の書き間違いが定着したとされる。誤記が語を生んだ例。
++conf: 通説

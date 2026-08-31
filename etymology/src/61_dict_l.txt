@@ -17,12 +17,6 @@
 +chain: 仏 <i>lampons</i>「飲もうぜ」（<i>lamper</i>「がぶ飲みする」の一人称複数命令）
 +desc: 17世紀フランスの風刺歌の囃子詞が、そのままジャンル名になった。
 
-@ larva ; /ˈlɑːvə/ ; 名 ; 幼虫
-+lit: 「幽霊、仮面」
-+chain: L <i>lārva</i>「悪霊、仮面」→ リンネが1691年以降の用法を確立
-+desc: 成虫が「仮面」をかぶって隠れている状態、という見立てによるリンネの命名。
-+der: larval, larvae
-
 @ lens ; /lenz/ ; 名 ; レンズ
 +lit: 「レンズ豆」
 +chain: L <i>lēns, lentis</i>「レンズ豆（ヒラマメ）」
@@ -42,12 +36,6 @@
 +desc: 「代理」が原義。英国式発音 /lefˈtenənt/ の f は、中英語期に <i>lieu</i> の u が v/f と読まれたことによる（諸説あり）。米国式は /luːˈtenənt/。
 +der: locate, local, milieu, tenant, contain, maintain, tenacious
 +note: <i>lieutenant governor</i>「副知事」に「代理」の原義が明瞭。
-
-@ lord ; /lɔːd/ ; 名 ; 主君
-+lit: 「パンを守る者」
-+chain: OE <i>hlāfweard</i>（<i>hlāf</i>「パン」+ <i>weard</i>「守り手」）→ <i>hlāford</i> → ME <i>loverd</i> → <i>lord</i>
-+der: lady, loaf, ward, warden, guard, guardian
-+note: 三音節が一音節に摩耗した、英語史上もっとも劇的な短縮の例。
 
 @ lukewarm ; /luːkˈwɔːm/ ; 形 ; 生ぬるい
 +lit: 「ぬるく暖かい」
@@ -82,7 +70,6 @@
 +der: luxuriant, luxurious, luxate（「関節を外す」＝ <i>luxus</i>「外れた」）
 +note: 現代フランス語 <i>luxure</i> は今も「淫蕩」の意で、「贅沢」は <i>luxe</i> と語形が分かれている。
 
-
 @ labyrinth ; /ˈlæbərɪnθ/ ; 名 ; 迷宮
 +chain: Gk <i>labýrinthos</i>（クレタ島のミノス王の迷宮）
 +desc: 語源は前ギリシア語の基層語とされ、リュディア語 <i>labrys</i>「双斧」との関連説がある（クノッソス宮殿の双斧の意匠）。ただし確証はない。
@@ -103,3 +90,174 @@
 @ lunch ; /lʌntʃ/ ; 名 ; 昼食
 +chain: <i>luncheon</i> の短縮（語源不確実。<i>lump</i>「塊」の異形 <i>lunch</i>「一切れ」から）
 +note: 19世紀までは <i>dinner</i> が正午の主食事で、<i>lunch</i> は間食だった。産業化により食事時間が後ろ倒しになり、現在の体系ができた。<i>supper</i>（＜ <i>sup</i>「すする」）は軽い夜食が原義。
+
+@ laboratory ; /ləˈbɒrətri/ ; 名 ; 実験室
++chain: L <i>labōrāre</i>「働く」→ 中世ラテン語 <i>labōrātōrium</i>
++der: labor, elaborate, collaborate, belabor
++note: 錬金術師の作業場を指す中世語。<i>elaborate</i> は「働き出す」＝入念に仕上げる。
++lvl: ★★
+
+@ lachrymose ; /ˈlækrɪməʊs/ ; 形 ; 涙もろい
++chain: L <i>lacrima</i>「涙」（古形 <i>dacruma</i>）
++root: *dakru-「涙」
++cog: Gk <i>dákry</i>, OE <i>tēar</i> → tear
++note: ラテン語で語頭 d→l が起きた稀な変化。英語 <i>tear</i> とギリシア語 <i>dakry</i> とラテン語 <i>lacrima</i> はすべて同根。
++conf: 通説
+
+@ landscape ; /ˈlændskeɪp/ ; 名 ; 風景
++chain: 蘭 <i>landschap</i>「地方、（絵の）風景」→ 英語（1598）
++desc: オランダ絵画の隆盛とともに画題名として輸入された美術用語。「実際の景色」の意はその後の逆流。
++der: -ship（<i>friendship</i> の接尾辞と同語源）
++note: <i>-scape</i> は後に <i>seascape, cityscape, moonscape</i> と生産的接尾辞になった。
+
+@ larva ; /ˈlɑːvə/ ; 名 ; 幼虫
++lit: 「仮面、亡霊」
++chain: L <i>larva</i>「悪霊、仮面」
++desc: リンネの命名（1768）。成虫の姿を「仮面で覆い隠している」状態と捉えた比喩。<i>pupa</i>「蛹」は「人形」、<i>imago</i>「成虫」は「像」で、同じ隠喩系列。
+
+@ lavish ; /ˈlævɪʃ/ ; 形 ; 惜しみない
++chain: OF <i>lavasse</i>「豪雨」（L <i>lavāre</i>「洗う」）
++der: lava, lavatory, laundry, latrine, deluge, dilute, ablution
++note: 「土砂降りのように」。<i>lava</i>（溶岩）は「流れ下るもの」で同根。
+
+@ lecture ; /ˈlektʃə/ ; 名 ; 講義
++chain: L <i>legere</i>「集める、選ぶ、読む」→ <i>lēctūra</i>
++root: *leǵ-「集める」
++der: legend, lesson, legible, collect, select, elect, intellect, neglect, diligent, elegant, sacrilege／Gk系 logic, dialogue, catalogue, -logy
++note: 「拾い集める」→「文字を拾う」→「読む」という意味発展。ギリシア語 <i>légein</i>「言う」も同根で、<i>lógos</i>（言葉・理性）が全 <i>-logy</i> の源。
++see: *leǵ-
++lvl: ★★★
+
+@ legacy ; /ˈleɡəsi/ ; 名 ; 遺産
++chain: L <i>lēgāre</i>「委任する、遺贈する」（<i>lēx</i>「法」）
++root: *leǵ-
++der: legal, legitimate, loyal, privilege, legislate, delegate, colleague, relegate
++dbl: loyal, legal, leal
++note: 計算機の <i>legacy system</i>「旧式システム」は1980年代の用法で、「先代から引き継いだもの」の比喩。
+
+@ leprechaun ; /ˈleprəkɔːn/ ; 名 ; レプラホーン
++chain: 古アイルランド語 <i>luchorpán</i>（<i>lu</i>「小さい」＋ <i>corp</i>「体」＜ L <i>corpus</i>）
++note: ケルト語がラテン語から借りた語を、英語がさらに借りた三段借用。
+
+@ leverage ; /ˈliːvərɪdʒ/ ; 名 ; てこの作用、影響力
++chain: L <i>levāre</i>「軽くする、上げる」→ OF <i>lever</i>
++root: *h₁leng<sup>wh</sup>-「軽い」
++der: lever, levy, elevate, relieve, relevant, alleviate, levity, carnival（<i>carne vale</i> は別）, light（形容詞、ゲルマン系同根）
++note: 英語 <i>light</i>「軽い」と <i>levity</i> は同根。金融の <i>leverage</i>「てこ入れ」は1930年代の米語。
++lvl: ★★
+
+@ liberal ; /ˈlɪbərəl/ ; 形 ; 自由な、気前のよい
++chain: L <i>līber</i>「自由な」→ <i>līberālis</i>「自由人にふさわしい」
++der: liberty, liberate, libertine, deliver（<i>de-</i>＋<i>līberāre</i>）
++desc: <i>artēs līberālēs</i>「自由七科」は「自由人（＝奴隷でない市民）が学ぶべき学科」の意で、文法・修辞・論理・算術・幾何・天文・音楽。<i>liberal arts</i> の「教養」の含みはここから。
++note: 政治用語としての「自由主義」は19世紀スペインの <i>Liberales</i> 党派名が起点。
++lvl: ★★★
+
+@ library ; /ˈlaɪbrəri/ ; 名 ; 図書館
++chain: L <i>liber</i>「本、樹皮の内皮」→ <i>librāria</i>
++note: <i>līber</i>「自由な」（長母音）と <i>liber</i>「本」（短母音）は別語。書写材の樹皮が「本」になった。ギリシア語 <i>bíblos</i>「パピルスの内皮」→ <i>Bible</i> も同じ発想。仏 <i>librairie</i> は「書店」で、英語 <i>library</i> と意味がずれる有名な false friend。
++see: Bible
+
+@ licence ; /ˈlaɪsəns/ ; 名 ; 許可
++chain: L <i>licēre</i>「許される」→ <i>licentia</i>
++der: license, licentious, leisure, illicit
++note: <i>leisure</i>「余暇」も「許されていること」が原義。<i>poetic licence</i>「詩的許容」。
+
+@ limit ; /ˈlɪmɪt/ ; 名 ; 限界
++chain: L <i>līmes</i>（属格 <i>līmitis</i>）「境界の道、国境線」
++der: limitation, preliminary（<i>prae-</i>＋<i>līmen</i>「敷居」）, eliminate（「敷居の外へ出す」）, sublime（「敷居の下まで＝高みへ」）
++note: <i>līmes</i> はローマ帝国の国境防衛線の名でもあった。
++lvl: ★★★
+
+@ linen ; /ˈlɪnɪn/ ; 名 ; 亜麻布
++chain: L <i>līnum</i>「亜麻」→ OE <i>līn</i>＋形容詞語尾 <i>-en</i>
++der: line（測量の亜麻糸から）, lining, lingerie（仏）, linoleum（<i>līnum</i>＋<i>oleum</i>「油」）
++note: <i>line</i>「線」は亜麻の糸をぴんと張って直線を引いたことから。素材名が抽象概念になった。
++see: line
+
+@ liquor ; /ˈlɪkə/ ; 名 ; 酒
++chain: L <i>liquēre</i>「液体である」→ <i>liquor</i>
++der: liquid, liquidate, prolix, liquefy
++note: <i>liquidate</i>「清算する」は「（債務を）流動化して解消する」。「抹殺する」の意はロシア語 <i>ликвидировать</i> の訳語として1920年代に生じた。
+
+@ loaf ; /ləʊf/ ; 名 ; パン一斤
++chain: OE <i>hlāf</i>「パン」
++cog: 露 <i>хлеб</i>（ゲルマン語からの借用）
++der: lord, lady, Lammas（<i>hlāfmæsse</i>「パンのミサ」）
++note: 古英語では <i>hlāf</i> が「パン」の総称で、<i>brēad</i> は「かけら」だった。両語が地位を入れ替えた。
+
+@ logistics ; /ləˈdʒɪstɪks/ ; 名 ; 兵站、物流
++chain: 仏 <i>logistique</i>（<i>loger</i>「宿営させる」）
++conf: 通説　ギリシア語 <i>logistikḗ</i>「計算術」との混同・二重の影響がある。
++note: 語形はギリシア語 <i>lógos</i> 系に見えるが、実際は「宿舎（lodge）」系。19世紀の軍事理論家ジョミニが定義した。
+
+@ lord ; /lɔːd/ ; 名 ; 主、領主
++lit: 「パンの守り手」
++chain: OE <i>hlāfweard</i> → <i>hlāford</i> → <i>lord</i>
++der: lady, loaf, ward, warden, guard, reward
++note: <i>-weard</i>「守る者」はゲルマン系で、ノルマン・フランス語経由の <i>guard</i> と二重語。
++see: lady, ward
++lvl: ★★
+
+@ lucid ; /ˈluːsɪd/ ; 形 ; 明晰な
++chain: L <i>lūx</i>「光」→ <i>lūcidus</i>
++root: *lewk-「光る」
++der: lucid, elucidate, translucent, lunar, illustrate, lustre, Lucifer（「光を運ぶ者」）／ゲルマン系 light（名詞）／Gk系 leukemia（<i>leukós</i>「白い」）
++cog: Gk <i>leukós</i>, Skt <i>rúci-</i>
++note: 英語 <i>light</i>「光」はこの根、<i>light</i>「軽い」は *h₁leng<sup>wh</sup>-。綴りが同じでも別語。
++see: *lewk-
++lvl: ★★
+
+@ lumber ; /ˈlʌmbə/ ; 名 ; 材木、がらくた
++conf: 一説　<i>Lombard</i>「ロンバルディア人」から。中世英国でロンバルディア人が質屋を営み、その質草置き場（<i>lumber room</i>）から「がらくた」→ 北米で「積んである材木」へ。
++note: 「のろのろ歩く」の <i>lumber</i> は別語（擬音）。
+
+@ lyric ; /ˈlɪrɪk/ ; 形名 ; 抒情の、歌詞
++chain: Gk <i>lýra</i>「竪琴」→ <i>lyrikós</i>
++note: 「竪琴に合わせて歌う詩」が原義で、叙事詩（<i>epic</i>）・劇詩（<i>dramatic</i>）と対をなす三分類。現代の「歌詞」は20世紀の用法。
+
+@ lackey ; /ˈlæki/ ; 名 ; 従僕、追従者
++chain: アラビア語 <i>al-qāʼid</i>「隊長」→ 西 <i>alcayde</i> → 仏 <i>laquais</i>
++conf: 一説
++note: 「隊長」が「下男」に転落した稀な下降例。
+
+@ leech ; /liːtʃ/ ; 名 ; ヒル、（古）医者
++chain: OE <i>lǣce</i>「医者」と <i>lȳce</i>「ヒル」が中英語で合流
++note: 瀉血にヒルを使ったため両語が混同・融合した。<i>leechcraft</i> は古英語で「医術」。
+
+@ legion ; /ˈliːdʒən/ ; 名 ; 軍団、多数
++chain: L <i>legere</i>「集める」→ <i>legiō</i>「徴集された部隊」
++root: *leǵ-
++note: ローマ軍団は約5,000人。<i>my name is Legion, for we are many</i>（マルコ5:9）から「大群」の意。
+
+@ leisure ; /ˈleʒə/ ; 名 ; 余暇
++chain: L <i>licēre</i>「許される」→ OF <i>leisir</i>
++see: licence
++note: 「（義務から）許されている時間」。<i>school</i> がギリシア語 <i>skholḗ</i>「余暇」に遡るのと対をなす、労働と学びの関係を映す語。
+
+@ liaison ; /liˈeɪzɒn/ ; 名 ; 連絡、つなぎ
++chain: L <i>ligāre</i>「縛る」→ 仏 <i>liaison</i>
++root: *leyǵ-「縛る」
++der: ligament, ligature, oblige, religion（一説）, ally, alloy, rally, league, rely
++note: 料理では「つなぎ」、音声学では「リエゾン」、軍事では「連絡将校」。フランス語の多義をそのまま引き継いだ。
+
+@ litter ; /ˈlɪtə/ ; 名 ; ごみ、（動物の）一腹の子、担架
++chain: L <i>lectus</i>「寝床」→ OF <i>litiere</i>
++desc: 「寝台（担架）」→「家畜の敷きわら」→「敷きわらの上で生まれた一腹の子」／「散らかった敷きわら」→「ごみ」。一語から三方向に分岐した。
+
+@ loophole ; /ˈluːphəʊl/ ; 名 ; 抜け穴
++chain: ME <i>loupe</i>「城壁の狭間」（語源不確実、蘭 <i>lūpen</i>「覗く」か）
++conf: 一説
++note: 城壁に開けた矢狭間。法律の「抜け穴」の比喩は17世紀。
+
+@ lounge ; /laʊndʒ/ ; 動名 ; ぶらつく、休憩室
++conf: 不確実　仏 <i>s'allonger</i>「体を伸ばす」または <i>Longinus</i>（キリストを刺した兵士の名、演劇で怠惰に立つ役）からの説がある。
+
+@ lure ; /lʊə/ ; 名動 ; おとり（で誘う）
++chain: フランク語 *<i>lōþr</i>「呼び戻す道具」→ OF <i>loirre</i>
++desc: 鷹狩りで鷹を呼び戻すための羽根つきの疑似餌。専門技術の語彙が一般化した例。
+
+@ lush ; /lʌʃ/ ; 形 ; 青々と茂った
++chain: ME <i>lusch</i>「柔らかい」（OF <i>lasche</i>「ゆるい」＜ L <i>laxus</i>）
++der: lax, relax, release, relish, languish
++conf: 通説

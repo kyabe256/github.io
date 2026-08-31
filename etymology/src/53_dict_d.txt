@@ -197,3 +197,165 @@
 @ dude ; /djuːd/ ; 名 ; やつ
 +chain: 語源不確実。1883年ニューヨークで「気取った伊達男」を指す新語として現れた
 +note: <i>Yankee Doodle</i> の <i>doodle</i> からの短縮とする説が有力視されている。20世紀後半に「男一般」へ意味が広がった（<i>guy</i> と同じ経路）。
+
+@ daughter ; /ˈdɔːtə/ ; 名 ; 娘
++root: *dʰugh₂tḗr
++cog: Gk <i>thygátēr</i>, Skt <i>duhitṛ́</i>, Goth <i>daúhtar</i>, OCS <i>dŭšti</i>
++note: 印欧語族の親族名称でもっとも広く保存された語の一つ。ラテン語では失われ <i>fīlia</i> に置き換わった。綴りの gh は古英語の /x/ 音の名残。
+
+@ dawn ; /dɔːn/ ; 名 ; 夜明け
++chain: OE <i>dagian</i>「夜が明ける」（<i>dæg</i>「日」）→ ME <i>dawnen</i>
++der: day, today, daily
++note: <i>it dawned on me</i>「はっと気づいた」は光が差す比喩。
+
+@ debate ; /dɪˈbeɪt/ ; 動・名 ; 討論（する）
++lit: 「打ち合う」
++chain: L <i>dis-</i> + <i>battuere</i>「打つ」→ OF <i>debatre</i>
++der: battle, battery, combat, abate, rebate, batter
++note: 「叩き合い」が原義。<i>combat</i>「戦闘」も同じ動詞から。
+
+@ decade ; /ˈdekeɪd/ ; 名 ; 10年間
++chain: Gk <i>dekás</i>「十のまとまり」→ L <i>decas</i> → 仏 <i>décade</i>
++der: decimal, December, dean, dime, ten（本来語）, decathlon
++note: <i>dean</i>「学部長」は <i>decānus</i>「十人隊長」から。
+
+@ decent ; /ˈdiːsnt/ ; 形 ; きちんとした
++lit: 「ふさわしい」
++chain: L <i>decēre</i>「似合う、ふさわしい」→ <i>decēns</i>
++der: decorate, decorum, dignity, dainty, doctor, disciple（*deḱ- 系）
++note: <i>decoration</i>「装飾」と同根。「ふさわしく整える」が共通の核。
+
+@ decide ; /dɪˈsaɪd/ ; 動 ; 決める
++lit: 「切り離す」
++chain: L <i>dē-</i>（離れて）+ <i>caedere</i>「切る」→ <i>dēcīdere</i>
++der: concise, precise, incision, homicide, suicide, scissors（綴りの影響）
++note: 「迷いを断ち切る」。日本語の「決断」の「断」と同じ発想。
+
+@ delicate ; /ˈdelɪkət/ ; 形 ; 繊細な
++chain: L <i>dēlicātus</i>「快い、贅沢な」（<i>dēlicere</i>「誘惑する」）
++der: delicious, delight, elicit, lace は別
++note: <i>delight</i> の綴りの gh は <i>light</i> に引かれた民間語源的挿入。本来 <i>delite</i>。
+
+@ democracy ; /dɪˈmɒkrəsi/ ; 名 ; 民主主義
++chain: Gk <i>dêmos</i>「民衆」+ <i>krátos</i>「力、支配」→ <i>dēmokratíā</i>
++der: demagogue, epidemic, pandemic, endemic, demography／aristocracy, bureaucracy
++note: <i>-cracy</i>（力による支配）と <i>-archy</i>（首位による支配）は微妙に異なる。
+
+@ demon ; /ˈdiːmən/ ; 名 ; 悪魔
++chain: Gk <i>daímōn</i>「神霊、守護霊」→ L <i>daemōn</i>
++desc: ギリシア語では中立的な「霊」で、ソクラテスの「ダイモニオン」は良き警告者だった。キリスト教が異教の神々を悪霊とみなしたことで、否定的な語に転落した。
++der: pandemonium（ミルトンの造語）, demonic, eudemonia
++note: 計算機の <i>daemon</i>「常駐プロセス」は古義（守護霊）を意図した命名。
+
+@ dentist ; /ˈdentɪst/ ; 名 ; 歯科医
++chain: L <i>dēns, dentis</i>「歯」→ 仏 <i>dentiste</i>（1759）
++root: *h₃dónts
++der: dental, indent, trident, dandelion（「獅子の歯」）, tooth（本来語）
++note: 本来語 <i>tooth</i> とグリムの法則で対応（*d → t）。
+
+@ depend ; /dɪˈpend/ ; 動 ; 依存する
++lit: 「〜からぶら下がる」
++chain: L <i>dē-</i> + <i>pendēre</i>「垂れ下がる」
++der: pendant, pendulum, suspend, append, independent, pending
++note: 「ぶら下がっている」という物理的な像が「頼っている」になった。
+
+@ desert ; /dɪˈzɜːt/ ; 動 ; 見捨てる
++lit: 「（結びつきを）解く」
++chain: L <i>dē-</i> + <i>serere</i>「繋ぐ」→ <i>dēserere</i>
++der: series, sermon, assert, insert, exert, dissertation
++note: 名詞の <i>desert</i>「砂漠」（/ˈdezət/）は「見捨てられた地」で同語源。<i>dessert</i>「デザート」は別語源。
+
+@ design ; /dɪˈzaɪn/ ; 動・名 ; 設計（する）
++lit: 「印をつけて示す」
++chain: L <i>dē-</i> + <i>signāre</i>「印をつける」
++der: sign, signal, signature, designate, resign, assign, consign, seal
++note: <i>resign</i>「辞任する」は「署名を取り消す」。
+
+@ develop ; /dɪˈveləp/ ; 動 ; 発展させる
++lit: 「包みを開く」
++chain: OF <i>desveloper</i>（<i>des-</i>「逆に」+ <i>voloper</i>「包む」、語源不確実）
++der: envelop, envelope, develop
++note: <i>envelope</i>「封筒」と正反対の語。「包む」と「包みを解く」。
+
+@ dial ; /ˈdaɪəl/ ; 名 ; 文字盤
++chain: 中世ラテン語 <i>diālis</i>「日の」（<i>diēs</i>「日」）
++desc: 日時計の文字盤が原義。電話の「ダイヤル」も円形の盤から。
++der: diary, journal, journey, meridian, deity, divine
++note: <i>dial tone</i>, <i>dial-up</i> は回転式電話の名残。
+
+@ diamond ; /ˈdaɪəmənd/ ; 名 ; ダイヤモンド
++chain: Gk <i>adámas</i>「征服されないもの」→ 中世ラテン語 <i>diamantem</i>（<i>dia-</i> に引かれた変形）
++dbl: <i>adamant</i>
++der: tame, indomitable, daunt, dominate は別
++note: <i>adamant</i>「断固とした」と同語。英語 <i>tame</i>「馴らす」と同根。
+
+@ diet ; /ˈdaɪət/ ; 名 ; 食事、国会
++desc: 二つの別語。（1）食事＝Gk <i>díaita</i>「生活様式」。（2）国会（<i>the Diet</i>）＝中世ラテン語 <i>diēta</i>「（定められた）日の会議」（<i>diēs</i>「日」）。
++note: 日本の「国会」を <i>the Diet</i> と呼ぶのは、明治期にプロイセンの <i>Reichstag</i> の英訳語を採ったため。「食事」とは無関係。
+
+@ direct ; /dəˈrekt/ ; 形・動 ; まっすぐな、指示する
++chain: L <i>dis-</i> + <i>regere</i>「導く」→ <i>dīrigere, dīrēctum</i>
++der: rule, regular, correct, erect, rectangle, region, royal, regal, right（本来語）
++note: <i>dirge</i>「挽歌」も同語根（典礼文の <i>Dirige</i>「導きたまえ」）。
+
+@ discipline ; /ˈdɪsəplɪn/ ; 名 ; 規律、学問分野
++lit: 「学ぶこと」
++chain: L <i>discere</i>「学ぶ」→ <i>disciplīna</i>
++der: disciple, docile, doctor, doctrine, document
++note: 「学ぶこと」→「訓練」→「規律」→「懲罰」と、一語が四方向に広がった。「学問分野」の意味も原義に近い。
+
+@ divide ; /dɪˈvaɪd/ ; 動 ; 分ける
++chain: L <i>dis-</i> + <i>-videre</i>「分ける」→ <i>dīvidere</i>
++der: division, dividend, individual（「これ以上分けられない」）, device, devise, widow(?)
++note: <i>individual</i>「個人」の原義は「不可分のもの」。<i>atom</i>（Gk「分けられない」）と同じ発想。
+
+@ dizzy ; /ˈdɪzi/ ; 形 ; めまいがする
++chain: OE <i>dysiġ</i>「愚かな」
++desc: 「愚かな」→「ぼんやりした」→「めまいがする」。
++der: doze(?), dust, dun（*dʰeu-「煙る・ぼんやりする」）
++note: 独 <i>dösig</i>「眠そうな」と同根。
+
+@ domino ; /ˈdɒmɪnəʊ/ ; 名 ; ドミノ
++chain: 仏 <i>domino</i>（もと聖職者の頭巾つき外套。L <i>dominus</i>「主」から）
++conf: 一説　牌の黒白が僧衣に似ることによる命名とされるが確定しない
++der: dominate, dominion, dame, danger, dungeon
++note: <i>domino effect</i>「ドミノ効果」は1954年アイゼンハワーの演説から。
+
+@ doubt ; /daʊt/ ; 名・動 ; 疑い
++lit: 「二つの間で揺れる」
++chain: L <i>dubitāre</i>（<i>duo</i>「二」）→ OF <i>douter</i>
++der: dubious, indubitable, redoubtable, two, double, duo
++note: 綴りの b は16世紀にラテン語形に合わせて挿入されたもので、発音されない（第4章）。
+
+@ dragon ; /ˈdræɡən/ ; 名 ; 竜
++lit: 「（鋭く）見るもの」
++chain: Gk <i>drákōn</i>（<i>dérkomai</i>「見る」）→ L <i>dracō</i> → OF
++der: dragoon（竜騎兵）, rankle（<i>dracunculus</i>「小さな竜」＝潰瘍）
++note: 宝を「見張る」竜の観念と語源が一致する。<i>rankle</i>「（恨みが）くすぶる」が同語源であるのは意外。
+
+@ dream ; /driːm/ ; 名 ; 夢
++chain: OE <i>drēam</i>「喜び、音楽、騒ぎ」／ME <i>drem</i>「夢」
++conf: 不確実　古英語形は「夢」を意味せず、中英語で北欧語の影響により意味が入れ替わったとされる
++cog: 独 <i>Traum</i>, ON <i>draumr</i>
++note: 古英語の「夢」は <i>swefn</i>（*swep-「眠る」）だった。基本語の交替の例。
+
+@ drug ; /drʌɡ/ ; 名 ; 薬、麻薬
++chain: OF <i>drogue</i>（中期オランダ語 <i>droge vate</i>「乾いた樽」からとする説）
++conf: 一説
++note: 乾燥した薬草を樽で運んだことによる、という説が有力だが確定しない。
+
+@ dwell ; /dwel/ ; 動 ; 住む
++chain: OE <i>dwellan</i>「惑わす、遅らせる」
++desc: 「惑わす」→「引き止める」→「留まる」→「住む」。意味が大きく移動した。
++der: dwelling
++note: <i>dwell on</i>「くよくよ考える」に「留まる」の原義が残る。
+
+@ dye ; /daɪ/ ; 動・名 ; 染める、染料
++chain: OE <i>dēag</i>「色」
++note: <i>die</i>「死ぬ」との同音を避けるため、進行形は <i>dyeing</i> と綴り分ける（<i>dying</i> と区別）。
+
+@ dynamite ; /ˈdaɪnəmaɪt/ ; 名 ; ダイナマイト
++chain: Gk <i>dýnamis</i>「力」→ 英語（1867年アルフレッド・ノーベルの命名）
++der: dynamic, dynamo, dynasty, aerodynamics, thermodynamics
++note: ノーベル自身の造語。<i>dynasty</i>「王朝」も同語根（「支配力」）。
+

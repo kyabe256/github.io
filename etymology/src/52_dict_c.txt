@@ -255,3 +255,290 @@
 @ cue ; /kjuː/ ; 名 ; きっかけ
 +desc: 語源不確実。16〜17世紀の台本で、次の役者の出番を示す記号として <i>Q</i> と書かれ、これがラテン語 <i>quandō</i>「いつ」の略だとする説が古くからある。確証はない。
 +note: ビリヤードの <i>cue</i>（キュー）は仏 <i>queue</i>「尾」で別語源。
+
+@ cabinet ; /ˈkæbɪnət/ ; 名 ; 戸棚、内閣
++lit: 「小部屋」
++chain: 仏 <i>cabinet</i>（<i>cabine</i>「小屋」の縮小形）
++desc: 「小部屋」→「私室で開かれる少数の顧問会議」→「内閣」。英国で17世紀に定着した。
++der: cabin, cab（<i>cabriolet</i> の略）
++note: 家具の「キャビネット」と政治の「内閣」が同語であるのは、王の私室での密議から。
+
+@ camera ; /ˈkæmərə/ ; 名 ; カメラ
++lit: 「（丸天井の）部屋」
++chain: L <i>camera</i>「丸天井の部屋」→ <i>camera obscura</i>「暗い部屋」の略
++der: chamber, chamberlain, comrade（西「同室者」）, camaraderie, bicameral（「二院制の」）
++note: <i>in camera</i>「非公開で」（法律用語）は原義そのまま。<i>comrade</i>「同志」と同語源。
+
+@ campaign ; /kæmˈpeɪn/ ; 名 ; 運動、戦役
++lit: 「野原（での戦い）」
++chain: L <i>campus</i>「平地」→ 伊 <i>campagna</i> → 仏 <i>campagne</i>
++der: camp, campus, champion, champagne, encamp, decamp
++note: 冬営から出て野に展開する季節の戦いが原義。選挙運動の意味は18世紀の米国から。
+
+@ cannon ; /ˈkænən/ ; 名 ; 大砲
++lit: 「大きな管」
++chain: 伊 <i>cannone</i>（<i>canna</i>「葦、管」の拡大形）→ 仏 <i>canon</i>
++der: cane, canal, canyon（西 <i>cañón</i>「管状の谷」）, canister, canon は別語源
++note: <i>canyon</i>「峡谷」も「管」から。<i>canon</i>「規範」（Gk <i>kanṓn</i>「物差し」）は別語だが、遠く同じ「葦」に遡るとされる。
+
+@ capital ; /ˈkæpɪtl/ ; 名・形 ; 首都、資本、主要な
++lit: 「頭の」
++chain: L <i>caput</i>「頭」→ <i>capitālis</i>
++dbl: <i>cattle</i>, <i>chattel</i>
++der: captain, chief, chef, cape, cap, chapter, cadet, decapitate, precipitate
++note: 「資本」は「頭数で数える財産」から、「死刑」（<i>capital punishment</i>）は「首を切る刑」から。
+
+@ carbon ; /ˈkɑːbən/ ; 名 ; 炭素
++chain: L <i>carbō, carbōnis</i>「炭」→ 仏 <i>carbone</i>（1789年ラヴォアジエ）
++der: carbonate, carbonic, carboniferous（「石炭を産する」）, char(?)
++note: 地質時代の「石炭紀」<i>Carboniferous</i> も同語。
+
+@ career ; /kəˈrɪə/ ; 名 ; 経歴
++lit: 「車道、（馬の）走路」
++chain: L <i>carrus</i>「荷車」→ <i>carrāria</i>「車道」→ 仏 <i>carrière</i>
++der: car, cargo, charge, carry, chariot, cargo, carpenter（「車大工」）
++note: <i>carpenter</i>「大工」は本来「荷車を作る者」。ケルト語 <i>carros</i> がラテン語に入った語群。
+
+@ carol ; /ˈkærəl/ ; 名 ; 賛美歌
++chain: OF <i>carole</i>「輪舞」（Gk <i>khorós</i>「舞踏」か）
++conf: 一説
++der: chorus, choir, choreography（<i>khorós</i> 系）, garden, yard（*gʰer- 系）
++note: もとは輪になって踊りながら歌う歌。<i>chorus</i> と同根とすれば、さらに「囲い」の語根に遡る。
+
+@ casual ; /ˈkæʒuəl/ ; 形 ; 偶然の、くだけた
++chain: L <i>cāsus</i>「落下、偶然」→ <i>cāsuālis</i>
++der: case, casualty, accident, incident, occasion, decay, chance, cadence
++note: <i>casualty</i>「死傷者」は「（戦場で）偶然起きたこと」から。
+
+@ cataract ; /ˈkætərækt/ ; 名 ; 大滝、白内障
++chain: Gk <i>katarráktēs</i>「（水の）落下、落とし格子」
++desc: 「落とし格子」の意から、視界を遮る眼病（白内障）の名にも転用された。
++der: cata-（下へ）, rack は別
++note: 一語が「滝」と「白内障」の両方を指すのは、「落ちて遮るもの」という共通の像による。
+
+@ cathedral ; /kəˈθiːdrəl/ ; 名 ; 大聖堂
++lit: 「司教座のある（教会）」
++chain: Gk <i>kathédrā</i>「座席」（<i>kata-</i>+<i>hédrā</i>「座」）→ L <i>cathedrālis</i>
++der: chair（同語の仏語経由摩耗形）, chaise, sit, seat, nest, session（*sed- 系）
++note: <i>chair</i>「椅子」と <i>cathedral</i>「大聖堂」は同語源。<i>ex cathedra</i>「（教皇が）座から」は「権威をもって」。
+
+@ cease ; /siːs/ ; 動 ; やめる
++chain: L <i>cessāre</i>「休む」（<i>cēdere</i>「退く」）→ OF <i>cesser</i>
++der: cede, precede, process, access, success, necessary, ancestor
++note: <i>cease and desist</i>「中止せよ」は英米法の定型対句（第VII部 法律・政治）。
+
+@ cell ; /sel/ ; 名 ; 細胞、独房
++lit: 「小部屋」
++chain: L <i>cella</i>「小部屋、貯蔵室」（*ḱel-「覆う」）
++desc: 修道院の個室の意で使われていた語を、1665年ロバート・フックがコルクの微細構造に転用した。
++der: cellar, conceal, occult, hell（本来語「覆われた場所」）, clandestine(?)
++note: <i>hell</i>「地獄」と <i>cell</i>「細胞」が同根。どちらも「覆い隠された場所」。
+
+@ cereal ; /ˈsɪəriəl/ ; 名 ; 穀物
++chain: 女神 <i>Cerēs</i>（ローマの穀物の女神）→ L <i>Cereālis</i>
++der: create, crescent, increase, concrete, recruit（*ḱerh₃-「育つ」系）
++note: 神名由来語。同型に <i>volcano</i>（ウルカヌス）, <i>museum</i>（ムーサ）, <i>panic</i>（パーン）。
+
+@ certain ; /ˈsɜːtn/ ; 形 ; 確かな
++chain: L <i>certus</i>「決められた」（<i>cernere</i>「ふるい分ける」の分詞）
++der: certify, certificate, ascertain, discern, discreet, secret, crime, criterion（ギ）
++note: 「ふるい分けられた」→「はっきりした」→「確かな」。
+
+@ chalk ; /tʃɔːk/ ; 名 ; 白墨
++chain: L <i>calx</i>「石灰」→ OE <i>cealc</i>
++der: calcium, calculate, calculus, causeway
++note: 大陸期のラテン語借用。<i>calculate</i>「計算する」と同根（「小石」）。
+
+@ chance ; /tʃɑːns/ ; 名 ; 機会、偶然
++lit: 「（さいころが）落ちること」
++chain: 俗ラテン語 <i>cadentia</i>（<i>cadere</i>「落ちる」）→ OF <i>cheance</i>
++der: cadence, accident, incident, occasion, decay, case, cheat
++note: <i>cadence</i>「抑揚」と同語源。どちらも「落ち方」。
+
+@ character ; /ˈkærəktə/ ; 名 ; 性格、文字
++lit: 「刻印するもの」
++chain: Gk <i>kharáttein</i>「刻む」→ <i>kharaktḗr</i>「刻印、刻まれた印」→ L
++desc: 「刻印」→「（心に刻まれた）特質」→「性格」。同時に「刻まれた記号」→「文字」の意も残った。
++der: characteristic, characterize
++note: 計算機の <i>character</i>「文字」は原義に近い用法。
+
+@ charity ; /ˈtʃærəti/ ; 名 ; 慈愛
++chain: L <i>cārus</i>「愛しい」→ <i>cāritās</i> → OF <i>charité</i>
++der: caress, cherish, charitable
++note: ギリシア語 <i>agápē</i> の訳語として選ばれた。<i>charisma</i>（Gk <i>kháris</i>「恵み」）とは別語源だが混同されやすい。
+
+@ chauffeur ; /ˈʃəʊfə/ ; 名 ; お抱え運転手
++lit: 「火を焚く者」
++chain: 仏 <i>chauffer</i>「熱する」（L <i>calefacere</i>）→ <i>chauffeur</i>
++der: chafe（「こすって温める」）, calorie, cauldron, nonchalant（「熱くならない」）
++note: 蒸気自動車の時代、ボイラーを焚く役だったことによる。
+
+@ church ; /tʃɜːtʃ/ ; 名 ; 教会
++lit: 「主の（家）」
++chain: Gk <i>kūriakón (dôma)</i>「主の家」→ ゲルマン語 *kirika → OE <i>cirice</i>
++dbl: <i>kirk</i>（古ノルド語経由のスコットランド語形）
++cog: 独 <i>Kirche</i>, オランダ語 <i>kerk</i>, 露 <i>церковь</i>
++note: ラテン語 <i>ecclēsia</i>（→ 仏 <i>église</i>, 西 <i>iglesia</i>）ではなくギリシア語形が北方に伝わった。ゴート人経由とされる。
+
+@ cider ; /ˈsaɪdə/ ; 名 ; シードル
++chain: ヘブライ語 <i>šēkār</i>「強い酒」→ Gk <i>síkera</i> → L <i>sīcera</i> → OF <i>sidre</i>
++note: 聖書ギリシア語の「強い飲み物」が、西欧で「りんご酒」に特化した。
+
+@ cipher ; /ˈsaɪfə/ ; 名 ; 暗号、ゼロ
++chain: アラビア語 <i>ṣifr</i>「空」→ 中世ラテン語 <i>cifra</i>
++dbl: <i>zero</i>（イタリア語経由）
++note: ゼロを用いる記数法が一般人には秘密の記号に見えたため「暗号」の意が生じた。<i>decipher</i>「解読する」も同語。
+
+@ circus ; /ˈsɜːkəs/ ; 名 ; サーカス、円形広場
++chain: L <i>circus</i>「輪、競技場」（Gk <i>kírkos</i>）
++der: circle, circuit, circulate, circumference, search（「巡る」）, research
++note: ロンドンの <i>Piccadilly Circus</i> の <i>Circus</i> は「円形の交差点」。
+
+@ citizen ; /ˈsɪtɪzn/ ; 名 ; 市民
++chain: L <i>cīvis</i>「市民」→ <i>cīvitās</i>「市民権、都市」→ OF <i>citeain</i>
++der: city, civil, civilization, civic, civilian, home（本来語の同根語 *ḱei-）
++note: <i>home</i>「家」と <i>city</i>「都市」が同根であるのは、どちらも「横になって住む場所」から。
+
+@ claim ; /kleɪm/ ; 動 ; 主張する
++chain: L <i>clāmāre</i>「叫ぶ」→ OF <i>clamer</i>
++der: exclaim, proclaim, acclaim, reclaim, disclaim, clamor, calendar, class, council は別
++note: <i>calendar</i>「暦」と同根（「朔日を呼ばわる」）。
+
+@ climate ; /ˈklaɪmət/ ; 名 ; 気候
++lit: 「（地表の）傾き」
++chain: Gk <i>klíma</i>「傾き、緯度帯」（<i>klínein</i>「傾ける」）→ L <i>clīma</i>
++der: incline, decline, recline, climax（「梯子」）, clinic（「寝台」）, lean（本来語）
++note: 古代地理学で地球を緯度帯（傾きの帯）に分けたことによる。<i>climax</i>「クライマックス」は「梯子」で別語。
+
+@ clock ; /klɒk/ ; 名 ; 時計
++lit: 「鐘」
++chain: 中世ラテン語 <i>clocca</i>「鐘」（ケルト語起源）→ 中期オランダ語 <i>clocke</i> → ME
++cog: 仏 <i>cloche</i>「鐘」, 独 <i>Glocke</i>
++note: 機械時計は鐘を鳴らして時を告げた。文字盤のない鐘だけの時計が先だった。
+
+@ closet ; /ˈklɒzɪt/ ; 名 ; 戸棚、私室
++chain: L <i>claudere</i>「閉じる」→ OF <i>closet</i>（<i>clos</i>「囲い」の縮小形）
++der: close, enclose, include, exclude, conclude, clause, cloister, claustrophobia
++note: <i>come out of the closet</i> の <i>closet</i> は「隠れた私室」。
+
+@ coast ; /kəʊst/ ; 名 ; 海岸
++lit: 「肋骨、脇腹」
++chain: L <i>costa</i>「肋骨、脇」→ OF <i>coste</i>
++der: costal, intercostal, cutlet（「小さな肋肉」）, accost（「脇に近づく」）
++note: 「（陸の）脇腹」から「海岸」へ。<i>accost</i>「話しかける」は「船を横づけする」が原義。
+
+@ coffee ; /ˈkɒfi/ ; 名 ; コーヒー
++chain: アラビア語 <i>qahwa</i>（もと「酒」）→ トルコ語 <i>kahve</i> → 伊 <i>caffè</i> → 英語（1598）
++der: café, caffeine, cafeteria（西）
++note: エチオピアのカファ地方の名に由来するという説は民間語源とされる。
+
+@ coin ; /kɔɪn/ ; 名 ; 硬貨
++lit: 「楔（の刻印）」
++chain: L <i>cuneus</i>「楔」→ OF <i>coin</i>「楔、刻印の型」
++der: cuneiform（「楔形文字」）, quoin（隅石）, coinage
++note: 硬貨を打刻する型が楔形だったことによる。<i>cuneiform</i>「楔形文字」と同根。
+
+@ colleague ; /ˈkɒliːɡ/ ; 名 ; 同僚
++lit: 「共に選ばれた者」
++chain: L <i>com-</i> + <i>legāre</i>「委任する」→ <i>collēga</i>
++der: college, collegiate, delegate, legacy, legal, legislate
++note: <i>college</i>「大学」も同語源で「同僚の団体」。
+
+@ colonel ; /ˈkɜːnl/ ; 名 ; 大佐
++chain: 伊 <i>colonnello</i>「（縦隊 <i>colonna</i> の）指揮官」→ 仏 <i>coronel</i>（異化）→ 英語
++der: column, colonnade
++note: 綴りは <i>col-</i>、発音は /ˈkɜːnl/。フランス語で l → r と異化した形の発音と、イタリア語形の綴りが混在した結果。英語の綴りと発音の乖離の極端な例。
+
+@ comfort ; /ˈkʌmfət/ ; 名 ; 慰め
++lit: 「（心を）強くすること」
++chain: L <i>com-</i>（強意）+ <i>fortis</i>「強い」→ 後期ラテン語 <i>confortāre</i>
++der: fort, force, effort, fortitude, discomfort
++note: 「快適さ」の意味は後発。本来は「力づけること」。
+
+@ compass ; /ˈkʌmpəs/ ; 名 ; 羅針盤、コンパス
++lit: 「共に歩む」
++chain: L <i>com-</i> + <i>passus</i>「歩み」→ 俗ラテン語 <i>compassāre</i>「歩測する」
++der: pace, pass, passage, passenger, expand（<i>pandere</i>「広げる」）
++note: 「歩測して円を描く道具」から。方位磁石の意味は英語独自の発展。
+
+@ concrete ; /ˈkɒŋkriːt/ ; 形・名 ; 具体的な、コンクリート
++lit: 「共に固まった」
++chain: L <i>com-</i> + <i>crēscere</i>「育つ」→ <i>concrētus</i>
++der: create, crescent, increase, recruit, cereal
++note: 対義の <i>abstract</i>「抽象的な」は「引き離された」。建材の意味は19世紀から。
+
+@ conquer ; /ˈkɒŋkə/ ; 動 ; 征服する
++chain: L <i>com-</i>（強意）+ <i>quaerere</i>「求める」→ <i>conquīrere</i>
++der: quest, question, inquire, require, exquisite, acquire, conquest
++note: <i>the Conquest</i>「（ノルマン）征服」は英語史の分水嶺（第5章）。
+
+@ corpse ; /kɔːps/ ; 名 ; 死体
++chain: L <i>corpus</i>「体」→ OF <i>cors</i> → ME <i>corps</i>
++dbl: <i>corps</i>（軍団。発音 /kɔː/）
++der: corporal, corporate, corpulent, corset, corpuscle, incorporate
++note: 同一語が綴りと発音で分化した。<i>corps</i> の p と s は発音しない（フランス語式）。
+
+@ courage ; /ˈkʌrɪdʒ/ ; 名 ; 勇気
++lit: 「心（の強さ）」
++chain: L <i>cor</i>「心臓」→ 俗ラテン語 <i>corāticum</i> → OF <i>corage</i>
++der: heart（本来語）, cordial, accord, discord, record, encourage, discourage
++note: 「勇気は心臓に宿る」という発想。日本語の「胆力」と近い。
+
+@ court ; /kɔːt/ ; 名 ; 法廷、宮廷、中庭
++lit: 「囲われた場所」
++chain: L <i>cohors, cohortis</i>「囲い、隊」→ OF <i>cort</i>
++der: cohort, courtesy, courteous, courtesan, curtain は別, garden, yard（本来語の同根語）
++note: 「囲い」→「中庭」→「宮廷」→「法廷」。<i>yard</i>「庭」と同根（*gʰer-）。
+
+@ cousin ; /ˈkʌzn/ ; 名 ; いとこ
++lit: 「姉妹を共にする者」
++chain: L <i>consobrīnus</i>（<i>com-</i>+<i>soror</i>「姉妹」）→ OF <i>cosin</i>
++der: sister（本来語）, sorority, sororal
++note: 本来は母方のいとこのみを指した。英語では親族名称が大幅に単純化されている。
+
+@ coward ; /ˈkaʊəd/ ; 名 ; 臆病者
++lit: 「尾を（巻く）者」
++chain: OF <i>coart</i>（<i>coe</i>「尾」＜ L <i>cauda</i> + 軽蔑の接尾辞 <i>-ard</i>）
++der: caudal, queue（「尾」→ 行列）, coda（伊「尾」＝楽曲の結尾）
++note: 尾を巻いて逃げる犬の像による。<i>cow</i>「牛」や <i>cower</i>「すくむ」とは無関係。
+
+@ crescent ; /ˈkresnt/ ; 名 ; 三日月
++lit: 「増えつつある（月）」
++chain: L <i>crēscere</i>「育つ」の現在分詞 <i>crēscēns</i>
++der: increase, decrease, concrete, recruit, croissant（仏「三日月」＝パン）, cereal
++note: 厳密には「満ちていく月」を指し、欠けていく月は <i>decrescent</i>。
+
+@ crusade ; /kruːˈseɪd/ ; 名 ; 十字軍
++chain: L <i>crux, crucis</i>「十字架」→ 西 <i>cruzada</i>／仏 <i>croisade</i>
++der: cross, crucial, crucify, excruciate, cruise（オランダ語経由）
++note: <i>cruise</i>「巡航する」も「十字に横切る」から（オランダ語 <i>kruisen</i>）。
+
+@ crystal ; /ˈkrɪstl/ ; 名 ; 結晶、水晶
++lit: 「氷」
++chain: Gk <i>krýstallos</i>「氷、水晶」（<i>krýos</i>「冷たさ」）→ L <i>crystallum</i>
++der: cryogenic, crystallize
++note: 古代人は水晶を「永久に融けない氷」と考えた。プリニウスもそう記している。
+
+@ cuisine ; /kwɪˈziːn/ ; 名 ; 料理
++chain: L <i>coquīna</i>「台所」→ 仏 <i>cuisine</i>
++der: kitchen（本来語化した古い借用）, cook, biscuit, precocious, apricot
++note: <i>kitchen</i>（大陸期の借用）と <i>cuisine</i>（近代仏語）は同語源の二重語。
+
+@ culture ; /ˈkʌltʃə/ ; 名 ; 文化、栽培
++lit: 「耕すこと」
++chain: L <i>colere</i>「耕す、住む、崇める」→ <i>cultūra</i>
++der: cultivate, agriculture, colony, cult, cultivar, wheel（本来語の同根語 *kʷel-）
++note: キケロの <i>cultūra animī</i>「精神の耕作」が「文化」の語義の出発点。細菌の「培養」も同語。
+
+@ current ; /ˈkʌrənt/ ; 形・名 ; 現在の、流れ
++lit: 「走っている」
++chain: L <i>currere</i>「走る」の現在分詞 <i>currēns</i>
++der: course, occur, concur, recur, excursion, cursor, corridor, car, career, curriculum
++note: 「今走っている」→「現在の」。電流の <i>current</i> も「流れ」。
+
+@ curriculum ; /kəˈrɪkjələm/ ; 名 ; 教育課程
++lit: 「走路」
++chain: L <i>currere</i>「走る」→ <i>curriculum</i>「競走、走路」
++der: current, course, cursor, career, corridor
++note: <i>curriculum vitae</i>「履歴書」は「人生の走路」。
+

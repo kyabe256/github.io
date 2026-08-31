@@ -7,11 +7,6 @@
 +der: oyster（<i>óstreon</i>「牡蠣」）, osteo-（骨）は関連語根
 +note: 実際に出土した陶片には、テミストクレスやアリステイデスの名が刻まれている。
 
-@ orange ; /ˈɒrɪndʒ/ ; 名 ; オレンジ
-+chain: サンスクリット語 <i>nāraṅga</i> → ペルシア語 <i>nārang</i> → アラビア語 <i>nāranj</i> → 伊 <i>arancia</i> → OF <i>orenge</i> → 英語
-+desc: 語頭の n は、冠詞との境界の切り直し（<i>una narancia</i> → <i>un'arancia</i>）で失われた。フランス語では <i>or</i>「金」の連想でさらに o- が定着したとされる。
-+note: 色名としての <i>orange</i> は果実の名から（16世紀）。それ以前、英語にこの色を指す固有語はなく、<i>ġeolurēad</i>「黄赤」などと表現された。
-
 @ orchestra ; /ˈɔːkɪstrə/ ; 名 ; 管弦楽団
 +lit: 「踊る場所」
 +chain: Gk <i>orkheîsthai</i>「踊る」→ <i>orkhḗstrā</i>
@@ -23,19 +18,6 @@
 +desc: 中世の神明裁判——熱した鉄を握らせる、水に沈める——を指した語。1215年の第四ラテラノ公会議で聖職者の関与が禁じられ、制度は衰退したが語は残った。
 +cog: 独 <i>Urteil</i>「判決」
 +der: deal, dole（本来語の同根語）
-
-@ orient ; /ˈɔːrient/ ; 名・動 ; 東洋、方向づける
-+lit: 「（日の）昇るところ」
-+chain: L <i>orīrī</i>「昇る」→ <i>oriēns</i>「昇る（太陽）、東」
-+desc: 中世の地図と教会堂は東を上・正面としたため、「東に向ける」ことが「正しく位置づける」を意味した。ここから <i>orientation</i>「方位決定、適応指導」が生じた。
-+der: origin, original, abort（「昇らない」＝流産する）, orient
-+note: 対語の <i>occident</i>「西洋」は <i>occidere</i>「（日が）落ちる」から（<i>cadere</i> 系）。
-
-@ ounce ; /aʊns/ ; 名 ; オンス
-+lit: 「十二分の一」
-+chain: L <i>uncia</i>「（ローマポンドの）十二分の一」
-+dbl: <i>inch</i>（「（フィートの）十二分の一」。同じ <i>uncia</i> の別経路）
-+note: 重さの <i>ounce</i> と長さの <i>inch</i> が同語源であるのは、いずれも「十二分の一」だから。
 
 @ ostrich ; /ˈɒstrɪtʃ/ ; 名 ; ダチョウ
 +lit: 「鳥のスズメ」
@@ -72,3 +54,155 @@
 +der: work, energy, organ, surgery（同根語）
 +note: <i>érgon</i>「仕事」と同根で、原義は「（神への）働きかけ・儀式」。
 
+@ obese ; /əʊˈbiːs/ ; 形 ; 肥満の
++lit: 「食べ尽くした」
++chain: L <i>ob-</i>「すっかり」＋ <i>edere</i>「食べる」→ <i>obēsus</i>
++root: *h₁ed-「食べる」
++cog: OE <i>etan</i> → eat, Gk <i>édein</i>, Skt <i>ad-</i>
++der: eat, edible, comestible, etch は別
++note: ラテン語では「痩せた」の意でも使われた（<i>ob-</i> を「食べ尽くされた」と取るか「食べ込んだ」と取るかで正反対）。
+
+@ obituary ; /əˈbɪtʃuəri/ ; 名 ; 死亡記事
++lit: 「（現世から）去ること」
++chain: L <i>obīre</i>「（死に）赴く」（<i>ob-</i>＋<i>īre</i>「行く」）→ <i>obitus</i>
++root: *h₁ey-「行く」
++der: exit, transit, initial, ambition, circuit, itinerary, perish, issue, sudden, county は別
++note: <i>ambition</i> は「（票を求めて）まわり歩くこと」。政治家の行動が抽象名詞になった。
++see: *h₁ey-
+
+@ obvious ; /ˈɒbviəs/ ; 形 ; 明らかな
++lit: 「道の前に立ちはだかる」
++chain: L <i>ob viam</i>「道の前に」→ <i>obvius</i>
++root: *weǵʰ-「運ぶ」
++der: via, voyage, convey, convoy, deviate, obviate, previous, trivial（「三叉路の＝どこにでもある」）, vehicle, wagon, way, weigh
++note: 「つまずくほど目の前にある」が原義。<i>trivial</i>「些細な」は「三叉路で誰もが話す程度のこと」。
++lvl: ★★★
+
+@ ocean ; /ˈəʊʃn/ ; 名 ; 大洋
++chain: Gk <i>Ōkeanós</i>「世界を取り巻く大河（の神）」→ L <i>ōceanus</i>
++desc: 古代の世界観では大地を環流する川。地中海（<i>mare</i>）と区別される「外の水」。<i>Oceania</i>（1831、仏の造語）。
+
+@ odd ; /ɒd/ ; 形 ; 奇妙な、奇数の
++lit: 「（三角形の）先端」
++chain: 古ノルド語 <i>oddi</i>「先端、三角形、奇数」
++desc: 三角形の頂点＝対にならないもの→「奇数」→「余りの」→「変な」。北欧語からの借用で、古英語 <i>unefen</i> を駆逐した。
++note: <i>odds</i>「見込み」は「不均衡」から。
+
+@ offend ; /əˈfend/ ; 動 ; 怒らせる
++chain: L <i>ob-</i>「〜に向かって」＋ <i>fendere</i>「打つ」
++der: defend, fence, offense, defense, infest は別
++note: <i>fendere</i> は単独では現れず、接頭辞付きでのみ残る。<i>fence</i> は <i>defence</i> の頭音消失形。
++lvl: ★★
+
+@ office ; /ˈɒfɪs/ ; 名 ; 職務、事務所
++chain: L <i>opus</i>「仕事」＋ <i>facere</i>「なす」→ <i>officium</i>
++root: *h₃ep-「働く」／*dʰeh₁-「置く」
++der: opera, operate, opus, copious, opulent, maneuver／officer, official, officious
++note: <i>officious</i>「おせっかいな」は「職務熱心な」から下降した。
++lvl: ★★★
+
+@ ointment ; /ˈɔɪntmənt/ ; 名 ; 軟膏
++chain: L <i>unguere</i>「塗る」→ OF <i>oignement</i>
++der: unguent, unction, anoint
++note: <i>Christ</i>（Gk <i>khristós</i>「油を塗られた者」）、<i>Messiah</i>（ヘブライ語 <i>māshīaḥ</i> 同義）と発想が一致する。塗油は王と祭司の即位儀礼。
+
+@ omen ; /ˈəʊmən/ ; 名 ; 前兆
++chain: L <i>ōmen</i>（語源不確実）
++der: ominous, abominable（「凶兆として忌む」）
++note: <i>abominable</i> の綴りは中世に <i>ab homine</i>「人間離れした」と誤解され <i>abhominable</i> と書かれた時期がある。語源俗説が綴りを変えた例。
++see: 第X部
+
+@ omnibus ; /ˈɒmnɪbəs/ ; 名 ; 乗合馬車、総集編
++lit: 「すべての人のために」
++chain: L <i>omnis</i>「すべて」の複数与格 <i>omnibus</i>
++desc: 1820年代パリの乗合馬車。ナントの業者 Omnès の店の看板 <i>Omnes omnibus</i> の洒落が語源という説がある。短縮されて <i>bus</i>（1832）。
++note: 語尾の屈折語尾だけが残って独立語になった、きわめて珍しい例。
++see: bus
++lvl: ★★
+
+@ orient ; /ˈɔːriənt/ ; 動名 ; 方向づける、東洋
++lit: 「（太陽が）昇る（方）」
++chain: L <i>orīrī</i>「昇る」→ <i>oriēns</i>「昇る（太陽）＝東」
++der: origin, original, aborigine, abort（「（発生から）離れる」）
++note: <i>orientate</i>「方向づける」は、教会堂を東（エルサレム）に向けて建てる慣習から。<i>Occident</i>「西洋」は <i>occidere</i>「（太陽が）沈む」で、<i>occasion</i>, <i>occident</i>, <i>decay</i> と同根。
++see: occident
++lvl: ★★
+
+@ ounce ; /aʊns/ ; 名 ; オンス
++lit: 「十二分の一」
++chain: L <i>uncia</i>「十二分の一」（<i>ūnus</i>「一」）
++dbl: inch
++note: ローマの <i>lībra</i>（ポンド）と <i>pēs</i>（フィート）をそれぞれ12分した単位。同じ語が重さでは <i>ounce</i>、長さでは <i>inch</i> に分かれた。記号 oz は伊 <i>onza</i> の略。lb は <i>lībra</i>。
++see: inch, pound
++lvl: ★★
+
+@ oxygen ; /ˈɒksɪdʒən/ ; 名 ; 酸素
++lit: 「酸を生むもの」
++chain: Gk <i>oxýs</i>「鋭い、酸っぱい」＋ <i>-genēs</i>「生む」（ラヴォアジエ、1777）
++note: すべての酸に酸素が含まれるという当時の誤った理論に基づく命名。塩酸に酸素がないことが後に判明したが、名は残った。<i>hydrogen</i>「水を生むもの」、<i>nitrogen</i>「硝石を生むもの」も同じ命名体系。
++der: oxymoron（「鋭くて鈍い」＝それ自体が撞着語法）, paroxysm, acid（L <i>acēre</i>、別根だが同義）
++see: 第9章 科学語彙の造語
++lvl: ★★
+
+@ obscene ; /əbˈsiːn/ ; 形 ; わいせつな
++conf: 不確実　L <i>obscēnus</i>「不吉な、汚らわしい」。<i>ob-</i>＋<i>caenum</i>「汚物」説と、<i>scaena</i>「舞台」（＝舞台に出せない）説がある。後者は俗説とされる。
+
+@ obsolete ; /ˈɒbsəliːt/ ; 形 ; 廃れた
++chain: L <i>ob-</i>＋<i>solēre</i>「習慣とする」→ <i>obsolēscere</i>「使われなくなる」
++der: insolent（「習慣に反する＝不遜な」）
++note: <i>insolent</i> と同根。
+
+@ omelette ; /ˈɒmlət/ ; 名 ; オムレツ
++chain: L <i>lāmina</i>「薄板」→ <i>lāmella</i> → 仏 <i>alemelle</i> →（異分析で）<i>alumelle</i> → <i>amelette</i> → <i>omelette</i>
++der: laminate, lamella, omelette
++note: 冠詞との境界の取り違えと音位転換が重なった、語形変化の見本のような語。薄く広げた形からの命名。
++see: 異分析（第6章）
+
+@ opinion ; /əˈpɪnjən/ ; 名 ; 意見
++chain: L <i>opīnārī</i>「思う」→ <i>opīniō</i>
++der: opine, opinionated
++lvl: ★★
+
+@ orange ; /ˈɒrɪndʒ/ ; 名 ; オレンジ
++chain: サンスクリット <i>nāraṅga</i> → ペルシア語 <i>nārang</i> → アラビア語 <i>nāranj</i> → 伊 <i>arancia</i> → 仏 <i>orange</i>
++desc: 語頭の n- が冠詞に取られて脱落した（伊 <i>una narancia</i> → <i>un'arancia</i>）。<i>or-</i> になったのは仏 <i>or</i>「金」の連想。
++note: 英語で色名として使われるのは1512年以降。それ以前この色は <i>ġeolurēad</i>「黄赤」と呼ばれた。色名が果物名より新しい珍しい例。
++see: 異分析, 第VIII部 インド諸語
++lvl: ★★
+
+@ ordinary ; /ˈɔːdnri/ ; 形 ; 普通の
++chain: L <i>ōrdō</i>（属格 <i>ōrdinis</i>）「（織機の）縦糸の並び、順序」→ <i>ōrdinārius</i>
++der: order, ordain, ordinance, coordinate, subordinate, primordial, exordium
++note: 織機の縦糸の整列が「秩序」の原イメージ。<i>ordinary</i> は「規定どおりの」→「並の」。
++lvl: ★★★
+
+@ organ ; /ˈɔːɡən/ ; 名 ; 器官、オルガン
++chain: Gk <i>órganon</i>「道具」← <i>érgon</i>「仕事」
++root: *werǵ-「働く」
++der: work, wright, energy, surgery（<i>kheirourgía</i>「手仕事」）, allergy, synergy, orgy, ergonomics
++note: 英語 <i>work</i> とギリシア語 <i>órganon</i> は同根。身体の「器官」は「魂の道具」というアリストテレスの比喩。<i>surgery</i> は「手の仕事」で、<i>chirurgeon</i>→<i>surgeon</i> と磨滅した。
++see: *werǵ-
++lvl: ★★★
+
+@ orphan ; /ˈɔːfn/ ; 名 ; 孤児
++chain: Gk <i>orphanós</i>「親を失った」→ L <i>orphanus</i>
++root: *h₃erbʰ-「（境遇が）変わる、労働する」
++cog: L <i>orbus</i>「奪われた」, 独 <i>Erbe</i>「相続人」, 露 <i>раб</i>「奴隷」
++der: robot（チェコ語 <i>robota</i>「賦役」、1920）
++note: <i>robot</i> と <i>orphan</i> が同根。「所属を失って労働に落とされた者」という共通の原義。
+
+@ ounce（動物） ; /aʊns/ ; 名 ; ユキヒョウ
++chain: L <i>lynx</i> → OF <i>lonce</i> →（冠詞の l- を取られて）<i>once</i>
++see: 異分析
++note: 重量の <i>ounce</i> とは無関係の同綴語。
+
+@ overwhelm ; /ˌəʊvəˈwelm/ ; 動 ; 圧倒する
++chain: <i>over</i>＋ME <i>whelmen</i>「ひっくり返す」
++note: <i>whelm</i> は単独では廃語となり、接頭辞付きの形だけが生き残った。<i>unkempt</i>（＜ <i>kempt</i>）, <i>disgruntled</i>（＜ <i>gruntled</i>）と同型の「片割れだけ残った語」。
++lvl: ★★
+
+@ oyster ; /ˈɔɪstə/ ; 名 ; カキ
++chain: Gk <i>óstreon</i>「殻をもつもの」→ L <i>ostrea</i> → OF <i>oistre</i>
++root: *h₃est-「骨」
++der: osteo-, ostracize, ossify（L <i>os</i>「骨」）
++note: 「骨（＝硬いもの）」の根から。<i>the world is your oyster</i> はシェイクスピア『ウィンザーの陽気な女房たち』。

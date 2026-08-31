@@ -128,3 +128,84 @@
 +desc: ヒポクラテス以来の四体液説で、血液・粘液・黄胆汁・黒胆汁の配合が気質を決めるとされた。「体液」→「気質」→「機嫌」→「滑稽味」。<i>good humor</i>「上機嫌」に中間段階が残る。
 +der: humid, humidity／melancholy, phlegmatic, sanguine, choleric（四体液の派生語）
 +note: 医学理論が消えた後も、性格語彙として英語に深く残った。
+
+@ habit ; /ˈhæbɪt/ ; 名 ; 習慣、衣服
++lit: 「持ち方、身なり」
++chain: L <i>habēre</i>「持つ」→ <i>habitus</i>「状態、身なり」
++der: habitat, inhabit, inhibit, prohibit, exhibit, ability, debt, due, duty, malady
++note: 修道服を <i>habit</i> と呼ぶのは原義（身なり）。「習慣」は「身についた状態」から。
+
+@ hand ; /hænd/ ; 名 ; 手
++chain: OE <i>hand</i> ← PGmc *handuz（語源不確実、ゲルマン語独自）
++der: handle, handsome（「扱いやすい」→ 立派な）, handkerchief
++note: ラテン系は <i>man-</i>（manual）、ギリシア系は <i>chir-</i>（chiropractic）。本来語だけが印欧祖語まで遡れない珍しい例。
+
+@ harmony ; /ˈhɑːməni/ ; 名 ; 調和
++lit: 「継ぎ目、接合」
++chain: Gk <i>harmós</i>「継ぎ目」→ <i>harmoníā</i>「音の組み合わせ」→ L
++der: art, arm, army, order, arithmetic, rite（*h₂er-「合わせる」）
++note: <i>art</i>「技」と <i>harmony</i>「調和」が同根。どちらも「はめ合わせる」。
+
+@ harvest ; /ˈhɑːvɪst/ ; 名 ; 収穫
++chain: OE <i>hærfest</i>「秋、収穫期」
++root: *kerp-「摘む」
++der: carpet（「むしり取った布」）, excerpt, carpe diem
++note: 古英語では季節名「秋」だった。<i>autumn</i>（仏語経由）に押されて「収穫」に特化した。
+
+@ health ; /helθ/ ; 名 ; 健康
++lit: 「全き状態」
++chain: OE <i>hǣlþ</i>（<i>hāl</i>「全体の、無傷の」+ <i>-þ</i>）
++der: whole, heal, hale, holy（「完全な＝聖なる」）, hail（挨拶）, wholesome
++note: <i>whole</i>「全体」・<i>heal</i>「癒す」・<i>holy</i>「聖なる」がすべて同根。「欠けていないこと」が健康・神聖の共通の核。<i>whole</i> の w は15世紀の書記上の追加。
+
+@ heart ; /hɑːt/ ; 名 ; 心臓
++root: *ḱerd-
++cog: L <i>cor, cordis</i>, Gk <i>kardíā</i>, Skt <i>hṛd</i>, 露 <i>сердце</i>
++der: cordial, accord, discord, record, courage, credo／cardiac, cardiology
++note: グリムの法則 *ḱ → h の代表例。<i>record</i>「記録する」は「心に呼び戻す」。
+
+@ heaven ; /ˈhevn/ ; 名 ; 天
++chain: OE <i>heofon</i>（語源不確実、ゲルマン語独自）
++conf: 不確実
++note: 北欧語 <i>ský</i>（＝ <i>sky</i>）に押されて宗教的な意味に特化した。<i>sky</i> はもと「雲」。
+
+@ hero ; /ˈhɪərəʊ/ ; 名 ; 英雄
++chain: Gk <i>hḗrōs</i>「半神、守護者」→ L <i>hērōs</i>
++conf: 一説　女神 <i>Hḗrā</i>（ヘラ）との関連、*ser-「守る」との関連が説かれる
++der: heroic, heroine, heroin（薬品名。1898年バイエル社の商標「英雄的な気分にする」）
++note: 麻薬の <i>heroin</i> が同語源であるのは、商標命名による。
+
+@ holiday ; /ˈhɒlədeɪ/ ; 名 ; 休日
++lit: 「聖なる日」
++chain: OE <i>hāliġdæġ</i>（<i>hāliġ</i>「聖なる」+ <i>dæġ</i>「日」）
++der: holy, whole, heal, health, hallow, Halloween（<i>All Hallows' Eve</i>）
++note: 「聖日」→「祝日」→「休日」一般へ（意味の拡大、第7章）。母音が短くなったのは二子音前の短化。
+
+@ honest ; /ˈɒnɪst/ ; 形 ; 正直な
++chain: L <i>honōs, honōris</i>「名誉」→ <i>honestus</i>「名誉ある」
++der: honor, honorary, dishonest, honorific
++note: h は発音しない（フランス語経由）。<i>an honest man</i> と冠詞が <i>an</i> になる。
+
+@ hostage ; /ˈhɒstɪdʒ/ ; 名 ; 人質
++chain: OF <i>hostage</i>（後期ラテン語 <i>obsidāticum</i>「人質の状態」＜ <i>obses</i>「人質」）
++conf: 一説　<i>hospes</i>「客」との混同で綴りが変わったとされる
++der: obsess（<i>obsidēre</i>「座り込む、包囲する」）
++note: 語源的には <i>host</i>「主人」系ではなく <i>obsess</i>「取り憑く」系。綴りだけが引き寄せられた。
+
+@ house ; /haʊs/ ; 名 ; 家
++chain: OE <i>hūs</i> ← PGmc *hūsam（語源不確実）
++der: husband（ON「家の主」）, hustings, husk(?), hoard は別
++note: ラテン語 <i>domus</i>、ギリシア語 <i>oîkos</i> とは無関係のゲルマン語独自語。
+
+@ hydrogen ; /ˈhaɪdrədʒən/ ; 名 ; 水素
++lit: 「水を生むもの」
++chain: Gk <i>hýdōr</i>「水」+ <i>-genēs</i>「生じる」→ 仏 <i>hydrogène</i>（1787年ラヴォアジエ）
++der: hydrant, hydraulic, dehydrate, water（本来語の同根語）／gene, genus, kin
++note: 燃えると水を生じることによる命名。<i>oxygen</i>「酸素」（酸を生む）は誤った命名だった。
+
+@ hypocrite ; /ˈhɪpəkrɪt/ ; 名 ; 偽善者
++lit: 「（仮面の下から）答える者＝役者」
++chain: Gk <i>hypokrī́nesthai</i>「（劇で）答える、演じる」→ <i>hypokritḗs</i>「役者」
++der: hypo-（下）, critic, criterion, crisis, certain, secret（<i>krínein</i> 系）
++note: ギリシア劇の役者が仮面をつけて合唱隊に応答したことから、「本心を隠して演じる者」へ。
+

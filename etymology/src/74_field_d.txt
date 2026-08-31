@@ -1,0 +1,261 @@
+== 8　軍事・海事
+
+<b>この分野はどこから来たか。</b>軍事語彙は三つの層に分かれる。中世の封建的な語はフランス語（<i>army, soldier, sergeant, lieutenant, captain, guard, siege, banner, armour, lance, archer</i>）、近代の戦術・工兵の語はフランス語とイタリア語（<i>battalion, brigade, cavalry, infantry, bastion, citadel, sortie, reconnaissance</i>）、20世紀の語はドイツ語（<i>blitz, flak, ersatz, strafe, panzer</i>）。海事語彙は逆に<b>オランダ語</b>が圧倒的である（<i>deck, dock, skipper, sloop, yacht, cruise, freight, keel, hull, buoy, reef, boom, avast, bow, luff</i>）。17世紀のオランダが世界最大の海運国だったことの直接の反映で、英語の航海術はオランダから学ばれた。
+
+@ admiral ; /ˈædmərəl/ ; 名 ; 提督
++chain: アラビア語 <i>amīr al-baḥr</i>「海の司令官」→ 中世ラテン語 <i>amīrālis</i> →（L <i>admīrārī</i>「感嘆する」との連想で d が挿入）<i>admiral</i>
++der: emir, amir（同語）
++note: 語源に無関係な <i>d</i> が民間語源で入り込んだ例。
++see: 第VIII部 アラビア語
++lvl: ★★
+
+@ ambush ; /ˈæmbʊʃ/ ; 名動 ; 待ち伏せ
++lit: 「茂みの中に（置く）」
++chain: 俗ラテン語 *<i>imboscāre</i>（<i>in</i>＋<i>boscus</i>「森」）→ OF <i>embuschier</i>
++der: bush, bosky, ambuscade
+
+@ army ; /ˈɑːmi/ ; 名 ; 軍隊
++chain: L <i>armāre</i>「武装させる」→ <i>armāta</i>「武装した（部隊）」→ OF <i>armee</i>
++root: *h₂er-「合わせる」
++see: rite, harmony
++der: arm（腕・武器）, armour, alarm（伊 <i>all'arme!</i>「武器を取れ！」）, armistice, disarm
++note: 身体の <i>arm</i>「腕」と武器の <i>arms</i> は同根で、どちらも「（体に）組み合わさるもの」。<i>alarm</i>「警報」は号令句がそのまま名詞になった。
++lvl: ★★★
+
+@ blitz ; /blɪts/ ; 名 ; 電撃戦、空襲
++chain: 独 <i>Blitzkrieg</i>「電撃戦」の短縮（1939）
++der: blitz, blitzkrieg
++note: 英語では特にロンドン空襲（1940–41）を指す。ドイツ語では軍事理論としての語で、英語での用法とずれる。
+
+@ cannon ; /ˈkænən/ ; 名 ; 大砲
++lit: 「大きな管」
++chain: L <i>canna</i>「葦、管」→ 伊 <i>cannone</i>（拡大形）
++der: cane, canal, channel, canyon, canister, canon は別
++note: <i>canon</i>「規範」はギリシア語 <i>kanṓn</i>「（葦の）ものさし」から。同じ「葦」を出発点に、一方は武器、一方は基準になった。
+
+@ cruise ; /kruːz/ ; 動名 ; 巡航（する）
++chain: 蘭 <i>kruisen</i>「（十字に）横切る」（<i>kruis</i>「十字架」＜ L <i>crux</i>）
++der: cross, crux, crucial, crucify, excruciating, crusade, cruise
++note: <i>crucial</i>「決定的な」はベーコンの <i>īnstantia crucis</i>「十字路の（＝分岐点の）事例」から。
+
+@ deck ; /dek/ ; 名 ; 甲板
++chain: 中世オランダ語 <i>dec</i>「覆い」（<i>decken</i>「覆う」）
++cog: 独 <i>Decke</i>, OE <i>þeccan</i>「覆う」→ thatch
++der: thatch（藁葺き）, deck, tile は別
++note: 英語 <i>thatch</i> と同根。<i>deck</i> はもと船の覆い。トランプの <i>deck</i>「一組」は「積み重ね」から。
+
+@ freight ; /freɪt/ ; 名 ; 貨物
++chain: 中世オランダ語 <i>vrecht</i>「運賃」
++cog: 独 <i>Fracht</i>
++note: TOEIC の物流文脈で頻出。
++see: 第XI部
++lvl: ★★
+
+@ infantry ; /ˈɪnfəntri/ ; 名 ; 歩兵
++lit: 「（口のきけない）子ども」
++chain: L <i>īnfāns</i>「話せない（者）」→ 伊 <i>infante</i>「若者、従者、歩兵」→ <i>infanteria</i>
++der: infant, infantile, fate, fame, fable, fatal, preface, confess, profess, professor（<i>fārī</i>「話す」）
++note: <i>infant</i>「幼児」と <i>infantry</i>「歩兵」が同語。若い従者が徒歩で従ったことから。<i>fate</i>「運命」も「（神が）語ったこと」で同根。
++lvl: ★★
+
+@ lieutenant ; /lefˈtenənt/ ; 名 ; 中尉、代理
++lit: 「地位を保持する者」
++chain: 仏 <i>lieu</i>「場所」＋<i>tenant</i>「保つ者」
++see: tenant
++note: 英音 /lef-/ は中世の <i>lieu</i> の異綴 <i>lieff</i> に由来するとされる。米音は /luː-/。
+
+@ pirate ; /ˈpaɪrət/ ; 名 ; 海賊
++lit: 「試みる者、襲う者」
++chain: Gk <i>peirân</i>「試みる」→ <i>peiratḗs</i>
++der: experience, experiment, expert, peril, empirical（「経験による」）
++note: <i>experience</i>「経験」と <i>pirate</i> が同根。「危険を試す」が共通の観念。
++lvl: ★★
+
+@ salvo ; /ˈsælvəʊ/ ; 名 ; 一斉射撃
++chain: L <i>salvē!</i>「ご機嫌よう！」（<i>salvus</i>「無事な」）→ 伊 <i>salva</i>「礼砲」
++see: salvage
++note: 挨拶の礼砲が攻撃の斉射に転じた。
+
+@ strategy ; /ˈstrætədʒi/ ; 名 ; 戦略
++lit: 「将軍の技」
++chain: Gk <i>stratós</i>「軍勢」＋<i>ágein</i>「導く」→ <i>stratēgós</i>「将軍」→ <i>stratēgía</i>
++der: tactics（<i>tássein</i>「配置する」）, agent, act, agile, agony（「競技での苦闘」）, demagogue, pedagogue, synagogue
++note: <i>strategy</i>（全体構想）と <i>tactics</i>（部隊配置）の区別は語源に忠実で、前者は「将軍が導く」、後者は「並べる」。
++lvl: ★★★
+
+@ starboard ; /ˈstɑːbəd/ ; 名 ; 右舷
++lit: 「舵の側」
++chain: OE <i>stēorbord</i>（<i>stēor</i>「舵」＋<i>bord</i>「船べり」）
++der: steer, starboard, port（左舷。舵のない側を岸につけたため）
++note: バイキング船は右舷に舵板を付けたため、接岸には左舷を使った。左舷はかつて <i>larboard</i> と呼ばれたが、<i>starboard</i> と紛らわしいため1844年に英海軍が <i>port</i> に統一した。
+
+@ tank ; /tæŋk/ ; 名 ; 戦車、水槽
++chain: グジャラート語／マラーティー語 <i>tāṅkẽ</i>「貯水池」（またはポルトガル語 <i>tanque</i>）
++desc: 第一次大戦で新兵器の輸送を秘匿するため「水運搬車（water tank）」と偽装表示したことから、兵器そのものの名になった。暗号名が正式名称になった珍しい例。
++conf: 確実
+
+== 9　宗教・信仰
+
+<b>この分野はどこから来たか。</b>キリスト教の語彙は、ギリシア語→ラテン語という二段階の翻訳を経て英語に入った。<i>church</i>（Gk <i>kyriakón</i>「主の（家）」）, <i>bishop</i>（<i>epískopos</i>「監督者」）, <i>priest</i>（<i>presbýteros</i>「長老」）, <i>angel</i>（<i>ángelos</i>「使者」）, <i>devil</i>（<i>diábolos</i>「中傷する者」）, <i>baptize</i>（<i>baptízein</i>「浸す」）はギリシア語。<i>saint, altar, cross, mass, sacrament, communion, confession</i> はラテン語。これに対し <i>God, heaven, hell, sin, soul, holy, ghost, evil, doom, lord, gospel</i> は古英語＝ゲルマン語で、既存の異教語彙をキリスト教概念に転用したものである。<i>Easter</i> が春の女神 <i>Ēostre</i> の名であるように、改宗は語彙の入れ替えではなく<b>意味の上書き</b>によって進んだ。
+
+@ angel ; /ˈeɪndʒl/ ; 名 ; 天使
++lit: 「使者」
++chain: Gk <i>ángelos</i>「使者」→ L <i>angelus</i> → OE <i>engel</i>
++der: evangelist（「よい知らせを運ぶ者」）, evangelical, angelic
++note: ヘブライ語 <i>malʾākh</i>「使者」の訳語。<i>gospel</i> は OE <i>gōd spel</i>「よい知らせ」で、<i>euangélion</i> の翻訳借用。
++lvl: ★★
+
+@ bishop ; /ˈbɪʃəp/ ; 名 ; 司教
++lit: 「上から見る者＝監督」
++chain: Gk <i>epískopos</i> → L <i>episcopus</i> → OE <i>bisceop</i>
++see: skeptic
++der: episcopal, scope, spy, species
++note: 語頭の <i>e-</i> が脱落し、<i>p</i> が <i>b</i> になった激しい摩耗。同じ語がフランス語で <i>évêque</i>、ドイツ語で <i>Bischof</i>。
++lvl: ★★
+
+@ church ; /tʃɜːtʃ/ ; 名 ; 教会
++lit: 「主の（家）」
++chain: Gk <i>kyriakón (dôma)</i>「主の家」→ PGmc *<i>kirikō</i> → OE <i>cirice</i>
++cog: 独 <i>Kirche</i>, 蘭 <i>kerk</i>, スコットランド語 <i>kirk</i>
++note: ラテン語系諸語は別語 <i>ecclēsia</i>（Gk「呼び集められた集会」）を使う（仏 <i>église</i>, 西 <i>iglesia</i>）。ゲルマン語圏だけが「主の家」型を選んだ。英語 <i>ecclesiastical</i> は後の学術借用。
++lvl: ★★
+
+@ devil ; /ˈdevl/ ; 名 ; 悪魔
++lit: 「中傷する者」
++chain: Gk <i>diábolos</i>（<i>diá</i>「間を」＋<i>bállein</i>「投げる」）→ L <i>diabolus</i> → OE <i>dēofol</i>
++der: ballistic, symbol（「照合のために投げ合わせるもの」）, problem（「前に投げ出されたもの」）, parable, emblem, hyperbole
++note: ヘブライ語 <i>śāṭān</i>「敵対者」の訳語。<i>symbol</i>「象徴」と <i>devil</i> が同根で、前者は「投げ合わせる」、後者は「間に投げ込む（＝離間する）」。
++lvl: ★★
+
+@ Easter ; /ˈiːstə/ ; 名 ; 復活祭
++chain: OE <i>Ēastre</i>（春の女神の名、ベーダの記述による）
++conf: 一説　ベーダ以外の証拠がなく、単に「東（＝日の出）の月」の意とする説もある。
++der: east, Ostern（独）, aurora, austral（L <i>aurōra</i>「曙」と同根 *h₂ews-）
++note: ロマンス諸語は <i>Pascha</i>（ヘブライ語 <i>pesaḥ</i>「過越」）由来（仏 <i>Pâques</i>）。ゲルマン語圏だけが異教の祭名を残した。
++see: 第7章
+
+@ heathen ; /ˈhiːðn/ ; 名 ; 異教徒
++lit: 「荒野に住む者」
++chain: OE <i>hǣðen</i>（<i>hǣð</i>「荒野」）
++dbl: pagan
++note: L <i>pāgānus</i>「村人、田舎者」の翻訳借用。都市から広まったキリスト教にとって、未改宗者は「田舎の者」だった。<i>pagan</i>（ラテン語）と <i>heathen</i>（ゲルマン語）は同じ発想の対訳語。
++see: villain
+
+@ holy ; /ˈhəʊli/ ; 形 ; 聖なる
++chain: OE <i>hāliġ</i>（<i>hāl</i>「完全な、健全な」）
++der: whole, hale, heal, health, hallow, Halloween（<i>All Hallows' Even</i>）, holiday（<i>hāliġ dæġ</i>）
++note: 「聖」と「健康」と「全体」が同根。<i>whole</i> の <i>w-</i> は15世紀に加えられた綴りで、語源にはない。
++lvl: ★★
+
+@ priest ; /priːst/ ; 名 ; 司祭
++lit: 「長老」
++chain: Gk <i>presbýteros</i>「より年長の」→ L <i>presbyter</i> → OE <i>prēost</i>
++dbl: presbyter, Presbyterian
++der: presbyopia（「老眼」）
++note: 摩耗形 <i>priest</i> と学術借用形 <i>presbyter</i> が同一語。
+
+@ sacrifice ; /ˈsækrɪfaɪs/ ; 名 ; 犠牲
++lit: 「聖なるものにすること」
++chain: L <i>sacer</i>「聖なる、呪われた」＋<i>facere</i>「なす」
++der: sacred, sacrament, consecrate, sacrilege（「聖物を盗ること」）, saint, sanctuary, execrate
++note: <i>sacer</i> は「神に属する」ゆえに「触れてはならない」という両義をもち、「聖なる」と「呪われた」の両方を意味した。<i>homo sacer</i> はローマ法の概念。
++lvl: ★★
+
+@ sin ; /sɪn/ ; 名 ; 罪
++chain: OE <i>synn</i>
++conf: 一説　L <i>sōns</i>「有罪の」と同根で、原義は「（そう）である（＝真犯人である）」とされる。
++note: 法的な <i>crime</i>、道徳的な <i>vice</i>、宗教的な <i>sin</i> の三語がそれぞれ別語源で共存している。
+
+@ soul ; /səʊl/ ; 名 ; 魂
++chain: OE <i>sāwol</i>
++conf: 不確実　「湖（<i>sǣ</i>）から来て湖へ帰るもの」というゲルマン的観念に基づく説があるが確証はない。
++note: <i>spirit</i>（ラテン語、「息」）、<i>psyche</i>（ギリシア語、「息」）と違い、ゲルマン語の <i>soul</i> の語源は不明のままである。
++see: spirit
++lvl: ★★
+
+== 10　動植物・自然
+
+@ animal ; /ˈænɪml/ ; 名 ; 動物
++lit: 「息をするもの」
++chain: L <i>anima</i>「息、魂」→ <i>animālis</i>
++root: *h₂enh₁-「息をする」
++cog: Gk <i>ánemos</i>「風」, Skt <i>ániti</i>「息をする」
++der: animate, animosity, unanimous（「一つの心の」）, magnanimous, anemone（「風の花」）
++note: <i>spirit</i>, <i>psyche</i>, <i>ātman</i> と並び、「息＝魂」の観念がここでも現れる。
++see: spirit
++lvl: ★★★
+
+@ daisy ; /ˈdeɪzi/ ; 名 ; ヒナギク
++lit: 「日の目」
++chain: OE <i>dæġes ēage</i>「昼の目」
++note: 朝に開き夕に閉じる花の性質から。<i>window</i>「風の目」と同じく、身体部位を用いた命名。
++see: window
+
+@ dandelion ; /ˈdændɪlaɪən/ ; 名 ; タンポポ
++lit: 「ライオンの歯」
++chain: 仏 <i>dent de lion</i>（L <i>dēns leōnis</i>）
++der: dental, dentist, indent, trident, dandelion／同根 tooth（ゲルマン系）
++note: 葉の鋸歯から。フランス語では現在 <i>pissenlit</i>「寝小便」（利尿作用から）と呼ばれ、英語の <i>piss-a-bed</i> も同じ発想の古語。
+
+@ elephant ; /ˈelɪfənt/ ; 名 ; ゾウ
++chain: Gk <i>eléphās</i>（属格 <i>eléphantos</i>）「象、象牙」（エジプト語／セム語起源か）
++conf: 不確実
++der: ivory（L <i>ebur</i>、同源か）
++note: 古英語には <i>ylpend</i> の形があり、中英語でフランス語形に置き換わった。
+
+@ flower ; /ˈflaʊə/ ; 名 ; 花
++chain: L <i>flōs</i>（属格 <i>flōris</i>）「花」→ OF <i>flor</i>
++der: flora, floral, florid, flourish, flour（「小麦粉＝粉の花＝最良の部分」）, Florence
++note: <i>flour</i>「小麦粉」と <i>flower</i> は同一語で、18世紀まで綴りも同じだった。「最良の部分」の意から。
++lvl: ★★
+
+@ orchid ; /ˈɔːkɪd/ ; 名 ; ラン
++lit: 「睾丸」
++chain: Gk <i>órkhis</i>「睾丸」
++desc: 地下の球根の形による命名（テオフラストス）。<i>orchiectomy</i> は今も医学用語で本来の意味を保つ。
+
+@ pineapple ; /ˈpaɪnæpl/ ; 名 ; パイナップル
++lit: 「松の実」
++chain: <i>pine</i>＋<i>apple</i>
++desc: 中英語では松かさを指す語だった。新大陸の果実が松かさに似ていたため名が転用され、松かさのほうは <i>pinecone</i> と呼び直された。<i>apple</i> はもと果実一般を指した（独 <i>Erdapfel</i>「じゃがいも」、仏 <i>pomme de terre</i> 同様）。
++see: 意味の移動（第8章）
+
+== 11　色・数・時間
+
+@ black ; /blæk/ ; 形 ; 黒い
++chain: OE <i>blæc</i>「黒い」
++conf: 通説　*<i>bhleg-</i>「焼ける、輝く」に遡り、L <i>flagrāre</i>「燃える」, <i>fulgur</i>「稲妻」と同根。
++der: flagrant, conflagration, flame, bleach, blank, blanch（同根の *bhel-「輝く」）
++note: 古英語には <i>blæc</i>「黒」と <i>blāc</i>「白、青白い」が併存し、しばしば混同された。「焼ける」から一方は「焦げた＝黒」、他方は「輝く＝白」へ分かれたとされる。<i>black</i> と <i>blank</i>（仏 <i>blanc</i>「白」）が同根なのはこのため。
++lvl: ★★
+
+@ blue ; /bluː/ ; 形 ; 青い
++chain: フランク語 *<i>blāo</i> → OF <i>bleu</i>
++cog: OE <i>blǣwen</i>, 独 <i>blau</i>, L <i>flāvus</i>「金色の」（同根）
++note: 英語 <i>blue</i> はフランス語形で、本来の英語形は失われた。ラテン語 <i>flāvus</i>「黄」と同根で、色語の意味が言語間で大きくずれる例。
++see: yellow
+
+@ hundred ; /ˈhʌndrəd/ ; 数 ; 百
++chain: OE <i>hundred</i>（<i>hund</i>「百」＋<i>-rað</i>「数」）
++root: *ḱm̥tóm「百」
++cog: L <i>centum</i>, Gk <i>hekatón</i>, Skt <i>śatám</i>, Av <i>satəm</i>
++der: cent, century, percent, centipede, hecatomb
++note: 印欧語族を <b>centum 語派</b>と <b>satem 語派</b>に二分する基準語。ゲルマン・イタリック・ケルト・ギリシアが centum、インド・イラン・バルト・スラヴが satem。
++see: centum-satem（図）
++lvl: ★★
+
+@ month ; /mʌnθ/ ; 名 ; 月
++chain: OE <i>mōnaþ</i>（<i>mōna</i>「月（天体）」）
++root: *meh₁ns-「月、暦月」← *meh₁-「測る」
++cog: L <i>mēnsis</i>, Gk <i>mḗn</i>, Skt <i>mās</i>
++der: moon, month, menstrual, semester（<i>sex mēnsis</i>「六か月」）, measure, meter, immense, dimension
++note: 「月」は最初の測定装置だった。<i>measure</i>「測る」と <i>moon</i> が同根であることが、暦の起源を語っている。
++lvl: ★★
+
+@ second ; /ˈsekənd/ ; 数名 ; 第二の、秒
++chain: L <i>secundus</i>「続く（もの）」← <i>sequī</i>「従う」
++see: sue
++desc: 時間の「秒」は中世ラテン語 <i>pars minūta secunda</i>「第二の細分」。1時間を60分した第一の細分（<i>minūta prīma</i>）が <i>minute</i>、それをさらに60分した第二の細分が <i>second</i>。
++note: <i>minute</i>「分」と <i>minute</i>「微細な」が同語なのはこのため。
++see: menu
++lvl: ★★★

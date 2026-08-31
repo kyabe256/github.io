@@ -469,3 +469,294 @@
 +der: employee, trainee, refugee, nominee, addressee, escapee, absentee
 +note: -er（する人）と対をなす（<i>employer/employee</i>）。ただし <i>escapee</i>, <i>attendee</i> のように能動的な意味の語もある。
 
+
+== 接頭辞（補遺）
+
+@ a- / ab- / abs- ; → 前掲
++cf: → <b>ab-</b>（離れて）。abduct, abstain, avert。
+
+@ al- ; 「（アラビア語の）定冠詞」
++form: アラビア語 <i>al-</i>
++der: alcohol, algebra, alkali, almanac, alchemy, alcove, algorithm（人名だが al- を含む）, apricot（<i>al-barqūq</i>）, artichoke, azimuth（<i>as-samt</i>）, admiral（<i>amīr al-</i>）
++note: 借用の際に定冠詞ごと取り込まれた。スペイン語には <i>azúcar</i>（砂糖）など更に多い。英語の <i>a-</i> や <i>al-</i> をすべてラテン語系と思わないこと。
+
+@ ambi- / amphi- ; → 前掲
++cf: → <b>ambi-</b>（両方）、<b>amphi-</b>（両方・周り）。
+
+@ arch- / archi- ; 「第一の、主要な」
++form: Gk <i>arkhi-</i>
++der: archbishop, archangel, archduke, archenemy, architect, archetype, archipelago
++note: 「古い」の <i>archaeo-</i>（archaeology）とは別系統。<i>arch-</i> は「主要な」。
+
+@ auto- ; → 前掲
++cf: → <b>auto-</b>（自身）。automatic, autonomy, authentic。
+
+@ bene- / mal- ; → 前掲
++cf: → <b>bene-</b>（よく）、<b>mal-</b>（悪く）。
+
+@ cis- ; 「こちら側の」
++form: L <i>cis</i>
++der: cisalpine（「アルプスのこちら側」）, cislunar, cisgender
++note: <i>trans-</i>「向こう側の」の対。<i>cisgender</i> は1990年代の造語で、この対立を使っている。
+
+@ de- ; → 前掲
++cf: → <b>de-</b>（下へ・離れて・強意）。
+
+@ demi- / semi- / hemi- ; 「半分」
++form: 仏 <i>demi-</i>／L <i>sēmi-</i>／Gk <i>hēmi-</i>
++der: demigod, demitasse, demisemiquaver／semicircle, semiconductor, semifinal／hemisphere, hemiplegia
++note: 三系統が揃うため、音楽の音価では <i>demisemiquaver</i>（32分音符）のように重ねて使える。
+
+@ dia- / per- ; → 前掲
++cf: → <b>dia-</b>（通して・ギ）、<b>per-</b>（通して・ラ）。
+
+@ eu- / dys- ; → 前掲
++cf: → <b>eu-</b>（よい）、<b>dys-</b>（悪い）。
+
+@ extra- / intra- ; → 前掲
++cf: → <b>extra-</b>（外）、<b>intra-</b>（内）。
+
+@ fore- ; 「前に、あらかじめ」（本来語）
++form: OE <i>fore</i>
++der: forecast, foresee, foretell, forehead, forefather, foreground, forewarn, foreman
++note: <i>for-</i>（forget, forbid）とは別の接頭辞。<i>forgo</i>（差し控える）と <i>forego</i>（先行する）の綴り分けはこの区別による。
+
+@ hyper- / hypo- ; → 前掲
++cf: → <b>hyper-</b>（超）、<b>hypo-</b>（下）。
+
+@ infra- ; 「下に、下位に」
++form: L <i>īnfrā</i>
++der: infrared（「赤より下」）, infrastructure, infrasonic, infra dig（<i>infra dignitatem</i>）
++note: <i>ultra-</i>「超えて」の対。<i>infrared</i> は可視光の赤より波長が長い（振動数が低い）ことから。
+
+@ inter- / intro- ; → 前掲
++cf: → <b>inter-</b>（間）、<b>intro-</b>（内へ）。
+
+@ juxta- ; 「隣に」
++form: L <i>iūxtā</i>
++der: juxtapose, juxtaposition
++note: 語源は *yewg-「結ぶ」（yoke）。
+
+@ meta- ; → 前掲
++cf: → <b>meta-</b>（後・変化・上位）。metaphor, metabolism, metadata。
+
+@ neo- / paleo- ; 「新しい／古い」
++form: Gk <i>néos</i>／<i>palaiós</i>
++der: neolithic, neologism, neoclassical, neophyte, neon／paleolithic, paleontology, Paleozoic
++note: 考古学の時代区分（旧石器・新石器）はこの対で作られている。
+
+@ ob- ; → 前掲
++cf: → <b>ob-</b>（対して）。object, obstacle, obvious。
+
+@ omni- / pan- ; 「すべて」
++form: L <i>omnis</i>／Gk <i>pân</i>
++der: omnipotent, omniscient, omnivorous, omnibus（「すべての人のために」→ bus）／panorama, pandemic, pantheon, panacea, pancreas（「すべて肉」）
++note: <i>bus</i>「バス」は <i>omnibus</i>（ラテン語の与格複数「すべての人に」）の語尾だけが残った異分析の産物。
+
+@ out- ; 「外へ、〜より優れて」（本来語）
++form: OE <i>ūt</i>
++der: outcome, outlook, outbreak, outstanding／outrun, outnumber, outlive, outsmart
++note: 比較の用法（<i>outrun</i>「走り勝つ」）は英語独特で、生産性が高い。
+
+@ para- ; → 前掲
++cf: → <b>para-</b>（そばに・ギ）。<i>parachute</i> の para- は伊「防ぐ」で別語源。
+
+@ post- / ante- ; → 前掲
++cf: → <b>post-</b>（後）、<b>ante-</b>（前）。
+
+@ proto- ; → 前掲
++cf: → <b>prot-</b>（第一の）。prototype, protein, protagonist。
+
+@ pseudo- ; 「偽の」
++form: Gk <i>pseudḗs</i>
++der: pseudonym, pseudoscience, pseudopod, pseudocode
++note: 発音は /sjuːd-/。語頭の p は発音しない（ギリシア語 ψ の名残）。
+
+@ quasi- ; 「準〜、〜のような」
++form: L <i>quasi</i>「あたかも〜のごとく」
++der: quasi-judicial, quasi-experimental, quasar（<i>quasi-stellar</i> の混成）
++note: <i>quasar</i>「クエーサー」は "quasi-stellar radio source" の短縮（1964年）。
+
+@ retro- ; → 前掲
++cf: → <b>retro-</b>（後ろへ）。retrospect, retrovirus。
+
+@ tele- ; → 前掲
++cf: → <b>tele-</b>（遠く）。telephone, telescope, television。
+
+@ trans- / cis- ; → 前掲
++cf: → <b>trans-</b>（越えて）、<b>cis-</b>（こちら側）。
+
+@ un- / in- / non- / dis- / a- ; 「否定の五系統」
++form: 本来語 un-／ラテン in-／ラテン non-／ラテン dis-／ギリシア a-
++der: unhappy／incredible／nonfiction／dishonest／atypical
++note: 使い分けの目安 ── 本来語には <i>un-</i>、ラテン系形容詞には <i>in-</i>、中立的な否定には <i>non-</i>、逆転には <i>dis-</i>、ギリシア系術語には <i>a-</i>。<i>unable</i>（能力がない）と <i>disabled</i>（能力を奪われた）のように、接頭辞の違いが含意の違いになる例もある。
+
+@ vice- ; 「代理の」
++form: L <i>vice</i>「〜の代わりに」
++der: vice-president, viceroy（「王の代理」）, vicar（「代理者」＝教区牧師）, vicarious, vicissitude
++note: <i>vicarious</i>「代理の、追体験の」も同語。<i>vice</i>「悪徳」（<i>vitium</i>）とは別語源。
+
+== 接尾辞（補遺）
+
+@ -acy / -cy ; → 前掲
++cf: → <b>-cy</b>（状態・地位）。democracy, accuracy。
+
+@ -ade ; 「行為・産物」
++form: プロヴァンス語／西 <i>-ada</i>（L <i>-āta</i>）
++der: parade, blockade, cavalcade, lemonade, marmalade, crusade, decade は ギ
++note: <i>-ade</i> は飲み物にも使われる（<i>lemonade</i>, <i>orangeade</i>）。
+
+@ -algia ; 「痛み」
++form: Gk <i>álgos</i>
++der: neuralgia, myalgia, nostalgia, cephalalgia
++note: 医学の複合要素。
+
+@ -archy ; 「支配」
++form: Gk <i>arkhḗ</i>
++der: monarchy, oligarchy, anarchy, hierarchy, patriarchy, matriarchy
++note: <i>-cracy</i>（力による支配）と <i>-archy</i>（首位による支配）は微妙に異なる。
+
+@ -aster ; 「まがいの、劣った」
++form: L <i>-aster</i>
++der: poetaster（「へぼ詩人」）, criticaster, oleaster
++note: 生産性は低いが、軽蔑を表す珍しい接尾辞。
+
+@ -cide ; 「殺すこと・殺す者」
++form: L <i>caedere</i>「切る、殺す」
++der: homicide, suicide, genocide, insecticide, pesticide, herbicide, patricide, regicide, fratricide, infanticide, matricide, deicide
++note: <i>genocide</i>「ジェノサイド」は1944年ラファエル・レムキンの造語（Gk <i>génos</i>＋L <i>-cīdium</i> の混成）。
+
+@ -crat / -cracy ; → 前掲
++cf: → <b>crat-</b>（力・支配）。democracy, bureaucracy。
+
+@ -en ; 「〜製の」（本来語・形容詞）
++form: OE <i>-en</i>
++der: wooden, golden, woolen, earthen, wheaten, ashen, oaken, leaden
++note: 動詞化の <i>-en</i>（widen）、複数の <i>-en</i>（children）とは別。三つの同形接尾辞がある。
+
+@ -escent / -escence ; 「〜になりつつある」
++form: L <i>-ēscere</i>（起動相）
++der: adolescent, convalescent, obsolescent, luminescent, effervescent, evanescent, incandescent, senescence, quiescent
++note: ラテン語の起動動詞（inchoative）語尾。「〜し始める」の相を表す。
+
+@ -esque ; → 前掲
++cf: → <b>-esque</b>（〜風の）。picturesque, Kafkaesque。
+
+@ -ferous ; 「〜を産する」
++form: L <i>ferre</i>「運ぶ」
++der: carboniferous, coniferous, odoriferous, auriferous, somniferous, vociferous
++note: 地質時代の「石炭紀」<i>Carboniferous</i> は「石炭を産する」。
+
+@ -fy / -ify ; → 前掲
++cf: → <b>-ify</b>（〜にする）。simplify, classify。
+
+@ -gate ; 「〜疑惑」（現代の逆成接尾辞）
++form: <i>Watergate</i>（1972年の事件）の異分析
++der: Irangate, Deflategate, Pizzagate, Partygate
++note: ホテル名の一部だった -gate が「政治スキャンダル」を意味する接尾辞として独立した。20世紀後半に生まれた新しい接辞の代表例（第6章の異分析）。
+
+@ -gon / -gonal ; 「角」
++form: Gk <i>gōnía</i>「角」
++der: polygon, pentagon, hexagon, diagonal, orthogonal, trigonometry
++note: 語源は *ǵónu「膝」（＝曲がるところ）。<i>knee</i> と同根。
+
+@ -graphy / -gram ; → 前掲
++cf: → <b>graph-</b>（書く）。photography, telegram。
+
+@ -ics ; 「〜学、〜術」
++form: Gk <i>-ika</i>（中性複数）
++der: physics, mathematics, ethics, politics, economics, linguistics, acoustics, gymnastics
++note: 形は複数だが単数扱い（<i>Physics is…</i>）。ギリシア語の中性複数「〜に関する事柄」から。
+
+@ -ise / -ize ; → 前掲
++cf: → <b>-ize</b>（〜化する）。realize, organize。
+
+@ -itis ; 「炎症」
++form: Gk <i>-îtis</i>
++der: appendicitis, arthritis, bronchitis, hepatitis, dermatitis, tonsillitis, meningitis
++note: 本来はギリシア語で <i>nósos</i>「病」を修飾する女性形容詞語尾。比喩的に <i>electionitis</i> のような戯語も作られる。
+
+@ -latry ; 「崇拝」
++form: Gk <i>latreíā</i>「礼拝」
++der: idolatry（「偶像崇拝」）, bibliolatry, ecolatry
++note: <i>idolatry</i> は <i>eidōlon</i>「像」＋ <i>latreíā</i>。
+
+@ -logue / -logy ; → 前掲
++cf: → <b>log-</b>（言葉・学）。dialogue, biology。
+
+@ -mancy ; 「占い」
++form: Gk <i>manteíā</i>
++der: necromancy（「死者による占い」）, chiromancy（手相）, cartomancy, oneiromancy
++note: <i>necromancy</i> が中世に <i>nigromancy</i>「黒い魔術」と誤解され、<i>black magic</i> の観念を強めた。
+
+@ -meter / -metry ; → 前掲
++cf: → <b>metr-</b>（測る）。thermometer, geometry。
+
+@ -monger ; 「〜屋、〜を売る者」（本来語）
++form: OE <i>mangere</i>（L <i>mangō</i>「商人」からの借用）
++der: fishmonger, ironmonger, warmonger, scaremonger, rumormonger
++note: 現代では否定的な複合（<i>warmonger</i>「戦争屋」）で生産的。
+
+@ -nomy ; → 前掲
++cf: → <b>nom-</b>（法則）。astronomy, economy, taxonomy。
+
+@ -oid ; 「〜に似たもの」
++form: Gk <i>-oeidḗs</i>（<i>eîdos</i>「形」）
++der: android, asteroid, humanoid, spheroid, factoid, celluloid, rhomboid, thyroid（「盾の形」）
++note: <i>factoid</i>「事実もどき」はノーマン・メイラーの造語（1973年）。
+
+@ -oma ; 「腫瘍」
++form: Gk <i>-ōma</i>
++der: carcinoma, melanoma, lymphoma, hematoma, glaucoma, sarcoma
++note: 複数形は <i>-omata</i>（medically）または <i>-omas</i>。
+
+@ -onym ; → 前掲
++cf: → <b>onym-</b>（名）。synonym, pseudonym, acronym。
+
+@ -osis ; 「状態・過程・異常」
++form: Gk <i>-ōsis</i>
++der: osmosis, symbiosis, metamorphosis, thrombosis, neurosis, psychosis, fibrosis, halitosis, tuberculosis
++note: <i>-itis</i>（炎症）と対比される。<i>-osis</i> は非炎症性の病変や生理過程。
+
+@ -phile / -philia ; 「〜を愛する」
++form: Gk <i>phílos</i>
++der: bibliophile, Anglophile, audiophile, hemophilia, pedophilia, necrophilia
++note: 対義は <i>-phobe / -phobia</i>。
+
+@ -phone / -phony ; → 前掲
++cf: → <b>phon-</b>（音）。telephone, symphony, homophone。
+
+@ -scape ; 「〜の眺め」
++form: オランダ語 <i>-schap</i>（英 <i>-ship</i> と同根）
++der: landscape, seascape, cityscape, moonscape, soundscape
++note: <i>landscape</i>「風景」は1600年ごろオランダ絵画とともに入った語。以後 <i>-scape</i> が接尾辞として独立した。
+
+@ -scope / -scopy ; → 前掲
++cf: → <b>scop-</b>（見る）。telescope, endoscopy。
+
+@ -some ; 「〜をもたらす」（本来語）／「体」（ギリシア語）
++form: OE <i>-sum</i>／Gk <i>sôma</i>
++der: handsome, tiresome, wholesome, awesome, troublesome, burdensome／chromosome, ribosome, lysosome
++note: 同形だが起源のまったく違う二つの接尾辞。<i>awesome</i> と <i>chromosome</i> は無関係。
+
+@ -ster ; → 前掲
++cf: → <b>-ster</b>（もと女性形）。spinster, gangster, Webster。
+
+@ -tude ; 「性質・状態」
++form: L <i>-tūdō</i>
++der: attitude, aptitude, gratitude, latitude, longitude, magnitude, multitude, solitude, fortitude, altitude, plenitude
++note: 形容詞・名詞から抽象名詞を作る。<i>-ness</i>（本来語）、<i>-ity</i>（ラテン系）と並ぶ第三系統。
+
+@ -ule / -cule ; 「小さいもの」
++form: L <i>-ulus, -culus</i>（縮小辞）
++der: globule, capsule, granule, nodule, module／molecule, particle, cuticle, animalcule, homunculus
++note: <i>molecule</i>「分子」は「小さな塊」（<i>mōlēs</i>「塊」）。ラテン語の縮小辞は英語に大量の語を残した。
+
+@ -ward / -wise ; → 前掲
++cf: → <b>-ward</b>（方向）、<b>-wise</b>（やり方）。
+
+@ -y / -ie ; 「親愛の縮小辞」（本来語）
++form: 中英語（スコットランド語起源とされる）
++der: doggie, birdie, daddy, mommy, Johnny, Tommy, sweetie, cookie（オランダ語 <i>koekje</i>「小さな菓子」）
++note: 人名の愛称（Bill → Billy）に多用される。<i>cookie</i> はオランダ語の縮小形がそのまま入った例。
+

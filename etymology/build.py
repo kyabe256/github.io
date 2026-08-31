@@ -27,6 +27,9 @@ MANIFEST = [
     ("19_chap10.txt",       "prose"),
     ("1a_chap11.txt",       "prose"),
     ("1b_chap12.txt",       "prose"),
+    ("1c_chap13.txt",       "prose"),
+    ("1d_chap14.txt",       "prose"),
+    ("1e_chap15.txt",       "prose"),
     ("20_pie_roots.txt",    "entry"),
     ("29_latin_intro.txt",  "prose"),
     ("30_latin_stems.txt",  "entry"),
@@ -56,8 +59,15 @@ MANIFEST = [
     ("71_dict_v.txt",       "entry"),
     ("72_dict_w.txt",       "entry"),
     ("73_dict_xyz.txt",     "entry"),
+    ("74_field_a.txt",      "entry"),
+    ("74_field_b.txt",      "entry"),
+    ("74_field_c.txt",      "entry"),
+    ("74_field_d.txt",      "entry"),
+    ("76_loan_a.txt",       "entry"),
+    ("76_loan_b.txt",       "entry"),
     ("80_topics.txt",       "prose"),
     ("85_myths.txt",        "prose"),
+    ("88_study.txt",        "prose"),
     ("90_appendix.txt",     "prose"),
     ("95_biblio.txt",       "prose"),
 ]
@@ -73,11 +83,21 @@ LABELS = {
     "dbl":   "二重語",
     "eng":   "英語への流入",
     "form":  "語形",
+    "first": "初出",
     "ex":    "用例",
+    "conf":  "確実度",
     "note":  "ノート",
+    "see":   "この語根から",
     "cf":    "参照",
 }
-ORDER = ["lit", "root", "chain", "desc", "form", "cog", "der", "dbl", "eng", "ex", "note", "cf"]
+ORDER = ["lit", "root", "chain", "first", "desc", "form", "cog", "der", "dbl",
+         "eng", "ex", "conf", "note", "see", "cf"]
+
+# 確実度ラベル → CSS クラス
+CONF_CLASS = {
+    "確実": "c-sure", "通説": "c-std", "一説": "c-one", "不確実": "c-vague",
+    "誤り": "c-false", "俗説": "c-false",
+}
 
 _id_counter = [0]
 def new_id(prefix="e"):
@@ -95,6 +115,28 @@ TOC = []        # (level, title, id)
 INDEX_EN = []   # (display, id)
 INDEX_ROOT = [] # (display, id)
 INDEX_AFF = []  # (display, id)
+INDEX_FIELD = []   # 分野別語彙
+INDEX_EPONYM = []  # 人名・地名由来語
+INDEXES = {"en": INDEX_EN, "root": INDEX_ROOT, "aff": INDEX_AFF,
+           "field": INDEX_FIELD, "eponym": INDEX_EPONYM}
+
+# 人名・地名に由来する見出し語。どのファイルにあっても人名・地名由来語索引に載せる。
+# （:: index の指定とは独立に、見出し語そのもので判定する）
+EPONYMS = set("""
+academy algorithm atlas attic boycott bungalow canary cashmere copper czar dollar
+dunce frank franchise gerrymander ghetto guy hooligan janitor jeans jockey jovial
+juggernaut jumbo laconic lumber lunatic lyceum magpie marathon martial mausoleum
+meander mesmerize nickel palace pamphlet pandemonium panic posh quixotic romance
+sandwich scot-free shrapnel silhouette siren slave stoic suede tabby tantalize
+tawdry turquoise tuxedo utopia vandal vaudeville volcano yankee zeppelin
+""".split())
+
+# 図版（figures.py があれば読み込む）
+try:
+    from figures import FIGURES
+except Exception:
+    FIGURES = {}
+FIG_SEEN = []   # (番号, 名前, キャプション, id)
 
 # ---------------------------------------------------------------- parser
 class Parser:
@@ -148,7 +190,15 @@ class Parser:
         if not self.in_entry:
             return
         buf = ['<div class="entry" id="%s">' % self.entry_head["id"]]
-        buf.append('<p class="hw">%s</p>' % self.entry_head["html"])
+        # 重要度 ★ は見出し行に出す（フィールドとしては出力しない）
+        head_html = self.entry_head["html"]
+        lvls = [v for (k, v) in self.entry_fields if k == "lvl"]
+        if lvls:
+            n = lvls[0].count("★") or len(lvls[0].strip()) or 1
+            n = max(1, min(3, n))
+            head_html += ' <span class="stars">%s</span>' % ("★" * n)
+        self.entry_fields = [(k, v) for (k, v) in self.entry_fields if k != "lvl"]
+        buf.append('<p class="hw">%s</p>' % head_html)
         for key in ORDER:
             vals = [v for (k, v) in self.entry_fields if k == key]
             if not vals:
@@ -159,6 +209,13 @@ class Parser:
                     buf.append('<p class="ebody">%s</p>' % v)
                 elif key == "chain":
                     buf.append('<p class="chain"><span class="lb">%s</span>%s</p>' % (label, v))
+                elif key == "conf":
+                    head = v.split("　")[0].split(" ")[0].strip("／/")
+                    cls = CONF_CLASS.get(head, "c-std")
+                    rest = v[len(head):].lstrip("　 ")
+                    buf.append('<p class="fld"><span class="lb">%s</span>'
+                               '<span class="conf %s">%s</span>%s</p>'
+                               % (label, cls, head, ("　" + rest) if rest else ""))
                 else:
                     buf.append('<p class="fld"><span class="lb">%s</span>%s</p>' % (label, v))
         # 未知キーも落とさない
@@ -216,6 +273,24 @@ class Parser:
                 self.out.append('<h%d id="%s" class="%s">%s</h%d>' % (lv, hid, cls, title, lv))
                 continue
 
+            # 図版　%fig 名前 ; キャプション
+            if s.startswith("%fig "):
+                self.flush_all()
+                body = s[5:].strip()
+                name, _, cap = body.partition(";")
+                name = name.strip(); cap = cap.strip()
+                svg = FIGURES.get(name)
+                if svg is None:
+                    sys.stderr.write("  [warn] 図版が見つかりません: %s\n" % name)
+                    continue
+                fid = new_id("f")
+                num = len(FIG_SEEN) + 1
+                FIG_SEEN.append((num, name, cap, fid))
+                self.out.append(
+                    '<figure id="%s">%s<figcaption>図 %d　%s</figcaption></figure>'
+                    % (fid, svg, num, cap))
+                continue
+
             # 語群見出し(アルファベット区切りなど)
             if s.startswith("=="):
                 self.flush_all()
@@ -238,12 +313,11 @@ class Parser:
                 self.in_entry = True
                 self.entry_fields = []
                 disp = re.sub(r"<[^>]+>", "", hw)
-                if self.index_target == "en":
-                    INDEX_EN.append((disp, eid))
-                elif self.index_target == "root":
-                    INDEX_ROOT.append((disp, eid))
-                elif self.index_target == "aff":
-                    INDEX_AFF.append((disp, eid))
+                bucket = INDEXES.get(self.index_target)
+                if bucket is not None:
+                    bucket.append((disp, eid))
+                if disp.strip().lower() in EPONYMS:
+                    INDEX_EPONYM.append((disp, eid))
                 continue
 
             # エントリーのフィールド
@@ -304,12 +378,20 @@ CSS = r"""
      font-family: "Liberation Serif", serif; font-size: 8.5pt; color: #444;
      vertical-align: top; padding-top: 3mm;
   }
-  @top-center {
+  @top-left {
      content: string(runhead);
      font-family: "Liberation Serif","DejaVu Serif","IPAGothic",serif;
-     font-size: 7.5pt; color: #777; letter-spacing: .04em;
+     font-size: 7.5pt; color: #7a7f86; letter-spacing: .04em;
      vertical-align: bottom; padding-bottom: 2.5mm;
-     border-bottom: .2pt solid #ccc; width: 100%;
+  }
+}
+/* 辞書パートだけ、右肩にそのページの見出し語範囲（柱）を出す */
+@page dict {
+  @top-right {
+     content: string(hw, first) "　—　" string(hw, last);
+     font-family: "Liberation Serif","DejaVu Serif","IPAGothic",serif;
+     font-size: 8pt; color: #24507a; font-weight: bold; letter-spacing: .02em;
+     vertical-align: bottom; padding-bottom: 2.5mm;
   }
 }
 @page cover { margin: 0; @bottom-center { content: none } @top-center { content: none } }
@@ -361,7 +443,22 @@ table.tbl td { border: .4pt solid #999; padding: 1.1mm 1.4mm; vertical-align: to
 p.hw { text-indent: 0; margin: 0 0 .5mm 0; line-height: 1.4; break-after: avoid; }
 p.fld b, p.chain b, p.ebody b { color: #24507a; font-weight: bold; }
 p.fld i, p.chain i { font-style: italic; }
-.hwword { font-size: 11.4pt; font-weight: bold; letter-spacing: .01em; }
+.hwword { font-size: 11.4pt; font-weight: bold; letter-spacing: .01em;
+          string-set: hw content(); }
+.sec.entry { page: dict; }
+.stars { font-size: 7.6pt; color: #c8952a; letter-spacing: .06em; vertical-align: .12em; }
+.conf { font-size: 7.4pt; padding: 0 .35em; border-radius: 1pt; color: #fff; }
+.c-sure  { background: #1E7A46; }
+.c-std   { background: #24507a; }
+.c-one   { background: #8a6d1f; }
+.c-vague { background: #7a7f86; }
+.c-false { background: #b3312c; }
+
+/* ---- 図版 ---- */
+figure { margin: 3.5mm 0 4mm; break-inside: avoid; text-align: center; }
+figure svg { max-width: 100%; height: auto; }
+figcaption { font-size: 7.8pt; color: #555; margin-top: 1.6mm; text-align: center;
+             line-height: 1.5; }
 .hwmeta { font-size: 8.6pt; color: #333; margin-left: .35em; }
 .hwmeta::before { content: "〔"; color:#888; }
 .hwmeta::after  { content: "〕"; color:#888; }
@@ -530,9 +627,11 @@ def group_index(items, title, prefix):
 def build_index():
     out = ['<section><h1 class="h1" id="idx-head">索引</h1>']
     TOC.append((1, "索引", "idx-head"))
-    out.append(group_index(INDEX_EN,   "英語見出し語索引", "w"))
-    out.append(group_index(INDEX_ROOT, "印欧語根・語幹索引", "r"))
-    out.append(group_index(INDEX_AFF,  "接辞索引", "a"))
+    out.append(group_index(INDEX_EN,     "英語見出し語索引", "w"))
+    out.append(group_index(INDEX_ROOT,   "印欧語根・語幹索引", "r"))
+    out.append(group_index(INDEX_AFF,    "接辞索引", "a"))
+    out.append(group_index(INDEX_FIELD,  "分野別語彙索引", "d"))
+    out.append(group_index(INDEX_EPONYM, "人名・地名由来語索引", "p"))
     out.append("</section>")
     return "\n".join(out)
 

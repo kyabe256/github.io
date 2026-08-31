@@ -13,30 +13,11 @@
 +der: xylem（木部）, xylitol（キシリトール。木から得られる糖アルコール）
 +note: 日本語「木琴」も同じ構成の翻訳借用。
 
-@ yankee ; /ˈjæŋki/ ; 名 ; ヤンキー
-+chain: 語源不確実。オランダ語 <i>Janke</i>「ヤンちゃん（Jan の縮小形）」説が有力
-+desc: ニューアムステルダム（現ニューヨーク）のオランダ人が、ニューイングランドの英国系入植者を呼んだあだ名とされる。<i>Yankee Doodle</i> は英国側の嘲弄歌が、独立戦争で当のアメリカ側に愛唱歌として奪い返されたもの。
-+note: 日本語の「ヤンキー（不良）」は英語の語義とは無関係な和製用法。
-
-@ yoga ; /ˈjəʊɡə/ ; 名 ; ヨーガ
-+lit: 「結合、くびき」
-+chain: サンスクリット語 <i>yoga-</i>（<i>yuj-</i>「結ぶ」）→ 英語（1820）
-+root: *yewg-「結ぶ」
-+der: yoke（本来語）, join, junction, conjugal, subjugate, jugular（ラテン系）, zygote（ギリシア系）
-+note: 「心身を結ぶ修行」の意。英語 <i>yoke</i>「くびき」と同根。
-
 @ zeal ; /ziːl/ ; 名 ; 熱意
 +chain: Gk <i>zêlos</i>「熱心、競争心、嫉妬」→ 後期ラテン語 <i>zēlus</i> → OF
 +dbl: <i>jealous</i>（同語源。仏語経由の摩耗形）
 +der: zealot（熱心党。1世紀ユダヤの反ローマ集団）, zealous, jealousy
 +note: <i>zeal</i>「熱意」と <i>jealousy</i>「嫉妬」が同語源であるのは、ギリシア語 <i>zêlos</i> が「熱烈な思い」の両面（憧れと妬み）を含んでいたため。
-
-@ zenith ; /ˈzenɪθ/ ; 名 ; 天頂
-+lit: 「（頭上の）道」
-+chain: アラビア語 <i>samt (ar-raʾs)</i>「（頭の）方向」→ 中世ラテン語での誤写 <i>senit</i> → <i>zenith</i>
-+desc: 写本の m が ni と誤読されたことによる、誤写が定着した稀な例。
-+der: azimuth（同じ <i>as-samt</i> から）, nadir（<i>naẓīr</i>「（天頂の）対応点」＝天底）
-+note: 中世の天文学がアラビア語からラテン語へ移された過程の痕跡。
 
 @ zero ; /ˈzɪərəʊ/ ; 名 ; 零
 +lit: 「空」
@@ -55,3 +36,102 @@
 +chain: 西アフリカのキコンゴ語 <i>nzambi</i>「神」／<i>zumbi</i>「呪物」→ ハイチ・クレオール語 → 英語（1819）
 +desc: ハイチのヴードゥー信仰における、呪術で蘇らされた死者。1929年のシーブルック『魔法の島』と1932年の映画で大衆化した。計算機科学の <i>zombie process</i>「ゾンビプロセス」もこの比喩。
 
+@ xenophobia ; /ˌzenəˈfəʊbiə/ ; 名 ; 外国人嫌悪
++chain: Gk <i>xénos</i>「よそ者、客」＋<i>phóbos</i>「恐怖」
++der: xenon（元素名「よそ者」）, xenophile, hospitality は別
++note: ギリシア語 <i>xénos</i> は「よそ者」と「客」の両義で、<i>xenía</i>「客人歓待」はギリシア倫理の中心概念だった。ラテン語 <i>hostis</i> も「敵」と「客」の両義（→ <i>host</i>／<i>hostile</i>）。
++see: host
++lvl: ★★
+
+@ yacht ; /jɒt/ ; 名 ; ヨット
++chain: 初期オランダ語 <i>jaghtschip</i>「追跡船」（<i>jagen</i>「狩る、追う」）
++desc: もと海賊追跡用の快速船。1660年、オランダがチャールズ2世に贈った船から英国に遊興用の意味で広まった。
++note: 綴りの <i>ch</i> はオランダ語の /x/ の名残で、英語では発音されない。
++see: 第VIII部 オランダ語
+
+@ yankee ; /ˈjæŋki/ ; 名 ; ヤンキー
++conf: 一説　蘭 <i>Janke</i>（<i>Jan</i>「ヤン」の愛称）が、ニューアムステルダムのオランダ人が英国系入植者を呼んだ蔑称になったとする説が有力。
++note: 独立戦争期に英軍が米兵を嘲る歌 <i>Yankee Doodle</i> で使い、米側がそれを誇りとして受け入れた（蔑称の再領有）。同型に <i>Quaker</i>, <i>Methodist</i>, <i>Gothic</i>, <i>impressionism</i>。
+
+@ yard ; /jɑːd/ ; 名 ; 庭／ヤード（長さ）
++chain: (1) OE <i>ġeard</i>「囲い」／(2) OE <i>ġierd</i>「棒、杖」
++root: (1) *gher-「囲む」
++der: (1) garden, orchard, girdle, court, choir は別, kindergarten, horticulture（L <i>hortus</i>）, gird／(2) yardstick
++note: 同綴異源。長さの <i>yard</i>「棒」がヘンリー1世の腕の長さに由来するという話は伝承。
+
+@ year ; /jɪə/ ; 名 ; 年
++chain: OE <i>ġēar</i>
++root: *yeh₁r-「年、季節」
++cog: 独 <i>Jahr</i>, Gk <i>hṓrā</i>「季節、時刻」, Av <i>yārə</i>
++der: hour, horoscope（Gk <i>hṓrā</i>）, yearly
++note: 英語 <i>year</i> とギリシア語由来の <i>hour</i> が同根。ギリシア語で「季節」が「時刻」に縮小した。
++lvl: ★★
+
+@ yellow ; /ˈjeləʊ/ ; 形 ; 黄色い
++chain: OE <i>ġeolu</i>
++root: *ǵʰelh₃-「輝く、緑黄色」
++cog: L <i>fel</i>「胆汁」, Gk <i>khlōrós</i>「淡緑」, 露 <i>жёлтый</i>
++der: gold, gall（胆汁）, gleam, glow, glass, glad／chlorine, chlorophyll, cholera（Gk <i>kholḗ</i>「胆汁」）, melancholy
++note: <i>gold</i>, <i>yellow</i>, <i>gall</i>, <i>chlorine</i>, <i>melancholy</i> がすべて同根。印欧語で色語彙が「輝き」から派生する典型。
++see: melancholy, humors（図）
++lvl: ★★
+
+@ yoga ; /ˈjəʊɡə/ ; 名 ; ヨーガ
++lit: 「（心身を）つなぐこと」
++chain: サンスクリット <i>yoga</i>「結合」← <i>yuj-</i>「つなぐ」
++root: *yewg-「つなぐ」
++cog: L <i>iugum</i>「くびき」, Gk <i>zygón</i>, OE <i>ġeoc</i> → yoke
++der: yoke, join, joint, junction, conjugal, subjugate, jugular, adjust, zeugma, syzygy
++see: jugular
++lvl: ★★
+
+@ zenith ; /ˈzenɪθ/ ; 名 ; 天頂
++chain: アラビア語 <i>samt (ar-raʾs)</i>「（頭の）方向」→ 中世ラテン語 <i>senit</i>（写本の <i>m</i> を <i>ni</i> と読み違えた誤写）
++dbl: azimuth
++note: 誤写がそのまま定着した語。同じ <i>samt</i> から正しく写された形が <i>azimuth</i>（<i>as-sumūt</i>）。<i>nadir</i>「天底」（<i>naẓīr</i>「対応するもの」）と対をなす。
++see: 第VIII部 アラビア語, 第X部
+
+@ zest ; /zest/ ; 名 ; 熱意、（柑橘の）皮
++chain: 仏 <i>zeste</i>「柑橘の外皮」（語源不確実）
++conf: 不確実
++note: 料理に風味を添える皮→「味わい」→「熱意」。
+
+@ zone ; /zəʊn/ ; 名 ; 地帯
++lit: 「帯」
++chain: Gk <i>zṓnē</i>「帯、腰帯」→ L <i>zōna</i>
++desc: 古代地理学が地球を五つの気候帯（<i>zōnai</i>）に分けたことから。ギリシア語では女性の腰帯を指す日常語だった。
++lvl: ★★
+
+@ zeppelin ; /ˈzepəlɪn/ ; 名 ; ツェッペリン飛行船
++chain: Ferdinand von Zeppelin 伯爵（1838–1917）
++see: 人名由来語索引
+
+@ zigzag ; /ˈzɪɡzæɡ/ ; 名 ; ジグザグ
++chain: 独 <i>Zickzack</i>（<i>Zacke</i>「歯、突起」の反復）
++note: 母音交替による反復複合（ablaut reduplication）。英語では <i>tick-tock, flip-flop, ping-pong, criss-cross, dilly-dally, riff-raff</i> と生産的で、必ず i → a/o の順になる。
++see: 第6章
+
+@ zinc ; /zɪŋk/ ; 名 ; 亜鉛
++chain: 独 <i>Zink</i>（<i>Zinke</i>「尖り、歯」。溶炉に生じる尖った形から。パラケルスス、16世紀）
++see: nickel, cobalt
+
+@ yield ; /jiːld/ ; 動 ; 産出する、屈する
++chain: OE <i>ġieldan</i>「支払う、報いる」
++cog: 独 <i>gelten</i>「価値がある」, <i>Geld</i>「金銭」
++der: guild（「拠出金を出し合う組合」）, yield
++note: 「支払う」→「（利益を）生む」と「（要求に）応じる」の二方向に分かれた。<i>guild</i>「同業組合」と同根。
++lvl: ★★
+
+@ yeoman ; /ˈjəʊmən/ ; 名 ; 自作農、（英王室の）近衛兵
++conf: 一説　<i>young man</i> の縮約説と、OE <i>ġēa</i>「地区」＋<i>man</i> 説がある。
++note: <i>yeoman's service</i>「立派な働き」（『ハムレット』）。
+
+@ yodel ; /ˈjəʊdl/ ; 動 ; ヨーデルを歌う
++chain: 独（バイエルン方言）<i>jodeln</i>（囃子 <i>jo</i> の反復）
++note: 擬音由来。
+
+@ yoke ; /jəʊk/ ; 名 ; くびき
++chain: OE <i>ġeoc</i>
++root: *yewg-
++see: yoga, jugular
++note: 印欧祖語からほぼすべての語派に残る、農耕技術語の最古層。

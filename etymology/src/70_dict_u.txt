@@ -40,8 +40,73 @@
 +desc: 「ハリネズミ」→（比喩で）「（髪の逆立った）小僧」。<i>sea urchin</i>「ウニ」に原義が残る。
 +der: hedgehog（本来語の別表現）, echinoderm（ギ <i>ekhînos</i>「ハリネズミ、ウニ」）
 
-@ utensil ; /juːˈtensl/ ; 名 ; 器具
-+lit: 「使えるもの」
-+chain: L <i>ūtī</i>「使う」→ <i>ūtēnsilia</i>「必需品」
-+der: use, useful, utility, utilize, usual, abuse, usury（「使用料」）, utensil
+@ understand ; /ˌʌndəˈstænd/ ; 動 ; 理解する
++chain: OE <i>understandan</i>
++conf: 一説　<i>under</i> は「下に」ではなく古義の「間に」（L <i>inter</i> と同根の *n̥ter-）とする説が有力。「物事の間に立つ」＝内側から把握する。
++note: 独 <i>verstehen</i>、L <i>comprehendere</i>「掴み込む」、Gk <i>syn-hienai</i>「送り合わせる」と、理解の比喩は言語ごとに異なる。
++see: 第8章
++lvl: ★★★
 
+@ undermine ; /ˌʌndəˈmaɪn/ ; 動 ; 弱体化させる
++lit: 「（城壁の）下に坑道を掘る」
++chain: <i>under</i>＋<i>mine</i>「坑道を掘る」
++note: 攻城戦の技術用語。城壁の下を掘って支柱を焼き崩落させた。<i>mine</i>「地雷」もこの坑道戦から。
++lvl: ★★
+
+@ union ; /ˈjuːniən/ ; 名 ; 結合、組合
++chain: L <i>ūnus</i>「一」→ 後期ラテン語 <i>ūniō</i>
++root: *óynos「一」
++cog: OE <i>ān</i> → one, a/an, Gk <i>oínē</i>「（賽の）一の目」
++der: one, once, only, alone, atone（<i>at one</i>「一つになる」＝贖罪する）, none, unit, unite, universe, unique, onion（L <i>ūniō</i>「大きな真珠、玉ねぎ」）
++note: <i>onion</i> と <i>union</i> は同一語。層が一つに合わさった球根の形から。<i>atone</i> は英語内部で作られた語で、<i>at one</i> の綴りが融合した。
++see: *óynos
++lvl: ★★★
+
+@ universe ; /ˈjuːnɪvɜːs/ ; 名 ; 宇宙
++lit: 「一つに向けられたもの」
++chain: L <i>ūnus</i>「一」＋<i>vertere</i>「向ける」→ <i>ūniversum</i>
++der: version, convert, divert, invert, pervert, reverse, adverse, controversy, vertebra, versatile, worth（ゲルマン系同根）
++note: <i>-verse</i> をもつ語群は英語で最大級。<i>vertebra</i>「椎骨」は「回るもの」＝関節。
++see: *wert-
++lvl: ★★★
+
+@ urban ; /ˈɜːbən/ ; 形 ; 都市の
++chain: L <i>urbs</i>「都市」→ <i>urbānus</i>
++dbl: urbane
++note: <i>urban</i>（地理的）と <i>urbane</i>（「都会的に洗練された」）が同一語から価値を分けた。<i>rural</i>／<i>rustic</i>、<i>human</i>／<i>humane</i> と同型のペア。
++see: rural
++lvl: ★★
+
+@ urge ; /ɜːdʒ/ ; 動 ; 促す
++chain: L <i>urgēre</i>「押す」
++der: urgent, urgency
++lvl: ★★
+
+@ usher ; /ˈʌʃə/ ; 名 ; 案内係
++lit: 「扉番」
++chain: L <i>ōstium</i>「入口」→ <i>ōstiārius</i> → OF <i>uissier</i>
++der: oral, oscillate（<i>ōs</i>「口」）
++note: <i>ōstium</i> は <i>ōs</i>「口」から。建物の「口」＝入口。
+
+@ utensil ; /juːˈtensl/ ; 名 ; 器具
++chain: L <i>ūtī</i>「使う」→ <i>ūtēnsilia</i>「使えるもの」
++der: use, utility, usual, abuse, utilize, usury（「使用料」＝利息）
++note: <i>usury</i>「高利貸し」はもと中立の「利息」。中世教会が利息を禁じたため悪義に固定した。
+
+@ uncanny ; /ʌnˈkæni/ ; 形 ; 不気味な
++chain: スコットランド語 <i>canny</i>「賢い、（魔術に）通じた」＋<i>un-</i>
++note: フロイトの <i>das Unheimliche</i>（1919）の英訳語に採用され、精神分析・美学の術語になった。
+
+@ upholster ; /ʌpˈhəʊlstə/ ; 動 ; 椅子張りをする
++chain: <i>uphold</i>「支える、（商品を）保持する」→ <i>upholder</i>「古物商」→ <i>upholsterer</i> → 逆成 <i>upholster</i>
++see: 逆成（第6章）
+
+@ utter ; /ˈʌtə/ ; 動形 ; 発する／まったくの
++chain: OE <i>ūt</i>「外へ」の比較級 <i>ūtera</i>「より外の」
++der: out, outer, utmost, utterance, about
++note: 動詞は「（言葉を）外に出す」、形容詞は「外側の＝極端な」→「まったくの」。<i>outer</i> と <i>utter</i> は同一語。
+
+@ unkempt ; /ʌnˈkempt/ ; 形 ; ぼさぼさの
++chain: <i>un-</i>＋ME <i>kempt</i>「櫛で梳かれた」（OE <i>cemban</i>、<i>comb</i> と同根）
++see: overwhelm
++note: 肯定形 <i>kempt</i> はほぼ廃語。<i>disgruntled/gruntled</i>, <i>ruthless/ruth</i>, <i>reckless/reck</i>, <i>feckless/feck</i> と同型。

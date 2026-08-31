@@ -775,3 +775,570 @@
 +der: vulgar, vulgarity, divulge（「民衆に広める」＝漏らす）, Vulgate（ラテン語訳聖書＝「民衆の（版）」）
 +note: <i>vulgar</i> は「民衆の」→「下品な」（悪化、第7章）。
 
+
+== 補遺 A – F
+
+@ acu- / acut- ; L <i>acuere, acūtus</i>「尖らせる」
++root: *h₂eḱ-「鋭い」
++der: acute, acuity, acumen, acupuncture, aglet, ague, cute（<i>acute</i> の頭音消失形）
++note: <i>cute</i>「かわいい」は <i>acute</i>「鋭い、抜け目ない」の語頭が落ちた形で、18世紀には「利口な」の意だった。
+
+@ aed- / edif- ; L <i>aedēs</i>「建物」, <i>aedificāre</i>「建てる」
++der: edifice, edify（「（精神を）建て上げる」＝啓発する）, edification
++note: <i>edify</i>「教化する」は建築の比喩。
+
+@ aequ- ; → equ- を見よ
++cf: → <b>equ-</b>（等しい）。equal, adequate, iniquity。
+
+@ al- / alter- ; L <i>alius, alter</i>「他の」
++root: *h₂el-
++der: alias, alibi, alien, alter, alternate, alternative, altercation, altruism, adulterate, adultery, subaltern
++note: <i>adultery</i>「姦通」は「他者を混ぜる」（<i>ad-</i>+<i>alter</i>）。<i>adult</i>「成人」（<i>alere</i>「育つ」）とは別語源。
+
+@ ampl- ; L <i>amplus</i>「広い、豊かな」
++der: ample, amplify, amplitude, amplifier
++note: 語源は不確実。
+
+@ anim- / ann- ; → 前掲
++cf: → <b>anim-</b>（心・息）、<b>ann-</b>（年）。
+
+@ apt- / ept- ; L <i>aptus</i>「適した」（<i>apere</i>「結びつける」）
++root: *h₂ep-「つかむ」
++der: apt, aptitude, adapt, adept（「達した」）, inept（「適さない」）, attitude（伊 <i>attitudine</i> 経由の二重語）
++note: <i>attitude</i>「態度」と <i>aptitude</i>「適性」は同語源の二重語。前者はイタリア語経由。
+
+@ arbitr- ; L <i>arbiter</i>「立会人、裁定者」
++der: arbiter, arbitrary（「裁定者の一存による」）, arbitrate, arbitration, arbitrage
++note: <i>arbitrary</i>「恣意的な」は「裁定者の気分次第」から。
+
+@ ard- ; L <i>ārdēre</i>「燃える」
++der: ardent, ardor, arson（「放火」）
++note: <i>arson</i>「放火」は古フランス法用語。
+
+@ art- / articul- ; → 前掲
++cf: → <b>art-</b>（技）。article は「小さな関節」。
+
+@ aur- ; L <i>aurum</i>「金」
++root: *h₂ews-「輝く」
++der: auric, auriferous, aureole, oriole, aureate, dorado は西語
++note: 元素記号 Au はこの語。<i>aurora</i>「暁」とも同根。
+
+@ bat- / batt- ; L <i>battuere</i>「打つ」
++der: battle, batter, battery, combat, debate（「打ち合う」）, abate（「打ち下げる」）, rebate, batten
++note: <i>debate</i>「討論」の原義は「打ち合い」。<i>battery</i>「電池」は「（板を）打ち並べたもの」から。
+
+@ bib- ; L <i>bibere</i>「飲む」
++root: *peh₃-
++der: imbibe, bibulous, beverage（<i>biberāticum</i>）, bib（よだれかけ）
++note: <i>beverage</i>「飲料」と <i>bib</i> が同根。
+
+@ calc- ; L <i>calx, calcis</i>「石灰石、小石」
++der: calculate, calculus, calcium, calcify, chalk（本来語化した借用）, causeway, recalcitrant（「かかとで蹴る」は別の <i>calx</i>）
++note: <i>calx</i> には「石灰」と「かかと」の二語があり、<i>recalcitrant</i> は後者。
+
+@ camp- ; L <i>campus</i>「平地、野」
++der: camp, campus, campaign（「野戦」）, champion（「野の（戦士）」）, encamp, decamp, champagne（地名「野原」）
++note: <i>champion</i>「王者」の原義は「戦場に出る者」。<i>champagne</i>「シャンパン」も「野」から。
+
+@ cand- / cens- ; → 前掲
++cf: → <b>cand-</b>（白く輝く）。candle, candid, candidate。
+
+@ cap- / capit- ; → 前掲
++cf: → <b>cap-</b>（取る）、<b>capit-</b>（頭）。
+
+@ car- / carit- ; L <i>cārus</i>「愛しい」
++der: charity（<i>cāritās</i>）, caress, cherish（仏 <i>chérir</i>）, charitable
++note: <i>charity</i>「慈愛」はギリシア語 <i>agápē</i> の訳語として選ばれた。<i>charisma</i>（Gk）とは別語源。
+
+@ cel- / celer- ; → 前掲
++cf: → <b>celer-</b>（速い）。accelerate。
+
+@ cens- ; L <i>cēnsēre</i>「評価する、意見を述べる」
++der: census, censor, censure, censorious, recension
++note: ローマの <i>cēnsor</i>「監察官」は市民の財産評価と風紀取締を担った。
+
+@ centr- ; L <i>centrum</i> ＜ Gk <i>kéntron</i>「（円の）中心、刺し針」
++der: center, central, centrifugal（「中心から逃げる」）, centripetal（「中心を求める」）, concentrate, eccentric（「中心を外れた」）, egocentric
++note: 原義は「コンパスの針の刺さる点」。
+
+@ cert- ; L <i>certus</i>「確かな」（<i>cernere</i>「ふるい分ける」の分詞）
++der: certain, certainty, certify, certificate, ascertain, concert(?), disconcert
++note: 「ふるい分けられた」＝「はっきりした」から「確かな」へ。
+
+@ ci- / cit- ; L <i>ciēre, citum</i>「動かす、呼ぶ」
++der: cite, citation, excite, incite, recite, resuscitate, solicit（「すっかり掻き立てる」）
++note: <i>cite</i>「引用する」の原義は「呼び出す」。法廷への召喚から。
+
+@ civ- ; → 前掲
++cf: → <b>*ḱei-</b>（横たわる・住む）。city, civil, civilization。
+
+@ cli- / clin- ; L <i>clīnāre</i>「傾ける」
++root: *ḱley-「傾く」
++der: incline, decline, recline, declination, climate（Gk <i>klíma</i>「（地の）傾き」）, climax（Gk「梯子」）, clinic（Gk <i>klínē</i>「寝台」）, proclivity
++note: <i>climate</i>「気候」の原義は「地表の傾き（緯度）」。<i>clinic</i>「診療所」は「寝台のある所」。
+
+@ colo- / cult- ; → 前掲
++cf: → <b>*kʷel-</b>（回る・耕す）。culture, colony, cult。
+
+@ commun- ; → 前掲
++cf: → <b>*mei-</b>（交換する）。common, community, immune。
+
+@ cor- / cord- ; → 前掲
++cf: → <b>cor-</b>（心臓）。cordial, record, courage。
+
+@ corn- ; L <i>cornū</i>「角」
++root: *ḱer-
++der: cornea, corner, cornet, cornucopia, unicorn, Capricorn, cornu, hornet は本来語
++note: <i>corner</i>「角（かど）」は「角（つの）状の出っ張り」から。
+
+@ crim- ; L <i>crīmen</i>「告発、罪」（<i>cernere</i>「分ける」）
++der: crime, criminal, incriminate, recrimination, discriminate
++note: 原義は「裁きのために（善悪を）分けること」。
+
+@ crux / cruc- ; L <i>crux, crucis</i>「十字架」
++der: cross, crucial（「十字路の＝決定的な」）, crucify, crucifix, crusade, excruciate（「十字架にかける」＝苦しめる）, cruise（オランダ語経由）, crux
++note: <i>crucial</i>「決定的な」はベーコンの <i>instantia crucis</i>「十字路の実例」から。
+
+@ culp- ; L <i>culpa</i>「罪、過失」
++der: culprit, culpable, exculpate, inculpate, mea culpa
++note: <i>mea culpa</i>「私の過ちです」はミサの祈祷文から。
+
+@ cumb- / cub- ; L <i>cubāre</i>「横たわる」, <i>-cumbere</i>
++der: incumbent（「（職に）横たわる者」＝現職の）, succumb（「下に倒れる」）, recumbent, concubine, incubate（「上に横たわる」＝抱卵する）, incubus, succubus
++note: <i>incubate</i>「孵化させる」は「卵の上に横たわる」。
+
+@ dei- / div- ; → 前掲
++cf: → <b>*dei-</b>（輝く・神）。deity, divine, journal。
+
+@ dens- ; L <i>dēnsus</i>「密な」
++der: dense, density, condense, condensation
++note: 語源は不確実。
+
+@ dign- ; → 前掲
++cf: → <b>*deḱ-</b>（受け入れる）。dignity, dainty, disdain。
+
+@ dol- ; L <i>dolēre</i>「痛む」
++der: dolorous, doleful, condole, condolence, indolent（「痛みを感じない」＝物憂い）
++note: <i>indolent</i>「怠惰な」の原義は「無痛の」。医学用語では今も「無痛性の」。
+
+@ dom- ; → 前掲
++cf: → <b>domin-</b>（主人）、<b>dom-</b>（馴らす）。
+
+@ don- / dot- ; L <i>dōs, dōtis</i>「持参金」
++root: *deh₃-「与える」
++der: dowry, dower, endow, dotation, anecdote は ギ
++note: <i>endow</i>「（基金を）寄付する」は「持参金を付ける」。
+
+@ du- / dubi- ; L <i>duo</i>「二」, <i>dubius</i>「二つの間の」
++der: dual, duel, duo, duet, duplex, duplicate, double, doubt, dubious, indubitable, deuce
++note: <i>doubt</i>「疑い」は「二つの間で揺れる」。
+
+@ err- ; → 前掲
++cf: → <b>err-</b>（さまよう）。error, erratic, aberrant。
+
+@ fall- / fals- ; L <i>fallere, falsum</i>「欺く、裏切る」
++root: *bʰel-「裂ける」(?)
++der: false, falsify, fallacy, fallible, infallible, fault（仏経由）, default, fail, failure, faucet(?)
++note: <i>fault</i>「欠点」と <i>fail</i>「失敗する」は同語源。地質学の「断層」も <i>fault</i>。
+
+@ fam- ; L <i>fāma</i>「評判」, <i>famēs</i>「飢え」（別語）
++der: fame, famous, infamous, defame, defamation／famine, famish（<i>famēs</i> 系）
++note: <i>fame</i>「名声」は *bʰeh₂-「話す」から。<i>famine</i>「飢饉」は別語源の同綴類似語。
+
+@ fend- / fens- ; L <i>-fendere</i>「打つ」
++der: defend, defense, offend, offense, fence（<i>defence</i> の頭音消失形）, fender, defendant
++note: <i>fence</i>「垣根」は <i>defence</i>「防御」の語頭が落ちた形。
+
+@ fer- / fest- ; L <i>fēriae</i>「祭日」, <i>fēstus</i>「祝いの」
++der: feast, festival, festive, festoon, fair（市）, fiesta
++note: <i>fair</i>「市（いち）」は祭日に立つ市から。<i>fair</i>「公正な」（本来語）とは別語源。
+
+@ fig- / fix- ; L <i>fīgere, fīxum</i>「留める、刺す」
++der: fix, fixture, affix, prefix, suffix, infix, transfix, crucifix, fibula(?)
++note: 接辞を表す <i>-fix</i> 系の語はすべてここから。
+
+@ fil- ; L <i>fīlum</i>「糸」
++der: file（書類綴り＝紐で綴じた）, filament, filigree, profile（「輪郭線を引く」）, defile（「一列縦隊で進む」）, fillet
++note: <i>file</i>「ファイル」の原義は「（書類を刺し通す）糸」。計算機の <i>file</i> もここから。
+
+@ fisc- ; L <i>fiscus</i>「かご、国庫」
++der: fiscal, confiscate（「国庫に収める」）
++note: 原義は「銭を入れる編みかご」。
+
+@ flig- / flict- ; L <i>flīgere, flīctum</i>「打つ」
++der: afflict, affliction, conflict, inflict, profligate（「打ち倒された」＝放蕩の）
++note: <i>conflict</i>「衝突」は「共に打ち合う」。
+
+@ flor- ; → 前掲
++cf: → <b>*bʰel-</b>（膨らむ）。flower, flour, flourish。
+
+@ for- / fort- ; → 前掲
++cf: → <b>fort-</b>（強い）。fort, comfort, effort。
+
+@ frig- ; L <i>frīgus</i>「寒さ」
++der: frigid, refrigerate, refrigerator, frigidity
++note: ギリシア語 <i>rhîgos</i> と同根とされる。
+
+@ fug- ; L <i>fugere</i>「逃げる」
++root: *bʰewg-「逃げる」
++der: fugitive, refuge, refugee, subterfuge, centrifugal, fugue（「逃走曲」）
++note: 音楽の <i>fugue</i>「フーガ」は主題が「追いかけ逃げる」形式から。
+
+== 補遺 G – P
+
+@ grad- / gress- ; → 前掲
++cf: → <b>grad-</b>（歩む）。grade, progress, aggression。
+
+@ gust- ; → 前掲
++cf: → <b>*ǵews-</b>（味わう）。gusto, disgust, choose。
+
+@ hab- / hibit- ; → 前掲
++cf: → <b>habit-</b>（持つ）。habit, prohibit, debt。
+
+@ hor- ; L <i>hōra</i> ＜ Gk <i>hṓrā</i>「時、季節」
++der: hour, horoscope（「時を見る」）, horologe, horary
++note: <i>hour</i> の h は発音しない（フランス語経由のため）。
+
+@ host- / hosp- ; → 前掲
++cf: → <b>*gʰostis</b>（よそ者）。guest, host, hospital, hotel。
+
+@ hum- ; → 前掲
++cf: → <b>*dʰǵʰem-</b>（地）。human, humble, exhume。
+
+@ imag- ; L <i>imāgō, imāginis</i>「像」
++der: image, imagine, imagination, imaginary, imitate(?)
++note: <i>imitate</i>「まねる」との関連が古くから説かれる。
+
+@ insul- ; L <i>īnsula</i>「島」
++der: insular, insulate, insulin, peninsula（「ほとんど島」）, isle, island（s は誤挿入）, isolate（伊経由）
++note: <i>island</i> の s は語源的に誤り（第4章）。<i>isolate</i> と <i>insulate</i> は二重語。
+
+@ integ- ; → 前掲
++cf: → <b>tang-</b>（触れる）。integer, integrity, entire。
+
+@ ira- ; L <i>īra</i>「怒り」
++der: ire, irate, irascible, irritate(?)
++note: <i>irritate</i> との語源的関係は不確実。
+
+@ jung- / junct- ; → 前掲
++cf: → <b>*yewg-</b>（結ぶ）。join, junction, yoke, yoga。
+
+@ juven- ; L <i>iuvenis</i>「若い」
++root: *h₂yuh₁en-
++der: juvenile, junior, rejuvenate, young（本来語の同根語）
++note: <i>junior</i> は <i>iuvenis</i> の比較級。本来語 <i>young</i> と同根。
+
+@ lab- / laps- ; L <i>lābī, lāpsus</i>「滑る、落ちる」
++der: lapse, collapse, elapse, relapse, prolapse, labile, avalanche は別
++note: <i>lapse</i>「経過、失効」の原義は「滑り落ちること」。
+
+@ labor- ; L <i>labor</i>「労働、苦しみ」
++der: labor, laborious, laboratory, elaborate, collaborate, belabor
++note: <i>laboratory</i>「実験室」は「労働の場」。
+
+@ lat- ; → 前掲
++cf: → <b>fer- / lat-</b>（運ぶ）。relate, translate, oblate。
+
+@ laud- ; L <i>laus, laudis</i>「賞賛」
++der: laud, laudable, laudatory, applaud, plaudit, allow(?)
++note: <i>applaud</i>「拍手する」は <i>plaudere</i>「手を打つ」で別語根とする説もある。
+
+@ lav- / lut- ; L <i>lavāre</i>「洗う」, <i>-luere</i>
++root: *lewh₃-「洗う」
++der: lavatory, lavish, launder, laundry, lotion, ablution, dilute, deluge, latrine（<i>lavātrīna</i>）, alluvial, antediluvian
++note: <i>lavish</i>「豪勢な」は「（雨が）どっと降る」から。<i>latrine</i> と <i>lavatory</i> は同語源。
+
+@ leg- / legat- ; L <i>lēgāre</i>「委任する、遺贈する」（<i>lēx</i>「法」）
++der: legate, legacy, delegate, relegate, colleague, college, allege
++note: <i>legacy</i>「遺産」は「法によって託されたもの」。
+
+@ lev- ; → 前掲
++cf: → <b>lev-</b>（軽い・上げる）。elevate, relieve, carnival。
+
+@ liber- / libr- ; L <i>līber</i>「本」（もと「樹皮」）／<i>lībra</i>「秤」
++der: library, libretto（「小さな本」）／libra, level, deliberate（「よく秤にかける」）, equilibrium
++note: 通貨記号 £ は <i>lībra</i>「ポンド」の L。イタリアの <i>lira</i> も同語。
+
+@ lig- / lect- ; → 前掲
++cf: → <b>leg- / lect-</b>（集める・読む）。collect, intelligent, lecture。
+
+@ limin- ; L <i>līmen, līminis</i>「敷居」
++der: eliminate（「敷居の外へ出す」）, preliminary（「敷居の前の」）, subliminal（「閾下の」）, liminal
++note: 心理学の「閾（しきい）値」も同語。
+
+@ liter- ; L <i>littera</i>「文字」
++der: letter, literal, literature, literacy, illiterate, obliterate（「文字を消す」）, alliteration, transliterate
++note: <i>obliterate</i>「抹消する」は「書かれた文字をこすり消す」。
+
+@ magistr- ; → 前掲
++cf: → <b>magn-</b>（大きい）。master, mister, magistrate。
+
+@ mal- ; → 前掲
++cf: → <b>mal-</b>（悪い）。malice, malaria, dismal。
+
+@ memor- ; → 前掲
++cf: → <b>*(s)mer-</b>（思い出す）。memory, mourn, commemorate。
+
+@ merc- ; L <i>merx, mercis</i>「商品」
++der: merchant, merchandise, commerce, mercenary, market, mart, Mercury, mercy（「（神の）報い」）
++note: 商業の神メルクリウスと <i>mercy</i>「慈悲」が同語源であるのは、「代価・報い」という中間の意味を経たため。
+
+@ migr- ; L <i>migrāre</i>「移る」
++der: migrate, migration, emigrate, immigrate, transmigration, migrant
++note: <i>emigrate</i>（出て行く）と <i>immigrate</i>（入って来る）は視点の違い。
+
+@ min- ; L <i>minor, minus</i>「より小さい」
++der: minor, minus, minute, minimum, diminish, minister（「より小なる者＝奉仕者」）, administer, mince, minuscule
++note: <i>minister</i>「大臣」と <i>master</i>「主人」は「小」と「大」の対（第III部 magn- の項）。
+
+@ mir- ; L <i>mīrārī</i>「驚く」, <i>mīrus</i>「不思議な」
++der: miracle, mirage, mirror（「驚いて見るもの」）, admire, marvel（<i>mīrābilia</i>）
++note: <i>mirror</i>「鏡」と <i>miracle</i>「奇跡」が同語源。
+
+@ misc- / mixt- ; L <i>miscēre, mixtum</i>「混ぜる」
++root: *meyḱ-
++der: mix, mixture, miscellaneous, promiscuous, meddle, medley, mestizo（西）
++note: <i>promiscuous</i>「無差別の」は「前後の見境なく混ぜる」。
+
+@ mon- / monstr- ; → 前掲
++cf: → <b>mon-</b>（警告する）。monitor, monster, demonstrate。
+
+@ mun- ; → 前掲
++cf: → <b>*mei-</b>（交換）。common, immune, municipal。
+
+@ nav- ; → 前掲
++cf: → <b>*neh₂u-</b>（船）。navy, nausea, astronaut。
+
+@ nect- / nex- ; L <i>nectere, nexum</i>「結ぶ」
++der: connect, connection, annex, nexus, connexion
++note: <i>nexus</i>「結びつき」はラテン語そのまま。
+
+@ noc- / nox- ; → 前掲
++cf: → <b>*neḱ-</b>（害・死）。innocent, noxious, necropolis。
+
+@ nom- / nomin- ; → 前掲
++cf: → <b>*h₃nomn̥</b>（名）。nominate, noun, synonym。
+
+@ not- ; → 前掲
++cf: → <b>*ǵneh₃-</b>（知る）。notice, notion, notorious, know。
+
+@ nutri- ; L <i>nūtrīre</i>「養う」
++der: nutrition, nutrient, nurture, nurse, nourish, nutritious
++note: <i>nurse</i>「看護師」の原義は「乳母」。
+
+@ opt- ; L <i>optāre</i>「選ぶ、望む」
++der: option, optional, adopt, adoption, opt, co-opt, optimum は別
++note: <i>adopt</i>「養子にする」は「選び取る」。
+
+@ ori- ; → 前掲
++cf: → <b>*h₁er-</b>（動く・昇る）。origin, orient, abort。
+
+@ pac- / pact- ; L <i>pāx, pācis</i>「平和」, <i>pacīscī</i>「協定する」
++root: *peh₂ǵ-「固定する」
++der: peace, pacify, pacific, appease, pact, compact, propagate(?), pale（杭）, palisade, travel(?)
++note: 「平和」の原義は「（争いを）固定して止めること」＝協定。<i>pact</i>「協定」と同根。
+
+@ pan- ; → 前掲
++cf: → <b>*peh₂-</b>（守る・養う）。pastor, company, food。
+
+@ par- / part- ; → 前掲
++cf: → <b>part-</b>（部分）、<b>par-</b>（等しい／用意する）。
+
+@ pen- / puni- ; L <i>poena</i> ＜ Gk <i>poinḗ</i>「罰、賠償」
++der: penal, penalty, punish, punitive, impunity, penitent, repent, pain, subpoena（「罰のもとに」）
++note: <i>pain</i>「痛み」の原義は「罰」。<i>subpoena</i>「召喚状」は書き出しの句から。
+
+@ pet- / petit- ; → 前掲
++cf: → <b>pet-</b>（求める）。petition, appetite, compete。
+
+@ plaud- / plos- ; L <i>plaudere, plausum</i>「手を打つ」
++der: applaud, applause, plaudit, explode（「（拍手で）追い出す」）, explosion, implode, plausible（「拍手に値する」）
++note: <i>explode</i>「爆発する」の原義はローマ劇場で下手な役者を野次り倒すこと（第VI部）。
+
+@ plen- / plet- ; → 前掲
++cf: → <b>*pleh₁-</b>（満たす）。plenty, complete, full。
+
+@ pond- / pens- ; → 前掲
++cf: → <b>pend-</b>（吊るす・量る）。pension, pensive, spend。
+
+@ popul- ; L <i>populus</i>「人民」
++der: people, popular, population, public（<i>pūblicus</i>）, republic, publish, pub
++note: <i>pub</i> は <i>public house</i> の略。<i>people</i> は仏語経由。
+
+@ port- / portat- ; → 前掲
++cf: → <b>port-</b>（運ぶ・門）。transport, opportunity, sport。
+
+@ pot- ; → 前掲
++cf: → <b>poti-</b>（力ある者）。potent, possible, despot。
+
+@ prec- ; → 前掲
++cf: → <b>*preḱ-</b>（問う・祈る）。pray, precarious, deprecate。
+
+@ prehend- ; → 前掲
++cf: → <b>prehend-</b>（つかむ）。comprehend, prison, surprise。
+
+@ prim- / princ- ; → 前掲
++cf: → <b>prim-</b>（第一の）。prime, prince, principle。
+
+@ priv- ; L <i>prīvus</i>「個々の、自分だけの」
++der: private, privacy, privilege（「私人のための法」）, deprive, privy, privateer
++note: <i>privilege</i>「特権」は <i>prīvus</i>+<i>lēx</i>「個人に向けた法」。
+
+@ prob- ; → 前掲
++cf: → <b>prob-</b>（試す）。prove, probe, approve。
+
+@ propr- ; L <i>proprius</i>「自分自身の」
++der: proper, property, propriety, appropriate, expropriate, proprietor
++note: <i>proper</i>「適切な」の原義は「固有の」。文法の「固有名詞」proper noun に残る。
+
+== 補遺 Q – Z
+
+@ quart- / quadr- ; L <i>quattuor</i>「四」
++root: *kʷetwóres
++der: quart, quarter, quarantine, quadrant, quadruple, square, squadron, quire(?), carrefour
++note: <i>square</i>「四角」は <i>exquadrāre</i>「四角にする」の摩耗形。
+
+@ quer- / quest- ; → 前掲
++cf: → <b>quaer-</b>（求める）。question, inquire, exquisite。
+
+@ radi- ; L <i>radius</i>「棒、光線、車輻」
++der: radius, radiate, radiation, radio, radar は頭字語, ray, irradiate, eradicate は別語根
++note: <i>ray</i>「光線」は <i>radius</i> の仏語経由摩耗形。
+
+@ rap- / rapt- ; → 前掲
++cf: → <b>*rewp-</b>（もぎ取る）。rapid, rapture, rob, route。
+
+@ rat- ; → 前掲
++cf: → <b>*reh₁-</b>（数える）。reason, ratio, read。
+
+@ rid- / ris- ; → 前掲
++cf: → <b>rid-</b>（笑う）。ridiculous, deride。
+
+@ rot- ; L <i>rota</i>「車輪」
++root: *Hret-「走る、転がる」
++der: rotate, rotation, rotary, roll, role（「巻いた紙」）, control（<i>contrā-rotulus</i>「対照台帳」）, rodeo は別, round(?), rotund
++note: <i>control</i>「管理する」の原義は「（車輪状の）巻物台帳と照合する」。<i>role</i>「役」は台詞を巻いた紙。
+
+@ rud- ; L <i>rudis</i>「粗い、未加工の」
++der: rude, rudiment, rudimentary, erudite（「粗さを取り除いた」＝博学な）
++note: <i>erudite</i>「博識な」は「未熟さを抜き去った」。
+
+@ sanct- ; → 前掲
++cf: → <b>sacr-</b>（聖なる）。saint, sanction, sacrifice。
+
+@ sat- ; L <i>satis</i>「十分」
++der: satisfy, satisfaction, satiate, satiety, saturate, sad（本来語だが「満腹の」が原義）, asset（<i>ad satis</i>）
++note: <i>sad</i>「悲しい」の古義は「満ち足りた」→「重い」→「深刻な」→「悲しい」。
+
+@ scal- ; L <i>scāla</i>「梯子、階段」
++der: scale（音階・尺度）, escalate, escalator, echelon（仏）, scalar
++note: <i>scale</i>「魚の鱗」「秤」は別語源の同綴語。三つの <i>scale</i> がある。
+
+@ scand- / scens- ; L <i>scandere, scānsum</i>「登る」
++der: ascend, descend, transcend, condescend, ascension, scan（「韻律を測る」）, scandal は別, echelon は別
++note: <i>scan</i>「走査する」の原義は詩の韻律を「（指を上下させて）測る」。
+
+@ sci- ; → 前掲
++cf: → <b>sci-</b>（知る）。science, conscience, omniscient。
+
+@ scind- / sciss- ; L <i>scindere, scissum</i>「裂く」
++root: *skey-「切る」
++der: rescind, abscission, scissors（綴りの影響元）, schism は ギ
++note: <i>scissors</i> の綴り sc- はこの語との誤った結びつきによる（実際は <i>caedere</i> 系）。
+
+@ sent- / sens- ; → 前掲
++cf: → <b>sent-</b>（感じる）。sense, sentence, consent。
+
+@ sol- ; L <i>sōl</i>「太陽」／<i>sōlus</i>「単独の」／<i>solum</i>「地面」
++der: solar, solstice, parasol, solarium／sole, solo, solitary, soliloquy, desolate, sullen／soil, sole（靴底）
++note: 同綴の三語根がある。<i>solstice</i>「至」は「太陽が立ち止まる」。
+
+@ son- ; L <i>sonus</i>「音」
++root: *swenh₂-
++der: sound, sonic, sonata, sonnet（「小さな歌」）, resonate, dissonance, consonant, unison, assonance, sonorous
++note: <i>sound</i>「音」は仏語経由。<i>sound</i>「健全な」「海峡」は別語源。
+
+@ spond- / spons- ; → 前掲
++cf: → <b>spond-</b>（誓う）。respond, spouse, sponsor。
+
+@ st- / stitu- ; → 前掲
++cf: → <b>st-</b>（立つ）。state, constitute, stationery。
+
+@ strat- ; → 前掲
++cf: → <b>*ster-</b>（広げる）。street, stratum, straw。
+
+@ sui- ; → 前掲
++cf: → <b>*swe-</b>（自己）。suicide, secret, custom。
+
+@ tac- / tacit- ; L <i>tacēre</i>「黙る」
++der: tacit（「言わずもがなの」）, taciturn, reticent（<i>re-tacēre</i>）
++note: <i>tacit knowledge</i>「暗黙知」の <i>tacit</i>。
+
+@ temper- ; → 前掲
++cf: → <b>tempor-</b>（時）。temper, temperature, tempest。
+
+@ ter- / trit- ; → 前掲
++cf: → <b>*terh₁-</b>（すり減らす）。trite, attrition, tribulation。
+
+@ test- ; → 前掲
++cf: → <b>test-</b>（証人）。testify, contest, protest。
+
+@ torqu- / tort- ; → 前掲
++cf: → <b>*terkʷ-</b>（ねじる）。torture, distort, retort。
+
+@ trud- ; → 前掲
++cf: → <b>trud-</b>（押す）。intrude, abstruse。
+
+@ turb- ; L <i>turba</i>「群衆、騒ぎ」
++root: *(t)werh₁-「かき混ぜる」
++der: turbid, turbine, turbulent, disturb, perturb, trouble, turmoil(?), thorp は本来語
++note: <i>trouble</i>「困難」と <i>turbine</i>「タービン」が同根。どちらも「かき乱すもの」。
+
+@ umbr- ; L <i>umbra</i>「影」
++der: umbrella（「小さな影」）, umbrage, somber（「影の下」）, penumbra, adumbrate, umbel
++note: <i>take umbrage</i>「気を悪くする」の原義は「影に入る」。
+
+@ urb- ; L <i>urbs, urbis</i>「都市」
++der: urban, urbane（「都会風の」＝洗練された）, suburb, suburban, conurbation
++note: <i>urban</i>（都市の）と <i>urbane</i>（洗練された）は同語の綴り分化。
+
+@ ut- ; → 前掲
++cf: → <b>ut-</b>（使う）。use, utility, utensil。
+
+@ vac- / van- ; → 前掲
++cf: → <b>*h₁weh₂-</b>（空の）。vacant, vain, waste。
+
+@ vad- / vas- ; L <i>vādere</i>「行く」
++der: evade, invade, pervade, evasion, invasion, wade（本来語の同根語）
++note: 本来語 <i>wade</i>「（水を）歩いて渡る」と同根。
+
+@ veh- / vect- ; → 前掲
++cf: → <b>*weǵʰ-</b>（運ぶ）。vehicle, convey, way, weigh。
+
+@ vel- / vol- ; → 前掲
++cf: → <b>*wel-</b>（望む）。voluntary, benevolent, will。
+
+@ vest- ; → 前掲
++cf: → <b>*wes-</b>（着る）。vest, invest, travesty。
+
+@ vi- ; L <i>via</i>「道」
++der: via, viaduct, deviate, obviate, obvious（「道の前にある」）, previous, trivial（「三叉路」）, convey, voyage, envoy, impervious
++note: <i>obvious</i>「明白な」は「道の前にあって出会わずにいられない」。
+
+@ vig- ; → 前掲
++cf: → <b>*weǵ-</b>（強い・目覚める）。vigil, vigor, vegetable, wake。
+
+@ vin- ; L <i>vīnum</i>「ぶどう酒」
++der: wine（本来語化した借用）, vine, vineyard, vintage, vintner, vinegar, vinyl
++note: 化学の <i>vinyl</i>「ビニル」は <i>vīnum</i>+<i>-yl</i> で「エチルアルコール由来の基」を指した命名。
+
+@ vir- ; → 前掲
++cf: → <b>*wī-ro-</b>（男）。virile, virtue, werewolf, world。
+
+@ volv- ; → 前掲
++cf: → <b>volv-</b>（転がす）。volume, revolve, evolve。
+
+@ vulner- ; L <i>vulnus, vulneris</i>「傷」
++der: vulnerable, invulnerable, vulnerary
++note: <i>vulnerable</i>「傷つきやすい」は情報セキュリティでも「脆弱性」として使われる。
+

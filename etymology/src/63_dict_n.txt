@@ -1,30 +1,5 @@
 == N
 
-@ naughty ; /ˈnɔːti/ ; 形 ; いたずらな
-+lit: 「何も持たない（＝貧しい）」
-+chain: ME <i>naughti</i>（<i>naught</i>「無」＜ OE <i>nāwiht</i>「no thing」）
-+desc: 「無一物の」→「取るに足らない」→「邪悪な」→「（子どもが）いたずらな」と、強い意味から弱い意味へ移った（弱化、第7章）。欽定訳聖書には「naughty figs（悪い無花果）」という用例がある。
-+der: naught, nought, nothing, aught
-
-@ nausea ; /ˈnɔːziə/ ; 名 ; 吐き気
-+lit: 「船酔い」
-+chain: Gk <i>naûs</i>「船」→ <i>nautíā</i>「船酔い」→ L <i>nausea</i>
-+der: nautical, astronaut, nave, navy, naval, navigate
-+note: 日本語の「船酔い」が一般語化しなかったのに対し、ギリシア語では吐き気一般を指すようになった。海洋民の語彙。
-
-@ nice ; /naɪs/ ; 形 ; よい、感じのよい
-+lit: 「知らない、無知な」
-+chain: L <i>nescius</i>「無知な」（<i>ne-</i>「非」+ <i>scīre</i>「知る」）→ OF <i>nice</i>「愚かな」→ ME
-+desc: 意味変化の代表例。「愚かな」（13世紀）→「臆病な」→「気難しい・凝った」（14世紀）→「精密な」（16世紀）→「感じのよい」（18世紀）→「親切な」（19世紀）。OEDは十数の廃義を立てる。
-+der: science, conscience, conscious, omniscient, prescient
-+note: 「精密な」の古義は <i>a nice distinction</i>「微妙な区別」に残る。
-
-@ nickname ; /ˈnɪkneɪm/ ; 名 ; あだ名
-+lit: 「追加の名」
-+chain: ME <i>an eke-name</i>（<i>eke</i>「追加」）→ <i>a neke-name</i> → <i>a nickname</i>
-+desc: 冠詞と名詞の境界の切り直し（異分析、第6章）。<i>eke</i> は「増す」の意で、<i>eke out</i>「やりくりする」に残る。
-+der: eke, auction, augment, author（すべて *h₂ewg-「増す」）
-
 @ nightmare ; /ˈnaɪtmeə/ ; 名 ; 悪夢
 +lit: 「夜の魔物」
 +chain: <i>night</i> + OE <i>mære</i>「（人の胸に乗る）女悪魔」
@@ -74,7 +49,6 @@
 +der: nonna, nonno（伊「祖母・祖父」）
 +note: 同型の語に <i>abbot</i>（アラム語 <i>abbā</i>「父ちゃん」）, <i>papa</i>／<i>pope</i>。宗教語彙には幼児語起源のものが多い。
 
-
 @ nasty ; /ˈnɑːsti/ ; 形 ; 不快な
 +chain: 語源不確実。中期オランダ語 <i>nestich</i>「（巣のように）汚い」説、OF <i>nastre</i>「けちな」説がある
 +note: 語源不明な口語の典型。
@@ -98,3 +72,128 @@
 +desc: 銅鉱石に似ていながら銅が取れないため、鉱夫が「妖精の仕業」として名づけた。1751年クロンステットが新元素を分離し、名を <i>nickel</i> に短縮した。
 +note: <i>cobalt</i>（独 <i>Kobold</i>「妖精」）も同型の命名。鉱山の民間信仰が周期表に残った。
 
+@ naive ; /naɪˈiːv/ ; 形 ; 純朴な
++chain: L <i>nātīvus</i>「生まれたままの」→ 仏 <i>naïf/naïve</i>
++root: *ǵenh₁-「生む」
++dbl: native, nativity, Noël
++der: nature, nation, innate, pregnant, genius, genuine, gentle, king, kin
++note: <i>native</i> と <i>naive</i> は同一ラテン語の二重語。ラテン語直輸入が「生来の」、フランス語経由が「世慣れない」。
++see: *ǵenh₁-
+
+@ narcotic ; /nɑːˈkɒtɪk/ ; 形名 ; 麻酔の、麻薬
++chain: Gk <i>nárkē</i>「麻痺、しびれ」→ <i>narkōtikós</i>
++der: narcissus は別（水仙の香が麻痺させるとする語源説は俗説）, narcolepsy
++note: <i>Narcissus</i>「ナルキッソス」は人名で、花の名がそこから。<i>narcotic</i> とは無関係。
++conf: 確実
++see: 第X部 俗説
+
+@ nausea ; /ˈnɔːziə/ ; 名 ; 吐き気
++lit: 「船酔い」
++chain: Gk <i>naûs</i>「船」→ <i>nausía</i>「船酔い」→ L
++root: *neh₂w-「船」
++der: nautical, navy, navigate, aeronaut, astronaut, argonaut, nave（教会の身廊＝船の形）
++cog: L <i>nāvis</i>, Skt <i>nau-</i>
++note: 特殊な症状名が「吐き気」一般に拡大した。<i>noise</i> も一説にこの語（船上の喧騒）。
++see: *neh₂w-
+
+@ nice ; /naɪs/ ; 形 ; よい、すてきな
++lit: 「知らない、無知な」
++chain: L <i>nescius</i>「知らない」（<i>ne-</i>＋<i>scīre</i>「知る」）→ OF <i>nice</i>「愚かな」
++desc: 「愚かな」→「内気な」→「繊細な」→「精密な」→「感じのよい」→「よい」。英語史上もっとも激しく意味を移動させた語で、14〜18世紀に少なくとも6段階を経た。
++der: science, conscious, conscience, omniscient, prescience
++note: 現代でも <i>a nice distinction</i>「微妙な区別」に「精密な」の段階が残る。
++see: 第8章 意味変化
++lvl: ★★★
+
+@ nickname ; /ˈnɪkneɪm/ ; 名 ; あだ名
++lit: 「追加の名」
++chain: ME <i>an eke name</i>「追加の名」→ 異分析で <i>a neke name</i> → <i>nickname</i>
++der: eke（「増やす」、<i>eke out</i> に残存）, augment, auction, author（同根 *h₂ewg-「増す」）
++note: 冠詞との境界の取り違え。逆方向の例に <i>an apron</i>（＜ <i>a napron</i>）, <i>an adder</i>（＜ <i>a nadder</i>）, <i>an umpire</i>（＜ <i>a numpire</i>）。
++see: 異分析（第6章）
++lvl: ★★
+
+@ novel ; /ˈnɒvl/ ; 形名 ; 新しい、小説
++chain: L <i>novus</i>「新しい」→ 伊 <i>novella</i>「新しい話」
++root: *néwos「新しい」
++cog: OE <i>nīwe</i> → new, Gk <i>néos</i>, Skt <i>náva-</i>
++der: novice, innovate, renovate, novelty／Gk系 neon, neolithic, neophyte
++note: <i>new</i> と <i>novel</i> と <i>neo-</i> は同一の印欧語根の三系統。
++see: *néwos
++lvl: ★★★
+
+@ nuisance ; /ˈnjuːsns/ ; 名 ; 迷惑
++chain: L <i>nocēre</i>「害する」→ OF <i>nuisance</i>
++root: *neḱ-「死」
++der: innocent（「害さない」）, noxious, obnoxious, innocuous, pernicious, internecine, necro-（Gk）, nectar（「死を超えるもの」）
++note: <i>innocent</i>「無罪の」と <i>nuisance</i> が同根。<i>nectar</i> は <i>nek-</i>「死」＋<i>-tar</i>「超える」で「不死の飲み物」。
+
+@ number ; /ˈnʌmbə/ ; 名 ; 数
++chain: L <i>numerus</i>「数」→ OF <i>nombre</i>
++root: *nem-「割り当てる」
++der: numeral, enumerate, innumerable, numerous／Gk系 nomad（「牧地を割り当てられて移動する」）, economy, autonomy, astronomy, nemesis（「（罰を）割り当てるもの」）
++note: <i>nomad</i> と <i>number</i> と <i>economy</i> が同根。「分け与える」が「数える」と「牧する」と「家を治める」に分かれた。
++lvl: ★★★
+
+@ nurse ; /nɜːs/ ; 名動 ; 看護師、育てる
++chain: L <i>nūtrīre</i>「養う」→ <i>nūtrīcia</i> → OF <i>norrice</i>
++der: nutrition, nourish, nutrient, nursery, nurture
++note: 原義は「乳母」。病人の世話をする意は16世紀。<i>nature vs. nurture</i>「氏か育ちか」はシェイクスピア『テンペスト』の句をゴールトンが1874年に定式化。
++lvl: ★★
+
+@ nymph ; /nɪmf/ ; 名 ; ニンフ、（昆虫の）幼虫
++chain: Gk <i>nýmphē</i>「若い女、花嫁」→ L <i>nympha</i>
++cog: L <i>nūbere</i>「嫁ぐ」→ nuptial, connubial
++note: 昆虫学の「若虫」は成虫になる前の段階を「花嫁前」と見た比喩。<i>lymph</i>「リンパ」は <i>nympha</i> の異形とギリシア語 <i>lémphos</i> の混淆。
+
+@ naughty ; /ˈnɔːti/ ; 形 ; いたずらな
++lit: 「何も持たない」
++chain: ME <i>naughty</i>（<i>naught</i>「無」＋<i>-y</i>）
++desc: 「無一物の＝貧しい」→「取るに足らない」→「たちの悪い」→「（子どもが）いたずらな」。16〜17世紀には「邪悪な」の強い語だった。
++der: naught, nought, not（<i>nāwiht</i>「まったく何も」の弱形）
++note: <i>not</i> も <i>naught</i> も <i>ne</i>＋<i>ā</i>＋<i>wiht</i>「決して何ものも」の縮約。
+
+@ navy ; /ˈneɪvi/ ; 名 ; 海軍
++chain: L <i>nāvis</i>「船」→ 俗ラテン語 <i>nāvia</i> → OF <i>navie</i>
++see: nausea
++note: <i>navy blue</i> は1840年代の英国海軍制服の色から。
+
+@ nerve ; /nɜːv/ ; 名 ; 神経
++chain: L <i>nervus</i>「腱、筋」← Gk <i>neûron</i>
++der: neuron, neurology, neurosis, enervate（「腱を抜く＝弱らせる」）
++note: 古代には腱と神経が区別されず、ガレノス以後に分化。<i>nervous</i>「神経質な」は18世紀の医学用語から。
+
+@ noble ; /ˈnəʊbl/ ; 形 ; 高貴な
++chain: L <i>(g)nōscere</i>「知る」→ <i>nōbilis</i>「知られている」
++root: *ǵneh₃-「知る」
++der: know, notice, notorious, ignore, cognition, recognize, narrate（「知らせる」）, normal（一説）
++note: 「世に知られた家柄」が原義。<i>notorious</i>「悪名高い」は同じ語根が負に振れた形。
++see: know
++lvl: ★★
+
+@ nomad ; /ˈnəʊmæd/ ; 名 ; 遊牧民
++chain: Gk <i>némein</i>「割り当てる、牧する」→ <i>nomás</i>
++see: number
+
+@ nominal ; /ˈnɒmɪnl/ ; 形 ; 名目上の
++chain: L <i>nōmen</i>「名前」→ <i>nōminālis</i>
++root: *h₁nómn̥「名前」
++cog: OE <i>nama</i> → name, Gk <i>ónoma</i>, Skt <i>nā́man-</i>
++der: name, noun, nominate, denominate, renown, ignominy／Gk系 onomatopoeia, synonym, antonym, anonymous, pseudonym
++note: 印欧祖語からほぼ全語派に残る最古層の語のひとつ。
++lvl: ★★
+
+@ notorious ; /nəʊˈtɔːriəs/ ; 形 ; 悪名高い
++chain: L <i>nōtus</i>「知られた」→ 中世ラテン語 <i>nōtōrius</i>
++desc: 16世紀には中立に「よく知られた」だったが、悪い文脈での共起が続いた結果、語自体が悪義を帯びた。意味の下降（pejoration）の教科書的な例。
++see: noble, 第8章
++lvl: ★★
+
+@ nuance ; /ˈnjuːɑːns/ ; 名 ; 微妙な差
++lit: 「（雲の）濃淡」
++chain: L <i>nūbēs</i>「雲」→ 仏 <i>nuer</i>「色を暈す」→ <i>nuance</i>
++note: 絵画の色の階調を指す語。<i>nebula</i>「星雲」も同根。
+
+@ nudge ; /nʌdʒ/ ; 動 ; そっと突く
++conf: 不確実（擬音か、ノルウェー語 <i>nugga</i>「こする」か）
++note: 行動経済学の <i>nudge</i>（2008）で世界語になった。

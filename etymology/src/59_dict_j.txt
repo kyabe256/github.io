@@ -6,22 +6,11 @@
 +der: janitor（「門番」）, janitress
 +note: <i>janitor</i>「用務員」が同語源であるのは、もと「門番」だったから。
 
-@ jargon ; /ˈdʒɑːɡən/ ; 名 ; 専門用語、たわごと
-+lit: 「小鳥のさえずり」
-+chain: OF <i>jargon</i>「鳥のさえずり、わけの分からぬ言葉」（擬音）
-+note: 「理解できない音」という擬音起源は、<i>barbarian</i>（バルバル）と同じ発想。
-
 @ jeans ; /dʒiːnz/ ; 名 ; ジーンズ
 +lit: 「ジェノヴァ（産の綾織り）」
 +chain: 中世ラテン語 <i>Genua</i>「ジェノヴァ」→ OF <i>Janne</i> → 英語 <i>jean fustian</i>「ジェノヴァ産の綾織り」
 +der: denim（仏 <i>serge de Nîmes</i>「ニーム産のサージ」）
 +note: 生地の名は産地由来が多い（damask＝ダマスカス、muslin＝モスル、cashmere＝カシミール、satin、calico＝カリカット、duffel＝ベルギーの町）。
-
-@ jeopardy ; /ˈdʒepədi/ ; 名 ; 危険
-+lit: 「（勝敗の）分かれた勝負」
-+chain: OF <i>jeu parti</i>「（勝ち目が）二分された勝負」→ ME <i>jeupardie</i>
-+desc: チェスの用語で、どちらが勝つか分からない局面を指した。そこから「不確実で危うい状況」へ。
-+der: joke（<i>iocus</i>「戯れ」）, part, party, partition, portion
 
 @ jubilee ; /ˈdʒuːbɪliː/ ; 名 ; 記念祭
 +lit: 「雄羊の角笛（を吹く年）」
@@ -51,3 +40,109 @@
 +desc: 船の古綱をほぐして填隙材にしたことから「廃品」の意味へ。<i>junk food</i>, <i>junk mail</i>, <i>junk bond</i> と現代でも生産的。
 +note: 船の <i>junk</i>「ジャンク船」はマレー語 <i>jong</i> 由来で別語源。
 
+@ jargon ; /ˈdʒɑːɡən/ ; 名 ; 専門用語、わけのわからない言葉
++lit: 「鳥のさえずり」
++chain: OF <i>jargoun</i>「鳥のさえずり、意味不明な話」（擬音語）→ ME
++desc: もとは「小鳥のぺちゃくちゃ」。部外者には鳥の声同然に聞こえる、という蔑称が出発点で、現在の中立的な「専門用語」の意は19世紀以降。
++cf: gibberish（擬音）, babble（擬音）, barbarian（Gk <i>bárbaros</i>「バルバルと言う者」）
+
+@ jeopardy ; /ˈdʒepədi/ ; 名 ; 危険
++lit: 「（勝敗が）分かれた勝負」
++chain: OF <i>jeu parti</i>「分かたれた遊び＝五分五分の勝負」（L <i>iocus</i>「遊び」＋ <i>partītus</i>「分けられた」）
++der: joke, jocular, juggle（<i>iocus</i> 系）
++note: チェスの用語で「どちらが勝つか読めない局面」を指したのが原義。五分五分＝危ういという評価の移動。
++conf: 通説
+
+@ jovial ; /ˈdʒəʊviəl/ ; 形 ; 陽気な
++lit: 「木星（ユピテル）の影響下にある」
++chain: L <i>Iovialis</i>（<i>Iuppiter</i>, 属格 <i>Iovis</i>）→ 仏 <i>jovial</i>
++desc: 占星術で木星生まれは快活とされた。同じ体系から <i>saturnine</i>「陰鬱な」（土星）、<i>mercurial</i>「気まぐれな」（水星）、<i>martial</i>「好戦的な」（火星）、<i>lunatic</i>「狂気の」（月）。
++see: humors（第7章）, Thursday
+
+@ jugular ; /ˈdʒʌɡjʊlə/ ; 形名 ; 頸静脈（の）
++chain: L <i>iugulum</i>「鎖骨、のど」（<i>iugum</i>「くびき」の指小形）
++root: *yewg-「つなぐ」
++der: yoke, join, joint, junction, conjugal, subjugate, yoga（Skt <i>yoga</i>）
++note: 「小さなくびき」＝鎖骨の作る V 字。<i>go for the jugular</i>「急所を突く」。
+
+@ juvenile ; /ˈdʒuːvənaɪl/ ; 形 ; 少年の、幼稚な
++chain: L <i>iuvenis</i>「若い」→ <i>iuvenīlis</i>
++root: *h₂yew-「生命力」
++der: young, youth（ゲルマン系）, junior, rejuvenate, Junius／Juno
++cog: Skt <i>yuvan-</i>, 独 <i>jung</i>
++note: <i>young</i> と <i>juvenile</i> は同根の native/Latinate ペア。June（<i>Iūnius</i>）も同系とする説がある。
+
+@ jealous ; /ˈdʒeləs/ ; 形 ; 嫉妬深い
++chain: Gk <i>zêlos</i>「熱意」→ L <i>zēlōsus</i> → OF <i>gelos</i>
++dbl: zealous
++note: <i>jealous</i> と <i>zealous</i> は同一語の二重語。フランス語経由が /dʒ/、ラテン語直輸入が /z/。原義の「熱意」は <i>zeal</i> に残り、フランス経由の枝だけが「妬み」に堕ちた。
++see: doublet（図）
+
+@ jaunty ; /ˈdʒɔːnti/ ; 形 ; 陽気で粋な
++chain: 仏 <i>gentil</i>「上品な」（L <i>gentīlis</i>）→ 英語での綴り直し
++dbl: gentle, genteel, gentile
++note: 同一のフランス語 <i>gentil</i> が、借用時期を違えて4語に分かれた稀な例。
++root: *ǵenh₁-「生む」
+
+@ jettison ; /ˈdʒetɪsən/ ; 動 ; 投げ捨てる
++chain: L <i>iactātiō</i>「投げること」→ AF <i>getteson</i>
++root: *yeh₁-「投げる」
++der: jet, project, reject, subject, object, eject, adjective, ejaculate
++dbl: jetsam（漂着した投荷）
++note: 海事法で <i>flotsam</i>（漂流物）と <i>jetsam</i>（投荷）を区別する。
+
+@ jockey ; /ˈdʒɒki/ ; 名 ; 騎手
++chain: スコットランド語 <i>Jock</i>（<i>John</i> の愛称）＋ <i>-y</i>
++desc: 人名が職業名になった例。もと「下男」の一般名詞で、17世紀に「馬丁」→「騎手」。<i>disc jockey</i>（1941）はレコードを操る者。
++cf: jack（<i>John</i> の愛称から「男、道具」）
+
+@ jumble ; /ˈdʒʌmbl/ ; 動名 ; ごちゃまぜにする
++chain: 語源不確実。<i>jump</i> と <i>tumble</i> の混成か、擬音
++conf: 不確実
+
+@ jinx ; /dʒɪŋks/ ; 名 ; 縁起の悪いもの
++chain: Gk <i>iynx</i>「アリスイ（鳥）」→ L <i>iynx</i>
++desc: アリスイは古代の呪術で車輪に縛りつけて回し、恋の呪いに使われた。鳥の名がそのまま「呪い」になった。米国の野球俗語（1911）を通じて一般化。
+
+@ journey ; /ˈdʒɜːni/ ; 名 ; 旅
++lit: 「一日分（の行程）」
++chain: L <i>diurnum</i>「一日分」→ OF <i>jornee</i>
++root: *dyew-「輝く、空」
++der: journal, adjourn, sojourn, diary, diurnal, day は別語源
++note: <i>journal</i>「日誌」、<i>adjourn</i>「（別の日に）延期する」、<i>journeyman</i>「日給職人＝一人前の職人」がすべて「日」から。英語の <i>day</i> はゲルマン系で無関係。
++see: *dyew-
+
+@ jury-rigged ; /ˈdʒʊəri rɪɡd/ ; 形 ; 応急の
++chain: 航海用語 <i>jury mast</i>「仮マスト」（語源不確実。OF <i>ajurie</i>「助け」か）
++conf: 不確実
++note: <i>jerry-built</i>「粗雑に建てた」とは別語で、両者の混同から <i>jerry-rigged</i> という第三の形が生まれた。
+
+@ jade ; /dʒeɪd/ ; 名 ; ひすい
++lit: 「脇腹の石」
++chain: 西 <i>(piedra de la) ijada</i>「脇腹の石」（L <i>īlia</i>「わき腹」）→ 仏 <i>le jade</i>
++desc: 腎臓病に効くと信じられ「腎の石」と呼ばれた。ラテン語系の別名 <i>nephrite</i> も Gk <i>nephrós</i>「腎臓」で、まったく同じ発想の翻訳借用。
++see: 語源が二言語で並行した例（第9章）
+
+@ jamboree ; /ˌdʒæmbəˈriː/ ; 名 ; 大集会
++chain: 語源不確実（米俗語、1860年代）。<i>jam</i>＋仏 <i>soirée</i> の混成か
++conf: 不確実
++note: ボーイスカウトの世界大会名（1920）に採用されて定着した。
+
+@ janitor ; /ˈdʒænɪtə/ ; 名 ; 用務員、門番
++chain: L <i>iānus</i>「アーチ門」→ <i>iānitor</i>「門番」
++der: January（<i>Iānuārius</i>「ヤヌス神の月」）
++note: ヤヌスは前後に顔を持つ門の神。年の境目の月に名を与えた。米語で「管理人」の意になったのは19世紀。
+
+@ jubilant ; /ˈdʒuːbɪlənt/ ; 形 ; 歓喜にあふれた
++chain: L <i>iūbilāre</i>「歓呼する」（擬音語 <i>iū</i>）
++note: <i>jubilee</i> とは本来別語源だが（上項参照）、中世に完全に混ざった。
+
+@ jolly ; /ˈdʒɒli/ ; 形 ; 陽気な
++chain: OF <i>jolif</i>「快活な、美しい」（古ノルド語 <i>jól</i>「冬至祭」からか）
++conf: 一説
++der: jolly, joliment → 仏 <i>joli</i>「かわいい」
++note: 英語 <i>Yule</i>「クリスマス」と同源とすれば、「冬至祭のような浮かれ気分」が原義。フランス語では「美しい」に、英語では「陽気な」に分かれた。
+
+@ jaded ; /ˈdʒeɪdɪd/ ; 形 ; 疲れ切った、飽きた
++chain: <i>jade</i>「駄馬」（語源不確実、古ノルド語 <i>jalda</i>「牝馬」か）
++note: 宝石の <i>jade</i> とは同綴の別語。「使い古した馬のように」の比喩。

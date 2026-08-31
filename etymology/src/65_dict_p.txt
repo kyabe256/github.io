@@ -19,12 +19,6 @@
 +der: peri-（周りに）, paries（ラ「壁」）, dough（*dʰeigʰ-「こねる」＝土を積む）
 +note: 第一要素は Gk <i>perí</i>、英語 <i>far</i>, <i>for</i> と同根。
 
-@ parasite ; /ˈpærəsaɪt/ ; 名 ; 寄生者
-+lit: 「そばで食べる者」
-+chain: Gk <i>pará</i>「そばに」+ <i>sîtos</i>「食物」→ <i>parásītos</i>
-+desc: 本来は神殿で供物を食べる役の神官、後に「食客、太鼓持ち」を指す劇の類型となった。生物学用語としての用法は18世紀から。
-+der: sitology, parasitism
-
 @ pedigree ; /ˈpedɪɡriː/ ; 名 ; 家系
 +lit: 「鶴の足」
 +chain: OF <i>pié de grue</i>「鶴の足」→ ME <i>pedegru</i>
@@ -38,12 +32,6 @@
 +desc: 「仮面」→「劇中の役」→「法律上の資格」→「人格」→「人」。ラテン語 <i>per-sonāre</i>「（仮面を）通して響かせる」とする古来の説は民間語源とされる。
 +dbl: <i>parson</i>（「（教区を代表する）人格」＝教区司祭）, <i>persona</i>
 +der: personal, personality, impersonate, personnel
-
-@ pilgrim ; /ˈpɪlɡrɪm/ ; 名 ; 巡礼者
-+lit: 「畑を越えて行く者＝異国人」
-+chain: L <i>per</i>（越えて）+ <i>ager</i>「畑」→ <i>peregrīnus</i>「外国の」→ プロヴァンス語 <i>pelegrin</i>（r → l の異化）→ ME
-+dbl: <i>peregrine</i>（ハヤブサ。「渡りをする鳥」）
-+der: agriculture, acre（本来語）, peregrination
 
 @ planet ; /ˈplænɪt/ ; 名 ; 惑星
 +lit: 「さまようもの」
@@ -64,12 +52,6 @@
 +desc: 父の死後に生まれた子を指すようになり、<i>humus</i>「土（＝埋葬）」との民間語源的な連想から h が挿入された。
 +der: post-, posterior／humus, humble, human（誤って結びつけられた語）
 +note: 綴りの h は語源的に誤りだが、意味の理解を助けたために定着した。
-
-@ pretty ; /ˈprɪti/ ; 形 ; きれいな
-+lit: 「狡猾な」
-+chain: OE <i>prættig</i>「策略に富む」（<i>prætt</i>「策略」）
-+desc: 「ずるい」→「巧妙な」→「よくできた」→「かわいらしい」と、五百年かけて良化した（第7章）。
-+note: 副詞用法 <i>pretty good</i>「かなり」は16世紀から。
 
 @ punch ; /pʌntʃ/ ; 名 ; パンチ（飲料）
 +lit: 「五」
@@ -103,11 +85,6 @@
 +der: penicillin（1929年フレミング。菌の房が筆状であることから）, pencil
 +note: <i>pen</i>「ペン」は別語源（L <i>penna</i>「羽根」）。<i>pencil</i> と <i>pen</i> は無関係である。
 
-@ paper ; /ˈpeɪpə/ ; 名 ; 紙
-+chain: Gk <i>pápȳros</i>「パピルス」（エジプト語起源）→ L <i>papȳrus</i> → OF <i>papier</i>
-+dbl: <i>papyrus</i>（学術借用形）
-+note: 紙そのものは中国起源だが、名は地中海の書写材料から受け継いだ。日本語「紙」とは無関係。
-
 @ pen ; /pen/ ; 名 ; ペン
 +lit: 「羽根」
 +chain: L <i>penna</i>「羽根」→ OF <i>penne</i>
@@ -121,7 +98,6 @@
 +dbl: <i>policy</i>（同語源の二重語）
 +desc: 「国家の統治」一般を指す語だったが、18世紀に「治安機構」に特殊化した。<i>policy</i>（保険証券）はギリシア語 <i>apódeixis</i>「証明」由来の別語で、同綴の混同がある。
 +der: politics, polity, metropolis, cosmopolitan, acropolis
-
 
 @ palace ; /ˈpæləs/ ; 名 ; 宮殿
 +chain: 地名 <i>Palātium</i>（ローマのパラティヌスの丘。アウグストゥス以後、皇帝の邸宅が置かれた）→ L <i>palātium</i>「宮殿」→ OF <i>palais</i>
@@ -143,17 +119,6 @@
 +chain: Gk <i>pará</i>「傍らに」+ <i>gráphein</i>「書く」
 +desc: 古代の写本で、段落の切れ目を示すために行の脇に書き入れた記号。記号の名が単位の名になった。
 +note: 現在の段落記号 ¶（pilcrow）は、この記号の子孫で、<i>paragraph</i> の語形が中世に訛ったもの（<i>pilcrow</i> ＜ <i>paragraph</i>）。
-
-@ pariah ; /pəˈraɪə/ ; 名 ; のけ者
-+lit: 「太鼓を打つ者」
-+chain: タミル語 <i>paṟaiyar</i>（<i>paṟai</i>「太鼓」）→ 英語（1610年代）
-+desc: 南インドの、祭礼で太鼓を打つ役を担った低カースト集団の名から。
-
-@ pastor ; /ˈpɑːstə/ ; 名 ; 牧師
-+lit: 「羊飼い」
-+chain: L <i>pāscere</i>「牧する」→ <i>pāstor</i>
-+der: pasture, pastoral, repast, company, companion, pantry, food, feed（本来語）
-+note: 「牧師」「司牧」「羊の群れ（flock）」という比喩体系は、ヨハネ福音書10章の「よい羊飼い」に発する。
 
 @ pedagogue ; /ˈpedəɡɒɡ/ ; 名 ; 教育者
 +lit: 「子どもを（学校へ）導く者」
@@ -184,7 +149,7 @@
 
 @ posh ; /pɒʃ/ ; 形 ; 上流の
 +chain: 語源不確実。19世紀の俗語 <i>posh</i>「金、洒落者」から
-+note: "Port Out, Starboard Home" の頭字語だとする有名な説は、船会社の記録にも初期の用例にも裏づけがなく、<b>誤り</b>とされる（第VIII部）。
++note: "Port Out, Starboard Home" の頭字語だとする有名な説は、船会社の記録にも初期の用例にも裏づけがなく、<b>誤り</b>とされる（第X部）。
 
 @ pundit ; /ˈpʌndɪt/ ; 名 ; 評論家
 +lit: 「学者」
@@ -195,3 +160,263 @@
 +chain: L <i>pūpa</i>「少女、人形」→ OF <i>poupette</i>
 +der: pupil（瞳孔・生徒）, puppy, pupa（さなぎ）, poppet
 +note: <i>puppy</i>「子犬」も同語源で、もと「愛玩用の小犬」。
+
+@ paper ; /ˈpeɪpə/ ; 名 ; 紙
++chain: Gk <i>pápyros</i>「パピルス」→ L <i>papȳrus</i> → OF <i>papier</i>
++note: 素材はまったく別（パピルスは草、紙は繊維）だが、機能が同じため名が引き継がれた。<i>Bible</i>（<i>bíblos</i>「パピルスの内皮」）も同じ書写材由来。
++lvl: ★★
+
+@ parasite ; /ˈpærəsaɪt/ ; 名 ; 寄生者
++lit: 「（他人の）そばで食べる者」
++chain: Gk <i>pará</i>「そばに」＋ <i>sîtos</i>「食物」→ <i>parásitos</i>
++desc: 古代には神殿の共食者、のち喜劇の「食客」の役柄名。生物学用語は18世紀。
++der: parody（「並行する歌」）, paradox, parallel, paragraph, paralysis, paramedic
+
+@ pariah ; /pəˈraɪə/ ; 名 ; 追放者
++chain: タミル語 <i>paṛaiyar</i>「太鼓打ち（のカースト）」→ 英語（1613）
++note: 儀礼で太鼓を打つ集団の名。英領インド期に「不可触民」全般の呼称として誤用され、比喩的な「のけ者」の意で英語に定着した。
++see: 第VIII部 インド諸語
+
+@ parliament ; /ˈpɑːləmənt/ ; 名 ; 議会
++lit: 「話し合うこと」
++chain: L <i>parabola</i>「たとえ話」→ 俗ラテン語 <i>parabolāre</i>「話す」→ OF <i>parler</i>＋<i>-ment</i>
++der: parley, parole, parlor, parable, palaver, parlance
++note: ギリシア語 <i>parabolḗ</i>「傍らに投げること＝比喩」が、俗ラテン語で「しゃべる」の一般動詞になり、仏 <i>parler</i>、伊 <i>parlare</i> の元になった。<i>parole</i>「仮釈放」は「（名誉にかけた）言葉」。
++lvl: ★★
+
+@ pastor ; /ˈpɑːstə/ ; 名 ; 牧師
++lit: 「羊飼い」
++chain: L <i>pāscere</i>「（家畜を）飼う」→ <i>pāstor</i>
++root: *peh₂-「守る、養う」
++der: pasture, pastoral, repast, food, feed, fodder, foster, company（<i>com-panis</i>「パンを共にする者」）は別根
++note: 「羊飼い」は聖書の比喩体系の中核。<i>pastor</i>, <i>flock</i>「信徒」, <i>shepherd</i> がひと組。
+
+@ patient ; /ˈpeɪʃnt/ ; 形名 ; 忍耐強い、患者
++lit: 「苦しみを受ける者」
++chain: L <i>patī</i>「苦しむ、受ける」→ <i>patiēns</i>
++root: *peh₁-「傷つける」
++der: passion, passive, compassion, compatible, patience, impatient
++note: 「患者」と「忍耐強い」が同語なのは「（治療を）受ける側」の意から。<i>passion</i>「情熱」も本来「受難」で、<i>the Passion</i> はキリストの受難。能動的な「情熱」の意は18世紀。
++see: 第8章 意味変化
++lvl: ★★★
+
+@ pension ; /ˈpenʃn/ ; 名 ; 年金
++chain: L <i>pendere</i>「重さを量る、支払う」→ <i>pēnsiō</i>
++root: *(s)pen-「引っぱる、紡ぐ」
++der: pendant, pendulum, depend, suspend, expend, spend, dispense, compensate, ponder, pound（重さ）, poise, peso, spin, span
++note: 貨幣を秤で量って支払った時代の名残で、「量る」と「支払う」が同語。<i>pound</i>「ポンド」も <i>pendere</i> の <i>pondus</i>「重さ」から。
++see: *(s)pen-
++lvl: ★★★
+
+@ people ; /ˈpiːpl/ ; 名 ; 人々
++chain: L <i>populus</i>「民衆」→ AF <i>people</i>
++der: popular, population, public, publish, pub, republic
++note: ラテン語 <i>populus</i> は語源不確実で、エトルリア語起源説がある。<i>public</i> は <i>pūbēs</i>「成人」との混淆形。
++lvl: ★★★
+
+@ perfume ; /ˈpɜːfjuːm/ ; 名 ; 香水
++lit: 「煙を通して」
++chain: L <i>per</i>「通して」＋ <i>fūmus</i>「煙」→ 伊 <i>perfumare</i>
++der: fume, fumigate, fumble は別
++note: 香木を焚いた煙による芳香が原義。アルコール溶液の香水は14世紀ハンガリー以降。
+
+@ pigeon ; /ˈpɪdʒɪn/ ; 名 ; ハト
++chain: 後期ラテン語 <i>pīpiō</i>「ぴいぴい鳴く雛」（擬音）→ OF <i>pijon</i>
++note: 本来語 <i>dove</i> と借用語 <i>pigeon</i> が共存し、<i>dove</i> が詩語・象徴、<i>pigeon</i> が日常語という分業になった。<i>pidgin English</i> の <i>pidgin</i> は <i>business</i> の中国語訛りで別語。
+
+@ pilgrim ; /ˈpɪlɡrɪm/ ; 名 ; 巡礼者
++lit: 「野を通り抜ける者＝異邦人」
++chain: L <i>per agrum</i>「野を越えて」→ <i>peregrīnus</i>「外国の」→ OF <i>pelegrin</i>
++der: peregrine（falcon「渡りのハヤブサ」）, agriculture, acre（同根 *h₂éǵros「野」）
++note: <i>l</i> は異化（r…r → l…r）。<i>peregrine</i> と <i>pilgrim</i> は同一語の二重語。
+
+@ plausible ; /ˈplɔːzəbl/ ; 形 ; もっともらしい
++lit: 「拍手に値する」
++chain: L <i>plaudere</i>「拍手する」→ <i>plausibilis</i>
++der: applaud, applause, explode（「（役者を）拍手して追い出す」）
++note: <i>explode</i> は「野次で舞台から追い出す」が原義。「爆発する」は17世紀の転用で、劇場用語が物理用語になった。
++see: explode
+
+@ pornography ; /pɔːˈnɒɡrəfi/ ; 名 ; ポルノ
++lit: 「娼婦について書いたもの」
++chain: Gk <i>pórnē</i>「娼婦」＋ <i>gráphein</i>「書く」
++note: ポンペイ遺跡の壁画分類のために1850年代に造られた考古学用語。
+
+@ pound ; /paʊnd/ ; 名 ; ポンド（重さ・通貨）
++chain: L <i>lībra pondō</i>「重さにして1リブラ」→ OE <i>pund</i>
++note: 略号 lb は <i>lībra</i>、語は <i>pondō</i> から。ひとつの句が二つに分かれ、記号と語で別々の部分を残した。通貨記号 £ も <i>lībra</i> の L。
++see: pension, ounce
++lvl: ★★
+
+@ practice ; /ˈpræktɪs/ ; 名 ; 実践
++chain: Gk <i>prássein</i>「行う」→ <i>praktikós</i> → L
++der: practical, pragmatic, praxis
++note: アリストテレスの <i>theōría</i>（観照）／<i>praxis</i>（実践）／<i>poíēsis</i>（制作）の三分が、<i>theory</i>／<i>practice</i>／<i>poetry</i> として英語に残っている。
++lvl: ★★★
+
+@ precarious ; /prɪˈkeəriəs/ ; 形 ; 不安定な
++lit: 「祈願によって（得た）」
++chain: L <i>precārī</i>「祈る」→ <i>precārius</i>「懇願によって許された」
++root: *preḱ-「請う」
++der: pray, prayer, deprecate, imprecation, postulate は別
++note: 法律用語で「他人の好意で保有し、いつでも取り消されうる」状態。そこから「不安定な」。
++lvl: ★★
+
+@ prestige ; /preˈstiːʒ/ ; 名 ; 威信
++lit: 「目くらまし、幻術」
++chain: L <i>praestigiae</i>「手品、幻惑」（<i>praestringere</i>「（目を）縛る」）
++desc: 19世紀初めまで「まやかし」の悪義だった。「（人を眩ませる）魅力」→「威信」へ上昇したのは19世紀のフランス語の影響。
++see: 意味の上昇（第8章）
+
+@ pretty ; /ˈprɪti/ ; 形 ; きれいな
++chain: OE <i>prættiġ</i>「狡猾な」（<i>prætt</i>「策略」）
++desc: 「ずるい」→「巧みな」→「小ぎれいな」→「きれいな」。<i>cunning</i>, <i>crafty</i>, <i>artful</i> が逆に「悪知恵の」へ下降したのと対照的。
++see: nice, 第8章
++lvl: ★★
+
+@ prime ; /praɪm/ ; 形名 ; 第一の
++chain: L <i>prīmus</i>「最初の」
++root: *per-「前へ」
++der: primary, primitive, premier, prince（<i>prīmus capere</i>「第一の地位を取る者」）, principal, principle, prior, pristine
++note: <i>prime number</i>「素数」は「第一の（＝それ以上分解できない）数」。<i>prime minister</i> は18世紀に蔑称として始まった。
++lvl: ★★★
+
+@ prison ; /ˈprɪzn/ ; 名 ; 監獄
++chain: L <i>prehendere</i>「つかむ」→ <i>prēnsiō</i>「捕捉」→ OF <i>prisun</i>
++der: prize, apprehend, comprehend, surprise, enterprise, reprisal, comprise, pregnant は別
++note: <i>surprise</i>「不意打ち」は「上から掴む」。<i>comprehend</i>「理解する」は「掴み込む」で、日本語「把握」と同じ比喩。
++lvl: ★★
+
+@ privilege ; /ˈprɪvəlɪdʒ/ ; 名 ; 特権
++lit: 「私人のための法」
++chain: L <i>prīvus</i>「個々の」＋ <i>lēx</i>「法」→ <i>prīvilēgium</i>
++der: private, deprive, privy, proper（<i>prīvus</i>系）／legal, legislate
++note: ローマ法では「特定個人に向けた法」で、本来は不利な特別法も含んだ。
++lvl: ★★
+
+@ profane ; /prəˈfeɪn/ ; 形 ; 冒瀆的な、世俗の
++lit: 「神殿の前（＝外）の」
++chain: L <i>prō</i>「前に」＋ <i>fānum</i>「神殿」
++der: fane, fanatic（「神殿に憑かれた」）, feast, festival, fair（祭）
++note: <i>fanatic</i> と <i>profane</i> が同根で、神殿の内と外に分かれた。
+
+@ propaganda ; /ˌprɒpəˈɡændə/ ; 名 ; 宣伝
++chain: L <i>Congregātiō dē Prōpagandā Fide</i>「信仰を広めるための聖省」（1622）
++desc: カトリックの布教機関の名の奪格 <i>propagandā</i> がそのまま切り出された。第一次大戦以降に悪義化。
++der: propagate, pagan は別
++note: 屈折形が名詞化した点で <i>omnibus</i>, <i>agenda</i>, <i>quorum</i> と同型。
+
+@ prosper ; /ˈprɒspə/ ; 動 ; 繁栄する
++chain: L <i>prō spē</i>「希望どおりに」→ <i>prosperus</i>
++conf: 通説
++der: prosperity, prosperous
+
+@ protein ; /ˈprəʊtiːn/ ; 名 ; タンパク質
++chain: Gk <i>prôtos</i>「第一の」→ <i>prōteîos</i>「第一級の」（ムルダー／ベルセリウス、1838）
++der: protocol（「最初に貼る紙」）, prototype, protagonist（「第一の競技者」）, proton, Proterozoic
++note: <i>protocol</i> は巻物の冒頭に貼った内容表示の紙片から。「議定書」「通信規約」へ。
+
+@ purple ; /ˈpɜːpl/ ; 名形 ; 紫
++chain: Gk <i>porphýra</i>「アクキガイ（貝紫）」→ L <i>purpura</i> → OE <i>purpure</i>
++desc: 一片の布を染めるのに数千個の貝を要したため、ローマでは皇帝と元老院議員のみが着用を許された。<i>born in the purple</i>「皇族に生まれる」はビザンツ宮殿の斑岩（<i>porphyry</i>）の産室から。
++der: porphyry, purpure
+
+@ puzzle ; /ˈpʌzl/ ; 名動 ; 難問（に悩ませる）
++conf: 不確実（<i>pose</i>「困らせる」＜<i>oppose</i> からの派生説が有力）
++note: <i>crossword puzzle</i> は1913年の <i>New York World</i> 紙が初出。
+
+@ pyjamas ; /pəˈdʒɑːməz/ ; 名 ; パジャマ
++chain: ペルシア語 <i>pāy-jāma</i>「脚の衣」→ ウルドゥー語 → 英語（1800）
++root: *ped-「足」（ペルシア語 <i>pāy</i>）
++note: <i>pāy</i> は英語 <i>foot</i>、ラテン語 <i>pēs</i> と同根。
+
+@ pyramid ; /ˈpɪrəmɪd/ ; 名 ; ピラミッド
++chain: Gk <i>pyramís</i>（エジプト語起源か、Gk <i>pyrós</i>「小麦」の菓子名からか）
++conf: 不確実
++note: <i>pyre</i>「火葬の薪」（<i>pŷr</i>「火」）との連想は俗説。
+
+@ pace ; /peɪs/ ; 名 ; 歩調
++chain: L <i>passus</i>「一歩（の広がり）」（<i>pandere</i>「広げる」）
++der: pass, passage, passenger, compass, expand, spawn
++note: ローマの <i>passus</i> は左右2足分。<i>mīlle passūs</i>＝1マイル。
++see: mile
+
+@ pain ; /peɪn/ ; 名 ; 痛み
++lit: 「罰」
++chain: Gk <i>poinḗ</i>「罰金、償い」→ L <i>poena</i> → OF <i>peine</i>
++der: penalty, punish, penal, repent は別, subpoena（「罰の下に」）, impunity, pine（動詞）
++note: 「罰」から「苦痛」へ。<i>on pain of death</i> に原義が残る。
++lvl: ★★★
+
+@ palaver ; /pəˈlɑːvə/ ; 名 ; 長話
++chain: L <i>parabola</i> → ポルトガル語 <i>palavra</i>「言葉」→ 西アフリカ交易の英語（18世紀）
++see: parliament
++note: <i>parliament</i>, <i>parable</i>, <i>parole</i>, <i>palaver</i> はすべて <i>parabola</i> の子孫。
+
+@ pastel ; /ˈpæstl/ ; 名 ; パステル
++chain: 後期ラテン語 <i>pasta</i>「練り粉」→ 伊 <i>pastello</i>
++der: paste, pasta, pastry, pâté, patty, pasty
++note: 顔料を練って棒状にした画材。<i>pasta</i>「パスタ」も同語で、原義は「（大麦の）練り粉」。
+
+@ pathetic ; /pəˈθetɪk/ ; 形 ; 哀れな
++chain: Gk <i>páthos</i>「経験、苦しみ」→ <i>pathētikós</i>
++root: *k<sup>w</sup>entʰ-「苦しむ」
++der: pathos, sympathy, empathy, apathy, antipathy, pathology, -pathy
++note: <i>sympathy</i>「共感」は「ともに苦しむ」で、L <i>compassiō</i> の直訳。<i>empathy</i> は1909年に独 <i>Einfühlung</i> の訳として造られた新しい語。
++lvl: ★★
+
+@ peculiar ; /pɪˈkjuːliə/ ; 形 ; 特有の、風変わりな
++lit: 「私有財産の」
++chain: L <i>pecū</i>「家畜」→ <i>pecūlium</i>「私有財産」→ <i>pecūliāris</i>
++der: pecuniary, peculate, fee（ゲルマン系同根 *peku-）
++note: 家畜が富の基本単位だった時代の語。英語 <i>fee</i>「料金」、独 <i>Vieh</i>「家畜」と同根。<i>impecunious</i>「金のない」。
++see: cattle, capital
++lvl: ★★
+
+@ pedant ; /ˈpednt/ ; 名 ; 衒学者
++chain: 伊 <i>pedante</i>「教師」（Gk <i>paidagōgós</i>「子どもを導く者」からか）
++conf: 一説
++der: pedagogy, pediatrics, encyclopedia（<i>enkýklios paideía</i>「円環をなす教育＝一般教養」）
++note: <i>pedagogue</i> はもと「子どもを学校へ送り迎えする奴隷」。
+
+@ pester ; /ˈpestə/ ; 動 ; 悩ませる
++chain: OF <i>empestrer</i>「（馬を）足枷でつなぐ」（L <i>pāstōrium</i>「放牧用の足枷」）
++note: <i>pest</i>「害虫、疫病」（L <i>pestis</i>）とは別語源だが、意味の連想で混同され綴りが引き寄せられた。
+
+@ phrase ; /freɪz/ ; 名 ; 句
++chain: Gk <i>phrázein</i>「示す、言う」→ <i>phrásis</i>
++der: paraphrase, periphrasis, phraseology, antiphrasis
++lvl: ★★
+
+@ poison ; /ˈpɔɪzn/ ; 名 ; 毒
++lit: 「飲み物」
++chain: L <i>pōtiō</i>「飲むこと、飲み薬」→ OF <i>poison</i>
++dbl: potion
++der: potable, potion, symposium（Gk「ともに飲む会」）
++note: <i>poison</i> と <i>potion</i> は同一語の二重語。中立の「調合薬」が、フランス語経由の枝でだけ悪義に固定した。
++lvl: ★★
+
+@ portfolio ; /pɔːtˈfəʊliəʊ/ ; 名 ; 書類挟み、資産構成
++chain: 伊 <i>portafoglio</i>（<i>portare</i>「運ぶ」＋<i>foglio</i>「紙」）
++der: folio, foliage, foil, portable, transport
++note: 「大臣の書類挟み」→「所管」（<i>minister without portfolio</i>）→ 金融の「保有銘柄一覧」。
+
+@ posture ; /ˈpɒstʃə/ ; 名 ; 姿勢
++chain: L <i>pōnere</i>「置く」→ <i>positūra</i>
++der: position, compose, expose, deposit, impose, oppose, propose, purpose, suppose, component, post（地位）
++note: <i>pōnere</i> の過去分詞 <i>positus</i> 系は英語で50語以上を生んだ、もっとも生産的なラテン語動詞のひとつ。
++see: ラテン語動詞語幹対照表（付録）
++lvl: ★★★
+
+@ premises ; /ˈpremɪsɪz/ ; 名 ; 建物、構内
++lit: 「前に述べた事柄」
++chain: L <i>praemissa</i>「前置きされたもの」
++desc: 法律文書の冒頭で対象不動産を特定する記述を <i>the premises</i> と呼び、その指示対象（＝その土地建物）自体を指すようになった。論理学の「前提」と同語。
++note: 文書上の位置を表す語が、物理的な場所の名になった珍しい経路。
+
+@ purse ; /pɜːs/ ; 名 ; 財布
++chain: Gk <i>býrsa</i>「皮」→ 後期ラテン語 <i>bursa</i> → OE <i>purs</i>
++der: bursar（会計係）, bursary, disburse, reimburse, Bourse（仏「証券取引所」）
++note: <i>reimburse</i>「払い戻す」は「財布に戻し入れる」。TOEIC 頻出語だが語源で覚えると忘れない。
++see: 第XI部 TOEIC語彙
++lvl: ★★★

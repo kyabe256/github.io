@@ -128,3 +128,105 @@
 +der: grain, granule, granary, pomegranate, grenade, corn（本来語）
 +note: 結晶の粒が見えることによる命名。
 
+
+@ gallery ; /ˈɡæləri/ ; 名 ; 画廊、回廊
++chain: 中世ラテン語 <i>galeria</i>（語源不確実。<i>galilaea</i>「教会の玄関廊」からとする説）
++conf: 一説
++note: <i>play to the gallery</i>「大衆受けを狙う」の <i>gallery</i> は劇場の最上階席（天井桟敷）。
+
+@ gamble ; /ˈɡæmbl/ ; 動 ; 賭博をする
++chain: OE <i>gamenian</i>「遊ぶ」（<i>gamen</i>「遊び」＝ <i>game</i>）
++der: game, gammon（backgammon）
++note: <i>game</i>「遊び」からの派生とされるが、18世紀の初出で中間形が不明瞭。
+
+@ garage ; /ˈɡærɑːʒ/ ; 名 ; 車庫
++lit: 「守る場所」
++chain: 仏 <i>garer</i>「（船を）避難させる」（ゲルマン語 *warōn「守る」）
++der: ward, warden, guard, guarantee, warranty, wary（本来語）
++note: 1902年に自動車とともに入った新しい語。<i>guard</i>, <i>ward</i> と同根。
+
+@ garden ; /ˈɡɑːdn/ ; 名 ; 庭
++root: *gʰer-「囲む」
++chain: 古北仏語 <i>gardin</i>（ゲルマン語 *gardaz）→ ME
++dbl: <i>yard</i>（本来語）
++der: court, cohort, horticulture, chorus, choir（ギ「囲い地＝舞踏場」）
++note: <i>yard</i>（本来語）と <i>garden</i>（北仏語経由）は同語源の二重語。<i>chorus</i> とも遠く同根。
+
+@ gas ; /ɡæs/ ; 名 ; 気体
++chain: Gk <i>kháos</i>「混沌、空虚」→ ヤン・ファン・ヘルモントの造語（1640年ごろ、オランダ語）
++der: chaos, chasm, gash は別
++note: <i>chaos</i>「混沌」を意図的に変形した人工語。ヘルモントは <i>chaos</i> のオランダ語発音に基づくと自ら記している。
+
+@ generous ; /ˈdʒenərəs/ ; 形 ; 気前のよい
++lit: 「よい血筋の」
++chain: L <i>genus, generis</i>「生まれ、種族」→ <i>generōsus</i>「高貴な生まれの」
++der: gene, genus, general, genuine, gentle, kin, king（本来語）
++note: 「高貴な生まれ」→「（貴族らしく）気前がよい」。<i>gentle</i>「優しい」も同じ経路（「よい生まれの」）。
+
+@ geography ; /dʒiˈɒɡrəfi/ ; 名 ; 地理学
++lit: 「地を描くこと」
++chain: Gk <i>gê</i>「大地」+ <i>gráphein</i>「書く」
++der: geology, geometry（「地を測る」）, geopolitics, apogee, Pangaea, George（「土を耕す者」）
++note: <i>geometry</i>「幾何学」はナイル氾濫後の耕地再測量に起源があるとヘロドトスは伝える。
+
+@ ghetto ; /ˈɡetəʊ/ ; 名 ; ゲットー
++chain: 伊 <i>ghetto</i>（1516年ヴェネツィアのユダヤ人居住区）
++conf: 一説　鋳造所 <i>getto</i> の跡地だったことによる説が有力
++note: 地名が普通名詞化し、20世紀に「都市の少数民族居住区」一般を指すようになった。
+
+@ giant ; /ˈdʒaɪənt/ ; 名 ; 巨人
++chain: Gk <i>Gígantes</i>（神話の巨人族）→ L <i>gigās</i> → OF <i>geant</i>
++der: gigantic, gigabyte（<i>giga-</i>）
++note: 計算機の <i>giga-</i>（10⁹）は1960年にこの語から採られた。
+
+@ glass ; /ɡlɑːs/ ; 名 ; ガラス
++chain: OE <i>glæs</i> ← PGmc *glasam（*ǵʰel-「輝く、黄色い」）
++der: glare, gleam, glow, glitter, gold, gall（胆汁）, yellow, chlorine（ギ）
++note: <i>gl-</i> で始まる語には「光」に関わるものが多い（<i>glimmer, glint, glisten, gloss</i>）。音象徴の一例。
+
+@ globe ; /ɡləʊb/ ; 名 ; 球、地球
++chain: L <i>globus</i>「球、塊」
++der: global, globule, globalization, conglomerate（<i>glomus</i>「毛玉」）
++note: <i>globalization</i>「グローバル化」は1930年代の初出だが、一般化は1980年代以降。
+
+@ govern ; /ˈɡʌvn/ ; 動 ; 統治する
++lit: 「（船の）舵を取る」
++chain: Gk <i>kybernân</i>「舵を取る」→ L <i>gubernāre</i> → OF <i>governer</i>
++der: government, governor, gubernatorial（ラテン形）, cybernetics（「操舵術」）, cyber-
++note: <i>cyber-</i>「サイバー」は1948年ウィーナーの <i>cybernetics</i> から。語源的には <i>govern</i> と同じ「舵取り」。
+
+@ grammar ; /ˈɡræmə/ ; 名 ; 文法
++lit: 「文字に関する（技）」
++chain: Gk <i>grámma</i>「文字」→ <i>grammatikḗ</i> → L → OF <i>gramaire</i>
++dbl: <i>glamour</i>（スコットランド語形。「学問＝魔術」）
++der: graph, program, diagram, telegram, carve（本来語の同根語）
++note: 中世では読み書きができること自体が魔術的とみなされ、<i>grammar</i> の方言形が「魔法」を意味した（第VI部 glamour）。
+
+@ grape ; /ɡreɪp/ ; 名 ; ぶどう
++lit: 「（ぶどうを摘む）鉤」
++chain: OF <i>grape</i>「房、（摘み取り用の）鉤」（ゲルマン語 *krappô「鉤」）
++der: grapnel, cramp(?), grapple
++note: 道具の名が果実の名になった換喩。ラテン語 <i>ūva</i> ではなくゲルマン語系の語が入った。
+
+@ guarantee ; /ɡærənˈtiː/ ; 名・動 ; 保証（する）
++chain: ゲルマン語 *warjan「守る」→ 中央仏語 <i>garantie</i>
++dbl: <i>warranty</i>（ノルマン方言経由）
++der: guard, ward, warden, guardian, garage, wary
++note: ノルマン方言（w-）と中央フランス語（gu-）の対の代表例（第8章）。
+
+@ guitar ; /ɡɪˈtɑː/ ; 名 ; ギター
++chain: Gk <i>kithárā</i>「キタラ（竪琴）」→ アラビア語 <i>qītāra</i> → 西 <i>guitarra</i> → 英語
++der: zither（独語経由の同語源）, cithara
++note: <i>zither</i>「ツィター」と同語源。ギリシア語がアラビア語を経てスペインに伝わった。
+
+@ gun ; /ɡʌn/ ; 名 ; 銃
++chain: 女性名 <i>Gunnhildr</i>（古ノルド語の人名、<i>gunnr</i>+<i>hildr</i> ともに「戦い」）の愛称 <i>Gunilda</i>
++desc: 1330年代のウィンザー城の目録に、大型弩砲を <i>Domina Gunilda</i>「ガニルダ夫人」と呼んだ記録がある。兵器に女性名をつける慣習から。
++note: 人名由来語のうち、もっとも意外なものの一つ。
+
+@ gypsy ; /ˈdʒɪpsi/ ; 名 ; ジプシー
++lit: 「エジプト人」
++chain: <i>Egyptian</i> の頭音消失形
++desc: ロマの人々がエジプトから来たと誤解されたことによる呼称。実際の起源は北インドで、言語（ロマ語）はインド・アーリア語派に属する。
++note: 現在は <i>Roma</i> が自称として用いられる。<i>bohemian</i> も同型の誤解（ボヘミア経由で来たとされた）。
+

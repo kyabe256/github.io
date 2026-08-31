@@ -1,0 +1,194 @@
+# 第VIII部　言語別借用語辞典
+
+英語は借用の言語である。基本語彙の骨格こそゲルマン語だが、語彙全体で見ればラテン語・フランス語が半分以上を占め、残りに世界中の言語が層をなしている。ここでは<b>供給元の言語ごと</b>に語をまとめ、「いつ・なぜ・どの経路で入ったか」を示す。
+
+同じ語がどの経路で入ったかによって形が変わることに注意したい。<i>chief</i>（古仏語）と <i>chef</i>（近代仏語）、<i>cadence</i>（仏）と <i>chance</i>（仏）と <i>case</i>（ラ）——これらはすべて L <i>cadere</i>「落ちる」の子孫である。借用は一度きりの出来事ではなく、同じ井戸から何度も汲むことである。
+
+:: index field
+
+== 1　アラビア語
+
+<b>いつ・なぜ入ったか。</b>8〜15世紀のイスラム世界は、数学・天文学・化学・医学でヨーロッパを凌駕していた。アラビア語の学術語は、イベリア半島（アル・アンダルス）とシチリアでのラテン語訳を通じて西欧に流れ込んだ。定冠詞 <b><i>al-</i></b> が語頭に貼りついたまま入った語が多い（<i>alcohol, algebra, alchemy, alkali, almanac, algorithm, apricot, artichoke, admiral</i>）のが最大の目印である。学術語のほか、交易品（<i>sugar, coffee, cotton, syrup, saffron, lemon, orange, tariff, magazine, mattress</i>）と、天体名（<i>Altair, Betelgeuse, Aldebaran, Vega, zenith, nadir, azimuth</i>）が二大群をなす。
+
+@ alcohol ; /ˈælkəhɒl/ ; 名 ; アルコール
++chain: アラビア語 <i>al-kuḥl</i>「アンチモンの微粉（アイライナー）」→ 中世ラテン語
++desc: もと粉末化粧料。錬金術で「昇華によって得られた純粋な精」の意になり、そこから蒸留で得られる酒精へ。<i>kohl</i>「コール墨」は同語の別ルート。
++dbl: kohl
+
+@ algebra ; /ˈældʒɪbrə/ ; 名 ; 代数
++lit: 「（骨の）接合」
++chain: アラビア語 <i>al-jabr</i>「復元、接合」（al-Khwārizmī の書名、820年頃）
++note: 方程式の項を移項して「復元する」操作。スペインでは19世紀まで <i>algebrista</i> が「接骨医」を意味した。
++see: algorithm
+
+@ almanac ; /ˈɔːlmənæk/ ; 名 ; 暦
++chain: アラビア語（スペイン方言）<i>al-manākh</i>（語源不確実）
++conf: 不確実
+
+@ assassin ; /əˈsæsɪn/ ; 名 ; 暗殺者
++chain: アラビア語 <i>ḥashshāshīn</i>「ハシシュを吸う者たち」
++desc: 11〜13世紀のニザール派イスマーイール派を、敵対者がこう呼んだ。マルコ・ポーロが伝えた「山の老人」の伝説によって西欧に広まった。麻薬使用の伝承自体は敵側のプロパガンダとされる。
++conf: 通説
+
+@ candy ; /ˈkændi/ ; 名 ; 菓子
++chain: サンスクリット <i>khaṇḍa</i>「砂糖の塊」→ アラビア語 <i>qandī</i> → OF <i>sucre candi</i>「氷砂糖」
++see: sugar
+
+@ coffee ; /ˈkɒfi/ ; 名 ; コーヒー
++chain: アラビア語 <i>qahwa</i>（もと「ぶどう酒」の詩語）→ トルコ語 <i>kahve</i> → 伊 <i>caffè</i>
++desc: エチオピア原産、イエメンで飲用が確立。1650年オックスフォードに英国最初のコーヒーハウスが開き、そこがロイズ保険や株式取引所の母体になった。
++see: 第VII部 金融
+
+@ cotton ; /ˈkɒtn/ ; 名 ; 綿
++chain: アラビア語 <i>quṭn</i> → 西 <i>algodón</i>／伊 <i>cotone</i> → OF <i>coton</i>
+
+@ elixir ; /ɪˈlɪksə/ ; 名 ; 霊薬
++chain: Gk <i>xḗrion</i>「乾いた粉薬」→ アラビア語 <i>al-iksīr</i>
++see: Xerox
++note: ギリシア語がアラビア語を経て戻ってきた「往復借用」。<i>chemistry</i>（<i>al-kīmiyā</i> ← Gk <i>khēmeía</i>）も同型。
+
+@ giraffe ; /dʒɪˈrɑːf/ ; 名 ; キリン
++chain: アラビア語 <i>zarāfa</i> → 伊 <i>giraffa</i>
++note: 中英語では <i>camelopard</i>「ラクダヒョウ」と呼ばれた（Gk <i>kamēlopárdalis</i>）。
+
+@ lemon ; /ˈlemən/ ; 名 ; レモン
++chain: アラビア語／ペルシア語 <i>līmūn</i> → OF <i>limon</i>
++dbl: lime（果実）
+
+@ safari ; /səˈfɑːri/ ; 名 ; サファリ
++chain: アラビア語 <i>safar</i>「旅」→ スワヒリ語 <i>safari</i> → 英語（1860）
++note: アラビア語がスワヒリ語を経て入った。東アフリカ交易の言語史を映す。
+
+@ sofa ; /ˈsəʊfə/ ; 名 ; ソファ
++chain: アラビア語 <i>ṣuffa</i>「（腰掛け用の）高座」→ トルコ語 → 仏 <i>sofa</i>
+
+@ sultan ; /ˈsʌltən/ ; 名 ; スルタン
++chain: アラビア語 <i>sulṭān</i>「権力、支配者」
++der: sultana（干しぶどう。スルタン用の高級品）
+
+== 2　オランダ語
+
+<b>いつ・なぜ入ったか。</b>三つの波がある。第一に中世の<b>毛織物交易</b>（フランドル）で <i>pack, spool, bale, cambric</i> など。第二に17世紀の<b>海運と絵画</b>で <i>deck, dock, cruise, yacht, skipper, sloop, freight, keel, buoy, easel, landscape, sketch, etch, still life</i>。第三に<b>ニューアムステルダム（＝ニューヨーク）</b>経由の米語で <i>cookie, coleslaw, waffle, boss, stoop, dope, spook, Santa Claus, Yankee</i>。英語がオランダ語から借りた語は、いずれも「英国が実務でオランダに学んだ分野」に集中している。
+
+@ boss ; /bɒs/ ; 名 ; 上司
++chain: 蘭 <i>baas</i>「親方」→ 米語（1806）
++desc: <i>master</i> が奴隷制を連想させたため、アメリカで代替語として広まった。社会的な忌避が語彙選択を動かした例。
+
+@ coleslaw ; /ˈkəʊlslɔː/ ; 名 ; コールスロー
++chain: 蘭 <i>koolsla</i>（<i>kool</i>「キャベツ」＋<i>sla</i>「サラダ」）
++note: 異分析で <i>cold slaw</i> と解され、対語として <i>hot slaw</i> まで作られた。
++see: 異分析
+
+@ decoy ; /ˈdiːkɔɪ/ ; 名 ; おとり
++chain: 蘭 <i>de kooi</i>「その檻」（定冠詞ごと借用）
++note: <i>alcohol</i> の <i>al-</i> と同型の、冠詞ごと借用。
+
+@ dock ; /dɒk/ ; 名 ; ドック
++chain: 中世オランダ語 <i>docke</i>
+
+@ easel ; /ˈiːzl/ ; 名 ; イーゼル
++lit: 「ロバ」
++chain: 蘭 <i>ezel</i>「ロバ」（L <i>asinus</i> から）
++note: 荷を背負わせる道具を動物に喩える発想。<i>horse</i>（作業台）, 独 <i>Bock</i>, 仏 <i>chevalet</i> も同型。
+
+@ skipper ; /ˈskɪpə/ ; 名 ; 船長
++chain: 中世オランダ語 <i>schipper</i>（<i>schip</i>「船」）
++dbl: ship
++note: 英語 <i>ship</i> の同源語が、オランダ語形で職名として再輸入された。
++see: shirt
+
+@ smuggle ; /ˈsmʌɡl/ ; 動 ; 密輸する
++chain: 低地ドイツ語／蘭 <i>smokkelen</i>
+
+@ Santa Claus ; /ˌsæntə ˈklɔːz/ ; 名 ; サンタクロース
++chain: 蘭（方言）<i>Sinterklaas</i>「聖ニコラウス」→ 米語（1773）
++note: ニューアムステルダムのオランダ系住民の習俗が、19世紀ニューヨークの文学（アーヴィング、ムーア）を通じて現在の像に整えられた。
+
+== 3　イタリア語
+
+<b>いつ・なぜ入ったか。</b>ルネサンス期以降、<b>芸術・音楽・建築・銀行・軍事築城</b>の分野でイタリアが先端だったため。音楽用語はほぼ全面的にイタリア語（前章参照）、銀行用語も同様。ほかに <i>balcony, corridor, cupola, fresco, grotto, piazza, portico, studio, umbrella, volcano, malaria, influenza, ghetto, bandit, brigade, casino, carnival, motto, replica, torso, gusto, dilettante, fiasco, graffiti, incognito, propaganda</i>。
+
+@ balcony ; /ˈbælkəni/ ; 名 ; バルコニー
++chain: 伊 <i>balcone</i>（ゲルマン語 *<i>balkon</i>「梁」）
++der: balk, baulk（「梁、障害」）
+
+@ bandit ; /ˈbændɪt/ ; 名 ; 山賊
++chain: 伊 <i>bandito</i>「追放された者」（<i>bandire</i>「布告する、追放する」）
++see: abandon
++der: ban, banish, banal, abandon
+
+@ carnival ; /ˈkɑːnɪvl/ ; 名 ; 謝肉祭
++lit: 「肉よ、さらば」
++chain: 中世ラテン語 <i>carnelevāmen</i>「肉を取り去ること」→ 伊 <i>carnevale</i>
++conf: 通説　<i>carne vale</i>「肉よさらば」という分解は民間語源で、正しくは <i>carnem levāre</i>「肉を除く」。
++der: carnal, carnivore, carnage, incarnate, carrion, charnel
++note: 四旬節の断食に入る前の祝祭。
++see: 第X部
+
+@ ghetto ; /ˈɡetəʊ/ ; 名 ; ゲットー
++conf: 一説　ヴェネツィアの鋳造所 <i>getto</i> のあった地区にユダヤ人居住区が設けられた（1516）ことによるとする説が有力。
++note: 語源に諸説あるが、ヴェネツィア起源であることは確実。
+
+@ volcano ; /vɒlˈkeɪnəʊ/ ; 名 ; 火山
++chain: L <i>Vulcānus</i>「火の神ウゥルカーヌス」→ 伊 <i>volcano</i>
++note: シチリア沖のヴルカーノ島（神の鍛冶場とされた）の名から。<i>vulcanize</i>「加硫する」も同語。
+
+@ fiasco ; /fiˈæskəʊ/ ; 名 ; 大失敗
++lit: 「瓶」
++chain: 伊 <i>far fiasco</i>「瓶を作る＝失敗する」（由来不詳）
++conf: 不確実
++der: flask, flagon（同根）
+
+@ graffiti ; /ɡrəˈfiːti/ ; 名 ; 落書き
++chain: 伊 <i>graffito</i>「引っかき書き」の複数（Gk <i>gráphein</i>）
++see: program
++note: 単数形は <i>graffito</i>。英語では複数形が単数扱いされることが多い。<i>panini</i>, <i>paparazzi</i>, <i>biscotti</i> も同様。
+
+== 4　スペイン語・ポルトガル語
+
+<b>いつ・なぜ入ったか。</b>16世紀以降の<b>新大陸</b>との接触と、19世紀以降の<b>アメリカ西部</b>を通じて。多くはアメリカ先住民語がスペイン語を経由した二段借用である（<i>tomato, chocolate, potato, canoe, hurricane, barbecue, cannibal, hammock, tobacco</i>）。牧畜・西部の語彙も西語（<i>ranch, corral, lasso, rodeo, stampede, bronco, mustang, canyon, mesa, plaza, patio, siesta, vigilante, desperado</i>）。ポルトガル語からは大航海時代の交易語（<i>marmalade, molasses, cobra, veranda, caste, monsoon, mandarin</i>）。
+
+@ alligator ; /ˈælɪɡeɪtə/ ; 名 ; アリゲーター
++chain: 西 <i>el lagarto</i>「そのトカゲ」（L <i>lacertus</i>）
++der: lizard（同語のフランス語経由形）
++note: 定冠詞ごと借用された例。<i>lizard</i> と <i>alligator</i> は同一語。
+
+@ cannibal ; /ˈkænɪbl/ ; 名 ; 人食い
++chain: 西 <i>Caníbales</i>（<i>Caribes</i>「カリブ族」の異形）
++der: Caribbean, cannibal
++note: <i>Caribbean</i> と <i>cannibal</i> が同一の民族名から。コロンブスの記録での揺れが二語に分かれた。
+
+@ canoe ; /kəˈnuː/ ; 名 ; カヌー
++chain: タイノ語 <i>canoa</i> → 西 → 英語（1555）
++note: コロンブスが記録した最初期の新大陸語のひとつ。
+
+@ cargo ; /ˈkɑːɡəʊ/ ; 名 ; 積み荷
++chain: 西 <i>cargo</i>「積載」（後期ラテン語 <i>carricāre</i>「車に積む」）
++der: charge, car, career, cargo, caricature（伊「（誇張を）積み込むこと」）, chariot, carpenter（「車大工」）
++note: <i>charge</i>「積む、負わせる、告発する、充電する」と <i>cargo</i> が同語。
++lvl: ★★
+
+@ hurricane ; /ˈhʌrɪkən/ ; 名 ; ハリケーン
++chain: タイノ語 <i>hurakán</i>（嵐の神）→ 西 <i>huracán</i>
+
+@ ranch ; /rɑːntʃ/ ; 名 ; 牧場
++chain: 西 <i>rancho</i>「（兵の）宿営、小屋」← <i>rancharse</i>「宿営する」（仏 <i>se ranger</i>「並ぶ」）
++der: range, rank, arrange, derange, ranch
++note: <i>rank</i>「列、階級」と <i>ranch</i> が同根。
+
+@ tobacco ; /təˈbækəʊ/ ; 名 ; タバコ
++chain: 西 <i>tabaco</i>（タイノ語で「喫煙の管」または「葉を巻いたもの」）
++conf: 一説
+
+@ veranda ; /vəˈrændə/ ; 名 ; ベランダ
++chain: ヒンディー語 <i>varaṇḍā</i> ← ポルトガル語 <i>varanda</i>「手すり」
++note: ポルトガル語がインドで定着し、そこから英語に入った。往復した借用。
+
+@ monsoon ; /mɒnˈsuːn/ ; 名 ; モンスーン
++chain: アラビア語 <i>mawsim</i>「季節、（航海の）時季」→ ポルトガル語 <i>monção</i>
++note: インド洋交易の季節風。アラビア語→ポルトガル語→英語の典型的な三段経路。
+
+@ mandarin ; /ˈmændərɪn/ ; 名 ; 高級官僚、標準中国語
++chain: サンスクリット <i>mantrin</i>「顧問官」→ マレー語 <i>mantri</i> → ポルトガル語 <i>mandarim</i>
++note: 中国語ではない。中国の官僚を指すためにポルトガル人が用いたインド由来の語。ポルトガル語 <i>mandar</i>「命じる」との連想で語形が変わった。
++conf: 確実

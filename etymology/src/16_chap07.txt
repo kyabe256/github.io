@@ -18,6 +18,8 @@
 | 婉曲 euphemism | 忌避による言い換え | <i>bathroom, pass away</i> |
 | 文法化 grammaticalization | 内容語→機能語 | <i>going to</i> → <i>gonna</i> |
 
+%fig semchange ; 意味変化の五つの型。
+
 ## 7.2　拡大（widening / generalization）
 
 - <i>bird</i> ＜ OE <i>bridd</i>「雛鳥」。鳥一般は <i>fugol</i>（＝ <i>fowl</i>）だったが、両者の担当範囲が入れ替わった。

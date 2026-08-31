@@ -1,0 +1,209 @@
+== 3　情報技術・計算機
+
+<b>この分野はどこから来たか。</b>IT 語彙の作り方は三つある。第一に<b>古い日常語の転用</b>——<i>mouse, web, virus, bug, cookie, cloud, stream, thread, port, bus, memory, window, desktop, folder, file, menu, boot</i>。第二に<b>ギリシア・ラテン語の学術造語</b>——<i>computer, digital, data, algorithm, cyber-, tele-, automatic, protocol, binary, matrix</i>。第三に<b>頭字語と短縮</b>——<i>modem, pixel, bit, codec, laser, radar, wifi</i>。この分野では第一の型が圧倒的に多い。新しい技術ほど、既存の平明な語を比喩として使う傾向がある。<i>desktop</i> も <i>folder</i> も <i>trash</i> も、1980年代の GUI が仕掛けた大規模な比喩体系の一部である。
+
+@ algorithm ; /ˈælɡərɪðəm/ ; 名 ; アルゴリズム
++chain: al-Khwārizmī（9世紀の数学者、ホラズム出身）→ 中世ラテン語 <i>algorismus</i> →（Gk <i>arithmós</i>「数」との混淆で）<i>algorithm</i>
++desc: 『インドの数の計算について』の著者名がそのまま「筆算の手順」の名になった。同じ人物の著書『al-jabr』が <i>algebra</i> の語源。
++der: algebra, logarithm（<i>lógos</i>＋<i>arithmós</i>）
++note: 語尾が <i>-thm</i> なのはギリシア語 <i>arithmós</i> に引かれた民間語源による綴り換え。
++see: 人名由来語索引
++lvl: ★★
+
+@ avatar ; /ˈævətɑː/ ; 名 ; アバター
++lit: 「（神の）降下」
++chain: サンスクリット <i>avatāra</i>（<i>ava-</i>「下へ」＋<i>tṛ-</i>「渡る」）
++desc: ヒンドゥー教で神が地上に姿を取って現れること。1985年のオンラインゲーム、1992年の小説『スノウ・クラッシュ』を経て IT 用語に。
+
+@ bit ; /bɪt/ ; 名 ; ビット
++chain: <i>binary digit</i> の短縮（テューキー、1946）
++der: byte（1956、<i>bite</i> のもじり）, nibble（4ビット）
++note: 同時期に <i>byte</i> が「一口分」として、<i>nibble</i>「かじり」がその半分として作られた。食べる比喩の体系。
+
+@ bug ; /bʌɡ/ ; 名 ; 不具合
++chain: 語源不確実（ME <i>bugge</i>「妖怪」か）
++desc: エジソンが1878年に機械の不調を <i>bugs</i> と呼んだ記録があり、計算機以前から技術者の隠語だった。1947年のハーバード Mark II で実際に蛾が挟まった逸話は、既存語の裏付けとして語られたもので語源ではない。
++conf: 確実
++der: debug（1945頃）, bugbear, bogey
++see: 第X部
+
+@ computer ; /kəmˈpjuːtə/ ; 名 ; 計算機
++chain: L <i>com-</i>＋<i>putāre</i>「数える、剪定する」
++der: count, account, dispute, repute, deputy, impute, amputate（「切り落とす」）
++note: <i>putāre</i> の原義は「（枝を）刈り込んで整える」で、「勘定を整理する」へ転じた。<i>amputate</i>「切断する」が同根なのはこのため。1613年から「計算する人」の意で使われ、機械の意になったのは1897年。
++lvl: ★★★
+
+@ cookie ; /ˈkʊki/ ; 名 ; クッキー
++chain: 蘭 <i>koekje</i>「小さな菓子」（<i>koek</i>「ケーキ」の指小形）
++desc: ニューアムステルダムのオランダ人経由で米語に入った。ウェブの <i>cookie</i>（1994）は、渡すと戻ってくる合い言葉を指す計算機用語 <i>magic cookie</i> から。
++see: 第VIII部 オランダ語
+
+@ cursor ; /ˈkɜːsə/ ; 名 ; カーソル
++lit: 「走る者」
++chain: L <i>currere</i>「走る」→ <i>cursor</i>
++root: *ḱers-「走る」
++der: current, course, occur, recur, concur, incur, excursion, corridor, courier, car, career, discourse, curriculum（「走路」）
++note: 計算尺の可動部を <i>cursor</i> と呼んだのが先で、画面上の記号への転用は1960年代。<i>curriculum</i>「教育課程」も「走るべきコース」。
++see: *ḱers-
++lvl: ★★★
+
+@ cyber ; /ˈsaɪbə/ ; 接頭 ; サイバー
++lit: 「舵取り」
++chain: Gk <i>kybernân</i>「舵を取る」→ <i>kybernḗtēs</i>「舵手」→ <i>cybernetics</i>（ウィーナー、1948）
++der: govern, government（L <i>gubernāre</i> は同語のラテン借用）, cybernetics, cyborg, cyberspace
++note: <i>govern</i>「統治する」と <i>cyber-</i> は同じギリシア語。統治を操船に喩える発想は『国家』以来のもの。
++lvl: ★★
+
+@ data ; /ˈdeɪtə/ ; 名 ; データ
++lit: 「与えられたもの」
++chain: L <i>dare</i>「与える」の過去分詞中性複数 <i>data</i>
++root: *deh₃-「与える」
++der: date（日付。書簡の <i>datum Rōmae</i>「ローマにて与えられた（＝発せられた）」から）, donate, dose, anecdote, antidote, pardon, edition, tradition, betray, render, surrender
++note: <i>date</i>「日付」が「与える」から来るのは、手紙の冒頭の定型句による。ナツメヤシの <i>date</i> は Gk <i>dáktylos</i>「指」で別語。
++see: *deh₃-
++lvl: ★★★
+
+@ digital ; /ˈdɪdʒɪtl/ ; 形 ; デジタルの
++lit: 「指の」
++chain: L <i>digitus</i>「指」→ <i>digitālis</i>
++desc: 指で数える＝離散的な数え方。<i>digit</i>「桁」がまず「指」の意から生まれ、そこから「離散量の」の形容詞ができた。連続量の <i>analog</i>（Gk <i>análogos</i>「比に従う」）と対をなす。
++der: digit, digitalis（ジギタリス、花が指サックの形）
++lvl: ★★★
+
+@ font ; /fɒnt/ ; 名 ; フォント
++lit: 「鋳造したもの」
++chain: 仏 <i>fonte</i>（<i>fondre</i>「溶かす、鋳る」＜ L <i>fundere</i>）
++der: found（鋳造する）, foundry, fuse, confuse, refuse, profuse, diffuse, infuse, futile（「（水が）漏れる」）
++note: 活字を一揃い鋳造したものが一組の <i>font</i>。英国綴りは <i>fount</i>。洗礼盤の <i>font</i>（L <i>fōns</i>「泉」）は別語。
++lvl: ★★
+
+@ program ; /ˈprəʊɡræm/ ; 名 ; プログラム
++lit: 「前に書き記したもの」
++chain: Gk <i>prógramma</i>「公示、布告」（<i>pró</i>＋<i>gráphein</i>）
++der: graph, graphic, photograph, biography, grammar, glamour（<i>grammar</i> の訛りで「魔法の学」→「魅惑」）
++note: <i>grammar</i> と <i>glamour</i> が同一語。中世には読み書きができること自体が魔術と結びつけられた。
++see: glamour
++lvl: ★★★
+
+@ router ; /ˈruːtə/ ; 名 ; ルーター
++see: rout
++note: <i>route</i>「経路」から。同綴の工具 <i>router</i>「ルーター（面取り機）」は <i>rout</i>「掘り起こす」で別語。
+
+@ server ; /ˈsɜːvə/ ; 名 ; サーバー
++see: sergeant
++note: <i>serve</i>「仕える」から。<i>client</i>（L <i>cliēns</i>「庇護を求める者」）と対をなすが、ローマ社会では <i>patrōnus</i>／<i>cliēns</i> が主従関係だったので、語源的には主従が逆転している。
+
+@ spam ; /spæm/ ; 名 ; 迷惑メール
++chain: 商標 SPAM（<i>spiced ham</i> の混成、1937）
++desc: 何を頼んでも SPAM が出てくるモンティ・パイソンのコント（1970）から、Usenet の反復投稿を指す隠語（1980年代）を経て一般化。
++see: 商標由来語
+
+@ web ; /web/ ; 名 ; ウェブ
++chain: OE <i>webb</i>「織物」（<i>wefan</i>「織る」）
++root: *webʰ-「織る」
++der: weave, weft, woof, wasp（「巣を織るもの」）, wafer, waffle
++note: <i>text</i>「文章」がラテン語で「織られたもの」であるのと同じ比喩が、ゲルマン語側でも <i>web</i>「網」として使われている。ハイパーテキストの命名（1989）は偶然だが、二重に的確だった。
++see: text
++lvl: ★★
+
+== 4　金融・経済・商業
+
+<b>この分野はどこから来たか。</b>近代金融の基本語彙はイタリア語である。<i>bank, bankrupt, credit, debit, cash, capital, ducat, florin, lira, net, gross, tariff, risk, contraband, bilan（→balance）</i>。14〜16世紀の北イタリア（フィレンツェ、ジェノヴァ、ヴェネツィア）が複式簿記と為替手形を発明し、その術語が全欧に広まった。これに古英語系の素朴な語（<i>buy, sell, borrow, lend, owe, worth, cheap, price は仏語</i>）と、ラテン語の抽象語（<i>revenue, dividend, interest, invoice, remit</i>）が重なる。
+
+@ bank ; /bæŋk/ ; 名 ; 銀行
++lit: 「（両替商の）台」
++chain: 伊 <i>banca</i>「腰掛け、台」（ゲルマン語 *<i>bankiz</i>）
++der: bench, bank（土手）, banquet（「小さな台＝食卓」）, bankrupt
++note: <i>bankrupt</i> は伊 <i>banca rotta</i>「壊された台」。破産した両替商の台を壊す慣習に由来するとされる。
++conf: 通説
++lvl: ★★★
+
+@ budget ; /ˈbʌdʒɪt/ ; 名 ; 予算
++lit: 「小さな革袋」
++chain: L <i>bulga</i>「革袋」（ケルト語起源）→ OF <i>bougette</i>
++desc: 英国の財務大臣が予算案を入れた鞄を「開く」（<i>to open the budget</i>）と表現したことから、中身の意味になった。現在も予算演説の日に赤い鞄が掲げられる。
++der: bulge, budget
++lvl: ★★
+
+@ capital ; /ˈkæpɪtl/ ; 名 ; 資本、首都、大文字
++lit: 「頭の」
++chain: L <i>caput</i>「頭」→ <i>capitālis</i>
++root: *kaput-「頭」
++der: cattle, chattel, chief, chef, chapter, achieve, cape（岬）, captain, corporal は別, decapitate, precipitate（「頭から落ちる」）, capitulate（「章立てにする＝条件を決めて降伏する」）
++note: <i>cattle</i>（家畜）と <i>chattel</i>（動産）と <i>capital</i>（資本）は同一語の三重語で、いずれも「頭数で数える富」から。富の単位が家畜だった時代の記憶。
++see: doublet（図）, peculiar
++lvl: ★★★
+
+@ cash ; /kæʃ/ ; 名 ; 現金
++lit: 「金箱」
++chain: L <i>capsa</i>「箱」→ 伊 <i>cassa</i>／仏 <i>caisse</i>
++der: case（箱）, capsule, cassette, chassis, encase
++note: 「箱」→「箱の中身」→「現金」。中国の貨幣単位 <i>cash</i>（銭）はタミル語 <i>kāsu</i> 由来の別語で、同音の偶然。
+
+@ credit ; /ˈkredɪt/ ; 名 ; 信用
++lit: 「（心を）置くこと＝信じること」
++chain: L <i>crēdere</i>「信じる」（*<i>ḱred-dʰeh₁-</i>「心を置く」）
++root: *ḱerd-「心」／*dʰeh₁-「置く」
++der: creed, credible, credential, credulous, incredible, miscreant, grant（一説）
++note: 印欧祖語の複合語がそのままラテン語動詞として残った稀な例。ヴェーダ語 <i>śrad-dhā-</i> と完全に対応する。「信用」が経済の基礎語になるのは、それが「心を預ける」ことだからである。
++see: record
++lvl: ★★★
+
+@ dividend ; /ˈdɪvɪdend/ ; 名 ; 配当
++chain: L <i>dīvidere</i>「分ける」→ <i>dīvidendum</i>「分けられるべきもの」
++der: divide, division, individual（「分けられない＝個人」）, device, devise, widow は別
++note: <i>individual</i>「個人」は「これ以上分割できないもの」＝ Gk <i>átomon</i> の訳語。近代の「個人」概念そのものが翻訳から生まれた。
++lvl: ★★
+
+@ finance ; /ˈfaɪnæns/ ; 名 ; 財政
++lit: 「（支払いによる）決着」
++chain: L <i>fīnis</i>「終わり、境界」→ OF <i>finer</i>「決済する」→ <i>finance</i>
++der: fine（罰金／立派な）, final, finish, define, confine, infinite, affinity
++note: <i>fine</i>「罰金」は「（訴訟を）終わらせる金」、<i>fine</i>「立派な」は「仕上げられた」。同一語の二方向。
++lvl: ★★★
+
+@ invoice ; /ˈɪnvɔɪs/ ; 名 ; 請求書
++chain: 仏 <i>envois</i>「送付物（複数）」← <i>envoyer</i>「送る」（L <i>in viam</i>「道に（出す）」）
++der: envoy, voyage, via, obvious, deviate
++note: 複数形が単数と誤解されて <i>invoice</i> という単数形が定着した。TOEIC 頻出語。
++see: 第XI部 TOEIC語彙
++lvl: ★★★
+
+@ economy ; /ɪˈkɒnəmi/ ; 名 ; 経済
++lit: 「家の管理」
++chain: Gk <i>oîkos</i>「家」＋<i>némein</i>「管理する」→ <i>oikonomía</i>
++der: ecology（「家の学」、ヘッケル、1866）, ecumenical（「人の住む全世界の」）, parish（<i>pároikos</i>「隣に住む者」）, villa は別
++note: <i>economy</i> と <i>ecology</i> が同じ <i>oîkos</i>「家」から。前者は家政術、後者は家の学。
++see: number
++lvl: ★★★
+
+@ merchant ; /ˈmɜːtʃənt/ ; 名 ; 商人
++see: mercy
++der: market, commerce, mercenary, merchandise, Mercury
++note: メルクリウスは商業と盗賊と伝令の神。三者が同じ神格に属したことは、古代の交易の性格を映している。
++lvl: ★★
+
+@ premium ; /ˈpriːmiəm/ ; 名 ; 保険料、割増金
++lit: 「先に取るもの＝賞」
++chain: L <i>prae</i>「前に」＋<i>emere</i>「取る、買う」→ <i>praemium</i>
++see: ransom
++der: exempt, example, redeem, prompt, assume, consume, presume, resume, sample
++lvl: ★★
+
+@ profit ; /ˈprɒfɪt/ ; 名 ; 利益
++chain: L <i>prōficere</i>「前へ進む、役立つ」（<i>prō</i>＋<i>facere</i>）
++der: proficient, profit, benefit, factory, fact, affect, effect, perfect, defect, difficult
++note: <i>facere</i>「なす」系はラテン語動詞のうち最大の語族を英語に残した。
++lvl: ★★★
+
+@ revenue ; /ˈrevənjuː/ ; 名 ; 歳入
++lit: 「戻ってくるもの」
++chain: 仏 <i>revenir</i>「戻る」の過去分詞 <i>revenue</i>
++see: venue
++lvl: ★★
+
+@ wealth ; /welθ/ ; 名 ; 富
++chain: ME <i>welthe</i>（<i>wele</i>「幸福」＋<i>-th</i>、<i>health</i> に倣った造語）
++der: well, weal, commonwealth（「共通の福利」）
++note: 「幸福」がまず「富」に狭まった。<i>commonwealth</i> は原義の「公共の福利」を保つ。
++lvl: ★★

@@ -188,3 +188,299 @@
 @ bizarre ; /bɪˈzɑː/ ; 形 ; 奇妙な
 +chain: 伊 <i>bizzarro</i>「気短な、風変わりな」→ 仏 <i>bizarre</i>
 +note: バスク語 <i>bizar</i>「ひげ」に由来し、ひげ面のバスク兵が異様に見えたから、という説が広く流布したが、現在では支持されない。イタリア語内での発生とみられる。
+
+@ bachelor ; /ˈbætʃələ/ ; 名 ; 独身男性、学士
++chain: 中世ラテン語 <i>baccalāris</i>「若い従士」（語源不確実）→ OF <i>bacheler</i>
++conf: 不確実　ケルト語起源説、<i>bacca laurea</i>「月桂樹の実」説などがあるが確定しない
++desc: 「一人前でない若い騎士」→「見習い」→「（大学の）最下位の学位」→「未婚の男」。
++note: <i>bachelor's degree</i>「学士号」と「独身」が同語であるのは、中世大学では学生が独身の若者だったことによる。
+
+@ bacteria ; /bækˈtɪəriə/ ; 名 ; 細菌
++lit: 「小さな杖」
++chain: Gk <i>baktḗrion</i>（<i>báktron</i>「杖」の縮小形）→ 近代ラテン語（1838年エーレンベルク）
++der: bacillus（L「小さな杖」＝同義のラテン語版）
++note: 桿菌の棒状の形による命名。単数は <i>bacterium</i>。
+
+@ bald ; /bɔːld/ ; 形 ; 禿げた
++chain: ME <i>balled</i>「白い斑のある」（*bʰel-「輝く・白い」）
++der: piebald（「かささぎ斑の」）, bald eagle（頭が白い鷲。禿げてはいない）
++note: <i>bald eagle</i>「ハクトウワシ」は「白頭の鷲」で、原義に忠実。
+
+@ bandage ; /ˈbændɪdʒ/ ; 名 ; 包帯
++chain: 仏 <i>bande</i>「帯」（ゲルマン語 *bindan「縛る」）+ <i>-age</i>
++der: band, bind, bond, bundle, bandana（ヒンディー語、同根）
++note: 本来語 <i>bind</i>「縛る」と同根。
+
+@ bankrupt ; /ˈbæŋkrʌpt/ ; 形 ; 破産した
++lit: 「壊された台」
++chain: 伊 <i>banca rotta</i>「壊された両替台」→ 仏 <i>banqueroute</i> → 英語
++der: bank, bench／rupture, erupt, corrupt, abrupt, route
++note: 支払い不能になった両替商の台が壊されたことによる。
+
+@ banquet ; /ˈbæŋkwɪt/ ; 名 ; 宴会
++lit: 「小さなベンチ」
++chain: 伊 <i>banchetto</i>（<i>banco</i>「台、ベンチ」の縮小形）→ 仏 <i>banquet</i>
++der: bank, bench, banking
++note: もとは食卓のそばの小さな腰掛けでの軽食。転じて豪華な宴会へ。
+
+@ bargain ; /ˈbɑːɡɪn/ ; 名・動 ; 取引（する）
++chain: OF <i>bargaignier</i>「値切る」（後期ラテン語 <i>barcāniāre</i>、語源不確実）
++conf: 不確実
++note: <i>bargain</i>「掘り出し物」の意味は16世紀から。
+
+@ barometer ; /bəˈrɒmɪtə/ ; 名 ; 気圧計
++chain: Gk <i>báros</i>「重さ」+ <i>métron</i>「尺度」（1665年ボイルの命名とされる）
++der: baritone（「重い音」）, barium, isobar, baryon／gravity（ラ系の同根語）
++note: 「空気の重さを測るもの」。トリチェリの実験（1643）が背景にある。
+
+@ barrier ; /ˈbæriə/ ; 名 ; 障壁
++chain: 俗ラテン語 <i>barra</i>「棒」→ OF <i>barriere</i>
++der: bar, barrel, barricade, embarrass（「棒でふさぐ」）, barrister（「（法廷の）柵の内側の弁護士」）
++note: <i>barrister</i>「法廷弁護士」は法廷の柵（bar）の内に立つ資格を持つ者。<i>the Bar</i>「弁護士界」も同じ。
+
+@ basement ; /ˈbeɪsmənt/ ; 名 ; 地下室
++chain: Gk <i>básis</i>「歩み、土台」→ L <i>basis</i> → 仏 → 英語
++der: base, basis, basic, acrobat, diabetes, come（本来語の同根語 *gʷem-）
++note: <i>base</i>「基礎」と <i>come</i>「来る」が同根であるのは、どちらも「歩む」から。
+
+@ battery ; /ˈbætəri/ ; 名 ; 電池、砲台、暴行
++chain: L <i>battuere</i>「打つ」→ 仏 <i>batterie</i>
++desc: 「打つこと」→「暴行」（法律用語 <i>assault and battery</i>）→「（打ち並べた）砲の一群」→「（並べた電池の）組」。
++der: batter, battle, combat, debate, abate, rebate
++note: 「電池」の意味はフランクリンが1748年、ライデン瓶を並べたものを砲台に見立てて名づけた。
+
+@ beacon ; /ˈbiːkən/ ; 名 ; かがり火、標識
++chain: OE <i>bēacen</i>「しるし」
++der: beckon（「合図する」）
++note: <i>beckon</i>「手招きする」と同根。もとは「信号」一般。
+
+@ beard ; /bɪəd/ ; 名 ; あごひげ
++root: *bʰardʰeh₂-
++cog: L <i>barba</i>, OCS <i>brada</i>, Lith <i>barzdà</i>
++der: barber（ラ経由）, barb（「かかり」）, rebarbative
++note: 本来語 <i>beard</i> とラテン系 <i>barber</i>「理髪師」が同根。
+
+@ beast ; /biːst/ ; 名 ; 獣
++chain: L <i>bēstia</i>「獣」→ OF <i>beste</i> → ME
++der: bestial, bestiary
++note: 仏語 <i>bête</i> の曲折アクセント（ˆ）は失われた s の跡（第9章）。中英語では <i>deer</i>（＝動物）を押しのけたが、後に本来語 <i>animal</i> ならぬラテン語 <i>animal</i> に押された。
+
+@ beauty ; /ˈbjuːti/ ; 名 ; 美
++chain: L <i>bellus</i>「美しい」→ OF <i>beauté</i>
++der: beautiful, belle, embellish, beau, bello（伊）
++note: <i>bellus</i> は <i>bonus</i>「よい」の縮小形とされる。<i>bellum</i>「戦争」とは別語。
+
+@ beef ; /biːf/ ; 名 ; 牛肉
++chain: L <i>bōs, bovis</i>「牛」→ OF <i>boef</i> → ME
++dbl: <i>cow</i>（本来語）
++der: bovine, bugle, butter（ギ「牛のチーズ」）, boustrophedon
++note: 家畜は英語、その肉はフランス語という有名な対（第5章）。
+
+@ beetle ; /ˈbiːtl/ ; 名 ; 甲虫
++lit: 「噛むもの」
++chain: OE <i>bitela</i>（<i>bītan</i>「噛む」）
++der: bite, bit, bitter（「噛むような」）, bait, abet
++note: <i>The Beatles</i> の綴りは <i>beat</i> との掛詞。
+
+@ beg ; /beɡ/ ; 動 ; 乞う
++chain: <i>beggar</i> からの逆成（中英語）
++der: beggar, beggarly
++note: 名詞が先で動詞が後という逆成の代表例（第6章）。<i>beggar</i> の語源自体は不確実。
+
+@ behalf ; /bɪˈhɑːf/ ; 名 ; 味方、利益
++chain: OE <i>be healfe</i>「〜の側に」
++der: half, halve
++note: <i>on behalf of</i>「〜を代表して」は「〜の側に立って」。<i>half</i>「半分」と同語。
+
+@ belfry ; /ˈbelfri/ ; 名 ; 鐘楼
++chain: 古フランク語 *<i>bergfrid</i>「守りの塔」→ OF <i>berfrei</i> → ME
++note: <i>bell</i>「鐘」とは<b>無関係</b>。もとは移動式の攻城櫓で、鐘を吊るす塔に転用されたことで <i>bell</i> に引かれ綴りが変わった（民間語源、第1章）。
+
+@ benefit ; /ˈbenɪfɪt/ ; 名 ; 利益
++lit: 「よい行い」
++chain: L <i>bene</i>「よく」+ <i>facere</i>「なす」→ <i>benefactum</i>
++der: benefactor, beneficial, beneficiary, benediction, benevolent, benign
++note: <i>benefit of the doubt</i>「疑わしきは罰せず」の <i>benefit</i> は法律用語の「恩典」。
+
+@ berry ; /ˈberi/ ; 名 ; 液果
++chain: OE <i>berie</i>（語源不確実）
++note: <i>strawberry</i>「イチゴ」の <i>straw-</i> の由来は不明。「藁」説、「（ランナーが）撒き散らされた」説がある。
+
+@ betray ; /bɪˈtreɪ/ ; 動 ; 裏切る
++lit: 「引き渡す」
++chain: <i>be-</i>（強意）+ OF <i>traïr</i>（L <i>trādere</i>「引き渡す」）
++der: traitor, treason, tradition（同語源の二重語）, betrayal
++note: <i>tradition</i>「伝統」と <i>treason</i>「反逆」は同じ「引き渡し」。何を引き渡すかで正反対になる。
+
+@ beverage ; /ˈbevərɪdʒ/ ; 名 ; 飲料
++chain: L <i>bibere</i>「飲む」→ <i>biberāticum</i> → OF <i>bevrage</i>
++der: imbibe, bib（よだれかけ）, bibulous, potion, poison（同語根 *peh₃-）
++note: <i>bib</i>「よだれかけ」と同語源。
+
+@ bible ; /ˈbaɪbl/ ; 名 ; 聖書
++lit: 「（パピルスの）書物」
++chain: Gk <i>bíblos</i>「パピルスの内皮、書物」（フェニキアの港ビブロスの名から）→ <i>ta biblía</i>「諸書」
++der: bibliography, bibliophile, bibliotheca
++note: ギリシア語では複数「諸書」だったものが、ラテン語で単数と解され、一冊の書物の名になった。
+
+@ bicycle ; /ˈbaɪsɪkl/ ; 名 ; 自転車
++chain: L <i>bi-</i>「二」+ Gk <i>kýklos</i>「輪」（1868年、仏語から）
++der: cycle, cyclone, encyclopedia, wheel（本来語の同根語）
++note: ラテン語とギリシア語の混成語（hybrid）。
+
+@ bill ; /bɪl/ ; 名 ; 請求書、法案、くちばし
++desc: 三つの別語。（1）請求書・法案＝中世ラテン語 <i>bulla</i>「印章つき文書」。（2）くちばし＝OE <i>bile</i>。（3）鉾＝OE <i>bill</i>。
++der: (1) bulletin, bull（教皇勅書）, boil は別
++note: <i>bill</i>「紙幣」（米）も（1）の系統で「証書」から。
+
+@ biscuit ; /ˈbɪskɪt/ ; 名 ; ビスケット
++lit: 「二度焼いた」
++chain: L <i>bis</i>「二度」+ <i>coctus</i>「焼いた」→ OF <i>bescuit</i>
++der: cook, kitchen, cuisine, precocious, apricot（<i>coquere</i> 系）
++note: 保存のため二度焼いた航海用の堅パンが原義。イタリア語 <i>biscotto</i> も同じ。
+
+@ blame ; /bleɪm/ ; 動 ; 非難する
++chain: Gk <i>blasphēmeîn</i>「冒瀆する」→ 俗ラテン語 <i>blastēmāre</i> → OF <i>blasmer</i>
++dbl: <i>blaspheme</i>（学術借用形）
++note: <i>blame</i>「非難する」と <i>blaspheme</i>「冒瀆する」は同語源の二重語。
+
+@ blanket ; /ˈblæŋkɪt/ ; 名 ; 毛布
++lit: 「白い（布）」
++chain: OF <i>blanchet</i>（<i>blanc</i>「白い」の縮小形）
++der: blank, blanch, black（同語根 *bʰel-）
++note: 白い毛織物が原義。<i>blanket statement</i>「一括りの言明」は「全体を覆う」から。
+
+@ blast ; /blɑːst/ ; 名 ; 突風、爆発
++chain: OE <i>blǣst</i>「吹くこと」
++der: blow, bladder, blister（同語根 *bʰleh₁-「吹く」）
++note: <i>blast furnace</i>「溶鉱炉」は「送風炉」。
+
+@ blizzard ; /ˈblɪzəd/ ; 名 ; 猛吹雪
++chain: 語源不明（1859年の米国が初出。1880年の大寒波で一般化）
++conf: 不確実
++note: 擬音とする説、ドイツ語 <i>Blitz</i>「稲妻」との関連説があるが確証はない。
+
+@ blood ; /blʌd/ ; 名 ; 血
++chain: OE <i>blōd</i> ← PGmc *blōþam
++der: bleed（i-ウムラウト形）, bless（「血で聖別する」）, bloody
++note: 印欧祖語の「血」*h₁ésh₂r̥（L <i>sanguis</i>、Gk <i>haîma</i> は別語）はゲルマン語に残らず、独自の語に置き換わった。
+
+@ blush ; /blʌʃ/ ; 動 ; 赤面する
++chain: OE <i>blyscan</i>「赤く輝く」（*bʰel-「輝く」）
++der: blaze, blush, black, blank, flame（ラ系）
++note: <i>at first blush</i>「一見したところ」の <i>blush</i> は「一瞥」の別語源とする説もある。
+
+@ board ; /bɔːd/ ; 名 ; 板、委員会、食事
++chain: OE <i>bord</i>「板、（船の）舷」
++desc: 「板」→「食卓」→「食卓を囲む人々＝委員会」「食事」。
++der: aboard, overboard, starboard（「舵の側」）, larboard, border は別
++note: <i>board and lodging</i>「食事付きの宿」、<i>board of directors</i>「取締役会」がすべて「板」に遡る。
+
+@ boot ; /buːt/ ; 名・動 ; 長靴、起動する
++desc: 二つの別語。（1）長靴＝OF <i>bote</i>（語源不確実）。（2）<i>to boot</i>「おまけに」＝OE <i>bōt</i>「利益、償い」。
++note: 計算機の <i>boot</i>「起動」は <i>bootstrap</i>「靴紐」から。「自分の靴紐を引っ張って身を持ち上げる」という不可能事の比喩が、「自力で立ち上がる」の意味で1950年代に使われた。
+
+@ border ; /ˈbɔːdə/ ; 名 ; 境界
++chain: ゲルマン語 *burd「へり」→ OF <i>bordure</i>
++der: board（船の舷）, bordello は別
++note: <i>board</i>「板」とは近縁だが別語とされる。
+
+@ bottle ; /ˈbɒtl/ ; 名 ; 瓶
++chain: 後期ラテン語 <i>butticula</i>（<i>buttis</i>「樽」の縮小形）→ OF <i>boteille</i>
++der: butt（樽）, butler（「瓶を扱う者」＝執事）, buttery（食料室）
++note: <i>butler</i>「執事」は「酒瓶係」が原義。
+
+@ boulevard ; /ˈbuːləvɑːd/ ; 名 ; 大通り
++lit: 「城塞の稜堡」
++chain: 中期オランダ語 <i>bolwerc</i>「城壁」→ 仏 <i>boulevard</i>
++dbl: <i>bulwark</i>（英語に直接入った形）
++note: 取り壊した城壁の跡地が並木道になったため、「城壁」の語が「大通り」を意味するようになった。<i>bulwark</i>「防壁」と同語源。
+
+@ bourgeois ; /ˈbʊəʒwɑː/ ; 名・形 ; 中産階級（の）
++lit: 「城市の住人」
++chain: OF <i>borjois</i>（<i>borc</i>「城市」＜ ゲルマン語 *burg）
++der: borough, burgh, -bury, burgher, burglar は別
++note: 英語の <i>borough</i>「自治都市」と同根。マルクス主義用語としての用法は19世紀から。
+
+@ bread ; /bred/ ; 名 ; パン
++chain: OE <i>brēad</i>「かけら、パン」
++desc: 古英語では <i>hlāf</i>（＝ <i>loaf</i>）が「パン」の一般語で、<i>brēad</i> は「ひとかけら」だった。中英語期に立場が入れ替わった。
++der: brew(?), broth(?)／loaf, lord, lady（<i>hlāf</i> 系）
++note: <i>lord</i>「パンの番人」・<i>lady</i>「パンをこねる者」に古い体系が残る。
+
+@ breeze ; /briːz/ ; 名 ; そよ風
++chain: 西・ポルトガル語 <i>briza</i>「北東の風」→ 英語（16世紀）
++note: 大航海時代に船乗りが持ち帰った語。<i>trade winds</i>「貿易風」の <i>trade</i> は「一定の進路」が原義。
+
+@ bride ; /braɪd/ ; 名 ; 花嫁
++chain: OE <i>brȳd</i> ← PGmc *brūdiz（語源不確実）
++der: bridal（<i>brȳd-ealu</i>「花嫁の酒宴」）, bridegroom
++note: <i>bridal</i> は本来「花嫁の宴」という名詞で、-al がラテン語系接尾辞と誤解されて形容詞化した。<i>bridegroom</i> の -groom は <i>guma</i>「男」の民間語源的変形（第3章）。
+
+@ bridge ; /brɪdʒ/ ; 名 ; 橋
++chain: OE <i>brycg</i> ← PGmc *brugjō
++cog: 独 <i>Brücke</i>, ON <i>bryggja</i>「桟橋」
++note: カードゲームの <i>bridge</i> は別語源（トルコ語・ロシア語説がある）。
+
+@ brief ; /briːf/ ; 形・名 ; 短い、要約
++root: *mreǵʰu-「短い」
++chain: L <i>brevis</i>「短い」→ OF <i>brief</i>
++der: brevity, abbreviate, abridge, breve, brassiere は別
++note: <i>briefcase</i>「書類鞄」の <i>brief</i> は法律用語「準備書面」。
+
+@ brilliant ; /ˈbrɪliənt/ ; 形 ; 輝かしい
++chain: 伊 <i>brillare</i>「輝く」（L <i>bēryllus</i>「緑柱石」か）→ 仏 <i>brillant</i>
++conf: 一説　宝石名 <i>beryl</i> 由来説が有力だが確定しない
++der: beryl, brilliance
++note: ダイヤモンドの「ブリリアントカット」も同語。
+
+@ broadcast ; /ˈbrɔːdkɑːst/ ; 動・名 ; 放送（する）
++lit: 「（種を）広く撒く」
++chain: <i>broad</i> + <i>cast</i>（農業用語、18世紀）
++desc: 種を手で広く撒く播種法を指す農業語だったものを、1920年代のラジオが比喩として採用した。
++note: <i>podcast</i>（iPod+broadcast）, <i>webcast</i> はこの語からの混成。
+
+@ brown ; /braʊn/ ; 形 ; 茶色の
++root: *bʰerH-「明るい、茶色」
++chain: OE <i>brūn</i>
++der: bear（「褐色のもの」＝熊の忌み名）, beaver（「褐色の動物」）, bruin
++note: 熊を <i>bear</i>「褐色のもの」と呼ぶのは忌み言葉。本来の印欧語形は失われた（第7章）。
+
+@ buffalo ; /ˈbʌfələʊ/ ; 名 ; 水牛
++chain: Gk <i>boúbalos</i>「アンテロープ」→ L <i>būfalus</i> → ポルトガル語 <i>búfalo</i>
++der: beef, bovine, cow（同語根 *gʷōus）
++note: 北米のバイソンを <i>buffalo</i> と呼ぶのは誤用が定着したもの。
+
+@ bully ; /ˈbʊli/ ; 名・動 ; いじめっ子、いじめる
++chain: 中期オランダ語 <i>boele</i>「恋人、兄弟」
++desc: 16世紀には「良い仲間、恋人」という<b>肯定的な</b>語だった。「威張る者」→「いじめっ子」へ悪化した（第7章）。
++note: <i>bully for you!</i>「でかしたぞ」に古い肯定的用法が残る。
+
+@ burglar ; /ˈbɜːɡlə/ ; 名 ; 強盗
++chain: 中世ラテン語 <i>burglātor</i>（語源不確実。<i>burgus</i>「城市」＋ <i>lātrō</i>「盗人」か）
++conf: 不確実
++der: burgle（逆成による動詞）, burglary
++note: 動詞 <i>burgle</i>（1872）は名詞からの逆成。米語では <i>burglarize</i>。
+
+@ butcher ; /ˈbʊtʃə/ ; 名 ; 肉屋
++lit: 「山羊を屠る者」
++chain: OF <i>bouchier</i>（<i>bouc</i>「雄山羊」＜ ケルト語またはゲルマン語）
++der: buck（雄鹿・雄山羊。本来語の同根語か）
++note: 特定の家畜（山羊）の名が、肉屋一般を指すようになった（意味の拡大、第7章）。
+
+@ butter ; /ˈbʌtə/ ; 名 ; バター
++lit: 「牛のチーズ」
++chain: Gk <i>boútȳron</i>（<i>boûs</i>「牛」+ <i>tȳrós</i>「チーズ」）→ L <i>būtȳrum</i> → OE <i>butere</i>
++der: beef, bovine, cow（<i>boûs</i> 系）, butyric
++note: 大陸期のラテン語借用（第5章の第0期）。ギリシア人はバターを使わず、遊牧民の食品として記述した。
+
+@ button ; /ˈbʌtn/ ; 名 ; ボタン
++chain: OF <i>boton</i>「芽、ボタン」（<i>bouter</i>「突き出す」＜ ゲルマン語 *bautan「打つ」）
++der: butt（突く）, abut, rebut, beat（本来語の同根語か）
++note: 「（枝から）突き出た芽」が原義。花の <i>bud</i> も関連するとされる。
+
+@ buy ; /baɪ/ ; 動 ; 買う
++chain: OE <i>bycgan</i> ← PGmc *bugjan（語源不確実、ゲルマン語独自）
++der: bought, buyer
++note: ラテン語 <i>emere</i>、ギリシア語 <i>ōneîsthai</i> とは無関係で、ゲルマン語独自の語。「買う」の語が語族間で一致しないのは、交易語彙が新しい層に属することを示す。
+

@@ -29,13 +29,6 @@
 +desc: レビ記16章の贖罪日の儀式で、民の罪を負わせて荒野に放つ山羊。ヘブライ語 <i>ʿazāzēl</i> を「（罪を負って）逃れる山羊」と解した訳語だが、現在では <i>Azazel</i> は悪霊の固有名とする説が有力。
 +note: 誤訳から生まれた語が英語の重要語彙になった例。
 
-@ school ; /skuːl/ ; 名 ; 学校
-+lit: 「余暇」
-+chain: Gk <i>skholḗ</i>「余暇、閑暇」→「余暇に行う討論」→「講義」→「学派、学校」→ L <i>schola</i> → OE <i>scōl</i>
-+desc: 労働を免れた者だけが学問をなしえた古代社会の反映。ラテン語 <i>lūdus</i>「遊び」も「学校」を意味した。
-+der: scholar, scholastic, scholium
-+note: 魚の <i>school</i>「群れ」は別語源（中期オランダ語 <i>schole</i>「群れ」＝英 <i>shoal</i>）。
-
 @ shampoo ; /ʃæmˈpuː/ ; 名・動 ; シャンプー
 +lit: 「押せ」
 +chain: ヒンディー語 <i>cāmpo</i>（<i>cāmpnā</i>「押す、揉む」の命令形）→ 英語（1762）
@@ -46,10 +39,6 @@
 +chain: 人名 Étienne de Silhouette（1709–67、フランス財務総監）
 +desc: 七年戦争後の財政難で極端な緊縮策をとり不評を買った。「シルエット風」は「安上がりの、間に合わせの」を意味する流行語となり、安価な影絵肖像の名として定着した。
 +note: 本人が影絵の趣味を持っていたからだ、とする説もある。
-
-@ sincere ; /sɪnˈsɪə/ ; 形 ; 誠実な
-+chain: L <i>sincērus</i>「純粋な、混じり気のない」
-+note: 「<i>sine cērā</i>（蝋なしで）＝ひび割れを蝋で埋めない誠実な彫刻家」という有名な説は、語形成の点で成り立たない民間語源である。第二要素の語源は不確実で、<i>crēscere</i>「育つ」に関連づける説がある。
 
 @ sinister ; /ˈsɪnɪstə/ ; 形 ; 不吉な
 +lit: 「左の」
@@ -63,12 +52,6 @@
 +desc: 10世紀ごろ、神聖ローマ帝国の東方拡大で多数のスラヴ人が捕虜として売られたため、民族名が「奴隷」を意味するようになった。
 +der: Slav, Slavic, Yugoslavia
 +note: 民族名が普通名詞化した重い例。逆に <i>frank</i>（フランク族）は「自由な」を意味するようになった。
-
-@ sponsor ; /ˈspɒnsə/ ; 名 ; 保証人、後援者
-+lit: 「（神に）誓う者」
-+chain: L <i>spondēre</i>「厳かに約束する」→ <i>spōnsor</i>
-+der: spouse（「誓約された者」）, espouse, respond, response, correspond, despondent
-+note: <i>spouse</i>「配偶者」が「約束された人」であるのは、婚約が誓約であったから。
 
 @ starve ; /stɑːv/ ; 動 ; 飢える
 +lit: 「死ぬ」
@@ -87,12 +70,6 @@
 @ sterling ; /ˈstɜːlɪŋ/ ; 形 ; 純良な、英貨の
 +chain: 語源に諸説。OE <i>steorra</i>「星」+ <i>-ling</i>（初期ノルマン銀貨に星の刻印があった）とする説が有力。
 +note: 「東方の人（Easterling）＝ハンザ商人の貨幣」からとする説は、記録上の裏づけが乏しい。
-
-@ stigma ; /ˈstɪɡmə/ ; 名 ; 汚名
-+lit: 「刺青、焼き印」
-+chain: Gk <i>stízein</i>「刺す」→ <i>stígma</i>「刺した印」→ L
-+desc: 古代ギリシア・ローマで奴隷や犯罪者に押した焼き印。<i>stigmata</i>「聖痕」（キリストの傷の再現）は宗教的用法。
-+der: stick, stitch, sting（本来語の同根語）, instigate, distinguish, extinguish, style は別
 
 @ sycophant ; /ˈsɪkəfænt/ ; 名 ; おべっか使い
 +lit: 「無花果を見せる者」
@@ -132,16 +109,10 @@
 +der: salary, salad, sauce, sausage, salami, saline, halogen（「塩を生む」）, halite
 +note: <i>sauce</i>, <i>salad</i>, <i>sausage</i>, <i>salsa</i> がすべて「塩」から。塩漬けが基本的な保存法だった時代の語彙。
 
-
 @ salon ; /ˈsælɒn/ ; 名 ; 客間、サロン
 +chain: 伊 <i>salone</i>「大広間」（<i>sala</i>「広間」＜ ゲルマン語 *sal-）→ 仏 <i>salon</i>
 +der: saloon（同語の別綴り）, hall（本来語の同根語か）
 +note: <i>saloon</i>（酒場）と <i>salon</i>（社交場）は同一語の綴り分化。アメリカで前者が酒場に特化した。
-
-@ satellite ; /ˈsætəlaɪt/ ; 名 ; 衛星
-+lit: 「随員、護衛」
-+chain: L <i>satelles, satellitis</i>「護衛、取り巻き」→ ケプラーが1611年、木星の衛星に転用
-+note: 人工衛星の意味は1936年（SFでの用法）、実用は1957年のスプートニク以降。
 
 @ scandal ; /ˈskændl/ ; 名 ; 醜聞
 +lit: 「（罠の）仕掛け棒、つまずきの石」
@@ -190,13 +161,6 @@
 +desc: 未婚の女性が家で糸を紡いだことから、法律文書で未婚女性の身分を示す語となり、やがて「行き遅れ」の含みを帯びた（悪化、第7章）。
 +note: 接尾辞 <i>-ster</i> はもと女性形（<i>webster</i>「女の織り手」→ 姓 Webster、<i>brewster</i>, <i>baxter</i>「女のパン焼き」→ 姓 Baxter）。後に性の区別を失い、<i>gangster</i>, <i>trickster</i>, <i>youngster</i> のように用いられるようになった。
 
-@ stamina ; /ˈstæmɪnə/ ; 名 ; 体力
-+lit: 「（運命の女神が紡ぐ）縦糸」
-+chain: L <i>stāmen</i>「縦糸」の複数 <i>stāmina</i>
-+desc: ローマの運命の三女神（パルカエ）が紡ぐ命の糸。「生命力の根本」の比喩から「持久力」へ。
-+der: stamen（植物の雄しべ）
-+note: 複数形が英語で単数化した例（<i>agenda</i>, <i>data</i> と同型）。
-
 @ sullen ; /ˈsʌlən/ ; 形 ; むっつりした
 +lit: 「ひとりの」
 +chain: L <i>sōlus</i>「ひとりの」→ アングロ・フランス語 <i>sulein</i>
@@ -213,3 +177,288 @@
 +desc: 北欧語の「雲」が英語で「空」に転じた。古英語の <i>heofon</i>（＝ <i>heaven</i>）は宗教的な意味に特化した。
 +der: scum(?), obscure（ラテン系の同根語 <i>obscūrus</i>「覆われた」）
 +note: <i>sky</i>, <i>skin</i>, <i>skirt</i>, <i>skill</i>, <i>scatter</i> など sk- 語の多くは北欧語起源（第5章）。
+
+@ salvage ; /ˈsælvɪdʒ/ ; 名 ; 救難
++chain: L <i>salvus</i>「無事な」→ <i>salvāre</i>「救う」
++der: save, safe, salvation, salute, salubrious, sage は別
++note: 海難救助の報酬を指す海事法の語から一般化。
++lvl: ★★
+
+@ satellite ; /ˈsætəlaɪt/ ; 名 ; 衛星
++lit: 「護衛、取り巻き」
++chain: L <i>satelles</i>（属格 <i>satellitis</i>）「随員」（エトルリア語起源か）
++desc: ケプラーが1611年に木星の月をこう呼んだ。「人工衛星」は1936年の SF、実物は1957年のスプートニク。
+
+@ school ; /skuːl/ ; 名 ; 学校
++lit: 「余暇」
++chain: Gk <i>skholḗ</i>「余暇、閑暇にする議論」→ L <i>schola</i> → OE <i>scōl</i>
++desc: 生活の必要から解放された時間にこそ学問がある、というギリシアの理念。<i>scholar</i>, <i>scholastic</i>, 独 <i>Schule</i>, 露 <i>школа</i>。
++note: 魚の <i>school</i>「群れ」は蘭 <i>school</i>「群れ」で別語（<i>shoal</i> と同源）。
++see: leisure
++lvl: ★★★
+
+@ science ; /ˈsaɪəns/ ; 名 ; 科学
++chain: L <i>scīre</i>「知る」→ <i>scientia</i>
++root: *skei-「切り分ける」
++der: conscience, conscious, omniscient, prescience, nice, plebiscite／同根 shed, sheath, ski, schism, schedule, schizophrenia
++note: 「切り分ける」＝「区別する」が「知る」の原イメージ。<i>scientist</i> は1834年にヒューウェルが <i>artist</i> に倣って造った新しい語で、それ以前は <i>natural philosopher</i>。
++see: nice, *skei-
++lvl: ★★★
+
+@ scruple ; /ˈskruːpl/ ; 名 ; ためらい
++lit: 「小さな鋭い石」
++chain: L <i>scrūpulus</i>（<i>scrūpus</i>「鋭い石」の指小形）
++note: 靴に入った小石のように心に引っかかるもの。キケロの比喩が語義として定着した。
++der: scrupulous, unscrupulous
++lvl: ★★
+
+@ secretary ; /ˈsekrətri/ ; 名 ; 秘書、長官
++lit: 「秘密を託された者」
++chain: L <i>sēcernere</i>「選り分ける」→ <i>sēcrētus</i>「隔てられた」→ 中世ラテン語 <i>sēcrētārius</i>
++der: secret, secrete, discern, discreet, discrete, certain, concern, crime, crisis, critic（Gk <i>krínein</i> 同根）
++note: <i>Secretary of State</i>「国務長官」に「機密を扱う者」の原義が残る。<i>discreet</i>（口が堅い）と <i>discrete</i>（別々の）は同一語の綴り分け。
++see: *krei-
++lvl: ★★★
+
+@ senate ; /ˈsenət/ ; 名 ; 上院、元老院
++lit: 「長老の集まり」
++chain: L <i>senex</i>「老人」→ <i>senātus</i>
++root: *sen-「古い」
++der: senior, sir, sire, seigneur, monsieur, senile, senescence
++cog: OE <i>sinc</i> は別, ゴート語 <i>sinista</i>「最年長の」
++note: <i>sir</i>, <i>monsieur</i>, <i>señor</i> はすべて <i>senior</i>「より年長の」の磨滅形。
++lvl: ★★
+
+@ sergeant ; /ˈsɑːdʒənt/ ; 名 ; 軍曹
++lit: 「仕える者」
++chain: L <i>servīre</i>「仕える」→ <i>serviēns</i> → OF <i>sergent</i>
++der: serve, service, servant, sergeant, dessert（「食卓を片づける」）, deserve, subservient
++note: 中世には「従者」で、階級名になったのは近代。<i>servant</i> と <i>sergeant</i> は同一語の二重語。
+
+@ sheriff ; /ˈʃerɪf/ ; 名 ; 保安官
++lit: 「シャイア（州）の長」
++chain: OE <i>scīr</i>「州」＋<i>gerēfa</i>「長官」→ <i>scīrgerēfa</i>
++note: 純ゲルマン語の官職名がノルマン征服後も残った稀な例。<i>reeve</i> は単独でも残る。<i>-shire</i>（Yorkshire）は同じ <i>scīr</i>。
+
+@ shrapnel ; /ˈʃræpnl/ ; 名 ; 榴散弾の破片
++chain: Henry Shrapnel（英陸軍少将、1761–1842）
++note: 人名由来語。同型に <i>boycott</i>, <i>guillotine</i>, <i>silhouette</i>, <i>saxophone</i>, <i>diesel</i>, <i>mackintosh</i>, <i>sandwich</i>, <i>cardigan</i>, <i>nicotine</i>。
++see: 人名・地名由来語索引
+
+@ sincere ; /sɪnˈsɪə/ ; 形 ; 誠実な
++chain: L <i>sincērus</i>「混じり気のない」（語源不確実）
++note: 「蝋（<i>cēra</i>）なしの＝彫像の傷を蝋で埋めていない」という語源説は有名だが、音韻的に成り立たない俗説。<i>sem-</i>「一つの」＋<i>crē-</i>「生長する」説が有力。
++conf: 誤り
++see: 第X部 俗説
++lvl: ★★
+
+@ siren ; /ˈsaɪərən/ ; 名 ; サイレン、魔女
++chain: Gk <i>Seirḗn</i>（『オデュッセイア』の歌う怪物）
++note: 1819年に警報装置の名として転用された。神話の名が工業製品名になった例。
+
+@ skeptic ; /ˈskeptɪk/ ; 名 ; 懐疑論者
++chain: Gk <i>sképtesthai</i>「よく見る、吟味する」→ <i>skeptikós</i>
++der: scope, telescope, bishop（<i>epískopos</i>「監督する者」）, episcopal, spy, species, spectacle（L <i>specere</i> 同根）
++note: 英語 <i>bishop</i> と <i>scope</i> が同根。ギリシア語の <i>skep-</i> は <i>spek-</i> の音位転換形。
+
+@ sneeze ; /sniːz/ ; 動 ; くしゃみをする
++chain: OE <i>fnēosan</i> → ME <i>fnese</i> →（写本の <i>f</i> を <i>ſ</i>(長い s) と読み違えて）<i>snese</i>
++note: 書き文字の読み違いが標準形になった稀な例。同型に <i>gherkin</i>, <i>ptarmigan</i>（誤ったギリシア語風綴り）。
++see: 第5章
+
+@ sophisticated ; /səˈfɪstɪkeɪtɪd/ ; 形 ; 洗練された
++chain: Gk <i>sophós</i>「賢い」→ <i>sophistḗs</i>「知者、詭弁家」→ 中世ラテン語 <i>sophisticāre</i>「混ぜ物をする」
++desc: 「（詭弁で）混ぜ物をする」→「不純にする」という悪義が19世紀まで続き、20世紀初頭に「（素朴さを失って）洗練された」へ反転した。
++der: philosophy（「知を愛する」）, sophomore（<i>sophos</i>＋<i>mōros</i>「賢い愚か者」）, sophistry
++see: 意味の上昇（第8章）
++lvl: ★★★
+
+@ spirit ; /ˈspɪrɪt/ ; 名 ; 精神、酒精
++lit: 「息」
++chain: L <i>spīrāre</i>「息をする」→ <i>spīritus</i>
++der: inspire, expire, respire, conspire（「ともに息をする＝共謀する」）, aspire, perspire, transpire, spirit
++note: 「息＝生命＝魂」は世界的な比喩（Gk <i>pneûma</i>, ヘブライ語 <i>rûaḥ</i>, Skt <i>ātman</i>, 日本語「息／生き」）。<i>spirits</i>「蒸留酒」は錬金術の「（蒸留で得られる）精」から。
++lvl: ★★★
+
+@ spoil ; /spɔɪl/ ; 動 ; 台無しにする、甘やかす
++chain: L <i>spolium</i>「剥ぎ取った皮、戦利品」→ <i>spoliāre</i>
++der: spoils（戦利品）, despoil, spolium
++note: 「（獣の）皮を剥ぐ」→「略奪する」→「損なう」→「（過度に与えて）だめにする」。<i>spoils system</i>「猟官制」は原義に近い。
+
+@ stamina ; /ˈstæmɪnə/ ; 名 ; 持久力
++lit: 「（運命の女神が紡ぐ）縦糸」
++chain: L <i>stāmen</i>「縦糸」の複数 <i>stāmina</i>
++desc: パルカ（運命の三女神）が紡ぐ寿命の糸。「生まれつきの生命力」→「持久力」。植物学の <i>stamen</i>「雄しべ」も糸状の形から。
++der: stand, stable, statue, status, stanza, obstacle（*steh₂-）
++see: *steh₂-（図）
++lvl: ★★
+
+@ stereotype ; /ˈsteriətaɪp/ ; 名 ; 固定観念
++lit: 「固い（鋳型の）活字版」
++chain: Gk <i>stereós</i>「固い」＋ <i>týpos</i>「型」→ 仏 <i>stéréotype</i>（1798）
++desc: 組版全体を一枚の鉛版に鋳造する印刷技術の名。1922年にリップマンが『世論』で心理学用語に転用した。<i>cliché</i> も同じ鉛版を指すフランス語（擬音「カチッ」）で、まったく同じ経路をたどった。
++see: cliché
++lvl: ★★
+
+@ stigma ; /ˈstɪɡmə/ ; 名 ; 汚名
++lit: 「刺青、烙印」
++chain: Gk <i>stízein</i>「刺す」→ <i>stígma</i>
++root: *steig-「刺す」
++der: stick, sting, stitch, instigate, distinguish, extinguish, etiquette（仏、「（貼り札を）刺す」）, ticket
++note: <i>etiquette</i> と <i>ticket</i> が同語。宮廷の行動規則を書いた札から。
++lvl: ★★
+
+@ stock ; /stɒk/ ; 名 ; 幹、在庫、株式
++chain: OE <i>stocc</i>「木の幹、切り株」
++desc: 「幹」→「（家系の）幹＝血統」→「元手」→「在庫」→「株式」。英国の割符（tally stick）を割って債権を示した慣行が「株」の語義に関わるとされる。
++der: stocking（脚の「幹」を覆うもの）, stockade, stucco
++lvl: ★★
+
+@ stoic ; /ˈstəʊɪk/ ; 形名 ; 禁欲的な
++chain: Gk <i>stoá</i>「柱廊」→ <i>Stōïkós</i>
++desc: ゼノンがアテナイの彩色柱廊（<i>Stoà Poikílē</i>）で教えたことによる学派名。建物の名が思想の名になった。
++see: academy, lyceum
+
+@ subtle ; /ˈsʌtl/ ; 形 ; 微妙な
++lit: 「（織物の）織り目が細かい」
++chain: L <i>sub</i>「下に」＋<i>tēla</i>「織機の縦糸」→ <i>subtīlis</i>
++der: text, textile, texture, context, pretext, subtle, toilet（仏 <i>toilette</i>「小さな布」）
++note: <i>text</i>「文章」が「織られたもの」であるのと同じ比喩系。<i>b</i> は語源に合わせた黙字の挿入。
++lvl: ★★★
+
+@ suffer ; /ˈsʌfə/ ; 動 ; 苦しむ、許す
++chain: L <i>sub</i>＋<i>ferre</i>「運ぶ」→ <i>sufferre</i>「下から支える、耐える」
++root: *bʰer-「運ぶ」
++der: bear, birth, burden, bring／confer, defer, differ, infer, offer, prefer, refer, transfer, fertile
++note: <i>suffer little children to come unto me</i>（マタイ19:14）の <i>suffer</i>「許す」は「耐えて受け入れる」の古義。
++see: *bʰer-（図）
++lvl: ★★★
+
+@ supercilious ; /ˌsuːpəˈsɪliəs/ ; 形 ; 横柄な
++lit: 「眉を上げた」
++chain: L <i>super</i>「上に」＋<i>cilium</i>「まぶた」→ <i>supercilium</i>「眉」
++note: 身体動作が性格語になった例。<i>arrogant</i>（「（権利を）自分に要求する」）, <i>haughty</i>（<i>haut</i>「高い」）, <i>disdain</i>（「価値なしとする」）も同じ意味場。
+
+@ surgeon ; /ˈsɜːdʒən/ ; 名 ; 外科医
++lit: 「手で仕事をする者」
++chain: Gk <i>kheirourgós</i>（<i>kheír</i>「手」＋<i>érgon</i>「仕事」）→ L <i>chirurgus</i> → OF <i>surgien</i>
++see: organ
++note: 英国では長く理髪師が兼業し（barber-surgeon）、内科医（physician）より低い身分だった。今も英国の外科医は Dr. でなく Mr. と呼ばれる伝統がある。
++lvl: ★★
+
+@ surname ; /ˈsɜːneɪm/ ; 名 ; 姓
++chain: OF <i>surnom</i>（<i>sur</i>「上に」＋<i>nom</i>「名」）
++note: <i>sire's name</i>「父の名」という語源説は俗説。
++conf: 確実
+
+@ survive ; /səˈvaɪv/ ; 動 ; 生き延びる
++chain: L <i>super</i>「〜を超えて」＋<i>vīvere</i>「生きる」
++root: *g<sup>w</sup>eyh₃-「生きる」
++der: vivid, vital, vitamin, revive, convivial, victual, viper（「生きたまま産む」）／Gk系 zoo, zoology, biology（<i>bíos</i>）／ゲルマン系 quick（古義「生きている」）
++note: <i>the quick and the dead</i>「生者と死者」の <i>quick</i> が原義。<i>quicksilver</i>「水銀＝生きた銀」も同様。
++see: *g<sup>w</sup>eyh₃-
++lvl: ★★★
+
+@ sabbatical ; /səˈbætɪkl/ ; 形名 ; 研究休暇
++chain: ヘブライ語 <i>shabbāth</i>「休息」→ Gk <i>sábbaton</i> → L
++desc: 7年ごとに耕作を休ませる安息年（レビ記25章）から、大学の7年ごとの研究休暇へ。
+
+@ sad ; /sæd/ ; 形 ; 悲しい
++lit: 「満ち足りた」
++chain: OE <i>sæd</i>「飽きた、満腹の」
++root: *seh₂-「満たす」
++cog: L <i>satis</i>「十分」, <i>satur</i>「満腹の」
++der: satisfy, satiate, saturate, assets（<i>ad satis</i>「十分に」）
++note: 「満腹」→「飽き飽きした」→「重苦しい」→「悲しい」。<i>satisfy</i> と <i>sad</i> が同根。
++see: 第8章
++lvl: ★★
+
+@ scarce ; /skeəs/ ; 形 ; 乏しい
++chain: 俗ラテン語 *<i>excarpsus</i>「抜き出された」（L <i>excerpere</i>）
++der: excerpt, scarcity, scarcely
++note: <i>excerpt</i>「抜粋」と同根。
+
+@ scene ; /siːn/ ; 名 ; 場面
++chain: Gk <i>skēnḗ</i>「舞台の背景となる仮小屋」→ L <i>scaena</i>
++der: scenery, scenario, proscenium
++note: もと役者が着替える天幕。それが背景画を掛ける壁になり、「舞台面」→「場面」へ。
+
+@ schedule ; /ˈʃedjuːl/ ; 名 ; 予定表
++lit: 「小さな紙片」
++chain: Gk <i>skhídē</i>「木の裂片」→ 後期ラテン語 <i>schedula</i>
++root: *skei-「切り分ける」
++see: science
++note: 英 /ˈʃedjuːl/ と米 /ˈskedʒuːl/ の差は、フランス語式と（ウェブスターが推した）ギリシア語式の読みの対立。
+
+@ scot-free ; /ˌskɒtˈfriː/ ; 形 ; 罰を免れて
++chain: OE <i>scot</i>「割り当て金、税」（古ノルド語 <i>skot</i>）
++note: スコットランド人とは無関係。<i>scot and lot</i> は中世の地方税。
++conf: 確実
++see: 第X部
+
+@ shirt ; /ʃɜːt/ ; 名 ; シャツ
++chain: OE <i>scyrte</i>
++dbl: skirt（古ノルド語 <i>skyrta</i>）
++root: *(s)ker-「切る」
++der: short, shear, scissors, share, score, shard, skirt, curt, carnage（L <i>carō</i>「肉」）
++note: 英語本来形 <i>shirt</i>（上）と北欧語形 <i>skirt</i>（下）が、同一語でありながら上下に分業した。<i>sh-</i>／<i>sk-</i> の対はこの型の目印（<i>shatter/scatter</i>, <i>ship/skipper</i>）。
++see: skirt
++lvl: ★★
+
+@ siesta ; /siˈestə/ ; 名 ; 昼寝
++lit: 「第六時」
++chain: L <i>sexta (hōra)</i>「（日の出から）第六時＝正午」→ 西 <i>siesta</i>
++see: noon
++note: 時刻名が習慣名になった点で <i>noon</i> と対をなす。
+
+@ signature ; /ˈsɪɡnətʃə/ ; 名 ; 署名
++chain: L <i>signum</i>「印」→ <i>signāre</i>
++der: sign, design, resign, assign, consign, ensign, insignia, seal（L <i>sigillum</i>「小さな印」）
++note: <i>resign</i>「辞任する」は「（職を）印で戻す」。<i>design</i>「設計」は「印をつけ出す」。
++lvl: ★★★
+
+@ slogan ; /ˈsləʊɡən/ ; 名 ; 標語
++lit: 「軍勢の叫び」
++chain: ゲール語 <i>sluagh-ghairm</i>（<i>sluagh</i>「軍勢」＋<i>gairm</i>「叫び」）
++note: スコットランド氏族の鬨の声。19世紀に政治・広告の語になった。
+
+@ sponsor ; /ˈspɒnsə/ ; 名 ; 後援者
++lit: 「（誓約を）保証する者」
++chain: L <i>spondēre</i>「厳粛に約束する」→ <i>sponsor</i>
++der: spouse（「約束された者」）, espouse, respond, response, responsible, correspond, despondent
++note: <i>spouse</i>「配偶者」と <i>responsible</i>「責任ある」が同根。「約束に応える」が責任の原イメージ。
++lvl: ★★
+
+@ stew ; /stjuː/ ; 名動 ; 煮込み
++chain: 俗ラテン語 *<i>extūfāre</i>「蒸気を当てる」（Gk <i>týphos</i>「煙」）
++der: stove, typhus（「（熱で）ぼんやりする」）, typhoon は別
++note: 中英語の <i>stews</i> は「公衆浴場」、のち「売春宿」。蒸し風呂の文化史が語に残る。
+
+@ stranger ; /ˈstreɪndʒə/ ; 名 ; 見知らぬ人
++chain: L <i>extrā</i>「外に」→ <i>extrāneus</i> → OF <i>estrangier</i>
++dbl: strange, extraneous
++der: extra, external, strange
++note: <i>strange</i> と <i>extraneous</i> は同一語の二重語。フランス語経由と直輸入で音も意味も離れた。
+
+@ stupid ; /ˈstjuːpɪd/ ; 形 ; 愚かな
++chain: L <i>stupēre</i>「呆然とする」→ <i>stupidus</i>
++der: stupor, stupendous（「呆然とさせるほどの」）, stupefy, type は別
++note: <i>stupendous</i>「途方もない」と <i>stupid</i> が同根。驚きの正負が分かれた。
++lvl: ★★
+
+@ suede ; /sweɪd/ ; 名 ; スエード
++chain: 仏 <i>gants de Suède</i>「スウェーデンの手袋」
++note: 国名が素材名になった。<i>china</i>（磁器）, <i>japan</i>（漆器）, <i>cashmere</i>（カシミール）, <i>denim</i>（<i>de Nîmes</i>）, <i>jeans</i>（Genoa）, <i>damask</i>（Damascus）, <i>muslin</i>（Mosul）と同型。
++see: 地名由来語索引
+
+@ supper ; /ˈsʌpə/ ; 名 ; 夕食
++chain: OF <i>souper</i>「スープを飲む」（ゲルマン語起源、<i>sup</i>「すする」）
++der: sup, soup, sop, sip, absorb は別
++note: 一日の主食事 <i>dinner</i>（＜ <i>disjejūnāre</i>「断食を解く」＝もと朝食）が正午→夕方へ移動した結果、<i>supper</i> は「もっと遅い軽食」に押しやられた。
++see: dinner, lunch
+
+@ syrup ; /ˈsɪrəp/ ; 名 ; シロップ
++chain: アラビア語 <i>sharāb</i>「飲み物」→ 中世ラテン語 <i>siropus</i>
++dbl: sherbet, sorbet, shrub（飲料）
++note: <i>sharāb</i> は <i>shariba</i>「飲む」から。同根の <i>sherbet</i>（<i>sharbat</i>）が別ルートで入り、フランス語経由が <i>sorbet</i>。
++see: 第VIII部 アラビア語

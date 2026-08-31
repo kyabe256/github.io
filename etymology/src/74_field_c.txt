@@ -1,0 +1,207 @@
+== 5　料理・食
+
+<b>この分野はどこから来たか。</b>英語の食語彙は、ノルマン征服後の社会構造をそのまま化石として保存している。生きている家畜はゲルマン語（<i>ox, cow, calf, sheep, swine, deer</i>）、食卓に上る肉はフランス語（<i>beef, veal, mutton, pork, venison</i>）。飼う者と食べる者が別の言語を話していた。さらに調理法（<i>boil, fry, roast, stew, sauce, mince, grill</i>）、食器（<i>plate, dish は古英語, saucer, goblet, cutlery</i>）、コース（<i>appetizer, entrée, dessert</i>）もフランス語系である。香辛料の名はアラビア語・インド諸語（<i>saffron, cumin, ginger, pepper, sugar, curry</i>）、新大陸の作物はナワトル語・ケチュア語・アラワク語（<i>tomato, chocolate, avocado, potato, maize, barbecue</i>）から来ている。食卓の上には世界地図が広がっている。
+
+@ beef ; /biːf/ ; 名 ; 牛肉
++chain: L <i>bōs</i>（属格 <i>bovis</i>）「牛」→ OF <i>boef</i>
++root: *g<sup>w</sup>ṓws「牛」
++cog: OE <i>cū</i> → cow, Gk <i>boûs</i>, Skt <i>gáu-</i>
++der: bovine, bugle（「小さな牛（の角笛）」）, butter（<i>boútȳron</i>「牛のチーズ」）, cow, beef
++note: <i>cow</i> と <i>beef</i> は語源的には同じ印欧語根に遡る。ゲルマン語経由とラテン語経由で分かれ、英語の中で「生きた牛」と「牛肉」に役割を分けた。
++see: 第4章
++lvl: ★★★
+
+@ biscuit ; /ˈbɪskɪt/ ; 名 ; ビスケット
++lit: 「二度焼いた」
++chain: L <i>bis coctus</i>「二度焼かれた」→ OF <i>bescuit</i>
++der: cook, kitchen, culinary, precocious（「早く煮える＝早熟の」）, concoct, decoction, apricot（「早熟の（果実）」）
++note: 保存のため二度焼いた船乗りのパン。伊 <i>biscotto</i>、独 <i>Zwieback</i>（「二度焼き」）も同じ命名。
++see: kiln
+
+@ butcher ; /ˈbʊtʃə/ ; 名 ; 肉屋
++lit: 「牡ヤギを扱う者」
++chain: OF <i>bouchier</i>（<i>bouc</i>「牡ヤギ」）
++note: もとヤギ肉を売る者。
+
+@ chocolate ; /ˈtʃɒklət/ ; 名 ; チョコレート
++chain: ナワトル語 <i>chocolātl</i>（<i>xocolli</i>「苦い」＋<i>ātl</i>「水」か）→ 西 <i>chocolate</i>
++conf: 一説　ナワトル語での語形成に議論がある。マヤ語 <i>chokol</i>「熱い」との混成説もある。
++der: cacao（ナワトル語 <i>cacahuatl</i>）
++see: 第VIII部 アメリカ先住民諸語
+
+@ curry ; /ˈkʌri/ ; 名 ; カレー
++chain: タミル語 <i>kaṟi</i>「おかず、ソース」→ ポルトガル語 <i>caril</i> → 英語（1598）
++note: <i>curry favour</i>「機嫌を取る」の <i>curry</i> は「（馬を）ブラシで手入れする」（OF <i>correier</i>）で別語。しかもこの成句は <i>curry Favel</i>「（寓話の馬）ファヴェルを撫でる」の異分析。
++see: 異分析
+
+@ dinner ; /ˈdɪnə/ ; 名 ; 正餐
++lit: 「断食を解くこと」
++chain: 俗ラテン語 *<i>disiēiūnāre</i>「断食を破る」→ OF <i>disner</i>
++dbl: breakfast（英語での直訳的な複合）
++der: jejune（「（腸が）空の＝味気ない」）, dine, dinner
++note: 語源的には「朝食」の意。一日の主食事の時刻が中世以降どんどん後ろへ動いた結果、<i>dinner</i> は夕食を指すようになり、朝食には <i>breakfast</i> という同義の英語複合語が新たに作られた。
++see: lunch, supper
++lvl: ★★
+
+@ garlic ; /ˈɡɑːlɪk/ ; 名 ; ニンニク
++lit: 「槍の形のネギ」
++chain: OE <i>gārlēac</i>（<i>gār</i>「槍」＋<i>lēac</i>「ネギ属」）
++der: leek, garlic, Edgar（<i>ēad</i>「富」＋<i>gār</i>「槍」）
++note: <i>-lic</i> は <i>leek</i>。人名 Edgar, Garret の <i>gar-</i> も「槍」。
+
+@ ginger ; /ˈdʒɪndʒə/ ; 名 ; ショウガ
++chain: サンスクリット <i>śṛṅgavera</i>「角の形の（根）」→ パーリ語 <i>siṅgivera</i> → Gk <i>zingíberis</i> → L <i>zingiber</i> → OE <i>gingifer</i>
++desc: インドから古英語期にすでに到達していた、最古の東方交易語のひとつ。
+
+@ grocer ; /ˈɡrəʊsə/ ; 名 ; 食料品店
++lit: 「大口で売る者」
++chain: L <i>grossus</i>「太い」→ 中世ラテン語 <i>grossārius</i>「卸売商」
++der: gross, engross, grocery
++note: <i>gross</i>「総計の、粗野な」と同語。もと卸売商だったのが小売店の名になった。
+
+@ pepper ; /ˈpepə/ ; 名 ; コショウ
++chain: サンスクリット <i>pippalī</i>「長コショウ」→ Gk <i>péperi</i> → L <i>piper</i> → OE <i>pipor</i>
++note: 中世ヨーロッパでは貨幣同様の価値をもち、地代を胡椒で払う契約（<i>peppercorn rent</i>）があった。現代英語ではその語が「名目だけの賃料」を意味する。
+
+@ potato ; /pəˈteɪtəʊ/ ; 名 ; ジャガイモ
++chain: タイノ語（アラワク語族）<i>batata</i>「サツマイモ」→ 西 <i>patata</i>
++note: もとサツマイモの名。アンデス原産のジャガイモ（ケチュア語 <i>papa</i>）に流用され、区別のため <i>sweet potato</i> が作られた。名前が入れ替わった。
++see: 第VIII部
+
+@ salad ; /ˈsæləd/ ; 名 ; サラダ
++see: salary
++note: 俗ラテン語 <i>herba salāta</i>「塩をした野菜」。<i>sauce</i>, <i>sausage</i>, <i>salami</i>, <i>salsa</i> もすべて「塩」から。
+
+@ sugar ; /ˈʃʊɡə/ ; 名 ; 砂糖
++chain: サンスクリット <i>śarkarā</i>「砂利、粗糖」→ ペルシア語 <i>shakar</i> → アラビア語 <i>sukkar</i> → 伊 <i>zucchero</i> → OF <i>sucre</i>
++der: saccharine, jaggery
++note: 「砂利」が原義。結晶の形から。インド→ペルシア→アラブ→地中海という砂糖の伝播経路が語形にそのまま残る。
++lvl: ★★
+
+@ tomato ; /təˈmɑːtəʊ/ ; 名 ; トマト
++chain: ナワトル語 <i>tomatl</i> → 西 <i>tomate</i>
++note: 英語で当初は <i>love apple</i>（仏 <i>pomme d'amour</i>）と呼ばれ、有毒と信じられて食用は19世紀まで広まらなかった。
+
+== 6　音楽・芸術
+
+<b>この分野はどこから来たか。</b>音楽の術語はほぼ完全に<b>イタリア語</b>である（<i>piano, forte, allegro, adagio, andante, crescendo, opera, soprano, tempo, sonata, concerto, aria, solo, duo, cello, viola, piccolo</i>）。17〜18世紀のイタリアが西洋音楽の中心だったことの直接の結果で、記譜法とともに術語も国際標準になった。これに対し理論の語（<i>harmony, melody, rhythm, chorus, symphony, orchestra, music</i>）はギリシア語。美術の語はイタリア語（<i>fresco, chiaroscuro, studio, replica, torso</i>）とフランス語（<i>collage, montage, avant-garde, genre, nuance, silhouette</i>）に分かれる。
+
+@ chorus ; /ˈkɔːrəs/ ; 名 ; 合唱
++chain: Gk <i>khorós</i>「輪舞、踊り手の一団」→ L <i>chorus</i>
++der: choir, chorale, choreography（「踊りを書くこと」）, carol（一説）
++note: 本来は踊りが主で歌は従。ギリシア悲劇のコロスは舞台前の <i>orkhḗstra</i> で踊った。
++see: orchestra
+
+@ harmony ; /ˈhɑːməni/ ; 名 ; 調和
++lit: 「（板の）接合」
++chain: Gk <i>harmós</i>「継ぎ目」→ <i>harmonía</i>
++root: *h₂er-「合わせる」
++der: art, arm, army, rite, ratio, reason, order は別
++note: もと大工仕事の語。<i>art</i>「技術」も同根で、「うまく組み合わせること」という共通観念がある。
++see: rite
++lvl: ★★
+
+@ melody ; /ˈmelədi/ ; 名 ; 旋律
++chain: Gk <i>mélos</i>「歌、旋律」＋<i>ōidḗ</i>「歌」→ <i>melōidía</i>
++der: ode, tragedy, comedy, parody, rhapsody, prosody, palinode
++note: <i>-ody</i> をもつ語はすべて <i>ōidḗ</i>「歌」（<i>aeídein</i>「歌う」）から。
+
+@ music ; /ˈmjuːzɪk/ ; 名 ; 音楽
++chain: Gk <i>Moûsa</i>「ムーサ（詩神）」→ <i>mousikḗ (tékhnē)</i>「ムーサの技」
++see: museum
++note: 本来「ムーサが司る技」全般で、詩・舞踊・学芸を含んだ。音楽に限定されたのは後代。
++lvl: ★★
+
+@ opera ; /ˈɒprə/ ; 名 ; オペラ
++lit: 「（複数の）仕事」
++chain: L <i>opus</i>「仕事」の複数 <i>opera</i> → 伊
++see: office
++note: <i>opera in musica</i>「音楽による作品」の略。<i>opus</i> は今も作品番号に使う。
+
+@ piano ; /piˈænəʊ/ ; 名 ; ピアノ
++lit: 「弱く」
++chain: 伊 <i>gravicembalo col piano e forte</i>「弱音も強音も出るチェンバロ」の略
++der: plain, plane, plan（L <i>plānus</i>「平らな」）／fort, force, effort, comfort（L <i>fortis</i>「強い」）
++note: 楽器名が二語の対比表現から切り出された。<i>piano</i> は「平らな＝穏やかな」が原義で、英語 <i>plain</i> と同語。
++lvl: ★★
+
+@ rhythm ; /ˈrɪðəm/ ; 名 ; リズム
++chain: Gk <i>rheîn</i>「流れる」→ <i>rhythmós</i>
++der: rheum, catarrh, diarrhea, hemorrhoid, stream は別系だが同根
++note: 英語 <i>stream</i> と <i>rhythm</i> は同じ印欧語根 *sreu-「流れる」。
+
+@ symphony ; /ˈsɪmfəni/ ; 名 ; 交響曲
++lit: 「ともに響くこと」
++chain: Gk <i>sýn</i>＋<i>phōnḗ</i>「音」
++der: phone, telephone, euphony, cacophony, phoneme, blasphemy（「傷つける言葉」）
++lvl: ★★
+
+@ genre ; /ˈʒɒnrə/ ; 名 ; ジャンル
++chain: L <i>genus</i>「種類、生まれ」→ 仏 <i>genre</i>
++see: naive
++note: <i>gender</i>「性」も同語で、文法用語としてはラテン語 <i>genus</i>「類」の訳。社会的性別の意は1955年以降。
+
+@ studio ; /ˈstjuːdiəʊ/ ; 名 ; アトリエ
++chain: L <i>studēre</i>「熱心に努める」→ <i>studium</i> → 伊 <i>studio</i>
++der: study, student, studious
++note: <i>study</i>「勉強」と <i>studio</i>「制作室」が同語。「熱意」が原義で、「学ぶ」に狭まったのは中世大学以降。
++lvl: ★★
+
+== 7　スポーツ・遊戯
+
+<b>この分野はどこから来たか。</b>近代スポーツの多くは19世紀イギリスで成文化されたため、術語も英語系が多い。しかし語源をたどると、狩猟・軍事・宮廷遊戯の語彙が大量に転用されている。<i>sport</i> 自体が「気晴らし」、<i>rival</i> が「用水の隣人」、<i>tournament</i> が「（馬を）回すこと」、<i>arena</i> が「砂」、<i>gymnasium</i> が「裸」。テニス・トランプ・チェスの用語はフランス語とペルシア語・アラビア語から来ている。
+
+@ arena ; /əˈriːnə/ ; 名 ; 闘技場
++lit: 「砂」
++chain: L <i>harēna</i>「砂」
++desc: 円形闘技場の中央に血を吸わせるため砂を撒いたことから、その空間の名になった。
+
+@ athlete ; /ˈæθliːt/ ; 名 ; 運動選手
++lit: 「賞を競う者」
++chain: Gk <i>âthlon</i>「賞」→ <i>athlētḗs</i>
++der: pentathlon, decathlon, triathlon
++note: 「賞」が語根で、競技そのものではない。プロ・アマの区別が語源上は逆転している。
+
+@ champion ; /ˈtʃæmpiən/ ; 名 ; 優勝者
++lit: 「野（＝戦場）の者」
++chain: L <i>campus</i>「野原、戦場」→ 後期ラテン語 <i>campiō</i>「闘士」
++der: camp, campaign, campus, encamp, scamper, champagne（シャンパーニュ地方＝「平野」）
++note: <i>campaign</i>「選挙運動、軍事作戦」も「野で行うこと」。<i>champion</i> はもと決闘裁判の代理闘士。
++lvl: ★★★
+
+@ gymnasium ; /dʒɪmˈneɪziəm/ ; 名 ; 体育館
++lit: 「裸で運動する場所」
++chain: Gk <i>gymnós</i>「裸の」→ <i>gymnásion</i>
++der: gymnastics, gymnosperm（裸子植物）
++note: 古代ギリシアの競技は裸で行われた。ドイツ語 <i>Gymnasium</i> は「進学校」の意で、古代の体育場が知育の場でもあったことによる。
+
+@ referee ; /ˌrefəˈriː/ ; 名 ; 審判
++chain: L <i>referre</i>「（判断を）持ち帰る、委ねる」
++see: suffer
++note: 論点を「委ねる」相手が原義。<i>umpire</i>（第三者）と語源の発想が異なる。
++see: umpire
+
+@ sport ; /spɔːt/ ; 名 ; スポーツ
++lit: 「（日常から）持ち去ること＝気晴らし」
++chain: L <i>dis-</i>＋<i>portāre</i>「運ぶ」→ OF <i>desport</i>「気晴らし」→ 語頭消失で <i>sport</i>
++der: disport, portable, import, export, transport, comport, deport
++note: 「憂さを持ち去る」が原義。19世紀まで「娯楽」一般を指し、身体競技に限定されたのは近代。
++lvl: ★★★
+
+@ tournament ; /ˈtʊənəmənt/ ; 名 ; トーナメント
++chain: OF <i>torneiement</i>（<i>torneier</i>「（馬を）旋回させる」）
++see: tour
++note: 騎馬試合で馬首を返す動作から。現代の「勝ち抜き戦」の意は19世紀。
+
+@ checkmate ; /ˈtʃekmeɪt/ ; 名 ; チェックメイト
++lit: 「王は無力である」
++chain: ペルシア語 <i>shāh māt</i>「王は動けない」→ アラビア語 → OF <i>eschec mat</i>
++der: check, cheque, checker, exchequer（財務省。市松模様の計算布から）, chess, chagrin は別
++note: <i>check</i>（阻止、照合、小切手）、<i>chess</i>、<i>exchequer</i>「英国財務省」がすべてペルシア語の「王」から出ている。<i>māt</i> は「無力な、死んだ」で、「死んだ（mate）」ではない。
++conf: 通説
++lvl: ★★
+
+@ trump ; /trʌmp/ ; 名 ; 切り札
++chain: <i>triumph</i> の訛り（16世紀のカードゲーム用語）
++der: triumph, trumpet は別
++note: <i>triumph</i>「凱旋」から。ラテン語 <i>triumphus</i> はギリシア語 <i>thríambos</i>（ディオニュソス讃歌）から。

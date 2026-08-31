@@ -135,7 +135,7 @@
 @ April ; /ˈeɪprəl/ ; 名 ; 4月
 +chain: L <i>Aprīlis</i>
 +desc: 語源は不確実。ラテン語 <i>aperīre</i>「開く」（蕾が開く月）とする古来の説と、ギリシア語 <i>Aphrodítē</i>（エトルリア語経由）に結びつける説がある。
-+cf: → 月名は第VII部で一括して扱う。
++cf: → 月名は第IX部で一括して扱う。
 
 @ arena ; /əˈriːnə/ ; 名 ; 競技場
 +lit: 「砂」
@@ -281,3 +281,311 @@
 +chain: OE <i>eġefull</i>（<i>eġe</i>「畏怖」+ <i>-full</i>）
 +desc: 「畏敬すべき」（<i>the awful majesty of God</i>）→「恐ろしい」→「ひどい」→（副詞で）単なる強調へ。<i>awesome</i> が20世紀後半に「素晴らしい」へ良化したのと対照的な、同じ語根からの正反対の分岐である。
 +der: awe, awesome, ugly（＜ ON <i>uggligr</i>「恐ろしい」、別語源）
+
+@ ability ; /əˈbɪləti/ ; 名 ; 能力
++chain: L <i>habilis</i>「扱いやすい」（<i>habēre</i>「持つ」）→ OF <i>ableté</i>
++der: able, enable, disable, habit, prohibit, exhibit
++note: <i>able</i> の原義は「（道具として）手に持てる」。
+
+@ absolute ; /ˈæbsəluːt/ ; 形 ; 絶対の
++lit: 「解き放たれた」
++chain: L <i>ab-</i>（離れて）+ <i>solvere</i>「解く」→ <i>absolūtus</i>
++der: solve, solution, dissolve, resolve, absolve, absolution
++note: 「関係から解き放たれた」＝無条件の。対義の <i>relative</i>「相対的な」は「関係づけられた」。
+
+@ accurate ; /ˈækjərət/ ; 形 ; 正確な
++lit: 「注意して作られた」
++chain: L <i>ad-</i> + <i>cūra</i>「配慮」→ <i>accūrātus</i>
++der: cure, curious, secure, sure, curator, procure, manicure
+
+@ acid ; /ˈæsɪd/ ; 形・名 ; 酸っぱい、酸
++root: *h₂eḱ-「鋭い」
++chain: L <i>acidus</i>「酸っぱい」
++der: acute, acumen, acrid, eager, vinegar, oxygen（ギ）
++note: 味覚の「鋭さ」から。<i>acid test</i>「厳しい試練」は金の純度を硝酸で試したことから。
+
+@ admire ; /ədˈmaɪə/ ; 動 ; 感嘆する
++chain: L <i>ad-</i> + <i>mīrārī</i>「驚く」
++der: miracle, mirror, mirage, marvel
++note: <i>mirror</i>「鏡」と同語源。「驚いて見る」が共通の核。
+
+@ adolescent ; /ædəˈlesnt/ ; 名・形 ; 青年（の）
++lit: 「育ちつつある」
++chain: L <i>ad-</i> + <i>alēscere</i>「育つ」（起動相）
++der: adult（「育ち終わった」）, alimony, altitude, old（本来語）
++note: <i>adolescent</i>（育っている途中）と <i>adult</i>（育ち終わった）は同じ動詞の相の違い。
+
+@ agony ; /ˈæɡəni/ ; 名 ; 苦悶
++lit: 「競技会（での苦闘）」
++chain: Gk <i>agṓn</i>「集会、競技会」→ <i>agōníā</i>
++der: antagonist, protagonist, agonize, act, agent（ラ系の同根語）
++note: ギリシアの競技会の必死さから「苦悶」へ。<i>protagonist</i>「主人公」は「第一の競技者」。
+
+@ almanac ; /ˈɔːlmənæk/ ; 名 ; 暦書
++chain: 中世ラテン語 <i>almanach</i>（アラビア語 <i>al-manākh</i> か。語源は不確実）
++conf: 一説　アラビア語起源説が有力だが、対応するアラビア語が確認しにくい
++note: 定冠詞 <i>al-</i> を含むアラビア語系の語群の一つ。
+
+@ altar ; /ˈɔːltə/ ; 名 ; 祭壇
++chain: L <i>altāre</i>（<i>adolēre</i>「焼いて捧げる」、または <i>altus</i>「高い」）
++conf: 一説　<i>altus</i>「高い」との関連は民間語源の可能性がある
++der: adult, altitude, exalt（<i>altus</i> 系）
+
+@ amethyst ; /ˈæməθɪst/ ; 名 ; 紫水晶
++lit: 「酔わない（石）」
++chain: Gk <i>a-</i>（非）+ <i>méthy</i>「酒」→ <i>améthystos</i>
++der: mead（本来語「蜂蜜酒」）, methyl, methane
++note: 紫水晶の杯で飲めば酔わないという俗信による護符。英語 <i>mead</i> と同根。
+
+@ anchor ; /ˈæŋkə/ ; 名 ; 錨
++chain: Gk <i>ánkȳra</i>「錨」→ L <i>ancora</i> → OE <i>ancor</i>
++der: angle（釣り針）, ankle（曲がる関節）, anchovy は別
++note: 語根 *h₂enk-「曲げる」から。曲がったものという点で <i>angle</i>, <i>ankle</i> と同根。
+
+@ animal ; /ˈænɪml/ ; 名 ; 動物
++lit: 「息をするもの」
++chain: L <i>anima</i>「息、魂」→ <i>animal</i>
++der: animate, animation, unanimous, magnanimous, equanimity, anemone（ギ「風の花」）
++note: 「生きているもの＝息をするもの」。<i>animation</i>「アニメ」は「命を吹き込むこと」。
+
+@ annual ; /ˈænjuəl/ ; 形 ; 年一回の
++chain: L <i>annus</i>「年」→ <i>annuālis</i>
++der: anniversary, annals, biennial, perennial, millennium, superannuated
++note: 複合語では ann- → enn- に弱化する（<i>perennial</i>）。
+
+@ antique ; /ænˈtiːk/ ; 形・名 ; 古風な、骨董品
++chain: L <i>ante</i>「前に」→ <i>antīquus</i>
++dbl: <i>antic</i>（「おどけた仕草」。同語源だがイタリア語経由で意味が分化）
++der: ancient, anterior, advance, antecedent
++note: <i>antic</i>「道化た」は、発掘された古代の grotesque 装飾から。
+
+@ apparent ; /əˈpærənt/ ; 形 ; 明白な、見かけの
++chain: L <i>ad-</i> + <i>pārēre</i>「現れる」
++der: appear, appearance, apparition, transparent, apparatus は別
++note: 「明白な」と「見かけだけの」という正反対の含みを併せ持つ（<i>heir apparent</i> と <i>apparent contradiction</i>）。
+
+@ appetite ; /ˈæpɪtaɪt/ ; 名 ; 食欲
++lit: 「（強く）求めること」
++chain: L <i>ad-</i> + <i>petere</i>「求める、突進する」
++der: petition, compete, repeat, impetus, perpetual, centripetal, feather（本来語）
++note: 本来語 <i>feather</i>「羽根」と同根（*peth₂-「飛ぶ」）。
+
+@ arcade ; /ɑːˈkeɪd/ ; 名 ; アーケード
++chain: L <i>arcus</i>「弓、アーチ」→ 伊 <i>arcata</i> → 仏 <i>arcade</i>
++der: arch, archer, arrow(?), arc
++note: <i>arcade game</i>「アーケードゲーム」は、屋根付き商店街の遊技場から。
+
+@ architect ; /ˈɑːkɪtekt/ ; 名 ; 建築家
++lit: 「棟梁の大工」
++chain: Gk <i>arkhi-</i>（主要な）+ <i>téktōn</i>「大工」
++der: technique, technology, text, textile（<i>texere</i>「織る」と同根）
++note: <i>architect</i> と <i>text</i> が同根。どちらも「組み立てる・織る」。
+
+@ arctic ; /ˈɑːktɪk/ ; 形 ; 北極の
++lit: 「熊（座）の」
++chain: Gk <i>árktos</i>「熊」→ <i>arktikós</i>
++der: Antarctic（「熊の反対」）, Arcturus（「熊の番人」）
++note: 印欧祖語の「熊」*h₂ŕ̥tḱos はゲルマン語から失われ（忌み名のため <i>bear</i>「褐色のもの」に置換）、この学術語として英語に戻ってきた。
+
+@ armistice ; /ˈɑːmɪstɪs/ ; 名 ; 休戦
++lit: 「武器を止めること」
++chain: L <i>arma</i>「武器」+ <i>-stitium</i>（<i>sistere</i>「止める」）
++der: arms, army, solstice（「太陽が止まる」）, stand（本来語）
++note: <i>solstice</i>「至」と同じ構成（〜を止める）。
+
+@ arrogant ; /ˈærəɡənt/ ; 形 ; 傲慢な
++lit: 「（権利を）自分に求める」
++chain: L <i>ad-</i> + <i>rogāre</i>「問う、求める」
++der: interrogate, prerogative, derogatory, abrogate, surrogate
++note: 「自分のものだと要求する」から「思い上がった」へ。
+
+@ arsenal ; /ˈɑːsənl/ ; 名 ; 兵器庫
++chain: アラビア語 <i>dār aṣ-ṣināʿa</i>「製造所」→ ヴェネツィア方言 <i>arzanà</i> → 伊 <i>arsenale</i>
++note: ヴェネツィアの国営造船所（Arsenale）の名から。サッカークラブ Arsenal は王立兵器廠の労働者チームが起源。
+
+@ artery ; /ˈɑːtəri/ ; 名 ; 動脈
++chain: Gk <i>artēríā</i>（<i>aeírein</i>「持ち上げる」か）
++desc: 古代の解剖では死体の動脈が空だったため「空気の管」と考えられ、<i>artēríā</i> は気管をも指した。
++der: arteriosclerosis, arterial
++note: 誤った生理学観が語に残った例。
+
+@ asparagus ; /əˈspærəɡəs/ ; 名 ; アスパラガス
++chain: Gk <i>aspáragos</i> → L <i>asparagus</i>
++note: 民間語源で <i>sparrowgrass</i>「雀草」と呼ばれた時期があり、18世紀の辞書にも載る（第6章）。
+
+@ asset ; /ˈæset/ ; 名 ; 資産
++lit: 「（債務を返すのに）十分な」
++chain: OF <i>asez</i>「十分」（L <i>ad satis</i>）→ 法律用語 <i>assets</i>
++der: satisfy, satiate, saturate, sad（本来語「満ち足りた」が原義）
++note: もと複数形の法律用語で、単数 <i>asset</i> は逆成。
+
+@ atone ; /əˈtəʊn/ ; 動 ; 償う
++lit: 「一つになる」
++chain: ME <i>at one</i>「一致して」→ <i>atonement</i>
++der: one, alone, only, atonement
++note: 神と和解して「一つになる」こと。<i>atonement</i>（at-one-ment）は1520年代ティンダルの造語とされる。
+
+@ audience ; /ˈɔːdiəns/ ; 名 ; 聴衆
++chain: L <i>audīre</i>「聞く」→ <i>audientia</i>
++der: audio, audit, auditorium, audition, obey, obedient
++note: <i>obey</i>「従う」が「聞く」であるのは、<i>ob-audīre</i>「（下から）耳を傾ける」から。
+
+@ august ; /ɔːˈɡʌst/ ; 形 ; 威厳のある
++chain: L <i>augēre</i>「増す」→ <i>augustus</i>「増大した、荘厳な」
++der: August（アウグストゥス帝）, auction, author, augment, eke（本来語）
++note: 月名の <i>August</i> と形容詞の <i>august</i> は同語。アクセントが異なる（/ˈɔːɡəst/ と /ɔːˈɡʌst/）。
+
+@ author ; /ˈɔːθə/ ; 名 ; 著者
++lit: 「増やす者、創始者」
++chain: L <i>augēre</i>「増す」→ <i>auctor</i> → OF <i>autor</i>
++der: authority, authorize, authentic は別語源, augment, auction
++note: 綴りの th は、ギリシア語系と誤解した中世の綴り直し。本来 t。
+
+@ autumn ; /ˈɔːtəm/ ; 名 ; 秋
++chain: L <i>autumnus</i>（語源不明。エトルリア語起源説がある）
++conf: 不確実　ラテン語内部で語源が説明できない稀な基本語
++note: 米語の <i>fall</i> は <i>fall of the leaf</i>「落葉」の短縮で、17世紀の英国でも使われた。
+
+@ avenue ; /ˈævənjuː/ ; 名 ; 大通り
++lit: 「（館へ）来る道」
++chain: 仏 <i>avenue</i>（<i>avenir</i>「来る」＜ L <i>advenīre</i>）
++der: advent, adventure, convene, event, invent, revenue, come（本来語）
++note: もとは邸宅への並木の進入路。
+
+@ avoid ; /əˈvɔɪd/ ; 動 ; 避ける
++lit: 「空にする、立ち退く」
++chain: OF <i>esvuidier</i>（<i>es-</i>+<i>vuide</i>「空の」）
++der: void, devoid, vacant, vacuum, vanity, waste
++note: 「（場所を）空ける」→「（危険を）避ける」。
+
+@ awe ; /ɔː/ ; 名 ; 畏敬
++chain: ON <i>agi</i>「恐怖」← PGmc *agiz
++der: awful（「畏敬に満ちた」→ ひどい）, awesome（「畏敬すべき」→ 素晴らしい）
++note: 同じ語根から <i>awful</i> と <i>awesome</i> が正反対の価値に分かれた（第7章）。
+
+@ axis ; /ˈæksɪs/ ; 名 ; 軸
++chain: L <i>axis</i>「車軸」
++root: *h₂eḱs-「軸」
++der: axle（本来語）, axial, axilla（腋窩）
++note: 印欧祖語に「車軸」の語があることは、語族の分裂が車輪の発明より後であることを示す（第2章）。
+
+@ abbot ; /ˈæbət/ ; 名 ; 大修道院長
++lit: 「父ちゃん」
++chain: アラム語 <i>abbā</i>「父」→ Gk <i>abbâs</i> → L <i>abbās</i> → OE <i>abbod</i>
++der: abbey, abbess, abbot
++note: 幼児語起源の宗教語彙（<i>nun</i>, <i>pope</i>, <i>papa</i> と同型）。新約聖書の「アバ、父よ」の <i>abba</i>。
+
+@ abyss ; /əˈbɪs/ ; 名 ; 深淵
++lit: 「底がない」
++chain: Gk <i>a-</i>（非）+ <i>byssós</i>「底」→ <i>ábyssos</i>
++der: abysmal, abyssal
++note: <i>abysmal</i>「ひどい」は「底なしに悪い」から。
+
+@ academy ; /əˈkædəmi/ ; 名 ; 学園
++chain: 地名 <i>Akadḗmeia</i>（アテナイ郊外の英雄アカデモスの聖林）
++desc: プラトンがこの地に学園を開いたことから、学問の場を指す普通名詞になった。
++der: academic, academia
++note: <i>Lyceum</i>（アリストテレス）、<i>Stoa</i>（ストア派）も同様に場所の名が学派の名になった。
+
+@ acrobat ; /ˈækrəbæt/ ; 名 ; 曲芸師
++lit: 「先端を歩く者」
++chain: Gk <i>ákros</i>「先端」+ <i>baínein</i>「歩く」
++der: acropolis, acronym, acrophobia, acme／base, basis, diabetes（<i>baínein</i> 系）
++note: 綱渡りが原義。
+
+@ alibi ; /ˈæləbaɪ/ ; 名 ; アリバイ
++lit: 「他の場所に」
++chain: L <i>alibī</i>（<i>alius</i>「他の」+ <i>ibi</i>「そこに」）
++der: alias, alien, alter, altruism, else（本来語）
++note: ラテン語の副詞がそのまま法律用語として英語の名詞になった。
+
+@ alligator ; /ˈælɪɡeɪtə/ ; 名 ; アリゲーター
++lit: 「そのトカゲ」
++chain: 西 <i>el lagarto</i>「そのトカゲ」→ 英語 <i>aligarto</i> → <i>alligator</i>
++der: lizard（同じ L <i>lacertus</i> から仏語経由）
++note: スペイン語の定冠詞ごと借用された例（第6章の異分析）。<i>lizard</i> と同語源。
+
+@ amuse ; /əˈmjuːz/ ; 動 ; 楽しませる
++lit: 「（じっと）見つめさせる」
++chain: OF <i>amuser</i>（<i>a-</i>+<i>muser</i>「鼻づらを上げてぼんやりする」）
++der: muse（動詞「熟考する」）, bemuse
++note: <i>Muse</i>「ミューズ」（Gk）とは別語源。「気を逸らす」→「楽しませる」。
+
+@ ancestor ; /ˈænsestə/ ; 名 ; 祖先
++lit: 「先に行く者」
++chain: L <i>ante-cessor</i>（<i>ante</i>「前に」+ <i>cēdere</i>「行く」）
++der: cede, precede, proceed, access, success, necessary
++note: <i>necessary</i>「必要な」は「退くことのできない」で同じ語根。
+
+@ anguish ; /ˈæŋɡwɪʃ/ ; 名 ; 苦悩
++lit: 「（喉が）締めつけられること」
++chain: L <i>angustia</i>「狭さ」（<i>angere</i>「絞める」）
++der: anxious, anxiety, anger, angina, agony は別
++note: 独 <i>Angst</i> も同根。不安を身体の締めつけで表す普遍的な発想。
+
+@ ankle ; /ˈæŋkl/ ; 名 ; 足首
++root: *h₂enk-「曲げる」
++chain: OE <i>ancleow</i>
++der: angle（釣り針）, anchor, anxious は別
++note: 「曲がるところ」が原義。<i>angle</i>「角度」（L <i>angulus</i>）とも同根。
+
+@ answer ; /ˈɑːnsə/ ; 動・名 ; 答える
++lit: 「（告発に）向かって誓う」
++chain: OE <i>andswaru</i>（<i>and-</i>「向かって」+ <i>swaru</i>「誓い」）
++der: swear, anti-（ギ系の同根接頭辞）
++note: <i>and-</i> はギリシア語 <i>anti-</i>「向かって」と同根。法廷での宣誓が原義。
+
+@ apart ; /əˈpɑːt/ ; 副 ; 離れて
++chain: 仏 <i>à part</i>「脇へ」（L <i>ad partem</i>）
++der: part, party, portion, apartment, apartheid（アフリカーンス語「離れた状態」）
++note: <i>apartheid</i> は <i>apart</i>+<i>-heid</i>（＝英 -hood）のアフリカーンス語形。
+
+@ apron ; /ˈeɪprən/ ; 名 ; エプロン
++chain: OF <i>naperon</i>「小さな布」（<i>nappe</i>「テーブルクロス」）→ ME <i>a napron</i> → <i>an apron</i>
++der: napkin, napery, map（L <i>mappa</i>「布」）
++note: 冠詞との境界の切り直し（異分析）。<i>napkin</i>, <i>map</i> と同語源。
+
+@ arrest ; /əˈrest/ ; 動 ; 逮捕する
++lit: 「（動きを）止めさせる」
++chain: L <i>ad-</i> + <i>restāre</i>「留まる」→ OF <i>arester</i>
++der: rest（残り）, stand, state, station, cost（<i>stāre</i> 系）
++note: <i>rest</i>「休息」（本来語）とは別語源の同綴語。
+
+@ artificial ; /ɑːtɪˈfɪʃl/ ; 形 ; 人工の
++lit: 「技で作られた」
++chain: L <i>ars, artis</i>「技」+ <i>facere</i>「作る」
++der: art, artifice, artisan, artillery, fact, effect
++note: <i>artificial intelligence</i>「人工知能」は1955年ジョン・マッカーシーの命名。
+
+@ assemble ; /əˈsembl/ ; 動 ; 集める
++lit: 「一緒にする」
++chain: L <i>ad-</i> + <i>simul</i>「同時に」→ 俗ラテン語 <i>assimulāre</i>
++der: similar, simulate, simultaneous, resemble, same（本来語）
++note: 計算機の <i>assembly language</i> も「（機械語を）組み立てる」から。
+
+@ astronomy ; /əˈstrɒnəmi/ ; 名 ; 天文学
++chain: Gk <i>ástron</i>「星」+ <i>nómos</i>「法則」
++der: astrology, asterisk, asteroid, disaster, star（本来語）, stellar（ラ）
++note: <i>-nomy</i>（法則の学）と <i>-logy</i>（言説の学）の区別。<i>astrology</i> のほうが古い学問だった。
+
+@ athlete ; /ˈæθliːt/ ; 名 ; 運動選手
++lit: 「賞を争う者」
++chain: Gk <i>âthlon</i>「賞」→ <i>athlētḗs</i>
++der: athletic, decathlon, pentathlon, triathlon
++note: <i>-athlon</i> は「競技」。<i>decathlon</i>「十種競技」。
+
+@ attend ; /əˈtend/ ; 動 ; 出席する、注意を払う
++lit: 「（心を）〜へ張る」
++chain: L <i>ad-</i> + <i>tendere</i>「伸ばす、張る」
++der: tend, tension, extend, intend, pretend, contend, attention, tent
++note: 「注意を向ける」と「出席する」の両義は、「心を差し向ける」という原義から自然に分岐した。
+
+@ aunt ; /ɑːnt/ ; 名 ; おば
++chain: L <i>amita</i>「父方のおば」→ 北仏 <i>ante</i> → ME
++note: 古英語には <i>faðu</i>（父方）と <i>mōdrige</i>（母方）の区別があったが、フランス語の借用で一語に統合された。<i>uncle</i>（＜ L <i>avunculus</i>「母方のおじ」）も同様。
+
+@ avalanche ; /ˈævəlɑːnʃ/ ; 名 ; 雪崩
++chain: スイス・フランス語 <i>avalanche</i>（<i>avaler</i>「谷へ下る」＜ <i>à val</i>「谷へ」）
++der: vale, valley, avail は別
++note: <i>à val</i>「谷へ」が動詞化した。フランス語 <i>avaler</i> は現在「飲み込む」の意。
+

@@ -21,13 +21,52 @@
 +chain: 語源不明（1780年代、「変人」の意で初出）
 +note: 「ダブリンの劇場支配人デイリーが、無意味な語を一晩で流行らせられるという賭けをして街中に QUIZ と落書きさせた」という有名な逸話があるが、初出年代と合わず、作り話とされる。語源不明の語に付きまとう典型的な創作説（第1章）。
 
-@ quixotic ; /kwɪkˈsɒtɪk/ ; 形 ; 空想的な
-+chain: 人名 Don Quixote（セルバンテス『ドン・キホーテ』1605）
-+note: 文学作品の登場人物に由来する形容詞（<i>Kafkaesque</i>, <i>Orwellian</i>, <i>Dickensian</i>, <i>Machiavellian</i>, <i>platonic</i>, <i>sadistic</i>）の一例。
+@ quaint ; /kweɪnt/ ; 形 ; 古風で趣のある
++chain: L <i>cognitus</i>「知られた」→ OF <i>cointe</i>「巧みな、粋な」
++desc: 「巧みな」→「凝った」→「風変わりな」→「古風で愛らしい」。原義の「知られた」からは遠い。
++see: know
+
+@ quell ; /kwel/ ; 動 ; 鎮圧する
++chain: OE <i>cwellan</i>「殺す」
++see: kill
++note: 古英語の「殺す」の主要語が、「鎮める」に弱まった。強い語が弱化する例（<i>starve</i>「死ぬ」→「飢える」も同型）。
+
+@ query ; /ˈkwɪəri/ ; 名動 ; 問い合わせ
++chain: L <i>quaerere</i>「求める、問う」の命令形 <i>quaere</i>
++root: 語源不確実（ラテン語独自）
++der: question, quest, inquire, require, acquire, conquer, exquisite, inquest, request, perquisite（→ perk）
++note: 欄外に「調べよ」と書き入れた指示語 <i>quaere</i> が名詞化した。
++lvl: ★★
+
+@ queue ; /kjuː/ ; 名 ; 列
++lit: 「尻尾」
++chain: L <i>cauda</i>「尾」→ 仏 <i>queue</i>
++der: coward（「尾を巻く者」の説）, coda（音楽の「終結部」）, cue（撞球の棒）
++note: 英国で「行列」の意になったのは19世紀。米語は <i>line</i> を使う。計算機の <i>queue</i> は1946年。
+
+@ quorum ; /ˈkwɔːrəm/ ; 名 ; 定足数
++lit: 「その者たちのうち」
++chain: L <i>quōrum</i>（関係代名詞の複数属格）
++desc: 治安判事の任命状の定型句 <i>quōrum vōs … ūnum esse volumus</i>「そのうちの一人であってほしい」から、句の一語が切り出された。
++see: omnibus, propaganda（屈折形の名詞化）
+
+@ quota ; /ˈkwəʊtə/ ; 名 ; 割当量
++chain: L <i>quota pars</i>「何分の一の部分」
++der: quotient, quote, quotidian（「毎日の」）
++note: <i>quote</i>「引用する」は「章節番号を付ける」が原義。
+
+@ quixotic ; /kwɪkˈsɒtɪk/ ; 形 ; 非現実的に理想主義の
++chain: <i>Don Quixote</i>（セルバンテス、1605）
++note: 文学の登場人物名から作られた形容詞。同型に <i>gargantuan</i>（ラブレー）, <i>malapropism</i>（シェリダン）, <i>panglossian</i>（ヴォルテール）, <i>Orwellian</i>, <i>Kafkaesque</i>。
++see: 人名由来語索引
 
 @ quintessence ; /kwɪnˈtesns/ ; 名 ; 真髄
-+lit: 「第五の実体」
-+chain: 中世ラテン語 <i>quīnta essentia</i>（アリストテレスの <i>pémptē ousíā</i> の訳）
-+desc: 地水火風の四元素に加え、天界を構成する第五の元素（エーテル）。錬金術ではこれを抽出することが目標とされ、「精髄」の意味になった。
-+der: five, quintet, essence, entity
++lit: 「第五の本質」
++chain: 中世ラテン語 <i>quīnta essentia</i>（Gk <i>pémptē ousía</i> の訳）
++desc: アリストテレスが四大元素（土・水・風・火）に加えた第五元素＝天体を構成するエーテル。錬金術師はこれを抽出しようとした。「最も純粋な essence」の意はそこから。
++der: quintet, quintuple, essence, essential
 
+@ quarrel ; /ˈkwɒrəl/ ; 名 ; 口論
++chain: L <i>querī</i>「嘆く、訴える」→ <i>querēla</i>「苦情」
++der: querulous（「不平がましい」）
++note: <i>quarry</i>（採石場、<i>quadra</i> 系）とは無関係。

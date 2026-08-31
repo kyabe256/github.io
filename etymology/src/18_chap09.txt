@@ -40,6 +40,8 @@
 
 > <b>実践</b>　未知の長い語に出会ったら、まず語頭2〜3文字を接頭辞として切り離し、同化を戻してみる。<i>irascible</i> → in-（非？）ではなく <i>īra</i>「怒り」+ -scible。<i>succinct</i> → sub- + cinctus「帯を締めた」→「引き締まった」。<i>oppugn</i> → ob- + pugnāre「戦う」→「攻撃する」。
 
+%fig ad-assim ; 接頭辞 ad- の同化。見た目が9通りに化けるが意味は同じ。
+
 ## 9.2　規則2：母音弱化（vowel weakening）
 
 ラテン語では、複合語の内部で語根の母音が弱化する。これが同一語根の姿を大きく変える最大の原因である。
@@ -73,6 +75,8 @@
 - <b>facere 系</b>：fact, faculty, facile, factory, facsimile / affect, effect, infect, perfect, defect, confection / efficient, deficient, proficient, sufficient / benefit, profit, edifice, artifice, sacrifice / -fy 動詞（simplify, magnify, classify, satisfy）/ 仏語経由 feat, feature, defeat, forfeit, counterfeit, surfeit
 - <b>tenēre 系</b>：tenant, tenable, tenacious, tenure, tenor / contain, obtain, retain, sustain, detain, maintain, abstain, entertain, pertain / content, continent, tenet, lieutenant（「代理で保持する者」）, tenement
 - <b>premere 系</b>：press, pressure / compress, depress, express, impress, oppress, repress, suppress / print（＜ OF <i>preinte</i>）, imprint, reprimand
+
+%fig cap-weak ; 母音弱化。capere が四つの姿になる。
 
 ## 9.3　規則3：語幹交替（現在幹と完了分詞幹）
 
@@ -109,6 +113,8 @@
 | <i>stringere</i> 締める | <i>strictum</i> | stringent, astringent | strict, district, restrict, strain |
 
 > <b>要点</b>　英語で -tion, -sion, -ture, -or で終わる名詞は、ほぼ例外なくラテン語の完了分詞幹から作られている。したがって「動詞形が思い出せない名詞」は、-tion を外して現在幹に戻せばよい。<i>concession</i> → <i>concede</i>、<i>ascension</i> → <i>ascend</i>、<i>emission</i> → <i>emit</i>、<i>compulsion</i> → <i>compel</i>、<i>retention</i> → <i>retain</i>、<i>recognition</i> → <i>recognize</i>。
+
+%fig latin-stems ; 二つの幹。-tion 名詞から動詞に戻る道。
 
 ## 9.4　フランス語経由での摩耗
 

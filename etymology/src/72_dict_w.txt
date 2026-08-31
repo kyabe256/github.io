@@ -1,11 +1,5 @@
 == W
 
-@ wardrobe ; /ˈwɔːdrəʊb/ ; 名 ; 衣装だんす
-+lit: 「衣服を守る（場所）」
-+chain: 北仏 <i>warderobe</i>（<i>warder</i>「守る」+ <i>robe</i>「衣服」）
-+der: ward, warden, guard, guardian（中央仏語形）, robe, rob（「略奪する」＝衣服を剥ぐ）
-+note: <i>robe</i>「衣服」と <i>rob</i>「奪う」は同語源。略奪品としての衣服が原義。
-
 @ werewolf ; /ˈweəwʊlf/ ; 名 ; 狼男
 +lit: 「男狼」
 +chain: OE <i>werewulf</i>（<i>wer</i>「男」+ <i>wulf</i>「狼」）
@@ -18,13 +12,6 @@
 +desc: ラテン語 <i>aqua vītae</i>「生命の水」の翻訳借用。同じ発想が北欧の <i>akvavit</i>、フランスの <i>eau-de-vie</i>、ロシアの <i>vodka</i>「小さな水」にも見られる。
 +der: <i>uisce</i> は英語 <i>water</i>, ギリシア語 <i>hýdōr</i> と同根／<i>beatha</i> は <i>vital</i>, <i>bio-</i> と同根
 +note: スコットランドは <i>whisky</i>、アイルランドとアメリカは <i>whiskey</i> と綴り分ける慣習がある。
-
-@ window ; /ˈwɪndəʊ/ ; 名 ; 窓
-+lit: 「風の目」
-+chain: ON <i>vindauga</i>（<i>vindr</i>「風」+ <i>auga</i>「目」）→ ME
-+desc: ガラス以前の、風と光の通る開口部。古英語には <i>ēagþyrl</i>「目の穴」、<i>ēagduru</i>「目の戸」という語もあった。
-+der: wind, eye, ocular, optic, daisy（「日の目」）
-+note: 開口部を「目」と呼ぶ発想は、<i>oculus</i>（丸窓）、日本語の「窓」（「間戸」説）にも通じる。
 
 @ wine ; /waɪn/ ; 名 ; ぶどう酒
 +chain: L <i>vīnum</i> → PGmc *wīnam → OE <i>wīn</i>
@@ -59,7 +46,6 @@
 +der: wring, wrangle, wrench, wrist, writhe, wreath, wrap（<i>wr-</i> はいずれも「ねじれ」を含意する語群）
 +note: 英語の <i>wr-</i> で始まる語は、多くが「ねじれ・ゆがみ」の意味を共有する（<i>wriggle</i>, <i>wrinkle</i>, <i>wrestle</i>, <i>wry</i>）。音象徴の一例。<i>right</i>「正しい」が「まっすぐ」であることと対をなす。
 
-
 @ walrus ; /ˈwɔːlrəs/ ; 名 ; セイウチ
 +chain: オランダ語 <i>walrus</i>（<i>wal</i>「鯨」+ <i>ros</i>「馬」の転倒か）← 北欧語 <i>hrosshvalr</i>「馬鯨」
 +note: 古英語には <i>horschwæl</i>「馬鯨」という形があり、<i>hwæl</i>「鯨」が <i>whale</i>。要素の順序が入れ替わった珍しい例。
@@ -88,3 +74,138 @@
 +chain: OE <i>wrist</i>（*wreiþ-「ねじる」）
 +der: wring, writhe, wreath, wrestle, wrong, wrap, wry, wriggle, wrench
 +note: <i>wr-</i> で始まる語群が共有する「ねじれ」の意味（第VI部 wrong の項）。関節を「ねじれる場所」と捉えた命名。
+
+@ wardrobe ; /ˈwɔːdrəʊb/ ; 名 ; 衣装だんす
++lit: 「衣服を守る場所」
++chain: OF <i>warder</i>「守る」＋<i>robe</i>「衣服」
++der: ward, warden, guard, guardian, regard, reward, award
++note: <i>w-</i>（ノルマン方言）と <i>gu-</i>（中央フランス語）の対が、英語に二重語を大量に残した。<i>warden/guardian</i>, <i>warranty/guarantee</i>, <i>wile/guile</i>, <i>ward/guard</i>, <i>William/Guillaume</i>。
++see: 第4章 ノルマン方言と中央フランス語
++lvl: ★★
+
+@ warehouse ; /ˈweəhaʊs/ ; 名 ; 倉庫
++chain: ME <i>ware</i>「商品」＋<i>house</i>
++der: wares, warehouse, aware は別
++note: TOEIC の物流文脈で頻出。<i>ware</i>「商品」は <i>hardware</i>, <i>software</i>, <i>silverware</i> に残る。
++see: 第XI部 TOEIC語彙
++lvl: ★★★
+
+@ warm ; /wɔːm/ ; 形 ; 暖かい
++chain: OE <i>wearm</i>
++root: *g<sup>w</sup>ʰer-「熱い」
++cog: L <i>formus</i>, Gk <i>thermós</i>, Skt <i>gharmá-</i>
++der: thermal, thermometer, thermos, furnace（L <i>fornāx</i>）, forceps
++note: 英語 <i>warm</i> とギリシア語 <i>thermós</i> が同根。グリムの法則で g<sup>w</sup>ʰ → w。
++see: grimm（図）
+
+@ wedlock ; /ˈwedlɒk/ ; 名 ; 婚姻
++chain: OE <i>wedlāc</i>（<i>wed</i>「誓約」＋<i>-lāc</i>「行為を表す接尾辞」）
++note: <i>-lock</i> は「錠」ではない。接尾辞 <i>-lāc</i> は他に <i>guilelock</i> 等があったがすべて消え、この語だけに残った。
++der: wed, wage, gage, engage, mortgage, wager
++note: <i>wed</i>「結婚する」と <i>wage</i>「賃金」が同根で、共通の原義は「担保、誓約」。
+
+@ weird ; /wɪəd/ ; 形 ; 奇妙な
++lit: 「運命」
++chain: OE <i>wyrd</i>「運命」（<i>weorþan</i>「なる」）
++desc: 名詞「運命」が、シェイクスピア『マクベス』の <i>the weird sisters</i>（運命の三姉妹）を通じて形容詞化し、「超自然的な」→「奇妙な」へ。一作品が語の品詞と意味を変えた稀な例。
++cog: 独 <i>werden</i>「なる」, L <i>vertere</i>「回る」
++see: universe
++lvl: ★★
+
+@ whisky ; /ˈwɪski/ ; 名 ; ウイスキー
++lit: 「命の水」
++chain: ゲール語 <i>uisce beatha</i>「命の水」→ <i>usquebaugh</i> → <i>whisky</i>
++note: L <i>aqua vītae</i> の直訳。仏 <i>eau-de-vie</i>、北欧 <i>akvavit</i>、露 <i>водка</i>（<i>вода</i>「水」の指小形）と、蒸留酒の名は各地で「水」を核にしている。
++der: usquebaugh, whiskey（アイルランド・米国式綴り）
+
+@ window ; /ˈwɪndəʊ/ ; 名 ; 窓
++lit: 「風の目」
++chain: 古ノルド語 <i>vindauga</i>（<i>vindr</i>「風」＋<i>auga</i>「目」）
++desc: 古英語には <i>ēagþyrel</i>「目の穴」と <i>ēagduru</i>「目の戸」があったが、北欧語形に置き換えられた。ガラスのない換気口の時代の命名。
++der: wind, eye, ocular（L <i>oculus</i>、同根）
++note: 日常語が北欧語に置き換わった代表例（<i>they, them, their, sky, skin, egg, take, give, get, want, die, knife, law</i>）。
++see: 第4章 古ノルド語の影響
++lvl: ★★★
+
+@ wonder ; /ˈwʌndə/ ; 名動 ; 驚き
++chain: OE <i>wundor</i>（語源不確実、ゲルマン語独自）
++conf: 不確実
++note: <i>wander</i>「さまよう」とは別語だが、綴りと意味の近さで混同されやすい。
+
+@ worship ; /ˈwɜːʃɪp/ ; 名動 ; 崇拝（する）
++lit: 「価値ある状態」
++chain: OE <i>weorþscipe</i>（<i>weorþ</i>「価値」＋<i>-scipe</i>）
++der: worth, worthy, -ship（friendship, hardship, township）
++note: <i>Your Worship</i>「閣下」に「敬意」の原義が残る。<i>-ship</i> は <i>shape</i> と同根で「作られた状態」。
++lvl: ★★
+
+@ wright ; /raɪt/ ; 名 ; 職人
++chain: OE <i>wyrhta</i>（<i>wyrcan</i>「作る」）
++root: *werǵ-「働く」
++see: organ
++der: work, wright（playwright, shipwright, wheelwright, cartwright）, wrought
++note: <i>playwright</i>「劇作家」は <i>write</i> ではなく <i>wright</i>「作る人」。「劇を書く人」ではなく「劇を組み立てる職人」。誤って <i>playwrite</i> と綴られることが多い。
++lvl: ★★
+
+@ waffle ; /ˈwɒfl/ ; 名動 ; ワッフル／曖昧に話す
++chain: (1) 蘭 <i>wafel</i>「ワッフル」（<i>weave</i> と同根、格子模様から）／(2) 擬音の <i>waff</i>「（犬が）小さく吠える」
++note: 同綴異源。
+
+@ war ; /wɔː/ ; 名 ; 戦争
++chain: 古北フランス語 <i>werre</i>（フランク語 *<i>werra</i>「混乱」）
++cog: 独 <i>wirren</i>「混乱させる」, <i>Wirrwarr</i>
++note: ラテン語 <i>bellum</i> がロマンス諸語で <i>bello</i>「美しい」と同音になるのを避け、ゲルマン語形が採られたとされる。仏 <i>guerre</i>、西 <i>guerra</i> も同語。
++see: rebel
++lvl: ★★
+
+@ weather ; /ˈweðə/ ; 名 ; 天気
++chain: OE <i>weder</i>
++root: *h₂weh₁-「吹く」
++cog: 露 <i>ветер</i>「風」, L <i>ventus</i>「風」
++der: wind, ventilate, vent, window, wing, nirvana（Skt「吹き消すこと」）
++note: <i>nirvana</i>「涅槃」が「（炎を）吹き消すこと」で、英語 <i>wind</i> と同根。
+
+@ week ; /wiːk/ ; 名 ; 週
++chain: OE <i>wicu</i>「順番、交替」
++root: *weyk-「曲がる、順番」
++der: weak は別, vicar は別
++note: 七日制はバビロニア起源で、ローマを経てゲルマン世界に入った。曜日名はローマの惑星神をゲルマンの神で置き換えた翻訳借用（<i>interpretatio germanica</i>）。
++see: weekdays（図）, Wednesday
++lvl: ★★
+
+@ Wednesday ; /ˈwenzdeɪ/ ; 名 ; 水曜日
++lit: 「オーディンの日」
++chain: OE <i>Wōdnesdæġ</i>（<i>Wōden</i>＝北欧の <i>Óðinn</i>）
++desc: L <i>diēs Mercuriī</i>「メルクリウスの日」の翻訳借用。旅と知恵と魔術という属性の重なりでオーディンが当てられた。<i>Tuesday</i>（Tīw＝Mars）, <i>Thursday</i>（Thunor＝Jupiter）, <i>Friday</i>（Frīg＝Venus）も同じ体系。土日月だけがローマの神／天体のまま。
++note: 綴りの <i>d</i> は発音されない。語源的綴りの保存。
++see: weekdays（図）
++lvl: ★★
+
+@ whim ; /wɪm/ ; 名 ; 気まぐれ
++chain: <i>whim-wham</i>「装飾品、思いつき」の短縮（語源不確実）
++conf: 不確実
+
+@ wilderness ; /ˈwɪldənəs/ ; 名 ; 荒野
++chain: OE <i>wilddēoren</i>「野獣の（地）」＋<i>-ness</i>
++der: wild, deer, wilderness, bewilder
++note: <i>-der-</i> は <i>deer</i>（もと「獣」一般）。<i>bewilder</i>「当惑させる」は「荒野に迷い込ませる」。
++see: reindeer
+
+@ wield ; /wiːld/ ; 動 ; 振るう
++chain: OE <i>wealdan</i>「支配する」
++cog: 独 <i>walten</i>, 露 <i>владеть</i>「所有する」（同根）
++der: Vladimir, Vlad（スラヴ語の人名要素 <i>vlad-</i>）
++note: スラヴ系の人名 Vladimir「支配を大いにする者」と英語 <i>wield</i> が同根。
+
+@ withdraw ; /wɪðˈdrɔː/ ; 動 ; 引き下がる
++chain: <i>with</i>「〜に逆らって、離れて」＋<i>draw</i>
++note: <i>with</i> の古義は「〜に対して」で、<i>withstand</i>「抵抗する」, <i>withhold</i>「差し控える」, <i>withdraw</i> にその意味が残る。現在の「〜とともに」は <i>mid</i> から引き継いだ後発の意味。
++see: midwife
++lvl: ★★
+
+@ worry ; /ˈwʌri/ ; 動 ; 心配する
++lit: 「（喉を）絞める」
++chain: OE <i>wyrgan</i>「絞め殺す」
++desc: 「（犬が獲物を）噛み振る」→「苦しめる」→「悩ませる」→「心配する」。暴力的な原義から心的状態へ弱化した。<i>a dog worrying a rat</i> に古義が残る。
++see: 第8章
++lvl: ★★

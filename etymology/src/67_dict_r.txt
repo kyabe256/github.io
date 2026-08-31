@@ -1,17 +1,5 @@
 == R
 
-@ rehearse ; /rɪˈhɜːs/ ; 動 ; 稽古する
-+lit: 「（まぐわで）繰り返し掻く」
-+chain: OF <i>rehercier</i>（<i>re-</i> + <i>hercier</i>「まぐわで掻く」＜ <i>herse</i>「まぐわ」）
-+der: hearse（霊柩車）, hirsute は別
-+note: 農具の比喩が芸能用語になった。日本語の「浚（さら）う」（稽古する）とも発想が近い。
-
-@ rival ; /ˈraɪvl/ ; 名 ; 競争相手
-+lit: 「同じ川を使う者」
-+chain: L <i>rīvus</i>「小川」→ <i>rīvālis</i>「同じ流れを共有する者」
-+desc: 水利権を争う隣人が原義とされる。
-+der: river, riparian, arrive, derive（「川から引く」）, rivulet
-
 @ robot ; /ˈrəʊbɒt/ ; 名 ; ロボット
 +lit: 「賦役、強制労働」
 +chain: チェコ語 <i>robota</i>「賦役」→ カレル・チャペック『R.U.R.』（1920）
@@ -25,12 +13,6 @@
 +desc: 聖母への祈りを「薔薇の花輪」に見立てた中世の比喩による。<i>rosarium</i> はまた「詞華集」の題名にも用いられた。
 +der: rose, rosette
 +note: 「花を集める」比喩は <i>anthology</i>（詞華集）にも見られる。
-
-@ rubric ; /ˈruːbrɪk/ ; 名 ; 規定、項目
-+lit: 「赤い（文字）」
-+chain: L <i>ruber</i>「赤い」→ <i>rubrīca</i>「赤土、（赤字の）標題」
-+desc: 中世写本で、典礼書の指示や章題を赤インクで記したことから。
-+der: red（本来語）, ruby, rubella, rouge, russet, erythrocyte（ギ）
 
 @ rummage ; /ˈrʌmɪdʒ/ ; 動 ; かき回して探す
 +lit: 「船倉に積み込むこと」
@@ -62,26 +44,6 @@
 +der: Romance languages（ロマンス諸語）, roman（仏「長編小説」）, romantic
 +note: 「言語の名」から「文学ジャンル」へ、さらに「感情の質」へと三段跳びした語。
 
-@ rostrum ; /ˈrɒstrəm/ ; 名 ; 演壇
-+lit: 「（船の）嘴」
-+chain: L <i>rōstrum</i>「くちばし、（軍船の）衝角」
-+desc: ローマのフォルムにあった演壇は、鹵獲した敵船の衝角（<i>rōstra</i>）で飾られていた。ここから「演壇」の意味が生じた。
-+der: rodent（<i>rōdere</i>「かじる」）, erode, corrode
-
-
-@ radical ; /ˈrædɪkl/ ; 形 ; 根本的な、急進的な
-+lit: 「根の」
-+chain: L <i>rādīx, rādīcis</i>「根」→ 後期ラテン語 <i>rādīcālis</i>
-+der: radish（「根菜」）, eradicate（「根こそぎにする」）, root（本来語の同根語）, race（血統）は別
-+note: 「根本から変える」→「急進的な」。数学の <i>radical</i>「根号」、化学の <i>radical</i>「基」も同語。
-
-@ recipe ; /ˈresəpi/ ; 名 ; 調理法
-+lit: 「取れ」
-+chain: L <i>recipe</i>（<i>recipere</i>「取る」の命令形）
-+desc: 処方箋の冒頭に「（以下を）取れ」と書いた定型句が名詞化した。薬局の記号 ℞ はこの語の略記。
-+der: receive, receipt, recipient, capture, accept（*kap-）
-+note: <i>dirge</i>, <i>eureka</i>, <i>shampoo</i>, <i>tennis</i> と同じく、命令形が名詞化した語。
-
 @ restaurant ; /ˈrestrɒnt/ ; 名 ; レストラン
 +lit: 「（体力を）回復させるもの」
 +chain: 仏 <i>restaurer</i>「回復させる」（L <i>restaurāre</i>）→ <i>restaurant</i>「滋養スープ」→ それを供する店
@@ -108,3 +70,212 @@
 +lit: 「海の露」
 +chain: L <i>rōs marīnus</i>（<i>rōs</i>「露」+ <i>marīnus</i>「海の」）
 +note: <i>rose</i>「薔薇」とも <i>Mary</i>「マリア」とも無関係だが、英語形は両者に引き寄せられた民間語源的な綴りである（中英語では <i>rosmarine</i>）。
+
+@ radical ; /ˈrædɪkl/ ; 形 ; 根本的な、急進的な
++chain: L <i>rādīx</i>「根」→ 後期ラテン語 <i>rādīcālis</i>
++root: *wréh₂ds「根」
++cog: OE <i>wyrt</i> → wort, Gk <i>rhíza</i> → rhizome, licorice
++der: radish, eradicate（「根こそぎにする」）, root（北欧語経由の同根）, race（血統）は別
++note: 政治用語「急進派」は「根本から改革する者」の意で、1790年代の英議会改革運動から。数学の根号 √ も「根」。
++lvl: ★★
+
+@ ransack ; /ˈrænsæk/ ; 動 ; 荒らし回る
++lit: 「家を捜す」
++chain: 古ノルド語 <i>rannsaka</i>（<i>rann</i>「家」＋<i>saka</i>「探す」）
++der: seek, beseech, ransack, sake（「訴訟」が原義、<i>for my sake</i>）
++note: <i>seek</i> と <i>sake</i> が同根。
+
+@ ransom ; /ˈrænsəm/ ; 名 ; 身代金
++chain: L <i>redemptiō</i>「買い戻し」→ OF <i>ranson</i>
++dbl: redemption
++der: redeem, exempt, example, sample, prompt, assume, consume, presume, resume（<i>emere</i>「買う、取る」）
++note: <i>ransom</i> と <i>redemption</i> は同一語の二重語。世俗の「身代金」と神学の「贖罪」に分かれた。
++see: doublet（図）
+
+@ rapport ; /ræˈpɔː/ ; 名 ; 信頼関係
++chain: 仏 <i>rapporter</i>「持ち帰る、関係づける」（L <i>re-</i>＋<i>ad</i>＋<i>portāre</i>）
++der: report, portable, import, export
++note: メスメル（動物磁気）の用語として18世紀末に英語に入り、心理療法の語彙になった。
+
+@ ravel ; /ˈrævl/ ; 動 ; ほつれる／ほどく
++chain: 蘭 <i>ravelen</i>「もつれる」
++note: <i>ravel</i> と <i>unravel</i> がほぼ同義という珍しい自己矛盾語（auto-antonym）。<i>cleave</i>「割る／くっつく」, <i>sanction</i>「認可／制裁」, <i>dust</i>「払う／まく」, <i>oversight</i>「監督／見落とし」も同型。
++see: 第8章
+
+@ rebel ; /ˈrebl/ ; 名動 ; 反逆者
++lit: 「再び戦う」
++chain: L <i>re-</i>「再び」＋ <i>bellum</i>「戦争」→ <i>rebellāre</i>
++der: bellicose, belligerent, antebellum, duel（<i>duellum</i>＝<i>bellum</i> の古形）
++note: 一度降伏した者が再び武器を取ることが原義。<i>duel</i> は <i>duo</i>「二」との連想で意味が変わった。
+
+@ recipe ; /ˈresəpi/ ; 名 ; レシピ
++lit: 「取れ」
++chain: L <i>recipere</i>「受け取る」の命令形 <i>recipe</i>
++desc: 処方箋の冒頭に書いた「（以下を）取れ」という医師の指示語。記号 ℞ はこの語の略記。18世紀に料理の作り方へ転用された。
++der: receive, receipt, reception, recipient, deceive, conceive, perceive, capable, capture
++see: cap-/cip-/cept-（図）, query（同型の命令形名詞化）
++lvl: ★★
+
+@ record ; /ˈrekɔːd/ ; 名 ; 記録
++lit: 「心に呼び戻す」
++chain: L <i>re-</i>＋<i>cor</i>（属格 <i>cordis</i>）「心」→ <i>recordārī</i>
++root: *ḱḗr「心」
++cog: OE <i>heorte</i> → heart, Gk <i>kardía</i>
++der: courage, cordial, accord, concord, discord, encourage, core（一説）／cardiac, cardiology
++note: 記憶は「心に戻すこと」。<i>learn by heart</i> の <i>heart</i> も同じ発想。
++see: *ḱḗr
++lvl: ★★★
+
+@ rehearse ; /rɪˈhɜːs/ ; 動 ; リハーサルする
++lit: 「もう一度まぐわで掻く」
++chain: OF <i>rehercier</i>（<i>re-</i>＋<i>herce</i>「まぐわ、熊手」＜ L <i>hirpex</i>）
++der: hearse（もと燭台つきの棺架。まぐわの形に似ていた）
++note: 畑を繰り返し掻き均す農具の動きが「繰り返し稽古する」の比喩に。<i>hearse</i>「霊柩車」と同根という意外な組み合わせ。
+
+@ religion ; /rɪˈlɪdʒən/ ; 名 ; 宗教
++conf: 一説　キケロは <i>relegere</i>「読み返す、注意深く行う」由来とし、ラクタンティウスは <i>religāre</i>「（神と人を）結び直す」由来とした。後者が広く流布したが、語形的には前者が優る。
++der: ligament, oblige, ally, rely（<i>ligāre</i> 系とした場合）／lecture, legend, elect（<i>legere</i> 系とした場合）
++note: 語源論争そのものが神学史の一部になっている珍しい語。
++see: 第X部
++lvl: ★★
+
+@ remorse ; /rɪˈmɔːs/ ; 名 ; 良心の呵責
++lit: 「噛み戻すこと」
++chain: L <i>re-</i>＋<i>mordēre</i>「噛む」→ 中世ラテン語 <i>remorsus</i>
++der: morsel（「一口」）, mordant, bite は別系
++note: 「良心が噛み返す」という比喩。中世の <i>remorsus conscientiae</i> の直訳。
+
+@ rescue ; /ˈreskjuː/ ; 動 ; 救う
++chain: L <i>re-</i>＋<i>ex</i>＋<i>quatere</i>「揺さぶる」→ OF <i>rescoure</i>
++der: quash, squash, concussion, percussion, discuss（「振り分けて調べる」）, rescue
++note: <i>discuss</i>「議論する」が「打ち砕く」から来ている。
+
+@ resent ; /rɪˈzent/ ; 動 ; 憤慨する
++chain: 仏 <i>ressentir</i>「（強く）感じる」（L <i>re-</i>＋<i>sentīre</i>）
++der: sense, sentiment, sentence, consent, dissent, assent, scent
++note: 17世紀には「感謝する」の意でも使えた中立語だったが、負の感情に固定した。
++lvl: ★★
+
+@ retaliate ; /rɪˈtælieɪt/ ; 動 ; 報復する
++chain: L <i>tālis</i>「同種の」→ <i>retāliāre</i>
++note: <i>lēx tāliōnis</i>「同害報復法」（目には目を）の <i>tāliō</i> と同根。<i>tailor</i>（L <i>tālea</i>「切り枝」）とは別。
+
+@ rhetoric ; /ˈretərɪk/ ; 名 ; 修辞学
++chain: Gk <i>rhḗtōr</i>「弁論家」← <i>eírein</i>「言う」
++root: *werh₁-「言う」
++cog: OE <i>word</i>, L <i>verbum</i>
++der: word, verb, verbal, adverb, proverb, irony（<i>eirōneía</i>「見せかけ」）
++note: 英語 <i>word</i>、ラテン語 <i>verbum</i>、ギリシア語 <i>rhētōr</i> が同根。自由七科の一。
++see: liberal
+
+@ rival ; /ˈraɪvl/ ; 名 ; 競争相手
++lit: 「同じ川を使う者」
++chain: L <i>rīvus</i>「小川」→ <i>rīvālis</i>「同じ流れを引く者」
++der: derive（「流れをそらす」）, rivulet, river は別（L <i>rīpa</i>「岸」）
++desc: 灌漑用水の分配をめぐる隣人が原イメージ。<i>derive</i>「導き出す」も水路の比喩。
++note: <i>river</i>「川」は <i>rīpa</i>「岸」由来で、<i>rival</i> とは同根ではない。
++lvl: ★★
+
+@ rostrum ; /ˈrɒstrəm/ ; 名 ; 演壇
++lit: 「（船の）衝角」
++chain: L <i>rōdere</i>「かじる」→ <i>rōstrum</i>「くちばし、衝角」
++desc: 前338年アンティウム海戦で鹵獲した敵艦の衝角を、ローマ広場の演壇に飾ったことから、その演壇が <i>Rōstra</i> と呼ばれた。
++der: rodent, corrode, erode, rat は別
+
+@ rubric ; /ˈruːbrɪk/ ; 名 ; 見出し、規定
++lit: 「赤で書いたもの」
++chain: L <i>ruber</i>「赤い」→ <i>rūbrīca</i>
++root: *h₁rewdʰ-「赤い」
++cog: OE <i>rēad</i> → red, Gk <i>erythrós</i>
++der: red, ruby, rouge, rust, robust（「赤い樫のように強い」）, erythrocyte, rubella
++desc: 写本で章題や典礼指示を赤インクで書いた慣習。<i>red-letter day</i>「祝日」も暦の赤字から。
++see: *h₁rewdʰ-
+
+@ rural ; /ˈrʊərəl/ ; 形 ; 田舎の
++chain: L <i>rūs</i>（属格 <i>rūris</i>）「田舎」→ <i>rūrālis</i>
++dbl: rustic
++der: rustic, rusticate
++note: <i>rural</i>（中立）と <i>rustic</i>（「素朴な／野暮な」）が同一語から価値を分けた。<i>urban</i>／<i>urbane</i> がまったく同じ分岐をしている。
++see: urban
++lvl: ★★
+
+@ rehabilitate ; /ˌriːəˈbɪlɪteɪt/ ; 動 ; 復権させる
++chain: L <i>re-</i>＋<i>habilitāre</i>（<i>habēre</i>「持つ」）
++der: habit, habitat, able, ability, exhibit, prohibit, inhibit, debt（<i>dē-habēre</i>「〜から持つ」）
++note: <i>debt</i> の <i>b</i> はラテン語 <i>dēbitum</i> に合わせて16世紀に挿入された黙字。仏 <i>dette</i>、中英語 <i>dette</i> には <i>b</i> がなかった。
++see: 第5章 綴りの語源的復元
++lvl: ★★
+
+@ reciprocal ; /rɪˈsɪprəkl/ ; 形 ; 相互の
++lit: 「後ろへ前へ」
++chain: L <i>reciprocus</i>（*<i>reco-</i>「後ろへ」＋*<i>proco-</i>「前へ」）
++note: 二つの方向副詞を貼り合わせた合成。潮の満ち引きを表す語だった。
+
+@ regret ; /rɪˈɡret/ ; 動名 ; 後悔（する）
++chain: OF <i>regreter</i>「嘆く」（<i>re-</i>＋古ノルド語 <i>grāta</i>「泣く」か）
++conf: 一説
++der: greet（「泣く」の意の古語 <i>grēotan</i>）は同根、挨拶の <i>greet</i> は別語
+
+@ reindeer ; /ˈreɪndɪə/ ; 名 ; トナカイ
++chain: 古ノルド語 <i>hreindýri</i>（<i>hreinn</i>「トナカイ」＋<i>dýr</i>「獣」）
++note: <i>-deer</i> は「鹿」ではなく「獣」（独 <i>Tier</i>）。英語 <i>deer</i> ももと「獣」一般で、「鹿」に縮小した。
++see: 意味の縮小（第8章）
+
+@ ridicule ; /ˈrɪdɪkjuːl/ ; 名動 ; 嘲笑（する）
++chain: L <i>rīdēre</i>「笑う」→ <i>rīdiculum</i>
++der: ridiculous, deride, derision, risible
++lvl: ★★
+
+@ riding ; /ˈraɪdɪŋ/ ; 名 ; （ヨークシャーの）行政区
++lit: 「三分の一」
++chain: 古ノルド語 <i>þriðjungr</i>「三分の一」→ OE <i>þriding</i> →（<i>North</i>, <i>East</i>, <i>West</i> の語末 -t/-th に吸収されて）<i>riding</i>
++note: 先行する方位語の末子音と融合して語頭子音が消えた稀な例。カナダの選挙区名にも残る。
+
+@ rigmarole ; /ˈrɪɡmərəʊl/ ; 名 ; 長ったらしい手続き
++chain: <i>Ragman roll</i>（中世の遊戯用巻物、のちスコットランド貴族の忠誠署名文書）
++conf: 通説
+
+@ risk ; /rɪsk/ ; 名 ; 危険
++conf: 不確実　伊 <i>risco</i>／西 <i>risco</i>「切り立った岩」からの航海用語説が有力。ギリシア語 <i>rhizikón</i>「（運命の）根」説もある。
++note: 海上保険の発達（14世紀イタリア）とともに広まった商業語。
++lvl: ★★
+
+@ rite ; /raɪt/ ; 名 ; 儀式
++chain: L <i>rītus</i>「宗教儀礼、慣習」
++root: *h₂er-「合わせる」
++der: ritual, art, arm, army, order は別, harmony（Gk）, arithmetic, rate, reason, ratio
++note: <i>art</i>, <i>arm</i>, <i>harmony</i>, <i>rite</i> が同根で、共通の観念は「きちんと組み合わせること」。
+
+@ rotund ; /rəʊˈtʌnd/ ; 形 ; 丸い
++chain: L <i>rota</i>「車輪」→ <i>rotundus</i>
++root: *Hret-「走る、転がる」
++der: round, rodeo, rotary, rotate, roll, control（<i>contrā rotulus</i>「照合用の巻物」）, role（巻物に書いた役の台本）, enroll, rouleau
++note: <i>control</i>「管理」は「対照台帳」、<i>role</i>「役割」は「台本の巻物」。どちらも巻いた紙から。
++see: control
++lvl: ★★
+
+@ rout ; /raʊt/ ; 名動 ; 敗走（させる）
++chain: L <i>rumpere</i>「破る」→ <i>rupta</i>「破られた（隊列）」→ OF <i>route</i>
++dbl: route, routine, rupture
++der: rupture, corrupt, abrupt, interrupt, erupt, bankrupt（伊 <i>banca rotta</i>「壊れた台」）
++note: <i>route</i>「道」は <i>via rupta</i>「（森を）切り開いた道」。<i>rout</i>「敗走」と <i>route</i>「道順」と <i>routine</i>「決まった手順」が同一語の三重語。
++see: doublet
++lvl: ★★
+
+@ royal ; /ˈrɔɪəl/ ; 形 ; 王の
++chain: L <i>rēx</i>（属格 <i>rēgis</i>）「王」→ <i>rēgālis</i> → OF <i>roial</i>
++root: *h₃reǵ-「まっすぐにする、導く」
++dbl: regal, real（西 <i>real</i>）
++cog: Skt <i>rāj-</i>（<i>rājā</i>）, ゴール語 <i>-rīx</i>（Vercingetorix）
++der: regime, region, rector, correct, direct, erect, right, rule, ruler, reign, realm, rich, reckon
++note: 英語 <i>right</i>「正しい・右」も同根で、「まっすぐ」が「正義」と「統治」の両方に分かれた。日本語の「正」も同型の多義。
++see: *h₃reǵ-
++lvl: ★★★
+
+@ rubbish ; /ˈrʌbɪʃ/ ; 名 ; ごみ
++chain: AF <i>rubbous</i>（語源不確実。<i>rubble</i> と同源か）
++conf: 不確実
+
+@ ruminate ; /ˈruːmɪneɪt/ ; 動 ; 反芻する、熟考する
++chain: L <i>rūmen</i>「第一胃、喉」→ <i>rūmināre</i>
++note: 反芻動物の胃の名から。「繰り返し噛む」が「繰り返し考える」の比喩に。日本語「反芻する」も同じ比喩を独立に採用した訳語。

@@ -137,3 +137,63 @@
 +desc: 「（当事者の）間にあること」＝利害関係。中世に、利息を取ることが教会法で禁じられたため、「損害賠償」の名目で <i>interesse</i> と呼んだのが「利子」の語義の起源とされる。
 +der: essence, present, absent, entity, is（本来語）
 
+
+@ ice ; /aɪs/ ; 名 ; 氷
++chain: OE <i>īs</i> ← PGmc *īsaz
++cog: 独 <i>Eis</i>, ON <i>íss</i>
++der: iceberg（オランダ語「氷の山」）, icicle（<i>ice</i>+<i>gicel</i>「氷柱」）
++note: <i>icicle</i>「つらら」の後半 <i>-icle</i> は古英語の「氷柱」で、ラテン語の縮小辞 <i>-icle</i> とは無関係。
+
+@ ignore ; /ɪɡˈnɔː/ ; 動 ; 無視する
++lit: 「知らない」
++chain: L <i>in-</i>（非）+ <i>gnōscere</i>「知る」→ <i>ignōrāre</i>
++der: ignorant, ignoramus, notice, notion, noble, recognize, know（本来語）
++note: 「知らないでいる」→「知らないふりをする」→「無視する」。<i>know</i> と同根。
+
+@ illustrate ; /ˈɪləstreɪt/ ; 動 ; 説明する、図示する
++lit: 「光を当てる」
++chain: L <i>in-</i> + <i>lūstrāre</i>「照らす」
++der: lustre, illustrious, lucid, luminous, Lucifer, light（本来語）
++note: 「例で照らす」から「挿絵を入れる」へ。
+
+@ impede ; /ɪmˈpiːd/ ; 動 ; 妨げる
++lit: 「足かせをはめる」
++chain: L <i>in-</i> + <i>pēs, pedis</i>「足」→ <i>impedīre</i>
++der: impediment, expedite（「足かせを外す」＝促進する）, expedition, pedal, foot（本来語）
++note: <i>expedite</i>「促進する」と正反対の対をなす。どちらも「足」から。
+
+@ import ; /ɪmˈpɔːt/ ; 動 ; 輸入する
++chain: L <i>in-</i> + <i>portāre</i>「運ぶ」
++der: export, transport, report, support, deport, portable, porter, opportunity
++note: <i>important</i>「重要な」も同語（「（重みを）持ち込む」）。
+
+@ innocent ; /ˈɪnəsnt/ ; 形 ; 無罪の、無邪気な
++lit: 「害を与えない」
++chain: L <i>in-</i>（非）+ <i>nocēre</i>「害する」→ <i>innocēns</i>
++der: noxious, obnoxious, nuisance, pernicious, necro-（ギ）
++note: 「無害」が「無罪」「無邪気」へ。法廷用語から日常語へ広がった。
+
+@ insect ; /ˈɪnsekt/ ; 名 ; 昆虫
++lit: 「切り込みのあるもの」
++chain: L <i>in-</i> + <i>secāre</i>「切る」→ <i>īnsectum</i>
++desc: ギリシア語 <i>éntomon</i>「切れ込みのあるもの」（アリストテレス）の翻訳借用。頭・胸・腹のくびれによる命名。
++der: section, sector, dissect, segment, saw（本来語）／entomology（ギ）
++note: <i>entomology</i>「昆虫学」は原語のほう。同じ発想の語が二系統ある。
+
+@ insurance ; /ɪnˈʃʊərəns/ ; 名 ; 保険
++chain: L <i>sēcūrus</i>「安全な」→ OF <i>seur</i> → <i>asseurer</i>「保証する」
++der: sure, secure, assure, ensure, insure, security
++note: <i>sure</i> と <i>secure</i> は同語源の二重語。<i>insure</i>（保険をかける）と <i>ensure</i>（確実にする）の使い分けは英語内部での分化。
+
+@ invest ; /ɪnˈvest/ ; 動 ; 投資する
++lit: 「衣を着せる」
++chain: L <i>in-</i> + <i>vestīre</i>「着せる」→ <i>investīre</i>
++der: vest, vestment, divest, travesty, transvestite, wear（本来語）
++note: 「（職位の印として）衣を着せる」→「（資金に）職務を与える」。イタリアの商業用語から。
+
+@ iron ; /ˈaɪən/ ; 名 ; 鉄
++chain: OE <i>īsern, īren</i>（ケルト語 *īsarnom からの借用とされる）
++conf: 一説　ケルト語起源説が有力
++der: 元素記号 Fe は L <i>ferrum</i> で別語源
++note: 鉄器技術がケルト人経由でゲルマン人に伝わったことを語彙が示唆する。<i>Iron Age</i>「鉄器時代」。
+

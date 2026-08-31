@@ -23,12 +23,6 @@
 +desc: 15世紀にヴィール谷で流行した風刺歌に由来するとされる。<i>voix de ville</i>「街の声」との混同もあった。
 +note: 地名由来語で、途中に民間語源による形の変化が加わった例。
 
-@ verdict ; /ˈvɜːdɪkt/ ; 名 ; 評決
-+lit: 「真実を言われたこと」
-+chain: L <i>vērē dictum</i> → アングロ・フランス語 <i>verdit</i>
-+der: verify, very（もと「真の」）, veritable, aver／dictate, diction, predict, contradict, judge
-+note: <i>very</i> が「真の」であることは <i>the very man</i>「まさにその人」に残る（文法化、第7章）。
-
 @ vermilion ; /vəˈmɪliən/ ; 名 ; 朱色
 +lit: 「小さな虫」
 +chain: L <i>vermis</i>「虫」→ <i>vermiculus</i>「小さな虫（＝カイガラムシ）」→ OF <i>vermeillon</i>
@@ -42,19 +36,6 @@
 +desc: 「農奴」→「粗野な者」→「悪党」と悪化した（第7章）。支配層の言語における階級的偏見が語義に沈殿した典型例。
 +der: villa, village, villein, vicinity(?)
 +note: 同型の悪化に <i>churl</i>（自由農民→無礼者）, <i>boor</i>（農民→粗野な人）, <i>peasant</i>。
-
-@ virtue ; /ˈvɜːtʃuː/ ; 名 ; 美徳
-+lit: 「男らしさ」
-+chain: L <i>vir</i>「男」→ <i>virtūs</i>「男らしさ、勇気、卓越」→ OF <i>vertu</i>
-+desc: ローマにおける <i>virtūs</i> は軍人的な勇気を核とする。キリスト教化のなかで「徳」一般へ、さらに（女性について）「貞節」へと意味が移った。マキャヴェッリの <i>virtù</i> は古義に近い政治的力量を指す。
-+der: virile, virtual（もと「潜在的な力を持つ」）, triumvirate, werewolf（本来語 <i>wer</i>「男」）
-+note: <i>virtual reality</i> の <i>virtual</i> は「（実体はないが）力としては実在する」という中世スコラ哲学の用語法に遡る。
-
-@ volume ; /ˈvɒljuːm/ ; 名 ; 巻、体積、音量
-+lit: 「巻いたもの」
-+chain: L <i>volvere</i>「転がす、巻く」→ <i>volūmen</i>「巻物」→ OF
-+desc: 巻物の書物が原義。「本の一巻」→「（巻いた）かさ＝体積」→「（響きの）大きさ＝音量」と三方向に分岐した。
-+der: revolve, revolution, involve, evolve, devolve, vault, valve, walk（本来語）, helix（ギ）
 
 @ vulgar ; /ˈvʌlɡə/ ; 形 ; 下品な
 +lit: 「民衆の」
@@ -71,16 +52,6 @@
 +chain: L <i>vōx, vōcis</i> → OF <i>vois</i>
 +der: vocal, vocation（「（神の）呼びかけ」＝天職）, advocate, evoke, invoke, provoke, revoke, vocabulary, vowel（「声の（文字）」）, equivocal
 +note: 文法の <i>voice</i>「態（能動態・受動態）」は、ギリシア語 <i>diáthesis</i> のラテン語訳 <i>vōx</i> による用語法。
-
-
-@ vagabond ; /ˈvæɡəbɒnd/ ; 名 ; 放浪者
-+chain: L <i>vagārī</i>「さまよう」→ <i>vagābundus</i>
-+der: vague（「さまよう＝定まらない」）, vagary, extravagant（「外へさまよい出る」）, vagrant
-+note: <i>vague</i>「曖昧な」の原義は「（意味が）さまよう」。
-
-@ vermin ; /ˈvɜːmɪn/ ; 名 ; 害虫
-+chain: L <i>vermis</i>「虫」→ 俗ラテン語 *<i>verminum</i>
-+der: worm（本来語）, vermilion, vermicelli, vermiform, vermouth（独 <i>Wermut</i>「ニガヨモギ」、同根とする説あり）
 
 @ veto ; /ˈviːtəʊ/ ; 名 ; 拒否権
 +lit: 「私は禁じる」
@@ -104,3 +75,146 @@
 +chain: L <i>Volcānus</i>（火と鍛冶の神ウルカヌス）→ 伊 <i>volcano</i>
 +desc: シチリア沖のヴルカーノ島（神の鍛冶場と考えられた）の名から。
 +der: vulcanize（加硫。グッドイヤー, 1839）, Vulcan
+
+@ vast ; /vɑːst/ ; 形 ; 広大な
++chain: L <i>vastus</i>「空虚な、荒涼とした、広大な」
++der: waste, devastate, vain, vanity, vacant, vacuum, evacuate, void, avoid
++note: <i>waste</i> と <i>vast</i> は同一語源で、ゲルマン語形と混淆した。「何もない」が「広い」と「荒れた」に分かれた。
++lvl: ★★
+
+@ verdict ; /ˈvɜːdɪkt/ ; 名 ; 評決
++lit: 「真実を言うこと」
++chain: L <i>vērum dictum</i>「真実の言」→ AF <i>verdit</i>
++root: *weh₁r-「真実」／*deyḱ-「示す」
++der: very（「真の」が原義）, verify, verdict, veracity, aver／dictionary, dictate, predict, contradict, index, judge, indicate
++note: <i>very</i> はもと形容詞「真の」（<i>the very man</i> に残る）。強意副詞になったのは中英語後期。
++lvl: ★★
+
+@ vermin ; /ˈvɜːmɪn/ ; 名 ; 害獣、害虫
++chain: L <i>vermis</i>「虫」→ 俗ラテン語 <i>vermīnum</i>
++der: worm（ゲルマン系同根）, vermilion（<i>vermiculus</i>「カイガラムシ」＝朱の染料）, vermicelli（伊「小さな虫」＝細いパスタ）
++note: <i>vermilion</i>「朱色」は虫から採る染料の名。<i>crimson</i>（アラビア語 <i>qirmiz</i>「カイガラムシ」）も同じ発想の別語。
+
+@ vernacular ; /vəˈnækjʊlə/ ; 形名 ; 土着の（言語）
++chain: L <i>verna</i>「家で生まれた奴隷」→ <i>vernāculus</i>
++note: 「家生まれの＝土地固有の」。エトルリア語起源とされる。
++lvl: ★★
+
+@ virtue ; /ˈvɜːtʃuː/ ; 名 ; 美徳
++lit: 「男らしさ」
++chain: L <i>vir</i>「男」→ <i>virtūs</i>「男らしさ、勇気、徳」
++root: *wiH-ro-「男」
++cog: OE <i>wer</i>（<i>werewolf</i>「狼男」に残存）, Skt <i>vīra-</i>
++der: virile, virtual, world（OE <i>weorold</i>＝<i>wer</i>「人」＋<i>ald</i>「年齢」＝「人の世」）, werewolf, triumvirate
++note: <i>world</i> が「人の一生」であることは語源を知らないとわからない。<i>virtual</i>「事実上の」は「（潜在的な）力をもつ」が原義で、計算機用語は1959年から。
++see: world
++lvl: ★★★
+
+@ volume ; /ˈvɒljuːm/ ; 名 ; 巻、体積、音量
++lit: 「巻いたもの」
++chain: L <i>volvere</i>「巻く、転がす」→ <i>volūmen</i>
++der: revolve, revolution, involve, evolve, devolve, convolution, vault, volt は別, walk（ゲルマン系同根）
++note: 巻物が「巻」の単位になり、そこから「かさ」→「体積」→「音の大きさ」へ。三つの意味が一語に同居する。
++lvl: ★★★
+
+@ voyage ; /ˈvɔɪɪdʒ/ ; 名 ; 航海
++chain: L <i>via</i>「道」→ <i>viāticum</i>「旅の糧」→ OF <i>veiage</i>
++see: obvious
++der: via, deviate, obvious, previous, trivial, convey, convoy, envoy, viaduct
++note: <i>viaticum</i> はもと「旅費・旅の食糧」で、キリスト教では「臨終の聖体」（最後の旅の糧）を指す。
+
+@ vacation ; /vəˈkeɪʃn/ ; 名 ; 休暇
++chain: L <i>vacāre</i>「空である」→ <i>vacātiō</i>
++der: vacant, vacuum, evacuate, void, avoid, vanity, vain, waste, vast
++note: 「（職務が）空になること」。英国では大学・法廷の休廷期を指し、一般の休暇は <i>holiday</i>（<i>hāliġ dæġ</i>「聖なる日」）。米英差。
++lvl: ★★
+
+@ vagabond ; /ˈvæɡəbɒnd/ ; 名 ; 放浪者
++chain: L <i>vagārī</i>「さまよう」→ <i>vagābundus</i>
++der: vague（「さまよう＝定まらない」）, extravagant（「外へさまよい出る」）, vagrant, vagary
++note: <i>extravagant</i>「浪費する」が「常軌を逸してさまよう」から。
+
+@ valet ; /ˈvæleɪ/ ; 名 ; 従者
++chain: 俗ラテン語 *<i>vassellittus</i>（ケルト語 *<i>wasso-</i>「若者、従者」）
++dbl: varlet, vassal
++der: vassal, varlet, valet
++note: ケルト語からラテン語に入った数少ない語のひとつ。封建制の語彙（<i>vassal</i>「臣下」）を作った。
+
+@ vampire ; /ˈvæmpaɪə/ ; 名 ; 吸血鬼
++chain: セルビア語 <i>вампир</i> → 独 <i>Vampir</i> → 英語（1734）
++note: 18世紀のハプスブルク帝国辺境での「吸血鬼騒動」の報告書が西欧に伝えた。コウモリの命名（1774）は逆に伝説からの転用。
++see: 第VIII部 スラヴ語
+
+@ velocity ; /vəˈlɒsəti/ ; 名 ; 速度
++chain: L <i>vēlōx</i>「速い」→ <i>vēlōcitās</i>
++der: velocipede（「速い足」＝自転車の前身）
++lvl: ★★
+
+@ vengeance ; /ˈvendʒəns/ ; 名 ; 復讐
++chain: L <i>vindicāre</i>「（法的に）要求する、罰する」→ OF <i>vengier</i>
++der: avenge, revenge, vindicate, vindictive
++note: <i>vindicate</i>「正当性を証明する」と <i>vengeance</i> が同根。法的主張と私的報復が同じ語から分かれた。
+
+@ venue ; /ˈvenjuː/ ; 名 ; 会場
++lit: 「来ること」
++chain: L <i>venīre</i>「来る」→ 仏 <i>venue</i>
++root: *g<sup>w</sup>em-「行く、来る」
++cog: OE <i>cuman</i> → come, Gk <i>baínein</i>
++der: come, become／advent, convene, event, invent, prevent, revenue, souvenir, intervene, avenue, convenient／Gk系 base, basis, acrobat, diabetes
++note: 法律用語で「裁判が行われる地」。英語 <i>come</i> とラテン語 <i>venīre</i> はグリムの法則（g<sup>w</sup> → k<sup>w</sup>）で対応する。
++see: *g<sup>w</sup>em-
++lvl: ★★★
+
+@ verge ; /vɜːdʒ/ ; 名 ; 縁、間際
++chain: L <i>virga</i>「小枝、杖」→「（権標の届く）範囲」
++der: virgule（斜線）, verger（教会の杖持ち）
++note: <i>on the verge of</i>「〜の間際に」。権威の杖が及ぶ境界が原義。
+
+@ versatile ; /ˈvɜːsətaɪl/ ; 形 ; 多才な
++chain: L <i>vertere</i>「向ける、回す」→ <i>versātilis</i>
++see: universe
++note: 「（あらゆる方向に）向きを変えられる」。17世紀には「変わりやすい＝不誠実な」の悪義でも使われた。
++lvl: ★★
+
+@ veterinary ; /ˈvetrɪnri/ ; 形 ; 獣医の
++chain: L <i>veterīnae</i>「（荷を引く）役畜」← <i>vetus</i>「年老いた」
++der: veteran, inveterate, veteranary
++note: <i>veteran</i>「古参兵」と同根。「年を経た（＝使役に耐える）家畜」。
+
+@ vice ; /vaɪs/ ; 名 ; 悪徳／副〜
++chain: (1) L <i>vitium</i>「欠陥」／(2) L <i>vicis</i>「交替、代わり」
++der: (1) vicious, vitiate／(2) vice-president, vicar, vicarious, vicissitude
++note: 同綴異源。<i>vicar</i>「代理牧師」は「（キリストの）代理」。
+
+@ vigilante ; /ˌvɪdʒɪˈlænti/ ; 名 ; 自警団員
++chain: L <i>vigil</i>「目覚めている」→ 西 <i>vigilante</i>
++der: vigil, vigilant, vigor, wake, watch（ゲルマン系同根）, reveille（仏「起きよ」）
++note: 19世紀アメリカ西部の自警委員会（vigilance committee）から。
+
+@ visa ; /ˈviːzə/ ; 名 ; 査証
++lit: 「見られた（書類）」
++chain: L <i>vidēre</i>「見る」の過去分詞複数 <i>vīsa</i>「見られたもの」
++root: *weyd-「見る、知る」
++cog: Gk <i>eîdos</i>「形」, <i>oîda</i>「知っている」, Skt <i>veda</i>, OE <i>wītan</i>「知る」
++der: vision, video, evident, provide, advise, revise, survey, view, visit, wise, wit, guide／idea, idol, history（Gk <i>hístōr</i>「見た人＝証人」）
++note: <i>history</i>「歴史」と <i>wise</i>「賢い」と <i>visa</i> が同根。「見た者が知る」という印欧語共通の観念。
++see: *weyd-
++lvl: ★★★
+
+@ volunteer ; /ˌvɒlənˈtɪə/ ; 名 ; 志願者
++chain: L <i>voluntās</i>「意志」（<i>velle</i>「望む」）→ 仏 <i>voluntaire</i>
++der: voluntary, volition, benevolent, malevolent, will（ゲルマン系同根）
++note: 英語 <i>will</i> とラテン語 <i>velle</i> は同根。
++lvl: ★★
+
+@ vote ; /vəʊt/ ; 動名 ; 投票（する）
++lit: 「（神への）誓願」
++chain: L <i>vovēre</i>「誓う」→ <i>vōtum</i>
++der: vow, devout, devote, votive
++note: <i>vow</i> と <i>vote</i> は同一語の二重語。宗教的な誓いが政治的な意思表示へ。
++lvl: ★★★
+
+@ vulnerable ; /ˈvʌlnərəbl/ ; 形 ; 傷つきやすい
++chain: L <i>vulnus</i>「傷」→ <i>vulnerābilis</i>
++der: invulnerable, vulnerary
++lvl: ★★

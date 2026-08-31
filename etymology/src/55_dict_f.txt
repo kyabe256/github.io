@@ -157,3 +157,128 @@
 @ furniture ; /ˈfɜːnɪtʃə/ ; 名 ; 家具
 +chain: 仏 <i>fourniture</i>「供給」（<i>fournir</i>「供給する」＜ ゲルマン語 *frumjan「進める」）
 +note: フランス語 <i>fourniture</i> は今も「備品・供給」の意で、家具は <i>meuble</i>（「動かせるもの」＝動産）という。英語 <i>movables</i> にも同じ発想がある。
+
+@ face ; /feɪs/ ; 名 ; 顔
++chain: L <i>faciēs</i>「形、外見、顔」（<i>facere</i>「作る」）→ OF <i>face</i>
++der: facade, facial, surface, deface, efface, facet, fact, factory
++note: 古英語の <i>andwlita</i>「顔」は失われた。<i>fact</i>「事実」と同根で、どちらも「作られたもの」。
+
+@ fair ; /feə/ ; 形・名 ; 公正な、市（いち）
++desc: 二つの別語。（1）公正な・美しい＝OE <i>fæger</i>。（2）市＝L <i>fēriae</i>「祭日」→ OF <i>feire</i>。
++der: (1) fairness, fairly／(2) feast, festival, festive, fiesta
++note: 祭日に立つ市が <i>fair</i>。同綴だが起源はまったく異なる。
+
+@ family ; /ˈfæməli/ ; 名 ; 家族
++lit: 「家の召使いたち」
++chain: L <i>famulus</i>「召使い」→ <i>familia</i>「（奴隷を含む）家の全員」
++der: familiar, familiarity
++note: ローマの <i>familia</i> は血縁より「家長の支配下にある者すべて」を指した。近代的な「家族」概念は後発。
+
+@ fashion ; /ˈfæʃn/ ; 名 ; 流行、様式
++lit: 「作ること、作り方」
++chain: L <i>factiō</i>「作ること、党派」→ OF <i>façon</i>
++dbl: <i>faction</i>（党派。ラテン直輸入）
++der: fact, factory, effect, perfect, defect
++note: <i>faction</i>「派閥」と <i>fashion</i>「流行」が同語源。「作り方」から一方は政治、一方は服飾へ。
+
+@ fate ; /feɪt/ ; 名 ; 運命
++lit: 「（神が）語ったこと」
++chain: L <i>fārī</i>「話す」→ <i>fātum</i>「神託、運命」
++der: fable, fairy（<i>fāta</i>）, fame, infant（「話さない者」）, preface, confess, prophet（ギ）
++note: 「言葉が運命を決める」という古代の観念。<i>fairy</i>「妖精」も運命の女神から。
+
+@ female ; /ˈfiːmeɪl/ ; 名・形 ; 女性（の）
++chain: L <i>femella</i>「若い女」（<i>fēmina</i>「女」の縮小形）→ OF <i>femelle</i>
++note: 綴りが <i>male</i> に引かれて <i>femelle</i> → <i>female</i> となった民間語源。語源的には <i>male</i>（L <i>masculus</i>）と<b>無関係</b>。
+
+@ fever ; /ˈfiːvə/ ; 名 ; 熱
++chain: L <i>febris</i>「熱」→ OE <i>fefor</i>
++der: febrile, foment（「暖める」）, day（本来語の同根語とする説）
++note: 大陸期〜キリスト教化期のラテン語借用。
+
+@ fiber ; /ˈfaɪbə/ ; 名 ; 繊維
++chain: L <i>fibra</i>「繊維、糸」
++der: fibril, fibrous, fibrosis
++note: <i>moral fiber</i>「精神力」は繊維の比喩。
+
+@ fiction ; /ˈfɪkʃn/ ; 名 ; 虚構
++lit: 「こねて形づくられたもの」
++chain: L <i>fingere, fictum</i>「こねる、形づくる」→ <i>fictiō</i>
++der: figure, figment, feign, feint, effigy, configuration／dough, lady（本来語の同根語）
++note: <i>lady</i>「パンをこねる者」と <i>fiction</i>「作り話」が同根。どちらも「こねる」。
+
+@ finance ; /ˈfaɪnæns/ ; 名 ; 財政
++lit: 「（債務の）決着」
++chain: L <i>fīnis</i>「終わり」→ 中世ラテン語 <i>fīnantia</i>「支払いによる決着」
++der: fine（罰金・上等な）, final, finish, define, confine, refine, infinite, affinity
++note: <i>fine</i>「罰金」は「（争いの）決着金」、<i>fine</i>「上等な」は「仕上げられた」。
+
+@ finger ; /ˈfɪŋɡə/ ; 名 ; 指
++chain: OE <i>finger</i> ← PGmc *fingraz
++conf: 一説　*penkʷe「五」との関連が説かれるが確定しない
++der: fist(?), five(?)
++note: ラテン系は <i>digit</i>（「指」→「数字」）、ギリシア系は <i>dactyl</i>。
+
+@ flag ; /flæɡ/ ; 名 ; 旗
++chain: 語源不明（16世紀）
++conf: 不確実　擬音（はためく音）説がある
++note: 語源不明の日常語の一つ。
+
+@ flesh ; /fleʃ/ ; 名 ; 肉
++chain: OE <i>flǣsc</i>
++cog: 独 <i>Fleisch</i>
++der: flitch（豚の脇肉）
++note: ラテン系は <i>carn-</i>（carnal）、ギリシア系は <i>sarc-</i>（sarcasm）。三系統が揃う。
+
+@ foot ; /fʊt/ ; 名 ; 足
++root: *ped-
++cog: L <i>pēs, pedis</i>, Gk <i>poús, podós</i>, Skt <i>pád-</i>, Hitt <i>pata-</i>
++der: fetter, fetlock／pedal, pedestrian, impede, expedite, pawn, pioneer／podium, tripod, octopus
++note: グリムの法則 *p → f の代表例。<i>foot</i> と <i>pedal</i> と <i>podium</i> がすべて同じ一点から出ている。
+
+@ forest ; /ˈfɒrɪst/ ; 名 ; 森
++lit: 「（囲いの）外の地」
++chain: 中世ラテン語 <i>forestis (silva)</i>「（王の）囲い外の森」（L <i>forīs</i>「外に」）
++der: foreign, forum, forensic, door（本来語の同根語 *dʰwer-）
++note: 本来は「王が狩猟権を留保した 法の及ぶ地」という法律用語だった。<i>door</i>「戸」と同根。
+
+@ fork ; /fɔːk/ ; 名 ; フォーク
++chain: L <i>furca</i>「二又の道具、熊手」→ OE <i>forca</i>
++der: bifurcate（「二又に分かれる」）, furcate
++note: 食卓用フォークがヨーロッパに広まったのは中世末以降で、それまでは農具の名だった。
+
+@ forward ; /ˈfɔːwəd/ ; 副 ; 前へ
++chain: OE <i>foreweard</i>（<i>fore</i>「前」+ <i>-weard</i>「〜の方へ」）
++der: -ward（toward, backward）, worth, verse, versus, weird（*wert-「回す」）
++note: <i>-ward</i> は「向きを変える」から。<i>weird</i>「不気味な」も同根（「巡ってくる運命」）。
+
+@ fragile ; /ˈfrædʒaɪl/ ; 形 ; 壊れやすい
++chain: L <i>frangere</i>「砕く」→ <i>fragilis</i>
++dbl: <i>frail</i>（仏語経由の摩耗形）
++der: fraction, fracture, fragment, infringe, refract, suffrage, break（本来語）
++note: 二重語の代表例。本来語 <i>break</i> と同根。
+
+@ friend ; /frend/ ; 名 ; 友
++lit: 「愛する者」
++chain: OE <i>frēond</i>（<i>frēon</i>「愛する」の現在分詞）
++cog: 独 <i>Freund</i>, Goth <i>frijōnds</i>
++der: free（同語根 *preyH-「愛する、自分の」）, Friday（女神 <i>Frīg</i>）, afraid は別
++note: <i>free</i>「自由な」と <i>friend</i>「友」が同根。「一族の（愛する）者＝自由身分の者」という社会構造を反映する。
+
+@ fruit ; /fruːt/ ; 名 ; 果物
++lit: 「享受されるもの」
++chain: L <i>fruī</i>「享受する」→ <i>frūctus</i> → OF <i>fruit</i>
++der: fructose, frugal（「実り豊かな」→ 倹約な）, usufruct, brook（本来語「耐える」）
++note: <i>frugal</i>「倹約な」がもと「実り豊かな」であるのは、「（少しで）足りる」への転義による。
+
+@ funeral ; /ˈfjuːnərəl/ ; 名 ; 葬儀
++chain: L <i>fūnus, fūneris</i>「葬儀」（語源不確実）
++der: funereal, funerary
++note: <i>funeral</i>（葬儀）と <i>funereal</i>（陰気な）の綴りと意味の違いに注意。
+
+@ future ; /ˈfjuːtʃə/ ; 名 ; 未来
++chain: L <i>futūrus</i>（<i>esse</i>「ある」の未来分詞）
++root: *bʰuH-「なる、生じる」
++der: be, been（本来語）, physics, physical（ギ）
++note: 英語 <i>be</i> と <i>future</i> と <i>physics</i> が同根。すべて「生じる・ある」に遡る。
+

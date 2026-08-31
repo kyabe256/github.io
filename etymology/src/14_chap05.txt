@@ -30,6 +30,8 @@
 | end | finish | conclude |
 | goodness | virtue | probity |
 
+%fig vocab-pie ; 見出し語ベースと使用頻度ベースでは、語彙の構成がまるで違う。
+
 ## 5.2　第一層：ケルト語
 
 アングロ・サクソン人が渡来する以前のブリテン島にはブリソン系ケルト語が話されていたが、英語に入ったケルト系語彙はごく少ない。<i>crag</i>（岩）、<i>bin</i>、<i>brock</i>（穴熊）、<i>dun</i>（くすんだ茶色）、<i>tor</i>（岩山）、<i>bannock</i>、<i>coomb</i>（谷）程度である。後代にアイルランド語・スコットランド・ゲール語から <i>whiskey</i>（<i>uisce beatha</i>「命の水」）、<i>clan</i>、<i>slogan</i>（<i>sluagh-ghairm</i>「軍勢の叫び」）、<i>galore</i>、<i>trousers</i>、<i>bog</i>、<i>brogue</i>、<i>banshee</i>、<i>leprechaun</i>、ウェールズ語から <i>corgi</i>（「小人の犬」）、<i>penguin</i>（諸説）、<i>flannel</i> が入った。
@@ -77,6 +79,8 @@
 
 また、<i>whole/hale</i>, <i>no/nay</i>, <i>from/fro</i>, <i>rear/raise</i>, <i>church/kirk</i> の対も英語形と北欧語形の二重語である。
 
+%fig strata ; 語彙の三層。同じ意味を三つの高さで言い分けられる。
+
 ## 5.5　第四層：フランス語（二段階）
 
 <b>ノルマン・フランス語（1066〜1250頃）</b>　征服者の言語として、支配・軍事・法・料理の語彙が入った。北ノルマン方言の特徴（ca- の保持、w- の保持）を示す。
@@ -108,6 +112,8 @@
 ギリシア語からの語彙は、（1）ラテン語経由の古い層（<i>church, bishop, devil, school, paper</i>）、（2）ルネサンス以降の学術借用、（3）近代の科学造語、の三層からなる。
 
 近代の科学語彙はほとんどがギリシア語要素の新造語（neoclassical compound）である。<i>telephone</i>（遠い＋音）, <i>photograph</i>（光＋書く）, <i>telegraph</i>, <i>microscope</i>, <i>thermometer</i>, <i>biology</i>, <i>psychology</i>, <i>chromosome</i>, <i>antibiotic</i>, <i>dinosaur</i>（恐ろしい＋トカゲ、1841年オーウェンの造語）, <i>helicopter</i>（螺旋＋翼）。これらは古代ギリシア人には通じない「現代人のギリシア語」である。
+
+%fig world-origins ; 英語に入った語の出身地。借用の博物館と呼ばれるゆえん。
 
 ## 5.7　その他の言語から
 

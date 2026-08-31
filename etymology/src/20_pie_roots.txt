@@ -6,6 +6,20 @@
 
 記号：L＝ラテン語、Gk＝ギリシア語、Skt＝サンスクリット語、PGmc＝ゲルマン祖語、OE＝古英語、ON＝古ノルド語、OF＝古フランス語、Goth＝ゴート語、OHG＝古高ドイツ語、Av＝アヴェスター語、OCS＝古教会スラヴ語、Lith＝リトアニア語、W＝ウェールズ語、OIr＝古アイルランド語。
 
+## 一つの語根が、三つの層すべてに届く
+
+印欧祖語の語根は、英語のなかで一か所に留まらない。本来語として直接受け継がれ、ラテン語を経由してもう一度入り、ギリシア語からさらに一度入る。その結果、見た目のまったく違う語が、同じ一点から出ていることになる。
+
+%fig bher-tree ; *bʰer-「運ぶ」から出た英語。三つの層すべてに届いている。
+
+%fig steh2-tree ; *steh₂-「立つ」。英語だけで200語を超える、もっとも多産な語根。
+
+## どの語根から覚えるか
+
+語根には費用対効果の差がある。派生語の多い語根を先に押さえるほど、一語あたりの見返りが大きい。
+
+%fig root-roi ; 上位10語根で、800語近くが構造的に見えるようになる。
+
 :: index root
 
 == A – B
@@ -816,4 +830,502 @@
 +cog: Gk <i>gérōn</i>「老人」, <i>gêras</i>「老い」; Skt <i>járati</i>; OCS <i>zĭrěti</i>「熟す」
 +eng: <b>本来語</b> corn（穀粒。「すり減ったもの」＜ *ǵr̥h₂-no-）, kernel, grain は ラ／<b>ラテン系</b> grain, granule, granary, granite, pomegranate（「種の多いリンゴ」）, garner, filigree／<b>ギリシア系</b> geriatric, gerontology
 +note: <i>corn</i>（本来語）と <i>grain</i>（ラテン系）は同根の二重語。グリムの法則 *ǵ → k。
+
+
+== 補遺 A – D
+
+@ *h₂eǵʰ- ; 「怖れる、苦しむ」
++cog: Gk <i>ákhos</i>「苦痛」; Goth <i>agis</i>「恐怖」
++eng: <b>本来語</b> awe（＜ ON <i>agi</i>）, awful（もと「畏敬に満ちた」）, ugly（＜ ON <i>uggligr</i>「恐ろしい」）／<b>ギリシア系</b> agony は別語根
++note: <i>awful</i>「ひどい」と <i>awesome</i>「素晴らしい」は同じ語根から正反対に分岐した。
+
+@ *h₂el- ; 「粉にする、挽く」
++cog: Gk <i>áleuron</i>「小麦粉」, <i>alphi</i>「大麦」
++eng: <b>ギリシア系</b> aleurone（糊粉層）
++note: 前掲の *al-「養う」「他の」とは別語根。
+
+@ *h₂erǵ- ; 「白く輝く、輝く」
++cog: L <i>argentum</i>「銀」, <i>arguere</i>「明らかにする」; Gk <i>argós</i>「白い、速い」; Skt <i>árjuna-</i>
++eng: <b>ラテン系</b> argent, Argentina（「銀の国」）, argue（「明らかにする」→ 論じる）, argument／<b>ギリシア系</b> argon（「不活発な」は別解釈）
++note: <i>argue</i>「議論する」の原義は「白日のもとに晒す」。元素記号 Ag は <i>argentum</i>。
+
+@ *h₂eus- ; 「引き出す、汲む」
++cog: L <i>haurīre</i>「汲む」, <i>exhaurīre</i>
++eng: <b>ラテン系</b> exhaust（「汲み尽くす」）, exhaustive, inexhaustible
++note: <i>exhaust</i>「疲れ果てさせる」は井戸を汲み干す比喩。
+
+@ *bʰedʰ- ; 「掘る、突く」
++cog: L <i>fodere</i>「掘る」, <i>fossa</i>「溝」
++eng: <b>本来語</b> bed（「掘った寝床」説）／<b>ラテン系</b> fossil（「掘り出されたもの」）, fosse, fossa
++note: <i>bed</i>「寝台」が「掘る」に遡るのは、地面を掘って作った寝床から。<i>flower bed</i>「花壇」に原義が近い。
+
+@ *bʰeg- ; 「壊れる、砕く」
++cog: Skt <i>bhanákti</i>「壊す」; OIr <i>bongid</i>
++eng: <b>本来語</b> break, breach, brake, bark（樹皮）(?)／<b>ラテン系</b> fraction は別語根 *bʰreg-
++note: *bʰreg- と混同されやすいが、両者は関連するとされる。
+
+@ *bʰeidʰ- ; 「説得する、信頼する」
++cog: L <i>fīdere</i>「信じる」, <i>fidēs</i>「信頼」, <i>foedus</i>「契約」; Gk <i>peíthein</i>「説得する」
++eng: <b>本来語</b> bide, abide, abode, bode／<b>ラテン系</b> confide, confidence, fidelity, infidel, perfidy, affidavit, federal, faith, fealty, defy
++note: 本来語 <i>abide</i>「留まる」と <i>faith</i>「信仰」が同根であるのは、「（相手を）信じて待つ」という意味の橋による。
+
+@ *bʰelǵʰ- ; 「膨らむ」
++cog: OIr <i>bolg</i>「袋」; Goth <i>balgs</i>「革袋」
++eng: <b>本来語</b> belly, bellows, billow, bolster, budget（ケルト語経由の <i>bulga</i>「革袋」）, bilge, bulge
++note: <i>budget</i>「予算」が「革袋」であるのは、英国蔵相が財政案を鞄で運んだことによる。
+
+@ *bʰerh₁- ; 「穴をあける、削る」
++cog: L <i>forāre</i>「穿つ」, <i>forāmen</i>「孔」; Gk <i>pharóō</i>
++eng: <b>本来語</b> bore（穴をあける）, barrow(?)／<b>ラテン系</b> perforate, foramen, biforate
++note: <i>bore</i>「退屈させる」は同綴の別語で、18世紀の語源不明語。
+
+@ *bʰes- ; 「息を吹く、こする」
++cog: Skt <i>bábhasti</i>; Gk <i>psḗkhein</i>「こする」
++eng: <b>ギリシア系</b> psammite は別／<i>psyche</i> は *bʰes- 起源説がある
++note: <i>psȳkhḗ</i>「息、魂」をこの語根に結びつける説があるが、確実ではない。
+
+@ *bʰeug- ; 「享受する、役立つ」
++cog: L <i>fungī</i>「果たす」, <i>fructus</i>「果実」(?), <i>fruī</i>「享受する」
++eng: <b>ラテン系</b> function, functional, defunct（「務めを終えた」）, perfunctory, fungible, fruit, frugal, fructose, usufruct
++note: <i>fruit</i>「果実」の原義は「享受されるもの」。<i>frugal</i>「倹約な」は「実り豊かな」から。
+
+@ *bʰreg- ; 「破る」
++cog: L <i>frangere, frāctum</i>「砕く」; Goth <i>brikan</i>
++eng: <b>本来語</b> break, breach, brake, brick(?)／<b>ラテン系</b> fraction, fracture, fragment, fragile, frail, infringe, refract, diffract, suffrage, irrefragable
++note: 本来語 <i>break</i> とラテン系 <i>fracture</i> が同根。グリムの法則で *bʰ → b。
+
+@ *dail- ; 「分ける」
++cog: Goth <i>dails</i>「部分」; OCS <i>dělŭ</i>
++eng: <b>本来語</b> deal（分ける→取引する）, dole（施し）, ordeal（「（神の）分け前＝裁き」）
++note: <i>a great deal of</i>「大量の」の <i>deal</i> は「分け前」が原義。
+
+@ *dʰegʷʰ- ; 「燃える、暖かい」
++cog: L <i>foveō</i>「暖める」, <i>febris</i>「熱」; Skt <i>dahati</i>「焼く」; Lith <i>degti</i>
++eng: <b>本来語</b> day（PGmc *dagaz。この語根とする説が有力）／<b>ラテン系</b> fever, febrile, foment（「湿布で暖める」）
++note: 英語 <i>day</i> はラテン語 <i>diēs</i> とは<b>同根ではない</b>（第1章）。こちらの語根に属する。
+
+@ *dʰeu- ; 「煙る、埃立つ、ぼんやりする」
++cog: L <i>fūmus</i>「煙」, <i>fūmāre</i>; Gk <i>thȳmós</i>「気息、意気」; Skt <i>dhūmá-</i>
++eng: <b>本来語</b> dust, dun（くすんだ色）, dizzy(?), doze(?), deaf（「感覚が鈍い」）, dumb（「鈍い」→ 口のきけない）／<b>ラテン系</b> fume, fumigate, perfume（「（香を）通して燻らす」）／<b>ギリシア系</b> thyme（香草）, thymus
++note: <i>perfume</i>「香水」の原義は「（煙を）通す」で、香を焚きしめる習慣による。
+
+@ *dʰeubʰ- ; 「深い、うつろな」
++cog: Goth <i>diups</i>; Lith <i>dubus</i>
++eng: <b>本来語</b> deep, depth, dip, dive, dove（潜る鳥）(?)
++note: <i>dove</i>「鳩」を「潜るように飛ぶ鳥」とする語源説がある。
+
+@ *dʰǵʰu- ; 「魚」
++cog: Gk <i>ikhthýs</i>; Arm <i>jukn</i>
++eng: <b>ギリシア系</b> ichthyology（魚類学）, ichthyosaur
++note: 英語 <i>fish</i>、ラテン語 <i>piscis</i> は *peysk- で別語根。「魚」を表す印欧語には少なくとも二系統ある。
+
+@ *dʰwene- ; 「音を立てる」
++cog: Skt <i>dhvanati</i>「響く」
++eng: <b>本来語</b> din（騒音）
++note: 短いが確実な語根。
+
+@ *drem- ; 「眠る」
++cog: L <i>dormīre</i>「眠る」; Gk <i>darthánein</i>; OCS <i>drěmati</i>
++eng: <b>ラテン系</b> dormant（休眠中の）, dormitory（寄宿舎）, dormouse（「眠りねずみ」＝ヤマネ）
++note: <i>dormouse</i> は <i>mouse</i> との複合に見えるが、前半は「眠る」。『不思議の国のアリス』の眠りねずみ。
+
+== 補遺 E – L
+
+@ *h₁eg- ; 「私」
++cog: L <i>ego</i>; Gk <i>egṓ</i>; Skt <i>ahám</i>; Goth <i>ik</i>; Lith <i>àš</i>
++eng: <b>本来語</b> I（OE <i>ic</i>）／<b>ラテン系</b> ego, egoism, egotism, alter ego
++note: 英語の <i>I</i> は、印欧祖語の二音節語がここまで摩耗した極端な例。大文字で書くのは、中英語期に小文字の i が読みにくかったための書記上の慣習。
+
+@ *h₁er- ; 「動く、達する」
++cog: L <i>orīrī</i>「昇る」, <i>orīgō</i>「起源」; Gk <i>órnymi</i>「起こす」; Hitt <i>arāi-</i>
++eng: <b>本来語</b> earnest(?), run(?)／<b>ラテン系</b> origin, original, aborigine, orient, oriental, abort, abortion
++note: <i>orient</i>「東洋」は「日が昇る方」、<i>abort</i>「流産する」は「昇らない＝生まれ出ない」。
+
+@ *h₁eus- ; 「焼く」
++cog: L <i>ūrere</i>「焼く」, <i>ustus</i>; Gk <i>heúein</i>; Skt <i>óṣati</i>
++eng: <b>本来語</b> ember(?)／<b>ラテン系</b> combustion, adust, ustulate
++note: <i>combustion</i>「燃焼」の -bust- はこの語根とされる。
+
+@ *h₁leudʰ- ; 「育つ、人民」
++cog: L <i>līber</i>「自由な」（「一族の成員」から）, <i>līberī</i>「子どもたち」; Gk <i>eleútheros</i>「自由な」; OCS <i>ljudŭ</i>「人民」; 独 <i>Leute</i>
++eng: <b>本来語</b> lede（古語「人民」）／<b>ラテン系</b> liberty, liberal, liberate, deliver, libertine
++note: 「自由」は本来「（奴隷ではなく）一族に属する者」の意。共同体の成員であることが自由の条件だった。
+
+@ *h₁newn̥ ; 「九」
++cog: L <i>novem</i>; Gk <i>ennéa</i>; Skt <i>náva</i>; Goth <i>niun</i>
++eng: <b>本来語</b> nine, ninety, noon（「第九時」）／<b>ラテン系</b> November, novena, nonagenarian
++note: <i>noon</i>「正午」がもと午後3時ごろだったことは第VI部の項を参照。
+
+@ *ǵʰeh₁- ; 「去る、空になる」
++cog: Gk <i>khḗra</i>「未亡人」; Skt <i>jáhāti</i>
++eng: <b>本来語</b> go(?), gone(?)
++note: 英語 <i>go</i> の語源は不確実で、この語根とする説と PGmc 独自語とする説がある。
+
+@ *ǵʰer- ; 「短い、欠ける」
++cog: L <i>hērēs</i>「相続人」(?); Gk <i>khḗra</i>「寡婦」
++eng: <b>ラテン系</b> heir, heritage, inherit, heredity, hereditary
++note: <i>heir</i>「相続人」を「（死者の）欠けた場所を埋める者」と解する説。
+
+@ *ǵʰeys- ; 「驚く、恐れる」
++cog: Goth <i>usgeisnan</i>「驚く」
++eng: <b>本来語</b> ghost, ghastly, aghast, ghoul は別（アラビア語）
++note: <i>ghost</i> の h は15世紀にオランダ語の影響で入った書記上の追加（第VI部）。
+
+@ *ǵʰreh₁- ; 「育つ、緑」
++cog: OE <i>grōwan</i>「育つ」; ON <i>gróa</i>
++eng: <b>本来語</b> grow, green, grass, graze（草を食む）
++note: <i>green</i>「緑」が <i>grow</i>「育つ」と同根であるのは、「育つものの色」だから。色名が事物から作られる典型。
+
+@ *gʷeh₂- ; 「行く、来る」
++cog: Gk <i>baínein</i>「歩く」, <i>básis</i>「歩み、台」; Skt <i>gāti</i>
++eng: <b>ギリシア系</b> base, basis, basement, acrobat（「先端を歩く」）, diabetes（「（尿が）通り抜ける」）, anabasis, hyperbaton
++note: 前掲 *gʷem-（come, venue）と近縁の別語根とされる。
+
+@ *gʷelbʰ- ; 「子宮」
++cog: Gk <i>delphýs</i>「子宮」, <i>adelphós</i>「兄弟（同じ子宮の）」
++eng: <b>ギリシア系</b> Philadelphia（「兄弟愛」）, dolphin（<i>delphís</i>「子宮を持つ魚＝胎生」）
++note: <i>dolphin</i>「イルカ」が「子宮」に遡るのは、魚と違って胎生であることをギリシア人が知っていたため。
+
+@ *gʷelH- ; 「投げる、届く」
++cog: Gk <i>bállein</i>「投げる」, <i>bolḗ</i>「投擲」
++eng: <b>ギリシア系</b> ball（球技のそれは別）, ballistic, symbol（「投げ合わせる」）, problem（「前に投げ出されたもの」）, emblem, parable/parabola, hyperbole, metabolism, devil（<i>diábolos</i>「投げ違える者＝中傷者」）, diabolic
++note: <i>devil</i>「悪魔」の原義は「（言葉を）投げつけて中傷する者」。<i>symbol</i>「象徴」は割符を「投げ合わせる」。
+
+@ *gʷetH- ; 「言う」
++cog: Goth <i>qiþan</i>「言う」; ON <i>kveða</i>
++eng: <b>本来語</b> quoth（古語「言った」）, bequeath（「言い残す」＝遺贈する）, bequest
++note: <i>bequeath</i>「遺贈する」は「（遺言で）言い置く」。<i>quoth the Raven, "Nevermore"</i>（ポー）に古形が残る。
+
+@ *kagʰ- ; 「捕える、囲う」
++cog: L <i>cohum</i>「くびき紐」; W <i>cae</i>「垣」
++eng: <b>本来語</b> hedge, haw（サンザシの実）, haggard(?)／<b>ラテン系</b> cage(?), incarcerate は別
++note: <i>hedge</i>「生垣」と <i>haw</i>「サンザシ」（<i>hawthorn</i>＝「垣の刺」）が同根。
+
+@ *keh₂d- ; 「憎む」
++cog: Gk <i>kêdos</i>「気遣い、悲しみ」; Goth <i>hatis</i>「憎しみ」
++eng: <b>本来語</b> hate, hatred, heinous（仏語経由）
++note: ギリシア語では「気遣い」、ゲルマン語では「憎しみ」と正反対に振れた。強い感情という点で共通する。
+
+@ *keh₂p- ; 「つかむ」→ *kap- を見よ
++cf: → <b>*kap-</b>（取る・つかむ）。capture, have, heavy。
+
+@ *kel- ; 「打つ、切る」
++cog: L <i>-cellere</i>「打つ」, <i>clādēs</i>「損害」; Gk <i>kláein</i>「折る」
++eng: <b>本来語</b> halt(?)／<b>ラテン系</b> clast は ギ／<b>ギリシア系</b> iconoclast（「像を打ち砕く者」）, clastic
++note: 前掲の *kel-「覆う」「呼ぶ」「丘」とは別語根。同形の語根が複数あることに注意。
+
+@ *kerp- ; 「摘む、集める」
++cog: L <i>carpere</i>「摘む」; Gk <i>karpós</i>「果実」
++eng: <b>本来語</b> harvest（「収穫」）／<b>ラテン系</b> carpet（「むしり取った布」）, excerpt, carpe diem（「日を摘め」）, scarce(?)
++note: <i>harvest</i>（本来語）と <i>carpet</i>（ラテン系）が同根。ホラティウスの <i>carpe diem</i> も同じ語根。
+
+@ *kes- ; 「切る」
++cog: L <i>castrāre</i>「切る」, <i>castus</i>「純潔な」(?); Skt <i>śásati</i>
++eng: <b>ラテン系</b> castrate, caste（「混じり気のない（血統）」）, chaste, chasten, incest（「純潔でない」）
++note: <i>caste</i>「カースト」はポルトガル語 <i>casta</i>「純血」から。<i>chaste</i>「純潔な」と同語源。
+
+@ *kʷelp- ; 「丸天井、屋根」
++cog: Gk <i>kólpos</i>「胸、湾」
++eng: <b>本来語</b> gulf（ギリシア語経由）, engulf
++note: <i>gulf</i>「湾」の原義は「ふところ」。
+
+@ *kʷerp- ; 「回る」
++cog: Gk <i>karpós</i>「手首」（回る関節）
++eng: <b>本来語</b> wharf(?)
++note: ギリシア語では「果実」の <i>karpós</i> と同綴だが別語。
+
+@ *legʷʰ- ; 「軽い、素早い」
++cog: L <i>levis</i>「軽い」; Gk <i>elakhýs</i>「小さい」; Skt <i>laghú-</i>
++eng: <b>本来語</b> light（軽い）, lung（「軽い臓器」＝水に浮く）, lever は仏経由／<b>ラテン系</b> levity, alleviate, elevate, relieve, relevant, lever, leaven, carnival
++note: <i>lung</i>「肺」が「軽い」であるのは、水に入れると浮くから。ロシア語 <i>лёгкое</i>「肺」も「軽い」から。
+
+@ *leikʷ- ; → 前掲
++cf: → <b>*leikʷ-</b>（残す）。relinquish, eclipse, lend。
+
+@ *leig- ; 「跳ぶ、震える」
++cog: OIr <i>lingid</i>「跳ぶ」
++eng: <b>本来語</b> lick は別／<i>delight</i> は L <i>dēlectāre</i> で別語源
++note: 語根としては痕跡が薄い。
+
+@ *lengʷʰ- ; 「軽い」→ *legʷʰ- を見よ
++cf: → <b>*legʷʰ-</b>
+
+== 補遺 M – R
+
+@ *maǵ- ; 「こねる、練る」
++cog: Gk <i>mássein</i>「こねる」, <i>mâza</i>「練り粉」; OCS <i>mazati</i>
++eng: <b>本来語</b> make（「（形を）こねる」説）, mingle(?)／<b>ギリシア系</b> mass（物理の「質量」＝練り粉の塊）, massage(?), magma（「練ったもの」）
++note: 物理学の <i>mass</i>「質量」が「パン生地の塊」に遡る。<i>magma</i>「マグマ」も同語源。
+
+@ *mel- ; 「現れる、偽る」
++cog: L <i>malus</i>「悪い」(?); Gk <i>mélas</i>「黒い」
++eng: <b>ラテン系</b> malice, malign, malady, malaria, dismal, malevolent／<b>ギリシア系</b> melanin, melancholy, melanoma, Melanesia（「黒い島々」）
++note: <i>melancholy</i>「憂鬱」は「黒い胆汁」。四体液説の化石（第IX部）。
+
+@ *men- ; 「小さい、孤立した」
++cog: Gk <i>mónos</i>「単独の」; Arm <i>manr</i>
++eng: <b>ギリシア系</b> mono-, monopoly, monk（<i>monakhós</i>「独り住まいの者」）, monastery, monotone, monolith, monogamy
++note: <i>monk</i>「修道士」の原義は「独居する者」。前掲の *men-「思う」とは別語根。
+
+@ *melg- ; → 前掲
++cf: → <b>*melg-</b>（乳を搾る）。milk, emulsion。
+
+@ *mer- ; 「輝く、きらめく」
++cog: L <i>merus</i>「純粋な」(?); Gk <i>marmaírein</i>「きらめく」
++eng: <b>本来語</b> morning, morrow, tomorrow（「朝に」）／<b>ギリシア系</b> marmoreal, marble（<i>mármaros</i>「きらめく石」）
++note: <i>marble</i>「大理石」は「きらめくもの」。前掲の *mer-「死ぬ」とは別語根。
+
+@ *mreǵʰu- ; 「短い」
++cog: L <i>brevis</i>「短い」; Gk <i>brakhýs</i>; Av <i>mərəzu-</i>
++eng: <b>ラテン系</b> brief, brevity, abbreviate, abridge, breve, brassiere は別／<b>ギリシア系</b> brachy-, brachycephalic, amphibrach
++note: <i>abbreviate</i>（ラテン直輸入）と <i>abridge</i>（仏語経由）は二重語。
+
+@ *nas- ; 「鼻」
++cog: L <i>nāsus</i>; Skt <i>nā́sā</i>; Lith <i>nósis</i>
++eng: <b>本来語</b> nose, nostril（「鼻の穴」）, nozzle, nuzzle／<b>ラテン系</b> nasal, nasturtium（「鼻をよじる（辛い）草」）
++note: <i>nasturtium</i>「キンレンカ」は <i>nāsus</i>+<i>torquēre</i>「鼻をねじる」。刺激臭による命名。
+
+@ *(s)neh₂- ; 「泳ぐ、流れる」
++cog: L <i>nāre</i>「泳ぐ」, <i>natāre</i>; Gk <i>nēkhein</i>; Skt <i>snā́ti</i>「沐浴する」
++eng: <b>ラテン系</b> natant, natatorium, supernatant, naiad は ギ／<b>ギリシア系</b> Naiad（水の精）
++note: <i>nautical</i>（船）は *neh₂u- で別語根。
+
+@ *nek- ; 「達する、得る」
++cog: L <i>nancīscī</i>「得る」; Skt <i>naśati</i>
++eng: <b>本来語</b> enough（OE <i>genōg</i>）, nigh は別
++note: <i>enough</i>「十分な」は「（必要に）達した」。
+
+@ *peh₃- ; 「飲む」
++cog: L <i>pōtāre</i>「飲む」, <i>pōculum</i>「杯」; Gk <i>pínein</i>; Skt <i>píbati</i>; OCS <i>piti</i>
++eng: <b>ラテン系</b> potion, poison（同語源の二重語）, potable, potation, imbibe, beverage（<i>bibere</i>「飲む」）／<b>ギリシア系</b> symposium（「共に飲むこと」）
++note: <i>poison</i>「毒」と <i>potion</i>「水薬」は同じ「飲み物」。何を飲ませるかで意味が分かれた。
+
+@ *pel- ; 「皮、覆い」
++cog: L <i>pellis</i>「皮」; Gk <i>péllā</i>
++eng: <b>本来語</b> fell（獣皮）, film（「薄い皮」）, filmy／<b>ラテン系</b> pelt, pelisse, pellicle, surplice（「毛皮の上に着る」）
++note: <i>film</i>「映画」の原義は「薄い皮膜」。写真の感光膜から。
+
+@ *per- ; 「試みる、危険を冒す」
++cog: L <i>experīrī</i>「試す」, <i>perīculum</i>「危険」; Gk <i>peîra</i>「試み」
++eng: <b>本来語</b> fear（「不意の危難」）, fare(?)／<b>ラテン系</b> experience, experiment, expert, peril, perilous／<b>ギリシア系</b> empiric（「経験による」）, pirate（<i>peirátēs</i>「試みる者＝襲う者」）
++note: <i>pirate</i>「海賊」と <i>experience</i>「経験」が同根。どちらも「試みる」。
+
+@ *peth₂- ; 「広げる、飛ぶ」
++cog: L <i>patēre</i>「開いている」, <i>petere</i>「求める、突進する」; Gk <i>pétesthai</i>「飛ぶ」, <i>ptéryx</i>「翼」
++eng: <b>本来語</b> feather, fathom（「両腕を広げた長さ」）／<b>ラテン系</b> patent（「開かれた」）, petition, appetite, compete, repeat, impetus, perpetual, centripetal／<b>ギリシア系</b> helicopter（「螺旋の翼」）, pterodactyl（「翼の指」）, ptomaine
++note: <i>patent</i>「特許」の原義は「開かれた（書状）」＝ <i>litterae patentes</i>「公開状」。
+
+@ *plat- ; 「平らな、広がる」
++cog: Gk <i>platýs</i>「広い」; Skt <i>práthati</i>; Lith <i>platùs</i>
++eng: <b>本来語</b> flat（＜ ON）, flounder（平たい魚）(?)／<b>ギリシア系</b> plate, plateau, platform, platitude, plaza, place（<i>plateîa</i>「広い道」）, platypus（「平たい足」）, Plato（「肩幅の広い」というあだ名）
++note: 哲学者プラトンの名は「肩幅の広い」というあだ名だったと古代から伝わる。
+
+@ *pleu- ; → 前掲
++cf: → <b>*pleu-</b>（流れる）。flow, flood, float。
+
+@ *prek- ; → 前掲
++cf: → <b>*preḱ-</b>（問う）。pray, precarious。
+
+@ *reh₁- ; 「数える、考える」
++cog: L <i>rērī</i>「思う」, <i>ratiō</i>「計算、理」; Goth <i>raþjō</i>「数」
++eng: <b>本来語</b> read（「解き明かす」）, riddle（「解くべきもの」）, rede（古語「助言」）／<b>ラテン系</b> reason, ration, rational, rate, ratio, arraign
++note: <i>read</i>「読む」の原義は「（謎を）解き明かす」。<i>riddle</i>「なぞなぞ」と同根。文字を読むのは謎解きだった。
+
+@ *reudʰ- ; → 前掲
++cf: → <b>*reudʰ-</b>（赤い）。red, ruby, rubric。
+
+@ *rewp- ; 「もぎ取る、破る」
++cog: L <i>rumpere, ruptum</i>「破る」, <i>rapere</i>「奪う」
++eng: <b>本来語</b> reave, bereave, rob, robe, rover／<b>ラテン系</b> rupture, erupt, corrupt, abrupt, bankrupt, route, routine, rapid, rape, rapture, ravish, ravine, surreptitious
++note: <i>rapid</i>「速い」は「（急流が）奪い去る」。<i>route</i>「道」は「切り開かれた道」。
+
+== 補遺 S – Z
+
+@ *sal- ; 「汚れた、灰色の」
++cog: L <i>salīva</i>「唾液」(?); Gk <i>hálios</i>
++eng: <b>本来語</b> sallow（土気色の）／<b>ラテン系</b> saliva, salivate
++note: 前掲の *seh₂l-「塩」とは別語根。
+
+@ *sed- ; → 前掲
++cf: → <b>*sed-</b>（座る）。sit, nest, cathedral, session。
+
+@ *segʰ- ; 「保つ、抑える」
++cog: Gk <i>ékhein</i>「持つ」, <i>skholḗ</i>「余暇」, <i>hexis</i>「状態」; Skt <i>sáhate</i>「耐える」
++eng: <b>本来語</b> sail(?)／<b>ギリシア系</b> school（「（労働から）保たれた時間＝余暇」）, scheme（<i>skhêma</i>「姿勢、形」）, scholar, epoch（「（時の）留め」）, hectic（「（熱を）保つ」）, cachexia, entelechy
++note: <i>school</i>「学校」と <i>epoch</i>「時代」が同根。どちらも「留める・保つ」から。
+
+@ *sek- ; → 前掲
++cf: → <b>*sek-</b>（切る）。saw, section, insect。
+
+@ *sekʷ- ; 「見る、示す」
++cog: Goth <i>saiƕan</i>「見る」; Hitt <i>šakuwa-</i>「目」
++eng: <b>本来語</b> see, sight, saw（見た）
++note: 英語 <i>see</i> の語源は不確実で、この語根とする説と *sekʷ-「従う」に結びつける説がある。
+
+@ *sel- ; 「よい機嫌、好意」
++cog: Goth <i>sēls</i>「善良な」; L <i>sōlārī</i>「慰める」
++eng: <b>本来語</b> silly（もと「祝福された」）, seely（古形）／<b>ラテン系</b> console, solace
++note: <i>silly</i>「愚かな」がもと「幸福な」であることは、意味の悪化の代表例（第7章）。
+
+@ *sem- ; → 前掲
++cf: → <b>*sem-</b>（一・共に）。same, similar, homogeneous, hyphen。
+
+@ *sengʷʰ- ; 「歌う」
++cog: Goth <i>siggwan</i>; Gk <i>omphḗ</i>「神託の声」
++eng: <b>本来語</b> sing, song, singer, sang, sung
++note: <i>sing – sang – sung</i> の母音交替は印欧祖語のアプラウトの直系（第2章）。
+
+@ *ser- ; 「守る、見張る」
++cog: L <i>servāre</i>「守る」, <i>servus</i>「奴隷」(?); Av <i>haraiti</i>
++eng: <b>ラテン系</b> conserve, preserve, reserve, observe, serve, service, servant, sergeant, dessert, deserve, subservient
++note: <i>observe</i>「観察する」の原義は「（規則を）守る」。「見る」の意味は後発。
+
+@ *sker- ; 「跳ぶ、はねる」
++cog: Gk <i>skaírein</i>「跳ねる」; Lith <i>skėrỹs</i>「イナゴ」
++eng: <b>本来語</b> scurry(?), skirmish は別
++note: 同形の *sker-「切る」「曲がる」とは別語根。
+
+@ *(s)kerb- ; 「曲がる、丸まる」
++cog: OE <i>hrympel</i>
++eng: <b>本来語</b> shrimp（「丸まったもの」）, shrivel, crimp, cramp, crumple, rumple
++note: <i>shrimp</i>「エビ」は「体を丸めるもの」。小柄な人を指す俗語も同じ発想。
+
+@ *slei- ; 「粘る、滑る」
++cog: Gk <i>leîos</i>「滑らか」; L <i>līmus</i>「泥」, <i>linere</i>「塗る」
++eng: <b>本来語</b> slime, slip, slick, sled, sledge, slide, slug, sly(?), lime（石灰）／<b>ラテン系</b> liniment, oblivion（「（記憶が）塗り消される」）
++note: <i>oblivion</i>「忘却」の原義は「上塗りして消すこと」。蝋板の文字を均す動作。
+
+@ *(s)mer- ; 「思い出す、心にかける」
++cog: L <i>memor</i>「覚えている」; Gk <i>mérimna</i>「心配」; Skt <i>smárati</i>
++eng: <b>本来語</b> mourn（「（死者を）心にかける」）／<b>ラテン系</b> memory, memorial, commemorate, remember, memoir, memento
++note: 語頭の s- が付いたり付かなかったりする s-mobile の例。<i>mourn</i> と <i>memory</i> が同根。
+
+@ *speh₁- ; 「栄える、うまくいく」
++cog: L <i>spērāre</i>「望む」, <i>spēs</i>「希望」, <i>prosperus</i>; Skt <i>sphāyate</i>「太る」
++eng: <b>本来語</b> speed（「成功、繁栄」→ 速さ）, godspeed／<b>ラテン系</b> prosper, prosperity, despair（「望みを失う」）, desperate, esperance
++note: <i>speed</i>「速さ」の原義は「うまくいくこと」。<i>God speed you</i>「神が汝を栄えさせんことを」に古義が残る。
+
+@ *sper- ; 「まく、散らす」
++cog: Gk <i>speírein</i>「まく」, <i>spérma</i>「種」; L <i>spargere</i>「撒く」
++eng: <b>本来語</b> spread(?), sprout(?)／<b>ラテン系</b> sparse, disperse, aspersion, intersperse／<b>ギリシア系</b> sperm, spore, diaspora（「（民が）撒き散らされること」）, sporadic
++note: <i>diaspora</i>「離散」は「種を撒き散らすこと」。
+
+@ *stel- ; 「置く、立てる」
++cog: Gk <i>stéllein</i>「配置する、送る」, <i>stólos</i>「遠征」; L <i>locus</i>(?)
++eng: <b>本来語</b> still, stall, stalk, stilt／<b>ギリシア系</b> apostle（「遣わされた者」）, epistle（「送られたもの＝書簡」）, diastole, systole, peristalsis, stole（祭服）
++note: <i>apostle</i>「使徒」と <i>epistle</i>「書簡」が同根。どちらも「送る」。
+
+@ *sterh₃- ; 「敷く、広げる」→ *ster- を見よ
++cf: → <b>*ster-</b>（広げる）。straw, street, stratum。
+
+@ *swed- ; 「甘い」
++cog: L <i>suāvis</i>「快い」, <i>suādēre</i>「勧める」; Gk <i>hēdýs</i>「甘い」; Skt <i>svādú-</i>
++eng: <b>本来語</b> sweet, sweeten／<b>ラテン系</b> suave, persuade（「（甘言で）説き伏せる」）, dissuade, assuage／<b>ギリシア系</b> hedonism（「快楽主義」）
++note: <i>persuade</i>「説得する」の原義は「甘く思わせる」。<i>hedonism</i> も「甘い」から。
+
+@ *swep- ; → 前掲
++cf: → <b>*swep-</b>（眠る）。somnolent, hypnosis。
+
+@ *tekʷ- ; 「走る、流れる」
++cog: Skt <i>tákti</i>; Lith <i>tekė́ti</i>「流れる」; OCS <i>tešti</i>
++eng: <b>その他</b> ？
++note: 英語には直接の反映形が乏しい語根。
+
+@ *tetḱ- ; 「作る、大工仕事をする」
++cog: Gk <i>téktōn</i>「大工」, <i>tékhnē</i>「技」; L <i>texere</i>「織る」; Skt <i>takṣan-</i>
++eng: <b>ラテン系</b> text（「織られたもの」）, textile, texture, context, pretext, subtle（「（織り目が）細かい」）／<b>ギリシア系</b> technique, technology, architect（「棟梁の大工」）, tectonic
++note: <i>text</i>「文章」の原義は「織物」。日本語の「文（あや）」や「織りなす」と同じ発想。
+
+@ *terh₁- ; 「こする、すり減らす」
++cog: L <i>terere, trītum</i>「すりつぶす」; Gk <i>teírein</i>
++eng: <b>本来語</b> throw(?)／<b>ラテン系</b> trite（「すり減った」＝陳腐な）, attrition, detriment, contrite, tribulation, detritus, tribe は別
++note: <i>trite</i>「陳腐な」は文字通り「使い古された」。
+
+@ *terkʷ- ; 「ねじる」
++cog: L <i>torquēre, tortum</i>「ねじる」; Skt <i>tarku-</i>「紡錘」
++eng: <b>本来語</b> throw(?)／<b>ラテン系</b> torture（「ねじる責め」）, torment, torque, tortuous, torso は別, contort, distort, extort, retort, nasturtium
++note: <i>torture</i>「拷問」は「体をねじること」。<i>retort</i>「言い返す」は「（言葉を）ねじり返す」。
+
+@ *ters- ; 「乾く」
++cog: L <i>terra</i>「（乾いた）大地」, <i>torrēre</i>「焼く」; Gk <i>térsesthai</i>
++eng: <b>本来語</b> thirst, thirsty／<b>ラテン系</b> terrain, terrace, territory, Mediterranean, inter, torrid, torrent（「沸き立つ流れ」）, toast（「焼いて乾かす」）, tureen(?)
++note: <i>thirst</i>（本来語）と <i>terrain</i>（ラ）と <i>toast</i>（乾杯）がすべて「乾く」に遡る。
+
+@ *teuh₂- ; 「膨らむ、太る」
++cog: L <i>tumēre</i>「腫れる」, <i>tōtus</i>「全体の」(?); Skt <i>tavas-</i>「強い」
++eng: <b>本来語</b> thigh（「太い部分」）, thumb（「太い指」）, thousand（「太い百」）／<b>ラテン系</b> tumor, tumult, tuber, tumid, contumely, total(?), truffle(?)
++note: <i>thumb</i>「親指」は「太い指」、<i>thousand</i>「千」は「膨らんだ百」。<i>tumor</i>「腫瘍」も同根。
+
+@ *tkei- ; 「住む、定住する」
++cog: Gk <i>ktízein</i>「建てる」; Skt <i>kṣéti</i>「住む」
++eng: <b>ラテン系</b> site(?), situate(?)
++note: <i>pōnere</i>「置く」をこの語根に結びつける説がある（第III部 pon- の項）。
+
+@ *tremb- ; 「震える」
++cog: L <i>tremere</i>「震える」; Gk <i>trémein</i>
++eng: <b>ラテン系</b> tremble, tremor, tremendous（「震えさせるほどの」）, tremulous, trepidation, intrepid
++note: <i>tremendous</i>「途方もない」の原義は「震えさせる」。強意化の例（第7章）。
+
+@ *webʰ- ; 「織る」
++cog: Gk <i>hyphaínein</i>「織る」, <i>hýphos</i>「織物」; Skt <i>ubhnā́ti</i>
++eng: <b>本来語</b> weave, web, weft, woof, wafer, waffle（「織り目模様の」）／<b>ギリシア系</b> hyphen（別語源）
++note: <i>web</i>「（蜘蛛の）巣、ウェブ」の原義は「織られたもの」。<i>World Wide Web</i> の比喩は語源に忠実。
+
+@ *weg- ; 「強い、活発な」
++cog: L <i>vegēre</i>「活気づける」, <i>vigil</i>「目覚めている」; Skt <i>vā́ja-</i>「力」
++eng: <b>本来語</b> wake, watch, awake, waken／<b>ラテン系</b> vigil, vigilant, vigor, vegetable（「活気づけるもの」）, surveillance, reveille
++note: <i>vegetable</i>「野菜」の原義は「生命力を与えるもの」。<i>wake</i>（本来語）と同根。
+
+@ *wei- ; 「曲げる、巻く」
++cog: L <i>viēre</i>「編む」, <i>vītis</i>「つる」; Skt <i>váyati</i>
++eng: <b>本来語</b> withe, withy, wire(?), wine は別／<b>ラテン系</b> vine は別, ferrule, viticulture
++note: 前掲 *weyh₁- とも関連づけられる。
+
+@ *weid- ; → 前掲
++cf: → <b>*weyd-</b>（見る・知る）。wit, wise, vision, idea, history。
+
+@ *wekʷ- ; 「言う、声」
++cog: L <i>vōx</i>「声」, <i>vocāre</i>「呼ぶ」; Gk <i>épos</i>「言葉、叙事詩」; Skt <i>vákti</i>
++eng: <b>ラテン系</b> voice, vocal, vocation, advocate, evoke, invoke, provoke, revoke, vocabulary, vowel／<b>ギリシア系</b> epic（「語られるもの」）, epos
++note: <i>epic</i>「叙事詩」は「語られる言葉」。<i>voice</i> と同根。
+
+@ *wemh₁- ; 「吐く」
++cog: L <i>vomere</i>「吐く」; Gk <i>emeîn</i>; Skt <i>vámiti</i>
++eng: <b>ラテン系</b> vomit, vomitory／<b>ギリシア系</b> emetic, emesis
++note: 短いが全語派に残る確実な語根。
+
+@ *wers- ; 「高い所、頂」
++cog: L <i>verrūca</i>「いぼ」; Skt <i>várṣman-</i>「高み」
++eng: <b>ラテン系</b> verruca, wart は本来語の同根語
++note: <i>wart</i>「いぼ」と <i>verruca</i> は同根。
+
+@ *wes- ; 「留まる、過ごす」
++cog: Skt <i>vásati</i>「住む」; Goth <i>wisan</i>「ある」
++eng: <b>本来語</b> was, were（<i>be</i> の過去形）
++note: 英語の <i>be</i> は三つの語根の混成。<i>be/been</i> ＜ *bʰeu-、<i>am/is/are</i> ＜ *h₁es-、<i>was/were</i> ＜ この語根（第II部 *bʰeh₂wH- の項）。
+
+@ *weyh₁- ; 「追う、求める」
++cog: L <i>vīs</i>「力」, <i>invītāre</i>「招く」; Skt <i>véti</i>
++eng: <b>ラテン系</b> invite, vim（「力」）, violate(?)
++note: <i>vim and vigor</i> の <i>vim</i> はラテン語 <i>vīs</i> の対格 <i>vim</i> がそのまま入った形。
+
+@ *yeh₁- ; 「投げる、行かせる」
++cog: L <i>iacere, iactum</i>「投げる」; Gk <i>hiénai</i>「送る」
++eng: <b>ラテン系</b> eject, inject, project, reject, object, subject, adjective, conjecture, trajectory, jet, jetty, jettison, ejaculate
++note: -ject を含む語はすべてこの語根。母音弱化で jac- → -jec- となる（第9章）。
+
+@ *yes- ; 「沸く、泡立つ」
++cog: Gk <i>zeîn</i>「沸く」, <i>zýmē</i>「酵母」; Skt <i>yásyati</i>
++eng: <b>本来語</b> yeast（「泡立たせるもの」）／<b>ギリシア系</b> enzyme（「酵母の中に」）, zymurgy
++note: <i>enzyme</i>「酵素」は <i>en-</i>（中に）+ <i>zýmē</i>（酵母）で1878年の造語。
+
+@ *yew- ; 「混ぜる、こねる」
++cog: Skt <i>yaúti</i>; Lith <i>jáuti</i>
++eng: <b>ラテン系</b> jus（法）は別語根
++note: 痕跡の薄い語根。
+
+@ *yōs- ; 「帯を締める」
++cog: Gk <i>zṓnē</i>「帯」; Av <i>yāsta-</i>; Lith <i>júosti</i>
++eng: <b>ギリシア系</b> zone（「帯」→ 地帯）, zonal, ozone は別
++note: <i>zone</i>「地帯」の原義は「腰帯」。地球を帯のように取り巻く気候帯から。
 

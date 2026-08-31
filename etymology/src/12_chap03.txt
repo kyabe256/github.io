@@ -62,6 +62,8 @@
 
 > <b>使い方</b>　英語の本来語（短く、日常的で、ゲルマン系）とラテン語系の術語が「f : p」「h : c」「t : d」「th : t」の関係にあれば、まず同根を疑ってよい。<i>fish</i> : <i>piscine</i>、<i>full</i> : <i>plenty</i>、<i>hound</i> : <i>canine</i>、<i>wheel</i> : <i>cycle</i>、<i>yoke</i> : <i>junction</i>。
 
+%fig grimm ; グリムの法則。三つの推移が玉突きで起こる。
+
 ## 3.3　グリムの法則の例外とヴェルナーの法則
 
 グリムの法則には、長らく説明できない例外があった。たとえば PIE *ph₂tḗr「父」からは、規則どおりなら PGmc *faþēr が期待されるのに、実際のゲルマン諸語は *fadēr を示す（OE <i>fæder</i>, ON <i>faðir</i>, Goth <i>fadar</i>）。第二子音が θ ではなく d になっているのだ。
@@ -83,6 +85,8 @@
 | OE <i>wesan</i> | wæs | wǣron | — | <i>was</i> : <i>were</i>（s ~ r, ロタシズム） |
 
 <i>was</i> と <i>were</i> の s と r の交替は、ヴェルナーの法則で有声化した z が北ゲルマン・西ゲルマンで r に変わった（ロタシズム, rhotacism）結果である。同じ現象がラテン語にもあり、<i>flōs</i> : <i>flōris</i>、<i>genus</i> : <i>generis</i>、<i>honōs</i> : <i>honōris</i> の s ~ r 交替を生んだ（<i>flora</i>, <i>general</i>, <i>honor</i>）。
+
+%fig verner ; ヴェルナーの法則。father の d と brother の th を分けたもの。
 
 ## 3.4　ゲルマン語派のその他の特徴
 
@@ -106,6 +110,8 @@
 | þ → d | thing, three, thou, thick | Ding, drei, du, dick |
 
 この表を頭に入れておくと、ドイツ語と英語の対応が驚くほど機械的に見えてくる。<i>Pfad</i> : <i>path</i>、<i>Zunge</i> : <i>tongue</i>、<i>Herz</i> : <i>heart</i>、<i>weiß</i> : <i>white</i>、<i>Zaun</i>「垣根」: <i>town</i>（もと「囲い」）。
+
+%fig hg-shift ; 第二次子音推移。英語とドイツ語の語形の差の大半はこれで説明できる。
 
 ## 3.6　ゴート語という定点
 

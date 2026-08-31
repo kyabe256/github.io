@@ -1,0 +1,549 @@
+# 第XI部　語源で覚える英単語――学習直結編
+
+ここまでの十部は「語源そのもの」を扱ってきた。この部は目的が違う。<b>語源を使って英単語を実際に覚えるための実務編</b>である。
+
+語源学習には、はっきりした限界と、はっきりした強みがある。まずそこを正確に切り分ける。
+
+> <b>語源学習が効くとき</b>——(1) 抽象語・多音節語（<i>comprehensive, subordinate, inevitable</i>）、(2) 一つの語根から十語以上が派生する語族、(3) 既に見たことがあるが定着していない語、(4) 意味が近い語の識別（<i>adopt / adapt / adept</i>）。<br><b>語源学習が効かないとき</b>——(1) <i>get, take, run, put</i> のような基本動詞（語源より用法が本体）、(2) 熟語・句動詞、(3) 語源と現代語義が離れすぎた語（<i>nice, silly, pretty</i>）、(4) 初めて見る語の<b>正確な</b>意味の確定（語源は方向を示すが、精度は文脈が決める）。
+
+要するに、語源は<b>単語帳の代わりにはならないが、単語帳の効率を二倍にする</b>。順序は「単語帳で出会う → 語源で束ねる → 文脈で確かめる」であって、その逆ではない。
+
+## 1　費用対効果の高い語根 トップ100
+
+「一つ覚えると何語わかるか」で並べた。上位20を完全に覚えるだけで、英検準1級・TOEIC 700点レベルの語彙のうち<b>およそ15％</b>が語根から推測可能になる。
+
+| 順 | 語根 | 意味 | 主な語 |
+|---|---|---|---|
+| 1 | <b>ten-/tin-/tain-</b> | 保つ | contain, maintain, obtain, retain, sustain, detain, pertain, abstain, tenant, tenure, tenacious, content, continent, continue, tenor, tenet |
+| 2 | <b>cap-/cip-/cept-/ceive</b> | 取る | receive, deceive, conceive, perceive, accept, except, concept, capable, capture, participate, anticipate, municipal, recipe, occupy, emancipate |
+| 3 | <b>fer-/lat-</b> | 運ぶ | confer, defer, differ, infer, offer, prefer, refer, transfer, suffer, fertile, relate, translate, legislate, collate, dilate, elated |
+| 4 | <b>mit-/mis-</b> | 送る | admit, commit, emit, omit, permit, submit, transmit, mission, missile, message, promise, compromise, dismiss, premise, surmise |
+| 5 | <b>pos-/pon-</b> | 置く | compose, expose, impose, oppose, propose, suppose, deposit, dispose, purpose, position, component, postpone, opponent, proponent |
+| 6 | <b>duc-/duct-</b> | 導く | conduct, deduce, induce, introduce, produce, reduce, seduce, educate, abduct, aqueduct, duke, duct |
+| 7 | <b>spec-/spic-/spect-</b> | 見る | aspect, expect, inspect, prospect, respect, suspect, spectacle, species, specific, conspicuous, despise, perspective, speculate |
+| 8 | <b>gress-/grad-</b> | 歩む | progress, regress, digress, aggressive, congress, degree, gradual, graduate, ingredient, transgress, grade |
+| 9 | <b>vert-/vers-</b> | 向ける | convert, divert, invert, revert, subvert, adverse, averse, diverse, reverse, universe, version, versatile, controversy, anniversary |
+| 10 | <b>ject-</b> | 投げる | reject, project, inject, eject, object, subject, adjective, conjecture, trajectory, dejected |
+| 11 | <b>press-</b> | 押す | compress, depress, express, impress, oppress, suppress, repress, print |
+| 12 | <b>tract-</b> | 引く | attract, contract, detract, distract, extract, subtract, abstract, trace, treat, treaty, portray |
+| 13 | <b>scrib-/script-</b> | 書く | describe, prescribe, subscribe, ascribe, inscribe, transcribe, manuscript, script, scripture |
+| 14 | <b>dic-/dict-</b> | 言う | dictate, predict, contradict, indicate, dedicate, verdict, index, judge, benediction, addict |
+| 15 | <b>fac-/fic-/fect-</b> | なす | factory, fact, affect, effect, perfect, defect, infect, sufficient, efficient, proficient, benefit, profit, difficult, faculty |
+| 16 | <b>ced-/cess-</b> | 行く | proceed, precede, exceed, recede, concede, succeed, access, process, necessary, ancestor, cease |
+| 17 | <b>port-</b> | 運ぶ | import, export, transport, support, report, deport, comport, portable, opportunity, sport, passport |
+| 18 | <b>sta-/sist-</b> | 立つ | stand, state, status, statue, establish, constitute, institute, substitute, assist, consist, insist, persist, resist, exist, stable, obstacle |
+| 19 | <b>ven-/vent-</b> | 来る | convene, event, invent, prevent, intervene, revenue, avenue, souvenir, convenient, adventure, advent |
+| 20 | <b>cid-/cas-/cad-</b> | 落ちる | accident, incident, coincide, occasion, decay, cadence, chance, case, cascade, decadent |
+| 21 | <b>fid-</b> | 信じる | confide, confident, fidelity, defy, defiant, faith, federal, affidavit |
+| 22 | <b>gen-</b> | 生む | generate, gene, genius, genuine, native, nature, nation, pregnant, indigenous, congenital, benign |
+| 23 | <b>leg-/lect-/lig-</b> | 集める・読む | collect, select, elect, neglect, intellect, diligent, elegant, legible, lecture, legend, eligible |
+| 24 | <b>man(u)-</b> | 手 | manual, manage, manufacture, manuscript, manipulate, maintain, command, demand, recommend, emancipate |
+| 25 | <b>plic-/plex-/ply</b> | 折る | complicated, implicate, explicit, replicate, complex, perplex, apply, imply, reply, supply, employ, deploy, display |
+| 26 | <b>rupt-</b> | 破る | abrupt, corrupt, disrupt, erupt, interrupt, bankrupt, rupture, route, routine |
+| 27 | <b>sect-/seg-</b> | 切る | section, insect, intersect, dissect, segment, sector |
+| 28 | <b>sequ-/secut-</b> | 従う | sequence, consequence, subsequent, pursue, prosecute, execute, sect, second, suit |
+| 29 | <b>solv-/solut-</b> | 解く | solve, dissolve, resolve, absolute, solution, resolute |
+| 30 | <b>struct-</b> | 建てる | construct, destruct, instruct, obstruct, structure, instrument, industry |
+| 31 | <b>tend-/tens-</b> | 伸ばす | attend, extend, intend, pretend, contend, tension, intense, tender |
+| 32 | <b>vid-/vis-</b> | 見る | video, evident, provide, divide, advise, revise, supervise, visible, vision, visit, survey |
+| 33 | <b>voc-/vok-</b> | 呼ぶ | vocal, vocation, advocate, provoke, evoke, revoke, invoke, convoke, vociferous |
+| 34 | <b>gnos-/gni-</b> | 知る | diagnosis, prognosis, recognize, cognition, ignore, noble, notice, notorious |
+| 35 | <b>pel-/puls-</b> | 押す | compel, expel, impel, propel, repel, dispel, pulse, impulse, compulsory |
+| 36 | <b>tribut-</b> | 与える | contribute, distribute, attribute, tribute, tributary, tribe |
+| 37 | <b>cred-</b> | 信じる | credit, credible, credential, credulous, incredible, creed |
+| 38 | <b>cur(r)-/curs-</b> | 走る | current, occur, recur, concur, incur, excursion, corridor, course, curriculum, career |
+| 39 | <b>gest-</b> | 運ぶ | digest, suggest, congest, register, gesture, ingest |
+| 40 | <b>flu-/flux-</b> | 流れる | fluent, influence, affluent, fluid, influx, superfluous, fluctuate |
+| 41 | <b>lig-/leag-</b> | 縛る | oblige, religion, ligament, ally, rally, league, liable, liaison |
+| 42 | <b>par-</b> | 準備する | prepare, repair, separate, apparatus, parade, parent, emperor |
+| 43 | <b>pend-/pens-</b> | 吊る・量る | depend, suspend, expend, append, pension, compensate, ponder, dispense, spend |
+| 44 | <b>quir-/quisit-</b> | 求める | acquire, inquire, require, question, conquer, exquisite, request, perquisite |
+| 45 | <b>sent-/sens-</b> | 感じる | consent, dissent, resent, sentiment, sensible, sensation, scent |
+| 46 | <b>serv-</b> | 守る・仕える | conserve, preserve, reserve, observe, deserve, serve, servant, subservient |
+| 47 | <b>sign-</b> | しるし | design, resign, assign, consign, signature, significant, insignia |
+| 48 | <b>tempor-</b> | 時 | temporary, contemporary, temporal, tempo, extempore |
+| 49 | <b>terr-</b> | 土地 | territory, terrain, terrestrial, Mediterranean, subterranean, inter |
+| 50 | <b>tort-</b> | ねじる | distort, contort, extort, retort, torture, torment, torch |
+| 51 | <b>trud-/trus-</b> | 押す | intrude, extrude, protrude, obtrude, abstruse, thrust |
+| 52 | <b>und-</b> | 波 | abundant, redundant, inundate, undulate |
+| 53 | <b>uni-</b> | 一 | union, unite, unique, universe, unanimous, unit, unify |
+| 54 | <b>val-</b> | 強い・値する | value, valid, evaluate, prevail, avail, equivalent, convalesce |
+| 55 | <b>ver-</b> | 真実 | verify, verdict, veracity, aver, very |
+| 56 | <b>vinc-/vict-</b> | 勝つ | convince, convict, evict, victory, invincible, evince |
+| 57 | <b>viv-/vit-</b> | 生きる | vivid, vital, vitamin, revive, survive, convivial |
+| 58 | <b>volv-/volut-</b> | 巻く | involve, revolve, evolve, revolution, convoluted, volume |
+| 59 | <b>ann-/enn-</b> | 年 | annual, anniversary, biennial, perennial, annals |
+| 60 | <b>aud-</b> | 聞く | audible, audience, audit, auditorium, obey, obedient |
+| 61 | <b>bene-/bon-</b> | 良い | benefit, benevolent, benign, bonus, bounty |
+| 62 | <b>cid-/cis-</b> | 切る | decide, precise, concise, incision, suicide, homicide, scissors |
+| 63 | <b>clud-/clus-</b> | 閉じる | conclude, exclude, include, preclude, seclude, recluse, close |
+| 64 | <b>cor(d)-</b> | 心 | cordial, accord, discord, concord, courage, encourage, record |
+| 65 | <b>corp-</b> | 体 | corporation, corpse, corporal, incorporate, corps, corpulent |
+| 66 | <b>dom-</b> | 家・支配 | domestic, dominate, domain, dome, predominant, madam, danger |
+| 67 | <b>equ-</b> | 等しい | equal, equator, equivalent, adequate, equity, iniquity |
+| 68 | <b>fin-</b> | 終わり・境 | final, finish, define, confine, infinite, affinity, finance |
+| 69 | <b>flect-/flex-</b> | 曲げる | reflect, deflect, inflect, flexible, reflex |
+| 70 | <b>form-</b> | 形 | reform, inform, transform, conform, formula, uniform, deform |
+| 71 | <b>fund-/found-/fus-</b> | 注ぐ・基礎 | found, foundation, fundamental, confuse, refuse, profuse, diffuse, infuse, refund |
+| 72 | <b>grat-</b> | 喜ばす | grateful, gratitude, congratulate, gratuity, agree, grace |
+| 73 | <b>hab-/hib-</b> | 持つ | habit, inhabit, exhibit, prohibit, inhibit, able, ability, debt |
+| 74 | <b>jur-/just-</b> | 法 | jury, justice, injury, perjury, adjust, judicial, jurisdiction |
+| 75 | <b>lev-</b> | 軽い・上げる | elevate, relieve, relevant, alleviate, levity, lever, levy |
+| 76 | <b>loc-</b> | 場所 | local, locate, dislocate, allocate, locomotive, lieu |
+| 77 | <b>loqu-/locut-</b> | 話す | eloquent, colloquial, soliloquy, loquacious, elocution |
+| 78 | <b>mem-</b> | 記憶 | memory, memorial, commemorate, remember, memorandum |
+| 79 | <b>merg-/mers-</b> | 沈む | emerge, submerge, merge, immerse, emergency |
+| 80 | <b>migr-</b> | 移る | migrate, immigrant, emigrate, migratory |
+| 81 | <b>mod-</b> | 尺度 | mode, model, modern, modest, moderate, modify, accommodate, commodity |
+| 82 | <b>mort-</b> | 死 | mortal, immortal, mortgage, mortify, mortuary, amortize |
+| 83 | <b>mov-/mot-</b> | 動く | move, motion, motive, emotion, promote, remote, mobile, momentum |
+| 84 | <b>nat-</b> | 生まれる | nature, native, nation, innate, prenatal, naive |
+| 85 | <b>nounc-/nunci-</b> | 告げる | announce, pronounce, denounce, renounce, enunciate |
+| 86 | <b>ord-</b> | 順序 | order, ordinary, coordinate, subordinate, ordain, primordial |
+| 87 | <b>par-/pair</b> | 等しい | compare, disparity, peer, par, umpire, pair |
+| 88 | <b>pass-/pat-</b> | 苦しむ | passion, patient, compassion, compatible, passive |
+| 89 | <b>ped-/pod-</b> | 足 | pedal, pedestrian, expedite, impede, pedigree, tripod, podium, octopus |
+| 90 | <b>pet-</b> | 求める | compete, appetite, repeat, petition, impetus, perpetual |
+| 91 | <b>reg-/rect-</b> | まっすぐ・支配 | regular, direct, correct, erect, region, regime, rector, royal, rule |
+| 92 | <b>rog-</b> | 尋ねる | interrogate, arrogant, prerogative, surrogate, abrogate |
+| 93 | <b>sacr-/sanct-</b> | 聖 | sacred, sacrifice, consecrate, sanctuary, saint, sanction |
+| 94 | <b>simil-/simul-</b> | 似る | similar, assimilate, simultaneous, simulate, resemble, assemble |
+| 95 | <b>son-</b> | 音 | sound, resonate, sonic, unison, dissonance, consonant, person は別 |
+| 96 | <b>spir-</b> | 息 | inspire, expire, respire, conspire, aspire, perspire, spirit |
+| 97 | <b>tang-/tact-/ting-</b> | 触れる | contact, tangible, tactile, contagious, intact, integrity, contingent, tax |
+| 98 | <b>test-</b> | 証人 | testify, testament, protest, contest, attest, detest |
+| 99 | <b>urb-</b> | 都市 | urban, urbane, suburb, suburban |
+| 100 | <b>vac-/van-</b> | 空 | vacant, vacuum, evacuate, vanish, vain, vanity, void, avoid, waste |
+
+## 2　接頭辞・接尾辞の要点20
+
+語根が「何を」を決めるのに対し、接頭辞は「どちらへ・どのように」を決める。<b>意味の方向を決めるのは接頭辞</b>である。
+
+| 接頭辞 | 意味 | 見分けの鍵 |
+|---|---|---|
+| ad- (ac-, af-, ag-, al-, an-, ap-, ar-, as-, at-) | 〜へ | 次の子音に同化して二重子音になる。<i>accept, affect, aggregate, allocate, announce, appear, arrive, assist, attend</i> |
+| com- (co-, col-, con-, cor-) | ともに・すっかり | 同上。<i>collect, correct, compose, connect</i> |
+| in-¹ | 中へ | <i>include, inject, import</i> |
+| in-² (im-, il-, ir-) | 〜でない | <i>invisible, impossible, illegal, irregular</i>。①と②は同形で紛らわしい。<i>inflammable</i> は「燃えやすい」（in-①）で、「不燃」ではない |
+| ex- (e-, ef-) | 外へ・すっかり | <i>exit, emit, effect</i> |
+| de- | 下へ・離れて・否定 | <i>descend, deduct, decode</i> |
+| dis- (dif-, di-) | 分離・否定 | <i>distract, differ, divide</i> |
+| re- | 再び・後ろへ | <i>return, reduce, recede</i> |
+| pro- | 前へ | <i>proceed, project, promote</i> |
+| pre- | あらかじめ | <i>predict, prevent, prepare</i> |
+| sub- (suc-, suf-, sug-, sup-, sus-) | 下へ | <i>submit, succeed, suffer, suggest, support, sustain</i> |
+| super-/sur- | 上へ・超えて | <i>supervise, surface, surpass</i> |
+| trans- | 越えて | <i>transfer, transmit, translate</i> |
+| inter- | 間に | <i>interrupt, intervene, international</i> |
+| ob- (oc-, of-, op-) | 〜に向かって・逆らって | <i>object, occur, offer, oppose</i> |
+| circum- | 周りに | <i>circumstance, circumvent</i> |
+| per- | 通して・すっかり | <i>perfect, permit, perceive</i> |
+| se- | 離れて | <i>separate, select, secure, seduce</i> |
+| a-/an-（ギ） | 〜でない | <i>atheist, anonymous, apathy</i> |
+| syn-/sym- | ともに | <i>synthesis, sympathy, symbol</i> |
+
+## 3　TOEIC 頻出語を語根で攻略
+
+TOEIC のパート5・7に繰り返し出る語には、はっきりした語彙的偏りがある。<b>業務・契約・物流・人事</b>の四領域で、しかも同じ語根が繰り返し現れる。
+
+<b>(1) 契約・法務</b>——<i>ten-/tain-</i>（保つ）と <i>lig-</i>（縛る）に集中する。
+- <i>tenant</i>「借家人」＝保つ人／<i>tenure</i>「保有（権）」／<i>retain</i>「保持する」／<i>maintain</i>「維持する」／<i>obtain</i>「得る」
+- <i>oblige</i>「義務づける」＝縛りつける／<i>liable</i>「責任がある」／<i>liability</i>「債務」／<i>ally</i>「提携する」
+- <i>comply with</i>「遵守する」＝ <i>com-</i>＋<i>plēre</i>「満たす」／<i>compliance</i>／<i>complement</i>／<i>supplement</i>
+
+<b>(2) 物流・在庫</b>——<i>port-</i>（運ぶ）と <i>fer-</i>（運ぶ）とゲルマン系の実務語。
+- <i>freight</i>「貨物」（蘭）／<i>warehouse</i>「倉庫」（<i>ware</i>「商品」）／<i>inventory</i>「在庫（表）」＝<i>invenīre</i>「見つけ出す」→「（見つけたものの）目録」
+- <i>shipment, consignment</i>（<i>signum</i>「印」＝送り状に印をする）／<i>itinerary</i>「旅程」＝<i>iter</i>「道」／<i>expedite</i>「迅速化する」＝「足枷を外す」
+
+<b>(3) 経理・支払い</b>
+- <i>invoice</i>「請求書」＝「送付物」／<i>reimburse</i>「払い戻す」＝「財布に戻す」／<i>disburse</i>「支出する」／<i>remit</i>「送金する」＝「送り返す」／<i>defer payment</i>「支払いを繰り延べる」＝「後ろへ運ぶ」
+- <i>deduct</i>「控除する」＝「引き下ろす」／<i>allocate</i>「配分する」／<i>appraise</i>「査定する」（<i>pretium</i>「価格」）／<i>audit</i>「監査」＝「聞くこと」（会計報告を読み上げて聞いた時代の名残）
+
+<b>(4) 人事・組織</b>
+- <i>subordinate</i>「部下」＝「下の順位に置かれた」／<i>supervise</i>「監督する」＝「上から見る」／<i>promote</i>「昇進させる」＝「前へ動かす」／<i>appoint</i>「任命する」／<i>tentative</i>「暫定的な」＝「試みの」
+- <i>resign</i>「辞任する」＝「（職を）印で返す」／<i>severance</i>「解雇（手当）」＝<i>sēparāre</i>「切り離す」／<i>reinstate</i>「復職させる」
+
+> <b>使い方の順序。</b>単語帳（『金のフレーズ』等）でまず出会い、<b>その日のうちに</b>語根で束ね直す。「今日出た <i>retain</i>・<i>maintain</i>・<i>obtain</i> は全部 <i>ten-</i>（保つ）だ」と気づいて紙に3語並べる——これだけで定着率が変わる。逆に、語根リストを先に暗記しても点は伸びない。<b>語根は復習の道具であって、初回学習の道具ではない。</b>
+
+## 4　英検準1級・1級の抽象語を語根で攻略
+
+準1級以上で急に増えるのは<b>ラテン語系の抽象名詞・形容詞</b>である。ここは語源がもっとも効く領域で、逆に言えば語源なしでは効率が落ちる。
+
+| 語 | 分解 | 直訳 | 語義 |
+|---|---|---|---|
+| <i>comprehensive</i> | com-（すっかり）＋prehend（掴む） | すっかり掴む | 包括的な |
+| <i>inevitable</i> | in-（否定）＋ē-（外へ）＋vītāre（避ける） | 避け出られない | 避けられない |
+| <i>indispensable</i> | in-＋dis-（離す）＋pendere（量る） | 分け与えて済ませられない | 不可欠の |
+| <i>unprecedented</i> | un-＋prae-（前に）＋cēdere（行く） | 先に行った例がない | 前例のない |
+| <i>reciprocal</i> | reco-（後ろへ）＋proco-（前へ） | 行きつ戻りつ | 相互の |
+| <i>ubiquitous</i> | ubīque（どこにでも） | どこにでもある | 遍在する |
+| <i>meticulous</i> | metus（恐れ） | 恐れるほど気にする | 極度に細かい |
+| <i>ostensible</i> | ob-＋tendere（伸ばす） | 差し出して見せる | 表向きの |
+| <i>innocuous</i> | in-＋nocēre（害する） | 害さない | 無害な |
+| <i>perfunctory</i> | per-（通して）＋fungī（果たす） | 通り一遍に果たす | おざなりの |
+| <i>tenacious</i> | tenēre（保つ） | しっかり保つ | 粘り強い |
+| <i>vicarious</i> | vicis（交替） | 代わりの | 代理の、他人事ながらの |
+| <i>eloquent</i> | ē-（外へ）＋loquī（話す） | 話し出す | 雄弁な |
+| <i>obsolete</i> | ob-＋solēre（習慣とする） | 使われなくなった | 廃れた |
+| <i>redundant</i> | re-＋unda（波） | 波が溢れ返る | 冗長な、余剰の |
+| <i>succinct</i> | sub-＋cingere（帯を締める） | 帯で締めた | 簡潔な |
+| <i>candid</i> | candidus（真っ白な） | 白い | 率直な |
+| <i>prudent</i> | prō-＋vidēns（見る） | 先を見る | 思慮深い |
+| <i>lucrative</i> | lucrum（利得） | 利をもたらす | 儲かる |
+| <i>tangible</i> | tangere（触れる） | 触れられる | 具体的な、有形の |
+| <i>ambivalent</i> | ambi-（両方）＋valēre（力がある） | 両方に力が働く | 相反する感情の |
+| <i>circumvent</i> | circum-（周り）＋venīre（来る） | 迂回して来る | 回避する |
+| <i>conducive</i> | con-＋dūcere（導く） | ともに導く | 助けとなる |
+| <i>discern</i> | dis-＋cernere（ふるい分ける） | 分けて見る | 識別する |
+| <i>exacerbate</i> | ex-＋acerbus（苦い） | ますます苦くする | 悪化させる |
+| <i>impeccable</i> | in-＋peccāre（罪を犯す） | 罪を犯さない | 非の打ちどころのない |
+| <i>incessant</i> | in-＋cessāre（やむ） | やまない | 絶え間ない |
+| <i>inherent</i> | in-＋haerēre（くっつく） | 内側にくっついている | 本来備わった |
+| <i>plausible</i> | plaudere（拍手する） | 拍手に値する | もっともらしい |
+| <i>prolific</i> | prōlēs（子孫）＋facere | 子を多く生む | 多産の、多作の |
+
+## 5　紛らわしい語を語源で切り分ける
+
+- <b>adopt / adapt / adept</b>——<i>adopt</i>＝<i>ad</i>＋<i>optāre</i>「選ぶ」→ 採用する・養子にする。<i>adapt</i>＝<i>ad</i>＋<i>aptāre</i>「合わせる」→ 適合させる。<i>adept</i>＝<i>ad</i>＋<i>aptus</i>「（技を）身につけた」→ 熟達した。「選ぶ／合わせる／身につけた」。
+- <b>affect / effect</b>——<i>ad</i>＋<i>facere</i>「〜に働きかける」（動詞）／<i>ex</i>＋<i>facere</i>「（外へ）成し出されたもの＝結果」（名詞）。接頭辞の方向がそのまま品詞を決めている。
+- <b>principal / principle</b>——<i>principal</i>＝<i>prīnceps</i>「第一の（人）」→ 主要な・校長・元本。<i>principle</i>＝<i>prīncipium</i>「始まり」→ 原理。<i>-al</i> は形容詞、<i>-le</i> は名詞。
+- <b>discreet / discrete</b>——同一語 <i>discrētus</i>「分けられた」の綴り分け。<i>discreet</i>＝（口が）分別で仕切られている＝慎重な。<i>discrete</i>＝分離した。
+- <b>comprise / compose</b>——<i>comprise</i>＝<i>com</i>＋<i>prehendere</i>「まとめて掴む」→ 全体が部分を含む（The whole comprises the parts）。<i>compose</i>＝<i>com</i>＋<i>pōnere</i>「ともに置く」→ 部分が全体を構成する。方向が逆。
+- <b>imply / infer</b>——<i>imply</i>＝<i>in</i>＋<i>plicāre</i>「（意味を）折り込む」→ 話し手がほのめかす。<i>infer</i>＝<i>in</i>＋<i>ferre</i>「（結論を）運び入れる」→ 聞き手が推論する。誰が動作主かが語源で決まる。
+- <b>economic / economical</b>——前者は「経済（学）の」、後者は「節約になる」。<i>-ical</i> が付くと日常的・評価的になる傾向（<i>historic</i>「歴史的意義のある」／<i>historical</i>「歴史上の」、<i>classic</i>／<i>classical</i>）。
+- <b>continual / continuous</b>——<i>continual</i>＝断続的に繰り返す。<i>continuous</i>＝途切れない。語源は同じ <i>continēre</i>「保ち合わせる」だが、<i>-ous</i>（状態）と <i>-al</i>（関係）の差が用法を分けた。
+
+## 6　章末確認問題300問
+
+<b>形式。</b>各問は「語根の意味を手がかりに、下線語の意味を推測する」。<b>正確な訳を当てることが目的ではない</b>。語根から意味の方向をつかめれば正解とみなしてよい。解答は問題群のあとにまとめてある。
+
+各問の書式は「語　／　語根とその意味　→　？」である。まず語根から推測し、それから解答を見ること。逆にすると練習にならない。
+
+### A 群（1–60）　基本語根から
+
+1. <i>contain</i> ／ ten-（保つ）＋con-（ともに）
+2. <i>detain</i> ／ ten-＋de-（離して）
+3. <i>abstain</i> ／ ten-＋abs-（離れて）
+4. <i>tenacious</i> ／ ten-
+5. <i>tenet</i> ／ ten-
+6. <i>receive</i> ／ cip-（取る）＋re-（後ろへ）
+7. <i>perceive</i> ／ cip-＋per-（通して）
+8. <i>anticipate</i> ／ cip-＋ante-（前に）
+9. <i>emancipate</i> ／ man-（手）＋cap-（取る）＋e-（外へ）
+10. <i>susceptible</i> ／ cept-＋sub-（下に）
+11. <i>confer</i> ／ fer-（運ぶ）＋con-
+12. <i>defer</i> ／ fer-＋de-
+13. <i>infer</i> ／ fer-＋in-（中へ）
+14. <i>proliferate</i> ／ fer-＋prōlēs（子孫）
+15. <i>vociferous</i> ／ fer-＋vōx（声）
+16. <i>omit</i> ／ mit-（送る）＋ob-（離れて）
+17. <i>remit</i> ／ mit-＋re-
+18. <i>surmise</i> ／ mis-＋super-（上に）
+19. <i>compromise</i> ／ mis-＋com-＋prō-
+20. <i>emissary</i> ／ mis-＋ex-
+21. <i>impose</i> ／ pos-（置く）＋in-（上に）
+22. <i>depose</i> ／ pos-＋de-（下へ）
+23. <i>juxtapose</i> ／ pos-＋iuxtā（隣に）
+24. <i>proponent</i> ／ pon-＋prō-
+25. <i>postpone</i> ／ pon-＋post-（後に）
+26. <i>induce</i> ／ duc-（導く）＋in-
+27. <i>seduce</i> ／ duc-＋se-（離れて）
+28. <i>abduct</i> ／ duct-＋ab-（離れて）
+29. <i>conducive</i> ／ duc-＋con-
+30. <i>ductile</i> ／ duct-
+31. <i>conspicuous</i> ／ spic-（見る）＋con-（すっかり）
+32. <i>circumspect</i> ／ spect-＋circum-（周りを）
+33. <i>retrospect</i> ／ spect-＋retro-（後ろを）
+34. <i>despise</i> ／ spic-＋de-（下に）
+35. <i>specious</i> ／ spec-
+36. <i>digress</i> ／ gress-（歩む）＋dis-（脇へ）
+37. <i>transgress</i> ／ gress-＋trans-（越えて）
+38. <i>ingredient</i> ／ grad-＋in-
+39. <i>retrograde</i> ／ grad-＋retro-
+40. <i>egress</i> ／ gress-＋ex-
+41. <i>subvert</i> ／ vert-（向ける）＋sub-（下から）
+42. <i>avert</i> ／ vert-＋ab-
+43. <i>inadvertent</i> ／ vert-＋ad-＋in-（否定）
+44. <i>versatile</i> ／ vers-
+45. <i>controversy</i> ／ vers-＋contrā-（逆に）
+46. <i>abject</i> ／ ject-（投げる）＋ab-（下へ）
+47. <i>conjecture</i> ／ ject-＋con-
+48. <i>trajectory</i> ／ ject-＋trans-
+49. <i>interject</i> ／ ject-＋inter-
+50. <i>dejected</i> ／ ject-＋de-
+51. <i>oppress</i> ／ press-（押す）＋ob-（〜に向かって）
+52. <i>repress</i> ／ press-＋re-
+53. <i>irrepressible</i> ／ press-＋re-＋in-（否定）
+54. <i>abstract</i> ／ tract-（引く）＋abs-
+55. <i>detract</i> ／ tract-＋de-
+56. <i>intractable</i> ／ tract-＋in-（否定）
+57. <i>tractable</i> ／ tract-
+58. <i>protract</i> ／ tract-＋prō-
+59. <i>ascribe</i> ／ scrib-（書く）＋ad-
+60. <i>proscribe</i> ／ scrib-＋prō-（公に）
+
+### B 群（61–120）　接頭辞の方向を読む
+
+61. <i>circumvent</i> ／ ven-（来る）＋circum-
+62. <i>contravene</i> ／ ven-＋contrā-
+63. <i>advent</i> ／ ven-＋ad-
+64. <i>convention</i> ／ ven-＋con-
+65. <i>revenue</i> ／ ven-＋re-
+66. <i>precedent</i> ／ ced-（行く）＋prae-
+67. <i>recede</i> ／ ced-＋re-
+68. <i>concede</i> ／ ced-＋con-
+69. <i>secede</i> ／ ced-＋se-
+70. <i>accede</i> ／ ced-＋ad-
+71. <i>deport</i> ／ port-（運ぶ）＋de-
+72. <i>comport</i> ／ port-＋com-
+73. <i>purport</i> ／ port-＋prō-
+74. <i>importunate</i> ／ port-＋in-（否定）
+75. <i>portfolio</i> ／ port-＋folium（葉・紙）
+76. <i>insist</i> ／ sist-（立つ）＋in-（上に）
+77. <i>desist</i> ／ sist-＋de-
+78. <i>subsist</i> ／ sist-＋sub-
+79. <i>constituent</i> ／ stitu-＋con-
+80. <i>destitute</i> ／ stitu-＋de-
+81. <i>obstinate</i> ／ sta-＋ob-
+82. <i>coincide</i> ／ cid-（落ちる）＋co-＋in-
+83. <i>decadent</i> ／ cad-＋de-
+84. <i>cadence</i> ／ cad-
+85. <i>occasion</i> ／ cas-＋ob-
+86. <i>diffident</i> ／ fid-（信じる）＋dis-（否定）
+87. <i>perfidy</i> ／ fid-＋per-（破って）
+88. <i>affidavit</i> ／ fid-＋ad-
+89. <i>congenital</i> ／ gen-（生む）＋con-
+90. <i>indigenous</i> ／ gen-＋indi-（内に）
+91. <i>degenerate</i> ／ gen-＋de-
+92. <i>progeny</i> ／ gen-＋prō-
+93. <i>diligent</i> ／ leg-（選ぶ）＋dis-（別々に）
+94. <i>eligible</i> ／ leg-＋ex-
+95. <i>sacrilege</i> ／ leg-＋sacer（聖）
+96. <i>elegant</i> ／ leg-＋ex-
+97. <i>manifest</i> ／ man-（手）＋festus（打つ）
+98. <i>manipulate</i> ／ man-＋plēre（満たす）
+99. <i>emancipation</i> ／ man-＋cap-
+100. <i>implicate</i> ／ plic-（折る）＋in-
+101. <i>explicit</i> ／ plic-＋ex-（外へ）
+102. <i>complicity</i> ／ plic-＋com-
+103. <i>supplicate</i> ／ plic-＋sub-（下に）
+104. <i>replicate</i> ／ plic-＋re-
+105. <i>disrupt</i> ／ rupt-（破る）＋dis-
+106. <i>abrupt</i> ／ rupt-＋ab-
+107. <i>rupture</i> ／ rupt-
+108. <i>dissect</i> ／ sect-（切る）＋dis-
+109. <i>segment</i> ／ seg-
+110. <i>consecutive</i> ／ secut-（従う）＋con-
+111. <i>obsequious</i> ／ sequ-＋ob-
+112. <i>persecute</i> ／ secut-＋per-
+113. <i>absolve</i> ／ solv-（解く）＋ab-
+114. <i>dissolute</i> ／ solut-＋dis-
+115. <i>resolute</i> ／ solut-＋re-
+116. <i>obstruct</i> ／ struct-（建てる）＋ob-
+117. <i>instrumental</i> ／ struct-＋in-
+118. <i>construe</i> ／ stru-＋con-
+119. <i>contend</i> ／ tend-（伸ばす）＋con-
+120. <i>portend</i> ／ tend-＋prō-
+
+### C 群（121–180）　抽象語を分解する
+
+121. <i>provident</i> ／ vid-（見る）＋prō-
+122. <i>improvise</i> ／ vis-＋prō-＋in-（否定）
+123. <i>revise</i> ／ vis-＋re-
+124. <i>evident</i> ／ vid-＋ex-
+125. <i>invidious</i> ／ vid-＋in-（〜に対して）
+126. <i>revoke</i> ／ vok-（呼ぶ）＋re-
+127. <i>irrevocable</i> ／ vok-＋re-＋in-（否定）
+128. <i>equivocal</i> ／ voc-＋aequus（等しい）
+129. <i>avocation</i> ／ voc-＋ab-
+130. <i>convoke</i> ／ vok-＋con-
+131. <i>incognito</i> ／ gnos-（知る）＋in-（否定）
+132. <i>prognosis</i> ／ gnos-＋prō-
+133. <i>ignoble</i> ／ gno-＋in-（否定）
+134. <i>reconnaissance</i> ／ gnos-＋re-＋con-
+135. <i>compel</i> ／ pel-（押す）＋com-
+136. <i>dispel</i> ／ pel-＋dis-
+137. <i>repellent</i> ／ pel-＋re-
+138. <i>impulsive</i> ／ puls-＋in-
+139. <i>attribute</i> ／ tribut-（与える）＋ad-
+140. <i>retribution</i> ／ tribut-＋re-
+141. <i>tributary</i> ／ tribut-
+142. <i>credulous</i> ／ cred-（信じる）
+143. <i>accredit</i> ／ cred-＋ad-
+144. <i>incur</i> ／ cur-（走る）＋in-
+145. <i>concurrent</i> ／ cur-＋con-
+146. <i>discourse</i> ／ curs-＋dis-
+147. <i>precursor</i> ／ curs-＋prae-
+148. <i>cursory</i> ／ curs-
+149. <i>congest</i> ／ gest-（運ぶ）＋con-
+150. <i>digest</i> ／ gest-＋dis-
+151. <i>ingest</i> ／ gest-＋in-
+152. <i>superfluous</i> ／ flu-（流れる）＋super-
+153. <i>affluent</i> ／ flu-＋ad-
+154. <i>influx</i> ／ flux-＋in-
+155. <i>confluence</i> ／ flu-＋con-
+156. <i>obligation</i> ／ lig-（縛る）＋ob-
+157. <i>ligature</i> ／ lig-
+158. <i>alliance</i> ／ lig-＋ad-
+159. <i>apparatus</i> ／ par-（準備する）＋ad-
+160. <i>disparate</i> ／ par-（等しい）＋dis-
+161. <i>impending</i> ／ pend-（吊る）＋in-
+162. <i>appendix</i> ／ pend-＋ad-
+163. <i>propensity</i> ／ pens-＋prō-
+164. <i>expenditure</i> ／ pend-＋ex-
+165. <i>acquisitive</i> ／ quisit-（求める）＋ad-
+166. <i>exquisite</i> ／ quisit-＋ex-
+167. <i>requisite</i> ／ quisit-＋re-
+168. <i>consensus</i> ／ sens-（感じる）＋con-
+169. <i>dissent</i> ／ sent-＋dis-
+170. <i>sentient</i> ／ sent-
+171. <i>reservation</i> ／ serv-（保つ）＋re-
+172. <i>subservient</i> ／ serv-（仕える）＋sub-
+173. <i>conserve</i> ／ serv-＋con-
+174. <i>consign</i> ／ sign-（印）＋con-
+175. <i>designate</i> ／ sign-＋de-
+176. <i>extemporaneous</i> ／ tempor-（時）＋ex-
+177. <i>contemporary</i> ／ tempor-＋con-
+178. <i>temporal</i> ／ tempor-
+179. <i>subterranean</i> ／ terr-（土地）＋sub-
+180. <i>inter</i>（動詞） ／ terr-＋in-
+
+### D 群（181–240）　語根の意味から逆算する
+
+181. <i>extort</i> ／ tort-（ねじる）＋ex-
+182. <i>retort</i> ／ tort-＋re-
+183. <i>contort</i> ／ tort-＋con-
+184. <i>protrude</i> ／ trud-（押す）＋prō-
+185. <i>obtrusive</i> ／ trus-＋ob-
+186. <i>abstruse</i> ／ trus-＋abs-
+187. <i>redundant</i> ／ und-（波）＋re-
+188. <i>inundate</i> ／ und-＋in-
+189. <i>unanimous</i> ／ uni-（一）＋anim-（心）
+190. <i>unilateral</i> ／ uni-＋later-（側）
+191. <i>prevail</i> ／ val-（力がある）＋prae-
+192. <i>convalesce</i> ／ val-＋con-
+193. <i>avail</i> ／ val-＋ad-
+194. <i>veracity</i> ／ ver-（真実）
+195. <i>aver</i> ／ ver-＋ad-
+196. <i>invincible</i> ／ vinc-（勝つ）＋in-（否定）
+197. <i>evince</i> ／ vinc-＋ex-
+198. <i>convivial</i> ／ viv-（生きる）＋con-
+199. <i>vivacious</i> ／ viv-
+200. <i>convoluted</i> ／ volut-（巻く）＋con-
+201. <i>devolve</i> ／ volv-＋de-
+202. <i>perennial</i> ／ enn-（年）＋per-（通して）
+203. <i>annals</i> ／ ann-
+204. <i>inaudible</i> ／ aud-（聞く）＋in-（否定）
+205. <i>audit</i> ／ aud-
+206. <i>benevolent</i> ／ bene-（良い）＋vol-（望む）
+207. <i>benign</i> ／ bene-＋gn-（生まれ）
+208. <i>concise</i> ／ cis-（切る）＋con-
+209. <i>incisive</i> ／ cis-＋in-
+210. <i>excise</i> ／ cis-＋ex-
+211. <i>preclude</i> ／ clud-（閉じる）＋prae-
+212. <i>seclude</i> ／ clud-＋se-
+213. <i>recluse</i> ／ clus-＋re-
+214. <i>discord</i> ／ cord-（心）＋dis-
+215. <i>accord</i> ／ cord-＋ad-
+216. <i>incorporate</i> ／ corp-（体）＋in-
+217. <i>corpulent</i> ／ corp-
+218. <i>predominant</i> ／ dom-（支配）＋prae-
+219. <i>domain</i> ／ dom-
+220. <i>adequate</i> ／ equ-（等しい）＋ad-
+221. <i>iniquity</i> ／ equ-＋in-（否定）
+222. <i>infinite</i> ／ fin-（終わり）＋in-（否定）
+223. <i>affinity</i> ／ fin-（境）＋ad-
+224. <i>confine</i> ／ fin-＋con-
+225. <i>deflect</i> ／ flect-（曲げる）＋de-
+226. <i>inflection</i> ／ flect-＋in-
+227. <i>conform</i> ／ form-（形）＋con-
+228. <i>deformity</i> ／ form-＋de-
+229. <i>profuse</i> ／ fus-（注ぐ）＋prō-
+230. <i>diffuse</i> ／ fus-＋dis-
+231. <i>refund</i> ／ fund-（注ぐ）＋re-
+232. <i>gratuitous</i> ／ grat-（喜ばす）
+233. <i>ingratiate</i> ／ grat-＋in-
+234. <i>inhibit</i> ／ hib-（持つ）＋in-（対して）
+235. <i>prohibitive</i> ／ hib-＋prō-
+236. <i>perjury</i> ／ jur-（誓う）＋per-（破って）
+237. <i>jurisdiction</i> ／ jur-＋dict-（言う）
+238. <i>alleviate</i> ／ lev-（軽い）＋ad-
+239. <i>levity</i> ／ lev-
+240. <i>relegate</i> ／ leg-（送る・法）＋re-
+
+### E 群（241–300）　総合
+
+241. <i>allocate</i> ／ loc-（場所）＋ad-
+242. <i>dislocate</i> ／ loc-＋dis-
+243. <i>colloquial</i> ／ loqu-（話す）＋con-
+244. <i>soliloquy</i> ／ loqu-＋sōlus（一人）
+245. <i>loquacious</i> ／ loqu-
+246. <i>commemorate</i> ／ mem-（記憶）＋con-
+247. <i>immemorial</i> ／ mem-＋in-（否定）
+248. <i>emerge</i> ／ merg-（沈む）＋ex-
+249. <i>immerse</i> ／ mers-＋in-
+250. <i>emigrate</i> ／ migr-（移る）＋ex-
+251. <i>immigrate</i> ／ migr-＋in-
+252. <i>accommodate</i> ／ mod-（尺度）＋ad-＋con-
+253. <i>commodity</i> ／ mod-＋con-
+254. <i>modicum</i> ／ mod-
+255. <i>amortize</i> ／ mort-（死）＋ad-
+256. <i>mortify</i> ／ mort-＋fic-（する）
+257. <i>promote</i> ／ mot-（動く）＋prō-
+258. <i>remote</i> ／ mot-＋re-
+259. <i>innate</i> ／ nat-（生まれる）＋in-
+260. <i>prenatal</i> ／ nat-＋prae-
+261. <i>denounce</i> ／ nounc-（告げる）＋de-
+262. <i>renounce</i> ／ nounc-＋re-
+263. <i>enunciate</i> ／ nunci-＋ex-
+264. <i>subordinate</i> ／ ord-（順序）＋sub-
+265. <i>primordial</i> ／ ord-＋prīmus（最初）
+266. <i>disparity</i> ／ par-（等しい）＋dis-
+267. <i>compatible</i> ／ pat-（苦しむ・耐える）＋con-
+268. <i>impassive</i> ／ pass-＋in-（否定）
+269. <i>expedite</i> ／ ped-（足）＋ex-
+270. <i>impediment</i> ／ ped-＋in-（中に）
+271. <i>appetite</i> ／ pet-（求める）＋ad-
+272. <i>impetus</i> ／ pet-＋in-
+273. <i>perpetual</i> ／ pet-＋per-
+274. <i>rectify</i> ／ rect-（まっすぐ）＋fic-
+275. <i>insurrection</i> ／ rect-＋sub-＋in-
+276. <i>interrogate</i> ／ rog-（尋ねる）＋inter-
+277. <i>arrogant</i> ／ rog-＋ad-（自分に）
+278. <i>prerogative</i> ／ rog-＋prae-
+279. <i>surrogate</i> ／ rog-＋sub-
+280. <i>consecrate</i> ／ sacr-（聖）＋con-
+281. <i>sanction</i> ／ sanct-（聖）
+282. <i>assimilate</i> ／ simil-（似る）＋ad-
+283. <i>simultaneous</i> ／ simul-
+284. <i>dissonance</i> ／ son-（音）＋dis-
+285. <i>consonant</i> ／ son-＋con-
+286. <i>conspire</i> ／ spir-（息）＋con-
+287. <i>aspire</i> ／ spir-＋ad-
+288. <i>transpire</i> ／ spir-＋trans-
+289. <i>contiguous</i> ／ tig-（触れる）＋con-
+290. <i>contingent</i> ／ ting-＋con-
+291. <i>integrity</i> ／ tag-（触れる）＋in-（否定）
+292. <i>attest</i> ／ test-（証人）＋ad-
+293. <i>detest</i> ／ test-＋de-
+294. <i>protest</i> ／ test-＋prō-
+295. <i>suburban</i> ／ urb-（都市）＋sub-（近くの）
+296. <i>urbane</i> ／ urb-
+297. <i>evacuate</i> ／ vac-（空）＋ex-
+298. <i>vacuous</i> ／ vac-
+299. <i>vanquish</i> ／ vinc-（勝つ）
+300. <i>vindicate</i> ／ vindic-（要求する・罰する）
+
+## 7　解答
+
+<b>A 群</b>　1 含む（ともに保つ）／2 拘留する／3 慎む・棄権する／4 粘り強い／5 教義・信条／6 受け取る／7 知覚する／8 予期する・先んじる／9 解放する（手から放つ）／10 影響を受けやすい（下から受け取る）／11 授与する・協議する／12 延期する・従う／13 推論する／14 増殖する／15 声高な／16 省く／17 送金する・免除する／18 推測する／19 妥協（する）／20 使者／21 課す（上に置く）／22 退位させる／23 並置する／24 提案者／25 延期する／26 誘発する／27 誘惑する／28 誘拐する／29 助けとなる／30 延性のある／31 目立つ／32 用心深い／33 回顧（の）／34 軽蔑する／35 もっともらしいが偽の／36 脱線する／37 違反する／38 材料（中に入るもの）／39 逆行する／40 出口・退出／41 転覆させる／42 そらす・避ける／43 不注意な／44 多才な／45 論争／46 惨めな／47 推測／48 弾道・軌道／49 差し挟む／50 落胆した／51 抑圧する／52 抑制する／53 抑えきれない／54 抽象的な・要約／55 損なう／56 手に負えない／57 従順な／58 長引かせる／59 帰する／60 禁止する・追放する
+
+<b>B 群</b>　61 迂回する・回避する／62 違反する／63 到来／64 慣習・大会／65 歳入／66 先例／67 後退する／68 譲歩する／69 脱退する／70 就任する・同意する／71 国外追放する／72 振る舞う／73 趣旨・主張する／74 しつこい／75 書類挟み・資産構成／76 主張する／77 やめる／78 生存する／79 構成要素／80 極貧の／81 頑固な／82 同時に起こる・一致する／83 退廃的な／84 抑揚・終止形／85 機会／86 自信のない／87 裏切り／88 宣誓供述書／89 先天的な／90 土着の／91 悪化する／92 子孫／93 勤勉な／94 適格の／95 冒瀆／96 上品な（選び抜かれた）／97 明白な／98 操る／99 解放／100 巻き込む／101 明示的な／102 共犯／103 嘆願する／104 複製する／105 混乱させる／106 突然の／107 破裂／108 解剖する／109 部分・区分／110 連続する／111 こびへつらう／112 迫害する／113 免除する・赦免する／114 放蕩な／115 断固とした／116 妨げる／117 役立つ／118 解釈する／119 争う・主張する／120 前兆となる
+
+<b>C 群</b>　121 先見の明のある／122 即興でやる／123 改訂する／124 明白な／125 不快感を与える・妬ましい／126 撤回する／127 取り消せない／128 曖昧な／129 副業／130 招集する／131 匿名で／132 予後・予測／133 卑しい／134 偵察／135 強制する／136 追い払う／137 はねつける・防虫剤／138 衝動的な／139 帰する・属性／140 報復／141 支流・貢納国／142 だまされやすい／143 認定する／144 （損失などを）被る／145 同時に起こる／146 談話・論説／147 先駆者／148 ざっとした／149 混雑させる／150 消化する／151 摂取する／152 余分な／153 裕福な／154 流入／155 合流／156 義務／157 結紮・連結／158 同盟／159 装置／160 異質の／161 差し迫った／162 付録・虫垂／163 傾向／164 支出／165 貪欲な／166 精巧な／167 必要な／168 総意／169 異議を唱える／170 感覚のある／171 予約・留保／172 卑屈な／173 保存する／174 委託する／175 指名する／176 即興の／177 同時代の／178 時間の・世俗の／179 地下の／180 埋葬する
+
+<b>D 群</b>　181 強請する／182 言い返す／183 ゆがめる／184 突き出る／185 出しゃばりな／186 難解な／187 冗長な・余剰の／188 氾濫させる／189 満場一致の／190 一方的な／191 優勢である・普及する／192 快復する／193 役立つ／194 真実性／195 断言する／196 無敵の／197 明示する／198 宴会好きの・和やかな／199 快活な／200 込み入った／201 委譲する／202 多年生の・永続する／203 年代記／204 聞き取れない／205 監査／206 慈悲深い／207 良性の・優しい／208 簡潔な／209 鋭い／210 切除する・物品税／211 妨げる・排除する／212 隔離する／213 世捨て人／214 不和／215 一致・協定／216 法人化する・組み込む／217 肥満の／218 支配的な／219 領域／220 十分な／221 不正／222 無限の／223 親近性・類縁／224 制限する・監禁する／225 そらす／226 語形変化・抑揚／227 従う・適合する／228 奇形／229 豊富な・気前のよい／230 拡散する／231 払い戻す／232 無償の・不必要な／233 取り入る／234 抑制する／235 法外な・禁止的な／236 偽証／237 司法権／238 緩和する／239 軽率さ／240 左遷する・追いやる
+
+<b>E 群</b>　241 割り当てる／242 移動させる・脱臼させる／243 口語の／244 独白／245 おしゃべりな／246 記念する／247 太古からの／248 現れる／249 浸す・没頭させる／250 移住する（出る）／251 移住する（入る）／252 収容する・適応させる／253 商品／254 少量／255 償却する／256 屈辱を与える／257 促進する・昇進させる／258 遠隔の／259 生来の／260 出生前の／261 非難する／262 放棄する／263 明瞭に発音する／264 下位の・部下／265 原初の／266 格差／267 両立する／268 無感動な／269 促進する／270 障害／271 食欲／272 勢い／273 永続的な／274 是正する／275 反乱／276 尋問する／277 傲慢な／278 特権／279 代理（の）／280 奉献する／281 認可・制裁／282 同化する／283 同時の／284 不協和／285 子音・調和する／286 共謀する／287 熱望する／288 判明する・発散する／289 隣接する／290 偶発的な・派遣団／291 誠実さ・完全性／292 証明する／293 ひどく嫌う／294 抗議する／295 郊外の／296 洗練された／297 避難させる／298 空虚な／299 打ち負かす／300 潔白を証明する
+
+> <b>この問題集の使い方。</b>一周目は解答を見ながらでよい。二周目に、語根欄だけを見て意味を言う。三周目に、語だけを見て「語根は何か」を言う。三周目ができるようになった語根は、以後、初見の派生語にも通用する。300問を三周しても20時間はかからない。それで語彙の推測力が恒久的に一段上がる。
