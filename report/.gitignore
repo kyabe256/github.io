@@ -1,3 +1,13 @@
+# 個人情報を含むため、公開リポジトリには置かない。
+# 本リポジトリ kyabe256/github.io は public であり、GitHub Pages が有効。
+# 置き場所の方針が決まるまで、資料と本文はコミットしない。
+images/*
+!images/.gitkeep
+transcripts/batch-*.md
+src/*.tex
+src/*.pdf
+
+# LaTeX の中間ファイル
 src/*.aux
 src/*.log
 src/*.toc
