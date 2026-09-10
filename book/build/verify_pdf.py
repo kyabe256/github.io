@@ -180,6 +180,27 @@ def main() -> int:
     r.check(not missing, f"執筆済み {len(written)} 章の見出しを抽出テキストで確認",
             f"見つからない章: {missing[:6]}" if missing else "全て抽出可能")
 
+    # 8. 和文に紛れた欧文語
+    # 「イベリア半島から north 上してきた」のような書き間違いを捕まえる。
+    # 原語の併記は括弧や .orig / .dates の内側に書く方針なので、
+    # 和文と欧文が素の空白で直接隣り合う形は誤りとみなす。
+    print("\n8. 和文への欧文混入")
+    JA = r"[ぁ-んァ-ヶ一-鿿]"
+    stray_latin: list[tuple[str, str]] = []
+    for part in MANIFEST["parts"]:
+        for ch in part["chapters"]:
+            f = CONTENT / part["dir"] / ch["file"]
+            if not f.exists():
+                continue
+            src = f.read_text(encoding="utf-8")
+            # 原語の併記は .orig / .dates の内側に書く方針なので、その中身は除外する
+            src = re.sub(r'<span class="(?:orig|dates)">.*?</span>', "", src, flags=re.S)
+            plain = re.sub(r"<[^>]+>", "", src, flags=re.S)
+            for m in re.finditer(rf"{JA} [A-Za-z]+ {JA}", plain):
+                stray_latin.append((f.name, m.group(0)))
+    r.check(not stray_latin, f"混入 {len(stray_latin)} 件",
+            ", ".join(f"{fn}「{s}」" for fn, s in stray_latin[:5]) or "なし")
+
     # 参考情報
     body_chars = sum(len(t) for t in pages_text)
     print(f"\n  参考: 抽出テキスト {body_chars:,} 字 / {n_pages} ページ"
