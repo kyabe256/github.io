@@ -48,7 +48,7 @@ def load_chapter(part: dict, ch: dict, stub: bool) -> str | None:
     path = CONTENT / part["dir"] / ch["file"]
     heading = (
         f'<h2 id="ch{ch["n"]:02d}">'
-        f'<span class="ch-num">第{ch["n"]}章</span>{ch["title"]}</h2>'
+        f'<span class="ch-num">第{ch["n"]}章　</span>{ch["title"]}</h2>'
     )
 
     if path.exists():
