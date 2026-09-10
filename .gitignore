@@ -1,0 +1,11 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# フォント本体は再配布せず、book/build/fetch_fonts.py がビルド時に取得する
+book/assets/fonts/*.ttf
+book/assets/fonts/*.woff2
+
+# ビルドの中間生成物
+book/out/*.html

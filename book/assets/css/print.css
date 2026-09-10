@@ -1,0 +1,265 @@
+/* ===========================================================
+   世界史大全 — 印刷（PDF）用スタイル
+   A5判（148×210mm）／通しノンブル（印刷ページ番号＝PDFページ番号）
+   =========================================================== */
+
+@font-face { font-family:"SekaishiSerif"; src:url("../fonts/NotoSerifJP-400.ttf"); font-weight:400; font-style:normal; }
+@font-face { font-family:"SekaishiSerif"; src:url("../fonts/NotoSerifJP-700.ttf"); font-weight:700; font-style:normal; }
+@font-face { font-family:"SekaishiSans";  src:url("../fonts/NotoSansJP-400.ttf");  font-weight:400; font-style:normal; }
+@font-face { font-family:"SekaishiSans";  src:url("../fonts/NotoSansJP-700.ttf");  font-weight:700; font-style:normal; }
+
+/* -----------------------------------------------------------
+   版面
+   小口（外側）15mm／のど（内側）20mm／天16mm／地18mm
+   版面 113 × 176mm ＝ 約33字 × 29行
+   ----------------------------------------------------------- */
+
+@page {
+  size: 148mm 210mm;
+  margin: 16mm 15mm 18mm 20mm;
+
+  @footnote {
+    border-top: .5pt solid #999;
+    padding-top: 3pt;
+    margin-top: 6pt;
+    margin-left: 0;
+  }
+}
+
+/* 左ページ（偶数・ヴェルソ）：柱は部名、ノンブルは小口＝左 */
+@page :left {
+  margin: 16mm 20mm 18mm 15mm;
+  @top-left {
+    content: string(parttitle);
+    font-family: "SekaishiSans", sans-serif; font-size: 7.5pt;
+    color: #6a6a68; letter-spacing: .06em;
+    vertical-align: bottom; padding-bottom: 3mm;
+  }
+  @bottom-left {
+    content: counter(page);
+    font-family: "SekaishiSans", sans-serif; font-size: 8.5pt; color: #333;
+    vertical-align: top; padding-top: 4mm;
+  }
+}
+
+/* 右ページ（奇数・レクト）：柱は章名、ノンブルは小口＝右 */
+@page :right {
+  margin: 16mm 15mm 18mm 20mm;
+  @top-right {
+    content: string(chaptitle);
+    font-family: "SekaishiSans", sans-serif; font-size: 7.5pt;
+    color: #6a6a68; letter-spacing: .06em;
+    text-align: right; vertical-align: bottom; padding-bottom: 3mm;
+  }
+  @bottom-right {
+    content: counter(page);
+    font-family: "SekaishiSans", sans-serif; font-size: 8.5pt; color: #333;
+    text-align: right; vertical-align: top; padding-top: 4mm;
+  }
+}
+
+/* 白ページ：柱もノンブルも出さない */
+@page :blank {
+  @top-left { content: none; } @top-right { content: none; }
+  @bottom-left { content: none; } @bottom-right { content: none; }
+}
+
+/* 表紙・前付け：ページ数には数えるが、柱・ノンブルは出さない */
+@page cover, cover:left, cover:right {
+  margin: 0;
+  @top-left { content: none; } @top-right { content: none; }
+  @bottom-left { content: none; } @bottom-right { content: none; }
+}
+@page front, front:left, front:right {
+  @top-left { content: none; } @top-right { content: none; }
+  @bottom-left { content: none; } @bottom-right { content: none; }
+}
+
+/* 部の大扉：柱を出さない（ノンブルは出す） */
+@page partpage:left  { @top-left  { content: none; } }
+@page partpage:right { @top-right { content: none; } }
+
+/* 章の1ページ目：柱を出さない */
+@page chapfirst:left  { @top-left  { content: none; } }
+@page chapfirst:right { @top-right { content: none; } }
+
+/* -----------------------------------------------------------
+   本文の基本組
+   ----------------------------------------------------------- */
+
+html, body { margin: 0; padding: 0; }
+
+body {
+  font-size: 9.5pt;
+  line-height: 1.79;
+  hyphens: none;
+  widows: 2;
+  orphans: 2;
+}
+
+/* -----------------------------------------------------------
+   ページ種別の割り当て
+   ※ page カウンタは絶対にリセットしない。
+   　 リセットすると target-counter()（目次・索引のページ番号）が壊れる。
+   ----------------------------------------------------------- */
+
+.cover      { page: cover; break-after: right; }
+.frontmatter{ page: front; }
+.part-title { page: partpage; break-before: right; break-after: page; }
+.chapter    { break-before: page; }
+.chapter > h2 { page: chapfirst; }
+.appendix   { break-before: right; }
+
+/* 柱の文字列を拾う ＆ PDF しおりを作る */
+.part-title h1 {
+  string-set: parttitle content(text);
+  bookmark-level: 1;
+  bookmark-state: closed;
+}
+.chapter > h2 {
+  string-set: chaptitle content(text);
+  bookmark-level: 2;
+}
+.chapter h3 { bookmark-level: 3; }
+.frontmatter > h1, .appendix > h1 {
+  string-set: parttitle content(text), chaptitle content(text);
+  bookmark-level: 1;
+}
+
+/* 見出しは直後で改ページさせない */
+h1, h2, h3, h4, h5 { break-after: avoid; }
+h3 + p, h4 + p { break-before: avoid; }
+
+/* -----------------------------------------------------------
+   部の大扉のレイアウト
+   ----------------------------------------------------------- */
+
+.part-title {
+  padding-top: 38mm;
+}
+.part-title h1 { bookmark-label: content(text); }
+
+/* -----------------------------------------------------------
+   改ページ制御
+   ----------------------------------------------------------- */
+
+figure, table, .toi { break-inside: avoid; }
+.mondai { break-inside: avoid; }
+/* 長くなりうる囲みは分割を許し、割れても罫と背景を保つ */
+.lv2, .lv3, .shiryo { box-decoration-break: clone; }
+.shiryo blockquote { break-inside: avoid; }
+thead { display: table-header-group; }
+tr { break-inside: avoid; }
+
+/* -----------------------------------------------------------
+   脚注
+   ----------------------------------------------------------- */
+
+.fn {
+  float: footnote;
+  font-size: 8pt;
+  line-height: 1.6;
+  text-indent: 0;
+}
+::footnote-call {
+  content: counter(footnote);
+  font-size: .62em;
+  vertical-align: super;
+  line-height: 0;
+}
+::footnote-marker {
+  content: counter(footnote) ")\00a0";
+  font-family: "SekaishiSans", sans-serif;
+}
+
+/* -----------------------------------------------------------
+   目次
+   ----------------------------------------------------------- */
+
+.toc { font-size: 9pt; line-height: 1.9; }
+.toc ul { list-style: none; margin: 0; padding: 0; }
+.toc a { text-decoration: none; color: inherit; }
+
+.toc .toc-part { margin-top: 1.5em; }
+.toc .toc-part > a {
+  font-family: "SekaishiSans", sans-serif;
+  font-weight: 700;
+  font-size: 1.06em;
+  color: var(--lv2-accent);
+}
+.toc .toc-part > a::after {
+  content: leader(" ") target-counter(attr(href), page);
+  color: var(--lv2-accent);
+}
+.toc .toc-part .toc-period {
+  font-family: "SekaishiSans", sans-serif;
+  font-size: .82em; color: var(--muted); margin-left: .8em;
+}
+
+.toc .toc-chap { padding-left: 1.4em; }
+.toc .toc-chap > a::after {
+  content: leader(".") target-counter(attr(href), page);
+  color: #444;
+}
+.toc .toc-chap .toc-n {
+  font-family: "SekaishiSans", sans-serif;
+  color: var(--muted);
+  margin-right: .5em;
+}
+
+/* -----------------------------------------------------------
+   索引（付録G）
+   ----------------------------------------------------------- */
+
+.sakuin { column-count: 2; column-gap: 6mm; font-size: 8.2pt; line-height: 1.7; }
+.sakuin .idx-group {
+  font-family: "SekaishiSans", sans-serif; font-weight: 700;
+  background: #eceff3; padding: .1em .4em; margin: .9em 0 .3em;
+  break-after: avoid;
+}
+.sakuin ul { list-style: none; margin: 0; padding: 0; }
+.sakuin li { text-indent: -1em; padding-left: 1em; }
+.sakuin a { text-decoration: none; color: inherit; }
+.sakuin a::after { content: target-counter(attr(href), page); }
+.sakuin .idx-term::after { content: "　"; }
+
+/* 相互参照（→ 第N章、000ページ） */
+.xref { color: var(--lv2-accent); text-decoration: none; }
+.xref::after { content: "（" target-counter(attr(href), page) "ページ）"; font-size: .88em; }
+
+/* -----------------------------------------------------------
+   表紙・奥付
+   ----------------------------------------------------------- */
+
+.cover {
+  height: 210mm;
+  background: #1f3b5c;
+  color: #fff;
+  padding: 46mm 18mm 20mm;
+  text-align: center;
+}
+.cover .cv-title {
+  font-family: "SekaishiSans", sans-serif;
+  font-size: 34pt; font-weight: 700; letter-spacing: .16em;
+  line-height: 1.3; margin: 0;
+}
+.cover .cv-sub {
+  font-family: "SekaishiSans", sans-serif;
+  font-size: 11pt; letter-spacing: .1em; color: #cfe0f2;
+  margin-top: 2.2em; line-height: 1.9;
+}
+.cover .cv-rule { width: 40mm; height: 1.5pt; background: #cfa14e; margin: 3.2em auto; }
+.cover .cv-levels {
+  font-family: "SekaishiSans", sans-serif;
+  font-size: 9.5pt; letter-spacing: .08em; color: #e8eef6; line-height: 2.1;
+}
+.cover .cv-foot {
+  font-family: "SekaishiSans", sans-serif;
+  font-size: 9pt; color: #a9c2dd; margin-top: 5.5em; letter-spacing: .1em;
+}
+
+.okuduke {
+  border-top: 1pt solid #333; padding-top: 1em; margin-top: 3em;
+  font-family: "SekaishiSans", sans-serif; font-size: 8.5pt; line-height: 2;
+}
+.okuduke p { text-indent: 0; }

@@ -1,0 +1,255 @@
+{
+  "title": "世界史大全",
+  "subtitle": "高校・大学・大学院の三層で読む人類の歴史",
+  "edition": "第1版",
+  "lang": "ja",
+  "publisher": "25KD016",
+  "page_target": [600, 800],
+  "parts": [
+    {
+      "id": "p00",
+      "label": "序論",
+      "title": "歴史とどう向き合うか",
+      "dir": "00-jo",
+      "lead": "世界史の教科書を開く前に、そもそも歴史とは何か、史料から過去をどう再構成するのか、時代区分という枠組みは誰が何のために作ったのかを考える。ここは本書全体を貫く方法論の土台である。",
+      "chapters": [
+        { "n": 1, "title": "歴史学とは何か", "file": "00-01-rekishigaku-towa.html", "status": "todo" },
+        { "n": 2, "title": "史料と史料批判", "file": "00-02-shiryo-hihan.html", "status": "todo" },
+        { "n": 3, "title": "時代区分という発明", "file": "00-03-jidai-kubun.html", "status": "todo" },
+        { "n": 4, "title": "グローバルヒストリーの視座", "file": "00-04-global-history.html", "status": "todo" }
+      ]
+    },
+    {
+      "id": "p01",
+      "label": "第I部",
+      "title": "人類の誕生と古代文明の成立",
+      "period": "〜前500年",
+      "dir": "01-kodai-bunmei",
+      "lead": "アフリカに生まれた一種の霊長類が、なぜ地球全体に広がり、農耕を始め、都市と国家と文字を持つに至ったのか。人類史の最初の数百万年と、最初の数千年の文明を扱う。",
+      "chapters": [
+        { "n": 5, "title": "人類の進化と地球への拡散", "file": "01-05-jinrui-shinka.html", "status": "todo" },
+        { "n": 6, "title": "農耕革命と定住社会の成立", "file": "01-06-noko-kakumei.html", "status": "todo" },
+        { "n": 7, "title": "メソポタミア文明", "file": "01-07-mesopotamia.html", "status": "todo" },
+        { "n": 8, "title": "エジプト文明", "file": "01-08-egypt.html", "status": "todo" },
+        { "n": 9, "title": "東地中海世界とアルファベットの誕生", "file": "01-09-higashi-chichukai.html", "status": "todo" },
+        { "n": 10, "title": "インダス文明とアーリヤ人の世界", "file": "01-10-indus-arya.html", "status": "todo" },
+        { "n": 11, "title": "中国文明の成立と殷周", "file": "01-11-chugoku-in-shu.html", "status": "todo" },
+        { "n": 12, "title": "アメリカ・アフリカ・オセアニアの古代世界", "file": "01-12-america-africa-oceania.html", "status": "todo" }
+      ]
+    },
+    {
+      "id": "p02",
+      "label": "第II部",
+      "title": "古代帝国の時代",
+      "period": "前500年〜後500年",
+      "dir": "02-kodai-teikoku",
+      "lead": "ユーラシアの東西で、都市国家をはるかに超える規模の帝国が同時多発的に生まれた。統治の技術、貨幣、法、そして世界宗教が、この千年のあいだに出そろう。",
+      "chapters": [
+        { "n": 13, "title": "アケメネス朝ペルシアと最初の世界帝国", "file": "02-13-achaemenid.html", "status": "todo" },
+        { "n": 14, "title": "ギリシア世界とポリスの実験", "file": "02-14-greece-polis.html", "status": "todo" },
+        { "n": 15, "title": "アレクサンドロスとヘレニズム世界", "file": "02-15-hellenism.html", "status": "todo" },
+        { "n": 16, "title": "ローマ共和政の成立と拡大", "file": "02-16-roma-kyowasei.html", "status": "todo" },
+        { "n": 17, "title": "ローマ帝政と地中海世界の統合", "file": "02-17-roma-teisei.html", "status": "todo" },
+        { "n": 18, "title": "春秋戦国と諸子百家", "file": "02-18-shunju-sengoku.html", "status": "todo" },
+        { "n": 19, "title": "秦漢帝国と中華の形成", "file": "02-19-shin-kan.html", "status": "todo" },
+        { "n": 20, "title": "古代インドの統一国家とマウリヤ・グプタ", "file": "02-20-kodai-india.html", "status": "todo" },
+        { "n": 21, "title": "遊牧国家と草原の道", "file": "02-21-yuboku-sogen.html", "status": "todo" },
+        { "n": 22, "title": "世界宗教の誕生", "file": "02-22-sekai-shukyo.html", "status": "todo" }
+      ]
+    },
+    {
+      "id": "p03",
+      "label": "第III部",
+      "title": "イスラーム世界の形成と拡大",
+      "period": "600年〜1500年",
+      "dir": "03-islam",
+      "lead": "アラビア半島の一角に生まれた信仰が、一世紀のうちに大西洋からインダスまでを覆う政治秩序となり、やがて世界最先端の学問と商業のネットワークを築いた。",
+      "chapters": [
+        { "n": 23, "title": "ムハンマドとイスラームの成立", "file": "03-23-muhammad.html", "status": "todo" },
+        { "n": 24, "title": "カリフ制国家の拡大 ウマイヤ朝とアッバース朝", "file": "03-24-umayyad-abbasid.html", "status": "todo" },
+        { "n": 25, "title": "イスラーム諸王朝の分立とトルコ人の登場", "file": "03-25-shooucho-turk.html", "status": "todo" },
+        { "n": 26, "title": "イスラーム文明 学問・法・都市・商業", "file": "03-26-islam-bunmei.html", "status": "todo" },
+        { "n": 27, "title": "インド・東南アジアのイスラーム化", "file": "03-27-india-tonan-asia.html", "status": "todo" }
+      ]
+    },
+    {
+      "id": "p04",
+      "label": "第IV部",
+      "title": "東アジア世界の展開",
+      "period": "300年〜1500年",
+      "dir": "04-higashi-asia",
+      "lead": "分裂と統合をくり返しながら、東アジアには漢字・儒教・仏教・律令を共有する文化圏が形成された。宋代の経済革命とモンゴル帝国は、その枠を世界大に押し広げる。",
+      "chapters": [
+        { "n": 28, "title": "魏晋南北朝と民族の融合", "file": "04-28-gishin-nanbokucho.html", "status": "todo" },
+        { "n": 29, "title": "隋唐帝国と東アジア文化圏", "file": "04-29-zui-to.html", "status": "todo" },
+        { "n": 30, "title": "宋代の社会経済革命", "file": "04-30-so-keizai.html", "status": "todo" },
+        { "n": 31, "title": "モンゴル帝国とユーラシアの一体化", "file": "04-31-mongol.html", "status": "todo" },
+        { "n": 32, "title": "明と朝貢・海禁体制", "file": "04-32-min-chuko.html", "status": "todo" },
+        { "n": 33, "title": "朝鮮・日本・ベトナムの国家形成", "file": "04-33-chosen-nihon-vietnam.html", "status": "todo" }
+      ]
+    },
+    {
+      "id": "p05",
+      "label": "第V部",
+      "title": "ヨーロッパ世界の形成",
+      "period": "400年〜1500年",
+      "dir": "05-europe-keisei",
+      "lead": "ローマ帝国の廃墟の上に、ゲルマン・キリスト教・ローマの三要素が結合して新しい世界が生まれる。封建社会、教皇権、都市、そして中世の危機とルネサンス。",
+      "chapters": [
+        { "n": 34, "title": "ゲルマン人の移動とフランク王国", "file": "05-34-german-frank.html", "status": "todo" },
+        { "n": 35, "title": "ビザンツ帝国と正教世界", "file": "05-35-byzantine.html", "status": "todo" },
+        { "n": 36, "title": "封建社会と荘園", "file": "05-36-hoken-shoen.html", "status": "todo" },
+        { "n": 37, "title": "教皇権の伸張と十字軍", "file": "05-37-kyokoken-jujigun.html", "status": "todo" },
+        { "n": 38, "title": "中世都市と商業の復活", "file": "05-38-chusei-toshi.html", "status": "todo" },
+        { "n": 39, "title": "黒死病と中世の危機", "file": "05-39-kokushibyo-kiki.html", "status": "todo" },
+        { "n": 40, "title": "ルネサンス", "file": "05-40-renaissance.html", "status": "todo" }
+      ]
+    },
+    {
+      "id": "p06",
+      "label": "第VI部",
+      "title": "大航海時代と「世界の一体化」",
+      "period": "1450年〜1650年",
+      "dir": "06-daikokai",
+      "lead": "大西洋が障壁から通路に変わり、地球上の生態系・人口・貨幣が一つの回路でつながった。同時にそれは、征服と奴隷制という暴力の始まりでもあった。",
+      "chapters": [
+        { "n": 41, "title": "大航海時代とコロンブス交換", "file": "06-41-daikokai-jidai.html", "status": "todo" },
+        { "n": 42, "title": "アメリカ大陸の征服と植民地社会", "file": "06-42-america-seifuku.html", "status": "todo" },
+        { "n": 43, "title": "宗教改革と対抗宗教改革", "file": "06-43-shukyo-kaikaku.html", "status": "todo" },
+        { "n": 44, "title": "主権国家体制の成立と三十年戦争", "file": "06-44-shuken-kokka.html", "status": "todo" },
+        { "n": 45, "title": "アジアの火薬帝国 オスマン・サファヴィー・ムガル", "file": "06-45-kayaku-teikoku.html", "status": "todo" },
+        { "n": 46, "title": "清の成立と東アジアの再編", "file": "06-46-shin-teikoku.html", "status": "todo" }
+      ]
+    },
+    {
+      "id": "p07",
+      "label": "第VII部",
+      "title": "近世ヨーロッパと世界システム",
+      "period": "1650年〜1789年",
+      "dir": "07-kinsei-europe",
+      "lead": "常備軍と官僚制を備えた国家が戦争を通じて肥大化し、大西洋を回る商品と人間の流れがヨーロッパに富を集中させる。同時に、その秩序を疑う思想も育っていた。",
+      "chapters": [
+        { "n": 47, "title": "絶対王政と重商主義", "file": "07-47-zettai-osei.html", "status": "todo" },
+        { "n": 48, "title": "大西洋三角貿易と覇権の交代", "file": "07-48-taiseiyo-boeki.html", "status": "todo" },
+        { "n": 49, "title": "科学革命と啓蒙思想", "file": "07-49-kagaku-keimo.html", "status": "todo" },
+        { "n": 50, "title": "ロシアの台頭と東欧の再編", "file": "07-50-russia-toou.html", "status": "todo" }
+      ]
+    },
+    {
+      "id": "p08",
+      "label": "第VIII部",
+      "title": "二重革命の時代",
+      "period": "1750年〜1870年",
+      "dir": "08-nijukakumei",
+      "lead": "産業革命と市民革命という二つの革命が、生産のしかたと政治の正統性を同時に作り替えた。国民国家という近代最強の政治形態が、この時代に完成する。",
+      "chapters": [
+        { "n": 51, "title": "産業革命", "file": "08-51-sangyo-kakumei.html", "status": "todo" },
+        { "n": 52, "title": "アメリカ独立革命", "file": "08-52-america-dokuritsu.html", "status": "todo" },
+        { "n": 53, "title": "フランス革命とナポレオン", "file": "08-53-france-kakumei.html", "status": "todo" },
+        { "n": 54, "title": "ウィーン体制と1848年革命", "file": "08-54-vienna-1848.html", "status": "todo" },
+        { "n": 55, "title": "国民国家の形成 イタリアとドイツ", "file": "08-55-kokumin-kokka.html", "status": "todo" },
+        { "n": 56, "title": "アメリカ合衆国の拡大と南北戦争", "file": "08-56-nanboku-senso.html", "status": "todo" },
+        { "n": 57, "title": "ロシアの改革とオスマンのタンジマート", "file": "08-57-russia-tanzimat.html", "status": "todo" },
+        { "n": 58, "title": "アジアの動揺 アヘン戦争・インド大反乱・明治維新", "file": "08-58-asia-doyo.html", "status": "todo" }
+      ]
+    },
+    {
+      "id": "p09",
+      "label": "第IX部",
+      "title": "帝国主義と世界の分割",
+      "period": "1870年〜1914年",
+      "dir": "09-teikokushugi",
+      "lead": "重化学工業と金融資本を背景に、少数の国家が地球のほぼ全域を勢力圏に組み込んだ。世界は初めて一つの政治空間になり、同時にその矛盾が蓄積されていく。",
+      "chapters": [
+        { "n": 59, "title": "第二次産業革命と独占資本", "file": "09-59-daini-sangyo.html", "status": "todo" },
+        { "n": 60, "title": "アフリカ分割", "file": "09-60-africa-bunkatsu.html", "status": "todo" },
+        { "n": 61, "title": "アジア・太平洋の分割", "file": "09-61-asia-taiheiyo.html", "status": "todo" },
+        { "n": 62, "title": "中国の半植民地化と辛亥革命", "file": "09-62-chugoku-shingai.html", "status": "todo" },
+        { "n": 63, "title": "ラテンアメリカと非公式帝国", "file": "09-63-latin-america.html", "status": "todo" },
+        { "n": 64, "title": "労働運動・社会主義・女性参政権運動", "file": "09-64-rodo-shakaishugi.html", "status": "todo" }
+      ]
+    },
+    {
+      "id": "p10",
+      "label": "第X部",
+      "title": "二つの世界大戦",
+      "period": "1914年〜1945年",
+      "dir": "10-sekai-taisen",
+      "lead": "総力戦は国家と社会の関係を根底から変え、帝国を解体し、革命を生み、そして人類が自らに加えうる暴力の限界を示した。",
+      "chapters": [
+        { "n": 65, "title": "第一次世界大戦と総力戦", "file": "10-65-daiichiji-taisen.html", "status": "todo" },
+        { "n": 66, "title": "ロシア革命とソヴィエト連邦", "file": "10-66-russia-kakumei.html", "status": "todo" },
+        { "n": 67, "title": "ヴェルサイユ体制とワシントン体制", "file": "10-67-versailles-washington.html", "status": "todo" },
+        { "n": 68, "title": "世界恐慌と資本主義の危機", "file": "10-68-sekai-kyoko.html", "status": "todo" },
+        { "n": 69, "title": "ファシズムと全体主義", "file": "10-69-fascism.html", "status": "todo" },
+        { "n": 70, "title": "戦間期のアジア 国共・インド・トルコ", "file": "10-70-senkanki-asia.html", "status": "todo" },
+        { "n": 71, "title": "第二次世界大戦", "file": "10-71-dainiji-taisen.html", "status": "todo" },
+        { "n": 72, "title": "ホロコーストと戦争犯罪", "file": "10-72-holocaust.html", "status": "todo" }
+      ]
+    },
+    {
+      "id": "p11",
+      "label": "第XI部",
+      "title": "冷戦と脱植民地化",
+      "period": "1945年〜1991年",
+      "dir": "11-reisen",
+      "lead": "核を背景にした二極対立の下で、旧植民地が次々と独立し、世界の多数派が初めて自らの国家を持った。冷戦とは、同時に脱植民地化の時代でもあった。",
+      "chapters": [
+        { "n": 73, "title": "冷戦の起源と世界の分断", "file": "11-73-reisen-kigen.html", "status": "todo" },
+        { "n": 74, "title": "中国革命と朝鮮戦争", "file": "11-74-chugoku-chosen.html", "status": "todo" },
+        { "n": 75, "title": "脱植民地化 アジアとアフリカ", "file": "11-75-datsu-shokuminchi.html", "status": "todo" },
+        { "n": 76, "title": "ベトナム戦争と1968年", "file": "11-76-vietnam-1968.html", "status": "todo" },
+        { "n": 77, "title": "中東紛争とパレスチナ問題", "file": "11-77-chuto-funso.html", "status": "todo" },
+        { "n": 78, "title": "高度成長・福祉国家・第三世界", "file": "11-78-kodo-seicho.html", "status": "todo" },
+        { "n": 79, "title": "デタントと石油危機", "file": "11-79-detente-oil.html", "status": "todo" },
+        { "n": 80, "title": "冷戦の終焉とソ連の解体", "file": "11-80-reisen-shuen.html", "status": "todo" }
+      ]
+    },
+    {
+      "id": "p12",
+      "label": "第XII部",
+      "title": "現代世界",
+      "period": "1991年〜2020年代",
+      "dir": "12-gendai",
+      "lead": "冷戦後の三十余年で、資本と情報は国境をほとんど無視して動くようになり、その反動として国境と帰属をめぐる政治が戻ってきた。私たちが立っている場所を歴史として見る。",
+      "chapters": [
+        { "n": 81, "title": "グローバリゼーションと金融資本主義", "file": "12-81-globalization.html", "status": "todo" },
+        { "n": 82, "title": "地域統合とヨーロッパ連合", "file": "12-82-chiiki-togo.html", "status": "todo" },
+        { "n": 83, "title": "中国の台頭と新興国の時代", "file": "12-83-chugoku-taito.html", "status": "todo" },
+        { "n": 84, "title": "9・11とテロ・戦争の二十年", "file": "12-84-911-tero.html", "status": "todo" },
+        { "n": 85, "title": "デジタル革命と情報社会", "file": "12-85-digital.html", "status": "todo" },
+        { "n": 86, "title": "気候変動・パンデミック・人口", "file": "12-86-kiko-pandemic.html", "status": "todo" },
+        { "n": 87, "title": "民主主義の動揺とウクライナ戦争以後", "file": "12-87-minshushugi-ukraine.html", "status": "todo" }
+      ]
+    },
+    {
+      "id": "p13",
+      "label": "第XIII部",
+      "title": "テーマ史編 通史を横断する",
+      "period": "全時代",
+      "dir": "13-thema",
+      "lead": "ここまでは時間の流れに沿って世界を見てきた。最後に、時代の区切りを取り払い、一つの主題が数千年をどう貫いているかを追う。通史編で得た知識が、ここで別の形に組み変わる。",
+      "chapters": [
+        { "n": 88, "title": "疫病と人類", "file": "13-88-ekibyo.html", "status": "todo" },
+        { "n": 89, "title": "気候・環境と歴史", "file": "13-89-kiko-kankyo.html", "status": "todo" },
+        { "n": 90, "title": "貨幣・信用・金融の歴史", "file": "13-90-kahei-kinyu.html", "status": "todo" },
+        { "n": 91, "title": "技術とエネルギーの歴史", "file": "13-91-gijutsu-energy.html", "status": "todo" },
+        { "n": 92, "title": "ジェンダーと家族の歴史", "file": "13-92-gender-kazoku.html", "status": "todo" },
+        { "n": 93, "title": "移民・奴隷制・強制移動", "file": "13-93-imin-dorei.html", "status": "todo" },
+        { "n": 94, "title": "都市の世界史", "file": "13-94-toshi.html", "status": "todo" },
+        { "n": 95, "title": "海域から見る世界史", "file": "13-95-kaiiki.html", "status": "todo" },
+        { "n": 96, "title": "帝国と国民国家の比較史", "file": "13-96-teikoku-kokumin.html", "status": "todo" },
+        { "n": 97, "title": "宗教と世俗化の世界史", "file": "13-97-shukyo-sezokuka.html", "status": "todo" }
+      ]
+    }
+  ],
+  "appendix": [
+    { "id": "apA", "label": "付録A", "title": "総合年表", "file": "A-nenpyo.html", "status": "todo" },
+    { "id": "apB", "label": "付録B", "title": "用語集", "file": "B-yogoshu.html", "status": "todo" },
+    { "id": "apC", "label": "付録C", "title": "王朝・国家系図集", "file": "C-keizu.html", "status": "todo" },
+    { "id": "apD", "label": "付録D", "title": "地図・図版索引", "file": "D-zuhan-sakuin.html", "status": "todo" },
+    { "id": "apE", "label": "付録E", "title": "章末問題 解答例と採点の観点", "file": "E-kaitorei.html", "status": "todo" },
+    { "id": "apF", "label": "付録F", "title": "読書案内", "file": "F-dokusho-annai.html", "status": "todo" },
+    { "id": "apG", "label": "付録G", "title": "索引", "file": "G-sakuin.html", "status": "todo" }
+  ]
+}
