@@ -9,6 +9,7 @@
 from __future__ import annotations
 
 import argparse
+import itertools
 import json
 import logging
 import re
@@ -38,9 +39,14 @@ def flatten_ruby(html: str) -> str:
 
 
 def number_captions(html: str, ch_num: int) -> str:
-    """図表キャプションに章番号を持たせる（図5-1 / 表5-2 の「5」の部分）。"""
+    """図表キャプションに章番号を持たせ（図5-1 / 表5-2 の「5」の部分）、
+    図版索引（付録D）が target-counter() で参照できる id を振る。"""
     html = re.sub(r"<figcaption(?![^>]*data-ch=)", f'<figcaption data-ch="{ch_num}"', html)
     html = re.sub(r"<caption(?![^>]*data-ch=)", f'<caption data-ch="{ch_num}"', html)
+
+    counter = itertools.count(1)
+    html = re.sub(r"<figure(?![^>]*\sid=)",
+                  lambda _m: f'<figure id="fig{ch_num}-{next(counter)}"', html)
     return html
 
 

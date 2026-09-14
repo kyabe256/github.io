@@ -163,6 +163,10 @@ def main() -> int:
             html = f.read_text(encoding="utf-8")
             ids.update(re.findall(r'id="([^"]+)"', html))
             hrefs += [(f.name, h) for h in re.findall(r'href="#([^"]+)"', html)]
+            # <figure> の id はビルド時に付与される（build_pdf.number_captions）。
+            # 図版索引（付録D）が参照するため、ここで同じ規則を再現しておく。
+            n_fig = len(re.findall(r"<figure(?![^>]*\sid=)", html))
+            ids.update(f'fig{ch["n"]}-{i}' for i in range(1, n_fig + 1))
     for ap in MANIFEST["appendix"]:
         ids.add(ap["id"])
         f = CONTENT / "zz-appendix" / ap["file"]
