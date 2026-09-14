@@ -223,6 +223,38 @@ tr { break-inside: avoid; }
 .sakuin a::after { content: target-counter(attr(href), page); }
 .sakuin .idx-term::after { content: "　"; }
 
+/* 用語集（付録B） */
+.yogoshu { font-size: 8.8pt; line-height: 1.72; }
+.yogoshu .idx-group {
+  font-family: "SekaishiSans", sans-serif; font-weight: 700;
+  background: #eceff3; padding: .12em .45em; margin: 1.15em 0 .4em;
+  break-after: avoid;
+}
+.yogoshu .y-item { text-indent: -1em; padding-left: 1em; margin: .3em 0; }
+.yogoshu .y-term {
+  font-family: "SekaishiSans", sans-serif; font-weight: 700;
+  color: var(--lv2-accent); margin-right: .45em;
+}
+.yogoshu .y-ref { color: #777; font-size: .92em; }
+
+/* 読書案内（付録F）・解答例（付録E） */
+.annai, .kaito { font-size: 9pt; line-height: 1.76; }
+.annai ul, .kaito ul { list-style: none; margin: .2em 0 0; padding: 0; }
+.annai li { text-indent: -1em; padding-left: 1em; margin: .35em 0; }
+.annai li::before, .kaito li::before { content: "・"; }
+.kaito li { text-indent: -1em; padding-left: 1em; margin: .22em 0; }
+.kaito .k-ch {
+  font-family: "SekaishiSans", sans-serif; font-weight: 700;
+  color: var(--lv2-accent); margin-right: .5em;
+}
+.kaito .k-item { margin: .9em 0; break-inside: avoid; }
+.kaito .k-kan { display: block; font-size: .92em; color: #7a4a2a; margin-top: .15em; }
+.annai .idx-group, .kaito .idx-group {
+  font-family: "SekaishiSans", sans-serif; font-weight: 700;
+  background: #eceff3; padding: .12em .45em; margin: 1.2em 0 .45em;
+  break-after: avoid;
+}
+
 /* 総合年表（付録A） */
 .nenpyo { font-size: 8.6pt; line-height: 1.72; }
 .nenpyo .idx-group {
