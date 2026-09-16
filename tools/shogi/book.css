@@ -1,0 +1,427 @@
+@font-face {
+  font-family: 'BookSerif';
+  src: url('@FONTDIR@/NotoSerifJP-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'BookSerif';
+  src: url('@FONTDIR@/NotoSerifJP-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'BookSans';
+  src: url('@FONTDIR@/NotoSansJP-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'BookSans';
+  src: url('@FONTDIR@/NotoSansJP-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+@page {
+  size: 182mm 257mm;          /* JIS B5 */
+  margin: 20mm 17mm 18mm 17mm;
+}
+
+* { box-sizing: border-box; }
+
+html { font-size: 9.6pt; }
+
+body {
+  font-family: 'BookSerif', serif;
+  line-height: 1.72;
+  text-align: justify;
+  color: #14161a;
+  margin: 0;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+  font-feature-settings: "palt" 0;
+}
+
+p {
+  margin: 0;
+  text-indent: 1em;
+}
+p + p { margin-top: 0; }
+.note p, .tbox p:first-of-type, figcaption, li p { text-indent: 0; }
+
+.mk {
+  font-size: 1px;
+  color: #ffffff;
+  letter-spacing: -0.8px;
+  line-height: 0;
+  white-space: nowrap;
+}
+
+/* ---------------------------------------------------------- 見出し */
+
+section.chapter { break-before: page; }
+
+h1 {
+  font-family: 'BookSans', sans-serif;
+  font-weight: 700;
+  margin: 0 0 12mm 0;
+  padding: 0 0 4mm 0;
+  border-bottom: 2.4pt solid #14161a;
+  break-after: avoid;
+}
+h1 .chno {
+  display: block;
+  font-size: 10pt;
+  letter-spacing: .28em;
+  color: #6b7280;
+  margin-bottom: 2.5mm;
+  font-weight: 500;
+}
+h1 .chtitle {
+  display: block;
+  font-size: 21pt;
+  line-height: 1.32;
+  letter-spacing: .02em;
+}
+
+h2 {
+  font-family: 'BookSans', sans-serif;
+  font-size: 13pt;
+  font-weight: 700;
+  margin: 8mm 0 3mm;
+  padding-left: 3mm;
+  border-left: 3pt solid #1f2937;
+  line-height: 1.4;
+  break-after: avoid;
+}
+
+h3 {
+  font-family: 'BookSans', sans-serif;
+  font-size: 10.6pt;
+  font-weight: 700;
+  margin: 5.5mm 0 1.5mm;
+  color: #111827;
+  break-after: avoid;
+}
+h3::before { content: "◆ "; color: #9ca3af; }
+
+h4 {
+  font-family: 'BookSans', sans-serif;
+  font-size: 9.8pt;
+  margin: 4mm 0 1mm;
+  break-after: avoid;
+}
+
+ul, ol { margin: 2mm 0 2mm 0; padding-left: 5.5mm; }
+li { margin: .6mm 0; }
+
+code {
+  font-family: 'DejaVu Sans Mono', monospace;
+  font-size: .86em;
+  background: #f3f4f6;
+  padding: 0 .25em;
+  border-radius: 2px;
+}
+
+strong { font-weight: 700; }
+
+/* ---------------------------------------------------------- 部扉 */
+
+section.part {
+  break-before: page;
+  break-after: page;
+  height: 217mm;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.partbox { text-align: center; width: 100%; }
+.partno {
+  font-family: 'BookSans', sans-serif;
+  font-size: 12pt;
+  letter-spacing: .5em;
+  color: #6b7280;
+}
+.parttitle {
+  font-family: 'BookSans', sans-serif;
+  font-size: 27pt;
+  font-weight: 700;
+  margin: 6mm 0;
+  padding: 6mm 0;
+  border-top: 1pt solid #14161a;
+  border-bottom: 1pt solid #14161a;
+  letter-spacing: .06em;
+}
+.partlead {
+  font-size: 9.6pt;
+  color: #374151;
+  max-width: 108mm;
+  margin: 0 auto;
+  text-align: justify;
+  line-height: 1.85;
+}
+
+/* ---------------------------------------------------------- 盤面図 */
+
+figure.board {
+  break-inside: avoid;
+  margin: 4mm auto;
+  width: 74mm;
+  float: right;
+  margin-left: 6mm;
+  margin-right: 0;
+}
+figure.board.wide { float: none; margin: 5mm auto; }
+figure.board.small { width: 57mm; float: none; margin: 0; }
+figure.board.small .hand { font-size: 6pt; padding: .3mm 1mm; }
+figure.board.small .hand.gote { margin-bottom: .6mm; }
+figure.board.small .hand.sente { margin-top: .6mm; }
+figure.board.small figcaption { margin-top: .9mm; font-size: 7pt; }
+
+table.ban {
+  border-collapse: collapse;
+  margin: 0 auto;
+  table-layout: fixed;
+}
+table.ban td.sq {
+  width: 7.2mm;
+  height: 7.2mm;
+  border: .5pt solid #4b5563;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0;
+  background: #fdfaf2;
+}
+figure.board.small table.ban td.sq { width: 5.2mm; height: 5.2mm; }
+table.ban td.sq.hl { background: #e5e7eb; }
+table.ban th {
+  font-family: 'BookSans', sans-serif;
+  font-size: 5.4pt;
+  font-weight: 500;
+  color: #4b5563;
+  text-align: center;
+  padding: 0 .3mm;
+  border: none;
+  line-height: 1;
+}
+table.ban th.corner { width: 3.6mm; }
+table.ban .pc {
+  font-family: 'BookSans', sans-serif;
+  font-size: 5.6pt;
+  font-weight: 700;
+  display: inline-block;
+  line-height: 1;
+  color: #111827;
+}
+figure.board.small table.ban .pc { font-size: 4.8pt; }
+table.ban .pc.w { transform: rotate(180deg); }
+
+.hand {
+  font-family: 'BookSans', sans-serif;
+  font-size: 6.6pt;
+  color: #1f2937;
+  padding: .6mm 1mm;
+  background: #f3f4f6;
+  border: .4pt solid #d1d5db;
+  text-align: center;
+}
+.hand.gote { margin-bottom: 1mm; }
+.hand.sente { margin-top: 1mm; }
+
+figcaption {
+  font-family: 'BookSans', sans-serif;
+  font-size: 7.4pt;
+  text-align: center;
+  margin-top: 1.6mm;
+  color: #374151;
+  line-height: 1.5;
+}
+
+/* ---------------------------------------------------------- 表 */
+
+table.tbl {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 3mm 0;
+  font-size: 8.6pt;
+  break-inside: avoid;
+  font-family: 'BookSans', sans-serif;
+}
+table.tbl th {
+  background: #1f2937;
+  color: #fff;
+  font-weight: 500;
+  padding: 1.2mm 1.6mm;
+  text-align: left;
+  border: .4pt solid #1f2937;
+}
+table.tbl td {
+  border: .4pt solid #cbd5e1;
+  padding: 1.1mm 1.6mm;
+  vertical-align: top;
+}
+table.tbl tr:nth-child(even) td { background: #f8fafc; }
+
+/* ---------------------------------------------------------- 囲み */
+.tbox, table.tbl { clear: right; }
+
+.note {
+  border-left: 2.4pt solid #9ca3af;
+  background: #f8fafc;
+  padding: 2.4mm 3mm;
+  margin: 3.5mm 0;
+  font-size: 9pt;
+  break-inside: avoid;
+}
+
+.tbox {
+  border: .7pt solid #1f2937;
+  margin: 4mm 0;
+  padding: 0 3.4mm 3mm;
+  break-inside: avoid;
+  background: #fcfcfd;
+}
+.tboxhead {
+  font-family: 'BookSans', sans-serif;
+  font-weight: 700;
+  font-size: 9.4pt;
+  background: #1f2937;
+  color: #fff;
+  margin: 0 -3.4mm 2.6mm;
+  padding: 1.4mm 3.4mm;
+  letter-spacing: .04em;
+}
+
+/* ---------------------------------------------------------- 棋譜 */
+
+.kifu {
+  font-family: 'BookSans', sans-serif;
+  font-size: 8.4pt;
+  line-height: 1.85;
+  margin: 3mm 0;
+  columns: 2;
+  column-gap: 7mm;
+}
+.kifu .mv { display: block; }
+.kifu .mv .n { color: #6b7280; display: inline-block; width: 6.5mm; text-align: right; margin-right: 1.6mm; }
+.kifuline {
+  font-family: 'BookSans', sans-serif;
+  font-size: 8.8pt;
+  background: #f3f4f6;
+  padding: 2mm 2.6mm;
+  margin: 2.5mm 0;
+  line-height: 1.9;
+  border-left: 2pt solid #374151;
+}
+
+/* ---------------------------------------------------------- 問題 */
+
+.probgrid { margin: 3mm 0; text-align: left; }
+.probgrid figure.board.small {
+  display: inline-block;
+  vertical-align: top;
+  width: 48%;
+  margin: 0 1.5% 3.5mm 0;
+  break-inside: avoid;
+}
+
+.answers { font-size: 8.6pt; columns: 1; }
+.ans {
+  text-indent: 0;
+  margin: 0 0 1.4mm;
+  padding-bottom: 1.2mm;
+  border-bottom: .3pt dotted #cbd5e1;
+  break-inside: avoid;
+}
+.ansno {
+  font-family: 'BookSans', sans-serif;
+  font-weight: 700;
+  display: inline-block;
+  width: 16mm;
+}
+.anspv { font-family: 'BookSans', sans-serif; }
+.anssfen {
+  display: block;
+  font-family: 'DejaVu Sans Mono', monospace;
+  font-size: 6.2pt;
+  color: #9ca3af;
+  margin-left: 16mm;
+}
+
+/* ---------------------------------------------------------- 目次 */
+
+.toc { font-family: 'BookSans', sans-serif; font-size: 9pt; }
+.toc-part {
+  font-weight: 700;
+  font-size: 10.4pt;
+  margin: 5mm 0 2mm;
+  display: flex;
+  border-bottom: .8pt solid #1f2937;
+  padding-bottom: 1.2mm;
+}
+.toc-ch { display: flex; margin: 1.4mm 0; }
+.toc-sec { display: flex; margin: .5mm 0 .5mm 6mm; font-size: 8.2pt; color: #4b5563; }
+.dots {
+  flex: 1;
+  border-bottom: .4pt dotted #9ca3af;
+  margin: 0 1.5mm 1.1mm;
+}
+.pn { font-variant-numeric: tabular-nums; min-width: 5mm; text-align: right; }
+
+/* ---------------------------------------------------------- 用語集・索引 */
+
+dl.glossary { font-size: 8.8pt; margin: 0; columns: 2; column-gap: 7mm; }
+dl.glossary dt {
+  font-family: 'BookSans', sans-serif;
+  font-weight: 700;
+  margin-top: 2.2mm;
+  break-after: avoid;
+}
+dl.glossary dd { margin: 0; text-align: justify; }
+.yomi { font-weight: 500; font-size: 7.4pt; color: #6b7280; }
+
+.index { columns: 3; column-gap: 6mm; font-size: 8.2pt; font-family: 'BookSans', sans-serif; }
+.ixrow { display: flex; margin: .5mm 0; break-inside: avoid; }
+.ixterm { flex: 1; }
+.ixpages { color: #4b5563; font-variant-numeric: tabular-nums; padding-left: 1.5mm; }
+
+.xref { font-size: .86em; color: #4b5563; }
+.ixt { }
+
+.pagebreak { break-after: page; }
+
+/* ---------------------------------------------------------- 扉 */
+
+.titlepage {
+  height: 217mm;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  break-after: page;
+}
+.titlepage .maintitle {
+  font-family: 'BookSans', sans-serif;
+  font-size: 40pt;
+  font-weight: 700;
+  letter-spacing: .12em;
+  margin-bottom: 4mm;
+}
+.titlepage .subtitle {
+  font-family: 'BookSans', sans-serif;
+  font-size: 12pt;
+  letter-spacing: .18em;
+  color: #374151;
+  padding: 5mm 0;
+  border-top: .6pt solid #14161a;
+  border-bottom: .6pt solid #14161a;
+  margin: 0 18mm;
+}
+.titlepage .tagline { margin-top: 14mm; font-size: 9.6pt; color: #4b5563; line-height: 2; }
+.titlepage .imprint { margin-top: 26mm; font-family: 'BookSans', sans-serif; font-size: 8.4pt; color: #6b7280; }
+
+.frontmatter h1 {
+  border: none;
+  text-align: center;
+  margin-bottom: 8mm;
+}
+.frontmatter h1 .chno { display: none; }
+
+.clearfix { clear: both; }

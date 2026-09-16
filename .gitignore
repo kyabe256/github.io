@@ -1,0 +1,3 @@
+tools/shogi/*.log
+tools/shogi/vendor/
+tools/shogi/__pycache__/
