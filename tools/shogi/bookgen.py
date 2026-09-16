@@ -345,7 +345,7 @@ class Book:
             p = self.hisshi[n]
             self.fig_no += 1
             key = "fig:%d" % self.fig_no
-            self.add(board_html(p["sfen"], "第%d図　先手番。一手必至を掛けよ" % self.fig_no,
+            self.add(board_html(p["sfen"], "第%d図　先手番。この局面に一手必至がある" % self.fig_no,
                                 (), self.marker, key))
             defs = "".join("<li>%s　……　%s</li>" % (d, pv) for d, pv in p["defences"])
             self.add('<div class="note"><p><strong>正解　%s</strong>。'
