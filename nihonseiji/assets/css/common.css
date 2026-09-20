@@ -1,0 +1,287 @@
+/* ===========================================================
+   世界史大全 — 共通スタイル（PDF・Web で共有）
+   タイポグラフィと三層構造コンポーネントの定義
+   =========================================================== */
+
+:root {
+  /* 三層の色 */
+  --lv1-ink:    #1a1a1a;   /* ★   本文（高校） */
+  --lv2-accent: #35618f;   /* ★★  ゼミナール（大学） */
+  --lv2-tint:   #eef3f8;
+  --lv3-accent: #7a3b52;   /* ★★★ 研究の最前線（大学院） */
+  --lv3-tint:   #f8eff3;
+
+  /* 定型要素の色 */
+  --toi-accent:    #2f6b5f;  /* この章の問い */
+  --toi-tint:      #ecf4f2;
+  --shiryo-accent: #9a7b45;  /* 史料 */
+  --shiryo-tint:   #f8f4ea;
+  --mondai-accent: #55565a;  /* 章末問題 */
+  --mondai-tint:   #f2f2f1;
+
+  --rule:  #c9c9c6;
+  --muted: #6a6a68;
+}
+
+/* ---------- 基本 ---------- */
+
+body {
+  font-family: "SekaishiSerif", "Noto Serif JP", serif;
+  color: var(--lv1-ink);
+  text-align: justify;
+  overflow-wrap: break-word;
+}
+
+p { margin: 0; text-indent: 1em; }
+p + p { margin-top: 0; }
+/* 見出し直後・囲みの先頭段落は字下げしない */
+h1 + p, h2 + p, h3 + p, h4 + p, h5 + p,
+li > p:first-child, blockquote > p:first-child,
+.no-indent { text-indent: 0; }
+
+h1, h2, h3, h4, h5 {
+  font-family: "SekaishiSans", "Noto Sans JP", sans-serif;
+  font-weight: 700;
+  line-height: 1.4;
+  margin: 0;
+}
+
+a { color: inherit; }
+
+/* ---------- 見出し ---------- */
+
+/* 部の大扉 */
+.part-title { }
+.part-title .part-label {
+  font-family: "SekaishiSans", sans-serif;
+  font-size: 1.1em;
+  letter-spacing: .3em;
+  color: var(--lv2-accent);
+}
+.part-title h1 { font-size: 2.1em; line-height: 1.35; margin: .5em 0 .6em; }
+.part-title .part-period {
+  font-family: "SekaishiSans", sans-serif;
+  font-size: .95em; color: var(--muted); letter-spacing: .12em;
+}
+.part-title .part-lead {
+  margin-top: 2.2em; text-indent: 0; font-size: .95em; line-height: 2;
+  border-top: .5pt solid var(--rule); padding-top: 1.2em;
+}
+
+/* 章 */
+.chapter > h2 {
+  font-size: 1.55em;
+  margin-bottom: 1.1em;
+  padding-bottom: .35em;
+  border-bottom: 1.6pt solid var(--lv2-accent);
+}
+.chapter > h2 .ch-num {
+  display: block;
+  font-size: .48em;
+  letter-spacing: .22em;
+  color: var(--lv2-accent);
+  margin-bottom: .5em;
+}
+
+/* 節 */
+h3 {
+  font-size: 1.12em;
+  margin: 1.9em 0 .75em;
+  padding-left: .55em;
+  border-left: 3.5pt solid var(--lv2-accent);
+}
+/* 項 */
+h4 { font-size: 1em; margin: 1.4em 0 .5em; }
+h5 { font-size: .95em; margin: 1.1em 0 .35em; color: var(--muted); }
+
+/* ---------- 三層のバッジ ---------- */
+
+.lv2 > h4::before,
+.lv3 > h4::before {
+  font-family: "SekaishiSans", sans-serif;
+  font-size: .82em;
+  letter-spacing: .05em;
+  padding: .1em .5em;
+  margin-right: .7em;
+  border-radius: 2pt;
+  color: #fff;
+  vertical-align: .08em;
+}
+.lv2 > h4::before { content: "★★ 大学"; background: var(--lv2-accent); }
+.lv3 > h4::before { content: "★★★ 大学院"; background: var(--lv3-accent); }
+
+/* ---------- 囲み要素の共通形 ---------- */
+
+.lv2, .lv3, .toi, .shiryo, .mondai, .zukai {
+  margin: 1.5em 0;
+  padding: .85em 1em;
+  font-size: .94em;
+  line-height: 1.85;
+}
+.lv2 p, .lv3 p, .toi p, .shiryo p, .mondai p { text-indent: 1em; }
+.lv2 > h4, .lv3 > h4, .toi > h4, .shiryo > h4, .mondai > h4 { margin-top: 0; }
+.lv2 > *:last-child, .lv3 > *:last-child,
+.toi > *:last-child, .shiryo > *:last-child, .mondai > *:last-child { margin-bottom: 0; }
+
+/* ★★ 大学レベル */
+.lv2 {
+  background: var(--lv2-tint);
+  border-left: 3.5pt solid var(--lv2-accent);
+}
+/* ★★★ 大学院レベル */
+.lv3 {
+  background: var(--lv3-tint);
+  border-left: 3.5pt double var(--lv3-accent);
+  border-top: .5pt solid var(--lv3-accent);
+  border-bottom: .5pt solid var(--lv3-accent);
+}
+
+/* この章の問い */
+.toi {
+  background: var(--toi-tint);
+  border: .5pt solid var(--toi-accent);
+  border-radius: 3pt;
+}
+.toi > h4 { color: var(--toi-accent); letter-spacing: .1em; }
+.toi > h4::before { content: "◆　"; }
+.toi ul { margin: .4em 0 0; padding-left: 1.4em; }
+.toi li { margin: .3em 0; text-indent: 0; }
+
+/* 史料 */
+.shiryo {
+  background: var(--shiryo-tint);
+  border: .5pt solid var(--shiryo-accent);
+}
+.shiryo > h4 { color: #6f5628; }
+.shiryo > h4::before { content: "史料　"; letter-spacing: .15em; }
+.shiryo blockquote {
+  margin: .7em 0 .4em;
+  padding: .6em .9em;
+  background: #fffdf7;
+  border-left: 2pt solid var(--shiryo-accent);
+  font-size: .96em;
+}
+.shiryo blockquote p { text-indent: 1em; }
+.shiryo .shutten {
+  text-indent: 0;
+  font-size: .85em;
+  color: var(--muted);
+  text-align: right;
+  margin-top: .3em;
+}
+.shiryo .yomitoki { margin-top: .7em; padding-top: .6em; border-top: .5pt dashed var(--shiryo-accent); }
+.shiryo .yomitoki::before {
+  content: "読み解き";
+  font-family: "SekaishiSans", sans-serif; font-weight: 700;
+  color: #6f5628; margin-right: .6em;
+}
+
+/* 章末問題 */
+.mondai {
+  background: var(--mondai-tint);
+  border-top: 2pt solid var(--mondai-accent);
+  border-bottom: .5pt solid var(--mondai-accent);
+}
+.mondai > h4 { letter-spacing: .18em; }
+.mondai .q-set { margin: .8em 0 0; }
+.mondai .q-set > .q-head {
+  font-family: "SekaishiSans", sans-serif;
+  font-weight: 700; font-size: .88em;
+  color: #fff; background: var(--mondai-accent);
+  padding: .08em .6em; border-radius: 2pt;
+  display: inline-block; margin-bottom: .35em;
+}
+.mondai ol { margin: .2em 0 0; padding-left: 1.7em; }
+.mondai li { margin: .32em 0; text-indent: 0; }
+.mondai .haiten { color: var(--muted); font-size: .85em; }
+
+/* ---------- 本文中の細かい要素 ---------- */
+
+/* 重要用語 */
+.yogo { font-weight: 700; }
+.yogo-hl {
+  font-weight: 700;
+  background: linear-gradient(transparent 62%, #ffe9a8 62%);
+}
+/* 原語・年号の補足 */
+.orig { font-size: .85em; color: var(--muted); }
+/* 人物の生没年など */
+.dates { font-size: .85em; color: var(--muted); white-space: nowrap; }
+
+/* 図版・表の連番（章ごとにリセットし「図5-1」「表5-2」の形にする） */
+.chapter, .appendix-body { counter-reset: figc tblc; }
+figure { counter-increment: figc; }
+figcaption::before {
+  content: "図" attr(data-ch) "-" counter(figc) "　";
+  font-weight: 700;
+  color: var(--lv2-accent);
+}
+table { counter-increment: tblc; }
+caption::before {
+  content: "表" attr(data-ch) "-" counter(tblc) "　";
+  color: var(--lv2-accent);
+}
+
+/* 図版 */
+figure {
+  margin: 1.4em 0;
+  text-align: center;
+}
+figure svg { max-width: 100%; height: auto; }
+figcaption {
+  font-family: "SekaishiSans", sans-serif;
+  font-size: .84em;
+  line-height: 1.65;
+  color: #333;
+  margin-top: .5em;
+  text-align: left;
+}
+figcaption .fig-src { color: var(--muted); font-size: .92em; }
+
+/* 表 */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-family: "SekaishiSans", sans-serif;
+  font-size: .82em;
+  line-height: 1.6;
+  margin: 1.2em 0;
+}
+caption {
+  font-family: "SekaishiSans", sans-serif;
+  font-size: .84em; font-weight: 700;
+  text-align: left; margin-bottom: .35em;
+}
+th, td { border: .4pt solid #9a9a97; padding: .28em .5em; vertical-align: top; }
+th { background: #eceff3; font-weight: 700; }
+td.num { text-align: right; }
+tbody tr:nth-child(even) td { background: #fafafa; }
+
+/* 引用（史料枠の外で使う一般の引用） */
+blockquote {
+  margin: 1em 1.2em;
+  font-size: .95em;
+}
+
+/* 箇条書き */
+ul, ol { margin: .6em 0; padding-left: 1.6em; }
+li { margin: .25em 0; }
+
+/* 年表用の定義リスト */
+.nenpyo { margin: 1em 0; font-size: .9em; }
+.nenpyo dt {
+  font-family: "SekaishiSans", sans-serif; font-weight: 700;
+  color: var(--lv2-accent);
+}
+.nenpyo dd { margin: 0 0 .4em 5.5em; text-indent: 0; }
+
+/* 用語集 */
+.yogoshu dt { font-weight: 700; margin-top: .6em; }
+.yogoshu dd { margin: 0 0 0 1em; text-indent: 0; font-size: .95em; }
+
+/* ルビ（Web版のみ本物のルビとして機能する） */
+ruby rt { font-size: .5em; }
+/* PDF版では build_pdf.py が「漢字（かな）」に変換する */
+
+/* 執筆中の章を示す注記（完成版には現れない） */
+.stub-note { text-indent: 0; color: #aaa; font-style: italic; }

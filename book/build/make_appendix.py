@@ -13,7 +13,9 @@ import re
 import unicodedata
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
+from _bookroot import book_root
+
+ROOT = book_root(__file__)
 CONTENT = ROOT / "content"
 MANIFEST = json.loads((ROOT / "manifest.json").read_text(encoding="utf-8"))
 

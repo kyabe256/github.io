@@ -21,7 +21,9 @@ from pathlib import Path
 
 from pypdf import PdfReader
 
-BOOK = Path(__file__).resolve().parent.parent
+from _bookroot import book_root, slug_of
+
+BOOK = book_root(__file__)
 MANIFEST = json.loads((BOOK / "manifest.json").read_text(encoding="utf-8"))
 CONTENT = BOOK / "content"
 
@@ -70,7 +72,8 @@ def walk_outline(items, depth=0, acc=None):
 
 
 def main() -> int:
-    pdf_path = Path(sys.argv[1]) if len(sys.argv) > 1 else BOOK / "out" / "sekaishi-taizen.pdf"
+    pdf_path = (Path(sys.argv[1]) if len(sys.argv) > 1
+                else BOOK / "out" / f"{slug_of(MANIFEST)}.pdf")
     if not pdf_path.exists():
         print(f"{NG} PDFが見つかりません: {pdf_path}")
         return 1

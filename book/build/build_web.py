@@ -18,14 +18,20 @@ import re
 import shutil
 from pathlib import Path
 
-BOOK = Path(__file__).resolve().parents[1]
+from _bookroot import book_root, slug_of
+
+BOOK = book_root(__file__)
 ROOT = BOOK.parent
 CONTENT = BOOK / "content"
-OUT = ROOT / "worldhistory"
 MANIFEST = json.loads((BOOK / "manifest.json").read_text(encoding="utf-8"))
+OUT = ROOT / MANIFEST.get("web_dir", BOOK.name)
 
 TITLE = MANIFEST["title"]
 SUBTITLE = MANIFEST["subtitle"]
+PDF_NAME = f"{slug_of(MANIFEST)}.pdf"
+# 本ごとの紹介文と注記。manifest に無ければ当たり障りのない既定に落とす。
+LEAD = MANIFEST.get("web_lead", SUBTITLE)
+NOTE = MANIFEST.get("web_note", "本文・図版とも本書のために作成したものです。")
 
 FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com">'
          '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
@@ -54,7 +60,7 @@ def page(title: str, body: str, depth: int = 0, desc: str = "") -> str:
   <a class="site-title" href="{up}index.html">{esc(TITLE)}</a>
   <nav class="site-nav">
     <a href="{up}index.html">目次</a>
-    <a href="{up}sekaishi-taizen.pdf">PDF版</a>
+    <a href="{up}{PDF_NAME}">PDF版</a>
   </nav>
 </header>
 <main>
@@ -62,7 +68,7 @@ def page(title: str, body: str, depth: int = 0, desc: str = "") -> str:
 </main>
 <footer class="site">
   <p>{esc(TITLE)}　{esc(SUBTITLE)}</p>
-  <p class="small">本文・図版とも本書のために作成したものです。引用した史料の訳は本書によります。</p>
+  <p class="small">{esc(NOTE)}</p>
 </footer>
 </body>
 </html>
@@ -194,10 +200,8 @@ def build() -> None:
     toc = ['<section class="hero">',
            f'<h1>{esc(TITLE)}</h1>',
            f'<p class="sub">{esc(SUBTITLE)}</p>',
-           '<p class="lead">高校の「世界史探究」から大学の概説、そして学説の対立と史料批判まで、'
-           '同じ主題を三つの水準で読めるように構成した通史です。'
-           'すべての図版は本書のために作成し、史料の訳は本書によります。</p>',
-           '<p class="dl"><a class="btn" href="sekaishi-taizen.pdf">PDF版をダウンロード</a>'
+           f'<p class="lead">{esc(LEAD)}</p>',
+           f'<p class="dl"><a class="btn" href="{PDF_NAME}">PDF版をダウンロード</a>'
            f'<span class="meta">全{len(chapters)}章・巻末資料{len(appendices)}点</span></p>',
            '<div class="levels">',
            '<span class="lvtag t1">★ 高校</span>',
@@ -229,9 +233,9 @@ def build() -> None:
 
     # ---- CSS と PDF ----
     shutil.copy(BOOK / "assets" / "css" / "web.css", OUT / "web.css")
-    pdf = BOOK / "out" / "sekaishi-taizen.pdf"
+    pdf = BOOK / "out" / PDF_NAME
     if pdf.exists():
-        shutil.copy(pdf, OUT / "sekaishi-taizen.pdf")
+        shutil.copy(pdf, OUT / PDF_NAME)
 
     print(f"Web版を生成しました: {OUT}")
     print(f"  章 {len(chapters)} / 巻末 {len(appendices)} / PDF {'あり' if pdf.exists() else 'なし'}")

@@ -17,7 +17,9 @@ import sys
 from datetime import date
 from pathlib import Path
 
-BOOK = Path(__file__).resolve().parent.parent
+from _bookroot import book_root, slug_of
+
+BOOK = book_root(__file__)
 CONTENT = BOOK / "content"
 ASSETS = BOOK / "assets"
 MANIFEST = BOOK / "manifest.json"
@@ -254,7 +256,7 @@ def assemble(m: dict, only: set[str] | None, stub: bool) -> tuple[str, dict]:
 
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("-o", "--out", default=str(BOOK / "out" / "sekaishi-taizen.pdf"))
+    ap.add_argument("-o", "--out", default=None, help="出力先。既定は out/<slug>.pdf")
     ap.add_argument("--only", help="部IDをカンマ区切りで指定（例 p00,p01）")
     ap.add_argument("--no-stub", action="store_true", help="未執筆の章を差し込まない")
     ap.add_argument("--keep-html", action="store_true", help="結合後のHTMLも残す")
@@ -264,7 +266,7 @@ def main() -> int:
     only = set(args.only.split(",")) if args.only else None
     doc, stats = assemble(m, only, stub=not args.no_stub)
 
-    out = Path(args.out)
+    out = Path(args.out) if args.out else BOOK / "out" / f"{slug_of(m)}.pdf"
     out.parent.mkdir(parents=True, exist_ok=True)
     html_path = out.with_suffix(".html")
     html_path.write_text(doc, encoding="utf-8")

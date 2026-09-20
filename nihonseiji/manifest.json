@@ -1,0 +1,780 @@
+{
+  "title": "日本政治大全",
+  "subtitle": "高校・大学・大学院の三層で読む日本の統治",
+  "edition": "第1版",
+  "lang": "ja",
+  "publisher": "25KD016",
+  "slug": "nihon-seiji-taizen",
+  "web_dir": "japanesepolitics",
+  "web_lead": "高校の「政治・経済」から大学の概説、そして学説の対立と資料の吟味まで、同じ主題を三つの水準で読めるように構成した日本政治の教科書です。条文・判例・慣行という三つの層を読み分け、選挙結果や世論調査という数字がどう作られるかを確かめながら進みます。",
+  "web_note": "本文・図版とも本書のために作成したものです。引用した条文・判例は出典を各章に示しています。",
+  "page_target": [
+    800,
+    1200
+  ],
+  "parts": [
+    {
+      "id": "q00",
+      "label": "序論",
+      "title": "政治をどう見るか",
+      "period": "方法",
+      "dir": "00-jo",
+      "lead": "日本政治を扱う前に、そもそも政治学は何を問う学問なのか、条文と判例と慣行という三種類の「制度」をどう読み分けるのか、選挙結果や世論調査という数字をどう扱うのかを確かめる。ここは本書全体を貫く方法の土台である。",
+      "chapters": [
+        {
+          "n": 1,
+          "title": "政治学は何を問う学問か",
+          "file": "00-01-seijigaku-towa.html",
+          "status": "todo"
+        },
+        {
+          "n": 2,
+          "title": "制度を読む——条文・判例・慣行",
+          "file": "00-02-seido-wo-yomu.html",
+          "status": "todo"
+        },
+        {
+          "n": 3,
+          "title": "数字を読む——選挙・世論・統計",
+          "file": "00-03-suji-wo-yomu.html",
+          "status": "todo"
+        },
+        {
+          "n": 4,
+          "title": "日本政治をどう区切るか",
+          "file": "00-04-jidai-kubun.html",
+          "status": "todo"
+        }
+      ]
+    },
+    {
+      "id": "q01",
+      "label": "第I部",
+      "title": "近代国家の形成",
+      "period": "1853〜1900年",
+      "dir": "01-kindai-kokka",
+      "lead": "二六〇年続いた幕藩体制が崩れ、一〇年たらずで中央集権国家が現れ、二〇年後には憲法と議会を持つ国家になる。この速度の異常さと、そこで何が選ばれ何が退けられたのかを見る。",
+      "chapters": [
+        {
+          "n": 5,
+          "title": "幕藩体制という統治のかたち",
+          "file": "01-05-bakuhan-taisei.html",
+          "status": "todo"
+        },
+        {
+          "n": 6,
+          "title": "開国と、正統性の危機",
+          "file": "01-06-kaikoku.html",
+          "status": "todo"
+        },
+        {
+          "n": 7,
+          "title": "明治維新は何を壊したのか",
+          "file": "01-07-meiji-ishin.html",
+          "status": "todo"
+        },
+        {
+          "n": 8,
+          "title": "廃藩置県——中央集権の達成",
+          "file": "01-08-haihan-chiken.html",
+          "status": "todo"
+        },
+        {
+          "n": 9,
+          "title": "自由民権運動と国会開設の勅諭",
+          "file": "01-09-jiyu-minken.html",
+          "status": "todo"
+        },
+        {
+          "n": 10,
+          "title": "大日本帝国憲法——何を定め、何を定めなかったか",
+          "file": "01-10-teikoku-kenpo.html",
+          "status": "todo"
+        },
+        {
+          "n": 11,
+          "title": "帝国議会の開設と初期議会",
+          "file": "01-11-shoki-gikai.html",
+          "status": "todo"
+        },
+        {
+          "n": 12,
+          "title": "地方制度と官僚制の設計",
+          "file": "01-12-chiho-kanryosei.html",
+          "status": "todo"
+        }
+      ]
+    },
+    {
+      "id": "q02",
+      "label": "第II部",
+      "title": "政党政治の成立と崩壊",
+      "period": "1900〜1945年",
+      "dir": "02-seito-seiji",
+      "lead": "憲法に政党の規定はない。それにもかかわらず政党内閣が慣行として成立し、そして二〇年たらずで消える。制度が明文で定めていない部分こそが、この時期の政治を決めた。",
+      "chapters": [
+        {
+          "n": 13,
+          "title": "藩閥と政党の妥協",
+          "file": "02-13-hanbatsu-seito.html",
+          "status": "todo"
+        },
+        {
+          "n": 14,
+          "title": "大正政変と「憲政擁護」",
+          "file": "02-14-taisho-seihen.html",
+          "status": "todo"
+        },
+        {
+          "n": 15,
+          "title": "米騒動と原敬内閣",
+          "file": "02-15-hara-naikaku.html",
+          "status": "todo"
+        },
+        {
+          "n": 16,
+          "title": "普通選挙法と治安維持法",
+          "file": "02-16-futsu-senkyo.html",
+          "status": "todo"
+        },
+        {
+          "n": 17,
+          "title": "「憲政の常道」という慣行",
+          "file": "02-17-kensei-no-jodo.html",
+          "status": "todo"
+        },
+        {
+          "n": 18,
+          "title": "統帥権と軍部の自立",
+          "file": "02-18-tosuiken.html",
+          "status": "todo"
+        },
+        {
+          "n": 19,
+          "title": "政党政治の終わり",
+          "file": "02-19-seito-seiji-no-owari.html",
+          "status": "todo"
+        },
+        {
+          "n": 20,
+          "title": "総力戦体制と大政翼賛会",
+          "file": "02-20-yokusankai.html",
+          "status": "todo"
+        }
+      ]
+    },
+    {
+      "id": "q03",
+      "label": "第III部",
+      "title": "占領と戦後体制の設計",
+      "period": "1945〜1960年",
+      "dir": "03-senryo-sengo",
+      "lead": "占領下の数年間に、憲法・議会・行政・地方・労使関係の設計が一挙に書き換えられた。誰が何を決めたのか、どこまでが押しつけでどこからが受容だったのかは、いまも争われている。",
+      "chapters": [
+        {
+          "n": 21,
+          "title": "敗戦と占領の構造",
+          "file": "03-21-senryo-kozo.html",
+          "status": "todo"
+        },
+        {
+          "n": 22,
+          "title": "日本国憲法の成立過程",
+          "file": "03-22-kenpo-seiritsu.html",
+          "status": "todo"
+        },
+        {
+          "n": 23,
+          "title": "象徴天皇制——地位の転換",
+          "file": "03-23-shocho-tennosei.html",
+          "status": "todo"
+        },
+        {
+          "n": 24,
+          "title": "第九条——条文と解釈の始まり",
+          "file": "03-24-dai9jo.html",
+          "status": "todo"
+        },
+        {
+          "n": 25,
+          "title": "占領改革——農地・労働・財閥",
+          "file": "03-25-senryo-kaikaku.html",
+          "status": "todo"
+        },
+        {
+          "n": 26,
+          "title": "逆コースと再軍備",
+          "file": "03-26-gyaku-course.html",
+          "status": "todo"
+        },
+        {
+          "n": 27,
+          "title": "講和と日米安全保障条約",
+          "file": "03-27-kowa-anpo.html",
+          "status": "todo"
+        },
+        {
+          "n": 28,
+          "title": "五五年体制の成立と六〇年安保",
+          "file": "03-28-55nen-taisei.html",
+          "status": "todo"
+        }
+      ]
+    },
+    {
+      "id": "q04",
+      "label": "第IV部",
+      "title": "憲法と統治機構",
+      "period": "制度",
+      "dir": "04-kenpo",
+      "lead": "憲法は統治の設計図である。だが設計図と建物は同じではない。条文が何を定め、裁判所がそれをどう読み、実務がどう運用してきたか——三つの層を分けて扱う。",
+      "chapters": [
+        {
+          "n": 29,
+          "title": "憲法とは何か——最高法規性",
+          "file": "04-29-kenpo-towa.html",
+          "status": "todo"
+        },
+        {
+          "n": 30,
+          "title": "国民主権と天皇の地位",
+          "file": "04-30-shuken-tenno.html",
+          "status": "todo"
+        },
+        {
+          "n": 31,
+          "title": "基本的人権の体系",
+          "file": "04-31-jinken.html",
+          "status": "todo"
+        },
+        {
+          "n": 32,
+          "title": "違憲審査制はなぜ使われないのか",
+          "file": "04-32-iken-shinsa.html",
+          "status": "todo"
+        },
+        {
+          "n": 33,
+          "title": "統治行為論と司法の自制",
+          "file": "04-33-tochi-koi.html",
+          "status": "todo"
+        },
+        {
+          "n": 34,
+          "title": "裁判所の組織と裁判官の人事",
+          "file": "04-34-saibansho.html",
+          "status": "todo"
+        },
+        {
+          "n": 35,
+          "title": "憲法改正論の系譜",
+          "file": "04-35-kaiken-ron.html",
+          "status": "todo"
+        }
+      ]
+    },
+    {
+      "id": "q05",
+      "label": "第V部",
+      "title": "国会",
+      "period": "制度",
+      "dir": "05-kokkai",
+      "lead": "国会は「国権の最高機関」であり「唯一の立法機関」である。ではなぜ、法案のほとんどは国会の外で作られるのか。条文の建前と立法過程の実態の落差から、この機関の性格を読む。",
+      "chapters": [
+        {
+          "n": 36,
+          "title": "二院制——参議院は何のためにあるのか",
+          "file": "05-36-niinsei.html",
+          "status": "todo"
+        },
+        {
+          "n": 37,
+          "title": "法案はどこで作られるのか",
+          "file": "05-37-hoan-sakusei.html",
+          "status": "todo"
+        },
+        {
+          "n": 38,
+          "title": "委員会制度と国会対策",
+          "file": "05-38-iinkai.html",
+          "status": "todo"
+        },
+        {
+          "n": 39,
+          "title": "会期制と日程の政治",
+          "file": "05-39-kaikisei.html",
+          "status": "todo"
+        },
+        {
+          "n": 40,
+          "title": "予算の審議",
+          "file": "05-40-yosan-shingi.html",
+          "status": "todo"
+        },
+        {
+          "n": 41,
+          "title": "行政監視と国政調査権",
+          "file": "05-41-gyosei-kanshi.html",
+          "status": "todo"
+        },
+        {
+          "n": 42,
+          "title": "議員立法はなぜ少ないのか",
+          "file": "05-42-giin-rippo.html",
+          "status": "todo"
+        }
+      ]
+    },
+    {
+      "id": "q06",
+      "label": "第VI部",
+      "title": "内閣と行政",
+      "period": "制度",
+      "dir": "06-naikaku-gyosei",
+      "lead": "首相は強いのか弱いのか。この問いに答えるには、憲法と内閣法が与えた権限と、実際に動かせる資源——人事・予算・情報・時間——を分けて見なければならない。",
+      "chapters": [
+        {
+          "n": 43,
+          "title": "議院内閣制の論理",
+          "file": "06-43-giin-naikakusei.html",
+          "status": "todo"
+        },
+        {
+          "n": 44,
+          "title": "首相の権力——制度と資源",
+          "file": "06-44-shusho-kenryoku.html",
+          "status": "todo"
+        },
+        {
+          "n": 45,
+          "title": "内閣官房と官邸機能の強化",
+          "file": "06-45-kantei-kino.html",
+          "status": "todo"
+        },
+        {
+          "n": 46,
+          "title": "大臣と官僚——政治任用の乏しさ",
+          "file": "06-46-daijin-kanryo.html",
+          "status": "todo"
+        },
+        {
+          "n": 47,
+          "title": "官僚制の構造と人事",
+          "file": "06-47-kanryosei.html",
+          "status": "todo"
+        },
+        {
+          "n": 48,
+          "title": "審議会——政策はどこで決まるのか",
+          "file": "06-48-shingikai.html",
+          "status": "todo"
+        },
+        {
+          "n": 49,
+          "title": "独立行政委員会と規制機関",
+          "file": "06-49-dokuritsu-iinkai.html",
+          "status": "todo"
+        },
+        {
+          "n": 50,
+          "title": "行政改革の系譜",
+          "file": "06-50-gyosei-kaikaku.html",
+          "status": "todo"
+        }
+      ]
+    },
+    {
+      "id": "q07",
+      "label": "第VII部",
+      "title": "選挙と政党",
+      "period": "制度",
+      "dir": "07-senkyo-seito",
+      "lead": "票がどう議席になるかは、数学の問題であると同時に政治の問題である。計算の規則を変えれば、政党のかたちも候補者の行動も変わる。一九九四年の改革は、その最大の実験だった。",
+      "chapters": [
+        {
+          "n": 51,
+          "title": "票はどう議席になるか——選挙制度の数理",
+          "file": "07-51-senkyo-suri.html",
+          "status": "todo"
+        },
+        {
+          "n": 52,
+          "title": "中選挙区制とその帰結",
+          "file": "07-52-chu-senkyoku.html",
+          "status": "todo"
+        },
+        {
+          "n": 53,
+          "title": "一九九四年の制度改革",
+          "file": "07-53-1994-kaikaku.html",
+          "status": "todo"
+        },
+        {
+          "n": 54,
+          "title": "小選挙区比例代表並立制の実際",
+          "file": "07-54-heiritsu-sei.html",
+          "status": "todo"
+        },
+        {
+          "n": 55,
+          "title": "参議院の選挙制度",
+          "file": "07-55-sangiin-senkyo.html",
+          "status": "todo"
+        },
+        {
+          "n": 56,
+          "title": "一票の較差と司法",
+          "file": "07-56-ippyo-kakusa.html",
+          "status": "todo"
+        },
+        {
+          "n": 57,
+          "title": "政党とは何か——組織と規律",
+          "file": "07-57-seito-towa.html",
+          "status": "todo"
+        },
+        {
+          "n": 58,
+          "title": "自民党の組織——派閥と族議員",
+          "file": "07-58-jiminto-soshiki.html",
+          "status": "todo"
+        },
+        {
+          "n": 59,
+          "title": "野党の形成と分裂",
+          "file": "07-59-yato.html",
+          "status": "todo"
+        },
+        {
+          "n": 60,
+          "title": "組織政党——公明党と共産党",
+          "file": "07-60-soshiki-seito.html",
+          "status": "todo"
+        },
+        {
+          "n": 61,
+          "title": "政治資金の制度と抜け道",
+          "file": "07-61-seiji-shikin.html",
+          "status": "todo"
+        },
+        {
+          "n": 62,
+          "title": "選挙運動の規制",
+          "file": "07-62-senkyo-undo.html",
+          "status": "todo"
+        }
+      ]
+    },
+    {
+      "id": "q08",
+      "label": "第VIII部",
+      "title": "有権者と社会",
+      "period": "実態",
+      "dir": "08-yukensha",
+      "lead": "有権者は何を見て投票するのか。この問いに答えようとする実証研究と、その材料になる世論調査そのものの読み方を扱う。数字がどう作られるかを知らなければ、数字は読めない。",
+      "chapters": [
+        {
+          "n": 63,
+          "title": "投票行動の理論",
+          "file": "08-63-tohyo-kodo.html",
+          "status": "todo"
+        },
+        {
+          "n": 64,
+          "title": "世論調査をどう読むか",
+          "file": "08-64-yoron-chosa.html",
+          "status": "todo"
+        },
+        {
+          "n": 65,
+          "title": "政党支持と無党派層",
+          "file": "08-65-mutoha.html",
+          "status": "todo"
+        },
+        {
+          "n": 66,
+          "title": "投票率の低下は何を意味するか",
+          "file": "08-66-tohyoritsu.html",
+          "status": "todo"
+        },
+        {
+          "n": 67,
+          "title": "利益団体——農業・医師会・労組",
+          "file": "08-67-rieki-dantai.html",
+          "status": "todo"
+        },
+        {
+          "n": 68,
+          "title": "経済団体と政治",
+          "file": "08-68-keizai-dantai.html",
+          "status": "todo"
+        },
+        {
+          "n": 69,
+          "title": "メディアと政治——記者クラブ",
+          "file": "08-69-media.html",
+          "status": "todo"
+        },
+        {
+          "n": 70,
+          "title": "インターネットと世論",
+          "file": "08-70-internet.html",
+          "status": "todo"
+        },
+        {
+          "n": 71,
+          "title": "ジェンダーと政治的代表",
+          "file": "08-71-gender.html",
+          "status": "todo"
+        }
+      ]
+    },
+    {
+      "id": "q09",
+      "label": "第IX部",
+      "title": "中央と地方",
+      "period": "制度",
+      "dir": "09-chuo-chiho",
+      "lead": "地方自治は憲法が保障している。だが自治体の収入の多くは国から来る。金の流れを追うと、制度の建前とは別の統制の経路が見えてくる。",
+      "chapters": [
+        {
+          "n": 72,
+          "title": "地方自治制度の構造",
+          "file": "09-72-chiho-jichi.html",
+          "status": "todo"
+        },
+        {
+          "n": 73,
+          "title": "財政移転——交付税と補助金",
+          "file": "09-73-zaisei-iten.html",
+          "status": "todo"
+        },
+        {
+          "n": 74,
+          "title": "分権改革と平成の大合併",
+          "file": "09-74-bunken-gappei.html",
+          "status": "todo"
+        },
+        {
+          "n": 75,
+          "title": "首長と議会——二元代表制",
+          "file": "09-75-nigen-daihyo.html",
+          "status": "todo"
+        },
+        {
+          "n": 76,
+          "title": "住民投票と直接請求",
+          "file": "09-76-jumin-tohyo.html",
+          "status": "todo"
+        },
+        {
+          "n": 77,
+          "title": "大都市制度と道州制論",
+          "file": "09-77-daitoshi.html",
+          "status": "todo"
+        }
+      ]
+    },
+    {
+      "id": "q10",
+      "label": "第X部",
+      "title": "政策過程",
+      "period": "実態",
+      "dir": "10-seisaku-katei",
+      "lead": "政策は、誰かが決めるより先に、決めうる選択肢の集合が絞られている。予算・社会保障・産業・農業・教育・エネルギーの各分野で、その絞り込みがどう起きるかを追う。",
+      "chapters": [
+        {
+          "n": 78,
+          "title": "政策過程の理論",
+          "file": "10-78-seisaku-riron.html",
+          "status": "todo"
+        },
+        {
+          "n": 79,
+          "title": "予算編成の政治",
+          "file": "10-79-yosan-hensei.html",
+          "status": "todo"
+        },
+        {
+          "n": 80,
+          "title": "社会保障——年金と医療",
+          "file": "10-80-shakai-hosho.html",
+          "status": "todo"
+        },
+        {
+          "n": 81,
+          "title": "産業政策と規制",
+          "file": "10-81-sangyo-seisaku.html",
+          "status": "todo"
+        },
+        {
+          "n": 82,
+          "title": "農業政策——保護の政治学",
+          "file": "10-82-nogyo-seisaku.html",
+          "status": "todo"
+        },
+        {
+          "n": 83,
+          "title": "教育政策",
+          "file": "10-83-kyoiku-seisaku.html",
+          "status": "todo"
+        },
+        {
+          "n": 84,
+          "title": "エネルギー政策と原子力",
+          "file": "10-84-energy.html",
+          "status": "todo"
+        },
+        {
+          "n": 85,
+          "title": "災害と政治",
+          "file": "10-85-saigai.html",
+          "status": "todo"
+        }
+      ]
+    },
+    {
+      "id": "q11",
+      "label": "第XI部",
+      "title": "外交と安全保障",
+      "period": "制度と政策",
+      "dir": "11-gaiko-anzen",
+      "lead": "第九条を持つ国家が、世界有数の装備を備えた実力組織を持ち、同盟国の軍隊を国内に置いている。この状態をどのような法的構成で正当化してきたのかを、条文と答弁から追う。",
+      "chapters": [
+        {
+          "n": 86,
+          "title": "日米同盟の制度と実態",
+          "file": "11-86-nichibei-domei.html",
+          "status": "todo"
+        },
+        {
+          "n": 87,
+          "title": "自衛隊——法的地位と文民統制",
+          "file": "11-87-jieitai.html",
+          "status": "todo"
+        },
+        {
+          "n": 88,
+          "title": "解釈改憲という手法",
+          "file": "11-88-kaishaku-kaiken.html",
+          "status": "todo"
+        },
+        {
+          "n": 89,
+          "title": "沖縄と基地",
+          "file": "11-89-okinawa.html",
+          "status": "todo"
+        },
+        {
+          "n": 90,
+          "title": "近隣諸国との関係と歴史問題",
+          "file": "11-90-kinrin-shokoku.html",
+          "status": "todo"
+        },
+        {
+          "n": 91,
+          "title": "経済と安全保障の接続",
+          "file": "11-91-keizai-anpo.html",
+          "status": "todo"
+        }
+      ]
+    },
+    {
+      "id": "q12",
+      "label": "第XII部",
+      "title": "現代の論点",
+      "period": "1993年〜",
+      "dir": "12-gendai",
+      "lead": "五五年体制の崩壊から三〇年、日本政治は制度改革を重ねてきた。何が変わり、何が変わらなかったのか。評価の定まらない論点は、対立する解釈を並べて示す。",
+      "chapters": [
+        {
+          "n": 92,
+          "title": "五五年体制の崩壊",
+          "file": "12-92-55nen-hokai.html",
+          "status": "todo"
+        },
+        {
+          "n": 93,
+          "title": "官邸主導への転換",
+          "file": "12-93-kantei-shudo.html",
+          "status": "todo"
+        },
+        {
+          "n": 94,
+          "title": "政権交代の経験",
+          "file": "12-94-seiken-kotai.html",
+          "status": "todo"
+        },
+        {
+          "n": 95,
+          "title": "制度改革は何をもたらしたか",
+          "file": "12-95-seido-kaikaku.html",
+          "status": "todo"
+        },
+        {
+          "n": 96,
+          "title": "人口減少と政治",
+          "file": "12-96-jinko-genshou.html",
+          "status": "todo"
+        },
+        {
+          "n": 97,
+          "title": "日本政治をどう問うか",
+          "file": "12-97-dou-tou-ka.html",
+          "status": "todo"
+        }
+      ]
+    }
+  ],
+  "appendix": [
+    {
+      "id": "apA",
+      "label": "付録A",
+      "title": "日本政治年表",
+      "file": "A-nenpyo.html",
+      "status": "todo"
+    },
+    {
+      "id": "apB",
+      "label": "付録B",
+      "title": "用語集",
+      "file": "B-yogoshu.html",
+      "status": "todo"
+    },
+    {
+      "id": "apC",
+      "label": "付録C",
+      "title": "主要判例一覧",
+      "file": "C-hanrei.html",
+      "status": "todo"
+    },
+    {
+      "id": "apD",
+      "label": "付録D",
+      "title": "図版索引",
+      "file": "D-zuhan-sakuin.html",
+      "status": "todo"
+    },
+    {
+      "id": "apE",
+      "label": "付録E",
+      "title": "章末問題の解答例と採点の観点",
+      "file": "E-kaitorei.html",
+      "status": "todo"
+    },
+    {
+      "id": "apF",
+      "label": "付録F",
+      "title": "読書案内と資料の探し方",
+      "file": "F-dokusho-annai.html",
+      "status": "todo"
+    },
+    {
+      "id": "apG",
+      "label": "付録G",
+      "title": "索引",
+      "file": "G-sakuin.html",
+      "status": "todo"
+    }
+  ]
+}

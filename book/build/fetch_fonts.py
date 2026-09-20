@@ -13,7 +13,9 @@ import sys
 import urllib.request
 from pathlib import Path
 
-FONT_DIR = Path(__file__).resolve().parent.parent / "assets" / "fonts"
+from _bookroot import book_root
+
+FONT_DIR = book_root(__file__) / "assets" / "fonts"
 
 # css2 API は User-Agent で返す形式を変える。UA を付けないと truetype(ttf) が返り、
 # WeasyPrint が追加依存なしで扱えるのでこれを使う。
