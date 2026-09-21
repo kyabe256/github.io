@@ -2,12 +2,14 @@
 /*
  * 複素関数論 演習問題集 — ビルドスクリプト
  *
- *   src/*.html （$…$ / $$…$$ で数式を書いた素材）を結合し、
- *   KaTeX でサーバサイド描画して 2 つの成果物を作る。
+ *   src/*.html, src2/*.html （$…$ / $$…$$ で数式を書いた素材）をそれぞれ結合し、
+ *   KaTeX でサーバサイド描画して巻ごとに 2 つの成果物を作る。
  *
- *     1. index.html            … Web 版（CDN の KaTeX / Google Fonts を参照）
+ *     1. <巻>.html             … Web 版（CDN の KaTeX / Google Fonts を参照）
  *     2. <OUT_DIR>/print.html  … 印刷版（ローカルの woff2 / KaTeX を参照）
  *        → puppeteer-core + Chromium で PDF 化
+ *
+ *   CSS は assets/style.css に一本化し、各巻の head の /*STYLE*_/ を差し替える。
  *
  * 使い方:
  *   MODULES=/path/to/node_modules OUT_DIR=/path/to/build \
@@ -19,19 +21,16 @@ const path = require('path');
 const MODULES = process.env.MODULES || path.join(__dirname, 'node_modules');
 const OUT_DIR = process.env.OUT_DIR || path.join(__dirname, 'build');
 const CHROME = process.env.CHROME || '/opt/pw-browsers/chromium-1194/chrome-linux/chrome';
-const PDF_OUT = process.env.PDF_OUT || path.join(__dirname, 'complex-analysis-problems.pdf');
+
+const BOOKS = [
+  { src: 'src', html: 'index.html', pdf: 'complex-analysis-problems.pdf' },
+  { src: 'src2', html: 'volume2.html', pdf: 'complex-analysis-problems-vol2.pdf' },
+];
 
 const katex = require(path.join(MODULES, 'katex'));
+const STYLE = fs.readFileSync(path.join(__dirname, 'assets', 'style.css'), 'utf8');
 
-// ---- 1. 素材の結合 ---------------------------------------------------------
-const SRC = path.join(__dirname, 'src');
-const parts = fs.readdirSync(SRC).filter((f) => f.endsWith('.html')).sort();
-let doc = parts.map((f) => fs.readFileSync(path.join(SRC, f), 'utf8')).join('\n');
-
-// ---- 2. 数式の描画 ---------------------------------------------------------
-let count = 0;
 const render = (tex, displayMode) => {
-  count += 1;
   try {
     return katex.renderToString(tex.trim(), { displayMode, throwOnError: true, strict: false });
   } catch (e) {
@@ -40,15 +39,23 @@ const render = (tex, displayMode) => {
     return `<span style="color:red">${tex}</span>`;
   }
 };
-doc = doc.replace(/\$\$([\s\S]+?)\$\$/g, (_, tex) => render(tex, true));
-doc = doc.replace(/\$([^$]{1,400}?)\$/g, (_, tex) => render(tex, false));
 
-if (doc.includes('$')) {
-  console.error('[warn] 対応の取れていない $ が残っています');
-  process.exitCode = 1;
-}
+// 素材を結合し、数式を描画した 1 枚の HTML にする
+const compose = (srcDir) => {
+  const dir = path.join(__dirname, srcDir);
+  const parts = fs.readdirSync(dir).filter((f) => f.endsWith('.html')).sort();
+  let doc = parts.map((f) => fs.readFileSync(path.join(dir, f), 'utf8')).join('\n');
+  doc = doc.replace('/*STYLE*/', () => STYLE);
+  doc = doc.replace(/\$\$([\s\S]+?)\$\$/g, (_, tex) => render(tex, true));
+  doc = doc.replace(/\$([^$]{1,400}?)\$/g, (_, tex) => render(tex, false));
+  if (doc.includes('$')) {
+    console.error(`[warn] ${srcDir}: 対応の取れていない $ が残っています`);
+    process.exitCode = 1;
+  }
+  return { doc, parts };
+};
 
-// ---- 3. 2 つの HTML を書き出す ---------------------------------------------
+// ---- 出力先ごとの CSS リンク ------------------------------------------------
 const WEB_LINKS = [
   '<meta name="viewport" content="width=device-width, initial-scale=1">',
   '<link rel="preconnect" href="https://fonts.googleapis.com">',
@@ -65,34 +72,39 @@ const PRINT_LINKS = [
 ].join('\n');
 
 fs.mkdirSync(OUT_DIR, { recursive: true });
-fs.writeFileSync(path.join(__dirname, 'index.html'), doc.replace('<!--CSSLINKS-->', WEB_LINKS));
-const printPath = path.join(OUT_DIR, 'print.html');
-fs.writeFileSync(printPath, doc.replace('<!--CSSLINKS-->', PRINT_LINKS));
-console.log(`数式 ${count} 個を描画 / 素材 ${parts.length} ファイル`);
 
-// ---- 4. PDF 化 -------------------------------------------------------------
 (async () => {
   const puppeteer = require(path.join(MODULES, 'puppeteer-core'));
   const browser = await puppeteer.launch({
     executablePath: CHROME,
     args: ['--no-sandbox', '--disable-gpu', '--font-render-hinting=none'],
   });
-  const page = await browser.newPage();
-  await page.goto('file://' + printPath, { waitUntil: 'networkidle0' });
-  await page.evaluateHandle('document.fonts.ready');
   const foot =
     '<div style="width:100%;font-size:8px;color:#8a929c;font-family:sans-serif;' +
     'text-align:center;padding:0 0 4mm"><span class="pageNumber"></span></div>';
-  await page.pdf({
-    path: PDF_OUT,
-    format: 'A4',
-    printBackground: true,
-    displayHeaderFooter: true,
-    headerTemplate: '<div></div>',
-    footerTemplate: foot,
-    margin: { top: '17mm', bottom: '17mm', left: '17mm', right: '17mm' },
-  });
+
+  for (const book of BOOKS) {
+    const { doc, parts } = compose(book.src);
+    fs.writeFileSync(path.join(__dirname, book.html), doc.replace('<!--CSSLINKS-->', WEB_LINKS));
+    const printPath = path.join(OUT_DIR, `print-${book.src}.html`);
+    fs.writeFileSync(printPath, doc.replace('<!--CSSLINKS-->', PRINT_LINKS));
+
+    const page = await browser.newPage();
+    await page.goto('file://' + printPath, { waitUntil: 'networkidle0' });
+    await page.evaluateHandle('document.fonts.ready');
+    const pdfPath = path.join(__dirname, book.pdf);
+    await page.pdf({
+      path: pdfPath,
+      format: 'A4',
+      printBackground: true,
+      displayHeaderFooter: true,
+      headerTemplate: '<div></div>',
+      footerTemplate: foot,
+      margin: { top: '17mm', bottom: '17mm', left: '17mm', right: '17mm' },
+    });
+    await page.close();
+    const kb = (fs.statSync(pdfPath).size / 1024).toFixed(0);
+    console.log(`${book.src} (${parts.length} ファイル) → ${book.html}, ${book.pdf} (${kb} KB)`);
+  }
   await browser.close();
-  const kb = (fs.statSync(PDF_OUT).size / 1024).toFixed(0);
-  console.log(`PDF: ${PDF_OUT} (${kb} KB)`);
 })();

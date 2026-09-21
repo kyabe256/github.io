@@ -1,21 +1,28 @@
 # 複素関数論 演習問題集
 
-理工系学部 2・3 年 〜 大学院入試レベルのオリジナル問題集。全 20 大問・小問 108 題、A4 で 24 ページ。**解答は収録していません**（付録 A に大問ごとの一行ヒント、付録 B に計算問題の最終値のみ）。
+理工系学部 2・3 年 〜 大学院入試レベルのオリジナル問題集。2 巻あわせて全 40 大問・小問 204 題。**解答は収録していません**（大問ごとの一行ヒントと、計算問題の最終値のみ）。
 
 | ファイル | 内容 |
 | --- | --- |
-| `complex-analysis-problems.pdf` | 問題集本体（PDF） |
-| `index.html` | Web 版（KaTeX / Noto Serif JP を CDN から読み込む） |
-| `src/*.html` | 素材。数式は `$…$` / `$$…$$` で記述 |
-| `build.js` | 結合 → KaTeX でサーバサイド描画 → PDF 化 |
+| `complex-analysis-problems.pdf` | 第 I 巻（20 大問 / 108 題、24 ページ） |
+| `complex-analysis-problems-vol2.pdf` | 第 II 巻 基礎編＋挑戦編（20 大問 / 96 題、18 ページ） |
+| `index.html`, `volume2.html` | Web 版（KaTeX / Noto Serif JP を CDN から読み込む） |
+| `src/*.html`, `src2/*.html` | 素材。数式は `$…$` / `$$…$$` で記述 |
+| `assets/style.css` | 2 巻共通のスタイル |
+| `build.js` | 結合 → KaTeX でサーバサイド描画 → PDF 化（2 巻同時） |
 
-## 構成
+## 第 I 巻の構成
 
 - 第 I 部　正則性の基礎（Cauchy–Riemann、Liouville、べき級数、一致の定理）
 - 第 II 部　Cauchy 理論の技法（積分公式、Morera・鏡像原理、Laurent 展開）
 - 第 III 部　留数計算の華（実定積分 I・II、級数の総和）
 - 第 IV 部　幾何学的関数論（偏角原理、Schwarz の補題、等角写像、Poisson 核）
 - 第 V 部　発展（無限積と Γ、ζ、Jensen と Blaschke、鞍点法、Riemann の写像定理、Weierstrass の ℘）
+
+## 第 II 巻の構成
+
+- 第 0 部　基礎編（★☆☆☆☆〜★★★☆☆、44 題）複素数の代数と幾何、初等関数と多価性、正則性の判定、線積分、Cauchy の積分公式、Taylor / Laurent 展開、留数、零点の数え上げ、等角写像の基本
+- 第 VI 部　挑戦編（★★★★★、52 題）Weierstrass の因数分解、Mittag-Leffler、Runge、Hadamard の因数分解、Bloch–Schottky–Picard、単葉関数と Koebe 1/4、θ と ζ の関数等式、素数定理、複素力学系、Schwarz–Christoffel
 
 ## ビルド
 

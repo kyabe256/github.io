@@ -1,0 +1,230 @@
+<h2 class="part">第 VI 部　挑戦編<span class="en">BEYOND THE COURSE</span></h2>
+<p class="part-lead">ここから先は学部の講義の外側である。どの大問も、単独で一章分の重さをもつ定理をひとつ落とすことを目標にした誘導つき問題である。一日で終わらなくてよい。参考書を横に置き、紙を何枚も使い、証明の骨格を自分で組み直すこと ― それが唯一の解き方である。</p>
+
+<div class="prob">
+  <div class="prob-head">
+    <span class="no">挑戦 1</span><span class="ttl">Weierstrass の因数分解定理</span><span class="stars">★★★★★</span>
+  </div>
+  <p class="preamble">目標：<em>与えられた零点をもつ整関数はつねに存在する</em>。多項式なら $\prod(z-a_{k})$ で済む話が、無限個の零点に対してどう修復されるかを追う。初等因子を
+    $$E_{0}(z)=1-z,\qquad E_{p}(z)=(1-z)\exp\left(z+\frac{z^{2}}{2}+\cdots+\frac{z^{p}}{p}\right)\ \ (p\ge1)$$
+    と定める。</p>
+  <ol class="items">
+    <li>$|z|\le1$ のとき $\bigl|E_{p}(z)-1\bigr|\le|z|^{p+1}$ を示せ。（$E_{p}'(z)=-z^{p}\exp(z+\cdots+z^{p}/p)$ を計算し、$E_{p}(z)-1$ のべき級数の係数がすべて実で符号が一定であることを使うとよい。）<span class="lv">★★★★★</span></li>
+
+    <li>$a_{n}\neq0$、$|a_{n}|\to\infty$ とする。このとき
+      $$P(z)=\prod_{n=1}^{\infty}E_{n}\!\left(\frac{z}{a_{n}}\right)$$
+      は $\mathbb{C}$ 上広義一様収束し、零点がちょうど $\{a_{n}\}$（重複込み）である整関数を定めることを示せ。<span class="lv">★★★★★</span></li>
+
+    <li>（Weierstrass の因数分解定理）$f$ を $f\not\equiv0$ なる整関数、$0$ を位数 $m$ の零点、$0$ 以外の零点を $\{a_{n}\}$（重複込み、$|a_{n}|\to\infty$）とすると、整関数 $g$ と整数列 $\{p_{n}\}$ が存在して
+      $$f(z)=z^{m}e^{g(z)}\prod_{n=1}^{\infty}E_{p_{n}}\!\left(\frac{z}{a_{n}}\right)$$
+      と書けることを示せ。<span class="lv">★★★★★</span></li>
+
+    <li>系として次を示せ。(a) $\mathbb{C}$ 上の任意の有理型関数は、二つの整関数の商として書ける。(b) $\Omega$ を領域、$A\subset\Omega$ を $\Omega$ 内に集積点をもたない点列とするとき、$A$ をちょうど零点集合にもつ $f\in\mathcal{O}(\Omega)$ が存在する（$\Omega=\mathbb{C}$ の場合から出発して一般の $\Omega$ へ拡張する筋道を述べよ）。<span class="lv">★★★★★</span></li>
+
+    <li>$\displaystyle\prod_{n\ge1}E_{1}\!\left(\frac{z}{n}\right)$ と $\displaystyle\prod_{n\ge1}E_{0}\!\left(\frac{z}{n}\right)$ のうち、収束するのはどちらか。$1/\Gamma$ の Weierstrass 積（第 I 巻・問題 15）が $E_{1}$ を使っている理由を、この観点から説明せよ。<span class="lv">★★★★☆</span></li>
+  </ol>
+</div>
+
+<div class="prob">
+  <div class="prob-head">
+    <span class="no">挑戦 2</span><span class="ttl">Mittag-Leffler の定理</span><span class="stars">★★★★★</span>
+  </div>
+  <p class="preamble">挑戦 1 が「零点の指定」なら、こちらは「極（主要部）の指定」である。</p>
+  <ol class="items">
+    <li>$|a_{n}|\to\infty$（相異なる）と、各 $n$ に対する主要部
+      $\displaystyle P_{n}(z)=\sum_{k=1}^{m_{n}}\frac{c_{n,k}}{(z-a_{n})^{k}}$
+      が与えられたとき、$\mathbb{C}$ 上の有理型関数 $f$ で、極がちょうど $\{a_{n}\}$、$a_{n}$ における主要部が $P_{n}$ であるものが存在することを示せ。（$P_{n}$ を $|z|\lt|a_{n}|/2$ で Taylor 展開し、適当な次数で打ち切った多項式 $q_{n}$ を引いて $\sum(P_{n}-q_{n})$ を作る。）<span class="lv">★★★★★</span></li>
+
+    <li>そのような $f$ は「一つ見つけたもの $+$ 任意の整関数」の形にすべて書けることを示せ。<span class="lv">★★★★☆</span></li>
+
+    <li>この定理を $a_{n}=n\ (n\in\mathbb{Z})$、$P_{n}(z)=(z-n)^{-2}$ に適用し、得られる関数と $\pi^{2}/\sin^{2}\pi z$ の差が定数（実は $0$）であることを Liouville 型の議論で示せ。同様に $\pi\cot\pi z$ を再構成せよ。<span class="lv">★★★★★</span></li>
+
+    <li>$\displaystyle\sum_{n\in\mathbb{Z}}\frac{1}{(z-n)^{2}}$ は収束するのに $\displaystyle\sum_{n\in\mathbb{Z}}\frac{1}{z-n}$ はそのままでは収束しない。Mittag-Leffler の証明における「打ち切り多項式 $q_{n}$」が、この差をどう吸収しているかを説明せよ。<span class="lv">★★★★☆</span></li>
+
+    <li>（発展）領域 $\Omega$ 上の Mittag-Leffler の定理を述べよ。$\Omega=\mathbb{C}$ の証明のどこが $\Omega$ では通用せず、挑戦 3 の Runge の定理がその穴をどう埋めるかを説明せよ。<span class="lv">★★★★★</span></li>
+  </ol>
+</div>
+
+<div class="prob">
+  <div class="prob-head">
+    <span class="no">挑戦 3</span><span class="ttl">Runge の近似定理とその副産物</span><span class="stars">★★★★★</span>
+  </div>
+  <ol class="items">
+    <li>（極の押し出し）$K\subset\mathbb{C}$ をコンパクト、$a,b$ を $\mathbb{C}\setminus K$ の同一連結成分に属する 2 点とする。$1/(z-a)$ は $K$ 上一様に、$1/(z-b)$ の多項式で近似できることを示せ。また $\mathbb{C}\setminus K$ の非有界成分に属する $a$ については、$1/(z-a)$ が $K$ 上一様に多項式で近似できることを示せ。<span class="lv">★★★★★</span></li>
+
+    <li>（Runge の定理）$K$ をコンパクト、$f$ を $K$ を含むある開集合上で正則とする。
+      (a) $f$ は $K$ 上一様に、極が $\mathbb{C}\setminus K$ にある有理関数で近似できる。
+      (b) さらに $\mathbb{C}\setminus K$ が連結ならば、$f$ は $K$ 上一様に多項式で近似できる。
+      （(a) では Cauchy の積分公式を Riemann 和で離散化し、(1) を適用する。）<span class="lv">★★★★★</span></li>
+
+    <li>$K=\{|z|=1\}$ 上で $f(z)=1/z$ は多項式で一様近似できないことを示せ。(2)(b) の仮定「$\mathbb{C}\setminus K$ が連結」が外せないことがこれでわかる。<span class="lv">★★★★☆</span></li>
+
+    <li>（Runge の不思議な例）
+      $$K_{n}=\left\{z:|z|\le n,\ |\operatorname{Im}z|\ge\tfrac1n\right\}\cup\left\{z:|z|\le\tfrac1n\right\}$$
+      とおく。$\mathbb{C}\setminus K_{n}$ が連結であることを確かめ、$K_{n}$ の近傍で「大きい部分では $0$、小さい円板では $1$」となる正則関数を作り、Runge の定理で多項式 $p_{n}$ を選ぶことにより、
+      $$\lim_{n\to\infty}p_{n}(z)=0\ \ (z\in\mathbb{C}\setminus\mathbb{R}),\qquad \lim_{n\to\infty}p_{n}(0)=1$$
+      となる多項式列が構成できることを示せ。多項式列の各点収束極限は、こんなにも不連続になりうる。<span class="lv">★★★★★</span></li>
+
+    <li>Runge の定理を用いて、任意の開集合 $\Omega$ に対し「$\Omega$ 内に集積点をもたない点列を極にもち、指定された主要部をもつ有理型関数」が $\Omega$ 上に存在すること（$\Omega$ 版 Mittag-Leffler）の証明の筋道を述べよ。<span class="lv">★★★★★</span></li>
+  </ol>
+</div>
+
+<div class="prob">
+  <div class="prob-head">
+    <span class="no">挑戦 4</span><span class="ttl">整関数の位数と Hadamard の因数分解</span><span class="stars">★★★★★</span>
+  </div>
+  <p class="preamble">整関数 $f$ に対し $M(r)=\max_{|z|=r}|f(z)|$、位数を
+    $\displaystyle\rho=\limsup_{r\to\infty}\frac{\log\log M(r)}{\log r}$ と定める。</p>
+  <ol class="items">
+    <li>次の整関数の位数を求めよ。(a) 多項式、(b) $e^{z}$、(c) $e^{z^{k}}$、(d) $\cos\sqrt{z}$、(e) $\sin z$、(f) $1/\Gamma(z)$。<span class="lv">★★★★☆</span></li>
+
+    <li>Jensen の公式（第 I 巻・問題 17）を用いて、位数 $\rho$ の整関数の零点 $\{a_{n}\}$ について
+      $$n(r)=O\!\left(r^{\rho+\varepsilon}\right),\qquad \sum_{n}\frac{1}{|a_{n}|^{\rho+\varepsilon}}\lt\infty\quad(\forall\varepsilon\gt0)$$
+      を示せ。<span class="lv">★★★★★</span></li>
+
+    <li>（Hadamard の因数分解定理）位数 $\rho$ の整関数 $f$ は
+      $$f(z)=z^{m}e^{P(z)}\prod_{n}E_{p}\!\left(\frac{z}{a_{n}}\right),\qquad p=\lfloor\rho\rfloor,\ \ \deg P\le\rho$$
+      と書けることを示せ（証明の全体像を追い、$f'/f$ の評価が要となる箇所を明示すること）。<span class="lv">★★★★★</span></li>
+
+    <li>系として次を示せ。
+      (a) 位数が整数でない整関数は、無限個の零点をもつ。
+      (b) 位数 $\lt1$ で零点をもたない整関数は定数。
+      (c) 位数 $\rho$ の整関数 $f$ と任意の $w\in\mathbb{C}$ に対し、$f(z)=w$ の解は（$\rho$ が非整数なら）無限個ある。<span class="lv">★★★★★</span></li>
+
+    <li>$\sin\pi z$ の位数が $1$ であることを確かめ、Hadamard の定理から積表示 $\sin\pi z=\pi z\prod(1-z^{2}/n^{2})$ を再導出せよ。指数因子 $e^{P(z)}$ が $P(z)=\text{const}$ になる理由を、$\sin$ の奇関数性から説明せよ。<span class="lv">★★★★★</span></li>
+  </ol>
+</div>
+
+<div class="prob">
+  <div class="prob-head">
+    <span class="no">挑戦 5</span><span class="ttl">Bloch・Schottky から Picard へ</span><span class="stars">★★★★★</span>
+  </div>
+  <p class="preamble">目標：<em>定数でない整関数は、高々 1 つの例外を除いてすべての複素数値をとる</em>（Picard の小定理）。Liouville の定理の、途方もない強化である。</p>
+  <ol class="items">
+    <li>（Bloch の定理）$f$ が $\overline{\mathbb{D}}$ の近傍で正則、$f(0)=0$、$f'(0)=1$ とする。このとき $f(\mathbb{D})$ は半径 $1/72$ の円板を含むことを示せ。（$\max_{|z|=r}|f'|$ が急に大きくなる半径を選び、適当な部分円板上で $f$ の振る舞いを押さえる。）<span class="lv">★★★★★</span></li>
+
+    <li>（Landau の定理）(1) の系として、$f(0)=a_{0}$、$f'(0)=a_{1}\neq0$ で $0$ と $1$ を値にとらない正則関数が $|z|\lt R$ 上に存在するならば、$R$ は $a_{0},a_{1}$ のみで定まる値で上から押さえられることを示せ。<span class="lv">★★★★★</span></li>
+
+    <li>$f$ が $\mathbb{C}$ 上正則で $0$ と $1$ を値にとらないとする。$\mathbb{C}$ の単連結性を繰り返し使って、整関数 $g$ で
+      $$f(z)=-\exp\bigl(i\pi\cosh 2g(z)\bigr)$$
+      となるものが存在することを示せ。（$\sqrt{f}$ と $\sqrt{f-1}$ の分枝をとり、$\sqrt{f}-\sqrt{f-1}$ が零点をもたないことから対数をとる、という順序で進む。）<span class="lv">★★★★★</span></li>
+
+    <li>(3) の $g$ は
+      $$E=\left\{\pm\log\bigl(\sqrt{n}+\sqrt{n-1}\bigr)+\tfrac{1}{2}i m\pi\ :\ n\ge1,\ m\in\mathbb{Z}\right\}$$
+      の点を値にとらないことを確かめよ（定数の細部は $\cosh$ の逆関数から自分で追うこと）。さらに $\mathbb{C}\setminus E$ は半径 $1$ の円板を含まないことを示せ。<span class="lv">★★★★★</span></li>
+
+    <li>(1) と (4) を組み合わせて $g$ が定数、したがって $f$ が定数であることを結論せよ（Picard の小定理）。さらに、例外値をちょうど 1 個もつ整関数の例（$e^{z}$ は $0$ をとらない）を挙げ、有理型関数では例外値が 2 個までありうること（$\tan z$ は $\pm i$ をとらない）と対比せよ。<span class="lv">★★★★★</span></li>
+
+    <li>（Picard の大定理へ）Schottky の定理と Montel の大定理（$0,1$ を値にとらない正則関数の族は正規）を述べ、そこから「真性特異点の任意の近傍で、$f$ は高々 1 つの例外を除くすべての値を無限回とる」が従う筋道を説明せよ。第 I 巻・問題 7 (4) の Casorati–Weierstrass と比べて、何がどれだけ強くなったかを述べよ。<span class="lv">★★★★★</span></li>
+  </ol>
+</div>
+
+<div class="prob">
+  <div class="prob-head">
+    <span class="no">挑戦 6</span><span class="ttl">単葉関数・面積定理・Koebe $1/4$</span><span class="stars">★★★★★</span>
+  </div>
+  <p class="preamble">$\mathcal{S}$ を、$\mathbb{D}$ 上単射正則で $f(0)=0,\ f'(0)=1$ をみたす $f(z)=z+a_{2}z^{2}+a_{3}z^{3}+\cdots$ の全体とする。$\Sigma$ を、$\{|z|\gt1\}$ 上単射正則で $g(z)=z+b_{0}+b_{1}z^{-1}+\cdots$ の形のものの全体とする。</p>
+  <ol class="items">
+    <li>（面積定理）$g\in\Sigma$ に対し $\displaystyle\sum_{n\ge1}n|b_{n}|^{2}\le1$ を示せ。（$|z|=r\gt1$ の像が囲む領域の面積を Green の定理で計算し、面積が非負であることを使う。）<span class="lv">★★★★★</span></li>
+
+    <li>Koebe 関数 $\displaystyle k(z)=\frac{z}{(1-z)^{2}}=\sum_{n\ge1}nz^{n}$ が $\mathcal{S}$ に属し、その像が $\mathbb{C}\setminus(-\infty,-1/4]$ であることを示せ。<span class="lv">★★★★☆</span></li>
+
+    <li>（Bieberbach）$f\in\mathcal{S}$ に対し $|a_{2}|\le2$ を示し、等号成立は Koebe 関数の回転 $e^{-i\alpha}k(e^{i\alpha}z)$ に限ることを示せ。（$h(z)=\sqrt{f(z^{2})}$ が $\mathcal{S}$ に属する奇関数であることを示し、$1/h(1/z)\in\Sigma$ に (1) を適用する。）<span class="lv">★★★★★</span></li>
+
+    <li>（Koebe $1/4$ 定理）$f\in\mathcal{S}$ ならば $f(\mathbb{D})\supset\mathbb{D}(0,1/4)$ を示せ。（$w\notin f(\mathbb{D})$ のとき $\dfrac{wf(z)}{w-f(z)}\in\mathcal{S}$ であることを使い、(3) を適用する。）<span class="lv">★★★★★</span></li>
+
+    <li>（歪曲定理）$f\in\mathcal{S}$, $|z|=r\lt1$ に対し
+      $$\frac{1-r}{(1+r)^{3}}\le|f'(z)|\le\frac{1+r}{(1-r)^{3}},\qquad \frac{r}{(1+r)^{2}}\le|f(z)|\le\frac{r}{(1-r)^{2}}$$
+      を示せ。等号は Koebe 関数の回転で達成される。<span class="lv">★★★★★</span></li>
+
+    <li>Bieberbach 予想 $|a_{n}|\le n$（de Branges の定理、1985）を述べ、Koebe 関数がこの評価を各 $n$ で達成することを確かめよ。$n=2$ の場合が (3) であり、$n=3$ 以降がなぜ格段に難しいのかを、(1) の証明が $a_{2}$ しか捕まえていないことから説明せよ。<span class="lv">★★★★☆</span></li>
+  </ol>
+</div>
+
+<div class="prob">
+  <div class="prob-head">
+    <span class="no">挑戦 7</span><span class="ttl">θ 関数と ζ の関数等式</span><span class="stars">★★★★★</span>
+  </div>
+  <p class="preamble">$t\gt0$ に対し $\displaystyle\theta(t)=\sum_{n\in\mathbb{Z}}e^{-\pi n^{2}t}$、$\displaystyle\psi(t)=\sum_{n\ge1}e^{-\pi n^{2}t}=\frac{\theta(t)-1}{2}$ とおく。</p>
+  <ol class="items">
+    <li>（Poisson の和公式）$F$ が十分よい減衰をもつとき $\displaystyle\sum_{n\in\mathbb{Z}}F(n)=\sum_{k\in\mathbb{Z}}\hat F(k)$（$\hat F(\xi)=\int_{\mathbb{R}}F(x)e^{-2\pi i x\xi}dx$）が成り立つことを、$\Phi(x)=\sum_{n}F(x+n)$ の Fourier 級数から示せ。<span class="lv">★★★★☆</span></li>
+
+    <li>$F(x)=e^{-\pi t x^{2}}$ の Fourier 変換を求め（第 I 巻・問題 8 (4) の Gauss 積分が効く）、
+      $$\theta\!\left(\frac1t\right)=\sqrt{t}\,\theta(t)\qquad(t\gt0)$$
+      を示せ。<span class="lv">★★★★★</span></li>
+
+    <li>$\operatorname{Re}s\gt1$ において
+      $$\pi^{-s/2}\Gamma\!\left(\frac{s}{2}\right)\zeta(s)=\int_{0}^{\infty}t^{\frac{s}{2}-1}\psi(t)\,dt$$
+      を示せ。<span class="lv">★★★★☆</span></li>
+
+    <li>(3) の積分を $\int_{0}^{1}+\int_{1}^{\infty}$ に分け、$\int_{0}^{1}$ に (2) を適用して
+      $$\xi(s):=\pi^{-s/2}\Gamma\!\left(\frac{s}{2}\right)\zeta(s)=\frac{1}{s(s-1)}+\int_{1}^{\infty}\left(t^{\frac{s}{2}-1}+t^{\frac{1-s}{2}-1}\right)\psi(t)\,dt$$
+      を示せ。右辺が $\mathbb{C}$ 全体で有理型（極は $s=0,1$ のみ）であり、$s\mapsto1-s$ について対称であることから
+      $$\xi(s)=\xi(1-s)$$
+      を結論せよ。<span class="lv">★★★★★</span></li>
+
+    <li>関数等式から次を導け。(a) $\zeta(-2n)=0$（$n\ge1$：自明零点）、(b) $\zeta$ の自明でない零点はすべて臨界帯 $0\le\operatorname{Re}s\le1$ にあり、直線 $\operatorname{Re}s=1/2$ に関して（また実軸に関して）対称に分布すること。Riemann 予想を正確に述べよ。<span class="lv">★★★★★</span></li>
+  </ol>
+</div>
+
+<div class="prob">
+  <div class="prob-head">
+    <span class="no">挑戦 8</span><span class="ttl">素数定理への道</span><span class="stars">★★★★★</span>
+  </div>
+  <p class="preamble">目標：$\displaystyle\pi(x)\sim\frac{x}{\log x}$。Chebyshev の $\vartheta(x)=\sum_{p\le x}\log p$ と $\displaystyle\Phi(s)=\sum_{p}\frac{\log p}{p^{s}}$ を用いる（$p$ は素数を走る）。</p>
+  <ol class="items">
+    <li>$\operatorname{Re}s\gt1$ で $\displaystyle-\frac{\zeta'(s)}{\zeta(s)}=\sum_{p}\sum_{k\ge1}\frac{\log p}{p^{ks}}$ を示し、$\displaystyle\Phi(s)=-\frac{\zeta'(s)}{\zeta(s)}-\sum_{p}\frac{\log p}{p^{s}(p^{s}-1)}$、および右辺第 2 項が $\operatorname{Re}s\gt1/2$ で正則であることを示せ。<span class="lv">★★★★☆</span></li>
+
+    <li>（$\zeta$ の非零性）$\sigma\gt1$ と $t\in\mathbb{R}$ に対し、恒等式 $3+4\cos\theta+\cos2\theta=2(1+\cos\theta)^{2}\ge0$ を用いて
+      $$\bigl|\zeta(\sigma)^{3}\zeta(\sigma+it)^{4}\zeta(\sigma+2it)\bigr|\ge1$$
+      を示し、そこから $\zeta(1+it)\neq0$（$t\neq0$）を結論せよ。<span class="lv">★★★★★</span></li>
+
+    <li>(1)(2) と $\zeta$ の $s=1$ における 1 位の極から、$\displaystyle\Phi(s)-\frac{1}{s-1}$ が $\operatorname{Re}s\ge1$ を含む開集合へ正則に延びることを示せ。<span class="lv">★★★★★</span></li>
+
+    <li>（Newman の解析的定理）$f:[0,\infty)\to\mathbb{R}$ を有界可測とし、$\displaystyle g(z)=\int_{0}^{\infty}f(t)e^{-zt}dt$（$\operatorname{Re}z\gt0$ で正則）が $\operatorname{Re}z\ge0$ を含む開集合へ正則に延びるならば、$\displaystyle\int_{0}^{\infty}f(t)\,dt$ は収束して $g(0)$ に等しい ― これを、半径 $R$ の円弧と直線を組み合わせた経路に $e^{zT}\left(1+\frac{z^{2}}{R^{2}}\right)$ を掛けて積分する Newman の方法で示せ。<span class="lv">★★★★★</span></li>
+
+    <li>$\vartheta(x)=O(x)$（Chebyshev）を認めた上で、(3)(4) を $f(t)=\vartheta(e^{t})e^{-t}-1$ に適用して $\displaystyle\int_{1}^{\infty}\frac{\vartheta(x)-x}{x^{2}}dx$ の収束を示し、$\vartheta$ の単調性から $\vartheta(x)\sim x$ を導け。さらに部分和分により $\pi(x)\sim x/\log x$ を結論せよ。<span class="lv">★★★★★</span></li>
+  </ol>
+  <div class="note"><span class="lbl">注</span>(2) の不等式は「$\zeta$ が $1+it$ で消えると $\sigma\to1^{+}$ で左辺が $0$ に向かってしまう」という形で使う。$\zeta$ の極の 3 乗と零点の 4 乗の競争であり、係数 $3,4,1$ はそのために選ばれている。</div>
+</div>
+
+<div class="prob">
+  <div class="prob-head">
+    <span class="no">挑戦 9</span><span class="ttl">複素力学系入門 ― Fatou と Julia</span><span class="stars">★★★★★</span>
+  </div>
+  <p class="preamble">$R$ を次数 $d\ge2$ の有理関数とし、$R^{n}$ を $n$ 回合成とする。$\hat{\mathbb{C}}$ の点 $z$ が Fatou 集合 $F(R)$ に属するとは、$z$ のある近傍で族 $\{R^{n}\}_{n\ge1}$ が正規であることをいい、$J(R)=\hat{\mathbb{C}}\setminus F(R)$ を Julia 集合という。</p>
+  <ol class="items">
+    <li>$F(R)$ は開集合、$J(R)$ はコンパクトであり、ともに完全不変（$R^{-1}(J)=J=R(J)$）であることを示せ。また $J(R^{k})=J(R)$（$k\ge1$）を示せ。<span class="lv">★★★★☆</span></li>
+
+    <li>$R(z)=z^{2}$ のとき $J(R)$ が単位円周であることを示せ。（$|z|\lt1$ と $|z|\gt1$ では $\{R^{n}\}$ が正規であること、円周上の点の任意の近傍では正規でないことを、それぞれ示す。）<span class="lv">★★★★☆</span></li>
+
+    <li>$f_{c}(z)=z^{2}+c$ とする。$|z|\gt\max(|c|,2)$ ならば $|f_{c}^{n}(z)|\to\infty$ であることを示し、充填 Julia 集合 $K_{c}=\{z:\{f_{c}^{n}(z)\}\ \text{が有界}\}$ がコンパクトで $J(f_{c})=\partial K_{c}$ となることを示せ。<span class="lv">★★★★★</span></li>
+
+    <li>（Montel の大定理の威力）$z_{0}\in J(R)$ とし、$U$ を $z_{0}$ の任意の近傍とする。$\displaystyle\bigcup_{n\ge1}R^{n}(U)$ が $\hat{\mathbb{C}}$ から高々 2 点を除いた集合を覆うことを示せ。系として $J(R)\neq\emptyset$、$J(R)$ が完全集合（孤立点をもたない閉集合）であることを示せ。<span class="lv">★★★★★</span></li>
+
+    <li>$|c|\gt2$ のとき、臨界点 $0$ の軌道が発散することを確かめ、$J(f_{c})$ が完全不連結（Cantor 集合）になる筋道を述べよ。Mandelbrot 集合 $M=\{c:\{f_{c}^{n}(0)\}\ \text{が有界}\}$ の定義がなぜ「臨界点の軌道」で書かれているのかを説明せよ。<span class="lv">★★★★★</span></li>
+  </ol>
+</div>
+
+<div class="prob">
+  <div class="prob-head">
+    <span class="no">挑戦 10</span><span class="ttl">Schwarz–Christoffel の公式</span><span class="stars">★★★★★</span>
+  </div>
+  <p class="preamble">Riemann の写像定理は等角写像の<em>存在</em>しか言わない。多角形が相手なら、写像を<em>書き下す</em>ことができる。</p>
+  <ol class="items">
+    <li>$x_{1}\lt x_{2}\lt\cdots\lt x_{n}$ を実数、$\alpha_{1},\dots,\alpha_{n}\in(0,2)$ を $\sum(\alpha_{k}-1)=-2$ をみたすものとし、
+      $$f(z)=C\int_{z_{0}}^{z}\prod_{k=1}^{n}(\zeta-x_{k})^{\alpha_{k}-1}\,d\zeta+C'$$
+      （各因子は $\mathbb{H}$ 上の適当な分枝）と定める。$f$ が $\mathbb{H}$ 上正則で、実軸の各区間 $(x_{k},x_{k+1})$ を線分に写し、$x_{k}$ を通過するときに接線方向が $\pi(\alpha_{k}-1)$ だけ回転することを示せ。すなわち $f(\mathbb{H})$ は内角 $\pi\alpha_{k}$ の多角形である。<span class="lv">★★★★★</span></li>
+
+    <li>逆に、$P$ を有界な単純多角形、$f:\mathbb{H}\to P$ を等角同型とすると、$f$ は (1) の形に書けることを示せ。（境界対応の連続性については Carathéodory の定理を認めてよい。鏡像原理を各辺で用いて $f$ を $\mathbb{C}$ 上に延長し、$f''/f'$ を調べる。）<span class="lv">★★★★★</span></li>
+
+    <li>$n=3$、$x_{1},x_{2},x_{3}=0,1,\infty$ として、$\mathbb{H}$ から三角形への写像が超幾何型の積分
+      $\displaystyle f(z)=C\int_{0}^{z}\zeta^{\alpha_{1}-1}(\zeta-1)^{\alpha_{2}-1}d\zeta$ で与えられることを示せ（$x_{3}=\infty$ に対応する因子が消える理由を説明せよ）。<span class="lv">★★★★★</span></li>
+
+    <li>$\alpha_{k}=1/2$（$k=1,\dots,4$）、$x_{k}=\pm1,\pm1/k_{0}$（$0\lt k_{0}\lt1$）とすると、
+      $$f(z)=\int_{0}^{z}\frac{d\zeta}{\sqrt{(1-\zeta^{2})(1-k_{0}^{2}\zeta^{2})}}$$
+      が $\mathbb{H}$ を長方形に写すことを示せ。楕円積分と楕円関数がここで顔を出す理由を、逆写像 $f^{-1}$ の二重周期性から説明せよ。<span class="lv">★★★★★</span></li>
+
+    <li>退化した場合として、$\mathbb{H}$ から半無限帯 $\{|\operatorname{Re}w|\lt\pi/2,\ \operatorname{Im}w\gt0\}$ への写像が $w=\arcsin z$ で与えられることを (1) から導き、第 I 巻・問題 13 (3) と整合することを確かめよ。<span class="lv">★★★★☆</span></li>
+  </ol>
+</div>

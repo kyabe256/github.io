@@ -1,0 +1,189 @@
+<h2 class="part basic">第 0 部　基礎編<span class="en">FUNDAMENTALS &mdash; DRILLS</span></h2>
+<p class="part-lead">ここは「詰まってはいけない場所」である。定義に戻れば必ず解ける問題だけを並べた。ただし、実関数の常識が最初に破られる瞬間 ― $\sin z=2$ に解があること、$\log$ が一意に定まらないこと、$\overline{z}$ が正則でないこと ― を、計算の手ざわりとして捕まえてほしい。</p>
+
+<div class="prob basic">
+  <div class="prob-head">
+    <span class="no">基礎 1</span><span class="ttl">複素数の代数と幾何</span><span class="stars">★☆☆☆☆</span>
+  </div>
+  <ol class="items">
+    <li>次を $a+bi$（$a,b\in\mathbb{R}$）の形にせよ。
+      <span class="qgrid"><span>(a) $(1+i)^{10}$</span><span>(b) $\dfrac{1}{2-3i}$</span><span>(c) $\dfrac{3+4i}{1-2i}$</span><span>(d) $\bigl(1+i\sqrt{3}\bigr)^{12}$</span></span><span class="lv">★☆☆☆☆</span></li>
+
+    <li>極形式 $z=re^{i\theta}$ と de Moivre の公式を用いて次を求めよ。
+      (a) $z^{5}=1$ のすべての解、(b) $1+i$ の平方根、(c) $z^{3}=-8i$ のすべての解。
+      また (a) の解の総和が $0$ になる理由を、代数的にも幾何的にも説明せよ。<span class="lv">★☆☆☆☆</span></li>
+
+    <li>次の条件をみたす点 $z$ の全体は、複素平面上でどのような図形か。
+      (a) $|z-1|=2|z+1|$、(b) $\operatorname{Re}\dfrac{1}{z}=\dfrac12$、(c) $|z-1|+|z+1|=4$、(d) $\arg\dfrac{z-1}{z+1}=\dfrac{\pi}{2}$。<span class="lv">★★☆☆☆</span></li>
+
+    <li>$|a|\lt1,\ |b|\lt1$ のとき $\left|\dfrac{a-b}{1-\overline{a}b}\right|\lt 1$ を示せ。また $|a|=1$ または $|b|=1$ のとき（分母が $0$ でなければ）この値が $1$ になることを示せ。<span class="lv">★★☆☆☆</span></li>
+
+    <li>立体射影 $\pi:S^{2}\setminus\{N\}\to\mathbb{C}$ について、$S^{2}$ 上の円が $\mathbb{C}$ の円または直線に写ることを認めた上で、$\hat{\mathbb{C}}$ における「$z\to\infty$」が球面上では北極への収束を意味することを説明せよ。また $z$ と $1/\overline{z}$ が球面上でどのような位置関係にあるかを述べよ。<span class="lv">★★☆☆☆</span></li>
+  </ol>
+</div>
+
+<div class="prob basic">
+  <div class="prob-head">
+    <span class="no">基礎 2</span><span class="ttl">初等関数と多価性</span><span class="stars">★★☆☆☆</span>
+  </div>
+  <ol class="items">
+    <li>$e^{z}$ の定義から $e^{z+w}=e^{z}e^{w}$、$e^{z}\neq0$、周期 $2\pi i$ を確かめ、次の方程式の解をすべて求めよ。
+      (a) $e^{z}=-1$、(b) $e^{z}=1+i$、(c) $e^{z}=e$。<span class="lv">★☆☆☆☆</span></li>
+
+    <li>主枝 $\operatorname{Log}z=\log|z|+i\operatorname{Arg}z$（$-\pi\lt\operatorname{Arg}z\le\pi$）について次を計算せよ。
+      (a) $\operatorname{Log}(-1+i)$、(b) $\operatorname{Log}(-e)$、(c) $\log(-1+i)$ のすべての値。
+      さらに $\operatorname{Log}(z_{1}z_{2})=\operatorname{Log}z_{1}+\operatorname{Log}z_{2}$ が成り立たない具体例を挙げよ。<span class="lv">★★☆☆☆</span></li>
+
+    <li>$z^{w}=e^{w\log z}$ と定める。次の値をすべて求め、主値も示せ。
+      (a) $i^{i}$、(b) $2^{i}$、(c) $(-1)^{\sqrt{2}}$、(d) $(1+i)^{1-i}$。<span class="lv">★★☆☆☆</span></li>
+
+    <li>$\sin z=\dfrac{e^{iz}-e^{-iz}}{2i}$ などの定義から次を示せ。
+      (a) $|\sin z|^{2}=\sin^{2}x+\sinh^{2}y$（$z=x+iy$）、
+      (b) $\sin z,\cos z$ は $\mathbb{C}$ 上で有界でない、
+      (c) $\sin z=0\iff z=n\pi$、$\cos z=0\iff z=\pi/2+n\pi$。<span class="lv">★★☆☆☆</span></li>
+
+    <li>方程式 $\sin z=2$ の解をすべて求めよ。実関数では解がないのに複素数では解が存在する ― この違いがどこから来るのかを (4)(a) を用いて説明せよ。<span class="lv">★★★☆☆</span></li>
+
+    <li>$\cosh z,\sinh z$ と $\cos z,\sin z$ の関係式を導き、$\cosh z=0$ の解をすべて求めよ。<span class="lv">★☆☆☆☆</span></li>
+  </ol>
+</div>
+
+<div class="prob basic">
+  <div class="prob-head">
+    <span class="no">基礎 3</span><span class="ttl">正則性の判定と調和共役</span><span class="stars">★★☆☆☆</span>
+  </div>
+  <ol class="items">
+    <li>次の各関数について、複素微分可能な点の全体を求め、さらに正則な領域があるかどうかを述べよ。
+      <span class="qgrid"><span>(a) $f(z)=\overline{z}$</span><span>(b) $f(z)=|z|^{2}$</span><span>(c) $f(z)=z\operatorname{Re}z$</span><span>(d) $f(z)=e^{\overline{z}}$</span><span>(e) $f(z)=x^{2}+iy^{2}$</span></span><span class="lv">★★☆☆☆</span></li>
+
+    <li>次の $u$ が調和であることを確かめ、調和共役 $v$（$f=u+iv$ が正則）を求め、$f$ を $z$ の式で表せ。
+      (a) $u=x^{3}-3xy^{2}$、(b) $u=\dfrac{x}{x^{2}+y^{2}}$（$z\neq0$）、(c) $u=e^{-y}\cos x$。<span class="lv">★★☆☆☆</span></li>
+
+    <li>$u=\log|z|$ は $\mathbb{C}\setminus\{0\}$ で調和である。しかし $\mathbb{C}\setminus\{0\}$ 全体では調和共役が（一価関数としては）存在しないことを示せ。どこに原因があるか述べよ。<span class="lv">★★★☆☆</span></li>
+
+    <li>$w=z^{2}$ による像を調べよ。(a) 直線 $x=c\ (c\neq0)$ と $y=c\ (c\neq0)$ の像、(b) 第一象限の像、(c) 原点で等角性が崩れること（角が 2 倍になること）を確かめよ。<span class="lv">★★☆☆☆</span></li>
+  </ol>
+</div>
+
+<div class="prob basic">
+  <div class="prob-head">
+    <span class="no">基礎 4</span><span class="ttl">複素線積分の計算</span><span class="stars">★★☆☆☆</span>
+  </div>
+  <ol class="items">
+    <li>$\displaystyle\int_{C}\overline{z}\,dz$ を、$0$ から $1+i$ に至る次の 2 つの経路について計算せよ。
+      (a) 線分、(b) $0\to1\to1+i$ と進む折れ線。値が一致しない事実は何を意味するか。<span class="lv">★★☆☆☆</span></li>
+
+    <li>$n\in\mathbb{Z}$、$r\gt0$ のとき $\displaystyle\oint_{|z|=r}z^{n}\,dz$ を直接計算（$z=re^{i\theta}$ と置換）で求めよ。$n=-1$ のときだけ $0$ にならない事実が、以降のすべての留数計算の出発点である。<span class="lv">★☆☆☆☆</span></li>
+
+    <li>原始関数を用いて次を求めよ。積分路は端点を結ぶ任意の曲線でよい理由も述べよ。
+      (a) $\displaystyle\int_{0}^{i}ze^{z}\,dz$、(b) $\displaystyle\int_{1}^{i}\frac{dz}{z}$（経路は上半平面内）、(c) $\displaystyle\int_{0}^{\pi i}\cos z\,dz$。<span class="lv">★★☆☆☆</span></li>
+
+    <li>（ML 不等式）$\displaystyle\left|\oint_{|z|=2}\frac{dz}{z^{2}+1}\right|\le\frac{4\pi}{3}$ を示せ。さらに $R\to\infty$ のとき
+      $\displaystyle\left|\int_{\Gamma_{R}}\frac{dz}{z^{2}+1}\right|\to0$（$\Gamma_{R}$ は上半平面の半円）を示せ。<span class="lv">★★☆☆☆</span></li>
+  </ol>
+</div>
+
+<div class="prob basic">
+  <div class="prob-head">
+    <span class="no">基礎 5</span><span class="ttl">Cauchy の定理と積分公式</span><span class="stars">★★☆☆☆</span>
+  </div>
+  <ol class="items">
+    <li>次の積分を求めよ。まず「特異点が積分路の内部にあるか」を判定すること。
+      <span class="qgrid"><span>(a) $\displaystyle\oint_{|z|=1}\frac{dz}{z^{2}-4}$</span><span>(b) $\displaystyle\oint_{|z|=3}\frac{dz}{z^{2}-4}$</span><span>(c) $\displaystyle\oint_{|z-1|=1}\frac{dz}{z^{2}-1}$</span><span>(d) $\displaystyle\oint_{|z|=2}\frac{z\,dz}{z^{2}+1}$</span></span><span class="lv">★★☆☆☆</span></li>
+
+    <li>高階の Cauchy 積分公式を用いて次を求めよ。
+      (a) $\displaystyle\oint_{|z|=1}\frac{e^{z}}{z^{3}}\,dz$、(b) $\displaystyle\oint_{|z|=1}\frac{\cos z}{z^{2}}\,dz$、(c) $\displaystyle\oint_{|z|=3}\frac{e^{z}}{(z-1)^{2}(z-2)}\,dz$。<span class="lv">★★☆☆☆</span></li>
+
+    <li>$f(z)=z^{2}+z$ について、平均値の性質 $\displaystyle f(a)=\frac{1}{2\pi}\int_{0}^{2\pi}f(a+re^{i\theta})\,d\theta$ を $a=1,\ r=2$ で直接計算して確かめよ。<span class="lv">★☆☆☆☆</span></li>
+
+    <li>Cauchy の評価式 $\displaystyle|f^{(n)}(a)|\le\frac{n!\,M}{r^{n}}$ を導き、これを用いて Liouville の定理を示せ。さらに Liouville の定理から代数学の基本定理を示せ。<span class="lv">★★★☆☆</span></li>
+  </ol>
+</div>
+
+<div class="prob basic">
+  <div class="prob-head">
+    <span class="no">基礎 6</span><span class="ttl">べき級数と Taylor 展開</span><span class="stars">★★☆☆☆</span>
+  </div>
+  <ol class="items">
+    <li>次のべき級数の収束半径を求めよ。
+      <span class="qgrid"><span>(a) $\displaystyle\sum_{n\ge0}\frac{z^{n}}{n!}$</span><span>(b) $\displaystyle\sum_{n\ge0}n!\,z^{n}$</span><span>(c) $\displaystyle\sum_{n\ge1}\frac{z^{n}}{n2^{n}}$</span><span>(d) $\displaystyle\sum_{n\ge0}\frac{n^{2}+1}{3^{n}}z^{n}$</span></span><span class="lv">★☆☆☆☆</span></li>
+
+    <li>次の Taylor 展開と収束半径を求めよ。
+      (a) $\operatorname{Log}(1+z)$（$z=0$ のまわり）、(b) $\dfrac{1}{z-3}$（$z=1$ のまわり）、(c) $\dfrac{1}{1+z^{2}}$（$z=0$ のまわり）、(d) $\sqrt{1+z}$ の主枝（$z=0$ のまわり、最初の 4 項）。<span class="lv">★★☆☆☆</span></li>
+
+    <li>(2)(c) の級数の収束半径は $1$ である。実軸上で見るかぎり $1/(1+x^{2})$ は $\mathbb{R}$ 全体で何の問題もない関数なのに、なぜ収束半径が有限なのか。複素平面を用いて説明せよ。<span class="lv">★★☆☆☆</span></li>
+
+    <li>$\displaystyle\frac{e^{z}}{1-z}=\sum_{n\ge0}c_{n}z^{n}$ の $c_{0},\dots,c_{4}$ を求め、$c_{n}=\sum_{k=0}^{n}\frac{1}{k!}$ であることを示せ。また収束半径を求めよ。<span class="lv">★★☆☆☆</span></li>
+
+    <li>$f$ が $|z|\lt R$ で正則ならば $f$ は $z=0$ のまわりで Taylor 展開でき、その収束半径は「$0$ から $f$ の最も近い特異点までの距離」以上であることを、Cauchy の積分公式から説明せよ。<span class="lv">★★★☆☆</span></li>
+  </ol>
+</div>
+
+<div class="prob basic">
+  <div class="prob-head">
+    <span class="no">基礎 7</span><span class="ttl">Laurent 展開・特異点・留数</span><span class="stars">★★☆☆☆</span>
+  </div>
+  <ol class="items">
+    <li>次の Laurent 展開を、指定された領域で求めよ。
+      (a) $e^{1/z}$（$0\lt|z|$）、(b) $\dfrac{\sin z}{z^{3}}$（$0\lt|z|$）、(c) $\dfrac{1}{z^{2}(z-1)}$（$0\lt|z|\lt1$）、(d) $\dfrac{1}{z^{2}(z-1)}$（$|z|\gt1$）。<span class="lv">★★☆☆☆</span></li>
+
+    <li>次の関数の孤立特異点を挙げ、種類（可除・$k$ 位の極・真性）を判定せよ。
+      <span class="qgrid"><span>(a) $\dfrac{\sin z}{z}$</span><span>(b) $\dfrac{e^{z}-1}{z^{2}}$</span><span>(c) $\dfrac{1}{z^{2}(z-1)^{3}}$</span><span>(d) $z\,e^{1/z}$</span><span>(e) $\dfrac{\cos z}{z-\pi/2}$</span></span><span class="lv">★★☆☆☆</span></li>
+
+    <li>留数を求めよ。1 位の極には $\operatorname{Res}=p(a)/q'(a)$、$k$ 位の極には微分の公式を使うこと。
+      (a) $\displaystyle\operatorname*{Res}_{z=0}\frac{e^{z}-1}{z^{3}}$、(b) $\displaystyle\operatorname*{Res}_{z=i}\frac{z}{(z^{2}+1)^{2}}$、(c) $\displaystyle\operatorname*{Res}_{z=0}\cot z$、(d) $\displaystyle\operatorname*{Res}_{z=0}\frac{1}{z\sin z}$、(e) $\displaystyle\operatorname*{Res}_{z=1}\frac{z^{3}}{(z-1)^{2}(z+2)}$。<span class="lv">★★★☆☆</span></li>
+
+    <li>留数定理を用いて次を求めよ。
+      (a) $\displaystyle\oint_{|z|=2}\frac{dz}{z(z-1)^{2}}$、(b) $\displaystyle\oint_{|z|=1}z^{2}e^{1/z}\,dz$、(c) $\displaystyle\oint_{|z|=4}\tan z\,dz$。<span class="lv">★★★☆☆</span></li>
+  </ol>
+</div>
+
+<div class="prob basic">
+  <div class="prob-head">
+    <span class="no">基礎 8</span><span class="ttl">留数による実定積分（入門）</span><span class="stars">★★★☆☆</span>
+  </div>
+  <p class="preamble">第 I 巻・問題 8、9 の前段にあたる基本パターンである。「置換」「経路」「遠方評価」の三点セットを毎回書く習慣をつけること。</p>
+  <ol class="items">
+    <li>$z=e^{i\theta}$ と置換して次を求めよ。
+      (a) $\displaystyle\int_{0}^{2\pi}\frac{d\theta}{5+4\cos\theta}$、(b) $\displaystyle\int_{0}^{2\pi}\frac{d\theta}{1-2a\cos\theta+a^{2}}$（$0\lt a\lt1$）。<span class="lv">★★☆☆☆</span></li>
+
+    <li>上半平面の半円経路を用いて次を求めよ。
+      (a) $\displaystyle\int_{-\infty}^{\infty}\frac{dx}{(x^{2}+a^{2})^{2}}$（$a\gt0$）、(b) $\displaystyle\int_{0}^{\infty}\frac{x^{2}}{x^{4}+1}\,dx$。<span class="lv">★★★☆☆</span></li>
+
+    <li>$e^{iz}$ に置き換えてから Jordan の補題を用いて $\displaystyle\int_{-\infty}^{\infty}\frac{\cos x}{x^{2}+1}\,dx$ を求めよ。$\cos z$ のまま上半平面の半円をとってはいけない理由を説明せよ。<span class="lv">★★★☆☆</span></li>
+
+    <li>$\displaystyle\int_{0}^{\infty}\frac{dx}{x^{3}+1}$ を、開き角 $2\pi/3$ の扇形経路を用いて求めよ。<span class="lv">★★★☆☆</span></li>
+  </ol>
+</div>
+
+<div class="prob basic">
+  <div class="prob-head">
+    <span class="no">基礎 9</span><span class="ttl">零点の数え上げ</span><span class="stars">★★★☆☆</span>
+  </div>
+  <ol class="items">
+    <li>Rouché の定理を用いて代数学の基本定理を示せ（$|z|=R$ 上で $z^{n}$ が主要項になるように $R$ をとる）。<span class="lv">★★☆☆☆</span></li>
+
+    <li>$p(z)=z^{5}+3z+1$ の零点について、$|z|\lt1$ にある個数と $1\lt|z|\lt2$ にある個数を求めよ。<span class="lv">★★★☆☆</span></li>
+
+    <li>$q(z)=z^{4}+5z+1$ の零点のうち $|z|\lt1$ にあるものの個数を求めよ。また $q$ の零点はすべて $|z|\lt2$ にあることを示せ。<span class="lv">★★★☆☆</span></li>
+
+    <li>$f(z)=z^{3}-2$ の零点を $|z|\lt2$ の中で数え上げることを、偏角原理 $\dfrac{1}{2\pi i}\oint\dfrac{f'}{f}dz$ の立場から説明せよ（具体的に計算せよという意味ではなく、なぜ $3$ になるかを偏角の変化として述べよ）。<span class="lv">★★★☆☆</span></li>
+  </ol>
+</div>
+
+<div class="prob basic">
+  <div class="prob-head">
+    <span class="no">基礎 10</span><span class="ttl">等角写像の基本</span><span class="stars">★★★☆☆</span>
+  </div>
+  <ol class="items">
+    <li>次の写像による像を求めよ。
+      (a) $w=z^{2}$ による第一象限の像、(b) $w=e^{z}$ による帯 $\{0\lt\operatorname{Im}z\lt\pi\}$ の像、
+      (c) $w=1/z$ による円 $|z-1|=1$（原点を除く）の像、(d) $w=e^{z}$ による半帯 $\{\operatorname{Re}z\lt0,\ 0\lt\operatorname{Im}z\lt\pi\}$ の像。<span class="lv">★★★☆☆</span></li>
+
+    <li>$3$ 点 $1,\ i,\ -1$ をこの順に $0,\ 1,\ \infty$ に写す Möbius 変換を求めよ。またこの変換による単位円周と単位円板の像を求めよ。<span class="lv">★★★☆☆</span></li>
+
+    <li>$\displaystyle w=\frac{z-i}{z+i}$ が $\mathbb{H}$ を $\mathbb{D}$ に写す等角同型であることを、境界と内部の一点を追うことで確かめよ。また逆写像を求めよ。<span class="lv">★★☆☆☆</span></li>
+
+    <li>第一象限 $\{x\gt0,\ y\gt0\}$ を $\mathbb{D}$ へ写す等角同型を、(1)(a) と (3) を組み合わせて構成せよ。<span class="lv">★★★☆☆</span></li>
+  </ol>
+</div>
