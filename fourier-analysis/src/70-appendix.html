@@ -1,0 +1,103 @@
+<h2 class="plain">付録 A　基礎編の答え</h2>
+
+<div class="warnbox">
+  <span class="big">⚠︎　答え合わせ専用</span>
+  基礎編は反復が目的なので、計算問題には<strong>値</strong>を載せました。<br>
+  導出・証明は一切書いていません。まず自分で最後まで走り切ってから開くこと。
+</div>
+
+<div class="ans">
+<h3 class="sec">基礎 1 ― Fourier 級数を計算する</h3>
+<p><span class="q">(1)(a)</span> $\displaystyle x\sim2\sum_{n\ge1}\frac{(-1)^{n+1}}{n}\sin nx$　（$x=\pi$ では $0$ に収束）</p>
+<p><span class="q">(b)</span> $\displaystyle|x|\sim\frac{\pi}{2}-\frac{4}{\pi}\sum_{k\ge0}\frac{\cos(2k+1)x}{(2k+1)^{2}}$　（$x=\pi$ では $\pi$）</p>
+<p><span class="q">(c)</span> $\displaystyle x^{2}\sim\frac{\pi^{2}}{3}+4\sum_{n\ge1}\frac{(-1)^{n}}{n^{2}}\cos nx$　（$x=\pi$ では $\pi^{2}$）</p>
+<p><span class="q">(d)</span> $\displaystyle\operatorname{sgn}x\sim\frac{4}{\pi}\sum_{k\ge0}\frac{\sin(2k+1)x}{2k+1}$　（$x=\pi$ では $0$）</p>
+<p><span class="q">(3)</span> 余弦級数は (1)(b) と同じ式、正弦級数は (1)(a) と同じ式。偶延長は連続だが、奇延長は $x=\pi$ で跳ぶ。</p>
+<p><span class="q">(4)</span> $\displaystyle c_{n}=\frac{(-1)^{n}\sinh(a\pi)}{\pi\,(a-in)}$.</p>
+<p><span class="q">(5)</span> (a) $e^{-inh}c_{n}$　(b) $c_{n-m}$　(c) $\overline{c_{-n}}$　(d) $c_{-n}$　(e) $in\,c_{n}$.</p>
+
+<h3 class="sec">基礎 2 ― Parseval と級数の和</h3>
+<p><span class="q">(3)</span> (a) $\dfrac{\pi^{2}}{6}$　(b) $\dfrac{\pi^{2}}{12}$　(c) $\dfrac{\pi^{4}}{90}$.</p>
+<p><span class="q">(4)</span> $\displaystyle\sum_{k\ge0}\frac{1}{(2k+1)^{2}}=\frac{\pi^{2}}{8}$、$\displaystyle\sum_{k\ge1}\frac{1}{(2k)^{2}}=\frac{\pi^{2}}{24}$（和は $\pi^{2}/6$）。</p>
+<p><span class="q">(5)</span> $a\to0^{+}$ で $\dfrac{\pi\coth\pi a}{a}=\dfrac{1}{a^{2}}+\dfrac{\pi^{2}}{3}+O(a^{2})$ となり、$n=0$ の項 $1/a^{2}$ を除いた残りが $2\sum_{n\ge1}n^{-2}=\pi^{2}/3$。</p>
+
+<h3 class="sec">基礎 3 ― 複素形・一般周期・係数の減衰</h3>
+<p><span class="q">(2)</span> 周期 $2L$ では $\displaystyle f\sim\sum_{n}c_{n}e^{in\pi x/L}$, $\displaystyle c_{n}=\frac{1}{2L}\int_{-L}^{L}f(x)e^{-in\pi x/L}dx$。
+  $f(x)=x$ に対しては $\displaystyle x\sim\frac{2L}{\pi}\sum_{n\ge1}\frac{(-1)^{n+1}}{n}\sin\frac{n\pi x}{L}$.</p>
+<p><span class="q">(4)</span> 減衰の対応：$\operatorname{sgn}x$（不連続）は $1/n$、$|x|$（折れ曲がり）は $1/n^{2}$、$x^{2}$（$C^{1}$ 接続）も $1/n^{2}$、$C^{\infty}$ なら任意次数より速い。</p>
+<p><span class="q">(5)(a)</span> 項別微分すると $2\sum_{n\ge1}(-1)^{n+1}\cos nx$ となり、どの点でも収束しない（$f'=1$ とは全く別物）。不連続点をもつ関数の級数は項別微分できない。</p>
+
+<h3 class="sec">基礎 4 ― 収束のしかたを見る</h3>
+<p><span class="q">(3)</span> $\displaystyle\frac{2}{\pi}\int_{0}^{\pi}\frac{\sin t}{t}dt=\frac{2}{\pi}\mathrm{Si}(\pi)=1.178979\ldots$（跳び $2$ に対しておよそ $8.9\%$ の行き過ぎ）。</p>
+<p><span class="q">(4)</span> 決定的な違いは符号：$D_{N}$ は正負に振動して $\int|D_{N}|\to\infty$ だが、$K_{N}\ge0$ なので $\int|K_{N}|=2\pi$ のまま。</p>
+
+<h3 class="sec">基礎 5 ― Fourier 変換を計算する</h3>
+<p><span class="q">(1)</span> (a) $\operatorname{sinc}\xi=\dfrac{\sin\pi\xi}{\pi\xi}$　(b) $\operatorname{sinc}^{2}\xi$　(c) $\dfrac{2a}{a^{2}+4\pi^{2}\xi^{2}}$
+  (d) $\dfrac{1}{a+2\pi i\xi}$　(e) $e^{-\pi\xi^{2}}$　(f) $\sqrt{\dfrac{\pi}{a}}\,e^{-\pi^{2}\xi^{2}/a}$.</p>
+<p><span class="q">(5)</span> (a) $\pi$　(b) $\dfrac{2\pi}{3}$　(c) $\dfrac{\pi}{2}$.</p>
+</div>
+
+<h2 class="plain">付録 B　第 I 部以降への一行ヒント</h2>
+
+<div class="warnbox">
+  <span class="big">⚠︎　まだ開かないでください</span>
+  各大問につき一行、<strong>使う道具の名前</strong>だけを示します。方針も計算も書いていません。
+</div>
+
+<dl class="hints">
+  <dt>問題 1　Dirichlet 核と局所化原理</dt>
+  <dd>$S_{N}f(x_{0})-L=\frac{1}{2\pi}\int\bigl(f(x_{0}-t)-L\bigr)D_{N}(t)dt$ と書き、$D_{N}$ の分子 $\sin((N+\frac12)t)$ を Riemann–Lebesgue にぶつける。分母 $\sin(t/2)$ で割れるかどうかが判定法の分かれ目。</dd>
+
+  <dt>問題 2　Fejér の定理</dt>
+  <dd>近似単位元の議論は毎回同じ三段構え：$|t|\lt\delta$ で連続性、$|t|\ge\delta$ で核の小ささ、全体で $L^{1}$ ノルムの一様有界性。</dd>
+
+  <dt>問題 3　$L^{2}$ 理論</dt>
+  <dd>Hilbert 空間の一般論（射影・Bessel・完全性）に帰着させ、完全性だけを Fejér から供給する。</dd>
+
+  <dt>問題 4　発散する Fourier 級数</dt>
+  <dd>$\|S_{N}\|=L_{N}\to\infty$ と一様有界性原理。具体例は「周波数帯を離して足す」＝空隙級数の思想。</dd>
+
+  <dt>問題 5　反転公式</dt>
+  <dd>乗法公式に Gauss 関数を代入して $\varepsilon\to0$。Gauss 関数が自己双対であることが、証明の全重量を支えている。</dd>
+
+  <dt>問題 6　畳み込みと Plancherel</dt>
+  <dd>Plancherel は「$g=\bar f$ として乗法公式」。$L^{2}$ への拡張は $\mathcal{S}$ の稠密性と等長性から一意に決まる。</dd>
+
+  <dt>問題 7　Poisson の和公式</dt>
+  <dd>周期化してから Fourier 級数を書き、$x=0$ とおく。ただ一度の操作だが、応用のたびに「どの $f$ に適用するか」の選択が勝負。</dd>
+
+  <dt>問題 8　不確定性原理</dt>
+  <dd>$\int|f|^{2}=-\int x(|f|^{2})'$ の部分積分から始め、$(|f|^{2})'=2\operatorname{Re}(\bar ff')$ に Cauchy–Schwarz。等号条件は微分方程式 $f'=-cxf$。</dd>
+
+  <dt>問題 9　熱方程式</dt>
+  <dd>Fourier 変換で $\partial_{t}\hat u=-4\pi^{2}\xi^{2}\hat u$。乗数 $e^{-4\pi^{2}t\xi^{2}}$ の急減少が、解の即座の平滑化そのもの。</dd>
+
+  <dt>問題 10　波動・Laplace 方程式</dt>
+  <dd>乗数の絶対値を見よ：熱は $e^{-t\xi^{2}}$（減衰）、波は $\cos(2\pi\xi t)$（絶対値 $1$）、Laplace は $e^{-2\pi y|\xi|}$（減衰だが $\xi=0$ で非滑らか）。</dd>
+
+  <dt>問題 11　標本化定理</dt>
+  <dd>$\hat f$ を $[-W,W]$ 上の周期関数と見て Fourier 級数展開すると、その係数が標本値になる。それだけ。</dd>
+
+  <dt>問題 12　等周不等式と Weyl</dt>
+  <dd>どちらも「不等式・極限を Parseval で係数の言葉に翻訳し、係数ごとに比較する」。等号条件は $|n|\le1$ 以外の係数が消えること。</dd>
+
+  <dt>問題 13　緩増加超関数</dt>
+  <dd>計算はすべて $\langle\hat T,\varphi\rangle=\langle T,\hat\varphi\rangle$ に戻して、テスト関数側で処理する。$\mathrm{pv}\frac1x$ は $\operatorname{sgn}$ の微分（定数倍）。</dd>
+
+  <dt>問題 14　DFT と FFT</dt>
+  <dd>$\omega^{N}=1$ による等比級数の直交関係 $\sum_{j}\omega^{j(k-l)}=N\delta_{kl}$ が全問の土台。</dd>
+
+  <dt>問題 15　Hilbert 変換</dt>
+  <dd>時間領域では特異積分、周波数領域では $-i\operatorname{sgn}\xi$ を掛けるだけ。$L^{2}$ の話は全部後者で片付く。</dd>
+
+  <dt>問題 16　Bochner・Wiener</dt>
+  <dd>正定値性は「$|\hat\mu|$ の非負性」の言い換え。Wiener の補題は、局所的な逆元を $1$ の分割で貼り合わせる。</dd>
+
+  <dt>問題 17　特性関数と中心極限定理</dt>
+  <dd>独立和 $\to$ 畳み込み $\to$ 特性関数の積 $\to$ 対数を取って Taylor 展開。$e^{-t^{2}/2}$ が出てきたら Lévy の連続性定理で締める。</dd>
+</dl>
+
+<div class="colophon">
+  <p><strong>さらに深く進むために</strong>　E. M. Stein and R. Shakarchi, <em>Fourier Analysis: An Introduction</em>（本書第 0〜III 部にほぼ対応、標本化・等周・Weyl まで収録）／ Y. Katznelson, <em>An Introduction to Harmonic Analysis</em>（第 I 部の収束論と第 IV 部の Wiener 理論は決定版）／ E. M. Stein, <em>Singular Integrals and Differentiability Properties of Functions</em>（問題 15）／ 猪狩惺『フーリエ級数』、新井仁之『フーリエ解析と関数解析学』／ 確率論側は Durrett, <em>Probability: Theory and Examples</em> 第 3 章（問題 17）。</p>
+  <p><strong>本書について</strong>　第 0 部 24 題 ＋ 第 I〜IV 部 85 題、計 22 大問・109 題。すべて書き下ろしのオリジナル問題です。流儀（$2\pi$ の置き場所）は前付けで固定しましたが、他書と突き合わせるときは必ず定義を確認してください ― 係数がずれる事故の大半はそこで起きます。</p>
+</div>

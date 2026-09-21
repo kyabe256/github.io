@@ -1,0 +1,92 @@
+<div class="cover">
+  <div class="kicker">FOURIER ANALYSIS</div>
+  <h1>フーリエ解析<br>演習問題集</h1>
+  <div class="rule"></div>
+  <div class="sub">波に分解する、という思想</div>
+  <div class="formula">$$\sum_{n\in\mathbb{Z}}f(n)=\sum_{n\in\mathbb{Z}}\hat f(n)$$</div>
+  <div class="meta">
+    第 0 部　基礎編 ― 全 5 大問 / 小問 24 題（★☆☆☆☆ 〜 ★★★☆☆）<br>
+    第 I 〜 IV 部 ― 全 17 大問 / 小問 85 題（★★★☆☆ 〜 ★★★★★）<br>
+    <br>
+    対象：理工系学部 2・3 年 〜 大学院入試<br>
+    <br>
+    解答は収録していません
+  </div>
+</div>
+
+<h2 class="plain">はじめに ― 分解し、掛け算に変え、組み立て直す</h2>
+
+<p>フーリエ解析のすべては、次の一行に集約されます。</p>
+<p style="text-align:center;margin:1em 0">$$\widehat{f*g}=\hat f\cdot\hat g$$</p>
+<p>畳み込みという厄介な演算が、ただの掛け算になる。微分が $2\pi i\xi$ を掛けるだけの操作になる。だから偏微分方程式が解け、信号が処理でき、素数が数えられ、中心極限定理が証明できる。本書は、その「変換の威力」を自分の手で確かめるための問題集です。</p>
+
+<p>構成は次の通りです。</p>
+<ul class="plain">
+  <li><strong>第 0 部・基礎編</strong>（★☆☆☆☆〜★★★☆☆）Fourier 級数と Fourier 変換の計算ドリル。ここは手が覚えるまで反復すべき場所です。付録 A に答えを載せました。</li>
+  <li><strong>第 I 部・収束論</strong>　「$f$ の Fourier 級数は $f$ に収束するか」という、19 世紀を丸ごと費やした問いに向き合います。Dirichlet 核・Fejér 核・$L^{2}$ 理論、そして連続関数なのに発散する例まで。</li>
+  <li><strong>第 II 部・Fourier 変換</strong>　反転公式、Plancherel、Poisson の和公式、不確定性原理。</li>
+  <li><strong>第 III 部・応用</strong>　熱・波動・Laplace 方程式、標本化定理、等周不等式、Weyl の一様分布定理。</li>
+  <li><strong>第 IV 部・発展</strong>　緩増加超関数、離散 Fourier 変換と FFT、Hilbert 変換、Wiener–Khinchin、特性関数と中心極限定理。</li>
+</ul>
+
+<p>解答は収録していません。付録 A（基礎編の答え）と付録 B（第 I 部以降への一行ヒント）だけを、十分に粘ったあとで開いてください。</p>
+
+<h3 class="sec">記号と約束 ― 流儀を最初に固定する</h3>
+<p>Fourier 解析は流儀が多く、$2\pi$ の置き場所で式の形が変わります。<strong>本書では次の流儀に統一します</strong>。</p>
+<table class="legend">
+  <tr><th>Fourier 係数</th><td>$2\pi$ 周期の $f$ に対し $\displaystyle\hat f(n)=c_{n}=\frac{1}{2\pi}\int_{-\pi}^{\pi}f(x)e^{-inx}\,dx$、級数は $\displaystyle\sum_{n\in\mathbb{Z}}c_{n}e^{inx}$</td></tr>
+  <tr><th>実形</th><td>$\displaystyle\frac{a_{0}}{2}+\sum_{n\ge1}\bigl(a_{n}\cos nx+b_{n}\sin nx\bigr)$、$\displaystyle a_{n}=\frac{1}{\pi}\int_{-\pi}^{\pi}f\cos nx\,dx$、$\displaystyle b_{n}=\frac{1}{\pi}\int_{-\pi}^{\pi}f\sin nx\,dx$</td></tr>
+  <tr><th>Fourier 変換</th><td>$\displaystyle\hat f(\xi)=\int_{\mathbb{R}}f(x)e^{-2\pi i x\xi}\,dx$、反転は $\displaystyle f(x)=\int_{\mathbb{R}}\hat f(\xi)e^{2\pi i x\xi}\,d\xi$</td></tr>
+  <tr><th>畳み込み</th><td>$\displaystyle(f*g)(x)=\int_{\mathbb{R}}f(y)g(x-y)\,dy$</td></tr>
+  <tr><th>部分和・Cesàro 平均</th><td>$\displaystyle S_{N}f=\sum_{|n|\le N}c_{n}e^{inx}$、$\displaystyle \sigma_{N}f=\frac{1}{N+1}\sum_{k=0}^{N}S_{k}f$</td></tr>
+  <tr><th>$\mathcal{S}(\mathbb{R})$</th><td>Schwartz 空間（急減少 $C^{\infty}$ 関数全体）、$\mathcal{S}'(\mathbb{R})$ はその双対（緩増加超関数）</td></tr>
+</table>
+<p style="font-size:9.4pt;color:#4b5563">この流儀では $\widehat{f'}(\xi)=2\pi i\xi\hat f(\xi)$、Plancherel は $\|f\|_{2}=\|\hat f\|_{2}$、Poisson の和公式は $\sum f(n)=\sum\hat f(n)$ と、すべて定数なしの形になります。$\hat f(\xi)=\int f(x)e^{-i\xi x}dx$ の流儀（$\xi=2\pi\xi'$）に慣れている人は、各公式を自分で書き換えてみることを最初の練習問題としてください。</p>
+
+<h3 class="sec">難易度の目安</h3>
+<table class="legend">
+  <tr><td class="s">★☆☆☆☆</td><td>定義の直接適用。手が止まるならその節に戻ること。</td></tr>
+  <tr><td class="s">★★☆☆☆</td><td>定期試験の標準問題。</td></tr>
+  <tr><td class="s">★★★☆☆</td><td>定期試験の難問。道具の選択が要る。</td></tr>
+  <tr><td class="s">★★★★☆</td><td>院試の標準〜やや難。</td></tr>
+  <tr><td class="s">★★★★★</td><td>院試の難問・専門色。腰を据えて半日かける価値のある問題。</td></tr>
+</table>
+
+<h2 class="plain">目次</h2>
+<ul class="toc">
+  <li class="head"><span class="t">第 0 部　基礎編</span><span class="s"></span></li>
+  <li><span class="t">基礎 1　Fourier 級数を計算する</span><span class="s">★☆☆☆☆</span></li>
+  <li><span class="t">基礎 2　Parseval と級数の和</span><span class="s">★★☆☆☆</span></li>
+  <li><span class="t">基礎 3　複素形・一般周期・係数の減衰</span><span class="s">★★☆☆☆</span></li>
+  <li><span class="t">基礎 4　収束のしかたを見る</span><span class="s">★★★☆☆</span></li>
+  <li><span class="t">基礎 5　Fourier 変換を計算する</span><span class="s">★★☆☆☆</span></li>
+
+  <li class="head"><span class="t">第 I 部　収束論</span><span class="s"></span></li>
+  <li><span class="t">問題 1　Dirichlet 核と局所化原理</span><span class="s">★★★★☆</span></li>
+  <li><span class="t">問題 2　Fejér の定理と一様近似</span><span class="s">★★★★☆</span></li>
+  <li><span class="t">問題 3　$L^{2}$ 理論 ― 完全正規直交系</span><span class="s">★★★★☆</span></li>
+  <li><span class="t">問題 4　発散する Fourier 級数</span><span class="s">★★★★★</span></li>
+
+  <li class="head"><span class="t">第 II 部　Fourier 変換</span><span class="s"></span></li>
+  <li><span class="t">問題 5　反転公式と Schwartz 空間</span><span class="s">★★★★☆</span></li>
+  <li><span class="t">問題 6　畳み込み・近似単位元・Plancherel</span><span class="s">★★★★☆</span></li>
+  <li><span class="t">問題 7　Poisson の和公式</span><span class="s">★★★★★</span></li>
+  <li><span class="t">問題 8　不確定性原理</span><span class="s">★★★★★</span></li>
+
+  <li class="head"><span class="t">第 III 部　応用</span><span class="s"></span></li>
+  <li><span class="t">問題 9　熱方程式と Gauss 核</span><span class="s">★★★★☆</span></li>
+  <li><span class="t">問題 10　波動方程式と Laplace 方程式</span><span class="s">★★★★☆</span></li>
+  <li><span class="t">問題 11　標本化定理と Paley–Wiener</span><span class="s">★★★★★</span></li>
+  <li><span class="t">問題 12　等周不等式と Weyl の一様分布定理</span><span class="s">★★★★★</span></li>
+
+  <li class="head"><span class="t">第 IV 部　発展</span><span class="s"></span></li>
+  <li><span class="t">問題 13　緩増加超関数と Fourier 変換</span><span class="s">★★★★★</span></li>
+  <li><span class="t">問題 14　離散 Fourier 変換と FFT</span><span class="s">★★★★☆</span></li>
+  <li><span class="t">問題 15　Hilbert 変換と共役関数</span><span class="s">★★★★★</span></li>
+  <li><span class="t">問題 16　Wiener–Khinchin とタウバー型定理</span><span class="s">★★★★★</span></li>
+  <li><span class="t">問題 17　特性関数と中心極限定理</span><span class="s">★★★★★</span></li>
+
+  <li class="head"><span class="t">付録</span><span class="s"></span></li>
+  <li><span class="t">付録 A　基礎編の答え</span><span class="s"></span></li>
+  <li><span class="t">付録 B　第 I 部以降への一行ヒント</span><span class="s"></span></li>
+</ul>

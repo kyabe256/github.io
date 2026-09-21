@@ -1,0 +1,193 @@
+<h2 class="part">第 III 部　応用<span class="en">APPLICATIONS</span></h2>
+<p class="part-lead">Fourier はそもそも熱伝導のために級数を発明した。偏微分方程式、信号の標本化、幾何の不等式、数論の一様分布 ― 「分解して掛け算に変える」という一つの思想が、これだけ遠くまで届く。</p>
+
+<div class="prob">
+  <div class="prob-head">
+    <span class="no">問題 9</span><span class="ttl">熱方程式と Gauss 核</span><span class="stars">★★★★☆</span>
+  </div>
+  <ol class="items">
+    <li>（円周上）$u_{t}=u_{xx}$、$u(x,0)=f(x)$（周期 $2\pi$）の解が
+      $\displaystyle u(x,t)=\sum_{n\in\mathbb{Z}}c_{n}(f)e^{-n^{2}t}e^{inx}$
+      で与えられることを示し、$t\gt0$ では $u(\cdot,t)$ が $C^{\infty}$（実は実解析的）になることを、係数の減衰から示せ。$f$ が単に $L^{1}$ でもよいことに注意せよ。<span class="lv">★★★★☆</span></li>
+
+    <li>$t\to\infty$ のとき $u(x,t)\to c_{0}(f)=\dfrac{1}{2\pi}\int f$ を示せ（熱平衡）。収束の速さは何で決まるか。<span class="lv">★★★☆☆</span></li>
+
+    <li>（直線上）$u_{t}=u_{xx}$、$u(x,0)=f(x)\in\mathcal{S}(\mathbb{R})$ を Fourier 変換で解き、
+      $$u(x,t)=(f*H_{t})(x),\qquad H_{t}(x)=\frac{1}{\sqrt{4\pi t}}e^{-x^{2}/4t}$$
+      を導け。$\widehat{H_{t}}(\xi)=e^{-4\pi^{2}t\xi^{2}}$ と半群性 $H_{t}*H_{s}=H_{t+s}$ を確かめよ。<span class="lv">★★★★☆</span></li>
+
+    <li>$\{H_{t}\}_{t\gt0}$ が近似単位元（$t\to0^{+}$）であることから $u(\cdot,t)\to f$ を示し、熱方程式の解の一意性を、エネルギー $\int u^{2}dx$ の単調減少から示せ。<span class="lv">★★★★☆</span></li>
+
+    <li>（逆向き熱方程式の非適切性）$t\lt0$ 向きに解こうとすると $e^{n^{2}|t|}$ が現れる。初期値を $\varepsilon\sin(nx)$ と摂動したときの解を比較して、初期値への連続依存性が破れることを定量的に示せ。これが「熱は拡散するが、逆再生できない」ことの解析的表現であることを述べよ。<span class="lv">★★★★☆</span></li>
+  </ol>
+</div>
+
+<div class="prob">
+  <div class="prob-head">
+    <span class="no">問題 10</span><span class="ttl">波動方程式と Laplace 方程式</span><span class="stars">★★★★☆</span>
+  </div>
+  <ol class="items">
+    <li>弦の振動 $u_{tt}=c^{2}u_{xx}$、$u(0,t)=u(L,t)=0$、$u(x,0)=f$、$u_{t}(x,0)=g$ を正弦級数で解け。得られた級数解が d'Alembert の公式 $\frac{f(x+ct)+f(x-ct)}{2}+\frac{1}{2c}\int_{x-ct}^{x+ct}g$（奇延長・周期延長のもとで）と一致することを示せ。<span class="lv">★★★★☆</span></li>
+
+    <li>エネルギー $\displaystyle E(t)=\frac12\int_{0}^{L}\left(u_{t}^{2}+c^{2}u_{x}^{2}\right)dx$ が保存することを、直接計算と Fourier 係数の両方から示せ。熱方程式（問題 9）との違いはどこに現れるか。<span class="lv">★★★★☆</span></li>
+
+    <li>（円板の Dirichlet 問題）$\Delta u=0$（$|z|\lt1$）、$u|_{\partial\mathbb{D}}=f$ の解が
+      $u(re^{i\theta})=(f*P_{r})(\theta)$（$P_{r}$ は問題 2 (5) の Poisson 核）で与えられることを示し、$f\in C(\partial\mathbb{D})$ のとき $\overline{\mathbb{D}}$ 上連続な解が一意に存在することを結論せよ。<span class="lv">★★★★☆</span></li>
+
+    <li>（半平面の Dirichlet 問題）$\Delta u=0$（$y\gt0$）、$u(x,0)=f(x)$ を Fourier 変換で解き、解が
+      $u(x,y)=(f*P_{y})(x)$, $P_{y}(x)=\dfrac{1}{\pi}\dfrac{y}{x^{2}+y^{2}}$ で与えられることを示せ。$\widehat{P_{y}}(\xi)=e^{-2\pi y|\xi|}$ を確かめ、これが $\xi=0$ で微分可能でないことと、$P_{y}$ が $|x|^{-2}$ 程度でしか減衰しないこと（Gauss 核 $H_{t}$ の急減少との対比）を結びつけて説明せよ。<span class="lv">★★★★★</span></li>
+
+    <li>$u_{tt}=u_{xx}$ を直線上で Fourier 変換して解き、$\hat u(\xi,t)=\hat f(\xi)\cos(2\pi\xi t)+\hat g(\xi)\dfrac{\sin(2\pi\xi t)}{2\pi\xi}$ を導け。ここから、熱方程式と違って波動方程式が「滑らかさを増やさない」ことを、乗数の絶対値の大きさから説明せよ。<span class="lv">★★★★☆</span></li>
+  </ol>
+</div>
+
+<div class="prob">
+  <div class="prob-head">
+    <span class="no">問題 11</span><span class="ttl">標本化定理と Paley–Wiener</span><span class="stars">★★★★★</span>
+  </div>
+  <p class="preamble">連続な信号を離散的な点列で完全に復元できるのはなぜか。答えは Poisson の和公式にある。</p>
+  <ol class="items">
+    <li>（Shannon の標本化定理）$f\in L^{2}(\mathbb{R})$ の Fourier 変換が $[-W,W]$ に台をもつ（帯域制限）とき、
+      $$f(x)=\sum_{n\in\mathbb{Z}}f\!\left(\frac{n}{2W}\right)\operatorname{sinc}\bigl(2Wx-n\bigr)$$
+      が $L^{2}$ かつ広義一様に成り立つことを示せ。（$\hat f$ を $[-W,W]$ 上で Fourier 級数展開するのが最短経路である。）<span class="lv">★★★★☆</span></li>
+
+    <li>（エイリアシング）標本化間隔が $\Delta\gt\dfrac{1}{2W}$ のとき、標本値から作った再構成信号のスペクトルが $\displaystyle\frac1\Delta\sum_{k}\hat f\!\left(\xi-\frac{k}{\Delta}\right)$ となること（Poisson の和公式）を示し、折り返し歪みが起こる仕組みを説明せよ。<span class="lv">★★★★☆</span></li>
+
+    <li>$\{\sqrt{2W}\operatorname{sinc}(2Wx-n)\}_{n\in\mathbb{Z}}$ が帯域制限関数の空間 $PW_{W}$ の正規直交基底であることを示し、$\|f\|_{2}^{2}=\dfrac{1}{2W}\sum_{n}\left|f\!\left(\frac{n}{2W}\right)\right|^{2}$ を導け。<span class="lv">★★★★☆</span></li>
+
+    <li>（Paley–Wiener の定理）$f\in L^{2}(\mathbb{R})$ について、次が同値であることを示せ。
+      (a) $\hat f$ の台が $[-W,W]$ に含まれる。
+      (b) $f$ は $\mathbb{C}$ 上の整関数に延長され、$|f(z)|\le Ce^{2\pi W|\operatorname{Im}z|}$（指数型 $2\pi W$）かつ $f|_{\mathbb{R}}\in L^{2}$。
+      複素解析編・第 II 巻の Phragmén–Lindelöf と Hadamard の議論がここで効く。<span class="lv">★★★★★</span></li>
+
+    <li>(4) から、帯域制限された信号は「有限時間で完全に $0$ になる」ことがありえない（時間制限と帯域制限は両立しない）ことを結論せよ。問題 8 (3) との関係を述べよ。<span class="lv">★★★★☆</span></li>
+  </ol>
+</div>
+
+<div class="prob">
+  <div class="prob-head">
+    <span class="no">問題 12</span><span class="ttl">等周不等式と Weyl の一様分布定理</span><span class="stars">★★★★★</span>
+  </div>
+  <p class="preamble">Fourier 級数が、幾何の最適化問題と数論の分布問題を同時に解いてしまう。この部の白眉である。</p>
+  <ol class="items">
+    <li>（Wirtinger の不等式）$f$ が周期 $2\pi$ の $C^{1}$ 関数で $\displaystyle\int_{-\pi}^{\pi}f=0$ ならば
+      $\displaystyle\int_{-\pi}^{\pi}|f|^{2}\le\int_{-\pi}^{\pi}|f'|^{2}$
+      であり、等号は $f(x)=ae^{ix}+be^{-ix}$ のときに限ることを、Parseval から示せ。<span class="lv">★★★★☆</span></li>
+
+    <li>（等周不等式）長さ $L$ の $C^{1}$ 級単純閉曲線が囲む面積 $A$ について
+      $$4\pi A\le L^{2}$$
+      であり、等号成立は円に限ることを示せ。（弧長でパラメータ表示し、$A=\frac12\oint(x\,dy-y\,dx)$ を Parseval で書き換え、(1) を使う。）<span class="lv">★★★★★</span></li>
+
+    <li>（Weyl の判定法）実数列 $(x_{n})$ が $\bmod 1$ で一様分布するとは、任意の $0\le a\lt b\le1$ に対し
+      $\displaystyle\lim_{N\to\infty}\frac{\#\{n\le N:\{x_{n}\}\in[a,b)\}}{N}=b-a$
+      が成り立つことをいう。これが「任意の $k\in\mathbb{Z}\setminus\{0\}$ に対し $\displaystyle\frac1N\sum_{n\le N}e^{2\pi ikx_{n}}\to0$」と同値であることを示せ。（Fejér の定理（問題 2）で指示関数を三角多項式で挟む。）<span class="lv">★★★★★</span></li>
+
+    <li>$\alpha$ が無理数ならば $(n\alpha)$ は $\bmod 1$ で一様分布することを (3) から示せ。$\alpha$ が有理数のときは何が起こるか。<span class="lv">★★★★☆</span></li>
+
+    <li>（Benford の法則の一例）$2^{n}$ の最高位の数字が $1$ である $n\le N$ の割合が $\log_{10}2=0.301\ldots$ に収束することを、(4) を $\alpha=\log_{10}2$ に適用して示せ。<span class="lv">★★★★☆</span></li>
+  </ol>
+</div>
+
+<h2 class="part">第 IV 部　発展<span class="en">FURTHER TOPICS</span></h2>
+<p class="part-lead">超関数として変換を拡張し、有限次元に落として計算機に載せ、解析的な深みへ戻る。最後は確率論との合流点 ― 中心極限定理が Fourier 変換の一行で落ちる瞬間を見る。</p>
+
+<div class="prob">
+  <div class="prob-head">
+    <span class="no">問題 13</span><span class="ttl">緩増加超関数と Fourier 変換</span><span class="stars">★★★★★</span>
+  </div>
+  <ol class="items">
+    <li>$\mathcal{S}'(\mathbb{R})$ の定義を述べ、次が $\mathcal{S}'$ の元であることを確かめよ。
+      (a) $\delta$、(b) 多項式、(c) $L^{p}$ 関数（$1\le p\le\infty$）、(d) 主値 $\displaystyle\mathrm{pv}\frac1x:\varphi\mapsto\lim_{\varepsilon\to0^{+}}\int_{|x|\gt\varepsilon}\frac{\varphi(x)}{x}dx$。<span class="lv">★★★★☆</span></li>
+
+    <li>$\langle\hat T,\varphi\rangle=\langle T,\hat\varphi\rangle$ により $\mathcal{S}'$ 上の Fourier 変換を定義し、これが $L^{1}\cap\mathcal{S}'$ 上で通常の変換と一致することを確かめよ。次を計算せよ。
+      (a) $\hat\delta=1$、(b) $\hat1=\delta$、(c) $\widehat{\delta_{a}}=e^{-2\pi ia\xi}$、(d) $\widehat{x^{n}}$。<span class="lv">★★★★☆</span></li>
+
+    <li>$\displaystyle\widehat{\mathrm{pv}\frac1x}(\xi)=-i\pi\operatorname{sgn}\xi$ と $\widehat{\operatorname{sgn}}=\dfrac{1}{i\pi}\mathrm{pv}\dfrac1\xi$ を示せ。また Heaviside 関数の Fourier 変換 $\hat H=\dfrac12\delta+\dfrac{1}{2\pi i}\mathrm{pv}\dfrac1\xi$ を導け。<span class="lv">★★★★★</span></li>
+
+    <li>Dirac 櫛 $\displaystyle\mathrm{III}=\sum_{n\in\mathbb{Z}}\delta_{n}$ が $\mathcal{S}'$ の元で $\widehat{\mathrm{III}}=\mathrm{III}$（自己双対）であることを示し、これが Poisson の和公式（問題 7）の超関数的表現であることを説明せよ。標本化（問題 11）が「$\mathrm{III}$ を掛ける操作」であることも述べよ。<span class="lv">★★★★★</span></li>
+
+    <li>$\left(\partial_{t}-\partial_{x}^{2}\right)E=\delta_{(0,0)}$ をみたす基本解 $E(x,t)=H(t)\dfrac{e^{-x^{2}/4t}}{\sqrt{4\pi t}}$ を、Fourier 変換を用いて導け。超関数の枠組みが本質的に必要になるのはどの段階かを指摘せよ。<span class="lv">★★★★★</span></li>
+  </ol>
+</div>
+
+<div class="prob">
+  <div class="prob-head">
+    <span class="no">問題 14</span><span class="ttl">離散 Fourier 変換と FFT</span><span class="stars">★★★★☆</span>
+  </div>
+  <p class="preamble">$\omega=e^{-2\pi i/N}$、$\displaystyle(\mathcal{F}_{N}a)_{k}=\hat a_{k}=\sum_{j=0}^{N-1}a_{j}\omega^{jk}$ とする。</p>
+  <ol class="items">
+    <li>逆変換 $\displaystyle a_{j}=\frac1N\sum_{k=0}^{N-1}\hat a_{k}\omega^{-jk}$ と Parseval $\displaystyle\sum_{j}|a_{j}|^{2}=\frac1N\sum_{k}|\hat a_{k}|^{2}$ を示せ。<span class="lv">★★★☆☆</span></li>
+
+    <li>循環畳み込み $\displaystyle(a\circledast b)_{j}=\sum_{l=0}^{N-1}a_{l}b_{j-l}$（添字は $\bmod N$）に対し $\widehat{a\circledast b}=\hat a\cdot\hat b$ を示せ。これにより 2 つの $N$ 次多項式の積が $O(N\log N)$ で計算できることを説明せよ。<span class="lv">★★★★☆</span></li>
+
+    <li>$\mathcal{F}_{N}^{2}a_{j}=N a_{-j}$、したがって $\mathcal{F}_{N}^{4}=N^{2}\mathrm{id}$ を示し、$\mathcal{F}_{N}$ の固有値が $\sqrt{N}\cdot\{1,-i,-1,i\}$ のいずれかであることを導け。<span class="lv">★★★★☆</span></li>
+
+    <li>（Cooley–Tukey）$N=2M$ のとき、偶数番目と奇数番目に分けることで
+      $\hat a_{k}=\hat a^{\mathrm{even}}_{k}+\omega^{k}\hat a^{\mathrm{odd}}_{k}$（$k\lt M$）という分解が成り立つことを示し、計算量 $T(N)=2T(N/2)+O(N)=O(N\log N)$ を導け。素朴な行列積 $O(N^{2})$ との差が、$N=2^{20}$ でどれほどになるか見積もれ。<span class="lv">★★★★☆</span></li>
+
+    <li>周期 $1$ の滑らかな関数 $f$ の Fourier 係数 $c_{k}$ を、標本 $f(j/N)$ の DFT で近似したとき、誤差が
+      $\displaystyle\frac{1}{N}\sum_{j}f(j/N)e^{-2\pi ikj/N}=\sum_{m\in\mathbb{Z}}c_{k+mN}$
+      となること（離散版 Poisson の和公式・エイリアシング）を示し、$f$ が $C^{\infty}$ なら誤差が $N$ について超代数的に小さくなることを述べよ。<span class="lv">★★★★★</span></li>
+  </ol>
+</div>
+
+<div class="prob">
+  <div class="prob-head">
+    <span class="no">問題 15</span><span class="ttl">Hilbert 変換と共役関数</span><span class="stars">★★★★★</span>
+  </div>
+  <ol class="items">
+    <li>$\displaystyle Hf(x)=\frac{1}{\pi}\,\mathrm{pv}\!\int_{\mathbb{R}}\frac{f(y)}{x-y}\,dy$ と定める。$\widehat{Hf}(\xi)=-i\operatorname{sgn}(\xi)\hat f(\xi)$ を示し、$H$ が $L^{2}(\mathbb{R})$ 上の等長作用素で $H^{2}=-\mathrm{id}$ をみたすことを示せ。<span class="lv">★★★★★</span></li>
+
+    <li>解析信号 $f+iHf$ の Fourier 変換が $\xi\lt0$ で消えることを示し、Hardy 空間
+      $H^{2}(\mathbb{R})=\{f\in L^{2}:\hat f=0\ \text{a.e. on}\ \xi\lt0\}$ が上半平面上の正則関数の境界値全体と一致すること（Paley–Wiener 型定理）を述べよ。<span class="lv">★★★★★</span></li>
+
+    <li>円周版：$f\sim\sum c_{n}e^{in\theta}$ に対し共役関数を $\tilde f\sim\sum(-i\operatorname{sgn}n)c_{n}e^{in\theta}$ と定める。$u=f*P_{r}$ の調和共役が $\tilde f*P_{r}$ であることを示し、$u+i\tilde u$ が $\mathbb{D}$ 上正則であることを確かめよ。<span class="lv">★★★★★</span></li>
+
+    <li>$H$ が $L^{1}(\mathbb{R})\to L^{1}(\mathbb{R})$ としては有界でないことを、$f=\mathbf{1}_{[0,1]}$ を例に示せ（$Hf$ の遠方での減衰を評価せよ）。代わりに成り立つ弱 $(1,1)$ 評価
+      $\left|\{|Hf|\gt\lambda\}\right|\le\dfrac{C}{\lambda}\|f\|_{1}$ を述べよ。<span class="lv">★★★★★</span></li>
+
+    <li>$1\lt p\lt\infty$ に対する $H$ の $L^{p}$ 有界性（M. Riesz の定理）を述べ、$p=1,\infty$ で破れることと (4) の関係を説明せよ。<span class="lv">★★★★☆</span></li>
+  </ol>
+</div>
+
+<div class="prob">
+  <div class="prob-head">
+    <span class="no">問題 16</span><span class="ttl">正定値関数・Wiener–Khinchin・Wiener の補題</span><span class="stars">★★★★★</span>
+  </div>
+  <ol class="items">
+    <li>$\varphi:\mathbb{R}\to\mathbb{C}$ が正定値であるとは、任意の $x_{1},\dots,x_{n}$ と $c_{1},\dots,c_{n}\in\mathbb{C}$ に対し $\sum_{j,k}c_{j}\overline{c_{k}}\varphi(x_{j}-x_{k})\ge0$ となることをいう。有限測度の Fourier 変換が正定値であることを示せ。<span class="lv">★★★★☆</span></li>
+
+    <li>（Bochner の定理）連続な正定値関数は、ある有限正測度の Fourier 変換に一致する ― この定理を正確に述べ、(1) の逆であることを確認せよ。<span class="lv">★★★★☆</span></li>
+
+    <li>（Wiener–Khinchin）定常過程の自己相関関数 $R(\tau)=\mathbb{E}[X(t)\overline{X(t+\tau)}]$ とパワースペクトル密度が Fourier 変換対をなすことを、(2) を用いて説明せよ。決定論的な $f\in L^{2}$ については $\widehat{f\star f}=|\hat f|^{2}$（$\star$ は相関）を直接確かめよ。<span class="lv">★★★★★</span></li>
+
+    <li>（Wiener の補題）絶対収束 Fourier 級数 $f=\sum c_{n}e^{in\theta}$（$\sum|c_{n}|\lt\infty$）が零点をもたないならば、$1/f$ もまた絶対収束 Fourier 級数をもつことを示せ。（局所的に幾何級数展開し、$1$ の分割で貼り合わせる初等的証明か、Banach 環 $A(\mathbb{T})$ の極大イデアル空間を決定する Gelfand 理論による証明か、どちらかを選べ。）<span class="lv">★★★★★</span></li>
+
+    <li>（Wiener のタウバー型定理）$f\in L^{1}(\mathbb{R})$ の Fourier 変換が零点をもたないならば、$\{f(\cdot-a)\}_{a\in\mathbb{R}}$ の張る空間は $L^{1}(\mathbb{R})$ で稠密である ― この定理を述べ、素数定理の証明に使われる仕組みを概説せよ。複素解析編・第 II 巻の挑戦 8（Newman の方法）と比較せよ。<span class="lv">★★★★★</span></li>
+  </ol>
+</div>
+
+<div class="prob">
+  <div class="prob-head">
+    <span class="no">問題 17</span><span class="ttl">特性関数と中心極限定理</span><span class="stars">★★★★★</span>
+  </div>
+  <p class="preamble">確率変数 $X$ の特性関数を $\varphi_{X}(t)=\mathbb{E}\left[e^{itX}\right]$ とする。これは分布 $\mu_{X}$ の Fourier 変換にほかならない（符号と $2\pi$ の置き方が本書の流儀と異なる点に注意）。</p>
+  <ol class="items">
+    <li>$\varphi_{X}$ が一様連続、$\varphi_{X}(0)=1$、$|\varphi_{X}|\le1$ をみたし、$X,Y$ が独立ならば $\varphi_{X+Y}=\varphi_{X}\varphi_{Y}$ となることを示せ。独立和の分布が畳み込みであることと合わせて述べよ。<span class="lv">★★★☆☆</span></li>
+
+    <li>$\mathbb{E}[|X|^{k}]\lt\infty$ ならば $\varphi_{X}$ は $k$ 回微分可能で
+      $\displaystyle\varphi_{X}(t)=\sum_{j=0}^{k}\frac{(it)^{j}}{j!}\mathbb{E}[X^{j}]+o(t^{k})$
+      を示せ。（基礎 5 (2)(e) の「モーメント $\leftrightarrow$ 原点での微分」の対応である。）<span class="lv">★★★★☆</span></li>
+
+    <li>（反転公式と一意性）特性関数が分布を一意に定めることを示せ。さらに Lévy の連続性定理（$\varphi_{n}\to\varphi$ 各点、$\varphi$ が $0$ で連続 $\Rightarrow$ 分布収束）を述べよ。<span class="lv">★★★★★</span></li>
+
+    <li>（中心極限定理）$X_{i}$ が i.i.d.、$\mathbb{E}X=0$、$\mathrm{Var}X=\sigma^{2}\lt\infty$ のとき
+      $\displaystyle\varphi_{S_{n}/(\sigma\sqrt n)}(t)=\left[\varphi_{X}\!\left(\frac{t}{\sigma\sqrt n}\right)\right]^{n}\to e^{-t^{2}/2}$
+      を (2)(3) から示し、$S_{n}/(\sigma\sqrt n)\Rightarrow N(0,1)$ を結論せよ。<span class="lv">★★★★★</span></li>
+
+    <li>同じ道具で次を示せ。
+      (a)（少数の法則）$\mathrm{Bin}(n,\lambda/n)\Rightarrow\mathrm{Poisson}(\lambda)$。
+      (b) Cauchy 分布 $\dfrac{1}{\pi(1+x^{2})}$ の特性関数が $e^{-|t|}$ であることから、Cauchy 分布の標本平均が再び Cauchy 分布になること（大数の法則が成り立たない理由）。<span class="lv">★★★★☆</span></li>
+  </ol>
+  <div class="note"><span class="lbl">注</span>(5)(b) の $e^{-|t|}$ は、問題 10 (4) の半平面 Poisson 核の Fourier 変換 $e^{-2\pi y|\xi|}$ と同じものである。偏微分方程式の核と確率分布が同一の関数として現れる ― このような一致は Fourier 解析の随所にある。</div>
+</div>

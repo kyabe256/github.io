@@ -1,0 +1,119 @@
+<h2 class="part basic">第 0 部　基礎編<span class="en">FUNDAMENTALS &mdash; DRILLS</span></h2>
+<p class="part-lead">係数を計算し、Parseval で級数の和を取り出し、変換表を自分の手で作る。フーリエ解析の実務はここに尽きる。反復して、手が覚えるまで。</p>
+
+<div class="prob basic">
+  <div class="prob-head">
+    <span class="no">基礎 1</span><span class="ttl">Fourier 級数を計算する</span><span class="stars">★☆☆☆☆</span>
+  </div>
+  <p class="preamble">以下、関数は $(-\pi,\pi]$ 上で定義され、周期 $2\pi$ で $\mathbb{R}$ に延長されているものとする。</p>
+  <ol class="items">
+    <li>次の関数の Fourier 級数（実形）を求めよ。
+      (a) $f(x)=x$、(b) $f(x)=|x|$、(c) $f(x)=x^{2}$、(d) $f(x)=\operatorname{sgn}x$。
+      得られた級数が $x=\pi$（不連続点）でどの値に収束するかも述べよ。<span class="lv">★☆☆☆☆</span></li>
+
+    <li>$f$ が偶関数ならば $b_{n}=0$、奇関数ならば $a_{n}=0$ となることを示せ。(1) の 4 例でこれを確かめよ。<span class="lv">★☆☆☆☆</span></li>
+
+    <li>（半区間展開）$(0,\pi)$ 上の $f(x)=x$ を、(a) 偶延長して余弦級数に、(b) 奇延長して正弦級数に展開せよ。二つの級数は $(0,\pi)$ 上で同じ関数を表すのに、$x=0$ と $x=\pi$ での振る舞いが異なる。その理由を述べよ。<span class="lv">★★☆☆☆</span></li>
+
+    <li>$a\in\mathbb{R}\setminus\{0\}$ とする。$f(x)=e^{ax}$（$-\pi\lt x\lt\pi$）の複素 Fourier 係数 $c_{n}$ を求めよ。<span class="lv">★★☆☆☆</span></li>
+
+    <li>$f$ の Fourier 係数を $c_{n}$ とするとき、次の関数の係数を $c_{n}$ で表せ。
+      (a) $f(x-h)$、(b) $e^{imx}f(x)$、(c) $\overline{f(x)}$、(d) $f(-x)$、(e) $f'(x)$（$f$ は $C^{1}$ で周期的）。<span class="lv">★★☆☆☆</span></li>
+  </ol>
+</div>
+
+<div class="prob basic">
+  <div class="prob-head">
+    <span class="no">基礎 2</span><span class="ttl">Parseval と級数の和</span><span class="stars">★★☆☆☆</span>
+  </div>
+  <p class="preamble">Fourier 級数の最初のご褒美は、初等的には手が出ない級数の値が転がり出てくることである。</p>
+  <ol class="items">
+    <li>Parseval の等式を、実形 $\displaystyle\frac{1}{\pi}\int_{-\pi}^{\pi}|f|^{2}=\frac{a_{0}^{2}}{2}+\sum_{n\ge1}(a_{n}^{2}+b_{n}^{2})$ と複素形 $\displaystyle\frac{1}{2\pi}\int_{-\pi}^{\pi}|f|^{2}=\sum_{n\in\mathbb{Z}}|c_{n}|^{2}$ の両方の形で書き、両者が同値であることを確かめよ。<span class="lv">★★☆☆☆</span></li>
+
+    <li>基礎 1 (1)(a) の $f(x)=x$ に Parseval を適用して $\displaystyle\sum_{n\ge1}\frac{1}{n^{2}}=\frac{\pi^{2}}{6}$ を導け。<span class="lv">★★☆☆☆</span></li>
+
+    <li>基礎 1 (1)(c) の $f(x)=x^{2}$ について、
+      (a) $x=\pi$ を代入して $\displaystyle\sum_{n\ge1}\frac{1}{n^{2}}$ を、
+      (b) $x=0$ を代入して $\displaystyle\sum_{n\ge1}\frac{(-1)^{n-1}}{n^{2}}$ を、
+      (c) Parseval から $\displaystyle\sum_{n\ge1}\frac{1}{n^{4}}$ を、それぞれ求めよ。<span class="lv">★★☆☆☆</span></li>
+
+    <li>基礎 1 (1)(b) の $f(x)=|x|$ に $x=0$ を代入して $\displaystyle\sum_{k\ge0}\frac{1}{(2k+1)^{2}}=\frac{\pi^{2}}{8}$ を導き、これと (2) から $\displaystyle\sum_{k\ge1}\frac{1}{(2k)^{2}}$ を求めて整合を確かめよ。<span class="lv">★★☆☆☆</span></li>
+
+    <li>基礎 1 (4) の $e^{ax}$ に Parseval を適用して
+      $$\sum_{n\in\mathbb{Z}}\frac{1}{n^{2}+a^{2}}=\frac{\pi}{a}\coth(\pi a)\qquad(a\gt0)$$
+      を導け。$a\to0^{+}$ の極限から $\displaystyle\sum_{n\ge1}\frac1{n^{2}}$ が再び現れることを確かめよ。<span class="lv">★★★☆☆</span></li>
+  </ol>
+</div>
+
+<div class="prob basic">
+  <div class="prob-head">
+    <span class="no">基礎 3</span><span class="ttl">複素形・一般周期・係数の減衰</span><span class="stars">★★☆☆☆</span>
+  </div>
+  <ol class="items">
+    <li>実形の係数 $a_{n},b_{n}$ と複素形の係数 $c_{n}$ の関係
+      $c_{n}=\dfrac{a_{n}-ib_{n}}{2}$, $c_{-n}=\dfrac{a_{n}+ib_{n}}{2}$（$n\ge1$）を導け。$f$ が実数値であることは $c_{-n}=\overline{c_{n}}$ と同値であることも示せ。<span class="lv">★☆☆☆☆</span></li>
+
+    <li>周期 $2L$ の関数に対する Fourier 級数と係数の公式を書き下し、$f(x)=x$（$-L\lt x\lt L$）に適用せよ。<span class="lv">★☆☆☆☆</span></li>
+
+    <li>$f$ が周期 $2\pi$ の $C^{k}$ 級関数ならば、部分積分を繰り返して $c_{n}(f)=\dfrac{c_{n}(f^{(k)})}{(in)^{k}}$ を示し、Riemann–Lebesgue の補題と合わせて $c_{n}=o\!\left(|n|^{-k}\right)$（$|n|\to\infty$）を導け。<span class="lv">★★★☆☆</span></li>
+
+    <li>逆に $\displaystyle\sum_{n}|n|^{k}|c_{n}|\lt\infty$ ならば $f$ は $C^{k}$ 級であることを示せ。(3) と合わせると「係数の減衰の速さ $=$ 関数の滑らかさ」という対応が見える。基礎 1 の 4 例について、不連続・折れ曲がり・滑らかさと減衰の速さ（$1/n$, $1/n^{2}$）の対応を確かめよ。<span class="lv">★★★☆☆</span></li>
+
+    <li>項別微分・項別積分について。
+      (a) $f(x)=x$ の Fourier 級数を項別微分すると何が起きるか。
+      (b) 一方、項別積分はつねに許されることを示せ（$\int_{0}^{x}f$ の Fourier 級数が、$f$ の級数を項別に積分したものに一致する）。<span class="lv">★★★☆☆</span></li>
+  </ol>
+</div>
+
+<div class="prob basic">
+  <div class="prob-head">
+    <span class="no">基礎 4</span><span class="ttl">収束のしかたを見る</span><span class="stars">★★★☆☆</span>
+  </div>
+  <ol class="items">
+    <li>Dirichlet 核 $\displaystyle D_{N}(x)=\sum_{|n|\le N}e^{inx}$ について
+      $$D_{N}(x)=\frac{\sin\left(\left(N+\frac12\right)x\right)}{\sin(x/2)},\qquad \frac{1}{2\pi}\int_{-\pi}^{\pi}D_{N}=1$$
+      を示せ。また $\displaystyle\int_{-\pi}^{\pi}|D_{N}(x)|\,dx\sim \frac{4}{\pi}\log N$（$N\to\infty$）となること（Lebesgue 定数の発散）を示せ。<span class="lv">★★★★☆</span></li>
+
+    <li>$\displaystyle S_{N}f(x)=\frac{1}{2\pi}\int_{-\pi}^{\pi}f(x-t)D_{N}(t)\,dt$ を示し、$f$ が $x_{0}$ で区分的に $C^{1}$ ならば
+      $\displaystyle S_{N}f(x_{0})\to\frac{f(x_{0}+)+f(x_{0}-)}{2}$ となることを示せ。<span class="lv">★★★☆☆</span></li>
+
+    <li>（Gibbs 現象）方形波 $f=\operatorname{sgn}$ の部分和について
+      $$\lim_{N\to\infty}S_{N}f\!\left(\frac{\pi}{N+1}\right)=\frac{2}{\pi}\int_{0}^{\pi}\frac{\sin t}{t}\,dt=1.17897\ldots$$
+      を示せ。跳びの高さは $2$ なのに、部分和は跳びのおよそ $9\%$ ぶん行き過ぎる。$N$ を大きくしてもこの行き過ぎが消えない理由を述べよ。<span class="lv">★★★★☆</span></li>
+
+    <li>Fejér 核 $\displaystyle K_{N}(x)=\frac{1}{N+1}\sum_{k=0}^{N}D_{k}(x)$ について
+      $$K_{N}(x)=\frac{1}{N+1}\left(\frac{\sin\frac{(N+1)x}{2}}{\sin\frac{x}{2}}\right)^{2}$$
+      を示し、$K_{N}\ge0$、$\frac{1}{2\pi}\int K_{N}=1$、任意の $\delta\gt0$ に対し $\delta\le|x|\le\pi$ 上で $K_{N}\to0$（一様）を示せ。$D_{N}$ と $K_{N}$ の決定的な違いはどこか。<span class="lv">★★★☆☆</span></li>
+  </ol>
+</div>
+
+<div class="prob basic">
+  <div class="prob-head">
+    <span class="no">基礎 5</span><span class="ttl">Fourier 変換を計算する</span><span class="stars">★★☆☆☆</span>
+  </div>
+  <p class="preamble">$\displaystyle\hat f(\xi)=\int_{\mathbb{R}}f(x)e^{-2\pi ix\xi}dx$ の流儀である。$\operatorname{sinc}\xi=\dfrac{\sin\pi\xi}{\pi\xi}$ と書く。</p>
+  <ol class="items">
+    <li>次の関数の Fourier 変換を求めよ。
+      (a) 矩形 $\chi(x)=\mathbf{1}_{[-1/2,1/2]}(x)$、
+      (b) 三角 $\Lambda(x)=\max(0,1-|x|)$、
+      (c) $e^{-a|x|}$（$a\gt0$）、
+      (d) $e^{-ax}\mathbf{1}_{[0,\infty)}(x)$（$a\gt0$）、
+      (e) $e^{-\pi x^{2}}$、(f) $e^{-ax^{2}}$（$a\gt0$）。<span class="lv">★★☆☆☆</span></li>
+
+    <li>次を示せ（$f\in L^{1}$）。
+      (a) $\widehat{f(\cdot-h)}(\xi)=e^{-2\pi ih\xi}\hat f(\xi)$、
+      (b) $\widehat{e^{2\pi ihx}f}(\xi)=\hat f(\xi-h)$、
+      (c) $\widehat{f(\lambda\,\cdot)}(\xi)=\dfrac{1}{|\lambda|}\hat f\!\left(\dfrac{\xi}{\lambda}\right)$、
+      (d) $\widehat{f'}(\xi)=2\pi i\xi\hat f(\xi)$、
+      (e) $\widehat{xf(x)}(\xi)=\dfrac{i}{2\pi}\dfrac{d}{d\xi}\hat f(\xi)$。<span class="lv">★★☆☆☆</span></li>
+
+    <li>$\chi*\chi=\Lambda$ を直接計算で確かめ、(1)(a)(b) と畳み込み定理 $\widehat{f*g}=\hat f\hat g$ の整合を確認せよ。<span class="lv">★★☆☆☆</span></li>
+
+    <li>$\hat f$ は有界連続で $\hat f(\xi)\to0$（$|\xi|\to\infty$、Riemann–Lebesgue）であることを示せ。(1)(a) の $\hat\chi=\operatorname{sinc}$ が $L^{1}(\mathbb{R})$ に属さないことを確かめ、「$f\in L^{1}$ でも $\hat f\in L^{1}$ とは限らない」ことを実例で理解せよ。<span class="lv">★★★☆☆</span></li>
+
+    <li>Plancherel の等式 $\|f\|_{2}=\|\hat f\|_{2}$ と反転公式を用いて次を求めよ。
+      (a) $\displaystyle\int_{-\infty}^{\infty}\frac{\sin^{2}x}{x^{2}}dx$、
+      (b) $\displaystyle\int_{-\infty}^{\infty}\frac{\sin^{4}x}{x^{4}}dx$、
+      (c) $\displaystyle\int_{-\infty}^{\infty}\frac{dx}{(1+x^{2})^{2}}$。<span class="lv">★★★☆☆</span></li>
+  </ol>
+</div>

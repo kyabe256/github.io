@@ -1,0 +1,163 @@
+<h2 class="part">第 I 部　収束論<span class="en">CONVERGENCE OF FOURIER SERIES</span></h2>
+<p class="part-lead">「$f$ の Fourier 級数は $f$ に収束するか」― Fourier 自身が当然と考え、Dirichlet が条件付きで証明し、du Bois-Reymond が連続関数の反例を作り、Carleson が $L^{2}$ で決着させるまでに 150 年かかった問いである。核（kernel）の形を睨むことが、このすべての鍵になる。</p>
+
+<div class="prob">
+  <div class="prob-head">
+    <span class="no">問題 1</span><span class="ttl">Dirichlet 核と局所化原理</span><span class="stars">★★★★☆</span>
+  </div>
+  <ol class="items">
+    <li>（Riemann–Lebesgue の補題）$f\in L^{1}(\mathbb{T})$ ならば $c_{n}(f)\to0$（$|n|\to\infty$）を示せ。階段関数（あるいは $C^{1}$ 関数）による $L^{1}$ 近似を経由するのが定石である。<span class="lv">★★★☆☆</span></li>
+
+    <li>（Riemann の局所化原理）$f,g\in L^{1}(\mathbb{T})$ が $x_{0}$ のある近傍で一致するならば
+      $$\lim_{N\to\infty}\bigl(S_{N}f(x_{0})-S_{N}g(x_{0})\bigr)=0$$
+      を示せ。すなわち $S_{N}f(x_{0})$ の収束・発散は $x_{0}$ のいくらでも小さい近傍のみで決まる。係数 $c_{n}$ は $f$ の全体の情報から作られるのに、なぜこんなことが起こるのかを一言で説明せよ。<span class="lv">★★★★☆</span></li>
+
+    <li>（Dini の判定法）ある $\delta\gt0$ に対して
+      $\displaystyle\int_{|t|\lt\delta}\frac{|f(x_{0}+t)-L|}{|t|}\,dt\lt\infty$
+      ならば $S_{N}f(x_{0})\to L$ であることを示せ。系として、$f$ が $x_{0}$ で Hölder 連続ならば $S_{N}f(x_{0})\to f(x_{0})$ を導け。<span class="lv">★★★★☆</span></li>
+
+    <li>（Dirichlet–Jordan）$f$ が有界変動ならば、各点で $S_{N}f(x)\to\frac{f(x+)+f(x-)}{2}$ となることを示せ。さらに $f$ が連続かつ有界変動ならば収束は一様であることを示せ。<span class="lv">★★★★★</span></li>
+
+    <li>Lebesgue 定数 $\displaystyle L_{N}=\frac{1}{2\pi}\int_{-\pi}^{\pi}|D_{N}(t)|\,dt$ について $L_{N}\to\infty$（基礎 4 (1)）である。$S_{N}:C(\mathbb{T})\to C(\mathbb{T})$ の作用素ノルムが $L_{N}$ に等しいことを示せ。<span class="lv">★★★★☆</span></li>
+  </ol>
+</div>
+
+<div class="prob">
+  <div class="prob-head">
+    <span class="no">問題 2</span><span class="ttl">Fejér の定理と一様近似</span><span class="stars">★★★★☆</span>
+  </div>
+  <p class="preamble">$D_{N}$ は符号が暴れるが、$K_{N}$ は正である。この一点だけで世界が変わる。</p>
+  <ol class="items">
+    <li>$\{\Phi_{N}\}$ が $\mathbb{T}$ 上の近似単位元であるとは、$\frac{1}{2\pi}\int\Phi_{N}=1$、$\sup_{N}\frac{1}{2\pi}\int|\Phi_{N}|\lt\infty$、かつ任意の $\delta\gt0$ に対し $\int_{\delta\le|t|\le\pi}|\Phi_{N}|\to0$ が成り立つことをいう。Fejér 核 $K_{N}$ がこれをみたすことを示し、$D_{N}$ がみたさないのはどの条件かを指摘せよ。<span class="lv">★★★☆☆</span></li>
+
+    <li>（Fejér の定理）$f\in C(\mathbb{T})$ ならば $\sigma_{N}f\to f$ 一様、$f\in L^{p}(\mathbb{T})$（$1\le p\lt\infty$）ならば $\|\sigma_{N}f-f\|_{p}\to0$ を示せ。また $f$ が $x_{0}$ で左右極限をもつならば $\sigma_{N}f(x_{0})\to\frac{f(x_{0}+)+f(x_{0}-)}{2}$ を示せ。<span class="lv">★★★★☆</span></li>
+
+    <li>Fejér の定理の系として次を示せ。
+      (a)（一意性定理）$f\in L^{1}(\mathbb{T})$ のすべての Fourier 係数が $0$ ならば $f=0$（a.e.）。
+      (b)（Weierstrass）連続な周期関数は三角多項式で一様近似できる。
+      (c) $S_{N}f(x_{0})$ が収束するならば、その極限は $\sigma_{N}f(x_{0})$ の極限と一致する。<span class="lv">★★★★☆</span></li>
+
+    <li>$K_{N}\ge0$ から $\min f\le\sigma_{N}f\le\max f$ を示し、Cesàro 平均では Gibbs 現象が起こらないことを説明せよ。基礎 4 (3) と対比すること。<span class="lv">★★★★☆</span></li>
+
+    <li>Poisson 核 $\displaystyle P_{r}(\theta)=\sum_{n\in\mathbb{Z}}r^{|n|}e^{in\theta}=\frac{1-r^{2}}{1-2r\cos\theta+r^{2}}$（$0\le r\lt1$）もまた近似単位元（$r\to1^{-}$）であることを示し、Abel 総和 $A_{r}f=f*P_{r}\to f$ を示せ。これが単位円板の Dirichlet 問題の解であること（問題 10）に注意せよ。<span class="lv">★★★★☆</span></li>
+  </ol>
+</div>
+
+<div class="prob">
+  <div class="prob-head">
+    <span class="no">問題 3</span><span class="ttl">$L^{2}$ 理論 ― 完全正規直交系</span><span class="stars">★★★★☆</span>
+  </div>
+  <p class="preamble">$L^{2}(\mathbb{T})$ は内積 $\langle f,g\rangle=\frac{1}{2\pi}\int_{-\pi}^{\pi}f\overline{g}$ をもつ Hilbert 空間であり、$\{e^{inx}\}_{n\in\mathbb{Z}}$ はその正規直交系である。</p>
+  <ol class="items">
+    <li>（最良近似）$N$ 次三角多項式 $P$ のうち $\|f-P\|_{2}$ を最小にするのは $P=S_{N}f$ であることを示し、Bessel の不等式 $\sum|c_{n}|^{2}\le\|f\|_{2}^{2}$ を導け。<span class="lv">★★★☆☆</span></li>
+
+    <li>（Riesz–Fischer）$(c_{n})\in\ell^{2}(\mathbb{Z})$ に対し、$c_{n}$ を Fourier 係数にもつ $f\in L^{2}(\mathbb{T})$ が存在することを示せ。<span class="lv">★★★★☆</span></li>
+
+    <li>Fejér の定理（問題 2）から $\{e^{inx}\}$ の完全性を導き、Parseval の等式と $\|S_{N}f-f\|_{2}\to0$ を結論せよ。つまり $L^{2}$ では収束問題は完全に決着している。<span class="lv">★★★★☆</span></li>
+
+    <li>$0\le\alpha\le\pi$ とする。区間の指示関数に Parseval を適用して
+      $$\sum_{n\ge1}\frac{\sin^{2}(n\alpha)}{n^{2}}=\frac{\alpha(\pi-\alpha)}{2}$$
+      を示せ。$\alpha=\pi/2$ とおいて基礎 2 (4) と整合することを確かめよ。<span class="lv">★★★★☆</span></li>
+
+    <li>$L^{2}$ 収束と各点収束の関係について。$\|S_{N}f-f\|_{2}\to0$ から直ちに各点収束は従わないことを説明し、Carleson の定理（$f\in L^{2}$ ならば $S_{N}f\to f$ a.e.、1966）と Kolmogorov の例（$f\in L^{1}$ で $S_{N}f$ が至る所発散、1926）を正確に述べ、両者の間に $L^{p}$ のどのあたりに境界があるかを述べよ。<span class="lv">★★★★☆</span></li>
+  </ol>
+</div>
+
+<div class="prob">
+  <div class="prob-head">
+    <span class="no">問題 4</span><span class="ttl">発散する Fourier 級数</span><span class="stars">★★★★★</span>
+  </div>
+  <ol class="items">
+    <li>一様有界性原理（Banach–Steinhaus）を正確に述べ、Baire のカテゴリー定理から証明せよ。<span class="lv">★★★★☆</span></li>
+
+    <li>（du Bois-Reymond）$L_{N}\to\infty$（基礎 4 (1)）と問題 1 (5) から、$S_{N}f(0)$ が発散する $f\in C(\mathbb{T})$ が存在することを示せ。さらに、そのような $f$ の全体が $C(\mathbb{T})$ の稠密な $G_{\delta}$ 集合をなす（＝「ほとんどの」連続関数がそうである）ことを示せ。<span class="lv">★★★★★</span></li>
+
+    <li>抽象論に頼らず、$\displaystyle f(x)=\sum_{k\ge1}\frac{1}{k^{2}}\,\widetilde{P}_{n_{k}}(x)$ の形（$\widetilde P_{n}$ は適当に平行移動した共役 Dirichlet 核型の三角多項式、$n_{k}$ は急増加列）で (2) の反例を具体的に構成する方針を述べ、実行せよ。<span class="lv">★★★★★</span></li>
+
+    <li>（Bernstein の定理）$f$ が指数 $\alpha\gt1/2$ の Hölder 連続ならば $\sum_{n}|c_{n}|\lt\infty$ であり、したがって Fourier 級数は絶対一様収束することを示せ。（$\|f(\cdot+h)-f\|_{2}^{2}=\sum|c_{n}|^{2}|e^{inh}-1|^{2}$ を $h=\pi/2^{k}$ ととり、周波数帯 $2^{k-1}\lt|n|\le2^{k}$ ごとに Cauchy–Schwarz を使う。）<span class="lv">★★★★★</span></li>
+
+    <li>$\alpha=1/2$ では (4) が成り立たないこと（Hardy–Littlewood の反例の存在）を述べ、また「$\sum|c_{n}|\lt\infty$ ならば $f$ は連続」の逆が偽であること（(2) はさらに強い反例を与える）を確認せよ。<span class="lv">★★★★☆</span></li>
+  </ol>
+</div>
+
+<h2 class="part">第 II 部　Fourier 変換<span class="en">THE FOURIER TRANSFORM ON THE LINE</span></h2>
+<p class="part-lead">周期を無限に飛ばすと、和は積分になり、離散スペクトルは連続スペクトルになる。$L^{1}$、$L^{2}$、Schwartz 空間という三つの舞台の上で、変換の性質を組み立て直す。</p>
+
+<div class="prob">
+  <div class="prob-head">
+    <span class="no">問題 5</span><span class="ttl">反転公式と Schwartz 空間</span><span class="stars">★★★★☆</span>
+  </div>
+  <ol class="items">
+    <li>$f\in\mathcal{S}(\mathbb{R})$ ならば $\hat f\in\mathcal{S}(\mathbb{R})$ であることを、基礎 5 (2)(d)(e) の微分・乗法の交換則から示せ。<span class="lv">★★★★☆</span></li>
+
+    <li>（乗法公式）$f,g\in L^{1}$ に対し $\displaystyle\int_{\mathbb{R}}f\hat g=\int_{\mathbb{R}}\hat fg$ を示せ（Fubini）。<span class="lv">★★★☆☆</span></li>
+
+    <li>（反転公式）$g(x)=e^{-\pi\varepsilon^{2}x^{2}}$ を (2) に代入して $\varepsilon\to0^{+}$ とすることにより、$f\in L^{1}$ かつ $\hat f\in L^{1}$ ならば
+      $\displaystyle f(x)=\int_{\mathbb{R}}\hat f(\xi)e^{2\pi ix\xi}d\xi$（a.e.、$f$ が連続なら至る所）を示せ。<span class="lv">★★★★☆</span></li>
+
+    <li>Fourier 変換 $\mathcal{F}$ を $\mathcal{S}$ 上の作用素と見るとき、$\mathcal{F}^{2}f(x)=f(-x)$、したがって $\mathcal{F}^{4}=\mathrm{id}$ であることを示せ。$\mathcal{F}$ の固有値は $1,i,-1,-i$ に限ること、および Hermite 関数
+      $h_{n}(x)=\left(-\frac{1}{2\pi}\right)^{n}e^{\pi x^{2}}\dfrac{d^{n}}{dx^{n}}\left(e^{-2\pi x^{2}}\right)$
+      が $\mathcal{F}h_{n}=(-i)^{n}h_{n}$ をみたす固有関数であることを示せ。<span class="lv">★★★★★</span></li>
+
+    <li>基礎 5 (4) の $\chi$ のように $\hat f\notin L^{1}$ のとき、(3) はそのままでは使えない。Fejér 型の総和核（Gauss 核 or Fejér 核）を挟んだ「総和法つき反転公式」を定式化し、$\chi$ に対して不連続点でどの値が得られるかを確かめよ。<span class="lv">★★★★☆</span></li>
+  </ol>
+</div>
+
+<div class="prob">
+  <div class="prob-head">
+    <span class="no">問題 6</span><span class="ttl">畳み込み・近似単位元・Plancherel</span><span class="stars">★★★★☆</span>
+  </div>
+  <ol class="items">
+    <li>（Young の不等式）$\dfrac1p+\dfrac1q=1+\dfrac1r$（$1\le p,q,r\le\infty$）のとき $\|f*g\|_{r}\le\|f\|_{p}\|g\|_{q}$ を示せ。とくに $L^{1}$ が畳み込みに関して（単位元をもたない）可換 Banach 環をなすことを確かめよ。<span class="lv">★★★★☆</span></li>
+
+    <li>$\varphi\in L^{1}$、$\int\varphi=1$、$\varphi_{\varepsilon}(x)=\varepsilon^{-1}\varphi(x/\varepsilon)$ とおくと、$f\in L^{p}$（$1\le p\lt\infty$）に対し $\|f*\varphi_{\varepsilon}-f\|_{p}\to0$（$\varepsilon\to0^{+}$）を示せ。Gauss 核 $\varepsilon^{-1}e^{-\pi x^{2}/\varepsilon^{2}}$ と Poisson 核 $\dfrac{1}{\pi}\dfrac{\varepsilon}{x^{2}+\varepsilon^{2}}$ がこの形であることを確かめよ。<span class="lv">★★★★☆</span></li>
+
+    <li>$L^{1}$ が畳み込みに関して単位元をもたないことを、(2) を用いて示せ（もし $\delta\in L^{1}$ が単位元なら何が矛盾するか）。<span class="lv">★★★★☆</span></li>
+
+    <li>（Plancherel）$\mathcal{S}$ 上で $\|\hat f\|_{2}=\|f\|_{2}$ を示し、$\mathcal{F}$ が $L^{2}(\mathbb{R})$ 上のユニタリ作用素に一意に拡張されることを示せ。さらに偏極化して $\langle f,g\rangle=\langle\hat f,\hat g\rangle$ を導け。<span class="lv">★★★★☆</span></li>
+
+    <li>$f,g\in L^{1}$ に対し $\widehat{f*g}=\hat f\hat g$ を示し、$f,g\in L^{2}$ に対しては $\widehat{fg}=\hat f*\hat g$ が成り立つことを示せ。「畳み込みが掛け算になる」というこの一行が、なぜ微分方程式・信号処理・確率論を横断して効くのかを、各分野から一つずつ例を挙げて説明せよ。<span class="lv">★★★★☆</span></li>
+  </ol>
+</div>
+
+<div class="prob">
+  <div class="prob-head">
+    <span class="no">問題 7</span><span class="ttl">Poisson の和公式</span><span class="stars">★★★★★</span>
+  </div>
+  <p class="preamble">「和と和が等しい」というだけの式が、θ 関数・格子・標本化定理をつなぐ。</p>
+  <ol class="items">
+    <li>$f\in\mathcal{S}(\mathbb{R})$ に対し、周期化 $\displaystyle F(x)=\sum_{n\in\mathbb{Z}}f(x+n)$ が周期 $1$ の $C^{\infty}$ 関数で、その Fourier 係数が $\hat f(k)$ であることを示し、
+      $$\sum_{n\in\mathbb{Z}}f(n)=\sum_{k\in\mathbb{Z}}\hat f(k)$$
+      を導け。より一般に $\displaystyle\sum_{n}f(x+nT)=\frac{1}{T}\sum_{k}\hat f\!\left(\frac{k}{T}\right)e^{2\pi ikx/T}$ を示せ。<span class="lv">★★★★☆</span></li>
+
+    <li>$f(x)=e^{-\pi tx^{2}}$（$t\gt0$）に適用して、θ 関数の変換公式
+      $$\theta\!\left(\frac1t\right)=\sqrt{t}\,\theta(t),\qquad \theta(t)=\sum_{n\in\mathbb{Z}}e^{-\pi n^{2}t}$$
+      を示せ。<span class="lv">★★★★☆</span></li>
+
+    <li>$f(x)=e^{-2\pi a|x|}$（$a\gt0$）に適用して $\displaystyle\sum_{n\in\mathbb{Z}}\frac{1}{n^{2}+a^{2}}=\frac{\pi}{a}\coth(\pi a)$ を再導出し、基礎 2 (5) と比較せよ。<span class="lv">★★★★☆</span></li>
+
+    <li>$t\to0^{+}$ のとき $\theta(t)\sim t^{-1/2}$ を (2) から導き、$\displaystyle\sum_{n\ge1}e^{-\pi n^{2}t}=\frac{1}{2\sqrt{t}}-\frac12+O\!\left(e^{-\pi/t}\right)$ を示せ。<span class="lv">★★★★★</span></li>
+
+    <li>Poisson の和公式は $\mathcal{S}$ より弱い仮定でも成り立つ。$f$ が連続で $|f(x)|+|\hat f(x)|\le C(1+|x|)^{-1-\delta}$ をみたせば十分であることを示し、一方で「両辺が収束するのに等号が破れる」病的な例が存在しうること（仮定が本質的であること）を説明せよ。<span class="lv">★★★★★</span></li>
+  </ol>
+</div>
+
+<div class="prob">
+  <div class="prob-head">
+    <span class="no">問題 8</span><span class="ttl">不確定性原理</span><span class="stars">★★★★★</span>
+  </div>
+  <p class="preamble">時間局在と周波数局在は両立しない。$f$ を狭めれば $\hat f$ が広がる ― スケーリング則 $\widehat{f(\lambda\cdot)}=|\lambda|^{-1}\hat f(\cdot/\lambda)$ に既にその萌芽がある。</p>
+  <ol class="items">
+    <li>（Heisenberg–Weyl）$f\in\mathcal{S}(\mathbb{R})$, $\|f\|_{2}=1$ に対し
+      $$\left(\int_{\mathbb{R}}x^{2}|f(x)|^{2}dx\right)\left(\int_{\mathbb{R}}\xi^{2}|\hat f(\xi)|^{2}d\xi\right)\ge\frac{1}{16\pi^{2}}$$
+      を示せ。（$1=\int|f|^{2}=-\int x\frac{d}{dx}|f|^{2}$ から出発し、Cauchy–Schwarz と Plancherel を使う。）<span class="lv">★★★★★</span></li>
+
+    <li>等号成立は $f(x)=ce^{-\pi\lambda x^{2}}$（$\lambda\gt0$）に限ることを示せ。また中心を $x_{0},\xi_{0}$ にずらした一般形を述べ、平行移動・変調で不等式が不変であることを確かめよ。<span class="lv">★★★★☆</span></li>
+
+    <li>$f$ と $\hat f$ がともにコンパクト台をもつならば $f=0$ であることを示せ（$\hat f$ がコンパクト台なら $f$ は整関数に延びることを使う。問題 11 と関連）。<span class="lv">★★★★★</span></li>
+
+    <li>（Hardy の不確定性定理）$|f(x)|\le Ce^{-\pi x^{2}}$ かつ $|\hat f(\xi)|\le Ce^{-\pi\xi^{2}}$ ならば $f(x)=ce^{-\pi x^{2}}$ であることを示せ。（$\hat f$ を整関数に延長し、Phragmén–Lindelöf 型の議論を使う。複素解析編・第 I 巻の問題 12 が効く。）<span class="lv">★★★★★</span></li>
+
+    <li>窓付き Fourier 変換（Gabor 変換）$\displaystyle V_{g}f(x,\xi)=\int f(t)\overline{g(t-x)}e^{-2\pi it\xi}dt$ を定義し、(1) が「時間–周波数平面の分解能に下限がある」という主張になることを説明せよ。窓 $g$ を Gauss にとる理由も述べよ。<span class="lv">★★★★☆</span></li>
+  </ol>
+</div>
