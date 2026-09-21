@@ -1,0 +1,152 @@
+<h2 class="part">第 V 部　発展 ― 古典解析への扉<span class="en">CLASSICAL ANALYSIS BEYOND</span></h2>
+<p class="part-lead">ここから先は、複素関数論が「道具」ではなく「舞台」になる領域である。無限積・Γ・ζ・楕円関数 ― 19 世紀の巨人たちが歩いた道を、自分の手で少しだけ辿ってみよう。一問に半日かけて構わない。</p>
+
+<div class="prob">
+  <div class="prob-head">
+    <span class="no">問題 15</span><span class="ttl">無限積と Γ 関数</span><span class="stars">★★★★★</span>
+  </div>
+  <ol class="items">
+    <li>（無限積の基礎）$u_{n}$ を領域 $D$ 上の正則関数とし、$\sum_{n}|u_{n}|$ が $D$ 上広義一様収束するとする。このとき
+      $$P(z)=\prod_{n=1}^{\infty}\bigl(1+u_{n}(z)\bigr)$$
+      は $D$ 上広義一様収束して正則関数を定め、$P(z_{0})=0$ となるのは、ある $n$ で $1+u_{n}(z_{0})=0$ となるときに限ることを示せ。また $P\not\equiv 0$ のとき
+      $\displaystyle\frac{P'}{P}=\sum_{n}\frac{u_{n}'}{1+u_{n}}$（広義一様収束）を示せ。<span class="lv">★★★★☆</span></li>
+
+    <li>問題 10 (5) の部分分数展開を積分して
+      $$\sin \pi z=\pi z\prod_{n=1}^{\infty}\left(1-\frac{z^{2}}{n^{2}}\right)$$
+      を導け（項別積分と収束の正当化を含む）。さらに $z=1/2$ を代入して Wallis の公式
+      $\displaystyle\frac{\pi}{2}=\prod_{n=1}^{\infty}\frac{(2n)^{2}}{(2n-1)(2n+1)}$ を得よ。<span class="lv">★★★★☆</span></li>
+
+    <li>（Γ の Weierstrass 積）$\gamma=\lim_{N\to\infty}\left(\sum_{n=1}^{N}\frac1n-\log N\right)$ を Euler の定数とし、
+      $$\frac{1}{\Gamma(z)}=z\,e^{\gamma z}\prod_{n=1}^{\infty}\left(1+\frac{z}{n}\right)e^{-z/n}$$
+      によって $1/\Gamma$ を定義する。次を示せ。
+      (a) 右辺は整関数を定め、零点は $z=0,-1,-2,\dots$（すべて 1 位）である。
+      (b) $\Gamma(z+1)=z\Gamma(z)$、$\Gamma(1)=1$、したがって $\Gamma(n+1)=n!$。
+      (c) 相反公式 $\displaystyle\Gamma(z)\Gamma(1-z)=\frac{\pi}{\sin \pi z}$。とくに $\Gamma(1/2)=\sqrt{\pi}$。<span class="lv">★★★★★</span></li>
+
+    <li>$\operatorname{Re}z\gt 0$ において $\displaystyle\Gamma(z)=\int_{0}^{\infty}t^{z-1}e^{-t}\,dt$ が広義積分として収束し、正則関数を定めることを（Morera または微分の下での積分で）示せ。さらに、この $\Gamma$ が (3) の $\Gamma$ と一致することを示し、
+      $$\Gamma(z)=\sum_{n=0}^{\infty}\frac{(-1)^{n}}{n!}\frac{1}{z+n}+\int_{1}^{\infty}t^{z-1}e^{-t}dt$$
+      によって $\mathbb{C}$ 全体への有理型接続が得られること、$z=-n$ が 1 位の極で留数が $(-1)^{n}/n!$ であることを示せ。<span class="lv">★★★★☆</span></li>
+
+    <li>（Legendre の倍数公式）
+      $$\Gamma(z)\,\Gamma\!\left(z+\frac{1}{2}\right)=2^{1-2z}\sqrt{\pi}\;\Gamma(2z)$$
+      を示せ。両辺の比が定数であることを (3) の積表示から示し、定数を $z=1/2$ で決めるのが一つの道である。<span class="lv">★★★★★</span></li>
+  </ol>
+</div>
+
+<div class="prob">
+  <div class="prob-head">
+    <span class="no">問題 16</span><span class="ttl">ζ 関数への入口</span><span class="stars">★★★★★</span>
+  </div>
+  <ol class="items">
+    <li>$\displaystyle\zeta(s)=\sum_{n\ge1}n^{-s}$ は $\operatorname{Re}s\gt 1$ で広義一様収束し正則であることを示せ。さらに Euler 積
+      $\displaystyle\zeta(s)=\prod_{p:\text{素数}}\bigl(1-p^{-s}\bigr)^{-1}$ を示し、そこから「素数は無限に存在する」を導け。<span class="lv">★★★★☆</span></li>
+
+    <li>Abel の総和法（部分積分）により、$\operatorname{Re}s\gt 1$ で
+      $$\zeta(s)=\frac{s}{s-1}-s\int_{1}^{\infty}\frac{\{x\}}{x^{s+1}}\,dx$$
+      が成り立つことを示せ。右辺の積分は $\operatorname{Re}s\gt 0$ で正則関数を定めるから、$\zeta$ は $\operatorname{Re}s\gt 0$ へ有理型接続され、$s=1$ における 1 位の極（留数 $1$）以外に極をもたないことを結論せよ。<span class="lv">★★★★★</span></li>
+
+    <li>$\displaystyle\eta(s)=\sum_{n\ge1}\frac{(-1)^{n-1}}{n^{s}}$ は $\operatorname{Re}s\gt 0$ で収束し正則であること、および $\operatorname{Re}s\gt 1$ で $\eta(s)=\bigl(1-2^{1-s}\bigr)\zeta(s)$ であることを示せ。これが (2) とは別の解析接続を与えることを説明し、$s=1$ 以外の $1-2^{1-s}=0$ の零点で $\zeta$ が極をもたない理由を述べよ。<span class="lv">★★★★☆</span></li>
+
+    <li>$\operatorname{Re}s\gt 1$ において
+      $$\Gamma(s)\,\zeta(s)=\int_{0}^{\infty}\frac{x^{s-1}}{e^{x}-1}\,dx$$
+      を示せ（項別積分の正当化を含む）。<span class="lv">★★★★☆</span></li>
+
+    <li>Hankel 型経路 $H$（$+\infty$ から実軸のすぐ上を原点へ、原点を小円で回り、実軸のすぐ下を $+\infty$ へ）を用いて
+      $$\zeta(s)=\frac{\Gamma(1-s)}{2\pi i}\int_{H}\frac{(-x)^{s-1}}{e^{x}-1}\,dx$$
+      を導き、これが $\mathbb{C}$ 全体への接続を与えることを示せ。さらに $x/(e^{x}-1)=\sum_{k\ge0}\frac{B_{k}}{k!}x^{k}$（Bernoulli 数）を用いて
+      $$\zeta(-n)=-\frac{B_{n+1}}{n+1}\quad(n\ge 0),\qquad\text{とくに}\quad \zeta(0)=-\frac12,\ \ \zeta(-1)=-\frac{1}{12}$$
+      を導け。<span class="lv">★★★★★</span></li>
+  </ol>
+  <div class="note"><span class="lbl">注</span>(5) の $(-x)^{s-1}$ は $|\arg(-x)|\lt\pi$ の分枝をとる。経路の上岸・下岸での偏角の差が $2\pi$ であることが、$\Gamma(1-s)$ の前因子と結びついて (4) を再現する仕掛けになっている。</div>
+</div>
+
+<div class="prob">
+  <div class="prob-head">
+    <span class="no">問題 17</span><span class="ttl">Jensen の公式と Blaschke 積</span><span class="stars">★★★★★</span>
+  </div>
+  <ol class="items">
+    <li>（Jensen の公式）$f$ が $|z|\le R$ を含む領域で正則、$f(0)\neq 0$、$|z|\lt R$ における零点を重複込みで $a_{1},\dots,a_{N}$、$|z|=R$ 上に零点はないとする。このとき
+      $$\log|f(0)|=\sum_{k=1}^{N}\log\frac{|a_{k}|}{R}+\frac{1}{2\pi}\int_{0}^{2\pi}\log\bigl|f(Re^{i\theta})\bigr|\,d\theta$$
+      を示せ。<span class="lv">★★★★☆</span></li>
+
+    <li>$\displaystyle\int_{0}^{2\pi}\log\bigl|1-e^{i\theta}\bigr|\,d\theta=0$ を示せ。（Jensen の公式の「零点が境界上にある」限界的な場合であり、直接計算でも示せる。）<span class="lv">★★★☆☆</span></li>
+
+    <li>$n(r)$ を $|z|\lt r$ にある $f$ の零点の個数（重複込み）とするとき
+      $$\int_{0}^{R}\frac{n(r)}{r}\,dr=\frac{1}{2\pi}\int_{0}^{2\pi}\log\bigl|f(Re^{i\theta})\bigr|\,d\theta-\log|f(0)|$$
+      を示せ。これを用いて「$|f|\le M$ が $|z|\lt R$ で成り立ち $f(0)\neq0$ ならば、$n(R/2)\le \dfrac{\log (M/|f(0)|)}{\log 2}$」を導け。<span class="lv">★★★★☆</span></li>
+
+    <li>$f$ が $\mathbb{D}$ 上有界正則、$f\not\equiv 0$、零点を $\{a_{n}\}$（重複込み、$0$ は零点でないとしてよい）とすると
+      $$\sum_{n}\bigl(1-|a_{n}|\bigr)\lt\infty$$
+      が成り立つことを示せ。系として、$\mathbb{D}$ 上有界正則で $f(1-1/n)=0$（$n\ge2$）なる $f$ は $f\equiv0$ に限ることを示せ。<span class="lv">★★★★★</span></li>
+
+    <li>逆に $\{a_{n}\}\subset\mathbb{D}\setminus\{0\}$ が $\sum(1-|a_{n}|)\lt\infty$ をみたすとき、Blaschke 積
+      $$B(z)=\prod_{n}\frac{|a_{n}|}{a_{n}}\cdot\frac{a_{n}-z}{1-\overline{a_{n}}z}$$
+      は $\mathbb{D}$ 上広義一様収束し、$|B|\lt1$ なる正則関数を定め、その零点はちょうど $\{a_{n}\}$（重複込み）であることを示せ。<span class="lv">★★★★★</span></li>
+  </ol>
+</div>
+
+<div class="prob">
+  <div class="prob-head">
+    <span class="no">問題 18</span><span class="ttl">鞍点法と漸近評価</span><span class="stars">★★★★☆</span>
+  </div>
+  <p class="preamble">$a_{n}\sim b_{n}$ は $a_{n}/b_{n}\to 1$ を意味する。各問で「峠道をどちらに横切るか」を明示すること。</p>
+  <ol class="items">
+    <li>（Laplace の方法）$\varphi$ が $[\alpha,\beta]$ 上実数値 $C^{2}$ 級で、内点 $t_{0}$ でのみ最大値をとり $\varphi''(t_{0})\lt 0$、$g$ は連続で $g(t_{0})\neq0$ とする。このとき
+      $$\int_{\alpha}^{\beta}g(t)e^{n\varphi(t)}\,dt\sim g(t_{0})\,e^{n\varphi(t_{0})}\sqrt{\frac{2\pi}{n\,|\varphi''(t_{0})|}}\qquad(n\to\infty)$$
+      を示せ。<span class="lv">★★★★☆</span></li>
+
+    <li>(1) を用いて、変形 Bessel 関数 $\displaystyle I_{0}(n)=\frac{1}{2\pi}\int_{-\pi}^{\pi}e^{n\cos\theta}\,d\theta$ について $\displaystyle I_{0}(n)\sim\frac{e^{n}}{\sqrt{2\pi n}}$ を示せ。<span class="lv">★★★★☆</span></li>
+
+    <li>（Stirling の公式）$\displaystyle n!=\int_{0}^{\infty}t^{n}e^{-t}\,dt$ に $t=nu$ と置換して (1) を適用し、
+      $$n!\sim\sqrt{2\pi n}\left(\frac{n}{e}\right)^{n}$$
+      を示せ。<span class="lv">★★★★★</span></li>
+
+    <li>（Cauchy の係数公式 + 鞍点法）$\displaystyle\frac{1}{n!}=\frac{1}{2\pi i}\oint_{|z|=r}\frac{e^{z}}{z^{n+1}}\,dz$ において、被積分関数 $e^{z}z^{-n-1}$ の鞍点が $z=n$ にあることを確かめ、$r=n$ にとったうえで最急降下の議論により再び Stirling の公式を導け。この二通りの導出を比べ、複素平面を経由することの利点を論ぜよ。<span class="lv">★★★★★</span></li>
+
+    <li>同様に $\displaystyle\binom{2n}{n}=\frac{1}{2\pi i}\oint_{|z|=r}\frac{(1+z)^{2n}}{z^{n+1}}\,dz$ から $\displaystyle\binom{2n}{n}\sim\frac{4^{n}}{\sqrt{\pi n}}$ を導け。<span class="lv">★★★★☆</span></li>
+  </ol>
+</div>
+
+<div class="prob">
+  <div class="prob-head">
+    <span class="no">問題 19</span><span class="ttl">Riemann の写像定理（完全誘導）</span><span class="stars">★★★★★</span>
+  </div>
+  <p class="preamble">定理：$\Omega\subsetneq\mathbb{C}$ を単連結領域、$z_{0}\in\Omega$ とすると、等角同型 $f:\Omega\to\mathbb{D}$ で $f(z_{0})=0,\ f'(z_{0})\gt 0$ なるものがただ一つ存在する。以下の誘導に従って証明せよ。</p>
+  <ol class="items">
+    <li>（Montel の定理）$\mathcal{F}\subset\mathcal{O}(\Omega)$ が局所一様有界ならば、$\mathcal{F}$ の任意の列は広義一様収束する部分列をもつ。Cauchy の評価式から同程度連続性を出し、Arzelà–Ascoli と対角線論法を用いて示せ。<span class="lv">★★★★☆</span></li>
+
+    <li>$\Omega$ が単連結、$g\in\mathcal{O}(\Omega)$ が零点をもたないならば、$g=e^{h}$ なる $h\in\mathcal{O}(\Omega)$ が存在することを示せ。とくに $g$ は $\Omega$ 上に正則な平方根をもつ。<span class="lv">★★★★☆</span></li>
+
+    <li>（Koebe の平方根トリック）$\Omega\subsetneq\mathbb{C}$ が単連結ならば、単射正則写像 $\Omega\to\mathbb{D}$ が存在することを示せ。（$a\notin\Omega$ をとり $\sqrt{z-a}$ の分枝を考えよ。その像が、ある円板と交わらないことを示すのが鍵。）<span class="lv">★★★★★</span></li>
+
+    <li>$\mathcal{F}=\{f:\Omega\to\mathbb{D}\ \text{単射正則},\ f(z_{0})=0\}$ とおくと $\mathcal{F}\neq\emptyset$ であり、$M=\sup_{f\in\mathcal{F}}|f'(z_{0})|$ は有限で、これを達成する $f_{\ast}\in\mathcal{F}$ が存在することを、(1) と Hurwitz の定理（問題 11 (4)）を用いて示せ。<span class="lv">★★★★★</span></li>
+
+    <li>$f_{\ast}$ が全射であることを示せ。（全射でないとして $w_{0}\in\mathbb{D}\setminus f_{\ast}(\Omega)$ をとり、$\mathbb{D}$ の自己同型と平方根を組み合わせて $|f'(z_{0})|$ をより大きくする $f\in\mathcal{F}$ を構成し、矛盾を導く。）<span class="lv">★★★★★</span></li>
+
+    <li>一意性を Schwarz の補題から示せ。また、$\Omega=\mathbb{C}$ のときに定理が成り立たない理由を述べよ。<span class="lv">★★★★☆</span></li>
+  </ol>
+</div>
+
+<div class="prob">
+  <div class="prob-head">
+    <span class="no">問題 20</span><span class="ttl">Weierstrass の ℘ 関数</span><span class="stars">★★★★★</span>
+  </div>
+  <p class="preamble">$\omega_{1},\omega_{2}$ を $\mathbb{R}$ 上一次独立な複素数とし、格子 $\Lambda=\mathbb{Z}\omega_{1}+\mathbb{Z}\omega_{2}$、$\Lambda^{\ast}=\Lambda\setminus\{0\}$ とおく。</p>
+  <ol class="items">
+    <li>$\displaystyle\sum_{\omega\in\Lambda^{\ast}}\frac{1}{|\omega|^{s}}$ は $s\gt 2$ のとき収束し、$s\le 2$ のとき発散することを示せ。<span class="lv">★★★★☆</span></li>
+
+    <li>$$\wp(z)=\frac{1}{z^{2}}+\sum_{\omega\in\Lambda^{\ast}}\left[\frac{1}{(z-\omega)^{2}}-\frac{1}{\omega^{2}}\right]$$
+      が $\mathbb{C}\setminus\Lambda$ 上広義一様収束し、$\Lambda$ の各点に 2 位の極をもつ有理型関数を定めることを示せ。さらに $\wp$ が偶関数であり、$\wp'$ が $\Lambda$-周期的であることを用いて、$\wp$ 自身も $\Lambda$-周期的であることを示せ。<span class="lv">★★★★★</span></li>
+
+    <li>$G_{k}=\sum_{\omega\in\Lambda^{\ast}}\omega^{-k}$（$k\ge 3$、奇数のとき $0$）とおく。$0\lt|z|\lt\min_{\omega\in\Lambda^{\ast}}|\omega|$ において
+      $$\wp(z)=\frac{1}{z^{2}}+\sum_{k\ge1}(2k+1)G_{2k+2}\,z^{2k}$$
+      を示せ。<span class="lv">★★★★★</span></li>
+
+    <li>$g_{2}=60G_{4}$, $g_{3}=140G_{6}$ とおく。$F(z)=\wp'(z)^{2}-4\wp(z)^{3}+g_{2}\wp(z)+g_{3}$ が $\Lambda$-周期的な整関数で $F(0)=0$ となることを (3) から示し、Liouville の定理により
+      $$\wp'^{\,2}=4\wp^{3}-g_{2}\wp-g_{3}$$
+      を結論せよ。<span class="lv">★★★★★</span></li>
+
+    <li>任意の $\Lambda$-楕円関数 $F$ は $\wp$ と $\wp'$ の有理式として書けることを示せ。（まず $F$ が偶関数の場合に $F$ が $\wp$ の有理式であることを、零点と極の対称性から示し、一般の $F$ を偶部分と奇部分に分けよ。）<span class="lv">★★★★★</span></li>
+  </ol>
+  <div class="note"><span class="lbl">注</span>(2) の「$\wp'$ の周期性から $\wp$ の周期性へ」の一歩では、$\wp(z+\omega_{j})-\wp(z)$ が定数であることをまず示し、$z=-\omega_{j}/2$ を代入して偶関数性を使う。半周期点を代入するこの技巧は、楕円関数論の随所に現れる。</div>
+</div>

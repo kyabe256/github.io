@@ -1,0 +1,76 @@
+<h2 class="part">第 II 部　Cauchy 理論の技法<span class="en">THE CAUCHY MACHINERY</span></h2>
+<p class="part-lead">円周上の値が内部を支配する ― Cauchy の積分公式は、等式であると同時に「情報の伝播装置」である。ここでは公式を計算道具として使い倒し、続いてその逆向き（Morera）と、特異点の分類へ進む。</p>
+
+<div class="prob">
+  <div class="prob-head">
+    <span class="no">問題 5</span><span class="ttl">Cauchy の積分公式を使い倒す</span><span class="stars">★★★★☆</span>
+  </div>
+  <ol class="items">
+    <li>$|a|\neq 1$ とする。$|dz|$ を弧長要素として
+      $$\int_{|z|=1}\frac{|dz|}{|z-a|^{2}}=\frac{2\pi}{\bigl|\,1-|a|^{2}\,\bigr|}$$
+      を示せ。<span class="lv">★★★☆☆</span></li>
+
+    <li>$n\ge 0$ を整数とするとき
+      $$\int_{0}^{2\pi}e^{\cos\theta}\cos\bigl(\sin\theta-n\theta\bigr)\,d\theta=\frac{2\pi}{n!}$$
+      を示せ。また $\displaystyle\int_{0}^{2\pi}e^{\cos\theta}\sin\bigl(\sin\theta-n\theta\bigr)\,d\theta$ の値も求めよ。<span class="lv">★★★☆☆</span></li>
+
+    <li>$$I=\oint_{|z|=2}\frac{e^{z}}{z^{2}(z-1)^{3}}\,dz$$
+      を求めよ。<span class="lv">★★★☆☆</span></li>
+
+    <li>（Gutzmer / Parseval の等式）$f(z)=\sum_{n\ge 0}a_{n}z^{n}$ が $|z|\lt R$ で正則であるとき、$0\lt r\lt R$ に対して
+      $$\frac{1}{2\pi}\int_{0}^{2\pi}\bigl|f(re^{i\theta})\bigr|^{2}d\theta=\sum_{n\ge 0}|a_{n}|^{2}r^{2n}$$
+      を示せ。これを用いて、$|f|\le M$ が $|z|\lt R$ で成り立つならば $\sum_{n\ge 0}|a_{n}|^{2}R^{2n}\le M^{2}$ であることを導き（Cauchy の評価式 $|a_n|\le MR^{-n}$ の精密化になっている）、ある $n\ge 1$ で $|a_{n}|R^{n}=M$ となるのはどのようなときかを決定せよ。<span class="lv">★★★★☆</span></li>
+
+    <li>（Schwarz の積分公式）$f$ が $\overline{\mathbb{D}}$ を含む開集合で正則、$u=\operatorname{Re}f$ とする。$|z|\lt 1$ に対し
+      $$f(z)=\frac{1}{2\pi}\int_{0}^{2\pi}u\bigl(e^{i\theta}\bigr)\,\frac{e^{i\theta}+z}{e^{i\theta}-z}\,d\theta+i\operatorname{Im}f(0)$$
+      を示せ。<span class="lv">★★★★☆</span></li>
+  </ol>
+  <div class="note"><span class="lbl">誘導</span>(5)：$|z|\lt 1$ のとき $1/\overline{z}$ は単位円板の外にあるから $\displaystyle\oint_{|z'|=1}\frac{f(z')}{z'-1/\overline{z}}dz'=0$。この「鏡像点の項」を Cauchy の積分公式に足し引きして、被積分関数が実部だけで書けるように仕立てるのが鍵である。</div>
+</div>
+
+<div class="prob">
+  <div class="prob-head">
+    <span class="no">問題 6</span><span class="ttl">Morera・鏡像原理・可除特異点</span><span class="stars">★★★★☆</span>
+  </div>
+  <p class="preamble">Cauchy の定理の「逆」をどこまで弱い仮定で回収できるか、という主題である。</p>
+  <ol class="items">
+    <li>（Morera の定理）$f$ が領域 $D$ 上連続で、$D$ に含まれる任意の三角形 $T$ の周に沿って $\oint_{\partial T}f(z)\,dz=0$ となるならば、$f$ は $D$ 上正則であることを示せ。<span class="lv">★★★☆☆</span></li>
+
+    <li>（Weierstrass の収束定理）$f_{n}$ が領域 $D$ 上正則で $f$ に広義一様収束するならば、$f$ は正則であり、さらに各 $k$ について $f_{n}^{(k)}\to f^{(k)}$ が広義一様に成り立つことを示せ。<span class="lv">★★★☆☆</span></li>
+
+    <li>$L$ を直線の一部（線分または直線）とする。$f$ が領域 $D$ 上連続で、$D\setminus L$ 上で正則ならば、$f$ は $D$ 全体で正則であることを示せ。<span class="lv">★★★★☆</span></li>
+
+    <li>（Schwarz の鏡像原理）$\Omega$ を実軸に関して対称な領域とし、$\Omega^{+}=\Omega\cap\mathbb{H}$, $I=\Omega\cap\mathbb{R}$ とする。$f$ が $\Omega^{+}$ で正則、$\Omega^{+}\cup I$ で連続、$f(I)\subset\mathbb{R}$ であるとき、
+      $$\tilde f(z)=\begin{cases} f(z) & (z\in\Omega^{+}\cup I)\\ \overline{f(\overline{z})} & (z\in\Omega^{-})\end{cases}$$
+      は $\Omega$ 全体で正則であることを示せ。また、結論が成り立たなくなるのは仮定のどこを外したときかを、具体例とともに述べよ。<span class="lv">★★★★☆</span></li>
+
+    <li>$f$ が $0\lt|z-a|\lt r$ で正則であるとする。次を示せ。
+      (a) $\lim_{z\to a}(z-a)f(z)=0$ ならば $a$ は可除特異点である。
+      (b) $a$ の近傍で $\operatorname{Re}f$ が上に有界ならば $a$ は可除特異点である。
+      (c) $|f(z)|\le C|z-a|^{-1/2}$ ならば $a$ は可除特異点である。<span class="lv">★★★★☆</span></li>
+  </ol>
+</div>
+
+<div class="prob">
+  <div class="prob-head">
+    <span class="no">問題 7</span><span class="ttl">Laurent 展開と特異点の分類</span><span class="stars">★★★★☆</span>
+  </div>
+  <ol class="items">
+    <li>$\displaystyle f(z)=\frac{1}{(z-1)(z-2)}$ の Laurent 展開を、次の各領域について求めよ。
+      (a) $0\le|z|\lt 1$、(b) $1\lt|z|\lt 2$、(c) $2\lt|z|\lt\infty$、(d) $0\lt|z-1|\lt 1$。<span class="lv">★★★☆☆</span></li>
+
+    <li>（Bessel 関数の母関数）$x\in\mathbb{C}$ を固定する。$\displaystyle G(z)=\exp\!\left[\frac{x}{2}\left(z-\frac{1}{z}\right)\right]$ は $0\lt|z|\lt\infty$ で正則だから Laurent 展開 $G(z)=\sum_{n=-\infty}^{\infty}J_{n}(x)z^{n}$ をもつ。次を示せ。
+      (a) $\displaystyle J_{n}(x)=\frac{1}{2\pi}\int_{-\pi}^{\pi}\cos\bigl(n\theta-x\sin\theta\bigr)\,d\theta$。
+      (b) $J_{-n}(x)=(-1)^{n}J_{n}(x)$。
+      (c) $\displaystyle J_{n}(x)=\sum_{m\ge 0}\frac{(-1)^{m}}{m!\,(n+m)!}\left(\frac{x}{2}\right)^{n+2m}$（$n\ge 0$）。
+      (d) $J_{n}$ は Bessel の微分方程式 $x^{2}y''+xy'+(x^{2}-n^{2})y=0$ をみたす。<span class="lv">★★★★☆</span></li>
+
+    <li>次の関数について、$\mathbb{C}$ における特異点をすべて挙げ、その種類（可除・$k$ 位の極・真性・孤立でない特異点）を判定せよ。さらに $z=\infty$ における振る舞いも分類せよ。
+      (a) $\dfrac{z}{e^{z}-1}$、(b) $\dfrac{1-\cos z}{z^{4}}$、(c) $z^{2}\sin\dfrac{1}{z}$、(d) $\dfrac{1}{\sin(\pi/z)}$、(e) $\dfrac{1}{e^{1/z}-1}$。<span class="lv">★★★★☆</span></li>
+
+    <li>（Casorati–Weierstrass）$a$ が $f$ の真性特異点ならば、任意の $\varepsilon\gt 0$ に対し $f\bigl(\{0\lt|z-a|\lt\varepsilon\}\bigr)$ は $\mathbb{C}$ で稠密であることを示せ。さらに $f(z)=e^{1/z}$ については、任意の $\varepsilon\gt 0$ に対し $f$ が $0\lt|z|\lt\varepsilon$ 上で $\mathbb{C}\setminus\{0\}$ の各値をちょうど無限回とることを、直接的に確かめよ。<span class="lv">★★★★☆</span></li>
+
+    <li>Riemann 球面 $\hat{\mathbb{C}}=\mathbb{C}\cup\{\infty\}$ の全体で有理型な関数（$\infty$ でも極または可除）は有理関数に限ることを示せ。系として、$\hat{\mathbb{C}}$ 上正則な関数は定数であることを導け。<span class="lv">★★★★★</span></li>
+  </ol>
+  <div class="note"><span class="lbl">注</span>(3)(d)(e) では「孤立特異点の定義」に立ち返ること。特異点が集積する点は、それ自身が孤立特異点ではない。</div>
+</div>

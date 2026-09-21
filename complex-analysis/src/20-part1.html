@@ -1,0 +1,95 @@
+<h2 class="part">第 I 部　正則性の基礎<span class="en">FOUNDATIONS OF HOLOMORPHY</span></h2>
+<p class="part-lead">「複素微分可能」というたった一つの条件が、どれほど強い帰結をもたらすか。Cauchy–Riemann 方程式・Liouville の定理・一致の定理という三本の柱を、限界まで押し込んでみる。</p>
+
+<div class="prob">
+  <div class="prob-head">
+    <span class="no">問題 1</span><span class="ttl">Cauchy–Riemann 方程式の深層</span><span class="stars">★★★☆☆</span>
+  </div>
+  <p class="preamble">$f=u+iv$ を領域 $D$ 上の関数とし、$z=x+iy=re^{i\theta}$ と書く。</p>
+  <ol class="items">
+    <li>極形式における Cauchy–Riemann 方程式
+      $$\frac{\partial u}{\partial r}=\frac{1}{r}\frac{\partial v}{\partial\theta},\qquad
+        \frac{\partial v}{\partial r}=-\frac{1}{r}\frac{\partial u}{\partial\theta}\qquad(r\neq 0)$$
+      を導出し、さらに $f$ が正則ならば $f'(z)=e^{-i\theta}\left(u_r+iv_r\right)$ となることを示せ。これを用いて $\log z$ の主枝の導関数を求めよ。<span class="lv">★★☆☆☆</span></li>
+
+    <li>形式的な微分作用素 $\displaystyle\partial=\frac{1}{2}\left(\frac{\partial}{\partial x}-i\frac{\partial}{\partial y}\right)$, $\displaystyle\bar\partial=\frac{1}{2}\left(\frac{\partial}{\partial x}+i\frac{\partial}{\partial y}\right)$ を導入すると、$C^1$ 級の $f$ について「$f$ が正則 $\iff \bar\partial f=0$」であり、このとき $f'=\partial f$ となることを示せ。さらに $\Delta=4\partial\bar\partial$ を確かめ、$f$ が正則ならば
+      $$\Delta\bigl(|f|^{2}\bigr)=4|f'|^{2},\qquad \Delta\bigl(\log|f|\bigr)=0\ \ (f\neq 0\ \text{の点で})$$
+      が成り立つことを示せ。<span class="lv">★★★☆☆</span></li>
+
+    <li>$u(x,y)=e^{x}\left(x\cos y-y\sin y\right)$ が $\mathbb{R}^{2}$ 上調和であることを確かめ、$u$ を実部にもち $f(0)=0$ をみたす正則関数 $f$ を、$z$ の初等関数の閉じた形で表せ。<span class="lv">★★★☆☆</span></li>
+
+    <li>$$f(z)=\begin{cases}\dfrac{\overline{z}^{\,2}}{z} & (z\neq 0)\\[4pt] 0 & (z=0)\end{cases}$$
+      について次を示せ。(a) $f$ は $\mathbb{C}$ 上連続である。(b) 原点において $u_x,u_y,v_x,v_y$ がすべて存在し、Cauchy–Riemann 方程式を満たす。(c) にもかかわらず $f$ は原点で複素微分可能でない。この事実と「$u,v$ が $C^{1}$ 級で CR 方程式をみたせば正則」という定理は、なぜ矛盾しないのか説明せよ。<span class="lv">★★★★☆</span></li>
+
+    <li>領域 $D$ 上の正則関数 $f=u+iv$ について、次のいずれか一つが成り立てば $f$ は定数であることを示せ（最大値原理・開写像定理は用いず、Cauchy–Riemann 方程式のみから示すこと）。
+      (a) $|f|$ が $D$ 上定数。(b) $f$ が零点をもたず $\arg f$ が定数（連続な分枝がとれるとする）。(c) $u=v^{2}$ が $D$ 上成り立つ。(d) $\overline{f}$ もまた $D$ 上正則。<span class="lv">★★★★☆</span></li>
+  </ol>
+</div>
+
+<div class="prob">
+  <div class="prob-head">
+    <span class="no">問題 2</span><span class="ttl">整関数と Liouville の定理の諸相</span><span class="stars">★★★★☆</span>
+  </div>
+  <p class="preamble">以下、$f$ は $\mathbb{C}$ 全体で正則（整関数）とする。Liouville の定理は既知としてよいが、各小問では「どの関数に Liouville を適用するか」の発見が要点である。</p>
+  <ol class="items">
+    <li>ある実数 $M$ が存在して、すべての $z\in\mathbb{C}$ で $\operatorname{Re}f(z)\le M$ が成り立つとする。このとき $f$ は定数であることを示せ。また、同じ結論が「$f(\mathbb{C})$ がある円板 $\mathbb{D}(a,\varepsilon)$ と交わらない」という仮定からも従うことを示せ。<span class="lv">★★★☆☆</span></li>
+
+    <li>ある $A,B\gt 0$ と整数 $k\ge 0$ に対して $|f(z)|\le A+B|z|^{k}$ がすべての $z$ で成り立つならば、$f$ は次数 $k$ 以下の多項式であることを、Cauchy の評価式から示せ。<span class="lv">★★★☆☆</span></li>
+
+    <li>整関数 $f,g$ が $|f(z)|\le|g(z)|$（すべての $z$）をみたし、$g\not\equiv 0$ とする。このとき $|c|\le 1$ なる定数 $c$ が存在して $f=cg$ となることを示せ。<span class="lv">★★★★☆</span></li>
+
+    <li>整関数 $f$ が $|z|\to\infty$ のとき $|f(z)|\to\infty$ をみたすならば、$f$ は多項式であることを示せ。さらに、そのような $f$ は $\mathbb{C}$ から $\mathbb{C}$ への全射であることを示せ。<span class="lv">★★★★☆</span></li>
+
+    <li>整関数 $f$ が $f(z+1)=f(z)$ かつ $f(z+i)=f(z)$ をすべての $z$ でみたすならば $f$ は定数であることを示せ。<span class="lv">★★★☆☆</span></li>
+
+    <li>$\omega_1,\omega_2$ を $\mathbb{R}$ 上一次独立な複素数とし、$F$ を $\mathbb{C}$ 上の有理型関数で $F(z+\omega_1)=F(z+\omega_2)=F(z)$ をみたす非定数なもの（楕円関数）とする。基本平行四辺形 $P=\{a+s\omega_1+t\omega_2:0\le s,t\lt 1\}$ について、
+      (a) $P$ の内部にある極の留数の総和は $0$ であること、(b) したがって $F$ は $P$ 内に少なくとも $2$ 個の極（重複度込み）をもつこと、を示せ。<span class="lv">★★★★★</span></li>
+  </ol>
+  <div class="note"><span class="lbl">注</span>(6)(a) では、$\partial P$ を周期分だけずらした辺どうしが打ち消し合うように平行移動しておくとよい。極が $\partial P$ 上に来る場合の処理まで込めて論じること。</div>
+</div>
+
+<div class="prob">
+  <div class="prob-head">
+    <span class="no">問題 3</span><span class="ttl">べき級数・収束半径・自然境界</span><span class="stars">★★★★☆</span>
+  </div>
+  <ol class="items">
+    <li>次のべき級数の収束半径を求めよ。
+      (a) $\displaystyle\sum_{n\ge 0}\bigl(3+(-1)^{n}\bigr)^{n}z^{n}$、
+      (b) $\displaystyle\sum_{n\ge 1}\frac{n!}{n^{n}}z^{n}$、
+      (c) $\displaystyle\sum_{n\ge 1}\left(1+\frac{1}{n}\right)^{n^{2}}z^{n}$。<span class="lv">★★★☆☆</span></li>
+
+    <li>$\sum_{n\ge 0}a_{n}z^{n}$ の収束半径が $R$（$0\lt R\lt\infty$、かつ $a_n\neq 0$ が無限個）であるとき、
+      $\sum a_{n}^{2}z^{n}$、$\displaystyle\sum \frac{a_{n}}{n!}z^{n}$、$\sum n^{n}a_{n}z^{n}$ の収束半径をそれぞれ求めよ。<span class="lv">★★★☆☆</span></li>
+
+    <li>（Abel の連続性定理）$\sum_{n\ge 0}a_{n}$ が収束するならば、$f(z)=\sum a_{n}z^{n}$ は $|z|\lt 1$ で正則であり、
+      $$\lim_{r\to 1^{-}}f(r)=\sum_{n\ge 0}a_{n}$$
+      が成り立つことを示せ。これを用いて $\displaystyle\sum_{n\ge 1}\frac{(-1)^{n-1}}{n}$ と $\displaystyle\sum_{n\ge 0}\frac{(-1)^{n}}{2n+1}$ の値を求めよ。<span class="lv">★★★★☆</span></li>
+
+    <li>$\displaystyle g(z)=\sum_{n\ge 1}\frac{z^{n}}{n^{2}}$ は $\overline{\mathbb{D}}$ 上一様収束するから $\overline{\mathbb{D}}$ 上連続である。にもかかわらず $z=1$ は $g$ の正則点ではない（$z=1$ を含むどんな開円板にも $g$ は正則に延びない）ことを示せ。<span class="lv">★★★★☆</span></li>
+
+    <li>（Hadamard の空隙級数）$\displaystyle F(z)=\sum_{n\ge 0}z^{2^{n}}$ は $\mathbb{D}$ で正則である。単位円周上の各点が $F$ の特異点であること、すなわち単位円周が $F$ の自然境界であることを示せ。<span class="lv">★★★★★</span></li>
+  </ol>
+  <div class="note"><span class="lbl">誘導</span>(5)：まず $z=r\exp\left(2\pi i\,p/2^{q}\right)$（$p,q$ は整数）に沿って $r\to 1^{-}$ とすると $|F(z)|\to\infty$ となることを示し、そのような点が単位円周上稠密であることと、正則点全体が開集合であることを併せよ。</div>
+</div>
+
+<div class="prob">
+  <div class="prob-head">
+    <span class="no">問題 4</span><span class="ttl">一致の定理とその破壊力</span><span class="stars">★★★★☆</span>
+  </div>
+  <ol class="items">
+    <li>原点の近傍で正則な関数 $f$ について、十分大きいすべての $n$ で次の条件をみたすものが存在するか。存在するなら $f$ を決定し、存在しないなら証明せよ。
+      (a) $f\!\left(\tfrac1n\right)=\dfrac{1}{n^{2}}$、
+      (b) $f\!\left(\tfrac1n\right)=\dfrac{(-1)^{n}}{n}$、
+      (c) $f\!\left(\tfrac1n\right)=\dfrac{1}{2n+1}$、
+      (d) $f\!\left(\tfrac1n\right)=\dfrac{n}{n+1}$。<span class="lv">★★★☆☆</span></li>
+
+    <li>$D$ が領域のとき、環 $\mathcal{O}(D)$ は整域である（$fg\equiv 0$ ならば $f\equiv 0$ または $g\equiv 0$）ことを示せ。$D$ が連結でない開集合のときにこれが破れる例を挙げよ。<span class="lv">★★★☆☆</span></li>
+
+    <li>整関数 $f$ が $f(\mathbb{R})\subset\mathbb{R}$ をみたすならば $f(\overline{z})=\overline{f(z)}$ がすべての $z$ で成り立つことを示せ。さらに、$f(\mathbb{R})\subset\mathbb{R}$ かつ $f(i\mathbb{R})\subset i\mathbb{R}$ ならば $f$ は奇関数であることを示せ。<span class="lv">★★★★☆</span></li>
+
+    <li>$f$ を領域 $D$ 上の正則関数とし、$f$ の零点集合 $Z(f)$ が $D$ 内に集積点をもたないとする。$K\subset D$ をコンパクトとするとき $Z(f)\cap K$ は有限集合であることを示し、これを用いて「$\mathbb{D}$ 上で正則かつ $f(1-1/n)=0$（$n\ge 2$）なる $f\not\equiv 0$」が存在しうるかどうかを論ぜよ。さらに、そのような $f$ で <em>有界</em> なものは存在するか（問題 17 を解いたあとで再訪せよ）。<span class="lv">★★★☆☆</span></li>
+
+    <li>（Baire のカテゴリー定理を用いる）$f$ を領域 $D$ 上の正則関数とし、各点 $z\in D$ に対してある整数 $n=n(z)\ge 0$ が存在して $f^{(n)}(z)=0$ となるとする。このとき $f$ は多項式であることを示せ。<span class="lv">★★★★★</span></li>
+  </ol>
+  <div class="note"><span class="lbl">誘導</span>(5)：$E_{n}=\{z\in D: f^{(n)}(z)=0\}$ は閉集合で $D=\bigcup_{n}E_{n}$。Baire よりある $E_{N}$ は内点をもつ。そこから一致の定理で $D$ 全体に広げるとき、$D$ の連結性をどう使うかが山場である。</div>
+</div>

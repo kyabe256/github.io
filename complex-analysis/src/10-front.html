@@ -1,0 +1,86 @@
+<div class="cover">
+  <div class="kicker">COMPLEX ANALYSIS</div>
+  <h1>複素関数論<br>演習問題集</h1>
+  <div class="rule"></div>
+  <div class="sub">美しい定理と、鮮やかな計算</div>
+  <div class="formula">$$\oint_{\partial\Omega} f(z)\,dz \;=\; 2\pi i\sum_{k}\operatorname*{Res}_{z=a_k} f$$</div>
+  <div class="meta">
+    全 20 大問 / 小問 108 題<br>
+    対象：理工系学部 2・3 年 〜 大学院入試<br>
+    難易度：定期試験の難問 〜 院試の難問<br>
+    <br>
+    解答は収録していません
+  </div>
+</div>
+
+<h2 class="plain">はじめに ― この問題集の使い方</h2>
+
+<p>本書は、複素関数論（複素解析）を一通り学んだ人が、<strong>自分の手を動かして「複素関数ならでは」の力を味わう</strong>ために編んだオリジナル問題集です。実関数論では決して起こらないこと ― 一度微分できれば無限回微分できること、円周上の値が内部をすべて決めてしまうこと、実軸上の積分が平面上の迂回路によって一撃で求まってしまうこと ― が、どの問題の背後にも潜んでいます。</p>
+
+<p>方針は三つです。</p>
+<ul class="plain">
+  <li><strong>証明問題と計算問題を半々に。</strong> 定理を「使う」だけでなく「作る」側に回れるよう、Morera・Rouché・Jensen・Montel といった道具の証明そのものを問いました。</li>
+  <li><strong>大問内は誘導つき。</strong> 小問 (1) から (5) へ進むにつれ、ひとつの定理が組み上がるように配置しています。前問の結果は自由に使って構いません。</li>
+  <li><strong>解答は載せません。</strong> じっくり格闘する時間こそが本体です。付録 A に一行ヒント（大問ごと・最小限）、付録 B に計算問題の最終値のみを検算用に置きました。どちらも、十分に粘ったあとで開いてください。</li>
+</ul>
+
+<h3 class="sec">難易度の目安</h3>
+<table class="legend">
+  <tr><td class="s">★★☆☆☆</td><td>定期試験の標準問題。基本の定理をそのまま適用すれば届く。</td></tr>
+  <tr><td class="s">★★★☆☆</td><td>定期試験の難問。一手ひねる、あるいは計算量がある。</td></tr>
+  <tr><td class="s">★★★★☆</td><td>院試の標準〜やや難。道具の選択そのものが問われる。</td></tr>
+  <tr><td class="s">★★★★★</td><td>院試の難問・専門色。腰を据えて半日かける価値のある問題。</td></tr>
+</table>
+<p style="font-size:9.4pt;color:#4b5563">大問の見出しにある星はその大問全体の総合難易度、各小問の末尾の星はその小問単独の難易度です。</p>
+
+<h3 class="sec">記号の約束</h3>
+<table class="legend">
+  <tr><th>$\mathbb{C},\ \mathbb{R},\ \mathbb{Z},\ \mathbb{N}$</th><td>複素数体、実数体、有理整数環、正の整数全体</td></tr>
+  <tr><th>$\mathbb{D},\ \mathbb{D}(a,r)$</th><td>単位開円板 $\{z:|z|\lt 1\}$、開円板 $\{z:|z-a|\lt r\}$</td></tr>
+  <tr><th>$\mathbb{H}$</th><td>上半平面 $\{z:\operatorname{Im}z\gt 0\}$</td></tr>
+  <tr><th>$D,\ \Omega$</th><td>$\mathbb{C}$ の領域（空でない連結開集合）</td></tr>
+  <tr><th>$\mathcal{O}(\Omega)$</th><td>$\Omega$ 上の正則関数全体</td></tr>
+  <tr><th>$\operatorname{Aut}(\Omega)$</th><td>$\Omega$ から $\Omega$ への等角同型（正則全単射）全体のなす群</td></tr>
+  <tr><th>$\displaystyle\operatorname*{Res}_{z=a}f$</th><td>$f$ の $z=a$ における留数</td></tr>
+  <tr><th>$\{x\}$</th><td>実数 $x$ の小数部分 $x-\lfloor x\rfloor$</td></tr>
+  <tr><th>閉曲線の向き</th><td>断りのない限り、正の向き（反時計回り）に一周する</td></tr>
+  <tr><th>「広義一様収束」</th><td>定義域の任意のコンパクト部分集合上で一様収束すること</td></tr>
+</table>
+<p style="font-size:9.4pt;color:#4b5563">対数・べき乗などの多価関数は、その都度分枝を明示して用いること。分枝の選択とその正当化までが解答の一部です。</p>
+
+<h2 class="plain">目次</h2>
+<ul class="toc">
+  <li class="head"><span class="t">第 I 部　正則性の基礎</span><span class="s"></span></li>
+  <li><span class="t">問題 1　Cauchy–Riemann 方程式の深層</span><span class="s">★★★☆☆</span></li>
+  <li><span class="t">問題 2　整関数と Liouville の定理の諸相</span><span class="s">★★★★☆</span></li>
+  <li><span class="t">問題 3　べき級数・収束半径・自然境界</span><span class="s">★★★★☆</span></li>
+  <li><span class="t">問題 4　一致の定理とその破壊力</span><span class="s">★★★★☆</span></li>
+
+  <li class="head"><span class="t">第 II 部　Cauchy 理論の技法</span><span class="s"></span></li>
+  <li><span class="t">問題 5　Cauchy の積分公式を使い倒す</span><span class="s">★★★★☆</span></li>
+  <li><span class="t">問題 6　Morera・鏡像原理・可除特異点</span><span class="s">★★★★☆</span></li>
+  <li><span class="t">問題 7　Laurent 展開と特異点の分類</span><span class="s">★★★★☆</span></li>
+
+  <li class="head"><span class="t">第 III 部　留数計算の華</span><span class="s"></span></li>
+  <li><span class="t">問題 8　実定積分 I ― 標準的な経路</span><span class="s">★★★☆☆</span></li>
+  <li><span class="t">問題 9　実定積分 II ― 分岐切断と特殊経路</span><span class="s">★★★★★</span></li>
+  <li><span class="t">問題 10　留数による級数の総和</span><span class="s">★★★★☆</span></li>
+
+  <li class="head"><span class="t">第 IV 部　幾何学的関数論</span><span class="s"></span></li>
+  <li><span class="t">問題 11　偏角原理と Rouché の定理</span><span class="s">★★★★☆</span></li>
+  <li><span class="t">問題 12　最大値原理・Schwarz の補題・凸性</span><span class="s">★★★★★</span></li>
+  <li><span class="t">問題 13　等角写像の構成</span><span class="s">★★★★☆</span></li>
+  <li><span class="t">問題 14　調和関数と Poisson 核</span><span class="s">★★★★☆</span></li>
+
+  <li class="head"><span class="t">第 V 部　発展 ― 古典解析への扉</span><span class="s"></span></li>
+  <li><span class="t">問題 15　無限積と Γ 関数</span><span class="s">★★★★★</span></li>
+  <li><span class="t">問題 16　ζ 関数への入口</span><span class="s">★★★★★</span></li>
+  <li><span class="t">問題 17　Jensen の公式と Blaschke 積</span><span class="s">★★★★★</span></li>
+  <li><span class="t">問題 18　鞍点法と漸近評価</span><span class="s">★★★★☆</span></li>
+  <li><span class="t">問題 19　Riemann の写像定理（完全誘導）</span><span class="s">★★★★★</span></li>
+  <li><span class="t">問題 20　Weierstrass の ℘ 関数</span><span class="s">★★★★★</span></li>
+
+  <li class="head"><span class="t">付録</span><span class="s"></span></li>
+  <li><span class="t">付録 A　一行ヒント（最小限）</span><span class="s"></span></li>
+  <li><span class="t">付録 B　検算用の最終解答（計算問題のみ）</span><span class="s"></span></li>
+</ul>

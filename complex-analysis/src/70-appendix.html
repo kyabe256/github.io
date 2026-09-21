@@ -1,0 +1,86 @@
+<h2 class="plain">付録 A　一行ヒント</h2>
+
+<div class="warnbox">
+  <span class="big">⚠︎　まだ開かないでください</span>
+  ここから先は、行き詰まったときの「最小限の一押し」です。<br>
+  各大問につき一行だけ、使うべき道具の名前を示します。方針も計算も書いていません。<br>
+  十分に粘ってから、必要な一行だけを読むことをおすすめします。
+</div>
+
+<dl class="hints">
+  <dt>問題 1</dt><dd>(3) 実部から共役調和関数を作るときは、$f'(z)=u_{x}-iu_{y}$ を $z$ だけの式に整理してから積分するのが速い。(5) はすべて「$u,v$ の偏微分の間の代数的な関係」に帰着する。</dd>
+  <dt>問題 2</dt><dd>(1) $e^{f}$、(3) $f/g$、(4) 零点の個数、(6) 楕円関数を長方形の周で積分する。Liouville を「どの関数に当てるか」だけが問題である。</dd>
+  <dt>問題 3</dt><dd>(1)(2) は Cauchy–Hadamard の公式 $1/R=\limsup|a_{n}|^{1/n}$ に忠実に。(3) は Abel 総和法（部分和 $s_{n}$ を使った変形）、(4) は導関数の境界での挙動を見る。</dd>
+  <dt>問題 4</dt><dd>(1) 集積点をもつ集合の上での一致。「候補の関数を作って一致の定理で押す」か「二つの部分列で矛盾を出す」かの二択。</dd>
+  <dt>問題 5</dt><dd>$|dz|=\dfrac{dz}{iz}\cdot z$ のような書き換えと、$\overline{z}=1/z$（$|z|=1$ 上）が全問に効く。(4) は $|f|^{2}=f\overline{f}$ を級数で展開して項別積分。</dd>
+  <dt>問題 6</dt><dd>(1) 原始関数を作る。(2)(3) は Morera に帰着させるため、三角形を「線分をまたぐ場合」に分けて極限をとる。(5) は Laurent 係数の積分表示か、$e^{f}$ あるいは $1/(f-c)$ を考える。</dd>
+  <dt>問題 7</dt><dd>(2) は $e^{A}e^{B}$ の二重級数を整理して $z^{n}$ の係数を拾う。(5) は極を有限個であることから示し、主要部を引いて Liouville。</dd>
+  <dt>問題 8</dt><dd>三角関数の積分は $z=e^{i\theta}$、有理関数は上半平面の半円、$\cos x,\sin x$ は $e^{iz}$ に置き換えてから Jordan、$\cosh,\ e^{x}$ が分母なら長方形。</dd>
+  <dt>問題 9</dt><dd>分枝を決めたら、まず「切断の上岸と下岸で被積分関数の値は何倍ずれるか」を計算せよ。その比が $1$ になってしまう分枝の取り方は失敗である。</dd>
+  <dt>問題 10</dt><dd>$\pi\cot\pi z\cdot f(z)$ を $C_{N}$ で積分して $N\to\infty$。$C_{N}$ 上の一様評価 (1) が、極限が $0$ になることの根拠である。</dd>
+  <dt>問題 11</dt><dd>Rouché を使うときは「どちらの項を主要項とみなすか」を境界ごとに変える。(5) は $f(z)-w$ の零点の個数が $w$ について局所定数であることに尽きる。</dd>
+  <dt>問題 12</dt><dd>(1)(2) は $\mathbb{D}$ の自己同型で原点に移してから Schwarz。(4) は $z^{\lambda}f(z)$、(5) は $f(z)e^{-\varepsilon z^{\sigma}}$ という「補助因子」がすべて。</dd>
+  <dt>問題 13</dt><dd>角のある領域はまず Möbius で角の頂点を $0$ と $\infty$ に送り、扇形にしてからべき乗。スリットは平方根。半平面と円板の往復は最後に一度だけ。</dd>
+  <dt>問題 14</dt><dd>(2) は問題 5 (5) の Schwarz 積分公式の実部。(5) は $\operatorname{Re}f\gt0$ を Poisson 核（あるいは $\mathbb{D}$ から右半平面への写像）を通して読み替える。</dd>
+  <dt>問題 15</dt><dd>(1) は $\log(1+u_{n})$ の絶対収束に帰着。(3)(5) は「両辺の比が周期的な整関数／定数」を示す型の議論。</dd>
+  <dt>問題 16</dt><dd>(2) は $\sum_{n\le N}n^{-s}$ を Stieltjes 積分と見て部分積分。(5) は経路を小円と二本の半直線に分け、$s$ の実部が大きいところで小円の寄与が消えることから (4) に帰着させる。</dd>
+  <dt>問題 17</dt><dd>(1) は零点を Blaschke 因子で割って「零点なし」に帰着させ、$\log|f|$ の平均値性質を使う。(4) は (1) を $r\to1^{-}$ で回す。</dd>
+  <dt>問題 18</dt><dd>指数の肩を鞍点のまわりで 2 次まで展開し、残りを $e^{-nt^{2}/2}$ の Gauss 積分に。鞍点から離れた部分の寄与が指数的に小さいことの評価を省略しないこと。</dd>
+  <dt>問題 19</dt><dd>(3) $\sqrt{z-a}$ の像 $S$ は $-S$ と交わらない。(5) 「平方根を取ると微分係数が増える」という Schwarz の補題の等号条件が、全射でないことと矛盾する。</dd>
+  <dt>問題 20</dt><dd>楕円関数の議論はすべて「周期的＋極なし＋有界 $\Rightarrow$ 定数」に帰着する。示したい等式の両辺の差が、そのような関数になるように主要部を差し引け。</dd>
+</dl>
+
+<h2 class="plain">付録 B　検算用の最終解答</h2>
+
+<div class="warnbox">
+  <span class="big">⚠︎　答え合わせ専用</span>
+  収録したのは「値」だけです。証明問題・構成問題（等角写像の構成など）の解答は<br>
+  一切載せていません。自分の計算と突き合わせる用途にのみ使ってください。
+</div>
+
+<div class="ans">
+<h3 class="sec">第 I 部</h3>
+<p><span class="q">1 (3)</span> $f(z)=z\,e^{z}$.</p>
+<p><span class="q">3 (1)</span> (a) $R=1/4$　(b) $R=e$　(c) $R=1/e$.</p>
+<p><span class="q">3 (2)</span> 順に $R^{2}$, $\infty$, $0$.</p>
+<p><span class="q">3 (3)</span> $\log 2$ と $\pi/4$.</p>
+<p><span class="q">4 (1)</span> (a) $f(z)=z^{2}$　(b) 存在しない　(c) $f(z)=\dfrac{z}{z+2}$　(d) $f(z)=\dfrac{1}{1+z}$.</p>
+
+<h3 class="sec">第 II 部</h3>
+<p><span class="q">5 (1)</span> $\dfrac{2\pi}{\bigl|1-|a|^{2}\bigr|}$.　<span class="q">5 (2)</span> $\dfrac{2\pi}{n!}$ と $0$.　<span class="q">5 (3)</span> $I=\pi i\,(3e-8)$.</p>
+<p><span class="q">7 (1)</span> (a) $\displaystyle\sum_{n\ge0}\Bigl(1-\tfrac{1}{2^{n+1}}\Bigr)z^{n}$
+(b) $\displaystyle-\sum_{n\ge1}\frac{1}{z^{n}}-\sum_{n\ge0}\frac{z^{n}}{2^{n+1}}$
+(c) $\displaystyle\sum_{n\ge1}\frac{2^{n-1}-1}{z^{n}}$
+(d) $\displaystyle-\frac{1}{z-1}-\sum_{n\ge0}(z-1)^{n}$.</p>
+<p><span class="q">7 (3)</span> (a) $z=0$ は可除、$z=2\pi ik\ (k\neq0)$ は 1 位の極、$z=\infty$ は孤立特異点でない。
+(b) $z=0$ は 2 位の極、$z=\infty$ は真性特異点（実軸上では $0$ に近づくが、虚軸方向には $\cos z$ が指数的に増大する）。
+(c) $z=0$ は真性特異点、$z=\infty$ は 1 位の極。
+(d) $z=1/k\ (k\in\mathbb{Z}\setminus\{0\})$ は 1 位の極、$z=0$ は孤立特異点でない、$z=\infty$ は 1 位の極。
+(e) $z=1/(2\pi ik)\ (k\in\mathbb{Z}\setminus\{0\})$ は 1 位の極、$z=0$ は孤立特異点でない、$z=\infty$ は 1 位の極。</p>
+
+<h3 class="sec">第 III 部</h3>
+<p><span class="q">8 (1)</span> $\dfrac{2\pi a}{(a^{2}-1)^{3/2}}$.</p>
+<p><span class="q">8 (2)</span> (a) $\dfrac{\pi}{3}$　(b) $\dfrac{\pi}{\sqrt{2}}$　(c) $\dfrac{\pi}{e}$.</p>
+<p><span class="q">8 (3)</span> ともに $\dfrac{\pi}{2}$.　<span class="q">8 (5)</span> $\dfrac{\pi}{\sin \pi a}$.
+<span class="q">8 (6)</span> $\dfrac{\pi}{2\cosh(\pi/2)}$.</p>
+<p><span class="q">9 (1)</span> $\dfrac{\pi}{\sin \pi a}$.
+<span class="q">9 (2)</span> $\dfrac{\pi^{3}}{8}$,　$0$,　$-\dfrac{\pi}{4}$.
+<span class="q">9 (3)</span> $\dfrac{1}{2}\sqrt{\dfrac{\pi}{2}}$.</p>
+<p><span class="q">9 (4)</span> $\dfrac{\pi/n}{\sin(\pi/n)}$.
+<span class="q">9 (5)</span> $\dfrac{\pi}{\sqrt{3}}$.
+<span class="q">9 (6)</span> $\dfrac{\pi^{2}}{4}$.</p>
+<p><span class="q">10 (3)</span> (a) $\dfrac{\pi^{2}}{6}$　(b) $\dfrac{\pi^{4}}{90}$　(c) $\dfrac{\pi\coth \pi a}{2a}-\dfrac{1}{2a^{2}}$.
+<span class="q">10 (4)</span> $\dfrac{\pi^{2}}{12}$,　$\dfrac{\pi^{3}}{32}$.</p>
+
+<h3 class="sec">第 IV 部・第 V 部</h3>
+<p><span class="q">11 (2)</span> $|z|\lt1$ に 1 個、$1\lt|z|\lt2$ に 3 個（合計 4 個で、$|z|=1,2$ 上には零点なし）。</p>
+<p><span class="q">13 (2)(b)</span> 像は下半平面 $\{w:\operatorname{Im}w\lt 0\}$。</p>
+<p><span class="q">15 (3)(c)</span> $\Gamma(1/2)=\sqrt{\pi}$.</p>
+<p><span class="q">16 (5)</span> $\zeta(0)=-\dfrac12$,　$\zeta(-1)=-\dfrac{1}{12}$,　$\zeta(-2)=0$,　$\zeta(-3)=\dfrac{1}{120}$.</p>
+<p style="margin-top:.9em;color:#55606e">※ 等角写像の構成（問題 13 (3)–(6)、19）、および証明問題については、答えを載せていません。構成した写像は「境界が境界へ、内部が内部へ、全単射に移る」ことを自分で確かめられます。それが最良の検算です。</p>
+</div>
+
+<div class="colophon">
+  <p><strong>さらに深く進むために</strong>　L. V. Ahlfors, <em>Complex Analysis</em>（古典にして最良の教科書。第 4 章以降が本書第 IV・V 部に対応）／ E. M. Stein and R. Shakarchi, <em>Complex Analysis</em>（Γ・ζ・Riemann 写像定理の扱いが現代的）／ J. B. Conway, <em>Functions of One Complex Variable I</em>（正規族と Riemann 写像定理の議論が丁寧）／ 高木貞治『解析概論』（第 5 章）。楕円関数は Ahlfors 第 7 章、あるいは梅村浩『楕円関数論』へ。</p>
+  <p><strong>本書について</strong>　全 20 大問・小問 108 題。すべて書き下ろしのオリジナル問題です。定理の名称は慣用に従いました。誤りを見つけたら、それもまた良い演習です ― まずは自分の計算を疑い、次に本書を疑ってください。</p>
+</div>

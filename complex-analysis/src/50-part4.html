@@ -1,0 +1,107 @@
+<h2 class="part">第 IV 部　幾何学的関数論<span class="en">GEOMETRIC FUNCTION THEORY</span></h2>
+<p class="part-lead">正則写像は「角を保つ写像」であり、「開写像」であり、「距離を縮める写像」でもある。解析的な不等式が幾何的な剛性に翻訳されていく様子を追う。</p>
+
+<div class="prob">
+  <div class="prob-head">
+    <span class="no">問題 11</span><span class="ttl">偏角原理と Rouché の定理</span><span class="stars">★★★★☆</span>
+  </div>
+  <ol class="items">
+    <li>（偏角原理）$f$ が単純閉曲線 $C$ とその内部を含む領域で有理型、$C$ 上に零点も極ももたないとする。$C$ の内部の零点の個数 $Z$、極の個数 $P$（ともに重複度込み）に対して
+      $$\frac{1}{2\pi i}\oint_{C}\frac{f'(z)}{f(z)}\,dz=Z-P$$
+      を示し、左辺が「$f\circ C$ が原点のまわりを回る回数」に等しいことを説明せよ。さらに、ここから Rouché の定理を導け。<span class="lv">★★★☆☆</span></li>
+
+    <li>$p(z)=z^{4}-6z+3$ の零点は、$|z|\lt 1$ にちょうど $1$ 個、$1\lt|z|\lt 2$ にちょうど $3$ 個あることを示せ。また $p$ は $|z|=1$ 上と $|z|=2$ 上に零点をもたないことも確かめよ。<span class="lv">★★★☆☆</span></li>
+
+    <li>$n\in\mathbb{N}$、$a\gt e$ とする。方程式 $e^{z}=az^{n}$ は $|z|\lt 1$ にちょうど $n$ 個の解（重複込み）をもつことを示せ。<span class="lv">★★★★☆</span></li>
+
+    <li>（Hurwitz の定理）領域 $D$ 上の正則関数列 $f_{n}$ が $f$ に広義一様収束しているとする。
+      (a) すべての $f_{n}$ が $D$ 上零点をもたないならば、$f\equiv 0$ であるか、または $f$ も零点をもたない。
+      (b) すべての $f_{n}$ が単射ならば、$f$ は定数であるか、または単射である。<span class="lv">★★★★☆</span></li>
+
+    <li>偏角原理を用いて次を示せ。
+      (a)（開写像定理）$D$ 上の非定数正則関数は開写像である。
+      (b) $f$ が単射正則ならば $f'$ は零点をもたない。
+      (c) そのとき逆写像 $f^{-1}$ も正則であり、$(f^{-1})'(w)=1/f'(f^{-1}(w))$。
+      (d) $f$ が $a$ で $k$ 位（$k\ge 2$）に値 $f(a)$ をとる（すなわち $f(z)-f(a)$ が $a$ で $k$ 位の零点をもつ）ならば、$a$ の十分小さい近傍で $f$ は $k$ 対 $1$ である。<span class="lv">★★★★★</span></li>
+
+    <li>（Gauss–Lucas の定理）複素係数多項式 $p$ の零点全体の凸包を $K$ とすると、$p'$ の零点はすべて $K$ に属することを示せ。$p(z)=\prod(z-a_{j})$ に対する $p'/p$ の表示から出発せよ。<span class="lv">★★★★☆</span></li>
+  </ol>
+</div>
+
+<div class="prob">
+  <div class="prob-head">
+    <span class="no">問題 12</span><span class="ttl">最大値原理・Schwarz の補題・凸性</span><span class="stars">★★★★★</span>
+  </div>
+  <ol class="items">
+    <li>（Schwarz の補題とその精密化）$f:\mathbb{D}\to\mathbb{D}$ が正則で $f(0)=f'(0)=\cdots=f^{(k-1)}(0)=0$（$k\ge 1$）とする。このとき
+      $$|f(z)|\le|z|^{k}\quad(z\in\mathbb{D}),\qquad \frac{|f^{(k)}(0)|}{k!}\le 1$$
+      が成り立ち、どちらかで等号が一点でも成立すれば $f(z)=cz^{k}$（$|c|=1$）であることを示せ。<span class="lv">★★★☆☆</span></li>
+
+    <li>（Schwarz–Pick）$f:\mathbb{D}\to\mathbb{D}$ を正則とする。任意の $z_{1},z_{2}\in\mathbb{D}$ に対し
+      $$\left|\frac{f(z_{1})-f(z_{2})}{1-\overline{f(z_{2})}f(z_{1})}\right|\le\left|\frac{z_{1}-z_{2}}{1-\overline{z_{2}}z_{1}}\right|,
+        \qquad \frac{|f'(z)|}{1-|f(z)|^{2}}\le\frac{1}{1-|z|^{2}}$$
+      を示せ。等号成立は $f\in\operatorname{Aut}(\mathbb{D})$ のときに限ることも示せ。<span class="lv">★★★★☆</span></li>
+
+    <li>$\operatorname{Aut}(\mathbb{D})=\left\{\,z\mapsto e^{i\alpha}\dfrac{z-a}{1-\overline{a}z}\ :\ \alpha\in\mathbb{R},\ a\in\mathbb{D}\right\}$ を示せ。系として、$\mathbb{D}$ の正則自己写像が相異なる $2$ つの不動点をもてば恒等写像であることを示せ。<span class="lv">★★★★☆</span></li>
+
+    <li>（Hadamard の三円定理）$f$ が閉円環 $r_{1}\le|z|\le r_{2}$ を含む領域で正則、$M(r)=\max_{|z|=r}|f(z)|$ とする。$\log M(r)$ は $\log r$ の凸関数である、すなわち $r_{1}\lt r\lt r_{2}$ に対し
+      $$\log M(r)\le\frac{\log(r_{2}/r)}{\log(r_{2}/r_{1})}\log M(r_{1})+\frac{\log(r/r_{1})}{\log(r_{2}/r_{1})}\log M(r_{2})$$
+      を示せ。ヒントとして、$z^{\lambda}f(z)$（$\lambda$ は適当な実数）に最大値原理を適用する方法を検討せよ。系として $M(\sqrt{r_{1}r_{2}})^{2}\le M(r_{1})M(r_{2})$ を導け。<span class="lv">★★★★★</span></li>
+
+    <li>（Phragmén–Lindelöf の原理）$\beta\gt 1/2$ とし、扇形 $S=\left\{z\neq 0:|\arg z|\lt\dfrac{\pi}{2\beta}\right\}$ を考える。$f$ が $S$ で正則、$\overline{S}$ で連続、$\partial S$ 上で $|f|\le M$ とし、さらにある $\rho\lt\beta$ と $C\gt 0$ に対して $|f(z)|\le Ce^{|z|^{\rho}}$（$z\in S$）が成り立つとする。このとき $S$ 全体で $|f|\le M$ であることを示せ。<span class="lv">★★★★★</span></li>
+
+    <li>(5) において増大度の仮定を $\rho=\beta$ にまで緩めると結論が偽になることを、具体的な反例を作って示せ。さらに (5) を用いて、次を示せ：$f$ が帯状領域 $\{|\operatorname{Im}z|\lt \pi/2\}$ で正則、その閉包で連続で、境界上 $|f|\le M$、かつ $|f(z)|\le C\exp\bigl(e^{\gamma|\operatorname{Re}z|}\bigr)$（$\gamma\lt 1$）ならば、帯全体で $|f|\le M$。<span class="lv">★★★★☆</span></li>
+  </ol>
+  <div class="note"><span class="lbl">誘導</span>(5)：$\rho\lt\sigma\lt\beta$ なる $\sigma$ をとり、$\varepsilon\gt 0$ に対して $g_{\varepsilon}(z)=f(z)\exp(-\varepsilon z^{\sigma})$ に最大値原理を適用してから $\varepsilon\to 0^{+}$ とする。$z^{\sigma}$ の分枝の取り方と、$\operatorname{Re}(z^{\sigma})$ が扇形内でどれだけ正になるかの評価が要点。</div>
+</div>
+
+<div class="prob">
+  <div class="prob-head">
+    <span class="no">問題 13</span><span class="ttl">等角写像の構成</span><span class="stars">★★★★☆</span>
+  </div>
+  <p class="preamble">以下、「$A$ を $B$ に写す等角同型を構成せよ」とは、具体的な式を与え、それが全単射正則であることを（合成の各段階の像を追って）確認することを意味する。</p>
+  <ol class="items">
+    <li>Möbius 変換 $T(z)=\dfrac{az+b}{cz+d}$（$ad-bc\neq0$）について、
+      (a) $\hat{\mathbb{C}}$ の「円（直線を含む）」を「円」に写すこと、
+      (b) 非調和比 $(z_{1},z_{2};z_{3},z_{4})$ を保つこと、
+      (c) $\mathbb{H}$ から $\mathbb{D}$ への等角同型をすべて決定すること、を示せ。<span class="lv">★★★☆☆</span></li>
+
+    <li>（Joukowski 写像）$\displaystyle w=\frac{1}{2}\left(z+\frac{1}{z}\right)$ について、
+      (a) $\{|z|\gt 1\}$ を $\mathbb{C}\setminus[-1,1]$ へ等角同型に写すこと、
+      (b) $\{|z|\lt 1\}\cap\mathbb{H}$ の像を決定すること、を示せ。<span class="lv">★★★★☆</span></li>
+
+    <li>$w=\sin z$ が半無限帯 $\displaystyle\Sigma=\left\{z:|\operatorname{Re}z|\lt\frac{\pi}{2},\ \operatorname{Im}z\gt 0\right\}$ を $\mathbb{H}$ へ等角同型に写すことを示せ。$\partial\Sigma$ の各部分がどこへ行くかを図示して説明すること。<span class="lv">★★★★☆</span></li>
+
+    <li>スリット入り円板 $\mathbb{D}\setminus(-1,0]$ を $\mathbb{D}$ へ写す等角同型を構成せよ。<span class="lv">★★★★☆</span></li>
+
+    <li>レンズ形領域 $L=\{|z|\lt 1\}\cap\{|z-1|\lt 1\}$ を $\mathbb{D}$ へ写す等角同型を構成せよ。まず $L$ の二つの「角」の位置と開き角を求めるところから始めよ。<span class="lv">★★★★★</span></li>
+
+    <li>スリット入り半平面 $\mathbb{H}\setminus\{iy:0\lt y\le 1\}$ を $\mathbb{H}$ へ写す等角同型を構成せよ。<span class="lv">★★★★★</span></li>
+  </ol>
+</div>
+
+<div class="prob">
+  <div class="prob-head">
+    <span class="no">問題 14</span><span class="ttl">調和関数と Poisson 核</span><span class="stars">★★★★☆</span>
+  </div>
+  <p class="preamble">$$P_{r}(\theta)=\frac{1-r^{2}}{1-2r\cos\theta+r^{2}}\qquad(0\le r\lt 1)$$ を Poisson 核という。</p>
+  <ol class="items">
+    <li>$\displaystyle P_{r}(\theta)=\operatorname{Re}\frac{1+re^{i\theta}}{1-re^{i\theta}}=\sum_{n=-\infty}^{\infty}r^{|n|}e^{in\theta}$ を確かめ、$P_{r}\gt 0$、$\displaystyle\frac{1}{2\pi}\int_{-\pi}^{\pi}P_{r}(\theta)\,d\theta=1$、および任意の $\delta\gt 0$ に対し $\delta\le|\theta|\le\pi$ 上で $P_{r}(\theta)\to 0$（$r\to1^{-}$、一様）を示せ。<span class="lv">★★★☆☆</span></li>
+
+    <li>（Poisson の積分公式と Dirichlet 問題）$u$ が $\mathbb{D}$ で調和、$\overline{\mathbb{D}}$ で連続ならば
+      $$u(re^{i\varphi})=\frac{1}{2\pi}\int_{-\pi}^{\pi}P_{r}(\varphi-\theta)\,u(e^{i\theta})\,d\theta$$
+      を示せ。逆に、$\partial\mathbb{D}$ 上の連続関数 $g$ に対し右辺で定めた $u$ は $\mathbb{D}$ で調和で、境界値 $g$ に連続に接続することを示せ。<span class="lv">★★★★☆</span></li>
+
+    <li>（Harnack の不等式）$u\ge 0$ が $\mathbb{D}$ で調和のとき
+      $$\frac{1-r}{1+r}\,u(0)\le u(re^{i\varphi})\le\frac{1+r}{1-r}\,u(0)$$
+      を示せ。系として、$\mathbb{R}^{2}$ 全体で調和かつ下に有界な関数は定数であることを示せ。<span class="lv">★★★★☆</span></li>
+
+    <li>$u$ が $\mathbb{R}^{2}$ 全体で調和で、ある $C\gt 0$ に対し $u(x,y)\le C\bigl(1+\sqrt{x^{2}+y^{2}}\bigr)^{1/2}$ をみたすならば $u$ は定数であることを示せ。<span class="lv">★★★★☆</span></li>
+
+    <li>（Carathéodory–Herglotz の評価）$f$ が $\mathbb{D}$ で正則、$\operatorname{Re}f\gt 0$、$f(0)=1$ とし、$f(z)=1+\sum_{n\ge 1}a_{n}z^{n}$ とする。このとき $|a_{n}|\le 2$（すべての $n\ge 1$）を示し、ある $n$ で等号が成立する例をすべて挙げよ。<span class="lv">★★★★★</span></li>
+
+    <li>領域 $D$ 上の連続関数 $u$ が、各点 $a\in D$ と十分小さいすべての $\rho\gt 0$ に対して平均値性質
+      $\displaystyle u(a)=\frac{1}{2\pi}\int_{0}^{2\pi}u(a+\rho e^{i\theta})\,d\theta$
+      をみたすならば、$u$ は $D$ 上調和（したがって $C^{\infty}$）であることを示せ。<span class="lv">★★★★☆</span></li>
+  </ol>
+</div>

@@ -1,0 +1,98 @@
+<h2 class="part">第 III 部　留数計算の華<span class="en">THE ART OF RESIDUES</span></h2>
+<p class="part-lead">実軸上の積分が、平面上に迂回路をひとつ描くだけで決着する。この「鮮やかさ」こそ複素解析の最大の見世物である。経路の選び方・分枝の取り方・遠方評価の三点を、毎回きちんと書き切ること。</p>
+
+<div class="prob">
+  <div class="prob-head">
+    <span class="no">問題 8</span><span class="ttl">実定積分 I ― 標準的な経路</span><span class="stars">★★★☆☆</span>
+  </div>
+  <p class="preamble">以下、収束はすべて広義積分の意味で考え、必要なら主値を明示すること。円弧上の評価（Jordan の補題を含む）は省略せずに書くこと。</p>
+  <ol class="items">
+    <li>$a\gt 1$ に対して
+      $$\int_{0}^{2\pi}\frac{d\theta}{(a+\cos\theta)^{2}}$$
+      を、単位円周への置換 $z=e^{i\theta}$ により求めよ。<span class="lv">★★★☆☆</span></li>
+
+    <li>次を求めよ。
+      (a) $\displaystyle\int_{-\infty}^{\infty}\frac{x^{2}}{(x^{2}+1)(x^{2}+4)}\,dx$、
+      (b) $\displaystyle\int_{-\infty}^{\infty}\frac{dx}{1+x^{4}}$、
+      (c) $\displaystyle\int_{-\infty}^{\infty}\frac{\cos x}{(x^{2}+1)^{2}}\,dx$。<span class="lv">★★★☆☆</span></li>
+
+    <li>（Jordan の補題とくぼみ経路）$\Gamma_{R}$ を上半平面の半円 $|z|=R$ とする。$R\to\infty$ で $\max_{|z|=R,\,\operatorname{Im}z\ge0}|g(z)|\to 0$ ならば、$\lambda\gt 0$ に対し $\int_{\Gamma_{R}}g(z)e^{i\lambda z}dz\to 0$ となることを示せ。これと原点をくぼませた経路を用いて
+      $$\int_{0}^{\infty}\frac{\sin x}{x}\,dx=\frac{\pi}{2},\qquad
+        \int_{0}^{\infty}\left(\frac{\sin x}{x}\right)^{2}dx=\frac{\pi}{2}$$
+      を示せ。<span class="lv">★★★★☆</span></li>
+
+    <li>$b\in\mathbb{R}$ とする。長方形 $[-R,R]\times[0,b]$ を経路として
+      $$\int_{-\infty}^{\infty}e^{-x^{2}}\cos(2bx)\,dx=\sqrt{\pi}\,e^{-b^{2}}$$
+      を示せ（$\int_{-\infty}^{\infty}e^{-x^{2}}dx=\sqrt{\pi}$ は既知としてよい）。実関数の範囲でこの積分を直接求めようとするとどこで困るか、一言添えよ。<span class="lv">★★★★☆</span></li>
+
+    <li>$0\lt a\lt 1$ とする。高さ $2\pi$ の長方形経路を用いて
+      $$\int_{-\infty}^{\infty}\frac{e^{ax}}{1+e^{x}}\,dx=\frac{\pi}{\sin \pi a}$$
+      を示せ。<span class="lv">★★★★☆</span></li>
+
+    <li>$$\int_{0}^{\infty}\frac{\cos x}{\cosh x}\,dx$$
+      を、適当な高さの長方形経路によって求めよ。<span class="lv">★★★★★</span></li>
+  </ol>
+  <div class="note"><span class="lbl">注</span>(6)：高さを $\pi$ にとると $\cosh$ の周期性から、辺の上の積分が元の積分の定数倍になって「自分自身で解ける」形になる。極の位置に注意。</div>
+</div>
+
+<div class="prob">
+  <div class="prob-head">
+    <span class="no">問題 9</span><span class="ttl">実定積分 II ― 分岐切断と特殊経路</span><span class="stars">★★★★★</span>
+  </div>
+  <p class="preamble">ここからは多価関数が主役である。分枝の定義域・切断・偏角の範囲を明示し、切断の両岸で被積分関数の値がどれだけずれるかを正確に書くこと。それが計算の心臓部である。</p>
+  <ol class="items">
+    <li>（鍵穴経路）$0\lt a\lt 1$ に対して
+      $$\int_{0}^{\infty}\frac{x^{a-1}}{1+x}\,dx=\frac{\pi}{\sin \pi a}$$
+      を示せ。また、この結果と問題 8 (5) の結果が置換 $x=e^{t}$ で一致することを確かめよ。<span class="lv">★★★★☆</span></li>
+
+    <li>$\log$ の分枝を $-\pi/2\lt\arg z\lt 3\pi/2$ にとり、上半平面の半円経路（原点をくぼませる）を用いて
+      $$\int_{0}^{\infty}\frac{(\log x)^{2}}{1+x^{2}}\,dx=\frac{\pi^{3}}{8},\qquad
+        \int_{0}^{\infty}\frac{\log x}{1+x^{2}}\,dx=0$$
+      を示せ。同じ方法で $\displaystyle\int_{0}^{\infty}\frac{\log x}{(1+x^{2})^{2}}\,dx$ も求めよ。<span class="lv">★★★★☆</span></li>
+
+    <li>（Fresnel 積分）$0\le\arg z\le\pi/4$ の扇形経路を用いて
+      $$\int_{0}^{\infty}\cos(x^{2})\,dx=\int_{0}^{\infty}\sin(x^{2})\,dx=\frac{1}{2}\sqrt{\frac{\pi}{2}}$$
+      を示せ。円弧上の評価では $\sin\varphi\ge 2\varphi/\pi$（$0\le\varphi\le\pi/2$）を用いよ。<span class="lv">★★★★★</span></li>
+
+    <li>$n\ge 2$ を整数とする。開き角 $2\pi/n$ の扇形経路を用いて
+      $$\int_{0}^{\infty}\frac{dx}{1+x^{n}}=\frac{\pi/n}{\sin(\pi/n)}$$
+      を示せ。<span class="lv">★★★★☆</span></li>
+
+    <li>（ドッグボーン経路）$\sqrt{1-z^{2}}$ の適当な分枝を $\mathbb{C}\setminus[-1,1]$ 上にとり、切断 $[-1,1]$ を取り囲む経路を用いて
+      $$\int_{-1}^{1}\frac{dx}{(x+2)\sqrt{1-x^{2}}}=\frac{\pi}{\sqrt{3}}$$
+      を示せ。無限遠点における被積分関数の振る舞いを忘れずに評価すること。<span class="lv">★★★★★</span></li>
+
+    <li>$$\int_{0}^{\infty}\frac{\log x}{x^{2}-1}\,dx$$
+      が収束することを確かめ（$x=1$ は可除）、その値を求めよ。<span class="lv">★★★★★</span></li>
+  </ol>
+</div>
+
+<div class="prob">
+  <div class="prob-head">
+    <span class="no">問題 10</span><span class="ttl">留数による級数の総和</span><span class="stars">★★★★☆</span>
+  </div>
+  <p class="preamble">$\pi\cot\pi z$ は整数全点に留数 $1$ の単純極をもつ。この一点から、Euler の $\zeta(2)=\pi^{2}/6$ が転がり出てくる。</p>
+  <ol class="items">
+    <li>$\pi\cot\pi z$ の極をすべて求め、各極における留数が $1$ であることを示せ。さらに $N\in\mathbb{N}$ に対し正方形 $C_{N}$（頂点 $\pm(N+\tfrac12)\pm(N+\tfrac12)i$）の上で $|\cot\pi z|\le A$ となる $N$ に依存しない定数 $A$ が存在することを示せ。<span class="lv">★★★★☆</span></li>
+
+    <li>(1) を用いて、$f$ が有理関数で $|z|\to\infty$ のとき $|f(z)|=O(|z|^{-2})$、かつ $f$ の極が整数でないとき
+      $$\sum_{n=-\infty}^{\infty}f(n)=-\sum_{\text{$f$ の極 }w}\operatorname*{Res}_{z=w}\bigl[\pi\cot(\pi z)f(z)\bigr]$$
+      を示せ。<span class="lv">★★★★☆</span></li>
+
+    <li>(2) の公式から次を導け。
+      (a) $\displaystyle\sum_{n=1}^{\infty}\frac{1}{n^{2}}=\frac{\pi^{2}}{6}$、
+      (b) $\displaystyle\sum_{n=1}^{\infty}\frac{1}{n^{4}}=\frac{\pi^{4}}{90}$、
+      (c) $a\gt 0$ に対し $\displaystyle\sum_{n=1}^{\infty}\frac{1}{n^{2}+a^{2}}=\frac{\pi\coth\pi a}{2a}-\frac{1}{2a^{2}}$。<span class="lv">★★★★☆</span></li>
+
+    <li>$\pi\cot\pi z$ を $\pi/\sin\pi z$ に置き換えると交代和が得られる。これを定式化して
+      $$\sum_{n=1}^{\infty}\frac{(-1)^{n-1}}{n^{2}}=\frac{\pi^{2}}{12},\qquad
+        \sum_{n=0}^{\infty}\frac{(-1)^{n}}{(2n+1)^{3}}=\frac{\pi^{3}}{32}$$
+      を示せ。<span class="lv">★★★★☆</span></li>
+
+    <li>（Herglotz の技法）
+      $$\frac{\pi^{2}}{\sin^{2}\pi z}=\sum_{n=-\infty}^{\infty}\frac{1}{(z-n)^{2}}$$
+      を示せ。留数定理を使う方法と、「両辺の差 $h(z)$ が整関数・周期 $1$・$|\operatorname{Im}z|\to\infty$ で $0$ に収束」を示して Liouville に持ち込む方法の、双方で証明せよ。さらに両辺を積分して
+      $$\pi\cot\pi z=\frac{1}{z}+\sum_{n=1}^{\infty}\frac{2z}{z^{2}-n^{2}}$$
+      を導け（項別積分の正当化も述べること）。<span class="lv">★★★★★</span></li>
+  </ol>
+</div>
