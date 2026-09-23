@@ -1,0 +1,8 @@
+{
+  "name": "mathrender",
+  "private": true,
+  "version": "1.0.0",
+  "description": "TeX の数式を SVG に変換する。WeasyPrint はMathMLを組めないため、事前にベクタ化して本文へ埋め込む。",
+  "type": "commonjs",
+  "dependencies": { "mathjax-full": "^3.2.2" }
+}

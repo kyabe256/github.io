@@ -42,6 +42,8 @@ ALLOWED = re.compile(
     r"Ͱ-Ͽ"       # ギリシア文字
     r"‐-⁞"       # ダッシュ・引用符など
     r"←-⇿∀-⋿■-⛿✀-➿"  # 記号・★など
+    r"⁰-₟"       # 上付き・下付き（図版中の添字）
+    r"℀-⅏"       # 文字様記号（ℵ など）
     r"①-⓿"       # 丸数字（図版の番号づけ）
     r"\s]"
 )
@@ -59,6 +61,22 @@ class Report:
 
     def note(self, label: str, detail: str = "") -> None:
         print(f"  {WARN} {label}" + (f"  — {detail}" if detail else ""))
+
+
+def sources(guide: bool = False):
+    """執筆済みの本文と巻末の原稿を (ファイル名, 中身) で返す。"""
+    for part in MANIFEST["parts"]:
+        for ch in part["chapters"]:
+            f = CONTENT / part["dir"] / ch["file"]
+            if f.exists():
+                yield f.name, f.read_text(encoding="utf-8")
+    for ap in MANIFEST["appendix"]:
+        f = CONTENT / "zz-appendix" / ap["file"]
+        if f.exists():
+            yield f.name, f.read_text(encoding="utf-8")
+    g = CONTENT / "_guide.html"
+    if guide and g.exists():
+        yield g.name, g.read_text(encoding="utf-8")
 
 
 def walk_outline(items, depth=0, acc=None):
@@ -123,8 +141,16 @@ def main() -> int:
 
     # 3. 豆腐・欠字
     print("\n3. 欠字（豆腐）")
-    tofu = re.findall(r"[�□■]", full_text)
-    r.check(not tofu, f"欠字 {len(tofu)} 個", "本文に □ や U+FFFD が無いこと")
+    tofu = re.findall(r"[�■]", full_text)
+    # 数学書では証明の箱が末尾を □ で閉じる（CSS の ::after）。その分は欠字ではないので、
+    # □ の総数を証明の箱の数と突き合わせる。多ければ本当の豆腐が紛れている。
+    # 原稿に直接書かれた □（記号の説明など）も正当なので、期待値に足す。
+    n_shomei = sum(t.count('<div class="shomei"') + t.count("□")
+                   for _n, t in sources(guide=True))
+    n_box = full_text.count("□")
+    r.check(not tofu and n_box <= n_shomei,
+            f"欠字 {len(tofu)} 個 / □ {n_box} 個（正当な出どころ {n_shomei} 件）",
+            "U+FFFD・■ が無く、□ が証明の閉じ記号と原稿の記述だけであること")
 
     # 4. 想定外の文字体系
     print("\n4. 文字体系")
@@ -195,17 +221,16 @@ def main() -> int:
     print("\n8. 和文への欧文混入")
     JA = r"[ぁ-んァ-ヶ一-鿿]"
     stray_latin: list[tuple[str, str]] = []
-    for part in MANIFEST["parts"]:
-        for ch in part["chapters"]:
-            f = CONTENT / part["dir"] / ch["file"]
-            if not f.exists():
-                continue
-            src = f.read_text(encoding="utf-8")
-            # 原語の併記は .orig / .dates の内側に書く方針なので、その中身は除外する
-            src = re.sub(r'<span class="(?:orig|dates)">.*?</span>', "", src, flags=re.S)
-            plain = re.sub(r"<[^>]+>", "", src, flags=re.S)
-            for m in re.finditer(rf"{JA} [A-Za-z]+ {JA}", plain):
-                stray_latin.append((f.name, m.group(0)))
+    for name, src in sources():
+        # 原語の併記は .orig / .dates の内側に書く方針なので、その中身は除外する
+        src = re.sub(r'<span class="(?:orig|dates)">.*?</span>', "", src, flags=re.S)
+        # 数式は別の記法なので対象外。<m>x</m> の中身は欧文の混入ではない。
+        src = re.sub(r"<(m|M)>.*?</\1>", "", src, flags=re.S)
+        # 図版の中の文字も和文の地の文ではない。図版は組版後の目視で確かめる。
+        src = re.sub(r"<svg\b.*?</svg>", "", src, flags=re.S)
+        plain = re.sub(r"<[^>]+>", "", src, flags=re.S)
+        for m in re.finditer(rf"{JA} [A-Za-z]+ {JA}", plain):
+            stray_latin.append((name, m.group(0)))
     r.check(not stray_latin, f"混入 {len(stray_latin)} 件",
             ", ".join(f"{fn}「{s}」" for fn, s in stray_latin[:5]) or "なし")
 

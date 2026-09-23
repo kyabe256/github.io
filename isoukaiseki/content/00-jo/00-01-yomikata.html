@@ -1,0 +1,189 @@
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>定義・定理・証明という形式は、何のためにあるのか。</li>
+<li>「明らか」と書いてよいのは、どんなときか。</li>
+<li>定理の仮定が本当に必要かどうかを、どうやって確かめるのか。</li>
+</ul>
+</div>
+
+<h3 id="s1-1">数学の文章は、三つの役割に分かれている</h3>
+
+<p>数学の本を読みにくくしているのは、記号の多さではない。<span class="yogo-hl">文が三つの異なる役割を担っており、それぞれ読み方が違うのに、見た目が似ていること</span>である。まずその区別をつけておきたい。</p>
+
+<p><span class="yogo">定義</span>——言葉の意味を定める文。<em>これは主張ではないので、正しいか誤っているかを問えない。</em>問えるのは「便利か」「後の議論が通るか」だけである。定義を読んで「なぜそう決めるのか」と思ったら、その疑問は正しい。本書は定義の前に、必ずその問いに答える。</p>
+
+<p><span class="yogo">定理</span>——主張する文。仮定と結論からなり、真偽を問える。<em>仮定のどれを外しても成り立たなくなる</em>ように書かれているのが、よい定理である。</p>
+
+<p><span class="yogo">証明</span>——定理が真であることを、既に認めた事柄から導く文。<span class="yogo-hl">証明は「なぜ正しいか」を説明するのであって、「どうやって思いついたか」を説明するのではない。</span>この二つが違うことが、数学の文章を難しくしている最大の原因である。</p>
+
+<p>この本は、思いついた順序のほうも書く。定義の前に動機を置き、証明の前に方針を述べるのは、そのためである。</p>
+
+<h3 id="s1-2">定理の形——仮定と結論</h3>
+
+<p>定理はほぼすべて「<m>P</m> ならば <m>Q</m>」の形に書ける。ここで <m>P</m> を仮定、<m>Q</m> を結論という。</p>
+
+<p>この形について、初学者がつまずく点が三つある。</p>
+
+<p><strong>第一に、<m>P</m> が偽のとき「<m>P</m> ならば <m>Q</m>」は真である。</strong>「空集合のすべての元は赤い」は真の主張である。これは言葉遊びではない。<em>この約束があるおかげで、場合分けのたびに例外を書かずに済む。</em></p>
+
+<p><strong>第二に、逆・裏・対偶を混同しないこと。</strong>「<m>P</m> ならば <m>Q</m>」に対して、逆は「<m>Q</m> ならば <m>P</m>」、裏は「<m>P</m> でないならば <m>Q</m> でない」、そして対偶は「<m>Q</m> でないならば <m>P</m> でない」である。</p>
+
+<p><span class="yogo-hl">もとの命題と対偶は同値であり、逆と裏は同値である。だがもとの命題と逆は同値でない。</span>証明に行き詰まったら対偶を証明してみる——これは本書で何度も使う手である。</p>
+
+<p><strong>第三に、「必要」と「十分」の向き。</strong>「<m>P</m> ならば <m>Q</m>」が成り立つとき、<m>P</m> は <m>Q</m> の十分条件であり、<m>Q</m> は <m>P</m> の必要条件である。<em>向きを取り違えると、定理の意味が逆になる。</em></p>
+
+<div class="teigi" id="def-doti">
+<h4></h4>
+<p class="no-indent">二つの主張 <m>P</m> と <m>Q</m> について、「<m>P</m> ならば <m>Q</m>」と「<m>Q</m> ならば <m>P</m>」がともに成り立つとき、<m>P</m> と <m>Q</m> は<strong>同値</strong>であるといい、<m>P \iff Q</m> と書く。</p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">同値であることを示すには、両方向を示さなければならない。<em>片方だけ示して終わる誤りは、驚くほど頻繁に起きる。</em>三つ以上の条件が同値であることを示すときは、<m>(1) \Rightarrow (2) \Rightarrow (3) \Rightarrow (1)</m> のように環状に回すと手間が減る。本書ではこの手を第20章で本格的に使う。</p>
+</div>
+
+<h3 id="s1-3">証明の型</h3>
+
+<p>証明の書き方には、繰り返し現れる型がある。型を知っていれば、証明を読むときに「いま何をしているのか」が見える。</p>
+
+<p><span class="yogo">直接証明</span>——仮定から出発し、既知の事柄を使って結論に至る。</p>
+
+<p><span class="yogo">対偶による証明</span>——結論の否定から出発し、仮定の否定に至る。<em>結論が「〜でない」という形のときに有効である。</em></p>
+
+<p><span class="yogo">背理法</span>——仮定と結論の否定をともに認めて、矛盾を導く。強力だが、<span class="yogo-hl">得られるのは「そうでないことはありえない」という情報だけで、具体物は手に入らない。</span>この違いは第3章（選択公理）と第4章で重要になる。</p>
+
+<p><span class="yogo">数学的帰納法</span>——自然数で添字づけられた主張の列に使う。後に第4章で、超限帰納法へ拡張する。</p>
+
+<p><span class="yogo">構成による証明</span>——「存在する」という主張を、実際に作って示す。背理法による存在証明と対比される。</p>
+
+<figure>
+<svg viewBox="0 0 470 244" width="470" height="244" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <defs>
+    <marker id="p1" markerWidth="8" markerHeight="8" refX="7" refY="2.6" orient="auto"><path d="M0,0 L7,2.6 L0,5.2 z" fill="#35618f"/></marker>
+    <marker id="p1r" markerWidth="8" markerHeight="8" refX="7" refY="2.6" orient="auto"><path d="M0,0 L7,2.6 L0,5.2 z" fill="#a03b2e"/></marker>
+  </defs>
+
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">証明の型——どこから出発し、どこへ着くか</text>
+
+  <text x="14" y="36" font-size="7.6" font-weight="700" fill="#1f3b5c">直接証明</text>
+  <rect x="88" y="26" width="86" height="20" rx="3" fill="#dce7f0" stroke="#35618f"/>
+  <text x="131" y="40" font-size="7.4" text-anchor="middle" fill="#1f3b5c">仮定 P</text>
+  <rect x="224" y="26" width="86" height="20" rx="3" fill="#dce7f0" stroke="#35618f"/>
+  <text x="267" y="40" font-size="7.4" text-anchor="middle" fill="#1f3b5c">結論 Q</text>
+  <path d="M178,36 L220,36" stroke="#35618f" stroke-width="1.3" fill="none" marker-end="url(#p1)"/>
+
+  <text x="14" y="74" font-size="7.6" font-weight="700" fill="#1f3b5c">対偶</text>
+  <rect x="88" y="64" width="86" height="20" rx="3" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="131" y="78" font-size="7.4" text-anchor="middle" fill="#1e4a41">Q でない</text>
+  <rect x="224" y="64" width="86" height="20" rx="3" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="267" y="78" font-size="7.4" text-anchor="middle" fill="#1e4a41">P でない</text>
+  <path d="M178,74 L220,74" stroke="#2f6b5f" stroke-width="1.3" fill="none" marker-end="url(#p1)"/>
+  <text x="320" y="78" font-size="7" fill="#6a6a68">もとの命題と同値</text>
+
+  <text x="14" y="112" font-size="7.6" font-weight="700" fill="#8c2f1e">背理法</text>
+  <rect x="88" y="102" width="122" height="20" rx="3" fill="#f7eceb" stroke="#a03b2e"/>
+  <text x="149" y="116" font-size="7.4" text-anchor="middle" fill="#8c2f1e">P かつ Q でない</text>
+  <rect x="260" y="102" width="74" height="20" rx="3" fill="#f2e2de" stroke="#a03b2e"/>
+  <text x="297" y="116" font-size="7.4" text-anchor="middle" fill="#8c2f1e">矛盾</text>
+  <path d="M214,112 L256,112" stroke="#a03b2e" stroke-width="1.3" fill="none" marker-end="url(#p1r)"/>
+  <text x="344" y="116" font-size="7" fill="#6a6a68">具体物は手に入らない</text>
+
+  <text x="14" y="150" font-size="7.6" font-weight="700" fill="#5a4520">構成</text>
+  <rect x="88" y="140" width="122" height="20" rx="3" fill="#f4f1ea" stroke="#8a6b2c"/>
+  <text x="149" y="154" font-size="7.4" text-anchor="middle" fill="#5a4520">求めるものを実際に作る</text>
+  <rect x="260" y="140" width="110" height="20" rx="3" fill="#e8e0d0" stroke="#8a6b2c"/>
+  <text x="315" y="154" font-size="7.4" text-anchor="middle" fill="#5a4520">存在が示される</text>
+  <path d="M214,150 L256,150" stroke="#8a6b2c" stroke-width="1.3" fill="none" marker-end="url(#p1)"/>
+
+  <rect x="40" y="176" width="390" height="34" rx="4" fill="#efe0e6" stroke="#8a3b62"/>
+  <text x="235" y="191" font-size="8" text-anchor="middle" fill="#6b2a48">背理法と構成では、得られる情報の量が違う</text>
+  <text x="235" y="204" font-size="7.4" text-anchor="middle" fill="#6b2a48">「存在しないことはありえない」と「これが求めるものだ」は、同じではない</text>
+
+  <text x="14" y="228" font-size="7.6" fill="#555">※ この違いは、選択公理を使う証明（第3章）で決定的になる。選択公理は「選べる」と主張するが、</text>
+  <text x="14" y="240" font-size="7.6" fill="#555">　 どう選ぶかは教えない。存在は保証されても、具体物は手に入らない。</text>
+</svg>
+<figcaption>証明の四つの型。出発点と到達点の違いが、得られる情報の質を決める。</figcaption>
+</figure>
+
+<h3 id="s1-4">「明らか」と書いてよいとき</h3>
+
+<p>数学の文章には「明らかに」「容易に分かる」「同様にして」という語が頻繁に現れる。<em>これらは読者を最も苛立たせる語でもある。</em></p>
+
+<p>本書の方針を先に述べておく。<span class="yogo-hl">「明らか」と書くのは、直前に示した議論をそのまま繰り返せば済む場合に限る。</span>そしてその場合でも、何を繰り返すのかを述べる。</p>
+
+<p>読者の側の作法も述べておきたい。<em>「明らか」と書かれていて明らかでなかったら、それは読者の落ち度ではない。</em>著者が省略の判断を誤ったか、読者がまだ必要な準備を終えていないかのどちらかである。後者であれば、どの準備が足りないのかを特定することが、次の一歩になる。</p>
+
+<div class="teiri" data-kind="命題" id="prop-taiguu">
+<h4></h4>
+<p class="no-indent">命題「<m>P</m> ならば <m>Q</m>」と、その対偶「<m>Q</m> でないならば <m>P</m> でない」は同値である。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">「<m>P</m> ならば <m>Q</m>」が真であるとし、<m>Q</m> でないと仮定する。もし <m>P</m> であれば、仮定より <m>Q</m> が従い、<m>Q</m> でないことに反する。よって <m>P</m> でない。逆向きも同様に示される——「<m>Q</m> でないならば <m>P</m> でない」が真であるとし、<m>P</m> であると仮定すると、<m>Q</m> でないとすれば <m>P</m> でないことになって矛盾する。よって <m>Q</m> である。</p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">いま「逆向きも同様に示される」と書いたが、<em>実際には書き下した。</em>「同様」で済ませてよいのは、読者が自分で再現できることが確かな場合だけである。ここでは、対偶という概念を導入したばかりなので、省略しなかった。</p>
+</div>
+
+<div class="lv2">
+<h4>集合の言葉で書き直す——なぜ記号を使うのか</h4>
+<p>前節の議論は日本語だけで書けた。では、なぜ数学は記号を使うのか。答えは「短くするため」ではない。<span class="yogo-hl">日本語では区別しにくい二つの主張を、区別するためである。</span></p>
+<p><strong>量化子の順序。</strong>次の二つの文を比べてほしい。</p>
+<p>（甲）どんな <m>\varepsilon > 0</m> に対しても、ある <m>N</m> が存在して、<m>n \ge N</m> ならば <m>|a_n - a| < \varepsilon</m>。</p>
+<p>（乙）ある <m>N</m> が存在して、どんな <m>\varepsilon > 0</m> に対しても、<m>n \ge N</m> ならば <m>|a_n - a| < \varepsilon</m>。</p>
+<p>記号で書けば違いは一目で分かる。</p>
+<M>\forall \varepsilon > 0\ \exists N\ \forall n \ge N:\ |a_n - a| < \varepsilon</M>
+<M>\exists N\ \forall \varepsilon > 0\ \forall n \ge N:\ |a_n - a| < \varepsilon</M>
+<p>（甲）は数列 <m>(a_n)</m> が <m>a</m> に収束することを言う。<em>（乙）は、ある番号から先で <m>a_n</m> が <m>a</m> に完全に一致することを言う</em>——なぜなら <m>\varepsilon</m> をいくらでも小さくできるからである。<span class="yogo-hl">語順を入れ替えただけで、意味がまったく違う主張になった。</span></p>
+<p><strong><m>N</m> は何に依存するか。</strong>（甲）では <m>N</m> は <m>\varepsilon</m> の後に来るので、<m>\varepsilon</m> に依存してよい。これを明示したいときは <m>N(\varepsilon)</m> と書く。<em>この依存が許されるかどうかが、一様収束と各点収束を分ける</em>（第47章）。本書でもっとも重要な区別の一つである。</p>
+<p><strong>否定の作り方。</strong>量化子を含む文の否定は、機械的に作れる。<m>\forall</m> と <m>\exists</m> を入れ替え、最後の主張を否定する。</p>
+<M>\lnot\big(\forall \varepsilon > 0\ \exists N\ \forall n \ge N:\ |a_n - a| < \varepsilon\big)
+\iff \exists \varepsilon > 0\ \forall N\ \exists n \ge N:\ |a_n - a| \ge \varepsilon</M>
+<p>つまり「収束しない」とは、<em>ある <m>\varepsilon</m> が存在して、どんなに先へ行っても <m>a</m> から <m>\varepsilon</m> 以上離れる番号がある</em>ということである。<span class="yogo-hl">否定を機械的に作れることが、背理法と対偶を使える条件になっている。</span></p>
+<p>記号は、思考の節約のためではなく、<strong>あいまいさの排除のため</strong>にある。日本語で書いたときに二通りに読める文が、記号では一通りにしか読めない——それが記号を使う理由である。</p>
+</div>
+
+<div class="lv3">
+<h4>証明とは何か——形式化できるのか</h4>
+<p>本章では証明を「既に認めた事柄から導く文」と述べた。では「導く」とは何か。この問いは二〇世紀の数学基礎論の出発点であり、いまも完全には決着していない。</p>
+<p><strong>形式的証明という理想。</strong>二〇世紀初頭、証明を完全に機械的な手続きに還元する計画が立てられた。公理を並べ、推論規則を定め、<em>証明とは記号列の有限列であって、各行が公理か、前の行から規則によって得られるもの</em>と定義する。この定義のもとでは、ある記号列が証明であるかどうかは機械的に確かめられる。</p>
+<p><strong>そして限界が示された。</strong>ゲーデル <span class="orig">Gödel</span> の不完全性定理は、この計画に本質的な制約があることを示した。算術を含むだけの強さを持ち、かつ無矛盾な公理系は、<span class="yogo-hl">その体系内で証明も反証もできない主張を必ず含む。</span>しかも、その体系自身の無矛盾性は、その体系内では証明できない。</p>
+<p><strong>これは数学を否定するのか。</strong>しない。不完全性定理が述べているのは「真だが証明できない主張がある」ことであって、「証明できたことが怪しい」ことではない。<em>証明できたものは依然として証明できている。</em>ただし、<strong>公理系を選ぶという行為が、数学の外にある</strong>ことが明らかになった。</p>
+<p><strong>本書に関わる具体例。</strong>この抽象的な話は、本書の内容に直接関わる。</p>
+<p>第3章で扱う<strong>選択公理</strong>は、他の公理から証明も反証もできない。<em>採用するかどうかは選択である。</em>採用すればチコノフ <span class="orig">Tychonoff</span> の定理（第21章）が得られ、同時にバナッハ–タルスキ <span class="orig">Banach–Tarski</span> の逆説のような直観に反する帰結も生じる。第4章で扱う<strong>連続体仮説</strong>も同様に独立であり、第36章のスーリン <span class="orig">Souslin</span> 問題は、その独立性が位相空間の性質として現れる例である。</p>
+<p><span class="yogo-hl">「この定理は成り立つか」という問いに、「どの公理系の上で問うているか次第だ」という答えが返ってくる場面が、本書には実際に現れる。</span></p>
+<p><strong>実務としての証明。</strong>他方で、数学者が日々書いている証明は、形式的証明ではない。<em>読者が形式的証明に翻訳できると納得するに足る説明</em>である。どこまで書けば納得に足るかは、時代と読者によって変わる。一九世紀には認められた議論が、いまは不十分とされることがある（第43章で実数の構成を扱うときに、この例を見る）。</p>
+<p>近年は、証明を計算機で検証する試みが進んでいる。四色定理のように、計算機の助けなしには検証しきれない証明も現れた。<em>「証明とは何か」という問いは、技術の変化によって形を変えながら続いている。</em></p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li>命題「<m>x > 2</m> ならば <m>x^2 > 4</m>」の逆・裏・対偶をそれぞれ述べ、真偽を判定せよ。</li>
+<li>「空集合のすべての元は赤い」が真である理由を説明せよ。</li>
+<li>三つの条件が同値であることを示すとき、環状に示すと手間が減るのはなぜか。</li>
+<li>背理法による存在証明と構成による存在証明で、得られる情報がどう違うか述べよ。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li>命題 <ref t="prop-taiguu"/> の証明において、「逆向きも同様」で済ませずに書き下した理由を説明せよ。<span class="haiten">（10点）</span></li>
+<li>数列 <m>(a_n)</m> が <m>a</m> に収束しないことの定義を、量化子を用いて書き下せ。さらに、その否定を作ってもとの定義に戻ることを確かめよ。<span class="haiten">（10点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li>「どんな <m>\varepsilon > 0</m> に対してもある <m>N</m> が存在して」という語順と、「ある <m>N</m> が存在してどんな <m>\varepsilon > 0</m> に対しても」という語順で、主張がまったく異なることを示した。この違いが、一様収束と各点収束の区別（第47章）にどう対応するかを予想して述べよ。<span class="haiten">（20点）</span></li>
+</ol>
+</div>
+</div>

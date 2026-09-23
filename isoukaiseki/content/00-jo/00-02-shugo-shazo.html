@@ -1,0 +1,256 @@
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>「集合とは、ものの集まりである」という説明は、なぜ通用しないのか。</li>
+<li>写像の像と逆像は、なぜこれほど振る舞いが違うのか。</li>
+<li>同値関係で割るという操作は、何を捨てて何を残しているのか。</li>
+<li>無限には大小があるのか。</li>
+</ul>
+</div>
+
+<h3 id="s2-1">素朴な定義が壊れるところ</h3>
+
+<p>集合を「ものの集まり」と説明するのは分かりやすい。そして、その分かりやすさがそのまま矛盾を生む。<span class="yogo-hl">どんな条件を書いても、それを満たすものを全部集めれば集合になる</span>——この素朴な原則を認めると、次の集合を考えることができてしまう。</p>
+
+<M>R = \{\, x \mid x \notin x \,\}</M>
+
+<p>自分自身を元として含まないもの全体である。ここで <m>R \in R</m> かどうかを問う。含むとすれば条件により含まない。含まないとすれば条件を満たすので含む。<em>どちらに転んでも矛盾する。</em>ラッセル <span class="orig">Russell</span> が一九〇一年に見つけたこの逆説は、集合論をいったん壊した。</p>
+
+<p>修復の方針は、<strong>「集める」操作を制限する</strong>ことだった。現在の標準的な公理系では、条件を満たすものを無制限に集めることは許されない。許されるのは<span class="yogo-hl">すでに存在する集合の中から、条件を満たす元を選び出すこと</span>だけである。これを分出の公理という。</p>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">この制限のもとでは、上の <m>R</m> は作れない。作れるのは、あらかじめ与えられた集合 <m>A</m> に対する <m>\{\, x \in A \mid x \notin x \,\}</m> だけである。そしてこの集合は <m>A</m> の元ではない——それを示すのが演習である。<em>「すべての集合の集合」も同じ理由で存在しない。</em></p>
+</div>
+
+<p>本書はこれ以上集合論の公理には立ち入らない。<em>必要なのは、無制限な内包が許されないという一点だけ</em>である。位相空間論では「ある空間のすべての開集合の族」のように大きな族をしばしば扱うが、それらはいずれも冪集合の部分集合として作られており、危険はない。</p>
+
+<h3 id="s2-2">演算——任意個の合併と交叉</h3>
+
+<p>二つの集合の合併と交叉は既知とする。位相空間論で本質的に効いてくるのは、<strong>添字集合が有限でなくてもよい</strong>という点である。</p>
+
+<p>添字集合 <m>I</m> と、各 <m>i \in I</m> に対する集合 <m>A_i</m> が与えられたとき、</p>
+
+<M>\bigcup_{i \in I} A_i = \{\, x \mid \exists i \in I,\ x \in A_i \,\}, \qquad
+\bigcap_{i \in I} A_i = \{\, x \mid \forall i \in I,\ x \in A_i \,\}</M>
+
+<p>と定める。<span class="yogo-hl">合併には存在量化子が、交叉には全称量化子が対応している。</span>この対応は覚える価値がある。後に開集合の公理が「任意個の合併で閉じ、有限個の交叉で閉じる」という非対称な形をとるとき、その非対称性の意味を考える手掛かりになるからである（第5章）。</p>
+
+<p>ド・モルガン <span class="orig">De Morgan</span> の法則も任意個で成り立つ。全体集合 <m>X</m> の中で補集合をとるとき、</p>
+
+<M>X \setminus \bigcup_{i \in I} A_i = \bigcap_{i \in I} (X \setminus A_i), \qquad
+X \setminus \bigcap_{i \in I} A_i = \bigcup_{i \in I} (X \setminus A_i)</M>
+
+<p>である。<em>補集合をとる操作が、合併と交叉を入れ替える。</em>この事実によって、開集合について証明したことは自動的に閉集合についての主張に翻訳される。第6章で繰り返し使う。</p>
+
+<h3 id="s2-3">写像——像と逆像は対等ではない</h3>
+
+<p>写像 <m>f \colon X \to Y</m> とは、<m>X</m> の各元に <m>Y</m> の元をただ一つ対応させる規則である。厳密には <m>X \times Y</m> の部分集合 <m>f</m> であって、各 <m>x \in X</m> に対して <m>(x, y) \in f</m> となる <m>y</m> がちょうど一つ存在するもの、と定める。<em>規則という語を使わずに済ませたいときは、この定義に戻ればよい。</em></p>
+
+<div class="teigi" id="def-zo-gyakuzo">
+<h4></h4>
+<p class="no-indent"><m>f \colon X \to Y</m> とし、<m>A \subseteq X</m>、<m>B \subseteq Y</m> とする。</p>
+<M>f(A) = \{\, f(x) \mid x \in A \,\} \subseteq Y, \qquad
+f^{-1}(B) = \{\, x \in X \mid f(x) \in B \,\} \subseteq X</M>
+<p><m>f(A)</m> を <m>A</m> の<strong>像</strong>、<m>f^{-1}(B)</m> を <m>B</m> の<strong>逆像</strong>という。</p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">記号 <m>f^{-1}</m> は逆写像を意味しない。<em>逆写像が存在しなくても逆像は定義される。</em>逆像は集合に対する操作であり、点に対する操作ではない。この混同は非常によく起きるので、最初に断っておく。</p>
+</div>
+
+<p>さて、ここからがこの節の要点である。<span class="yogo-hl">逆像は集合演算のすべてと可換であるが、像はそうではない。</span></p>
+
+<div class="teiri" id="thm-gyakuzo-hozon">
+<h4>逆像は集合演算を保つ</h4>
+<p class="no-indent"><m>f \colon X \to Y</m> とし、<m>\{B_i\}_{i \in I}</m> を <m>Y</m> の部分集合の族、<m>B \subseteq Y</m> とする。</p>
+<M>f^{-1}\Big(\bigcup_{i \in I} B_i\Big) = \bigcup_{i \in I} f^{-1}(B_i), \qquad
+f^{-1}\Big(\bigcap_{i \in I} B_i\Big) = \bigcap_{i \in I} f^{-1}(B_i)</M>
+<M>f^{-1}(Y \setminus B) = X \setminus f^{-1}(B)</M>
+</div>
+
+<div class="shomei">
+<p class="no-indent">交叉の場合を示す。他も同様であり、ここでは省略してよい——同じ書き換えを繰り返すだけだからである。</p>
+<p><m>x \in f^{-1}(\bigcap_i B_i)</m> であることは、定義により <m>f(x) \in \bigcap_i B_i</m> と同値であり、これは「すべての <m>i</m> について <m>f(x) \in B_i</m>」と同値であり、さらに「すべての <m>i</m> について <m>x \in f^{-1}(B_i)</m>」と同値である。最後の条件は <m>x \in \bigcap_i f^{-1}(B_i)</m> にほかならない。</p>
+<p>証明の全体が、<em>定義を書き下して量化子の位置を動かさずに読み替えるだけ</em>で終わっていることに注意してほしい。逆像がこれほど素直なのは、<m>x \in f^{-1}(B)</m> が <m>f(x) \in B</m> という一点の条件に還元されるからである。</p>
+</div>
+
+<p>像はそうはいかない。<m>y \in f(A)</m> は「ある <m>x \in A</m> があって <m>f(x) = y</m>」という存在の主張であり、存在量化子は交叉と可換でない。</p>
+
+<div class="hanrei" id="cex-zo-kyosa">
+<h4>像は交叉を保たない</h4>
+<p class="no-indent"><m>X = \{a, b\}</m>、<m>Y = \{c\}</m> とし、<m>f(a) = f(b) = c</m> とする。<m>A_1 = \{a\}</m>、<m>A_2 = \{b\}</m> とおくと、</p>
+<M>f(A_1 \cap A_2) = f(\varnothing) = \varnothing, \qquad
+f(A_1) \cap f(A_2) = \{c\} \cap \{c\} = \{c\}</M>
+<p>となって一致しない。<em>一般に成り立つのは <m>f(A_1 \cap A_2) \subseteq f(A_1) \cap f(A_2)</m> という片側の包含だけ</em>である。等号が常に成り立つのは <m>f</m> が単射のときに限る。</p>
+</div>
+
+<figure>
+<svg viewBox="0 0 470 300" width="470" height="300" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <defs>
+    <marker id="a2" markerWidth="8" markerHeight="8" refX="7" refY="2.6" orient="auto"><path d="M0,0 L7,2.6 L0,5.2 z" fill="#35618f"/></marker>
+    <marker id="a2r" markerWidth="8" markerHeight="8" refX="7" refY="2.6" orient="auto"><path d="M0,0 L7,2.6 L0,5.2 z" fill="#a03b2e"/></marker>
+  </defs>
+
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">像と逆像の非対称——どちらが集合演算と可換か</text>
+
+  <rect x="14" y="26" width="442" height="128" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+  <text x="24" y="41" font-size="7.8" font-weight="700" fill="#1f3b5c">逆像　すべての演算と可換</text>
+
+  <text x="130" y="62" font-size="7.2" text-anchor="middle" fill="#1f3b5c">X</text>
+  <ellipse cx="130" cy="96" rx="72" ry="30" fill="#e8f0f7" stroke="#35618f"/>
+  <ellipse cx="108" cy="98" rx="30" ry="16" fill="none" stroke="#35618f" stroke-dasharray="2.5,2"/>
+  <ellipse cx="152" cy="98" rx="30" ry="16" fill="none" stroke="#35618f" stroke-dasharray="2.5,2"/>
+  <path d="M130,84 A30,16 0 0,0 130,112 A30,16 0 0,0 130,84 z" fill="#b9d2e6" opacity="0.85"/>
+  <text x="100" y="101" font-size="6.4" text-anchor="middle" fill="#1f3b5c">f ⁻¹(B₁)</text>
+  <text x="160" y="101" font-size="6.4" text-anchor="middle" fill="#1f3b5c">f ⁻¹(B₂)</text>
+
+  <text x="346" y="62" font-size="7.2" text-anchor="middle" fill="#1f3b5c">Y</text>
+  <ellipse cx="346" cy="96" rx="72" ry="30" fill="#e8f0f7" stroke="#35618f"/>
+  <ellipse cx="324" cy="98" rx="30" ry="16" fill="none" stroke="#35618f" stroke-dasharray="2.5,2"/>
+  <ellipse cx="368" cy="98" rx="30" ry="16" fill="none" stroke="#35618f" stroke-dasharray="2.5,2"/>
+  <path d="M346,84 A30,16 0 0,0 346,112 A30,16 0 0,0 346,84 z" fill="#b9d2e6" opacity="0.85"/>
+  <text x="316" y="101" font-size="6.4" text-anchor="middle" fill="#1f3b5c">B₁</text>
+  <text x="376" y="101" font-size="6.4" text-anchor="middle" fill="#1f3b5c">B₂</text>
+
+  <path d="M268,96 L208,96" stroke="#35618f" stroke-width="1.3" fill="none" marker-end="url(#a2)"/>
+  <text x="238" y="89" font-size="7" text-anchor="middle" fill="#35618f">f ⁻¹</text>
+
+  <text x="235" y="145" font-size="7.2" text-anchor="middle" fill="#1f3b5c">濃い部分どうしが正確に対応する——交叉の逆像は、逆像の交叉である</text>
+
+  <rect x="14" y="162" width="442" height="128" rx="4" fill="#fdf6f4" stroke="#e0c3bd"/>
+  <text x="24" y="177" font-size="7.8" font-weight="700" fill="#8c2f1e">像　交叉とは可換でない</text>
+
+  <text x="130" y="198" font-size="7.2" text-anchor="middle" fill="#8c2f1e">X</text>
+  <ellipse cx="130" cy="232" rx="72" ry="30" fill="#f7eceb" stroke="#a03b2e"/>
+  <circle cx="100" cy="232" r="15" fill="#efd6d1" stroke="#a03b2e" stroke-dasharray="2.5,2"/>
+  <text x="100" y="235" font-size="6.8" text-anchor="middle" fill="#8c2f1e">A₁</text>
+  <circle cx="160" cy="232" r="15" fill="#efd6d1" stroke="#a03b2e" stroke-dasharray="2.5,2"/>
+  <text x="160" y="235" font-size="6.8" text-anchor="middle" fill="#8c2f1e">A₂</text>
+
+  <text x="346" y="198" font-size="7.2" text-anchor="middle" fill="#8c2f1e">Y</text>
+  <ellipse cx="346" cy="232" rx="72" ry="30" fill="#f7eceb" stroke="#a03b2e"/>
+  <circle cx="346" cy="232" r="16" fill="#dfb2a9" stroke="#a03b2e"/>
+  <text x="346" y="235" font-size="6.8" text-anchor="middle" fill="#6b2118">一点</text>
+
+  <path d="M208,232 L268,232" stroke="#a03b2e" stroke-width="1.3" fill="none" marker-end="url(#a2r)"/>
+  <text x="238" y="225" font-size="7" text-anchor="middle" fill="#a03b2e">f</text>
+
+  <text x="235" y="281" font-size="7.2" text-anchor="middle" fill="#8c2f1e">交わらない二つが同じ像をもつ——交叉は空でも、像の交叉は空でない</text>
+</svg>
+<figcaption>逆像は一点ごとの条件に還元されるので、合併・交叉・補集合のすべてと可換になる。像は存在の主張なので、交叉が潰れる。連続性を逆像で定義するのは、この非対称のためである。</figcaption>
+</figure>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">この非対称が、本書の構成を決めている。<span class="yogo-hl">連続写像を「開集合の逆像が開集合」と定義するのは、逆像だけが集合演算を壊さないからである。</span>「開集合の像が開集合」という条件も考えられるが（開写像という）、それは連続性とは別の、もっと強くて扱いにくい条件になる。第8章で正面から扱う。</p>
+</div>
+
+<h3 id="s2-4">同値関係——何を捨てるか</h3>
+
+<p>数学で「同じとみなす」という操作は、同値関係によって形式化される。</p>
+
+<div class="teigi" id="def-doti-kankei">
+<h4></h4>
+<p class="no-indent">集合 <m>X</m> 上の関係 <m>\sim</m> が<strong>同値関係</strong>であるとは、次の三つを満たすことをいう。</p>
+<p class="no-indent">反射律　すべての <m>x</m> について <m>x \sim x</m>。<br>
+対称律　<m>x \sim y</m> ならば <m>y \sim x</m>。<br>
+推移律　<m>x \sim y</m> かつ <m>y \sim z</m> ならば <m>x \sim z</m>。</p>
+</div>
+
+<p><m>x</m> を含む<strong>同値類</strong>を <m>[x] = \{\, y \in X \mid y \sim x \,\}</m> と書き、同値類全体の集合を <m>X/{\sim}</m> と書いて<strong>商集合</strong>という。</p>
+
+<div class="teiri" data-kind="命題" id="prop-bunkatsu">
+<h4></h4>
+<p class="no-indent"><m>X</m> 上の同値関係 <m>\sim</m> に対し、同値類の全体は <m>X</m> の分割をなす。すなわち、どの同値類も空でなく、和集合が <m>X</m> に等しく、異なる二つの同値類は交わらない。逆に、<m>X</m> の任意の分割は、ちょうど一つの同値関係から得られる。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">反射律より <m>x \in [x]</m> なので、同値類は空でなく、和集合は <m>X</m> を覆う。交わらないことを示す。<m>[x] \cap [y] \ne \varnothing</m> とし、<m>z</m> をその元とする。<m>z \sim x</m> かつ <m>z \sim y</m> である。対称律と推移律より <m>x \sim y</m> が従う。すると任意の <m>w \in [x]</m> について <m>w \sim x \sim y</m> なので <m>w \in [y]</m>、つまり <m>[x] \subseteq [y]</m>。役割を入れ替えて逆向きも得られ、<m>[x] = [y]</m>。<em>交われば一致する</em>——これが分割の意味である。</p>
+<p>逆を示す。分割 <m>\mathcal{P}</m> が与えられたとき、<m>x \sim y</m> を「<m>x</m> と <m>y</m> が同じ要素に属する」と定めれば、三つの条件はただちに確かめられる。一意性は、同値関係が同値類によって完全に決まることから従う。</p>
+</div>
+
+<p>商集合を作るとは、<em>区別する必要のない違いを捨てること</em>である。何を捨てるかを決めるのが同値関係であり、<span class="yogo-hl">捨てた後に何が残るかを見極めることが、商を扱う際の実質的な作業になる。</span>整数の合同、ベクトル空間の商、そして第10章の商空間は、いずれも同じ構造をしている。</p>
+
+<h3 id="s2-5">濃度——無限の大小</h3>
+
+<p>二つの集合のあいだに全単射があるとき、<strong>濃度が等しい</strong>という。有限集合では元の個数が一致することと同じだが、<em>無限集合ではこの定義が直観を裏切る。</em>自然数全体と偶数全体は、真部分集合でありながら濃度が等しい。</p>
+
+<p>自然数全体と濃度の等しい集合を<strong>可算無限</strong>といい、有限または可算無限であることを<strong>可算</strong>という。有理数全体は可算である。<span class="yogo-hl">では、すべての無限集合が可算なのか。</span>この問いに答えたのがカントール <span class="orig">Cantor</span> であった。</p>
+
+<div class="teiri" id="thm-cantor">
+<h4>カントールの定理</h4>
+<p class="no-indent">任意の集合 <m>X</m> について、<m>X</m> から冪集合 <m>\mathcal{P}(X)</m> への全射は存在しない。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><m>f \colon X \to \mathcal{P}(X)</m> を任意の写像とし、</p>
+<M>D = \{\, x \in X \mid x \notin f(x) \,\}</M>
+<p class="no-indent">とおく。<m>D</m> は <m>X</m> の部分集合であるから <m>\mathcal{P}(X)</m> の元である。もし <m>f</m> が全射なら、<m>f(d) = D</m> となる <m>d \in X</m> がある。ここで <m>d \in D</m> かどうかを問う。<m>d \in D</m> とすれば <m>D</m> の定義より <m>d \notin f(d) = D</m>。<m>d \notin D</m> とすれば <m>d \notin f(d)</m> なので定義より <m>d \in D</m>。いずれも矛盾する。よって全射は存在しない。</p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">この証明は、本章の冒頭で見たラッセルの逆説とまったく同じ仕掛けを使っている。<em>違いは、無制限に集めていないこと</em>である。<m>D</m> は既存の集合 <m>X</m> から分出しているので、正当に存在する。<span class="yogo-hl">逆説を生んだ対角線の議論が、制限のもとでは定理を生む。</span></p>
+</div>
+
+<p><m>x \mapsto \{x\}</m> は単射なので、<m>X</m> の濃度は <m>\mathcal{P}(X)</m> の濃度より真に小さい。<em>したがって無限には限りなく多くの段階がある。</em>特に実数全体は自然数全体と濃度が等しくない——第43章で実数を構成したのち、この事実が解析学でどう効くかを見る。</p>
+
+<div class="lv2">
+<h4>逆像の可換性は、どこまで自明か</h4>
+<p>「逆像は演算と可換、像は可換でない」という事実は、暗記すべき公式のように見える。しかし理由を押さえておくと、忘れても再構成できる。</p>
+<p><strong>述語の言葉で見る。</strong>部分集合 <m>B \subseteq Y</m> は、述語 <m>P_B(y) \equiv (y \in B)</m> と同一視できる。このとき逆像は</p>
+<M>x \in f^{-1}(B) \iff P_B(f(x))</M>
+<p>であり、<em>逆像をとる操作は述語に <m>f</m> を代入する操作にすぎない。</em>代入は論理結合子と可換である——<m>P \land Q</m> に代入したものは、代入したもの同士の <m>\land</m> に等しい。<span class="yogo-hl">逆像の可換性は、代入が論理結合子を透過するという、それだけの事実である。</span></p>
+<p><strong>像はなぜ違うのか。</strong>像は代入ではなく、存在量化である。</p>
+<M>y \in f(A) \iff \exists x\ \big(x \in A \land f(x) = y\big)</M>
+<p><m>\exists</m> は <m>\lor</m> とは可換だが <m>\land</m> とは可換でない。<m>\exists x (P \lor Q)</m> と <m>\exists x P \lor \exists x Q</m> は同値だが、<m>\exists x (P \land Q)</m> は <m>\exists x P \land \exists x Q</m> より真に強い。<em>左辺は同じ <m>x</m> が両方を満たすことを要求し、右辺は別々の <m>x</m> でよい。</em>この一点が、反例 <ref t="cex-zo-kyosa"/> の正体である。</p>
+<p><strong>補集合はどうか。</strong>像と補集合の関係はさらに悪い。一般には <m>f(X \setminus A)</m> と <m>Y \setminus f(A)</m> のあいだにどちらの包含も成り立たない。<m>f</m> が全射でなければ左辺に入らない点が右辺にあり、<m>f</m> が単射でなければ右辺に入らない点が左辺にある。<span class="yogo-hl">両方の包含が成り立つのは、<m>f</m> が全単射のときに限る。</span></p>
+<p><strong>まとめると次の表になる。</strong>成り立つ包含だけを書く。</p>
+<M>f(A_1 \cap A_2) \subseteq f(A_1) \cap f(A_2), \qquad
+f(A_1 \cup A_2) = f(A_1) \cup f(A_2)</M>
+<M>A \subseteq f^{-1}(f(A)), \qquad f(f^{-1}(B)) \subseteq B</M>
+<p>最後の二つも向きを間違えやすい。<m>A \subseteq f^{-1}(f(A))</m> の等号は <m>f</m> が単射のとき、<m>f(f^{-1}(B)) \subseteq B</m> の等号は <m>f</m> が全射のときに成り立つ。<em>どちらも、証明を書けば一行で終わる。書いてみることを勧める。</em></p>
+</div>
+
+<div class="lv3">
+<h4>選択公理なしで、どこまで進めるか</h4>
+<p>本章の結果は、どれも選択公理を使っていない。<em>分出と冪集合と対の公理だけで足りる。</em>しかし「可算」という概念のまわりには、選択公理の影が早くも差している。</p>
+<p><strong>可算和は可算か。</strong>「可算個の可算集合の合併は可算である」という主張は、教科書で当然のように使われる。証明は、各 <m>A_n</m> に自然数からの全単射 <m>f_n</m> を取り、<m>(n, k) \mapsto f_n(k)</m> で数え上げるというものである。ここに <em>可算個の選択</em>が隠れている——各 <m>n</m> について <m>f_n</m> を「取る」操作は、可算選択公理を使っている。</p>
+<p>実際、選択公理を完全に否定するある種のモデルでは、<span class="yogo-hl">実数全体が可算個の可算集合の合併になる</span>ことが知られている。フェファーマン <span class="orig">Feferman</span> とレヴィ <span class="orig">Lévy</span> によるこのモデルでは、カントールの定理は依然として成り立つ（それは選択公理を使わない）が、可算性についての直観は崩れる。<em>定理が成り立つことと、直観が通用することは別である。</em></p>
+<p><strong>濃度の比較可能性。</strong>「任意の二つの集合は、一方から他方への単射があるか、その逆があるかのいずれかである」——これを濃度の三分律という。<span class="yogo-hl">三分律は選択公理と同値である。</span>選択公理を仮定しなければ、比較できない濃度の対が存在しうる。次章でこの事実を正面から扱う。</p>
+<p><strong>ベルンシュタインの定理は例外である。</strong>一方で、「<m>X</m> から <m>Y</m> への単射と <m>Y</m> から <m>X</m> への単射があれば、全単射がある」というカントール–ベルンシュタイン <span class="orig">Cantor–Bernstein</span> の定理は、<em>選択公理を使わずに証明できる。</em>証明は構成的で、二つの単射の合成を繰り返して軌道を追い、軌道の型に応じて対応を定める。比較可能性は選択を要するが、比較した後の話は要しない——この境界は覚えておく価値がある。</p>
+<p><strong>本書での扱い。</strong>以降、選択公理を使う証明には<em>そのつど断りを入れる。</em>特に第21章のチコノフ <span class="orig">Tychonoff</span> の定理は選択公理と同値であり、第27章のベール <span class="orig">Baire</span> のカテゴリー定理は従属選択公理と同値である。これらは単なる注釈ではない。<span class="yogo-hl">位相空間論の主要定理のいくつかは、集合論の公理の強さをそのまま反映している。</span></p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li>集合 <m>A</m> に対して <m>B = \{\, x \in A \mid x \notin x \,\}</m> とおく。<m>B \in A</m> が成り立たないことを示せ。</li>
+<li><m>f \colon \mathbb{R} \to \mathbb{R}</m> を <m>f(x) = x^2</m> とするとき、<m>f([-1, 2])</m> と <m>f^{-1}([1, 4])</m> を求めよ。</li>
+<li>整数上の関係「<m>m - n</m> が3で割り切れる」が同値関係であることを確かめ、同値類をすべて挙げよ。</li>
+<li>有理数全体が可算であることを、数え上げの方法を明示して述べよ。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li><ref t="thm-gyakuzo-hozon"/> のうち、合併と補集合の場合を書き下せ。<span class="haiten">（10点）</span></li>
+<li>任意の <m>f</m> と <m>A \subseteq X</m> について <m>A \subseteq f^{-1}(f(A))</m> を示し、等号が成り立つための必要十分条件が <m>f</m> の単射性であることを示せ。<span class="haiten">（15点）</span></li>
+<li><ref t="thm-cantor"/> を用いて、すべての集合の集合が存在しないことを示せ。<span class="haiten">（15点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li>カントール–ベルンシュタインの定理を、選択公理を使わずに証明せよ。二つの単射 <m>f \colon X \to Y</m>、<m>g \colon Y \to X</m> に対し、各元の「来歴」を <m>g^{-1}, f^{-1}</m> と遡って分類する方針をとるとよい。<span class="haiten">（30点）</span></li>
+<li>像が交叉を保たない例を、<m>\mathbb{R}</m> から <m>\mathbb{R}</m> への連続写像のなかから作れ。また、<m>f(A_1 \cap A_2) = f(A_1) \cap f(A_2)</m> がすべての <m>A_1, A_2</m> について成り立つならば <m>f</m> が単射であることを示せ。<span class="haiten">（20点）</span></li>
+</ol>
+</div>
+</div>

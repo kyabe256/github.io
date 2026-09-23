@@ -17,9 +17,12 @@ import sys
 from datetime import date
 from pathlib import Path
 
+import mathbook
 from _bookroot import book_root, slug_of
 
 BOOK = book_root(__file__)
+# 数学書のときだけ使う定理番号の対応表。manifest に "math": true があれば有効になる。
+THM_REGISTRY: dict | None = None
 CONTENT = BOOK / "content"
 ASSETS = BOOK / "assets"
 MANIFEST = BOOK / "manifest.json"
@@ -66,6 +69,10 @@ def load_chapter(part: dict, ch: dict, stub: bool) -> str | None:
             body = heading + "\n" + body
         body = flatten_ruby(body)
         body = number_captions(body, ch["n"])
+        # 数学書では定義・定理・例・反例に章内の通し番号を振る（第一パス）。
+        # 番号を手で書かないための仕組み。THM_REGISTRY は assemble が用意する。
+        if THM_REGISTRY is not None:
+            body = mathbook.number_boxes(body, ch["n"], THM_REGISTRY)
         return f'<section class="chapter" id="chsec{ch["n"]:02d}">\n{body}\n</section>'
 
     if not stub:
@@ -79,20 +86,30 @@ def load_chapter(part: dict, ch: dict, stub: bool) -> str | None:
 # ---------------------------------------------------------------- 前付け
 
 def build_cover(m: dict) -> str:
+    # 三層の呼び名は本ごとに違う。manifest の levels に無ければ従来の文面を使う。
+    lv = m.get("levels", [
+        "★　　高校「世界史探究」の本文",
+        "★★　 大学の概説講義にあたる「ゼミナール」",
+        "★★★ 大学院の議論にあたる「研究の最前線」",
+    ])
     return f"""<section class="cover">
   <p class="cv-title">{m['title']}</p>
   <p class="cv-sub">{m['subtitle']}</p>
   <div class="cv-rule"></div>
   <p class="cv-levels">
-    ★　　高校「世界史探究」の本文<br>
-    ★★　 大学の概説講義にあたる「ゼミナール」<br>
-    ★★★ 大学院の議論にあたる「研究の最前線」
+    {'<br>'.join(lv)}
   </p>
   <p class="cv-foot">{m['edition']}</p>
 </section>"""
 
 
 def build_guide() -> str:
+    # 本ごとに差し替えられるよう、content/_guide.html があればそれを使う。
+    # 無ければ従来の文面（世界史大全のもの）を出す。
+    custom = CONTENT / "_guide.html"
+    if custom.exists():
+        return ('<section class="frontmatter" id="guide">\n'
+                + custom.read_text(encoding="utf-8").strip() + "\n</section>")
     return """<section class="frontmatter" id="guide">
 <h1>本書の使い方</h1>
 
@@ -180,8 +197,9 @@ def build_okuduke(m: dict) -> str:
 <div class="okuduke">
 <p><strong>{m['title']}</strong>　{m['subtitle']}</p>
 <p>{m['edition']}　{date.today().year}年発行</p>
-<p>本文・図版・史料訳はすべて本書のために書き起こした。図版はコードで描画したSVGであり、
-外部の画像素材を使用していない。</p>
+<p>{m.get('colophon_note',
+  '本文・図版・史料訳はすべて本書のために書き起こした。図版はコードで描画したSVGであり、'
+  '外部の画像素材を使用していない。')}</p>
 <p>組版：WeasyPrint（CSS Paged Media）／本文書体：Noto Serif JP、
 見出し書体：Noto Sans JP（いずれも SIL Open Font License 1.1）</p>
 <p>本書は Claude Code を用いて執筆・組版された。</p>
@@ -264,7 +282,23 @@ def main() -> int:
 
     m = json.loads(MANIFEST.read_text(encoding="utf-8"))
     only = set(args.only.split(",")) if args.only else None
+
+    # 数学書のときだけ、定理番号と数式の処理を有効にする。
+    # 既存の二冊（manifest に "math" が無い）では一切走らない。
+    global THM_REGISTRY
+    is_math = bool(m.get("math"))
+    if is_math:
+        THM_REGISTRY = {}
+
     doc, stats = assemble(m, only, stub=not args.no_stub)
+
+    if is_math:
+        doc, missing = mathbook.resolve_refs(doc, THM_REGISTRY)   # 第二パス
+        doc, mstats = mathbook.render_math(doc, BOOK)
+        left = mathbook.leftovers(doc)
+        stats["math"] = mstats
+        stats["ref_missing"] = missing
+        stats["leftovers"] = left
 
     out = Path(args.out) if args.out else BOOK / "out" / f"{slug_of(m)}.pdf"
     out.parent.mkdir(parents=True, exist_ok=True)
@@ -295,6 +329,27 @@ def main() -> int:
     print(f"出力      : {out}  ({size_mb:.1f} MB)")
     print(f"執筆済み章: {stats['written']}　スタブ: {stats['stub']}")
     print(f"本文文字数: {stats['chars']:,} 字")
+
+    if "math" in stats:
+        ms, left = stats["math"], stats["leftovers"]
+        print(f"数式      : {ms['total']} 種（新規レンダリング {ms['rendered']}）")
+        print(f"定理番号  : {len(THM_REGISTRY)} 件に付与")
+        problems = (ms["errors"] or stats["ref_missing"]
+                    or left["math"] or left["ref"]
+                    or left["math_error"] or left["ref_error"])
+        if problems:
+            print("\n  ✗ 未解決:")
+            for i, e in ms["errors"][:5]:
+                print(f"    数式のエラー {i}: {e}")
+            for t in stats["ref_missing"][:5]:
+                print(f"    参照先が無い: {t}")
+            if left["math"]:
+                print(f"    置換されなかった <m>/<M>: {left['math']} 件")
+            if left["ref"]:
+                print(f"    置換されなかった <ref>: {left['ref']} 件")
+        else:
+            print("数式と参照: すべて解決")
+
     if warnings:
         print(f"\n警告 {len(warnings)} 件:")
         for w in dict.fromkeys(warnings):

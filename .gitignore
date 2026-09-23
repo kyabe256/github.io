@@ -12,3 +12,13 @@ nihonseiji/assets/fonts/*.woff2
 # ビルドの中間生成物
 book/out/*.html
 nihonseiji/out/*.html
+
+# 数式レンダラの依存（npm で取得する）
+tools/mathrender/node_modules/
+tools/mathrender/package-lock.json
+
+# 数式SVGのキャッシュ（TeXのSHA256をキーに再生成できる）
+isoukaiseki/assets/fonts/*.ttf
+isoukaiseki/assets/fonts/*.woff2
+isoukaiseki/out/*.html
+isoukaiseki/build/mathcache/

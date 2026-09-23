@@ -1,0 +1,267 @@
+{
+  "title": "位相・解析大全",
+  "subtitle": "学部から大学院まで、三層で読む位相空間論と解析学",
+  "edition": "第1版",
+  "lang": "ja",
+  "publisher": "25KD016",
+  "slug": "isou-kaiseki-taizen",
+  "web_dir": "topologyanalysis",
+  "math": true,
+  "web_lead": "位相空間論を Engelking の一般性で扱い、そのまま解析学へ接続する教科書です。定義がなぜその形なのかを述べ、定理を省略せずに証明し、反例を体系的に置きます。同じ主題を学部前半・学部後半・大学院の三つの水準で読めるように構成しました。",
+  "web_note": "本文・図版とも本書のために作成したものです。数式は MathJax でベクタ化して組んでいます。",
+  "levels": [
+    "★　　学部前半——定義・直観・基本定理",
+    "★★　 学部後半——証明の細部と別証明",
+    "★★★ 大学院——一般化・独立性・未解決問題"
+  ],
+  "colophon_note": "本文・図版・演習はすべて本書のために書き起こした。図版はコードで描画したSVGであり、外部の画像素材を使用していない。数式は MathJax によって SVG へ変換し、本文に埋め込んでいる。",
+  "page_target": [800, 1200],
+  "parts": [
+    {
+      "id": "m00",
+      "label": "序論",
+      "title": "数学の文章をどう読むか",
+      "period": "準備",
+      "dir": "00-jo",
+      "lead": "定義・定理・証明という形式は何のためにあるのか。そして本書が全編で使う道具——集合と写像、濃度、選択公理、順序数と基数——を、後で困らないところまで固めておく。",
+      "chapters": [
+        { "n": 1, "title": "定義・定理・証明——数学の文章の読み方", "file": "00-01-yomikata.html", "status": "todo" },
+        { "n": 2, "title": "集合・写像・同値関係", "file": "00-02-shugo-shazo.html", "status": "todo" },
+        { "n": 3, "title": "選択公理とその同値物", "file": "00-03-sentaku-kori.html", "status": "todo" },
+        { "n": 4, "title": "順序数と基数", "file": "00-04-junjosu-kisu.html", "status": "todo" }
+      ]
+    },
+    {
+      "id": "m01",
+      "label": "第I部",
+      "title": "位相空間の基礎",
+      "period": "位相",
+      "dir": "01-kiso",
+      "lead": "なぜ「開集合」という一語から始めるのか。距離を忘れても残るものが位相であり、その抽象化がどこまで有効かを、収束の概念が点列では足りなくなるところまで追う。",
+      "chapters": [
+        { "n": 5, "title": "なぜ開集合から始めるのか", "file": "01-05-naze-kaishugo.html", "status": "todo" },
+        { "n": 6, "title": "位相空間・閉集合・閉包・内部", "file": "01-06-isou-kukan.html", "status": "todo" },
+        { "n": 7, "title": "基底と準基底、近傍系", "file": "01-07-kitei.html", "status": "todo" },
+        { "n": 8, "title": "連続写像と同相", "file": "01-08-renzoku.html", "status": "todo" },
+        { "n": 9, "title": "部分空間と相対位相", "file": "01-09-bubun-kukan.html", "status": "todo" },
+        { "n": 10, "title": "商空間と等化写像", "file": "01-10-sho-kukan.html", "status": "todo" },
+        { "n": 11, "title": "積空間——なぜ箱位相ではないのか", "file": "01-11-seki-kukan.html", "status": "todo" },
+        { "n": 12, "title": "ネットとフィルター——点列では足りない", "file": "01-12-net-filter.html", "status": "todo" }
+      ]
+    },
+    {
+      "id": "m02",
+      "label": "第II部",
+      "title": "分離公理",
+      "period": "位相",
+      "dir": "02-bunri",
+      "lead": "点と点、点と閉集合、閉集合と閉集合を「開集合で引き離せるか」という問いが、位相空間の階層を作る。どの含意が成り立ち、どの逆が成り立たないかを、反例とともに確定させる。",
+      "chapters": [
+        { "n": 13, "title": "T0・T1・Hausdorff", "file": "02-13-t0-t2.html", "status": "todo" },
+        { "n": 14, "title": "正則空間と完全正則空間", "file": "02-14-seisoku.html", "status": "todo" },
+        { "n": 15, "title": "正規空間とUrysohnの補題", "file": "02-15-urysohn.html", "status": "todo" },
+        { "n": 16, "title": "Tietzeの拡張定理", "file": "02-16-tietze.html", "status": "todo" },
+        { "n": 17, "title": "分離公理の階層と、逆が成り立たない反例", "file": "02-17-kaisou-hanrei.html", "status": "todo" },
+        { "n": 18, "title": "完全正規性と遺伝性", "file": "02-18-kanzen-seiki.html", "status": "todo" },
+        { "n": 19, "title": "分離公理は何に保存されるか", "file": "02-19-hozon.html", "status": "todo" }
+      ]
+    },
+    {
+      "id": "m03",
+      "label": "第III部",
+      "title": "コンパクト性と被覆性質",
+      "period": "位相",
+      "dir": "03-compact",
+      "lead": "有限性の代用としてのコンパクト性。三つの定義が同値であることから始め、Tychonoffの定理が選択公理と同値であることを示し、コンパクト化とパラコンパクト性へ進む。",
+      "chapters": [
+        { "n": 20, "title": "コンパクト性——三つの定義の同値", "file": "03-20-compact.html", "status": "todo" },
+        { "n": 21, "title": "Tychonoffの定理と選択公理", "file": "03-21-tychonoff.html", "status": "todo" },
+        { "n": 22, "title": "局所コンパクト性と一点コンパクト化", "file": "03-22-kyokusho.html", "status": "todo" },
+        { "n": 23, "title": "Stone–Čechコンパクト化", "file": "03-23-stone-cech.html", "status": "todo" },
+        { "n": 24, "title": "パラコンパクト性と1の分割", "file": "03-24-paracompact.html", "status": "todo" },
+        { "n": 25, "title": "Lindelöf・可算コンパクト・点列コンパクト", "file": "03-25-lindelof.html", "status": "todo" },
+        { "n": 26, "title": "被覆性質の相互関係と反例", "file": "03-26-hifuku-hanrei.html", "status": "todo" },
+        { "n": 27, "title": "Baireのカテゴリー定理", "file": "03-27-baire.html", "status": "todo" }
+      ]
+    },
+    {
+      "id": "m04",
+      "label": "第IV部",
+      "title": "連結性・距離空間・距離化",
+      "period": "位相",
+      "dir": "04-kyori",
+      "lead": "距離から位相へ抽象化したあと、逆の問いを立てる。どんな位相空間が距離から来るのか。Urysohn・Nagata–Smirnov・Bing という三つの距離化定理が、その答えを与える。",
+      "chapters": [
+        { "n": 28, "title": "連結性・弧状連結・成分", "file": "04-28-renketsu.html", "status": "todo" },
+        { "n": 29, "title": "距離空間の位相と完備性", "file": "04-29-kyori-kukan.html", "status": "todo" },
+        { "n": 30, "title": "一様空間——距離と位相のあいだ", "file": "04-30-ichiyou.html", "status": "todo" },
+        { "n": 31, "title": "Urysohnの距離化定理", "file": "04-31-urysohn-kyorika.html", "status": "todo" },
+        { "n": 32, "title": "Nagata–SmirnovとBingの距離化定理", "file": "04-32-nagata-smirnov.html", "status": "todo" },
+        { "n": 33, "title": "完備距離化可能性とČech完備性", "file": "04-33-cech-kanbi.html", "status": "todo" },
+        { "n": 34, "title": "距離空間は何が特別なのか", "file": "04-34-kyori-tokubetsu.html", "status": "todo" }
+      ]
+    },
+    {
+      "id": "m05",
+      "label": "第V部",
+      "title": "基数不変量と次元論",
+      "period": "位相",
+      "dir": "05-jigen",
+      "lead": "空間の「大きさ」を基数で測り、空間の「太さ」を次元で測る。ind・Ind・dim という三つの次元が、距離空間では一致し、一般には一致しない——この定理群が本書の第一の山である。",
+      "chapters": [
+        { "n": 35, "title": "基数不変量——weight・density・character", "file": "05-35-kisu-fuhenryo.html", "status": "todo" },
+        { "n": 36, "title": "cellularityとSouslin問題", "file": "05-36-souslin.html", "status": "todo" },
+        { "n": 37, "title": "積空間の基数不変量", "file": "05-37-seki-kisu.html", "status": "todo" },
+        { "n": 38, "title": "小さい帰納的次元 ind", "file": "05-38-ind.html", "status": "todo" },
+        { "n": 39, "title": "大きい帰納的次元 Ind", "file": "05-39-Ind.html", "status": "todo" },
+        { "n": 40, "title": "被覆次元 dim", "file": "05-40-dim.html", "status": "todo" },
+        { "n": 41, "title": "次元の一致定理", "file": "05-41-icchi-teiri.html", "status": "todo" },
+        { "n": 42, "title": "次元論の反例と、一致しない空間", "file": "05-42-jigen-hanrei.html", "status": "todo" }
+      ]
+    },
+    {
+      "id": "m06",
+      "label": "第VI部",
+      "title": "実数と極限",
+      "period": "解析",
+      "dir": "06-jissu",
+      "lead": "ここから解析に移る。実数とは何かを構成から確定させ、ε-δ による極限の定義がなぜその形でなければならないかを、一様収束が必要になる場面まで含めて見る。",
+      "chapters": [
+        { "n": 43, "title": "実数の構成と完備性", "file": "06-43-jissu-kousei.html", "status": "todo" },
+        { "n": 44, "title": "上限・下限と単調列", "file": "06-44-johen.html", "status": "todo" },
+        { "n": 45, "title": "極限——ε-δ はなぜこの形か", "file": "06-45-epsilon-delta.html", "status": "todo" },
+        { "n": 46, "title": "連続関数——中間値と最大値", "file": "06-46-renzoku-kansu.html", "status": "todo" },
+        { "n": 47, "title": "一様連続と一様収束", "file": "06-47-ichiyou-shusoku.html", "status": "todo" },
+        { "n": 48, "title": "微分と平均値の定理", "file": "06-48-bibun.html", "status": "todo" },
+        { "n": 49, "title": "級数と収束判定", "file": "06-49-kyusu.html", "status": "todo" },
+        { "n": 50, "title": "関数列——何が保存され、何が壊れるか", "file": "06-50-kansu-retsu.html", "status": "todo" }
+      ]
+    },
+    {
+      "id": "m07",
+      "label": "第VII部",
+      "title": "測度と積分",
+      "period": "解析",
+      "dir": "07-sokudo",
+      "lead": "Riemann積分がどこで行き詰まるのかを見てから、測度を構成する。収束定理が自由に使えることが、Lebesgue積分の全体を支える。",
+      "chapters": [
+        { "n": 51, "title": "Riemann積分の限界", "file": "07-51-riemann-genkai.html", "status": "todo" },
+        { "n": 52, "title": "外測度とCarathéodoryの構成", "file": "07-52-caratheodory.html", "status": "todo" },
+        { "n": 53, "title": "Lebesgue測度と非可測集合", "file": "07-53-lebesgue-sokudo.html", "status": "todo" },
+        { "n": 54, "title": "可測関数", "file": "07-54-kasoku-kansu.html", "status": "todo" },
+        { "n": 55, "title": "Lebesgue積分と収束定理", "file": "07-55-shusoku-teiri.html", "status": "todo" },
+        { "n": 56, "title": "積測度とFubini–Tonelli", "file": "07-56-fubini.html", "status": "todo" },
+        { "n": 57, "title": "符号付測度とHahn–Jordan分解", "file": "07-57-hahn-jordan.html", "status": "todo" },
+        { "n": 58, "title": "Radon–Nikodymの定理", "file": "07-58-radon-nikodym.html", "status": "todo" },
+        { "n": 59, "title": "Rieszの表現定理", "file": "07-59-riesz-hyogen.html", "status": "todo" }
+      ]
+    },
+    {
+      "id": "m08",
+      "label": "第VIII部",
+      "title": "関数空間",
+      "period": "解析",
+      "dir": "08-kansu-kukan",
+      "lead": "関数の集まりに距離とノルムを入れる。ここで位相の言葉が本格的に働きはじめ、完備性が定理を生む道具になる。",
+      "chapters": [
+        { "n": 60, "title": "Lp空間とHölder・Minkowskiの不等式", "file": "08-60-lp.html", "status": "todo" },
+        { "n": 61, "title": "完備性——Riesz–Fischerの定理", "file": "08-61-riesz-fischer.html", "status": "todo" },
+        { "n": 62, "title": "稠密性と近似", "file": "08-62-chumitsu.html", "status": "todo" },
+        { "n": 63, "title": "Banach空間", "file": "08-63-banach.html", "status": "todo" },
+        { "n": 64, "title": "Hilbert空間と直交分解", "file": "08-64-hilbert.html", "status": "todo" },
+        { "n": 65, "title": "正規直交基底とParsevalの等式", "file": "08-65-seiki-chokkou.html", "status": "todo" },
+        { "n": 66, "title": "双対空間", "file": "08-66-sotsui.html", "status": "todo" }
+      ]
+    },
+    {
+      "id": "m09",
+      "label": "第IX部",
+      "title": "関数解析の基本定理",
+      "period": "解析",
+      "dir": "09-kansu-kaiseki",
+      "lead": "四つの基本定理——Hahn–Banach、一様有界性、開写像、閉グラフ。前三者はBaireのカテゴリー定理から来る。位相が解析の証明を支えている場面である。",
+      "chapters": [
+        { "n": 67, "title": "Hahn–Banachの定理", "file": "09-67-hahn-banach.html", "status": "todo" },
+        { "n": 68, "title": "一様有界性の原理", "file": "09-68-ichiyou-yukai.html", "status": "todo" },
+        { "n": 69, "title": "開写像定理と閉グラフ定理", "file": "09-69-kai-shazo.html", "status": "todo" },
+        { "n": 70, "title": "弱位相と弱*位相", "file": "09-70-jaku-isou.html", "status": "todo" },
+        { "n": 71, "title": "Banach–Alaogluの定理", "file": "09-71-alaoglu.html", "status": "todo" },
+        { "n": 72, "title": "凸性とKrein–Milmanの定理", "file": "09-72-krein-milman.html", "status": "todo" },
+        { "n": 73, "title": "コンパクト作用素", "file": "09-73-compact-sayoso.html", "status": "todo" }
+      ]
+    },
+    {
+      "id": "m10",
+      "label": "第X部",
+      "title": "スペクトル理論",
+      "period": "解析",
+      "dir": "10-spectrum",
+      "lead": "行列の対角化を無限次元へ持ち上げる。固有値だけでは足りず、スペクトルという概念が必要になる理由から始める。",
+      "chapters": [
+        { "n": 74, "title": "有界作用素とスペクトル", "file": "10-74-spectrum.html", "status": "todo" },
+        { "n": 75, "title": "自己共役作用素", "file": "10-75-jiko-kyoyaku.html", "status": "todo" },
+        { "n": 76, "title": "コンパクト自己共役作用素のスペクトル定理", "file": "10-76-compact-spectral.html", "status": "todo" },
+        { "n": 77, "title": "一般のスペクトル定理と作用素値測度", "file": "10-77-ippan-spectral.html", "status": "todo" },
+        { "n": 78, "title": "非有界作用素と自己共役拡大", "file": "10-78-hi-yukai.html", "status": "todo" },
+        { "n": 79, "title": "Banach環とGelfand理論", "file": "10-79-gelfand.html", "status": "todo" }
+      ]
+    },
+    {
+      "id": "m11",
+      "label": "第XI部",
+      "title": "フーリエ解析",
+      "period": "解析",
+      "dir": "11-fourier",
+      "lead": "関数を波に分解する。どの意味で収束するのかを問い続けることが、この分野の歴史そのものである。超関数まで進むことで、収束しない対象も扱えるようになる。",
+      "chapters": [
+        { "n": 80, "title": "Fourier級数——なぜ三角関数か", "file": "11-80-fourier-kyusu.html", "status": "todo" },
+        { "n": 81, "title": "各点収束の問題——DirichletとFejér", "file": "11-81-shusoku.html", "status": "todo" },
+        { "n": 82, "title": "L2理論とParsevalの等式", "file": "11-82-l2-riron.html", "status": "todo" },
+        { "n": 83, "title": "発散する例と、Carlesonの定理", "file": "11-83-carleson.html", "status": "todo" },
+        { "n": 84, "title": "Fourier変換——L1の理論", "file": "11-84-fourier-henkan.html", "status": "todo" },
+        { "n": 85, "title": "L2への拡張とPlancherelの定理", "file": "11-85-plancherel.html", "status": "todo" },
+        { "n": 86, "title": "畳み込みと近似単位元", "file": "11-86-tatamikomi.html", "status": "todo" },
+        { "n": 87, "title": "Schwartz空間と超関数", "file": "11-87-chokansu.html", "status": "todo" },
+        { "n": 88, "title": "超関数のFourier変換とSobolev空間", "file": "11-88-sobolev.html", "status": "todo" }
+      ]
+    },
+    {
+      "id": "m12",
+      "label": "第XII部",
+      "title": "複素解析",
+      "period": "解析",
+      "dir": "12-fukuso",
+      "lead": "一回微分できれば何回でも微分できる——実関数では起こらないこの剛性が、複素解析の全体を決めている。",
+      "chapters": [
+        { "n": 89, "title": "複素微分とCauchy–Riemannの方程式", "file": "12-89-cauchy-riemann.html", "status": "todo" },
+        { "n": 90, "title": "Cauchyの積分定理と積分公式", "file": "12-90-cauchy-sekibun.html", "status": "todo" },
+        { "n": 91, "title": "べき級数展開と解析接続", "file": "12-91-kaiseki-setsuzoku.html", "status": "todo" },
+        { "n": 92, "title": "留数定理とその応用", "file": "12-92-ryusu.html", "status": "todo" },
+        { "n": 93, "title": "等角写像とRiemannの写像定理", "file": "12-93-riemann-shazo.html", "status": "todo" },
+        { "n": 94, "title": "調和関数とDirichlet問題", "file": "12-94-chowa-kansu.html", "status": "todo" }
+      ]
+    },
+    {
+      "id": "m13",
+      "label": "第XIII部",
+      "title": "位相と解析の交差",
+      "period": "総合",
+      "dir": "13-kousa",
+      "lead": "本書の前半と後半が、どこで出会っていたのかを回収する。位相の定理が解析の道具になり、解析の必要が位相の概念を生んだ——その往復を最後に地図として描く。",
+      "chapters": [
+        { "n": 95, "title": "関数空間の位相とAscoli–Arzelàの定理", "file": "13-95-ascoli.html", "status": "todo" },
+        { "n": 96, "title": "Stone–Weierstrassの定理", "file": "13-96-stone-weierstrass.html", "status": "todo" },
+        { "n": 97, "title": "何が何を支えているか——本書の地図", "file": "13-97-chizu.html", "status": "todo" }
+      ]
+    }
+  ],
+  "appendix": [
+    { "id": "apA", "label": "付録A", "title": "記号一覧", "file": "A-kigo.html", "status": "todo" },
+    { "id": "apB", "label": "付録B", "title": "定義集", "file": "B-teigishu.html", "status": "todo" },
+    { "id": "apC", "label": "付録C", "title": "反例カタログ", "file": "C-hanrei.html", "status": "todo" },
+    { "id": "apD", "label": "付録D", "title": "図版索引", "file": "D-zuhan-sakuin.html", "status": "todo" },
+    { "id": "apE", "label": "付録E", "title": "演習の解答と方針", "file": "E-kaitorei.html", "status": "todo" },
+    { "id": "apF", "label": "付録F", "title": "読書案内", "file": "F-dokusho-annai.html", "status": "todo" },
+    { "id": "apG", "label": "付録G", "title": "索引", "file": "G-sakuin.html", "status": "todo" }
+  ]
+}
