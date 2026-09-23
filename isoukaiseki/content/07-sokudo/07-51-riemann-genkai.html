@@ -1,0 +1,212 @@
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>リーマン積分はどこまで通用し、どこで行き詰まるのか。</li>
+<li>可積分な関数は、どういう関数なのか。</li>
+<li>行き詰まりを解くには、何を取り替えればよいのか。</li>
+</ul>
+</div>
+
+<h3 id="s51-1">リーマン積分の定義を確認する</h3>
+
+<div class="teigi" id="def-riemann">
+<h4>リーマン積分</h4>
+<p class="no-indent"><m>f \colon [a,b] \to \mathbb{R}</m> を有界とする。分割 <m>P \colon a = x_0 < \cdots < x_n = b</m> に対し</p>
+<M>\underline{S}(f,P) = \sum_{k} \Big(\inf_{[x_{k-1},x_k]} f\Big)\Delta x_k, \qquad
+\overline{S}(f,P) = \sum_{k} \Big(\sup_{[x_{k-1},x_k]} f\Big)\Delta x_k</M>
+<p class="no-indent">とおく。<m>\sup_P \underline{S} = \inf_P \overline{S}</m> のとき <m>f</m> は<strong>リーマン可積分</strong>であるといい、その値を <m>\int_a^b f</m> と書く。</p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">定義に現れるのは<em>区間の長さ</em>だけである。<span class="yogo-hl">「定義域を区間に切り、各区間での値の幅を見る」——これがリーマン積分の設計である。</span></p>
+<p>この設計が、あとで見る限界の原因になる。<em>切り方が区間に縛られているからである。</em></p>
+</div>
+
+<div class="teiri" id="thm-riemann-kijun">
+<h4>リーマンの可積分条件</h4>
+<p class="no-indent">有界な <m>f</m> がリーマン可積分であることと、どの <m>\varepsilon > 0</m> についても</p>
+<M>\overline{S}(f,P) - \underline{S}(f,P) < \varepsilon</M>
+<p class="no-indent">なる分割 <m>P</m> が存在することは同値である。</p>
+</div>
+
+<div class="teiri" id="thm-riemann-kanou">
+<h4>可積分な関数</h4>
+<p class="no-indent">（1）連続関数はリーマン可積分。<br>
+（2）単調関数はリーマン可積分。<br>
+（3）有界変動関数はリーマン可積分。<br>
+（4）有界な <m>f</m> がリーマン可積分であることと、<m>f</m> の不連続点の集合が<em>測度零</em>であることは同値である（ルベーグの判定条件）。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">（1）第47章のハイネ–カントールの定理より <m>f</m> は一様連続。<m>\varepsilon/(b-a)</m> に対する <m>\delta</m> を取り、幅 <m>\delta</m> 未満の分割を使えば <m>\overline{S}-\underline{S} < \varepsilon</m>。</p>
+<p>（2）単調増加なら <m>\overline{S}-\underline{S} = \sum_k (f(x_k)-f(x_{k-1}))\Delta x_k \le \max_k \Delta x_k \cdot (f(b)-f(a))</m>。<em>等分割で幅を小さくすればよい。</em></p>
+<p>（3）有界変動なら二つの単調関数の差（第48章★★★）なので（2）から。</p>
+<p>（4）は測度を定義してから示す（第53章★★）。</p>
+</div>
+
+<h3 id="s51-2">四つの行き詰まり</h3>
+
+<div class="hanrei" id="cex-riemann-1">
+<h4>第一——極限が可積分でない</h4>
+<p class="no-indent"><m>[0,1] \cap \mathbb{Q} = \{q_1, q_2, \ldots\}</m> と番号づけ、<m>f_n = \mathbf{1}_{\{q_1,\ldots,q_n\}}</m> とおく。</p>
+<p>各 <m>f_n</m> は有限個の点でだけ <m>1</m> なのでリーマン可積分で <m>\int f_n = 0</m>。<em>ところが各点極限は <m>f = \mathbf{1}_{\mathbb{Q}\cap[0,1]}</m>（ディリクレ関数）であり、これはリーマン可積分でない。</em></p>
+<p>実際、どの分割でも <m>\overline{S} = 1</m>、<m>\underline{S} = 0</m>。<span class="yogo-hl">単調増加する可積分関数の列の極限が、可積分にならない。</span></p>
+</div>
+
+<div class="hanrei" id="cex-riemann-2">
+<h4>第二——可積分関数の空間が完備でない</h4>
+<p class="no-indent">リーマン可積分関数の全体に <m>\|f\|_1 = \int_0^1|f|</m>（正確には半ノルム）を入れる。</p>
+<p><ref t="cex-riemann-1"/> の <m>(f_n)</m> はこのノルムでコーシー列（<m>\|f_m-f_n\|_1 = 0</m>）だが、極限がこの空間にない<em>——というより、極限の候補がすべてノルム零の関数に見えてしまう。</em></p>
+<p><span class="yogo-hl">完備でない空間では、第63章以降の関数解析が何も始まらない。</span></p>
+</div>
+
+<div class="hanrei" id="cex-riemann-3">
+<h4>第三——微積分の基本定理が完全でない</h4>
+<p class="no-indent"><m>f</m> が微分可能で <m>f'</m> が有界でも、<m>f'</m> がリーマン可積分とは限らない。</p>
+<p><em>ヴォルテラの構成により、<m>f' </m> の不連続点が測度正になる例が作れる。</em>そのとき <ref t="thm-riemann-kanou"/>（4）より <m>f'</m> はリーマン可積分でなく、<m>\int_a^b f' = f(b)-f(a)</m> という式が書けない。</p>
+<p><span class="yogo-hl">「微分してから積分すると戻る」が、リーマン積分の枠では言えない場合がある。</span></p>
+</div>
+
+<div class="hanrei" id="cex-riemann-4">
+<h4>第四——定義域が区間でないと使えない</h4>
+<p class="no-indent">リーマン積分の定義は、定義域を区間に切ることに依存している。</p>
+<p><em>そのため、円周上の関数、無限次元空間上の関数、確率空間上の関数には、そのままでは適用できない。</em><span class="yogo-hl">第83章のフーリエ解析、第VIII部の関数空間、確率論はどれも、区間でない台の上で積分を必要とする。</span></p>
+</div>
+
+<h3 id="s51-3">何を取り替えるか</h3>
+
+<div class="chui">
+<h4>切り方を変える</h4>
+<p class="no-indent">リーマン積分は<em>定義域を縦に切る</em>。<span class="yogo-hl">ルベーグ積分は<em>値域を横に切る</em>。</span></p>
+<p>値 <m>y</m> のあたりを取る点の集合 <m>\{\, x \mid y \le f(x) < y + \Delta y \,\}</m> を考え、<em>その集合の「大きさ」に <m>y</m> をかけて足す</em>。</p>
+<p>この集合は区間ではない——一般には、とても複雑な集合になる。<em>だから「区間でない集合の大きさ」を先に定義しなければならない。</em></p>
+<p><span class="yogo-hl">それが測度である。第52章で構成する。</span></p>
+</div>
+
+<div class="teigi" id="def-sokudo-zero">
+<h4>測度零</h4>
+<p class="no-indent"><m>N \subseteq \mathbb{R}</m> が<strong>測度零</strong>であるとは、どの <m>\varepsilon > 0</m> についても可算個の区間 <m>I_1, I_2, \ldots</m> で</p>
+<M>N \subseteq \bigcup_k I_k, \qquad \sum_k |I_k| < \varepsilon</M>
+<p class="no-indent">となるものが取れることをいう。</p>
+</div>
+
+<div class="rei" id="rei-sokudo-zero">
+<h4>測度零の例</h4>
+<p class="no-indent"><strong>可算集合。</strong><m>N = \{a_1,a_2,\ldots\}</m> なら <m>I_k = (a_k - \varepsilon 2^{-k-1}, a_k + \varepsilon 2^{-k-1})</m> と取れば長さの和は <m>\varepsilon</m>。</p>
+<p><strong>カントール集合。</strong>可算でないのに測度零である。<em>第 <m>n</m> 段で長さ <m>(2/3)^n</m> の区間が残り、これが <m>0</m> に行く。</em></p>
+<p><span class="yogo-hl">「小さい」の意味が、濃度と測度で食い違う。</span>第53章で詳しく見る。</p>
+</div>
+
+<figure>
+<svg viewBox="0 0 470 276" width="470" height="276" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">縦に切るか、横に切るか</text>
+
+  <rect x="14" y="26" width="218" height="122" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+  <text x="24" y="42" font-size="7" font-weight="700" fill="#1f3b5c">リーマン　定義域を縦に切る</text>
+  <line x1="36" y1="128" x2="216" y2="128" stroke="#8a8a88" stroke-width="0.8"/>
+  <line x1="36" y1="128" x2="36" y2="52" stroke="#8a8a88" stroke-width="0.8"/>
+  <g fill="#cfe0ee" stroke="#35618f" stroke-width="0.6">
+    <rect x="42" y="104.0" width="20" height="24.0"/>
+    <rect x="62" y="88.4" width="20" height="39.6"/>
+    <rect x="82" y="75.8" width="20" height="52.2"/>
+    <rect x="102" y="66.6" width="20" height="61.4"/>
+    <rect x="122" y="63.7" width="20" height="64.3"/>
+    <rect x="142" y="72.3" width="20" height="55.7"/>
+    <rect x="162" y="86.0" width="20" height="42.0"/>
+    <rect x="182" y="104.0" width="20" height="24.0"/>
+  </g>
+  <path d="M42,104 C 80,72 110,60 132,62 C 160,64 190,92 202,104" stroke="#1f3b5c" stroke-width="1.3" fill="none"/>
+  <text x="24" y="142" font-size="6.2" fill="#6a6a68">短冊の幅は「区間の長さ」しか使わない</text>
+
+  <rect x="238" y="26" width="218" height="122" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+  <text x="248" y="42" font-size="7" font-weight="700" fill="#1e4a41">ルベーグ　値域を横に切る</text>
+  <line x1="260" y1="128" x2="440" y2="128" stroke="#8a8a88" stroke-width="0.8"/>
+  <line x1="260" y1="128" x2="260" y2="52" stroke="#8a8a88" stroke-width="0.8"/>
+  <g stroke="#2f6b5f" stroke-width="0.6">
+    <rect x="266.0" y="94.0" width="160.0" height="10.0" fill="#d8e6de"/>
+    <rect x="278.5" y="82.0" width="137.0" height="12.0" fill="#cfe0d8"/>
+    <rect x="295.6" y="70.0" width="105.2" height="12.0" fill="#c4dccf"/>
+    <rect x="317.6" y="61.8" width="64.3" height="8.2" fill="#b8d4c6"/>
+  </g>
+  <path d="M266,104 C 304,72 334,60 356,62 C 384,64 414,92 426,104" stroke="#1f3b5c" stroke-width="1.3" fill="none"/>
+  <text x="248" y="142" font-size="6.2" fill="#6a6a68">層の「横幅」は区間でない集合の大きさ</text>
+
+  <rect x="14" y="158" width="442" height="52" rx="4" fill="#fdf6f4" stroke="#e0c3bd"/>
+  <text x="24" y="173" font-size="7.4" font-weight="700" fill="#8c2f1e">リーマン積分の四つの行き詰まり</text>
+  <text x="24" y="189" font-size="6.6" fill="#8c2f1e">一　可積分関数の単調列の極限が可積分でない（ディリクレ関数）</text>
+  <text x="24" y="201" font-size="6.6" fill="#8c2f1e">二　可積分関数の空間が完備でない　　三　微積分の基本定理が完全でない　　四　定義域が区間に限る</text>
+
+  <rect x="14" y="220" width="442" height="46" rx="4" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="24" y="235" font-size="7.4" font-weight="700" fill="#1e4a41">取り替えるのは「大きさ」の測り方</text>
+  <text x="24" y="251" font-size="6.6" fill="#1e4a41">区間の長さ　→　測度（第52章）。層の横幅を測れるようになれば、横に切って足せる</text>
+  <text x="24" y="262" font-size="6.6" fill="#6a6a68">代わりに、どの集合が測れるのかという問いが生じる——非可測集合（第53章）</text>
+</svg>
+<figcaption>リーマン積分は定義域を縦に切って区間の長さを使う。ルベーグ積分は値域を横に切り、層の横幅を測る。層は区間でないので、まず測度を作らなければならない。</figcaption>
+</figure>
+
+<div class="lv2">
+<h4>ダルブー積分・リーマン和・広義積分</h4>
+<p><ref t="def-riemann"/> は上和と下和で書いた。<em>これはダルブーの定式化である。</em>リーマン自身の定義とは形が違う。</p>
+<p><strong>リーマン和による定義。</strong>分割 <m>P</m> と各小区間の代表点 <m>\xi_k \in [x_{k-1},x_k]</m> に対し <m>S(f,P,\xi) = \sum_k f(\xi_k)\Delta x_k</m> とおく。<em>分割の幅 <m>|P| = \max_k \Delta x_k</m> を <m>0</m> にしたとき、代表点の取り方によらず極限が存在すること</em>を可積分性とする。</p>
+<p><strong>二つは同値。</strong><m>\underline{S} \le S(f,P,\xi) \le \overline{S}</m> であり、<m>\inf_\xi S = \underline{S}</m>、<m>\sup_\xi S = \overline{S}</m>。<span class="yogo-hl">上和・下和は、代表点を最悪に取ったリーマン和である。</span></p>
+<p>ダルブーの形が扱いやすいのは、<em>単調性（分割を細かくすると上和は減り下和は増える）</em>がはっきり見えるからである。</p>
+<p><strong>広義積分。</strong><m>\int_0^1 x^{-1/2}dx</m> や <m>\int_1^\infty x^{-2}dx</m> は、<em>有界性か有界区間性が破れている</em>のでリーマン積分の定義が直接使えない。極限で定義する。</p>
+<M>\int_0^1 x^{-1/2}dx = \lim_{\epsilon \to 0^+}\int_\epsilon^1 x^{-1/2}dx = 2</M>
+<p><strong>広義積分の落とし穴。</strong><m>\int_0^\infty \frac{\sin x}{x}dx = \pi/2</m> は収束するが、<m>\int_0^\infty \left|\frac{\sin x}{x}\right|dx = \infty</m>。<em>条件収束する級数（第49章）と同じ状況である。</em></p>
+<p><span class="yogo-hl">ルベーグ積分は絶対可積分を基本にするので、この関数はルベーグ可積分でない。</span>広義リーマン積分にできてルベーグ積分にできないことが、ここだけある。</p>
+<p>第49章で述べたとおり、<em>可算加法性を成り立たせるには絶対収束が要る</em>。ルベーグ積分は収束定理を得る代わりに、条件収束型の積分を手放している。</p>
+<p><strong>補う方法。</strong>主値積分として扱うか、第87章の超関数として扱う。<span class="yogo-hl">実際に解析で必要なのは、後者のほうである。</span></p>
+</div>
+
+<div class="lv3">
+<h4>リーマン積分を救う道——ヘンストック–クルツヴァイル積分</h4>
+<p>行き詰まりのうち第三（微積分の基本定理）だけは、測度論を使わずに解決できる。<em>分割の「幅」の測り方を変えればよい。</em></p>
+<p><strong>定義。</strong><m>\delta \colon [a,b] \to (0,\infty)</m> を任意の正値関数（<em>ゲージ</em>）とする。タグつき分割 <m>\{([x_{k-1},x_k], \xi_k)\}</m> が <m>\delta</m>-<em>細かい</em>とは、各 <m>k</m> で</p>
+<M>[x_{k-1},x_k] \subseteq (\xi_k - \delta(\xi_k),\ \xi_k + \delta(\xi_k))</M>
+<p class="no-indent">が成り立つことをいう。<m>f</m> が<strong>ヘンストック–クルツヴァイル可積分</strong>であるとは、ある <m>A</m> があって、どの <m>\varepsilon>0</m> についてもゲージ <m>\delta</m> が取れて、<m>\delta</m>-細かいどのタグつき分割についても <m>|S(f,P,\xi)-A| < \varepsilon</m> となることをいう。</p>
+<p><span class="yogo-hl">リーマン積分の <m>\delta</m> を定数から関数に変えただけである。</span><em>第45章の言葉でいえば、<m>\delta</m> が点に依存してよくなった</em>——一様性を捨てたのである。</p>
+<p><strong>何が得られるか。</strong>三つある。</p>
+<p>第一に、<em>微積分の基本定理が無条件で成り立つ</em>。<m>f</m> が <m>[a,b]</m> で微分可能なら <m>f'</m> はこの意味で可積分で <m>\int_a^b f' = f(b)-f(a)</m>。<ref t="cex-riemann-3"/> が解消する。</p>
+<p>第二に、<em>ルベーグ可積分な関数はすべてこの意味で可積分で、値も一致する</em>。さらに <m>\int_0^\infty \frac{\sin x}{x}dx</m> のような条件収束型も扱える。<span class="yogo-hl">ルベーグ積分より真に広い。</span></p>
+<p>第三に、<em>単調収束定理と優収束定理も成り立つ</em>。<ref t="cex-riemann-1"/> も解消する。</p>
+<p><strong>ではなぜ標準にならないのか。</strong>三つ理由がある。</p>
+<p>第一に、<em>絶対値を取ると可積分でなくなることがある</em>。<m>|f|</m> が可積分でない可積分関数がある（<m>\sin x / x</m> がそれ）。したがって <m>\|f\|_1 = \int|f|</m> がノルムにならず、<span class="yogo-hl">第60章の <m>L^1</m> 空間が作れない</span>。第VIII部以降の関数解析が立たない。</p>
+<p>第二に、<em>一般の測度空間へ一般化しにくい</em>。ゲージの定義が区間の構造を使うので、<ref t="cex-riemann-4"/> が残る。確率論には使えない。</p>
+<p>第三に、<em>測度論が積分以外にも要る</em>。ハウスドルフ次元、確率測度、表現定理（第59章）——どれも測度そのものを対象にする。<span class="yogo-hl">積分を作るためだけに測度を導入するのではない。</span></p>
+<p><strong>まとめ。</strong>ヘンストック–クルツヴァイル積分は、一次元の微積分としてはルベーグ積分より優れている。<em>だが完備な関数空間を与えないので、解析の土台にはならない。</em>本書は第52章から測度を構成する。</p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li>ディリクレ関数がリーマン可積分でないことを、上和と下和を計算して示せ。</li>
+<li>有限集合が測度零であることを示せ。</li>
+<li><m>f(x)=x</m> について <m>\overline{S}-\underline{S}</m> を等分割で計算せよ。</li>
+<li>カントール集合が測度零であることを示せ。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li><ref t="thm-riemann-kijun"/> を示せ。<span class="haiten">（20点）</span></li>
+<li>可算集合が測度零であることを示せ。<span class="haiten">（15点）</span></li>
+<li>測度零の集合の可算合併が測度零であることを示せ。<span class="haiten">（20点）</span></li>
+<li>リーマン和による定義とダルブーによる定義が同値であることを示せ。<span class="haiten">（30点）</span></li>
+<li><m>\int_0^\infty \frac{\sin x}{x}dx</m> が収束し、絶対収束しないことを示せ。<span class="haiten">（35点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li>単調増加するリーマン可積分関数の列で、極限が可積分でない例を <ref t="cex-riemann-1"/> 以外に作れ。<span class="haiten">（30点）</span></li>
+<li>リーマン可積分関数の空間が <m>\|\cdot\|_1</m> について完備でないことを、具体的なコーシー列で示せ。<span class="haiten">（40点）</span></li>
+<li>ヘンストック–クルツヴァイル積分の定義で、ゲージを定数に取るとリーマン積分に一致することを確かめよ。<span class="haiten">（25点）</span></li>
+</ol>
+</div>
+</div>

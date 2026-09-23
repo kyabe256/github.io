@@ -1,0 +1,229 @@
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>どんな測度が「密度をもつ」のか。</li>
+<li>絶対連続と特異は、どう分けられるのか。</li>
+<li>微積分の基本定理は、測度の言葉でどう書けるのか。</li>
+</ul>
+</div>
+
+<h3 id="s58-1">絶対連続と特異</h3>
+
+<div class="teigi" id="def-zettai-renzoku">
+<h4>絶対連続・特異</h4>
+<p class="no-indent"><m>\mu,\nu</m> を <m>(X,\mathcal{A})</m> 上の測度（<m>\nu</m> は符号付でもよい）とする。</p>
+<p><m>\nu</m> が <m>\mu</m> について<strong>絶対連続</strong>（<m>\nu\ll\mu</m>）であるとは、<m>\mu(A)=0 \implies \nu(A)=0</m> が成り立つことをいう。</p>
+<p><m>\nu</m> と <m>\mu</m> が<strong>互いに特異</strong>（<m>\nu\perp\mu</m>）であるとは、<m>X=A\sqcup B</m> で <m>|\nu|(A)=0</m>、<m>\mu(B)=0</m> となる分解があることをいう。</p>
+</div>
+
+<div class="rei" id="rei-zettai-tokui">
+<h4>三つの例</h4>
+<p class="no-indent"><strong>絶対連続。</strong><m>\nu(A)=\int_A f\,d\lambda</m>。<em><m>\lambda(A)=0</m> なら積分も <m>0</m>。</em></p>
+<p><strong>特異（離散）。</strong>ディラック測度 <m>\delta_0(A)=\mathbf{1}_A(0)</m>。<em><m>\lambda(\{0\})=0</m> だが <m>\delta_0(\{0\})=1</m>。</em></p>
+<p><strong>特異（連続）。</strong>カントール関数 <m>\varphi</m>（第53章）の定める測度 <m>\nu_\varphi((a,b])=\varphi(b)-\varphi(a)</m>。<em>台はカントール集合で <m>\lambda(C)=0</m>。しかし一点の測度はどこでも <m>0</m>。</em></p>
+<p><span class="yogo-hl">特異には、点に集中する型と、測度零の連続体に広がる型がある。</span></p>
+</div>
+
+<div class="teiri" data-kind="命題" id="prop-zettai-eps">
+<h4>ε-δ による言い換え</h4>
+<p class="no-indent"><m>\nu</m> が有限測度なら、<m>\nu\ll\mu</m> であることと</p>
+<M>\forall\varepsilon>0\ \exists\delta>0\ \forall A\ \big(\mu(A)<\delta \implies |\nu|(A)<\varepsilon\big)</M>
+<p class="no-indent">は同値である。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><m>\Leftarrow</m>。<m>\mu(A)=0</m> ならどの <m>\delta</m> でも <m>\mu(A)<\delta</m>、よって <m>|\nu|(A)<\varepsilon</m> がすべての <m>\varepsilon</m> で成り立つ。</p>
+<p><m>\Rightarrow</m>。対偶。ある <m>\varepsilon</m> について、各 <m>n</m> で <m>\mu(A_n)<2^{-n}</m> かつ <m>|\nu|(A_n)\ge\varepsilon</m> なる <m>A_n</m> がある。<m>A=\limsup_n A_n</m> とおくと、<em>ボレル–カンテリの補題（第54章★★★）より <m>\mu(A)=0</m></em>。一方 <m>|\nu|</m> が有限なので測度の連続性より <m>|\nu|(A)\ge\varepsilon>0</m>。</p>
+<p><span class="yogo-hl">「絶対連続」という名が、この <m>\varepsilon</m>-<m>\delta</m> の形に由来する。</span></p>
+</div>
+
+<h3 id="s58-2">ラドン–ニコディムの定理</h3>
+
+<div class="teiri" id="thm-radon-nikodym">
+<h4>ラドン–ニコディムの定理</h4>
+<p class="no-indent"><m>\mu,\nu</m> を σ-有限測度とし、<m>\nu\ll\mu</m> とする。このとき非負可測関数 <m>f</m> がただ一つ（ほとんどいたるところの差を除いて）存在して</p>
+<M>\nu(A)=\int_A f\,d\mu \qquad (A\in\mathcal{A})</M>
+<p class="no-indent">と書ける。この <m>f</m> を <m>\dfrac{d\nu}{d\mu}</m> と書き、<strong>ラドン–ニコディム導関数</strong>という。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">有限測度の場合を示す（σ-有限の場合は分けて貼り合わせる）。</p>
+<p><strong>候補の集合。</strong><m>\mathcal{F}=\{\, g\ge0 \text{ 可測} \mid \forall A,\ \int_A g\,d\mu \le \nu(A) \,\}</m> とおく。<m>0\in\mathcal{F}</m> なので空でない。</p>
+<p><strong>束になっている。</strong><m>g,h\in\mathcal{F}</m> なら <m>\max(g,h)\in\mathcal{F}</m>。<em><m>A</m> を <m>\{g>h\}</m> と <m>\{g\le h\}</m> に分けて足せばよい。</em></p>
+<p><strong>上限を取る。</strong><m>\alpha=\sup_{g\in\mathcal{F}}\int_X g\,d\mu \le \nu(X)<\infty</m>。<m>\int g_n\to\alpha</m> なる列を取り、<m>h_n=\max(g_1,\ldots,g_n)\in\mathcal{F}</m>、<m>f=\lim_n h_n</m> とおく。</p>
+<p><em>単調収束定理より <m>\int_A f = \lim_n\int_A h_n \le \nu(A)</m> で <m>f\in\mathcal{F}</m>、かつ <m>\int_X f=\alpha</m>。</em></p>
+<p><strong>等号であること。</strong><m>\nu_0(A)=\nu(A)-\int_A f\,d\mu</m> とおく。これは測度で <m>\nu_0 \ll \mu</m>。<m>\nu_0\ne0</m> と仮定する。</p>
+<p><m>\nu_0(X)>0</m> なので <m>\nu_0(X)-\varepsilon\mu(X)>0</m> なる <m>\varepsilon>0</m> が取れる。<em>符号付測度 <m>\nu_0-\varepsilon\mu</m> にハーンの分解（<ref t="thm-hahn"/>）を適用し、正集合 <m>P</m> を得る。</em></p>
+<p><m>\mu(P)>0</m> である。<em>もし <m>\mu(P)=0</m> なら <m>\nu_0\ll\mu</m> より <m>\nu_0(P)=0</m>、すると <m>\nu_0(X)-\varepsilon\mu(X)=(\nu_0-\varepsilon\mu)(P)+(\nu_0-\varepsilon\mu)(X\setminus P)\le0+0</m> で矛盾。</em></p>
+<p>すると <m>f+\varepsilon\mathbf{1}_P \in \mathcal{F}</m>——<m>\int_A(f+\varepsilon\mathbf{1}_P) = \int_A f + \varepsilon\mu(A\cap P) \le \int_A f + \nu_0(A\cap P) \le \nu(A)</m>。<em>ところが <m>\int_X(f+\varepsilon\mathbf{1}_P)=\alpha+\varepsilon\mu(P)>\alpha</m> で <m>\alpha</m> の定義に反する。</em></p>
+<p><strong>一意性。</strong><m>\int_A f=\int_A g</m> がすべての <m>A</m> で成り立てば、<m>A=\{f>g\}</m> と取って <m>\int_A(f-g)=0</m>、<m>f-g>0</m> より <m>\mu(A)=0</m>。逆も同様。</p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">証明はハーンの分解を一度だけ使う。<span class="yogo-hl">「もし足りないなら、足りない部分が正になる場所がある」——そこで <m>f</m> を持ち上げられる、という論法である。</span></p>
+<p>σ-有限性が要るのは、上限 <m>\alpha</m> を有限に保つためである。<em>外すと定理は破れる</em>（後述）。</p>
+</div>
+
+<div class="teiri" id="thm-lebesgue-bunkai">
+<h4>ルベーグの分解定理</h4>
+<p class="no-indent"><m>\mu,\nu</m> を σ-有限測度とする。<m>\nu</m> は</p>
+<M>\nu = \nu_{\mathrm{ac}} + \nu_{\mathrm{s}}, \qquad \nu_{\mathrm{ac}}\ll\mu,\quad \nu_{\mathrm{s}}\perp\mu</M>
+<p class="no-indent">と一意に分解される。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><m>\rho=\mu+\nu</m> とおくと <m>\mu\ll\rho</m>、<m>\nu\ll\rho</m>。<ref t="thm-radon-nikodym"/> より <m>\mu=\int g\,d\rho</m>、<m>\nu=\int h\,d\rho</m> と書ける。</p>
+<p><m>B=\{g=0\}</m>、<m>A=X\setminus B=\{g>0\}</m> とおく。<em><m>\mu(B)=\int_B g\,d\rho=0</m>。</em></p>
+<p><m>\nu_{\mathrm{s}}(E)=\nu(E\cap B)</m>、<m>\nu_{\mathrm{ac}}(E)=\nu(E\cap A)</m> とおく。<m>\nu_{\mathrm{s}}\perp\mu</m> は <m>\mu(B)=0</m> から。</p>
+<p><m>\nu_{\mathrm{ac}}\ll\mu</m>。<em><m>\mu(E)=0</m> なら <m>\int_E g\,d\rho=0</m>、<m>E\cap A</m> で <m>g>0</m> なので <m>\rho(E\cap A)=0</m>、よって <m>\nu(E\cap A)=0</m>。</em></p>
+</div>
+
+<h3 id="s58-3">微積分の基本定理</h3>
+
+<div class="teiri" id="thm-bisekibun-kihon">
+<h4>測度論版の微積分の基本定理</h4>
+<p class="no-indent"><m>F \colon [a,b]\to\mathbb{R}</m> について、次は同値である。</p>
+<p class="no-indent">（1）<m>F</m> は<strong>絶対連続</strong>——どの <m>\varepsilon>0</m> についても <m>\delta>0</m> があって、互いに交わらないどの有限個の区間 <m>(a_k,b_k)</m> についても <m>\sum_k(b_k-a_k)<\delta \implies \sum_k|F(b_k)-F(a_k)|<\varepsilon</m>。<br>
+（2）ある <m>f\in L^1[a,b]</m> があって <m>F(x)=F(a)+\int_a^x f\,d\lambda</m>。</p>
+<p class="no-indent">このとき <m>F</m> はほとんどいたるところ微分可能で <m>F'=f</m> ほとんどいたるところ。</p>
+</div>
+
+<div class="chui">
+<h4>三つの水準</h4>
+<p class="no-indent"><em>絶対連続 <m>\Rightarrow</m> 有界変動 <m>\Rightarrow</m> ほとんどいたるところ微分可能。</em>逆はどちらも成り立たない。</p>
+<p><span class="yogo-hl">カントール関数は連続・単調（したがって有界変動）でほとんどいたるところ微分可能だが、絶対連続でない。</span><em>だから <m>F(b)-F(a)=\int_a^b F'</m> が破れる。</em></p>
+<p>第53章で「微積分の基本定理が破れる」と述べたのは、<em>ルベーグ分解で特異部分が残っている</em>ということだった。</p>
+</div>
+
+<div class="rei" id="rei-bunkai-jissu">
+<h4>実数直線上の測度の三分解</h4>
+<p class="no-indent"><m>\mathbb{R}</m> 上の有限測度 <m>\nu</m> は</p>
+<M>\nu = \nu_{\mathrm{ac}} + \nu_{\mathrm{pp}} + \nu_{\mathrm{sc}}</M>
+<p class="no-indent">と一意に分かれる。<em>絶対連続部分（密度をもつ）、純点部分（可算個の点に集中）、特異連続部分（カントール型）。</em></p>
+<p><span class="yogo-hl">第76章以降のスペクトル理論で、作用素のスペクトルがこの三つに分類される。</span><em>絶対連続スペクトルは散乱、純点スペクトルは束縛状態、特異連続スペクトルは中間的な現象に対応する。</em></p>
+</div>
+
+<figure>
+<svg viewBox="0 0 470 274" width="470" height="274" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">測度を三つに分ける</text>
+
+  <rect x="14" y="26" width="442" height="118" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+
+  <text x="86" y="42" font-size="6.8" text-anchor="middle" font-weight="700" fill="#1f3b5c">絶対連続</text>
+  <line x1="30" y1="120" x2="146" y2="120" stroke="#8a8a88" stroke-width="0.8"/>
+  <path d="M32,120 C 56,86 76,72 92,74 C 112,77 128,100 144,118 L144,120 L32,120 Z" fill="#dce7f0" stroke="#35618f" stroke-width="1"/>
+  <text x="86" y="134" font-size="6.2" text-anchor="middle" fill="#1f3b5c">密度 dν/dλ をもつ</text>
+
+  <text x="235" y="42" font-size="6.8" text-anchor="middle" font-weight="700" fill="#8c2f1e">純点</text>
+  <line x1="178" y1="120" x2="294" y2="120" stroke="#8a8a88" stroke-width="0.8"/>
+  <g stroke="#a03b2e" stroke-width="1.6">
+    <line x1="198" y1="120" x2="198" y2="76"/>
+    <line x1="224" y1="120" x2="224" y2="92"/>
+    <line x1="248" y1="120" x2="248" y2="66"/>
+    <line x1="272" y1="120" x2="272" y2="100"/>
+  </g>
+  <g fill="#a03b2e">
+    <circle cx="198" cy="76" r="2"/><circle cx="224" cy="92" r="2"/>
+    <circle cx="248" cy="66" r="2"/><circle cx="272" cy="100" r="2"/>
+  </g>
+  <text x="235" y="134" font-size="6.2" text-anchor="middle" fill="#8c2f1e">可算個の点に集中</text>
+
+  <text x="384" y="42" font-size="6.8" text-anchor="middle" font-weight="700" fill="#6b2a48">特異連続</text>
+  <line x1="326" y1="120" x2="442" y2="120" stroke="#8a8a88" stroke-width="0.8"/>
+  <path d="M326,118 L344,118 L344,104 L362,104 L362,102 L380,102 L380,74 L398,74 L398,72 L416,72 L416,58 L442,58"
+        stroke="#8a3b62" stroke-width="1.2" fill="none"/>
+  <text x="384" y="134" font-size="6.2" text-anchor="middle" fill="#6b2a48">測度零の集合に広がる</text>
+
+  <text x="24" y="60" font-size="6" fill="#6a6a68">λ(A)=0 なら</text>
+  <text x="24" y="69" font-size="6" fill="#6a6a68">ν(A)=0</text>
+
+  <rect x="14" y="154" width="216" height="110" rx="4" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="24" y="169" font-size="7.6" font-weight="700" fill="#1e4a41">関数の側の三つの水準</text>
+  <text x="24" y="186" font-size="6.8" fill="#1e4a41">絶対連続　→　F(x) ＝ F(a) ＋ ∫ f</text>
+  <text x="24" y="199" font-size="6.8" fill="#5a4520">有界変動　→　ほとんどいたるところ微分可能</text>
+  <text x="24" y="212" font-size="6.8" fill="#8c2f1e">連続だけ　→　微分できない点が多くありうる</text>
+  <text x="24" y="229" font-size="6.6" fill="#6a6a68">上から下へは成り立ち、下から上へは成り立たない</text>
+  <text x="24" y="243" font-size="6.6" fill="#8c2f1e">カントール関数は二段目で止まる——</text>
+  <text x="24" y="254" font-size="6.6" fill="#8c2f1e">だから F(b) − F(a) ＝ ∫ F′ が破れる</text>
+
+  <rect x="240" y="154" width="216" height="110" rx="4" fill="#f4f1ea" stroke="#8a6b2c"/>
+  <text x="250" y="169" font-size="7.6" font-weight="700" fill="#5a4520">ラドン–ニコディムが言うこと</text>
+  <text x="250" y="186" font-size="6.8" fill="#5a4520">ν ≪ μ（σ-有限）　⇔　密度をもつ</text>
+  <text x="250" y="203" font-size="6.6" fill="#6a6a68">証明はハーンの分解を一度だけ使う。</text>
+  <text x="250" y="214" font-size="6.6" fill="#6a6a68">「足りないなら足りない分が正になる場所が</text>
+  <text x="250" y="225" font-size="6.6" fill="#6a6a68">あり、そこで密度を持ち上げられる」</text>
+  <text x="250" y="241" font-size="6.6" fill="#8c2f1e">σ-有限性は外せない——数え上げ測度と</text>
+  <text x="250" y="252" font-size="6.6" fill="#8c2f1e">ルベーグ測度の組で反例が作れる</text>
+</svg>
+<figcaption>実数直線上の測度は、絶対連続・純点・特異連続の三つに一意に分かれる。絶対連続な部分だけが密度をもつ。関数の側では、絶対連続・有界変動・連続という三つの水準が対応している。</figcaption>
+</figure>
+
+<div class="lv2">
+<h4>σ-有限性の必要性と、連鎖律</h4>
+<p><strong>σ-有限性が要る。</strong><m>X=[0,1]</m>、<m>\mu</m>＝数え上げ測度、<m>\nu=\lambda</m>（ルベーグ測度）とする。</p>
+<p><m>\mu(A)=0 \iff A=\varnothing</m> なので <m>\nu\ll\mu</m>。<em>ところが <m>\nu(A)=\int_A f\,d\mu=\sum_{x\in A}f(x)</m> と書けたとすると、一点集合について <m>0=\nu(\{x\})=f(x)</m>、よって <m>\nu=0</m> で矛盾。</em></p>
+<p><span class="yogo-hl">密度が存在しない。</span><m>\mu</m> が σ-有限でないことが原因である。</p>
+<p><strong>連鎖律。</strong><m>\nu\ll\mu\ll\rho</m>（すべて σ-有限）なら</p>
+<M>\frac{d\nu}{d\rho} = \frac{d\nu}{d\mu}\cdot\frac{d\mu}{d\rho} \qquad \rho\text{-ほとんどいたるところ}</M>
+<p><em>証明は単関数から単調収束定理で上げる標準的な手順。</em></p>
+<p><strong>同値な測度。</strong><m>\nu\ll\mu</m> かつ <m>\mu\ll\nu</m> のとき <m>\mu\sim\nu</m>（同値）と書く。このとき <m>\frac{d\nu}{d\mu}>0</m> ほとんどいたるところで、<m>\frac{d\mu}{d\nu}=\big(\frac{d\nu}{d\mu}\big)^{-1}</m>。</p>
+<p><span class="yogo-hl">同値な測度は「零集合が同じ」測度である。</span>確率論では、測度変換（ギルサノフの定理）がこの形をしている。</p>
+<p><strong>変数変換。</strong><m>T \colon X\to Y</m> 可測、<m>\mu</m> を <m>X</m> 上の測度とすると、<em>像測度</em> <m>T_*\mu(B)=\mu(T^{-1}B)</m> が定まる。</p>
+<M>\int_Y g\,d(T_*\mu) = \int_X g\circ T\,d\mu</M>
+<p class="no-indent"><em>単関数で確かめて単調収束定理で上げる。</em><m>\mathbb{R}^n</m> の滑らかな変換については <m>\frac{d(T_*\lambda)}{d\lambda}=|\det DT^{-1}|</m> となり、<span class="yogo-hl">重積分の変数変換公式がラドン–ニコディム導関数として現れる。</span></p>
+<p><strong>条件つき期待値。</strong><m>\mathcal{B}\subseteq\mathcal{A}</m> を部分 σ-加法族、<m>f\in L^1(\mu)</m> とする。<m>\nu(B)=\int_B f\,d\mu</m>（<m>B\in\mathcal{B}</m>）は <m>\mu|_{\mathcal{B}}</m> について絶対連続なので、密度 <m>\mathbb{E}[f\mid\mathcal{B}]=\frac{d\nu}{d\mu|_{\mathcal{B}}}</m> が定まる。</p>
+<p><em>確率論の中心概念である条件つき期待値は、ラドン–ニコディムの定理の直接の帰結である。</em></p>
+</div>
+
+<div class="lv3">
+<h4>微分定理と、極大関数</h4>
+<p><ref t="thm-bisekibun-kihon"/> の「<m>F'=f</m> ほとんどいたるところ」は、次の定理の系である。</p>
+<p><strong>ルベーグの微分定理。</strong><m>f\in L^1_{\mathrm{loc}}(\mathbb{R}^n)</m> について、ほとんどすべての <m>x</m> で</p>
+<M>\lim_{r\to0}\frac{1}{\lambda(B(x,r))}\int_{B(x,r)}f\,d\lambda = f(x)</M>
+<p class="no-indent">さらに <em>ほとんどすべての <m>x</m> で <m>\lim_{r\to0}\frac{1}{\lambda(B(x,r))}\int_{B(x,r)}|f-f(x)|\,d\lambda=0</m></em>（ルベーグ点）。</p>
+<p><strong>証明の道具——ハーディ–リトルウッドの極大関数。</strong></p>
+<M>Mf(x) = \sup_{r>0}\frac{1}{\lambda(B(x,r))}\int_{B(x,r)}|f|\,d\lambda</M>
+<p><strong>弱 (1,1) 評価。</strong><m>\lambda(\{Mf>t\}) \le \frac{C_n}{t}\|f\|_1</m>。</p>
+<p><em>証明はヴィタリ型の被覆補題（第53章★★）を使う。</em><m>\{Mf>t\}</m> の各点に半径 <m>r_x</m> の球を取り、互いに交わらない部分族を選んで <m>3</m> 倍に膨らませると全体を覆える。</p>
+<p><strong>微分定理の証明。</strong>連続関数については明らか。一般の <m>f</m> については、<em><m>\|f-g\|_1<\varepsilon</m> なる連続関数 <m>g</m> を取り（<m>C_c</m> が <m>L^1</m> で稠密、第62章）、極大関数の評価で誤差を押さえる。</em></p>
+<p><span class="yogo-hl">「稠密な部分集合で成り立つ主張を、極大関数の評価で全体へ運ぶ」——調和解析の基本的な論法である。</span>第83章のカルレソンの定理も、同じ骨格をもつ。</p>
+<p><strong>極大関数の <m>L^p</m> 評価。</strong><m>1<p\le\infty</m> について <m>\|Mf\|_p \le C_{n,p}\|f\|_p</m>。<em>弱 (1,1) と <m>L^\infty</m> の自明な評価を、マルチンキェヴィチの補間定理でつなぐ。</em></p>
+<p><m>p=1</m> では成り立たない。<span class="yogo-hl"><m>Mf\in L^1</m> となるのは <m>f=0</m> のときだけである</span>——<m>Mf(x)\ge C/|x|^n</m>（<m>|x|</m> 大）となるから。</p>
+<p><strong>密度点。</strong>可測集合 <m>E</m> について <m>f=\mathbf{1}_E</m> に微分定理を適用すると、<em>ほとんどすべての <m>x\in E</m> で <m>\lambda(E\cap B(x,r))/\lambda(B(x,r))\to1</m></em>。</p>
+<p><span class="yogo-hl">「可測集合は、ほとんどすべての点で局所的に全体に見える」。</span>この事実（ルベーグの密度定理）は、第53章のヴィタリの非可測集合の議論を別の角度から説明する——<em>非可測集合は、密度が <m>0</m> でも <m>1</m> でもない点をどこにでももつ。</em></p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li><m>\delta_0 \perp \lambda</m> を確かめよ。</li>
+<li><m>\nu(A)=\int_A x^2\,d\lambda</m> の <m>\frac{d\nu}{d\lambda}</m> を求めよ。</li>
+<li>カントール関数の定める測度が <m>\lambda</m> と特異であることを示せ。</li>
+<li>絶対連続な関数が一様連続であることを示せ。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li><ref t="prop-zettai-eps"/> の <m>\Rightarrow</m> を、ボレル–カンテリの補題を使って示せ。<span class="haiten">（25点）</span></li>
+<li><ref t="thm-radon-nikodym"/> の証明で <m>\mathcal{F}</m> が <m>\max</m> で閉じていることを示せ。<span class="haiten">（20点）</span></li>
+<li><ref t="thm-lebesgue-bunkai"/> の一意性を示せ。<span class="haiten">（25点）</span></li>
+<li>連鎖律 <m>\frac{d\nu}{d\rho}=\frac{d\nu}{d\mu}\frac{d\mu}{d\rho}</m> を示せ。<span class="haiten">（30点）</span></li>
+<li>絶対連続な関数が有界変動であることを示せ。<span class="haiten">（25点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li>ハーディ–リトルウッドの極大関数の弱 (1,1) 評価を示せ。<span class="haiten">（50点）</span></li>
+<li>ルベーグの微分定理を、極大関数の評価から導け。<span class="haiten">（45点）</span></li>
+<li>σ-有限性を外すとラドン–ニコディムの定理が破れる例を、本文以外に作れ。<span class="haiten">（35点）</span></li>
+</ol>
+</div>
+</div>

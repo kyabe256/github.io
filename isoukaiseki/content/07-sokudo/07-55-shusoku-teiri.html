@@ -1,0 +1,245 @@
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>ルベーグ積分は、どう定義されるのか。</li>
+<li>極限と積分は、どんな条件で交換できるのか。</li>
+<li>三つの収束定理は、どういう関係にあるのか。</li>
+</ul>
+</div>
+
+<h3 id="s55-1">積分を三段階で定義する</h3>
+
+<div class="teigi" id="def-tankansu-sekibun">
+<h4>第一段——単関数</h4>
+<p class="no-indent"><m>s = \sum_{k=1}^{n}c_k\mathbf{1}_{E_k}</m>（<m>c_k \ge 0</m>、<m>E_k</m> は互いに交わらない可測集合）に対し</p>
+<M>\int_X s \,d\mu = \sum_{k=1}^{n} c_k\,\mu(E_k)</M>
+<p class="no-indent">と定める（<m>0\cdot\infty = 0</m> と約束する）。<em>この値は <m>s</m> の表し方によらない。</em></p>
+</div>
+
+<div class="teigi" id="def-hifu-sekibun">
+<h4>第二段——非負可測関数</h4>
+<p class="no-indent"><m>f \ge 0</m> 可測に対し</p>
+<M>\int_X f\,d\mu = \sup\Big\{\, \int_X s\,d\mu \ \Big|\ s \text{ は単関数},\ 0\le s\le f \,\Big\}</M>
+<p class="no-indent">と定める。</p>
+</div>
+
+<div class="teigi" id="def-kasekibun">
+<h4>第三段——一般の可測関数</h4>
+<p class="no-indent"><m>f^+ = \max(f,0)</m>、<m>f^- = \max(-f,0)</m> とおく。<m>\int f^+</m> と <m>\int f^-</m> の少なくとも一方が有限なら</p>
+<M>\int_X f\,d\mu = \int_X f^+\,d\mu - \int_X f^-\,d\mu</M>
+<p class="no-indent">と定める。両方が有限のとき <m>f</m> は<strong>可積分</strong>であるという。<em><m>f</m> が可積分であることと <m>\int|f|<\infty</m> は同値。</em></p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">第二段の上限は、<ref t="thm-tankansu-kinji"/> の単関数列 <m>s_n \uparrow f</m> について <m>\lim_n \int s_n</m> に等しい。<em>それが単調収束定理の内容である。</em></p>
+<p><span class="yogo-hl">ルベーグ積分が絶対可積分を基本にするのは、第49章で見た「可算加法性には絶対収束が要る」という事情による。</span></p>
+</div>
+
+<h3 id="s55-2">三つの収束定理</h3>
+
+<div class="teiri" id="thm-tancho-shusoku">
+<h4>単調収束定理</h4>
+<p class="no-indent">非負可測関数の列 <m>0\le f_1\le f_2\le\cdots</m> が <m>f</m> に各点収束するなら</p>
+<M>\int_X f_n\,d\mu \ \longrightarrow\ \int_X f\,d\mu</M>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><m>\le</m>。<m>f_n \le f</m> より <m>\int f_n \le \int f</m>、極限も <m>\le \int f</m>。</p>
+<p><m>\ge</m>。単関数 <m>0\le s\le f</m> と <m>0<c<1</m> を取り、<m>E_n = \{\, x \mid f_n(x) \ge c\,s(x) \,\}</m> とおく。<em><m>E_n</m> は増加列で <m>\bigcup_n E_n = X</m></em>（<m>f_n \uparrow f \ge s > cs</m> が <m>s>0</m> の点で成り立つから）。</p>
+<M>\int_X f_n \ \ge\ \int_{E_n} f_n \ \ge\ c\int_{E_n}s = c\sum_k c_k\,\mu(E_k\cap E_n)</M>
+<p class="no-indent"><em>測度の連続性（<ref t="thm-sokudo-renzoku"/>（1））より <m>\mu(E_k\cap E_n)\to\mu(E_k)</m>。</em>よって <m>\lim_n\int f_n \ge c\int s</m>。</p>
+<p><m>c\to1</m>、<m>s</m> について上限を取れば <m>\lim_n \int f_n \ge \int f</m>。</p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">証明の心臓は<em>測度の連続性</em>、すなわち可算加法性である。<span class="yogo-hl">単調収束定理は、可算加法性を積分の言葉に翻訳したものにほかならない。</span></p>
+<p>第52章で「可算加法性がないと極限と積分が交換できない」と述べたのは、この定理のことである。</p>
+</div>
+
+<div class="teiri" id="thm-fatou">
+<h4>ファトゥの補題</h4>
+<p class="no-indent">非負可測関数の列 <m>(f_n)</m> について</p>
+<M>\int_X \liminf_n f_n \,d\mu \ \le\ \liminf_n \int_X f_n\,d\mu</M>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><m>g_N = \inf_{n\ge N}f_n</m> とおくと、<m>g_N</m> は非負可測で増加し、<m>g_N \uparrow \liminf_n f_n</m>。</p>
+<p><ref t="thm-tancho-shusoku"/> より <m>\int g_N \to \int\liminf f_n</m>。一方 <m>g_N \le f_n</m>（<m>n\ge N</m>）より <m>\int g_N \le \inf_{n\ge N}\int f_n</m>。<em>両辺で <m>N\to\infty</m>。</em></p>
+</div>
+
+<div class="hanrei" id="cex-fatou">
+<h4>等号にならない</h4>
+<p class="no-indent"><m>f_n = n\mathbf{1}_{(0,1/n)}</m> とすると <m>\liminf_n f_n = 0</m> で左辺は <m>0</m>、<m>\int f_n = 1</m> で右辺は <m>1</m>。</p>
+<p><m>f_n = \mathbf{1}_{[n,n+1]}</m> でも同じく <m>0<1</m>。<span class="yogo-hl">第50章の「背が伸びる」「横へ逃げる」が、そのままファトゥの補題の不等号を説明している。</span></p>
+<p><em>質量が消えることはあるが、湧くことはない</em>——それがこの不等式の向きである。</p>
+</div>
+
+<div class="teiri" id="thm-yushusoku">
+<h4>優収束定理</h4>
+<p class="no-indent">可測関数の列 <m>(f_n)</m> がほとんどいたるところ <m>f</m> に収束し、可積分な <m>g</m> があって <m>|f_n|\le g</m> がほとんどいたるところ成り立つとする。このとき <m>f</m> は可積分で</p>
+<M>\int_X |f_n - f|\,d\mu \to 0, \qquad \text{したがって}\quad \int_X f_n\,d\mu \to \int_X f\,d\mu</M>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><m>|f|\le g</m> より <m>f</m> は可積分。<m>|f_n-f|\le 2g</m> なので <m>2g - |f_n-f| \ge 0</m>。</p>
+<p><ref t="thm-fatou"/> を <m>2g-|f_n-f|</m> に適用すると</p>
+<M>\int 2g \ \le\ \liminf_n \int\big(2g - |f_n-f|\big) = \int 2g - \limsup_n \int|f_n-f|</M>
+<p class="no-indent"><m>\int 2g<\infty</m> なので引けて、<m>\limsup_n\int|f_n-f|\le0</m>。<em>よって <m>\int|f_n-f|\to0</m>。</em></p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent"><span class="yogo-hl">優収束定理はファトゥの補題の系である。</span><em>そしてファトゥの補題は単調収束定理の系である。</em></p>
+<p>三つは同じ一つの事実——可算加法性——の三通りの姿である。<span class="yogo-hl">使い分けは、手元に何があるかで決まる。</span></p>
+<p><em>単調性があるなら単調収束定理。不等式だけでよいならファトゥ。押さえる関数があるなら優収束定理。</em></p>
+</div>
+
+<div class="hanrei" id="cex-yushusoku">
+<h4>優関数がないと壊れる</h4>
+<p class="no-indent"><ref t="cex-fatou"/> の <m>f_n = n\mathbf{1}_{(0,1/n)}</m> を押さえるには <m>g(x)\ge 1/x</m> が要るが、<m>\int_0^1 1/x\,dx = \infty</m> で可積分でない。</p>
+<p><m>f_n = \frac1n\mathbf{1}_{[0,n]}</m>（第50章の「平らに広がる」）では <m>g \ge \frac1n</m> が <m>[0,n]</m> で要るので <m>g \ge \sup_n \frac1n\mathbf{1}_{[0,n]}</m>、これも可積分でない。</p>
+<p><span class="yogo-hl">第50章で挙げた三つの型は、すべて「優関数が取れない」型だった。</span></p>
+</div>
+
+<h3 id="s55-3">積分の基本性質</h3>
+
+<div class="teiri" id="thm-sekibun-seishitsu">
+<h4></h4>
+<p class="no-indent">（1）線型性。<m>\int(af+bg)=a\int f+b\int g</m>（可積分な <m>f,g</m> について）。<br>
+（2）単調性。<m>f\le g</m> なら <m>\int f\le\int g</m>。<br>
+（3）<m>\left|\int f\right| \le \int|f|</m>。<br>
+（4）<m>\int|f|=0</m> であることと <m>f=0</m> がほとんどいたるところ成り立つことは同値。<br>
+（5）項別積分。<m>f_n\ge0</m> 可測なら <m>\int\sum_n f_n = \sum_n \int f_n</m>。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">（1）の加法性が意外に手間である。単関数では明らか。非負可測 <m>f,g</m> については <ref t="thm-tankansu-kinji"/> で <m>s_n\uparrow f</m>、<m>t_n\uparrow g</m> を取れば <m>s_n+t_n\uparrow f+g</m> なので <ref t="thm-tancho-shusoku"/> から従う。<em>一般の場合は正部分と負部分に分けて組み直す。</em></p>
+<p>（4）<m>\Leftarrow</m> は明らか。<m>\Rightarrow</m>：<m>E_n=\{|f|>1/n\}</m> とすると <m>\mu(E_n)/n \le \int|f| = 0</m> より <m>\mu(E_n)=0</m>、<m>\{f\ne0\}=\bigcup_n E_n</m>。</p>
+<p>（5）<m>\sum_{n\le N}f_n \uparrow \sum_n f_n</m> に <ref t="thm-tancho-shusoku"/>。<span class="yogo-hl">項別積分が無条件に成り立つのが、非負の場合の強みである。</span></p>
+</div>
+
+<div class="teiri" data-kind="命題" id="prop-chebyshev">
+<h4>チェビシェフの不等式</h4>
+<p class="no-indent"><m>f\ge0</m> 可測、<m>a>0</m> について <m>\mu(\{f\ge a\}) \le \frac1a\int_X f\,d\mu</m>。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><m>a\,\mathbf{1}_{\{f\ge a\}} \le f</m> を積分する。</p>
+</div>
+
+<figure>
+<svg viewBox="0 0 470 274" width="470" height="274" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <defs>
+    <marker id="a55" markerWidth="8" markerHeight="8" refX="7" refY="2.6" orient="auto"><path d="M0,0 L7,2.6 L0,5.2 z" fill="#2f6b5f"/></marker>
+  </defs>
+
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">三つの収束定理は、一つの事実の三つの姿</text>
+
+  <rect x="14" y="26" width="442" height="116" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+
+  <rect x="160" y="34" width="152" height="24" rx="3" fill="#dce7f0" stroke="#35618f" stroke-width="1.2"/>
+  <text x="236" y="49" font-size="6.8" text-anchor="middle" font-weight="700" fill="#1f3b5c">測度の可算加法性（第52章）</text>
+
+  <rect x="160" y="70" width="152" height="22" rx="3" fill="#e8f0f7" stroke="#35618f"/>
+  <text x="236" y="84" font-size="6.8" text-anchor="middle" fill="#1f3b5c">単調収束定理</text>
+
+  <rect x="160" y="104" width="152" height="22" rx="3" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="236" y="118" font-size="6.8" text-anchor="middle" fill="#1e4a41">ファトゥの補題</text>
+
+  <rect x="332" y="104" width="118" height="22" rx="3" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="391" y="118" font-size="6.8" text-anchor="middle" fill="#1e4a41">優収束定理</text>
+
+  <path d="M236,58 L236,66" stroke="#35618f" stroke-width="1.1" marker-end="url(#a55)"/>
+  <path d="M236,92 L236,100" stroke="#2f6b5f" stroke-width="1.1" marker-end="url(#a55)"/>
+  <path d="M312,115 L328,115" stroke="#2f6b5f" stroke-width="1.1" marker-end="url(#a55)"/>
+
+  <text x="24" y="49" font-size="6.2" fill="#6a6a68">増加列なら</text>
+  <text x="24" y="59" font-size="6.2" fill="#6a6a68">等号</text>
+  <text x="24" y="84" font-size="6.2" fill="#6a6a68">非負なら</text>
+  <text x="24" y="94" font-size="6.2" fill="#6a6a68">片側の不等式</text>
+  <text x="24" y="118" font-size="6.2" fill="#6a6a68">押さえがあれば</text>
+  <text x="24" y="128" font-size="6.2" fill="#6a6a68">等号に戻る</text>
+
+  <text x="332" y="82" font-size="6.2" fill="#8c2f1e">2g − |fₙ − f| ≥ 0 に</text>
+  <text x="332" y="92" font-size="6.2" fill="#8c2f1e">ファトゥを使うだけ</text>
+
+  <rect x="14" y="152" width="442" height="54" rx="4" fill="#fdf6f4" stroke="#e0c3bd"/>
+  <text x="24" y="167" font-size="7.4" font-weight="700" fill="#8c2f1e">使い分け</text>
+  <text x="24" y="183" font-size="6.6" fill="#8c2f1e">単調性があるとき　→　単調収束定理（等号が出る。項別積分も無条件）</text>
+  <text x="24" y="195" font-size="6.6" fill="#8c2f1e">不等式でよいとき　→　ファトゥ（仮定は非負だけ）　　押さえる可積分関数があるとき　→　優収束定理</text>
+
+  <rect x="14" y="216" width="442" height="52" rx="4" fill="#f4f1ea" stroke="#8a6b2c"/>
+  <text x="24" y="231" font-size="7.4" font-weight="700" fill="#5a4520">ファトゥの不等号が等号にならない三つの型（第50章）</text>
+  <text x="24" y="247" font-size="6.6" fill="#5a4520">背が伸びる n·1(0,1/n)　　横へ逃げる 1[n,n+1]　　平らに広がる (1/n)·1[0,n]</text>
+  <text x="24" y="259" font-size="6.4" fill="#6a6a68">どれも優関数が取れない。質量は消えることはあっても、湧くことはない——それが不等号の向きである</text>
+</svg>
+<figcaption>単調収束定理は測度の可算加法性の言い換えであり、ファトゥの補題はその系、優収束定理はさらにその系である。不等号が等号にならないのは、質量が逃げる三つの型に限られる。</figcaption>
+</figure>
+
+<div class="lv2">
+<h4>積分と極限の交換——より弱い十分条件</h4>
+<p>優収束定理の「可積分な優関数」は、実用上ほとんどの場面で足りる。<em>だが、もう少し弱い条件でも交換できる。</em></p>
+<p><strong>一様可積分性。</strong>可測関数の族 <m>\mathcal{F}</m> が<em>一様可積分</em>であるとは、</p>
+<M>\lim_{M\to\infty}\ \sup_{f\in\mathcal{F}}\int_{\{|f|>M\}}|f|\,d\mu = 0</M>
+<p class="no-indent">となることをいう。<em>可積分な優関数があれば一様可積分</em>（優収束定理を <m>g\mathbf{1}_{\{g>M\}}</m> に使う）。</p>
+<p><strong>ヴィタリの収束定理。</strong><m>\mu(X)<\infty</m> とする。<m>f_n\to f</m> が測度収束し、<m>(f_n)</m> が一様可積分なら <m>\int|f_n-f|\to0</m>。</p>
+<p>逆も成り立つ。<span class="yogo-hl"><m>L^1</m> 収束することと、測度収束かつ一様可積分であることは同値である。</span></p>
+<p><em>これが最善の条件である</em>——優収束定理より真に弱く、かつ必要十分。</p>
+<p><strong>例。</strong><m>f_n = n\mathbf{1}_{(0,1/n)}</m> は測度収束するが一様可積分でない（<m>\int_{\{f_n>M\}}f_n = 1</m> が <m>n>M</m> で成り立つ）。<em>やはり交換できない。</em></p>
+<p><strong>シェッフェの補題。</strong><m>f_n\ge0</m>、<m>f_n\to f</m> ほとんどいたるところ、<m>\int f_n\to\int f<\infty</m> なら <m>\int|f_n-f|\to0</m>。</p>
+<p>証明。<m>(f-f_n)^+ \le f</m> なので優収束定理より <m>\int(f-f_n)^+\to0</m>。<em>一方 <m>\int(f-f_n) = \int f-\int f_n \to 0</m> なので、<m>\int(f-f_n)^- = \int(f-f_n)^+-\int(f-f_n)\to0</m>。</em>合わせて <m>\int|f-f_n|\to0</m>。</p>
+<p><span class="yogo-hl">「各点収束して、積分の値も収束する」だけで <m>L^1</m> 収束が出る。</span>確率論で分布の収束を扱うときの基本道具である。</p>
+<p><strong>まとめ。</strong>交換の条件には三つの水準がある。<em>優関数（十分・使いやすい）、一様可積分性（必要十分）、シェッフェ（非負の場合の実用的な形）。</em>どれも第VIII部以降で繰り返し使う。</p>
+</div>
+
+<div class="lv3">
+<h4>積分の抽象化——バナッハ空間値、ボホナー積分、ダニエル積分</h4>
+<p><strong>ベクトル値積分。</strong><m>f \colon X \to B</m>（<m>B</m> はバナッハ空間、第63章）の積分をどう定義するか。</p>
+<p><em>ボホナー積分。</em><m>f</m> が<em>強可測</em>（単関数の各点極限として書ける）で <m>\int\|f\|\,d\mu<\infty</m> のとき、単関数の積分の極限として <m>\int f\,d\mu \in B</m> を定める。</p>
+<p><span class="yogo-hl">スカラー値の構成がそのまま動く。</span>優収束定理も成り立つ。第87章の超関数、確率過程の理論で使う。</p>
+<p><em>ペティス積分。</em>弱い意味の積分。<m>\int f\,d\mu</m> を「どの <m>\varphi\in B^*</m> についても <m>\varphi\big(\int f\big)=\int \varphi\circ f</m>」で定める。</p>
+<p>ボホナー可積分ならペティス可積分だが、逆は成り立たない。<em>ペティス積分の存在には、<m>B</m> の性質（ラドン–ニコディム性）が絡む。</em></p>
+<p><strong>ダニエル積分。</strong>測度から積分を作るのではなく、<em>積分から測度を作る</em>道がある。</p>
+<p><m>L</m> を関数の線型空間（束をなす）とし、<m>I \colon L\to\mathbb{R}</m> を正線型汎関数で「<m>f_n\downarrow0</m> なら <m>I(f_n)\to0</m>」を満たすものとする。<em>このとき <m>I</m> を拡張して、ある測度についての積分として表せる。</em></p>
+<p><span class="yogo-hl">第59章のリースの表現定理は、この構成の具体化である。</span>「積分できること」を出発点にして「測れること」を導く。</p>
+<p><strong>どちらが自然か。</strong>関数解析の立場では、ダニエルの道のほうが自然である。<em>測度は「積分という線型汎関数」の別の姿にすぎない。</em></p>
+<p>一方、確率論では測度が先である。<em>事象の確率が対象であって、期待値はその積分だからである。</em></p>
+<p><strong>積分の特徴づけ。</strong>ルベーグ積分は、次の性質で特徴づけられる。<em>平行移動不変で、線型で、単調収束定理を満たし、<m>\int\mathbf{1}_{[0,1]}=1</m> を満たす汎関数は一意である。</em></p>
+<p>第52章のハール測度の一意性が、その一般的な形である。<span class="yogo-hl">積分は「対称性 ＋ 連続性」で決まる。</span></p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li><m>\int_{[0,1]}\mathbf{1}_{\mathbb{Q}}\,d\lambda = 0</m> を示せ。</li>
+<li><m>f_n = n\mathbf{1}_{(0,1/n)}</m> でファトゥの不等号が真の不等号になることを確かめよ。</li>
+<li>チェビシェフの不等式を使って、可積分関数がほとんどいたるところ有限であることを示せ。</li>
+<li><m>\int_0^\infty e^{-nx}dx</m> に単調収束定理を使えるか判定せよ。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li><ref t="def-tankansu-sekibun"/> の値が表し方によらないことを示せ。<span class="haiten">（20点）</span></li>
+<li><ref t="thm-tancho-shusoku"/> の証明で、なぜ <m>c<1</m> を入れるのかを説明せよ。<span class="haiten">（20点）</span></li>
+<li><ref t="thm-sekibun-seishitsu"/>（1）の加法性を、非負の場合から一般の場合へ拡げよ。<span class="haiten">（30点）</span></li>
+<li>シェッフェの補題を示せ。<span class="haiten">（30点）</span></li>
+<li>可積分な優関数があれば一様可積分であることを示せ。<span class="haiten">（25点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li>ヴィタリの収束定理を示せ。<span class="haiten">（45点）</span></li>
+<li>リーマン可積分な関数はルベーグ可積分で、値が一致することを示せ。<span class="haiten">（40点）</span></li>
+<li><m>\int_0^\infty \frac{\sin x}{x}dx</m> がルベーグ可積分でないことを示し、広義リーマン積分との差を論ぜよ。<span class="haiten">（35点）</span></li>
+</ol>
+</div>
+</div>

@@ -1,0 +1,202 @@
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>「積分する」という操作は、どんな写像なのか。</li>
+<li>逆に、線型汎関数から測度を復元できるのか。</li>
+<li>位相が測度をどこまで決めるのか。</li>
+</ul>
+</div>
+
+<h3 id="s59-1">積分を汎関数と見る</h3>
+
+<p>測度 <m>\mu</m> が与えられると、写像</p>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent"><m>\displaystyle I(f)=\int_X f\,d\mu</m> が定まる。この <m>I</m> は</p>
+<p class="no-indent"><em>線型</em>　<m>I(af+bg)=aI(f)+bI(g)</m>。<br>
+<em>正</em>　<m>f\ge0 \implies I(f)\ge0</m>。</p>
+<p><span class="yogo-hl">逆に、線型で正な汎関数が与えられたら、それは積分なのか。</span><em>この章の問いである。</em></p>
+</div>
+
+<div class="teigi" id="def-cc">
+<h4>台がコンパクトな連続関数</h4>
+<p class="no-indent"><m>X</m> を局所コンパクトハウスドルフ空間（第22章）とする。</p>
+<M>C_c(X) = \{\, f \colon X\to\mathbb{R} \text{ 連続} \mid \mathrm{supp}\,f = \overline{\{f\ne0\}} \text{ がコンパクト} \,\}</M>
+<p class="no-indent">と書く。<m>C_0(X)</m> は「無限遠で消える連続関数」の全体、すなわち <m>C_c(X)</m> の一様ノルムでの閉包である。</p>
+</div>
+
+<div class="teigi" id="def-radon">
+<h4>ラドン測度</h4>
+<p class="no-indent"><m>X</m> 上のボレル測度 <m>\mu</m> が<strong>ラドン測度</strong>であるとは、</p>
+<p class="no-indent">（1）コンパクト集合の測度が有限。<br>
+（2）外部正則——<m>\mu(E)=\inf\{\,\mu(U)\mid U\supseteq E \text{ 開}\,\}</m>。<br>
+（3）開集合について内部正則——<m>\mu(U)=\sup\{\,\mu(K)\mid K\subseteq U \text{ コンパクト}\,\}</m>。</p>
+</div>
+
+<h3 id="s59-2">リースの表現定理</h3>
+
+<div class="teiri" id="thm-riesz-sei">
+<h4>リースの表現定理（正汎関数版）</h4>
+<p class="no-indent"><m>X</m> を局所コンパクトハウスドルフ空間、<m>I \colon C_c(X)\to\mathbb{R}</m> を正線型汎関数とする。このときラドン測度 <m>\mu</m> がただ一つ存在して</p>
+<M>I(f)=\int_X f\,d\mu \qquad (f\in C_c(X))</M>
+<p class="no-indent">と書ける。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><strong>外測度を作る。</strong>開集合 <m>U</m> に対し</p>
+<M>\mu^*(U) = \sup\{\, I(f) \mid f\in C_c(X),\ 0\le f\le1,\ \mathrm{supp}\,f\subseteq U \,\}</M>
+<p class="no-indent">とおき（<m>f \prec U</m> と書く）、一般の <m>E</m> には <m>\mu^*(E)=\inf\{\,\mu^*(U)\mid U\supseteq E \text{ 開}\,\}</m> と定める。</p>
+<p><strong>外測度であること。</strong>単調性は明らか。劣加法性は<em>一の分割</em>（第24章）を使う——<m>\mathrm{supp}\,f \subseteq \bigcup_{n\le N}U_n</m> なら、<m>\mathrm{supp}\,h_n\subseteq U_n</m>、<m>\sum_n h_n=1</m>（<m>\mathrm{supp}\,f</m> 上）なる <m>h_n</m> が取れ、<m>I(f)=\sum_n I(fh_n)\le\sum_n\mu^*(U_n)</m>。</p>
+<p><span class="yogo-hl">局所コンパクト性とハウスドルフ性は、この一の分割を作るために使われる。</span></p>
+<p><strong>カラテオドリを適用。</strong><ref t="thm-caratheodory"/> より可測集合の上の測度 <m>\mu</m> が得られる。<em>開集合が可測であることは、直接に確かめる。</em></p>
+<p><strong>表示が成り立つこと。</strong><m>f\in C_c(X)</m>、<m>0\le f\le1</m> とする。値域 <m>[0,1]</m> を <m>0=y_0<\cdots<y_N=1</m> に刻み、<m>E_k=\{y_{k-1}<f\le y_k\}\cap\mathrm{supp}\,f</m> とおく。</p>
+<p><em>各 <m>E_k</m> を含む開集合 <m>U_k</m> を <m>\mu(U_k)<\mu(E_k)+\varepsilon/N</m> と取り、一の分割で <m>f=\sum_k f h_k</m> と分ける。</em>両側から評価すると <m>|I(f)-\int f\,d\mu| \le \varepsilon(\ldots)</m> が出る。</p>
+<p><strong>一意性。</strong>ラドン測度は開集合での値で決まり（正則性）、開集合での値は <m>\mu(U)=\sup\{I(f)\mid f\prec U\}</m> で <m>I</m> から決まる。</p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">証明の構造は、第52章とまったく同じである。<em>外測度を作り、カラテオドリで可測集合を選ぶ。</em></p>
+<p><span class="yogo-hl">違いは、外測度の作り方が「区間の長さ」ではなく「汎関数の値」になったことだけである。</span></p>
+<p>第55章★★★で述べたダニエル積分の道が、ここで具体的な形をもった。<em>「積分できること」から「測れること」が出る。</em></p>
+</div>
+
+<div class="teiri" id="thm-riesz-yukai">
+<h4>リースの表現定理（有界汎関数版）</h4>
+<p class="no-indent"><m>X</m> をコンパクトハウスドルフ空間とする。<m>C(X)^*</m>（有界線型汎関数の全体）は、有限符号付ラドン測度の空間 <m>M(X)</m> と等距離同型である。</p>
+<M>\varphi(f)=\int_X f\,d\nu, \qquad \|\varphi\| = \|\nu\| = |\nu|(X)</M>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><m>\varphi</m> を正部分と負部分に分ける。<m>f\ge0</m> に対し</p>
+<M>\varphi^+(f)=\sup\{\, \varphi(g) \mid 0\le g\le f \,\}</M>
+<p class="no-indent">とおくと、<em><m>\varphi^+</m> は正で、<m>C(X)</m> 全体へ線型に延びる</em>（加法性の確認が要る）。<m>\varphi^-=\varphi^+-\varphi</m> も正。</p>
+<p>それぞれに <ref t="thm-riesz-sei"/> を適用して <m>\nu^\pm</m> を得、<m>\nu=\nu^+-\nu^-</m> とおく。<span class="yogo-hl">これは第57章のジョルダン分解の、汎関数の側の姿である。</span></p>
+<p>等距離性。<m>|\varphi(f)|\le\|f\|_\infty|\nu|(X)</m> より <m>\|\varphi\|\le\|\nu\|</m>。逆は、ハーン分解の <m>P,N</m> を連続関数で近似して示す（ルジンの定理、<ref t="thm-luzin"/> の類似）。</p>
+</div>
+
+<div class="chui">
+<h4>第VII部の締めくくり</h4>
+<p class="no-indent"><span class="yogo-hl">測度と積分は、同じものの二つの姿である。</span></p>
+<p><em>測度から積分が作れる（第55章）。積分から測度が作れる（本章）。</em>どちらを出発点にしてもよい。</p>
+<p>そして <ref t="thm-riesz-yukai"/> は、<em>測度の空間を、連続関数の空間の双対として位置づけた</em>。<span class="yogo-hl">ここから先は、測度そのものではなく「空間とその双対」が主題になる。</span>第VIII部へ進む。</p>
+</div>
+
+<figure>
+<svg viewBox="0 0 470 272" width="470" height="272" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <defs>
+    <marker id="a59" markerWidth="8" markerHeight="8" refX="7" refY="2.6" orient="auto"><path d="M0,0 L7,2.6 L0,5.2 z" fill="#35618f"/></marker>
+    <marker id="b59" markerWidth="8" markerHeight="8" refX="7" refY="2.6" orient="auto"><path d="M0,0 L7,2.6 L0,5.2 z" fill="#2f6b5f"/></marker>
+  </defs>
+
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">測度と積分は、同じものの二つの姿</text>
+
+  <rect x="14" y="26" width="442" height="98" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+
+  <rect x="44" y="50" width="136" height="26" rx="3" fill="#dce7f0" stroke="#35618f" stroke-width="1.2"/>
+  <text x="112" y="66" font-size="7" text-anchor="middle" font-weight="700" fill="#1f3b5c">ラドン測度 μ</text>
+
+  <rect x="290" y="50" width="136" height="26" rx="3" fill="#e6efe9" stroke="#2f6b5f" stroke-width="1.2"/>
+  <text x="358" y="66" font-size="7" text-anchor="middle" font-weight="700" fill="#1e4a41">正線型汎関数 I</text>
+
+  <path d="M184,58 L284,58" stroke="#35618f" stroke-width="1.2" marker-end="url(#a59)"/>
+  <path d="M284,70 L184,70" stroke="#2f6b5f" stroke-width="1.2" marker-end="url(#b59)"/>
+
+  <text x="234" y="52" font-size="6.2" text-anchor="middle" fill="#1f3b5c">I(f) ＝ ∫ f dμ（第55章）</text>
+  <text x="234" y="84" font-size="6.2" text-anchor="middle" fill="#1e4a41">μ(U) ＝ sup{ I(f) : f ≺ U }（本章）</text>
+
+  <text x="112" y="92" font-size="6" text-anchor="middle" fill="#6a6a68">集合の大きさが先</text>
+  <text x="358" y="92" font-size="6" text-anchor="middle" fill="#6a6a68">積分できることが先</text>
+
+  <text x="24" y="110" font-size="6.2" fill="#8c2f1e">どちらから出発しても同じ理論に到達する。対応は一対一で、正則性の条件が一意性を保証する</text>
+
+  <rect x="14" y="134" width="216" height="130" rx="4" fill="#fdf6f4" stroke="#e0c3bd"/>
+  <text x="24" y="149" font-size="7.6" font-weight="700" fill="#8c2f1e">証明の骨格は第52章と同じ</text>
+  <text x="24" y="166" font-size="6.8" fill="#8c2f1e">一　開集合に μ*(U) ＝ sup I(f) を与える</text>
+  <text x="24" y="179" font-size="6.8" fill="#8c2f1e">二　一般の集合に外から近づけて外測度を作る</text>
+  <text x="24" y="192" font-size="6.8" fill="#8c2f1e">三　カラテオドリの条件で可測集合を選ぶ</text>
+  <text x="24" y="205" font-size="6.8" fill="#8c2f1e">四　値域を刻んで表示を確かめる</text>
+  <text x="24" y="222" font-size="6.6" fill="#6a6a68">違うのは外測度の作り方だけ——区間の長さの</text>
+  <text x="24" y="233" font-size="6.6" fill="#6a6a68">代わりに汎関数の値を使う</text>
+  <text x="24" y="249" font-size="6.6" fill="#1e4a41">劣加法性の証明に、1の分割（第24章）が要る</text>
+  <text x="24" y="260" font-size="6.6" fill="#6a6a68">——局所コンパクト性が効く唯一の場所である</text>
+
+  <rect x="240" y="134" width="216" height="130" rx="4" fill="#f4f1ea" stroke="#8a6b2c"/>
+  <text x="250" y="149" font-size="7.6" font-weight="700" fill="#5a4520">双対としての測度の空間</text>
+  <text x="250" y="166" font-size="6.8" fill="#5a4520">X コンパクト　→　C(X)* ≅ M(X)</text>
+  <text x="250" y="179" font-size="6.8" fill="#5a4520">X 局所コンパクト　→　C₀(X)* ≅ M(X)</text>
+  <text x="250" y="196" font-size="6.6" fill="#6a6a68">汎関数のノルムが、測度の全変動に一致する</text>
+  <text x="250" y="212" font-size="6.8" fill="#8c2f1e">符号付測度を用意した理由がここにある</text>
+  <text x="250" y="223" font-size="6.6" fill="#6a6a68">——汎関数は正とは限らないから</text>
+  <text x="250" y="240" font-size="6.6" fill="#1e4a41">弱*位相を入れると、全変動 1 以下の測度が</text>
+  <text x="250" y="251" font-size="6.6" fill="#1e4a41">コンパクトになる（第71章）。第46章で</text>
+  <text x="250" y="262" font-size="6.6" fill="#1e4a41">失われたコンパクト性が、ここで戻る</text>
+</svg>
+<figcaption>測度から積分を作る道と、積分から測度を作る道は、同じ理論の二つの入り口である。リースの表現定理は両者を一対一に対応させ、測度の空間を連続関数の空間の双対として位置づける。</figcaption>
+</figure>
+
+<div class="lv2">
+<h4>正則性と、どこで仮定が効くか</h4>
+<p><ref t="def-radon"/> の三条件は、一意性のために要る。<em>それがないと、同じ汎関数を与える測度が複数できてしまう。</em></p>
+<p><strong>反例。</strong><m>X=\omega_1+1</m>（順序位相、第17章）はコンパクトハウスドルフ。ディユードネ測度</p>
+<M>\mu(E) = \begin{cases} 1 & E \text{ が非有界な閉集合を含む} \\ 0 & \text{それ以外} \end{cases}</M>
+<p class="no-indent">はボレル測度で、<m>\mu(\{\omega_1\})=0</m> だが <em><m>\delta_{\omega_1}</m> と同じ汎関数を与える</em>。</p>
+<p><m>\mu</m> は外部正則でない。<span class="yogo-hl">正則性を課さないと、表現の一意性が失われる。</span></p>
+<p><strong>いつ自動的に正則か。</strong><m>X</m> が σ-コンパクト（コンパクト集合の可算合併）かつ局所コンパクトなら、<em>コンパクト集合で有限なボレル測度は自動的にラドン測度である</em>。</p>
+<p><m>\mathbb{R}^n</m>、多様体、可分な局所コンパクト空間はすべてこれを満たす。<em>実用上、正則性を気にする必要はほとんどない。</em></p>
+<p><strong>ポーランド空間では。</strong><m>X</m> が可分完備距離空間（第33章）なら、<span class="yogo-hl">どの有限ボレル測度も内部正則である</span>（ウルィソーンの定理）。</p>
+<p>証明は、可分性から可算稠密集合を取り、有限個の小球で測度の大部分を覆うことを繰り返して全有界な閉集合を作る。<em>完備性からそれがコンパクトになる（第29章）。</em></p>
+<p><strong>測度の弱収束。</strong><m>M(X)</m> に <m>\nu_n\to\nu \iff \int f\,d\nu_n\to\int f\,d\nu</m>（すべての <m>f\in C_b(X)</m>）で位相を入れる。<em>確率論の「分布収束」である。</em></p>
+<p><strong>ポートマントーの定理。</strong>この収束は、次のどれとも同値である。<em>どの閉集合 <m>F</m> でも <m>\limsup\nu_n(F)\le\nu(F)</m>、どの開集合 <m>U</m> でも <m>\liminf\nu_n(U)\ge\nu(U)</m>、境界が <m>\nu</m>-零な集合で <m>\nu_n(A)\to\nu(A)</m>。</em></p>
+<p><span class="yogo-hl">第19章の「開集合と閉集合で条件の向きが逆になる」という構図が、測度の収束にそのまま現れている。</span></p>
+</div>
+
+<div class="lv3">
+<h4>可換 C*-環としての C(X)——ゲルファントの定理へ</h4>
+<p><ref t="thm-riesz-yukai"/> は <m>C(X)</m> の双対を記述した。<em>さらに進んで、<m>C(X)</m> という環そのものが <m>X</m> を決めることを見る。</em></p>
+<p><strong>バナッハ–ストーンの定理。</strong><m>X,Y</m> をコンパクトハウスドルフ空間とする。<m>C(X)</m> と <m>C(Y)</m> が等距離同型なら、<m>X</m> と <m>Y</m> は同相である。</p>
+<p><em>証明の骨子。</em>等距離同型 <m>T \colon C(X)\to C(Y)</m> の双対 <m>T^*</m> は <m>M(Y)\to M(X)</m> の等距離同型。<span class="yogo-hl">単位球の端点（第72章のクレイン–ミルマン）が <m>\{\pm\delta_x\}</m> なので、端点が端点に写る。</span>そこから点の対応が出る。</p>
+<p><strong>ゲルファントの定理。</strong>もっと強く、<em>可換なユニタル C*-環はすべて <m>C(X)</m> の形である</em>（<m>X</m> は極大イデアルの空間）。第79章で扱う。</p>
+<p>ここで <m>X</m> は<em>ゲルファント空間</em>——環の極大イデアル全体に弱*位相を入れたもの——として復元される。<span class="yogo-hl">位相空間が、その上の関数環から完全に復元される。</span></p>
+<p><strong>第23章との関係。</strong><m>\beta X</m>（ストーン–チェックのコンパクト化）は、<m>C_b(X)</m> のゲルファント空間である。<em>第23章で「<m>\beta X</m> は有界連続関数がすべて延びる最大のコンパクト化」と述べたことの、環論的な言い換えである。</em></p>
+<p><strong>測度の側の対応。</strong><m>C(X)^*=M(X)</m> の単位球は弱*コンパクト（第71章）で、その端点は <m>\{\pm\delta_x \mid x\in X\}</m>。</p>
+<p>正の部分に限れば、<em>確率測度の全体 <m>P(X)</m> は弱*コンパクト凸集合で、端点はディラック測度</em>。クレイン–ミルマンの定理より <m>P(X)=\overline{\mathrm{conv}}\{\delta_x\}</m>。</p>
+<p><span class="yogo-hl">「どの確率測度も、点測度の凸結合の極限である」</span>——直観そのものが定理になっている。</p>
+<p><strong>非可換化。</strong>ここまでの対応は、可換な場合の話である。<em>非可換 C*-環を「非可換な位相空間の上の関数環」とみなすのが、非可換幾何学の出発点である。</em></p>
+<p>そこでは点も測度も直接には存在せず、<em>状態（正規化された正線型汎関数）だけがある</em>。<span class="yogo-hl">リースの表現定理が「測度＝汎関数」と教えたことが、非可換の世界では汎関数の側だけが残る形で引き継がれる。</span></p>
+<p>量子力学の数学的定式化（第78章）が、ちょうどこの構図をしている。</p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li><m>I(f)=f(0)</m> が <m>C_c(\mathbb{R})</m> 上の正線型汎関数であることを確かめ、対応する測度を求めよ。</li>
+<li><m>C_c(\mathbb{R})</m> が <m>C_0(\mathbb{R})</m> で一様ノルムについて稠密であることを示せ。</li>
+<li>ラドン測度の三条件を <m>\lambda</m> について確かめよ。</li>
+<li><m>\varphi(f)=\int_0^1 f - \int_1^2 f</m> に対応する符号付測度を書け。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li><ref t="thm-riesz-sei"/> の外測度の劣加法性を、一の分割を使って示せ。<span class="haiten">（35点）</span></li>
+<li><ref t="thm-riesz-yukai"/> で <m>\varphi^+</m> が加法的であることを示せ。<span class="haiten">（30点）</span></li>
+<li>正線型汎関数が自動的に有界であることを、<m>X</m> コンパクトの場合に示せ。<span class="haiten">（25点</span>）</li>
+<li>ポーランド空間上の有限ボレル測度が内部正則であることを示せ。<span class="haiten">（40点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li>ディユードネ測度を構成し、外部正則でないことを示せ。<span class="haiten">（45点）</span></li>
+<li>ポートマントーの定理の同値性のうち、二つを示せ。<span class="haiten">（40点）</span></li>
+<li><m>M(X)</m> の単位球の端点が <m>\{\pm\delta_x\}</m> であることを示せ。<span class="haiten">（45点）</span></li>
+</ol>
+</div>
+</div>

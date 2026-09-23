@@ -1,0 +1,231 @@
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>測度に負の値を許すと、何が変わるのか。</li>
+<li>符号つきの測度は、正と負に分けられるのか。</li>
+<li>全変動とは何を測っているのか。</li>
+</ul>
+</div>
+
+<h3 id="s57-1">符号付測度</h3>
+
+<div class="teigi" id="def-fugo-sokudo">
+<h4>符号付測度</h4>
+<p class="no-indent">可測空間 <m>(X,\mathcal{A})</m> 上の関数 <m>\nu \colon \mathcal{A}\to(-\infty,\infty]</m>（または <m>[-\infty,\infty)</m>）が<strong>符号付測度</strong>であるとは、</p>
+<p class="no-indent">（1）<m>\nu(\varnothing)=0</m>。<br>
+（2）互いに交わらない <m>A_1,A_2,\ldots</m> について <m>\nu\big(\bigsqcup_n A_n\big)=\sum_n\nu(A_n)</m>。</p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent"><m>+\infty</m> と <m>-\infty</m> の両方を許すと <m>\infty-\infty</m> が出るので、<em>少なくとも一方は取らないと約束する</em>。</p>
+<p>（2）の右辺は、左辺が有限なら<span class="yogo-hl">絶対収束しなければならない</span>。<em>合併の順序を変えても左辺は変わらないので、和も順序によらない——第49章のリーマンの再配列定理から、絶対収束が導かれる。</em></p>
+</div>
+
+<div class="rei" id="rei-fugo-sokudo">
+<h4>符号付測度の例</h4>
+<p class="no-indent"><strong>可積分関数から。</strong><m>f\in L^1(\mu)</m> について <m>\nu(A)=\int_A f\,d\mu</m>。</p>
+<p><strong>二つの測度の差。</strong><m>\nu=\mu_1-\mu_2</m>（一方は有限）。</p>
+<p><strong>電荷分布。</strong>物理的には、正負の電荷の分布がこれにあたる。<em>符号付測度を「電荷」<span class="orig">charge</span>と呼ぶことがあるのは、このためである。</em></p>
+</div>
+
+<h3 id="s57-2">ハーンの分解</h3>
+
+<div class="teigi" id="def-sei-fu-shugo">
+<h4>正集合・負集合</h4>
+<p class="no-indent"><m>P\in\mathcal{A}</m> が <m>\nu</m> の<strong>正集合</strong>であるとは、<m>P</m> のどの可測部分集合 <m>E</m> についても <m>\nu(E)\ge0</m> となることをいう。負集合も同様。</p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent"><em><m>\nu(P)\ge0</m> だけでは正集合とは限らない。</em><span class="yogo-hl">部分集合をすべて見る必要がある。</span>この違いが、以下の証明の難所になる。</p>
+</div>
+
+<div class="teiri" id="thm-hahn">
+<h4>ハーンの分解定理</h4>
+<p class="no-indent"><m>\nu</m> を符号付測度とする。<m>X = P \sqcup N</m> で <m>P</m> が正集合、<m>N</m> が負集合となる分解が存在する。</p>
+<p class="no-indent">この分解は <m>\nu</m>-零集合の差を除いて一意である。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><m>\nu</m> は <m>-\infty</m> を取らないとする。</p>
+<p><strong>補題。</strong><m>\nu(A)<0</m> なら、<m>A</m> の中に負集合 <m>B\subseteq A</m> で <m>\nu(B)\le\nu(A)</m> となるものがある。</p>
+<p><em>証明。</em><m>A</m> から「正の測度をもつ部分」を貪欲に取り除く。<m>n_1</m> を「<m>\nu(E)\ge1/n</m> なる <m>E\subseteq A</m> が存在する最小の <m>n</m>」とし、そのような <m>E_1</m> を取る。<m>A\setminus E_1</m> について同じことを繰り返す。</p>
+<p><m>B=A\setminus\bigsqcup_k E_k</m> とおくと <m>\nu(B)=\nu(A)-\sum_k\nu(E_k)\le\nu(A)</m>。<em><m>\nu(A)>-\infty</m> より <m>\sum_k\nu(E_k)<\infty</m> なので <m>\nu(E_k)\to0</m>、したがって <m>n_k\to\infty</m>。</em></p>
+<p>よって <m>B</m> の部分集合で正の測度をもつものはない——<m>\nu(E)\ge1/n</m> なる <m>E\subseteq B</m> があれば、十分大きい <m>k</m> で <m>n_k>n</m> に反する。<span class="yogo-hl"><m>B</m> は負集合。</span></p>
+<p><strong>本体。</strong><m>\alpha=\inf\{\,\nu(B)\mid B \text{ は負集合}\,\}</m> とおく。負集合の列 <m>B_k</m> で <m>\nu(B_k)\to\alpha</m> なるものを取り、<m>N=\bigcup_k B_k</m> とおく。</p>
+<p><em>負集合の可算合併は負集合である</em>（互いに交わらないように取り直せる）。よって <m>\nu(N)\le\nu(B_k)</m> がすべての <m>k</m> で成り立ち、<m>\nu(N)=\alpha</m>。とくに <m>\alpha>-\infty</m>。</p>
+<p><m>P=X\setminus N</m> が正集合であること。<em>そうでなければ <m>\nu(A)<0</m> なる <m>A\subseteq P</m> があり、補題より負集合 <m>B\subseteq A</m> が取れる。<m>N\sqcup B</m> は負集合で <m>\nu(N\sqcup B)<\alpha</m> となり矛盾。</em></p>
+</div>
+
+<div class="teigi" id="def-jordan">
+<h4>ジョルダン分解</h4>
+<p class="no-indent"><ref t="thm-hahn"/> の <m>P,N</m> を用いて</p>
+<M>\nu^+(A)=\nu(A\cap P), \qquad \nu^-(A)=-\nu(A\cap N)</M>
+<p class="no-indent">と定めると、<m>\nu^+,\nu^-</m> は測度で <m>\nu=\nu^+-\nu^-</m>。これを<strong>ジョルダン分解</strong>という。</p>
+<p><m>|\nu|=\nu^++\nu^-</m> を<strong>全変動測度</strong>、<m>\|\nu\|=|\nu|(X)</m> を<strong>全変動</strong>という。</p>
+</div>
+
+<div class="teiri" id="thm-jordan-saisho">
+<h4>ジョルダン分解の最小性</h4>
+<p class="no-indent"><m>\nu=\mu_1-\mu_2</m>（<m>\mu_1,\mu_2</m> は測度）と書けるなら、<m>\nu^+\le\mu_1</m> かつ <m>\nu^-\le\mu_2</m>。</p>
+<p class="no-indent">また <m>|\nu|(A)=\sup\Big\{\,\sum_k|\nu(A_k)| \ \Big|\ A=\bigsqcup_k A_k \text{ は可算分割}\,\Big\}</m>。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">最小性。<m>\nu^+(A)=\nu(A\cap P)=\mu_1(A\cap P)-\mu_2(A\cap P)\le\mu_1(A\cap P)\le\mu_1(A)</m>。</p>
+<p>全変動の表示。<m>\le</m> は <m>|\nu(A_k)|\le|\nu|(A_k)</m> から。<m>\ge</m> は分割 <m>A=(A\cap P)\sqcup(A\cap N)</m> を取れば <m>|\nu(A\cap P)|+|\nu(A\cap N)|=|\nu|(A)</m>。</p>
+</div>
+
+<div class="chui">
+<h4>互いに特異</h4>
+<p class="no-indent"><m>\nu^+</m> と <m>\nu^-</m> は<strong>互いに特異</strong>である。すなわち <m>\nu^+(N)=0</m>、<m>\nu^-(P)=0</m> となる分割 <m>X=P\sqcup N</m> がある。<m>\nu^+\perp\nu^-</m> と書く。</p>
+<p><span class="yogo-hl">「正の部分と負の部分が、互いに交わらない台をもつ」——これがジョルダン分解の内容である。</span></p>
+<p>第58章のルベーグ分解は、この「特異」という語をもう一度使う。<em>そこでは「絶対連続な部分」と「特異な部分」に分ける。</em></p>
+</div>
+
+<h3 id="s57-3">有界変動関数との対応</h3>
+
+<div class="teigi" id="def-yukai-hendo">
+<h4>有界変動関数</h4>
+<p class="no-indent"><m>F \colon [a,b]\to\mathbb{R}</m> の<strong>全変動</strong>を</p>
+<M>V_a^b(F)=\sup\Big\{\,\sum_{k=1}^{n}|F(x_k)-F(x_{k-1})| \ \Big|\ a=x_0<\cdots<x_n=b \,\Big\}</M>
+<p class="no-indent">と定める。これが有限のとき <m>F</m> は<strong>有界変動</strong>であるという。</p>
+</div>
+
+<div class="teiri" id="thm-jordan-bunkai-kansu">
+<h4>ジョルダンの分解（関数版）</h4>
+<p class="no-indent"><m>F</m> が有界変動であることと、二つの単調増加関数の差として書けることは同値である。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><m>\Leftarrow</m>。単調増加なら全変動は <m>F(b)-F(a)</m>、差の全変動は和以下。</p>
+<p><m>\Rightarrow</m>。<m>G(x)=V_a^x(F)</m> とおくと <m>G</m> は単調増加。<em><m>G-F</m> も単調増加である</em>——<m>x<y</m> について <m>(G(y)-G(x))-(F(y)-F(x))=V_x^y(F)-(F(y)-F(x))\ge0</m>。よって <m>F=G-(G-F)</m>。</p>
+</div>
+
+<div class="chui">
+<h4>対応</h4>
+<p class="no-indent"><span class="yogo-hl">符号付測度のジョルダン分解と、有界変動関数のジョルダン分解は、同じ事実の二つの姿である。</span></p>
+<p><m>F</m> が右連続な有界変動関数なら、<em><m>\nu((a,b])=F(b)-F(a)</m> で符号付測度が定まる</em>（ルベーグ–スティルチェス測度）。そして <m>V_a^b(F)=|\nu|((a,b])</m>。</p>
+<p>逆に符号付測度 <m>\nu</m>（有限）から <m>F(x)=\nu((-\infty,x])</m> と定めれば有界変動関数が得られる。<em>この対応が全単射である。</em></p>
+</div>
+
+<figure>
+<svg viewBox="0 0 470 272" width="470" height="272" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">正の部分と負の部分に、台ごと切り分ける</text>
+
+  <rect x="14" y="26" width="442" height="120" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+
+  <line x1="34" y1="86" x2="440" y2="86" stroke="#8a8a88" stroke-width="0.8"/>
+
+  <path d="M40,86 C 70,50 96,44 124,58 C 146,70 156,86 166,86 L166,86 C 178,86 190,104 208,116 C 230,130 250,120 266,100 C 278,86 284,86 292,86 C 310,86 330,58 356,52 C 388,45 416,66 436,86"
+        fill="none" stroke="#1f3b5c" stroke-width="1.4"/>
+
+  <path d="M40,86 C 70,50 96,44 124,58 C 146,70 156,86 166,86 Z" fill="#dce7f0" opacity="0.8"/>
+  <path d="M292,86 C 310,86 330,58 356,52 C 388,45 416,66 436,86 Z" fill="#dce7f0" opacity="0.8"/>
+  <path d="M166,86 C 178,86 190,104 208,116 C 230,130 250,120 266,100 C 278,86 284,86 292,86 Z" fill="#f0d8d4" opacity="0.85"/>
+
+  <text x="100" y="66" font-size="6.6" text-anchor="middle" fill="#1f3b5c">ν⁺</text>
+  <text x="228" y="108" font-size="6.6" text-anchor="middle" fill="#8c2f1e">ν⁻</text>
+  <text x="372" y="66" font-size="6.6" text-anchor="middle" fill="#1f3b5c">ν⁺</text>
+
+  <g stroke="#2f6b5f" stroke-width="1.6">
+    <line x1="40" y1="130" x2="166" y2="130"/>
+    <line x1="292" y1="130" x2="436" y2="130"/>
+  </g>
+  <g stroke="#a03b2e" stroke-width="1.6">
+    <line x1="166" y1="130" x2="292" y2="130"/>
+  </g>
+  <text x="100" y="140" font-size="6.2" text-anchor="middle" fill="#1e4a41">正集合 P</text>
+  <text x="228" y="140" font-size="6.2" text-anchor="middle" fill="#8c2f1e">負集合 N</text>
+  <text x="364" y="140" font-size="6.2" text-anchor="middle" fill="#1e4a41">正集合 P</text>
+
+  <text x="24" y="42" font-size="6.2" fill="#6a6a68">P のどの部分集合でも ν ≥ 0、N のどの部分集合でも ν ≤ 0。X ＝ P ⊔ N と切れる</text>
+
+  <rect x="14" y="156" width="216" height="108" rx="4" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="24" y="171" font-size="7.6" font-weight="700" fill="#1e4a41">得られる三つの量</text>
+  <text x="24" y="188" font-size="6.8" fill="#1e4a41">ν⁺(A) ＝ ν(A ∩ P)　正の部分</text>
+  <text x="24" y="201" font-size="6.8" fill="#1e4a41">ν⁻(A) ＝ −ν(A ∩ N)　負の部分</text>
+  <text x="24" y="214" font-size="6.8" fill="#1e4a41">|ν| ＝ ν⁺ ＋ ν⁻　全変動測度</text>
+  <text x="24" y="231" font-size="6.6" fill="#6a6a68">ν ＝ μ₁ − μ₂ と書く方法は無数にあるが、</text>
+  <text x="24" y="242" font-size="6.6" fill="#6a6a68">ジョルダン分解はそのなかで最小である</text>
+  <text x="24" y="256" font-size="6.6" fill="#8c2f1e">ν⁺ と ν⁻ は互いに特異（台が交わらない）</text>
+
+  <rect x="240" y="156" width="216" height="108" rx="4" fill="#f4f1ea" stroke="#8a6b2c"/>
+  <text x="250" y="171" font-size="7.6" font-weight="700" fill="#5a4520">関数の側の同じ話</text>
+  <text x="250" y="188" font-size="6.8" fill="#5a4520">有界変動関数　＝　二つの単調増加関数の差</text>
+  <text x="250" y="201" font-size="6.8" fill="#5a4520">G(x) を a から x までの全変動として、F ＝ G − (G − F)</text>
+  <text x="250" y="218" font-size="6.6" fill="#6a6a68">右連続な有界変動関数と有限符号付測度が</text>
+  <text x="250" y="229" font-size="6.6" fill="#6a6a68">一対一に対応する（ルベーグ–スティルチェス）</text>
+  <text x="250" y="245" font-size="6.6" fill="#8c2f1e">全変動 Vₐᵇ(F) ＝ |ν|((a,b])</text>
+  <text x="250" y="257" font-size="6.6" fill="#6a6a68">測度の言葉と関数の言葉が、ここで一致する</text>
+</svg>
+<figcaption>符号付測度は、正集合と負集合に台ごと切り分けられる（ハーンの分解）。そこから得られる正の部分と負の部分が、差としての表し方のうち最小のものになる。有界変動関数の分解が、その関数の側の姿である。</figcaption>
+</figure>
+
+<div class="lv2">
+<h4>全変動ノルムと、測度の空間</h4>
+<p>有限符号付測度の全体を <m>M(X)</m> と書く。<em><m>\|\nu\|=|\nu|(X)</m> はノルムになる。</em></p>
+<p><strong>ノルムであること。</strong>斉次性は明らか。三角不等式は <ref t="thm-jordan-saisho"/> の分割による表示から出る。<em><m>\|\nu\|=0</m> なら、どの <m>A</m> についても <m>|\nu(A)|\le|\nu|(X)=0</m>。</em></p>
+<p><strong>完備性。</strong><m>(M(X),\|\cdot\|)</m> はバナッハ空間である。</p>
+<p><em>証明の骨子。</em>コーシー列 <m>(\nu_n)</m> について、各 <m>A</m> で <m>|\nu_m(A)-\nu_n(A)|\le\|\nu_m-\nu_n\|</m> なので <m>\nu(A)=\lim_n\nu_n(A)</m> が存在する。<m>\nu</m> が可算加法的であることは、<span class="yogo-hl">一様コーシー性から「各 <m>n</m> について尻尾が一様に小さい」ことを引き出して示す</span>（第47章の三分割の議論と同じ形）。</p>
+<p><strong>束構造。</strong><m>M(X)</m> は半順序（<m>\mu\le\nu \iff</m> どの <m>A</m> でも <m>\mu(A)\le\nu(A)</m>）について束をなす。</p>
+<M>(\mu\vee\nu)(A)=\sup_{E\subseteq A}\big(\mu(E)+\nu(A\setminus E)\big)</M>
+<p class="no-indent"><em>ジョルダン分解は <m>\nu^+=\nu\vee0</m>、<m>\nu^-=(-\nu)\vee0</m> と書ける。</em><span class="yogo-hl"><m>M(X)</m> はバナッハ束の典型例である。</span></p>
+<p><strong>リースの表現定理との関係。</strong><m>X</m> をコンパクト距離空間とすると、第59章で</p>
+<M>C(X)^* \cong M(X)</M>
+<p class="no-indent">が示される。<em>全変動ノルムが、ちょうど双対ノルムに一致する。</em></p>
+<p><span class="yogo-hl">符号付測度を導入した本当の理由は、ここにある。</span><em>連続関数の空間の双対を記述するには、正の測度だけでは足りない。</em>汎関数は正とは限らないからである。</p>
+<p><strong>弱*位相。</strong><m>M(X)</m> には、<m>C(X)</m> との組み合わせで定まる弱*位相（第70章）も入る。<em>その位相での収束が、確率論の「分布収束」である。</em></p>
+<p>バナッハ–アラオグルの定理（第71章）より、<span class="yogo-hl">全変動が <m>1</m> 以下の測度の全体は弱*コンパクトになる</span>。第46章で述べた「関数空間ではコンパクト性がない」という壁が、位相を弱めることで越えられる。</p>
+</div>
+
+<div class="lv3">
+<h4>ベクトル測度と、分解の一般化</h4>
+<p><strong>ベクトル測度。</strong><m>\nu \colon \mathcal{A}\to B</m>（<m>B</m> はバナッハ空間）が可算加法的なものを<em>ベクトル測度</em>という。</p>
+<p>全変動を <m>|\nu|(A)=\sup\sum_k\|\nu(A_k)\|</m>（可算分割の上限）と定める。<em>有限とは限らない。</em></p>
+<p><strong>ハーンの分解は一般化できない。</strong><m>B=\mathbb{R}^2</m> でも、<span class="yogo-hl">「正集合と負集合に分ける」という発想がそのままでは通らない</span>——順序がないからである。</p>
+<p>代わりに得られるのは<em>値域の性質</em>である。</p>
+<p><strong>リアプノフの定理。</strong><m>\nu \colon \mathcal{A}\to\mathbb{R}^n</m> が非原子的（測度正の集合がつねに真に小さい測度正の部分集合をもつ）なベクトル測度なら、<em>値域 <m>\{\nu(A)\mid A\in\mathcal{A}\}</m> はコンパクト凸集合である</em>。</p>
+<p>驚くべき主張である。<span class="yogo-hl">各成分がばらばらに動きそうなのに、値域が凸になる。</span></p>
+<p><em>応用。</em>「ケーキを <m>n</m> 人で、各人が自分の評価で <m>1/n</m> と思うように切り分けられる」——各人の評価を測度とし、リアプノフの定理を使う。第72章のクレイン–ミルマンの定理と並ぶ、凸性の基本定理である。</p>
+<p><strong>無限次元では成り立たない。</strong><m>B</m> が無限次元なら、値域が凸でもコンパクトでもない例がある。<em><m>\nu(A)=\mathbf{1}_A \in L^2[0,1]</m> がそれ</em>——値域は <m>\{\mathbf{1}_A\}</m> で、凸包に入らない。</p>
+<p><strong>ラドン–ニコディム性。</strong>バナッハ空間 <m>B</m> が<em>ラドン–ニコディム性</em>をもつとは、有界変動な <m>B</m>-値測度がすべて <m>\nu(A)=\int_A f\,d\mu</m> と書けることをいう（第58章）。</p>
+<p>反射的な空間、可分双対をもつ空間はこの性質をもつ。<em><m>c_0</m> と <m>L^1[0,1]</m> はもたない。</em></p>
+<p><span class="yogo-hl">第58章のラドン–ニコディムの定理は、スカラー値では無条件に成り立つが、ベクトル値では空間の幾何に依存する。</span></p>
+<p><strong>まとめ。</strong>符号付測度の理論は、「順序がある」ことに強く依存している。<em>順序を失うと、分解の代わりに凸性が現れる。</em>それが第IX部の主題につながる。</p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li><m>\nu(A)=\int_A f\,d\mu</m> の正集合・負集合を <m>f</m> で書き表せ。</li>
+<li><m>F(x)=x\sin(1/x)</m>（<m>F(0)=0</m>）が <m>[0,1]</m> で有界変動でないことを示せ。</li>
+<li><m>\nu(P)\ge0</m> でも正集合とは限らない例を挙げよ。</li>
+<li>単調増加関数の全変動を求めよ。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li><ref t="thm-hahn"/> の補題（負集合が取り出せること）を、細部まで示せ。<span class="haiten">（35点）</span></li>
+<li>負集合の可算合併が負集合であることを示せ。<span class="haiten">（20点）</span></li>
+<li><ref t="thm-jordan-saisho"/> の全変動の表示を示せ。<span class="haiten">（25点）</span></li>
+<li><ref t="thm-jordan-bunkai-kansu"/> で <m>G-F</m> が単調増加であることを確かめよ。<span class="haiten">（20点）</span></li>
+<li><m>\|\nu\|=|\nu|(X)</m> がノルムであることを示せ。<span class="haiten">（25点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li><m>M(X)</m> が完備であることを示せ。<span class="haiten">（45点）</span></li>
+<li>ハーンの分解の一意性（零集合の差を除く）を示せ。<span class="haiten">（30点）</span></li>
+<li>右連続な有界変動関数と有限符号付測度の対応が全単射であることを示せ。<span class="haiten">（45点）</span></li>
+</ol>
+</div>
+</div>

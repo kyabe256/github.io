@@ -1,0 +1,259 @@
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>「大きさ」に何を要求すればよいのか。</li>
+<li>外測度から測度へ、どうやって渡るのか。</li>
+<li>カラテオドリの条件は、なぜあの形なのか。</li>
+</ul>
+</div>
+
+<h3 id="s52-1">測度に何を要求するか</h3>
+
+<p>区間でない集合に「長さ」を与えたい。<em>どんな性質を要求すべきか。</em></p>
+
+<div class="chui">
+<h4>四つの要求</h4>
+<p class="no-indent"><strong>非負性</strong>　<m>\mu(A) \ge 0</m>、<m>\mu(\varnothing)=0</m>。</p>
+<p><strong>単調性</strong>　<m>A \subseteq B \implies \mu(A) \le \mu(B)</m>。</p>
+<p><strong>可算加法性</strong>　互いに交わらない <m>A_1,A_2,\ldots</m> について <m>\mu\big(\bigsqcup_n A_n\big) = \sum_n \mu(A_n)</m>。</p>
+<p><strong>区間との整合</strong>　<m>\mu([a,b]) = b-a</m>。</p>
+<p><span class="yogo-hl">この四つを、<m>\mathbb{R}</m> のすべての部分集合について同時に満たすことはできない。</span><em>第53章で見る（バナッハ–タルスキの状況と同じ）。</em>だから「測れる集合」を選ぶ必要がある。</p>
+</div>
+
+<div class="chui">
+<h4>なぜ可算加法性なのか</h4>
+<p class="no-indent">有限加法性だけなら、<m>\mathbb{R}</m> のすべての部分集合に長さを与えることができる（バナッハ）。<em>それでは足りない。</em></p>
+<p>可算加法性がないと、<span class="yogo-hl">極限と積分の交換ができない</span>。第55章の収束定理は、可算加法性の言い換えとして出てくる。</p>
+<p>逆に、非可算加法性は要求できない。<em><m>[0,1] = \bigsqcup_{x \in [0,1]}\{x\}</m> で右辺の測度の和は <m>0</m> になってしまう。</em></p>
+</div>
+
+<h3 id="s52-2">外測度</h3>
+
+<div class="teigi" id="def-gai-sokudo">
+<h4>外測度</h4>
+<p class="no-indent">集合 <m>X</m> 上の関数 <m>\mu^* \colon \mathcal{P}(X) \to [0,\infty]</m> が<strong>外測度</strong>であるとは、</p>
+<p class="no-indent">（1）<m>\mu^*(\varnothing)=0</m>。<br>
+（2）<m>A \subseteq B \implies \mu^*(A) \le \mu^*(B)</m>（単調性）。<br>
+（3）<m>\mu^*\big(\bigcup_n A_n\big) \le \sum_n \mu^*(A_n)</m>（劣加法性）。</p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">外測度は<em>すべての</em>部分集合に定まる。<span class="yogo-hl">代わりに、加法性が不等式にゆるめられている。</span></p>
+<p>方針はこうである。<em>まず全部の集合に外測度を与え、そのうち加法性が等式で成り立つものだけを選び出す。</em></p>
+</div>
+
+<div class="rei" id="rei-lebesgue-gai">
+<h4>ルベーグ外測度</h4>
+<p class="no-indent"><m>\mathbb{R}</m> 上で</p>
+<M>\lambda^*(A) = \inf\Big\{\, \sum_k |I_k| \ \Big|\ A \subseteq \bigcup_k I_k,\ I_k \text{ は開区間} \,\Big\}</M>
+<p class="no-indent">と定める。<em>これが外測度であることは、（1）（2）は明らか、（3）は各 <m>A_n</m> の被覆を <m>\varepsilon 2^{-n}</m> の余裕で取って合わせればよい。</em></p>
+<p><ref t="def-sokudo-zero"/> の測度零は <m>\lambda^*(N)=0</m> にあたる。</p>
+</div>
+
+<div class="teiri" data-kind="命題" id="prop-kukan-gai">
+<h4></h4>
+<p class="no-indent"><m>\lambda^*([a,b]) = b-a</m>。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><m>\le</m>。<m>(a-\varepsilon, b+\varepsilon)</m> で覆えば <m>b-a+2\varepsilon</m>。</p>
+<p><m>\ge</m>。<m>[a,b] \subseteq \bigcup_k I_k</m> とする。<em>コンパクト性（第20章）より有限個で覆える。</em>有限個の開区間で <m>[a,b]</m> を覆うとき、長さの和が <m>b-a</m> 以上であることは、区間の端点を並べる帰納法で示せる。</p>
+<p><span class="yogo-hl">ここでコンパクト性が本質的に効く。</span><em>可算個のままでは、直接の帰納法が回らない。</em></p>
+</div>
+
+<h3 id="s52-3">カラテオドリの条件</h3>
+
+<div class="teigi" id="def-caratheodory">
+<h4>可測性</h4>
+<p class="no-indent"><m>\mu^*</m> を外測度とする。<m>E \subseteq X</m> が <m>\mu^*</m>-<strong>可測</strong>であるとは、<em>すべての</em> <m>A \subseteq X</m> について</p>
+<M>\mu^*(A) = \mu^*(A \cap E) + \mu^*(A \setminus E)</M>
+<p class="no-indent">が成り立つことをいう。可測集合の全体を <m>\mathcal{M}_{\mu^*}</m> と書く。</p>
+</div>
+
+<div class="chui">
+<h4>なぜこの形なのか</h4>
+<p class="no-indent">直観はこうである。<span class="yogo-hl"><m>E</m> が「よい形」なら、どんな集合 <m>A</m> を <m>E</m> で切っても、二つの断片の大きさの和がもとに戻る。</span></p>
+<p>劣加法性から <m>\le</m> はつねに成り立つ。<em>だから条件は実質 <m>\ge</m> だけである。</em></p>
+<p>「すべての <m>A</m> について」という強い要求が、あとで σ-加法族になることを保証する。<em><m>A</m> を任意に取れることが、可算合併を扱うときの余地になる。</em></p>
+</div>
+
+<div class="teiri" id="thm-caratheodory">
+<h4>カラテオドリの拡張定理</h4>
+<p class="no-indent"><m>\mu^*</m> を <m>X</m> 上の外測度とする。</p>
+<p class="no-indent">（1）<m>\mathcal{M}_{\mu^*}</m> は σ-加法族である（全体・補集合・可算合併で閉じている）。<br>
+（2）<m>\mu = \mu^*|_{\mathcal{M}_{\mu^*}}</m> は <m>\mathcal{M}_{\mu^*}</m> 上で可算加法的である。<br>
+（3）<m>\mu^*(N)=0</m> なら <m>N \in \mathcal{M}_{\mu^*}</m>（完備性）。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><strong>（3）。</strong><m>\mu^*(N)=0</m> とする。<m>\mu^*(A\cap N) \le \mu^*(N) = 0</m> と <m>\mu^*(A\setminus N)\le \mu^*(A)</m> より和は <m>\mu^*(A)</m> 以下。劣加法性で逆も出る。</p>
+<p><strong>（1）補集合。</strong>条件が <m>E</m> と <m>X\setminus E</m> について対称なので明らか。<m>\varnothing</m> と <m>X</m> も明らか。</p>
+<p><strong>（1）有限合併。</strong><m>E, F \in \mathcal{M}</m> とする。任意の <m>A</m> について</p>
+<M>\mu^*(A) = \mu^*(A\cap E) + \mu^*(A\setminus E)</M>
+<p class="no-indent">であり、第二項を <m>F</m> で切ると <m>\mu^*(A\setminus E) = \mu^*((A\setminus E)\cap F) + \mu^*(A \setminus (E\cup F))</m>。</p>
+<p>一方 <m>A \cap (E\cup F) = (A\cap E) \sqcup ((A\setminus E)\cap F)</m> なので、劣加法性より</p>
+<M>\mu^*(A\cap(E\cup F)) \le \mu^*(A\cap E) + \mu^*((A\setminus E)\cap F)</M>
+<p class="no-indent">これらを合わせると <m>\mu^*(A) \ge \mu^*(A\cap(E\cup F)) + \mu^*(A\setminus(E\cup F))</m>。<em>逆向きは劣加法性。</em></p>
+<p><strong>（1）可算合併と（2）。</strong><m>E_1,E_2,\ldots \in \mathcal{M}</m> を互いに交わらないとし（一般の場合は差を取って交わらなくできる）、<m>E = \bigsqcup_n E_n</m> とおく。有限合併の場合を繰り返すと、任意の <m>A</m> と各 <m>N</m> について</p>
+<M>\mu^*(A) = \sum_{n=1}^{N}\mu^*(A\cap E_n) + \mu^*\Big(A \setminus \bigsqcup_{n\le N}E_n\Big)
+\ \ge\ \sum_{n=1}^{N}\mu^*(A\cap E_n) + \mu^*(A\setminus E)</M>
+<p class="no-indent"><em>（最後は単調性）。</em><m>N \to \infty</m> として</p>
+<M>\mu^*(A) \ge \sum_{n=1}^{\infty}\mu^*(A\cap E_n) + \mu^*(A\setminus E) \ge \mu^*(A\cap E) + \mu^*(A\setminus E)</M>
+<p class="no-indent">（最後は劣加法性）。逆向きは劣加法性なので、<m>E \in \mathcal{M}</m> で、かつ上の不等式がすべて等号になる。</p>
+<p><em><m>A = E</m> と取れば <m>\mu(E) = \sum_n \mu(E_n)</m>、すなわち（2）。</em><span class="yogo-hl">可測性が自動的に可算加法性を与える——これがこの定理の要点である。</span></p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">証明を見ると、<em>「任意の <m>A</m> について」という要求が、最後の一行で <m>A=E</m> と取るために使われている</em>。<span class="yogo-hl">可測性を強く要求したことが、加法性という利得になって返ってきた。</span></p>
+</div>
+
+<h3 id="s52-4">測度空間</h3>
+
+<div class="teigi" id="def-sokudo-kukan">
+<h4>測度空間</h4>
+<p class="no-indent">集合 <m>X</m>、<m>X</m> 上の σ-加法族 <m>\mathcal{A}</m>、<m>\mathcal{A}</m> 上の可算加法的な非負関数 <m>\mu</m>（<m>\mu(\varnothing)=0</m>）の三つ組 <m>(X,\mathcal{A},\mu)</m> を<strong>測度空間</strong>という。</p>
+<p><m>\mu(X) < \infty</m> のとき有限、<m>\mu(X)=1</m> のとき確率空間、<m>X</m> が可測な有限測度集合の可算合併のとき <m>\sigma</m>-有限という。</p>
+</div>
+
+<div class="teiri" id="thm-sokudo-renzoku">
+<h4>測度の連続性</h4>
+<p class="no-indent"><m>(X,\mathcal{A},\mu)</m> を測度空間とする。</p>
+<p class="no-indent">（1）<m>A_1 \subseteq A_2 \subseteq \cdots</m> なら <m>\mu\big(\bigcup_n A_n\big) = \lim_n \mu(A_n)</m>。<br>
+（2）<m>A_1 \supseteq A_2 \supseteq \cdots</m> かつ <m>\mu(A_1)<\infty</m> なら <m>\mu\big(\bigcap_n A_n\big) = \lim_n \mu(A_n)</m>。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">（1）<m>B_1 = A_1</m>、<m>B_n = A_n \setminus A_{n-1}</m> とおくと互いに交わらず <m>\bigcup_n A_n = \bigsqcup_n B_n</m>、<m>A_N = \bigsqcup_{n \le N}B_n</m>。可算加法性から従う。</p>
+<p>（2）<m>A_1 \setminus A_n</m> が増加列なので（1）を使う。<em><m>\mu(A_1)<\infty</m> は引き算をするために要る。</em></p>
+</div>
+
+<div class="hanrei" id="cex-genshou">
+<h4>有限性を外すと（2）が壊れる</h4>
+<p class="no-indent"><m>A_n = [n,\infty)</m> とすると <m>\bigcap_n A_n = \varnothing</m> で測度 <m>0</m> だが、各 <m>\lambda(A_n)=\infty</m>。</p>
+<p><span class="yogo-hl">減少列については、有限性の仮定が外せない。</span><em>第55章のファトゥの補題と優収束定理で、同じ形の注意が繰り返される。</em></p>
+</div>
+
+<figure>
+<svg viewBox="0 0 470 272" width="470" height="272" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <defs>
+    <marker id="a52" markerWidth="8" markerHeight="8" refX="7" refY="2.6" orient="auto"><path d="M0,0 L7,2.6 L0,5.2 z" fill="#35618f"/></marker>
+  </defs>
+
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">全部に与えてから、よいものだけ選ぶ</text>
+
+  <rect x="14" y="26" width="442" height="118" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+
+  <rect x="30" y="38" width="120" height="24" rx="3" fill="#eef2f6" stroke="#8a8a88"/>
+  <text x="90" y="53" font-size="6.8" text-anchor="middle" fill="#1f3b5c">区間の長さ</text>
+
+  <rect x="176" y="38" width="130" height="24" rx="3" fill="#dce7f0" stroke="#35618f"/>
+  <text x="241" y="53" font-size="6.8" text-anchor="middle" fill="#1f3b5c">外測度</text>
+
+  <rect x="332" y="38" width="124" height="24" rx="3" fill="#e6efe9" stroke="#2f6b5f" stroke-width="1.2"/>
+  <text x="394" y="53" font-size="6.8" text-anchor="middle" font-weight="700" fill="#1e4a41">測度</text>
+
+  <path d="M152,50 L172,50" stroke="#35618f" stroke-width="1.1" marker-end="url(#a52)"/>
+  <path d="M308,50 L328,50" stroke="#2f6b5f" stroke-width="1.1" marker-end="url(#a52)"/>
+
+  <text x="90" y="74" font-size="6" text-anchor="middle" fill="#6a6a68">開区間の被覆で</text>
+  <text x="90" y="83" font-size="6" text-anchor="middle" fill="#6a6a68">下から詰める</text>
+
+  <text x="241" y="74" font-size="6" text-anchor="middle" fill="#6a6a68">すべての部分集合に定まる</text>
+  <text x="241" y="83" font-size="6" text-anchor="middle" fill="#8c2f1e">ただし加法性は不等式だけ</text>
+
+  <text x="394" y="74" font-size="6" text-anchor="middle" fill="#6a6a68">可測集合だけに定まる</text>
+  <text x="394" y="83" font-size="6" text-anchor="middle" fill="#1e4a41">加法性が等式で成り立つ</text>
+
+  <rect x="30" y="94" width="426" height="40" rx="3" fill="#fdf6f4" stroke="#e0c3bd"/>
+  <text x="40" y="107" font-size="6.6" font-weight="700" fill="#8c2f1e">カラテオドリの条件</text>
+  <text x="152" y="107" font-size="6.6" fill="#8c2f1e">どの A についても　μ*(A) ＝ μ*(A ∩ E) ＋ μ*(A ∖ E)</text>
+  <text x="40" y="122" font-size="6.2" fill="#6a6a68">「E でどう切っても、断片の大きさの和がもとに戻る」——劣加法性から ≤ は自動、実質は ≥ だけ</text>
+  <text x="40" y="131" font-size="6.2" fill="#6a6a68">「すべての A」と要求したことが、最後に A ＝ E と取って可算加法性を得る余地になる</text>
+
+  <rect x="14" y="154" width="216" height="110" rx="4" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="24" y="169" font-size="7.6" font-weight="700" fill="#1e4a41">得られるもの</text>
+  <text x="24" y="186" font-size="6.8" fill="#1e4a41">可測集合の全体は σ-加法族</text>
+  <text x="24" y="199" font-size="6.8" fill="#1e4a41">その上で可算加法的</text>
+  <text x="24" y="212" font-size="6.8" fill="#1e4a41">測度零の集合はすべて可測（完備）</text>
+  <text x="24" y="229" font-size="6.6" fill="#6a6a68">増加列について連続。減少列は</text>
+  <text x="24" y="240" font-size="6.6" fill="#6a6a68">有限性を足さないと連続でない</text>
+  <text x="24" y="256" font-size="6.6" fill="#8c2f1e">[n,∞) の交わりが空でも、各項は ∞</text>
+
+  <rect x="240" y="154" width="216" height="110" rx="4" fill="#f4f1ea" stroke="#8a6b2c"/>
+  <text x="250" y="169" font-size="7.6" font-weight="700" fill="#5a4520">なぜ可算加法性か</text>
+  <text x="250" y="186" font-size="6.8" fill="#5a4520">有限加法性だけなら全部の集合に</text>
+  <text x="250" y="197" font-size="6.8" fill="#5a4520">長さを与えられる（バナッハ）</text>
+  <text x="250" y="213" font-size="6.8" fill="#8c2f1e">しかし極限と積分が交換できない</text>
+  <text x="250" y="230" font-size="6.6" fill="#6a6a68">非可算加法性は要求できない——</text>
+  <text x="250" y="241" font-size="6.6" fill="#6a6a68">一点の測度がすべて 0 だから</text>
+  <text x="250" y="256" font-size="6.6" fill="#1e4a41">可算がちょうど釣り合う水準である</text>
+</svg>
+<figcaption>区間の長さから外測度を作り、カラテオドリの条件で可測集合を選び出すと、その上で可算加法的な測度が得られる。可算加法性は、極限と積分の交換を可能にする最小限の要求である。</figcaption>
+</figure>
+
+<div class="lv2">
+<h4>前測度からの拡張と、一意性</h4>
+<p><ref t="thm-caratheodory"/> は外測度から始めた。<em>実際には、もっと少ない情報から出発できる。</em></p>
+<p><strong>前測度。</strong><m>X</m> 上の集合の族 <m>\mathcal{E}</m>（有限加法族でよい）と、その上の有限加法的で可算加法的な <m>\mu_0</m> を<em>前測度</em>という。<m>\mathbb{R}</m> では <m>\mathcal{E}</m> を「有限個の区間の合併」、<m>\mu_0</m> を長さの和に取る。</p>
+<p><strong>誘導される外測度。</strong></p>
+<M>\mu^*(A) = \inf\Big\{\, \sum_n \mu_0(E_n)\ \Big|\ A \subseteq \bigcup_n E_n,\ E_n \in \mathcal{E} \,\Big\}</M>
+<p class="no-indent">これは外測度であり、<em><m>\mathcal{E}</m> の元はすべて可測で、<m>\mu^*|_{\mathcal{E}} = \mu_0</m></em>。証明は <ref t="prop-kukan-gai"/> と同じ形で、有限加法性から出る。</p>
+<p><span class="yogo-hl">結果として <m>\mathcal{E}</m> の生成する σ-加法族の上に、<m>\mu_0</m> を延ばした測度が得られる。</span></p>
+<p><strong>一意性。</strong><m>\mu_0</m> が σ-有限なら、この拡張は <m>\sigma(\mathcal{E})</m> 上で一意である。</p>
+<p><em>証明にはディンキンの補題（π-λ 定理）を使う。</em>二つの拡張が一致する集合の全体が λ 系をなし、<m>\mathcal{E}</m> を含むので <m>\sigma(\mathcal{E})</m> 全体になる。</p>
+<p><strong>σ-有限性が要る。</strong>外すと一意性が崩れる。<em><m>\mathcal{E}</m> を <m>\mathbb{R}</m> 上の可算集合と補集合が可算な集合の族に取り、<m>\mu_0 = 0</m> と <m>\mu_0 = \infty</m>（空でない集合に）で拡張が二通りできる。</em></p>
+<p><strong>完備化。</strong><ref t="thm-caratheodory"/>（3）より、カラテオドリの構成で得られる測度はつねに完備である。<em>一方、<m>\sigma(\mathcal{E})</m> に制限すると完備でないことがある。</em></p>
+<p><m>\mathbb{R}</m> では、ボレル集合族 <m>\mathcal{B}</m> 上のルベーグ測度は完備でなく、<span class="yogo-hl">カラテオドリの構成で得られる <m>\mathcal{M}</m> がその完備化である。</span><em><m>|\mathcal{B}| = 2^{\aleph_0}</m> だが <m>|\mathcal{M}| = 2^{2^{\aleph_0}}</m></em>——カントール集合の部分集合がすべて可測だからである（第53章）。</p>
+<p><strong>使い分け。</strong>ボレル集合族は、位相から決まるので<em>写像による扱いがよい</em>（連続写像の逆像がボレル）。ルベーグ可測集合族は、<em>完備なので「ほとんどいたるところ」の議論に強い</em>。第54章で両方を使う。</p>
+</div>
+
+<div class="lv3">
+<h4>測度の存在と、位相との関係</h4>
+<p><strong>ハール測度。</strong>局所コンパクト群 <m>G</m> には、左移動で不変な測度（ハール測度）が定数倍を除いて一意に存在する。<em><m>\mathbb{R}</m> のルベーグ測度は、その加法群としての場合である。</em></p>
+<p>存在証明は第20章のコンパクト性と、第21章のチコノフの定理を使う。<span class="yogo-hl">位相群の構造から測度が生まれる。</span></p>
+<p><strong>ラドン測度。</strong>局所コンパクトハウスドルフ空間 <m>X</m> 上で、コンパクト集合で有限、内部正則かつ外部正則な測度をラドン測度という。第59章のリースの表現定理が、<em><m>C_c(X)</m> 上の正線型汎関数とラドン測度を一対一に対応させる。</em></p>
+<p><strong>どの位相空間に測度が乗るか。</strong>ボレル集合族はどの位相空間にも定まるが、<em>そこに「よい」測度が乗るかは空間の性質に依る</em>。</p>
+<p>ポーランド空間（可分完備距離空間、第33章）では事情がとてもよい。<span class="yogo-hl">ボレル確率測度の全体が、それ自身ポーランド空間になる（弱位相について）。</span>これが確率論の標準的な舞台である。</p>
+<p><strong>測度の非存在。</strong>逆に、測度が存在しないこともある。</p>
+<p><em>可測基数の問題。</em>「<m>\kappa</m> 上のすべての部分集合に定まり、一点の測度が <m>0</m> で、<m>\kappa</m>-加法的な確率測度が存在するか」——そのような <m>\kappa</m> を可測基数という。</p>
+<p>可測基数の存在は、集合論の公理系から証明できない（強到達不可能基数より強い）。<span class="yogo-hl">第4章・第36章で見た独立性の構図が、測度論にも現れる。</span></p>
+<p><strong>実数値可測基数。</strong><m>2^{\aleph_0}</m> が実数値可測であること（すなわち <m>\mathbb{R}</m> のすべての部分集合に可算加法的な拡張測度が存在すること）は、<em>可測基数の存在と同等の強さをもつ</em>。</p>
+<p>したがって「ルベーグ測度をすべての集合に延ばせるか」という素朴な問いの答えは、<span class="yogo-hl">選択公理のもとでは否（第53章）、選択公理を落としても巨大基数の存在と結びつく</span>という形になる。</p>
+<p><strong>ソロヴェイのモデル。</strong>一九七〇年、ソロヴェイは<em>「到達不可能基数が存在すれば、選択公理を従属選択公理に弱めた体系で、すべての集合がルベーグ可測なモデルが作れる」</em>ことを示した。</p>
+<p>そこでは解析の大半が成り立つ。<span class="yogo-hl">非可測集合は、選択公理が作り出すものである。</span>第53章で、その作り方を見る。</p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li>ルベーグ外測度が劣加法的であることを示せ。</li>
+<li>一点集合の外測度が <m>0</m> であることを示せ。</li>
+<li>カラテオドリの条件で <m>\le</m> がつねに成り立つことを確かめよ。</li>
+<li>σ-加法族が有限合併と可算交叉で閉じていることを示せ。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li><ref t="prop-kukan-gai"/> の <m>\ge</m> を、コンパクト性を使って示せ。<span class="haiten">（25点）</span></li>
+<li><ref t="thm-caratheodory"/>（1）の有限合併の部分を、細部まで埋めよ。<span class="haiten">（30点）</span></li>
+<li><ref t="thm-sokudo-renzoku"/>（2）で有限性が要ることを、<ref t="cex-genshou"/> 以外の例で示せ。<span class="haiten">（20点）</span></li>
+<li>区間 <m>(a,\infty)</m> がルベーグ可測であることを、定義に従って示せ。<span class="haiten">（30点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li>前測度からの拡張の一意性を、ディンキンの補題を使って示せ。<span class="haiten">（45点）</span></li>
+<li>σ-有限でない前測度で、拡張が一意でない例を作れ。<span class="haiten">（35点）</span></li>
+<li>ボレル集合族の濃度が <m>2^{\aleph_0}</m> であることを示せ。<span class="haiten">（40点）</span></li>
+</ol>
+</div>
+</div>

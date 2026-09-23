@@ -1,0 +1,297 @@
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>どんな関数なら「横に切って」測れるのか。</li>
+<li>可測関数は、極限でどこまで閉じているのか。</li>
+<li>可測関数は、連続関数とどのくらい近いのか。</li>
+</ul>
+</div>
+
+<h3 id="s54-1">可測関数の定義</h3>
+
+<div class="teigi" id="def-kasoku-kansu">
+<h4>可測関数</h4>
+<p class="no-indent"><m>(X,\mathcal{A})</m> を可測空間とする。<m>f \colon X \to [-\infty,\infty]</m> が<strong>可測</strong>であるとは、すべての <m>a \in \mathbb{R}</m> について</p>
+<M>\{\, x \in X \mid f(x) > a \,\} \in \mathcal{A}</M>
+<p class="no-indent">が成り立つことをいう。</p>
+</div>
+
+<div class="chui">
+<h4>なぜ <m>&gt; a</m> だけでよいのか</h4>
+<p class="no-indent"><m>\{f \ge a\} = \bigcap_n \{f > a-1/n\}</m>、<m>\{f < a\} = \{f\ge a\}^c</m>、<m>\{f \le a\}=\{f>a\}^c</m>。<em>σ-加法族は可算交叉と補集合で閉じているので、四つの形はすべて同値である。</em></p>
+<p><span class="yogo-hl">第51章で「値域を横に切る」と述べた。その層 <m>\{a \le f < b\}</m> が可測であることが、可測関数の内容である。</span></p>
+</div>
+
+<div class="teiri" data-kind="命題" id="prop-kasoku-iikae">
+<h4></h4>
+<p class="no-indent"><m>f \colon X \to \mathbb{R}</m> について、次は同値である。</p>
+<p class="no-indent">（1）<m>f</m> は可測。<br>
+（2）どの開集合 <m>U \subseteq \mathbb{R}</m> についても <m>f^{-1}(U) \in \mathcal{A}</m>。<br>
+（3）どのボレル集合 <m>B</m> についても <m>f^{-1}(B) \in \mathcal{A}</m>。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">（1）から（2）。開集合は可算個の開区間の合併で、<m>f^{-1}((a,b)) = \{f>a\}\cap\{f<b\}</m>。</p>
+<p>（2）から（3）。<m>\{\, B \mid f^{-1}(B)\in\mathcal{A} \,\}</m> は σ-加法族であり（逆像が集合演算と可換だから）、開集合を含む。<em>よってボレル集合族を含む。</em></p>
+<p>（3）から（1）は <m>(a,\infty)</m> がボレルだから。</p>
+</div>
+
+<div class="chui">
+<h4>連続写像との対応</h4>
+<p class="no-indent">（2）は第8章の連続性の定義「開集合の逆像が開」とそっくりである。<span class="yogo-hl">「開集合の族」を「σ-加法族」に取り替えただけ。</span></p>
+<p><em>だから可測関数は「可測空間の圏における射」である</em>——位相空間と連続写像の関係が、そのまま平行移動している。</p>
+<p>ただし一点違う。<em>合成 <m>g \circ f</m> は、<m>f</m> 可測・<m>g</m> <strong>ボレル</strong>可測なら可測だが、<m>g</m> がルベーグ可測なだけでは可測とは限らない。</em><span class="yogo-hl">ルベーグ可測性は完備化で作ったので、逆像の議論と噛み合わない。</span></p>
+</div>
+
+<h3 id="s54-2">演算と極限で閉じている</h3>
+
+<div class="teiri" id="thm-kasoku-enzan">
+<h4></h4>
+<p class="no-indent"><m>f, g</m> を可測、<m>c \in \mathbb{R}</m> とする。</p>
+<p class="no-indent">（1）<m>cf</m>、<m>f+g</m>、<m>fg</m>、<m>\max(f,g)</m>、<m>\min(f,g)</m>、<m>|f|</m> は可測。<br>
+（2）可測関数の列 <m>(f_n)</m> について、<m>\sup_n f_n</m>、<m>\inf_n f_n</m>、<m>\limsup_n f_n</m>、<m>\liminf_n f_n</m> は可測。<br>
+（3）<m>(f_n)</m> が各点収束するなら、極限 <m>f</m> は可測。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">（1）<m>f+g</m>。<m>\{f+g>a\} = \bigcup_{q\in\mathbb{Q}}\big(\{f>q\}\cap\{g>a-q\}\big)</m>。<em>有理数で刻めるところが効いている。</em></p>
+<p><m>fg</m> は <m>fg = \frac14\big((f+g)^2-(f-g)^2\big)</m> と <m>\{f^2>a\}</m> の可測性から。</p>
+<p>（2）<m>\{\sup_n f_n > a\} = \bigcup_n \{f_n > a\}</m>。<em>可算合併で閉じているから可測。</em></p>
+<p><m>\limsup_n f_n = \inf_N \sup_{n\ge N} f_n</m> なので、上の二つを組み合わせればよい。</p>
+<p>（3）収束するなら <m>f = \limsup_n f_n</m>。</p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent"><span class="yogo-hl">（2）が、リーマン積分にはない性質である。</span><ref t="cex-riemann-1"/> で見たとおり、リーマン可積分関数の各点極限は可積分とは限らなかった。</p>
+<p><em>可測性は各点極限で完全に閉じている。</em>これは可算加法性の直接の帰結で、<m>\{\sup f_n > a\}</m> が可算合併になるところに現れている。</p>
+</div>
+
+<h3 id="s54-3">単関数による近似</h3>
+
+<div class="teigi" id="def-tankansu">
+<h4>単関数</h4>
+<p class="no-indent">有限個の値しか取らない可測関数を<strong>単関数</strong>という。すなわち</p>
+<M>s = \sum_{k=1}^{n} c_k \mathbf{1}_{E_k} \qquad (c_k \in \mathbb{R},\ E_k \in \mathcal{A})</M>
+<p class="no-indent">の形に書ける関数である。</p>
+</div>
+
+<div class="teiri" id="thm-tankansu-kinji">
+<h4>単関数近似定理</h4>
+<p class="no-indent"><m>f \ge 0</m> を可測とすると、単関数の増加列 <m>0 \le s_1 \le s_2 \le \cdots</m> で <m>s_n \to f</m> 各点収束するものが存在する。<em><m>f</m> が有界なら収束は一様である。</em></p>
+<p class="no-indent">一般の可測 <m>f</m> については、<m>f = f^+ - f^-</m>（<m>f^\pm \ge 0</m> 可測）と分けて適用する。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><m>n</m> ごとに、値域 <m>[0,n)</m> を幅 <m>2^{-n}</m> の区間に刻む。</p>
+<M>s_n = \sum_{k=0}^{n2^n-1} \frac{k}{2^n}\,\mathbf{1}_{\{k2^{-n} \le f < (k+1)2^{-n}\}} \ +\ n\,\mathbf{1}_{\{f \ge n\}}</M>
+<p class="no-indent">各 <m>\{k2^{-n}\le f<(k+1)2^{-n}\}</m> は可測なので <m>s_n</m> は単関数。</p>
+<p><strong>増加性。</strong><m>n</m> から <m>n+1</m> へ行くと各区間が半分に割れ、下端が上がるか同じになる。</p>
+<p><strong>収束。</strong><m>f(x)<\infty</m> なら <m>n>f(x)</m> で <m>0 \le f(x)-s_n(x) < 2^{-n}</m>。<em><m>f</m> が <m>M</m> で有界なら <m>n>M</m> 以降 <m>\sup_x|f-s_n|\le2^{-n}</m> で一様収束。</em></p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">この定理が、第55章で積分を定義する道具である。<em>単関数の積分は「値 <m>\times</m> 集合の測度」の和で明らかに定義でき、あとは極限を取ればよい。</em></p>
+<p><span class="yogo-hl">第51章の図で「値域を横に切る」と描いたのが、この <m>s_n</m> である。</span></p>
+</div>
+
+<h3 id="s54-4">ほとんどいたるところ</h3>
+
+<div class="teigi" id="def-hotondo">
+<h4>ほとんどいたるところ</h4>
+<p class="no-indent">測度空間 <m>(X,\mathcal{A},\mu)</m> で、性質 <m>P</m> が<strong>ほとんどいたるところ</strong>成り立つとは、<m>\mu(N)=0</m> なる <m>N</m> があって <m>X\setminus N</m> のすべての点で <m>P</m> が成り立つことをいう。</p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">測度が完備なら（<ref t="thm-caratheodory"/>（3））、<em>ほとんどいたるところ可測関数に等しい関数は可測である</em>。</p>
+<p>完備でないと、これが言えない。<span class="yogo-hl">ボレル測度で議論すると、零集合の部分集合が可測でないかもしれず、「ほとんどいたるところ」の扱いが煩雑になる。</span>第52章★★で完備化を導入した理由である。</p>
+</div>
+
+<div class="teiri" id="thm-egorov">
+<h4>エゴロフの定理</h4>
+<p class="no-indent"><m>\mu(X)<\infty</m> とし、可測関数の列 <m>(f_n)</m> がほとんどいたるところ <m>f</m> に収束するとする。このとき、どの <m>\varepsilon>0</m> についても可測集合 <m>E</m> で</p>
+<M>\mu(X\setminus E)<\varepsilon, \qquad f_n \to f \ \text{は } E \text{ 上で一様収束}</M>
+<p class="no-indent">となるものが存在する。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">零集合を除いて、いたるところ収束としてよい。</p>
+<M>E_{n,k} = \bigcap_{m \ge n}\Big\{\, x \ \Big|\ |f_m(x)-f(x)| < \tfrac1k \,\Big\}</M>
+<p class="no-indent">とおく。各 <m>k</m> について <m>E_{1,k}\subseteq E_{2,k}\subseteq\cdots</m> で <m>\bigcup_n E_{n,k}=X</m>（各点収束だから）。</p>
+<p><em>測度の連続性（<ref t="thm-sokudo-renzoku"/>（1））と <m>\mu(X)<\infty</m> より</em>、<m>\mu(X\setminus E_{n_k,k})<\varepsilon2^{-k}</m> なる <m>n_k</m> が取れる。</p>
+<p><m>E = \bigcap_k E_{n_k,k}</m> とおくと <m>\mu(X\setminus E)<\varepsilon</m>。<m>E</m> 上では、どの <m>k</m> についても <m>m\ge n_k</m> で <m>|f_m-f|<1/k</m> が<em>すべての点で同時に</em>成り立つ——すなわち一様収束。</p>
+</div>
+
+<div class="hanrei" id="cex-egorov-yugen">
+<h4>有限性は外せない</h4>
+<p class="no-indent"><m>X=\mathbb{R}</m>、<m>f_n = \mathbf{1}_{[n,n+1]}</m> とすると各点で <m>0</m> に収束する。</p>
+<p><em>だが、どの有限測度の集合を除いても一様収束しない</em>——除いた集合の外に、つねに <m>f_n=1</m> となる点が残る。</p>
+</div>
+
+<div class="teiri" id="thm-luzin">
+<h4>ルジンの定理</h4>
+<p class="no-indent"><m>f</m> を <m>[a,b]</m> 上のルベーグ可測関数とする。どの <m>\varepsilon>0</m> についても閉集合 <m>F \subseteq [a,b]</m> で</p>
+<M>\lambda([a,b]\setminus F)<\varepsilon, \qquad f|_F \text{ は連続}</M>
+<p class="no-indent">となるものが存在する。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><m>f</m> が単関数の場合。有限個の可測集合 <m>E_k</m> について、各 <m>E_k</m> の内側に閉集合 <m>F_k</m> を <m>\lambda(E_k\setminus F_k)</m> が小さくなるように取る（内部正則性）。<m>F=\bigcup_k F_k</m> 上で <m>f</m> は局所定数、したがって連続。</p>
+<p>一般の場合。<ref t="thm-tankansu-kinji"/> で単関数の列 <m>s_n\to f</m> を取り、各 <m>s_n</m> について上の <m>F_n</m>（除外測度 <m>\varepsilon2^{-n-1}</m>）を取る。<ref t="thm-egorov"/> で <m>E</m>（除外測度 <m>\varepsilon/2</m>）上の一様収束を得る。</p>
+<p><em><m>F = E' \cap \bigcap_n F_n</m>（<m>E'\subseteq E</m> は閉）の上では、連続関数の一様極限だから <m>f</m> は連続</em>（第47章）。</p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent"><span class="yogo-hl">エゴロフは「各点収束はほとんど一様収束」、ルジンは「可測関数はほとんど連続関数」と読める。</span></p>
+<p>どちらも<em>「小さい例外を許せば、よい性質が戻る」</em>という形をしている。<em>これが測度論の基本的な手つきである。</em></p>
+<p>ただし<em>「ほとんど連続」は「ほとんどいたるところ連続」ではない</em>。ディリクレ関数はルジンの定理を満たすが、どの点でも連続でない。<span class="yogo-hl">除く集合を選べることが本質である。</span></p>
+</div>
+
+<figure>
+<svg viewBox="0 0 470 272" width="470" height="272" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">単関数で下から刻み、極限を取る</text>
+
+  <rect x="14" y="26" width="442" height="120" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+
+  <text x="86" y="42" font-size="6.8" text-anchor="middle" font-weight="700" fill="#1f3b5c">n = 2</text>
+  <line x1="30" y1="126" x2="150" y2="126" stroke="#8a8a88" stroke-width="0.8"/>
+  <line x1="30" y1="126" x2="30" y2="54" stroke="#8a8a88" stroke-width="0.8"/>
+  <g fill="#cfe0ee" stroke="#35618f" stroke-width="0.5">
+    <rect x="47.4" y="113.48" width="100.6" height="12.52"/>
+    <rect x="63.5" y="100.97" width="84.5" height="12.52"/>
+    <rect x="78.6" y="88.45" width="67.8" height="12.52"/>
+  </g>
+  <path d="M32,122 C 60,110 76,84 98,78 C 120,72 138,80 148,90" stroke="#1f3b5c" stroke-width="1.2" fill="none"/>
+
+  <text x="235" y="42" font-size="6.8" text-anchor="middle" font-weight="700" fill="#1f3b5c">n = 3</text>
+  <line x1="178" y1="126" x2="298" y2="126" stroke="#8a8a88" stroke-width="0.8"/>
+  <line x1="178" y1="126" x2="178" y2="54" stroke="#8a8a88" stroke-width="0.8"/>
+  <g fill="#cfe0ee" stroke="#35618f" stroke-width="0.5">
+    <rect x="184.8" y="119.74" width="111.2" height="6.26"/>
+    <rect x="195.4" y="113.48" width="100.6" height="6.26"/>
+    <rect x="203.9" y="107.22" width="92.1" height="6.26"/>
+    <rect x="211.5" y="100.97" width="84.5" height="6.26"/>
+    <rect x="218.8" y="94.71" width="77.2" height="6.26"/>
+    <rect x="226.6" y="88.45" width="67.8" height="6.26"/>
+    <rect x="236.0" y="82.19" width="49.6" height="6.26"/>
+  </g>
+  <path d="M180,122 C 208,110 224,84 246,78 C 268,72 286,80 296,90" stroke="#1f3b5c" stroke-width="1.2" fill="none"/>
+
+  <text x="384" y="42" font-size="6.8" text-anchor="middle" font-weight="700" fill="#1f3b5c">n = 4</text>
+  <line x1="326" y1="126" x2="446" y2="126" stroke="#8a8a88" stroke-width="0.8"/>
+  <line x1="326" y1="126" x2="326" y2="54" stroke="#8a8a88" stroke-width="0.8"/>
+  <g fill="#cfe0ee" stroke="#35618f" stroke-width="0.4">
+    <rect x="328.0" y="122.87" width="116.0" height="3.13"/>
+    <rect x="332.8" y="119.74" width="111.2" height="3.13"/>
+    <rect x="338.5" y="116.61" width="105.5" height="3.13"/>
+    <rect x="343.4" y="113.48" width="100.6" height="3.13"/>
+    <rect x="347.8" y="110.35" width="96.2" height="3.13"/>
+    <rect x="351.9" y="107.22" width="92.1" height="3.13"/>
+    <rect x="355.7" y="104.10" width="88.3" height="3.13"/>
+    <rect x="359.5" y="100.97" width="84.5" height="3.13"/>
+    <rect x="363.2" y="97.84" width="80.8" height="3.13"/>
+    <rect x="366.8" y="94.71" width="77.2" height="3.13"/>
+    <rect x="370.6" y="91.58" width="73.4" height="3.13"/>
+    <rect x="374.6" y="88.45" width="67.8" height="3.13"/>
+    <rect x="378.9" y="85.32" width="59.6" height="3.13"/>
+    <rect x="384.0" y="82.19" width="49.6" height="3.13"/>
+    <rect x="390.7" y="79.06" width="36.0" height="3.13"/>
+  </g>
+  <path d="M328,122 C 356,110 372,84 394,78 C 416,72 434,80 444,90" stroke="#1f3b5c" stroke-width="1.2" fill="none"/>
+
+  <text x="24" y="140" font-size="6.2" fill="#6a6a68">層の横幅は「値がその高さを超える点の集合」の大きさ。刻みを 2⁻ⁿ に細かくすると下から単調に近づく</text>
+
+  <rect x="14" y="156" width="216" height="108" rx="4" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="24" y="171" font-size="7.6" font-weight="700" fill="#1e4a41">可測関数が閉じている操作</text>
+  <text x="24" y="188" font-size="6.8" fill="#1e4a41">和・積・定数倍・絶対値・最大最小</text>
+  <text x="24" y="201" font-size="6.8" fill="#1e4a41">上限・下限・上極限・下極限</text>
+  <text x="24" y="214" font-size="6.8" fill="#1e4a41">各点収束の極限</text>
+  <text x="24" y="231" font-size="6.6" fill="#8c2f1e">リーマン可積分性には、最後の性質がない</text>
+  <text x="24" y="244" font-size="6.6" fill="#6a6a68">{sup fₙ &gt; a} ＝ ∪ₙ {fₙ &gt; a} ——</text>
+  <text x="24" y="255" font-size="6.6" fill="#6a6a68">可算合併で閉じていることの直接の帰結</text>
+
+  <rect x="240" y="156" width="216" height="108" rx="4" fill="#f4f1ea" stroke="#8a6b2c"/>
+  <text x="250" y="171" font-size="7.6" font-weight="700" fill="#5a4520">小さい例外を許すと、性質が戻る</text>
+  <text x="250" y="188" font-size="6.8" fill="#5a4520">エゴロフ　各点収束　→　ほとんど一様収束</text>
+  <text x="250" y="201" font-size="6.8" fill="#5a4520">ルジン　　可測関数　→　ほとんど連続</text>
+  <text x="250" y="218" font-size="6.6" fill="#6a6a68">どちらも「測度 ε 未満の集合を除けば」</text>
+  <text x="250" y="229" font-size="6.6" fill="#6a6a68">という形をしている</text>
+  <text x="250" y="245" font-size="6.6" fill="#8c2f1e">エゴロフは全測度が有限でないと成り立たない</text>
+  <text x="250" y="256" font-size="6.6" fill="#6a6a68">——ℝ 上の 1[n,n+1] が反例</text>
+</svg>
+<figcaption>値域を幅 2⁻ⁿ に刻んで単関数を作ると、下から単調に元の関数へ近づく。可測関数は各点極限で閉じており、小さい例外集合を除けば一様収束・連続性が戻る。</figcaption>
+</figure>
+
+<div class="lv2">
+<h4>可測性の細部——合成・ボレル可測・像の可測性</h4>
+<p><strong>合成の問題。</strong><m>f</m> がルベーグ可測、<m>g</m> が連続でも、<m>f\circ g</m> は可測とは限らない。<em>順序が大事である。</em></p>
+<p><m>g\circ f</m>（<m>g</m> がボレル可測）は可測。<span class="yogo-hl">なぜなら <m>(g\circ f)^{-1}(B) = f^{-1}(g^{-1}(B))</m> で、<m>g^{-1}(B)</m> がボレルだから。</span></p>
+<p>一方 <m>f\circ g</m> は、<m>f</m> がルベーグ可測なだけだと <m>f^{-1}(B)</m> はルベーグ可測にすぎず、<em>その <m>g</m> による逆像が可測とは限らない</em>。</p>
+<p><strong>具体例。</strong>カントール関数 <m>\varphi</m> を使う。<m>\psi(x)=x+\varphi(x)</m> は <m>[0,1]\to[0,2]</m> の同相写像で、<em><m>\psi(C)</m> の測度は <m>1</m></em>（<m>C</m> の外で <m>\psi</m> は長さを保ち、その合計が <m>1</m> だから）。</p>
+<p>測度 <m>1</m> の集合 <m>\psi(C)</m> には非可測部分集合 <m>V</m> がある（第53章の演習）。<m>A = \psi^{-1}(V) \subseteq C</m> は測度零なので可測。<em>ところが <m>\mathbf{1}_A \circ \psi^{-1} = \mathbf{1}_V</m> は可測でない。</em></p>
+<p><span class="yogo-hl">可測関数と連続関数（しかも同相）の合成が、可測でなくなった。</span></p>
+<p><strong>同じ例から。</strong><m>A</m> はルベーグ可測だがボレルでない。<em><m>A</m> がボレルなら、同相の像 <m>V=\psi(A)</m> もボレルになり可測になってしまう。</em></p>
+<p>これが「可測だがボレルでない集合」の具体的な構成である。<span class="yogo-hl">第53章では濃度の比較で存在だけ示したが、ここでは実際に作れた。</span></p>
+<p><strong>像の可測性。</strong>可測集合の連続像は可測とは限らない（上の <m>V</m> がそれ）。<em>ボレル集合の連続像は解析集合であり、可測ではある</em>（第53章★★★のルジンの定理）。</p>
+<p><strong>実用上の指針。</strong>解析では、<em>外側の関数はボレル可測に取る</em>のが安全である。連続関数はボレル可測なので、<m>\varphi(f)</m>（<m>\varphi</m> 連続、<m>f</m> 可測）はつねに可測。</p>
+<p>確率論でも同じ約束をする。<span class="yogo-hl">確率変数は「ボレル可測な関数」と定義するのが標準である。</span></p>
+</div>
+
+<div class="lv3">
+<h4>可測関数の空間と、測度収束の位相</h4>
+<p>可測関数の全体に位相を入れる。<em>第50章★★で名前だけ挙げた測度収束が、ここで位相になる。</em></p>
+<p><strong>測度収束。</strong><m>f_n \to f</m> が<em>測度収束</em>するとは、どの <m>\varepsilon>0</m> についても</p>
+<M>\mu\big(\{\, x \mid |f_n(x)-f(x)|>\varepsilon \,\}\big) \to 0</M>
+<p class="no-indent">となることをいう。</p>
+<p><strong>距離化。</strong><m>\mu(X)<\infty</m> のとき</p>
+<M>d(f,g) = \int_X \frac{|f-g|}{1+|f-g|}\,d\mu</M>
+<p class="no-indent">は（ほとんどいたるところ等しい関数を同一視すれば）距離であり、<em>この距離での収束が測度収束に一致する</em>。</p>
+<p><span class="yogo-hl">可測関数の全体は、この距離で完備距離空間になる。</span>リーマン可積分関数の空間が完備でなかった（<ref t="cex-riemann-2"/>）のと対照的である。</p>
+<p><strong>収束の階層。</strong><m>\mu(X)<\infty</m> のとき、</p>
+<p><em>一様収束 <m>\Rightarrow</m> ほとんどいたるところ収束 <m>\Rightarrow</m> 測度収束</em>。</p>
+<p>また <em><m>L^1</m> 収束 <m>\Rightarrow</m> 測度収束</em>（チェビシェフの不等式から）。逆向きはどれも成り立たない。</p>
+<p><strong>部分列定理。</strong>測度収束する列は、<em>ほとんどいたるところ収束する部分列をもつ</em>。証明は <m>\mu(\{|f_{n_k}-f|>2^{-k}\})<2^{-k}</m> なる部分列を取り、ボレル–カンテリの補題を使う。</p>
+<p><strong>ボレル–カンテリの補題。</strong><m>\sum_n \mu(A_n)<\infty</m> なら <m>\mu(\limsup_n A_n)=0</m>。</p>
+<p><em>証明は <m>\limsup_n A_n = \bigcap_N \bigcup_{n\ge N}A_n</m> で、<m>\mu\big(\bigcup_{n\ge N}A_n\big)\le\sum_{n\ge N}\mu(A_n)\to0</m>。</em></p>
+<p><span class="yogo-hl">確率論の基本道具だが、内容は測度の連続性と劣加法性だけである。</span></p>
+<p><strong>なぜ「ほとんどいたるところ収束」が位相でないのか。</strong>驚くべきことに、<em>ほとんどいたるところ収束を収束とするような位相は、一般には存在しない</em>。</p>
+<p>もし位相があれば、「どの部分列も、さらに収束する部分列をもつなら、もとの列も収束する」が成り立つはずである。<em>ところが測度収束するが至るところ収束しない列（第50章の「動く窓」）が、この条件を満たしてしまう。</em></p>
+<p><span class="yogo-hl">ほとんどいたるところ収束は、位相に由来しない収束概念である。</span>第12章でネットを導入したときの「収束は位相から来るとは限らない」という話が、ここで具体例をもつ。</p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li>連続関数がボレル可測であることを示せ。</li>
+<li>単調関数がボレル可測であることを示せ。</li>
+<li><m>\{f\ge a\}=\bigcap_n\{f>a-1/n\}</m> を確かめよ。</li>
+<li>ディリクレ関数が可測であることを示し、単関数近似を書け。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li><ref t="thm-kasoku-enzan"/>（1）の <m>f+g</m> の部分を、なぜ有理数で刻めるのかを説明しながら示せ。<span class="haiten">（20点）</span></li>
+<li><ref t="thm-tankansu-kinji"/> の増加性を、細部まで確かめよ。<span class="haiten">（25点）</span></li>
+<li><ref t="thm-egorov"/> で <m>\mu(X\setminus E)<\varepsilon</m> を確かめよ。<span class="haiten">（25点）</span></li>
+<li>ボレル–カンテリの補題を示せ。<span class="haiten">（20点）</span></li>
+<li>測度収束する列が、ほとんどいたるところ収束する部分列をもつことを示せ。<span class="haiten">（30点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li><ref t="thm-luzin"/> を、内部正則性を使って細部まで示せ。<span class="haiten">（40点）</span></li>
+<li>カントール関数を使って、可測だがボレルでない集合を具体的に作れ。<span class="haiten">（45点）</span></li>
+<li>ほとんどいたるところ収束が位相に由来しないことを示せ。<span class="haiten">（45点）</span></li>
+</ol>
+</div>
+</div>
