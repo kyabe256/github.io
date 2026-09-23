@@ -1,0 +1,214 @@
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>無限個の空間の積に、どんな位相を入れるべきか。</li>
+<li>素朴に「各成分が開」とすると、何が壊れるのか。</li>
+<li>積位相は、何を最適化した結果なのか。</li>
+</ul>
+</div>
+
+<h3 id="s11-1">有限積では迷いようがない</h3>
+
+<p><m>X \times Y</m> に位相を入れる。基底として <m>\{\, U \times V \mid U, V \text{ 開} \,\}</m> を取ればよい。第7章の（B1）（B2）は容易に確かめられる。<em>有限個の積なら、これで話は終わる。</em></p>
+
+<p>問題は無限個のときである。添字集合 <m>I</m> と空間の族 <m>\{X_i\}_{i \in I}</m> に対し、</p>
+
+<M>\prod_{i \in I} X_i = \Big\{\, x \colon I \to \bigcup_i X_i \ \Big|\ x(i) \in X_i \ (\forall i) \,\Big\}</M>
+
+<p>と定める。<em>この集合が空でないことは、選択公理そのものである</em>（第3章）。各 <m>x</m> の第 <m>i</m> 成分を <m>x_i</m> と書き、射影を <m>p_i \colon \prod_j X_j \to X_i</m>、<m>p_i(x) = x_i</m> と書く。</p>
+
+<p>素朴な一般化は次のものである。</p>
+
+<div class="teigi" id="def-hako">
+<h4>箱位相</h4>
+<p class="no-indent"><m>\{\, \prod_i U_i \mid U_i \text{ は } X_i \text{ で開} \,\}</m> を基底とする位相を<strong>箱位相</strong>という。</p>
+</div>
+
+<p>すべての成分で独立に開集合を指定できる、もっとも自然に見える定義である。<span class="yogo-hl">ところが、この位相では基本的な定理がことごとく成り立たない。</span></p>
+
+<h3 id="s11-2">箱位相が壊すもの</h3>
+
+<div class="hanrei" id="cex-hako-renzoku">
+<h4>箱位相では対角線写像が連続でない</h4>
+<p class="no-indent"><m>\mathbb{R}^{\omega} = \prod_{n \in \mathbb{N}} \mathbb{R}</m> に箱位相を入れ、</p>
+<M>f \colon \mathbb{R} \to \mathbb{R}^{\omega}, \qquad f(t) = (t, t, t, \ldots)</M>
+<p class="no-indent">を考える。<em>各成分は恒等写像だから連続である。</em>ところが <m>f</m> 自身は連続でない。</p>
+<p>実際、<m>U = \prod_n (-1/n,\ 1/n)</m> は箱位相で開であり <m>f(0) = 0</m> を含む。もし <m>f</m> が連続なら、<m>f((-\delta, \delta)) \subseteq U</m> なる <m>\delta > 0</m> がある。しかし <m>t \ne 0</m> なら、<m>1/n < |t|</m> となる <m>n</m> が存在するので <m>t \notin (-1/n, 1/n)</m>、すなわち <m>f(t) \notin U</m>。<span class="yogo-hl">よって <m>\delta</m> は取れない。</span></p>
+<p><em>各成分が連続なのに、写像全体が連続でない。</em>これは致命的である。積空間を作る目的の一つは「成分ごとに考えれば済むようにする」ことだったのに、それができなくなっている。</p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">箱位相が壊すのはこれだけではない。<em>チコノフの定理（コンパクト空間の積はコンパクト）も成り立たない。</em><m>\{0,1\}^{\omega}</m> は箱位相では離散位相になり、非可算なのでコンパクトでない。<span class="yogo-hl">積位相ではこれはカントール集合であり、コンパクトである。</span>同じ集合に入れた位相の違いが、これほどの差を生む。</p>
+</div>
+
+<h3 id="s11-3">積位相——最小性を選ぶ</h3>
+
+<p>何を直せばよいか。<ref t="cex-hako-renzoku"/> の失敗は、開集合が多すぎたことにある。<em>無限個の成分を同時に制限する開集合を許したのが原因だった。</em></p>
+
+<p>第8章の始位相の考え方に戻る。<span class="yogo-hl">すべての射影 <m>p_i</m> が連続になる、最小の位相を選ぶ。</span></p>
+
+<div class="teigi" id="def-seki">
+<h4>積位相</h4>
+<p class="no-indent"><m>\mathcal{S} = \{\, p_i^{-1}(U) \mid i \in I,\ U \text{ は } X_i \text{ で開} \,\}</m> を準基底として生成される位相を<strong>積位相</strong>（チコノフ位相）という。</p>
+<p>同じことだが、基底は <m>\prod_i U_i</m> の形の集合であって、<span class="yogo-hl">有限個を除くすべての <m>i</m> で <m>U_i = X_i</m> となるもの</span>である。</p>
+</div>
+
+<p>二つの記述が一致するのは、準基底の有限交叉を取ると</p>
+
+<M>p_{i_1}^{-1}(U_1) \cap \cdots \cap p_{i_n}^{-1}(U_n) = \prod_i V_i, \qquad
+V_i = \begin{cases} U_k & (i = i_k) \\ X_i & (\text{それ以外}) \end{cases}</M>
+
+<p>となるからである。<em>有限交叉しか許さないという位相の公理が、ここで「有限個を除いて全体」という形に翻訳される。</em></p>
+
+<div class="teiri" id="thm-seki-fuhen">
+<h4>積空間の普遍性</h4>
+<p class="no-indent">写像 <m>f \colon Z \to \prod_i X_i</m> について、</p>
+<M>f \text{ が連続} \iff \text{すべての } i \text{ について } p_i \circ f \text{ が連続}</M>
+</div>
+
+<div class="shomei">
+<p class="no-indent">左から右は、連続写像の合成だから明らか。逆を示す。<ref t="thm-renzoku-doti"/>（3）より、準基底の元の逆像が開であることを見ればよい。</p>
+<M>f^{-1}\big(p_i^{-1}(U)\big) = (p_i \circ f)^{-1}(U)</M>
+<p class="no-indent">であり、右辺は仮定より開である。<em>準基底で判定してよいという第8章の節約が、ここで本領を発揮している。</em></p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">この定理が、箱位相との決定的な差である。<span class="yogo-hl">「成分ごとに連続なら全体も連続」——積空間を作る目的が、この一文に凝縮されている。</span><em>箱位相はこれを満たさない。</em>射影を連続にするだけなら箱位相でもよいが、最小でないために余分な開集合が残り、逆向きの判定が壊れる。</p>
+</div>
+
+<figure>
+<svg viewBox="0 0 470 262" width="470" height="262" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">箱位相と積位相——基本開集合の形が違う</text>
+
+  <rect x="14" y="26" width="220" height="112" rx="4" fill="#fdf6f4" stroke="#e0c3bd"/>
+  <text x="24" y="42" font-size="7.6" font-weight="700" fill="#8c2f1e">箱位相　すべての成分を制限してよい</text>
+
+  <g stroke="#a03b2e" stroke-width="1">
+    <line x1="34" y1="60" x2="34" y2="112"/><line x1="66" y1="60" x2="66" y2="112"/>
+    <line x1="98" y1="60" x2="98" y2="112"/><line x1="130" y1="60" x2="130" y2="112"/>
+    <line x1="162" y1="60" x2="162" y2="112"/><line x1="194" y1="60" x2="194" y2="112"/>
+  </g>
+  <g fill="#e4bdb6">
+    <rect x="30" y="74" width="8" height="18"/><rect x="62" y="70" width="8" height="24"/>
+    <rect x="94" y="78" width="8" height="14"/><rect x="126" y="72" width="8" height="20"/>
+    <rect x="158" y="80" width="8" height="12"/><rect x="190" y="76" width="8" height="16"/>
+  </g>
+  <text x="212" y="88" font-size="7" fill="#8c2f1e">⋯</text>
+  <text x="24" y="126" font-size="6.8" fill="#8c2f1e">無限個の条件を同時に課せる → 開集合が多すぎる</text>
+
+  <rect x="244" y="26" width="212" height="112" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+  <text x="254" y="42" font-size="7.6" font-weight="700" fill="#1f3b5c">積位相　有限個の成分だけ制限する</text>
+
+  <g stroke="#35618f" stroke-width="1">
+    <line x1="264" y1="60" x2="264" y2="112"/><line x1="296" y1="60" x2="296" y2="112"/>
+    <line x1="328" y1="60" x2="328" y2="112"/><line x1="360" y1="60" x2="360" y2="112"/>
+    <line x1="392" y1="60" x2="392" y2="112"/><line x1="424" y1="60" x2="424" y2="112"/>
+  </g>
+  <g fill="#b9d2e6">
+    <rect x="260" y="74" width="8" height="18"/><rect x="324" y="70" width="8" height="24"/>
+  </g>
+  <g fill="#dfe6ec">
+    <rect x="292" y="60" width="8" height="52"/><rect x="356" y="60" width="8" height="52"/>
+    <rect x="388" y="60" width="8" height="52"/><rect x="420" y="60" width="8" height="52"/>
+  </g>
+  <text x="442" y="88" font-size="7" fill="#1f3b5c">⋯</text>
+  <text x="254" y="126" font-size="6.8" fill="#1f3b5c">濃い二つだけが制限され、残りは成分全体のまま</text>
+
+  <rect x="14" y="150" width="442" height="102" rx="4" fill="#f4f1ea" stroke="#8a6b2c"/>
+  <text x="24" y="165" font-size="7.8" font-weight="700" fill="#5a4520">どちらを選ぶかで、成り立つ定理が変わる</text>
+
+  <text x="24" y="184" font-size="7" font-weight="700" fill="#5a4520">成分ごとに連続 ⇒ 全体も連続</text>
+  <text x="250" y="184" font-size="7" fill="#1e4a41">積位相　○</text>
+  <text x="340" y="184" font-size="7" fill="#8c2f1e">箱位相　×</text>
+
+  <text x="24" y="202" font-size="7" font-weight="700" fill="#5a4520">コンパクトの積はコンパクト</text>
+  <text x="250" y="202" font-size="7" fill="#1e4a41">積位相　○（第21章）</text>
+  <text x="340" y="202" font-size="7" fill="#8c2f1e">箱位相　×</text>
+
+  <text x="24" y="220" font-size="7" font-weight="700" fill="#5a4520">可算個の距離空間の積が距離化可能</text>
+  <text x="250" y="220" font-size="7" fill="#1e4a41">積位相　○</text>
+  <text x="340" y="220" font-size="7" fill="#8c2f1e">箱位相　×</text>
+
+  <text x="24" y="242" font-size="7" fill="#6a6a68">箱位相で保たれるのはハウスドルフ性と正則性くらいで、実用上はほとんど使われない。</text>
+</svg>
+<figcaption>基本開集合の形の違いが、そのまま定理の成否を分ける。積位相は「射影を連続にする最小の位相」であり、その最小性が普遍性を保証する。</figcaption>
+</figure>
+
+<h3 id="s11-4">積が保つもの</h3>
+
+<div class="teiri" data-kind="命題" id="prop-seki-hozon">
+<h4></h4>
+<p class="no-indent">積位相について、次が成り立つ。</p>
+<p class="no-indent">（1）<m>\overline{\prod_i A_i} = \prod_i \overline{A_i}</m>。<br>
+（2）各 <m>X_i</m> がハウスドルフなら積もハウスドルフ。正則についても同様。<br>
+（3）各 <m>X_i</m> がコンパクトなら積もコンパクト（チコノフの定理、第21章）。<br>
+（4）可算個の距離空間の積は距離化可能。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">（1）を示す。<m>x \in \overline{\prod_i A_i}</m> とする。各 <m>i</m> について <m>p_i</m> は連続だから <m>p_i(\overline{\prod A_j}) \subseteq \overline{p_i(\prod A_j)} = \overline{A_i}</m>（<ref t="thm-renzoku-doti"/>（5））。よって左辺は右辺に含まれる。</p>
+<p>逆を示す。<m>x_i \in \overline{A_i}</m> がすべての <m>i</m> で成り立つとし、<m>x</m> の基本近傍 <m>\prod_i U_i</m>（有限個を除き <m>U_i = X_i</m>）を取る。<em>制限がかかるのは有限個の <m>i</m> だけである。</em>その各々で <m>U_i \cap A_i \ne \varnothing</m> だから点を選び、他の成分は <m>A_i</m> の任意の点を取れば、<m>\prod_i U_i \cap \prod_i A_i \ne \varnothing</m>。</p>
+<p><span class="yogo-hl">ここでも「有限個を除いて全体」が効いている。</span>箱位相ではこの議論が通らない。</p>
+</div>
+
+<p>一方、<em>可分性と第二可算性は非可算積では保たれない</em>——ただし可分性については驚くべき例外がある。<span class="yogo-hl">濃度 <m>2^{\aleph_0}</m> 以下の個数の可分空間の積は可分である</span>（ヒューイット–マルチェフスキ–ポンディチェリの定理）。第37章で扱う。</p>
+
+<div class="lv2">
+<h4>距離化できる積と、できない積</h4>
+<p>可算個の距離空間の積が距離化できることを、具体的に示しておく。<em>構成が、後の章で繰り返し使われる。</em></p>
+<p><strong>構成。</strong><m>(X_n, d_n)</m> を距離空間の列とする。各 <m>d_n</m> を <m>\bar{d}_n = \min(d_n, 1)</m> で置き換えても、同じ位相を与える。そのうえで</p>
+<M>d(x, y) = \sum_{n=1}^{\infty} \frac{1}{2^n}\, \bar{d}_n(x_n, y_n)</M>
+<p>と定める。右辺は <m>\sum 2^{-n} = 1</m> で押さえられるので収束する。<em>三角不等式は項ごとに成り立つので、和でも成り立つ。</em></p>
+<p><strong>位相が一致すること。</strong><m>d</m> の定める位相が積位相に等しいことを見る。<m>d</m>-球のなかに基本開集合が入ることは、<m>N</m> を大きく取って尾の和を小さくすればよい。逆に、基本開集合のなかに <m>d</m>-球が入ることは、制限のかかる有限個の成分についてだけ <m>\varepsilon</m> を調整すればよい。</p>
+<p><span class="yogo-hl">重みが <m>2^{-n}</m> で減衰することと、制限が有限個であることが、二つの向きでそれぞれ効いている。</span></p>
+<p><strong>なぜ非可算では駄目か。</strong>非可算個の和は定義できない。<em>より本質的には、距離空間は第一可算だが、非可算積は一般に第一可算でない。</em></p>
+<p>実際、<m>\{0,1\}^{I}</m> で <m>I</m> が非可算のとき、点 <m>0</m> の近傍基は非可算でなければならない。<m>0</m> の基本近傍は有限個の座標を <m>0</m> に固定するものだから、可算個の基本近傍が使う座標は可算個にとどまる。<em>使われていない座標を自由にできるので、可算個では近傍基にならない。</em></p>
+<p><strong>ヒルベルト立方体。</strong>特に重要な例が <m>[0,1]^{\mathbb{N}}</m> である。可算個のコンパクト距離空間の積なので、<span class="yogo-hl">コンパクトかつ距離化可能</span>である。第31章のウリゾーンの距離化定理は、第二可算かつ正則な空間がこの立方体に埋め込めることを示す。<em>第9章の★★で述べた「どこに入るか」を問う方法の、もっとも重要な行き先である。</em></p>
+<p><strong>カントール集合。</strong><m>\{0,1\}^{\mathbb{N}}</m> も同様にコンパクト距離空間である。これは実数直線のカントール集合と同相であり、第27章と第53章で再登場する。</p>
+</div>
+
+<div class="lv3">
+<h4>箱位相はまったく無用か</h4>
+<p>箱位相を切り捨てたが、これが何の役にも立たないかというと、そうでもない。<em>使われる場面と、使えない理由の両方を押さえておく。</em></p>
+<p><strong>箱位相が保つ性質。</strong>ハウスドルフ性と正則性は箱位相でも保たれる。<em>これらは「二点または点と閉集合を分離する」性質であり、有限個の成分を見れば足りるからではない</em>——実際には、各成分で分離を行い、それを全成分で同時に実行すればよい。<span class="yogo-hl">分離の議論は、無限個の条件を同時に課すことを嫌わない。</span></p>
+<p>一方、完全正則性は箱位相では一般に保たれない。連続関数を作る議論が、無限積では通らなくなる。</p>
+<p><strong>箱位相が使われる場面。</strong>関数解析で、一様収束に近い位相を作りたいときに箱位相的な構成が現れる。<em>各点で独立に誤差を制御したい場合である。</em>また、超準解析や、ある種の順序構造の研究で、箱位相が自然な役割を果たすことがある。</p>
+<p>しかしこれらは特殊な用途であり、<span class="yogo-hl">「積」という語を無条件に使うときは、つねに積位相を指す。</span>本書もそれに従う。</p>
+<p><strong>中間の位相。</strong>実は箱位相と積位相のあいだには、無数の位相がある。<m>\kappa</m> を基数として、「濃度 <m>\kappa</m> 未満の成分だけ制限してよい」という位相を <m>\kappa</m>-箱位相という。<m>\kappa = \aleph_0</m> が積位相、<m>\kappa</m> が十分大きければ箱位相である。</p>
+<p><em><m>\kappa</m>-箱位相は、<m>\kappa</m>-加法的な位相の研究で現れる。</em>通常の位相が有限交叉で閉じるのに対し、<m>\kappa</m> 個未満の交叉で閉じる位相を考える枠組みがあり、そこでは <m>\kappa</m>-箱位相が自然な積になる。第5章の★★で触れたアレクサンドロフ位相は、<m>\kappa</m> を制限しない極限の場合にあたる。</p>
+<p><strong>教訓。</strong><span class="yogo-hl">定義の選び方は趣味ではない。どの定理を成り立たせたいかが、定義を決める。</span>積位相が標準になったのは、それが普遍性——成分ごとに連続なら全体も連続——を満たす唯一の位相だからである。</p>
+<p>そしてこの普遍性は、第8章の★★★で述べた圏論的な言葉では「積が圏論的な積である」ことにほかならない。<em>箱位相を入れた <m>\prod X_i</m> は、圏 <m>\mathbf{Top}</m> における積ではない。</em>集合としては同じでも、圏としての役割を果たさない。第21章でチコノフの定理を証明するとき、この最小性がどこで効くかを改めて見る。</p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li>有限積では箱位相と積位相が一致することを示せ。</li>
+<li><m>\{0,1\}^{\omega}</m> が箱位相で離散位相になることを示せ。</li>
+<li>射影 <m>p_i</m> が開写像であることを示せ。また、閉写像とは限らないことを例で示せ。</li>
+<li><m>\mathbb{R}^2</m> で、開円板全体と開長方形全体が同じ位相を与えることを確かめよ。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li><ref t="cex-hako-renzoku"/> の議論を、自分の言葉で書き直せ。とくに「無限個の条件を同時に課す」ことがどこで効いているかを明示せよ。<span class="haiten">（15点）</span></li>
+<li><ref t="thm-seki-fuhen"/> を示し、この性質が積位相を一意に特徴づけることを述べよ。<span class="haiten">（15点）</span></li>
+<li>可算個の距離空間の積が距離化可能であることを、★★の構成に従って完全に示せ。<span class="haiten">（30点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li><m>\{0,1\}^{I}</m> が <m>I</m> の非可算性のもとで第一可算でないことを示せ。<span class="haiten">（25点）</span></li>
+<li>ヒルベルト立方体 <m>[0,1]^{\mathbb{N}}</m> がコンパクト距離空間であることを認めたうえで、その部分空間として <m>\mathbb{R}</m> が埋め込めることを示せ。<span class="haiten">（25点）</span></li>
+</ol>
+</div>
+</div>

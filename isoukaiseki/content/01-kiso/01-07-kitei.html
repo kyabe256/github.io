@@ -1,0 +1,223 @@
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>位相を与えるのに、開集合を全部並べる必要があるのか。</li>
+<li>どんな族からでも位相を生成できるのか。</li>
+<li>「小さい基底がある」ことは、空間について何を言っているのか。</li>
+</ul>
+</div>
+
+<h3 id="s7-1">開集合を全部書くのは無理である</h3>
+
+<p><m>\mathbb{R}</m> の開集合は非可算個ある。<em>それを全部並べて位相を与えるわけにはいかない。</em>実際には「開区間」という可算個の型を指定し、その合併として開集合を作った。この「型」にあたるものを基底という。</p>
+
+<div class="teigi" id="def-kitei">
+<h4></h4>
+<p class="no-indent">位相空間 <m>(X, \mathcal{T})</m> において、<m>\mathcal{B} \subseteq \mathcal{T}</m> が<strong>基底</strong>であるとは、<span class="yogo-hl">どの開集合も <m>\mathcal{B}</m> の元の合併として書ける</span>ことをいう。同じことだが、<m>U</m> が開で <m>x \in U</m> なら <m>x \in B \subseteq U</m> なる <m>B \in \mathcal{B}</m> がある、と言ってもよい。</p>
+</div>
+
+<p>二つの言い換えが同値であることを確かめておく。前者から後者は、<m>U = \bigcup_j B_j</m> と書いて <m>x</m> を含む <m>B_j</m> を取ればよい。後者から前者は、各 <m>x \in U</m> に対して <m>B_x</m> を取り <m>U = \bigcup_{x \in U} B_x</m> とすればよい。<em>どちらの形で使うかは場面による。</em></p>
+
+<p>では逆に、部分集合の族が与えられたとき、それが何かの位相の基底になっているかどうかは、どう判定するのか。</p>
+
+<div class="teiri" id="thm-kitei-hantei">
+<h4>基底になるための条件</h4>
+<p class="no-indent">集合 <m>X</m> の部分集合の族 <m>\mathcal{B}</m> が、<m>X</m> 上のある位相の基底になるための必要十分条件は、次の二つである。</p>
+<p class="no-indent">（B1）<m>\bigcup \mathcal{B} = X</m>。<br>
+（B2）<m>B_1, B_2 \in \mathcal{B}</m> と <m>x \in B_1 \cap B_2</m> に対し、<m>x \in B_3 \subseteq B_1 \cap B_2</m> なる <m>B_3 \in \mathcal{B}</m> が存在する。</p>
+<p class="no-indent">このとき位相は <m>\mathcal{T} = \{\, \mathcal{B} \text{ の元の合併} \,\}</m> として一意に定まる。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">必要性は易しい。<m>X</m> は開だから（B1）が要る。<m>B_1 \cap B_2</m> も開だから、基底の第二の言い換えより（B2）が要る。</p>
+<p>十分性を示す。<m>\mathcal{T}</m> を <m>\mathcal{B}</m> の元の合併全体とする。（T1）は（B1）と、空な合併が <m>\varnothing</m> であることによる。（T2）は合併の合併が合併であることから明らか。<em>問題は（T3）である。</em></p>
+<p><m>U = \bigcup_i B_i</m>、<m>V = \bigcup_j C_j</m> とし、<m>x \in U \cap V</m> とする。<m>x \in B_i</m> かつ <m>x \in C_j</m> なる <m>i, j</m> があり、（B2）より <m>x \in B \subseteq B_i \cap C_j \subseteq U \cap V</m> なる <m>B \in \mathcal{B}</m> がある。<m>x</m> は任意だったので <m>U \cap V</m> は <m>\mathcal{B}</m> の元の合併であり、<m>\mathcal{T}</m> に属する。</p>
+<p>一意性は、位相が基底の合併で決まることによる。</p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">（B2）は「<m>B_1 \cap B_2</m> が <m>\mathcal{B}</m> に属する」ことまでは要求していない。<em>交叉そのものではなく、交叉の各点のまわりに小さい基底元が取れればよい。</em><span class="yogo-hl">開区間の交叉は開区間なので <m>\mathbb{R}</m> では区別が見えないが、一般には見える。</span>たとえば平面の開円板全体は基底だが、二つの円板の交叉は円板でない。</p>
+</div>
+
+<h3 id="s7-2">準基底——条件をさらに落とす</h3>
+
+<p>（B2）すら満たさない族から出発したいこともある。そのときは、有限交叉をとってから合併をとればよい。</p>
+
+<div class="teigi" id="def-junkitei">
+<h4></h4>
+<p class="no-indent">族 <m>\mathcal{S} \subseteq \mathcal{P}(X)</m> に対し、<m>\mathcal{S}</m> の元の<strong>有限交叉</strong>全体は（B1）（B2）を満たす（空な交叉を <m>X</m> と約束する）。これを基底として生成される位相を、<m>\mathcal{S}</m> が<strong>生成する位相</strong>といい、<m>\mathcal{S}</m> を<strong>準基底</strong>という。</p>
+</div>
+
+<div class="teiri" data-kind="命題" id="prop-junkitei-saisho">
+<h4></h4>
+<p class="no-indent"><m>\mathcal{S}</m> が生成する位相は、<m>\mathcal{S}</m> を含む最小の位相である。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><m>\mathcal{S}</m> を含む位相 <m>\mathcal{T}'</m> を任意に取る。<m>\mathcal{T}'</m> は（T3）より有限交叉で閉じ、（T2）より合併で閉じるから、<m>\mathcal{S}</m> の有限交叉の合併をすべて含む。よって生成された位相は <m>\mathcal{T}'</m> に含まれる。<em>生成された位相自身が <m>\mathcal{S}</m> を含む位相なので、最小である。</em></p>
+<p>別の見方もできる。第5章の演習で見たように位相の共通部分は位相だから、<m>\mathcal{S}</m> を含む位相すべての共通部分をとればよい。<span class="yogo-hl">二つの構成が同じものを与えるのは、下から積み上げる道と上から削る道が一致するからである。</span></p>
+</div>
+
+<p>準基底は、第11章の積位相と第8章の始位相を定義するときに本領を発揮する。<em>「射影がすべて連続になる最小の位相」を作るには、射影による逆像の族を準基底に取ればよい。</em></p>
+
+<h3 id="s7-3">近傍系と可算公理</h3>
+
+<p>基底は空間全体に対する概念だった。点ごとに考えると、近傍基になる。</p>
+
+<div class="teigi" id="def-kinbo">
+<h4></h4>
+<p class="no-indent"><m>x \in X</m> に対し、<m>x</m> を含む開集合を <m>x</m> の<strong>近傍</strong>という。<m>x</m> の近傍の族 <m>\mathcal{B}_x</m> が <m>x</m> の<strong>近傍基</strong>であるとは、<m>x</m> を含むどの開集合 <m>U</m> についても <m>x \in B \subseteq U</m> なる <m>B \in \mathcal{B}_x</m> があることをいう。</p>
+</div>
+
+<div class="teigi" id="def-kasan-kori">
+<h4>可算公理</h4>
+<p class="no-indent">空間 <m>X</m> が<strong>第一可算</strong>であるとは、各点が可算な近傍基をもつことをいう。<strong>第二可算</strong>であるとは、可算な基底をもつことをいう。<strong>可分</strong>であるとは、可算な稠密部分集合をもつことをいう。</p>
+</div>
+
+<div class="teiri" data-kind="命題" id="prop-kasan-kankei">
+<h4></h4>
+<p class="no-indent">第二可算ならば、第一可算であり、かつ可分である。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><m>\mathcal{B}</m> を可算基底とする。第一可算は、<m>x</m> を含む <m>\mathcal{B}</m> の元全体が <m>x</m> の可算な近傍基になることによる。</p>
+<p>可分を示す。各 <m>B \in \mathcal{B} \setminus \{\varnothing\}</m> から点 <m>x_B</m> を一つ選ぶ（可算選択公理を使う）。<m>D = \{\, x_B \,\}</m> は可算である。<m>U</m> を空でない開集合とすると、<m>\mathcal{B}</m> の元 <m>B \subseteq U</m> で空でないものがあり、<m>x_B \in U</m>。<em>よって <m>D</m> はどの空でない開集合とも交わり、第6章の特徴づけより稠密である。</em></p>
+</div>
+
+<p><span class="yogo-hl">逆はどちらも成り立たない。</span>その反例が、この本で繰り返し登場する空間である。</p>
+
+<div class="hanrei" id="cex-sorgenfrey">
+<h4>ゾルゲンフライ直線</h4>
+<p class="no-indent"><m>\mathbb{R}</m> 上で、半開区間 <m>[a, b)</m> の全体を基底とする位相を考える。（B1）（B2）は容易に確かめられる。この空間を<strong>ゾルゲンフライ直線</strong> <span class="orig">Sorgenfrey line</span> といい、<m>\mathbb{R}_\ell</m> と書く。</p>
+<p><m>\mathbb{R}_\ell</m> は通常の位相より真に強い。<m>(a,b) = \bigcup_{n} [a + 1/n,\ b)</m> なので通常の開集合はすべて開だが、<m>[0,1)</m> は通常の位相では開でない。</p>
+<p><strong>第一可算である。</strong><m>\{\, [x, x + 1/n) \mid n \in \mathbb{N} \,\}</m> が <m>x</m> の可算近傍基になる。</p>
+<p><strong>可分である。</strong><m>\mathbb{Q}</m> はやはり稠密である。どの <m>[a,b)</m> にも有理数がある。</p>
+<p><strong>しかし第二可算でない。</strong><m>\mathcal{B}</m> を基底とする。各 <m>x \in \mathbb{R}</m> について、<m>x \in B_x \subseteq [x, x+1)</m> なる <m>B_x \in \mathcal{B}</m> を取る。<em><m>x \ne y</m> なら <m>B_x \ne B_y</m> である</em>——なぜなら <m>\inf B_x = x</m> であり、しかも <m>x \in B_x</m> だから、<m>B_x</m> が最小元 <m>x</m> をもつ。よって <m>x \mapsto B_x</m> は単射であり、<m>\mathcal{B}</m> は非可算である。</p>
+<p><span class="yogo-hl">可分で第一可算だが第二可算でない——三つの可算公理が別物であることを、この一つの空間が示している。</span></p>
+</div>
+
+<figure>
+<svg viewBox="0 0 470 262" width="470" height="262" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <defs>
+    <marker id="a7" markerWidth="8" markerHeight="8" refX="7" refY="2.6" orient="auto"><path d="M0,0 L7,2.6 L0,5.2 z" fill="#35618f"/></marker>
+  </defs>
+
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">準基底から位相へ、そして可算公理の階層</text>
+
+  <rect x="14" y="26" width="104" height="52" rx="4" fill="#f4f1ea" stroke="#8a6b2c"/>
+  <text x="66" y="42" font-size="7.4" text-anchor="middle" font-weight="700" fill="#5a4520">準基底 S</text>
+  <text x="24" y="56" font-size="6.6" fill="#5a4520">条件はいらない</text>
+  <text x="24" y="68" font-size="6.6" fill="#5a4520">どんな族でもよい</text>
+
+  <rect x="150" y="26" width="104" height="52" rx="4" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="202" y="42" font-size="7.4" text-anchor="middle" font-weight="700" fill="#1e4a41">基底 B</text>
+  <text x="160" y="56" font-size="6.6" fill="#1e4a41">S の有限交叉</text>
+  <text x="160" y="68" font-size="6.6" fill="#1e4a41">（B1）（B2）を満たす</text>
+
+  <rect x="286" y="26" width="104" height="52" rx="4" fill="#dce7f0" stroke="#35618f"/>
+  <text x="338" y="42" font-size="7.4" text-anchor="middle" font-weight="700" fill="#1f3b5c">位相 T</text>
+  <text x="296" y="56" font-size="6.6" fill="#1f3b5c">B の元の合併</text>
+  <text x="296" y="68" font-size="6.6" fill="#1f3b5c">S を含む最小の位相</text>
+
+  <path d="M122,52 L146,52" stroke="#35618f" stroke-width="1.3" fill="none" marker-end="url(#a7)"/>
+  <text x="134" y="45" font-size="6.2" text-anchor="middle" fill="#35618f">有限交叉</text>
+  <path d="M258,52 L282,52" stroke="#35618f" stroke-width="1.3" fill="none" marker-end="url(#a7)"/>
+  <text x="270" y="45" font-size="6.2" text-anchor="middle" fill="#35618f">任意合併</text>
+
+  <rect x="14" y="94" width="442" height="80" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+  <text x="24" y="109" font-size="7.8" font-weight="700" fill="#1f3b5c">可算公理の含意——矢印は一方向にしか進まない</text>
+
+  <rect x="42" y="120" width="96" height="26" rx="3" fill="#dce7f0" stroke="#35618f"/>
+  <text x="90" y="137" font-size="7.2" text-anchor="middle" fill="#1f3b5c">第二可算</text>
+
+  <rect x="196" y="120" width="96" height="26" rx="3" fill="#e8f0f7" stroke="#35618f"/>
+  <text x="244" y="137" font-size="7.2" text-anchor="middle" fill="#1f3b5c">第一可算</text>
+
+  <rect x="350" y="120" width="96" height="26" rx="3" fill="#e8f0f7" stroke="#35618f"/>
+  <text x="398" y="137" font-size="7.2" text-anchor="middle" fill="#1f3b5c">可分</text>
+
+  <path d="M142,128 L192,128" stroke="#35618f" stroke-width="1.3" fill="none" marker-end="url(#a7)"/>
+  <path d="M142,140 C 200,166 300,166 348,142" stroke="#35618f" stroke-width="1.3" fill="none" marker-end="url(#a7)"/>
+
+  <text x="167" y="124" font-size="6.2" text-anchor="middle" fill="#8c2f1e">逆は偽</text>
+  <text x="245" y="168" font-size="6.2" text-anchor="middle" fill="#8c2f1e">逆は偽　どちらもゾルゲンフライ直線が反例</text>
+
+  <rect x="14" y="186" width="442" height="68" rx="4" fill="#fdf6f4" stroke="#e0c3bd"/>
+  <text x="24" y="201" font-size="7.8" font-weight="700" fill="#8c2f1e">ゾルゲンフライ直線——本書でもっとも働く反例</text>
+  <text x="24" y="217" font-size="7" fill="#8c2f1e">基底は半開区間 [a, b)　通常の位相より真に強い</text>
+  <text x="24" y="231" font-size="7" fill="#8c2f1e">第一可算・可分・正規・リンデレーフ　だが第二可算でなく、距離化もできない</text>
+  <text x="24" y="245" font-size="7" fill="#6a6a68">第17章・第26章・第32章・第37章でも、この直線が判定の基準になる</text>
+</svg>
+<figcaption>準基底から位相が生成される順序と、三つの可算公理の関係。矢印の逆が成り立たないことを、ゾルゲンフライ直線が一手で示す。</figcaption>
+</figure>
+
+<h3 id="s7-4">距離空間では一致する</h3>
+
+<p>可算公理の区別は、一般の位相空間で初めて現れる。</p>
+
+<div class="teiri" data-kind="命題" id="prop-kyori-kasan">
+<h4></h4>
+<p class="no-indent">距離空間においては、第二可算・可分・リンデレーフの三つは同値である。また距離空間は常に第一可算である。</p>
+</div>
+
+<p>第一可算は <m>\{\, U_{1/n}(x) \,\}</m> を取ればよい。三つの同値は第29章で証明する。<em>可分ならば第二可算であることの証明には、稠密集合の各点のまわりに有理半径の球を並べる。</em><span class="yogo-hl">距離があると、可算な「半径の目盛り」が使えるので、局所的な可算性が大域的な可算性に持ち上がる。</span></p>
+
+<p>ゾルゲンフライ直線が反例になりえたのは、まさにこの持ち上げが効かないからである。<em>その帰結として、ゾルゲンフライ直線は距離化できない</em>（第31章）。可算公理は、距離化定理を語るための準備でもある。</p>
+
+<div class="lv2">
+<h4>基底の大きさを測る——weight という不変量</h4>
+<p>第二可算であるかどうかは「はい／いいえ」の問いだった。<em>それを数量化すると、空間を測る物差しになる。</em></p>
+<p><strong>定義。</strong>空間 <m>X</m> の<strong>weight</strong> <m>w(X)</m> とは、<m>X</m> の基底の濃度の最小値をいう（有限空間で困らないよう、慣例として <m>\aleph_0</m> を下限とする）。同様に、<m>x</m> の近傍基の濃度の最小値を <m>\chi(x, X)</m>、その上限を空間の <strong>character</strong> <m>\chi(X)</m> という。稠密部分集合の濃度の最小値を <strong>density</strong> <m>d(X)</m> という。</p>
+<p>この言葉で先ほどの命題を書き直すと、<m>w(X) = \aleph_0</m> が第二可算、<m>\chi(X) = \aleph_0</m> が第一可算、<m>d(X) = \aleph_0</m> が可分である。<span class="yogo-hl">三つの「はい／いいえ」が、三つの基数の値になった。</span></p>
+<p><strong>一般に成り立つ不等式。</strong>第二可算から第一可算と可分が出たのと同じ議論で、次が示される。</p>
+<M>\chi(X) \le w(X), \qquad d(X) \le w(X)</M>
+<p>ゾルゲンフライ直線では <m>\chi = d = \aleph_0</m> だが <m>w = 2^{\aleph_0}</m> であり、<em>不等式が真に成り立つ</em>ことが分かる。</p>
+<p><strong>距離空間での一致。</strong>距離空間では <m>w(X) = d(X)</m> が成り立つ。証明は先ほど述べた「有理半径の球を並べる」議論を一般の濃度で行うものである。<em>距離という構造が、二つの不変量を潰している。</em></p>
+<p><strong>なぜこの数え方をするのか。</strong>基底の大きさは、空間を「記述するのに必要な情報量」の目安になる。<span class="yogo-hl">weight が小さい空間は、小さいデータで指定できる空間である。</span>第二可算かつ正則な空間が距離化できるというウリゾーンの定理（第31章）は、「情報量が可算に収まる空間は、実数一本ぶんの構造で表せる」と読むこともできる。</p>
+<p>この方向の研究が第V部の主題になる。<em>基数不変量のあいだにどんな不等式が成り立つか、そしてどの不等式が公理系から独立か</em>——第35章から第37章で扱う。</p>
+</div>
+
+<div class="lv3">
+<h4>生成された位相の記述しにくさ</h4>
+<p>準基底 <m>\mathcal{S}</m> から生成された位相は、「<m>\mathcal{S}</m> を含む最小の位相」として一行で定義できる。<em>だが、その元を具体的に書き下すのは別の問題である。</em></p>
+<p><strong>有限交叉と任意合併で足りる理由。</strong><m>\mathcal{S}</m> の元から出発して、有限交叉と任意合併を交互に繰り返したら、どこまで行くだろうか。<span class="yogo-hl">答えは「一往復で止まる」である。</span>合併の有限交叉は、分配法則により交叉の合併に書き換えられるからである。</p>
+<M>\Big(\bigcup_i A_i\Big) \cap \Big(\bigcup_j B_j\Big) = \bigcup_{i,j} (A_i \cap B_j)</M>
+<p>ここで有限交叉しか許さないことが効いている。<em>もし無限交叉を許せば、この書き換えは無限個の添字の選択を要し、止まらなくなる。</em>第5章の★★で見たアレクサンドロフ位相の異常さは、ここにも現れている。</p>
+<p><strong>ボレル集合との対比。</strong>同じ問いを、可算合併と補集合について問うとどうなるか。<m>\mathcal{S}</m> を含む最小の <m>\sigma</m>-加法族は、<span class="yogo-hl">有限回の操作では作れない。</span>超限帰納法で <m>\omega_1</m> 段階まで登る必要がある——これがボレル階層であり、第52章と第54章で扱う。</p>
+<p>階層が <m>\omega_1</m> で止まるのは、可算個の操作を <m>\omega_1</m> 回繰り返しても、各段階で使う添字が可算だからである。<em>第4章で見た共終数の議論が、ここで具体的に働く</em>——<m>\mathrm{cf}(\omega_1) = \omega_1 > \omega</m> なので、可算個の可算段階の上限がまだ <m>\omega_1</m> に届かない。</p>
+<p><strong>位相と <m>\sigma</m>-加法族の違い。</strong>この対比は、二つの構造の性格の違いを言い当てている。<span class="yogo-hl">位相は「有限交叉・任意合併」で、生成が一往復で止まる。<m>\sigma</m>-加法族は「可算合併・補集合」で、生成が <m>\omega_1</m> 段階かかる。</span></p>
+<p>位相のほうが生成しやすいぶん、位相から得られる情報は少ない。逆に <m>\sigma</m>-加法族は扱いにくいが、測度を載せられる。<em>本書の第VI部から第VII部への移行は、この二つの構造を行き来する話でもある。</em>第52章でボレル集合を導入するとき、いま述べた階層の話に戻る。</p>
+<p><strong>なお、記述集合論という分野がある。</strong>ボレル階層のさらに上——解析集合、射影集合——を扱うこの分野では、階層の各段階の性質が集合論の公理に依存する。<em>第4章の★★★で述べた「決まらないことが数学の対象として現れる」現象が、ここでも起きている。</em>本書はこの方向には踏み込まないが、第53章で非可測集合を扱うときに一度だけ触れる。</p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li>平面の開円板全体が基底の条件（B1）（B2）を満たすことを確かめよ。</li>
+<li><m>\mathbb{R}</m> において、端点が有理数の開区間全体が可算基底になることを示せ。</li>
+<li>離散位相の最小の基底は何か。密着位相ではどうか。</li>
+<li>半開区間 <m>[a,b)</m> の全体が（B2）を満たすことを確かめよ。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li><ref t="thm-kitei-hantei"/> の十分性の証明で、（B2）が（T3）のどこに効いているかを説明せよ。<span class="haiten">（10点）</span></li>
+<li><ref t="cex-sorgenfrey"/> が第二可算でないことの証明を、自分の言葉で書き直せ。とくに <m>x \mapsto B_x</m> が単射である理由を丁寧に述べよ。<span class="haiten">（15点）</span></li>
+<li>可分な距離空間が第二可算であることを示せ。<span class="haiten">（20点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li>可分だが第一可算でない空間を作れ。<span class="haiten">（25点）</span></li>
+<li>準基底から生成された位相が、有限交叉と任意合併の一往復で得られることを、分配法則を用いて厳密に示せ。さらに、無限交叉を許すとこの議論が破れることを説明せよ。<span class="haiten">（25点）</span></li>
+</ol>
+</div>
+</div>

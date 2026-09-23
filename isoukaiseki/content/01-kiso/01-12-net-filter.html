@@ -1,0 +1,201 @@
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>点列で閉包を捉えきれないのは、どんな空間か。</li>
+<li>点列の「番号」を何に取り替えれば、一般の空間でも足りるのか。</li>
+<li>ネットとフィルターは、どちらが本質的なのか。</li>
+</ul>
+</div>
+
+<h3 id="s12-1">点列では足りない</h3>
+
+<p>距離空間では、閉包が点列で特徴づけられる。<m>x \in \overline{A}</m> であることと、<m>A</m> の点列で <m>x</m> に収束するものがあることは同値だった。<em>証明には <m>U_{1/n}(x)</m> から点を選ぶ操作を使う。</em><span class="yogo-hl">可算な近傍基があることが、この議論の前提である。</span></p>
+
+<p>第一可算な空間なら、同じ議論が通る。ではそうでない空間では、何が起きるのか。</p>
+
+<div class="hanrei" id="cex-tenretsu-fusoku">
+<h4>点列では閉包が捉えられない</h4>
+<p class="no-indent"><m>X = \{0,1\}^{I}</m> を、<m>I</m> が非可算な添字集合として、積位相で考える。<m>A \subseteq X</m> を「有限個を除くすべての成分が <m>0</m> である点」の全体とする。</p>
+<p><strong>すべて <m>1</m> の点 <m>\mathbf{1}</m> は <m>\overline{A}</m> に属する。</strong>実際、<m>\mathbf{1}</m> の基本近傍は有限個の成分を <m>1</m> に指定するだけだから、残りを <m>0</m> にした点が <m>A</m> に属し、近傍に入る。</p>
+<p><strong>しかし <m>A</m> のどの点列も <m>\mathbf{1}</m> に収束しない。</strong><m>(a^{(n)})</m> を <m>A</m> の点列とする。各 <m>a^{(n)}</m> は有限個の成分でしか <m>1</m> をとらないので、<em>可算個の点列全体が <m>1</m> をとる成分は、可算個にとどまる。</em><m>I</m> は非可算だから、どの <m>a^{(n)}</m> でも <m>0</m> である成分 <m>j</m> がある。すると <m>p_j^{-1}(\{1\})</m> は <m>\mathbf{1}</m> の近傍でありながら、点列のどの項も含まない。</p>
+<p><span class="yogo-hl">閉包に属するのに、そこへ向かう点列がない。</span>点列という道具が、この空間では届いていない。</p>
+</div>
+
+<p>原因ははっきりしている。<em>点列の添字は自然数、すなわち可算な整列集合である。</em>一方、<m>\mathbf{1}</m> の近傍系は非可算で、しかも有向的に細かくなっていく。<span class="yogo-hl">近傍系の「細かさの階層」に、自然数では追いつけない。</span></p>
+
+<p>ならば、添字集合のほうを取り替えればよい。</p>
+
+<h3 id="s12-2">ネット——添字を有向集合にする</h3>
+
+<div class="teigi" id="def-yuko">
+<h4></h4>
+<p class="no-indent">半順序集合 <m>(D, \le)</m> が<strong>有向集合</strong>であるとは、空でなく、どの <m>a, b \in D</m> に対しても <m>a \le c</m> かつ <m>b \le c</m> なる <m>c \in D</m> が存在することをいう。</p>
+<p>有向集合から位相空間への写像 <m>x \colon D \to X</m> を<strong>ネット</strong>といい、<m>(x_\alpha)_{\alpha \in D}</m> と書く。ネットが <m>x \in X</m> に<strong>収束</strong>するとは、<m>x</m> のどの近傍 <m>U</m> についても、ある <m>\alpha_0 \in D</m> があって <m>\alpha \ge \alpha_0</m> なるすべての <m>\alpha</m> で <m>x_\alpha \in U</m> となることをいう。</p>
+</div>
+
+<div class="rei" id="rei-kinbokei-yuko">
+<h4>近傍系そのものが有向集合になる</h4>
+<p class="no-indent"><m>x \in X</m> の近傍全体 <m>\mathcal{N}_x</m> に、<span class="yogo-hl">逆向きの包含</span>で順序を入れる。<m>U \le V \iff V \subseteq U</m>。二つの近傍 <m>U, V</m> に対し <m>U \cap V</m> が両方より「大きい」から、これは有向集合である。</p>
+<p><em>「先へ進む」ことが「小さい近傍に入る」ことにあたる。</em>この有向集合を添字に使えば、どんな空間でも近傍系の細かさを追いかけられる。点列の自然数を、近傍系そのもので置き換えたのである。</p>
+</div>
+
+<div class="teiri" id="thm-net-heiho">
+<h4>ネットによる特徴づけ</h4>
+<p class="no-indent">（1）<m>x \in \overline{A}</m> <m>\iff</m> <m>A</m> のネットで <m>x</m> に収束するものが存在する。<br>
+（2）<m>f \colon X \to Y</m> が <m>x</m> で連続 <m>\iff</m> <m>x_\alpha \to x</m> なるどのネットについても <m>f(x_\alpha) \to f(x)</m>。<br>
+（3）<m>X</m> がハウスドルフ <m>\iff</m> どのネットの収束先も高々一つ。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">（1）の右から左は易しい。<m>x_\alpha \to x</m> かつ <m>x_\alpha \in A</m> なら、<m>x</m> のどの近傍も <m>x_\alpha</m> を含むから <m>A</m> と交わる（第6章の特徴づけ）。</p>
+<p>左から右を示す。<m>x \in \overline{A}</m> とし、<m>D = \mathcal{N}_x</m> を <ref t="rei-kinbokei-yuko"/> の有向集合とする。各 <m>U \in D</m> について <m>U \cap A \ne \varnothing</m> だから、点 <m>x_U \in U \cap A</m> を選ぶ（選択公理）。<em>このネットは <m>x</m> に収束する</em>——近傍 <m>V</m> を与えると、<m>U \ge V</m>、すなわち <m>U \subseteq V</m> なる <m>U</m> について <m>x_U \in U \subseteq V</m> だからである。</p>
+<p>（2）と（3）も同様に、近傍系を添字にしたネットを作って示す。<span class="yogo-hl">点列の議論で「各 <m>n</m> について <m>U_{1/n}(x)</m> から選ぶ」としていたところを、「各近傍から選ぶ」に読み替えるだけである。</span></p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">ネットには、点列にない現象がある。<em>部分ネットの定義は、部分列より込み入っている。</em>添字の単調な部分列を取るだけでは足りず、「共終な写像」を経由する必要がある。この技術的な煩わしさが、次に述べるフィルターを使う動機の一つになる。</p>
+</div>
+
+<h3 id="s12-3">フィルター——点を数えずに収束を語る</h3>
+
+<div class="teigi" id="def-filter">
+<h4></h4>
+<p class="no-indent"><m>X</m> の部分集合の族 <m>\mathcal{F}</m> が<strong>フィルター</strong>であるとは、次を満たすことをいう。</p>
+<p class="no-indent">（1）<m>\varnothing \notin \mathcal{F}</m> かつ <m>X \in \mathcal{F}</m>。<br>
+（2）<m>F, G \in \mathcal{F}</m> ならば <m>F \cap G \in \mathcal{F}</m>。<br>
+（3）<m>F \in \mathcal{F}</m> かつ <m>F \subseteq G</m> ならば <m>G \in \mathcal{F}</m>。</p>
+<p><m>\mathcal{F}</m> が <m>x</m> に<strong>収束</strong>するとは、<m>x</m> のすべての近傍が <m>\mathcal{F}</m> に属することをいう。包含について極大なフィルターを<strong>超フィルター</strong>という。</p>
+</div>
+
+<p>フィルターは「大きい集合の族」と読める。<em>（2）と（3）は「大きい集合どうしの交わりは大きく、大きい集合を含むものは大きい」と言っている。</em><span class="yogo-hl">収束とは、近傍がすべて大きい集合になることである。</span></p>
+
+<div class="teiri" data-kind="命題" id="prop-cho-filter">
+<h4></h4>
+<p class="no-indent">フィルター <m>\mathcal{F}</m> が超フィルターであるための必要十分条件は、どの <m>A \subseteq X</m> についても <m>A \in \mathcal{F}</m> または <m>X \setminus A \in \mathcal{F}</m> が成り立つことである。また、どのフィルターも超フィルターに拡張できる（選択公理）。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">十分性を示す。条件を満たす <m>\mathcal{F}</m> を真に含むフィルター <m>\mathcal{G}</m> があるとし、<m>A \in \mathcal{G} \setminus \mathcal{F}</m> を取る。条件より <m>X \setminus A \in \mathcal{F} \subseteq \mathcal{G}</m>。すると <m>A \cap (X\setminus A) = \varnothing \in \mathcal{G}</m> となって（1）に反する。</p>
+<p>必要性を示す。<m>A \notin \mathcal{F}</m> とする。すべての <m>F \in \mathcal{F}</m> について <m>F \cap (X \setminus A) \ne \varnothing</m> であることを見る。もし <m>F \cap (X\setminus A) = \varnothing</m> なる <m>F</m> があれば <m>F \subseteq A</m> で（3）より <m>A \in \mathcal{F}</m> となり矛盾。<em>よって <m>\mathcal{F}</m> に <m>X \setminus A</m> を付け加えて生成したものがフィルターになり、極大性より <m>X \setminus A \in \mathcal{F}</m>。</em></p>
+<p>拡張の存在はツォルンの補題による（第3章）。フィルターの鎖の合併がフィルターであることを確かめればよい。<span class="yogo-hl">この主張を超フィルター補題といい、選択公理より真に弱い。</span></p>
+</div>
+
+<figure>
+<svg viewBox="0 0 470 258" width="470" height="258" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <defs>
+    <marker id="a12" markerWidth="8" markerHeight="8" refX="7" refY="2.6" orient="auto"><path d="M0,0 L7,2.6 L0,5.2 z" fill="#35618f"/></marker>
+  </defs>
+
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">点列・ネット・フィルター——収束を語る三つの道具</text>
+
+  <rect x="14" y="26" width="142" height="96" rx="4" fill="#fdf6f4" stroke="#e0c3bd"/>
+  <text x="85" y="42" font-size="7.6" text-anchor="middle" font-weight="700" fill="#8c2f1e">点列</text>
+  <text x="24" y="58" font-size="6.8" fill="#8c2f1e">添字は自然数</text>
+  <text x="24" y="70" font-size="6.8" fill="#8c2f1e">部分列が簡単</text>
+  <text x="24" y="86" font-size="6.8" fill="#8c2f1e">第一可算な空間でのみ十分</text>
+  <text x="24" y="104" font-size="6.6" fill="#6a6a68">非可算積では届かない</text>
+  <text x="24" y="115" font-size="6.6" fill="#6a6a68">（本章の反例）</text>
+
+  <rect x="166" y="26" width="142" height="96" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+  <text x="237" y="42" font-size="7.6" text-anchor="middle" font-weight="700" fill="#1f3b5c">ネット</text>
+  <text x="176" y="58" font-size="6.8" fill="#1f3b5c">添字は有向集合</text>
+  <text x="176" y="70" font-size="6.8" fill="#1f3b5c">点列の直接の一般化</text>
+  <text x="176" y="86" font-size="6.8" fill="#1f3b5c">どの空間でも十分</text>
+  <text x="176" y="104" font-size="6.6" fill="#6a6a68">部分ネットの定義が</text>
+  <text x="176" y="115" font-size="6.6" fill="#6a6a68">やや込み入る</text>
+
+  <rect x="318" y="26" width="138" height="96" rx="4" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="387" y="42" font-size="7.6" text-anchor="middle" font-weight="700" fill="#1e4a41">フィルター</text>
+  <text x="328" y="58" font-size="6.8" fill="#1e4a41">添字を持たない</text>
+  <text x="328" y="70" font-size="6.8" fill="#1e4a41">集合の族として語る</text>
+  <text x="328" y="86" font-size="6.8" fill="#1e4a41">どの空間でも十分</text>
+  <text x="328" y="104" font-size="6.6" fill="#6a6a68">超フィルターが使える</text>
+  <text x="328" y="115" font-size="6.6" fill="#6a6a68">（第21章・第23章）</text>
+
+  <path d="M160,74 L162,74" stroke="#35618f" stroke-width="1.3" fill="none" marker-end="url(#a12)"/>
+  <path d="M312,74 L314,74" stroke="#2f6b5f" stroke-width="1.3" fill="none" marker-end="url(#a12)"/>
+
+  <rect x="14" y="134" width="442" height="50" rx="4" fill="#efe0e6" stroke="#8a3b62"/>
+  <text x="24" y="149" font-size="7.8" font-weight="700" fill="#6b2a48">ネットとフィルターは互いに翻訳できる</text>
+  <text x="24" y="165" font-size="7" fill="#6b2a48">ネット → フィルター　「尾の集合を含む集合」全体をとる</text>
+  <text x="24" y="178" font-size="7" fill="#6b2a48">フィルター → ネット　「（点, その点を含むフィルターの元）」の対を有向集合にする</text>
+
+  <rect x="14" y="196" width="442" height="56" rx="4" fill="#f4f1ea" stroke="#8a6b2c"/>
+  <text x="24" y="211" font-size="7.8" font-weight="700" fill="#5a4520">超フィルターが効く場面</text>
+  <text x="24" y="227" font-size="7" fill="#5a4520">コンパクト性 ⇔ すべての超フィルターが収束する（第20章）</text>
+  <text x="24" y="242" font-size="7" fill="#5a4520">この言い換えが、チコノフの定理（第21章）の短い証明を可能にする</text>
+</svg>
+<figcaption>三つの道具は表現力が同じではない。点列は第一可算な空間でしか足りず、ネットとフィルターはどの空間でも足りる。ネットとフィルターは互いに翻訳可能である。</figcaption>
+</figure>
+
+<h3 id="s12-4">なぜ二つあるのか</h3>
+
+<p>ネットとフィルターは、表現力としては同等である。<em>互いに翻訳できる。</em></p>
+
+<p>ネット <m>(x_\alpha)</m> から、尾の集合 <m>T_{\alpha_0} = \{\, x_\alpha \mid \alpha \ge \alpha_0 \,\}</m> を含む集合全体を取れば、フィルターになる。逆にフィルター <m>\mathcal{F}</m> から、<m>D = \{\, (x, F) \mid F \in \mathcal{F},\ x \in F \,\}</m> を <m>(x,F) \le (y,G) \iff G \subseteq F</m> で順序づけると有向集合になり、<m>(x,F) \mapsto x</m> がネットを与える。<span class="yogo-hl">どちらの収束も、他方の収束に対応する。</span></p>
+
+<p><em>ではなぜ両方使うのか。</em>用途が違うからである。</p>
+
+<p>ネットは<strong>点列の直接の一般化</strong>なので、解析学の議論をそのまま持ち上げられる。「<m>x_\alpha \to x</m> ならば <m>f(x_\alpha) \to f(x)</m>」という書き方は、ε-δ に慣れた目には読みやすい。<em>第X部のスペクトル理論や第XI部で、作用素の収束を扱うときに使う。</em></p>
+
+<p>フィルターは<strong>点を数えない</strong>ので、極大性の議論と相性がよい。<span class="yogo-hl">超フィルターという「これ以上細かくできない収束の芽」が取れることが、決定的な利点である。</span>コンパクト性は「すべての超フィルターが収束する」と言い換えられ（第20章）、この形からチコノフの定理（第21章）が数行で出る。<em>ネットで同じことをしようとすると、普遍ネットという概念を用意する必要があり、かえって煩雑になる。</em></p>
+
+<div class="lv2">
+<h4>点列で足りる空間——第一可算性と点列空間</h4>
+<p>点列が足りないのは非可算な状況だった。<em>ではどこまでなら足りるのか。</em>条件を整理しておく。</p>
+<p><strong>第一可算なら足りる。</strong><m>x</m> の可算近傍基 <m>\{U_n\}</m> があるとき、<m>V_n = U_1 \cap \cdots \cap U_n</m> と置けば減少列になる。<em>各 <m>V_n</m> から点を選べば、それは自然数を添字とするネット、すなわち点列である。</em><span class="yogo-hl">可算性が、有向集合を自然数に潰す役割を果たしている。</span></p>
+<p>したがって距離空間では点列で足りる。解析学の大部分が点列だけで書けるのは、このためである。</p>
+<p><strong>もう少し弱い条件。</strong>空間 <m>X</m> が<strong>点列空間</strong>であるとは、「点列閉ならば閉」が成り立つことをいう。すなわち、<m>A</m> の点列の極限がすべて <m>A</m> に入るなら <m>A</m> は閉である、という条件である。第一可算ならば点列空間だが、逆は成り立たない。</p>
+<p>さらに中間に<strong>フレシェ–ウリゾーン空間</strong>がある。これは「<m>x \in \overline{A}</m> ならば <m>A</m> の点列が <m>x</m> に収束する」という条件で、閉包そのものが点列で捉えられることを要求する。</p>
+<M>\text{第一可算} \implies \text{フレシェ–ウリゾーン} \implies \text{点列空間}</M>
+<p>どちらの含意も逆は成り立たない。<em>これら三つの区別は、第一可算性が壊れたところで初めて意味をもつ。</em></p>
+<p><strong>商が壊す。</strong>第10章で見たように、商は可算公理を壊す。<span class="yogo-hl">ところが点列空間であることは商で保たれる。</span>実際、点列空間とは「距離空間の商として得られる空間」と特徴づけられる。<em>第一可算性より弱い条件を考える意味は、ここにある</em>——商を取っても生き残る、点列に関する最良の条件なのである。</p>
+<p><strong>本書での扱い。</strong>本書はネットとフィルターを使うので、これらの区別に深く立ち入らない。ただし第50章で関数列の収束を扱うとき、また第70章で弱位相を扱うとき、<em>「点列では足りない」という事態に再び出会う。</em>弱位相は一般に第一可算でなく、有界集合に制限して初めて点列が使えるようになる。第71章のバナッハ–アラオグルの定理が、その典型である。</p>
+</div>
+
+<div class="lv3">
+<h4>超フィルターの奇妙さと、その使い道</h4>
+<p>超フィルターは、位相空間論のいくつかの定理を劇的に短くする。<em>その代償として、具体物としてはまったく手に入らない。</em></p>
+<p><strong>自明な超フィルターと、そうでないもの。</strong>点 <m>x</m> を固定し、<m>x</m> を含む集合全体を取ると超フィルターになる。これを主超フィルターという。<span class="yogo-hl">問題は、主でない超フィルターである。</span></p>
+<p>自然数全体の上で、有限集合の補集合全体（フレシェフィルター）を考え、これを含む超フィルターを取る。<em>この超フィルターは主でない。</em>ところが、その存在はツォルンの補題に依存しており、<span class="yogo-hl">具体的に書き下すことはできない。</span>第3章で見た「選択公理は選べると言うが、どう選ぶかは教えない」の、もっとも純粋な現れである。</p>
+<p>実際、選択公理を仮定しないモデルでは、主でない超フィルターが一つも存在しないことがありうる。</p>
+<p><strong>コンパクト性の言い換え。</strong>それでも超フィルターは強力である。第20章で示すとおり、</p>
+<M>X \text{ がコンパクト} \iff X \text{ 上のすべての超フィルターが収束する}</M>
+<p>この形を使うと、チコノフの定理は次のように証明できる。積の上の超フィルター <m>\mathcal{U}</m> を取る。各射影による像 <m>p_i(\mathcal{U})</m> が生成するフィルターは超フィルターであり、<m>X_i</m> のコンパクト性より <m>x_i</m> に収束する。<em>そこで <m>x = (x_i)</m> と置けば、積位相の基本近傍が有限個の成分しか制限しないので、<m>\mathcal{U}</m> は <m>x</m> に収束する。</em></p>
+<p><span class="yogo-hl">証明が五行で終わるのは、超フィルターが「選ぶ」作業を一度に済ませてくれるからである。</span>被覆による直接証明は、これよりはるかに長い。</p>
+<p><strong>ストーン–チェックのコンパクト化。</strong>第23章では、離散空間 <m>D</m> 上の超フィルター全体に位相を入れたものが <m>\beta D</m> になる。<em>超フィルターが空間の「点」として実体化する。</em><m>\beta \mathbb{N}</m> は濃度 <m>2^{2^{\aleph_0}}</m> をもつ怪物のような空間だが、コンパクトハウスドルフであり、組合せ論や群論に応用がある。</p>
+<p><strong>超積と超準解析。</strong>超フィルターは集合論と代数にも現れる。構造の族を超フィルターで割ると超積が得られ、ウォシュ <span class="orig">Łoś</span> の定理により一階の性質が保たれる。<em>実数の超積として超実数体が作られ、無限小を含む解析学が展開できる。</em></p>
+<p>本書はこの道を取らない。<span class="yogo-hl">ε-δ による標準的な解析学を、第VI部から丁寧に組み立てる。</span>だが、第45章で「ε-δ はなぜこの形か」を問うとき、無限小を使う別の道があることには触れる。<em>どちらが正しいかではなく、どちらの言葉で書くと何が見やすいかという問題である。</em></p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li>有向集合の例を三つ挙げよ。全順序でないものを含めること。</li>
+<li>近傍系が逆包含で有向集合になることを確かめよ。</li>
+<li>点 <m>x</m> を含む集合全体がフィルターであり、しかも超フィルターであることを示せ。</li>
+<li>距離空間で、閉包が点列で捉えられることを示せ。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li><ref t="cex-tenretsu-fusoku"/> の議論を、どこで <m>I</m> の非可算性を使っているかを明示しながら書き直せ。<span class="haiten">（15点）</span></li>
+<li><ref t="thm-net-heiho"/>（2）を示せ。<span class="haiten">（15点）</span></li>
+<li><ref t="prop-cho-filter"/> の必要性の証明を、生成されるフィルターが実際にフィルターであることの確認も含めて完全に書け。<span class="haiten">（20点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li>ネットとフィルターの翻訳が、収束の概念を保つことを両方向で示せ。<span class="haiten">（30点）</span></li>
+<li>第一可算ならばフレシェ–ウリゾーン空間であり、フレシェ–ウリゾーンならば点列空間であることを示せ。さらに、どちらの逆も成り立たないことを反例で示せ。<span class="haiten">（35点）</span></li>
+</ol>
+</div>
+</div>
