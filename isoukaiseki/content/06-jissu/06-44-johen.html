@@ -1,0 +1,212 @@
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>上限は最大値とどう違うのか。なぜ最大値では足りないのか。</li>
+<li>上限をとる操作は、和や積とどう噛み合うのか。</li>
+<li>上極限・下極限は、何のためにあるのか。</li>
+</ul>
+</div>
+
+<h3 id="s44-1">最大値では足りない</h3>
+
+<p>第43章で、完備性を「上に有界なら上限がある」という形で述べた。<em>なぜ「最大値がある」ではないのか。</em></p>
+
+<p>開区間 <m>(0,1)</m> には最大値がない。<span class="yogo-hl">それでも「1 より上には行けない」という情報はある。</span>その情報を数にしたのが上限である。</p>
+
+<div class="teigi" id="def-johen">
+<h4>上限・下限</h4>
+<p class="no-indent"><m>S \subseteq \mathbb{R}</m> を空でない集合とする。<m>s \in \mathbb{R}</m> が <m>S</m> の<strong>上限</strong>であるとは、</p>
+<p class="no-indent">（1）どの <m>x \in S</m> についても <m>x \le s</m>（上界である）。<br>
+（2）どの <m>t < s</m> についても <m>x > t</m> なる <m>x \in S</m> がある（最小の上界である）。</p>
+<p class="no-indent">これを <m>\sup S</m> と書く。下限 <m>\inf S</m> も同様。<m>S</m> が上に有界でないとき <m>\sup S = +\infty</m> と約束する。</p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">（2）は実際の計算でこう使う。<em><m>s = \sup S</m> なら、どの <m>\varepsilon > 0</m> についても <m>x > s - \varepsilon</m> なる <m>x \in S</m> がある。</em><span class="yogo-hl">「いくらでも上限に近い元が取れる」——これが上限の使い方のほとんどすべてである。</span></p>
+</div>
+
+<div class="rei" id="rei-sup-rei">
+<h4>いくつかの上限</h4>
+<p class="no-indent"><m>\sup (0,1) = 1</m>（最大値なし）。<m>\sup [0,1] = 1</m>（最大値あり）。</p>
+<p><m>\sup \{\, 1 - 1/n \mid n \in \mathbb{N} \,\} = 1</m>。<m>\sup \{\, q \in \mathbb{Q} \mid q^2 < 2 \,\} = \sqrt{2}</m>。</p>
+<p><m>\sup \varnothing</m> は定めない（あるいは <m>-\infty</m> と約束する）。<em><m>\inf S = -\sup(-S)</m> なので、上限だけ扱えば十分である。</em></p>
+</div>
+
+<h3 id="s44-2">上限と演算</h3>
+
+<div class="teiri" id="thm-sup-enzan">
+<h4></h4>
+<p class="no-indent"><m>A, B \subseteq \mathbb{R}</m> を空でない上に有界な集合とする。</p>
+<p class="no-indent">（1）<m>\sup(A+B) = \sup A + \sup B</m>（<m>A+B = \{a+b\}</m>）。<br>
+（2）<m>c > 0</m> なら <m>\sup(cA) = c \sup A</m>。<m>c < 0</m> なら <m>\sup(cA) = c \inf A</m>。<br>
+（3）<m>A \subseteq B</m> なら <m>\sup A \le \sup B</m>。<br>
+（4）<m>\sup(A \cup B) = \max(\sup A, \sup B)</m>。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">（1）<m>\le</m>。<m>a + b \le \sup A + \sup B</m> だから右辺は上界。</p>
+<p><m>\ge</m>。<m>\varepsilon > 0</m> に対し <m>a > \sup A - \varepsilon/2</m>、<m>b > \sup B - \varepsilon/2</m> を取れば <m>a+b > \sup A + \sup B - \varepsilon</m>。<em><m>\varepsilon</m> が任意なので不等式が出る。</em></p>
+<p>（2）（3）（4）も同じ形の議論。<span class="yogo-hl">上限の証明は、つねに「上界であること」と「<m>\varepsilon</m> だけ下げれば届く元があること」の二本立てになる。</span></p>
+</div>
+
+<div class="hanrei" id="cex-sup-seki">
+<h4>積では等号にならない</h4>
+<p class="no-indent"><m>\sup(AB) = \sup A \cdot \sup B</m> は一般に成り立たない。</p>
+<p><m>A = B = \{-2, 1\}</m> とすると <m>\sup A = \sup B = 1</m> だが <m>AB = \{4, -2, 1\}</m> で <m>\sup(AB) = 4</m>。</p>
+<p><em>負の数が入ると、大きい値どうしの積が最大になるとは限らない。</em><span class="yogo-hl"><m>A, B \subseteq [0,\infty)</m> なら等号が成り立つ。</span></p>
+</div>
+
+<h3 id="s44-3">単調列</h3>
+
+<div class="teiri" id="thm-tancho">
+<h4>単調収束定理</h4>
+<p class="no-indent">上に有界な単調増加列 <m>(x_n)</m> は収束し、<m>\lim_n x_n = \sup_n x_n</m>。下に有界な単調減少列も同様。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><m>s = \sup_n x_n</m> とおく。<m>\varepsilon > 0</m> に対し、上限の定義から <m>x_N > s - \varepsilon</m> なる <m>N</m> がある。</p>
+<p><em>単調性より <m>n \ge N</m> で <m>s - \varepsilon < x_N \le x_n \le s</m>。</em>よって <m>|x_n - s| < \varepsilon</m>。</p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">この定理は、<span class="yogo-hl">極限の値を知らなくても収束が言える</span>という点で強力である。<em>「増えていて、上に押さえがある」だけで収束する。</em>第49章の正項級数の議論は、ほとんどこの定理で動く。</p>
+</div>
+
+<h3 id="s44-4">上極限と下極限</h3>
+
+<p>収束しない数列にも、何か言えることはあるか。<em><m>x_n = (-1)^n</m> は収束しないが、値が <m>-1</m> と <m>1</m> のあいだを動くことはわかる。</em></p>
+
+<div class="teigi" id="def-limsup">
+<h4>上極限・下極限</h4>
+<p class="no-indent">有界な数列 <m>(x_n)</m> について</p>
+<M>\limsup_n x_n = \lim_{N \to \infty} \sup_{n \ge N} x_n, \qquad
+\liminf_n x_n = \lim_{N \to \infty} \inf_{n \ge N} x_n</M>
+<p class="no-indent">と定める。右辺の <m>\sup_{n \ge N} x_n</m> は <m>N</m> について単調減少で下に有界なので、<ref t="thm-tancho"/> により極限が存在する。</p>
+</div>
+
+<div class="teiri" id="thm-limsup">
+<h4></h4>
+<p class="no-indent">有界数列 <m>(x_n)</m> について、</p>
+<p class="no-indent">（1）<m>\liminf_n x_n \le \limsup_n x_n</m>。<br>
+（2）<m>(x_n)</m> が収束することと、両者が一致することは同値であり、そのとき極限に等しい。<br>
+（3）<m>\limsup_n x_n</m> は、<m>(x_n)</m> の部分列の極限のうち最大のものである。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">（1）<m>\inf_{n \ge N} x_n \le \sup_{n \ge N} x_n</m> で <m>N \to \infty</m>。</p>
+<p>（2）一致して値を <m>L</m> とすると、<m>N</m> を大きく取れば <m>L - \varepsilon < \inf_{n\ge N} x_n \le x_n \le \sup_{n \ge N} x_n < L + \varepsilon</m>。<em>逆は定義から明らか。</em></p>
+<p>（3）<m>L = \limsup x_n</m> とおく。各 <m>k</m> について <m>|x_{n_k} - L| < 1/k</m> なる <m>n_k</m> が（増加するように）取れるので、<m>L</m> は部分列の極限。逆に部分列の極限 <m>M</m> について <m>M \le \sup_{n \ge N} x_n</m> がすべての <m>N</m> で成り立つので <m>M \le L</m>。<span class="yogo-hl">上極限は「集積点のうち最大のもの」である。</span></p>
+</div>
+
+<figure>
+<svg viewBox="0 0 470 268" width="470" height="268" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">上極限は、尻尾の上限がどこへ落ち着くか</text>
+
+  <rect x="14" y="26" width="442" height="126" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+
+  <line x1="46" y1="136" x2="440" y2="136" stroke="#8a8a88" stroke-width="0.8"/>
+  <line x1="46" y1="136" x2="46" y2="40" stroke="#8a8a88" stroke-width="0.8"/>
+
+  <line x1="46" y1="58" x2="440" y2="58" stroke="#a03b2e" stroke-width="1" stroke-dasharray="3,2.4"/>
+  <text x="446" y="56" font-size="6.2" text-anchor="end" fill="#8c2f1e">上極限</text>
+  <line x1="46" y1="110" x2="440" y2="110" stroke="#2f6b5f" stroke-width="1" stroke-dasharray="3,2.4"/>
+  <text x="446" y="120" font-size="6.2" text-anchor="end" fill="#1e4a41">下極限</text>
+
+  <g fill="#35618f">
+    <circle cx="62" cy="44" r="2.2"/><circle cx="82" cy="118" r="2.2"/><circle cx="102" cy="50" r="2.2"/>
+    <circle cx="122" cy="116" r="2.2"/><circle cx="142" cy="54" r="2.2"/><circle cx="162" cy="114" r="2.2"/>
+    <circle cx="182" cy="56" r="2.2"/><circle cx="202" cy="113" r="2.2"/><circle cx="222" cy="57" r="2.2"/>
+    <circle cx="242" cy="112" r="2.2"/><circle cx="262" cy="57.5" r="2.2"/><circle cx="282" cy="111" r="2.2"/>
+    <circle cx="302" cy="58" r="2.2"/><circle cx="322" cy="110.5" r="2.2"/><circle cx="342" cy="58" r="2.2"/>
+    <circle cx="362" cy="110" r="2.2"/><circle cx="382" cy="58" r="2.2"/><circle cx="402" cy="110" r="2.2"/>
+    <circle cx="422" cy="58" r="2.2"/>
+  </g>
+
+  <path d="M62,44 C 120,46 200,54 440,57.6" stroke="#a03b2e" stroke-width="1.2" fill="none" opacity="0.7"/>
+  <text x="150" y="40" font-size="6.2" fill="#8c2f1e">尻尾の上限は単調に下がる</text>
+  <text x="150" y="132" font-size="6.2" fill="#1e4a41">尻尾の下限は単調に上がる</text>
+
+  <text x="40" y="146" font-size="6" text-anchor="end" fill="#6a6a68">番号</text>
+  <text x="24" y="44" font-size="6" text-anchor="end" fill="#6a6a68">値</text>
+
+  <rect x="14" y="164" width="216" height="94" rx="4" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="24" y="179" font-size="7.6" font-weight="700" fill="#1e4a41">上限の使い方はいつも同じ</text>
+  <text x="24" y="196" font-size="6.8" fill="#1e4a41">上界であることを示す</text>
+  <text x="24" y="209" font-size="6.8" fill="#1e4a41">ε だけ下げれば届く元を取る</text>
+  <text x="24" y="226" font-size="6.6" fill="#6a6a68">この二段構えが、上限を使う証明の</text>
+  <text x="24" y="237" font-size="6.6" fill="#6a6a68">ほぼすべてを占める</text>
+  <text x="24" y="252" font-size="6.6" fill="#8c2f1e">最大値と違い、集合に属さなくてよい</text>
+
+  <rect x="240" y="164" width="216" height="94" rx="4" fill="#f4f1ea" stroke="#8a6b2c"/>
+  <text x="250" y="179" font-size="7.6" font-weight="700" fill="#5a4520">上極限が要る場面</text>
+  <text x="250" y="196" font-size="6.8" fill="#5a4520">収束を仮定せずに評価したいとき</text>
+  <text x="250" y="209" font-size="6.8" fill="#5a4520">コーシー–アダマールの収束半径（第49章）</text>
+  <text x="250" y="222" font-size="6.8" fill="#5a4520">ファトゥの補題（第55章）</text>
+  <text x="250" y="239" font-size="6.6" fill="#6a6a68">極限が存在しなくても不等式は書ける</text>
+  <text x="250" y="252" font-size="6.6" fill="#6a6a68">——これが上極限の効能である</text>
+</svg>
+<figcaption>尻尾の上限は単調減少、尻尾の下限は単調増加。それぞれの極限が上極限・下極限である。二つが一致することが収束と同値になる。</figcaption>
+</figure>
+
+<div class="lv2">
+<h4>上極限の不等式と、等号が崩れる場所</h4>
+<p>上極限は不等式としては扱いやすいが、等号はめったに成り立たない。<em>どこで崩れるかを見ておく。</em></p>
+<p><strong>劣加法性。</strong>有界数列 <m>(x_n), (y_n)</m> について</p>
+<M>\limsup_n (x_n + y_n) \le \limsup_n x_n + \limsup_n y_n</M>
+<p><em>証明は <m>\sup_{n \ge N}(x_n+y_n) \le \sup_{n \ge N} x_n + \sup_{n \ge N} y_n</m> で <m>N \to \infty</m>。</em></p>
+<p><strong>等号が崩れる例。</strong><m>x_n = (-1)^n</m>、<m>y_n = (-1)^{n+1}</m> とすると左辺は <m>0</m>、右辺は <m>2</m>。<span class="yogo-hl">二つの数列が「逆位相で振動する」と、和の振動が消える。</span></p>
+<p><strong>片方が収束すれば等号。</strong><m>(y_n)</m> が収束するなら <m>\limsup(x_n+y_n) = \limsup x_n + \lim y_n</m>。<em>収束列は上限をとる操作と可換である。</em></p>
+<p><strong>下極限との関係。</strong><m>\liminf_n(x_n+y_n) \ge \liminf x_n + \liminf y_n</m>。<span class="yogo-hl">上極限は劣加法的、下極限は優加法的。</span>向きが逆になる。</p>
+<p><strong>積について。</strong>非負の数列なら <m>\limsup(x_n y_n) \le (\limsup x_n)(\limsup y_n)</m>。<em>負の値が入ると <ref t="cex-sup-seki"/> と同じ理由で崩れる。</em></p>
+<p><strong>なぜ不等式で十分なのか。</strong>解析の多くの場面で、示したいのは「極限が存在して値が <m>L</m>」ではなく「<m>\limsup \le L</m> かつ <m>\liminf \ge L</m>」である。<em>二つを挟めば収束が出る。</em><span class="yogo-hl">不等式を二本立てて挟む——これが上極限の標準的な使い方である。</span></p>
+<p><strong>実例。</strong>第49章のコーシー–アダマールの公式 <m>1/R = \limsup_n |a_n|^{1/n}</m> は、<m>|a_n|^{1/n}</m> が収束しなくても収束半径を与える。<em>収束を仮定せずに値が定まるところに、上極限の意味がある。</em></p>
+</div>
+
+<div class="lv3">
+<h4>上限・下限の一般化——束と、順序位相</h4>
+<p>上限と下限は、実数に固有の概念ではない。<em>順序があれば定義できる。</em></p>
+<p><strong>完備束。</strong>半順序集合 <m>P</m> が<em>完備束</em>であるとは、任意の部分集合が上限と下限をもつことをいう。<span class="yogo-hl"><m>\mathbb{R}</m> は完備束ではない</span>——空集合と非有界集合で破れる。<m>[-\infty, +\infty]</m> にすれば完備束になる。</p>
+<p>第6章の位相の全体（ある集合上の位相をなす族）は、包含について完備束である。<em>第7章で「生成される位相」を扱ったのは、この束の上限を取る操作だった。</em></p>
+<p><strong>タルスキの不動点定理。</strong>完備束 <m>L</m> 上の単調写像 <m>f</m> は不動点をもち、不動点の全体もまた完備束になる。<em>証明は <m>\sup\{\, x \mid x \le f(x) \,\}</m> が不動点であることを確かめるだけである。</em><span class="yogo-hl">上限を取る操作が、不動点を生む。</span></p>
+<p><strong>方向づけられた集合と上極限。</strong>第12章のネットを使うと、上極限は</p>
+<M>\limsup_{n} x_n = \inf_{N} \sup_{n \ge N} x_n</M>
+<p class="no-indent">という「下向きの族の下限」として書ける。<em>一般のネット <m>(x_\lambda)_{\lambda \in \Lambda}</m> についても同じ式で定義できる。</em></p>
+<p><strong>ムーア–スミス収束との関係。</strong>第12章で、位相空間の収束は点列では足りずネットが要ると見た。<span class="yogo-hl">上極限・下極限は、順序があるおかげで「収束しなくても値が決まる」代用品である。</span>一般の位相空間には、これにあたるものがない。</p>
+<p><strong>バナッハ極限。</strong>有界数列の空間 <m>\ell^\infty</m> 上に、線型で、平行移動で不変で、<m>\liminf \le \Lambda(x) \le \limsup</m> を満たす汎関数 <m>\Lambda</m> が存在する。<em>これは第67章のハーン–バナッハの定理から出る。</em></p>
+<p><m>\Lambda</m> は収束列では極限に一致し、<m>(-1)^n</m> には <m>0</m> を与える。<span class="yogo-hl">「振動する数列に無理やり極限を与える」操作が、選択公理に依存する形で存在する。</span>第67章で構成を見る。</p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li><m>\sup\{\, 1/n \mid n \in \mathbb{N} \,\}</m> と <m>\inf</m> を求めよ。</li>
+<li><m>x_n = (-1)^n(1 + 1/n)</m> の上極限と下極限を求めよ。</li>
+<li><m>\sup(A \cap B) \le \min(\sup A, \sup B)</m> を示し、等号が崩れる例を挙げよ。</li>
+<li>上に有界でない集合について <m>\sup S = +\infty</m> と約束する理由を述べよ。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li><ref t="thm-sup-enzan"/>（2）を示せ。<span class="haiten">（15点）</span></li>
+<li><ref t="thm-limsup"/>（3）の細部（部分列を増加するように取れること）を埋めよ。<span class="haiten">（20点）</span></li>
+<li><m>\limsup(x_n+y_n) \le \limsup x_n + \limsup y_n</m> を示し、等号の成り立つ十分条件を一つ述べよ。<span class="haiten">（25点）</span></li>
+<li><m>x_n > 0</m> のとき <m>\liminf \frac{x_{n+1}}{x_n} \le \liminf x_n^{1/n} \le \limsup x_n^{1/n} \le \limsup \frac{x_{n+1}}{x_n}</m> を示せ。<span class="haiten">（35点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li>完備束上の単調写像が不動点をもつこと（タルスキ）を示せ。<span class="haiten">（35点）</span></li>
+<li>集積点の集合が閉集合であることを示し、上極限がその最大元であることを確かめよ。<span class="haiten">（30点）</span></li>
+<li>有界数列に対する上極限が、第12章のネットの言葉でどう書けるかを論ぜよ。<span class="haiten">（30点）</span></li>
+</ol>
+</div>
+</div>

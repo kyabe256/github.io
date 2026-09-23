@@ -1,0 +1,190 @@
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>中間値の定理は、連結性の何を使っているのか。</li>
+<li>最大値の定理は、コンパクト性の何を使っているのか。</li>
+<li>「有界閉区間」という仮定を外すと、どこから壊れるのか。</li>
+</ul>
+</div>
+
+<h3 id="s46-1">二つの定理、二つの位相的性質</h3>
+
+<p>連続関数についての基本定理は二つある。<em>中間値の定理と、最大値の定理。</em></p>
+
+<p>どちらも高校で習う。<span class="yogo-hl">だが二つは、まったく別の性質から来ている。</span>中間値は連結性（第28章）、最大値はコンパクト性（第20章）である。</p>
+
+<div class="teiri" id="thm-chukanchi">
+<h4>中間値の定理</h4>
+<p class="no-indent"><m>f \colon [a,b] \to \mathbb{R}</m> を連続とし、<m>f(a) < c < f(b)</m> とする。このとき <m>f(\xi) = c</m> なる <m>\xi \in (a,b)</m> が存在する。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><m>S = \{\, x \in [a,b] \mid f(x) < c \,\}</m> とおく。<m>a \in S</m> で <m>S</m> は上に有界なので、<m>\xi = \sup S</m> が存在する。</p>
+<p><m>f(\xi) < c</m> と仮定する。連続性より <m>\xi</m> の近くで <m>f < c</m> なので、<m>\xi + \delta \in S</m> となり上限に反する（<m>\xi < b</m> は <m>f(b) > c</m> から）。</p>
+<p><m>f(\xi) > c</m> と仮定する。連続性より <m>\xi</m> の近くで <m>f > c</m> なので、<m>\xi - \delta</m> が <m>S</m> の上界になり、最小性に反する。</p>
+<p><em>よって <m>f(\xi) = c</m>。</em></p>
+</div>
+
+<div class="chui">
+<h4>位相で書き直す</h4>
+<p class="no-indent">この証明は上限性質を使っている。<span class="yogo-hl">位相の言葉ではこう言える——<m>[a,b]</m> は連結（第28章）、連続像は連結（第19章）、<m>\mathbb{R}</m> の連結部分集合は区間。</span></p>
+<p><em>よって <m>f([a,b])</m> は区間であり、<m>f(a)</m> と <m>f(b)</m> を含むから <m>c</m> も含む。</em>三行で終わる。</p>
+<p>上限を使った証明は、<m>\mathbb{R}</m> の完備性を直接使う。位相を使った証明は、それが「連結性」という形で結晶したものを使う。<span class="yogo-hl">同じ内容の、抽象度の違う二つの証明である。</span></p>
+</div>
+
+<h3 id="s46-2">最大値の定理</h3>
+
+<div class="teiri" id="thm-saidaichi">
+<h4>最大値の定理</h4>
+<p class="no-indent"><m>f \colon [a,b] \to \mathbb{R}</m> を連続とすると、<m>f</m> は有界であり、最大値と最小値を取る。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><strong>有界性。</strong>有界でないとすると、各 <m>n</m> について <m>|f(x_n)| > n</m> なる <m>x_n \in [a,b]</m> がある。ボルツァーノ–ワイエルシュトラスの定理（下）より収束部分列 <m>x_{n_k} \to \xi \in [a,b]</m> が取れる。<em>連続性より <m>f(x_{n_k}) \to f(\xi)</m> だが、<m>|f(x_{n_k})| > n_k \to \infty</m> で矛盾。</em></p>
+<p><strong>最大値。</strong><m>M = \sup_{x} f(x)</m> とおく（有界性から有限）。各 <m>n</m> について <m>f(y_n) > M - 1/n</m> なる <m>y_n</m> を取り、収束部分列 <m>y_{n_k} \to \eta</m> を取る。<em>連続性より <m>f(\eta) = \lim f(y_{n_k}) = M</m>。</em></p>
+</div>
+
+<div class="teiri" id="thm-bw">
+<h4>ボルツァーノ–ワイエルシュトラスの定理</h4>
+<p class="no-indent"><m>[a,b]</m> の任意の点列は、収束部分列をもつ。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">二分法。<m>[a,b]</m> を半分に分け、無限個の項を含むほうを選ぶ。これを繰り返して区間の減少列 <m>I_1 \supseteq I_2 \supseteq \cdots</m>（長さ <m>(b-a)2^{-k}</m>）を作る。</p>
+<p>各 <m>I_k</m> から項を一つずつ、番号が増えるように選んで部分列とする。<em>区間縮小原理（第43章★★）より <m>\bigcap_k I_k</m> は一点 <m>\xi</m> からなり、部分列は <m>\xi</m> に収束する。</em></p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">位相の言葉では、<ref t="thm-bw"/> は「<m>[a,b]</m> が点列コンパクト」（第25章）である。<span class="yogo-hl">距離空間では、コンパクト・点列コンパクト・可算コンパクトが一致した（第29章）。</span></p>
+<p><ref t="thm-saidaichi"/> は「コンパクト空間の連続像はコンパクト、<m>\mathbb{R}</m> のコンパクト集合は有界閉、空でない有界閉集合は最大元をもつ」で片づく。<em>これも三行である。</em></p>
+</div>
+
+<h3 id="s46-3">仮定を外すとどこが壊れるか</h3>
+
+<div class="hanrei" id="cex-renzoku-kateiwo">
+<h4>閉区間という仮定を外す</h4>
+<p class="no-indent"><strong>開区間にすると。</strong><m>f(x) = 1/x</m> は <m>(0,1]</m> で連続だが有界でない。<em><m>(0,1]</m> はコンパクトでない。</em></p>
+<p><strong>有界でない閉集合にすると。</strong><m>f(x) = x</m> は <m>[0,\infty)</m> で連続だが最大値をもたない。</p>
+<p><strong>有界で最大値をもたない例。</strong><m>f(x) = x</m> は <m>(0,1)</m> で有界だが、最大値も最小値も取らない。</p>
+<p><strong>連結でない定義域にすると。</strong><m>f = \mathbf{1}_{[2,3]}</m> は <m>[0,1] \cup [2,3]</m> で連続だが、値 <m>1/2</m> を取らない。<span class="yogo-hl">中間値の定理は連結性、最大値の定理はコンパクト性——どちらを外したかで、壊れ方が違う。</span></p>
+</div>
+
+<div class="rei" id="rei-fudoten">
+<h4>中間値の定理の使い道</h4>
+<p class="no-indent"><strong>不動点。</strong><m>f \colon [0,1] \to [0,1]</m> が連続なら <m>f(\xi) = \xi</m> なる <m>\xi</m> がある。<em><m>g(x) = f(x)-x</m> に中間値の定理を使う（<m>g(0) \ge 0 \ge g(1)</m>）。</em></p>
+<p><strong>奇数次方程式。</strong>実係数の奇数次多項式は実根をもつ。<em><m>x \to \pm\infty</m> で符号が変わる。</em></p>
+<p><strong>平方根の存在。</strong><m>f(x) = x^2</m> に <m>[0,2]</m> で中間値の定理を使えば <m>\sqrt{2}</m> が出る。<span class="yogo-hl">第43章で完備性から作ったものが、ここでは定理の帰結として出る。</span></p>
+</div>
+
+<figure>
+<svg viewBox="0 0 470 264" width="470" height="264" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">二つの定理は、別の性質から来ている</text>
+
+  <rect x="14" y="26" width="218" height="124" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+  <text x="24" y="42" font-size="7" font-weight="700" fill="#1f3b5c">中間値　←　連結性</text>
+
+  <line x1="40" y1="130" x2="212" y2="130" stroke="#8a8a88" stroke-width="0.8"/>
+  <line x1="40" y1="130" x2="40" y2="52" stroke="#8a8a88" stroke-width="0.8"/>
+  <line x1="40" y1="92" x2="212" y2="92" stroke="#a03b2e" stroke-width="0.9" stroke-dasharray="3,2.4"/>
+  <text x="216" y="94" font-size="6" fill="#8c2f1e">c</text>
+  <path d="M48,120 C 80,118 96,66 124,64 C 152,62 176,72 206,58" stroke="#1f3b5c" stroke-width="1.5" fill="none"/>
+  <circle cx="87.5" cy="92" r="2.4" fill="#a03b2e"/>
+  <text x="87.5" y="86" font-size="6" text-anchor="middle" fill="#8c2f1e">ξ</text>
+  <text x="24" y="144" font-size="6.2" fill="#6a6a68">区間の像は区間——値の飛びがない</text>
+
+  <rect x="238" y="26" width="218" height="124" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+  <text x="248" y="42" font-size="7" font-weight="700" fill="#1f3b5c">最大値　←　コンパクト性</text>
+
+  <line x1="264" y1="130" x2="436" y2="130" stroke="#8a8a88" stroke-width="0.8"/>
+  <line x1="264" y1="130" x2="264" y2="52" stroke="#8a8a88" stroke-width="0.8"/>
+  <path d="M272,120 C 300,118 312,60 340,58 C 368,56 396,104 430,110" stroke="#1f3b5c" stroke-width="1.5" fill="none"/>
+  <line x1="264" y1="58" x2="436" y2="58" stroke="#2f6b5f" stroke-width="0.9" stroke-dasharray="3,2.4"/>
+  <text x="440" y="60" font-size="6" fill="#1e4a41">M</text>
+  <circle cx="340" cy="58" r="2.4" fill="#2f6b5f"/>
+  <text x="340" y="52" font-size="6" text-anchor="middle" fill="#1e4a41">η</text>
+  <text x="248" y="144" font-size="6.2" fill="#6a6a68">上限が実際に取られる——逃げ場がない</text>
+
+  <rect x="14" y="162" width="442" height="94" rx="4" fill="#f4f1ea" stroke="#8a6b2c"/>
+  <text x="24" y="177" font-size="7.6" font-weight="700" fill="#5a4520">仮定を一つずつ外すと</text>
+
+  <text x="24" y="195" font-size="6.8" fill="#5a4520">定義域</text>
+  <text x="140" y="195" font-size="6.8" fill="#5a4520">中間値</text>
+  <text x="250" y="195" font-size="6.8" fill="#5a4520">有界性・最大値</text>
+  <line x1="24" y1="199" x2="446" y2="199" stroke="#d8ccb0" stroke-width="0.7"/>
+
+  <text x="24" y="213" font-size="6.6" fill="#1e4a41">有界閉区間</text>
+  <text x="140" y="213" font-size="6.6" fill="#1e4a41">成り立つ</text>
+  <text x="250" y="213" font-size="6.6" fill="#1e4a41">成り立つ</text>
+
+  <text x="24" y="226" font-size="6.6" fill="#8c2f1e">開区間 (0,1)</text>
+  <text x="140" y="226" font-size="6.6" fill="#1e4a41">成り立つ（連結）</text>
+  <text x="250" y="226" font-size="6.6" fill="#8c2f1e">壊れる（1/x、x）</text>
+
+  <text x="24" y="239" font-size="6.6" fill="#8c2f1e">[0,1] ∪ [2,3]</text>
+  <text x="140" y="239" font-size="6.6" fill="#8c2f1e">壊れる（定義関数）</text>
+  <text x="250" y="239" font-size="6.6" fill="#1e4a41">成り立つ（コンパクト）</text>
+
+  <text x="24" y="252" font-size="6.4" fill="#6a6a68">連結性とコンパクト性は独立——どちらを外したかで、壊れる定理が変わる</text>
+</svg>
+<figcaption>中間値の定理は連結性、最大値の定理はコンパクト性から来る。定義域を開区間にすると後者だけが壊れ、二つの区間の合併にすると前者だけが壊れる。</figcaption>
+</figure>
+
+<div class="lv2">
+<h4>単調関数と、中間値の逆</h4>
+<p>中間値の定理の逆は成り立つか。<em>「すべての中間値を取る関数は連続か」という問いである。</em></p>
+<p><strong>反例。</strong><m>f(0)=0</m>、<m>x \ne 0</m> で <m>f(x) = \sin(1/x)</m> とすると、<m>f</m> はどの区間でも <m>[-1,1]</m> のすべての値を取るが、<m>x=0</m> で連続でない。<span class="yogo-hl">中間値性は連続性より真に弱い。</span></p>
+<p>この性質をもつ関数を<strong>ダルブー関数</strong><span class="orig">Darboux</span>という。第48章で見るとおり、<em>導関数はつねにダルブー関数である</em>——連続でなくても。</p>
+<p><strong>単調なら逆が成り立つ。</strong><m>f</m> が単調で中間値性をもつなら連続である。<em>単調関数の不連続点は跳びだけで、跳びがあれば値を飛ばすからである。</em></p>
+<p><strong>単調関数の不連続点。</strong><m>f</m> が <m>[a,b]</m> で単調増加なら、各点で片側極限 <m>f(x^-) \le f(x) \le f(x^+)</m> が存在し、不連続点は <m>f(x^-) < f(x^+)</m> となる点である。</p>
+<p>各不連続点に開区間 <m>(f(x^-), f(x^+))</m> を対応させると、これらは互いに交わらない。<em><m>\mathbb{R}</m> の互いに交わらない開区間の族は可算である</m>（各区間から有理数を一つ取れば単射になる）。</em></p>
+<p><span class="yogo-hl">よって単調関数の不連続点は高々可算個。</span>第35章のセル数の言葉でいえば、<m>\mathbb{R}</m> が可算鎖条件を満たすことの帰結である。</p>
+<p><strong>逆関数定理。</strong><m>f \colon [a,b] \to \mathbb{R}</m> が連続かつ狭義単調なら、<m>f</m> は像への同相写像である。<em><m>[a,b]</m> がコンパクト、<m>\mathbb{R}</m> がハウスドルフなので、連続全単射は同相（第20章）。</em></p>
+<p><span class="yogo-hl">これが第III部の「コンパクトからハウスドルフへの連続全単射は同相」の、もっとも身近な応用である。</span><m>\sqrt{\ }</m> や <m>\log</m> の連続性は、ここから出る。</p>
+</div>
+
+<div class="lv3">
+<h4>中間値の定理の構成的な側面と、より強い形</h4>
+<p><strong>構成的でない。</strong><ref t="thm-chukanchi"/> の証明は <m>\xi = \sup S</m> を取る。<em>この上限を計算する手続きはない。</em></p>
+<p>実際、構成的数学では中間値の定理は<span class="yogo-hl">そのままの形では証明できない</span>。<m>f</m> が区間 <m>[\xi-\varepsilon,\xi+\varepsilon]</m> で <m>c</m> に張りついていると、根の位置を決められないからである。</p>
+<p>構成的に証明できるのは、<em>近似版</em>である——どの <m>\varepsilon > 0</m> についても <m>|f(x)-c| < \varepsilon</m> なる <m>x</m> が<em>計算できる</em>。二分法がそのまま手続きになる。</p>
+<p><strong>より強い形——ブラウワーの不動点定理。</strong><m>[0,1]</m> での不動点定理（<ref t="rei-fudoten"/>）は、中間値の定理から出た。<em>高次元ではどうか。</em></p>
+<p><m>\bar{B}^n \to \bar{B}^n</m> の連続写像は不動点をもつ（ブラウワー）。<span class="yogo-hl">これは第40章のスペルナーの補題と同値であり、ルベーグの被覆定理とも同値である。</span></p>
+<p>つまり<em>「中間値の定理の <m>n</m> 次元版」が、次元論の中心定理と同じ内容をもつ</em>。一次元では自明に近いことが、二次元以上では組合せ論を要する。</p>
+<p><strong>さらに強い形——ボルスーク–ウラムの定理。</strong><m>f \colon S^n \to \mathbb{R}^n</m> が連続なら、<m>f(x) = f(-x)</m> なる <m>x</m> がある。<em><m>n=1</m> の場合が「地球上に、気温と気圧が対蹠点と一致する点がある」という有名な主張である。</em></p>
+<p><m>n=1</m> の証明は中間値の定理で書ける。<m>g(x) = f(x)-f(-x)</m> は <m>g(-x) = -g(x)</m> だから、符号が変わる。<span class="yogo-hl">高次元では代数的位相幾何が要る。</span></p>
+<p><strong>まとめ。</strong>中間値の定理は「連結性 <m>+</m> 一次元」である。<em>次元を上げると、連結性だけでは足りず、次元論か代数的位相幾何が必要になる。</em>第40章で見た構図が、ここでも現れている。</p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li><m>x^5 - x - 1 = 0</m> が実根をもつことを示せ。</li>
+<li><m>f \colon [0,1] \to [0,1]</m> 連続が不動点をもつことを示せ。</li>
+<li><m>(0,1)</m> 上の連続関数で有界だが最大値をもたないものを挙げよ。</li>
+<li><m>[a,b]</m> の連続関数の像が閉区間であることを示せ。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li><ref t="thm-bw"/> を、区間縮小ではなく上極限を使って示せ。<span class="haiten">（20点）</span></li>
+<li><ref t="thm-saidaichi"/> を、コンパクト性（有限部分被覆）から直接示せ。<span class="haiten">（25点）</span></li>
+<li>単調関数の不連続点が高々可算であることを示せ。<span class="haiten">（25点）</span></li>
+<li>連続かつ狭義単調な <m>f</m> の逆関数が連続であることを、コンパクト性を使って示せ。<span class="haiten">（25点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li>ダルブー関数だが連続でない例を作り、中間値性が連続性より弱いことを確かめよ。<span class="haiten">（30点）</span></li>
+<li>ボルスーク–ウラムの定理の <m>n=1</m> の場合を示せ。<span class="haiten">（30点）</span></li>
+<li><m>f \colon \mathbb{R} \to \mathbb{R}</m> が連続かつ全単射なら狭義単調であることを示せ。<span class="haiten">（35点）</span></li>
+</ol>
+</div>
+</div>

@@ -1,0 +1,219 @@
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>微分は「接線の傾き」以上の何を表しているのか。</li>
+<li>平均値の定理は、なぜあれほど多くの結果を生むのか。</li>
+<li>導関数は、どこまで自由な関数になれるのか。</li>
+</ul>
+</div>
+
+<h3 id="s48-1">微分は一次近似である</h3>
+
+<div class="teigi" id="def-bibun">
+<h4>微分可能性</h4>
+<p class="no-indent"><m>f</m> が <m>a</m> の近傍で定義されているとする。<m>f</m> が <m>a</m> で<strong>微分可能</strong>であるとは、</p>
+<M>f'(a) = \lim_{h \to 0} \frac{f(a+h)-f(a)}{h}</M>
+<p class="no-indent">が存在することをいう。</p>
+</div>
+
+<div class="chui">
+<h4>言い換え</h4>
+<p class="no-indent">同値な言い方がある。<em>ある数 <m>c</m> があって</em></p>
+<M>f(a+h) = f(a) + ch + o(h) \qquad (h \to 0)</M>
+<p class="no-indent"><em>と書けること。</em>ここで <m>o(h)</m> は <m>o(h)/h \to 0</m> を意味する。<span class="yogo-hl">微分可能とは「一次関数でよく近似できる」ことである。</span></p>
+<p>この形は高次元へそのまま拡張できる（<m>c</m> を線型写像に置き換える）。<em>商の形のほうは拡張できない</em>——ベクトルで割れないからである。</p>
+</div>
+
+<div class="teiri" data-kind="命題" id="prop-bibun-renzoku">
+<h4></h4>
+<p class="no-indent">微分可能なら連続である。逆は成り立たない。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><m>f(a+h)-f(a) = f'(a)h + o(h) \to 0</m>。逆の反例は <m>f(x)=|x|</m>（<m>a=0</m>）。</p>
+</div>
+
+<h3 id="s48-2">平均値の定理</h3>
+
+<div class="teiri" id="thm-rolle">
+<h4>ロルの定理</h4>
+<p class="no-indent"><m>f</m> が <m>[a,b]</m> で連続、<m>(a,b)</m> で微分可能、<m>f(a)=f(b)</m> なら、<m>f'(\xi)=0</m> なる <m>\xi \in (a,b)</m> が存在する。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><m>f</m> が定数なら明らか。そうでないなら、最大値の定理（<ref t="thm-saidaichi"/>）より <m>f</m> は <m>[a,b]</m> で最大値と最小値を取り、少なくとも一方は端点以外で取られる。</p>
+<p>その点を <m>\xi</m> とする。<m>\xi</m> が最大値を与えるとすると、<m>h>0</m> で <m>\frac{f(\xi+h)-f(\xi)}{h} \le 0</m>、<m>h<0</m> で <m>\ge 0</m>。<em>両側の極限が一致するので <m>f'(\xi)=0</m>。</em></p>
+</div>
+
+<div class="teiri" id="thm-heikinchi">
+<h4>平均値の定理</h4>
+<p class="no-indent"><m>f</m> が <m>[a,b]</m> で連続、<m>(a,b)</m> で微分可能なら</p>
+<M>f(b)-f(a) = f'(\xi)(b-a)</M>
+<p class="no-indent">なる <m>\xi \in (a,b)</m> が存在する。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><m>g(x) = f(x) - \frac{f(b)-f(a)}{b-a}(x-a)</m> とおくと <m>g(a)=g(b)=f(a)</m>。<ref t="thm-rolle"/> を <m>g</m> に使えばよい。</p>
+</div>
+
+<div class="chui">
+<h4>なぜこれが効くのか</h4>
+<p class="no-indent">平均値の定理は<em>局所的な情報（導関数）を大域的な情報（増分）に変換する</em>。<span class="yogo-hl">「各点で傾きがわかれば、二点間の差がわかる」——これが解析の基本的な橋渡しである。</span></p>
+<p>コンパクト性（最大値の存在）を使っていることに注意する。<em>有界閉区間でないと、この橋は架からない。</em></p>
+</div>
+
+<div class="rei" id="rei-heikinchi-kiketsu">
+<h4>平均値の定理から出るもの</h4>
+<p class="no-indent"><strong>導関数がゼロなら定数。</strong><m>f'\equiv 0</m>（区間上）なら <m>f(x)-f(y) = f'(\xi)(x-y) = 0</m>。<em>区間でないと成り立たない</em>——定義域が二つに分かれていれば、別々の定数になりうる。</p>
+<p><strong>単調性の判定。</strong><m>f' > 0</m> なら狭義単調増加。<m>f' \ge 0</m> なら単調増加。</p>
+<p><strong>リプシッツ評価。</strong><m>|f'| \le M</m> なら <m>|f(x)-f(y)| \le M|x-y|</m>。<span class="yogo-hl">よって一様連続（第47章）。</span></p>
+<p><strong>テイラーの定理。</strong>コーシーの平均値定理を繰り返すと、剰余項つきのテイラー展開が出る。</p>
+</div>
+
+<div class="teiri" id="thm-taylor">
+<h4>テイラーの定理（ラグランジュの剰余）</h4>
+<p class="no-indent"><m>f</m> が <m>[a,x]</m> で <m>n</m> 回連続微分可能、<m>(a,x)</m> で <m>n+1</m> 回微分可能なら</p>
+<M>f(x) = \sum_{k=0}^{n} \frac{f^{(k)}(a)}{k!}(x-a)^k + \frac{f^{(n+1)}(\xi)}{(n+1)!}(x-a)^{n+1}</M>
+<p class="no-indent">なる <m>\xi</m> が <m>a</m> と <m>x</m> のあいだに存在する。</p>
+</div>
+
+<h3 id="s48-3">導関数はどこまで自由か</h3>
+
+<div class="teiri" id="thm-darboux">
+<h4>ダルブーの定理</h4>
+<p class="no-indent"><m>f</m> が <m>[a,b]</m> で微分可能なら、<m>f'</m> は中間値性をもつ。すなわち <m>f'(a)</m> と <m>f'(b)</m> のあいだのどの値も <m>f'</m> は取る。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><m>f'(a) < c < f'(b)</m> とし、<m>g(x) = f(x)-cx</m> とおく。<m>g'(a)<0<g'(b)</m>。</p>
+<p><m>g</m> は <m>[a,b]</m> で最小値を取る。<em><m>g'(a)<0</m> より <m>a</m> の右側で <m>g</m> が減るので、最小は <m>a</m> でない。<m>g'(b)>0</m> より同様に <m>b</m> でない。</em></p>
+<p>よって最小は内点 <m>\xi</m> で取られ、<m>g'(\xi)=0</m> すなわち <m>f'(\xi)=c</m>。</p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">第46章★★で述べたダルブー関数が、ここで出た。<span class="yogo-hl">導関数は連続でなくてよいが、中間値性は必ずもつ。</span></p>
+<p>したがって<em>跳びのある関数は導関数になれない</em>。たとえば <m>\mathbf{1}_{[0,\infty)}</m> は、どんな関数の導関数でもない。</p>
+</div>
+
+<div class="rei" id="rei-dokansu-hirenzoku">
+<h4>連続でない導関数</h4>
+<p class="no-indent"><m>f(x) = x^2 \sin(1/x)</m>（<m>x \ne 0</m>）、<m>f(0)=0</m> とする。</p>
+<p><m>f'(0) = \lim_{h\to 0} h\sin(1/h) = 0</m>。<m>x \ne 0</m> では <m>f'(x) = 2x\sin(1/x) - \cos(1/x)</m>。</p>
+<p><em><m>x \to 0</m> で <m>\cos(1/x)</m> が振動するので、<m>f'</m> は <m>0</m> で連続でない。</em><span class="yogo-hl">それでも <m>f'</m> は中間値性をもつ——振動しながら、すべての値を取り続ける。</span></p>
+</div>
+
+<figure>
+<svg viewBox="0 0 470 268" width="470" height="268" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">平均値の定理——弦と平行な接線がある</text>
+
+  <rect x="14" y="26" width="442" height="124" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+
+  <line x1="50" y1="134" x2="440" y2="134" stroke="#8a8a88" stroke-width="0.8"/>
+  <line x1="50" y1="134" x2="50" y2="40" stroke="#8a8a88" stroke-width="0.8"/>
+
+  <path d="M76,116 C 130,52 210,130 276,72 C 320,34 370,58 404,50" stroke="#1f3b5c" stroke-width="1.6" fill="none"/>
+
+  <line x1="76" y1="116" x2="404" y2="50" stroke="#a03b2e" stroke-width="1.2" stroke-dasharray="4,2.6"/>
+  <circle cx="76" cy="116" r="2.6" fill="#a03b2e"/>
+  <circle cx="404" cy="50" r="2.6" fill="#a03b2e"/>
+  <text x="76" y="146" font-size="6.2" text-anchor="middle" fill="#8c2f1e">a</text>
+  <text x="404" y="146" font-size="6.2" text-anchor="middle" fill="#8c2f1e">b</text>
+
+  <line x1="85.6" y1="97.3" x2="149.6" y2="84.5" stroke="#2f6b5f" stroke-width="1.4"/>
+  <circle cx="117.6" cy="90.9" r="2.4" fill="#2f6b5f"/>
+  <text x="117.6" y="104" font-size="6.2" text-anchor="middle" fill="#1e4a41">ξ₁</text>
+
+  <line x1="284.8" y1="58.4" x2="348.8" y2="45.6" stroke="#2f6b5f" stroke-width="1.4"/>
+  <circle cx="316.8" cy="52" r="2.4" fill="#2f6b5f"/>
+  <text x="316.8" y="42" font-size="6.2" text-anchor="middle" fill="#1e4a41">ξ₂</text>
+
+  <text x="60" y="52" font-size="6.4" fill="#8c2f1e">破線が弦</text>
+  <text x="60" y="62" font-size="6.4" fill="#1e4a41">実線が接線——弦と平行</text>
+  <text x="240" y="126" font-size="6.2" fill="#6a6a68">ξ は一つとは限らない。存在だけが主張である</text>
+
+  <rect x="14" y="162" width="216" height="96" rx="4" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="24" y="177" font-size="7.6" font-weight="700" fill="#1e4a41">局所から大域へ</text>
+  <text x="24" y="194" font-size="6.8" fill="#1e4a41">f′ ≡ 0　→　定数（区間上）</text>
+  <text x="24" y="207" font-size="6.8" fill="#1e4a41">f′ &gt; 0　→　狭義単調増加</text>
+  <text x="24" y="220" font-size="6.8" fill="#1e4a41">|f′| ≤ M　→　リプシッツ、一様連続</text>
+  <text x="24" y="237" font-size="6.6" fill="#6a6a68">各点の傾きから、二点間の差が決まる</text>
+  <text x="24" y="250" font-size="6.6" fill="#8c2f1e">最大値の定理（コンパクト性）が土台にある</text>
+
+  <rect x="240" y="162" width="216" height="96" rx="4" fill="#fdf6f4" stroke="#e0c3bd"/>
+  <text x="250" y="177" font-size="7.6" font-weight="700" fill="#8c2f1e">導関数になれる関数</text>
+  <text x="250" y="194" font-size="6.8" fill="#8c2f1e">中間値性をもつ（ダルブーの定理）</text>
+  <text x="250" y="207" font-size="6.8" fill="#6a6a68">連続でなくてよい</text>
+  <text x="250" y="220" font-size="6.8" fill="#6a6a68">不連続点は第一類集合に限る</text>
+  <text x="250" y="237" font-size="6.6" fill="#8c2f1e">跳びのある関数は導関数になれない</text>
+  <text x="250" y="250" font-size="6.6" fill="#6a6a68">——単位階段関数は誰の導関数でもない</text>
+</svg>
+<figcaption>平均値の定理は、弦と平行な接線の存在をいう。局所的な傾きの情報が、二点間の差という大域的な情報に変わる。導関数は連続でなくてよいが、中間値性は必ずもつ。</figcaption>
+</figure>
+
+<div class="lv2">
+<h4>関数列の微分と、微分と極限の交換</h4>
+<p>第47章で、一様収束は微分を保たないと述べた。<em>正しい仮定を置き直す。</em></p>
+<p><strong>定理。</strong><m>(f_n)</m> を <m>[a,b]</m> 上の微分可能関数の列とし、</p>
+<p>（1）ある点 <m>x_0</m> で <m>(f_n(x_0))</m> が収束する、<br>
+（2）<m>(f_n')</m> が <m>[a,b]</m> で一様収束する</p>
+<p>とすると、<m>(f_n)</m> は一様収束し、極限 <m>f</m> は微分可能で <m>f' = \lim_n f_n'</m>。</p>
+<p><strong>証明の骨子。</strong>まず <m>(f_n)</m> が一様コーシーであることを示す。<em><m>f_m - f_n</m> に平均値の定理を使うと</em></p>
+<M>|(f_m-f_n)(x) - (f_m-f_n)(x_0)| \le |x-x_0| \cdot \sup_t |f_m'(t)-f_n'(t)|</M>
+<p class="no-indent">となり、右辺は（2）から小さくできる。<m>x_0</m> での収束（1）と合わせて一様コーシー。</p>
+<p>次に微分可能性。<m>\varphi_n(t) = \frac{f_n(t)-f_n(x)}{t-x}</m> とおくと、同じ評価から <m>(\varphi_n)</m> は <m>t</m> について一様コーシー。<em>一様収束する連続関数列の極限で、<m>t \to x</m> の極限と <m>n \to \infty</m> の極限が交換できる。</em></p>
+<p><span class="yogo-hl">仮定を導関数の側に置いたことで、平均値の定理が使えるようになった。</span>これが要点である。</p>
+<p><strong>系——項別微分。</strong>級数 <m>\sum f_n</m> について、<m>\sum f_n'</m> が一様収束し <m>\sum f_n(x_0)</m> が収束すれば、<m>\left(\sum f_n\right)' = \sum f_n'</m>。<em>第49章の冪級数で使う。</em></p>
+<p><strong>どこまで弱められるか。</strong>ルベーグ積分を使うと、もっと弱い仮定で交換できる。<m>f_n \to f</m> 各点収束、<m>|f_n'| \le g</m>（<m>g</m> 可積分）なら、<m>f</m> はほとんどいたるところ微分可能で <m>f' = \lim f_n'</m> がほとんどいたるところ成り立つ。</p>
+<p><span class="yogo-hl">「すべての点で」を「ほとんどすべての点で」に弱めると、仮定が格段に軽くなる。</span>これが第VII部の主題である。</p>
+</div>
+
+<div class="lv3">
+<h4>いたるところ微分不可能な関数と、導関数の集合</h4>
+<p><strong>ワイエルシュトラス関数。</strong></p>
+<M>W(x) = \sum_{n=0}^{\infty} a^n \cos(b^n \pi x) \qquad (0<a<1,\ ab > 1 + \tfrac{3}{2}\pi)</M>
+<p class="no-indent">は <m>\mathbb{R}</m> 上で連続だが、どの点でも微分可能でない。<em>一八七二年の構成である。</em></p>
+<p>一様収束（<m>\sum a^n < \infty</m>）から連続性が出る。<span class="yogo-hl">微分不可能性は、<m>b</m> が大きいと各段の振動が前段を打ち消せないことによる。</span></p>
+<p><strong>典型的である。</strong>バナッハ（一九三一）は、<m>C[0,1]</m>（一様ノルム）のなかで<em>どこかで微分可能な関数の全体は第一類集合（痩せた集合）である</em>ことを示した。</p>
+<p>証明はベールのカテゴリー定理（第27章）による。<span class="yogo-hl">「微分できる関数のほうが例外である」——連続関数の空間ではそうなっている。</span></p>
+<p><strong>どの集合が導関数の不連続点になれるか。</strong><m>f'</m> は第一級ベール関数（連続関数の各点極限）である。<em>実際 <m>f'(x) = \lim_n n(f(x+1/n)-f(x))</m>。</em></p>
+<p>第一級ベール関数の不連続点の全体は、第一類集合かつ <m>F_\sigma</m> 集合である。<span class="yogo-hl">したがって導関数はどこかで連続——それも稠密な集合の上で連続である。</span></p>
+<p><ref t="rei-dokansu-hirenzoku"/> の <m>f'</m> は一点でだけ不連続だった。<em>不連続点を稠密にすることもできるが、余集合をなくすことはできない。</em></p>
+<p><strong>単調関数の微分可能性。</strong>ルベーグの定理——<em>単調関数は、ほとんどいたるところ微分可能である。</em>証明にはヴィタリの被覆定理が要る（第53章）。</p>
+<p>これは強い主張である。<span class="yogo-hl">単調性という順序だけの条件から、測度論的な結論が出る。</span>第46章★★で「単調関数の不連続点は可算」と述べたのと同じ構図で、順序の条件が解析的な結論を生んでいる。</p>
+<p><strong>有界変動関数。</strong>単調関数の差として書ける関数を有界変動という。<em>ジョルダン分解により、有界変動関数はほとんどいたるところ微分可能。</em>第57章のハーン–ジョルダン分解は、これを測度について述べたものである。</p>
+<p>ただし<em>微分した結果をもとに戻せるとは限らない</em>——カントール関数（第53章）は連続・単調で、導関数がほとんどいたるところ <m>0</m> なのに、<m>0</m> から <m>1</m> まで増える。<span class="yogo-hl">微積分の基本定理が破れる例である。</span>第58章のラドン–ニコディムの定理が、破れる条件を確定させる。</p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li><m>f(x)=|x|</m> が <m>0</m> で微分可能でないことを定義から示せ。</li>
+<li><m>f(x)=x^3</m> に平均値の定理を <m>[0,1]</m> で適用し、<m>\xi</m> を求めよ。</li>
+<li><m>f'(x) = 0</m>（すべての <m>x \in \mathbb{R}</m>）なら <m>f</m> が定数であることを示せ。</li>
+<li>単位階段関数がどの関数の導関数でもないことを、<ref t="thm-darboux"/> から導け。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li>コーシーの平均値定理 <m>\frac{f(b)-f(a)}{g(b)-g(a)} = \frac{f'(\xi)}{g'(\xi)}</m> を示せ。<span class="haiten">（20点）</span></li>
+<li><ref t="thm-taylor"/> を、コーシーの平均値定理の繰り返しで示せ。<span class="haiten">（30点）</span></li>
+<li><ref t="rei-dokansu-hirenzoku"/> の <m>f'</m> が <m>0</m> で中間値性をもつことを確かめよ。<span class="haiten">（25点）</span></li>
+<li>導関数の一様収束から関数列の微分が交換できることを、細部まで示せ。<span class="haiten">（35点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li>ワイエルシュトラス関数が連続であることを示し、微分不可能性の証明の骨子を述べよ。<span class="haiten">（45点）</span></li>
+<li><m>C[0,1]</m> でどこかで微分可能な関数の全体が第一類集合であることを、第27章を使って示せ。<span class="haiten">（45点）</span></li>
+<li>導関数が第一級ベール関数であることを示し、その不連続点の集合について言えることを述べよ。<span class="haiten">（40点）</span></li>
+</ol>
+</div>
+</div>
