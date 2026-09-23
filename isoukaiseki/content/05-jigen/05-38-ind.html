@@ -1,0 +1,228 @@
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>「次元」を、開集合だけでどう定義するのか。</li>
+<li>なぜ境界の次元を使う再帰的な定義になるのか。</li>
+<li>この定義は、直線を1次元、平面を2次元と判定するか。</li>
+</ul>
+</div>
+
+<h3 id="s38-1">次元を位相で定義する</h3>
+
+<p>直線は1次元、平面は2次元、空間は3次元である。<em>これを座標を使わずに言いたい。</em></p>
+
+<p>手がかりは境界にある。<span class="yogo-hl">直線上の点のまわりには、境界が二点（0次元）の近傍が取れる。平面上の点のまわりには、境界が円（1次元）の近傍が取れる。</span></p>
+
+<p><em>したがって、次元を「境界の次元より1大きい」と再帰的に定義すればよい。</em>出発点は空集合で、その次元を <m>-1</m> と約束する。</p>
+
+<div class="teigi" id="def-ind">
+<h4>小さい帰納的次元</h4>
+<p class="no-indent">正則空間 <m>X</m> について、<strong>小さい帰納的次元</strong> <m>\mathrm{ind}\,X</m> を次のように定める。</p>
+<p class="no-indent">（1）<m>\mathrm{ind}\,X = -1 \iff X = \varnothing</m>。<br>
+（2）<m>\mathrm{ind}\,X \le n</m> とは、各点 <m>x</m> と各近傍 <m>U \ni x</m> に対し、開集合 <m>V</m> で</p>
+<M>x \in V \subseteq U, \qquad \mathrm{ind}\,(\partial V) \le n-1</M>
+<p class="no-indent">となるものが存在することをいう。<br>
+（3）<m>\mathrm{ind}\,X = n</m> とは、<m>\mathrm{ind}\,X \le n</m> かつ <m>\mathrm{ind}\,X \le n-1</m> でないことをいう。どの <m>n</m> でも <m>\le n</m> でないとき <m>\mathrm{ind}\,X = \infty</m>。</p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">この定義は<em>局所的</em>である。<span class="yogo-hl">各点のまわりで、境界の小さい近傍が取れるかを問う。</span>正則性を仮定するのは、近傍を縮める操作（<ref t="prop-seisoku-iikae"/>）が要るからである。</p>
+</div>
+
+<div class="teiri" data-kind="命題" id="prop-ind-zero">
+<h4></h4>
+<p class="no-indent"><m>\mathrm{ind}\,X = 0</m> であることと、開かつ閉な集合が基底をなすこと（零次元、第28章★★★）は同値である。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><m>\mathrm{ind}\,X \le 0</m> とは、各点の各近傍のなかに <m>\partial V = \varnothing</m> なる開集合 <m>V</m> が取れることである。<em><m>\partial V = \overline{V} \setminus V^\circ = \varnothing</m> は <m>V</m> が開かつ閉であることと同値。</em></p>
+</div>
+
+<h3 id="s38-2">基本的な値</h3>
+
+<div class="rei" id="rei-ind-rei">
+<h4>いくつかの空間の ind</h4>
+<p class="no-indent"><strong><m>\mathrm{ind} = 0</m>。</strong><m>\mathbb{Q}</m>、無理数全体、カントール集合、離散空間、<m>\{0,1\}^{I}</m>、<m>\beta\mathbb{N}</m>。<em>どれも全不連結である。</em></p>
+<p><strong><m>\mathrm{ind}\,\mathbb{R} = 1</m>。</strong>各点 <m>x</m> と近傍 <m>(a,b) \ni x</m> に対し、<m>V = (c,d)</m>（<m>a<c<x<d<b</m>）を取れば <m>\partial V = \{c,d\}</m> で、これは離散空間だから <m>\mathrm{ind} = 0</m>。<span class="yogo-hl">よって <m>\mathrm{ind}\,\mathbb{R} \le 1</m>。</span></p>
+<p><m>\mathrm{ind}\,\mathbb{R} \ne 0</m> は、<m>\mathbb{R}</m> が連結だから（開かつ閉な集合が自明なものしかない）。</p>
+<p><strong><m>\mathrm{ind}\,\mathbb{R}^n = n</m>。</strong><em><m>\le n</m> は開球を取れば従う（境界は <m>S^{n-1}</m>）。</em><span class="yogo-hl"><m>\ge n</m> のほうが難しく、第41章で扱う。</span></p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent"><m>\mathrm{ind}\,\mathbb{R}^n \ge n</m> を示すのは、この分野の中心的な難所である。<em>ブラウワーの領域不変性定理（<m>\mathbb{R}^n</m> と <m>\mathbb{R}^m</m> は <m>n \ne m</m> なら同相でない）と同値な内容をもつ。</em><span class="yogo-hl">位相の言葉だけでは出ず、代数的な道具か、綿密な組合せ論が必要になる。</span></p>
+</div>
+
+<h3 id="s38-3">基本的な性質</h3>
+
+<div class="teiri" id="thm-ind-seishitsu">
+<h4></h4>
+<p class="no-indent">（1）<m>\mathrm{ind}</m> は位相的性質である（同相で保たれる）。<br>
+（2）<m>\mathrm{ind}</m> は遺伝的である。すなわち <m>A \subseteq X</m> なら <m>\mathrm{ind}\,A \le \mathrm{ind}\,X</m>。<br>
+（3）<m>\mathrm{ind}(X \times Y) \le \mathrm{ind}\,X + \mathrm{ind}\,Y</m>（可分距離空間で）。<br>
+（4）可分距離空間 <m>X</m> について、<m>\mathrm{ind}\,X \le n</m> ならば <m>X</m> は <m>n+1</m> 個の零次元集合の合併である（分解定理）。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">（1）定義が開集合と境界だけを使うので明らか。</p>
+<p>（2）<m>n</m> についての帰納法。<m>x \in A</m>、<m>U</m> を <m>A</m> での近傍とすると <m>U = U' \cap A</m>（<m>U'</m> は <m>X</m> で開）。<m>X</m> で <m>x \in V \subseteq U'</m>、<m>\mathrm{ind}\,\partial V \le n-1</m> なる <m>V</m> を取る。<em><m>\partial_A(V \cap A) \subseteq (\partial V) \cap A</m> であり</em>、帰納法の仮定より右辺の <m>\mathrm{ind}</m> は <m>n-1</m> 以下。<span class="yogo-hl">境界が制限で小さくなることが、遺伝性の鍵である。</span></p>
+<p>（3）と（4）は第41章で扱う。</p>
+</div>
+
+<figure>
+<svg viewBox="0 0 470 274" width="470" height="274" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <defs>
+    <marker id="a38" markerWidth="8" markerHeight="8" refX="7" refY="2.6" orient="auto"><path d="M0,0 L7,2.6 L0,5.2 z" fill="#35618f"/></marker>
+  </defs>
+
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">境界の次元より一つ大きい——再帰的な定義</text>
+
+  <rect x="14" y="26" width="442" height="132" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+
+  <text x="76" y="42" font-size="7" text-anchor="middle" font-weight="700" fill="#1f3b5c">ind = 0</text>
+  <rect x="30" y="52" width="92" height="52" rx="3" fill="#eef2f6" stroke="#c9c9c7"/>
+  <g fill="#35618f">
+    <circle cx="48" cy="66" r="2.4"/><circle cx="72" cy="62" r="2.4"/><circle cx="96" cy="70" r="2.4"/>
+    <circle cx="56" cy="88" r="2.4"/><circle cx="82" cy="92" r="2.4"/><circle cx="104" cy="84" r="2.4"/>
+  </g>
+  <circle cx="72" cy="62" r="11" fill="none" stroke="#2f6b5f" stroke-width="1.2"/>
+  <text x="76" y="118" font-size="6.4" text-anchor="middle" fill="#1e4a41">境界が空の近傍が取れる</text>
+  <text x="76" y="129" font-size="6.2" text-anchor="middle" fill="#6a6a68">開かつ閉な集合が基底</text>
+  <text x="76" y="142" font-size="6.2" text-anchor="middle" fill="#6a6a68">有理数・カントール集合・二点集合の積</text>
+
+  <text x="235" y="42" font-size="7" text-anchor="middle" font-weight="700" fill="#1f3b5c">ind ℝ = 1</text>
+  <line x1="160" y1="78" x2="310" y2="78" stroke="#8a8a88" stroke-width="1"/>
+  <line x1="196" y1="78" x2="272" y2="78" stroke="#35618f" stroke-width="3"/>
+  <circle cx="196" cy="78" r="3.2" fill="#fff" stroke="#a03b2e" stroke-width="1.4"/>
+  <circle cx="272" cy="78" r="3.2" fill="#fff" stroke="#a03b2e" stroke-width="1.4"/>
+  <circle cx="234" cy="78" r="2.4" fill="#1f3b5c"/>
+  <text x="234" y="70" font-size="6" text-anchor="middle" fill="#1f3b5c">x</text>
+  <text x="234" y="94" font-size="6.2" text-anchor="middle" fill="#8c2f1e">境界は二点＝ 0 次元</text>
+  <text x="235" y="118" font-size="6.4" text-anchor="middle" fill="#1e4a41">開区間を取れば境界が二点</text>
+  <text x="235" y="129" font-size="6.2" text-anchor="middle" fill="#6a6a68">連結なので 0 次元ではない</text>
+  <text x="235" y="142" font-size="6.2" text-anchor="middle" fill="#6a6a68">よって ind = 1</text>
+
+  <text x="390" y="42" font-size="7" text-anchor="middle" font-weight="700" fill="#1f3b5c">ind ℝ² = 2</text>
+  <rect x="340" y="52" width="100" height="52" rx="3" fill="#eef2f6" stroke="#c9c9c7"/>
+  <circle cx="390" cy="78" r="20" fill="#dce7f0" stroke="#a03b2e" stroke-width="1.4"/>
+  <circle cx="390" cy="78" r="2.4" fill="#1f3b5c"/>
+  <text x="390" y="72" font-size="6" text-anchor="middle" fill="#1f3b5c">x</text>
+  <text x="390" y="118" font-size="6.4" text-anchor="middle" fill="#1e4a41">開円板の境界は円＝ 1 次元</text>
+  <text x="390" y="129" font-size="6.2" text-anchor="middle" fill="#6a6a68">ind ≤ 2 はこれで出る</text>
+  <text x="390" y="142" font-size="6.2" text-anchor="middle" fill="#8c2f1e">ind ≥ 2 が難所（第41章）</text>
+
+  <rect x="14" y="176" width="442" height="88" rx="4" fill="#f4f1ea" stroke="#8a6b2c"/>
+  <text x="24" y="191" font-size="7.8" font-weight="700" fill="#5a4520">定義の構造</text>
+  <text x="24" y="209" font-size="6.8" fill="#5a4520">ind ∅ = −1　　これが再帰の底</text>
+  <text x="24" y="223" font-size="6.8" fill="#5a4520">ind X ≤ n　各点の各近傍のなかに、境界の ind が n−1 以下の開集合が取れる</text>
+  <text x="24" y="241" font-size="6.8" fill="#8c2f1e">局所的な定義——各点のまわりだけを見る</text>
+  <text x="24" y="254" font-size="6.6" fill="#6a6a68">大域的に定義した Ind（第39章）、被覆で定義した dim（第40章）と比べることになる</text>
+</svg>
+<figcaption>点のまわりに、境界がより低次元の近傍が取れるか。この再帰で次元を定義する。上からの評価は易しく、下からの評価が難所になる。</figcaption>
+</figure>
+
+<h3 id="s38-4">零次元空間</h3>
+
+<div class="teiri" id="thm-zero-jigen">
+<h4></h4>
+<p class="no-indent">空でない可分距離空間 <m>X</m> について、次は同値である。</p>
+<p class="no-indent">（1）<m>\mathrm{ind}\,X = 0</m>。<br>
+（2）<m>X</m> は開かつ閉な可算基底をもつ。<br>
+（3）<m>X</m> はカントール集合 <m>\{0,1\}^{\mathbb{N}}</m> の部分空間と同相。</p>
+<p class="no-indent">さらに、これらが成り立つとき <m>X</m> は<em>全不連結</em>である。<span class="yogo-hl">ただしその逆は成り立たない。</span></p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">（1）と（2）。<ref t="prop-ind-zero"/> により <m>\mathrm{ind}\,X = 0</m> は開かつ閉な基底の存在と同値である。可分距離空間は第二可算（第34章）なので、その基底から可算部分族を選んで、なお基底であるようにできる。</p>
+<p>（2）から（3）。開かつ閉な可算基底 <m>\{B_n\}_{n \in \mathbb{N}}</m> を取り、<m>e(x) = (\chi_{B_n}(x))_n \in \{0,1\}^{\mathbb{N}}</m> と定める。<span class="yogo-hl">各 <m>B_n</m> が開かつ閉だから <m>\chi_{B_n}</m> は連続</span>であり、<m>e</m> は連続。<m>x \ne y</m> なら一方だけを含む <m>B_n</m> があるので単射。像の上での逆写像の連続性も、<m>e(B_n)</m> が像のなかで開であることから従う。</p>
+<p>（3）から（1）。カントール集合は開かつ閉な基底をもち、この性質は部分空間に遺伝する（<ref t="thm-ind-seishitsu"/>（1））。</p>
+<p>全不連結性。開かつ閉な集合が基底なら、異なる二点を開かつ閉な集合で分離でき、連結成分は一点になる。□</p>
+</div>
+
+<div class="hanrei" id="cex-zenfurenketsu-hi-zero">
+<h4>全不連結でも零次元でない——エルデシュ空間</h4>
+<p class="no-indent">第28章★★★で見たエルデシュ <span class="orig">Erdős</span> 空間</p>
+<M>E = \{\, x \in \ell^2 \mid \text{すべての座標 } x_n \text{ が有理数} \,\}</M>
+<p class="no-indent">は可分距離空間であり、全不連結だが <m>\mathrm{ind}\,E = 1</m> である。<em>つまり <ref t="thm-zero-jigen"/> の最後の含意は、逆向きには可分距離空間でも成り立たない。</em></p>
+<p><span class="yogo-hl">「連結成分が一点」と「開かつ閉な基底がある」は、別の条件である。</span>両者が一致するのはコンパクトハウスドルフ空間の場合であり（第28章の演習）、そこでは全分離性も加わって三つが同値になる。</p>
+</div>
+
+<div class="rei" id="rei-zero-rei">
+<h4>零次元空間の分類（可分距離）</h4>
+<p class="no-indent"><strong>カントール集合。</strong>コンパクトで完全（孤立点がない）な零次元空間は、すべてカントール集合と同相である（ブラウワーの定理）。</p>
+<p><strong><m>\mathbb{Q}</m>。</strong>可算で孤立点をもたない零次元距離空間は、すべて <m>\mathbb{Q}</m> と同相である（シェルピンスキの定理）。</p>
+<p><strong>無理数全体。</strong>完備距離化可能・零次元・孤立点なし・どのコンパクト部分集合も内部が空、という空間は <m>\mathbb{N}^{\mathbb{N}}</m> と同相である（アレクサンドロフ–ウリゾーンの定理）。</p>
+<p><span class="yogo-hl">零次元の世界は、驚くほど整理されている。</span><em>1次元以上ではこの種の完全な分類はない。</em></p>
+</div>
+
+<div class="lv2">
+<h4>ind が加法的でない</h4>
+<p>次元には「和の公式」があってほしい。<em>だが <m>\mathrm{ind}</m> は素直に振る舞わない。</em></p>
+<p><strong>部分集合への分解。</strong><ref t="thm-ind-seishitsu"/>（4）の分解定理は、<m>\mathrm{ind}\,X \le n</m> なら <m>X = Z_0 \cup \cdots \cup Z_n</m>（各 <m>Z_k</m> は零次元）と書けることを述べる。<span class="yogo-hl">逆も成り立つ——<m>n+1</m> 個の零次元集合の合併なら <m>\mathrm{ind} \le n</m>。</span></p>
+<p>したがって <em><m>\mathrm{ind}\,X</m> は「零次元集合で何枚に分けられるか」を測っている。</em></p>
+<p><strong>和の公式。</strong>この分解から、<m>X = A \cup B</m> について</p>
+<M>\mathrm{ind}(A \cup B) \le \mathrm{ind}\,A + \mathrm{ind}\,B + 1</M>
+<p>が従う（可分距離空間で）。<em>右辺の <m>+1</m> は外せない。</em><m>\mathbb{R} = \mathbb{Q} \cup (\mathbb{R}\setminus\mathbb{Q})</m> がその例で、左辺が <m>1</m>、右辺が <m>0+0+1=1</m> である。</p>
+<p><strong>積の公式。</strong><ref t="thm-ind-seishitsu"/>（3）の不等式</p>
+<M>\mathrm{ind}(X \times Y) \le \mathrm{ind}\,X + \mathrm{ind}\,Y</M>
+<p>も等号とは限らない。<span class="yogo-hl">ポントリャーギン <span class="orig">Pontryagin</span> が一九三〇年に、<m>\mathrm{ind}\,X = \mathrm{ind}\,Y = 2</m> なのに <m>\mathrm{ind}(X \times Y) = 3</m> という例を作った。</span></p>
+<p>第42章でこの例を扱う。<em>次元が「足し算で決まらない」のは、次元論のもっとも驚くべき事実の一つである。</em></p>
+<p><strong>なぜ素直でないのか。</strong><m>\mathrm{ind}</m> は局所的な定義である。<em>各点のまわりの境界しか見ていない。</em></p>
+<p>積を取ると、点のまわりの構造が座標ごとの情報の組合せになるが、<span class="yogo-hl">境界の取り方に自由度が残り、最良の取り方が座標ごとに独立とは限らない。</span></p>
+<p>この不便さが、第39章で <m>\mathrm{Ind}</m>（大域的な定義）を導入する動機の一つである。</p>
+</div>
+
+<div class="lv3">
+<h4>次元を測る三つの流儀</h4>
+<p>本書では三つの次元を扱う。<em>それぞれ何を測っているのかを先に述べておく。</em></p>
+<p><strong>ind（小さい帰納的次元）</strong>——本章。<em>点と閉集合を、低次元の境界で分ける。</em>局所的。ウリゾーンとメンガー <span class="orig">Menger</span> による（一九二二–二三）。</p>
+<p><strong>Ind（大きい帰納的次元）</strong>——第39章。<em>閉集合と閉集合を、低次元の境界で分ける。</em>大域的。チェック <span class="orig">Čech</span> による（一九三二）。</p>
+<p><strong>dim（被覆次元）</strong>——第40章。<em>開被覆を、重なりが <m>n+1</m> 以下の細分に置き換えられるか。</em>被覆的。ルベーグ <span class="orig">Lebesgue</span> の着想をチェックが定式化した。</p>
+<p><strong>三つの関係。</strong>一般に</p>
+<M>\mathrm{ind}\,X \le \mathrm{Ind}\,X, \qquad \dim X \le \mathrm{Ind}\,X</M>
+<p>が成り立つ（正規空間で）。<span class="yogo-hl">可分距離空間では三つすべてが一致する</span>——これが第41章の一致定理である。</p>
+<p>一般の空間では一致しない。第42章で反例を扱う。</p>
+<p><strong>第II部・第III部との対応。</strong>三つの流儀は、分離公理と被覆性質の区別に対応している。</p>
+<p><em>ind は「点と閉集合」を分ける</em>——正則性（第14章）の水準である。</p>
+<p><em>Ind は「閉集合と閉集合」を分ける</em>——正規性（第15章）の水準である。</p>
+<p><em>dim は被覆を扱う</em>——パラコンパクト性（第24章）の水準である。</p>
+<p><span class="yogo-hl">第II部と第III部で丁寧に区別した階層が、次元の三つの定義としてそのまま再現されている。</span></p>
+<p><strong>なぜ三つとも必要か。</strong>それぞれ得意な場面が違う。</p>
+<p><m>\mathrm{ind}</m> は定義が直観的で、零次元の理論が美しい。<m>\mathrm{Ind}</m> は和の公式が素直に成り立つ。<m>\dim</m> は被覆の言葉なので、パラコンパクト性と相性がよく、写像による評価がしやすい。</p>
+<p><em>そして三つが一致する場面（可分距離空間）では、どれを使ってもよい。</em>第41章でその範囲を確定させる。</p>
+<p><strong>ハウスドルフ次元との違い。</strong>フラクタルで使われるハウスドルフ次元は、<span class="yogo-hl">位相的でない——距離に依存する。</span>カントール集合の位相次元は <m>0</m> だが、ハウスドルフ次元は <m>\log 2/\log 3 \approx 0.63</m> である。</p>
+<p>第34章の三層で言えば、<em>位相次元は位相の層、ハウスドルフ次元は距離の層に属する。</em>本書は位相次元だけを扱う。</p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li><m>\mathrm{ind}\,\mathbb{Q} = 0</m> を示せ。</li>
+<li><m>\mathrm{ind}\,\mathbb{R} \le 1</m> を示せ。</li>
+<li>離散空間の <m>\mathrm{ind}</m> を求めよ。</li>
+<li>カントール集合の <m>\mathrm{ind}</m> を求めよ。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li><ref t="prop-ind-zero"/> を示せ。<span class="haiten">（15点）</span></li>
+<li><ref t="thm-ind-seishitsu"/>（2）を、<m>\partial_A(V \cap A) \subseteq (\partial V) \cap A</m> を確かめながら示せ。<span class="haiten">（25点）</span></li>
+<li><ref t="thm-zero-jigen"/> の（1）から（3）を示せ。<span class="haiten">（30点）</span></li>
+<li><ref t="cex-zenfurenketsu-hi-zero"/> について、<m>E</m> が全不連結であることを示せ（<m>\mathrm{ind}\,E = 1</m> は難しい）。<span class="haiten">（30点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li><m>\mathrm{ind}(\mathbb{Q} \cup (\mathbb{R}\setminus\mathbb{Q})) = 1</m> が、和の公式 <m>\mathrm{ind}(A\cup B) \le \mathrm{ind}\,A + \mathrm{ind}\,B + 1</m> の <m>+1</m> が外せないことを示す例になっていることを説明せよ。<span class="haiten">（30点）</span></li>
+<li>コンパクトで完全な零次元可分距離空間がカントール集合と同相であることを示せ。<span class="haiten">（40点）</span></li>
+</ol>
+</div>
+</div>

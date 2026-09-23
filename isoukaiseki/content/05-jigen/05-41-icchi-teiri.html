@@ -1,0 +1,196 @@
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>三つの次元は、どこまで一致するのか。</li>
+<li>可分性は、なぜ一致の条件になるのか。</li>
+<li>一致定理があると、何が言えるようになるのか。</li>
+</ul>
+</div>
+
+<h3 id="s41-1">一致定理</h3>
+
+<div class="teiri" id="thm-icchi">
+<h4>一致定理</h4>
+<p class="no-indent">可分距離空間 <m>X</m> について</p>
+<M>\mathrm{ind}\,X = \mathrm{Ind}\,X = \dim X</M>
+<p class="no-indent">が成り立つ。</p>
+</div>
+
+<p><em>これが第V部の中心にある定理である。</em>三つのまったく違う定義——点と近傍、閉集合と開集合、被覆の重なり——が、同じ値を与える。</p>
+
+<p>証明は三つの不等式の環である。<span class="yogo-hl"><m>\dim \le \mathrm{ind} \le \mathrm{Ind} \le \dim</m> を示す。</span></p>
+
+<div class="shomei">
+<p class="no-indent"><strong><m>\mathrm{ind} \le \mathrm{Ind}</m></strong>は一般の <m>T_1</m> 正規空間で成り立つ（<ref t="prop-ind-Ind"/>）。</p>
+<p><strong><m>\mathrm{Ind} \le \dim</m></strong>を示す。<m>n</m> についての帰納法。<m>\dim X \le n</m> とし、交わらない閉集合 <m>A, B</m> を取る。</p>
+<p><m>\{X \setminus A,\ X \setminus B\}</m> は開被覆だから、<ref t="thm-dim-seishitsu"/>（5）より位数 <m>n</m> 以下の縮小被覆 <m>\{V_1, V_2\}</m> がある。<em><m>S = X \setminus (V_1 \cup V_2)</m> と置くと <m>S</m> は <m>A</m> と <m>B</m> を分離する。</em></p>
+<p><span class="yogo-hl"><m>\dim S \le n-1</m> が示せれば、帰納法の仮定より <m>\mathrm{Ind}\,S \le n-1</m>、<ref t="thm-Ind-bunri"/> より <m>\mathrm{Ind}\,X \le n</m> となる。</span></p>
+<p><m>\dim S \le n-1</m> は、<m>S</m> の被覆を <m>X</m> の被覆に延ばして位数を数えることで出る。<em>細部には <m>\dim</m> の閉遺伝性と、位数の計算が要る。</em></p>
+<p><strong><m>\dim \le \mathrm{ind}</m></strong>が可分性を使う部分である。<m>\mathrm{ind}\,X \le n</m> とする。</p>
+<p>第二可算性より可算基底 <m>\{B_k\}</m> が取れ、<em><m>\mathrm{ind}\,\partial B_k \le n-1</m> となるように選べる</em>（各点の各近傍のなかに境界の小さい基底元が取れるから）。</p>
+<p><m>S = \bigcup_k \partial B_k</m> と置く。帰納法の仮定（<m>\dim \le \mathrm{ind}</m> が <m>n-1</m> で成立）と<span class="yogo-hl">可算和定理（<ref t="thm-dim-seishitsu"/>（3））</span>より <m>\dim S \le n-1</m>。</p>
+<p><m>X \setminus S</m> は零次元である（開かつ閉な集合 <m>B_k \setminus S</m> が基底をなす）。<em>よって <m>X</m> は <m>\dim \le n-1</m> の部分と <m>\dim = 0</m> の部分に分かれ、和の公式より <m>\dim X \le n</m>。</em></p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">可分性が二か所で効いている。<em>可算基底が取れること</em>と、<em>可算和定理が使えること</em>である。<span class="yogo-hl">非可算な基底しかない空間では、境界の合併が「可算個の閉集合の合併」にならず、この議論が通らない。</span></p>
+</div>
+
+<h3 id="s41-2">ただちに従うこと</h3>
+
+<div class="teiri" data-kind="系" id="cor-icchi-kei">
+<h4></h4>
+<p class="no-indent">可分距離空間について、次が成り立つ。</p>
+<p class="no-indent">（1）<m>\dim \mathbb{R}^n = \mathrm{ind}\,\mathbb{R}^n = \mathrm{Ind}\,\mathbb{R}^n = n</m>。<br>
+（2）<m>n \ne m</m> なら <m>\mathbb{R}^n</m> と <m>\mathbb{R}^m</m> は同相でない（領域不変性）。<br>
+（3）分解定理——<m>\dim X \le n</m> であることと、<m>X</m> が <m>n+1</m> 個の零次元集合の合併であることは同値。<br>
+（4）和の公式 <m>\dim(A \cup B) \le \dim A + \dim B + 1</m>。<br>
+（5）可算和定理 <m>\dim \bigcup_n F_n = \sup_n \dim F_n</m>（<m>F_n</m> 閉）。<br>
+（6）積の不等式 <m>\dim(X \times Y) \le \dim X + \dim Y</m>。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">（1）<m>\le n</m> は <m>\mathrm{ind}</m> で（第38章）、<m>\ge n</m> は <m>\dim</m> で（ルベーグの被覆定理、第40章）示した。<em>一致定理が二つをつなぐ。</em></p>
+<p>（2）同相なら次元が等しいが、（1）より異なる。<span class="yogo-hl">「次元が位相的に定まる」という事実が、領域不変性を与える。</span></p>
+<p>（3）から（6）は、<m>\dim</m> と <m>\mathrm{Ind}</m> の性質（第39章・第40章）を一致定理で移す。</p>
+</div>
+
+<figure>
+<svg viewBox="0 0 470 272" width="470" height="272" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <defs>
+    <marker id="a41" markerWidth="8" markerHeight="8" refX="7" refY="2.6" orient="auto"><path d="M0,0 L7,2.6 L0,5.2 z" fill="#35618f"/></marker>
+  </defs>
+
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">三つの不等式を環状に示す</text>
+
+  <rect x="14" y="26" width="442" height="120" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+
+  <rect x="186" y="40" width="92" height="24" rx="3" fill="#dce7f0" stroke="#35618f"/>
+  <text x="232" y="56" font-size="7" text-anchor="middle" fill="#1f3b5c">ind</text>
+
+  <rect x="316" y="98" width="92" height="24" rx="3" fill="#dce7f0" stroke="#35618f"/>
+  <text x="362" y="114" font-size="7" text-anchor="middle" fill="#1f3b5c">Ind</text>
+
+  <rect x="56" y="98" width="92" height="24" rx="3" fill="#dce7f0" stroke="#35618f"/>
+  <text x="102" y="114" font-size="7" text-anchor="middle" fill="#1f3b5c">dim</text>
+
+  <path d="M266,62 L326,94" stroke="#35618f" stroke-width="1.3" fill="none" marker-end="url(#a41)"/>
+  <path d="M312,110 L152,110" stroke="#35618f" stroke-width="1.3" fill="none" marker-end="url(#a41)"/>
+  <path d="M110,94 L196,62" stroke="#a03b2e" stroke-width="1.3" fill="none" marker-end="url(#a41)"/>
+
+  <text x="312" y="76" font-size="6.4" fill="#1f3b5c">ind ≤ Ind</text>
+  <text x="312" y="86" font-size="6" fill="#6a6a68">一般の T₁ 正規空間で成立</text>
+
+  <text x="232" y="124" font-size="6.4" text-anchor="middle" fill="#1f3b5c">Ind ≤ dim</text>
+  <text x="232" y="134" font-size="6" text-anchor="middle" fill="#6a6a68">縮小被覆から分離集合を作る</text>
+
+  <text x="24" y="80" font-size="6.4" fill="#8c2f1e">dim ≤ ind</text>
+  <text x="24" y="90" font-size="6" fill="#8c2f1e">ここで可分性を使う</text>
+
+  <text x="24" y="42" font-size="6.2" fill="#6a6a68">可分距離空間</text>
+
+  <rect x="14" y="158" width="216" height="106" rx="4" fill="#fdf6f4" stroke="#e0c3bd"/>
+  <text x="24" y="173" font-size="7.6" font-weight="700" fill="#8c2f1e">可分性が効く二か所</text>
+  <text x="24" y="190" font-size="6.8" fill="#8c2f1e">可算基底が取れる</text>
+  <text x="24" y="202" font-size="6.6" fill="#6a6a68">境界の合併が可算個の閉集合になる</text>
+  <text x="24" y="218" font-size="6.8" fill="#8c2f1e">可算和定理が使える</text>
+  <text x="24" y="230" font-size="6.6" fill="#6a6a68">その合併の次元が上がらない</text>
+  <text x="24" y="248" font-size="6.6" fill="#6a6a68">非可算な基底しかない空間では、</text>
+  <text x="24" y="259" font-size="6.6" fill="#6a6a68">この議論が通らない（第42章）</text>
+
+  <rect x="240" y="158" width="216" height="106" rx="4" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="250" y="173" font-size="7.6" font-weight="700" fill="#1e4a41">一致定理から出ること</text>
+  <text x="250" y="190" font-size="6.8" fill="#1e4a41">dim ℝⁿ = n　（上は ind、下は dim で示す）</text>
+  <text x="250" y="204" font-size="6.8" fill="#1e4a41">領域不変性　ℝⁿ ≅ ℝᵐ ならば n = m</text>
+  <text x="250" y="218" font-size="6.8" fill="#1e4a41">分解定理　n+1 枚の零次元集合</text>
+  <text x="250" y="232" font-size="6.8" fill="#1e4a41">和の公式・可算和定理・積の不等式</text>
+  <text x="250" y="250" font-size="6.6" fill="#6a6a68">三つの定義の長所が、すべて使えるようになる</text>
+</svg>
+<figcaption>三つの不等式を環状に示す。dim ≤ ind の一歩でだけ可分性が要る。一致すると、三つの定義それぞれの長所が同時に使えるようになる。</figcaption>
+</figure>
+
+<h3 id="s41-3">一致の範囲</h3>
+
+<div class="teiri" id="thm-icchi-hani">
+<h4>どこまで一致するか</h4>
+<p class="no-indent">（1）<strong>可分距離空間</strong>　<m>\mathrm{ind} = \mathrm{Ind} = \dim</m>。<br>
+（2）<strong>一般の距離空間</strong>　<m>\mathrm{Ind} = \dim</m>（カトゥートフ–モリタ）。<em><m>\mathrm{ind}</m> は一致しないことがある。</em><br>
+（3）<strong>コンパクトハウスドルフ空間</strong>　<m>\dim \le \mathrm{Ind}</m> のみ。三つとも異なりうる。<br>
+（4）<strong>一般の正規空間</strong>　<m>\dim \le \mathrm{Ind}</m>、<m>\mathrm{ind} \le \mathrm{Ind}</m> のみ。</p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">可分性を外すと、まず <m>\mathrm{ind}</m> が落ちる。<em>ロクトノフの例（第42章）は、完備距離空間で <m>\mathrm{ind}=0</m>、<m>\mathrm{Ind}=\dim=1</m>。</em></p>
+<p>距離化可能性を外すと、<m>\mathrm{Ind}</m> と <m>\dim</m> も分かれる。<span class="yogo-hl">コンパクトハウスドルフ空間で <m>\dim = 1</m>、<m>\mathrm{Ind} = 2</m> という例がある（フィリポフ）。</span></p>
+</div>
+
+<div class="lv2">
+<h4>分解定理を読む</h4>
+<p><ref t="cor-icchi-kei"/>（3）の分解定理は、次元の意味をもっとも直接に述べている。<em>丁寧に見ておく。</em></p>
+<p><strong>主張。</strong>可分距離空間 <m>X</m> について、<span class="yogo-hl"><m>\dim X \le n</m> <m>\iff</m> <m>X = Z_0 \cup \cdots \cup Z_n</m>（各 <m>Z_k</m> は零次元）。</span></p>
+<p><strong>例で確かめる。</strong><m>\mathbb{R}</m> は <m>\mathbb{Q} \cup (\mathbb{R}\setminus\mathbb{Q})</m> と書ける。<em>どちらも零次元（第38章）。</em>二枚なので <m>\dim \mathbb{R} \le 1</m>。</p>
+<p><m>\mathbb{R}^2</m> はどうか。<em>座標が両方有理数、片方だけ有理数、両方無理数——という分け方では三枚必要に見える。</em>実際には</p>
+<M>\mathbb{R}^2 = \{(x,y) : x \in \mathbb{Q}\} \cup \{(x,y) : x \notin \mathbb{Q},\ y \in \mathbb{Q}\} \cup \{(x,y) : x,y \notin \mathbb{Q}\}</M>
+<p>で、各々が零次元であることを確かめれば <m>\dim \mathbb{R}^2 \le 2</m> になる。<span class="yogo-hl">ただし「三枚で済む」ことは、各片が本当に零次元であることを要する</span>——単に定義から出るわけではない。</p>
+<p><strong>証明の方向。</strong><m>\Leftarrow</m> は和の公式の繰り返しで従う。<m>\Rightarrow</m> が実質である。</p>
+<p><m>\dim X \le n</m> とする。<em>可算基底 <m>\{B_k\}</m> を、境界の次元が <m>n-1</m> 以下になるように取る。</em><m>S = \bigcup_k \partial B_k</m> は <m>\dim \le n-1</m> で、<m>X \setminus S</m> は零次元。</p>
+<p>帰納法の仮定より <m>S = Z_0 \cup \cdots \cup Z_{n-1}</m> と分解でき、<m>Z_n = X \setminus S</m> を足せば <m>n+1</m> 枚になる。</p>
+<p><strong>何を意味するか。</strong><em>「<m>n</m> 次元」とは「零次元のものを <m>n+1</m> 枚重ねてできている」ということである。</em></p>
+<p>零次元空間はカントール集合の部分空間だった（<ref t="thm-zero-jigen"/>）。<span class="yogo-hl">したがって <m>n</m> 次元の可分距離空間は、カントール集合的なものを <m>n+1</m> 枚重ねた構造をもつ。</span></p>
+<p><strong>埋め込み定理との関係。</strong>分解定理から、次の定理が出る。</p>
+<p><em><m>\dim X \le n</m> の可分距離空間は、<m>\mathbb{R}^{2n+1}</m> に埋め込める。</em></p>
+<p>メンガー–ネーベリング <span class="orig">Menger–Nöbeling</span> の定理という。<span class="yogo-hl"><m>2n+1</m> という数は最良である</span>——<m>\mathbb{R}^{2n}</m> には埋め込めない <m>n</m> 次元空間がある。</p>
+<p>第9章★★で述べた「どこに入るかを問う」方法が、次元論でも中心的である。<em>普遍空間としてメンガーの普遍曲線（<m>n=1</m> の場合）が知られている。</em></p>
+</div>
+
+<div class="lv3">
+<h4>可分性を外すとどうなるか</h4>
+<p><ref t="thm-icchi-hani"/>（2）のカトゥートフ–モリタの定理を述べる。<em>可分でない距離空間でも、二つは一致する。</em></p>
+<p><strong>主張。</strong>距離空間 <m>X</m> について <m>\mathrm{Ind}\,X = \dim X</m>。</p>
+<p><strong>証明の道具。</strong>第32章の <m>\sigma</m>-離散な基底（ビングの定理）が使われる。<em>可算基底の代わりに、可算個の離散族からなる基底を使う。</em></p>
+<p>各離散族について、境界の合併を取る。<span class="yogo-hl">離散族の境界の合併は、可算和定理が使える形になる。</span>可分な場合の証明が、ほぼそのまま通る。</p>
+<p><strong>なぜ <m>\mathrm{ind}</m> だけが落ちるのか。</strong><m>\mathrm{ind}</m> の議論では、<em>点のまわりの境界を集めて可算和定理を使う</em>必要があった。</p>
+<p>可分でなければ、境界を可算個に集められない。<span class="yogo-hl"><m>\sigma</m>-離散な基底があっても、<m>\mathrm{ind}</m> の定義が点ごとなので、離散族の構造を活かせない。</span></p>
+<p><strong>ロクトノフの例。</strong>一九六二年、ロクトノフ <span class="orig">Roy</span> は完備距離空間 <m>\Delta</m> で</p>
+<M>\mathrm{ind}\,\Delta = 0, \qquad \mathrm{Ind}\,\Delta = \dim\Delta = 1</M>
+<p>となるものを構成した。<em>零次元（開かつ閉な基底をもつ）なのに、閉集合の分離では次元が落ちない。</em></p>
+<p>構成は複雑である。<m>\{0,1\}^{\omega_1}</m> の部分空間として作られ、<span class="yogo-hl">非可算性が本質的に使われる。</span></p>
+<p><strong>コンパクトでの破れ。</strong>フィリポフ <span class="orig">Filippov</span> は一九七〇年に、コンパクトハウスドルフ空間で <m>\dim = 1</m>、<m>\mathrm{Ind} = 2</m> という例を作った。<em>連続体仮説を仮定する。</em></p>
+<p>ここでも集合論が入り込む。<span class="yogo-hl">第36章のスーリン問題、第32章の正規ムーア空間予想に続いて、次元論でも独立性が現れる。</span></p>
+<p><strong>まとめ。</strong>一致定理の成立範囲は、<em>可算性がどこまで効くか</em>で決まる。</p>
+<p>可分距離空間では、可算基底が三つの定義をつなぐ。距離空間では <m>\sigma</m>-離散基底が二つをつなぐ。<em>それ以上の一般性では、つなぐ道具がない。</em></p>
+<p>第32章の距離化定理と同じ構図である。<span class="yogo-hl">可算性が局所と大域を橋渡しする——第7章から繰り返し現れてきた主題が、次元論でも中心にある。</span></p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li><m>\dim \mathbb{R} = 1</m> を、一致定理を使って述べよ。</li>
+<li><m>\mathbb{R} = \mathbb{Q} \cup (\mathbb{R}\setminus\mathbb{Q})</m> が分解定理の例になっていることを確かめよ。</li>
+<li>領域不変性が一致定理から従う理由を述べよ。</li>
+<li><m>\dim S^n</m> を求めよ。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li><ref t="thm-icchi"/> の <m>\mathrm{Ind} \le \dim</m> を、分離集合を作る部分を明示して示せ。<span class="haiten">（30点）</span></li>
+<li><ref t="thm-icchi"/> の <m>\dim \le \mathrm{ind}</m> で、可分性がどこで効いているかを二か所とも述べよ。<span class="haiten">（25点）</span></li>
+<li>分解定理の <m>\Leftarrow</m> を、和の公式から示せ。<span class="haiten">（20点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li><m>\mathbb{R}^2</m> を三枚の零次元集合に分解し、各片が零次元であることを示せ。<span class="haiten">（35点）</span></li>
+<li>メンガー–ネーベリングの埋め込み定理を述べ、<m>2n+1</m> が最良である理由を説明せよ。<span class="haiten">（35点）</span></li>
+</ol>
+</div>
+</div>

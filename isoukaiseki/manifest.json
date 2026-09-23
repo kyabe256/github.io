@@ -109,8 +109,8 @@
       "dir": "05-jigen",
       "lead": "空間の「大きさ」を基数で測り、空間の「太さ」を次元で測る。ind・Ind・dim という三つの次元が、距離空間では一致し、一般には一致しない——この定理群が本書の第一の山である。",
       "chapters": [
-        { "n": 35, "title": "基数不変量——weight・density・character", "file": "05-35-kisu-fuhenryo.html", "status": "todo" },
-        { "n": 36, "title": "cellularityとSouslin問題", "file": "05-36-souslin.html", "status": "todo" },
+        { "n": 35, "title": "基数不変量——重み・稠密度・指標", "file": "05-35-kisu-fuhenryo.html", "status": "todo" },
+        { "n": 36, "title": "セル数とスーリン問題", "file": "05-36-souslin.html", "status": "todo" },
         { "n": 37, "title": "積空間の基数不変量", "file": "05-37-seki-kisu.html", "status": "todo" },
         { "n": 38, "title": "小さい帰納的次元 ind", "file": "05-38-ind.html", "status": "todo" },
         { "n": 39, "title": "大きい帰納的次元 Ind", "file": "05-39-Ind.html", "status": "todo" },
