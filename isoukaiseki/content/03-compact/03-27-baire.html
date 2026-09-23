@@ -1,0 +1,181 @@
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>「ほとんどすべての点」という言い方に、測度を使わずに意味を与えられるか。</li>
+<li>可算個の疎集合で空間を覆えないのは、なぜか。</li>
+<li>この定理は、解析学のどこで使われるのか。</li>
+</ul>
+</div>
+
+<h3 id="s27-1">第一類集合と第二類集合</h3>
+
+<p>第6章で「疎」という概念を導入した。<m>A</m> が疎とは <m>(\overline{A})^\circ = \varnothing</m> となることである。<em>疎集合は「どこにも隙間なく詰まっていない」集合である。</em></p>
+
+<div class="teigi" id="def-daiichirui">
+<h4></h4>
+<p class="no-indent"><m>A \subseteq X</m> が<strong>第一類</strong>（やせた集合）であるとは、可算個の疎集合の合併として書けることをいう。第一類でない集合を<strong>第二類</strong>という。</p>
+<p><m>A</m> の補集合が第一類であるとき、<m>A</m> は<strong>余やせ</strong>であるという。</p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">「小さい」という語には二種類ある。<em>測度が零であることと、第一類であることは別の概念である。</em><span class="yogo-hl">どちらでもあるもの、一方だけのものが存在する。</span>第53章で、測度零だが第二類である集合、第一類だが測度が正である集合を構成する。</p>
+</div>
+
+<h3 id="s27-2">ベールのカテゴリー定理</h3>
+
+<div class="teigi" id="def-baire">
+<h4></h4>
+<p class="no-indent">位相空間 <m>X</m> が<strong>ベール空間</strong>であるとは、可算個の稠密開集合の交叉がつねに稠密であることをいう。同値な言い方として、空でない開集合が第一類でないことをいう。</p>
+</div>
+
+<div class="teiri" id="thm-baire">
+<h4>ベールのカテゴリー定理</h4>
+<p class="no-indent">（1）完備距離空間はベール空間である。<br>
+（2）局所コンパクトハウスドルフ空間はベール空間である。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><strong>（1）。</strong><m>\{U_n\}</m> を稠密開集合の列とし、<m>W</m> を任意の空でない開集合とする。<m>W \cap \bigcap_n U_n \ne \varnothing</m> を示す。</p>
+<p><m>U_1</m> が稠密開だから <m>W \cap U_1</m> は空でない開集合であり、閉球 <m>\overline{B}(x_1, r_1) \subseteq W \cap U_1</m>（<m>r_1 < 1</m>）が取れる。<em>次に <m>B(x_1,r_1) \cap U_2</m> のなかに <m>\overline{B}(x_2, r_2) \subseteq B(x_1,r_1) \cap U_2</m>、<m>r_2 < 1/2</m> を取る。</em>以下、帰納的に</p>
+<M>\overline{B}(x_{n+1}, r_{n+1}) \subseteq B(x_n, r_n) \cap U_{n+1}, \qquad r_{n+1} < 2^{-n}</M>
+<p class="no-indent">と選ぶ。<span class="yogo-hl">ここで各段の選択を可算回行う——従属選択公理を使う。</span></p>
+<p><m>(x_n)</m> はコーシー列である（<m>m, n \ge N</m> で <m>d(x_m,x_n) < 2r_N \to 0</m>）。完備性より <m>x_n \to x</m> がある。<em>各 <m>N</m> について <m>n \ge N</m> の項がすべて <m>\overline{B}(x_N, r_N)</m> に入るので、<m>x \in \overline{B}(x_N,r_N)</m>。</em>よって <m>x \in W</m> かつ <m>x \in U_N</m> がすべての <m>N</m> で成り立つ。</p>
+<p><strong>（2）。</strong>同じ構成を、閉球のかわりに<em>閉包がコンパクトな開集合</em>で行う（第22章の <ref t="thm-kyokusho-seishitsu"/>（3））。列 <m>\overline{V_1} \supseteq \overline{V_2} \supseteq \cdots</m> は減少するコンパクト集合の列だから、<span class="yogo-hl">有限交叉性より交叉が空でない</span>（<ref t="thm-compact-doti"/>（2））。完備性の代わりにコンパクト性が働く。</p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">二つの証明は同じ形をしている。<em>入れ子の列を作り、その交叉が空でないことを使う。</em><span class="yogo-hl">完備性とコンパクト性は、この一点で同じ役割を果たしている。</span>第29章で「完備かつ全有界＝コンパクト」を見るが、両者の共通部分がここに現れている。</p>
+</div>
+
+<figure>
+<svg viewBox="0 0 470 268" width="470" height="268" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">入れ子の球を作り、交叉が空でないことを使う</text>
+
+  <rect x="14" y="26" width="442" height="118" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+
+  <circle cx="130" cy="86" r="52" fill="#e8f0f7" stroke="#35618f"/>
+  <text x="130" y="30" font-size="6.6" text-anchor="middle" fill="#1f3b5c">W ∩ U₁</text>
+  <circle cx="122" cy="86" r="38" fill="#cfe0ee" stroke="#35618f"/>
+  <circle cx="116" cy="86" r="26" fill="#b9d2e6" stroke="#35618f"/>
+  <circle cx="112" cy="86" r="17" fill="#9dbfd9" stroke="#35618f"/>
+  <circle cx="110" cy="86" r="10" fill="#7fa8c9" stroke="#35618f"/>
+  <circle cx="108" cy="86" r="3" fill="#a03b2e"/>
+  <line x1="108" y1="86" x2="70" y2="130" stroke="#a03b2e" stroke-width="0.7"/>
+  <text x="66" y="133" font-size="6.4" text-anchor="end" fill="#8c2f1e">交叉に入る点</text>
+
+  <text x="200" y="48" font-size="7" font-weight="700" fill="#1f3b5c">各段の作り方</text>
+  <text x="200" y="64" font-size="6.8" fill="#1f3b5c">Uₙ が稠密開 → 前段の球と交わる</text>
+  <text x="200" y="78" font-size="6.8" fill="#1f3b5c">交わりは空でない開集合</text>
+  <text x="200" y="92" font-size="6.8" fill="#1f3b5c">→ そこに半径 2⁻ⁿ 未満の閉球を取る</text>
+  <text x="200" y="110" font-size="6.8" fill="#2f6b5f">完備なら中心列がコーシー列 → 極限が交叉に入る</text>
+  <text x="200" y="124" font-size="6.8" fill="#2f6b5f">局所コンパクトなら減少コンパクト列 → 交叉が空でない</text>
+  <text x="200" y="138" font-size="6.6" fill="#8c2f1e">可算回の選択（従属選択公理）を使う</text>
+
+  <rect x="14" y="156" width="216" height="100" rx="4" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="24" y="171" font-size="7.6" font-weight="700" fill="#1e4a41">この定理から出る四つの定理</text>
+  <text x="24" y="188" font-size="6.8" fill="#1e4a41">一様有界性の原理（第68章）</text>
+  <text x="24" y="201" font-size="6.8" fill="#1e4a41">開写像定理（第69章）</text>
+  <text x="24" y="214" font-size="6.8" fill="#1e4a41">閉グラフ定理（第69章）</text>
+  <text x="24" y="227" font-size="6.8" fill="#1e4a41">連続でない点が稠密な関数の存在</text>
+  <text x="24" y="245" font-size="6.6" fill="#6a6a68">関数解析の基本定理の三つが、位相の一つの定理から出る</text>
+
+  <rect x="240" y="156" width="216" height="100" rx="4" fill="#f4f1ea" stroke="#8a6b2c"/>
+  <text x="250" y="171" font-size="7.6" font-weight="700" fill="#5a4520">二つの「小さい」は別物</text>
+  <text x="250" y="188" font-size="6.8" fill="#5a4520">第一類　可算個の疎集合の合併</text>
+  <text x="250" y="201" font-size="6.8" fill="#5a4520">測度零　ルベーグ測度が 0</text>
+  <text x="250" y="218" font-size="6.6" fill="#6a6a68">どちらでもある集合、一方だけの集合が</text>
+  <text x="250" y="229" font-size="6.6" fill="#6a6a68">どちらも存在する（第53章）</text>
+  <text x="250" y="246" font-size="6.6" fill="#8c2f1e">R を第一類集合と測度零集合の二つに分割できる</text>
+</svg>
+<figcaption>稠密開集合の列に沿って入れ子の球を作る。完備性かコンパクト性が、交叉が空でないことを保証する。第一類であることと測度が零であることは別の概念である。</figcaption>
+</figure>
+
+<h3 id="s27-3">応用</h3>
+
+<div class="rei" id="rei-baire-riyou">
+<h4>四つの帰結</h4>
+<p class="no-indent"><strong>（1）<m>\mathbb{R}</m> は可算個の疎集合では覆えない。</strong>とくに <m>\mathbb{R}</m> は可算でない——<em>一点集合は疎だから</em>。<span class="yogo-hl">カントールの対角線論法とは別の、非可算性の証明である。</span></p>
+<p><strong>（2）<m>\mathbb{Q}</m> は <m>\mathbb{R}</m> のなかで <m>G_\delta</m> でない。</strong><m>\mathbb{Q} = \bigcap_n U_n</m>（<m>U_n</m> 開）なら、各 <m>U_n</m> は <m>\mathbb{Q}</m> を含むので稠密。ベールの定理より <m>\bigcap_n U_n</m> は稠密。<em>ところが <m>\mathbb{Q}</m> の補集合も稠密なので、<m>\mathbb{Q}</m> は開集合を含まない。</em>矛盾するには <m>\mathbb{Q}</m> と無理数の両方が <m>G_\delta</m> だと仮定すればよい——両方の交叉が空なのに、両方稠密な <m>G_\delta</m> になってしまう。</p>
+<p><strong>（3）至るところ微分可能でない連続関数は「ほとんどすべて」。</strong><m>C([0,1])</m>（一様ノルム）のなかで、ある点で微分可能な関数の全体は第一類である。<em>したがって余やせな集合の関数は、どこでも微分可能でない。</em><span class="yogo-hl">ワイエルシュトラスが一つ構成した例外的な関数が、実は典型だった。</span></p>
+<p><strong>（4）関数解析の基本定理。</strong>第68章の一様有界性の原理、第69章の開写像定理と閉グラフ定理は、いずれもベールの定理から導かれる。</p>
+</div>
+
+<div class="teiri" data-kind="命題" id="prop-baire-iden">
+<h4></h4>
+<p class="no-indent">ベール空間の稠密開部分空間、および <m>G_\delta</m> 部分空間はベール空間である。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><m>Y \subseteq X</m> を稠密開とし、<m>\{V_n\}</m> を <m>Y</m> の稠密開集合の列とする。<em>各 <m>V_n</m> は <m>X</m> でも開であり（第9章）、<m>Y</m> が稠密だから <m>X</m> でも稠密である。</em>したがって <m>X</m> のベール性より <m>\bigcap_n V_n</m> は <m>X</m> で稠密、よって <m>Y</m> でも稠密。<m>G_\delta</m> の場合も同様の議論を可算回行う。</p>
+</div>
+
+<div class="lv2">
+<h4>従属選択公理との同値性</h4>
+<p><ref t="thm-baire"/>（1）の証明で、可算回の選択を行った。<em>これは避けられるのか。</em></p>
+<p><strong>答えは否である。</strong><span class="yogo-hl">完備距離空間に対するベールのカテゴリー定理は、従属選択公理と同値である。</span></p>
+<p><strong>なぜ従属選択が要るのか。</strong>各段で <m>x_{n+1}</m> を選ぶとき、<em>その選択は <m>x_n</m> に依存する。</em>可算選択公理では「あらかじめ与えられた族から一つずつ選ぶ」ことしかできない。第3章の★★★で述べた区別が、ここで効いている。</p>
+<p><strong>逆向きの証明。</strong>関係 <m>R</m> について、どの <m>x</m> にも <m>xRy</m> なる <m>y</m> があるとする。<m>x_0 R x_1 R \cdots</m> という列を作りたい。</p>
+<p>集合 <m>X</m> の上に、有限列の全体を考える。<em>「<m>R</m> に沿った有限列」全体に適当な距離を入れると完備距離空間になり、</em>ベールの定理を適用することで無限列の存在が出る。<span class="yogo-hl">空間の完備性が、列を「最後まで」延ばすことを可能にする。</span></p>
+<p><strong>局所コンパクト版はどうか。</strong><ref t="thm-baire"/>（2）の証明では、減少コンパクト列の交叉を使った。<em>これも可算回の選択を要する。</em>したがって局所コンパクト版も従属選択公理を必要とする。</p>
+<p>ただし、コンパクトハウスドルフ空間に限れば事情が変わる。<em>そこでは超フィルター補題で足りる場合がある</em>——選択の仕方によるが、より弱い公理で済むことが知られている。</p>
+<p><strong>第3章の階層に位置づける。</strong></p>
+<M>\begin{array}{ll}
+\text{選択公理} & \text{チコノフの定理（第21章）} \\
+\text{超フィルター補題} & \text{ハウスドルフ版チコノフ、ハーン–バナッハ} \\
+\text{従属選択公理} & \text{ベールのカテゴリー定理} \\
+\text{可算選択公理} & \text{可算和の可算性}
+\end{array}</M>
+<p><span class="yogo-hl">ベールの定理は、階層のなかで中くらいの強さに位置する。</span>それでいて、第IX部の関数解析の基本定理三つを支えている。</p>
+<p><strong>何が読み取れるか。</strong>関数解析の基本定理が「構成的でない」ことが、これで正確に述べられる。<em>一様有界性の原理は、有界性を保証するが、境界の値を与えない。</em>開写像定理も同様である。第69章でこの点に触れる。</p>
+</div>
+
+<div class="lv3">
+<h4>二つの「小さい」——測度とカテゴリー</h4>
+<p><ref t="def-daiichirui"/> の注意で述べたことを、正面から扱う。<em>第一類であることと測度が零であることは、どう違うのか。</em></p>
+<p><strong>共通点。</strong>どちらも「小さい」という直観に合う性質をもつ。可算合併で閉じ、部分集合に受け継がれ、全体は小さくない（ベールの定理／測度の正値性）。<span class="yogo-hl">両者は <m>\sigma</m>-イデアルをなす。</span></p>
+<p><strong>相違点。</strong><em>どちらでもない集合の例。</em>カントール集合は第一類で測度零である。一方、</p>
+<p><em>測度零だが第二類な集合</em>が存在する。<m>\mathbb{R}</m> の稠密な <m>G_\delta</m> 集合で測度零のものが作れる——各 <m>n</m> で有理数のまわりに幅 <m>2^{-n}</m> の区間を取り、その合併の補集合を考える（測度は正だがこれを補正する）。</p>
+<p><em>第一類だが測度が正の集合</em>も存在する。<m>[0,1]</m> のなかで、疎な閉集合の可算合併として測度 <m>1</m> のものが作れる。<span class="yogo-hl">各段で「太い」カントール型の集合を取り、合併すればよい。</span></p>
+<p><strong>実数直線の分割。</strong>もっと劇的な事実がある。</p>
+<M>\mathbb{R} = A \cup B, \qquad A \text{ は第一類}, \quad B \text{ は測度零}</M>
+<p>という分割が存在する。<em>したがって「小さい」の二つの意味は、まったく両立しない。</em><m>\mathbb{R}</m> 全体を、一方の意味で小さい集合と、他方の意味で小さい集合の二つに分けられる。</p>
+<p><strong>双対性。</strong>二つの概念のあいだには形式的な双対性がある。エルデシュ–シェルピンスキ <span class="orig">Erdős–Sierpiński</span> の双対定理により、<em>連続体仮説のもとでは、測度零イデアルと第一類イデアルを交換する <m>\mathbb{R}</m> の全単射が存在する。</em></p>
+<p><span class="yogo-hl">両者は構造として同型でありながら、具体的な集合としてはまったく違うものを小さいと呼んでいる。</span></p>
+<p><strong>基数不変量。</strong>この二つの <m>\sigma</m>-イデアルに対して、いくつもの基数不変量が定義される。<m>\mathbb{R}</m> を覆うのに必要な小さい集合の最小個数（covering number）、小さくない集合を作るのに必要な最小個数（additivity）など。</p>
+<p><em>これらのあいだの不等式は、シハリ図式 <span class="orig">Cichoń's diagram</span> として整理されている。</em>図式に現れる不等式の多くは証明できるが、<span class="yogo-hl">いくつかは公理系から独立である。</span></p>
+<p><strong>本書での扱い。</strong>第53章で、測度零と第一類の具体的な違いを構成で示す。第55章で「ほとんどすべての点で」という語を測度の意味で定義するが、<em>そのとき「カテゴリーの意味でのほとんどすべて」とは別であることを明記する。</em></p>
+<p>第VII部の測度論と、この第III部のベールの定理は、<em>同じ直観を別の言葉で定式化したものである。</em>どちらが「正しい」かではなく、どちらの言葉で何が言えるかという問題になる。第97章でこの対比を地図に載せる。</p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li>一点集合が <m>\mathbb{R}</m> で疎であることを示せ。</li>
+<li><m>\mathbb{Q}</m> が <m>\mathbb{R}</m> で第一類であることを示せ。</li>
+<li><m>\mathbb{Q}</m>（部分空間として）がベール空間でないことを示せ。</li>
+<li>カントール集合が第一類で測度零であることを述べよ。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li><ref t="thm-baire"/>（1）の証明で、<m>x \in \overline{B}(x_N, r_N)</m> となる理由を丁寧に述べよ。<span class="haiten">（20点）</span></li>
+<li><ref t="thm-baire"/>（2）を、局所コンパクト性をどこで使うか明示して書き直せ。<span class="haiten">（20点）</span></li>
+<li><ref t="prop-baire-iden"/> の <m>G_\delta</m> の場合を示せ。<span class="haiten">（25点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li><m>C([0,1])</m> のなかで、ある点で微分可能な関数の全体が第一類であることを示せ。<span class="haiten">（40点）</span></li>
+<li><m>\mathbb{R}</m> が第一類集合と測度零集合の合併として書けることを示せ。<span class="haiten">（35点）</span></li>
+</ol>
+</div>
+</div>

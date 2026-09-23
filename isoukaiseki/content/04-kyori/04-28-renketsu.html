@@ -1,0 +1,213 @@
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>「つながっている」を、開集合だけでどう言うのか。</li>
+<li>道でつなげることと、切り離せないことは同じか。</li>
+<li>連結成分は開集合か。</li>
+</ul>
+</div>
+
+<h3 id="s28-1">切り離せないこと</h3>
+
+<p>直観的には、<m>[0,1]</m> はつながっていて、<m>[0,1] \cup [2,3]</m> は二つに分かれている。<em>この違いを開集合の言葉で述べたい。</em></p>
+
+<p>後者では、<m>[0,1]</m> と <m>[2,3]</m> がそれぞれ全体のなかで<span class="yogo-hl">開かつ閉</span>である。<em>前者では、開かつ閉な部分集合は <m>\varnothing</m> と全体しかない。</em>これを定義に採る。</p>
+
+<div class="teigi" id="def-renketsu">
+<h4>連結空間</h4>
+<p class="no-indent">位相空間 <m>X</m> が<strong>連結</strong>であるとは、<m>X</m> を二つの空でない交わらない開集合の合併として書けないことをいう。同値な言い方として、開かつ閉な部分集合が <m>\varnothing</m> と <m>X</m> に限ることをいう。</p>
+</div>
+
+<div class="teiri" data-kind="命題" id="prop-renketsu-iikae">
+<h4></h4>
+<p class="no-indent"><m>X</m> が連結であることと、<m>X</m> から二点離散空間 <m>\{0,1\}</m> への連続写像が定数に限ることは同値である。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><m>f \colon X \to \{0,1\}</m> が連続で定数でないなら、<m>f^{-1}(0)</m> と <m>f^{-1}(1)</m> はともに空でない開集合で、交わらず、合併が <m>X</m>。逆に分割 <m>X = U \sqcup V</m> があれば、<m>U</m> で <m>0</m>、<m>V</m> で <m>1</m> と定めた関数が連続で定数でない。</p>
+<p><span class="yogo-hl">この言い換えが実用上もっとも使いやすい。</span><em>連結性を示すには「定数でない <m>\{0,1\}</m> 値連続関数がない」ことを言えばよい。</em></p>
+</div>
+
+<div class="rei" id="rei-renketsu-rei">
+<h4>連結な空間、そうでない空間</h4>
+<p class="no-indent"><strong>連結。</strong>区間（<m>\mathbb{R}</m> の連結部分集合は区間に限る）。<m>\mathbb{R}^n</m>。凸集合。球面。トーラス。密着位相をもつ空間。</p>
+<p><strong>連結でない。</strong><m>\mathbb{Q}</m>（第9章）。無理数全体。カントール集合。離散空間（二点以上）。<m>\mathbb{R} \setminus \{0\}</m>。</p>
+<p><m>\mathbb{Q}</m> が連結でないのは、<m>\sqrt{2}</m> が穴になるからである。<em>各点のまわりがいくらでも細かく切れる</em>——こういう空間を<strong>全不連結</strong>という。<span class="yogo-hl">連結成分が一点集合に限る空間である。</span>カントール集合と <m>\beta\mathbb{N}</m>（第23章）もそうである。</p>
+</div>
+
+<h3 id="s28-2">保たれ方</h3>
+
+<div class="teiri" id="thm-renketsu-hozon">
+<h4></h4>
+<p class="no-indent">（1）連結空間の連続像は連結である。<br>
+（2）連結な部分集合の族が共通点をもつなら、その合併は連結である。<br>
+（3）<m>A</m> が連結で <m>A \subseteq B \subseteq \overline{A}</m> なら <m>B</m> は連結である。<br>
+（4）連結空間の任意個の積は連結である。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">（1）<m>f \colon X \to Y</m> 連続全射で <m>Y</m> が分割 <m>U \sqcup V</m> をもつなら、<m>f^{-1}(U) \sqcup f^{-1}(V)</m> が <m>X</m> の分割になる。</p>
+<p>（2）<m>\{A_i\}</m> が連結で <m>p \in \bigcap_i A_i</m> とする。<m>f \colon \bigcup_i A_i \to \{0,1\}</m> を連続とすると、各 <m>A_i</m> 上で定数（<ref t="prop-renketsu-iikae"/>）。<em>どれも <m>p</m> を含むので、その定数値は <m>f(p)</m> に等しい。</em>よって全体で定数。</p>
+<p>（3）<m>f \colon B \to \{0,1\}</m> 連続とする。<m>A</m> 上で定数 <m>c</m>。<m>B \subseteq \overline{A}</m> より <m>A</m> は <m>B</m> で稠密であり、<span class="yogo-hl">稠密集合上で一致する連続写像はハウスドルフな値域では全体で一致する</span>（第13章）。よって <m>f \equiv c</m>。</p>
+<p>（4）まず有限積。<m>X \times Y</m> で点 <m>(a,b)</m> を固定する。各 <m>x</m> について <m>(\{x\} \times Y) \cup (X \times \{b\})</m> は、二つの連結集合が <m>(x,b)</m> で交わるので（2）より連結。<em>これらはすべて <m>(a,b)</m> を含むので、再び（2）より合併が連結。</em>合併は <m>X \times Y</m> 全体である。</p>
+<p>無限積。<m>a = (a_i)</m> を固定し、<em>有限個の座標を除いて <m>a</m> と一致する点の全体</em>を <m>D</m> とする。<m>D</m> は連結集合（有限積の連結性を使う）の合併で共通点 <m>a</m> をもつから連結。<span class="yogo-hl"><m>D</m> は積で稠密である</span>——基本開集合が有限個の座標しか制限しないから。（3）より <m>\overline{D} = \prod_i X_i</m> も連結。</p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">（4）の証明で、積位相の「有限個を除いて全体」という形が二度効いている。<em>有限積を使って <m>D</m> を作り、稠密性を言うのにも使う。</em><span class="yogo-hl">第11章で箱位相を退けた理由が、ここでも現れる</span>——箱位相では <m>D</m> が稠密にならない。</p>
+</div>
+
+<h3 id="s28-3">弧状連結</h3>
+
+<div class="teigi" id="def-kojo">
+<h4></h4>
+<p class="no-indent"><m>X</m> が<strong>弧状連結</strong>であるとは、任意の二点 <m>x, y</m> に対し連続写像 <m>\gamma \colon [0,1] \to X</m> で <m>\gamma(0)=x</m>、<m>\gamma(1)=y</m> となるものが存在することをいう。</p>
+</div>
+
+<div class="teiri" data-kind="命題" id="prop-kojo-renketsu">
+<h4></h4>
+<p class="no-indent">弧状連結ならば連結である。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><m>x</m> を固定する。各 <m>y</m> について道 <m>\gamma_y</m> を取ると、<m>\gamma_y([0,1])</m> は <m>[0,1]</m> の連続像だから連結（<ref t="thm-renketsu-hozon"/>（1））。<em>これらはすべて <m>x</m> を含むので、（2）より合併が連結。</em>合併は <m>X</m> 全体。</p>
+</div>
+
+<div class="hanrei" id="cex-topologist-sine">
+<h4>位相幾何学者の正弦曲線</h4>
+<p class="no-indent">逆は成り立たない。<m>\mathbb{R}^2</m> のなかで</p>
+<M>S = \{\, (x, \sin(1/x)) \mid 0 < x \le 1 \,\}, \qquad T = S \cup (\{0\} \times [-1,1])</M>
+<p class="no-indent">と置く。<m>S</m> は <m>(0,1]</m> の連続像だから連結であり、<em><m>\overline{S} = T</m> である</em>——<m>x \to 0</m> のとき <m>\sin(1/x)</m> が <m>[-1,1]</m> の全体を無限回往復するので、線分のすべての点が集積点になる。よって <ref t="thm-renketsu-hozon"/>（3）より <m>T</m> は連結。</p>
+<p><strong>しかし弧状連結でない。</strong>原点 <m>(0,0)</m> と <m>S</m> の点を結ぶ道 <m>\gamma</m> があったとする。<m>t_0 = \sup\{\, t \mid \gamma(t) \in \{0\}\times[-1,1] \,\}</m> と置くと、<m>t_0</m> のどんな右近傍でも <m>\gamma</m> の第二成分は <m>[-1,1]</m> 全体を動く。<span class="yogo-hl"><m>t_0</m> での連続性に反する。</span></p>
+<p><em>連結だが弧状連結でない</em>——この例が、二つの概念が別物であることを示す。</p>
+</div>
+
+<figure>
+<svg viewBox="0 0 470 268" width="470" height="268" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">位相幾何学者の正弦曲線——連結だが弧状連結でない</text>
+
+  <rect x="14" y="26" width="442" height="126" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+
+  <line x1="70" y1="92" x2="430" y2="92" stroke="#c9c9c7" stroke-width="0.7"/>
+  <line x1="70" y1="44" x2="70" y2="140" stroke="#8a8a88" stroke-width="1"/>
+  <line x1="66" y1="48" x2="74" y2="48" stroke="#8a8a88" stroke-width="1"/>
+  <line x1="66" y1="136" x2="74" y2="136" stroke="#8a8a88" stroke-width="1"/>
+  <text x="62" y="51" font-size="6" text-anchor="end" fill="#6a6a68">1</text>
+  <text x="62" y="139" font-size="6" text-anchor="end" fill="#6a6a68">−1</text>
+
+  <line x1="70" y1="48" x2="70" y2="136" stroke="#a03b2e" stroke-width="3"/>
+  <text x="78" y="40" font-size="6.4" fill="#8c2f1e">線分 {0}×[−1,1] を足すと閉包になる</text>
+
+  <path d="M76,92 L77,60 L78,126 L79,52 L80.5,134 L82,50 L84,136 L86.5,48 L90,136 L94,48
+           L100,136 L108,48 L120,136 L136,48 L160,136 L196,48 L248,136 L320,48 L410,136"
+        fill="none" stroke="#35618f" stroke-width="1.1"/>
+  <text x="330" y="66" font-size="6.6" fill="#1f3b5c">y = sin(1/x)　（0 &lt; x ≤ 1）</text>
+  <text x="330" y="78" font-size="6.4" fill="#6a6a68">原点に近づくほど振動が速くなる</text>
+
+  <text x="24" y="148" font-size="6.6" fill="#8c2f1e">閉包を取ると連結（定理より）。だが線分と曲線を結ぶ道は作れない</text>
+
+  <rect x="14" y="164" width="216" height="92" rx="4" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="24" y="179" font-size="7.6" font-weight="700" fill="#1e4a41">連結性が保たれるもの</text>
+  <text x="24" y="196" font-size="6.8" fill="#1e4a41">連続像　商　任意個の積</text>
+  <text x="24" y="209" font-size="6.8" fill="#1e4a41">共通点をもつ連結集合の合併</text>
+  <text x="24" y="222" font-size="6.8" fill="#1e4a41">閉包（A ⊆ B ⊆ A の閉包）</text>
+  <text x="24" y="239" font-size="6.8" fill="#8c2f1e">遺伝しない　R は連結だが Q はそうでない</text>
+  <text x="24" y="251" font-size="6.6" fill="#6a6a68">閉部分空間にも遺伝しない（Z を見よ）</text>
+
+  <rect x="240" y="164" width="216" height="92" rx="4" fill="#f4f1ea" stroke="#8a6b2c"/>
+  <text x="250" y="179" font-size="7.6" font-weight="700" fill="#5a4520">成分の閉と開</text>
+  <text x="250" y="196" font-size="6.8" fill="#5a4520">連結成分はつねに閉</text>
+  <text x="250" y="209" font-size="6.8" fill="#8c2f1e">開とは限らない（Q では一点集合）</text>
+  <text x="250" y="226" font-size="6.8" fill="#5a4520">局所連結なら成分は開</text>
+  <text x="250" y="239" font-size="6.6" fill="#6a6a68">R の開集合が可算個の開区間の</text>
+  <text x="250" y="250" font-size="6.6" fill="#6a6a68">合併になるのは、この事実による</text>
+</svg>
+<figcaption>原点に近づくほど振動が速くなる曲線に、縦の線分を足したもの。閉包なので連結だが、線分と曲線を結ぶ道は存在しない。</figcaption>
+</figure>
+
+<h3 id="s28-4">連結成分</h3>
+
+<div class="teigi" id="def-seibun">
+<h4></h4>
+<p class="no-indent"><m>x \in X</m> を含む連結部分集合すべての合併を、<m>x</m> の<strong>連結成分</strong>という。<ref t="thm-renketsu-hozon"/>（2）より、これは <m>x</m> を含む最大の連結集合である。</p>
+</div>
+
+<div class="teiri" data-kind="命題" id="prop-seibun">
+<h4></h4>
+<p class="no-indent">連結成分はつねに閉である。開とは限らない。各点が連結な近傍基をもつとき（<strong>局所連結</strong>）、連結成分は開である。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">閉であること。<m>C</m> を成分とすると <ref t="thm-renketsu-hozon"/>（3）より <m>\overline{C}</m> も連結であり、最大性より <m>\overline{C} \subseteq C</m>。</p>
+<p>開でない例。<m>\mathbb{Q}</m> では成分は一点集合であり、開でない。</p>
+<p>局所連結なら開であること。<m>x \in C</m> に対し連結近傍 <m>V \ni x</m> を取ると、最大性より <m>V \subseteq C</m>。<em>よって <m>C</m> は各点の近傍を含む。</em></p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">局所連結性は連結性を含まないし、含まれもしない。<em><m>\mathbb{R} \setminus \{0\}</m> は局所連結だが連結でない。<ref t="cex-topologist-sine"/> の <m>T</m> は連結だが局所連結でない。</em><span class="yogo-hl">大域的な条件と局所的な条件は独立である</span>——第19章の★★で述べた構図がここにも現れる。</p>
+</div>
+
+<div class="lv2">
+<h4>弧状連結成分と、局所弧状連結</h4>
+<p>連結成分と同じく、弧状連結成分が定義できる。<em>だが振る舞いが違う。</em></p>
+<p><strong>弧状連結成分は閉とは限らない。</strong><ref t="cex-topologist-sine"/> の <m>T</m> では、弧状連結成分は二つ——曲線部分 <m>S</m> と線分 <m>\{0\}\times[-1,1]</m> である。<span class="yogo-hl"><m>S</m> は閉でない。</span>連結成分は <m>T</m> 全体の一つだけなので、<em>連結成分が弧状連結成分より真に大きい</em>ことがある。</p>
+<p><strong>局所弧状連結なら一致する。</strong>各点が弧状連結な近傍基をもつとき、連結成分と弧状連結成分は一致する。</p>
+<p>証明。<m>C</m> を連結成分、<m>P \subseteq C</m> を弧状連結成分とする。局所弧状連結性より <m>P</m> は開である（上と同じ議論）。<em>同時に <m>C \setminus P</m> も他の弧状連結成分の合併だから開である。</em><m>C</m> が連結で <m>P \ne \varnothing</m> だから <m>P = C</m>。</p>
+<p><strong>多様体では一致する。</strong>多様体は局所的に <m>\mathbb{R}^n</m> と同相だから、局所弧状連結である。<span class="yogo-hl">したがって多様体では「連結」と「弧状連結」を区別しなくてよい。</span></p>
+<p>開集合についても同様である。<m>\mathbb{R}^n</m> の開集合は局所弧状連結なので、連結な開集合は弧状連結である。<em>複素解析で「領域」を連結開集合と定義し、そこで道に沿った積分を考えられるのは、この事実による</em>（第90章）。</p>
+<p><strong>なぜ道のほうが強いのか。</strong>道は <m>[0,1]</m> という具体的な空間からの写像を要求する。<em>連結性は「切れない」という否定的な条件にすぎない。</em></p>
+<p>存在を主張する条件（弧状連結）と、非存在を主張する条件（連結）——<span class="yogo-hl">前者のほうが強く、そのぶん使いやすい。</span>第1章で背理法と構成の違いを述べたが、同じ対比がここにある。</p>
+<p>ホモトピー論が弧状連結性を基礎に据えるのは、そのためである。基本群を定義するには道が要る。<em>連結なだけの空間では、道が足りなくて理論が立たない。</em></p>
+</div>
+
+<div class="lv3">
+<h4>全不連結性の階層</h4>
+<p><ref t="rei-renketsu-rei"/> で全不連結空間に触れた。<em>「つながっていない」にも程度がある。</em></p>
+<p><strong>三つの条件。</strong>強い順に並べる。</p>
+<p><em>零次元</em>——開かつ閉な集合が基底をなす。</p>
+<p><em>全分離</em>——異なる二点を、開かつ閉な集合で分離できる。</p>
+<p><em>全不連結</em>——連結成分が一点集合に限る。</p>
+<p>一般に <span class="yogo-hl">零次元 <m>\Rightarrow</m> 全分離 <m>\Rightarrow</m> 全不連結</span> であり、逆はいずれも成り立たない。</p>
+<p><strong>コンパクトなら一致する。</strong>コンパクトハウスドルフ空間では三つが同値になる。<em>証明には、成分が「<m>x</m> を含む開かつ閉な集合すべての交叉」に等しいことを使う。</em></p>
+<p>この事実が第20章★★★のストーン双対性を支えている。<span class="yogo-hl">ストーン空間（ブール代数に対応する空間）はコンパクトハウスドルフかつ零次元である。</span></p>
+<p><strong>反例。</strong>全不連結だが零次元でない空間がある。エルデシュ <span class="orig">Erdős</span> 空間</p>
+<M>E = \{\, x \in \ell^2 \mid \text{すべての } x_n \text{ が有理数} \,\}</M>
+<p>は全不連結だが零次元でない。<em>さらに <m>E</m> は自分自身と同相な位相的性質をもち、次元論で重要な例になる</em>（第42章）。</p>
+<p><strong>次元論への接続。</strong>零次元性は、第38章で導入する小さい帰納的次元 <m>\mathrm{ind}</m> が <m>0</m> であることと同値である。<em>したがって本章の三つの条件は、次元 <m>0</m> の三つの定義にあたる。</em></p>
+<p>第41章の一致定理は、可分距離空間で <m>\mathrm{ind} = \mathrm{Ind} = \dim</m> を主張する。<span class="yogo-hl">その一番下の段——次元 <m>0</m> の場合——が、ここで述べた同値性である。</span></p>
+<p><strong>連結性の次元論的な意味。</strong>逆に、連結性は「次元が <m>0</m> でない」ための条件の一つである。<em>連結で二点以上ある空間は <m>\mathrm{ind} \ge 1</m> である</em>——開かつ閉な集合が自明なものしかないので、境界が空でない近傍が取れないからである。</p>
+<p>第V部でこの関係を正面から扱う。本章の連結性は、そこへの入口にあたる。</p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li><m>\mathbb{R}</m> の連結部分集合が区間に限ることを示せ。</li>
+<li><m>\mathbb{Q}</m> の連結成分が一点集合であることを示せ。</li>
+<li>凸集合が弧状連結であることを示せ。</li>
+<li>連結空間の商が連結であることを示せ。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li><ref t="thm-renketsu-hozon"/>（2）を、<ref t="prop-renketsu-iikae"/> を使って示せ。<span class="haiten">（15点）</span></li>
+<li><ref t="thm-renketsu-hozon"/>（4）の無限積の場合を、<m>D</m> が稠密である理由を明示して示せ。<span class="haiten">（25点）</span></li>
+<li>連結成分が閉であることを示し、開とは限らない例を挙げよ。<span class="haiten">（15点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li><ref t="cex-topologist-sine"/> が弧状連結でないことを、連続性に反する箇所を明示して完全に示せ。<span class="haiten">（35点）</span></li>
+<li>コンパクトハウスドルフ空間では、零次元・全分離・全不連結が同値であることを示せ。<span class="haiten">（35点）</span></li>
+</ol>
+</div>
+</div>

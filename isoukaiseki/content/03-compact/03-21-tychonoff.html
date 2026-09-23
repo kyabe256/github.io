@@ -1,0 +1,202 @@
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>無限個のコンパクト空間の積は、コンパクトか。</li>
+<li>それを証明するのに、なぜ選択公理が要るのか。</li>
+<li>この定理は、どれだけ強い主張なのか。</li>
+</ul>
+</div>
+
+<h3 id="s21-1">主張と、意外さ</h3>
+
+<div class="teiri" id="thm-tychonoff">
+<h4>チコノフの定理</h4>
+<p class="no-indent">コンパクト空間の族 <m>\{X_i\}_{i \in I}</m> に対し、積空間 <m>\prod_{i \in I} X_i</m>（積位相）はコンパクトである。添字集合 <m>I</m> の濃度に制限はない。</p>
+</div>
+
+<p>この主張は意外である。<em>第19章で見たとおり、正規性は積で壊れ、第二可算性は非可算積で壊れた。</em><span class="yogo-hl">コンパクト性は、任意個の積で保たれるほとんど唯一の大域的な性質である。</span></p>
+
+<p>意外さの源を述べる。<m>\{0,1\}^{I}</m> を考える。<m>I</m> が非可算のとき、この空間は第一可算でなく、距離化できず、点列コンパクトでもない。<em>にもかかわらずコンパクトである。</em></p>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">箱位相ではこの定理は成り立たない。<m>\{0,1\}^{\omega}</m> は箱位相で離散になり、非可算なのでコンパクトでない（第11章）。<span class="yogo-hl">積位相の「有限個を除いて全体」という形が、定理の成立に不可欠である。</span></p>
+</div>
+
+<h3 id="s21-2">超フィルターによる証明</h3>
+
+<div class="shomei">
+<p class="no-indent"><ref t="thm-compact-doti"/>（3）を使う。<m>X = \prod_i X_i</m> 上の超フィルター <m>\mathcal{U}</m> を任意に取り、これが収束することを示す。</p>
+<p><strong>各座標に落とす。</strong>射影 <m>p_i \colon X \to X_i</m> による像を考える。</p>
+<M>\mathcal{U}_i = \{\, A \subseteq X_i \mid p_i^{-1}(A) \in \mathcal{U} \,\}</M>
+<p class="no-indent">これは <m>X_i</m> 上のフィルターである。<em>しかも超フィルターである</em>——<m>A \subseteq X_i</m> に対し、<m>p_i^{-1}(A)</m> か <m>p_i^{-1}(X_i \setminus A) = X \setminus p_i^{-1}(A)</m> のどちらかが <m>\mathcal{U}</m> に属するから（第12章の<ref t="prop-cho-filter"/>）、<m>A</m> か <m>X_i \setminus A</m> が <m>\mathcal{U}_i</m> に属する。</p>
+<p><strong>各座標で収束させる。</strong><m>X_i</m> はコンパクトだから、<ref t="thm-compact-doti"/>（3）より <m>\mathcal{U}_i \to x_i</m> なる <m>x_i \in X_i</m> がある。<span class="yogo-hl">ここで各 <m>i</m> について一つずつ <m>x_i</m> を選ぶ——選択公理を使う。</span></p>
+<p><strong>束ねる。</strong><m>x = (x_i)_{i \in I}</m> と置き、<m>\mathcal{U} \to x</m> を示す。<m>x</m> の基本近傍は</p>
+<M>W = p_{i_1}^{-1}(V_1) \cap \cdots \cap p_{i_n}^{-1}(V_n), \qquad V_k \ni x_{i_k} \text{ 開}</M>
+<p class="no-indent">の形である（第11章）。各 <m>k</m> について <m>\mathcal{U}_{i_k} \to x_{i_k}</m> だから <m>V_k \in \mathcal{U}_{i_k}</m>、すなわち <m>p_{i_k}^{-1}(V_k) \in \mathcal{U}</m>。<em>フィルターは有限交叉で閉じるから <m>W \in \mathcal{U}</m>。</em></p>
+<p><span class="yogo-hl">基本近傍が有限個の座標しか制限しないことが、ここで決定的に効く。</span>無限個の制限があれば、有限交叉では閉じない。</p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">証明が短いのには理由がある。<em>超フィルターは「すでに選び終わった」対象である。</em><span class="yogo-hl">選択の手間は、超フィルターの存在（第12章の超フィルター補題）と、各座標の収束先を選ぶところに封じ込められている。</span>被覆による証明では、この選択を証明の途中で明示的に行わなければならず、はるかに長くなる。</p>
+</div>
+
+<h3 id="s21-3">選択公理との同値性</h3>
+
+<div class="teiri" id="thm-tychonoff-ac">
+<h4></h4>
+<p class="no-indent">チコノフの定理は選択公理と同値である。すなわち、選択公理を除いた集合論の公理系のもとで、チコノフの定理から選択公理が導ける。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">チコノフの定理を仮定する。空でない集合の族 <m>\{A_i\}_{i \in I}</m> を与え、選択関数を作る。</p>
+<p><strong>空間を作る。</strong>各 <m>i</m> について <m>Y_i = A_i \cup \{\infty_i\}</m>（<m>\infty_i \notin A_i</m> は新しい点）とし、位相を</p>
+<M>\mathcal{T}_i = \{\varnothing\} \cup \{\, U \subseteq Y_i \mid \infty_i \in U \,\} \cup \{A_i\}</M>
+<p class="no-indent">と定める。<em>これは位相である</em>——確認は演習に回す。<m>Y_i</m> はコンパクトである。実際、<m>Y_i</m> を覆う開被覆には <m>\infty_i</m> を含む開集合 <m>U</m> があり、残りは <m>Y_i \setminus U \subseteq A_i</m> を覆う必要があるが、<m>A_i</m> 自身が開なのでこれ一つで足りる。<span class="yogo-hl">よって二つの開集合で覆える。</span></p>
+<p><strong>積を取る。</strong>チコノフの定理より <m>Y = \prod_i Y_i</m> はコンパクト。ここで閉集合の族</p>
+<M>F_i = p_i^{-1}(A_i) = \{\, y \in Y \mid y_i \in A_i \,\}</M>
+<p class="no-indent">を考える。<em><m>A_i</m> は <m>Y_i</m> で閉である</em>——補集合 <m>\{\infty_i\}</m> が開だから。よって <m>F_i</m> は閉である。</p>
+<p><strong>有限交叉性。</strong>有限個の <m>i_1, \ldots, i_n</m> に対し <m>F_{i_1} \cap \cdots \cap F_{i_n} \ne \varnothing</m> である。実際、<em>その有限個の座標では <m>A_{i_k}</m> から元を一つ選び（有限個の選択は公理不要、第3章）、残りの座標は <m>\infty_i</m> と置けばよい。</em></p>
+<p><strong>結論。</strong>コンパクト性（<ref t="thm-compact-doti"/>（2））より <m>\bigcap_{i \in I} F_i \ne \varnothing</m>。その元 <m>y</m> は、<em>すべての座標で <m>y_i \in A_i</m> を満たす。</em><span class="yogo-hl">すなわち <m>c(i) = y_i</m> が選択関数である。</span></p>
+</div>
+
+<figure>
+<svg viewBox="0 0 470 268" width="470" height="268" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <defs>
+    <marker id="a21" markerWidth="8" markerHeight="8" refX="7" refY="2.6" orient="auto"><path d="M0,0 L7,2.6 L0,5.2 z" fill="#35618f"/></marker>
+  </defs>
+
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">超フィルターは、選択を先に済ませた対象である</text>
+
+  <rect x="14" y="26" width="442" height="110" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+
+  <rect x="28" y="42" width="86" height="30" rx="3" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="71" y="55" font-size="6.6" text-anchor="middle" fill="#1e4a41">積の上の</text>
+  <text x="71" y="65" font-size="6.6" text-anchor="middle" fill="#1e4a41">超フィルター U</text>
+
+  <rect x="172" y="34" width="86" height="22" rx="3" fill="#dce7f0" stroke="#35618f"/>
+  <text x="215" y="48" font-size="6.4" text-anchor="middle" fill="#1f3b5c">座標 1 の超フィルター</text>
+  <rect x="172" y="60" width="86" height="22" rx="3" fill="#dce7f0" stroke="#35618f"/>
+  <text x="215" y="74" font-size="6.4" text-anchor="middle" fill="#1f3b5c">座標 2 の超フィルター</text>
+  <text x="215" y="94" font-size="6.4" text-anchor="middle" fill="#6a6a68">⋯（各座標へ落とす）</text>
+
+  <rect x="316" y="34" width="124" height="22" rx="3" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="378" y="48" font-size="6.4" text-anchor="middle" fill="#1e4a41">各成分の収束先 x₁</text>
+  <rect x="316" y="60" width="124" height="22" rx="3" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="378" y="74" font-size="6.4" text-anchor="middle" fill="#1e4a41">各成分の収束先 x₂</text>
+  <text x="378" y="94" font-size="6.4" text-anchor="middle" fill="#8c2f1e">ここで選択公理を使う</text>
+
+  <path d="M118,57 L168,45" stroke="#35618f" stroke-width="1.1" fill="none" marker-end="url(#a21)"/>
+  <path d="M118,60 L168,70" stroke="#35618f" stroke-width="1.1" fill="none" marker-end="url(#a21)"/>
+  <path d="M262,45 L312,45" stroke="#2f6b5f" stroke-width="1.1" fill="none" marker-end="url(#a21)"/>
+  <path d="M262,71 L312,71" stroke="#2f6b5f" stroke-width="1.1" fill="none" marker-end="url(#a21)"/>
+
+  <text x="24" y="114" font-size="6.8" fill="#1f3b5c">束ねた点 x = (xᵢ) の基本近傍は有限個の座標しか制限しない</text>
+  <text x="24" y="128" font-size="6.8" fill="#1e4a41">→ 有限交叉で閉じるフィルターの性質だけで、U が x に収束することが出る</text>
+
+  <rect x="14" y="148" width="216" height="112" rx="4" fill="#f4f1ea" stroke="#8a6b2c"/>
+  <text x="24" y="163" font-size="7.6" font-weight="700" fill="#5a4520">逆向き——定理から選択公理へ</text>
+  <text x="24" y="180" font-size="6.8" fill="#5a4520">各 Aᵢ に新しい点 ∞ᵢ を足す</text>
+  <text x="24" y="193" font-size="6.8" fill="#5a4520">開集合は ∞ᵢ を含むものと Aᵢ だけ</text>
+  <text x="24" y="206" font-size="6.8" fill="#5a4520">→ 二つの開集合で覆えるのでコンパクト</text>
+  <text x="24" y="223" font-size="6.8" fill="#5a4520">積はコンパクト（定理）</text>
+  <text x="24" y="236" font-size="6.8" fill="#5a4520">Fᵢ = pᵢ⁻¹(Aᵢ) は閉で有限交叉性をもつ</text>
+  <text x="24" y="251" font-size="6.8" font-weight="700" fill="#8c2f1e">→ 全体の交叉の元が選択関数になる</text>
+
+  <rect x="240" y="148" width="216" height="112" rx="4" fill="#fdf6f4" stroke="#e0c3bd"/>
+  <text x="250" y="163" font-size="7.6" font-weight="700" fill="#8c2f1e">強さの階層</text>
+  <text x="250" y="180" font-size="6.8" fill="#8c2f1e">選択公理　⇔　一般のチコノフ</text>
+  <text x="250" y="196" font-size="6.8" fill="#8c2f1e">超フィルター補題　⇔　ハウスドルフ版</text>
+  <text x="250" y="212" font-size="6.8" fill="#6a6a68">超フィルター補題は選択公理より真に弱い</text>
+  <text x="250" y="228" font-size="6.8" fill="#5a4520">分離公理を一段加えるだけで、必要な</text>
+  <text x="250" y="240" font-size="6.8" fill="#5a4520">集合論の強さが下がる</text>
+  <text x="250" y="254" font-size="6.6" fill="#6a6a68">第3章★★★で予告したことの実例</text>
+</svg>
+<figcaption>超フィルターを各座標へ落とし、収束先を選んで束ねる。基本近傍が有限個の座標しか制限しないことが決定的である。逆向きに、定理から選択関数が構成できる。</figcaption>
+</figure>
+
+<h3 id="s21-4">ただちに従うこと</h3>
+
+<div class="teiri" data-kind="系" id="cor-tychonoff-kei">
+<h4></h4>
+<p class="no-indent">（1）立方体 <m>[0,1]^{\kappa}</m> はコンパクトハウスドルフである。<br>
+（2）ヒルベルト立方体 <m>[0,1]^{\mathbb{N}}</m> はコンパクト距離空間である。<br>
+（3）カントール集合 <m>\{0,1\}^{\mathbb{N}}</m> はコンパクト距離空間である。<br>
+（4）<m>\mathbb{R}^n</m> の有界閉集合はコンパクトである（ハイネ–ボレル）。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">（1）は <ref t="thm-tychonoff"/> と、ハウスドルフ性が積で保たれること（第13章）。（2）（3）はこれに第11章★★の距離化を合わせる。</p>
+<p>（4）<m>A \subseteq \mathbb{R}^n</m> を有界閉とする。<m>A \subseteq [-M, M]^n</m> なる <m>M</m> を取れば、<m>[-M,M]^n</m> は <ref t="thm-tychonoff"/> よりコンパクトであり、<m>A</m> はその閉部分集合だからコンパクト（<ref t="thm-compact-kekka"/>（1））。<em><m>[-M,M]</m> のコンパクト性は第29章で実数の完備性から示す。</em></p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">（1）と第14章の <ref t="thm-tychonoff-umekomi"/> を合わせると、<span class="yogo-hl">チコノフ空間はコンパクトハウスドルフ空間の部分空間として実現できる</span>ことが分かる。<em>これが第23章のストーン–チェックのコンパクト化の出発点である。</em></p>
+</div>
+
+<div class="lv2">
+<h4>被覆による直接証明——アレクサンダーの準基底補題</h4>
+<p>超フィルターを使わない証明もある。<em>その道具が、それ自体として有用である。</em></p>
+<p><strong>アレクサンダーの準基底補題。</strong><m>\mathcal{S}</m> を <m>X</m> の準基底とする。<span class="yogo-hl"><m>\mathcal{S}</m> の元による被覆がすべて有限部分被覆をもてば、<m>X</m> はコンパクトである。</span></p>
+<p>証明はツォルンの補題を使う。<m>X</m> がコンパクトでないとして矛盾を導く。有限部分被覆をもたない開被覆の全体を、包含で順序づける。<em>鎖の合併が再び有限部分被覆をもたないことを確かめれば</em>（有限部分被覆があれば鎖のどれかの元に含まれてしまう）、ツォルンの補題より極大なもの <m>\mathcal{C}</m> が取れる。</p>
+<p><m>\mathcal{C}</m> の極大性から、<em><m>\mathcal{C}</m> に属さない開集合を足すと有限部分被覆ができる。</em>ここから、<m>\mathcal{C} \cap \mathcal{S}</m> が <m>X</m> を覆わないことを導く——覆えば仮定に反するからである。覆わない点 <m>x</m> を取ると、<m>x \in U \in \mathcal{C}</m> なる <m>U</m> があり、準基底の定義より <m>x \in S_1 \cap \cdots \cap S_m \subseteq U</m> なる <m>S_k \in \mathcal{S}</m> がある。</p>
+<p>各 <m>S_k \notin \mathcal{C}</m> なので、極大性より <m>\mathcal{C} \cup \{S_k\}</m> に有限部分被覆がある。<em>それらを合わせると <m>\mathcal{C}</m> 自身の有限部分被覆が作れてしまう</em>——分配法則による計算で確かめられる。矛盾。</p>
+<p><strong>チコノフの定理への適用。</strong>積位相の準基底は <m>\{p_i^{-1}(V)\}</m> である。この形の集合による被覆を考える。</p>
+<p>もし、ある <m>i</m> について <m>\{V \mid p_i^{-1}(V) \in \mathcal{C}\}</m> が <m>X_i</m> を覆うなら、<m>X_i</m> のコンパクト性より有限部分被覆があり、その逆像が <m>X</m> の有限部分被覆になる。<span class="yogo-hl">どの <m>i</m> でも覆わないとすると、各座標で覆われない点 <m>x_i</m> を選べる（選択公理）。</span>すると <m>x = (x_i)</m> は <m>\mathcal{C}</m> で覆われず、矛盾する。</p>
+<p><strong>二つの証明の比較。</strong>超フィルターによる証明は短いが、超フィルター補題という別の道具を要する。<em>準基底補題による証明は、ツォルンの補題を直接使うので自己完結的である。</em></p>
+<p>どちらでも選択公理は避けられない。<ref t="thm-tychonoff-ac"/> により、それは避けようのないことである。<span class="yogo-hl">証明の技法を変えても、定理の集合論的な強さは変わらない。</span></p>
+</div>
+
+<div class="lv3">
+<h4>ハウスドルフ版は、より弱い公理で足りる</h4>
+<p>チコノフの定理は選択公理と同値だった。<em>ところが、空間にハウスドルフ性を課すと事情が変わる。</em></p>
+<p><strong>主張。</strong><span class="yogo-hl">「コンパクトハウスドルフ空間の積はコンパクト」は、超フィルター補題と同値である。</span>そして超フィルター補題は選択公理より真に弱い。</p>
+<p><strong>なぜ弱くなるのか。</strong><ref t="thm-tychonoff"/> の証明を振り返る。選択公理を使ったのは、各座標の収束先 <m>x_i</m> を選ぶところだった。</p>
+<p>ハウスドルフ空間では、<em>超フィルターの収束先は一意である</em>（第13章）。<span class="yogo-hl">一意なら「選ぶ」必要がない——関数として定まる。</span>したがって選択公理は不要になり、超フィルター補題だけで足りる。</p>
+<p>第3章で述べた「選択公理は選べると言うが、どう選ぶかは教えない」という事情が、逆向きに働いている。<em>選ぶべきものが一つしかなければ、公理は要らない。</em></p>
+<p><strong>逆向き。</strong>ハウスドルフ版から超フィルター補題を導くには、<m>\{0,1\}^{I}</m> を使う。<m>I</m> 上のフィルター <m>\mathcal{F}</m> に対し、<em>それを含む超フィルターの全体が <m>\{0,1\}^{\mathcal{P}(I)}</m> の閉集合として表せる。</em>コンパクト性からこの閉集合が空でないことが出る。</p>
+<p><strong>階層のまとめ。</strong>第3章の★★★で述べた階層に、位相の定理を対応させる。</p>
+<M>\begin{array}{ll}
+\text{選択公理} & \text{一般のチコノフの定理} \\
+\text{超フィルター補題} & \text{ハウスドルフ版チコノフ、ハーン–バナッハ} \\
+\text{従属選択公理} & \text{ベールのカテゴリー定理（第27章）} \\
+\text{可算選択公理} & \text{可算和の可算性、点列コンパクトの初等的性質}
+\end{array}</M>
+<p><span class="yogo-hl">位相空間論の主要定理が、集合論の公理の強さの目盛りになっている。</span></p>
+<p><strong>何が読み取れるか。</strong>第一に、<em>定理に分離公理を加えると、必要な集合論の強さが下がることがある。</em>これは第II部で階層を丁寧に扱った理由の一つである。</p>
+<p>第二に、<em>「どの公理が必要か」を知ることは、定理の意味を知ることの一部である。</em>チコノフの定理が選択公理と同値であるという事実は、この定理が「構成的でない」ことを正確に述べている。<span class="yogo-hl">積の元を一つ取り出すことすらできないのだから、コンパクト性から具体物が得られないのは当然である。</span></p>
+<p>第三に、ロケールの理論（第5章★★★）では、チコノフの定理が選択公理なしに証明できる。<em>点という概念を捨てると、選択が要らなくなる。</em>必要だったのは点を選ぶことであり、コンパクト性そのものではなかった。</p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li>有限個のコンパクト空間の積がコンパクトであることを、被覆の言葉で直接示せ。</li>
+<li><m>\{0,1\}^{\mathbb{N}}</m> がコンパクトであることを、<ref t="thm-tychonoff"/> から述べよ。</li>
+<li><ref t="thm-tychonoff-ac"/> の証明で作った <m>\mathcal{T}_i</m> が位相であることを確かめよ。</li>
+<li>箱位相でチコノフの定理が成り立たない理由を述べよ。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li><ref t="thm-tychonoff"/> の証明で、<m>\mathcal{U}_i</m> が超フィルターであることを丁寧に示せ。<span class="haiten">（20点）</span></li>
+<li><ref t="thm-tychonoff-ac"/> の証明で、<m>F_i</m> の族が有限交叉性をもつことを示せ。有限個の選択が公理を要さない理由も述べること。<span class="haiten">（25点）</span></li>
+<li>ハイネ–ボレルの定理（<ref t="cor-tychonoff-kei"/>（4））を、<m>[-M,M]</m> のコンパクト性を認めて示せ。<span class="haiten">（15点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li>アレクサンダーの準基底補題を証明し、それを用いてチコノフの定理を示せ。<span class="haiten">（40点）</span></li>
+<li>ハウスドルフ版チコノフの定理が超フィルター補題だけで証明できる理由を、収束先の一意性に即して説明せよ。<span class="haiten">（30点）</span></li>
+</ol>
+</div>
+</div>
