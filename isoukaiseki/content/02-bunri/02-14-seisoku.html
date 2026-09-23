@@ -1,0 +1,198 @@
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>点と点ではなく、点と閉集合を引き離すには何が要るのか。</li>
+<li>「開集合で分離する」ことと「連続関数で分離する」ことは、どちらが強いのか。</li>
+<li>チコノフ空間が、なぜ位相空間論のひとつの標準になるのか。</li>
+</ul>
+</div>
+
+<h3 id="s14-1">点と閉集合を引き離す</h3>
+
+<p>ハウスドルフ性は二点を引き離す。<em>だが、点と閉集合を引き離せるとは限らない。</em>この二つは別の条件である。</p>
+
+<div class="teigi" id="def-seisoku">
+<h4>正則空間</h4>
+<p class="no-indent"><m>X</m> が<strong>正則</strong>であるとは、点 <m>x</m> と、<m>x</m> を含まない閉集合 <m>F</m> に対し、交わらない開集合 <m>U \ni x</m>、<m>V \supseteq F</m> が存在することをいう。<m>T_1</m> かつ正則な空間を <strong>T<sub>3</sub></strong> 空間という。</p>
+</div>
+
+<div class="teiri" data-kind="命題" id="prop-seisoku-iikae">
+<h4></h4>
+<p class="no-indent"><m>X</m> が正則であることと、<span class="yogo-hl">各点 <m>x</m> と各近傍 <m>U \ni x</m> に対し、<m>x \in W \subseteq \overline{W} \subseteq U</m> なる開集合 <m>W</m> が存在すること</span>は同値である。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">正則とする。<m>F = X \setminus U</m> は <m>x</m> を含まない閉集合だから、交わらない開集合 <m>W \ni x</m>、<m>V \supseteq F</m> が取れる。<m>W \cap V = \varnothing</m> より <m>W \subseteq X \setminus V</m> であり、右辺は閉だから <m>\overline{W} \subseteq X \setminus V \subseteq X \setminus F = U</m>。</p>
+<p>逆に条件を仮定する。<m>x \notin F</m>、<m>F</m> 閉とすると <m>U = X \setminus F</m> は <m>x</m> の近傍である。<m>x \in W \subseteq \overline{W} \subseteq U</m> なる <m>W</m> を取れば、<m>W</m> と <m>X \setminus \overline{W}</m> が求める分離を与える。</p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">この言い換えが実用上の正則性である。<em>「近傍のなかに、閉包まで含めて収まる小さい近傍が取れる」</em>——<span class="yogo-hl">近傍を「縮める」操作が許されることが、正則性の内容である。</span>距離空間では <m>U_{\varepsilon/2}(x)</m> を取ればよいので自明に成り立つ。第31章の距離化定理でこの操作を繰り返し使う。</p>
+</div>
+
+<div class="hanrei" id="cex-t2-not-t3">
+<h4>ハウスドルフだが正則でない</h4>
+<p class="no-indent"><m>\mathbb{R}</m> 上で、通常の開集合と、<m>\mathbb{Q}</m> を除いた集合の形 <m>U \setminus \mathbb{Q}</m> を合わせて生成した位相 <m>\mathcal{T}'</m> を考える。この空間を<strong>有理数を抜いた直線</strong>と呼ぶことにする。</p>
+<p>通常の位相より強いので、ハウスドルフである。<em>ところが正則でない。</em></p>
+<p><m>\mathbb{Q}</m> は <m>\mathcal{T}'</m> で閉である（補集合 <m>\mathbb{R} \setminus \mathbb{Q} = \mathbb{R} \setminus \mathbb{Q}</m> が基本開集合）。無理数 <m>x</m> を取る。<m>x</m> を含む <m>\mathcal{T}'</m>-開集合 <m>U</m> と、<m>\mathbb{Q}</m> を含む <m>\mathcal{T}'</m>-開集合 <m>V</m> が交わらないとする。<m>V</m> は <m>\mathbb{Q}</m> を含むので、通常の位相で稠密な集合を含む開集合を含む。<span class="yogo-hl">通常の位相で見ると、<m>U</m> の内部と <m>V</m> は交わらざるをえない。</span>くわしい議論は演習に回すが、<em>稠密な閉集合があると正則性が壊れる</em>というのが要点である。</p>
+</div>
+
+<h3 id="s14-2">連続関数で分離する</h3>
+
+<p>開集合による分離より、はるかに使いやすい分離がある。<em>連続関数を使う分離である。</em></p>
+
+<div class="teigi" id="def-kanzen-seisoku">
+<h4>完全正則空間・チコノフ空間</h4>
+<p class="no-indent"><m>X</m> が<strong>完全正則</strong>であるとは、点 <m>x</m> と <m>x</m> を含まない閉集合 <m>F</m> に対し、連続関数 <m>f \colon X \to [0,1]</m> で</p>
+<M>f(x) = 0, \qquad f|_F \equiv 1</M>
+<p class="no-indent">となるものが存在することをいう。<m>T_1</m> かつ完全正則な空間を<strong>チコノフ空間</strong>（<m>T_{3\frac{1}{2}}</m>）という。</p>
+</div>
+
+<div class="teiri" data-kind="命題" id="prop-kanzen-to-seisoku">
+<h4></h4>
+<p class="no-indent">完全正則ならば正則である。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><m>f</m> を定義のとおり取る。<m>U = f^{-1}([0, 1/2))</m>、<m>V = f^{-1}((1/2, 1])</m> と置く。<em>どちらも開集合の逆像だから開であり</em>、<m>x \in U</m>、<m>F \subseteq V</m>、そして <m>U \cap V = \varnothing</m>。</p>
+<p><span class="yogo-hl">連続関数による分離から開集合による分離を作るのは、区間を切るだけで済む。</span>逆向きは一般に難しい——それが次章のウリゾーンの補題の内容である。</p>
+</div>
+
+<p>逆は成り立たない。<em>正則だが完全正則でない空間が存在する。</em>構成は込み入っており、ティコノフの反例として知られる。<span class="yogo-hl">連続関数を作ることは、開集合を取ることよりも強い要求である。</span></p>
+
+<h3 id="s14-3">チコノフ空間の特徴づけ</h3>
+
+<p>チコノフ空間が標準的な地位を得たのは、次の定理による。</p>
+
+<div class="teiri" id="thm-tychonoff-umekomi">
+<h4>立方体への埋め込み</h4>
+<p class="no-indent"><m>X</m> がチコノフ空間であることと、ある基数 <m>\kappa</m> について <m>X</m> が立方体 <m>[0,1]^{\kappa}</m> に埋め込めることは同値である。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">十分性から示す。<m>[0,1]^{\kappa}</m> はチコノフ空間である——<m>[0,1]</m> がそうであり、完全正則性は積に保たれ（座標ごとの関数を使う）、遺伝もする（関数を制限する）。したがってその部分空間もチコノフである。</p>
+<p>必要性を示す。<m>C = \{\, f \colon X \to [0,1] \mid f \text{ 連続} \,\}</m> とし、<m>\kappa = |C|</m> として</p>
+<M>e \colon X \to [0,1]^{C}, \qquad e(x) = (f(x))_{f \in C}</M>
+<p class="no-indent">と定める。各成分が連続だから、<ref t="thm-seki-fuhen"/> より <m>e</m> は連続である。</p>
+<p><em><m>e</m> が単射であること。</em><m>x \ne y</m> とする。<m>T_1</m> より <m>\{y\}</m> は閉で <m>x \notin \{y\}</m>、完全正則性より <m>f(x) = 0</m>、<m>f(y) = 1</m> なる <m>f \in C</m> がある。よって <m>e(x) \ne e(y)</m>。</p>
+<p><em><m>e</m> が埋め込みであること。</em><m>U \subseteq X</m> を開、<m>x \in U</m> とする。<m>F = X \setminus U</m> に対し <m>f(x) = 0</m>、<m>f|_F \equiv 1</m> なる <m>f</m> を取る。<m>W = \{\, z \in [0,1]^C \mid z_f < 1/2 \,\}</m> は基本開集合であり、<span class="yogo-hl"><m>e(U) \supseteq e(X) \cap W \ni e(x)</m> が成り立つ</span>——<m>e(z) \in W</m> なら <m>f(z) < 1/2</m> なので <m>z \notin F</m>、すなわち <m>z \in U</m>。よって <m>e(U)</m> は <m>e(X)</m> で開である。</p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">この定理は、第9章の★★で述べた「どこに入るかを問う」方法の典型である。<em>チコノフ空間とは、立方体の部分空間として実現できる空間にほかならない。</em><span class="yogo-hl">抽象的な公理が、具体的な普遍空間への埋め込みとして翻訳された。</span>第23章のストーン–チェックのコンパクト化は、この埋め込みの閉包として構成される。</p>
+</div>
+
+<figure>
+<svg viewBox="0 0 470 266" width="470" height="266" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <defs>
+    <marker id="a14" markerWidth="8" markerHeight="8" refX="7" refY="2.6" orient="auto"><path d="M0,0 L7,2.6 L0,5.2 z" fill="#35618f"/></marker>
+  </defs>
+
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">開集合で分ける／関数で分ける</text>
+
+  <rect x="14" y="26" width="216" height="112" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+  <text x="24" y="42" font-size="7.6" font-weight="700" fill="#1f3b5c">正則　開集合で引き離す</text>
+  <ellipse cx="60" cy="78" rx="26" ry="15" fill="#cfe0ee" stroke="#35618f"/>
+  <circle cx="60" cy="78" r="3.4" fill="#1f3b5c"/><text x="60" y="60" font-size="6.6" text-anchor="middle" fill="#1f3b5c">x</text>
+  <rect x="130" y="58" width="78" height="36" rx="3" fill="#b9c8d6" stroke="#35618f"/>
+  <text x="169" y="80" font-size="6.8" text-anchor="middle" fill="#1f3b5c">閉集合 F</text>
+  <text x="120" y="112" font-size="6.6" text-anchor="middle" fill="#6a6a68">交わらない二つの開集合</text>
+  <text x="120" y="126" font-size="6.6" text-anchor="middle" fill="#6a6a68">言い換え　近傍を閉包ごと縮められる</text>
+
+  <rect x="240" y="26" width="216" height="112" rx="4" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="250" y="42" font-size="7.6" font-weight="700" fill="#1e4a41">完全正則　関数で引き離す</text>
+  <line x1="256" y1="100" x2="440" y2="100" stroke="#8a8a88" stroke-width="0.8"/>
+  <line x1="256" y1="100" x2="256" y2="56" stroke="#8a8a88" stroke-width="0.8"/>
+  <text x="250" y="59" font-size="6" text-anchor="end" fill="#6a6a68">1</text>
+  <text x="250" y="103" font-size="6" text-anchor="end" fill="#6a6a68">0</text>
+  <path d="M262,100 C 300,100 320,58 360,58 L436,58" fill="none" stroke="#2f6b5f" stroke-width="1.6"/>
+  <circle cx="262" cy="100" r="2.6" fill="#2f6b5f"/>
+  <text x="262" y="112" font-size="6.2" text-anchor="middle" fill="#1e4a41">x</text>
+  <line x1="360" y1="52" x2="436" y2="52" stroke="#2f6b5f" stroke-width="3"/>
+  <text x="398" y="46" font-size="6.2" text-anchor="middle" fill="#1e4a41">F 上で 1</text>
+  <text x="348" y="126" font-size="6.6" text-anchor="middle" fill="#6a6a68">f⁻¹([0,½)) と f⁻¹((½,1]) を取れば開集合の分離になる</text>
+
+  <rect x="14" y="150" width="442" height="106" rx="4" fill="#f4f1ea" stroke="#8a6b2c"/>
+  <text x="24" y="165" font-size="7.8" font-weight="700" fill="#5a4520">階層と、逆が成り立たないこと</text>
+
+  <rect x="30" y="176" width="72" height="24" rx="3" fill="#dce7f0" stroke="#35618f"/>
+  <text x="66" y="191" font-size="6.8" text-anchor="middle" fill="#1f3b5c">T₂</text>
+  <rect x="130" y="176" width="72" height="24" rx="3" fill="#dce7f0" stroke="#35618f"/>
+  <text x="166" y="191" font-size="6.8" text-anchor="middle" fill="#1f3b5c">T₃　正則</text>
+  <rect x="230" y="176" width="86" height="24" rx="3" fill="#dce7f0" stroke="#35618f"/>
+  <text x="273" y="191" font-size="6.8" text-anchor="middle" fill="#1f3b5c">T₃½　チコノフ</text>
+  <rect x="344" y="176" width="96" height="24" rx="3" fill="#dce7f0" stroke="#35618f"/>
+  <text x="392" y="191" font-size="6.8" text-anchor="middle" fill="#1f3b5c">T₄　正規（第15章）</text>
+
+  <path d="M126,188 L106,188" stroke="#35618f" stroke-width="1.2" fill="none" marker-end="url(#a14)"/>
+  <path d="M226,188 L206,188" stroke="#35618f" stroke-width="1.2" fill="none" marker-end="url(#a14)"/>
+  <path d="M340,188 L320,188" stroke="#35618f" stroke-width="1.2" fill="none" marker-end="url(#a14)"/>
+
+  <text x="24" y="219" font-size="7" fill="#8c2f1e">矢印はすべて一方向。逆の反例は第17章に集める</text>
+  <text x="24" y="235" font-size="7" fill="#5a4520">チコノフ ⇔ 立方体 [0,1]^κ に埋め込める。抽象的な公理が具体的な普遍空間に翻訳される</text>
+  <text x="24" y="250" font-size="7" fill="#5a4520">この埋め込みの閉包が、第23章のストーン–チェックのコンパクト化になる</text>
+</svg>
+<figcaption>正則性は開集合による分離、完全正則性は連続関数による分離。後者のほうが強く、立方体への埋め込みという具体的な特徴づけをもつ。</figcaption>
+</figure>
+
+<div class="lv2">
+<h4>完全正則性が保たれる操作</h4>
+<p>第13章の★★で作った表を、完全正則性について埋めておく。<em>ここまでは分離公理が「良く」振る舞う。</em></p>
+<p><strong>遺伝する。</strong><m>A \subseteq X</m>、<m>x \in A</m>、<m>F</m> が <m>A</m> で閉で <m>x \notin F</m> とする。<m>F = G \cap A</m>（<m>G</m> は <m>X</m> で閉）と書けるが、<em><m>x \notin G</m> とは限らない</em>ので注意が要る。</p>
+<p>正しくは <m>G' = \overline{F}^{\,X}</m> を取る。<m>x \notin F</m> かつ <m>F</m> が <m>A</m> で閉だから <m>x \notin \overline{F}^{\,X} \cap A = F</m>、すなわち <m>x \notin \overline{F}^{\,X}</m>。<m>X</m> の完全正則性より <m>f(x) = 0</m>、<m>f|_{\overline{F}} \equiv 1</m> なる <m>f</m> が取れ、<m>f|_A</m> が求めるものである。<span class="yogo-hl">閉包を先に取るのが要点である。</span></p>
+<p><strong>積に保たれる。</strong><m>x \in \prod_i X_i</m>、<m>F</m> 閉、<m>x \notin F</m> とする。<m>x</m> の基本近傍 <m>\prod_i U_i \subseteq X \setminus F</m>（有限個を除き <m>U_i = X_i</m>）を取る。制限のかかる座標 <m>i_1, \ldots, i_n</m> の各々で <m>f_k(x_{i_k}) = 0</m>、<m>f_k|_{X_{i_k} \setminus U_{i_k}} \equiv 1</m> なる連続関数を取り、</p>
+<M>f(z) = \max\big(f_1(z_{i_1}),\ \ldots,\ f_n(z_{i_n})\big)</M>
+<p>と定める。<em>有限個の連続関数の最大は連続である。</em><m>f(x) = 0</m> であり、<m>z \in F</m> なら <m>z \notin \prod U_i</m> なのでどれかの座標で <m>1</m> をとり、<m>f(z) = 1</m>。<span class="yogo-hl">制限が有限個であることが、有限個の最大で済む理由である。</span></p>
+<p><strong>商では壊れる。</strong>第10章の <m>\mathbb{R}/\mathbb{Q}</m> が反例になる。連続関数が定数しかないので、分離はできない。</p>
+<p><strong>なぜ完全正則性がここまで良いのか。</strong>理由は <m>[0,1]</m> という一つの空間に帰着することにある。<em>完全正則性とは「<m>[0,1]</m> への連続関数が十分に多い」という条件である。</em>そして関数の族に対する操作——制限、座標ごとの合成、有限個の最大——はいずれも連続性を保つ。</p>
+<p><ref t="thm-tychonoff-umekomi"/> はこの見方を定式化したものである。<span class="yogo-hl">チコノフ空間とは、<m>[0,1]</m> への連続関数で点と閉集合を見分けられる空間である。</span>第79章のゲルファント理論では、この「関数が十分に多い」という考えが代数の言葉に翻訳される。</p>
+</div>
+
+<div class="lv3">
+<h4>正則だが完全正則でない空間</h4>
+<p><ref t="prop-kanzen-to-seisoku"/> の逆が成り立たないことは述べた。<em>その反例の作り方に、この分野の技術が集約されている。</em></p>
+<p><strong>難しさの所在。</strong>正則性から完全正則性を導こうとすると、連続関数を構成しなければならない。第15章で見るウリゾーンの補題は、<span class="yogo-hl">正規性があれば関数が作れる</span>と主張する。ところが正則性だけでは足りない。</p>
+<p>正則性は「近傍を閉包ごと縮められる」という条件で、これを可算回繰り返せば <m>[0,1]</m> 上の二進有理数で添字づけられた開集合の列が作れそうに見える。しかし縮める操作は<em>点と閉集合</em>の間でしかできず、<em>閉集合と閉集合</em>の間ではできない。関数を作るには後者が要る。</p>
+<p><strong>ティコノフの構成。</strong>一九三〇年の反例は、順序数の空間を組み合わせて作られる。おおまかな仕組みはこうである。正則な空間 <m>X</m> を、連続関数がすべて特定の閉集合上で同じ値をとるように設計する。すると、その閉集合と外の点を関数で分離できない。</p>
+<p><em>設計の道具は、共終数の非対称性である。</em><m>\omega_1</m> 上の可算個の条件では <m>\omega_1</m> を押さえきれないという第4章の事実を使い、連続関数が「最後まで」到達できないように空間を組む。</p>
+<p><strong>ヘヴィットの改良。</strong>より劇的な例がある。ヘヴィット <span class="orig">Hewitt</span> は一九四六年に、<span class="yogo-hl">正則ハウスドルフでありながら、連続な実数値関数が定数しかない</span>空間を構成した。</p>
+<p>この空間では完全正則性が最悪の形で壊れる。<em>分離するどころか、分離に使える関数が一つもない。</em>それでも正則性は成り立っている。位相空間として十分に「細かい」のに、関数がまったく作れない。</p>
+<p><strong>教訓。</strong>この反例が示すのは、<span class="yogo-hl">位相の情報と関数の情報が独立だということである。</span>開集合を細かくしても、連続関数が増えるとは限らない。</p>
+<p>この独立性は、本書の後半にも影を落とす。第59章のリースの表現定理や第79章のゲルファント理論は、「連続関数の全体から空間を復元する」という形をとる。<em>その復元が可能なのは、コンパクトハウスドルフ空間という十分に良い場合に限られる。</em>ヘヴィットの空間からは、関数の全体を見ても何も復元できない。</p>
+<p><strong>階層のなかの位置づけ。</strong>結局、分離公理の階層は次のようになる。</p>
+<M>T_2 \impliedby T_3 \impliedby T_{3\frac12} \impliedby T_4</M>
+<p>そして <m>T_3</m> と <m>T_{3\frac12}</m> のあいだの段差が、「開集合で分けること」と「関数で分けること」の段差にあたる。<em>第15章と第16章は、<m>T_4</m>（正規）があればこの段差を越えられることを示す二つの定理に充てられる。</em></p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li>距離空間が完全正則であることを、具体的な関数を書いて示せ。</li>
+<li><m>[0,1]</m> が完全正則であることを確かめよ。</li>
+<li>正則かつ <m>T_0</m> ならば <m>T_1</m> であることを示せ。</li>
+<li>離散空間と密着位相をもつ空間が、それぞれ正則かどうかを判定せよ。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li><ref t="prop-seisoku-iikae"/> を、両方向とも自分の言葉で書き直せ。<span class="haiten">（15点）</span></li>
+<li>完全正則性が遺伝的であることを、★★で述べた「閉包を先に取る」という注意点を明示して示せ。<span class="haiten">（20点）</span></li>
+<li><ref t="thm-tychonoff-umekomi"/> の必要性の証明で、<m>e</m> が埋め込みであることの部分を詳しく書け。<span class="haiten">（25点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li><ref t="cex-t2-not-t3"/> の空間が正則でないことを、完全に証明せよ。<span class="haiten">（30点）</span></li>
+<li>完全正則性が積で保たれることを示せ。有限個の最大をとる操作がどこで必要になるかを述べること。<span class="haiten">（25点）</span></li>
+</ol>
+</div>
+</div>

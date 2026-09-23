@@ -1,0 +1,201 @@
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>位相的性質は、四つの操作に対してどう振る舞うのか。</li>
+<li>「保存される」ことと「強い条件である」ことは、なぜ逆の関係にあるのか。</li>
+<li>この表を作ることで、何が見えるようになるのか。</li>
+</ul>
+</div>
+
+<h3 id="s19-1">四つの操作</h3>
+
+<p>第I部で、位相空間を作る四つの操作を得た。<em>部分空間、積、商、そして連続像である。</em>第II部では分離公理を導入し、それぞれが操作に対してどう振る舞うかを個別に確かめてきた。<span class="yogo-hl">この章では表を完成させ、そこから何が読めるかを述べる。</span></p>
+
+<div class="teigi" id="def-hozon-go">
+<h4>保存に関する用語</h4>
+<p class="no-indent">位相的性質 <m>P</m> について、</p>
+<p class="no-indent"><strong>遺伝的</strong>　すべての部分空間が <m>P</m> をもつ。<strong>閉遺伝的</strong>　閉部分空間が <m>P</m> をもつ。<strong>開遺伝的</strong>　開部分空間が <m>P</m> をもつ。<br>
+<strong>積で保たれる</strong>　<m>P</m> をもつ空間の積が <m>P</m> をもつ。有限積・可算積・任意積を区別する。<br>
+<strong>商で保たれる</strong>　<m>P</m> をもつ空間の商が <m>P</m> をもつ。<br>
+<strong>連続像で保たれる</strong>　<m>P</m> をもつ空間の連続像が <m>P</m> をもつ。</p>
+</div>
+
+<h3 id="s19-2">表</h3>
+
+<div class="teiri" id="thm-hozon-hyo">
+<h4>保存の一覧</h4>
+<p class="no-indent">第II部までに扱った性質について、次が成り立つ。</p>
+<M>\begin{array}{lcccc}
+& \text{部分} & \text{積} & \text{商} & \text{連続像} \\
+T_0,\ T_1,\ T_2 & \bigcirc & \bigcirc & \times & \times \\
+T_3,\ T_{3\frac12} & \bigcirc & \bigcirc & \times & \times \\
+T_4\ (\text{正規}) & \text{閉のみ} & \times & \times & \times \\
+T_5\ (\text{完全正規}) & \bigcirc & \times & \times & \times \\
+\text{第一可算} & \bigcirc & \text{可算積} & \times & \times \\
+\text{第二可算} & \bigcirc & \text{可算積} & \times & \times \\
+\text{可分} & \times & \bigcirc\ (\le 2^{\aleph_0}) & \bigcirc & \bigcirc \\
+\text{距離化可能} & \bigcirc & \text{可算積} & \times & \times
+\end{array}</M>
+</div>
+
+<div class="shomei">
+<p class="no-indent">大半は第13章から第18章で示した。残りを補う。</p>
+<p><strong>第一可算・第二可算が可算積で保たれる。</strong>各成分の可算基底 <m>\mathcal{B}_n</m> から、基本開集合 <m>\prod_i U_i</m>（有限個を除き <m>U_i = X_i</m>、制限される座標では <m>U_i \in \mathcal{B}_i</m>）の全体を取る。<em>有限個の座標の選び方と基底元の選び方がともに可算なので、全体も可算である。</em><span class="yogo-hl">「有限個を除いて全体」という積位相の形が、可算性を保つ理由である。</span></p>
+<p><strong>非可算積では壊れる。</strong><m>\{0,1\}^{I}</m>（<m>I</m> 非可算）は第一可算でない（第11章の演習）。<em>したがって第二可算でも距離化可能でもない。</em></p>
+<p><strong>可分性は商と連続像で保たれる。</strong><m>D \subseteq X</m> が稠密で <m>f</m> が連続な全射なら、<m>f(D)</m> は <m>f(X)</m> で稠密である。実際、<m>V</m> を空でない開集合とすると <m>f^{-1}(V)</m> は空でない開集合だから <m>D</m> と交わり、その像が <m>f(D) \cap V</m> に入る。<em>可分性は「小さい集合で近似できる」という条件で、像を取ると小さいままである。</em></p>
+<p><strong>可分性は遺伝しない。</strong>ゾルゲンフライ平面が可分なのに、反対角線（濃度 <m>2^{\aleph_0}</m> の離散空間）が可分でない（第9章の演習）。</p>
+</div>
+
+<figure>
+<svg viewBox="0 0 470 272" width="470" height="272" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">保存の一覧——強い条件は壊れやすい</text>
+
+  <rect x="14" y="26" width="442" height="146" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+
+  <text x="24" y="42" font-size="7" font-weight="700" fill="#1f3b5c">性質</text>
+  <text x="190" y="42" font-size="7" font-weight="700" text-anchor="middle" fill="#1f3b5c">部分</text>
+  <text x="250" y="42" font-size="7" font-weight="700" text-anchor="middle" fill="#1f3b5c">積</text>
+  <text x="310" y="42" font-size="7" font-weight="700" text-anchor="middle" fill="#1f3b5c">商</text>
+  <text x="380" y="42" font-size="7" font-weight="700" text-anchor="middle" fill="#1f3b5c">連続像</text>
+  <line x1="24" y1="47" x2="446" y2="47" stroke="#c3d2e0" stroke-width="0.8"/>
+
+  <text x="24" y="61" font-size="6.8" fill="#1f3b5c">T₀・T₁・T₂</text>
+  <text x="190" y="61" font-size="7" text-anchor="middle" fill="#2f6b5f">○</text>
+  <text x="250" y="61" font-size="7" text-anchor="middle" fill="#2f6b5f">○</text>
+  <text x="310" y="61" font-size="7" text-anchor="middle" fill="#a03b2e">×</text>
+  <text x="380" y="61" font-size="7" text-anchor="middle" fill="#a03b2e">×</text>
+
+  <text x="24" y="76" font-size="6.8" fill="#1f3b5c">T₃・T₃½</text>
+  <text x="190" y="76" font-size="7" text-anchor="middle" fill="#2f6b5f">○</text>
+  <text x="250" y="76" font-size="7" text-anchor="middle" fill="#2f6b5f">○</text>
+  <text x="310" y="76" font-size="7" text-anchor="middle" fill="#a03b2e">×</text>
+  <text x="380" y="76" font-size="7" text-anchor="middle" fill="#a03b2e">×</text>
+
+  <text x="24" y="91" font-size="6.8" font-weight="700" fill="#8c2f1e">T₄　正規</text>
+  <text x="190" y="91" font-size="6.4" text-anchor="middle" fill="#8a6b2c">閉のみ</text>
+  <text x="250" y="91" font-size="7" text-anchor="middle" fill="#a03b2e">×</text>
+  <text x="310" y="91" font-size="7" text-anchor="middle" fill="#a03b2e">×</text>
+  <text x="380" y="91" font-size="7" text-anchor="middle" fill="#a03b2e">×</text>
+
+  <text x="24" y="106" font-size="6.8" fill="#1f3b5c">T₅　完全正規</text>
+  <text x="190" y="106" font-size="7" text-anchor="middle" fill="#2f6b5f">○</text>
+  <text x="250" y="106" font-size="7" text-anchor="middle" fill="#a03b2e">×</text>
+  <text x="310" y="106" font-size="7" text-anchor="middle" fill="#a03b2e">×</text>
+  <text x="380" y="106" font-size="7" text-anchor="middle" fill="#a03b2e">×</text>
+
+  <text x="24" y="121" font-size="6.8" fill="#1f3b5c">第一可算・第二可算</text>
+  <text x="190" y="121" font-size="7" text-anchor="middle" fill="#2f6b5f">○</text>
+  <text x="250" y="121" font-size="6.4" text-anchor="middle" fill="#8a6b2c">可算積</text>
+  <text x="310" y="121" font-size="7" text-anchor="middle" fill="#a03b2e">×</text>
+  <text x="380" y="121" font-size="7" text-anchor="middle" fill="#a03b2e">×</text>
+
+  <text x="24" y="136" font-size="6.8" fill="#1f3b5c">可分</text>
+  <text x="190" y="136" font-size="7" text-anchor="middle" fill="#a03b2e">×</text>
+  <text x="250" y="136" font-size="7" text-anchor="middle" fill="#2f6b5f">○</text>
+  <text x="310" y="136" font-size="7" text-anchor="middle" fill="#2f6b5f">○</text>
+  <text x="380" y="136" font-size="7" text-anchor="middle" fill="#2f6b5f">○</text>
+
+  <text x="24" y="151" font-size="6.8" fill="#1f3b5c">距離化可能</text>
+  <text x="190" y="151" font-size="7" text-anchor="middle" fill="#2f6b5f">○</text>
+  <text x="250" y="151" font-size="6.4" text-anchor="middle" fill="#8a6b2c">可算積</text>
+  <text x="310" y="151" font-size="7" text-anchor="middle" fill="#a03b2e">×</text>
+  <text x="380" y="151" font-size="7" text-anchor="middle" fill="#a03b2e">×</text>
+
+  <text x="24" y="166" font-size="6.6" fill="#6a6a68">コンパクト・連結は第III部と第IV部で埋める（どちらも商と連続像で保たれる）</text>
+
+  <rect x="14" y="184" width="216" height="80" rx="4" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="24" y="199" font-size="7.6" font-weight="700" fill="#1e4a41">読めること（1）</text>
+  <text x="24" y="215" font-size="6.8" fill="#1e4a41">局所的な性質は操作に強い</text>
+  <text x="24" y="227" font-size="6.6" fill="#6a6a68">各点のまわりの話は、制限しても</text>
+  <text x="24" y="238" font-size="6.6" fill="#6a6a68">座標ごとに見ても壊れない</text>
+  <text x="24" y="255" font-size="6.8" fill="#8c2f1e">大域的な性質は壊れやすい</text>
+
+  <rect x="240" y="184" width="216" height="80" rx="4" fill="#f4f1ea" stroke="#8a6b2c"/>
+  <text x="250" y="199" font-size="7.6" font-weight="700" fill="#5a4520">読めること（2）</text>
+  <text x="250" y="215" font-size="6.8" fill="#5a4520">商だけは、どの分離公理も保たない</text>
+  <text x="250" y="227" font-size="6.6" fill="#6a6a68">「潰す」操作は情報を失う</text>
+  <text x="250" y="238" font-size="6.8" fill="#5a4520">可分だけが商で保たれる</text>
+  <text x="250" y="255" font-size="6.6" fill="#6a6a68">像として保たれる性質だから</text>
+</svg>
+<figcaption>保存の一覧。局所的な性質は四つの操作に強く、大域的な性質は壊れやすい。商はどの分離公理も保存しない一方、可分性のような「像として残る」性質だけを保つ。</figcaption>
+</figure>
+
+<h3 id="s19-3">表から読めること</h3>
+
+<p>三つのことが読める。</p>
+
+<p><strong>第一に、局所的な性質は操作に強い。</strong><em>「各点のまわりで何が言えるか」という形の条件——第一可算性、正則性、完全正則性——は、部分空間と積で保たれる。</em><span class="yogo-hl">制限しても各点のまわりは変わらず、積でも有限個の座標を見れば足りるからである。</span></p>
+
+<p><strong>第二に、大域的な性質は壊れやすい。</strong>正規性は「空間全体の二つの閉集合」を扱う条件であり、部分空間でも積でも壊れる。<em>コンパクト性と連結性（第III部・第IV部）も大域的だが、こちらは商と連続像で保たれる</em>——後述する。</p>
+
+<p><strong>第三に、商だけが分離公理をまったく保たない。</strong><span class="yogo-hl">潰す操作は、点を区別する能力そのものを破壊する。</span><em>逆に、可分性のように「像として残る」性質は商で保たれる。</em>この対比が、操作の性格を言い当てている。</p>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">表の空欄——コンパクト性と連結性——を先に埋めておく。どちらも<span class="yogo-hl">商と連続像で保たれ、積で保たれ（コンパクト性は任意積、連結性も任意積）、遺伝しない</span>。<em>コンパクト性は閉遺伝的である。</em>第20章と第28章で証明する。</p>
+<p>この振る舞いは分離公理と正反対である。<em>分離公理は「細かさ」を要求し、コンパクト性と連結性は「粗さ」を要求する。</em>細かさは制限で保たれ、粗さは像で保たれる。</p>
+</div>
+
+<div class="lv2">
+<h4>強さと安定性のあいだの交換</h4>
+<p>表を眺めると、法則のようなものが見える。<em>強い条件ほど保存されにくい。</em>これは偶然ではない。</p>
+<p><strong>理由を述べる。</strong>位相的性質 <m>P</m> が「<m>X</m> のすべての◯◯について△△が存在する」という形をしているとする。<span class="yogo-hl">部分空間を取ると、◯◯は増えないが△△の候補も減る。</span></p>
+<p>正規性の場合、部分空間 <m>A</m> で閉な集合は <m>X</m> で閉とは限らない。<em>すなわち「◯◯が増える」</em>——<m>A</m> で閉な集合のほうが多い。同時に、分離する開集合は <m>A</m> の開集合でなければならないので、<em>「△△が減る」</em>。両方が悪い向きに動くので壊れる。</p>
+<p>完全正則性の場合、◯◯は「点と閉集合の対」で、<m>A</m> で閉な集合は <m>X</m> で閉な集合の制限だから、<em>閉包を取ることで <m>X</m> の問題に還元できる</em>（第14章★★）。△△は <m>X</m> の関数を制限すればよい。<span class="yogo-hl">還元が効くかどうかが分かれ目である。</span></p>
+<p><strong>積の場合。</strong>積で保たれるには、<em>各成分の情報を有限個束ねて全体の情報にできる</em>必要がある。完全正則性では有限個の関数の最大を取った（第14章★★）。正規性ではこれができない——閉集合は座標ごとに分解できないからである。</p>
+<p>ゾルゲンフライ平面の反対角線が典型である。<span class="yogo-hl">二つの座標が連動して動く方向にできる集合は、座標ごとの情報では見えない。</span></p>
+<p><strong>実務上の含意。</strong>定理を証明するとき、仮定として何を置くかは次の基準で決まる。</p>
+<p><em>操作を繰り返す証明では、保存される条件を使う。</em>部分空間と積を行き来する議論には、完全正則性までにとどめる。</p>
+<p><em>一回で済む証明では、強い条件を使ってよい。</em>ウリゾーンの補題は正規性を一度使うだけなので、正規性が壊れやすくても困らない。</p>
+<p><strong>コンパクトハウスドルフという解決。</strong>実は、この交換をほぼ回避する条件がある。<em>コンパクトハウスドルフ性である。</em></p>
+<p>この条件は正規性を含み（第20章）、しかも<span class="yogo-hl">任意積で保たれ（チコノフの定理、第21章）、閉部分空間に遺伝し、連続像で保たれる（ハウスドルフな値域なら）。</span>強くて安定という、めずらしい組み合わせである。</p>
+<p>第III部以降、多くの定理がコンパクトハウスドルフ空間を舞台にするのは、この安定性のためである。第59章のリースの表現定理、第79章のゲルファント理論、第96章のストーン–ワイエルシュトラスの定理——いずれもこの設定で述べられる。</p>
+</div>
+
+<div class="lv3">
+<h4>保存を公理化する——圏論的な見方</h4>
+<p>保存の表は、性質ごとの個別の事実の集まりに見える。<em>だが背後に共通の構造がある。</em>それを取り出しておく。</p>
+<p><strong>反映的部分圏。</strong>位相空間の圏 <m>\mathbf{Top}</m> のなかで、ある性質をもつ空間だけを集めた部分圏を考える。<em>この部分圏が「反映的」であるとは、任意の空間から部分圏への最良の近似が存在することをいう。</em></p>
+<p><m>T_0</m> 空間の圏は反映的である。第13章の★★★で述べたコルモゴロフ商が、その近似を与える。ハウスドルフ空間の圏も反映的で、近似は「ハウスドルフ化」（適当な商を取る）である。</p>
+<p><strong>余反映的部分圏。</strong>逆向きに、部分圏から任意の空間への最良の近似が存在する場合を余反映的という。<em>コンパクト生成空間の圏（第8章★★★）は余反映的である。</em></p>
+<p><strong>保存と随伴。</strong>ここで一般的な原理が働く。<span class="yogo-hl">部分圏が反映的なら、その性質は極限（積・部分空間）で保たれる。余反映的なら、余極限（商・直和）で保たれる。</span></p>
+<p>これで表の大枠が説明できる。分離公理は反映的な部分圏を定めるので、積と部分空間で保たれやすい。<em>正規性が例外なのは、正規空間の圏が反映的でないからである。</em></p>
+<p><strong>なぜ正規空間の圏は反映的でないのか。</strong>反映的であるには、正規空間の積が正規でなければならない（極限で閉じる必要がある）。ゾルゲンフライ平面がそれを否定する。</p>
+<p>より根本的には、<em>正規性が「存在命題の一様な選択」を要求しない</em>ことが原因である。分離する開集合を、閉集合の対ごとに選ぶだけでよい。<span class="yogo-hl">選び方に一貫性がないので、積で束ねられない。</span></p>
+<p>対して完全正則性は、連続関数という「関手的な」対象を要求する。関数は制限も合成もできるので、操作に対して一貫して振る舞う。</p>
+<p><strong>パラコンパクト性という改良。</strong>第24章で導入するパラコンパクト性は、<em>「被覆の細分」という一貫した構造を要求する。</em>その結果、正規性より強いのに扱いやすい。</p>
+<p>ただし積では保たれない。<m>\mathbb{R}_\ell</m> はパラコンパクトだが <m>\mathbb{R}_\ell^2</m> はそうでない。<span class="yogo-hl">積で保たれる大域的な条件は、実質的にコンパクト性だけである。</span></p>
+<p><strong>この見方の限界。</strong>圏論的な整理は大枠を説明するが、個別の反例は説明しない。<em>チコノフ板が正規である理由も、ゾルゲンフライ平面が正規でない理由も、圏論からは出てこない。</em></p>
+<p>第4章の共終数、第7章の可算性、第15章のヨーンズの補題——これらは具体的な集合論的・組合せ論的な事実であり、抽象化では代替できない。<span class="yogo-hl">枠組みは整理を与えるが、内容は個別の構成から来る。</span>第V部で基数不変量を扱うとき、この点が改めて明らかになる。</p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li>第一可算性が可算積で保たれることを示せ。</li>
+<li>可分性が連続像で保たれることを示せ。</li>
+<li>正規性が閉遺伝的であることを示せ。</li>
+<li>表のうち、四つの操作すべてで保たれる性質はあるか。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li>第二可算性が可算積で保たれ、非可算積では保たれないことを示せ。<span class="haiten">（20点）</span></li>
+<li><ref t="thm-hozon-hyo"/> の「可分性は遺伝しない」を、ゾルゲンフライ平面を用いて示せ。<span class="haiten">（25点）</span></li>
+<li>局所的な性質が部分空間で保たれやすい理由を、★★の議論に従って一般的に述べよ。<span class="haiten">（20点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li>正規空間の圏が反映的でないことを、積で閉じないという事実から説明せよ。<span class="haiten">（30点）</span></li>
+<li>「強い条件ほど保存されにくい」という経験則に反する例を探し、その例で何が効いているかを論ぜよ（コンパクトハウスドルフ性を検討するとよい）。<span class="haiten">（30点）</span></li>
+</ol>
+</div>
+</div>

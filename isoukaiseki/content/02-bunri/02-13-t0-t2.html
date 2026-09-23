@@ -1,0 +1,183 @@
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>位相の公理だけでは、なぜ二点を区別できないことがあるのか。</li>
+<li>一点集合が閉であることは、何を意味するのか。</li>
+<li>ハウスドルフ性は、なぜこれほど頻繁に仮定されるのか。</li>
+</ul>
+</div>
+
+<h3 id="s13-1">位相の公理は、点を区別しない</h3>
+
+<p>第5章の密着位相を思い出す。開集合は <m>\varnothing</m> と <m>X</m> しかない。<em>この空間では、どの二点も開集合で引き離せない。</em>収束を考えると事情の深刻さが分かる——どの点列も、すべての点に収束する。</p>
+
+<p><span class="yogo-hl">位相の三公理は、点を区別する力をまったく要求していない。</span>そこで、区別の度合いを段階的に課す条件を立てる。これが分離公理である。</p>
+
+<div class="teigi" id="def-t0-t2">
+<h4>三つの分離公理</h4>
+<p class="no-indent">位相空間 <m>X</m> について、</p>
+<p class="no-indent"><strong>T<sub>0</sub></strong>　異なる二点 <m>x \ne y</m> に対し、一方だけを含む開集合が存在する。<br>
+<strong>T<sub>1</sub></strong>　異なる二点 <m>x \ne y</m> に対し、<m>x</m> を含み <m>y</m> を含まない開集合が存在する（したがって逆も）。<br>
+<strong>T<sub>2</sub>（ハウスドルフ）</strong>　異なる二点 <m>x \ne y</m> に対し、交わらない開集合 <m>U \ni x</m>、<m>V \ni y</m> が存在する。</p>
+</div>
+
+<p>定義から <m>T_2 \Rightarrow T_1 \Rightarrow T_0</m> は明らかである。<em>逆はいずれも成り立たない。</em>それを見る前に、<m>T_1</m> の言い換えを押さえておく。</p>
+
+<div class="teiri" id="thm-t1-heiten">
+<h4></h4>
+<p class="no-indent"><m>X</m> が <m>T_1</m> であることと、すべての一点集合 <m>\{x\}</m> が閉であることは同値である。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><m>T_1</m> とする。<m>y \ne x</m> のとき、<m>y</m> を含み <m>x</m> を含まない開集合 <m>U_y</m> がある。<m>X \setminus \{x\} = \bigcup_{y \ne x} U_y</m> は開集合の合併だから開であり、<m>\{x\}</m> は閉である。</p>
+<p>逆に <m>\{x\}</m> がすべて閉とすると、<m>X \setminus \{y\}</m> は <m>x</m> を含み <m>y</m> を含まない開集合である。</p>
+</div>
+
+<div class="rei" id="rei-t0-t1">
+<h4>階層を分ける空間</h4>
+<p class="no-indent"><strong><m>T_0</m> だが <m>T_1</m> でない。</strong>シェルピンスキ <span class="orig">Sierpiński</span> 空間 <m>X = \{a, b\}</m>、<m>\mathcal{T} = \{\varnothing, \{a\}, X\}</m>。<m>\{a\}</m> が <m>a</m> だけを含むので <m>T_0</m> だが、<m>b</m> を含み <m>a</m> を含まない開集合はない。<em><m>\{b\}</m> は閉でない。</em></p>
+<p><strong><m>T_1</m> だが <m>T_2</m> でない。</strong>無限集合 <m>X</m> 上の補有限位相。一点集合の補集合は補有限だから開であり、<m>T_1</m> である。ところが<span class="yogo-hl">空でない二つの開集合は必ず交わる</span>——補集合が有限どうしなので、交わらなければ <m>X</m> が有限になってしまう。よってハウスドルフでない。</p>
+</div>
+
+<h3 id="s13-2">ハウスドルフ性が保証するもの</h3>
+
+<p>ハウスドルフ性は、単なる階層の一段ではない。<em>三つの基本的な事実を一度に保証する。</em></p>
+
+<div class="teiri" id="thm-t2-kekka">
+<h4></h4>
+<p class="no-indent"><m>X</m> がハウスドルフのとき、</p>
+<p class="no-indent">（1）ネットの収束先は高々一つ。<br>
+（2）コンパクト部分集合は閉である。<br>
+（3）対角線 <m>\Delta = \{\, (x,x) \,\}</m> は <m>X \times X</m> で閉である（逆も成り立つ）。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">（1）を示す。<m>x_\alpha \to x</m> かつ <m>x_\alpha \to y</m>、<m>x \ne y</m> とする。交わらない近傍 <m>U \ni x</m>、<m>V \ni y</m> を取る。収束の定義より <m>\alpha \ge \alpha_1</m> で <m>x_\alpha \in U</m>、<m>\alpha \ge \alpha_2</m> で <m>x_\alpha \in V</m>。<em>有向性より両方を超える <m>\alpha_3</m> があり、そこで <m>x_{\alpha_3} \in U \cap V = \varnothing</m> となって矛盾。</em></p>
+<p>（3）を示す。<m>(x,y) \notin \Delta</m> は <m>x \ne y</m> を意味する。交わらない近傍 <m>U, V</m> を取れば <m>U \times V</m> は <m>(x,y)</m> の近傍で <m>\Delta</m> と交わらない。よって <m>\Delta</m> の補集合は開である。逆向きも同じ議論を逆にたどればよい。<span class="yogo-hl">ハウスドルフ性は、対角線が閉であることと正確に同じ主張である。</span></p>
+<p>（2）は第20章で証明する。<em>コンパクト性を使うので、ここでは述べるにとどめる。</em></p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">（1）が解析学にとって決定的である。<em>「極限」という語が意味をもつのは、収束先が一つに定まるときだけである。</em><span class="yogo-hl">ハウスドルフ性が至るところで仮定されるのは、極限の一意性という最低限の要求のためである。</span>密着位相では <m>\lim</m> という記号が書けない。</p>
+</div>
+
+<figure>
+<svg viewBox="0 0 470 268" width="470" height="268" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">分離の三段階——何をどこまで引き離せるか</text>
+
+  <rect x="14" y="26" width="142" height="108" rx="4" fill="#f4f1ea" stroke="#8a6b2c"/>
+  <text x="85" y="42" font-size="7.6" text-anchor="middle" font-weight="700" fill="#5a4520">T₀</text>
+  <circle cx="54" cy="76" r="3.4" fill="#5a4520"/><text x="54" y="60" font-size="6.6" text-anchor="middle" fill="#5a4520">x</text>
+  <circle cx="116" cy="76" r="3.4" fill="#5a4520"/><text x="116" y="60" font-size="6.6" text-anchor="middle" fill="#5a4520">y</text>
+  <ellipse cx="60" cy="76" rx="26" ry="13" fill="none" stroke="#8a6b2c" stroke-dasharray="2.5,2"/>
+  <text x="85" y="104" font-size="6.6" text-anchor="middle" fill="#5a4520">片方だけを囲めればよい</text>
+  <text x="85" y="118" font-size="6.6" text-anchor="middle" fill="#6a6a68">シェルピンスキ空間</text>
+  <text x="85" y="129" font-size="6.6" text-anchor="middle" fill="#6a6a68">一点集合が閉とは限らない</text>
+
+  <rect x="166" y="26" width="142" height="108" rx="4" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="237" y="42" font-size="7.6" text-anchor="middle" font-weight="700" fill="#1e4a41">T₁</text>
+  <circle cx="206" cy="76" r="3.4" fill="#1e4a41"/><text x="206" y="60" font-size="6.6" text-anchor="middle" fill="#1e4a41">x</text>
+  <circle cx="268" cy="76" r="3.4" fill="#1e4a41"/><text x="268" y="60" font-size="6.6" text-anchor="middle" fill="#1e4a41">y</text>
+  <ellipse cx="212" cy="76" rx="26" ry="13" fill="none" stroke="#2f6b5f" stroke-dasharray="2.5,2"/>
+  <ellipse cx="262" cy="76" rx="26" ry="13" fill="none" stroke="#2f6b5f" stroke-dasharray="2.5,2"/>
+  <text x="237" y="104" font-size="6.6" text-anchor="middle" fill="#1e4a41">両方それぞれ囲める（交わってよい）</text>
+  <text x="237" y="118" font-size="6.6" text-anchor="middle" fill="#6a6a68">補有限位相</text>
+  <text x="237" y="129" font-size="6.6" text-anchor="middle" fill="#6a6a68">一点集合は閉だが分離できない</text>
+
+  <rect x="318" y="26" width="138" height="108" rx="4" fill="#dce7f0" stroke="#35618f"/>
+  <text x="387" y="42" font-size="7.6" text-anchor="middle" font-weight="700" fill="#1f3b5c">T₂（ハウスドルフ）</text>
+  <ellipse cx="354" cy="76" rx="24" ry="13" fill="#cfe0ee" stroke="#35618f"/>
+  <ellipse cx="420" cy="76" rx="24" ry="13" fill="#cfe0ee" stroke="#35618f"/>
+  <circle cx="356" cy="76" r="3.4" fill="#1f3b5c"/><text x="356" y="60" font-size="6.6" text-anchor="middle" fill="#1f3b5c">x</text>
+  <circle cx="418" cy="76" r="3.4" fill="#1f3b5c"/><text x="418" y="60" font-size="6.6" text-anchor="middle" fill="#1f3b5c">y</text>
+  <text x="387" y="104" font-size="6.6" text-anchor="middle" fill="#1f3b5c">交わらない近傍が取れる</text>
+  <text x="387" y="118" font-size="6.6" text-anchor="middle" fill="#6a6a68">極限が一意に定まる</text>
+  <text x="387" y="129" font-size="6.6" text-anchor="middle" fill="#6a6a68">対角線が閉</text>
+
+  <rect x="14" y="146" width="442" height="110" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+  <text x="24" y="161" font-size="7.8" font-weight="700" fill="#1f3b5c">ハウスドルフ性が一度に保証する三つ</text>
+  <text x="24" y="180" font-size="7" fill="#1f3b5c">ネットの収束先は高々一つ</text>
+  <text x="250" y="180" font-size="6.8" fill="#6a6a68">「極限」という語が意味をもつ条件</text>
+  <text x="24" y="197" font-size="7" fill="#1f3b5c">コンパクト部分集合は閉</text>
+  <text x="250" y="197" font-size="6.8" fill="#6a6a68">第20章。連続全単射が同相になる鍵</text>
+  <text x="24" y="214" font-size="7" fill="#1f3b5c">対角線 Δ が X×X で閉</text>
+  <text x="250" y="214" font-size="6.8" fill="#6a6a68">逆も成り立つ。積の言葉での言い換え</text>
+  <text x="24" y="234" font-size="7" fill="#8c2f1e">T₁ までは「一点集合が閉」という代数的な条件だが、T₂ から先は近傍の話になる</text>
+  <text x="24" y="249" font-size="7" fill="#5a4520">この段差が、第14章以降の分離公理の階層を生む</text>
+</svg>
+<figcaption>三つの分離公理。T₁ は一点集合が閉であることと同値で、T₂ は対角線が閉であることと同値である。逆の成り立たない例が各段に存在する。</figcaption>
+</figure>
+
+<h3 id="s13-3">階層のどこで何が必要になるか</h3>
+
+<p>分離公理は「あればあるほどよい」というものではない。<em>それぞれの定理が必要とする水準がある。</em></p>
+
+<p><m>T_0</m> はほとんど何も保証しないが、<span class="yogo-hl">「位相が点を区別できる」という最低限の条件</span>である。<m>T_0</m> でない空間は、区別できない点を同一視して商を取れば <m>T_0</m> になる。<em>したがって <m>T_0</m> を仮定しても一般性はほとんど失われない。</em></p>
+
+<p><m>T_1</m> は一点集合が閉であることを保証する。<em>第38章で次元を定義するとき、この条件が前提になる。</em>また、極大イデアルと点の対応（第79章のゲルファント理論）でも <m>T_1</m> が効く。</p>
+
+<p><m>T_2</m> からが本番である。極限の一意性、コンパクト部分集合の閉性、そして<span class="yogo-hl">第20章の「コンパクトからハウスドルフへの連続全単射は同相」という定理</span>。この定理が、位相空間論のなかでもっとも多用される道具の一つになる。</p>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">ハウスドルフでない空間が無用というわけではない。<em>代数幾何のザリスキ位相は <m>T_1</m> だがハウスドルフでない。</em>そこでは分離公理の代わりに、層とスキームという別の道具で局所性を扱う。<span class="yogo-hl">分離公理は解析に向かう道の条件であって、位相空間一般の良さの尺度ではない。</span></p>
+</div>
+
+<div class="lv2">
+<h4>分離公理は何に保たれるか——最初の一覧</h4>
+<p>第9章で遺伝性を扱い、第10章と第11章で商と積を扱った。<em>三つの分離公理が、これらの操作でどうなるかを確かめておく。</em></p>
+<p><strong>部分空間には遺伝する。</strong><m>T_0, T_1, T_2</m> はいずれも遺伝的である。証明はどれも同じ形で、<m>X</m> での分離する開集合を <m>A</m> と交わらせればよい。<m>U \cap V = \varnothing</m> なら <m>(U \cap A) \cap (V \cap A) = \varnothing</m> である。<span class="yogo-hl">点についての条件は、部分集合に制限しても弱まらない。</span></p>
+<p><strong>積にも保たれる。</strong>三つとも積で保たれる。<m>x \ne y</m> なら、ある座標 <m>i</m> で <m>x_i \ne y_i</m> である。その座標で分離する開集合 <m>U_i, V_i</m> を取り、<m>p_i^{-1}(U_i)</m> と <m>p_i^{-1}(V_i)</m> を考えればよい。<em>逆像は交わらなさを保つから、これで分離できる。</em></p>
+<p>逆も成り立つ。積が <m>T_2</m> なら各成分も <m>T_2</m> である——成分は積の部分空間と同相だからである（他の座標を固定する）。</p>
+<p><strong>商では壊れる。</strong>第10章で見たとおりである。<m>\mathbb{R}/\mathbb{Q}</m> は密着位相になり、<m>T_0</m> ですらない。<span class="yogo-hl">四つの操作のうち、商だけが分離公理を保証しない。</span></p>
+<p><strong>連続像でも壊れる。</strong>恒等写像 <m>(\mathbb{R}, \text{離散}) \to (\mathbb{R}, \text{密着})</m> は連続な全単射だが、値域はハウスドルフでない。<em>連続像は商の特別な場合ではないが、同じ理由で保証がない。</em></p>
+<p><strong>まとめ。</strong>この表は第19章で完成させるが、いまの段階で次のことが言える。</p>
+<M>\text{部分}\ \bigcirc \qquad \text{積}\ \bigcirc \qquad \text{商}\ \times \qquad \text{連続像}\ \times</M>
+<p>そして第14章以降の分離公理（正則・正規）では、<em>この表が崩れはじめる。</em>正規性は積で保たれず、部分空間にも遺伝しない。<span class="yogo-hl">分離公理が強くなるほど、保存の性質は悪くなる。</span></p>
+</div>
+
+<div class="lv3">
+<h4>T<sub>0</sub> 化と、特殊化前順序</h4>
+<p><m>T_0</m> でない空間は「区別できない点」をもつ。<em>その構造を正面から調べると、位相空間と順序集合の意外な近さが見えてくる。</em></p>
+<p><strong>特殊化前順序。</strong>位相空間 <m>X</m> 上に、<m>x \le y \iff x \in \overline{\{y\}}</m> と定める。反射律と推移律は閉包の性質から従うので、これは前順序である。これを<strong>特殊化前順序</strong>という。</p>
+<p>この前順序が反対称であること、すなわち順序であることは、<em>ちょうど <m>T_0</m> と同値である。</em><span class="yogo-hl"><m>T_0</m> とは「位相が定める前順序が順序になる」ことにほかならない。</span></p>
+<p>さらに、<m>T_1</m> であることは、この前順序が離散順序（<m>x \le y \iff x = y</m>）になることと同値である。<em><m>T_1</m> の空間では、特殊化前順序は何の情報も持たない。</em></p>
+<p><strong>コルモゴロフ商。</strong><m>x \sim y \iff \overline{\{x\}} = \overline{\{y\}}</m> で割った商空間 <m>X/{\sim}</m> は <m>T_0</m> になる。これを<strong>コルモゴロフ商</strong> <span class="orig">Kolmogorov quotient</span> という。</p>
+<p>この商は、位相的な情報をまったく失わない。<m>X</m> と <m>X/{\sim}</m> の開集合の族は一対一に対応し、任意の <m>T_0</m> 空間への連続写像も一対一に対応する。<em>したがって「<m>T_0</m> を仮定しても一般性を失わない」と言える。</em></p>
+<p><strong>順序の位相。</strong>逆向きに、前順序集合から位相を作ることもできる。第5章の★★で見たアレクサンドロフ位相がそれである。<span class="yogo-hl">アレクサンドロフ位相をもつ <m>T_0</m> 空間の圏は、順序集合の圏と同値である。</span></p>
+<p>この対応は、計算機科学の領域理論で本格的に使われる。プログラムの意味論では、「情報が増える」という順序を位相として扱い、連続写像が計算可能な関数に対応する。<em>そこで現れる空間はハウスドルフでなく、<m>T_0</m> どまりである。</em></p>
+<p><strong>スキームとの関係。</strong>代数幾何のスキームも <m>T_0</m> だがハウスドルフでない空間である。特殊化前順序は、そこでは「点が別の点の特殊化である」という幾何的な関係を表す。生成点の閉包が既約成分全体になるという事実は、いまの言葉では「生成点が順序の最大元である」と読める。</p>
+<p><span class="yogo-hl">分離公理を課さない世界には、課した世界とは別の豊かさがある。</span>本書は <m>T_2</m> 以上を主に扱うが、それは解析学へ向かうという目的による選択である。</p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li>シェルピンスキ空間が <m>T_0</m> であって <m>T_1</m> でないことを確かめよ。</li>
+<li>無限集合上の補有限位相が <m>T_1</m> であってハウスドルフでないことを示せ。</li>
+<li>有限な <m>T_1</m> 空間が離散空間であることを示せ。</li>
+<li>距離空間がハウスドルフであることを示せ。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li><ref t="thm-t1-heiten"/> を用いて、<m>T_1</m> 空間では <m>A'</m>（集積点の集合）が閉であることを示せ。<span class="haiten">（15点）</span></li>
+<li><ref t="thm-t2-kekka"/>（3）の逆——対角線が閉ならばハウスドルフ——を示せ。<span class="haiten">（15点）</span></li>
+<li><m>T_0, T_1, T_2</m> がいずれも遺伝的かつ積で保たれることを示せ。<span class="haiten">（20点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li>特殊化前順序が順序であることと <m>T_0</m> が同値であることを示せ。<span class="haiten">（25点）</span></li>
+<li>連続写像 <m>f, g \colon X \to Y</m> が <m>Y</m> ハウスドルフのもとで、稠密集合の上で一致すれば全体で一致することを示せ。<span class="haiten">（25点）</span></li>
+</ol>
+</div>
+</div>

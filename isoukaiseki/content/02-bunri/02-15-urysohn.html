@@ -1,0 +1,203 @@
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>開集合しか与えられていないところから、どうやって連続関数を作るのか。</li>
+<li>二進有理数で添字をつけるのは、なぜうまくいくのか。</li>
+<li>正規性という条件は、どこまで必要なのか。</li>
+</ul>
+</div>
+
+<h3 id="s15-1">正規空間</h3>
+
+<div class="teigi" id="def-seiki">
+<h4>正規空間</h4>
+<p class="no-indent"><m>X</m> が<strong>正規</strong>であるとは、交わらない二つの閉集合 <m>A, B</m> に対し、交わらない開集合 <m>U \supseteq A</m>、<m>V \supseteq B</m> が存在することをいう。<m>T_1</m> かつ正規な空間を <strong>T<sub>4</sub></strong> 空間という。</p>
+</div>
+
+<p>第14章の正則性は点と閉集合を分離した。<em>正規性は閉集合と閉集合を分離する。</em><span class="yogo-hl"><m>T_1</m> のもとでは一点集合が閉なので、正規ならば正則である。</span></p>
+
+<div class="teiri" data-kind="命題" id="prop-seiki-iikae">
+<h4></h4>
+<p class="no-indent"><m>X</m> が正規であることと、<span class="yogo-hl">閉集合 <m>A</m> とその近傍 <m>U \supseteq A</m> に対し、<m>A \subseteq W \subseteq \overline{W} \subseteq U</m> なる開集合 <m>W</m> が存在すること</span>は同値である。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">正則性の場合（<ref t="prop-seisoku-iikae"/>）と同じ議論である。<m>B = X \setminus U</m> と置き、<m>A</m> と <m>B</m> を分離する開集合 <m>W, V</m> を取ると <m>\overline{W} \subseteq X \setminus V \subseteq U</m>。逆も同様。</p>
+<p><em>正則性との違いは、縮める対象が点ではなく閉集合であることだけである。</em>だがこの違いが、次節で決定的に効く。</p>
+</div>
+
+<h3 id="s15-2">ウリゾーンの補題</h3>
+
+<p>これが第II部の中心にある定理である。<em>開集合の情報だけから、連続関数を作り出す。</em></p>
+
+<div class="teiri" id="thm-urysohn">
+<h4>ウリゾーンの補題</h4>
+<p class="no-indent"><m>X</m> が正規で、<m>A, B</m> が交わらない閉集合とする。このとき連続関数 <m>f \colon X \to [0,1]</m> で</p>
+<M>f|_A \equiv 0, \qquad f|_B \equiv 1</M>
+<p class="no-indent">となるものが存在する。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">証明は三段からなる。<em>第一に開集合の族を作り、第二に関数を定義し、第三に連続性を示す。</em></p>
+<p><strong>第一段。</strong><m>D = \{\, k/2^n \mid n \ge 0,\ 0 \le k \le 2^n \,\}</m> を <m>[0,1]</m> の二進有理数全体とする。<m>D</m> で添字づけられた開集合の族 <m>\{U_q\}_{q \in D}</m> を、次を満たすように作る。</p>
+<M>A \subseteq U_0, \qquad U_1 = X \setminus B, \qquad
+p < q \implies \overline{U_p} \subseteq U_q</M>
+<p class="no-indent"><m>n</m> についての帰納法で構成する。<m>n = 0</m> のとき、<m>A \subseteq X \setminus B</m> で <m>X \setminus B</m> は開だから、<ref t="prop-seiki-iikae"/> より <m>A \subseteq U_0 \subseteq \overline{U_0} \subseteq X \setminus B = U_1</m> なる <m>U_0</m> が取れる。</p>
+<p><m>n</m> まで作れたとする。新しく必要なのは <m>q = (2k+1)/2^{n+1}</m> の形の添字であり、その両隣 <m>p = k/2^n</m>、<m>r = (k+1)/2^n</m> はすでに作られていて <m>\overline{U_p} \subseteq U_r</m>。<em>閉集合 <m>\overline{U_p}</m> とその近傍 <m>U_r</m> に <ref t="prop-seiki-iikae"/> を適用して</em></p>
+<M>\overline{U_p} \subseteq U_q \subseteq \overline{U_q} \subseteq U_r</M>
+<p class="no-indent">なる <m>U_q</m> を取る。<span class="yogo-hl">ここで縮める対象が閉集合 <m>\overline{U_p}</m> であることに注意してほしい。正則性ではこの一歩が踏めない。</span></p>
+<p><strong>第二段。</strong>関数を</p>
+<M>f(x) = \inf \{\, q \in D \mid x \in U_q \,\}</M>
+<p class="no-indent">と定める（<m>x</m> がどの <m>U_q</m> にも入らないときは <m>f(x) = 1</m>）。<m>x \in A</m> なら <m>x \in U_0</m> だから <m>f(x) = 0</m>。<m>x \in B</m> なら <m>x \notin U_1 \supseteq U_q</m>（すべての <m>q</m>）だから <m>f(x) = 1</m>。</p>
+<p><strong>第三段。</strong>連続性を示す。<m>[0,1]</m> の位相は <m>[0,a)</m> と <m>(a,1]</m> の形の集合で生成されるから（第8章（3））、この二つの逆像が開であることを見ればよい。</p>
+<p><m>f(x) < a</m> であることは、<m>q < a</m> なる <m>q \in D</m> で <m>x \in U_q</m> となるものがあることと同値である。よって</p>
+<M>f^{-1}\big([0,a)\big) = \bigcup_{q < a} U_q</M>
+<p class="no-indent">は開である。次に <m>f(x) > a</m> を考える。<em>これは <m>q > a</m> なる <m>q</m> で <m>x \notin \overline{U_q}</m> となるものがあることと同値である</em>——実際、<m>f(x) > a</m> なら <m>a < p < q < f(x)</m> なる <m>p, q \in D</m> が取れ、<m>x \notin U_q \supseteq \overline{U_p}</m>。逆に <m>x \notin \overline{U_q}</m>、<m>q > a</m> なら <m>f(x) \ge q > a</m>。したがって</p>
+<M>f^{-1}\big((a,1]\big) = \bigcup_{q > a} \big(X \setminus \overline{U_q}\big)</M>
+<p class="no-indent">も開である。<span class="yogo-hl">閉包の包含 <m>\overline{U_p} \subseteq U_q</m> が、この二つ目の等式でちょうど必要になる。</span></p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">なぜ二進有理数なのか。<em>必要なのは <m>[0,1]</m> のなかで稠密な可算全順序集合であり、しかも「二つの元のあいだに必ず元がある」ことである。</em><span class="yogo-hl">帰納法の各段で「両隣のあいだに新しい添字を挿す」操作ができればよい。</span>有理数全体でも構成できるが、二進有理数のほうが段数が数えやすい。</p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">この補題は <m>f|_A \equiv 0</m>、<m>f|_B \equiv 1</m> を主張するが、<em><m>f^{-1}(0) = A</m> とは言っていない。</em><span class="yogo-hl"><m>f^{-1}(0) = A</m> かつ <m>f^{-1}(1) = B</m> が取れるのは、<m>A</m> と <m>B</m> が <m>G_\delta</m> 集合であるときに限る</span>——これが第18章の完全正規性の内容である。</p>
+</div>
+
+<figure>
+<svg viewBox="0 0 470 266" width="470" height="266" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">ウリゾーンの補題——二進有理数で開集合を挟み込む</text>
+
+  <rect x="14" y="26" width="442" height="124" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+
+  <text x="24" y="42" font-size="7" font-weight="700" fill="#1f3b5c">第0段</text>
+  <rect x="80" y="34" width="40" height="14" rx="2" fill="#b9c8d6" stroke="#35618f"/>
+  <text x="100" y="44" font-size="6" text-anchor="middle" fill="#1f3b5c">A</text>
+  <rect x="74" y="32" width="120" height="18" rx="3" fill="none" stroke="#35618f" stroke-dasharray="2,1.6"/>
+  <text x="204" y="44" font-size="6" fill="#35618f">U₀</text>
+  <rect x="68" y="30" width="330" height="22" rx="3" fill="none" stroke="#35618f"/>
+  <text x="408" y="44" font-size="6" fill="#35618f">U₁ = X＼B</text>
+
+  <text x="24" y="74" font-size="7" font-weight="700" fill="#1f3b5c">第1段</text>
+  <rect x="80" y="66" width="40" height="14" rx="2" fill="#b9c8d6" stroke="#35618f"/>
+  <text x="100" y="76" font-size="6" text-anchor="middle" fill="#1f3b5c">A</text>
+  <rect x="74" y="64" width="120" height="18" rx="3" fill="none" stroke="#35618f" stroke-dasharray="2,1.6"/>
+  <text x="200" y="76" font-size="6" fill="#35618f">U₀</text>
+  <rect x="70" y="62" width="200" height="22" rx="3" fill="none" stroke="#2f6b5f" stroke-width="1.2"/>
+  <text x="276" y="76" font-size="6" fill="#2f6b5f">U₁⁄₂　新しく挿した</text>
+  <rect x="68" y="60" width="330" height="26" rx="3" fill="none" stroke="#35618f"/>
+
+  <text x="24" y="112" font-size="7" font-weight="700" fill="#1f3b5c">第2段</text>
+  <rect x="80" y="104" width="40" height="14" rx="2" fill="#b9c8d6" stroke="#35618f"/>
+  <text x="100" y="114" font-size="6" text-anchor="middle" fill="#1f3b5c">A</text>
+  <rect x="74" y="102" width="86" height="18" rx="3" fill="none" stroke="#35618f" stroke-dasharray="2,1.6"/>
+  <rect x="72" y="100" width="130" height="22" rx="3" fill="none" stroke="#8a6b2c" stroke-width="1.1"/>
+  <rect x="70" y="98" width="200" height="26" rx="3" fill="none" stroke="#2f6b5f" stroke-width="1.2"/>
+  <rect x="68" y="96" width="266" height="30" rx="3" fill="none" stroke="#8a6b2c" stroke-width="1.1"/>
+  <rect x="66" y="94" width="332" height="34" rx="3" fill="none" stroke="#35618f"/>
+  <text x="404" y="110" font-size="6.2" fill="#6a6a68">¼ と ¾ を</text><text x="404" y="120" font-size="6.2" fill="#6a6a68">両隣に挿す</text>
+
+  <text x="24" y="142" font-size="6.8" fill="#8c2f1e">各段で「閉集合 U の閉包」と「その近傍」のあいだに新しい開集合を入れる——正規性が要る一歩</text>
+
+  <rect x="14" y="162" width="216" height="94" rx="4" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="24" y="177" font-size="7.6" font-weight="700" fill="#1e4a41">関数の定義</text>
+  <text x="24" y="194" font-size="7" fill="#1e4a41">f(x) = inf { q : x は q 段の開集合の中 }</text>
+  <text x="24" y="210" font-size="6.8" fill="#6a6a68">「x が最初にどの段で捕まるか」</text>
+  <text x="24" y="222" font-size="6.8" fill="#6a6a68">を測っている</text>
+  <text x="24" y="240" font-size="6.8" fill="#1e4a41">A で 0、B で 1 になるのは定義から直ちに</text>
+  <text x="24" y="252" font-size="6.8" fill="#6a6a68">連続性だけが仕事になる</text>
+
+  <rect x="240" y="162" width="216" height="94" rx="4" fill="#fdf6f4" stroke="#e0c3bd"/>
+  <text x="250" y="177" font-size="7.6" font-weight="700" fill="#8c2f1e">正則性では踏めない一歩</text>
+  <text x="250" y="194" font-size="7" fill="#8c2f1e">正則　点と閉集合を縮められる</text>
+  <text x="250" y="209" font-size="7" fill="#8c2f1e">正規　閉集合と閉集合を縮められる</text>
+  <text x="250" y="227" font-size="6.8" fill="#6a6a68">帰納法の各段で縮めるのは、前段で作った</text>
+  <text x="250" y="239" font-size="6.8" fill="#6a6a68">開集合の閉包——点ではない。だから</text>
+  <text x="250" y="251" font-size="6.8" fill="#6a6a68">正則だけでは関数が作れない（第14章）</text>
+</svg>
+<figcaption>二進有理数を添字に、開集合を入れ子に挟み込んでいく。各段で必要なのは閉集合と閉集合のあいだを縮める操作であり、これが正則性と正規性を分ける。</figcaption>
+</figure>
+
+<h3 id="s15-3">ただちに従うこと</h3>
+
+<div class="teiri" data-kind="系" id="cor-t4-tychonoff">
+<h4></h4>
+<p class="no-indent"><m>T_4</m> 空間はチコノフ空間である。すなわち <m>T_4 \Rightarrow T_{3\frac12} \Rightarrow T_3 \Rightarrow T_2</m>。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><m>T_1</m> より一点集合 <m>\{x\}</m> は閉である。<m>x \notin F</m>、<m>F</m> 閉なら <m>\{x\}</m> と <m>F</m> は交わらない閉集合だから、<ref t="thm-urysohn"/> より分離する関数が存在する。<em>よって完全正則である。</em>残りは第14章で示した。</p>
+</div>
+
+<div class="rei" id="rei-seiki-rei">
+<h4>正規な空間の例</h4>
+<p class="no-indent"><strong>距離空間は正規である。</strong><m>A, B</m> を交わらない閉集合とし、</p>
+<M>f(x) = \frac{d(x,A)}{d(x,A) + d(x,B)}</M>
+<p class="no-indent">と置く。<em>分母は <m>A, B</m> が閉で交わらないので消えない。</em><m>f</m> は連続で <m>f|_A \equiv 0</m>、<m>f|_B \equiv 1</m>。<span class="yogo-hl">距離空間ではウリゾーンの補題を経由せず、関数を一行で書ける。</span></p>
+<p><strong>コンパクトハウスドルフ空間は正規である。</strong>第20章で証明する。</p>
+<p><strong>順序位相をもつ全順序集合は正規である。</strong>とくに順序数の空間 <m>[0, \omega_1]</m> は正規である。</p>
+</div>
+
+<div class="lv2">
+<h4>正規性の言い換えと、1の分割への道</h4>
+<p>正規性は、いくつもの同値な形をもつ。<em>どの形で使うかが、証明の見通しを決める。</em></p>
+<p><strong>関数による特徴づけ。</strong><ref t="thm-urysohn"/> の逆は易しい。分離する関数が常に存在すれば、<m>f^{-1}([0,1/2))</m> と <m>f^{-1}((1/2,1])</m> が開集合の分離を与える。<span class="yogo-hl">したがって正規性は「交わらない閉集合を関数で分離できる」と同値である。</span></p>
+<p>これは完全正則性との対比で覚えるとよい。完全正則は<em>点と閉集合</em>を関数で分離し、正規は<em>閉集合と閉集合</em>を関数で分離する。</p>
+<p><strong>被覆による特徴づけ。</strong>もう一つの形がある。<m>X</m> が正規であることは、<em>二つの開集合による被覆 <m>X = U_1 \cup U_2</m> に対し、<m>\overline{V_i} \subseteq U_i</m> なる開被覆 <m>X = V_1 \cup V_2</m> が取れること</em>と同値である。</p>
+<p>証明は、<m>A = X \setminus U_2</m>、<m>B = X \setminus U_1</m> と置けば交わらない閉集合になることから従う。<span class="yogo-hl">この形が「被覆を縮める」という言い方に通じ、第24章のパラコンパクト性と1の分割へつながる。</span></p>
+<p><strong>1の分割。</strong>有限開被覆 <m>\{U_1, \ldots, U_n\}</m> に対し、連続関数 <m>\varphi_i \colon X \to [0,1]</m> で</p>
+<M>\mathrm{supp}\,\varphi_i \subseteq U_i, \qquad \sum_{i=1}^n \varphi_i \equiv 1</M>
+<p>となるものが取れる。<em>これを1の分割という。</em>正規性から作れる。各 <m>i</m> について縮めた被覆 <m>V_i</m> を取り、ウリゾーンの補題で <m>\psi_i</m>（<m>\overline{V_i}</m> で <m>1</m>、<m>X \setminus U_i</m> で <m>0</m>）を作り、</p>
+<M>\varphi_i = \frac{\psi_i}{\sum_j \psi_j}</M>
+<p>と規格化すればよい。<em>分母は <m>\{V_i\}</m> が被覆だから消えない。</em></p>
+<p><strong>なぜ1の分割が重要か。</strong>局所的に定義されたものを大域的に貼り合わせる道具になる。<span class="yogo-hl">各 <m>U_i</m> の上で作った対象に <m>\varphi_i</m> を掛けて足せば、大域的な対象が得られる。</span></p>
+<p>この手法は第24章で無限被覆に拡張され、多様体論・微分幾何学・偏微分方程式論の基本的な道具になる。第88章でソボレフ空間を扱うとき、局所的な推定を大域化するのに使う。</p>
+</div>
+
+<div class="lv3">
+<h4>正規性の悪い性質——階層が崩れはじめる</h4>
+<p>ここまでの分離公理は、部分空間に遺伝し、積に保たれた。<em>正規性は、どちらも満たさない。</em></p>
+<p><strong>遺伝しない。</strong>第9章の★★★で見たチコノフ板がそれである。<m>T = [0,\omega_1] \times [0,\omega]</m> はコンパクトハウスドルフだから正規だが、角の一点を除いた開部分空間は正規でない。</p>
+<p>簡単な言い方をすると、上辺 <m>[0,\omega_1) \times \{\omega\}</m> と右辺 <m>\{\omega_1\} \times [0,\omega)</m> が分離できない。<em>右辺を覆う開集合は、各 <m>n < \omega</m> について「ある <m>\alpha_n < \omega_1</m> より右」を含む。</em><m>\alpha = \sup_n \alpha_n < \omega_1</m> なので（<m>\mathrm{cf}(\omega_1) > \omega</m>）、<span class="yogo-hl">その <m>\alpha</m> より右の部分で、上辺を覆う開集合と必ず交わる。</span></p>
+<p><strong>積で保たれない。</strong>もっと劇的な例がある。<em>ゾルゲンフライ直線 <m>\mathbb{R}_\ell</m> は正規だが、<m>\mathbb{R}_\ell \times \mathbb{R}_\ell</m>（ゾルゲンフライ平面）は正規でない。</em></p>
+<p>反対角線 <m>L = \{\, (x, -x) \,\}</m> を考える。<m>L</m> はゾルゲンフライ平面の閉集合であり、しかも<span class="yogo-hl">相対位相が離散位相になる</span>——基本開集合 <m>[x, x+\varepsilon) \times [-x, -x+\varepsilon)</m> が <m>L</m> と一点でしか交わらない。</p>
+<p><m>L</m> は濃度 <m>2^{\aleph_0}</m> の離散閉集合である。一方ゾルゲンフライ平面は可分である（<m>\mathbb{Q}^2</m> が稠密）。<em>可分な正規空間の離散閉部分集合の濃度は <m>2^{\aleph_0}</m> より小さくなければならない</em>という定理（ヨーンズの補題）があり、これに矛盾する。</p>
+<p><strong>ヨーンズの補題。</strong>正規空間 <m>X</m> が稠密部分集合 <m>D</m> と離散閉部分集合 <m>S</m> をもつとき、<m>2^{|S|} \le 2^{|D|}</m>。証明は、<m>S</m> の各部分集合 <m>T</m> に対し <m>T</m> と <m>S \setminus T</m> を分離する開集合を取り、<m>D</m> との交わりで区別することによる。<em>正規性が、二つの濃度のあいだに不等式を強いる。</em></p>
+<p><strong>これは何を意味するか。</strong>正規性は「大域的な」条件である。<span class="yogo-hl">局所的な条件（第一可算、正則）は操作に強いが、大域的な条件（正規、コンパクト、連結）は壊れやすい。</span></p>
+<p>そこで二つの応答がある。第一に、<em>遺伝的に正規な空間</em>を別の階層として立てる——これが第18章の完全正規性である。第二に、<em>より強く、より安定な条件</em>を探す——これが第24章のパラコンパクト性であり、第32章の距離化定理の主役になる。</p>
+<p>第17章で階層と反例を一覧にするとき、正規性がどこで階層を乱しているかを確かめる。</p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li>距離空間が正規であることを、<ref t="rei-seiki-rei"/> の関数を使って示せ。</li>
+<li>正規かつ <m>T_1</m> ならば正則であることを示せ。</li>
+<li>離散空間が正規であることを確かめよ。</li>
+<li><m>\mathbb{R}</m> で <m>A = \{\, n \mid n \in \mathbb{Z} \,\}</m>、<m>B = \{\, n + 1/2 \,\}</m> を分離する連続関数を具体的に書け。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li><ref t="thm-urysohn"/> の第一段で、<m>U_q</m> の構成が帰納法の各段で可能であることを、<ref t="prop-seiki-iikae"/> の適用箇所を明示して書け。<span class="haiten">（20点）</span></li>
+<li><ref t="thm-urysohn"/> の第三段で、<m>f^{-1}((a,1]) = \bigcup_{q>a}(X \setminus \overline{U_q})</m> を両方の包含について示せ。<span class="haiten">（25点）</span></li>
+<li>正規性が「二つの開集合による被覆を縮められること」と同値であることを示せ。<span class="haiten">（15点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li>有限開被覆に対する1の分割が正規空間で構成できることを、★★の手順に従って完全に示せ。<span class="haiten">（30点）</span></li>
+<li>ヨーンズの補題を証明し、それを用いてゾルゲンフライ平面が正規でないことを示せ。<span class="haiten">（35点）</span></li>
+</ol>
+</div>
+</div>

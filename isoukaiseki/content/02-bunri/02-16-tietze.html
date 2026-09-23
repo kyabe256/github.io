@@ -1,0 +1,180 @@
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>閉集合の上で定義された連続関数を、全体に延ばせるか。</li>
+<li>延ばせるための条件は、ウリゾーンの補題と同じものか。</li>
+<li>閉集合でなければならない理由は何か。</li>
+</ul>
+</div>
+
+<h3 id="s16-1">拡張という問題</h3>
+
+<p><m>A \subseteq X</m> を閉集合、<m>f \colon A \to \mathbb{R}</m> を連続関数とする。<em><m>F|_A = f</m> となる連続な <m>F \colon X \to \mathbb{R}</m> は存在するか。</em></p>
+
+<p>ウリゾーンの補題は、この問題の特別な場合を解いていた。<span class="yogo-hl"><m>A \cup B</m> の上で「<m>A</m> で <m>0</m>、<m>B</m> で <m>1</m>」という関数が与えられていて、それを全体に延ばしたのである。</span>一般の <m>f</m> でも同じことができるだろうか。</p>
+
+<div class="teiri" id="thm-tietze">
+<h4>ティーツェの拡張定理</h4>
+<p class="no-indent"><m>X</m> が正規、<m>A \subseteq X</m> が閉、<m>f \colon A \to [a,b]</m> が連続とする。このとき連続な <m>F \colon X \to [a,b]</m> で <m>F|_A = f</m> となるものが存在する。</p>
+<p><m>f \colon A \to \mathbb{R}</m>（有界でない場合）についても、連続な拡張 <m>F \colon X \to \mathbb{R}</m> が存在する。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">区間は <m>[-1,1]</m> としてよい。<em>証明は、ウリゾーンの補題で作った関数を無限級数として足し合わせる。</em></p>
+<p><strong>近似の一歩。</strong><m>g \colon A \to [-1,1]</m> が連続なとき、連続な <m>h \colon X \to [-1/3, 1/3]</m> で</p>
+<M>\sup_{x \in A} |g(x) - h(x)| \le \tfrac{2}{3}</M>
+<p class="no-indent">となるものが作れることを示す。<m>A_- = g^{-1}([-1, -1/3])</m>、<m>A_+ = g^{-1}([1/3, 1])</m> は <m>A</m> で閉、したがって <m>A</m> が <m>X</m> で閉だから <m>X</m> でも閉であり、交わらない。<span class="yogo-hl">ここで <m>A</m> が閉であることが使われる。</span></p>
+<p>ウリゾーンの補題（<ref t="thm-urysohn"/>）より、<m>h \colon X \to [-1/3, 1/3]</m> で <m>h|_{A_-} \equiv -1/3</m>、<m>h|_{A_+} \equiv 1/3</m> となるものが取れる。<em>三つの場合を確かめると、<m>A</m> 上で <m>|g - h| \le 2/3</m> が成り立つ。</em></p>
+<p><strong>反復。</strong><m>g_0 = f</m> とし、上の一歩で <m>h_0</m> を作る。<m>g_1 = f - h_0|_A</m> は <m>A</m> 上で <m>|g_1| \le 2/3</m> なので、<m>(3/2) g_1</m> に同じ一歩を適用して <m>h_1</m>（値域 <m>[-\frac13 \cdot \frac23,\ \frac13 \cdot \frac23]</m>）を作る。以下同様に</p>
+<M>|h_n| \le \tfrac{1}{3}\Big(\tfrac{2}{3}\Big)^n, \qquad
+\sup_A \Big| f - \sum_{k=0}^{n} h_k \Big| \le \Big(\tfrac{2}{3}\Big)^{n+1}</M>
+<p class="no-indent">が成り立つ。</p>
+<p><strong>収束。</strong><m>F = \sum_{n=0}^{\infty} h_n</m> と置く。<m>\sum \frac13 (\frac23)^n = 1</m> なので級数は一様収束し、<em>一様収束極限は連続である</em>（第47章で証明するが、ここでは既知としてよい）。値域は <m>[-1,1]</m> に収まる。そして <m>A</m> 上で <m>|f - F| = 0</m>、すなわち <m>F|_A = f</m>。</p>
+<p><strong>有界でない場合。</strong>同相 <m>\varphi \colon \mathbb{R} \to (-1,1)</m>（たとえば <m>\varphi(t) = t/(1+|t|)</m>）を使って <m>\varphi \circ f \colon A \to (-1,1)</m> を <m>[-1,1]</m> へ拡張し、値が <m>\pm 1</m> になる部分を処理する。<em>具体的には、拡張 <m>G</m> に対し <m>C = G^{-1}(\{-1,1\})</m> は <m>A</m> と交わらない閉集合なので、ウリゾーンの補題で <m>A</m> で <m>1</m>、<m>C</m> で <m>0</m> の関数 <m>u</m> を取り、<m>uG</m> を考えれば値域が <m>(-1,1)</m> に収まる。</em>最後に <m>\varphi^{-1}</m> を合成する。</p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">この証明は解析学の議論そのものである。<em>一様収束する級数を作り、極限の連続性を使う。</em><span class="yogo-hl">位相空間論の定理が、一様収束という解析の道具で証明された。</span>逆に第47章では、一様収束の必要性が解析の側から改めて論じられる。二つの部の往復は、第97章で回収する。</p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent"><m>A</m> が閉でなければ、定理は成り立たない。<m>X = \mathbb{R}</m>、<m>A = (0,1)</m>、<m>f(x) = \sin(1/x)</m> とすると、<em><m>0</m> での極限が存在しないので連続に延ばせない。</em><m>A = \mathbb{R} \setminus \{0\}</m>、<m>f(x) = 1/x</m> も延ばせない。<span class="yogo-hl">閉集合であることが、近似の一歩で <m>A_\pm</m> が <m>X</m> で閉になることに使われていた。</span></p>
+</div>
+
+<h3 id="s16-2">ウリゾーンとの同値性</h3>
+
+<div class="teiri" data-kind="命題" id="prop-tietze-doti">
+<h4></h4>
+<p class="no-indent"><m>T_1</m> 空間 <m>X</m> について、次は同値である。（1）<m>X</m> は正規。（2）ウリゾーンの補題が成り立つ。（3）ティーツェの拡張定理が成り立つ。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">（1）から（2）は <ref t="thm-urysohn"/>、（2）から（3）は <ref t="thm-tietze"/> で示した。（3）から（1）を示す。</p>
+<p><m>A, B</m> を交わらない閉集合とする。<m>A \cup B</m> は閉であり、その上で <m>f|_A \equiv 0</m>、<m>f|_B \equiv 1</m> と定めた <m>f</m> は連続である——<em><m>A</m> と <m>B</m> がともに <m>A \cup B</m> で閉なので、この定義は各点の近傍で局所定数になる。</em>（3）より <m>F \colon X \to [0,1]</m> に拡張でき、<m>F^{-1}([0,1/2))</m> と <m>F^{-1}((1/2,1])</m> が分離を与える。</p>
+<p><span class="yogo-hl">三つの主張がすべて同値であることは、正規性という条件が「拡張が可能であること」と同じ内容だと言っている。</span></p>
+</div>
+
+<figure>
+<svg viewBox="0 0 470 264" width="470" height="264" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <defs>
+    <marker id="a16" markerWidth="8" markerHeight="8" refX="7" refY="2.6" orient="auto"><path d="M0,0 L7,2.6 L0,5.2 z" fill="#2f6b5f"/></marker>
+  </defs>
+
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">拡張を級数で作る——誤差が 2/3 ずつ減る</text>
+
+  <rect x="14" y="26" width="442" height="118" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+
+  <text x="24" y="42" font-size="7" font-weight="700" fill="#1f3b5c">誤差の減り方</text>
+  <line x1="60" y1="118" x2="440" y2="118" stroke="#8a8a88" stroke-width="0.8"/>
+  <line x1="60" y1="118" x2="60" y2="52" stroke="#8a8a88" stroke-width="0.8"/>
+  <text x="54" y="56" font-size="6" text-anchor="end" fill="#6a6a68">1</text>
+  <text x="54" y="121" font-size="6" text-anchor="end" fill="#6a6a68">0</text>
+
+  <rect x="74" y="55" width="26" height="63" fill="#b9c8d6" stroke="#35618f"/>
+  <text x="87" y="130" font-size="6" text-anchor="middle" fill="#6a6a68">初期</text>
+  <rect x="122" y="76" width="26" height="42" fill="#b9c8d6" stroke="#35618f"/>
+  <text x="135" y="130" font-size="6" text-anchor="middle" fill="#6a6a68">1回</text>
+  <rect x="170" y="90" width="26" height="28" fill="#b9c8d6" stroke="#35618f"/>
+  <text x="183" y="130" font-size="6" text-anchor="middle" fill="#6a6a68">2回</text>
+  <rect x="218" y="99" width="26" height="19" fill="#b9c8d6" stroke="#35618f"/>
+  <text x="231" y="130" font-size="6" text-anchor="middle" fill="#6a6a68">3回</text>
+  <rect x="266" y="106" width="26" height="12" fill="#b9c8d6" stroke="#35618f"/>
+  <text x="279" y="130" font-size="6" text-anchor="middle" fill="#6a6a68">4回</text>
+  <rect x="314" y="110" width="26" height="8" fill="#b9c8d6" stroke="#35618f"/>
+  <text x="327" y="130" font-size="6" text-anchor="middle" fill="#6a6a68">5回</text>
+  <text x="360" y="112" font-size="7" fill="#6a6a68">⋯ → 0</text>
+
+  <text x="360" y="72" font-size="6.8" fill="#1f3b5c">誤差は (2/3)ⁿ</text>
+  <text x="360" y="84" font-size="6.8" fill="#1f3b5c">補正は (1/3)(2/3)ⁿ</text>
+  <text x="360" y="96" font-size="6.8" fill="#2f6b5f">和は一様収束する</text>
+
+  <rect x="14" y="156" width="216" height="98" rx="4" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="24" y="171" font-size="7.6" font-weight="700" fill="#1e4a41">三つの主張は同値</text>
+  <rect x="34" y="180" width="76" height="20" rx="3" fill="#cfe0ee" stroke="#35618f"/>
+  <text x="72" y="194" font-size="6.6" text-anchor="middle" fill="#1f3b5c">正規性</text>
+  <rect x="134" y="180" width="76" height="20" rx="3" fill="#cfe0ee" stroke="#35618f"/>
+  <text x="172" y="194" font-size="6.6" text-anchor="middle" fill="#1f3b5c">ウリゾーン</text>
+  <rect x="84" y="212" width="76" height="20" rx="3" fill="#cfe0ee" stroke="#35618f"/>
+  <text x="122" y="226" font-size="6.6" text-anchor="middle" fill="#1f3b5c">ティーツェ</text>
+  <path d="M114,190 L130,190" stroke="#2f6b5f" stroke-width="1.2" fill="none" marker-end="url(#a16)"/>
+  <path d="M166,204 L142,210" stroke="#2f6b5f" stroke-width="1.2" fill="none" marker-end="url(#a16)"/>
+  <path d="M96,210 L74,204" stroke="#2f6b5f" stroke-width="1.2" fill="none" marker-end="url(#a16)"/>
+  <text x="122" y="248" font-size="6.6" text-anchor="middle" fill="#6a6a68">環状に示すのが手際がよい</text>
+
+  <rect x="240" y="156" width="216" height="98" rx="4" fill="#fdf6f4" stroke="#e0c3bd"/>
+  <text x="250" y="171" font-size="7.6" font-weight="700" fill="#8c2f1e">閉集合でなければ延ばせない</text>
+  <text x="250" y="188" font-size="7" fill="#8c2f1e">A = (0,1) 上の sin(1/x)</text>
+  <text x="250" y="200" font-size="6.8" fill="#6a6a68">0 での極限が存在しない</text>
+  <text x="250" y="216" font-size="7" fill="#8c2f1e">A = R＼{0} 上の 1/x</text>
+  <text x="250" y="228" font-size="6.8" fill="#6a6a68">値が発散する</text>
+  <text x="250" y="245" font-size="6.8" fill="#6a6a68">証明のどこで閉性を使うか——A± が X で閉になるところ</text>
+</svg>
+<figcaption>誤差が 2/3 ずつ減る補正を無限に足すことで拡張が作られる。正規性・ウリゾーンの補題・ティーツェの拡張定理の三つは互いに同値である。</figcaption>
+</figure>
+
+<h3 id="s16-3">拡張定理が働く場面</h3>
+
+<div class="rei" id="rei-tietze-riyou">
+<h4>三つの応用</h4>
+<p class="no-indent"><strong>境界値問題。</strong>領域の境界で与えられた連続関数を、内部まで連続に延ばせる。<em>ただし延ばしただけでは方程式を満たさない</em>——第94章のディリクレ問題は、延ばしたうえで調和にすることを要求する。ティーツェの定理は、そこでの出発点を与える。</p>
+<p><strong>レトラクション。</strong><m>A \subseteq X</m> が閉で、連続な <m>r \colon X \to A</m> が <m>r|_A = \mathrm{id}</m> を満たすとき、<m>A</m> を <m>X</m> のレトラクトという。<m>A</m> が <m>\mathbb{R}^n</m> の凸集合に同相なら、ティーツェの定理を座標ごとに適用してレトラクションが作れる。<span class="yogo-hl">凸性が座標ごとの独立な拡張を許すのが要点である。</span></p>
+<p><strong>関数の貼り合わせ。</strong><m>X = A \cup B</m>（<m>A, B</m> 閉）で、<m>f_A</m> と <m>f_B</m> が <m>A \cap B</m> で一致するとき、貼り合わせた関数は連続である。<em>これは拡張定理を使わずに直接示せるが、拡張定理と組み合わせると「片方だけ与えて他方を作る」ことができる。</em></p>
+</div>
+
+<div class="lv2">
+<h4>拡張できるかどうかは、値域にもよる</h4>
+<p>ティーツェの定理は値域が <m>\mathbb{R}</m> または区間の場合である。<em>値域を変えると、何が起きるか。</em></p>
+<p><strong><m>\mathbb{R}^n</m> なら大丈夫。</strong>座標ごとに適用すればよい。<m>f \colon A \to \mathbb{R}^n</m> の各成分を拡張し、束ねれば連続である（<ref t="thm-seki-fuhen"/>）。<span class="yogo-hl">値域が積であれば、拡張は成分ごとに独立に行える。</span></p>
+<p><strong>凸集合なら大丈夫。</strong><m>C \subseteq \mathbb{R}^n</m> が凸閉集合のとき、<m>f \colon A \to C</m> は <m>C</m> への拡張をもつ。まず <m>\mathbb{R}^n</m> へ拡張し、<em>最近点への射影 <m>\pi \colon \mathbb{R}^n \to C</m>（凸集合では一意で連続）を合成する。</em><m>A</m> 上では <m>f</m> の値が既に <m>C</m> に入っているので <m>\pi</m> は何も変えない。</p>
+<p><strong>球面では駄目。</strong><m>S^1</m> への拡張は一般にできない。<m>X = \overline{D^2}</m>（閉円板）、<m>A = S^1</m>、<m>f = \mathrm{id}</m> とすると、拡張 <m>F \colon \overline{D^2} \to S^1</m> は存在しない。</p>
+<p><em>存在すれば、<m>S^1</m> が円板のレトラクトになる。</em>これはホモトピー論の道具（基本群が <m>\mathbb{Z}</m> であること、あるいはブラウワーの不動点定理）で否定される。<span class="yogo-hl">拡張の可否は、値域の位相的な「穴」に依存する。</span></p>
+<p><strong>絶対レトラクト。</strong>「どんな正規空間のどんな閉部分集合からの連続写像も拡張できる」という値域を、絶対レトラクト（<m>\mathrm{AR}</m>）という。<m>[0,1]</m> と <m>\mathbb{R}^n</m> の凸閉集合は <m>\mathrm{AR}</m> であり、ヒルベルト立方体も <m>\mathrm{AR}</m> である。</p>
+<p>より弱い概念として、<em>近傍からの拡張だけを要求する</em>絶対近傍レトラクト（<m>\mathrm{ANR}</m>）がある。多様体や単体複体は <m>\mathrm{ANR}</m> である。<span class="yogo-hl">球面は <m>\mathrm{ANR}</m> だが <m>\mathrm{AR}</m> でない——局所的には延ばせるが、大域的には延ばせない。</span></p>
+<p>この局所と大域の落差が、代数的位相幾何学の出発点の一つになる。本書はこの方向に進まないが、第94章の調和関数の境界値問題で、局所的な拡張と大域的な解の違いに再び出会う。</p>
+</div>
+
+<div class="lv3">
+<h4>拡張定理から距離化定理へ</h4>
+<p>ティーツェの定理は、それ自体が目的ではない。<em>第31章の距離化定理への部品になる。</em>その接続を先に述べておく。</p>
+<p><strong>埋め込みを作るという戦略。</strong>第14章で見たとおり、チコノフ空間は立方体 <m>[0,1]^\kappa</m> に埋め込める。距離化するには、<span class="yogo-hl">埋め込み先を可算次元の立方体 <m>[0,1]^{\mathbb{N}}</m> にしなければならない</span>——それがコンパクト距離空間だからである（第11章の★★）。</p>
+<p>そのためには、点と閉集合を分離する連続関数が<em>可算個で足りる</em>必要がある。ここに第二可算性が効く。可算基底 <m>\{B_n\}</m> から可算個の関数を作れれば、埋め込みが <m>[0,1]^{\mathbb{N}}</m> に収まる。</p>
+<p><strong>正則＋第二可算から正規が出る。</strong>驚くべきことに、<em>正則な第二可算空間は正規である。</em>証明の骨子はこうである。交わらない閉集合 <m>A, B</m> を取る。正則性より、各 <m>x \in A</m> について <m>\overline{B_{n(x)}} \cap B = \varnothing</m> なる基底元 <m>B_{n(x)} \ni x</m> が取れる。基底は可算だから、<m>A</m> を覆う可算個の <m>\{B_{n_k}\}</m> が選べる。<m>B</m> についても同様に <m>\{C_{m_j}\}</m> を取る。</p>
+<p>あとは可算個の被覆から交わらない開集合を作る。<m>U = \bigcup_k (B_{n_k} \setminus \bigcup_{j \le k} \overline{C_{m_j}})</m>、<m>V = \bigcup_j (C_{m_j} \setminus \bigcup_{k \le j} \overline{B_{n_k}})</m> と置けばよい。<em>添字の大小で「先に取ったものを避ける」ことが、交わらなさを保証する。</em><span class="yogo-hl">可算性が、この対角線的な構成を可能にしている。</span></p>
+<p><strong>したがって。</strong>正則かつ第二可算な空間は正規であり、ウリゾーンの補題が使える。可算基底から可算個の分離関数が作れ、<m>[0,1]^{\mathbb{N}}</m> への埋め込みが得られる。<em>これがウリゾーンの距離化定理（第31章）の筋である。</em></p>
+<M>\text{正則} + \text{第二可算} \implies \text{正規} \implies \text{関数が作れる} \implies \text{立方体に入る} \implies \text{距離化可能}</M>
+<p><strong>可算性を外すとどうなるか。</strong>第32章のナガタ–スミルノフの定理は、第二可算性を「<m>\sigma</m>-局所有限基底」という弱い条件に置き換える。<span class="yogo-hl">そこでは正規性の代わりにパラコンパクト性（第24章）が主役になる。</span></p>
+<p>大づかみに言えば、距離化定理の歴史は<em>「可算性」をどこまで弱められるかの歴史</em>である。ウリゾーンが可算基底で解き、ナガタとスミルノフとビングが局所有限性で解いた。第34章では、この一連の定理が距離空間の何を特徴づけたのかを振り返る。</p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li><m>A = \{0\} \cup \{1\}</m> 上の関数 <m>f(0)=0</m>、<m>f(1)=1</m> を <m>\mathbb{R}</m> に拡張せよ。</li>
+<li><m>A = (0,1)</m> 上の <m>\sin(1/x)</m> が <m>\mathbb{R}</m> に連続拡張できない理由を述べよ。</li>
+<li>ティーツェの定理を <m>\mathbb{R}^n</m> 値の関数に拡張する方法を述べよ。</li>
+<li><m>\mathbb{R}</m> の閉集合上の連続関数が、つねに有界な拡張をもつとは限らない例を挙げよ。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li><ref t="thm-tietze"/> の「近似の一歩」で、<m>A</m> 上 <m>|g - h| \le 2/3</m> となることを三つの場合に分けて確かめよ。<span class="haiten">（20点）</span></li>
+<li><ref t="prop-tietze-doti"/> の（3）から（1）を示せ。<m>A \cup B</m> 上の関数が連続である理由を丁寧に述べること。<span class="haiten">（15点）</span></li>
+<li>値域が <m>\mathbb{R}^n</m> の凸閉集合のとき拡張が可能であることを、最近点射影を用いて示せ。<span class="haiten">（20点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li>有界でない場合の拡張を、★★★を参照せず、<m>\varphi(t) = t/(1+|t|)</m> を用いて完全に構成せよ。<span class="haiten">（30点）</span></li>
+<li>正則かつ第二可算な空間が正規であることを、★★★の対角線的な構成に従って示せ。<span class="haiten">（35点）</span></li>
+</ol>
+</div>
+</div>

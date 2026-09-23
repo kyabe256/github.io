@@ -1,0 +1,209 @@
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>正規性が遺伝しないなら、遺伝するように強めるとどうなるか。</li>
+<li>その強めた条件は、局所的な言葉で書けるのか。</li>
+<li>ウリゾーンの補題で「0 になる点がちょうど A」とできるのはいつか。</li>
+</ul>
+</div>
+
+<h3 id="s18-1">遺伝的正規性を条件として立てる</h3>
+
+<p>第15章で正規性が遺伝しないことを見た。<em>ならば、遺伝することを条件に加えればよい。</em>ただしそれでは定義が「すべての部分空間について」という大域的な形になってしまう。<span class="yogo-hl">この章の主題は、その大域的な条件が局所的な言葉で書き直せることである。</span></p>
+
+<div class="teigi" id="def-kanzen-seiki">
+<h4>完全正規空間</h4>
+<p class="no-indent"><m>X</m> が<strong>完全正規</strong>であるとは、<m>X</m> のすべての部分空間が正規であることをいう。<m>T_1</m> かつ完全正規な空間を <strong>T<sub>5</sub></strong> 空間という。</p>
+</div>
+
+<div class="teiri" data-kind="命題" id="prop-kanzen-kai">
+<h4></h4>
+<p class="no-indent"><m>X</m> が完全正規であることと、<m>X</m> のすべての<strong>開</strong>部分空間が正規であることは同値である。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">一方向は自明。逆を示す。<m>A \subseteq X</m> を任意の部分空間、<m>E, F</m> を <m>A</m> で閉な交わらない集合とする。</p>
+<p><m>U = X \setminus (\overline{E} \cap \overline{F})</m>（閉包は <m>X</m> で取る）と置く。<em><m>U</m> は開であり、<m>A \subseteq U</m> である</em>——実際 <m>x \in A \cap \overline{E} \cap \overline{F}</m> なら <m>x \in \overline{E}^{\,A} \cap \overline{F}^{\,A} = E \cap F = \varnothing</m>（第9章）。</p>
+<p><m>U</m> は正規な開部分空間である。<m>\overline{E} \cap U</m> と <m>\overline{F} \cap U</m> は <m>U</m> で閉であり、交わらない（<m>U</m> の定義より）。よって <m>U</m> のなかで分離する開集合 <m>V, W</m> が取れる。<em><m>V \cap A</m> と <m>W \cap A</m> が <m>E, F</m> を <m>A</m> のなかで分離する。</em></p>
+<p><span class="yogo-hl">閉包の交わりを抜いた開集合を経由することで、任意の部分空間が開部分空間に還元された。</span></p>
+</div>
+
+<h3 id="s18-2">分離された集合による特徴づけ</h3>
+
+<p>もう一つの言い換えが、<m>T_5</m> を「分離公理の階層の一段」として位置づける。</p>
+
+<div class="teigi" id="def-bunri-sareta">
+<h4></h4>
+<p class="no-indent"><m>E, F \subseteq X</m> が<strong>分離されている</strong>とは、<m>\overline{E} \cap F = \varnothing</m> かつ <m>E \cap \overline{F} = \varnothing</m> となることをいう。</p>
+</div>
+
+<p><em>交わらない閉集合は分離されているが、逆は成り立たない。</em><m>\mathbb{R}</m> で <m>E = (0,1)</m>、<m>F = (1,2)</m> は分離されているが、どちらも閉でない。</p>
+
+<div class="teiri" id="thm-t5-doti">
+<h4>完全正規性の特徴づけ</h4>
+<p class="no-indent"><m>X</m> について、次は同値である。</p>
+<p class="no-indent">（1）<m>X</m> は完全正規。<br>
+（2）分離された二つの集合 <m>E, F</m> は、つねに交わらない開集合で分離できる。<br>
+（3）<m>X</m> は正規であり、かつすべての開集合が <m>F_\sigma</m> 集合（可算個の閉集合の合併）である。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><strong>（1）から（2）。</strong><m>E, F</m> を分離された集合とし、<m>A = E \cup F</m> とする。<m>E</m> は <m>A</m> で閉である——<m>\overline{E}^{\,A} = \overline{E} \cap A = \overline{E} \cap (E \cup F) = E</m>（<m>\overline{E} \cap F = \varnothing</m> より）。同様に <m>F</m> も <m>A</m> で閉。<em><m>A</m> の正規性より <m>A</m> のなかで分離でき、<ref t="prop-kanzen-kai"/> の議論と同じく <m>X</m> の開集合に持ち上げられる。</em></p>
+<p><strong>（2）から（1）。</strong>部分空間 <m>A</m> で閉な交わらない集合は、<m>X</m> のなかで分離されている（上の計算を逆にたどる）。よって（2）より分離でき、<m>A</m> に制限すればよい。</p>
+<p><strong>（3）から（2）。</strong>これが実質的な部分である。<m>E, F</m> を分離された集合とする。<m>X \setminus \overline{F}</m> は <m>E</m> を含む開集合であり、（3）より <m>F_\sigma</m> だから <m>X \setminus \overline{F} = \bigcup_n A_n</m>（<m>A_n</m> 閉、増加としてよい）と書ける。同様に <m>X \setminus \overline{E} = \bigcup_n B_n</m>。</p>
+<p>正規性を使って各段で分離し、<em>第16章★★★と同じ対角線的な構成で</em></p>
+<M>U = \bigcup_n \Big(U_n \setminus \bigcup_{k \le n} \overline{V_k}\Big), \qquad
+V = \bigcup_n \Big(V_n \setminus \bigcup_{k \le n} \overline{U_k}\Big)</M>
+<p class="no-indent">と置けば、交わらない開集合が得られる。<span class="yogo-hl">可算性が対角線の議論を可能にする。</span></p>
+<p><strong>（1）から（3）。</strong>正規性は（1）から直ちに従う。開集合 <m>U</m> が <m>F_\sigma</m> であることを示す。<em><m>U</m> と <m>X \setminus U</m> について、完全正規性から連続関数 <m>f</m> で <m>f^{-1}(0) = X \setminus U</m> となるものが作れる</em>（構成は演習）。すると <m>U = \bigcup_n f^{-1}([1/n, 1])</m> は閉集合の可算合併である。</p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">（3）の「開集合が <m>F_\sigma</m>」は、補集合を取れば「閉集合が <m>G_\delta</m>（可算個の開集合の交叉）」と同じである。<em>この形が第52章のボレル集合の議論とつながる。</em><span class="yogo-hl">完全正規性は、位相の階層に「可算操作」を持ち込む最初の条件である。</span></p>
+</div>
+
+<figure>
+<svg viewBox="0 0 470 268" width="470" height="268" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">交わらない／分離されている——二つの違い</text>
+
+  <rect x="14" y="26" width="216" height="104" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+  <text x="24" y="42" font-size="7.6" font-weight="700" fill="#1f3b5c">交わらない閉集合（T₄ が扱う）</text>
+  <line x1="30" y1="76" x2="216" y2="76" stroke="#8a8a88" stroke-width="0.8"/>
+  <line x1="46" y1="76" x2="100" y2="76" stroke="#35618f" stroke-width="3.4"/>
+  <circle cx="46" cy="76" r="2.8" fill="#35618f"/><circle cx="100" cy="76" r="2.8" fill="#35618f"/>
+  <line x1="140" y1="76" x2="200" y2="76" stroke="#35618f" stroke-width="3.4"/>
+  <circle cx="140" cy="76" r="2.8" fill="#35618f"/><circle cx="200" cy="76" r="2.8" fill="#35618f"/>
+  <text x="73" y="68" font-size="6.4" text-anchor="middle" fill="#1f3b5c">[0,1]</text>
+  <text x="170" y="68" font-size="6.4" text-anchor="middle" fill="#1f3b5c">[2,3]</text>
+  <text x="24" y="100" font-size="6.8" fill="#6a6a68">端点まで含めて離れている</text>
+  <text x="24" y="114" font-size="6.8" fill="#6a6a68">正規性があれば分離できる</text>
+
+  <rect x="240" y="26" width="216" height="104" rx="4" fill="#fdf6f4" stroke="#e0c3bd"/>
+  <text x="250" y="42" font-size="7.6" font-weight="700" fill="#8c2f1e">分離されている（T₅ が扱う）</text>
+  <line x1="256" y1="76" x2="442" y2="76" stroke="#8a8a88" stroke-width="0.8"/>
+  <line x1="272" y1="76" x2="344" y2="76" stroke="#a03b2e" stroke-width="3.4"/>
+  <circle cx="272" cy="76" r="2.8" fill="#fff" stroke="#a03b2e" stroke-width="1.2"/>
+  <circle cx="344" cy="76" r="2.8" fill="#fff" stroke="#a03b2e" stroke-width="1.2"/>
+  <line x1="344" y1="76" x2="420" y2="76" stroke="#8a3b62" stroke-width="3.4"/>
+  <circle cx="420" cy="76" r="2.8" fill="#fff" stroke="#8a3b62" stroke-width="1.2"/>
+  <text x="308" y="68" font-size="6.4" text-anchor="middle" fill="#8c2f1e">(0,1)</text>
+  <text x="382" y="68" font-size="6.4" text-anchor="middle" fill="#6b2a48">(1,2)</text>
+  <text x="344" y="90" font-size="6.2" text-anchor="middle" fill="#6a6a68">1 はどちらにも属さない</text>
+  <text x="250" y="104" font-size="6.8" fill="#6a6a68">互いに他方の閉包と交わらない</text>
+  <text x="250" y="118" font-size="6.8" fill="#8c2f1e">閉でないので、T₄ では扱えない</text>
+
+  <rect x="14" y="142" width="442" height="114" rx="4" fill="#f4f1ea" stroke="#8a6b2c"/>
+  <text x="24" y="157" font-size="7.8" font-weight="700" fill="#5a4520">完全正規性の三つの顔</text>
+
+  <text x="24" y="176" font-size="7" font-weight="700" fill="#5a4520">大域的な形</text>
+  <text x="120" y="176" font-size="7" fill="#5a4520">すべての部分空間が正規</text>
+  <text x="300" y="176" font-size="6.8" fill="#6a6a68">定義。開部分空間だけで足りる</text>
+
+  <text x="24" y="196" font-size="7" font-weight="700" fill="#5a4520">分離の形</text>
+  <text x="120" y="196" font-size="7" fill="#5a4520">分離された集合が分離できる</text>
+  <text x="300" y="196" font-size="6.8" fill="#6a6a68">階層の一段として位置づく</text>
+
+  <text x="24" y="216" font-size="7" font-weight="700" fill="#5a4520">局所的な形</text>
+  <text x="120" y="216" font-size="7" fill="#5a4520">正規＋開集合が Fσ</text>
+  <text x="300" y="216" font-size="6.8" fill="#6a6a68">可算操作が入る。第52章へ</text>
+
+  <text x="24" y="238" font-size="7" fill="#8c2f1e">三つが同値であることが、この章の内容。大域的な要求が局所的な条件に翻訳される</text>
+  <text x="24" y="251" font-size="7" fill="#5a4520">距離空間は完全正規　ゾルゲンフライ直線も完全正規　チコノフ板は正規だが完全正規でない</text>
+</svg>
+<figcaption>「交わらない閉集合」より広い「分離された集合」を分離できることが完全正規性である。大域的な遺伝性の要求が、開集合が Fσ であるという局所的な条件に翻訳される。</figcaption>
+</figure>
+
+<h3 id="s18-3">完全なウリゾーン関数</h3>
+
+<p>第15章で注意したことを、ここで解決する。<em>ウリゾーンの補題は <m>f|_A \equiv 0</m> を与えたが、<m>f^{-1}(0) = A</m> は保証しなかった。</em></p>
+
+<div class="teiri" id="thm-kanzen-urysohn">
+<h4></h4>
+<p class="no-indent"><m>X</m> が正規、<m>A \subseteq X</m> が閉とする。<m>f^{-1}(0) = A</m> となる連続関数 <m>f \colon X \to [0,1]</m> が存在するための必要十分条件は、<m>A</m> が <m>G_\delta</m> 集合であることである。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><strong>必要性。</strong><m>f^{-1}(0) = A</m> なら <m>A = \bigcap_n f^{-1}([0, 1/n))</m> であり、各項は開だから <m>A</m> は <m>G_\delta</m>。</p>
+<p><strong>十分性。</strong><m>A = \bigcap_n U_n</m>（<m>U_n</m> 開）とする。各 <m>n</m> について、<m>A</m> と <m>X \setminus U_n</m> は交わらない閉集合だから、ウリゾーンの補題より <m>f_n|_A \equiv 0</m>、<m>f_n|_{X \setminus U_n} \equiv 1</m> なる連続 <m>f_n \colon X \to [0,1]</m> が取れる。</p>
+<M>f = \sum_{n=1}^{\infty} 2^{-n} f_n</M>
+<p class="no-indent">と置く。<em>一様収束するので連続である。</em><m>x \in A</m> なら全項が <m>0</m> だから <m>f(x) = 0</m>。逆に <m>f(x) = 0</m> なら全 <m>n</m> で <m>f_n(x) = 0</m>、とくに <m>x \in U_n</m>（そうでなければ <m>f_n(x) = 1</m>）。よって <m>x \in \bigcap U_n = A</m>。</p>
+</div>
+
+<div class="teiri" data-kind="系" id="cor-t5-kanzen-urysohn">
+<h4></h4>
+<p class="no-indent"><m>T_5</m> 空間では、交わらない閉集合 <m>A, B</m> に対し <m>f^{-1}(0) = A</m>、<m>f^{-1}(1) = B</m> となる連続関数が存在する。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><ref t="thm-t5-doti"/>（3）より閉集合はすべて <m>G_\delta</m> である。<ref t="thm-kanzen-urysohn"/> を <m>A</m> と <m>B</m> にそれぞれ適用して <m>g, h</m> を作り、<em><m>f = g/(g+h)</m> と置けばよい</em>（分母は <m>A \cap B = \varnothing</m> より消えない）。</p>
+</div>
+
+<div class="lv2">
+<h4>完全正規性は何に保たれるか</h4>
+<p>第13章から積み上げてきた表を、<m>T_5</m> について埋める。<em>正規性より良く、しかし積では駄目である。</em></p>
+<p><strong>遺伝する。</strong>定義そのものから従う。<span class="yogo-hl">完全正規性は、正規性の遺伝しないという欠点を設計上解消した条件である。</span>この点で <m>T_0</m> から <m>T_{3\frac12}</m> の仲間に戻る。</p>
+<p><strong>積では保たれない。</strong>第17章で見たとおり、ゾルゲンフライ直線 <m>\mathbb{R}_\ell</m> は完全正規だが、<m>\mathbb{R}_\ell \times \mathbb{R}_\ell</m> は正規ですらない。<em>したがって完全正規でもない。</em></p>
+<p><strong>可算積でも駄目。</strong>もっと弱い形でも保たれない。<m>\mathbb{R}_\ell</m> 二つの積で壊れるのだから、有限積ですら保証がない。<span class="yogo-hl">積で保たれる分離公理は <m>T_{3\frac12}</m> までである。</span></p>
+<p><strong>まとめの表。</strong>第19章で完成させるが、現段階で次のようになる。</p>
+<M>\begin{array}{lccc}
+& \text{部分空間} & \text{有限積} & \text{商} \\
+T_0 \sim T_{3\frac12} & \bigcirc & \bigcirc & \times \\
+T_4 & \times & \times & \times \\
+T_5 & \bigcirc & \times & \times \\
+\text{距離化可能} & \bigcirc & \bigcirc(\text{可算積}) & \times
+\end{array}</M>
+<p><strong>なぜ距離化可能性は積で保たれるのか。</strong>第11章の★★で構成したとおり、可算個の距離を重み <m>2^{-n}</m> で足せばよい。<em>距離という具体的な対象があるので、直接構成できる。</em></p>
+<p>対して <m>T_4</m> や <m>T_5</m> は「分離できる」という存在命題であり、<span class="yogo-hl">積の各成分での分離を束ねる方法がない。</span>ゾルゲンフライ平面の反対角線は、二つの座標が連動して動く方向にできる集合であり、座標ごとの情報では捉えられない。</p>
+<p>この落差が、第24章のパラコンパクト性を導入する動機になる。<em>パラコンパクト性は正規性より強く、しかも扱いやすい。</em>そして第32章の距離化定理では、パラコンパクト性が主役になる。</p>
+</div>
+
+<div class="lv3">
+<h4>完全正規性と、可算性の階層</h4>
+<p><ref t="thm-t5-doti"/>（3）が示したのは、完全正規性が<em>可算操作</em>に関する条件だということである。この観点から、周辺の概念を整理しておく。</p>
+<p><strong><m>F_\sigma</m> と <m>G_\delta</m> の階層。</strong>開集合と閉集合から出発し、可算合併と可算交叉を交互に取ると階層ができる。</p>
+<M>\text{開} \subseteq G_\delta \subseteq G_{\delta\sigma} \subseteq \cdots, \qquad
+\text{閉} \subseteq F_\sigma \subseteq F_{\sigma\delta} \subseteq \cdots</M>
+<p>第7章の★★★で述べたとおり、この階層は <m>\omega_1</m> 段階まで登り、その全体がボレル集合になる。<span class="yogo-hl">完全正規性は「階層の第一段で開と閉が入れ替わる」ことを要求している。</span></p>
+<p><strong>距離空間では自動的に成り立つ。</strong>距離空間の開集合 <m>U</m> に対し、</p>
+<M>U = \bigcup_{n} \{\, x \mid d(x, X \setminus U) \ge 1/n \,\}</M>
+<p>と書ける。右辺の各項は閉である（<m>x \mapsto d(x, X\setminus U)</m> が連続だから）。<em>したがって距離空間では開集合がつねに <m>F_\sigma</m> であり、完全正規性が成り立つ。</em></p>
+<p>この計算は、距離が「可算な目盛り」を提供していることの一例である。第7章で可分性と第二可算性が距離空間で一致した理由と同じ構造である。</p>
+<p><strong>完全正規性の別名。</strong>文献では <m>T_5</m> を「完全正規（perfectly normal）」と呼ぶ場合と「遺伝的正規（hereditarily normal）」と呼ぶ場合があり、さらに「完全正規」を別の条件に使う流儀もある。</p>
+<p>混乱を避けるため、条件を明示して整理する。<em>遺伝的正規（すべての部分空間が正規）</em>と、<em><m>T_1</m> 正規かつすべての閉集合が <m>G_\delta</m></em>は、<ref t="thm-t5-doti"/> により同値である。したがってどちらの語を使っても指す対象は同じである。</p>
+<p>ただし一部の文献では「完全正規」を<em><m>T_1</m> 正規かつ各閉集合がある連続関数の零点集合</em>と定義する。<ref t="thm-kanzen-urysohn"/> によりこれも同値なので、結局三つの定義が一致する。<span class="yogo-hl">本書では <m>T_5</m> の名で呼び、必要に応じて三つの形を使い分ける。</span></p>
+<p><strong>ボレル構造との接続。</strong>完全正規性が本書の後半で効く場面が一つある。<em>第54章で可測関数を扱うとき、位相空間上のボレル <m>\sigma</m>-加法族を考える。</em></p>
+<p>完全正規空間では、閉集合が <m>G_\delta</m> なので、<span class="yogo-hl">ボレル階層の底が開集合だけで生成される。</span>これは可測性の議論を簡単にする。距離空間では自動的に成り立つので、第VII部以降この条件を明示する必要はなくなる。</p>
+<p>逆に言えば、<em>完全正規性は「位相空間論から測度論へ渡るときの最低条件」</em>にあたる。第II部の階層のなかで、この条件が解析学にもっとも近い位置にある。</p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li><m>\mathbb{R}</m> で <m>(0,1)</m> と <m>(1,2)</m> が分離されていることを確かめよ。</li>
+<li>距離空間の開集合が <m>F_\sigma</m> であることを、★★★の式を使って示せ。</li>
+<li>交わらない閉集合が分離されていることを示せ。</li>
+<li>チコノフ板が完全正規でない理由を、第17章の結果から述べよ。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li><ref t="prop-kanzen-kai"/> の証明で、<m>A \subseteq U</m> となる理由を丁寧に述べよ。<span class="haiten">（20点）</span></li>
+<li><ref t="thm-kanzen-urysohn"/> の十分性を、級数の一様収束と <m>f(x) = 0</m> の同値性の両方について書き下せ。<span class="haiten">（20点）</span></li>
+<li><ref t="thm-t5-doti"/>（1）から（3）で、閉集合が <m>G_\delta</m> であることを示せ。<span class="haiten">（25点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li><ref t="thm-t5-doti"/>（3）から（2）を、対角線的な構成を明示して完全に示せ。<span class="haiten">（35点）</span></li>
+<li>完全正規性が積で保たれないことを、ゾルゲンフライ直線を用いて示せ。<span class="haiten">（30点）</span></li>
+</ol>
+</div>
+</div>
