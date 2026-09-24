@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第74章 有界作用素とスペクトル｜位相・解析大全</title>
+<meta name="description" content="位相・解析大全　第74章　有界作用素とスペクトル">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;600&display=swap">
+<link rel="stylesheet" href="web.css">
+</head>
+<body>
+<header class="site">
+  <a class="site-title" href="index.html">位相・解析大全</a>
+  <nav class="site-nav">
+    <a href="index.html">目次</a>
+    <a href="isou-kaiseki-taizen.pdf">PDF版</a>
+  </nav>
+</header>
+<main>
+<article class="chapter">
+<p class="part-label">第X部　スペクトル理論</p>
+<h1><span class="ch-num">第74章</span>有界作用素とスペクトル</h1>
+<nav class="chnav">
+<a class="prev" href="ch73.html">← 第73章　コンパクト作用素</a>
+<a class="next" href="ch75.html">第75章　自己共役作用素 →</a>
+</nav>
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>無限次元では、なぜ固有値だけで足りないのか。</li>
+<li>スペクトルは、どんな集合になるのか。</li>
+<li>スペクトル半径は、どうやって計算するのか。</li>
+</ul>
+</div>
+
+<h3 id="s74-1">固有値では足りない</h3>
+
+<p>有限次元では、行列の対角化は固有値と固有ベクトルの話だった。<em>無限次元では、これが破れる。</em></p>
+
+<div class="hanrei" id="cex-koyuchi-tarinai">
+<h4>固有値が一つもない作用素</h4>
+<p class="no-indent"><m>H=L^2[0,1]</m>、<m>(Mf)(x)=xf(x)</m>（掛け算作用素）とする。</p>
+<p><m>Mf=\lambda f</m> なら <m>(x-\lambda)f(x)=0</m> ほとんどいたるところ。<em><m>x\ne\lambda</m> の点では <m>f=0</m> で、一点は測度零だから <m>f=0</m>。</em></p>
+<p><span class="yogo-hl">固有値が一つもない。</span>それでも <m>\lambda\in[0,1]</m> のとき <m>M-\lambda I</m> は可逆でない——<em>逆作用素の候補 <m>f\mapsto f/(x-\lambda)</m> が有界でないからである。</em></p>
+<p>シフト作用素（第73章）も固有値をもたない。<em>「可逆でない」と「固有値である」は、無限次元では別のことである。</em></p>
+</div>
+
+<div class="teigi" id="def-spectrum">
+<h4>スペクトル</h4>
+<p class="no-indent"><m>E</m> を複素バナッハ空間、<m>T\in B(E)</m> とする。</p>
+<M>\rho(T) = \{\, \lambda\in\mathbb{C} \mid T-\lambda I \text{ が } B(E) \text{ で可逆} \,\}</M>
+<p class="no-indent">を<strong>レゾルベント集合</strong>、<m>\sigma(T)=\mathbb{C}\setminus\rho(T)</m> を<strong>スペクトル</strong>という。<m>\lambda\in\rho(T)</m> について <m>R(\lambda)=(T-\lambda I)^{-1}</m> を<strong>レゾルベント</strong>という。</p>
+</div>
+
+<div class="chui">
+<h4>スペクトルの三つの部分</h4>
+<p class="no-indent"><strong>点スペクトル</strong> <m>\sigma_p(T)</m>——<m>T-\lambda I</m> が単射でない（すなわち <m>\lambda</m> が固有値）。</p>
+<p><strong>連続スペクトル</strong> <m>\sigma_c(T)</m>——単射で値域が稠密だが、閉でない。</p>
+<p><strong>剰余スペクトル</strong> <m>\sigma_r(T)</m>——単射だが値域の閉包が全体でない。</p>
+<p><span class="yogo-hl">第69章★★の閉値域定理により、この三分が <m>\sigma(T)</m> の分割になる。</span><em><ref t="cex-koyuchi-tarinai"/> の掛け算作用素では、<m>\sigma(M)=[0,1]</m> がすべて連続スペクトルである。</em></p>
+</div>
+
+<h3 id="s74-2">スペクトルの基本性質</h3>
+
+<div class="teiri" data-kind="命題" id="prop-neumann">
+<h4>ノイマン級数</h4>
+<p class="no-indent"><m>S\in B(E)</m>、<m>\|S\|<1</m> なら <m>I-S</m> は可逆で</p>
+<M>(I-S)^{-1} = \sum_{n=0}^{\infty}S^n, \qquad \|(I-S)^{-1}\| \le \frac{1}{1-\|S\|}</M>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><m>\sum_n\|S^n\|\le\sum_n\|S\|^n<\infty</m> なので、<m>B(E)</m> の完備性（<ref t="thm-be-f-kanbi"/>）より級数は収束する。<em>あとは <m>(I-S)\sum_n S^n = I</m> を確かめる。</em></p>
+</div>
+
+<div class="teiri" id="thm-spectrum-kihon">
+<h4>スペクトルの基本性質</h4>
+<p class="no-indent"><m>E\ne\{0\}</m> を複素バナッハ空間、<m>T\in B(E)</m> とする。</p>
+<p class="no-indent">（1）<m>\rho(T)</m> は開集合で、<m>\lambda\mapsto R(\lambda)</m> は正則（<m>B(E)</m>-値の解析関数）。<br>
+（2）<m>\sigma(T)</m> は閉で、<m>\{\,|\lambda|\le\|T\|\,\}</m> に含まれる（したがってコンパクト）。<br>
+（3）<m>\sigma(T)\ne\varnothing</m>。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">（1）<m>\lambda_0\in\rho(T)</m> とする。<m>|\lambda-\lambda_0|<1/\|R(\lambda_0)\|</m> なら</p>
+<M>T-\lambda I = (T-\lambda_0I)\big(I-(\lambda-\lambda_0)R(\lambda_0)\big)</M>
+<p class="no-indent"><em>第二因子は <ref t="prop-neumann"/> より可逆。</em>級数展開から</p>
+<M>R(\lambda) = \sum_{n=0}^{\infty}(\lambda-\lambda_0)^nR(\lambda_0)^{n+1}</M>
+<p class="no-indent">が得られ、<span class="yogo-hl"><m>R</m> が <m>\lambda_0</m> のまわりで冪級数に展開できる</span>——すなわち正則。</p>
+<p>（2）<m>|\lambda|>\|T\|</m> なら <m>T-\lambda I = -\lambda(I-T/\lambda)</m> が可逆。</p>
+<p>（3）<m>\sigma(T)=\varnothing</m> と仮定する。<m>R</m> は <m>\mathbb{C}</m> 全体で正則で、<m>|\lambda|\to\infty</m> のとき</p>
+<M>\|R(\lambda)\| = \frac{1}{|\lambda|}\Big\|\Big(I-\frac{T}{\lambda}\Big)^{-1}\Big\| \le \frac{1}{|\lambda|-\|T\|} \to 0</M>
+<p class="no-indent"><em>どの <m>\varphi\in B(E)^*</m> についても <m>\lambda\mapsto\varphi(R(\lambda))</m> は有界な整関数なので、リウヴィルの定理（第90章）より定数、すなわち <m>0</m>。</em></p>
+<p>ハーン–バナッハの定理より <m>R(\lambda)=0</m>、これは可逆作用素でありえない。<span class="yogo-hl">ここで複素解析が本質的に使われる。</span></p>
+</div>
+
+<div class="chui">
+<h4>複素数であることが必要</h4>
+<p class="no-indent"><em>実バナッハ空間では（3）が成り立たない。</em><m>\mathbb{R}^2</m> の回転（<m>90</m> 度）は実固有値をもたない。</p>
+<p><span class="yogo-hl">スペクトル理論は、複素数体の上でしか整合しない。</span>第XII部の複素解析が、第X部の土台になっている。</p>
+</div>
+
+<h3 id="s74-3">スペクトル半径</h3>
+
+<div class="teigi" id="def-spectrum-hankei">
+<h4>スペクトル半径</h4>
+<p class="no-indent"><m>r(T) = \sup\{\,|\lambda| \mid \lambda\in\sigma(T)\,\}</m> を<strong>スペクトル半径</strong>という。<em><ref t="thm-spectrum-kihon"/> より <m>r(T)\le\|T\|</m>。</em></p>
+</div>
+
+<div class="teiri" id="thm-gelfand-koshiki">
+<h4>ゲルファントの公式</h4>
+<p class="no-indent"><m>\displaystyle r(T) = \lim_{n\to\infty}\|T^n\|^{1/n} = \inf_n \|T^n\|^{1/n}</m>。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><strong><m>r(T)\ge\limsup</m>。</strong><m>\lambda\in\sigma(T)</m> なら <m>\lambda^n\in\sigma(T^n)</m>（<m>T^n-\lambda^nI</m> が <m>T-\lambda I</m> で割れるから）。よって <m>|\lambda|^n\le\|T^n\|</m>。</p>
+<p><strong><m>r(T)\le\liminf</m>。</strong><m>|\lambda|>\|T\|</m> で <m>R(\lambda)=-\sum_{n\ge0}T^n/\lambda^{n+1}</m>。<em>この級数は <m>R</m> の <m>\infty</m> のまわりのローラン展開であり、<ref t="thm-spectrum-kihon"/>（1）より <m>|\lambda|>r(T)</m> で収束する</em>（第91章の解析接続）。</p>
+<p>冪級数の収束半径の公式（コーシー–アダマール、<ref t="thm-cauchy-hadamard"/>）より <m>\limsup_n\|T^n\|^{1/n}\le r(T)</m>。</p>
+<p><span class="yogo-hl">第49章の収束半径の公式が、そのまま作用素に適用されている。</span></p>
+</div>
+
+<div class="rei" id="rei-spectrum-rei">
+<h4>スペクトルの例</h4>
+<p class="no-indent"><strong>掛け算作用素。</strong><m>(M_gf)=gf</m> on <m>L^2(\mu)</m>（<m>g\in L^\infty</m>）。<em><m>\sigma(M_g)=\text{ess\,ran}\,g</m>（本質的値域）。</em></p>
+<p><strong>シフト作用素。</strong><m>\ell^2</m> の右シフト <m>S</m>。<em><m>\sigma(S)=\{\,|\lambda|\le1\,\}</m>（閉単位円板）。固有値はない。</em><m>|\lambda|<1</m> は剰余スペクトル、<m>|\lambda|=1</m> は連続スペクトル。</p>
+<p><strong>べき零作用素。</strong><m>\mathbb{C}^2</m> の <m>T=\begin{pmatrix}0&1\\0&0\end{pmatrix}</m>。<em><m>\|T\|=1</m> だが <m>T^2=0</m> なので <m>r(T)=0</m>、<m>\sigma(T)=\{0\}</m>。</em></p>
+<p><span class="yogo-hl">スペクトル半径とノルムは、大きく食い違うことがある。</span></p>
+<p><strong>ヴォルテラ作用素。</strong><m>(Vf)(x)=\int_0^xf</m> on <m>L^2[0,1]</m>。<em><m>\sigma(V)=\{0\}</m> だが <m>V\ne0</m>——固有値のないコンパクト作用素。</em></p>
+</div>
+
+<figure id="fig74-1">
+<svg viewBox="0 0 470 286" width="470" height="286" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">「可逆でない」は「固有値である」より広い</text>
+
+  <rect x="14" y="26" width="442" height="130" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+
+  <text x="88" y="42" font-size="6.8" text-anchor="middle" font-weight="700" fill="#1f3b5c">掛け算作用素</text>
+  <line x1="30" y1="96" x2="150" y2="96" stroke="#8a8a88" stroke-width="0.7"/>
+  <line x1="90" y1="62" x2="90" y2="126" stroke="#8a8a88" stroke-width="0.7"/>
+  <line x1="90" y1="96" x2="138" y2="96" stroke="#2f6b5f" stroke-width="3"/>
+  <circle cx="90" cy="96" r="2.4" fill="#2f6b5f"/>
+  <circle cx="138" cy="96" r="2.4" fill="#2f6b5f"/>
+  <text x="114" y="90" font-size="6" text-anchor="middle" fill="#1e4a41">[0,1]</text>
+  <text x="88" y="134" font-size="6" text-anchor="middle" fill="#8c2f1e">全部が連続スペクトル</text>
+  <text x="88" y="143" font-size="6" text-anchor="middle" fill="#8c2f1e">固有値は一つもない</text>
+
+  <text x="235" y="42" font-size="6.8" text-anchor="middle" font-weight="700" fill="#1f3b5c">シフト作用素</text>
+  <line x1="178" y1="96" x2="294" y2="96" stroke="#8a8a88" stroke-width="0.7"/>
+  <line x1="236" y1="62" x2="236" y2="126" stroke="#8a8a88" stroke-width="0.7"/>
+  <circle cx="236" cy="96" r="28" fill="#dce7f0" stroke="#35618f" stroke-width="1.3"/>
+  <text x="236" y="80" font-size="5.8" text-anchor="middle" fill="#1f3b5c">|λ| &lt; 1</text>
+  <text x="236" y="90" font-size="5.8" text-anchor="middle" fill="#1f3b5c">剰余</text>
+  <text x="236" y="134" font-size="5.8" text-anchor="middle" fill="#8c2f1e">円周は連続</text>
+  <text x="235" y="143" font-size="6" text-anchor="middle" fill="#8c2f1e">固有値は一つもない</text>
+
+  <text x="384" y="42" font-size="6.8" text-anchor="middle" font-weight="700" fill="#1f3b5c">べき零・ヴォルテラ</text>
+  <line x1="326" y1="96" x2="442" y2="96" stroke="#8a8a88" stroke-width="0.7"/>
+  <line x1="384" y1="62" x2="384" y2="126" stroke="#8a8a88" stroke-width="0.7"/>
+  <circle cx="384" cy="96" r="3.4" fill="#a03b2e"/>
+  <text x="384" y="86" font-size="6" text-anchor="middle" fill="#8c2f1e">σ ＝ {0}</text>
+  <text x="384" y="134" font-size="6" text-anchor="middle" fill="#6a6a68">作用素は 0 でないのに</text>
+  <text x="384" y="143" font-size="6" text-anchor="middle" fill="#6a6a68">スペクトル半径は 0</text>
+
+  <rect x="14" y="166" width="216" height="110" rx="4" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="24" y="181" font-size="7.6" font-weight="700" fill="#1e4a41">スペクトルの三分</text>
+  <text x="24" y="198" font-size="6.6" fill="#1e4a41">点　　T − λI が単射でない（固有値）</text>
+  <text x="24" y="210" font-size="6.6" fill="#1e4a41">連続　単射・値域が稠密だが閉でない</text>
+  <text x="24" y="222" font-size="6.6" fill="#1e4a41">剰余　単射・値域の閉包が全体でない</text>
+  <text x="24" y="239" font-size="6.4" fill="#6a6a68">有限次元では点スペクトルしかない</text>
+  <text x="24" y="251" font-size="6.6" fill="#8c2f1e">無限次元で新しく現れるのが、残る二つ</text>
+  <text x="24" y="265" font-size="6.4" fill="#5a4520">第69章の閉値域定理が、この三分を保証する</text>
+
+  <rect x="240" y="166" width="216" height="110" rx="4" fill="#f4f1ea" stroke="#8a6b2c"/>
+  <text x="250" y="181" font-size="7.6" font-weight="700" fill="#5a4520">複素解析が土台になっている</text>
+  <text x="250" y="198" font-size="6.6" fill="#5a4520">レゾルベントは正則関数（冪級数展開）</text>
+  <text x="250" y="211" font-size="6.6" fill="#5a4520">σ(T) ≠ ∅　←　リウヴィルの定理（第90章）</text>
+  <text x="250" y="224" font-size="6.6" fill="#5a4520">ゲルファントの公式　←　収束半径（第49章）</text>
+  <text x="250" y="241" font-size="6.4" fill="#8c2f1e">実バナッハ空間では σ(T) ＝ ∅ がありうる</text>
+  <text x="250" y="252" font-size="6.4" fill="#6a6a68">——90 度回転が反例</text>
+  <text x="250" y="266" font-size="6.4" fill="#6b2a48">スペクトル理論は複素数の上でしか整合しない</text>
+</svg>
+<figcaption data-ch="74">無限次元では「可逆でない」が固有値に限らない。掛け算作用素とシフト作用素は固有値をもたないのにスペクトルが広い。レゾルベントが正則関数であることから、スペクトルが空でないことが複素解析で示される。</figcaption>
+</figure>
+
+<div class="lv2">
+<h4>正則関数算法——関数を作用素に代入する</h4>
+<p>多項式 <m>p</m> については <m>p(T)</m> が定義できる。<em>もっと一般の関数を代入できるか。</em></p>
+<p><strong>ダンフォード–テイラー積分。</strong><m>f</m> を <m>\sigma(T)</m> の近傍で正則な関数とし、<m>\sigma(T)</m> を囲む閉曲線 <m>\Gamma</m> を取る。</p>
+<M>f(T) = \frac{1}{2\pi i}\oint_\Gamma f(\lambda)\,R(\lambda)\,d\lambda</M>
+<p class="no-indent"><em>第90章のコーシーの積分公式を、作用素値に持ち上げたものである。</em></p>
+<p><strong>性質。</strong>この対応は環準同型である——<m>(fg)(T)=f(T)g(T)</m>、<m>(f+g)(T)=f(T)+g(T)</m>。<em>多項式については通常の代入と一致する。</em></p>
+<p><strong>スペクトル写像定理。</strong><m>\sigma(f(T)) = f(\sigma(T))</m>。</p>
+<p><span class="yogo-hl">「スペクトルの上で関数を適用する」ことが、作用素の上での操作に対応する。</span></p>
+<p><strong>応用——平方根。</strong><m>\sigma(T)</m> が負の実軸と交わらなければ、<m>\sqrt{T}</m> が定義できる。<em><m>f(\lambda)=\sqrt\lambda</m> の枝を取れる。</em></p>
+<p><strong>応用——指数関数。</strong><m>e^{tT}=\sum_n(tT)^n/n!</m>。<em>これは半群 <m>\{e^{tT}\}_{t\ge0}</m> をなし、微分方程式 <m>u'=Tu</m> の解を与える。</em></p>
+<p>第78章で、非有界作用素についても半群を定義する（ヒレ–吉田の定理）。<span class="yogo-hl">偏微分方程式の時間発展が、この形で扱われる。</span></p>
+<p><strong>応用——スペクトル射影。</strong><m>\sigma(T)=\sigma_1\sqcup\sigma_2</m>（閉集合に分離）のとき、<m>\sigma_1</m> だけを囲む曲線で <m>f=1</m> として積分すると、射影 <m>P_1</m> が得られる。</p>
+<p><em><m>P_1</m> は <m>E</m> を <m>T</m>-不変な二つの部分空間に分ける。</em>これが対角化の第一歩である。</p>
+<p><strong>限界。</strong>正則関数算法では、<em>連続関数を代入できない</em>。<m>|\lambda|</m> や <m>\max(\lambda,0)</m> は正則でないので扱えない。</p>
+<p>自己共役作用素については、第75章・第77章で連続関数算法・可測関数算法へ拡張する。<span class="yogo-hl">そこで必要になるのが、スペクトルが実軸上にあるという性質である。</span></p>
+</div>
+
+<div class="lv3">
+<h4>スペクトルはどんな集合になれるか</h4>
+<p><strong>定理。</strong><m>\mathbb{C}</m> の空でないコンパクト集合 <m>K</m> について、<em><m>\sigma(T)=K</m> なる <m>T\in B(\ell^2)</m> が存在する。</em></p>
+<p><em>構成。</em><m>K</m> の可算稠密集合 <m>\{\lambda_n\}</m> を取り、対角作用素 <m>T(x)=(\lambda_nx_n)</m> とする。<m>\sigma(T)=\overline{\{\lambda_n\}}=K</m>。</p>
+<p><span class="yogo-hl">スペクトルの形には、コンパクトで空でない以外の制限がない。</span></p>
+<p><strong>スペクトルの連続性は破れる。</strong><m>T\mapsto\sigma(T)</m> は上半連続だが、連続でない。</p>
+<p><em>例。</em><m>T_\epsilon</m> を「右シフト＋左下隅に <m>\epsilon</m>」とすると <m>\sigma(T_\epsilon)</m> は半径 <m>\epsilon^{1/n}</m> の円周（<m>n</m> 次元の巡回シフト）。<m>\epsilon\to0</m> で円板に収束せず、単位円周に近づく。</p>
+<p><strong>スペクトル半径は劣乗法的。</strong><m>r(ST)\le r(S)r(T)</m> は一般に成り立たない（可換なら成り立つ）。</p>
+<p><em>反例。</em><m>S=\begin{pmatrix}0&1\\0&0\end{pmatrix}</m>、<m>T=S^*</m> とすると <m>r(S)=r(T)=0</m> だが <m>ST</m> は射影で <m>r(ST)=1</m>。</p>
+<p><strong>擬スペクトル。</strong>数値計算では、<m>\sigma(T)</m> より<em>擬スペクトル</em></p>
+<M>\sigma_\epsilon(T) = \{\, \lambda \mid \|R(\lambda)\| > 1/\epsilon \,\}</M>
+<p class="no-indent">のほうが実用的である。<em>スペクトルの不連続性を、<m>\epsilon</m> の余裕で吸収する。</em></p>
+<p><span class="yogo-hl">非正規作用素では、スペクトルが挙動を予言しない</span>——<m>\sigma(T)</m> が単位円内にあっても <m>\|T^n\|</m> が一時的に巨大になることがある。</p>
+<p>流体力学の安定性解析で、この現象（<em>擬共鳴</em>）が実際に問題になる。第77章で見るとおり、<em>正規作用素ならスペクトルがすべてを決める</em>。非正規性が、理論と計算の乖離を生む。</p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li><m>\|T\|<1</m> のとき <m>(I-T)^{-1}=\sum T^n</m> を確かめよ。</li>
+<li>対角作用素 <m>T(x)=(\lambda_nx_n)</m> のスペクトルを求めよ。</li>
+<li>ヴォルテラ作用素 <m>V</m> について <m>\|V^n\|\le1/n!</m> を示し、<m>r(V)=0</m> を導け。</li>
+<li>べき零行列でノルムとスペクトル半径が食い違う例を挙げよ。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li><ref t="thm-spectrum-kihon"/>（1）のレゾルベントの冪級数展開を示せ。<span class="haiten">（25点）</span></li>
+<li><ref t="thm-spectrum-kihon"/>（3）を、リウヴィルの定理を使って示せ。<span class="haiten">（30点）</span></li>
+<li><ref t="thm-gelfand-koshiki"/> の <m>r(T)\ge\limsup</m> を示せ。<span class="haiten">（25点）</span></li>
+<li>シフト作用素のスペクトルが閉単位円板であることを示せ。<span class="haiten">（35点）</span></li>
+<li>掛け算作用素のスペクトルが本質的値域であることを示せ。<span class="haiten">（30点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li>スペクトル写像定理 <m>\sigma(p(T))=p(\sigma(T))</m> を、多項式について示せ。<span class="haiten">（35点）</span></li>
+<li>任意の空でないコンパクト集合がスペクトルとして実現できることを示せ。<span class="haiten">（35点）</span></li>
+<li><m>r(ST)\le r(S)r(T)</m> が一般に成り立たないことを示し、可換な場合に成り立つことを示せ。<span class="haiten">（40点）</span></li>
+</ol>
+</div>
+</div>
+<nav class="chnav">
+<a class="prev" href="ch73.html">← 第73章　コンパクト作用素</a>
+<a class="next" href="ch75.html">第75章　自己共役作用素 →</a>
+</nav>
+</article>
+</main>
+<footer class="site">
+  <p>位相・解析大全　学部から大学院まで、三層で読む位相空間論と解析学</p>
+  <p class="small">本文・図版とも本書のために作成したものです。数式は MathJax でベクタ化して組んでいます。</p>
+</footer>
+</body>
+</html>

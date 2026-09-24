@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第9章 部分空間と相対位相｜位相・解析大全</title>
+<meta name="description" content="位相・解析大全　第9章　部分空間と相対位相">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;600&display=swap">
+<link rel="stylesheet" href="web.css">
+</head>
+<body>
+<header class="site">
+  <a class="site-title" href="index.html">位相・解析大全</a>
+  <nav class="site-nav">
+    <a href="index.html">目次</a>
+    <a href="isou-kaiseki-taizen.pdf">PDF版</a>
+  </nav>
+</header>
+<main>
+<article class="chapter">
+<p class="part-label">第I部　位相空間の基礎</p>
+<h1><span class="ch-num">第9章</span>部分空間と相対位相</h1>
+<nav class="chnav">
+<a class="prev" href="ch08.html">← 第8章　連続写像と同相</a>
+<a class="next" href="ch10.html">第10章　商空間と等化写像 →</a>
+</nav>
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>空間の一部分に、どうやって位相を入れるのが自然か。</li>
+<li>「開である」という言葉は、どの空間のなかでの話なのか。</li>
+<li>空間のもつ性質は、部分に受け継がれるのか。</li>
+</ul>
+</div>
+
+<h3 id="s9-1">相対位相——一つしかない自然な選び方</h3>
+
+<p><m>X</m> が位相空間で、<m>A \subseteq X</m> とする。<em><m>A</m> に位相を入れたい。どう入れるべきか。</em></p>
+
+<p>方針は第8章の★★で述べた始位相の考え方に従う。<span class="yogo-hl">包含写像 <m>\iota \colon A \to X</m> が連続になるような、最小の位相を選ぶ。</span>そうすれば、<m>A</m> に余分な開集合が増えず、しかも <m>A</m> の点が <m>X</m> のなかで近かったものは <m>A</m> のなかでも近いままになる。</p>
+
+<div class="teigi" id="def-soutai">
+<h4>相対位相</h4>
+<p class="no-indent"><m>A \subseteq X</m> に対し、</p>
+<M>\mathcal{T}_A = \{\, U \cap A \mid U \in \mathcal{T}_X \,\}</M>
+<p class="no-indent">は <m>A</m> 上の位相である。これを<strong>相対位相</strong>といい、<m>(A, \mathcal{T}_A)</m> を <m>X</m> の<strong>部分空間</strong>という。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">位相であることを確かめる。<m>\varnothing = \varnothing \cap A</m>、<m>A = X \cap A</m> なので（T1）。第2章の分配法則より</p>
+<M>\bigcup_i (U_i \cap A) = \Big(\bigcup_i U_i\Big) \cap A, \qquad (U \cap A) \cap (V \cap A) = (U \cap V) \cap A</M>
+<p class="no-indent">であり、（T2）（T3）が従う。<em>「<m>A</m> と交わる」という操作が、合併とも交叉とも可換であることが効いている。</em></p>
+<p>最小性を示す。<m>\iota</m> が連続なら <m>\iota^{-1}(U) = U \cap A</m> が開でなければならないから、どの位相も <m>\mathcal{T}_A</m> を含む。<m>\mathcal{T}_A</m> 自身で <m>\iota</m> は連続だから、これが最小である。</p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent"><span class="yogo-hl">「開集合」という語は、つねにどの空間のなかでの話かを伴う。</span><em><m>A</m> のなかで開であることと、<m>X</m> のなかで開であることは別である。</em>混乱を避けるため、本書では必要に応じて「<m>A</m> において開」「<m>X</m> において開」と書き分ける。</p>
+</div>
+
+<div class="rei" id="rei-soutai-kaiheisa">
+<h4>部分空間で開になるもの</h4>
+<p class="no-indent"><m>X = \mathbb{R}</m>、<m>A = [0, 1]</m> とする。<m>[0, 1/2)</m> は <m>X</m> では開でないが、<m>A</m> では開である。実際 <m>[0,1/2) = (-1, 1/2) \cap A</m> であり、<m>(-1,1/2)</m> は <m>X</m> で開である。</p>
+<p>同様に <m>A = \mathbb{Q}</m> のとき、<m>\{\, q \in \mathbb{Q} \mid q^2 < 2 \,\}</m> は <m>\mathbb{Q}</m> において開であり、かつ閉である。<em><m>\sqrt{2}</m> が <m>\mathbb{Q}</m> に属さないので、境界が取れてしまう。</em><span class="yogo-hl">有理数全体は、<m>\varnothing</m> と全体以外に開かつ閉な部分集合をもつ——すなわち連結でない</span>（第28章）。</p>
+</div>
+
+<h3 id="s9-2">相対位相の基本的な性質</h3>
+
+<div class="teiri" id="thm-soutai-seishitsu">
+<h4></h4>
+<p class="no-indent"><m>A \subseteq X</m> を部分空間とする。</p>
+<p class="no-indent">（1）<m>F \subseteq A</m> が <m>A</m> で閉 <m>\iff</m> <m>X</m> の閉集合 <m>G</m> があって <m>F = G \cap A</m>。<br>
+（2）<m>B \subseteq A</m> の <m>A</m> における閉包は <m>\overline{B}^{\,X} \cap A</m> に等しい。<br>
+（3）<m>\mathcal{B}</m> が <m>X</m> の基底なら、<m>\{\, B \cap A \,\}</m> は <m>A</m> の基底である。<br>
+（4）<m>A</m> が <m>X</m> で開（閉）なら、<m>A</m> で開（閉）な集合は <m>X</m> でも開（閉）である。<br>
+（5）<m>B \subseteq A \subseteq X</m> のとき、<m>B</m> に <m>A</m> 経由で入る位相と <m>X</m> から直接入る位相は一致する。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">（1）は補集合をとるだけである。<m>A \setminus F = U \cap A</m> と書けば <m>F = (X \setminus U) \cap A</m>。</p>
+<p>（2）を示す。<m>\overline{B}^{\,X} \cap A</m> は（1）より <m>A</m> で閉であり <m>B</m> を含むから、<m>\overline{B}^{\,A} \subseteq \overline{B}^{\,X} \cap A</m>。逆を示す。<m>\overline{B}^{\,A} = G \cap A</m> と書くと <m>G</m> は <m>X</m> で閉で <m>B</m> を含むから <m>\overline{B}^{\,X} \subseteq G</m>、よって <m>\overline{B}^{\,X} \cap A \subseteq G \cap A = \overline{B}^{\,A}</m>。</p>
+<p>（4）を示す。<m>A</m> が <m>X</m> で開、<m>V</m> が <m>A</m> で開とする。<m>V = U \cap A</m> と書けば、<em>二つの <m>X</m>-開集合の交叉だから <m>X</m> で開である。</em>閉の場合も同様。</p>
+<p>（5）は <m>(U \cap A) \cap B = U \cap B</m> による。<span class="yogo-hl">部分空間をとる操作は推移的である。</span></p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">（4）の仮定を外すと結論は崩れる。<m>A = [0,1]</m> は <m>\mathbb{R}</m> で開でないので、<m>A</m> で開な <m>[0,1/2)</m> は <m>\mathbb{R}</m> で開でない。<em>「部分空間で開なら全体でも開」は、部分空間自身が開であるときにだけ言える。</em></p>
+</div>
+
+<figure id="fig9-1">
+<svg viewBox="0 0 470 276" width="470" height="276" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">相対位相——「開」はどの空間のなかでの話か</text>
+
+  <rect x="14" y="26" width="442" height="116" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+
+  <text x="24" y="42" font-size="7.4" font-weight="700" fill="#1f3b5c">R のなかで見る</text>
+  <line x1="40" y1="62" x2="430" y2="62" stroke="#8a8a88" stroke-width="1"/>
+  <line x1="130" y1="57" x2="130" y2="67" stroke="#8a8a88" stroke-width="0.8"/>
+  <line x1="340" y1="57" x2="340" y2="67" stroke="#8a8a88" stroke-width="0.8"/>
+  <text x="130" y="77" font-size="6.6" text-anchor="middle" fill="#6a6a68">0</text>
+  <text x="340" y="77" font-size="6.6" text-anchor="middle" fill="#6a6a68">1</text>
+  <line x1="130" y1="62" x2="340" y2="62" stroke="#35618f" stroke-width="3"/>
+  <circle cx="130" cy="62" r="3" fill="#35618f"/>
+  <circle cx="340" cy="62" r="3" fill="#35618f"/>
+  <text x="235" y="52" font-size="6.8" text-anchor="middle" fill="#35618f">A = [0, 1]　R では閉、開でない</text>
+
+  <text x="24" y="97" font-size="7.4" font-weight="700" fill="#8c2f1e">A のなかで見る</text>
+  <line x1="130" y1="112" x2="340" y2="112" stroke="#c9c9c7" stroke-width="3"/>
+  <line x1="130" y1="112" x2="235" y2="112" stroke="#a03b2e" stroke-width="3"/>
+  <circle cx="130" cy="112" r="3" fill="#a03b2e"/>
+  <circle cx="235" cy="112" r="3" fill="#fff" stroke="#a03b2e" stroke-width="1.2"/>
+  <text x="182" y="104" font-size="6.8" text-anchor="middle" fill="#a03b2e">[0, 1/2) は A では開</text>
+  <text x="24" y="134" font-size="6.6" fill="#6a6a68">端の 0 を含んでよい——A の外へは出られないので、0 のまわりは A のなかでは「内側」になる</text>
+
+  <rect x="14" y="154" width="216" height="112" rx="4" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="24" y="169" font-size="7.6" font-weight="700" fill="#1e4a41">遺伝する性質</text>
+  <text x="24" y="186" font-size="7" fill="#1e4a41">ハウスドルフ　正則　第一可算</text>
+  <text x="24" y="200" font-size="7" fill="#1e4a41">第二可算　距離化可能</text>
+  <text x="24" y="218" font-size="7.6" font-weight="700" fill="#1e4a41">閉部分空間にだけ遺伝</text>
+  <text x="24" y="235" font-size="7" fill="#1e4a41">コンパクト　正規　パラコンパクト</text>
+  <text x="24" y="252" font-size="6.8" fill="#6a6a68">閉であることが、性質を持ち越す鍵になる</text>
+
+  <rect x="240" y="154" width="216" height="112" rx="4" fill="#fdf6f4" stroke="#e0c3bd"/>
+  <text x="250" y="169" font-size="7.6" font-weight="700" fill="#8c2f1e">遺伝しない性質</text>
+  <text x="250" y="186" font-size="7" fill="#8c2f1e">連結　コンパクト　完備　可分</text>
+  <text x="250" y="203" font-size="6.8" fill="#6a6a68">R は連結だが Q は連結でない</text>
+  <text x="250" y="215" font-size="6.8" fill="#6a6a68">[0,1] はコンパクトだが (0,1) はそうでない</text>
+  <text x="250" y="233" font-size="7" fill="#8c2f1e">正規は開部分空間にも遺伝しない</text>
+  <text x="250" y="246" font-size="6.8" fill="#6a6a68">この破れ方が第18章の主題になる</text>
+  <text x="250" y="258" font-size="6.8" fill="#6a6a68">（完全正規性＝遺伝的正規性）</text>
+</svg>
+<figcaption data-ch="9">同じ集合でも、どの空間の部分として見るかで「開」の意味が変わる。右下のとおり、性質が遺伝するかどうかは性質ごとに違い、それ自体が研究の対象になる。</figcaption>
+</figure>
+
+<h3 id="s9-3">遺伝性——性質は部分に受け継がれるか</h3>
+
+<div class="teigi" id="def-idensei">
+<h4></h4>
+<p class="no-indent">位相的性質 <m>P</m> が<strong>遺伝的</strong>であるとは、<m>P</m> をもつ空間のすべての部分空間が <m>P</m> をもつことをいう。閉部分空間についてだけ成り立つとき<strong>閉遺伝的</strong>という。</p>
+</div>
+
+<div class="teiri" data-kind="命題" id="prop-iden">
+<h4></h4>
+<p class="no-indent">第一可算性、第二可算性、距離化可能性は遺伝的である。コンパクト性は閉遺伝的だが遺伝的でない。連結性は閉遺伝的ですらない。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">第二可算を示す。<m>\mathcal{B}</m> を <m>X</m> の可算基底とすると、<ref t="thm-soutai-seishitsu"/>（3）より <m>\{ B \cap A \}</m> は <m>A</m> の基底であり、<em>可算集合の像だから可算である。</em>第一可算も同様。距離化可能性は、距離を <m>A</m> に制限すればよい。</p>
+<p>コンパクト性が遺伝的でないことは、<m>[0,1]</m> がコンパクトで <m>(0,1)</m> がそうでないことによる。閉遺伝的であることは第20章で示す。連結性については、<m>\mathbb{R}</m> は連結だが閉部分空間 <m>\mathbb{Z}</m> は連結でない。</p>
+</div>
+
+<p><span class="yogo-hl">どの性質が遺伝し、どの性質が遺伝しないかは、その性質が何を言っているかの指標になる。</span><em>「各点のまわり」を語る性質は遺伝しやすく、「空間全体」を語る性質は遺伝しにくい。</em>可算公理や距離化可能性は前者、コンパクト性や連結性は後者である。</p>
+
+<p>中間に位置するのが分離公理である。ハウスドルフ性と正則性は遺伝するが、<em>正規性は遺伝しない。</em>この一点が第18章の主題になる——遺伝的に正規な空間を完全正規空間といい、正規性とは別の階層をなす。</p>
+
+<div class="lv2">
+<h4>埋め込みと、部分空間の特徴づけ</h4>
+<p>部分空間の概念は、集合として部分であることに縛られない。<em>同相なコピーが入っていれば同じことである。</em></p>
+<p><strong>埋め込みの定義を思い出す。</strong>第8章で、単射 <m>f \colon X \to Y</m> が <m>X</m> から <m>f(X)</m>（相対位相）への同相であるとき埋め込みと呼んだ。<span class="yogo-hl">埋め込みが存在すれば、<m>X</m> は <m>Y</m> の部分空間と「同じ」空間だと見なせる。</span></p>
+<p><strong>単射連続だけでは足りない。</strong>第8章の反例 <m>[0, 2\pi) \to S^1</m> は単射連続だが埋め込みでない。像への写像が同相でないからである。<em>埋め込みであるためには、<m>X</m> の開集合の像が <m>f(X)</m> のなかで開でなければならない。</em></p>
+<p><strong>始位相との関係。</strong>埋め込みは「<m>f</m> による始位相が <m>X</m> のもとの位相に一致する単射」と言い換えられる。この言い方は、第11章で積空間への埋め込みを扱うときに効いてくる。</p>
+<p><strong>なぜ埋め込みが重要か。</strong>位相空間論の多くの定理が「ある空間は、よく知られた空間に埋め込める」という形をとるからである。</p>
+<p>ウリゾーンの距離化定理（第31章）は、第二可算かつ正則な空間がヒルベルト立方体 <m>[0,1]^{\mathbb{N}}</m> に埋め込めることを示す。<em>埋め込めれば、距離が遺伝的であることから距離化可能性が従う。</em>チコノフ空間の特徴づけ（第14章）は、立方体 <m>[0,1]^{\kappa}</m> への埋め込みとして与えられる。ストーン–チェックのコンパクト化（第23章）も、この立方体への埋め込みの閉包として構成される。</p>
+<p><span class="yogo-hl">「どんな空間か」を問う代わりに「どこに入るか」を問う——これが位相空間論の主要な方法の一つである。</span>そして入り先として使われる空間は、たいてい立方体か、その部分空間である。</p>
+<p><strong>普遍空間。</strong>ある族のすべての空間を埋め込める空間を、その族の<strong>普遍空間</strong>という。ヒルベルト立方体は可分距離空間の普遍空間であり、カントール集合はコンパクト距離空間の連続像としての普遍性をもつ。<em>第42章で次元を扱うとき、次元 <m>n</m> の空間の普遍空間としてメンガー <span class="orig">Menger</span> の普遍曲線が登場する。</em></p>
+</div>
+
+<div class="lv3">
+<h4>遺伝性の破れ方を測る——第18章への伏線</h4>
+<p>正規性が遺伝しないという事実は、単なる不便ではない。<em>破れ方を調べることが、正規性という概念の内実を明らかにする。</em></p>
+<p><strong>まず、どこまで遺伝するか。</strong>正規空間の<em>閉</em>部分空間は正規である。証明は易しい——閉部分空間で閉な集合は、もとの空間でも閉だからである（<ref t="thm-soutai-seishitsu"/>（4））。<span class="yogo-hl">遺伝性が破れるのは、開部分空間や一般の部分空間を取ったときである。</span></p>
+<p><strong>典型的な反例。</strong>チコノフ板と呼ばれる空間がある。順序数の空間を使って</p>
+<M>T = [0, \omega_1] \times [0, \omega]</M>
+<p>と置く（順序位相を入れる）。<m>T</m> はコンパクトハウスドルフだから正規である。ところが角の一点 <m>(\omega_1, \omega)</m> を除いた開部分空間</p>
+<M>T_\infty = T \setminus \{(\omega_1, \omega)\}</M>
+<p>は正規でない。<em>二つの辺——上辺と右辺——が、開集合で分離できない。</em>この分離不能性の根は、第4章で見た共終数にある。<m>\mathrm{cf}(\omega_1) = \omega_1 > \omega</m> なので、可算個の条件では <m>\omega_1</m> を押さえきれないのである。</p>
+<p><span class="yogo-hl">集合論の基数の性質が、位相空間の分離不能性として目に見える形で現れる。</span>第4章の★★★で予告したことの、最初の具体例である。</p>
+<p><strong>完全正規性。</strong>遺伝的に正規な空間を完全正規空間という。これは「すべての閉集合が <m>G_\delta</m> 集合である正規空間」と同値である——証明は第18章で与える。<em>この同値が示すのは、遺伝性という大域的な要求が、閉集合の局所的な構造に翻訳できるということである。</em></p>
+<p><strong>階層のなかの位置。</strong>完全正規性は、正規性より真に強く、距離化可能性より真に弱い。</p>
+<M>\text{距離化可能} \implies \text{完全正規} \implies \text{正規}</M>
+<p>どちらの含意も逆は成り立たない。<em>ゾルゲンフライ直線は完全正規だが距離化できない。</em>チコノフ板は正規だが完全正規でない。第17章で、この種の階層と反例を体系的に扱う。</p>
+<p><strong>遺伝性を一般に問う。</strong>どの性質が遺伝的かを一覧にすることは、第19章の課題である。そこでは遺伝だけでなく、積・商・連続像で何が保たれるかも併せて整理する。<span class="yogo-hl">位相的性質を、四つの操作（部分・積・商・連続像）に対する振る舞いで分類すること</span>——これが第II部を貫く視点になる。</p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li><m>\mathbb{R}</m> の部分空間 <m>A = (0,1] </m> において、<m>(1/2, 1]</m> が開であることを示せ。</li>
+<li><m>\mathbb{Z}</m> が <m>\mathbb{R}</m> の部分空間として離散位相をもつことを示せ。</li>
+<li><m>\mathbb{Q}</m> において、開かつ閉であって自明でない部分集合を一つ挙げよ。</li>
+<li>部分空間の部分空間が、もとの空間の部分空間として同じ位相をもつことを確かめよ。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li><ref t="thm-soutai-seishitsu"/>（2）を、閉包の最小性を使って書き直せ。また、内部について同じ等式が成り立たない例を挙げよ。<span class="haiten">（15点）</span></li>
+<li>相対位相が、包含写像による始位相であることを示せ。<span class="haiten">（10点）</span></li>
+<li>可分性が遺伝的でないことを示せ。ヒント——ゾルゲンフライ平面 <m>\mathbb{R}_\ell \times \mathbb{R}_\ell</m> の反対角線を考えよ。<span class="haiten">（25点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li>埋め込みであることが「単射かつ、像への写像が開写像」と同値であることを示せ。<span class="haiten">（20点）</span></li>
+<li>チコノフ板 <m>[0, \omega_1] \times [0, \omega]</m> から角の一点を除いた空間が正規でないことを示せ。共終数の議論をどこで使うかを明示すること。<span class="haiten">（35点）</span></li>
+</ol>
+</div>
+</div>
+<nav class="chnav">
+<a class="prev" href="ch08.html">← 第8章　連続写像と同相</a>
+<a class="next" href="ch10.html">第10章　商空間と等化写像 →</a>
+</nav>
+</article>
+</main>
+<footer class="site">
+  <p>位相・解析大全　学部から大学院まで、三層で読む位相空間論と解析学</p>
+  <p class="small">本文・図版とも本書のために作成したものです。数式は MathJax でベクタ化して組んでいます。</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第62章 稠密性と近似｜位相・解析大全</title>
+<meta name="description" content="位相・解析大全　第62章　稠密性と近似">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;600&display=swap">
+<link rel="stylesheet" href="web.css">
+</head>
+<body>
+<header class="site">
+  <a class="site-title" href="index.html">位相・解析大全</a>
+  <nav class="site-nav">
+    <a href="index.html">目次</a>
+    <a href="isou-kaiseki-taizen.pdf">PDF版</a>
+  </nav>
+</header>
+<main>
+<article class="chapter">
+<p class="part-label">第VIII部　関数空間</p>
+<h1><span class="ch-num">第62章</span>稠密性と近似</h1>
+<nav class="chnav">
+<a class="prev" href="ch61.html">← 第61章　完備性——Riesz–Fischerの定理</a>
+<a class="next" href="ch63.html">第63章　Banach空間 →</a>
+</nav>
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>なぜ「稠密な部分集合で示せば十分」なのか。</li>
+<li>Lᵖ のなかで、どんな関数が稠密なのか。</li>
+<li>近似の道具は、どこから来るのか。</li>
+</ul>
+</div>
+
+<h3 id="s62-1">稠密性という論法</h3>
+
+<div class="chui">
+<h4>三/ε の論法</h4>
+<p class="no-indent"><m>D</m> が <m>L^p</m> で稠密、<m>T</m> が有界線型作用素とする。<em>「<m>D</m> の上で成り立つ評価は、<m>L^p</m> 全体に延びる」。</em></p>
+<p>実際、<m>f\in L^p</m>、<m>\varepsilon>0</m> に対し <m>\|f-g\|_p<\varepsilon</m> なる <m>g\in D</m> を取れば</p>
+<M>\|Tf\| \le \|T(f-g)\| + \|Tg\| \le \|T\|\varepsilon + \|Tg\|</M>
+<p class="no-indent"><span class="yogo-hl">第47章の「三分割の議論」と同じ形である。</span><em>有界性が「誤差を誤差のまま運ぶ」ことを保証している。</em></p>
+<p>したがって<em>定理を証明するときは、扱いやすい関数の族で示せばよい</em>。これが第VIII部以降の標準的な戦略になる。</p>
+</div>
+
+<h3 id="s62-2">何が稠密か</h3>
+
+<div class="teiri" id="thm-tankansu-chumitsu">
+<h4>単関数の稠密性</h4>
+<p class="no-indent"><m>1\le p<\infty</m> のとき、<m>\mu</m>-可測な集合の有限一次結合（単関数）で、台の測度が有限なものの全体は <m>L^p(\mu)</m> で稠密である。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><m>f\ge0</m> としてよい。<ref t="thm-tankansu-kinji"/> より単関数の増加列 <m>s_n\uparrow f</m> が取れる。</p>
+<p><m>|f-s_n|^p \le f^p \in L^1</m> が優関数なので、<em>優収束定理より <m>\|f-s_n\|_p\to0</m></em>。</p>
+<p><m>s_n\le f</m> と <m>f\in L^p</m> から、<m>s_n</m> の台のうち値が正の部分は有限測度である（チェビシェフの不等式）。</p>
+</div>
+
+<div class="teiri" id="thm-cc-chumitsu">
+<h4>連続関数の稠密性</h4>
+<p class="no-indent"><m>X</m> を局所コンパクトハウスドルフ空間、<m>\mu</m> をラドン測度とする。<m>1\le p<\infty</m> のとき <m>C_c(X)</m> は <m>L^p(\mu)</m> で稠密である。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><ref t="thm-tankansu-chumitsu"/> より <m>\mathbf{1}_E</m>（<m>\mu(E)<\infty</m>）を近似すれば十分。</p>
+<p><strong>正則性を使う。</strong><m>\mu</m> がラドン測度なので、<m>K\subseteq E\subseteq U</m>（<m>K</m> コンパクト、<m>U</m> 開）で <m>\mu(U\setminus K)<\varepsilon</m> なるものが取れる。</p>
+<p><strong>ウリゾーンの補題を使う。</strong>局所コンパクトハウスドルフ空間では、<em><m>K\prec h\prec U</m>（<m>h\in C_c</m>、<m>0\le h\le1</m>、<m>h=1</m> on <m>K</m>、<m>\mathrm{supp}\,h\subseteq U</m>）なる <m>h</m> が存在する</em>（第15章・第22章）。</p>
+<p><m>|\mathbf{1}_E-h|\le\mathbf{1}_{U\setminus K}</m> なので <m>\|\mathbf{1}_E-h\|_p \le \mu(U\setminus K)^{1/p}<\varepsilon^{1/p}</m>。</p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent"><span class="yogo-hl">測度の正則性と、位相の分離公理（ウリゾーン）が、ここで噛み合う。</span></p>
+<p><em>第II部で分離公理を扱い、第VII部で正則性を測度の条件として立てたのは、この一点のためだったといってよい。</em></p>
+<p><m>p=\infty</m> では成り立たない。<m>C_c</m> の <m>L^\infty</m> での閉包は <m>C_0(X)</m> であって、<m>L^\infty</m> 全体ではない。<em><m>\mathbf{1}_{[0,1]}</m> は、どの連続関数からも <m>L^\infty</m> 距離 <m>1/2</m> 以上離れている。</em></p>
+</div>
+
+<div class="teiri" id="thm-heikatsu-chumitsu">
+<h4>滑らかな関数の稠密性</h4>
+<p class="no-indent"><m>1\le p<\infty</m> のとき、<m>C_c^\infty(\mathbb{R}^n)</m>（台がコンパクトな無限回微分可能関数）は <m>L^p(\mathbb{R}^n)</m> で稠密である。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><ref t="thm-cc-chumitsu"/> より <m>C_c</m> を近似すれば十分。軟化子を使う。</p>
+</div>
+
+<h3 id="s62-3">軟化子</h3>
+
+<div class="teigi" id="def-nanka">
+<h4>軟化子</h4>
+<p class="no-indent"><m>\varphi\in C_c^\infty(\mathbb{R}^n)</m>、<m>\varphi\ge0</m>、<m>\int\varphi=1</m>、<m>\mathrm{supp}\,\varphi\subseteq B(0,1)</m> を取る。たとえば</p>
+<M>\varphi(x) = c\,\exp\Big(\frac{-1}{1-|x|^2}\Big)\ \ (|x|<1), \qquad \varphi(x)=0 \ \ (|x|\ge1)</M>
+<p class="no-indent"><m>\varphi_\epsilon(x)=\epsilon^{-n}\varphi(x/\epsilon)</m> とおく。この族を<strong>軟化子</strong>という。</p>
+</div>
+
+<div class="teiri" id="thm-nanka">
+<h4>軟化子の性質</h4>
+<p class="no-indent"><m>f\in L^p(\mathbb{R}^n)</m>（<m>1\le p<\infty</m>）とする。</p>
+<p class="no-indent">（1）<m>f*\varphi_\epsilon \in C^\infty</m>。<br>
+（2）<m>\|f*\varphi_\epsilon\|_p \le \|f\|_p</m>。<br>
+（3）<m>\|f*\varphi_\epsilon - f\|_p \to 0</m>（<m>\epsilon\to0</m>）。<br>
+（4）<m>f</m> の台がコンパクトなら <m>f*\varphi_\epsilon</m> の台もコンパクト。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">（1）微分を積分の中に入れる。<m>\partial^\alpha(f*\varphi_\epsilon) = f*(\partial^\alpha\varphi_\epsilon)</m>。<em>優収束定理で微分と積分の交換を正当化する。</em></p>
+<p>（2）ミンコフスキーの積分形（第60章★★）、あるいは <m>\int\varphi_\epsilon=1</m> とヤングの不等式から。</p>
+<p>（3）<m>\int\varphi_\epsilon=1</m> を使って</p>
+<M>(f*\varphi_\epsilon)(x)-f(x) = \int \big(f(x-y)-f(x)\big)\varphi_\epsilon(y)\,dy</M>
+<p class="no-indent">ミンコフスキーの積分形より <m>\|f*\varphi_\epsilon-f\|_p \le \sup_{|y|\le\epsilon}\|\tau_y f - f\|_p</m>。</p>
+<p><em>ここで <m>\tau_y f(x)=f(x-y)</m>。</em><span class="yogo-hl">「平行移動が <m>L^p</m> で連続である」ことに帰着した。</span></p>
+<p><strong>平行移動の連続性。</strong><m>g\in C_c</m> なら一様連続なので明らか。一般の <m>f</m> は <ref t="thm-cc-chumitsu"/> で近似し、三分割の議論を使う。</p>
+</div>
+
+<div class="chui">
+<h4>近似単位元</h4>
+<p class="no-indent"><m>(\varphi_\epsilon)</m> は<strong>近似単位元</strong>と呼ばれる。<em>畳み込みの単位元 <m>\delta</m> が <m>L^1</m> に存在しないので、その代用である。</em></p>
+<p><span class="yogo-hl">質量 <m>1</m> を <m>0</m> のまわりに集中させていく族なら、何でもよい。</span>第86章でフェイエール核・ポアソン核を、同じ枠組みで扱う。</p>
+<p>第87章では、<m>\varphi_\epsilon \to \delta</m> が超関数の意味で厳密な等式になる。</p>
+</div>
+
+<figure id="fig62-1">
+<svg viewBox="0 0 470 274" width="470" height="274" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <defs>
+    <marker id="a62" markerWidth="8" markerHeight="8" refX="7" refY="2.6" orient="auto"><path d="M0,0 L7,2.6 L0,5.2 z" fill="#35618f"/></marker>
+  </defs>
+
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">粗いものから細かいものへ、四段で近づける</text>
+
+  <rect x="14" y="26" width="442" height="70" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+
+  <rect x="24" y="40" width="96" height="22" rx="3" fill="#eef2f6" stroke="#8a8a88"/>
+  <text x="72" y="54" font-size="6.6" text-anchor="middle" fill="#1f3b5c">Lᵖ の元</text>
+  <rect x="136" y="40" width="88" height="22" rx="3" fill="#dce7f0" stroke="#35618f"/>
+  <text x="180" y="54" font-size="6.6" text-anchor="middle" fill="#1f3b5c">単関数</text>
+  <rect x="240" y="40" width="96" height="22" rx="3" fill="#d8e6de" stroke="#2f6b5f"/>
+  <text x="288" y="54" font-size="6.6" text-anchor="middle" fill="#1e4a41">連続関数（台コンパクト）</text>
+  <rect x="352" y="40" width="96" height="22" rx="3" fill="#f0e2e8" stroke="#8a3b62"/>
+  <text x="400" y="54" font-size="6.6" text-anchor="middle" fill="#6b2a48">無限回微分可能（台コンパクト）</text>
+
+  <path d="M122,51 L132,51" stroke="#35618f" stroke-width="1.1" marker-end="url(#a62)"/>
+  <path d="M226,51 L236,51" stroke="#2f6b5f" stroke-width="1.1" marker-end="url(#a62)"/>
+  <path d="M338,51 L348,51" stroke="#8a3b62" stroke-width="1.1" marker-end="url(#a62)"/>
+
+  <text x="180" y="76" font-size="6" text-anchor="middle" fill="#6a6a68">単調近似＋優収束</text>
+  <text x="288" y="76" font-size="6" text-anchor="middle" fill="#6a6a68">正則性＋ウリゾーン</text>
+  <text x="400" y="76" font-size="6" text-anchor="middle" fill="#6a6a68">軟化子との畳み込み</text>
+  <text x="24" y="90" font-size="6.2" fill="#8c2f1e">p = ∞ では最初の一段で止まる——連続関数の閉包は C₀ であって、有界関数の空間ではない</text>
+
+  <rect x="14" y="106" width="442" height="80" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+  <text x="24" y="121" font-size="7" font-weight="700" fill="#1f3b5c">軟化子——質量 1 を原点に集めていく</text>
+
+  <line x1="40" y1="172" x2="200" y2="172" stroke="#8a8a88" stroke-width="0.8"/>
+  <path d="M60,172 C 84,172 96,160 120,160 C 144,160 156,172 180,172 Z" fill="#dce7f0" stroke="#35618f" stroke-width="0.9"/>
+  <path d="M84,172 C 100,172 108,146 120,146 C 132,146 140,172 156,172 Z" fill="#cfe0ee" stroke="#35618f" stroke-width="0.9"/>
+  <path d="M104,172 C 112,172 116,120 120,120 C 124,120 128,172 136,172 Z" fill="#b6cee4" stroke="#35618f" stroke-width="0.9"/>
+  <text x="120" y="182" font-size="6" text-anchor="middle" fill="#6a6a68">ε → 0</text>
+
+  <text x="220" y="130" font-size="6.6" fill="#1e4a41">‖f * φ_ε‖_p ≤ ‖f‖_p</text>
+  <text x="220" y="143" font-size="6.6" fill="#1e4a41">f * φ_ε は無限回微分できる</text>
+  <text x="220" y="156" font-size="6.6" fill="#1e4a41">‖f * φ_ε − f‖_p → 0</text>
+  <text x="220" y="172" font-size="6.2" fill="#6a6a68">最後の一つは「平行移動が Lᵖ で連続」に帰着する</text>
+  <text x="220" y="182" font-size="6.2" fill="#8c2f1e">——そこで連続関数の稠密性をもう一度使う</text>
+
+  <rect x="14" y="196" width="442" height="68" rx="4" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="24" y="211" font-size="7.4" font-weight="700" fill="#1e4a41">稠密性がもたらす論法</text>
+  <text x="24" y="227" font-size="6.6" fill="#1e4a41">稠密な D の上で評価を示す　→　有界性で Lᵖ 全体へ延ばす（三分割の議論）</text>
+  <text x="24" y="240" font-size="6.6" fill="#6a6a68">第58章のルベーグの微分定理、第85章のプランシュレルの定理、第86章の畳み込みの評価——</text>
+  <text x="24" y="251" font-size="6.6" fill="#6a6a68">いずれも「連続関数で示して、稠密性で運ぶ」という同じ骨格をもつ</text>
+  <text x="24" y="262" font-size="6.4" fill="#8c2f1e">有界性は「誤差を誤差のまま運ぶ」ための条件である</text>
+</svg>
+<figcaption data-ch="62">Lᵖ の元は、単関数・連続関数・滑らかな関数の順に近似できる。最後の一段は軟化子との畳み込みによる。稠密な部分集合で評価を示し、有界性で全体へ延ばすのが標準的な論法である。</figcaption>
+</figure>
+
+<div class="lv2">
+<h4>近似の速さと、そこから出るもの</h4>
+<p>稠密性は「近づける」としか言わない。<em>どのくらい速く近づくかを問うと、別の理論が始まる。</em></p>
+<p><strong>連続度。</strong><m>\omega_p(f,t)=\sup_{|y|\le t}\|\tau_y f - f\|_p</m> とおく。<ref t="thm-nanka"/>（3）の証明は</p>
+<M>\|f*\varphi_\epsilon - f\|_p \le \omega_p(f,\epsilon)</M>
+<p class="no-indent">を示していた。<em><m>\omega_p(f,t)\to0</m> が稠密性の内容である。</em></p>
+<p><strong>速さで空間を分ける。</strong><m>\omega_p(f,t) \le Ct^\alpha</m>（<m>0<\alpha\le1</m>）なる <m>f</m> の全体を<em>ベゾフ空間</em>あるいはリプシッツ空間という。</p>
+<p><span class="yogo-hl">「近似の速さ」が関数の滑らかさを測る尺度になる。</span>第88章のソボレフ空間も、この見方で統一的に扱える。</p>
+<p><strong>単調性。</strong><m>\omega_p(f,t)</m> は <m>t</m> について単調増加で劣加法的。<em><m>\omega_p(f,t)=o(t)</m> なら <m>f</m> は定数である</em>（<m>p<\infty</m>、連結な台の上で）。</p>
+<p>したがって<em>非自明な関数の近似の速さには上限がある</em>。<span class="yogo-hl"><m>t^1</m> より速くは近づけない。</span></p>
+<p><strong>軟化子の選び方。</strong><ref t="def-nanka"/> の <m>\varphi</m> を変えると、近似の性質が変わる。</p>
+<p><em>モーメント条件。</em><m>\int x^\alpha\varphi(x)dx=0</m>（<m>1\le|\alpha|\le m</m>）なら、<m>f</m> が <m>C^{m+1}</m> のとき <m>\|f*\varphi_\epsilon-f\|_\infty = O(\epsilon^{m+1})</m>。</p>
+<p>ただし<em>そのような <m>\varphi</m> は非負にできない</em>。<span class="yogo-hl">「速く近似したいなら、正値性を諦める」——数値解析の高次スキームと同じ構図である。</span></p>
+<p><strong>ヤングの不等式（畳み込み版）。</strong><m>\frac1r=\frac1p+\frac1q-1</m> について</p>
+<M>\|f*g\|_r \le \|f\|_p\|g\|_q</M>
+<p><ref t="thm-nanka"/>（2）は <m>q=1</m>、<m>r=p</m> の場合である。<em>証明はヘルダーの不等式とフビニの定理を組み合わせる。</em>第86章で詳しく扱う。</p>
+</div>
+
+<div class="lv3">
+<h4>ワイエルシュトラスの近似定理から、ストーン–ワイエルシュトラスへ</h4>
+<p><m>L^p</m> の稠密性とは別に、<em>一様ノルムでの稠密性</em>がある。</p>
+<p><strong>ワイエルシュトラスの近似定理。</strong><m>[a,b]</m> 上の連続関数は、多項式で一様近似できる。</p>
+<p><em>軟化子による証明。</em><m>f</m> を <m>[0,1]</m> の外へ <m>0</m> で延長し、ランダウ核 <m>c_n(1-x^2)^n</m> と畳み込む。<span class="yogo-hl">この核は多項式なので、畳み込みも（区間上で）多項式になる。</span></p>
+<p><em>バーンスタイン多項式による証明。</em></p>
+<M>B_n f(x) = \sum_{k=0}^{n}f\Big(\frac{k}{n}\Big)\binom{n}{k}x^k(1-x)^{n-k}</M>
+<p class="no-indent">が <m>f</m> に一様収束する。<em>確率論的に読むと、二項分布の期待値である</em>——大数の法則が一様収束を与える。</p>
+<p><strong>ストーン–ワイエルシュトラスの定理（第96章）。</strong>コンパクトハウスドルフ空間 <m>X</m> 上で、<m>C(X)</m> の部分代数 <m>A</m> が<em>定数を含み、点を分離する</em>なら、<m>A</m> は <m>C(X)</m> で稠密である。</p>
+<p><span class="yogo-hl">多項式が稠密なのは「<m>x</m> が点を分離するから」という一点に尽きる。</span>第96章で証明を与える。</p>
+<p><strong>三角多項式。</strong>円周 <m>\mathbb{T}</m> 上では、<m>\{e^{inx}\}</m> の有限一次結合が <m>C(\mathbb{T})</m> で稠密である（ストーン–ワイエルシュトラスの複素版、自己共役性が要る）。</p>
+<p><em>これが第80章のフーリエ級数の出発点になる。</em>そして <m>C(\mathbb{T})</m> が <m>L^p(\mathbb{T})</m> で稠密だから、<span class="yogo-hl">三角多項式は <m>L^p(\mathbb{T})</m> でも稠密になる</span>——第65章の「完全正規直交系」の意味がこれである。</p>
+<p><strong>稠密性が壊れる場合。</strong><m>\{x^{n_k}\}</m> が <m>C[0,1]</m> で稠密（定数を加えて）であるための条件は、ミュンツの定理により</p>
+<M>\sum_k \frac{1}{n_k} = \infty</M>
+<p class="no-indent"><em><m>\{x, x^4, x^9, \ldots\}</m> では稠密にならない</em>——<m>\sum 1/k^2<\infty</m> だから。</p>
+<p><span class="yogo-hl">「点を分離する」だけでは足りず、密度の条件が要る場合がある。</span>ストーン–ワイエルシュトラスが「代数」を要求するのは、この困難を避けるためである。</p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li><ref t="def-nanka"/> の <m>\varphi</m> が無限回微分可能であることを確かめよ。</li>
+<li><m>\mathbf{1}_{[0,1]}</m> が <m>C(\mathbb{R})</m> から <m>L^\infty</m> 距離 <m>1/2</m> 以上離れていることを示せ。</li>
+<li><m>f*\varphi_\epsilon</m> の台が <m>\mathrm{supp}\,f</m> の <m>\epsilon</m>-近傍に含まれることを示せ。</li>
+<li>バーンスタイン多項式 <m>B_n f</m> の <m>f(x)=x^2</m> についての形を求めよ。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li><ref t="thm-tankansu-chumitsu"/> を、細部まで示せ。<span class="haiten">（25点）</span></li>
+<li><ref t="thm-cc-chumitsu"/> の正則性の使い方を明示して示せ。<span class="haiten">（30点）</span></li>
+<li>平行移動が <m>L^p</m>（<m>p<\infty</m>）で連続であることを示せ。<span class="haiten">（30点）</span></li>
+<li><ref t="thm-nanka"/>（1）で微分と積分の交換を正当化せよ。<span class="haiten">（25点）</span></li>
+<li><m>\omega_p(f,t)=o(t)</m> なら <m>f</m> が定数であることを示せ。<span class="haiten">（35点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li>ワイエルシュトラスの近似定理を、ランダウ核による畳み込みで示せ。<span class="haiten">（40点）</span></li>
+<li>バーンスタイン多項式が一様収束することを、大数の法則を使って示せ。<span class="haiten">（40点）</span></li>
+<li>モーメント条件を満たす軟化子が非負にできないことを示せ。<span class="haiten">（30点）</span></li>
+</ol>
+</div>
+</div>
+<nav class="chnav">
+<a class="prev" href="ch61.html">← 第61章　完備性——Riesz–Fischerの定理</a>
+<a class="next" href="ch63.html">第63章　Banach空間 →</a>
+</nav>
+</article>
+</main>
+<footer class="site">
+  <p>位相・解析大全　学部から大学院まで、三層で読む位相空間論と解析学</p>
+  <p class="small">本文・図版とも本書のために作成したものです。数式は MathJax でベクタ化して組んでいます。</p>
+</footer>
+</body>
+</html>

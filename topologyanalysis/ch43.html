@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第43章 実数の構成と完備性｜位相・解析大全</title>
+<meta name="description" content="位相・解析大全　第43章　実数の構成と完備性">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;600&display=swap">
+<link rel="stylesheet" href="web.css">
+</head>
+<body>
+<header class="site">
+  <a class="site-title" href="index.html">位相・解析大全</a>
+  <nav class="site-nav">
+    <a href="index.html">目次</a>
+    <a href="isou-kaiseki-taizen.pdf">PDF版</a>
+  </nav>
+</header>
+<main>
+<article class="chapter">
+<p class="part-label">第VI部　実数と極限</p>
+<h1><span class="ch-num">第43章</span>実数の構成と完備性</h1>
+<nav class="chnav">
+<a class="prev" href="ch42.html">← 第42章　次元論の反例と、一致しない空間</a>
+<a class="next" href="ch44.html">第44章　上限・下限と単調列 →</a>
+</nav>
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>有理数では、いったい何が足りないのか。</li>
+<li>実数を「作る」とは、どういう作業なのか。</li>
+<li>作り方が二通りあるのに、同じものができるのはなぜか。</li>
+</ul>
+</div>
+
+<h3 id="s43-1">有理数に空いている穴</h3>
+
+<p>第42章まで位相の言葉で議論してきた。<em>ここから解析に移る。</em>最初にやるべきは、議論の舞台である実数を確定させることである。</p>
+
+<p>有理数体 <m>\mathbb{Q}</m> は、四則が自由にでき、順序があり、稠密でもある。<span class="yogo-hl">それでも解析には足りない。</span></p>
+
+<div class="rei" id="rei-q-fusoku">
+<h4>有理数で壊れる三つのこと</h4>
+<p class="no-indent"><strong>方程式が解けない。</strong><m>x^2 = 2</m> を満たす <m>x \in \mathbb{Q}</m> は存在しない。</p>
+<p><strong>上限がない。</strong><m>A = \{\, q \in \mathbb{Q} \mid q > 0,\ q^2 < 2 \,\}</m> は上に有界だが、<m>\mathbb{Q}</m> のなかに上限をもたない。</p>
+<p><strong>コーシー列が収束しない。</strong><m>x_{n+1} = \tfrac{1}{2}(x_n + 2/x_n)</m>、<m>x_1 = 2</m> はコーシー列だが、極限は <m>\mathbb{Q}</m> にない。</p>
+<p><span class="yogo-hl">三つは同じ穴を別の角度から見ている。</span><em>「連続体である」という性質が欠けているのである。</em></p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">第29章の言葉でいえば、<m>\mathbb{Q}</m> は通常の距離について<em>完備でない</em>。<span class="yogo-hl">実数の構成とは、この完備でない空間を完備にする作業である。</span>ただし、順序と四則をこわさずに行う必要がある。</p>
+</div>
+
+<h3 id="s43-2">切断による構成</h3>
+
+<div class="teigi" id="def-dedekind">
+<h4>デデキント切断</h4>
+<p class="no-indent"><m>\mathbb{Q}</m> の部分集合 <m>\alpha</m> が<strong>切断</strong><span class="orig">Dedekind cut</span>であるとは、</p>
+<p class="no-indent">（1）<m>\varnothing \ne \alpha \ne \mathbb{Q}</m>。<br>
+（2）<m>q \in \alpha</m>、<m>p < q</m> ならば <m>p \in \alpha</m>（下に閉じている）。<br>
+（3）<m>\alpha</m> は最大元をもたない。</p>
+<p class="no-indent">切断の全体を <m>\mathbb{R}</m> と定め、包含関係 <m>\alpha \subseteq \beta</m> を順序 <m>\alpha \le \beta</m> とする。</p>
+</div>
+
+<p>直観は単純である。<em>切断 <m>\alpha</m> は「その実数より小さい有理数の全体」を表す。</em><span class="yogo-hl">数そのものを、それが切り分ける有理数の集合で代用する。</span></p>
+
+<div class="teiri" id="thm-dedekind-johen">
+<h4></h4>
+<p class="no-indent">この順序について、<m>\mathbb{R}</m> の空でない上に有界な部分集合はつねに上限をもつ。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><m>S \subseteq \mathbb{R}</m> を空でない上に有界な集合とし、<m>\gamma = \bigcup_{\alpha \in S} \alpha</m> とおく。</p>
+<p><m>\gamma</m> が切断であることを確かめる。空でないことは <m>S \ne \varnothing</m> から。<m>\mathbb{Q}</m> と異なることは、<m>S</m> の上界 <m>\beta</m> について <m>\gamma \subseteq \beta \ne \mathbb{Q}</m> だから。下に閉じていること、最大元をもたないことは、各 <m>\alpha</m> がそうだから合併でも成り立つ。</p>
+<p><em><m>\gamma</m> がすべての <m>\alpha \in S</m> を含むので上界であり、どの上界 <m>\beta</m> についても <m>\gamma \subseteq \beta</m> なので最小の上界である。</em><span class="yogo-hl">上限の存在が、合併というただ一つの操作で出てしまう。</span>これが切断による構成の長所である。</p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">加法は <m>\alpha + \beta = \{\, p + q \mid p \in \alpha,\ q \in \beta \,\}</m> で定義でき、これも切断になる。<em>乗法は符号の場合分けが要り、証明が長くなる。</em><span class="yogo-hl">切断は順序に強く、演算に弱い。</span>次の構成はちょうど逆である。</p>
+</div>
+
+<h3 id="s43-3">コーシー列による構成</h3>
+
+<div class="teigi" id="def-cauchy-kousei">
+<h4>コーシー列による構成</h4>
+<p class="no-indent"><m>\mathbb{Q}</m> のコーシー列の全体を <m>\mathcal{C}</m> とする。<m>(x_n) \sim (y_n)</m> を <m>\lim_n |x_n - y_n| = 0</m> で定めると同値関係になる。商集合 <m>\mathcal{C}/{\sim}</m> を <m>\mathbb{R}</m> と定める。</p>
+<p>演算は項ごとに定める。<m>[(x_n)] + [(y_n)] = [(x_n + y_n)]</m>、<m>[(x_n)] \cdot [(y_n)] = [(x_n y_n)]</m>。</p>
+</div>
+
+<p><em>こちらは演算が自然である。</em>項ごとに足し、項ごとにかければよい。<span class="yogo-hl">代わりに、順序と上限の存在を示すのに手間がかかる。</span></p>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">この構成は、第29章の<em>完備化</em>をそのまま <m>\mathbb{Q}</m> に適用したものである。<span class="yogo-hl">位相の言葉で作った完備化が、代数と順序も引き継ぐことを確かめている。</span></p>
+</div>
+
+<h3 id="s43-4">どちらでも同じものができる</h3>
+
+<div class="teigi" id="def-kanbi-juntai">
+<h4>完備順序体</h4>
+<p class="no-indent">順序体 <m>F</m> が<strong>完備</strong>であるとは、空でない上に有界な部分集合がつねに上限をもつことをいう。</p>
+</div>
+
+<div class="teiri" id="thm-jissu-ichii">
+<h4>実数体の一意性</h4>
+<p class="no-indent">完備順序体は、同型を除いてただ一つである。すなわち二つの完備順序体のあいだには、順序と演算を保つ全単射がただ一つ存在する。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><m>F, G</m> を完備順序体とする。どちらも <m>\mathbb{Q}</m> と同型な部分体を含む（<m>1</m> を足していけば <m>\mathbb{N}</m>、差と商で <m>\mathbb{Q}</m> が出る）。この部分体を同一視する。</p>
+<p><m>x \in F</m> に対し <m>\varphi(x) = \sup\{\, q \in \mathbb{Q} \mid q < x \,\}</m>（<m>G</m> での上限）と定める。<em>右辺の集合は空でなく上に有界なので、<m>G</m> の完備性から上限が存在する。</em></p>
+<p><m>\varphi</m> が順序と演算を保つことは、<m>\mathbb{Q}</m> が <m>F</m> でも <m>G</m> でも稠密であること（下のアルキメデス性）から従う。逆向きも同様に作れて、合成が恒等写像になる。</p>
+<p>一意性。同型は <m>\mathbb{Q}</m> 上で恒等でなければならず、<m>\mathbb{Q}</m> が稠密だから全体で決まる。</p>
+</div>
+
+<div class="teiri" data-kind="命題" id="prop-archimedes">
+<h4>アルキメデス性</h4>
+<p class="no-indent">完備順序体 <m>F</m> では、どの <m>x \in F</m> についても <m>n > x</m> なる自然数 <m>n</m> が存在する。したがって <m>\mathbb{Q}</m> は <m>F</m> で稠密である。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">そうでないとすると <m>\mathbb{N}</m> が上に有界になり、完備性から上限 <m>s</m> をもつ。<em><m>s-1</m> は上界でないので <m>n > s-1</m> なる <m>n</m> があるが、すると <m>n+1 > s</m> で矛盾。</em></p>
+<p>稠密性。<m>x < y</m> とし、<m>n > 1/(y-x)</m> を取る。<m>m</m> を <m>m/n > x</m> なる最小の整数とすれば <m>x < m/n < y</m> になる。<span class="yogo-hl">アルキメデス性は完備性から出る——独立な公理ではない。</span></p>
+</div>
+
+<figure id="fig43-1">
+<svg viewBox="0 0 470 268" width="470" height="268" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <defs>
+    <marker id="a43" markerWidth="8" markerHeight="8" refX="7" refY="2.6" orient="auto"><path d="M0,0 L7,2.6 L0,5.2 z" fill="#35618f"/></marker>
+  </defs>
+
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">二通りに作っても、同じものができる</text>
+
+  <rect x="14" y="26" width="442" height="120" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+
+  <rect x="186" y="34" width="92" height="22" rx="3" fill="#eef2f6" stroke="#8a8a88"/>
+  <text x="232" y="48" font-size="7" text-anchor="middle" fill="#1f3b5c">有理数体</text>
+
+  <rect x="40" y="74" width="140" height="24" rx="3" fill="#dce7f0" stroke="#35618f"/>
+  <text x="110" y="89" font-size="6.8" text-anchor="middle" fill="#1f3b5c">切断を集める</text>
+
+  <rect x="290" y="74" width="140" height="24" rx="3" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="360" y="89" font-size="6.8" text-anchor="middle" fill="#1e4a41">コーシー列を割る</text>
+
+  <path d="M198,58 L130,70" stroke="#35618f" stroke-width="1.1" fill="none" marker-end="url(#a43)"/>
+  <path d="M266,58 L340,70" stroke="#2f6b5f" stroke-width="1.1" fill="none" marker-end="url(#a43)"/>
+
+  <rect x="166" y="114" width="132" height="22" rx="3" fill="#f0e2e8" stroke="#8a3b62"/>
+  <text x="232" y="128" font-size="6.8" text-anchor="middle" fill="#6b2a48">完備順序体（一意）</text>
+
+  <path d="M110,102 L200,112" stroke="#8a3b62" stroke-width="1.1" fill="none" marker-end="url(#a43)"/>
+  <path d="M360,102 L266,112" stroke="#8a3b62" stroke-width="1.1" fill="none" marker-end="url(#a43)"/>
+
+  <text x="24" y="108" font-size="6.2" fill="#6a6a68">順序に強い</text>
+  <text x="24" y="118" font-size="6.2" fill="#6a6a68">乗法が面倒</text>
+  <text x="446" y="108" font-size="6.2" text-anchor="end" fill="#6a6a68">演算に強い</text>
+  <text x="446" y="118" font-size="6.2" text-anchor="end" fill="#6a6a68">上限が面倒</text>
+
+  <rect x="14" y="158" width="216" height="98" rx="4" fill="#fdf6f4" stroke="#e0c3bd"/>
+  <text x="24" y="173" font-size="7.6" font-weight="700" fill="#8c2f1e">同値な言い換え</text>
+  <text x="24" y="190" font-size="6.8" fill="#8c2f1e">上限性質　上に有界なら上限がある</text>
+  <text x="24" y="203" font-size="6.8" fill="#8c2f1e">単調収束　上に有界な単調増加列は収束</text>
+  <text x="24" y="216" font-size="6.8" fill="#8c2f1e">区間縮小　閉区間の減少列は交わる</text>
+  <text x="24" y="229" font-size="6.8" fill="#8c2f1e">コーシー完備　＋　アルキメデス性</text>
+  <text x="24" y="246" font-size="6.6" fill="#6a6a68">最後だけアルキメデス性を足す必要がある</text>
+
+  <rect x="240" y="158" width="216" height="98" rx="4" fill="#f4f1ea" stroke="#8a6b2c"/>
+  <text x="250" y="173" font-size="7.6" font-weight="700" fill="#5a4520">位相から見ると</text>
+  <text x="250" y="190" font-size="6.8" fill="#5a4520">完備化（第29章）を有理数に適用したもの</text>
+  <text x="250" y="204" font-size="6.8" fill="#5a4520">順序位相が距離位相と一致する</text>
+  <text x="250" y="218" font-size="6.8" fill="#5a4520">連結・可分・局所コンパクト</text>
+  <text x="250" y="235" font-size="6.6" fill="#6a6a68">第36章のカントールの特徴づけが、</text>
+  <text x="250" y="246" font-size="6.6" fill="#6a6a68">順序の側から同じものを取り出していた</text>
+</svg>
+<figcaption data-ch="43">切断とコーシー列という二通りの構成は、同じ完備順序体に到達する。完備順序体が同型を除いて一意だからである。上限性質・単調収束・区間縮小は互いに同値である。</figcaption>
+</figure>
+
+<div class="lv2">
+<h4>四つの言い換えが同値であること</h4>
+<p>完備性の言い換えを四つ挙げた。<em>これらが同値であることを確かめておく。</em>解析の議論では、場面に応じて使い分ける。</p>
+<p><strong>上限性質から単調収束へ。</strong><m>(x_n)</m> を上に有界な単調増加列とし、<m>s = \sup_n x_n</m> とおく。<em>どの <m>\varepsilon > 0</m> についても <m>s - \varepsilon</m> は上界でないので、<m>x_N > s-\varepsilon</m> なる <m>N</m> がある。</em>単調性より <m>n \ge N</m> で <m>s - \varepsilon < x_n \le s</m>。よって <m>x_n \to s</m>。</p>
+<p><strong>単調収束から区間縮小へ。</strong><m>[a_n, b_n]</m> を減少する閉区間の列とすると、<m>(a_n)</m> は上に有界な単調増加列、<m>(b_n)</m> は下に有界な単調減少列。<span class="yogo-hl">両方の極限が存在し、<m>\lim a_n \le \lim b_n</m> なので交わりは空でない。</span></p>
+<p><strong>区間縮小からコーシー完備へ。</strong><m>(x_n)</m> をコーシー列とする。各 <m>k</m> について <m>|x_m - x_n| < 2^{-k}</m>（<m>m,n \ge N_k</m>）なる <m>N_k</m> を取り、<m>I_k = [x_{N_k} - 2^{-k}, x_{N_k} + 2^{-k}]</m> とおく。<em>必要なら小さくして減少列にできる。</em>交わりの点が極限になる。</p>
+<p><strong>コーシー完備から上限性質へ。</strong><span class="yogo-hl">ここでアルキメデス性が要る。</span><m>S</m> を空でない上に有界な集合とし、二分法で区間を縮める。<m>[a_0,b_0]</m> を <m>a_0</m> が上界でなく <m>b_0</m> が上界であるように取り、中点で分けて同じ性質を保つ半分を選ぶ。<em>区間の長さが <m>2^{-n}(b_0-a_0) \to 0</m> となるのに、アルキメデス性が必要である。</em></p>
+<p><strong>なぜ最後だけ余分な仮定が要るのか。</strong>コーシー完備だがアルキメデス的でない順序体が存在するからである。<em>たとえば有理関数体に「<m>x</m> はどの有理数より大きい」という順序を入れたものは、アルキメデス的でない。</em><span class="yogo-hl">上限性質はアルキメデス性を含むが、コーシー完備性は含まない。</span></p>
+<p><strong>使い分け。</strong>上限性質は存在証明に、単調収束は数列の議論に、区間縮小は二分法に、コーシー完備性は極限の値がわからないときに使う。第45章以降で、どれも繰り返し現れる。</p>
+</div>
+
+<div class="lv3">
+<h4>実数でない順序体と、実数の特徴づけ</h4>
+<p>完備順序体が一意だという事実は、逆に「完備性を落とすと何が出るか」を問わせる。</p>
+<p><strong>非アルキメデス順序体。</strong>形式的ローラン級数体 <m>\mathbb{R}((t))</m> に、<m>t > 0</m> かつ <m>t</m> がどの正の実数より小さい、という順序を入れる。<em>これは順序体だがアルキメデス的でない。</em><span class="yogo-hl"><m>t</m> は「無限小」である。</span></p>
+<p><strong>超実数体。</strong><m>\mathbb{R}^{\mathbb{N}}</m> を超フィルター（第12章）で割ると、<m>{}^{*}\mathbb{R}</m> が得られる。<em><m>\mathbb{R}</m> を真に含む順序体で、一階の言語で書ける性質をすべて共有する（移行原理）。</em>無限小と無限大をもち、微分や積分を無限小で直接扱える——これが超準解析である。</p>
+<p>移行原理の証明には、超フィルターの存在すなわち選択公理（第3章）が要る。<span class="yogo-hl">無限小の存在は、選択公理の帰結として現れる。</span></p>
+<p><strong>実閉体。</strong>順序体 <m>F</m> が<em>実閉</em>であるとは、正の元がすべて平方根をもち、奇数次多項式がつねに根をもつことをいう。<m>\mathbb{R}</m> は実閉だが、実閉体は他にもたくさんある（実代数的数の全体など）。</p>
+<p>タルスキの定理により、<em>実閉体の一階の理論は決定可能である。</em><span class="yogo-hl">「実数についての一階の主張」は機械的に判定できる。</span>ところが「すべての部分集合について」と量化した瞬間に、二階の主張になって決定不能になる。</p>
+<p><strong>完備性は二階の性質である。</strong>上限性質は「部分集合」を量化する。<em>一階の言語では書けない。</em>だからこそ <m>\mathbb{R}</m> と <m>{}^{*}\mathbb{R}</m> が一階では区別できず、二階では区別できる。</p>
+<p><strong>連続体としての ℝ。</strong>第36章のカントールの特徴づけは、順序の言葉だけで <m>\mathbb{R}</m> を決めていた。<span class="yogo-hl">代数を使わずに、稠密・端点なし・連結・可分の四条件で足りる。</span>そして第36章で見たとおり、最後の「可分」を「可算鎖条件」に弱めてよいかは、公理系から決まらない。</p>
+<p><m>|\mathbb{R}| = 2^{\aleph_0}</m> の値そのものも独立である（第4章）。<em>実数は、構成は一意なのに、大きさが決まらない。</em></p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li><m>x^2 = 2</m> が <m>\mathbb{Q}</m> で解をもたないことを示せ。</li>
+<li><m>A = \{\, q \in \mathbb{Q} \mid q^2 < 2,\ q>0 \,\}</m> が切断を定めることを確かめよ。</li>
+<li>二つの切断の和が切断になることを示せ。</li>
+<li><m>\sqrt{2}</m> に収束するコーシー列を一つ書け。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li><ref t="thm-dedekind-johen"/> の証明の細部（<m>\gamma</m> が最大元をもたないこと）を埋めよ。<span class="haiten">（15点）</span></li>
+<li><ref t="prop-archimedes"/> を、上限性質だけから示せ。<span class="haiten">（20点）</span></li>
+<li>単調収束定理と区間縮小原理が同値であることを示せ。<span class="haiten">（25点）</span></li>
+<li><m>\mathbb{Q}</m> が <m>\mathbb{R}</m> で稠密であることから、<m>\mathbb{R}</m> が可分であることを導け。<span class="haiten">（15点）</span></li>
+<li>切断による構成で、乗法を定義し、結合法則を確かめよ。<span class="haiten">（35点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li>コーシー完備だがアルキメデス的でない順序体の例を作れ。<span class="haiten">（40点）</span></li>
+<li><ref t="thm-jissu-ichii"/> の同型が一意であることを、詳しく示せ。<span class="haiten">（30点）</span></li>
+<li>第36章のカントールの特徴づけから <ref t="thm-jissu-ichii"/> を導けるか。順序体の構造をどこで使うかを論ぜよ。<span class="haiten">（45点）</span></li>
+</ol>
+</div>
+</div>
+<nav class="chnav">
+<a class="prev" href="ch42.html">← 第42章　次元論の反例と、一致しない空間</a>
+<a class="next" href="ch44.html">第44章　上限・下限と単調列 →</a>
+</nav>
+</article>
+</main>
+<footer class="site">
+  <p>位相・解析大全　学部から大学院まで、三層で読む位相空間論と解析学</p>
+  <p class="small">本文・図版とも本書のために作成したものです。数式は MathJax でベクタ化して組んでいます。</p>
+</footer>
+</body>
+</html>

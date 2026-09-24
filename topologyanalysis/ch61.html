@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第61章 完備性——Riesz–Fischerの定理｜位相・解析大全</title>
+<meta name="description" content="位相・解析大全　第61章　完備性——Riesz–Fischerの定理">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;600&display=swap">
+<link rel="stylesheet" href="web.css">
+</head>
+<body>
+<header class="site">
+  <a class="site-title" href="index.html">位相・解析大全</a>
+  <nav class="site-nav">
+    <a href="index.html">目次</a>
+    <a href="isou-kaiseki-taizen.pdf">PDF版</a>
+  </nav>
+</header>
+<main>
+<article class="chapter">
+<p class="part-label">第VIII部　関数空間</p>
+<h1><span class="ch-num">第61章</span>完備性——Riesz–Fischerの定理</h1>
+<nav class="chnav">
+<a class="prev" href="ch60.html">← 第60章　Lp空間とHölder・Minkowskiの不等式</a>
+<a class="next" href="ch62.html">第62章　稠密性と近似 →</a>
+</nav>
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>なぜ完備性がそれほど大事なのか。</li>
+<li>Lᵖ が完備であることは、測度論の何に支えられているのか。</li>
+<li>ノルム収束と各点収束は、どうつながるのか。</li>
+</ul>
+</div>
+
+<h3 id="s61-1">完備性は何のためにあるか</h3>
+
+<p>第29章で、完備性は「コーシー列が収束すること」と定めた。<em>なぜそれが要るのか。</em></p>
+
+<div class="chui">
+<h4>完備性が与えるもの</h4>
+<p class="no-indent"><strong>極限の存在が無料になる。</strong>「収束先を知らなくても、近づいていれば収束する」——第44章の単調収束定理と同じ効き方である。</p>
+<p><strong>不動点定理が使える。</strong>縮小写像の原理（第29章）は完備性を要求する。<em>微分方程式の解の存在は、ここから出る。</em></p>
+<p><strong>ベールのカテゴリー定理が使える。</strong>第27章の定理は完備距離空間で成り立つ。<span class="yogo-hl">第IX部の三大定理（一様有界性・開写像・閉グラフ）は、すべてこれを土台にしている。</span></p>
+<p>第51章で「リーマン可積分関数の空間が完備でない」と述べた。<em>この章で、ルベーグ積分がその欠陥を埋めることを示す。</em></p>
+</div>
+
+<h3 id="s61-2">リース–フィッシャーの定理</h3>
+
+<div class="teiri" id="thm-riesz-fischer">
+<h4>リース–フィッシャーの定理</h4>
+<p class="no-indent"><m>1\le p\le\infty</m> について、<m>L^p(\mu)</m> は完備である。すなわちバナッハ空間である。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><m>1\le p<\infty</m> とする（<m>p=\infty</m> は後述）。</p>
+<p><strong>級数に置き換える。</strong>コーシー列 <m>(f_n)</m> から、<m>\|f_{n_{k+1}}-f_{n_k}\|_p < 2^{-k}</m> なる部分列を取る。<em>部分列が収束すれば、コーシー列全体が同じ極限に収束する。</em></p>
+<p><strong>優関数を作る。</strong><m>g_K = \sum_{k=1}^{K}|f_{n_{k+1}}-f_{n_k}|</m> とおくと、<ref t="thm-minkowski"/> より <m>\|g_K\|_p \le \sum_{k}2^{-k} < 1</m>。</p>
+<p><m>g_K \uparrow g = \sum_{k=1}^{\infty}|f_{n_{k+1}}-f_{n_k}|</m> なので、<em>単調収束定理（<ref t="thm-tancho-shusoku"/>）より <m>\|g\|_p \le 1</m></em>。</p>
+<p><strong>各点で収束する。</strong><m>\|g\|_p<\infty</m> より <m>g<\infty</m> ほとんどいたるところ。<span class="yogo-hl">その点では級数 <m>f_{n_1}+\sum_k(f_{n_{k+1}}-f_{n_k})</m> が絶対収束する。</span></p>
+<p>極限を <m>f</m> とおく（<m>g=\infty</m> の零集合では <m>f=0</m> とする）。<m>f</m> は可測（<ref t="thm-kasoku-enzan"/>（3））で、<m>|f| \le |f_{n_1}|+g \in L^p</m>。</p>
+<p><strong>ノルムで収束する。</strong><m>|f-f_{n_k}|^p \le (2(|f_{n_1}|+g))^p</m> が可積分な優関数なので、<em>優収束定理（<ref t="thm-yushusoku"/>）より <m>\|f-f_{n_k}\|_p\to0</m></em>。</p>
+<p><strong>もとの列も収束する。</strong><m>\|f-f_n\|_p \le \|f-f_{n_k}\|_p + \|f_{n_k}-f_n\|_p</m> で、両項とも小さくできる。</p>
+</div>
+
+<div class="chui">
+<h4>証明の骨格</h4>
+<p class="no-indent"><span class="yogo-hl">完備性は、単調収束定理と優収束定理の二つに支えられている。</span></p>
+<p>すなわち<em>可算加法性</em>である（第55章）。リーマン積分で完備性が破れたのは、可算加法性に相当するものがなかったからだった。</p>
+<p>部分列を取って級数に直すのは、<em>ノルム空間の完備性を示すときの定型</em>である。「絶対収束する級数が収束すれば完備」という同値条件を使っている（第63章）。</p>
+</div>
+
+<div class="teiri" data-kind="命題" id="prop-linfty-kanbi">
+<h4>L^∞ の場合</h4>
+<p class="no-indent"><m>L^\infty(\mu)</m> も完備である。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">コーシー列 <m>(f_n)</m> を取る。<m>E_{m,n}=\{\,|f_m-f_n|>\|f_m-f_n\|_\infty\,\}</m> は零集合で、<m>E=\bigcup_{m,n}E_{m,n}</m> も零集合。</p>
+<p><em><m>X\setminus E</m> の上では <m>(f_n)</m> が一様コーシー列</em>なので、一様収束する（<ref t="thm-ichiyou-cauchy"/>）。<span class="yogo-hl">零集合を可算個ぶん除いておけるのが要点である。</span></p>
+</div>
+
+<h3 id="s61-3">ノルム収束と各点収束</h3>
+
+<div class="teiri" id="thm-bubunretsu">
+<h4>部分列定理</h4>
+<p class="no-indent"><m>f_n\to f</m> が <m>L^p</m> で収束するなら、ほとんどいたるところ <m>f</m> に収束する部分列が存在する。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><ref t="thm-riesz-fischer"/> の証明で作った部分列がそれである。<em>あるいはチェビシェフの不等式（<ref t="prop-chebyshev"/>）から測度収束が出て、第54章★★★の部分列定理を使ってもよい。</em></p>
+</div>
+
+<div class="hanrei" id="cex-lp-kakuten">
+<h4>全体では各点収束しない</h4>
+<p class="no-indent">「動く窓」の列——<m>[0,1]</m> 上で、<m>m=0,1,2,\ldots</m>、<m>k=0,\ldots,2^m-1</m> に対し <m>\mathbf{1}_{[k2^{-m},(k+1)2^{-m}]}</m> を辞書式に並べる。</p>
+<p><em>この列は <m>L^p</m> で <m>0</m> に収束する</em>（<m>\|\cdot\|_p^p=2^{-m}\to0</m>）が、<span class="yogo-hl">どの点でも <m>0</m> と <m>1</m> を無限回ずつ取るので、各点収束しない。</span></p>
+<p>部分列（各段の最初の窓だけ取る）を選べば、<m>[0,1]</m> のほとんどすべての点で <m>0</m> に収束する。</p>
+</div>
+
+<div class="hanrei" id="cex-lp-gyaku">
+<h4>各点収束しても L^p 収束しない</h4>
+<p class="no-indent"><m>f_n = n^{1/p}\mathbf{1}_{(0,1/n)}</m> は各点で <m>0</m> に収束するが <m>\|f_n\|_p = 1</m>。</p>
+<p><em>第50章の「背が伸びる」型である。</em>優関数がないので、優収束定理が使えない。</p>
+</div>
+
+<figure id="fig61-1">
+<svg viewBox="0 0 470 272" width="470" height="272" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <defs>
+    <marker id="a61" markerWidth="8" markerHeight="8" refX="7" refY="2.6" orient="auto"><path d="M0,0 L7,2.6 L0,5.2 z" fill="#35618f"/></marker>
+  </defs>
+
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">完備性の証明は、級数に直して優関数を作る</text>
+
+  <rect x="14" y="26" width="442" height="118" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+
+  <rect x="26" y="38" width="96" height="22" rx="3" fill="#eef2f6" stroke="#8a8a88"/>
+  <text x="74" y="52" font-size="6.6" text-anchor="middle" fill="#1f3b5c">コーシー列</text>
+
+  <rect x="142" y="38" width="112" height="22" rx="3" fill="#dce7f0" stroke="#35618f"/>
+  <text x="198" y="52" font-size="6.6" text-anchor="middle" fill="#1f3b5c">早く近づく部分列</text>
+
+  <rect x="274" y="38" width="112" height="22" rx="3" fill="#dce7f0" stroke="#35618f"/>
+  <text x="330" y="52" font-size="6.6" text-anchor="middle" fill="#1f3b5c">絶対収束する級数</text>
+
+  <path d="M124,49 L138,49" stroke="#35618f" stroke-width="1.1" marker-end="url(#a61)"/>
+  <path d="M256,49 L270,49" stroke="#35618f" stroke-width="1.1" marker-end="url(#a61)"/>
+
+  <rect x="142" y="78" width="112" height="22" rx="3" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="198" y="92" font-size="6.6" text-anchor="middle" fill="#1e4a41">単調収束定理</text>
+  <rect x="274" y="78" width="112" height="22" rx="3" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="330" y="92" font-size="6.6" text-anchor="middle" fill="#1e4a41">優収束定理</text>
+
+  <path d="M330,64 L330,74" stroke="#2f6b5f" stroke-width="1.1" marker-end="url(#a61)"/>
+  <path d="M274,89 L258,89" stroke="#2f6b5f" stroke-width="1.1" marker-end="url(#a61)"/>
+
+  <rect x="142" y="112" width="244" height="22" rx="3" fill="#f0e2e8" stroke="#8a3b62"/>
+  <text x="264" y="126" font-size="6.8" text-anchor="middle" font-weight="700" fill="#6b2a48">Lᵖ は完備（リース–フィッシャー）</text>
+  <path d="M198,104 L198,108" stroke="#8a3b62" stroke-width="1.1"/>
+  <path d="M330,104 L330,108" stroke="#8a3b62" stroke-width="1.1"/>
+
+  <text x="398" y="82" font-size="6.2" fill="#6a6a68">優関数 g を</text>
+  <text x="398" y="92" font-size="6.2" fill="#6a6a68">作るのに使う</text>
+  <text x="398" y="105" font-size="6.2" fill="#8c2f1e">どちらも可算</text>
+  <text x="398" y="115" font-size="6.2" fill="#8c2f1e">加法性の帰結</text>
+
+  <text x="24" y="76" font-size="6.2" fill="#6a6a68">‖f_{n_{k+1}} − f_{n_k}‖ &lt; 2⁻ᵏ</text>
+  <text x="24" y="87" font-size="6.2" fill="#6a6a68">と取る</text>
+  <text x="24" y="104" font-size="6.2" fill="#8c2f1e">部分列が収束すれば</text>
+  <text x="24" y="114" font-size="6.2" fill="#8c2f1e">もとの列も収束する</text>
+
+  <rect x="14" y="154" width="216" height="110" rx="4" fill="#fdf6f4" stroke="#e0c3bd"/>
+  <text x="24" y="169" font-size="7.6" font-weight="700" fill="#8c2f1e">ノルム収束と各点収束の関係</text>
+  <text x="24" y="186" font-size="6.8" fill="#8c2f1e">Lᵖ 収束　→　各点収束　は成り立たない</text>
+  <text x="24" y="197" font-size="6.4" fill="#6a6a68">「動く窓」の列が反例</text>
+  <text x="24" y="212" font-size="6.8" fill="#1e4a41">Lᵖ 収束　→　部分列が各点収束</text>
+  <text x="24" y="223" font-size="6.4" fill="#6a6a68">証明のなかで実際に作っている</text>
+  <text x="24" y="238" font-size="6.8" fill="#8c2f1e">各点収束　→　Lᵖ 収束　も成り立たない</text>
+  <text x="24" y="249" font-size="6.4" fill="#6a6a68">n の 1/p 乗を (0,1/n) に載せた列が反例。優関数がない</text>
+  <text x="24" y="260" font-size="6.4" fill="#5a4520">優関数があれば成り立つ（優収束定理）</text>
+
+  <rect x="240" y="154" width="216" height="110" rx="4" fill="#f4f1ea" stroke="#8a6b2c"/>
+  <text x="250" y="169" font-size="7.6" font-weight="700" fill="#5a4520">完備だと何ができるようになるか</text>
+  <text x="250" y="186" font-size="6.8" fill="#5a4520">極限の存在が無料になる</text>
+  <text x="250" y="199" font-size="6.8" fill="#5a4520">縮小写像の原理（第29章）</text>
+  <text x="250" y="212" font-size="6.8" fill="#5a4520">ベールのカテゴリー定理（第27章）</text>
+  <text x="250" y="229" font-size="6.6" fill="#8c2f1e">第IX部の三大定理は、すべて</text>
+  <text x="250" y="240" font-size="6.6" fill="#8c2f1e">ベールのカテゴリー定理から出る</text>
+  <text x="250" y="256" font-size="6.4" fill="#6a6a68">第51章で見た「完備でない」欠陥が、ここで埋まる</text>
+</svg>
+<figcaption data-ch="61">コーシー列から早く近づく部分列を取り、級数に直して優関数を作る。単調収束定理と優収束定理が、そのまま完備性になる。ノルム収束と各点収束は、部分列を経由してのみつながる。</figcaption>
+</figure>
+
+<div class="lv2">
+<h4>Lᵖ が可分かどうか</h4>
+<p>完備性の次に効く性質が<em>可分性</em>（第7章）である。可算稠密集合があると、近似の議論が格段に扱いやすくなる。</p>
+<p><strong>定理。</strong><m>\mu</m> を <m>\mathbb{R}^n</m> のルベーグ測度とすると、<m>1\le p<\infty</m> について <m>L^p</m> は可分である。<em><m>L^\infty</m> は可分でない。</em></p>
+<p><strong>可分性の証明。</strong>有理数の端点をもつ矩形の定義関数の、有理係数の有限一次結合。<em>これは可算集合で、第62章の稠密性定理から <m>L^p</m> で稠密になる。</em></p>
+<p><strong><m>L^\infty</m> が可分でない理由。</strong><m>\{\mathbf{1}_{[0,t]}\}_{t\in[0,1]}</m> は非可算個の元からなり、<em>互いの距離が <m>1</m></em>。</p>
+<p><span class="yogo-hl">距離 <m>1</m> 離れた非可算族があれば、可分でない</span>——各元のまわりの半径 <m>1/2</m> の球が互いに交わらず、稠密集合はそれぞれに点をもたねばならない。</p>
+<p>第35章の言葉でいえば、<m>L^\infty</m> のセル数が非可算だということである。<em>第VIII部の道具が、第V部の基数不変量と噛み合う場面である。</em></p>
+<p><strong>なぜ可分性が要るのか。</strong>三つある。</p>
+<p>第一に、<em>可算基底が取れる</em>（第65章の正規直交基底、可分ヒルベルト空間の場合）。</p>
+<p>第二に、<em>弱位相が単位球上で距離化できる</em>（第70章）。可分でないと、弱収束を点列で扱えない。</p>
+<p>第三に、<em>測度論的な議論が可算個の条件に帰着する</em>。第54章のエゴロフ・ルジンの証明が、その典型だった。</p>
+<p><strong>一般の測度空間では。</strong><m>L^p(\mu)</m> が可分であることと、<m>\mathcal{A}</m> が「可算生成 <m>+</m> 零集合」の意味で可分であることが同値になる。<em>確率論で扱う標準的な空間（ポーランド空間上のボレル測度）は、すべてこれを満たす。</em></p>
+</div>
+
+<div class="lv3">
+<h4>完備化という操作と、Lᵖ の抽象的な特徴づけ</h4>
+<p><strong>完備化としての <m>L^p</m>。</strong>第62章で示すとおり、<m>C_c(\mathbb{R}^n)</m> は <m>L^p</m>（<m>p<\infty</m>）で稠密である。</p>
+<p>したがって <span class="yogo-hl"><m>L^p(\mathbb{R}^n)</m> は、<m>C_c(\mathbb{R}^n)</m> を <m>\|\cdot\|_p</m> で完備化したものにほかならない。</span></p>
+<p><em>これは定義の別の入り口を与える。</em>測度論を経由せず、「連続関数の空間を完備化したもの」として <m>L^p</m> を定義できる。ダニエル積分（第55章★★★）の立場である。</p>
+<p>ただし<em>その定義では、元が「関数」であることが自明でなくなる</em>。完備化の元は抽象的なコーシー列の同値類にすぎない。測度論は、それが実際に関数（の同値類）だと教える。</p>
+<p><strong>バナッハ束としての特徴づけ。</strong><m>L^p</m> は順序（ほとんどいたるところの大小）をもち、ノルムと順序が</p>
+<M>|f|\le|g| \implies \|f\|_p\le\|g\|_p</M>
+<p class="no-indent">で噛み合う。<em>このような空間をバナッハ束という。</em>第57章★★の <m>M(X)</m> も、その一例だった。</p>
+<p><strong>カクタニの表現定理。</strong>抽象 <m>L^p</m> 空間（<m>\||f|+|g|\|^p=\|f\|^p+\|g\|^p</m>（<m>f\wedge g=0</m> のとき）を満たすバナッハ束）は、<em>ある測度空間の <m>L^p(\mu)</m> と同型である</em>。</p>
+<p><span class="yogo-hl">「順序とノルムの噛み合い方」だけから、測度空間が復元される。</span>第59章のリースの表現定理と同じ構図——構造から、それを実現する測度が出てくる。</p>
+<p><strong>等距離同型の分類。</strong>ラミの定理——<m>p\ne2</m> のとき、<m>L^p(\mu)</m> から <m>L^p(\nu)</m> への全射等距離写像は、<em>必ず「測度変換 <m>\times</m> 符号」の形をしている</em>。</p>
+<M>(Tf)(y) = h(y)\,f(\sigma(y))</M>
+<p class="no-indent"><em><m>p=2</m> だけが例外である</em>——そこではユニタリ作用素が大量にあり、この形に限らない。</p>
+<p><span class="yogo-hl"><m>p=2</m> の特別さが、ここでも顔を出す。</span>第64章で、その源が内積であることを見る。</p>
+<p><strong>同型かどうか。</strong><m>p\ne q</m> なら <m>L^p[0,1]</m> と <m>L^q[0,1]</m> は同型でない。<em>証明には、第70章の弱位相と、コティプ・タイプという幾何的な不変量が要る。</em></p>
+<p>各 <m>p</m> が、本質的に違う空間を与えている。<em>「関数の大きさ」の測り方を変えると、空間そのものが変わる。</em></p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li><m>f_n = n^{1/p}\mathbf{1}_{(0,1/n)}</m> の <m>L^p</m> ノルムを計算せよ。</li>
+<li>「動く窓」の列が <m>L^1</m> で <m>0</m> に収束することを確かめよ。</li>
+<li><m>\{\mathbf{1}_{[0,t]}\}</m> の <m>L^\infty</m> での距離を求めよ。</li>
+<li><m>L^2[0,1]</m> のコーシー列で、各点収束しないものを作れ。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li><ref t="thm-riesz-fischer"/> の「部分列が収束すればもとの列も収束する」部分を示せ。<span class="haiten">（15点）</span></li>
+<li><ref t="prop-linfty-kanbi"/> を、細部まで示せ。<span class="haiten">（25点）</span></li>
+<li><ref t="thm-bubunretsu"/> を、チェビシェフの不等式から導け。<span class="haiten">（25点）</span></li>
+<li><m>L^\infty[0,1]</m> が可分でないことを示せ。<span class="haiten">（25点）</span></li>
+<li>「絶対収束する級数が収束する」ことと完備性が同値であることを示せ。<span class="haiten">（30点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li><m>L^p(\mathbb{R})</m>（<m>1\le p<\infty</m>）が可分であることを示せ。<span class="haiten">（35点）</span></li>
+<li>リース–フィッシャーの定理を、優収束定理を使わずに示せるか論ぜよ。<span class="haiten">（35点）</span></li>
+<li><m>L^1[0,1]</m> と <m>L^2[0,1]</m> が等距離同型でないことを示せ。<span class="haiten">（40点）</span></li>
+</ol>
+</div>
+</div>
+<nav class="chnav">
+<a class="prev" href="ch60.html">← 第60章　Lp空間とHölder・Minkowskiの不等式</a>
+<a class="next" href="ch62.html">第62章　稠密性と近似 →</a>
+</nav>
+</article>
+</main>
+<footer class="site">
+  <p>位相・解析大全　学部から大学院まで、三層で読む位相空間論と解析学</p>
+  <p class="small">本文・図版とも本書のために作成したものです。数式は MathJax でベクタ化して組んでいます。</p>
+</footer>
+</body>
+</html>

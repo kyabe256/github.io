@@ -1,0 +1,279 @@
+/* ===========================================================
+   世界史大全 — Web版スタイル
+   PDF版（print.css）とは別に、画面で読むための版面を定義する。
+   本文コンポーネント（.lv2/.lv3/.shiryo/.mondai/.toi）の
+   色と構造は common.css と揃えてある。
+   =========================================================== */
+
+:root {
+  --lv1-ink:    #1a1a1a;
+  --lv2-accent: #35618f;
+  --lv2-tint:   #eef3f8;
+  --lv3-accent: #7a3b52;
+  --lv3-tint:   #f8eff3;
+  --toi-accent:    #2f6b5f;
+  --toi-tint:      #ecf4f2;
+  --shiryo-accent: #9a7b45;
+  --shiryo-tint:   #f8f4ea;
+  --mondai-accent: #55565a;
+  --mondai-tint:   #f2f2f1;
+  --rule:  #d8d8d4;
+  --muted: #6a6a68;
+  --bg:    #fbfaf8;
+  --paper: #ffffff;
+  --serif: "Noto Serif JP", serif;
+  --sans:  "Noto Sans JP", system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--lv1-ink);
+  font-family: var(--serif);
+  font-size: 17px;
+  line-height: 1.95;
+  text-align: justify;
+  overflow-wrap: break-word;
+}
+
+/* ---------- ヘッダ・フッタ ---------- */
+
+header.site {
+  position: sticky; top: 0; z-index: 10;
+  display: flex; flex-wrap: wrap; gap: .6rem 1.2rem;
+  align-items: baseline; justify-content: space-between;
+  padding: .7rem 1.2rem;
+  background: rgba(251, 250, 248, .94);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--rule);
+  font-family: var(--sans);
+}
+.site-title { font-weight: 700; font-size: 1.02rem; color: inherit; text-decoration: none; }
+.site-nav a { color: var(--lv2-accent); text-decoration: none; margin-left: 1rem; font-size: .9rem; }
+.site-nav a:hover { text-decoration: underline; }
+
+footer.site {
+  margin-top: 4rem; padding: 2rem 1.2rem 3rem;
+  border-top: 1px solid var(--rule);
+  font-family: var(--sans); font-size: .84rem; color: var(--muted);
+  text-align: center;
+}
+footer.site p { margin: .2rem 0; text-indent: 0; }
+footer.site .small { font-size: .78rem; }
+
+main { max-width: 44rem; margin: 0 auto; padding: 0 1.2rem; }
+
+/* ---------- 目次ページ ---------- */
+
+.hero { padding: 2.5rem 0 1rem; border-bottom: 1px solid var(--rule); }
+.hero h1 { font-size: 2.1rem; margin: 0 0 .4rem; letter-spacing: .04em; }
+.hero .sub { font-family: var(--sans); color: var(--muted); margin: 0 0 1.2rem; text-indent: 0; }
+.hero .lead { text-indent: 0; margin: 0 0 1.4rem; }
+.hero .dl { text-indent: 0; margin: 0 0 1.2rem; display: flex; flex-wrap: wrap; align-items: center; gap: .8rem; }
+.btn {
+  display: inline-block; padding: .55rem 1.1rem; border-radius: 4px;
+  background: var(--lv2-accent); color: #fff; text-decoration: none;
+  font-family: var(--sans); font-size: .92rem; font-weight: 700;
+}
+.btn:hover { background: #27496d; }
+.hero .meta { font-family: var(--sans); font-size: .85rem; color: var(--muted); }
+.levels { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem; }
+.lvtag {
+  display: inline-block; font-family: var(--sans); font-size: .78rem;
+  padding: .18rem .6rem; border-radius: 3px; color: #fff; line-height: 1.5;
+}
+.lvtag.t1 { background: #6a6a68; }
+.lvtag.t2 { background: var(--lv2-accent); }
+.lvtag.t3 { background: var(--lv3-accent); }
+.levels-note { font-family: var(--sans); font-size: .8rem; color: var(--muted); }
+
+h2.part {
+  font-family: var(--sans); font-size: 1.05rem; font-weight: 700;
+  margin: 2.4rem 0 .6rem; padding-left: .6rem;
+  border-left: 5px solid var(--lv2-accent);
+}
+h2.part .period { font-weight: 400; font-size: .82rem; color: var(--muted); margin-left: .7rem; }
+ol.toc { list-style: none; margin: 0; padding: 0; }
+ol.toc li { border-bottom: 1px solid var(--rule); }
+ol.toc a {
+  display: flex; gap: .9rem; padding: .6rem .2rem;
+  color: inherit; text-decoration: none;
+}
+ol.toc a:hover { background: var(--lv2-tint); }
+ol.toc .n { font-family: var(--sans); font-size: .82rem; color: var(--lv2-accent); min-width: 4.6em; }
+
+/* ---------- 章ページ ---------- */
+
+.part-label { font-family: var(--sans); font-size: .82rem; color: var(--muted); margin: 2rem 0 .3rem; text-indent: 0; }
+article.chapter h1 { font-size: 1.7rem; line-height: 1.5; margin: 0 0 1.2rem; }
+article.chapter h1 .ch-num {
+  display: block; font-family: var(--sans); font-size: .82rem;
+  color: var(--lv2-accent); margin-bottom: .3rem;
+}
+article.chapter h3 {
+  font-size: 1.18rem; margin: 2.6rem 0 .8rem; padding-left: .55rem;
+  border-left: 5px solid var(--lv2-accent); line-height: 1.5;
+}
+article.chapter h4 { font-size: 1.02rem; margin: 0 0 .5rem; }
+
+p { margin: 0; text-indent: 1em; }
+h1 + p, h3 + p, h4 + p, li > p:first-child,
+blockquote > p:first-child, .no-indent { text-indent: 0; }
+em { font-style: normal; font-weight: 600; }
+strong { font-weight: 700; }
+
+.yogo { font-weight: 700; color: var(--lv2-accent); }
+.yogo-hl { background: linear-gradient(transparent 62%, #ffe9a8 62%); font-weight: 700; }
+.orig, .dates { font-family: var(--sans); font-size: .82em; color: var(--muted); }
+
+ruby rt { font-size: .5em; }
+
+.chnav {
+  display: flex; justify-content: space-between; gap: 1rem;
+  margin: 1.4rem 0; padding: .7rem 0; border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  font-family: var(--sans); font-size: .82rem;
+}
+.chnav a { color: var(--lv2-accent); text-decoration: none; }
+.chnav a:hover { text-decoration: underline; }
+.chnav .next { text-align: right; }
+
+/* ---------- 三層と定型の囲み ---------- */
+
+.toi, .lv2, .lv3, .shiryo, .mondai {
+  margin: 2rem 0; padding: 1rem 1.15rem; border-radius: 4px;
+  font-size: .96rem; line-height: 1.9;
+}
+.toi > *:last-child, .lv2 > *:last-child, .lv3 > *:last-child,
+.shiryo > *:last-child, .mondai > *:last-child { margin-bottom: 0; }
+
+.toi { background: var(--toi-tint); border-left: 5px solid var(--toi-accent); }
+.toi > h4 { color: var(--toi-accent); }
+.toi ul { margin: .4rem 0 0; padding-left: 1.2rem; }
+.toi li { margin: .25rem 0; }
+
+.lv2 { background: var(--lv2-tint); border-left: 5px solid var(--lv2-accent); }
+.lv3 { background: var(--lv3-tint); border-left: 5px double var(--lv3-accent);
+       border-top: 1px solid var(--lv3-accent); border-bottom: 1px solid var(--lv3-accent); }
+.lv2 > h4::before, .lv3 > h4::before {
+  font-family: var(--sans); font-size: .74em; letter-spacing: .05em;
+  padding: .12em .55em; margin-right: .6em; border-radius: 3px;
+  color: #fff; vertical-align: .1em;
+}
+.lv2 > h4::before { content: "★★ 大学"; background: var(--lv2-accent); }
+.lv3 > h4::before { content: "★★★ 大学院"; background: var(--lv3-accent); }
+
+.shiryo { background: var(--shiryo-tint); border: 1px solid var(--shiryo-accent); }
+.shiryo > h4 { color: #6f5526; }
+.shiryo blockquote {
+  margin: .8rem 0; padding: .7rem .9rem; background: #fff;
+  border-left: 3px solid var(--shiryo-accent); font-size: .95em;
+}
+.shutten { font-family: var(--sans); font-size: .8rem; color: var(--muted); text-indent: 0; margin-top: .5rem; }
+.yomitoki { margin-top: 1rem; padding-top: .9rem; border-top: 1px dashed var(--shiryo-accent); }
+
+.mondai { background: var(--mondai-tint); border-top: 3px solid var(--mondai-accent); }
+.q-set { margin: .9rem 0; }
+.q-head {
+  display: inline-block; font-family: var(--sans); font-size: .78rem; font-weight: 700;
+  background: var(--mondai-accent); color: #fff; padding: .1em .6em; border-radius: 3px;
+}
+.mondai ol { margin: .4rem 0 0; padding-left: 1.4rem; }
+.mondai li { margin: .3rem 0; }
+.haiten { font-family: var(--sans); font-size: .76rem; color: var(--muted); }
+
+/* ---------- 図版と表 ---------- */
+
+figure { margin: 2rem 0; text-align: center; }
+figure svg { max-width: 100%; height: auto; }
+figcaption {
+  font-family: var(--sans); font-size: .82rem; line-height: 1.7;
+  color: var(--muted); text-align: left; margin-top: .5rem;
+}
+figcaption::before {
+  content: "図" attr(data-ch) "-" counter(figc) "　";
+  font-weight: 700; color: var(--lv2-accent);
+}
+article.chapter { counter-reset: figc tblc; }
+figure { counter-increment: figc; }
+
+table { width: 100%; border-collapse: collapse; margin: 1.6rem 0; font-size: .88rem; }
+th, td { border-bottom: 1px solid var(--rule); padding: .45rem .5rem; text-align: left; }
+thead th { border-bottom: 2px solid var(--mondai-accent); font-family: var(--sans); }
+caption { caption-side: top; font-family: var(--sans); font-size: .85rem; text-align: left; margin-bottom: .4rem; }
+caption::before { content: "表" attr(data-ch) "-" counter(tblc) "　"; color: var(--lv2-accent); }
+table { counter-increment: tblc; }
+
+/* 横に長い表と図は、画面が狭いときだけ横スクロールさせる */
+@media (max-width: 40rem) {
+  table { display: block; overflow-x: auto; white-space: nowrap; }
+}
+
+/* ---------- 巻末資料 ---------- */
+
+/* ページ番号は印刷専用の機能なので、Web版では出さずリンクだけを生かす */
+.sakuin a::after, .zuhan a::after, .xref::after { content: none; }
+
+.sakuin { font-size: .88rem; }
+/* 段組みは五十音の見出しごとに閉じる。索引全体を2段にすると、
+   片方の段を最後まで読んでから頁の先頭へ戻ることになってしまう */
+.sakuin ul { columns: 2; column-gap: 1.6rem; }
+.sakuin ul, .zuhan ul, .annai ul, .nenpyo ul { list-style: none; margin: 0; padding: 0; }
+.sakuin li, .zuhan li, .nenpyo li { margin: .15rem 0; text-indent: 0; }
+.sakuin a, .zuhan a, .annai a { color: var(--lv2-accent); text-decoration: none; }
+.sakuin a:hover, .zuhan a:hover { text-decoration: underline; }
+/* 同じ用語が複数の章に出るとき、二つめ以降は小さな連番で示す */
+.sakuin .more {
+  font-family: var(--sans); font-size: .72em; vertical-align: super;
+  margin-left: .3em; color: var(--muted);
+}
+.sakuin .more:hover { color: var(--lv2-accent); }
+.idx-group {
+  font-family: var(--sans); font-size: .86rem; font-weight: 700;
+  background: #edf0f3; padding: .2em .5em; margin: 1.4rem 0 .5rem;
+  break-after: avoid; text-indent: 0;
+}
+.nenpyo .ny {
+  display: inline-block; min-width: 8.4em;
+  font-family: var(--sans); font-size: .86em; font-weight: 700; color: var(--lv2-accent);
+}
+.zuhan .zu-num { font-family: var(--sans); font-weight: 700; color: var(--lv2-accent); }
+.yogoshu .y-item { text-indent: 0; margin: .5rem 0; }
+.yogoshu .y-term { font-family: var(--sans); font-weight: 700; color: var(--lv2-accent); margin-right: .4em; }
+.yogoshu .y-ref { color: var(--muted); font-size: .88em; }
+.kaito .k-item { margin: .9rem 0; }
+.kaito .k-ch { font-family: var(--sans); font-weight: 700; color: var(--lv2-accent); margin-right: .5em; }
+.kaito .k-kan { display: block; font-size: .9em; color: #7a4a2a; margin-top: .2rem; }
+.annai li { margin: .5rem 0; text-indent: -1em; padding-left: 1em; }
+.annai li::before { content: "・"; }
+
+@media (max-width: 40rem) {
+  body { font-size: 16px; line-height: 1.9; }
+  .sakuin ul { columns: 1; }
+  article.chapter h1 { font-size: 1.42rem; }
+  .chnav { flex-direction: column; gap: .4rem; }
+  .chnav .next { text-align: left; }
+}
+
+/* 付録A・B・C・E */
+.kigo-hyo { margin: 1rem 0 1.6rem; overflow-x: auto; }
+.kigo-hyo table { width: 100%; border-collapse: collapse; font-size: .92rem; }
+.kigo-hyo th { background: #eceff3; text-align: left; padding: .4rem .6rem; font-weight: 700; }
+.kigo-hyo td { padding: .38rem .6rem; border-bottom: 1px solid #e3e7ec; vertical-align: top; }
+.kigo-hyo td:last-child { white-space: nowrap; color: #6a6a68; font-size: .88rem; }
+
+.teigishu .idx-group, .hanreishu .idx-group {
+  background: #eceff3; padding: .2rem .5rem; margin: 1.3rem 0 .5rem; font-weight: 700;
+}
+.hanreishu .idx-group { background: #f4ece9; }
+.teigishu ul, .hanreishu ul { list-style: none; margin: 0; padding: 0; }
+.teigishu li, .hanreishu li { margin: .3rem 0; }
+.teigishu a, .hanreishu a { text-decoration: none; color: inherit; }
+.hanreishu .idx-term { font-weight: 700; color: #8c2f1e; }
+.hanrei-lead { color: #55555a; font-size: .94em; }
+.tejun p { margin: .6rem 0; }
+.tejun strong { color: #1f3b5c; }

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第66章 双対空間｜位相・解析大全</title>
+<meta name="description" content="位相・解析大全　第66章　双対空間">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;600&display=swap">
+<link rel="stylesheet" href="web.css">
+</head>
+<body>
+<header class="site">
+  <a class="site-title" href="index.html">位相・解析大全</a>
+  <nav class="site-nav">
+    <a href="index.html">目次</a>
+    <a href="isou-kaiseki-taizen.pdf">PDF版</a>
+  </nav>
+</header>
+<main>
+<article class="chapter">
+<p class="part-label">第VIII部　関数空間</p>
+<h1><span class="ch-num">第66章</span>双対空間</h1>
+<nav class="chnav">
+<a class="prev" href="ch65.html">← 第65章　正規直交基底とParsevalの等式</a>
+<a class="next" href="ch67.html">第67章　Hahn–Banachの定理 →</a>
+</nav>
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>双対空間を調べると、もとの空間の何がわかるのか。</li>
+<li>Lᵖ の双対は、なぜ Lᵠ になるのか。</li>
+<li>二重双対に戻らない空間は、何が違うのか。</li>
+</ul>
+</div>
+
+<h3 id="s66-1">双対空間</h3>
+
+<div class="teigi" id="def-sotsui">
+<h4>双対空間</h4>
+<p class="no-indent">ノルム空間 <m>E</m> 上の有界線型汎関数の全体を <m>E^*=B(E,\mathbb{K})</m> と書き、<strong>双対空間</strong>という。</p>
+<p><m>\mathbb{K}</m>（スカラー体）は完備なので、<ref t="thm-be-f-kanbi"/> より <em><m>E^*</m> はつねにバナッハ空間である</em>（<m>E</m> が完備でなくても）。</p>
+</div>
+
+<div class="chui">
+<h4>双対を調べる理由</h4>
+<p class="no-indent"><span class="yogo-hl">元そのものを扱うより、汎関数を通して見るほうが易しいことが多い。</span></p>
+<p><em>ノルムが上限として書ける</em>（第60章★★）。<em>収束の判定が弱められる</em>（第70章）。<em>コンパクト性が回復する</em>（第71章）。</p>
+<p>ただし <m>E^*</m> が豊かであることは自明でない。<em>第63章★★★で見たとおり、<m>L^p</m>（<m>p<1</m>）の双対は <m>0</m> だけである。</em></p>
+<p><span class="yogo-hl">「双対が十分に大きい」ことを保証するのが、第67章のハーン–バナッハの定理である。</span>この章では、具体的な空間の双対を決める。</p>
+</div>
+
+<h3 id="s66-2">Lᵖ の双対</h3>
+
+<div class="teiri" id="thm-lp-sotsui">
+<h4>Lᵖ の双対</h4>
+<p class="no-indent"><m>(X,\mathcal{A},\mu)</m> を σ-有限測度空間、<m>1\le p<\infty</m>、<m>\frac1p+\frac1q=1</m> とする。写像</p>
+<M>\Phi \colon L^q(\mu) \to (L^p(\mu))^*, \qquad (\Phi g)(f) = \int_X fg\,d\mu</M>
+<p class="no-indent">は等距離同型である。すなわち <m>(L^p)^* \cong L^q</m>。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><strong>well-defined と等距離性。</strong>ヘルダーの不等式（<ref t="thm-holder"/>）より <m>\|\Phi g\|\le\|g\|_q</m>。逆は第60章★★で見たとおり、<m>f=|g|^{q-1}\mathrm{sgn}(g)</m>（<m>q<\infty</m>）で等号が達成される。<em><m>q=\infty</m>（<m>p=1</m>）の場合は、<m>|g|>\|g\|_\infty-\varepsilon</m> なる正測度集合の上で <m>f</m> を取る。</em></p>
+<p><strong>全射性。</strong><m>\mu(X)<\infty</m> の場合を示す（σ-有限は分けて貼る）。<m>\varphi\in(L^p)^*</m> とし</p>
+<M>\nu(E) = \varphi(\mathbf{1}_E) \qquad (E\in\mathcal{A})</M>
+<p class="no-indent">とおく。<em><m>\nu</m> は可算加法的である</em>——<m>E=\bigsqcup_n E_n</m> について <m>\|\mathbf{1}_E - \sum_{n\le N}\mathbf{1}_{E_n}\|_p = \mu(\bigsqcup_{n>N}E_n)^{1/p}\to0</m> で、<m>\varphi</m> が連続だから。</p>
+<p><strong>絶対連続。</strong><m>\mu(E)=0</m> なら <m>\mathbf{1}_E=0</m>（<m>L^p</m> で）なので <m>\nu(E)=0</m>。<span class="yogo-hl">すなわち <m>\nu\ll\mu</m>。</span></p>
+<p><strong>ラドン–ニコディム。</strong><ref t="thm-radon-nikodym"/> より <m>\nu(E)=\int_E g\,d\mu</m> なる <m>g\in L^1</m> が存在する。線型性から、単関数 <m>s</m> について <m>\varphi(s)=\int sg\,d\mu</m>。</p>
+<p><strong><m>g\in L^q</m> であること。</strong><m>q<\infty</m> とする。<m>E_n=\{|g|\le n\}</m>、<m>f_n=\mathbf{1}_{E_n}|g|^{q-1}\mathrm{sgn}(g)</m>（有界なので <m>L^p</m>）とおくと</p>
+<M>\int_{E_n}|g|^q \,d\mu = \varphi(f_n) \le \|\varphi\|\,\|f_n\|_p = \|\varphi\|\Big(\int_{E_n}|g|^q\Big)^{1/p}</M>
+<p class="no-indent"><em>よって <m>\big(\int_{E_n}|g|^q\big)^{1-1/p}\le\|\varphi\|</m>、すなわち <m>\|g\mathbf{1}_{E_n}\|_q\le\|\varphi\|</m>。単調収束定理で <m>\|g\|_q\le\|\varphi\|</m>。</em></p>
+<p><strong>一致。</strong>単関数が <m>L^p</m> で稠密（<ref t="thm-tankansu-chumitsu"/>）なので、<m>\varphi=\Phi g</m>。</p>
+</div>
+
+<div class="chui">
+<h4>証明の要</h4>
+<p class="no-indent"><span class="yogo-hl">ラドン–ニコディムの定理が、双対の記述を与えている。</span></p>
+<p><em>「汎関数 → 測度 → 密度」という道筋である。</em>第59章のリースの表現定理も、まったく同じ構造をしていた。</p>
+<p>そして<em>稠密性</em>（第62章）が、単関数の上の等式を全体へ運んでいる。<span class="yogo-hl">第VIII部のここまでの道具が、すべて一度に使われる。</span></p>
+</div>
+
+<div class="hanrei" id="cex-linfty-sotsui">
+<h4>p = ∞ では成り立たない</h4>
+<p class="no-indent"><m>(L^\infty)^* \ne L^1</m>。<em><m>L^\infty</m> は <m>L^1</m> よりずっと大きい双対をもつ。</em></p>
+<p><strong>例。</strong><m>C[0,1]\subseteq L^\infty[0,1]</m> の上で <m>f\mapsto f(0)</m> は有界線型汎関数。ハーン–バナッハの定理（第67章）で <m>L^\infty</m> 全体に延ばすと、<em><m>\int fg</m> の形では書けない汎関数</em>が得られる。</p>
+<p><span class="yogo-hl">実は <m>(L^\infty)^*</m> は「有限加法的測度」の空間である</span>（第52章で捨てたもの）。</p>
+<p>同じ理由で <m>(\ell^\infty)^*\ne\ell^1</m>。<em>一方 <m>c_0^*=\ell^1</m> と <m>(\ell^1)^*=\ell^\infty</m> は成り立つ。</em></p>
+</div>
+
+<h3 id="s66-3">反射性</h3>
+
+<div class="teigi" id="def-hansha">
+<h4>標準埋め込みと反射性</h4>
+<p class="no-indent"><m>J \colon E \to E^{**}</m> を</p>
+<M>(Jx)(\varphi) = \varphi(x) \qquad (\varphi\in E^*)</M>
+<p class="no-indent">で定める。<em><m>J</m> は等距離埋め込みである</em>（ハーン–バナッハの定理から、第67章）。<m>J</m> が全射のとき <m>E</m> は<strong>反射的</strong>であるという。</p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent"><span class="yogo-hl">「<m>E</m> と <m>E^{**}</m> が同型」では足りない。標準埋め込み <m>J</m> が全射でなければならない。</span></p>
+<p><em>ジェイムズの空間</em>——<m>E\cong E^{**}</m> だが反射的でないバナッハ空間が存在する（一九五一年）。<m>E^{**}/J(E)</m> が一次元になる。</p>
+</div>
+
+<div class="teiri" id="thm-hansha-rei">
+<h4>反射的かどうか</h4>
+<p class="no-indent">（1）<m>L^p(\mu)</m>（<m>1<p<\infty</m>）は反射的。<br>
+（2）<m>L^1</m>、<m>L^\infty</m>、<m>c_0</m>、<m>\ell^1</m>、<m>\ell^\infty</m>、<m>C(K)</m>（<m>K</m> 無限）は反射的でない。<br>
+（3）ヒルベルト空間は反射的。<br>
+（4）有限次元空間は反射的。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">（1）<ref t="thm-lp-sotsui"/> を二回使うと <m>(L^p)^{**}\cong(L^q)^*\cong L^p</m>。<em>この同型が標準埋め込みに一致することを確かめればよい。</em></p>
+<p>（3）<ref t="thm-riesz-hyogen-hilbert"/> を二回。<em>反線型が二回で線型に戻る。</em></p>
+<p>（2）<m>c_0^{**}=(\ell^1)^*=\ell^\infty \ne c_0</m>。<m>\ell^1</m> については <m>(\ell^1)^{**}=(\ell^\infty)^*</m> が <m>\ell^1</m> より真に大きい。</p>
+</div>
+
+<div class="teiri" data-kind="命題" id="prop-hansha-seishitsu">
+<h4>反射性の性質</h4>
+<p class="no-indent">（1）<m>E</m> 反射的 <m>\iff</m> <m>E^*</m> 反射的。<br>
+（2）反射的空間の閉部分空間は反射的。<br>
+（3）<m>E</m> が反射的であることと、閉単位球が弱コンパクトであることは同値（第71章）。</p>
+</div>
+
+<figure id="fig66-1">
+<svg viewBox="0 0 470 276" width="470" height="276" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <defs>
+    <marker id="a66" markerWidth="8" markerHeight="8" refX="7" refY="2.6" orient="auto"><path d="M0,0 L7,2.6 L0,5.2 z" fill="#35618f"/></marker>
+  </defs>
+
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">双対を二回取ると、戻るか戻らないか</text>
+
+  <rect x="14" y="26" width="442" height="110" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+
+  <text x="24" y="42" font-size="7" font-weight="700" fill="#1e4a41">反射的　1 &lt; p &lt; ∞</text>
+  <rect x="34" y="50" width="62" height="20" rx="3" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="65" y="63" font-size="6.6" text-anchor="middle" fill="#1e4a41">Lᵖ</text>
+  <rect x="126" y="50" width="62" height="20" rx="3" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="157" y="63" font-size="6.6" text-anchor="middle" fill="#1e4a41">共役指数の空間</text>
+  <rect x="218" y="50" width="62" height="20" rx="3" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="249" y="63" font-size="6.6" text-anchor="middle" fill="#1e4a41">Lᵖ</text>
+  <path d="M100,60 L122,60" stroke="#2f6b5f" stroke-width="1.1" marker-end="url(#a66)"/>
+  <path d="M192,60 L214,60" stroke="#2f6b5f" stroke-width="1.1" marker-end="url(#a66)"/>
+  <text x="300" y="63" font-size="6.2" fill="#1e4a41">J が全射——もとに戻る</text>
+
+  <text x="24" y="90" font-size="7" font-weight="700" fill="#8c2f1e">反射的でない</text>
+  <rect x="34" y="98" width="62" height="20" rx="3" fill="#fdf6f4" stroke="#a03b2e"/>
+  <text x="65" y="111" font-size="6.6" text-anchor="middle" fill="#8c2f1e">c₀</text>
+  <rect x="126" y="98" width="62" height="20" rx="3" fill="#fdf6f4" stroke="#a03b2e"/>
+  <text x="157" y="111" font-size="6.6" text-anchor="middle" fill="#8c2f1e">ℓ¹</text>
+  <rect x="218" y="98" width="62" height="20" rx="3" fill="#fdf6f4" stroke="#a03b2e"/>
+  <text x="249" y="111" font-size="6.6" text-anchor="middle" fill="#8c2f1e">有界数列</text>
+  <path d="M100,108 L122,108" stroke="#a03b2e" stroke-width="1.1" marker-end="url(#a66)"/>
+  <path d="M192,108 L214,108" stroke="#a03b2e" stroke-width="1.1" marker-end="url(#a66)"/>
+  <text x="300" y="105" font-size="6.2" fill="#8c2f1e">c₀ ⊊ 有界数列の空間——真に大きくなる</text>
+  <text x="300" y="116" font-size="6.2" fill="#6a6a68">ℓ¹ の二重双対はさらに大きい</text>
+
+  <text x="24" y="130" font-size="6.2" fill="#6a6a68">E ≅ E** でも反射的とは限らない（ジェイムズの空間）。標準埋め込み J が全射であることが定義である</text>
+
+  <rect x="14" y="146" width="216" height="118" rx="4" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="24" y="161" font-size="7.6" font-weight="700" fill="#1e4a41">双対の表</text>
+  <text x="24" y="178" font-size="6.6" fill="#1e4a41">Lᵖ（1 ≤ p &lt; ∞）</text>
+  <text x="140" y="178" font-size="6.6" fill="#1e4a41">共役指数の空間</text>
+  <text x="24" y="191" font-size="6.6" fill="#1e4a41">c₀</text>
+  <text x="140" y="191" font-size="6.6" fill="#1e4a41">ℓ¹</text>
+  <text x="24" y="204" font-size="6.6" fill="#1e4a41">C(K)（K コンパクト）</text>
+  <text x="140" y="204" font-size="6.6" fill="#1e4a41">M(K)（第59章）</text>
+  <text x="24" y="217" font-size="6.6" fill="#1e4a41">ヒルベルト空間 H</text>
+  <text x="140" y="217" font-size="6.6" fill="#1e4a41">H 自身（反線型）</text>
+  <text x="24" y="233" font-size="6.6" fill="#8c2f1e">有界関数の空間</text>
+  <text x="140" y="233" font-size="6.6" fill="#8c2f1e">有限加法的測度の空間</text>
+  <text x="24" y="247" font-size="6.4" fill="#6a6a68">——第52章で捨てたものが、ここで</text>
+  <text x="24" y="257" font-size="6.4" fill="#6a6a68">双対として戻ってくる</text>
+
+  <rect x="240" y="146" width="216" height="118" rx="4" fill="#f4f1ea" stroke="#8a6b2c"/>
+  <text x="250" y="161" font-size="7.6" font-weight="700" fill="#5a4520">証明はどれも同じ骨格</text>
+  <text x="250" y="178" font-size="6.6" fill="#5a4520">一　汎関数から集合関数 ν(E) ＝ φ(1_E) を作る</text>
+  <text x="250" y="190" font-size="6.6" fill="#5a4520">二　連続性から ν が可算加法的だと示す</text>
+  <text x="250" y="202" font-size="6.6" fill="#5a4520">三　ν ≪ μ を確かめる</text>
+  <text x="250" y="214" font-size="6.6" fill="#5a4520">四　ラドン–ニコディムで密度 g を得る</text>
+  <text x="250" y="226" font-size="6.6" fill="#5a4520">五　稠密性で単関数の上の等式を全体へ運ぶ</text>
+  <text x="250" y="243" font-size="6.4" fill="#6a6a68">第59章のリースの表現定理も、同じ五段である</text>
+  <text x="250" y="255" font-size="6.4" fill="#8c2f1e">「汎関数 → 測度 → 密度」が共通の道筋</text>
+</svg>
+<figcaption data-ch="66">Lᵖ（1 &lt; p &lt; ∞）は双対を二回取るともとに戻る。c₀ や ℓ¹ は戻らず、真に大きくなる。双対の決定は、汎関数から測度を作りラドン–ニコディムで密度を取り出す、という五段の手順で行われる。</figcaption>
+</figure>
+
+<div class="lv2">
+<h4>双対作用素と、零化域</h4>
+<p><strong>双対作用素。</strong><m>T\in B(E,F)</m> に対し <m>T^* \in B(F^*,E^*)</m> を <m>(T^*\varphi)(x)=\varphi(Tx)</m> で定める。</p>
+<p><em><m>\|T^*\|=\|T\|</m></em>（ハーン–バナッハの定理から、第67章）。<span class="yogo-hl">ヒルベルト空間の随伴（第64章★★）は、リースの同一視を挟んだこの作用素である。</span></p>
+<p><strong>零化域。</strong><m>M\subseteq E</m> に対し <m>M^\circ=\{\,\varphi\in E^* \mid \varphi|_M=0\,\}</m>、<m>N\subseteq E^*</m> に対し <m>{}^\circ N=\{\,x\in E\mid \varphi(x)=0\ (\forall\varphi\in N)\,\}</m>。</p>
+<p>ハーン–バナッハの定理から <m>{}^\circ(M^\circ)=\overline{\mathrm{span}}\,M</m>。<em>ヒルベルト空間の <m>(M^\perp)^\perp=M</m>（<ref t="thm-chokkou-bunkai"/>）の一般化である。</em></p>
+<p><strong>核と像。</strong></p>
+<M>\ker T^* = (\mathrm{ran}\,T)^\circ, \qquad \overline{\mathrm{ran}\,T} = {}^\circ(\ker T^*)</M>
+<p class="no-indent"><span class="yogo-hl">第64章★★の関係式が、直交補空間を零化域に置き換えてそのまま成り立つ。</span></p>
+<p><strong>商と部分空間の双対。</strong><m>M\subseteq E</m> を閉部分空間とすると</p>
+<M>M^* \cong E^*/M^\circ, \qquad (E/M)^* \cong M^\circ</M>
+<p class="no-indent"><em>「部分空間の双対は商、商の双対は部分空間」——向きが入れ替わる。</em>圏論でいう反変性である。</p>
+<p><strong>使いどころ。</strong>第73章のコンパクト作用素で、フレドホルムの択一定理を</p>
+<M>Tx=y \text{ が解をもつ} \iff \varphi(y)=0 \ (\forall\varphi\in\ker T^*)</M>
+<p class="no-indent">という形で述べる。<span class="yogo-hl">「解の存在条件」が「双対の核への直交性」で書ける</span>——線型代数の <m>\mathrm{rank}</m> の議論が、無限次元でこの形を取る。</p>
+</div>
+
+<div class="lv3">
+<h4>L^∞ の双対と、バナッハ極限の再訪</h4>
+<p><ref t="cex-linfty-sotsui"/> で <m>(L^\infty)^*</m> が有限加法的測度の空間だと述べた。<em>正確に書く。</em></p>
+<p><strong>定理。</strong><m>(L^\infty(\mu))^*</m> は、<m>\mu</m>-零集合で消える<em>有界有限加法的符号付測度</em>の空間 <m>ba(\mu)</m> と等距離同型である。</p>
+<p><em>証明の骨子。</em><m>\varphi\in(L^\infty)^*</m> に対し <m>\nu(E)=\varphi(\mathbf{1}_E)</m> とおく。<span class="yogo-hl">今度は <m>\|\mathbf{1}_{\bigsqcup_{n>N}E_n}\|_\infty=1</m> なので、可算加法性が出ない。</span>有限加法性だけが残る。</p>
+<p><strong>第52章との対応。</strong>そこで「有限加法性だけなら全部の集合に長さを与えられる」と述べ、可算加法性を選んだ。<em>捨てたものが、双対空間として戻ってきた。</em></p>
+<p><strong>バナッハ極限。</strong>第44章★★★で、有界数列に「極限」を与える汎関数 <m>\Lambda\in(\ell^\infty)^*</m> の存在を予告した。</p>
+<p><em>構成。</em><m>c</m>（収束列の空間）の上で <m>\Lambda=\lim</m> とし、<m>p(x)=\limsup_n x_n</m> を劣線型汎関数として、ハーン–バナッハの定理（第67章）で <m>\ell^\infty</m> 全体へ延ばす。</p>
+<p>平行移動不変性は、<em><m>p(x-\sigma x)\le0</m>（<m>\sigma</m> はシフト）を使って別途に作る</em>。<span class="yogo-hl">結果は <m>\ell^1</m> の元では表せない汎関数である。</span></p>
+<p><strong>ストーン–チェック空間との関係。</strong><m>(\ell^\infty)^*</m> は、第23章の <m>\beta\mathbb{N}</m> 上の測度の空間と同一視できる。</p>
+<p><em>実際 <m>\ell^\infty \cong C(\beta\mathbb{N})</m></em>（有界数列は <m>\beta\mathbb{N}</m> 上の連続関数に一意に延びる）。第59章のリースの表現定理より <m>(\ell^\infty)^*\cong M(\beta\mathbb{N})</m>。</p>
+<p><span class="yogo-hl">バナッハ極限は、<m>\beta\mathbb{N}\setminus\mathbb{N}</m> 上の確率測度にほかならない。</span>超フィルター（第12章）で極限を取る、という操作の測度論的な姿である。</p>
+<p><strong>選択公理への依存。</strong>これらはすべてハーン–バナッハの定理、すなわち弱い形の選択公理を使う。<em>第52章★★★のソロヴェイのモデルでは、<m>(\ell^\infty)^*=\ell^1</m> になってしまう。</em></p>
+<p>第VII部で「非可測集合は選択公理が作る」と述べたのと、まったく同じ構図である。<span class="yogo-hl">双対空間の豊かさもまた、選択公理の産物を含んでいる。</span></p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li><m>c_0^*=\ell^1</m> を示せ。</li>
+<li><m>(\ell^1)^*=\ell^\infty</m> を示せ。</li>
+<li><m>\ell^2</m> の双対が <m>\ell^2</m> であることを、<ref t="thm-lp-sotsui"/> から確かめよ。</li>
+<li>有限次元空間が反射的であることを示せ。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li><ref t="thm-lp-sotsui"/> で <m>\nu</m> が可算加法的であることを、細部まで示せ。<span class="haiten">（30点）</span></li>
+<li><ref t="thm-lp-sotsui"/> の <m>g\in L^q</m> の部分を示せ。<span class="haiten">（30点）</span></li>
+<li><m>p=1</m> の場合（<m>q=\infty</m>）の等距離性を示せ。<span class="haiten">（25点）</span></li>
+<li><m>(L^p)^{**}\cong L^p</m> の同型が標準埋め込みに一致することを確かめよ。<span class="haiten">（30点）</span></li>
+<li>反射的空間の閉部分空間が反射的であることを示せ。<span class="haiten">（35点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li><m>(\ell^\infty)^*\ne\ell^1</m> を、具体的な汎関数を作って示せ。<span class="haiten">（40点）</span></li>
+<li><m>\ell^\infty \cong C(\beta\mathbb{N})</m> を示せ。<span class="haiten">（45点）</span></li>
+<li>部分空間と商の双対の関係 <m>(E/M)^*\cong M^\circ</m> を示せ。<span class="haiten">（35点）</span></li>
+</ol>
+</div>
+</div>
+<nav class="chnav">
+<a class="prev" href="ch65.html">← 第65章　正規直交基底とParsevalの等式</a>
+<a class="next" href="ch67.html">第67章　Hahn–Banachの定理 →</a>
+</nav>
+</article>
+</main>
+<footer class="site">
+  <p>位相・解析大全　学部から大学院まで、三層で読む位相空間論と解析学</p>
+  <p class="small">本文・図版とも本書のために作成したものです。数式は MathJax でベクタ化して組んでいます。</p>
+</footer>
+</body>
+</html>

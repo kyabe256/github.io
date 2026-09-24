@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第76章 コンパクト自己共役作用素のスペクトル定理｜位相・解析大全</title>
+<meta name="description" content="位相・解析大全　第76章　コンパクト自己共役作用素のスペクトル定理">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;600&display=swap">
+<link rel="stylesheet" href="web.css">
+</head>
+<body>
+<header class="site">
+  <a class="site-title" href="index.html">位相・解析大全</a>
+  <nav class="site-nav">
+    <a href="index.html">目次</a>
+    <a href="isou-kaiseki-taizen.pdf">PDF版</a>
+  </nav>
+</header>
+<main>
+<article class="chapter">
+<p class="part-label">第X部　スペクトル理論</p>
+<h1><span class="ch-num">第76章</span>コンパクト自己共役作用素のスペクトル定理</h1>
+<nav class="chnav">
+<a class="prev" href="ch75.html">← 第75章　自己共役作用素</a>
+<a class="next" href="ch77.html">第77章　一般のスペクトル定理と作用素値測度 →</a>
+</nav>
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>無限次元で「対角化できる」とは、何を意味するのか。</li>
+<li>固有値は、どうやって取り出すのか。</li>
+<li>この定理は、どんな問題を解くのか。</li>
+</ul>
+</div>
+
+<h3 id="s76-1">対角化を無限次元に持ち上げる</h3>
+
+<p>実対称行列 <m>A</m> は直交行列 <m>P</m> で <m>P^{-1}AP=\mathrm{diag}(\lambda_1,\dots,\lambda_n)</m> と対角化できる。これを基底の言葉に翻訳すると、<em>固有ベクトルからなる正規直交基底 <m>e_1,\dots,e_n</m> があって</em></p>
+<M>Ax = \sum_{k=1}^n \lambda_k (x,e_k)\,e_k</M>
+<p>と書ける、ということである。<span class="yogo-hl">この形の式なら、和を無限和にすれば無限次元でも意味をもつ——第65章の正規直交基底の理論が、そのための準備だった。</span></p>
+
+<p>ただし、そのまま持ち上がるわけではない。第74章で見たように、掛け算作用素は自己共役なのに固有ベクトルを一つももたない。<em>「固有ベクトルの基底」が存在するためには、コンパクト性という追加の仮定が要る。</em>本章はコンパクトな場合を完全に片づけ、第77章で一般の場合を扱う。</p>
+
+<div class="teiri" id="lem-koyuchi-sonzai">
+<h4>最大固有値の取り出し</h4>
+<p class="no-indent"><m>T\in B(H)</m> をコンパクトかつ自己共役、<m>T\ne0</m> とする。このとき <m>\lambda=\|T\|</m> または <m>\lambda=-\|T\|</m> が <m>T</m> の固有値である。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><ref t="thm-suchi-han-i"/>より <m>\|T\|=\max(|m|,|M|)</m> で、<m>m,M\in\sigma(T)</m>。<m>M=\|T\|</m> の場合を扱う（<m>m=-\|T\|</m> なら <m>-T</m> に適用する）。</p>
+<p class="no-indent">数値範囲の定義から、単位ベクトル列 <m>x_n</m> で <m>(Tx_n,x_n)\to M</m> となるものがある。<m>\|Tx_n\|\le M</m> に注意して</p>
+<M>\|Tx_n-Mx_n\|^2 = \|Tx_n\|^2 - 2M(Tx_n,x_n) + M^2 \le 2M^2 - 2M(Tx_n,x_n) \to 0</M>
+<p class="no-indent"><em>ここまでは自己共役性だけで出る。</em>ここでコンパクト性を使う：<m>x_n</m> は有界なので、部分列をとって <m>Tx_{n_k}\to y</m> としてよい（<ref t="def-compact-sayoso"/>）。すると <m>Mx_{n_k}=Tx_{n_k}-(Tx_{n_k}-Mx_{n_k})\to y</m>。<m>M>0</m> だから <m>x_{n_k}\to y/M=:x</m> で、<m>\|x\|=1</m>、<m>T</m> の連続性から <m>Tx=Mx</m>。</p>
+<p><span class="yogo-hl">コンパクト性が使われたのは「<m>Tx_n-Mx_n\to0</m> から <m>x_n</m> 自身の収束を取り出す」一点だけである。</span><em>この一点がないと、極限は弱収束にしかならず、弱極限は零ベクトルになりうる</em>——掛け算作用素で実際にそうなる。</p>
+</div>
+
+<div class="teiri" id="thm-hilbert-schmidt">
+<h4>スペクトル定理（コンパクト自己共役／ヒルベルト–シュミット）</h4>
+<p class="no-indent"><m>H</m> をヒルベルト空間、<m>T\in B(H)</m> をコンパクトかつ自己共役とする。このとき <m>T</m> の固有値からなる実数列 <m>(\lambda_n)</m>（重複を許す、<m>|\lambda_1|\ge|\lambda_2|\ge\cdots</m>）と、<m>(\overline{\mathrm{ran}}\,T)</m> の正規直交基底をなす固有ベクトル列 <m>(e_n)</m> が存在して、</p>
+<M>Tx = \sum_n \lambda_n (x,e_n)\,e_n \qquad (\forall x\in H)</M>
+<p class="no-indent">が成り立つ。固有値の個数が無限のときは <m>\lambda_n\to0</m>。さらに</p>
+<M>H = \ker T \ \oplus\ \overline{\mathrm{span}}\{e_n\}</M>
+<p class="no-indent">であり、<m>H</m> が可分なら <m>H</m> 全体の正規直交基底を固有ベクトルからとれる。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><strong>帰納的に取り出す。</strong><m>H_1=H</m> とし、<ref t="lem-koyuchi-sonzai"/>で <m>|\lambda_1|=\|T\|</m> なる固有値と単位固有ベクトル <m>e_1</m> をとる。<m>H_2=\{e_1\}^\perp</m> と置くと、<em><m>T</m> は <m>H_2</m> を保つ</em>：<m>(x,e_1)=0</m> なら <m>(Tx,e_1)=(x,Te_1)=\lambda_1(x,e_1)=0</m>。<m>T|_{H_2}</m> はまたコンパクト自己共役だから、同じ操作を続ける。こうして <m>|\lambda_1|\ge|\lambda_2|\ge\cdots</m> と正規直交系 <m>(e_n)</m> が得られる。</p>
+<p class="no-indent"><strong>零に収束すること。</strong>もし <m>|\lambda_n|\ge\delta>0</m> が無限に続くなら、<m>e_n</m> は有界列で <m>\|Te_n-Te_m\|^2=|\lambda_n|^2+|\lambda_m|^2\ge2\delta^2</m>。<em><m>(Te_n)</m> は収束部分列をもちえず、コンパクト性に反する</em>（<ref t="prop-compact-kihon"/>）。</p>
+<p class="no-indent"><strong>展開式。</strong><m>P_N x=\sum_{n\le N}(x,e_n)e_n</m>、<m>R_N=T-TP_N</m> と置く。<m>R_N</m> は <m>H_{N+1}=\{e_1,\dots,e_N\}^\perp</m> 上への制限が <m>T|_{H_{N+1}}</m> に一致し、構成から</p>
+<M>\|R_N\| = \|T|_{H_{N+1}}\| = |\lambda_{N+1}| \to 0</M>
+<p class="no-indent">よって <m>TP_N\to T</m> がノルムで成り立ち、<m>TP_Nx=\sum_{n\le N}\lambda_n(x,e_n)e_n</m> だから展開式が出る。<em>収束はノルム収束——各点ごとではなく一様に近づく</em>のが、コンパクト性の恩恵である。</p>
+<p class="no-indent"><strong>分解。</strong><m>x\perp e_n</m>（すべての <m>n</m>）なら展開式から <m>Tx=0</m>。逆は明らか。固有値の手続きが有限で止まる場合は <m>T</m> が有限階である。<m>H</m> が可分なら <m>\ker T</m> の正規直交基底（<ref t="thm-hilbert-bunrui"/>）を継ぎ足せばよい。</p>
+</div>
+
+<div class="chui">
+<h4>「対角化」の意味が変わったところ</h4>
+<p class="no-indent">有限次元では、対角化は<em>基底の取り替え</em>だった。無限次元でも、可分なら基底の取り替えである。<span class="yogo-hl">ただし対角成分は零に収束しなければならない。</span></p>
+<p><em>これは制約ではなく、コンパクト作用素の特徴づけである</em>（第73章の演習1）。「対角成分が零に収束する対角作用素」がコンパクト作用素の標準形であり、逆に零に収束しない対角作用素はコンパクトでない。<m>I</m> が無限次元でコンパクトでない、という事実がこの言い換えである。</p>
+</div>
+
+<h3 id="s76-2">最小最大原理</h3>
+
+<div class="teiri" id="thm-minimax">
+<h4>クーラン–フィッシャーの最小最大原理</h4>
+<p class="no-indent"><m>T</m> をコンパクト自己共役で <m>T\ge0</m> とし、固有値を <m>\lambda_1\ge\lambda_2\ge\cdots\ge0</m> と並べる。このとき</p>
+<M>\lambda_n = \max_{\substack{V\subset H \\ \dim V=n}} \ \min_{\substack{x\in V \\ \|x\|=1}} (Tx,x) = \min_{\substack{W\subset H \\ \dim W=n-1}} \ \max_{\substack{x\perp W \\ \|x\|=1}} (Tx,x)</M>
+<p class="no-indent">右辺の <m>(Tx,x)/\|x\|^2</m> を<strong>レイリー商</strong>という。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">第一の等式を示す。<m>V_n=\mathrm{span}\{e_1,\dots,e_n\}</m> とすると、<m>x=\sum_{k\le n}c_ke_k</m>、<m>\|x\|=1</m> について</p>
+<M>(Tx,x) = \sum_{k\le n}\lambda_k|c_k|^2 \ge \lambda_n</M>
+<p class="no-indent">なので左辺 <m>\ge\lambda_n</m>。逆に <m>\dim V=n</m> なる任意の <m>V</m> について、<m>V\cap\mathrm{span}\{e_1,\dots,e_{n-1}\}^\perp\ne\{0\}</m>（次元の数え上げ：<m>n</m> 次元と余次元 <m>n-1</m> の交わりは <m>1</m> 次元以上）。<em>その交わりの単位ベクトル <m>x</m> は <m>(Tx,x)=\sum_{k\ge n}\lambda_k|c_k|^2\le\lambda_n</m> をみたす。</em>よって最小値は <m>\lambda_n</m> 以下。第二の等式も同様である。</p>
+</div>
+
+<div class="rei" id="rei-minimax-riyo">
+<h4>最小最大原理が答えること</h4>
+<p class="no-indent">（1）<strong>固有値の単調性。</strong><m>0\le S\le T</m> なら、すべての <m>n</m> について <m>\lambda_n(S)\le\lambda_n(T)</m>。<em>レイリー商が各部分空間で大小関係をもつから、最大最小もそれを継ぐ。</em></p>
+<p>（2）<strong>領域の単調性。</strong>膜の振動の固有振動数は、領域を広げると下がる。<span class="yogo-hl">これは「領域が広いほど試験関数の空間が大きく、レイリー商の最小値が小さくなる」という一行から出る</span>——物理的な直観が、部分空間の包含関係に翻訳されている。</p>
+<p>（3）<strong>数値計算の根拠。</strong>有限次元の部分空間に落として固有値を計算すると、真の固有値の<em>下からの</em>近似が得られる（<strong>レイリー–リッツ法</strong>）。誤差の向きが理論的に保証されているのは、この原理のおかげである。</p>
+<p>（4）<strong>特異値。</strong>一般のコンパクト作用素 <m>K</m> について <m>s_n(K)=\lambda_n(|K|)</m> と定めれば、<m>s_n(K)=\min\{\|K-F\| : \mathrm{rank}\,F < n\}</m>。<em>近似の最良性が、固有値の最小最大表示から出る。</em></p>
+</div>
+
+<h3 id="s76-3">積分方程式への応用</h3>
+
+<div class="rei" id="rei-sturm-liouville">
+<h4>スツルム–リウヴィル問題</h4>
+<p class="no-indent">区間 <m>[0,1]</m> 上の境界値問題</p>
+<M>-u'' = \lambda u, \qquad u(0)=u(1)=0</M>
+<p class="no-indent">を考える。<em>微分作用素は非有界で、そのままではコンパクト性の議論に乗らない</em>（第78章）。そこで<strong>逆を見る</strong>：<m>-u''=f</m>、<m>u(0)=u(1)=0</m> の解は</p>
+<M>u(x) = \int_0^1 G(x,y)f(y)\,dy, \qquad G(x,y)=\begin{cases} x(1-y) & x\le y \\ y(1-x) & x>y\end{cases}</M>
+<p class="no-indent"><m>G</m> は<strong>グリーン関数</strong>で、対称かつ連続だから <m>L^2([0,1]^2)</m> に属し、積分作用素 <m>K</m> はコンパクト自己共役（第73章）。<ref t="thm-hilbert-schmidt"/>より <m>K</m> の固有値 <m>\mu_n\to0</m> と固有関数の正規直交基底が得られ、<m>\lambda_n=1/\mu_n</m> が元の問題の固有値である。</p>
+<p>実際に解けば <m>\lambda_n=n^2\pi^2</m>、<m>u_n(x)=\sqrt2\sin(n\pi x)</m>。<span class="yogo-hl">三角関数系が <m>L^2[0,1]</m> の正規直交基底をなすという事実が、スペクトル定理の帰結として出てくる</span>——第80章のフーリエ級数論を、別の方向から根拠づけている。</p>
+</div>
+
+<div class="rei" id="rei-fredholm-hoteishiki">
+<h4>フレドホルムの交代定理</h4>
+<p class="no-indent">積分方程式 <m>u-\lambda Ku=f</m>（<m>K</m> はコンパクト自己共役）について、<ref t="thm-riesz-schauder"/>とスペクトル定理から次が言える。</p>
+<p class="no-indent"><m>1/\lambda</m> が <m>K</m> の固有値でないなら、任意の <m>f</m> に対して解がただ一つあり</p>
+<M>u = f + \sum_n \frac{\lambda\mu_n}{1-\lambda\mu_n}(f,e_n)\,e_n</M>
+<p class="no-indent"><em>固有値でないとき分母は零から離れており、係数は有界。</em><m>1/\lambda=\mu_{n_0}</m> なら、解が存在するのは <m>f\perp\ker(I-\lambda K)</m> のときに限り、そのとき解は固有空間の分だけ自由度をもつ。<span class="yogo-hl">有限次元の線形方程式と全く同じ交代律が、無限次元で成り立っている</span>——コンパクト性がそれを可能にしている。</p>
+</div>
+
+<div class="hanrei" id="cex-compact-hazusu">
+<h4>コンパクト性を外すと</h4>
+<p class="no-indent"><m>H=L^2[0,1]</m>、<m>(Mf)(x)=xf(x)</m>。<m>M</m> は自己共役で <m>\sigma(M)=[0,1]</m>、しかし<em>固有値は一つもない</em>（<ref t="cex-koyuchi-tarinai"/>）。したがって<ref t="thm-hilbert-schmidt"/>の結論は完全に成り立たない：固有ベクトルの正規直交系が空である。</p>
+<p><ref t="lem-koyuchi-sonzai"/>の証明を追うと、どこで止まるかが分かる。<m>x_n=\sqrt{n}\,\chi_{[1-1/n,1]}</m> とすれば <m>(Mx_n,x_n)\to1=M</m> で <m>\|Mx_n-x_n\|\to0</m> は成り立つ。<span class="yogo-hl">しかし <m>x_n</m> は弱収束で零に行き、ノルム収束する部分列をもたない。</span><em>「近似固有ベクトルはあるが固有ベクトルはない」</em>——これが連続スペクトルの正体である。</p>
+<p>この隙を埋めるのが第77章の作用素値測度で、和 <m>\sum\lambda_n(\cdot,e_n)e_n</m> を積分 <m>\int\lambda\,dE(\lambda)</m> に置き換える。</p>
+</div>
+
+<figure id="fig76-1">
+<svg viewBox="0 0 470 282" width="470" height="282" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">コンパクト自己共役作用素は、対角作用素にほかならない</text>
+
+  <rect x="14" y="26" width="442" height="128" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+
+  <text x="82" y="42" font-size="6.8" text-anchor="middle" font-weight="700" fill="#1f3b5c">固有値を大きい順に取る</text>
+  <line x1="30" y1="134" x2="146" y2="134" stroke="#8a8a88" stroke-width="0.8"/>
+  <line x1="30" y1="134" x2="30" y2="54" stroke="#8a8a88" stroke-width="0.8"/>
+  <rect x="36" y="60" width="9" height="74" fill="#35618f"/>
+  <rect x="49" y="82" width="9" height="52" fill="#35618f"/>
+  <rect x="62" y="98" width="9" height="36" fill="#4a7ba8"/>
+  <rect x="75" y="110" width="9" height="24" fill="#4a7ba8"/>
+  <rect x="88" y="118" width="9" height="16" fill="#7fa3c4"/>
+  <rect x="101" y="124" width="9" height="10" fill="#7fa3c4"/>
+  <rect x="114" y="128" width="9" height="6" fill="#aec6da"/>
+  <rect x="127" y="131" width="9" height="3" fill="#aec6da"/>
+  <text x="40" y="54" font-size="6" text-anchor="middle" fill="#1f3b5c">λ₁</text>
+  <text x="82" y="148" font-size="6" text-anchor="middle" fill="#8c2f1e">必ず零に収束する</text>
+
+  <text x="235" y="42" font-size="6.8" text-anchor="middle" font-weight="700" fill="#1f3b5c">直交する方向に分解</text>
+  <line x1="180" y1="120" x2="292" y2="120" stroke="#8a8a88" stroke-width="0.7"/>
+  <line x1="236" y1="62" x2="236" y2="130" stroke="#8a8a88" stroke-width="0.7"/>
+  <line x1="236" y1="120" x2="286" y2="120" stroke="#2f6b5f" stroke-width="1.6" marker-end="url(#a76)"/>
+  <line x1="236" y1="120" x2="236" y2="70" stroke="#2f6b5f" stroke-width="1.6" marker-end="url(#a76)"/>
+  <line x1="236" y1="120" x2="272" y2="88" stroke="#a03b2e" stroke-width="1.6" marker-end="url(#a76b)"/>
+  <text x="290" y="128" font-size="6" fill="#1e4a41">e₁</text>
+  <text x="226" y="70" font-size="6" fill="#1e4a41">e₂</text>
+  <text x="272" y="82" font-size="6" fill="#8c2f1e">x</text>
+  <text x="235" y="148" font-size="6" text-anchor="middle" fill="#6a6a68">各方向を λ 倍に伸縮するだけ</text>
+
+  <text x="384" y="42" font-size="6.8" text-anchor="middle" font-weight="700" fill="#1f3b5c">レイリー商の山</text>
+  <line x1="326" y1="134" x2="442" y2="134" stroke="#8a8a88" stroke-width="0.8"/>
+  <path d="M 332 128 C 350 128 356 68 384 68 C 412 68 418 128 436 128" fill="none" stroke="#8a6b2c" stroke-width="1.3"/>
+  <circle cx="384" cy="68" r="2.6" fill="#8a6b2c"/>
+  <line x1="326" y1="68" x2="384" y2="68" stroke="#8a6b2c" stroke-width="0.6" stroke-dasharray="2 2"/>
+  <text x="352" y="64" font-size="6" fill="#5a4520">λ₁ ＝ ‖T‖</text>
+  <text x="384" y="148" font-size="6" text-anchor="middle" fill="#6a6a68">最大値が最大固有値</text>
+
+  <defs>
+    <marker id="a76" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 z" fill="#2f6b5f"/></marker>
+    <marker id="a76b" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 z" fill="#a03b2e"/></marker>
+  </defs>
+
+  <rect x="14" y="164" width="216" height="110" rx="4" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="24" y="179" font-size="7.6" font-weight="700" fill="#1e4a41">証明の骨は二行</text>
+  <text x="24" y="196" font-size="6.6" fill="#1e4a41">① 数値範囲の端に近似固有ベクトルがある</text>
+  <text x="24" y="208" font-size="6.6" fill="#1e4a41">② コンパクト性で収束部分列を取り出す</text>
+  <text x="24" y="225" font-size="6.4" fill="#5a4520">あとは直交補空間へ落として繰り返すだけ</text>
+  <text x="24" y="242" font-size="6.6" fill="#8c2f1e">② が効かないと弱収束で零に逃げる</text>
+  <text x="24" y="255" font-size="6.4" fill="#6a6a68">掛け算作用素がまさにそれ（第77章へ）</text>
+  <text x="24" y="267" font-size="6.4" fill="#6b2a48">近似固有ベクトルは連続スペクトルの影</text>
+
+  <rect x="240" y="164" width="216" height="110" rx="4" fill="#f4f1ea" stroke="#8a6b2c"/>
+  <text x="250" y="179" font-size="7.6" font-weight="700" fill="#5a4520">この定理が解くもの</text>
+  <text x="250" y="196" font-size="6.6" fill="#5a4520">対称核の積分方程式（フレドホルム）</text>
+  <text x="250" y="209" font-size="6.6" fill="#5a4520">境界値問題　グリーン関数の逆を見る</text>
+  <text x="250" y="222" font-size="6.6" fill="#5a4520">膜の振動　　領域を広げると音が下がる</text>
+  <text x="250" y="239" font-size="6.4" fill="#1e4a41">三角関数系が基底であることも帰結</text>
+  <text x="250" y="251" font-size="6.4" fill="#1e4a41">——第80章のフーリエ級数論の別の根拠</text>
+  <text x="250" y="267" font-size="6.4" fill="#8c2f1e">数値計算の誤差の向きも保証される</text>
+</svg>
+<figcaption data-ch="76">コンパクト自己共役作用素のスペクトル定理。固有値は絶対値の大きい順に並び零へ収束し、固有ベクトルが直交基底をなす。証明の要は、数値範囲の端における近似固有ベクトルからコンパクト性で真の固有ベクトルを取り出す一点である。</figcaption>
+</figure>
+
+<div class="star2">
+<h4>★★ 学部後半——マーサーの定理と跡、そして正規作用素へ</h4>
+
+<p><strong>展開の収束の強さ。</strong><ref t="thm-hilbert-schmidt"/>は <m>L^2</m> での収束を与える。核 <m>k</m> が連続かつ正定値なら、もっと強いことが言える。</p>
+
+<p><em>マーサーの定理。</em><m>k</m> を <m>[0,1]^2</m> 上の連続対称核で、対応する積分作用素が正とする。このとき</p>
+<M>k(x,y) = \sum_n \lambda_n e_n(x)\overline{e_n(y)}</M>
+<p>が <m>[0,1]^2</m> 上<strong>一様絶対収束</strong>する。<span class="yogo-hl">証明は、部分和の対角値 <m>\sum_{n\le N}\lambda_n|e_n(x)|^2</m> が <m>k(x,x)</m> で上から押さえられることと、ディニの定理（単調収束する連続関数列の一様収束、第47章）の組み合わせである。</span>これが機械学習の<em>再生核ヒルベルト空間</em>の理論的基礎になっている。</p>
+
+<p><strong>跡とヒルベルト–シュミットノルム。</strong><m>\sum_n|\lambda_n| < \infty</m> のとき <m>T</m> を<strong>跡クラス</strong>といい、<m>\mathrm{tr}\,T=\sum_n\lambda_n</m> と定める。<m>\sum_n\lambda_n^2 < \infty</m> のとき<strong>ヒルベルト–シュミットクラス</strong>で、核をもつ積分作用素はここに入り</p>
+<M>\|T\|_{HS}^2 = \sum_n\lambda_n^2 = \int\!\!\int |k(x,y)|^2\,dx\,dy</M>
+<p><em>三つのノルム（作用素ノルム、ヒルベルト–シュミットノルム、跡ノルム）は固有値列の <m>\ell^\infty</m>・<m>\ell^2</m>・<m>\ell^1</m> ノルムに対応する。</em>この対応は<strong>シャッテンクラス</strong> <m>\mathcal{S}^p</m> として一般化され、<m>L^p</m> 空間の理論（第60章）が作用素の言葉で繰り返される——双対性 <m>(\mathcal{S}^1)^*=B(H)</m>、<m>K(H)^*=\mathcal{S}^1</m> まで含めて。</p>
+
+<p><strong>正規の場合。</strong>コンパクトかつ正規なら、同じ結論が固有値を複素数として許して成り立つ：<m>Tx=\sum\lambda_n(x,e_n)e_n</m>、<m>\lambda_n\in\mathbb{C}</m>、<m>\lambda_n\to0</m>。<em>証明は <m>T=A+iB</m>（<m>A=\tfrac12(T+T^*)</m>、<m>B=\tfrac{1}{2i}(T-T^*)</m>）と分け、<m>AB=BA</m> を使って同時対角化に帰着させる。</em>可換な自己共役作用素の族が同時に対角化できるという事実（<ref t="thm-hilbert-schmidt"/>を固有空間の上で繰り返す）が要点である。</p>
+
+<p><strong>仮定を外すと何が壊れるか。</strong>コンパクト性を外すと固有ベクトルが消える（<ref t="cex-compact-hazusu"/>）。自己共役性を外すと、コンパクトでも対角化できない：<m>2</m> 次のべき零行列 <m>\begin{pmatrix}0&1\\0&0\end{pmatrix}</m> は有限階（したがってコンパクト）だが対角化できない。<em>両方の仮定が独立に必要である。</em></p>
+</div>
+
+<div class="star3">
+<h4>★★★ 大学院——固有値の漸近と逆問題</h4>
+
+<p><strong>ワイルの漸近公式。</strong>有界領域 <m>\Omega\subset\mathbb{R}^d</m> のディリクレ・ラプラシアンの固有値 <m>\lambda_n</m> は</p>
+<M>N(\lambda) = \#\{n : \lambda_n\le\lambda\} \sim \frac{\omega_d\,|\Omega|}{(2\pi)^d}\,\lambda^{d/2} \qquad (\lambda\to\infty)</M>
+<p>をみたす（<m>\omega_d</m> は単位球の体積）。<em>固有値の数え上げ関数の主要項が、領域の体積と次元だけで決まる。</em>次の項には境界の面積が現れ（<em>ワイルの予想</em>、多くの場合に証明済み）、さらに細かい項にはオイラー標数が顔を出す。<span class="yogo-hl">スペクトルは、領域の幾何を段階的に記憶している。</span></p>
+
+<p><strong>カッツの問い。</strong>「太鼓の形は聞き分けられるか」——スペクトルが一致する非合同な領域はあるか。<em>答えは否</em>：ゴードン–ウェッブ–ウォルパートは平面上の非合同な等スペクトル領域を構成した（1992年）。閉リーマン多様体ではミルナーが <m>16</m> 次元フラットトーラスで先に反例を与えている（1964年）。<em>体積・周長・オイラー標数は聞き取れるが、形そのものは決まらない。</em></p>
+
+<p><strong>リーマン予想との接点。</strong>ヒルベルト–ポリアの予想は、リーマンゼータ関数の非自明零点の虚部が、ある自己共役作用素のスペクトルであるとする。<ref t="thm-jiko-spectrum-jitsu"/>により<em>自己共役作用素のスペクトルは実</em>だから、そのような作用素が見つかればリーマン予想が従う。<span class="yogo-hl">モンゴメリー–オドリズコの数値実験は、零点の間隔分布がランダムエルミート行列（ガウス型ユニタリアンサンブル）の固有値間隔分布と一致することを示している。</span><em>スペクトル理論的な説明が存在することの、状況証拠である。</em>ベリー–キーティングの半古典的模型はその方向の試みだが、作用素そのものは未発見である。</p>
+
+<p><strong>無限次元の摂動論。</strong>固有値の摂動はカトーの解析的摂動論で扱える：<m>T(\varepsilon)=T+\varepsilon V</m> の単純固有値は <m>\varepsilon</m> の解析関数として動く。<em>ところが縮退があると、分岐点を持つ代数関数になりうる。</em>自己共役の族では固有値が実に留まるため交差の様子が制限され（<em>フォン・ノイマン–ウィグナーの不交差定理</em>）、この制限が固体物理のバンド構造やベリー位相の幾何を決めている。</p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li>コンパクト自己共役作用素の異なる固有値に属する固有空間が直交することを確かめよ。</li>
+<li>有限階の自己共役作用素について<ref t="thm-hilbert-schmidt"/>を直接確かめよ。</li>
+<li>グリーン関数 <m>G(x,y)</m> が対称かつ連続であることを確かめよ。</li>
+<li><m>2</m> 次のべき零行列が対角化できないことを示し、どの仮定が破れているか言え。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li><ref t="lem-koyuchi-sonzai"/>で <m>m=-\|T\|</m> の場合を書き下せ。<span class="haiten">（25点）</span></li>
+<li><m>T</m> がコンパクト自己共役なら固有値の絶対値が零に収束することを示せ。<span class="haiten">（30点）</span></li>
+<li><ref t="thm-hilbert-schmidt"/>の <m>\|R_N\|=|\lambda_{N+1}|</m> を確かめよ。<span class="haiten">（35点）</span></li>
+<li><ref t="thm-minimax"/>の第二の等式を示せ。<span class="haiten">（40点）</span></li>
+<li><m>0\le S\le T</m> なら <m>\lambda_n(S)\le\lambda_n(T)</m> を示せ。<span class="haiten">（35点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li>スツルム–リウヴィル問題の固有値が <m>n^2\pi^2</m> であることを、グリーン関数の積分作用素から導け。<span class="haiten">（45点）</span></li>
+<li>マーサーの定理を、ディニの定理を用いて示せ。<span class="haiten">（50点）</span></li>
+<li>コンパクト正規作用素の対角化を、実部と虚部の同時対角化によって示せ。<span class="haiten">（45点）</span></li>
+<li><m>s_n(K)=\min\{\|K-F\|:\mathrm{rank}\,F < n\}</m> を示せ。<span class="haiten">（45点）</span></li>
+</ol>
+</div>
+</div>
+<nav class="chnav">
+<a class="prev" href="ch75.html">← 第75章　自己共役作用素</a>
+<a class="next" href="ch77.html">第77章　一般のスペクトル定理と作用素値測度 →</a>
+</nav>
+</article>
+</main>
+<footer class="site">
+  <p>位相・解析大全　学部から大学院まで、三層で読む位相空間論と解析学</p>
+  <p class="small">本文・図版とも本書のために作成したものです。数式は MathJax でベクタ化して組んでいます。</p>
+</footer>
+</body>
+</html>

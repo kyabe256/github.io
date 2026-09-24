@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第31章 Urysohnの距離化定理｜位相・解析大全</title>
+<meta name="description" content="位相・解析大全　第31章　Urysohnの距離化定理">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;600&display=swap">
+<link rel="stylesheet" href="web.css">
+</head>
+<body>
+<header class="site">
+  <a class="site-title" href="index.html">位相・解析大全</a>
+  <nav class="site-nav">
+    <a href="index.html">目次</a>
+    <a href="isou-kaiseki-taizen.pdf">PDF版</a>
+  </nav>
+</header>
+<main>
+<article class="chapter">
+<p class="part-label">第IV部　連結性・距離空間・距離化</p>
+<h1><span class="ch-num">第31章</span>Urysohnの距離化定理</h1>
+<nav class="chnav">
+<a class="prev" href="ch30.html">← 第30章　一様空間——距離と位相のあいだ</a>
+<a class="next" href="ch32.html">第32章　Nagata–SmirnovとBingの距離化定理 →</a>
+</nav>
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>どんな位相空間が、距離から来るのか。</li>
+<li>可算性と分離性だけで、距離が作れるのか。</li>
+<li>この定理の条件は、どれも外せないのか。</li>
+</ul>
+</div>
+
+<h3 id="s31-1">距離化問題</h3>
+
+<p>第5章で距離から位相へ進んだ。<em>逆の問いを立てる。</em></p>
+
+<div class="teigi" id="def-kyorika">
+<h4></h4>
+<p class="no-indent">位相空間 <m>X</m> が<strong>距離化可能</strong>であるとは、<m>X</m> の位相を与える距離が存在することをいう。</p>
+</div>
+
+<p>必要条件はいくつも挙がる。距離空間は<span class="yogo-hl">ハウスドルフ・正則・正規・完全正規・第一可算・パラコンパクト</span>である。<em>これらを満たせば距離化できるか。</em></p>
+
+<p>答えは否である。<m>[0,\omega_1)</m> は正規・第一可算だが距離化できない（コンパクトでないのに点列コンパクト、第25章）。ゾルゲンフライ直線も完全正規・第一可算・パラコンパクトだが距離化できない。</p>
+
+<p><span class="yogo-hl">十分条件を見つけるのが距離化定理の仕事である。</span>ウリゾーンが最初の答えを出した。</p>
+
+<h3 id="s31-2">ウリゾーンの距離化定理</h3>
+
+<div class="teiri" id="thm-urysohn-kyorika">
+<h4>ウリゾーンの距離化定理</h4>
+<p class="no-indent">第二可算な正則ハウスドルフ空間は距離化可能である。より強く、ヒルベルト立方体 <m>[0,1]^{\mathbb{N}}</m> に埋め込める。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">証明は四段からなる。</p>
+<p><strong>第一段——正規性を出す。</strong>第16章★★★で示した。<em>正則かつ第二可算なら正規である。</em>可算基底を使った対角線的な構成による。<span class="yogo-hl">これでウリゾーンの補題（第15章）が使えるようになる。</span></p>
+<p><strong>第二段——可算個の関数を作る。</strong><m>\mathcal{B} = \{B_n\}</m> を可算基底とする。</p>
+<M>P = \{\, (m,n) \mid \overline{B_m} \subseteq B_n \,\}</M>
+<p class="no-indent">は可算集合である。各 <m>(m,n) \in P</m> について、正規性とウリゾーンの補題より連続関数 <m>f_{mn} \colon X \to [0,1]</m> で</p>
+<M>f_{mn}|_{\overline{B_m}} \equiv 0, \qquad f_{mn}|_{X \setminus B_n} \equiv 1</M>
+<p class="no-indent">となるものが取れる。<em>これで可算個の関数が手に入った。</em></p>
+<p><strong>第三段——点と閉集合を分離できること。</strong><m>x \in U</m>（<m>U</m> 開）とする。<m>x \in B_n \subseteq U</m> なる基底元を取り、正則性より <m>x \in B_m \subseteq \overline{B_m} \subseteq B_n</m> なる基底元を取る（<ref t="prop-seisoku-iikae"/> と、基底が基底であることを使う）。<span class="yogo-hl">すると <m>(m,n) \in P</m> であり、<m>f_{mn}(x)=0</m>、<m>f_{mn}|_{X \setminus U} \equiv 1</m>。</span></p>
+<p><strong>第四段——埋め込み。</strong><m>e \colon X \to [0,1]^{P}</m> を <m>e(x) = (f_{mn}(x))_{(m,n) \in P}</m> と定める。<m>P</m> は可算だから値域は <m>[0,1]^{\mathbb{N}}</m> と同一視できる。</p>
+<p><em>第14章の <ref t="thm-tychonoff-umekomi"/> の証明と同じ議論で、<m>e</m> が埋め込みであることが従う</em>——単射性は第三段（<m>T_1</m> を使う）、開写像性も第三段による。</p>
+<p>ヒルベルト立方体は距離化可能（第11章★★）であり、距離化可能性は遺伝する（第9章）。よって <m>X</m> は距離化可能である。</p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">証明の要所は第二段と第三段である。<em>可算基底があるおかげで、必要な関数が可算個で済む。</em><span class="yogo-hl">第14章の一般のチコノフ空間では、関数の個数が非可算になりうるので、立方体の次元が非可算になり距離化できない。</span>可算性がすべてを決めている。</p>
+</div>
+
+<div class="teiri" data-kind="系" id="cor-urysohn-doti">
+<h4></h4>
+<p class="no-indent">第二可算な空間について、次は同値である。（1）距離化可能。（2）正則ハウスドルフ。（3）正規ハウスドルフ。（4）チコノフ。</p>
+</div>
+
+<figure id="fig31-1">
+<svg viewBox="0 0 470 268" width="470" height="268" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <defs>
+    <marker id="a31" markerWidth="8" markerHeight="8" refX="7" refY="2.6" orient="auto"><path d="M0,0 L7,2.6 L0,5.2 z" fill="#35618f"/></marker>
+  </defs>
+
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">ウリゾーンの距離化定理——四段の道</text>
+
+  <rect x="14" y="26" width="442" height="118" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+
+  <rect x="26" y="42" width="94" height="30" rx="3" fill="#f4f1ea" stroke="#8a6b2c"/>
+  <text x="73" y="55" font-size="6.6" text-anchor="middle" fill="#5a4520">正則</text>
+  <text x="73" y="66" font-size="6.6" text-anchor="middle" fill="#5a4520">＋ 第二可算</text>
+
+  <rect x="140" y="42" width="84" height="30" rx="3" fill="#efe0e6" stroke="#8a3b62"/>
+  <text x="182" y="55" font-size="6.6" text-anchor="middle" fill="#6b2a48">正規</text>
+  <text x="182" y="66" font-size="6.2" text-anchor="middle" fill="#6b2a48">（第16章★★★）</text>
+
+  <rect x="244" y="42" width="94" height="30" rx="3" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="291" y="55" font-size="6.6" text-anchor="middle" fill="#1e4a41">可算個の関数</text>
+  <text x="291" y="66" font-size="6.2" text-anchor="middle" fill="#1e4a41">（ウリゾーンの補題）</text>
+
+  <rect x="358" y="42" width="86" height="30" rx="3" fill="#dce7f0" stroke="#35618f"/>
+  <text x="401" y="55" font-size="6.4" text-anchor="middle" fill="#1f3b5c">ヒルベルト</text>
+  <text x="401" y="66" font-size="6.4" text-anchor="middle" fill="#1f3b5c">立方体へ埋め込む</text>
+
+  <path d="M124,57 L136,57" stroke="#35618f" stroke-width="1.2" fill="none" marker-end="url(#a31)"/>
+  <path d="M228,57 L240,57" stroke="#35618f" stroke-width="1.2" fill="none" marker-end="url(#a31)"/>
+  <path d="M342,57 L354,57" stroke="#35618f" stroke-width="1.2" fill="none" marker-end="url(#a31)"/>
+
+  <text x="24" y="90" font-size="6.8" fill="#1f3b5c">可算基底 {Bₙ} から、閉包の包含する対 (m,n) を集める——これが可算</text>
+  <text x="24" y="104" font-size="6.8" fill="#1f3b5c">各対に一つ関数を割り当て、束ねて立方体へ写す</text>
+  <text x="24" y="120" font-size="6.8" fill="#2f6b5f">ヒルベルト立方体は距離化可能（第11章★★）　距離化可能性は遺伝する（第9章）</text>
+  <text x="24" y="134" font-size="6.8" fill="#8c2f1e">可算性がなければ立方体の次元が非可算になり、距離化できない（第14章）</text>
+
+  <rect x="14" y="156" width="442" height="100" rx="4" fill="#fdf6f4" stroke="#e0c3bd"/>
+  <text x="24" y="171" font-size="7.8" font-weight="700" fill="#8c2f1e">条件はどれも外せない</text>
+
+  <text x="24" y="189" font-size="6.8" font-weight="700" fill="#8c2f1e">第二可算を外す</text>
+  <text x="150" y="189" font-size="6.8" fill="#8c2f1e">ゾルゲンフライ直線　完全正規・第一可算・パラコンパクトだが距離化不能</text>
+  <text x="24" y="205" font-size="6.8" font-weight="700" fill="#8c2f1e">正則を外す</text>
+  <text x="150" y="205" font-size="6.8" fill="#8c2f1e">第14章の「有理数を抜いた直線」　ハウスドルフだが正則でない</text>
+  <text x="24" y="221" font-size="6.8" font-weight="700" fill="#8c2f1e">ハウスドルフを外す</text>
+  <text x="150" y="221" font-size="6.8" fill="#8c2f1e">密着位相　距離空間はハウスドルフなので当然</text>
+  <text x="24" y="240" font-size="6.8" fill="#5a4520">第二可算を「σ-局所有限な基底」に弱めたのが第32章のナガタ–スミルノフの定理</text>
+  <text x="24" y="252" font-size="6.6" fill="#6a6a68">そこでは可算性の代わりにパラコンパクト性が働く</text>
+</svg>
+<figcaption data-ch="31">可算基底から可算個の分離関数を作り、ヒルベルト立方体へ埋め込む。可算性がなければ立方体の次元が非可算になり、この道は通らない。</figcaption>
+</figure>
+
+<h3 id="s31-3">条件の必要性</h3>
+
+<div class="hanrei" id="cex-kyorika-joken">
+<h4>どの条件も外せない</h4>
+<p class="no-indent"><strong>第二可算を外す。</strong>ゾルゲンフライ直線は完全正規・第一可算・パラコンパクト・可分だが、第二可算でなく距離化できない。<em>距離空間では可分と第二可算が一致する（第7章）ので、この二つが食い違うことが距離化不能の証拠になる。</em></p>
+<p><strong>正則を外す。</strong>第14章の「有理数を抜いた直線」は第二可算ハウスドルフだが正則でない。<span class="yogo-hl">距離空間は正則だから距離化できない。</span></p>
+<p><strong>ハウスドルフを外す。</strong>密着位相をもつ二点以上の空間。<em>距離空間はハウスドルフなので当然である。</em></p>
+<p><strong>非可算積。</strong><m>\{0,1\}^{I}</m>（<m>I</m> 非可算）はコンパクトハウスドルフだから正規だが、第一可算でないので距離化できない（第11章の演習）。</p>
+</div>
+
+<div class="lv2">
+<h4>距離を直接書き下す</h4>
+<p><ref t="thm-urysohn-kyorika"/> は埋め込みを経由した。<em>距離を直接書くこともできる。</em></p>
+<p><strong>構成。</strong>第二段で作った関数 <m>\{f_k\}_{k \in \mathbb{N}}</m>（<m>P</m> を <m>\mathbb{N}</m> と同一視）に対し、</p>
+<M>d(x,y) = \sum_{k=1}^{\infty} 2^{-k}\, |f_k(x) - f_k(y)|</M>
+<p>と定める。<em>これが距離であることは、各項が擬距離で、重みつき和が収束することから従う。</em></p>
+<p><strong>位相が一致すること。</strong>二方向を見る。</p>
+<p><em><m>d</m>-球のなかに開集合が入る。</em><m>d(x,y) < \varepsilon</m> を保証するには、最初の <m>N</m> 項を小さくし、尾を <m>2^{-N} < \varepsilon/2</m> で押さえればよい。<span class="yogo-hl">各 <m>f_k</m> が連続なので、有限個の条件は開集合で表せる。</span></p>
+<p><em>開集合のなかに <m>d</m>-球が入る。</em><m>x \in U</m> とする。第三段より <m>f_k(x)=0</m>、<m>f_k|_{X\setminus U} \equiv 1</m> なる <m>k</m> がある。<m>d(x,y) < 2^{-k}</m> なら <m>2^{-k}|f_k(x)-f_k(y)| < 2^{-k}</m> より <m>|f_k(y)| < 1</m>、すなわち <m>y \in U</m>。<em>よって <m>B_d(x, 2^{-k}) \subseteq U</m>。</em></p>
+<p><strong>二つの構成の関係。</strong>この距離は、埋め込み <m>e</m> とヒルベルト立方体の距離（第11章★★）を合成したものに等しい。<span class="yogo-hl">どちらの道も同じ距離を与える。</span></p>
+<p><strong>なぜ埋め込みの形で述べるのか。</strong>第一に、<em>ヒルベルト立方体が可分距離空間の普遍空間である</em>という事実が同時に得られる（第9章★★）。第二に、この形が第23章のコンパクト化や第33章の完備距離化と接続する。</p>
+<p><strong>系——ウリゾーンの普遍空間定理。</strong><ref t="thm-urysohn-kyorika"/> の系として、<em>可分距離空間はすべてヒルベルト立方体に埋め込める。</em>可分距離空間は第二可算で正則だからである。</p>
+<p>したがってヒルベルト立方体は<strong>可分距離空間の普遍空間</strong>である。<span class="yogo-hl">「どんな空間か」を問う代わりに「どこに入るか」を問う方法が、ここで完結する。</span></p>
+</div>
+
+<div class="lv3">
+<h4>距離化定理の歴史と、何が本当の条件だったのか</h4>
+<p>ウリゾーンの定理は一九二五年である。<em>その後半世紀にわたって、条件を弱める努力が続いた。</em>その流れを追うと、何が本質だったかが見えてくる。</p>
+<p><strong>第一段階——第二可算を外す。</strong>ウリゾーンの条件は強い。第二可算性は「空間全体が可算個の情報で書ける」という要求で、多くの空間が満たさない。</p>
+<p>ナガタ <span class="orig">Nagata</span>（一九五〇）とスミルノフ <span class="orig">Smirnov</span>（一九五一）が独立に答えを出した。<span class="yogo-hl">第二可算性を「<m>\sigma</m>-局所有限な基底」に置き換えればよい。</span>第32章で扱う。</p>
+<p><strong>第二段階——基底の条件を変える。</strong>ビング <span class="orig">Bing</span>（一九五一）は「<m>\sigma</m>-離散な基底」で同じことを示した。<em>局所有限より離散のほうが強い条件だが、基底の存在としては同値になる。</em></p>
+<p><strong>第三段階——基底を使わない条件。</strong>さらに進んで、被覆の列や写像の存在で距離化を特徴づける定理群が現れた。ムーア空間、<m>\sigma</m>-空間、層空間といった概念がこの流れから生まれた。</p>
+<p><strong>何が本質だったのか。</strong>三つの要素に分解できる。</p>
+<p><em>分離</em>——点と閉集合を関数で分けられること。正則性（＋正規性）が担う。</p>
+<p><em>可算的な近似</em>——各点のまわりを可算個の段階で押さえられること。第一可算性、あるいは <m>\sigma</m>-局所有限性が担う。</p>
+<p><em>局所と大域の整合</em>——局所的な情報を大域的に貼り合わせられること。パラコンパクト性が担う。</p>
+<p><span class="yogo-hl">ウリゾーンの第二可算性は、三つを一度に保証する強い条件だった。</span>ナガタ–スミルノフは、これを分解して最小限に削ったのである。</p>
+<p><strong>未解決だったこと。</strong>第17章★★★で触れた正規ムーア空間予想は、この流れのなかの問いである。<em>ムーア空間は「可算的な近似」をもつが、分離が足りるかどうかが問題だった。</em></p>
+<p>答えは公理系から独立である。<span class="yogo-hl">距離化問題は、最後の一段で集合論に突き当たった。</span></p>
+<p><strong>本書での位置。</strong>第32章でナガタ–スミルノフとビングを証明し、第33章で完備距離化を扱い、第34章で「距離空間は何が特別なのか」を総括する。</p>
+<p>そのあと第VI部から解析学に移る。<em>そこでは距離があるものとして進む。</em>距離化定理を丁寧に扱ったのは、<span class="yogo-hl">「距離があると仮定する」ことが何を仮定しているのかを明示するため</span>である。第34章でこの点を回収する。</p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li>距離空間が第一可算・正規・パラコンパクトであることを述べよ。</li>
+<li>ゾルゲンフライ直線が距離化できない理由を、可分性と第二可算性の食い違いから述べよ。</li>
+<li>密着位相をもつ二点空間が距離化できないことを示せ。</li>
+<li>第二可算な距離空間が可分であることを示せ。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li><ref t="thm-urysohn-kyorika"/> の第三段を、正則性と基底の性質をどこで使うか明示して示せ。<span class="haiten">（25点）</span></li>
+<li><ref t="cor-urysohn-doti"/> の四つが同値であることを示せ。<span class="haiten">（20点）</span></li>
+<li>★★の距離 <m>d</m> が実際に距離であり、もとの位相を与えることを示せ。<span class="haiten">（30点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li>可分距離空間がヒルベルト立方体に埋め込めることを示し、逆にヒルベルト立方体の部分空間が可分距離空間であることを示せ。<span class="haiten">（30点）</span></li>
+<li><m>[0,\omega_1)</m> が正規・第一可算でありながら距離化できないことを示せ。<span class="haiten">（35点）</span></li>
+</ol>
+</div>
+</div>
+<nav class="chnav">
+<a class="prev" href="ch30.html">← 第30章　一様空間——距離と位相のあいだ</a>
+<a class="next" href="ch32.html">第32章　Nagata–SmirnovとBingの距離化定理 →</a>
+</nav>
+</article>
+</main>
+<footer class="site">
+  <p>位相・解析大全　学部から大学院まで、三層で読む位相空間論と解析学</p>
+  <p class="small">本文・図版とも本書のために作成したものです。数式は MathJax でベクタ化して組んでいます。</p>
+</footer>
+</body>
+</html>

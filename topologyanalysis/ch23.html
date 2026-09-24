@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第23章 Stone–Čechコンパクト化｜位相・解析大全</title>
+<meta name="description" content="位相・解析大全　第23章　Stone–Čechコンパクト化">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;600&display=swap">
+<link rel="stylesheet" href="web.css">
+</head>
+<body>
+<header class="site">
+  <a class="site-title" href="index.html">位相・解析大全</a>
+  <nav class="site-nav">
+    <a href="index.html">目次</a>
+    <a href="isou-kaiseki-taizen.pdf">PDF版</a>
+  </nav>
+</header>
+<main>
+<article class="chapter">
+<p class="part-label">第III部　コンパクト性と被覆性質</p>
+<h1><span class="ch-num">第23章</span>Stone–Čechコンパクト化</h1>
+<nav class="chnav">
+<a class="prev" href="ch22.html">← 第22章　局所コンパクト性と一点コンパクト化</a>
+<a class="next" href="ch24.html">第24章　パラコンパクト性と1の分割 →</a>
+</nav>
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>もっとも大きいコンパクト化とは、何が大きいのか。</li>
+<li>「有界連続関数がすべて延びる」という性質は、なぜ最大性と同じなのか。</li>
+<li><m>\beta\mathbb{N}</m> という空間は、どれほど奇妙なのか。</li>
+</ul>
+</div>
+
+<h3 id="s23-1">構成</h3>
+
+<p>第14章で、チコノフ空間が立方体に埋め込めることを見た。<em>その埋め込みの閉包を取れば、コンパクト化が得られる。</em></p>
+
+<div class="teigi" id="def-beta">
+<h4>ストーン–チェックのコンパクト化</h4>
+<p class="no-indent"><m>X</m> をチコノフ空間、<m>C = \{\, f \colon X \to [0,1] \mid f \text{ 連続} \,\}</m> とする。<ref t="thm-tychonoff-umekomi"/> の埋め込み <m>e \colon X \to [0,1]^{C}</m>、<m>e(x) = (f(x))_{f \in C}</m> に対し、</p>
+<M>\beta X = \overline{e(X)} \subseteq [0,1]^{C}</M>
+<p class="no-indent">と定める。これを <m>X</m> の<strong>ストーン–チェックのコンパクト化</strong>という。</p>
+</div>
+
+<p><m>[0,1]^C</m> はチコノフの定理（第21章）よりコンパクトハウスドルフであり、その閉部分集合 <m>\beta X</m> もコンパクトハウスドルフである。<em><m>e(X)</m> は <m>\beta X</m> で稠密であり、<m>e</m> は埋め込みだから、これはコンパクト化である。</em></p>
+
+<h3 id="s23-2">普遍性</h3>
+
+<p>構成そのものより、次の性質が <m>\beta X</m> を特徴づける。</p>
+
+<div class="teiri" id="thm-beta-fuhen">
+<h4>ストーン–チェックの普遍性</h4>
+<p class="no-indent"><m>X</m> をチコノフ空間とする。</p>
+<p class="no-indent">（1）どの有界連続関数 <m>f \colon X \to \mathbb{R}</m> も、連続に <m>\beta X \to \mathbb{R}</m> へ延びる。<br>
+（2）どのコンパクトハウスドルフ空間 <m>K</m> と連続写像 <m>g \colon X \to K</m> に対しても、連続な <m>\tilde{g} \colon \beta X \to K</m> で <m>\tilde{g} \circ e = g</m> となるものがただ一つ存在する。<br>
+（3）この性質をもつコンパクト化は、同型を除いて <m>\beta X</m> に限る。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><strong>（1）。</strong><m>f</m> の値域を <m>[0,1]</m> に正規化してよい。すると <m>f \in C</m> であり、射影 <m>p_f \colon [0,1]^C \to [0,1]</m> を <m>\beta X</m> に制限したものが求める拡張である。実際 <m>p_f(e(x)) = f(x)</m>。<em>射影は連続だから、制限も連続。</em><span class="yogo-hl">拡張の存在が、構成そのものに組み込まれている。</span></p>
+<p><strong>（2）。</strong><m>K</m> はコンパクトハウスドルフだから正規、よってチコノフ（第15章の系）。<ref t="thm-tychonoff-umekomi"/> より <m>K</m> は <m>[0,1]^{D}</m>（<m>D = C(K, [0,1])</m>）に埋め込める。各 <m>h \in D</m> について <m>h \circ g \colon X \to [0,1]</m> は連続だから、（1）により <m>\beta X</m> へ延びる。それらを束ねて <m>\tilde{G} \colon \beta X \to [0,1]^{D}</m> を得る。</p>
+<p><em><m>\tilde{G}(\beta X) \subseteq K</m> を示す。</em><m>K</m> は <m>[0,1]^D</m> でコンパクト、したがって閉である。<m>\tilde{G}(e(X)) = g(X) \subseteq K</m> であり、<m>e(X)</m> は稠密だから <m>\tilde{G}(\beta X) = \tilde{G}(\overline{e(X)}) \subseteq \overline{\tilde{G}(e(X))} \subseteq K</m>（第8章（5））。</p>
+<p>一意性は、稠密集合上で一致する連続写像がハウスドルフな値域では全体で一致すること（第13章の演習）による。</p>
+<p><strong>（3）。</strong>普遍性をもつ二つのコンパクト化のあいだには、互いに逆な連続写像が誘導される。<em>一意性より、それらの合成は恒等写像である。</em></p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">（2）が「最大のコンパクト化」の意味である。<em>どのコンパクト化 <m>Y</m> についても、<m>Y</m> 自身がコンパクトハウスドルフだから、<m>\beta X \to Y</m> という潰す写像がある。</em><span class="yogo-hl">第22章の★★で導入した順序で、<m>\beta X</m> が最大元になる。</span></p>
+</div>
+
+<h3 id="s23-3">βN——離散空間のコンパクト化</h3>
+
+<p>もっとも研究されているのが <m>\beta\mathbb{N}</m> である。<em>離散空間 <m>\mathbb{N}</m> のコンパクト化だが、その構造は驚くほど複雑である。</em></p>
+
+<div class="teiri" id="thm-beta-n">
+<h4></h4>
+<p class="no-indent"><m>\beta\mathbb{N}</m> は、<m>\mathbb{N}</m> 上の超フィルター全体の集合と自然に同一視できる。位相は、<m>A \subseteq \mathbb{N}</m> に対する</p>
+<M>\hat{A} = \{\, \mathcal{U} \mid A \in \mathcal{U} \,\}</M>
+<p class="no-indent">の全体を基底とする。各 <m>\hat{A}</m> は開かつ閉である。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">骨子だけ述べる。<m>n \in \mathbb{N}</m> には主超フィルター（<m>n</m> を含む集合の全体）を対応させる。これが <m>\mathbb{N}</m> の埋め込みを与える。</p>
+<p><em>超フィルター全体がコンパクトハウスドルフになること</em>は、第20章★★★のストーン双対性による。<m>\hat{A}</m> の補集合が <m>\widehat{\mathbb{N} \setminus A}</m> であることは、超フィルターの性質（<ref t="prop-cho-filter"/>）から直ちに従う。<span class="yogo-hl">したがって <m>\hat{A}</m> は開かつ閉であり、空間は全不連結である。</span></p>
+<p>普遍性の確認。有界連続 <m>f \colon \mathbb{N} \to \mathbb{R}</m>（すなわち有界数列）に対し、<m>\tilde{f}(\mathcal{U}) = \lim_{\mathcal{U}} f</m>（超フィルターに沿った極限）と定めれば連続な拡張になる。<em>有界数列は、どの超フィルターに沿っても極限をもつ。</em></p>
+</div>
+
+<div class="rei" id="rei-beta-n-kimyo">
+<h4>βN の奇妙さ</h4>
+<p class="no-indent"><strong>濃度。</strong><m>|\beta\mathbb{N}| = 2^{2^{\aleph_0}}</m>。<em>可算集合のコンパクト化が、実数全体よりはるかに大きい。</em></p>
+<p><strong>点列が収束しない。</strong><m>\beta\mathbb{N} \setminus \mathbb{N}</m> のなかの点列で、収束するものは<span class="yogo-hl">最終的に定数になるものに限る。</span>コンパクトなのに点列コンパクトでない。</p>
+<p><strong>稠密だが小さい。</strong><m>\mathbb{N}</m> は可算で稠密。<em>したがって <m>\beta\mathbb{N}</m> は可分である</em>——濃度 <m>2^{2^{\aleph_0}}</m> の可分空間。</p>
+<p><strong>主でない超フィルターは見えない。</strong><m>\beta\mathbb{N} \setminus \mathbb{N}</m> の点は、選択公理なしには一つも存在を示せない（第12章★★★）。<em>この空間の大部分は、構成的には手に入らない。</em></p>
+</div>
+
+<figure id="fig23-1">
+<svg viewBox="0 0 470 266" width="470" height="266" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <defs>
+    <marker id="a23" markerWidth="8" markerHeight="8" refX="7" refY="2.6" orient="auto"><path d="M0,0 L7,2.6 L0,5.2 z" fill="#35618f"/></marker>
+  </defs>
+
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">コンパクト化の順序——βX が最大</text>
+
+  <rect x="14" y="26" width="442" height="108" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+
+  <rect x="36" y="42" width="84" height="26" rx="3" fill="#efe0e6" stroke="#8a3b62"/>
+  <text x="78" y="58" font-size="7" text-anchor="middle" fill="#6b2a48">βX　最大</text>
+
+  <rect x="36" y="78" width="84" height="20" rx="3" fill="#dce7f0" stroke="#35618f"/>
+  <text x="78" y="92" font-size="6.4" text-anchor="middle" fill="#1f3b5c">中間のコンパクト化</text>
+
+  <rect x="36" y="106" width="84" height="20" rx="3" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="78" y="120" font-size="6.4" text-anchor="middle" fill="#1e4a41">X*　一点　最小</text>
+
+  <path d="M78,72 L78,76" stroke="#35618f" stroke-width="1.2" fill="none" marker-end="url(#a23)"/>
+  <path d="M78,100 L78,104" stroke="#35618f" stroke-width="1.2" fill="none" marker-end="url(#a23)"/>
+  <text x="128" y="76" font-size="6.2" fill="#6a6a68">連続に潰せる</text>
+
+  <text x="200" y="46" font-size="7" font-weight="700" fill="#1f3b5c">R の場合</text>
+  <text x="200" y="62" font-size="6.8" fill="#6b2a48">βℝ　濃度は連続体の冪集合と同じ</text>
+  <text x="200" y="76" font-size="6.8" fill="#1f3b5c">[−∞, +∞]　両端を別の点に</text>
+  <text x="200" y="90" font-size="6.8" fill="#1e4a41">S¹　両端を一点に</text>
+  <text x="200" y="108" font-size="6.6" fill="#6a6a68">用途で選ぶ。極限を区別したいなら二点、</text>
+  <text x="200" y="120" font-size="6.6" fill="#6a6a68">有理関数を扱うなら一点（リーマン球面）</text>
+
+  <rect x="14" y="146" width="216" height="110" rx="4" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="24" y="161" font-size="7.6" font-weight="700" fill="#1e4a41">普遍性が最大性を意味する</text>
+  <text x="24" y="179" font-size="6.8" fill="#1e4a41">有界連続関数がすべて延びる</text>
+  <text x="24" y="193" font-size="6.8" fill="#1e4a41">コンパクトハウスドルフへの写像が</text>
+  <text x="24" y="205" font-size="6.8" fill="#1e4a41">すべて一意に延びる</text>
+  <text x="24" y="223" font-size="6.6" fill="#6a6a68">どのコンパクト化 Y もコンパクト</text>
+  <text x="24" y="235" font-size="6.6" fill="#6a6a68">ハウスドルフだから、βX → Y がある</text>
+  <text x="24" y="249" font-size="6.8" font-weight="700" fill="#1e4a41">→ βX が順序の最大元</text>
+
+  <rect x="240" y="146" width="216" height="110" rx="4" fill="#fdf6f4" stroke="#e0c3bd"/>
+  <text x="250" y="161" font-size="7.6" font-weight="700" fill="#8c2f1e">βN の奇妙さ</text>
+  <text x="250" y="179" font-size="6.8" fill="#8c2f1e">濃度は連続体の冪集合と同じ　可算集合のコンパクト化</text>
+  <text x="250" y="193" font-size="6.8" fill="#8c2f1e">可分だが第一可算でない</text>
+  <text x="250" y="207" font-size="6.8" fill="#8c2f1e">コンパクトだが点列コンパクトでない</text>
+  <text x="250" y="221" font-size="6.8" fill="#8c2f1e">開かつ閉な集合が基底（全不連結）</text>
+  <text x="250" y="238" font-size="6.6" fill="#6a6a68">N の外側の点は、選択公理なしには</text>
+  <text x="250" y="250" font-size="6.6" fill="#6a6a68">一つも存在を示せない</text>
+</svg>
+<figcaption data-ch="23">コンパクト化には順序があり、一点コンパクト化が最小、ストーン–チェックが最大である。βN は可算集合のコンパクト化でありながら、濃度も構造も極端に大きい。</figcaption>
+</figure>
+
+<div class="lv2">
+<h4>コンパクト化からもとの空間を復元できるか</h4>
+<p><m>\beta X</m> は <m>X</m> の情報をどれだけ保っているのか。<em>逆に、<m>\beta X</m> から <m>X</m> を取り出せるのか。</em></p>
+<p><strong>関数環との対応。</strong><m>C^b(X)</m> を <m>X</m> 上の有界連続実数値関数の全体とする。<ref t="thm-beta-fuhen"/>（1）より、</p>
+<M>C^b(X) \cong C(\beta X)</M>
+<p>という対応がある。<span class="yogo-hl"><m>\beta X</m> は「<m>X</m> 上の有界連続関数が作る代数」を空間として実現したものである。</span></p>
+<p>したがって、<m>\beta X</m> が決まれば <m>C^b(X)</m> が決まる。逆に <m>C^b(X)</m> から <m>\beta X</m> が復元できる——これが第79章のゲルファント理論の内容である。</p>
+<p><strong><m>X</m> は復元できない。</strong><em><m>\beta X = \beta Y</m> でも <m>X \ne Y</m> でありうる。</em>たとえば <m>X = \mathbb{N}</m> と <m>Y = \mathbb{N} \cup \{p\}</m>（<m>p \in \beta\mathbb{N} \setminus \mathbb{N}</m> を一つ足した部分空間）は、同じストーン–チェックのコンパクト化をもつ。</p>
+<p>より一般に、<m>X \subseteq Y \subseteq \beta X</m> なる <m>Y</m> はすべて <m>\beta Y = \beta X</m> を満たす。<span class="yogo-hl">したがって <m>\beta X</m> は <m>X</m> を決めない。</span></p>
+<p><strong>復元できる場合。</strong><m>X</m> がコンパクトなら <m>\beta X = X</m> である。<em>コンパクト空間は自分自身のストーン–チェックのコンパクト化である。</em></p>
+<p>これが第79章で効く。<span class="yogo-hl">コンパクトハウスドルフ空間 <m>K</m> は、関数環 <m>C(K)</m> から完全に復元できる。</span>ゲルファント–ナイマルクの定理は、可換 <m>C^*</m> 環と コンパクトハウスドルフ空間が圏同値であることを述べる。</p>
+<p><strong>実用的な帰結。</strong>コンパクト化の理論は、次の形で解析学に入ってくる。</p>
+<p><em>第59章のリースの表現定理</em>——<m>C(K)</m> 上の正線形汎関数が <m>K</m> 上の測度で表せる。<m>K</m> がコンパクトであることが本質的である。</p>
+<p><em>第96章のストーン–ワイエルシュトラスの定理</em>——<m>C(K)</m> の部分代数が稠密になる条件。ここでもコンパクト性が前提になる。</p>
+<p>局所コンパクトな <m>X</m> については、<m>C_0(X)</m>（無限遠で消える連続関数）を使い、一点コンパクト化 <m>X^*</m> 経由で <m>C(X^*)</m> の話に帰着させる。<em>ストーン–チェックではなく一点コンパクト化を使うのは、そのほうが小さくて扱いやすいからである。</em></p>
+</div>
+
+<div class="lv3">
+<h4>βN の余部分——組合せ論と独立性</h4>
+<p><m>\mathbb{N}^* = \beta\mathbb{N} \setminus \mathbb{N}</m> を考える。<em>この空間の構造には、集合論が深く入り込む。</em></p>
+<p><strong>P点は存在するか。</strong><m>\mathcal{U} \in \mathbb{N}^*</m> がP点であるとは、可算個の近傍の交叉が再び近傍を含むことをいう。<em>言い換えれば、<m>\mathcal{U}</m> の可算個の元 <m>A_n</m> に対し、<m>A \setminus A_n</m> が有限になる <m>A \in \mathcal{U}</m> が存在する。</em></p>
+<p><span class="yogo-hl">P点の存在は、集合論の公理系から証明も反証もできない。</span>連続体仮説を仮定すれば存在する（ルドゥイン）。一方、シェラー <span class="orig">Shelah</span> はP点が存在しないモデルを構成した。</p>
+<p>第4章の★★★で述べた独立性が、ここでも具体的な空間の点の存在として現れている。</p>
+<p><strong>組合せ論への応用。</strong><m>\beta\mathbb{N}</m> には半群の構造が入る。<m>\mathbb{N}</m> の加法を超フィルターへ延ばすと、</p>
+<M>A \in \mathcal{U} + \mathcal{V} \iff \{\, n \mid \{\, m \mid n + m \in A \,\} \in \mathcal{V} \,\} \in \mathcal{U}</M>
+<p>という演算が定まる。<em>この演算は結合的で、片側からは連続である。</em></p>
+<p>エリス <span class="orig">Ellis</span> の定理により、コンパクトな右位相半群には冪等元が存在する。<span class="yogo-hl"><m>\mathcal{U} + \mathcal{U} = \mathcal{U}</m> なる超フィルターが存在する。</span></p>
+<p>この事実から、ヒンドマン <span class="orig">Hindman</span> の定理が短く証明できる。<em>自然数を有限個に色分けすると、ある色のなかに、無限集合のすべての有限和が含まれる。</em>組合せ論の定理が、位相的な議論で出てくる。</p>
+<p><strong>ファン・デル・ヴェルデンの定理も同様。</strong>「自然数を有限個に色分けすると、ある色に任意の長さの等差数列が含まれる」という定理も、<m>\beta\mathbb{N}</m> の力学系を使って証明できる。</p>
+<p><strong>なぜこれが可能なのか。</strong><m>\beta\mathbb{N}</m> はコンパクトである。<span class="yogo-hl">コンパクト性が「無限に続く選択」を一つの点として実体化する。</span>組合せ論で「うまい部分集合を取り続ける」という議論が、位相では「ある超フィルターを取る」という一行になる。</p>
+<p>第20章の★★★で述べた論理のコンパクト性定理と、同じ構図である。<em>有限的な情報の整合性が、無限の対象の存在を保証する。</em></p>
+<p><strong>本書の扱い。</strong>この方向には進まない。だが <m>\beta\mathbb{N}</m> は、本書の後半で一度だけ顔を出す。第71章でバナッハ極限を扱うとき、<em>「収束しない有界数列に極限を割り当てる」という操作が、超フィルターに沿った極限として実現される。</em>ハーン–バナッハの定理（第67章）による構成と、<m>\beta\mathbb{N}</m> による構成は、同じものを別の言葉で述べている。</p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li>コンパクトハウスドルフ空間 <m>K</m> について <m>\beta K = K</m> であることを示せ。</li>
+<li><m>\hat{A}</m> が <m>\beta\mathbb{N}</m> で開かつ閉であることを示せ。</li>
+<li><m>\beta\mathbb{N}</m> が可分であることを述べよ。</li>
+<li>一点コンパクト化とストーン–チェックのコンパクト化が一致する空間の例を挙げよ。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li><ref t="thm-beta-fuhen"/>（1）を、射影の制限が拡張を与えることを明示して示せ。<span class="haiten">（15点）</span></li>
+<li><ref t="thm-beta-fuhen"/>（2）で <m>\tilde{G}(\beta X) \subseteq K</m> を示す部分を、第8章の結果を引用しながら書き直せ。<span class="haiten">（25点）</span></li>
+<li><m>X \subseteq Y \subseteq \beta X</m> なら <m>\beta Y = \beta X</m> であることを示せ。<span class="haiten">（25点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li>有界数列が超フィルターに沿って極限をもつことを示し、それが <m>\beta\mathbb{N}</m> への拡張を与えることを説明せよ。<span class="haiten">（30点）</span></li>
+<li><m>\beta\mathbb{N}</m> がコンパクトでありながら点列コンパクトでないことを示せ。<span class="haiten">（35点）</span></li>
+</ol>
+</div>
+</div>
+<nav class="chnav">
+<a class="prev" href="ch22.html">← 第22章　局所コンパクト性と一点コンパクト化</a>
+<a class="next" href="ch24.html">第24章　パラコンパクト性と1の分割 →</a>
+</nav>
+</article>
+</main>
+<footer class="site">
+  <p>位相・解析大全　学部から大学院まで、三層で読む位相空間論と解析学</p>
+  <p class="small">本文・図版とも本書のために作成したものです。数式は MathJax でベクタ化して組んでいます。</p>
+</footer>
+</body>
+</html>

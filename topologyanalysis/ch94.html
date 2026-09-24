@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第94章 調和関数とDirichlet問題｜位相・解析大全</title>
+<meta name="description" content="位相・解析大全　第94章　調和関数とDirichlet問題">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;600&display=swap">
+<link rel="stylesheet" href="web.css">
+</head>
+<body>
+<header class="site">
+  <a class="site-title" href="index.html">位相・解析大全</a>
+  <nav class="site-nav">
+    <a href="index.html">目次</a>
+    <a href="isou-kaiseki-taizen.pdf">PDF版</a>
+  </nav>
+</header>
+<main>
+<article class="chapter">
+<p class="part-label">第XII部　複素解析</p>
+<h1><span class="ch-num">第94章</span>調和関数とDirichlet問題</h1>
+<nav class="chnav">
+<a class="prev" href="ch93.html">← 第93章　等角写像とRiemannの写像定理</a>
+<a class="next" href="ch95.html">第95章　関数空間の位相とAscoli–Arzelàの定理 →</a>
+</nav>
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>境界の値を与えると、内部の値は決まるのか。</li>
+<li>平均値の性質だけから、どこまで言えるのか。</li>
+<li>境界が悪いと、何が壊れるのか。</li>
+</ul>
+</div>
+
+<h3 id="s94-1">平均値の性質から出るもの</h3>
+
+<div class="teigi" id="def-chowa-kansu">
+<h4>調和関数</h4>
+<p class="no-indent"><m>\Omega\subset\mathbb{R}^d</m> 上の <m>C^2</m> 関数 <m>u</m> が <m>\Delta u=\sum_j\partial_j^2u=0</m> をみたすとき<strong>調和</strong>という。<m>\Delta u\ge0</m> のとき<strong>劣調和</strong>、<m>\Delta u\le0</m> のとき<strong>優調和</strong>という。</p>
+<p class="no-indent"><em><m>d=2</m> では、調和関数はちょうど正則関数の実部である</em>（局所的に、<ref t="thm-chowa"/>）。</p>
+</div>
+
+<div class="teiri" id="thm-chowa-heikinchi">
+<h4>平均値の性質と最大値原理</h4>
+<p class="no-indent"><m>u</m> が <m>\Omega</m> 上調和なら次が成り立つ。</p>
+<p class="no-indent">（1）<strong>平均値の性質</strong>：<m>\overline{B(x,r)}\subset\Omega</m> なら</p>
+<M>u(x) = \frac{1}{|\partial B(x,r)|}\int_{\partial B(x,r)}u\,d\sigma = \frac{1}{|B(x,r)|}\int_{B(x,r)}u\,dy</M>
+<p class="no-indent">（2）<strong>逆も成り立つ</strong>：連続関数が平均値の性質をもてば調和（したがって <m>C^\infty</m>）。<br>
+（3）<strong>最大値原理</strong>：<m>\Omega</m> が領域で <m>u</m> が内点で最大値をとれば <m>u</m> は定数。<m>\Omega</m> が有界で <m>u\in C(\overline\Omega)</m> なら <m>\max_{\overline\Omega}u=\max_{\partial\Omega}u</m>。<br>
+（4）<strong>正則性</strong>：調和関数は <m>C^\infty</m>、さらに実解析的。<br>
+（5）<strong>ハルナックの不等式</strong>：<m>u\ge0</m> が <m>B(x_0,R)</m> 上調和なら、<m>|x-x_0|\le r < R</m> について</p>
+<M>\Big(\frac{R-r}{R+r}\Big)^{d-1}\frac{R}{R+r}\,u(x_0) \ \le\ u(x) \ \le\ \Big(\frac{R+r}{R-r}\Big)^{d-1}\frac{R}{R-r}\,u(x_0)</M>
+<p class="no-indent">（6）<strong>リウヴィル型</strong>：<m>\mathbb{R}^d</m> 全体で調和かつ有界（あるいは下に有界）なら定数。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">（2）を示す。<m>u</m> が連続で平均値の性質をもつとする。軟化子 <m>\varphi_\varepsilon</m>（球対称）との畳み込み <m>u*\varphi_\varepsilon</m> を考えると、平均値の性質から <m>u*\varphi_\varepsilon=u</m>（球平均の重ね合わせだから）。<em>左辺は <m>C^\infty</m>（<ref t="rei-tatamikomi-seishitsu"/>（2））なので <m>u\in C^\infty</m>。</em></p>
+<p class="no-indent"><m>u\in C^2</m> なら、球平均の <m>r</m> についての微分がガウスの発散定理より</p>
+<M>\frac{d}{dr}\Big(\frac{1}{|\partial B_r|}\int_{\partial B(x,r)}u\,d\sigma\Big) = \frac{1}{|\partial B_r|}\int_{B(x,r)}\Delta u\,dy</M>
+<p class="no-indent"><em>左辺は平均値の性質より恒等的に零、したがって右辺も零。これがすべての <m>r</m> と <m>x</m> で成り立つので <m>\Delta u=0</m>。</em></p>
+<p class="no-indent">（3）最大値を <m>M</m> とし <m>A=\{u=M\}</m> と置く。<m>A</m> は閉。<em><m>x\in A</m> なら平均値の性質より、小さな球上でほとんどいたるところ <m>u=M</m>、連続性から球全体で <m>u=M</m>——よって <m>A</m> は開。</em>連結性から <m>A=\Omega</m>。<span class="yogo-hl">第91章の一致の定理と同じ「開かつ閉」の議論である。</span></p>
+<p class="no-indent">（6）ハルナックの不等式で <m>R\to\infty</m> とすると、両端が <m>u(x_0)</m> に収束するので <m>u(x)=u(x_0)</m>。<em>あるいは（1）の体積平均を二つの大きな球で比べる。</em></p>
+</div>
+
+<div class="chui">
+<h4>調和と正則の違い</h4>
+<p class="no-indent"><m>d=2</m> では調和関数と正則関数は近いが、同じではない。</p>
+<p class="no-indent">（i）<em>調和関数は実数値でよい。</em>正則関数の実部として局所的には書けるが、<span class="yogo-hl">大域的には共役調和関数が一価とは限らない</span>（<m>\log|z|</m>）。</p>
+<p class="no-indent">（ii）<em>調和関数には一致の定理がない。</em><m>u=\mathrm{Re}\,z=x</m> は直線 <m>x=0</m> 上で零だが恒等的に零でない。<span class="yogo-hl">零点集合が集積しても定数とは限らない</span>——正則関数の剛性は、調和性より真に強い。</p>
+<p class="no-indent">（iii）<em>調和関数は任意次元で意味をもつ。</em><m>d\ge3</m> では「正則関数の実部」という表現は使えず、平均値の性質と最大値原理だけが道具になる。<em>本章の議論がすべて平均値の性質から出るように書いてあるのは、そのためである。</em></p>
+</div>
+
+<h3 id="s94-2">ディリクレ問題</h3>
+
+<div class="teiri" id="thm-poisson">
+<h4>球のポアソン積分</h4>
+<p class="no-indent"><m>g\in C(\partial B(0,R))</m> に対し</p>
+<M>u(x) = \frac{R^2-|x|^2}{R\,|\partial B_R|}\int_{\partial B(0,R)}\frac{g(y)}{|x-y|^{d}}\,d\sigma(y) \qquad (|x| < R)</M>
+<p class="no-indent">と定めると、<m>u</m> は <m>B(0,R)</m> で調和、<m>\overline B</m> で連続、<m>u|_{\partial B}=g</m>。<em>これが球でのディリクレ問題の唯一の解である。</em></p>
+<p class="no-indent"><m>d=2</m>、<m>R=1</m> では極座標で</p>
+<M>u(re^{i\theta}) = \frac{1}{2\pi}\int_{-\pi}^{\pi} P_r(\theta-t)\,g(e^{it})\,dt, \qquad P_r(\theta) = \frac{1-r^2}{1-2r\cos\theta+r^2}</M>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><m>d=2</m> で示す。ポアソン核は <m>P_r(\theta)=\sum_{n\in\mathbb{Z}}r^{|n|}e^{in\theta}=\mathrm{Re}\Big(\dfrac{1+re^{i\theta}}{1-re^{i\theta}}\Big)</m> と書ける（<ref t="rei-fourier-keisan"/>（4））。<em>したがって <m>u</m> は正則関数の実部で、調和である。</em></p>
+<p class="no-indent">境界値については、<ref t="rei-yoi-kaku"/>（2）でみたとおり <m>(P_r)_{r\uparrow1}</m> は正の近似単位元だから、<ref t="thm-kinji-tan-i"/>により <m>g</m> が連続なら <m>u(re^{i\theta})\to g(e^{i\theta})</m> が一様に成り立つ。<span class="yogo-hl">第81章の近似単位元の理論が、そのままディリクレ問題の解を与えている。</span></p>
+<p class="no-indent">一意性は最大値原理（<ref t="thm-chowa-heikinchi"/>（3））：二つの解の差は境界で零の調和関数だから、最大値も最小値も零、すなわち恒等的に零。</p>
+</div>
+
+<div class="teiri" id="thm-perron">
+<h4>ペロンの方法と、一般領域のディリクレ問題</h4>
+<p class="no-indent"><m>\Omega</m> を有界領域、<m>g\in C(\partial\Omega)</m> とする。</p>
+<M>\mathcal{S}_g = \{\, v \ \text{劣調和},\ \limsup_{x\to\zeta}v(x)\le g(\zeta)\ (\forall\zeta\in\partial\Omega) \,\}, \qquad u(x) = \sup_{v\in\mathcal{S}_g}v(x)</M>
+<p class="no-indent">と置くと、<m>u</m> は <m>\Omega</m> 上調和である（<strong>ペロン解</strong>）。</p>
+<p class="no-indent">さらに、境界点 <m>\zeta</m> で <m>u(x)\to g(\zeta)</m> が成り立つことと、<m>\zeta</m> が<strong>正則境界点</strong>（<em>バリア</em>——<m>\zeta</m> でのみ零になる負の優調和関数——が存在する点）であることは同値。<em>すべての境界点が正則なら、古典的な意味でディリクレ問題が解ける。</em></p>
+</div>
+
+<div class="rei" id="rei-seisoku-kyokaiten">
+<h4>境界点が正則になる条件</h4>
+<p class="no-indent">（1）<strong>外部球条件。</strong><m>\zeta</m> で <m>\Omega</m> の外から球が接するなら正則。<em>滑らかな境界はこれをみたす。</em></p>
+<p>（2）<strong>外部錐条件（ポアンカレ）。</strong>外から錐が接すれば正則。<em>角のある領域（多角形）でも大丈夫。</em></p>
+<p>（3）<strong><m>d=2</m> では連結性で十分。</strong><m>\zeta</m> を含む <m>\partial\Omega</m> の連結成分が一点でなければ正則（<m>\log</m> を使ったバリアが作れる）。<span class="yogo-hl">二次元は寛容である。</span></p>
+<p>（4）<strong>ウィーナーの判定法。</strong>一般の次元では、容量による条件</p>
+<M>\sum_{n\ge1} \frac{\mathrm{cap}\big(\{x\notin\Omega\}\cap\{2^{-n-1}\le|x-\zeta|\le2^{-n}\}\big)}{2^{-n(d-2)}} = \infty</M>
+<p class="no-indent">が正則性と同値（ウィーナー、1924年）。<em>「補集合が <m>\zeta</m> の近くで十分太い」という定量的な条件である。</em></p>
+</div>
+
+<div class="hanrei" id="cex-dirichlet">
+<h4>解けない例</h4>
+<p class="no-indent">（1）<strong>穴あき円板。</strong><m>\Omega=D\setminus\{0\}</m>、境界値を <m>\partial D</m> で <m>0</m>、原点で <m>1</m> とする。<em>解は存在しない。</em>もし <m>u</m> が解なら、<m>u-\varepsilon\log(1/|z|)</m> が <m>0 < |z| < 1</m> で調和、境界で <m>\le0</m> だから最大値原理より <m>u\le\varepsilon\log(1/|z|)</m>。<em><m>\varepsilon\to0</m> として <m>u\le0</m>、原点での条件に反する。</em><span class="yogo-hl">一点は「見えない」——容量が零だからである。</span></p>
+<p class="no-indent">（2）<strong>ルベーグの棘。</strong><m>d\ge3</m> で、非常に鋭い棘が外から入り込んだ領域では、棘の先端が非正則境界点になりうる（ルベーグ、1913年）。<em>外部錐条件は成り立たず、ウィーナーの判定法の級数が収束する。</em></p>
+<p class="no-indent">（3）<strong>ディリクレの原理の穴。</strong>リーマンは、エネルギー <m>\int|\nabla v|^2</m> を最小化すれば解が得られると論じた（<strong>ディリクレの原理</strong>）。<em>ワイエルシュトラスは「下限を達成する関数が存在するとは限らない」と批判した（1870年）。</em></p>
+<p><span class="yogo-hl">この批判が、変分法における「関数空間の完備性とコンパクト性」の必要性を明らかにした。</span><em>ヒルベルトが正しい枠組み（後のソボレフ空間、第88章）で原理を復活させるまで、半世紀かかった。</em>第88章の弱解の議論は、まさにこの決着である。</p>
+</div>
+
+<h3 id="s94-3">境界値と、どこまで復元できるか</h3>
+
+<div class="teiri" id="thm-fatou-kyokai">
+<h4>ファトゥの定理</h4>
+<p class="no-indent"><m>u</m> が <m>D</m> 上調和で <m>\sup_{r < 1}\int|u(re^{i\theta})|d\theta < \infty</m> ならば、複素測度 <m>\mu</m> があって <m>u</m> はそのポアソン積分である。</p>
+<p class="no-indent">さらに <m>u</m> は<strong>非接的極限</strong>をほとんどすべての境界点でもつ：<m>\zeta\in\partial D</m> に頂点をもつ角領域のなかで <m>z\to\zeta</m> とするとき、<m>u(z)</m> は収束する（極限は <m>\mu</m> のルベーグ分解の絶対連続部分の密度に等しい）。</p>
+</div>
+
+<div class="rei" id="rei-kyokai-chi">
+<h4>境界値の三つの階層</h4>
+<p class="no-indent">（1）<m>g</m> 連続 → 解は <m>\overline D</m> で連続、境界値を<em>一様に</em>とる。</p>
+<p>（2）<m>g\in L^p(\partial D)</m>（<m>1\le p\le\infty</m>）→ 解は <m>L^p</m> ノルムで境界値に収束し、さらにほとんどすべての点で非接的極限をもつ。<em>証明はハーディ–リトルウッドの最大作用素（第83章★★★）による。</em></p>
+<p>（3）<m>\mu</m> が測度 → 弱収束するが、特異部分は非接的極限として見えない。<em>例：<m>\mu=\delta_1</m> ならポアソン核そのもので、<m>\theta\ne0</m> では非接的極限が <m>0</m>。</em><span class="yogo-hl">特異測度は「測度零の集合に隠れる」。</span></p>
+<p>（4）<strong>正則関数の場合はもっと強い。</strong><m>f</m> が <m>D</m> 上正則かつ有界なら、ほとんどすべての境界点で非接的極限をもち、<em>その境界値が正の測度の集合上で零なら <m>f\equiv0</m></em>（F. とM. リースの定理）。<span class="yogo-hl">調和関数にはない剛性が、正則性によって回復する。</span></p>
+</div>
+
+<figure id="fig94-1">
+<svg viewBox="0 0 470 284" width="470" height="284" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">境界から内部へ——見える境界と見えない境界</text>
+
+  <rect x="14" y="26" width="442" height="128" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+
+  <text x="110" y="42" font-size="6.8" text-anchor="middle" font-weight="700" fill="#1e4a41">解ける　外から錐が接する</text>
+  <path d="M 56 132 C 48 92 72 56 110 56 C 148 56 172 92 164 132 Z" fill="#e6efe9" stroke="#2f6b5f" stroke-width="1.3"/>
+  <polygon points="110,96 92,136 128,136" fill="#f0e2de" stroke="#a03b2e" stroke-width="1"/>
+  <circle cx="110" cy="96" r="2.6" fill="#a03b2e"/>
+  <text x="110" y="148" font-size="6" text-anchor="middle" fill="#6a6a68">補集合が十分に太い</text>
+
+  <text x="352" y="42" font-size="6.8" text-anchor="middle" font-weight="700" fill="#8c2f1e">解けない　棘が細すぎる</text>
+  <path d="M 298 132 C 290 92 314 56 352 56 C 390 56 414 92 406 132 Z" fill="#e6efe9" stroke="#2f6b5f" stroke-width="1.3"/>
+  <path d="M 352 96 L 348 138 L 356 138 Z" fill="#f0e2de" stroke="#a03b2e" stroke-width="0.8"/>
+  <circle cx="352" cy="96" r="2.6" fill="#a03b2e"/>
+  <text x="352" y="148" font-size="6" text-anchor="middle" fill="#8c2f1e">先端で境界値がとれない</text>
+
+  <rect x="14" y="164" width="216" height="112" rx="4" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="24" y="179" font-size="7.6" font-weight="700" fill="#1e4a41">すべては平均値の性質から出る</text>
+  <text x="24" y="196" font-size="6.6" fill="#1e4a41">平均値の性質　⇔　調和である</text>
+  <text x="24" y="208" font-size="6.6" fill="#1e4a41">　→　無限回微分可能になる</text>
+  <text x="24" y="220" font-size="6.6" fill="#1e4a41">　→　最大値原理（開かつ閉の議論）</text>
+  <text x="24" y="232" font-size="6.6" fill="#1e4a41">　→　解の一意性</text>
+  <text x="24" y="249" font-size="6.4" fill="#5a4520">球での解はポアソン核との畳み込み</text>
+  <text x="24" y="261" font-size="6.4" fill="#5a4520">——第81章の近似単位元がそのまま効く</text>
+  <text x="24" y="272" font-size="6.2" fill="#6b2a48">次元によらず成り立つ議論である</text>
+
+  <rect x="240" y="164" width="216" height="112" rx="4" fill="#f4f1ea" stroke="#8a6b2c"/>
+  <text x="250" y="179" font-size="7.6" font-weight="700" fill="#5a4520">境界値をどの意味でとるか</text>
+  <text x="250" y="196" font-size="6.4" fill="#5a4520">連続　　　一様に　　境界まで連続</text>
+  <text x="250" y="208" font-size="6.4" fill="#5a4520">可積分　　ノルムで　ほとんど全点で非接的</text>
+  <text x="250" y="220" font-size="6.4" fill="#8c2f1e">測度　　　弱い意味で　特異部分は見えない</text>
+  <text x="250" y="237" font-size="6.4" fill="#1e4a41">正則なら、さらに強い一意性がある</text>
+  <text x="250" y="249" font-size="6.4" fill="#1e4a41">正測度の集合で零なら、恒等的に零</text>
+  <text x="250" y="266" font-size="6.4" fill="#6b2a48">調和性だけでは、この剛性は得られない</text>
+</svg>
+<figcaption data-ch="94">ディリクレ問題は、境界点が「外から見て十分太い」ときに解ける。すべての議論は平均値の性質から出発し、球での解はポアソン核との畳み込みとして近似単位元の理論に帰着する。</figcaption>
+</figure>
+
+<div class="star2">
+<h4>★★ 学部後半——グリーン関数、調和測度、ハーディ空間</h4>
+
+<p><strong>グリーン関数。</strong><m>\Omega</m> の<strong>グリーン関数</strong> <m>G(x,y)</m> は、<m>-\Delta_xG(\cdot,y)=\delta_y</m>、<m>G|_{\partial\Omega}=0</m> で定まる。<em>これがあれば解が書ける</em>：</p>
+<M>u(x) = \int_\Omega G(x,y)f(y)\,dy - \int_{\partial\Omega}\frac{\partial G}{\partial n}(x,\zeta)\,g(\zeta)\,d\sigma(\zeta)</M>
+<p><em>第一項が <m>-\Delta u=f</m> を、第二項が境界値 <m>g</m> を担う。</em>球では鏡像法で明示的に構成でき、法線微分がポアソン核になる。<span class="yogo-hl">第76章のスツルム–リウヴィル問題で使ったグリーン関数（<ref t="rei-sturm-liouville"/>）の、多次元版である。</span></p>
+
+<p><strong>調和測度。</strong><m>\omega_x(E)=</m>（境界値 <m>\chi_E</m> に対するペロン解の <m>x</m> での値）と定めると、<m>\omega_x</m> は <m>\partial\Omega</m> 上の確率測度で</p>
+<M>u(x) = \int_{\partial\Omega} g\,d\omega_x</M>
+<p><em>確率論的な解釈：<m>\omega_x(E)</m> は、<m>x</m> から出発したブラウン運動が最初に境界に当たる点が <m>E</m> に入る確率である。</em><span class="yogo-hl">カクタニの定理（1944年）——ディリクレ問題の解は、境界値のブラウン運動による期待値である。</span>第78章★★★のファインマン–カッツの公式の、もっとも古典的な場合にあたる。</p>
+
+<p><em>この解釈から最大値原理が「確率が <m>1</m> 以下」として自明になり、ハルナックの不等式が「到達確率の比が有界」として読める。</em>また、<ref t="cex-dirichlet"/>（1）の「一点が見えない」は、<span class="yogo-hl">二次元以上のブラウン運動が一点に当たる確率が零</span>だということである。</p>
+
+<p><strong>ハーディ空間。</strong><m>H^p(D)=\{f \text{ 正則} : \sup_{r < 1}\int|f(re^{i\theta})|^pd\theta < \infty\}</m>。<em><m>p=2</m> のときは第82章の <m>\ell^2</m> 係数の空間と一致する。</em></p>
+<p>（i）<m>f\in H^p</m>（<m>p>0</m>）なら非接的極限 <m>f^*</m> がほとんどいたるところ存在し、<m>f^*\in L^p(\partial D)</m>。<br>
+（ii）<m>1\le p < \infty</m> なら <m>f</m> は <m>f^*</m> のポアソン積分（＋共役）。<br>
+（iii）<strong>内部・外部因子分解</strong>：<m>f=BSF</m>（ブラシュケ積、特異内部関数、外部関数）。<em>零点・特異測度・境界の大きさが、きれいに分離される。</em></p>
+<p><span class="yogo-hl">ベーリングの定理（第82章）——片側シフトの不変部分空間は内部関数で分類される——は、この分解の直接の帰結である。</span></p>
+
+<p><strong>仮定を外すと。</strong><m>p < 1</m> では <m>H^p</m> はバナッハ空間でなく、<m>p=\infty</m> では境界値が <m>L^\infty</m> だが <m>H^\infty</m> の双対は複雑（コロナ問題、<ref t="rei-gelfand-ouyou"/>（4））。<em>また <m>h^1</m>（調和関数の <m>L^1</m> 有界）と <m>H^1</m>（正則）は異なり、前者は測度を境界値にもつのに対し後者は必ず <m>L^1</m> 関数をもつ（F. とM. リース）。</em></p>
+</div>
+
+<div class="star3">
+<h4>★★★ 大学院——ポテンシャル論と、自由境界</h4>
+
+<p><strong>容量。</strong>コンパクト集合 <m>K\subset\mathbb{R}^d</m>（<m>d\ge3</m>）の<strong>ニュートン容量</strong>は</p>
+<M>\mathrm{cap}(K) = \sup\{\,\mu(K) \mid \mathrm{supp}\,\mu\subset K,\ \ U^\mu(x)=\int|x-y|^{2-d}d\mu(y)\le1 \,\}</M>
+<p><em>物理的には「導体 <m>K</m> に蓄えられる電荷の最大量」である。</em>容量零の集合はディリクレ問題から「見えない」（<ref t="cex-dirichlet"/>）。<span class="yogo-hl">容量零とハウスドルフ次元 <m>d-2</m> 以下は近いが一致しない</span>——フロストマンの補題が両者を結ぶ：<m>\dim_H K>d-2</m> なら容量正。<em>第42章の次元論が、ポテンシャル論の言葉で再登場する。</em></p>
+
+<p><strong>細位相。</strong>劣調和関数がすべて連続になるような、ユークリッド位相より細かい位相（<strong>細位相</strong>）が入る。<em>この位相ではディリクレ問題の非正則境界点が「細位相で孤立している」と特徴づけられる。</em>カルタンの細位相の理論は、確率論の言葉では「ブラウン運動が到達する集合」の理論になる。</p>
+
+<p><strong>自由境界問題。</strong>障害物問題——<m>u\ge\psi</m> のもとで <m>\int|\nabla u|^2</m> を最小化——では、接触集合 <m>\{u=\psi\}</m> の境界（<em>自由境界</em>）が未知である。<em>カファレリの理論は、この自由境界がほとんどいたるところ滑らかであることを示す。</em><span class="yogo-hl">特異点集合の次元を測る道具が、またしても幾何的測度論である。</span>フィゲイエリ（2018年フィールズ賞）は、特異点の集合の構造をさらに精密化した。</p>
+
+<p><strong>ディリクレ問題の離散版と確率。</strong>格子上の離散ラプラシアンについて、離散ディリクレ問題の解はランダムウォークの到達確率である。<em>格子間隔を零にする極限で連続の解に収束する</em>（ドンスカーの不変原理）。<span class="yogo-hl">この収束の速さと、境界の幾何との関係が、共形不変性の証明（スミルノフのイジング模型、パーコレーション）の技術的な核心である。</span></p>
+
+<p><strong>未解決に近い問い。</strong>シェーンフリースの問題の高次元版、調和測度の次元に関するオクセンダール予想（<m>d\ge3</m> での調和測度の次元が <m>d-1</m> 以下か）は部分的にしか解かれていない。<em>また、リプシッツ領域での <m>L^p</m> ディリクレ問題の可解範囲（ダールバーグの定理の最適性）を超えた、より悪い境界での理論は現在も活発に研究されている</em>——<span class="yogo-hl">「境界の幾何が、どこまで解の性質を決めるか」という本章の主題そのものが、まだ完全には答えられていない。</span></p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li><m>\log|z|</m> が <m>\mathbb{C}\setminus\{0\}</m> で調和であることを確かめよ。</li>
+<li>ポアソン核の積分が <m>1</m> であることを確かめよ。</li>
+<li>平均値の性質から最大値原理を導け。</li>
+<li>調和関数に一致の定理が成り立たない例を挙げよ。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li>連続関数が平均値の性質をもてば調和であることを、平滑化を使って示せ。<span class="haiten">（35点）</span></li>
+<li>球平均の <m>r</m> 微分がラプラシアンの積分になることを、発散定理で示せ。<span class="haiten">（30点）</span></li>
+<li><ref t="thm-poisson"/>を、ポアソン核が近似単位元であることから示せ。<span class="haiten">（40点）</span></li>
+<li>有界な調和関数が定数であることを、ハルナックの不等式から示せ。<span class="haiten">（35点）</span></li>
+<li><ref t="cex-dirichlet"/>（1）で解が存在しないことを示せ。<span class="haiten">（40点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li>球のグリーン関数を鏡像法で構成し、法線微分がポアソン核になることを確かめよ。<span class="haiten">（50点）</span></li>
+<li>ペロンの方法で構成した関数が調和であることを示せ。<span class="haiten">（50点）</span></li>
+<li>外部錐条件をみたす境界点にバリアを構成せよ。<span class="haiten">（45点）</span></li>
+<li>ファトゥの定理を、最大作用素の弱型評価を用いて示せ。<span class="haiten">（50点）</span></li>
+</ol>
+</div>
+</div>
+<nav class="chnav">
+<a class="prev" href="ch93.html">← 第93章　等角写像とRiemannの写像定理</a>
+<a class="next" href="ch95.html">第95章　関数空間の位相とAscoli–Arzelàの定理 →</a>
+</nav>
+</article>
+</main>
+<footer class="site">
+  <p>位相・解析大全　学部から大学院まで、三層で読む位相空間論と解析学</p>
+  <p class="small">本文・図版とも本書のために作成したものです。数式は MathJax でベクタ化して組んでいます。</p>
+</footer>
+</body>
+</html>

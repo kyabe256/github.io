@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第92章 留数定理とその応用｜位相・解析大全</title>
+<meta name="description" content="位相・解析大全　第92章　留数定理とその応用">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;600&display=swap">
+<link rel="stylesheet" href="web.css">
+</head>
+<body>
+<header class="site">
+  <a class="site-title" href="index.html">位相・解析大全</a>
+  <nav class="site-nav">
+    <a href="index.html">目次</a>
+    <a href="isou-kaiseki-taizen.pdf">PDF版</a>
+  </nav>
+</header>
+<main>
+<article class="chapter">
+<p class="part-label">第XII部　複素解析</p>
+<h1><span class="ch-num">第92章</span>留数定理とその応用</h1>
+<nav class="chnav">
+<a class="prev" href="ch91.html">← 第91章　べき級数展開と解析接続</a>
+<a class="next" href="ch93.html">第93章　等角写像とRiemannの写像定理 →</a>
+</nav>
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>なぜ「係数がひとつ」で積分が決まるのか。</li>
+<li>実数の定積分が、複素の積分路で解けるのはなぜか。</li>
+<li>留数は、数え上げの道具にもなるのか。</li>
+</ul>
+</div>
+
+<h3 id="s92-1">生き残るのは一つの係数だけ</h3>
+
+<p>第90章の基本計算を思い出す：円周に沿った <m>(z-a)^n</m> の積分は、<m>n=-1</m> のときだけ <m>2\pi i</m> で、他はすべて零だった。<em>したがってローラン展開を項別に積分すると、<m>c_{-1}</m> の項しか残らない。</em></p>
+
+<div class="teigi" id="def-ryusu">
+<h4>留数</h4>
+<p class="no-indent"><m>a</m> を <m>f</m> の孤立特異点とし、ローラン展開を <m>f(z)=\sum_nc_n(z-a)^n</m> とする。</p>
+<M>\mathrm{Res}_{z=a}f = c_{-1} = \frac{1}{2\pi i}\oint_{|z-a|=\rho}f(z)\,dz</M>
+<p class="no-indent">を <m>f</m> の <m>a</m> における<strong>留数</strong>という。</p>
+</div>
+
+<div class="teiri" id="thm-ryusu">
+<h4>留数定理</h4>
+<p class="no-indent"><m>\Omega</m> を開集合、<m>f</m> を <m>\Omega</m> から孤立特異点の集合 <m>S</m> を除いた部分で正則、<m>\gamma</m> を <m>\Omega</m> のなかで零ホモローグなサイクルで <m>S</m> と交わらないものとする。このとき</p>
+<M>\frac{1}{2\pi i}\oint_\gamma f(z)\,dz = \sum_{a\in S} n(\gamma,a)\,\mathrm{Res}_{z=a}f</M>
+<p class="no-indent">（右辺は有限和：<m>n(\gamma,a)\ne0</m> なる <m>a</m> は有限個）。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><m>n(\gamma,a)\ne0</m> なる特異点を <m>a_1,\dots,a_k</m> とし、各 <m>a_j</m> でのローラン展開の主要部を <m>P_j(z)</m> と置く。<em><m>P_j</m> は <m>\mathbb{C}\setminus\{a_j\}</m> 上正則である。</em></p>
+<p class="no-indent"><m>g=f-\sum_jP_j</m> と置くと、<m>g</m> は各 <m>a_j</m> で除去可能特異点をもつので、<m>\Omega</m> 上（修正して）正則になる。<em>コーシーの定理のホモロジー版（<ref t="thm-cauchy-sekibun"/>（3））より <m>\oint_\gamma g=0</m>。</em>したがって</p>
+<M>\oint_\gamma f = \sum_j \oint_\gamma P_j</M>
+<p class="no-indent"><m>P_j(z)=\sum_{n\ge1}c^{(j)}_{-n}(z-a_j)^{-n}</m> を項別に積分する（主要部は <m>\gamma</m> 上で一様収束）。<em><m>n\ge2</m> の項は <m>(z-a_j)^{-n}</m> が原始関数 <m>\frac{(z-a_j)^{1-n}}{1-n}</m> をもつので閉曲線に沿った積分が零。</em><m>n=1</m> の項だけが残り、</p>
+<M>\oint_\gamma \frac{c^{(j)}_{-1}}{z-a_j}\,dz = 2\pi i\, n(\gamma,a_j)\,c^{(j)}_{-1}</M>
+<p><span class="yogo-hl">留数定理は、コーシーの定理と「<m>-1</m> 乗だけが原始関数をもたない」という一点の組み合わせにすぎない。</span></p>
+</div>
+
+<div class="teiri" id="prop-ryusu-keisan">
+<h4>留数の計算法</h4>
+<p class="no-indent">（1）<strong>位数 <m>1</m> の極</strong>：<m>\mathrm{Res}_{z=a}f=\lim_{z\to a}(z-a)f(z)</m>。<br>
+（2）<strong><m>f=g/h</m>、<m>h(a)=0</m>、<m>h'(a)\ne0</m>、<m>g(a)\ne0</m></strong>：<m>\mathrm{Res}_{z=a}\dfrac gh=\dfrac{g(a)}{h'(a)}</m>。<br>
+（3）<strong>位数 <m>m</m> の極</strong>：</p>
+<M>\mathrm{Res}_{z=a}f = \frac{1}{(m-1)!}\lim_{z\to a}\frac{d^{m-1}}{dz^{m-1}}\Big[(z-a)^mf(z)\Big]</M>
+<p class="no-indent">（4）<strong>真性特異点</strong>：展開して <m>c_{-1}</m> を読むしかない。<br>
+（5）<strong>無限遠での留数</strong>：<m>\mathrm{Res}_{z=\infty}f=-\mathrm{Res}_{w=0}\big[w^{-2}f(1/w)\big]</m>。<em>すべての留数（無限遠を含む）の和は零。</em></p>
+</div>
+
+<h3 id="s92-2">実積分を解く</h3>
+
+<div class="rei" id="rei-ryusu-jisseki">
+<h4>型ごとの処方</h4>
+<p class="no-indent"><strong>（1）有理関数の全直線積分。</strong><m>\displaystyle\int_{-\infty}^{\infty}\frac{dx}{1+x^4}</m>。</p>
+<p class="no-indent">上半平面の半円（半径 <m>R</m>）を積分路にとる。<em>円弧上では <m>|f|\le\frac{1}{R^4-1}</m>、長さ <m>\pi R</m> なので寄与は <m>O(R^{-3})\to0</m>。</em>上半平面の極は <m>e^{i\pi/4}</m>、<m>e^{3i\pi/4}</m> で、（2）より留数は <m>\frac{1}{4z^3}=\frac{z}{4z^4}=-\frac z4</m>。和をとって</p>
+<M>\int_{-\infty}^{\infty}\frac{dx}{1+x^4} = 2\pi i\cdot\Big(-\frac{e^{i\pi/4}+e^{3i\pi/4}}{4}\Big) = \frac{\pi}{\sqrt2}</M>
+<p class="no-indent"><em>一般に、分母の次数が分子より <m>2</m> 以上大きければこの方法が使える。</em></p>
+<p class="no-indent"><strong>（2）振動する積分。</strong><m>\displaystyle\int_{-\infty}^{\infty}\frac{\cos x}{1+x^2}dx</m>。</p>
+<p class="no-indent"><m>\cos x</m> ではなく <m>e^{iz}</m> を使う。<em>上半平面で <m>|e^{iz}|=e^{-\mathrm{Im}\,z}\le1</m> だから、円弧の寄与が制御できる</em>（<strong>ジョルダンの補題</strong>：<m>|f|\to0</m> なら <m>\int_{\text{半円}}f(z)e^{iaz}dz\to0</m>、<m>a>0</m>）。極は <m>i</m>、留数は <m>\frac{e^{i\cdot i}}{2i}=\frac{e^{-1}}{2i}</m>。実部をとって <m>\pi/e</m>。</p>
+<p class="no-indent"><strong>（3）三角関数の周期積分。</strong><m>\displaystyle\int_0^{2\pi}\frac{d\theta}{a+\cos\theta}</m>（<m>a>1</m>）。</p>
+<p class="no-indent"><m>z=e^{i\theta}</m> と置くと <m>\cos\theta=\frac{z+z^{-1}}{2}</m>、<m>d\theta=\frac{dz}{iz}</m> で、単位円周上の積分になる。<em>これは第80章のフーリエ係数の計算と同じ変数変換である。</em>結果は <m>2\pi/\sqrt{a^2-1}</m>。</p>
+<p class="no-indent"><strong>（4）分岐点をもつ積分。</strong><m>\displaystyle\int_0^\infty\frac{x^{a-1}}{1+x}dx</m>（<m>0 < a < 1</m>）。</p>
+<p class="no-indent">正の実軸に沿って切断を入れ、<strong>鍵穴型</strong>の積分路をとる。<em>切断の上下で <m>z^{a-1}</m> の値が <m>e^{2\pi i(a-1)}</m> 倍だけずれる——この差が答えを生む。</em>極は <m>z=-1</m> で留数 <m>e^{i\pi(a-1)}</m>。整理すると</p>
+<M>\int_0^\infty\frac{x^{a-1}}{1+x}\,dx = \frac{\pi}{\sin\pi a}</M>
+<p class="no-indent"><span class="yogo-hl">これはガンマ関数の相反公式 <m>\Gamma(a)\Gamma(1-a)=\pi/\sin\pi a</m> にほかならない。</span></p>
+<p class="no-indent"><strong>（5）主値積分。</strong><m>\displaystyle\mathrm{p.v.}\int_{-\infty}^{\infty}\frac{\sin x}{x}dx=\pi</m>。</p>
+<p class="no-indent">原点を小さな半円で迂回する。<em>位数 <m>1</m> の極を角 <m>\alpha</m> の円弧で迂回すると、寄与は <m>i\alpha\times</m> 留数になる</em>（半円なら <m>i\pi\times</m> 留数）。<span class="yogo-hl">第87章の主値超関数 <m>\mathrm{p.v.}\frac1x</m> の変換が <m>-i\pi\,\mathrm{sgn}\,\xi</m> だったのは、この迂回の <m>i\pi</m> である。</span></p>
+<p class="no-indent"><strong>（6）級数の和。</strong><m>\pi\cot\pi z</m> はすべての整数に位数 <m>1</m> の極をもち留数 <m>1</m>。したがって <m>f</m> が適当に減衰すれば</p>
+<M>\sum_{n\in\mathbb{Z}} f(n) = -\sum_{\text{$f$ の極 }a}\mathrm{Res}_{z=a}\big[\pi\cot(\pi z)f(z)\big]</M>
+<p class="no-indent"><em><m>f(z)=1/z^2</m> とすれば <m>\sum1/n^2=\pi^2/6</m>。</em><span class="yogo-hl">留数が「和を積分に変える」道具になる</span>——ポアソンの和公式（第84章）と同じ主題の、別の実現である。</p>
+</div>
+
+<div class="chui">
+<h4>なぜ複素に出ると実積分が解けるのか</h4>
+<p class="no-indent">実軸上の積分だけを見ていると、計算すべき量は積分そのものである。<em>ところが積分路を閉じると、コーシーの定理により値は「囲んだ特異点の情報」だけで決まってしまう。</em></p>
+<p><span class="yogo-hl">大域的な量（積分）が、局所的な量（各特異点での一つの係数）の有限和に落ちる。</span><em>これが第90章★★★で述べた「局所と大域の往復」の、最も実用的な形である。</em></p>
+<p>成功の条件は二つ：（i）積分路を閉じたときの追加部分（円弧など）の寄与が消えること、（ii）囲まれた特異点が有限個で、留数が計算できること。<em>どちらかが破れると、この方法は使えない。</em></p>
+</div>
+
+<h3 id="s92-3">数え上げの道具として</h3>
+
+<div class="teiri" id="thm-hengaku">
+<h4>偏角の原理とルーシェの定理</h4>
+<p class="no-indent">（1）<m>f</m> が <m>\gamma</m> の内部で有理型、<m>\gamma</m> 上に零点も極もないとき</p>
+<M>\frac{1}{2\pi i}\oint_\gamma\frac{f'(z)}{f(z)}\,dz = Z - P</M>
+<p class="no-indent">（<m>Z</m>、<m>P</m> は重複度込みの零点・極の個数）。<br>
+（2）<strong>ルーシェ</strong>：<m>\gamma</m> 上で <m>|g| < |f|</m> なら、<m>f</m> と <m>f+g</m> は内部で同じ個数の零点をもつ。<br>
+（3）<strong>フルヴィッツ</strong>：零点をもたない正則関数の列が広義一様収束すれば、極限も零点をもたないか恒等的に零。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">（1）<m>f(z)=(z-a)^m u(z)</m>（<m>u(a)\ne0</m>）なら <m>\dfrac{f'}{f}=\dfrac{m}{z-a}+\dfrac{u'}{u}</m>。<em>第二項は <m>a</m> で正則だから、<m>f'/f</m> は <m>a</m> で位数 <m>1</m> の極をもち留数 <m>m</m>。</em>極 <m>a</m>（位数 <m>p</m>）なら同様に留数 <m>-p</m>。<ref t="thm-ryusu"/>を適用すればよい。</p>
+<p class="no-indent">（2）<m>h_t=f+tg</m>（<m>t\in[0,1]</m>）は <m>\gamma</m> 上で零にならない（<m>|f+tg|\ge|f|-|g|>0</m>）。<em>零点の個数 <m>Z(t)=\frac{1}{2\pi i}\oint\frac{h_t'}{h_t}</m> は <m>t</m> の連続関数で整数値だから一定。</em></p>
+<p class="no-indent">（3）<m>f\not\equiv0</m> で <m>f(a)=0</m> とすると、小さな円周 <m>\gamma</m> 上で <m>|f|\ge\delta>0</m>（零点は孤立）。<m>n</m> が大きければ <m>|f_n-f| < \delta\le|f|</m> なので、ルーシェより <m>f_n</m> も内部に零点をもつ——矛盾。</p>
+</div>
+
+<div class="rei" id="rei-ruche-ouyou">
+<h4>ルーシェの使いどころ</h4>
+<p class="no-indent">（1）<strong>代数学の基本定理。</strong><m>P(z)=z^n+a_{n-1}z^{n-1}+\cdots+a_0</m>。<m>R</m> を十分大きくとれば <m>|z|=R</m> 上で <m>|a_{n-1}z^{n-1}+\cdots+a_0| < |z^n|</m>。<em>よって <m>P</m> と <m>z^n</m> は同じ個数（<m>n</m> 個）の零点をもつ。</em></p>
+<p>（2）<strong>零点の位置。</strong><m>z^5+3z+1</m> の零点は <m>|z| < 2</m> にいくつあるか。<m>|z|=2</m> で <m>|3z+1|\le7 < 32=|z^5|</m> なので、<m>z^5</m> と同じ <m>5</m> 個。<em><m>|z|=1</m> では <m>|z^5+1|\le2 < 3=|3z|</m> なので、<m>3z</m> と同じ <m>1</m> 個。</em>したがって <m>1\le|z| < 2</m> に <m>4</m> 個。</p>
+<p>（3）<strong>開写像定理の証明。</strong><m>f(a)=w_0</m> とし、<m>|f(z)-w_0|\ge\delta</m>（小円周上）とする。<m>|w-w_0| < \delta</m> なら、ルーシェより <m>f(z)-w</m> と <m>f(z)-w_0</m> は同じ個数の零点をもつ。<em>後者は少なくとも <m>1</m> 個（<m>z=a</m>）だから、前者も解をもつ。</em><span class="yogo-hl">像が <m>w_0</m> のまわりの円板を含む——これが開写像性である。</span></p>
+<p>（4）<strong>逆関数定理。</strong><m>f'(a)\ne0</m> なら、（3）の議論で零点がちょうど <m>1</m> 個になり、<m>f</m> は <m>a</m> の近傍で単射。<em>逆関数は</em></p>
+<M>f^{-1}(w) = \frac{1}{2\pi i}\oint_\gamma \frac{z\,f'(z)}{f(z)-w}\,dz</M>
+<p class="no-indent"><em>という積分で書け、したがって <m>w</m> について正則である。</em></p>
+<p>（5）<strong>逆関数の係数（ラグランジュの反転公式）。</strong>同じ積分から <m>f^{-1}</m> のテイラー係数が</p>
+<M>[w^n]\,f^{-1}(w) = \frac1n[z^{n-1}]\Big(\frac{z}{f(z)}\Big)^n</M>
+<p class="no-indent">と書ける。<span class="yogo-hl">組合せ論の数え上げ（木の個数、カタラン数）が、この公式で一行で出る。</span></p>
+</div>
+
+<div class="hanrei" id="cex-ryusu">
+<h4>うまくいかない場合</h4>
+<p class="no-indent">（1）<strong>円弧の寄与が消えない。</strong><m>\int_{-\infty}^\infty\frac{x\,dx}{1+x^2}</m> は主値としてしか存在せず、半円の寄与は零に行かない。<em>分母と分子の次数差が <m>1</m> しかないと、円弧上で <m>|f|\cdot\pi R\not\to0</m>。</em></p>
+<p class="no-indent">（2）<strong>特異点が無限個。</strong><m>1/\sin z</m> を大きな円で囲むと、極の個数が <m>R</m> とともに増える。<em>それでも和が制御できれば使える</em>（（6）の級数和の方法がまさにそれ）が、無条件ではない。</p>
+<p class="no-indent">（3）<strong>真性特異点。</strong>留数は定義されるが、計算には展開が要る。<em><m>\oint_{|z|=1}e^{1/z}dz=2\pi i</m>（<m>c_{-1}=1</m>）。</em></p>
+<p class="no-indent">（4）<strong>分岐点は孤立特異点でない。</strong><m>\sqrt z</m> の原点は、穴あき円板で一価に定まらないので留数が定義できない。<em>切断を入れて扱うしかない。</em></p>
+<p class="no-indent">（5）<strong>実積分が発散していれば当然だめ。</strong><m>\int_0^\infty\frac{dx}{x}</m> のような場合、留数計算は形式的な答えを出すことがあるが意味をもたない。<span class="yogo-hl">計算の前に収束を確かめること。</span></p>
+</div>
+
+<figure id="fig92-1">
+<svg viewBox="0 0 470 284" width="470" height="284" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">積分路を閉じると、囲んだ特異点だけが残る</text>
+
+  <rect x="14" y="26" width="442" height="124" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+
+  <text x="118" y="42" font-size="6.8" text-anchor="middle" font-weight="700" fill="#1f3b5c">上半平面の半円</text>
+  <line x1="44" y1="120" x2="192" y2="120" stroke="#8a8a88" stroke-width="0.7"/>
+  <path d="M 56 120 A 62 62 0 0 1 180 120" fill="#f0f4f8" stroke="#35618f" stroke-width="1.4"/>
+  <line x1="56" y1="120" x2="180" y2="120" stroke="#35618f" stroke-width="1.4"/>
+  <circle cx="98" cy="92" r="2.6" fill="#a03b2e"/>
+  <circle cx="142" cy="92" r="2.6" fill="#a03b2e"/>
+  <circle cx="98" cy="148" r="2.6" fill="#c8c4bd"/>
+  <circle cx="142" cy="148" r="2.6" fill="#c8c4bd"/>
+  <text x="118" y="70" font-size="6" text-anchor="middle" fill="#8c2f1e">囲まれた極だけ数える</text>
+  <text x="118" y="140" font-size="5.8" text-anchor="middle" fill="#6a6a68">下半平面の極は効かない</text>
+
+  <text x="352" y="42" font-size="6.8" text-anchor="middle" font-weight="700" fill="#1f3b5c">鍵穴型（分岐がある場合）</text>
+  <line x1="286" y1="96" x2="424" y2="96" stroke="#8a8a88" stroke-width="0.7"/>
+  <line x1="352" y1="54" x2="352" y2="138" stroke="#8a8a88" stroke-width="0.7"/>
+  <path d="M 356 92 L 420 92 A 44 44 0 1 1 420 100 L 356 100 A 5 5 0 1 1 356 92 Z" fill="#f4f1ea" stroke="#8a6b2c" stroke-width="1.2"/>
+  <line x1="352" y1="96" x2="424" y2="96" stroke="#a03b2e" stroke-width="1.6" stroke-dasharray="3 2"/>
+  <circle cx="330" cy="96" r="2.6" fill="#a03b2e"/>
+  <text x="392" y="112" font-size="5.6" fill="#8c2f1e">切断</text>
+  <text x="352" y="150" font-size="5.8" text-anchor="middle" fill="#6a6a68">切断の上下で値がずれ、その差が答えになる</text>
+
+  <rect x="14" y="160" width="216" height="118" rx="4" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="24" y="175" font-size="7.6" font-weight="700" fill="#1e4a41">なぜ係数ひとつで決まるのか</text>
+  <text x="24" y="192" font-size="6.6" fill="#1e4a41">冪が −1 以外なら原始関数をもつ</text>
+  <text x="24" y="204" font-size="6.6" fill="#1e4a41">原始関数があれば閉曲線の積分は零</text>
+  <text x="24" y="221" font-size="6.6" fill="#8c2f1e">だから −1 乗の係数だけが生き残る</text>
+  <text x="24" y="238" font-size="6.4" fill="#5a4520">大域的な量（積分）が</text>
+  <text x="24" y="250" font-size="6.4" fill="#5a4520">局所的な量（各点の一係数）の和になる</text>
+  <text x="24" y="267" font-size="6.4" fill="#6b2a48">これが留数という概念の全内容である</text>
+
+  <rect x="240" y="160" width="216" height="118" rx="4" fill="#f4f1ea" stroke="#8a6b2c"/>
+  <text x="250" y="175" font-size="7.6" font-weight="700" fill="#5a4520">型ごとの処方</text>
+  <text x="250" y="192" font-size="6.4" fill="#5a4520">有理関数　　上半平面の半円</text>
+  <text x="250" y="204" font-size="6.4" fill="#5a4520">振動する積分　指数関数に直して半円</text>
+  <text x="250" y="216" font-size="6.4" fill="#5a4520">三角関数の周期　単位円に移す</text>
+  <text x="250" y="228" font-size="6.4" fill="#5a4520">分岐がある　　鍵穴型</text>
+  <text x="250" y="240" font-size="6.4" fill="#5a4520">主値　　　　極を小円で迂回する</text>
+  <text x="250" y="257" font-size="6.4" fill="#8c2f1e">級数の和も　余接関数を掛けて留数を読む</text>
+  <text x="250" y="270" font-size="6.2" fill="#6a6a68">条件は、閉じた分の寄与が消えること</text>
+</svg>
+<figcaption data-ch="92">留数定理の計算の型。積分路を閉じると値は囲んだ特異点の留数だけで決まる。分岐がある場合は切断を避ける鍵穴型を用い、切断の上下での値のずれが答えを与える。</figcaption>
+</figure>
+
+<div class="star2">
+<h4>★★ 学部後半——鞍点法と、漸近評価</h4>
+
+<p><strong>ラプラスの方法と鞍点法。</strong><m>I(\lambda)=\int_\gamma g(z)e^{\lambda h(z)}dz</m>（<m>\lambda\to\infty</m>）を評価したい。<em>積分路を変形して、<m>\mathrm{Re}\,h</m> が最大になる点を一点だけ通るようにする。</em>正則性により、そのような点は <m>h'(z_0)=0</m> をみたす<strong>鞍点</strong>である（最大値原理により、<m>|e^h|</m> は内点で極大値をもてない——極値は鞍点にしかならない）。</p>
+<M>I(\lambda) \sim g(z_0)\,e^{\lambda h(z_0)}\sqrt{\frac{2\pi}{-\lambda h''(z_0)}}</M>
+<p><span class="yogo-hl">最大値原理が「峠を通る道しかない」ことを保証し、それが漸近展開の主要項を決める。</span></p>
+
+<p><em>例：スターリングの公式。</em><m>\Gamma(n+1)=\int_0^\infty t^ne^{-t}dt</m> で <m>t=nz</m> と置けば <m>n^{n+1}\int z^ne^{-nz}dz=n^{n+1}\int e^{n(\log z-z)}dz</m>。鞍点は <m>z=1</m>、<m>h''=-1</m> で</p>
+<M>n! \sim \sqrt{2\pi n}\,\Big(\frac ne\Big)^n</M>
+
+<p><strong>特異点解析。</strong>母関数 <m>F(z)=\sum a_nz^n</m> の係数の漸近挙動は、<m>F</m> の収束円上の特異点の種類で決まる。<em>コーシーの係数公式 <m>a_n=\frac{1}{2\pi i}\oint\frac{F(z)}{z^{n+1}}dz</m> を、特異点のまわりに積分路を変形して評価する。</em></p>
+<p>（i）位数 <m>m</m> の極 <m>\rho</m> なら <m>a_n\sim c\,n^{m-1}\rho^{-n}</m>。<br>
+（ii）代数的特異点 <m>(1-z/\rho)^{-\alpha}</m> なら <m>a_n\sim\frac{n^{\alpha-1}}{\Gamma(\alpha)}\rho^{-n}</m>。<em>カタラン数の <m>4^n n^{-3/2}</m> はこの型（<m>\alpha=-1/2</m>）。</em></p>
+<p><span class="yogo-hl">フラジョレ–セジウィックの解析的組合せ論は、この対応を体系化した</span>——「数え上げの漸近は、母関数の最も近い特異点を見よ」。</p>
+
+<p><strong>逆ラプラス変換。</strong><m>F(s)=\int_0^\infty f(t)e^{-st}dt</m> の反転は</p>
+<M>f(t) = \frac{1}{2\pi i}\int_{c-i\infty}^{c+i\infty}F(s)e^{st}\,ds</M>
+<p>（<strong>ブロムウィッチ積分</strong>）。<em>積分路を左に倒して留数を拾えば、<m>F</m> の極が <m>f</m> の指数的な成分を与える。</em><span class="yogo-hl">制御理論で「極が左半平面にあれば安定」というのは、この留数計算の帰結である。</span>第77章★★のストーンの公式も、同じ形をしている。</p>
+
+<p><strong>仮定を外すと。</strong>鞍点法は <m>h''(z_0)\ne0</m> を要求する。<em>退化した鞍点（<m>h''=0</m>）ではエアリー関数型の漸近が現れ、この分類が<strong>カタストロフィー理論</strong>になる。</em>光学の焦線（コースティクス）が物理的な現れである。</p>
+</div>
+
+<div class="star3">
+<h4>★★★ 大学院——留数の一般化</h4>
+
+<p><strong>多変数の留数。</strong><m>\mathbb{C}^n</m> では特異点が孤立するとは限らず、留数は <m>n</m> 次元の積分路（<m>|f_1|=\varepsilon_1,\dots,|f_n|=\varepsilon_n</m> というトーラス）に沿った積分として定義される（<strong>グロタンディークの留数</strong>）。<em>局所的なデータ（多項式の係数）から大域的な不変量（交点数）を読む道具で、代数幾何の交点理論の基礎にある。</em></p>
+
+<p><strong>層コホモロジーとしての留数。</strong>留数写像 <m>H^n(\mathbb{C}^n\setminus V,\Omega^n)\to\mathbb{C}</m> は、ド・ラム・コホモロジーの双対性の一部である。<em>ポアンカレ双対性のもとで、留数をとることと「サイクルと交わる」ことが同じになる。</em><span class="yogo-hl">第90章★★★で並べた「局所と大域の往復」が、ここでは完全に代数的な形をとる。</span></p>
+
+<p><strong>グロタンディーク–リーマン–ロッホ。</strong>留数定理の「すべての留数の和は零」（<ref t="prop-ryusu-keisan"/>（5））は、リーマン球面上の有理型 <m>1</m> 形式についての主張である。<em>一般の閉リーマン面では、これが留数定理の大域版になり、さらに層の特性類の言葉に持ち上げると<strong>リーマン–ロッホの定理</strong></em></p>
+<M>\dim H^0(X,L) - \dim H^1(X,L) = \deg L + 1 - g</M>
+<p><em>が得られる。</em>アティヤ–シンガーの指数定理は、これを任意の楕円型作用素へ一般化したものである。<span class="yogo-hl">「留数の総和が零」という素朴な等式が、指数定理の系譜の出発点にある。</span></p>
+
+<p><strong>正則モチーフと周期。</strong>代数多様体の<em>周期</em>（代数的サイクル上の正則形式の積分）は、留数の高次元版として現れる。<em>グロタンディークの周期予想——周期の代数的関係はすべて幾何的な理由から来る——は未解決である。</em>コンツェヴィッチ–ザギエの周期の理論は、<m>\pi</m>、<m>\log2</m>、<m>\zeta(3)</m>、多重ゼータ値などを統一的に扱う枠組みを与えるが、<span class="yogo-hl"><m>\zeta(3)</m> が無理数であること（アペリー、1979年）を超えて、<m>\zeta(5)</m> の無理数性すら未解決である。</span></p>
+
+<p><strong>物理での留数。</strong>ファインマン積分の値は、しばしば周期であり、その計算は留数と <m>\bar\partial</m> の理論に帰着する。<em>散乱振幅の「単位性」（ユニタリティ）は、複素平面での切断と留数の関係（分散関係）として定式化される。</em>第75章の作用素論的なユニタリ性と、複素解析的な単位性は、同じ物理を二つの言葉で述べたものである。</p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li><m>\dfrac{1}{z^2+1}</m> の各極での留数を求めよ。</li>
+<li><m>\oint_{|z|=1}e^{1/z}dz</m> を計算せよ。</li>
+<li><m>\displaystyle\int_{-\infty}^\infty\frac{dx}{1+x^2}</m> を留数で計算せよ。</li>
+<li>すべての留数（無限遠を含む）の和が零であることを、有理関数で確かめよ。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li><ref t="thm-ryusu"/>を、主要部を引く議論で示せ。<span class="haiten">（35点）</span></li>
+<li>位数 <m>m</m> の極での留数公式（<ref t="prop-ryusu-keisan"/>（3））を示せ。<span class="haiten">（30点）</span></li>
+<li>ジョルダンの補題を示せ。<span class="haiten">（35点）</span></li>
+<li><ref t="thm-hengaku"/>（1）を示せ。<span class="haiten">（35点）</span></li>
+<li>ルーシェの定理から開写像定理を導け。<span class="haiten">（40点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li>鍵穴型の積分路で <m>\int_0^\infty\frac{x^{a-1}}{1+x}dx=\frac{\pi}{\sin\pi a}</m> を示せ。<span class="haiten">（50点）</span></li>
+<li>余接関数を使って <m>\sum1/n^2=\pi^2/6</m> と <m>\sum1/n^4=\pi^4/90</m> を導け。<span class="haiten">（45点）</span></li>
+<li>鞍点法でスターリングの公式を導け。<span class="haiten">（50点）</span></li>
+<li>ラグランジュの反転公式を、逆関数の積分表示から導け。<span class="haiten">（50点）</span></li>
+</ol>
+</div>
+</div>
+<nav class="chnav">
+<a class="prev" href="ch91.html">← 第91章　べき級数展開と解析接続</a>
+<a class="next" href="ch93.html">第93章　等角写像とRiemannの写像定理 →</a>
+</nav>
+</article>
+</main>
+<footer class="site">
+  <p>位相・解析大全　学部から大学院まで、三層で読む位相空間論と解析学</p>
+  <p class="small">本文・図版とも本書のために作成したものです。数式は MathJax でベクタ化して組んでいます。</p>
+</footer>
+</body>
+</html>

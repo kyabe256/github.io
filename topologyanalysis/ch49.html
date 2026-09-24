@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第49章 級数と収束判定｜位相・解析大全</title>
+<meta name="description" content="位相・解析大全　第49章　級数と収束判定">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;600&display=swap">
+<link rel="stylesheet" href="web.css">
+</head>
+<body>
+<header class="site">
+  <a class="site-title" href="index.html">位相・解析大全</a>
+  <nav class="site-nav">
+    <a href="index.html">目次</a>
+    <a href="isou-kaiseki-taizen.pdf">PDF版</a>
+  </nav>
+</header>
+<main>
+<article class="chapter">
+<p class="part-label">第VI部　実数と極限</p>
+<h1><span class="ch-num">第49章</span>級数と収束判定</h1>
+<nav class="chnav">
+<a class="prev" href="ch48.html">← 第48章　微分と平均値の定理</a>
+<a class="next" href="ch50.html">第50章　関数列——何が保存され、何が壊れるか →</a>
+</nav>
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>無限個を足すとは、どういう約束なのか。</li>
+<li>足す順序を変えると和が変わるのは、なぜ起きるのか。</li>
+<li>収束判定法はたくさんあるが、根はいくつあるのか。</li>
+</ul>
+</div>
+
+<h3 id="s49-1">無限和の約束</h3>
+
+<div class="teigi" id="def-kyusu">
+<h4>級数の収束</h4>
+<p class="no-indent">数列 <m>(a_n)</m> に対し、部分和 <m>S_N = \sum_{n=1}^{N} a_n</m> を作る。<m>(S_N)</m> が収束するとき、級数 <m>\sum_n a_n</m> は<strong>収束</strong>するといい、その極限を和とする。</p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent"><span class="yogo-hl">無限和は「足す」という操作ではなく、「部分和の極限」という約束である。</span><em>だから足し算の法則がそのまま成り立つとは限らない。</em>結合法則は生き残るが、交換法則は条件つきでしか成り立たない（後述）。</p>
+</div>
+
+<div class="teiri" data-kind="命題" id="prop-kyusu-hitsuyo">
+<h4></h4>
+<p class="no-indent"><m>\sum_n a_n</m> が収束するなら <m>a_n \to 0</m>。逆は成り立たない。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><m>a_n = S_n - S_{n-1} \to S - S = 0</m>。逆の反例は調和級数 <m>\sum 1/n</m>。</p>
+<p>調和級数の発散。<em><m>\sum_{n=2^k+1}^{2^{k+1}} \frac1n \ge 2^k \cdot \frac{1}{2^{k+1}} = \frac12</m></em> なので、部分和はいくらでも大きくなる。</p>
+</div>
+
+<h3 id="s49-2">正項級数——単調収束定理だけで足りる</h3>
+
+<p><m>a_n \ge 0</m> なら部分和は単調増加である。<em>よって第44章の単調収束定理から、収束と有界性が同値になる。</em></p>
+
+<div class="teiri" id="thm-seiko">
+<h4>正項級数の判定法</h4>
+<p class="no-indent"><m>a_n, b_n \ge 0</m> とする。</p>
+<p class="no-indent">（1）<strong>比較</strong>　<m>a_n \le b_n</m> で <m>\sum b_n</m> 収束なら <m>\sum a_n</m> 収束。<br>
+（2）<strong>比判定</strong>（ダランベール）　<m>\limsup_n \frac{a_{n+1}}{a_n} < 1</m> なら収束、<m>\liminf_n \frac{a_{n+1}}{a_n} > 1</m> なら発散。<br>
+（3）<strong>根判定</strong>（コーシー）　<m>\limsup_n a_n^{1/n} < 1</m> なら収束、<m>>1</m> なら発散。<br>
+（4）<strong>積分判定</strong>　<m>f</m> が <m>[1,\infty)</m> で正・単調減少なら、<m>\sum_n f(n)</m> と <m>\int_1^\infty f</m> は同時に収束する。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">（1）部分和が単調増加で上に有界。<ref t="thm-tancho"/>。</p>
+<p>（2）<m>\limsup \frac{a_{n+1}}{a_n} = r < 1</m> なら、<m>r < \rho < 1</m> を取れば、ある <m>N</m> から先 <m>a_{n+1} \le \rho a_n</m>。<em>よって <m>a_n \le a_N \rho^{n-N}</m> で、等比級数と比較。</em></p>
+<p>（3）<m>\limsup a_n^{1/n} = r < 1</m> なら <m>r<\rho<1</m> を取って <m>a_n \le \rho^n</m>（ある <m>N</m> から先）。同じく等比級数と比較。</p>
+<p>（4）<m>\int_{n}^{n+1} f \le f(n) \le \int_{n-1}^{n} f</m> を足し上げる。</p>
+</div>
+
+<div class="chui">
+<h4>根判定は比判定より強い</h4>
+<p class="no-indent">第44章の演習で見たとおり <m>\limsup a_n^{1/n} \le \limsup \frac{a_{n+1}}{a_n}</m>。<em>だから比判定で収束が出れば、根判定でも出る。</em></p>
+<p>逆は成り立たない。<m>a_n = 2^{-n+(-1)^n}</m> とすると、<em>比 <m>a_{n+1}/a_n</m> は <m>1/8</m> と <m>2</m> のあいだを振動する</em>が、<m>a_n^{1/n} \to 1/2</m>。<span class="yogo-hl">根判定は収束するが、比判定は何も言えない。</span></p>
+<p>それでも比判定がよく使われるのは、階乗や二項係数が現れる級数で<em>比のほうが計算しやすい</em>からである。</p>
+</div>
+
+<h3 id="s49-3">絶対収束と条件収束</h3>
+
+<div class="teigi" id="def-zettai">
+<h4>絶対収束</h4>
+<p class="no-indent"><m>\sum_n |a_n|</m> が収束するとき、<m>\sum_n a_n</m> は<strong>絶対収束</strong>するという。収束するが絶対収束しないとき<strong>条件収束</strong>するという。</p>
+</div>
+
+<div class="teiri" id="thm-zettai-shusoku">
+<h4></h4>
+<p class="no-indent">絶対収束すれば収束する。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">コーシー条件。<m>\left|\sum_{n=m}^{k} a_n\right| \le \sum_{n=m}^{k}|a_n|</m> で、右辺がコーシー条件を満たす。<em><m>\mathbb{R}</m> の完備性を使っている。</em></p>
+</div>
+
+<div class="teiri" id="thm-riemann-saihairetsu">
+<h4>リーマンの再配列定理</h4>
+<p class="no-indent"><m>\sum_n a_n</m> が条件収束するとき、どの <m>S \in [-\infty,+\infty]</m> についても、適当な置換 <m>\sigma</m> を取れば <m>\sum_n a_{\sigma(n)} = S</m> とできる。</p>
+<p class="no-indent">絶対収束するときは、どの置換についても和は変わらない。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><m>a_n^+ = \max(a_n,0)</m>、<m>a_n^- = \max(-a_n,0)</m> とおく。条件収束なら <m>\sum a_n^+ = \sum a_n^- = +\infty</m> である。<em>片方が有限なら、もう片方も有限になり絶対収束してしまうから。</em></p>
+<p>目標 <m>S</m> を取る。正項を <m>S</m> を超えるまで足し、次に負項を <m>S</m> を下回るまで足し、これを繰り返す。<span class="yogo-hl">どちらも無限に足せるので、いつでも越えられる。</span></p>
+<p><m>a_n \to 0</m> だから、越えたときの超過幅は <m>0</m> に近づく。<em>よって部分和は <m>S</m> に収束する。</em></p>
+<p>絶対収束の場合。<m>\varepsilon > 0</m> に対し <m>\sum_{n>N}|a_n|<\varepsilon</m> なる <m>N</m> を取る。置換後に <m>1,\ldots,N</m> がすべて現れる番号 <m>M</m> を取れば、<m>k \ge M</m> の部分和と <m>\sum a_n</m> の差は <m>\varepsilon</m> 以下。</p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent"><span class="yogo-hl">条件収束する級数の「和」は、足す順序に依存する。</span><em>つまり集合としての <m>\{a_n\}</m> には、和という量が定まっていない。</em></p>
+<p>第VII部で測度を扱うとき、<em>可算加法性</em>を要求する。その値が順序によらないためには、絶対収束が要る。<span class="yogo-hl">ルベーグ積分が「絶対可積分」を基本にするのは、この理由による。</span></p>
+</div>
+
+<h3 id="s49-4">冪級数</h3>
+
+<div class="teiri" id="thm-cauchy-hadamard">
+<h4>コーシー–アダマールの公式</h4>
+<p class="no-indent">冪級数 <m>\sum_n a_n (x-c)^n</m> について</p>
+<M>\frac{1}{R} = \limsup_{n} |a_n|^{1/n}</M>
+<p class="no-indent">とおくと、<m>|x-c|<R</m> で絶対収束、<m>|x-c|>R</m> で発散する。さらに <m>0<r<R</m> なら <m>|x-c|\le r</m> で一様収束する。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">根判定（<ref t="thm-seiko"/>（3））を <m>|a_n(x-c)^n|</m> に適用する。<em><m>\limsup |a_n(x-c)^n|^{1/n} = |x-c|/R</m>。</em></p>
+<p>一様収束。<m>|x-c|\le r</m> なら <m>|a_n(x-c)^n| \le |a_n| r^n</m> で、右辺の級数は収束する。<span class="yogo-hl">定数列で押さえるこの手法をワイエルシュトラスの <m>M</m> 判定法という。</span></p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">ここで第44章の上極限が効いている。<em><m>|a_n|^{1/n}</m> は収束しなくてよい。</em><span class="yogo-hl">極限が存在しなくても収束半径は定まる——これが上極限を用意した理由である。</span></p>
+<p>収束円周 <m>|x-c|=R</m> での挙動は、公式からは何も出ない。<em><m>\sum x^n</m>、<m>\sum x^n/n</m>、<m>\sum x^n/n^2</m> はどれも <m>R=1</m> だが、境界での様子が違う。</em></p>
+</div>
+
+<figure id="fig49-1">
+<svg viewBox="0 0 470 266" width="470" height="266" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">判定法の系図——根はどれも比較である</text>
+
+  <rect x="14" y="26" width="442" height="128" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+
+  <rect x="166" y="34" width="140" height="22" rx="3" fill="#dce7f0" stroke="#35618f" stroke-width="1.2"/>
+  <text x="236" y="48" font-size="6.8" text-anchor="middle" font-weight="700" fill="#1f3b5c">単調収束定理（第44章）</text>
+
+  <rect x="166" y="70" width="140" height="22" rx="3" fill="#e8f0f7" stroke="#35618f"/>
+  <text x="236" y="84" font-size="6.8" text-anchor="middle" fill="#1f3b5c">正項級数の比較判定</text>
+
+  <path d="M236,58 L236,66" stroke="#35618f" stroke-width="1.1"/>
+  <path d="M232,66 L236,70 L240,66" fill="#35618f"/>
+
+  <rect x="36" y="110" width="104" height="22" rx="3" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="88" y="124" font-size="6.6" text-anchor="middle" fill="#1e4a41">比判定</text>
+  <rect x="184" y="110" width="104" height="22" rx="3" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="236" y="124" font-size="6.6" text-anchor="middle" fill="#1e4a41">根判定</text>
+  <rect x="332" y="110" width="104" height="22" rx="3" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="384" y="124" font-size="6.6" text-anchor="middle" fill="#1e4a41">積分判定</text>
+
+  <path d="M200,94 L110,106" stroke="#2f6b5f" stroke-width="1"/>
+  <path d="M110,106 L118,104 L114,110" fill="#2f6b5f"/>
+  <path d="M236,94 L236,106" stroke="#2f6b5f" stroke-width="1"/>
+  <path d="M232,106 L236,110 L240,106" fill="#2f6b5f"/>
+  <path d="M272,94 L362,106" stroke="#2f6b5f" stroke-width="1"/>
+  <path d="M362,106 L354,104 L358,110" fill="#2f6b5f"/>
+
+  <text x="88" y="144" font-size="6.2" text-anchor="middle" fill="#6a6a68">階乗に強い</text>
+  <text x="236" y="144" font-size="6.2" text-anchor="middle" fill="#8c2f1e">比判定より強い</text>
+  <text x="384" y="144" font-size="6.2" text-anchor="middle" fill="#6a6a68">単調な項に強い</text>
+
+  <text x="24" y="48" font-size="6.2" fill="#6a6a68">どれも「等比級数</text>
+  <text x="24" y="58" font-size="6.2" fill="#6a6a68">または積分と</text>
+  <text x="24" y="68" font-size="6.2" fill="#6a6a68">比べる」に帰着</text>
+
+  <rect x="14" y="166" width="216" height="92" rx="4" fill="#fdf6f4" stroke="#e0c3bd"/>
+  <text x="24" y="181" font-size="7.6" font-weight="700" fill="#8c2f1e">絶対収束と条件収束の差</text>
+  <text x="24" y="198" font-size="6.8" fill="#8c2f1e">絶対収束　順序を変えても和は同じ</text>
+  <text x="24" y="211" font-size="6.8" fill="#8c2f1e">条件収束　順序を変えれば任意の値に</text>
+  <text x="24" y="228" font-size="6.6" fill="#6a6a68">正の項の和も負の項の和も無限大——</text>
+  <text x="24" y="239" font-size="6.6" fill="#6a6a68">だから上下どちらへも動かせる</text>
+  <text x="24" y="252" font-size="6.6" fill="#5a4520">測度の可算加法性に絶対収束が要る理由でもある</text>
+
+  <rect x="240" y="166" width="216" height="92" rx="4" fill="#f4f1ea" stroke="#8a6b2c"/>
+  <text x="250" y="181" font-size="7.6" font-weight="700" fill="#5a4520">収束半径 1 の三つ</text>
+  <text x="250" y="198" font-size="6.8" fill="#5a4520">Σ xⁿ　　　境界でどこも発散</text>
+  <text x="250" y="211" font-size="6.8" fill="#5a4520">Σ xⁿ/n　　x = 1 だけ発散</text>
+  <text x="250" y="224" font-size="6.8" fill="#5a4520">Σ xⁿ/n²　 境界で絶対収束</text>
+  <text x="250" y="241" font-size="6.6" fill="#6a6a68">収束半径の公式は、境界での挙動を</text>
+  <text x="250" y="252" font-size="6.6" fill="#6a6a68">まったく決めない</text>
+</svg>
+<figcaption data-ch="49">正項級数の判定法はいずれも比較判定に帰着し、比較判定は単調収束定理に帰着する。絶対収束と条件収束の差は、正の項と負の項がそれぞれ発散するかどうかにある。</figcaption>
+</figure>
+
+<div class="lv2">
+<h4>条件収束する級数を扱う道具</h4>
+<p>絶対収束しない級数には、比較判定が使えない。<em>別の道具が要る。</em></p>
+<p><strong>交代級数判定法（ライプニッツ）。</strong><m>b_n \ge 0</m> が単調減少で <m>b_n \to 0</m> なら <m>\sum (-1)^n b_n</m> は収束し、<em>部分和の誤差は次の項で押さえられる</em>。</p>
+<p>証明。偶数番の部分和は単調減少、奇数番は単調増加で、互いに挟み合う。<span class="yogo-hl">区間縮小原理（第43章★★）そのものである。</span></p>
+<p><strong>アーベルの総和法。</strong><m>A_N = \sum_{n\le N} a_n</m> とおくと</p>
+<M>\sum_{n=m}^{k} a_n b_n = A_k b_k - A_{m-1}b_m - \sum_{n=m}^{k-1} A_n (b_{n+1}-b_n)</M>
+<p class="no-indent"><em>これは部分積分の離散版である。</em>和の一方を「積分」し、他方を「微分」している。</p>
+<p><strong>ディリクレの判定法。</strong><m>(A_N)</m> が有界で <m>b_n \downarrow 0</m> なら <m>\sum a_n b_n</m> は収束する。<em>上の式で <m>A_n</m> を有界性で押さえ、<m>\sum|b_{n+1}-b_n| = b_m</m>（単調だから）を使う。</em></p>
+<p><strong>応用。</strong><m>\sum \frac{\sin n\theta}{n}</m>（<m>\theta \ne 2k\pi</m>）は収束する。<em><m>\sum_{n\le N}\sin n\theta</m> が有界だから。</em><span class="yogo-hl">これは第80章のフーリエ級数で本質的に効く。</span></p>
+<p><strong>アーベルの定理。</strong><m>\sum a_n</m> が収束するなら <m>\lim_{x\to 1^-}\sum a_n x^n = \sum a_n</m>。<em>境界での値が、内部からの極限として取れる。</em></p>
+<p>逆は成り立たない（<m>\sum(-1)^n</m> は <m>x\to1^-</m> で <m>1/2</m> に近づくが発散する）。<span class="yogo-hl">タウバーの定理は、逆が成り立つ追加条件（<m>na_n \to 0</m> など）を与える。</span></p>
+<p><strong>まとめ。</strong>条件収束の道具はすべて「<em>部分和を有界に保ちながら、係数を単調に減らす</em>」という形をしている。<em>絶対値で評価しないところが、正項級数と根本的に違う。</em></p>
+</div>
+
+<div class="lv3">
+<h4>無条件収束・総和可能性・そして発散級数</h4>
+<p><strong>無条件収束。</strong>どの置換についても収束して同じ和になることを<em>無条件収束</em>という。<ref t="thm-riemann-saihairetsu"/> は、<m>\mathbb{R}</m> では無条件収束と絶対収束が同値であることを述べている。</p>
+<p><strong>高次元では変わる。</strong>レヴィ–シュタイニッツの定理——<m>\mathbb{R}^d</m> の級数が収束するとき、<em>再配列で得られる和の全体はアフィン部分空間をなす</em>。<span class="yogo-hl">一次元では「一点か直線全体」で、これがリーマンの定理にあたる。</span></p>
+<p><strong>無限次元ではさらに変わる。</strong>ドヴォレツキー–ロジャースの定理——<em>無限次元バナッハ空間には、無条件収束するが絶対収束しない級数がつねに存在する</em>。</p>
+<p>逆に、無条件収束と絶対収束が一致するのは有限次元の場合に限る。<span class="yogo-hl">これは第63章で扱う「バナッハ空間の有限次元性の特徴づけ」の一つである。</span></p>
+<p><strong>総和法。</strong>発散する級数にも「和」を与えたい場面がある。</p>
+<p><em>チェザロ総和</em>——部分和の平均 <m>\frac{1}{N}\sum_{k\le N} S_k</m> の極限。<m>\sum(-1)^n</m> に <m>1/2</m> を与える。</p>
+<p><em>アーベル総和</em>——<m>\lim_{x\to1^-}\sum a_n x^n</m>。チェザロ総和より強い（チェザロ総和可能ならアーベル総和可能で値も同じ）。</p>
+<p>これらは<em>正則</em>である——収束する級数には、もとの和を与える。<span class="yogo-hl">第81章のフェイエールの定理は、フーリエ級数のチェザロ平均が一様収束することを示す。</span>発散しうる級数を、平均で救う技法である。</p>
+<p><strong>バナッハ極限との関係。</strong>第44章★★★で触れたバナッハ極限 <m>\Lambda</m> は、あらゆる有界数列に「極限」を与える。<em>部分和の列に適用すれば、どんな有界な部分和をもつ級数にも和が定まる。</em></p>
+<p>ただし<em>線型性しか保証されず、積とは噛み合わない</em>。そしてハーン–バナッハの定理（第67章）すなわち選択公理に依存する。<span class="yogo-hl">「すべての級数に和を与える」ことは、具体的な構成を諦める代償で買える。</span></p>
+<p><strong>オイラーの流儀。</strong><m>1+2+4+8+\cdots = -1</m> のような等式は、<m>\frac{1}{1-x}</m> の <m>x=2</m> での「値」として意味づけられる。<em>解析接続（第91章）が、形式的な計算に正当な意味を与える。</em></p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li><m>\sum 1/n^2</m> が収束することを積分判定で示せ。</li>
+<li><m>\sum n!/n^n</m> の収束を比判定で調べよ。</li>
+<li><m>\sum x^n/n!</m> の収束半径を求めよ。</li>
+<li><m>\sum (-1)^n/n</m> が条件収束することを示せ。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li><ref t="thm-seiko"/>（4）の積分判定を、細部まで示せ。<span class="haiten">（20点）</span></li>
+<li><ref t="thm-riemann-saihairetsu"/> の条件収束の場合を、<m>S=+\infty</m> についても示せ。<span class="haiten">（30点）</span></li>
+<li>ディリクレの判定法を、アーベルの総和法から導け。<span class="haiten">（30点）</span></li>
+<li>冪級数が収束円の内部で項別微分できることを、第48章★★を使って示せ。<span class="haiten">（30点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li>アーベルの定理を示し、逆が成り立たない例を挙げよ。<span class="haiten">（35点）</span></li>
+<li>根判定が比判定より真に強いことを、具体例で示せ。<span class="haiten">（25点）</span></li>
+<li>チェザロ総和が正則であること（収束級数にもとの和を与えること）を示せ。<span class="haiten">（30点）</span></li>
+</ol>
+</div>
+</div>
+<nav class="chnav">
+<a class="prev" href="ch48.html">← 第48章　微分と平均値の定理</a>
+<a class="next" href="ch50.html">第50章　関数列——何が保存され、何が壊れるか →</a>
+</nav>
+</article>
+</main>
+<footer class="site">
+  <p>位相・解析大全　学部から大学院まで、三層で読む位相空間論と解析学</p>
+  <p class="small">本文・図版とも本書のために作成したものです。数式は MathJax でベクタ化して組んでいます。</p>
+</footer>
+</body>
+</html>

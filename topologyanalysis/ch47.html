@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第47章 一様連続と一様収束｜位相・解析大全</title>
+<meta name="description" content="位相・解析大全　第47章　一様連続と一様収束">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;600&display=swap">
+<link rel="stylesheet" href="web.css">
+</head>
+<body>
+<header class="site">
+  <a class="site-title" href="index.html">位相・解析大全</a>
+  <nav class="site-nav">
+    <a href="index.html">目次</a>
+    <a href="isou-kaiseki-taizen.pdf">PDF版</a>
+  </nav>
+</header>
+<main>
+<article class="chapter">
+<p class="part-label">第VI部　実数と極限</p>
+<h1><span class="ch-num">第47章</span>一様連続と一様収束</h1>
+<nav class="chnav">
+<a class="prev" href="ch46.html">← 第46章　連続関数——中間値と最大値</a>
+<a class="next" href="ch48.html">第48章　微分と平均値の定理 →</a>
+</nav>
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>「一様」という語は、何を一様にしているのか。</li>
+<li>各点収束では、なぜ連続性が保たれないのか。</li>
+<li>一様性は位相的な概念なのか。</li>
+</ul>
+</div>
+
+<h3 id="s47-1">δ が点に依存しないこと</h3>
+
+<p>第45章で、<m>\varepsilon</m> に対する <m>\delta</m> は点 <m>a</m> ごとに取ってよいと述べた。<em>では、すべての点で共通の <m>\delta</m> が取れるとしたら。</em></p>
+
+<div class="teigi" id="def-eps-ichiyou-renzoku">
+<h4>一様連続</h4>
+<p class="no-indent"><m>f \colon X \to \mathbb{R}</m>（<m>X \subseteq \mathbb{R}</m>）が<strong>一様連続</strong>であるとは、</p>
+<M>\forall \varepsilon > 0\ \exists \delta > 0\ \forall x, y \in X\ \big(|x-y| < \delta \implies |f(x)-f(y)| < \varepsilon\big)</M>
+<p class="no-indent">が成り立つことをいう。</p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">連続の定義と比べる。<em>連続は <m>\forall x\ \forall \varepsilon\ \exists \delta</m>、一様連続は <m>\forall \varepsilon\ \exists \delta\ \forall x</m>。</em><span class="yogo-hl"><m>\exists \delta</m> が <m>\forall x</m> の前に出た——これだけの違いである。</span></p>
+<p>第45章で述べたとおり、量化子の順序が定義の内容そのものである。</p>
+</div>
+
+<div class="hanrei" id="cex-ichiyou">
+<h4>連続だが一様連続でない</h4>
+<p class="no-indent"><m>f(x) = 1/x</m> は <m>(0,1]</m> で連続だが一様連続でない。<em><m>x</m> が <m>0</m> に近いほど、同じ <m>\varepsilon</m> に対して小さい <m>\delta</m> が要る。</em></p>
+<p>実際、<m>x_n = 1/n</m>、<m>y_n = 1/(n+1)</m> とすると <m>|x_n-y_n| \to 0</m> だが <m>|f(x_n)-f(y_n)| = 1</m>。</p>
+<p><m>f(x) = x^2</m> は <m>\mathbb{R}</m> で連続だが一様連続でない。<span class="yogo-hl">傾きが無限に大きくなる場所があると、一様連続でなくなる。</span></p>
+</div>
+
+<div class="teiri" id="thm-heine-cantor">
+<h4>ハイネ–カントールの定理</h4>
+<p class="no-indent">コンパクト距離空間 <m>K</m> 上の連続関数は一様連続である。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><m>\varepsilon > 0</m> を取る。各 <m>x \in K</m> について、連続性より <m>\delta_x > 0</m> を <m>|f(y)-f(x)| < \varepsilon/2</m>（<m>d(y,x) < \delta_x</m>）となるように取る。</p>
+<p><m>\{\, B(x, \delta_x/2) \,\}_{x \in K}</m> は開被覆なので、有限部分被覆 <m>B(x_1,\delta_{x_1}/2), \ldots, B(x_k,\delta_{x_k}/2)</m> を取る。<m>\delta = \min_i \delta_{x_i}/2</m> とおく。</p>
+<p><m>d(x,y) < \delta</m> とする。<m>x \in B(x_i, \delta_{x_i}/2)</m> なる <m>i</m> があり、<em><m>d(y,x_i) \le d(y,x)+d(x,x_i) < \delta + \delta_{x_i}/2 \le \delta_{x_i}</m>。</em></p>
+<p>よって <m>|f(x)-f(x_i)| < \varepsilon/2</m> かつ <m>|f(y)-f(x_i)| < \varepsilon/2</m> で、<m>|f(x)-f(y)| < \varepsilon</m>。</p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">証明の骨は「<em>無限個の <m>\delta_x</m> から有限個を選んで、その最小を取る</em>」である。<span class="yogo-hl">コンパクト性が、無限個の局所的な情報を有限個にまとめる。</span>第20章で述べた「コンパクト性は有限性の代用」が、ここで具体的に働いている。</p>
+<p><m>\delta_x/2</m> と半分にしておくのは、三角不等式の余裕を作るためである。<em>第24章の細分の議論と同じ技巧である。</em></p>
+</div>
+
+<h3 id="s47-2">関数列の収束</h3>
+
+<div class="teigi" id="def-ichiyou-shusoku">
+<h4>各点収束と一様収束</h4>
+<p class="no-indent"><m>f_n, f \colon X \to \mathbb{R}</m> とする。</p>
+<p class="no-indent"><strong>各点収束</strong>　<m>\forall x\ \forall \varepsilon\ \exists N\ \forall n \ge N\ (|f_n(x)-f(x)| < \varepsilon)</m>。<br>
+<strong>一様収束</strong>　<m>\forall \varepsilon\ \exists N\ \forall n \ge N\ \forall x\ (|f_n(x)-f(x)| < \varepsilon)</m>。</p>
+<p class="no-indent">一様収束は <m>\sup_x |f_n(x)-f(x)| \to 0</m> と同値である。</p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">ここでも量化子の順序である。<em>各点収束では <m>N</m> が <m>x</m> に依存してよい。一様収束では依存できない。</em><span class="yogo-hl">一様連続で <m>\delta</m> が点に依存しなかったのと、まったく同じ構造である。</span></p>
+</div>
+
+<div class="hanrei" id="cex-kakuten">
+<h4>各点収束では連続性が壊れる</h4>
+<p class="no-indent"><m>f_n(x) = x^n</m> を <m>[0,1]</m> 上で考える。各点では</p>
+<M>f_n(x) \to f(x) = \begin{cases} 0 & (0 \le x < 1) \\ 1 & (x = 1) \end{cases}</M>
+<p class="no-indent">に収束するが、<em><m>f</m> は連続でない。</em></p>
+<p>一様収束でないことは <m>\sup_x|f_n(x)-f(x)| = 1</m>（<m>x \to 1^-</m> で）から。<span class="yogo-hl">各 <m>f_n</m> が連続でも、極限が連続とは限らない。</span></p>
+</div>
+
+<div class="teiri" id="thm-ichiyou-renzoku-hozon">
+<h4></h4>
+<p class="no-indent">連続関数の列 <m>(f_n)</m> が <m>f</m> に一様収束するなら、<m>f</m> は連続である。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><m>\varepsilon > 0</m>、<m>a \in X</m> とする。一様収束より <m>\sup_x|f_N(x)-f(x)| < \varepsilon/3</m> なる <m>N</m> を取る。<m>f_N</m> の連続性より <m>|f_N(x)-f_N(a)| < \varepsilon/3</m>（<m>|x-a|<\delta</m>）なる <m>\delta</m> を取る。</p>
+<M>|f(x)-f(a)| \le |f(x)-f_N(x)| + |f_N(x)-f_N(a)| + |f_N(a)-f(a)| < \varepsilon</M>
+<p class="no-indent"><em>これがいわゆる「三分割の議論」である。</em><span class="yogo-hl">一様性は、第一項と第三項を <m>x</m> によらず押さえるために使われる。</span></p>
+</div>
+
+<div class="teiri" id="thm-ichiyou-cauchy">
+<h4>一様コーシー条件</h4>
+<p class="no-indent"><m>(f_n)</m> が一様収束することと、</p>
+<M>\forall \varepsilon > 0\ \exists N\ \forall m,n \ge N\ \forall x\ \big(|f_m(x)-f_n(x)| < \varepsilon\big)</M>
+<p class="no-indent">は同値である。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">必要性は三角不等式。十分性は、各 <m>x</m> で <m>(f_n(x))</m> がコーシー列なので <m>\mathbb{R}</m> の完備性より極限 <m>f(x)</m> が存在し、上の式で <m>m \to \infty</m> とすれば <m>|f(x)-f_n(x)| \le \varepsilon</m>（<m>x</m> によらず）。</p>
+</div>
+
+<figure id="fig47-1">
+<svg viewBox="0 0 470 272" width="470" height="272" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">一様収束は、ε の帯に丸ごと入ること</text>
+
+  <rect x="14" y="26" width="218" height="126" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+  <text x="24" y="42" font-size="7" font-weight="700" fill="#8c2f1e">各点収束だけ　xⁿ</text>
+  <line x1="36" y1="134" x2="220" y2="134" stroke="#8a8a88" stroke-width="0.8"/>
+  <line x1="36" y1="134" x2="36" y2="54" stroke="#8a8a88" stroke-width="0.8"/>
+  <line x1="36" y1="60" x2="220" y2="60" stroke="#8a8a88" stroke-width="0.5" stroke-dasharray="2,2"/>
+  <text x="30" y="62" font-size="5.6" text-anchor="end" fill="#6a6a68">1</text>
+  <path d="M36,134 C 140,133 190,128 206,60" stroke="#35618f" stroke-width="1.3" fill="none"/>
+  <path d="M36,134 C 170,133 198,130 206,60" stroke="#35618f" stroke-width="1.1" fill="none" opacity="0.7"/>
+  <path d="M36,134 C 188,133.5 203,132 206,60" stroke="#35618f" stroke-width="1" fill="none" opacity="0.5"/>
+  <line x1="36" y1="134" x2="204" y2="134" stroke="#a03b2e" stroke-width="1.6"/>
+  <circle cx="206" cy="60" r="2.4" fill="#a03b2e"/>
+  <text x="123" y="148" font-size="6.2" text-anchor="middle" fill="#8c2f1e">端の一点だけが持ち上がり、極限は不連続</text>
+
+  <rect x="238" y="26" width="218" height="126" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+  <text x="248" y="42" font-size="7" font-weight="700" fill="#1e4a41">一様収束</text>
+  <line x1="260" y1="134" x2="444" y2="134" stroke="#8a8a88" stroke-width="0.8"/>
+  <line x1="260" y1="134" x2="260" y2="54" stroke="#8a8a88" stroke-width="0.8"/>
+  <rect x="260" y="80" width="184" height="26" fill="#e6efe9" opacity="0.8"/>
+  <line x1="260" y1="80" x2="444" y2="80" stroke="#2f6b5f" stroke-width="0.9" stroke-dasharray="3,2.4"/>
+  <line x1="260" y1="106" x2="444" y2="106" stroke="#2f6b5f" stroke-width="0.9" stroke-dasharray="3,2.4"/>
+  <line x1="260" y1="93" x2="444" y2="93" stroke="#2f6b5f" stroke-width="0.6" opacity="0.7"/>
+  <text x="448" y="95" font-size="5.8" text-anchor="end" fill="#1e4a41">f</text>
+  <path d="M262.0,93.0 L263.1,92.7 L264.2,92.3 L265.4,92.0 L266.5,91.7 L267.6,91.4 L268.8,91.0 L269.9,90.7 L271.0,90.4 L272.1,90.1 L273.2,89.8 L274.4,89.5 L275.5,89.2 L276.6,88.9 L277.8,88.6 L278.9,88.3 L280.0,88.1 L281.1,87.9 L282.2,87.7 L283.4,87.5 L284.5,87.3 L285.6,87.1 L286.8,87.0 L287.9,86.9 L289.0,86.8 L290.1,86.7 L291.2,86.6 L292.4,86.6 L293.5,86.6 L294.6,86.6 L295.8,86.6 L296.9,86.6 L298.0,86.7 L299.1,86.8 L300.2,86.9 L301.4,87.1 L302.5,87.3 L303.6,87.4 L304.8,87.7 L305.9,87.9 L307.0,88.1 L308.1,88.4 L309.2,88.7 L310.4,89.0 L311.5,89.3 L312.6,89.7 L313.8,90.0 L314.9,90.4 L316.0,90.8 L317.1,91.2 L318.2,91.6 L319.4,92.0 L320.5,92.4 L321.6,92.9 L322.8,93.3 L323.9,93.7 L325.0,94.2 L326.1,94.6 L327.2,95.0 L328.4,95.5 L329.5,95.9 L330.6,96.3 L331.8,96.7 L332.9,97.1 L334.0,97.5 L335.1,97.9 L336.2,98.3 L337.4,98.6 L338.5,99.0 L339.6,99.3 L340.8,99.6 L341.9,99.9 L343.0,100.1 L344.1,100.3 L345.2,100.5 L346.4,100.7 L347.5,100.9 L348.6,101.0 L349.8,101.1 L350.9,101.2 L352.0,101.2 L353.1,101.3 L354.2,101.3 L355.4,101.2 L356.5,101.2 L357.6,101.1 L358.8,100.9 L359.9,100.8 L361.0,100.6 L362.1,100.4 L363.2,100.1 L364.4,99.9 L365.5,99.6 L366.6,99.3 L367.8,98.9 L368.9,98.6 L370.0,98.2 L371.1,97.8 L372.2,97.3 L373.4,96.9 L374.5,96.4 L375.6,95.9 L376.8,95.4 L377.9,94.9 L379.0,94.4 L380.1,93.9 L381.2,93.4 L382.4,92.8 L383.5,92.3 L384.6,91.7 L385.8,91.2 L386.9,90.6 L388.0,90.1 L389.1,89.6 L390.2,89.1 L391.4,88.5 L392.5,88.0 L393.6,87.6 L394.8,87.1 L395.9,86.6 L397.0,86.2 L398.1,85.8 L399.2,85.4 L400.4,85.0 L401.5,84.7 L402.6,84.4 L403.8,84.1 L404.9,83.8 L406.0,83.6 L407.1,83.4 L408.2,83.2 L409.4,83.1 L410.5,83.0 L411.6,82.9 L412.8,82.9 L413.9,82.9 L415.0,83.0 L416.1,83.0 L417.2,83.1 L418.4,83.3 L419.5,83.5 L420.6,83.7 L421.8,83.9 L422.9,84.2 L424.0,84.5 L425.1,84.9 L426.2,85.3 L427.4,85.7 L428.5,86.1 L429.6,86.6 L430.8,87.1 L431.9,87.6 L433.0,88.1 L434.1,88.7 L435.2,89.3 L436.4,89.9 L437.5,90.5 L438.6,91.1 L439.8,91.7 L440.9,92.4 L442.0,93.0" stroke="#1f3b5c" stroke-width="1.3" fill="none"/>
+  <path d="M262.0,93.0 L263.1,92.8 L264.2,92.6 L265.4,92.4 L266.5,92.2 L267.6,92.0 L268.8,91.8 L269.9,91.6 L271.0,91.5 L272.1,91.3 L273.2,91.1 L274.4,90.9 L275.5,90.7 L276.6,90.6 L277.8,90.4 L278.9,90.3 L280.0,90.1 L281.1,90.0 L282.2,89.8 L283.4,89.7 L284.5,89.6 L285.6,89.5 L286.8,89.4 L287.9,89.4 L289.0,89.3 L290.1,89.3 L291.2,89.2 L292.4,89.2 L293.5,89.2 L294.6,89.2 L295.8,89.2 L296.9,89.2 L298.0,89.3 L299.1,89.3 L300.2,89.4 L301.4,89.5 L302.5,89.6 L303.6,89.7 L304.8,89.8 L305.9,90.0 L307.0,90.1 L308.1,90.3 L309.2,90.5 L310.4,90.6 L311.5,90.8 L312.6,91.0 L313.8,91.2 L314.9,91.5 L316.0,91.7 L317.1,91.9 L318.2,92.2 L319.4,92.4 L320.5,92.7 L321.6,92.9 L322.8,93.2 L323.9,93.4 L325.0,93.7 L326.1,93.9 L327.2,94.2 L328.4,94.5 L329.5,94.7 L330.6,95.0 L331.8,95.2 L332.9,95.4 L334.0,95.7 L335.1,95.9 L336.2,96.1 L337.4,96.3 L338.5,96.5 L339.6,96.7 L340.8,96.9 L341.9,97.0 L343.0,97.2 L344.1,97.3 L345.2,97.5 L346.4,97.6 L347.5,97.7 L348.6,97.7 L349.8,97.8 L350.9,97.8 L352.0,97.9 L353.1,97.9 L354.2,97.9 L355.4,97.9 L356.5,97.8 L357.6,97.8 L358.8,97.7 L359.9,97.6 L361.0,97.5 L362.1,97.4 L363.2,97.2 L364.4,97.1 L365.5,96.9 L366.6,96.7 L367.8,96.5 L368.9,96.3 L370.0,96.1 L371.1,95.8 L372.2,95.6 L373.4,95.3 L374.5,95.0 L375.6,94.7 L376.8,94.4 L377.9,94.1 L379.0,93.8 L380.1,93.5 L381.2,93.2 L382.4,92.9 L383.5,92.6 L384.6,92.3 L385.8,91.9 L386.9,91.6 L388.0,91.3 L389.1,91.0 L390.2,90.7 L391.4,90.4 L392.5,90.1 L393.6,89.8 L394.8,89.5 L395.9,89.2 L397.0,89.0 L398.1,88.7 L399.2,88.5 L400.4,88.3 L401.5,88.1 L402.6,87.9 L403.8,87.7 L404.9,87.6 L406.0,87.4 L407.1,87.3 L408.2,87.2 L409.4,87.1 L410.5,87.1 L411.6,87.0 L412.8,87.0 L413.9,87.0 L415.0,87.1 L416.1,87.1 L417.2,87.2 L418.4,87.3 L419.5,87.4 L420.6,87.5 L421.8,87.6 L422.9,87.8 L424.0,88.0 L425.1,88.2 L426.2,88.4 L427.4,88.7 L428.5,88.9 L429.6,89.2 L430.8,89.5 L431.9,89.8 L433.0,90.1 L434.1,90.5 L435.2,90.8 L436.4,91.1 L437.5,91.5 L438.6,91.9 L439.8,92.2 L440.9,92.6 L442.0,93.0" stroke="#35618f" stroke-width="1.1" fill="none"/>
+  <path d="M262.0,93.0 L263.1,92.9 L264.2,92.8 L265.4,92.8 L266.5,92.7 L267.6,92.6 L268.8,92.5 L269.9,92.5 L271.0,92.4 L272.1,92.3 L273.2,92.2 L274.4,92.2 L275.5,92.1 L276.6,92.0 L277.8,92.0 L278.9,91.9 L280.0,91.8 L281.1,91.8 L282.2,91.7 L283.4,91.7 L284.5,91.6 L285.6,91.6 L286.8,91.6 L287.9,91.5 L289.0,91.5 L290.1,91.5 L291.2,91.5 L292.4,91.5 L293.5,91.5 L294.6,91.5 L295.8,91.5 L296.9,91.5 L298.0,91.5 L299.1,91.5 L300.2,91.6 L301.4,91.6 L302.5,91.6 L303.6,91.7 L304.8,91.7 L305.9,91.8 L307.0,91.9 L308.1,91.9 L309.2,92.0 L310.4,92.1 L311.5,92.1 L312.6,92.2 L313.8,92.3 L314.9,92.4 L316.0,92.5 L317.1,92.6 L318.2,92.7 L319.4,92.8 L320.5,92.9 L321.6,93.0 L322.8,93.1 L323.9,93.2 L325.0,93.3 L326.1,93.4 L327.2,93.5 L328.4,93.6 L329.5,93.7 L330.6,93.8 L331.8,93.9 L332.9,94.0 L334.0,94.1 L335.1,94.2 L336.2,94.2 L337.4,94.3 L338.5,94.4 L339.6,94.5 L340.8,94.6 L341.9,94.6 L343.0,94.7 L344.1,94.7 L345.2,94.8 L346.4,94.8 L347.5,94.9 L348.6,94.9 L349.8,94.9 L350.9,94.9 L352.0,95.0 L353.1,95.0 L354.2,95.0 L355.4,94.9 L356.5,94.9 L357.6,94.9 L358.8,94.9 L359.9,94.8 L361.0,94.8 L362.1,94.7 L363.2,94.7 L364.4,94.6 L365.5,94.6 L366.6,94.5 L367.8,94.4 L368.9,94.3 L370.0,94.2 L371.1,94.1 L372.2,94.0 L373.4,93.9 L374.5,93.8 L375.6,93.7 L376.8,93.6 L377.9,93.5 L379.0,93.3 L380.1,93.2 L381.2,93.1 L382.4,93.0 L383.5,92.8 L384.6,92.7 L385.8,92.6 L386.9,92.4 L388.0,92.3 L389.1,92.2 L390.2,92.1 L391.4,91.9 L392.5,91.8 L393.6,91.7 L394.8,91.6 L395.9,91.5 L397.0,91.4 L398.1,91.3 L399.2,91.2 L400.4,91.1 L401.5,91.0 L402.6,91.0 L403.8,90.9 L404.9,90.8 L406.0,90.8 L407.1,90.7 L408.2,90.7 L409.4,90.7 L410.5,90.6 L411.6,90.6 L412.8,90.6 L413.9,90.6 L415.0,90.6 L416.1,90.6 L417.2,90.7 L418.4,90.7 L419.5,90.7 L420.6,90.8 L421.8,90.9 L422.9,90.9 L424.0,91.0 L425.1,91.1 L426.2,91.2 L427.4,91.3 L428.5,91.4 L429.6,91.5 L430.8,91.6 L431.9,91.7 L433.0,91.8 L434.1,92.0 L435.2,92.1 L436.4,92.3 L437.5,92.4 L438.6,92.5 L439.8,92.7 L440.9,92.8 L442.0,93.0" stroke="#2f6b5f" stroke-width="1.1" fill="none"/>
+  <text x="448" y="82" font-size="5.8" text-anchor="end" fill="#1e4a41">f+ε</text>
+  <text x="448" y="116" font-size="5.8" text-anchor="end" fill="#1e4a41">f−ε</text>
+  <text x="347" y="148" font-size="6.2" text-anchor="middle" fill="#1e4a41">ある番号から先、全体が帯に収まる</text>
+
+  <rect x="14" y="164" width="442" height="96" rx="4" fill="#f4f1ea" stroke="#8a6b2c"/>
+  <text x="24" y="179" font-size="7.6" font-weight="700" fill="#5a4520">「一様」はすべて、量化子を前に出すこと</text>
+
+  <text x="24" y="197" font-size="6.8" fill="#5a4520">連続</text>
+  <text x="120" y="197" font-size="6.6" fill="#6a6a68">∀x ∀ε ∃δ</text>
+  <text x="250" y="197" font-size="6.6" fill="#6a6a68">δ は点ごとでよい</text>
+
+  <text x="24" y="211" font-size="6.8" fill="#1e4a41">一様連続</text>
+  <text x="120" y="211" font-size="6.6" fill="#1e4a41">∀ε ∃δ ∀x</text>
+  <text x="250" y="211" font-size="6.6" fill="#1e4a41">δ が点によらない</text>
+
+  <text x="24" y="225" font-size="6.8" fill="#5a4520">各点収束</text>
+  <text x="120" y="225" font-size="6.6" fill="#6a6a68">∀x ∀ε ∃N</text>
+  <text x="250" y="225" font-size="6.6" fill="#6a6a68">N は点ごとでよい</text>
+
+  <text x="24" y="239" font-size="6.8" fill="#1e4a41">一様収束</text>
+  <text x="120" y="239" font-size="6.6" fill="#1e4a41">∀ε ∃N ∀x</text>
+  <text x="250" y="239" font-size="6.6" fill="#1e4a41">N が点によらない</text>
+
+  <text x="24" y="254" font-size="6.4" fill="#8c2f1e">コンパクトな定義域では、連続から一様連続が出る（ハイネ–カントール）</text>
+</svg>
+<figcaption data-ch="47">一様収束は、ある番号から先でグラフ全体が幅 2ε の帯に収まることをいう。各点収束では帯からはみ出す場所が残りうる。「一様」はいずれも、存在量化子を全称量化子の前に出す操作である。</figcaption>
+</figure>
+
+<div class="lv2">
+<h4>一様収束で保たれるもの、保たれないもの</h4>
+<p>一様収束は連続性を保つ。<em>ほかに何を保ち、何を保たないか。</em></p>
+<p><strong>有界性——保つ。</strong><m>f_n</m> が一様有界で <m>f_n \to f</m> 一様なら <m>f</m> も有界。</p>
+<p><strong>リーマン積分——保つ。</strong><m>[a,b]</m> 上で <m>f_n \to f</m> 一様、各 <m>f_n</m> が可積分なら <m>f</m> も可積分で</p>
+<M>\int_a^b f_n \to \int_a^b f</M>
+<p class="no-indent"><em><m>\left|\int (f_n - f)\right| \le (b-a)\sup|f_n-f| \to 0</m>。</em><span class="yogo-hl">有界区間でなければ、この評価は効かない。</span></p>
+<p><strong>微分——保たない。</strong><m>f_n(x) = \frac{\sin(nx)}{\sqrt{n}}</m> は <m>0</m> に一様収束するが、<m>f_n'(x) = \sqrt{n}\cos(nx)</m> は発散する。<em>一様収束は「値の近さ」しか制御しない。傾きは自由である。</em></p>
+<p><strong>微分を保つ条件。</strong><m>(f_n')</m> が一様収束し、ある一点で <m>(f_n)</m> が収束すれば、<m>(f_n)</m> は一様収束してその極限が微分可能で <m>f' = \lim f_n'</m>。<span class="yogo-hl">仮定を導関数の側に置くのが正しい。</span>第48章で示す。</p>
+<p><strong>無限区間での積分——保たない。</strong><m>f_n = \frac{1}{n}\mathbf{1}_{[0,n]}</m> は <m>\mathbb{R}</m> 上で <m>0</m> に一様収束するが、<m>\int f_n = 1</m> で <m>0</m> にならない。<em>質量が無限遠へ逃げる。</em></p>
+<p><span class="yogo-hl">この「逃げる質量」を扱うのが、第55章の優収束定理である。</span>ルベーグ積分では、一様収束よりずっと弱い仮定で積分と極限が交換できる。</p>
+<p><strong>ディニの定理。</strong>コンパクト空間 <m>K</m> 上で、連続関数の列 <m>f_n</m> が各点単調に連続関数 <m>f</m> へ収束するなら、収束は一様である。<em>証明は <m>\{x : f_n(x)-f(x) < \varepsilon\}</m> が増加する開被覆をなすことから。</em></p>
+<p><span class="yogo-hl">単調性とコンパクト性を足すと、各点収束が一様収束に格上げされる。</span>第20章の有限部分被覆が、また効いている。</p>
+</div>
+
+<div class="lv3">
+<h4>一様構造——一様性は位相的でない</h4>
+<p>一様連続は位相だけでは定まらない。<em><m>(0,1)</m> と <m>\mathbb{R}</m> は同相だが、<m>f(x) = 1/x</m> は前者で一様連続でなく、対応する関数は後者で一様連続になりうる。</em></p>
+<p><span class="yogo-hl">一様性は、位相と距離のあいだの中間層に属する。</span>第30章で導入した<strong>一様空間</strong>が、その層である。</p>
+<p><strong>一様空間の言葉で。</strong><m>X</m> 上の一様構造とは、対角線を含む <m>X \times X</m> の部分集合の族（近縁）で、いくつかの公理を満たすものである。<em><m>f</m> が一様連続とは、終域の各近縁 <m>V</m> について <m>(x,y) \in U \implies (f(x),f(y)) \in V</m> なる近縁 <m>U</m> があること。</em></p>
+<p>この定義に <m>\varepsilon</m> も <m>\delta</m> も現れない。<span class="yogo-hl">「点によらない近さ」という概念が、近縁という一つの集合に押し込められている。</span></p>
+<p><strong>コンパクト空間の一様構造は一意。</strong>コンパクトハウスドルフ空間には、その位相を与える一様構造がちょうど一つしかない（第30章）。<em>だから <ref t="thm-heine-cantor"/> が成り立つ</em>——一様構造を選ぶ余地がないので、連続写像は自動的に一様連続になる。</p>
+<p><strong>完備性も一様的。</strong>第29章で「完備性は位相的でない」と述べた。<em>完備性は一様構造で決まる。</em>コーシー列の定義に近縁を使うからである。</p>
+<p><span class="yogo-hl">位相的でないが距離にもよらない性質——一様連続・完備性・全有界性——が、ちょうど一様構造の層に収まる。</span></p>
+<p><strong>一様収束の位相。</strong>関数の空間 <m>C(X)</m> に、一様収束を収束とする位相を入れられる。<em><m>X</m> がコンパクトなら <m>\|f\|_\infty = \sup_x|f(x)|</m> がノルムになり、第63章のバナッハ空間になる。</em></p>
+<p><m>X</m> がコンパクトでないときは、コンパクト集合上で一様に収束する位相（コンパクト開位相、第95章）を使う。<span class="yogo-hl">第95章のアスコリ–アルツェラの定理は、この位相でのコンパクト性を特徴づける。</span></p>
+<p>そこで現れる条件が<em>同程度連続性</em>——「一様連続の、関数族についての版」である。本章の主題が、関数空間の位相として再登場することになる。</p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li><m>f(x)=x^2</m> が <m>[0,1]</m> で一様連続、<m>\mathbb{R}</m> で一様連続でないことを示せ。</li>
+<li><m>f_n(x) = x/n</m> が <m>\mathbb{R}</m> 上で一様収束するかを判定せよ。</li>
+<li><m>f_n(x) = nx(1-x)^n</m> の <m>[0,1]</m> での各点極限を求め、一様収束するかを調べよ。</li>
+<li>リプシッツ条件をみたす関数が一様連続であることを示せ。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li><ref t="thm-heine-cantor"/> を、点列コンパクト性を使って証明せよ。<span class="haiten">（25点）</span></li>
+<li>ディニの定理を示せ。<span class="haiten">（30点）</span></li>
+<li><ref t="thm-ichiyou-cauchy"/> の十分性の細部（極限が一様であること）を埋めよ。<span class="haiten">（20点）</span></li>
+<li>一様連続な関数が、全有界集合を全有界集合に写すことを示せ。<span class="haiten">（25点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li>一様連続な <m>f \colon (0,1) \to \mathbb{R}</m> が <m>[0,1]</m> へ連続に延長できることを示せ。<span class="haiten">（30点）</span></li>
+<li>一様収束するが導関数が各点収束しない例を作れ。<span class="haiten">（30点）</span></li>
+<li>一様連続性が位相的性質でないことを、具体的な同相写像で示せ。<span class="haiten">（25点）</span></li>
+</ol>
+</div>
+</div>
+<nav class="chnav">
+<a class="prev" href="ch46.html">← 第46章　連続関数——中間値と最大値</a>
+<a class="next" href="ch48.html">第48章　微分と平均値の定理 →</a>
+</nav>
+</article>
+</main>
+<footer class="site">
+  <p>位相・解析大全　学部から大学院まで、三層で読む位相空間論と解析学</p>
+  <p class="small">本文・図版とも本書のために作成したものです。数式は MathJax でベクタ化して組んでいます。</p>
+</footer>
+</body>
+</html>

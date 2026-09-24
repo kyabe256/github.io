@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第86章 畳み込みと近似単位元｜位相・解析大全</title>
+<meta name="description" content="位相・解析大全　第86章　畳み込みと近似単位元">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;600&display=swap">
+<link rel="stylesheet" href="web.css">
+</head>
+<body>
+<header class="site">
+  <a class="site-title" href="index.html">位相・解析大全</a>
+  <nav class="site-nav">
+    <a href="index.html">目次</a>
+    <a href="isou-kaiseki-taizen.pdf">PDF版</a>
+  </nav>
+</header>
+<main>
+<article class="chapter">
+<p class="part-label">第XI部　フーリエ解析</p>
+<h1><span class="ch-num">第86章</span>畳み込みと近似単位元</h1>
+<nav class="chnav">
+<a class="prev" href="ch85.html">← 第85章　L2への拡張とPlancherelの定理</a>
+<a class="next" href="ch87.html">第87章　Schwartz空間と超関数 →</a>
+</nav>
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>畳み込みは、なぜこれほど頻繁に現れるのか。</li>
+<li>単位元がないのに、どうやって「近似的な単位元」を作るのか。</li>
+<li>時間と周波数の広がりは、どこまで同時に小さくできるのか。</li>
+</ul>
+</div>
+
+<h3 id="s86-1">畳み込みという積</h3>
+
+<p>ここまでの章で、畳み込みは繰り返し現れた——フーリエ部分和（<m>f*D_N</m>）、フェイェール平均（<m>f*K_N</m>）、熱方程式の解（<m>f*H_t</m>）、平滑化（<m>f*\varphi_\varepsilon</m>）。<em>本章でその理由を整理する。</em></p>
+
+<div class="teigi" id="def-tatamikomi">
+<h4>畳み込み</h4>
+<p class="no-indent"><m>f,g:\mathbb{R}^d\to\mathbb{C}</m> について</p>
+<M>(f*g)(x) = \int_{\mathbb{R}^d} f(x-y)\,g(y)\,dy</M>
+<p class="no-indent">を<strong>畳み込み</strong>という（右辺が定義されるとき）。<em>変数変換により <m>f*g=g*f</m>、また <m>(f*g)*h=f*(g*h)</m>。</em></p>
+</div>
+
+<div class="teiri" id="thm-young">
+<h4>ヤングの不等式</h4>
+<p class="no-indent"><m>1\le p,q,r\le\infty</m> が <m>\frac1p+\frac1q=1+\frac1r</m> をみたすとき、<m>f\in L^p</m>、<m>g\in L^q</m> について <m>f*g</m> はほとんどいたるところ定義され</p>
+<M>\|f*g\|_r \le \|f\|_p\,\|g\|_q</M>
+<p class="no-indent">とくに（1）<m>L^1*L^1\subset L^1</m>、（2）<m>L^1*L^p\subset L^p</m>、（3）<m>L^p*L^{p'}\subset L^\infty</m>（<m>1/p+1/p'=1</m>、このとき <m>f*g</m> は一様連続）。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">（2）を示す（一般の場合はここから補間で出る）。ミンコフスキーの積分不等式より</p>
+<M>\|f*g\|_p = \Big\|\int f(y)g(\cdot-y)\,dy\Big\|_p \le \int|f(y)|\,\|g(\cdot-y)\|_p\,dy = \|f\|_1\|g\|_p</M>
+<p class="no-indent"><em>平行移動が <m>L^p</m> ノルムを変えないことだけを使っている。</em></p>
+<p class="no-indent">（3）はヘルダーの不等式（<ref t="thm-holder"/>）そのもの。一様連続性は、<m>|(f*g)(x)-(f*g)(x')|\le\|f\|_p\|g(x-\cdot)-g(x'-\cdot)\|_{p'}</m> と平行移動の <m>L^{p'}</m> 連続性（<m>p' < \infty</m> のとき）から出る。</p>
+<p class="no-indent">一般の場合は <m>|f*g|\le(|f|^{p/r}|g|^{q/r})*1</m> のような分解にヘルダーを三重に使うか、<ref t="thm-hausdorff-young"/>と同じくリース–ソリンの補間による。</p>
+</div>
+
+<div class="chui">
+<h4>畳み込みが現れる三つの理由</h4>
+<p class="no-indent">（1）<strong>平行移動と可換な作用素は、畳み込みしかない。</strong><m>T:L^p\to L^p</m> が有界で、すべての平行移動 <m>\tau_h</m> と可換（<m>T\tau_h=\tau_hT</m>）なら、<m>T</m> はある超関数との畳み込みである。<em>逆も明らか。</em><span class="yogo-hl">「空間のどこでも同じように働く」という要請が、畳み込みという形を強制する。</span>物理でいう並進不変性である。</p>
+<p class="no-indent">（2）<strong>フーリエ変換が積に変える。</strong><m>\widehat{f*g}=\hat f\hat g</m>（<ref t="prop-fourier-kihon-r"/>（5））。<em>したがって畳み込みの解析は、周波数側では各点の掛け算にすぎない。</em></p>
+<p class="no-indent">（3）<strong>独立な確率変数の和の分布が畳み込みである。</strong><m>X,Y</m> が独立で密度 <m>f,g</m> をもつなら、<m>X+Y</m> の密度は <m>f*g</m>。<em>中心極限定理は、畳み込みを繰り返すと形がガウスに近づくという主張である。</em></p>
+<p>三つはどれも同じ事実の別の顔である：<em>畳み込みは、平行移動という群作用に関する「積」である。</em>第79章の言葉では、群環の積にほかならない。</p>
+</div>
+
+<div class="rei" id="rei-tatamikomi-seishitsu">
+<h4>畳み込みは滑らかさを継ぐ</h4>
+<p class="no-indent">（1）<m>f\in L^1</m>、<m>g\in C^k</m> で導関数が有界なら <m>f*g\in C^k</m> で <m>\partial^\alpha(f*g)=f*\partial^\alpha g</m>。<em>微分を <m>g</m> の側に押しつけられる。</em></p>
+<p>（2）したがって <m>\varphi\in C_c^\infty</m> なら <m>f*\varphi\in C^\infty</m>。<span class="yogo-hl"><em>どれほど荒い <m>f</m> も、滑らかな関数と畳み込めば滑らかになる。</em>これが平滑化（<ref t="thm-heikatsu-chumitsu"/>）の原理である。</span></p>
+<p>（3）<strong>台の加法性。</strong><m>\mathrm{supp}(f*g)\subset\overline{\mathrm{supp}f+\mathrm{supp}g}</m>。<em>両方が有界なら畳み込みも有界な台をもつ。</em></p>
+<p>（4）<strong>単位元は存在しない。</strong><m>f*e=f</m>（すべての <m>f\in L^1</m>）をみたす <m>e\in L^1</m> はない。<em>もしあれば <m>\hat e\equiv1</m> だが、これはリーマン–ルベーグの補題に反する。</em><span class="yogo-hl"><m>L^1(\mathbb{R}^d)</m> は単位元をもたないバナッハ環である</span>（<ref t="rei-banach-kan-rei"/>（3））。</p>
+</div>
+
+<h3 id="s86-2">近似単位元</h3>
+
+<div class="teigi" id="def-kinji-tan-i-r">
+<h4>近似単位元（実直線上）</h4>
+<p class="no-indent"><m>\varphi\in L^1(\mathbb{R}^d)</m>、<m>\int\varphi=1</m> とし、<m>\varphi_\varepsilon(x)=\varepsilon^{-d}\varphi(x/\varepsilon)</m> と置く。<em>この族 <m>(\varphi_\varepsilon)_{\varepsilon>0}</m> を <m>\varphi</m> から作った<strong>近似単位元</strong>という。</em></p>
+<p class="no-indent">拡大縮小の規約により <m>\int\varphi_\varepsilon=1</m> がすべての <m>\varepsilon</m> で成り立ち、<m>\|\varphi_\varepsilon\|_1=\|\varphi\|_1</m>、そして任意の <m>\delta>0</m> について <m>\int_{|x|\ge\delta}|\varphi_\varepsilon|\to0</m>（<m>\varepsilon\downarrow0</m>）。</p>
+</div>
+
+<div class="teiri" id="thm-kinji-tan-i-r">
+<h4>近似単位元による収束</h4>
+<p class="no-indent">（1）<m>f\in L^p(\mathbb{R}^d)</m>（<m>1\le p < \infty</m>）なら <m>\|f*\varphi_\varepsilon-f\|_p\to0</m>。<br>
+（2）<m>f</m> が有界連続なら、<m>f*\varphi_\varepsilon\to f</m> がコンパクト集合上一様に。<br>
+（3）<m>\varphi\ge0</m> かつ <m>\varphi(x)\le C(1+|x|)^{-d-\eta}</m>（<m>\eta>0</m>）なら、<m>f\in L^1_{\mathrm{loc}}</m> のルベーグ点で <m>f*\varphi_\varepsilon(x)\to f(x)</m>。とくに<em>ほとんどすべての点で収束する</em>。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">（1）<m>\int\varphi_\varepsilon=1</m> を使って</p>
+<M>(f*\varphi_\varepsilon-f)(x) = \int\big(f(x-y)-f(x)\big)\varphi_\varepsilon(y)\,dy</M>
+<p class="no-indent">ミンコフスキーの積分不等式より <m>\|f*\varphi_\varepsilon-f\|_p\le\int\|\tau_yf-f\|_p\,|\varphi_\varepsilon(y)|dy</m>。<em>ここで <m>\omega(y)=\|\tau_yf-f\|_p</m> は有界（<m>\le2\|f\|_p</m>）で <m>y\to0</m> のとき零に行く。</em>積分を <m>|y| < \delta</m> と <m>|y|\ge\delta</m> に分ければ、<ref t="thm-kinji-tan-i"/>と同じ議論が通る。</p>
+<p class="no-indent">（3）ルベーグ点では <m>\frac{1}{|B_r|}\int_{B_r}|f(x-y)-f(x)|dy\to0</m>（<ref t="thm-bisekibun-kihon"/>）。<m>\varphi</m> の減衰条件から、<m>\varphi_\varepsilon</m> を球面上の平均の重ね合わせに分解して評価する。<em>正確には、ハーディ–リトルウッドの最大作用素で <m>\sup_\varepsilon|f*\varphi_\varepsilon|\le C\,Mf</m> を示し、第83章の三段の手順を使う。</em></p>
+</div>
+
+<div class="rei" id="rei-kinji-tan-i-rei">
+<h4>使われる近似単位元</h4>
+<p class="no-indent">（1）<strong>箱。</strong><m>\varphi=\frac{1}{|B_1|}\chi_{B_1}</m>。<m>f*\varphi_\varepsilon(x)</m> は球平均で、ルベーグの微分定理そのもの。</p>
+<p>（2）<strong>ガウス（熱核）。</strong><m>\varphi=(4\pi)^{-d/2}e^{-|x|^2/4}</m>。<em>フーリエ変換が <m>e^{-|\xi|^2}</m> なので、周波数側では高周波の指数的な切り落としになる。</em>反転公式の証明に使った（<ref t="thm-hanten"/>）。</p>
+<p>（3）<strong>ポアソン核。</strong><m>P_y(x)=c_d\,y/(|x|^2+y^2)^{(d+1)/2}</m>。<em>フーリエ変換は <m>e^{-y|\xi|}</m>。</em>上半空間の調和関数の境界値の理論（第94章）の中心にある。</p>
+<p>（4）<strong>なめらかな山（軟化子）。</strong><m>\varphi(x)=c\,e^{-1/(1-|x|^2)}\chi_{|x| < 1}</m>。<em><m>C_c^\infty</m> に属するので、<m>f*\varphi_\varepsilon</m> は <m>C^\infty</m> かつ台がわずかに広がるだけ。</em><span class="yogo-hl">「滑らかにしたいが台を保ちたい」ときの標準の道具で、1の分割（第24章）と組み合わせて偏微分方程式論の至るところで使われる。</span></p>
+<p>（5）<strong>フェイェール核・ディリクレ核。</strong>周期の場合（第81章）。<em>ディリクレ核は近似単位元ではない</em>ことを思い出しておく。</p>
+</div>
+
+<h3 id="s86-3">不確定性関係</h3>
+
+<div class="teiri" id="thm-heisenberg">
+<h4>ハイゼンベルクの不確定性関係</h4>
+<p class="no-indent"><m>f\in L^2(\mathbb{R})</m>、<m>\|f\|_2=1</m> とする。任意の <m>x_0,\xi_0\in\mathbb{R}</m> について</p>
+<M>\left(\int (x-x_0)^2|f(x)|^2dx\right)\left(\frac{1}{2\pi}\int(\xi-\xi_0)^2|\hat f(\xi)|^2d\xi\right) \ \ge\ \frac14</M>
+<p class="no-indent">等号は <m>f</m> が <m>x_0</m> を中心とするガウス関数に変調 <m>e^{i\xi_0x}</m> を掛けたもののときに限る。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><m>x_0=\xi_0=0</m> としてよい（平行移動と変調で帰着する）。<m>f\in C_c^\infty</m> として示せば、稠密性で一般の場合に移る。部分積分より</p>
+<M>1 = \int|f|^2dx = -\int x\,\frac{d}{dx}|f(x)|^2dx = -2\,\mathrm{Re}\int x\,f(x)\overline{f'(x)}\,dx</M>
+<p class="no-indent">コーシー–シュワルツを使うと</p>
+<M>1 \le 2\Big(\int x^2|f|^2dx\Big)^{1/2}\Big(\int|f'|^2dx\Big)^{1/2}</M>
+<p class="no-indent">プランシュレル（<ref t="thm-plancherel"/>）より <m>\int|f'|^2dx=\frac{1}{2\pi}\int\xi^2|\hat f|^2d\xi</m>。<em>両辺を二乗すれば結論。</em></p>
+<p class="no-indent">等号はコーシー–シュワルツの等号条件、すなわち <m>f'(x)=-cxf(x)</m>（<m>c>0</m>）のとき。<em>これを解けば <m>f(x)=Ae^{-cx^2/2}</m>、ガウス関数である。</em></p>
+<p><span class="yogo-hl">証明の実質は部分積分一回とコーシー–シュワルツ一回である。</span><em>作用素の言葉で言えば、交換関係 <m>[\frac{d}{dx},x]=I</m> と、非可換な二つの自己共役作用素の分散の積に対するロバートソンの不等式（第75章★★の数値範囲の議論）である。</em></p>
+</div>
+
+<div class="hanrei" id="cex-tatamikomi">
+<h4>畳み込みの落とし穴</h4>
+<p class="no-indent">（1）<strong>ヤングの不等式の条件は外せない。</strong><m>f,g\in L^2(\mathbb{R})</m> なら <m>f*g\in L^\infty</m> だが <m>L^2</m> に入るとは限らない。<em><m>\frac12+\frac12=1+\frac1r</m> より <m>r=\infty</m> が正しい指数である。</em></p>
+<p class="no-indent">（2）<strong>定義できない場合。</strong><m>f=g=|x|^{-1/2}\chi_{|x| < 1}</m>（<m>d=1</m>）とすると両方 <m>L^1</m> だが、<m>f*g(0)=\int|y|^{-1}\chi\,dy=\infty</m>。<em>ヤングの不等式は「ほとんどいたるところ定義される」としか言わない。</em></p>
+<p class="no-indent">（3）<strong>近似単位元の条件を外すと。</strong><m>\int\varphi=1</m> を <m>\int\varphi=c\ne1</m> にすると極限が <m>cf</m> になる。<em><m>\varphi\notin L^1</m>（たとえば <m>\varphi(x)=\sin x/x</m>、これはディリクレ核の連続版）だと一様有界性が失われ、<m>L^1</m> での収束が壊れる</em>——第81章のディリクレ核と同じ現象である。</p>
+<p class="no-indent">（4）<strong>不確定性は「片方を零にできない」より強い。</strong>分散が有限でない場合（コーシー分布など）には不等式が自明になるが、<em>台に関する定性的な不確定性（第84章★★★）はそのような場合も排除する。</em></p>
+</div>
+
+<figure id="fig86-1">
+<svg viewBox="0 0 470 290" width="470" height="290" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">畳み込みは角をならし、不確定性が限界を決める</text>
+
+  <rect x="14" y="26" width="442" height="124" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+
+  <text x="235" y="42" font-size="6.8" text-anchor="middle" font-weight="700" fill="#1f3b5c">同じ矩形を繰り返し畳み込む</text>
+
+  <line x1="34" y1="126" x2="120" y2="126" stroke="#8a8a88" stroke-width="0.6"/>
+  <rect x="60" y="82" width="34" height="44" fill="#dce7f0" stroke="#35618f" stroke-width="1"/>
+  <text x="77" y="140" font-size="6" text-anchor="middle" fill="#6a6a68">矩形</text>
+
+  <line x1="140" y1="126" x2="226" y2="126" stroke="#8a8a88" stroke-width="0.6"/>
+  <polygon points="150,126 183,84 216,126" fill="#dce7f0" stroke="#35618f" stroke-width="1"/>
+  <text x="183" y="140" font-size="6" text-anchor="middle" fill="#6a6a68">二回　折れ線</text>
+
+  <line x1="246" y1="126" x2="332" y2="126" stroke="#8a8a88" stroke-width="0.6"/>
+  <path d="M 252 126 C 268 126 272 110 289 88 C 306 110 310 126 326 126 Z" fill="#e6efe9" stroke="#2f6b5f" stroke-width="1"/>
+  <text x="289" y="140" font-size="6" text-anchor="middle" fill="#6a6a68">三回　なめらか</text>
+
+  <line x1="352" y1="126" x2="438" y2="126" stroke="#8a8a88" stroke-width="0.6"/>
+  <path d="M 356 125 C 378 125 382 88 395 88 C 408 88 412 125 434 125" fill="#f4f1ea" stroke="#8a6b2c" stroke-width="1.2"/>
+  <text x="395" y="140" font-size="6" text-anchor="middle" fill="#5a4520">極限はガウス</text>
+
+  <rect x="14" y="160" width="216" height="124" rx="4" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="24" y="175" font-size="7.6" font-weight="700" fill="#1e4a41">畳み込みが現れる三つの理由</text>
+  <text x="24" y="192" font-size="6.6" fill="#1e4a41">① 平行移動と可換な作用素はこれしかない</text>
+  <text x="24" y="204" font-size="6.6" fill="#1e4a41">② 変換すると各点の掛け算になる</text>
+  <text x="24" y="216" font-size="6.6" fill="#1e4a41">③ 独立な確率変数の和の分布である</text>
+  <text x="24" y="233" font-size="6.4" fill="#5a4520">三つは同じ事実の別の顔——群の上の積</text>
+  <text x="24" y="250" font-size="6.6" fill="#8c2f1e">単位元は存在しない</text>
+  <text x="24" y="262" font-size="6.4" fill="#6a6a68">もしあれば変換が恒等的に 1 になり</text>
+  <text x="24" y="274" font-size="6.4" fill="#6a6a68">リーマン–ルベーグの補題に反する</text>
+
+  <rect x="240" y="160" width="216" height="124" rx="4" fill="#f4f1ea" stroke="#8a6b2c"/>
+  <text x="250" y="175" font-size="7.6" font-weight="700" fill="#5a4520">不確定性——証明は二行</text>
+  <text x="250" y="192" font-size="6.6" fill="#5a4520">部分積分を一回</text>
+  <text x="250" y="204" font-size="6.6" fill="#5a4520">コーシー–シュワルツを一回</text>
+  <text x="250" y="221" font-size="6.4" fill="#1e4a41">等号はガウス関数のときだけ</text>
+  <text x="250" y="233" font-size="6.4" fill="#1e4a41">——変分問題の解が一意に決まる</text>
+  <text x="250" y="250" font-size="6.6" fill="#8c2f1e">作用素の言葉では交換関係が本体</text>
+  <text x="250" y="262" font-size="6.4" fill="#6b2a48">位置と運動量が可換でないという一点が</text>
+  <text x="250" y="274" font-size="6.4" fill="#6b2a48">分散の積に下限を与えている</text>
+</svg>
+<figcaption data-ch="86">矩形を繰り返し畳み込むと角が取れ、正規化された極限はガウス関数になる（中心極限定理）。時間側と周波数側の広がりの積には下限があり、等号を達成するのはガウス関数だけである。</figcaption>
+</figure>
+
+<div class="star2">
+<h4>★★ 学部後半——リトルウッド–ペイリー分解と特異積分</h4>
+
+<p><strong>周波数を二進の帯に分ける。</strong><m>\psi\in C_c^\infty</m> を <m>1/2\le|\xi|\le2</m> に台をもつように選び、<m>\sum_{j\in\mathbb{Z}}\psi(2^{-j}\xi)=1</m>（<m>\xi\ne0</m>）となるようにする。<m>\Delta_jf=(\psi(2^{-j}\cdot)\hat f)^\vee</m> と置くと <m>f=\sum_j\Delta_jf</m>。<em>各 <m>\Delta_jf</m> は周波数が <m>2^j</m> 程度の成分だけを含む。</em></p>
+
+<p><strong>リトルウッド–ペイリーの定理</strong>：<m>1 < p < \infty</m> のとき</p>
+<M>\|f\|_{L^p} \ \asymp\ \Big\|\Big(\sum_j|\Delta_jf|^2\Big)^{1/2}\Big\|_{L^p}</M>
+<p><span class="yogo-hl">「周波数帯ごとの大きさの二乗和」が、もとのノルムと同値になる。</span><em><m>p=2</m> ではプランシュレルから自明だが、<m>p\ne2</m> では非自明で、ランダムな符号（ヒンチンの不等式）と特異積分の理論を使う。</em>これによってソボレフ空間・ベゾフ空間・ハーディ空間が周波数分解の言葉で定義でき、第88章の非線形評価が可能になる。</p>
+
+<p><strong>カルデロン–ジグムントの理論。</strong>核 <m>K(x)</m> が <m>|K(x)|\le C|x|^{-d}</m>、<m>|\nabla K(x)|\le C|x|^{-d-1}</m>、<m>\int_{a < |x| < b}K=0</m> をみたすとき、主値</p>
+<M>Tf(x) = \mathrm{p.v.}\int K(x-y)f(y)\,dy</M>
+<p>は <m>L^p</m>（<m>1 < p < \infty</m>）で有界、<m>L^1</m> から弱 <m>L^1</m> へ有界。<em>核が <m>L^1</m> に属さないので、ヤングの不等式は効かない——代わりに <strong>カルデロン–ジグムント分解</strong>（関数を「良い部分」と「悪い部分」に分け、悪い部分を二進立方体ごとに平均を引いて処理する）を使う。</em><span class="yogo-hl">ヒルベルト変換（<m>d=1</m>、<m>K=1/\pi x</m>）とリース変換（<m>K=c_dx_j/|x|^{d+1}</m>）がその原型である。</span></p>
+
+<p><strong>仮定を外すと。</strong>核の消去条件 <m>\int_{a < |x| < b}K=0</m> を外すと主値が収束しない。<em>滑らかさ条件（ヘルマンダー条件）を外すと <m>L^1</m> 弱型が壊れる。</em>どちらも最小限の仮定に近い。</p>
+</div>
+
+<div class="star3">
+<h4>★★★ 大学院——畳み込みの逆問題と、群の上の解析</h4>
+
+<p><strong>ウィーナーのタウバー型定理。</strong><m>f\in L^1(\mathbb{R})</m> について、<m>\{f*g : g\in L^1\}</m> が <m>L^1</m> で稠密であることと、<m>\hat f</m> がどこでも零でないことは同値。<em>証明はゲルファント理論（第79章）：閉イデアルの零点集合が空であることと、イデアルが全体であることの対応である。</em></p>
+
+<p>この定理から<strong>素数定理</strong>が導ける（ウィーナー–池原の定理）。<em>ゼータ関数が <m>\mathrm{Re}\,s=1</m> 上で零をもたないことが、ちょうど「<m>\hat f</m> がどこでも零でない」に翻訳される。</em><span class="yogo-hl">解析的整数論の中心的な結果が、バナッハ環のイデアル論の一行に帰着する。</span></p>
+
+<p><strong>スペクトル総合問題。</strong>逆に、<m>\hat f</m> が零点をもつとき、<m>f</m> が生成する閉イデアルは零点集合だけで決まるか。<em><m>\mathbb{R}</m> では答えは否</em>：シュヴァルツが <m>\mathbb{R}^3</m> で反例を与え（1948年）、マリアヴァンがすべての非コンパクト局所コンパクト可換群で反例を構成した（1959年）。<em>零点集合が同じでも別のイデアルになりうる——「重複度」の情報が失われている。</em></p>
+
+<p><strong>非可換群の畳み込み。</strong><m>G</m> が非可換なら <m>f*g\ne g*f</m> で、<m>L^1(G)</m> は非可換バナッハ環になる。<em>指標が足りないのでゲルファント変換は使えず、既約ユニタリ表現の族が双対の役割を果たす。</em>プランシュレルの定理は</p>
+<M>\|f\|_{L^2(G)}^2 = \int_{\hat G}\|\pi(f)\|_{HS}^2\,d\mu(\pi)</M>
+<p>という形になる（<m>\|\cdot\|_{HS}</m> はヒルベルト–シュミットノルム、<m>\mu</m> はプランシュレル測度）。<span class="yogo-hl">第76章★★の跡クラス・ヒルベルト–シュミットクラスが、ここで双対側の「積分の重み」として現れる。</span><em>コンパクト群ではピーター–ワイルの定理がこれを離散和として与え、半単純リー群ではハリシュ–チャンドラのプランシュレル公式が明示的な答えを与える。</em></p>
+
+<p><strong>未解決に近い問い。</strong>カジュダンの性質 (T) をもつ群では、畳み込み作用素のスペクトルギャップが存在し、これが<em>拡大グラフ</em>の構成やバナッハ–ルジン問題に使われる。<em>ラマヌジャングラフの最適性（アロン–ボッパナ限界の達成）は、群の表現論と数論の一致によるものである。</em>一方、<span class="yogo-hl">自由群のフォン・ノイマン環の同型問題（<m>L(F_n)\cong L(F_m)</m> が <m>n\ne m</m> で成り立つか）は、自由確率論の発展にもかかわらず未解決のままである。</span></p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li>畳み込みが可換かつ結合的であることを確かめよ。</li>
+<li>矩形と矩形の畳み込みが三角形になることを計算せよ。</li>
+<li>台の加法性 <m>\mathrm{supp}(f*g)\subset\overline{\mathrm{supp}f+\mathrm{supp}g}</m> を確かめよ。</li>
+<li>軟化子 <m>e^{-1/(1-|x|^2)}\chi_{|x| < 1}</m> が <m>C_c^\infty</m> に属することを確かめよ。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li><ref t="thm-young"/>（2）をミンコフスキーの積分不等式から示せ。<span class="haiten">（30点）</span></li>
+<li><m>L^1</m> が畳み込みについて単位元をもたないことを示せ。<span class="haiten">（30点）</span></li>
+<li><ref t="thm-kinji-tan-i-r"/>（1）を書き下せ。<span class="haiten">（35点）</span></li>
+<li><m>f\in L^1</m>、<m>\varphi\in C_c^\infty</m> なら <m>f*\varphi\in C^\infty</m> を示せ。<span class="haiten">（30点）</span></li>
+<li><ref t="thm-heisenberg"/>を、部分積分とコーシー–シュワルツで示せ。<span class="haiten">（40点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li>不確定性の等号がガウス関数に限ることを示せ。<span class="haiten">（40点）</span></li>
+<li>平行移動と可換な <m>L^2</m> 上の有界作用素が、乗子作用素に限ることを示せ。<span class="haiten">（50点）</span></li>
+<li>ヤングの不等式を、一般の指数について補間で示せ。<span class="haiten">（45点）</span></li>
+<li>ウィーナーのタウバー型定理を、ゲルファント理論から示せ。<span class="haiten">（50点）</span></li>
+</ol>
+</div>
+</div>
+<nav class="chnav">
+<a class="prev" href="ch85.html">← 第85章　L2への拡張とPlancherelの定理</a>
+<a class="next" href="ch87.html">第87章　Schwartz空間と超関数 →</a>
+</nav>
+</article>
+</main>
+<footer class="site">
+  <p>位相・解析大全　学部から大学院まで、三層で読む位相空間論と解析学</p>
+  <p class="small">本文・図版とも本書のために作成したものです。数式は MathJax でベクタ化して組んでいます。</p>
+</footer>
+</body>
+</html>

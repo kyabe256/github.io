@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第24章 パラコンパクト性と1の分割｜位相・解析大全</title>
+<meta name="description" content="位相・解析大全　第24章　パラコンパクト性と1の分割">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;600&display=swap">
+<link rel="stylesheet" href="web.css">
+</head>
+<body>
+<header class="site">
+  <a class="site-title" href="index.html">位相・解析大全</a>
+  <nav class="site-nav">
+    <a href="index.html">目次</a>
+    <a href="isou-kaiseki-taizen.pdf">PDF版</a>
+  </nav>
+</header>
+<main>
+<article class="chapter">
+<p class="part-label">第III部　コンパクト性と被覆性質</p>
+<h1><span class="ch-num">第24章</span>パラコンパクト性と1の分割</h1>
+<nav class="chnav">
+<a class="prev" href="ch23.html">← 第23章　Stone–Čechコンパクト化</a>
+<a class="next" href="ch25.html">第25章　Lindelöf・可算コンパクト・点列コンパクト →</a>
+</nav>
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>有限部分被覆が取れないとき、代わりに何が取れればよいのか。</li>
+<li>「局所有限」という条件は、なぜ有限性の代用になるのか。</li>
+<li>1の分割は、どんな問題を解くのか。</li>
+</ul>
+</div>
+
+<h3 id="s24-1">局所有限性——有限性の局所化</h3>
+
+<p>コンパクト性は有限部分被覆を要求した。<em>それでは強すぎる。</em><m>\mathbb{R}^n</m> も多様体も、コンパクトとは限らない。</p>
+
+<p>そこで要求を緩める。<span class="yogo-hl">全体として有限であることは諦め、各点のまわりで有限であることを求める。</span></p>
+
+<div class="teigi" id="def-kyokusho-yugen">
+<h4>局所有限・細分</h4>
+<p class="no-indent">部分集合の族 <m>\mathcal{A}</m> が<strong>局所有限</strong>であるとは、各点が近傍をもち、その近傍と交わる <m>\mathcal{A}</m> の元が有限個であることをいう。</p>
+<p>被覆 <m>\mathcal{B}</m> が被覆 <m>\mathcal{A}</m> の<strong>細分</strong>であるとは、<m>\mathcal{B}</m> の各元がある <m>\mathcal{A}</m> の元に含まれることをいう。</p>
+</div>
+
+<div class="teigi" id="def-paracompact">
+<h4>パラコンパクト空間</h4>
+<p class="no-indent">ハウスドルフ空間 <m>X</m> が<strong>パラコンパクト</strong>であるとは、どの開被覆も局所有限な開細分をもつことをいう。</p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">「有限部分被覆」から「局所有限な開細分」へと、二か所が緩んでいる。<em>部分被覆でなく細分でよく、有限でなく局所有限でよい。</em><span class="yogo-hl">コンパクトならパラコンパクトである</span>——有限部分被覆は局所有限な細分だからである。</p>
+</div>
+
+<div class="rei" id="rei-paracompact">
+<h4>パラコンパクトな空間</h4>
+<p class="no-indent"><strong>距離空間はすべてパラコンパクト。</strong>スミルノフ <span class="orig">Smirnov</span> とストーン <span class="orig">Stone</span> の定理。証明は込み入っており、選択公理を使う。<em>この事実が第32章の距離化定理の土台になる。</em></p>
+<p><strong>コンパクト空間。</strong>定義から直ちに。</p>
+<p><strong>局所コンパクトで <m>\sigma</m>-コンパクトな空間。</strong><m>\mathbb{R}^n</m> や多様体がこれにあたる。<em>コンパクト集合の増大列で覆えることを使って、局所有限な細分を作る。</em></p>
+<p><strong>ゾルゲンフライ直線。</strong>パラコンパクトである。ところが<span class="yogo-hl">ゾルゲンフライ平面 <m>\mathbb{R}_\ell^2</m> はパラコンパクトでない</span>——第17章で正規でないことを見たが、パラコンパクトなら正規なので（次の定理）、当然である。</p>
+</div>
+
+<h3 id="s24-2">パラコンパクト性は正規性を含む</h3>
+
+<div class="teiri" id="thm-para-seiki">
+<h4></h4>
+<p class="no-indent">パラコンパクト空間は正規である。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">まず正則性を示す。<m>x \notin F</m>、<m>F</m> 閉とする。各 <m>y \in F</m> について、ハウスドルフ性より交わらない開集合 <m>U_y \ni x</m>、<m>V_y \ni y</m> を取る。<m>\{V_y\}_{y \in F} \cup \{X \setminus F\}</m> は開被覆だから、局所有限な開細分 <m>\mathcal{W}</m> がある。</p>
+<p><m>V = \bigcup \{\, W \in \mathcal{W} \mid W \cap F \ne \varnothing \,\}</m> と置く。<em>局所有限な族の合併の閉包は、閉包の合併に等しい</em>（次の補題）。したがって</p>
+<M>\overline{V} = \bigcup \{\, \overline{W} \mid W \cap F \ne \varnothing \,\}</M>
+<p class="no-indent">である。各 <m>W</m> はある <m>V_y</m> に含まれるので <m>\overline{W} \subseteq \overline{V_y} \subseteq X \setminus U_y</m>。<m>x</m> の近傍で有限個の <m>W</m> としか交わらないものを取り、<em>対応する <m>U_y</m> の有限交叉と合わせれば</em>、<m>x</m> の近傍で <m>\overline{V}</m> と交わらないものが得られる。<span class="yogo-hl">よって正則。</span></p>
+<p>正規性は、同じ議論で点 <m>x</m> を閉集合 <m>A</m> に置き換えれば得られる。<em>正則性を使って各 <m>y \in B</m> のまわりを取り、局所有限な細分で束ねる。</em></p>
+</div>
+
+<div class="teiri" data-kind="補題" id="lem-kyokusho-yugen-heiho">
+<h4></h4>
+<p class="no-indent"><m>\mathcal{A}</m> が局所有限なら <m>\overline{\bigcup \mathcal{A}} = \bigcup_{A \in \mathcal{A}} \overline{A}</m>。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><m>\supseteq</m> は明らか。<m>\subseteq</m> を示す。<m>x \in \overline{\bigcup \mathcal{A}}</m> とし、<m>x</m> の近傍 <m>N</m> で有限個の <m>A_1, \ldots, A_n \in \mathcal{A}</m> としか交わらないものを取る。</p>
+<p>もし <m>x \notin \overline{A_k}</m> がすべての <m>k</m> で成り立つなら、<m>N \cap \bigcap_k (X \setminus \overline{A_k})</m> は <m>x</m> の近傍で <m>\bigcup \mathcal{A}</m> と交わらない。<em>有限個の交叉なので開である。</em>これは <m>x \in \overline{\bigcup \mathcal{A}}</m> に反する。<span class="yogo-hl">局所有限性が、無限個の閉包の合併を閉にしている。</span></p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">この補題が、局所有限性が「有限性の代用」として働く理由である。<em>一般には無限個の閉集合の合併は閉でない（第6章）。</em><span class="yogo-hl">局所有限なら閉である。</span>各点のまわりで有限個しか効かないので、有限合併の議論がそのまま通る。</p>
+</div>
+
+<h3 id="s24-3">1の分割</h3>
+
+<div class="teigi" id="def-ichi-bunkatsu">
+<h4></h4>
+<p class="no-indent">開被覆 <m>\{U_i\}_{i \in I}</m> に<strong>従属する1の分割</strong>とは、連続関数の族 <m>\{\varphi_i \colon X \to [0,1]\}</m> で次を満たすものをいう。</p>
+<p class="no-indent">（1）<m>\mathrm{supp}\,\varphi_i = \overline{\{\, x \mid \varphi_i(x) \ne 0 \,\}} \subseteq U_i</m>。<br>
+（2）<m>\{\mathrm{supp}\,\varphi_i\}</m> は局所有限。<br>
+（3）各点で <m>\sum_i \varphi_i(x) = 1</m>（局所有限性より、各点で有限和）。</p>
+</div>
+
+<div class="teiri" id="thm-ichi-bunkatsu">
+<h4></h4>
+<p class="no-indent">ハウスドルフ空間 <m>X</m> がパラコンパクトであることと、どの開被覆にも従属する1の分割が存在することは同値である。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><strong>逆向き（1の分割から）。</strong><m>\{\varphi_i\}</m> を取れば <m>\{\mathrm{supp}\,\varphi_i\}</m> の内部が局所有限な開細分を与える。</p>
+<p><strong>順向き。</strong><m>\{U_i\}</m> を開被覆とする。パラコンパクト性と正規性（<ref t="thm-para-seiki"/>）から、被覆を二段階縮める。すなわち、局所有限な開被覆 <m>\{V_i\}</m>、<m>\{W_i\}</m> で <m>\overline{W_i} \subseteq V_i \subseteq \overline{V_i} \subseteq U_i</m> となるものを作る。<em>各段で正規性（<ref t="prop-seiki-iikae"/>）を使う。</em></p>
+<p>ウリゾーンの補題（<ref t="thm-urysohn"/>）より、<m>\overline{W_i}</m> で <m>1</m>、<m>X \setminus V_i</m> で <m>0</m> となる連続 <m>\psi_i</m> が取れる。<m>\{V_i\}</m> が局所有限だから <m>\Psi = \sum_i \psi_i</m> は局所有限和であり連続、かつ <m>\{W_i\}</m> が被覆だから <m>\Psi > 0</m>。<span class="yogo-hl"><m>\varphi_i = \psi_i / \Psi</m> と置けばよい。</span></p>
+</div>
+
+<figure id="fig24-1">
+<svg viewBox="0 0 470 268" width="470" height="268" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">局所有限な細分と、1の分割</text>
+
+  <rect x="14" y="26" width="442" height="106" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+
+  <text x="24" y="42" font-size="7" font-weight="700" fill="#1f3b5c">もとの被覆（粗い）</text>
+  <line x1="120" y1="52" x2="440" y2="52" stroke="#c9c9c7" stroke-width="1"/>
+  <line x1="126" y1="52" x2="250" y2="52" stroke="#35618f" stroke-width="3.4"/>
+  <line x1="220" y1="58" x2="360" y2="58" stroke="#35618f" stroke-width="3.4"/>
+  <line x1="330" y1="52" x2="436" y2="52" stroke="#35618f" stroke-width="3.4"/>
+
+  <text x="24" y="82" font-size="7" font-weight="700" fill="#1f3b5c">局所有限な開細分</text>
+  <g stroke="#2f6b5f" stroke-width="3">
+    <line x1="126" y1="92" x2="176" y2="92"/><line x1="166" y1="98" x2="216" y2="98"/>
+    <line x1="206" y1="92" x2="256" y2="92"/><line x1="246" y1="98" x2="296" y2="98"/>
+    <line x1="286" y1="92" x2="336" y2="92"/><line x1="326" y1="98" x2="376" y2="98"/>
+    <line x1="366" y1="92" x2="416" y2="92"/><line x1="406" y1="98" x2="436" y2="98"/>
+  </g>
+  <text x="24" y="98" font-size="6.6" fill="#6a6a68">無限個でよい</text>
+  <text x="24" y="112" font-size="6.6" fill="#1e4a41">各点のまわりでは有限個しか重ならない</text>
+  <text x="24" y="126" font-size="6.6" fill="#8c2f1e">→ 無限個の閉包の合併が、それでも閉になる</text>
+
+  <rect x="14" y="144" width="442" height="112" rx="4" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="24" y="159" font-size="7.6" font-weight="700" fill="#1e4a41">1の分割——局所的なものを大域的に貼り合わせる</text>
+
+  <line x1="60" y1="222" x2="440" y2="222" stroke="#8a8a88" stroke-width="0.8"/>
+  <line x1="60" y1="222" x2="60" y2="176" stroke="#8a8a88" stroke-width="0.8"/>
+  <text x="54" y="180" font-size="6" text-anchor="end" fill="#6a6a68">1</text>
+  <text x="54" y="225" font-size="6" text-anchor="end" fill="#6a6a68">0</text>
+
+  <path d="M64,222 C 96,222 104,178 136,178 C 168,178 176,222 208,222" fill="none" stroke="#2f6b5f" stroke-width="1.4" opacity="0.8"/>
+  <path d="M152,222 C 184,222 192,178 224,178 C 256,178 264,222 296,222" fill="none" stroke="#35618f" stroke-width="1.4" opacity="0.8"/>
+  <path d="M240,222 C 272,222 280,178 312,178 C 344,178 352,222 384,222" fill="none" stroke="#8a6b2c" stroke-width="1.4" opacity="0.8"/>
+  <path d="M328,222 C 360,222 368,178 400,178 L436,178" fill="none" stroke="#a03b2e" stroke-width="1.4" opacity="0.8"/>
+  <line x1="64" y1="176" x2="436" y2="176" stroke="#6b2a48" stroke-width="1.6" stroke-dasharray="3,2"/>
+  <text x="250" y="170" font-size="6.4" text-anchor="middle" fill="#6b2a48">各点で和がちょうど 1</text>
+
+  <text x="24" y="240" font-size="6.8" fill="#1e4a41">各 φᵢ の台は Uᵢ に収まる　台の族は局所有限　各点で有限和</text>
+  <text x="24" y="252" font-size="6.8" fill="#1e4a41">→ Uᵢ 上で作ったものに φᵢ を掛けて足せば、大域的な対象になる</text>
+</svg>
+<figcaption data-ch="24">局所有限な細分は無限個でよいが、各点のまわりでは有限個しか重ならない。1の分割は、この性質を使って局所的な構成を大域化する。</figcaption>
+</figure>
+
+<h3 id="s24-4">何が解けるようになるか</h3>
+
+<div class="rei" id="rei-ichi-bunkatsu-riyou">
+<h4>1の分割の用途</h4>
+<p class="no-indent"><strong>リーマン計量の構成。</strong>多様体の各座標近傍で内積を定め、1の分割で足し合わせる。<em>正定値性は凸結合で保たれるので、和も内積になる。</em><span class="yogo-hl">これが「どんな多様体にもリーマン計量が入る」という定理の証明である。</span></p>
+<p><strong>積分の定義。</strong>多様体上の微分形式の積分は、座標近傍ごとの積分を1の分割で足し合わせて定義する。<em>局所有限性が、和が有限であることを保証する。</em></p>
+<p><strong>偏微分方程式の局所解の貼り合わせ。</strong>第88章でソボレフ空間を扱うとき、局所的な評価から大域的な評価を得るのに使う。</p>
+<p><strong>ティーツェの拡張定理の別証明。</strong>第16章の定理は、1の分割を使っても証明できる。</p>
+</div>
+
+<div class="lv2">
+<h4>パラコンパクト性の同値な形</h4>
+<p>パラコンパクト性には、細分の種類を変えた同値な言い換えがいくつもある。<em>どれを使うかで証明の見通しが変わる。</em></p>
+<p><strong>マイケルの定理。</strong>正則空間 <m>X</m> について、次は同値である。</p>
+<p>（1）パラコンパクト。（2）どの開被覆も<em>局所有限な</em>細分（開とは限らない）をもつ。（3）どの開被覆も<em><m>\sigma</m>-離散な</em>開細分をもつ。（4）どの開被覆も<em><m>\sigma</m>-局所有限な</em>開細分をもつ。</p>
+<p>ここで <m>\sigma</m>-局所有限とは、局所有限な族の可算合併であることをいう。<span class="yogo-hl">(4) が第32章のナガタ–スミルノフの距離化定理で使われる形である。</span></p>
+<p><strong>なぜ <m>\sigma</m>-局所有限で足りるのか。</strong>可算個の局所有限な族があれば、それらを「一段ずつ削る」ことで真に局所有限な族が作れる。第16章★★★と第18章で使った対角線的な構成と同じ手法である。</p>
+<M>W_{n,i} = V_{n,i} \setminus \bigcup_{m < n} \overline{\bigcup_i V_{m,i}}</M>
+<p><em>可算性が、この削り方を可能にする。</em></p>
+<p><strong>被覆を縮める形。</strong>もう一つの同値な形がある。<m>X</m> がパラコンパクトであることと、<em>どの開被覆 <m>\{U_i\}</m> に対しても、<m>\overline{V_i} \subseteq U_i</m> なる局所有限な開被覆 <m>\{V_i\}</m> が存在すること</em>は同値である。</p>
+<p>この形は、第15章の★★で述べた正規性の「被覆を縮める」形の無限版である。<span class="yogo-hl">正規性は有限被覆を縮め、パラコンパクト性は任意の被覆を縮める。</span></p>
+<p><strong>階層のなかの位置。</strong></p>
+<M>\text{コンパクト} \implies \text{パラコンパクト} \implies \text{正規}</M>
+<p>どちらの逆も成り立たない。<m>\mathbb{R}</m> はパラコンパクトだがコンパクトでない。第17章のチコノフ板 <m>[0,\omega_1] \times [0,\omega]</m> は正規（コンパクトだから）だが、<em>その部分空間 <m>[0,\omega_1)</m> は正規でパラコンパクトでない。</em></p>
+<p><m>[0,\omega_1)</m> がパラコンパクトでない理由は、共終数にある。<m>\{[0,\alpha)\}_{\alpha < \omega_1}</m> という被覆の局所有限な細分を取ろうとすると、<span class="yogo-hl">可算個の条件では <m>\omega_1</m> に届かない</span>という第4章の事実に突き当たる。</p>
+</div>
+
+<div class="lv3">
+<h4>パラコンパクト性は積で壊れる——ドウカー空間再訪</h4>
+<p>第19章の表を、パラコンパクト性について埋める。<em>結果は正規性とほぼ同じで、良くない。</em></p>
+<p><strong>遺伝しない。</strong>開部分空間には遺伝するが、一般の部分空間には遺伝しない。閉部分空間には遺伝する。</p>
+<p><strong>積で壊れる。</strong><m>\mathbb{R}_\ell</m> はパラコンパクトだが <m>\mathbb{R}_\ell^2</m> はそうでない。<span class="yogo-hl">積で保たれる被覆性質は、実質的にコンパクト性だけである。</span></p>
+<p><strong>コンパクト空間との積。</strong>ただし一つ救いがある。<em>パラコンパクト空間とコンパクト空間の積はパラコンパクトである。</em>証明は、コンパクトな成分を有限個で覆えることを使う「チューブ補題」による。</p>
+<p><strong>可算パラコンパクト性。</strong>可算な開被覆に限って局所有限な細分を要求する条件を、可算パラコンパクト性という。<em>パラコンパクトより真に弱い。</em></p>
+<p>第17章の★★★で触れたドウカー空間は、<span class="yogo-hl">正規だが可算パラコンパクトでない空間</span>である。ドウカーの定理により、これは <m>X \times [0,1]</m> が正規でないことと同値である。</p>
+<p><strong>なぜ <m>[0,1]</m> との積が関わるのか。</strong>証明の筋を述べる。<m>X</m> が正規で可算パラコンパクトなら、可算開被覆 <m>\{U_n\}</m> を縮めて <m>\overline{V_n} \subseteq U_n</m> とし、1の分割を作れる。その関数を使って <m>X \times [0,1]</m> のなかの閉集合を分離できる。</p>
+<p>逆に、可算パラコンパクトでなければ、<em>縮められない可算被覆があり</em>、それを使って <m>X \times [0,1]</m> のなかに分離できない閉集合の対が作れる。<span class="yogo-hl">積の第二成分 <m>[0,1]</m> が、可算な「目盛り」の役割を果たしている。</span></p>
+<p><strong>ルドゥインの構成。</strong>一九七一年に構成された最初のドウカー空間は、<m>\aleph_\omega</m> のまわりの順序数を使う。共終数 <m>\mathrm{cf}(\aleph_\omega) = \omega</m> という性質が本質的である。<em>可算個で届いてしまうのに、各段では届かない</em>——この微妙な状況が、正規性と可算パラコンパクト性を分ける。</p>
+<p>第4章で共終数を導入したとき、それが位相空間の性質として現れると予告した。チコノフ板（<m>\mathrm{cf}(\omega_1) > \omega</m> を使う）とドウカー空間（<m>\mathrm{cf}(\aleph_\omega) = \omega</m> を使う）は、その二つの現れ方である。</p>
+<p><strong>本書の扱い。</strong>可算パラコンパクト性は第25章で改めて扱う。<em>そこではリンデレーフ性や可算コンパクト性との関係を整理する。</em>第26章で被覆性質の相互関係を一覧にし、どの含意が成り立ちどの反例があるかを確定させる。</p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li>コンパクト空間がパラコンパクトであることを示せ。</li>
+<li>離散空間がパラコンパクトであることを示せ。</li>
+<li><m>\mathbb{R}</m> の開被覆 <m>\{(n-1, n+1)\}</m> が局所有限であることを確かめよ。</li>
+<li>局所有限な族の部分族が局所有限であることを示せ。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li><ref t="lem-kyokusho-yugen-heiho"/> を証明し、これが局所有限性の要点であることを説明せよ。<span class="haiten">（20点）</span></li>
+<li><ref t="thm-para-seiki"/> の正則性の部分を、補題をどこで使うか明示して書き直せ。<span class="haiten">（25点）</span></li>
+<li><ref t="thm-ichi-bunkatsu"/> の順向きを、被覆を二段階縮める部分を明示して示せ。<span class="haiten">（30点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li><m>[0,\omega_1)</m> が正規だがパラコンパクトでないことを示せ。共終数をどこで使うか明示すること。<span class="haiten">（35点）</span></li>
+<li>σ-局所有限な開細分から局所有限な開細分が作れることを、対角線的な構成で示せ。<span class="haiten">（30点）</span></li>
+</ol>
+</div>
+</div>
+<nav class="chnav">
+<a class="prev" href="ch23.html">← 第23章　Stone–Čechコンパクト化</a>
+<a class="next" href="ch25.html">第25章　Lindelöf・可算コンパクト・点列コンパクト →</a>
+</nav>
+</article>
+</main>
+<footer class="site">
+  <p>位相・解析大全　学部から大学院まで、三層で読む位相空間論と解析学</p>
+  <p class="small">本文・図版とも本書のために作成したものです。数式は MathJax でベクタ化して組んでいます。</p>
+</footer>
+</body>
+</html>

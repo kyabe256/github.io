@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第53章 Lebesgue測度と非可測集合｜位相・解析大全</title>
+<meta name="description" content="位相・解析大全　第53章　Lebesgue測度と非可測集合">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;600&display=swap">
+<link rel="stylesheet" href="web.css">
+</head>
+<body>
+<header class="site">
+  <a class="site-title" href="index.html">位相・解析大全</a>
+  <nav class="site-nav">
+    <a href="index.html">目次</a>
+    <a href="isou-kaiseki-taizen.pdf">PDF版</a>
+  </nav>
+</header>
+<main>
+<article class="chapter">
+<p class="part-label">第VII部　測度と積分</p>
+<h1><span class="ch-num">第53章</span>Lebesgue測度と非可測集合</h1>
+<nav class="chnav">
+<a class="prev" href="ch52.html">← 第52章　外測度とCarathéodoryの構成</a>
+<a class="next" href="ch54.html">第54章　可測関数 →</a>
+</nav>
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>ルベーグ可測集合は、どのくらい豊かなのか。</li>
+<li>非可測集合は、なぜ存在してしまうのか。</li>
+<li>「小さい」には何通りの意味があるのか。</li>
+</ul>
+</div>
+
+<h3 id="s53-1">ルベーグ測度</h3>
+
+<div class="teigi" id="def-lebesgue">
+<h4>ルベーグ測度</h4>
+<p class="no-indent"><ref t="rei-lebesgue-gai"/> のルベーグ外測度 <m>\lambda^*</m> に <ref t="thm-caratheodory"/> を適用して得られる測度空間 <m>(\mathbb{R}, \mathcal{M}, \lambda)</m> を<strong>ルベーグ測度空間</strong>という。</p>
+</div>
+
+<div class="teiri" id="thm-lebesgue-kihon">
+<h4>基本性質</h4>
+<p class="no-indent">（1）区間はすべて可測で、<m>\lambda</m> はその長さを与える。<br>
+（2）開集合・閉集合はすべて可測。したがってボレル集合はすべて可測。<br>
+（3）<m>\lambda</m> は平行移動不変：<m>\lambda(A+t) = \lambda(A)</m>。<br>
+（4）<m>\lambda</m> はスケール変換で <m>\lambda(cA) = |c|\lambda(A)</m>。<br>
+（5）<m>E</m> が可測であることと、どの <m>\varepsilon>0</m> についても開集合 <m>U \supseteq E</m> で <m>\lambda^*(U\setminus E)<\varepsilon</m> なるものがあることは同値（外部正則性）。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">（2）<m>(a,\infty)</m> が可測であることを示せば、それらの生成する σ-加法族として開集合が入る。</p>
+<p><m>A \subseteq \mathbb{R}</m> と <m>\varepsilon>0</m> を取り、<m>A \subseteq \bigcup_k I_k</m>、<m>\sum_k|I_k| < \lambda^*(A)+\varepsilon</m> なる被覆を取る。<em>各 <m>I_k</m> を <m>(a,\infty)</m> で切ると二つの区間になり、長さの和は <m>|I_k|</m> に等しい。</em></p>
+<p>よって <m>\lambda^*(A\cap(a,\infty)) + \lambda^*(A\setminus(a,\infty)) \le \sum_k |I_k| < \lambda^*(A)+\varepsilon</m>。<span class="yogo-hl">「区間を切っても長さの和が変わらない」という当たり前の事実が、可測性の証明の中身である。</span></p>
+<p>（3）（4）外測度の定義が区間の被覆で書かれており、区間の長さが平行移動で不変・スケールで比例するから。</p>
+</div>
+
+<div class="rei" id="rei-kantoru-kansu">
+<h4>カントール集合とカントール関数</h4>
+<p class="no-indent"><strong>カントール集合 <m>C</m>。</strong><m>[0,1]</m> から中央三分の一を繰り返し除く。<em>閉集合で、濃度は <m>2^{\aleph_0}</m>、しかし <m>\lambda(C)=0</m>。</em></p>
+<p><strong>したがって。</strong><m>C</m> の部分集合はすべて測度零なので、<ref t="thm-caratheodory"/>（3）よりすべて可測。<span class="yogo-hl">可測集合は <m>2^{2^{\aleph_0}}</m> 個ある。</span>ボレル集合は <m>2^{\aleph_0}</m> 個しかないので、<em>可測だがボレルでない集合が存在する</em>。</p>
+<p><strong>カントール関数 <m>\varphi</m>。</strong><m>C</m> の点を三進展開 <m>\sum a_k 3^{-k}</m>（<m>a_k \in \{0,2\}</m>）で表し、<m>\varphi\big(\sum a_k 3^{-k}\big) = \sum (a_k/2)2^{-k}</m> と定め、<m>C</m> の外へは単調に延ばす。</p>
+<p><em><m>\varphi</m> は連続・単調増加・全射 <m>[0,1]\to[0,1]</m> で、<m>C</m> の外では微分が <m>0</m>。</em><span class="yogo-hl">ほとんどいたるところ導関数が <m>0</m> なのに、<m>0</m> から <m>1</m> まで増える。</span></p>
+<p>したがって <m>\int_0^1 \varphi' \,d\lambda = 0 \ne 1 = \varphi(1)-\varphi(0)</m>。<em>微積分の基本定理が破れる。</em>第58章のラドン–ニコディムの定理が、この現象を「特異」という語で整理する。</p>
+</div>
+
+<h3 id="s53-2">非可測集合</h3>
+
+<div class="teiri" id="thm-vitali">
+<h4>ヴィタリの構成</h4>
+<p class="no-indent">ルベーグ可測でない <m>V \subseteq [0,1]</m> が存在する。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><m>[0,1]</m> 上で <m>x \sim y \iff x-y \in \mathbb{Q}</m> という同値関係を考える。各同値類から代表を一つ選び、その全体を <m>V</m> とする。<em>ここで選択公理（第3章）を使う。</em></p>
+<p><m>V</m> が可測だと仮定して矛盾を導く。<m>\mathbb{Q}\cap[-1,1] = \{q_1,q_2,\ldots\}</m> とし、<m>V_n = V + q_n</m> とおく。</p>
+<p><strong>互いに交わらない。</strong><m>V_m \cap V_n \ne \varnothing</m> なら <m>v + q_m = v' + q_n</m> で <m>v - v' \in \mathbb{Q}</m>、代表の一意性から <m>v=v'</m>、よって <m>m=n</m>。</p>
+<p><strong>挟み込む。</strong><m>[0,1] \subseteq \bigsqcup_n V_n \subseteq [-1,2]</m>。<em>左は、<m>x\in[0,1]</m> の同値類の代表 <m>v</m> について <m>x - v \in \mathbb{Q}\cap[-1,1]</m> だから。</em></p>
+<p><strong>矛盾。</strong>平行移動不変性（<ref t="thm-lebesgue-kihon"/>（3））より <m>\lambda(V_n)=\lambda(V)</m>。可算加法性から</p>
+<M>1 \le \sum_{n=1}^{\infty}\lambda(V) \le 3</M>
+<p class="no-indent"><m>\lambda(V)=0</m> なら中央の和は <m>0</m> で左の不等式に反する。<m>\lambda(V)>0</m> なら和は <m>\infty</m> で右に反する。<em>どちらも矛盾。</em></p>
+</div>
+
+<div class="chui">
+<h4>何が両立しなかったのか</h4>
+<p class="no-indent">証明が使ったのは三つである。<em>平行移動不変性、可算加法性、そしてすべての集合が可測であること。</em></p>
+<p><span class="yogo-hl">選択公理のもとでは、この三つは両立しない。</span>測度論はこのうち三番目を捨てる——可測な集合だけを扱う。</p>
+<p>第52章★★★のソロヴェイのモデルは、選択公理を捨てて三番目を残す道である。<em>そこでは代表を選ぶことができないので、<m>V</m> が作れない。</em></p>
+</div>
+
+<div class="rei" id="rei-banach-tarski">
+<h4>次元が上がるともっと激しい</h4>
+<p class="no-indent"><m>\mathbb{R}^3</m> では、バナッハ–タルスキの定理により<em>球を有限個に分割して、合同変換で組み直すと二つの球になる</em>（第3章）。</p>
+<p><span class="yogo-hl">回転不変な有限加法的測度すら、<m>\mathbb{R}^3</m> のすべての部分集合には存在しない。</span></p>
+<p><m>\mathbb{R}</m> と <m>\mathbb{R}^2</m> では事情が違う。<em>平行移動と回転で不変な有限加法的測度が、すべての部分集合に存在する</em>（バナッハ）。<m>\mathbb{R}^3</m> で壊れるのは、回転群が自由部分群を含むからである。</p>
+</div>
+
+<h3 id="s53-3">「小さい」の三つの意味</h3>
+
+<div class="chui">
+<h4>三つの小ささ</h4>
+<p class="no-indent"><strong>濃度の意味で小さい</strong>——可算である。</p>
+<p><strong>測度の意味で小さい</strong>——測度零である。</p>
+<p><strong>位相の意味で小さい</strong>——第一類集合（痩せた集合、第27章）である。</p>
+<p><span class="yogo-hl">三つはどれも他の二つを含まない。</span></p>
+</div>
+
+<div class="rei" id="rei-chiisai">
+<h4>食い違いの例</h4>
+<p class="no-indent"><strong>可算だが測度も第一類も小さい。</strong><m>\mathbb{Q}</m>。<em>三つすべてで小さい。</em></p>
+<p><strong>非可算だが測度零かつ第一類。</strong>カントール集合。</p>
+<p><strong>測度零だが第一類でない。</strong><m>G = \bigcap_n \bigcup_k (q_k-2^{-n-k}, q_k+2^{-n-k})</m>（<m>\{q_k\}=\mathbb{Q}</m>）は稠密な <m>G_\delta</m> で測度零。<em>補集合が第一類なので、<m>G</m> 自身は第一類でない。</em></p>
+<p><strong>第一類だが測度が正。</strong><m>\mathbb{R}\setminus\bigcup_n(q_n-\varepsilon 2^{-n},q_n+\varepsilon 2^{-n})</m> 型の閉集合の合併。</p>
+<p><strong>両方に分ける。</strong><m>\mathbb{R} = A \sqcup B</m> で <m>A</m> が測度零、<m>B</m> が第一類、という分解がある。<em>つまり「測度でも位相でも大きい」部分は取り出せない。</em><span class="yogo-hl">二つの「ほとんどすべて」が、まったく違う場所を指している。</span></p>
+</div>
+
+<figure id="fig53-1">
+<svg viewBox="0 0 470 278" width="470" height="278" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">カントール集合と、三つの「小さい」</text>
+
+  <rect x="14" y="26" width="442" height="106" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+  <text x="24" y="42" font-size="7" font-weight="700" fill="#1f3b5c">中央三分の一を除き続ける</text>
+
+  <g fill="#35618f">
+    <rect x="34" y="52" width="400" height="7"/>
+  </g>
+  <g fill="#35618f">
+    <rect x="34" y="65" width="133" height="7"/><rect x="301" y="65" width="133" height="7"/>
+  </g>
+  <g fill="#35618f">
+    <rect x="34" y="78" width="44" height="7"/><rect x="122" y="78" width="44" height="7"/>
+    <rect x="301" y="78" width="44" height="7"/><rect x="390" y="78" width="44" height="7"/>
+  </g>
+  <g fill="#35618f">
+    <rect x="34" y="91" width="15" height="7"/><rect x="63" y="91" width="15" height="7"/>
+    <rect x="122" y="91" width="15" height="7"/><rect x="152" y="91" width="15" height="7"/>
+    <rect x="301" y="91" width="15" height="7"/><rect x="330" y="91" width="15" height="7"/>
+    <rect x="390" y="91" width="15" height="7"/><rect x="419" y="91" width="15" height="7"/>
+  </g>
+  <g fill="#35618f" opacity="0.6">
+    <rect x="34" y="104" width="5" height="7"/><rect x="44" y="104" width="5" height="7"/>
+    <rect x="63" y="104" width="5" height="7"/><rect x="73" y="104" width="5" height="7"/>
+    <rect x="122" y="104" width="5" height="7"/><rect x="132" y="104" width="5" height="7"/>
+    <rect x="152" y="104" width="5" height="7"/><rect x="162" y="104" width="5" height="7"/>
+    <rect x="301" y="104" width="5" height="7"/><rect x="311" y="104" width="5" height="7"/>
+    <rect x="330" y="104" width="5" height="7"/><rect x="340" y="104" width="5" height="7"/>
+    <rect x="390" y="104" width="5" height="7"/><rect x="400" y="104" width="5" height="7"/>
+    <rect x="419" y="104" width="5" height="7"/><rect x="429" y="104" width="5" height="7"/>
+  </g>
+  <text x="440" y="58" font-size="5.6" fill="#6a6a68">長さ 1</text>
+  <text x="440" y="71" font-size="5.6" fill="#6a6a68">2/3</text>
+  <text x="440" y="84" font-size="5.6" fill="#6a6a68">4/9</text>
+  <text x="440" y="97" font-size="5.6" fill="#6a6a68">8/27</text>
+  <text x="440" y="110" font-size="5.6" fill="#6a6a68">→ 0</text>
+  <text x="24" y="126" font-size="6.2" fill="#8c2f1e">残るのは連続体の濃度をもつ閉集合。長さは 0 なのに、点は連続体と同じだけある</text>
+
+  <rect x="14" y="142" width="442" height="62" rx="4" fill="#fdf6f4" stroke="#e0c3bd"/>
+  <text x="24" y="157" font-size="7.4" font-weight="700" fill="#8c2f1e">三つの「小さい」は、どれも他を含まない</text>
+
+  <text x="24" y="174" font-size="6.6" fill="#8c2f1e">可算</text>
+  <text x="120" y="174" font-size="6.6" fill="#8c2f1e">測度零</text>
+  <text x="230" y="174" font-size="6.6" fill="#8c2f1e">第一類（痩せた）</text>
+  <text x="360" y="174" font-size="6.6" fill="#8c2f1e">例</text>
+  <line x1="24" y1="178" x2="446" y2="178" stroke="#e0c3bd" stroke-width="0.7"/>
+
+  <text x="24" y="190" font-size="6.2" fill="#6a6a68">いいえ</text>
+  <text x="120" y="190" font-size="6.2" fill="#6a6a68">はい</text>
+  <text x="230" y="190" font-size="6.2" fill="#6a6a68">はい</text>
+  <text x="360" y="190" font-size="6.2" fill="#6a6a68">カントール集合</text>
+
+  <text x="24" y="200" font-size="6.2" fill="#6a6a68">いいえ</text>
+  <text x="120" y="200" font-size="6.2" fill="#6a6a68">いいえ</text>
+  <text x="230" y="200" font-size="6.2" fill="#6a6a68">はい</text>
+  <text x="360" y="200" font-size="6.2" fill="#6a6a68">測度正の閉集合の可算合併</text>
+
+  <rect x="14" y="214" width="442" height="58" rx="4" fill="#efe0e6" stroke="#8a3b62"/>
+  <text x="24" y="229" font-size="7.4" font-weight="700" fill="#6b2a48">非可測集合は、三つの要求が両立しないことの帰結</text>
+  <text x="24" y="245" font-size="6.6" fill="#6b2a48">平行移動不変　＋　可算加法性　＋　すべての集合が可測　——選択公理のもとで矛盾する</text>
+  <text x="24" y="257" font-size="6.4" fill="#6a6a68">測度論は三番目を捨てる。ソロヴェイのモデルは選択公理を弱めて三番目を残す（第52章★★★）</text>
+  <text x="24" y="267" font-size="6.4" fill="#6a6a68">ℝ³ では回転不変な有限加法的測度さえ存在しない（バナッハ–タルスキ、第3章）</text>
+</svg>
+<figcaption data-ch="53">カントール集合は長さ零だが連続体と同じ濃度をもつ。「小さい」の三つの意味は互いに独立である。非可測集合の存在は、平行移動不変性・可算加法性・全集合可測性が両立しないことから出る。</figcaption>
+</figure>
+
+<div class="lv2">
+<h4>ルベーグの可積分条件と、ヴィタリの被覆定理</h4>
+<p>第51章で保留した二つを、ここで示す。</p>
+<p><strong>ルベーグの可積分条件（<ref t="thm-riemann-kanou"/>（4））。</strong>有界な <m>f \colon [a,b]\to\mathbb{R}</m> について、<em>リーマン可積分 <m>\iff</m> 不連続点の集合が測度零</em>。</p>
+<p>証明の骨子。<m>x</m> での<em>振動量</em>を <m>\omega(x) = \lim_{\delta\to0}\big(\sup_{B(x,\delta)}f - \inf_{B(x,\delta)}f\big)</m> とおく。<m>f</m> が <m>x</m> で連続であることと <m>\omega(x)=0</m> は同値。</p>
+<p><m>D_\alpha = \{\,x \mid \omega(x)\ge\alpha\,\}</m> とおくと、<em><m>D_\alpha</m> は閉集合</em>で、不連続点の全体は <m>\bigcup_n D_{1/n}</m>。</p>
+<p><m>\Longleftarrow</m>。不連続点が測度零なら各 <m>D_\alpha</m> は測度零の閉集合すなわちコンパクト。<em>有限個の区間で全長 <m>\varepsilon</m> 未満に覆え、その外では振動が <m>\alpha</m> 未満。</em>分割を細かくすれば <m>\overline{S}-\underline{S} \le \alpha(b-a) + \varepsilon\cdot 2\|f\|_\infty</m>。</p>
+<p><m>\Longrightarrow</m>。<m>\overline{S}-\underline{S}<\varepsilon\alpha</m> なる分割を取ると、<em><m>D_\alpha</m> と交わる小区間の長さの和が <m>\varepsilon</m> 未満</em>。よって <m>\lambda^*(D_\alpha)\le\varepsilon</m>。</p>
+<p><span class="yogo-hl">リーマン可積分性は「不連続がどれだけあるか」を測度で測った条件だった。</span><em>だから測度論なしには述べられない。</em></p>
+<p><strong>ヴィタリの被覆定理。</strong><m>E\subseteq\mathbb{R}</m> と、<m>E</m> の各点を中心とする区間の族 <m>\mathcal{V}</m> が<em>ヴィタリ被覆</em>である（各点について、いくらでも小さい半径の区間が族に含まれる）とする。このとき <m>\mathcal{V}</m> から互いに交わらない可算個 <m>I_1,I_2,\ldots</m> を選んで</p>
+<M>\lambda^*\Big(E \setminus \bigsqcup_k I_k\Big) = 0</M>
+<p class="no-indent">とできる。<em>証明は「残った部分から、いま取れるものの半分以上の大きさの区間を貪欲に取る」という手順を繰り返す。</em></p>
+<p><strong>使い道。</strong>単調関数がほとんどいたるところ微分可能であること（第48章★★★のルベーグの定理）の証明に要る。<span class="yogo-hl">「微分の存在」という局所的な主張を、測度零の例外を許して大域的に言うための道具である。</span></p>
+<p>第55章以降でも、極大関数の評価、微分の定理、ラドン–ニコディムの定理の別証明などに繰り返し現れる。</p>
+</div>
+
+<div class="lv3">
+<h4>可測性の階層と、記述集合論</h4>
+<p>可測集合とボレル集合のあいだに、階層がある。<em>第33章のポーランド空間の上で、これを整理するのが記述集合論である。</em></p>
+<p><strong>ボレル階層。</strong><m>\mathbf{\Sigma}^0_1</m> を開集合、<m>\mathbf{\Pi}^0_1</m> を閉集合とし、</p>
+<M>\mathbf{\Sigma}^0_{\alpha+1} = \Big\{\textstyle\bigcup_n A_n \ \Big|\ A_n \in \mathbf{\Pi}^0_\alpha\Big\}, \qquad
+\mathbf{\Pi}^0_\alpha = \{\, A^c \mid A \in \mathbf{\Sigma}^0_\alpha \,\}</M>
+<p class="no-indent">と超限帰納法で定める。<em><m>\mathbf{\Sigma}^0_2</m> が <m>F_\sigma</m>、<m>\mathbf{\Pi}^0_2</m> が <m>G_\delta</m>（第18章）。</em></p>
+<p>この階層は <m>\omega_1</m> まで続き、そこで止まってボレル集合族になる。<span class="yogo-hl">階層は真に増大する——各段に、前の段にない集合がある。</span>第4章の順序数が、ここで集合の複雑さの尺度として使われている。</p>
+<p><strong>射影階層。</strong>ボレル集合の連続像は、ボレルとは限らない。<m>\mathbf{\Sigma}^1_1</m>（解析集合）を「ボレル集合の連続像」、<m>\mathbf{\Pi}^1_1</m> をその補集合とし、射影と補集合で階層を続ける。</p>
+<p><strong>可測性はどこまで保たれるか。</strong><em>解析集合はすべてルベーグ可測である</em>（ルジン）。<m>\mathbf{\Sigma}^1_2</m> の可測性は、公理系から決まらない。</p>
+<p>構成可能性公理 <m>V=L</m>（第36章）のもとでは、<span class="yogo-hl">非可測な <m>\mathbf{\Sigma}^1_2</m> 集合が存在する</span>。一方、可測基数の存在を仮定すると、<m>\mathbf{\Sigma}^1_2</m> はすべて可測になる。</p>
+<p><em>第36章のスーリン問題と同じ構図である</em>——具体的な解析の問いが、集合論の公理の強さに直結する。</p>
+<p><strong>決定性公理。</strong>「射影階層のすべての集合について、ある無限ゲームが決定する」という公理（射影決定性）を仮定すると、<em>射影階層のすべての集合がルベーグ可測になる</em>。</p>
+<p>この公理は巨大基数（ウッディン基数）の存在から従う。<span class="yogo-hl">「解析に現れる集合はすべて可測である」という直観は、巨大基数によって正当化される。</span></p>
+<p><strong>まとめ。</strong><ref t="thm-vitali"/> の <m>V</m> は、どの射影階層にも属さない。<em>選択公理で「選んだ」ものは、記述できないからである。</em></p>
+<p>実際の解析で現れる集合は、ほとんどがボレルか解析集合である。<span class="yogo-hl">非可測集合は、存在するが構成できない——それが本章の結論である。</span></p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li>カントール集合の測度が <m>0</m> であることを、各段の長さから示せ。</li>
+<li>カントール集合が濃度 <m>2^{\aleph_0}</m> をもつことを示せ。</li>
+<li><ref t="thm-vitali"/> で <m>V_m \cap V_n = \varnothing</m>（<m>m\ne n</m>）を確かめよ。</li>
+<li>可測だがボレルでない集合が存在することを、濃度の比較で示せ。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li><ref t="thm-lebesgue-kihon"/>（2）を、<m>(a,\infty)</m> の可測性から導け。<span class="haiten">（25点）</span></li>
+<li>カントール関数が連続であることを示せ。<span class="haiten">（30点）</span></li>
+<li><ref t="thm-lebesgue-kihon"/>（5）の外部正則性を示せ。<span class="haiten">（30点）</span></li>
+<li>測度正の集合が、非可測な部分集合をもつことを示せ。<span class="haiten">（35点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li>ルベーグの可積分条件を、振動量を使って完全に示せ。<span class="haiten">（45点）</span></li>
+<li><m>\mathbb{R} = A \sqcup B</m> で <m>A</m> が測度零、<m>B</m> が第一類となる分解を作れ。<span class="haiten">（45点）</span></li>
+<li>ヴィタリの被覆定理を示せ。<span class="haiten">（50点）</span></li>
+</ol>
+</div>
+</div>
+<nav class="chnav">
+<a class="prev" href="ch52.html">← 第52章　外測度とCarathéodoryの構成</a>
+<a class="next" href="ch54.html">第54章　可測関数 →</a>
+</nav>
+</article>
+</main>
+<footer class="site">
+  <p>位相・解析大全　学部から大学院まで、三層で読む位相空間論と解析学</p>
+  <p class="small">本文・図版とも本書のために作成したものです。数式は MathJax でベクタ化して組んでいます。</p>
+</footer>
+</body>
+</html>

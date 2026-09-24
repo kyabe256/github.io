@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第22章 局所コンパクト性と一点コンパクト化｜位相・解析大全</title>
+<meta name="description" content="位相・解析大全　第22章　局所コンパクト性と一点コンパクト化">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;600&display=swap">
+<link rel="stylesheet" href="web.css">
+</head>
+<body>
+<header class="site">
+  <a class="site-title" href="index.html">位相・解析大全</a>
+  <nav class="site-nav">
+    <a href="index.html">目次</a>
+    <a href="isou-kaiseki-taizen.pdf">PDF版</a>
+  </nav>
+</header>
+<main>
+<article class="chapter">
+<p class="part-label">第III部　コンパクト性と被覆性質</p>
+<h1><span class="ch-num">第22章</span>局所コンパクト性と一点コンパクト化</h1>
+<nav class="chnav">
+<a class="prev" href="ch21.html">← 第21章　Tychonoffの定理と選択公理</a>
+<a class="next" href="ch23.html">第23章　Stone–Čechコンパクト化 →</a>
+</nav>
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>コンパクトでない空間を、一点だけ足してコンパクトにできるか。</li>
+<li>「局所的にコンパクト」とは、正確に何を言うのか。</li>
+<li>局所コンパクト性は、なぜ解析学で繰り返し仮定されるのか。</li>
+</ul>
+</div>
+
+<h3 id="s22-1">局所コンパクト性</h3>
+
+<p><m>\mathbb{R}^n</m> はコンパクトでない。<em>だが各点のまわりには、コンパクトな閉球がある。</em>この「局所的にはコンパクト」という状況を条件として取り出す。</p>
+
+<div class="teigi" id="def-kyokusho-compact">
+<h4>局所コンパクト空間</h4>
+<p class="no-indent">ハウスドルフ空間 <m>X</m> が<strong>局所コンパクト</strong>であるとは、各点がコンパクトな近傍をもつことをいう。</p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">ハウスドルフ性を定義に含める流儀と、含めない流儀がある。<em>含めない場合、同値でない複数の定義が生じてしまう。</em><span class="yogo-hl">本書は含める。</span>実際、次の命題はハウスドルフ性を使う。</p>
+</div>
+
+<div class="teiri" data-kind="命題" id="prop-kyokusho-iikae">
+<h4></h4>
+<p class="no-indent">ハウスドルフ空間 <m>X</m> について、次は同値である。</p>
+<p class="no-indent">（1）<m>X</m> は局所コンパクト。<br>
+（2）各点 <m>x</m> と各近傍 <m>U \ni x</m> に対し、<m>\overline{V}</m> がコンパクトで <m>x \in V \subseteq \overline{V} \subseteq U</m> なる開集合 <m>V</m> が存在する。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">（2）から（1）は明らか。（1）から（2）を示す。<m>K</m> を <m>x</m> のコンパクト近傍とする。<m>K</m> はコンパクトハウスドルフだから正規（<ref t="thm-compact-kekka"/>（6））、したがって正則である。</p>
+<p><m>U \cap \mathrm{int}\,K</m> は <m>K</m> のなかで <m>x</m> の近傍だから、<em><m>K</m> の正則性より（<ref t="prop-seisoku-iikae"/>）<m>x \in W \subseteq \overline{W}^{\,K} \subseteq U \cap \mathrm{int}\,K</m> なる <m>K</m>-開集合 <m>W</m> が取れる。</em></p>
+<p><m>W \subseteq \mathrm{int}\,K</m> なので <m>W</m> は <m>X</m> でも開である（第9章）。<m>\overline{W}^{\,K}</m> はコンパクト（<ref t="thm-compact-kekka"/>（1））であり、<span class="yogo-hl"><m>X</m> がハウスドルフだからコンパクト集合は閉、よって <m>\overline{W}^{\,X} = \overline{W}^{\,K}</m>。</span><m>V = W</m> と置けばよい。</p>
+</div>
+
+<div class="rei" id="rei-kyokusho">
+<h4>局所コンパクトな空間、そうでない空間</h4>
+<p class="no-indent"><strong>局所コンパクト。</strong>コンパクト空間。<m>\mathbb{R}^n</m>。離散空間。多様体。局所コンパクト群。<m>[0,\omega_1)</m>。</p>
+<p><strong>局所コンパクトでない。</strong><m>\mathbb{Q}</m>（どの点のどの近傍も、コンパクトな閉包をもたない）。無限次元ノルム空間（第71章で示す——<em>単位球がコンパクトになるのは有限次元のときに限る</em>）。<m>\mathbb{R}^{\mathbb{N}}</m>（積位相）。</p>
+<p><span class="yogo-hl">無限次元では局所コンパクト性が失われる——これが関数解析の全体を特徴づける事実である。</span></p>
+</div>
+
+<h3 id="s22-2">一点コンパクト化</h3>
+
+<div class="teiri" id="thm-ittensen">
+<h4>アレクサンドロフの一点コンパクト化</h4>
+<p class="no-indent"><m>X</m> を局所コンパクト（ハウスドルフ）でコンパクトでない空間とする。<m>X^* = X \cup \{\infty\}</m>（<m>\infty \notin X</m>）に</p>
+<M>\mathcal{T}^* = \mathcal{T}_X \cup \{\, X^* \setminus K \mid K \subseteq X \text{ コンパクト} \,\}</M>
+<p class="no-indent">という位相を入れると、<m>X^*</m> はコンパクトハウスドルフになり、<m>X</m> はその稠密な開部分空間になる。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><strong>位相であること。</strong>（T1）は <m>K = \varnothing</m> と <m>\varnothing \in \mathcal{T}_X</m> による。（T2）（T3）は、コンパクト集合の有限合併がコンパクトで、コンパクト集合と閉集合の交叉がコンパクトであることから従う。<em>ハウスドルフ性より <m>K</m> は閉なので、<m>X \setminus K</m> は <m>X</m> で開である</em>——これが <m>\mathcal{T}_X</m> との整合を保証する。</p>
+<p><strong>コンパクト性。</strong><m>\{U_i\}</m> を <m>X^*</m> の開被覆とする。<m>\infty</m> を含む <m>U_{i_0} = X^* \setminus K</m> がある。<em><m>K</m> はコンパクトだから、残りの <m>U_i \cap X</m> のうち有限個で覆える。</em>合わせて有限部分被覆になる。</p>
+<p><strong>ハウスドルフ性。</strong><m>x, y \in X</m> なら <m>X</m> のハウスドルフ性で足りる。<m>x \in X</m> と <m>\infty</m> を分離するには、<ref t="prop-kyokusho-iikae"/> より <m>\overline{V}</m> がコンパクトな <m>V \ni x</m> を取り、<m>V</m> と <m>X^* \setminus \overline{V}</m> を使う。<span class="yogo-hl">ここで局所コンパクト性が必要になる。</span></p>
+<p><strong>稠密性。</strong><m>X</m> がコンパクトでないので、<m>\infty</m> のどの近傍 <m>X^* \setminus K</m> も <m>X \setminus K \ne \varnothing</m> を含む。</p>
+</div>
+
+<div class="rei" id="rei-ittensen-rei">
+<h4>一点コンパクト化の例</h4>
+<p class="no-indent"><strong>直線と円。</strong><m>\mathbb{R}^* \cong S^1</m>。<em>両端を一点でつなぐと円になる。</em></p>
+<p><strong>平面と球面。</strong><m>(\mathbb{R}^2)^* \cong S^2</m>。これがリーマン球面であり、第91章と第93章で複素解析の舞台になる。<span class="yogo-hl">無限遠点を足すことで、有理関数が球面全体で定義された写像になる。</span></p>
+<p><strong>一般に。</strong><m>(\mathbb{R}^n)^* \cong S^n</m>。立体射影が同相写像を与える。</p>
+<p><strong>離散空間。</strong>可算離散空間 <m>\mathbb{N}</m> の一点コンパクト化は、<m>\{0\} \cup \{1/n\}</m> と同相である。<em>収束点が一つ足される。</em></p>
+</div>
+
+<figure id="fig22-1">
+<svg viewBox="0 0 470 264" width="470" height="264" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <defs>
+    <marker id="a22" markerWidth="8" markerHeight="8" refX="7" refY="2.6" orient="auto"><path d="M0,0 L7,2.6 L0,5.2 z" fill="#35618f"/></marker>
+  </defs>
+
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">無限遠に一点を足す——立体射影</text>
+
+  <rect x="14" y="26" width="442" height="120" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+
+  <circle cx="150" cy="86" r="34" fill="#e8f0f7" stroke="#35618f" stroke-width="1.2"/>
+  <ellipse cx="150" cy="86" rx="34" ry="11" fill="none" stroke="#35618f" stroke-width="0.6" stroke-dasharray="2,2"/>
+  <circle cx="150" cy="52" r="3.2" fill="#a03b2e"/>
+  <text x="150" y="44" font-size="6.6" text-anchor="middle" fill="#8c2f1e">北極 ∞</text>
+
+  <line x1="60" y1="120" x2="260" y2="120" stroke="#8a8a88" stroke-width="1"/>
+  <text x="24" y="116" font-size="6.6" fill="#6a6a68">直線 R</text>
+
+  <circle cx="200" cy="120" r="2.6" fill="#35618f"/>
+  <text x="200" y="134" font-size="6" text-anchor="middle" fill="#1f3b5c">x</text>
+  <circle cx="171" cy="100" r="2.6" fill="#35618f"/>
+  <path d="M150,52 L200,120" stroke="#35618f" stroke-width="0.8" stroke-dasharray="2.4,2"/>
+
+  <circle cx="96" cy="120" r="2.6" fill="#35618f"/>
+  <text x="96" y="134" font-size="6" text-anchor="middle" fill="#1f3b5c">y</text>
+  <circle cx="126" cy="101" r="2.6" fill="#35618f"/>
+  <path d="M150,52 L96,120" stroke="#35618f" stroke-width="0.8" stroke-dasharray="2.4,2"/>
+
+  <text x="330" y="52" font-size="7" font-weight="700" fill="#1f3b5c">対応</text>
+  <text x="330" y="68" font-size="6.8" fill="#1f3b5c">R ∪ {∞} ≅ S¹</text>
+  <text x="330" y="82" font-size="6.8" fill="#1f3b5c">R² ∪ {∞} ≅ S²（リーマン球面）</text>
+  <text x="330" y="96" font-size="6.8" fill="#1f3b5c">Rⁿ ∪ {∞} ≅ Sⁿ</text>
+  <text x="330" y="114" font-size="6.6" fill="#6a6a68">遠くへ行くほど北極に近づく</text>
+  <text x="330" y="126" font-size="6.6" fill="#6a6a68">∞ の近傍＝コンパクト集合の外側</text>
+
+  <rect x="14" y="158" width="216" height="98" rx="4" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="24" y="173" font-size="7.6" font-weight="700" fill="#1e4a41">局所コンパクトが要る場面</text>
+  <text x="24" y="190" font-size="6.8" fill="#1e4a41">一点コンパクト化がハウスドルフ</text>
+  <text x="24" y="203" font-size="6.8" fill="#1e4a41">商と積の交換（第10章★★★）</text>
+  <text x="24" y="216" font-size="6.8" fill="#1e4a41">関数空間のデカルト閉性（第95章）</text>
+  <text x="24" y="229" font-size="6.8" fill="#1e4a41">リースの表現定理（第59章）</text>
+  <text x="24" y="245" font-size="6.8" fill="#1e4a41">ハール測度の存在（局所コンパクト群）</text>
+
+  <rect x="240" y="158" width="216" height="98" rx="4" fill="#fdf6f4" stroke="#e0c3bd"/>
+  <text x="250" y="173" font-size="7.6" font-weight="700" fill="#8c2f1e">局所コンパクトでないもの</text>
+  <text x="250" y="190" font-size="6.8" fill="#8c2f1e">Q　閉包がコンパクトな近傍がない</text>
+  <text x="250" y="203" font-size="6.8" fill="#8c2f1e">無限次元ノルム空間（第71章）</text>
+  <text x="250" y="216" font-size="6.8" fill="#8c2f1e">R の可算積（積位相）</text>
+  <text x="250" y="233" font-size="6.8" font-weight="700" fill="#8c2f1e">単位球がコンパクト ⇔ 有限次元</text>
+  <text x="250" y="247" font-size="6.6" fill="#6a6a68">関数解析はこの事実の上に立つ</text>
+</svg>
+<figcaption data-ch="22">立体射影が一点コンパクト化を実現する。局所コンパクト性は多くの定理の前提になる一方、無限次元のノルム空間では成り立たない。</figcaption>
+</figure>
+
+<h3 id="s22-3">局所コンパクト空間の性質</h3>
+
+<div class="teiri" id="thm-kyokusho-seishitsu">
+<h4></h4>
+<p class="no-indent">局所コンパクトハウスドルフ空間 <m>X</m> について、</p>
+<p class="no-indent">（1）<m>X</m> はチコノフ空間（完全正則）である。<br>
+（2）<m>X</m> の開部分空間と閉部分空間は局所コンパクトである。<br>
+（3）コンパクト集合 <m>K</m> と開集合 <m>U \supseteq K</m> に対し、<m>\overline{V}</m> がコンパクトな開集合 <m>V</m> で <m>K \subseteq V \subseteq \overline{V} \subseteq U</m> となるものが存在する。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">（1）<m>X^*</m> はコンパクトハウスドルフだから正規、したがってチコノフである（第15章の系）。<em><m>X</m> はその部分空間であり、チコノフ性は遺伝する（第14章）。</em></p>
+<p>（3）各 <m>x \in K</m> について <ref t="prop-kyokusho-iikae"/> より <m>V_x</m> を取る。<m>K</m> のコンパクト性より有限個 <m>V_{x_1}, \ldots, V_{x_n}</m> で覆え、<m>V = \bigcup_k V_{x_k}</m> と置けばよい。<span class="yogo-hl">閉包は有限個の閉包の合併だからコンパクトである。</span></p>
+<p>（2）開部分空間 <m>U</m> について。<m>x \in U</m> なら（3）を <m>K = \{x\}</m> に適用して <m>\overline{V} \subseteq U</m> なるコンパクト近傍が得られる。閉部分空間は <ref t="thm-compact-kekka"/>（1）による。</p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">（1）は重要である。<em>局所コンパクトハウスドルフ空間では、コンパクト台をもつ連続関数が豊富に存在する。</em><span class="yogo-hl">第59章のリースの表現定理は、この関数の全体の上の線形汎関数が測度で表せることを主張する。</span>局所コンパクト性がなければ、関数が足りずに定理が成り立たない。</p>
+</div>
+
+<div class="lv2">
+<h4>コンパクト化は一つではない</h4>
+<p>一点コンパクト化は、もっとも「けち」なコンパクト化である。<em>他にもコンパクト化はあり、それらのあいだには順序がある。</em></p>
+<p><strong>定義。</strong>チコノフ空間 <m>X</m> の<strong>コンパクト化</strong>とは、コンパクトハウスドルフ空間 <m>Y</m> と埋め込み <m>e \colon X \to Y</m> で <m>\overline{e(X)} = Y</m> となるものをいう。</p>
+<p><strong>順序。</strong>二つのコンパクト化 <m>(Y_1, e_1)</m>、<m>(Y_2, e_2)</m> について、<m>f \circ e_2 = e_1</m> なる連続全射 <m>f \colon Y_2 \to Y_1</m> があるとき <m>Y_1 \le Y_2</m> と定める。<span class="yogo-hl">大きいコンパクト化から小さいコンパクト化へ、連続に潰せる。</span></p>
+<p><strong>一点コンパクト化は最小。</strong>局所コンパクトな <m>X</m> のどのコンパクト化からも、<m>X^*</m> へ潰す写像がある。<em><m>Y \setminus X</m> を一点に潰せばよい。</em>その商がハウスドルフになることは、<m>Y \setminus X</m> が閉であることから従う。</p>
+<p><strong>もっと大きいコンパクト化。</strong><m>\mathbb{R}</m> の例を三つ挙げる。</p>
+<p><em>一点コンパクト化</em> <m>S^1</m>。両端を一点に。</p>
+<p><em>二点コンパクト化</em> <m>[-\infty, +\infty]</m>。両端を別々の点に。解析学で使う拡大実数直線である。</p>
+<p><em>ストーン–チェックのコンパクト化</em> <m>\beta\mathbb{R}</m>。第23章で構成する。<span class="yogo-hl">これが最大のコンパクト化である。</span>濃度は <m>2^{2^{\aleph_0}}</m> という巨大なもので、<m>\beta\mathbb{R} \setminus \mathbb{R}</m> の構造は複雑である。</p>
+<p><strong>階層。</strong>したがって</p>
+<M>S^1 \le [-\infty,+\infty] \le \cdots \le \beta\mathbb{R}</M>
+<p>という順序がある。<em>あいだには無数のコンパクト化がある。</em></p>
+<p><strong>何を選ぶか。</strong>用途による。<span class="yogo-hl">一点コンパクト化は「無限遠で一つの値に収束する」関数を扱うのに向く。</span>複素解析でリーマン球面を使うのは、有理関数が無限遠で一つの値をとるからである。</p>
+<p>二点コンパクト化は、順序を保ちたいときに使う。<m>\lim_{x \to +\infty}</m> と <m>\lim_{x \to -\infty}</m> を区別したいからである。第44章で上限・下限を扱うとき、この拡大実数直線が必要になる。</p>
+<p>ストーン–チェックのコンパクト化は、<em>すべての有界連続関数を延ばせる</em>という普遍性をもつ。これが第23章の主題である。</p>
+</div>
+
+<div class="lv3">
+<h4>局所コンパクト性が失われる世界——無限次元</h4>
+<p><ref t="rei-kyokusho"/> で触れた「無限次元では局所コンパクトでない」という事実を、正面から述べる。<em>これが関数解析という分野の存在理由である。</em></p>
+<p><strong>リースの補題と、その帰結。</strong>ノルム空間 <m>V</m> の閉単位球 <m>B = \{\, v \mid \|v\| \le 1 \,\}</m> を考える。<span class="yogo-hl"><m>B</m> がコンパクトであることと <m>\dim V < \infty</m> であることは同値である。</span>第71章で証明する。</p>
+<p>証明の核は、リース <span class="orig">Riesz</span> の補題である。<em>真閉部分空間 <m>W \subsetneq V</m> と <m>\varepsilon > 0</m> に対し、<m>\|v\| = 1</m> かつ <m>d(v, W) > 1 - \varepsilon</m> なる <m>v</m> が取れる。</em></p>
+<p>無限次元なら、これを繰り返して <m>\|v_n\| = 1</m>、<m>\|v_n - v_m\| > 1/2</m> なる点列が作れる。<span class="yogo-hl">この点列は収束する部分列をもたないので、単位球はコンパクトでない。</span></p>
+<p><strong>何が困るのか。</strong>コンパクト性は「有限性の代用」だった。それが失われると、次のことがすべて使えなくなる。</p>
+<p><em>連続関数が最大値を取る</em>——最適化の存在が保証されない。<em>点列から収束部分列が取れる</em>——近似列の極限が作れない。<em>閉集合の入れ子が空でない交叉をもつ</em>——不動点の存在が言えない。</p>
+<p><strong>三つの回避策。</strong>関数解析は、この困難に三つの方法で応じる。</p>
+<p>第一に、<strong>位相を弱める</strong>。第70章の弱位相と弱*位相がそれである。<span class="yogo-hl">位相を弱くすると開集合が減り、被覆が粗くなるのでコンパクトになりやすい。</span>第71章のバナッハ–アラオグルの定理は、双対空間の単位球が弱*位相でコンパクトであることを主張する——これはチコノフの定理から従う。</p>
+<p>第二に、<strong>作用素を制限する</strong>。第73章のコンパクト作用素は、有界集合を「コンパクトに近い」集合へ写す作用素である。<em>この種の作用素に限れば、有限次元に似たスペクトル理論が成り立つ</em>（第76章）。</p>
+<p>第三に、<strong>凸性を使う</strong>。第72章のクレイン–ミルマンの定理は、コンパクト凸集合が端点の閉凸包になることを述べる。<span class="yogo-hl">凸性が、コンパクト性の欠如をある程度埋め合わせる。</span></p>
+<p><strong>位相空間論との往復。</strong>これら三つの回避策は、いずれも位相空間論の概念を使っている。第70章から第73章は、第III部で作った道具を無限次元の舞台で使い直す章である。</p>
+<p><em>第97章でこの往復を地図にする。</em>局所コンパクト性という一つの条件が、有限次元と無限次元を分ける境界線になっていることが、そこで明らかになる。</p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li><m>\mathbb{Q}</m> が局所コンパクトでないことを示せ。</li>
+<li><m>\mathbb{N}</m>（離散）の一点コンパクト化が <m>\{0\} \cup \{1/n\}</m> と同相であることを示せ。</li>
+<li>コンパクト空間が局所コンパクトであることを示せ。</li>
+<li>局所コンパクト空間の有限積が局所コンパクトであることを示せ。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li><ref t="thm-ittensen"/> で <m>\mathcal{T}^*</m> が位相であることを、三つの公理それぞれについて確かめよ。<span class="haiten">（20点）</span></li>
+<li><ref t="thm-ittensen"/> のハウスドルフ性の証明で、局所コンパクト性がどこで必要かを述べよ。<span class="haiten">（15点）</span></li>
+<li><ref t="thm-kyokusho-seishitsu"/>（3）を、有限個の被覆から閉包のコンパクト性を導く箇所を明示して示せ。<span class="haiten">（20点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li>立体射影が <m>(\mathbb{R}^2)^* \to S^2</m> の同相写像を与えることを、具体的な式で示せ。<span class="haiten">（30点）</span></li>
+<li>局所コンパクト空間の可算積が局所コンパクトとは限らないことを示せ。<span class="haiten">（25点）</span></li>
+</ol>
+</div>
+</div>
+<nav class="chnav">
+<a class="prev" href="ch21.html">← 第21章　Tychonoffの定理と選択公理</a>
+<a class="next" href="ch23.html">第23章　Stone–Čechコンパクト化 →</a>
+</nav>
+</article>
+</main>
+<footer class="site">
+  <p>位相・解析大全　学部から大学院まで、三層で読む位相空間論と解析学</p>
+  <p class="small">本文・図版とも本書のために作成したものです。数式は MathJax でベクタ化して組んでいます。</p>
+</footer>
+</body>
+</html>

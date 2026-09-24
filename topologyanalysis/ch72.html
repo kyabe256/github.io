@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第72章 凸性とKrein–Milmanの定理｜位相・解析大全</title>
+<meta name="description" content="位相・解析大全　第72章　凸性とKrein–Milmanの定理">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;600&display=swap">
+<link rel="stylesheet" href="web.css">
+</head>
+<body>
+<header class="site">
+  <a class="site-title" href="index.html">位相・解析大全</a>
+  <nav class="site-nav">
+    <a href="index.html">目次</a>
+    <a href="isou-kaiseki-taizen.pdf">PDF版</a>
+  </nav>
+</header>
+<main>
+<article class="chapter">
+<p class="part-label">第IX部　関数解析の基本定理</p>
+<h1><span class="ch-num">第72章</span>凸性とKrein–Milmanの定理</h1>
+<nav class="chnav">
+<a class="prev" href="ch71.html">← 第71章　Banach–Alaogluの定理</a>
+<a class="next" href="ch73.html">第73章　コンパクト作用素 →</a>
+</nav>
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>凸集合は、どの点で決まるのか。</li>
+<li>「端点」は、どんな空間にも十分にあるのか。</li>
+<li>端点を知ると、何がわかるのか。</li>
+</ul>
+</div>
+
+<h3 id="s72-1">端点</h3>
+
+<div class="teigi" id="def-tanten">
+<h4>端点と端面</h4>
+<p class="no-indent"><m>C</m> を凸集合とする。<m>x\in C</m> が<strong>端点</strong>であるとは、</p>
+<M>x = \tfrac12(y+z), \ \ y,z\in C \qquad \Longrightarrow \qquad y=z=x</M>
+<p class="no-indent">が成り立つことをいう。端点の全体を <m>\mathrm{ext}\,C</m> と書く。</p>
+<p><m>F\subseteq C</m> が<strong>端面</strong>であるとは、<em><m>F</m> が凸で、<m>C</m> の線分の内点が <m>F</m> に入るならその線分全体が <m>F</m> に入る</em>ことをいう。<em>一点からなる端面が端点である。</em></p>
+</div>
+
+<div class="rei" id="rei-tanten-rei">
+<h4>端点の例</h4>
+<p class="no-indent"><strong>多面体。</strong>頂点が端点。<em>線型計画法の基本定理——線型汎関数の最大値は頂点で取られる。</em></p>
+<p><strong>球（ヒルベルト空間）。</strong>球面のすべての点が端点。<em>一様凸だから（第60章★★★）。</em></p>
+<p><strong><m>\ell^1</m> の単位球。</strong>端点は <m>\{\pm e_n\}</m> だけ。</p>
+<p><strong><m>c_0</m> の単位球。</strong><span class="yogo-hl">端点が一つもない。</span><em><m>\|x\|_\infty\le1</m> なら <m>x_n\to0</m> なので、大きい <m>n</m> の座標を動かせる。</em></p>
+<p><strong><m>L^1[0,1]</m> の単位球。</strong>端点がない。<em><m>f</m> の台を二つに割って、それぞれを定数倍すればよい。</em></p>
+<p><strong><m>C[0,1]</m> の単位球。</strong>端点は <m>|f|\equiv1</m> なる <m>f</m>、すなわち実の場合 <m>\pm1</m> の二つだけ。</p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent"><span class="yogo-hl">端点が一つもない凸集合がある——コンパクトでなければ。</span></p>
+<p><em><m>c_0</m> と <m>L^1</m> の単位球は、閉で有界で凸だが、端点をもたない。</em>これらは反射的でないので、弱コンパクトでもない（<ref t="cor-hansha-compact"/>）。</p>
+</div>
+
+<h3 id="s72-2">クレイン–ミルマンの定理</h3>
+
+<div class="teiri" id="thm-krein-milman">
+<h4>クレイン–ミルマンの定理</h4>
+<p class="no-indent"><m>X</m> を局所凸ハウスドルフ空間、<m>K\subseteq X</m> を空でないコンパクト凸集合とする。このとき</p>
+<M>K = \overline{\mathrm{conv}}\,(\mathrm{ext}\,K)</M>
+<p class="no-indent">とくに <m>\mathrm{ext}\,K\ne\varnothing</m>。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><strong>第一段——端点の存在。</strong><m>K</m> の空でないコンパクトな端面の全体を、逆包含で順序づける。</p>
+<p>鎖 <m>\{F_i\}</m> の上限は <m>\bigcap_i F_i</m>。<em>コンパクト集合の減少族なので空でない</em>（有限交叉性、第20章）。ツォルンの補題より<span class="yogo-hl">極小な端面 <m>F</m> が存在する。</span></p>
+<p><m>F</m> が一点であること。そうでなければ <m>x\ne y\in F</m> を取り、分離定理（<ref t="thm-bunri"/>）より <m>\varphi</m> で <m>\mathrm{Re}\,\varphi(x)\ne\mathrm{Re}\,\varphi(y)</m>。</p>
+<p><em><m>F'=\{\,z\in F \mid \mathrm{Re}\,\varphi(z)=\max_F \mathrm{Re}\,\varphi \,\}</m> は <m>F</m> の真の端面</em>（コンパクト性より最大値が存在）。極小性に反する。</p>
+<p><strong>第二段——閉凸包が全体。</strong><m>C=\overline{\mathrm{conv}}(\mathrm{ext}\,K)\subseteq K</m>。<m>C\ne K</m> と仮定し、<m>x_0\in K\setminus C</m> を取る。</p>
+<p>分離定理より <m>\varphi</m> と <m>\gamma</m> があって <m>\mathrm{Re}\,\varphi(x_0)>\gamma\ge\mathrm{Re}\,\varphi(c)</m>（<m>c\in C</m>）。</p>
+<p><m>F=\{\,z\in K \mid \mathrm{Re}\,\varphi(z)=\max_K\mathrm{Re}\,\varphi\,\}</m> は空でないコンパクト端面で、<em><m>C</m> と交わらない。</em></p>
+<p>第一段を <m>F</m> に適用すると <m>F</m> は端点をもつ。<span class="yogo-hl">端面の端点は <m>K</m> の端点なので、<m>C</m> と交わり、矛盾。</span></p>
+</div>
+
+<div class="chui">
+<h4>二つの道具</h4>
+<p class="no-indent"><span class="yogo-hl">コンパクト性（極小端面の存在と最大値の存在）と、分離定理（端面を作る）。</span></p>
+<p><em>どちらもこの定理に不可欠である。</em>コンパクトでない <m>c_0</m> の単位球には端点がなく、局所凸でない <m>L^p</m>（<m>p<1</m>）には分離定理がない。</p>
+</div>
+
+<div class="teiri" id="thm-milman">
+<h4>ミルマンの定理（部分的な逆）</h4>
+<p class="no-indent"><m>K</m> をコンパクト凸、<m>A\subseteq K</m> が <m>\overline{\mathrm{conv}}\,A = K</m> を満たすなら、<m>\mathrm{ext}\,K \subseteq \overline{A}</m>。</p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent"><em>端点は「どうしても必要な点」である。</em><span class="yogo-hl">どの生成集合も、端点をすべて（閉包の意味で）含まねばならない。</span></p>
+<p>第59章★★★で <m>M(X)</m> の単位球の端点が <m>\{\pm\delta_x\}</m> だと述べた。<em>ミルマンの定理より、確率測度の空間を生成する集合はディラック測度をすべて含む。</em></p>
+</div>
+
+<h3 id="s72-3">応用</h3>
+
+<div class="rei" id="rei-krein-milman-ouyou">
+<h4>クレイン–ミルマンの使い道</h4>
+<p class="no-indent"><strong>バナッハ–ストーンの定理。</strong>第59章★★★で述べたとおり、<m>C(X)^*</m> の単位球の端点が <m>\{\pm\delta_x\}</m> であることから、<m>C(X)\cong C(Y)</m> ならば <m>X\cong Y</m> が出る。</p>
+<p><strong>ストーンの表現定理。</strong>ブール代数が集合代数として表せることの証明に使う。</p>
+<p><strong>エルゴード分解。</strong><m>T</m>-不変確率測度の全体はコンパクト凸で、<em>その端点がエルゴード測度である</em>。クレイン–ミルマンより、どの不変測度もエルゴード測度の「混合」として書ける。</p>
+<p><strong>反射的でない空間の判定。</strong><m>c_0</m> や <m>L^1</m> の単位球に端点がないので、<span class="yogo-hl">これらは他の空間の双対になりえない</span>（双対の単位球は弱*コンパクトなので端点をもつ）。</p>
+</div>
+
+<div class="teiri" data-kind="命題" id="prop-sotsui-hantei">
+<h4>双対になれない空間</h4>
+<p class="no-indent"><m>E</m> がノルム空間 <m>F</m> の双対 <m>F^*</m> と等距離同型なら、<m>B_E</m> は端点をもつ。</p>
+<p class="no-indent">したがって <m>c_0</m> と <m>L^1[0,1]</m> は、どのノルム空間の双対にもなれない。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><m>B_{F^*}</m> は弱*コンパクト（<ref t="thm-alaoglu"/>）で凸。<m>(F^*,\text{弱*})</m> は局所凸ハウスドルフなので <ref t="thm-krein-milman"/> が使える。</p>
+</div>
+
+<figure id="fig72-1">
+<svg viewBox="0 0 470 274" width="470" height="274" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">端点は、凸集合を生成する最小の材料</text>
+
+  <rect x="14" y="26" width="142" height="124" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+  <text x="24" y="42" font-size="6.8" font-weight="700" fill="#1f3b5c">多面体</text>
+  <path d="M46,120 L34,80 L62,52 L110,56 L132,92 L106,126 Z" fill="#dce7f0" stroke="#35618f" stroke-width="1.1"/>
+  <g fill="#a03b2e">
+    <circle cx="46" cy="120" r="2.6"/><circle cx="34" cy="80" r="2.6"/><circle cx="62" cy="52" r="2.6"/>
+    <circle cx="110" cy="56" r="2.6"/><circle cx="132" cy="92" r="2.6"/><circle cx="106" cy="126" r="2.6"/>
+  </g>
+  <text x="24" y="142" font-size="6" fill="#8c2f1e">端点は頂点だけ（有限個）</text>
+
+  <rect x="164" y="26" width="142" height="124" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+  <text x="174" y="42" font-size="6.8" font-weight="700" fill="#1f3b5c">球（一様凸）</text>
+  <circle cx="235" cy="90" r="42" fill="#e6efe9" stroke="#2f6b5f" stroke-width="1.1"/>
+  <g fill="#a03b2e">
+    <circle cx="235" cy="48" r="1.8"/><circle cx="265" cy="60" r="1.8"/><circle cx="277" cy="90" r="1.8"/>
+    <circle cx="265" cy="120" r="1.8"/><circle cx="235" cy="132" r="1.8"/><circle cx="205" cy="120" r="1.8"/>
+    <circle cx="193" cy="90" r="1.8"/><circle cx="205" cy="60" r="1.8"/>
+    <circle cx="252" cy="51" r="1.8"/><circle cx="274" cy="74" r="1.8"/><circle cx="274" cy="106" r="1.8"/>
+    <circle cx="252" cy="129" r="1.8"/><circle cx="218" cy="129" r="1.8"/><circle cx="196" cy="106" r="1.8"/>
+    <circle cx="196" cy="74" r="1.8"/><circle cx="218" cy="51" r="1.8"/>
+  </g>
+  <text x="174" y="142" font-size="6" fill="#8c2f1e">球面のすべての点が端点</text>
+
+  <rect x="314" y="26" width="142" height="124" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+  <text x="324" y="42" font-size="6.8" font-weight="700" fill="#8c2f1e">c₀ の単位球</text>
+  <rect x="336" y="56" width="110" height="70" rx="3" fill="#fdf6f4" stroke="#a03b2e" stroke-width="1.1" stroke-dasharray="3,2.4"/>
+  <text x="391" y="86" font-size="6.4" text-anchor="middle" fill="#8c2f1e">端点なし</text>
+  <text x="391" y="100" font-size="5.8" text-anchor="middle" fill="#6a6a68">xₙ → 0 なので、遠くの</text>
+  <text x="391" y="110" font-size="5.8" text-anchor="middle" fill="#6a6a68">座標をいつでも動かせる</text>
+  <text x="324" y="142" font-size="6" fill="#8c2f1e">コンパクトでないと端点は保証されない</text>
+
+  <rect x="14" y="160" width="216" height="104" rx="4" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="24" y="175" font-size="7.6" font-weight="700" fill="#1e4a41">証明に使う二つの道具</text>
+  <text x="24" y="192" font-size="6.6" fill="#1e4a41">コンパクト性　→　極小な端面が存在する</text>
+  <text x="24" y="204" font-size="6.6" fill="#1e4a41">　　　　　　　　汎関数が最大値を取る</text>
+  <text x="24" y="217" font-size="6.6" fill="#1e4a41">分離定理　　→　端面を切り出す</text>
+  <text x="24" y="234" font-size="6.4" fill="#8c2f1e">c₀ の単位球はコンパクトでないので端点なし</text>
+  <text x="24" y="246" font-size="6.4" fill="#8c2f1e">Lᵖ（p &lt; 1）は局所凸でないので分離できない</text>
+  <text x="24" y="258" font-size="6.4" fill="#6a6a68">どちらを外しても定理は成り立たない</text>
+
+  <rect x="240" y="160" width="216" height="104" rx="4" fill="#f4f1ea" stroke="#8a6b2c"/>
+  <text x="250" y="175" font-size="7.6" font-weight="700" fill="#5a4520">端点からわかること</text>
+  <text x="250" y="192" font-size="6.6" fill="#5a4520">M(X) の端点 ＝ ±δₓ　→　バナッハ–ストーン</text>
+  <text x="250" y="205" font-size="6.6" fill="#5a4520">不変測度の端点 ＝ エルゴード測度</text>
+  <text x="250" y="218" font-size="6.6" fill="#5a4520">単位球に端点がない　→　双対になれない</text>
+  <text x="250" y="235" font-size="6.4" fill="#6a6a68">c₀ と L¹[0,1] は、どのノルム空間の</text>
+  <text x="250" y="246" font-size="6.4" fill="#6a6a68">双対にもなれない</text>
+  <text x="250" y="258" font-size="6.4" fill="#6b2a48">ミルマンの定理——生成集合は端点を全部含む</text>
+</svg>
+<figcaption data-ch="72">多面体は頂点、球は球面のすべての点が端点になる。コンパクトでない c₀ の単位球には端点が一つもない。クレイン–ミルマンの定理はコンパクト性と分離定理の二つに支えられている。</figcaption>
+</figure>
+
+<div class="lv2">
+<h4>ショケの定理——積分表示へ</h4>
+<p>クレイン–ミルマンの定理は「閉凸包」としか言わない。<em>もっと精密に、積分として書けないか。</em></p>
+<p><strong>ショケの定理。</strong><m>K</m> を局所凸空間の<em>距離化可能な</em>コンパクト凸集合とすると、どの <m>x\in K</m> についても <m>\mathrm{ext}\,K</m> 上の確率測度 <m>\mu</m> が存在して</p>
+<M>\varphi(x) = \int_{\mathrm{ext}\,K}\varphi(e)\,d\mu(e) \qquad (\forall\varphi\in X^*)</M>
+<p class="no-indent">が成り立つ（<m>x</m> は <m>\mu</m> の<em>重心</em>である、と書く）。</p>
+<p><span class="yogo-hl">「端点の凸結合の極限」が、「端点上の測度による積分」になった。</span></p>
+<p><em>距離化可能性が要るのは、<m>\mathrm{ext}\,K</m> がボレル集合になるためである</em>（一般には <m>G_\delta</m> にすぎない）。距離化できない場合は、<m>\mathrm{ext}\,K</m> を含むベール集合の上の測度で述べる（ビショップ–ド・レーウ）。</p>
+<p><strong>一意性——ショケ単体。</strong>表示が一意になるのは、<m>K</m> が<em>単体</em>のときに限る。<em>三角形では一意（重心座標）、正方形では一意でない（二つの対角線の交点として二通り）。</em></p>
+<p><strong>応用——完全単調関数。</strong>ベルンシュタインの定理。<m>f \colon[0,\infty)\to\mathbb{R}</m> が完全単調（<m>(-1)^nf^{(n)}\ge0</m>）なら</p>
+<M>f(t) = \int_0^\infty e^{-ts}\,d\mu(s)</M>
+<p class="no-indent">と書ける。<em><m>\{e^{-ts}\}</m> が端点であることを示し、ショケの定理を使う。</em></p>
+<p><strong>応用——正定値関数。</strong>ボホナーの定理。<m>\mathbb{R}</m> 上の連続正定値関数は、有限測度のフーリエ変換として書ける（第84章）。</p>
+<p><em>正定値関数のなす凸集合の端点が <m>\{e^{i\xi t}\}</m> である。</em><span class="yogo-hl">第XI部のフーリエ解析の基本定理が、凸性の言葉で説明される。</span></p>
+<p><strong>応用——エルゴード分解。</strong><ref t="rei-krein-milman-ouyou"/> で触れた分解が、ショケの定理により積分表示になる。<em>不変測度の空間はショケ単体なので、分解は一意である。</em></p>
+</div>
+
+<div class="lv3">
+<h4>露出点・強端点と、微分可能性</h4>
+<p>端点よりも強い概念がある。</p>
+<p><strong>露出点。</strong><m>x\in C</m> が<em>露出点</em>であるとは、ある <m>\varphi\in X^*</m> について <m>\varphi</m> が <m>C</m> の上で <m>x</m> だけで最大値を取ることをいう。</p>
+<p><em>露出点は端点だが、逆は成り立たない</em>——正方形に半円をつないだ図形の、接続点が反例になる。</p>
+<p><strong>ストラスチェヴィチの定理。</strong>コンパクト凸集合は、<em>強露出点</em>（最大化列が必ず収束する露出点）の閉凸包に等しい。</p>
+<p><span class="yogo-hl">クレイン–ミルマンより強い結論である。</span></p>
+<p><strong>ラドン–ニコディム性との関係。</strong>第57章★★★でバナッハ空間の<em>ラドン–ニコディム性</em>に触れた。</p>
+<p>幾何的な特徴づけがある——<em><m>E</m> がラドン–ニコディム性をもつことと、どの有界閉凸集合も「切片」（<m>\{x\in C : \varphi(x)>\alpha\}</m>）をいくらでも小さい直径で取れることは同値。</em></p>
+<p>さらに<span class="yogo-hl">どの有界閉凸集合も強露出点をもつことと同値</span>（ブールガン）。</p>
+<p><m>c_0</m> と <m>L^1[0,1]</m> はこの性質をもたない。<em>その単位球に端点がないことと、整合している。</em></p>
+<p><strong>ノルムの微分可能性との双対。</strong><m>E^*</m> のノルムが<em>フレシェ微分可能</em>であることと、<m>E</m> のノルムが一様凸であることは（ほぼ）双対である。</p>
+<p>より正確に——<em><m>E^*</m> のノルムがフレシェ微分可能なら <m>E</m> は反射的。</em><m>E</m> のノルムがガトー微分可能であることと、<m>E^*</m> が狭義凸（球面に線分が乗らない）であることは同値。</p>
+<p><strong>再ノルム化。</strong>可分なバナッハ空間には、ノルムを取り替えて狭義凸にできる（クリー）。<em>反射的なら一様凸にできるか</em>——これはエンフロの定理により<span class="yogo-hl">はい</span>（超反射的な空間について）。</p>
+<p>第60章★★★で「<m>L^p</m> は一様凸」と述べた。<em>一般の反射的空間も、ノルムを取り替えれば同じ恩恵を受けられる。</em>凸性の幾何が、関数解析の構造を決めている。</p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li><m>\ell^1</m> の単位球の端点が <m>\{\pm e_n\}</m> であることを示せ。</li>
+<li><m>c_0</m> の単位球に端点がないことを示せ。</li>
+<li><m>C[0,1]</m>（実）の単位球の端点を求めよ。</li>
+<li>一様凸な空間の単位球で、球面のすべての点が端点であることを示せ。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li><ref t="thm-krein-milman"/> の第一段（極小端面が一点）を示せ。<span class="haiten">（35点）</span></li>
+<li><ref t="thm-krein-milman"/> の第二段を示せ。<span class="haiten">（30点）</span></li>
+<li><ref t="prop-sotsui-hantei"/> を示し、<m>L^1[0,1]</m> に適用せよ。<span class="haiten">（30点）</span></li>
+<li><ref t="thm-milman"/> を示せ。<span class="haiten">（35点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li><m>M(K)</m> の単位球の端点が <m>\{\pm\delta_x\}</m> であることを示せ。<span class="haiten">（45点）</span></li>
+<li>正方形では重心表示が一意でないことを確かめ、三角形では一意であることを示せ。<span class="haiten">（30点）</span></li>
+<li>露出点でない端点をもつ凸集合を作れ。<span class="haiten">（30点）</span></li>
+</ol>
+</div>
+</div>
+<nav class="chnav">
+<a class="prev" href="ch71.html">← 第71章　Banach–Alaogluの定理</a>
+<a class="next" href="ch73.html">第73章　コンパクト作用素 →</a>
+</nav>
+</article>
+</main>
+<footer class="site">
+  <p>位相・解析大全　学部から大学院まで、三層で読む位相空間論と解析学</p>
+  <p class="small">本文・図版とも本書のために作成したものです。数式は MathJax でベクタ化して組んでいます。</p>
+</footer>
+</body>
+</html>

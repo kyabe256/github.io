@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第8章 連続写像と同相｜位相・解析大全</title>
+<meta name="description" content="位相・解析大全　第8章　連続写像と同相">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;600&display=swap">
+<link rel="stylesheet" href="web.css">
+</head>
+<body>
+<header class="site">
+  <a class="site-title" href="index.html">位相・解析大全</a>
+  <nav class="site-nav">
+    <a href="index.html">目次</a>
+    <a href="isou-kaiseki-taizen.pdf">PDF版</a>
+  </nav>
+</header>
+<main>
+<article class="chapter">
+<p class="part-label">第I部　位相空間の基礎</p>
+<h1><span class="ch-num">第8章</span>連続写像と同相</h1>
+<nav class="chnav">
+<a class="prev" href="ch07.html">← 第7章　基底と準基底、近傍系</a>
+<a class="next" href="ch09.html">第9章　部分空間と相対位相 →</a>
+</nav>
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>連続性を確かめるのに、すべての開集合を調べる必要があるのか。</li>
+<li>連続な全単射があれば、二つの空間は同じものか。</li>
+<li>「位相的な性質」とは、何のことか。</li>
+</ul>
+</div>
+
+<h3 id="s8-1">連続——逆像で定義する理由</h3>
+
+<p>第5章で、距離のある世界の連続性が「開集合の逆像が開集合」に書き換えられることを見た。一般の空間では、これを定義に採る。</p>
+
+<div class="teigi" id="def-renzoku">
+<h4></h4>
+<p class="no-indent">位相空間のあいだの写像 <m>f \colon X \to Y</m> が<strong>連続</strong>であるとは、<span class="yogo-hl">どの開集合 <m>V \subseteq Y</m> についても <m>f^{-1}(V)</m> が <m>X</m> の開集合であること</span>をいう。</p>
+<p>また、<m>f</m> が点 <m>x \in X</m> で<strong>連続</strong>であるとは、<m>f(x)</m> を含むどの開集合 <m>V</m> についても、<m>x</m> を含む開集合 <m>U</m> で <m>f(U) \subseteq V</m> となるものが存在することをいう。</p>
+</div>
+
+<p>第2章で見たとおり、像ではなく逆像を使うのは、<em>逆像だけが集合演算のすべてと可換だから</em>である。もし「開集合の像が開集合」を連続性の定義にしていたら、合成が連続にならない、定数写像が連続にならないなど、基本的な性質がことごとく壊れる。</p>
+
+<div class="teiri" id="thm-renzoku-doti">
+<h4>連続性の同値な言い換え</h4>
+<p class="no-indent"><m>f \colon X \to Y</m> について、次は同値である。</p>
+<p class="no-indent">（1）<m>f</m> は連続。<br>
+（2）<m>Y</m> のある基底 <m>\mathcal{B}</m> の元すべてについて、逆像が開。<br>
+（3）<m>Y</m> のある準基底 <m>\mathcal{S}</m> の元すべてについて、逆像が開。<br>
+（4）どの閉集合 <m>F \subseteq Y</m> についても <m>f^{-1}(F)</m> が閉。<br>
+（5）どの <m>A \subseteq X</m> についても <m>f(\overline{A}) \subseteq \overline{f(A)}</m>。<br>
+（6）<m>f</m> は各点で連続。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">（1）から（2）（3）は明らか。（3）から（1）を示す。<m>V</m> を開とすると、<m>V</m> は <m>\mathcal{S}</m> の元の有限交叉の合併である。逆像は合併と交叉を保つ（第2章）から、<m>f^{-1}(V)</m> も開集合の有限交叉の合併となり、開である。<em>ここで逆像の可換性が丸ごと効いている。</em>（2）から（1）も同様。</p>
+<p>（1）と（4）は、<m>f^{-1}(Y \setminus F) = X \setminus f^{-1}(F)</m> による。</p>
+<p>（4）から（5）を示す。<m>\overline{f(A)}</m> は閉だから <m>f^{-1}(\overline{f(A)})</m> は閉であり、<m>A</m> を含む。閉包の最小性より <m>\overline{A} \subseteq f^{-1}(\overline{f(A)})</m>、すなわち <m>f(\overline{A}) \subseteq \overline{f(A)}</m>。</p>
+<p>（5）から（4）を示す。<m>F</m> を閉、<m>A = f^{-1}(F)</m> とする。<m>f(\overline{A}) \subseteq \overline{f(A)} \subseteq \overline{F} = F</m> だから <m>\overline{A} \subseteq f^{-1}(F) = A</m>。よって <m>A</m> は閉である。</p>
+<p>（1）と（6）は、点ごとの条件を全点で束ねるだけである。<m>V</m> を開とし、各 <m>x \in f^{-1}(V)</m> について <m>U_x</m> を取れば <m>f^{-1}(V) = \bigcup_x U_x</m> が開。逆は <m>U = f^{-1}(V)</m> と取ればよい。</p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">（2）と（3）は実用上とても重要である。<em>連続性を確かめるのに、すべての開集合を調べる必要はない。</em><span class="yogo-hl">基底か準基底の元だけ見ればよい。</span>第11章で積空間への写像の連続性を判定するとき、この節約が決定的に効く。</p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">（5）の包含は片側だけである。<em>等号は一般に成り立たない。</em><m>f \colon \mathbb{R} \to \mathbb{R}</m>、<m>f(x) = \arctan x</m>、<m>A = \mathbb{R}</m> とすると、左辺は開区間、右辺はその閉区間になる。等号が常に成り立つのは、<m>f</m> が閉写像のときである。</p>
+</div>
+
+<h3 id="s8-2">同相——位相空間として同じであること</h3>
+
+<div class="teigi" id="def-doso">
+<h4></h4>
+<p class="no-indent">全単射 <m>f \colon X \to Y</m> が<strong>同相写像</strong>であるとは、<m>f</m> と <m>f^{-1}</m> がともに連続であることをいう。同相写像が存在するとき <m>X</m> と <m>Y</m> は<strong>同相</strong>であるという。</p>
+</div>
+
+<p>「<m>f</m> が全単射で連続」だけでは足りない。<em>逆写像の連続性を別に要求している。</em>なぜそれが必要かは、反例を見るのが早い。</p>
+
+<div class="hanrei" id="cex-renzoku-zentansha">
+<h4>連続な全単射だが同相でない</h4>
+<p class="no-indent"><m>f \colon [0, 2\pi) \to S^1</m> を <m>f(t) = (\cos t, \sin t)</m> と定める。これは連続な全単射である。<em>だが同相ではない。</em></p>
+<p>理由はこうである。<m>[0, \pi)</m> は <m>[0,2\pi)</m> の開集合だが、その像は <m>S^1</m> の開集合でない——点 <m>(1,0)</m> のどんな近傍も、像に入らない点を含む。よって <m>f^{-1}</m> は連続でない。</p>
+<p>より構造的な理由もある。<m>S^1</m> はコンパクトだが <m>[0,2\pi)</m> はコンパクトでない（第20章）。<span class="yogo-hl">コンパクト性は同相で保たれるので、二つは同相でありえない。</span></p>
+<p>もっと簡単な例もある。<m>X</m> を離散位相の <m>\mathbb{R}</m>、<m>Y</m> を通常の <m>\mathbb{R}</m> とすると、恒等写像 <m>X \to Y</m> は連続な全単射だが逆は連続でない。<em>位相を弱くする向きには連続に写せるが、逆には写せない。</em></p>
+</div>
+
+<p>一方、逆写像の連続性が自動的に従う場面もある。<span class="yogo-hl">コンパクト空間からハウスドルフ空間への連続な全単射は、必ず同相である</span>（第20章で証明する）。この定理のおかげで、多くの場面で確認の手間が省ける。</p>
+
+<div class="teigi" id="def-kaisha-heisha">
+<h4></h4>
+<p class="no-indent"><m>f \colon X \to Y</m> が<strong>開写像</strong>であるとは、開集合の像が開であることをいい、<strong>閉写像</strong>であるとは、閉集合の像が閉であることをいう。<m>f</m> が単射で、<m>X</m> から <m>f(X)</m>（相対位相）への同相であるとき、<m>f</m> を<strong>埋め込み</strong>という。</p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">開写像と閉写像は独立な条件である。<em>どちらか一方だけをもつ写像も、両方をもつ写像も、どちらももたない写像もある。</em>連続でない開写像さえある。<span class="yogo-hl">連続な全単射については、開写像であることと閉写像であることと同相であることが同値になる</span>——補集合を通して移り合うからである。</p>
+</div>
+
+<figure id="fig8-1">
+<svg viewBox="0 0 470 256" width="470" height="256" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <defs>
+    <marker id="a8" markerWidth="8" markerHeight="8" refX="7" refY="2.6" orient="auto"><path d="M0,0 L7,2.6 L0,5.2 z" fill="#35618f"/></marker>
+  </defs>
+
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">連続・開・閉・同相——どれがどれを含むか</text>
+
+  <rect x="14" y="26" width="442" height="96" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+
+  <rect x="34" y="40" width="118" height="30" rx="3" fill="#dce7f0" stroke="#35618f"/>
+  <text x="93" y="59" font-size="7.2" text-anchor="middle" fill="#1f3b5c">連続　逆像が開</text>
+
+  <rect x="180" y="40" width="118" height="30" rx="3" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="239" y="59" font-size="7.2" text-anchor="middle" fill="#1e4a41">開写像　像が開</text>
+
+  <rect x="326" y="40" width="118" height="30" rx="3" fill="#f4f1ea" stroke="#8a6b2c"/>
+  <text x="385" y="59" font-size="7.2" text-anchor="middle" fill="#5a4520">閉写像　像が閉</text>
+
+  <text x="239" y="86" font-size="7" text-anchor="middle" fill="#8c2f1e">三つは互いに独立——どの二つも、一方が他方を含まない</text>
+
+  <rect x="140" y="94" width="196" height="20" rx="3" fill="#efe0e6" stroke="#8a3b62"/>
+  <text x="238" y="108" font-size="7" text-anchor="middle" fill="#6b2a48">全単射なら、連続＋開＝連続＋閉＝同相</text>
+
+  <rect x="14" y="134" width="216" height="110" rx="4" fill="#fdf6f4" stroke="#e0c3bd"/>
+  <text x="24" y="149" font-size="7.6" font-weight="700" fill="#8c2f1e">連続な全単射でも同相とは限らない</text>
+  <text x="24" y="166" font-size="7" fill="#8c2f1e">f : [0, 2π) → S¹,  t ↦ (cos t, sin t)</text>
+  <text x="24" y="181" font-size="6.8" fill="#6a6a68">端点 0 が「巻きついて」しまう。</text>
+  <text x="24" y="193" font-size="6.8" fill="#6a6a68">像の側では (1,0) のまわりが切れない。</text>
+  <text x="24" y="211" font-size="7" fill="#8c2f1e">S¹ はコンパクト、[0, 2π) はそうでない</text>
+  <text x="24" y="225" font-size="6.8" fill="#6a6a68">コンパクト性は同相不変なので、</text>
+  <text x="24" y="237" font-size="6.8" fill="#6a6a68">この一点だけで結論が出る。</text>
+
+  <rect x="240" y="134" width="216" height="110" rx="4" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="250" y="149" font-size="7.6" font-weight="700" fill="#1e4a41">位相的性質（同相不変量）</text>
+  <text x="250" y="166" font-size="7" fill="#1e4a41">コンパクト性　連結性　分離公理</text>
+  <text x="250" y="180" font-size="7" fill="#1e4a41">可算公理　次元　基数不変量</text>
+  <text x="250" y="198" font-size="7.6" font-weight="700" fill="#8c2f1e">位相的でないもの</text>
+  <text x="250" y="213" font-size="7" fill="#8c2f1e">有界性　完備性　一様連続性</text>
+  <text x="250" y="227" font-size="6.8" fill="#6a6a68">(0,1) と R は同相だが、一方は有界で</text>
+  <text x="250" y="239" font-size="6.8" fill="#6a6a68">他方はそうでない。距離に属する性質。</text>
+</svg>
+<figcaption data-ch="8">連続・開・閉は独立な条件だが、全単射のもとでは連続に一つ足せば同相になる。右は、同相で保たれる性質と保たれない性質の区別。</figcaption>
+</figure>
+
+<h3 id="s8-3">位相的性質とは何か</h3>
+
+<p>同相な空間は、位相空間としては区別がつかない。<em>したがって「同相で保たれる性質」だけが、位相空間論の対象になる。</em>これを<strong>位相的性質</strong>または同相不変量という。</p>
+
+<div class="rei" id="rei-isou-teki">
+<h4>位相的なもの、そうでないもの</h4>
+<p class="no-indent">コンパクト性、連結性、分離公理、可算公理、次元——これらはすべて位相的性質である。<em>定義が開集合の言葉だけで書けるからである。</em></p>
+<p>一方、<strong>有界性・完備性・一様連続性は位相的でない。</strong><m>(0,1)</m> と <m>\mathbb{R}</m> は同相である（<m>x \mapsto \tan(\pi(x - 1/2))</m> が同相写像）。<span class="yogo-hl">しかし前者は有界で、後者はそうでない。</span>同じ位相を与える距離のなかに、完備なものと完備でないものが共存する。</p>
+<p>この事実が、第29章から第34章の主題になる。<em>距離空間の理論のどこまでが位相の話で、どこからが距離の話か</em>を切り分ける必要がある。第30章で一様空間を導入するのは、その中間層を取り出すためである。</p>
+</div>
+
+<div class="lv2">
+<h4>始位相と終位相——連続性から位相を決める</h4>
+<p>これまでは位相が先にあり、連続性を後から判定してきた。<em>順序を逆にすることもできる。</em>「この写像たちが連続になるように位相を入れよ」と要求するのである。</p>
+<p><strong>始位相。</strong>集合 <m>X</m> と、写像の族 <m>f_i \colon X \to Y_i</m>（各 <m>Y_i</m> は位相空間）が与えられたとする。<span class="yogo-hl">すべての <m>f_i</m> を連続にする最小の位相</span>を、この族の定める<strong>始位相</strong>という。</p>
+<p>構成は第7章の準基底そのものである。<m>\mathcal{S} = \{\, f_i^{-1}(V) \mid i \in I,\ V \subseteq Y_i \text{ 開} \,\}</m> を準基底に取ればよい。<em>各 <m>f_i</m> が連続であるには <m>f_i^{-1}(V)</m> が開でなければならず、逆にこれらから生成した位相で十分である。</em></p>
+<p>始位相は次の普遍性で特徴づけられる。<m>g \colon Z \to X</m> が連続であることと、すべての <m>f_i \circ g</m> が連続であることが同値。証明は <m>g^{-1}(f_i^{-1}(V)) = (f_i \circ g)^{-1}(V)</m> と準基底による判定から出る。</p>
+<p><strong>終位相。</strong>逆向きに、写像 <m>f_i \colon Y_i \to X</m> の族が与えられたとき、<em>すべての <m>f_i</m> を連続にする最大の位相</em>を<strong>終位相</strong>という。こちらは <m>\mathcal{T} = \{\, U \subseteq X \mid \forall i,\ f_i^{-1}(U) \text{ が開} \,\}</m> と直接定義できる。普遍性は <m>g \colon X \to Z</m> が連続 <m>\iff</m> すべての <m>g \circ f_i</m> が連続。</p>
+<p><strong>本書での現れ方。</strong>この二つが、以降の構成をすべて統一する。</p>
+<p>部分空間（第9章）は包含写像による始位相であり、積空間（第11章）は射影による始位相である。商空間（第10章）は商写像による終位相であり、直和は包含写像による終位相である。<span class="yogo-hl">四つの構成が、二つの原理の特別な場合になる。</span></p>
+<p>そして第11章で「なぜ箱位相ではないのか」という問いに答えるとき、<em>積位相が始位相であることが決め手になる。</em>箱位相は射影を連続にするが、最小ではない。最小性を失うと、普遍性が壊れる。</p>
+</div>
+
+<div class="lv3">
+<h4>圏としての位相空間——何が失われているか</h4>
+<p>位相空間と連続写像は圏をなす。<m>\mathbf{Top}</m> と書く。<em>この圏の性質を調べると、位相空間という概念の限界が見えてくる。</em></p>
+<p><strong>良い性質。</strong><m>\mathbf{Top}</m> は完備かつ余完備である。すなわち、任意の極限と余極限をもつ。極限は始位相で、余極限は終位相で作られる。<span class="yogo-hl">★★で述べた二つの原理が、圏論的にはこの一文に要約される。</span>積、等化子、引き戻しはすべて始位相、余積、余等化子、押し出しはすべて終位相である。</p>
+<p><strong>欠けている性質。</strong>だが <m>\mathbf{Top}</m> はデカルト閉でない。<em>すなわち、関数空間 <m>Y^X</m> をうまく定義できない。</em>正確に言えば、</p>
+<M>\mathrm{Hom}(Z \times X,\ Y) \cong \mathrm{Hom}(Z,\ Y^X)</M>
+<p>という自然な対応を与える位相が、一般の <m>X</m> については存在しない。<m>X</m> が局所コンパクトハウスドルフなら、コンパクト開位相がこれを実現する（第95章）。一般にはできない。</p>
+<p><strong>なぜ困るのか。</strong>ホモトピー論では、道の空間やループ空間を自在に扱いたい。<em>関数空間の関数空間を取るような操作が、<m>\mathbf{Top}</m> のなかでは保証されない。</em>この不便さは実際的である。</p>
+<p><strong>対処。</strong>二つの道がある。第一に、<strong>対象を制限する</strong>——コンパクト生成空間の圏に移れば、デカルト閉になる。積の定義を少し変える必要があるが、代数的位相幾何学ではこの道が標準になっている。</p>
+<p>第二に、<strong>対象を広げる</strong>——収束構造をもつ空間の圏や、疑似位相空間の圏に移る。これらはデカルト閉であり、<m>\mathbf{Top}</m> を充満部分圏として含む。第12章で導入するフィルターの収束は、この方向への入口にあたる。</p>
+<p><strong>何を意味するか。</strong>位相空間という概念は、連続性を記述するには十分だが、<em>連続写像全体を再び空間として扱うには足りない。</em><span class="yogo-hl">第5章で「距離を捨てる」ことの代償を見たが、位相そのものにも、それが取りこぼすものがある。</span></p>
+<p>本書は <m>\mathbf{Top}</m> のなかで話を進める。解析学が必要とする関数空間は、ほとんどが距離空間かバナッハ空間であり、デカルト閉性の不足が問題になる場面は少ないからである。第95章でアスコリ–アルツェラの定理を扱うとき、関数空間の位相について改めて考える。</p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li>定数写像がつねに連続であることを、定義に戻って示せ。</li>
+<li>離散位相をもつ空間からの写像がすべて連続であること、密着位相をもつ空間への写像がすべて連続であることを示せ。</li>
+<li>連続写像の合成が連続であることを示せ。</li>
+<li><m>(0,1)</m> と <m>\mathbb{R}</m> が同相であることを、同相写像を具体的に書いて示せ。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li><ref t="thm-renzoku-doti"/> の（5）から（4）の証明を、閉包の最小性がどこで効いているかを述べながら書き直せ。<span class="haiten">（10点）</span></li>
+<li>連続な全単射について、開写像であることと閉写像であることと同相であることが同値であることを示せ。<span class="haiten">（15点）</span></li>
+<li>開写像だが連続でない写像の例を挙げよ。また、連続だが開でも閉でもない写像の例を挙げよ。<span class="haiten">（15点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li>始位相の普遍性——<m>g \colon Z \to X</m> が連続 <m>\iff</m> すべての <m>f_i \circ g</m> が連続——を証明し、この性質が始位相を一意に特徴づけることを示せ。<span class="haiten">（25点）</span></li>
+<li>連続写像 <m>f</m> について <m>f(\overline{A}) = \overline{f(A)}</m> がすべての <m>A</m> で成り立つことと、<m>f</m> が閉写像であることが同値であることを示せ。<span class="haiten">（25点）</span></li>
+</ol>
+</div>
+</div>
+<nav class="chnav">
+<a class="prev" href="ch07.html">← 第7章　基底と準基底、近傍系</a>
+<a class="next" href="ch09.html">第9章　部分空間と相対位相 →</a>
+</nav>
+</article>
+</main>
+<footer class="site">
+  <p>位相・解析大全　学部から大学院まで、三層で読む位相空間論と解析学</p>
+  <p class="small">本文・図版とも本書のために作成したものです。数式は MathJax でベクタ化して組んでいます。</p>
+</footer>
+</body>
+</html>

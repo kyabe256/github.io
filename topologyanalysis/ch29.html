@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第29章 距離空間の位相と完備性｜位相・解析大全</title>
+<meta name="description" content="位相・解析大全　第29章　距離空間の位相と完備性">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;600&display=swap">
+<link rel="stylesheet" href="web.css">
+</head>
+<body>
+<header class="site">
+  <a class="site-title" href="index.html">位相・解析大全</a>
+  <nav class="site-nav">
+    <a href="index.html">目次</a>
+    <a href="isou-kaiseki-taizen.pdf">PDF版</a>
+  </nav>
+</header>
+<main>
+<article class="chapter">
+<p class="part-label">第IV部　連結性・距離空間・距離化</p>
+<h1><span class="ch-num">第29章</span>距離空間の位相と完備性</h1>
+<nav class="chnav">
+<a class="prev" href="ch28.html">← 第28章　連結性・弧状連結・成分</a>
+<a class="next" href="ch30.html">第30章　一様空間——距離と位相のあいだ →</a>
+</nav>
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>完備性は位相的な性質ではない。では何なのか。</li>
+<li>コンパクト性と完備性は、どこで重なりどこで違うのか。</li>
+<li>完備でない空間を、完備にできるか。</li>
+</ul>
+</div>
+
+<h3 id="s29-1">距離空間に戻る</h3>
+
+<div class="teigi" id="def-kyori">
+<h4>距離空間</h4>
+<p class="no-indent">集合 <m>X</m> と関数 <m>d \colon X \times X \to [0,\infty)</m> の対が<strong>距離空間</strong>であるとは、</p>
+<M>d(x,y) = 0 \iff x = y, \qquad d(x,y) = d(y,x), \qquad d(x,z) \le d(x,y) + d(y,z)</M>
+<p class="no-indent">を満たすことをいう。開球 <m>B(x,r) = \{\, y \mid d(x,y) < r \,\}</m> の全体を基底とする位相を、<m>d</m> の定める位相という。</p>
+</div>
+
+<p>第5章から第28章まで、位相の言葉で議論してきた。<em>ここで距離に戻るのは、距離でしか言えないことを扱うためである。</em></p>
+
+<div class="teigi" id="def-kanbi">
+<h4>完備性・全有界性</h4>
+<p class="no-indent">点列 <m>(x_n)</m> が<strong>コーシー列</strong>であるとは、どの <m>\varepsilon > 0</m> に対してもある <m>N</m> があって <m>m,n \ge N</m> で <m>d(x_m,x_n) < \varepsilon</m> となることをいう。すべてのコーシー列が収束するとき <m>(X,d)</m> は<strong>完備</strong>であるという。</p>
+<p>どの <m>\varepsilon > 0</m> に対しても有限個の <m>\varepsilon</m>-球で <m>X</m> を覆えるとき、<strong>全有界</strong>であるという。</p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent"><span class="yogo-hl">完備性と全有界性は位相的な性質でない。</span><em><m>(0,1)</m> と <m>\mathbb{R}</m> は同相だが、通常の距離では前者が全有界で完備でなく、後者は完備で全有界でない。</em>同じ位相を与える距離のなかに、完備なものと完備でないものが共存する（第8章）。</p>
+<p>これらは<strong>一様構造</strong>に属する性質である——第30章でその中間層を取り出す。</p>
+</div>
+
+<h3 id="s29-2">コンパクト性の特徴づけ</h3>
+
+<div class="teiri" id="thm-kyori-compact">
+<h4>距離空間のコンパクト性</h4>
+<p class="no-indent">距離空間 <m>(X,d)</m> について、次は同値である。</p>
+<p class="no-indent">（1）コンパクト。（2）可算コンパクト。（3）点列コンパクト。（4）完備かつ全有界。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">（1）から（3）と（2）と（3）の同値は第25章で述べた。<em>残りを示す。</em></p>
+<p><strong>（3）から（4）。</strong>コーシー列は収束部分列をもち、コーシー列で部分列が収束すれば全体が収束する。よって完備。全有界でないとすると、ある <m>\varepsilon</m> について有限個の <m>\varepsilon</m>-球で覆えない。<em>そこで <m>x_1</m> を任意に取り、<m>x_{n+1}</m> を <m>B(x_1,\varepsilon) \cup \cdots \cup B(x_n,\varepsilon)</m> の外に取る。</em>この点列は互いに <m>\varepsilon</m> 以上離れているので、収束部分列をもたない。</p>
+<p><strong>（4）から（3）。</strong>点列 <m>(x_n)</m> を取る。全有界性より、<m>X</m> は有限個の <m>1</m>-球で覆える。<span class="yogo-hl">無限個の項を含む球 <m>B_1</m> がある。</span><m>B_1</m> は全有界だから、そのなかで <m>1/2</m>-球について同じことを繰り返し、<m>B_1 \supseteq B_2 \supseteq \cdots</m>（半径 <m>2^{-n}</m>）で各々が無限個の項を含むものを作る。</p>
+<p>各 <m>B_n</m> から項を一つずつ、添字が増加するように選べば、<em>それはコーシー列である。</em>完備性より収束する。</p>
+<p><strong>（3）から（1）。</strong>（4）より全有界、したがって可分（各 <m>\varepsilon = 1/n</m> について有限個の中心を集める）。可分な距離空間は第二可算（第7章）、したがってリンデレーフ（第25章）。<span class="yogo-hl">リンデレーフかつ可算コンパクトならコンパクト。</span></p>
+</div>
+
+<div class="teiri" data-kind="系" id="cor-heine-borel">
+<h4>ハイネ–ボレルの定理</h4>
+<p class="no-indent"><m>\mathbb{R}^n</m> の部分集合がコンパクトであることと、有界閉であることは同値である。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><m>\mathbb{R}^n</m> は完備である（第43章で実数の構成から示す）。有界閉集合は、完備空間の閉部分集合だから完備であり、有界だから全有界である（有界集合が全有界になるのは <m>\mathbb{R}^n</m> の特殊事情——次元が有限だから）。<ref t="thm-kyori-compact"/> よりコンパクト。</p>
+<p>逆に、コンパクトなら全有界だから有界であり、ハウスドルフ空間のコンパクト部分集合は閉である（第20章）。</p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">「有界ならば全有界」は一般には成り立たない。<em>無限次元ノルム空間の単位球は有界だが全有界でない</em>（第22章★★★、第71章）。<span class="yogo-hl">ハイネ–ボレルの定理が有限次元でしか成り立たないのは、この一点による。</span></p>
+</div>
+
+<figure id="fig29-1">
+<svg viewBox="0 0 470 264" width="470" height="264" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <defs>
+    <marker id="a29" markerWidth="8" markerHeight="8" refX="7" refY="2.6" orient="auto"><path d="M0,0 L7,2.6 L0,5.2 z" fill="#35618f"/></marker>
+  </defs>
+
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">完備・全有界・コンパクト——位相的なものとそうでないもの</text>
+
+  <rect x="14" y="26" width="442" height="110" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+
+  <rect x="166" y="40" width="138" height="24" rx="3" fill="#dce7f0" stroke="#35618f" stroke-width="1.2"/>
+  <text x="235" y="56" font-size="7" text-anchor="middle" font-weight="700" fill="#1f3b5c">コンパクト</text>
+
+  <rect x="56" y="88" width="120" height="24" rx="3" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="116" y="104" font-size="7" text-anchor="middle" fill="#1e4a41">完備</text>
+
+  <rect x="294" y="88" width="120" height="24" rx="3" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="354" y="104" font-size="7" text-anchor="middle" fill="#1e4a41">全有界</text>
+
+  <path d="M206,68 L146,84" stroke="#35618f" stroke-width="1.2" fill="none" marker-end="url(#a29)"/>
+  <path d="M264,68 L324,84" stroke="#35618f" stroke-width="1.2" fill="none" marker-end="url(#a29)"/>
+  <path d="M176,96 L290,96" stroke="#6b2a48" stroke-width="1" stroke-dasharray="3,2.4" fill="none"/>
+  <text x="235" y="92" font-size="6.2" text-anchor="middle" fill="#6b2a48">両方でコンパクト</text>
+
+  <text x="24" y="126" font-size="6.8" fill="#8c2f1e">どちらも位相的でない——(0,1) は全有界で完備でなく、R は完備で全有界でない。二つは同相</text>
+
+  <rect x="14" y="148" width="216" height="104" rx="4" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="24" y="163" font-size="7.6" font-weight="700" fill="#1e4a41">完備性が与えるもの</text>
+  <text x="24" y="180" font-size="6.8" fill="#1e4a41">ベールのカテゴリー定理（第27章）</text>
+  <text x="24" y="193" font-size="6.8" fill="#1e4a41">縮小写像の不動点定理（バナッハ）</text>
+  <text x="24" y="206" font-size="6.8" fill="#1e4a41">閉集合の入れ子の交叉が空でない</text>
+  <text x="24" y="219" font-size="6.8" fill="#1e4a41">Lp・Banach・Hilbert（第VIII部）</text>
+  <text x="24" y="236" font-size="6.6" fill="#6a6a68">解析学の存在定理のほとんどが、</text>
+  <text x="24" y="247" font-size="6.6" fill="#6a6a68">完備性を経由して証明される</text>
+
+  <rect x="240" y="148" width="216" height="104" rx="4" fill="#f4f1ea" stroke="#8a6b2c"/>
+  <text x="250" y="163" font-size="7.6" font-weight="700" fill="#5a4520">有界と全有界の違い</text>
+  <text x="250" y="180" font-size="6.8" fill="#5a4520">有界　直径が有限</text>
+  <text x="250" y="193" font-size="6.8" fill="#5a4520">全有界　有限個の ε 球で覆える</text>
+  <text x="250" y="210" font-size="6.8" fill="#5a4520">Rⁿ では一致する（有限次元だから）</text>
+  <text x="250" y="224" font-size="6.8" fill="#8c2f1e">無限次元では一致しない</text>
+  <text x="250" y="237" font-size="6.6" fill="#6a6a68">ℓ² の単位球は有界だが全有界でない</text>
+  <text x="250" y="248" font-size="6.6" fill="#6a6a68">→ ハイネ–ボレルは有限次元だけ（第71章）</text>
+</svg>
+<figcaption data-ch="29">完備性と全有界性はどちらも位相的でないが、両方そろうとコンパクト性という位相的な性質になる。有界と全有界が一致するのは有限次元に限る。</figcaption>
+</figure>
+
+<h3 id="s29-3">完備化</h3>
+
+<div class="teiri" id="thm-kanbika">
+<h4>完備化の存在と一意性</h4>
+<p class="no-indent">どの距離空間 <m>(X,d)</m> も、完備距離空間 <m>(\hat{X}, \hat{d})</m> のなかに等距離に稠密に埋め込める。この <m>\hat{X}</m> は等距離同型を除いて一意である。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><strong>構成。</strong><m>X</m> のコーシー列全体に、<m>(x_n) \sim (y_n) \iff d(x_n,y_n) \to 0</m> という同値関係を入れ、商集合を <m>\hat{X}</m> とする。距離を</p>
+<M>\hat{d}([(x_n)], [(y_n)]) = \lim_{n \to \infty} d(x_n, y_n)</M>
+<p class="no-indent">と定める。<em>右辺の極限が存在すること</em>は、<m>|d(x_m,y_m) - d(x_n,y_n)| \le d(x_m,x_n) + d(y_m,y_n)</m> より数列 <m>(d(x_n,y_n))</m> がコーシー列になることから従う。<span class="yogo-hl">ここで実数の完備性を使う</span>——第43章でこの循環を解く。</p>
+<p><strong>埋め込み。</strong><m>x \in X</m> に定数列 <m>[(x,x,\ldots)]</m> を対応させる。等距離であり、<em>像は稠密である</em>——コーシー列 <m>(x_n)</m> に対し、定数列 <m>[(x_N, x_N, \ldots)]</m> は <m>N</m> を大きく取れば <m>[(x_n)]</m> にいくらでも近い。</p>
+<p><strong>完備性。</strong><m>\hat{X}</m> のコーシー列を取る。稠密性より、各項に <m>X</m> の点を近く取れる。<em>それらがコーシー列をなし、その類が極限になる。</em></p>
+<p><strong>一意性。</strong><m>X</m> を稠密に含む二つの完備化のあいだに、<m>X</m> 上で恒等な等距離写像が一意に定まる（稠密集合上で決まるから）。</p>
+</div>
+
+<div class="rei" id="rei-kanbika-rei">
+<h4>完備化の例</h4>
+<p class="no-indent"><strong><m>\mathbb{Q}</m> の完備化は <m>\mathbb{R}</m>。</strong>これが第43章で採る実数の構成法の一つである。</p>
+<p><strong><m>C([0,1])</m> を <m>L^1</m> ノルムで完備化すると <m>L^1([0,1])</m>。</strong>第62章で扱う。<em>連続関数だけでは足りず、測度論が必要になる</em>——これが第VII部を要する理由の一つである。</p>
+<p><strong>有理数を <m>p</m>-進距離で完備化すると <m>p</m>-進数体。</strong>同じ <m>\mathbb{Q}</m> から、距離の取り方で違う完備化が得られる。<span class="yogo-hl">完備化は距離に依存する——位相だけでは決まらない。</span></p>
+</div>
+
+<div class="lv2">
+<h4>縮小写像の不動点定理</h4>
+<p>完備性がもっとも直接に働く定理を挙げる。<em>存在と一意性を同時に、しかも構成的に与える珍しい定理である。</em></p>
+<p><strong>主張。</strong><m>(X,d)</m> を空でない完備距離空間、<m>T \colon X \to X</m> を<strong>縮小写像</strong>——すなわちある <m>0 \le k < 1</m> について <m>d(Tx, Ty) \le k\, d(x,y)</m>——とする。このとき <m>T</m> は不動点をただ一つもつ。</p>
+<p><strong>証明。</strong><m>x_0</m> を任意に取り <m>x_{n+1} = Tx_n</m> と定める。</p>
+<M>d(x_{n+1}, x_n) \le k^n d(x_1, x_0)</M>
+<p>なので、<m>m > n</m> について <m>d(x_m,x_n) \le \frac{k^n}{1-k} d(x_1,x_0) \to 0</m>。<em>コーシー列だから完備性より収束する。</em>極限 <m>x</m> は <m>Tx = \lim Tx_n = \lim x_{n+1} = x</m> を満たす（<m>T</m> は連続）。一意性は <m>d(x,y) = d(Tx,Ty) \le k\,d(x,y)</m> から <m>d(x,y)=0</m>。</p>
+<p><strong>なぜ構成的か。</strong><span class="yogo-hl">不動点は <m>x_0</m> から始めて <m>T</m> を繰り返すだけで得られる。</span>しかも収束の速さが <m>k^n</m> で評価できる。<em>第1章で述べた「背理法による存在証明と構成による存在証明」の違いで言えば、これは完全に構成的である。</em></p>
+<p><strong>用途。</strong>常微分方程式の解の存在と一意性（ピカール–リンデレーフの定理）。陰関数定理。ニュートン法の収束。積分方程式の解法。<em>いずれも「適当な関数空間を完備にして、縮小写像を作る」という形をとる。</em></p>
+<p>第63章でバナッハ空間を導入したあと、この定理が線型作用素の逆の存在（ノイマン級数）として現れる。</p>
+<p><strong>完備性が外せないこと。</strong><m>X = (0,1]</m>、<m>Tx = x/2</m> とすると <m>k = 1/2</m> の縮小写像だが、不動点 <m>0</m> は <m>X</m> にない。<span class="yogo-hl">完備性がなければ、極限が空間の外へ逃げる。</span></p>
+<p><strong>コンパクト性では代用できない。</strong>コンパクト空間上の連続写像には不動点がないことがある（円の回転）。<em>縮小という条件が本質的である。</em>逆に、コンパクト凸集合上の連続写像については不動点があり（ブラウワー、第72章で触れる）、そちらは構成的でない。</p>
+</div>
+
+<div class="lv3">
+<h4>完備性は位相的でないが、完備化可能性は位相的である</h4>
+<p>完備性が位相的でないことを何度も述べた。<em>ところが、「完備な距離が入るか」という問いは位相的である。</em>この微妙な区別を押さえておく。</p>
+<p><strong>定義。</strong>位相空間 <m>X</m> が<strong>完備距離化可能</strong>であるとは、<m>X</m> の位相を与える完備な距離が存在することをいう。ポーランド空間とは、可分かつ完備距離化可能な空間のことをいう。</p>
+<p><strong>位相的であること。</strong>この条件は「ある距離が存在する」という形なので、同相で保たれる。<span class="yogo-hl">したがって完備距離化可能性は位相的性質である。</span></p>
+<p><m>(0,1)</m> は通常の距離では完備でないが、<m>\mathbb{R}</m> と同相なので完備距離化可能である。<em>完備でない空間と、完備距離化できない空間は違う。</em></p>
+<p><strong>特徴づけ。</strong>第33章で扱うが、結論を先に述べる。<em>完備距離化可能な空間は、チェック完備な距離化可能空間として特徴づけられる。</em></p>
+<p>より具体的な形として、<strong>アレクサンドロフの定理</strong>がある。<span class="yogo-hl">完備距離空間の <m>G_\delta</m> 部分空間は完備距離化可能であり、逆も成り立つ。</span></p>
+<p>したがって <m>\mathbb{Q}</m> は完備距離化可能でない。<em><m>\mathbb{Q}</m> は <m>\mathbb{R}</m> の <m>G_\delta</m> 部分集合でないからである</em>（第27章でベールの定理から示した）。</p>
+<p><strong>無理数全体はどうか。</strong>無理数全体 <m>\mathbb{R} \setminus \mathbb{Q}</m> は <m>\mathbb{R}</m> の <m>G_\delta</m> 集合である（<m>\bigcap_q (\mathbb{R} \setminus \{q\})</m>）。<em>したがって完備距離化可能である。</em></p>
+<p>実際、無理数全体は <m>\mathbb{N}^{\mathbb{N}}</m>（可算離散空間の可算積、ベール空間と呼ばれる）と同相である。連分数展開がその同相を与える。<span class="yogo-hl">通常の距離では完備でないのに、別の距離では完備になる。</span></p>
+<p><strong>なぜこの区別が重要か。</strong>第VII部以降で扱う定理の多くが「完備距離空間で」という仮定をもつ。<em>実際に必要なのは完備距離化可能性である</em>——適切な距離を選び直せばよい。</p>
+<p>とくに第54章で可測関数を扱うとき、ポーランド空間という枠組みが自然に現れる。<m>\mathbb{R}</m>、<m>[0,1]</m>、<m>\mathbb{R}^n</m>、可分バナッハ空間、コンパクト距離空間——<em>解析学で出会う空間はほとんどポーランド空間である。</em></p>
+<p>記述集合論はポーランド空間の上で展開される。第7章★★★で触れたボレル階層の理論も、この設定でもっとも整った形になる。</p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li><m>(0,1)</m> が通常の距離で完備でないことを示せ。</li>
+<li>完備距離空間の閉部分空間が完備であることを示せ。</li>
+<li>全有界な距離空間が可分であることを示せ。</li>
+<li>コーシー列が収束する部分列をもてば収束することを示せ。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li><ref t="thm-kyori-compact"/> の（4）から（3）を、入れ子の球を作る手順を明示して示せ。<span class="haiten">（25点）</span></li>
+<li><ref t="thm-kanbika"/> で <m>\hat{d}</m> が矛盾なく定まることを、同値類の代表の取り方に依らないことを含めて示せ。<span class="haiten">（25点）</span></li>
+<li>縮小写像の不動点定理を証明し、完備性を外すと成り立たない例を挙げよ。<span class="haiten">（20点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li>無理数全体が <m>\mathbb{N}^{\mathbb{N}}</m> と同相であることを、連分数展開を用いて示せ。<span class="haiten">（40点）</span></li>
+<li><m>\mathbb{Q}</m> が完備距離化可能でないことを、ベールのカテゴリー定理を用いて示せ。<span class="haiten">（30点）</span></li>
+</ol>
+</div>
+</div>
+<nav class="chnav">
+<a class="prev" href="ch28.html">← 第28章　連結性・弧状連結・成分</a>
+<a class="next" href="ch30.html">第30章　一様空間——距離と位相のあいだ →</a>
+</nav>
+</article>
+</main>
+<footer class="site">
+  <p>位相・解析大全　学部から大学院まで、三層で読む位相空間論と解析学</p>
+  <p class="small">本文・図版とも本書のために作成したものです。数式は MathJax でベクタ化して組んでいます。</p>
+</footer>
+</body>
+</html>

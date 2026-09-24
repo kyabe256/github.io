@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第89章 複素微分とCauchy–Riemannの方程式｜位相・解析大全</title>
+<meta name="description" content="位相・解析大全　第89章　複素微分とCauchy–Riemannの方程式">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;600&display=swap">
+<link rel="stylesheet" href="web.css">
+</head>
+<body>
+<header class="site">
+  <a class="site-title" href="index.html">位相・解析大全</a>
+  <nav class="site-nav">
+    <a href="index.html">目次</a>
+    <a href="isou-kaiseki-taizen.pdf">PDF版</a>
+  </nav>
+</header>
+<main>
+<article class="chapter">
+<p class="part-label">第XII部　複素解析</p>
+<h1><span class="ch-num">第89章</span>複素微分とCauchy–Riemannの方程式</h1>
+<nav class="chnav">
+<a class="prev" href="ch88.html">← 第88章　超関数のFourier変換とSobolev空間</a>
+<a class="next" href="ch90.html">第90章　Cauchyの積分定理と積分公式 →</a>
+</nav>
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>複素数で微分できるとは、実の場合と何が違うのか。</li>
+<li>なぜ一回微分できれば何回でも微分できるのか。</li>
+<li>正則関数は、どんな幾何をもつのか。</li>
+</ul>
+</div>
+
+<h3 id="s89-1">極限の向きが増えるだけで、何が起こるか</h3>
+
+<p>実関数の微分は <m>\lim_{h\to0}(f(x+h)-f(x))/h</m> で、<m>h</m> は実数として左右から近づく。<em>複素関数では <m>h</m> が複素数なので、あらゆる方向から近づける。</em></p>
+
+<p><span class="yogo-hl">「どの方向から近づいても同じ極限」という要求が、決定的に強い。</span>実二変数の関数として見れば、微分可能性は「線形写像で近似できる」ことだが、複素微分可能性はさらに<em>その線形写像が複素数の掛け算である</em>ことを要求する。複素数の掛け算は<strong>回転と拡大の合成</strong>だから、これは「角を保ち向きを保つ」という幾何的な条件である。</p>
+
+<div class="teigi" id="def-fukuso-seisoku">
+<h4>複素微分可能・正則</h4>
+<p class="no-indent"><m>\Omega\subset\mathbb{C}</m> を開集合、<m>f:\Omega\to\mathbb{C}</m> とする。<m>z_0\in\Omega</m> で</p>
+<M>f'(z_0) = \lim_{h\to0}\frac{f(z_0+h)-f(z_0)}{h} \qquad (h\in\mathbb{C}\setminus\{0\})</M>
+<p class="no-indent">が存在するとき <m>f</m> は <m>z_0</m> で<strong>複素微分可能</strong>という。<m>\Omega</m> のすべての点で複素微分可能なとき <m>f</m> は <m>\Omega</m> 上<strong>正則</strong>（<span class="orig">holomorphic</span>）という。</p>
+<p class="no-indent"><em>一点での微分可能性は弱い条件だが、開集合全体での微分可能性は極端に強い。</em>この落差が複素解析の全体を決める。</p>
+</div>
+
+<div class="teiri" id="thm-cauchy-riemann">
+<h4>コーシー–リーマンの方程式</h4>
+<p class="no-indent"><m>f=u+iv</m>（<m>u,v</m> は実数値）、<m>z=x+iy</m> とする。次は同値である。</p>
+<p class="no-indent">（1）<m>f</m> は <m>z_0</m> で複素微分可能。<br>
+（2）<m>f</m> は <m>z_0</m> で実二変数の関数として全微分可能で、かつ</p>
+<M>\frac{\partial u}{\partial x} = \frac{\partial v}{\partial y}, \qquad \frac{\partial u}{\partial y} = -\frac{\partial v}{\partial x}</M>
+<p class="no-indent">（<strong>コーシー–リーマンの方程式</strong>）。<br>
+（3）<m>f</m> は全微分可能で <m>\dfrac{\partial f}{\partial\bar z}=0</m>。ここで</p>
+<M>\frac{\partial}{\partial z} = \frac12\Big(\frac{\partial}{\partial x}-i\frac{\partial}{\partial y}\Big), \qquad \frac{\partial}{\partial\bar z} = \frac12\Big(\frac{\partial}{\partial x}+i\frac{\partial}{\partial y}\Big)</M>
+<p class="no-indent">このとき <m>f'(z_0)=\partial f/\partial z(z_0)</m>。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">（1）から（2）：<m>h=t</m>（実）として近づけると <m>f'(z_0)=u_x+iv_x</m>。<m>h=it</m> として近づけると</p>
+<M>f'(z_0) = \lim_{t\to0}\frac{f(z_0+it)-f(z_0)}{it} = \frac{1}{i}(u_y+iv_y) = v_y - iu_y</M>
+<p class="no-indent"><em>二つが等しいので、実部と虚部を比べてコーシー–リーマンの方程式を得る。</em></p>
+<p class="no-indent">（2）から（1）：全微分可能性より <m>f(z_0+h)-f(z_0)=Ah_1+Bh_2+o(|h|)</m>（<m>h=h_1+ih_2</m>、<m>A=f_x</m>、<m>B=f_y</m>）。コーシー–リーマンは <m>B=iA</m> と同値だから</p>
+<M>Ah_1+Bh_2 = A(h_1+ih_2) = Ah</M>
+<p class="no-indent"><em>すなわち増分が <m>h</m> の複素定数倍で、複素微分可能である。</em></p>
+<p class="no-indent">（3）は（2）の書き換え：<m>\partial f/\partial\bar z=\frac12(f_x+if_y)=\frac12(A+iB)</m> で、<m>B=iA</m> と <m>A+iB=0</m> は同値。</p>
+<p><span class="yogo-hl">記号 <m>\partial/\partial\bar z</m> の意味は「<m>\bar z</m> にどれだけ依存しているか」である。</span><em>正則とは、<m>z</m> だけの関数であって <m>\bar z</m> を含まない、ということである。</em></p>
+</div>
+
+<div class="rei" id="rei-seisoku-rei">
+<h4>正則なもの・ないもの</h4>
+<p class="no-indent"><strong>正則。</strong>多項式、<m>e^z=\sum z^n/n!</m>、<m>\sin z</m>、<m>\cos z</m>、<m>\log z</m>（分枝を切れば）、有理関数（極を除く）。<em>収束冪級数はその収束円板の内部で正則である</em>（第91章）。</p>
+<p class="no-indent"><strong>正則でない。</strong></p>
+<p class="no-indent">（1）<m>f(z)=\bar z</m>。<m>u=x</m>、<m>v=-y</m> なので <m>u_x=1\ne-1=v_y</m>。<em>実二変数としては無限回微分可能なのに、複素微分可能な点が一つもない。</em></p>
+<p class="no-indent">（2）<m>f(z)=|z|^2=z\bar z</m>。<m>\partial f/\partial\bar z=z</m> なので、<m>z=0</m> でのみ複素微分可能。<span class="yogo-hl">一点で微分可能でも正則ではない。</span></p>
+<p class="no-indent">（3）<m>f(z)=\mathrm{Re}\,z=x</m>。<m>u_x=1</m>、<m>v_y=0</m>。<em>実部をとる操作は正則でない。</em></p>
+<p class="no-indent">（4）<m>f(z)=|z|</m>。原点以外でも正則でない。</p>
+<p class="no-indent">（5）<strong>コーシー–リーマンだけでは足りない。</strong></p>
+<M>f(z) = \begin{cases} e^{-z^{-4}} & z\ne0 \\ 0 & z=0\end{cases}</M>
+<p class="no-indent">は原点で <m>u,v</m> の偏導関数がすべて存在してコーシー–リーマンをみたすが、<em>全微分可能でなく、複素微分可能でもない</em>（実軸に沿っては零だが、<m>\arg z=\pi/4</m> の方向では <m>e^{-z^{-4}}=e^{|z|^{-4}}</m> が発散する）。<span class="yogo-hl">（2）の「全微分可能」という条件は外せない。</span></p>
+</div>
+
+<h3 id="s89-2">等角性と調和性</h3>
+
+<div class="teiri" id="thm-tokaku">
+<h4>正則写像は等角である</h4>
+<p class="no-indent"><m>f</m> が <m>z_0</m> で正則、<m>f'(z_0)\ne0</m> とする。<m>z_0</m> で交わる二つの滑らかな曲線 <m>\gamma_1,\gamma_2</m> の像 <m>f\circ\gamma_1,f\circ\gamma_2</m> は、<m>f(z_0)</m> で<em>同じ角度で、同じ向きに</em>交わる。</p>
+<p class="no-indent">逆に、実二変数の全微分可能な写像が向きを保つ等角写像であれば、複素微分可能で <m>f'\ne0</m> である。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">連鎖律より <m>(f\circ\gamma_j)'(0)=f'(z_0)\gamma_j'(0)</m>。<em>両方の接ベクトルが同じ複素数 <m>f'(z_0)</m> で掛けられる。</em>複素数の掛け算は <m>|f'(z_0)|</m> 倍の拡大と <m>\arg f'(z_0)</m> の回転だから、<span class="yogo-hl">二つの接ベクトルのなす角は変わらない。</span></p>
+<p class="no-indent">逆向き：ヤコビ行列 <m>J=\begin{pmatrix}u_x & u_y\\ v_x & v_y\end{pmatrix}</m> が向きを保つ相似変換（すなわち <m>r\cdot(\text{回転})</m>、<m>r>0</m>）であることは、<m>u_x=v_y</m>、<m>u_y=-v_x</m> と同値である。<em>コーシー–リーマンの方程式は「ヤコビ行列が複素数である」ことの成分表示にすぎない。</em></p>
+</div>
+
+<div class="teiri" id="thm-chowa">
+<h4>正則関数の実部・虚部は調和</h4>
+<p class="no-indent"><m>f=u+iv</m> が正則で <m>u,v\in C^2</m> ならば</p>
+<M>\Delta u = u_{xx}+u_{yy} = 0, \qquad \Delta v = 0</M>
+<p class="no-indent">（<m>u,v</m> を<strong>調和関数</strong>という）。逆に単連結な領域上の実調和関数 <m>u</m> には<strong>共役調和関数</strong> <m>v</m> が（定数を除いて一意に）存在し、<m>u+iv</m> が正則になる。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">コーシー–リーマンを微分して <m>u_{xx}=v_{yx}</m>、<m>u_{yy}=-v_{xy}</m>。<em><m>C^2</m> なら混合偏微分が交換するので和は零。</em></p>
+<p class="no-indent">逆：<m>u</m> が調和なら、<m>\omega=-u_y\,dx+u_x\,dy</m> は閉形式（<m>d\omega=(u_{xx}+u_{yy})dx\wedge dy=0</m>）。<em>単連結ならポアンカレの補題により完全形式で、<m>\omega=dv</m> なる <m>v</m> が存在する。</em>すると <m>v_x=-u_y</m>、<m>v_y=u_x</m> でコーシー–リーマンがみたされる。</p>
+<p><span class="yogo-hl">単連結性は外せない</span>：<m>u=\log|z|</m> は <m>\mathbb{C}\setminus\{0\}</m> で調和だが、共役調和関数は <m>\arg z</m> で一価に定まらない。<em>これが多価性と解析接続（第91章）の出発点である。</em></p>
+</div>
+
+<div class="chui">
+<h4>なぜ一回で無限回になるのか——予告</h4>
+<p class="no-indent">本章の定義は「一回複素微分可能」しか要求していない。<em>ところが第90章のコーシーの積分公式</em></p>
+<M>f(z) = \frac{1}{2\pi i}\oint_{\gamma}\frac{f(w)}{w-z}\,dw</M>
+<p class="no-indent"><em>が成り立つと、右辺は <m>z</m> について何回でも微分できる</em>（積分記号の下で <m>1/(w-z)</m> を微分するだけ）。<span class="yogo-hl">したがって一回微分できれば無限回微分でき、しかも冪級数に展開できる。</span></p>
+<p><em>実関数ではこんなことは起こらない</em>：<m>C^1</m> だが <m>C^2</m> でない関数、<m>C^\infty</m> だが解析的でない関数（<m>e^{-1/x^2}</m>）がいくらでもある。<em>この剛性が、複素解析と実解析を分ける。</em>剛性の源は「あらゆる方向で同じ極限」という一点にある。</p>
+</div>
+
+<div class="rei" id="rei-shokyu-kansu">
+<h4>初等関数を複素数に伸ばす</h4>
+<p class="no-indent">（1）<strong>指数関数。</strong><m>e^z=\sum_{n\ge0}z^n/n!</m> は全平面で収束し正則。<m>e^{x+iy}=e^x(\cos y+i\sin y)</m>。<em>周期 <m>2\pi i</m> をもつ</em>——実の指数関数からは想像できない性質である。値域は <m>\mathbb{C}\setminus\{0\}</m>。</p>
+<p>（2）<strong>三角関数。</strong><m>\cos z=\frac{e^{iz}+e^{-iz}}{2}</m>、<m>\sin z=\frac{e^{iz}-e^{-iz}}{2i}</m>。<em>複素数では有界でない</em>：<m>\cos(iy)=\cosh y\to\infty</m>。<span class="yogo-hl">「三角関数は有界」という実の直観は、複素数では完全に崩れる</span>——第90章のリウヴィルの定理から、非定数の正則関数は有界になりえないからである。</p>
+<p>（3）<strong>対数。</strong><m>e^w=z</m> の解は <m>w=\log|z|+i(\arg z+2\pi n)</m>。<em>一価な関数としては定義できない。</em>切断（たとえば負の実軸）を入れて主枝 <m>\mathrm{Log}\,z</m> を取るが、切断の選び方は恣意的である。<em>正しい理解は「対数はリーマン面（無限葉の螺旋）の上の一価関数」というもの</em>（第91章、第93章）。</p>
+<p>（4）<strong>冪。</strong><m>z^\alpha=e^{\alpha\log z}</m>。<m>\alpha</m> が整数なら一価、有理数 <m>p/q</m>（既約）なら <m>q</m> 価、無理数なら無限多価。<em><m>i^i=e^{i\log i}=e^{i(i\pi/2+2\pi in)}=e^{-\pi/2-2\pi n}</m> は実数で、無限個の値をとる。</em></p>
+<p>（5）<strong>逆三角関数。</strong><m>\arcsin z=-i\log(iz+\sqrt{1-z^2})</m>。<em>平方根と対数の多価性を継ぐ。</em></p>
+</div>
+
+<figure id="fig89-1">
+<svg viewBox="0 0 470 288" width="470" height="288" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">複素微分可能とは、局所的に回転と拡大であること</text>
+
+  <rect x="14" y="26" width="442" height="128" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+
+  <text x="110" y="42" font-size="6.8" text-anchor="middle" font-weight="700" fill="#1f3b5c">もとの格子</text>
+  <line x1="50" y1="60" x2="170" y2="60" stroke="#c3d2e0" stroke-width="0.6"/>
+  <line x1="50" y1="84" x2="170" y2="84" stroke="#c3d2e0" stroke-width="0.6"/>
+  <line x1="50" y1="108" x2="170" y2="108" stroke="#c3d2e0" stroke-width="0.6"/>
+  <line x1="50" y1="132" x2="170" y2="132" stroke="#c3d2e0" stroke-width="0.6"/>
+  <line x1="62" y1="54" x2="62" y2="138" stroke="#c3d2e0" stroke-width="0.6"/>
+  <line x1="86" y1="54" x2="86" y2="138" stroke="#c3d2e0" stroke-width="0.6"/>
+  <line x1="110" y1="54" x2="110" y2="138" stroke="#c3d2e0" stroke-width="0.6"/>
+  <line x1="134" y1="54" x2="134" y2="138" stroke="#c3d2e0" stroke-width="0.6"/>
+  <line x1="158" y1="54" x2="158" y2="138" stroke="#c3d2e0" stroke-width="0.6"/>
+  <line x1="86" y1="84" x2="134" y2="84" stroke="#35618f" stroke-width="1.8"/>
+  <line x1="86" y1="84" x2="86" y2="108" stroke="#2f6b5f" stroke-width="1.8"/>
+  <circle cx="86" cy="84" r="2.2" fill="#a03b2e"/>
+  <text x="110" y="150" font-size="6" text-anchor="middle" fill="#6a6a68">直交する二本</text>
+
+  <text x="360" y="42" font-size="6.8" text-anchor="middle" font-weight="700" fill="#1f3b5c">正則写像の像</text>
+  <path d="M 268 132 C 300 120 332 96 348 60" fill="none" stroke="#c3d2e0" stroke-width="0.6"/>
+  <path d="M 284 136 C 316 126 350 102 368 64" fill="none" stroke="#c3d2e0" stroke-width="0.6"/>
+  <path d="M 300 140 C 334 130 368 108 388 68" fill="none" stroke="#c3d2e0" stroke-width="0.6"/>
+  <path d="M 262 106 C 296 112 334 118 372 116" fill="none" stroke="#c3d2e0" stroke-width="0.6"/>
+  <path d="M 272 86 C 306 92 346 100 386 98" fill="none" stroke="#c3d2e0" stroke-width="0.6"/>
+  <path d="M 284 66 C 318 72 358 82 400 80" fill="none" stroke="#c3d2e0" stroke-width="0.6"/>
+  <path d="M 322 98 C 342 100 360 102 378 101" fill="none" stroke="#35618f" stroke-width="1.8"/>
+  <path d="M 322 98 C 328 108 332 116 336 124" fill="none" stroke="#2f6b5f" stroke-width="1.8"/>
+  <circle cx="322" cy="98" r="2.2" fill="#a03b2e"/>
+  <text x="360" y="150" font-size="6" text-anchor="middle" fill="#6a6a68">曲がっても直交は保たれる</text>
+
+  <line x1="190" y1="96" x2="246" y2="96" stroke="#8a6b2c" stroke-width="1.3" marker-end="url(#c89)"/>
+  <text x="218" y="88" font-size="5.8" text-anchor="middle" fill="#8a6b2c">正則写像</text>
+
+  <defs>
+    <marker id="c89" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 z" fill="#8a6b2c"/></marker>
+  </defs>
+
+  <rect x="14" y="164" width="216" height="118" rx="4" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="24" y="179" font-size="7.6" font-weight="700" fill="#1e4a41">同値な三つの言い方</text>
+  <text x="24" y="196" font-size="6.6" fill="#1e4a41">どの方向から近づいても同じ極限</text>
+  <text x="24" y="208" font-size="6.6" fill="#1e4a41">コーシー–リーマンの方程式をみたす</text>
+  <text x="24" y="220" font-size="6.6" fill="#1e4a41">共役変数に依存しない</text>
+  <text x="24" y="237" font-size="6.4" fill="#5a4520">幾何では「向きを保つ等角写像」</text>
+  <text x="24" y="249" font-size="6.4" fill="#5a4520">行列では「実数倍の回転行列」</text>
+  <text x="24" y="266" font-size="6.6" fill="#8c2f1e">全微分可能性は外せない</text>
+  <text x="24" y="278" font-size="6.2" fill="#6a6a68">偏導関数だけ揃っても足りない反例がある</text>
+
+  <rect x="240" y="164" width="216" height="118" rx="4" fill="#f4f1ea" stroke="#8a6b2c"/>
+  <text x="250" y="179" font-size="7.6" font-weight="700" fill="#5a4520">実解析との落差</text>
+  <text x="250" y="196" font-size="6.6" fill="#5a4520">実　一回微分できても二回は不明</text>
+  <text x="250" y="208" font-size="6.6" fill="#8c2f1e">複素　一回できれば無限回できる</text>
+  <text x="250" y="225" font-size="6.4" fill="#1e4a41">理由は第90章の積分公式</text>
+  <text x="250" y="237" font-size="6.4" fill="#1e4a41">値が境界の積分で決まってしまう</text>
+  <text x="250" y="254" font-size="6.4" fill="#6b2a48">代償として、多価性が現れる</text>
+  <text x="250" y="266" font-size="6.4" fill="#6b2a48">対数・冪・逆三角は一価に定まらない</text>
+  <text x="250" y="278" font-size="6.2" fill="#6a6a68">正しい舞台はリーマン面である</text>
+</svg>
+<figcaption data-ch="89">正則写像は局所的に回転と拡大の合成であり、したがって角を保つ。コーシー–リーマンの方程式は、ヤコビ行列が複素数の掛け算であることの成分表示にすぎない。</figcaption>
+</figure>
+
+<div class="star2">
+<h4>★★ 学部後半——ヴィルティンガー計算と、擬等角写像</h4>
+
+<p><strong>ヴィルティンガー計算。</strong><m>\partial=\partial/\partial z</m>、<m>\bar\partial=\partial/\partial\bar z</m> を独立な微分作用素として扱うと、計算が驚くほど簡単になる。</p>
+<M>\partial z=1,\quad \partial\bar z=0,\quad \bar\partial z=0,\quad \bar\partial\bar z=1, \qquad \Delta = 4\,\partial\bar\partial</M>
+<p><em>ラプラシアンが二つの一階作用素の積に分解する</em>——これが「調和関数が正則関数の実部である」ことの計算上の理由である。<span class="yogo-hl">正則性は <m>\bar\partial f=0</m> という一階の方程式で、調和性は <m>\partial\bar\partial u=0</m> という二階の方程式。前者のほうが強い。</span></p>
+
+<p><strong>不斉方程式。</strong><m>\bar\partial f=g</m>（<m>g</m> が与えられた関数）は常に解ける：</p>
+<M>f(z) = \frac{1}{\pi}\int_{\mathbb{C}}\frac{g(w)}{z-w}\,dA(w)</M>
+<p>（<m>g\in C_c^\infty</m> のとき）。<em>これは第87章の基本解の言葉では <m>\bar\partial\frac{1}{\pi z}=\delta</m> ということである。</em><span class="yogo-hl">一階の偏微分方程式が常に解けるという事実が、多変数複素解析（オカ–カルタン理論）と層コホモロジーの出発点になる。</span></p>
+
+<p><strong>擬等角写像。</strong>正則性 <m>\bar\partial f=0</m> を緩めて</p>
+<M>\bar\partial f = \mu\,\partial f, \qquad \|\mu\|_\infty = k < 1</M>
+<p>（<strong>ベルトラミ方程式</strong>）をみたす写像を <m>K</m> 擬等角写像という（<m>K=(1+k)/(1-k)</m>）。<em>円を「離心率 <m>K</m> 以下の楕円」に写す写像である。</em>可測リーマン写像定理（アールフォルス–ベルス）：任意の可測な <m>\mu</m>（<m>\|\mu\|_\infty < 1</m>）に対し解が存在し、正規化すれば一意。</p>
+<p><em>この定理が、タイヒミュラー理論（リーマン面のモジュライ空間）と、複素力学系（サリヴァンの非遊走領域定理）の基礎である。</em><span class="yogo-hl">正則性を「ほんの少し」緩めると、剛性が柔らかさに変わり、変形の空間が現れる。</span></p>
+
+<p><strong>仮定を外すと。</strong><m>\Omega</m> の連結性を外しても局所的な理論は変わらない。<em>単連結性を外すと共役調和関数の一価性が失われる</em>（周期が現れる）。<m>f</m> の値域を <m>\mathbb{C}</m> から <m>\mathbb{C}^n</m> にすると多変数の理論になり、<span class="yogo-hl">ハルトークスの現象——球殻上の正則関数が自動的に内部へ延びる——という一変数には存在しない剛性が現れる。</span></p>
+</div>
+
+<div class="star3">
+<h4>★★★ 大学院——正則性の剛性はどこから来るのか</h4>
+
+<p><strong>楕円型作用素としての <m>\bar\partial</m>。</strong><m>\bar\partial</m> は一階の楕円型作用素で、その最高次部分 <m>\frac12(\xi_1+i\xi_2)</m> は <m>\xi\ne0</m> で零にならない。<em>第87章★★の楕円型正則性により、<m>\bar\partial f=0</m> の解は自動的に <m>C^\infty</m> になる。</em><span class="yogo-hl">「一回微分できれば無限回」の本当の理由は、正則性が楕円型方程式の解であることである。</span></p>
+
+<p>ところが楕円型正則性は <m>C^\infty</m> しか与えず、<em>解析性（冪級数展開）までは与えない</em>。解析性が出るのは <m>\bar\partial</m> が定数係数かつ一階だからで、その場合には基本解 <m>1/\pi z</m> が明示的に書けてコーシーの積分公式に至る。<em>楕円型でも <m>\Delta^2</m> のような高階作用素では、解は解析的だが表現公式は複雑になる。</em></p>
+
+<p><strong>多変数の剛性。</strong><m>n\ge2</m> では正則関数の性質が一変数と質的に違う。</p>
+<p>（i）<em>ハルトークスの延長定理</em>：<m>1 < |z| < 2</m> 型の領域（球殻）上の正則関数は、<m>|z| < 2</m> 全体に延びる。<span class="yogo-hl">したがって多変数では「孤立特異点」が存在しない。</span>一変数の <m>1/z</m> に対応するものがない。</p>
+<p>（ii）<em>リーマンの写像定理が成り立たない</em>：<m>\mathbb{C}^2</m> の球と双円板は正則同値でない（ポアンカレ）。<em>単連結性だけでは分類できず、無限次元のモジュライが現れる。</em></p>
+<p>（iii）<em>擬凸性が本質的</em>：オカ–カルタンの定理により、<m>\bar\partial</m> 方程式が解ける領域（<em>シュタイン多様体</em>）は擬凸領域とちょうど一致する（レヴィの問題、岡潔とグラウエルトが解決）。</p>
+
+<p><strong>コホモロジーとしての読み替え。</strong><m>\bar\partial</m> 作用素の層コホモロジー <m>H^q(X,\mathcal{O})</m> が、正則関数の延長・存在の障害を測る。<em>小平の消滅定理、セールの双対性、ホッジ理論——複素幾何の全体が、この一階の方程式を層の言葉で組織したものである。</em><span class="yogo-hl">本章で「<m>\bar z</m> に依存しない」と書いた一行の条件が、代数幾何と微分幾何の共通の土台になっている。</span></p>
+
+<p><strong>未解決に近い問い。</strong><m>\mathbb{C}^n</m> における<em>ヤコビ予想</em>（多項式写像のヤコビ行列式が非零定数なら逆も多項式か）は、<m>n\ge2</m> で未解決である。<em>また、複素力学系におけるファトゥ予想（多項式の族のなかで双曲的なものが稠密か）は、擬等角変形の理論を使っても一次元でさえ未解決のままである。</em></p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li><m>\bar z</m> がどこでも複素微分可能でないことを確かめよ。</li>
+<li><m>|z|^2</m> が原点でのみ複素微分可能であることを確かめよ。</li>
+<li><m>e^z</m> がコーシー–リーマンの方程式をみたすことを確かめよ。</li>
+<li><m>i^i</m> の値をすべて求めよ。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li><ref t="thm-cauchy-riemann"/>の（1）と（2）の同値性を示せ。<span class="haiten">（30点）</span></li>
+<li>コーシー–リーマンの方程式が <m>\partial f/\partial\bar z=0</m> と同値であることを示せ。<span class="haiten">（25点）</span></li>
+<li><ref t="thm-tokaku"/>の逆向き（等角なら複素微分可能）を示せ。<span class="haiten">（35点）</span></li>
+<li>正則関数の実部が調和であることを示せ。<span class="haiten">（25点）</span></li>
+<li>単連結領域上の調和関数に共役調和関数が存在することを示せ。<span class="haiten">（40点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li><m>e^{-z^{-4}}</m> の例で、偏導関数が揃ってもコーシー–リーマンだけでは足りないことを確かめよ。<span class="haiten">（45点）</span></li>
+<li><m>\Delta=4\partial\bar\partial</m> を確かめ、調和性と正則性の関係を説明せよ。<span class="haiten">（35点）</span></li>
+<li><m>\log|z|</m> に <m>\mathbb{C}\setminus\{0\}</m> 上で一価な共役調和関数が存在しないことを示せ。<span class="haiten">（40点）</span></li>
+<li>正則写像のヤコビ行列式が <m>|f'|^2</m> であることを示し、面積の変化率として解釈せよ。<span class="haiten">（40点）</span></li>
+</ol>
+</div>
+</div>
+<nav class="chnav">
+<a class="prev" href="ch88.html">← 第88章　超関数のFourier変換とSobolev空間</a>
+<a class="next" href="ch90.html">第90章　Cauchyの積分定理と積分公式 →</a>
+</nav>
+</article>
+</main>
+<footer class="site">
+  <p>位相・解析大全　学部から大学院まで、三層で読む位相空間論と解析学</p>
+  <p class="small">本文・図版とも本書のために作成したものです。数式は MathJax でベクタ化して組んでいます。</p>
+</footer>
+</body>
+</html>

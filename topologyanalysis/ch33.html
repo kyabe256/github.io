@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第33章 完備距離化可能性とČech完備性｜位相・解析大全</title>
+<meta name="description" content="位相・解析大全　第33章　完備距離化可能性とČech完備性">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;600&display=swap">
+<link rel="stylesheet" href="web.css">
+</head>
+<body>
+<header class="site">
+  <a class="site-title" href="index.html">位相・解析大全</a>
+  <nav class="site-nav">
+    <a href="index.html">目次</a>
+    <a href="isou-kaiseki-taizen.pdf">PDF版</a>
+  </nav>
+</header>
+<main>
+<article class="chapter">
+<p class="part-label">第IV部　連結性・距離空間・距離化</p>
+<h1><span class="ch-num">第33章</span>完備距離化可能性とČech完備性</h1>
+<nav class="chnav">
+<a class="prev" href="ch32.html">← 第32章　Nagata–SmirnovとBingの距離化定理</a>
+<a class="next" href="ch34.html">第34章　距離空間は何が特別なのか →</a>
+</nav>
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>「完備な距離が入るか」を、位相の言葉で言い当てられるか。</li>
+<li>コンパクト化のなかで、もとの空間はどんな位置を占めるのか。</li>
+<li>ベール性は完備性から来るのか、もっと弱いものから来るのか。</li>
+</ul>
+</div>
+
+<h3 id="s33-1">完備距離化可能性を位相で述べる</h3>
+
+<p>第29章★★★で述べたとおり、完備性は位相的でないが、<em>完備距離化可能性は位相的である。</em>それを位相の言葉だけで特徴づけたい。</p>
+
+<div class="teiri" id="thm-alexandrov">
+<h4>アレクサンドロフの定理</h4>
+<p class="no-indent">距離空間 <m>X</m> について、次は同値である。</p>
+<p class="no-indent">（1）<m>X</m> は完備距離化可能。<br>
+（2）<m>X</m> は、ある完備距離空間の <m>G_\delta</m> 部分空間と同相。<br>
+（3）<m>X</m> は、自分の完備化 <m>\hat{X}</m> のなかで <m>G_\delta</m> である。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><strong>（1）から（3）。</strong><m>d</m> を完備な距離とし、<m>\hat{X}</m> を別の距離 <m>\rho</m> による完備化とする。</p>
+<M>U_n = \{\, y \in \hat{X} \mid \exists\, \rho\text{-近傍 } V \ni y,\ \mathrm{diam}_d(V \cap X) < 1/n \,\}</M>
+<p class="no-indent">と置く。<em>各 <m>U_n</m> は開であり <m>X \subseteq U_n</m> である</em>（<m>x \in X</m> のまわりで <m>d</m>-径が小さい近傍が取れる）。</p>
+<p>逆に <m>y \in \bigcap_n U_n</m> とすると、<m>y</m> に近づく <m>X</m> の点列が <m>d</m>-コーシーになる。<span class="yogo-hl"><m>d</m> が完備だから極限が <m>X</m> にあり、<m>y \in X</m>。</span>よって <m>X = \bigcap_n U_n</m>。</p>
+<p><strong>（2）から（1）。</strong><m>Y</m> を完備距離空間、<m>X = \bigcap_n U_n</m>（<m>U_n</m> 開）とする。新しい距離を</p>
+<M>d(x,y) = \rho(x,y) + \sum_{n=1}^{\infty} \min\Big( 2^{-n},\ \Big| \tfrac{1}{\rho(x, Y\setminus U_n)} - \tfrac{1}{\rho(y, Y\setminus U_n)} \Big| \Big)</M>
+<p class="no-indent">と定める。<em><m>d</m>-コーシー列は <m>\rho</m>-コーシーであり、しかも各 <m>U_n</m> の境界に近づけない</em>——近づくと第二項が発散するからである。<span class="yogo-hl">よって極限が <m>X</m> のなかに留まる。</span></p>
+<p>（3）から（2）は自明である。</p>
+</div>
+
+<div class="rei" id="rei-kanbi-kyorika">
+<h4>完備距離化できる空間、できない空間</h4>
+<p class="no-indent"><strong>できる。</strong><m>\mathbb{R}</m>、<m>(0,1)</m>（<m>\mathbb{R}</m> と同相）、無理数全体（<m>G_\delta</m>）、コンパクト距離空間、バナッハ空間、<m>\mathbb{R}</m> の開集合と閉集合。</p>
+<p><strong>できない。</strong><m>\mathbb{Q}</m>。<em><m>\mathbb{R}</m> のなかで <m>G_\delta</m> でないからである</em>（第27章）。</p>
+<p>同じ理由で、<m>\mathbb{Q}</m> と同相な空間（可算で孤立点をもたない距離空間はすべて <m>\mathbb{Q}</m> と同相——シェルピンスキの定理）はどれも完備距離化できない。</p>
+</div>
+
+<h3 id="s33-2">チェック完備性</h3>
+
+<p><ref t="thm-alexandrov"/> は距離空間の話だった。<em>一般のチコノフ空間に拡張する。</em></p>
+
+<div class="teigi" id="def-cech-kanbi">
+<h4>チェック完備空間</h4>
+<p class="no-indent">チコノフ空間 <m>X</m> が<strong>チェック完備</strong>であるとは、<m>X</m> がストーン–チェックのコンパクト化 <m>\beta X</m> のなかで <m>G_\delta</m> であることをいう。</p>
+</div>
+
+<div class="teiri" data-kind="命題" id="prop-cech-doti">
+<h4></h4>
+<p class="no-indent">（1）この条件は <m>\beta X</m> に依らない。どのコンパクト化について <m>G_\delta</m> でも同じことである。<br>
+（2）コンパクトハウスドルフ空間と、局所コンパクトハウスドルフ空間はチェック完備である。<br>
+（3）距離化可能な空間について、チェック完備であることと完備距離化可能であることは同値である。<br>
+（4）チェック完備な空間はベール空間である。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">（2）コンパクトなら <m>\beta X = X</m> で、<m>X</m> は自分のなかで開（したがって <m>G_\delta</m>）。局所コンパクトなら <m>X</m> は <m>\beta X</m> で開である——一点コンパクト化への潰す写像を考えればよい。</p>
+<p>（3）は <ref t="thm-alexandrov"/> と、距離化可能空間の完備化がコンパクト化に埋め込めることによる。</p>
+<p>（4）が重要である。<em>証明は第27章のベールの定理の構成を、<m>\beta X</m> のコンパクト性を使って行う。</em><m>X = \bigcap_n V_n</m>（<m>V_n</m> は <m>\beta X</m> で開）とし、稠密開集合の列に沿って <m>\beta X</m> のなかで入れ子のコンパクト集合を作る。<span class="yogo-hl">各段で <m>V_n</m> のなかに収まるようにすれば、交叉が <m>X</m> のなかに落ちる。</span></p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">（4）が第27章のベールの定理を統一する。<em>完備距離空間と局所コンパクトハウスドルフ空間は、どちらもチェック完備である。</em><span class="yogo-hl">二つの別々に見えた定理が、一つの条件の帰結だった。</span></p>
+</div>
+
+<figure id="fig33-1">
+<svg viewBox="0 0 470 264" width="470" height="264" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">コンパクト化のなかで Gδ であること</text>
+
+  <rect x="14" y="26" width="442" height="110" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+
+  <ellipse cx="150" cy="82" rx="110" ry="44" fill="#e8f0f7" stroke="#35618f"/>
+  <text x="150" y="34" font-size="6.8" text-anchor="middle" fill="#1f3b5c">コンパクト化 βX</text>
+
+  <ellipse cx="140" cy="82" rx="86" ry="34" fill="none" stroke="#2f6b5f" stroke-dasharray="3,2"/>
+  <ellipse cx="134" cy="82" rx="68" ry="27" fill="none" stroke="#2f6b5f" stroke-dasharray="3,2"/>
+  <ellipse cx="130" cy="82" rx="54" ry="22" fill="#cfe0ee" stroke="#2f6b5f"/>
+  <text x="130" y="85" font-size="6.8" text-anchor="middle" fill="#1e4a41">X</text>
+
+  <text x="270" y="46" font-size="7" font-weight="700" fill="#1f3b5c">チェック完備</text>
+  <text x="270" y="62" font-size="6.8" fill="#1f3b5c">X が可算個の開集合の交叉</text>
+  <text x="270" y="76" font-size="6.8" fill="#6a6a68">＝ 外側から可算段で近づける</text>
+  <text x="270" y="94" font-size="6.8" fill="#2f6b5f">コンパクト　局所コンパクト　○</text>
+  <text x="270" y="108" font-size="6.8" fill="#2f6b5f">完備距離化可能　○</text>
+  <text x="270" y="122" font-size="6.8" fill="#8c2f1e">Q　×（R のなかで Gδ でない）</text>
+
+  <rect x="14" y="148" width="216" height="104" rx="4" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="24" y="163" font-size="7.6" font-weight="700" fill="#1e4a41">ベールの定理が一つにまとまる</text>
+  <text x="24" y="180" font-size="6.8" fill="#1e4a41">完備距離空間　→ チェック完備</text>
+  <text x="24" y="194" font-size="6.8" fill="#1e4a41">局所コンパクト　→ チェック完備</text>
+  <text x="24" y="211" font-size="6.8" font-weight="700" fill="#1e4a41">チェック完備 ⇒ ベール空間</text>
+  <text x="24" y="228" font-size="6.6" fill="#6a6a68">第27章の二つの定理が、一つの条件の</text>
+  <text x="24" y="239" font-size="6.6" fill="#6a6a68">帰結だった。入れ子の列を作る議論が</text>
+  <text x="24" y="249" font-size="6.6" fill="#6a6a68">βX のコンパクト性で統一される</text>
+
+  <rect x="240" y="148" width="216" height="104" rx="4" fill="#f4f1ea" stroke="#8a6b2c"/>
+  <text x="250" y="163" font-size="7.6" font-weight="700" fill="#5a4520">階層</text>
+  <text x="250" y="180" font-size="6.8" fill="#5a4520">コンパクト ⇒ 局所コンパクト</text>
+  <text x="250" y="193" font-size="6.8" fill="#5a4520">　　　　　 ⇒ チェック完備</text>
+  <text x="250" y="206" font-size="6.8" fill="#5a4520">　　　　　 ⇒ ベール</text>
+  <text x="250" y="223" font-size="6.6" fill="#8c2f1e">逆はすべて偽</text>
+  <text x="250" y="235" font-size="6.6" fill="#6a6a68">R はチェック完備だがコンパクトでない</text>
+  <text x="250" y="246" font-size="6.6" fill="#6a6a68">ベールだがチェック完備でない空間もある</text>
+</svg>
+<figcaption data-ch="33">コンパクト化のなかで可算個の開集合の交叉になっていることが、チェック完備性である。完備距離空間と局所コンパクト空間が、この一つの条件のもとにまとまる。</figcaption>
+</figure>
+
+<h3 id="s33-3">保存</h3>
+
+<div class="teiri" id="thm-cech-hozon">
+<h4></h4>
+<p class="no-indent">（1）チェック完備性は <m>G_\delta</m> 部分空間に遺伝する。とくに開部分空間と閉部分空間に遺伝する。<br>
+（2）可算個のチェック完備空間の積はチェック完備である。<br>
+（3）一般の部分空間には遺伝しない。非可算積では保たれない。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">（1）<m>Y</m> が <m>X</m> で <m>G_\delta</m>、<m>X</m> が <m>\beta X</m> で <m>G_\delta</m> なら、<m>Y</m> は <m>\beta X</m> で <m>G_\delta</m> である（<m>Y = X \cap \bigcap_n W_n</m> と書いて交叉をとる）。<em><m>\beta Y</m> が <m>\beta X</m> の閉部分集合として得られることを使う。</em></p>
+<p>（2）<m>X_k = \bigcap_n V_{k,n}</m> とすると <m>\prod_k X_k = \bigcap_{k,n} p_k^{-1}(V_{k,n})</m> であり、添字の対 <m>(k,n)</m> は可算である。<span class="yogo-hl">可算個の積でしか成り立たないのは、この数え上げが可算でなければならないからである。</span></p>
+<p>（3）<m>\mathbb{Q}</m> は <m>\mathbb{R}</m> の部分空間でチェック完備でない。</p>
+</div>
+
+<div class="lv2">
+<h4>ポーランド空間</h4>
+<p>可分かつ完備距離化可能な空間を<strong>ポーランド空間</strong>という。<em>解析学で出会う空間のほとんどがこれである。</em></p>
+<p><strong>例。</strong><m>\mathbb{R}^n</m>、コンパクト距離空間、可分バナッハ空間、<m>[0,1]^{\mathbb{N}}</m>、<m>\mathbb{N}^{\mathbb{N}}</m>（無理数全体と同相）、<m>\{0,1\}^{\mathbb{N}}</m>（カントール集合）。</p>
+<p><strong>性質。</strong>ポーランド空間は次を満たす。</p>
+<p><em>ベール空間である</em>（<ref t="prop-cech-doti"/>（4））。<em><m>G_\delta</m> 部分空間はポーランド</em>。<em>可算積はポーランド</em>。<em>第二可算</em>（可分＋距離化可能、第7章）。</p>
+<p><strong>普遍性。</strong>どのポーランド空間も、ヒルベルト立方体 <m>[0,1]^{\mathbb{N}}</m> の <m>G_\delta</m> 部分空間と同相である。<span class="yogo-hl">第31章の埋め込みと <ref t="thm-alexandrov"/> を合わせればよい。</span></p>
+<p>さらに、空でないポーランド空間はすべて <m>\mathbb{N}^{\mathbb{N}}</m> の連続像である。<em>ベール空間 <m>\mathbb{N}^{\mathbb{N}}</m> がポーランド空間の「もと」になる。</em></p>
+<p><strong>なぜこの枠組みが有用か。</strong>三つの理由がある。</p>
+<p>第一に、<em>ベール性が保証される</em>。第IX部の関数解析の基本定理が使える。</p>
+<p>第二に、<em>ボレル階層が整った形になる</em>。第52章で導入するボレル集合の理論は、ポーランド空間でもっとも完全な形をとる。</p>
+<p>第三に、<em>測度論との相性がよい</em>。ポーランド空間上の有限ボレル測度は正則（内部からコンパクト集合で、外部から開集合で近似できる）になり、第59章のリースの表現定理が使いやすい形で成り立つ。</p>
+<p><strong>標準ボレル空間。</strong>ポーランド空間のボレル構造だけを取り出したものを標準ボレル空間という。<span class="yogo-hl">驚くべきことに、非可算な標準ボレル空間はすべて同型である。</span></p>
+<p>すなわち、<m>\mathbb{R}</m>、<m>[0,1]</m>、<m>\mathbb{N}^{\mathbb{N}}</m>、<m>\{0,1\}^{\mathbb{N}}</m> は、ボレル構造としては区別がつかない。<em>位相としてはまったく違う（コンパクトかどうか、連結かどうか）のに、可測構造では同じである。</em></p>
+<p>第54章で可測関数を扱うとき、この事実が背景にある。<span class="yogo-hl">測度論は位相の情報の多くを見ていない。</span></p>
+</div>
+
+<div class="lv3">
+<h4>ベール性はチェック完備性より真に弱い</h4>
+<p><ref t="prop-cech-doti"/>（4）の逆は成り立たない。<em>ベール空間だがチェック完備でない空間がある。</em>この落差に何があるのかを見る。</p>
+<p><strong>反例。</strong><m>\mathbb{R}</m> のなかで、ベルンシュタイン集合を取る。<span class="yogo-hl">どの非可算閉集合とも交わり、どの非可算閉集合も含まない集合</span>である。超限帰納法で構成できる（<m>\mathbb{R}</m> の閉集合は <m>2^{\aleph_0}</m> 個しかないことを使う）。</p>
+<p>ベルンシュタイン集合 <m>B</m> とその補集合はどちらもベール空間になるが、<em>どちらもチェック完備でない</em>——<m>G_\delta</m> 集合は非可算なら非可算閉集合を含むからである。</p>
+<p><strong>もっと自然な例。</strong>関数解析にも現れる。無限次元バナッハ空間の稠密な真部分空間は、ベール空間でないことが多い。<em>だが位相群のなかには、ベールだが完備化できないものがある。</em></p>
+<p><strong>ベール性を保証する条件の階層。</strong>チェック完備性とベール性のあいだに、いくつもの条件がある。</p>
+<p><em>擬完備</em>——減少する空でない開集合の列で、各段の閉包が次に含まれるものの交叉が空でない。</p>
+<p><em>チェック完備</em>——本章の条件。</p>
+<p><em>完備距離化可能</em>——距離化可能な場合のチェック完備。</p>
+<M>\text{完備距離化可能} \implies \text{チェック完備} \implies \text{擬完備} \implies \text{ベール}</M>
+<p>どの逆も成り立たない。<span class="yogo-hl">ベール性は結論であって、それ自体は構造を与えない。</span></p>
+<p><strong>ゲームによる特徴づけ。</strong>ベール性は無限ゲームで特徴づけられる。二人が交互に空でない開集合を選び、<m>U_1 \supseteq V_1 \supseteq U_2 \supseteq \cdots</m> と縮めていく。<em>交叉が空でなければ一方の勝ち、空なら他方の勝ち。</em></p>
+<p>バナッハ–マズール <span class="orig">Banach–Mazur</span> のゲームという。<span class="yogo-hl"><m>X</m> がベール空間であることと、一方のプレイヤーが勝つ戦略をもたないことが同値である。</span></p>
+<p>擬完備性は、もう一方のプレイヤーが<em>勝つ戦略をもつ</em>ことに対応する。<em>「負けない」と「勝てる」の差が、ベール性と擬完備性の差である。</em></p>
+<p>この種の特徴づけは決定性の公理とも関係する。第4章★★★で触れた独立性の話題が、ここにも接続する。<em>本書はこの方向に進まないが、ベール性が「構造」ではなく「結論」であることは押さえておく価値がある。</em></p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li><m>(0,1)</m> が完備距離化可能であることを、同相を使って示せ。</li>
+<li>無理数全体が <m>\mathbb{R}</m> の <m>G_\delta</m> であることを示せ。</li>
+<li>コンパクトハウスドルフ空間がチェック完備であることを示せ。</li>
+<li>ポーランド空間の例を五つ挙げよ。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li><ref t="thm-alexandrov"/> の（1）から（3）を、<m>U_n</m> が開であることを含めて示せ。<span class="haiten">（30点）</span></li>
+<li><ref t="thm-cech-hozon"/>（2）を示し、非可算積では成り立たない理由を述べよ。<span class="haiten">（25点）</span></li>
+<li><m>\mathbb{Q}</m> がチェック完備でないことを示せ。<span class="haiten">（20点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li><ref t="thm-alexandrov"/> の（2）から（1）で与えた距離が完備であることを示せ。<span class="haiten">（40点）</span></li>
+<li>ベルンシュタイン集合を構成し、それがベール空間だがチェック完備でないことを示せ。<span class="haiten">（40点）</span></li>
+</ol>
+</div>
+</div>
+<nav class="chnav">
+<a class="prev" href="ch32.html">← 第32章　Nagata–SmirnovとBingの距離化定理</a>
+<a class="next" href="ch34.html">第34章　距離空間は何が特別なのか →</a>
+</nav>
+</article>
+</main>
+<footer class="site">
+  <p>位相・解析大全　学部から大学院まで、三層で読む位相空間論と解析学</p>
+  <p class="small">本文・図版とも本書のために作成したものです。数式は MathJax でベクタ化して組んでいます。</p>
+</footer>
+</body>
+</html>

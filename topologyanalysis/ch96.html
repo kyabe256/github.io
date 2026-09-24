@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第96章 Stone–Weierstrassの定理｜位相・解析大全</title>
+<meta name="description" content="位相・解析大全　第96章　Stone–Weierstrassの定理">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;600&display=swap">
+<link rel="stylesheet" href="web.css">
+</head>
+<body>
+<header class="site">
+  <a class="site-title" href="index.html">位相・解析大全</a>
+  <nav class="site-nav">
+    <a href="index.html">目次</a>
+    <a href="isou-kaiseki-taizen.pdf">PDF版</a>
+  </nav>
+</header>
+<main>
+<article class="chapter">
+<p class="part-label">第XIII部　位相と解析の交差</p>
+<h1><span class="ch-num">第96章</span>Stone–Weierstrassの定理</h1>
+<nav class="chnav">
+<a class="prev" href="ch95.html">← 第95章　関数空間の位相とAscoli–Arzelàの定理</a>
+<a class="next" href="ch97.html">第97章　何が何を支えているか——本書の地図 →</a>
+</nav>
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>なぜ多項式で連続関数を近似できるのか。</li>
+<li>近似の理由は、多項式のどんな性質にあるのか。</li>
+<li>複素の場合に条件が一つ増えるのは、なぜか。</li>
+</ul>
+</div>
+
+<h3 id="s96-1">近似の理由を突き止める</h3>
+
+<p>本書では稠密性を何度も使ってきた。<em>三角多項式が <m>C(\mathbb{T})</m> で稠密（第81章）、多項式が <m>C(\sigma(T))</m> で稠密（第77章の関数計算）、連続関数が <m>L^p</m> で稠密（第62章）。</em></p>
+
+<p><span class="yogo-hl">本章は、これらの多くが一つの定理の系であることを示す。</span><em>鍵は「多項式である」ことではなく、「代数をなし、点を分離する」という二つの性質だけである。</em></p>
+
+<div class="teiri" id="thm-weierstrass">
+<h4>ワイエルシュトラスの近似定理</h4>
+<p class="no-indent"><m>f\in C([a,b],\mathbb{R})</m> と <m>\varepsilon>0</m> に対し、多項式 <m>p</m> があって <m>\sup_{[a,b]}|f-p| < \varepsilon</m>。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><strong>ベルンシュタインによる構成的な証明</strong>（<m>[a,b]=[0,1]</m> としてよい）。</p>
+<M>B_nf(x) = \sum_{k=0}^{n}f\Big(\frac kn\Big)\binom nk x^k(1-x)^{n-k}</M>
+<p class="no-indent">と置く（<strong>ベルンシュタイン多項式</strong>）。<em>確率論的に読むと、<m>B_nf(x)</m> は「成功確率 <m>x</m> の <m>n</m> 回の試行で成功率 <m>S_n/n</m> を観測したときの <m>f(S_n/n)</m> の期待値」である。</em></p>
+<p class="no-indent">大数の法則により <m>S_n/n\to x</m>（確率収束）。定量的には、チェビシェフの不等式（<ref t="prop-chebyshev"/>）から</p>
+<M>\mathbb{P}\Big(\Big|\frac{S_n}{n}-x\Big|\ge\delta\Big) \le \frac{x(1-x)}{n\delta^2} \le \frac{1}{4n\delta^2}</M>
+<p class="no-indent"><m>f</m> の一様連続性から <m>\delta</m> を「<m>|s-x| < \delta\Rightarrow|f(s)-f(x)| < \varepsilon/2</m>」ととると</p>
+<M>|B_nf(x)-f(x)| \le \mathbb{E}\big|f(S_n/n)-f(x)\big| \le \frac\varepsilon2 + 2\|f\|_\infty\cdot\frac{1}{4n\delta^2}</M>
+<p class="no-indent"><em>右辺は <m>x</m> に依らず、<m>n</m> を大きくすれば <m>\varepsilon</m> 未満になる。</em></p>
+<p><span class="yogo-hl">大数の法則という確率論の定理が、近似定理の証明になっている。</span><em>「確率変数を平均すると集中する」ことと「近似の精度が上がる」ことが、同じ現象である。</em></p>
+</div>
+
+<h3 id="s96-2">ストーン–ワイエルシュトラスの定理</h3>
+
+<div class="teiri" id="thm-stone-weierstrass">
+<h4>ストーン–ワイエルシュトラスの定理</h4>
+<p class="no-indent"><m>X</m> をコンパクトハウスドルフ空間とする。</p>
+<p class="no-indent"><strong>（実の場合）</strong><m>\mathcal{A}\subset C(X,\mathbb{R})</m> が</p>
+<p class="no-indent">（1）部分代数である（和・積・スカラー倍で閉じる）、<br>
+（2）定数関数を含む（あるいは「どの点でも消えない」）、<br>
+（3）<strong>点を分離する</strong>：<m>x\ne y</m> なら <m>f(x)\ne f(y)</m> なる <m>f\in\mathcal{A}</m> がある</p>
+<p class="no-indent">をみたすなら、<m>\mathcal{A}</m> は <m>C(X,\mathbb{R})</m> で一様稠密である。</p>
+<p class="no-indent"><strong>（複素の場合）</strong><m>\mathcal{A}\subset C(X,\mathbb{C})</m> については、（1）（2）（3）に加えて</p>
+<p class="no-indent">（4）<strong>複素共役で閉じる</strong>：<m>f\in\mathcal{A}\Rightarrow\bar f\in\mathcal{A}</m></p>
+<p class="no-indent">が必要である。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><strong>第一段：閉包は絶対値で閉じる。</strong><m>\overline{\mathcal{A}}</m>（一様閉包）も代数である。<m>f\in\overline{\mathcal{A}}</m>、<m>\|f\|_\infty\le M</m> とする。<em><m>|t|</m> を <m>[-M,M]</m> 上で多項式で一様近似し</em>（<ref t="thm-weierstrass"/>；定数項は（2）で吸収できる）、<m>t=f(x)</m> を代入すれば <m>|f|\in\overline{\mathcal{A}}</m>。</p>
+<p class="no-indent"><strong>第二段：束になる。</strong><m>\max(f,g)=\frac{f+g+|f-g|}{2}</m>、<m>\min(f,g)=\frac{f+g-|f-g|}{2}</m> なので、<em><m>\overline{\mathcal{A}}</m> は有限個の最大・最小で閉じる。</em></p>
+<p class="no-indent"><strong>第三段：二点で値を合わせる。</strong><m>x\ne y</m> と <m>\alpha,\beta\in\mathbb{R}</m> に対し、<m>h(x)=\alpha</m>、<m>h(y)=\beta</m> なる <m>h\in\mathcal{A}</m> がある。<em>分離する <m>g</m> をとり、<m>h=\alpha+(\beta-\alpha)\dfrac{g-g(x)}{g(y)-g(x)}</m> と置けばよい</em>（定数関数が使えるので <m>\mathcal{A}</m> に入る）。</p>
+<p class="no-indent"><strong>第四段：貼り合わせ。</strong><m>f\in C(X)</m>、<m>\varepsilon>0</m> とする。各対 <m>(x,y)</m> について <m>h_{xy}(x)=f(x)</m>、<m>h_{xy}(y)=f(y)</m> なる <m>h_{xy}</m> をとる。</p>
+<p class="no-indent"><m>x</m> を固定する。各 <m>y</m> について <m>U_y=\{z : h_{xy}(z) < f(z)+\varepsilon\}</m> は <m>y</m> を含む開集合。<em><m>X</m> のコンパクト性より有限個 <m>U_{y_1},\dots,U_{y_k}</m> で覆え</em>、<m>g_x=\min_j h_{xy_j}</m> と置くと</p>
+<M>g_x < f+\varepsilon \ \ (X \text{ 全体で}), \qquad g_x(x)=f(x)</M>
+<p class="no-indent">次に <m>V_x=\{z : g_x(z)>f(z)-\varepsilon\}</m> も <m>x</m> を含む開集合。再びコンパクト性で有限個で覆い、<m>g=\max_i g_{x_i}</m> と置くと</p>
+<M>f-\varepsilon < g < f+\varepsilon</M>
+<p class="no-indent"><em><m>g\in\overline{\mathcal{A}}</m> なので結論を得る。</em></p>
+<p class="no-indent"><strong>複素の場合。</strong>（4）があれば <m>\mathrm{Re}\,f=\frac{f+\bar f}{2}</m>、<m>\mathrm{Im}\,f=\frac{f-\bar f}{2i}</m> が <m>\mathcal{A}</m> に入り、実部の全体 <m>\mathcal{A}_{\mathbb{R}}</m> が実の場合の仮定をみたす。<em>実部と虚部を別々に近似すればよい。</em></p>
+<p><span class="yogo-hl">証明の実質は「絶対値が近似できる」という一点である。</span><em>それさえ言えれば、あとは束の構造とコンパクト性による貼り合わせで機械的に進む。</em></p>
+</div>
+
+<div class="chui">
+<h4>複素の場合に共役が要る理由</h4>
+<p class="no-indent"><m>X=\overline D</m>（閉単位円板）、<m>\mathcal{A}=\{</m>多項式<m>\}</m> とする。<em>これは代数であり、定数を含み、点を分離する。</em>しかし一様閉包は<strong>ディスク環</strong>（円板で正則、閉円板で連続な関数の全体）であって、<m>C(\overline D)</m> 全体ではない。</p>
+<p><span class="yogo-hl"><m>\bar z</m> は多項式で一様近似できない</span>——できるとすればその極限は正則になり（ワイエルシュトラスの収束定理、<ref t="thm-kekka-gun"/>（7））、<m>\bar z</m> が正則でないことに反する（<ref t="rei-seisoku-rei"/>（1））。</p>
+<p><em>第89章の剛性が、ここで近似の障害として現れている。</em>複素の場合の条件（4）は、この障害を取り除くためにある。<em>共役を許せば <m>|z|^2=z\bar z</m> が使え、実部・虚部が分離できるようになる。</em></p>
+</div>
+
+<div class="rei" id="rei-sw-ouyou">
+<h4>系として出てくるもの</h4>
+<p class="no-indent">（1）<strong>多項式の稠密性。</strong><m>X=[a,b]</m>、<m>\mathcal{A}=\{</m>多項式<m>\}</m>。<em>座標関数 <m>x</m> が点を分離する。</em></p>
+<p>（2）<strong>三角多項式の稠密性。</strong><m>X=\mathbb{T}</m>、<m>\mathcal{A}=\{\sum_{|n|\le N}c_ne^{in\theta}\}</m>。<em>積・和で閉じ、共役で閉じ（<m>\overline{e^{in\theta}}=e^{-in\theta}</m>）、<m>e^{i\theta}</m> が点を分離する。</em><span class="yogo-hl">第81章ではフェイェール核で示したが、こちらは核を使わない純位相的な証明である。</span></p>
+<p>（3）<strong>多変数の多項式。</strong><m>X\subset\mathbb{R}^n</m> コンパクト、<m>\mathcal{A}=\mathbb{R}[x_1,\dots,x_n]</m>。<em>座標関数の組が点を分離する。</em></p>
+<p>（4）<strong>積空間の関数。</strong><m>C(X\times Y)</m> において、<m>\sum_i f_i(x)g_i(y)</m> の形の関数（<em>有限階テンソル</em>）が稠密。<em>これが第56章のフビニの定理を関数解析的に使うときの基礎になる。</em></p>
+<p>（5）<strong>関数計算。</strong><m>X=\sigma(T)\subset\mathbb{R}</m>、<m>\mathcal{A}=\{</m>多項式<m>\}</m>。<em>第77章の連続関数計算の延長が、これで正当化される。</em></p>
+<p>（6）<strong>ゲルファント–ナイマルク。</strong><m>X=\Delta(A)</m>、<m>\mathcal{A}=\Gamma(A)</m>。<em>点を分離するのは指標の定義から、共役で閉じるのはシースター環の対合から。</em><span class="yogo-hl">第79章の構造定理の全射性は、この定理そのものだった。</span></p>
+<p>（7）<strong>リースの表現定理の一意性。</strong>測度が連続関数上の積分を決めることから、稠密な部分環での一致で十分になる。</p>
+</div>
+
+<div class="hanrei" id="cex-sw">
+<h4>条件を外すと</h4>
+<p class="no-indent">（1）<strong>点を分離しない。</strong><m>X=[-1,1]</m>、<m>\mathcal{A}=\{</m>偶多項式<m>\}</m>。<em><m>x</m> と <m>-x</m> を分離できず、閉包は偶関数全体。</em><m>f(x)=x</m> は近似できない。</p>
+<p class="no-indent">（2）<strong>どこかで消える。</strong><m>\mathcal{A}=\{p : p(0)=0\}</m>（<m>X=[0,1]</m>）。<em>閉包は <m>\{f : f(0)=0\}</m>。</em>条件（2）が必要な理由である。</p>
+<p class="no-indent">（3）<strong>代数でない。</strong><m>X=[0,1]</m>、<m>\mathcal{A}=\{</m>一次関数<m>\}</m>。点を分離し定数を含むが、積で閉じない。<em>閉包は自分自身。</em></p>
+<p class="no-indent">（4）<strong>複素で共役なし。</strong>上述のディスク環。</p>
+<p class="no-indent">（5）<strong><m>X</m> がコンパクトでない。</strong><m>X=\mathbb{R}</m>、<m>C_b(\mathbb{R})</m> で多項式の閉包を考えても、有界でない関数は入らない。<em>正しい定式化は <m>C_0(X)</m>（無限遠で消える連続関数）についての形で、そこでは条件（2）を「どの点でも消えない」に替える。</em></p>
+<p class="no-indent">（6）<strong>一様収束でなければ別の話。</strong><m>L^2</m> での稠密性は、一様稠密性から従う（<m>X</m> が有限測度なら）が、逆は言えない。<span class="yogo-hl">どの位相で稠密かを混同しないこと。</span></p>
+</div>
+
+<div class="chui">
+<h4>二つの証明の対比</h4>
+<p class="no-indent">三角多項式の稠密性には、本書で二つの証明が与えられた。</p>
+<p class="no-indent"><strong>第81章（フェイェール核）。</strong>具体的な核を構成し、近似単位元の性質を確かめる。<em>構成的で、収束の速さも読める。フーリエ級数に固有の議論である。</em></p>
+<p class="no-indent"><strong>本章（ストーン–ワイエルシュトラス）。</strong>代数的・位相的な性質だけを使う。<em>構成的でないが、適用範囲がはるかに広い。</em></p>
+<p><span class="yogo-hl">「なぜ近似できるのか」への答えが違う。</span><em>前者は「核が質量を集中させるから」、後者は「代数が点を分離するから」。</em>後者の答えのほうが一般的だが、前者のほうが定量的である——<em>数学の定理には、しばしばこの二種類の理解が並立する。</em></p>
+</div>
+
+<figure id="fig96-1">
+<svg viewBox="0 0 470 284" width="470" height="284" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">近似できる理由は、代数の構造だけにある</text>
+
+  <rect x="14" y="26" width="442" height="128" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+
+  <text x="118" y="42" font-size="6.8" text-anchor="middle" font-weight="700" fill="#1e4a41">二点で値を合わせる</text>
+  <line x1="44" y1="120" x2="196" y2="120" stroke="#8a8a88" stroke-width="0.7"/>
+  <path d="M 50 104 C 80 62 110 116 140 78 C 160 96 178 70 192 86" fill="none" stroke="#35618f" stroke-width="1.4"/>
+  <circle cx="72" cy="88" r="2.8" fill="#a03b2e"/>
+  <circle cx="160" cy="96" r="2.8" fill="#a03b2e"/>
+  <text x="72" y="80" font-size="5.8" text-anchor="middle" fill="#8c2f1e">x</text>
+  <text x="160" y="110" font-size="5.8" text-anchor="middle" fill="#8c2f1e">y</text>
+  <text x="118" y="140" font-size="6" text-anchor="middle" fill="#6a6a68">分離する関数が一つあれば作れる</text>
+
+  <text x="352" y="42" font-size="6.8" text-anchor="middle" font-weight="700" fill="#1e4a41">最大と最小で貼り合わせる</text>
+  <line x1="278" y1="120" x2="430" y2="120" stroke="#8a8a88" stroke-width="0.7"/>
+  <path d="M 284 96 C 310 96 336 74 362 74 C 388 74 410 92 426 92" fill="none" stroke="#c3d2e0" stroke-width="3.2"/>
+  <path d="M 284 100 C 306 88 330 82 352 84 C 376 86 404 96 426 96" fill="none" stroke="#2f6b5f" stroke-width="1.2"/>
+  <path d="M 284 92 C 308 104 332 70 356 72 C 380 74 406 88 426 88" fill="none" stroke="#4d8878" stroke-width="1.2"/>
+  <path d="M 284 104 C 312 78 336 90 358 78 C 382 82 402 94 426 84" fill="none" stroke="#7aa89c" stroke-width="1.2"/>
+  <text x="352" y="140" font-size="6" text-anchor="middle" fill="#6a6a68">有限個で覆えば、帯のなかに収まる</text>
+
+  <rect x="14" y="164" width="216" height="112" rx="4" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="24" y="179" font-size="7.6" font-weight="700" fill="#1e4a41">証明の実質はただ一点</text>
+  <text x="24" y="196" font-size="6.8" fill="#1e4a41">絶対値が近似できること</text>
+  <text x="24" y="213" font-size="6.4" fill="#5a4520">そこから最大・最小が作れ</text>
+  <text x="24" y="225" font-size="6.4" fill="#5a4520">二点で値を合わせる関数が作れ</text>
+  <text x="24" y="237" font-size="6.4" fill="#5a4520">コンパクト性で有限個に落として貼る</text>
+  <text x="24" y="254" font-size="6.4" fill="#8c2f1e">残りは機械的に進む</text>
+  <text x="24" y="270" font-size="6.2" fill="#6b2a48">近似の理由は「多項式だから」ではない</text>
+
+  <rect x="240" y="164" width="216" height="112" rx="4" fill="#f4f1ea" stroke="#8a6b2c"/>
+  <text x="250" y="179" font-size="7.6" font-weight="700" fill="#5a4520">一つの定理の系として出るもの</text>
+  <text x="250" y="196" font-size="6.5" fill="#5a4520">多項式の稠密性　　三角多項式の稠密性</text>
+  <text x="250" y="208" font-size="6.5" fill="#5a4520">多変数の多項式　　積空間のテンソル</text>
+  <text x="250" y="220" font-size="6.5" fill="#5a4520">連続関数計算（第77章）</text>
+  <text x="250" y="232" font-size="6.5" fill="#5a4520">ゲルファント–ナイマルク（第79章）</text>
+  <text x="250" y="249" font-size="6.4" fill="#8c2f1e">複素では共役で閉じることが要る</text>
+  <text x="250" y="261" font-size="6.4" fill="#6a6a68">共役がないと、正則性の剛性が障害になる</text>
+  <text x="250" y="273" font-size="6.2" fill="#6b2a48">ディスク環が、そのちょうどの反例である</text>
+</svg>
+<figcaption data-ch="96">ストーン–ワイエルシュトラスの定理。近似できる理由は代数をなし点を分離することだけにあり、証明の実質は「絶対値が近似できる」という一点である。複素の場合に共役の条件が要るのは、正則性の剛性が障害になるためである。</figcaption>
+</figure>
+
+<div class="star2">
+<h4>★★ 学部後半——定量化と、近似の速さ</h4>
+
+<p><strong>ジャクソンの定理。</strong>ストーン–ワイエルシュトラスは速さを何も言わない。<em>定量版</em>：<m>f</m> が <m>[-1,1]</m> 上で連続度 <m>\omega</m> をもつとき、<m>n</m> 次多項式による最良近似 <m>E_n(f)</m> は</p>
+<M>E_n(f) \le C\,\omega\Big(\frac1n\Big)</M>
+<p><em><m>f\in C^k</m> なら <m>E_n(f)\le Cn^{-k}\omega(f^{(k)};1/n)</m>。</em>逆向きの<strong>ベルンシュタインの定理</strong>：<m>E_n(f)=O(n^{-\alpha})</m>（<m>0 < \alpha < 1</m>）なら <m>f</m> はヘルダー指数 <m>\alpha</m>。<span class="yogo-hl">近似の速さと滑らかさが、正確に対応する</span>——第80章の「フーリエ係数の減衰＝滑らかさ」と同じ主題である。</p>
+
+<p><strong>ベルンシュタイン多項式の速さは遅い。</strong><m>B_nf</m> の誤差は一般に <m>O(n^{-1})</m> より速くならない（<m>f</m> が <m>C^\infty</m> でも）。<em>構成的だが最適ではない。</em>最良近似を与える多項式はチェビシェフの等振動定理で特徴づけられ、実際の計算にはチェビシェフ補間が使われる。</p>
+
+<p><strong>ミュンツ–サースの定理。</strong><m>\{1,x^{\lambda_1},x^{\lambda_2},\dots\}</m>（<m>\lambda_k>0</m> 増加）が <m>C[0,1]</m> で稠密であることと</p>
+<M>\sum_k \frac{1}{\lambda_k} = \infty</M>
+<p>は同値。<em>したがって <m>\{1,x^2,x^4,\dots\}</m> は稠密だが、<m>\{1,x,x^4,x^9,\dots\}</m>（平方数）は稠密でない。</em><span class="yogo-hl">代数でない部分空間の稠密性は、こうした定量的な条件で決まる。</span>ストーン–ワイエルシュトラスが「代数である」ことを要求するのは、この難しさを回避するためである。</p>
+
+<p><strong>格子版（ストーンの束定理）。</strong>代数のかわりに<em>束</em>（最大・最小で閉じる）であれば、（2）（3）の条件のもとで同じ結論が成り立つ。<em>本章の証明は実は束であることしか使っておらず、代数であることは「絶対値が作れる」ためだけに要る。</em></p>
+
+<p><strong>仮定を外すと。</strong><m>X</m> のハウスドルフ性を外すと、<m>C(X)</m> が点を分離できない（同一視される点がある）。<em>コンパクト性を外すと <m>C_0</m> の形になる。</em>値域を <m>\mathbb{R}</m> や <m>\mathbb{C}</m> でなく一般のバナッハ環にすると、<span class="yogo-hl">ベクトル値の場合は成り立たないことがある</span>——テンソル積の理論（近似性質、エンフロの反例、第63章）が関わってくる。</p>
+</div>
+
+<div class="star3">
+<h4>★★★ 大学院——双対としての定式化と、量子化</h4>
+
+<p><strong>ゲルファント双対性としての読み替え。</strong>ストーン–ワイエルシュトラスは、可換シースター環の圏とコンパクトハウスドルフ空間の圏の<em>反変同値</em></p>
+<M>X \ \longmapsto\ C(X), \qquad A \ \longmapsto\ \Delta(A)</M>
+<p>の一部である（第79章）。<em>「点を分離する部分環は全体」という主張は、圏論的には「単射の双対が全射」ということにあたる。</em><span class="yogo-hl">第23章のストーン–チェックのコンパクト化、第27章のベールの定理、本章の近似定理は、同じ双対性の三つの側面である。</span></p>
+
+<p><strong>非可換化。</strong>非可換シースター環では「点」がないので、この定理の直接の類似はない。<em>かわりに、部分環がいつ全体になるかを問う<strong>ストーン–ワイエルシュトラス予想</strong>がある</em>：非可換シースター環 <m>A</m> の部分環 <m>B</m> が <m>A</m> の純粋状態を分離すれば <m>B=A</m> か。<span class="yogo-hl">一般には未解決で、いくつかのクラス（型 <m>\mathrm{I}</m>、核型）でのみ知られている。</span></p>
+
+<p><strong>量子力学への応用。</strong>ワイル量子化では、古典的な可観測量（位相空間上の関数）を作用素に対応させる。<em>対応が「代数準同型」にならない——これが量子化の本質的な困難（グローネヴォルト–ファン・ホーヴの定理）である。</em>近似の言葉では、<span class="yogo-hl">古典極限 <m>\hbar\to0</m> で交換子が <m>\hbar</m> 倍のポアソン括弧に収束する——「漸近的にだけ代数準同型」になる。</span>変形量子化の理論（コンツェヴィッチの形式性定理、1997年）は、この漸近的な対応を形式的冪級数の水準で完全に構成した。</p>
+
+<p><strong>多項式の正値性。</strong>ストーン–ワイエルシュトラスは符号を制御しない。<em>正の関数を正の多項式（平方和）で近似できるか</em>——これが実代数幾何の主題である。<span class="yogo-hl">ヒルベルトの第17問題（正定値多項式は有理関数の平方和か）はアルティンが肯定的に解決した（1927年）</span>が、多項式の平方和では足りない（モツキンの反例 <m>x^4y^2+x^2y^4-3x^2y^2z^2+z^6</m>）。<em>プッチナルやシュミュートゲンの定理は、コンパクトな半代数集合上で正の多項式が「明示的な平方和の組み合わせ」で書けることを保証し、これが多項式最適化（半正定値計画法への緩和）の理論的な基礎になっている。</em></p>
+
+<p><strong>未解決に近い問い。</strong>ラサール階層の収束の速さ、および有限収束が起こる条件の完全な特徴づけは、実代数幾何と最適化の境界で現在も研究されている。<em>また、無限次元でのストーン–ワイエルシュトラス型の結果——たとえばバナッハ空間上の多項式による稠密性——は、空間の幾何（近似性質）に強く依存し、統一的な理論はまだない。</em></p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li>ベルンシュタイン多項式 <m>B_nf</m> が <m>f(0)</m> と <m>f(1)</m> を保つことを確かめよ。</li>
+<li>偶多項式の全体が点を分離しないことを確かめよ。</li>
+<li>三角多項式の全体が共役で閉じることを確かめよ。</li>
+<li><m>\bar z</m> が多項式で一様近似できないことを説明せよ。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li><ref t="thm-weierstrass"/>を、ベルンシュタイン多項式とチェビシェフの不等式で示せ。<span class="haiten">（40点）</span></li>
+<li><ref t="thm-stone-weierstrass"/>の第一段（絶対値が閉包に入る）を示せ。<span class="haiten">（35点）</span></li>
+<li>第三段（二点で値を合わせる）を示せ。<span class="haiten">（30点）</span></li>
+<li>第四段の貼り合わせを、コンパクト性の使い方に注意して書き下せ。<span class="haiten">（45点）</span></li>
+<li>複素の場合を、実部・虚部に分けて示せ。<span class="haiten">（30点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li>ディスク環が <m>C(\overline D)</m> の真閉部分環であることを示せ。<span class="haiten">（45点）</span></li>
+<li><m>C_0(X)</m>（<m>X</m> 局所コンパクト）版のストーン–ワイエルシュトラスを定式化して示せ。<span class="haiten">（50点）</span></li>
+<li>ミュンツ–サースの定理の必要性（級数が収束すれば稠密でない）を示せ。<span class="haiten">（50点）</span></li>
+<li>第81章のフェイェール核による証明と本章の証明を比較し、それぞれが与える追加の情報を述べよ。<span class="haiten">（40点）</span></li>
+</ol>
+</div>
+</div>
+<nav class="chnav">
+<a class="prev" href="ch95.html">← 第95章　関数空間の位相とAscoli–Arzelàの定理</a>
+<a class="next" href="ch97.html">第97章　何が何を支えているか——本書の地図 →</a>
+</nav>
+</article>
+</main>
+<footer class="site">
+  <p>位相・解析大全　学部から大学院まで、三層で読む位相空間論と解析学</p>
+  <p class="small">本文・図版とも本書のために作成したものです。数式は MathJax でベクタ化して組んでいます。</p>
+</footer>
+</body>
+</html>

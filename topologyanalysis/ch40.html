@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第40章 被覆次元 dim｜位相・解析大全</title>
+<meta name="description" content="位相・解析大全　第40章　被覆次元 dim">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;600&display=swap">
+<link rel="stylesheet" href="web.css">
+</head>
+<body>
+<header class="site">
+  <a class="site-title" href="index.html">位相・解析大全</a>
+  <nav class="site-nav">
+    <a href="index.html">目次</a>
+    <a href="isou-kaiseki-taizen.pdf">PDF版</a>
+  </nav>
+</header>
+<main>
+<article class="chapter">
+<p class="part-label">第V部　基数不変量と次元論</p>
+<h1><span class="ch-num">第40章</span>被覆次元 dim</h1>
+<nav class="chnav">
+<a class="prev" href="ch39.html">← 第39章　大きい帰納的次元 Ind</a>
+<a class="next" href="ch41.html">第41章　次元の一致定理 →</a>
+</nav>
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>被覆の重なり方を数えると、なぜ次元が出るのか。</li>
+<li>ルベーグの被覆定理は、何を言っているのか。</li>
+<li>この定義は、なぜ扱いやすいのか。</li>
+</ul>
+</div>
+
+<h3 id="s40-1">重なりを数える</h3>
+
+<p>三つ目の次元は、まったく違う発想から来る。<em>被覆の重なり方を数えるのである。</em></p>
+
+<p>直線を短い区間で覆うと、どう工夫しても<span class="yogo-hl">高々二つが重なる</span>ようにできる。平面を小さい円板で覆うと、<em>高々三つが重なる</em>ようにできるが、二つに抑えることはできない。</p>
+
+<p>この観察を定義にする。</p>
+
+<div class="teigi" id="def-dim">
+<h4>被覆次元</h4>
+<p class="no-indent">被覆 <m>\mathcal{A}</m> の<strong>位数</strong>とは、<m>n+1</m> 個の元が共通点をもつような最大の <m>n</m> をいう（どの点も高々 <m>n+1</m> 個の元に属する、と言ってもよい）。</p>
+<p>正規空間 <m>X</m> について、<m>\dim X \le n</m> とは、<span class="yogo-hl">どの有限開被覆も、位数 <m>n</m> 以下の有限開細分をもつ</span>ことをいう。<m>\dim \varnothing = -1</m> と約束する。</p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">「位数 <m>n</m>」とは「高々 <m>n+1</m> 個が重なる」ことである。<em>添字のずれに注意してほしい。</em><span class="yogo-hl">直線が <m>\dim = 1</m> なのは、高々二つが重なるようにできるからである。</span></p>
+</div>
+
+<div class="rei" id="rei-dim-rei">
+<h4>基本的な値</h4>
+<p class="no-indent"><strong><m>\dim \mathbb{R} = 1</m>。</strong>どの有限開被覆も、長さの十分小さい区間による細分をもつ。<em>区間を互い違いに並べれば、重なるのは隣り合う二つだけである。</em></p>
+<p><strong><m>\dim \mathbb{R}^n = n</m>。</strong><m>\le n</m> は、立方体をずらして並べる構成による。<span class="yogo-hl"><m>\ge n</m> がルベーグの被覆定理である（次節）。</span></p>
+<p><strong><m>\dim X = 0</m>。</strong>どの有限開被覆も、互いに交わらない開集合による細分をもつ。<em>零次元空間（第38章）にあたる。</em></p>
+</div>
+
+<h3 id="s40-2">ルベーグの被覆定理</h3>
+
+<div class="teiri" id="thm-lebesgue-hifuku">
+<h4>ルベーグの被覆定理</h4>
+<p class="no-indent"><m>n</m> 次元立方体 <m>[0,1]^n</m> を、直径が十分小さい閉集合で覆うと、<span class="yogo-hl">必ずどこかで <m>n+1</m> 個が重なる。</span>すなわち <m>\dim [0,1]^n \ge n</m>。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">骨子を述べる。証明はスペルナー <span class="orig">Sperner</span> の補題（組合せ論）を使う。</p>
+<p><strong>スペルナーの補題。</strong><m>n</m> 単体を小さい単体に分割し、各頂点に <m>0</m> から <m>n</m> のラベルを「面の条件」を守って付けると、<em>すべてのラベルをもつ小単体が奇数個存在する。</em></p>
+<p><strong>被覆への翻訳。</strong>立方体の被覆 <m>\{F_0,\ldots,F_k\}</m>（直径が小さい閉集合）が与えられたとする。<m>n+1</m> 個が重ならないと仮定する。</p>
+<p>立方体を <m>n</m> 単体に分け、細かく分割する。<em>各頂点に、それを含む <m>F_i</m> のうち「対応する面に整合する」ものの番号を付ける。</em>直径が小さいので、この付け方は可能である。</p>
+<p>スペルナーの補題より、すべてのラベルをもつ小単体がある。<span class="yogo-hl">その頂点たちは近くにあるので、対応する <m>F_i</m> が <m>n+1</m> 個すべて交わる。</span>仮定に反する。</p>
+<p><em>分割を細かくする極限を取ることで、閉集合の被覆についての主張が得られる。</em></p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">この定理がブラウワーの不動点定理と同値であることが知られている。<em>またブラウワーの領域不変性（<m>\mathbb{R}^n \not\cong \mathbb{R}^m</m>）も、これから従う。</em><span class="yogo-hl">次元が「よく定義された」ことの証明が、組合せ論の補題に帰着する。</span></p>
+</div>
+
+<figure id="fig40-1">
+<svg viewBox="0 0 470 280" width="470" height="280" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">被覆の重なりを数える</text>
+
+  <rect x="14" y="26" width="442" height="136" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+
+  <text x="24" y="42" font-size="7" font-weight="700" fill="#1f3b5c">直線　高々二つが重なる（位数 1）</text>
+  <line x1="60" y1="62" x2="420" y2="62" stroke="#c9c9c7" stroke-width="0.8"/>
+  <g stroke="#35618f" stroke-width="3.4" opacity="0.75">
+    <line x1="64" y1="58" x2="150" y2="58"/><line x1="200" y1="58" x2="286" y2="58"/>
+    <line x1="336" y1="58" x2="418" y2="58"/>
+  </g>
+  <g stroke="#2f6b5f" stroke-width="3.4" opacity="0.75">
+    <line x1="126" y1="66" x2="224" y2="66"/><line x1="262" y1="66" x2="360" y2="66"/>
+  </g>
+  <text x="430" y="64" font-size="6.2" fill="#6a6a68">⋯</text>
+  <text x="24" y="80" font-size="6.4" fill="#6a6a68">どこでも重なるのは隣り合う二つだけ → dim ℝ = 1</text>
+
+  <text x="24" y="98" font-size="7" font-weight="700" fill="#1f3b5c">平面　高々三つが重なる（位数 2）</text>
+  <g opacity="0.55">
+    <circle cx="121" cy="138" r="15" fill="#cfe0ee" stroke="#35618f"/>
+    <circle cx="145" cy="138" r="15" fill="#d8e6de" stroke="#2f6b5f"/>
+    <circle cx="133" cy="120" r="15" fill="#f0d8d4" stroke="#a03b2e"/>
+  </g>
+  <circle cx="133" cy="132" r="2.2" fill="#000"/>
+  <text x="178" y="122" font-size="6.4" fill="#1f3b5c">三つが一点で重なる</text>
+  <text x="178" y="134" font-size="6.4" fill="#8c2f1e">二つに抑えることはできない（ルベーグの被覆定理）</text>
+  <text x="178" y="146" font-size="6.4" fill="#6a6a68">→ dim ℝ² = 2</text>
+
+  <rect x="14" y="176" width="216" height="96" rx="4" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="24" y="191" font-size="7.6" font-weight="700" fill="#1e4a41">dim が扱いやすい理由</text>
+  <text x="24" y="208" font-size="6.8" fill="#1e4a41">被覆の言葉なのでパラコンパクト性と相性がよい</text>
+  <text x="24" y="222" font-size="6.8" fill="#1e4a41">写像による評価がしやすい</text>
+  <text x="24" y="236" font-size="6.8" fill="#1e4a41">和の公式・可算和定理が素直</text>
+  <text x="24" y="253" font-size="6.6" fill="#6a6a68">1の分割（第24章）や細分の議論が</text>
+  <text x="24" y="264" font-size="6.6" fill="#6a6a68">そのまま使える</text>
+
+  <rect x="240" y="176" width="216" height="96" rx="4" fill="#f4f1ea" stroke="#8a6b2c"/>
+  <text x="250" y="191" font-size="7.6" font-weight="700" fill="#5a4520">証明に使う道具</text>
+  <text x="250" y="208" font-size="6.8" fill="#5a4520">スペルナーの補題（組合せ論）</text>
+  <text x="250" y="221" font-size="6.6" fill="#6a6a68">単体分割の頂点にラベルを付けると、</text>
+  <text x="250" y="232" font-size="6.6" fill="#6a6a68">全ラベルをもつ小単体が奇数個ある</text>
+  <text x="250" y="249" font-size="6.8" fill="#8c2f1e">ブラウワーの不動点定理と同値</text>
+  <text x="250" y="262" font-size="6.6" fill="#6a6a68">領域不変性（ℝⁿ と ℝᵐ は同相でない）もここから出る</text>
+</svg>
+<figcaption data-ch="40">直線は二つ重なる被覆で済み、平面は三つ必要になる。重なりの個数が次元を与える。下からの評価にはスペルナーの補題が使われる。</figcaption>
+</figure>
+
+<h3 id="s40-3">dim の性質</h3>
+
+<div class="teiri" id="thm-dim-seishitsu">
+<h4></h4>
+<p class="no-indent">正規空間 <m>X</m> について、</p>
+<p class="no-indent">（1）<m>\dim</m> は閉部分空間に遺伝する。<br>
+（2）<m>\dim X \le \mathrm{Ind}\,X</m>。<br>
+（3）全正規空間では可算和定理が成り立つ。<br>
+（4）<m>\dim(X \times Y) \le \dim X + \dim Y</m>（コンパクトハウスドルフで）。<br>
+（5）<m>\dim X \le n</m> であることと、どの有限開被覆 <m>\{U_1,\ldots,U_k\}</m> も、位数 <m>n</m> 以下の縮小被覆 <m>\{V_1,\ldots,V_k\}</m>（<m>\overline{V_i} \subseteq U_i</m>）をもつことは同値である。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">（5）が実用上の形である。<em>細分ではなく「同じ添字の縮小」で述べられる。</em>第15章★★の被覆を縮める議論（正規性）を使う。</p>
+<p>（2）<m>\mathrm{Ind}\,X \le n</m> とする。有限開被覆 <m>\{U_1,\ldots,U_k\}</m> を取り、各段で <ref t="thm-Ind-bunri"/> を使って境界の次元を下げながら縮小していく。<span class="yogo-hl">帰納法で位数を <m>n</m> に抑える。</span></p>
+<p>（1）閉部分空間の被覆を、全体の被覆に延ばして細分し、制限する。<em>正規性が延ばす操作を保証する。</em></p>
+</div>
+
+<div class="lv2">
+<h4>写像による特徴づけ</h4>
+<p><m>\dim</m> のもっとも強力な性質は、<em>球面への写像で言い換えられることである。</em></p>
+<p><strong>定理。</strong>正規空間 <m>X</m> について、<m>\dim X \le n</m> であることと</p>
+<p><span class="yogo-hl">どの閉集合 <m>A \subseteq X</m> とどの連続写像 <m>f \colon A \to S^n</m> も、<m>X</m> 全体への連続な拡張をもつ</span></p>
+<p>ことは同値である。</p>
+<p><strong>なぜこの形が有用か。</strong>第16章★★で述べたとおり、球面への写像は一般には延びない。<em>「どこまで延びるか」が次元を測っている。</em></p>
+<p>円周 <m>S^1</m> への写像を考える。<m>X = [0,1]</m>、<m>A = \{0,1\}</m> なら、<m>f</m> は必ず延びる（<m>S^1</m> は弧状連結）。<m>X = \overline{D^2}</m>、<m>A = S^1</m>、<m>f = \mathrm{id}</m> なら延びない。<span class="yogo-hl"><m>\dim \overline{D^2} = 2 > 1</m> だから。</span></p>
+<p><strong>次元を上げる例。</strong>この特徴づけから、次元の下からの評価が得やすくなる。<em>「延びない写像を一つ作れば、次元が下限を超える」</em>と言えるからである。</p>
+<p>第42章で反例を作るとき、この手法を使う。</p>
+<p><strong>本質的写像。</strong>関連する概念として、<m>f \colon X \to [0,1]^n</m> が<strong>本質的</strong>であるとは、境界 <m>f^{-1}(\partial [0,1]^n)</m> 上で <m>f</m> と一致する写像で、値域が <m>\partial[0,1]^n</m> に収まるものが存在しないことをいう。</p>
+<p><span class="yogo-hl"><m>\dim X \ge n</m> であることと、<m>X</m> から <m>[0,1]^n</m> への本質的写像が存在することは同値である。</span></p>
+<p>ルベーグの被覆定理は、<em>恒等写像 <m>[0,1]^n \to [0,1]^n</m> が本質的である</em>という主張として読める。</p>
+<p><strong>ホモトピー論との接続。</strong>これらの特徴づけは、代数的位相幾何学の道具（ホモトピー群、コホモロジー）と直接つながっている。</p>
+<p><em>チェックコホモロジーを使うと、次元のさらに精密な理論（コホモロジー次元）が得られる。</em><span class="yogo-hl">一般に <m>\dim_{\mathbb{Z}} X \le \dim X</m> であり、等号が成り立たない例がある</span>——第42章で触れる。</p>
+</div>
+
+<div class="lv3">
+<h4>無限次元の分類</h4>
+<p><m>\dim X = \infty</m> の空間にも、区別がある。<em>「無限次元」は一種類ではない。</em></p>
+<p><strong>強無限次元と弱無限次元。</strong><m>X</m> が<strong>強無限次元</strong>であるとは、<em>閉集合の対の無限列 <m>\{(A_i,B_i)\}</m> で、どのように分離集合 <m>S_i</m> を取っても <m>\bigcap_i S_i \ne \varnothing</m> となるものが存在する</em>ことをいう。そうでないとき<strong>弱無限次元</strong>という。</p>
+<p>ヒルベルト立方体 <m>[0,1]^{\mathbb{N}}</m> は強無限次元である。<span class="yogo-hl">有限次元の空間はすべて弱無限次元である。</span></p>
+<p><strong>可算次元。</strong><m>X</m> が<strong>可算次元</strong>であるとは、可算個の有限次元部分集合の合併として書けることをいう。</p>
+<p>可算次元ならば弱無限次元である。<em>逆は成り立たない</em>——ポール <span class="orig">Pol</span> が一九八一年に、弱無限次元だが可算次元でないコンパクト距離空間を構成した。</p>
+<p>この問題は五十年近く未解決だった。<span class="yogo-hl">アレクサンドロフが一九五一年に提起している。</span></p>
+<p><strong>超限次元。</strong>次元の定義を超限順序数まで延ばすこともできる。<m>\mathrm{ind}</m> の再帰を順序数で行い、<m>\mathrm{trind}</m>（超限小帰納的次元）を定める。</p>
+<p><em>可算次元なコンパクト距離空間は、<m>\mathrm{trind} < \omega_1</m> をもつ。</em><span class="yogo-hl">第4章で導入した順序数が、次元の値として現れる。</span></p>
+<p><strong>無限次元位相幾何学。</strong>ヒルベルト立方体と <m>\ell^2</m> を扱う分野がある。驚くべき定理がいくつもある。</p>
+<p><em>アンダーソン <span class="orig">Anderson</span> の定理</em>——<m>\ell^2</m> は <m>\mathbb{R}^{\mathbb{N}}</m> と同相である。<span class="yogo-hl">ノルムの入った空間と、単なる積空間が同相になる。</span></p>
+<p><em>ケラー <span class="orig">Keller</span> の定理</em>——<m>\ell^2</m> の無限次元コンパクト凸集合は、すべてヒルベルト立方体と同相である。</p>
+<p>有限次元では、コンパクト凸集合は球体と同相になる（次元が決まる）。<em>無限次元では次元による区別が消える。</em></p>
+<p><strong>本書での扱い。</strong>第42章で次元論の反例を扱うが、無限次元位相幾何学には立ち入らない。</p>
+<p>ただし第VIII部以降で <m>\ell^2</m> と <m>L^2</m> を扱うとき、<span class="yogo-hl">それらが位相空間としては区別できないという事実</span>を心に留めておくとよい。<em>解析学がそこで見ているのは、位相ではなく内積構造である。</em></p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li><m>\dim \mathbb{R} \le 1</m> を、区間による細分を具体的に作って示せ。</li>
+<li>位数 <m>0</m> の被覆とは何か。それが <m>\dim = 0</m> に対応することを述べよ。</li>
+<li>有限集合の <m>\dim</m> を求めよ。</li>
+<li><m>\dim \mathbb{R}^2 \le 2</m> を、立方体をずらして並べる構成で示せ。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li><ref t="thm-dim-seishitsu"/>（5）を、第15章の被覆を縮める議論を使って示せ。<span class="haiten">（25点）</span></li>
+<li><ref t="thm-dim-seishitsu"/>（1）を示せ。<span class="haiten">（25点）</span></li>
+<li><ref t="thm-dim-seishitsu"/>（2）を、<ref t="thm-Ind-bunri"/> を使って示せ。<span class="haiten">（30点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li>スペルナーの補題を述べ、<m>n=1</m>（区間の場合）と <m>n=2</m>（三角形の場合）について証明せよ。<span class="haiten">（35点）</span></li>
+<li><m>\dim X \le n</m> と「<m>S^n</m> への写像が延びる」ことが同値であることの意味を説明し、<m>\overline{D^2}</m> について確かめよ。<span class="haiten">（35点）</span></li>
+</ol>
+</div>
+</div>
+<nav class="chnav">
+<a class="prev" href="ch39.html">← 第39章　大きい帰納的次元 Ind</a>
+<a class="next" href="ch41.html">第41章　次元の一致定理 →</a>
+</nav>
+</article>
+</main>
+<footer class="site">
+  <p>位相・解析大全　学部から大学院まで、三層で読む位相空間論と解析学</p>
+  <p class="small">本文・図版とも本書のために作成したものです。数式は MathJax でベクタ化して組んでいます。</p>
+</footer>
+</body>
+</html>

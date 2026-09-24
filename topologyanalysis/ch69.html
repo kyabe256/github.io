@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第69章 開写像定理と閉グラフ定理｜位相・解析大全</title>
+<meta name="description" content="位相・解析大全　第69章　開写像定理と閉グラフ定理">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;600&display=swap">
+<link rel="stylesheet" href="web.css">
+</head>
+<body>
+<header class="site">
+  <a class="site-title" href="index.html">位相・解析大全</a>
+  <nav class="site-nav">
+    <a href="index.html">目次</a>
+    <a href="isou-kaiseki-taizen.pdf">PDF版</a>
+  </nav>
+</header>
+<main>
+<article class="chapter">
+<p class="part-label">第IX部　関数解析の基本定理</p>
+<h1><span class="ch-num">第69章</span>開写像定理と閉グラフ定理</h1>
+<nav class="chnav">
+<a class="prev" href="ch68.html">← 第68章　一様有界性の原理</a>
+<a class="next" href="ch70.html">第70章　弱位相と弱*位相 →</a>
+</nav>
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>全射な有界作用素は、なぜ開写像になるのか。</li>
+<li>「グラフが閉」と「連続」は、どこで同じになるのか。</li>
+<li>閉性という仮定は、何を代わりにしているのか。</li>
+</ul>
+</div>
+
+<h3 id="s69-1">開写像定理</h3>
+
+<div class="teiri" id="thm-kai-shazo">
+<h4>開写像定理</h4>
+<p class="no-indent"><m>E,F</m> をバナッハ空間、<m>T\in B(E,F)</m> を全射とする。このとき <m>T</m> は開写像である。すなわち <m>T</m> は開集合を開集合に写す。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><m>B_E=B_E(0,1)</m> と書く。<em><m>T(B_E)</m> が <m>0</m> の近傍であることを示せば十分</em>（平行移動とスケール変換で一般の場合が出る）。</p>
+<p><strong>第一段——閉包が近傍。</strong><m>F=\bigcup_n \overline{T(nB_E)}</m>（全射だから）。<m>F</m> は完備なのでベールのカテゴリー定理より、ある <m>\overline{T(NB_E)}</m> が内点をもつ。</p>
+<p>スケールして <m>\overline{T(B_E)}</m> が <m>y_0</m> を内点にもつとする。<em><m>\overline{T(B_E)}</m> は対称かつ凸なので、<m>\frac12(\overline{T(B_E)}-\overline{T(B_E)}) \subseteq \overline{T(B_E)}</m>。</em></p>
+<p>よって <m>0</m> も内点。<span class="yogo-hl"><m>B_F(0,2r)\subseteq\overline{T(B_E)}</m> なる <m>r>0</m> が取れる。</span></p>
+<p><strong>第二段——閉包を外す。</strong><m>\|y\|<r</m> とする。<m>B_F(0,r)\subseteq\overline{T(\frac12 B_E)}</m> なので、<m>\|y-Tx_1\|<r/2</m> なる <m>x_1\in\frac12 B_E</m> がある。</p>
+<p>次に <m>y-Tx_1</m> について同じことを（スケールして）行い、<m>\|y-Tx_1-Tx_2\|<r/4</m>、<m>x_2\in\frac14 B_E</m>。これを繰り返す。</p>
+<p><m>x=\sum_n x_n</m> は絶対収束するので（<m>\sum\|x_n\|<1</m>）、<em><m>E</m> の完備性から収束し、<m>\|x\|<1</m>、<m>Tx=y</m>。</em></p>
+<p><span class="yogo-hl">すなわち <m>B_F(0,r)\subseteq T(B_E)</m>。</span></p>
+</div>
+
+<div class="chui">
+<h4>二段構えの意味</h4>
+<p class="no-indent"><em>第一段はベール、第二段は完備性（級数の収束）を使う。</em></p>
+<p><span class="yogo-hl">「閉包が近傍」から「そのものが近傍」へ渡るのが、この定理の技術的な核心である。</span>第二段の反復近似は、第61章のリース–フィッシャーの証明と同じ形をしている。</p>
+<p><m>E</m> と <m>F</m> の両方の完備性が要る。<em>どちらを外しても反例がある。</em></p>
+</div>
+
+<div class="teiri" data-kind="系" id="cor-gyaku-yukai">
+<h4>逆写像定理</h4>
+<p class="no-indent"><m>T\in B(E,F)</m> が全単射なら、<m>T^{-1}\in B(F,E)</m>。</p>
+</div>
+
+<div class="teiri" data-kind="系" id="cor-norm-douchi">
+<h4>ノルムの同値</h4>
+<p class="no-indent">ベクトル空間 <m>E</m> 上の二つのノルム <m>\|\cdot\|_1</m>、<m>\|\cdot\|_2</m> について、どちらでも完備で、かつ <m>\|x\|_1\le C\|x\|_2</m> が成り立つなら、二つは同値である。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">恒等写像 <m>(E,\|\cdot\|_2)\to(E,\|\cdot\|_1)</m> は有界な全単射。<ref t="cor-gyaku-yukai"/> より逆も有界。</p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent"><span class="yogo-hl">「比較可能な二つの完備ノルムは、自動的に同値になる」。</span></p>
+<p><em>完備なノルムは、あったとしてもほとんど一意である。</em>第63章で「有限次元ではノルムがすべて同値」と述べたが、無限次元でも完備性を課せば強い一意性がある。</p>
+</div>
+
+<h3 id="s69-2">閉グラフ定理</h3>
+
+<div class="teigi" id="def-hei-graph">
+<h4>閉作用素</h4>
+<p class="no-indent">線型写像 <m>T \colon E\to F</m>（<m>E,F</m> ノルム空間）の<strong>グラフ</strong>を</p>
+<M>\Gamma(T) = \{\, (x,Tx) \mid x\in E \,\} \subseteq E\times F</M>
+<p class="no-indent">と定める。<m>\Gamma(T)</m> が <m>E\times F</m>（ノルム <m>\|(x,y)\|=\|x\|+\|y\|</m>）で閉のとき、<m>T</m> を<strong>閉作用素</strong>という。</p>
+</div>
+
+<div class="chui">
+<h4>閉と連続の違い</h4>
+<p class="no-indent"><em>連続</em>とは「<m>x_n\to x</m> ならば <m>Tx_n\to Tx</m>」。</p>
+<p><em>閉</em>とは「<m>x_n\to x</m> かつ <m>Tx_n\to y</m> ならば <m>y=Tx</m>」。</p>
+<p><span class="yogo-hl">閉のほうが弱い——<m>Tx_n</m> が収束することを仮定に含めてよい。</span></p>
+<p>連続なら閉である（逆は一般に成り立たない）。<em>微分作用素は閉だが連続でない。</em></p>
+</div>
+
+<div class="teiri" id="thm-hei-graph">
+<h4>閉グラフ定理</h4>
+<p class="no-indent"><m>E,F</m> をバナッハ空間、<m>T \colon E\to F</m> を線型とする。<m>T</m> が閉ならば <m>T</m> は有界である。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><m>\Gamma(T)</m> は <m>E\times F</m> の閉部分空間なので、それ自身バナッハ空間。</p>
+<p>射影 <m>\pi_1 \colon \Gamma(T)\to E</m>、<m>(x,Tx)\mapsto x</m> は有界な全単射。<em><ref t="cor-gyaku-yukai"/> より <m>\pi_1^{-1}</m> が有界。</em></p>
+<p>したがって <m>\|x\|+\|Tx\| \le C\|x\|</m>、すなわち <m>\|Tx\|\le(C-1)\|x\|</m>。</p>
+</div>
+
+<div class="chui">
+<h4>何が得か</h4>
+<p class="no-indent"><span class="yogo-hl">連続性を示すのに、極限の存在を仮定に入れてよくなる。</span></p>
+<p><em>普通は「<m>x_n\to x</m> ならば <m>Tx_n\to Tx</m>」を示すが、そのためにまず <m>Tx_n</m> が収束することを示さねばならない。閉グラフ定理を使うなら、収束は仮定に回せる。</em></p>
+<p>実際の証明が格段に楽になる場面が多い。</p>
+</div>
+
+<div class="rei" id="rei-hei-graph-riyo">
+<h4>閉グラフ定理の使い方</h4>
+<p class="no-indent"><strong>例。</strong><m>T \colon L^2[0,1]\to L^2[0,1]</m> を、ある可測関数 <m>k(x,y)</m> による積分作用素とする。<m>T</m> が <m>L^2</m> に値を取ると<em>わかっていれば</em>、有界性は自動的に従う。</p>
+<p><em>確かめ方。</em><m>f_n\to f</m>、<m>Tf_n\to g</m> とする。部分列で各点収束させ（<ref t="thm-bubunretsu"/>）、ファトゥの補題で <m>g=Tf</m> を得る。<span class="yogo-hl">閉であることだけ示せば、有界性がついてくる。</span></p>
+<p><strong>例。</strong>二つのバナッハ空間 <m>E\subseteq F</m>（包含が連続）で、<m>T \colon E\to E</m> が <m>F</m> の作用素として有界なら、<m>E</m> でも有界。</p>
+</div>
+
+<div class="teiri" data-kind="系" id="cor-hoshakan">
+<h4>補空間の自動性</h4>
+<p class="no-indent"><m>E</m> をバナッハ空間、<m>M,N</m> を閉部分空間で <m>E=M\oplus N</m>（代数的な直和）とする。このとき射影 <m>P \colon E\to M</m> は有界である。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><m>P</m> が閉であることを示す。<m>x_n\to x</m>、<m>Px_n\to y</m> とする。<m>Px_n\in M</m>、<m>M</m> 閉より <m>y\in M</m>。</p>
+<p><m>x_n-Px_n\in N</m> が <m>x-y</m> に収束し、<m>N</m> 閉より <m>x-y\in N</m>。<em><m>x=y+(x-y)</m> が <m>M\oplus N</m> の分解なので <m>Px=y</m>。</em></p>
+</div>
+
+<figure id="fig69-1">
+<svg viewBox="0 0 470 274" width="470" height="274" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <defs>
+    <marker id="a69" markerWidth="8" markerHeight="8" refX="7" refY="2.6" orient="auto"><path d="M0,0 L7,2.6 L0,5.2 z" fill="#35618f"/></marker>
+  </defs>
+
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">三つの定理は、ベールから出て互いに導き合う</text>
+
+  <rect x="14" y="26" width="442" height="104" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+
+  <rect x="168" y="36" width="134" height="22" rx="3" fill="#dce7f0" stroke="#35618f" stroke-width="1.2"/>
+  <text x="235" y="50" font-size="6.8" text-anchor="middle" font-weight="700" fill="#1f3b5c">ベールのカテゴリー定理</text>
+
+  <rect x="28" y="76" width="118" height="22" rx="3" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="87" y="90" font-size="6.6" text-anchor="middle" fill="#1e4a41">一様有界性</text>
+  <rect x="176" y="76" width="118" height="22" rx="3" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="235" y="90" font-size="6.6" text-anchor="middle" fill="#1e4a41">開写像定理</text>
+  <rect x="324" y="76" width="118" height="22" rx="3" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="383" y="90" font-size="6.6" text-anchor="middle" fill="#1e4a41">閉グラフ定理</text>
+
+  <path d="M200,60 L120,72" stroke="#35618f" stroke-width="1.1" marker-end="url(#a69)"/>
+  <path d="M235,60 L235,72" stroke="#35618f" stroke-width="1.1" marker-end="url(#a69)"/>
+  <path d="M270,60 L350,72" stroke="#35618f" stroke-width="1.1" marker-end="url(#a69)"/>
+
+  <path d="M294,84 L320,84" stroke="#2f6b5f" stroke-width="1" marker-end="url(#a69)"/>
+  <path d="M320,92 L298,92" stroke="#2f6b5f" stroke-width="1" marker-end="url(#a69)"/>
+  <path d="M330,104 C 260,118 140,116 100,102" stroke="#2f6b5f" stroke-width="1" fill="none" marker-end="url(#a69)"/>
+  <text x="215" y="120" font-size="6" text-anchor="middle" fill="#1e4a41">閉グラフから一様有界性も出る</text>
+  <text x="24" y="50" font-size="6.2" fill="#6a6a68">完備距離空間は</text>
+  <text x="24" y="60" font-size="6.2" fill="#6a6a68">第二類（第27章）</text>
+
+  <rect x="14" y="140" width="216" height="124" rx="4" fill="#fdf6f4" stroke="#e0c3bd"/>
+  <text x="24" y="155" font-size="7.6" font-weight="700" fill="#8c2f1e">閉と連続の違い</text>
+  <text x="24" y="172" font-size="6.6" fill="#8c2f1e">連続　xₙ → x ならば Txₙ → Tx</text>
+  <text x="24" y="186" font-size="6.6" fill="#8c2f1e">閉　　xₙ → x かつ Txₙ → y ならば y ＝ Tx</text>
+  <text x="24" y="203" font-size="6.4" fill="#6a6a68">閉のほうが弱い——Txₙ の収束を</text>
+  <text x="24" y="214" font-size="6.4" fill="#6a6a68">仮定に回してよい</text>
+  <text x="24" y="230" font-size="6.6" fill="#1e4a41">両方が完備なら、二つは一致する</text>
+  <text x="24" y="246" font-size="6.4" fill="#5a4520">微分作用素は閉だが連続でない</text>
+  <text x="24" y="257" font-size="6.4" fill="#6a6a68">——定義域が空間全体でないから（第78章）</text>
+
+  <rect x="240" y="140" width="216" height="124" rx="4" fill="#f4f1ea" stroke="#8a6b2c"/>
+  <text x="250" y="155" font-size="7.6" font-weight="700" fill="#5a4520">開写像定理の二段構え</text>
+  <text x="250" y="172" font-size="6.6" fill="#5a4520">第一段　T(B) の閉包が 0 の近傍</text>
+  <text x="250" y="183" font-size="6.4" fill="#6a6a68">——ベールのカテゴリー定理を使う</text>
+  <text x="250" y="198" font-size="6.6" fill="#5a4520">第二段　閉包を外す</text>
+  <text x="250" y="209" font-size="6.4" fill="#6a6a68">——半分ずつ詰める反復近似。E の完備性</text>
+  <text x="250" y="225" font-size="6.6" fill="#8c2f1e">E と F の両方の完備性が要る</text>
+  <text x="250" y="241" font-size="6.4" fill="#6a6a68">第二段は、第61章のリース–フィッシャーの</text>
+  <text x="250" y="252" font-size="6.4" fill="#6a6a68">証明とまったく同じ形をしている</text>
+  <text x="250" y="263" font-size="6.4" fill="#1e4a41">比較可能な二つの完備ノルムは自動的に同値</text>
+</svg>
+<figcaption data-ch="69">一様有界性・開写像・閉グラフの三定理は、いずれもベールのカテゴリー定理から来て、互いに導き合う。開写像定理は「閉包が近傍」から「そのものが近傍」へ渡る二段構えで証明される。</figcaption>
+</figure>
+
+<div class="lv2">
+<h4>閉値域定理と、解の存在条件</h4>
+<p>開写像定理は「全射なら開」と言う。<em>全射でないときは何が言えるか。</em></p>
+<p><strong>閉値域定理（バナッハ）。</strong><m>T\in B(E,F)</m>（<m>E,F</m> バナッハ）について、次は同値である。</p>
+<p>（1）<m>\mathrm{ran}\,T</m> が閉。（2）<m>\mathrm{ran}\,T^*</m> が閉。（3）<m>\mathrm{ran}\,T = {}^\circ(\ker T^*)</m>。（4）<m>\mathrm{ran}\,T^*=(\ker T)^\circ</m>。</p>
+<p><em>第66章★★の零化域の記法を使っている。</em></p>
+<p><strong>何が得られるか。</strong>（3）は「方程式 <m>Tx=y</m> が解をもつ条件」を与える。</p>
+<M>Tx=y \text{ が解をもつ} \iff \varphi(y)=0 \ \ (\forall\varphi\in\ker T^*)</M>
+<p><span class="yogo-hl">ただし、これは値域が閉であることを前提とする。</span><em>値域が閉でないと、「直交条件を満たすが解がない」<m>y</m> が出てくる。</em></p>
+<p><strong>値域が閉になる判定。</strong><m>\mathrm{ran}\,T</m> が閉であることと</p>
+<M>\exists c>0: \ \ \|Tx\| \ge c\,\mathrm{dist}(x,\ker T) \qquad (\forall x\in E)</M>
+<p class="no-indent">は同値である。<em>「下からの評価」があれば値域が閉になる。</em></p>
+<p><em>証明。</em><m>E/\ker T\to\mathrm{ran}\,T</m> が全単射になるので、開写像定理を使う。</p>
+<p><strong>第73章への橋。</strong>コンパクト作用素 <m>K</m> について <m>I-K</m> の値域は閉である。<span class="yogo-hl">これがフレドホルムの択一定理の技術的な基礎になる。</span></p>
+<p><strong>実例——偏微分方程式。</strong>楕円型作用素 <m>L</m> について、<m>Lu=f</m> が解をもつ条件を「<m>f</m> が <m>L^*</m> の核に直交すること」で書く。<em>値域の閉性は、第88章のソボレフ空間での評価から出る。</em></p>
+<p>「解の存在」を「直交条件」に翻訳するのが、関数解析の実用上もっとも重要な働きである。</p>
+</div>
+
+<div class="lv3">
+<h4>閉グラフ定理が壊れる場所と、可測グラフ</h4>
+<p><strong>完備性は外せない。</strong><m>E=C^1[0,1]</m> に一様ノルムを入れる（完備でない）。<m>T=d/dx \colon E\to C[0,1]</m> は閉だが有界でない。</p>
+<p><em>閉であること。</em><m>f_n\to f</m> 一様、<m>f_n'\to g</m> 一様なら、第48章★★より <m>f</m> は微分可能で <m>f'=g</m>。</p>
+<p><strong>局所凸空間では。</strong>閉グラフ定理はフレシェ空間どうしでは成り立つ。<em>一般の局所凸空間では成り立たない。</em></p>
+<p>成り立つための条件を整理したのが、<em>ウェブ空間</em>の理論（ド・ウィルデ）である。<span class="yogo-hl">第87章の超関数の空間は、フレシェ空間でないがウェブ空間なので、閉グラフ定理が使える。</span></p>
+<p><strong>可測グラフ定理。</strong>驚くべき一般化がある。<em><m>E,F</m> をポーランド空間（第33章）上の可分バナッハ空間とし、線型写像 <m>T</m> のグラフが<strong>ボレル可測</strong>（閉でなくてよい）なら、<m>T</m> は連続である。</em></p>
+<p>証明は記述集合論（第53章★★★）を使う。<span class="yogo-hl">「可測」という非常に弱い条件から「連続」が出る。</span></p>
+<p><strong>したがって。</strong>不連続な線型汎関数（ハメル基底で作るもの）は、<em>どれも非可測なグラフをもつ</em>。</p>
+<p>第53章で「非可測集合は選択公理が作る」と述べた。<span class="yogo-hl">不連続な線型汎関数も同じである</span>——ソロヴェイのモデルでは、<m>\mathbb{R}</m> 上の加法的関数はすべて線型かつ連続になる。</p>
+<p><strong>コーシーの関数方程式。</strong><m>f(x+y)=f(x)+f(y)</m> を満たす <m>f \colon \mathbb{R}\to\mathbb{R}</m> は、<em>可測なら <m>f(x)=cx</m></em>（フレシェ）。</p>
+<p>可測性を外すと、ハメル基底で病的な解が作れる。<em>そのグラフは <m>\mathbb{R}^2</m> で稠密になる。</em></p>
+<p>一九〇五年のハメルの構成は、<span class="yogo-hl">選択公理が生む病理の最初の例の一つだった。</span>第53章のヴィタリの非可測集合（一九〇五年）と同じ年である。</p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li>連続な線型写像が閉であることを示せ。</li>
+<li><m>d/dx \colon C^1[0,1]\to C[0,1]</m>（一様ノルム）が閉であることを示せ。</li>
+<li><ref t="cor-norm-douchi"/> を <ref t="cor-gyaku-yukai"/> から導け。</li>
+<li>グラフのノルム <m>\|x\|+\|Tx\|</m> がノルムであることを確かめよ。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li><ref t="thm-kai-shazo"/> の第一段を、細部まで示せ。<span class="haiten">（30点）</span></li>
+<li><ref t="thm-kai-shazo"/> の第二段（反復近似）を示せ。<span class="haiten">（35点）</span></li>
+<li><ref t="thm-hei-graph"/> を <ref t="cor-gyaku-yukai"/> から導け。<span class="haiten">（25点）</span></li>
+<li><ref t="cor-hoshakan"/> を示せ。<span class="haiten">（25点）</span></li>
+<li>値域が閉であることと下からの評価が同値であることを示せ。<span class="haiten">（35点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li>閉値域定理の（1）と（3）の同値性を示せ。<span class="haiten">（45点）</span></li>
+<li>可測な加法的関数が線型であることを示せ。<span class="haiten">（40点）</span></li>
+<li>不連続な加法的関数のグラフが <m>\mathbb{R}^2</m> で稠密であることを示せ。<span class="haiten">（40点）</span></li>
+</ol>
+</div>
+</div>
+<nav class="chnav">
+<a class="prev" href="ch68.html">← 第68章　一様有界性の原理</a>
+<a class="next" href="ch70.html">第70章　弱位相と弱*位相 →</a>
+</nav>
+</article>
+</main>
+<footer class="site">
+  <p>位相・解析大全　学部から大学院まで、三層で読む位相空間論と解析学</p>
+  <p class="small">本文・図版とも本書のために作成したものです。数式は MathJax でベクタ化して組んでいます。</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第36章 セル数とスーリン問題｜位相・解析大全</title>
+<meta name="description" content="位相・解析大全　第36章　セル数とスーリン問題">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;600&display=swap">
+<link rel="stylesheet" href="web.css">
+</head>
+<body>
+<header class="site">
+  <a class="site-title" href="index.html">位相・解析大全</a>
+  <nav class="site-nav">
+    <a href="index.html">目次</a>
+    <a href="isou-kaiseki-taizen.pdf">PDF版</a>
+  </nav>
+</header>
+<main>
+<article class="chapter">
+<p class="part-label">第V部　基数不変量と次元論</p>
+<h1><span class="ch-num">第36章</span>セル数とスーリン問題</h1>
+<nav class="chnav">
+<a class="prev" href="ch35.html">← 第35章　基数不変量——重み・稠密度・指標</a>
+<a class="next" href="ch37.html">第37章　積空間の基数不変量 →</a>
+</nav>
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>実数直線を特徴づけるのに、可分性は外せないのか。</li>
+<li>「交わらない開集合は可算個しかない」という条件は、可分性より弱いのか。</li>
+<li>公理系から決まらない位相的な問いとは、どういうものか。</li>
+</ul>
+</div>
+
+<h3 id="s36-1">実数直線の特徴づけ</h3>
+
+<p>カントールの定理がある。<em>実数直線は、順序の性質だけで特徴づけられる。</em></p>
+
+<div class="teiri" id="thm-cantor-tokucho">
+<h4>カントールによる実数直線の特徴づけ</h4>
+<p class="no-indent">全順序集合 <m>L</m>（順序位相を入れる）が次をすべて満たすなら、<m>L</m> は <m>\mathbb{R}</m> と順序同型である。</p>
+<p class="no-indent">（1）稠密——任意の二点のあいだに点がある。<br>
+（2）端点をもたない。<br>
+（3）連結——すなわち順序について完備（有界集合が上限をもつ）。<br>
+（4）<strong>可分</strong>——可算な稠密部分集合をもつ。</p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">（4）が <m>\mathbb{Q}</m> の役割を果たしている。<em>可算な稠密集合があれば、それが <m>\mathbb{Q}</m> と順序同型になり（カントールの背進法）、その完備化として <m>L \cong \mathbb{R}</m> が従う。</em></p>
+</div>
+
+<p>スーリン <span class="orig">Souslin</span> が一九二〇年に問うた。<span class="yogo-hl">（4）を、より弱い条件に置き換えられないか。</span></p>
+
+<div class="teigi" id="def-ccc">
+<h4>可算鎖条件</h4>
+<p class="no-indent">位相空間 <m>X</m> が<strong>可算鎖条件</strong>（<m>\mathrm{ccc}</m>）を満たすとは、互いに交わらない空でない開集合の族がつねに可算であることをいう。第35章の記号では <m>c(X) = \aleph_0</m>。</p>
+</div>
+
+<div class="teiri" data-kind="命題" id="prop-kabun-ccc">
+<h4></h4>
+<p class="no-indent">可分ならば可算鎖条件を満たす。逆は一般には成り立たない。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">第35章の <m>c(X) \le d(X)</m> による。</p>
+<p>逆の反例。<m>\{0,1\}^{I}</m>（<m>|I| > 2^{\aleph_0}</m>）は可算鎖条件を満たすが（第37章で示す）、可分でない。<em>ただしこれは順序位相をもつ空間ではない。</em></p>
+</div>
+
+<h3 id="s36-2">スーリン問題</h3>
+
+<div class="teiri" data-kind="問題" id="prob-souslin">
+<h4>スーリン問題</h4>
+<p class="no-indent"><ref t="thm-cantor-tokucho"/> の（4）を「可算鎖条件」に置き換えても、<m>L \cong \mathbb{R}</m> が従うか。</p>
+</div>
+
+<div class="teigi" id="def-souslin-line">
+<h4></h4>
+<p class="no-indent">（1）（2）（3）と可算鎖条件を満たすが可分でない全順序集合を、<strong>スーリン直線</strong>という。スーリン問題は「スーリン直線が存在しないか」と同じである。</p>
+</div>
+
+<div class="teiri" id="thm-souslin-dokuritsu">
+<h4></h4>
+<p class="no-indent">スーリン直線の存在は、集合論の公理系から証明も反証もできない。</p>
+<p class="no-indent">（1）構成可能性公理 <m>V = L</m> のもとでは、スーリン直線が存在する（イェンセン）。<br>
+（2）マーティンの公理と連続体仮説の否定のもとでは、スーリン直線は存在しない（ソロヴェイ–テネンバウム）。</p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">この定理は、第4章★★★で予告したことの実例である。<em>「実数直線を特徴づけるのに可分性は外せるか」という素朴な問いが、公理系から決まらない。</em><span class="yogo-hl">未解決ではない——独立であることが決着している。</span></p>
+</div>
+
+<h3 id="s36-3">スーリン木への翻訳</h3>
+
+<p>証明は直接には行われない。<em>問題を木の言葉に翻訳する。</em></p>
+
+<div class="teigi" id="def-souslin-tree">
+<h4>スーリン木</h4>
+<p class="no-indent">半順序集合 <m>T</m> が<strong>木</strong>であるとは、各元より下の元の全体が整列していることをいう。<m>T</m> の高さが <m>\omega_1</m> で、<span class="yogo-hl">鎖も反鎖もすべて可算</span>であるとき、<m>T</m> を<strong>スーリン木</strong>という。</p>
+</div>
+
+<div class="teiri" id="thm-souslin-doti">
+<h4></h4>
+<p class="no-indent">スーリン直線が存在することと、スーリン木が存在することは同値である。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">骨子だけ述べる。<strong>直線から木へ。</strong>スーリン直線 <m>L</m> から、区間を細分していく過程を木として記録する。<m>\omega_1</m> 段まで細分できる（可分でないから）が、<em>各段の区間の族は可算鎖条件より可算である</em>——これが反鎖の可算性になる。</p>
+<p><strong>木から直線へ。</strong>スーリン木の枝の全体に辞書式順序を入れる。<span class="yogo-hl">反鎖が可算であることが可算鎖条件に、鎖が可算であることが可分でないことに翻訳される。</span></p>
+<p>細部には、木を正規化する（各段で分岐が二つ、各元の上に <m>\omega_1</m> 個の元がある）操作が要る。</p>
+</div>
+
+<figure id="fig36-1">
+<svg viewBox="0 0 470 280" width="470" height="280" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">スーリン木——高さ ω₁ で、鎖も反鎖も可算</text>
+
+  <rect x="14" y="26" width="442" height="130" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+
+  <g stroke="#35618f" stroke-width="0.9" fill="none">
+    <path d="M150,44 L110,64"/><path d="M150,44 L190,64"/>
+    <path d="M110,64 L90,84"/><path d="M110,64 L130,84"/>
+    <path d="M190,64 L170,84"/><path d="M190,64 L210,84"/>
+    <path d="M90,84 L80,104"/><path d="M90,84 L100,104"/>
+    <path d="M130,84 L120,104"/><path d="M130,84 L140,104"/>
+    <path d="M170,84 L160,104"/><path d="M170,84 L180,104"/>
+    <path d="M210,84 L200,104"/><path d="M210,84 L220,104"/>
+  </g>
+  <g fill="#35618f">
+    <circle cx="150" cy="44" r="2.6"/>
+    <circle cx="110" cy="64" r="2.4"/><circle cx="190" cy="64" r="2.4"/>
+    <circle cx="90" cy="84" r="2.2"/><circle cx="130" cy="84" r="2.2"/>
+    <circle cx="170" cy="84" r="2.2"/><circle cx="210" cy="84" r="2.2"/>
+    <circle cx="80" cy="104" r="2"/><circle cx="100" cy="104" r="2"/>
+    <circle cx="120" cy="104" r="2"/><circle cx="140" cy="104" r="2"/>
+    <circle cx="160" cy="104" r="2"/><circle cx="180" cy="104" r="2"/>
+    <circle cx="200" cy="104" r="2"/><circle cx="220" cy="104" r="2"/>
+  </g>
+  <text x="150" y="122" font-size="6.4" text-anchor="middle" fill="#6a6a68">⋯ 高さ ω₁ まで続く</text>
+  <text x="34" y="48" font-size="6.2" text-anchor="end" fill="#6a6a68">第0段</text>
+  <text x="34" y="68" font-size="6.2" text-anchor="end" fill="#6a6a68">第1段</text>
+  <text x="34" y="88" font-size="6.2" text-anchor="end" fill="#6a6a68">第2段</text>
+  <text x="34" y="108" font-size="6.2" text-anchor="end" fill="#6a6a68">第3段</text>
+  <line x1="40" y1="44" x2="64" y2="44" stroke="#c9c9c7" stroke-width="0.5"/>
+  <line x1="40" y1="64" x2="64" y2="64" stroke="#c9c9c7" stroke-width="0.5"/>
+  <line x1="40" y1="84" x2="64" y2="84" stroke="#c9c9c7" stroke-width="0.5"/>
+  <line x1="40" y1="104" x2="64" y2="104" stroke="#c9c9c7" stroke-width="0.5"/>
+
+  <text x="252" y="48" font-size="7" font-weight="700" fill="#1f3b5c">二つの条件</text>
+  <text x="252" y="64" font-size="6.8" fill="#1f3b5c">鎖が可算　一本の枝は ω₁ まで届かない</text>
+  <text x="252" y="76" font-size="6.4" fill="#6a6a68">→ 直線の側では「可分でない」</text>
+  <text x="252" y="92" font-size="6.8" fill="#1f3b5c">反鎖が可算　互いに比較できない元は可算個</text>
+  <text x="252" y="104" font-size="6.4" fill="#6a6a68">→ 直線の側では「可算鎖条件」</text>
+  <text x="252" y="122" font-size="6.6" fill="#8c2f1e">高さ ω₁ なのに、どちらも可算</text>
+  <text x="252" y="134" font-size="6.4" fill="#6a6a68">この両立が、存在するかどうかの争点</text>
+
+  <text x="24" y="148" font-size="6.6" fill="#6b2a48">通常の二分木（長さが可算な 0-1 列の全体）は、反鎖が非可算になってしまう</text>
+
+  <rect x="14" y="168" width="216" height="98" rx="4" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="24" y="183" font-size="7.6" font-weight="700" fill="#1e4a41">存在する側のモデル</text>
+  <text x="24" y="200" font-size="6.8" fill="#1e4a41">構成可能性公理 V = L</text>
+  <text x="24" y="213" font-size="6.6" fill="#6a6a68">イェンセンの菱形原理 ◊ から作れる</text>
+  <text x="24" y="226" font-size="6.6" fill="#6a6a68">◊ は連続体仮説より強い</text>
+  <text x="24" y="243" font-size="6.8" fill="#1e4a41">各段で「先を読んで」分岐を決める</text>
+  <text x="24" y="256" font-size="6.6" fill="#6a6a68">超限帰納法で ω₁ 段まで構成する</text>
+
+  <rect x="240" y="168" width="216" height="98" rx="4" fill="#fdf6f4" stroke="#e0c3bd"/>
+  <text x="250" y="183" font-size="7.6" font-weight="700" fill="#8c2f1e">存在しない側のモデル</text>
+  <text x="250" y="200" font-size="6.8" fill="#8c2f1e">マーティンの公理 ＋ 連続体仮説の否定</text>
+  <text x="250" y="213" font-size="6.6" fill="#6a6a68">ソロヴェイ–テネンバウム（1971）</text>
+  <text x="250" y="226" font-size="6.6" fill="#6a6a68">反復強制法を使う</text>
+  <text x="250" y="243" font-size="6.8" fill="#8c2f1e">マーティンの公理が「可算鎖条件なら十分に均質」を保証</text>
+  <text x="250" y="256" font-size="6.6" fill="#6a6a68">スーリン木の枝を強制的に作ってしまう</text>
+</svg>
+<figcaption data-ch="36">高さ ω₁ の木で、鎖も反鎖も可算なもの。この両立が可能かどうかが、スーリン問題の核心である。存在するモデルと存在しないモデルの両方が作られている。</figcaption>
+</figure>
+
+<h3 id="s36-4">位相的な帰結</h3>
+
+<div class="rei" id="rei-souslin-kekka">
+<h4>スーリン直線が存在するとどうなるか</h4>
+<p class="no-indent"><strong>可算鎖条件が積で壊れる。</strong><m>L</m> をスーリン直線とすると、<m>L \times L</m> は可算鎖条件を満たさない。<em>したがって「可算鎖条件は積で保たれるか」という問いも、公理に依存する</em>（第37章）。</p>
+<p><strong>遺伝的リンデレーフと遺伝的可分が分かれる。</strong>スーリン直線は遺伝的リンデレーフだが遺伝的可分でない、あるいはその逆になる。<span class="yogo-hl">通常の空間ではこの二つが一致しがちだが、スーリン直線が分ける。</span></p>
+<p><strong>第一可算で完全正規な非距離化空間。</strong>スーリン直線は第一可算・完全正規・連結・可算鎖条件を満たすが距離化できない。<em>第31章で挙げた条件の組み合わせに、もう一つ反例が加わる。</em></p>
+</div>
+
+<div class="lv2">
+<h4>マーティンの公理</h4>
+<p>スーリン問題の解決に使われたマーティンの公理 <m>\mathrm{MA}</m> は、それ自体が位相的な意味をもつ。<em>内容を述べておく。</em></p>
+<p><strong>主張。</strong><m>\kappa < 2^{\aleph_0}</m> とする。<m>\mathrm{MA}_\kappa</m> は次を主張する。<em>可算鎖条件を満たす半順序集合 <m>P</m> と、<m>\kappa</m> 個以下の稠密部分集合の族 <m>\{D_\alpha\}</m> に対し、すべての <m>D_\alpha</m> と交わるフィルターが存在する。</em></p>
+<p><m>\mathrm{MA}</m> はすべての <m>\kappa < 2^{\aleph_0}</m> についての主張である。</p>
+<p><strong>連続体仮説との関係。</strong><span class="yogo-hl"><m>\mathrm{MA}_{\aleph_0}</m> は定理である</span>（ラシオワ–シコルスキの補題）。連続体仮説を仮定すると <m>\mathrm{MA}</m> は自動的に成り立つ（<m>\kappa < 2^{\aleph_0} = \aleph_1</m> なら <m>\kappa = \aleph_0</m>）。</p>
+<p><em>したがって <m>\mathrm{MA}</m> が面白いのは、連続体仮説を否定したときである。</em></p>
+<p><strong>ベールの定理の一般化。</strong><m>\mathrm{MA}_{\aleph_0}</m> は、実はベールのカテゴリー定理（第27章）の言い換えである。<span class="yogo-hl"><m>\mathrm{MA}</m> は「可算個」を「連続体未満の個数」に強めたベールの定理である。</span></p>
+<p>この見方をすると、位相的な内容が見えてくる。<em><m>\mathrm{MA}</m> のもとでは、可算鎖条件を満たす空間で「連続体未満個の稠密開集合の交叉が稠密」になる。</em></p>
+<p><strong>位相的な帰結。</strong><m>\mathrm{MA}</m> ＋ 連続体仮説の否定のもとで、次が成り立つ。</p>
+<p><em>スーリン直線が存在しない</em>（本章）。<em>可算鎖条件が積で保たれる</em>（第37章）。<em>濃度 <m>\aleph_1</m> の集合はルベーグ測度零</em>（第53章に関係）。<em>第一類集合の <m>\aleph_1</m> 個の合併は第一類</em>。</p>
+<p><span class="yogo-hl"><m>\mathrm{MA}</m> は「<m>\aleph_1</m> が可算のように振る舞う」ことを保証する。</span></p>
+<p><strong>強制法の影。</strong><m>\mathrm{MA}</m> の無矛盾性は、反復強制法で示される。<em>強制法とは、集合論のモデルに新しい対象を「付け加える」手法である。</em></p>
+<p>本書はこの技法に立ち入らない。<span class="yogo-hl">だが第V部で扱う独立な命題は、どれもこの手法で扱われていることは記しておく。</span></p>
+</div>
+
+<div class="lv3">
+<h4>菱形原理と、スーリン木の構成</h4>
+<p>存在する側の証明を、骨格だけ見ておく。<em>イェンセン <span class="orig">Jensen</span> の菱形原理 <m>\diamondsuit</m> から構成する。</em></p>
+<p><strong>菱形原理。</strong><m>\{A_\alpha\}_{\alpha < \omega_1}</m>（<m>A_\alpha \subseteq \alpha</m>）が存在して、<em>どの <m>A \subseteq \omega_1</m> についても <m>\{\alpha \mid A \cap \alpha = A_\alpha\}</m> が定常集合になる</em>、という主張である。</p>
+<p><span class="yogo-hl">「<m>\omega_1</m> のすべての部分集合を、可算段階で先読みできる」と読める。</span><m>\diamondsuit</m> は連続体仮説を含意し、<m>V = L</m> のもとで成り立つ。</p>
+<p><strong>構成の骨子。</strong><m>\omega_1</m> 段の木を超限帰納法で作る。各段 <m>\alpha</m> で、</p>
+<p><em>後続段</em>——各元の上に二つの元を置く。<em>極限段</em>——下の段の枝のうち、いくつかを延ばす。</p>
+<p><span class="yogo-hl">問題は、極限段でどの枝を延ばすかである。</span>すべて延ばすと反鎖が大きくなり、延ばさなすぎると木が途切れる。</p>
+<p><strong>菱形原理の使い方。</strong>極限段 <m>\alpha</m> で、<m>A_\alpha</m> が「これまでに作った木の非可算反鎖の候補」を表しているとみなす。<em>その候補を潰すように枝を選ぶ。</em></p>
+<p>定常性により、どの非可算反鎖も、ある段で <m>A_\alpha</m> として捉えられる。<span class="yogo-hl">その段で潰されるので、最終的に非可算反鎖は存在しない。</span></p>
+<p>鎖が可算であることは、各段の構成から従う（各元の上に <m>\omega_1</m> 個の元があるようにすれば、一本の枝が <m>\omega_1</m> まで届かない）。</p>
+<p><strong>何が起きているのか。</strong>菱形原理は<em>「未来を先読みする」能力</em>を与える。超限帰納法の各段で、これから起こりうる「悪いこと」を一つずつ潰していける。</p>
+<p>第4章で超限帰納法を導入したとき、「各段で条件を満たすものを選ぶ」と述べた。<span class="yogo-hl">菱形原理は、その選択を賢く行うための道具である。</span></p>
+<p><strong>対照的に。</strong>マーティンの公理は逆向きに働く。<em>「どんな悪い候補も、十分に一般的なフィルターで回避できる」と主張する。</em></p>
+<p>菱形原理は病理を作り、マーティンの公理は病理を消す。<span class="yogo-hl">二つの公理が、位相空間論の同じ問いに反対の答えを与える。</span></p>
+<p><strong>本書の方針。</strong>第4章で述べたとおり、独立な命題は「未解決」とは書かない。<em>スーリン問題は決着している——独立であることが証明されている。</em></p>
+<p>第42章で次元論の反例を扱うとき、同種の状況に再び出会う。<span class="yogo-hl">そこでは次元という素朴な概念が、公理に依存する場面が現れる。</span></p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li><m>\mathbb{R}</m> が可算鎖条件を満たすことを示せ。</li>
+<li>可分ならば可算鎖条件を満たすことを示せ。</li>
+<li>非可算離散空間が可算鎖条件を満たさないことを示せ。</li>
+<li>スーリン直線の定義を述べ、それが <m>\mathbb{R}</m> と同型でない理由を述べよ。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li><ref t="thm-cantor-tokucho"/> の証明の骨子（背進法）を述べよ。<span class="haiten">（25点）</span></li>
+<li>スーリン直線が存在すれば <m>L \times L</m> が可算鎖条件を満たさないことを示せ。<span class="haiten">（30点）</span></li>
+<li>スーリン木の定義から、鎖と反鎖の可算性が直線の側の何に対応するかを説明せよ。<span class="haiten">（25点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li>マーティンの公理 <m>\mathrm{MA}_{\aleph_0}</m> がベールのカテゴリー定理と同値であることを説明せよ。<span class="haiten">（35点）</span></li>
+<li><ref t="thm-souslin-doti"/> の「直線から木へ」の方向を、区間の細分として構成せよ。<span class="haiten">（40点）</span></li>
+</ol>
+</div>
+</div>
+<nav class="chnav">
+<a class="prev" href="ch35.html">← 第35章　基数不変量——重み・稠密度・指標</a>
+<a class="next" href="ch37.html">第37章　積空間の基数不変量 →</a>
+</nav>
+</article>
+</main>
+<footer class="site">
+  <p>位相・解析大全　学部から大学院まで、三層で読む位相空間論と解析学</p>
+  <p class="small">本文・図版とも本書のために作成したものです。数式は MathJax でベクタ化して組んでいます。</p>
+</footer>
+</body>
+</html>

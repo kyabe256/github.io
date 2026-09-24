@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第65章 正規直交基底とParsevalの等式｜位相・解析大全</title>
+<meta name="description" content="位相・解析大全　第65章　正規直交基底とParsevalの等式">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;600&display=swap">
+<link rel="stylesheet" href="web.css">
+</head>
+<body>
+<header class="site">
+  <a class="site-title" href="index.html">位相・解析大全</a>
+  <nav class="site-nav">
+    <a href="index.html">目次</a>
+    <a href="isou-kaiseki-taizen.pdf">PDF版</a>
+  </nav>
+</header>
+<main>
+<article class="chapter">
+<p class="part-label">第VIII部　関数空間</p>
+<h1><span class="ch-num">第65章</span>正規直交基底とParsevalの等式</h1>
+<nav class="chnav">
+<a class="prev" href="ch64.html">← 第64章　Hilbert空間と直交分解</a>
+<a class="next" href="ch66.html">第66章　双対空間 →</a>
+</nav>
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>無限次元で「基底」とは何を意味するのか。</li>
+<li>なぜ係数は内積で書けるのか。</li>
+<li>パーセヴァルの等式は、何を保存しているのか。</li>
+</ul>
+</div>
+
+<h3 id="s65-1">無限次元の基底</h3>
+
+<div class="chui">
+<h4>二種類の基底</h4>
+<p class="no-indent"><strong>ハメル基底</strong>——線型代数の意味の基底。どの元も<em>有限個</em>の一次結合で一意に書ける。選択公理で存在するが、無限次元バナッハ空間では非可算（ベールのカテゴリー定理から）。<span class="yogo-hl">解析には使えない。</span></p>
+<p><strong>シャウダー基底</strong>——どの元も<em>無限級数</em>として一意に書ける。<em>収束が関わるので、位相に依存する概念である。</em></p>
+<p>ヒルベルト空間では、直交性のおかげで話が格段に簡単になる。</p>
+</div>
+
+<div class="teigi" id="def-seiki-chokkou">
+<h4>正規直交系</h4>
+<p class="no-indent"><m>\{e_i\}_{i\in I}\subseteq H</m> が<strong>正規直交系</strong>であるとは、<m>\langle e_i,e_j\rangle = \delta_{ij}</m> を満たすことをいう。</p>
+<p>さらに <m>\overline{\mathrm{span}}\{e_i\} = H</m> のとき<strong>完全</strong>（正規直交基底）であるという。</p>
+</div>
+
+<div class="teiri" id="thm-bessel">
+<h4>ベッセルの不等式</h4>
+<p class="no-indent"><m>\{e_i\}_{i\in I}</m> を正規直交系とすると、どの <m>x\in H</m> についても</p>
+<M>\sum_{i\in I}|\langle x,e_i\rangle|^2 \ \le\ \|x\|^2</M>
+<p class="no-indent">とくに <m>\langle x,e_i\rangle\ne0</m> なる <m>i</m> は高々可算個である。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">有限部分集合 <m>F\subseteq I</m> について、<m>y=\sum_{i\in F}\langle x,e_i\rangle e_i</m> とおく。</p>
+<M>0 \le \|x-y\|^2 = \|x\|^2 - \sum_{i\in F}|\langle x,e_i\rangle|^2</M>
+<p class="no-indent"><em><m>F</m> について上限を取ればよい。</em></p>
+<p>可算性。<m>\{\,i \mid |\langle x,e_i\rangle|>1/n\,\}</m> は高々 <m>n^2\|x\|^2</m> 個。<span class="yogo-hl">その可算合併だから、非零の係数は高々可算個。</span></p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">この「高々可算」が効いている。<em>正規直交系がどんなに大きくても、一つの元を展開するのに使うのは可算個だけである。</em></p>
+<p>第35章の言葉でいえば、<span class="yogo-hl">ヒルベルト空間の指標が可算であることの現れである。</span></p>
+</div>
+
+<h3 id="s65-2">完全性の特徴づけ</h3>
+
+<div class="teiri" id="thm-parseval">
+<h4>パーセヴァルの等式</h4>
+<p class="no-indent"><m>\{e_i\}_{i\in I}</m> を正規直交系とすると、次は同値である。</p>
+<p class="no-indent">（1）<m>\{e_i\}</m> は完全（<m>\overline{\mathrm{span}}\{e_i\}=H</m>）。<br>
+（2）<m>\langle x,e_i\rangle=0</m>（<m>\forall i</m>）ならば <m>x=0</m>。<br>
+（3）どの <m>x</m> についても <m>x = \sum_{i}\langle x,e_i\rangle e_i</m>（無条件収束）。<br>
+（4）どの <m>x</m> についても <m>\|x\|^2 = \sum_i |\langle x,e_i\rangle|^2</m>（パーセヴァルの等式）。<br>
+（5）どの <m>x,y</m> についても <m>\langle x,y\rangle = \sum_i \langle x,e_i\rangle\overline{\langle y,e_i\rangle}</m>。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">（1）から（2）。<m>x\perp e_i</m> なら <m>x\perp\overline{\mathrm{span}}\{e_i\}=H</m>、とくに <m>x\perp x</m>。</p>
+<p>（2）から（3）。<ref t="thm-bessel"/> より <m>\sum_i|\langle x,e_i\rangle|^2<\infty</m> なので、部分和はコーシー列（直交性からピタゴラスの定理が使える）。<em>完備性より収束して <m>y=\sum_i\langle x,e_i\rangle e_i</m> が定まる。</em></p>
+<p><m>\langle x-y,e_j\rangle = \langle x,e_j\rangle - \langle x,e_j\rangle = 0</m> なので（2）より <m>x=y</m>。</p>
+<p>（3）から（4）。ノルムの連続性と、部分和でのピタゴラスの定理。</p>
+<p>（4）から（1）。<m>M=\overline{\mathrm{span}}\{e_i\}</m> とし、<m>x\in M^\perp</m> とすると（4）より <m>\|x\|^2=0</m>。<ref t="thm-chokkou-bunkai"/> より <m>M=H</m>。</p>
+<p>（3）と（5）は、内積の連続性で行き来する。</p>
+</div>
+
+<div class="chui">
+<h4>何が保存されているか</h4>
+<p class="no-indent"><span class="yogo-hl">パーセヴァルの等式は、展開がノルムを保つことをいう。</span></p>
+<p>つまり <m>x\mapsto(\langle x,e_i\rangle)_i</m> は <m>H</m> から <m>\ell^2(I)</m> への<em>等距離同型</em>である。</p>
+<p><em>ピタゴラスの定理の無限版</em>と読める。第85章のプランシュレルの定理は、この等式のフーリエ変換版である。</p>
+</div>
+
+<div class="teiri" id="thm-hilbert-bunrui">
+<h4>ヒルベルト空間の分類</h4>
+<p class="no-indent">どのヒルベルト空間にも正規直交基底が存在し、その濃度は基底の取り方によらない（<strong>ヒルベルト次元</strong>）。</p>
+<p class="no-indent">二つのヒルベルト空間がユニタリ同型であることと、ヒルベルト次元が等しいことは同値である。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">存在。正規直交系の全体を包含で順序づけ、ツォルンの補題（第3章）を使う。<em>極大な正規直交系は完全である</em>（<ref t="thm-parseval"/>（2））。</p>
+<p>濃度の一意性。<m>\{e_i\}_{i\in I}</m>、<m>\{f_j\}_{j\in J}</m> を二つの基底とする。各 <m>i</m> について <m>\langle e_i,f_j\rangle\ne0</m> なる <m>j</m> は高々可算個で、<em>どの <m>j</m> もある <m>i</m> とは非零の内積をもつ</em>（そうでなければ <m>f_j=0</m>）。よって <m>|J|\le|I|\cdot\aleph_0</m>。</p>
+<p>無限次元なら <m>|J|\le|I|</m>、対称に <m>|I|\le|J|</m>。<em>有限次元は線型代数。</em></p>
+<p>同型。基底どうしを対応させる線型写像を延ばせば、パーセヴァルの等式から等距離になる。</p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent"><span class="yogo-hl">可分なヒルベルト空間は、すべて <m>\ell^2</m> と同型である。</span></p>
+<p><em>第61章★★で述べた <m>L^p</m> の可分性より、<m>L^2(\mathbb{R}^n)</m>、<m>L^2[0,1]</m>、<m>\ell^2</m> はすべて同じ空間である。</em></p>
+<p>「関数の空間」と「数列の空間」が同じものだという事実は、一九〇七年にリースとフィッシャーが示した。<em>当時これは驚きをもって受け取られた。</em>第80章のフーリエ級数が、その同型を具体的に与える。</p>
+</div>
+
+<h3 id="s65-3">グラム–シュミットと具体例</h3>
+
+<div class="teiri" data-kind="命題" id="prop-gram-schmidt">
+<h4>グラム–シュミットの直交化</h4>
+<p class="no-indent">一次独立な列 <m>(x_n)</m> から、<m>\mathrm{span}\{e_1,\ldots,e_n\}=\mathrm{span}\{x_1,\ldots,x_n\}</m> なる正規直交系 <m>(e_n)</m> が作れる。</p>
+<M>v_n = x_n - \sum_{k<n}\langle x_n,e_k\rangle e_k, \qquad e_n = \frac{v_n}{\|v_n\|}</M>
+</div>
+
+<div class="rei" id="rei-chokkou-rei">
+<h4>正規直交基底の例</h4>
+<p class="no-indent"><strong>三角関数系。</strong><m>L^2(\mathbb{T})</m> で <m>\{e^{inx}/\sqrt{2\pi}\}_{n\in\mathbb{Z}}</m>。<em>完全性は第62章★★★のストーン–ワイエルシュトラスから出る。</em>第80章で扱う。</p>
+<p><strong>ルジャンドル多項式。</strong><m>L^2[-1,1]</m> で <m>\{1,x,x^2,\ldots\}</m> をグラム–シュミットしたもの。</p>
+<p><strong>エルミート関数。</strong><m>L^2(\mathbb{R})</m> で <m>H_n(x)e^{-x^2/2}</m>。<em>フーリエ変換の固有関数である</em>（第85章）。</p>
+<p><strong>ハール系。</strong><m>L^2[0,1]</m> で、階段関数からなる基底。<em>ウェーブレットの原型である。</em></p>
+<p><strong>標準基底。</strong><m>\ell^2</m> で <m>e_n=(0,\ldots,0,1,0,\ldots)</m>。</p>
+</div>
+
+<figure id="fig65-1">
+<svg viewBox="0 0 470 274" width="470" height="274" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <defs>
+    <marker id="a65" markerWidth="8" markerHeight="8" refX="7" refY="2.6" orient="auto"><path d="M0,0 L7,2.6 L0,5.2 z" fill="#35618f"/></marker>
+  </defs>
+
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">展開は、ノルムをそのまま数列へ移す</text>
+
+  <rect x="14" y="26" width="442" height="106" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+
+  <rect x="36" y="46" width="130" height="26" rx="3" fill="#dce7f0" stroke="#35618f" stroke-width="1.2"/>
+  <text x="101" y="62" font-size="7" text-anchor="middle" font-weight="700" fill="#1f3b5c">ヒルベルト空間 H</text>
+
+  <rect x="304" y="46" width="130" height="26" rx="3" fill="#e6efe9" stroke="#2f6b5f" stroke-width="1.2"/>
+  <text x="369" y="62" font-size="7" text-anchor="middle" font-weight="700" fill="#1e4a41">ℓ²(I)</text>
+
+  <path d="M170,55 L300,55" stroke="#35618f" stroke-width="1.2" marker-end="url(#a65)"/>
+  <path d="M300,66 L170,66" stroke="#2f6b5f" stroke-width="1.2" marker-end="url(#a65)"/>
+  <text x="235" y="50" font-size="6.2" text-anchor="middle" fill="#1f3b5c">x ↦ (〈x, eᵢ〉)</text>
+  <text x="235" y="78" font-size="6.2" text-anchor="middle" fill="#1e4a41">(cᵢ) ↦ Σ cᵢ eᵢ</text>
+
+  <text x="101" y="92" font-size="6.2" text-anchor="middle" fill="#6a6a68">関数の空間</text>
+  <text x="369" y="92" font-size="6.2" text-anchor="middle" fill="#6a6a68">数列の空間</text>
+
+  <text x="235" y="106" font-size="6.6" text-anchor="middle" font-weight="700" fill="#8c2f1e">‖x‖² ＝ Σ |〈x, eᵢ〉|²（パーセヴァル）</text>
+  <text x="235" y="120" font-size="6.2" text-anchor="middle" fill="#6a6a68">等距離同型なので、二つは「同じ空間」である</text>
+
+  <rect x="14" y="142" width="216" height="122" rx="4" fill="#fdf6f4" stroke="#e0c3bd"/>
+  <text x="24" y="157" font-size="7.6" font-weight="700" fill="#8c2f1e">完全性の五つの言い換え</text>
+  <text x="24" y="174" font-size="6.6" fill="#8c2f1e">一　span の閉包が全体</text>
+  <text x="24" y="186" font-size="6.6" fill="#8c2f1e">二　すべての eᵢ と直交するのは 0 だけ</text>
+  <text x="24" y="198" font-size="6.6" fill="#8c2f1e">三　x ＝ Σ 〈x, eᵢ〉 eᵢ と展開できる</text>
+  <text x="24" y="210" font-size="6.6" fill="#8c2f1e">四　パーセヴァルの等式</text>
+  <text x="24" y="222" font-size="6.6" fill="#8c2f1e">五　内積が係数の内積に等しい</text>
+  <text x="24" y="239" font-size="6.4" fill="#6a6a68">二が一番使いやすい——「直交するものが</text>
+  <text x="24" y="249" font-size="6.4" fill="#6a6a68">0 しかない」ことだけ確かめればよい</text>
+  <text x="24" y="260" font-size="6.4" fill="#5a4520">三角関数系の完全性も、この形で示す</text>
+
+  <rect x="240" y="142" width="216" height="122" rx="4" fill="#f4f1ea" stroke="#8a6b2c"/>
+  <text x="250" y="157" font-size="7.6" font-weight="700" fill="#5a4520">ベッセルの不等式が言うこと</text>
+  <text x="250" y="174" font-size="6.6" fill="#5a4520">Σ |〈x, eᵢ〉|² ≤ ‖x‖²　（完全でなくても）</text>
+  <text x="250" y="188" font-size="6.6" fill="#8c2f1e">非零の係数は高々可算個</text>
+  <text x="250" y="200" font-size="6.4" fill="#6a6a68">基底がどんなに大きくても、一つの元の</text>
+  <text x="250" y="210" font-size="6.4" fill="#6a6a68">展開に使うのは可算個だけ</text>
+  <text x="250" y="226" font-size="6.6" fill="#1e4a41">ヒルベルト次元だけで同型が決まる</text>
+  <text x="250" y="238" font-size="6.4" fill="#6a6a68">可分なら、すべて ℓ² と同型</text>
+  <text x="250" y="252" font-size="6.4" fill="#8c2f1e">L²(ℝⁿ)・L²[0,1]・ℓ² は同じ空間である</text>
+  <text x="250" y="262" font-size="6.4" fill="#6a6a68">——一九〇七年のリース–フィッシャーの驚き</text>
+</svg>
+<figcaption data-ch="65">正規直交基底による展開は、ヒルベルト空間を ℓ² へ等距離に移す。ベッセルの不等式は完全でなくても成り立ち、非零の係数が高々可算個であることを保証する。ヒルベルト次元だけで同型類が決まる。</figcaption>
+</figure>
+
+<div class="lv2">
+<h4>最良近似と、部分和の最適性</h4>
+<p>正規直交系による展開には、<em>近似としての最適性</em>がある。</p>
+<p><strong>定理。</strong><m>\{e_1,\ldots,e_N\}</m> を正規直交系、<m>M=\mathrm{span}\{e_1,\ldots,e_N\}</m> とすると</p>
+<M>\min_{y\in M}\|x-y\| = \Big\|x-\sum_{k\le N}\langle x,e_k\rangle e_k\Big\|</M>
+<p class="no-indent"><em>すなわち、部分和がちょうど <m>M</m> への直交射影である。</em></p>
+<p><em>証明。</em><m>y=\sum c_ke_k</m> とすると</p>
+<M>\|x-y\|^2 = \|x\|^2 - \sum_k|\langle x,e_k\rangle|^2 + \sum_k|c_k-\langle x,e_k\rangle|^2</M>
+<p class="no-indent"><span class="yogo-hl">第三項を <m>0</m> にするのが最善——係数はフーリエ係数に取るしかない。</span></p>
+<p><strong>最小二乗法。</strong>この事実が、統計と数値解析の最小二乗法そのものである。<em>「データへの最良近似は、直交射影で与えられる」。</em></p>
+<p><strong>フーリエ級数の部分和。</strong><m>L^2(\mathbb{T})</m> で <m>S_Nf = \sum_{|n|\le N}\hat f(n)e^{inx}</m> は、<em>次数 <m>N</m> 以下の三角多項式のなかで <m>f</m> に最も近い</em>。</p>
+<p>そして完全性から <m>\|f-S_Nf\|_2\to0</m>。<span class="yogo-hl"><m>L^2</m> ではフーリエ級数が必ず収束する</span>——第80章以降で見るとおり、これは <m>L^2</m> に特有の恵まれた事情である。</p>
+<p><strong>各点収束とは別物。</strong><m>L^2</m> 収束は各点収束を意味しない（第61章）。<em>各点でどうなるかは、第81章から第83章の主題である。</em></p>
+<p><strong>無条件収束。</strong><ref t="thm-parseval"/>（3）の収束は無条件である——<em>並べ替えても同じ極限になる</em>。</p>
+<p>第49章★★★で「無限次元バナッハ空間では無条件収束と絶対収束が一致しない」と述べた。<span class="yogo-hl">ヒルベルト空間の直交展開は、まさにその例である</span>——<m>\sum\|\langle x,e_i\rangle e_i\|=\sum|\langle x,e_i\rangle|</m> は発散しうる。</p>
+</div>
+
+<div class="lv3">
+<h4>フレームとリース基底——直交性を緩める</h4>
+<p>正規直交基底は理想的だが、<em>実際の応用では作りにくいことがある</em>。条件を緩めた概念がある。</p>
+<p><strong>リース基底。</strong><m>\{f_i\}</m> が、ある有界可逆作用素 <m>T</m> によって正規直交基底の像 <m>f_i=Te_i</m> と書けるもの。<em>展開の一意性は保つが、直交性を失う。</em></p>
+<M>A\|x\|^2 \le \sum_i|\langle x,f_i\rangle|^2 \le B\|x\|^2 \qquad (0<A\le B<\infty)</M>
+<p><strong>フレーム。</strong>上の不等式だけを要求し、<em>一次独立性すら要求しない</em>もの。<span class="yogo-hl">冗長な「基底もどき」である。</span></p>
+<p>フレームがあれば、双対フレーム <m>\{\tilde f_i\}</m> が存在して</p>
+<M>x = \sum_i \langle x,f_i\rangle \tilde f_i = \sum_i \langle x,\tilde f_i\rangle f_i</M>
+<p class="no-indent"><em>展開は一意でないが、安定した再構成ができる。</em></p>
+<p><strong>なぜ冗長性が役立つのか。</strong>係数の一部が失われても復元できる。<em>通信路の誤りやノイズに強い。</em>ウェーブレット、ガボール解析、圧縮センシングはすべてこの枠組みを使う。</p>
+<p><strong>バリアン–ロウの定理。</strong>ガボール系 <m>\{e^{2\pi ibnx}g(x-am)\}</m> が <m>ab=1</m> でリース基底になるとき、<em><m>g</m> は「時間と周波数の両方で良い減衰」をもてない</em>——</p>
+<M>\Big(\int x^2|g|^2\Big)\Big(\int \xi^2|\hat g|^2\Big) = \infty</M>
+<p><span class="yogo-hl">不確定性原理（第85章）の、基底についての版である。</span><em>冗長にすれば（<m>ab<1</m>）この制約は消える</em>——フレームを使う実質的な理由の一つである。</p>
+<p><strong>ヒルベルト空間以外では。</strong>バナッハ空間にシャウダー基底が存在するかは長らく未解決だった。<em>エンフロの反例（一九七三年）により、存在しない可分バナッハ空間があることがわかった。</em></p>
+<p>これは近似性質（有限階作用素で恒等作用素を近似できるか）とも関わる。<span class="yogo-hl">ヒルベルト空間では、直交射影のおかげで何の問題も起こらない。</span></p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li><m>\{e^{inx}/\sqrt{2\pi}\}</m> が <m>L^2(\mathbb{T})</m> で正規直交系であることを確かめよ。</li>
+<li><m>\{1,x,x^2\}</m> を <m>L^2[-1,1]</m> でグラム–シュミットせよ。</li>
+<li><m>f(x)=x</m> の <m>L^2[-\pi,\pi]</m> でのフーリエ係数を求め、パーセヴァルの等式から <m>\sum 1/n^2</m> を計算せよ。</li>
+<li>正規直交系の部分和がコーシー列であることを示せ。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li><ref t="thm-bessel"/> の可算性の部分を示せ。<span class="haiten">（20点）</span></li>
+<li><ref t="thm-parseval"/> の（2）から（3）を、細部まで示せ。<span class="haiten">（30点）</span></li>
+<li>部分和が最良近似であることを示せ。<span class="haiten">（25点）</span></li>
+<li><ref t="thm-hilbert-bunrui"/> の濃度の一意性を示せ。<span class="haiten">（35点）</span></li>
+<li>直交展開が無条件収束するが絶対収束しない例を作れ。<span class="haiten">（30点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li>ハール系が <m>L^2[0,1]</m> の正規直交基底であることを示せ。<span class="haiten">（40点）</span></li>
+<li>ツォルンの補題を使って、正規直交基底の存在を示せ。<span class="haiten">（30点）</span></li>
+<li>フレームの定義から、双対フレームの存在を示せ。<span class="haiten">（45点）</span></li>
+</ol>
+</div>
+</div>
+<nav class="chnav">
+<a class="prev" href="ch64.html">← 第64章　Hilbert空間と直交分解</a>
+<a class="next" href="ch66.html">第66章　双対空間 →</a>
+</nav>
+</article>
+</main>
+<footer class="site">
+  <p>位相・解析大全　学部から大学院まで、三層で読む位相空間論と解析学</p>
+  <p class="small">本文・図版とも本書のために作成したものです。数式は MathJax でベクタ化して組んでいます。</p>
+</footer>
+</body>
+</html>

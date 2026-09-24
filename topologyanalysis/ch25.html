@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第25章 Lindelöf・可算コンパクト・点列コンパクト｜位相・解析大全</title>
+<meta name="description" content="位相・解析大全　第25章　Lindelöf・可算コンパクト・点列コンパクト">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;600&display=swap">
+<link rel="stylesheet" href="web.css">
+</head>
+<body>
+<header class="site">
+  <a class="site-title" href="index.html">位相・解析大全</a>
+  <nav class="site-nav">
+    <a href="index.html">目次</a>
+    <a href="isou-kaiseki-taizen.pdf">PDF版</a>
+  </nav>
+</header>
+<main>
+<article class="chapter">
+<p class="part-label">第III部　コンパクト性と被覆性質</p>
+<h1><span class="ch-num">第25章</span>Lindelöf・可算コンパクト・点列コンパクト</h1>
+<nav class="chnav">
+<a class="prev" href="ch24.html">← 第24章　パラコンパクト性と1の分割</a>
+<a class="next" href="ch26.html">第26章　被覆性質の相互関係と反例 →</a>
+</nav>
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>「有限」を「可算」に置き換えると、何が変わるのか。</li>
+<li>点列コンパクトとコンパクトは、なぜ一致しないのか。</li>
+<li>距離空間では、これらがすべて一致するのはなぜか。</li>
+</ul>
+</div>
+
+<h3 id="s25-1">三つの弱いコンパクト性</h3>
+
+<div class="teigi" id="def-yowai-compact">
+<h4></h4>
+<p class="no-indent">位相空間 <m>X</m> について、</p>
+<p class="no-indent"><strong>リンデレーフ</strong>　どの開被覆も<em>可算</em>部分被覆をもつ。<br>
+<strong>可算コンパクト</strong>　どの<em>可算</em>開被覆も有限部分被覆をもつ。<br>
+<strong>点列コンパクト</strong>　どの点列も収束する部分列をもつ。<br>
+<strong>擬コンパクト</strong>　どの連続実数値関数も有界。</p>
+</div>
+
+<p><em>コンパクト性の定義には二つの「有限」が現れていた。</em>「どの開被覆も」の部分と「有限部分被覆」の部分である。<span class="yogo-hl">前者を可算に制限したのが可算コンパクト性、後者を可算に緩めたのがリンデレーフ性である。</span></p>
+
+<div class="teiri" data-kind="命題" id="prop-compact-bunkai">
+<h4></h4>
+<p class="no-indent"><m>X</m> がコンパクトであることと、リンデレーフかつ可算コンパクトであることは同値である。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">コンパクトなら両方は明らか。逆に、開被覆 <m>\mathcal{U}</m> を取る。リンデレーフ性より可算部分被覆 <m>\{U_n\}</m> があり、可算コンパクト性よりその有限部分被覆がある。<em>二つの条件が、ちょうど補い合って完全なコンパクト性を作る。</em></p>
+</div>
+
+<h3 id="s25-2">含意の関係</h3>
+
+<div class="teiri" id="thm-yowai-kankei">
+<h4></h4>
+<p class="no-indent">（1）コンパクト <m>\Rightarrow</m> 可算コンパクト <m>\Rightarrow</m> 擬コンパクト。<br>
+（2）点列コンパクト <m>\Rightarrow</m> 可算コンパクト。<br>
+（3）第一可算かつ可算コンパクト <m>\Rightarrow</m> 点列コンパクト。<br>
+（4）第二可算 <m>\Rightarrow</m> リンデレーフ。<br>
+（5）正則かつリンデレーフ <m>\Rightarrow</m> パラコンパクト、したがって正規。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">（1）の後半。<m>f</m> が非有界なら <m>U_n = f^{-1}((-n,n))</m> は可算開被覆で有限部分被覆をもたない。</p>
+<p>（2）可算開被覆 <m>\{U_n\}</m> が有限部分被覆をもたないとする。各 <m>n</m> について <m>x_n \notin U_1 \cup \cdots \cup U_n</m> を選ぶ。点列コンパクト性より収束部分列 <m>x_{n_k} \to x</m> がある。<em><m>x \in U_m</m> なる <m>m</m> を取ると、<m>n_k \ge m</m> なる <m>k</m> について <m>x_{n_k} \notin U_m</m> となり、収束に反する。</em></p>
+<p>（3）点列 <m>(x_n)</m> を取る。<m>A_n = \{\, x_k \mid k \ge n \,\}</m> とすると、<m>\{\overline{A_n}\}</m> は有限交叉性をもつ閉集合の族である。可算コンパクト性より <m>x \in \bigcap_n \overline{A_n}</m> がある。<span class="yogo-hl">第一可算性より <m>x</m> の可算減少近傍基 <m>\{V_m\}</m> を取り、各 <m>V_m</m> から <m>A_m</m> の点を選べば部分列になる。</span></p>
+<p>（4）可算基底 <m>\mathcal{B}</m> を取る。開被覆 <m>\mathcal{U}</m> に対し、<em><m>B \subseteq U</m> なる <m>U \in \mathcal{U}</m> が存在する <m>B \in \mathcal{B}</m> を集める。</em>それらは可算で、各 <m>B</m> に一つずつ <m>U</m> を選べば可算部分被覆になる。</p>
+<p>（5）は証明を省く。第24章のマイケルの定理の系である。</p>
+</div>
+
+<div class="hanrei" id="cex-yowai-hanrei">
+<h4>逆が成り立たない例</h4>
+<p class="no-indent"><strong>可算コンパクトだがコンパクトでない。</strong><m>[0,\omega_1)</m>。<em>可算個の <m>[0,\alpha_n)</m> の合併は <m>[0, \sup \alpha_n)</m> で、<m>\sup \alpha_n < \omega_1</m> だから被覆にならない</em>——すなわち可算開被覆は必ず有限で足りる。一方 <m>\{[0,\alpha)\}_{\alpha<\omega_1}</m> は有限部分被覆をもたない。<span class="yogo-hl">リンデレーフでない。</span></p>
+<p><strong>コンパクトだが点列コンパクトでない。</strong><m>\{0,1\}^{I}</m>（<m>I</m> の濃度 <m>2^{\aleph_0}</m> より大）。第12章の議論による。また <m>\beta\mathbb{N}</m> もそうである（第23章）。</p>
+<p><strong>点列コンパクトだがコンパクトでない。</strong><m>[0,\omega_1)</m>。可算な部分集合は有界なので、どの点列も収束部分列をもつ。</p>
+<p><strong>擬コンパクトだが可算コンパクトでない。</strong>構成は込み入るが存在する。<em>完全正則な空間では擬コンパクトと可算コンパクトが一致する</em>ので、そうでない空間を作る必要がある。</p>
+<p><strong>リンデレーフだが第二可算でない。</strong>ゾルゲンフライ直線。<em>第7章で第二可算でないことを見た。</em>リンデレーフであることは、被覆から可算個を選ぶ議論で示せる。</p>
+</div>
+
+<figure id="fig25-1">
+<svg viewBox="0 0 470 272" width="470" height="272" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <defs>
+    <marker id="a25" markerWidth="8" markerHeight="8" refX="7" refY="2.6" orient="auto"><path d="M0,0 L7,2.6 L0,5.2 z" fill="#35618f"/></marker>
+  </defs>
+
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">弱いコンパクト性の関係——距離空間ではすべて一致する</text>
+
+  <rect x="14" y="26" width="442" height="128" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+
+  <rect x="186" y="38" width="94" height="22" rx="3" fill="#dce7f0" stroke="#35618f" stroke-width="1.2"/>
+  <text x="233" y="52" font-size="7" text-anchor="middle" fill="#1f3b5c">コンパクト</text>
+
+  <rect x="56" y="80" width="94" height="22" rx="3" fill="#e8f0f7" stroke="#35618f"/>
+  <text x="103" y="94" font-size="6.8" text-anchor="middle" fill="#1f3b5c">リンデレーフ</text>
+
+  <rect x="186" y="80" width="94" height="22" rx="3" fill="#e8f0f7" stroke="#35618f"/>
+  <text x="233" y="94" font-size="6.8" text-anchor="middle" fill="#1f3b5c">可算コンパクト</text>
+
+  <rect x="316" y="80" width="94" height="22" rx="3" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="363" y="94" font-size="6.8" text-anchor="middle" fill="#1e4a41">点列コンパクト</text>
+
+  <rect x="186" y="122" width="94" height="22" rx="3" fill="#f4f1ea" stroke="#8a6b2c"/>
+  <text x="233" y="136" font-size="6.8" text-anchor="middle" fill="#5a4520">擬コンパクト</text>
+
+  <path d="M210,64 L140,78" stroke="#35618f" stroke-width="1.1" fill="none" marker-end="url(#a25)"/>
+  <path d="M233,64 L233,76" stroke="#35618f" stroke-width="1.1" fill="none" marker-end="url(#a25)"/>
+  <path d="M312,90 L284,90" stroke="#2f6b5f" stroke-width="1.1" fill="none" marker-end="url(#a25)"/>
+  <path d="M284,96 L312,96" stroke="#8a6b2c" stroke-width="1" stroke-dasharray="2,1.6" fill="none" marker-end="url(#a25)"/>
+  <text x="298" y="110" font-size="5.8" text-anchor="middle" fill="#8a6b2c">第一可算なら</text>
+  <path d="M233,106 L233,118" stroke="#35618f" stroke-width="1.1" fill="none" marker-end="url(#a25)"/>
+
+  <path d="M150,96 C 176,110 190,108 210,102" stroke="#6b2a48" stroke-width="1.1" stroke-dasharray="2.4,2" fill="none"/>
+  <text x="130" y="116" font-size="6" fill="#6b2a48">両方あればコンパクト</text>
+
+  <text x="24" y="44" font-size="6.6" fill="#6a6a68">被覆の側を</text>
+  <text x="24" y="54" font-size="6.6" fill="#6a6a68">可算に制限</text>
+  <text x="424" y="44" font-size="6.6" text-anchor="end" fill="#6a6a68">部分被覆を可算に緩める</text>
+
+  <rect x="14" y="166" width="216" height="90" rx="4" fill="#fdf6f4" stroke="#e0c3bd"/>
+  <text x="24" y="181" font-size="7.6" font-weight="700" fill="#8c2f1e">逆が成り立たない例</text>
+  <text x="24" y="198" font-size="6.6" fill="#8c2f1e">[0, ω₁)　可算コンパクト・点列コンパクト</text>
+  <text x="24" y="209" font-size="6.6" fill="#8c2f1e">　　　　 だがコンパクトでもリンデレーフでもない</text>
+  <text x="24" y="224" font-size="6.6" fill="#8c2f1e">{0,1} の非可算積　コンパクトだが</text>
+  <text x="24" y="235" font-size="6.6" fill="#8c2f1e">　　　　 点列コンパクトでない</text>
+  <text x="24" y="250" font-size="6.6" fill="#8c2f1e">ゾルゲンフライ直線　リンデレーフだが第二可算でない</text>
+
+  <rect x="240" y="166" width="216" height="90" rx="4" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="250" y="181" font-size="7.6" font-weight="700" fill="#1e4a41">距離空間ではすべて一致</text>
+  <text x="250" y="199" font-size="7" fill="#1e4a41">コンパクト ⇔ 可算コンパクト</text>
+  <text x="250" y="212" font-size="7" fill="#1e4a41">　　　　　 ⇔ 点列コンパクト</text>
+  <text x="250" y="225" font-size="7" fill="#1e4a41">　　　　　 ⇔ 全有界かつ完備</text>
+  <text x="250" y="242" font-size="6.6" fill="#6a6a68">距離が可算な目盛りを与えるので、</text>
+  <text x="250" y="252" font-size="6.6" fill="#6a6a68">可算と有限の差が消える（第29章）</text>
+</svg>
+<figcaption data-ch="25">コンパクト性の定義に現れる二つの「有限」を、それぞれ可算に置き換えると二つの弱い条件が得られる。一般には互いに独立だが、距離空間ではすべて一致する。</figcaption>
+</figure>
+
+<h3 id="s25-3">距離空間ではすべて一致する</h3>
+
+<div class="teiri" id="thm-kyori-icchi">
+<h4></h4>
+<p class="no-indent">距離空間 <m>X</m> について、次は同値である。（1）コンパクト。（2）可算コンパクト。（3）点列コンパクト。（4）全有界かつ完備。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">詳細は第29章で扱う。骨子だけ述べる。距離空間は第一可算だから、<ref t="thm-yowai-kankei"/>（2）（3）により（2）と（3）は同値である。</p>
+<p>（3）から（1）を示すのが要点である。点列コンパクトな距離空間は<em>全有界</em>である——そうでなければ、互いに <m>\varepsilon</m> 以上離れた点列が作れ、収束部分列をもたない。全有界性から可分性が従い、可分な距離空間は第二可算（第7章）、したがってリンデレーフ（<ref t="thm-yowai-kankei"/>（4））。<span class="yogo-hl">リンデレーフかつ可算コンパクトならコンパクトである（<ref t="prop-compact-bunkai"/>）。</span></p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">証明の鍵は「点列コンパクト <m>\Rightarrow</m> 可分 <m>\Rightarrow</m> 第二可算 <m>\Rightarrow</m> リンデレーフ」という経路である。<em>距離があることで、局所的な可算性が大域的な可算性に持ち上がる</em>（第7章）。<span class="yogo-hl">この持ち上げが、可算と有限の差を消している。</span></p>
+</div>
+
+<div class="lv2">
+<h4>擬コンパクト性——関数の側から見る</h4>
+<p>擬コンパクト性は、開被覆ではなく連続関数で定義された。<em>この違いが何を意味するかを見ておく。</em></p>
+<p><strong>完全正則なら可算コンパクトと一致する。</strong>完全正則空間 <m>X</m> が擬コンパクトなら可算コンパクトである。</p>
+<p>証明。可算開被覆 <m>\{U_n\}</m>（増加としてよい）が有限部分被覆をもたないとする。各 <m>n</m> について <m>x_n \notin U_n</m> を選ぶ。完全正則性より、<em><m>x_n</m> で <m>n</m> をとり <m>X \setminus U_{n+1}</m> の外で急速に消える関数 <m>f_n</m> が作れる。</em>和 <m>f = \sum_n f_n</m> が局所有限和になるよう調整すると、連続で非有界な関数が得られる。<span class="yogo-hl">擬コンパクト性に反する。</span></p>
+<p><strong>完全正則でなければ一致しない。</strong>関数が足りない空間では、擬コンパクト性は何も言わない。極端な例として、第14章★★★のヘヴィットの空間——連続関数が定数しかない正則空間——は自動的に擬コンパクトである。<em>可算コンパクトである必要はない。</em></p>
+<p><strong>解析学での意味。</strong>擬コンパクト性は「有界性が自動的に成り立つ」条件である。第20章で見たとおり、コンパクト空間上の連続関数は最大値を取った。<em>擬コンパクト性は、最大値までは保証しないが有界性は保証する。</em></p>
+<p>第VIII部で関数空間を扱うとき、<m>C(X)</m> が有界関数の空間になる条件として、この概念が背後にある。<span class="yogo-hl"><m>C(X) = C^b(X)</m> であることが、まさに擬コンパクト性である。</span></p>
+<p><strong>第23章との接続。</strong>第23章で <m>C^b(X) \cong C(\beta X)</m> を見た。<em><m>X</m> が擬コンパクトなら <m>C(X) = C^b(X) \cong C(\beta X)</m> である。</em></p>
+<p>したがって擬コンパクトな空間は、関数の側から見ると <m>\beta X</m> と区別がつかない。<span class="yogo-hl">「有界でない関数が作れない」ということは、「コンパクト化しても関数が増えない」ということである。</span></p>
+<p><strong>まとめ。</strong>四つの弱いコンパクト性のうち、<em>リンデレーフ性だけが被覆の側を緩め、他の三つは有限性の側を緩めている。</em>この非対称が、<ref t="prop-compact-bunkai"/> の分解に現れている。</p>
+</div>
+
+<div class="lv3">
+<h4>[0, ω₁) という空間を読む</h4>
+<p><ref t="cex-yowai-hanrei"/> で三度登場した <m>[0,\omega_1)</m> を、正面から調べる。<em>この空間は、位相空間論のあらゆる反例に顔を出す。</em></p>
+<p><strong>基本的な性質。</strong>順序位相を入れる。基本開集合は <m>(\alpha, \beta)</m> の形である。<m>[0,\omega_1)</m> は</p>
+<p><em>局所コンパクト</em>——各 <m>\alpha</m> の近傍 <m>[0,\alpha]</m> はコンパクト。</p>
+<p><em>可算コンパクト</em>——可算個の順序数の上限は <m>\omega_1</m> 未満（<m>\mathrm{cf}(\omega_1) > \omega</m>）。</p>
+<p><em>点列コンパクト</em>——同じ理由。可算な点列は有界。</p>
+<p><em>正規</em>——順序位相をもつ全順序集合は正規（第15章）。</p>
+<p><em>第一可算</em>——後続順序数は孤立点、極限順序数 <m>\lambda</m> には <m>\mathrm{cf}(\lambda) = \omega</m> より可算な近傍基がある。</p>
+<p><strong>しかし。</strong><span class="yogo-hl">コンパクトでなく、リンデレーフでなく、パラコンパクトでなく、可分でなく、第二可算でない。</span></p>
+<p><strong>閉非有界集合。</strong>この空間を理解する鍵は、閉非有界集合（クラブ集合）という概念である。<m>C \subseteq \omega_1</m> がクラブとは、閉であって非有界であることをいう。</p>
+<p><em>二つのクラブの交叉はクラブである。</em>さらに、可算個のクラブの交叉もクラブである。<span class="yogo-hl">この性質が、<m>[0,\omega_1)</m> の連続関数の振る舞いを決める。</span></p>
+<p><strong>連続関数は最終的に定数。</strong>驚くべき事実がある。<em>連続関数 <m>f \colon [0,\omega_1) \to \mathbb{R}</m> は、ある <m>\alpha < \omega_1</m> より先で定数になる。</em></p>
+<p>証明の筋。各 <m>n</m> について、<m>|f(\beta) - f(\gamma)| < 1/n</m> がすべての <m>\beta, \gamma \ge \alpha_n</m> で成り立つような <m>\alpha_n</m> が取れることを示す。そうでなければ、<m>1/n</m> 以上離れた値をとる増加列が作れ、その上限で連続性が壊れる。<em><m>\alpha = \sup_n \alpha_n < \omega_1</m> と置けばよい。</em></p>
+<p>したがって <m>[0,\omega_1)</m> は擬コンパクトであり、<span class="yogo-hl"><m>\beta([0,\omega_1)) = [0,\omega_1]</m> である</span>——一点コンパクト化とストーン–チェックのコンパクト化が一致する珍しい例である。</p>
+<p><strong>プレッシング・ダウン補題。</strong>より強い道具がある。<m>f</m> が退行的（<m>f(\alpha) < \alpha</m>）なら、<em><m>f</m> はある定常集合の上で定数である。</em>フォドア <span class="orig">Fodor</span> の補題という。</p>
+<p>これは第36章のスーリン問題や、第V部の基数不変量の議論で使われる。<span class="yogo-hl"><m>\omega_1</m> の組合せ論が、位相空間の性質を決めている。</span></p>
+<p><strong>なぜこの空間が重要か。</strong><m>[0,\omega_1)</m> は、<em>「可算では届かないが、それより上はない」という最小の非可算性</em>を体現している。第4章で共終数を導入した目的が、ここに集約される。</p>
+<p>本書の後半では、この空間は表に出てこない。<em>解析学は可算な操作で閉じているからである。</em>だが第36章と第42章では、非可算性が本質的に効く場面が現れる。そこでこの空間に戻る。</p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li>第二可算空間がリンデレーフであることを示せ。</li>
+<li><m>\mathbb{R}</m> がリンデレーフだが可算コンパクトでないことを示せ。</li>
+<li>離散空間が可算コンパクトになるのはどんなときか。</li>
+<li>コンパクト空間が擬コンパクトであることを示せ。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li><ref t="prop-compact-bunkai"/> を示せ。<span class="haiten">（10点）</span></li>
+<li><ref t="thm-yowai-kankei"/>（3）を、第一可算性をどこで使うか明示して示せ。<span class="haiten">（20点）</span></li>
+<li><m>[0,\omega_1)</m> が可算コンパクトでリンデレーフでないことを示せ。<span class="haiten">（25点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li>点列コンパクトな距離空間が全有界であることを示し、そこから <ref t="thm-kyori-icchi"/> の経路を完成させよ。<span class="haiten">（35点）</span></li>
+<li><m>[0,\omega_1)</m> 上の連続実数値関数が最終的に定数になることを示せ。<span class="haiten">（35点）</span></li>
+</ol>
+</div>
+</div>
+<nav class="chnav">
+<a class="prev" href="ch24.html">← 第24章　パラコンパクト性と1の分割</a>
+<a class="next" href="ch26.html">第26章　被覆性質の相互関係と反例 →</a>
+</nav>
+</article>
+</main>
+<footer class="site">
+  <p>位相・解析大全　学部から大学院まで、三層で読む位相空間論と解析学</p>
+  <p class="small">本文・図版とも本書のために作成したものです。数式は MathJax でベクタ化して組んでいます。</p>
+</footer>
+</body>
+</html>

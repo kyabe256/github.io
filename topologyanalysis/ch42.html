@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第42章 次元論の反例と、一致しない空間｜位相・解析大全</title>
+<meta name="description" content="位相・解析大全　第42章　次元論の反例と、一致しない空間">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;600&display=swap">
+<link rel="stylesheet" href="web.css">
+</head>
+<body>
+<header class="site">
+  <a class="site-title" href="index.html">位相・解析大全</a>
+  <nav class="site-nav">
+    <a href="index.html">目次</a>
+    <a href="isou-kaiseki-taizen.pdf">PDF版</a>
+  </nav>
+</header>
+<main>
+<article class="chapter">
+<p class="part-label">第V部　基数不変量と次元論</p>
+<h1><span class="ch-num">第42章</span>次元論の反例と、一致しない空間</h1>
+<nav class="chnav">
+<a class="prev" href="ch41.html">← 第41章　次元の一致定理</a>
+<a class="next" href="ch43.html">第43章　実数の構成と完備性 →</a>
+</nav>
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>次元は、積で足し算になるのか。</li>
+<li>一致定理が破れる空間は、どう作られるのか。</li>
+<li>次元という素朴な概念のどこに、集合論が入り込むのか。</li>
+</ul>
+</div>
+
+<h3 id="s42-1">積で足し算にならない</h3>
+
+<p>第38章で <m>\mathrm{ind}(X \times Y) \le \mathrm{ind}\,X + \mathrm{ind}\,Y</m> を述べた。<em>等号が成り立ちそうに見える。</em></p>
+
+<div class="hanrei" id="cex-pontryagin">
+<h4>ポントリャーギンの曲面</h4>
+<p class="no-indent">一九三〇年、ポントリャーギン <span class="orig">Pontryagin</span> は二次元のコンパクト距離空間 <m>P_2, P_3</m> で</p>
+<M>\dim P_2 = \dim P_3 = 2, \qquad \dim (P_2 \times P_3) = 3</M>
+<p class="no-indent">となるものを構成した。<span class="yogo-hl">積の次元が、和より真に小さい。</span></p>
+<p><strong>構成の骨子。</strong>二次元単体複体から出発し、<em>係数が <m>\mathbb{Z}/2</m> と <m>\mathbb{Z}/3</m> のコホモロジーで次元が違う</em>ように作る。</p>
+<p>具体的には、<m>P_p</m>（<m>p</m> は素数）を「<m>\mathbb{Z}/p</m>-係数のコホモロジー次元が <m>2</m>、他の素数 <m>q</m> については <m>1</m>」となるように構成する。<em>積を取ると、係数が素であるところで次元が打ち消し合う。</em></p>
+<p><span class="yogo-hl">次元が「足し算で決まらない」のは、位相的な次元が代数的な情報（コホモロジー）の最大値として振る舞うためである。</span></p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">この現象は、コホモロジー次元 <m>\dim_G</m>（係数群 <m>G</m>）を導入すると説明がつく。<em><m>\dim_G</m> は素直に足し算になり、<m>\dim X = \max_G \dim_G X</m> のような関係がある。</em></p>
+<p>したがって <m>\dim(X\times Y) \ge \dim X + \dim Y - 1</m> は成り立つが、等号は保証されない。<span class="yogo-hl">差は高々 <m>1</m> である（有限次元コンパクト距離空間で）。</span></p>
+</div>
+
+<h3 id="s42-2">一致定理が破れる例</h3>
+
+<div class="hanrei" id="cex-roy">
+<h4>ロクトノフの空間</h4>
+<p class="no-indent">完備距離空間 <m>\Delta</m> で</p>
+<M>\mathrm{ind}\,\Delta = 0, \qquad \mathrm{Ind}\,\Delta = \dim\Delta = 1</M>
+<p class="no-indent">となるものが存在する（ロクトノフ <span class="orig">Roy</span>、一九六二）。</p>
+<p><strong>何が起きているか。</strong><m>\mathrm{ind}\,\Delta = 0</m> は、開かつ閉な集合が基底をなすことを意味する。<em>各点のまわりは、いくらでも細かく「切り離せる」。</em></p>
+<p>ところが <m>\mathrm{Ind}\,\Delta = 1</m> は、<span class="yogo-hl">ある交わらない閉集合の対が、空集合では分離できない</span>ことを意味する。</p>
+<p><strong>なぜ両立するのか。</strong>点ごとに切り離せても、<em>閉集合全体を一度に切り離すには、無限個の切り口を「束ねる」必要がある。</em></p>
+<p>可分ならば可算個で済み、対角線的に処理できる（第41章の証明）。<m>\Delta</m> は可分でない——<m>\{0,1\}^{\omega_1}</m> の部分空間として作られる。<span class="yogo-hl">非可算個の切り口は束ねられない。</span></p>
+<p>第4章の共終数が、ここでも効いている。</p>
+</div>
+
+<div class="hanrei" id="cex-filippov">
+<h4>フィリポフの空間</h4>
+<p class="no-indent">コンパクトハウスドルフ空間 <m>F</m> で <m>\dim F = 1</m> かつ <m>\mathrm{Ind}\,F = 2</m> となるものが存在する（フィリポフ <span class="orig">Filippov</span>、一九七〇）。<em>構成に連続体仮説を使う。</em></p>
+<p>距離化できない空間では、被覆で測る次元と帰納的に測る次元が分かれる。<span class="yogo-hl">第40章で「<m>\dim</m> はパラコンパクト性と相性がよい」と述べたが、距離化できないコンパクト空間ではその相性が効かない。</span></p>
+</div>
+
+<figure id="fig42-1">
+<svg viewBox="0 0 470 286" width="470" height="286" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">一致定理は、どこで破れるか</text>
+
+  <rect x="14" y="26" width="442" height="138" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+
+  <text x="24" y="42" font-size="7" font-weight="700" fill="#1f3b5c">空間のクラス</text>
+  <text x="200" y="42" font-size="7" font-weight="700" fill="#1f3b5c">成り立つ関係</text>
+  <text x="340" y="42" font-size="7" font-weight="700" fill="#1f3b5c">破る例</text>
+  <line x1="24" y1="47" x2="446" y2="47" stroke="#c3d2e0" stroke-width="0.8"/>
+
+  <text x="24" y="63" font-size="6.6" fill="#1e4a41">可分距離空間</text>
+  <text x="200" y="63" font-size="6.6" fill="#1e4a41">ind = Ind = dim</text>
+  <text x="340" y="63" font-size="6.6" fill="#6a6a68">なし（一致定理）</text>
+
+  <text x="24" y="81" font-size="6.6" fill="#1f3b5c">一般の距離空間</text>
+  <text x="200" y="81" font-size="6.6" fill="#1f3b5c">Ind = dim</text>
+  <text x="340" y="81" font-size="6.6" fill="#8c2f1e">ロクトノフの空間</text>
+  <text x="200" y="91" font-size="6.2" fill="#6a6a68">（カトゥートフ–モリタ）</text>
+  <text x="340" y="91" font-size="6.2" fill="#6a6a68">ind = 0, Ind = dim = 1</text>
+
+  <text x="24" y="109" font-size="6.6" fill="#1f3b5c">コンパクトハウスドルフ</text>
+  <text x="200" y="109" font-size="6.6" fill="#1f3b5c">dim ≤ Ind のみ</text>
+  <text x="340" y="109" font-size="6.6" fill="#8c2f1e">フィリポフの空間</text>
+  <text x="340" y="119" font-size="6.2" fill="#6a6a68">dim = 1, Ind = 2（連続体仮説を使う）</text>
+
+  <text x="24" y="137" font-size="6.6" fill="#1f3b5c">一般の正規空間</text>
+  <text x="200" y="137" font-size="6.6" fill="#1f3b5c">dim ≤ Ind、ind ≤ Ind</text>
+  <text x="340" y="137" font-size="6.6" fill="#6a6a68">三つとも異なりうる</text>
+
+  <line x1="24" y1="146" x2="446" y2="146" stroke="#c3d2e0" stroke-width="0.8"/>
+  <text x="24" y="158" font-size="6.4" fill="#8c2f1e">可分性を外すと ind が落ち、距離化可能性を外すと Ind と dim も分かれる</text>
+
+  <rect x="14" y="176" width="216" height="100" rx="4" fill="#fdf6f4" stroke="#e0c3bd"/>
+  <text x="24" y="191" font-size="7.6" font-weight="700" fill="#8c2f1e">積で足し算にならない</text>
+  <text x="24" y="208" font-size="6.8" fill="#8c2f1e">dim P₂ = dim P₃ = 2</text>
+  <text x="24" y="221" font-size="6.8" fill="#8c2f1e">dim (P₂ × P₃) = 3　（ポントリャーギン）</text>
+  <text x="24" y="238" font-size="6.6" fill="#6a6a68">係数 ℤ/2 と ℤ/3 のコホモロジーで</text>
+  <text x="24" y="249" font-size="6.6" fill="#6a6a68">次元が違うように作る</text>
+  <text x="24" y="266" font-size="6.6" fill="#5a4520">差は高々 1（有限次元コンパクト距離空間）</text>
+
+  <rect x="240" y="176" width="216" height="100" rx="4" fill="#efe0e6" stroke="#8a3b62"/>
+  <text x="250" y="191" font-size="7.6" font-weight="700" fill="#6b2a48">集合論が入り込む場所</text>
+  <text x="250" y="208" font-size="6.8" fill="#6b2a48">ロクトノフ　非可算な切り口を束ねられない</text>
+  <text x="250" y="222" font-size="6.8" fill="#6b2a48">フィリポフ　連続体仮説を使う</text>
+  <text x="250" y="239" font-size="6.6" fill="#6a6a68">可算と非可算の境界で、共終数の構造が</text>
+  <text x="250" y="250" font-size="6.6" fill="#6a6a68">次元の一致・不一致を決めている</text>
+  <text x="250" y="267" font-size="6.6" fill="#8c2f1e">第36章のスーリン問題と同じ構図</text>
+</svg>
+<figcaption data-ch="42">一致定理は可分距離空間で成り立つ。可分性を外すと小さい帰納的次元が落ち、距離化可能性を外すと大きい帰納的次元と被覆次元も分かれる。次元は積で足し算にもならない。</figcaption>
+</figure>
+
+<h3 id="s42-3">その他の反例</h3>
+
+<div class="rei" id="rei-jigen-kimyo">
+<h4>次元の奇妙な例</h4>
+<p class="no-indent"><strong>エルデシュ空間</strong>（第28章★★★）。<m>E = \{\, x \in \ell^2 \mid \text{各 } x_n \in \mathbb{Q} \,\}</m> は全不連結だが <m>\dim E = 1</m>。<em>零次元でない全不連結空間である。</em></p>
+<p><strong>メンガーの普遍曲線</strong>。<m>\dim = 1</m> のコンパクト距離空間で、<span class="yogo-hl">どの <m>1</m> 次元可分距離空間もこれに埋め込める。</span>立方体から繰り返し穴を開けて作る。</p>
+<p><strong>ヌーベリングの普遍空間</strong>。<m>\dim \le n</m> の可分距離空間の普遍空間が <m>\mathbb{R}^{2n+1}</m> のなかに作れる（第41章★★）。</p>
+<p><strong>次元が上がる連続像</strong>。<em>ペアノ曲線</em>——<m>[0,1]</m>（<m>\dim=1</m>）から <m>[0,1]^2</m>（<m>\dim=2</m>）への連続全射がある。<span class="yogo-hl">次元は連続像で保たれない。</span>ただし単射なら保たれる（領域不変性）。</p>
+<p><strong>次元が下がる閉写像</strong>。<em>零次元空間から <m>n</m> 次元空間への連続全射も作れる</em>（カントール集合から <m>[0,1]^n</m> へ）。</p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">次元が連続像で保たれないのは、<em>第19章の表でコンパクト性や連結性が連続像で保たれたのと対照的である。</em><span class="yogo-hl">次元は「細かさ」の量であり、像を取ると細かさが失われる。</span>第19章★★で述べた「細かさは制限で保たれ、粗さは像で保たれる」という構図に従っている。</p>
+</div>
+
+<div class="lv2">
+<h4>次元を上げる写像と下げる写像</h4>
+<p>写像で次元がどう変わるかを整理する。<em>方向によってまったく違う。</em></p>
+<p><strong>単射で次元は上がらない。</strong><m>f \colon X \to Y</m> が埋め込みなら <m>\dim X \le \dim Y</m>（<m>\dim</m> は遺伝的だから）。</p>
+<p><strong>連続全射では上がりうる。</strong>ペアノ曲線が例である。<em><m>[0,1] \to [0,1]^2</m> の連続全射。</em></p>
+<p>より強く、<span class="yogo-hl">カントール集合からどのコンパクト距離空間へも連続全射がある</span>（第33章★★で触れた）。零次元から任意の次元へ上がる。</p>
+<p><strong>閉写像で下がることはない。</strong><m>f \colon X \to Y</m> がコンパクト距離空間のあいだの連続全射なら、<em>一般に <m>\dim Y</m> と <m>\dim X</m> の関係は決まらない。</em></p>
+<p>だが条件を付けると評価が出る。<strong>ヒューレヴィッチ <span class="orig">Hurewicz</span> の公式</strong>——</p>
+<M>\dim X \le \dim Y + \sup_{y \in Y} \dim f^{-1}(y)</M>
+<p><em>ファイバーの次元を足せば押さえられる。</em><span class="yogo-hl">直観的には「底空間の次元＋繊維の次元」である。</span></p>
+<p>逆向きの評価もある。<m>f</m> が閉写像で、各ファイバーが高々 <m>k+1</m> 点なら <m>\dim Y \le \dim X + k</m>。</p>
+<p><strong>次元を上げない写像。</strong><m>\dim f^{-1}(y) = 0</m>（各ファイバーが零次元）の閉写像では <m>\dim X \le \dim Y</m>。<em>とくに、有限個の点しか重ならない写像は次元を上げない。</em></p>
+<p><strong>ペアノ曲線を読み直す。</strong><m>[0,1] \to [0,1]^2</m> の連続全射では、ファイバーが有限（多くの点で）なのに次元が上がる。<span class="yogo-hl">これは <m>f</m> が閉写像だが単射でなく、しかもファイバーの構造が場所によって変わるためである。</span></p>
+<p>ヒューレヴィッチの公式は <m>\dim X \le \dim Y + \sup \dim f^{-1}(y)</m> の形なので、<em><m>1 \le 2 + 0</m> で矛盾しない。</em>逆向きの評価が効かないだけである。</p>
+<p><strong>本書での意味。</strong>第VI部以降で「次元」という語はほとんど使わない。<em>だが第88章のソボレフ空間の埋め込み定理では、次元が指数に現れる。</em></p>
+<p><span class="yogo-hl">そこでの次元は <m>\mathbb{R}^n</m> の <m>n</m> であり、本章で確立した「位相的に定まる量」である。</span>領域不変性がなければ、その <m>n</m> は座標の取り方に依存してしまう。</p>
+</div>
+
+<div class="lv3">
+<h4>次元論の未解決問題と独立命題</h4>
+<p>第4章の方針に従い、<em>未解決と独立を区別して</em>残された問題を挙げる。</p>
+<p><strong>独立な命題。</strong></p>
+<p><em>フィリポフの例は連続体仮説を使う。</em>連続体仮説なしで <m>\dim \ne \mathrm{Ind}</m> のコンパクトハウスドルフ空間が作れるかは、長く問題だった。<span class="yogo-hl">現在は、公理系だけで構成できることが知られている。</span></p>
+<p><em>可分距離空間の次元の振る舞いに関する一部の問い</em>は、マーティンの公理などに依存する。</p>
+<p><strong>未解決の問題。</strong></p>
+<p><em>積の次元の正確な値。</em><m>\dim(X \times Y)</m> を <m>\dim X</m>、<m>\dim Y</m> と付加的な情報から決定する一般的な公式は知られていない。<span class="yogo-hl">コホモロジー次元を使うと部分的に説明できるが、完全ではない。</span></p>
+<p><em>コホモロジー次元と被覆次元の差。</em>コンパクト距離空間で <m>\dim_{\mathbb{Z}} X = n</m> なら <m>\dim X = n</m> か。<em>有限次元の場合は真である（ドラニシニコフ <span class="orig">Dranishnikov</span> の理論）。</em></p>
+<p>ところが<span class="yogo-hl">ドラニシニコフは一九八八年に、<m>\dim_{\mathbb{Z}} X = 3</m> だが <m>\dim X = \infty</m> のコンパクト距離空間を構成した。</span>アレクサンドロフが一九三二年に提起した問題の解決である。</p>
+<p><strong>次元の定義を変える方向。</strong>非可算な状況で <m>\mathrm{ind}</m> が落ちることを受けて、別の定義が試みられている。</p>
+<p><em>基底次元、局所次元、超限次元</em>など。<span class="yogo-hl">どれも可分距離空間では一致し、一般の空間で分かれる。</span></p>
+<p><strong>第V部の総括。</strong>この部で見たことをまとめる。</p>
+<p>第一に、<em>「はい／いいえ」の条件を量に変えると、不等式の網が見えてくる</em>（第35章）。</p>
+<p>第二に、<em>その網のなかに、公理系から決まらない関係がある</em>（第36章・第37章）。</p>
+<p>第三に、<em>次元という素朴な概念も、三つの定義が一致するのは可分距離空間に限られる</em>（第38〜42章）。</p>
+<p>第四に、<span class="yogo-hl">一致・不一致を決めているのは、つねに可算と非可算の境界である。</span>第4章で導入した共終数が、ここまでのすべての反例に現れた。</p>
+<p><strong>第VI部への移行。</strong>次の部から解析学に入る。<em>そこでは可算な操作だけで閉じた世界を扱う。</em></p>
+<p>実数を構成し（第43章）、極限を定義し（第45章）、測度を作る（第52章）——<span class="yogo-hl">どれも可算個の操作で完結する。</span>第V部で見た非可算性の複雑さは、表に出てこない。</p>
+<p>それが解析学の強みであり、同時に限界でもある。第97章でこの対比を地図にする。</p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li>ペアノ曲線の存在から、次元が連続像で保たれないことを述べよ。</li>
+<li>次元が単射連続写像（埋め込み）で上がらないことを示せ。</li>
+<li>エルデシュ空間が全不連結だが零次元でないことの意味を述べよ。</li>
+<li>ロクトノフの空間で、<m>\mathrm{ind}=0</m> と <m>\mathrm{Ind}=1</m> が両立する理由を述べよ。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li>カントール集合から <m>[0,1]</m> への連続全射を構成せよ。<span class="haiten">（25点）</span></li>
+<li>ヒューレヴィッチの公式を述べ、ペアノ曲線がそれと矛盾しないことを確かめよ。<span class="haiten">（25点）</span></li>
+<li>次元が閉部分空間に遺伝することを、<m>\dim</m> の定義から示せ。<span class="haiten">（25点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li>ポントリャーギンの例の構成の骨子を述べ、なぜ積で次元が落ちるのかをコホモロジー次元の言葉で説明せよ。<span class="haiten">（40点）</span></li>
+<li>第V部で見た「可算と非可算の境界」が、どの反例のどこに現れたかを、第36章・第37章・第41章・第42章について整理せよ。<span class="haiten">（35点）</span></li>
+</ol>
+</div>
+</div>
+<nav class="chnav">
+<a class="prev" href="ch41.html">← 第41章　次元の一致定理</a>
+<a class="next" href="ch43.html">第43章　実数の構成と完備性 →</a>
+</nav>
+</article>
+</main>
+<footer class="site">
+  <p>位相・解析大全　学部から大学院まで、三層で読む位相空間論と解析学</p>
+  <p class="small">本文・図版とも本書のために作成したものです。数式は MathJax でベクタ化して組んでいます。</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第6章 位相空間・閉集合・閉包・内部｜位相・解析大全</title>
+<meta name="description" content="位相・解析大全　第6章　位相空間・閉集合・閉包・内部">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;600&display=swap">
+<link rel="stylesheet" href="web.css">
+</head>
+<body>
+<header class="site">
+  <a class="site-title" href="index.html">位相・解析大全</a>
+  <nav class="site-nav">
+    <a href="index.html">目次</a>
+    <a href="isou-kaiseki-taizen.pdf">PDF版</a>
+  </nav>
+</header>
+<main>
+<article class="chapter">
+<p class="part-label">第I部　位相空間の基礎</p>
+<h1><span class="ch-num">第6章</span>位相空間・閉集合・閉包・内部</h1>
+<nav class="chnav">
+<a class="prev" href="ch05.html">← 第5章　なぜ開集合から始めるのか</a>
+<a class="next" href="ch07.html">第7章　基底と準基底、近傍系 →</a>
+</nav>
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>閉集合は「開集合でない集合」ではない。では何か。</li>
+<li>閉包と内部は、どちらが基本的なのか。</li>
+<li>「稠密」という語は、どれだけ強い主張をしているのか。</li>
+</ul>
+</div>
+
+<h3 id="s6-1">閉集合——開集合の裏返し</h3>
+
+<p>位相は開集合の族として与えられた。だがその補集合の族も、まったく同じ情報をもっている。</p>
+
+<div class="teigi" id="def-heishugo">
+<h4></h4>
+<p class="no-indent">位相空間 <m>(X, \mathcal{T})</m> において、<m>F \subseteq X</m> が<strong>閉集合</strong>であるとは、<m>X \setminus F</m> が開集合であることをいう。</p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">開と閉は排反ではない。<span class="yogo-hl">両方であるもの（<m>\varnothing</m> と <m>X</m> は常にそう）も、どちらでもないものもある。</span><m>\mathbb{R}</m> の <m>[0,1)</m> はどちらでもない。<em>「閉集合」は「開集合の否定」ではなく、「補集合が開である集合」である。</em>この混同は初学者の誤りの筆頭に来る。</p>
+</div>
+
+<p>第2章のド・モルガンの法則により、位相の公理はそのまま閉集合の性質に翻訳される。</p>
+
+<div class="teiri" data-kind="命題" id="prop-heishugo-koori">
+<h4></h4>
+<p class="no-indent">閉集合の族は次を満たす。（F1）<m>\varnothing</m> と <m>X</m> は閉。（F2）<strong>任意個</strong>の閉集合の交叉は閉。（F3）<strong>有限個</strong>の閉集合の合併は閉。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">（F2）を示す。<m>\{F_i\}</m> を閉集合の族とすると、</p>
+<M>X \setminus \bigcap_{i} F_i = \bigcup_{i} (X \setminus F_i)</M>
+<p class="no-indent">であり、右辺は開集合の任意合併だから開である。よって左辺の補集合、すなわち <m>\bigcap_i F_i</m> は閉である。（F1）と（F3）も同様に、ド・モルガンで移すだけである。</p>
+</div>
+
+<p><em>合併と交叉の役割が、開と閉で入れ替わっている。</em><span class="yogo-hl">無限個の閉集合の合併は閉とは限らない。</span>実際 <m>\bigcup_n [1/n, 1] = (0, 1]</m> は閉でない。第5章の反例を補集合で読み替えたものである。</p>
+
+<h3 id="s6-2">閉包・内部・境界</h3>
+
+<p>任意の集合 <m>A</m> に対して、それを含む最小の閉集合と、それに含まれる最大の開集合が定まる。</p>
+
+<div class="teigi" id="def-heiho">
+<h4></h4>
+<p class="no-indent"><m>A \subseteq X</m> に対し、</p>
+<M>\overline{A} = \bigcap \{\, F \mid A \subseteq F,\ F \text{ は閉} \,\}, \qquad
+A^{\circ} = \bigcup \{\, U \mid U \subseteq A,\ U \text{ は開} \,\}</M>
+<p class="no-indent">をそれぞれ <m>A</m> の<strong>閉包</strong>、<strong>内部</strong>という。また <m>\partial A = \overline{A} \setminus A^{\circ}</m> を <m>A</m> の<strong>境界</strong>という。</p>
+</div>
+
+<p>（F2）より <m>\overline{A}</m> は閉であり、（T2）より <m>A^\circ</m> は開である。<em>したがって <m>\overline{A}</m> は <m>A</m> を含む最小の閉集合、<m>A^\circ</m> は <m>A</m> に含まれる最大の開集合である。</em>次の特徴づけが、実際の計算では使いやすい。</p>
+
+<div class="teiri" id="thm-heiho-tokucho">
+<h4>閉包の点ごとの特徴づけ</h4>
+<p class="no-indent"><m>x \in \overline{A}</m> であることと、<span class="yogo-hl"><m>x</m> を含むどの開集合も <m>A</m> と交わること</span>は同値である。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">対偶で示す。<m>x \notin \overline{A}</m> とすると、<m>U = X \setminus \overline{A}</m> は <m>x</m> を含む開集合であり、<m>\overline{A} \supseteq A</m> より <m>U \cap A = \varnothing</m> である。よって <m>A</m> と交わらない開集合が取れた。</p>
+<p>逆に、<m>x</m> を含む開集合 <m>U</m> で <m>U \cap A = \varnothing</m> となるものがあったとする。すると <m>X \setminus U</m> は <m>A</m> を含む閉集合だから <m>\overline{A} \subseteq X \setminus U</m>。<m>x \in U</m> より <m>x \notin \overline{A}</m> である。</p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">この特徴づけは「<m>x</m> にいくらでも近いところに <m>A</m> の点がある」という直観を、距離を使わずに述べたものである。<em>距離空間なら「どんな <m>\varepsilon</m> についても <m>U_\varepsilon(x) \cap A \ne \varnothing</m>」と書けるが、一般の空間では <m>\varepsilon</m> がない。</em><span class="yogo-hl">開集合の族が、<m>\varepsilon</m> の役割を代行している。</span></p>
+</div>
+
+<p>閉包と内部は、補集合を通して互いに移り合う。</p>
+
+<M>X \setminus \overline{A} = (X \setminus A)^{\circ}, \qquad X \setminus A^{\circ} = \overline{X \setminus A}</M>
+
+<p><em>したがって、どちらか一方を基本概念に選べば、他方は定義できる。</em>どちらを選ぶかは趣味の問題である。本書は閉包を主に使う——収束の議論と相性がよいからである。</p>
+
+<figure id="fig6-1">
+<svg viewBox="0 0 470 272" width="470" height="272" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">閉包・内部・境界——三つの領域に分かれる</text>
+
+  <rect x="14" y="26" width="238" height="150" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+
+  <text x="124" y="46" font-size="7" text-anchor="end" fill="#1f3b5c">閉包</text>
+  <text x="140" y="46" font-size="7" text-anchor="middle" fill="#1f3b5c">A</text>
+  <line x1="136" y1="39.5" x2="144" y2="39.5" stroke="#1f3b5c" stroke-width="0.7"/>
+
+  <ellipse cx="133" cy="98" rx="98" ry="46" fill="#e8f0f7" stroke="#35618f" stroke-dasharray="3,2.4"/>
+  <ellipse cx="133" cy="98" rx="66" ry="28" fill="#cfe0ee" stroke="#35618f"/>
+  <text x="133" y="101" font-size="7" text-anchor="middle" fill="#1f3b5c">内部 A°</text>
+
+  <text x="133" y="137" font-size="6.8" text-anchor="middle" fill="#8c2f1e">境界 ∂A はこの帯</text>
+
+  <text x="133" y="160" font-size="6.6" text-anchor="middle" fill="#6a6a68">A 自身は、内部を含み閉包に含まれる</text>
+  <text x="133" y="170" font-size="6.6" text-anchor="middle" fill="#6a6a68">三つのどれが A に属するかは、A による</text>
+
+  <rect x="264" y="26" width="192" height="150" rx="4" fill="#fdf6f4" stroke="#e0c3bd"/>
+  <text x="274" y="43" font-size="7.6" font-weight="700" fill="#8c2f1e">有理数 Q の場合（R のなか）</text>
+  <text x="274" y="62" font-size="7" fill="#8c2f1e">閉包は R 全体</text>
+  <text x="274" y="77" font-size="7" fill="#8c2f1e">内部は空集合</text>
+  <text x="274" y="92" font-size="7" fill="#8c2f1e">境界は R 全体</text>
+  <text x="274" y="113" font-size="6.8" fill="#6a6a68">どの開区間にも有理数と無理数が</text>
+  <text x="274" y="125" font-size="6.8" fill="#6a6a68">両方あるので、こうなる。</text>
+  <text x="274" y="145" font-size="6.8" fill="#6a6a68">「稠密で、しかも内部が空」は</text>
+  <text x="274" y="157" font-size="6.8" fill="#6a6a68">矛盾ではない。</text>
+
+  <rect x="14" y="188" width="442" height="76" rx="4" fill="#f4f1ea" stroke="#8a6b2c"/>
+  <text x="24" y="203" font-size="7.8" font-weight="700" fill="#5a4520">三つの語の違い（R の部分集合で見る）</text>
+
+  <text x="24" y="221" font-size="7" font-weight="700" fill="#5a4520">稠密</text>
+  <text x="80" y="221" font-size="7" fill="#5a4520">閉包が全体　Q、無理数全体</text>
+  <text x="300" y="221" font-size="6.8" fill="#6a6a68">どの開集合とも交わる</text>
+
+  <text x="24" y="237" font-size="7" font-weight="700" fill="#5a4520">疎</text>
+  <text x="80" y="237" font-size="7" fill="#5a4520">閉包の内部が空　整数全体、カントール集合</text>
+  <text x="300" y="237" font-size="6.8" fill="#6a6a68">どの開集合にも隙間を残す</text>
+
+  <text x="24" y="253" font-size="7" font-weight="700" fill="#5a4520">開かつ閉</text>
+  <text x="80" y="253" font-size="7" fill="#5a4520">境界が空　R では ∅ と R だけ</text>
+  <text x="300" y="253" font-size="6.8" fill="#6a6a68">連結性の言い換え（第28章）</text>
+</svg>
+<figcaption data-ch="6">閉包・内部・境界の関係。有理数の例が示すように、稠密であることと内部をもつことは無関係である。境界が空であることは連結性と結びつく。</figcaption>
+</figure>
+
+<h3 id="s6-3">稠密・疎・そのあいだ</h3>
+
+<div class="teigi" id="def-chumitsu">
+<h4></h4>
+<p class="no-indent"><m>A \subseteq X</m> が<strong>稠密</strong>であるとは <m>\overline{A} = X</m> となることをいい、<strong>疎</strong>であるとは <m>(\overline{A})^{\circ} = \varnothing</m> となることをいう。</p>
+</div>
+
+<div class="rei" id="rei-yuri">
+<h4>有理数と無理数</h4>
+<p class="no-indent"><m>\mathbb{Q}</m> は <m>\mathbb{R}</m> のなかで稠密である。どの開区間にも有理数があるからである。<em>同時に <m>\mathbb{Q}^{\circ} = \varnothing</m> である</em>——どの開区間も無理数を含むので、<m>\mathbb{Q}</m> に含まれる開区間はない。無理数全体も同じく稠密で内部が空である。</p>
+<p><span class="yogo-hl">互いに交わらない二つの稠密集合が共存できる。</span>「稠密」は「たくさんある」ことを意味しない。実際、有理数は可算であり、実数の濃度からすれば無視できるほど少ない。</p>
+</div>
+
+<div class="hanrei" id="cex-so-chumitsu">
+<h4>疎でないが内部も空</h4>
+<p class="no-indent"><m>\mathbb{Q}</m> は疎ではない——<m>\overline{\mathbb{Q}} = \mathbb{R}</m> の内部は <m>\mathbb{R}</m> であって空でないからである。<em>にもかかわらず <m>\mathbb{Q}</m> 自身の内部は空である。</em>「内部が空」と「疎」を混同してはならない。<span class="yogo-hl">疎であるとは、閉包をとってもなお内部が空であること</span>をいう。</p>
+<p>整数全体 <m>\mathbb{Z}</m> は閉集合であり内部が空なので、疎である。カントール集合も疎である。第27章のベールのカテゴリー定理は、この「疎」という概念の上に立っている。</p>
+</div>
+
+<h3 id="s6-4">集積点と孤立点</h3>
+
+<p>閉包の点は二種類に分かれる。</p>
+
+<div class="teigi" id="def-shusekiten">
+<h4></h4>
+<p class="no-indent"><m>x</m> が <m>A</m> の<strong>集積点</strong>であるとは、<m>x</m> を含むどの開集合 <m>U</m> についても <m>(U \setminus \{x\}) \cap A \ne \varnothing</m> となることをいう。集積点全体を <m>A'</m> と書く。<m>A</m> の点であって集積点でないものを<strong>孤立点</strong>という。</p>
+</div>
+
+<p>定義から <m>\overline{A} = A \cup A'</m> が従う。<em><m>x \in \overline{A}</m> なら、<m>x</m> 自身が <m>A</m> の点であるか、<m>x</m> の近くに <m>x</m> と異なる <m>A</m> の点があるか、どちらかである。</em></p>
+
+<div class="rei" id="rei-shuseki">
+<h4>集積点の計算</h4>
+<p class="no-indent"><m>A = \{\, 1/n \mid n \in \mathbb{N} \,\}</m> とすると、<m>A' = \{0\}</m> である。<m>A</m> の点はすべて孤立点であり、<m>\overline{A} = A \cup \{0\}</m>。<em>集積点は <m>A</m> に属さなくてよい。</em></p>
+<p><m>A = \mathbb{Q}</m> なら <m>A' = \mathbb{R}</m> であり、孤立点はない。<m>A = \mathbb{Z}</m> なら <m>A' = \varnothing</m> で、すべてが孤立点である。<span class="yogo-hl">孤立点をもたない閉集合を完全集合という</span>——カントール集合がその例であり、第27章と第53章で再登場する。</p>
+</div>
+
+<div class="lv2">
+<h4>閉包作用素から位相を復元する</h4>
+<p>第5章の★★★で触れたクラトフスキの公理を、ここで証明しておく。<em>閉包を原始概念に選んでも、同じ構造が得られる。</em></p>
+<p><strong>閉包が満たす四条件。</strong>位相空間の閉包作用素は次を満たす。</p>
+<M>\overline{\varnothing} = \varnothing, \quad A \subseteq \overline{A}, \quad \overline{\overline{A}} = \overline{A}, \quad \overline{A \cup B} = \overline{A} \cup \overline{B}</M>
+<p>最初の三つは定義から直ちに出る。第四のものを示す。<m>A \cup B \subseteq \overline{A} \cup \overline{B}</m> であり、右辺は二つの閉集合の合併だから（F3）より閉である。よって <m>\overline{A \cup B} \subseteq \overline{A} \cup \overline{B}</m>。逆向きは <m>A \subseteq A \cup B</m> より <m>\overline{A} \subseteq \overline{A \cup B}</m>、<m>B</m> についても同様だから従う。</p>
+<p><strong>逆の構成。</strong>集合 <m>X</m> と、四条件を満たす作用素 <m>c</m> が与えられたとする。<m>\mathcal{F} = \{\, A \mid c(A) = A \,\}</m> と置き、その補集合の族を <m>\mathcal{T}</m> とする。<em><m>\mathcal{T}</m> が位相になり、その閉包作用素が <m>c</m> に一致する</em>ことを示せばよい。</p>
+<p>まず、第四条件から <m>c</m> は単調である。<m>A \subseteq B</m> なら <m>c(B) = c(A \cup B) = c(A) \cup c(B) \supseteq c(A)</m>。<span class="yogo-hl">合併を保つことが、単調性を含んでいる。</span></p>
+<p>（F3）は第四条件そのものである。（F2）を示す。<m>\{A_i\}</m> を <m>\mathcal{F}</m> の族、<m>A = \bigcap_i A_i</m> とする。各 <m>i</m> について <m>A \subseteq A_i</m> だから単調性より <m>c(A) \subseteq c(A_i) = A_i</m>。よって <m>c(A) \subseteq A</m> であり、第二条件と合わせて <m>c(A) = A</m>。<em>単調性だけで任意交叉が出る</em>のが要点である。</p>
+<p><strong>なぜ交叉の条件が要らないのか。</strong>四条件には <m>\overline{A \cap B}</m> についての要求がない。<span class="yogo-hl">それは <m>\overline{A \cap B} = \overline{A} \cap \overline{B}</m> が一般には成り立たないからである。</span>有理数と無理数を取れば、左辺は <m>\overline{\varnothing} = \varnothing</m>、右辺は <m>\mathbb{R}</m> である。</p>
+<p>ここにも第2章の非対称が顔を出している。<em>閉包は合併を保ち、交叉を保たない。</em>そして位相の公理は、合併を任意個で、交叉を有限個で許した。<span class="yogo-hl">二つの非対称は同じ根から出ている。</span></p>
+</div>
+
+<div class="lv3">
+<h4>クラトフスキの14集合問題</h4>
+<p>一つの集合から出発して、閉包をとる操作と補集合をとる操作を繰り返すと、いくつの相異なる集合が得られるか。<em>答えは、どんな位相空間のどんな部分集合から始めても、高々14個である。</em>クラトフスキが一九二二年に示した。</p>
+<p><strong>なぜ有限で止まるのか。</strong>閉包を <m>k</m>、補集合を <m>c</m> と書く。<m>c</m> は対合（<m>cc = \mathrm{id}</m>）であり、<m>k</m> は冪等（<m>kk = k</m>）である。<span class="yogo-hl">鍵になるのは <m>kckckck = kck</m> という等式である。</span>これが成り立つと、長い語はすべて短い語に潰れ、可能な語は14個に限られる。</p>
+<p>等式の証明には、<m>kck</m> が単調であることと、<m>A \subseteq kckA</m> が閉集合 <m>A</m> について成り立つことを使う。<em>技術的には短いが、見通しをつけるのが難しい種類の議論である。</em></p>
+<p><strong>14個すべてが実現するか。</strong>する。<m>\mathbb{R}</m> のなかで</p>
+<M>A = (0,1) \cup (1,2) \cup \{3\} \cup \big([4,5] \cap \mathbb{Q}\big)</M>
+<p>と置くと、14個の相異なる集合が得られる。<em>四つの成分が、それぞれ別の役割を果たしている</em>——開区間の切れ目、孤立点、稠密だが内部のない部分。<span class="yogo-hl">この例は、本章で導入した概念がすべて独立であることを一つの式で示している。</span></p>
+<p><strong>一般化。</strong>同じ問いを、閉包と内部の組合せ、あるいは閉包・補集合・合併の組合せで問うこともできる。閉包と内部だけなら7個、閉包・補集合・合併を許すと無限個になる。<em>どの操作を許すかで答えが変わる</em>ので、問題としては操作の集合を指定して初めて意味をもつ。</p>
+<p><strong>これは何の役に立つのか。</strong>直接の応用は乏しい。だが、この問題は位相空間論の一つの性格をよく表している。<span class="yogo-hl">単純な操作の組合せが、有限で止まるか止まらないかを問うこと</span>——第38章からの次元論も、第35章からの基数不変量も、突き詰めればこの形の問いである。「どこまでが有限で、どこから先が無限か」を測ることが、この分野の仕事の一つになる。</p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li><m>\mathbb{R}</m> において <m>[0,1)</m> の閉包・内部・境界を求めよ。</li>
+<li><m>\overline{A \cap B} \subseteq \overline{A} \cap \overline{B}</m> を示し、等号が成り立たない例を挙げよ。</li>
+<li>補有限位相をもつ無限集合で、任意の無限部分集合が稠密であることを示せ。</li>
+<li>孤立点をもたない空でない閉集合の例を、<m>\mathbb{R}</m> のなかで二つ挙げよ。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li><ref t="thm-heiho-tokucho"/> を用いて <m>\overline{A} = A \cup A'</m> を示せ。<span class="haiten">（10点）</span></li>
+<li><m>X \setminus \overline{A} = (X \setminus A)^{\circ}</m> を示せ。<span class="haiten">（10点）</span></li>
+<li><m>A</m> が疎であることと、<m>X \setminus \overline{A}</m> が稠密であることが同値であることを示せ。<span class="haiten">（15点）</span></li>
+<li>クラトフスキの四条件を満たす作用素から位相が構成できることを、★★の骨組みに従って完全に書き下せ。<span class="haiten">（25点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li><m>\mathbb{R}</m> の部分集合 <m>A = (0,1) \cup (1,2) \cup \{3\} \cup ([4,5] \cap \mathbb{Q})</m> から、閉包と補集合を繰り返して得られる集合を14個すべて書き下せ。<span class="haiten">（30点）</span></li>
+<li>境界が空である部分集合が <m>\varnothing</m> と <m>X</m> だけであることと、<m>X</m> が連結であることが同値であることを示せ（連結性の定義は第28章で与えるが、「開かつ閉な部分集合が自明なものに限る」を定義としてよい）。<span class="haiten">（20点）</span></li>
+</ol>
+</div>
+</div>
+<nav class="chnav">
+<a class="prev" href="ch05.html">← 第5章　なぜ開集合から始めるのか</a>
+<a class="next" href="ch07.html">第7章　基底と準基底、近傍系 →</a>
+</nav>
+</article>
+</main>
+<footer class="site">
+  <p>位相・解析大全　学部から大学院まで、三層で読む位相空間論と解析学</p>
+  <p class="small">本文・図版とも本書のために作成したものです。数式は MathJax でベクタ化して組んでいます。</p>
+</footer>
+</body>
+</html>

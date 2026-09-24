@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第37章 積空間の基数不変量｜位相・解析大全</title>
+<meta name="description" content="位相・解析大全　第37章　積空間の基数不変量">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;600&display=swap">
+<link rel="stylesheet" href="web.css">
+</head>
+<body>
+<header class="site">
+  <a class="site-title" href="index.html">位相・解析大全</a>
+  <nav class="site-nav">
+    <a href="index.html">目次</a>
+    <a href="isou-kaiseki-taizen.pdf">PDF版</a>
+  </nav>
+</header>
+<main>
+<article class="chapter">
+<p class="part-label">第V部　基数不変量と次元論</p>
+<h1><span class="ch-num">第37章</span>積空間の基数不変量</h1>
+<nav class="chnav">
+<a class="prev" href="ch36.html">← 第36章　セル数とスーリン問題</a>
+<a class="next" href="ch38.html">第38章　小さい帰納的次元 ind →</a>
+</nav>
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>積を取ると、基数不変量はどう変わるのか。</li>
+<li>非可算個の可分空間の積が可分になることがあるのは、なぜか。</li>
+<li>可算鎖条件は積で保たれるのか。</li>
+</ul>
+</div>
+
+<h3 id="s37-1">素朴な予想が外れる</h3>
+
+<p>第19章で保存の表を作った。<em>可分性は積で保たれると書いたが、条件がついていた。</em>ここで正確に述べる。</p>
+
+<div class="teiri" id="thm-hmp">
+<h4>ヒューイット–マルチェフスキ–ポンディチェリの定理</h4>
+<p class="no-indent"><m>|I| \le 2^{\aleph_0}</m> のとき、可分空間の族 <m>\{X_i\}_{i \in I}</m> の積 <m>\prod_{i \in I} X_i</m> は可分である。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><m>I = \{0,1\}^{\mathbb{N}}</m>（カントール集合の点全体）としてよい。各 <m>X_i</m> の可算稠密集合を <m>D_i = \{d_{i,n}\}_{n \in \mathbb{N}}</m> とする。</p>
+<p><strong>稠密集合を作る。</strong>有限個の互いに交わらない基本開集合 <m>C_1, \ldots, C_k \subseteq \{0,1\}^{\mathbb{N}}</m>（すなわち有限個の座標を固定して決まる集合）と、自然数 <m>n_1, \ldots, n_k</m> の組に対し、点 <m>p = p(C_1,\ldots,C_k; n_1,\ldots,n_k) \in \prod_i X_i</m> を</p>
+<M>p_i = \begin{cases} d_{i, n_j} & (i \in C_j) \\ d_{i, 0} & (\text{どの } C_j \text{ にも入らない}) \end{cases}</M>
+<p class="no-indent">と定める。<em>そのような組は可算個しかない</em>——有限個の基本開集合の選び方も、自然数の組も可算だからである。<span class="yogo-hl">よってこれらの点の全体 <m>D</m> は可算。</span></p>
+<p><strong>稠密性。</strong>積の基本開集合 <m>\prod_i U_i</m>（有限個 <m>i_1,\ldots,i_k</m> を除き <m>U_i = X_i</m>）を取る。<em><m>\{0,1\}^{\mathbb{N}}</m> はハウスドルフなので、<m>i_1,\ldots,i_k</m> を分離する互いに交わらない基本開集合 <m>C_1,\ldots,C_k</m>（<m>i_j \in C_j</m>）が取れる。</em></p>
+<p>各 <m>j</m> について <m>d_{i_j, n_j} \in U_{i_j}</m> なる <m>n_j</m> を選ぶ（<m>D_{i_j}</m> が稠密だから）。すると <m>p(C_1,\ldots,C_k; n_1,\ldots,n_k) \in \prod_i U_i</m>。</p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">証明の鍵は、<em>添字集合 <m>I</m> 自身に位相を入れて、有限個の添字を「分離」することである。</em><span class="yogo-hl"><m>|I| \le 2^{\aleph_0}</m> という条件は、<m>I</m> がカントール集合に埋め込めることを意味している。</span>カントール集合は可算個の基本開集合で任意の有限個の点を分離できる——これが可算な稠密集合を作る余地を与える。</p>
+</div>
+
+<div class="hanrei" id="cex-kabun-seki">
+<h4>濃度を超えると壊れる</h4>
+<p class="no-indent"><m>|I| > 2^{\aleph_0}</m> のとき、<m>\{0,1\}^{I}</m> は可分でない。</p>
+<p><em>証明。</em><m>D</m> を可算稠密集合とする。各 <m>i \in I</m> に、<m>\{\, d \in D \mid d_i = 0 \,\}</m> を対応させる。<m>i \ne j</m> なら、<m>p_i^{-1}(0) \cap p_j^{-1}(1)</m> が空でない開集合なので <m>D</m> と交わり、<span class="yogo-hl">対応する集合は異なる。</span>よって <m>|I| \le |\mathcal{P}(D)| = 2^{\aleph_0}</m>。</p>
+<p>この評価は <ref t="thm-hmp"/> とちょうど噛み合う。<em>可分性が保たれる限界が、正確に <m>2^{\aleph_0}</m> である。</em></p>
+</div>
+
+<h3 id="s37-2">積の重みと指標</h3>
+
+<div class="teiri" id="thm-seki-w-chi">
+<h4></h4>
+<p class="no-indent"><m>\{X_i\}_{i \in I}</m> を無限空間の族とする。</p>
+<M>w\Big(\prod_{i \in I} X_i\Big) = |I| \cdot \sup_i w(X_i), \qquad
+\chi\Big(\prod_{i \in I} X_i\Big) = |I| \cdot \sup_i \chi(X_i)</M>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><m>\le</m>。基本開集合は「有限個の座標を、各座標の基底元で制限する」形である。<em>その個数は <m>|I|^{<\omega} \cdot (\sup_i w(X_i))^{<\omega} = |I| \cdot \sup_i w(X_i)</m> で押さえられる</em>（無限基数の有限冪はそれ自身）。</p>
+<p><m>\ge</m>。各射影が開写像なので、<m>w(X_i) \le w(\prod)</m>。また <m>|I| \le w(\prod)</m> は、各座標で二つの開集合を区別する基底元が必要なことによる。</p>
+<p>指標も同様。<span class="yogo-hl">積では重みと指標がどちらも添字集合の濃度まで上がる。</span></p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">この定理が、<m>\{0,1\}^{I}</m>（<m>I</m> 非可算）が第一可算でない理由である（第11章の演習）。<em><m>\chi = |I|</m> だから。</em></p>
+<p>一方、稠密度とセル数は、この単純な式に従わない。<span class="yogo-hl">積で「上がりにくい」不変量がある</span>——それが次節の主題である。</p>
+</div>
+
+<figure id="fig37-1">
+<svg viewBox="0 0 470 272" width="470" height="272" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">積で上がるもの、上がらないもの</text>
+
+  <rect x="14" y="26" width="442" height="112" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+
+  <text x="24" y="42" font-size="7" font-weight="700" fill="#1f3b5c">二点集合を κ 個かけた空間の不変量</text>
+
+  <line x1="70" y1="120" x2="430" y2="120" stroke="#8a8a88" stroke-width="0.8"/>
+  <line x1="70" y1="120" x2="70" y2="56" stroke="#8a8a88" stroke-width="0.8"/>
+  <text x="64" y="60" font-size="6" text-anchor="end" fill="#6a6a68">大</text>
+  <text x="64" y="123" font-size="6" text-anchor="end" fill="#6a6a68">ℵ₀</text>
+  <text x="250" y="132" font-size="6.2" text-anchor="middle" fill="#6a6a68">添字集合の濃度 κ →</text>
+
+  <path d="M74,118 L430,60" stroke="#35618f" stroke-width="1.6" fill="none"/>
+  <text x="380" y="56" font-size="6.6" fill="#1f3b5c">w = χ = κ</text>
+
+  <path d="M74,118 C 160,110 260,100 430,92" stroke="#8a6b2c" stroke-width="1.4" fill="none"/>
+  <text x="380" y="88" font-size="6.6" fill="#5a4520">d ≈ log κ　ゆっくり上がる</text>
+
+  <line x1="74" y1="118" x2="430" y2="118" stroke="#2f6b5f" stroke-width="1.6"/>
+  <text x="330" y="114" font-size="6.6" fill="#1e4a41">c = ℵ₀　まったく上がらない</text>
+
+  <line x1="248" y1="56" x2="248" y2="120" stroke="#a03b2e" stroke-width="0.8" stroke-dasharray="2.4,2"/>
+  <text x="248" y="52" font-size="6.2" text-anchor="middle" fill="#8c2f1e">κ が 2 の ℵ₀ 乗</text>
+  <text x="248" y="146" font-size="6.4" text-anchor="middle" fill="#8c2f1e">ここまでは可分（d = ℵ₀）</text>
+
+  <rect x="14" y="156" width="216" height="110" rx="4" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="24" y="171" font-size="7.6" font-weight="700" fill="#1e4a41">可算鎖条件が積で保たれる理由</text>
+  <text x="24" y="188" font-size="6.8" fill="#1e4a41">Δ 系補題（デルタシステム）</text>
+  <text x="24" y="201" font-size="6.6" fill="#6a6a68">非可算個の有限集合の族からは、</text>
+  <text x="24" y="212" font-size="6.6" fill="#6a6a68">共通部分が同じ非可算な部分族が取れる</text>
+  <text x="24" y="229" font-size="6.8" fill="#1e4a41">基本開集合は有限個の座標しか使わない</text>
+  <text x="24" y="242" font-size="6.6" fill="#6a6a68">→ 非可算な反鎖があれば、根が同じ</text>
+  <text x="24" y="253" font-size="6.6" fill="#6a6a68">部分族が取れ、そこで矛盾が出る</text>
+
+  <rect x="240" y="156" width="216" height="110" rx="4" fill="#fdf6f4" stroke="#e0c3bd"/>
+  <text x="250" y="171" font-size="7.6" font-weight="700" fill="#8c2f1e">一般の積では独立</text>
+  <text x="250" y="188" font-size="6.8" fill="#8c2f1e">「可算鎖条件は積で保たれるか」</text>
+  <text x="250" y="203" font-size="6.8" fill="#8c2f1e">スーリン直線があれば　偽</text>
+  <text x="250" y="216" font-size="6.6" fill="#6a6a68">スーリン直線の平方が可算鎖条件を満たさない（第36章）</text>
+  <text x="250" y="231" font-size="6.8" fill="#8c2f1e">マーティンの公理のもとでは　真</text>
+  <text x="250" y="244" font-size="6.6" fill="#6a6a68">公理＋連続体仮説の否定のもとで保たれる</text>
+  <text x="250" y="257" font-size="6.6" fill="#8c2f1e">→ この問いも公理系から決まらない</text>
+</svg>
+<figcaption data-ch="37">二点集合を κ 個かけた空間では、重みと指標は κ まで上がるが、稠密度は κ の対数程度にとどまり、セル数はまったく上がらない。</figcaption>
+</figure>
+
+<h3 id="s37-3">可算鎖条件は積で保たれるか</h3>
+
+<div class="teiri" id="thm-ccc-seki-tokubetsu">
+<h4></h4>
+<p class="no-indent">可分空間の族の積は、添字集合の濃度によらず可算鎖条件を満たす。とくに <m>\{0,1\}^{I}</m> はどんな <m>I</m> についても可算鎖条件を満たす。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><ref t="thm-hmp"/> により、<em>添字集合を濃度 <m>2^{\aleph_0}</m> 以下の部分に分けると各部分の積は可分である。</em></p>
+<p>非可算な反鎖 <m>\{U_\alpha\}_{\alpha<\omega_1}</m> があったとする。各 <m>U_\alpha</m> は基本開集合を含むとしてよく、その基本開集合が使う座標の有限集合を <m>F_\alpha</m> とする。</p>
+<p><strong>Δ系補題。</strong><em>非可算個の有限集合の族 <m>\{F_\alpha\}</m> からは、非可算な部分族 <m>\{F_\beta\}_{\beta \in B}</m> で「どの二つの共通部分も同じ集合 <m>R</m>（根）になる」ものが取れる。</em></p>
+<p>この部分族について考える。<m>R</m> は有限だから、<m>\prod_{i \in R} X_i</m> は可分（有限積）であり、<span class="yogo-hl"><m>R</m> 上での制限が同じになる <m>\beta</m> が非可算個ある。</span></p>
+<p>ところが <m>R</m> の外では座標が互いに素だから、二つの基本開集合は交わってしまう。<em>反鎖であることに反する。</em></p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">Δ系補題（デルタシステム補題）が要である。<em>「非可算個の有限集合を集めると、必ず同じ根をもつ非可算な部分族が取れる」</em>——組合せ論の定理である。<span class="yogo-hl">積位相の基本開集合が有限個の座標しか使わないという性質（第11章）が、この補題を使える形にしている。</span></p>
+</div>
+
+<div class="hanrei" id="cex-ccc-seki">
+<h4>一般には保たれない</h4>
+<p class="no-indent">可分でない可算鎖条件空間の積では、可算鎖条件が壊れることがある。<em>スーリン直線 <m>L</m> がその例である</em>（第36章）——<m>L</m> は可算鎖条件を満たすが <m>L \times L</m> は満たさない。</p>
+<p><span class="yogo-hl">したがって「可算鎖条件は積で保たれるか」という問いは、公理系から決まらない。</span>スーリン直線が存在すれば偽、マーティンの公理と連続体仮説の否定のもとでは真である。</p>
+</div>
+
+<div class="lv2">
+<h4>Δ系補題</h4>
+<p>前節で使った補題を、正確に述べて証明する。<em>組合せ論的な議論の典型である。</em></p>
+<p><strong>主張。</strong><m>\{F_\alpha\}_{\alpha < \omega_1}</m> を有限集合の族とする。<span class="yogo-hl">非可算な <m>B \subseteq \omega_1</m> と有限集合 <m>R</m> が存在して、<m>\alpha \ne \beta \in B</m> なら <m>F_\alpha \cap F_\beta = R</m>。</span></p>
+<p><strong>証明。</strong>まず、<em>非可算個の <m>F_\alpha</m> が同じ濃度 <m>n</m> をもつとしてよい</em>（可算個の濃度しかないので、鳩の巣原理）。<m>n</m> についての帰納法で示す。</p>
+<p><m>n = 1</m> のとき。<m>F_\alpha = \{x_\alpha\}</m>。<em>もし非可算個が同じ点なら <m>R</m> はその点、そうでなければ互いに素なので <m>R = \varnothing</m>。</em></p>
+<p><m>n > 1</m> のとき。二つの場合に分ける。</p>
+<p><em>場合1——ある点 <m>x</m> が非可算個の <m>F_\alpha</m> に属する。</em>それらについて <m>F_\alpha \setminus \{x\}</m> に帰納法の仮定を適用し、得られた根に <m>x</m> を足す。</p>
+<p><em>場合2——どの点も可算個の <m>F_\alpha</m> にしか属さない。</em>このとき互いに素な非可算部分族が取れる。超限帰納法で <m>\alpha_\xi</m> を選ぶ——すでに選んだ <m>\bigcup_{\eta<\xi} F_{\alpha_\eta}</m> は（<m>\xi < \omega_1</m> なら）可算集合だから、その各点を含む <m>F_\alpha</m> も可算個であり、<span class="yogo-hl">まだ <m>\omega_1</m> 個の候補が残っている。</span></p>
+<p><strong>共終数がどこで効くか。</strong>場合2で「可算個を除いてもまだ非可算個残る」と言った。<em>これは <m>\mathrm{cf}(\omega_1) > \omega</m> による。</em></p>
+<p>第4章の共終数が、ここでも働いている。<span class="yogo-hl">第17章のチコノフ板、第25章の <m>[0,\omega_1)</m>、第35章★★のアルハンゲリスキーの定理、そしてこの補題——すべて同じ事実に立っている。</span></p>
+<p><strong>一般化。</strong><m>\omega_1</m> を正則な非可算基数 <m>\kappa</m> に、有限集合を濃度 <m>< \kappa</m> の集合に置き換えても成り立つ（<m>\kappa</m> が適当な条件を満たせば）。</p>
+<p><strong>用途。</strong>Δ系補題は、積空間の議論のほとんどで使われる。<em>「非可算個の基本開集合があれば、共通の座標集合をもつ非可算部分族が取れる」</em>——この形で、座標の有限性を大域的な結論に変える。</p>
+<p>第41章の次元の一致定理でも、被覆の議論で類似の手法が現れる。</p>
+</div>
+
+<div class="lv3">
+<h4>稠密度の対数的な振る舞い</h4>
+<p><ref t="thm-hmp"/> は <m>|I| \le 2^{\aleph_0}</m> で可分性が保たれることを示した。<em>その先はどうなるのか。</em></p>
+<p><strong>正確な値。</strong>ハウスドルフ空間の積について</p>
+<M>d\Big(\prod_{i \in I} X_i\Big) \le \log |I| \cdot \sup_i d(X_i)</M>
+<p>ここで <m>\log \kappa</m> は <m>2^{\lambda} \ge \kappa</m> なる最小の基数 <m>\lambda</m> を表す。<span class="yogo-hl"><m>\{0,1\}^{I}</m> については等号が成り立つ。</span></p>
+<p><ref t="thm-hmp"/> は <m>\log(2^{\aleph_0}) = \aleph_0</m> の場合にあたる。<ref t="cex-kabun-seki"/> は <m>|I| > 2^{\aleph_0}</m> なら <m>\log |I| > \aleph_0</m> であることを述べている。</p>
+<p><strong>なぜ対数なのか。</strong>直観はこうである。<em>稠密集合の点は、各座標について「どこにいるか」の情報をもつ。</em><m>|D|</m> 個の点で <m>|I|</m> 個の座標を区別するには、<m>2^{|D|} \ge |I|</m> が必要になる。</p>
+<p><ref t="cex-kabun-seki"/> の証明が、まさにこの数え上げである。<span class="yogo-hl">稠密集合の濃度が、添字集合の濃度の対数として現れる。</span></p>
+<p><strong>連続体仮説との関係。</strong><m>\log</m> の値は連続体仮説に依存する。<em><m>\kappa = \aleph_1</m> のとき、連続体仮説のもとでは <m>\log \aleph_1 = \aleph_0</m> だが、<m>2^{\aleph_0} = \aleph_2</m> なら <m>\log \aleph_1 = \aleph_0</m> でもある</em>（<m>2^{\aleph_0} \ge \aleph_1</m> だから）。</p>
+<p>より大きい <m>\kappa</m> では、<m>\log \kappa</m> の値が基数冪の振る舞いに依存する。<span class="yogo-hl">第4章で述べた「冪だけが難しい」という事実が、位相の量として現れている。</span></p>
+<p><strong>セル数の不変性。</strong>対照的に、セル数は積でまったく上がらない（可分な成分の場合）。<em>これは Δ系補題という組合せ論的な事実による</em>——集合論の公理には依存しない。</p>
+<p>しかし一般の可算鎖条件空間の積では独立になる。<span class="yogo-hl">「可分」と「可算鎖条件」の差が、ここで効いている。</span>第36章のスーリン問題が、まさにその差を問うていた。</p>
+<p><strong>まとめ。</strong>三つの不変量が、積に対して三通りに振る舞う。</p>
+<p><em>重みと指標</em>——線型に上がる（<m>|I|</m> まで）。</p>
+<p><em>稠密度</em>——対数的に上がる。値は基数冪に依存する。</p>
+<p><em>セル数</em>——上がらない。ただし成分が可分でないと独立命題になる。</p>
+<p>第38章からは次元に移る。<span class="yogo-hl">次元も積で上がるが、その上がり方には不等式しか知られていない</span>——第42章で見る。</p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li><m>\mathbb{R}^{\mathbb{N}}</m> が可分であることを示せ。</li>
+<li><m>\{0,1\}^{I}</m> の重みと指標を求めよ。</li>
+<li>有限積で稠密度が最大値になることを示せ。</li>
+<li>Δ系補題の主張を述べ、<m>n=1</m> の場合を示せ。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li><ref t="cex-kabun-seki"/> を、写像が単射である理由を明示して示せ。<span class="haiten">（25点）</span></li>
+<li><ref t="thm-seki-w-chi"/> の <m>\le</m> の向きを示せ。<span class="haiten">（25点）</span></li>
+<li>Δ系補題を、場合分けと超限帰納法を明示して証明せよ。<span class="haiten">（35点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li><ref t="thm-hmp"/> を、添字集合をカントール集合と同一視する部分を明示して完全に示せ。<span class="haiten">（40点）</span></li>
+<li><ref t="thm-ccc-seki-tokubetsu"/> を、Δ系補題をどこで使うか明示して示せ。<span class="haiten">（35点）</span></li>
+</ol>
+</div>
+</div>
+<nav class="chnav">
+<a class="prev" href="ch36.html">← 第36章　セル数とスーリン問題</a>
+<a class="next" href="ch38.html">第38章　小さい帰納的次元 ind →</a>
+</nav>
+</article>
+</main>
+<footer class="site">
+  <p>位相・解析大全　学部から大学院まで、三層で読む位相空間論と解析学</p>
+  <p class="small">本文・図版とも本書のために作成したものです。数式は MathJax でベクタ化して組んでいます。</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第5章 なぜ開集合から始めるのか｜位相・解析大全</title>
+<meta name="description" content="位相・解析大全　第5章　なぜ開集合から始めるのか">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;600&display=swap">
+<link rel="stylesheet" href="web.css">
+</head>
+<body>
+<header class="site">
+  <a class="site-title" href="index.html">位相・解析大全</a>
+  <nav class="site-nav">
+    <a href="index.html">目次</a>
+    <a href="isou-kaiseki-taizen.pdf">PDF版</a>
+  </nav>
+</header>
+<main>
+<article class="chapter">
+<p class="part-label">第I部　位相空間の基礎</p>
+<h1><span class="ch-num">第5章</span>なぜ開集合から始めるのか</h1>
+<nav class="chnav">
+<a class="prev" href="ch04.html">← 第4章　順序数と基数</a>
+<a class="next" href="ch06.html">第6章　位相空間・閉集合・閉包・内部 →</a>
+</nav>
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>距離を測れないところで、「近い」をどう言えばよいのか。</li>
+<li>位相の公理は、なぜ合併が任意個で、交叉が有限個なのか。</li>
+<li>この抽象化は、何を捨てて何を残したのか。</li>
+</ul>
+</div>
+
+<h3 id="s5-1">距離から始めて、距離を忘れる</h3>
+
+<p>実数の上で、関数 <m>f</m> が点 <m>a</m> で連続であるとは、次を意味した。</p>
+
+<M>\forall \varepsilon > 0\ \exists \delta > 0:\ |x - a| < \delta \implies |f(x) - f(a)| < \varepsilon</M>
+
+<p>この定義には距離 <m>|x - a|</m> が現れる。<em>だが、距離そのものが使われているわけではない。</em>使われているのは「<m>a</m> のまわりの小さな範囲」という観念だけである。<span class="yogo-hl">距離は、その範囲を作るための道具にすぎない。</span></p>
+
+<p>そこで、範囲のほうを先に用意してみる。<m>U_\varepsilon(a) = \{\, x \mid |x-a| < \varepsilon \,\}</m> を <m>a</m> の <m>\varepsilon</m> 近傍という。連続性の定義は、近傍の言葉でこう書き直せる。</p>
+
+<M>\forall \varepsilon > 0\ \exists \delta > 0:\ f\big(U_\delta(a)\big) \subseteq U_\varepsilon\big(f(a)\big)</M>
+
+<p>ここでさらに一歩進む。第2章で見たように、像より逆像のほうが素直だった。<em>逆像で書き直すと、<m>\delta</m> が姿を消す。</em></p>
+
+<div class="teiri" data-kind="命題" id="prop-renzoku-kaishugo">
+<h4></h4>
+<p class="no-indent"><m>f \colon \mathbb{R} \to \mathbb{R}</m> がすべての点で連続であることと、<span class="yogo-hl">すべての開集合 <m>V \subseteq \mathbb{R}</m> について <m>f^{-1}(V)</m> が開集合であること</span>は同値である。ここで <m>U \subseteq \mathbb{R}</m> が開集合であるとは、各 <m>a \in U</m> に対して <m>U_\varepsilon(a) \subseteq U</m> となる <m>\varepsilon > 0</m> が存在することをいう。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">連続とする。<m>V</m> を開集合、<m>a \in f^{-1}(V)</m> とする。<m>f(a) \in V</m> であり <m>V</m> は開だから、<m>U_\varepsilon(f(a)) \subseteq V</m> なる <m>\varepsilon</m> がある。連続性より <m>f(U_\delta(a)) \subseteq U_\varepsilon(f(a))</m> なる <m>\delta</m> がある。よって <m>U_\delta(a) \subseteq f^{-1}(V)</m> であり、<m>f^{-1}(V)</m> は開集合である。</p>
+<p>逆を示す。<m>a</m> を任意の点、<m>\varepsilon > 0</m> を任意とする。<m>U_\varepsilon(f(a))</m> は開集合だから、仮定より <m>f^{-1}(U_\varepsilon(f(a)))</m> は開集合であり、<m>a</m> を含む。よって <m>U_\delta(a) \subseteq f^{-1}(U_\varepsilon(f(a)))</m> なる <m>\delta</m> があり、これは求める条件にほかならない。</p>
+</div>
+
+<p><span class="yogo-hl">この命題で、連続性から <m>\varepsilon</m> と <m>\delta</m> が消えた。</span>残ったのは「開集合」という語だけである。<em>ならば、開集合が何であるかを直接与えてしまえば、距離がなくても連続性を語れる。</em>これが位相空間という概念の出発点である。</p>
+
+<h3 id="s5-2">開集合の族が満たす性質</h3>
+
+<p>では、距離から作った開集合の族は、どんな性質をもっているか。三つある。</p>
+
+<p>第一に、<m>\varnothing</m> と全体 <m>\mathbb{R}</m> は開である。第二に、<strong>任意個</strong>の開集合の合併は開である。第三に、<strong>有限個</strong>の開集合の交叉は開である。</p>
+
+<p>合併のほうを確かめる。<m>a \in \bigcup_i U_i</m> なら、ある <m>i</m> で <m>a \in U_i</m> であり、その <m>U_i</m> のなかに <m>a</m> の近傍が取れる。<em>それはそのまま合併のなかの近傍でもある。</em>族がいくつあっても、使うのは一つだけなので、無限個でも困らない。</p>
+
+<p>交叉は事情が違う。<m>a \in U_1 \cap \cdots \cap U_n</m> なら、各 <m>i</m> について <m>U_{\varepsilon_i}(a) \subseteq U_i</m> なる <m>\varepsilon_i</m> がある。ここで <m>\varepsilon = \min(\varepsilon_1, \ldots, \varepsilon_n)</m> と置けばよい。<span class="yogo-hl">最小値が正であることに、有限性が効いている。</span></p>
+
+<div class="hanrei" id="cex-mugen-kyosa">
+<h4>無限個の交叉は開とは限らない</h4>
+<p class="no-indent"><m>U_n = (-1/n,\ 1/n)</m> はすべて開集合である。しかし</p>
+<M>\bigcap_{n=1}^{\infty} U_n = \{0\}</M>
+<p class="no-indent">であり、一点集合 <m>\{0\}</m> は開でない。<em>どんなに小さい <m>\varepsilon</m> を取っても <m>U_\varepsilon(0)</m> は <m>0</m> 以外の点を含む。</em>無限個の <m>\varepsilon_n</m> の下限が <m>0</m> になってしまうところが、有限の場合との違いである。</p>
+</div>
+
+<h3 id="s5-3">公理として書き下す</h3>
+
+<p>いま抜き出した三つの性質を、そのまま定義に昇格させる。</p>
+
+<div class="teigi" id="def-isou">
+<h4>位相空間</h4>
+<p class="no-indent">集合 <m>X</m> と、その部分集合の族 <m>\mathcal{T} \subseteq \mathcal{P}(X)</m> の対 <m>(X, \mathcal{T})</m> が<strong>位相空間</strong>であるとは、<m>\mathcal{T}</m> が次の三つを満たすことをいう。</p>
+<p class="no-indent">（T1）<m>\varnothing \in \mathcal{T}</m> かつ <m>X \in \mathcal{T}</m>。<br>
+（T2）<m>\{U_i\}_{i \in I} \subseteq \mathcal{T}</m> ならば <m>\bigcup_{i \in I} U_i \in \mathcal{T}</m>（<strong>任意個</strong>の合併）。<br>
+（T3）<m>U, V \in \mathcal{T}</m> ならば <m>U \cap V \in \mathcal{T}</m>（したがって<strong>有限個</strong>の交叉）。</p>
+<p><m>\mathcal{T}</m> を <m>X</m> 上の<strong>位相</strong>といい、<m>\mathcal{T}</m> の元を<strong>開集合</strong>という。</p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">（T3）は二つの場合だけを要求している。<em>帰納法により有限個に拡張されるが、無限個には拡張されない。</em><span class="yogo-hl">この非対称は、公理を書く人の趣味ではなく、距離空間の観察から強いられたものである。</span>もし無限個の交叉まで許すと、何が起きるかは★★で見る。</p>
+</div>
+
+<p>この定義には、点のあいだの距離も、点そのものの性質も現れない。<em>あるのは「どの部分集合を開と呼ぶか」という指定だけである。</em>したがって、同じ集合の上に違う位相を入れることができる。</p>
+
+<div class="rei" id="rei-isou-rei">
+<h4>三つの基本的な位相</h4>
+<p class="no-indent">任意の集合 <m>X</m> に対して、次はいずれも位相である。</p>
+<p class="no-indent"><strong>離散位相</strong>　<m>\mathcal{T} = \mathcal{P}(X)</m>。すべての部分集合が開。<em>点がばらばらに離れている状態</em>にあたる。</p>
+<p class="no-indent"><strong>密着位相</strong>　<m>\mathcal{T} = \{\varnothing, X\}</m>。開集合が二つしかない。<em>どの点とどの点も分離できない。</em></p>
+<p class="no-indent"><strong>補有限位相</strong>　<m>\mathcal{T} = \{\varnothing\} \cup \{\, U \subseteq X \mid X \setminus U \text{ が有限} \,\}</m>。<m>X</m> が無限のとき、<span class="yogo-hl">空でない二つの開集合は必ず交わる</span>という奇妙な性質をもつ。第13章で分離公理を考えるとき、この空間が重要な参照点になる。</p>
+</div>
+
+<figure id="fig5-1">
+<svg viewBox="0 0 470 268" width="470" height="268" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <defs>
+    <marker id="a5" markerWidth="8" markerHeight="8" refX="7" refY="2.6" orient="auto"><path d="M0,0 L7,2.6 L0,5.2 z" fill="#35618f"/></marker>
+  </defs>
+
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">距離を捨てて位相が残る——何を忘れ、何が残ったか</text>
+
+  <rect x="14" y="26" width="132" height="72" rx="4" fill="#dce7f0" stroke="#35618f"/>
+  <text x="80" y="42" font-size="7.6" text-anchor="middle" font-weight="700" fill="#1f3b5c">距離空間</text>
+  <text x="24" y="56" font-size="6.8" fill="#1f3b5c">二点の遠さが数で出る</text>
+  <text x="24" y="68" font-size="6.8" fill="#1f3b5c">ε 近傍が作れる</text>
+  <text x="24" y="80" font-size="6.8" fill="#1f3b5c">一様連続が言える</text>
+  <text x="24" y="92" font-size="6.8" fill="#1f3b5c">完備性が言える</text>
+
+  <rect x="169" y="26" width="132" height="72" rx="4" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="235" y="42" font-size="7.6" text-anchor="middle" font-weight="700" fill="#1e4a41">開集合の族</text>
+  <text x="179" y="56" font-size="6.8" fill="#1e4a41">「近さ」の範囲だけ残る</text>
+  <text x="179" y="68" font-size="6.8" fill="#1e4a41">遠さの数値は消える</text>
+  <text x="179" y="80" font-size="6.8" fill="#1e4a41">連続は言える</text>
+  <text x="179" y="92" font-size="6.8" fill="#1e4a41">一様連続は言えない</text>
+
+  <rect x="324" y="26" width="132" height="72" rx="4" fill="#efe0e6" stroke="#8a3b62"/>
+  <text x="390" y="42" font-size="7.6" text-anchor="middle" font-weight="700" fill="#6b2a48">位相空間</text>
+  <text x="334" y="56" font-size="6.8" fill="#6b2a48">三つの公理だけを課す</text>
+  <text x="334" y="68" font-size="6.8" fill="#6b2a48">距離に由来しなくてよい</text>
+  <text x="334" y="80" font-size="6.8" fill="#6b2a48">同じ集合に別の位相</text>
+  <text x="334" y="92" font-size="6.8" fill="#6b2a48">距離化は第31〜32章</text>
+
+  <path d="M150,62 L165,62" stroke="#35618f" stroke-width="1.3" fill="none" marker-end="url(#a5)"/>
+  <path d="M305,62 L320,62" stroke="#35618f" stroke-width="1.3" fill="none" marker-end="url(#a5)"/>
+
+  <rect x="14" y="112" width="442" height="78" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+  <text x="24" y="127" font-size="7.8" font-weight="700" fill="#1f3b5c">公理の非対称——なぜ合併は任意個で、交叉は有限個か</text>
+
+  <text x="24" y="145" font-size="7" fill="#1f3b5c">合併　点 a が入るには、族のうち一つの U だけ使えばよい</text>
+  <text x="300" y="145" font-size="7" fill="#2f6b5f">→ いくつあっても困らない</text>
+
+  <text x="24" y="161" font-size="7" fill="#1f3b5c">交叉　各 U ごとの ε を取り、その最小値を使う</text>
+  <text x="300" y="161" font-size="7" fill="#2f6b5f">→ 有限なら最小値は正</text>
+
+  <text x="24" y="180" font-size="7" fill="#8c2f1e">無限個だと下限が 0 になりうる。(−1/n, 1/n) の交叉は {0} で、開でない。</text>
+
+  <rect x="14" y="202" width="442" height="56" rx="4" fill="#f4f1ea" stroke="#8a6b2c"/>
+  <text x="24" y="217" font-size="7.8" font-weight="700" fill="#5a4520">捨てたことの代償と見返り</text>
+  <text x="24" y="232" font-size="7" fill="#5a4520">代償　距離でしか言えないこと（一様連続・完備・有界）が言えなくなる</text>
+  <text x="24" y="247" font-size="7" fill="#5a4520">見返り　商・積・関数空間など、距離の入らない空間を同じ言葉で扱える</text>
+</svg>
+<figcaption data-ch="5">距離から位相への抽象化。数値としての遠さを捨てる代わりに、距離の入らない空間まで同じ言葉で扱えるようになる。捨てたものは第29章から第34章で改めて取り戻す。</figcaption>
+</figure>
+
+<h3 id="s5-4">抽象化は、ただの一般化ではない</h3>
+
+<p>「距離空間で成り立つことを一般の空間でも言えるようにした」というだけなら、この抽象化の価値は限られる。<em>本当の見返りは別のところにある。</em></p>
+
+<p>第一に、<span class="yogo-hl">距離が自然に入らない空間が、数学には数多くある。</span>関数全体の集合に各点収束を与えた空間（第11章の積空間）、多様体を貼り合わせて作る空間（第10章の商空間）、代数幾何のザリスキ位相。これらはいずれも位相空間として自然に扱えるが、距離空間としては扱いにくいか、扱えない。</p>
+
+<p>第二に、<em>距離が入るとしても、位相だけが問題である場面が多い。</em>連続性、コンパクト性、連結性はすべて位相だけで決まる。<span class="yogo-hl">同じ位相を与える距離は無数にあり、どれを選んでも連続性の判定は変わらない。</span>ならば、位相の言葉で述べたほうが本質が見える。</p>
+
+<p>第三に、<em>どこまで一般化できるかを調べること自体が、定理の意味を明らかにする。</em>本書が第II部で分離公理の階層を、第III部で被覆性質の階層を丁寧に扱うのは、そのためである。「この定理はどの水準の空間で成り立つのか」を突き止めると、その定理が何に依存していたかが分かる。</p>
+
+<div class="lv2">
+<h4>公理を変えたらどうなるか</h4>
+<p>位相の公理は、三つとも動かせない。<em>どれを緩めても壊れる。</em>実際に緩めてみると、公理が何を守っているかが見える。</p>
+<p><strong>交叉を任意個にしてみる。</strong>（T3）を「任意個の交叉で閉じる」に強めると、何が起きるか。各点 <m>x</m> について、<m>x</m> を含む開集合すべての交叉を <m>V_x</m> とおく。強めた公理のもとでは <m>V_x</m> も開である。<span class="yogo-hl">そして <m>V_x</m> は <m>x</m> を含む最小の開集合になる。</span></p>
+<p>このような位相を<strong>アレクサンドロフ位相</strong>という。これは前順序集合と一対一に対応し、<em>位相空間論というより順序集合論になる。</em>実際、<m>x \le y \iff x \in V_y</m> と定めると前順序が得られ、逆に前順序から同じ位相が復元される。有限空間はすべてアレクサンドロフ位相をもつので、有限位相空間論は組合せ論の一部になる。連続体を扱う道具としては無力である。</p>
+<p><strong>合併を有限個にしてみる。</strong>（T2）を有限個に弱めると、開集合の族は有限交叉と有限合併で閉じるだけになり、<em>これは位相ではなく束の構造である。</em>実数の開集合 <m>(0,1)</m> は <m>\bigcup_n (1/n, 1 - 1/n)</m> と書けるが、この表示が使えなくなる。近似の議論がすべて止まる。</p>
+<p><strong>大小の比較。</strong>同じ集合 <m>X</m> 上の二つの位相 <m>\mathcal{T}_1 \subseteq \mathcal{T}_2</m> のとき、<m>\mathcal{T}_2</m> は <m>\mathcal{T}_1</m> より<strong>強い</strong>（細かい）という。離散位相が最強、密着位相が最弱である。</p>
+<p>この大小は、二つの方向に効く。<em>位相が強いほど連続関数は多く出ていき、少なく入ってくる。</em>離散位相をもつ空間からはどんな写像も連続だが、密着位相をもつ空間へはどんな写像も連続である。<span class="yogo-hl">「連続写像が多い」ことは、空間が良いことを意味しない。</span></p>
+<p><strong>位相の共通部分。</strong><m>X</m> 上の位相の族 <m>\{\mathcal{T}_i\}</m> があるとき、<m>\bigcap_i \mathcal{T}_i</m> は再び位相である。<em>三つの公理がいずれも「族の元すべてについて」という形なので、交叉で保たれる。</em>一方、合併は位相とは限らない。この事実が、次章以降で「ある族を含む最小の位相」を作るときの土台になる（第7章）。</p>
+</div>
+
+<div class="lv3">
+<h4>開集合でないものから始める道</h4>
+<p>位相空間を定義する方法は、開集合の族を与えるだけではない。<em>同じ構造を、別の原始概念から定義できる。</em>どれを出発点に選ぶかで、見える風景が変わる。</p>
+<p><strong>閉包作用素から。</strong>クラトフスキ <span class="orig">Kuratowski</span> は、閉包をとる操作 <m>A \mapsto \overline{A}</m> を原始概念として位相を定義した。要求する条件は四つである。</p>
+<M>\overline{\varnothing} = \varnothing, \quad A \subseteq \overline{A}, \quad \overline{\overline{A}} = \overline{A}, \quad \overline{A \cup B} = \overline{A} \cup \overline{B}</M>
+<p>この四条件から、<m>\overline{A} = A</m> となる <m>A</m> を閉集合と定めれば、その補集合の族が位相になる。<span class="yogo-hl">第4の条件で合併しか現れず、交叉が現れないことに注意してほしい。</span>これが（T2）と（T3）の非対称の裏返しである。第6章でこの同値を証明する。</p>
+<p><strong>近傍系から。</strong>各点に「その点の近傍の族」を割り当て、適当な条件を課しても同じ構造が得られる。<em>この道は直観に近い</em>——「近い」という概念を点ごとに与えるからである。ハウスドルフ <span class="orig">Hausdorff</span> の一九一四年の原著は、この形で位相空間を導入した。</p>
+<p><strong>点を使わない道。</strong>より徹底した見方がある。位相空間の本質が開集合の族にあるなら、<em>点を忘れて、開集合の族がなす束だけを相手にしてはどうか。</em>これがロケール <span class="orig">locale</span>（フレーム）の理論であり、点なし位相空間論と呼ばれる。</p>
+<p>開集合の族は、任意合併と有限交叉で閉じた束をなす。この束構造だけを公理化したものをフレームといい、その反対圏をロケールの圏という。位相空間からは自然にロケールが得られるが、<span class="yogo-hl">逆にロケールから点を復元できるとは限らない。</span>点をもたない自明でないロケールが存在する。</p>
+<p>この立場の御利益は、<em>選択公理への依存が減る</em>ことである。チコノフの定理は位相空間では選択公理と同値だが（第21章）、ロケールの圏では選択公理なしに証明できる。同様に、ハーン–バナッハの定理のロケール版も構成的に証明できる。<span class="yogo-hl">点という概念そのものが、選択公理を呼び込んでいた</span>——この診断は、第3章で見た事情への一つの応答である。</p>
+<p>本書は点をもつ位相空間を扱う。それが解析学への接続に必要だからである。だが「なぜ開集合から始めるのか」という本章の問いに対して、<em>「そもそも点から始めなくてもよい」という答えがありうる</em>ことは、記しておく価値がある。</p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li><m>X = \{a, b, c\}</m> 上の位相をすべて数え上げよ（同相なものを同一視しなくてよい）。</li>
+<li>離散位相と密着位相が <ref t="def-isou"/> の三条件を満たすことを確かめよ。</li>
+<li>無限集合上の補有限位相で、空でない二つの開集合が必ず交わることを示せ。</li>
+<li><m>\mathbb{R}</m> 上で <m>[0,1]</m> が開でないことを、開集合の定義に戻って示せ。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li><ref t="prop-renzoku-kaishugo"/> の証明を、逆像が集合演算を保つこと（第2章）がどこで効いているかを明示しながら書き直せ。<span class="haiten">（15点）</span></li>
+<li><m>X</m> 上の位相の族の共通部分が再び位相であることを示せ。また、合併が位相とは限らない例を挙げよ。<span class="haiten">（15点）</span></li>
+<li><m>\mathbb{R}</m> の開集合が、高々可算個の互いに交わらない開区間の合併として一意に書けることを示せ。<span class="haiten">（20点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li>任意個の交叉で閉じる位相（アレクサンドロフ位相）が、<m>X</m> 上の前順序と一対一に対応することを示せ。<span class="haiten">（25点）</span></li>
+<li>同じ集合の上に、比較できない二つの位相——どちらも他方より強くない——を作れ。<span class="haiten">（20点）</span></li>
+</ol>
+</div>
+</div>
+<nav class="chnav">
+<a class="prev" href="ch04.html">← 第4章　順序数と基数</a>
+<a class="next" href="ch06.html">第6章　位相空間・閉集合・閉包・内部 →</a>
+</nav>
+</article>
+</main>
+<footer class="site">
+  <p>位相・解析大全　学部から大学院まで、三層で読む位相空間論と解析学</p>
+  <p class="small">本文・図版とも本書のために作成したものです。数式は MathJax でベクタ化して組んでいます。</p>
+</footer>
+</body>
+</html>

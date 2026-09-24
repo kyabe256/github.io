@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第70章 弱位相と弱*位相｜位相・解析大全</title>
+<meta name="description" content="位相・解析大全　第70章　弱位相と弱*位相">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;600&display=swap">
+<link rel="stylesheet" href="web.css">
+</head>
+<body>
+<header class="site">
+  <a class="site-title" href="index.html">位相・解析大全</a>
+  <nav class="site-nav">
+    <a href="index.html">目次</a>
+    <a href="isou-kaiseki-taizen.pdf">PDF版</a>
+  </nav>
+</header>
+<main>
+<article class="chapter">
+<p class="part-label">第IX部　関数解析の基本定理</p>
+<h1><span class="ch-num">第70章</span>弱位相と弱*位相</h1>
+<nav class="chnav">
+<a class="prev" href="ch69.html">← 第69章　開写像定理と閉グラフ定理</a>
+<a class="next" href="ch71.html">第71章　Banach–Alaogluの定理 →</a>
+</nav>
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>位相を弱めると、何が得られて何を失うのか。</li>
+<li>弱収束と強収束は、どこで食い違うのか。</li>
+<li>弱位相と弱*位相は、どう違うのか。</li>
+</ul>
+</div>
+
+<h3 id="s70-1">位相を弱める</h3>
+
+<p>第63章で、無限次元では閉単位球がコンパクトでないと見た。<em>コンパクト性を取り戻す第一の道が、位相を弱めることである。</em></p>
+
+<div class="teigi" id="def-jaku-isou">
+<h4>弱位相と弱*位相</h4>
+<p class="no-indent"><m>E</m> をノルム空間とする。</p>
+<p><strong>弱位相</strong> <m>\sigma(E,E^*)</m>——<em>すべての <m>\varphi\in E^*</m> を連続にする最弱の位相</em>。第7章の始位相である。</p>
+<p><strong>弱*位相</strong> <m>\sigma(E^*,E)</m>——<em><m>E^*</m> の上で、すべての評価写像 <m>\varphi\mapsto\varphi(x)</m>（<m>x\in E</m>）を連続にする最弱の位相</em>。</p>
+</div>
+
+<div class="chui">
+<h4>近傍の形</h4>
+<p class="no-indent">弱位相の <m>x_0</m> の基本近傍は</p>
+<M>V(x_0;\varphi_1,\ldots,\varphi_n;\varepsilon) = \{\, x \mid |\varphi_k(x-x_0)|<\varepsilon \ (k=1,\ldots,n) \,\}</M>
+<p class="no-indent"><span class="yogo-hl">有限個の汎関数しか見ない。</span><em>だから <m>E</m> が無限次元なら、どの弱近傍も無限次元の部分空間（<m>\bigcap_k\ker\varphi_k</m>）を含む。</em></p>
+<p>したがって<em>弱位相では、どの <m>0</m> の近傍も有界でない</em>。<span class="yogo-hl">第63章★★★のコルモゴロフの定理より、弱位相はノルムで定まらない。</span></p>
+<p>第11章の積位相と同じ構造である。<em>弱位相は、<m>E</m> を <m>\mathbb{K}^{E^*}</m> の部分空間と見たときの相対位相にほかならない。</em></p>
+</div>
+
+<div class="teiri" data-kind="命題" id="prop-jaku-kihon">
+<h4>基本性質</h4>
+<p class="no-indent">（1）弱位相はハウスドルフである（ハーン–バナッハの定理から）。<br>
+（2）弱位相 <m>\subseteq</m> ノルム位相。無限次元なら真に弱い。<br>
+（3）<m>x_n \rightharpoonup x</m>（弱収束）<m>\iff</m> すべての <m>\varphi\in E^*</m> で <m>\varphi(x_n)\to\varphi(x)</m>。<br>
+（4）弱収束列は有界で、<m>\|x\|\le\liminf_n\|x_n\|</m>（<strong>ノルムの弱下半連続性</strong>）。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">（1）<m>x\ne y</m> なら <ref t="cor-hb-kei"/>（1）より <m>\varphi(x)\ne\varphi(y)</m> なる <m>\varphi</m> がある。</p>
+<p>（4）有界性は <ref t="cor-yukai-hantei"/>（1）。下半連続性は、<m>\|\varphi\|=1</m>、<m>\varphi(x)=\|x\|</m> を取れば <m>\|x\|=\lim\varphi(x_n)\le\liminf\|x_n\|</m>。</p>
+</div>
+
+<div class="chui">
+<h4>下半連続性が重要</h4>
+<p class="no-indent"><span class="yogo-hl">ノルムは弱連続でないが、弱下半連続である。</span></p>
+<p><em>これが変分法の基礎になる</em>——「最小化列が弱収束すれば、極限が最小値を与える」。第71章で、弱コンパクト性と合わせて使う。</p>
+</div>
+
+<h3 id="s70-2">弱収束の実際</h3>
+
+<div class="rei" id="rei-jaku-shusoku">
+<h4>弱収束するが強収束しない例</h4>
+<p class="no-indent"><strong>正規直交系。</strong>ヒルベルト空間で <m>e_n\rightharpoonup0</m>（ベッセルの不等式より <m>\langle x,e_n\rangle\to0</m>）だが <m>\|e_n\|=1</m>。</p>
+<p><strong>振動。</strong><m>f_n(x)=\sin(nx)</m> は <m>L^2[0,2\pi]</m> で <m>0</m> に弱収束する（リーマン–ルベーグの補題、第84章）。</p>
+<p><strong>集中。</strong><m>f_n=n^{1/p}\mathbf{1}_{(0,1/n)}</m> は <m>L^p</m>（<m>1<p<\infty</m>）で <m>0</m> に弱収束する。</p>
+<p><strong>平行移動。</strong><m>f_n(x)=f(x-n)</m> は <m>L^p(\mathbb{R})</m>（<m>1<p<\infty</m>）で <m>0</m> に弱収束する。</p>
+<p><span class="yogo-hl">弱収束が捉えられないのは「振動」「集中」「逃走」の三つである。</span><em>第50章で見た積分と極限が交換しない三つの型と、同じ顔ぶれである。</em></p>
+</div>
+
+<div class="teiri" id="thm-radon-riesz">
+<h4>ラドン–リースの性質</h4>
+<p class="no-indent"><m>E</m> が一様凸なら（第60章★★★）、</p>
+<M>x_n\rightharpoonup x \ \ \text{かつ}\ \ \|x_n\|\to\|x\| \qquad \Longrightarrow \qquad \|x_n-x\|\to0</M>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><m>x=0</m> なら明らか。<m>x\ne0</m> とし、<m>y_n=x_n/\|x_n\|</m>、<m>y=x/\|x\|</m> とおく。<em><m>y_n\rightharpoonup y</m> で <m>\|y_n\|=\|y\|=1</m>。</em></p>
+<p><m>\frac{y_n+y}{2}\rightharpoonup y</m> なので、下半連続性より <m>\liminf\|\frac{y_n+y}{2}\|\ge1</m>。<em>一様凸性より <m>\|y_n-y\|\to0</m>。</em></p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent"><span class="yogo-hl">「弱収束 <m>+</m> ノルムの収束 <m>=</m> 強収束」。</span></p>
+<p><em>ヒルベルト空間では直接に確かめられる</em>——<m>\|x_n-x\|^2=\|x_n\|^2-2\mathrm{Re}\langle x_n,x\rangle+\|x\|^2\to0</m>。</p>
+<p><m>L^1</m> では成り立たない（一様凸でない）。<em><m>f_n=n\mathbf{1}_{(0,1/n)}</m> は <m>L^1</m> で弱収束しないが、似た現象が起こる。</em></p>
+</div>
+
+<h3 id="s70-3">閉集合と凸性</h3>
+
+<div class="teiri" id="thm-mazur">
+<h4>マズールの定理</h4>
+<p class="no-indent"><m>C\subseteq E</m> を凸集合とすると、<m>C</m> が弱閉であることとノルム閉であることは同値である。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">弱閉ならノルム閉は明らか（弱位相のほうが弱いから）。</p>
+<p>逆。<m>C</m> をノルム閉凸、<m>x_0\notin C</m> とする。<em>分離定理（<ref t="thm-bunri"/>（2））より、<m>\varphi\in E^*</m> と <m>\gamma_1<\gamma_2</m> があって <m>\mathrm{Re}\,\varphi(x_0)\le\gamma_1<\gamma_2\le\mathrm{Re}\,\varphi(c)</m>（<m>c\in C</m>）。</em></p>
+<p><m>\{\,x \mid \mathrm{Re}\,\varphi(x)<\gamma_2\,\}</m> は <m>x_0</m> の弱開近傍で <m>C</m> と交わらない。<span class="yogo-hl">よって <m>C</m> の補集合は弱開。</span></p>
+</div>
+
+<div class="teiri" data-kind="系" id="cor-mazur">
+<h4>マズールの補題</h4>
+<p class="no-indent"><m>x_n\rightharpoonup x</m> なら、<m>\{x_n\}</m> の凸結合からなる列で <m>x</m> にノルム収束するものが存在する。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><m>C=\overline{\mathrm{conv}}\{x_n : n\ge N\}</m>（ノルム閉包）は凸閉なので弱閉。<em><m>x</m> は <m>\{x_n : n\ge N\}</m> の弱閉包に属するので <m>x\in C</m>。</em></p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent"><span class="yogo-hl">凸集合については、弱位相とノルム位相が「閉」に関して同じ結論を出す。</span></p>
+<p><em>これが弱位相を実用的にしている。</em>凸な対象（凸関数の下位集合、凸最適化の制約集合）を扱うかぎり、位相を弱めても閉性を失わない。</p>
+</div>
+
+<figure id="fig70-1">
+<svg viewBox="0 0 470 276" width="470" height="276" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">弱収束が見落とす三つの現象</text>
+
+  <rect x="14" y="26" width="442" height="110" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+
+  <text x="86" y="42" font-size="6.8" text-anchor="middle" font-weight="700" fill="#1f3b5c">振動</text>
+  <line x1="30" y1="100" x2="146" y2="100" stroke="#8a8a88" stroke-width="0.7"/>
+  <path d="M32,100 L38,76 L44,124 L50,76 L56,124 L62,76 L68,124 L74,76 L80,124 L86,76 L92,124 L98,76 L104,124 L110,76 L116,124 L122,76 L128,124 L134,76 L140,124 L144,100"
+        stroke="#35618f" stroke-width="0.9" fill="none"/>
+  <text x="86" y="132" font-size="6" text-anchor="middle" fill="#6a6a68">sin(nx)</text>
+
+  <text x="235" y="42" font-size="6.8" text-anchor="middle" font-weight="700" fill="#1f3b5c">集中</text>
+  <line x1="178" y1="124" x2="294" y2="124" stroke="#8a8a88" stroke-width="0.7"/>
+  <path d="M180,124 L180,88 L204,88 L204,124 Z" fill="none" stroke="#8aa8c4" stroke-width="0.8"/>
+  <path d="M180,124 L180,72 L192,72 L192,124 Z" fill="none" stroke="#5f87ad" stroke-width="0.9"/>
+  <path d="M180,124 L180,56 L186,56 L186,124 Z" fill="#cfe0ee" stroke="#35618f" stroke-width="1"/>
+  <text x="235" y="132" font-size="6" text-anchor="middle" fill="#6a6a68">n の 1/p 乗を (0,1/n) に</text>
+
+  <text x="384" y="42" font-size="6.8" text-anchor="middle" font-weight="700" fill="#1f3b5c">逃走</text>
+  <line x1="326" y1="124" x2="442" y2="124" stroke="#8a8a88" stroke-width="0.7"/>
+  <path d="M330,124 C 338,124 340,88 348,88 C 356,88 358,124 366,124 Z" fill="#cfe0ee" stroke="#35618f" stroke-width="0.9"/>
+  <path d="M368,124 C 376,124 378,88 386,88 C 394,88 396,124 404,124 Z" fill="none" stroke="#8aa8c4" stroke-width="0.8"/>
+  <path d="M406,124 C 414,124 416,88 424,88 C 432,88 434,124 442,124 Z" fill="none" stroke="#b6c8d8" stroke-width="0.7"/>
+  <text x="384" y="132" font-size="6" text-anchor="middle" fill="#6a6a68">f(x − n)</text>
+
+  <text x="24" y="58" font-size="6" fill="#8c2f1e">どれも</text>
+  <text x="24" y="68" font-size="6" fill="#8c2f1e">ノルムは</text>
+  <text x="24" y="78" font-size="6" fill="#8c2f1e">1 のまま</text>
+  <text x="24" y="90" font-size="6" fill="#1e4a41">弱くは</text>
+  <text x="24" y="100" font-size="6" fill="#1e4a41">0 に行く</text>
+
+  <rect x="14" y="146" width="216" height="118" rx="4" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="24" y="161" font-size="7.6" font-weight="700" fill="#1e4a41">弱めて得るもの、失うもの</text>
+  <text x="24" y="178" font-size="6.6" fill="#1e4a41">得る　単位球がコンパクトになる（第71章）</text>
+  <text x="24" y="190" font-size="6.6" fill="#1e4a41">得る　最小化列から収束部分列が取れる</text>
+  <text x="24" y="206" font-size="6.6" fill="#8c2f1e">失う　ノルムが連続でなくなる</text>
+  <text x="24" y="218" font-size="6.6" fill="#8c2f1e">失う　距離化できない（無限次元）</text>
+  <text x="24" y="234" font-size="6.6" fill="#5a4520">ただしノルムは弱下半連続</text>
+  <text x="24" y="245" font-size="6.4" fill="#6a6a68">‖x‖ ≤ liminf ‖xₙ‖ ——変分法の基礎</text>
+  <text x="24" y="258" font-size="6.4" fill="#6b2a48">最小値を取るには、これだけあれば足りる</text>
+
+  <rect x="240" y="146" width="216" height="118" rx="4" fill="#f4f1ea" stroke="#8a6b2c"/>
+  <text x="250" y="161" font-size="7.6" font-weight="700" fill="#5a4520">凸なら、弱とノルムで閉が一致する</text>
+  <text x="250" y="178" font-size="6.6" fill="#5a4520">マズールの定理　凸集合について</text>
+  <text x="250" y="189" font-size="6.6" fill="#5a4520">弱閉　⇔　ノルム閉</text>
+  <text x="250" y="204" font-size="6.4" fill="#6a6a68">証明は分離定理（第67章）だけを使う</text>
+  <text x="250" y="220" font-size="6.6" fill="#1e4a41">系　弱収束列の凸結合は、ノルム収束させられる</text>
+  <text x="250" y="237" font-size="6.4" fill="#6a6a68">凸な対象を扱うかぎり、位相を弱めても</text>
+  <text x="250" y="248" font-size="6.4" fill="#6a6a68">閉性を失わない——これが弱位相を</text>
+  <text x="250" y="259" font-size="6.4" fill="#6a6a68">実用的にしている</text>
+</svg>
+<figcaption data-ch="70">弱収束は振動・集中・逃走の三つを見落とす。その代わりに単位球がコンパクトになる。凸集合については弱閉とノルム閉が一致するので、凸な対象を扱うかぎり弱めても失うものは少ない。</figcaption>
+</figure>
+
+<div class="lv2">
+<h4>距離化できる場合と、点列で足りるか</h4>
+<p>弱位相は無限次元では距離化できない。<em>ところが、部分集合に制限すれば距離化できることがある。</em></p>
+<p><strong>定理。</strong><m>E^*</m> が可分なら、<m>E</m> の閉単位球 <m>B_E</m> 上の弱位相は距離化できる。</p>
+<M>d(x,y) = \sum_{n=1}^{\infty}2^{-n}\,|\varphi_n(x-y)| \qquad (\{\varphi_n\} \text{ は } B_{E^*} \text{ の稠密列})</M>
+<p><strong>定理。</strong><m>E</m> が可分なら、<m>B_{E^*}</m> 上の弱*位相は距離化できる。</p>
+<p><span class="yogo-hl">どちらも「有界集合の上でだけ」である。</span><em>空間全体では、無限次元なら距離化できない。</em></p>
+<p><strong>点列で足りるか。</strong>距離化できれば、閉包・コンパクト性を点列で扱える。<em>そうでないとネット（第12章）が要る。</em></p>
+<p><strong>エベルライン–シュミュリアンの定理。</strong>それでも、<em>弱位相については点列で足りる</em>。</p>
+<p>すなわち——<m>A\subseteq E</m> について、<span class="yogo-hl"><m>A</m> が弱コンパクトであることと、弱点列コンパクト（どの列も弱収束部分列をもつ）であることは同値。</span></p>
+<p>これは驚くべき定理である。<em>第25章で「一般の位相空間ではコンパクトと点列コンパクトが一致しない」と見た。弱位相は距離化できないのに、この同値が成り立つ。</em></p>
+<p><strong>弱*位相では成り立たない。</strong><m>B_{E^*}</m> は弱*コンパクト（第71章）だが、<m>E</m> が非可分なら弱*点列コンパクトとは限らない。</p>
+<p><em>例。</em><m>E=\ell^\infty</m> のとき、<m>B_{(\ell^\infty)^*}</m> は弱*点列コンパクトでない。<span class="yogo-hl">評価汎関数 <m>\delta_n</m> の列が、弱*収束部分列をもたない。</span></p>
+<p>第23章の <m>\beta\mathbb{N}</m> が点列コンパクトでないという事実（第25章）の、双対空間での姿である。</p>
+</div>
+
+<div class="lv3">
+<h4>弱位相の一般論——双対対と、極集合</h4>
+<p><strong>双対対。</strong>ベクトル空間の対 <m>(X,Y)</m> と双線型形式 <m>\langle\cdot,\cdot\rangle \colon X\times Y\to\mathbb{K}</m> で、<em>互いに点を分離する</em>ものを双対対という。</p>
+<p><m>\sigma(X,Y)</m> を、<m>Y</m> の元が定める汎関数をすべて連続にする最弱の位相とする。<em>弱位相 <m>\sigma(E,E^*)</m> と弱*位相 <m>\sigma(E^*,E)</m> は、この枠組みの二つの例である。</em></p>
+<p><strong>マッキー–アレンスの定理。</strong><m>(X,\sigma(X,Y))^* = Y</m>。<em>すなわち、弱位相での連続汎関数はちょうど <m>Y</m> の元に限る。</em></p>
+<p><span class="yogo-hl">位相を弱めても、双対は変わらない。</span>だから <m>(E,\text{弱})^*=E^*</m> であり、マズールの定理の証明で分離定理が使えた。</p>
+<p><strong>マッキー位相。</strong>同じ双対 <m>Y</m> を与える位相のうち、<em>最強のもの</em>が存在する（マッキー位相 <m>\tau(X,Y)</m>）。</p>
+<p>ノルム位相はその間にある——<m>\sigma(E,E^*) \subseteq \|\cdot\| \subseteq \tau(E,E^*)</m>。<em>実は <m>E</m> がバナッハなら、ノルム位相 <m>=</m> マッキー位相。</em></p>
+<p><strong>極集合。</strong><m>A\subseteq X</m> の<em>極</em>を <m>A^\circ=\{\,y\in Y \mid |\langle x,y\rangle|\le1 \ (\forall x\in A)\,\}</m> と定める。</p>
+<p><strong>双極定理。</strong><m>A^{\circ\circ}=\overline{\mathrm{conv}}(A\cup\{0\})</m>（弱閉包）。<em>第66章★★の零化域は、極の線型部分空間版である。</em></p>
+<p><span class="yogo-hl">双極定理は、分離定理の言い換えにすぎない。</span>だがこの形にすると、多くの命題が計算だけで出る。</p>
+<p><strong>応用——凸共役。</strong>凸関数 <m>f</m> に対し <m>f^*(\varphi)=\sup_x(\varphi(x)-f(x))</m> を<em>ルジャンドル–フェンシェル変換</em>という。</p>
+<p>双極定理から <em><m>f^{**}=f</m>（<m>f</m> が下半連続な真凸関数なら）</em>。<span class="yogo-hl">凸解析と最適化理論の中心的な道具である。</span></p>
+<p><strong>第72章への橋。</strong>極集合は凸でコンパクト（第71章）になる。<em>その端点を調べるのが、クレイン–ミルマンの定理である。</em></p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li>ヒルベルト空間で <m>e_n\rightharpoonup0</m> を示せ。</li>
+<li>弱位相の基本近傍が無限次元部分空間を含むことを示せ。</li>
+<li>ヒルベルト空間で <ref t="thm-radon-riesz"/> を直接示せ。</li>
+<li>弱収束列が有界であることを示せ。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li>ノルムが弱下半連続であることを示せ。<span class="haiten">（20点）</span></li>
+<li><ref t="thm-mazur"/> を、分離定理を使って示せ。<span class="haiten">（25点）</span></li>
+<li><ref t="cor-mazur"/> を示せ。<span class="haiten">（25点）</span></li>
+<li><m>E^*</m> 可分のとき <m>B_E</m> 上の弱位相が距離化できることを示せ。<span class="haiten">（35点）</span></li>
+<li><m>f_n(x)=\sin(nx)</m> が <m>L^2</m> で弱収束することを示せ。<span class="haiten">（30点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li>弱位相がノルムで定まらないことを、コルモゴロフの定理を使って示せ。<span class="haiten">（40点）</span></li>
+<li>双極定理を、分離定理から導け。<span class="haiten">（40点）</span></li>
+<li><m>(\ell^\infty)^*</m> の単位球が弱*点列コンパクトでないことを示せ。<span class="haiten">（45点）</span></li>
+</ol>
+</div>
+</div>
+<nav class="chnav">
+<a class="prev" href="ch69.html">← 第69章　開写像定理と閉グラフ定理</a>
+<a class="next" href="ch71.html">第71章　Banach–Alaogluの定理 →</a>
+</nav>
+</article>
+</main>
+<footer class="site">
+  <p>位相・解析大全　学部から大学院まで、三層で読む位相空間論と解析学</p>
+  <p class="small">本文・図版とも本書のために作成したものです。数式は MathJax でベクタ化して組んでいます。</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第56章 積測度とFubini–Tonelli｜位相・解析大全</title>
+<meta name="description" content="位相・解析大全　第56章　積測度とFubini–Tonelli">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;600&display=swap">
+<link rel="stylesheet" href="web.css">
+</head>
+<body>
+<header class="site">
+  <a class="site-title" href="index.html">位相・解析大全</a>
+  <nav class="site-nav">
+    <a href="index.html">目次</a>
+    <a href="isou-kaiseki-taizen.pdf">PDF版</a>
+  </nav>
+</header>
+<main>
+<article class="chapter">
+<p class="part-label">第VII部　測度と積分</p>
+<h1><span class="ch-num">第56章</span>積測度とFubini–Tonelli</h1>
+<nav class="chnav">
+<a class="prev" href="ch55.html">← 第55章　Lebesgue積分と収束定理</a>
+<a class="next" href="ch57.html">第57章　符号付測度とHahn–Jordan分解 →</a>
+</nav>
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>二つの測度空間の積に、どう測度を入れるのか。</li>
+<li>重積分と逐次積分は、いつ一致するのか。</li>
+<li>σ-有限性を外すと、何が壊れるのか。</li>
+</ul>
+</div>
+
+<h3 id="s56-1">積測度を作る</h3>
+
+<div class="teigi" id="def-seki-sokudo">
+<h4>積 σ-加法族と積測度</h4>
+<p class="no-indent"><m>(X,\mathcal{A},\mu)</m>、<m>(Y,\mathcal{B},\nu)</m> を測度空間とする。</p>
+<p><strong>矩形</strong>とは <m>A\times B</m>（<m>A\in\mathcal{A}</m>、<m>B\in\mathcal{B}</m>）の形の集合をいう。矩形の全体が生成する σ-加法族を <m>\mathcal{A}\otimes\mathcal{B}</m> と書く。</p>
+<p><m>\mathcal{A}\otimes\mathcal{B}</m> 上の測度 <m>\mu\times\nu</m> で <m>(\mu\times\nu)(A\times B)=\mu(A)\nu(B)</m> を満たすものを<strong>積測度</strong>という。</p>
+</div>
+
+<div class="teiri" id="thm-seki-sokudo-sonzai">
+<h4>積測度の存在と一意性</h4>
+<p class="no-indent"><m>\mu,\nu</m> が σ-有限なら、積測度は存在してただ一つである。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">矩形の有限個の互いに交わらない合併の全体は有限加法族をなし、その上で <m>\mu_0(A\times B)=\mu(A)\nu(B)</m> は前測度になる（第52章★★）。<em>可算加法性は、矩形を可算個の矩形に分けたときの <ref t="thm-sekibun-seishitsu"/>（5）から出る。</em></p>
+<p>カラテオドリの拡張定理（<ref t="thm-caratheodory"/>）で測度が得られ、σ-有限性から一意である。</p>
+</div>
+
+<div class="chui">
+<h4>切り口</h4>
+<p class="no-indent"><m>E \subseteq X\times Y</m> に対し、<em><m>x</m>-切り口</em>を <m>E_x = \{\, y \mid (x,y)\in E \,\}</m>、<em><m>y</m>-切り口</em>を <m>E^y = \{\, x \mid (x,y)\in E \,\}</m> と書く。</p>
+<p><span class="yogo-hl"><m>E\in\mathcal{A}\otimes\mathcal{B}</m> なら、すべての <m>x</m> について <m>E_x\in\mathcal{B}</m>。</span><em>証明は「切り口が可測な集合の全体」が σ-加法族で矩形を含むことによる。</em></p>
+</div>
+
+<div class="teiri" id="thm-kirikuchi">
+<h4>切り口の測度</h4>
+<p class="no-indent"><m>\mu,\nu</m> を σ-有限とし、<m>E\in\mathcal{A}\otimes\mathcal{B}</m> とする。このとき <m>x\mapsto\nu(E_x)</m> は可測で</p>
+<M>(\mu\times\nu)(E) = \int_X \nu(E_x)\,d\mu(x) = \int_Y \mu(E^y)\,d\nu(y)</M>
+</div>
+
+<div class="shomei">
+<p class="no-indent">有限測度の場合。<m>\mathcal{D}</m> を「主張が成り立つ <m>E</m> の全体」とする。矩形については <m>\nu((A\times B)_x)=\mathbf{1}_A(x)\nu(B)</m> なので成り立つ。</p>
+<p><m>\mathcal{D}</m> が λ 系（全体を含み、差と増加列の極限で閉じる）であることを確かめる。<em>増加列については測度の連続性と単調収束定理、差については有限性を使った引き算。</em></p>
+<p>矩形の全体は π 系（有限交叉で閉じる）なので、ディンキンの補題より <m>\mathcal{D} \supseteq \sigma(\text{矩形}) = \mathcal{A}\otimes\mathcal{B}</m>。</p>
+<p>σ-有限の場合は、有限測度の部分に分けて単調収束定理でつなぐ。</p>
+</div>
+
+<h3 id="s56-2">トネリとフビニ</h3>
+
+<div class="teiri" id="thm-tonelli">
+<h4>トネリの定理</h4>
+<p class="no-indent"><m>\mu,\nu</m> を σ-有限、<m>f \colon X\times Y \to[0,\infty]</m> を <m>\mathcal{A}\otimes\mathcal{B}</m>-可測とする。このとき</p>
+<M>\int_{X\times Y} f\,d(\mu\times\nu)
+= \int_X\Big(\int_Y f(x,y)\,d\nu(y)\Big)d\mu(x)
+= \int_Y\Big(\int_X f(x,y)\,d\mu(x)\Big)d\nu(y)</M>
+<p class="no-indent">が成り立つ（値が <m>\infty</m> でもよい）。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><m>f=\mathbf{1}_E</m> の場合が <ref t="thm-kirikuchi"/>。線型性から単関数の場合が出る。</p>
+<p>一般の非負可測 <m>f</m> については <ref t="thm-tankansu-kinji"/> で <m>s_n\uparrow f</m> を取り、<em>単調収束定理を三か所（内側の積分・外側の積分・左辺）で使う</em>。</p>
+</div>
+
+<div class="teiri" id="thm-fubini">
+<h4>フビニの定理</h4>
+<p class="no-indent">同じ設定で、<m>f</m> が <m>\mu\times\nu</m> について可積分とする。このとき</p>
+<p class="no-indent">（1）ほとんどすべての <m>x</m> について <m>y\mapsto f(x,y)</m> は <m>\nu</m>-可積分。<br>
+（2）<m>x\mapsto\int_Y f(x,y)d\nu(y)</m> は <m>\mu</m>-可積分。<br>
+（3）三つの積分がすべて一致する。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><m>|f|</m> に <ref t="thm-tonelli"/> を使うと <m>\int_X\big(\int_Y|f(x,y)|d\nu\big)d\mu<\infty</m>。<em>よって内側の積分はほとんどすべての <m>x</m> で有限</em>——これが（1）。</p>
+<p><m>f=f^+-f^-</m> と分け、それぞれにトネリを使って引けばよい。</p>
+</div>
+
+<div class="chui">
+<h4>二つの定理の役割分担</h4>
+<p class="no-indent"><span class="yogo-hl">トネリは「非負なら無条件に交換してよい」、フビニは「可積分なら交換してよい」。</span></p>
+<p>実際の使い方はこうである。<em>まず <m>|f|</m> にトネリを使って逐次積分を計算し、それが有限だと確かめる。そのうえで <m>f</m> にフビニを使う。</em></p>
+<p>この二段構えが標準的な手順である。<span class="yogo-hl">「可積分性は、絶対値の逐次積分で確かめる」——それがトネリの使いどころである。</span></p>
+</div>
+
+<div class="hanrei" id="cex-fubini-kaseki">
+<h4>可積分でないと交換できない</h4>
+<p class="no-indent"><m>X=Y=[0,1]</m>、</p>
+<M>f(x,y)=\frac{x^2-y^2}{(x^2+y^2)^2} \qquad ((x,y)\ne(0,0))</M>
+<p class="no-indent">とすると</p>
+<M>\int_0^1\!\!\Big(\int_0^1 f\,dy\Big)dx = \frac{\pi}{4}, \qquad
+\int_0^1\!\!\Big(\int_0^1 f\,dx\Big)dy = -\frac{\pi}{4}</M>
+<p class="no-indent"><em>二つの逐次積分が違う値をもつ。</em><m>\int\int|f| = \infty</m> なので、フビニの仮定が満たされていない。</p>
+<p><span class="yogo-hl">第49章のリーマンの再配列定理と同じ現象である</span>——絶対収束しないものは、足す順序に依存する。</p>
+</div>
+
+<div class="hanrei" id="cex-fubini-sigma">
+<h4>σ-有限性を外すと壊れる</h4>
+<p class="no-indent"><m>X=Y=[0,1]</m>、<m>\mu=\lambda</m>（ルベーグ測度）、<m>\nu</m>＝数え上げ測度（σ-有限でない）とする。</p>
+<p><m>E=\{(x,x)\mid x\in[0,1]\}</m>（対角線）について</p>
+<M>\int_X \nu(E_x)\,d\mu = \int_0^1 1\,dx = 1, \qquad
+\int_Y \mu(E^y)\,d\nu = \int 0\,d\nu = 0</M>
+<p class="no-indent"><em>切り口の積分が一致しない。</em><span class="yogo-hl"><ref t="thm-kirikuchi"/> が σ-有限性を要求する理由である。</span></p>
+</div>
+
+<h3 id="s56-3">完備化と積測度</h3>
+
+<div class="chui">
+<h4>完備性は積で保たれない</h4>
+<p class="no-indent"><m>\lambda</m> は完備だが、<em><m>\lambda\times\lambda</m> は <m>\mathcal{M}\otimes\mathcal{M}</m> 上では完備でない</em>。</p>
+<p><m>N\subseteq[0,1]</m> を非可測とすると、<m>\{0\}\times N \subseteq \{0\}\times[0,1]</m> は測度零の集合の部分集合。<em>ところが切り口が可測でないので <m>\mathcal{M}\otimes\mathcal{M}</m> に属さない。</em></p>
+<p><span class="yogo-hl"><m>\mathbb{R}^2</m> のルベーグ測度は、<m>\lambda\times\lambda</m> の完備化として定義する。</span></p>
+</div>
+
+<div class="teiri" id="thm-fubini-kanbi">
+<h4>完備化版のフビニ</h4>
+<p class="no-indent"><m>(X\times Y,\overline{\mathcal{A}\otimes\mathcal{B}},\overline{\mu\times\nu})</m> を完備化とする。<m>f</m> がこの意味で可積分なら、フビニの結論は<em>「ほとんどすべての <m>x</m> について <m>f(x,\cdot)</m> は <m>\nu</m>-可測かつ可積分」</em>という形で成り立つ。</p>
+<p class="no-indent"><span class="yogo-hl">「すべての <m>x</m> について可測」が「ほとんどすべての <m>x</m> について可測」に弱まる。</span></p>
+</div>
+
+<figure id="fig56-1">
+<svg viewBox="0 0 470 276" width="470" height="276" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">切り口の積分を、二通りに積む</text>
+
+  <rect x="14" y="26" width="218" height="122" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+  <text x="24" y="42" font-size="7" font-weight="700" fill="#1f3b5c">縦の切り口を積む</text>
+  <rect x="44" y="54" width="160" height="72" fill="#eef2f6" stroke="#c9c9c7"/>
+  <path d="M60,126 C 90,88 120,60 150,66 C 176,72 192,100 200,120" fill="#dce7f0" stroke="#35618f" stroke-width="1.1"/>
+  <g stroke="#a03b2e" stroke-width="0.8" opacity="0.8">
+    <line x1="76" y1="126" x2="76" y2="106"/>
+    <line x1="96" y1="126" x2="96" y2="88"/>
+    <line x1="116" y1="126" x2="116" y2="72"/>
+    <line x1="136" y1="126" x2="136" y2="65"/>
+    <line x1="156" y1="126" x2="156" y2="70"/>
+    <line x1="176" y1="126" x2="176" y2="87"/>
+  </g>
+  <text x="24" y="140" font-size="6.2" fill="#8c2f1e">各 x で ν(Eₓ) を求め、それを μ で積分する</text>
+
+  <rect x="238" y="26" width="218" height="122" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+  <text x="248" y="42" font-size="7" font-weight="700" fill="#1e4a41">横の切り口を積む</text>
+  <rect x="268" y="54" width="160" height="72" fill="#eef2f6" stroke="#c9c9c7"/>
+  <path d="M284,126 C 314,88 344,60 374,66 C 400,72 416,100 424,120" fill="#d8e6de" stroke="#2f6b5f" stroke-width="1.1"/>
+  <g stroke="#1e4a41" stroke-width="0.8" opacity="0.8">
+    <line x1="292" y1="116" x2="420" y2="116"/>
+    <line x1="298" y1="104" x2="414" y2="104"/>
+    <line x1="308" y1="92" x2="406" y2="92"/>
+    <line x1="322" y1="80" x2="396" y2="80"/>
+    <line x1="342" y1="70" x2="382" y2="70"/>
+  </g>
+  <text x="248" y="140" font-size="6.2" fill="#1e4a41">各 y で、y での切り口の μ-測度を求めて ν で積分する</text>
+
+  <rect x="14" y="158" width="442" height="50" rx="4" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="24" y="173" font-size="7.4" font-weight="700" fill="#1e4a41">二段構えで使う</text>
+  <text x="24" y="189" font-size="6.6" fill="#1e4a41">一　|f| にトネリを使って逐次積分を計算し、有限であることを確かめる（非負なら無条件）</text>
+  <text x="24" y="201" font-size="6.6" fill="#1e4a41">二　f にフビニを使って、重積分と二つの逐次積分が一致すると結論する</text>
+
+  <rect x="14" y="218" width="442" height="52" rx="4" fill="#fdf6f4" stroke="#e0c3bd"/>
+  <text x="24" y="233" font-size="7.4" font-weight="700" fill="#8c2f1e">仮定を外すと壊れるところ</text>
+  <text x="24" y="249" font-size="6.6" fill="#8c2f1e">可積分でない　→　二つの逐次積分が π/4 と −π/4 になる（第49章の再配列と同じ現象）</text>
+  <text x="24" y="261" font-size="6.6" fill="#8c2f1e">σ-有限でない　→　対角線の切り口の積分が 1 と 0 に食い違う（数え上げ測度との積）</text>
+</svg>
+<figcaption data-ch="56">フビニの定理は、集合の切り口を縦に積むか横に積むかの違いが結果に影響しないことをいう。可積分性か非負性のどちらかと、σ-有限性が要る。どれを外しても具体的な反例がある。</figcaption>
+</figure>
+
+<div class="lv2">
+<h4>フビニの応用——畳み込み・分布関数・層の公式</h4>
+<p><strong>層の公式。</strong><m>f\ge0</m> 可測について</p>
+<M>\int_X f\,d\mu = \int_0^\infty \mu(\{\, x \mid f(x)>t \,\})\,dt</M>
+<p class="no-indent"><em>証明は <m>E=\{(x,t)\mid 0<t<f(x)\}</m> にトネリを適用するだけ。</em></p>
+<p><span class="yogo-hl">第51章で「値域を横に切る」と述べたことが、ここで厳密な等式になった。</span>右辺の <m>\mu(\{f>t\})</m> を<em>分布関数</em>という。</p>
+<p><strong>系。</strong><m>\int|f|^p\,d\mu = p\int_0^\infty t^{p-1}\mu(\{|f|>t\})\,dt</m>。<em>第60章の <m>L^p</m> ノルムの評価で繰り返し使う。</em></p>
+<p><strong>畳み込み。</strong><m>f,g \in L^1(\mathbb{R})</m> に対し</p>
+<M>(f*g)(x) = \int_{\mathbb{R}} f(x-y)g(y)\,dy</M>
+<p class="no-indent">とおく。<em>トネリより</em></p>
+<M>\int\!\!\int |f(x-y)g(y)|\,dy\,dx = \int |g(y)|\Big(\int|f(x-y)|dx\Big)dy = \|f\|_1\|g\|_1<\infty</M>
+<p class="no-indent">（内側で平行移動不変性を使った）。<span class="yogo-hl">よって <m>f*g</m> はほとんどすべての <m>x</m> で定義され、<m>\|f*g\|_1\le\|f\|_1\|g\|_1</m>。</span></p>
+<p>フビニより <m>f*g=g*f</m> と結合律も出る。<em>第86章の畳み込みの理論は、すべてここから始まる。</em></p>
+<p><strong>可測性の確認。</strong><m>(x,y)\mapsto f(x-y)g(y)</m> が <m>\mathcal{B}\otimes\mathcal{B}</m>-可測であることは、<m>(x,y)\mapsto x-y</m> が連続、<m>f</m> がボレル可測であることから出る。<em>ルベーグ可測なだけだと第54章★★の問題が生じるので、代表をボレル可測に取っておく。</em></p>
+<p><strong>面積としての積分。</strong><m>f\ge0</m> について、<m>\mathbb{R}^2</m> のルベーグ測度で</p>
+<M>\lambda_2\big(\{\,(x,y)\mid 0\le y\le f(x)\,\}\big) = \int f\,d\lambda</M>
+<p class="no-indent"><em>「グラフの下の面積が積分である」が、フビニの帰結として証明される。</em><span class="yogo-hl">直観のほうが定理として出てくる——定義を積分から始めたからである。</span></p>
+</div>
+
+<div class="lv3">
+<h4>フビニが成り立たない世界と、独立性</h4>
+<p><strong>連続体仮説とフビニ。</strong>シェルピンスキの構成。連続体仮説を仮定すると、<m>[0,1]^2</m> の集合 <m>E</m> で</p>
+<p><em>ほとんどすべての <m>x</m> について <m>E_x</m> が可算（したがって測度零）、ほとんどすべての <m>y</m> について <m>E^y</m> の補集合が可算</em></p>
+<p>となるものが作れる。<m>[0,1]</m> を <m>\omega_1</m> で整列し、<m>E=\{(x,y)\mid x \preceq y\}</m> と取ればよい。</p>
+<p>すると <m>\int\nu(E_x)dx = 0</m>、<m>\int\mu(E^y)dy = 1</m>。<span class="yogo-hl">ただし <m>E</m> は可測でない</span>——<ref t="thm-kirikuchi"/> と矛盾しない。</p>
+<p><em>この <m>E</m> は「切り口はすべて可測なのに、全体が可測でない」集合である。</em>フビニの逆（切り口の可測性から全体の可測性）は成り立たない。</p>
+<p><strong>独立性。</strong>「切り口がすべて可測で、二つの逐次積分が存在して一致するなら、全体は可測か」——<em>この問いは公理系から決まらない。</em></p>
+<p>連続体仮説のもとでは偽（上の構成）。マーティンの公理と連続体仮説の否定のもとでは、<span class="yogo-hl">フビニ型の結論が可測性の仮定なしで成り立つ</span>（フリードマン）。</p>
+<p><em>第36章のスーリン問題、第53章★★★の射影可測性と、同じ独立性の構図である。</em></p>
+<p><strong>有限加法的測度での失敗。</strong>第52章で「有限加法性だけなら全部の集合に長さを与えられる」と述べた。<em>そのような測度でフビニは成り立たない。</em></p>
+<p>実際、平行移動不変な有限加法的測度 <m>m</m> について、<m>m\times m</m> の逐次積分は一般に交換できない。<span class="yogo-hl">フビニは可算加法性に依存している。</span></p>
+<p><strong>無限次元の積。</strong>可算個の確率空間の積 <m>\prod_n(X_n,\mathcal{A}_n,\mu_n)</m> には、つねに積確率測度が存在する（イオネスク–トゥルチャの定理）。<em>各 <m>\mu_n</m> が確率測度であることが効いている。</em></p>
+<p>非可算個の積でも、確率測度なら存在する（コルモゴロフの拡張定理）。<span class="yogo-hl">確率論が無限次元で動くのは、測度が有限だからである。</span></p>
+<p>一方、<m>\mathbb{R}^{\mathbb{N}}</m> に「無限次元ルベーグ測度」は存在しない。<em>平行移動不変で、単位立方体の測度が正で有限な測度は作れない</em>——単位立方体が、可算無限個の合同な小立方体に分割できてしまうからである。</p>
+<p>第87章のガウス測度は、この困難を「平行移動不変性を捨てる」ことで回避している。</p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li>矩形の可算合併が <m>\mathcal{A}\otimes\mathcal{B}</m> に属することを確かめよ。</li>
+<li><m>E\in\mathcal{A}\otimes\mathcal{B}</m> の切り口が可測であることを示せ。</li>
+<li>層の公式を <m>f=\mathbf{1}_A</m> について確かめよ。</li>
+<li><m>\int_0^1\!\int_0^1 xy\,dx\,dy</m> をフビニで計算せよ。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li><ref t="thm-kirikuchi"/> の有限測度の場合を、ディンキンの補題を使って示せ。<span class="haiten">（35点）</span></li>
+<li>層の公式を示せ。<span class="haiten">（25点）</span></li>
+<li><ref t="cex-fubini-kaseki"/> の二つの逐次積分を計算せよ。<span class="haiten">（30点）</span></li>
+<li><m>\|f*g\|_1\le\|f\|_1\|g\|_1</m> を示せ。<span class="haiten">（25点）</span></li>
+<li><m>\lambda\times\lambda</m> が <m>\mathcal{M}\otimes\mathcal{M}</m> 上で完備でないことを示せ。<span class="haiten">（30点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li>連続体仮説のもとでシェルピンスキの集合を構成せよ。<span class="haiten">（50点）</span></li>
+<li>無限次元の平行移動不変測度が存在しないことを示せ。<span class="haiten">（40点）</span></li>
+<li>グラフの下の面積が積分に等しいことを、フビニから導け。<span class="haiten">（30点）</span></li>
+</ol>
+</div>
+</div>
+<nav class="chnav">
+<a class="prev" href="ch55.html">← 第55章　Lebesgue積分と収束定理</a>
+<a class="next" href="ch57.html">第57章　符号付測度とHahn–Jordan分解 →</a>
+</nav>
+</article>
+</main>
+<footer class="site">
+  <p>位相・解析大全　学部から大学院まで、三層で読む位相空間論と解析学</p>
+  <p class="small">本文・図版とも本書のために作成したものです。数式は MathJax でベクタ化して組んでいます。</p>
+</footer>
+</body>
+</html>

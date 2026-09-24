@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第20章 コンパクト性——三つの定義の同値｜位相・解析大全</title>
+<meta name="description" content="位相・解析大全　第20章　コンパクト性——三つの定義の同値">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;600&display=swap">
+<link rel="stylesheet" href="web.css">
+</head>
+<body>
+<header class="site">
+  <a class="site-title" href="index.html">位相・解析大全</a>
+  <nav class="site-nav">
+    <a href="index.html">目次</a>
+    <a href="isou-kaiseki-taizen.pdf">PDF版</a>
+  </nav>
+</header>
+<main>
+<article class="chapter">
+<p class="part-label">第III部　コンパクト性と被覆性質</p>
+<h1><span class="ch-num">第20章</span>コンパクト性——三つの定義の同値</h1>
+<nav class="chnav">
+<a class="prev" href="ch19.html">← 第19章　分離公理は何に保存されるか</a>
+<a class="next" href="ch21.html">第21章　Tychonoffの定理と選択公理 →</a>
+</nav>
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>「有限である」ことの、どの部分を取り出したのがコンパクト性なのか。</li>
+<li>被覆・有限交叉性・超フィルターという三つの定義は、なぜ同じものなのか。</li>
+<li>コンパクト性があると、何が自動的に手に入るのか。</li>
+</ul>
+</div>
+
+<h3 id="s20-1">有限性の代用</h3>
+
+<p>有限集合には便利な性質が多い。<em>連続関数は最大値を取り、どんな被覆からも全体が作れ、どんな点列にも収束する部分列がある。</em>無限集合では、これらが一般に壊れる。</p>
+
+<p><span class="yogo-hl">コンパクト性は、無限集合でありながら有限集合のように振る舞うための条件である。</span>ただし「有限に見える」度合いをどう定式化するかに、複数の道がある。</p>
+
+<div class="teigi" id="def-compact">
+<h4>コンパクト空間</h4>
+<p class="no-indent">位相空間 <m>X</m> が<strong>コンパクト</strong>であるとは、<m>X</m> のどの開被覆も有限部分被覆をもつことをいう。すなわち、<m>X = \bigcup_{i \in I} U_i</m>（<m>U_i</m> 開）ならば、有限個の <m>i_1, \ldots, i_n</m> があって <m>X = U_{i_1} \cup \cdots \cup U_{i_n}</m>。</p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">本書ではコンパクト性にハウスドルフ性を含めない。<em>文献によっては「コンパクト」にハウスドルフを含め、含めない場合を「擬コンパクト」や「準コンパクト」と呼ぶ。</em><span class="yogo-hl">必要なときは「コンパクトハウスドルフ」と明記する。</span></p>
+</div>
+
+<h3 id="s20-2">三つの定義が同値であること</h3>
+
+<div class="teigi" id="def-yugen-kosa">
+<h4></h4>
+<p class="no-indent">集合の族 <m>\mathcal{F}</m> が<strong>有限交叉性</strong>をもつとは、<m>\mathcal{F}</m> のどの有限部分族の交叉も空でないことをいう。</p>
+</div>
+
+<div class="teiri" id="thm-compact-doti">
+<h4>コンパクト性の三つの形</h4>
+<p class="no-indent"><m>X</m> について、次は同値である。</p>
+<p class="no-indent">（1）どの開被覆も有限部分被覆をもつ。<br>
+（2）有限交叉性をもつ閉集合の族は、全体の交叉が空でない。<br>
+（3）<m>X</m> 上のどの超フィルターも収束する。<br>
+（4）<m>X</m> のどのネットも収束する部分ネットをもつ。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><strong>（1）と（2）。</strong>補集合を取るだけである。閉集合の族 <m>\{F_i\}</m> に対し <m>\bigcap_i F_i = \varnothing</m> は <m>\bigcup_i (X \setminus F_i) = X</m> と同値であり、<em>「有限部分被覆がある」は「有限個の <m>F_i</m> の交叉が空」と同値。</em>対偶を取れば（2）になる。</p>
+<p><strong>（2）から（3）。</strong><m>\mathcal{U}</m> を超フィルターとする。<m>\{\overline{F} \mid F \in \mathcal{U}\}</m> は有限交叉性をもつ（フィルターは有限交叉で閉じ、空集合を含まない）。（2）より <m>x \in \bigcap_{F \in \mathcal{U}} \overline{F}</m> なる点がある。</p>
+<p><em>この <m>x</m> に <m>\mathcal{U}</m> が収束することを示す。</em><m>V</m> を <m>x</m> の近傍とする。もし <m>V \notin \mathcal{U}</m> なら、超フィルターの性質（第12章）より <m>X \setminus V \in \mathcal{U}</m>、よって <m>x \in \overline{X \setminus V}</m>。ところが <m>V</m> は <m>x</m> の近傍で <m>V \cap (X \setminus V) = \varnothing</m> だから、第6章の特徴づけに反する。<span class="yogo-hl">よって <m>V \in \mathcal{U}</m>、すなわち <m>\mathcal{U} \to x</m>。</span></p>
+<p><strong>（3）から（2）。</strong><m>\{F_i\}</m> を有限交叉性をもつ閉集合の族とする。有限交叉全体はフィルターの基をなすので、それを含む超フィルター <m>\mathcal{U}</m> が取れる（第12章、選択公理）。（3）より <m>\mathcal{U} \to x</m> なる <m>x</m> がある。各 <m>i</m> について <m>F_i \in \mathcal{U}</m> であり、<m>x</m> の任意の近傍も <m>\mathcal{U}</m> に属するから、<em>両者は交わる。</em>よって <m>x \in \overline{F_i} = F_i</m>。</p>
+<p><strong>（3）と（4）。</strong>第12章で見たネットとフィルターの翻訳による。<em>超フィルターに対応するのが普遍ネットであり、収束する部分ネットの存在が超フィルターの収束に対応する。</em></p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">（3）の形が、第21章のチコノフの定理をもっとも短く証明する。<em>被覆による直接証明は、同じ定理に対してはるかに長くなる。</em><span class="yogo-hl">定義の選び方が証明の長さを決める——これが第12章でフィルターを導入した理由である。</span></p>
+</div>
+
+<h3 id="s20-3">コンパクト性が与えるもの</h3>
+
+<div class="teiri" id="thm-compact-kekka">
+<h4></h4>
+<p class="no-indent">（1）コンパクト空間の閉部分集合はコンパクト。<br>
+（2）ハウスドルフ空間のコンパクト部分集合は閉。<br>
+（3）コンパクト空間の連続像はコンパクト。<br>
+（4）コンパクト空間上の連続実数値関数は最大値と最小値を取る。<br>
+（5）コンパクト空間からハウスドルフ空間への連続な全単射は同相。<br>
+（6）コンパクトハウスドルフ空間は正規である。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">（1）<m>F \subseteq X</m> を閉、<m>\{U_i\}</m> を <m>F</m> の（<m>X</m> の開集合による）被覆とする。<m>\{U_i\} \cup \{X \setminus F\}</m> は <m>X</m> の開被覆だから有限部分被覆をもち、<em><m>X \setminus F</m> を除けば <m>F</m> の有限被覆になる。</em></p>
+<p>（2）<m>K \subseteq X</m> をコンパクト、<m>x \notin K</m> とする。各 <m>y \in K</m> についてハウスドルフ性より交わらない近傍 <m>U_y \ni x</m>、<m>V_y \ni y</m> を取る。<m>\{V_y\}</m> は <m>K</m> の開被覆だから有限個 <m>V_{y_1}, \ldots, V_{y_n}</m> で覆える。<span class="yogo-hl"><m>U = U_{y_1} \cap \cdots \cap U_{y_n}</m> は <m>x</m> の近傍で <m>K</m> と交わらない。</span><em>有限交叉だから開である——ここに有限性が効く。</em>よって <m>X \setminus K</m> は開。</p>
+<p>（3）<m>f \colon X \to Y</m> 連続全射、<m>\{V_i\}</m> を <m>Y</m> の開被覆とすると <m>\{f^{-1}(V_i)\}</m> は <m>X</m> の開被覆。有限部分被覆の像が <m>Y</m> を覆う。</p>
+<p>（4）（3）より <m>f(X) \subseteq \mathbb{R}</m> はコンパクト。ハイネ–ボレルの定理（第29章）よりコンパクトな <m>\mathbb{R}</m> の部分集合は有界閉であり、<em>上限を含む。</em></p>
+<p>（5）<m>f</m> が閉写像であることを示せばよい（第8章）。<m>F \subseteq X</m> 閉なら（1）よりコンパクト、（3）より <m>f(F)</m> はコンパクト、（2）より <m>Y</m> で閉。</p>
+<p>（6）<m>A, B</m> を交わらない閉集合とする。（1）より両方コンパクト。<em>（2）の証明を二段階に行う</em>——まず各 <m>x \in A</m> について、<m>x</m> と <m>B</m> を分離する開集合 <m>U_x, V_x</m> を（2）の議論で作る。<m>\{U_x\}</m> は <m>A</m> の被覆だから有限個で覆え、対応する <m>V_x</m> の有限交叉を取ればよい。<span class="yogo-hl">コンパクト性を二回使う。</span></p>
+</div>
+
+<figure id="fig20-1">
+<svg viewBox="0 0 470 272" width="470" height="272" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <defs>
+    <marker id="a20" markerWidth="8" markerHeight="8" refX="7" refY="2.6" orient="auto"><path d="M0,0 L7,2.6 L0,5.2 z" fill="#35618f"/></marker>
+  </defs>
+
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">三つの定義は同じものを言っている</text>
+
+  <rect x="14" y="26" width="442" height="104" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+
+  <rect x="30" y="40" width="94" height="34" rx="3" fill="#dce7f0" stroke="#35618f"/>
+  <text x="77" y="55" font-size="6.8" text-anchor="middle" fill="#1f3b5c">開被覆から</text>
+  <text x="77" y="66" font-size="6.8" text-anchor="middle" fill="#1f3b5c">有限部分被覆</text>
+
+  <rect x="188" y="40" width="94" height="34" rx="3" fill="#dce7f0" stroke="#35618f"/>
+  <text x="235" y="55" font-size="6.8" text-anchor="middle" fill="#1f3b5c">有限交叉性の族は</text>
+  <text x="235" y="66" font-size="6.8" text-anchor="middle" fill="#1f3b5c">交叉が空でない</text>
+
+  <rect x="346" y="40" width="94" height="34" rx="3" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="393" y="55" font-size="6.8" text-anchor="middle" fill="#1e4a41">どの超フィルターも</text>
+  <text x="393" y="66" font-size="6.8" text-anchor="middle" fill="#1e4a41">収束する</text>
+
+  <path d="M128,57 L184,57" stroke="#35618f" stroke-width="1.2" fill="none" marker-end="url(#a20)"/>
+  <path d="M184,51 L130,51" stroke="#35618f" stroke-width="1.2" fill="none" marker-end="url(#a20)"/>
+  <text x="156" y="38" font-size="6" text-anchor="middle" fill="#6a6a68">補集合</text>
+
+  <path d="M286,57 L342,57" stroke="#2f6b5f" stroke-width="1.2" fill="none" marker-end="url(#a20)"/>
+  <path d="M342,51 L288,51" stroke="#2f6b5f" stroke-width="1.2" fill="none" marker-end="url(#a20)"/>
+  <text x="314" y="38" font-size="6" text-anchor="middle" fill="#6a6a68">超フィルター補題</text>
+
+  <text x="24" y="92" font-size="6.8" fill="#1f3b5c">被覆の形　証明が直観的だが、積の定理では長くなる</text>
+  <text x="24" y="106" font-size="6.8" fill="#1f3b5c">交叉の形　閉集合の入れ子で使いやすい。カントールの共通部分定理</text>
+  <text x="24" y="120" font-size="6.8" fill="#1e4a41">超フィルターの形　チコノフの定理（第21章）が五行で済む</text>
+
+  <rect x="14" y="142" width="442" height="118" rx="4" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="24" y="157" font-size="7.8" font-weight="700" fill="#1e4a41">コンパクト性が自動的に与えるもの</text>
+
+  <text x="24" y="176" font-size="7" fill="#1e4a41">閉部分集合はコンパクト</text>
+  <text x="230" y="176" font-size="6.8" fill="#6a6a68">被覆に補集合を足すだけ</text>
+  <text x="24" y="192" font-size="7" fill="#1e4a41">ハウスドルフなら、コンパクト部分集合は閉</text>
+  <text x="230" y="192" font-size="6.8" fill="#6a6a68">有限交叉が開であることを使う</text>
+  <text x="24" y="208" font-size="7" fill="#1e4a41">連続像はコンパクト　連続関数は最大最小を取る</text>
+  <text x="24" y="224" font-size="7" font-weight="700" fill="#1e4a41">コンパクト → ハウスドルフ の連続全単射は同相</text>
+  <text x="300" y="224" font-size="6.8" fill="#8c2f1e">本書でもっとも多用する道具</text>
+  <text x="24" y="240" font-size="7" fill="#1e4a41">コンパクトハウスドルフ ⇒ 正規　（コンパクト性を二回使う）</text>
+  <text x="24" y="254" font-size="6.8" fill="#6a6a68">分離公理の階層を気にせずに済む場所が、ここにできる</text>
+</svg>
+<figcaption data-ch="20">被覆・有限交叉性・超フィルターの三つは同じ条件である。どれを使うかで証明の長さが変わる。コンパクトハウスドルフ空間では正規性まで自動的に手に入る。</figcaption>
+</figure>
+
+<div class="rei" id="rei-compact-rei">
+<h4>コンパクトな空間、そうでない空間</h4>
+<p class="no-indent"><strong>コンパクト。</strong>有限集合（どんな位相でも）。<m>[0,1]</m>（第29章のハイネ–ボレル）。<m>[0,1]^{\mathbb{N}}</m>（第21章）。カントール集合。順序数の空間 <m>[0,\omega_1]</m>。</p>
+<p><strong>コンパクトでない。</strong><m>\mathbb{R}</m>（<m>\{(-n,n)\}</m> に有限部分被覆がない）。<m>(0,1)</m>（<m>\{(1/n, 1)\}</m> に有限部分被覆がない）。無限離散空間。<m>[0,\omega_1)</m>（各 <m>[0,\alpha)</m> で覆えるが有限では足りない）。</p>
+</div>
+
+<div class="hanrei" id="cex-compact-iden">
+<h4>コンパクト性は遺伝しない</h4>
+<p class="no-indent"><m>[0,1]</m> はコンパクトだが <m>(0,1)</m> はそうでない。<em>開部分空間では壊れる。</em>閉部分空間では保たれる（<ref t="thm-compact-kekka"/>（1））。</p>
+<p><span class="yogo-hl">第19章の表でコンパクト性が「閉遺伝的」に分類されたのは、この非対称のためである。</span></p>
+</div>
+
+<div class="lv2">
+<h4>コンパクト性と、量化子の順序</h4>
+<p>コンパクト性の証明は、しばしば同じ型をとる。<em>「各点について何かが成り立つ」から「一様に何かが成り立つ」へ移る型である。</em></p>
+<p><strong>典型例——一様連続性。</strong>コンパクト距離空間上の連続関数は一様連続である（第47章で証明する）。証明はこうである。各点 <m>x</m> について <m>\delta_x</m> が取れる。<m>\{U_{\delta_x/2}(x)\}</m> はコンパクト空間の被覆だから有限個で覆え、<span class="yogo-hl"><m>\delta = \min_k \delta_{x_k}/2</m> が一様な値を与える。</span></p>
+<p>第1章の★★で述べた量化子の順序の問題が、ここで解決している。</p>
+<M>\forall x\ \exists \delta \quad\longrightarrow\quad \exists \delta\ \forall x</M>
+<p><em>この入れ替えは一般には許されない。コンパクト性が、有限個への還元を通してそれを許す。</em></p>
+<p><strong>もう一つの型——被覆を縮める。</strong><ref t="thm-compact-kekka"/>（6）の証明で、コンパクト性を二回使った。<em>一回目で <m>B</m> 側を有限個に還元し、二回目で <m>A</m> 側を還元する。</em>この二段構えは、第24章のパラコンパクト性でも繰り返される。</p>
+<p><strong>ルベーグ数。</strong>コンパクト距離空間の開被覆 <m>\{U_i\}</m> に対し、次の性質をもつ <m>\lambda > 0</m> が存在する。<em>直径が <m>\lambda</m> 未満の部分集合は、ある <m>U_i</m> に丸ごと含まれる。</em>この <m>\lambda</m> をルベーグ数という。</p>
+<p>証明は、各 <m>x</m> について <m>U_{2\varepsilon_x}(x) \subseteq U_{i(x)}</m> なる <m>\varepsilon_x</m> を取り、<m>\{U_{\varepsilon_x}(x)\}</m> の有限部分被覆から <m>\lambda = \min_k \varepsilon_{x_k}</m> を作る。<span class="yogo-hl">ここでも「各点ごと」が「一様」に変わっている。</span></p>
+<p>ルベーグ数は、第95章でアスコリ–アルツェラの定理を扱うときと、道のホモトピーを細かく分割するときに使われる。</p>
+<p><strong>なぜ有限性がこれを可能にするのか。</strong>無限個の正の数の最小値は <m>0</m> になりうる（第5章の反例）。<em>有限個なら最小値は正である。</em>コンパクト性は、この一点のためにある。第5章で位相の公理が「有限交叉」を要求した理由と、同じ根から来ている。</p>
+</div>
+
+<div class="lv3">
+<h4>コンパクト性の別の顔——論理と代数</h4>
+<p>コンパクト性は位相空間論の概念だが、同じ名前が論理学にも現れる。<em>偶然ではない。</em></p>
+<p><strong>一階述語論理のコンパクト性定理。</strong>文の集合 <m>\Sigma</m> について、<span class="yogo-hl">「<m>\Sigma</m> のどの有限部分集合もモデルをもつならば、<m>\Sigma</m> 自身もモデルをもつ」</span>——これを論理のコンパクト性定理という。</p>
+<p>この定理は、実際に位相的なコンパクト性として理解できる。言語 <m>L</m> の完全理論全体に適切な位相（ストーン位相）を入れると、<em>得られる空間はコンパクトである。</em>文 <m>\varphi</m> に対応する集合が開かつ閉であり、有限交叉性の議論がそのまま働く。</p>
+<p><strong>ストーン双対性。</strong>より一般に、ブール代数 <m>B</m> に対し、その超フィルター全体に位相を入れた空間 <m>S(B)</m> を考える。<span class="yogo-hl"><m>S(B)</m> はコンパクトハウスドルフで、しかも開かつ閉な集合が基底をなす（全不連結）。</span>このような空間をストーン空間という。</p>
+<p>逆に、ストーン空間から開閉集合全体を取るとブール代数が得られる。<em>この対応は圏同値である</em>——ストーン <span class="orig">Stone</span> の双対定理という。</p>
+<p>第23章のストーン–チェックのコンパクト化は、この双対性の特別な場合にあたる。<m>\beta \mathbb{N}</m> は、<m>\mathbb{N}</m> の冪集合というブール代数に対応するストーン空間である。</p>
+<p><strong>なぜ超フィルターが橋渡しをするのか。</strong><ref t="thm-compact-doti"/>（3）が鍵である。<em>コンパクト性とは、超フィルターがすべて「行き先」をもつことだった。</em>論理の側では、超フィルターは無矛盾な極大理論——すなわち完全な世界像——にあたる。</p>
+<p><span class="yogo-hl">「有限的に矛盾しない情報は、実際に実現できる」というのが、両方の定理の内容である。</span>位相では点として実現し、論理ではモデルとして実現する。</p>
+<p><strong>代数における現れ方。</strong>可換環のスペクトル <m>\mathrm{Spec}(A)</m>（素イデアル全体にザリスキ位相を入れたもの）もコンパクトである。ここでも有限交叉性の議論が働く——<em>イデアルが有限個の元で生成されることが、有限部分被覆を与える。</em></p>
+<p>ただし <m>\mathrm{Spec}(A)</m> はハウスドルフでない（第13章で触れた）。<span class="yogo-hl">コンパクト性は、分離公理を仮定しなくても意味をもつ。</span>この事実が、代数幾何でコンパクト性が有用である理由である。</p>
+<p>本書はこれらの方向に進まないが、第79章のゲルファント理論では、可換 <m>C^*</m> 環のスペクトルがコンパクトハウスドルフ空間になることを見る。<em>そこで「空間と関数環の双対性」という同じ主題に、解析の側から到達する。</em></p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li><m>(0,1)</m> がコンパクトでないことを、有限部分被覆をもたない開被覆を挙げて示せ。</li>
+<li>有限集合がどんな位相でもコンパクトであることを示せ。</li>
+<li>無限離散空間がコンパクトでないことを示せ。</li>
+<li>コンパクト空間の有限個の合併がコンパクトであることを示せ。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li><ref t="thm-compact-doti"/> の（1）と（2）が同値であることを、補集合の計算を明示して示せ。<span class="haiten">（15点）</span></li>
+<li><ref t="thm-compact-kekka"/>（2）の証明で、有限交叉が開であることがどこで効いているかを述べよ。<span class="haiten">（15点）</span></li>
+<li><ref t="thm-compact-kekka"/>（6）を、コンパクト性を二回使う箇所を明示して書き直せ。<span class="haiten">（25点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li><ref t="thm-compact-doti"/> の（2）から（3）を、超フィルターの性質をどこで使うかを明示して示せ。<span class="haiten">（30点）</span></li>
+<li>コンパクト距離空間の開被覆にルベーグ数が存在することを示せ。<span class="haiten">（25点）</span></li>
+</ol>
+</div>
+</div>
+<nav class="chnav">
+<a class="prev" href="ch19.html">← 第19章　分離公理は何に保存されるか</a>
+<a class="next" href="ch21.html">第21章　Tychonoffの定理と選択公理 →</a>
+</nav>
+</article>
+</main>
+<footer class="site">
+  <p>位相・解析大全　学部から大学院まで、三層で読む位相空間論と解析学</p>
+  <p class="small">本文・図版とも本書のために作成したものです。数式は MathJax でベクタ化して組んでいます。</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第84章 Fourier変換——L1の理論｜位相・解析大全</title>
+<meta name="description" content="位相・解析大全　第84章　Fourier変換——L1の理論">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;600&display=swap">
+<link rel="stylesheet" href="web.css">
+</head>
+<body>
+<header class="site">
+  <a class="site-title" href="index.html">位相・解析大全</a>
+  <nav class="site-nav">
+    <a href="index.html">目次</a>
+    <a href="isou-kaiseki-taizen.pdf">PDF版</a>
+  </nav>
+</header>
+<main>
+<article class="chapter">
+<p class="part-label">第XI部　フーリエ解析</p>
+<h1><span class="ch-num">第84章</span>Fourier変換——L1の理論</h1>
+<nav class="chnav">
+<a class="prev" href="ch83.html">← 第83章　発散する例と、Carlesonの定理</a>
+<a class="next" href="ch85.html">第85章　L2への拡張とPlancherelの定理 →</a>
+</nav>
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>周期をもたない関数を、どうやって波に分解するのか。</li>
+<li>フーリエ変換の像は、どんな関数なのか。</li>
+<li>反転公式は、いつ成り立つのか。</li>
+</ul>
+</div>
+
+<h3 id="s84-1">周期を無限に伸ばす</h3>
+
+<p>周期 <m>2L</m> の関数のフーリエ級数は、周波数 <m>n\pi/L</m> の波の重ね合わせである。<em><m>L\to\infty</m> とすると、周波数の刻み <m>\pi/L</m> が零に近づき、和が積分に変わる。</em>形式的には</p>
+<M>f(x) = \sum_n c_n e^{in\pi x/L} \ \longrightarrow \ \frac{1}{2\pi}\int_{-\infty}^{\infty}\hat f(\xi)e^{ix\xi}\,d\xi</M>
+<p><span class="yogo-hl">双対の側が <m>\mathbb{Z}</m> から <m>\mathbb{R}</m> に変わる。</span><em>第79章の言葉では、群 <m>\mathbb{T}</m> の双対群が <m>\mathbb{Z}</m>、群 <m>\mathbb{R}</m> の双対群が <m>\mathbb{R}</m> だということである</em>（<ref t="rei-gelfand-ouyou"/>（2））。</p>
+
+<div class="teigi" id="def-fourier-henkan">
+<h4>フーリエ変換</h4>
+<p class="no-indent"><m>f\in L^1(\mathbb{R}^d)</m> について</p>
+<M>\hat f(\xi) = \mathcal{F}f(\xi) = \int_{\mathbb{R}^d} f(x)\,e^{-i x\cdot\xi}\,dx \qquad (\xi\in\mathbb{R}^d)</M>
+<p class="no-indent">を <m>f</m> の<strong>フーリエ変換</strong>という。形式的な逆変換を</p>
+<M>\check g(x) = \frac{1}{(2\pi)^d}\int_{\mathbb{R}^d} g(\xi)\,e^{i x\cdot\xi}\,d\xi</M>
+<p class="no-indent">と書く。<em>係数 <m>2\pi</m> の置き場所には流儀がいくつかあるが、本書では上の規約を用いる。</em></p>
+</div>
+
+<div class="teiri" id="prop-fourier-kihon-r">
+<h4>基本性質</h4>
+<p class="no-indent"><m>f,g\in L^1(\mathbb{R}^d)</m> について次が成り立つ。</p>
+<p class="no-indent">（1）<m>\hat f</m> は有界連続で <m>\|\hat f\|_\infty\le\|f\|_1</m>。<br>
+（2）<strong>リーマン–ルベーグ</strong>：<m>\hat f(\xi)\to0</m>（<m>|\xi|\to\infty</m>）。すなわち <m>\mathcal{F}:L^1\to C_0</m>。<br>
+（3）<strong>平行移動と変調</strong>：<m>\widehat{f(\cdot-h)}(\xi)=e^{-ih\cdot\xi}\hat f(\xi)</m>、<m>\widehat{e^{ih\cdot x}f}(\xi)=\hat f(\xi-h)</m>。<br>
+（4）<strong>拡大縮小</strong>：<m>f_\lambda(x)=f(\lambda x)</m>（<m>\lambda>0</m>）なら <m>\widehat{f_\lambda}(\xi)=\lambda^{-d}\hat f(\xi/\lambda)</m>。<br>
+（5）<strong>畳み込み</strong>：<m>\widehat{f*g}=\hat f\,\hat g</m>。<br>
+（6）<strong>微分</strong>：<m>\widehat{\partial_jf}(\xi)=i\xi_j\hat f(\xi)</m>、<m>\widehat{x_jf}(\xi)=i\,\partial_{\xi_j}\hat f(\xi)</m>（それぞれ左辺が <m>L^1</m> のとき）。<br>
+（7）<strong>乗法公式</strong>：<m>\int\hat f\,g=\int f\,\hat g</m>。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">（1）連続性は優収束定理（<ref t="thm-yushusoku"/>）による。（3）（4）は変数変換、（5）（7）はフビニの定理（<ref t="thm-fubini"/>）。</p>
+<p class="no-indent">（2）<m>e^{-i\pi}=-1</m> を使う。<m>h=\pi\xi/|\xi|^2</m> と置くと <m>e^{-ih\cdot\xi}=-1</m> なので（3）より</p>
+<M>\hat f(\xi) = -\widehat{f(\cdot-h)}(\xi), \qquad\text{よって}\qquad \hat f(\xi) = \frac12\widehat{\big(f-f(\cdot-h)\big)}(\xi)</M>
+<p class="no-indent">（1）より <m>|\hat f(\xi)|\le\frac12\|f-f(\cdot-h)\|_1</m>。<em><m>|\xi|\to\infty</m> のとき <m>|h|\to0</m> で、平行移動の <m>L^1</m> 連続性（<ref t="thm-cc-chumitsu"/>から出る）により右辺は零に行く。</em><span class="yogo-hl">稠密性を経由しない、直接の証明である。</span></p>
+<p class="no-indent">（6）第一式は部分積分、第二式は積分記号下の微分（優収束定理）。</p>
+</div>
+
+<div class="chui">
+<h4>三つの規則が理論のすべてを動かす</h4>
+<p class="no-indent"><em>畳み込みが積になり、微分が多項式倍になり、平行移動が位相の回転になる</em>——この三つが、フーリエ変換が微分方程式に効く理由である。</p>
+<p>定数係数の偏微分方程式 <m>P(\partial)u=f</m> は、変換すると <m>P(i\xi)\hat u(\xi)=\hat f(\xi)</m> という<strong>代数方程式</strong>になる。<span class="yogo-hl">微分が割り算に変わる。</span><em>あとは <m>\hat u=\hat f/P(i\xi)</m> を逆変換すればよい——ただし <m>P(i\xi)</m> の零点で何が起こるかが、方程式の性質（楕円型・双曲型・放物型）を決める。</em>第88章でこの視点を仕上げる。</p>
+</div>
+
+<h3 id="s84-2">計算できる変換</h3>
+
+<div class="rei" id="rei-fourier-henkan-rei">
+<h4>基本的な変換の表</h4>
+<p class="no-indent">（1）<strong>矩形関数。</strong><m>f=\chi_{[-a,a]}</m> なら</p>
+<M>\hat f(\xi) = \int_{-a}^{a}e^{-ix\xi}dx = \frac{2\sin(a\xi)}{\xi}</M>
+<p class="no-indent"><em>これは <m>L^1</m> に属さない</em>（<m>\int|\sin(a\xi)/\xi|d\xi=\infty</m>）。<span class="yogo-hl">フーリエ変換は <m>L^1</m> を <m>L^1</m> に写さない</span>——像は <m>C_0</m> の真部分集合で、その特徴づけは知られていない。</p>
+<p>（2）<strong>三角関数（矩形の畳み込み）。</strong><m>\chi_{[-a,a]}*\chi_{[-a,a]}</m> は三角形で、変換は <m>(2\sin(a\xi)/\xi)^2\ge0</m>。<em>こちらは可積分である。</em></p>
+<p>（3）<strong>ガウス関数。</strong><m>f(x)=e^{-a|x|^2}</m>（<m>a>0</m>）なら</p>
+<M>\hat f(\xi) = \Big(\frac{\pi}{a}\Big)^{d/2} e^{-|\xi|^2/(4a)}</M>
+<p class="no-indent"><em><m>a=1/2</m> のとき <m>f</m> は（定数倍を除いて）自分自身に写る。</em><span class="yogo-hl">フーリエ変換の固有関数がガウス関数だという事実が、確率論（中心極限定理）・量子力学（コヒーレント状態）・不確定性関係のすべてに効いてくる。</span></p>
+<p>（4）<strong>ポアソン核。</strong><m>f(x)=e^{-a|x|}</m>（<m>d=1</m>）なら <m>\hat f(\xi)=2a/(a^2+\xi^2)</m>。<em>逆に <m>\frac{1}{\pi}\frac{a}{a^2+x^2}</m>（コーシー分布）の変換は <m>e^{-a|\xi|}</m>。</em></p>
+<p>（5）<strong>熱核。</strong><m>H_t(x)=(4\pi t)^{-d/2}e^{-|x|^2/4t}</m> の変換は <m>e^{-t|\xi|^2}</m>。<em>熱方程式 <m>\partial_tu=\Delta u</m> が、変換すると <m>\partial_t\hat u=-|\xi|^2\hat u</m> という常微分方程式になる。</em></p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">（3）を <m>d=1</m>、<m>a=1/2</m> で示す。<m>g(\xi)=\hat f(\xi)</m> と置くと、<ref t="prop-fourier-kihon-r"/>（6）の二式から</p>
+<M>g'(\xi) = \widehat{(-ix)f}(\xi) = -i\,\widehat{xf}(\xi), \qquad xf(x) = -f'(x)</M>
+<p class="no-indent">よって <m>g'(\xi)=i\widehat{f'}(\xi)=i(i\xi)g(\xi)=-\xi g(\xi)</m>。<em>この常微分方程式と <m>g(0)=\int e^{-x^2/2}dx=\sqrt{2\pi}</m> から <m>g(\xi)=\sqrt{2\pi}e^{-\xi^2/2}</m>。</em></p>
+<p><span class="yogo-hl">ガウス関数が「微分と掛け算が同じ働きをする」唯一の関数であることが、自己相似性の理由である。</span>多次元はフビニで積に分解する。</p>
+</div>
+
+<h3 id="s84-3">反転公式</h3>
+
+<div class="teiri" id="thm-hanten">
+<h4>反転公式</h4>
+<p class="no-indent">（1）<m>f\in L^1(\mathbb{R}^d)</m> かつ <m>\hat f\in L^1(\mathbb{R}^d)</m> ならば、ほとんどすべての <m>x</m> で</p>
+<M>f(x) = \frac{1}{(2\pi)^d}\int_{\mathbb{R}^d}\hat f(\xi)e^{ix\cdot\xi}\,d\xi</M>
+<p class="no-indent">が成り立ち、<m>f</m> は（測度零の修正で）連続関数になる。<br>
+（2）<m>f\in L^1</m> のみの仮定でも、<strong>ガウス総和法</strong>により</p>
+<M>\lim_{\varepsilon\downarrow0}\ \frac{1}{(2\pi)^d}\int \hat f(\xi)e^{-\varepsilon|\xi|^2}e^{ix\cdot\xi}\,d\xi = f(x)</M>
+<p class="no-indent">が <m>L^1</m> ノルムで、また <m>f</m> の連続点では各点で成り立つ。<br>
+（3）<strong>一意性</strong>：<m>\hat f\equiv0</m> ならば <m>f=0</m>。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">（2）を示し、（1）（3）をそこから導く。乗法公式（<ref t="prop-fourier-kihon-r"/>（7））を <m>g(\xi)=(2\pi)^{-d}e^{-\varepsilon|\xi|^2}e^{ix\cdot\xi}</m> に適用する。<ref t="rei-fourier-henkan-rei"/>（3）より <m>\hat g(y)=H_\varepsilon(x-y)</m>（熱核）だから</p>
+<M>\frac{1}{(2\pi)^d}\int\hat f(\xi)e^{-\varepsilon|\xi|^2}e^{ix\cdot\xi}\,d\xi = \int f(y)H_\varepsilon(x-y)\,dy = (f*H_\varepsilon)(x)</M>
+<p class="no-indent"><em>熱核は正の近似単位元である</em>（<m>\int H_\varepsilon=1</m>、正、原点の外の質量が零に行く）。<span class="yogo-hl">したがって<ref t="thm-kinji-tan-i"/>がそのまま使えて、<m>f*H_\varepsilon\to f</m> が <m>L^1</m> で、また連続点では各点で成り立つ。</span></p>
+<p class="no-indent">（1）：<m>\hat f\in L^1</m> なら左辺で <m>\varepsilon\to0</m> が優収束定理で通り、極限は反転積分になる。右辺の極限は <m>L^1</m> で <m>f</m> だから、部分列をとればほとんどいたるところ一致する。反転積分は（1）の形から連続関数である。</p>
+<p class="no-indent">（3）：<m>\hat f\equiv0</m> なら（2）の左辺が恒等的に零なので <m>f*H_\varepsilon\equiv0</m>、極限をとって <m>f=0</m>。</p>
+</div>
+
+<div class="hanrei" id="cex-l1-fourier">
+<h4><m>L^1</m> の理論の限界</h4>
+<p class="no-indent">（1）<strong>像が特徴づけられない。</strong><m>\mathcal{F}(L^1)\subsetneq C_0(\mathbb{R}^d)</m> であり、この包含は真である（矩形関数の変換は <m>C_0</m> に属するが、<m>L^1</m> の像に「近い」関数で像に入らないものが構成できる）。<em>「どんな <m>C_0</m> 関数がフーリエ変換か」に答えはない。</em></p>
+<p class="no-indent">（2）<strong>反転が素朴にはできない。</strong><m>\hat f\notin L^1</m> が普通に起こる（矩形関数）。<em>総和法を挟まなければ反転公式は書けない。</em></p>
+<p class="no-indent">（3）<strong><m>L^1</m> は変換で閉じない。</strong>したがって <m>\mathcal{F}</m> を <m>L^1</m> 上の作用素として反復できない。<span class="yogo-hl">この不都合を解消する空間が二つある：<m>L^2</m>（第85章）とシュワルツ空間（第87章）。</span>どちらもフーリエ変換で自分自身に写る。</p>
+<p class="no-indent">（4）<strong>正定値性の落とし穴。</strong><m>\hat f\ge0</m> でも <m>f\ge0</m> とは限らないし、逆も成り立たない。<em>正しい対応はボホナーの定理（<m>f</m> が正定値関数であることと <m>\hat f</m> が正測度であることが同値）である。</em></p>
+</div>
+
+<div class="rei" id="rei-fourier-ouyou">
+<h4>反転公式から出てくるもの</h4>
+<p class="no-indent">（1）<strong>ポアソンの和公式。</strong>十分減衰する <m>f</m> について</p>
+<M>\sum_{n\in\mathbb{Z}} f(n) = \sum_{k\in\mathbb{Z}} \hat f(2\pi k)</M>
+<p class="no-indent">証明は <m>F(x)=\sum_nf(x+n)</m> を周期 <m>1</m> の関数と見て、そのフーリエ係数が <m>\hat f(2\pi k)</m> であることを確かめ、<m>x=0</m> と置くだけ。<em>級数と積分の二つの世界を結ぶ橋であり、テータ関数の変換公式、ゼータ関数の関数等式、格子の幾何（<span class="orig">Minkowski</span>の定理）のすべてがここから出る。</em></p>
+<p>（2）<strong>標本化定理。</strong><m>\hat f</m> が <m>[-\Omega,\Omega]</m> に台をもつなら</p>
+<M>f(x) = \sum_{n\in\mathbb{Z}} f\Big(\frac{n\pi}{\Omega}\Big)\,\frac{\sin(\Omega x-n\pi)}{\Omega x-n\pi}</M>
+<p class="no-indent"><em>帯域が制限された信号は、等間隔の標本から完全に復元できる</em>（ナイキスト–シャノン）。<span class="yogo-hl">証明は <m>\hat f</m> を <m>[-\Omega,\Omega]</m> 上のフーリエ級数に展開し、反転するだけである。</span>デジタル信号処理の全体が、この一行に乗っている。</p>
+<p>（3）<strong>中心極限定理。</strong>確率変数の和の分布は畳み込みだから、特性関数（＝フーリエ変換）は積になる。<em><m>\hat\mu(\xi)=1-\sigma^2\xi^2/2+o(\xi^2)</m> を <m>n</m> 乗して <m>\xi\to\xi/\sqrt n</m> と縮めると <m>e^{-\sigma^2\xi^2/2}</m> に収束し、これはガウス関数の変換である。</em>レヴィの連続性定理が、特性関数の収束から分布の収束を保証する。</p>
+<p>（4）<strong>ハイゼンベルクの不確定性。</strong><m>\|f\|_2=1</m> のとき</p>
+<M>\Big(\int x^2|f|^2dx\Big)\Big(\int \xi^2|\hat f|^2\frac{d\xi}{2\pi}\Big) \ \ge\ \frac14</M>
+<p class="no-indent"><em>等号はガウス関数のときのみ。</em>第86章で証明する。</p>
+</div>
+
+<figure id="fig84-1">
+<svg viewBox="0 0 470 292" width="470" height="292" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">広がりを交換する——時間と周波数のシーソー</text>
+
+  <rect x="14" y="26" width="442" height="136" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+
+  <text x="118" y="42" font-size="6.8" text-anchor="middle" font-weight="700" fill="#1f3b5c">もとの関数</text>
+  <text x="352" y="42" font-size="6.8" text-anchor="middle" font-weight="700" fill="#1f3b5c">フーリエ変換</text>
+
+  <line x1="40" y1="76" x2="196" y2="76" stroke="#8a8a88" stroke-width="0.6"/>
+  <rect x="98" y="58" width="40" height="18" fill="#dce7f0" stroke="#35618f" stroke-width="1"/>
+  <text x="244" y="60" font-size="6" text-anchor="middle" fill="#6a6a68">矩形</text>
+  <line x1="274" y1="76" x2="430" y2="76" stroke="#8a8a88" stroke-width="0.6"/>
+  <path d="M 276 76 L 284 74 L 292 78 L 300 71 L 308 80 L 316 66 L 324 84 L 332 60 L 340 52 L 348 48 L 352 46 L 356 48 L 364 52 L 372 60 L 380 84 L 388 66 L 396 80 L 404 71 L 412 78 L 420 74 L 428 76" fill="none" stroke="#a03b2e" stroke-width="1.1"/>
+  <text x="352" y="90" font-size="5.8" text-anchor="middle" fill="#8c2f1e">裾が重く、可積分でない</text>
+
+  <line x1="40" y1="130" x2="196" y2="130" stroke="#8a8a88" stroke-width="0.6"/>
+  <path d="M 60 129 C 92 129 100 100 118 100 C 136 100 144 129 176 129" fill="#e6efe9" stroke="#2f6b5f" stroke-width="1.2"/>
+  <text x="244" y="114" font-size="6" text-anchor="middle" fill="#6a6a68">ガウス</text>
+  <line x1="274" y1="130" x2="430" y2="130" stroke="#8a8a88" stroke-width="0.6"/>
+  <path d="M 294 129 C 326 129 334 100 352 100 C 370 100 378 129 410 129" fill="#e6efe9" stroke="#2f6b5f" stroke-width="1.2"/>
+  <text x="352" y="144" font-size="5.8" text-anchor="middle" fill="#1e4a41">自分自身に写る唯一の形</text>
+
+  <line x1="220" y1="68" x2="268" y2="68" stroke="#35618f" stroke-width="1.2" marker-end="url(#f84)"/>
+  <line x1="220" y1="122" x2="268" y2="122" stroke="#2f6b5f" stroke-width="1.2" marker-end="url(#f84b)"/>
+
+  <defs>
+    <marker id="f84" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 z" fill="#35618f"/></marker>
+    <marker id="f84b" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 z" fill="#2f6b5f"/></marker>
+  </defs>
+
+  <text x="235" y="157" font-size="6.4" text-anchor="middle" fill="#8c2f1e">一方を狭めると他方が広がる——両方を同時に狭められない</text>
+
+  <rect x="14" y="172" width="216" height="110" rx="4" fill="#f4f1ea" stroke="#8a6b2c"/>
+  <text x="24" y="187" font-size="7.6" font-weight="700" fill="#5a4520">三つの規則で全部が動く</text>
+  <text x="24" y="204" font-size="6.6" fill="#5a4520">畳み込み　→　積</text>
+  <text x="24" y="216" font-size="6.6" fill="#5a4520">微分　　　→　変数倍</text>
+  <text x="24" y="228" font-size="6.6" fill="#5a4520">平行移動　→　位相の回転</text>
+  <text x="24" y="245" font-size="6.4" fill="#1e4a41">定数係数の偏微分方程式は代数方程式になる</text>
+  <text x="24" y="257" font-size="6.4" fill="#1e4a41">微分が割り算に変わる</text>
+  <text x="24" y="273" font-size="6.4" fill="#8c2f1e">割る相手の零点が、方程式の型を決める</text>
+
+  <rect x="240" y="172" width="216" height="110" rx="4" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="250" y="187" font-size="7.6" font-weight="700" fill="#1e4a41">一乗の理論の限界</text>
+  <text x="250" y="204" font-size="6.6" fill="#1e4a41">像は無限遠で消える連続関数だが</text>
+  <text x="250" y="216" font-size="6.6" fill="#8c2f1e">どれが像かは特徴づけられていない</text>
+  <text x="250" y="233" font-size="6.4" fill="#5a4520">変換した先が可積分とは限らないので</text>
+  <text x="250" y="245" font-size="6.4" fill="#5a4520">反転には総和法を挟む必要がある</text>
+  <text x="250" y="262" font-size="6.6" fill="#6b2a48">自分自身に写る空間が二つある</text>
+  <text x="250" y="274" font-size="6.4" fill="#6b2a48">二乗可積分（第85章）とシュワルツ（第87章）</text>
+</svg>
+<figcaption data-ch="84">フーリエ変換は時間側の広がりと周波数側の広がりを交換する。矩形は裾の重い関数に、ガウス関数は自分自身に写る。可積分な関数の枠組みでは像が特徴づけられず、反転にも総和法が要る。</figcaption>
+</figure>
+
+<div class="star2">
+<h4>★★ 学部後半——乗子、正定値性、そして群への一般化</h4>
+
+<p><strong>乗子作用素。</strong>有界関数 <m>m(\xi)</m> について <m>T_mf=(m\hat f)^{\vee}</m> と定める。<m>L^2</m> では <m>\|T_m\|=\|m\|_\infty</m>（パーセヴァル、第85章）だが、<em><m>L^p</m>（<m>p\ne2</m>）で有界になる条件はずっと厳しい。</em></p>
+
+<p><strong>ミヒリン–ヘルマンダーの定理</strong>：<m>|\partial^\alpha m(\xi)|\le C|\xi|^{-|\alpha|}</m>（<m>|\alpha|\le\lfloor d/2\rfloor+1</m>）なら <m>T_m</m> は <m>L^p</m>（<m>1 < p < \infty</m>）で有界。<em>リース変換 <m>m=\xi_j/|\xi|</m> がこの条件をみたすので、<m>\|\partial_i\partial_ju\|_p\le C\|\Delta u\|_p</m> という<strong>楕円型評価</strong>が出る。</em><span class="yogo-hl">「ラプラシアンを押さえれば二階微分がすべて押さえられる」——偏微分方程式の正則性理論の出発点である。</span></p>
+
+<p><strong>ボホナーの定理。</strong><m>\varphi:\mathbb{R}^d\to\mathbb{C}</m> が連続で <m>\varphi(0)=1</m>、かつ任意の <m>x_1,\dots,x_n</m> と <m>c_1,\dots,c_n</m> について</p>
+<M>\sum_{j,k}c_j\bar c_k\,\varphi(x_j-x_k) \ \ge\ 0</M>
+<p>（<strong>正定値</strong>）であることと、<m>\varphi</m> がある確率測度のフーリエ変換であることは同値。<em>これが確率論における特性関数の完全な特徴づけである。</em>証明はゲルファント理論（第79章）でも、直接の総和法でも与えられる。</p>
+
+<p><strong>局所コンパクト可換群への一般化。</strong><m>G</m> を局所コンパクト可換群、<m>\hat G</m> を指標の群（双対群）とすると、フーリエ変換 <m>L^1(G)\to C_0(\hat G)</m> が定義され、反転公式とプランシュレルの定理が成り立つ。<em>ポントリャーギン双対性 <m>\hat{\hat G}\cong G</m> が、反転公式の構造的な内容である。</em></p>
+<p><span class="yogo-hl">具体例：<m>\hat{\mathbb{T}}=\mathbb{Z}</m>（フーリエ級数）、<m>\hat{\mathbb{R}}=\mathbb{R}</m>（フーリエ変換）、<m>\widehat{\mathbb{Z}/N}=\mathbb{Z}/N</m>（離散フーリエ変換）、<m>\hat{\mathbb{Q}_p}=\mathbb{Q}_p</m>（<m>p</m> 進解析）。</span><em>本章と第80章は、同じ定理の二つの場合だったのである。</em>非可換群では指標が足りず、表現論が必要になる（第79章★★★のGNS構成の方向）。</p>
+
+<p><strong>仮定を外すと。</strong><m>f\in L^1</m> を外すと積分が定義できない——それを救うのが第87章の超関数である。<m>d=1</m> を外しても理論は変わらないが、<em>球形の切り落としの振る舞いだけが劇的に変わる</em>（第82章★★★のフェファーマンの反例）。</p>
+</div>
+
+<div class="star3">
+<h4>★★★ 大学院——不確定性の定理群</h4>
+
+<p><strong>「両方が小さい台をもてない」の諸相。</strong>ハイゼンベルクの不等式は分散による定量化だが、定性的にはもっと強い主張が成り立つ。</p>
+
+<p><em>ベンドキソンの定理</em>：<m>f\ne0</m> なら <m>f</m> と <m>\hat f</m> の台が両方とも有限測度をもつことはない。より精密に、<m>|\mathrm{supp}f|\cdot|\mathrm{supp}\hat f|\ge1</m>（アミレイ–ベルクマン）。</p>
+
+<p><em>ハーディの不確定性定理</em>：<m>|f(x)|\le Ce^{-a|x|^2}</m> かつ <m>|\hat f(\xi)|\le Ce^{-b|\xi|^2}</m> で <m>ab>1/4</m> なら <m>f=0</m>。<m>ab=1/4</m> ならガウス関数の定数倍に限る。<em>証明はフラグメン–リンデレーフの定理（第90章の最大値原理の拡張）による。</em><span class="yogo-hl">複素解析の剛性が、そのまま不確定性の剛性になっている。</span></p>
+
+<p><em>ベールリングの定理</em>：<m>\int\int|f(x)||\hat f(\xi)|e^{|x\xi|}dxd\xi < \infty</m> なら <m>f=0</m>。これはハーディの定理を含む最も強い形である。</p>
+
+<p><strong>離散版と数論。</strong>有限群 <m>\mathbb{Z}/p</m>（<m>p</m> 素数）では、タオの不確定性定理が成り立つ：<m>f\ne0</m> なら <m>|\mathrm{supp}f|+|\mathrm{supp}\hat f|\ge p+1</m>。<em>証明はシュヴァレー–ヴァルニングの定理と、ヴァンデルモンド行列式の非退化性を使う。</em><span class="yogo-hl">素数であることが本質的で、合成数では成り立たない。</span>この定理が圧縮センシングの理論的な基礎の一つになっている。</p>
+
+<p><strong>球充填との接触。</strong>ヴィアゾフスカによる <m>8</m> 次元と <m>24</m> 次元の球充填問題の解決（2016年、2022年フィールズ賞）は、コーン–エルキーズの線形計画法的な枠組みで、<em>ポアソンの和公式をみたす「魔法の関数」を明示的に構成する</em>ことによってなされた。関数は準モジュラー形式の積分表示として与えられる。<em>フーリエ変換の符号条件と格子の幾何が、一行の等式で結ばれている。</em>同じ手法が球面符号のフーリエ補間問題（ラドチェンコ–ヴィアゾフスカ）に発展している。</p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li>矩形関数のフーリエ変換を計算し、可積分でないことを確かめよ。</li>
+<li>ガウス関数のフーリエ変換を、常微分方程式を解いて求めよ。</li>
+<li>畳み込みの変換が積になることを、フビニの定理で確かめよ。</li>
+<li>熱方程式がフーリエ変換で常微分方程式になることを確かめよ。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li>リーマン–ルベーグの補題を、平行移動の <m>L^1</m> 連続性から示せ。<span class="haiten">（30点）</span></li>
+<li>乗法公式 <m>\int\hat fg=\int f\hat g</m> を示せ。<span class="haiten">（25点）</span></li>
+<li><ref t="thm-hanten"/>（2）を、熱核が近似単位元であることから示せ。<span class="haiten">（40点）</span></li>
+<li>一意性（<m>\hat f\equiv0\Rightarrow f=0</m>）を示せ。<span class="haiten">（30点）</span></li>
+<li>ポアソンの和公式を、周期化した関数のフーリエ係数から示せ。<span class="haiten">（40点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li>標本化定理を、反転公式とフーリエ級数展開から示せ。<span class="haiten">（45点）</span></li>
+<li>中心極限定理を、特性関数の収束から示せ。<span class="haiten">（50点）</span></li>
+<li>ボホナーの定理の必要性（正測度の変換は正定値）を示せ。<span class="haiten">（40点）</span></li>
+<li>ハーディの不確定性定理を、<m>ab>1/4</m> の場合にフラグメン–リンデレーフの定理を使って示せ。<span class="haiten">（50点）</span></li>
+</ol>
+</div>
+</div>
+<nav class="chnav">
+<a class="prev" href="ch83.html">← 第83章　発散する例と、Carlesonの定理</a>
+<a class="next" href="ch85.html">第85章　L2への拡張とPlancherelの定理 →</a>
+</nav>
+</article>
+</main>
+<footer class="site">
+  <p>位相・解析大全　学部から大学院まで、三層で読む位相空間論と解析学</p>
+  <p class="small">本文・図版とも本書のために作成したものです。数式は MathJax でベクタ化して組んでいます。</p>
+</footer>
+</body>
+</html>

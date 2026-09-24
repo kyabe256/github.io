@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第88章 超関数のFourier変換とSobolev空間｜位相・解析大全</title>
+<meta name="description" content="位相・解析大全　第88章　超関数のFourier変換とSobolev空間">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;600&display=swap">
+<link rel="stylesheet" href="web.css">
+</head>
+<body>
+<header class="site">
+  <a class="site-title" href="index.html">位相・解析大全</a>
+  <nav class="site-nav">
+    <a href="index.html">目次</a>
+    <a href="isou-kaiseki-taizen.pdf">PDF版</a>
+  </nav>
+</header>
+<main>
+<article class="chapter">
+<p class="part-label">第XI部　フーリエ解析</p>
+<h1><span class="ch-num">第88章</span>超関数のFourier変換とSobolev空間</h1>
+<nav class="chnav">
+<a class="prev" href="ch87.html">← 第87章　Schwartz空間と超関数</a>
+<a class="next" href="ch89.html">第89章　複素微分とCauchy–Riemannの方程式 →</a>
+</nav>
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>「半階だけ微分できる」とは、どういうことか。</li>
+<li>滑らかさと可積分性は、どうやって交換されるのか。</li>
+<li>偏微分方程式を解くのに、なぜこの空間が要るのか。</li>
+</ul>
+</div>
+
+<h3 id="s88-1">滑らかさを実数で測る</h3>
+
+<p>第87章で、すべての緩増加超関数がフーリエ変換をもつようになった。<em>すると <m>\hat u</m> の減衰の速さで、<m>u</m> の滑らかさを測れる</em>——第80章で見た「係数の減衰＝滑らかさ」の対応を、定義そのものに採用するのである。</p>
+
+<div class="teigi" id="def-sobolev">
+<h4>ソボレフ空間</h4>
+<p class="no-indent"><m>s\in\mathbb{R}</m> について</p>
+<M>H^s(\mathbb{R}^d) = \Big\{ u\in\mathcal{S}'(\mathbb{R}^d) \ \Big|\ \hat u \in L^2_{\mathrm{loc}},\ \ \|u\|_{H^s}^2 = \frac{1}{(2\pi)^d}\int_{\mathbb{R}^d}\big(1+|\xi|^2\big)^{s}\,|\hat u(\xi)|^2\,d\xi < \infty \Big\}</M>
+<p class="no-indent">を<strong>ソボレフ空間</strong>という。<m>\langle\xi\rangle=(1+|\xi|^2)^{1/2}</m> と書くのが慣例である。</p>
+<p class="no-indent"><em>より一般に、<m>1\le p\le\infty</m>、<m>k</m> 非負整数について</em></p>
+<M>W^{k,p}(\Omega) = \{\, u\in L^p(\Omega) \mid \partial^\alpha u\in L^p(\Omega)\ (|\alpha|\le k) \,\}</M>
+<p class="no-indent"><em>と定める（導関数は超関数の意味）。<m>W^{k,2}(\mathbb{R}^d)=H^k(\mathbb{R}^d)</m> である。</em></p>
+</div>
+
+<div class="teiri" id="prop-sobolev-kihon">
+<h4>基本性質</h4>
+<p class="no-indent">（1）<m>H^s</m> はヒルベルト空間で、<m>H^0=L^2</m>。<m>s>t</m> なら <m>H^s\subsetneq H^t</m>（連続な埋め込み）。<br>
+（2）<m>k</m> が非負整数なら <m>\|u\|_{H^k}^2\asymp\sum_{|\alpha|\le k}\|\partial^\alpha u\|_{L^2}^2</m>。<br>
+（3）<m>\partial^\alpha : H^s\to H^{s-|\alpha|}</m> は有界。<em>微分は指数を <m>|\alpha|</m> だけ下げる。</em><br>
+（4）<m>\langle D\rangle^t u = (\langle\xi\rangle^t\hat u)^\vee</m> は <m>H^s</m> から <m>H^{s-t}</m> へのユニタリ同型（<strong>ベッセル作用素</strong>）。<br>
+（5）<m>(H^s)^*\cong H^{-s}</m>（<m>L^2</m> の対を通して）。<br>
+（6）<m>\mathcal{S}</m> は <m>H^s</m> で稠密。<m>s\ge0</m> なら <m>C_c^\infty</m> も稠密。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">（1）（4）（6）はプランシュレル（<ref t="thm-plancherel"/>）と、周波数側での重みつき <m>L^2</m> 空間としての読み替えから直ちに従う。<em>ソボレフ空間は、本質的には重み <m>\langle\xi\rangle^{2s}</m> をつけた <m>L^2</m> 空間である。</em></p>
+<p class="no-indent">（2）<m>\widehat{\partial^\alpha u}=(i\xi)^\alpha\hat u</m> より <m>\sum_{|\alpha|\le k}|\xi^\alpha|^2\asymp\langle\xi\rangle^{2k}</m> を確かめればよい。<em>これは多項式の比較で、次数が同じだから両側から定数倍で押さえられる。</em></p>
+<p class="no-indent">（5）<m>\langle u,v\rangle=\frac{1}{(2\pi)^d}\int\hat u\overline{\hat v}\,d\xi</m> に対しコーシー–シュワルツを重み <m>\langle\xi\rangle^{s}\cdot\langle\xi\rangle^{-s}</m> で分けると <m>|\langle u,v\rangle|\le\|u\|_{H^s}\|v\|_{H^{-s}}</m>。<em>逆向きはリースの表現定理（<ref t="thm-riesz-hyogen-hilbert"/>）による。</em></p>
+<p><span class="yogo-hl">すべてが「重みつき <m>L^2</m>」という一言に帰着する——これが第85章のプランシュレルの定理を用意した理由である。</span></p>
+</div>
+
+<h3 id="s88-2">埋め込み定理</h3>
+
+<div class="teiri" id="thm-sobolev-umekomi">
+<h4>ソボレフの埋め込み定理</h4>
+<p class="no-indent">（1）<strong>有界性・連続性</strong>：<m>s>d/2</m> ならば <m>H^s(\mathbb{R}^d)\subset C_b(\mathbb{R}^d)</m> で</p>
+<M>\|u\|_{L^\infty} \le C_s\|u\|_{H^s}</M>
+<p class="no-indent">より一般に <m>s>d/2+k</m> なら <m>H^s\subset C^k_b</m>。<br>
+（2）<strong>可積分性の改善</strong>：<m>0\le s < d/2</m>、<m>\frac1q=\frac12-\frac sd</m> ならば <m>H^s(\mathbb{R}^d)\subset L^q(\mathbb{R}^d)</m>。<br>
+（3）<strong>ガリアルド–ニーレンバーグ–ソボレフ</strong>：<m>1\le p < d</m>、<m>\frac1{p^*}=\frac1p-\frac1d</m> ならば</p>
+<M>\|u\|_{L^{p^*}} \le C\|\nabla u\|_{L^p} \qquad (u\in C_c^1(\mathbb{R}^d))</M>
+<p class="no-indent">（4）<strong>レリッヒ–コンドラショフ</strong>：<m>\Omega</m> が有界で境界が滑らかなら、<m>s>t</m> のとき埋め込み <m>H^s(\Omega)\hookrightarrow H^t(\Omega)</m> はコンパクト作用素である。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">（1）コーシー–シュワルツを重みで分ける。</p>
+<M>|u(x)| \le \frac{1}{(2\pi)^d}\int|\hat u(\xi)|\,d\xi \le \frac{1}{(2\pi)^d}\Big(\int\langle\xi\rangle^{-2s}d\xi\Big)^{1/2}\Big(\int\langle\xi\rangle^{2s}|\hat u|^2d\xi\Big)^{1/2}</M>
+<p class="no-indent"><em>第一の積分が収束するのは <m>2s>d</m> のとき</em>（極座標で <m>\int r^{d-1}r^{-2s}dr</m> の無限遠での収束）。<span class="yogo-hl">臨界指数 <m>s=d/2</m> は、単に一つの積分の収束条件である。</span>反転公式から <m>u</m> は連続で、<m>k</m> 階の場合は <m>\partial^\alpha u\in H^{s-k}</m> に同じ議論を使う。</p>
+<p class="no-indent">（3）<m>p=1</m> の場合を示せば、残りはヘルダーで出る。<m>u\in C_c^1</m> について、各座標方向に</p>
+<M>|u(x)| \le \int_{-\infty}^{\infty}|\partial_ju(x_1,\dots,t,\dots,x_d)|\,dt</M>
+<p class="no-indent">この <m>d</m> 個の不等式の幾何平均をとり、<em>一般化ヘルダーの不等式（<ref t="thm-holder"/>の多重版）を順に各変数について適用する</em>と <m>\|u\|_{L^{d/(d-1)}}\le\prod_j\|\partial_ju\|_{L^1}^{1/d}\le\|\nabla u\|_{L^1}</m>。これが <m>p=1</m>、<m>p^*=d/(d-1)</m> の場合である。</p>
+<p class="no-indent">（4）<m>\Omega</m> が有界なので、<m>H^s(\Omega)</m> の有界列は <m>\hat u</m> が低周波では一様に、高周波では一様小に押さえられる。<em>低周波部分は有限次元に近く、高周波部分は小さい</em>——これは第73章の「有限階作用素のノルム極限はコンパクト」（<ref t="prop-compact-kihon"/>）そのものである。</p>
+</div>
+
+<div class="chui">
+<h4>埋め込みは「交換レート」である</h4>
+<p class="no-indent">（2）を書き直すと <m>s</m> 階の滑らかさを <m>\frac12-\frac1q=\frac sd</m> だけの可積分性に交換している。<em>次元 <m>d</m> が大きいほど、同じ滑らかさで得られる改善は小さい。</em></p>
+<p><span class="yogo-hl">レートを覚えるには拡大縮小を使うのが確実である。</span><m>u_\lambda(x)=u(\lambda x)</m> と置くと <m>\|u_\lambda\|_{L^q}=\lambda^{-d/q}\|u\|_{L^q}</m>、<m>\|\nabla u_\lambda\|_{L^p}=\lambda^{1-d/p}\|\nabla u\|_{L^p}</m>。<em>不等式 <m>\|u\|_{L^{p^*}}\le C\|\nabla u\|_{L^p}</m> がすべての <m>\lambda</m> で成り立つには、両辺の <m>\lambda</m> の冪が一致しなければならない：</em></p>
+<M>-\frac{d}{p^*} = 1-\frac dp \qquad\Longleftrightarrow\qquad \frac{1}{p^*} = \frac1p-\frac1d</M>
+<p><em>指数は「そうでなければ成り立ちようがない」値に決まっている。</em>臨界指数の記憶は不要で、拡大縮小で毎回導ける。</p>
+</div>
+
+<div class="hanrei" id="cex-sobolev">
+<h4>臨界の場合は落ちる</h4>
+<p class="no-indent">（1）<strong><m>s=d/2</m> では有界にならない。</strong><m>d=2</m>、<m>s=1</m> のとき <m>H^1(\mathbb{R}^2)\not\subset L^\infty</m>。反例は <m>u(x)=\log\log(1/|x|)</m> を切り落としたもの：<em><m>\nabla u\sim1/(|x|\log(1/|x|))</m> の二乗は <m>\int\frac{r\,dr}{r^2\log^2(1/r)}</m> で収束するが、<m>u</m> は原点で非有界。</em><span class="yogo-hl">境目は本当に境目である。</span></p>
+<p class="no-indent">（2）<strong>代わりに何が成り立つか。</strong><m>s=d/2</m> では指数可積分性（<em>トゥルーディンガー–モーザーの不等式</em>）が成り立つ：<m>\int(e^{\alpha|u|^2}-1)\le C</m>。<em>「ほとんど有界」だが有界ではない、という微妙な状態である。</em></p>
+<p class="no-indent">（3）<strong><m>p=d</m> では（3）が成り立たない。</strong><m>p^*=\infty</m> となるが <m>W^{1,d}\not\subset L^\infty</m>。（1）と同じ反例。</p>
+<p class="no-indent">（4）<strong>有界領域でないとコンパクトでない。</strong><m>\mathbb{R}^d</m> 上では埋め込み <m>H^1\hookrightarrow L^2</m> はコンパクトでない。<em>反例：<m>u_n(x)=u(x-ne_1)</m> は有界列だが <m>L^2</m> で収束部分列をもたない</em>（質量が無限遠へ逃げる）。<span class="yogo-hl">これが変分法で「消失」と呼ばれる現象で、集中コンパクト性の技法が必要になる理由である。</span></p>
+<p class="no-indent">（5）<strong>積が定義できるとは限らない。</strong><m>u,v\in H^s</m> でも <m>uv\in H^s</m> とは限らない。<em>成り立つのは <m>s>d/2</m> のとき</em>（そのとき <m>H^s</m> は環になる）。<m>s\le d/2</m> では、指数を下げた形の評価（積の評価、下記★★）しか得られない。</p>
+</div>
+
+<h3 id="s88-3">偏微分方程式への応用</h3>
+
+<div class="rei" id="rei-sobolev-pde">
+<h4>弱解とその正則性</h4>
+<p class="no-indent"><strong>ディリクレ問題。</strong><m>\Omega</m> を有界領域とし、</p>
+<M>-\Delta u = f \ \text{in } \Omega, \qquad u=0 \ \text{on } \partial\Omega</M>
+<p class="no-indent">を解く。<em>強い意味での解を探すのではなく、次を要求する</em>：<m>u\in H_0^1(\Omega)</m>（<m>C_c^\infty(\Omega)</m> の <m>H^1</m> 閉包）で</p>
+<M>\int_\Omega \nabla u\cdot\nabla\varphi\,dx = \int_\Omega f\varphi\,dx \qquad (\forall\varphi\in H_0^1(\Omega))</M>
+<p class="no-indent">これを<strong>弱解</strong>という。<em>左辺は <m>H_0^1</m> 上の内積であり、右辺は <m>f\in H^{-1}</m> なら有界線形汎関数である。</em><span class="yogo-hl">したがってリースの表現定理（<ref t="thm-riesz-hyogen-hilbert"/>）が一意存在を与える——偏微分方程式が、ヒルベルト空間の一行に帰着する。</span></p>
+<p><em>ここで使った「<m>H_0^1</m> 上で <m>\int|\nabla u|^2</m> が内積になる」ことは、ポアンカレの不等式 <m>\|u\|_{L^2}\le C\|\nabla u\|_{L^2}</m>（<m>\Omega</m> 有界、<m>u\in H_0^1</m>）による。</em>これは第76章の最小最大原理でいえば「最小固有値が正である」ことにあたる。</p>
+<p><strong>正則性。</strong>弱解は自動的になめらかになる。<m>f\in H^{k}</m> なら <m>u\in H^{k+2}_{\mathrm{loc}}</m>（<em>楕円型正則性</em>）。<em>証明は周波数側で <m>|\xi|^2\hat u=\hat f</m> を見るだけ（定数係数の場合）。</em>したがって <m>f\in C^\infty</m> なら <m>u\in C^\infty</m>。</p>
+<p><strong>固有値問題。</strong><m>-\Delta u=\lambda u</m> は、レリッヒ–コンドラショフのコンパクト埋め込みにより、<em>コンパクト自己共役作用素のスペクトル定理（<ref t="thm-hilbert-schmidt"/>）に乗る</em>。<span class="yogo-hl">固有値は離散で <m>\lambda_n\to\infty</m>、固有関数は <m>L^2(\Omega)</m> の正規直交基底をなす。</span>第76章のスツルム–リウヴィル問題（<ref t="rei-sturm-liouville"/>）の多次元版が、こうして完成する。</p>
+</div>
+
+<div class="chui">
+<h4>この部で何をしたか</h4>
+<p class="no-indent">第80章の問い——「任意の関数を波に分解できるか」——に、九つの章で答えを積み上げてきた。</p>
+<p class="no-indent"><strong>第80〜83章</strong>　周期の場合。二乗平均では常に成り立ち、各点では測度零の例外が避けられない。<br>
+<strong>第84〜86章</strong>　周期のない場合。等距離性は <m>L^2</m> の特権で、畳み込みと不確定性が理論の両端を定める。<br>
+<strong>第87〜88章</strong>　枠を広げる。超関数で例外をなくし、ソボレフ空間で滑らかさを実数で測る。</p>
+<p><em>結論を一行で言えば</em>——<span class="yogo-hl">フーリエ変換は、微分作用素を対角化するユニタリ変換である。</span>第77章のスペクトル定理の言葉で言えば、平行移動の群のスペクトル分解にほかならない。<em>そして「どの意味で収束するか」という問いへの答えは、その対角化がどの空間の上で等距離になるかで決まる。</em></p>
+</div>
+
+<figure id="fig88-1">
+<svg viewBox="0 0 470 292" width="470" height="292" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">滑らかさと可積分性の交換レート</text>
+
+  <rect x="14" y="26" width="442" height="120" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+
+  <line x1="54" y1="126" x2="440" y2="126" stroke="#8a8a88" stroke-width="0.8"/>
+  <line x1="54" y1="126" x2="54" y2="46" stroke="#8a8a88" stroke-width="0.8"/>
+  <text x="446" y="129" font-size="6" fill="#6a6a68">s</text>
+  <text x="44" y="46" font-size="6" fill="#6a6a68">1/q</text>
+
+  <line x1="54" y1="56" x2="290" y2="120" stroke="#35618f" stroke-width="1.6"/>
+  <circle cx="54" cy="56" r="2.6" fill="#35618f"/>
+  <text x="62" y="52" font-size="6" fill="#1f3b5c">s ＝ 0 なら二乗可積分のまま</text>
+  <circle cx="290" cy="120" r="2.6" fill="#a03b2e"/>
+  <line x1="290" y1="126" x2="290" y2="50" stroke="#a03b2e" stroke-width="0.8" stroke-dasharray="3 2"/>
+  <text x="290" y="44" font-size="6" text-anchor="middle" fill="#8c2f1e">s ＝ 次元の半分</text>
+  <text x="290" y="138" font-size="5.8" text-anchor="middle" fill="#8c2f1e">ここが臨界</text>
+
+  <rect x="292" y="60" width="140" height="60" rx="3" fill="#e6efe9" stroke="#2f6b5f" stroke-width="1"/>
+  <text x="362" y="76" font-size="6.4" text-anchor="middle" font-weight="700" fill="#1e4a41">有界かつ連続になる</text>
+  <text x="362" y="90" font-size="6" text-anchor="middle" fill="#1e4a41">さらに上げれば k 回微分可能</text>
+  <text x="362" y="106" font-size="6" text-anchor="middle" fill="#6a6a68">臨界ちょうどでは有界にならない</text>
+
+  <rect x="14" y="156" width="216" height="128" rx="4" fill="#f4f1ea" stroke="#8a6b2c"/>
+  <text x="24" y="171" font-size="7.6" font-weight="700" fill="#5a4520">指数は拡大縮小で決まる</text>
+  <text x="24" y="188" font-size="6.6" fill="#5a4520">変数を λ 倍すると</text>
+  <text x="24" y="200" font-size="6.4" fill="#5a4520">左辺と右辺の λ の冪が現れる</text>
+  <text x="24" y="212" font-size="6.4" fill="#5a4520">不等式がすべての λ で成り立つには</text>
+  <text x="24" y="224" font-size="6.4" fill="#5a4520">二つの冪が一致しなければならない</text>
+  <text x="24" y="241" font-size="6.6" fill="#8c2f1e">だから指数は覚える必要がない</text>
+  <text x="24" y="258" font-size="6.4" fill="#1e4a41">同じ論法で、方程式が「臨界」か</text>
+  <text x="24" y="270" font-size="6.4" fill="#1e4a41">「劣臨界」かも判定できる</text>
+  <text x="24" y="281" font-size="6.2" fill="#6a6a68">非線形方程式の難易度を測る第一歩</text>
+
+  <rect x="240" y="156" width="216" height="128" rx="4" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="250" y="171" font-size="7.6" font-weight="700" fill="#1e4a41">境界値問題が一行で解ける</text>
+  <text x="250" y="188" font-size="6.6" fill="#1e4a41">弱い意味の解を探す</text>
+  <text x="250" y="200" font-size="6.4" fill="#5a4520">勾配の内積が、そのまま内積になる</text>
+  <text x="250" y="212" font-size="6.4" fill="#5a4520">右辺は有界線形汎関数になる</text>
+  <text x="250" y="224" font-size="6.6" fill="#8c2f1e">リースの表現定理で一意存在</text>
+  <text x="250" y="241" font-size="6.4" fill="#1e4a41">弱い解は自動的になめらかになる</text>
+  <text x="250" y="253" font-size="6.4" fill="#1e4a41">——楕円型の正則性</text>
+  <text x="250" y="270" font-size="6.4" fill="#6b2a48">埋め込みがコンパクトだから</text>
+  <text x="250" y="281" font-size="6.2" fill="#6b2a48">固有値は離散になる（第76章へ戻る）</text>
+</svg>
+<figcaption data-ch="88">ソボレフ空間は滑らかさの指数を実数に拡張し、埋め込み定理が滑らかさと可積分性の交換レートを与える。指数は拡大縮小の不変性から一意に決まり、境界値問題はヒルベルト空間の一行の議論に帰着する。</figcaption>
+</figure>
+
+<div class="star2">
+<h4>★★ 学部後半——トレース、積の評価、ベゾフ空間</h4>
+
+<p><strong>トレース定理。</strong><m>u\in H^s(\mathbb{R}^d)</m>（<m>s>1/2</m>）の超平面 <m>\{x_d=0\}</m> への制限は <m>H^{s-1/2}(\mathbb{R}^{d-1})</m> に属し、</p>
+<M>\|u(\cdot,0)\|_{H^{s-1/2}(\mathbb{R}^{d-1})} \le C\|u\|_{H^s(\mathbb{R}^d)}</M>
+<p><em>制限で滑らかさが半階だけ落ちる。</em>証明はフーリエ変換して <m>\xi_d</m> について積分するだけ：<m>\widehat{u(\cdot,0)}(\xi')=\frac{1}{2\pi}\int\hat u(\xi',\xi_d)d\xi_d</m> にコーシー–シュワルツを重みで分けて使う。<span class="yogo-hl">境界条件を課すことの意味が、この定理で初めて正確になる</span>——<m>H^1</m> の関数には境界値があり、それは <m>H^{1/2}</m> に属する。</p>
+
+<p><strong>積の評価。</strong><m>s>d/2</m> なら <m>H^s</m> は環で <m>\|uv\|_{H^s}\le C\|u\|_{H^s}\|v\|_{H^s}</m>。<em>一般には</em></p>
+<M>\|uv\|_{H^{s}} \le C\big(\|u\|_{L^\infty}\|v\|_{H^s} + \|u\|_{H^s}\|v\|_{L^\infty}\big) \qquad (s>0)</M>
+<p>（<strong>モーザー型の評価</strong>）。証明はリトルウッド–ペイリー分解（第86章★★）で周波数を分け、「高×低」「低×高」「高×高」の三つに分類する。<em>「高×高」の項が指数の制限を生む。</em><span class="yogo-hl">非線形偏微分方程式の局所適切性の証明は、ほぼすべてこの型の評価の積み上げである。</span></p>
+
+<p><strong>ベゾフ空間。</strong><m>H^s</m> は <m>L^2</m> を基礎にしているが、<m>L^p</m> を基礎にして周波数分解で定義するのが<em>ベゾフ空間</em> <m>B^s_{p,q}</m>：</p>
+<M>\|u\|_{B^s_{p,q}} = \Big(\sum_j 2^{jsq}\|\Delta_ju\|_{L^p}^q\Big)^{1/q}</M>
+<p><em><m>B^s_{2,2}=H^s</m>、<m>B^s_{\infty,\infty}</m> はヘルダー空間 <m>C^s</m>（<m>s</m> が非整数のとき）に一致する。</em>滑らかさ <m>s</m>、可積分性 <m>p</m>、周波数方向の集約 <m>q</m> という三つのパラメータで関数空間を組織する枠組みで、埋め込み関係がすべて明示的に書ける。</p>
+
+<p><strong>仮定を外すと。</strong><m>\mathbb{R}^d</m> を有界領域にすると、境界の滑らかさが定理の成否に影響する（延長定理が必要）。<em>領域が非常に不規則だと埋め込みが壊れる</em>——尖った角をもつ領域では、コンパクト性が失われることがある。<m>p=2</m> を外すとヒルベルト空間でなくなり、リースの表現定理が使えず、弱解の存在証明に単調作用素論や変分法が必要になる。</p>
+</div>
+
+<div class="star3">
+<h4>★★★ 大学院——臨界性と、ミレニアム問題</h4>
+
+<p><strong>拡大縮小が難易度を決める。</strong>非線形方程式 <m>i\partial_tu+\Delta u=|u|^{p-1}u</m> について、解の拡大縮小 <m>u_\lambda(x,t)=\lambda^{2/(p-1)}u(\lambda x,\lambda^2t)</m> を考える。<em>この変換で不変になるソボレフ指数 <m>s_c=\frac d2-\frac{2}{p-1}</m> を<strong>臨界指数</strong>という。</em></p>
+<p><m>s>s_c</m>（<em>劣臨界</em>）なら局所適切性が不動点定理で出る。<m>s=s_c</m>（<em>臨界</em>）では、時間の長さが振幅に依らなくなり、<span class="yogo-hl">解が有限時間で爆発するかどうかが振幅の大きさだけでは決まらない</span>。<m>s < s_c</m>（<em>超臨界</em>）では局所適切性すら一般には成り立たない（不適切性の例が構成されている）。</p>
+
+<p><strong>ナヴィエ–ストークスの臨界性。</strong>三次元非圧縮ナヴィエ–ストークス方程式は <m>\dot H^{1/2}</m> で臨界である。<em>ルレイの弱解は <m>L^\infty_tL^2_x\cap L^2_t\dot H^1_x</m> に属し、これは臨界より弱い</em>——だから一意性と滑らかさが出ない。<span class="yogo-hl">ミレニアム問題の核心は、この「弱解の空間と臨界空間のずれ」である。</span></p>
+<p><em>知られている部分的な結果</em>：（i）二次元では大域適切（ルレイ、1933年）。（ii）三次元でも初期値が小さければ大域適切。（iii）カファレリ–コーン–ニーレンバーグにより、特異集合のハウスドルフ次元は <m>1</m> 以下。（iv）エシャウリエ–セレギン–シュヴェルクによる、<m>L^\infty_tL^3_x</m> での正則性判定。<em>（iii）で再び次元論が現れる</em>——第42章の道具が、流体の特異点の大きさを測っている。</p>
+
+<p><strong>負の指数と繰り込み。</strong>確率偏微分方程式では解が <m>H^s</m>（<m>s < 0</m>）にしか入らないことが普通で、積が定義できない（第87章★★★）。<em>ホグの正則性構造は、<m>B^s_{\infty,\infty}</m> の代わりに「模型空間」を導入し、繰り込まれた積を定義する。</em><span class="yogo-hl">滑らかさの指数を負まで拡張したことの代償が、積の不可能性として現れ、その回避が新しい理論を生んだ。</span></p>
+
+<p><strong>幾何への展開。</strong>リーマン多様体上のソボレフ空間では、埋め込み定数が幾何（リッチ曲率、等周定数）に依存する。<em>最良定数を達成する関数の存在は、山辺問題（一定スカラー曲率計量の存在）と同値な変分問題になる。</em>オービン–シェーンによる解決は、臨界指数での集中コンパクト性の議論を使う。<em>また、グロモフの平均次元やアレクサンドロフ空間上のソボレフ理論は、滑らかさの概念そのものを距離空間へ拡張する</em>——<span class="yogo-hl">第34章で問うた「距離空間は何が特別なのか」が、解析の側から再び問われている。</span></p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li><m>H^s</m> が <m>s>t</m> のとき <m>H^t</m> に埋め込まれることを確かめよ。</li>
+<li><m>\sum_{|\alpha|\le k}|\xi^\alpha|^2\asymp\langle\xi\rangle^{2k}</m> を確かめよ。</li>
+<li>拡大縮小から、ガリアルド–ニーレンバーグ–ソボレフの指数を導け。</li>
+<li>デルタ関数が <m>H^s(\mathbb{R}^d)</m> に属するのはどの <m>s</m> か決定せよ。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li><ref t="thm-sobolev-umekomi"/>（1）を、コーシー–シュワルツを重みで分けて示せ。<span class="haiten">（30点）</span></li>
+<li><m>(H^s)^*\cong H^{-s}</m> を示せ。<span class="haiten">（30点）</span></li>
+<li><ref t="thm-sobolev-umekomi"/>（3）を <m>p=1</m> の場合に示せ。<span class="haiten">（40点）</span></li>
+<li>ディリクレ問題の弱解の一意存在を、リースの表現定理から示せ。<span class="haiten">（35点）</span></li>
+<li>レリッヒ–コンドラショフのコンパクト性を、周波数の低い部分と高い部分に分けて示せ。<span class="haiten">（45点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li><m>H^1(\mathbb{R}^2)\not\subset L^\infty</m> の反例を書き下せ。<span class="haiten">（45点）</span></li>
+<li>トレース定理を、フーリエ変換して <m>\xi_d</m> について積分することで示せ。<span class="haiten">（50点）</span></li>
+<li><m>s>d/2</m> のとき <m>H^s</m> が環であることを示せ。<span class="haiten">（45点）</span></li>
+<li>有界領域のラプラシアンの固有値が離散で無限大に発散することを示せ。<span class="haiten">（50点）</span></li>
+</ol>
+</div>
+</div>
+<nav class="chnav">
+<a class="prev" href="ch87.html">← 第87章　Schwartz空間と超関数</a>
+<a class="next" href="ch89.html">第89章　複素微分とCauchy–Riemannの方程式 →</a>
+</nav>
+</article>
+</main>
+<footer class="site">
+  <p>位相・解析大全　学部から大学院まで、三層で読む位相空間論と解析学</p>
+  <p class="small">本文・図版とも本書のために作成したものです。数式は MathJax でベクタ化して組んでいます。</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第50章 関数列——何が保存され、何が壊れるか｜位相・解析大全</title>
+<meta name="description" content="位相・解析大全　第50章　関数列——何が保存され、何が壊れるか">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;600&display=swap">
+<link rel="stylesheet" href="web.css">
+</head>
+<body>
+<header class="site">
+  <a class="site-title" href="index.html">位相・解析大全</a>
+  <nav class="site-nav">
+    <a href="index.html">目次</a>
+    <a href="isou-kaiseki-taizen.pdf">PDF版</a>
+  </nav>
+</header>
+<main>
+<article class="chapter">
+<p class="part-label">第VI部　実数と極限</p>
+<h1><span class="ch-num">第50章</span>関数列——何が保存され、何が壊れるか</h1>
+<nav class="chnav">
+<a class="prev" href="ch49.html">← 第49章　級数と収束判定</a>
+<a class="next" href="ch51.html">第51章　Riemann積分の限界 →</a>
+</nav>
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>関数列の極限で、何が保たれ何が壊れるのか。</li>
+<li>「極限と極限の交換」は、いつ許されるのか。</li>
+<li>第VI部で足りなくなったものは何か。</li>
+</ul>
+</div>
+
+<h3 id="s50-1">保存の表を作る</h3>
+
+<p>第19章で、位相的性質が部分空間・積・連続像で保たれるかを表にした。<em>同じことを、関数列の収束について行う。</em></p>
+
+<div class="rei" id="rei-hozon-hyo">
+<h4>各点収束で壊れるもの</h4>
+<p class="no-indent"><strong>連続性。</strong><m>f_n(x)=x^n</m> は <m>[0,1]</m> で不連続な関数に収束する（第47章）。</p>
+<p><strong>有界性。</strong><m>f_n = n\mathbf{1}_{(0,1/n)}</m> は各点で <m>0</m> に収束するが、各 <m>f_n</m> は最大値 <m>n</m> を取る。</p>
+<p><strong>積分。</strong>同じ例で <m>\int_0^1 f_n = 1</m> だが <m>\int_0^1 0 = 0</m>。</p>
+<p><strong>微分可能性。</strong><m>f_n(x) = \sqrt{x^2+1/n}</m> は <m>|x|</m> に一様収束する。<em>各 <m>f_n</m> は滑らかだが、極限は <m>0</m> で微分できない。</em></p>
+<p><span class="yogo-hl">一様収束でも微分可能性は保たれない。</span></p>
+</div>
+
+<div class="teiri" id="thm-hozon-matome">
+<h4>何が保たれるか</h4>
+<p class="no-indent"><m>f_n \to f</m> とする。</p>
+<p class="no-indent">（1）各点収束で保たれる——可測性（第54章）、ボレル可測性。<br>
+（2）一様収束で保たれる——連続性、一様連続性、有界性、有界区間上のリーマン可積分性と積分値。<br>
+（3）一様収束でも保たれない——微分可能性、無限区間上の積分値。<br>
+（4）導関数の一様収束を仮定すれば保たれる——微分可能性と導関数（第48章★★）。</p>
+</div>
+
+<h3 id="s50-2">極限の交換</h3>
+
+<p>関数列の問題は、ほとんどすべて<em>「二つの極限を交換してよいか」</em>という形に書ける。</p>
+
+<div class="chui">
+<h4>交換の四つの場面</h4>
+<p class="no-indent"><strong>連続性</strong>　<m>\lim_{x\to a}\lim_n f_n(x) = \lim_n \lim_{x\to a} f_n(x)</m>。</p>
+<p><strong>積分</strong>　<m>\int \lim_n f_n = \lim_n \int f_n</m>。</p>
+<p><strong>微分</strong>　<m>\frac{d}{dx}\lim_n f_n = \lim_n \frac{d}{dx}f_n</m>。</p>
+<p><strong>二重級数</strong>　<m>\sum_m \sum_n a_{mn} = \sum_n \sum_m a_{mn}</m>。</p>
+<p><span class="yogo-hl">どれも「極限と極限を入れ替える」である。</span><em>一様収束は、この交換を許す十分条件の一つにすぎない。</em></p>
+</div>
+
+<div class="teiri" id="thm-nijukyokugen">
+<h4>二重極限の定理</h4>
+<p class="no-indent"><m>a_{mn}</m> について、各 <m>m</m> で <m>\lim_n a_{mn} = b_m</m>、各 <m>n</m> で <m>\lim_m a_{mn} = c_n</m> が存在するとする。<em>収束の一方が <m>m</m> について一様なら</em>、</p>
+<M>\lim_m b_m = \lim_n c_n</M>
+<p class="no-indent">が存在して一致する。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><m>\lim_n a_{mn}=b_m</m> が <m>m</m> について一様とする。<m>\varepsilon>0</m> に対し <m>|a_{mn}-b_m|<\varepsilon/3</m>（すべての <m>m</m>、<m>n \ge N</m>）なる <m>N</m> を取る。</p>
+<p><m>(b_m)</m> がコーシー列であること。<m>|b_m - b_{m'}| \le |b_m - a_{mN}| + |a_{mN}-a_{m'N}| + |a_{m'N}-b_{m'}|</m>。<em>両端は <m>\varepsilon/3</m> 以下、中央は <m>\lim_m a_{mN}=c_N</m> から <m>m,m'</m> を大きくすれば <m>\varepsilon/3</m> 以下。</em></p>
+<p>よって <m>b = \lim_m b_m</m> が存在する。同様の三分割で <m>\lim_n c_n = b</m> も出る。</p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent"><span class="yogo-hl">「一様」が要るのは、三分割の両端を添字によらず押さえるためである。</span><em>第47章の連続性の証明とまったく同じ構造である。</em></p>
+<p>一様性がないと結論は破れる。<m>a_{mn} = \frac{m}{m+n}</m> とすると <m>\lim_n a_{mn}=0</m>、<m>\lim_m a_{mn}=1</m>。<em>順序を変えると <m>0</m> と <m>1</m> になる。</em></p>
+</div>
+
+<h3 id="s50-3">一様収束では足りない場面</h3>
+
+<div class="hanrei" id="cex-ichiyou-tarinai">
+<h4>一様収束が強すぎる、弱すぎる</h4>
+<p class="no-indent"><strong>強すぎる例。</strong><m>f_n = \mathbf{1}_{[0,1/n]}</m> は <m>[0,1]</m> 上で各点収束するが一様収束しない。<em>それでも <m>\int f_n = 1/n \to 0 = \int 0</m> で、積分は交換できる。</em></p>
+<p><span class="yogo-hl">一様収束は、積分の交換には必要でない。</span></p>
+<p><strong>弱すぎる例。</strong><m>f_n = \frac{1}{n}\mathbf{1}_{[0,n]}</m> は <m>\mathbb{R}</m> 上で <m>0</m> に一様収束するが <m>\int f_n = 1</m>。</p>
+<p><em>一様収束は、無限区間での積分の交換には十分でない。</em><span class="yogo-hl">一様収束は、積分と極限の交換について必要でも十分でもない。</span></p>
+</div>
+
+<div class="chui">
+<h4>では何が正しい条件か</h4>
+<p class="no-indent">第55章の<strong>優収束定理</strong>がそれである。<em><m>f_n \to f</m> がほとんどいたるところ各点収束し、<m>|f_n| \le g</m>（<m>g</m> は可積分）なら <m>\int f_n \to \int f</m>。</em></p>
+<p>上の二例で確かめる。強すぎる例では <m>|f_n| \le 1</m>（<m>[0,1]</m> 上で可積分）なので、優収束定理が使えて交換できる。<em>弱すぎる例では、<m>f_n</m> を押さえる可積分関数がない</m>（<m>\sup_n f_n = 1/n</m> 上の階段で、積分が発散する）。</em></p>
+<p><span class="yogo-hl">「一様に近い」ではなく「一様に押さえられる」が正しい条件だった。</span>第VII部で測度を導入するのは、この定理に到達するためである。</p>
+</div>
+
+<figure id="fig50-1">
+<svg viewBox="0 0 470 270" width="470" height="270" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">同じ「1」が、三通りの逃げ方をする</text>
+
+  <rect x="14" y="26" width="442" height="112" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+
+  <text x="82" y="42" font-size="6.8" text-anchor="middle" font-weight="700" fill="#1f3b5c">背が伸びる</text>
+  <line x1="30" y1="112" x2="146" y2="112" stroke="#8a8a88" stroke-width="0.8"/>
+  <rect x="30" y="56" width="10" height="56" fill="#cfe0ee" stroke="#35618f" stroke-width="0.8"/>
+  <rect x="30" y="84" width="20" height="28" fill="none" stroke="#8aa8c4" stroke-width="0.7"/>
+  <rect x="30" y="98" width="40" height="14" fill="none" stroke="#b6c8d8" stroke-width="0.7"/>
+  <text x="82" y="126" font-size="6.2" text-anchor="middle" fill="#8c2f1e">各点では 0 に、積分は 1 のまま</text>
+
+  <text x="235" y="42" font-size="6.8" text-anchor="middle" font-weight="700" fill="#1f3b5c">横へ逃げる</text>
+  <line x1="166" y1="112" x2="304" y2="112" stroke="#8a8a88" stroke-width="0.8"/>
+  <rect x="170" y="80" width="26" height="32" fill="#cfe0ee" stroke="#35618f" stroke-width="0.8"/>
+  <rect x="216" y="80" width="26" height="32" fill="none" stroke="#8aa8c4" stroke-width="0.7"/>
+  <rect x="262" y="80" width="26" height="32" fill="none" stroke="#b6c8d8" stroke-width="0.7"/>
+  <text x="235" y="126" font-size="6.2" text-anchor="middle" fill="#8c2f1e">各点では 0 に、積分は 1 のまま</text>
+
+  <text x="388" y="42" font-size="6.8" text-anchor="middle" font-weight="700" fill="#1f3b5c">平らに広がる</text>
+  <line x1="320" y1="112" x2="440" y2="112" stroke="#8a8a88" stroke-width="0.8"/>
+  <rect x="324" y="64" width="24" height="48" fill="#cfe0ee" stroke="#35618f" stroke-width="0.8"/>
+  <rect x="324" y="88" width="48" height="24" fill="none" stroke="#8aa8c4" stroke-width="0.7"/>
+  <rect x="324" y="100" width="96" height="12" fill="none" stroke="#b6c8d8" stroke-width="0.7"/>
+  <text x="388" y="126" font-size="6.2" text-anchor="middle" fill="#8c2f1e">一様に 0 へ、積分は 1 のまま</text>
+
+  <rect x="14" y="148" width="442" height="46" rx="4" fill="#fdf6f4" stroke="#e0c3bd"/>
+  <text x="24" y="163" font-size="7" font-weight="700" fill="#8c2f1e">一様収束は、積分の交換について必要でも十分でもない</text>
+  <text x="24" y="178" font-size="6.6" fill="#6a6a68">左と中央は一様収束しないが、有界区間なら優収束定理で交換できる</text>
+  <text x="24" y="189" font-size="6.6" fill="#6a6a68">右は一様収束するが、押さえる可積分関数がないので交換できない</text>
+
+  <rect x="14" y="204" width="442" height="58" rx="4" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="24" y="219" font-size="7" font-weight="700" fill="#1e4a41">正しい条件は「一様に近い」ではなく「一様に押さえられる」</text>
+  <text x="24" y="234" font-size="6.6" fill="#1e4a41">優収束定理（第55章）　fₙ → f ほとんどいたるところ、かつ |fₙ| ≤ g（g 可積分）</text>
+  <text x="24" y="247" font-size="6.6" fill="#6a6a68">この定理に到達するために、第VII部で測度を構成する</text>
+  <text x="24" y="258" font-size="6.6" fill="#5a4520">第51章で、リーマン積分がなぜこの定理をもてないのかを見る</text>
+</svg>
+<figcaption data-ch="50">積分が極限と交換しない三つの型。背が伸びる、横へ逃げる、平らに広がる。一様収束が防げるのは最初の二つだけで、三番目は一様収束していても交換できない。</figcaption>
+</figure>
+
+<div class="lv2">
+<h4>一様収束より弱い収束</h4>
+<p>各点収束と一様収束のあいだに、いくつもの収束概念がある。<em>第VIII部以降で使うものを、ここで名前だけ挙げておく。</em></p>
+<p><strong>広義一様収束（コンパクト一様収束）。</strong>各コンパクト部分集合の上で一様収束すること。<em><m>f_n(x)=x^n</m> は <m>(-1,1)</m> で広義一様収束する。</em></p>
+<p>第89章以降の複素解析では、これが標準的な収束概念になる。<span class="yogo-hl">正則関数の列が広義一様収束すれば、極限も正則で、導関数も広義一様収束する</m>（ワイエルシュトラスの定理）。</span><em>実解析での「微分は保たれない」が、複素では逆転する。</em></p>
+<p><strong>平均収束。</strong><m>\int|f_n-f| \to 0</m>。第60章の <m>L^1</m> 収束である。</p>
+<p><m>f_n = n\mathbf{1}_{(0,1/n)}</m> は各点収束するが平均収束しない。逆に <m>f_n = \mathbf{1}_{[k/2^m,(k+1)/2^m]}</m> を並べた「動く窓」の列は、平均収束するが各点収束しない。<span class="yogo-hl">各点収束と平均収束は、どちらも他方を含まない。</span></p>
+<p><strong>測度収束。</strong>どの <m>\varepsilon>0</m> についても <m>\mu(\{|f_n-f|>\varepsilon\}) \to 0</m>。<em>平均収束すれば測度収束する。</em></p>
+<p>測度収束する列は、<em>ほとんどいたるところ収束する部分列をもつ</em>。動く窓の例で、実際に部分列を取れば各点収束する。</p>
+<p><strong>エゴロフの定理。</strong>有限測度の集合上で <m>f_n \to f</m> がほとんどいたるところ収束するなら、どの <m>\varepsilon>0</m> についても測度 <m>\varepsilon</m> 未満の集合を除けば一様収束する。</p>
+<p><span class="yogo-hl">「ほとんど一様収束」が、各点収束からほぼ無料で出る。</span><em>第54章で示す。</em>この定理が、各点収束と一様収束の距離を測っている。</p>
+<p><strong>まとめ。</strong>一様収束はもっとも強く、扱いやすいが、実際の解析では強すぎることが多い。<em>第VIII部で、各収束概念に対応する関数空間の位相を導入する。</em></p>
+</div>
+
+<div class="lv3">
+<h4>関数空間の位相と、第VI部の限界</h4>
+<p>第VI部で扱った収束は、すべて関数空間の位相として記述できる。<em>そう見ると、何が足りなかったかがはっきりする。</em></p>
+<p><strong>各点収束は積位相。</strong><m>\mathbb{R}^X = \prod_{x \in X}\mathbb{R}</m> の積位相での収束が、各点収束である。<span class="yogo-hl">第11章で「積位相は各座標の収束」と述べたことの、そのままの応用である。</span></p>
+<p>この位相は、<m>X</m> が非可算なら第一可算でない（第37章）。<em>だから点列では位相を記述できず、ネット（第12章）が要る。</em></p>
+<p><strong>一様収束はノルム位相。</strong><m>\|f\|_\infty = \sup_x|f(x)|</m> が定める距離での収束である。<em><m>X</m> がコンパクトなら <m>C(X)</m> はバナッハ空間（第63章）。</em></p>
+<p><strong>広義一様収束はコンパクト開位相。</strong>第95章で扱う。<em><m>X</m> が局所コンパクト <m>\sigma</m>-コンパクトなら、可算個の半ノルムで距離化できる。</em></p>
+<p><strong>足りなかったもの——完備性と、コンパクト性。</strong></p>
+<p>第VI部で作れたのは <m>C[a,b]</m> と、一様ノルムである。<em>この空間は完備だが、単位球がコンパクトでない。</em><span class="yogo-hl">無限次元ノルム空間では、閉単位球がコンパクトになることはない</span>（リースの補題、第63章）。</p>
+<p>したがって第46章の最大値の定理が、関数空間では使えない。<em>「最良近似が存在するか」「汎関数が最大値を取るか」という問いに、答えられない。</em></p>
+<p><strong>三つの解決。</strong>第VII部以降は、この壁を三方向から崩す。</p>
+<p>第一に、<em>測度と収束定理</em>（第VII部）。一様収束より弱い条件で極限が扱えるようにする。</p>
+<p>第二に、<em>弱位相</em>（第70章）。位相を弱くして、単位球をコンパクトにする（バナッハ–アラオグルの定理、第71章）。</p>
+<p>第三に、<em>同程度連続性</em>（第95章）。関数族に条件を課して、一様ノルムでコンパクトな集合を特徴づける（アスコリ–アルツェラの定理）。</p>
+<p><span class="yogo-hl">第VI部で見た「極限の交換ができない」という現象は、ここまでの道具では関数空間がコンパクトでないことの現れだった。</span>残る十一の部は、この一点をめぐって展開する。</p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li><m>f_n = n\mathbf{1}_{(0,1/n)}</m> の各点極限を求め、積分が交換しないことを確かめよ。</li>
+<li><m>a_{mn}=\frac{m}{m+n}</m> で二つの反復極限を計算し、一致しないことを示せ。</li>
+<li><m>f_n(x)=\sqrt{x^2+1/n}</m> が <m>|x|</m> に一様収束することを示せ。</li>
+<li><m>f_n(x)=x^n</m> が <m>(-1,1)</m> で広義一様収束することを示せ。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li><ref t="thm-nijukyokugen"/> の <m>\lim_n c_n = b</m> の部分を示せ。<span class="haiten">（25点）</span></li>
+<li>一様収束する連続関数列の極限について、<m>\lim_{x\to a}\lim_n f_n = \lim_n\lim_{x\to a}f_n</m> を <ref t="thm-nijukyokugen"/> から導け。<span class="haiten">（25点）</span></li>
+<li>各点収束するが平均収束しない列、平均収束するが各点収束しない列をそれぞれ作れ。<span class="haiten">（30点）</span></li>
+<li>広義一様収束が、ある距離による収束として書けることを、<m>X=\mathbb{R}</m> の場合に示せ。<span class="haiten">（30点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li><m>C[0,1]</m> の閉単位球がコンパクトでないことを、具体的な点列で示せ。<span class="haiten">（30点）</span></li>
+<li>各点収束の位相が、<m>X</m> 非可算のとき第一可算でないことを示せ（第37章）。<span class="haiten">（35点）</span></li>
+<li>第VI部で扱った四つの「極限の交換」を、どれも <ref t="thm-nijukyokugen"/> の形に書き直せ。<span class="haiten">（40点）</span></li>
+</ol>
+</div>
+</div>
+<nav class="chnav">
+<a class="prev" href="ch49.html">← 第49章　級数と収束判定</a>
+<a class="next" href="ch51.html">第51章　Riemann積分の限界 →</a>
+</nav>
+</article>
+</main>
+<footer class="site">
+  <p>位相・解析大全　学部から大学院まで、三層で読む位相空間論と解析学</p>
+  <p class="small">本文・図版とも本書のために作成したものです。数式は MathJax でベクタ化して組んでいます。</p>
+</footer>
+</body>
+</html>

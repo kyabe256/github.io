@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第17章 分離公理の階層と、逆が成り立たない反例｜位相・解析大全</title>
+<meta name="description" content="位相・解析大全　第17章　分離公理の階層と、逆が成り立たない反例">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;600&display=swap">
+<link rel="stylesheet" href="web.css">
+</head>
+<body>
+<header class="site">
+  <a class="site-title" href="index.html">位相・解析大全</a>
+  <nav class="site-nav">
+    <a href="index.html">目次</a>
+    <a href="isou-kaiseki-taizen.pdf">PDF版</a>
+  </nav>
+</header>
+<main>
+<article class="chapter">
+<p class="part-label">第II部　分離公理</p>
+<h1><span class="ch-num">第17章</span>分離公理の階層と、逆が成り立たない反例</h1>
+<nav class="chnav">
+<a class="prev" href="ch16.html">← 第16章　Tietzeの拡張定理</a>
+<a class="next" href="ch18.html">第18章　完全正規性と遺伝性 →</a>
+</nav>
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>分離公理の階層は、どこもかしこも真に狭まっているのか。</li>
+<li>反例を作るのに、いつも同じ道具が使われるのはなぜか。</li>
+<li>階層のどこに、集合論が顔を出すのか。</li>
+</ul>
+</div>
+
+<h3 id="s17-1">階層の全体</h3>
+
+<p>ここまでに導入した条件を並べる。<m>T_1</m> をつけた形で書く。</p>
+
+<M>T_1 \impliedby T_2 \impliedby T_3 \impliedby T_{3\frac12} \impliedby T_4 \impliedby T_5 \impliedby \text{距離化可能}</M>
+
+<p>ここで <m>T_5</m> は第18章で扱う完全正規性である。<span class="yogo-hl">この章の仕事は、六つの含意のすべてについて逆が成り立たないことを、具体的な空間で示すことである。</span></p>
+
+<p><em>反例は思いつきで作るものではない。</em>使われる道具は限られている。</p>
+
+<div class="rei" id="rei-dogu">
+<h4>反例を作る五つの道具</h4>
+<p class="no-indent"><strong>（1）補有限位相・補可算位相。</strong>開集合を大きくしすぎて、二つの開集合が必ず交わるようにする。<m>T_1</m> は保つが <m>T_2</m> を壊す。</p>
+<p><strong>（2）位相を強める。</strong>もとの空間に開集合を付け加える。第14章の「有理数を抜いた直線」がこれで、ハウスドルフ性は保たれるが正則性が壊れる。<em>強めると分離しやすくなるはずなのに壊れるのは、閉集合も増えるからである。</em></p>
+<p><strong>（3）順序数の空間。</strong><m>[0,\omega_1]</m> と <m>[0,\omega]</m> の積から一点を抜く。<span class="yogo-hl">共終数の非対称 <m>\mathrm{cf}(\omega_1) > \omega</m> が、分離不能性を生む。</span></p>
+<p><strong>（4）半開区間で位相を作る。</strong>ゾルゲンフライ直線とその積。可算性と正規性の関係を壊す。</p>
+<p><strong>（5）非可算な離散集合を稠密空間に埋める。</strong>ヨーンズの補題（第15章★★★）が濃度の不等式を強い、正規性を壊す。</p>
+</div>
+
+<h3 id="s17-2">各段の反例</h3>
+
+<div class="hanrei" id="cex-kaiso-ichiran">
+<h4>六つの反例</h4>
+<p class="no-indent"><strong><m>T_1</m> だが <m>T_2</m> でない。</strong>無限集合上の補有限位相（第13章）。</p>
+<p><strong><m>T_2</m> だが <m>T_3</m> でない。</strong><m>\mathbb{R}</m> 上で、通常の開集合と <m>\mathbb{Q}</m> の補集合を合わせて生成した位相（第14章）。<em>稠密な閉集合があると点と閉集合が分離できない。</em></p>
+<p><strong><m>T_3</m> だが <m>T_{3\frac12}</m> でない。</strong>ティコノフの一九三〇年の例、あるいはヘヴィットの「連続関数が定数しかない正則空間」（第14章★★★）。<span class="yogo-hl">開集合を細かくしても、連続関数が増えるとは限らない。</span></p>
+<p><strong><m>T_{3\frac12}</m> だが <m>T_4</m> でない。</strong>ゾルゲンフライ平面 <m>\mathbb{R}_\ell \times \mathbb{R}_\ell</m>。完全正則性は積に保たれるのでチコノフだが、反対角線が濃度 <m>2^{\aleph_0}</m> の離散閉集合になり、ヨーンズの補題に反する。</p>
+<p><em>もう一つ、チコノフ板 <m>T_\infty = ([0,\omega_1] \times [0,\omega]) \setminus \{(\omega_1,\omega)\}</m> もこの段の反例である。</em>コンパクトハウスドルフ空間の部分空間だからチコノフであり、上辺と右辺が分離できないので正規でない。</p>
+<p><strong><m>T_4</m> だが <m>T_5</m> でない。</strong>チコノフ板 <m>T = [0,\omega_1] \times [0,\omega]</m> 自身。コンパクトハウスドルフだから正規だが、<em>開部分空間 <m>T_\infty</m> が正規でないので遺伝的正規ではない。</em></p>
+<p><strong><m>T_5</m> だが距離化できない。</strong>ゾルゲンフライ直線 <m>\mathbb{R}_\ell</m>。完全正規だが第二可算でないので距離化できない（第7章・第31章）。</p>
+</div>
+
+<figure id="fig17-1">
+<svg viewBox="0 0 470 280" width="470" height="280" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <defs>
+    <marker id="a17" markerWidth="8" markerHeight="8" refX="7" refY="2.6" orient="auto"><path d="M0,0 L7,2.6 L0,5.2 z" fill="#35618f"/></marker>
+  </defs>
+
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">分離公理の階層と、各段を分ける反例</text>
+
+  <rect x="14" y="26" width="442" height="162" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+
+  <rect x="26" y="40" width="58" height="22" rx="3" fill="#dce7f0" stroke="#35618f"/>
+  <text x="55" y="55" font-size="6.8" text-anchor="middle" fill="#1f3b5c">距離化可能</text>
+  <rect x="26" y="70" width="58" height="22" rx="3" fill="#dce7f0" stroke="#35618f"/>
+  <text x="55" y="85" font-size="6.8" text-anchor="middle" fill="#1f3b5c">T₅ 完全正規</text>
+  <rect x="26" y="100" width="58" height="22" rx="3" fill="#dce7f0" stroke="#35618f"/>
+  <text x="55" y="115" font-size="6.8" text-anchor="middle" fill="#1f3b5c">T₄ 正規</text>
+  <rect x="26" y="130" width="58" height="22" rx="3" fill="#dce7f0" stroke="#35618f"/>
+  <text x="55" y="145" font-size="6.8" text-anchor="middle" fill="#1f3b5c">T₃½ チコノフ</text>
+  <rect x="26" y="160" width="58" height="22" rx="3" fill="#dce7f0" stroke="#35618f"/>
+  <text x="55" y="175" font-size="6.8" text-anchor="middle" fill="#1f3b5c">T₃ 正則</text>
+
+  <path d="M94,51 L94,178" stroke="#35618f" stroke-width="0.8" stroke-dasharray="2,2"/>
+  <path d="M94,62 L94,68" stroke="#35618f" stroke-width="1.2" marker-end="url(#a17)"/>
+
+  <text x="106" y="55" font-size="6.6" fill="#8c2f1e">↑ 逆は偽</text>
+  <text x="172" y="55" font-size="6.6" fill="#1f3b5c">ゾルゲンフライ直線　完全正規だが第二可算でない</text>
+  <text x="106" y="85" font-size="6.6" fill="#8c2f1e">↑ 逆は偽</text>
+  <text x="172" y="85" font-size="6.6" fill="#1f3b5c">チコノフ板 [0,ω₁]×[0,ω]　正規だが遺伝的でない</text>
+  <text x="106" y="115" font-size="6.6" fill="#8c2f1e">↑ 逆は偽</text>
+  <text x="172" y="115" font-size="6.6" fill="#1f3b5c">ゾルゲンフライ平面　反対角線がヨーンズの補題に反する</text>
+  <text x="106" y="145" font-size="6.6" fill="#8c2f1e">↑ 逆は偽</text>
+  <text x="172" y="145" font-size="6.6" fill="#1f3b5c">ティコノフ／ヘヴィットの例　関数が作れない</text>
+  <text x="106" y="175" font-size="6.6" fill="#8c2f1e">↑ 逆は偽</text>
+  <text x="172" y="175" font-size="6.6" fill="#1f3b5c">有理数を抜いた直線　稠密な閉集合が邪魔をする</text>
+
+  <rect x="14" y="198" width="216" height="74" rx="4" fill="#fdf6f4" stroke="#e0c3bd"/>
+  <text x="24" y="213" font-size="7.6" font-weight="700" fill="#8c2f1e">なぜ同じ空間が繰り返し出るか</text>
+  <text x="24" y="229" font-size="6.8" fill="#8c2f1e">チコノフ板　共終数の非対称</text>
+  <text x="24" y="241" font-size="6.8" fill="#8c2f1e">ゾルゲンフライ　可算性の不整合</text>
+  <text x="24" y="253" font-size="6.8" fill="#8c2f1e">補有限位相　開集合の作りすぎ</text>
+  <text x="24" y="266" font-size="6.6" fill="#6a6a68">三つで階層のほとんどの段が分けられる</text>
+
+  <rect x="240" y="198" width="216" height="74" rx="4" fill="#f4f1ea" stroke="#8a6b2c"/>
+  <text x="250" y="213" font-size="7.6" font-weight="700" fill="#5a4520">操作に対する振る舞い</text>
+  <text x="250" y="229" font-size="6.8" fill="#5a4520">T₀〜T₃½　部分 ○　積 ○　商 ×</text>
+  <text x="250" y="241" font-size="6.8" fill="#8c2f1e">T₄　　　部分 ×　積 ×　商 ×</text>
+  <text x="250" y="253" font-size="6.8" fill="#5a4520">T₅　　　部分 ○　積 ×　商 ×</text>
+  <text x="250" y="266" font-size="6.6" fill="#6a6a68">正規性だけが遺伝しない——第18章の出発点</text>
+</svg>
+<figcaption data-ch="17">六つの含意のいずれも逆が成り立たない。反例に使われる空間は限られており、共終数・可算性・開集合の作りすぎという三つの仕掛けに分類できる。</figcaption>
+</figure>
+
+<h3 id="s17-3">チコノフ板を読む</h3>
+
+<p>反例のなかでもチコノフ板は、二つの段を同時に分ける。<em>その仕組みを丁寧に見ておく。</em></p>
+
+<div class="teiri" id="thm-tychonoff-ita">
+<h4></h4>
+<p class="no-indent"><m>T = [0,\omega_1] \times [0,\omega]</m>（順序位相の積）とし、<m>t_\infty = (\omega_1, \omega)</m> とする。<m>T</m> はコンパクトハウスドルフだから正規であるが、<m>T_\infty = T \setminus \{t_\infty\}</m> は正規でない。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><m>T</m> の正規性は、コンパクトハウスドルフ空間が正規であること（第20章）による。<m>T_\infty</m> について示す。</p>
+<p>二つの閉集合を取る。</p>
+<M>A = \{\omega_1\} \times [0,\omega), \qquad B = [0,\omega_1) \times \{\omega\}</M>
+<p class="no-indent">どちらも <m>T_\infty</m> で閉であり、交わらない（交わるのは抜いた点 <m>t_\infty</m> だけだった）。</p>
+<p><m>U \supseteq A</m> を開集合とする。各 <m>n < \omega</m> について <m>(\omega_1, n) \in U</m> なので、<em>順序位相の基本近傍より、ある <m>\alpha_n < \omega_1</m> があって <m>(\alpha_n, \omega_1] \times \{n\} \subseteq U</m>。</em></p>
+<p>ここで <m>\alpha = \sup_{n < \omega} \alpha_n</m> と置く。<span class="yogo-hl"><m>\mathrm{cf}(\omega_1) = \omega_1 > \omega</m> なので、可算個の上限は <m>\omega_1</m> に達しない。</span>すなわち <m>\alpha < \omega_1</m>。</p>
+<p>したがって <m>\beta \in (\alpha, \omega_1)</m> を取れば、<em>すべての <m>n</m> について <m>(\beta, n) \in U</m>。</em>一方 <m>(\beta, \omega) \in B</m> であり、<m>B</m> を含む開集合 <m>V</m> はある <m>m</m> について <m>\{\beta\} \times (m, \omega] \subseteq V</m> を含む。すると <m>(\beta, m+1) \in U \cap V</m>。</p>
+<p><em>よって <m>A</m> と <m>B</m> を分離する開集合は存在しない。</em></p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">この証明の核心は一行に尽きる。<span class="yogo-hl">可算個の <m>\alpha_n</m> の上限が <m>\omega_1</m> に届かない。</span><em>第4章の★★で述べた共終数の概念が、位相空間の分離不能性としてそのまま現れている。</em>第36章のスーリン問題、第37章の積の基数不変量でも、同じ構造が繰り返し登場する。</p>
+</div>
+
+<div class="lv2">
+<h4>階層をどう覚えるか</h4>
+<p>公理の名前と番号を暗記するのは無益である。<em>それぞれが何を分離するかで覚えるとよい。</em></p>
+<p><strong>分離する対象で分類する。</strong></p>
+<M>\begin{array}{ll}
+T_0, T_1, T_2 & \text{点と点} \\
+T_3, T_{3\frac12} & \text{点と閉集合} \\
+T_4 & \text{閉集合と閉集合} \\
+T_5 & \text{分離された集合どうし}
+\end{array}</M>
+<p><strong>分離の手段で分類する。</strong>開集合で分離するのが <m>T_0</m> から <m>T_3</m> と <m>T_4</m>、連続関数で分離するのが <m>T_{3\frac12}</m>。ただし第15章で見たとおり、<span class="yogo-hl"><m>T_4</m> では開集合による分離と関数による分離が一致する。</span></p>
+<p><strong>階層が単調でない一点。</strong><m>T_4 \Rightarrow T_{3\frac12}</m> はウリゾーンの補題を要した（第15章の系）。<em>これは自明な含意ではない。</em>もし補題がなければ、<m>T_4</m> と <m>T_{3\frac12}</m> は比較できない条件だったはずである。</p>
+<p><strong>なぜ <m>T_{3\frac12}</m> という半端な番号か。</strong>歴史的な事情である。ティコノフが完全正則性を導入したのは、正則性と正規性のあいだに位置する条件が必要だと分かった後だった。<em>すでに <m>T_3</m> と <m>T_4</m> が使われていたので、あいだに入れる番号がなかった。</em></p>
+<p><strong>実務上どこを使うか。</strong>本書の後半で実際に仮定されるのは、ほとんどの場合次の三つだけである。</p>
+<p><em>ハウスドルフ</em>——極限の一意性が要るとき。ほぼすべての場面。</p>
+<p><em>コンパクトハウスドルフ</em>——第20章以降。この条件は正規性を含み、しかも安定である（積で保たれる）。<span class="yogo-hl">実用上、分離公理の階層を気にせずに済む最良の場所である。</span></p>
+<p><em>距離化可能</em>——第VI部以降の解析学。ここでは階層の話は終わっていて、距離があるものとして進む。</p>
+<p>したがって第II部の階層は、<em>「どの条件が本質的だったか」を後から振り返るための地図</em>として読むのがよい。第97章でこの地図を再掲する。</p>
+</div>
+
+<div class="lv3">
+<h4>反例の存在が公理に依存する場合</h4>
+<p>ここまでの反例は、集合論の公理系のなかで構成できた。<em>ところが、存在が公理に依存する反例もある。</em></p>
+<p><strong>ドウカー空間。</strong>正規だが可算パラコンパクトでない空間をドウカー <span class="orig">Dowker</span> 空間という。同値な言い方として、<m>X</m> が正規だが <m>X \times [0,1]</m> が正規でない空間である。</p>
+<p>ドウカーは一九五一年にこの概念を導入したが、<span class="yogo-hl">例が存在するかどうかは二十年以上わからなかった。</span>一九七一年にルドゥイン <span class="orig">Rudin</span> が、選択公理だけを使って一つを構成した。ただしその空間は濃度 <m>(\aleph_\omega)^{\aleph_0}</m> という巨大なものだった。</p>
+<p><em>小さいドウカー空間が存在するかは、いまも完全には決着していない。</em>基数 <m>\aleph_1</m> のドウカー空間の存在は、通常の公理系から証明も反証もできない。</p>
+<p><strong>正規ムーア空間予想。</strong>より有名な問題がある。ムーア空間とは、ある種の可算な基底の列をもつ正則空間である。<em>「正規なムーア空間は距離化可能か」</em>という問いを正規ムーア空間予想という。</p>
+<p>答えは公理に依存する。連続体仮説を仮定すると反例が構成でき、<span class="yogo-hl">一方、ある大きい基数の存在を仮定すると予想が成り立つモデルが作れる。</span>フリードマン <span class="orig">Fleissner</span> とニッケリ <span class="orig">Nyikos</span> の一連の仕事で明らかになった。</p>
+<p>とくに注目すべきは、<em>予想が成り立つことを示すには大きい基数が必要だ</em>という点である。純粋に位相的に見える問いが、集合論のもっとも強い仮定に結びついている。</p>
+<p><strong>何が起きているのか。</strong>第4章の★★★で述べたとおり、<span class="yogo-hl">未解決と独立は別である。</span>正規ムーア空間予想は未解決ではない——独立であることが決着している。</p>
+<p>そして独立性が生じる場所には共通の特徴がある。<em>可算性と非可算性の境界で、対角線的な構成が必要になる場面である。</em>チコノフ板の証明で <m>\mathrm{cf}(\omega_1) > \omega</m> を使ったのと同じ場所に、集合論が入り込む。</p>
+<p><strong>本書の扱い。</strong>第36章のスーリン問題で、独立性を正面から扱う。第42章の次元論の反例でも、構成に集合論的な仮定が要る例に触れる。<em>それ以外の場所では、通常の公理系のなかで構成できる反例だけを使う。</em></p>
+<p>分離公理の階層に限れば、<span class="yogo-hl">第II部で挙げた六つの反例はすべて公理系のなかで構成できる。</span>階層が真に狭まっていることは、独立な命題ではない。</p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li><m>T_1</m> から <m>T_5</m> までの各段が「何と何を分離するか」を表にせよ。</li>
+<li>チコノフ板 <m>T</m> がコンパクトであることを認めて、正規であることを述べよ。</li>
+<li>ゾルゲンフライ平面の反対角線が離散閉集合であることを確かめよ。</li>
+<li>階層のうち、遺伝的なものをすべて挙げよ。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li><ref t="thm-tychonoff-ita"/> の証明を、共終数を使う箇所を明示して書き直せ。<span class="haiten">（25点）</span></li>
+<li>ゾルゲンフライ直線が正規であることを示せ。<span class="haiten">（25点）</span></li>
+<li><m>T_4 \Rightarrow T_{3\frac12}</m> が、ウリゾーンの補題なしには自明でないことを説明せよ。<span class="haiten">（15点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li>ゾルゲンフライ平面が正規でないことを、ヨーンズの補題を用いて完全に示せ。<span class="haiten">（35点）</span></li>
+<li>ドウカー空間の定義を述べ、「<m>X</m> が正規だが <m>X \times [0,1]</m> が正規でない」という条件と同値であることの意味を説明せよ。<span class="haiten">（30点）</span></li>
+</ol>
+</div>
+</div>
+<nav class="chnav">
+<a class="prev" href="ch16.html">← 第16章　Tietzeの拡張定理</a>
+<a class="next" href="ch18.html">第18章　完全正規性と遺伝性 →</a>
+</nav>
+</article>
+</main>
+<footer class="site">
+  <p>位相・解析大全　学部から大学院まで、三層で読む位相空間論と解析学</p>
+  <p class="small">本文・図版とも本書のために作成したものです。数式は MathJax でベクタ化して組んでいます。</p>
+</footer>
+</body>
+</html>

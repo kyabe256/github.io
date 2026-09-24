@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第45章 極限——ε-δ はなぜこの形か｜位相・解析大全</title>
+<meta name="description" content="位相・解析大全　第45章　極限——ε-δ はなぜこの形か">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;600&display=swap">
+<link rel="stylesheet" href="web.css">
+</head>
+<body>
+<header class="site">
+  <a class="site-title" href="index.html">位相・解析大全</a>
+  <nav class="site-nav">
+    <a href="index.html">目次</a>
+    <a href="isou-kaiseki-taizen.pdf">PDF版</a>
+  </nav>
+</header>
+<main>
+<article class="chapter">
+<p class="part-label">第VI部　実数と極限</p>
+<h1><span class="ch-num">第45章</span>極限——ε-δ はなぜこの形か</h1>
+<nav class="chnav">
+<a class="prev" href="ch44.html">← 第44章　上限・下限と単調列</a>
+<a class="next" href="ch46.html">第46章　連続関数——中間値と最大値 →</a>
+</nav>
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>なぜ極限の定義は、あのわかりにくい形をしているのか。</li>
+<li>量化子の順序を入れ替えると、何が変わるのか。</li>
+<li>位相の言葉（第8章）と、どこで同じでどこで違うのか。</li>
+</ul>
+</div>
+
+<h3 id="s45-1">「近づく」を有限の言葉で書く</h3>
+
+<p><m>x</m> が <m>a</m> に近づくとき <m>f(x)</m> が <m>L</m> に近づく——この文には「近づく」という動きの言葉が二回出てくる。<em>動きを避けて、静止した言葉で書き直したい。</em></p>
+
+<p>どうするか。<span class="yogo-hl">「どんなに厳しい精度を要求されても、それに応じた近さを用意できる」と言い換える。</span>精度を <m>\varepsilon</m>、近さを <m>\delta</m> と書けば、定義ができあがる。</p>
+
+<div class="teigi" id="def-kyokugen">
+<h4>関数の極限</h4>
+<p class="no-indent"><m>f</m> を <m>a</m> のある除外近傍で定義された関数とする。<m>\lim_{x \to a} f(x) = L</m> とは、</p>
+<M>\forall \varepsilon > 0\ \exists \delta > 0\ \forall x\ \big(0 < |x-a| < \delta \implies |f(x)-L| < \varepsilon\big)</M>
+<p class="no-indent">が成り立つことをいう。</p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">三つの量化子の順序が本質である。<em><m>\varepsilon</m> が先、<m>\delta</m> が後。</em><span class="yogo-hl"><m>\delta</m> は <m>\varepsilon</m> に依存してよいが、<m>x</m> には依存できない。</span>この依存関係が、次章以降の「一様」という語の正体になる。</p>
+<p><m>0 < |x-a|</m> と書くのは、<m>x = a</m> での値を問わないためである。<em>極限は、その点を除いた周りだけで決まる。</em></p>
+</div>
+
+<div class="teigi" id="def-suretsu-kyokugen">
+<h4>数列の極限</h4>
+<p class="no-indent"><m>\lim_n x_n = L</m> とは、</p>
+<M>\forall \varepsilon > 0\ \exists N \in \mathbb{N}\ \forall n \ge N\ \big(|x_n - L| < \varepsilon\big)</M>
+<p class="no-indent">が成り立つことをいう。</p>
+</div>
+
+<h3 id="s45-2">量化子を入れ替えると何が起きるか</h3>
+
+<div class="rei" id="rei-ryokashi">
+<h4>順序を変えた四つの文</h4>
+<p class="no-indent"><strong>（甲）</strong><m>\forall \varepsilon\ \exists \delta\ \forall x</m>。これが極限の定義である。</p>
+<p><strong>（乙）</strong><m>\exists \delta\ \forall \varepsilon\ \forall x</m>。<em>一つの <m>\delta</m> がすべての <m>\varepsilon</m> に効く</em>——これは <m>f</m> が <m>a</m> の近くで定数 <m>L</m> であることを意味する。</p>
+<p><strong>（丙）</strong><m>\forall \varepsilon\ \forall x\ \exists \delta</m>。<em><m>\delta</m> が <m>x</m> に依存してよい</em>——これは何も言っていない（各 <m>x</m> ごとに <m>\delta</m> を <m>|x-a|</m> より小さく取れば、含意の前提が偽になる）。</p>
+<p><strong>（丁）</strong><m>\exists \varepsilon\ \forall \delta\ \exists x</m>。これは「（甲）の否定」の形である。</p>
+<p><span class="yogo-hl">量化子の順序は、定義の内容そのものである。</span></p>
+</div>
+
+<div class="chui">
+<h4>否定の作り方</h4>
+<p class="no-indent"><m>\lim_{x\to a} f(x) = L</m> でないとは、</p>
+<M>\exists \varepsilon > 0\ \forall \delta > 0\ \exists x\ \big(0 < |x-a| < \delta \ \text{かつ}\ |f(x)-L| \ge \varepsilon\big)</M>
+<p class="no-indent">である。<em><m>\forall</m> と <m>\exists</m> が入れ替わり、含意が「前提かつ結論の否定」になる。</em><span class="yogo-hl">第1章で述べた「否定は機械的に作れる」が、ここで実際に効く。</span></p>
+</div>
+
+<h3 id="s45-3">位相の言葉との対応</h3>
+
+<div class="teiri" id="thm-eps-isou">
+<h4></h4>
+<p class="no-indent"><m>f \colon \mathbb{R} \to \mathbb{R}</m> について、次は同値である。</p>
+<p class="no-indent">（1）どの <m>a</m> でも <m>\lim_{x \to a} f(x) = f(a)</m>（<m>\varepsilon</m>-<m>\delta</m> の意味で連続）。<br>
+（2）どの開集合 <m>V</m> についても <m>f^{-1}(V)</m> が開（第8章の意味で連続）。<br>
+（3）どの点 <m>a</m> と <m>a</m> に収束する数列 <m>(x_n)</m> についても <m>f(x_n) \to f(a)</m>。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">（1）から（2）。<m>V</m> を開、<m>a \in f^{-1}(V)</m> とする。<m>B(f(a),\varepsilon) \subseteq V</m> なる <m>\varepsilon</m> を取り、対応する <m>\delta</m> を取れば <m>B(a,\delta) \subseteq f^{-1}(V)</m>。</p>
+<p>（2）から（3）。<m>x_n \to a</m>、<m>V</m> を <m>f(a)</m> の近傍とすると <m>f^{-1}(V)</m> は <m>a</m> の近傍なので、ある <m>N</m> から先 <m>x_n \in f^{-1}(V)</m>。</p>
+<p>（3）から（1）。対偶を示す。（1）が破れるなら、ある <m>\varepsilon</m> についてどの <m>\delta = 1/n</m> でも <m>|x_n - a| < 1/n</m> かつ <m>|f(x_n)-f(a)| \ge \varepsilon</m> なる <m>x_n</m> がある。<em>この <m>(x_n)</m> が（3）の反例になる。</em></p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">（3）から（1）の議論で、<em>各 <m>n</m> について <m>x_n</m> を「選んで」いる</em>。<span class="yogo-hl">可算選択公理を使っている。</span>第3章で述べたとおり、この程度の選択は解析のいたるところに現れる。</p>
+<p>そして（2）と（3）が同値なのは <m>\mathbb{R}</m> が第一可算だからである。<em>一般の位相空間では、点列では足りない</em>（第12章）。</p>
+</div>
+
+<h3 id="s45-4">極限の演算</h3>
+
+<div class="teiri" id="thm-kyokugen-enzan">
+<h4></h4>
+<p class="no-indent"><m>\lim_{x\to a} f(x) = L</m>、<m>\lim_{x\to a} g(x) = M</m> とすると、</p>
+<M>\lim_{x \to a}(f+g) = L+M, \qquad \lim_{x\to a}(fg) = LM, \qquad
+\lim_{x\to a} \frac{f}{g} = \frac{L}{M}\ (M \ne 0)</M>
+</div>
+
+<div class="shomei">
+<p class="no-indent">和。<m>\varepsilon > 0</m> に対し、<m>|f-L| < \varepsilon/2</m> となる <m>\delta_1</m> と <m>|g-M| < \varepsilon/2</m> となる <m>\delta_2</m> を取り、<m>\delta = \min(\delta_1,\delta_2)</m>。</p>
+<p>積。<m>|fg - LM| \le |f||g-M| + |M||f-L|</m> と分ける。<em><m>|f|</m> を押さえるために、まず <m>|f - L| < 1</m> となる <m>\delta_0</m> を取って <m>|f| < |L|+1</m> としておく。</em><span class="yogo-hl">「先に粗く押さえてから、細かく詰める」——積の評価はつねにこの形になる。</span></p>
+<p>商。<m>|1/g - 1/M| = |g-M|/(|g||M|)</m> で、<m>|g| > |M|/2</m> を先に確保する。</p>
+</div>
+
+<figure id="fig45-1">
+<svg viewBox="0 0 470 272" width="470" height="272" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">ε を先に決め、δ を後から作る</text>
+
+  <rect x="14" y="26" width="442" height="132" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+
+  <line x1="60" y1="140" x2="430" y2="140" stroke="#8a8a88" stroke-width="0.8"/>
+  <line x1="60" y1="140" x2="60" y2="42" stroke="#8a8a88" stroke-width="0.8"/>
+  <text x="436" y="146" font-size="6" fill="#6a6a68">x</text>
+  <text x="54" y="46" font-size="6" text-anchor="end" fill="#6a6a68">y</text>
+
+  <rect x="60" y="74" width="370" height="28" fill="#f6e9dc" opacity="0.65"/>
+  <line x1="60" y1="74" x2="430" y2="74" stroke="#a03b2e" stroke-width="0.9" stroke-dasharray="3,2.4"/>
+  <line x1="60" y1="102" x2="430" y2="102" stroke="#a03b2e" stroke-width="0.9" stroke-dasharray="3,2.4"/>
+  <text x="436" y="76" font-size="6" fill="#8c2f1e">L+ε</text>
+  <text x="436" y="106" font-size="6" fill="#8c2f1e">L−ε</text>
+  <line x1="60" y1="88" x2="430" y2="88" stroke="#a03b2e" stroke-width="0.7"/>
+  <text x="436" y="90" font-size="6" fill="#8c2f1e">L</text>
+
+  <rect x="212" y="42" width="56" height="98" fill="#dce7f0" opacity="0.6"/>
+  <line x1="212" y1="42" x2="212" y2="140" stroke="#35618f" stroke-width="0.9" stroke-dasharray="3,2.4"/>
+  <line x1="268" y1="42" x2="268" y2="140" stroke="#35618f" stroke-width="0.9" stroke-dasharray="3,2.4"/>
+  <text x="212" y="152" font-size="6" text-anchor="middle" fill="#1f3b5c">a−δ</text>
+  <text x="240" y="152" font-size="6" text-anchor="middle" fill="#1f3b5c">a</text>
+  <text x="268" y="152" font-size="6" text-anchor="middle" fill="#1f3b5c">a+δ</text>
+
+  <path d="M70,126 C 140,120 190,100 240,88 C 290,76 350,62 428,52" stroke="#1f3b5c" stroke-width="1.5" fill="none"/>
+
+  <text x="76" y="56" font-size="6.4" fill="#8c2f1e">まず横の帯（精度 ε）が与えられる</text>
+  <text x="76" y="66" font-size="6.4" fill="#1f3b5c">それに合う縦の帯（近さ δ）を作る</text>
+
+  <rect x="14" y="170" width="216" height="94" rx="4" fill="#fdf6f4" stroke="#e0c3bd"/>
+  <text x="24" y="185" font-size="7.6" font-weight="700" fill="#8c2f1e">量化子の順序が意味を決める</text>
+  <text x="24" y="202" font-size="6.8" fill="#8c2f1e">∀ε ∃δ ∀x　　極限（δ は ε に依存）</text>
+  <text x="24" y="215" font-size="6.8" fill="#6a6a68">∃δ ∀ε ∀x　　近くで定数</text>
+  <text x="24" y="228" font-size="6.8" fill="#6a6a68">∀ε ∀x ∃δ　　何も言っていない</text>
+  <text x="24" y="245" font-size="6.6" fill="#5a4520">δ が x にも依存してよいかどうかが、</text>
+  <text x="24" y="256" font-size="6.6" fill="#5a4520">第47章の「一様」の分かれ目になる</text>
+
+  <rect x="240" y="170" width="216" height="94" rx="4" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="250" y="185" font-size="7.6" font-weight="700" fill="#1e4a41">位相の言葉との対応</text>
+  <text x="250" y="202" font-size="6.8" fill="#1e4a41">ε の帯　→　終域の開近傍</text>
+  <text x="250" y="215" font-size="6.8" fill="#1e4a41">δ の帯　→　定義域の開近傍</text>
+  <text x="250" y="228" font-size="6.8" fill="#1e4a41">連続　→　開集合の逆像が開（第8章）</text>
+  <text x="250" y="245" font-size="6.6" fill="#6a6a68">点列で言い換えられるのは、実数が</text>
+  <text x="250" y="256" font-size="6.6" fill="#6a6a68">第一可算だから（第12章）</text>
+</svg>
+<figcaption data-ch="45">横の帯を先に与え、それに収まるような縦の帯を後から作る。これが ε-δ の構造である。帯は位相の言葉では開近傍にあたる。</figcaption>
+</figure>
+
+<div class="lv2">
+<h4>片側極限・無限大・そして定義の統一</h4>
+<p>極限には変種が多い。<em>だが形はすべて同じである。</em>「精度」と「近さ」を何で測るかだけが違う。</p>
+<p><strong>片側極限。</strong><m>\lim_{x \to a^+} f(x) = L</m> は <m>0 < x - a < \delta</m> と書き換えるだけ。<em><m>\lim_{x\to a}</m> が存在することと、両側の片側極限が存在して一致することは同値である。</em></p>
+<p><strong>無限大への極限。</strong><m>\lim_{x \to \infty} f(x) = L</m> は、<m>\delta</m> の代わりに <m>M</m> を使う。</p>
+<M>\forall \varepsilon > 0\ \exists M\ \forall x > M\ \big(|f(x)-L| < \varepsilon\big)</M>
+<p><strong>無限大に発散。</strong><m>\lim_{x\to a} f(x) = +\infty</m> は、<m>\varepsilon</m> の代わりに <m>K</m> を使う。</p>
+<M>\forall K\ \exists \delta > 0\ \forall x\ \big(0<|x-a|<\delta \implies f(x) > K\big)</M>
+<p><strong>統一。</strong>すべて「<m>a</m> の近傍系」と「<m>L</m> の近傍系」で書ける。<span class="yogo-hl"><m>\infty</m> を一点として付け加え、<m>\{\, x \mid x > M \,\}</m> をその近傍とすればよい。</span></p>
+<p>これが第23章のコンパクト化である。<em><m>\mathbb{R}</m> に二点 <m>\pm\infty</m> を足した <m>[-\infty,+\infty]</m> は、<m>[0,1]</m> と同相なコンパクト空間になる。</em>そこでは、六種類の極限がすべて一つの定義に統一される。</p>
+<p><strong>ネットで書くと。</strong>第12章のネットを使えば、<m>x \to a</m> も <m>n \to \infty</m> も同じ記号で書ける。<em>方向づけられた集合を「<m>a</m> の除外近傍を逆包含で順序づけたもの」と取ればよい。</em></p>
+<p><span class="yogo-hl">解析の「極限」は、位相の「ネットの収束」の特別な場合である。</span>ただし実数では第一可算性のおかげで、数列だけで足りる。</p>
+<p><strong>合成の極限。</strong>注意が要る。<m>\lim_{x\to a} g(x) = b</m> かつ <m>\lim_{y \to b} f(y) = L</m> でも、<m>\lim_{x\to a} f(g(x)) = L</m> とは限らない。<em><m>g</m> が <m>a</m> の近くで値 <m>b</m> を取ってしまうと、<m>f</m> の <m>b</m> での値が効いてくるからである。</em><m>f</m> が <m>b</m> で連続なら問題ない。</p>
+</div>
+
+<div class="lv3">
+<h4>無限小と、ε-δ が勝った理由</h4>
+<p><m>\varepsilon</m>-<m>\delta</m> は、一九世紀にコーシーとワイエルシュトラスによって整えられた。<em>それ以前は無限小で議論していた。</em>なぜ置き換わったのか。</p>
+<p><strong>無限小の困難。</strong>ライプニッツの <m>dx</m> は「<m>0</m> ではないが、どの正の数より小さい」量だった。<span class="yogo-hl">アルキメデス性（<ref t="prop-archimedes"/>）と矛盾する。</span><m>\mathbb{R}</m> のなかには、そんな数はない。</p>
+<p>計算は正しい答えを出したが、<em>「なぜ正しいか」を説明できなかった</em>。バークリーの批判（「消え去った量の亡霊」）はこの点を突いている。</p>
+<p><strong>ロビンソンの解決。</strong>一九六〇年、ロビンソンは超実数体 <m>{}^{*}\mathbb{R}</m>（第43章★★★）を使って無限小を正当化した。<em><m>{}^{*}\mathbb{R}</m> はアルキメデス的でない順序体で、<m>\mathbb{R}</m> を真に含む。</em></p>
+<p>そこでは <m>f</m> が <m>a</m> で連続であることが、<span class="yogo-hl"><m>x \approx a \implies f(x) \approx f(a)</m>（<m>\approx</m> は差が無限小）</span>と書ける。<em>量化子が三つから一つに減る。</em></p>
+<p><strong>それでも標準的にならなかった理由。</strong>三つある。</p>
+<p>第一に、<em>構成に超フィルターが要る</em>（第12章・第3章）。選択公理が本質的で、具体的な構成がない。</p>
+<p>第二に、<em>移行原理の適用範囲を見極めるのに、論理の訓練が要る</em>。「一階で書ける性質」という制限を扱い損ねると誤りが出る。</p>
+<p>第三に、<em>位相空間への一般化が自然でない</em>。<m>\varepsilon</m>-<m>\delta</m> は第8章の開集合の言葉にそのまま乗る。<span class="yogo-hl">距離のない空間でも使えるのは、こちらだけである。</span></p>
+<p><strong>構成的解析。</strong>もう一つの方向がある。<m>\varepsilon</m> に対する <m>\delta</m> を<em>具体的に構成する関数</em>として要求する立場である。<m>\delta(\varepsilon)</m> を計算できることを求めるので、排中律の使用が制限される。</p>
+<p>この立場では <m>\lim</m> の存在証明が、そのまま数値計算の手続きになる。<em>計算機による証明支援と相性がよく、近年また注目されている。</em></p>
+<p><span class="yogo-hl">同じ「極限」に、三つの定式化がある。</span>どれを採るかは、何を説明したいかで決まる。本書は <m>\varepsilon</m>-<m>\delta</m> を採る——位相へつながるからである。</p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li><m>\lim_{x\to 2}(3x-1) = 5</m> を定義に従って示せ（<m>\delta</m> を具体的に書くこと）。</li>
+<li><m>\lim_{x\to 0} \sin(1/x)</m> が存在しないことを示せ。</li>
+<li><m>\lim_n x_n = L</m> の否定を書き下せ。</li>
+<li><m>\lim_{x\to a} f(x) = L</m> かつ <m>\lim_{x\to a} f(x) = L'</m> なら <m>L = L'</m> を示せ。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li><ref t="thm-kyokugen-enzan"/> の積の場合を、細部まで書け。<span class="haiten">（20点）</span></li>
+<li><ref t="thm-eps-isou"/>（3）から（1）を、可算選択公理をどこで使うか明示して示せ。<span class="haiten">（25点）</span></li>
+<li><m>f(x) = x^2</m> が各点で連続であることを示し、<m>\delta</m> が <m>a</m> に依存することを確かめよ。<span class="haiten">（20点）</span></li>
+<li>合成の極限が成り立たない例を作り、<m>f</m> が <m>b</m> で連続なら成り立つことを示せ。<span class="haiten">（30点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li><m>[-\infty,+\infty]</m> に位相を入れ、六種類の極限が一つの定義に統一されることを示せ。<span class="haiten">（40点）</span></li>
+<li>ディリクレ関数（有理数で <m>1</m>、無理数で <m>0</m>）がどの点でも連続でないことを、定義に従って示せ。<span class="haiten">（25点）</span></li>
+<li><m>f(x) = x \cdot \mathbf{1}_{\mathbb{Q}}(x)</m> が <m>x=0</m> でのみ連続であることを示せ。<span class="haiten">（30点）</span></li>
+</ol>
+</div>
+</div>
+<nav class="chnav">
+<a class="prev" href="ch44.html">← 第44章　上限・下限と単調列</a>
+<a class="next" href="ch46.html">第46章　連続関数——中間値と最大値 →</a>
+</nav>
+</article>
+</main>
+<footer class="site">
+  <p>位相・解析大全　学部から大学院まで、三層で読む位相空間論と解析学</p>
+  <p class="small">本文・図版とも本書のために作成したものです。数式は MathJax でベクタ化して組んでいます。</p>
+</footer>
+</body>
+</html>

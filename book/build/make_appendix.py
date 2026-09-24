@@ -41,19 +41,60 @@ BOX_ID = re.compile(r'id="([^"]+)"')
 LEAD = re.compile(r'<p[^>]*>(.*?)</p>', re.S)
 
 
+ORIG = re.compile(r'<span class="orig">.*?</span>', re.S)
+
+
 def strip(html: str) -> str:
+    html = ORIG.sub("", html)
     return TAG.sub("", html).replace("\n", "").strip()
 
 
-MATH_KEEP = re.compile(r"<(/?)[mM]>")
+MATH_BLOCK = re.compile(r"<([mM])>(.*?)</\1>", re.S)
 
 
 def strip_keep_math(html: str) -> str:
-    """タグを落とすが、<m> だけは残す（組版で数式として処理させるため）。"""
-    html = MATH_KEEP.sub(lambda m: f"\x00{m.group(1)}m\x01", html)
-    html = TAG.sub("", html)
-    html = html.replace("\x00", "<").replace("\x01", ">")
-    return html.replace("\n", "").strip()
+    """タグを落とすが、<m> の中身はそのまま残す。
+
+    数式本文には生の < が入りうる（不等号）。タグ除去より先に
+    数式をまるごと退避しないと、そこから先が食われてしまう。
+    """
+    html = ORIG.sub("", html)
+    held: list[str] = []
+
+    def stash(mo: re.Match) -> str:
+        held.append(mo.group(2))
+        return f"\x00{len(held) - 1}\x01"
+
+    html = MATH_BLOCK.sub(stash, html)
+    html = TAG.sub("", html).replace("\n", "").strip()
+    for i, tex in enumerate(held):
+        html = html.replace(f"\x00{i}\x01", f"<m>{tex}</m>")
+    return html
+
+
+MATH_SPAN = re.compile(r"<m>.*?</m>", re.S)
+
+
+def clip_keep_math(text: str, budget: int) -> str:
+    """数式の途中で切らずに、見た目の長さで切り詰める。"""
+    out, used = [], 0
+    pos = 0
+    for mo in MATH_SPAN.finditer(text):
+        plain = text[pos:mo.start()]
+        if used + len(plain) >= budget:
+            return "".join(out) + plain[: budget - used] + "…"
+        out.append(plain)
+        used += len(plain)
+        inner = len(TAG.sub("", mo.group(0)))
+        if used + inner > budget:            # 数式ごと落とす
+            return "".join(out).rstrip() + "…"
+        out.append(mo.group(0))
+        used += inner
+        pos = mo.end()
+    tail = text[pos:]
+    if used + len(tail) > budget:
+        return "".join(out) + tail[: budget - used] + "…"
+    return "".join(out) + tail
 
 
 def chapters():
@@ -98,7 +139,7 @@ def build_index() -> str:
         # 節見出しの位置を記録し、用語ごとに直前の節を参照先にする
         anchors = [(m.start(), m.group(1)) for m in SECTION.finditer(html)]
         for m in TERM.finditer(html):
-            raw = strip(m.group(1) or m.group(2) or "")
+            raw = strip_keep_math(m.group(1) or m.group(2) or "")
             # 段落の切り出し（<strong>……。</strong>）は用語ではないので外す
             if raw.endswith(("。", "．", "？", "か", "、")) or "、" in raw:
                 continue
@@ -112,6 +153,9 @@ def build_index() -> str:
             if term.endswith(("ため", "とき", "こと", "もの", "場合", "理由",
                               "ように", "だけ", "まで", "ほど")):
                 continue
+            # 述語をふくむ言い回しは用語ではない（「の」「と」は語の一部でありうる）
+            if any(k in term for k in ("は", "が", "を", "へ", "より", "から")):
+                continue
             target = f'ch{ch["n"]:02d}'
             for pos, sid in anchors:
                 if pos < m.start():
@@ -123,8 +167,11 @@ def build_index() -> str:
                 entries[term].append((ch["n"], target))
 
     groups: dict[str, list[str]] = {}
+    def plain(t: str) -> str:
+        return TAG.sub("", t)
+
     for term, refs in entries.items():
-        groups.setdefault(head_key(term), []).append(term)
+        groups.setdefault(head_key(plain(term)), []).append(term)
 
     order = list(KANA_ORDER) + ["漢字ではじまる語", "欧字ではじまる語", "その他"]
     out = ['<h3 id="apG-honbun">索引</h3>',
@@ -133,7 +180,7 @@ def build_index() -> str:
            '組版時に自動で解決している（手入力ではない）。</p>',
            '<div class="sakuin">']
     for g in order:
-        terms = sorted(groups.get(g, []))
+        terms = sorted(groups.get(g, []), key=plain)
         if not terms:
             continue
         out.append(f'<p class="idx-group">{g}</p>')
@@ -163,8 +210,10 @@ def build_figure_index() -> str:
             if not path.exists():
                 continue
             for i, m in enumerate(FIGCAP.finditer(path.read_text(encoding="utf-8")), 1):
-                cap = strip(m.group(1))
-                cap = cap.split("。")[0] + "。" if "。" in cap else cap
+                cap = strip_keep_math(m.group(1))
+                if "。" in TAG.sub("", cap):
+                    cap = clip_keep_math(cap, TAG.sub("", cap).index("。") + 1)
+                    cap = cap.rstrip("…")
                 rows.append(
                     f'<li><a href="#fig{ch["n"]}-{i}">'
                     f'<span class="zu-num">図{ch["n"]}-{i}</span>　{cap}</a></li>')
@@ -200,10 +249,10 @@ def boxes(kind: str):
                 rest = html[m.end():]
                 body = LEAD.search(rest)
                 lead = strip_keep_math(body.group(1)) if body else ""
-                title = strip(m.group(3))
+                title = strip_keep_math(m.group(3))
                 if not title:
                     sm = re.search(r"<strong>(.*?)</strong>", rest[:900], re.S)
-                    title = strip(sm.group(1)).rstrip("。") if sm else ""
+                    title = strip_keep_math(sm.group(1)).rstrip("。") if sm else ""
                 yield {
                     "part": part, "ch": ch,
                     "num": f'{ch["n"]}.{n}',
@@ -257,9 +306,7 @@ def build_counterexamples() -> str:
             out.append(f'<p class="idx-group">{cur}　{b["part"]["title"]}</p>')
             out.append("<ul>")
         target = b["id"] or f'ch{b["ch"]["n"]:02d}'
-        lead = b["lead"]
-        if len(lead) > 90:
-            lead = lead[:88] + "…"
+        lead = clip_keep_math(b["lead"], 90)
         out.append(
             f'<li><a href="#{target}"><span class="idx-term">反例{b["num"]}　'
             f'{b["title"]}</span></a>'

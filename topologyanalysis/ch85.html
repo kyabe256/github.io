@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第85章 L2への拡張とPlancherelの定理｜位相・解析大全</title>
+<meta name="description" content="位相・解析大全　第85章　L2への拡張とPlancherelの定理">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;600&display=swap">
+<link rel="stylesheet" href="web.css">
+</head>
+<body>
+<header class="site">
+  <a class="site-title" href="index.html">位相・解析大全</a>
+  <nav class="site-nav">
+    <a href="index.html">目次</a>
+    <a href="isou-kaiseki-taizen.pdf">PDF版</a>
+  </nav>
+</header>
+<main>
+<article class="chapter">
+<p class="part-label">第XI部　フーリエ解析</p>
+<h1><span class="ch-num">第85章</span>L2への拡張とPlancherelの定理</h1>
+<nav class="chnav">
+<a class="prev" href="ch84.html">← 第84章　Fourier変換——L1の理論</a>
+<a class="next" href="ch86.html">第86章　畳み込みと近似単位元 →</a>
+</nav>
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>二乗可積分だが可積分でない関数の、フーリエ変換はどう定義するのか。</li>
+<li>なぜ <m>L^2</m> でだけ等距離になるのか。</li>
+<li>フーリエ変換を作用素と見ると、そのスペクトルは何か。</li>
+</ul>
+</div>
+
+<h3 id="s85-1">定義できない場所へ、延長する</h3>
+
+<p><m>f\in L^2(\mathbb{R})</m> でも <m>f\notin L^1(\mathbb{R})</m> ということが起こる。典型は <m>f(x)=1/(1+|x|)</m> で、二乗は可積分だが一乗は可積分でない。<em>この場合、<m>\int f(x)e^{-ix\xi}dx</m> という積分は絶対収束しない。</em></p>
+
+<p><span class="yogo-hl">それでもフーリエ変換を定義したい。方法は第63章以来おなじみの「稠密な部分空間で定義し、等距離性を使って延長する」である</span>（<ref t="thm-be-f-kanbi"/>）。<em>鍵になるのは、<m>L^1\cap L^2</m> の上で <m>\mathcal{F}</m> が（定数倍を除いて）等距離だという事実である。</em></p>
+
+<div class="teiri" id="thm-plancherel">
+<h4>プランシュレルの定理</h4>
+<p class="no-indent">（1）<m>f\in L^1(\mathbb{R}^d)\cap L^2(\mathbb{R}^d)</m> ならば <m>\hat f\in L^2(\mathbb{R}^d)</m> で</p>
+<M>\|\hat f\|_2^2 = (2\pi)^d\|f\|_2^2</M>
+<p class="no-indent">（2）<m>L^1\cap L^2</m> は <m>L^2</m> で稠密なので、<m>\mathcal{F}</m> は <m>L^2(\mathbb{R}^d)</m> 上の有界作用素にただ一通りに延長され、<m>(2\pi)^{-d/2}\mathcal{F}</m> はユニタリになる。<br>
+（3）<strong>パーセヴァルの等式</strong>：<m>f,g\in L^2</m> について</p>
+<M>\int_{\mathbb{R}^d} f\bar g\,dx = \frac{1}{(2\pi)^d}\int_{\mathbb{R}^d}\hat f\,\overline{\hat g}\,d\xi</M>
+<p class="no-indent">（4）延長は具体的に <m>\hat f=\lim_{R\to\infty}\int_{|x|\le R}f(x)e^{-ix\cdot\xi}dx</m>（<m>L^2</m> ノルムでの極限）で与えられる。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><strong>（1）の証明。</strong><m>g(x)=\overline{f(-x)}</m> と置き、<m>h=f*g</m> とする。<em><m>h</m> は有界連続で</em>（<m>L^2</m> の元どうしの畳み込みはコーシー–シュワルツから有界連続）、<m>h\in L^1</m>（<m>f,g\in L^1</m>）、そして</p>
+<M>h(0) = \int f(x)\overline{f(x)}\,dx = \|f\|_2^2, \qquad \hat h = \hat f\,\hat g = \hat f\,\overline{\hat f} = |\hat f|^2 \ \ge 0</M>
+<p class="no-indent">反転公式のガウス総和法（<ref t="thm-hanten"/>（2））を <m>h</m> の連続点 <m>x=0</m> で使うと</p>
+<M>\|f\|_2^2 = h(0) = \lim_{\varepsilon\downarrow0}\frac{1}{(2\pi)^d}\int|\hat f(\xi)|^2e^{-\varepsilon|\xi|^2}\,d\xi</M>
+<p class="no-indent"><em>被積分関数は非負で <m>\varepsilon\downarrow0</m> のとき単調に増えるから、単調収束定理（<ref t="thm-tancho-shusoku"/>）により右辺は <m>(2\pi)^{-d}\|\hat f\|_2^2</m>（有限）に等しい。</em><span class="yogo-hl">非負性が単調収束を許すところが、証明の急所である。</span></p>
+<p class="no-indent"><strong>（2）。</strong><m>C_c(\mathbb{R}^d)\subset L^1\cap L^2</m> は <m>L^2</m> で稠密（<ref t="thm-cc-chumitsu"/>）。等距離写像の稠密な部分空間からの延長は<ref t="thm-be-f-kanbi"/>による。全射性は、逆変換 <m>\mathcal{F}^{-1}</m> も同様に延長され、<m>L^1\cap L^2</m> 上で <m>\mathcal{F}^{-1}\mathcal{F}=\mathrm{id}</m> が反転公式から成り立つことによる。</p>
+<p class="no-indent">（3）は（1）と偏極恒等式、（4）は <m>f\chi_{|x|\le R}\to f</m> が <m>L^2</m> で成り立つことと、<m>\mathcal{F}</m> の <m>L^2</m> 連続性による。</p>
+</div>
+
+<div class="chui">
+<h4>どの意味で「変換」なのか</h4>
+<p class="no-indent"><m>f\in L^2\setminus L^1</m> のとき、<m>\hat f(\xi)</m> は<em>各点での値としては定義されていない</em>。定義されているのは <m>L^2</m> の元としての同値類だけである。<span class="yogo-hl">したがって「<m>\hat f</m> を <m>\xi_0</m> で評価する」という操作に意味はない。</span></p>
+<p><em>これは不便ではなく、正確さの代償である。</em>実際、（4）の切り落とし積分は各点では収束しないことがある——カールソンの定理（第83章）の連続版が、ほとんどいたるところの収束を保証するが、それは深い定理である。</p>
+<p>次章以降で、<m>L^2</m> でも足りない場面が出てくる（たとえば定数関数 <m>1</m> のフーリエ変換）。<em>そこで超関数（第87章）へ進む。</em></p>
+</div>
+
+<h3 id="s85-2">ユニタリ作用素としてのフーリエ変換</h3>
+
+<div class="teiri" id="thm-fourier-spectrum">
+<h4>フーリエ変換のスペクトル</h4>
+<p class="no-indent"><m>\mathcal{U}=(2\pi)^{-d/2}\mathcal{F}</m> を <m>L^2(\mathbb{R}^d)</m> 上のユニタリ作用素とする。</p>
+<p class="no-indent">（1）<m>\mathcal{U}^2f(x)=f(-x)</m>、したがって <m>\mathcal{U}^4=I</m>。<br>
+（2）<m>\sigma(\mathcal{U})=\{1,i,-1,-i\}</m> で、すべて固有値である。<br>
+（3）<m>d=1</m> のとき、固有関数はエルミート関数</p>
+<M>h_n(x) = \big(2^nn!\sqrt\pi\big)^{-1/2}\,(-1)^n e^{x^2/2}\frac{d^n}{dx^n}e^{-x^2} , \qquad \mathcal{U}h_n = (-i)^n h_n</M>
+<p class="no-indent">で与えられ、<m>\{h_n\}_{n\ge0}</m> は <m>L^2(\mathbb{R})</m> の正規直交基底をなす。したがって <m>L^2(\mathbb{R})</m> は四つの固有空間の直和に分かれ、各固有空間は無限次元である。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">（1）反転公式から <m>\mathcal{F}^{-1}g(x)=(2\pi)^{-d}\mathcal{F}g(-x)</m>、よって <m>\mathcal{F}^2f(x)=(2\pi)^df(-x)</m>。正規化すれば <m>\mathcal{U}^2f(x)=f(-x)</m> で、これを二回で恒等写像。</p>
+<p class="no-indent">（2）<m>\mathcal{U}^4=I</m> より、多項式 <m>z^4-1</m> が <m>\mathcal{U}</m> を零化する。<em>スペクトル写像定理（<ref t="thm-spectral-mapping"/>）から <m>\sigma(\mathcal{U})^4=\{1\}</m>、すなわち <m>\sigma(\mathcal{U})\subset\{1,i,-1,-i\}</m>。</em>各値が実際に固有値であることは（3）から従う。</p>
+<p class="no-indent">（3）<m>A=-\frac{d^2}{dx^2}+x^2</m>（調和振動子、<ref t="rei-hi-yukai-jirei"/>（4））と置くと、<ref t="prop-fourier-kihon-r"/>（6）の二つの式から <m>\mathcal{U}A=A\mathcal{U}</m> が分かる（微分と掛け算が入れ替わるので、その和は不変）。<em><m>A</m> の固有値 <m>2n+1</m> は単純なので、固有関数 <m>h_n</m> は <m>\mathcal{U}</m> の固有ベクトルでもある。</em>固有値が <m>(-i)^n</m> であることは、生成関数（母関数）を使うか、<m>h_0=e^{-x^2/2}</m> が <m>\mathcal{U}</m> の固有値 <m>1</m> の固有関数であること（<ref t="rei-fourier-henkan-rei"/>（3））と、昇降作用素 <m>a^\pm=\mp\frac{d}{dx}+x</m> が <m>\mathcal{U}</m> とどう交換するかから出る。</p>
+<p><span class="yogo-hl">フーリエ変換と調和振動子が可換だという一行が、エルミート関数の役割をすべて説明する。</span></p>
+</div>
+
+<div class="rei" id="rei-plancherel-ouyou">
+<h4>等距離性の使い方</h4>
+<p class="no-indent">（1）<strong>乗子作用素のノルム。</strong><m>T_mf=(m\hat f)^\vee</m> について、<m>L^2</m> では</p>
+<M>\|T_m\|_{L^2\to L^2} = \|m\|_{L^\infty}</M>
+<p class="no-indent"><em>プランシュレルで両辺を周波数側に移せば、掛け算作用素のノルムを計算するだけ</em>（<ref t="rei-jiko-kyoyaku-rei"/>（1））。<span class="yogo-hl">第77章のスペクトル定理の言葉で言えば、フーリエ変換は微分作用素の族を同時に対角化するユニタリ変換である。</span></p>
+<p>（2）<strong>ソボレフ空間の定義。</strong><m>s\in\mathbb{R}</m> について</p>
+<M>H^s(\mathbb{R}^d) = \Big\{ f : \|f\|_{H^s}^2 = \frac{1}{(2\pi)^d}\int(1+|\xi|^2)^s|\hat f(\xi)|^2\,d\xi < \infty \Big\}</M>
+<p class="no-indent"><em>プランシュレルがあるので、<m>s</m> が非負整数のときこれは通常の「<m>s</m> 階までの導関数が二乗可積分」と一致する。</em><span class="yogo-hl"><m>s</m> が実数でもよいというのが、フーリエによる定義の強みである</span>——「半階の微分」に意味が与えられる。第88章で使う。</p>
+<p>（3）<strong>不確定性の証明。</strong>ハイゼンベルクの不等式は、<m>[\partial_x, x]=I</m> という交換関係と、<m>\|\partial_xf\|_2=\|\xi\hat f\|_2/\sqrt{2\pi}</m>（プランシュレル）から出る。<em>第86章で詳しく見る。</em></p>
+<p>（4）<strong>シュレーディンガー方程式。</strong><m>i\partial_tu=-\Delta u</m> の解は <m>\hat u(\xi,t)=e^{-it|\xi|^2}\hat f(\xi)</m>。<em>各周波数の絶対値が変わらないので、<m>\|u(\cdot,t)\|_2=\|f\|_2</m>（確率の保存）。</em><span class="yogo-hl">これは第77章★★のストーンの定理そのもので、生成子が <m>-\Delta</m> である。</span>ただし位相が周波数ごとに違う速さで回るため、波束は分散する。</p>
+</div>
+
+<div class="hanrei" id="cex-l2-fourier">
+<h4><m>L^2</m> でも足りない場面</h4>
+<p class="no-indent">（1）<strong>定数関数。</strong><m>f\equiv1</m> は <m>L^1</m> にも <m>L^2</m> にも属さない。<em>ところが <m>\hat1=(2\pi)^d\delta</m> であるべきで、この式は超関数の意味でのみ正しい。</em></p>
+<p class="no-indent">（2）<strong>多項式・指数関数。</strong>同様に <m>L^p</m> のどれにも属さない。<em>物理で扱う平面波 <m>e^{ik\cdot x}</m> がまさにこれである。</em></p>
+<p class="no-indent">（3）<strong>測度。</strong>ディラック測度のフーリエ変換は定数関数で、<m>L^2</m> に属さない。<span class="yogo-hl">「関数」の枠のなかでは、変換が空間の外に出てしまう対象がある。</span></p>
+<p class="no-indent">（4）<strong><m>L^p</m>（<m>p>2</m>）では定義できない。</strong>ハウスドルフ–ヤングの不等式は <m>p\le2</m> でしか成り立たず、<em><m>p>2</m> ではフーリエ変換は関数として定義されない</em>（超関数としてなら定義される）。</p>
+<p>これらをすべて含む枠組みが、シュワルツ空間の双対としての緩増加超関数である（第87章）。<em>そこでは <m>\mathcal{F}</m> が空間全体の自己同型になり、例外がなくなる。</em></p>
+</div>
+
+<figure id="fig85-1">
+<svg viewBox="0 0 470 286" width="470" height="286" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">延長の筋と、四乗して恒等になる作用素</text>
+
+  <rect x="14" y="26" width="442" height="96" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+
+  <rect x="34" y="46" width="96" height="46" rx="4" fill="#dce7f0" stroke="#35618f" stroke-width="1.1"/>
+  <text x="82" y="64" font-size="6.6" text-anchor="middle" font-weight="700" fill="#1f3b5c">可積分かつ二乗可積分</text>
+  <text x="82" y="78" font-size="6" text-anchor="middle" fill="#6a6a68">積分で直接定義できる</text>
+
+  <rect x="186" y="46" width="96" height="46" rx="4" fill="#e6efe9" stroke="#2f6b5f" stroke-width="1.1"/>
+  <text x="234" y="64" font-size="6.6" text-anchor="middle" font-weight="700" fill="#1e4a41">二乗可積分</text>
+  <text x="234" y="78" font-size="6" text-anchor="middle" fill="#6a6a68">等距離性で延長する</text>
+
+  <rect x="338" y="46" width="96" height="46" rx="4" fill="#f4f1ea" stroke="#8a6b2c" stroke-width="1.1"/>
+  <text x="386" y="64" font-size="6.6" text-anchor="middle" font-weight="700" fill="#5a4520">緩増加超関数</text>
+  <text x="386" y="78" font-size="6" text-anchor="middle" fill="#6a6a68">双対で定義する（第87章）</text>
+
+  <line x1="130" y1="69" x2="184" y2="69" stroke="#2f6b5f" stroke-width="1.3" marker-end="url(#pl85)"/>
+  <line x1="282" y1="69" x2="336" y2="69" stroke="#8a6b2c" stroke-width="1.3" marker-end="url(#pl85b)"/>
+  <text x="157" y="42" font-size="5.6" text-anchor="middle" fill="#2f6b5f">稠密＋等距離</text>
+  <text x="309" y="42" font-size="5.6" text-anchor="middle" fill="#8a6b2c">双対をとる</text>
+  <text x="235" y="112" font-size="6.4" text-anchor="middle" fill="#8c2f1e">どの段でも「定義を延長する」ことしかしていない</text>
+
+  <defs>
+    <marker id="pl85" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 z" fill="#2f6b5f"/></marker>
+    <marker id="pl85b" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 z" fill="#8a6b2c"/></marker>
+  </defs>
+
+  <rect x="14" y="132" width="216" height="148" rx="4" fill="#f5f8fb" stroke="#35618f"/>
+  <text x="24" y="147" font-size="7.6" font-weight="700" fill="#1f3b5c">四回で元に戻る</text>
+  <circle cx="122" cy="205" r="42" fill="none" stroke="#c3d2e0" stroke-width="1"/>
+  <circle cx="164" cy="205" r="3" fill="#35618f"/>
+  <text x="178" y="207" font-size="6.2" fill="#1f3b5c">1</text>
+  <circle cx="122" cy="163" r="3" fill="#8a6b2c"/>
+  <text x="122" y="155" font-size="6.2" text-anchor="middle" fill="#5a4520">i</text>
+  <circle cx="80" cy="205" r="3" fill="#a03b2e"/>
+  <text x="62" y="207" font-size="6.2" fill="#8c2f1e">−1</text>
+  <circle cx="122" cy="247" r="3" fill="#2f6b5f"/>
+  <text x="122" y="260" font-size="6.2" text-anchor="middle" fill="#1e4a41">−i</text>
+  <text x="24" y="276" font-size="6.2" fill="#6a6a68">固有値は四つ　どれも無限重複</text>
+
+  <rect x="240" y="132" width="216" height="148" rx="4" fill="#f4f1ea" stroke="#8a6b2c"/>
+  <text x="250" y="147" font-size="7.6" font-weight="700" fill="#5a4520">固有関数はエルミート関数</text>
+  <text x="250" y="164" font-size="6.6" fill="#5a4520">調和振動子と可換だから</text>
+  <text x="250" y="176" font-size="6.4" fill="#5a4520">——微分と掛け算が入れ替わり、和は不変</text>
+  <text x="250" y="193" font-size="6.4" fill="#1e4a41">最低次はガウス関数　固有値 1</text>
+  <text x="250" y="205" font-size="6.4" fill="#1e4a41">n 次の固有値は −i の n 乗</text>
+  <text x="250" y="222" font-size="6.4" fill="#8c2f1e">これらが二乗可積分な関数の正規直交基底</text>
+  <text x="250" y="239" font-size="6.6" fill="#1f3b5c">等距離性の使い道</text>
+  <text x="250" y="251" font-size="6.4" fill="#5a4520">乗子のノルム　ソボレフ空間の定義</text>
+  <text x="250" y="263" font-size="6.4" fill="#5a4520">不確定性　シュレーディンガー方程式</text>
+  <text x="250" y="276" font-size="6.2" fill="#6b2a48">どれも周波数側での掛け算に読み替えている</text>
+</svg>
+<figcaption data-ch="85">フーリエ変換は可積分かつ二乗可積分な関数の上で等距離になり、そこから二乗可積分な関数全体へ延長される。ユニタリ作用素として見ると四乗して恒等になり、固有値は四つ、固有関数はエルミート関数である。</figcaption>
+</figure>
+
+<div class="star2">
+<h4>★★ 学部後半——分数階フーリエ変換と、テストの取り方</h4>
+
+<p><strong>分数階フーリエ変換。</strong><m>\mathcal{U}=\sum_n(-i)^nP_n</m>（<m>P_n</m> は <m>h_n</m> への射影）とスペクトル分解できるので、実数 <m>\alpha</m> について</p>
+<M>\mathcal{U}^\alpha = \sum_n e^{-i\pi n\alpha/2}P_n</M>
+<p>と定められる（第77章のボレル関数計算）。<em><m>\mathcal{U}^\alpha</m> は位相平面を角度 <m>\pi\alpha/2</m> だけ回転させる作用素で、<m>\alpha=1</m> が通常のフーリエ変換、<m>\alpha=0</m> が恒等写像である。</em><span class="yogo-hl">「時間」と「周波数」は、位相平面のたまたま直交する二つの座標軸にすぎない。</span>光学（レンズ系）と信号処理で実際に使われる。</p>
+
+<p><strong>メタプレクティック表現。</strong>より一般に、位相平面の面積を保つ線形変換（シンプレクティック群 <m>Sp(2d,\mathbb{R})</m>）は <m>L^2(\mathbb{R}^d)</m> 上のユニタリ作用素として（二重被覆を経て）表現される。<em>フーリエ変換は <m>90</m> 度回転に対応する元である。</em>この表現が、量子力学の正準変換と古典力学のシンプレクティック幾何を結ぶ。</p>
+
+<p><strong>テスト関数の取り方の自由度。</strong>プランシュレルの証明では <m>L^1\cap L^2</m> を出発点にしたが、他にも道はある。</p>
+<p>（i）<em>エルミート関数から出発する</em>：<m>\{h_n\}</m> が正規直交基底で、各 <m>h_n</m> が固有関数だと示せば、等距離性は直ちに従う。<span class="yogo-hl">この道は「変換を計算せずに、対角化だけで結論する」という点で美しい。</span></p>
+<p>（ii）<em>シュワルツ空間から出発する</em>：<m>\mathcal{S}</m> 上でフーリエ変換が全単射であることを示し、そこから延長する。第87章の道である。</p>
+<p>（iii）<em>ガウス総和法から出発する</em>：本章で採った道で、反転公式の証明を再利用できる。</p>
+<p><em>どの道でも同じ定理に着くが、一般化の方向が違う。</em>（i）は他の直交多項式系へ、（ii）は超関数へ、（iii）は局所コンパクト群へ伸びる。</p>
+
+<p><strong>仮定を外すと。</strong>ユニタリ性は <m>p=2</m> の特権で、<m>p\ne2</m> ではハウスドルフ–ヤングの不等式しか残らない（第82章）。<em>また、<m>\mathbb{R}^d</m> を非可換群に替えると、プランシュレルの定理は「既約表現の空間の上の測度（プランシュレル測度）」に関する等式になる</em>——表現論の中心的な定理の一つである。</p>
+</div>
+
+<div class="star3">
+<h4>★★★ 大学院——制限定理とカクヤ予想</h4>
+
+<p><strong>制限問題。</strong><m>\hat f</m> は一般に <m>L^2</m> の元にすぎないから、曲面（たとえば球面 <m>S^{d-1}</m>）に制限しても意味がない——測度零の集合の上では値が定まらない。<em>ところが曲率があると、話が変わる。</em></p>
+
+<p><em>スタイン–トマスの定理</em>：<m>f\in L^p(\mathbb{R}^d)</m>、<m>1\le p\le\frac{2(d+1)}{d+3}</m> なら</p>
+<M>\|\hat f\|_{L^2(S^{d-1})} \le C\|f\|_{L^p(\mathbb{R}^d)}</M>
+<p><span class="yogo-hl">曲率が、フーリエ変換に余分の滑らかさを与えるのである。</span><em>平面（曲率零）では同じことが成り立たない。</em><strong>制限予想</strong>は、この不等式の <m>L^q(S^{d-1})</m> 版で <m>p < \frac{2d}{d+1}</m> という最良の範囲を主張するもので、<m>d=2</m> ではフェファーマン–ジグムントが解決、<m>d\ge3</m> では未解決である。</p>
+
+<p><strong>カクヤ予想との連鎖。</strong>制限予想は<strong>カクヤ予想</strong>——すべての方向に単位線分を含む集合（カクヤ集合）のハウスドルフ次元は <m>d</m> に等しい——を含意する。<em>連鎖は</em></p>
+<M>\text{ボヘナー–リース} \Longrightarrow \text{制限} \Longrightarrow \text{カクヤ}</M>
+<p>という向きで、左ほど強い。<em>カクヤ集合はルベーグ測度零でありうる（ベシコヴィッチ、1919年）のに、次元は最大だと予想されている。</em><span class="yogo-hl">第42章で扱った「測度と次元のずれ」が、ここでフーリエ解析の未解決問題の中心に座っている。</span><m>d=3</m> のカクヤ予想はワンとザールによって解決された（2025年）が、<m>d\ge4</m> は依然として開いている。</p>
+
+<p><strong>分散型評価。</strong>シュレーディンガー方程式の解の時空評価</p>
+<M>\|e^{it\Delta}f\|_{L^q_{t,x}} \le C\|f\|_{L^2}</M>
+<p>（<strong>ストリッカーツ評価</strong>）は、制限定理の双対として出る：<em>放物面への制限が、時間発展の評価になる。</em>これが非線形シュレーディンガー方程式の適切性理論の基礎で、ボルグ・タオ・ケンチヒらの仕事につながる。<span class="yogo-hl">純粋に幾何的な問い（カクヤ集合の次元）と、偏微分方程式の可解性が、フーリエ変換を介して同じ一つの難しさを共有している。</span></p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li><m>1/(1+|x|)</m> が二乗可積分だが可積分でないことを確かめよ。</li>
+<li><m>\mathcal{U}^2f(x)=f(-x)</m> を反転公式から確かめよ。</li>
+<li>ガウス関数が固有値 <m>1</m> の固有関数であることを確かめよ。</li>
+<li>シュレーディンガー方程式の解のノルムが保たれることを確かめよ。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li><m>f,g\in L^2</m> のとき <m>f*g</m> が有界連続であることを示せ。<span class="haiten">（25点）</span></li>
+<li><ref t="thm-plancherel"/>（1）を、単調収束定理を使う箇所に注意して書き下せ。<span class="haiten">（40点）</span></li>
+<li>延長の一意性を、等距離性から示せ。<span class="haiten">（30点）</span></li>
+<li><m>\sigma(\mathcal{U})\subset\{1,i,-1,-i\}</m> を、スペクトル写像定理から示せ。<span class="haiten">（30点）</span></li>
+<li>乗子作用素の <m>L^2</m> ノルムが <m>\|m\|_\infty</m> であることを示せ。<span class="haiten">（35点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li>フーリエ変換と調和振動子が可換であることを示せ。<span class="haiten">（45点）</span></li>
+<li>エルミート関数が <m>L^2(\mathbb{R})</m> の正規直交基底をなすことを示せ。<span class="haiten">（50点）</span></li>
+<li>分数階フーリエ変換を定義し、二つの合成が指数の和になることを示せ。<span class="haiten">（45点）</span></li>
+<li>ソボレフ空間の二つの定義（導関数による定義とフーリエによる定義）が非負整数 <m>s</m> で一致することを示せ。<span class="haiten">（45点）</span></li>
+</ol>
+</div>
+</div>
+<nav class="chnav">
+<a class="prev" href="ch84.html">← 第84章　Fourier変換——L1の理論</a>
+<a class="next" href="ch86.html">第86章　畳み込みと近似単位元 →</a>
+</nav>
+</article>
+</main>
+<footer class="site">
+  <p>位相・解析大全　学部から大学院まで、三層で読む位相空間論と解析学</p>
+  <p class="small">本文・図版とも本書のために作成したものです。数式は MathJax でベクタ化して組んでいます。</p>
+</footer>
+</body>
+</html>

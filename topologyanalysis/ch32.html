@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第32章 Nagata–SmirnovとBingの距離化定理｜位相・解析大全</title>
+<meta name="description" content="位相・解析大全　第32章　Nagata–SmirnovとBingの距離化定理">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;600&display=swap">
+<link rel="stylesheet" href="web.css">
+</head>
+<body>
+<header class="site">
+  <a class="site-title" href="index.html">位相・解析大全</a>
+  <nav class="site-nav">
+    <a href="index.html">目次</a>
+    <a href="isou-kaiseki-taizen.pdf">PDF版</a>
+  </nav>
+</header>
+<main>
+<article class="chapter">
+<p class="part-label">第IV部　連結性・距離空間・距離化</p>
+<h1><span class="ch-num">第32章</span>Nagata–SmirnovとBingの距離化定理</h1>
+<nav class="chnav">
+<a class="prev" href="ch31.html">← 第31章　Urysohnの距離化定理</a>
+<a class="next" href="ch33.html">第33章　完備距離化可能性とČech完備性 →</a>
+</nav>
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>第二可算性を、どこまで弱められるのか。</li>
+<li>「局所有限な基底」という条件は、何を保証しているのか。</li>
+<li>距離化の必要十分条件は、結局どう述べられるのか。</li>
+</ul>
+</div>
+
+<h3 id="s32-1">基底の細かさを測り直す</h3>
+
+<p>第二可算性は「基底が可算」という条件だった。<em>これを緩めたい。</em>だが単に「基底の濃度を大きくしてよい」では駄目である——ゾルゲンフライ直線が反例になる（第31章）。</p>
+
+<p><span class="yogo-hl">濃度ではなく、基底の重なり方を制限する。</span>第24章の局所有限性が使える。</p>
+
+<div class="teigi" id="def-sigma-kyokusho">
+<h4></h4>
+<p class="no-indent">部分集合の族 <m>\mathcal{A}</m> が <strong><m>\sigma</m>-局所有限</strong>であるとは、<m>\mathcal{A} = \bigcup_{n \in \mathbb{N}} \mathcal{A}_n</m> と書けて各 <m>\mathcal{A}_n</m> が局所有限であることをいう。<strong><m>\sigma</m>-離散</strong>とは、各 <m>\mathcal{A}_n</m> が離散（各点が高々一つの元と交わる近傍をもつ）であることをいう。</p>
+</div>
+
+<div class="rei" id="rei-sigma-kitei">
+<h4>距離空間の基底</h4>
+<p class="no-indent">距離空間 <m>(X,d)</m> は <m>\sigma</m>-局所有限な基底をもつ。<em>実は <m>\sigma</m>-離散な基底ももつ。</em></p>
+<p>構成の骨子。各 <m>n</m> について、半径 <m>2^{-n}</m> の球による被覆を取り、第24章のパラコンパクト性（距離空間はパラコンパクト）から局所有限な細分 <m>\mathcal{A}_n</m> を作る。<span class="yogo-hl"><m>\bigcup_n \mathcal{A}_n</m> が基底になる</span>——各点の各近傍について、半径を小さく取れば収まるからである。</p>
+<p><strong>可算でないことに注意。</strong>各 <m>\mathcal{A}_n</m> は無限個でよい。<em>可算個の局所有限な族の合併という形が、可算性を局所性に置き換えている。</em></p>
+</div>
+
+<h3 id="s32-2">ナガタ–スミルノフの距離化定理</h3>
+
+<div class="teiri" id="thm-nagata-smirnov">
+<h4>ナガタ–スミルノフの距離化定理</h4>
+<p class="no-indent">位相空間 <m>X</m> が距離化可能であるための必要十分条件は、<m>X</m> が正則ハウスドルフであって <m>\sigma</m>-局所有限な基底をもつことである。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><strong>必要性</strong>は <ref t="rei-sigma-kitei"/>。<em>十分性を示す。</em>三段で進む。</p>
+<p><strong>第一段——正規性。</strong><m>\mathcal{B} = \bigcup_n \mathcal{B}_n</m> を <m>\sigma</m>-局所有限な基底とする。<m>X</m> が正規であることを示す。</p>
+<p><m>A, B</m> を交わらない閉集合とする。各 <m>x \in A</m> について、正則性より <m>\overline{B} \cap B = \varnothing</m> なる基底元 <m>B \ni x</m> が取れる。<em>それらを <m>n</m> ごとに集めて <m>\mathcal{C}_n</m>、<m>U_n = \bigcup \mathcal{C}_n</m> と置く。</em></p>
+<p><m>\mathcal{C}_n</m> は局所有限だから、第24章の <ref t="lem-kyokusho-yugen-heiho"/> より <m>\overline{U_n} = \bigcup_{C \in \mathcal{C}_n} \overline{C}</m> であり、これは <m>B</m> と交わらない。<span class="yogo-hl">局所有限な族の閉包が閉になることが、ここで決定的に効く。</span></p>
+<p><m>B</m> についても同様に <m>V_n</m> を作り、第16章★★★と同じ対角線的な構成</p>
+<M>U = \bigcup_n \Big(U_n \setminus \bigcup_{k \le n} \overline{V_k}\Big), \qquad
+V = \bigcup_n \Big(V_n \setminus \bigcup_{k \le n} \overline{U_k}\Big)</M>
+<p class="no-indent">で分離する。<em>可算個の段しかないことが、この削り方を可能にする。</em></p>
+<p><strong>第二段——擬距離の族を作る。</strong>各 <m>n</m> と各 <m>B \in \mathcal{B}_n</m> について、正規性とウリゾーンの補題より <m>f_{n,B} \colon X \to [0, 2^{-n}]</m> を、<m>X \setminus B</m> で <m>0</m>、ある小さい基底元の上で <m>2^{-n}</m> となるように取る。</p>
+<p>そのうえで擬距離を</p>
+<M>\rho_n(x,y) = \sum_{B \in \mathcal{B}_n} |f_{n,B}(x) - f_{n,B}(y)|</M>
+<p class="no-indent">と定める。<span class="yogo-hl">和は局所有限性より各点で有限項しかない。</span><em>ここが可算性の代わりを務める箇所である。</em></p>
+<p><strong>第三段——距離にまとめる。</strong></p>
+<M>d(x,y) = \sum_{n=1}^{\infty} \min\big(\rho_n(x,y),\ 2^{-n}\big)</M>
+<p class="no-indent">と置く。可算和なので収束する。<em>これが距離であり、もとの位相を与える。</em>位相の一致は第31章★★と同じ二方向の議論による。</p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">証明の構造は第31章とほぼ同じである。<em>違いは「関数が可算個」の代わりに「擬距離が可算個、各擬距離は局所有限な関数族の和」になっていることだけである。</em><span class="yogo-hl">局所有限性が、無限個の関数を各点で有限個に落としている。</span>これが第24章の <ref t="lem-kyokusho-yugen-heiho"/> の御利益である。</p>
+</div>
+
+<div class="teiri" id="thm-bing">
+<h4>ビングの距離化定理</h4>
+<p class="no-indent"><m>X</m> が距離化可能であるための必要十分条件は、<m>X</m> が正則ハウスドルフであって <m>\sigma</m>-離散な基底をもつことである。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">離散な族は局所有限だから、<ref t="thm-nagata-smirnov"/> より十分性が従う。<em>必要性は <ref t="rei-sigma-kitei"/> の構成を、離散になるように精密化する。</em></p>
+<p>具体的には、各 <m>n</m> について半径 <m>2^{-n}</m> の球の被覆から、<span class="yogo-hl">互いに <m>2^{-n}</m> 以上離れた中心をもつ極大な族</span>を選ぶ（ツォルンの補題）。この族は離散である。<m>n</m> を動かして合併すれば <m>\sigma</m>-離散な基底になる。</p>
+</div>
+
+<figure id="fig32-1">
+<svg viewBox="0 0 470 268" width="470" height="268" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <defs>
+    <marker id="a32" markerWidth="8" markerHeight="8" refX="7" refY="2.6" orient="auto"><path d="M0,0 L7,2.6 L0,5.2 z" fill="#35618f"/></marker>
+  </defs>
+
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">可算性を局所有限性で置き換える</text>
+
+  <rect x="14" y="26" width="442" height="116" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+
+  <text x="24" y="42" font-size="7" font-weight="700" fill="#1f3b5c">第二可算（ウリゾーン）</text>
+  <g fill="#35618f">
+    <rect x="180" y="36" width="20" height="6"/><rect x="206" y="36" width="20" height="6"/>
+    <rect x="232" y="36" width="20" height="6"/><rect x="258" y="36" width="20" height="6"/>
+    <rect x="284" y="36" width="20" height="6"/>
+  </g>
+  <text x="314" y="42" font-size="6.4" fill="#6a6a68">基底が可算個　全部を並べられる</text>
+
+  <text x="24" y="66" font-size="7" font-weight="700" fill="#1e4a41">σ-局所有限（ナガタ–スミルノフ）</text>
+  <text x="24" y="80" font-size="6.4" fill="#6a6a68">第1段</text>
+  <g fill="#2f6b5f">
+    <rect x="70" y="75" width="16" height="5"/><rect x="92" y="75" width="16" height="5"/>
+    <rect x="114" y="75" width="16" height="5"/><rect x="136" y="75" width="16" height="5"/>
+    <rect x="158" y="75" width="16" height="5"/><rect x="180" y="75" width="16" height="5"/>
+    <rect x="202" y="75" width="16" height="5"/><rect x="224" y="75" width="16" height="5"/>
+    <rect x="246" y="75" width="16" height="5"/><rect x="268" y="75" width="16" height="5"/>
+    <rect x="290" y="75" width="16" height="5"/><rect x="312" y="75" width="16" height="5"/>
+  </g>
+  <text x="340" y="80" font-size="6.4" fill="#6a6a68">無限個でよい（各点では有限）</text>
+
+  <text x="24" y="96" font-size="6.4" fill="#6a6a68">第2段</text>
+  <g fill="#2f6b5f">
+    <rect x="70" y="91" width="10" height="5"/><rect x="84" y="91" width="10" height="5"/>
+    <rect x="98" y="91" width="10" height="5"/><rect x="112" y="91" width="10" height="5"/>
+    <rect x="126" y="91" width="10" height="5"/><rect x="140" y="91" width="10" height="5"/>
+    <rect x="154" y="91" width="10" height="5"/><rect x="168" y="91" width="10" height="5"/>
+    <rect x="182" y="91" width="10" height="5"/><rect x="196" y="91" width="10" height="5"/>
+    <rect x="210" y="91" width="10" height="5"/><rect x="224" y="91" width="10" height="5"/>
+    <rect x="238" y="91" width="10" height="5"/><rect x="252" y="91" width="10" height="5"/>
+    <rect x="266" y="91" width="10" height="5"/><rect x="280" y="91" width="10" height="5"/>
+    <rect x="294" y="91" width="10" height="5"/><rect x="308" y="91" width="10" height="5"/>
+  </g>
+  <text x="340" y="96" font-size="6.4" fill="#6a6a68">半径 2⁻ⁿ の球から作る</text>
+
+  <text x="24" y="110" font-size="6.4" fill="#6a6a68">⋯</text>
+  <text x="70" y="112" font-size="6.6" fill="#1e4a41">段が可算個　これが「σ」の意味</text>
+
+  <text x="24" y="130" font-size="6.8" fill="#2f6b5f">各段の族は局所有限 → 各点で有限項の和になる → 擬距離が作れる</text>
+
+  <rect x="14" y="154" width="216" height="102" rx="4" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="24" y="169" font-size="7.6" font-weight="700" fill="#1e4a41">三つの要素に分解できる</text>
+  <text x="24" y="186" font-size="6.8" fill="#1e4a41">分離　正則＋正規（関数が作れる）</text>
+  <text x="24" y="200" font-size="6.8" fill="#1e4a41">可算的な近似　σ が担う</text>
+  <text x="24" y="214" font-size="6.8" fill="#1e4a41">局所と大域の整合　局所有限性が担う</text>
+  <text x="24" y="232" font-size="6.6" fill="#6a6a68">ウリゾーンの第二可算性は、三つを</text>
+  <text x="24" y="243" font-size="6.6" fill="#6a6a68">一度に保証する強い条件だった</text>
+  <text x="24" y="254" font-size="6.6" fill="#6a6a68">ナガタ–スミルノフはそれを最小限に削った</text>
+
+  <rect x="240" y="154" width="216" height="102" rx="4" fill="#f4f1ea" stroke="#8a6b2c"/>
+  <text x="250" y="169" font-size="7.6" font-weight="700" fill="#5a4520">三つの距離化定理</text>
+  <text x="250" y="186" font-size="6.8" fill="#5a4520">ウリゾーン（1925）　第二可算＋正則</text>
+  <text x="250" y="200" font-size="6.8" fill="#5a4520">ナガタ–スミルノフ（1950）　σ-局所有限</text>
+  <text x="250" y="214" font-size="6.8" fill="#5a4520">ビング（1951）　σ-離散</text>
+  <text x="250" y="232" font-size="6.6" fill="#6a6a68">後二つは必要十分条件を与える</text>
+  <text x="250" y="243" font-size="6.6" fill="#6a6a68">ウリゾーンは十分条件だけ</text>
+  <text x="250" y="254" font-size="6.6" fill="#8c2f1e">最後の一段（正規ムーア空間予想）は独立命題</text>
+</svg>
+<figcaption data-ch="32">可算基底を「可算個の局所有限な族」に置き換える。各段が局所有限なので、無限個の関数の和が各点で有限項に落ち、擬距離が作れる。</figcaption>
+</figure>
+
+<h3 id="s32-3">パラコンパクト性との関係</h3>
+
+<div class="teiri" data-kind="系" id="cor-kyorika-para">
+<h4></h4>
+<p class="no-indent">距離化可能な空間はパラコンパクトである（スミルノフ–ストーンの定理）。逆に、局所距離化可能なパラコンパクト空間は距離化可能である。</p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">前半が第24章で引用した事実である。<em>証明は <ref t="thm-bing"/> の <m>\sigma</m>-離散基底を使って被覆を細分する。</em><span class="yogo-hl">距離化定理とパラコンパクト性は、互いに支え合っている。</span></p>
+<p>後半が実用的である。<em>多様体が距離化可能なのは、局所的に <m>\mathbb{R}^n</m> であり、かつパラコンパクト（通常は定義に含める）だからである。</em></p>
+</div>
+
+<div class="lv2">
+<h4>σ-局所有限とσ-離散はなぜ同値になるのか</h4>
+<p><ref t="thm-nagata-smirnov"/> と <ref t="thm-bing"/> は、条件が違うのに同じ結論を与える。<em>離散は局所有限より真に強いのに、なぜか。</em></p>
+<p><strong>族としては違う。</strong>離散な族は局所有限だが、逆は成り立たない。<m>\mathbb{R}</m> で <m>\{(n-1,n+1)\}_{n \in \mathbb{Z}}</m> は局所有限だが離散でない（隣り合う区間が重なる）。</p>
+<p><strong>基底の存在としては同じ。</strong><span class="yogo-hl"><m>\sigma</m>-局所有限な基底があれば、<m>\sigma</m>-離散な基底も作れる。</span>したがって二つの定理の条件は同値である。</p>
+<p>証明の方針。<m>\sigma</m>-局所有限な基底があれば、<ref t="thm-nagata-smirnov"/> より距離化できる。距離化できれば <ref t="thm-bing"/> の必要性の証明で <m>\sigma</m>-離散基底が作れる。<em>距離を経由して往復する。</em></p>
+<p><strong>直接示すには。</strong>距離を経由しない証明もある。局所有限な族 <m>\mathcal{A}</m> の各元を「重なりの個数」で分類し、<m>k</m> 個と重なる部分を集めると離散な族になる。<em>局所有限性より、この分類は可算個の段に収まる。</em></p>
+<p>より正確には、<m>\mathcal{A}</m> の有限部分族 <m>\mathcal{F}</m> ごとに</p>
+<M>A_{\mathcal{F}} = \bigcap_{A \in \mathcal{F}} A \setminus \bigcup_{A \notin \mathcal{F}} \overline{A}</M>
+<p>を考える。<span class="yogo-hl">同じ大きさの <m>\mathcal{F}</m> についての族は離散になる。</span>ただし <m>\mathcal{A}</m> が非可算のとき、この分類が可算段で済むことには議論が要る。</p>
+<p><strong>実用上どちらを使うか。</strong>距離を作るには局所有限で足りる（和が各点で有限になればよい）。<em>被覆を細分するには離散のほうが扱いやすい。</em></p>
+<p>第40章で被覆次元 <m>\dim</m> を定義するとき、被覆の重なりの個数を数える。<span class="yogo-hl">そこでは離散性と局所有限性の区別が本質的になる。</span>次元とは、まさに「いくつまで重なるか」を測る量だからである。</p>
+</div>
+
+<div class="lv3">
+<h4>距離化定理の外側——ムーア空間と独立性</h4>
+<p>ナガタ–スミルノフは必要十分条件を与えた。<em>それで距離化問題は終わったのか。</em>そうではない。</p>
+<p><strong>条件が確かめにくい。</strong><m>\sigma</m>-局所有限な基底の存在は、実際の空間について確かめるのが難しい。<em>もっと素朴な条件で距離化を保証したい。</em>この動機から、別種の条件が探された。</p>
+<p><strong>ムーア空間。</strong><m>X</m> が<strong>発展的</strong>であるとは、開被覆の列 <m>\{\mathcal{G}_n\}</m> が存在して、各点 <m>x</m> と各近傍 <m>U</m> について、ある <m>n</m> で <m>\mathcal{G}_n</m> の <m>x</m> を含む元がすべて <m>U</m> に収まることをいう。発展的な正則空間を<strong>ムーア空間</strong>という。</p>
+<p>距離空間はムーア空間である（<m>\mathcal{G}_n</m> を半径 <m>2^{-n}</m> の球の族とする）。<em>逆は成り立たない。</em></p>
+<p><strong>正規ムーア空間予想。</strong>「正規なムーア空間は距離化可能か」。<span class="yogo-hl">この問いの答えは集合論の公理系から決まらない。</span></p>
+<p>連続体仮説を仮定すると反例が構成できる（ビング、後にフリードマン <span class="orig">Fleissner</span> が精密化）。一方、可測基数の存在を仮定すると予想が成り立つモデルが作れる（ニッケリ <span class="orig">Nyikos</span>）。</p>
+<p><em>注目すべきは、予想を証明するには大きい基数が必要だということである。</em>純粋に位相的な問いが、集合論のもっとも強い仮定に結びついている。</p>
+<p><strong>集合論的位相空間論。</strong>この種の問いを扱う分野を集合論的位相空間論という。第36章のスーリン問題、第37章の積の基数不変量も同じ分野に属する。</p>
+<p><span class="yogo-hl">問いの形は素朴なのに、答えが公理に依存する</span>——これが第4章★★★で述べた事態の、もっとも豊富な現れ方である。</p>
+<p><strong>なぜここで止まるのか。</strong>距離化問題が集合論に突き当たったのは、偶然ではない。</p>
+<p>距離化とは「空間の構造を可算個の実数で書けるか」という問いである。<em>そして「可算個で足りるか」という問いは、非可算性の構造に直接触れる。</em></p>
+<p>第4章で共終数を導入し、第17章と第26章で反例に使い、ここで距離化問題の限界として現れた。<span class="yogo-hl">可算と非可算の境界が、位相空間論の主要な問題のほとんどが行き着く場所である。</span></p>
+<p><strong>本書の進み方。</strong>第33章で完備距離化を扱い、第34章で総括したあと、第V部で基数不変量と次元論に進む。<em>そこでは非可算性を正面から測る。</em></p>
+<p>そして第VI部からは解析学に移り、<span class="yogo-hl">可算な操作だけで閉じた世界</span>に入る。第43章で実数を構成し、第52章でボレル集合を作り、第55章で収束定理を証明する——<em>どれも可算性のなかで完結する。</em>第97章でこの対比を地図に載せる。</p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li><m>\mathbb{R}</m> で <m>\{(n-1,n+1)\}</m> が局所有限だが離散でないことを確かめよ。</li>
+<li>離散な族が局所有限であることを示せ。</li>
+<li>第二可算なら <m>\sigma</m>-離散な基底をもつことを示せ。</li>
+<li>距離空間がパラコンパクトであることを認めて、<ref t="rei-sigma-kitei"/> の構成を述べよ。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li><ref t="thm-nagata-smirnov"/> の第一段で、<ref t="lem-kyokusho-yugen-heiho"/> がどこで効いているかを明示して示せ。<span class="haiten">（30点）</span></li>
+<li><ref t="thm-nagata-smirnov"/> の第二段で、和が各点で有限項になる理由を述べよ。<span class="haiten">（20点）</span></li>
+<li><ref t="thm-bing"/> の必要性を、極大な離散族を取る方法で示せ。<span class="haiten">（25点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li><m>\sigma</m>-局所有限な基底の存在と <m>\sigma</m>-離散な基底の存在が同値であることを、距離を経由せずに示せ。<span class="haiten">（40点）</span></li>
+<li>ムーア空間の定義を述べ、距離空間がムーア空間であることを示せ。さらに正規ムーア空間予想が独立である意味を説明せよ。<span class="haiten">（35点）</span></li>
+</ol>
+</div>
+</div>
+<nav class="chnav">
+<a class="prev" href="ch31.html">← 第31章　Urysohnの距離化定理</a>
+<a class="next" href="ch33.html">第33章　完備距離化可能性とČech完備性 →</a>
+</nav>
+</article>
+</main>
+<footer class="site">
+  <p>位相・解析大全　学部から大学院まで、三層で読む位相空間論と解析学</p>
+  <p class="small">本文・図版とも本書のために作成したものです。数式は MathJax でベクタ化して組んでいます。</p>
+</footer>
+</body>
+</html>

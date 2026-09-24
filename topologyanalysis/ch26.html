@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第26章 被覆性質の相互関係と反例｜位相・解析大全</title>
+<meta name="description" content="位相・解析大全　第26章　被覆性質の相互関係と反例">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;600&display=swap">
+<link rel="stylesheet" href="web.css">
+</head>
+<body>
+<header class="site">
+  <a class="site-title" href="index.html">位相・解析大全</a>
+  <nav class="site-nav">
+    <a href="index.html">目次</a>
+    <a href="isou-kaiseki-taizen.pdf">PDF版</a>
+  </nav>
+</header>
+<main>
+<article class="chapter">
+<p class="part-label">第III部　コンパクト性と被覆性質</p>
+<h1><span class="ch-num">第26章</span>被覆性質の相互関係と反例</h1>
+<nav class="chnav">
+<a class="prev" href="ch25.html">← 第25章　Lindelöf・可算コンパクト・点列コンパクト</a>
+<a class="next" href="ch27.html">第27章　Baireのカテゴリー定理 →</a>
+</nav>
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>被覆性質の全体は、どんな図になるのか。</li>
+<li>どの含意が成り立ち、どの逆が破れるのか。</li>
+<li>反例に使われる空間は、なぜ順序数ばかりなのか。</li>
+</ul>
+</div>
+
+<h3 id="s26-1">図を描く</h3>
+
+<p>第20章から第25章で導入した条件を並べる。<em>第II部の分離公理と同じく、階層と反例を確定させるのがこの章の仕事である。</em></p>
+
+<div class="teiri" id="thm-hifuku-zu">
+<h4>被覆性質の含意</h4>
+<p class="no-indent">ハウスドルフ空間について、次の含意が成り立つ（すべて逆は偽）。</p>
+<M>\begin{array}{c}
+\text{コンパクト} \implies \text{パラコンパクト} \implies \text{正規} \\
+\text{コンパクト} \implies \text{リンデレーフ} \\
+\text{コンパクト} \implies \text{可算コンパクト} \implies \text{擬コンパクト} \\
+\text{点列コンパクト} \implies \text{可算コンパクト} \\
+\text{コンパクト} \implies \text{局所コンパクト} \\
+\text{第二可算} \implies \text{リンデレーフ} \\
+\text{正則} + \text{リンデレーフ} \implies \text{パラコンパクト} \\
+\text{リンデレーフ} + \text{可算コンパクト} \iff \text{コンパクト}
+\end{array}</M>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">パラコンパクト性とリンデレーフ性は、どちらもコンパクト性の弱化だが<em>互いに独立である。</em><span class="yogo-hl">離散な非可算集合はパラコンパクトだがリンデレーフでない。</span>一方、正則なリンデレーフ空間はパラコンパクトなので、正則性を仮定すれば一方向の含意が入る。</p>
+</div>
+
+<h3 id="s26-2">反例の一覧</h3>
+
+<div class="hanrei" id="cex-hifuku-ichiran">
+<h4>八つの反例</h4>
+<p class="no-indent"><strong>（1）<m>\mathbb{R}</m>。</strong>パラコンパクト・リンデレーフ・局所コンパクトだが<em>コンパクトでない</em>。可算コンパクトでも点列コンパクトでもない。</p>
+<p><strong>（2）非可算離散空間 <m>D</m>。</strong>パラコンパクト・局所コンパクトだが<em>リンデレーフでない</em>。可算コンパクトでもない。<span class="yogo-hl">パラコンパクトとリンデレーフが独立であることを示す。</span></p>
+<p><strong>（3）<m>[0,\omega_1)</m>。</strong>可算コンパクト・点列コンパクト・正規・局所コンパクト・第一可算だが、<em>コンパクトでもリンデレーフでもパラコンパクトでも可分でもない</em>（第25章★★★）。</p>
+<p><strong>（4）<m>\{0,1\}^{I}</m>（<m>|I| > 2^{\aleph_0}</m>）。</strong>コンパクトだが<em>点列コンパクトでない</em>。第一可算でない。</p>
+<p><strong>（5）ゾルゲンフライ直線 <m>\mathbb{R}_\ell</m>。</strong>リンデレーフ・パラコンパクト・完全正規・第一可算・可分だが、<em>第二可算でも局所コンパクトでも距離化可能でもない</em>。</p>
+<p><strong>（6）ゾルゲンフライ平面 <m>\mathbb{R}_\ell^2</m>。</strong>可分・完全正則だが、<em>正規でもパラコンパクトでもリンデレーフでもない</em>。<span class="yogo-hl">リンデレーフ性が有限積で壊れる例である。</span></p>
+<p><strong>（7）チコノフ板 <m>T_\infty</m>（第17章）。</strong>局所コンパクト・チコノフだが<em>正規でない</em>。したがってパラコンパクトでもない。</p>
+<p><strong>（8）<m>\mathbb{Q}</m>。</strong>第二可算・リンデレーフ・パラコンパクト・距離化可能だが、<em>局所コンパクトでない</em>。</p>
+</div>
+
+<figure id="fig26-1">
+<svg viewBox="0 0 470 304" width="470" height="304" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <defs>
+    <marker id="a26" markerWidth="8" markerHeight="8" refX="7" refY="2.6" orient="auto"><path d="M0,0 L7,2.6 L0,5.2 z" fill="#35618f"/></marker>
+    <marker id="a26d" markerWidth="8" markerHeight="8" refX="7" refY="2.6" orient="auto"><path d="M0,0 L7,2.6 L0,5.2 z" fill="#8a6b2c"/></marker>
+  </defs>
+
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">被覆性質の全体図——矢印はすべて一方向</text>
+
+  <rect x="14" y="26" width="442" height="164" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+
+  <rect x="186" y="38" width="94" height="22" rx="3" fill="#dce7f0" stroke="#35618f" stroke-width="1.3"/>
+  <text x="233" y="52" font-size="7" text-anchor="middle" font-weight="700" fill="#1f3b5c">コンパクト</text>
+
+  <rect x="30" y="92" width="86" height="22" rx="3" fill="#e8f0f7" stroke="#35618f"/>
+  <text x="73" y="106" font-size="6.6" text-anchor="middle" fill="#1f3b5c">パラコンパクト</text>
+
+  <rect x="132" y="92" width="86" height="22" rx="3" fill="#e8f0f7" stroke="#35618f"/>
+  <text x="175" y="106" font-size="6.6" text-anchor="middle" fill="#1f3b5c">リンデレーフ</text>
+
+  <rect x="248" y="92" width="86" height="22" rx="3" fill="#e8f0f7" stroke="#35618f"/>
+  <text x="291" y="106" font-size="6.6" text-anchor="middle" fill="#1f3b5c">可算コンパクト</text>
+
+  <rect x="350" y="92" width="94" height="22" rx="3" fill="#e8f0f7" stroke="#35618f"/>
+  <text x="397" y="106" font-size="6.6" text-anchor="middle" fill="#1f3b5c">局所コンパクト</text>
+
+  <rect x="30" y="142" width="86" height="22" rx="3" fill="#efe0e6" stroke="#8a3b62"/>
+  <text x="73" y="156" font-size="6.6" text-anchor="middle" fill="#6b2a48">正規</text>
+
+  <rect x="248" y="142" width="86" height="22" rx="3" fill="#f4f1ea" stroke="#8a6b2c"/>
+  <text x="291" y="156" font-size="6.6" text-anchor="middle" fill="#5a4520">擬コンパクト</text>
+
+  <rect x="350" y="142" width="94" height="22" rx="3" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="397" y="156" font-size="6.6" text-anchor="middle" fill="#1e4a41">点列コンパクト</text>
+
+  <path d="M200,64 L86,88" stroke="#35618f" stroke-width="1.1" fill="none" marker-end="url(#a26)"/>
+  <path d="M220,64 L182,88" stroke="#35618f" stroke-width="1.1" fill="none" marker-end="url(#a26)"/>
+  <path d="M248,64 L284,88" stroke="#35618f" stroke-width="1.1" fill="none" marker-end="url(#a26)"/>
+  <path d="M268,64 L382,88" stroke="#35618f" stroke-width="1.1" fill="none" marker-end="url(#a26)"/>
+
+  <path d="M73,118 L73,138" stroke="#8a3b62" stroke-width="1.1" fill="none" marker-end="url(#a26)"/>
+  <path d="M291,118 L291,138" stroke="#8a6b2c" stroke-width="1.1" fill="none" marker-end="url(#a26)"/>
+  <path d="M362,140 L318,118" stroke="#2f6b5f" stroke-width="1.1" fill="none" marker-end="url(#a26)"/>
+
+  <path d="M128,100 L120,100" stroke="#a03b2e" stroke-width="1" stroke-dasharray="2,1.6" fill="none" marker-end="url(#a26)"/>
+  <text x="124" y="128" font-size="6" text-anchor="middle" fill="#a03b2e">正則なら</text>
+
+
+  <text x="24" y="172" font-size="6.6" fill="#6b2a48">リンデレーフ ＋ 可算コンパクト ⇔ コンパクト（二つの「有限」が補い合う）</text>
+  <text x="24" y="183" font-size="6.6" fill="#8a6b2c">可算コンパクト ＋ 第一可算 ⇒ 点列コンパクト（逆はつねに成り立つ）</text>
+
+  <rect x="14" y="202" width="442" height="96" rx="4" fill="#fdf6f4" stroke="#e0c3bd"/>
+  <text x="24" y="217" font-size="7.8" font-weight="700" fill="#8c2f1e">各段を分ける反例</text>
+  <text x="24" y="234" font-size="6.6" fill="#8c2f1e">R</text>
+  <text x="130" y="234" font-size="6.6" fill="#8c2f1e">パラ・リンデ・局コンだが、コンパクトでない</text>
+  <text x="24" y="245" font-size="6.6" fill="#8c2f1e">非可算離散空間</text>
+  <text x="130" y="245" font-size="6.6" fill="#8c2f1e">パラコンパクトだがリンデレーフでない（両者は独立）</text>
+  <text x="24" y="256" font-size="6.6" fill="#8c2f1e">順序数の空間 [0, ω₁)</text>
+  <text x="130" y="256" font-size="6.6" fill="#8c2f1e">可算コン・点列コン・正規だが、リンデレーフでない</text>
+  <text x="24" y="267" font-size="6.6" fill="#8c2f1e">{0,1} の非可算積</text>
+  <text x="130" y="267" font-size="6.6" fill="#8c2f1e">コンパクトだが点列コンパクトでない</text>
+  <text x="24" y="278" font-size="6.6" fill="#8c2f1e">ゾルゲンフライ平面</text>
+  <text x="130" y="278" font-size="6.6" fill="#8c2f1e">リンデレーフ性が有限積で壊れることを示す</text>
+  <text x="24" y="289" font-size="6.6" fill="#8c2f1e">有理数全体 Q</text>
+  <text x="130" y="289" font-size="6.6" fill="#8c2f1e">距離化可能だが局所コンパクトでない</text>
+</svg>
+<figcaption data-ch="26">被覆性質の全体図。パラコンパクト性とリンデレーフ性は互いに独立で、正則性を仮定すると一方向の含意が入る。順序数の空間が多くの段を分ける。</figcaption>
+</figure>
+
+<h3 id="s26-3">なぜ順序数ばかりなのか</h3>
+
+<p>反例の多くが順序数の空間である。<em>これは偶然ではない。</em></p>
+
+<p><span class="yogo-hl">被覆性質は「どれだけの個数で覆えるか」を問う条件である。</span>そして順序数は、<em>「個数」を測るためにこそ作られた対象である</em>（第4章）。したがって、被覆の個数に関する反例を作るには順序数がもっとも直接的な道具になる。</p>
+
+<p>具体的には、三つの性質が使われる。</p>
+
+<p><strong>第一に、共終数の非対称。</strong><m>\mathrm{cf}(\omega_1) > \omega</m> なので、可算個の条件では <m>\omega_1</m> に届かない。<em>これが <m>[0,\omega_1)</m> が可算コンパクトである理由である。</em></p>
+
+<p><strong>第二に、順序位相の局所構造。</strong>後続順序数は孤立点、極限順序数には共終数と同じ長さの近傍基がある。<span class="yogo-hl">局所的な性質を細かく制御できる。</span></p>
+
+<p><strong>第三に、整列性。</strong>超限帰納法で構成ができる。<em>「各段で条件を満たすものを選び、極限で集める」という議論が、順序数の上では自然に書ける。</em></p>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">順序数以外の反例は、ゾルゲンフライ直線とその積、そして立方体 <m>\{0,1\}^I</m> である。<em>前者は「半開区間」という向きの非対称、後者は積位相の「有限個を除いて全体」という形を使う。</em><span class="yogo-hl">三種類の仕掛けで、被覆性質の階層のほとんどが分けられる。</span></p>
+</div>
+
+<div class="lv2">
+<h4>操作に対する保存——第19章の表を埋める</h4>
+<p>第19章で分離公理と可算公理について作った表に、被覆性質を加える。</p>
+<M>\begin{array}{lcccc}
+& \text{部分} & \text{積} & \text{商} & \text{連続像} \\
+\text{コンパクト} & \text{閉のみ} & \bigcirc & \bigcirc & \bigcirc \\
+\text{パラコンパクト} & \text{閉のみ} & \times & \times & \times \\
+\text{リンデレーフ} & \text{閉のみ} & \times & \bigcirc & \bigcirc \\
+\text{可算コンパクト} & \text{閉のみ} & \times & \bigcirc & \bigcirc \\
+\text{点列コンパクト} & \text{閉のみ} & \text{可算積} & \bigcirc & \bigcirc \\
+\text{局所コンパクト} & \text{開と閉} & \text{有限積} & \times & \times
+\end{array}</M>
+<p><strong>読めること。</strong>第一に、<em>被覆性質はどれも閉部分空間に遺伝し、一般の部分空間には遺伝しない。</em><span class="yogo-hl">大域的な条件の典型的な振る舞いである。</span></p>
+<p>第二に、<em>ほとんどが連続像と商で保たれる。</em>これは分離公理と正反対である（第19章）。理由は明快で、被覆の逆像が被覆になるからである。</p>
+<p>第三に、<em>積で保たれるのはコンパクト性だけである。</em>点列コンパクト性が可算積で保たれるのは、対角線論法で部分列を取れるからである。</p>
+<p><strong>局所コンパクト性の特異さ。</strong>この条件だけは開部分空間にも遺伝する。<em>局所的な条件だからである。</em>一方、商では壊れる——潰すと局所構造が変わる。</p>
+<p><strong>リンデレーフ性が積で壊れる理由。</strong>ゾルゲンフライ平面が反例だった。<m>\mathbb{R}_\ell</m> はリンデレーフだが、平面では反対角線 <m>L</m> が非可算離散閉集合になる。<span class="yogo-hl">閉部分空間に遺伝するので、非可算離散空間がリンデレーフでないことから結論が出る。</span></p>
+<p><strong>実用上の指針。</strong>第19章の★★で述べた基準が、ここでも当てはまる。操作を繰り返す証明ではコンパクト性を、一度使うだけならパラコンパクト性やリンデレーフ性を使う。</p>
+<p>第32章の距離化定理でパラコンパクト性が主役になるのは、<em>そこでは積を取らないからである。</em>被覆を細分する操作を一度行うだけなので、積で壊れることが問題にならない。</p>
+</div>
+
+<div class="lv3">
+<h4>被覆性質を基数で測る——第V部への橋</h4>
+<p>被覆性質は「はい／いいえ」の条件だった。<em>第7章の★★で可算公理を基数化したのと同じことを、被覆性質についても行える。</em></p>
+<p><strong>リンデレーフ数。</strong><m>X</m> の<strong>リンデレーフ数</strong> <m>L(X)</m> とは、どの開被覆も濃度 <m>L(X)</m> 以下の部分被覆をもつような最小の基数をいう。</p>
+<p><m>L(X) = \aleph_0</m> がリンデレーフ性、<m>L(X) = 1</m>（有限）がコンパクト性にあたる。<span class="yogo-hl">一つの基数不変量が、二つの条件を統一する。</span></p>
+<p><strong>拡張。</strong><m>\kappa</m>-コンパクト性（どの開被覆も濃度 <m>\kappa</m> 未満の部分被覆をもつ）、<m>\kappa</m>-パラコンパクト性（濃度 <m>\kappa</m> 未満の被覆が局所有限な細分をもつ）などが定義できる。</p>
+<p><em>これらのあいだの関係を調べるのが、第V部の仕事である。</em></p>
+<p><strong>不等式の網。</strong>基数不変量のあいだには、いくつもの不等式が成り立つ。例として、</p>
+<M>L(X) \le d(X) \cdot \chi(X), \qquad |X| \le 2^{L(X) \cdot \chi(X)}</M>
+<p>後者はアルハンゲリスキー <span class="orig">Arhangelskii</span> の不等式である。<span class="yogo-hl">リンデレーフかつ第一可算なハウスドルフ空間の濃度は <m>2^{\aleph_0}</m> 以下である。</span></p>
+<p>この定理は、被覆性質と局所的な性質から空間全体の大きさが制限されることを示す。<em>抽象的な条件が、具体的な濃度の上限を与える。</em></p>
+<p><strong>独立な命題。</strong>この方向の問いには、公理系から決まらないものが多い。たとえば、</p>
+<p><em>「リンデレーフな <m>T_3</m> 空間の濃度は <m>2^{\aleph_0}</m> 以下か」</em>——第一可算性を外すと、答えは公理に依存する。</p>
+<p><em>「リンデレーフ空間の積がリンデレーフになるのはいつか」</em>——ここにも独立性が現れる。</p>
+<p><strong>第V部への見通し。</strong>第35章で weight、density、character、cellularity を導入し、第36章でスーリン問題を通して独立性を扱い、第37章で積の基数不変量を調べる。</p>
+<p>その後、第38章から第42章で次元論に移る。<em>次元も一種の基数不変量である</em>——ただし値が自然数（または <m>\infty</m>）に限られる。<span class="yogo-hl">「大きさ」を測るのが基数不変量、「太さ」を測るのが次元である。</span></p>
+<p>第III部で被覆性質を丁寧に扱ったのは、第V部の準備でもある。<em>次元の定義（第40章の被覆次元 <m>\dim</m>）は、被覆の重なり方を数えることで与えられる。</em>局所有限性と細分という概念が、そこで再び中心に来る。</p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li>非可算離散空間がパラコンパクトでリンデレーフでないことを示せ。</li>
+<li><m>\mathbb{Q}</m> が距離化可能で局所コンパクトでないことを示せ。</li>
+<li>コンパクト性が連続像で保たれることを示せ。</li>
+<li>リンデレーフ性が閉部分空間に遺伝することを示せ。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li>リンデレーフ性が連続像で保たれることを示せ。<span class="haiten">（15点）</span></li>
+<li>ゾルゲンフライ平面がリンデレーフでないことを、反対角線を用いて示せ。<span class="haiten">（25点）</span></li>
+<li>点列コンパクト性が可算積で保たれることを、対角線論法で示せ。<span class="haiten">（30点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li><ref t="cex-hifuku-ichiran"/> の八つの空間について、六つの被覆性質の成否を表にまとめ、各段の分離を確認せよ。<span class="haiten">（35点）</span></li>
+<li>アルハンゲリスキーの不等式 <m>|X| \le 2^{L(X) \cdot \chi(X)}</m> の主張を述べ、リンデレーフかつ第一可算な場合に何が得られるかを説明せよ。<span class="haiten">（30点）</span></li>
+</ol>
+</div>
+</div>
+<nav class="chnav">
+<a class="prev" href="ch25.html">← 第25章　Lindelöf・可算コンパクト・点列コンパクト</a>
+<a class="next" href="ch27.html">第27章　Baireのカテゴリー定理 →</a>
+</nav>
+</article>
+</main>
+<footer class="site">
+  <p>位相・解析大全　学部から大学院まで、三層で読む位相空間論と解析学</p>
+  <p class="small">本文・図版とも本書のために作成したものです。数式は MathJax でベクタ化して組んでいます。</p>
+</footer>
+</body>
+</html>

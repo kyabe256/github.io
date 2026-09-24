@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第10章 商空間と等化写像｜位相・解析大全</title>
+<meta name="description" content="位相・解析大全　第10章　商空間と等化写像">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;600&display=swap">
+<link rel="stylesheet" href="web.css">
+</head>
+<body>
+<header class="site">
+  <a class="site-title" href="index.html">位相・解析大全</a>
+  <nav class="site-nav">
+    <a href="index.html">目次</a>
+    <a href="isou-kaiseki-taizen.pdf">PDF版</a>
+  </nav>
+</header>
+<main>
+<article class="chapter">
+<p class="part-label">第I部　位相空間の基礎</p>
+<h1><span class="ch-num">第10章</span>商空間と等化写像</h1>
+<nav class="chnav">
+<a class="prev" href="ch09.html">← 第9章　部分空間と相対位相</a>
+<a class="next" href="ch11.html">第11章　積空間——なぜ箱位相ではないのか →</a>
+</nav>
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>「貼り合わせる」という操作に、どう位相を入れるのか。</li>
+<li>商空間からの写像の連続性は、どうやって確かめるのか。</li>
+<li>良い空間を割ったのに、悪い空間が出てくるのはなぜか。</li>
+</ul>
+</div>
+
+<h3 id="s10-1">貼り合わせを位相で表す</h3>
+
+<p>紙テープの両端をつなぐと輪になる。これを数学の言葉にしたい。<em>区間 <m>[0,1]</m> の <m>0</m> と <m>1</m> を同一視すれば円になる</em>——集合としてはそのとおりである。では位相はどうか。</p>
+
+<p>第2章で、同値関係による商集合 <m>X/{\sim}</m> を作った。いま <m>X</m> が位相空間なら、商集合にも位相を入れたい。方針は第8章の終位相である。<span class="yogo-hl">商写像 <m>q \colon X \to X/{\sim}</m> が連続になるような、最大の位相を選ぶ。</span></p>
+
+<div class="teigi" id="def-sho">
+<h4>商位相</h4>
+<p class="no-indent"><m>X</m> を位相空間、<m>\sim</m> を <m>X</m> 上の同値関係、<m>q \colon X \to Y = X/{\sim}</m> を自然な全射とする。</p>
+<M>\mathcal{T}_Y = \{\, V \subseteq Y \mid q^{-1}(V) \text{ が } X \text{ で開} \,\}</M>
+<p class="no-indent">は <m>Y</m> 上の位相であり、<strong>商位相</strong>という。このとき <m>q</m> を<strong>商写像</strong>という。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">逆像が合併と交叉を保つ（第2章）から、（T1）（T2）（T3）はただちに従う。<em>終位相の構成が、位相の公理を逆像経由でそのまま引き継いでいる。</em></p>
+<p>最大性を示す。<m>q</m> が連続な位相 <m>\mathcal{T}'</m> があれば、<m>V \in \mathcal{T}'</m> について <m>q^{-1}(V)</m> は開だから <m>V \in \mathcal{T}_Y</m>。よって <m>\mathcal{T}' \subseteq \mathcal{T}_Y</m>。</p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">部分空間が「最小」で商空間が「最大」なのは、矢印の向きが逆だからである。<em>包含写像は部分から全体へ、商写像は全体から商へ向かう。</em><span class="yogo-hl">連続性はつねに「逆像が開」なので、写像の向きが逆になれば最適化の向きも逆になる。</span></p>
+</div>
+
+<p>商位相のもっとも重要な性質は、そこからの写像の連続性判定である。</p>
+
+<div class="teiri" id="thm-sho-fuhen">
+<h4>商空間の普遍性</h4>
+<p class="no-indent"><m>q \colon X \to Y</m> を商写像とする。写像 <m>g \colon Y \to Z</m> について、</p>
+<M>g \text{ が連続} \iff g \circ q \text{ が連続}</M>
+<p class="no-indent">が成り立つ。とくに、<m>f \colon X \to Z</m> が連続で、<m>x \sim x'</m> ならば <m>f(x) = f(x')</m> を満たすならば、<m>f = g \circ q</m> となる連続な <m>g</m> がただ一つ存在する。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><m>g</m> が連続なら合成も連続。逆に <m>g \circ q</m> が連続とする。<m>W \subseteq Z</m> を開とすると <m>(g \circ q)^{-1}(W) = q^{-1}(g^{-1}(W))</m> が <m>X</m> で開である。<em>商位相の定義がまさに「逆像が開なら開」だから</em>、<m>g^{-1}(W)</m> は <m>Y</m> で開である。</p>
+<p>後半を示す。条件より <m>f</m> は同値類の上で一定だから、<m>g([x]) = f(x)</m> は矛盾なく定まる。<m>g \circ q = f</m> が連続だから、前半より <m>g</m> は連続である。一意性は <m>q</m> が全射であることによる。</p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">この定理が、商空間を実際に使うときのほぼすべてである。<span class="yogo-hl">商空間からの写像を作るには、もとの空間からの写像を作って「同値な点を同じ所へ送る」ことを確かめればよい。</span><em>商空間の開集合を直接調べる必要はない。</em></p>
+</div>
+
+<h3 id="s10-2">具体的な貼り合わせ</h3>
+
+<div class="rei" id="rei-haritsuke">
+<h4>円・トーラス・メビウスの帯</h4>
+<p class="no-indent"><strong>円。</strong><m>[0,1]</m> で <m>0 \sim 1</m> とすると、商空間は <m>S^1</m> と同相である。実際 <m>f(t) = (\cos 2\pi t, \sin 2\pi t)</m> は連続で <m>f(0) = f(1)</m> だから、<ref t="thm-sho-fuhen"/> より連続な <m>g \colon [0,1]/{\sim} \to S^1</m> が誘導される。<m>g</m> は全単射であり、<em>定義域がコンパクトで値域がハウスドルフだから同相である</em>（第20章）。</p>
+<p><strong>トーラス。</strong>正方形 <m>[0,1]^2</m> で <m>(t,0) \sim (t,1)</m> かつ <m>(0,s) \sim (1,s)</m> とすると、商空間は <m>S^1 \times S^1</m> と同相になる。<em>向かい合う辺を同じ向きに貼る。</em></p>
+<p><strong>メビウスの帯。</strong>同じ正方形で <m>(0,s) \sim (1, 1-s)</m> だけを課すと、メビウス <span class="orig">Möbius</span> の帯が得られる。<span class="yogo-hl">貼る向きを反転させるだけで、まったく違う空間になる。</span>貼り合わせの指定が位相を決めていることが、この対比でよく分かる。</p>
+</div>
+
+<div class="hanrei" id="cex-sho-hausdorff">
+<h4>商はハウスドルフ性を保たない</h4>
+<p class="no-indent"><m>X = \mathbb{R}</m> で、<m>x \sim y \iff x - y \in \mathbb{Q}</m> と定める。商空間 <m>\mathbb{R}/\mathbb{Q}</m> はどうなるか。</p>
+<p>各同値類は <m>\mathbb{R}</m> のなかで稠密である。したがって、<m>q^{-1}(V)</m> が開で空でなければ、それは稠密な集合を含む開集合であり、<em>その補集合に開集合が入る余地がほとんどない。</em>実際、空でない開集合 <m>V, W \subseteq \mathbb{R}/\mathbb{Q}</m> を取ると、<m>q^{-1}(V)</m> と <m>q^{-1}(W)</m> はともに <m>\mathbb{Q}</m>-不変な空でない開集合であり、必ず交わる。</p>
+<p><span class="yogo-hl">よって <m>\mathbb{R}/\mathbb{Q}</m> は密着位相をもつ。</span><m>\mathbb{R}</m> は距離空間で、ハウスドルフどころか正規で完全正規である。<em>それを割った結果、二点すら分離できない空間になった。</em></p>
+<p>壊れ方の軽い例もある。<m>\mathbb{R}</m> で <m>x \sim y</m> を「<m>x = y</m>、または <m>x</m> と <m>y</m> がともに <m>(0,1)</m> に属する」と定める。同値類 <m>(0,1)</m> は <m>\mathbb{R}</m> で閉でないから、その像は商空間で閉でない。<em>すなわち商空間は <m>T_1</m> ですらない</em>（第13章）。<span class="yogo-hl">同値類が閉であることは、商がハウスドルフになるための必要条件である。</span></p>
+</div>
+
+<figure id="fig10-1">
+<svg viewBox="0 0 470 268" width="470" height="268" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <defs>
+    <marker id="m10r" markerWidth="7" markerHeight="7" refX="6" refY="2.3" orient="auto"><path d="M0,0 L6,2.3 L0,4.6 z" fill="#a03b2e"/></marker>
+    <marker id="m10g" markerWidth="7" markerHeight="7" refX="6" refY="2.3" orient="auto"><path d="M0,0 L6,2.3 L0,4.6 z" fill="#2f6b5f"/></marker>
+  </defs>
+
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">貼り合わせの指定が位相を決める</text>
+
+  <rect x="14" y="26" width="442" height="122" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+
+  <text x="72" y="44" font-size="6.8" text-anchor="middle" fill="#1f3b5c">両対辺を同じ向きに貼る</text>
+  <rect x="36" y="52" width="72" height="72" fill="#e8f0f7" stroke="#8a8a88" stroke-width="0.6"/>
+  <path d="M40,56 L102,56" stroke="#a03b2e" stroke-width="1.6" fill="none" marker-end="url(#m10r)"/>
+  <path d="M40,120 L102,120" stroke="#a03b2e" stroke-width="1.6" fill="none" marker-end="url(#m10r)"/>
+  <path d="M40,118 L40,58" stroke="#2f6b5f" stroke-width="1.6" fill="none" marker-end="url(#m10g)"/>
+  <path d="M104,118 L104,58" stroke="#2f6b5f" stroke-width="1.6" fill="none" marker-end="url(#m10g)"/>
+  <text x="72" y="137" font-size="6.6" text-anchor="middle" fill="#6a6a68">左右も上下も向きが揃う</text>
+
+  <text x="130" y="92" font-size="10" text-anchor="middle" fill="#35618f">→</text>
+
+  <ellipse cx="192" cy="88" rx="40" ry="24" fill="#e8f0f7" stroke="#35618f" stroke-width="1.4"/>
+  <ellipse cx="192" cy="88" rx="16" ry="8" fill="#fff" stroke="#35618f" stroke-width="1.1"/>
+  <text x="192" y="126" font-size="7" text-anchor="middle" fill="#1f3b5c">トーラス</text>
+  <text x="192" y="137" font-size="6.6" text-anchor="middle" fill="#6a6a68">向きづけ可能・裏表がある</text>
+
+  <text x="292" y="44" font-size="6.8" text-anchor="middle" fill="#8c2f1e">左右だけ向きを反転して貼る</text>
+  <rect x="256" y="52" width="72" height="72" fill="#f7eceb" stroke="#8a8a88" stroke-width="0.6"/>
+  <path d="M260,56 L322,56" stroke="#a03b2e" stroke-width="1.6" fill="none" marker-end="url(#m10r)"/>
+  <path d="M260,120 L322,120" stroke="#a03b2e" stroke-width="1.6" fill="none" marker-end="url(#m10r)"/>
+  <path d="M260,118 L260,58" stroke="#2f6b5f" stroke-width="1.6" fill="none" marker-end="url(#m10g)"/>
+  <path d="M324,58 L324,118" stroke="#2f6b5f" stroke-width="1.6" fill="none" marker-end="url(#m10g)"/>
+  <text x="292" y="137" font-size="6.6" text-anchor="middle" fill="#8c2f1e">右辺だけ矢印が下向き</text>
+
+  <text x="350" y="92" font-size="10" text-anchor="middle" fill="#a03b2e">→</text>
+
+  <path d="M378,88 C 378,66 396,58 410,66 C 424,74 420,92 406,94 C 392,96 386,82 398,74 C 410,66 432,70 434,88 C 436,104 416,112 400,106"
+        fill="none" stroke="#a03b2e" stroke-width="4.5" stroke-linecap="round" opacity="0.85"/>
+  <text x="408" y="126" font-size="7" text-anchor="middle" fill="#8c2f1e">メビウスの帯</text>
+  <text x="408" y="137" font-size="6.6" text-anchor="middle" fill="#6a6a68">向きづけ不可能・裏表がない</text>
+
+  <rect x="14" y="160" width="442" height="98" rx="4" fill="#fdf6f4" stroke="#e0c3bd"/>
+  <text x="24" y="175" font-size="7.8" font-weight="700" fill="#8c2f1e">商は何を保ち、何を壊すか</text>
+
+  <text x="24" y="194" font-size="7" font-weight="700" fill="#1e4a41">保たれる</text>
+  <text x="96" y="194" font-size="7" fill="#1e4a41">コンパクト性　連結性　弧状連結性</text>
+  <text x="300" y="194" font-size="6.8" fill="#6a6a68">連続像として保たれるもの</text>
+
+  <text x="24" y="212" font-size="7" font-weight="700" fill="#8c2f1e">壊れる</text>
+  <text x="96" y="212" font-size="7" fill="#8c2f1e">ハウスドルフ　距離化可能　第二可算</text>
+  <text x="300" y="212" font-size="6.8" fill="#6a6a68">分離も可算性も保証されない</text>
+
+  <text x="24" y="232" font-size="7" fill="#8c2f1e">R を有理数だけずらして割ると、商は密着位相になる——二点すら分離できない</text>
+  <text x="24" y="249" font-size="7" fill="#5a4520">商がハウスドルフ ⇔ 同値関係が X×X の閉集合（q が開写像のとき）</text>
+</svg>
+<figcaption data-ch="10">同じ正方形でも、辺を貼る向きを変えるだけで別の空間になる。商は連続像として保たれる性質を引き継ぐが、分離公理も可算公理も保証しない。</figcaption>
+</figure>
+
+<h3 id="s10-3">飽和集合と、開商写像</h3>
+
+<p>商位相の定義には <m>q^{-1}(V)</m> が現れる。<em>この形の集合を直接扱うと便利である。</em></p>
+
+<div class="teigi" id="def-hoowa">
+<h4></h4>
+<p class="no-indent"><m>A \subseteq X</m> が<strong>飽和</strong>であるとは、<m>A = q^{-1}(q(A))</m> となることをいう。すなわち、<m>A</m> が <m>A</m> と交わる同値類をすべて丸ごと含むことをいう。</p>
+</div>
+
+<p>商位相は「飽和な開集合の像が開」と言い換えられる。<span class="yogo-hl">商写像は、飽和でない開集合の像については何も保証しない。</span><em>これが商写像が一般に開写像でない理由である。</em></p>
+
+<div class="teiri" data-kind="命題" id="prop-kaisho">
+<h4></h4>
+<p class="no-indent">商写像 <m>q</m> が開写像であるための必要十分条件は、どの開集合 <m>U</m> についても <m>q^{-1}(q(U))</m> が開であることである。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><m>q(U)</m> が開 <m>\iff</m> <m>q^{-1}(q(U))</m> が開、というのが商位相の定義そのものである。<em>言い換えただけだが、後者は <m>X</m> のなかの条件なので確かめやすい。</em></p>
+<p>群作用による商では、この条件が自動的に満たされる。<m>G</m> が <m>X</m> に同相写像として作用しているとき、<m>q^{-1}(q(U)) = \bigcup_{g \in G} gU</m> は開集合の合併だから開である。<span class="yogo-hl">群による商写像は必ず開写像である。</span></p>
+</div>
+
+<div class="lv2">
+<h4>商がハウスドルフになる条件</h4>
+<p>商がハウスドルフ性を壊すことは反例で見た。では、<em>いつ壊れないのか。</em>条件を見つけておくと、実際の構成で役に立つ。</p>
+<p><strong>必要条件。</strong><m>Y = X/{\sim}</m> がハウスドルフなら、一点集合は閉である。<m>q</m> は連続だから <m>q^{-1}(\{[x]\}) = [x]</m> は <m>X</m> で閉である。<span class="yogo-hl">したがって、すべての同値類が閉でなければならない。</span><ref t="cex-sho-hausdorff"/> の第二の例が壊れたのは、この段階である。</p>
+<p><strong>十分条件。</strong><m>q</m> が開写像であるとき、次が成り立つ。</p>
+<M>Y \text{ がハウスドルフ} \iff R = \{\, (x,y) \mid x \sim y \,\} \text{ が } X \times X \text{ の閉集合}</M>
+<p>証明の骨子はこうである。<m>R</m> が閉なら、<m>[x] \ne [y]</m> のとき <m>(x,y) \notin R</m> なので、<m>U \times V</m> が <m>R</m> と交わらないような近傍が取れる。<em><m>q</m> が開写像だから <m>q(U), q(V)</m> は開であり、これが <m>[x], [y]</m> を分離する。</em>逆向きは、<m>R = (q \times q)^{-1}(\Delta_Y)</m> と、ハウスドルフ性が対角線の閉性と同値であること（第13章）による。</p>
+<p><strong>使いどころ。</strong>群 <m>G</m> が <m>X</m> に作用しているとき、商 <m>X/G</m> がハウスドルフになる条件は「作用が固有である」ことで与えられる。<em>先に見たとおり群作用の商写像は開写像なので、上の判定が使える。</em><m>\mathbb{R}/\mathbb{Z}</m> が円になるのは <m>\mathbb{Z}</m> の作用が固有だからであり、<m>\mathbb{R}/\mathbb{Q}</m> が潰れるのは <m>\mathbb{Q}</m> の作用が固有でないからである。</p>
+<p><strong>閉写像の場合。</strong><m>q</m> が閉写像であるときにも、似た判定がある。コンパクトハウスドルフ空間の商がハウスドルフになる条件は、同値関係が閉集合であることと同値である。<span class="yogo-hl">この場合、商は再びコンパクトハウスドルフになり、したがって正規である</span>（第20章）。CW複体の構成が破綻なく進むのは、この事実に支えられている。</p>
+<p><strong>まとめると。</strong>商を取るときに確かめるべきは、次の三点である。同値類が閉であるか。商写像が開写像か閉写像か。同値関係が積空間の閉集合か。<em>三つとも満たされれば、良い空間の商は良い空間である。</em></p>
+</div>
+
+<div class="lv3">
+<h4>商は積と可換でない</h4>
+<p>位相空間の構成には、部分・積・商・和の四つがある。<em>これらは互いに可換だろうか。</em>答えは「たいてい可換だが、商と積は違う」である。</p>
+<p><strong>問題の所在。</strong><m>q \colon X \to Y</m> を商写像、<m>Z</m> を任意の空間とする。</p>
+<M>q \times \mathrm{id}_Z \colon X \times Z \to Y \times Z</M>
+<p>は商写像か。<span class="yogo-hl">一般には違う。</span>連続な全射ではあり、商位相より弱い位相を与えるが、一致するとは限らない。</p>
+<p><strong>反例の構造。</strong>ドウディ <span class="orig">Dowker</span> による古典的な例がある。<m>X = \mathbb{Q}</m> から、整数全体を一点に潰した商を <m>Y</m> とし、<m>Z = \mathbb{Q}</m> とすると、<m>q \times \mathrm{id}</m> は商写像にならない。<em>原因は、積を取ったときに「対角線方向の近づき方」が新たに生じることにある。</em>一点に潰された像のまわりで、二つの座標が連動して近づく道筋を、商位相が捉えきれない。</p>
+<p><strong>いつ可換になるか。</strong>ホワイトヘッド <span class="orig">Whitehead</span> の定理が答えを与える。<m>Z</m> が局所コンパクトハウスドルフならば、<m>q \times \mathrm{id}_Z</m> は商写像である。</p>
+<p>証明の鍵は、局所コンパクト性が「点のまわりにコンパクトな近傍が取れる」ことを保証する点にある。<em>コンパクト性のおかげで、対角線方向の近づき方を有限個の場合に還元できる。</em><span class="yogo-hl">第22章で局所コンパクト性を扱うとき、この定理に戻る。</span></p>
+<p><strong>なぜこれが困るのか。</strong>第8章の★★★で述べた <m>\mathbf{Top}</m> のデカルト閉性の不足と、これは同じ現象である。実際、</p>
+<M>\text{積が商を保つ} \iff \text{関数空間の随伴が働く}</M>
+<p>という関係がある。<em>どちらの不便も、局所コンパクト性を仮定すると消える。</em>そしてどちらも、コンパクト生成空間の圏に移れば一般に解決する。</p>
+<p><strong>代数的位相幾何学での帰結。</strong>ホモトピー論では、商と積を自由に交換したい場面が絶えず出てくる。商空間の族を積で貼り合わせ、さらに商を取るといった構成が日常的だからである。<span class="yogo-hl">コンパクト生成空間の圏が標準になったのは、この交換可能性を保証するためである。</span></p>
+<p>本書は解析学へ向かうので、この方向には進まない。だが「良い構成をしたつもりが、細部で破綻する」という経験は、位相空間という枠組みの限界を知るうえで有用である。<em>第11章で積位相を扱うとき、同種の慎重さが別の形で必要になる。</em></p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li><m>[0,1]</m> で <m>0 \sim 1</m> とした商空間が <m>S^1</m> と同相であることを、<ref t="thm-sho-fuhen"/> を使って示せ。</li>
+<li>商写像が必ずしも開写像でない例を挙げよ。</li>
+<li>飽和集合の合併・交叉・補集合が再び飽和であることを示せ。</li>
+<li><m>\mathbb{R}/\mathbb{Z}</m> が円と同相であることを示せ。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li>群 <m>G</m> が同相写像として作用するとき、商写像が開写像であることを示せ。<span class="haiten">（10点）</span></li>
+<li><ref t="cex-sho-hausdorff"/> において <m>\mathbb{R}/\mathbb{Q}</m> が密着位相をもつことを、飽和な開集合の性質から示せ。<span class="haiten">（20点）</span></li>
+<li>商写像 <m>q</m> が開写像のとき、商がハウスドルフであることと、同値関係が <m>X \times X</m> で閉であることが同値であることを示せ。<span class="haiten">（25点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li>メビウスの帯が向きづけ不可能であることを、位相的な言葉で述べ、トーラスとの違いを説明せよ。<span class="haiten">（25点）</span></li>
+<li>コンパクトハウスドルフ空間の商がハウスドルフになる条件を述べ、そのとき商が正規になることを示せ。<span class="haiten">（30点）</span></li>
+</ol>
+</div>
+</div>
+<nav class="chnav">
+<a class="prev" href="ch09.html">← 第9章　部分空間と相対位相</a>
+<a class="next" href="ch11.html">第11章　積空間——なぜ箱位相ではないのか →</a>
+</nav>
+</article>
+</main>
+<footer class="site">
+  <p>位相・解析大全　学部から大学院まで、三層で読む位相空間論と解析学</p>
+  <p class="small">本文・図版とも本書のために作成したものです。数式は MathJax でベクタ化して組んでいます。</p>
+</footer>
+</body>
+</html>

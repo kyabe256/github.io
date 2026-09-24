@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第73章 コンパクト作用素｜位相・解析大全</title>
+<meta name="description" content="位相・解析大全　第73章　コンパクト作用素">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;600&display=swap">
+<link rel="stylesheet" href="web.css">
+</head>
+<body>
+<header class="site">
+  <a class="site-title" href="index.html">位相・解析大全</a>
+  <nav class="site-nav">
+    <a href="index.html">目次</a>
+    <a href="isou-kaiseki-taizen.pdf">PDF版</a>
+  </nav>
+</header>
+<main>
+<article class="chapter">
+<p class="part-label">第IX部　関数解析の基本定理</p>
+<h1><span class="ch-num">第73章</span>コンパクト作用素</h1>
+<nav class="chnav">
+<a class="prev" href="ch72.html">← 第72章　凸性とKrein–Milmanの定理</a>
+<a class="next" href="ch74.html">第74章　有界作用素とスペクトル →</a>
+</nav>
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>どんな作用素なら、有限次元のように扱えるのか。</li>
+<li>フレドホルムの択一定理は、線型代数の何を無限次元へ延ばしたものか。</li>
+<li>コンパクト作用素のスペクトルは、なぜ離散的なのか。</li>
+</ul>
+</div>
+
+<h3 id="s73-1">コンパクト作用素</h3>
+
+<p>第63章で、無限次元では単位球がコンパクトでないと見た。<em>コンパクト性を取り戻す第二の道が、作用素のほうに条件を課すことである。</em></p>
+
+<div class="teigi" id="def-compact-sayoso">
+<h4>コンパクト作用素</h4>
+<p class="no-indent"><m>T\in B(E,F)</m> が<strong>コンパクト</strong>であるとは、<m>T(B_E)</m> が <m>F</m> で相対コンパクト（閉包がコンパクト）であることをいう。</p>
+<p>同値な言い換え——<em>有界列 <m>(x_n)</m> について、<m>(Tx_n)</m> が収束部分列をもつ。</em></p>
+<p><m>E</m> から <m>F</m> へのコンパクト作用素の全体を <m>K(E,F)</m> と書く。</p>
+</div>
+
+<div class="teiri" data-kind="命題" id="prop-compact-kihon">
+<h4>基本性質</h4>
+<p class="no-indent">（1）<m>K(E,F)</m> は <m>B(E,F)</m> の閉部分空間である（<m>F</m> 完備のとき）。<br>
+（2）有限階作用素（値域が有限次元）はコンパクト。<br>
+（3）<m>T</m> コンパクト、<m>S</m> 有界なら <m>ST</m> と <m>TS</m> はコンパクト（<strong>イデアル</strong>）。<br>
+（4）<m>T</m> がコンパクトなら <m>T^*</m> もコンパクト（シャウダー）。<br>
+（5）<m>E</m> が無限次元なら、恒等作用素 <m>I</m> はコンパクトでない。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">（1）<m>T_n\to T</m>（作用素ノルム）、各 <m>T_n</m> コンパクトとする。<m>T(B_E)</m> が全有界であることを示せばよい（<m>F</m> 完備）。</p>
+<p><em><m>\|T-T_n\|<\varepsilon/2</m> を取り、<m>T_n(B_E)</m> の有限 <m>\varepsilon/2</m>-網を使う。</em><span class="yogo-hl">第29章の「全有界 <m>+</m> 完備 <m>=</m> コンパクト」がここで効く。</span></p>
+<p>（5）<ref t="thm-riesz-compact"/>（リースの定理）そのもの。</p>
+</div>
+
+<div class="rei" id="rei-compact-sayoso-rei">
+<h4>コンパクト作用素の例</h4>
+<p class="no-indent"><strong>積分作用素。</strong><m>(Tf)(x)=\int_0^1 k(x,y)f(y)\,dy</m>、<m>k\in L^2([0,1]^2)</m>。<em><m>L^2\to L^2</m> でコンパクト（ヒルベルト–シュミット作用素）。</em></p>
+<p><strong>対角作用素。</strong><m>\ell^2</m> で <m>T(x)=(\lambda_nx_n)</m>。<em><m>\lambda_n\to0</m> のときコンパクト。</em></p>
+<p><strong>埋め込み。</strong><m>C^1[0,1]\hookrightarrow C[0,1]</m> はコンパクト（アスコリ–アルツェラ、第95章）。<em>第88章のレリッヒ–コンドラショフの定理も同じ型である。</em></p>
+<p><strong>コンパクトでない例。</strong>シフト作用素 <m>S(x_1,x_2,\ldots)=(0,x_1,x_2,\ldots)</m>。<em>等距離なので <m>S(B)</m> は全有界でない。</em></p>
+</div>
+
+<div class="chui">
+<h4>近似性質</h4>
+<p class="no-indent"><ref t="prop-compact-kihon"/>（1）（2）より、<em>有限階作用素のノルム極限はコンパクトである</em>。</p>
+<p><span class="yogo-hl">逆が成り立つか——これが「近似性質」の問題である。</span></p>
+<p>ヒルベルト空間では成り立つ（下の★★）。<em>一般のバナッハ空間では、エンフロの反例（一九七三年、第65章★★★）により偽である。</em></p>
+</div>
+
+<h3 id="s73-2">リース–シャウダーの理論</h3>
+
+<div class="teiri" id="thm-riesz-schauder">
+<h4>リース–シャウダーの定理</h4>
+<p class="no-indent"><m>E</m> をバナッハ空間、<m>K\in K(E)</m>、<m>T=I-K</m> とする。</p>
+<p class="no-indent">（1）<m>\ker T</m> は有限次元。<br>
+（2）<m>\mathrm{ran}\,T</m> は閉。<br>
+（3）<m>\dim\ker T = \dim(E/\mathrm{ran}\,T)</m>（<strong>指数が <m>0</m></strong>）。<br>
+（4）<m>\ker T=\{0\}</m> であることと <m>\mathrm{ran}\,T=E</m> であることは同値。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">（1）<m>\ker T</m> の単位球は <m>K</m> で自分自身に写る（<m>x=Kx</m> だから）。<em>相対コンパクトなので、リースの定理より <m>\ker T</m> は有限次元。</em></p>
+<p>（2）<m>\ker T</m> は有限次元なので補空間 <m>M</m> をもつ（第63章★★）。<m>T|_M</m> は単射。</p>
+<p><em>下からの評価 <m>\|Tx\|\ge c\|x\|</m>（<m>x\in M</m>）を示せばよい</em>（第69章★★）。そうでなければ <m>\|x_n\|=1</m>、<m>Tx_n\to0</m> なる列がある。<m>K</m> コンパクトより部分列で <m>Kx_{n_k}\to y</m>、すると <m>x_{n_k}=Tx_{n_k}+Kx_{n_k}\to y</m>。</p>
+<p><m>\|y\|=1</m>、<m>y\in M</m>（閉）、<m>Ty=0</m> で単射性に反する。</p>
+<p>（4）<m>\Rightarrow</m>。<m>\mathrm{ran}\,T\subsetneq E</m> と仮定すると、<m>E\supsetneq TE\supsetneq T^2E\supsetneq\cdots</m> が真の減少列になる（<m>T</m> 単射だから）。</p>
+<p>各 <m>T^nE</m> は閉（（2）を繰り返す）。リースの補題（<ref t="lem-riesz"/>）で <m>x_n\in T^nE</m>、<m>\|x_n\|=1</m>、<m>\mathrm{dist}(x_n,T^{n+1}E)\ge1/2</m> を取る。</p>
+<p><em><m>n>m</m> について <m>Kx_m-Kx_n = x_m - (Tx_m+x_n-Tx_n)</m> で、括弧の中は <m>T^{m+1}E</m> に入る。</em><span class="yogo-hl">よって <m>\|Kx_m-Kx_n\|\ge1/2</m> で、<m>K</m> のコンパクト性に反する。</span></p>
+</div>
+
+<div class="teiri" data-kind="系" id="cor-fredholm">
+<h4>フレドホルムの択一定理</h4>
+<p class="no-indent"><m>K\in K(E)</m> とする。方程式 <m>x-Kx=y</m> について、次のいずれか一方だけが成り立つ。</p>
+<p class="no-indent">（甲）どの <m>y</m> についても解が一意に存在する。<br>
+（乙）斉次方程式 <m>x=Kx</m> が非自明な解をもつ。その場合、解の空間は有限次元で、<m>x-Kx=y</m> が解をもつ条件は</p>
+<M>\varphi(y)=0 \qquad (\forall\varphi\in\ker(I-K^*))</M>
+</div>
+
+<div class="chui">
+<h4>線型代数との対応</h4>
+<p class="no-indent"><span class="yogo-hl">有限次元では「単射 <m>\iff</m> 全射」が成り立った。無限次元では一般に成り立たないが、<m>I-\text{コンパクト}</m> という形の作用素には成り立つ。</span></p>
+<p><em>シフト作用素 <m>S</m> は単射だが全射でない。</em><m>I-S</m> はコンパクトでないので、この定理の外にある。</p>
+<p>第69章★★の閉値域定理が、ここで具体的な形をもつ。</p>
+</div>
+
+<h3 id="s73-3">スペクトル</h3>
+
+<div class="teiri" id="thm-compact-spectrum">
+<h4>コンパクト作用素のスペクトル</h4>
+<p class="no-indent"><m>E</m> を無限次元バナッハ空間、<m>K\in K(E)</m> とする。</p>
+<p class="no-indent">（1）<m>0\in\sigma(K)</m>（<m>K</m> は可逆でない）。<br>
+（2）<m>\lambda\ne0</m> について、<m>\lambda\in\sigma(K)</m> であることと <m>\lambda</m> が固有値であることは同値。<br>
+（3）固有値の全体は高々可算で、<m>0</m> 以外に集積点をもたない。<br>
+（4）各 <m>\lambda\ne0</m> の固有空間は有限次元。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">（2）<m>\lambda I-K = \lambda(I-K/\lambda)</m> に <ref t="thm-riesz-schauder"/>（4）を使う。</p>
+<p>（3）<m>|\lambda_n|\ge\delta>0</m> なる固有値が無限個あるとする。固有ベクトル <m>e_n</m> を取り、<m>M_n=\mathrm{span}\{e_1,\ldots,e_n\}</m> とおく。<em>異なる固有値の固有ベクトルは一次独立なので、真の増加列。</em></p>
+<p>リースの補題で <m>x_n\in M_n</m>、<m>\|x_n\|=1</m>、<m>\mathrm{dist}(x_n,M_{n-1})\ge1/2</m> を取る。<m>n>m</m> について</p>
+<M>Kx_n - Kx_m = \lambda_nx_n - \big((\lambda_nI-K)x_n + Kx_m\big)</M>
+<p class="no-indent"><em>括弧の中は <m>M_{n-1}</m> に入る</em>（<m>(\lambda_nI-K)M_n\subseteq M_{n-1}</m> だから）。<span class="yogo-hl">よって <m>\|Kx_n-Kx_m\|\ge|\lambda_n|/2\ge\delta/2</m> で、コンパクト性に反する。</span></p>
+</div>
+
+<figure id="fig73-1">
+<svg viewBox="0 0 470 272" width="470" height="272" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">スペクトルは、原点に集まる点列になる</text>
+
+  <rect x="14" y="26" width="218" height="122" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+  <text x="24" y="42" font-size="7" font-weight="700" fill="#1e4a41">コンパクト作用素</text>
+  <line x1="34" y1="98" x2="212" y2="98" stroke="#8a8a88" stroke-width="0.7"/>
+  <line x1="123" y1="56" x2="123" y2="140" stroke="#8a8a88" stroke-width="0.7"/>
+  <circle cx="123" cy="98" r="3" fill="#a03b2e"/>
+  <text x="123" y="112" font-size="6" text-anchor="middle" fill="#8c2f1e">0</text>
+  <g fill="#2f6b5f">
+    <circle cx="196" cy="70" r="2.4"/><circle cx="176" cy="118" r="2.4"/><circle cx="160" cy="80" r="2.4"/>
+    <circle cx="148" cy="112" r="2.4"/><circle cx="140" cy="86" r="2.4"/><circle cx="134" cy="106" r="2.4"/>
+    <circle cx="130" cy="92" r="2"/><circle cx="127.5" cy="103" r="1.8"/><circle cx="125.8" cy="95" r="1.6"/>
+    <circle cx="124.8" cy="100" r="1.4"/><circle cx="124.2" cy="97" r="1.2"/>
+  </g>
+  <text x="24" y="136" font-size="6.2" fill="#1e4a41">固有値は高々可算、0 以外に集積しない</text>
+
+  <rect x="238" y="26" width="218" height="122" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+  <text x="248" y="42" font-size="7" font-weight="700" fill="#8c2f1e">一般の有界作用素</text>
+  <line x1="258" y1="98" x2="436" y2="98" stroke="#8a8a88" stroke-width="0.7"/>
+  <line x1="347" y1="56" x2="347" y2="140" stroke="#8a8a88" stroke-width="0.7"/>
+  <circle cx="347" cy="98" r="30" fill="#fdf6f4" stroke="#a03b2e" stroke-width="1.4"/>
+  <text x="347" y="76" font-size="6" text-anchor="middle" fill="#8c2f1e">円板全体が</text>
+  <text x="347" y="86" font-size="6" text-anchor="middle" fill="#8c2f1e">スペクトル</text>
+  <text x="248" y="136" font-size="6.2" fill="#8c2f1e">シフト作用素——固有値が一つもないこともある</text>
+
+  <rect x="14" y="158" width="216" height="106" rx="4" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="24" y="173" font-size="7.6" font-weight="700" fill="#1e4a41">I − K は有限次元のようにふるまう</text>
+  <text x="24" y="190" font-size="6.6" fill="#1e4a41">ker は有限次元</text>
+  <text x="24" y="202" font-size="6.6" fill="#1e4a41">値域は閉</text>
+  <text x="24" y="214" font-size="6.6" fill="#1e4a41">単射　⇔　全射</text>
+  <text x="24" y="231" font-size="6.4" fill="#6a6a68">有限次元では当たり前のことが、無限次元では</text>
+  <text x="24" y="242" font-size="6.4" fill="#6a6a68">一般に成り立たない。I − K だけが例外</text>
+  <text x="24" y="256" font-size="6.4" fill="#8c2f1e">シフト作用素は単射だが全射でない</text>
+
+  <rect x="240" y="158" width="216" height="106" rx="4" fill="#f4f1ea" stroke="#8a6b2c"/>
+  <text x="250" y="173" font-size="7.6" font-weight="700" fill="#5a4520">証明に繰り返し使う道具</text>
+  <text x="250" y="190" font-size="6.6" fill="#5a4520">リースの補題（第63章）</text>
+  <text x="250" y="201" font-size="6.4" fill="#6a6a68">——距離 1/2 以上の単位ベクトルを取る</text>
+  <text x="250" y="216" font-size="6.6" fill="#5a4520">コンパクト性との矛盾を導く</text>
+  <text x="250" y="227" font-size="6.4" fill="#6a6a68">——収束部分列があるはずなのに、離れている</text>
+  <text x="250" y="243" font-size="6.4" fill="#8c2f1e">この論法が、リース–シャウダーの四つの主張と</text>
+  <text x="250" y="254" font-size="6.4" fill="#8c2f1e">スペクトルの離散性を、すべて生み出している</text>
+</svg>
+<figcaption data-ch="73">コンパクト作用素の非零スペクトルは固有値だけで、原点以外に集積しない。I − K は核が有限次元で値域が閉、単射と全射が同値になる。証明はどれもリースの補題とコンパクト性の矛盾による。</figcaption>
+</figure>
+
+<div class="lv2">
+<h4>ヒルベルト空間での特異値分解</h4>
+<p>ヒルベルト空間では、コンパクト作用素の構造が完全にわかる。</p>
+<p><strong>定理（特異値分解）。</strong><m>K\in K(H_1,H_2)</m> とすると、正規直交系 <m>\{e_n\}\subseteq H_1</m>、<m>\{f_n\}\subseteq H_2</m> と <m>s_n\downarrow0</m> があって</p>
+<M>Kx = \sum_n s_n\langle x,e_n\rangle f_n</M>
+<p class="no-indent"><em><m>s_n</m> を<strong>特異値</strong>という。</em>第76章のコンパクト自己共役作用素のスペクトル定理を <m>K^*K</m> に適用して得る。</p>
+<p><strong>近似性質。</strong>この表示から、<em><m>K_N x=\sum_{n\le N}s_n\langle x,e_n\rangle f_n</m> は有限階で <m>\|K-K_N\|=s_{N+1}\to0</m></em>。</p>
+<p><span class="yogo-hl">ヒルベルト空間では、コンパクト作用素は必ず有限階作用素のノルム極限である。</span>エンフロの反例は、ヒルベルト空間では起こらない。</p>
+<p><strong>作用素イデアル。</strong>特異値の減衰の速さで、コンパクト作用素を分類できる。</p>
+<p><em>ヒルベルト–シュミット類</em>——<m>\sum_n s_n^2<\infty</m>。<m>\|K\|_{HS}^2=\sum_n\|Ke_n\|^2</m>（基底によらない）。</p>
+<p><em>トレース類</em>——<m>\sum_n s_n<\infty</m>。<m>\mathrm{tr}(K)=\sum_n\langle Ke_n,e_n\rangle</m> が定義できる。</p>
+<p>一般に <m>S_p</m>（<m>\sum s_n^p<\infty</m>）を<em>シャッテン類</em>という。<span class="yogo-hl"><m>\ell^p</m> の作用素版である。</span></p>
+<p><strong>双対。</strong><m>K(H)^* = S_1</m>（トレース類）、<m>S_1^* = B(H)</m>。<em>第66章の <m>c_0^*=\ell^1</m>、<m>(\ell^1)^*=\ell^\infty</m> と同じ構図である。</em></p>
+<p><strong>積分作用素との対応。</strong><m>k\in L^2([0,1]^2)</m> の定める積分作用素は、ちょうどヒルベルト–シュミット類に入り</p>
+<M>\|T_k\|_{HS} = \|k\|_{L^2}</M>
+<p class="no-indent"><em>核関数の <m>L^2</m> ノルムが、そのまま作用素のノルムになる。</em>第76章で、この対応を使って積分方程式を解く。</p>
+</div>
+
+<div class="lv3">
+<h4>フレドホルム作用素と指数——位相不変量としての解析</h4>
+<p><strong>フレドホルム作用素。</strong><m>T\in B(E,F)</m> が<em>フレドホルム</em>であるとは、<m>\dim\ker T<\infty</m> かつ <m>\dim(F/\mathrm{ran}\,T)<\infty</m> であることをいう（値域の閉性は自動）。</p>
+<M>\mathrm{ind}\,T = \dim\ker T - \dim(F/\mathrm{ran}\,T)</M>
+<p class="no-indent">を<strong>指数</strong>という。<ref t="thm-riesz-schauder"/>（3）は「<m>I-K</m> の指数は <m>0</m>」と読める。</p>
+<p><strong>指数の安定性。</strong>二つの重要な性質がある。</p>
+<p><em>コンパクト摂動で不変</em>——<m>\mathrm{ind}(T+K)=\mathrm{ind}\,T</m>（<m>K</m> コンパクト）。</p>
+<p><em>連続な変形で不変</em>——指数は <m>T</m> の局所定数関数である。</p>
+<p><span class="yogo-hl">指数は「位相的な」量であって、微小な摂動では変わらない。</span></p>
+<p><strong>例。</strong>シフト作用素 <m>S</m> は <m>\ker S=\{0\}</m>、<m>\mathrm{ran}\,S</m> の余次元 <m>1</m> なので <m>\mathrm{ind}\,S=-1</m>。<em>随伴 <m>S^*</m> の指数は <m>+1</m>。</em></p>
+<p>指数が <m>0</m> でない作用素があるので、<em>シフトは <m>I-\text{コンパクト}</m> の形に書けない</em>。</p>
+<p><strong>アティヤ–シンガーの指数定理。</strong>コンパクト多様体上の楕円型微分作用素について</p>
+<M>\text{解析的指数} = \text{位相的指数}</M>
+<p class="no-indent"><em>左辺は解の空間の次元の差、右辺は多様体と作用素の記号から決まる位相不変量（特性類の積分）。</em></p>
+<p><span class="yogo-hl">「微分方程式の解の個数」が、空間の位相だけで決まる。</span>二〇世紀の解析学のもっとも深い定理の一つである。</p>
+<p><strong>本書の位置づけ。</strong>第I部から第V部で位相を、第VI部から第IX部で解析を組み立ててきた。<em>指数定理は、その二つが最も劇的に交わる地点にある。</em></p>
+<p>第97章で全体の地図を描くとき、この方向を「本書の外へ続く道」として示す。</p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li>対角作用素 <m>T(x)=(\lambda_nx_n)</m> がコンパクトであることと <m>\lambda_n\to0</m> が同値であることを示せ。</li>
+<li>有限階作用素がコンパクトであることを示せ。</li>
+<li>シフト作用素がコンパクトでないことを示せ。</li>
+<li>コンパクト作用素の合成がコンパクトであることを示せ。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li><ref t="prop-compact-kihon"/>（1）を、全有界性を使って示せ。<span class="haiten">（30点）</span></li>
+<li><ref t="thm-riesz-schauder"/>（1）（2）を示せ。<span class="haiten">（35点）</span></li>
+<li><ref t="thm-riesz-schauder"/>（4）を、リースの補題を使って示せ。<span class="haiten">（40点）</span></li>
+<li><ref t="thm-compact-spectrum"/>（3）を示せ。<span class="haiten">（35点）</span></li>
+<li>ヒルベルト–シュミット作用素がコンパクトであることを示せ。<span class="haiten">（30点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li>シャウダーの定理（<m>T</m> コンパクトなら <m>T^*</m> コンパクト）を示せ。<span class="haiten">（45点）</span></li>
+<li>シフト作用素の指数が <m>-1</m> であることを確かめ、コンパクト摂動で不変であることを示せ。<span class="haiten">（40点）</span></li>
+<li>指数が連続な変形で不変であることを示せ。<span class="haiten">（45点）</span></li>
+</ol>
+</div>
+</div>
+<nav class="chnav">
+<a class="prev" href="ch72.html">← 第72章　凸性とKrein–Milmanの定理</a>
+<a class="next" href="ch74.html">第74章　有界作用素とスペクトル →</a>
+</nav>
+</article>
+</main>
+<footer class="site">
+  <p>位相・解析大全　学部から大学院まで、三層で読む位相空間論と解析学</p>
+  <p class="small">本文・図版とも本書のために作成したものです。数式は MathJax でベクタ化して組んでいます。</p>
+</footer>
+</body>
+</html>

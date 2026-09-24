@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第63章 Banach空間｜位相・解析大全</title>
+<meta name="description" content="位相・解析大全　第63章　Banach空間">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;600&display=swap">
+<link rel="stylesheet" href="web.css">
+</head>
+<body>
+<header class="site">
+  <a class="site-title" href="index.html">位相・解析大全</a>
+  <nav class="site-nav">
+    <a href="index.html">目次</a>
+    <a href="isou-kaiseki-taizen.pdf">PDF版</a>
+  </nav>
+</header>
+<main>
+<article class="chapter">
+<p class="part-label">第VIII部　関数空間</p>
+<h1><span class="ch-num">第63章</span>Banach空間</h1>
+<nav class="chnav">
+<a class="prev" href="ch62.html">← 第62章　稠密性と近似</a>
+<a class="next" href="ch64.html">第64章　Hilbert空間と直交分解 →</a>
+</nav>
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>ノルムは、位相と線型構造をどうつなぐのか。</li>
+<li>有限次元と無限次元は、どこで決定的に分かれるのか。</li>
+<li>有界作用素の空間は、どんな空間なのか。</li>
+</ul>
+</div>
+
+<h3 id="s63-1">ノルム空間</h3>
+
+<div class="teigi" id="def-norm">
+<h4>ノルム空間・バナッハ空間</h4>
+<p class="no-indent">実または複素ベクトル空間 <m>E</m> 上の関数 <m>\|\cdot\| \colon E\to[0,\infty)</m> が<strong>ノルム</strong>であるとは、</p>
+<M>\|x\|=0 \iff x=0, \qquad \|\lambda x\|=|\lambda|\,\|x\|, \qquad \|x+y\|\le\|x\|+\|y\|</M>
+<p class="no-indent">を満たすことをいう。<m>d(x,y)=\|x-y\|</m> が定める距離について完備なとき、<m>E</m> を<strong>バナッハ空間</strong>という。</p>
+</div>
+
+<div class="chui">
+<h4>位相と線型構造の噛み合い</h4>
+<p class="no-indent">ノルムが定める位相では、<em>加法とスカラー倍が連続</em>である。<span class="yogo-hl">これを満たす位相ベクトル空間のなかで、ノルムで距離化できるものがバナッハ空間である。</span></p>
+<p>さらに<em>平行移動で不変</em>である——<m>d(x+z,y+z)=d(x,y)</m>。第30章の一様空間の言葉でいえば、加法群としての一様構造をもつ。</p>
+<p>したがって<em>近傍系を原点のまわりだけで調べれば十分</em>である。これが線型な設定の大きな利点になる。</p>
+</div>
+
+<div class="rei" id="rei-banach-rei">
+<h4>バナッハ空間の例</h4>
+<p class="no-indent"><strong><m>L^p(\mu)</m></strong>（<m>1\le p\le\infty</m>）。第61章で完備性を示した。</p>
+<p><strong><m>C(K)</m></strong>（<m>K</m> コンパクト、一様ノルム）。一様収束する連続関数列の極限は連続（<ref t="thm-ichiyou-renzoku-hozon"/>）。</p>
+<p><strong><m>C_0(X)</m></strong>（<m>X</m> 局所コンパクト、無限遠で消える連続関数）。</p>
+<p><strong><m>M(X)</m></strong>（有限符号付測度、全変動ノルム、第57章★★）。</p>
+<p><strong><m>\ell^p</m></strong>、<strong><m>c_0</m></strong>（<m>0</m> に収束する数列）。</p>
+<p><em>完備でない例。</em><m>C[0,1]</m> に <m>\|\cdot\|_1</m> を入れたもの（第51章）。多項式に一様ノルムを入れたもの。</p>
+</div>
+
+<h3 id="s63-2">有限次元と無限次元</h3>
+
+<div class="teiri" id="thm-yugen-jigen">
+<h4>有限次元ノルム空間</h4>
+<p class="no-indent"><m>E</m> を <m>n</m> 次元ノルム空間とする。</p>
+<p class="no-indent">（1）<m>E</m> 上のどの二つのノルムも同値である（互いに定数倍で押さえ合う）。<br>
+（2）<m>E</m> は <m>\mathbb{R}^n</m>（または <m>\mathbb{C}^n</m>）と同相な位相をもち、完備である。<br>
+（3）閉単位球はコンパクトである。<br>
+（4）<m>E</m> の線型部分空間はすべて閉である。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">（1）基底 <m>e_1,\ldots,e_n</m> を取り、<m>\|x\|_1=\sum|a_i|</m>（<m>x=\sum a_ie_i</m>）と比べる。</p>
+<p><m>\|x\| \le \sum|a_i|\|e_i\| \le C\|x\|_1</m> は三角不等式から。</p>
+<p>逆向き。<m>S=\{x : \|x\|_1=1\}</m> は <m>\mathbb{R}^n</m> の閉有界集合としてコンパクト。<em><m>x\mapsto\|x\|</m> は <m>\|\cdot\|_1</m> について連続（上の不等式から）なので、<m>S</m> 上で最小値 <m>c>0</m> を取る</em>（<m>0\notin S</m> だから <m>c>0</m>）。よって <m>\|x\|\ge c\|x\|_1</m>。</p>
+<p>（2）（3）（4）は（1）と <m>\mathbb{R}^n</m> の性質から従う。</p>
+</div>
+
+<div class="teiri" data-kind="補題" id="lem-riesz">
+<h4>リースの補題</h4>
+<p class="no-indent"><m>E</m> をノルム空間、<m>F\subsetneq E</m> を閉部分空間、<m>0<\theta<1</m> とする。このとき <m>\|x_0\|=1</m> かつ</p>
+<M>\mathrm{dist}(x_0,F) = \inf_{y\in F}\|x_0-y\| \ \ge\ \theta</M>
+<p class="no-indent">なる <m>x_0\in E</m> が存在する。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><m>x\in E\setminus F</m> を取り、<m>d=\mathrm{dist}(x,F)>0</m>（<m>F</m> が閉だから）。<m>d\le\|x-y_0\|\le d/\theta</m> なる <m>y_0\in F</m> を取る。</p>
+<p><m>x_0=\dfrac{x-y_0}{\|x-y_0\|}</m> とおく。<m>y\in F</m> について</p>
+<M>\|x_0-y\| = \frac{\|x-y_0-\|x-y_0\|y\|}{\|x-y_0\|} \ \ge\ \frac{d}{d/\theta} = \theta</M>
+<p class="no-indent"><em>分子の中身は <m>x</m> から <m>F</m> の元を引いた形なので <m>d</m> 以上。</em></p>
+</div>
+
+<div class="teiri" id="thm-riesz-compact">
+<h4>リースの定理</h4>
+<p class="no-indent">ノルム空間 <m>E</m> の閉単位球がコンパクトであることと、<m>E</m> が有限次元であることは同値である。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><m>\Leftarrow</m> は <ref t="thm-yugen-jigen"/>（3）。</p>
+<p><m>\Rightarrow</m>。<m>E</m> が無限次元とする。<m>x_1</m> を単位ベクトルとし、<m>F_1=\mathrm{span}\{x_1\}</m>（有限次元なので閉）。<ref t="lem-riesz"/>（<m>\theta=1/2</m>）で <m>\|x_2\|=1</m>、<m>\mathrm{dist}(x_2,F_1)\ge1/2</m> なる <m>x_2</m> を取る。</p>
+<p>これを繰り返すと、<em>互いの距離が <m>1/2</m> 以上の単位ベクトルの列 <m>(x_n)</m> が得られる。</em><span class="yogo-hl">この列は収束部分列をもたないので、単位球はコンパクトでない。</span></p>
+</div>
+
+<div class="chui">
+<h4>第46章の壁</h4>
+<p class="no-indent">第50章★★★で「関数空間ではコンパクト性がない」と述べたのは、この定理のことである。</p>
+<p><em>第46章の最大値の定理は、コンパクト性に依拠していた。</em><span class="yogo-hl">無限次元では、有界閉集合がコンパクトにならないので、最大値の存在が保証されない。</span></p>
+<p>回避の道は二つある。<em>位相を弱める</em>（第70章・第71章）か、<em>作用素に条件を課す</em>（第73章のコンパクト作用素、第95章の同程度連続性）か。</p>
+</div>
+
+<h3 id="s63-3">有界線型作用素</h3>
+
+<div class="teigi" id="def-yukai-sayoso">
+<h4>有界作用素</h4>
+<p class="no-indent">ノルム空間 <m>E,F</m> のあいだの線型写像 <m>T</m> が<strong>有界</strong>であるとは</p>
+<M>\|T\| = \sup_{\|x\|\le1}\|Tx\| < \infty</M>
+<p class="no-indent">となることをいう。<m>E</m> から <m>F</m> への有界作用素の全体を <m>B(E,F)</m> と書く。</p>
+</div>
+
+<div class="teiri" data-kind="命題" id="prop-yukai-renzoku">
+<h4></h4>
+<p class="no-indent">線型写像 <m>T</m> について、次は同値である。</p>
+<p class="no-indent">（1）<m>T</m> は連続。（2）<m>T</m> は <m>0</m> で連続。（3）<m>T</m> は有界。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">（1）から（2）は明らか。</p>
+<p>（2）から（3）。<m>\|Tx\|<1</m>（<m>\|x\|<\delta</m>）なる <m>\delta</m> を取れば <m>\|T\|\le1/\delta</m>。</p>
+<p>（3）から（1）。<m>\|Tx-Ty\|=\|T(x-y)\|\le\|T\|\|x-y\|</m> よりリプシッツ連続。<em><span class="yogo-hl">線型性のおかげで、一点での連続性が一様連続性に格上げされる。</span></em></p>
+</div>
+
+<div class="teiri" id="thm-be-f-kanbi">
+<h4></h4>
+<p class="no-indent"><m>F</m> がバナッハ空間なら、<m>B(E,F)</m> は作用素ノルムについてバナッハ空間である。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><m>(T_n)</m> をコーシー列とすると、各 <m>x</m> で <m>\|T_nx-T_mx\|\le\|T_n-T_m\|\|x\|</m> より <m>(T_nx)</m> はコーシー列。<m>F</m> の完備性から極限 <m>Tx</m> が定まる。</p>
+<p><m>T</m> は線型で、<m>\|T_n-T_m\|<\varepsilon</m>（<m>n,m\ge N</m>）で <m>m\to\infty</m> とすれば <m>\|T_nx-Tx\|\le\varepsilon\|x\|</m>。<em>よって <m>T</m> は有界で <m>\|T_n-T\|\to0</m>。</em></p>
+</div>
+
+<figure id="fig63-1">
+<svg viewBox="0 0 470 274" width="470" height="274" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">無限次元では、単位球に「隙間」が残り続ける</text>
+
+  <rect x="14" y="26" width="218" height="126" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+  <text x="24" y="42" font-size="7" font-weight="700" fill="#1e4a41">有限次元　単位球はコンパクト</text>
+  <circle cx="122" cy="98" r="40" fill="#e6efe9" stroke="#2f6b5f" stroke-width="1.1"/>
+  <g fill="#2f6b5f">
+    <circle cx="122" cy="58" r="1.8"/><circle cx="150" cy="70" r="1.8"/><circle cx="162" cy="98" r="1.8"/>
+    <circle cx="150" cy="126" r="1.8"/><circle cx="122" cy="138" r="1.8"/><circle cx="94" cy="126" r="1.8"/>
+    <circle cx="82" cy="98" r="1.8"/><circle cx="94" cy="70" r="1.8"/>
+    <circle cx="136" cy="61" r="1.8"/><circle cx="158" cy="84" r="1.8"/><circle cx="158" cy="112" r="1.8"/>
+    <circle cx="136" cy="135" r="1.8"/><circle cx="108" cy="135" r="1.8"/><circle cx="86" cy="112" r="1.8"/>
+    <circle cx="86" cy="84" r="1.8"/><circle cx="108" cy="61" r="1.8"/>
+  </g>
+  <text x="24" y="146" font-size="6.2" fill="#6a6a68">どの点列にも収束部分列がある</text>
+
+  <rect x="238" y="26" width="218" height="126" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+  <text x="248" y="42" font-size="7" font-weight="700" fill="#8c2f1e">無限次元　コンパクトでない</text>
+  <circle cx="346" cy="98" r="40" fill="#fdf6f4" stroke="#a03b2e" stroke-width="1.1"/>
+  <g stroke="#a03b2e" stroke-width="0.9">
+    <line x1="346" y1="98" x2="346" y2="58"/>
+    <line x1="346" y1="98" x2="380" y2="77"/>
+    <line x1="346" y1="98" x2="384" y2="108"/>
+    <line x1="346" y1="98" x2="360" y2="134"/>
+    <line x1="346" y1="98" x2="318" y2="133"/>
+    <line x1="346" y1="98" x2="308" y2="108"/>
+  </g>
+  <g fill="#a03b2e">
+    <circle cx="346" cy="58" r="2.2"/><circle cx="380" cy="77" r="2.2"/><circle cx="384" cy="108" r="2.2"/>
+    <circle cx="360" cy="134" r="2.2"/><circle cx="318" cy="133" r="2.2"/><circle cx="308" cy="108" r="2.2"/>
+  </g>
+  <text x="346" y="52" font-size="5.8" text-anchor="middle" fill="#8c2f1e">x₁</text>
+  <text x="392" y="76" font-size="5.8" fill="#8c2f1e">x₂</text>
+  <text x="394" y="110" font-size="5.8" fill="#8c2f1e">x₃</text>
+  <text x="248" y="146" font-size="6.2" fill="#8c2f1e">互いの距離が 1/2 以上の単位ベクトルが、いくらでも取れる</text>
+
+  <rect x="14" y="162" width="216" height="102" rx="4" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="24" y="177" font-size="7.6" font-weight="700" fill="#1e4a41">有限次元で成り立つこと</text>
+  <text x="24" y="194" font-size="6.8" fill="#1e4a41">ノルムはすべて同値</text>
+  <text x="24" y="206" font-size="6.8" fill="#1e4a41">つねに完備</text>
+  <text x="24" y="218" font-size="6.8" fill="#1e4a41">閉単位球がコンパクト</text>
+  <text x="24" y="230" font-size="6.8" fill="#1e4a41">部分空間はすべて閉</text>
+  <text x="24" y="246" font-size="6.6" fill="#8c2f1e">無限次元では、四つとも成り立たない</text>
+  <text x="24" y="257" font-size="6.4" fill="#6a6a68">リースの補題が、三つ目を壊す装置である</text>
+
+  <rect x="240" y="162" width="216" height="102" rx="4" fill="#f4f1ea" stroke="#8a6b2c"/>
+  <text x="250" y="177" font-size="7.6" font-weight="700" fill="#5a4520">コンパクト性を取り戻す三つの道</text>
+  <text x="250" y="194" font-size="6.8" fill="#5a4520">位相を弱める　→　弱*位相（第70・71章）</text>
+  <text x="250" y="207" font-size="6.8" fill="#5a4520">作用素に条件　→　コンパクト作用素（第73章）</text>
+  <text x="250" y="220" font-size="6.8" fill="#5a4520">関数族に条件　→　同程度連続性（第95章）</text>
+  <text x="250" y="237" font-size="6.6" fill="#6a6a68">第46章の最大値の定理が使えないことが、</text>
+  <text x="250" y="248" font-size="6.6" fill="#6a6a68">第IX部以降の主題をほぼ決めている</text>
+  <text x="250" y="260" font-size="6.4" fill="#8c2f1e">——「最良近似は存在するか」に答えるために</text>
+</svg>
+<figcaption data-ch="63">有限次元では閉単位球がコンパクトで、ノルムはすべて同値になる。無限次元ではリースの補題により、互いに離れた単位ベクトルがいくらでも取れる。コンパクト性の回復が、以降の主題になる。</figcaption>
+</figure>
+
+<div class="lv2">
+<h4>商空間・直和・部分空間の補空間</h4>
+<p><strong>商空間。</strong><m>F\subseteq E</m> を閉部分空間とし、<m>E/F</m> に</p>
+<M>\|x+F\| = \inf_{y\in F}\|x-y\| = \mathrm{dist}(x,F)</M>
+<p class="no-indent">と定めると、<em>これはノルムになる</em>（<m>F</m> が閉だから <m>\|x+F\|=0 \Rightarrow x\in F</m>）。</p>
+<p><em><m>E</m> がバナッハなら <m>E/F</m> もバナッハ</em>。証明は「絶対収束する級数が収束する」という判定条件（第61章の演習）を使う。</p>
+<p>商写像 <m>\pi \colon E\to E/F</m> は有界（<m>\|\pi\|\le1</m>）で開写像である。<span class="yogo-hl">第69章の開写像定理は、この性質の一般化である。</span></p>
+<p><strong>直和。</strong><m>E=F\oplus G</m>（代数的な直和、<m>F,G</m> 閉）のとき、射影 <m>P \colon E\to F</m> が有界になるとは限らない。</p>
+<p><em>有界になるとき、<m>F</m> は<strong>補空間をもつ</strong>という。</em>第69章の閉グラフ定理から、<span class="yogo-hl">バナッハ空間では代数的な直和分解が自動的に位相的になる。</span></p>
+<p><strong>補空間をもたない部分空間。</strong><m>c_0 \subseteq \ell^\infty</m> は補空間をもたない（フィリップスの定理）。<em>したがって、閉部分空間がつねに補空間をもつとは限らない。</em></p>
+<p>リンデンシュトラウス–ツァフリーリの定理——<span class="yogo-hl">どの閉部分空間も補空間をもつバナッハ空間は、ヒルベルト空間に同型なものに限る。</span></p>
+<p><em>第64章で見るとおり、ヒルベルト空間では直交補空間がつねに取れる。</em>それがこの定理の内容であり、ヒルベルト空間の特権である。</p>
+<p><strong>有限余次元。</strong><m>\dim(E/F)<\infty</m> なら <m>F</m> はつねに補空間をもつ。<em>有限次元部分空間も同様。</em>困難は無限次元・無限余次元の場合に限られる。</p>
+</div>
+
+<div class="lv3">
+<h4>ノルムを外すと——フレシェ空間と局所凸空間</h4>
+<p>ノルムがなくても、扱える空間がある。<em>解析で必要な空間の多くは、実際ノルム空間でない。</em></p>
+<p><strong>半ノルムの族。</strong><m>C^\infty(\Omega)</m> に <m>p_{K,\alpha}(f)=\sup_{x\in K}|\partial^\alpha f(x)|</m>（<m>K</m> コンパクト）という半ノルムの可算族を入れる。</p>
+<p>これが定める位相は<em>距離化できる</em>（可算族だから）が、<span class="yogo-hl">どの一つのノルムでも定まらない</span>。完備なら<strong>フレシェ空間</strong>という。</p>
+<p><strong>例。</strong><m>C^\infty(\Omega)</m>、第87章のシュワルツ空間 <m>\mathcal{S}(\mathbb{R}^n)</m>、正則関数の空間 <m>\mathcal{O}(\Omega)</m>（広義一様収束、第50章★★）。</p>
+<p><strong>局所凸空間。</strong>半ノルムの族（可算とは限らない）で定まる位相ベクトル空間。<em>第70章の弱位相がその典型である。</em></p>
+<p>コルモゴロフの定理——<span class="yogo-hl">位相ベクトル空間がノルムで定まることと、有界な凸近傍をもつことは同値である。</span></p>
+<p>弱位相では <m>0</m> の近傍がつねに無限次元の部分空間を含むので、有界でない。<em>だから弱位相はノルムで定まらない。</em></p>
+<p><strong>局所凸でない空間。</strong><m>L^p[0,1]</m>（<m>0<p<1</m>）は、<m>d(f,g)=\int|f-g|^p</m> で完備距離空間になるが、<em>局所凸でない</em>。</p>
+<p>さらに驚くべきことに、<span class="yogo-hl"><m>L^p[0,1]</m>（<m>0<p<1</m>）上の連続線型汎関数は <m>0</m> だけである。</span></p>
+<p><em>証明の骨子。</em>どの <m>f</m> も、<m>d(f_i,0)</m> の小さい <m>n</m> 個の関数の平均として書ける（区間を <m>n</m> 等分して <m>f\mathbf{1}_{I_i}\cdot n</m> を取る）。<em>汎関数が連続なら、値も小さくなるしかない。</em></p>
+<p>したがって第IX部のハーン–バナッハの定理が空回りする。<span class="yogo-hl">双対空間が自明だと、関数解析の道具が何も使えない。</span></p>
+<p><strong>局所凸性が要る理由。</strong>ハーン–バナッハの定理（第67章）は、<em>凸集合を超平面で分離する</em>定理である。凸な近傍がないと、分離すべき対象がない。</p>
+<p>だから解析で使う空間は、ほぼ例外なく局所凸である。<em>第VIII部でノルム空間に限るのは、議論を簡単にするためであって、本質的な制限ではない。</em></p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li><m>c_0</m> が <m>\ell^\infty</m> の閉部分空間であることを示せ。</li>
+<li><m>\mathbb{R}^2</m> で <m>\|\cdot\|_1</m>、<m>\|\cdot\|_2</m>、<m>\|\cdot\|_\infty</m> の同値定数を求めよ。</li>
+<li><m>T \colon \ell^2\to\ell^2</m>、<m>(Tx)_n = x_n/n</m> の作用素ノルムを求めよ。</li>
+<li>微分作用素 <m>d/dx</m> が <m>C^1[0,1]\to C[0,1]</m>（どちらも一様ノルム）で有界でないことを示せ。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li><ref t="thm-yugen-jigen"/>（1）を、細部まで示せ。<span class="haiten">（30点）</span></li>
+<li><ref t="lem-riesz"/> を示し、<m>\theta=1</m> に取れない例を挙げよ。<span class="haiten">（30点）</span></li>
+<li><ref t="thm-be-f-kanbi"/> を示せ。<span class="haiten">（25点）</span></li>
+<li>閉部分空間による商がノルム空間になることを示せ。<span class="haiten">（25点）</span></li>
+<li>バナッハ空間の商がバナッハ空間であることを示せ。<span class="haiten">（30点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li><m>L^p[0,1]</m>（<m>0<p<1</m>）上の連続線型汎関数が <m>0</m> だけであることを示せ。<span class="haiten">（45点）</span></li>
+<li><m>C^\infty[0,1]</m> の位相が、どのノルムでも定まらないことを示せ。<span class="haiten">（40点）</span></li>
+<li>有限余次元の閉部分空間が補空間をもつことを示せ。<span class="haiten">（35点）</span></li>
+</ol>
+</div>
+</div>
+<nav class="chnav">
+<a class="prev" href="ch62.html">← 第62章　稠密性と近似</a>
+<a class="next" href="ch64.html">第64章　Hilbert空間と直交分解 →</a>
+</nav>
+</article>
+</main>
+<footer class="site">
+  <p>位相・解析大全　学部から大学院まで、三層で読む位相空間論と解析学</p>
+  <p class="small">本文・図版とも本書のために作成したものです。数式は MathJax でベクタ化して組んでいます。</p>
+</footer>
+</body>
+</html>

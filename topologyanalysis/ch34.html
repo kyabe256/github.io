@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第34章 距離空間は何が特別なのか｜位相・解析大全</title>
+<meta name="description" content="位相・解析大全　第34章　距離空間は何が特別なのか">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;600&display=swap">
+<link rel="stylesheet" href="web.css">
+</head>
+<body>
+<header class="site">
+  <a class="site-title" href="index.html">位相・解析大全</a>
+  <nav class="site-nav">
+    <a href="index.html">目次</a>
+    <a href="isou-kaiseki-taizen.pdf">PDF版</a>
+  </nav>
+</header>
+<main>
+<article class="chapter">
+<p class="part-label">第IV部　連結性・距離空間・距離化</p>
+<h1><span class="ch-num">第34章</span>距離空間は何が特別なのか</h1>
+<nav class="chnav">
+<a class="prev" href="ch33.html">← 第33章　完備距離化可能性とČech完備性</a>
+<a class="next" href="ch35.html">第35章　基数不変量——重み・稠密度・指標 →</a>
+</nav>
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>距離があると仮定するとき、何を仮定しているのか。</li>
+<li>位相空間論の階層のなかで、距離空間はどこにいるのか。</li>
+<li>第VI部以降で距離だけを使うのは、何を捨てることなのか。</li>
+</ul>
+</div>
+
+<h3 id="s34-1">距離空間が満たす条件の全体</h3>
+
+<p>第5章から第33章までに導入した条件を、距離空間について総覧する。</p>
+
+<div class="teiri" id="thm-kyori-souran">
+<h4>距離空間が満たすこと</h4>
+<p class="no-indent">距離空間 <m>(X,d)</m> は次をすべて満たす。</p>
+<p class="no-indent"><strong>分離</strong>　<m>T_1</m>・ハウスドルフ・正則・完全正則・正規・完全正規（<m>T_5</m>）。<br>
+<strong>可算性</strong>　第一可算。<em>第二可算・可分・リンデレーフの三つは互いに同値</em>（一般には別物）。<br>
+<strong>被覆</strong>　パラコンパクト。<em>コンパクト・可算コンパクト・点列コンパクトの三つは互いに同値</em>。<br>
+<strong>基底</strong>　<m>\sigma</m>-局所有限かつ <m>\sigma</m>-離散な基底をもつ。<br>
+<strong>その他</strong>　完備距離化可能なら、チェック完備でベール空間。</p>
+</div>
+
+<p><span class="yogo-hl">「距離空間である」という仮定は、これらすべてを一度に仮定している。</span><em>解析学の定理が使う条件は、その一部にすぎない。</em></p>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">同値になる組が二つあることに注目してほしい。<em>可算性の三つと、コンパクト性の三つである。</em><span class="yogo-hl">距離が「可算な目盛り」を与えることが、どちらの同値の源でもある。</span>第7章で可分と第二可算が一致した理由と、第25章でコンパクト性が一致した理由は同じである。</p>
+</div>
+
+<h3 id="s34-2">何が距離に固有なのか</h3>
+
+<p>逆向きに問う。<em>距離空間の性質のうち、位相からは出ないものは何か。</em>第30章の三層に照らして整理する。</p>
+
+<div class="rei" id="rei-sanso-seiri">
+<h4>三層の振り分け</h4>
+<p class="no-indent"><strong>位相の層</strong>——連続・コンパクト・連結・分離公理・可算公理・次元。<em>同相で保たれる。</em></p>
+<p><strong>一様構造の層</strong>——一様連続・完備・全有界・一様収束。<em>同相では保たれないが、数値を使わずに言える。</em></p>
+<p><strong>距離の層</strong>——リプシッツ連続・ヘルダー連続・有界・直径・測地線・ハウスドルフ次元。<span class="yogo-hl">数値そのものを使う。</span></p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">解析学で使う概念が、三層に散っていることに注意してほしい。<em>第47章の一様連続と一様収束は一様構造の層、第48章の微分は距離の層（差の商を取るので数値が要る）、第46章の中間値定理は位相の層（連結性から出る）。</em></p>
+<p><span class="yogo-hl">どの層の概念かを意識すると、定理の一般化の余地が見える。</span></p>
+</div>
+
+<h3 id="s34-3">距離化定理を振り返る</h3>
+
+<div class="teiri" id="thm-kyorika-matome">
+<h4>距離化の必要十分条件（まとめ）</h4>
+<p class="no-indent"><m>X</m> が距離化可能であることは、次のいずれとも同値である。</p>
+<p class="no-indent">（1）正則ハウスドルフかつ <m>\sigma</m>-局所有限な基底をもつ（ナガタ–スミルノフ、第32章）。<br>
+（2）正則ハウスドルフかつ <m>\sigma</m>-離散な基底をもつ（ビング、第32章）。<br>
+（3）第二可算な場合に限れば、正則ハウスドルフで足りる（ウリゾーン、第31章）。<br>
+（4）パラコンパクトかつ局所距離化可能（第32章の系）。</p>
+</div>
+
+<p>第32章★★★で述べた三つの要素——<em>分離・可算的な近似・局所と大域の整合</em>——が、どの条件にも現れている。</p>
+
+<figure id="fig34-1">
+<svg viewBox="0 0 470 282" width="470" height="282" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">距離空間の位置——階層のどこにいるか</text>
+
+  <rect x="14" y="26" width="442" height="136" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+
+  <rect x="26" y="40" width="418" height="112" rx="4" fill="#fdf6f4" stroke="#e0c3bd"/>
+  <text x="34" y="52" font-size="6.4" fill="#8c2f1e">位相空間</text>
+  <rect x="44" y="56" width="382" height="92" rx="4" fill="#f4f1ea" stroke="#8a6b2c"/>
+  <text x="52" y="68" font-size="6.4" fill="#5a4520">ハウスドルフ</text>
+  <rect x="62" y="72" width="346" height="72" rx="4" fill="#efe0e6" stroke="#8a3b62"/>
+  <text x="70" y="84" font-size="6.4" fill="#6b2a48">チコノフ（＝一様化できる）</text>
+  <rect x="80" y="88" width="310" height="52" rx="4" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="88" y="100" font-size="6.4" fill="#1e4a41">正規 → パラコンパクト</text>
+  <rect x="98" y="104" width="274" height="32" rx="4" fill="#dce7f0" stroke="#35618f" stroke-width="1.2"/>
+  <text x="235" y="118" font-size="7.2" text-anchor="middle" font-weight="700" fill="#1f3b5c">距離化可能</text>
+  <text x="235" y="130" font-size="6.2" text-anchor="middle" fill="#1f3b5c">σ-局所有限な基底＋正則（ナガタ–スミルノフ）</text>
+
+  <rect x="14" y="174" width="216" height="100" rx="4" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="24" y="189" font-size="7.6" font-weight="700" fill="#1e4a41">距離空間で一致してしまう組</text>
+  <text x="24" y="206" font-size="6.8" fill="#1e4a41">第二可算 ⇔ 可分 ⇔ リンデレーフ</text>
+  <text x="24" y="220" font-size="6.8" fill="#1e4a41">コンパクト ⇔ 可算コン ⇔ 点列コン</text>
+  <text x="24" y="234" font-size="6.8" fill="#1e4a41">　　　　　 ⇔ 完備かつ全有界</text>
+  <text x="24" y="251" font-size="6.6" fill="#6a6a68">距離が可算な目盛りを与えるので、</text>
+  <text x="24" y="262" font-size="6.6" fill="#6a6a68">局所的な可算性が大域に持ち上がる</text>
+  <text x="24" y="272" font-size="6.6" fill="#8c2f1e">一般の空間ではどれも別物だった</text>
+
+  <rect x="240" y="174" width="216" height="100" rx="4" fill="#f4f1ea" stroke="#8a6b2c"/>
+  <text x="250" y="189" font-size="7.6" font-weight="700" fill="#5a4520">三層のどこに属するか</text>
+  <text x="250" y="206" font-size="6.8" fill="#6b2a48">位相　連続・コンパクト・連結・次元</text>
+  <text x="250" y="220" font-size="6.8" fill="#2f6b5f">一様　一様連続・完備・一様収束</text>
+  <text x="250" y="234" font-size="6.8" fill="#1f3b5c">距離　リプシッツ・有界・直径</text>
+  <text x="250" y="251" font-size="6.6" fill="#6a6a68">解析学の概念は三層に散っている</text>
+  <text x="250" y="262" font-size="6.6" fill="#6a6a68">中間値定理は位相、一様収束は一様、</text>
+  <text x="250" y="272" font-size="6.6" fill="#6a6a68">微分は距離の層に属する</text>
+</svg>
+<figcaption data-ch="34">距離化可能な空間は、位相空間の階層のもっとも内側にある。距離があると仮定すると、分離公理から被覆性質まで一度に仮定することになる。</figcaption>
+</figure>
+
+<h3 id="s34-4">第VI部への移行</h3>
+
+<p>ここから解析学に移る。<em>第43章以降は、ほとんどの場面で距離空間——多くは <m>\mathbb{R}</m> か <m>\mathbb{R}^n</m>、あるいはバナッハ空間——の上で議論する。</em></p>
+
+<p><span class="yogo-hl">その選択が何を意味するかを、はっきりさせておく。</span></p>
+
+<p><strong>得るもの。</strong><ref t="thm-kyori-souran"/> のすべてが自動的に成り立つ。分離公理を毎回確認する必要がなく、可算性とコンパクト性の区別を気にせずに済み、ベールの定理が使える（完備なら）。<em>第II部と第III部で丁寧に区別した階層が、一つに潰れる。</em></p>
+
+<p><strong>捨てるもの。</strong>距離化できない空間が扱えない。具体的には次のものである。</p>
+
+<p><em>非可算積</em>——第11章の <m>\{0,1\}^I</m>、第21章の立方体 <m>[0,1]^\kappa</m>。第71章の弱*位相がこの形をとる。</p>
+
+<p><em>弱位相</em>——第70章。無限次元では距離化できない。<span class="yogo-hl">そこでは第12章のネットとフィルターに戻らなければならない。</span></p>
+
+<p><em>超関数の空間</em>——第87章。局所凸だが距離化できない。第30章の一様構造と擬距離の族が必要になる。</p>
+
+<p><em>コンパクト化</em>——第23章の <m>\beta\mathbb{N}</m>。第71章のバナッハ極限で顔を出す。</p>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">したがって「距離空間に限る」という選択は、暫定的なものである。<em>第IX部から第XI部では、繰り返し距離化できない空間に出会う。</em><span class="yogo-hl">そのとき第I部から第IV部で作った道具が必要になる</span>——これが位相空間論を先に置いた理由である。第97章でこの往復を地図にする。</p>
+</div>
+
+<div class="lv2">
+<h4>距離のない解析学はどこまで可能か</h4>
+<p>解析学のどこまでが位相だけで書けるのか。<em>第VI部以降を先取りして、境界を引いておく。</em></p>
+<p><strong>位相だけで書けるもの。</strong></p>
+<p><em>連続関数の性質</em>——中間値定理（連結性）、最大値定理（コンパクト性）、一様連続性の自動成立（コンパクト性）。第46章と第47章で扱う。</p>
+<p><em>収束の一般論</em>——ネットとフィルター（第12章）。第50章の関数列の収束は、各点収束なら積位相、一様収束なら一様構造の話である。</p>
+<p><em>コンパクト性による存在定理</em>——第95章のアスコリ–アルツェラ、第71章のバナッハ–アラオグル。<span class="yogo-hl">どちらもコンパクト性から存在を出す。</span></p>
+<p><strong>一様構造が要るもの。</strong>完備性を使う定理はすべてここに属する。第27章のベールのカテゴリー定理、第29章の縮小写像の不動点定理、第61章のリース–フィッシャーの定理（<m>L^p</m> の完備性）。</p>
+<p><em>これらは距離がなくても一様構造があれば成り立つ。</em>ただし可算性が要る場面が多い——たとえばベールの定理は可算個の稠密開集合を扱う。</p>
+<p><strong>距離が要るもの。</strong>数値そのものを使う定理である。</p>
+<p><em>微分</em>——差の商 <m>(f(x+h)-f(x))/h</m> に <m>h</m> の大きさが現れる。第48章。</p>
+<p><em>不等式</em>——第60章のヘルダーとミンコフスキー、第64章のコーシー–シュワルツ。<span class="yogo-hl">ノルムの値を比較するので、数値が本質的である。</span></p>
+<p><em>積分の評価</em>——第55章の収束定理、第85章のプランシュレルの定理。</p>
+<p><strong>まとめ。</strong>位相空間論は解析学の「存在と一意性」を支え、距離は「評価と見積もり」を担う。<em>一様構造はそのあいだで「近似」を担う。</em></p>
+<p>第97章でこの分担を図にする。<span class="yogo-hl">本書の前半と後半が出会う場所が、まさにこの分担の境目である。</span></p>
+</div>
+
+<div class="lv3">
+<h4>距離を一般化する方向</h4>
+<p>距離の公理を緩めると、別の構造が出てくる。<em>本書では扱わないが、どこへ通じているかを記しておく。</em></p>
+<p><strong>擬距離</strong>——<m>\rho(x,y)=0</m> で <m>x \ne y</m> を許す。第30章★★で見た。<em><m>L^p</m> 空間を作るときに、ほとんど至るところ一致する関数を同一視する前の段階がこれである</em>（第60章）。</p>
+<p><strong>準距離</strong>——対称性を落とす。<m>d(x,y) \ne d(y,x)</m> を許す。<span class="yogo-hl">情報の順序を表すのに使われ、領域理論（計算機科学）で現れる。</span>第13章★★★の特殊化前順序と接続する。</p>
+<p><strong>超距離</strong>——三角不等式を <m>d(x,z) \le \max(d(x,y), d(y,z))</m> に強める。<em><m>p</m>-進距離がこれである。</em>超距離空間は全不連結であり（第28章）、球が入れ子か交わらないかのどちらかになる。</p>
+<p><strong>距離を測度に置き換える</strong>——第53章のルベーグ測度は「大きさ」を測るが、「遠さ」は測らない。<em>二つは独立な構造である。</em>第27章★★★で見た「第一類」と「測度零」の食い違いが、その帰結の一つである。</p>
+<p><strong>ハウスドルフ距離と、空間の空間</strong>——コンパクト集合の全体に距離を入れると、それ自体が距離空間になる。<span class="yogo-hl">グロモフ–ハウスドルフ距離は、距離空間の全体に距離を入れる。</span>幾何学的群論とリーマン幾何学で使われる。</p>
+<p><strong>距離のない微分</strong>——微分は差の商を使うので距離が要ると述べた。<em>だが方向微分だけなら、ベクトル空間の構造と位相で足りる。</em></p>
+<p>第87章のシュワルツ空間では、距離化できない位相の上で微分を扱う。<span class="yogo-hl">そこでは「微分が連続作用素である」という形で、位相と微分が両立する。</span></p>
+<p><strong>圏論的な見方。</strong>距離空間は、区間 <m>[0,\infty]</m> を値とする「豊穣圏」として理解できる。<em>対象が点、射が距離という見方である。</em>この立場では、距離空間と位相空間と順序集合が、値をとる対象を変えただけの同じ構造になる。</p>
+<p>本書はこの方向に進まない。<em>だが「距離・一様構造・位相」という三層が、本質的に「どれだけ細かい情報を保つか」の違いだという見通しは、この見方から来ている。</em></p>
+<p><strong>第V部への接続。</strong>次の第V部では、空間の「大きさ」を基数で測り、「太さ」を次元で測る。<span class="yogo-hl">どちらも距離を使わない——位相だけで定義される量である。</span></p>
+<p>ところが第41章の一致定理は、<em>可分距離空間で三つの次元が一致する</em>ことを主張する。距離があると量が潰れるという、本章の主題がそこでも現れる。</p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li>距離空間が完全正規であることを示せ（第18章★★★の式を使ってよい）。</li>
+<li>距離空間で第二可算と可分が一致することを示せ。</li>
+<li><m>p</m>-進距離が超距離であることを確かめよ。</li>
+<li>有界性が位相的な性質でないことを、具体例で示せ。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li><ref t="thm-kyori-souran"/> の可算性の三つが同値であることを、経路を明示して示せ。<span class="haiten">（25点）</span></li>
+<li>解析学の主要概念を三層（位相・一様・距離）に分類し、各々について理由を述べよ。<span class="haiten">（25点）</span></li>
+<li>超距離空間が全不連結であることを示せ。<span class="haiten">（25点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li><ref t="thm-kyorika-matome"/> の四つの条件が互いに同値であることを、第31章と第32章の結果を組み合わせて示せ。<span class="haiten">（35点）</span></li>
+<li>コンパクト距離空間の全体にハウスドルフ距離を入れると、それが距離空間になることを示せ。<span class="haiten">（35点）</span></li>
+</ol>
+</div>
+</div>
+<nav class="chnav">
+<a class="prev" href="ch33.html">← 第33章　完備距離化可能性とČech完備性</a>
+<a class="next" href="ch35.html">第35章　基数不変量——重み・稠密度・指標 →</a>
+</nav>
+</article>
+</main>
+<footer class="site">
+  <p>位相・解析大全　学部から大学院まで、三層で読む位相空間論と解析学</p>
+  <p class="small">本文・図版とも本書のために作成したものです。数式は MathJax でベクタ化して組んでいます。</p>
+</footer>
+</body>
+</html>

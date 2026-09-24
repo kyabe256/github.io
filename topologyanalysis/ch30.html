@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第30章 一様空間——距離と位相のあいだ｜位相・解析大全</title>
+<meta name="description" content="位相・解析大全　第30章　一様空間——距離と位相のあいだ">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;600&display=swap">
+<link rel="stylesheet" href="web.css">
+</head>
+<body>
+<header class="site">
+  <a class="site-title" href="index.html">位相・解析大全</a>
+  <nav class="site-nav">
+    <a href="index.html">目次</a>
+    <a href="isou-kaiseki-taizen.pdf">PDF版</a>
+  </nav>
+</header>
+<main>
+<article class="chapter">
+<p class="part-label">第IV部　連結性・距離空間・距離化</p>
+<h1><span class="ch-num">第30章</span>一様空間——距離と位相のあいだ</h1>
+<nav class="chnav">
+<a class="prev" href="ch29.html">← 第29章　距離空間の位相と完備性</a>
+<a class="next" href="ch31.html">第31章　Urysohnの距離化定理 →</a>
+</nav>
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>完備性と一様連続性は、位相では言えない。では何の言葉なら言えるのか。</li>
+<li>「二点が同じくらい近い」という比較を、数を使わずに表せるか。</li>
+<li>一様構造は、距離と位相のどちらに近いのか。</li>
+</ul>
+</div>
+
+<h3 id="s30-1">中間層を取り出す</h3>
+
+<p>第5章で距離を捨てて位相を得た。<em>そのとき一様連続性・完備性・全有界性が言えなくなった。</em>だが位相を得たことで、距離のない空間まで扱えるようになった。</p>
+
+<p><span class="yogo-hl">両方を取れるだろうか。</span>すなわち、距離の数値は捨てつつ、一様連続性を語れる枠組みはあるか。</p>
+
+<p>鍵は、一様連続性の定義を読み直すことにある。</p>
+
+<M>\forall \varepsilon > 0\ \exists \delta > 0\ \forall x, y:\ d(x,y) < \delta \implies d(f(x),f(y)) < \varepsilon</M>
+
+<p><em>ここで使われているのは「<m>x</m> と <m>y</m> が <m>\delta</m> より近い」という<strong>対</strong>の集合である。</em>すなわち <m>X \times X</m> の部分集合</p>
+
+<M>U_\delta = \{\, (x,y) \mid d(x,y) < \delta \,\}</M>
+
+<p>だけが使われている。<span class="yogo-hl">この形の部分集合の族を原始概念にすればよい。</span></p>
+
+<div class="teigi" id="def-ichiyou">
+<h4>一様空間</h4>
+<p class="no-indent">集合 <m>X</m> 上の<strong>一様構造</strong>とは、<m>X \times X</m> の部分集合の族 <m>\mathcal{U}</m>（元を<strong>近縁</strong>という）であって次を満たすものをいう。</p>
+<p class="no-indent">（U1）各 <m>U \in \mathcal{U}</m> は対角線 <m>\Delta</m> を含む。<br>
+（U2）<m>\mathcal{U}</m> はフィルターである（有限交叉と上への拡大で閉じる）。<br>
+（U3）<m>U \in \mathcal{U}</m> ならば <m>U^{-1} = \{(y,x) : (x,y) \in U\} \in \mathcal{U}</m>。<br>
+（U4）各 <m>U \in \mathcal{U}</m> に対し、<m>V \circ V \subseteq U</m> なる <m>V \in \mathcal{U}</m> が存在する。ここで <m>V \circ V = \{\, (x,z) \mid \exists y,\ (x,y),(y,z) \in V \,\}</m>。</p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">四つの条件は距離の性質をそのまま写している。<em>（U1）は <m>d(x,x)=0</m>、（U3）は対称性、（U4）は三角不等式（<m>\delta/2</m> を取ることにあたる）、（U2）は <m>\min</m> を取る操作である。</em><span class="yogo-hl">距離から数値を抜いて、順序関係だけを残したものが一様構造である。</span></p>
+</div>
+
+<h3 id="s30-2">一様構造から位相が出る</h3>
+
+<div class="teiri" data-kind="命題" id="prop-ichiyou-isou">
+<h4></h4>
+<p class="no-indent">一様空間 <m>(X, \mathcal{U})</m> に対し、</p>
+<M>U[x] = \{\, y \mid (x,y) \in U \,\} \qquad (U \in \mathcal{U})</M>
+<p class="no-indent">の全体を <m>x</m> の近傍基とすることで、<m>X</m> 上の位相が定まる。この位相はつねに完全正則であり、逆にどの完全正則空間の位相も、ある一様構造から得られる。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">位相が定まることは（U1）（U2）（U4）による。<em>（U4）が「近傍を半分に縮める」操作を与え、これが近傍系の公理を満たすのに必要である。</em></p>
+<p>完全正則性は、一様構造から擬距離の族を作り、そこから連続関数を作ることで示す。<span class="yogo-hl">一様構造は擬距離の族と同値な情報である</span>——これが★★の主題になる。</p>
+<p>逆向きは、完全正則空間 <m>X</m> について <m>C(X,[0,1])</m> の各元 <m>f</m> から <m>U_{f,\varepsilon} = \{(x,y) : |f(x)-f(y)| < \varepsilon\}</m> を作り、それらが生成する一様構造を取ればよい。</p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">一様化できる位相は完全正則な位相に限る。<em>したがって第14章の反例（正則だが完全正則でない空間）は一様化できない。</em><span class="yogo-hl">一様構造は、分離公理の階層のうち <m>T_{3\frac12}</m> のところにちょうど対応する。</span></p>
+</div>
+
+<h3 id="s30-3">一様構造でしか言えないこと</h3>
+
+<div class="teigi" id="def-ichiyou-renzoku">
+<h4></h4>
+<p class="no-indent"><m>f \colon (X,\mathcal{U}) \to (Y,\mathcal{V})</m> が<strong>一様連続</strong>であるとは、各 <m>V \in \mathcal{V}</m> に対し</p>
+<M>(f \times f)^{-1}(V) = \{\, (x,y) \mid (f(x),f(y)) \in V \,\} \in \mathcal{U}</M>
+<p class="no-indent">となることをいう。</p>
+<p><m>X</m> 上のフィルター <m>\mathcal{F}</m> が<strong>コーシー</strong>であるとは、各 <m>U \in \mathcal{U}</m> に対し <m>F \times F \subseteq U</m> なる <m>F \in \mathcal{F}</m> が存在することをいう。すべてのコーシーフィルターが収束するとき <m>X</m> は<strong>完備</strong>であるという。</p>
+<p><strong>全有界</strong>とは、各 <m>U \in \mathcal{U}</m> に対し有限個の <m>x_1,\ldots,x_n</m> で <m>X = \bigcup_k U[x_k]</m> となることをいう。</p>
+</div>
+
+<div class="teiri" id="thm-ichiyou-kekka">
+<h4></h4>
+<p class="no-indent">（1）一様連続なら連続である。逆は成り立たない。<br>
+（2）コンパクトな一様空間では、連続写像はすべて一様連続である。<br>
+（3）一様空間がコンパクトであることと、完備かつ全有界であることは同値である。<br>
+（4）コンパクトハウスドルフ空間の一様構造はただ一つである。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">（1）は定義から。逆の反例は <m>f(x)=x^2</m> on <m>\mathbb{R}</m>、あるいは <m>f(x)=1/x</m> on <m>(0,1)</m>。</p>
+<p>（2）第20章★★のルベーグ数の議論を一様構造で書き直す。<m>V \in \mathcal{V}</m> に対し <m>W \circ W \subseteq V</m> なる <m>W</m> を取る。各 <m>x</m> について <m>(f \times f)^{-1}(W)[x]</m> は近傍だから、<em>コンパクト性より有限個で覆える。</em>対応する近縁の有限交叉を取ればよい。</p>
+<p>（4）（2）から従う。二つの一様構造があれば、恒等写像が両方向に一様連続になるので一致する。<span class="yogo-hl">コンパクトハウスドルフ空間では、位相が一様構造を完全に決める。</span></p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">（4）が重要である。<em>コンパクトな場合には、位相と一様構造の区別が消える。</em><span class="yogo-hl">第29章で「完備性は位相的でない」と述べたが、コンパクト空間ではそうではない。</span>これが第59章・第96章でコンパクトハウスドルフ空間を舞台にする理由の一つである。</p>
+</div>
+
+<figure id="fig30-1">
+<svg viewBox="0 0 470 272" width="470" height="272" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <defs>
+    <marker id="a30" markerWidth="8" markerHeight="8" refX="7" refY="2.6" orient="auto"><path d="M0,0 L7,2.6 L0,5.2 z" fill="#35618f"/></marker>
+  </defs>
+
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">三つの層——距離・一様構造・位相</text>
+
+  <rect x="14" y="26" width="442" height="112" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+
+  <rect x="28" y="40" width="130" height="80" rx="4" fill="#dce7f0" stroke="#35618f"/>
+  <text x="93" y="55" font-size="7.4" text-anchor="middle" font-weight="700" fill="#1f3b5c">距離</text>
+  <text x="36" y="70" font-size="6.6" fill="#1f3b5c">遠さが数で出る</text>
+  <text x="36" y="82" font-size="6.6" fill="#1f3b5c">完備・全有界</text>
+  <text x="36" y="94" font-size="6.6" fill="#1f3b5c">一様連続</text>
+  <text x="36" y="106" font-size="6.6" fill="#1f3b5c">リプシッツ・ヘルダー</text>
+  <text x="36" y="117" font-size="6.2" fill="#6a6a68">数値に依る概念もここだけ</text>
+
+  <rect x="170" y="40" width="130" height="80" rx="4" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="235" y="55" font-size="7.4" text-anchor="middle" font-weight="700" fill="#1e4a41">一様構造</text>
+  <text x="178" y="70" font-size="6.6" fill="#1e4a41">「同じくらい近い」だけ</text>
+  <text x="178" y="82" font-size="6.6" fill="#1e4a41">完備・全有界　○</text>
+  <text x="178" y="94" font-size="6.6" fill="#1e4a41">一様連続　○</text>
+  <text x="178" y="106" font-size="6.6" fill="#8c2f1e">リプシッツ　×</text>
+  <text x="178" y="117" font-size="6.2" fill="#6a6a68">数値を捨て、順序だけ残す</text>
+
+  <rect x="312" y="40" width="130" height="80" rx="4" fill="#efe0e6" stroke="#8a3b62"/>
+  <text x="377" y="55" font-size="7.4" text-anchor="middle" font-weight="700" fill="#6b2a48">位相</text>
+  <text x="320" y="70" font-size="6.6" fill="#6b2a48">「近い」だけ</text>
+  <text x="320" y="82" font-size="6.6" fill="#8c2f1e">完備・全有界　×</text>
+  <text x="320" y="94" font-size="6.6" fill="#8c2f1e">一様連続　×</text>
+  <text x="320" y="106" font-size="6.6" fill="#6b2a48">連続・コンパクト　○</text>
+  <text x="320" y="117" font-size="6.2" fill="#6a6a68">開集合の族だけ</text>
+
+  <path d="M162,80 L166,80" stroke="#35618f" stroke-width="1.2" fill="none" marker-end="url(#a30)"/>
+  <path d="M304,80 L308,80" stroke="#35618f" stroke-width="1.2" fill="none" marker-end="url(#a30)"/>
+
+  <rect x="14" y="150" width="216" height="106" rx="4" fill="#f4f1ea" stroke="#8a6b2c"/>
+  <text x="24" y="165" font-size="7.6" font-weight="700" fill="#5a4520">四つの公理は距離の写し</text>
+  <text x="24" y="182" font-size="6.8" fill="#5a4520">U1　対角線を含む　←　d(x,x)=0</text>
+  <text x="24" y="196" font-size="6.8" fill="#5a4520">U2　フィルター　←　min を取る</text>
+  <text x="24" y="210" font-size="6.8" fill="#5a4520">U3　対称　←　d(x,y)=d(y,x)</text>
+  <text x="24" y="224" font-size="6.8" fill="#5a4520">U4　V∘V ⊆ U　←　三角不等式</text>
+  <text x="24" y="242" font-size="6.6" fill="#6a6a68">U4 が「δ/2 を取る」操作にあたり、</text>
+  <text x="24" y="252" font-size="6.6" fill="#6a6a68">これが証明のほとんどで働く</text>
+
+  <rect x="240" y="150" width="216" height="106" rx="4" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="250" y="165" font-size="7.6" font-weight="700" fill="#1e4a41">どこまで対応するか</text>
+  <text x="250" y="182" font-size="6.8" fill="#1e4a41">一様化できる位相 ⇔ 完全正則</text>
+  <text x="250" y="196" font-size="6.8" fill="#1e4a41">距離化できる一様構造 ⇔ 可算な基をもつ</text>
+  <text x="250" y="213" font-size="6.8" font-weight="700" fill="#1e4a41">コンパクトハウスドルフなら一様構造は一つ</text>
+  <text x="250" y="227" font-size="6.6" fill="#6a6a68">位相が一様構造を完全に決める</text>
+  <text x="250" y="240" font-size="6.6" fill="#6a6a68">→ そこでは「完備性は位相的でない」が</text>
+  <text x="250" y="251" font-size="6.6" fill="#6a6a68">　 当てはまらない</text>
+</svg>
+<figcaption data-ch="30">距離・一様構造・位相の三層。一様構造は距離から数値を捨てて順序関係だけを残したもので、完備性と一様連続性はこの層に属する。</figcaption>
+</figure>
+
+<h3 id="s30-4">距離化できる一様構造</h3>
+
+<div class="teiri" id="thm-ichiyou-kyorika">
+<h4>距離化定理（一様構造版）</h4>
+<p class="no-indent">分離的な一様構造が距離から来るための必要十分条件は、<span class="yogo-hl">可算な基をもつこと</span>である。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">必要性は <m>\{U_{1/n}\}</m> が基になることから明らか。十分性を示す。可算基 <m>\{U_n\}</m> を取り、（U4）を繰り返して <m>V_{n+1} \circ V_{n+1} \circ V_{n+1} \subseteq V_n</m>、<m>V_n \subseteq U_n</m> なる減少列を作る。</p>
+<p>そのうえで</p>
+<M>d(x,y) = \inf \Big\{\, \sum_{k} 2^{-n_k} \ \Big|\ \text{$x$ から $y$ へ $V_{n_k}$ を鎖状につなげる} \,\Big\}</M>
+<p class="no-indent">と定める。<em>三角不等式は鎖をつなぐことから直ちに従う。</em>三重の合成を要求したのが、<m>d</m> が <m>V_n</m> と整合することを保証する。<span class="yogo-hl">技術的な補題が一つ要るが、構成の骨格はこれだけである。</span></p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">この定理は第31章と第32章の距離化定理とは別物である。<em>こちらは一様構造が与えられたときの話で、あちらは位相だけが与えられたときの話である。</em><span class="yogo-hl">位相から出発する場合は、まず一様構造を作らなければならない——それが難しさの源である。</span></p>
+</div>
+
+<div class="lv2">
+<h4>擬距離の族による記述</h4>
+<p>一様構造は、擬距離の族として書くこともできる。<em>こちらのほうが解析学の議論に近い。</em></p>
+<p><strong>擬距離。</strong><m>\rho \colon X \times X \to [0,\infty)</m> が対称で三角不等式を満たし、<m>\rho(x,x)=0</m> を満たすものを擬距離という。<em><m>\rho(x,y)=0</m> でも <m>x \ne y</m> でよい。</em></p>
+<p><strong>対応。</strong>擬距離の族 <m>\{\rho_\alpha\}</m> が与えられたとき、</p>
+<M>U_{\alpha,\varepsilon} = \{\, (x,y) \mid \rho_\alpha(x,y) < \varepsilon \,\}</M>
+<p>の有限交叉を基とする一様構造が定まる。<span class="yogo-hl">逆に、どの一様構造もある擬距離の族から得られる。</span></p>
+<p>逆向きの構成は <ref t="thm-ichiyou-kyorika"/> の証明を各近縁について行うことで得られる。<em>可算基があれば擬距離が一つで足り、それが距離になる。</em></p>
+<p><strong>なぜこの形が有用か。</strong>関数解析で現れる位相が、この形で与えられることが多い。</p>
+<p><em>各点収束の位相</em>——<m>\rho_x(f,g) = |f(x)-g(x)|</m> の族。第11章の積位相にあたる。</p>
+<p><em>コンパクト一様収束の位相</em>——<m>\rho_K(f,g) = \sup_{x \in K}|f(x)-g(x)|</m>（<m>K</m> はコンパクト集合）の族。第91章で正則関数の空間に入れる位相である。</p>
+<p><em>シュワルツ空間の位相</em>——<m>\rho_{m,n}(f,g) = \sup_x |x^m (f-g)^{(n)}(x)|</m> の族。第87章で扱う。</p>
+<p><strong>局所凸空間との関係。</strong>ベクトル空間上で、擬距離をセミノルムから作ると局所凸空間になる。<span class="yogo-hl">第IX部で扱うバナッハ空間は、セミノルムが一つで済む場合である。</span></p>
+<p>一般の局所凸空間はノルムで距離化できないことがあり、<em>そこでは一様構造の言葉が必要になる。</em>第87章の超関数の空間がその例である。</p>
+<p><strong>可算性の役割。</strong>擬距離が可算個なら、第11章★★の重みつき和で一つの距離にまとめられる。<em>非可算個なら距離化できない。</em></p>
+<p><span class="yogo-hl">第7章から繰り返し現れている「可算性が局所と大域を橋渡しする」という構図が、ここでも働いている。</span></p>
+</div>
+
+<div class="lv3">
+<h4>一様空間の完備化と、標本的な例</h4>
+<p>第29章で距離空間の完備化を作った。<em>一様空間でも同じことができる。</em>そして、そこで得られるものが意外に豊かである。</p>
+<p><strong>完備化の存在。</strong>分離的な一様空間 <m>X</m> は、完備な分離一様空間のなかに稠密に埋め込める。<em>構成はコーシーフィルターの同値類を取ることによる</em>——第29章のコーシー列を、フィルターに置き換えるだけである。</p>
+<p><span class="yogo-hl">一意性も同様に成り立つ。</span>ただし「等距離同型」の代わりに「一様同型」を使う。</p>
+<p><strong>コンパクト化との関係。</strong>ここで面白いことが起きる。<m>X</m> をチコノフ空間とし、第14章の埋め込みから来る一様構造を入れる。<em>その完備化を取ると、第23章のストーン–チェックのコンパクト化 <m>\beta X</m> が得られる。</em></p>
+<p>より正確には、<m>X</m> 上の最大の一様構造（すべての有界連続関数から作られるもの）について完備化すると <m>\beta X</m> になる。<span class="yogo-hl">コンパクト化と完備化が、一様構造の言葉では同じ操作になる。</span></p>
+<p><strong>ヘヴィット実完備化。</strong>別の一様構造を取ると、別のものが出てくる。すべての（有界でなくてもよい）連続実数値関数から作られる一様構造で完備化すると、<strong>ヘヴィット実完備化</strong> <m>\upsilon X</m> が得られる。</p>
+<p><m>X \subseteq \upsilon X \subseteq \beta X</m> であり、<em><m>X = \upsilon X</m> となる空間を実完備空間という。</em>距離空間は実完備である。第25章★★で触れた <m>C(X)</m> の構造は、この概念で整理できる。</p>
+<p><strong>ハール測度。</strong>一様構造がもっとも劇的に働くのは、位相群の理論である。位相群には左不変な一様構造と右不変な一様構造が自然に入る。<em>局所コンパクト群では、この構造から左不変な測度（ハール測度）が一意に存在する。</em></p>
+<p>第84章でフーリエ変換を扱うとき、背景にこの構造がある。<span class="yogo-hl"><m>\mathbb{R}</m> 上のフーリエ変換は、局所コンパクトアーベル群の双対性の特別な場合である。</span>第79章のゲルファント理論と合わせて、ポントリャーギン双対性という枠組みになる。</p>
+<p><strong>本書での扱い。</strong>本書は一様空間を体系的には使わない。<em>第VI部以降は距離空間、多くは実数直線の上で議論する。</em></p>
+<p>それでも本章を置いたのは、二つの理由による。第一に、<span class="yogo-hl">「完備性は位相的でない」という事実の正体が、位相と距離のあいだに層があることだと示すため。</span>第二に、第87章のシュワルツ空間のように、距離化できない位相が実際に必要になる場面があるためである。</p>
+<p>第34章で「距離空間は何が特別なのか」を問うとき、本章の三層構造に戻る。</p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li>距離空間の <m>U_\delta</m> が <ref t="def-ichiyou"/> の四条件を満たすことを確かめよ。</li>
+<li><m>f(x) = x^2</m> が <m>\mathbb{R}</m> 上で連続だが一様連続でないことを示せ。</li>
+<li>離散一様構造（<m>\Delta</m> を含む集合すべて）を定義し、どんな位相を与えるか述べよ。</li>
+<li>（U4）が三角不等式にあたる理由を説明せよ。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li><ref t="thm-ichiyou-kekka"/>（2）を、ルベーグ数の議論を一様構造の言葉に書き直して示せ。<span class="haiten">（25点）</span></li>
+<li><ref t="thm-ichiyou-kekka"/>（4）を示せ。<span class="haiten">（20点）</span></li>
+<li>一様連続な全単射で、逆写像が一様連続でない例を挙げよ。<span class="haiten">（20点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li>擬距離の族と一様構造が同じ情報をもつことを、両方向の構成を書いて示せ。<span class="haiten">（35点）</span></li>
+<li><ref t="thm-ichiyou-kyorika"/> の十分性を、三重の合成が必要な理由を明示して示せ。<span class="haiten">（40点）</span></li>
+</ol>
+</div>
+</div>
+<nav class="chnav">
+<a class="prev" href="ch29.html">← 第29章　距離空間の位相と完備性</a>
+<a class="next" href="ch31.html">第31章　Urysohnの距離化定理 →</a>
+</nav>
+</article>
+</main>
+<footer class="site">
+  <p>位相・解析大全　学部から大学院まで、三層で読む位相空間論と解析学</p>
+  <p class="small">本文・図版とも本書のために作成したものです。数式は MathJax でベクタ化して組んでいます。</p>
+</footer>
+</body>
+</html>

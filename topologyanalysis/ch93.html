@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第93章 等角写像とRiemannの写像定理｜位相・解析大全</title>
+<meta name="description" content="位相・解析大全　第93章　等角写像とRiemannの写像定理">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;600&display=swap">
+<link rel="stylesheet" href="web.css">
+</head>
+<body>
+<header class="site">
+  <a class="site-title" href="index.html">位相・解析大全</a>
+  <nav class="site-nav">
+    <a href="index.html">目次</a>
+    <a href="isou-kaiseki-taizen.pdf">PDF版</a>
+  </nav>
+</header>
+<main>
+<article class="chapter">
+<p class="part-label">第XII部　複素解析</p>
+<h1><span class="ch-num">第93章</span>等角写像とRiemannの写像定理</h1>
+<nav class="chnav">
+<a class="prev" href="ch92.html">← 第92章　留数定理とその応用</a>
+<a class="next" href="ch94.html">第94章　調和関数とDirichlet問題 →</a>
+</nav>
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>どんな領域も、円板と同じだと言えるのか。</li>
+<li>存在証明は、何を使って行うのか。</li>
+<li>境界はどこまで対応するのか。</li>
+</ul>
+</div>
+
+<h3 id="s93-1">等角同値という分類</h3>
+
+<div class="teigi" id="def-tokaku-doti">
+<h4>等角同値</h4>
+<p class="no-indent">領域 <m>\Omega_1,\Omega_2\subset\mathbb{C}</m> のあいだに、正則な全単射 <m>f:\Omega_1\to\Omega_2</m> が存在するとき、<m>\Omega_1</m> と <m>\Omega_2</m> は<strong>等角同値</strong>であるという。<em>このとき逆写像も自動的に正則である</em>（<ref t="rei-ruche-ouyou"/>（4））。</p>
+<p class="no-indent"><em>等角同値は同値関係であり、「複素解析的に同じ」ということの正確な意味を与える。</em></p>
+</div>
+
+<div class="rei" id="rei-tokaku-rei">
+<h4>具体的な等角写像</h4>
+<p class="no-indent">（1）<strong>メビウス変換。</strong><m>T(z)=\dfrac{az+b}{cz+d}</m>（<m>ad-bc\ne0</m>）。<em>リーマン球面の自己同型はこれに限る。</em>円と直線の族を保ち、三点の像を自由に指定できる。</p>
+<p>（2）<strong>上半平面と単位円板。</strong><m>\displaystyle z\mapsto\frac{z-i}{z+i}</m> が <m>\mathbb{H}=\{\mathrm{Im}\,z>0\}</m> から <m>D</m> への等角同型。<em>逆は <m>w\mapsto i\frac{1+w}{1-w}</m>。</em></p>
+<p>（3）<strong>円板の自己同型。</strong><m>\mathrm{Aut}(D)=\Big\{\,e^{i\theta}\dfrac{z-a}{1-\bar az}\ \Big|\ |a| < 1,\ \theta\in\mathbb{R}\,\Big\}</m>。<em>証明はシュヴァルツの補題（<ref t="rei-cauchy-ouyou"/>（1））：<m>0</m> を <m>0</m> に写す自己同型は回転に限る。</em><span class="yogo-hl">この群が円板上の双曲幾何（ポアンカレ計量）の等長群である。</span></p>
+<p>（4）<strong>帯・扇形・半平面。</strong><m>e^z</m> は帯 <m>0 < \mathrm{Im}\,z < \pi</m> を上半平面へ、<m>z^\alpha</m> は扇形 <m>0 < \arg z < \pi/\alpha</m> を上半平面へ写す。<m>\frac12(z+1/z)</m>（<strong>ジューコフスキー写像</strong>）は円板の外部を切れ目の入った平面へ写し、<em>翼型の設計に使われた。</em></p>
+<p>（5）<strong>多角形。</strong><strong>シュヴァルツ–クリストッフェルの公式</strong></p>
+<M>f(z) = C\int_0^z \prod_{k=1}^{n}(w-x_k)^{\alpha_k-1}\,dw + C'</M>
+<p class="no-indent">が上半平面を多角形（内角 <m>\pi\alpha_k</m>）へ写す。<em>被積分関数の各因子が、対応する頂点で角を <m>\pi\alpha_k</m> に折り曲げる。</em></p>
+</div>
+
+<div class="teiri" id="thm-riemann-shazo">
+<h4>リーマンの写像定理</h4>
+<p class="no-indent"><m>\Omega\subsetneq\mathbb{C}</m> を単連結な領域（<m>\mathbb{C}</m> 全体でない）とする。任意の <m>z_0\in\Omega</m> に対し、等角同型</p>
+<M>f:\Omega \longrightarrow D = \{|w| < 1\}</M>
+<p class="no-indent">で <m>f(z_0)=0</m>、<m>f'(z_0)>0</m> をみたすものがただ一つ存在する。</p>
+<p class="no-indent"><em>したがって、<m>\mathbb{C}</m> 自身を除けば、単連結領域はすべて等角同値である。</em>境界がどれほど複雑でも——フラクタルでも——関係ない。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><strong>一意性。</strong><m>f_1,f_2</m> が条件をみたすなら <m>g=f_2\circ f_1^{-1}</m> は <m>D</m> の自己同型で <m>g(0)=0</m>、<m>g'(0)>0</m>。<em>シュヴァルツの補題より <m>g(w)=cw</m>（<m>|c|=1</m>）、<m>g'(0)=c>0</m> から <m>c=1</m>。</em></p>
+<p class="no-indent"><strong>存在。</strong>三段で進む。</p>
+<p class="no-indent"><strong>第一段（単射正則写像の族が空でない）。</strong><m>a\notin\Omega</m> をとる。<m>\Omega</m> は単連結だから <m>z-a</m> の平方根 <m>h(z)=\sqrt{z-a}</m> が一価に定まる（<em>モノドロミー定理</em>、<ref t="cex-takachi"/>）。<m>h</m> は単射で、<em><m>h(\Omega)</m> と <m>-h(\Omega)</m> は交わらない</em>（交われば <m>h(z_1)=-h(z_2)</m> から <m>z_1=z_2</m>、よって <m>h(z_1)=0</m>、すなわち <m>z_1=a\notin\Omega</m>）。<m>-h(\Omega)</m> はある円板 <m>D(w_0,r)</m> を含むので、<m>h(\Omega)</m> はその円板を避ける。したがって <m>\dfrac{r}{h(z)-w_0}</m> は <m>\Omega</m> から <m>D</m> への単射正則写像である。</p>
+<p class="no-indent"><strong>第二段（最大化問題を立てる）。</strong></p>
+<M>\mathcal{F} = \{\, g:\Omega\to D \ \text{単射正則},\ g(z_0)=0 \,\}, \qquad M = \sup_{g\in\mathcal{F}}|g'(z_0)|</M>
+<p class="no-indent">第一段より <m>\mathcal{F}\ne\emptyset</m>。コーシーの評価より <m>M < \infty</m>。<em><m>\mathcal{F}</m> は一様有界（値が <m>D</m> に入る）なので、モンテルの定理（<ref t="thm-montel"/>）により正規族である。</em>最大化列 <m>g_n</m> をとり、広義一様収束する部分列を抜けば、極限 <m>f</m> は正則で <m>|f'(z_0)|=M>0</m>。<em>フルヴィッツの定理（<ref t="thm-hengaku"/>（3））を <m>g_n(z)-g_n(z')</m> に適用すれば、<m>f</m> も単射である。</em></p>
+<p class="no-indent"><strong>第三段（最大値をとるものは全射）。</strong><m>f</m> が全射でないとし、<m>\alpha\in D\setminus f(\Omega)</m> をとる。<m>\varphi_\alpha(w)=\dfrac{w-\alpha}{1-\bar\alpha w}</m>（円板の自己同型）を合成すると <m>\varphi_\alpha\circ f</m> は <m>0</m> を避けるので、単連結性から平方根 <m>F=\sqrt{\varphi_\alpha\circ f}</m> が一価に定まる。<em>さらに <m>0</m> に戻す自己同型を合成した <m>G=\varphi_{F(z_0)}\circ F</m> について、計算すると</em></p>
+<M>|G'(z_0)| = \frac{1+|\alpha|}{2\sqrt{|\alpha|}}\,|f'(z_0)| > |f'(z_0)|</M>
+<p class="no-indent">（相加相乗平均より <m>\frac{1+t^2}{2t}>1</m>、<m>t=\sqrt{|\alpha|}\ne1</m>）。<em><m>M</m> の最大性に反する。</em></p>
+<p><span class="yogo-hl">証明の骨格は「コンパクト性で最大化元を取り出し、最大でないと仮定して改良する」——変分法そのものである。</span><em>コンパクト性を与えるのがモンテルの定理で、これは第95章のアスコリ–アルツェラの定理の複素版である。</em></p>
+</div>
+
+<div class="teiri" id="thm-montel">
+<h4>モンテルの定理</h4>
+<p class="no-indent"><m>\mathcal{F}</m> を領域 <m>\Omega</m> 上の正則関数の族とする。<m>\mathcal{F}</m> が広義一様有界（各コンパクト集合上で一様有界）ならば、<m>\mathcal{F}</m> は<strong>正規族</strong>である：任意の列が広義一様収束する部分列をもつ。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">コーシーの積分公式より、<m>K\subset\Omega</m> コンパクト、<m>K</m> の <m>\delta</m> 近傍が <m>\Omega</m> に入るとすると、<m>z,z'\in K</m>、<m>|z-z'|</m> 小について</p>
+<M>|f(z)-f(z')| \le \frac{2M}{\delta}\,|z-z'| \qquad (\forall f\in\mathcal{F})</M>
+<p class="no-indent"><em>すなわち族は同程度連続である。</em><span class="yogo-hl">一様有界性から同程度連続性が<strong>自動的に</strong>出る——これは正則関数に固有の現象で、連続関数の族では成り立たない。</span>あとはアスコリ–アルツェラの定理（第95章）を可算個のコンパクト集合に適用し、対角線論法で結論を得る。</p>
+</div>
+
+<h3 id="s93-2">境界の対応</h3>
+
+<div class="teiri" id="thm-caratheodory-kyokai">
+<h4>カラテオドリの境界対応定理</h4>
+<p class="no-indent"><m>\Omega</m> を単連結領域で、その境界 <m>\partial\Omega</m> がジョルダン曲線（単純閉曲線）であるとする。このときリーマン写像 <m>f:\Omega\to D</m> は <m>\overline\Omega</m> から <m>\overline D</m> への同相写像に延長される。</p>
+<p class="no-indent">より一般に、<m>f</m> が境界まで連続に延びることと、<m>\partial\Omega</m> が局所連結であることが同値である。</p>
+</div>
+
+<div class="rei" id="rei-kyokai">
+<h4>境界がどこまで見えるか</h4>
+<p class="no-indent">（1）<strong>多角形・滑らかな曲線。</strong>境界は同相に対応する。<em>境界が <m>C^\infty</m> なら <m>f</m> も境界まで <m>C^\infty</m>（ケロッグ–ワルシャフスキの定理）。</em></p>
+<p>（2）<strong>スリット領域。</strong><m>\Omega=D\setminus[0,1)</m>。境界の一点（切れ目の上側と下側）が、円周上の二点に対応する。<em>境界は同相には対応しない——「一点が二点に割れる」。</em></p>
+<p>（3）<strong>櫛形領域。</strong>境界が局所連結でない例（無限に細かい歯をもつ領域）では、<em>リーマン写像は境界まで連続に延びない。</em></p>
+<p>（4）<strong>フラクタル境界。</strong>コッホ雪片の内部は単連結だから円板と等角同値で、境界はジョルダン曲線だから同相に対応する。<em>しかし対応は極端に悪い</em>：円周上のルベーグ測度と境界上の長さ測度（無限大）が、まったく釣り合わない。<span class="yogo-hl">この釣り合いの悪さを測るのが<strong>調和測度</strong>の次元の理論である。</span></p>
+<p>（5）<strong>マクミランの定理・マカロフの定理。</strong>単連結領域の調和測度は、<em>ハウスドルフ次元がちょうど <m>1</m> の集合に台をもつ</em>（マカロフ、1985年）。<span class="yogo-hl">境界がどれほどフラクタルでも（次元が <m>1</m> より大きくても）、調和測度が見ているのは次元 <m>1</m> の部分だけである。</span><em>第42章の次元論が、ここで「境界のどこが見えるか」を答えている。</em></p>
+</div>
+
+<div class="hanrei" id="cex-riemann-shazo">
+<h4>仮定を外すと</h4>
+<p class="no-indent">（1）<strong><m>\Omega=\mathbb{C}</m> は除外される。</strong>リウヴィルの定理（<ref t="thm-kekka-gun"/>（3））により、<m>\mathbb{C}\to D</m> の正則写像は定数しかない。<em><m>\mathbb{C}</m> と <m>D</m> は等角同値でない。</em>同相ではあるので、<span class="yogo-hl">等角同値は同相よりずっと細かい分類である。</span></p>
+<p class="no-indent">（2）<strong>単連結性は外せない。</strong>円環 <m>A_r=\{r < |z| < 1\}</m> と <m>A_{r'}</m> が等角同値であることと <m>r=r'</m> は同値である。<em>つまり円環には連続無限個の等角同値類がある</em>（<strong>モジュラス</strong> <m>\log(1/r)</m> が不変量）。<em>穴が一つ増えるだけで、分類が離散から連続に変わる。</em></p>
+<p class="no-indent">（3）<strong>多変数では成り立たない。</strong><m>\mathbb{C}^2</m> の球 <m>\{|z_1|^2+|z_2|^2 < 1\}</m> と双円板 <m>D\times D</m> は、どちらも単連結・有界・凸だが等角同値でない（ポアンカレ、1907年）。<em>証明は自己同型群の次元を比べる。</em><span class="yogo-hl">一変数の写像定理は、一変数に固有の奇跡である。</span></p>
+<p class="no-indent">（4）<strong>構成的でない。</strong>証明は最大化元の存在を示すだけで、写像を明示しない。<em>実際、一般の領域についてリーマン写像を明示的に書く方法はない</em>（多角形ならシュヴァルツ–クリストッフェル、それ以外は数値計算）。</p>
+</div>
+
+<figure id="fig93-1">
+<svg viewBox="0 0 470 288" width="470" height="288" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">穴がなければ、どんな形も円板と同じ</text>
+
+  <rect x="14" y="26" width="442" height="120" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+
+  <path d="M 44 96 C 40 66 64 46 92 50 C 106 34 138 36 146 54 C 172 52 186 74 178 94 C 190 112 174 136 150 134 C 134 146 104 142 96 128 C 66 132 46 118 44 96 Z" fill="#dce7f0" stroke="#35618f" stroke-width="1.3"/>
+  <circle cx="110" cy="90" r="2.6" fill="#a03b2e"/>
+  <text x="110" y="24" font-size="6.4" text-anchor="middle" fill="#1f3b5c"> </text>
+  <text x="110" y="158" font-size="6.2" text-anchor="middle" fill="#6a6a68">どんな単連結領域でも</text>
+
+  <line x1="200" y1="90" x2="256" y2="90" stroke="#8a6b2c" stroke-width="1.4" marker-end="url(#r93)"/>
+  <text x="228" y="80" font-size="6" text-anchor="middle" fill="#8a6b2c">等角同型</text>
+  <text x="228" y="104" font-size="5.8" text-anchor="middle" fill="#6a6a68">一点と向きを決めれば一意</text>
+
+  <circle cx="352" cy="90" r="48" fill="#e6efe9" stroke="#2f6b5f" stroke-width="1.3"/>
+  <circle cx="352" cy="90" r="2.6" fill="#a03b2e"/>
+  <text x="352" y="158" font-size="6.2" text-anchor="middle" fill="#6a6a68">単位円板に写る</text>
+
+  <defs>
+    <marker id="r93" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 z" fill="#8a6b2c"/></marker>
+  </defs>
+
+  <rect x="14" y="166" width="216" height="116" rx="4" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="24" y="181" font-size="7.6" font-weight="700" fill="#1e4a41">証明は変分法の型</text>
+  <text x="24" y="198" font-size="6.6" fill="#1e4a41">① 単射な写像が少なくとも一つある</text>
+  <text x="24" y="210" font-size="6.6" fill="#1e4a41">② 微分の大きさを最大化する</text>
+  <text x="24" y="222" font-size="6.6" fill="#1e4a41">③ 最大なら全射でなければならない</text>
+  <text x="24" y="239" font-size="6.4" fill="#5a4520">②でコンパクト性を与えるのがモンテル</text>
+  <text x="24" y="251" font-size="6.4" fill="#5a4520">正則なら一様有界から同程度連続が出る</text>
+  <text x="24" y="268" font-size="6.4" fill="#8c2f1e">連続関数の族では、これは成り立たない</text>
+
+  <rect x="240" y="166" width="216" height="116" rx="4" fill="#f4f1ea" stroke="#8a6b2c"/>
+  <text x="250" y="181" font-size="7.6" font-weight="700" fill="#5a4520">外せない仮定</text>
+  <text x="250" y="198" font-size="6.6" fill="#8c2f1e">平面全体は除く（リウヴィルの定理）</text>
+  <text x="250" y="210" font-size="6.4" fill="#6a6a68">同相ではあるが、等角同値ではない</text>
+  <text x="250" y="226" font-size="6.6" fill="#8c2f1e">穴があると分類が連続無限個になる</text>
+  <text x="250" y="238" font-size="6.4" fill="#6a6a68">円環は、比の値そのものが不変量</text>
+  <text x="250" y="254" font-size="6.6" fill="#8c2f1e">多変数では成り立たない</text>
+  <text x="250" y="266" font-size="6.4" fill="#6a6a68">球と双円板は等角同値でない</text>
+  <text x="250" y="278" font-size="6.2" fill="#6b2a48">一変数に固有の奇跡である</text>
+</svg>
+<figcaption data-ch="93">リーマンの写像定理。平面全体を除くすべての単連結領域が単位円板と等角同値になる。証明はモンテルの定理によるコンパクト性のもとでの変分法で、写像そのものは構成されない。</figcaption>
+</figure>
+
+<div class="star2">
+<h4>★★ 学部後半——双曲計量とシュヴァルツ–ピックの定理</h4>
+
+<p><strong>ポアンカレ計量。</strong>単位円板に</p>
+<M>ds = \frac{2|dz|}{1-|z|^2}</M>
+<p>という計量を入れる。<em>円板の自己同型はこの計量の等長変換であり、逆に等長変換は自己同型（または共役）に限る。</em>曲率は一定 <m>-1</m> で、これが<strong>双曲幾何</strong>のモデルである。<span class="yogo-hl">ユークリッドの平行線公準を満たさない幾何が、複素解析の内部から自然に現れる。</span></p>
+
+<p><strong>シュヴァルツ–ピックの定理。</strong><m>f:D\to D</m> 正則なら</p>
+<M>\frac{|f'(z)|}{1-|f(z)|^2} \le \frac{1}{1-|z|^2}</M>
+<p><em>すなわち正則写像は双曲距離を縮める。</em>等号は自己同型のときのみ。<span class="yogo-hl">シュヴァルツの補題は「原点を固定する」という特別な場合にすぎず、本質は<strong>距離を縮める</strong>という幾何的な主張である。</span></p>
+
+<p>この視点は一般化される。任意の複素多様体に<strong>小林距離</strong>（円板からの正則写像で測る最大の距離）が定義され、正則写像は必ずそれを縮める。<em>小林距離が非退化な多様体を<strong>双曲的</strong>という。</em>ブロディの定理：コンパクト多様体が双曲的であることと、<m>\mathbb{C}</m> からの非定数正則写像（<em>整曲線</em>）が存在しないことは同値。</p>
+
+<p><strong>ピカールの小定理を幾何で見る。</strong><m>\mathbb{C}\setminus\{0,1\}</m> の普遍被覆は円板である（単一化定理、第91章★★）。<em>整関数 <m>f:\mathbb{C}\to\mathbb{C}\setminus\{0,1\}</m> があれば、単連結性から <m>\mathbb{C}\to D</m> へ持ち上がり、リウヴィルにより定数。</em><span class="yogo-hl">したがって整関数は二つ以上の値を除外できない——これがピカールの小定理である。</span>解析的な定理が、被覆空間と双曲幾何の言葉で一行になる。</p>
+
+<p><strong>モンテルの大定理。</strong>二つの値 <m>a,b</m> を取らない正則関数の族は正規族である。<em>同じ被覆の議論による。</em>これがモンテルの定理（一様有界性の仮定）を大幅に強めたもので、<span class="yogo-hl">複素力学系でジュリア集合とファトゥ集合を定義する道具になる</span>：反復 <m>f^{\circ n}</m> が正規族になる点の集合がファトゥ集合、その補集合がジュリア集合である。</p>
+
+<p><strong>仮定を外すと。</strong>モンテルの定理で一様有界性を「各点有界」に弱めると成り立たない。<em>ただし「広義一様有界でないなら、ある部分列が広義一様に <m>\infty</m> に発散する」という形（球面距離での正規性）に言い換えれば、より広い枠組みになる。</em></p>
+</div>
+
+<div class="star3">
+<h4>★★★ 大学院——一様化、タイヒミュラー空間、共形場</h4>
+
+<p><strong>単一化定理の全体像。</strong>任意のリーマン面 <m>X</m> の普遍被覆は <m>\hat{\mathbb{C}}</m>、<m>\mathbb{C}</m>、<m>D</m> のいずれか。<em>したがって <m>X</m> は次のどれかである</em>：</p>
+<p>（i）<em>球面型</em>：<m>\hat{\mathbb{C}}</m> のみ。<br>
+（ii）<em>ユークリッド型</em>：<m>\mathbb{C}</m>、<m>\mathbb{C}^*</m>、トーラス <m>\mathbb{C}/\Lambda</m>。<br>
+（iii）<em>双曲型</em>：それ以外すべて。<span class="yogo-hl">圧倒的多数が双曲型である。</span></p>
+<p>トーラス <m>\mathbb{C}/\Lambda</m> の等角同値類は格子の相似類で決まり、上半平面のモジュラー群による商 <m>\mathbb{H}/SL(2,\mathbb{Z})</m> がその<strong>モジュライ空間</strong>になる。<em>モジュラー形式の理論は、ここから始まる。</em></p>
+
+<p><strong>タイヒミュラー空間。</strong>種数 <m>g\ge2</m> の閉曲面の複素構造のモジュライ空間は、次元 <m>3g-3</m> の複素多様体である。<em>その普遍被覆であるタイヒミュラー空間は <m>\mathbb{C}^{3g-3}</m> の有界領域と同相で、タイヒミュラー計量（擬等角写像の歪みで測る距離）をもつ。</em><span class="yogo-hl">第89章★★のベルトラミ方程式が、この空間の座標を与える。</span>ミルザハニによるワイル–ピーターソン体積の再帰公式（2007年、2014年フィールズ賞）は、この空間の幾何を明示的に計算した。</p>
+
+<p><strong>等角写像の数値計算と確率。</strong>離散的な近似として<strong>円充填</strong>（サーストン）がある：三角形分割を円の接触パターンで実現すると、細分の極限がリーマン写像に収束する（ローディン–サリヴァン、1987年）。<em>離散的な組合せ論的データから、解析的な写像が復元される。</em></p>
+
+<p>確率論との接点が<strong>シュラム–レフナー発展</strong>（SLE）である。ランダムな曲線を、リーマン写像の族がみたす微分方程式</p>
+<M>\partial_t g_t(z) = \frac{2}{g_t(z)-\sqrt\kappa B_t}</M>
+<p>で記述する。<em>二次元臨界現象（パーコレーション、イジング模型、一様全域木）のスケール極限が、パラメータ <m>\kappa</m> の値ごとにこの曲線として現れる。</em><span class="yogo-hl">共形不変性という仮定だけから、臨界指数が厳密に計算できる</span>——スミルノフ、ヴェルナー、ドゥミニル–コパンのフィールズ賞の主題である。<em>第94章のディリクレ問題と調和測度が、その計算の道具として使われる。</em></p>
+
+<p><strong>未解決に近い問い。</strong>ブレナン予想——単連結領域のリーマン写像の導関数について <m>\int|f'|^p dA < \infty</m> が <m>4/3 < p < 4</m> で成り立つか——は、積分手段スペクトルの理論の中心にあり未解決である。<em>また、二次多項式の族におけるマンデルブロー集合の局所連結性（MLC予想）も、ヤッコブソン–ヨッコスの部分的な結果を超えて未解決のままである。</em></p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li><m>z\mapsto(z-i)/(z+i)</m> が上半平面を単位円板に写すことを確かめよ。</li>
+<li>円板の自己同型 <m>\varphi_a(z)=(z-a)/(1-\bar az)</m> が <m>D</m> を <m>D</m> に写すことを確かめよ。</li>
+<li><m>e^z</m> が帯 <m>0 < \mathrm{Im}\,z < \pi</m> を上半平面に写すことを確かめよ。</li>
+<li><m>\mathbb{C}</m> と <m>D</m> が等角同値でないことを示せ。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li>円板の自己同型がすべて <ref t="rei-tokaku-rei"/>（3）の形であることを示せ。<span class="haiten">（35点）</span></li>
+<li><ref t="thm-montel"/>を、コーシーの積分公式から同程度連続性を導いて示せ。<span class="haiten">（40点）</span></li>
+<li><ref t="thm-riemann-shazo"/>の一意性を示せ。<span class="haiten">（25点）</span></li>
+<li><ref t="thm-riemann-shazo"/>の第一段（単射正則写像の存在）を示せ。<span class="haiten">（40点）</span></li>
+<li>第三段の改良の計算 <m>|G'(z_0)|>|f'(z_0)|</m> を確かめよ。<span class="haiten">（45点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li>シュヴァルツ–ピックの定理を示し、幾何的に解釈せよ。<span class="haiten">（45点）</span></li>
+<li>円環 <m>A_r</m> と <m>A_{r'}</m> が等角同値なら <m>r=r'</m> を示せ。<span class="haiten">（50点）</span></li>
+<li>ピカールの小定理を、単一化定理とリウヴィルの定理から導け。<span class="haiten">（50点）</span></li>
+<li>シュヴァルツ–クリストッフェルの公式が三角形を与える場合を確かめよ。<span class="haiten">（45点）</span></li>
+</ol>
+</div>
+</div>
+<nav class="chnav">
+<a class="prev" href="ch92.html">← 第92章　留数定理とその応用</a>
+<a class="next" href="ch94.html">第94章　調和関数とDirichlet問題 →</a>
+</nav>
+</article>
+</main>
+<footer class="site">
+  <p>位相・解析大全　学部から大学院まで、三層で読む位相空間論と解析学</p>
+  <p class="small">本文・図版とも本書のために作成したものです。数式は MathJax でベクタ化して組んでいます。</p>
+</footer>
+</body>
+</html>

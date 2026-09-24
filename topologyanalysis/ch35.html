@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第35章 基数不変量——重み・稠密度・指標｜位相・解析大全</title>
+<meta name="description" content="位相・解析大全　第35章　基数不変量——重み・稠密度・指標">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;600&display=swap">
+<link rel="stylesheet" href="web.css">
+</head>
+<body>
+<header class="site">
+  <a class="site-title" href="index.html">位相・解析大全</a>
+  <nav class="site-nav">
+    <a href="index.html">目次</a>
+    <a href="isou-kaiseki-taizen.pdf">PDF版</a>
+  </nav>
+</header>
+<main>
+<article class="chapter">
+<p class="part-label">第V部　基数不変量と次元論</p>
+<h1><span class="ch-num">第35章</span>基数不変量——重み・稠密度・指標</h1>
+<nav class="chnav">
+<a class="prev" href="ch34.html">← 第34章　距離空間は何が特別なのか</a>
+<a class="next" href="ch36.html">第36章　セル数とスーリン問題 →</a>
+</nav>
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>「はい／いいえ」の条件を、量に変えると何が見えるのか。</li>
+<li>基数不変量のあいだには、どんな不等式が成り立つのか。</li>
+<li>空間の濃度は、局所的な量で押さえられるのか。</li>
+</ul>
+</div>
+
+<h3 id="s35-1">条件を量に変える</h3>
+
+<p>第7章で可算公理を三つ導入した。<em>「可算な基底があるか」「可算な近傍基があるか」「可算な稠密集合があるか」。</em>どれも「はい／いいえ」の問いだった。</p>
+
+<p><span class="yogo-hl">「可算」という語を「濃度 <m>\kappa</m> 以下」に置き換えると、条件が量になる。</span></p>
+
+<div class="teigi" id="def-kisu-fuhenryo">
+<h4>四つの基数不変量</h4>
+<p class="no-indent">位相空間 <m>X</m>（無限とする）について、</p>
+<p class="no-indent"><strong>重み</strong><span class="orig">weight</span> <m>w(X)</m>　基底の濃度の最小値。<br>
+<strong>稠密度</strong><span class="orig">density</span> <m>d(X)</m>　稠密部分集合の濃度の最小値。<br>
+<strong>指標</strong><span class="orig">character</span> <m>\chi(X)</m>　各点の近傍基の濃度の最小値の上限。<br>
+<strong>セル数</strong><span class="orig">cellularity</span> <m>c(X)</m>　互いに交わらない空でない開集合の族の濃度の上限。</p>
+<p>いずれも慣例として <m>\aleph_0</m> を下限とする（有限空間で <m>0</m> にならないように）。</p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">第7章の条件は、これらの値が <m>\aleph_0</m> であることにあたる。<em><m>w(X)=\aleph_0</m> が第二可算、<m>\chi(X)=\aleph_0</m> が第一可算、<m>d(X)=\aleph_0</m> が可分。</em><span class="yogo-hl">三つの「はい／いいえ」が、三つの基数の値になった。</span></p>
+</div>
+
+<div class="teigi" id="def-lindelof-su">
+<h4>もう三つ</h4>
+<p class="no-indent"><strong>Lindelöf 数</strong> <m>L(X)</m>　どの開被覆も濃度 <m>L(X)</m> 以下の部分被覆をもつような最小の基数。<br>
+<strong>散布度</strong><span class="orig">spread</span> <m>s(X)</m>　離散部分空間の濃度の上限。<br>
+<strong>拡がり</strong><span class="orig">extent</span> <m>e(X)</m>　離散<em>閉</em>部分空間の濃度の上限。</p>
+</div>
+
+<h3 id="s35-2">基本的な不等式</h3>
+
+<div class="teiri" id="thm-kisu-futoshiki">
+<h4></h4>
+<p class="no-indent">任意の位相空間 <m>X</m> について、</p>
+<M>d(X) \le w(X), \qquad \chi(X) \le w(X), \qquad c(X) \le d(X), \qquad
+e(X) \le s(X), \qquad L(X) \le w(X)</M>
+<p class="no-indent">が成り立つ。ハウスドルフ空間ではさらに <m>|X| \le 2^{w(X)}</m>。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><m>d(X) \le w(X)</m>。基底 <m>\mathcal{B}</m>（濃度 <m>w(X)</m>）の各元から点を一つ選べば稠密集合になる（第7章 <ref t="prop-kasan-kankei"/> の議論）。</p>
+<p><m>\chi(X) \le w(X)</m>。<m>x</m> を含む基底元の全体が近傍基になる。</p>
+<p><m>c(X) \le d(X)</m>。<m>D</m> を稠密集合、<m>\{U_i\}</m> を互いに交わらない空でない開集合の族とすると、<em>各 <m>U_i</m> が <m>D</m> の点を含み、交わらないので異なる点である。</em>よって族の濃度は <m>|D|</m> 以下。</p>
+<p><m>L(X) \le w(X)</m>。基底から被覆を選び直す議論（第25章 <ref t="thm-yowai-kankei"/>（4））の一般化。</p>
+<p><m>|X| \le 2^{w(X)}</m>。<m>T_0</m> ならば、各点 <m>x</m> に「<m>x</m> を含む基底元の集合」を対応させる写像が単射である。<span class="yogo-hl">値域は <m>\mathcal{P}(\mathcal{B})</m> なので濃度 <m>2^{w(X)}</m>。</span></p>
+</div>
+
+<div class="rei" id="rei-kisu-rei">
+<h4>具体的な値</h4>
+<p class="no-indent"><strong><m>\mathbb{R}</m>。</strong><m>w = d = \chi = c = L = \aleph_0</m>。すべて可算である。</p>
+<p><strong>ゾルゲンフライ直線 <m>\mathbb{R}_\ell</m>。</strong><m>d = \chi = c = L = \aleph_0</m> だが <m>w = 2^{\aleph_0}</m>。<em>第7章で第二可算でないことを見たのが、この不等式が真であることの内容である。</em></p>
+<p><strong><m>\{0,1\}^{I}</m>（<m>|I| = \kappa \ge \aleph_0</m>）。</strong><m>w = \kappa</m>、<m>\chi = \kappa</m>、<m>c = \aleph_0</m>（後述）、<m>d = \log \kappa</m>（第37章）。<span class="yogo-hl">セル数が可算にとどまるのが積空間の際立った性質である。</span></p>
+<p><strong>非可算離散空間 <m>D</m>（濃度 <m>\kappa</m>）。</strong><m>w = d = c = s = e = \kappa</m>、<m>\chi = \aleph_0</m>、<m>L = \kappa</m>。</p>
+</div>
+
+<figure id="fig35-1">
+<svg viewBox="0 0 470 276" width="470" height="276" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <defs>
+    <marker id="a35" markerWidth="8" markerHeight="8" refX="7" refY="2.6" orient="auto"><path d="M0,0 L7,2.6 L0,5.2 z" fill="#35618f"/></marker>
+  </defs>
+
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">基数不変量の不等式——矢印の向きに大きくなる</text>
+
+  <rect x="14" y="26" width="442" height="126" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+
+  <rect x="186" y="38" width="92" height="22" rx="3" fill="#dce7f0" stroke="#35618f" stroke-width="1.2"/>
+  <text x="232" y="52" font-size="6.8" text-anchor="middle" font-weight="700" fill="#1f3b5c">重み w(X)</text>
+
+  <rect x="62" y="80" width="92" height="22" rx="3" fill="#e8f0f7" stroke="#35618f"/>
+  <text x="108" y="94" font-size="6.8" text-anchor="middle" fill="#1f3b5c">稠密度 d(X)</text>
+
+  <rect x="186" y="80" width="92" height="22" rx="3" fill="#e8f0f7" stroke="#35618f"/>
+  <text x="232" y="94" font-size="6.8" text-anchor="middle" fill="#1f3b5c">指標 χ(X)</text>
+
+  <rect x="310" y="80" width="98" height="22" rx="3" fill="#e8f0f7" stroke="#35618f"/>
+  <text x="359" y="94" font-size="6.8" text-anchor="middle" fill="#1f3b5c">Lindelöf 数 L(X)</text>
+
+  <rect x="62" y="122" width="92" height="22" rx="3" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="108" y="136" font-size="6.8" text-anchor="middle" fill="#1e4a41">セル数 c(X)</text>
+
+  <path d="M202,64 L134,76" stroke="#35618f" stroke-width="1.1" fill="none" marker-end="url(#a35)"/>
+  <path d="M232,64 L232,76" stroke="#35618f" stroke-width="1.1" fill="none" marker-end="url(#a35)"/>
+  <path d="M262,64 L330,76" stroke="#35618f" stroke-width="1.1" fill="none" marker-end="url(#a35)"/>
+  <path d="M108,106 L108,118" stroke="#2f6b5f" stroke-width="1.1" fill="none" marker-end="url(#a35)"/>
+
+  <text x="24" y="52" font-size="6.4" fill="#6a6a68">矢印は「≥」</text>
+  <text x="24" y="62" font-size="6.4" fill="#6a6a68">上が大きい</text>
+
+  <text x="318" y="128" font-size="6.6" fill="#8c2f1e">ハウスドルフなら |X| ≤ 2 の w(X) 乗</text>
+  <text x="318" y="140" font-size="6.4" fill="#6a6a68">重みが空間の大きさを押さえる</text>
+
+  <rect x="14" y="164" width="442" height="102" rx="4" fill="#fdf6f4" stroke="#e0c3bd"/>
+  <text x="24" y="179" font-size="7.8" font-weight="700" fill="#8c2f1e">具体的な値</text>
+
+  <text x="24" y="197" font-size="6.6" fill="#8c2f1e">ℝ</text>
+  <text x="140" y="197" font-size="6.6" fill="#8c2f1e">w = d = χ = c = L = ℵ₀　すべて可算</text>
+  <text x="24" y="211" font-size="6.6" fill="#8c2f1e">ゾルゲンフライ直線</text>
+  <text x="140" y="211" font-size="6.6" fill="#8c2f1e">d = χ = c = L = ℵ₀ だが w は 2 の ℵ₀ 乗　→ 不等式が真</text>
+  <text x="24" y="225" font-size="6.6" fill="#8c2f1e">二点集合の κ 個の積</text>
+  <text x="140" y="225" font-size="6.6" fill="#8c2f1e">w = χ = κ、c = ℵ₀（可算鎖条件）、d は log κ 程度</text>
+  <text x="24" y="239" font-size="6.6" fill="#8c2f1e">濃度 κ の離散空間</text>
+  <text x="140" y="239" font-size="6.6" fill="#8c2f1e">w = d = c = L = κ だが χ = ℵ₀</text>
+  <text x="24" y="257" font-size="6.6" fill="#5a4520">距離空間では w = d（局所的な可算性が大域に持ち上がる——第7章・第34章）</text>
+</svg>
+<figcaption data-ch="35">基数不変量のあいだの不等式。重みがもっとも大きく、そこから稠密度・指標・Lindelöf 数が押さえられる。距離空間では重みと稠密度が一致する。</figcaption>
+</figure>
+
+<h3 id="s35-3">距離空間では潰れる</h3>
+
+<div class="teiri" data-kind="命題" id="prop-kyori-kisu">
+<h4></h4>
+<p class="no-indent">距離空間 <m>X</m> について <m>w(X) = d(X) = L(X) = c(X)</m> であり、<m>\chi(X) = \aleph_0</m> である。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><m>\chi = \aleph_0</m> は第一可算性（<m>\{B(x,1/n)\}</m>）。</p>
+<p><m>d \le w</m> は一般の不等式。<m>w \le d</m> を示す。<m>D</m> を稠密集合（濃度 <m>d(X)</m>）とすると、<em><m>\{B(x, q) \mid x \in D,\ q \in \mathbb{Q}^{+}\}</m> が基底になる</em>——第7章の議論の一般化である。濃度は <m>d(X) \cdot \aleph_0 = d(X)</m>。<span class="yogo-hl">有理半径という可算な目盛りが、ここでも効いている。</span></p>
+<p><m>c \le d</m> は一般。<m>d \le c</m> は、<m>c(X)</m> 個以下の交わらない球で覆えることから従う（極大な族を取る）。<m>L</m> についても同様。</p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">この命題が第34章の主題を数量的に述べたものである。<em>距離空間では四つの量が一つに潰れる。</em><span class="yogo-hl">一般の空間で四つを区別する意味は、距離化できない空間を扱うときに初めて生じる。</span></p>
+</div>
+
+<div class="lv2">
+<h4>空間の濃度を押さえる定理</h4>
+<p><ref t="thm-kisu-futoshiki"/> の最後は <m>|X| \le 2^{w(X)}</m> だった。<em>重みは大域的な量なので、この評価は粗い。</em>局所的な量で押さえられないか。</p>
+<p><strong>アルハンゲリスキーの定理。</strong>ハウスドルフ空間 <m>X</m> について</p>
+<M>|X| \le 2^{L(X) \cdot \chi(X)}</M>
+<p><span class="yogo-hl">とくに、リンデレーフかつ第一可算なハウスドルフ空間の濃度は <m>2^{\aleph_0}</m> 以下である。</span></p>
+<p><strong>なぜ意外か。</strong>第一可算性は各点のまわりの条件、リンデレーフ性は被覆の条件である。<em>どちらも空間の大きさを直接には制限しない。</em>それなのに、二つを合わせると濃度の上限が出る。</p>
+<p>一九六九年にアルハンゲリスキー <span class="orig">Arhangelskii</span> が示すまで、この問題は二十年以上未解決だった。ハウスドルフ空間の濃度を第一可算性から押さえる問題は、アレクサンドロフとウリゾーンが一九二三年に提起している。</p>
+<p><strong>証明の道具。</strong>証明は<em>閉包構成法</em>と呼ばれる手法による。長さ <m>\omega_1</m> の増加列 <m>\{F_\alpha\}</m> を作り、各段で</p>
+<p>（1）<m>F_\alpha</m> の各点の近傍基から被覆を選び、（2）その補集合に点を足し、（3）閉包を取る。</p>
+<p><em>各段の濃度が <m>2^{\aleph_0}</m> を超えないように制御する。</em><span class="yogo-hl"><m>\mathrm{cf}(\omega_1) > \omega</m> により、極限段で閉包が閉じる。</span></p>
+<p>第4章で導入した共終数が、ここでも決定的に働いている。第17章のチコノフ板、第25章の <m>[0,\omega_1)</m> と同じ構造である。</p>
+<p><strong>系。</strong>コンパクトハウスドルフかつ第一可算な空間の濃度は <m>2^{\aleph_0}</m> 以下である（コンパクトならリンデレーフ）。<em>したがって、そのような空間は連続体の濃度を超えられない。</em></p>
+<p><strong>関連する不等式。</strong>同じ方向の結果が多数ある。</p>
+<M>|X| \le 2^{c(X) \cdot \chi(X)} \quad(\text{正規ハウスドルフ}), \qquad
+|X| \le d(X)^{\chi(X)} \quad(\text{ハウスドルフ})</M>
+<p>後者はポスピシル <span class="orig">Pospíšil</span> の不等式である。<span class="yogo-hl">どれも「局所的な量と大域的な量から、空間全体の大きさが決まる」という形をしている。</span></p>
+<p>第37章で積空間について同じ問いを扱う。<em>そこで独立性が現れる。</em></p>
+</div>
+
+<div class="lv3">
+<h4>基数不変量の全体像と、独立な不等式</h4>
+<p>基数不変量は十数個が標準的に使われる。<em>それらのあいだの関係を尽くすのが、この分野の仕事である。</em></p>
+<p><strong>主要な不変量。</strong>本章で導入した七つに加えて、</p>
+<p><em>緊密度</em><span class="orig">tightness</span> <m>t(X)</m>——<m>x \in \overline{A}</m> なら濃度 <m>t(X)</m> 以下の <m>B \subseteq A</m> で <m>x \in \overline{B}</m>。第12章の点列の議論を量化したものである。</p>
+<p><em>π重み</em><span class="orig">π-weight</span> <m>\pi w(X)</m>——どの空でない開集合もある元を含むような開集合の族の、最小濃度。</p>
+<p><em>網重み</em><span class="orig">network weight</span> <m>nw(X)</m>——開とは限らない集合の族で「基底の役割」を果たすものの最小濃度。</p>
+<p><em>擬指標</em><span class="orig">pseudocharacter</span> <m>\psi(X)</m>——一点が <m>\psi(X)</m> 個の開集合の交叉になる。</p>
+<p><strong>不等式の網。</strong>これらのあいだには数十の不等式が知られている。例を挙げる。</p>
+<M>nw(X) \le w(X), \qquad t(X) \le \chi(X), \qquad c(X) \le \pi w(X) \le w(X)</M>
+<M>w(X) \le 2^{d(X)} \ (\text{ハウスドルフ}), \qquad \psi(X) \le \chi(X)</M>
+<p>一部は証明でき、<span class="yogo-hl">一部は公理系から独立である。</span></p>
+<p><strong>独立な例。</strong>「<m>c(X) = \aleph_0</m> ならば <m>|X| \le 2^{\aleph_0}</m> か」——ハウスドルフ空間では偽だが、正規なら？ この種の問いに独立なものが多い。</p>
+<p>もっとも有名なのが第36章のスーリン問題である。<em>「<m>c(X) = \aleph_0</m> と <m>d(X) = \aleph_0</m> は、順序位相をもつ連結な空間で一致するか」</em>という形に書ける。</p>
+<p><strong>積での振る舞い。</strong>不変量が積でどうなるかも独立性の宝庫である。<span class="yogo-hl"><m>c(X \times Y) = \max(c(X), c(Y))</m> は成り立つか。</span></p>
+<p>成り立つかどうかは公理に依存する。第37章で扱う。</p>
+<p><strong>なぜ独立性が多いのか。</strong>基数不変量は「どれだけの個数で足りるか」を問う。<em>そして個数の比較は、可算と非可算の境界で集合論に触れる。</em></p>
+<p>第4章で共終数と連続体仮説を導入し、第17章と第26章で反例に使い、第32章で距離化問題の限界として見た。<span class="yogo-hl">第V部は、その構造を正面から測る部である。</span></p>
+<p><strong>次元論との関係。</strong>第38章以降で扱う次元も、一種の不変量である。<em>ただし値が自然数に限られる。</em></p>
+<p>「大きさ」を測るのが基数不変量、「太さ」を測るのが次元——<span class="yogo-hl">どちらも位相だけで定義され、距離を使わない。</span>そして第41章の一致定理は、距離があると三つの次元が潰れることを述べる。本章の <ref t="prop-kyori-kisu"/> と同じ構図である。</p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li><m>\mathbb{R}</m> の四つの基数不変量を求めよ。</li>
+<li>濃度 <m>\kappa</m> の離散空間について、七つの不変量を求めよ。</li>
+<li><m>c(X) \le d(X)</m> を示せ。</li>
+<li>ゾルゲンフライ直線で <m>w \ne d</m> であることを述べよ。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li><ref t="thm-kisu-futoshiki"/> の <m>|X| \le 2^{w(X)}</m> を、<m>T_0</m> をどこで使うか明示して示せ。<span class="haiten">（20点）</span></li>
+<li><ref t="prop-kyori-kisu"/> の <m>w \le d</m> を示せ。<span class="haiten">（20点）</span></li>
+<li><m>L(X) \le w(X)</m> を示せ。<span class="haiten">（15点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li>アルハンゲリスキーの不等式 <m>|X| \le 2^{L(X)\chi(X)}</m> の主張を述べ、コンパクト第一可算ハウスドルフ空間について何が言えるかを説明せよ。<span class="haiten">（30点）</span></li>
+<li>ハウスドルフ空間について <m>w(X) \le 2^{d(X)}</m> を示せ。<span class="haiten">（35点）</span></li>
+</ol>
+</div>
+</div>
+<nav class="chnav">
+<a class="prev" href="ch34.html">← 第34章　距離空間は何が特別なのか</a>
+<a class="next" href="ch36.html">第36章　セル数とスーリン問題 →</a>
+</nav>
+</article>
+</main>
+<footer class="site">
+  <p>位相・解析大全　学部から大学院まで、三層で読む位相空間論と解析学</p>
+  <p class="small">本文・図版とも本書のために作成したものです。数式は MathJax でベクタ化して組んでいます。</p>
+</footer>
+</body>
+</html>
