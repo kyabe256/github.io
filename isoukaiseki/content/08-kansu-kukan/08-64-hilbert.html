@@ -1,0 +1,248 @@
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>内積は、ノルムに何を付け加えるのか。</li>
+<li>なぜ「最も近い点」が存在するのか。</li>
+<li>直交分解は、なぜヒルベルト空間だけの特権なのか。</li>
+</ul>
+</div>
+
+<h3 id="s64-1">内積とノルム</h3>
+
+<div class="teigi" id="def-naiseki">
+<h4>内積空間・ヒルベルト空間</h4>
+<p class="no-indent">複素ベクトル空間 <m>H</m> 上の <m>\langle\cdot,\cdot\rangle \colon H\times H\to\mathbb{C}</m> が<strong>内積</strong>であるとは、</p>
+<M>\langle x,x\rangle \ge 0\ (=0 \iff x=0), \qquad \langle y,x\rangle=\overline{\langle x,y\rangle}, \qquad
+\langle \lambda x + z, y\rangle = \lambda\langle x,y\rangle + \langle z,y\rangle</M>
+<p class="no-indent">を満たすことをいう。<m>\|x\|=\sqrt{\langle x,x\rangle}</m> が定めるノルムについて完備なとき、<m>H</m> を<strong>ヒルベルト空間</strong>という。</p>
+</div>
+
+<div class="teiri" id="thm-cauchy-schwarz">
+<h4>コーシー–シュワルツの不等式</h4>
+<p class="no-indent"><m>|\langle x,y\rangle| \le \|x\|\,\|y\|</m>。等号は <m>x,y</m> が一次従属のときに限る。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><m>y=0</m> なら明らか。<m>y\ne0</m> とし、<m>\lambda = \langle x,y\rangle/\|y\|^2</m> とおく。</p>
+<M>0 \le \|x-\lambda y\|^2 = \|x\|^2 - \frac{|\langle x,y\rangle|^2}{\|y\|^2}</M>
+<p class="no-indent"><em>等号は <m>x=\lambda y</m> のときに限る。</em><span class="yogo-hl">「直交する成分を引いて、残りの長さが非負」——これがこの不等式の内容である。</span></p>
+</div>
+
+<div class="teiri" id="thm-chusen">
+<h4>中線定理</h4>
+<p class="no-indent">内積から来るノルムは</p>
+<M>\|x+y\|^2 + \|x-y\|^2 = 2\|x\|^2 + 2\|y\|^2</M>
+<p class="no-indent">を満たす。逆に、この等式を満たすノルムは内積から来る（ヨルダン–フォン・ノイマン）。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">前半は展開するだけ。後半は</p>
+<M>\langle x,y\rangle = \tfrac14\big(\|x+y\|^2-\|x-y\|^2 + i\|x+iy\|^2 - i\|x-iy\|^2\big)</M>
+<p class="no-indent">と定めて、これが内積になることを確かめる（<em>加法性の証明が長い</em>）。</p>
+</div>
+
+<div class="chui">
+<h4>ヒルベルト空間はどれか</h4>
+<p class="no-indent"><m>L^p(\mu)</m> が中線定理を満たすのは <m>p=2</m> のときに限る。<em><m>f,g</m> を台が交わらない関数に取ると、左辺が <m>2\|f\|_p^p{}^{2/p}\cdots</m> となって等式が崩れる。</em></p>
+<p><m>C[0,1]</m>（一様ノルム）も満たさない。<em><m>f=1</m>、<m>g=x</m> で確かめられる。</em></p>
+<p><span class="yogo-hl">ヒルベルト空間は、バナッハ空間のなかで例外的に恵まれた一族である。</span></p>
+</div>
+
+<h3 id="s64-2">最も近い点</h3>
+
+<div class="teiri" id="thm-saikin-ten">
+<h4>凸集合への射影</h4>
+<p class="no-indent"><m>H</m> をヒルベルト空間、<m>C\subseteq H</m> を空でない閉凸集合とする。どの <m>x\in H</m> についても</p>
+<M>\|x-p\| = \mathrm{dist}(x,C) = \inf_{y\in C}\|x-y\|</M>
+<p class="no-indent">なる <m>p\in C</m> がただ一つ存在する。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><m>d=\mathrm{dist}(x,C)</m> とし、<m>\|x-y_n\|\to d</m> なる <m>y_n\in C</m> を取る。</p>
+<p><strong>コーシー列であること。</strong>中線定理を <m>x-y_n</m> と <m>x-y_m</m> に使う。</p>
+<M>\|y_n-y_m\|^2 = 2\|x-y_n\|^2 + 2\|x-y_m\|^2 - 4\Big\|x-\frac{y_n+y_m}{2}\Big\|^2</M>
+<p class="no-indent"><em>凸性より <m>\frac{y_n+y_m}{2}\in C</m> なので、最後の項は <m>4d^2</m> 以上。</em>よって</p>
+<M>\|y_n-y_m\|^2 \le 2\|x-y_n\|^2 + 2\|x-y_m\|^2 - 4d^2 \ \longrightarrow\ 0</M>
+<p><strong>極限。</strong>完備性より <m>y_n\to p</m>、<m>C</m> が閉なので <m>p\in C</m>、連続性より <m>\|x-p\|=d</m>。</p>
+<p><strong>一意性。</strong><m>p,p'</m> がどちらも最小を与えるなら、上の式で <m>\|p-p'\|^2 \le 2d^2+2d^2-4d^2=0</m>。</p>
+</div>
+
+<div class="chui">
+<h4>三つの仮定が全部効いている</h4>
+<p class="no-indent"><span class="yogo-hl">凸性は中点が <m>C</m> に入るために、完備性は極限が存在するために、内積は中線定理のために要る。</span></p>
+<p><em>どれを外しても定理は壊れる。</em>第63章で「無限次元では最大値の定理が使えない」と述べたが、<span class="yogo-hl">ヒルベルト空間の凸集合に限れば、最良近似が存在する。</span></p>
+<p>一般のバナッハ空間では、閉凸集合への最近点が存在しないこともあるし、存在しても一意とは限らない。<em><m>\ell^\infty</m> や <m>L^1</m> で反例が作れる。</em></p>
+</div>
+
+<h3 id="s64-3">直交分解</h3>
+
+<div class="teigi" id="def-chokkou">
+<h4>直交補空間</h4>
+<p class="no-indent"><m>M\subseteq H</m> に対し <m>M^\perp = \{\, x\in H \mid \langle x,y\rangle=0 \ (\forall y\in M) \,\}</m> と定める。<em><m>M^\perp</m> はつねに閉部分空間である</em>（内積の連続性から）。</p>
+</div>
+
+<div class="teiri" id="thm-chokkou-bunkai">
+<h4>直交分解定理</h4>
+<p class="no-indent"><m>M\subseteq H</m> を閉部分空間とすると</p>
+<M>H = M \oplus M^\perp</M>
+<p class="no-indent">すなわち、どの <m>x\in H</m> も <m>x=p+q</m>（<m>p\in M</m>、<m>q\in M^\perp</m>）と一意に書ける。さらに <m>(M^\perp)^\perp = M</m>。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><ref t="thm-saikin-ten"/> で <m>C=M</m> として <m>p</m> を取り、<m>q=x-p</m> とおく。</p>
+<p><strong><m>q\in M^\perp</m> であること。</strong><m>y\in M</m>、<m>t\in\mathbb{R}</m> について <m>p+ty\in M</m> なので</p>
+<M>\|q\|^2 \le \|x-(p+ty)\|^2 = \|q\|^2 - 2t\,\mathrm{Re}\langle q,y\rangle + t^2\|y\|^2</M>
+<p class="no-indent"><em>すべての <m>t</m> でこれが成り立つには <m>\mathrm{Re}\langle q,y\rangle=0</m>。</em><m>y</m> を <m>iy</m> に替えて虚部も <m>0</m>。</p>
+<p><strong>一意性。</strong><m>p+q=p'+q'</m> なら <m>p-p'=q'-q \in M\cap M^\perp = \{0\}</m>。</p>
+<p><strong><m>(M^\perp)^\perp=M</m>。</strong><m>M\subseteq(M^\perp)^\perp</m> は明らか。逆に <m>x\in(M^\perp)^\perp</m> を <m>x=p+q</m> と分けると <m>q\in M^\perp</m> かつ <m>q = x-p \in (M^\perp)^\perp</m> なので <m>\langle q,q\rangle=0</m>。</p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">第63章★★で述べた「補空間をもたない閉部分空間」の問題が、<span class="yogo-hl">ヒルベルト空間では起こらない。</span></p>
+<p><em>そしてリンデンシュトラウス–ツァフリーリの定理により、それはヒルベルト空間だけの性質である。</em></p>
+<p>射影 <m>P_M \colon x\mapsto p</m> は有界（<m>\|P_M\|\le1</m>）で、<m>P_M^2=P_M</m>、<m>\langle P_Mx,y\rangle=\langle x,P_My\rangle</m>。<em>第75章で、この性質をもつ作用素を「直交射影」として扱う。</em></p>
+</div>
+
+<div class="teiri" id="thm-riesz-hyogen-hilbert">
+<h4>リースの表現定理（ヒルベルト空間版）</h4>
+<p class="no-indent"><m>\varphi</m> を <m>H</m> 上の有界線型汎関数とすると、<m>y\in H</m> がただ一つ存在して</p>
+<M>\varphi(x) = \langle x,y\rangle \qquad (\forall x\in H)</M>
+<p class="no-indent">と書ける。さらに <m>\|\varphi\|=\|y\|</m>。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><m>\varphi=0</m> なら <m>y=0</m>。そうでないとき、<m>M=\ker\varphi</m> は閉部分空間（<m>\varphi</m> が連続だから）で <m>M\ne H</m>。</p>
+<p><ref t="thm-chokkou-bunkai"/> より <m>M^\perp\ne\{0\}</m>。<m>z\in M^\perp</m>、<m>\varphi(z)=1</m> と取る（正規化）。</p>
+<p>どの <m>x</m> も <m>x = (x-\varphi(x)z) + \varphi(x)z</m> と分け、第一項は <m>M</m> に入る。よって</p>
+<M>\langle x,z\rangle = \varphi(x)\langle z,z\rangle, \qquad \varphi(x) = \Big\langle x, \frac{z}{\|z\|^2}\Big\rangle</M>
+<p class="no-indent"><em><m>y=z/\|z\|^2</m> とすればよい。</em><span class="yogo-hl">一意性と <m>\|\varphi\|=\|y\|</m> はコーシー–シュワルツから。</span></p>
+</div>
+
+<figure>
+<svg viewBox="0 0 470 272" width="470" height="272" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">中線定理が、最近点の存在を生む</text>
+
+  <rect x="14" y="26" width="218" height="126" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+  <text x="24" y="42" font-size="7" font-weight="700" fill="#1f3b5c">閉凸集合への射影</text>
+
+  <path d="M44,124 C 60,92 96,72 134,80 C 170,88 186,112 178,132 L44,132 Z" fill="#e6efe9" stroke="#2f6b5f" stroke-width="1"/>
+  <text x="110" y="120" font-size="6.4" text-anchor="middle" fill="#1e4a41">C（閉凸）</text>
+
+  <circle cx="136" cy="54" r="2.6" fill="#a03b2e"/>
+  <text x="136" y="50" font-size="6" text-anchor="middle" fill="#8c2f1e">x</text>
+  <circle cx="132" cy="80" r="2.6" fill="#8a3b62"/>
+  <text x="146" y="80" font-size="6" fill="#6b2a48">p</text>
+  <line x1="136" y1="54" x2="132" y2="80" stroke="#8a3b62" stroke-width="1.2" stroke-dasharray="3,2"/>
+
+  <circle cx="86" cy="78" r="2" fill="#6a6a68"/>
+  <circle cx="166" cy="92" r="2" fill="#6a6a68"/>
+  <line x1="136" y1="54" x2="86" y2="78" stroke="#8a8a88" stroke-width="0.7"/>
+  <line x1="136" y1="54" x2="166" y2="92" stroke="#8a8a88" stroke-width="0.7"/>
+  <circle cx="126" cy="85" r="1.8" fill="#35618f"/>
+  <text x="126" y="97" font-size="5.6" text-anchor="middle" fill="#1f3b5c">中点も C の中</text>
+  <text x="24" y="146" font-size="6.2" fill="#6a6a68">中点が C に入るので、近似列がコーシー列になる</text>
+
+  <rect x="238" y="26" width="218" height="126" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+  <text x="248" y="42" font-size="7" font-weight="700" fill="#1f3b5c">直交分解</text>
+
+  <line x1="262" y1="118" x2="440" y2="88" stroke="#2f6b5f" stroke-width="1.4"/>
+  <text x="430" y="102" font-size="6.4" fill="#1e4a41">M</text>
+
+  <circle cx="352" cy="58" r="2.6" fill="#a03b2e"/>
+  <text x="352" y="53" font-size="6" text-anchor="middle" fill="#8c2f1e">x</text>
+  <circle cx="345" cy="104" r="2.6" fill="#8a3b62"/>
+  <text x="336" y="114" font-size="6" fill="#6b2a48">p</text>
+  <line x1="352" y1="58" x2="345" y2="104" stroke="#8a3b62" stroke-width="1.2"/>
+  <line x1="262" y1="118" x2="352" y2="58" stroke="#35618f" stroke-width="0.8" stroke-dasharray="3,2"/>
+  <path d="M341,98 L347,97 L348,103" stroke="#8a3b62" stroke-width="0.8" fill="none"/>
+  <text x="368" y="84" font-size="6" fill="#6b2a48">q ∈ M⊥</text>
+  <text x="248" y="146" font-size="6.2" fill="#6a6a68">x ＝ p ＋ q に一意に分かれ、(M⊥)⊥ ＝ M</text>
+
+  <rect x="14" y="162" width="216" height="102" rx="4" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="24" y="177" font-size="7.6" font-weight="700" fill="#1e4a41">三つの仮定が全部効いている</text>
+  <text x="24" y="194" font-size="6.8" fill="#1e4a41">凸性　→　中点が C に入る</text>
+  <text x="24" y="207" font-size="6.8" fill="#1e4a41">完備性　→　コーシー列に極限がある</text>
+  <text x="24" y="220" font-size="6.8" fill="#1e4a41">内積　→　中線定理が使える</text>
+  <text x="24" y="237" font-size="6.6" fill="#8c2f1e">どれを外しても、最近点の存在が崩れる</text>
+  <text x="24" y="249" font-size="6.4" fill="#6a6a68">一般のバナッハ空間では、最良近似が存在</text>
+  <text x="24" y="259" font-size="6.4" fill="#6a6a68">しないことも、一意でないこともある</text>
+
+  <rect x="240" y="162" width="216" height="102" rx="4" fill="#f4f1ea" stroke="#8a6b2c"/>
+  <text x="250" y="177" font-size="7.6" font-weight="700" fill="#5a4520">ヒルベルト空間だけの特権</text>
+  <text x="250" y="194" font-size="6.8" fill="#5a4520">閉部分空間がつねに補空間をもつ</text>
+  <text x="250" y="207" font-size="6.8" fill="#5a4520">双対が自分自身と同一視できる</text>
+  <text x="250" y="220" font-size="6.8" fill="#5a4520">可算な正規直交基底が取れる（第65章）</text>
+  <text x="250" y="237" font-size="6.6" fill="#6a6a68">最初のものは、ヒルベルト空間を特徴づける</text>
+  <text x="250" y="248" font-size="6.6" fill="#6a6a68">（リンデンシュトラウス–ツァフリーリ）</text>
+  <text x="250" y="260" font-size="6.4" fill="#8c2f1e">ノルムが中線定理を満たすかどうかが分かれ目</text>
+</svg>
+<figcaption>閉凸集合への最近点が存在するのは、中点が集合に入ること（凸性）と中線定理（内積）とコーシー列の収束（完備性）が揃うからである。そこから直交分解と、双対の同一視が出る。</figcaption>
+</figure>
+
+<div class="lv2">
+<h4>双対の反線型性と、随伴作用素</h4>
+<p><ref t="thm-riesz-hyogen-hilbert"/> は <m>H^* \cong H</m> を与える。<em>ただし対応 <m>y\mapsto\langle\cdot,y\rangle</m> は<strong>反線型</strong>である</em>——<m>\lambda y \mapsto \bar\lambda\langle\cdot,y\rangle</m>。</p>
+<p><span class="yogo-hl">実ヒルベルト空間なら線型同型、複素なら共役線型同型。</span>この違いが、以降の符号の扱いに効いてくる。</p>
+<p><strong>随伴作用素。</strong><m>T\in B(H)</m> に対し、<m>y</m> を固定した汎関数 <m>x\mapsto\langle Tx,y\rangle</m> にリースの表現定理を使うと、<m>T^*y\in H</m> が定まる。</p>
+<M>\langle Tx,y\rangle = \langle x,T^*y\rangle \qquad (\forall x,y)</M>
+<p><strong>性質。</strong><m>(T^*)^*=T</m>、<m>(ST)^*=T^*S^*</m>、<m>(\lambda T)^*=\bar\lambda T^*</m>、そして</p>
+<M>\|T^*\|=\|T\|, \qquad \|T^*T\| = \|T\|^2</M>
+<p class="no-indent"><em>最後の等式（<m>C^*</m> 等式）が、第79章のゲルファント理論の出発点になる。</em></p>
+<p><em>証明。</em><m>\|Tx\|^2 = \langle T^*Tx,x\rangle \le \|T^*T\|\|x\|^2</m> より <m>\|T\|^2\le\|T^*T\|</m>。逆は <m>\|T^*T\|\le\|T^*\|\|T\|=\|T\|^2</m>。</p>
+<p><strong>核と像の関係。</strong></p>
+<M>\ker T^* = (\mathrm{ran}\,T)^\perp, \qquad \overline{\mathrm{ran}\,T} = (\ker T^*)^\perp</M>
+<p class="no-indent"><span class="yogo-hl">「解が存在する条件」が「随伴の核に直交すること」で書ける</span>——これがフレドホルムの択一定理（第73章）の原型である。</p>
+<p><strong>有限次元との対応。</strong>行列でいえば <m>T^*</m> は共役転置。<em>上の関係式は、線型代数の「階数・退化次数定理」の無限次元版にあたる。</em></p>
+<p>ただし無限次元では <m>\mathrm{ran}\,T</m> が閉とは限らない。<span class="yogo-hl">閉包を取る必要があるところが、有限次元との実質的な差である。</span>第69章の開写像定理が、閉になる条件を与える。</p>
+</div>
+
+<div class="lv3">
+<h4>ヒルベルト空間の特徴づけと、そこから外れる世界</h4>
+<p><strong>何がヒルベルト空間を決めるか。</strong>これまでに三つの特徴づけが出た。</p>
+<p><em>ノルムが中線定理を満たす</em>（ヨルダン–フォン・ノイマン）。<em>どの閉部分空間も補空間をもつ</em>（リンデンシュトラウス–ツァフリーリ）。そして<em>単位球の等長変換群が推移的</em>（マズール–ウラムの周辺）。</p>
+<p>さらに幾何的な特徴づけがある。<strong>カデツ–スネジキンの定理</strong>——<em>どの二次元部分空間も等距離に同型なバナッハ空間は、ヒルベルト空間である</em>（実 <m>3</m> 次元以上）。</p>
+<p><span class="yogo-hl">「すべての方向が同じに見える」ことが、内積の存在と同値になる。</span></p>
+<p><strong>分類。</strong>ヒルベルト空間は、<em>正規直交基底の濃度（ヒルベルト次元）だけで同型を除いて決まる</em>（第65章）。</p>
+<p>可分な無限次元ヒルベルト空間は、すべて <m>\ell^2</m> と同型。<span class="yogo-hl">バナッハ空間の分類が絶望的に難しいのと、際立った対照をなす。</span></p>
+<p><strong>ヒルベルト空間でない世界。</strong>バナッハ空間の同型分類は、記述集合論の意味で「完全に複雑」であることが知られている（フェルドマン–ムーア型の結果）。</p>
+<p>たとえば<em>ツィルセルソンの空間</em>は、<m>\ell^p</m> も <m>c_0</m> も部分空間として含まない。<span class="yogo-hl">「どんなバナッハ空間も <m>\ell^p</m> か <m>c_0</m> のコピーを含む」という長年の予想が、これで否定された。</span></p>
+<p><strong>ゴワーズの二分法。</strong>どの無限次元バナッハ空間も、<em>無条件基底列をもつか、あるいは遺伝的に既約な部分空間をもつ</em>。この定理でゴワーズはフィールズ賞を受けた。</p>
+<p>証明にはラムゼー型の組合せ論が使われる。<em>第V部で見た「集合論が解析に入り込む」構図が、ここでも現れている。</em></p>
+<p><strong>同次空間問題。</strong>「すべての閉部分空間が自分自身と同型なバナッハ空間は、ヒルベルト空間に限るか」——ゴワーズの二分法から、<span class="yogo-hl">答えは<em>はい</em>である</span>（一九九六年）。</p>
+<p>ヒルベルト空間は、いくつもの方向から「唯一の完全に対称なバナッハ空間」として立ち現れる。<em>第X部でスペクトル理論が美しく展開できるのも、この対称性による。</em></p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li><m>C[0,1]</m> の一様ノルムが中線定理を満たさないことを、<m>f=1</m>、<m>g=x</m> で示せ。</li>
+<li><m>\ell^1</m> が中線定理を満たさないことを示せ。</li>
+<li><m>M^\perp</m> が閉部分空間であることを示せ。</li>
+<li><m>H=L^2[-1,1]</m>、<m>M</m>＝偶関数の全体として <m>M^\perp</m> を求めよ。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li><ref t="thm-cauchy-schwarz"/> の等号条件を確定させよ。<span class="haiten">（20点）</span></li>
+<li><ref t="thm-saikin-ten"/> で、凸性を外すと一意性が崩れる例を作れ。<span class="haiten">（25点）</span></li>
+<li><ref t="thm-chokkou-bunkai"/> の <m>q\in M^\perp</m> の部分を、細部まで示せ。<span class="haiten">（25点）</span></li>
+<li><m>\|T^*T\|=\|T\|^2</m> を示せ。<span class="haiten">（25点）</span></li>
+<li><m>\ker T^* = (\mathrm{ran}\,T)^\perp</m> を示せ。<span class="haiten">（25点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li>中線定理を満たすノルムが内積から来ること（ヨルダン–フォン・ノイマン）を、実の場合に示せ。<span class="haiten">（50点）</span></li>
+<li><m>\ell^1</m> で、閉凸集合への最近点が一意でない例を作れ。<span class="haiten">（35点）</span></li>
+<li><m>\mathrm{ran}\,T</m> が閉でない有界作用素の例を挙げよ。<span class="haiten">（30点）</span></li>
+</ol>
+</div>
+</div>

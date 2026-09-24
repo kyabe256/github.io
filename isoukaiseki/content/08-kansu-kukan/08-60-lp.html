@@ -1,0 +1,240 @@
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>関数の「大きさ」を測るのに、なぜ <m>p</m> 乗積分を使うのか。</li>
+<li>三角不等式は、なぜ自明でないのか。</li>
+<li><m>p</m> を動かすと、空間はどう変わるのか。</li>
+</ul>
+</div>
+
+<h3 id="s60-1">関数にノルムを入れる</h3>
+
+<p>第50章で、関数列の収束には何通りもの意味があると見た。<em>それぞれに対応する「大きさ」の測り方がある。</em></p>
+
+<div class="teigi" id="def-lp">
+<h4>Lᵖ 空間</h4>
+<p class="no-indent"><m>(X,\mathcal{A},\mu)</m> を測度空間、<m>1 \le p < \infty</m> とする。可測関数 <m>f</m> について</p>
+<M>\|f\|_p = \Big(\int_X |f|^p \,d\mu\Big)^{1/p}</M>
+<p class="no-indent">と定め、<m>\|f\|_p<\infty</m> なる <m>f</m> の全体を <m>\mathcal{L}^p(\mu)</m> と書く。</p>
+<p><m>p=\infty</m> のときは<strong>本質的上限</strong></p>
+<M>\|f\|_\infty = \inf\{\, M \ge 0 \mid |f|\le M \text{ がほとんどいたるところ成り立つ} \,\}</M>
+<p class="no-indent">を使う。</p>
+</div>
+
+<div class="chui">
+<h4>関数を同一視する</h4>
+<p class="no-indent"><m>\|f\|_p=0</m> であることは <m>f=0</m> ほとんどいたるところと同値だった（<ref t="thm-sekibun-seishitsu"/>（4））。<em>したがって <m>\|\cdot\|_p</m> は半ノルムにすぎない。</em></p>
+<p><span class="yogo-hl">ほとんどいたるところ等しい関数を同一視した商空間を <m>L^p(\mu)</m> と書く。</span>これでノルム空間になる。</p>
+<p>以下、<m>L^p</m> の元を「関数」と呼ぶが、<em>厳密には関数の同値類である</em>。一点での値は意味をもたない。</p>
+</div>
+
+<h3 id="s60-2">二つの不等式</h3>
+
+<div class="teiri" data-kind="補題" id="lem-young">
+<h4>ヤングの不等式</h4>
+<p class="no-indent"><m>a,b\ge0</m>、<m>1<p<\infty</m>、<m>\frac1p+\frac1q=1</m> とすると</p>
+<M>ab \le \frac{a^p}{p} + \frac{b^q}{q}</M>
+<p class="no-indent">等号は <m>a^p=b^q</m> のときに限る。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><m>\log</m> が凹であることから</p>
+<M>\log\Big(\frac{a^p}{p}+\frac{b^q}{q}\Big) \ \ge\ \frac1p\log a^p + \frac1q \log b^q = \log(ab)</M>
+<p class="no-indent"><em>凹性の等号条件が <m>a^p=b^q</m>。</em><span class="yogo-hl">ここで使ったのは、凸関数の性質だけである。</span></p>
+</div>
+
+<div class="teiri" id="thm-holder">
+<h4>ヘルダーの不等式</h4>
+<p class="no-indent"><m>\frac1p+\frac1q=1</m>（<m>1\le p\le\infty</m>）とすると</p>
+<M>\|fg\|_1 \le \|f\|_p\,\|g\|_q</M>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><m>p=1,\infty</m> の場合は明らか。<m>1<p<\infty</m> とし、<m>\|f\|_p=\|g\|_q=1</m> としてよい（そうでなければ定数倍する。どちらかが <m>0</m> なら両辺 <m>0</m>）。</p>
+<p><ref t="lem-young"/> を各点で使うと</p>
+<M>|f(x)g(x)| \le \frac{|f(x)|^p}{p} + \frac{|g(x)|^q}{q}</M>
+<p class="no-indent">積分して <m>\|fg\|_1 \le \frac1p+\frac1q = 1 = \|f\|_p\|g\|_q</m>。</p>
+</div>
+
+<div class="teiri" id="thm-minkowski">
+<h4>ミンコフスキーの不等式</h4>
+<p class="no-indent"><m>1\le p\le\infty</m> について <m>\|f+g\|_p \le \|f\|_p + \|g\|_p</m>。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><m>p=1,\infty</m> は明らか。<m>1<p<\infty</m> とする。</p>
+<M>\|f+g\|_p^p = \int|f+g|^p \le \int |f|\,|f+g|^{p-1} + \int |g|\,|f+g|^{p-1}</M>
+<p class="no-indent">右辺の各項に <ref t="thm-holder"/> を使う。<m>(p-1)q=p</m> なので <m>\big\||f+g|^{p-1}\big\|_q = \|f+g\|_p^{p/q}</m>。よって</p>
+<M>\|f+g\|_p^p \le (\|f\|_p+\|g\|_p)\,\|f+g\|_p^{p/q}</M>
+<p class="no-indent"><em><m>\|f+g\|_p^{p/q}</m> で割れば（有限であることは <m>|f+g|^p \le 2^p(|f|^p+|g|^p)</m> から）、<m>p-p/q=1</m> より結論を得る。</em></p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent"><span class="yogo-hl">三角不等式が自明でないのが <m>L^p</m> の特徴である。</span><em><m>p=1</m> なら各点の三角不等式を積分するだけ。<m>p>1</m> では、ヘルダーの不等式という別の道具が要る。</em></p>
+<p><m>0<p<1</m> では三角不等式が<em>逆向き</em>になり、ノルムにならない。<m>d(f,g)=\int|f-g|^p</m> が距離になるだけである（第63章★★★）。</p>
+</div>
+
+<h3 id="s60-3">p を動かす</h3>
+
+<div class="teiri" id="thm-lp-hokan">
+<h4>包含関係</h4>
+<p class="no-indent">（1）<m>\mu(X)<\infty</m> なら、<m>p<r</m> について <m>L^r \subseteq L^p</m> であり</p>
+<M>\|f\|_p \le \mu(X)^{\frac1p-\frac1r}\,\|f\|_r</M>
+<p class="no-indent">（2）数え上げ測度（<m>\ell^p</m> 空間）では逆に、<m>p<r</m> について <m>\ell^p \subseteq \ell^r</m>。<br>
+（3）<m>\mathbb{R}</m> のルベーグ測度では、どちらの包含も成り立たない。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">（1）<m>|f|^p</m> と <m>1</m> にヘルダーの不等式を指数 <m>r/p</m> と <m>(r/p)'</m> で使う。</p>
+<p>（2）<m>\|x\|_\infty \le \|x\|_p</m> より <m>|x_n|\le\|x\|_p</m>、よって <m>|x_n|^r \le \|x\|_p^{r-p}|x_n|^p</m>。和を取る。</p>
+<p>（3）<m>f(x)=x^{-1/2}\mathbf{1}_{(0,1)}</m> は <m>L^1</m> だが <m>L^2</m> でない。<m>g(x)=x^{-1}\mathbf{1}_{(1,\infty)}</m> は <m>L^2</m> だが <m>L^1</m> でない。</p>
+</div>
+
+<div class="chui">
+<h4>向きが逆になる理由</h4>
+<p class="no-indent"><span class="yogo-hl">有限測度では「大きい値」だけが問題になり、数え上げ測度では「小さい値の裾」だけが問題になる。</span></p>
+<p><em><m>|f|>1</m> の部分では <m>p</m> が大きいほど厳しく、<m>|f|<1</m> の部分では <m>p</m> が大きいほど緩い。</em>どちらの部分が効くかで、包含の向きが決まる。</p>
+<p><m>\mathbb{R}</m> では両方が起こりうるので、包含がない。</p>
+</div>
+
+<div class="teiri" data-kind="命題" id="prop-hokan-fudo">
+<h4>補間</h4>
+<p class="no-indent"><m>p<r<s</m>、<m>\frac1r=\frac{\theta}{p}+\frac{1-\theta}{s}</m>（<m>0<\theta<1</m>）とすると</p>
+<M>\|f\|_r \le \|f\|_p^{\theta}\,\|f\|_s^{1-\theta}</M>
+<p class="no-indent">したがって <m>L^p \cap L^s \subseteq L^r</m>。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><m>|f|^r = |f|^{r\theta}\cdot|f|^{r(1-\theta)}</m> と分け、指数 <m>\frac{p}{r\theta}</m> と <m>\frac{s}{r(1-\theta)}</m> でヘルダーの不等式を使う。<em>二つの指数が共役であることが、<m>1/r</m> の式から出る。</em></p>
+</div>
+
+<figure>
+<svg viewBox="0 0 470 276" width="470" height="276" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">p を上げると、どこが厳しくなるか</text>
+
+  <rect x="14" y="26" width="442" height="122" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+
+  <line x1="46" y1="126" x2="230" y2="126" stroke="#8a8a88" stroke-width="0.8"/>
+  <line x1="46" y1="126" x2="46" y2="44" stroke="#8a8a88" stroke-width="0.8"/>
+  <line x1="46" y1="88" x2="230" y2="88" stroke="#8a8a88" stroke-width="0.5" stroke-dasharray="2,2"/>
+  <text x="40" y="90" font-size="5.8" text-anchor="end" fill="#6a6a68">1</text>
+  <text x="24" y="48" font-size="6" fill="#6a6a68">|f|</text>
+
+  <path d="M50,118 C 70,116 84,60 104,52 C 124,44 140,104 160,114 C 184,124 206,120 228,122" stroke="#1f3b5c" stroke-width="1.3" fill="none"/>
+  <rect x="76.6" y="51.3" width="62.2" height="36.7" fill="#f0d8d4" opacity="0.7"/>
+  <text x="108" y="47" font-size="6" text-anchor="middle" fill="#8c2f1e">|f| &gt; 1</text>
+  <text x="108" y="140" font-size="6" text-anchor="middle" fill="#8c2f1e">p が大きいほど厳しい</text>
+  <rect x="138.8" y="88" width="89.2" height="38" fill="#d8e6de" opacity="0.7"/>
+  <text x="184" y="84" font-size="6" text-anchor="middle" fill="#1e4a41">|f| &lt; 1</text>
+  <text x="184" y="140" font-size="6" text-anchor="middle" fill="#1e4a41">p が大きいほど緩い</text>
+
+  <text x="250" y="44" font-size="7" font-weight="700" fill="#1f3b5c">どちらが効くかで包含の向きが決まる</text>
+
+  <text x="250" y="62" font-size="6.6" fill="#1e4a41">有限測度（[0,1] など）</text>
+  <text x="250" y="73" font-size="6.4" fill="#6a6a68">裾がないので「大きい値」だけが問題</text>
+  <text x="250" y="84" font-size="6.6" fill="#1e4a41">L¹ ⊃ L² ⊃ L³ ⊃ ⋯　いちばん小さいのが有界関数の空間</text>
+
+  <text x="250" y="102" font-size="6.6" fill="#8c2f1e">数え上げ測度（数列空間）</text>
+  <text x="250" y="113" font-size="6.4" fill="#6a6a68">大きい値は有限個なので「裾」だけが問題</text>
+  <text x="250" y="124" font-size="6.6" fill="#8c2f1e">ℓ¹ ⊂ ℓ² ⊂ ℓ³ ⊂ ⋯　いちばん大きいのが有界数列の空間</text>
+
+  <text x="250" y="141" font-size="6.4" fill="#6b2a48">実数直線では両方が起こるので、包含はない</text>
+
+  <rect x="14" y="158" width="216" height="106" rx="4" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="24" y="173" font-size="7.6" font-weight="700" fill="#1e4a41">二つの不等式の役割</text>
+  <text x="24" y="190" font-size="6.8" fill="#1e4a41">ヘルダー　積の 1 乗ノルムを、p 乗ノルムと q 乗ノルムの積で押さえる</text>
+  <text x="24" y="202" font-size="6.4" fill="#6a6a68">積を二つに分けて評価する。双対性の芽</text>
+  <text x="24" y="218" font-size="6.8" fill="#1e4a41">ミンコフスキー　三角不等式</text>
+  <text x="24" y="230" font-size="6.4" fill="#6a6a68">ヘルダーを二回使って導く</text>
+  <text x="24" y="247" font-size="6.6" fill="#8c2f1e">p &gt; 1 では三角不等式が自明でない</text>
+  <text x="24" y="258" font-size="6.6" fill="#6a6a68">——どちらも根は log の凹性だけである</text>
+
+  <rect x="240" y="158" width="216" height="106" rx="4" fill="#f4f1ea" stroke="#8a6b2c"/>
+  <text x="250" y="173" font-size="7.6" font-weight="700" fill="#5a4520">1/p を横軸に取ると見やすい</text>
+  <line x1="262" y1="206" x2="440" y2="206" stroke="#8a8a88" stroke-width="0.8"/>
+  <g fill="#8a6b2c">
+    <circle cx="262" cy="206" r="2.2"/><circle cx="351" cy="206" r="2.2"/><circle cx="440" cy="206" r="2.2"/>
+  </g>
+  <text x="262" y="219" font-size="6" text-anchor="middle" fill="#5a4520">1/p = 0</text>
+  <text x="262" y="228" font-size="6" text-anchor="middle" fill="#5a4520">p = ∞</text>
+  <text x="351" y="219" font-size="6" text-anchor="middle" fill="#5a4520">1/2</text>
+  <text x="351" y="228" font-size="6" text-anchor="middle" fill="#5a4520">p = 2</text>
+  <text x="440" y="219" font-size="6" text-anchor="middle" fill="#5a4520">1</text>
+  <text x="440" y="228" font-size="6" text-anchor="middle" fill="#5a4520">p = 1</text>
+  <text x="250" y="192" font-size="6.4" fill="#6a6a68">共役指数は 1/p + 1/q = 1、すなわち中点対称</text>
+  <text x="250" y="245" font-size="6.4" fill="#6a6a68">補間の指数 1/r も、この直線上の内分点になる</text>
+  <text x="250" y="257" font-size="6.4" fill="#8c2f1e">p = 2 だけが自分自身と共役——第64章の内積</text>
+</svg>
+<figcaption>指数 <m>p</m> を上げると、値が <m>1</m> を超える場所では条件が厳しくなり、<m>1</m> を下回る場所では緩くなる。どちらが効くかで包含の向きが決まる。<m>1/p</m> を横軸に取ると、共役指数も補間指数も線型に並ぶ。</figcaption>
+</figure>
+
+<div class="lv2">
+<h4>等号の条件と、ヘルダーの不等式の使い方</h4>
+<p><strong>ヘルダーの等号。</strong><m>1<p<\infty</m> のとき、<m>\|fg\|_1=\|f\|_p\|g\|_q</m> となるのは、<em><m>|f|^p</m> と <m>|g|^q</m> がほとんどいたるところ比例する</em>ときに限る。</p>
+<p><ref t="lem-young"/> の等号条件 <m>a^p=b^q</m> が、各点で成り立つ必要があるからである。</p>
+<p><strong>ミンコフスキーの等号。</strong><m>p>1</m> のとき、<m>f</m> と <m>g</m> が<em>非負定数倍で比例する</em>ときに限る。<m>p=1</m> では条件がゆるく、<em>ほとんどいたるところ <m>f</m> と <m>g</m> の符号が一致すれば</em>よい。</p>
+<p><span class="yogo-hl">この差が、第72章の「単位球の端点」の違いになる。</span><m>p>1</m> の球は狭義凸（球面に線分が乗らない）、<m>p=1</m> の球はそうでない。</p>
+<p><strong>双対性の芽。</strong>ヘルダーの不等式は、<m>g\in L^q</m> を固定すると</p>
+<M>\varphi_g(f) = \int_X fg \,d\mu, \qquad |\varphi_g(f)| \le \|g\|_q\|f\|_p</M>
+<p class="no-indent">という<em>有界線型汎関数</em>を与える。<span class="yogo-hl">しかも <m>\|\varphi_g\|=\|g\|_q</m>——等号条件から、上限が実際に達成される。</span></p>
+<p><em>確かめ方。</em><m>f=|g|^{q-1}\mathrm{sgn}(g)</m> と取ると <m>|f|^p=|g|^q</m> で、<m>\varphi_g(f)=\|g\|_q^q=\|g\|_q\|f\|_p</m>。</p>
+<p>第66章で、<em>逆に <m>(L^p)^*=L^q</m>（<m>1\le p<\infty</m>、σ-有限）</em>を示す。ヘルダーの不等式は、その片側である。</p>
+<p><strong>ノルムを積分で書く。</strong>この双対性から</p>
+<M>\|f\|_p = \sup\Big\{\, \Big|\int fg\,d\mu\Big| \ \Big|\ \|g\|_q \le 1 \,\Big\}</M>
+<p class="no-indent">が出る。<em>ノルムを上限として書けると、しばしば評価が楽になる</em>——<m>p</m> 乗積分を直接扱わずに済むからである。</p>
+<p><strong>実例。</strong>ミンコフスキーの積分形</p>
+<M>\Big\|\int_Y f(\cdot,y)\,d\nu(y)\Big\|_{L^p(\mu)} \ \le\ \int_Y \|f(\cdot,y)\|_{L^p(\mu)}\,d\nu(y)</M>
+<p class="no-indent">は、上の表示とフビニの定理（<ref t="thm-fubini"/>）から二行で出る。<span class="yogo-hl">「積分のノルムは、ノルムの積分以下」——第86章の畳み込みの評価で繰り返し使う。</span></p>
+</div>
+
+<div class="lv3">
+<h4>補間定理と、Lᵖ の幾何</h4>
+<p><ref t="prop-hokan-fudo"/> は「関数の補間」だった。<em>作用素についても同じことができる。</em></p>
+<p><strong>リース–ソリンの補間定理。</strong>線型作用素 <m>T</m> が <m>L^{p_0}\to L^{q_0}</m> で有界（ノルム <m>M_0</m>）、<m>L^{p_1}\to L^{q_1}</m> で有界（ノルム <m>M_1</m>）なら、</p>
+<M>\frac1p=\frac{1-\theta}{p_0}+\frac{\theta}{p_1}, \qquad \frac1q=\frac{1-\theta}{q_0}+\frac{\theta}{q_1}</M>
+<p class="no-indent">について <m>T \colon L^p\to L^q</m> は有界で、ノルムは <m>M_0^{1-\theta}M_1^{\theta}</m> 以下。</p>
+<p><em>証明は複素解析による</em>——<m>\theta</m> を複素変数にして、帯状領域での正則関数に三線定理（アダマール）を使う。<span class="yogo-hl">第XII部の複素解析が、実解析の不等式を証明する道具になる。</span></p>
+<p><strong>応用。</strong>第85章のハウスドルフ–ヤングの不等式 <m>\|\hat f\|_{q} \le \|f\|_p</m>（<m>1\le p\le2</m>）は、<m>p=1</m> と <m>p=2</m> の場合を補間して得る。</p>
+<p><strong>マルチンキェヴィチの補間定理。</strong>弱型の評価（第58章★★★の弱 (1,1)）からも補間できる。<em>こちらは実変数の方法で、極大関数やヒルベルト変換に使う。</em></p>
+<p><strong>一様凸性。</strong><m>1<p<\infty</m> のとき <m>L^p</m> は<em>一様凸</em>である——クラークソンの不等式</p>
+<M>\Big\|\frac{f+g}{2}\Big\|_p^p + \Big\|\frac{f-g}{2}\Big\|_p^p \le \frac{\|f\|_p^p+\|g\|_p^p}{2} \qquad (2\le p<\infty)</M>
+<p class="no-indent">から出る。<span class="yogo-hl">一様凸なバナッハ空間は反射的である（ミルマン–ペティス）。</span>第66章・第70章で効く。</p>
+<p><m>L^1</m> と <m>L^\infty</m> は一様凸でなく、反射的でもない。<em>この二つだけが仲間外れになる</em>——第VIII部以降、<m>p=1,\infty</m> はつねに別扱いになる。</p>
+<p><strong>ヒルベルト空間になるのは p = 2 だけ。</strong><m>L^p</m> のノルムが内積から来るのは <m>p=2</m> に限る。<em>中線定理（第64章）が <m>p=2</m> でしか成り立たないからである。</em></p>
+<p>図の「1/p 軸」でいえば、<span class="yogo-hl"><m>p=2</m> は共役指数の対称軸上にある唯一の点</span>である。第XI部でフーリエ変換が <m>L^2</m> で最も美しく働くのも、この自己双対性による。</p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li><m>f(x)=x^{-1/2}</m> が <m>L^1(0,1)</m> に属し <m>L^2(0,1)</m> に属さないことを示せ。</li>
+<li><m>\ell^1 \subseteq \ell^2</m> を示し、逆が成り立たない例を挙げよ。</li>
+<li>ヘルダーの不等式で <m>p=q=2</m> とすると何になるか。</li>
+<li><m>\|f\|_\infty = \lim_{p\to\infty}\|f\|_p</m> を、<m>\mu(X)<\infty</m> のとき示せ。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li><ref t="lem-young"/> を、<m>\log</m> の凹性を使わずに微分法で示せ。<span class="haiten">（20点）</span></li>
+<li><ref t="thm-minkowski"/> の細部（<m>\|f+g\|_p<\infty</m> の確認）を埋めよ。<span class="haiten">（20点）</span></li>
+<li><ref t="thm-lp-hokan"/>（1）を示せ。<span class="haiten">（25点）</span></li>
+<li><ref t="prop-hokan-fudo"/> を示せ。<span class="haiten">（25点）</span></li>
+<li><m>\|\varphi_g\|=\|g\|_q</m> を、等号を達成する <m>f</m> を作って示せ。<span class="haiten">（25点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li>ミンコフスキーの積分形を、双対による表示とフビニの定理から導け。<span class="haiten">（35点）</span></li>
+<li>ヘルダーの不等式の等号条件を確定させよ。<span class="haiten">（30点）</span></li>
+<li><m>0<p<1</m> のとき三角不等式が逆向きになることを示せ。<span class="haiten">（30点）</span></li>
+</ol>
+</div>
+</div>
