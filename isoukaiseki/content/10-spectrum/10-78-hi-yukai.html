@@ -1,0 +1,232 @@
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>微分作用素は有界でない。それでもスペクトル理論は使えるのか。</li>
+<li>「対称」と「自己共役」は、なぜ非有界では別のことになるのか。</li>
+<li>自己共役な延長は、いくつあるのか。</li>
+</ul>
+</div>
+
+<h3 id="s78-1">定義域を捨てられない</h3>
+
+<p>本書でここまで扱ってきた作用素は、すべて <m>H</m> 全体で定義された有界作用素だった。<em>ところが解析学で実際に現れる作用素の多くは有界でない。</em>微分作用素 <m>d/dx</m> は <m>L^2</m> 上で有界でない：<m>f_n(x)=e^{inx}</m> を考えれば <m>\|f_n\|</m> は一定なのに <m>\|f_n'\|=n\|f_n\|</m> である。</p>
+
+<p>有界でないなら <m>H</m> 全体では定義できない。<span class="yogo-hl">したがって非有界作用素の理論では、作用素は「写像」ではなく「定義域と写像の組」である。</span><em>同じ式で与えられていても定義域が違えば別の作用素であり、この区別が理論の中心になる。</em></p>
+
+<div class="teiri" id="thm-hellinger-toeplitz">
+<h4>ヘリンガー–テプリッツの定理</h4>
+<p class="no-indent"><m>T:H\to H</m> が <m>H</m> 全体で定義され、すべての <m>x,y\in H</m> について <m>(Tx,y)=(x,Ty)</m> をみたすなら、<m>T</m> は有界である。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">各 <m>y\in H</m> について <m>\varphi_y(x)=(Tx,y)=(x,Ty)</m> は有界線形汎関数で <m>\|\varphi_y\|=\|Ty\|</m>。<m>\|x\|\le1</m> なる <m>x</m> の族 <m>\{\varphi_y\mapsto\varphi_y(x)\}</m> を <m>H</m> 上の汎関数の族と見ると、各 <m>y</m> について</p>
+<M>\sup_{\|x\|\le1}|(x,Ty)| = \|Ty\| < \infty</M>
+<p class="no-indent">すなわち各点で有界。<em>一様有界性の原理（<ref t="thm-ichiyou-yukai"/>）より族は一様有界</em>、つまり <m>\sup_{\|x\|\le1}\|Tx\| < \infty</m>。</p>
+<p><span class="yogo-hl">この定理は、非有界作用素の理論が「定義域を真部分空間にとる」以外の道をもたないことを示している。</span><em>定義域を全体にした瞬間に、対称性は有界性を強制してしまう。</em>閉グラフ定理（<ref t="thm-hei-graph"/>）を使った別証明もある。</p>
+</div>
+
+<div class="teigi" id="def-hi-yukai-sayoso">
+<h4>非有界作用素・閉作用素・随伴</h4>
+<p class="no-indent"><m>D(T)\subset H</m> を稠密な部分空間、<m>T:D(T)\to H</m> を線形写像とする（<strong>稠密に定義された作用素</strong>）。</p>
+<p class="no-indent">（1）グラフ <m>\Gamma(T)=\{(x,Tx):x\in D(T)\}</m> が <m>H\times H</m> で閉のとき <m>T</m> は<strong>閉作用素</strong>。<br>
+（2）<m>\Gamma(T)</m> の閉包がまたある作用素のグラフになるとき、その作用素を<strong>閉包</strong> <m>\bar T</m> という。<br>
+（3）<strong>随伴</strong> <m>T^*</m> を次で定める：</p>
+<M>D(T^*) = \{\, y\in H \mid \exists z,\ (Tx,y)=(x,z)\ (\forall x\in D(T)) \,\}, \qquad T^*y=z</M>
+<p class="no-indent"><em><m>D(T)</m> が稠密だから <m>z</m> は一意である。</em><br>
+（4）<m>T\subset T^*</m>（すなわち <m>D(T)\subset D(T^*)</m> かつ <m>T^*|_{D(T)}=T</m>）のとき <m>T</m> は<strong>対称</strong>。<br>
+（5）<m>T=T^*</m>（定義域も含めて一致）のとき <m>T</m> は<strong>自己共役</strong>。<br>
+（6）対称で、閉包が自己共役になるとき<strong>本質的自己共役</strong>。</p>
+</div>
+
+<div class="chui">
+<h4>対称と自己共役の隔たり</h4>
+<p class="no-indent">対称性は <m>(Tx,y)=(x,Ty)</m> を <m>D(T)</m> の中だけで要求する。<em>随伴の定義域は <m>D(T)</m> より広くなりうる</em>——対称作用素では常に <m>D(T)\subset D(T^*)</m> であり、この包含が真になることが普通に起こる。</p>
+<p><span class="yogo-hl">自己共役性は「定義域が広すぎも狭すぎもしない」という、絶妙な釣り合いの要求である。</span>そして<em>スペクトル定理が成り立つのは自己共役のときだけで、対称では足りない</em>。この一点が本章のすべての動機である。</p>
+<p><m>T</m> が対称なら <m>T\subset\bar T\subset T^*</m> の三段階があり、本質的自己共役とは中央が右端に一致することである。</p>
+</div>
+
+<h3 id="s78-2">同じ式、違う作用素</h3>
+
+<div class="rei" id="rei-bibun-sanshu">
+<h4>運動量作用素の三つの顔</h4>
+<p class="no-indent"><m>H=L^2[0,1]</m>、<m>Tf=-if'</m> を三通りの定義域で考える。部分積分から</p>
+<M>(Tf,g)-(f,Tg) = -i\big[f\bar g\big]_0^1 = -i\big(f(1)\overline{g(1)}-f(0)\overline{g(0)}\big)</M>
+<p class="no-indent"><em>対称性は、この境界項が消えるかどうかで決まる。</em></p>
+<p class="no-indent">（1）<m>D(T_0)=\{f\in H^1 : f(0)=f(1)=0\}</m>。境界項は消えるので <m>T_0</m> は対称。<em>しかし随伴の定義域は <m>H^1</m> 全体</em>（<m>g</m> に条件が要らない）で、<m>D(T_0)\subsetneq D(T_0^*)</m>。<span class="yogo-hl">対称だが自己共役でない。</span></p>
+<p class="no-indent">（2）<m>D(T_\theta)=\{f\in H^1 : f(1)=e^{i\theta}f(0)\}</m>（<m>\theta\in[0,2\pi)</m>）。境界項は <m>|e^{i\theta}|=1</m> より消え、随伴の定義域も同じ条件になる。<em>各 <m>\theta</m> について自己共役</em>で、固有値は <m>2\pi n+\theta</m>（<m>n\in\mathbb{Z}</m>）、固有関数は <m>e^{i(2\pi n+\theta)x}</m>。</p>
+<p class="no-indent">（3）<m>D(T_1)=H^1[0,1]</m>（条件なし）。境界項は消えないので<em>対称でさえない</em>。実際 <m>T_1=T_0^*</m> で、<m>T_1^*=T_0</m>。</p>
+<p><em>同じ微分作用素が、境界条件によって「対称だが自己共役でない」「自己共役」「対称でない」に分かれる。</em>そして（2）の自己共役な延長は <m>\theta</m> の分だけ連続無限にあり、<span class="yogo-hl">スペクトルは <m>\theta</m> ごとに違う</span>。物理的には <m>\theta</m> が「環の周りの磁束」に対応する。</p>
+</div>
+
+<div class="rei" id="rei-hi-yukai-jirei">
+<h4>自己共役な非有界作用素の見本</h4>
+<p class="no-indent">（1）<strong>掛け算作用素。</strong><m>\varphi</m> を実数値可測関数（有界でなくてよい）、<m>D(M_\varphi)=\{f : \varphi f\in L^2\}</m>。<em>これは自己共役で、スペクトルは <m>\varphi</m> の本質的値域</em>（非有界なら非有界な閉集合）。第77章の掛け算作用素モデルは、この形で非有界の場合にも成り立つ。</p>
+<p>（2）<strong>全直線上の運動量。</strong><m>H=L^2(\mathbb{R})</m>、<m>Pf=-if'</m>、<m>D(P)=H^1(\mathbb{R})</m>。フーリエ変換（第85章）により <m>\xi</m> の掛け算に同値で、自己共役。<em>スペクトルは <m>\mathbb{R}</m> 全体、純絶対連続で固有値をもたない。</em>境界がないので境界条件の自由度も消えている。</p>
+<p>（3）<strong>ラプラシアン。</strong><m>-\Delta</m> は <m>C_c^\infty(\mathbb{R}^n)</m> 上で対称、その閉包は <m>H^2(\mathbb{R}^n)</m> を定義域として自己共役（本質的自己共役）。有界領域では境界条件（ディリクレ・ノイマン・混合）ごとに別の自己共役作用素になり、<em>スペクトルも異なる</em>。</p>
+<p>（4）<strong>調和振動子。</strong><m>H=-\tfrac{d^2}{dx^2}+x^2</m> は <m>L^2(\mathbb{R})</m> 上で本質的自己共役、固有値は <m>2n+1</m>、固有関数はエルミート関数。<em>固有関数が正規直交基底をなす（純点スペクトル）非有界作用素の例である。</em></p>
+</div>
+
+<h3 id="s78-3">欠損指数と自己共役拡大</h3>
+
+<div class="teigi" id="def-kesson-shisu">
+<h4>欠損指数</h4>
+<p class="no-indent"><m>T</m> を閉対称作用素とする。</p>
+<M>K_\pm = \ker(T^*\mp iI) = \big(\mathrm{ran}(T\pm iI)\big)^\perp</M>
+<p class="no-indent">の次元 <m>n_\pm=\dim K_\pm</m> を<strong>欠損指数</strong>という。</p>
+</div>
+
+<div class="teiri" id="thm-neumann-kakudai">
+<h4>フォン・ノイマンの拡大定理</h4>
+<p class="no-indent"><m>T</m> を閉対称作用素とする。</p>
+<p class="no-indent">（1）<m>n_+=n_-=0</m> ならば <m>T</m> は自己共役（拡大は自分自身のみ）。<br>
+（2）<m>n_+=n_-=n < \infty</m>（または一般に <m>n_+=n_-</m>）ならば、自己共役拡大は <m>K_+</m> から <m>K_-</m> へのユニタリ写像と一対一に対応する。<m>n < \infty</m> のときその族は <m>n^2</m> 次元のパラメータをもつ。<br>
+（3）<m>n_+\ne n_-</m> ならば自己共役拡大は<em>一つも存在しない</em>。<br>
+（4）<m>T</m> の定義域は <m>D(T^*)=D(T)\oplus K_+\oplus K_-</m>（直和、内積 <m>(x,y)+(T^*x,T^*y)</m> について直交）をみたす。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><strong>ケーリー変換に移す。</strong><m>T</m> が対称なら <m>x\in D(T)</m> について <m>\|(T\pm i)x\|^2=\|Tx\|^2+\|x\|^2</m>（交叉項は <m>(Tx,x)</m> が実なので消える）。よって <m>T\pm i</m> は単射で、<m>T</m> が閉なら値域も閉である。そこで</p>
+<M>V = (T-i)(T+i)^{-1} : \mathrm{ran}(T+i) \longrightarrow \mathrm{ran}(T-i)</M>
+<p class="no-indent">は等距離（上の等式から両辺のノルムが等しい）。<em><m>V</m> を <m>T</m> の<strong>ケーリー変換</strong>という。</em>逆に <m>V</m> が与えられれば <m>T=i(I+V)(I-V)^{-1}</m> で復元できる。</p>
+<p class="no-indent"><strong>拡大の対応。</strong><m>T</m> の対称な拡大は、<m>V</m> の等距離な拡大に対応する。<em><m>T</m> が自己共役であることは、<m>V</m> がユニタリ（すなわち <m>\mathrm{ran}(T+i)=\mathrm{ran}(T-i)=H</m>）であることと同値。</em>したがって <m>V</m> を <m>\mathrm{ran}(T+i)^\perp=K_+</m> から <m>\mathrm{ran}(T-i)^\perp=K_-</m> へのユニタリで継ぎ足すしかなく、それができるのは <m>n_+=n_-</m> のときに限る。継ぎ足し方の自由度がそのまま拡大の自由度である。</p>
+<p class="no-indent"><m>n < \infty</m> のとき <m>K_+</m> から <m>K_-</m> へのユニタリ写像全体は <m>n</m> 次ユニタリ群と同一視でき、その実次元は <m>n^2</m> である。</p>
+</div>
+
+<div class="rei" id="rei-kesson-keisan">
+<h4>欠損指数を数える</h4>
+<p class="no-indent">（1）<m>L^2[0,1]</m> 上の <m>T_0f=-if'</m>（<m>f(0)=f(1)=0</m>）。<m>T_0^*g=\pm ig</m> すなわち <m>-ig'=\pm ig</m> の解は <m>g(x)=e^{\mp x}</m>。<em>どちらも <m>H^1[0,1]</m> に属するので <m>n_+=n_-=1</m>。</em>自己共役拡大は <m>1</m> 次ユニタリ群、つまり <m>e^{i\theta}</m> の <m>1</m> パラメータ族——<ref t="rei-bibun-sanshu"/>（2）の <m>T_\theta</m> がそれである。</p>
+<p>（2）<m>L^2[0,\infty)</m> 上の <m>Tf=-if'</m>（<m>f(0)=0</m>）。<m>-ig'=ig</m> の解 <m>e^{-x}</m> は <m>L^2</m> に属するが、<m>-ig'=-ig</m> の解 <m>e^{x}</m> は属さない。<em><m>n_+=1</m>、<m>n_-=0</m>。</em><span class="yogo-hl">自己共役拡大は存在しない</span>——半直線上に「運動量」は定義できない。</p>
+<p>（3）<m>L^2(\mathbb{R})</m> 上の <m>Pf=-if'</m>（<m>C_c^\infty</m> 上）。<m>e^{\pm x}</m> はどちらも <m>L^2(\mathbb{R})</m> に属さないので <m>n_+=n_-=0</m>。<em>本質的自己共役で、延長の選択肢がない。</em></p>
+<p>（4）<m>-\Delta</m> を <m>\mathbb{R}^3\setminus\{0\}</m> 上の <m>C_c^\infty</m> で考えると、<m>n_\pm=0</m>（三次元では一点は「見えない」）。<em>ところが <m>-\Delta-c/|x|^2</m> は <m>c</m> が大きいと <m>n_\pm=1</m> になり、拡大の選択が物理的な意味をもつ</em>——境界条件が点での相互作用を記述する。</p>
+</div>
+
+<div class="hanrei" id="cex-hi-yukai-otoshiana">
+<h4>非有界作用素の落とし穴</h4>
+<p class="no-indent">（1）<strong>対称なのにスペクトルが複素平面全体。</strong><ref t="rei-bibun-sanshu"/>（1）の <m>T_0</m> について、任意の <m>\lambda\in\mathbb{C}</m> は <m>T_0</m> の意味で「スペクトル」に属する（<m>T_0-\lambda</m> は全射でない）。<em>対称性は、スペクトルを実軸に押し込めない。</em>押し込めるのは自己共役性だけである。</p>
+<p>（2）<strong>和の定義域が空になりうる。</strong>非有界作用素 <m>A,B</m> について <m>D(A)\cap D(B)=\{0\}</m> となる例がある。<em>このとき <m>A+B</m> は稠密に定義された作用素ですらない。</em>したがって「非有界作用素の代数」は素朴には構成できない。</p>
+<p>（3）<strong>可換性の定義が微妙。</strong><m>AB=BA</m> を定義域まで含めて要求すると強すぎる。正しい定義は「スペクトル測度が可換」であり、<em>ネルソンは <m>AB=BA</m> が稠密な芯の上で成り立つのにスペクトル測度が可換でない例を与えた</em>。量子力学の不確定性関係が「交換子」で語られるとき、この微妙さが背後にある。</p>
+</div>
+
+<div class="chui">
+<h4>スペクトル定理は非有界でも成り立つ</h4>
+<p class="no-indent"><m>T</m> が（非有界でも）自己共役なら、<m>\mathbb{R}</m> 上の作用素値測度 <m>E</m> がただ一つあって</p>
+<M>T = \int_{\mathbb{R}} \lambda\,dE(\lambda), \qquad D(T) = \Big\{ x : \int \lambda^2\,dE_{x,x}(\lambda) < \infty \Big\}</M>
+<p class="no-indent"><em>定義域が積分の収束条件として自然に出てくる</em>のが、非有界の場合の特徴である。証明はケーリー変換で有界ユニタリに移し、第77章の定理を適用して戻す。</p>
+<p><span class="yogo-hl">スペクトルが実であること、剰余スペクトルがないこと、掛け算作用素モデルが成り立つこと——第75章と第77章の結論はすべて非有界でも成り立つ。</span><em>ただし「自己共役」を正しい意味で要求したときに限る。</em></p>
+</div>
+
+<figure>
+<svg viewBox="0 0 470 292" width="470" height="292" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">定義域の広さの釣り合い——対称と自己共役の差</text>
+
+  <rect x="14" y="26" width="442" height="104" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+
+  <text x="235" y="42" font-size="6.8" text-anchor="middle" font-weight="700" fill="#1f3b5c">定義域が狭すぎると随伴が広がる</text>
+
+  <rect x="46" y="54" width="60" height="26" rx="3" fill="#dce7f0" stroke="#35618f" stroke-width="1.1"/>
+  <text x="76" y="70" font-size="6.4" text-anchor="middle" fill="#1f3b5c">D(T)</text>
+  <rect x="34" y="88" width="84" height="26" rx="3" fill="#f0e2de" stroke="#a03b2e" stroke-width="1.1"/>
+  <text x="76" y="104" font-size="6.4" text-anchor="middle" fill="#8c2f1e">D(T*)</text>
+  <text x="76" y="126" font-size="6" text-anchor="middle" fill="#6a6a68">対称だが自己共役でない</text>
+
+  <rect x="200" y="54" width="72" height="26" rx="3" fill="#dce7f0" stroke="#35618f" stroke-width="1.1"/>
+  <text x="236" y="70" font-size="6.4" text-anchor="middle" fill="#1f3b5c">D(T)</text>
+  <rect x="200" y="88" width="72" height="26" rx="3" fill="#e6efe9" stroke="#2f6b5f" stroke-width="1.4"/>
+  <text x="236" y="104" font-size="6.4" text-anchor="middle" fill="#1e4a41">D(T*)</text>
+  <text x="236" y="126" font-size="6" text-anchor="middle" fill="#1e4a41">ぴったり一致　自己共役</text>
+
+  <rect x="342" y="54" width="84" height="26" rx="3" fill="#dce7f0" stroke="#35618f" stroke-width="1.1"/>
+  <text x="384" y="70" font-size="6.4" text-anchor="middle" fill="#1f3b5c">D(T)</text>
+  <rect x="354" y="88" width="60" height="26" rx="3" fill="#f0e2de" stroke="#a03b2e" stroke-width="1.1"/>
+  <text x="384" y="104" font-size="6.4" text-anchor="middle" fill="#8c2f1e">D(T*)</text>
+  <text x="384" y="126" font-size="6" text-anchor="middle" fill="#6a6a68">広すぎる　対称でさえない</text>
+
+  <rect x="14" y="140" width="442" height="66" rx="4" fill="#f4f1ea" stroke="#8a6b2c"/>
+  <text x="24" y="155" font-size="7.6" font-weight="700" fill="#5a4520">同じ式 −i d/dx が、境界条件で別の作用素になる</text>
+  <text x="24" y="171" font-size="6.6" fill="#5a4520">両端で零　　f(0) ＝ f(1) ＝ 0　　欠損指数 1 と 1　　自己共役拡大が円周ぶん</text>
+  <text x="24" y="184" font-size="6.6" fill="#1e4a41">位相のずれ　f(1) は f(0) の絶対値 1 倍　　各 θ で自己共役　固有値 2πn ＋ θ</text>
+  <text x="24" y="197" font-size="6.6" fill="#8c2f1e">半直線　　　f(0) ＝ 0 のみ　　　　欠損指数 1 と 0　　自己共役拡大は存在しない</text>
+
+  <rect x="14" y="216" width="216" height="70" rx="4" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="24" y="231" font-size="7.6" font-weight="700" fill="#1e4a41">欠損指数の数え方</text>
+  <text x="24" y="247" font-size="6.6" fill="#1e4a41">T*g ＝ ±ig の解のうち、二乗可積分な</text>
+  <text x="24" y="259" font-size="6.6" fill="#1e4a41">ものの個数を、＋と−で別に数える</text>
+  <text x="24" y="275" font-size="6.4" fill="#8c2f1e">二つが等しくなければ拡大は存在しない</text>
+
+  <rect x="240" y="216" width="216" height="70" rx="4" fill="#f5f8fb" stroke="#35618f"/>
+  <text x="250" y="231" font-size="7.6" font-weight="700" fill="#1f3b5c">ケーリー変換が橋になる</text>
+  <text x="250" y="247" font-size="6.6" fill="#1f3b5c">対称作用素　←→　等距離作用素</text>
+  <text x="250" y="259" font-size="6.6" fill="#1f3b5c">自己共役　　←→　ユニタリ</text>
+  <text x="250" y="275" font-size="6.4" fill="#5a4520">有界の世界に移して、戻すだけ</text>
+</svg>
+<figcaption>非有界作用素では定義域が本体である。定義域が狭いと随伴が広がって自己共役性が破れ、広すぎると対称性さえ失われる。欠損指数が自己共役拡大の個数を数え、ケーリー変換が有界な世界への橋を与える。</figcaption>
+</figure>
+
+<div class="star2">
+<h4>★★ 学部後半——ストーンの定理と二次形式による構成</h4>
+
+<p><strong>ストーンの定理（非有界版）。</strong>強連続なユニタリ一径数群 <m>U(t)</m> に対し、</p>
+<M>D(A) = \Big\{ x : \lim_{t\to0}\frac{U(t)x-x}{t} \text{ が存在} \Big\}, \qquad Ax = \frac{1}{i}\lim_{t\to0}\frac{U(t)x-x}{t}</M>
+<p>と定めると <m>A</m> は自己共役で <m>U(t)=e^{itA}</m>。逆も成り立つ。<em>したがって「時間発展」と「自己共役作用素」は同じものである。</em><span class="yogo-hl">量子力学でハミルトニアンに自己共役性を要求する理由は、ユニタリな時間発展（確率の保存）がそれと同値だという、この定理にある。</span></p>
+
+<p><em><m>D(A)</m> が稠密であることの証明が面白い。</em><m>x\in H</m> と <m>f\in C_c^\infty(\mathbb{R})</m> について <m>x_f=\int f(t)U(t)x\,dt</m> と置くと <m>x_f\in D(A)</m> で、<m>f</m> を <m>\delta</m> に近づければ <m>x_f\to x</m>。<em>平滑化（第62章 <ref t="thm-heikatsu-chumitsu"/>）と同じ手口が、作用素の定義域に対して使われている。</em></p>
+
+<p><strong>フリードリクスの拡大。</strong><m>T</m> が対称で下に有界（<m>(Tx,x)\ge c\|x\|^2</m>）なら、自己共役拡大が必ず存在し、しかも<em>下からの評価を保つもののうち最大のもの</em>が一意に定まる。構成は二次形式を使う：<m>a(x,y)=(Tx,y)+(1-c)(x,y)</m> を内積として <m>D(T)</m> を完備化し、その完備化を新しい定義域にとる。<span class="yogo-hl">ラプラシアンのディリクレ境界条件は、この構成そのものである</span>——<m>H_0^1</m> が完備化として現れ、第88章のソボレフ空間論と直結する。</p>
+
+<p><strong>加藤–レリッヒの定理。</strong><m>A</m> を自己共役、<m>B</m> を対称で <m>D(B)\supset D(A)</m>、かつ</p>
+<M>\|Bx\| \le a\|Ax\| + b\|x\|, \qquad a < 1</M>
+<p>なら <m>A+B</m> は <m>D(A)</m> 上で自己共役。<em>「小さい摂動は自己共役性を壊さない」という定理である。</em>これにより <m>-\Delta+V</m> が自己共役であることが、<m>V</m> について広いクラスで保証される——水素原子の <m>V=-1/|x|</m> がその範囲に入ることが、量子力学の数学的基礎づけの出発点になった（加藤、1951年）。</p>
+
+<p><strong>仮定を外すと。</strong>下に有界でない対称作用素には、自己共役拡大が一つもない場合がある（<ref t="rei-kesson-keisan"/>（2））。<em>また、本質的自己共役でない作用素では「どの拡大を選ぶか」が物理の問題になり、数学だけでは決まらない。</em>これは病理ではなく、境界での物理を指定せよという要求である。</p>
+</div>
+
+<div class="star3">
+<h4>★★★ 大学院——芯・半群・作用素の和</h4>
+
+<p><strong>本質的自己共役性の判定。</strong>ネルソンの解析ベクトル定理：<m>T</m> が対称で、<m>D(T)</m> の中に <m>T</m> の解析ベクトル（<m>\sum\|T^nx\|t^n/n!</m> がある <m>t>0</m> で収束する <m>x</m>）の全体が稠密なら、<m>T</m> は本質的自己共役。<em>判定を「べき級数の収束」に落とすのが要点である。</em>多項式的に増大するポテンシャルへの応用が広い。</p>
+
+<p><strong>半群とヒレ–吉田。</strong>自己共役性を捨て、<m>e^{-tA}</m>（<m>t\ge0</m>）という半群だけを考えると、<em>ヒレ–吉田の定理</em>が生成子を特徴づける：<m>A</m> が縮小半群を生成することは、<m>A</m> が閉で稠密に定義され、<m>(0,\infty)\subset\rho(-A)</m> かつ <m>\|(\lambda+A)^{-1}\|\le1/\lambda</m> と同値。<span class="yogo-hl">熱方程式（<m>A=-\Delta</m>）のように時間の向きが一方向な現象は、群ではなく半群で記述される。</span>ルーマー–フィリップスの定理は、これを散逸性という条件に言い換える。</p>
+
+<p><strong>トロッター積公式。</strong><m>A,B</m> が自己共役で <m>A+B</m> も自己共役なら</p>
+<M>e^{it(A+B)} = \lim_{n\to\infty}\big(e^{itA/n}e^{itB/n}\big)^n</M>
+<p>（強収束）。<em>これがファインマンの経路積分の数学的な出発点である</em>——運動エネルギーとポテンシャルを交互に短時間作用させ、その極限をとる。ウィック回転して虚時間にすると、<m>e^{-t(-\Delta+V)}</m> についてファインマン–カッツの公式</p>
+<M>\big(e^{-t(-\Delta+V)}f\big)(x) = \mathbb{E}_x\Big[ e^{-\int_0^tV(B_s)\,ds}f(B_t) \Big]</M>
+<p>が成り立ち、ブラウン運動の期待値としてスペクトルの情報が読める。<em>作用素論と確率論が同じ対象の二つの顔になる。</em></p>
+
+<p><strong>未解決に近い問い。</strong>非可換な自己共役作用素の和 <m>A+B</m> のスペクトルを、<m>\sigma(A)</m> と <m>\sigma(B)</m> から決める問題は、有限次元でもホーンの予想（2000年頃に解決、シューベルト算法と表現論を経由する）という深い問題だった。<em>無限次元での対応物は、自由確率論における自由畳み込みとして部分的に理解されている。</em>一方で、多体シュレーディンガー作用素の本質的スペクトルの下端（基底状態エネルギー）の漸近挙動は、物質の安定性という物理的な問いとして、いまも研究の対象である。</p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li><m>d/dx</m> が <m>L^2</m> 上で有界でないことを、具体的な列で示せ。</li>
+<li><m>-if'</m> の対称性が境界項の消滅と同値であることを、部分積分で確かめよ。</li>
+<li><ref t="rei-bibun-sanshu"/>（2）の固有値と固有関数を求めよ。</li>
+<li>稠密に定義された作用素の随伴の値が一意であることを示せ。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li><ref t="thm-hellinger-toeplitz"/>を、閉グラフ定理（<ref t="thm-hei-graph"/>）を使って示せ。<span class="haiten">（30点）</span></li>
+<li>対称作用素について <m>\|(T\pm i)x\|^2=\|Tx\|^2+\|x\|^2</m> を示せ。<span class="haiten">（25点）</span></li>
+<li>閉対称作用素のケーリー変換が等距離であることを示せ。<span class="haiten">（35点）</span></li>
+<li><ref t="rei-kesson-keisan"/>（1）（2）の欠損指数を、微分方程式を解いて確かめよ。<span class="haiten">（35点）</span></li>
+<li><m>T</m> が自己共役なら <m>\sigma(T)\subset\mathbb{R}</m> を、非有界の場合に示せ。<span class="haiten">（40点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li><ref t="thm-neumann-kakudai"/>（2）を、ケーリー変換の延長として書き下せ。<span class="haiten">（50点）</span></li>
+<li>ストーンの定理の <m>D(A)</m> の稠密性を、平滑化によって示せ。<span class="haiten">（45点）</span></li>
+<li>フリードリクスの拡大を、二次形式の完備化として構成せよ。<span class="haiten">（50点）</span></li>
+<li>調和振動子が本質的自己共役で、固有関数が正規直交基底をなすことを示せ。<span class="haiten">（50点）</span></li>
+</ol>
+</div>
+</div>

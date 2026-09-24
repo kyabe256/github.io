@@ -1,0 +1,243 @@
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>作用素を捨て、代数だけからスペクトルを定義できるか。</li>
+<li>可換な作用素環は、どんな空間の上の関数環なのか。</li>
+<li>この抽象化は、具体的な何を解くのか。</li>
+</ul>
+</div>
+
+<h3 id="s79-1">代数だけでスペクトルを語る</h3>
+
+<p>第74章のスペクトルの定義を読み直すと、<em>使っているのは「可逆かどうか」だけ</em>である。ヒルベルト空間もベクトルも要らない。<span class="yogo-hl">ならば、積とノルムをもつ代数があればスペクトル理論が始まる。</span>この視点の転換が、ゲルファントの発見であった（1941年）。</p>
+
+<p>得られる見返りは二つある。第一に、作用素とは無関係な対象——たとえば関数の畳み込み環——にスペクトル理論が適用できる。第二に、第77章で手作業で組み立てた関数計算が、<em>定理の帰結として一息に出る</em>。</p>
+
+<div class="teigi" id="def-banach-kan">
+<h4>バナッハ環・シースター環</h4>
+<p class="no-indent"><m>A</m> を複素バナッハ空間とし、結合的な積が定まっていて</p>
+<M>\|xy\| \le \|x\|\,\|y\|</M>
+<p class="no-indent">をみたすとき <m>A</m> を<strong>バナッハ環</strong>という。単位元 <m>e</m>（<m>\|e\|=1</m>）をもつものを<em>単位的</em>という。さらに対合 <m>x\mapsto x^*</m>（共役線形、<m>(xy)^*=y^*x^*</m>、<m>x^{**}=x</m>）があって</p>
+<M>\|x^*x\| = \|x\|^2</M>
+<p class="no-indent">をみたすとき <m>A</m> を<strong>シースター環</strong>という。<m>x^*=x</m> なる元を<em>自己共役</em>、<m>x^*x=xx^*</m> なる元を<em>正規</em>という。</p>
+</div>
+
+<div class="rei" id="rei-banach-kan-rei">
+<h4>バナッハ環の見本</h4>
+<p class="no-indent">（1）<m>B(E)</m>（有界作用素全体、合成を積として）。<m>E</m> がヒルベルト空間なら随伴を対合としてシースター環（<ref t="prop-sotsui-kihon"/>（3））。</p>
+<p>（2）<m>C(X)</m>（<m>X</m> コンパクトハウスドルフ、各点ごとの積、複素共役を対合）。<em>可換なシースター環である。</em></p>
+<p>（3）<m>L^1(\mathbb{R})</m>（畳み込み <m>f*g(x)=\int f(x-y)g(y)dy</m> を積として）。<m>\|f*g\|_1\le\|f\|_1\|g\|_1</m> はフビニの定理（<ref t="thm-fubini"/>）から出る。<em>単位元をもたない</em>——デルタ関数は <m>L^1</m> にない。</p>
+<p>（4）<strong>ウィーナー環</strong> <m>A(\mathbb{T})=\{f=\sum_{n}c_ne^{in\theta} : \sum|c_n| < \infty\}</m>、ノルムは <m>\sum|c_n|</m>、積は各点積。<em>これは <m>\ell^1(\mathbb{Z})</m> を畳み込み環と見たものと同型である。</em></p>
+<p>（5）<m>H^\infty(\mathbb{D})</m>（単位円板上の有界正則関数、第89章以降）。<span class="yogo-hl">対合をもたないバナッハ環の代表例で、複素解析と作用素論の交点にある。</span></p>
+<p>（6）測度環 <m>M(G)</m>（局所コンパクト群上の有限測度、畳み込み積）。群の表現論がここで代数の言葉になる。</p>
+</div>
+
+<div class="teiri" id="thm-gelfand-mazur">
+<h4>ゲルファント–マズールの定理</h4>
+<p class="no-indent"><m>A</m> を単位的バナッハ環とする。</p>
+<p class="no-indent">（1）<m>x\in A</m> について <m>\sigma(x)=\{\lambda : x-\lambda e \text{ が可逆でない}\}</m> は空でないコンパクト集合で、<m>r(x)=\lim\|x^n\|^{1/n}\le\|x\|</m>。<br>
+（2）<m>A</m> のすべての非零元が可逆なら（<em>可除バナッハ環</em>）、<m>A\cong\mathbb{C}</m>。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">（1）の証明は第74章とまったく同じで、<m>B(E)</m> という設定を一度も使っていない。ノイマン級数（<ref t="prop-neumann"/>）で可逆元の集合が開であることを、リウヴィルの定理（第90章）でスペクトルが空でないことを示す。</p>
+<p class="no-indent">（2）<m>x\in A</m> を任意にとる。（1）より <m>\lambda\in\sigma(x)</m> なる <m>\lambda</m> が存在し、<m>x-\lambda e</m> は可逆でない。<em>仮定より可逆でない非零元はないので <m>x=\lambda e</m>。</em>よって <m>A=\mathbb{C}e</m>。</p>
+<p><span class="yogo-hl">スペクトルが空でないという一行が、可除環を <m>\mathbb{C}</m> に押し潰す。</span><em>これが次の極大イデアルの議論を可能にする。</em></p>
+</div>
+
+<h3 id="s79-2">極大イデアルとゲルファント変換</h3>
+
+<div class="teiri" id="thm-kyokudai-ideal">
+<h4>極大イデアルと指標</h4>
+<p class="no-indent"><m>A</m> を単位的<em>可換</em>バナッハ環とする。</p>
+<p class="no-indent">（1）極大イデアルは閉である。<br>
+（2）<m>M</m> が極大イデアルなら <m>A/M\cong\mathbb{C}</m>。<br>
+（3）したがって極大イデアルと、零でない乗法的線形汎関数（<strong>指標</strong>）<m>\chi:A\to\mathbb{C}</m> とは、<m>M=\ker\chi</m> によって一対一に対応する。<br>
+（4）指標は自動的に連続で <m>\|\chi\|=1</m>。指標全体 <m>\Delta(A)</m>（<strong>ゲルファントスペクトル</strong>）は、弱位相についてコンパクトハウスドルフ空間である。<br>
+（5）<m>\sigma(x)=\{\chi(x) : \chi\in\Delta(A)\}</m>。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">（1）可逆元の集合 <m>G</m> は開で、イデアル <m>I</m> が真なら <m>I\cap G=\emptyset</m>。よって <m>\bar I\cap G=\emptyset</m>（<m>G</m> が開だから）、すなわち <m>\bar I</m> も真のイデアル。<em>極大性より <m>\bar I=I</m>。</em></p>
+<p class="no-indent">（2）<m>A/M</m> はバナッハ環（<m>M</m> が閉だから商ノルムが入る）で、極大性から体である。<em>ゲルファント–マズールより <m>\mathbb{C}</m>。</em></p>
+<p class="no-indent">（3）（2）の同型を <m>A\to A/M\cong\mathbb{C}</m> と合成すれば指標が得られる。逆に指標の核は余次元 <m>1</m> のイデアルで極大。</p>
+<p class="no-indent">（4）<m>|\chi(x)|>\|x\|</m> なら <m>y=x/\chi(x)</m> は <m>\|y\| < 1</m>、<m>\chi(y)=1</m>。ところが <m>\|y\| < 1</m> なら <m>e-y</m> は可逆（ノイマン級数）で、<m>\chi(e-y)=0</m> は可逆元が指標で零になることを意味し矛盾。<em>よって <m>\|\chi\|\le1</m>、<m>\chi(e)=1</m> より等号。</em>したがって <m>\Delta(A)</m> は <m>A^*</m> の単位球に含まれ、<span class="yogo-hl">アラオグルの定理（<ref t="thm-alaoglu"/>）により弱位相でコンパクト</span>。乗法性は弱位相で閉条件だから、<m>\Delta(A)</m> は閉部分集合である。</p>
+<p class="no-indent">（5）<m>\lambda\in\sigma(x)</m> なら <m>x-\lambda e</m> は可逆でないから、それが生成するイデアルは真で、ツォルンの補題により極大イデアル <m>M</m> に含まれる。対応する指標について <m>\chi(x)=\lambda</m>。逆は（4）と同じ議論である。</p>
+</div>
+
+<div class="teigi" id="def-gelfand-henkan">
+<h4>ゲルファント変換</h4>
+<p class="no-indent"><m>A</m> を単位的可換バナッハ環とする。<m>x\in A</m> に対し <m>\hat x:\Delta(A)\to\mathbb{C}</m> を <m>\hat x(\chi)=\chi(x)</m> で定める。<m>\Gamma:x\mapsto\hat x</m> を<strong>ゲルファント変換</strong>という。</p>
+<p class="no-indent"><m>\Delta(A)</m> の弱位相の定義から <m>\hat x</m> は連続で、<m>\Gamma:A\to C(\Delta(A))</m> は代数準同型かつ</p>
+<M>\|\hat x\|_\infty = r(x) \le \|x\|</M>
+</div>
+
+<div class="teiri" id="thm-gelfand-naimark">
+<h4>ゲルファント–ナイマルクの定理</h4>
+<p class="no-indent"><m>A</m> を単位的可換<em>シースター環</em>とする。このときゲルファント変換</p>
+<M>\Gamma : A \longrightarrow C(\Delta(A))</M>
+<p class="no-indent">は等距離な <m>*</m> 同型（対合を保つ全単射で、ノルムを保つ）である。すなわち</p>
+<p class="no-indent"><span class="yogo-hl">可換シースター環とは、コンパクトハウスドルフ空間上の連続関数環にほかならない。</span></p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><strong>自己共役元の指標は実。</strong><m>x=x^*</m>、<m>t\in\mathbb{R}</m> について <m>\|e^{itx}\|^2=\|(e^{itx})^*e^{itx}\|=\|e^{-itx}e^{itx}\|=1</m>（対合の性質と可換性）。指標のノルムが <m>1</m> なので <m>|e^{it\chi(x)}|\le1</m>。<em>これがすべての実 <m>t</m> で成り立つには <m>\chi(x)\in\mathbb{R}</m> でなければならない。</em>よって <m>\widehat{x^*}=\overline{\hat x}</m>（一般の <m>x</m> は <m>x=a+ib</m>、<m>a,b</m> 自己共役に分ける）。</p>
+<p class="no-indent"><strong>等距離性。</strong><m>x</m> が自己共役なら <m>\|x^2\|=\|x^*x\|=\|x\|^2</m>、繰り返して <m>\|x^{2^k}\|=\|x\|^{2^k}</m>。ゲルファントの公式（<ref t="thm-gelfand-koshiki"/>）より <m>r(x)=\|x\|</m>、したがって <m>\|\hat x\|_\infty=\|x\|</m>。一般の <m>x</m> については <m>x^*x</m> が自己共役だから</p>
+<M>\|\hat x\|_\infty^2 = \|\widehat{x^*x}\|_\infty = \|x^*x\| = \|x\|^2</M>
+<p class="no-indent"><em>シースター恒等式が、ここで二度目の決定的な働きをしている。</em></p>
+<p class="no-indent"><strong>全射性。</strong>等距離だから <m>\Gamma(A)</m> は <m>C(\Delta(A))</m> の閉部分環で、対合を保ち、単位元を含む。<em>また <m>\Delta(A)</m> の点を分離する</em>——異なる指標 <m>\chi_1\ne\chi_2</m> には <m>\chi_1(x)\ne\chi_2(x)</m> なる <m>x</m> がある。<span class="yogo-hl">ストーン–ワイエルシュトラスの定理（第96章）により、点を分離する自己共役な閉部分環は全体に一致する。</span></p>
+</div>
+
+<div class="chui">
+<h4>関数計算が、定理の系として出る</h4>
+<p class="no-indent"><m>T\in B(H)</m> を自己共役とし、<m>T</m> と <m>I</m> が生成する最小の閉 <m>*</m> 部分環を <m>A</m> とする。<em><m>A</m> は可換シースター環である。</em>ゲルファント–ナイマルクより <m>A\cong C(\Delta(A))</m> で、<m>\hat T</m> が <m>\Delta(A)</m> を <m>\sigma(T)</m> の上へ同相に写す（<ref t="thm-kyokudai-ideal"/>（5）と、<m>T</m> が <m>A</m> を生成することから）。したがって</p>
+<M>C(\sigma(T)) \cong A \subset B(H)</M>
+<p class="no-indent">この同型が、そのまま<ref t="thm-renzoku-kansu-keisan"/>の連続関数計算である。<span class="yogo-hl">第77章では多項式から手で延長したものが、ここでは構造定理の一部として自動的に得られる。</span></p>
+<p><em>同じことをもう一段進めると、第77章のスペクトル定理は「可換シースター環の表現論」として述べ直される。</em>非可換な場合はゲルファント–ナイマルク–シーガルの定理（すべてのシースター環は <m>B(H)</m> の閉 <m>*</m> 部分環と同型）が対応物で、証明は正の汎関数から表現を組み立てる（<em>GNS構成</em>）。</p>
+</div>
+
+<h3 id="s79-3">抽象論が具体を解く</h3>
+
+<div class="teiri" id="thm-wiener">
+<h4>ウィーナーの定理</h4>
+<p class="no-indent"><m>f(\theta)=\sum_{n\in\mathbb{Z}}c_ne^{in\theta}</m> が <m>\sum|c_n| < \infty</m> をみたし、すべての <m>\theta</m> で <m>f(\theta)\ne0</m> とする。このとき <m>1/f</m> もまた絶対収束するフーリエ級数に展開される：</p>
+<M>\frac{1}{f(\theta)} = \sum_{n\in\mathbb{Z}}d_ne^{in\theta}, \qquad \sum|d_n| < \infty</M>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><m>A=A(\mathbb{T})</m>（<ref t="rei-banach-kan-rei"/>（4））は単位的可換バナッハ環である。<em>主張は「<m>f</m> が各点で零でなければ <m>A</m> で可逆」ということで、<ref t="thm-kyokudai-ideal"/>（5）により <m>\sigma(f)=\{\chi(f):\chi\in\Delta(A)\}</m> が <m>0</m> を含まないことと同値。</em>したがって <m>\Delta(A)</m> を決めればよい。</p>
+<p class="no-indent"><m>u(\theta)=e^{i\theta}</m> とすると <m>u</m> は可逆で <m>\|u\|=\|u^{-1}\|=1</m>。指標 <m>\chi</m> について <m>|\chi(u)|\le1</m> かつ <m>|\chi(u)^{-1}|=|\chi(u^{-1})|\le1</m>、よって <m>|\chi(u)|=1</m>。<em>つまり <m>\chi(u)=e^{i\theta_0}</m> なる <m>\theta_0</m> がある。</em><m>u</m> と <m>u^{-1}</m> が生成する部分環は <m>A</m> で稠密（三角多項式は絶対収束級数で稠密）だから、指標は <m>\chi(f)=f(\theta_0)</m> で決まる。</p>
+<p class="no-indent">すなわち <m>\Delta(A)\cong\mathbb{T}</m> で、<m>\sigma(f)=f(\mathbb{T})=\{f(\theta)\}</m>。<span class="yogo-hl"><m>f</m> が各点で零でなければ <m>0\notin\sigma(f)</m>、よって <m>f</m> は <m>A</m> で可逆である。</span></p>
+<p><em>初等的な証明も存在するが、極大イデアルを決めるという一行で片づくのがゲルファント理論の威力である。</em>第80章以降のフーリエ解析で、この定理は絶対収束級数の扱いに繰り返し使われる。</p>
+</div>
+
+<div class="rei" id="rei-gelfand-ouyou">
+<h4>ゲルファント変換が何になるか</h4>
+<p class="no-indent">（1）<m>A=C(X)</m>（<m>X</m> コンパクトハウスドルフ）。<em>指標は各点での評価 <m>f\mapsto f(x)</m> に限る</em>（極大イデアルが一点の零化イデアル）。よって <m>\Delta(A)\cong X</m>——<span class="yogo-hl">コンパクトハウスドルフ空間は、その上の連続関数環から復元できる</span>。第23章のストーン–チェックのコンパクト化は、<m>C_b(X)\cong C(\beta X)</m> というこの定理の一例である。</p>
+<p>（2）<m>A=L^1(\mathbb{R})</m>（単位元を足す）。指標は <m>f\mapsto\hat f(\xi)=\int f(x)e^{-ix\xi}dx</m> に限り、<em>ゲルファント変換はフーリエ変換そのものである</em>（第85章）。「畳み込みが積になる」というフーリエ変換の基本性質は、代数準同型であることの言い換えだった。</p>
+<p>（3）<m>A=\ell^1(\mathbb{Z})</m>。同様に <m>\Delta(A)\cong\mathbb{T}</m> で、ゲルファント変換はフーリエ級数。<em>局所コンパクト可換群 <m>G</m> について <m>\Delta(L^1(G))\cong\hat G</m>（双対群）となり、ポントリャーギン双対性が代数の言葉になる。</em></p>
+<p>（4）<m>A=H^\infty(\mathbb{D})</m>。<m>\Delta(A)</m> は円板よりはるかに大きく、その構造は<em>コロナ問題</em>として長く未解決だった（カールソンが1962年に解決：円板は <m>\Delta(A)</m> で稠密）。<span class="yogo-hl">抽象的な極大イデアル空間が、複素解析の難問に翻訳される。</span></p>
+</div>
+
+<div class="hanrei" id="cex-gelfand-genkai">
+<h4>ゲルファント変換が同型にならない場合</h4>
+<p class="no-indent">シースター恒等式を落とすと結論は崩れる。</p>
+<p class="no-indent">（1）<strong>核をもつ例。</strong><m>A=\{\,\begin{pmatrix}a&b\\0&a\end{pmatrix}\,\}</m>（<m>2</m> 次上三角、可換バナッハ環）。指標は <m>a</m> を取り出すものだけで、<em><m>b</m> の情報が完全に失われる</em>。ゲルファント変換の核は <m>\{b\ne0,a=0\}</m> の生成するイデアル（<strong>根基</strong>）で、零でない。<m>\Gamma</m> は単射でない。</p>
+<p class="no-indent">（2）<strong>単射だが等距離でない例。</strong>ウィーナー環 <m>A(\mathbb{T})</m>。<m>\Gamma</m> は <m>A(\mathbb{T})\hookrightarrow C(\mathbb{T})</m> という単射だが、<m>\|\hat f\|_\infty=\sup|f|</m> は <m>\sum|c_n|</m> より真に小さいことがあり、<em>像は <m>C(\mathbb{T})</m> の真部分環（稠密だが閉でない）</em>。<span class="yogo-hl">この差が、フーリエ級数の絶対収束という条件の非自明さである。</span></p>
+<p class="no-indent">（3）<strong>可換性を落とすと。</strong><m>A=B(H)</m>（<m>\dim H\ge2</m>）には非零な指標が一つもない（可換でないので乗法的汎関数が存在しない）。<em>非可換な場合は「点」ではなく「表現」を考えるしかない</em>——それがGNS構成の出発点である。</p>
+</div>
+
+<figure>
+<svg viewBox="0 0 470 288" width="470" height="288" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">代数から空間を取り出す——ゲルファント変換</text>
+
+  <rect x="14" y="26" width="442" height="112" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+
+  <rect x="32" y="48" width="104" height="56" rx="4" fill="#dce7f0" stroke="#35618f" stroke-width="1.2"/>
+  <text x="84" y="68" font-size="7" text-anchor="middle" font-weight="700" fill="#1f3b5c">可換シースター環</text>
+  <text x="84" y="82" font-size="6.4" text-anchor="middle" fill="#1f3b5c">A（代数だけ）</text>
+  <text x="84" y="96" font-size="6" text-anchor="middle" fill="#6a6a68">ノルム・積・対合</text>
+
+  <rect x="188" y="48" width="104" height="56" rx="4" fill="#f4f1ea" stroke="#8a6b2c" stroke-width="1.2"/>
+  <text x="240" y="68" font-size="7" text-anchor="middle" font-weight="700" fill="#5a4520">極大イデアル空間</text>
+  <text x="240" y="82" font-size="6.4" text-anchor="middle" fill="#5a4520">Δ(A)（点の集合）</text>
+  <text x="240" y="96" font-size="6" text-anchor="middle" fill="#6a6a68">弱位相でコンパクト</text>
+
+  <rect x="344" y="48" width="104" height="56" rx="4" fill="#e6efe9" stroke="#2f6b5f" stroke-width="1.2"/>
+  <text x="396" y="68" font-size="7" text-anchor="middle" font-weight="700" fill="#1e4a41">連続関数環</text>
+  <text x="396" y="82" font-size="6.4" text-anchor="middle" fill="#1e4a41">C(Δ(A))</text>
+  <text x="396" y="96" font-size="6" text-anchor="middle" fill="#6a6a68">等距離に同型</text>
+
+  <line x1="136" y1="70" x2="186" y2="70" stroke="#8a6b2c" stroke-width="1.3" marker-end="url(#g79)"/>
+  <text x="161" y="64" font-size="5.6" text-anchor="middle" fill="#8a6b2c">指標を集める</text>
+  <line x1="292" y1="70" x2="342" y2="70" stroke="#2f6b5f" stroke-width="1.3" marker-end="url(#g79b)"/>
+  <text x="317" y="64" font-size="5.6" text-anchor="middle" fill="#2f6b5f">関数と見る</text>
+  <text x="240" y="124" font-size="6.4" text-anchor="middle" fill="#8c2f1e">アラオグルがコンパクト性を、ストーン–ワイエルシュトラスが全射性を与える</text>
+
+  <defs>
+    <marker id="g79" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 z" fill="#8a6b2c"/></marker>
+    <marker id="g79b" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 z" fill="#2f6b5f"/></marker>
+  </defs>
+
+  <rect x="14" y="148" width="442" height="76" rx="4" fill="#faf8f4" stroke="#c3b89e"/>
+  <text x="24" y="163" font-size="7.6" font-weight="700" fill="#5a4520">同じ一つの定理が、別々の顔で現れる</text>
+  <text x="24" y="180" font-size="6.6" fill="#5a4520">A ＝ C(X)　　　　　　Δ(A) ＝ X　　　　　空間は関数環から復元できる（第27章）</text>
+  <text x="24" y="193" font-size="6.6" fill="#1e4a41">A ＝ 可積分関数の畳み込み環　Δ(A) ＝ 双対群　　ゲルファント変換 ＝ フーリエ変換（第85章）</text>
+  <text x="24" y="206" font-size="6.6" fill="#8c2f1e">A ＝ 自己共役作用素が生む環　Δ(A) ＝ スペクトル　関数計算（第77章）が構造定理の系になる</text>
+  <text x="24" y="219" font-size="6.4" fill="#6b2a48">A ＝ 絶対収束級数の環　　　Δ(A) ＝ 円周　　　　ウィーナーの定理が一行で出る</text>
+
+  <rect x="14" y="234" width="216" height="50" rx="4" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="24" y="249" font-size="7.4" font-weight="700" fill="#1e4a41">要になる一本の等式</text>
+  <text x="24" y="265" font-size="6.6" fill="#1e4a41">‖x*x‖ ＝ ‖x‖²</text>
+  <text x="24" y="278" font-size="6.4" fill="#8c2f1e">これを落とすと単射性も等距離性も失われる</text>
+
+  <rect x="240" y="234" width="216" height="50" rx="4" fill="#f0e2de" stroke="#a03b2e"/>
+  <text x="250" y="249" font-size="7.4" font-weight="700" fill="#8c2f1e">非可換だとどうなるか</text>
+  <text x="250" y="265" font-size="6.6" fill="#8c2f1e">指標が一つも存在しない</text>
+  <text x="250" y="278" font-size="6.4" fill="#6a6a68">点の代わりに表現を考える——GNS構成へ</text>
+</svg>
+<figcaption>ゲルファント変換は、可換シースター環からコンパクトハウスドルフ空間を取り出し、環をその上の連続関数環と同一視する。同じ定理が、空間の復元・フーリエ変換・関数計算・ウィーナーの定理という別々の顔で現れる。</figcaption>
+</figure>
+
+<div class="star2">
+<h4>★★ 学部後半——正則関数計算と、スペクトルの相対性</h4>
+
+<p><strong>正則関数計算（ダンフォード–テイラー）。</strong>単位的バナッハ環では、自己共役性がなくても<em>正則関数</em>なら代入できる。<m>\sigma(x)</m> を囲む閉曲線 <m>\gamma</m> をとり</p>
+<M>f(x) = \frac{1}{2\pi i}\oint_\gamma f(\lambda)(\lambda e-x)^{-1}\,d\lambda</M>
+<p>と定める。コーシーの積分定理（第90章）により <m>\gamma</m> の取り方に依らず、<m>f\mapsto f(x)</m> は代数準同型でスペクトル写像定理をみたす。<em>連続関数計算（自己共役・シースター環が必要）と正則関数計算（一般のバナッハ環で可能）の二つが、それぞれの範囲で使われる。</em><span class="yogo-hl">べき零作用素には平方根を代入できないが、指数関数なら代入できる——関数の側の条件の違いがそのまま現れている。</span>平方根は原点で正則でなく、指数関数は全平面で正則だからである。</p>
+
+<p><strong>スペクトルの相対性。</strong><m>B\subset A</m> を閉部分環（単位元を共有）とすると、<m>x\in B</m> について一般に <m>\sigma_A(x)\subset\sigma_B(x)</m> であり、等号は成り立たないことがある。<em>「<m>B</m> の中では可逆でないが、大きい環 <m>A</m> では可逆」ということが起こる。</em>例：<m>A=C(\mathbb{T})</m>、<m>B=</m> 円板上の正則関数の境界値の閉包（<em>ディスク環</em>）、<m>x=u</m>（座標関数）。<m>\sigma_A(u)=\mathbb{T}</m> だが <m>\sigma_B(u)=\overline{\mathbb{D}}</m> である。</p>
+
+<p><em>ところがシースター環では等号が成り立つ</em>（<strong>スペクトル置換不変性</strong>）。理由：自己共役元については <m>\sigma</m> が実で、レゾルベントの評価が環に依らないから。可逆性が「代数の外」を必要としないという、シースター環のもう一つの剛性である。</p>
+
+<p><strong>単位元をもたない場合。</strong><m>L^1(\mathbb{R})</m> のように単位元がないときは、<m>A\oplus\mathbb{C}e</m> を作って単位元を足す。<em>このとき <m>\Delta(A)</m> は局所コンパクトになり、<m>C_0</m>（無限遠で消える連続関数）との同型が成り立つ。</em>ゲルファント–ナイマルクの一般形は</p>
+<M>A \cong C_0(\Delta(A)), \qquad \Delta(A) \text{ 局所コンパクトハウスドルフ}</M>
+<p>である。<span class="yogo-hl">一点コンパクト化（第22章）が、単位元を足す操作の位相的な対応物になっている。</span></p>
+</div>
+
+<div class="star3">
+<h4>★★★ 大学院——非可換幾何と分類</h4>
+
+<p><strong>非可換幾何。</strong>ゲルファント–ナイマルクは「可換シースター環＝位相空間」という辞書を与える。<em>コンヌの着想は、この辞書を逆向きに使うことだった</em>：非可換なシースター環を「非可換な空間」と見なし、位相と幾何の概念を代数の言葉で書き直す。ベクトル束は射影加群、K理論は射影の同値類、微分形式は巡回コホモロジー、リーマン計量はスペクトル三対 <m>(A,H,D)</m>——<m>D</m> はディラック作用素にあたる自己共役作用素である。<span class="yogo-hl">距離が、作用素のノルムで書き直せる：<m>d(p,q)=\sup\{|p(a)-q(a)| : \|[D,a]\|\le1\}</m>。</span></p>
+
+<p><strong>葉層と量子群。</strong>葉層構造の「葉の空間」は普通の位相空間として貧しい（商が非ハウスドルフ）が、非可換シースター環としては豊かである。アティヤ–シンガーの指数定理の葉層版（コンヌ–スコダン）はこの枠組みで初めて意味をもつ。<em>回転環</em> <m>A_\theta</m>（<m>uv=e^{2\pi i\theta}vu</m> で生成）は非可換トーラスで、<m>\theta</m> が無理数のとき単純環になり、その K理論が <m>\mathbb{Z}+\theta\mathbb{Z}</m> という部分群を含む——<em>円周の無理数回転という、位相力学系のもっとも素朴な対象が、ここでは環として現れる。</em></p>
+
+<p><strong>分類プログラム。</strong>単純核型シースター環の分類は、この分野の中心的な成果である。エリオット不変量（K理論＋トレース＋その対合）が、有限核次元とUCT（普遍係数定理）という条件の下で完全不変量になることが、2015年から2020年にかけて多数の研究者によって完成した。<em>ジャン–スー環 <m>\mathcal{Z}</m> による安定性が鍵で、これは「作用素環における可縮性」のような役割を果たす。</em></p>
+
+<p><strong>未解決。</strong>ナイマルクの問題——ただ一つの既約表現をもつシースター環は、コンパクト作用素環と同型か——は、連続体仮説の下では反例が構成される（アカマン–ワイヴァー、2004年）。<span class="yogo-hl">作用素環の問いが、集合論の公理系に依存する。</span><em>第36章で扱ったスーリン問題と同じ独立性の現象が、解析学のただ中で再び現れている</em>——これが第97章で回収する、本書の主題の一つである。</p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li><m>C(X)</m> がシースター環であることを確かめよ。</li>
+<li>可積分関数の畳み込みについて <m>\|f*g\|_1\le\|f\|_1\|g\|_1</m> を示せ。</li>
+<li>ウィーナー環 <m>A(\mathbb{T})</m> がバナッハ環であることを確かめよ。</li>
+<li>指標が可逆元を零に写せないことを確かめよ。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li><ref t="thm-gelfand-mazur"/>（2）を示せ。<span class="haiten">（25点）</span></li>
+<li><ref t="thm-kyokudai-ideal"/>（1）を、可逆元の集合が開であることから示せ。<span class="haiten">（30点）</span></li>
+<li>指標のノルムが <m>1</m> であることを示せ。<span class="haiten">（30点）</span></li>
+<li><ref t="thm-gelfand-naimark"/>で、自己共役元の指標が実であることを示せ。<span class="haiten">（40点）</span></li>
+<li><ref t="thm-wiener"/>を、<m>\Delta(A(\mathbb{T}))\cong\mathbb{T}</m> から導け。<span class="haiten">（40点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li><m>C(X)</m> の極大イデアルが一点の零化イデアルに限ることを示せ。<span class="haiten">（40点）</span></li>
+<li>ディスク環について <m>\sigma_B(u)=\overline{\mathbb{D}}</m> を示し、スペクトルが環に依存することを確かめよ。<span class="haiten">（45点）</span></li>
+<li>正則関数計算が代数準同型であることを、コーシーの積分定理を使って示せ。<span class="haiten">（50点）</span></li>
+<li>自己共役作用素が生成する可換シースター環から、第77章の連続関数計算を導け。<span class="haiten">（50点）</span></li>
+</ol>
+</div>
+</div>

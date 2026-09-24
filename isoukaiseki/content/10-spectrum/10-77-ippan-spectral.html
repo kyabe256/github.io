@@ -1,0 +1,249 @@
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>固有ベクトルがないとき、「対角化」をどう書けばよいのか。</li>
+<li>作用素に関数を代入するとは、何をすることか。</li>
+<li>なぜ「作用素値の測度」という奇妙なものが必要になるのか。</li>
+</ul>
+</div>
+
+<h3 id="s77-1">和を積分に置き換える</h3>
+
+<p>第76章のスペクトル定理は</p>
+<M>T = \sum_n \lambda_n P_n \qquad (P_n = \text{固有空間への射影})</M>
+<p>という形だった。掛け算作用素ではこの和が空になってしまう（<ref t="cex-compact-hazusu"/>）。<em>ならば和を積分にすればよい</em>——それが本章の答えである。目標は</p>
+<M>T = \int_{\sigma(T)} \lambda\,dE(\lambda)</M>
+<p>という式に意味を与えることである。ここで <m>E</m> は「集合に射影を対応させる測度」でなければならない。<span class="yogo-hl">第57章で符号つき測度を、第58章でルベーグ分解を扱ったが、今度は値が作用素になる測度を作る。</span></p>
+
+<p>作り方には遠回りに見える道を通る。<em>いきなり測度を作るのではなく、まず「作用素に関数を代入する」操作を作り、それをリースの表現定理（<ref t="thm-riesz-sei"/>）で測度に変換する。</em>この順序が本質的である。</p>
+
+<h3 id="s77-2">多項式から連続関数へ</h3>
+
+<div class="teiri" id="thm-spectral-mapping">
+<h4>スペクトル写像定理（多項式）</h4>
+<p class="no-indent"><m>T\in B(E)</m>（複素バナッハ空間）、<m>p</m> を複素係数多項式とすると</p>
+<M>\sigma(p(T)) = p(\sigma(T)) = \{\,p(\lambda) \mid \lambda\in\sigma(T)\,\}</M>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><m>\mu\in\mathbb{C}</m> を固定し、<m>p(z)-\mu=c\prod_{k}(z-\alpha_k)</m> と因数分解する（<m>c\ne0</m>、代数学の基本定理）。すると</p>
+<M>p(T)-\mu I = c\prod_k (T-\alpha_k I)</M>
+<p class="no-indent">因子は互いに可換だから、<em>左辺が可逆であることと、すべての因子が可逆であることは同値</em>（一つでも可逆でなければ積も可逆でない。逆は明らか）。したがって</p>
+<M>\mu\in\sigma(p(T)) \iff \exists k,\ \alpha_k\in\sigma(T) \iff \exists\lambda\in\sigma(T),\ p(\lambda)=\mu</M>
+<p class="no-indent">最後の同値は <m>p(\alpha_k)=\mu</m> だからである。</p>
+</div>
+
+<div class="teiri" id="thm-renzoku-kansu-keisan">
+<h4>連続関数計算</h4>
+<p class="no-indent"><m>T\in B(H)</m> を自己共役とする。<m>C(\sigma(T))</m> から <m>B(H)</m> への写像 <m>f\mapsto f(T)</m> がただ一つ存在して、次をみたす。</p>
+<p class="no-indent">（1）代数準同型：<m>(f+g)(T)=f(T)+g(T)</m>、<m>(fg)(T)=f(T)g(T)</m>、<m>1(T)=I</m>。<br>
+（2）対合を保つ：<m>\bar f(T)=f(T)^*</m>。したがって <m>f</m> が実数値なら <m>f(T)</m> は自己共役。<br>
+（3）等距離：<m>\|f(T)\|=\sup_{\lambda\in\sigma(T)}|f(\lambda)|</m>。<br>
+（4）<m>\mathrm{id}(T)=T</m>。<br>
+（5）スペクトル写像定理：<m>\sigma(f(T))=f(\sigma(T))</m>。<br>
+（6）<m>ST=TS</m> なら <m>Sf(T)=f(T)S</m>。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><strong>多項式の上で等距離になること。</strong><m>p</m> を多項式とすると <m>p(T)^*=\bar p(T)</m> なので <m>p(T)^*p(T)=(|p|^2)(T)</m> は自己共役。<ref t="thm-suchi-han-i"/>とスペクトル写像定理より</p>
+<M>\|p(T)\|^2 = \|p(T)^*p(T)\| = r\big((\bar pp)(T)\big) = \sup_{\lambda\in\sigma(T)}|p(\lambda)|^2</M>
+<p class="no-indent"><em>ここで自己共役性が二度効いている</em>：ノルムとスペクトル半径の一致（<ref t="thm-suchi-han-i"/>）と、<m>\sigma(T)</m> が実であること。</p>
+<p class="no-indent"><strong>延長。</strong><m>\sigma(T)\subset\mathbb{R}</m> はコンパクトなので、ワイエルシュトラスの近似定理（第96章で一般形を扱う）により多項式は <m>C(\sigma(T))</m> で一様に稠密。<em>等距離写像は稠密な部分集合から一意に連続延長される</em>（<ref t="thm-be-f-kanbi"/>——<m>B(H)</m> が完備であることが要る）。延長が（1）〜（4）(6) を保つことは、両辺が連続で稠密集合上で一致するからである。</p>
+<p class="no-indent">（5）は多項式の場合を一様近似で移す。<m>f(\sigma(T))</m> がコンパクトであることに注意すれば、<m>\mu\notin f(\sigma(T))</m> のとき <m>1/(f-\mu)</m> が <m>C(\sigma(T))</m> に属し、これが <m>f(T)-\mu I</m> の逆を与える。</p>
+</div>
+
+<div class="chui">
+<h4>なぜ「等距離」が決定的か</h4>
+<p class="no-indent">（3）は <em>作用素のノルムが、スペクトル上の関数の一様ノルムにぴったり一致する</em>という主張である。これがなければ延長が存在しない——連続だが等距離でない写像は、稠密集合からの延長が有界性を失いうる。</p>
+<p><span class="yogo-hl">言い換えると、自己共役作用素 <m>T</m> が生成する作用素の集まりは、<m>\sigma(T)</m> 上の連続関数環の複製にすぎない。</span><em>この同型を一般の可換な作用素環に拡張したものが、第79章のゲルファント–ナイマルクの定理である。</em>本章の関数計算は、その特別な場合を手で作っていることになる。</p>
+</div>
+
+<h3 id="s77-3">作用素値測度とスペクトル定理</h3>
+
+<div class="teigi" id="def-spectral-sokudo">
+<h4>作用素値測度（単位の分解）</h4>
+<p class="no-indent"><m>(X,\mathcal{M})</m> を可測空間とする。写像 <m>E:\mathcal{M}\to B(H)</m> が次をみたすとき<strong>作用素値測度</strong>（または<strong>単位の分解</strong>）という。</p>
+<p class="no-indent">（1）各 <m>A\in\mathcal{M}</m> について <m>E(A)</m> は直交射影。<br>
+（2）<m>E(\emptyset)=0</m>、<m>E(X)=I</m>。<br>
+（3）<m>E(A\cap B)=E(A)E(B)</m>。<br>
+（4）互いに素な <m>A_n</m> について、<m>E(\bigcup A_n)=\sum E(A_n)</m>（強作用素位相での収束）。</p>
+<p class="no-indent">このとき各 <m>x,y\in H</m> について <m>E_{x,y}(A)=(E(A)x,y)</m> は複素測度であり、<m>E_{x,x}</m> は全質量 <m>\|x\|^2</m> の正測度である。</p>
+</div>
+
+<div class="teiri" id="thm-spectral-teiri">
+<h4>スペクトル定理（有界自己共役作用素）</h4>
+<p class="no-indent"><m>T\in B(H)</m> を自己共役とする。<m>\sigma(T)</m> のボレル集合体上の作用素値測度 <m>E</m> がただ一つ存在して</p>
+<M>(Tx,y) = \int_{\sigma(T)} \lambda\,dE_{x,y}(\lambda) \qquad (\forall x,y\in H)</M>
+<p class="no-indent">が成り立つ。これを <m>T=\int\lambda\,dE(\lambda)</m> と書く。さらに任意の有界ボレル関数 <m>f</m> について</p>
+<M>(f(T)x,y) = \int_{\sigma(T)} f(\lambda)\,dE_{x,y}(\lambda), \qquad \|f(T)\| \le \sup_{\sigma(T)}|f|</M>
+<p class="no-indent">により<strong>ボレル関数計算</strong>が定まり、<ref t="thm-renzoku-kansu-keisan"/>の（1）（2）（4）（6）を引き継ぐ。<m>E(A)=\chi_A(T)</m> である。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><strong>測度の構成。</strong><m>x,y\in H</m> を固定する。<m>f\mapsto(f(T)x,y)</m> は <m>C(\sigma(T))</m> 上の線形汎関数で、</p>
+<M>|(f(T)x,y)| \le \|f(T)\|\,\|x\|\,\|y\| = \|f\|_\infty\|x\|\|y\|</M>
+<p class="no-indent">より有界。<m>x=y</m> のときは <m>f\ge0</m> なら <m>f=g^2</m>（<m>g=\sqrt f</m> は連続）と書けて <m>(f(T)x,x)=\|g(T)x\|^2\ge0</m> だから<em>正</em>である。リースの表現定理（<ref t="thm-riesz-sei"/>）により、<m>\sigma(T)</m> 上の正則ボレル測度 <m>\mu_x</m> がただ一つあって</p>
+<M>(f(T)x,x) = \int f\,d\mu_x</M>
+<p class="no-indent">一般の <m>x,y</m> については、偏極恒等式</p>
+<M>4(f(T)x,y) = \int f\,d\mu_{x+y} - \int f\,d\mu_{x-y} + i\int f\,d\mu_{x+iy} - i\int f\,d\mu_{x-iy}</M>
+<p class="no-indent">により、複素測度</p>
+<M>E_{x,y} = \tfrac14\big(\mu_{x+y}-\mu_{x-y}+i\mu_{x+iy}-i\mu_{x-iy}\big)</M>
+<p class="no-indent">を定めればよい。<em>右辺が <m>x</m> について線形、<m>y</m> について共役線形になることは、恒等式そのものから従う。</em></p>
+<p class="no-indent"><strong>射影の構成。</strong>有界ボレル関数 <m>f</m> について、<m>(x,y)\mapsto\int f\,dE_{x,y}</m> は有界な双線形形式（<m>|\cdot|\le\|f\|_\infty\|x\|\|y\|</m>）だから、リースの表現定理（<ref t="thm-riesz-hyogen-hilbert"/>）でこれを表す作用素 <m>f(T)\in B(H)</m> がただ一つ定まる。<em>積を保つことは、連続関数の場合から単調族定理で移す</em>（可測関数の階層を <m>\chi_A</m> まで登る操作は第54章の <ref t="thm-tankansu-kinji"/> と同じ筋である）。<m>f=\chi_A</m> に対しては <m>\chi_A^2=\chi_A=\bar\chi_A</m> より <m>E(A)=\chi_A(T)</m> は射影で、（1）〜（4）がすべて従う。</p>
+<p class="no-indent"><strong>一意性。</strong>二つの作用素値測度が同じ <m>T</m> を与えるなら、多項式の積分が一致し、一様近似で連続関数の積分が一致し、リースの表現定理の一意性から測度が一致する。</p>
+</div>
+
+<div class="rei" id="rei-spectral-sokudo-rei">
+<h4>スペクトル測度の見本</h4>
+<p class="no-indent">（1）<strong>コンパクト自己共役。</strong><m>E(A)=\sum_{\lambda_n\in A}P_n</m>（固有空間への射影の和）。<em>第76章の結論を作用素値測度で書き直すとこうなる。</em>測度は可算個の原子に集まっている。</p>
+<p>（2）<strong>掛け算作用素。</strong><m>H=L^2[0,1]</m>、<m>(Mf)(x)=xf(x)</m>。<m>E(A)</m> は <m>\chi_A</m> を掛ける作用素、すなわち <m>L^2(A)</m> への射影である。<m>E_{f,f}(A)=\int_A|f|^2dx</m>。<span class="yogo-hl">測度は原子をもたず、ルベーグ測度に絶対連続——これが「固有値が一つもない」ことの測度論的な言い換えである。</span></p>
+<p>（3）<strong>カントール関数。</strong><m>\mu</m> をカントール測度（<ref t="rei-kantoru-kansu"/>）とし、<m>L^2(\mu)</m> 上で <m>x</m> を掛ける。<m>E_{x,x}</m> は原子をもたず、かつルベーグ測度に特異である。<em>第三の型（特異連続スペクトル）が実在する。</em></p>
+<p>（4）<strong>両側シフト。</strong><m>\ell^2(\mathbb{Z})</m> 上の <m>(Ux)_n=x_{n-1}</m> はユニタリで、フーリエ変換（第84章）によって <m>L^2</m> の単位円周上での <m>e^{i\theta}</m> の掛け算に同値。<em>スペクトルは単位円周全体で、スペクトル測度は角度のルベーグ測度である。</em></p>
+</div>
+
+<div class="teiri" id="thm-kakezan-model">
+<h4>掛け算作用素モデル</h4>
+<p class="no-indent"><m>T\in B(H)</m> を自己共役、<m>H</m> を可分とする。このとき有限測度空間の族 <m>(\sigma(T),\mu_n)</m> とユニタリ作用素</p>
+<M>U : H \longrightarrow \bigoplus_n L^2(\mu_n)</M>
+<p class="no-indent">が存在して、<m>UTU^{-1}</m> は各成分で <m>\lambda</m> を掛ける作用素になる。とくに <m>H</m> が<strong>巡回ベクトル</strong>（<m>\{f(T)x : f\in C(\sigma(T))\}</m> が稠密になる <m>x</m>）をもつなら、成分は一つで済む。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">巡回ベクトル <m>x</m> がある場合を示す。<m>\mu=\mu_x</m> とし、<m>U(f(T)x)=f</m> と定める。<ref t="thm-spectral-teiri"/>より</p>
+<M>\|f(T)x\|^2 = (\,\overline{f}f(T)x,x) = \int|f|^2d\mu = \|f\|_{L^2(\mu)}^2</M>
+<p class="no-indent">なので <m>U</m> は等距離。<em>定義域は仮定により <m>H</m> で稠密、値域は <m>C(\sigma(T))</m> で <m>L^2(\mu)</m> で稠密（<ref t="thm-cc-chumitsu"/>）だから、<m>U</m> はユニタリに延びる。</em>そして</p>
+<M>U T (f(T)x) = U\big((\mathrm{id}\cdot f)(T)x\big) = \lambda f(\lambda)</M>
+<p class="no-indent">すなわち <m>UTU^{-1}</m> は <m>\lambda</m> の掛け算である。一般の場合は、任意のベクトルから巡回部分空間 <m>\overline{\{f(T)x\}}</m> を作り、その直交補空間で繰り返す（可分性から可算回で尽きる）。</p>
+<p><span class="yogo-hl">結論を一行で言えば——自己共役作用素とは、本質的に「何かを掛ける」ことである。</span></p>
+</div>
+
+<div class="hanrei" id="cex-hi-seiki-sokudo">
+<h4>正規でないとスペクトル測度は存在しない</h4>
+<p class="no-indent">ヴォルテラ作用素 <m>(Vf)(x)=\int_0^xf(t)\,dt</m> は <m>\sigma(V)=\{0\}</m>（<ref t="rei-spectrum-rei"/>）だが <m>V\ne0</m>。<em>もしスペクトル測度があれば <m>V=\int_{\{0\}}\lambda\,dE=0</m> となって矛盾する。</em></p>
+<p><span class="yogo-hl">スペクトルが作用素を決めるのは、正規な場合に限られる。</span><ref t="thm-spectral-teiri"/>は正規作用素（複素平面上の測度として）まで一般化できるが、そこが限界である。<em>非正規作用素の「標準形」は、有限次元ならジョルダン標準形、無限次元では一般には存在しない</em>——不変部分空間問題（第75章★★★）が未解決であることの一つの表れである。</p>
+</div>
+
+<figure>
+<svg viewBox="0 0 470 288" width="470" height="288" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">和が積分に変わる——スペクトル測度の三つの型</text>
+
+  <rect x="14" y="26" width="442" height="120" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+
+  <text x="82" y="42" font-size="6.8" text-anchor="middle" font-weight="700" fill="#1f3b5c">点（原子）</text>
+  <line x1="28" y1="112" x2="136" y2="112" stroke="#8a8a88" stroke-width="0.8"/>
+  <line x1="40" y1="112" x2="40" y2="58" stroke="#35618f" stroke-width="2.2"/>
+  <line x1="58" y1="112" x2="58" y2="74" stroke="#35618f" stroke-width="2.2"/>
+  <line x1="76" y1="112" x2="76" y2="88" stroke="#35618f" stroke-width="2.2"/>
+  <line x1="94" y1="112" x2="94" y2="98" stroke="#35618f" stroke-width="2.2"/>
+  <line x1="108" y1="112" x2="108" y2="104" stroke="#35618f" stroke-width="2.2"/>
+  <line x1="118" y1="112" x2="118" y2="108" stroke="#35618f" stroke-width="2.2"/>
+  <text x="82" y="126" font-size="6" text-anchor="middle" fill="#8c2f1e">固有値がある</text>
+  <text x="82" y="137" font-size="6" text-anchor="middle" fill="#6a6a68">コンパクト作用素はここだけ</text>
+
+  <text x="235" y="42" font-size="6.8" text-anchor="middle" font-weight="700" fill="#1f3b5c">絶対連続</text>
+  <line x1="180" y1="112" x2="290" y2="112" stroke="#8a8a88" stroke-width="0.8"/>
+  <path d="M 192 112 C 208 112 212 66 235 66 C 258 66 262 112 278 112 Z" fill="#dce7f0" stroke="#35618f" stroke-width="1.1"/>
+  <text x="235" y="126" font-size="6" text-anchor="middle" fill="#8c2f1e">固有値は一つもない</text>
+  <text x="235" y="137" font-size="6" text-anchor="middle" fill="#6a6a68">掛け算作用素・自由な運動</text>
+
+  <text x="384" y="42" font-size="6.8" text-anchor="middle" font-weight="700" fill="#1f3b5c">特異連続</text>
+  <line x1="326" y1="112" x2="442" y2="112" stroke="#8a8a88" stroke-width="0.8"/>
+  <line x1="332" y1="112" x2="332" y2="78" stroke="#8a6b2c" stroke-width="1.4"/>
+  <line x1="340" y1="112" x2="340" y2="78" stroke="#8a6b2c" stroke-width="1.4"/>
+  <line x1="358" y1="112" x2="358" y2="78" stroke="#8a6b2c" stroke-width="1.4"/>
+  <line x1="366" y1="112" x2="366" y2="78" stroke="#8a6b2c" stroke-width="1.4"/>
+  <line x1="402" y1="112" x2="402" y2="78" stroke="#8a6b2c" stroke-width="1.4"/>
+  <line x1="410" y1="112" x2="410" y2="78" stroke="#8a6b2c" stroke-width="1.4"/>
+  <line x1="428" y1="112" x2="428" y2="78" stroke="#8a6b2c" stroke-width="1.4"/>
+  <line x1="436" y1="112" x2="436" y2="78" stroke="#8a6b2c" stroke-width="1.4"/>
+  <text x="384" y="126" font-size="6" text-anchor="middle" fill="#8c2f1e">原子なし・測度零に集中</text>
+  <text x="384" y="137" font-size="6" text-anchor="middle" fill="#6a6a68">カントール測度がその例</text>
+
+  <rect x="14" y="156" width="216" height="126" rx="4" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="24" y="171" font-size="7.6" font-weight="700" fill="#1e4a41">構成の道すじ</text>
+  <text x="24" y="188" font-size="6.6" fill="#1e4a41">① 多項式 p を代入　p(T)</text>
+  <text x="24" y="200" font-size="6.6" fill="#1e4a41">② ‖p(T)‖ ＝ スペクトル上の一様ノルム</text>
+  <text x="24" y="212" font-size="6.6" fill="#1e4a41">③ ワイエルシュトラスで連続関数へ延長</text>
+  <text x="24" y="224" font-size="6.6" fill="#1e4a41">④ リースの表現定理で測度に変換</text>
+  <text x="24" y="236" font-size="6.6" fill="#1e4a41">⑤ 特性関数を代入して射影を得る</text>
+  <text x="24" y="253" font-size="6.4" fill="#8c2f1e">②が自己共役性のすべてを使っている</text>
+  <text x="24" y="265" font-size="6.4" fill="#5a4520">測度を先に作るのではなく、関数計算が先</text>
+  <text x="24" y="277" font-size="6.4" fill="#6b2a48">この順序を逆にすると構成できない</text>
+
+  <rect x="240" y="156" width="216" height="126" rx="4" fill="#f4f1ea" stroke="#8a6b2c"/>
+  <text x="250" y="171" font-size="7.6" font-weight="700" fill="#5a4520">結論の言い換え</text>
+  <text x="250" y="188" font-size="6.6" fill="#5a4520">自己共役作用素とは、要するに</text>
+  <text x="250" y="201" font-size="6.6" fill="#5a4520">「実数値関数を掛けること」である</text>
+  <text x="250" y="218" font-size="6.4" fill="#1e4a41">有限次元　対角行列</text>
+  <text x="250" y="230" font-size="6.4" fill="#1e4a41">コンパクト　零に収束する対角作用素</text>
+  <text x="250" y="242" font-size="6.4" fill="#1e4a41">一般　　　測度空間上の掛け算作用素</text>
+  <text x="250" y="259" font-size="6.6" fill="#8c2f1e">正規でないと、この書き換えは不可能</text>
+  <text x="250" y="271" font-size="6.4" fill="#6a6a68">ヴォルテラ作用素が反例（σ ＝ {0} なのに 0 でない）</text>
+</svg>
+<figcaption>スペクトル測度の三つの型と、スペクトル定理の構成の順序。関数計算を先に作り、リースの表現定理で測度に変換する——この順序を逆にすると構成できない。</figcaption>
+</figure>
+
+<div class="star2">
+<h4>★★ 学部後半——レゾルベントから測度を読む、同時対角化、ストーンの定理</h4>
+
+<p><strong>ストーンの公式。</strong>スペクトル測度は、レゾルベントの虚軸方向からの極限で取り出せる。<m>a < b</m> について</p>
+<M>\tfrac12\big(E([a,b])+E((a,b))\big) = \lim_{\varepsilon\downarrow0}\frac{1}{2\pi i}\int_a^b \big(R(\lambda+i\varepsilon)-R(\lambda-i\varepsilon)\big)\,d\lambda</M>
+<p>（強作用素位相）。<em>レゾルベントの実軸を挟んだ跳びが、そこに載っている測度の量である。</em>複素解析の言葉では、<m>(R(z)x,x)</m> が上半平面の正則関数で <m>\mathrm{Im}\,z>0</m> では虚部が負——<em>ヘルグロッツ関数</em>——であり、その境界値がスペクトル測度を決める。<span class="yogo-hl">第91章の解析接続と第94章の調和関数の境界値の理論が、そのままここで使われる。</span></p>
+
+<p><strong>スペクトルの型の分離。</strong><m>E_{x,x}</m> をルベーグ分解（<ref t="thm-lebesgue-bunkai"/>）すると、<m>H</m> が三つの閉不変部分空間に直和分解する：</p>
+<M>H = H_{\mathrm{pp}} \oplus H_{\mathrm{ac}} \oplus H_{\mathrm{sc}}</M>
+<p><em>点・絶対連続・特異連続の三つは、測度論のルベーグ分解が作用素の言葉に翻訳されたものである。</em>量子力学では <m>H_{\mathrm{pp}}</m> が束縛状態、<m>H_{\mathrm{ac}}</m> が散乱状態に対応し、<m>H_{\mathrm{sc}}</m> は「例外的」と長く思われていたが、準周期的なポテンシャルでは主要な成分になる。</p>
+
+<p><strong>可換な族の同時対角化。</strong>可換な自己共役作用素の有限族 <m>T_1,\dots,T_n</m> には、<m>\mathbb{R}^n</m> 上の作用素値測度 <m>E</m> があって <m>T_k=\int\lambda_k\,dE(\lambda)</m> と同時に書ける。<em>構成は、各 <m>T_k</m> の関数計算が互いに可換であること（<ref t="thm-renzoku-kansu-keisan"/>（6））から、<m>C(\sigma(T_1)\times\cdots)</m> 上の準同型を組み立てればよい。</em>第79章のゲルファント理論なら、これは可換バナッハ環の一つの表現として一息に出る。</p>
+
+<p><strong>ストーンの定理。</strong>ユニタリ作用素の強連続な一径数群 <m>U(t)</m>（<m>U(s+t)=U(s)U(t)</m>、<m>t\mapsto U(t)x</m> が連続）は、必ず</p>
+<M>U(t) = e^{itA} = \int e^{it\lambda}\,dE(\lambda)</M>
+<p>の形に書ける。ここで <m>A</m> は（一般に非有界な）自己共役作用素で、<em>生成子</em>と呼ばれる。<span class="yogo-hl">これが量子力学の時間発展 <m>\psi(t)=e^{-itH/\hbar}\psi(0)</m> の数学的な内容である。</span>第78章で非有界の場合を整えたうえで、この定理の意味を詰める。</p>
+</div>
+
+<div class="star3">
+<h4>★★★ 大学院——散乱理論と局在</h4>
+
+<p><strong>ワイルの定理。</strong><m>A</m> を自己共役、<m>K</m> をコンパクト自己共役とすると <m>\sigma_{\mathrm{ess}}(A+K)=\sigma_{\mathrm{ess}}(A)</m>。<em>本質的スペクトルはコンパクト摂動で動かない。</em>シュレーディンガー作用素 <m>-\Delta+V</m> について、<m>V</m> が無限遠で減衰すれば <m>\sigma_{\mathrm{ess}}=[0,\infty)</m>（自由な運動の連続スペクトル）で、負の部分に離散固有値（束縛状態）が並ぶ。<span class="yogo-hl">水素原子のスペクトルが「離散＋連続」という形になることの、作用素論的な説明である。</span></p>
+
+<p><strong>散乱理論と絶対連続スペクトル。</strong>波作用素 <m>W_\pm=\lim_{t\to\pm\infty}e^{itH}e^{-itH_0}</m> が存在し値域が <m>H_{\mathrm{ac}}(H)</m> に一致するとき、散乱は<em>完全</em>であるという。<m>S=W_+^*W_-</m> が散乱行列で、<em>実験で測れる量はこの作用素の行列成分である</em>。RAGE定理は、<m>H_{\mathrm{ac}}</m> の状態が時間平均の意味でどの有界領域からも逃げ去ることを述べ、「連続スペクトル＝散乱」という物理的な対応に厳密な意味を与える。</p>
+
+<p><strong>アンダーソン局在。</strong>ランダムなポテンシャル <m>V_\omega</m> をもつ離散シュレーディンガー作用素では、一次元では<em>ほとんど確実に</em>スペクトルが純点スペクトルになり、固有関数が指数的に減衰する（局在）。三次元では弱い無秩序で絶対連続スペクトルが残ると予想されているが、<em>これは未解決である</em>。<span class="yogo-hl">絶対連続スペクトルの存在証明は、点スペクトルの証明よりはるかに難しい</span>——測度の絶対連続性は、下からの評価を要求するからである。</p>
+
+<p><strong>ほとんど周期的な場合。</strong>ホフスタッターの蝶として知られる<em>ほとんどマシュー作用素</em> <m>(H_\lambda u)_n=u_{n+1}+u_{n-1}+2\lambda\cos(2\pi(\alpha n+\theta))u_n</m> は、無理数 <m>\alpha</m> について <m>\lambda=1</m> でスペクトルがルベーグ測度零のカントール集合になる（<em>十本のマティーニ問題</em>、アヴィラ–ジトミルスカヤが解決）。<em>特異連続スペクトルが例外でなく典型として現れる</em>例であり、アヴィラのフィールズ賞（2014年）の主題の一部である。</p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li>射影 <m>P</m> のスペクトル測度を書き下せ。</li>
+<li>掛け算作用素 <m>M_\varphi</m> について <m>f(M_\varphi)=M_{f\circ\varphi}</m> を確かめよ。</li>
+<li>作用素値測度の性質（3）から <m>A\cap B=\emptyset</m> なら <m>E(A)E(B)=0</m>、すなわち値域が直交することを示せ。</li>
+<li>コンパクト自己共役作用素のスペクトル測度が原子のみからなることを確かめよ。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li><ref t="thm-spectral-mapping"/>を、因数分解の可換性に注意して書き下せ。<span class="haiten">（30点）</span></li>
+<li><ref t="thm-renzoku-kansu-keisan"/>の等距離性（3）を、多項式の場合について示せ。<span class="haiten">（35点）</span></li>
+<li><m>f\ge0</m> なら <m>f(T)\ge0</m> を示し、これがリースの表現定理を使うために要ることを説明せよ。<span class="haiten">（30点）</span></li>
+<li><ref t="thm-spectral-teiri"/>の一意性を示せ。<span class="haiten">（35点）</span></li>
+<li>巡回ベクトルがある場合の<ref t="thm-kakezan-model"/>を、等距離性の計算から書き下せ。<span class="haiten">（40点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li>可分なヒルベルト空間上の自己共役作用素が、可算個の巡回部分空間に分解されることを示せ。<span class="haiten">（45点）</span></li>
+<li>ストーンの公式を、レゾルベントを積分表示に書き換えることで示せ。<span class="haiten">（50点）</span></li>
+<li>可換な二つの自己共役作用素の同時スペクトル測度を構成せよ。<span class="haiten">（45点）</span></li>
+<li>カントール測度による掛け算作用素のスペクトルが、測度零のカントール集合であることを確かめよ。<span class="haiten">（40点）</span></li>
+</ol>
+</div>
+</div>

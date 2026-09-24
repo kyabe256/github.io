@@ -334,13 +334,15 @@ def main() -> int:
         ms, left = stats["math"], stats["leftovers"]
         print(f"数式      : {ms['total']} 種（新規レンダリング {ms['rendered']}）")
         print(f"定理番号  : {len(THM_REGISTRY)} 件に付与")
-        problems = (ms["errors"] or stats["ref_missing"]
+        problems = (ms["errors"] or ms.get("mjx_errors") or stats["ref_missing"]
                     or left["math"] or left["ref"]
                     or left["math_error"] or left["ref_error"])
         if problems:
             print("\n  ✗ 未解決:")
             for i, e in ms["errors"][:5]:
                 print(f"    数式のエラー {i}: {e}")
+            for tex in ms.get("mjx_errors", [])[:8]:
+                print(f"    数式が黒箱になっている: {tex[:70]}")
             for t in stats["ref_missing"][:5]:
                 print(f"    参照先が無い: {t}")
             if left["math"]:

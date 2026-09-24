@@ -1,0 +1,198 @@
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>なぜ二乗可積分な関数だけが、きれいに扱えるのか。</li>
+<li>パーセヴァルの等式は、何を言っているのか。</li>
+<li><m>L^p</m>（<m>p\ne2</m>）では何が成り立ち、何が崩れるのか。</li>
+</ul>
+</div>
+
+<h3 id="s82-1">二乗可積分という特別な場所</h3>
+
+<p>第81章で見たように、フーリエ部分和は各点では暴れる。<em>ところが二乗平均で測ると、何の条件もなしに収束する。</em>この落差の理由は、<m>L^2</m> が内積空間であり、フーリエ係数が直交射影の係数だという一点にある。</p>
+
+<div class="teiri" id="thm-parseval-fourier">
+<h4>リース–フィッシャーの定理とパーセヴァルの等式</h4>
+<p class="no-indent">（1）<m>f\in L^2(\mathbb{T})</m> について <m>\|S_Nf-f\|_2\to0</m>、かつ</p>
+<M>\|f\|_2^2 = \frac{1}{2\pi}\int_{-\pi}^{\pi}|f|^2\,d\theta = \sum_{n\in\mathbb{Z}}|\hat f(n)|^2</M>
+<p class="no-indent">（2）逆に <m>(c_n)_{n\in\mathbb{Z}}</m> が <m>\sum|c_n|^2 < \infty</m> をみたすなら、<m>\hat f(n)=c_n</m> となる <m>f\in L^2(\mathbb{T})</m> がただ一つ存在する。<br>
+（3）一般に <m>f,g\in L^2(\mathbb{T})</m> について</p>
+<M>\frac{1}{2\pi}\int_{-\pi}^{\pi} f\bar g\,d\theta = \sum_{n\in\mathbb{Z}}\hat f(n)\overline{\hat g(n)}</M>
+<p class="no-indent">すなわち <m>f\mapsto\hat f</m> は <m>L^2(\mathbb{T})</m> から <m>\ell^2(\mathbb{Z})</m> へのユニタリ同型である。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><m>\{e^{in\theta}\}_{n\in\mathbb{Z}}</m> は <m>L^2(\mathbb{T})</m> の正規直交系であり（<ref t="def-fourier-keisu"/>の直前の計算）、フェイェールの定理（<ref t="thm-fejer-shomei"/>）から張る空間が稠密である。<em>したがってこれは正規直交<strong>基底</strong>であり、あとは第65章の一般論を引くだけである</em>：（1）は<ref t="thm-parseval"/>、（2）は<ref t="thm-riesz-fischer"/>、（3）は偏極恒等式から（1）に帰着する。</p>
+<p><span class="yogo-hl">証明の実質は、この一つの正規直交系が基底であること——つまり三角多項式の稠密性——に尽きている。</span><em>収束の議論は抽象論が全部やってくれる。</em></p>
+</div>
+
+<div class="chui">
+<h4>パーセヴァルの等式が言っていること</h4>
+<p class="no-indent">左辺はエネルギー（時間領域での二乗積分）、右辺は各周波数成分の強さの総和である。<em>「エネルギーは周波数ごとに分解でき、総量は保たれる」</em>——これが物理的な読み方である。</p>
+<p>数学的には<strong>等距離性</strong>である。<m>L^2(\mathbb{T})\cong\ell^2(\mathbb{Z})</m> というユニタリ同型は、<span class="yogo-hl">連続的な対象（周期関数）と離散的な対象（数列）を完全に同一視する。</span><em>第65章のヒルベルト空間の分類定理（<ref t="thm-hilbert-bunrui"/>）の、もっとも具体的な実例である。</em></p>
+<p>この同型のもとで、平行移動は各成分の位相回転に、微分は <m>in</m> 倍に、畳み込みは各成分の積に移る。<em>作用素が対角化されている</em>——第77章の言葉では、平行移動作用素のスペクトル分解を与えているのである。</p>
+</div>
+
+<h3 id="s82-2">等式から出てくるもの</h3>
+
+<div class="rei" id="rei-parseval-ouyou">
+<h4>パーセヴァルの等式の使い方</h4>
+<p class="no-indent">（1）<strong>級数の値。</strong><m>f(\theta)=\theta</m>（<m>-\pi < \theta < \pi</m>）のフーリエ係数は <m>\hat f(n)=i(-1)^n/n</m>（<m>n\ne0</m>）。パーセヴァルより</p>
+<M>\frac{1}{2\pi}\int_{-\pi}^{\pi}\theta^2\,d\theta = \frac{\pi^2}{3} = \sum_{n\ne0}\frac{1}{n^2} = 2\sum_{n\ge1}\frac{1}{n^2}</M>
+<p class="no-indent"><em>バーゼル問題 <m>\sum1/n^2=\pi^2/6</m> が、積分の計算だけから出る。</em>同様に <m>\theta^2</m> を使えば <m>\sum1/n^4=\pi^4/90</m> が得られる。</p>
+<p>（2）<strong>ヴィルティンガーの不等式。</strong><m>f</m> が <m>\mathbb{T}</m> 上絶対連続で <m>\int f=0</m> なら</p>
+<M>\|f\|_2 \le \|f'\|_2</M>
+<p class="no-indent">証明はパーセヴァル二回：<m>\|f\|_2^2=\sum_{n\ne0}|\hat f(n)|^2\le\sum_{n\ne0}n^2|\hat f(n)|^2=\|f'\|_2^2</m>。<em>等号は <m>n=\pm1</m> の成分だけのとき、つまり <m>f</m> が単一の正弦波のときである。</em><span class="yogo-hl">これは第76章の最小最大原理の、フーリエによる別証明にあたる</span>——<m>-d^2/d\theta^2</m> の最小固有値が <m>1</m> だと言っている。</p>
+<p>（3）<strong>等周不等式。</strong>長さ <m>L</m> の閉曲線が囲む面積 <m>A</m> について <m>4\pi A\le L^2</m>。<em>曲線を <m>\mathbb{T}</m> 上の複素数値関数として弧長でパラメータ表示し、面積をグリーンの公式でフーリエ係数の双線形式に書き換え、（2）と同じ比較をする。</em>等号は円のときのみ。<span class="yogo-hl">純粋に幾何的な最適性が、係数の比較という代数的な操作に還元される。</span></p>
+<p>（4）<strong>熱方程式の解。</strong><m>u(\theta,t)=\sum\hat f(n)e^{-n^2t}e^{in\theta}</m> は <m>t>0</m> で無限回微分可能で、<m>\|u(\cdot,t)\|_2\le\|f\|_2</m>。<em>高周波成分が指数的に潰されるので、初期値がどれほど荒くても解は瞬時になめらかになる。</em>フーリエの出発点（第80章）に、これで答えが出た。</p>
+</div>
+
+<div class="teiri" id="thm-hausdorff-young">
+<h4>ハウスドルフ–ヤングの不等式</h4>
+<p class="no-indent"><m>1\le p\le2</m>、<m>1/p+1/q=1</m> とすると、<m>f\in L^p(\mathbb{T})</m> について</p>
+<M>\|\hat f\|_{\ell^q} \le \|f\|_{L^p}</M>
+<p class="no-indent">逆向きに <m>2\le p < \infty</m> のときは <m>\|f\|_{L^p}\le\|\hat f\|_{\ell^q}</m>（<m>q\le2</m>）。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><m>p=1</m> のとき <m>q=\infty</m> で <m>\|\hat f\|_\infty\le\|f\|_1</m>（<ref t="prop-fourier-kihon"/>（1））。<m>p=2</m> のとき <m>q=2</m> でパーセヴァルの等号。<em>あいだは補間で埋める。</em></p>
+<p class="no-indent"><strong>リース–ソリンの補間定理。</strong><m>T</m> が <m>L^{p_0}\to L^{q_0}</m> でノルム <m>M_0</m>、<m>L^{p_1}\to L^{q_1}</m> でノルム <m>M_1</m> の有界作用素なら、<m>1/p_\theta=(1-\theta)/p_0+\theta/p_1</m>、<m>1/q_\theta</m> も同様として</p>
+<M>\|T\|_{L^{p_\theta}\to L^{q_\theta}} \le M_0^{1-\theta}M_1^{\theta}</M>
+<p class="no-indent">証明は<em>複素解析</em>を使う：両端で評価がある正則関数に最大値原理（第90章）を適用する（<strong>三線定理</strong>）。<span class="yogo-hl">「二点で評価があれば、あいだでも評価がある」という主張が、正則関数の剛性から出る。</span></p>
+</div>
+
+<div class="hanrei" id="cex-lp-fourier">
+<h4><m>p\ne2</m> では何が崩れるか</h4>
+<p class="no-indent">（1）<strong>係数の特徴づけが失われる。</strong><m>L^2</m> では「<m>\sum|c_n|^2 < \infty</m>」がフーリエ係数であることの<em>必要十分条件</em>だった。<m>L^1</m> では、リーマン–ルベーグの条件 <m>c_n\to0</m> は必要だが十分でない。<em>「どんな数列がフーリエ係数か」という問いに、<m>p\ne2</m> では答えがない。</em></p>
+<p class="no-indent">（2）<strong>ハウスドルフ–ヤングは等式でない。</strong><m>p < 2</m> のとき不等式は真に厳しく、逆向きの不等式は成り立たない。<em>等距離性は <m>p=2</m> の特権である。</em></p>
+<p class="no-indent">（3）<strong><m>L^1</m> では部分和が収束しない。</strong><m>f\in L^1(\mathbb{T})</m> で <m>\|S_Nf-f\|_1\to0</m> が破れる例がある。<span class="yogo-hl">理由はルベーグ定数の発散（<ref t="prop-kaku-hikaku"/>）である</span>——一様有界でない作用素族が、稠密でない部分で破綻する。<m>L^\infty</m> でも同様。</p>
+<p class="no-indent">（4）<strong><m>1 < p < \infty</m> なら部分和は収束する。</strong>これはリースの定理で、共役関数（ヒルベルト変換）の <m>L^p</m> 有界性から出る（第81章★★）。<em>したがって <m>L^p</m> ノルムでの収束は <m>p=1,\infty</m> だけが例外である。</em></p>
+<p class="no-indent">（5）<strong>三角関数系は <m>L^p</m>（<m>p\ne2</m>）の「基底」ではない。</strong>シャウダー基底としては <m>1 < p < \infty</m> で正しいが、<em>無条件基底ではない</em>：項の順序を変えると収束が壊れる。<span class="yogo-hl">直交性を失うと、絶対収束と条件収束の区別が復活する。</span></p>
+</div>
+
+<div class="rei" id="rei-l2-doukei">
+<h4>同型としての読み方——三つの空間</h4>
+<p class="no-indent">パーセヴァルの等式は、次の三つを同一視する。</p>
+<p class="no-indent">（1）<m>L^2(\mathbb{T})</m>——周期関数。<br>
+（2）<m>\ell^2(\mathbb{Z})</m>——二乗総和可能な両側数列。<br>
+（3）<m>H^2(\mathbb{D})</m>（<strong>ハーディ空間</strong>）——単位円板上の正則関数 <m>F(z)=\sum_{n\ge0}c_nz^n</m> で <m>\sum|c_n|^2 < \infty</m> なるもの。これは（2）の片側部分 <m>\ell^2(\mathbb{N})</m> に対応する。</p>
+<p>（3）への対応が、<em>作用素論と複素解析を結ぶ</em>。<m>H^2</m> 上の掛け算作用素 <m>M_z</m>（<m>F\mapsto zF</m>）は、係数の側では片側シフトである（<ref t="cex-seiki-denai"/>）。<span class="yogo-hl">片側シフトの不変部分空間を分類する問題は、ベーリングの定理として「内部関数による表現」という完全な答えをもつ</span>——第75章★★★で触れた不変部分空間問題が、この特別な作用素については解けているのである。</p>
+<p><em>ハーディ空間の境界値の理論は、第94章の調和関数の境界値の理論と同じものである。</em>フーリエ級数・作用素論・複素解析の三つが、この一つの同型のところで出会っている。</p>
+</div>
+
+<figure>
+<svg viewBox="0 0 470 280" width="470" height="280" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">二乗可積分だけが等距離になる</text>
+
+  <rect x="14" y="26" width="442" height="106" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+
+  <rect x="36" y="52" width="106" height="52" rx="4" fill="#dce7f0" stroke="#35618f" stroke-width="1.2"/>
+  <text x="89" y="72" font-size="7" text-anchor="middle" font-weight="700" fill="#1f3b5c">周期関数の空間</text>
+  <text x="89" y="86" font-size="6.4" text-anchor="middle" fill="#1f3b5c">二乗可積分な f</text>
+  <text x="89" y="98" font-size="5.8" text-anchor="middle" fill="#6a6a68">連続的な対象</text>
+
+  <rect x="182" y="52" width="106" height="52" rx="4" fill="#e6efe9" stroke="#2f6b5f" stroke-width="1.2"/>
+  <text x="235" y="72" font-size="7" text-anchor="middle" font-weight="700" fill="#1e4a41">両側数列の空間</text>
+  <text x="235" y="86" font-size="6.4" text-anchor="middle" fill="#1e4a41">二乗総和可能な係数</text>
+  <text x="235" y="98" font-size="5.8" text-anchor="middle" fill="#6a6a68">離散的な対象</text>
+
+  <rect x="328" y="52" width="106" height="52" rx="4" fill="#f4f1ea" stroke="#8a6b2c" stroke-width="1.2"/>
+  <text x="381" y="72" font-size="7" text-anchor="middle" font-weight="700" fill="#5a4520">ハーディ空間</text>
+  <text x="381" y="86" font-size="6.4" text-anchor="middle" fill="#5a4520">円板上の正則関数</text>
+  <text x="381" y="98" font-size="5.8" text-anchor="middle" fill="#6a6a68">片側の係数だけ</text>
+
+  <line x1="142" y1="70" x2="180" y2="70" stroke="#2f6b5f" stroke-width="1.3" marker-end="url(#p82)"/>
+  <line x1="180" y1="86" x2="142" y2="86" stroke="#2f6b5f" stroke-width="1.3" marker-end="url(#p82)"/>
+  <text x="161" y="48" font-size="5.6" text-anchor="middle" fill="#2f6b5f">等距離</text>
+  <line x1="288" y1="78" x2="326" y2="78" stroke="#8a6b2c" stroke-width="1.3" marker-end="url(#p82b)"/>
+  <text x="307" y="48" font-size="5.6" text-anchor="middle" fill="#8a6b2c">片側に絞る</text>
+  <text x="235" y="122" font-size="6.4" text-anchor="middle" fill="#8c2f1e">この同型のもとで、平行移動・微分・畳み込みがすべて対角化される</text>
+
+  <defs>
+    <marker id="p82" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 z" fill="#2f6b5f"/></marker>
+    <marker id="p82b" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 z" fill="#8a6b2c"/></marker>
+  </defs>
+
+  <rect x="14" y="142" width="442" height="62" rx="4" fill="#faf8f4" stroke="#c3b89e"/>
+  <text x="24" y="157" font-size="7.6" font-weight="700" fill="#5a4520">指数 p ごとに、何が成り立つか</text>
+  <text x="24" y="174" font-size="6.6" fill="#8c2f1e">p ＝ 1　　　係数は零に収束するだけ　　部分和はノルムで収束しない</text>
+  <text x="24" y="187" font-size="6.6" fill="#1e4a41">1 ＜ p ＜ ∞　部分和はノルムで収束する　　ヒルベルト変換の有界性から</text>
+  <text x="24" y="200" font-size="6.6" fill="#1f3b5c">p ＝ 2　　　係数の完全な特徴づけ　　　等距離・直交・無条件収束</text>
+
+  <rect x="14" y="214" width="216" height="62" rx="4" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="24" y="229" font-size="7.4" font-weight="700" fill="#1e4a41">等式から出てくるもの</text>
+  <text x="24" y="245" font-size="6.4" fill="#1e4a41">バーゼル問題　ヴィルティンガーの不等式</text>
+  <text x="24" y="257" font-size="6.4" fill="#1e4a41">等周不等式　　熱方程式の解の滑らかさ</text>
+  <text x="24" y="271" font-size="6.4" fill="#8c2f1e">幾何の最適性が、係数の比較に還元される</text>
+
+  <rect x="240" y="214" width="216" height="62" rx="4" fill="#f4f1ea" stroke="#8a6b2c"/>
+  <text x="250" y="229" font-size="7.4" font-weight="700" fill="#5a4520">なぜ二乗なのか</text>
+  <text x="250" y="245" font-size="6.4" fill="#5a4520">内積があるから、係数が射影で読める</text>
+  <text x="250" y="257" font-size="6.4" fill="#5a4520">直交するから、和の順序が効かない</text>
+  <text x="250" y="271" font-size="6.4" fill="#6b2a48">この二点が、他の指数では手に入らない</text>
+</svg>
+<figcaption>二乗可積分な関数の空間は、係数の空間と等距離に同型である。この同型のもとで平行移動・微分・畳み込みが対角化され、幾何的な最適性の問題が係数の比較に還元される。</figcaption>
+</figure>
+
+<div class="star2">
+<h4>★★ 学部後半——補間、ラクナリ級数、絶対収束の境目</h4>
+
+<p><strong>マルチンキェヴィチの補間。</strong>リース–ソリンは強有界性の補間だが、実際に使いたいのは<em>弱型</em>の評価である。<m>T</m> が <m>L^{p_0}</m> から弱 <m>L^{p_0}</m> へ、<m>L^{p_1}</m> から弱 <m>L^{p_1}</m> へ有界なら、あいだの <m>p</m> で強有界。<span class="yogo-hl">ハーディ–リトルウッドの最大作用素は <m>L^1</m> から弱 <m>L^1</m> へしか有界でないので、この形の補間が必須になる。</span><em>証明は実解析的で、複素解析を使わない。</em></p>
+
+<p><strong>ラクナリ級数。</strong>指数が急速に増える <m>n_1 < n_2 < \cdots</m>（<m>n_{k+1}/n_k\ge\lambda>1</m>）に沿った級数 <m>\sum c_ke^{in_k\theta}</m> は、独立な確率変数の和のように振る舞う。<em>シドンの定理：このような級数について、<m>L^p</m> ノルムはすべての <m>p < \infty</m> で同値で、<m>\ell^2</m> ノルムに比例する。</em></p>
+
+<p>これから<strong>ヴァイエルシュトラス型の反例</strong>が作れる。<m>\sum 2^{-k\alpha}e^{i2^k\theta}</m> はヘルダー指数 <m>\alpha</m> で連続だが、<m>\alpha\le1/2</m> では絶対収束しない。<em>したがって第80章★★のベルンシュタインの定理の境目 <m>\alpha=1/2</m> は最適である。</em><span class="yogo-hl">ラクナリ級数は、フーリエ解析の「最悪の場合」を作る標準的な道具である。</span></p>
+
+<p><strong>ランダムな符号。</strong><m>\sum\pm c_ne^{in\theta}</m> の符号を独立に選ぶと、<em>ほとんど確実に</em>次が成り立つ：<m>\sum|c_n|^2 < \infty</m> なら級数は <m>L^p</m>（すべての <m>p < \infty</m>）に属し、<m>\sum|c_n|^2\log(1/|c_n|)</m> 型の条件で連続になる（サレム–ジグムント）。<em>「典型的な」フーリエ級数の挙動は、決定的な場合よりずっと良い。</em>カーンの本はこの主題の古典である。</p>
+
+<p><strong>仮定を外すと。</strong>周期性・直交性・二乗可積分性のうち、二乗可積分性を外すと等距離が消え（ハウスドルフ–ヤングの不等式だけが残る）、直交性を外すと係数の一意性と無条件収束が消え、周期性を外すと <m>\mathbb{Z}</m> が <m>\mathbb{R}</m> に置き換わる（第85章）。<em>三つのうち二つを保てば、理論の骨格はほぼ残る。</em></p>
+</div>
+
+<div class="star3">
+<h4>★★★ 大学院——一様分布からフェファーマンの反例まで</h4>
+
+<p><strong>ソボレフ埋め込みの原型。</strong><m>\|f\|_\infty\le C\|f\|_{H^s}</m>（<m>s>1/2</m>）は、パーセヴァルとコーシー–シュワルツだけで出る：</p>
+<M>|f(\theta)| \le \sum|\hat f(n)| \le \Big(\sum(1+n^2)^{-s}\Big)^{1/2}\Big(\sum(1+n^2)^{s}|\hat f(n)|^2\Big)^{1/2}</M>
+<p><em>第一の和が収束するのが <m>s>1/2</m> のとき。</em><span class="yogo-hl">ソボレフ埋め込みの臨界指数が、単に級数 <m>\sum n^{-2s}</m> の収束条件だったことが分かる。</span>第88章で <m>\mathbb{R}^n</m> 上の一般形を扱うが、仕組みはこれと同じである。</p>
+
+<p><strong>球面上の調和解析。</strong><m>S^{n-1}</m> 上では指数関数のかわりに球面調和関数が正規直交基底をなす。<em>パーセヴァルはそのまま成り立つが、部分和（低次の球面調和関数への射影）の各点収束は <m>n\ge3</m> で著しく難しくなる。</em>ボヘナー–リース乗子の有界性の範囲を決める問題は、多次元フーリエ解析の中心的な未解決問題の一つである。</p>
+
+<p><strong>フェファーマンの球乗子の反例。</strong><m>\mathbb{R}^n</m>（<m>n\ge2</m>）で、フーリエ変換を単位球の外で切り落とす作用素は <m>L^p</m>（<m>p\ne2</m>）で有界でない（1971年）。<em>証明はカクヤ型の集合を使う：細長い長方形を巧妙に重ねると、面積がほとんど増えないまま方向が全部揃う。</em><span class="yogo-hl">「境界が曲がっていると切り落とせない」——曲率の存在が、<m>p=2</m> 以外での破綻を生む。</span>一次元では区間の特性関数による切り落としが有界（ヒルベルト変換の有界性）なので、これは純粋に多次元の現象である。</p>
+
+<p><strong>離散版と加法的組合せ論。</strong>有限アーベル群 <m>\mathbb{Z}/N</m> 上のフーリエ解析では、パーセヴァルが有限和の等式になる。<em>ロスの定理（正の密度をもつ整数集合は長さ <m>3</m> の等差数列を含む）の証明は、この等式と「大きなフーリエ係数がなければランダムに振る舞う」という原理だけからなる。</em>長さ <m>4</m> 以上ではフーリエ解析が足りず、ゴワーズの高次一様性が必要になる——<span class="yogo-hl">「フーリエ係数が小さい」が「構造がない」を意味しなくなる境目が、ちょうどここにある。</span></p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li><m>f(\theta)=\theta</m> のフーリエ係数を計算せよ。</li>
+<li>パーセヴァルの等式からバーゼル問題の値を導け。</li>
+<li><m>\sum1/n^4=\pi^4/90</m> を、適当な関数にパーセヴァルを使って導け。</li>
+<li>熱方程式の解が <m>t>0</m> で無限回微分可能であることを、係数の減衰から確かめよ。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li><ref t="thm-parseval-fourier"/>（3）を偏極恒等式から示せ。<span class="haiten">（25点）</span></li>
+<li>ヴィルティンガーの不等式を示し、等号の場合を決定せよ。<span class="haiten">（35点）</span></li>
+<li><m>p=1</m> と <m>p=2</m> の場合からハウスドルフ–ヤングの不等式が補間で出ることを説明せよ。<span class="haiten">（30点）</span></li>
+<li>ソボレフ埋め込み <m>\|f\|_\infty\le C\|f\|_{H^s}</m>（<m>s>1/2</m>）を示せ。<span class="haiten">（35点）</span></li>
+<li><m>L^1(\mathbb{T})</m> で部分和がノルム収束しないことを、ルベーグ定数から示せ。<span class="haiten">（40点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li>等周不等式をフーリエ係数の比較で示せ。<span class="haiten">（50点）</span></li>
+<li>リース–ソリンの補間定理を、三線定理から示せ。<span class="haiten">（50点）</span></li>
+<li>ラクナリ級数について、ヘルダー連続だが絶対収束しない例を構成せよ。<span class="haiten">（50点）</span></li>
+<li>ハーディ空間上の掛け算作用素が片側シフトとユニタリ同値であることを示せ。<span class="haiten">（40点）</span></li>
+</ol>
+</div>
+</div>

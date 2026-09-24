@@ -1,0 +1,249 @@
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>なぜ閉曲線に沿った積分が零になるのか。</li>
+<li>境界の値だけで、内部の値が決まるのはなぜか。</li>
+<li>「有界な正則関数は定数」という主張は、どこから来るのか。</li>
+</ul>
+</div>
+
+<h3 id="s90-1">閉曲線に沿って積分する</h3>
+
+<div class="teigi" id="def-senseki-bun">
+<h4>複素線積分</h4>
+<p class="no-indent"><m>\gamma:[a,b]\to\mathbb{C}</m> を区分的に滑らかな道、<m>f</m> を <m>\gamma</m> の像を含む集合上の連続関数とする。</p>
+<M>\int_\gamma f(z)\,dz = \int_a^b f(\gamma(t))\,\gamma'(t)\,dt</M>
+<p class="no-indent">を<strong>複素線積分</strong>という。<em>径数の取り替えで値は変わらず、向きを逆にすると符号が変わる。</em>基本的な評価は</p>
+<M>\Big|\int_\gamma f\,dz\Big| \ \le\ \big(\sup_\gamma|f|\big)\cdot \mathrm{length}(\gamma)</M>
+<p class="no-indent">（<strong>標準評価</strong>）。また <m>\gamma</m> が <m>z_0</m> を中心とする半径 <m>r</m> の円周（正の向き）のとき</p>
+<M>\oint_{|z-z_0|=r}(z-z_0)^n\,dz = \begin{cases} 2\pi i & n=-1 \\ 0 & n\ne-1\ (n\in\mathbb{Z})\end{cases}</M>
+</div>
+
+<div class="chui">
+<h4>この一つの計算が全部を生む</h4>
+<p class="no-indent"><m>z=z_0+re^{i\theta}</m> と置けば <m>dz=ire^{i\theta}d\theta</m> で</p>
+<M>\oint (z-z_0)^n dz = \int_0^{2\pi} r^ne^{in\theta}\,ire^{i\theta}\,d\theta = ir^{n+1}\int_0^{2\pi}e^{i(n+1)\theta}\,d\theta</M>
+<p class="no-indent"><em><m>n\ne-1</m> なら指数関数の一周期にわたる積分で零、<m>n=-1</m> なら被積分関数が <m>1</m> で <m>2\pi i</m>。</em></p>
+<p><span class="yogo-hl">第80章でフーリエ級数の直交性として書いたのと、まったく同じ計算である。</span><em>複素解析の留数計算とフーリエ解析の係数抽出は、この一行を共有している。</em>指数 <m>-1</m> だけが生き残るという事実が、留数（第92章）の定義の理由である。</p>
+</div>
+
+<div class="teiri" id="thm-goursat">
+<h4>コーシー–グルサの定理（三角形）</h4>
+<p class="no-indent"><m>f</m> が開集合 <m>\Omega</m> 上で正則、<m>T\subset\Omega</m> を閉三角形（内部を含む）とすると</p>
+<M>\oint_{\partial T} f(z)\,dz = 0</M>
+<p class="no-indent"><em>仮定は「複素微分可能」だけで、導関数の連続性を要求しない。</em></p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><strong>四分割を繰り返す。</strong><m>I=\oint_{\partial T}f\,dz</m> と置く。<m>T</m> の各辺の中点を結んで四つの合同な三角形に分ける。<em>内部の辺は二回ずつ逆向きに通るので打ち消し合い</em>、四つの周に沿った積分の和が <m>I</m> に等しい。したがってどれか一つ <m>T^{(1)}</m> について</p>
+<M>\Big|\oint_{\partial T^{(1)}}f\Big| \ \ge\ \frac{|I|}{4}</M>
+<p class="no-indent">これを繰り返して入れ子の三角形列 <m>T\supset T^{(1)}\supset T^{(2)}\supset\cdots</m> を得る。<m>\mathrm{diam}(T^{(n)})=2^{-n}d</m>、<m>\mathrm{length}(\partial T^{(n)})=2^{-n}L</m> で</p>
+<M>\Big|\oint_{\partial T^{(n)}}f\Big| \ \ge\ \frac{|I|}{4^n}</M>
+<p class="no-indent"><strong>一点に収束させる。</strong>完備距離空間における入れ子の閉集合の共通部分定理（第29章）により <m>\bigcap_nT^{(n)}=\{z_*\}</m>。<em>ここで正則性を使う</em>：</p>
+<M>f(z) = f(z_*) + f'(z_*)(z-z_*) + \varepsilon(z)(z-z_*), \qquad \varepsilon(z)\to0 \ (z\to z_*)</M>
+<p class="no-indent">右辺の最初の二項は多項式で、<em>原始関数をもつから閉曲線に沿った積分は零</em>（<m>\oint P'(z)dz=0</m>）。残りを標準評価すると</p>
+<M>\Big|\oint_{\partial T^{(n)}}f\Big| = \Big|\oint_{\partial T^{(n)}}\varepsilon(z)(z-z_*)dz\Big| \le \sup|\varepsilon|\cdot 2^{-n}d\cdot 2^{-n}L = \frac{\sup|\varepsilon|\,dL}{4^n}</M>
+<p class="no-indent">よって <m>|I|\le\sup_{T^{(n)}}|\varepsilon|\cdot dL\to0</m>、すなわち <m>I=0</m>。</p>
+<p><span class="yogo-hl">証明の仕掛けは、<m>4^n</m> で割った量が <m>4^n</m> で割った評価に押さえられる、という完全な釣り合いである。</span><em>この釣り合いを作るために、辺の長さと直径が同じ率で縮む四分割を選んでいる。</em></p>
+</div>
+
+<div class="teiri" id="thm-cauchy-sekibun">
+<h4>コーシーの積分定理</h4>
+<p class="no-indent">（1）<strong>凸領域（星形領域）で。</strong><m>\Omega</m> が凸（または星形）で <m>f</m> が <m>\Omega</m> 上正則なら、<m>f</m> は <m>\Omega</m> 上に原始関数 <m>F</m>（<m>F'=f</m>）をもち、<m>\Omega</m> 内の任意の閉曲線 <m>\gamma</m> について</p>
+<M>\oint_\gamma f(z)\,dz = 0</M>
+<p class="no-indent">（2）<strong>ホモトピー版。</strong><m>\gamma_0,\gamma_1</m> が <m>\Omega</m> 内でホモトープな閉曲線なら <m>\oint_{\gamma_0}f=\oint_{\gamma_1}f</m>。とくに <m>\Omega</m> が単連結なら、任意の閉曲線に沿って積分が零。<br>
+（3）<strong>ホモロジー版。</strong><m>\gamma</m> が <m>\Omega</m> のなかで零ホモローグ（<m>\Omega</m> の外のすべての点 <m>a</m> について回転数 <m>n(\gamma,a)=0</m>）なら <m>\oint_\gamma f=0</m>。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">（1）<m>\Omega</m> を星形、中心を <m>z_0</m> とし <m>F(z)=\int_{[z_0,z]}f(w)dw</m>（線分に沿った積分）と定める。<m>z,z+h\in\Omega</m> について、三角形 <m>z_0,z,z+h</m> は <m>\Omega</m> に含まれ、<ref t="thm-goursat"/>より</p>
+<M>F(z+h)-F(z) = \int_{[z,z+h]}f(w)\,dw</M>
+<p class="no-indent"><em><m>f</m> の連続性から <m>\frac{1}{h}\int_{[z,z+h]}f(w)dw\to f(z)</m>、よって <m>F'=f</m>。</em>原始関数があれば <m>\oint_\gamma f=F(\gamma(b))-F(\gamma(a))=0</m>。</p>
+<p class="no-indent">（2）ホモトピー <m>H:[0,1]^2\to\Omega</m> を細かい格子に分け、各小方形の像が <m>\Omega</m> 内の小さな円板に入るようにする。<em>各円板は凸だから（1）が使え、辺の打ち消しで全体が出る。</em>コンパクト性——<m>[0,1]^2</m> の開被覆がルベーグ数をもつこと（第20章）——が、格子の細かさを保証する。</p>
+<p><span class="yogo-hl">積分の値が曲線の連続変形で変わらない——これが位相と解析が出会う地点である。</span><em>「単連結なら積分が零」という主張の本質は、第28章の連結性と第89章の局所理論の組み合わせにすぎない。</em></p>
+</div>
+
+<h3 id="s90-2">境界が内部を決める</h3>
+
+<div class="teiri" id="thm-cauchy-koshiki">
+<h4>コーシーの積分公式</h4>
+<p class="no-indent"><m>f</m> が <m>\overline{D(z_0,R)}</m> を含む開集合で正則、<m>0 &lt; r &lt; R</m> とする。<m>|z-z_0| &lt; r</m> なるすべての <m>z</m> について</p>
+<M>f(z) = \frac{1}{2\pi i}\oint_{|w-z_0|=r}\frac{f(w)}{w-z}\,dw</M>
+<p class="no-indent">さらに <m>f</m> は無限回複素微分可能で</p>
+<M>f^{(n)}(z) = \frac{n!}{2\pi i}\oint_{|w-z_0|=r}\frac{f(w)}{(w-z)^{n+1}}\,dw</M>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><m>g(w)=\dfrac{f(w)-f(z)}{w-z}</m>（<m>w\ne z</m>）、<m>g(z)=f'(z)</m> と置くと <m>g</m> は円板上連続で、<m>z</m> を除いて正則。<em>この状況でもコーシーの定理が成り立つ</em>（一点を除いた連続性で十分——三角形を <m>z</m> のまわりで細かく切り、標準評価で寄与が消える）。よって <m>\oint g=0</m>、すなわち</p>
+<M>\oint\frac{f(w)}{w-z}\,dw = f(z)\oint\frac{dw}{w-z} = f(z)\cdot 2\pi i</M>
+<p class="no-indent">最後の等式は、<m>\oint\frac{dw}{w-z}</m> が回転数 <m>\times\,2\pi i</m> であり、<m>z</m> が円の内部なので回転数 <m>1</m>（<ref t="def-senseki-bun"/>の計算の <m>n=-1</m> の場合を、中心を <m>z</m> にずらして使う）。</p>
+<p class="no-indent"><strong>微分可能性。</strong>右辺で <m>z</m> を動かす。<m>\frac{1}{w-z}=\sum_{n\ge0}\frac{(z-z_0)^n}{(w-z_0)^{n+1}}</m>（<m>|z-z_0| &lt; r=|w-z_0|</m> で一様収束する幾何級数）を代入し、項別積分すると</p>
+<M>f(z) = \sum_{n\ge0}c_n(z-z_0)^n, \qquad c_n = \frac{1}{2\pi i}\oint\frac{f(w)}{(w-z_0)^{n+1}}\,dw</M>
+<p class="no-indent"><em>冪級数は収束円内で何回でも項別微分できる（第49章）ので、<m>f</m> は無限回微分可能で <m>c_n=f^{(n)}(z_0)/n!</m>。</em></p>
+<p><span class="yogo-hl">一回微分できるという仮定だけから、冪級数展開が出た。</span>第89章で予告した剛性が、ここで証明された。</p>
+</div>
+
+<div class="teiri" id="thm-kekka-gun">
+<h4>積分公式から直ちに出るもの</h4>
+<p class="no-indent">（1）<strong>モレラの定理。</strong><m>f</m> が <m>\Omega</m> 上連続で、すべての三角形について <m>\oint_{\partial T}f=0</m> なら <m>f</m> は正則。<em>コーシーの定理の逆である。</em><br>
+（2）<strong>コーシーの評価。</strong><m>|f|\le M</m>（<m>|w-z_0|=r</m> 上）なら</p>
+<M>|f^{(n)}(z_0)| \le \frac{n!\,M}{r^n}</M>
+<p class="no-indent">（3）<strong>リウヴィルの定理。</strong>全平面で正則かつ有界な関数は定数。<br>
+（4）<strong>代数学の基本定理。</strong>定数でない複素係数多項式は零点をもつ。<br>
+（5）<strong>平均値の性質。</strong><m>f(z_0)=\frac{1}{2\pi}\int_0^{2\pi}f(z_0+re^{i\theta})\,d\theta</m>。<br>
+（6）<strong>最大値原理。</strong>領域 <m>\Omega</m> 上の正則関数 <m>f</m> について、<m>|f|</m> が内点で最大値をとれば <m>f</m> は定数。<br>
+（7）<strong>ワイエルシュトラスの収束定理。</strong>正則関数列が広義一様収束すれば、極限も正則で、導関数も広義一様収束する。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">（2）標準評価：<m>|f^{(n)}(z_0)|\le\frac{n!}{2\pi}\cdot\frac{M}{r^{n+1}}\cdot2\pi r</m>。</p>
+<p class="no-indent">（3）<m>n=1</m> として <m>|f'(z_0)|\le M/r</m>。<em><m>r\to\infty</m> とすれば <m>f'(z_0)=0</m>、これがすべての <m>z_0</m> で成り立つので <m>f</m> は定数。</em></p>
+<p class="no-indent">（4）<m>P</m> が零点をもたないなら <m>1/P</m> は全平面で正則。<m>|z|\to\infty</m> で <m>|P(z)|\to\infty</m> だから <m>1/P</m> は有界。<em>リウヴィルより定数で、<m>P</m> も定数。</em><span class="yogo-hl">代数の定理が、解析の評価一本から出る。</span></p>
+<p class="no-indent">（6）<m>|f(z_0)|</m> が最大とする。（5）より <m>|f(z_0)|\le\frac{1}{2\pi}\int|f(z_0+re^{i\theta})|d\theta\le|f(z_0)|</m>。<em>等号が成り立つので、円周上でほとんどいたるところ <m>|f|=|f(z_0)|</m>、連続性から至るところ等しい。</em>これが小さいすべての <m>r</m> で成り立つので <m>|f|</m> は近傍で定数、したがって <m>f</m> は定数（コーシー–リーマンから）。領域の連結性と一致の定理（第91章）で <m>\Omega</m> 全体に広がる。</p>
+<p class="no-indent">（7）モレラの定理による：一様収束なら積分と極限が交換でき、<m>\oint_{\partial T}f_n=0</m> から <m>\oint_{\partial T}f=0</m>。<em>導関数の収束は積分公式から出る。</em><span class="yogo-hl">実関数では成り立たない——<m>C^\infty</m> 関数の一様収束極限は連続でしかない。</span></p>
+</div>
+
+<div class="rei" id="rei-cauchy-ouyou">
+<h4>最大値原理が答えること</h4>
+<p class="no-indent">（1）<strong>シュヴァルツの補題。</strong><m>f:D\to D</m>（単位円板）が正則で <m>f(0)=0</m> なら <m>|f(z)|\le|z|</m> かつ <m>|f'(0)|\le1</m>。<em>等号のどちらかが成り立てば <m>f(z)=cz</m>（<m>|c|=1</m>）。</em>証明は <m>g(z)=f(z)/z</m>（<m>g(0)=f'(0)</m>）に最大値原理を使うだけ。<span class="yogo-hl">これが第93章のリーマンの写像定理と、双曲幾何（ポアンカレ計量）の基礎になる。</span></p>
+<p>（2）<strong>三線定理。</strong>帯状領域 <m>0\le\mathrm{Re}\,z\le1</m> 上で正則・有界な <m>F</m> について、<m>M(t)=\sup_y|F(t+iy)|</m> は <m>\log M</m> が凸。<em>これが第82章のリース–ソリンの補間定理の実質である。</em>証明は <m>F(z)M_0^{z-1}M_1^{-z}</m> に最大値原理を適用する（帯が非有界なのでフラグメン–リンデレーフ型の工夫が要る）。</p>
+<p>（3）<strong>開写像定理。</strong>定数でない正則関数は開写像である。<em>したがって像が実軸に含まれることはない</em>——実数値の正則関数は定数。<span class="yogo-hl">第69章の開写像定理（バナッハ空間の全射有界作用素）とは別の定理だが、「単射性・全射性の情報が像の位相を決める」という主題は共通している。</span></p>
+<p>（4）<strong>調和関数の最大値原理。</strong>正則関数の実部として、調和関数も内点で最大値をとらない。<em>これが第94章のディリクレ問題の一意性を与える。</em></p>
+</div>
+
+<div class="hanrei" id="cex-cauchy">
+<h4>仮定を外すと</h4>
+<p class="no-indent">（1）<strong>単連結性。</strong><m>\Omega=\mathbb{C}\setminus\{0\}</m>、<m>f=1/z</m>。<m>f</m> は <m>\Omega</m> 上正則だが <m>\oint_{|z|=1}f=2\pi i\ne0</m>。<em>穴があると積分が零にならない。</em><span class="yogo-hl">この <m>2\pi i</m> こそが、第92章の留数である。</span></p>
+<p class="no-indent">（2）<strong>閉包まで正則でないと。</strong><m>f</m> が開円板で正則でも、境界まで連続とは限らない。<em>積分公式は <m>r &lt; R</m> でしか書けない。</em></p>
+<p class="no-indent">（3）<strong>リウヴィルは実では成り立たない。</strong><m>\sin x</m> は <m>\mathbb{R}</m> 全体で無限回微分可能かつ有界だが定数でない。<em>複素に伸ばすと <m>\sin(iy)=i\sinh y</m> が発散する</em>——有界性が壊れている。</p>
+<p class="no-indent">（4）<strong>実バナッハ空間では。</strong>第74章で見たように、実の設定ではスペクトルが空になりうる。<em>本章の議論はすべて複素数の代数的閉性と、<m>\oint z^{-1}dz=2\pi i</m> という一点に依存している。</em></p>
+</div>
+
+<figure>
+<svg viewBox="0 0 470 292" width="470" height="292" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">三角形を四つに割る——グルサの証明の釣り合い</text>
+
+  <rect x="14" y="26" width="442" height="120" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+
+  <polygon points="50,130 122,130 86,62" fill="#f0f4f8" stroke="#35618f" stroke-width="1.4"/>
+  <text x="86" y="142" font-size="6" text-anchor="middle" fill="#6a6a68">もとの三角形</text>
+
+  <polygon points="146,130 218,130 182,62" fill="#f0f4f8" stroke="#35618f" stroke-width="1"/>
+  <line x1="164" y1="96" x2="200" y2="96" stroke="#35618f" stroke-width="0.9"/>
+  <line x1="164" y1="96" x2="182" y2="130" stroke="#35618f" stroke-width="0.9"/>
+  <line x1="200" y1="96" x2="182" y2="130" stroke="#35618f" stroke-width="0.9"/>
+  <polygon points="164,96 200,96 182,130" fill="#dce7f0" stroke="none"/>
+  <text x="182" y="142" font-size="6" text-anchor="middle" fill="#6a6a68">四つに割る</text>
+
+  <polygon points="242,130 314,130 278,62" fill="#f0f4f8" stroke="#35618f" stroke-width="0.8"/>
+  <line x1="260" y1="96" x2="296" y2="96" stroke="#35618f" stroke-width="0.6"/>
+  <line x1="260" y1="96" x2="278" y2="130" stroke="#35618f" stroke-width="0.6"/>
+  <line x1="296" y1="96" x2="278" y2="130" stroke="#35618f" stroke-width="0.6"/>
+  <polygon points="269,113 287,113 278,130" fill="#a03b2e" stroke="none"/>
+  <line x1="269" y1="113" x2="287" y2="113" stroke="#35618f" stroke-width="0.5"/>
+  <text x="278" y="142" font-size="6" text-anchor="middle" fill="#6a6a68">最大のものを選び続ける</text>
+
+  <rect x="330" y="56" width="112" height="80" rx="3" fill="#f4f1ea" stroke="#8a6b2c"/>
+  <text x="386" y="72" font-size="6.6" text-anchor="middle" font-weight="700" fill="#5a4520">完全な釣り合い</text>
+  <text x="340" y="88" font-size="6.2" fill="#5a4520">積分は 4 の n 乗で割られる</text>
+  <text x="340" y="100" font-size="6.2" fill="#5a4520">周の長さは 2 の n 乗で割られる</text>
+  <text x="340" y="112" font-size="6.2" fill="#5a4520">直径も 2 の n 乗で割られる</text>
+  <text x="340" y="128" font-size="6.2" fill="#8c2f1e">積が同じ率　だから誤差が勝つ</text>
+
+  <rect x="14" y="156" width="216" height="126" rx="4" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="24" y="171" font-size="7.6" font-weight="700" fill="#1e4a41">一つの計算が全部を生む</text>
+  <text x="24" y="189" font-size="6.8" fill="#1e4a41">円周に沿う積分は、冪が −1 のときだけ</text>
+  <text x="24" y="201" font-size="6.8" fill="#1e4a41">2πi になり、他はすべて零になる</text>
+  <text x="24" y="218" font-size="6.4" fill="#5a4520">これは第80章の直交性と同じ計算である</text>
+  <text x="24" y="235" font-size="6.6" fill="#8c2f1e">−1 だけが生き残ることが</text>
+  <text x="24" y="247" font-size="6.6" fill="#8c2f1e">留数という概念の理由になる</text>
+  <text x="24" y="264" font-size="6.4" fill="#6b2a48">穴のある領域で積分が零にならない量が</text>
+  <text x="24" y="276" font-size="6.4" fill="#6b2a48">ちょうどこの 2πi の整数倍である</text>
+
+  <rect x="240" y="156" width="216" height="126" rx="4" fill="#f4f1ea" stroke="#8a6b2c"/>
+  <text x="250" y="171" font-size="7.6" font-weight="700" fill="#5a4520">積分公式から直ちに出るもの</text>
+  <text x="250" y="189" font-size="6.6" fill="#5a4520">無限回微分可能　冪級数展開</text>
+  <text x="250" y="201" font-size="6.6" fill="#5a4520">導関数の評価　平均値の性質</text>
+  <text x="250" y="213" font-size="6.6" fill="#5a4520">最大値原理　開写像定理</text>
+  <text x="250" y="230" font-size="6.6" fill="#8c2f1e">有界な整関数は定数（リウヴィル）</text>
+  <text x="250" y="242" font-size="6.6" fill="#8c2f1e">　→　代数学の基本定理</text>
+  <text x="250" y="259" font-size="6.4" fill="#1e4a41">一様収束の極限がまた正則になる</text>
+  <text x="250" y="271" font-size="6.4" fill="#6a6a68">実関数では、どれも成り立たない</text>
+</svg>
+<figcaption>コーシー–グルサの定理の四分割の議論。積分が四分の一ずつ、直径と周長が二分の一ずつ縮むという完全な釣り合いから、誤差項が勝って積分が零になる。この定理から積分公式が出て、正則関数の剛性がすべて従う。</figcaption>
+</figure>
+
+<div class="star2">
+<h4>★★ 学部後半——回転数、ホモロジー版、そして偏角の原理</h4>
+
+<p><strong>回転数。</strong>閉曲線 <m>\gamma</m> と <m>a\notin\gamma</m> について</p>
+<M>n(\gamma,a) = \frac{1}{2\pi i}\oint_\gamma\frac{dz}{z-a} \ \in\ \mathbb{Z}</M>
+<p><em>整数値であることは、<m>h(t)=\exp\big(\int_a^t\frac{\gamma'(s)}{\gamma(s)-a}ds\big)</m> が <m>(\gamma(t)-a)</m> に比例することから出る。</em><span class="yogo-hl">これは「連続な偏角の持ち上げ」であり、第28章の被覆空間の議論と同じものである。</span>回転数は <m>\mathbb{C}\setminus\gamma</m> の各連結成分上で一定で、非有界成分では零。</p>
+
+<p><strong>ホモロジー版の一般形。</strong><m>\Omega</m> 上の正則関数 <m>f</m> と、<m>\Omega</m> のなかで零ホモローグなサイクル <m>\gamma</m> について</p>
+<M>n(\gamma,z)\,f(z) = \frac{1}{2\pi i}\oint_\gamma\frac{f(w)}{w-z}\,dw</M>
+<p><em>アールフォルスによる証明は、<m>g(w,z)=\frac{f(w)-f(z)}{w-z}</m> が二変数で連続かつ各変数で正則であることを使い、リウヴィルの定理に帰着させる巧妙なものである。</em>この形があれば、多重連結領域でも扱える。</p>
+
+<p><strong>偏角の原理。</strong><m>f</m> が <m>\gamma</m> の内部で有理型、<m>\gamma</m> 上に零点も極もないとき</p>
+<M>\frac{1}{2\pi i}\oint_\gamma\frac{f'(z)}{f(z)}\,dz = Z - P</M>
+<p>（<m>Z</m> は零点、<m>P</m> は極の個数、重複度込み）。<em>左辺は <m>f\circ\gamma</m> の原点のまわりの回転数である。</em><span class="yogo-hl">「像が原点を何周するか」が「内部に零点がいくつあるか」を数える</span>——第89章の等角性と、位相的な次数の理論の接点である。</p>
+
+<p><strong>ルーシェの定理。</strong><m>|g| &lt; |f|</m>（<m>\gamma</m> 上）なら、<m>f</m> と <m>f+g</m> は <m>\gamma</m> の内部で同じ個数の零点をもつ。<em>証明は <m>f+tg</m>（<m>t\in[0,1]</m>）の零点の個数が整数値の連続関数だから一定、というだけ。</em>代数学の基本定理も、多項式の根の連続性も、この一行から出る。</p>
+
+<p><strong>仮定を外すと。</strong>グルサの証明で「導関数の連続性」を仮定すれば、グリーンの定理から一行で示せる（<m>\oint f dz=\iint(\partial_x(if)-\partial_y f)dxdy=2i\iint\bar\partial f=0</m>）。<em>グルサの功績は、その仮定を外したことにある。</em><span class="yogo-hl">この差は本質的である——「一回微分できれば十分」が言えるからこそ、正則性が最小限の仮定として機能する。</span></p>
+</div>
+
+<div class="star3">
+<h4>★★★ 大学院——多変数と、積分公式の一般化</h4>
+
+<p><strong>多変数のコーシー公式。</strong>多重円板 <m>D^n</m> では</p>
+<M>f(z) = \frac{1}{(2\pi i)^n}\oint_{|w_1|=r_1}\!\!\cdots\oint_{|w_n|=r_n}\frac{f(w)}{\prod_j(w_j-z_j)}\,dw_n\cdots dw_1</M>
+<p>が成り立つ（各変数について一変数の公式を繰り返す）。<em>ところが積分路が「区別された境界」（<m>|w_j|=r_j</m> すべて）であって、位相的な境界 <m>\partial D^n</m> よりずっと小さい。</em><span class="yogo-hl">この差が、第89章★★★のハルトークスの延長現象を生む。</span></p>
+
+<p>一般の領域では<strong>ボホナー–マルティネリの公式</strong>があるが、核が正則でないため一変数ほど強力でない。<em>正則な核をもつ公式（<span class="orig">Cauchy–Fantappiè</span>、アンリオナ–ラムキン）は擬凸領域で構成でき、そこから <m>\bar\partial</m> 方程式の解の評価が得られる。</em></p>
+
+<p><strong>コホモロジーとしての定式化。</strong>ドルボーの定理 <m>H^{0,q}_{\bar\partial}(X)\cong H^q(X,\mathcal{O})</m> により、コーシーの定理は「<m>\mathbb{C}</m> の単連結領域上で <m>H^1(\Omega,\mathcal{O})=0</m>」という主張に翻訳される。<em>単連結性という位相的条件が、層コホモロジーの消滅に対応している。</em><span class="yogo-hl">カルタンの定理 B（シュタイン多様体上で連接層の高次コホモロジーが消える）は、この事実の最終形である。</span></p>
+
+<p><strong>形式的な一般化。</strong>コーシーの積分公式の構造——「関数の値が境界上の積分で再現される」——は、次のものたちに一般化される。</p>
+<p>（i）<em>ポアソンの公式</em>（調和関数、第94章）：核が正でない代わりに正の核。<br>
+（ii）<em>ダンフォード–テイラーの積分</em>（作用素、第79章★★）：<m>f(T)=\frac{1}{2\pi i}\oint f(\lambda)(\lambda-T)^{-1}d\lambda</m>。<span class="yogo-hl">スペクトル理論の関数計算は、コーシーの公式を作用素値に持ち上げたものそのものである。</span><br>
+（iii）<em>グリーンの表現公式</em>（楕円型方程式）：基本解を核とする。<br>
+（iv）<em>アティヤ–ボット–レフシェッツの不動点公式</em>：局所的なデータ（不動点での挙動）から大域的な不変量（レフシェッツ数）を再現する。</p>
+
+<p><em>どれも「局所データと大域データの往復」という同じ主題の変奏である。</em>コーシーの定理は、その最初の、そしてもっとも単純な例だった。</p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li><m>\oint_{|z|=1}z^n\,dz</m> をすべての整数 <m>n</m> について計算せよ。</li>
+<li>標準評価を確かめよ。</li>
+<li><m>\oint_{|z|=2}\frac{dz}{z^2+1}</m> を計算せよ。</li>
+<li>リウヴィルの定理が実関数では成り立たない例を挙げよ。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li><ref t="thm-goursat"/>を、四分割と入れ子の議論で示せ。<span class="haiten">（40点）</span></li>
+<li>星形領域で原始関数が存在することを示せ。<span class="haiten">（35点）</span></li>
+<li><ref t="thm-cauchy-koshiki"/>を、<m>g(w)=(f(w)-f(z))/(w-z)</m> に定理を適用して示せ。<span class="haiten">（40点）</span></li>
+<li>コーシーの評価からリウヴィルの定理と代数学の基本定理を導け。<span class="haiten">（30点）</span></li>
+<li>モレラの定理を示せ。<span class="haiten">（30点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li>回転数が整数値であることを、偏角の連続な持ち上げによって示せ。<span class="haiten">（45点）</span></li>
+<li>偏角の原理を示し、ルーシェの定理を導け。<span class="haiten">（45点）</span></li>
+<li>シュヴァルツの補題を示し、等号の場合を決定せよ。<span class="haiten">（40点）</span></li>
+<li>三線定理を、帯状領域での最大値原理から示せ。<span class="haiten">（50点）</span></li>
+</ol>
+</div>
+</div>

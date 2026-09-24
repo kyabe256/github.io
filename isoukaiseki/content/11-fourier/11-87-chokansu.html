@@ -1,0 +1,224 @@
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>微分できない関数を、どうやって微分するのか。</li>
+<li>デルタ関数は、何なのか。</li>
+<li>なぜ「なめらかで急減少な関数」の空間が要るのか。</li>
+</ul>
+</div>
+
+<h3 id="s87-1">微分を双対に移す</h3>
+
+<p>第84章と第85章で、フーリエ変換が定義できない対象が残った——定数関数、多項式、平面波、ディラック測度。<em>共通しているのは「積分が収束しない」ことである。</em></p>
+
+<p>解決の着想は、<span class="yogo-hl">関数を「値の割り当て」ではなく「積分による汎関数」と見る</span>ことである。<m>f</m> のかわりに</p>
+<M>\varphi \ \longmapsto \ \int f\varphi\,dx</M>
+<p>という汎関数を考える。<em>この見方では、<m>f</m> 自身が可積分でなくても、<m>\varphi</m> が十分よい関数なら積分が収束しうる。</em>そして<strong>微分は部分積分で <m>\varphi</m> の側に移せる</strong>——</p>
+<M>\int f'\varphi = -\int f\varphi'</M>
+<p>右辺は <m>f</m> の微分可能性を要求しない。<em>ここに、微分できない対象を微分する道が開ける。</em></p>
+
+<div class="teigi" id="def-schwartz">
+<h4>シュワルツ空間</h4>
+<p class="no-indent"><m>\varphi\in C^\infty(\mathbb{R}^d)</m> が、任意の多重指数 <m>\alpha,\beta</m> について</p>
+<M>\|\varphi\|_{\alpha,\beta} = \sup_{x\in\mathbb{R}^d}\big|x^\alpha\partial^\beta\varphi(x)\big| < \infty</M>
+<p class="no-indent">をみたすとき<strong>急減少関数</strong>といい、その全体を <m>\mathcal{S}(\mathbb{R}^d)</m>（<strong>シュワルツ空間</strong>）と書く。可算個の半ノルム <m>\|\cdot\|_{\alpha,\beta}</m> が定める位相を入れると、<m>\mathcal{S}</m> は<em>フレシェ空間</em>（完備な距離化可能局所凸空間）になる。</p>
+<p class="no-indent"><em>例</em>：<m>e^{-|x|^2}</m>、<m>C_c^\infty</m> の元。<em>例でないもの</em>：<m>e^{-|x|}</m>（原点で滑らかでない）、<m>(1+|x|^2)^{-N}</m>（多項式減衰では足りない）。</p>
+</div>
+
+<div class="teiri" id="thm-schwartz-fourier">
+<h4>シュワルツ空間はフーリエ変換で不変</h4>
+<p class="no-indent"><m>\mathcal{F}:\mathcal{S}(\mathbb{R}^d)\to\mathcal{S}(\mathbb{R}^d)</m> は連続な線形同型であり、逆写像は反転公式で与えられる。さらに</p>
+<M>\widehat{\partial^\beta\varphi}(\xi) = (i\xi)^\beta\hat\varphi(\xi), \qquad \widehat{x^\alpha\varphi}(\xi) = (i\partial_\xi)^\alpha\hat\varphi(\xi)</M>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><m>\varphi\in\mathcal{S}</m> なら <m>\varphi\in L^1</m>（急減少だから）で、<ref t="prop-fourier-kihon-r"/>（6）の二つの式が任意の階数で使える。<em>二式を組み合わせると</em></p>
+<M>\xi^\alpha\partial_\xi^\beta\hat\varphi(\xi) = c\,\widehat{\partial^\alpha(x^\beta\varphi)}(\xi)</M>
+<p class="no-indent">の形になり、右辺は <m>\partial^\alpha(x^\beta\varphi)\in\mathcal{S}\subset L^1</m> の変換だから有界（<ref t="prop-fourier-kihon-r"/>（1））。<span class="yogo-hl">すなわち <m>\hat\varphi</m> のすべての半ノルムが有限で、<m>\hat\varphi\in\mathcal{S}</m>。</span>連続性も同じ評価から出る。</p>
+<p class="no-indent"><m>\hat\varphi\in L^1</m> なので反転公式（<ref t="thm-hanten"/>（1））が使えて <m>\mathcal{F}^{-1}\mathcal{F}=\mathrm{id}</m>。<em>逆変換も同じ議論で <m>\mathcal{S}</m> を <m>\mathcal{S}</m> に写すから、<m>\mathcal{F}</m> は同型である。</em></p>
+<p><em>「微分と多項式倍を入れ替える」という性質そのものが、この空間を不変にする。</em>シュワルツ空間は、そのために作られた空間である。</p>
+</div>
+
+<h3 id="s87-2">超関数</h3>
+
+<div class="teigi" id="def-chokansu">
+<h4>緩増加超関数</h4>
+<p class="no-indent"><m>\mathcal{S}(\mathbb{R}^d)</m> 上の連続線形汎関数の全体を <m>\mathcal{S}'(\mathbb{R}^d)</m> と書き、その元を<strong>緩増加超関数</strong>という。<m>u\in\mathcal{S}'</m> と <m>\varphi\in\mathcal{S}</m> の対を <m>\langle u,\varphi\rangle</m> と書く。</p>
+<p class="no-indent"><em>連続性は、ある有限個の半ノルムで <m>|\langle u,\varphi\rangle|\le C\sum\|\varphi\|_{\alpha_j,\beta_j}</m> と押さえられることと同値である。</em></p>
+<p class="no-indent">同様に、<m>C_c^\infty(\Omega)</m> 上の連続線形汎関数の全体を <m>\mathcal{D}'(\Omega)</m>（<strong>超関数</strong>）と書く。<m>\mathcal{S}'\subset\mathcal{D}'</m> である。</p>
+</div>
+
+<div class="teigi" id="def-chokansu-enzan">
+<h4>超関数の演算</h4>
+<p class="no-indent"><m>u\in\mathcal{S}'</m> について、次を定義とする（いずれも「よい場合に成り立つ等式」をそのまま定義に採用している）。</p>
+<p class="no-indent">（1）<strong>微分</strong>：<m>\langle\partial^\alpha u,\varphi\rangle = (-1)^{|\alpha|}\langle u,\partial^\alpha\varphi\rangle</m>。<br>
+（2）<strong>フーリエ変換</strong>：<m>\langle\hat u,\varphi\rangle = \langle u,\hat\varphi\rangle</m>。<br>
+（3）<strong>滑らかな関数との積</strong>：<m>a</m> が多項式増大の <m>C^\infty</m> 関数なら <m>\langle au,\varphi\rangle=\langle u,a\varphi\rangle</m>。<br>
+（4）<strong>急減少関数との畳み込み</strong>：<m>\langle u*\psi,\varphi\rangle=\langle u,\tilde\psi*\varphi\rangle</m>（<m>\tilde\psi(x)=\psi(-x)</m>）。<br>
+（5）<strong>平行移動・拡大縮小</strong>：同様に双対で定める。</p>
+<p class="no-indent"><em>（1）（2）により、すべての緩増加超関数は無限回微分可能で、フーリエ変換をもつ。</em><span class="yogo-hl">定義できないことが原理的に起こらない枠組みになっている。</span></p>
+</div>
+
+<div class="rei" id="rei-chokansu-rei">
+<h4>超関数の見本</h4>
+<p class="no-indent">（1）<strong>局所可積分関数。</strong><m>f</m> が多項式増大の <m>L^1_{\mathrm{loc}}</m> 関数なら <m>\langle f,\varphi\rangle=\int f\varphi</m> で <m>\mathcal{S}'</m> の元。<em>この対応は単射である</em>（二つの <m>L^1_{\mathrm{loc}}</m> 関数が同じ超関数を定めれば、ほとんどいたるところ一致する）。<m>L^p</m>（すべての <m>p</m>）、有限測度、多項式はすべて <m>\mathcal{S}'</m> に入る。</p>
+<p>（2）<strong>ディラックのデルタ。</strong><m>\langle\delta,\varphi\rangle=\varphi(0)</m>。<em>これは関数ではない</em>——<m>\int f\varphi=\varphi(0)</m> をみたす <m>L^1_{\mathrm{loc}}</m> 関数 <m>f</m> は存在しない。フーリエ変換は</p>
+<M>\langle\hat\delta,\varphi\rangle = \langle\delta,\hat\varphi\rangle = \hat\varphi(0) = \int\varphi(x)\,dx = \langle 1,\varphi\rangle</M>
+<p class="no-indent">すなわち <m>\hat\delta=1</m>。<em>逆に <m>\hat1=(2\pi)^d\delta</m>。</em><span class="yogo-hl">第85章で「定義できない」とした変換が、ここでは一行の計算になる。</span></p>
+<p>（3）<strong>ヘヴィサイド関数の微分。</strong><m>H=\chi_{[0,\infty)}</m> について <m>\langle H',\varphi\rangle=-\int_0^\infty\varphi'=\varphi(0)</m>、すなわち <m>H'=\delta</m>。<em>跳びの微分がデルタである。</em></p>
+<p>（4）<strong>主値。</strong><m>1/x</m> は <m>L^1_{\mathrm{loc}}</m> でないが、</p>
+<M>\Big\langle \mathrm{p.v.}\frac1x,\varphi\Big\rangle = \lim_{\varepsilon\downarrow0}\int_{|x|>\varepsilon}\frac{\varphi(x)}{x}\,dx = \int_0^\infty\frac{\varphi(x)-\varphi(-x)}{x}\,dx</M>
+<p class="no-indent">右辺は <m>\varphi</m> の滑らかさから収束する。<em>フーリエ変換は <m>-i\pi\,\mathrm{sgn}(\xi)</m> で、これがヒルベルト変換の乗子である</em>（第81章★★）。</p>
+<p>（5）<strong>層と曲面上の測度。</strong>球面上の面積測度 <m>\sigma</m> は <m>\mathcal{S}'</m> の元で、<m>\hat\sigma(\xi)=c_d|\xi|^{-(d-2)/2}J_{(d-2)/2}(|\xi|)</m>（ベッセル関数）。<em>これが波動方程式の基本解と、第85章★★★の制限定理の出発点である。</em></p>
+<p>（6）<strong>基本解。</strong><m>-\Delta E=\delta</m> をみたす <m>E</m> は、<m>d\ge3</m> で <m>E(x)=c_d|x|^{2-d}</m>、<m>d=2</m> で <m>-\frac{1}{2\pi}\log|x|</m>。<span class="yogo-hl">ニュートンポテンシャル・クーロンポテンシャルが、超関数の方程式の解として特徴づけられる。</span></p>
+</div>
+
+<div class="chui">
+<h4>何ができて、何ができないか</h4>
+<p class="no-indent"><strong>できること。</strong>任意回の微分、フーリエ変換、滑らかな関数との積、急減少関数との畳み込み、平行移動・拡大縮小、極限（弱位相での収束）。</p>
+<p class="no-indent"><strong>できないこと。</strong><em>超関数どうしの積である。</em><m>\delta^2</m> に意味を与えることはできない。<span class="yogo-hl">シュヴァルツの不可能性定理：微分と両立し、連続関数の上で通常の積に一致する結合的な積は、超関数の空間には存在しない。</span></p>
+<p><em>この制約が、非線形偏微分方程式の理論が難しい根本的な理由である。</em>方程式 <m>\partial_tu+u\partial_xu=0</m> の <m>u\partial_xu</m> が、<m>u</m> が超関数のときには意味をもたない。回避策は（i）解の滑らかさを確保してから積を定義する（ソボレフ空間と積の評価、第88章）、（ii）弱解の定義を方程式ごとに工夫する（エントロピー解、粘性解）、（iii）確率論的な繰り込み（ホグの正則性構造、2014年フィールズ賞）。</p>
+</div>
+
+<h3 id="s87-3">構造と局所性</h3>
+
+<div class="teiri" id="thm-chokansu-kouzou">
+<h4>超関数の構造定理</h4>
+<p class="no-indent">（1）<strong>台がコンパクトなら有限階の微分。</strong><m>u\in\mathcal{D}'</m> で <m>\mathrm{supp}\,u</m> がコンパクトなら、有限個の連続関数 <m>f_\alpha</m> があって <m>u=\sum_{|\alpha|\le N}\partial^\alpha f_\alpha</m>。<br>
+（2）<strong>一点に台をもつもの。</strong><m>\mathrm{supp}\,u=\{0\}</m> なら <m>u=\sum_{|\alpha|\le N}c_\alpha\partial^\alpha\delta</m>（有限和）。<br>
+（3）<strong>正の超関数は測度。</strong><m>\varphi\ge0\Rightarrow\langle u,\varphi\rangle\ge0</m> なら <m>u</m> は正のラドン測度である（<ref t="thm-riesz-sei"/>）。<br>
+（4）<strong>平滑化で近づける。</strong><m>C_c^\infty</m> は <m>\mathcal{S}'</m> で（弱位相について）稠密。すなわちどの超関数も滑らかな関数の極限である。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">（2）を示す。<m>\varphi\in C_c^\infty</m> が原点で <m>N</m> 階まですべての導関数が零なら <m>\langle u,\varphi\rangle=0</m> であることを見ればよい（<m>N</m> は <m>u</m> の連続性から決まる階数）。<em>テイラーの定理から <m>|\partial^\beta\varphi(x)|\le C|x|^{N+1-|\beta|}</m>（<m>|x|</m> 小）。</em>原点のまわりの切り落とし <m>\chi(x/\varepsilon)</m> を掛けて評価すると、<m>u</m> の階数 <m>N</m> の連続性から <m>|\langle u,\chi(\cdot/\varepsilon)\varphi\rangle|\le C\varepsilon\to0</m>。</p>
+<p class="no-indent">よって <m>\langle u,\varphi\rangle</m> は <m>\varphi</m> の原点での <m>N</m> 階までの導関数のみに依存する線形汎関数で、<em>有限次元空間上の線形汎関数だから係数の組で書ける</em>——それが <m>\sum c_\alpha\partial^\alpha\delta</m> である。</p>
+<p class="no-indent">（4）<m>u*\varphi_\varepsilon</m>（<m>\varphi_\varepsilon</m> は軟化子）は <m>C^\infty</m> で、<m>\varepsilon\downarrow0</m> のとき <m>u</m> に弱収束する。<em>さらに切り落とせばコンパクト台にできる。</em><span class="yogo-hl">「超関数とは、滑らかな関数列の極限である」という素朴な理解が、これで正当化される。</span></p>
+</div>
+
+<div class="hanrei" id="cex-chokansu-genkai">
+<h4>超関数の限界</h4>
+<p class="no-indent">（1）<strong>点での値がない。</strong><m>u\in\mathcal{S}'</m> に <m>u(x_0)</m> という量はない。<em>ただし「<m>u</m> が開集合 <m>U</m> 上で滑らかな関数と一致する」ことは言える</em>（局所性）。台と特異台（<m>u</m> が滑らかでない点の集合）が、この方向の道具である。</p>
+<p class="no-indent">（2）<strong>積が定義できない。</strong>上述。<em>ただし波面集合（位置と方向の両方で特異性を追う）が交わらなければ積を定義できる</em>（ヘルマンダーの理論）。これが線形偏微分方程式の特異性の伝播の理論を生んだ。</p>
+<p class="no-indent">（3）<strong>合成が定義できない。</strong><m>\delta(f(x))</m> は <m>f</m> の零点が非退化なら定義できるが、一般には不可能。</p>
+<p class="no-indent">（4）<strong>緩増加でないと変換できない。</strong><m>e^{x^2}</m> は <m>\mathcal{D}'(\mathbb{R})</m> の元だが <m>\mathcal{S}'</m> に属さず、フーリエ変換をもたない。<em><m>\mathcal{S}'</m> という制限は、変換のために必要である。</em></p>
+<p class="no-indent">（5）<strong>すべての超関数が「関数の極限」だが、逆は言えない。</strong>収束しない列もある。<m>\sin(nx)</m> は <m>\mathcal{S}'</m> で <m>0</m> に弱収束するが、<m>\sin^2(nx)</m> は <m>1/2</m> に収束する。<span class="yogo-hl">弱収束は積と両立しない</span>——これが（2）の不可能性の、もう一つの現れである。</p>
+</div>
+
+<figure>
+<svg viewBox="0 0 470 288" width="470" height="288" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">微分を相手に押しつける——双対でできること</text>
+
+  <rect x="14" y="26" width="442" height="112" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+
+  <text x="118" y="42" font-size="6.8" text-anchor="middle" font-weight="700" fill="#1f3b5c">跳びのある関数</text>
+  <line x1="40" y1="100" x2="196" y2="100" stroke="#8a8a88" stroke-width="0.6"/>
+  <line x1="118" y1="62" x2="118" y2="118" stroke="#8a8a88" stroke-width="0.6"/>
+  <line x1="48" y1="100" x2="118" y2="100" stroke="#35618f" stroke-width="2"/>
+  <line x1="118" y1="72" x2="188" y2="72" stroke="#35618f" stroke-width="2"/>
+  <circle cx="118" cy="72" r="2" fill="#35618f"/>
+  <text x="118" y="132" font-size="6" text-anchor="middle" fill="#6a6a68">普通の意味では微分できない</text>
+
+  <text x="352" y="42" font-size="6.8" text-anchor="middle" font-weight="700" fill="#1f3b5c">その微分</text>
+  <line x1="274" y1="100" x2="430" y2="100" stroke="#8a8a88" stroke-width="0.6"/>
+  <line x1="352" y1="58" x2="352" y2="118" stroke="#8a8a88" stroke-width="0.6"/>
+  <line x1="352" y1="100" x2="352" y2="62" stroke="#a03b2e" stroke-width="2.4"/>
+  <polygon points="352,58 349,66 355,66" fill="#a03b2e"/>
+  <text x="352" y="132" font-size="6" text-anchor="middle" fill="#8c2f1e">デルタ　超関数としては定義できる</text>
+
+  <line x1="212" y1="86" x2="264" y2="86" stroke="#a03b2e" stroke-width="1.3" marker-end="url(#d87)"/>
+  <text x="238" y="78" font-size="5.6" text-anchor="middle" fill="#8c2f1e">部分積分</text>
+
+  <defs>
+    <marker id="d87" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 z" fill="#a03b2e"/></marker>
+  </defs>
+
+  <rect x="14" y="148" width="216" height="134" rx="4" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="24" y="163" font-size="7.6" font-weight="700" fill="#1e4a41">できること</text>
+  <text x="24" y="180" font-size="6.6" fill="#1e4a41">何回でも微分できる</text>
+  <text x="24" y="192" font-size="6.6" fill="#1e4a41">いつでもフーリエ変換できる</text>
+  <text x="24" y="204" font-size="6.6" fill="#1e4a41">なめらかな関数を掛けられる</text>
+  <text x="24" y="216" font-size="6.6" fill="#1e4a41">急減少関数と畳み込める</text>
+  <text x="24" y="228" font-size="6.6" fill="#1e4a41">弱い意味の極限がとれる</text>
+  <text x="24" y="245" font-size="6.4" fill="#5a4520">デルタの変換は定数関数</text>
+  <text x="24" y="257" font-size="6.4" fill="#5a4520">跳びの微分はデルタ</text>
+  <text x="24" y="273" font-size="6.4" fill="#6a6a68">どの超関数も、なめらかな関数の極限である</text>
+
+  <rect x="240" y="148" width="216" height="134" rx="4" fill="#f0e2de" stroke="#a03b2e"/>
+  <text x="250" y="163" font-size="7.6" font-weight="700" fill="#8c2f1e">できないこと</text>
+  <text x="250" y="180" font-size="6.6" fill="#8c2f1e">超関数どうしの積</text>
+  <text x="250" y="192" font-size="6.4" fill="#6a6a68">デルタの二乗に意味を与えられない</text>
+  <text x="250" y="206" font-size="6.6" fill="#8c2f1e">点での値</text>
+  <text x="250" y="218" font-size="6.4" fill="#6a6a68">言えるのは開集合の上での様子だけ</text>
+  <text x="250" y="232" font-size="6.6" fill="#8c2f1e">合成</text>
+  <text x="250" y="249" font-size="6.4" fill="#6b2a48">積の不可能性が、非線形方程式の難所である</text>
+  <text x="250" y="261" font-size="6.4" fill="#6b2a48">弱収束が積と両立しないのと同じ事情</text>
+  <text x="250" y="275" font-size="6.4" fill="#5a4520">回避には解の滑らかさか、繰り込みが要る</text>
+</svg>
+<figcaption>超関数は微分を試験関数の側に押しつけることで定義される。跳びの微分はデルタになり、デルタのフーリエ変換は定数関数になる。できないのは超関数どうしの積で、これが非線形偏微分方程式の難しさの根源にある。</figcaption>
+</figure>
+
+<div class="star2">
+<h4>★★ 学部後半——台・波面集合・基本解</h4>
+
+<p><strong>台と特異台。</strong><m>u\in\mathcal{D}'(\Omega)</m> の<strong>台</strong> <m>\mathrm{supp}\,u</m> は、<m>u</m> が近傍で零にならない点の集合。<strong>特異台</strong> <m>\mathrm{sing\,supp}\,u</m> は、<m>u</m> が近傍で <m>C^\infty</m> 関数と一致しない点の集合。<em><m>\delta</m> の台と特異台はどちらも <m>\{0\}</m>。</em></p>
+
+<p><strong>波面集合。</strong>特異性を「どの点で」だけでなく「どの方向で」も記述する。<m>u</m> の波面集合 <m>WF(u)\subset\Omega\times(\mathbb{R}^d\setminus0)</m> は、局所的にフーリエ変換が方向 <m>\xi</m> に沿って急減少しない点 <m>(x,\xi)</m> の集合。<span class="yogo-hl">波面集合が交わらない二つの超関数は、積が定義できる。</span><em>ヘルマンダーの定理：線形偏微分作用素 <m>P</m> について、<m>WF(u)\subset WF(Pu)\cup\mathrm{Char}(P)</m>。</em>これが「特異性は特性曲線に沿って伝播する」という物理的な直観の厳密な形である。</p>
+
+<p><strong>基本解と楕円性。</strong>定数係数の作用素 <m>P(\partial)</m> について <m>P(\partial)E=\delta</m> をみたす <m>E</m>（<strong>基本解</strong>）は、<em>マルグランジュ–エーレンプライスの定理により常に存在する</em>。フーリエ変換すれば <m>P(i\xi)\hat E=1</m> だが、<m>P(i\xi)</m> の零点で割れない。<em>零点を避けて積分路をずらすのが証明の要点で、複素解析（第90章）が本質的に使われる。</em></p>
+
+<p>作用素が<strong>楕円型</strong>（<m>P</m> の最高次部分 <m>P_m(\xi)</m> が <m>\xi\ne0</m> で零にならない）なら、<em>正則性定理</em>：<m>Pu\in C^\infty\Rightarrow u\in C^\infty</m>。<span class="yogo-hl">ラプラシアンの解が自動的に滑らかであるという事実（第94章）は、この一般論の特別な場合である。</span>双曲型（波動方程式）では特異性が伝播し、放物型（熱方程式）では即座に消える——<em>方程式の型が、特異性の運命を決めている。</em></p>
+
+<p><strong>仮定を外すと。</strong>試験関数を <m>\mathcal{S}</m> より小さい <m>C_c^\infty</m> にすると双対が大きくなり（<m>\mathcal{D}'\supset\mathcal{S}'</m>）、局所的な議論には便利だがフーリエ変換ができない。<em>逆に試験関数を大きくすると（解析的関数など）、双対が小さくなって使いにくい。</em>ジェヴレイ類や佐藤の超局所解析は、この中間の選択を系統的に扱う。</p>
+</div>
+
+<div class="star3">
+<h4>★★★ 大学院——ガウス測度、確率超関数、正則性構造</h4>
+
+<p><strong>無限次元のガウス測度。</strong><m>\mathcal{S}'(\mathbb{R}^d)</m> の上には、特性汎関数</p>
+<M>\int_{\mathcal{S}'} e^{i\langle u,\varphi\rangle}\,d\mu(u) = e^{-\frac12\|\varphi\|_{H}^2}</M>
+<p>をみたす確率測度がただ一つ存在する（<em>ボホナー–ミンロスの定理</em>、ボホナーの定理（第84章★★）の無限次元版）。<m>H=L^2</m> のとき <m>\mu</m> は<strong>白色雑音</strong>で、<em>その実現はほとんど確実に関数ではなく超関数である。</em><span class="yogo-hl">「確率的な対象が超関数でしかありえない」という事実が、確率偏微分方程式の枠組みを決めている。</span></p>
+
+<p><strong>ガウス自由場。</strong><m>H=H^1</m> にとると<em>ガウス自由場</em>が得られ、<m>d=2</m> ではその等高線が共形場理論と結びつく（シェラム–レフナー発展、シュラムのSLE）。<em>二次元臨界現象の普遍性が、この超関数の共形不変性から説明される。</em></p>
+
+<p><strong>積の問題の回避。</strong>確率偏微分方程式 <m>\partial_tu=\Delta u+u^2+\xi</m>（<m>\xi</m> は時空白色雑音）では、解が超関数なので <m>u^2</m> に意味がない。<em>ホグの<strong>正則性構造</strong>の理論（2014年フィールズ賞）は、超関数を「局所的なテイラー展開の一般化」として記述し直し、繰り込みによって積を定義する。</em>同時期にグビネッリ–インベリ–ペリーヌの<em>パラ制御解</em>の理論が別の道から同じ問題を解いた。<span class="yogo-hl">シュヴァルツの不可能性定理は「単一の普遍的な積は存在しない」と言っているだけで、方程式ごとに意味を与える道は閉ざされていなかった。</span></p>
+
+<p><strong>佐藤の超局所解析。</strong>波面集合の考えを層の言葉に翻訳し、<em>超関数の特異性を余接束の上の層（マイクロ関数の層）として扱う。</em>佐藤–河合–柏原の理論は、線形偏微分方程式の解の構造を代数解析（<m>D</m> 加群）の言葉で記述する。<em>方程式系を加群と見て、その特性多様体の幾何を調べる</em>——<span class="yogo-hl">解析の問いが、代数幾何の問いに完全に翻訳される。</span>リーマン–ヒルベルト対応（柏原、メビリー）はその頂点の一つで、正則特異な <m>D</m> 加群の圏と構成可能層の圏の同値を述べる。</p>
+
+<p><strong>未解決に近い問い。</strong><m>3</m> 次元ナヴィエ–ストークス方程式の解の一意性・滑らかさは、まさに「弱解の積をどう扱うか」という問題である。<em>弱解の存在はルレイ（1934年）が示したが、一意性は未解決</em>——ブッコマステル–ヴィコルは、より弱い意味の解に対して非一意性を示した（2019年）。<span class="yogo-hl">積が定義できないという超関数の一つの限界が、九十年間ミレニアム問題として残っている。</span></p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li><m>e^{-|x|}</m> がシュワルツ空間に属さない理由を述べよ。</li>
+<li><m>H'=\delta</m> を定義から確かめよ。</li>
+<li><m>\hat\delta=1</m> と <m>\hat1=(2\pi)^d\delta</m> を確かめよ。</li>
+<li><m>x\delta=0</m>、<m>x\delta'=-\delta</m> を確かめよ。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li><ref t="thm-schwartz-fourier"/>を、半ノルムの評価として書き下せ。<span class="haiten">（35点）</span></li>
+<li>主値 <m>1/x</m> が <m>\mathcal{S}'</m> の元であることを示せ。<span class="haiten">（35点）</span></li>
+<li>主値 <m>1/x</m> のフーリエ変換が <m>-i\pi\,\mathrm{sgn}(\xi)</m> であることを示せ。<span class="haiten">（40点）</span></li>
+<li><m>-\Delta E=\delta</m> の解が <m>d\ge3</m> で <m>c_d|x|^{2-d}</m> であることを確かめよ。<span class="haiten">（40点）</span></li>
+<li><m>\sin(nx)\to0</m> だが <m>\sin^2(nx)\to1/2</m> を <m>\mathcal{S}'</m> で確かめ、弱収束が積と両立しないことを説明せよ。<span class="haiten">（30点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li>一点に台をもつ超関数がデルタの導関数の有限和であることを示せ。<span class="haiten">（50点）</span></li>
+<li>正の超関数が正のラドン測度であることを示せ。<span class="haiten">（45点）</span></li>
+<li><m>C_c^\infty</m> が <m>\mathcal{S}'</m> で弱稠密であることを示せ。<span class="haiten">（45点）</span></li>
+<li>波面集合が交わらない二つの超関数の積が定義できることを説明せよ。<span class="haiten">（50点）</span></li>
+</ol>
+</div>
+</div>

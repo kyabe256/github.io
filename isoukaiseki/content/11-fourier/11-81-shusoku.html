@@ -1,0 +1,246 @@
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>部分和は、どんな積分として書けるのか。</li>
+<li>なぜ部分和は収束せず、平均は収束するのか。</li>
+<li>各点収束を保証する条件は何か。</li>
+</ul>
+</div>
+
+<h3 id="s81-1">部分和は核との畳み込みである</h3>
+
+<p>フーリエ部分和を定義に戻して書き直すと、<em>畳み込みの形になる</em>。</p>
+<M>S_Nf(\theta) = \sum_{|n|\le N}\hat f(n)e^{in\theta} = \frac{1}{2\pi}\int_{-\pi}^{\pi} f(t)\sum_{|n|\le N}e^{in(\theta-t)}\,dt = (f*D_N)(\theta)</M>
+<p>ここで <m>D_N(\theta)=\sum_{|n|\le N}e^{in\theta}</m>。<span class="yogo-hl">収束の問題は「この核の族がどう振る舞うか」という問題に完全に翻訳される。</span><em>関数 <m>f</m> の側の性質は、あとから核の性質と組み合わせるだけになる。</em></p>
+
+<div class="teigi" id="def-dirichlet-kaku">
+<h4>ディリクレ核とフェイェール核</h4>
+<p class="no-indent"><strong>ディリクレ核</strong>を <m>D_N(\theta)=\sum_{|n|\le N}e^{in\theta}</m>、<strong>フェイェール核</strong>を <m>K_N=\frac{1}{N+1}\sum_{k=0}^N D_k</m> とする。閉じた表示は</p>
+<M>D_N(\theta) = \frac{\sin\big((N+\tfrac12)\theta\big)}{\sin(\theta/2)}, \qquad K_N(\theta) = \frac{1}{N+1}\left(\frac{\sin\big(\tfrac{(N+1)\theta}{2}\big)}{\sin(\theta/2)}\right)^2</M>
+<p class="no-indent">これらを使って <m>S_Nf=f*D_N</m>、<m>\sigma_Nf=f*K_N</m>（<strong>フェイェール平均</strong>）と書ける。ただし畳み込みは <m>(f*g)(\theta)=\frac{1}{2\pi}\int f(t)g(\theta-t)dt</m> と正規化する。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">ディリクレ核の表示は等比級数の和である。<m>z=e^{i\theta}</m> として</p>
+<M>D_N = \sum_{n=-N}^{N}z^n = \frac{z^{-N}-z^{N+1}}{1-z} = \frac{z^{-(N+1/2)}-z^{N+1/2}}{z^{-1/2}-z^{1/2}} = \frac{\sin((N+\tfrac12)\theta)}{\sin(\theta/2)}</M>
+<p class="no-indent">フェイェール核は <m>\sum_{k=0}^N\sin((k+\tfrac12)\theta)=\frac{\sin^2((N+1)\theta/2)}{\sin(\theta/2)}</m>（同じく等比級数の実部をとる）を使えば出る。<em>フェイェール核が完全平方の形をしているのが、次節のすべてを決める。</em></p>
+</div>
+
+<div class="teiri" id="prop-kaku-hikaku">
+<h4>二つの核の違い</h4>
+<p class="no-indent">両方の核について次が成り立つ。</p>
+<M>\frac{1}{2\pi}\int_{-\pi}^{\pi} D_N = \frac{1}{2\pi}\int_{-\pi}^{\pi} K_N = 1</M>
+<p class="no-indent">しかし振る舞いは大きく異なる。</p>
+<p class="no-indent">（1）<m>K_N\ge0</m>。<em>一方 <m>D_N</m> は符号を変える。</em><br>
+（2）<m>\|K_N\|_1=1</m>。一方</p>
+<M>\|D_N\|_1 = \frac{1}{2\pi}\int_{-\pi}^{\pi}|D_N| \sim \frac{4}{\pi^2}\log N \to \infty</M>
+<p class="no-indent">（<m>\|D_N\|_1</m> を<strong>ルベーグ定数</strong>という）。<br>
+（3）任意の <m>\delta>0</m> について <m>\sup_{|\theta|\ge\delta}|K_N(\theta)|\to0</m>、さらに <m>\int_{|\theta|\ge\delta}K_N\to0</m>。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">積分が <m>1</m> なのは、<m>\frac{1}{2\pi}\int e^{in\theta}=\delta_{n0}</m> から定数項だけが残るため。（1）はフェイェール核の完全平方表示から明らか。</p>
+<p class="no-indent">（2）<m>|\sin(\theta/2)|\le|\theta|/2</m> と <m>|\sin((N+\frac12)\theta)|</m> の平均が <m>2/\pi</m> 程度であることから</p>
+<M>\frac{1}{2\pi}\int_{-\pi}^{\pi}\frac{|\sin((N+\frac12)\theta)|}{|\sin(\theta/2)|}\,d\theta \ \ge\ \frac{1}{2\pi}\int_{1/N}^{\pi}\frac{|\sin((N+\frac12)\theta)|}{\theta/2}\,d\theta \ \gtrsim\ \log N</M>
+<p class="no-indent"><em>核の絶対値の積分が発散する——これが各点収束が破れる理由のすべてである。</em></p>
+<p class="no-indent">（3）<m>|\theta|\ge\delta</m> では <m>\sin^2(\theta/2)\ge\sin^2(\delta/2)</m> なので <m>K_N(\theta)\le\frac{1}{(N+1)\sin^2(\delta/2)}\to0</m>。</p>
+</div>
+
+<div class="chui">
+<h4>なぜ絶対値の積分が決定的か</h4>
+<p class="no-indent">作用素 <m>f\mapsto f*D_N</m> を <m>C(\mathbb{T})\to\mathbb{C}</m>（<m>\theta=0</m> での値）と見ると、そのノルムはちょうど <m>\|D_N\|_1</m> である。<em>したがってルベーグ定数が発散することは、この汎関数の族が一様有界でないことを意味する。</em></p>
+<p><span class="yogo-hl">一様有界性の原理（<ref t="thm-ichiyou-yukai"/>）の対偶により、ある連続関数について <m>\sup_N|S_Nf(0)|=\infty</m> が従う</span>——<ref t="rei-fourier-hassan"/>で示したのがこれである。<em>発散の反例が「存在する」だけでなく、なぜ存在するかが核の形から読めている。</em></p>
+<p>逆に、核が正で積分が <m>1</m> なら、対応する作用素のノルムは <m>1</m> で一様に有界になる。<em>フェイェール核が良い振る舞いをする理由は、この一点に尽きる。</em></p>
+</div>
+
+<h3 id="s81-2">近似単位元としてのフェイェール核</h3>
+
+<div class="teigi" id="def-kinji-tan-i">
+<h4>近似単位元</h4>
+<p class="no-indent"><m>\mathbb{T}</m> 上の可積分関数の族 <m>(\Phi_N)</m> が次をみたすとき<strong>近似単位元</strong>（または<strong>良い核</strong>）という。</p>
+<p class="no-indent">（1）<m>\frac{1}{2\pi}\int\Phi_N=1</m>。<br>
+（2）<m>\sup_N\|\Phi_N\|_1 < \infty</m>。<br>
+（3）任意の <m>\delta>0</m> について <m>\int_{\delta\le|\theta|\le\pi}|\Phi_N|\to0</m>。</p>
+<p class="no-indent">さらに <m>\Phi_N\ge0</m> のとき<strong>正の近似単位元</strong>という（このとき（1）から（2）が従う）。</p>
+</div>
+
+<div class="teiri" id="thm-kinji-tan-i">
+<h4>近似単位元による収束</h4>
+<p class="no-indent"><m>(\Phi_N)</m> を近似単位元とする。</p>
+<p class="no-indent">（1）<m>f\in C(\mathbb{T})</m> なら <m>f*\Phi_N\to f</m> 一様に。<br>
+（2）<m>f\in L^p(\mathbb{T})</m>（<m>1\le p < \infty</m>）なら <m>\|f*\Phi_N-f\|_p\to0</m>。<br>
+（3）<m>f</m> が点 <m>\theta_0</m> で連続なら <m>f*\Phi_N(\theta_0)\to f(\theta_0)</m>。<m>f</m> が <m>\theta_0</m> で左右の極限をもつなら、<m>\Phi_N</m> が偶関数のとき</p>
+<M>f*\Phi_N(\theta_0) \to \frac{f(\theta_0^+)+f(\theta_0^-)}{2}</M>
+</div>
+
+<div class="shomei">
+<p class="no-indent">（1）（3）を示す。<m>\frac{1}{2\pi}\int\Phi_N=1</m> より</p>
+<M>f*\Phi_N(\theta)-f(\theta) = \frac{1}{2\pi}\int_{-\pi}^{\pi}\big(f(\theta-t)-f(\theta)\big)\Phi_N(t)\,dt</M>
+<p class="no-indent"><m>\varepsilon>0</m> をとる。<m>f</m> の一様連続性から <m>\delta>0</m> を <m>|t| < \delta\Rightarrow|f(\theta-t)-f(\theta)| < \varepsilon</m>（すべての <m>\theta</m> で）となるように選ぶ。積分を <m>|t| < \delta</m> と <m>|t|\ge\delta</m> に分けると</p>
+<M>|f*\Phi_N(\theta)-f(\theta)| \le \varepsilon\cdot\frac{\|\Phi_N\|_1}{1} + 2\|f\|_\infty\cdot\frac{1}{2\pi}\int_{|t|\ge\delta}|\Phi_N|</M>
+<p class="no-indent">第一項は（2）より <m>C\varepsilon</m> で押さえられ、第二項は（3）より <m>N\to\infty</m> で零。<em><m>\theta</m> に依らない評価なので一様収束である。</em></p>
+<p class="no-indent">点 <m>\theta_0</m> での連続性しか仮定しない場合も同じ議論が通る（<m>\delta</m> が <m>\theta_0</m> にのみ依存する）。左右極限の場合は、<m>\Phi_N</m> が偶であることから <m>|t| < \delta</m> の積分を <m>t>0</m> と <m>t < 0</m> に分け、それぞれ <m>f(\theta_0^-)</m>・<m>f(\theta_0^+)</m> に半分の重みで近づくことを見る。</p>
+<p class="no-indent">（2）は <m>C(\mathbb{T})</m> の稠密性（<ref t="thm-cc-chumitsu"/>）と、<m>\|f*\Phi_N\|_p\le\|\Phi_N\|_1\|f\|_p</m>（ミンコフスキーの積分不等式）から（1）を移す。<span class="yogo-hl">「稠密な部分集合で収束＋一様有界」という型の議論が、また使われている。</span></p>
+</div>
+
+<div class="teiri" id="thm-fejer-shomei">
+<h4>フェイェールの定理</h4>
+<p class="no-indent"><m>f\in C(\mathbb{T})</m> なら <m>\sigma_Nf\to f</m> 一様に。<m>f\in L^p(\mathbb{T})</m>（<m>1\le p < \infty</m>）なら <m>\|\sigma_Nf-f\|_p\to0</m>。<m>f</m> が <m>\theta_0</m> で左右極限をもつなら <m>\sigma_Nf(\theta_0)\to\frac12(f(\theta_0^+)+f(\theta_0^-))</m>。</p>
+<p class="no-indent">とくに<em>三角多項式は <m>C(\mathbb{T})</m> で一様稠密</em>であり、フーリエ係数がすべて零なら <m>f=0</m>。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><ref t="prop-kaku-hikaku"/>より <m>(K_N)</m> は正の近似単位元だから、<ref t="thm-kinji-tan-i"/>を適用するだけである。<m>\sigma_Nf</m> は三角多項式なので稠密性が従い、<m>\hat f\equiv0</m> なら <m>\sigma_Nf\equiv0</m> で <m>f=0</m>。</p>
+<p><em>この証明はフーリエ級数の一意性を使っていない</em>——核の三つの性質だけから出ている。<span class="yogo-hl">したがって第80章で先取りして使った<ref t="thm-fejer"/>に循環はない。</span></p>
+</div>
+
+<div class="rei" id="rei-yoi-kaku">
+<h4>良い核・悪い核</h4>
+<p class="no-indent">（1）<strong>フェイェール核。</strong>正の近似単位元。<em>チェザロ平均（部分和の算術平均）に対応する。</em></p>
+<p>（2）<strong>ポアソン核</strong> <m>P_r(\theta)=\frac{1-r^2}{1-2r\cos\theta+r^2}</m>（<m>r\uparrow1</m>）。正で、積分が <m>1</m>、原点以外で零に収束する。<em>アーベル平均 <m>\sum r^{|n|}\hat f(n)e^{in\theta}</m> に対応し、第94章の調和関数の境界値の理論の中核にある。</em></p>
+<p>（3）<strong>熱核</strong> <m>H_t(\theta)=\sum_n e^{-n^2t}e^{in\theta}</m>（<m>t\downarrow0</m>）。正の近似単位元。<em>フーリエがそもそも解こうとしていた熱方程式の解が、核との畳み込みとして現れる</em>——<span class="yogo-hl">第80章の出発点に戻ってきた。</span></p>
+<p>（4）<strong>ディリクレ核。</strong>近似単位元<em>ではない</em>（<m>\|D_N\|_1\to\infty</m>）。<em>部分和という最も自然な近似が、実は最も扱いにくい。</em></p>
+<p>（5）<strong>ド・ラ・ヴァレ–プーサン核</strong> <m>V_N=2K_{2N+1}-K_N</m>。符号を変えるが <m>\|V_N\|_1\le3</m> で一様有界なので近似単位元である。<em>正でない近似単位元の例で、しかも <m>|n|\le N</m> でフーリエ係数を保つ</em>——「なめらかな切り落とし」の原型である。</p>
+</div>
+
+<h3 id="s81-3">各点収束の十分条件</h3>
+
+<div class="teiri" id="thm-dini">
+<h4>ディニの判定法</h4>
+<p class="no-indent"><m>f\in L^1(\mathbb{T})</m>、<m>\theta_0\in\mathbb{T}</m> とし、ある <m>\delta>0</m> について</p>
+<M>\int_{|t| < \delta} \frac{|f(\theta_0-t)-f(\theta_0)|}{|t|}\,dt < \infty</M>
+<p class="no-indent">が成り立つなら <m>S_Nf(\theta_0)\to f(\theta_0)</m>。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><m>S_Nf(\theta_0)-f(\theta_0)=\frac{1}{2\pi}\int(f(\theta_0-t)-f(\theta_0))D_N(t)\,dt</m> と書ける。<m>g(t)=f(\theta_0-t)-f(\theta_0)</m> と置き、</p>
+<M>D_N(t) = \frac{\sin((N+\tfrac12)t)}{\sin(t/2)}</M>
+<p class="no-indent">を代入する。<m>h(t)=g(t)/\sin(t/2)</m> と置けば、仮定と <m>|\sin(t/2)|\asymp|t|</m>（<m>|t| < \delta</m>）から <m>h\in L^1(|t| < \delta)</m>。<m>|t|\ge\delta</m> では <m>1/\sin(t/2)</m> が有界なので、そこでも <m>h\in L^1</m>。したがって <m>h\in L^1(\mathbb{T})</m> で</p>
+<M>S_Nf(\theta_0)-f(\theta_0) = \frac{1}{2\pi}\int h(t)\sin\big((N+\tfrac12)t\big)\,dt \to 0</M>
+<p class="no-indent">最後の収束はリーマン–ルベーグの補題（<ref t="prop-fourier-kihon"/>（5））である（<m>\sin((N+\frac12)t)</m> を <m>e^{iNt}</m> の組み合わせに展開する）。</p>
+<p><span class="yogo-hl">ディリクレ核の悪さを、関数 <m>f</m> の側の滑らかさで打ち消している。</span><em>核だけを見ていては何も言えないが、両者を合わせれば収束が出る。</em></p>
+</div>
+
+<div class="rei" id="rei-dini-kei">
+<h4>ディニの判定法から出る系</h4>
+<p class="no-indent">（1）<m>f</m> が <m>\theta_0</m> で微分可能なら、あるいはヘルダー連続（<m>|f(\theta_0-t)-f(\theta_0)|\le C|t|^\alpha</m>、<m>\alpha>0</m>）なら収束する。<em>連続だけでは足りないが、ほんのわずかな余分の滑らかさで十分である。</em></p>
+<p>（2）<strong>ジョルダンの判定法。</strong><m>f</m> が <m>\theta_0</m> の近くで有界変動（<ref t="def-yukai-hendo"/>）なら <m>S_Nf(\theta_0)\to\frac12(f(\theta_0^+)+f(\theta_0^-))</m>。<em>跳びのある関数でも、跳びの中点に収束する。</em>方形波で実際にそうなっている。証明はジョルダン分解（<ref t="thm-jordan-bunkai-kansu"/>）で単調関数に帰着し、第二平均値定理を使う。</p>
+<p>（3）<strong>局所性。</strong>ディニの条件は <m>\theta_0</m> の近傍のみに関する。<span class="yogo-hl">つまり各点収束は局所的な性質である</span>——遠くで <m>f</m> がどれほど荒れていても、この点の近くでなめらかなら収束する。<em>一方でフーリエ係数は大域的な量である。</em>この食い違いが、フーリエ解析の技術的な難しさの源泉である（リーマンの局所化原理）。</p>
+</div>
+
+<div class="hanrei" id="cex-ichiyou-shusoku-fu">
+<h4>連続でも部分和は暴れる</h4>
+<p class="no-indent"><ref t="rei-fourier-hassan"/>で示したように、部分和が一点で発散する連続関数がある。<em>フェイェール平均をとれば、同じ関数について一様収束する</em>（<ref t="thm-fejer-shomei"/>）。</p>
+<p><span class="yogo-hl">「級数が発散する」ことと「係数が情報を失っている」ことは、まったく別である。</span><em>係数は <m>f</m> を完全に決めている</em>（一意性）。ただ、部分和という<em>足し方</em>が悪いのである。</p>
+<p>これは級数論で古くから知られた区別である：ある総和法で発散する級数が、別の総和法（チェザロ、アーベル）で収束する。<em>フーリエ級数の場合、チェザロ平均とアーベル平均はどちらも常にうまくいく。</em>にもかかわらず部分和を調べる価値があるのは、<m>L^p</m> ノルムでの収束（第82章）や、ほとんどいたるところの収束（第83章）が部分和について成り立つかが、独立に深い問題だからである。</p>
+</div>
+
+<figure>
+<svg viewBox="0 0 470 296" width="470" height="296" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">核の形が、収束の可否をそのまま決めている</text>
+
+  <rect x="14" y="26" width="442" height="140" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+
+  <text x="120" y="42" font-size="7" text-anchor="middle" font-weight="700" fill="#8c2f1e">ディリクレ核　符号が振れる</text>
+  <line x1="28" y1="110" x2="212" y2="110" stroke="#8a8a88" stroke-width="0.7"/>
+  <line x1="120" y1="56" x2="120" y2="152" stroke="#8a8a88" stroke-width="0.7"/>
+  <path d="M 34 110 L 38 118 L 42 110 L 46 100 L 50 110 L 54 124 L 58 110 L 62 92 L 66 110 L 70 132 L 74 110 L 78 84 L 82 110 L 86 142 L 90 110 L 94 74 L 98 110 L 102 148 L 106 110 L 110 66 L 114 110 L 117 74 L 120 60 L 123 74 L 126 110 L 130 66 L 134 110 L 138 148 L 142 110 L 146 74 L 150 110 L 154 142 L 158 110 L 162 84 L 166 110 L 170 132 L 174 110 L 178 92 L 182 110 L 186 124 L 190 110 L 194 100 L 198 110 L 202 118 L 206 110" fill="none" stroke="#a03b2e" stroke-width="1.1"/>
+  <text x="120" y="162" font-size="6.2" text-anchor="middle" fill="#8c2f1e">絶対値の積分が log N で発散する</text>
+
+  <text x="348" y="42" font-size="7" text-anchor="middle" font-weight="700" fill="#1e4a41">フェイェール核　常に正</text>
+  <line x1="256" y1="140" x2="440" y2="140" stroke="#8a8a88" stroke-width="0.7"/>
+  <line x1="348" y1="56" x2="348" y2="152" stroke="#8a8a88" stroke-width="0.7"/>
+  <path d="M 262 139 L 270 137 L 278 139 L 286 133 L 294 138 L 302 126 L 310 136 L 318 112 L 326 130 L 334 84 L 341 66 L 348 60 L 355 66 L 362 84 L 370 130 L 378 112 L 386 136 L 394 126 L 402 138 L 410 133 L 418 139 L 426 137 L 434 139" fill="#e6efe9" stroke="#2f6b5f" stroke-width="1.2"/>
+  <text x="348" y="162" font-size="6.2" text-anchor="middle" fill="#1e4a41">絶対値の積分はいつでも 1 のまま</text>
+
+  <rect x="14" y="176" width="216" height="112" rx="4" fill="#f4f1ea" stroke="#8a6b2c"/>
+  <text x="24" y="191" font-size="7.6" font-weight="700" fill="#5a4520">近似単位元の三条件</text>
+  <text x="24" y="208" font-size="6.6" fill="#5a4520">① 積分が 1（質量を保つ）</text>
+  <text x="24" y="220" font-size="6.6" fill="#5a4520">② 絶対値の積分が一様に有界</text>
+  <text x="24" y="232" font-size="6.6" fill="#5a4520">③ 原点の外へ出る質量が零に行く</text>
+  <text x="24" y="249" font-size="6.4" fill="#1e4a41">満たすもの　フェイェール・ポアソン・熱核</text>
+  <text x="24" y="261" font-size="6.4" fill="#8c2f1e">満たさないもの　ディリクレ核（②が破れる）</text>
+  <text x="24" y="278" font-size="6.4" fill="#6b2a48">②が破れると、一様有界性の原理が反例を生む</text>
+
+  <rect x="240" y="176" width="216" height="112" rx="4" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="250" y="191" font-size="7.6" font-weight="700" fill="#1e4a41">部分和を救う二つの道</text>
+  <text x="250" y="208" font-size="6.6" fill="#1e4a41">道その一　足し方を変える</text>
+  <text x="250" y="220" font-size="6.4" fill="#5a4520">　平均をとる → いつでも一様収束</text>
+  <text x="250" y="234" font-size="6.6" fill="#1e4a41">道その二　関数に条件を付ける</text>
+  <text x="250" y="246" font-size="6.4" fill="#5a4520">　ディニ・ジョルダンの判定法</text>
+  <text x="250" y="258" font-size="6.4" fill="#5a4520">　微分可能・ヘルダー・有界変動なら収束</text>
+  <text x="250" y="275" font-size="6.4" fill="#8c2f1e">核の悪さを、関数の滑らかさで打ち消す</text>
+</svg>
+<figcaption>ディリクレ核とフェイェール核。前者は符号を変え絶対値の積分が対数的に発散し、後者は常に正で積分が一定である。この差が各点収束の可否を決める。</figcaption>
+</figure>
+
+<div class="star2">
+<h4>★★ 学部後半——総和法、ギブズ現象、そして共役関数</h4>
+
+<p><strong>総和法の階層。</strong>級数 <m>\sum a_n</m> に対し、部分和 <m>s_N</m>、チェザロ平均 <m>\frac{1}{N+1}\sum_{k\le N}s_k</m>、アーベル平均 <m>\lim_{r\uparrow1}\sum a_nr^n</m> を考える。<em>「部分和が収束すればチェザロも収束し、チェザロが収束すればアーベルも収束する」</em>——逆は成り立たない。<span class="yogo-hl">この階層が、フェイェール核とポアソン核の「良さ」の順序に対応している。</span></p>
+
+<p><em>タウバー型定理</em>は、逆向きを回復する条件を与える：<m>\sum a_n</m> がアーベル総和可能で <m>na_n\to0</m> なら収束する（タウバー）。ハーディ–リトルウッドは条件を <m>na_n</m> の有界性に弱めた。<em>フーリエ級数に適用すると、<m>n\hat f(n)\to0</m> と <m>f</m> の連続性から一様収束が出る</em>（ハーディの定理）。</p>
+
+<p><strong>ギブズ現象の計算。</strong>方形波 <m>f</m> の部分和を跳びの近くで見る。<m>\theta_N=\pi/(N+1)</m> あたりで <m>S_Nf</m> は最大値をとり、</p>
+<M>S_Nf(\theta_N) \to \frac{2}{\pi}\int_0^\pi\frac{\sin t}{t}\,dt = \frac{2}{\pi}\,\mathrm{Si}(\pi) \approx 1.1789</M>
+<p><em>跳びの高さの約 <m>9\%</m> だけ超過する。</em><span class="yogo-hl">原因はディリクレ核の振動で、平均をとると振動が打ち消されるためフェイェール平均では超過が起こらない。</span>画像処理や信号処理で「リンギング」として現れるのは、この現象である。</p>
+
+<p><strong>共役関数とヒルベルト変換。</strong>フーリエ級数の各項に <m>-i\,\mathrm{sgn}(n)</m> をかけたものを <m>f</m> の<strong>共役関数</strong> <m>\tilde f</m> という。核は</p>
+<M>\tilde D_N(\theta) = -i\sum_{0 < |n|\le N}\mathrm{sgn}(n)e^{in\theta}</M>
+<p>で、極限は <m>\cot(\theta/2)</m> という<em>可積分でない</em>核になる。したがって <m>\tilde f</m> は素朴な積分では定義できず、<strong>主値</strong>をとる必要がある。<em>リースの定理：<m>1 < p < \infty</m> のとき <m>f\mapsto\tilde f</m> は <m>L^p</m> で有界。</em><m>p=1</m> と <m>p=\infty</m> では成り立たない。</p>
+
+<p><span class="yogo-hl">この作用素が、<m>L^p</m> でのフーリエ級数の収束（第82章）と、特異積分の理論全体の原型である。</span><em>正則関数の実部と虚部の関係（第94章）、ポアソン核と共役ポアソン核の対、リース変換——すべてこの一つの作用素から広がる。</em></p>
+
+<p><strong>仮定を外すと。</strong>近似単位元の条件（3）を落とすと、質量が原点から離れた場所に残り、極限は <m>f</m> の平行移動や平均になる。条件（2）を落とすとディリクレ核と同じ破綻が起こる。<em>条件（1）を落とせば極限が定数倍ずれる。三つとも外せない。</em></p>
+</div>
+
+<div class="star3">
+<h4>★★★ 大学院——最大作用素と重みつき理論</h4>
+
+<p><strong>最大作用素。</strong>各点収束を論じる正しい枠組みは、最大作用素の有界性である。<m>S^*f=\sup_N|S_Nf|</m>、<m>M f=\sup_{r>0}\frac{1}{2r}\int_{|t| < r}|f(\theta-t)|dt</m>（ハーディ–リトルウッドの最大作用素）と置く。<em>マルチンキェヴィチの原理：最大作用素が <m>L^p</m> で有界なら、稠密な部分集合での収束からほとんどいたるところの収束が従う。</em></p>
+
+<p><m>M</m> が <m>L^p</m>（<m>p>1</m>）で有界かつ <m>L^1</m> から弱 <m>L^1</m> へ有界であること（<em>ハーディ–リトルウッドの最大不等式</em>）は、ヴィタリの被覆補題（<ref t="thm-vitali"/>）から出る。<span class="yogo-hl">第53章の被覆補題が、ここで解析的な不等式に変わる。</span>これがルベーグの微分定理（<ref t="thm-bisekibun-kihon"/>）の証明の骨格でもあった。</p>
+
+<p><strong><m>S^*</m> の有界性がカールソンの定理。</strong><m>\|S^*f\|_{L^2}\le C\|f\|_{L^2}</m> が第83章で扱うカールソンの定理の実質である。<em>証明は「時間–周波数」平面の分解（タイル分解）を要し、ハーディ–リトルウッドの最大不等式のような単純な被覆論では届かない。</em>フェファーマンの別証明とレイシー–タイルの位相空間的な証明が、現代の調和解析の技術の源になった。</p>
+
+<p><strong>重みつき理論。</strong>重み <m>w\ge0</m> について <m>L^p(w)</m> でヒルベルト変換や最大作用素が有界になる条件は、<m>A_p</m> 条件</p>
+<M>\sup_I \left(\frac{1}{|I|}\int_I w\right)\left(\frac{1}{|I|}\int_I w^{-1/(p-1)}\right)^{p-1} < \infty</M>
+<p>である（マッケンホープト）。<em><m>A_p</m> 重みの理論は、特異積分・偏微分方程式の正則性・確率論のマルチンゲール理論を横断する。</em><span class="yogo-hl">ヒュトネンが解決した <m>A_2</m> 予想（作用素ノルムが <m>A_2</m> 定数に線形に依存する）は、鋭い定量的評価がどこまで可能かという問いに答えた（2012年）。</span></p>
+
+<p><strong>未解決。</strong>円板の乗子問題は解かれた（フェファーマン、1971年：<m>\mathbb{R}^n</m>（<m>n\ge2</m>）で球の特性関数による切り落としは <m>L^p</m>（<m>p\ne2</m>）で有界でない）。<em>一方、制限予想・カクヤ予想・束縛予想の連鎖は、多次元フーリエ解析の中心的な未解決問題として残っている。</em>カクヤ集合のハウスドルフ次元が空間の次元に等しいかという問いは、<span class="yogo-hl">第42章で扱った次元論が、フーリエ解析の最前線で決定的な役割を果たしている</span>ことの実例である（三次元の場合はワン–ザールが2025年に解決）。</p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li>ディリクレ核の閉じた表示を、等比級数の和から導け。</li>
+<li>フェイェール核が常に正であることを確かめよ。</li>
+<li>両方の核の積分が <m>1</m> であることを確かめよ。</li>
+<li>ポアソン核が正の近似単位元であることを確かめよ。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li>フェイェール核の閉じた表示を導け。<span class="haiten">（30点）</span></li>
+<li>ルベーグ定数が <m>\log N</m> の程度で発散することを示せ。<span class="haiten">（40点）</span></li>
+<li><ref t="thm-kinji-tan-i"/>（1）を書き下せ。<span class="haiten">（30点）</span></li>
+<li><ref t="thm-kinji-tan-i"/>（2）を、稠密性と一様有界性から示せ。<span class="haiten">（35点）</span></li>
+<li><ref t="thm-dini"/>を、リーマン–ルベーグの補題に帰着させて示せ。<span class="haiten">（40点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li>ジョルダンの判定法を、第二平均値定理を用いて示せ。<span class="haiten">（50点）</span></li>
+<li>ギブズ現象の超過量を計算せよ。<span class="haiten">（50点）</span></li>
+<li>ド・ラ・ヴァレ–プーサン核が近似単位元で、しかも低い周波数の係数を保つことを示せ。<span class="haiten">（45点）</span></li>
+<li>ハーディ–リトルウッドの最大不等式を、ヴィタリの被覆補題から示せ。<span class="haiten">（50点）</span></li>
+</ol>
+</div>
+</div>

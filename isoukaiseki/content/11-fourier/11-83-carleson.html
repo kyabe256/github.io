@@ -1,0 +1,199 @@
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>連続関数のフーリエ級数が発散する例は、どう作るのか。</li>
+<li>可積分関数では、どこまで悪くなりうるのか。</li>
+<li>二乗可積分なら救われる——それはなぜ、そして何が難しいのか。</li>
+</ul>
+</div>
+
+<h3 id="s83-1">発散する例を作る</h3>
+
+<p>第81章で、ディリクレ核のルベーグ定数が対数的に発散することを見た。<em>ここからは、二通りの道で反例に到達できる。</em>一つは一様有界性の原理による存在証明（非構成的）、もう一つは実際に関数を組み立てる構成である。<span class="yogo-hl">両方を見ることで、「発散が起こる仕組み」が具体的に分かる。</span></p>
+
+<div class="teiri" id="thm-dubois-reymond">
+<h4>デュ・ボワ–レーモンの定理</h4>
+<p class="no-indent"><m>f\in C(\mathbb{T})</m> で、<m>\sup_N|S_Nf(0)|=\infty</m> となるものが存在する。さらに、そのような <m>f</m> の全体は <m>C(\mathbb{T})</m> の<em>余第一類集合</em>である（つまり、発散する関数のほうが「ほとんど」である）。</p>
+<p class="no-indent">より強く、任意の第一類集合 <m>E\subset\mathbb{T}</m> に対し、<m>E</m> のすべての点で部分和が発散する連続関数が存在する。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><strong>非構成的な証明。</strong><m>\Lambda_N(f)=S_Nf(0)=\frac{1}{2\pi}\int f(-t)D_N(t)dt</m> は <m>C(\mathbb{T})</m> 上の有界線形汎関数で、そのノルムは <m>\|D_N\|_1</m>（正確には <m>D_N</m> の符号に合わせた関数で近似的に達成される）。<ref t="prop-kaku-hikaku"/>より <m>\|\Lambda_N\|\to\infty</m>。<em>一様有界性の原理（<ref t="thm-ichiyou-yukai"/>）により、<m>\sup_N|\Lambda_N(f)|=\infty</m> となる <m>f</m> が存在する。</em></p>
+<p class="no-indent">さらに、そのような <m>f</m> の全体は <m>\bigcap_M\bigcup_N\{f:|\Lambda_Nf|>M\}</m> という稠密 <m>G_\delta</m> 集合を含む。<span class="yogo-hl">ベールのカテゴリー定理（第27章）により、これは余第一類である</span>——<em>発散は例外でなく典型なのである。</em></p>
+<p class="no-indent"><strong>構成的な証明。</strong>共役ディリクレ核を使って、<m>N</m> 次の三角多項式 <m>p_N</m> で <m>\|p_N\|_\infty\le1</m>、<m>|S_{M}p_N(0)|\ge c\log N</m>（ある <m>M\le N</m>）となるものを作る。具体的には</p>
+<M>\tilde D_N(\theta) = \sum_{k=1}^{N}\frac{\sin(k\theta)}{k}</M>
+<p class="no-indent">の部分和を組み合わせる（この級数の部分和は一様有界だが、原点近くでのずれが <m>\log N</m> の程度に育つ）。次に指数を急速に増やして</p>
+<M>f(\theta) = \sum_{j=1}^{\infty} \frac{1}{j^2}\, p_{N_j}(\theta)\,e^{i m_j\theta}, \qquad N_j = 2^{2^j},\ m_j \gg N_{j-1}</M>
+<p class="no-indent">と置く。<em>各塊の周波数帯が重ならないように <m>m_j</m> をとるのが要点である。</em><m>\sum1/j^2 < \infty</m> なので <m>f</m> は一様収束して連続だが、<m>j</m> 番目の塊を見たときの部分和は <m>\frac{1}{j^2}\cdot c\log N_j\approx\frac{c\,2^j}{j^2}\to\infty</m>。</p>
+<p><span class="yogo-hl">仕掛けは「大きさは小さいが部分和が大きい塊」を、周波数を離しながら重ねることである。</span><em>この「周波数帯を分離して重ねる」手口は、フーリエ解析の反例構成のほぼすべてに現れる。</em></p>
+</div>
+
+<div class="hanrei" id="cex-kolmogorov">
+<h4>コルモゴロフの例</h4>
+<p class="no-indent"><m>f\in L^1(\mathbb{T})</m> で、<em>すべての点</em>で <m>\sup_N|S_Nf(\theta)|=\infty</m> となるものが存在する（コルモゴロフ、1926年。1923年にはほとんどいたるところ発散する例）。</p>
+<p class="no-indent">構成の核は、<strong>正の測度を一点に集めすぎない核</strong>を作ることである。<m>n_1 < \cdots < n_k</m> を適当に選び、</p>
+<M>g_k = \frac{1}{k}\sum_{j=1}^{k} \varphi_{\varepsilon}(\theta-a_j), \qquad \varphi_\varepsilon = \frac{1}{2\varepsilon}\chi_{[-\varepsilon,\varepsilon]}</M>
+<p class="no-indent">という「質量を <m>k</m> 個の点 <m>a_1,\dots,a_k</m> にばらまいた <m>L^1</m> 関数」を作ると、<m>\|g_k\|_1=1</m> のまま、どの点から見てもどれかの山が「近すぎる」状態になり、部分和が <m>\log k</m> の程度に膨らむ。<em>これを重ねる。</em></p>
+<p><span class="yogo-hl">結論：<m>L^1</m> では各点収束は完全に破綻する。</span><em>にもかかわらずフェイェール平均はほとんどいたるところ <m>f</m> に収束する（ルベーグの微分定理から）。</em>ここでも、悪いのは部分和という足し方である。</p>
+</div>
+
+<h3 id="s83-2">カールソンの定理</h3>
+
+<div class="teiri" id="thm-carleson">
+<h4>カールソン–ハントの定理</h4>
+<p class="no-indent">（1）<m>f\in L^2(\mathbb{T})</m> ならば <m>S_Nf(\theta)\to f(\theta)</m> がほとんどすべての <m>\theta</m> で成り立つ（カールソン、1966年）。<br>
+（2）より一般に <m>f\in L^p(\mathbb{T})</m>（<m>1 < p\le\infty</m>）でも同様（ハント、1968年）。<br>
+（3）実質的な内容は<strong>最大作用素の有界性</strong>である：</p>
+<M>S^*f(\theta) = \sup_N |S_Nf(\theta)| \qquad \text{について} \qquad \|S^*f\|_{L^p} \le C_p\|f\|_{L^p} \quad (1 < p < \infty)</M>
+</div>
+
+<div class="chui">
+<h4>なぜ最大作用素なのか</h4>
+<p class="no-indent">ほとんどいたるところの収束を示す標準的な手順は、次の三段である。</p>
+<p class="no-indent">（1）<strong>稠密な部分集合で収束を示す。</strong>三角多項式では <m>S_Nf=f</m>（<m>N</m> が十分大きいとき）なので自明。<br>
+（2）<strong>最大作用素の弱型評価を示す。</strong><m>|\{S^*f>\lambda\}|\le C\|f\|_p^p/\lambda^p</m>。<br>
+（3）<strong>両者を合わせる。</strong><m>f=g+h</m>（<m>g</m> は三角多項式、<m>\|h\|_p</m> 小）と分け、</p>
+<M>\limsup_N|S_Nf-f| \le \limsup_N|S_Nh| + |h| \le S^*h + |h|</M>
+<p class="no-indent"><em>右辺は（2）により、大きな値をとる集合の測度が小さい。</em><m>\varepsilon\to0</m> として結論を得る。</p>
+<p><span class="yogo-hl">この手順は、ルベーグの微分定理（<ref t="thm-bisekibun-kihon"/>）の証明とまったく同じ骨格である</span>——そこでは最大作用素がハーディ–リトルウッドのもので、ヴィタリの被覆補題（<ref t="thm-vitali"/>）から弱型評価が出た。<em>カールソンの定理が難しいのは、<m>S^*</m> の弱型評価が被覆論では出ないからである。</em></p>
+</div>
+
+<div class="rei" id="rei-carleson-nan">
+<h4>何が難しいのか</h4>
+<p class="no-indent">ハーディ–リトルウッドの最大作用素との違いを並べる。</p>
+<p class="no-indent">（1）<strong>核が正でない。</strong><m>M f</m> は正の核の平均だから、被覆論が効く。<m>S^*</m> はディリクレ核（符号が振れ、絶対値の積分が発散）の上限である。</p>
+<p class="no-indent">（2）<strong>変調に不変である。</strong><m>S_N(e^{ik\theta}f)=e^{ik\theta}S_{N-k}f</m> の形の関係があるため、<em><m>S^*</m> は平行移動・拡大縮小だけでなく<strong>周波数の平行移動</strong>にも不変</em>。<span class="yogo-hl">この三重の対称性が、被覆論的な手法を無効にする。</span>不変性が多いほど、評価は難しくなる。</p>
+<p class="no-indent">（3）<strong>時間と周波数を同時に分解する必要がある。</strong>カールソンの証明は、位相平面（位置と周波数の平面）を<strong>タイル</strong>——面積 <m>1</m> の長方形——に分け、各タイルへの射影を制御する。<em>ハイゼンベルクの不確定性から、面積 <m>1</m> より細かくは分けられない。</em>この極限の細かさで議論するのが技術的な核心である。</p>
+<p class="no-indent">（4）<strong>例外集合が本当に必要である。</strong>結論は「ほとんどいたるところ」であって「いたるところ」ではない。<em>実際、どんな測度零の集合 <m>E</m> に対しても、<m>E</m> 上で発散する連続関数が存在する</em>（カハネ–カツネルソン、1966年）。<span class="yogo-hl">カールソンの定理とカハネ–カツネルソンの定理が合わさって、発散集合の特徴づけが完成する：発散しうる集合はちょうど測度零の集合である。</span></p>
+</div>
+
+<div class="teiri" id="thm-kahane-katznelson">
+<h4>カハネ–カツネルソンの定理</h4>
+<p class="no-indent">任意の測度零の集合 <m>E\subset\mathbb{T}</m> に対し、<m>f\in C(\mathbb{T})</m> で <m>E</m> のすべての点でフーリエ級数が発散するものが存在する。</p>
+<p class="no-indent">したがって、<m>f\in L^2</m> のフーリエ級数の発散集合として現れうる集合は、<em>ちょうど測度零の集合である</em>（カールソンの定理と合わせて）。</p>
+</div>
+
+<div class="chui">
+<h4>百五十年の問いに、どう決着がついたか</h4>
+<p class="no-indent">年表で見ると、この問題の歩みが分かる。</p>
+<p class="no-indent"><strong>1807年</strong>　フーリエが「任意の関数は三角級数で表せる」と主張。<br>
+<strong>1829年</strong>　ディリクレが、区分的に単調な関数について収束を証明（<ref t="rei-dini-kei"/>（2）の原型）。<br>
+<strong>1873年</strong>　デュ・ボワ–レーモンが、連続関数で発散する例を構成。<em>フーリエの主張は素朴な形では偽だと判明。</em><br>
+<strong>1900年</strong>　フェイェールが、平均をとれば常に収束することを証明（十九歳）。<br>
+<strong>1913年</strong>　ルジンが「<m>L^2</m> ならほとんどいたるところ収束する」と予想。<br>
+<strong>1926年</strong>　コルモゴロフが、<m>L^1</m> でいたるところ発散する例を構成。<em>予想の <m>L^2</m> という仮定が本質的だと分かる。</em><br>
+<strong>1966年</strong>　カールソンがルジンの予想を証明。同年、カハネ–カツネルソンが逆向きの最適性を示す。<br>
+<strong>1968年</strong>　ハントが <m>L^p</m>（<m>p>1</m>）へ拡張。</p>
+<p><em>五十三年かかった予想が、その証明のために新しい手法（時間–周波数解析）を要求し、それが現代の調和解析を作った。</em><span class="yogo-hl">問いの難しさが、道具の水準を引き上げた典型である。</span></p>
+</div>
+
+<figure>
+<svg viewBox="0 0 470 288" width="470" height="288" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">どこまで悪くなりうるか——発散集合の完全な特徴づけ</text>
+
+  <rect x="14" y="26" width="442" height="104" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+
+  <text x="118" y="42" font-size="6.8" text-anchor="middle" font-weight="700" fill="#8c2f1e">可積分（一乗）</text>
+  <rect x="34" y="52" width="168" height="34" rx="3" fill="#f0e2de" stroke="#a03b2e" stroke-width="1"/>
+  <text x="118" y="66" font-size="6.2" text-anchor="middle" fill="#8c2f1e">いたるところ発散しうる</text>
+  <text x="118" y="78" font-size="6" text-anchor="middle" fill="#6a6a68">コルモゴロフ 1926</text>
+  <text x="118" y="100" font-size="6" text-anchor="middle" fill="#6a6a68">部分和は完全に破綻する</text>
+  <text x="118" y="115" font-size="6" text-anchor="middle" fill="#1e4a41">ただし平均をとれば救われる</text>
+
+  <text x="352" y="42" font-size="6.8" text-anchor="middle" font-weight="700" fill="#1e4a41">二乗可積分</text>
+  <rect x="268" y="52" width="168" height="34" rx="3" fill="#e6efe9" stroke="#2f6b5f" stroke-width="1"/>
+  <text x="352" y="66" font-size="6.2" text-anchor="middle" fill="#1e4a41">発散するのは測度零の上だけ</text>
+  <text x="352" y="78" font-size="6" text-anchor="middle" fill="#6a6a68">カールソン 1966</text>
+  <text x="352" y="100" font-size="6" text-anchor="middle" fill="#6a6a68">しかも測度零ならどれでも起こりうる</text>
+  <text x="352" y="115" font-size="6" text-anchor="middle" fill="#8c2f1e">カハネ–カツネルソンが最適性を与える</text>
+
+  <rect x="14" y="140" width="216" height="140" rx="4" fill="#f4f1ea" stroke="#8a6b2c"/>
+  <text x="24" y="155" font-size="7.6" font-weight="700" fill="#5a4520">ほとんど全点収束を示す型</text>
+  <text x="24" y="172" font-size="6.6" fill="#5a4520">① 稠密な部分集合で収束を示す</text>
+  <text x="24" y="184" font-size="6.6" fill="#5a4520">② 最大作用素の弱型評価を示す</text>
+  <text x="24" y="196" font-size="6.6" fill="#5a4520">③ 二つを合わせる</text>
+  <text x="24" y="213" font-size="6.4" fill="#1e4a41">ルベーグの微分定理もこの型である</text>
+  <text x="24" y="225" font-size="6.4" fill="#1e4a41">そこでは②がヴィタリの被覆補題で出た</text>
+  <text x="24" y="242" font-size="6.6" fill="#8c2f1e">カールソンでは②が被覆論で出ない</text>
+  <text x="24" y="255" font-size="6.4" fill="#6b2a48">核が正でなく、周波数の移動にも不変だから</text>
+  <text x="24" y="270" font-size="6.4" fill="#6a6a68">位相平面をタイルに分ける必要がある</text>
+
+  <rect x="240" y="140" width="216" height="140" rx="4" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="250" y="155" font-size="7.6" font-weight="700" fill="#1e4a41">百五十年の歩み</text>
+  <text x="250" y="172" font-size="6.4" fill="#1e4a41">1807　フーリエが主張する</text>
+  <text x="250" y="184" font-size="6.4" fill="#1e4a41">1829　ディリクレが単調な場合を証明</text>
+  <text x="250" y="196" font-size="6.4" fill="#8c2f1e">1873　連続でも発散する例が出る</text>
+  <text x="250" y="208" font-size="6.4" fill="#1e4a41">1900　フェイェール　平均なら常に収束</text>
+  <text x="250" y="220" font-size="6.4" fill="#5a4520">1913　ルジンが二乗可積分の場合を予想</text>
+  <text x="250" y="232" font-size="6.4" fill="#8c2f1e">1926　一乗では全点発散しうると判明</text>
+  <text x="250" y="244" font-size="6.4" fill="#1e4a41">1966　カールソンが予想を証明</text>
+  <text x="250" y="262" font-size="6.4" fill="#6b2a48">証明のために新しい手法が要求され</text>
+  <text x="250" y="274" font-size="6.4" fill="#6b2a48">それが現代の調和解析を作った</text>
+</svg>
+<figcaption>フーリエ級数の各点収束をめぐる問題の全体像。発散しうる集合はちょうど測度零の集合であり、この特徴づけは一九六六年の二つの定理によって同時に完成した。</figcaption>
+</figure>
+
+<div class="star2">
+<h4>★★ 学部後半——時間–周波数平面とタイル</h4>
+
+<p><strong>不確定性が分解の限界を決める。</strong>関数 <m>f</m> を「位置 <m>x</m> のあたり、周波数 <m>\xi</m> のあたり」に局在した部品に分けたい。<em>ところが位置の広がり <m>\Delta x</m> と周波数の広がり <m>\Delta\xi</m> には</em></p>
+<M>\Delta x \cdot \Delta\xi \ \ge\ \frac{1}{4\pi}</M>
+<p><em>という下限がある（ハイゼンベルクの不等式、第86章で証明する）。</em><span class="yogo-hl">したがって位相平面を分けるときの最小単位は、面積 <m>1</m> 程度の長方形——<strong>タイル</strong>——である。</span></p>
+
+<p><strong>カールソンの証明の骨格。</strong>各点 <m>\theta</m> について、上限をとる <m>N=N(\theta)</m> を可測関数として固定する（<em>線形化</em>）。すると評価すべきは</p>
+<M>\Big\| \sum_{|n|\le N(\theta)}\hat f(n)e^{in\theta} \Big\|_{L^2}</M>
+<p>である。位相平面を <m>\{(\theta,\xi):\xi\le N(\theta)\}</m> という領域で切り、これをタイルに分解して、各タイルの寄与を数える。<em>タイルは「選ばれた」ものと「選ばれない」ものに分かれ、選ばれたタイルが作る木構造（<strong>ツリー</strong>）ごとに評価する。</em>ツリー内では議論が単純になり、ツリーの個数の評価が全体を決める。</p>
+
+<p><strong>フェファーマンの証明（1973年）。</strong>カールソンの証明を組合せ論的に整理し直したもので、現代の標準的な説明になっている。レイシー–タイルは同じ手法を<strong>双線形ヒルベルト変換</strong></p>
+<M>H(f,g)(x) = \mathrm{p.v.}\int f(x-t)g(x+t)\frac{dt}{t}</M>
+<p>に適用し、カルデロンの三十年来の問題を解決した（1997年）。<em>カールソンの技術が、別の問題を解く道具として再利用された。</em></p>
+
+<p><strong>仮定を外すと。</strong><m>p=1</m> ではコルモゴロフの反例があるので、<m>p>1</m> は外せない。<em>ただし <m>L\log L\log\log L</m> という <m>L^1</m> と <m>L^p</m> のあいだのクラスでは収束する（シェーグレン、アントノフ）。</em>逆に <m>L^1</m> に少しでも近づけると反例が出る。<span class="yogo-hl">境目は <m>L\log L</m> の近傍にあり、正確な位置はまだ完全には分かっていない。</span></p>
+</div>
+
+<div class="star3">
+<h4>★★★ 大学院——発散集合の構造と多次元</h4>
+
+<p><strong>ハウスドルフ次元。</strong>カールソンの定理は発散集合が測度零だと言うが、その<em>大きさ</em>はもっと細かく測れる。<m>f\in L^2</m> の発散集合のハウスドルフ次元は <m>0</m> になりうるか、それとも <m>1</m> に近づけるか。<span class="yogo-hl">カハネ–カツネルソンの構成は次元 <m>1</m> の測度零集合（たとえば適当なカントール集合）でも動くので、発散集合の次元は <m>1</m> に達しうる。</span><em>第42章の次元論の道具が、ここで発散の「濃さ」を測る尺度になる。</em></p>
+
+<p><strong>多次元の球形部分和。</strong><m>\mathbb{T}^d</m>（<m>d\ge2</m>）では、部分和の取り方が一意でない。<em>正方形部分和（各座標で切る）ならフビニでカールソンに帰着できるが、球形部分和 <m>\sum_{|n|\le R}</m> は本質的に難しい。</em>フェファーマンの反例（第82章★★★）により、球形部分和は <m>L^p</m>（<m>p\ne2</m>）でノルム収束しない。<span class="yogo-hl"><m>L^2</m> での球形部分和のほとんどいたるところ収束は、<m>d\ge2</m> で未解決である。</span></p>
+
+<p><strong>ボヘナー–リース平均。</strong>切り落としを滑らかにした <m>\sum(1-|n|^2/R^2)_+^\delta\hat f(n)e^{in\theta}</m> は、<m>\delta>(d-1)/2</m> なら扱いやすい。<em>臨界指数 <m>\delta=(d-1)(1/p-1/2)-1/2</m> でのノルム有界性が<strong>ボヘナー–リース予想</strong>で、<m>d=2</m> ではカルレソン–ショーグレンとフェファーマンによって解決済み、<m>d\ge3</m> では未解決。</em>この予想は制限予想・カクヤ予想と論理的に連鎖しており、ボヘナー–リースが解ければ制限が、制限が解ければカクヤが従う。</p>
+
+<p><strong>エルゴード理論との対応。</strong>バーコフの個別エルゴード定理（時間平均がほとんど確実に空間平均に収束する）も、最大作用素の弱型評価から同じ三段の手順で出る。<em>ブルガンのポリノミアル・エルゴード定理——<m>\frac1N\sum_{n\le N}f(T^{n^2}x)</m> がほとんど確実に収束する——は、その証明に円周法（整数論の技法）と時間–周波数解析を同時に使う。</em><span class="yogo-hl">「ほとんどいたるところ収束する」という一つの型の問いが、解析・確率・整数論を横断して同じ難しさで現れる。</span></p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li>ルベーグ定数が発散することから、汎関数の族が一様有界でないことを確かめよ。</li>
+<li>三角多項式については <m>S_Nf=f</m> が大きい <m>N</m> で成り立つことを確かめよ。</li>
+<li>フェイェール平均がほとんどいたるところ収束することを、ルベーグの微分定理から説明せよ。</li>
+<li>発散集合が測度零であることと、測度零な集合すべてが発散集合になりうることの、二つの主張の関係を述べよ。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li><ref t="thm-dubois-reymond"/>を一様有界性の原理から示せ。<span class="haiten">（30点）</span></li>
+<li>発散する連続関数の全体が余第一類であることを示せ。<span class="haiten">（35点）</span></li>
+<li>「稠密集合での収束＋最大作用素の弱型評価」からほとんどいたるところの収束が出ることを示せ。<span class="haiten">（40点）</span></li>
+<li><m>S^*</m> が周波数の平行移動に不変であることを確かめ、なぜそれが評価を難しくするか説明せよ。<span class="haiten">（35点）</span></li>
+<li>ルベーグの微分定理を、同じ三段の手順で証明し直せ。<span class="haiten">（40点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li>周波数帯を分離して重ねる手口で、連続だが部分和が一点で発散する関数を構成せよ。<span class="haiten">（50点）</span></li>
+<li>不確定性から、位相平面の分解の最小単位が面積 <m>1</m> であることを説明せよ。<span class="haiten">（45点）</span></li>
+<li>正方形部分和については多次元でもカールソンの定理が成り立つことを、フビニの定理を使って示せ。<span class="haiten">（45点）</span></li>
+<li>バーコフの個別エルゴード定理を、最大エルゴード不等式から導け。<span class="haiten">（50点）</span></li>
+</ol>
+</div>
+</div>

@@ -1,0 +1,227 @@
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>なぜ三角関数で展開するのか。他の関数系ではいけないのか。</li>
+<li>フーリエ係数は、何を測っているのか。</li>
+<li>「展開できる」とは、どの意味での収束を指すのか。</li>
+</ul>
+</div>
+
+<h3 id="s80-1">熱が方程式を選んだ</h3>
+
+<p>フーリエ級数は、純粋な好奇心から生まれたのではない。<em>フーリエは熱伝導方程式を解こうとしていた（1807年、1822年）。</em>棒の上の温度分布 <m>u(x,t)</m> が</p>
+<M>\frac{\partial u}{\partial t} = \frac{\partial^2u}{\partial x^2}, \qquad u(0,t)=u(\pi,t)=0</M>
+<p>をみたすとする。<m>u=f(x)g(t)</m> と変数分離すれば <m>f''/f=g'/g=-\lambda</m>（定数）となり、境界条件から <m>f(x)=\sin(nx)</m>、<m>\lambda=n^2</m>、<m>g(t)=e^{-n^2t}</m>。<em>したがって</em></p>
+<M>u(x,t) = \sum_{n=1}^\infty b_n e^{-n^2t}\sin(nx)</M>
+<p>が解の候補である。<span class="yogo-hl">初期条件 <m>u(x,0)=f(x)</m> を満たすには、任意の関数 <m>f</m> が <m>\sum b_n\sin(nx)</m> と書けなければならない。</span><em>フーリエはこれを主張した。当時の数学者は信じなかった</em>——ラグランジュは公然と反対し、審査報告は留保つきだった。</p>
+
+<p>この主張が正しいかどうかを確かめる作業が、その後二百年の解析学をほぼ作った。<em>収束の概念、積分の概念、集合論、測度論——すべてこの問いから出てきた。</em>本書の第43章以降で積み上げてきた道具は、いまこの問いに答えるために揃えられたものである。</p>
+
+<div class="chui">
+<h4>なぜ三角関数なのか——三つの答え</h4>
+<p class="no-indent">（1）<strong>微分作用素の固有関数である。</strong><m>-d^2/dx^2</m> の固有関数が <m>\sin(nx)</m> であり、境界条件がその選択を決める。<em>第76章のスペクトル定理が、この事実を「グリーン関数の積分作用素の固有関数」として保証していた（<ref t="rei-sturm-liouville"/>）。</em>微分方程式を解くために対角化する——三角関数は、そのための基底である。</p>
+<p class="no-indent">（2）<strong>平行移動と両立する。</strong>円周上の関数を考えると、<m>e^{in\theta}</m> は回転 <m>\theta\mapsto\theta+\alpha</m> によって定数倍 <m>e^{in\alpha}</m> になる。<span class="yogo-hl">平行移動の作用を対角化する関数系が、指数関数系にほかならない</span>——これが群の表現論からの答えで、第79章のゲルファント変換がフーリエ変換になることと同じ事実である（<ref t="rei-gelfand-ouyou"/>（3））。</p>
+<p class="no-indent">（3）<strong>直交系である。</strong>次の計算がすべての出発点になる。</p>
+<M>\frac{1}{2\pi}\int_{-\pi}^{\pi} e^{in\theta}\overline{e^{im\theta}}\,d\theta = \frac{1}{2\pi}\int_{-\pi}^{\pi}e^{i(n-m)\theta}\,d\theta = \delta_{nm}</M>
+<p class="no-indent"><em>直交していれば係数が内積で読める。</em>これが第65章の正規直交基底の理論に載る条件である。</p>
+</div>
+
+<h3 id="s80-2">フーリエ係数と、三つの見方</h3>
+
+<div class="teigi" id="def-fourier-keisu">
+<h4>フーリエ係数とフーリエ級数</h4>
+<p class="no-indent"><m>f\in L^1(\mathbb{T})</m>（<m>\mathbb{T}=\mathbb{R}/2\pi\mathbb{Z}</m>、周期 <m>2\pi</m> の可積分関数）について</p>
+<M>\hat f(n) = \frac{1}{2\pi}\int_{-\pi}^{\pi} f(\theta)e^{-in\theta}\,d\theta \qquad (n\in\mathbb{Z})</M>
+<p class="no-indent">を<strong>フーリエ係数</strong>、形式的な級数</p>
+<M>S[f](\theta) = \sum_{n\in\mathbb{Z}} \hat f(n)e^{in\theta}</M>
+<p class="no-indent">を <m>f</m> の<strong>フーリエ級数</strong>という。<m>N</m> 次の<strong>部分和</strong>を <m>S_Nf(\theta)=\sum_{|n|\le N}\hat f(n)e^{in\theta}</m> と書く。</p>
+<p class="no-indent">実形式では <m>a_n=\frac1\pi\int f\cos n\theta\,d\theta</m>、<m>b_n=\frac1\pi\int f\sin n\theta\,d\theta</m> とし、</p>
+<M>S[f](\theta) = \frac{a_0}{2} + \sum_{n\ge1}\big(a_n\cos n\theta + b_n\sin n\theta\big)</M>
+</div>
+
+<div class="teiri" id="prop-fourier-kihon">
+<h4>フーリエ係数の基本性質</h4>
+<p class="no-indent"><m>f,g\in L^1(\mathbb{T})</m> について次が成り立つ。</p>
+<p class="no-indent">（1）<m>|\hat f(n)|\le\|f\|_{L^1}/(2\pi)\cdot2\pi=\|f\|_1</m>（正規化した <m>L^1</m> ノルムで <m>|\hat f(n)|\le\|f\|_1</m>）。<br>
+（2）<strong>平行移動</strong>：<m>f_h(\theta)=f(\theta-h)</m> なら <m>\widehat{f_h}(n)=e^{-inh}\hat f(n)</m>。<br>
+（3）<strong>畳み込み</strong>：<m>\widehat{f*g}(n)=\hat f(n)\hat g(n)</m>。<br>
+（4）<strong>微分</strong>：<m>f</m> が絶対連続で <m>f'\in L^1</m> なら <m>\widehat{f'}(n)=in\hat f(n)</m>。<br>
+（5）<strong>リーマン–ルベーグ</strong>：<m>\hat f(n)\to0</m>（<m>|n|\to\infty</m>）。<br>
+（6）<strong>一意性</strong>：すべての <m>n</m> で <m>\hat f(n)=0</m> ならば <m>f=0</m>（ほとんどいたるところ）。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">（2）は変数変換、（3）はフビニの定理（<ref t="thm-fubini"/>）、（4）は部分積分（境界項が周期性で消える）。</p>
+<p class="no-indent">（5）三角多項式は <m>L^1(\mathbb{T})</m> で稠密である（<ref t="thm-heikatsu-chumitsu"/>、または連続関数の稠密性と<ref t="thm-cc-chumitsu"/>）。三角多項式 <m>p</m> については <m>\hat p(n)=0</m> が大きい <m>|n|</m> で成り立つ。<m>\|f-p\|_1 < \varepsilon</m> をとれば（1）より <m>|\hat f(n)|\le|\widehat{f-p}(n)|+|\hat p(n)| < \varepsilon</m>（<m>|n|</m> 大）。<em>稠密性＋一様評価という、本書で繰り返し現れた型の議論である。</em></p>
+<p class="no-indent">（6）<m>\hat f\equiv0</m> なら、すべての三角多項式 <m>p</m> について <m>\int f\bar p=0</m>。三角多項式は <m>C(\mathbb{T})</m> で一様稠密（<ref t="thm-fejer"/>、あるいは第96章のストーン–ワイエルシュトラス）だから、すべての連続関数 <m>g</m> について <m>\int f\bar g=0</m>。<em>これは <m>f</m> が定める複素測度 <m>f\,d\theta</m> が零であることを意味し、リースの表現定理の一意性（<ref t="thm-riesz-yukai"/>）から <m>f=0</m>。</em></p>
+</div>
+
+<div class="chui">
+<h4>フーリエ係数は何を測っているか</h4>
+<p class="no-indent">（1）<strong>直交射影の係数。</strong><m>L^2(\mathbb{T})</m> では <m>\{e^{in\theta}\}</m> が正規直交系だから、<m>\hat f(n)=(f,e^{in\theta})</m> で、<m>S_Nf</m> は <m>f</m> の <m>\mathrm{span}\{e^{in\theta}\}_{|n|\le N}</m> への直交射影である（<ref t="thm-chokkou-bunkai"/>）。<em>したがって <m>S_Nf</m> は「<m>N</m> 次の三角多項式による最良の <m>L^2</m> 近似」である。</em></p>
+<p class="no-indent">（2）<strong>指標の値。</strong><m>\hat f(n)</m> は、<m>L^1(\mathbb{T})</m> を畳み込み環と見たときのゲルファント変換の値である（<ref t="rei-gelfand-ouyou"/>（3））。<span class="yogo-hl">（3）の畳み込み定理は「代数準同型である」ことの言い換えにすぎない。</span></p>
+<p class="no-indent">（3）<strong>減衰の速さが滑らかさを測る。</strong>（4）を繰り返せば、<m>f</m> が <m>k</m> 回微分可能で <m>f^{(k)}\in L^1</m> なら <m>\hat f(n)=o(|n|^{-k})</m>。<em>逆向きの主張も成り立ち、第88章のソボレフ空間はこの対応を定義そのものにする。</em>「なめらかさ＝高周波成分の小ささ」という辞書が、ここで生まれる。</p>
+</div>
+
+<h3 id="s80-3">収束するのか</h3>
+
+<div class="teiri" id="thm-l2-shusoku">
+<h4>二乗平均収束</h4>
+<p class="no-indent"><m>f\in L^2(\mathbb{T})</m> について <m>\|S_Nf-f\|_{L^2}\to0</m>、かつ</p>
+<M>\frac{1}{2\pi}\int_{-\pi}^{\pi}|f|^2\,d\theta = \sum_{n\in\mathbb{Z}}|\hat f(n)|^2</M>
+<p class="no-indent">（<strong>パーセヴァルの等式</strong>）。すなわち <m>\{e^{in\theta}\}</m> は <m>L^2(\mathbb{T})</m> の正規直交基底である。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><ref t="thm-parseval"/>より、正規直交系が基底であることと、その張る空間が稠密であることは同値である。三角多項式は <m>C(\mathbb{T})</m> で一様稠密（<ref t="thm-fejer"/>）で、<m>C(\mathbb{T})</m> は <m>L^2(\mathbb{T})</m> で稠密（<ref t="thm-cc-chumitsu"/>）。<em>一様収束は <m>L^2</m> 収束を導くので、三角多項式は <m>L^2(\mathbb{T})</m> で稠密。</em></p>
+<p><span class="yogo-hl">フーリエの主張は、<m>L^2</m> の意味では完全に正しい。</span><em>そしてその証明は第65章の抽象論に、稠密性という一点だけを足したものである。</em>第82章でこの定理の含意を詰める。</p>
+</div>
+
+<div class="hanrei" id="cex-kakuten-hassan">
+<h4>各点では収束しない</h4>
+<p class="no-indent"><m>L^2</m> での収束は、各点での収束を意味しない。<em>実際には次のことが知られている。</em></p>
+<p class="no-indent">（1）<strong>連続関数でも各点で発散しうる。</strong>ある <m>f\in C(\mathbb{T})</m> と点 <m>\theta_0</m> があって <m>\sup_N|S_Nf(\theta_0)|=\infty</m>（デュ・ボワ–レーモン、1876年）。<em>本書ではすでに<ref t="rei-fourier-hassan"/>で、一様有界性の原理からこの存在を導いている。</em></p>
+<p class="no-indent">（2）<strong>可積分関数ではほとんどいたるところ発散しうる。</strong><m>f\in L^1(\mathbb{T})</m> で <m>S_Nf</m> がほとんどすべての点で発散する例がある（コルモゴロフ、1923年）。<span class="yogo-hl"><m>L^1</m> ではフーリエの主張は成り立たない。</span></p>
+<p class="no-indent">（3）<strong><m>L^2</m> ならほとんどいたるところ収束する。</strong>これは非自明な定理で、カールソンの定理（1966年）として第83章で扱う。<em>証明には四十年かかった。</em></p>
+<p class="no-indent">（4）<strong>連続関数でも一様収束しない。</strong>（1）から従う。しかし<em>フェイェール平均（第81章）をとれば一様収束する</em>——部分和が悪いのであって、級数の情報が足りないわけではない。</p>
+<p>これらを並べると、「収束」という語をどの意味で使うかが決定的であることが分かる。<em>第81章から第83章まで、この一点を追う。</em></p>
+</div>
+
+<div class="rei" id="rei-fourier-keisan">
+<h4>計算してみる</h4>
+<p class="no-indent">（1）<strong>方形波。</strong><m>f(\theta)=1</m>（<m>0 < \theta < \pi</m>）、<m>-1</m>（<m>-\pi < \theta < 0</m>）。奇関数なので <m>a_n=0</m>、</p>
+<M>b_n = \frac2\pi\int_0^\pi\sin n\theta\,d\theta = \frac{2(1-\cos n\pi)}{n\pi} = \begin{cases}4/(n\pi) & n \text{ 奇} \\ 0 & n \text{ 偶}\end{cases}</M>
+<p class="no-indent"><em>係数の減衰は <m>1/n</m> でしかない</em>——跳びがあると <m>\hat f(n)=O(1/n)</m> より速くならない。<m>\theta=\pi/2</m> で <m>1=\frac4\pi(1-\tfrac13+\tfrac15-\cdots)</m>、すなわちライプニッツの級数が出る。</p>
+<p>（2）<strong>三角波。</strong><m>f(\theta)=|\theta|</m>。<m>a_0=\pi</m>、<m>a_n=-4/(\pi n^2)</m>（<m>n</m> 奇）、他は零。<em>折れ目はあるが跳びがないので <m>O(1/n^2)</m>。</em><m>\theta=0</m> とすれば <m>\sum_{n\ \text{奇}}1/n^2=\pi^2/8</m>。</p>
+<p>（3）<strong>放物線。</strong><m>f(\theta)=\theta^2</m>。<m>a_0=2\pi^2/3</m>、<m>a_n=4(-1)^n/n^2</m>。<m>\theta=\pi</m> から <em>バーゼル問題</em> <m>\sum1/n^2=\pi^2/6</m> が出る。<span class="yogo-hl">オイラーが技巧で得た値が、フーリエ級数では計算の副産物になる。</span></p>
+<p>（4）<strong>ポアソン核。</strong><m>0\le r < 1</m> について <m>P_r(\theta)=\sum_{n}r^{|n|}e^{in\theta}=\frac{1-r^2}{1-2r\cos\theta+r^2}</m>。<em>これが第94章の調和関数とディリクレ問題の中心にある。</em>係数が幾何級数的に減衰するので、収束は絶対かつ一様である。</p>
+</div>
+
+<div class="teiri" id="thm-fejer">
+<h4>フェイェールの定理（予告）</h4>
+<p class="no-indent"><m>f\in C(\mathbb{T})</m> について、フーリエ部分和の算術平均</p>
+<M>\sigma_Nf = \frac{1}{N+1}\sum_{k=0}^{N}S_kf</M>
+<p class="no-indent">は <m>f</m> に一様収束する。とくに三角多項式は <m>C(\mathbb{T})</m> で一様稠密である。</p>
+</div>
+
+<div class="chui">
+<h4>本章で使ったものと、次章で返すもの</h4>
+<p class="no-indent"><ref t="prop-fourier-kihon"/>（5）（6）と<ref t="thm-l2-shusoku"/>の証明では、<ref t="thm-fejer"/>を先取りして使った。<em>循環を避けるため、第81章ではフェイェールの定理をフーリエ級数の一意性に依存せずに証明する</em>——核の性質だけから出る、独立した議論である。</p>
+<p><span class="yogo-hl">三角多項式の稠密性は、フーリエ解析のすべての基礎にある。</span>第96章のストーン–ワイエルシュトラスの定理はこれを一般化し、<em>「点を分離する自己共役な部分環は稠密」という位相的な理由</em>に還元する。</p>
+</div>
+
+<figure>
+<svg viewBox="0 0 470 292" width="470" height="292" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">係数の減衰は、関数のなめらかさを写している</text>
+
+  <rect x="14" y="26" width="442" height="132" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+
+  <text x="82" y="42" font-size="6.8" text-anchor="middle" font-weight="700" fill="#1f3b5c">方形波（跳びがある）</text>
+  <line x1="28" y1="96" x2="140" y2="96" stroke="#8a8a88" stroke-width="0.7"/>
+  <line x1="84" y1="62" x2="84" y2="130" stroke="#8a8a88" stroke-width="0.7"/>
+  <line x1="32" y1="116" x2="84" y2="116" stroke="#35618f" stroke-width="2"/>
+  <line x1="84" y1="76" x2="136" y2="76" stroke="#35618f" stroke-width="2"/>
+  <line x1="84" y1="116" x2="84" y2="76" stroke="#35618f" stroke-width="0.8" stroke-dasharray="2 2"/>
+  <text x="82" y="146" font-size="6.2" text-anchor="middle" fill="#8c2f1e">係数は n の逆数まで</text>
+
+  <text x="235" y="42" font-size="6.8" text-anchor="middle" font-weight="700" fill="#1f3b5c">三角波（折れ目だけ）</text>
+  <line x1="180" y1="120" x2="292" y2="120" stroke="#8a8a88" stroke-width="0.7"/>
+  <line x1="236" y1="62" x2="236" y2="130" stroke="#8a8a88" stroke-width="0.7"/>
+  <polyline points="186,70 236,120 286,70" fill="none" stroke="#2f6b5f" stroke-width="2"/>
+  <text x="235" y="146" font-size="6.2" text-anchor="middle" fill="#1e4a41">係数は n の二乗の逆数</text>
+
+  <text x="384" y="42" font-size="6.8" text-anchor="middle" font-weight="700" fill="#1f3b5c">ポアソン核（なめらか）</text>
+  <line x1="326" y1="120" x2="442" y2="120" stroke="#8a8a88" stroke-width="0.7"/>
+  <line x1="384" y1="58" x2="384" y2="130" stroke="#8a8a88" stroke-width="0.7"/>
+  <path d="M 330 116 C 356 114 366 66 384 66 C 402 66 412 114 438 116" fill="none" stroke="#8a6b2c" stroke-width="1.8"/>
+  <text x="384" y="146" font-size="6.2" text-anchor="middle" fill="#5a4520">係数は幾何級数的に減衰</text>
+
+  <rect x="14" y="168" width="216" height="116" rx="4" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="24" y="183" font-size="7.6" font-weight="700" fill="#1e4a41">なぜ三角関数でなければならないか</text>
+  <text x="24" y="200" font-size="6.6" fill="#1e4a41">① 二階微分作用素の固有関数である</text>
+  <text x="24" y="212" font-size="6.6" fill="#1e4a41">② 平行移動を対角化する唯一の系である</text>
+  <text x="24" y="224" font-size="6.6" fill="#1e4a41">③ 直交系なので係数が内積で読める</text>
+  <text x="24" y="241" font-size="6.4" fill="#5a4520">①は第76章、②は第79章、③は第65章</text>
+  <text x="24" y="253" font-size="6.4" fill="#5a4520">三つはどれも同じ事実の別の顔である</text>
+  <text x="24" y="270" font-size="6.6" fill="#8c2f1e">境界条件が、どの系を選ぶかを決める</text>
+  <text x="24" y="281" font-size="6.2" fill="#6a6a68">環なら指数関数、区間なら正弦・余弦</text>
+
+  <rect x="240" y="168" width="216" height="116" rx="4" fill="#f4f1ea" stroke="#8a6b2c"/>
+  <text x="250" y="183" font-size="7.6" font-weight="700" fill="#5a4520">どの意味で収束するのか</text>
+  <text x="250" y="200" font-size="6.6" fill="#1e4a41">二乗平均　　いつでも収束する（第82章）</text>
+  <text x="250" y="213" font-size="6.6" fill="#5a4520">平均をとる　連続なら一様収束（第81章）</text>
+  <text x="250" y="226" font-size="6.6" fill="#8c2f1e">各点　　　　連続でも発散しうる</text>
+  <text x="250" y="239" font-size="6.6" fill="#8c2f1e">可積分　　　ほとんど全点で発散しうる</text>
+  <text x="250" y="256" font-size="6.4" fill="#6b2a48">二乗可積分ならほとんど全点で収束する</text>
+  <text x="250" y="268" font-size="6.4" fill="#6b2a48">——カールソン、証明までに四十年（第83章）</text>
+  <text x="250" y="281" font-size="6.2" fill="#6a6a68">「収束」の意味を決めずに問うても答えはない</text>
+</svg>
+<figcaption>フーリエ級数の二つの側面。係数の減衰の速さが関数のなめらかさを写し、収束の意味の選び方が定理の成否を決める。</figcaption>
+</figure>
+
+<div class="star2">
+<h4>★★ 学部後半——係数から関数を読む</h4>
+
+<p><strong>絶対収束の判定。</strong><m>\sum|\hat f(n)| < \infty</m> ならフーリエ級数は一様絶対収束し、和は連続関数で <m>f</m> に等しい。<em>十分条件：<m>f</m> が絶対連続で <m>f'\in L^2</m>。</em>実際、コーシー–シュワルツと<ref t="prop-fourier-kihon"/>（4）から</p>
+<M>\sum_{n\ne0}|\hat f(n)| = \sum_{n\ne0}\frac{|\widehat{f'}(n)|}{|n|} \le \Big(\sum_{n\ne0}\frac{1}{n^2}\Big)^{1/2}\Big(\sum|\widehat{f'}(n)|^2\Big)^{1/2} < \infty</M>
+<p><span class="yogo-hl">滑らかさをほんの少し（半階分）足すだけで、絶対収束が保証される。</span>ベルンシュタインの定理はこれを精密化し、<m>f</m> がヘルダー指数 <m>\alpha>1/2</m> で連続なら絶対収束することを述べる。<em><m>\alpha=1/2</m> では反例があり、境目は鋭い。</em></p>
+
+<p><strong>跳びは <m>1/n</m> を強制する。</strong><m>f</m> が点 <m>\theta_0</m> で跳び <m>d=f(\theta_0^+)-f(\theta_0^-)</m> をもてば、<m>n\hat f(n)</m> は零に収束しない。<em>逆に <m>\hat f(n)=o(1/n)</m> なら跳びはない。</em>この観測から<strong>ギブズ現象</strong>が説明される：跳びの近くで <m>S_Nf</m> は <m>f</m> を約 <m>8.9\%</m> 超過し、<m>N\to\infty</m> でもその超過量は減らない（位置だけが跳びに近づく）。超過量は</p>
+<M>\frac{2}{\pi}\int_0^\pi\frac{\sin t}{t}\,dt - 1 \approx 0.0895</M>
+<p>で、<em>これは <m>|d|</m> に比例する普遍的な定数である。</em>ディリクレ核の振動（第81章）が原因で、平均をとれば消える。</p>
+
+<p><strong>ワイルの一様分布判定法。</strong>数列 <m>(x_n)\subset\mathbb{T}</m> が一様分布する（任意の区間 <m>I</m> について <m>\#\{n\le N:x_n\in I\}/N\to|I|/2\pi</m>）ことと、</p>
+<M>\frac1N\sum_{n\le N}e^{ikx_n} \to 0 \qquad (\forall k\ne0)</M>
+<p>は同値である。<em>証明は、特性関数を三角多項式で近似する——つまり三角多項式の稠密性そのものである。</em>これから「<m>\alpha</m> 無理数なら <m>(n\alpha)</m> は一様分布する」が直ちに出る（幾何級数の和を評価するだけ）。<span class="yogo-hl">無理数回転の軌道が稠密であるという定性的な事実が、ここで「どう分布するか」まで定量化される。</span></p>
+
+<p><strong>仮定を外すと。</strong>周期性を外すと <m>\mathbb{Z}</m> ではなく <m>\mathbb{R}</m> が双対になり、級数が積分に変わる（第84章）。<em>直交性を外すと、係数が内積で読めなくなり、係数の一意性も失われる</em>——非直交系による展開は<em>フレーム</em>の理論として別に整備されている。</p>
+</div>
+
+<div class="star3">
+<h4>★★★ 大学院——一意性集合とビーリングの問い</h4>
+
+<p><strong>一意性集合。</strong><m>E\subset\mathbb{T}</m> が<strong>一意性集合</strong>であるとは、三角級数 <m>\sum c_ne^{in\theta}</m> が <m>\mathbb{T}\setminus E</m> のすべての点で <m>0</m> に収束すればすべての <m>c_n=0</m> となること。<em>カントールがこの問題から集合論を作った</em>（1872年）——「例外集合の構造を語る言葉」が必要だったのである。<span class="yogo-hl">本書の第43章の実数論と第53章の測度論は、もとをたどればこの問いに行き着く。</span></p>
+
+<p>可算集合は一意性集合である（カントール–ヤング）。測度正の集合は一意性集合でない。<em>ところが測度零で一意性集合でないものが存在する</em>（メンショフ、1916年）——完全集合の構造が問題になる。ラジャチマンは、比 <m>\xi</m> の<em>カントール集合</em> <m>C_\xi</m> が一意性集合であることと <m>1/\xi</m> がピゾー数（代数的整数で、共役がすべて単位円内）であることが同値、という驚くべき結果を得た。<em>整数論的な条件が、収束の問題を決めている。</em></p>
+
+<p><strong>記述集合論との結合。</strong>一意性集合の族 <m>\mathcal{U}</m> は <m>\Pi^1_1</m> 完全であり、ボレル集合ではない（ソロヴァイ、カウフマン）。<span class="yogo-hl">「この集合が一意性集合か」という問いは、本質的に解析的階層の第一段に属する。</span><em>第53章で扱った記述集合論の階層が、フーリエ解析の具体的な問題の複雑さを測る尺度として現れる。</em></p>
+
+<p><strong>ビーリングの問いとカレイマンの定理。</strong>指数の集合 <m>\Lambda\subset\mathbb{Z}</m> について、<m>\{e^{in\theta}\}_{n\in\Lambda}</m> が <m>L^2(E)</m>（<m>E\subset\mathbb{T}</m>）で完全になる条件は何か。<em>ランダウの密度条件が答えの一部を与え、完全な解決はセイプとオルトガ–セルダの仕事に至る。</em>応用は標本化定理（ナイキスト–シャノン）の一般化で、<span class="yogo-hl">「どれだけ疎に標本をとれば信号が復元できるか」という問いが、指数系の完全性の問題に翻訳される。</span></p>
+
+<p><strong>加法的組合せ論との接点。</strong>ゴワーズ一様性ノルムは、フーリエ係数の一様な小ささを高次に一般化したもので、グリーン–タオのアーベル素数定理（素数の中に任意長の等差数列がある）の証明の骨格をなす。<em>「フーリエ係数が小さい＝構造がない」という直観が、どこまで正しいか</em>——それが高次フーリエ解析の主題である。</p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li>指数関数系の直交性を計算で確かめよ。</li>
+<li>方形波のフーリエ係数を計算し、ライプニッツの級数を導け。</li>
+<li>放物線 <m>\theta^2</m> のフーリエ係数からバーゼル問題の値を導け。</li>
+<li>ポアソン核の閉じた表示を、幾何級数の和から確かめよ。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li><ref t="prop-fourier-kihon"/>（3）を、フビニの定理を使って示せ。<span class="haiten">（25点）</span></li>
+<li><ref t="prop-fourier-kihon"/>（4）を、部分積分と周期性から示せ。<span class="haiten">（25点）</span></li>
+<li>リーマン–ルベーグの補題を、三角多項式の稠密性から示せ。<span class="haiten">（30点）</span></li>
+<li><m>f</m> が絶対連続で <m>f'\in L^2</m> なら、フーリエ級数が絶対収束することを示せ。<span class="haiten">（35点）</span></li>
+<li><m>S_Nf</m> が <m>N</m> 次三角多項式による最良 <m>L^2</m> 近似であることを示せ。<span class="haiten">（30点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li>跳びをもつ関数について <m>n\hat f(n)</m> が零に収束しないことを示せ。<span class="haiten">（40点）</span></li>
+<li>ギブズ現象の超過量を、ディリクレ核の積分として計算せよ。<span class="haiten">（50点）</span></li>
+<li>ワイルの一様分布判定法を、三角多項式の稠密性から示せ。<span class="haiten">（45点）</span></li>
+<li><m>\alpha</m> が無理数のとき <m>(n\alpha)</m> が一様分布することを示せ。<span class="haiten">（40点）</span></li>
+</ol>
+</div>
+</div>

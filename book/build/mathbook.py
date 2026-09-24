@@ -64,7 +64,8 @@ def render_math(html: str, book: Path) -> tuple[str, dict]:
     todo = [{"id": k, "tex": t, "display": d}
             for k, t, d in found if not (cache / f"{k}.svg").exists()]
 
-    stats = {"total": len(found), "rendered": len(todo), "errors": []}
+    stats = {"total": len(found), "rendered": len(todo), "errors": [],
+             "mjx_errors": []}
 
     if todo:
         proc = subprocess.run(
@@ -76,6 +77,13 @@ def render_math(html: str, book: Path) -> tuple[str, dict]:
                 stats["errors"].append((item["id"], item["error"]))
                 continue
             (cache / f"{item['id']}.svg").write_text(item["svg"], encoding="utf-8")
+
+    # MathJax は構文エラーを例外でなく merror ノード（黒い箱）として返す。
+    # 抽出テキストには出ないので、ここで拾って報告する。
+    for key, tex, _ in found:
+        f = cache / f"{key}.svg"
+        if f.exists() and "data-mjx-error" in f.read_text(encoding="utf-8"):
+            stats["mjx_errors"].append(tex)
 
     def sub(mo: re.Match) -> str:
         display = mo.group(1) == "M"

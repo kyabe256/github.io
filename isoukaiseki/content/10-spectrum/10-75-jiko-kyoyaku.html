@@ -1,0 +1,242 @@
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>実対称行列の性質のうち、無限次元に残るのはどれか。</li>
+<li>自己共役作用素のスペクトルは、なぜ実数なのか。</li>
+<li>ノルムとスペクトル半径は、いつ一致するのか。</li>
+</ul>
+</div>
+
+<h3 id="s75-1">随伴という折り返し</h3>
+
+<p>第74章で見たように、スペクトルは一般には複素平面の中の込み入った閉集合になりうる。<em>ところが、ある一つの対称性を課すだけで、スペクトルは実軸の上の有界閉集合に落ちる。</em>その対称性が自己共役性である。</p>
+
+<p>有限次元での対応物は、実対称行列である。実対称行列については、固有値が実で、固有ベクトルが直交し、直交行列で対角化できる——この三点セットが成り立った。<span class="yogo-hl">無限次元では、第一点はそのまま残り、第三点は形を変えて残り、第二点は「固有ベクトル」が存在しないこともあるため言い換えを要する。</span>本章で第一点を、第76章と第77章で第三点を扱う。</p>
+
+<div class="teigi" id="def-jiko-kyoyaku">
+<h4>随伴・自己共役・正規・ユニタリ</h4>
+<p class="no-indent"><m>H</m> を複素ヒルベルト空間、<m>T\in B(H)</m> とする。リースの表現定理（<ref t="thm-riesz-hyogen-hilbert"/>）により、</p>
+<M>(Tx,y) = (x,T^*y) \qquad (\forall x,y\in H)</M>
+<p class="no-indent">をみたす <m>T^*\in B(H)</m> がただ一つ定まる。これを <m>T</m> の<strong>随伴作用素</strong>という。</p>
+<p class="no-indent">（1）<m>T^*=T</m> のとき <m>T</m> は<strong>自己共役</strong>（または<strong>エルミート</strong>）。<br>
+（2）<m>T^*T=TT^*</m> のとき <m>T</m> は<strong>正規</strong>。<br>
+（3）<m>T^*T=TT^*=I</m> のとき <m>T</m> は<strong>ユニタリ</strong>。<br>
+（4）すべての <m>x</m> について <m>(Tx,x)\ge0</m> のとき <m>T</m> は<strong>正</strong>（<m>T\ge0</m> と書く）。</p>
+</div>
+
+<div class="chui">
+<h4>随伴の存在の確かめ方</h4>
+<p class="no-indent"><m>y</m> を固定すると <m>x\mapsto(Tx,y)</m> は有界線形汎関数で、そのノルムは <m>\|T\|\,\|y\|</m> 以下である。リースの表現定理よりこれを内積で表すベクトルがただ一つあり、それを <m>T^*y</m> と書く。<em>線形性と有界性は一意性から従う。</em></p>
+<p><span class="yogo-hl">第66章の双対作用素との違いは、リースの同一視を二回挟むかどうかだけである。</span>ただし同一視は共役線形なので、<m>(\lambda T)^*=\bar\lambda T^*</m> となる。<em>随伴は共役線形な対応である。</em></p>
+</div>
+
+<div class="teiri" id="prop-sotsui-kihon">
+<h4>随伴の基本性質</h4>
+<p class="no-indent"><m>S,T\in B(H)</m>、<m>\lambda\in\mathbb{C}</m> について次が成り立つ。</p>
+<p class="no-indent">（1）<m>(S+T)^*=S^*+T^*</m>、<m>(\lambda T)^*=\bar\lambda T^*</m>、<m>(ST)^*=T^*S^*</m>、<m>(T^*)^*=T</m>。<br>
+（2）<m>\|T^*\|=\|T\|</m>。<br>
+（3）<m>\|T^*T\|=\|T\|^2</m>（<strong>シー・スター恒等式</strong>）。<br>
+（4）<m>\ker T^* = (\mathrm{ran}\,T)^\perp</m>、<m>\overline{\mathrm{ran}\,T}=(\ker T^*)^\perp</m>。<br>
+（5）<m>T</m> が可逆なら <m>T^*</m> も可逆で <m>(T^*)^{-1}=(T^{-1})^*</m>。したがって <m>\sigma(T^*)=\overline{\sigma(T)}</m>。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">（3）だけ示す。コーシー–シュワルツ（<ref t="thm-cauchy-schwarz"/>）より</p>
+<M>\|Tx\|^2 = (Tx,Tx) = (T^*Tx,x) \le \|T^*T\|\,\|x\|^2</M>
+<p class="no-indent">なので <m>\|T\|^2\le\|T^*T\|</m>。逆向きは <m>\|T^*T\|\le\|T^*\|\|T\|=\|T\|^2</m>。</p>
+<p><em>この等式が、作用素環の理論全体（第79章）の出発点になる。</em>ノルムと代数構造と対合が、たった一本の等式で結びついている。</p>
+</div>
+
+<h3 id="s75-2">スペクトルが実軸に載る</h3>
+
+<div class="teiri" id="thm-jiko-spectrum-jitsu">
+<h4>自己共役作用素のスペクトル</h4>
+<p class="no-indent"><m>T\in B(H)</m> を自己共役とする。</p>
+<p class="no-indent">（1）すべての <m>x</m> について <m>(Tx,x)\in\mathbb{R}</m>。<br>
+（2）<m>\sigma(T)\subset\mathbb{R}</m>。さらに <m>\lambda=\alpha+i\beta</m>（<m>\beta\ne0</m>）のとき</p>
+<M>\|(T-\lambda I)^{-1}\| \le \frac{1}{|\beta|}</M>
+<p class="no-indent">（3）<m>T</m> は剰余スペクトルをもたない。<br>
+（4）異なる固有値に属する固有ベクトルは直交する。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">（1）<m>(Tx,x)=(x,Tx)=\overline{(Tx,x)}</m>。</p>
+<p class="no-indent">（2）<m>\lambda=\alpha+i\beta</m>、<m>\beta\ne0</m> とする。<m>S=T-\alpha I</m> は自己共役なので</p>
+<M>\|(S-i\beta I)x\|^2 = \|Sx\|^2 + \beta^2\|x\|^2 - 2\,\mathrm{Re}\,(Sx,i\beta x)</M>
+<p class="no-indent">最後の項は <m>(Sx,x)</m> が実なので <m>-2\,\mathrm{Re}(-i\beta\overline{(Sx,x)})=0</m>。よって</p>
+<M>\|(T-\lambda I)x\| \ge |\beta|\,\|x\|</M>
+<p class="no-indent"><em>これで単射性と、値域が閉であることが同時に出る</em>（下からの評価があるから、像のコーシー列は原像のコーシー列を与える）。値域が稠密であることは（4）から <m>(\mathrm{ran}(T-\lambda I))^\perp=\ker(T-\bar\lambda I)=\{0\}</m> と分かる。閉かつ稠密なら全体であり、逆作用素は上の不等式から <m>1/|\beta|</m> 以下のノルムをもつ。</p>
+<p class="no-indent">（3）<m>\lambda\in\mathbb{R}</m> で <m>T-\lambda I</m> が単射なら、<m>(\mathrm{ran}(T-\lambda I))^\perp=\ker(T-\lambda I)=\{0\}</m> だから値域は稠密である。<span class="yogo-hl">単射なら値域は必ず稠密——これが剰余スペクトルの不在である。</span></p>
+<p class="no-indent">（4）<m>Tx=\lambda x</m>、<m>Ty=\mu y</m>、<m>\lambda\ne\mu</m> とすると <m>\lambda(x,y)=(Tx,y)=(x,Ty)=\mu(x,y)</m>（<m>\mu</m> は実）。</p>
+</div>
+
+<div class="teigi" id="def-suchi-han-i">
+<h4>数値範囲</h4>
+<p class="no-indent"><m>T\in B(H)</m> について</p>
+<M>W(T) = \{\,(Tx,x) \mid \|x\|=1\,\}</M>
+<p class="no-indent">を <m>T</m> の<strong>数値範囲</strong>という。自己共役のときは実数の集合で、</p>
+<M>m = \inf_{\|x\|=1}(Tx,x), \qquad M = \sup_{\|x\|=1}(Tx,x)</M>
+<p class="no-indent">と書く。</p>
+</div>
+
+<div class="teiri" id="thm-suchi-han-i">
+<h4>数値範囲とスペクトル</h4>
+<p class="no-indent"><m>T</m> を自己共役とする。</p>
+<M>\sigma(T)\subset[m,M], \qquad m\in\sigma(T), \quad M\in\sigma(T)</M>
+<p class="no-indent">すなわち <m>m=\min\sigma(T)</m>、<m>M=\max\sigma(T)</m>。さらに</p>
+<M>\|T\| = \max(|m|,|M|) = r(T) = \sup_{\|x\|=1}|(Tx,x)|</M>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><m>\lambda>M</m> とする。<m>\varepsilon=\lambda-M>0</m> と置くと、すべての単位ベクトルについて</p>
+<M>((\lambda I-T)x,x) = \lambda-(Tx,x) \ge \varepsilon</M>
+<p class="no-indent">コーシー–シュワルツより <m>\|(\lambda I-T)x\|\ge\varepsilon</m>。（2）の証明と同じ議論で <m>\lambda\in\rho(T)</m>。<m>\lambda < m</m> も同様。</p>
+<p class="no-indent"><m>M\in\sigma(T)</m> を見るには、<m>S=MI-T\ge0</m> について「<m>S\ge0</m> かつ <m>\inf_{\|x\|=1}(Sx,x)=0</m> なら <m>S</m> は可逆でない」を示せばよい。<m>(Sx_n,x_n)\to0</m> となる単位ベクトル列をとる。正作用素についてのコーシー–シュワルツ型不等式</p>
+<M>\|Sx\|^2 = (Sx,Sx) \le \|S\|\,(Sx,x)</M>
+<p class="no-indent">（これは <m>(Su,v)</m> を半内積と見て得られる）より <m>\|Sx_n\|\to0</m>。<em>単位ベクトル列で <m>Sx_n\to0</m> なら <m>S</m> は下から有界でなく、可逆でない。</em></p>
+<p class="no-indent">ノルムの等式は、<m>\sup|(Tx,x)|=\max(|m|,|M|)</m> と、<m>r(T)=\max(|m|,|M|)</m>（スペクトルが <m>[m,M]</m> に含まれ両端を含むこと）から従う。<m>\|T\|=r(T)</m> は <m>\|T^2\|=\|T^*T\|=\|T\|^2</m> を繰り返して <m>\|T^{2^k}\|=\|T\|^{2^k}</m> とし、ゲルファントの公式（<ref t="thm-gelfand-koshiki"/>）に入れれば出る。</p>
+</div>
+
+<div class="chui">
+<h4>ノルムがスペクトルから読めるということ</h4>
+<p class="no-indent">一般の作用素では <m>r(T)\le\|T\|</m> で、等号は成り立たないことがある（<ref t="rei-spectrum-rei"/>のべき零作用素はノルムが正でスペクトル半径が零）。<span class="yogo-hl">自己共役——より一般に正規——な作用素では、この隔たりが消える。</span></p>
+<p><em>これは「解析的な量（ノルム）が代数的な量（スペクトル）で決まる」という主張であり、第79章のゲルファント–ナイマルクの定理の核心である。</em>同じ理由で、自己共役作用素の族の上ではノルムが代数構造から一意に決まってしまう。</p>
+</div>
+
+<h3 id="s75-3">例と、正規でない例</h3>
+
+<div class="rei" id="rei-jiko-kyoyaku-rei">
+<h4>自己共役作用素の見本</h4>
+<p class="no-indent">（1）<strong>掛け算作用素。</strong><m>H=L^2(\mu)</m>、<m>\varphi</m> を実数値の本質的有界関数として <m>(M_\varphi f)=\varphi f</m>。このとき <m>M_\varphi^*=M_{\bar\varphi}=M_\varphi</m> で自己共役、<m>\sigma(M_\varphi)</m> は <m>\varphi</m> の<em>本質的値域</em>（<m>\{\lambda : \mu(|\varphi-\lambda| < \varepsilon)>0\ \forall\varepsilon>0\}</m>）である。<span class="yogo-hl">第77章で、すべての自己共役作用素がこの形に書けることを見る。</span></p>
+<p>（2）<strong>直交射影。</strong>閉部分空間 <m>V</m> への射影 <m>P</m>（<ref t="thm-chokkou-bunkai"/>）は <m>P^*=P=P^2</m>。<em>逆に <m>P^*=P=P^2</m> なら <m>P</m> は <m>\mathrm{ran}\,P</m> への直交射影である。</em><m>\sigma(P)\subset\{0,1\}</m>。</p>
+<p>（3）<strong>対称核の積分作用素。</strong><m>k(x,y)=\overline{k(y,x)}</m> が <m>L^2([0,1]^2)</m> に属するとき、<m>(Kf)(x)=\int_0^1 k(x,y)f(y)\,dy</m> は自己共役かつコンパクト（第73章）。<em>第76章のスペクトル定理が直接に効く相手である。</em></p>
+<p>（4）<strong>ユニタリ。</strong>測度を保つ変換 <m>\tau</m> による <m>f\mapsto f\circ\tau</m>、フーリエ変換（第85章）、両側シフト。<em>ユニタリのスペクトルは単位円周に含まれる</em>（<m>\|U\|=\|U^{-1}\|=1</m> から）。</p>
+</div>
+
+<div class="hanrei" id="cex-seiki-denai">
+<h4>正規でない作用素・自己共役でない対称作用素</h4>
+<p class="no-indent"><strong>片側シフトは正規でない。</strong><m>H=\ell^2</m>、<m>S(x_1,x_2,\dots)=(0,x_1,x_2,\dots)</m> とすると <m>S^*(x_1,x_2,\dots)=(x_2,x_3,\dots)</m> で</p>
+<M>S^*S = I, \qquad SS^* = I - P_1</M>
+<p class="no-indent">（<m>P_1</m> は第一座標への射影）。<em>等距離なのに正規でない。</em>有限次元では等距離ならユニタリだから、これは無限次元固有の現象である。</p>
+<p><strong>対称でも自己共役でない例は、有界な範囲には存在しない。</strong>有界作用素では <m>(Tx,y)=(x,Ty)</m> がすべての <m>x,y</m> で成り立てば定義域が全体なので <m>T^*=T</m> である。<span class="yogo-hl">両者が分かれるのは、定義域が真部分空間である非有界作用素の場合だけである</span>——微分作用素がその典型で、第78章で扱う。ヘリンガー–テプリッツの定理はこの分岐を説明する：定義域が全体である対称作用素は自動的に有界になってしまう。</p>
+</div>
+
+<figure>
+<svg viewBox="0 0 470 282" width="470" height="282" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">自己共役性が、スペクトルを実軸に押し込める</text>
+
+  <rect x="14" y="26" width="442" height="124" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+
+  <text x="95" y="42" font-size="6.8" text-anchor="middle" font-weight="700" fill="#1f3b5c">自己共役</text>
+  <line x1="34" y1="92" x2="156" y2="92" stroke="#8a8a88" stroke-width="0.7"/>
+  <line x1="95" y1="58" x2="95" y2="116" stroke="#8a8a88" stroke-width="0.7"/>
+  <line x1="58" y1="92" x2="132" y2="92" stroke="#2f6b5f" stroke-width="3.4"/>
+  <circle cx="58" cy="92" r="2.6" fill="#2f6b5f"/>
+  <circle cx="132" cy="92" r="2.6" fill="#2f6b5f"/>
+  <text x="58" y="82" font-size="6" text-anchor="middle" fill="#1e4a41">m</text>
+  <text x="132" y="82" font-size="6" text-anchor="middle" fill="#1e4a41">M</text>
+  <text x="95" y="128" font-size="6" text-anchor="middle" fill="#8c2f1e">両端はスペクトルに属する</text>
+  <text x="95" y="139" font-size="6" text-anchor="middle" fill="#6a6a68">実軸の有界閉集合</text>
+
+  <text x="236" y="42" font-size="6.8" text-anchor="middle" font-weight="700" fill="#1f3b5c">ユニタリ</text>
+  <text x="236" y="64" font-size="5.8" text-anchor="middle" fill="#1f3b5c">単位円周</text>
+  <line x1="182" y1="92" x2="290" y2="92" stroke="#8a8a88" stroke-width="0.7"/>
+  <line x1="236" y1="68" x2="236" y2="116" stroke="#8a8a88" stroke-width="0.7"/>
+  <circle cx="236" cy="92" r="21" fill="none" stroke="#35618f" stroke-width="2.6"/>
+  <text x="236" y="128" font-size="6" text-anchor="middle" fill="#8c2f1e">絶対値 1 の複素数だけ</text>
+  <text x="236" y="139" font-size="6" text-anchor="middle" fill="#6a6a68">実軸の上には二点しか載らない</text>
+
+  <text x="384" y="42" font-size="6.8" text-anchor="middle" font-weight="700" fill="#1f3b5c">一般の有界作用素</text>
+  <path d="M 368 74 C 352 80 350 96 362 106 C 374 116 398 114 406 102 C 414 90 402 70 384 70 Z" fill="#f0e2de" stroke="#a03b2e" stroke-width="1.2"/>
+  <line x1="330" y1="92" x2="440" y2="92" stroke="#8a8a88" stroke-width="0.7"/>
+  <line x1="384" y1="58" x2="384" y2="116" stroke="#8a8a88" stroke-width="0.7"/>
+  <text x="384" y="128" font-size="6" text-anchor="middle" fill="#8c2f1e">実軸から離れてよい</text>
+  <text x="384" y="139" font-size="6" text-anchor="middle" fill="#6a6a68">複素平面のどこにでも載りうる</text>
+
+  <rect x="14" y="160" width="216" height="114" rx="4" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="24" y="175" font-size="7.6" font-weight="700" fill="#1e4a41">実軸に載る仕組み</text>
+  <text x="24" y="192" font-size="6.6" fill="#1e4a41">虚部 β を離すと下から評価が立つ</text>
+  <text x="24" y="205" font-size="6.6" fill="#1e4a41">‖(T − λI)x‖ ≥ |β| ‖x‖</text>
+  <text x="24" y="221" font-size="6.4" fill="#5a4520">単射 ＋ 値域が閉 ＋ 値域が稠密</text>
+  <text x="24" y="233" font-size="6.4" fill="#5a4520">の三つが一度に出る</text>
+  <text x="24" y="250" font-size="6.6" fill="#8c2f1e">同じ評価から剰余スペクトルが消える</text>
+  <text x="24" y="264" font-size="6.4" fill="#6a6a68">残るのは点と連続の二種類だけ</text>
+
+  <rect x="240" y="160" width="216" height="114" rx="4" fill="#f4f1ea" stroke="#8a6b2c"/>
+  <text x="250" y="175" font-size="7.6" font-weight="700" fill="#5a4520">ノルムとスペクトル半径</text>
+  <text x="250" y="192" font-size="6.6" fill="#5a4520">一般　　　r(T) ≤ ‖T‖（等号でない例あり）</text>
+  <text x="250" y="205" font-size="6.6" fill="#5a4520">自己共役　r(T) ＝ ‖T‖</text>
+  <text x="250" y="221" font-size="6.4" fill="#1e4a41">理由　‖T²‖ ＝ ‖T‖² を繰り返す</text>
+  <text x="250" y="233" font-size="6.4" fill="#1e4a41">ゲルファントの公式に入れるだけ</text>
+  <text x="250" y="250" font-size="6.6" fill="#8c2f1e">解析的な量が代数的な量で決まる</text>
+  <text x="250" y="264" font-size="6.4" fill="#6b2a48">この事実が第79章の骨格になる</text>
+</svg>
+<figcaption>自己共役・ユニタリ・一般の有界作用素で、スペクトルが複素平面のどこに載るか。実軸への押し込めは、虚部を離したときの下からの評価だけで出る。</figcaption>
+</figure>
+
+<div class="star2">
+<h4>★★ 学部後半——正の作用素と平方根、極分解</h4>
+
+<p><strong>順序。</strong>自己共役作用素のあいだに <m>S\le T \iff T-S\ge0</m> で順序を入れる。<em>これは半順序であって全順序ではない。</em><m>0\le S\le T</m> なら <m>\|S\|\le\|T\|</m>、<m>\sigma(T)\subset[0,\infty)</m> と <m>T\ge0</m> は自己共役な <m>T</m> について同値である（<ref t="thm-suchi-han-i"/>から <m>m\ge0</m>）。</p>
+
+<p><strong>平方根の存在。</strong><m>T\ge0</m> なら <m>S\ge0</m> でただ一つ <m>S^2=T</m> をみたすものがある。<em>構成は二通りある。</em></p>
+
+<p>（i）<strong>冪級数による構成。</strong><m>\|T\|\le1</m> と正規化し、<m>A=I-T</m> と置くと <m>0\le A\le I</m>。<m>\sqrt{1-t}=1-\sum_{n\ge1}c_nt^n</m>（<m>c_n>0</m>、<m>\sum c_n=1</m>）を <m>t=A</m> に代入する。係数が正で和が収束するので級数は絶対収束し、<m>S=I-\sum c_nA^n</m> が <m>S^2=T</m> をみたす。<span class="yogo-hl">ここで使っているのは、係数の符号が一定という数値的な事実だけである。</span></p>
+
+<p>（ii）<strong>単調列による構成。</strong><m>S_0=0</m>、<m>S_{n+1}=\tfrac12(T+ I -(I-S_n)^2)</m> と定めると <m>S_n</m> は単調増加で有界。<em>自己共役作用素の単調有界列は強作用素位相で収束する</em>（各 <m>x</m> について <m>(S_nx,x)</m> が単調有界な実数列で、シー・スター恒等式から <m>\|(S_n-S_m)x\|^2\le\|S_n-S_m\|((S_n-S_m)x,x)</m>）。極限が求める平方根である。</p>
+
+<p><strong>絶対値と極分解。</strong><m>|T|=\sqrt{T^*T}</m> と定めると <m>\|\,|T|x\,\|=\|Tx\|</m> が成り立つ。これにより <m>\mathrm{ran}\,|T|</m> 上で <m>U(|T|x)=Tx</m> は等距離に定まり、閉包へ、さらに直交補空間へ零で延長すれば</p>
+<M>T = U|T|</M>
+<p>と書ける。<em><m>U</m> は <m>\overline{\mathrm{ran}}\,|T|</m> から <m>\overline{\mathrm{ran}}\,T</m> への等距離（<strong>部分等距離</strong>）である。</em>これが複素数の <m>z=e^{i\theta}|z|</m> の作用素版で、<span class="yogo-hl">行列の特異値分解（第73章★★）の無限次元版の骨格でもある。</span>正規作用素のときは <m>U</m> と <m>|T|</m> が可換になる。</p>
+
+<p><strong>数値範囲の凸性。</strong>一般の <m>T\in B(H)</m> について <m>W(T)</m> は凸集合である（<em>トープリッツ–ハウスドルフの定理</em>）。証明は二次元部分空間に落として楕円を描くことに帰着する。<m>\overline{W(T)}\supset\sigma(T)</m> は常に正しく、正規作用素のときは <m>\overline{W(T)}=\mathrm{conv}\,\sigma(T)</m>（<ref t="thm-krein-milman"/>の使い所の一つ）。<em>自己共役ならこれが <m>[m,M]</m> という区間になる、というのが<ref t="thm-suchi-han-i"/>だった。</em></p>
+
+<p><strong>仮定を外すと。</strong>実ヒルベルト空間では <m>(Tx,x)</m> が実なのは自動で、対称性と何の関係もない。<em>「スペクトルが実」という主張が意味をもつのは複素の上だけである。</em>また、シー・スター恒等式は <m>\|T^*T\|=\|T\|^2</m> という等式であって、これを落とすとノルムとスペクトル半径の一致が崩れる——バナッハ環の一般論（第79章）では、この一本の公理を入れるか入れないかで理論が大きく分かれる。</p>
+</div>
+
+<div class="star3">
+<h4>★★★ 大学院——正規作用素の分類と作用素環</h4>
+
+<p><strong>正規作用素はどこまで分類できるか。</strong>コンパクト自己共役なら固有値列で決まる（第76章）。一般の正規作用素は、スペクトル測度の<em>ユニタリ同値類</em>によって分類される：<m>T</m> は <m>\bigoplus_n M_{\mathrm{id}}</m>（各成分は <m>L^2(\mu_n)</m> 上の掛け算）とユニタリ同値で、測度の同値類の減少列 <m>[\mu_1]\supset[\mu_2]\supset\cdots</m> が完全不変量になる（<strong>重複度理論</strong>）。第77章で第一段階を扱う。</p>
+
+<p><strong>ワイル–フォン・ノイマンの定理。</strong>自己共役 <m>T</m> と任意の <m>\varepsilon>0</m> に対し、ヒルベルト–シュミットノルムが <m>\varepsilon</m> 未満の自己共役 <m>K</m> があって <m>T+K</m> が離散スペクトルの対角作用素になる。<em>連続スペクトルは、いくらでも小さなコンパクト摂動で壊れる。</em>これに対し<strong>本質的スペクトル</strong> <m>\sigma_{\mathrm{ess}}(T)=\sigma(\pi(T))</m>（<m>\pi</m> はカルキン環 <m>B(H)/K(H)</m> への商写像）はコンパクト摂動で不変で、第73章の指数理論と結びつく。<span class="yogo-hl">ブラウン–ダグラス–フィルモアの理論は、本質的正規作用素の分類を <m>K</m> 群で与える。</span></p>
+
+<p><strong>フォン・ノイマン環。</strong><m>B(H)</m> の <m>*</m> 部分環で弱作用素位相で閉じたものをフォン・ノイマン環という。<em>フォン・ノイマンの二重交換子定理</em>：単位元を含む <m>*</m> 部分環 <m>A</m> について、弱閉包は二重交換子 <m>A''</m> に等しい。<em>位相的な閉包が、純粋に代数的な操作で書ける。</em>因子環の <m>\mathrm{II}_1</m> 型は、有限次元でもなく可換でもないのに有限的なトレースをもつという逆説的な対象で、ジョーンズの部分因子環の指数が <m>\{4\cos^2(\pi/n)\}\cup[4,\infty]</m> という離散＋連続の値をとることは、この分野の最も意外な定理の一つである。</p>
+
+<p><strong>未解決に近い問い。</strong>コンナーの埋め込み予想（すべての <m>\mathrm{II}_1</m> 因子環が超有限因子環の超積に埋め込まれるか）は、量子情報の <m>\mathrm{MIP}^*=\mathrm{RE}</m> という計算量の結果から<em>否定的</em>に解決された（2020年）。<span class="yogo-hl">作用素環の問いが、計算可能性の言葉で決着した。</span>一方、単一作用素の不変部分空間問題——可分ヒルベルト空間上のすべての有界作用素は自明でない閉不変部分空間をもつか——は依然として未解決である（バナッハ空間では反例が知られている）。</p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li><m>T</m> が自己共役なら <m>T^2\ge0</m> であることを示せ。</li>
+<li>射影 <m>P</m> について <m>\sigma(P)\subset\{0,1\}</m> を確かめ、<m>P\ne0,I</m> のとき等号が成り立つことを示せ。</li>
+<li>ユニタリ作用素のスペクトルが単位円周に含まれることを示せ。</li>
+<li>片側シフトが等距離だがユニタリでないことを、値域を調べて示せ。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li><ref t="prop-sotsui-kihon"/>（4）を示せ。<span class="haiten">（25点）</span></li>
+<li><ref t="thm-jiko-spectrum-jitsu"/>（2）の下からの評価を、自分で式を展開して確かめよ。<span class="haiten">（30点）</span></li>
+<li><m>T</m> が正のとき <m>\|Sx\|^2\le\|S\|(Sx,x)</m> を、<m>(Su,v)</m> が半内積であることから示せ。<span class="haiten">（30点）</span></li>
+<li>自己共役 <m>T</m> について <m>\|T\|=\sup_{\|x\|=1}|(Tx,x)|</m> を示せ。<span class="haiten">（35点）</span></li>
+<li><m>T</m> が正規なら <m>\|T\|=r(T)</m> を示せ（自己共役の場合を <m>T^*T</m> に適用する）。<span class="haiten">（40点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li>正作用素の平方根の一意性を示せ。<span class="haiten">（45点）</span></li>
+<li>極分解 <m>T=U|T|</m> を構成し、<m>T</m> が正規なら <m>U</m> と <m>|T|</m> が可換であることを示せ。<span class="haiten">（45点）</span></li>
+<li>トープリッツ–ハウスドルフの定理（数値範囲の凸性）を、二次元の場合に確かめよ。<span class="haiten">（50点）</span></li>
+<li>掛け算作用素 <m>M_\varphi</m> のスペクトルが <m>\varphi</m> の本質的値域であることを示せ。<span class="haiten">（40点）</span></li>
+</ol>
+</div>
+</div>
