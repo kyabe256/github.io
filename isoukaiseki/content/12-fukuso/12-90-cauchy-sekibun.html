@@ -67,7 +67,7 @@
 
 <div class="teiri" id="thm-cauchy-koshiki">
 <h4>コーシーの積分公式</h4>
-<p class="no-indent"><m>f</m> が <m>\overline{D(z_0,R)}</m> を含む開集合で正則、<m>0 &lt; r &lt; R</m> とする。<m>|z-z_0| &lt; r</m> なるすべての <m>z</m> について</p>
+<p class="no-indent"><m>f</m> が <m>\overline{D(z_0,R)}</m> を含む開集合で正則、<m>0 < r < R</m> とする。<m>|z-z_0| < r</m> なるすべての <m>z</m> について</p>
 <M>f(z) = \frac{1}{2\pi i}\oint_{|w-z_0|=r}\frac{f(w)}{w-z}\,dw</M>
 <p class="no-indent">さらに <m>f</m> は無限回複素微分可能で</p>
 <M>f^{(n)}(z) = \frac{n!}{2\pi i}\oint_{|w-z_0|=r}\frac{f(w)}{(w-z)^{n+1}}\,dw</M>
@@ -77,7 +77,7 @@
 <p class="no-indent"><m>g(w)=\dfrac{f(w)-f(z)}{w-z}</m>（<m>w\ne z</m>）、<m>g(z)=f'(z)</m> と置くと <m>g</m> は円板上連続で、<m>z</m> を除いて正則。<em>この状況でもコーシーの定理が成り立つ</em>（一点を除いた連続性で十分——三角形を <m>z</m> のまわりで細かく切り、標準評価で寄与が消える）。よって <m>\oint g=0</m>、すなわち</p>
 <M>\oint\frac{f(w)}{w-z}\,dw = f(z)\oint\frac{dw}{w-z} = f(z)\cdot 2\pi i</M>
 <p class="no-indent">最後の等式は、<m>\oint\frac{dw}{w-z}</m> が回転数 <m>\times\,2\pi i</m> であり、<m>z</m> が円の内部なので回転数 <m>1</m>（<ref t="def-senseki-bun"/>の計算の <m>n=-1</m> の場合を、中心を <m>z</m> にずらして使う）。</p>
-<p class="no-indent"><strong>微分可能性。</strong>右辺で <m>z</m> を動かす。<m>\frac{1}{w-z}=\sum_{n\ge0}\frac{(z-z_0)^n}{(w-z_0)^{n+1}}</m>（<m>|z-z_0| &lt; r=|w-z_0|</m> で一様収束する幾何級数）を代入し、項別積分すると</p>
+<p class="no-indent"><strong>微分可能性。</strong>右辺で <m>z</m> を動かす。<m>\frac{1}{w-z}=\sum_{n\ge0}\frac{(z-z_0)^n}{(w-z_0)^{n+1}}</m>（<m>|z-z_0| < r=|w-z_0|</m> で一様収束する幾何級数）を代入し、項別積分すると</p>
 <M>f(z) = \sum_{n\ge0}c_n(z-z_0)^n, \qquad c_n = \frac{1}{2\pi i}\oint\frac{f(w)}{(w-z_0)^{n+1}}\,dw</M>
 <p class="no-indent"><em>冪級数は収束円内で何回でも項別微分できる（第49章）ので、<m>f</m> は無限回微分可能で <m>c_n=f^{(n)}(z_0)/n!</m>。</em></p>
 <p><span class="yogo-hl">一回微分できるという仮定だけから、冪級数展開が出た。</span>第89章で予告した剛性が、ここで証明された。</p>
@@ -114,7 +114,7 @@
 <div class="hanrei" id="cex-cauchy">
 <h4>仮定を外すと</h4>
 <p class="no-indent">（1）<strong>単連結性。</strong><m>\Omega=\mathbb{C}\setminus\{0\}</m>、<m>f=1/z</m>。<m>f</m> は <m>\Omega</m> 上正則だが <m>\oint_{|z|=1}f=2\pi i\ne0</m>。<em>穴があると積分が零にならない。</em><span class="yogo-hl">この <m>2\pi i</m> こそが、第92章の留数である。</span></p>
-<p class="no-indent">（2）<strong>閉包まで正則でないと。</strong><m>f</m> が開円板で正則でも、境界まで連続とは限らない。<em>積分公式は <m>r &lt; R</m> でしか書けない。</em></p>
+<p class="no-indent">（2）<strong>閉包まで正則でないと。</strong><m>f</m> が開円板で正則でも、境界まで連続とは限らない。<em>積分公式は <m>r < R</m> でしか書けない。</em></p>
 <p class="no-indent">（3）<strong>リウヴィルは実では成り立たない。</strong><m>\sin x</m> は <m>\mathbb{R}</m> 全体で無限回微分可能かつ有界だが定数でない。<em>複素に伸ばすと <m>\sin(iy)=i\sinh y</m> が発散する</em>——有界性が壊れている。</p>
 <p class="no-indent">（4）<strong>実バナッハ空間では。</strong>第74章で見たように、実の設定ではスペクトルが空になりうる。<em>本章の議論はすべて複素数の代数的閉性と、<m>\oint z^{-1}dz=2\pi i</m> という一点に依存している。</em></p>
 </div>
@@ -188,7 +188,7 @@
 <M>\frac{1}{2\pi i}\oint_\gamma\frac{f'(z)}{f(z)}\,dz = Z - P</M>
 <p>（<m>Z</m> は零点、<m>P</m> は極の個数、重複度込み）。<em>左辺は <m>f\circ\gamma</m> の原点のまわりの回転数である。</em><span class="yogo-hl">「像が原点を何周するか」が「内部に零点がいくつあるか」を数える</span>——第89章の等角性と、位相的な次数の理論の接点である。</p>
 
-<p><strong>ルーシェの定理。</strong><m>|g| &lt; |f|</m>（<m>\gamma</m> 上）なら、<m>f</m> と <m>f+g</m> は <m>\gamma</m> の内部で同じ個数の零点をもつ。<em>証明は <m>f+tg</m>（<m>t\in[0,1]</m>）の零点の個数が整数値の連続関数だから一定、というだけ。</em>代数学の基本定理も、多項式の根の連続性も、この一行から出る。</p>
+<p><strong>ルーシェの定理。</strong><m>|g| < |f|</m>（<m>\gamma</m> 上）なら、<m>f</m> と <m>f+g</m> は <m>\gamma</m> の内部で同じ個数の零点をもつ。<em>証明は <m>f+tg</m>（<m>t\in[0,1]</m>）の零点の個数が整数値の連続関数だから一定、というだけ。</em>代数学の基本定理も、多項式の根の連続性も、この一行から出る。</p>
 
 <p><strong>仮定を外すと。</strong>グルサの証明で「導関数の連続性」を仮定すれば、グリーンの定理から一行で示せる（<m>\oint f dz=\iint(\partial_x(if)-\partial_y f)dxdy=2i\iint\bar\partial f=0</m>）。<em>グルサの功績は、その仮定を外したことにある。</em><span class="yogo-hl">この差は本質的である——「一回微分できれば十分」が言えるからこそ、正則性が最小限の仮定として機能する。</span></p>
 </div>

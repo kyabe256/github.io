@@ -1,0 +1,233 @@
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>正則関数は、なぜ冪級数に展開できるのか。</li>
+<li>小さな円板での値が、遠くの値を決めてしまうのはなぜか。</li>
+<li>多価になる関数を、一価に扱う舞台はあるか。</li>
+</ul>
+</div>
+
+<h3 id="s91-1">冪級数と一致の定理</h3>
+
+<div class="teiri" id="thm-fukuso-taylor">
+<h4>テイラー展開</h4>
+<p class="no-indent"><m>f</m> が <m>D(z_0,R)</m> 上で正則なら、その円板全体で</p>
+<M>f(z) = \sum_{n=0}^{\infty} \frac{f^{(n)}(z_0)}{n!}(z-z_0)^n</M>
+<p class="no-indent">が成り立ち、収束は広義一様である。逆に収束半径 <m>R>0</m> の冪級数は、収束円の内部で正則な関数を定める。</p>
+<p class="no-indent"><em>したがって「正則」と「局所的に冪級数に展開できる」は同値である。</em></p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">前半は<ref t="thm-cauchy-koshiki"/>の証明のなかですでに得ている（幾何級数を代入して項別積分した）。<em>収束半径が <m>R</m> 以上になるのは、<m>r < R</m> を自由に取れるからである。</em></p>
+<p class="no-indent">後半：冪級数は収束円の内部で広義一様収束し（第49章）、各部分和は多項式だから正則。<em>ワイエルシュトラスの収束定理（<ref t="thm-kekka-gun"/>（7））より極限も正則である。</em></p>
+<p><span class="yogo-hl">実関数では <m>C^\infty</m> と解析的は別ものだった（<m>e^{-1/x^2}</m>）。複素では一致する。</span></p>
+</div>
+
+<div class="teiri" id="thm-icchi-teiri-fukuso">
+<h4>一致の定理</h4>
+<p class="no-indent"><m>\Omega</m> を領域（連結開集合）、<m>f,g</m> を <m>\Omega</m> 上の正則関数とする。次の三つは同値である。</p>
+<p class="no-indent">（1）<m>f\equiv g</m>（<m>\Omega</m> 上）。<br>
+（2）<m>\{z\in\Omega : f(z)=g(z)\}</m> が <m>\Omega</m> のなかに集積点をもつ。<br>
+（3）ある一点 <m>z_0\in\Omega</m> で、すべての <m>n</m> について <m>f^{(n)}(z_0)=g^{(n)}(z_0)</m>。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><m>h=f-g</m> として <m>h\equiv0</m> を示す。（2）から（3）：<m>a</m> を零点の集積点とする。<m>h</m> が <m>a</m> の近傍で <m>h(z)=\sum_{n\ge m}c_n(z-a)^n</m>（<m>c_m\ne0</m>）と書けるなら、<m>h(z)=(z-a)^m u(z)</m> で <m>u(a)=c_m\ne0</m>。<em>連続性より <m>u</m> は <m>a</m> の近傍で零にならず、<m>h</m> の零点は <m>a</m> だけ——集積点であることに反する。</em>よってすべての <m>c_n</m> が零、すなわち（3）。</p>
+<p class="no-indent">（3）から（1）：<m>A=\{z\in\Omega:\ \forall n,\ h^{(n)}(z)=0\}</m> と置く。<em><m>A</m> は閉</em>（可算個の連続関数の零点集合の共通部分）。<em><m>A</m> は開</em>（<m>z\in A</m> なら近傍で <m>h</m> のテイラー係数がすべて零だから <m>h\equiv0</m>、したがって近傍が <m>A</m> に入る）。<m>\Omega</m> は連結で <m>A\ne\emptyset</m> だから <m>A=\Omega</m>。</p>
+<p><span class="yogo-hl">「開かつ閉」の議論——第28章の連結性——が、ここで解析の定理を運んでいる。</span></p>
+</div>
+
+<div class="chui">
+<h4>一致の定理が意味すること</h4>
+<p class="no-indent"><em>正則関数は、どれほど小さな部分の情報からも完全に復元される。</em>実軸上の一区間での値が決まれば、複素平面上の連結な定義域での値がすべて決まる。<span class="yogo-hl">これが「剛性」の最も強い現れである。</span></p>
+<p><strong>使い方。</strong>実数で成り立つ恒等式は、両辺が正則なら複素数でも成り立つ。<em>たとえば <m>\sin^2z+\cos^2z=1</m>、<m>e^{z+w}=e^ze^w</m>、二項定理、ベータ関数とガンマ関数の関係——どれも実で確かめてから複素へ延ばせばよい。</em></p>
+<p><strong>反面。</strong><m>C_c^\infty</m> のような「台がコンパクトな」正則関数は存在しない（零でない限り）。<em>したがって第87章の平滑化や1の分割は、複素解析では使えない。</em><span class="yogo-hl">剛性は、局所的な操作の自由を奪う。</span>多変数でこの制約を回避するために <m>\bar\partial</m> 方程式の理論が発達した（第89章★★★）。</p>
+</div>
+
+<h3 id="s91-2">特異点と、ローラン展開</h3>
+
+<div class="teigi" id="def-tokuiten">
+<h4>孤立特異点の分類</h4>
+<p class="no-indent"><m>f</m> が穴あき円板 <m>D(a,r)\setminus\{a\}</m> 上で正則のとき、<m>a</m> を<strong>孤立特異点</strong>という。<strong>ローラン展開</strong></p>
+<M>f(z) = \sum_{n=-\infty}^{\infty} c_n(z-a)^n, \qquad c_n = \frac{1}{2\pi i}\oint_{|w-a|=\rho}\frac{f(w)}{(w-a)^{n+1}}\,dw</M>
+<p class="no-indent">が成り立ち、負冪の部分（<strong>主要部</strong>）の形で次の三つに分類される。</p>
+<p class="no-indent">（1）<strong>除去可能</strong>：<m>c_n=0</m>（<m>n < 0</m>）。<m>f</m> は <m>a</m> に正則に延びる。<br>
+（2）<strong>極</strong>：ある <m>m\ge1</m> について <m>c_{-m}\ne0</m>、<m>c_n=0</m>（<m>n < -m</m>）。<em><m>m</m> を極の位数という。</em><br>
+（3）<strong>真性特異点</strong>：<m>c_n\ne0</m> なる負の <m>n</m> が無限個ある。</p>
+</div>
+
+<div class="teiri" id="thm-tokuiten-hantei">
+<h4>特異点の判定</h4>
+<p class="no-indent">（1）<strong>リーマンの除去可能特異点定理</strong>：<m>f</m> が <m>a</m> の近傍で有界なら、<m>a</m> は除去可能。<br>
+（2）<m>a</m> が位数 <m>m</m> の極であることと <m>\lim_{z\to a}|f(z)|=\infty</m> かつ <m>(z-a)^mf(z)</m> が有界であることは同値。<br>
+（3）<strong>カゾラーティ–ワイエルシュトラス</strong>：<m>a</m> が真性特異点なら、任意の近傍での <m>f</m> の像は <m>\mathbb{C}</m> で稠密。<br>
+（4）<strong>ピカールの大定理</strong>：さらに強く、像はたかだか一点を除く <m>\mathbb{C}</m> 全体で、各値を無限回とる。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">（1）<m>g(z)=(z-a)^2f(z)</m>（<m>g(a)=0</m>）と置く。<m>|f|\le M</m> なら</p>
+<M>\Big|\frac{g(z)-g(a)}{z-a}\Big| = |(z-a)f(z)| \le M|z-a| \to 0</M>
+<p class="no-indent"><em>よって <m>g</m> は <m>a</m> で複素微分可能で <m>g'(a)=0</m>。</em><m>g</m> は <m>a</m> の近傍で正則だから <m>g(z)=\sum_{n\ge2}c_n(z-a)^n</m>、すなわち <m>f(z)=\sum_{n\ge0}c_{n+2}(z-a)^n</m> が正則な延長を与える。</p>
+<p class="no-indent">（3）像が稠密でないとすると、ある <m>w_0</m> と <m>\varepsilon>0</m> について <m>|f(z)-w_0|\ge\varepsilon</m>。すると <m>g(z)=1/(f(z)-w_0)</m> は穴あき円板で正則かつ有界で、（1）より <m>a</m> に延びる。<em><m>g(a)\ne0</m> なら <m>f</m> が <m>a</m> に延び（除去可能）、<m>g(a)=0</m> なら <m>f</m> は極をもつ。</em>どちらも真性特異点であることに反する。</p>
+</div>
+
+<div class="rei" id="rei-tokuiten-rei">
+<h4>三種類の見本</h4>
+<p class="no-indent">（1）<strong>除去可能。</strong><m>\dfrac{\sin z}{z}</m>。<m>\sin z=z-z^3/6+\cdots</m> なので <m>1-z^2/6+\cdots</m> に延びる。<m>\dfrac{e^z-1}{z}</m> も同様。</p>
+<p>（2）<strong>極。</strong><m>\dfrac{1}{z^3}</m>（位数 <m>3</m>）、<m>\dfrac{1}{\sin z}</m>（各 <m>n\pi</m> で位数 <m>1</m>）、<m>\cot z=\dfrac{\cos z}{\sin z}</m>。<em>極だけをもつ関数を<strong>有理型</strong>という。</em></p>
+<p>（3）<strong>真性。</strong><m>e^{1/z}=\sum_{n\ge0}\dfrac{1}{n!z^n}</m>。原点での挙動は劇的である：<em>実軸正方向から近づくと <m>\infty</m>、負方向からは <m>0</m>、虚軸に沿うと絶対値 <m>1</m> のまま振動する。</em><span class="yogo-hl">実際、任意の <m>w\ne0</m> について <m>e^{1/z}=w</m> の解が原点のどんな近傍にも無限個ある</span>——ピカールの大定理の例外値が <m>0</m> である。</p>
+<p>（4）<strong>孤立でない特異点。</strong><m>\dfrac{1}{\sin(1/z)}</m> は <m>z=1/(n\pi)</m> に極をもち、原点はそれらの集積点である。<em>原点は孤立特異点ではないので、この分類の外にある。</em></p>
+<p>（5）<strong>無限遠点。</strong><m>g(z)=f(1/z)</m> の <m>z=0</m> での特異性で分類する。<em>多項式は無限遠で極、<m>e^z</m> は真性特異点、有理関数は無限遠を含めて有理型。</em><span class="yogo-hl">リーマン球面 <m>\mathbb{C}\cup\{\infty\}</m>（第22章の一点コンパクト化）の上で見ると、有理関数とは球面全体で有理型な関数のことである。</span></p>
+</div>
+
+<h3 id="s91-3">解析接続</h3>
+
+<div class="teigi" id="def-kaiseki-setsuzoku">
+<h4>解析接続</h4>
+<p class="no-indent"><m>f</m> を領域 <m>\Omega</m> 上の正則関数、<m>\Omega\subset\Omega'</m> とする。<m>\Omega'</m> 上の正則関数 <m>F</m> で <m>F|_\Omega=f</m> なるものを <m>f</m> の <m>\Omega'</m> への<strong>解析接続</strong>という。</p>
+<p class="no-indent"><em><ref t="thm-icchi-teiri-fukuso"/>により、存在すれば一意である。</em>ただし存在するとは限らず、また「道に沿って延長する」やり方では、たどる道によって結果が変わりうる。</p>
+</div>
+
+<div class="rei" id="rei-setsuzoku-rei">
+<h4>解析接続の実例</h4>
+<p class="no-indent">（1）<strong>幾何級数。</strong><m>\sum_{n\ge0}z^n</m> は <m>|z| < 1</m> でのみ収束するが、その和 <m>\dfrac{1}{1-z}</m> は <m>\mathbb{C}\setminus\{1\}</m> 上正則。<em>級数は接続の一つの表示にすぎず、接続の限界を示すものではない。</em></p>
+<p>（2）<strong>ガンマ関数。</strong><m>\Gamma(s)=\int_0^\infty t^{s-1}e^{-t}dt</m> は <m>\mathrm{Re}\,s>0</m> で収束。関数等式 <m>\Gamma(s+1)=s\Gamma(s)</m> を使って</p>
+<M>\Gamma(s) = \frac{\Gamma(s+n)}{s(s+1)\cdots(s+n-1)}</M>
+<p class="no-indent">により <m>\mathbb{C}\setminus\{0,-1,-2,\dots\}</m> へ接続される。<em>非正整数で位数 <m>1</m> の極をもち、零点は一つもない。</em></p>
+<p>（3）<strong>リーマンゼータ関数。</strong><m>\zeta(s)=\sum n^{-s}</m> は <m>\mathrm{Re}\,s>1</m> で収束。<em>接続は関数等式</em></p>
+<M>\pi^{-s/2}\Gamma(s/2)\zeta(s) = \pi^{-(1-s)/2}\Gamma((1-s)/2)\zeta(1-s)</M>
+<p class="no-indent"><em>による</em>（リーマン、1859年）。証明はテータ関数 <m>\theta(t)=\sum_ne^{-\pi n^2t}</m> の変換公式 <m>\theta(1/t)=\sqrt t\,\theta(t)</m> を使い、これは<strong>ポアソンの和公式</strong>（<ref t="rei-fourier-ouyou"/>（1））の帰結である。<span class="yogo-hl">第84章のフーリエ解析が、そのまま整数論の中心に入っている。</span><m>\zeta</m> は <m>s=1</m> に位数 <m>1</m> の極をもち、他は正則。</p>
+<p>（4）<strong>接続できない例。</strong><m>f(z)=\sum_{n\ge0}z^{2^n}</m> は <m>|z| < 1</m> で正則だが、単位円周上のどの点からも外へ延ばせない（<strong>自然境界</strong>）。<em>理由：<m>2^n</m> 乗根の点で <m>|f|\to\infty</m> となり、そのような点が円周上稠密だから。</em>一般に<strong>アダマールの空隙定理</strong>：指数 <m>n_k</m> が <m>n_{k+1}/n_k\ge\lambda>1</m> をみたせば収束円が自然境界になる。<span class="yogo-hl">第82章★★のラクナリ級数が、ここでも「最悪の場合」を作っている。</span></p>
+</div>
+
+<div class="hanrei" id="cex-takachi">
+<h4>道によって答えが変わる</h4>
+<p class="no-indent"><m>f(z)=\log z</m> を <m>z=1</m> の近傍で <m>f(1)=0</m> と定め、原点を正の向きに一周する道に沿って接続する。<em>戻ってきたときの値は <m>2\pi i</m> である。</em></p>
+<p class="no-indent">同様に <m>\sqrt z</m> は一周で符号が変わる。<span class="yogo-hl">解析接続は「道のホモトピー類」にしか依らない（<strong>モノドロミー定理</strong>）が、道が異なるホモトピー類にあれば結果が異なる。</span></p>
+<p class="no-indent"><strong>モノドロミー定理。</strong><m>\Omega</m> が単連結で、<m>f</m> が <m>\Omega</m> 内のすべての道に沿って接続できるなら、<m>\Omega</m> 上に一価な正則関数として延びる。<em>逆に、穴があるとモノドロミー（一周したときの値の変化）が現れる。</em></p>
+<p class="no-indent"><em>解決は定義域を取り替えることである</em>：<m>\log z</m> は <m>\mathbb{C}\setminus\{0\}</m> の<strong>普遍被覆</strong>（無限葉の螺旋）の上で一価な関数になる。<span class="yogo-hl">第28章の被覆空間の理論が、ここで多価関数の正しい舞台を与える。</span>これが<strong>リーマン面</strong>の考え方で、<m>\sqrt z</m> なら二葉、<m>\sqrt{z(z-1)(z-\lambda)}</m> なら種数 <m>1</m> の閉曲面（トーラス）になる。</p>
+</div>
+
+<figure>
+<svg viewBox="0 0 470 288" width="470" height="288" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">円板をつないで延ばす——道が違えば行き先が違う</text>
+
+  <rect x="14" y="26" width="442" height="120" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+
+  <circle cx="160" cy="88" r="5" fill="#a03b2e"/>
+  <text x="160" y="80" font-size="6" text-anchor="middle" fill="#8c2f1e">特異点</text>
+
+  <circle cx="82" cy="88" r="22" fill="none" stroke="#35618f" stroke-width="1" stroke-dasharray="3 2"/>
+  <circle cx="82" cy="88" r="2.4" fill="#35618f"/>
+  <text x="82" y="120" font-size="6" text-anchor="middle" fill="#1f3b5c">出発点</text>
+
+  <path d="M 82 88 C 100 48 140 40 160 44 C 190 50 214 62 234 80" fill="none" stroke="#2f6b5f" stroke-width="1.4"/>
+  <circle cx="106" cy="60" r="17" fill="none" stroke="#2f6b5f" stroke-width="0.7" stroke-dasharray="2 2"/>
+  <circle cx="140" cy="46" r="17" fill="none" stroke="#2f6b5f" stroke-width="0.7" stroke-dasharray="2 2"/>
+  <circle cx="176" cy="52" r="17" fill="none" stroke="#2f6b5f" stroke-width="0.7" stroke-dasharray="2 2"/>
+  <circle cx="210" cy="68" r="17" fill="none" stroke="#2f6b5f" stroke-width="0.7" stroke-dasharray="2 2"/>
+  <text x="140" y="34" font-size="6" text-anchor="middle" fill="#1e4a41">上を回る道</text>
+
+  <path d="M 82 88 C 100 128 140 136 160 132 C 190 126 214 112 234 96" fill="none" stroke="#8a6b2c" stroke-width="1.4"/>
+  <circle cx="106" cy="116" r="17" fill="none" stroke="#8a6b2c" stroke-width="0.7" stroke-dasharray="2 2"/>
+  <circle cx="140" cy="130" r="17" fill="none" stroke="#8a6b2c" stroke-width="0.7" stroke-dasharray="2 2"/>
+  <circle cx="176" cy="126" r="17" fill="none" stroke="#8a6b2c" stroke-width="0.7" stroke-dasharray="2 2"/>
+  <circle cx="210" cy="108" r="17" fill="none" stroke="#8a6b2c" stroke-width="0.7" stroke-dasharray="2 2"/>
+  <text x="140" y="146" font-size="6" text-anchor="middle" fill="#5a4520">下を回る道</text>
+
+  <circle cx="240" cy="88" r="6" fill="#f0e2de" stroke="#a03b2e" stroke-width="1"/>
+  <text x="272" y="82" font-size="6.4" fill="#8c2f1e">同じ終点なのに</text>
+  <text x="272" y="94" font-size="6.4" fill="#8c2f1e">値が違うことがある</text>
+  <text x="272" y="110" font-size="6" fill="#6a6a68">対数なら 2πi だけずれる</text>
+  <text x="272" y="122" font-size="6" fill="#6a6a68">平方根なら符号が変わる</text>
+  <text x="272" y="138" font-size="6" fill="#1e4a41">単連結ならこのずれは起きない</text>
+
+  <rect x="14" y="156" width="216" height="126" rx="4" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="24" y="171" font-size="7.6" font-weight="700" fill="#1e4a41">一致の定理——剛性の極み</text>
+  <text x="24" y="188" font-size="6.6" fill="#1e4a41">零点が集積すれば、恒等的に零である</text>
+  <text x="24" y="205" font-size="6.4" fill="#5a4520">証明は「開かつ閉」の議論だけ</text>
+  <text x="24" y="217" font-size="6.4" fill="#5a4520">——第28章の連結性がそのまま効く</text>
+  <text x="24" y="234" font-size="6.6" fill="#8c2f1e">使い道　実数の恒等式を複素へ延ばす</text>
+  <text x="24" y="251" font-size="6.4" fill="#6b2a48">代償　台がコンパクトな正則関数はない</text>
+  <text x="24" y="263" font-size="6.4" fill="#6b2a48">平滑化も 1 の分割も使えない</text>
+  <text x="24" y="276" font-size="6.2" fill="#6a6a68">剛性は、局所的な操作の自由を奪う</text>
+
+  <rect x="240" y="156" width="216" height="126" rx="4" fill="#f4f1ea" stroke="#8a6b2c"/>
+  <text x="250" y="171" font-size="7.6" font-weight="700" fill="#5a4520">孤立特異点は三種類しかない</text>
+  <text x="250" y="188" font-size="6.6" fill="#5a4520">除去可能　近傍で有界なら必ずこれ</text>
+  <text x="250" y="200" font-size="6.6" fill="#5a4520">極　　　　絶対値が無限大に行く</text>
+  <text x="250" y="212" font-size="6.6" fill="#5a4520">真性　　　どちらでもない</text>
+  <text x="250" y="229" font-size="6.4" fill="#8c2f1e">真性特異点の近くでは、像がほぼ全平面</text>
+  <text x="250" y="241" font-size="6.4" fill="#8c2f1e">——例外は、たかだか一点だけ</text>
+  <text x="250" y="258" font-size="6.4" fill="#1e4a41">分類は主要部の項数で決まる</text>
+  <text x="250" y="270" font-size="6.4" fill="#6a6a68">無限遠点も、変数を逆数にして同じ分類</text>
+  <text x="250" y="281" font-size="6.2" fill="#6b2a48">球面全体で有理型なものが、有理関数</text>
+</svg>
+<figcaption>解析接続は円板を重ねながら関数を延ばす操作である。特異点を避ける道が異なるホモトピー類にあると、同じ終点でも値が変わる。正しい舞台は被覆空間、すなわちリーマン面である。</figcaption>
+</figure>
+
+<div class="star2">
+<h4>★★ 学部後半——無限積、ミッタク–レフラー、リーマン面</h4>
+
+<p><strong>ワイエルシュトラスの因数分解定理。</strong>任意の離散集合 <m>\{a_n\}\subset\mathbb{C}</m>（集積点なし）と重複度に対し、ちょうどそこに零点をもつ整関数が存在する。</p>
+<M>f(z) = z^m e^{g(z)}\prod_{n}\Big(1-\frac{z}{a_n}\Big)e^{P_n(z/a_n)}</M>
+<p><em><m>P_n(w)=w+w^2/2+\cdots+w^{k_n}/k_n</m> は収束因子で、これがないと無限積が収束しない。</em><span class="yogo-hl">多項式の因数分解を、無限次へ持ち上げる定理である。</span>例：</p>
+<M>\sin\pi z = \pi z\prod_{n\ge1}\Big(1-\frac{z^2}{n^2}\Big)</M>
+<p><em>両辺の <m>z^3</m> の係数を比べると、バーゼル問題 <m>\sum1/n^2=\pi^2/6</m> が出る</em>（オイラーの元々の議論を厳密化したものである）。</p>
+
+<p><strong>ミッタク–レフラーの定理。</strong>逆に、指定した点に指定した主要部をもつ有理型関数が存在する。<em>両定理を合わせると、零点と極を自由に指定した関数が作れる。</em>例：</p>
+<M>\pi\cot\pi z = \frac1z + \sum_{n\ne0}\Big(\frac{1}{z-n}+\frac1n\Big)</M>
+
+<p><strong>リーマン面。</strong>多価関数を一価にする舞台を、抽象的に定義する。<em>リーマン面とは、複素平面の開集合と同相な座標近傍で覆われ、座標変換が正則な連結ハウスドルフ空間である。</em></p>
+<p><span class="yogo-hl">単一化定理（ケーベ–ポアンカレ）：単連結リーマン面は、リーマン球面・複素平面・単位円板のいずれかと正則同型である。</span><em>たった三つしかない。</em>一般のリーマン面はこの三つのいずれかを普遍被覆にもち、基本群の作用による商として書ける。<em>種数 <m>g\ge2</m> の閉曲面は円板を普遍被覆にもち、双曲幾何をもつ</em>——これが第93章のリーマンの写像定理の、最終的な一般形である。</p>
+
+<p><strong>仮定を外すと。</strong>一致の定理は連結性を要求する（非連結なら成分ごと）。<em>実解析的関数についても一致の定理は成り立つ</em>が、そこでは「集積点」ではなく「区間上での一致」を要求する必要がある（<m>\mathbb{R}</m> の位相が貧しいため）。</p>
+</div>
+
+<div class="star3">
+<h4>★★★ 大学院——ゼータ関数と、接続の限界</h4>
+
+<p><strong>リーマン予想。</strong><m>\zeta(s)</m> の非自明零点（臨界帯 <m>0 < \mathrm{Re}\,s < 1</m> にあるもの）はすべて <m>\mathrm{Re}\,s=1/2</m> 上にあるか。<em>関数等式により零点は <m>s\mapsto1-s</m> について対称なので、臨界線はその対称軸である。</em></p>
+<p>知られていること：（i）<m>\mathrm{Re}\,s=1</m> 上に零点がない（アダマール、ド・ラ・ヴァレ–プーサン、1896年）——これが素数定理と同値。（ii）臨界線上に無限個の零点がある（ハーディ、1914年）。（iii）零点の <m>41\%</m> 以上が臨界線上にある（コンリー、ブイ–コンリー–ヤング）。（iv）最初の <m>10^{13}</m> 個の零点は臨界線上にある。<span class="yogo-hl">第76章★★★で触れたヒルベルト–ポリア予想は、これを自己共役作用素のスペクトルとして説明しようとする試みである。</span></p>
+
+<p><strong>関数体類似は解けている。</strong>有限体上の曲線のゼータ関数についてのリーマン予想は、ヴェイユが証明した（1948年）。さらに高次元の場合（ヴェイユ予想）はドリーニュが解決（1974年、エタール・コホモロジーを使う）。<em>数体の場合だけが残っている</em>——「幾何的な対象がないこと」が障害だと考えられており、<span class="yogo-hl">一元体 <m>\mathbb{F}_1</m> 上の幾何という、まだ定義されていない理論の探求がここから生まれた。</span></p>
+
+<p><strong>接続の限界を測る。</strong>与えられた冪級数が自然境界をもつかどうかは、一般には決定不能に近い。<em>フェイベスの定理：係数が「ランダム」なら、ほとんど確実に収束円は自然境界になる。</em>逆に、整数係数で有界な冪級数は、有理関数であるか自然境界をもつかのどちらかである（<strong>ポリア–カールソンの定理</strong>）。<span class="yogo-hl">「自然に現れる関数が接続できる」のは、むしろ例外的な事態である。</span></p>
+
+<p><strong>レゾルジェンス理論。</strong>発散級数（たとえば摂動論の級数）に意味を与える枠組みとして、エカルの<em>レゾルジェンス理論</em>がある。ボレル変換で発散級数を解析関数に変え、その特異点の構造（<em>アラン</em>）を追い、逆変換で「和」を定義する。<em>異なる方向からの和が異なる値を与える現象（ストークス現象）が、もとの級数の発散の度合いを測る。</em>この理論は、量子場理論のインスタントン展開や、ミラー対称性の数え上げ不変量の研究で現在も発展している。<em>解析接続の多価性が、物理的な非摂動効果として現れる</em>のである。</p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li><m>\sin z/z</m> の原点が除去可能であることを確かめよ。</li>
+<li><m>e^{1/z}</m> のローラン展開を書き、真性特異点であることを確かめよ。</li>
+<li><m>1/\sin z</m> の極の位置と位数を求めよ。</li>
+<li>多項式が無限遠点に極をもつことを確かめよ。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li><ref t="thm-icchi-teiri-fukuso"/>の（3）から（1）を、開かつ閉の議論で示せ。<span class="haiten">（35点）</span></li>
+<li>リーマンの除去可能特異点定理を示せ。<span class="haiten">（35点）</span></li>
+<li>カゾラーティ–ワイエルシュトラスの定理を示せ。<span class="haiten">（40点）</span></li>
+<li>ローラン展開の存在と係数の表示を示せ。<span class="haiten">（40点）</span></li>
+<li>台がコンパクトな正則関数が零に限ることを示せ。<span class="haiten">（25点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li><m>\sum z^{2^n}</m> の収束円が自然境界であることを示せ。<span class="haiten">（50点）</span></li>
+<li>ガンマ関数の解析接続を関数等式から構成し、極の位置と留数を求めよ。<span class="haiten">（45点）</span></li>
+<li>テータ関数の変換公式をポアソンの和公式から導け。<span class="haiten">（50点）</span></li>
+<li><m>\sin\pi z</m> の無限積表示から <m>\sum1/n^2=\pi^2/6</m> を導け。<span class="haiten">（45点）</span></li>
+</ol>
+</div>
+</div>

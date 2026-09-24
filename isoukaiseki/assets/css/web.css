@@ -258,3 +258,22 @@ table { counter-increment: tblc; }
   .chnav { flex-direction: column; gap: .4rem; }
   .chnav .next { text-align: left; }
 }
+
+/* 付録A・B・C・E */
+.kigo-hyo { margin: 1rem 0 1.6rem; overflow-x: auto; }
+.kigo-hyo table { width: 100%; border-collapse: collapse; font-size: .92rem; }
+.kigo-hyo th { background: #eceff3; text-align: left; padding: .4rem .6rem; font-weight: 700; }
+.kigo-hyo td { padding: .38rem .6rem; border-bottom: 1px solid #e3e7ec; vertical-align: top; }
+.kigo-hyo td:last-child { white-space: nowrap; color: #6a6a68; font-size: .88rem; }
+
+.teigishu .idx-group, .hanreishu .idx-group {
+  background: #eceff3; padding: .2rem .5rem; margin: 1.3rem 0 .5rem; font-weight: 700;
+}
+.hanreishu .idx-group { background: #f4ece9; }
+.teigishu ul, .hanreishu ul { list-style: none; margin: 0; padding: 0; }
+.teigishu li, .hanreishu li { margin: .3rem 0; }
+.teigishu a, .hanreishu a { text-decoration: none; color: inherit; }
+.hanreishu .idx-term { font-weight: 700; color: #8c2f1e; }
+.hanrei-lead { color: #55555a; font-size: .94em; }
+.tejun p { margin: .6rem 0; }
+.tejun strong { color: #1f3b5c; }

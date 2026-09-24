@@ -1,0 +1,205 @@
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>関数の集まりに、どんな位相を入れるべきか。</li>
+<li>無限次元では、有界閉集合がコンパクトにならない。では何が要るのか。</li>
+<li>「同程度連続」という条件は、どこから来たのか。</li>
+</ul>
+</div>
+
+<h3 id="s95-1">関数空間の位相</h3>
+
+<p>本書では関数の集まりに、場面ごとに違う位相を入れてきた。<em>一様ノルム（第47章）、<m>L^p</m> ノルム（第60章）、弱位相（第70章）、シュワルツ空間の半ノルム（第87章）。</em>本章でそれらを整理し、<span class="yogo-hl">「どの位相でコンパクトになるか」という問いに統一的な答えを与える。</span></p>
+
+<div class="teigi" id="def-kansu-isou">
+<h4>関数空間の三つの位相</h4>
+<p class="no-indent"><m>X</m> を位相空間、<m>(Y,d)</m> を距離空間、<m>C(X,Y)</m> を連続写像全体とする。</p>
+<p class="no-indent">（1）<strong>各点収束の位相</strong>：積位相 <m>Y^X</m> の相対位相。基本近傍は有限個の点での値を指定する。<br>
+（2）<strong>コンパクト開位相</strong>：<m>K\subset X</m> コンパクト、<m>U\subset Y</m> 開に対し</p>
+<M>W(K,U) = \{\, f\in C(X,Y) \mid f(K)\subset U \,\}</M>
+<p class="no-indent">を準基底とする位相。<br>
+（3）<strong>一様収束の位相</strong>（<m>X</m> がコンパクトのとき）：<m>\rho(f,g)=\sup_{x\in X}d(f(x),g(x))</m> による距離位相。</p>
+</div>
+
+<div class="teiri" id="prop-isou-kankei">
+<h4>三つの位相の関係</h4>
+<p class="no-indent">（1）各点収束 <m>\subset</m> コンパクト開 <m>\subset</m> 一様収束（位相として弱い順）。<br>
+（2）<m>X</m> がコンパクトなら、コンパクト開位相と一様収束の位相は一致する。<br>
+（3）<m>X</m> が局所コンパクトハウスドルフなら、コンパクト開位相は<em>広義一様収束の位相</em>（各コンパクト集合上での一様収束）に一致する。<br>
+（4）コンパクト開位相は、<strong>評価写像</strong> <m>e:C(X,Y)\times X\to Y</m>、<m>e(f,x)=f(x)</m> を連続にする最も弱い位相である（<m>X</m> 局所コンパクトのとき）。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">（2）<m>f\in W(K,U)</m> なら <m>f(K)\subset U</m> はコンパクトなので、<m>\varepsilon=d(f(K),Y\setminus U)>0</m>。<em><m>\rho(f,g) < \varepsilon</m> なら <m>g\in W(K,U)</m>。</em>逆に <m>\rho</m> の <m>\varepsilon</m> 球を、有限個の <m>W(K_i,U_i)</m> の共通部分で近似する：<m>X</m> のコンパクト性から <m>X</m> を有限個の小集合 <m>K_i</m> に分け、<m>U_i=B(f(x_i),\varepsilon/2)</m> ととればよい。</p>
+<p class="no-indent">（4）は指数法則 <m>C(Z\times X,Y)\cong C(Z,C(X,Y))</m> の言い換えである。<span class="yogo-hl">コンパクト開位相は「写像の族を一つの写像と見る」ための、圏論的に自然な位相である。</span><em>ホモトピー論で道の空間やループ空間を扱うとき、この位相が標準になる理由がここにある。</em></p>
+</div>
+
+<h3 id="s95-2">アスコリ–アルツェラの定理</h3>
+
+<div class="teigi" id="def-doteido-renzoku">
+<h4>同程度連続</h4>
+<p class="no-indent">族 <m>\mathcal{F}\subset C(X,Y)</m> が点 <m>x_0</m> で<strong>同程度連続</strong>とは、任意の <m>\varepsilon>0</m> に対し <m>x_0</m> の近傍 <m>V</m> があって</p>
+<M>x\in V \ \Longrightarrow\ d(f(x),f(x_0)) < \varepsilon \qquad (\forall f\in\mathcal{F})</M>
+<p class="no-indent">が成り立つこと。<em>肝心なのは <m>V</m> が <m>f</m> に依らないことである。</em>すべての点で同程度連続なとき、単に同程度連続という。</p>
+<p class="no-indent"><m>X</m> が距離空間で <m>V</m> が <m>x_0</m> にも依らずにとれるとき<strong>一様同程度連続</strong>という。</p>
+</div>
+
+<div class="teiri" id="thm-ascoli">
+<h4>アスコリ–アルツェラの定理</h4>
+<p class="no-indent"><m>X</m> をコンパクトハウスドルフ空間、<m>\mathcal{F}\subset C(X,\mathbb{R})</m>（または <m>\mathbb{C}</m> 値）とする。次は同値である。</p>
+<p class="no-indent">（1）<m>\mathcal{F}</m> は一様ノルムについて<em>相対コンパクト</em>（閉包がコンパクト）。<br>
+（2）<m>\mathcal{F}</m> は<strong>一様有界かつ同程度連続</strong>。</p>
+<p class="no-indent"><m>X</m> が可分距離空間なら、（2）は「<m>\mathcal{F}</m> の任意の列が一様収束する部分列をもつ」と同値である。</p>
+<p class="no-indent"><em>値域が <m>\mathbb{R}^n</m> でなく一般の距離空間 <m>Y</m> のときは、「一様有界」を「各点 <m>x</m> について <m>\{f(x):f\in\mathcal{F}\}</m> が相対コンパクト」に置き換える。</em></p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><strong>（2）から（1）。</strong><m>X</m> は可分（コンパクト距離空間の場合。一般には有限被覆で代用する）としてよい。可算稠密集合 <m>\{x_1,x_2,\dots\}</m> をとる。</p>
+<p class="no-indent"><strong>対角線論法。</strong>列 <m>(f_n)\subset\mathcal{F}</m> について、<m>(f_n(x_1))</m> は有界だからボルツァーノ–ワイエルシュトラス（<ref t="thm-bw"/>）で収束部分列 <m>(f_{n}^{(1)})</m> をとる。その部分列から <m>(f_n(x_2))</m> が収束するものを、と繰り返し、<em>対角線 <m>g_n=f_n^{(n)}</m> をとる。</em>すると <m>(g_n)</m> はすべての <m>x_j</m> で収束する。</p>
+<p class="no-indent"><strong>各点収束から一様収束へ。</strong>ここで同程度連続性を使う。<m>\varepsilon>0</m> に対し、各 <m>x</m> の近傍 <m>V_x</m> を「<m>y\in V_x\Rightarrow|f(y)-f(x)| < \varepsilon/3</m>（すべての <m>f\in\mathcal{F}</m>）」となるようにとる。<m>X</m> のコンパクト性より有限個 <m>V_{x_{j_1}},\dots,V_{x_{j_k}}</m> で覆え、稠密性から各 <m>V</m> に可算稠密集合の点を取れる。<m>N</m> を「<m>n,m\ge N</m> でそれら有限個の点での値の差が <m>\varepsilon/3</m> 未満」ととると、任意の <m>x</m> について</p>
+<M>|g_n(x)-g_m(x)| \le |g_n(x)-g_n(x_j)| + |g_n(x_j)-g_m(x_j)| + |g_m(x_j)-g_m(x)| < \varepsilon</M>
+<p class="no-indent"><em>すなわち <m>(g_n)</m> は一様コーシー列で、<m>C(X)</m> の完備性（<ref t="thm-ichiyou-cauchy"/>）から一様収束する。</em></p>
+<p class="no-indent"><strong>（1）から（2）。</strong>相対コンパクトなら全有界。有限 <m>\varepsilon/3</m> 網 <m>f_1,\dots,f_k</m> をとると、各 <m>f_i</m> は連続（<m>X</m> コンパクトなら一様連続）なので、共通の <m>\delta</m> がとれる。<em>任意の <m>f</m> はどれかの <m>f_i</m> と <m>\varepsilon/3</m> 以内だから、三角不等式で同程度連続性が出る。</em></p>
+<p><span class="yogo-hl">「有限 <m>\varepsilon</m> 網の連続性を、族全体に配る」——全有界性と同程度連続性は、同じことを二つの側から言っている。</span></p>
+</div>
+
+<div class="chui">
+<h4>なぜ「同程度」でなければならないか</h4>
+<p class="no-indent">有限次元では、有界閉集合がコンパクトだった（ハイネ–ボレル）。<em>無限次元ではこれが破れる</em>（<ref t="thm-riesz-compact"/>：単位球がコンパクトなのは有限次元のときに限る）。</p>
+<p><span class="yogo-hl">失われた分を埋めるのが、同程度連続性という「一様な制御」である。</span><em>各 <m>f</m> が連続なだけでは足りず、連続性の度合いが族全体で揃っていなければならない。</em></p>
+<p><strong>破れる例。</strong><m>f_n(x)=x^n</m>（<m>[0,1]</m> 上）。一様有界（<m>\le1</m>）だが、<m>x=1</m> の近くで同程度連続でない。<em>各点収束の極限は不連続な関数で、一様収束する部分列はない。</em></p>
+<p><strong>もう一つ。</strong><m>f_n(x)=\sin(nx)</m>（<m>[0,2\pi]</m> 上）。一様有界だが同程度連続でない。<em>どの部分列も一様収束しない</em>（<m>L^2</m> では弱収束して <m>0</m> に行くが、ノルム収束はしない——第70章の弱位相の典型例である）。</p>
+</div>
+
+<div class="rei" id="rei-ascoli-ouyou">
+<h4>アスコリ–アルツェラが使われる場所</h4>
+<p class="no-indent">（1）<strong>常微分方程式の解の存在（ペアノの定理）。</strong><m>y'=f(x,y)</m>、<m>f</m> 連続のみを仮定する。オイラー折れ線 <m>y_n</m> を作ると、<m>|y_n'|\le M</m> から <em>族は一様有界かつ同程度連続（リプシッツ定数 <m>M</m> で一様）</em>。<span class="yogo-hl">アスコリ–アルツェラで収束部分列をとれば、極限が解になる。</span><em>リプシッツ条件がなくても解が存在する——ただし一意性は失われる。</em></p>
+<p>（2）<strong>変分法の直接法。</strong>最小化列から収束部分列を取り出す段階で使う。<em>第93章のリーマンの写像定理の証明（モンテルの定理）が、まさにこの構図である。</em></p>
+<p>（3）<strong>モンテルの定理。</strong>正則関数の族では、<span class="yogo-hl">一様有界性から同程度連続性が自動的に出る</span>（コーシーの積分公式による導関数の評価、<ref t="thm-montel"/>）。<em>連続関数では二つが独立な条件なのに、正則関数では一方が他方を含む——これも剛性の現れである。</em></p>
+<p>（4）<strong>コンパクト作用素の特徴づけ。</strong><m>K</m> を連続核 <m>k(x,y)</m> の積分作用素とすると、<m>\{Kf:\|f\|\le1\}</m> は一様有界かつ同程度連続（<m>k</m> が一様連続だから）。<em>アスコリ–アルツェラより相対コンパクト、すなわち <m>K</m> はコンパクト作用素</em>（<ref t="def-compact-sayoso"/>）。<span class="yogo-hl">第73章のコンパクト作用素の理論は、ここに土台をもつ。</span></p>
+<p>（5）<strong>レリッヒ–コンドラショフの定理。</strong>ソボレフ空間の埋め込みのコンパクト性（<ref t="thm-sobolev-umekomi"/>（4））も、同じ型の議論である。<em>「滑らかさが一様に押さえられていれば、同程度連続になる」。</em></p>
+<p>（6）<strong>グロモフ–ハウスドルフのコンパクト性。</strong>距離空間の族の収束を論じる枠組みで、アスコリ–アルツェラの距離空間版が本質的に使われる。<em>リッチ曲率が下から押さえられた多様体の族がプリコンパクトになる（グロモフ）。</em></p>
+</div>
+
+<div class="hanrei" id="cex-ascoli">
+<h4>仮定を外すと</h4>
+<p class="no-indent">（1）<strong><m>X</m> のコンパクト性。</strong><m>X=\mathbb{R}</m> では、平行移動 <m>f_n(x)=f(x-n)</m> が一様有界かつ同程度連続だが、一様収束する部分列をもたない。<em>質量が無限遠へ逃げる</em>（第88章の「消失」）。<span class="yogo-hl">非コンパクトな台では、第三の条件（<em>一様な緊密性</em>：遠方で一様に小さい）が必要になる。</span></p>
+<p class="no-indent">（2）<strong>値域のコンパクト性。</strong><m>Y</m> が有界でないと、各点での相対コンパクト性が要る。<em><m>f_n\equiv n</m> は同程度連続（定数関数）だが収束部分列をもたない。</em></p>
+<p class="no-indent">（3）<strong>同程度連続だけでは不足。</strong>（2）の例。<em>一様有界性と同程度連続性は独立な条件である。</em></p>
+<p class="no-indent">（4）<strong><m>L^p</m> 版は別の形になる。</strong><m>L^p</m> でのコンパクト性判定は<strong>リース–コルモゴロフの定理</strong>：<m>\mathcal{F}\subset L^p(\mathbb{R}^d)</m> が相対コンパクトであることと、<em>有界・平行移動について一様連続（<m>\sup_{f}\|\tau_hf-f\|_p\to0</m>）・遠方で一様に小</em>の三条件が同値。<span class="yogo-hl">「同程度連続」が「平行移動について一様に連続」に置き換わっている。</span></p>
+</div>
+
+<figure>
+<svg viewBox="0 0 470 286" width="470" height="286" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">連続性の度合いが揃っているか——それが分かれ目</text>
+
+  <rect x="14" y="26" width="442" height="124" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+
+  <text x="118" y="42" font-size="6.8" text-anchor="middle" font-weight="700" fill="#8c2f1e">同程度でない　x の n 乗</text>
+  <line x1="44" y1="128" x2="196" y2="128" stroke="#8a8a88" stroke-width="0.7"/>
+  <line x1="44" y1="128" x2="44" y2="54" stroke="#8a8a88" stroke-width="0.7"/>
+  <path d="M 44 128 C 120 126 168 120 180 58" fill="none" stroke="#35618f" stroke-width="1.1"/>
+  <path d="M 44 128 C 100 124 160 112 180 58" fill="none" stroke="#4a7ba8" stroke-width="1.1"/>
+  <path d="M 44 128 C 84 120 148 96 180 58" fill="none" stroke="#7fa3c4" stroke-width="1.1"/>
+  <path d="M 44 128 C 70 112 132 76 180 58" fill="none" stroke="#aec6da" stroke-width="1.1"/>
+  <text x="118" y="142" font-size="6" text-anchor="middle" fill="#8c2f1e">右端で傾きがいくらでも急になる</text>
+
+  <text x="352" y="42" font-size="6.8" text-anchor="middle" font-weight="700" fill="#1e4a41">同程度である　傾きが一律に有界</text>
+  <line x1="278" y1="128" x2="430" y2="128" stroke="#8a8a88" stroke-width="0.7"/>
+  <line x1="278" y1="128" x2="278" y2="54" stroke="#8a8a88" stroke-width="0.7"/>
+  <path d="M 282 118 C 310 74 340 108 368 70 C 390 92 404 66 424 84" fill="none" stroke="#2f6b5f" stroke-width="1.1"/>
+  <path d="M 282 106 C 310 86 340 96 368 82 C 390 100 404 78 424 94" fill="none" stroke="#4d8878" stroke-width="1.1"/>
+  <path d="M 282 94 C 310 98 340 84 368 94 C 390 84 404 92 424 74" fill="none" stroke="#7aa89c" stroke-width="1.1"/>
+  <text x="352" y="142" font-size="6" text-anchor="middle" fill="#1e4a41">どの関数も同じ幅の近傍で押さえられる</text>
+
+  <rect x="14" y="160" width="216" height="118" rx="4" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="24" y="175" font-size="7.6" font-weight="700" fill="#1e4a41">証明の二段</text>
+  <text x="24" y="192" font-size="6.6" fill="#1e4a41">① 可算稠密集合で対角線論法</text>
+  <text x="24" y="204" font-size="6.4" fill="#5a4520">　→　そこでは各点収束する</text>
+  <text x="24" y="218" font-size="6.6" fill="#1e4a41">② 同程度連続性で隙間を埋める</text>
+  <text x="24" y="230" font-size="6.4" fill="#5a4520">　→　一様コーシー列になる</text>
+  <text x="24" y="247" font-size="6.4" fill="#8c2f1e">全有界性と同程度連続性は</text>
+  <text x="24" y="259" font-size="6.4" fill="#8c2f1e">同じことを二つの側から言っている</text>
+  <text x="24" y="272" font-size="6.2" fill="#6b2a48">有限個の代表の性質を、族全体に配る</text>
+
+  <rect x="240" y="160" width="216" height="118" rx="4" fill="#f4f1ea" stroke="#8a6b2c"/>
+  <text x="250" y="175" font-size="7.6" font-weight="700" fill="#5a4520">どこで使われているか</text>
+  <text x="250" y="192" font-size="6.6" fill="#5a4520">微分方程式の解の存在（ペアノ）</text>
+  <text x="250" y="204" font-size="6.6" fill="#5a4520">リーマンの写像定理（第93章）</text>
+  <text x="250" y="216" font-size="6.6" fill="#5a4520">コンパクト作用素の判定（第73章）</text>
+  <text x="250" y="228" font-size="6.6" fill="#5a4520">ソボレフ埋め込みのコンパクト性（第88章）</text>
+  <text x="250" y="245" font-size="6.4" fill="#1e4a41">正則関数では一様有界だけで足りる</text>
+  <text x="250" y="257" font-size="6.4" fill="#1e4a41">——同程度連続性が自動的に出るから</text>
+  <text x="250" y="272" font-size="6.2" fill="#6b2a48">可積分な関数では、平行移動の連続性に変わる</text>
+</svg>
+<figcaption>アスコリ–アルツェラの定理。無限次元では有界閉集合がコンパクトにならず、その欠落を同程度連続性という一様な制御が埋める。証明は対角線論法と、同程度連続性による隙間の補完の二段からなる。</figcaption>
+</figure>
+
+<div class="star2">
+<h4>★★ 学部後半——一般化と、コンパクト性の諸相</h4>
+
+<p><strong>一般のアスコリの定理。</strong><m>X</m> が局所コンパクトハウスドルフ、<m>Y</m> が距離空間のとき、<m>\mathcal{F}\subset C(X,Y)</m> がコンパクト開位相について相対コンパクトであることと、<em>（i）各点で相対コンパクト、（ii）同程度連続</em>が同値。<span class="yogo-hl">コンパクト開位相を使えば、<m>X</m> のコンパクト性が要らなくなる</span>——ただし結論は広義一様収束になる。</p>
+
+<p><strong>一様空間での定式化。</strong><m>Y</m> を一様空間（第30章）にすると、同程度連続性は「一様構造の各側近 <m>V</m> に対し、共通の近傍がとれる」と述べられる。<em>これが最も一般的な形で、位相群の表現論や、コンパクト変換群の理論で使われる。</em></p>
+
+<p><strong>コンパクト性の判定の並び。</strong>本書で現れたものを並べると、共通の型が見える。</p>
+<p>（i）<em>ハイネ–ボレル</em>（<m>\mathbb{R}^n</m>）：有界かつ閉。<br>
+（ii）<em>アスコリ–アルツェラ</em>（<m>C(X)</m>）：有界＋同程度連続。<br>
+（iii）<em>リース–コルモゴロフ</em>（<m>L^p</m>）：有界＋平行移動の一様連続性＋遠方の一様な小ささ。<br>
+（iv）<em>アラオグル</em>（<m>E^*</m>、弱位相）：有界（位相を弱めることで達成）。<br>
+（v）<em>プロホロフ</em>（確率測度の空間）：緊密性（<em>タイトネス</em>）。</p>
+<p><span class="yogo-hl">どれも「有界性＋一様な制御」の形をしている。</span><em>一様な制御が「コンパクト性の欠落分」をちょうど埋める</em>——これが無限次元解析の中心的なパターンである。第71章のアラオグルだけが、制御を足すかわりに位相を弱めている。</p>
+
+<p><strong>仮定を外すと。</strong>（iii）で「遠方の一様な小ささ」を外すと平行移動の反例が生き、（ii）で「有界」を外すと定数列の反例が生きる。<em>三条件（または二条件）はどれも独立で、最小である。</em></p>
+
+<p><strong>アスコリ–アルツェラと完備性。</strong>結論の「一様収束する」は、<m>C(X)</m> の完備性（<ref t="thm-ichiyou-cauchy"/>）を使っている。<em>値域が完備でないと、極限が存在しない。</em>第43章の実数の完備性が、ここでも最終的な根拠になっている。</p>
+</div>
+
+<div class="star3">
+<h4>★★★ 大学院——コンパクト性の圏論的な意味と、極限定理</h4>
+
+<p><strong>指数法則とコンパクト生成空間。</strong><m>C(X\times Y,Z)\cong C(X,C(Y,Z))</m> がコンパクト開位相で成り立つのは、<m>Y</m> が局所コンパクトハウスドルフのときに限る。<em>この制約を外すため、位相空間の圏を<strong>コンパクト生成弱ハウスドルフ空間</strong>の圏に取り替えるのが現代的な扱いである。</em><span class="yogo-hl">「よい圏」を作るために空間のクラスを制限する——これは代数的位相幾何学の標準的な手続きになっている。</span></p>
+
+<p><strong>プロホロフの定理と、確率の極限定理。</strong>距離空間 <m>S</m> 上の確率測度の族 <m>\{\mu_\alpha\}</m> が弱位相で相対コンパクトであることと、<em>緊密性</em>——任意の <m>\varepsilon</m> に対しコンパクト集合 <m>K</m> があって <m>\mu_\alpha(K)>1-\varepsilon</m>（すべての <m>\alpha</m>）——が同値（<m>S</m> がポーランド空間のとき）。</p>
+<p><em>ドンスカーの不変原理（ランダムウォークがブラウン運動に収束する）の証明は、（i）有限次元分布の収束と（ii）<m>C[0,1]</m> 上での緊密性の二段からなる。</em><span class="yogo-hl">（ii）を示すのに使うのが、まさにアスコリ–アルツェラの条件である</span>——連続性の率が確率的に一様であることを示す。</p>
+
+<p><strong>グロモフのコンパクト性定理。</strong>リッチ曲率が <m>\ge-(n-1)K</m>、直径 <m>\le D</m> の <m>n</m> 次元閉リーマン多様体の族は、グロモフ–ハウスドルフ距離についてプリコンパクトである。<em>証明の核は、ビショップ–グロモフの体積比較定理から「各スケールでの <m>\varepsilon</m> 網の個数が一様に押さえられる」を出すことで、これは全有界性の証明にほかならない。</em></p>
+<p>極限の空間は多様体とは限らず、<strong>アレクサンドロフ空間</strong>や<strong>RCD空間</strong>という一般化された空間になる。<span class="yogo-hl">第34章で問うた「距離空間は何が特別なのか」が、ここでは「曲率を距離だけで定義する」という形で答えられている。</span><em>チーガー–コールディングの理論、そしてチーガー–ヤン–ナーバーによる特異点集合の次元評価が、この方向の到達点である。</em></p>
+
+<p><strong>未解決に近い問い。</strong>アインシュタイン多様体の族のコンパクト性（次元 <m>4</m> でのアンダーソン–バンド–クルカルニのオービフォールド収束）を超えて、<em>高次元での特異点の構造は十分に理解されていない。</em>また、ヤン–ミルズ接続のモジュライ空間のコンパクト化（ウーレンベックの除去可能特異点定理）も、同じ「コンパクト性＋特異点の解析」という主題の一部である。</p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li><m>x^n</m> が <m>[0,1]</m> 上で同程度連続でないことを確かめよ。</li>
+<li><m>\sin(nx)</m> が一様有界だが同程度連続でないことを確かめよ。</li>
+<li>リプシッツ定数が一律に <m>M</m> 以下の関数族が同程度連続であることを確かめよ。</li>
+<li><m>f_n(x)=f(x-n)</m> が <m>\mathbb{R}</m> 上で収束部分列をもたないことを確かめよ。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li><m>X</m> コンパクトのとき、コンパクト開位相と一様収束の位相が一致することを示せ。<span class="haiten">（30点）</span></li>
+<li><ref t="thm-ascoli"/>の（2）から（1）を、対角線論法で示せ。<span class="haiten">（40点）</span></li>
+<li>（1）から（2）を、全有界性から示せ。<span class="haiten">（35点）</span></li>
+<li>連続核の積分作用素がコンパクトであることを示せ。<span class="haiten">（35点）</span></li>
+<li>正則関数の族では一様有界性から同程度連続性が出ることを示せ。<span class="haiten">（35点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li>ペアノの存在定理を、オイラー折れ線とアスコリ–アルツェラで示せ。<span class="haiten">（50点）</span></li>
+<li>リース–コルモゴロフの定理を示せ。<span class="haiten">（50点）</span></li>
+<li>局所コンパクトな <m>X</m> についてのアスコリの定理を、コンパクト開位相で述べて示せ。<span class="haiten">（45点）</span></li>
+<li>本書に現れたコンパクト性の判定を五つ挙げ、共通の型を説明せよ。<span class="haiten">（40点）</span></li>
+</ol>
+</div>
+</div>

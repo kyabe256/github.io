@@ -323,3 +323,46 @@ tr { break-inside: avoid; }
   font-family: "SekaishiSans", sans-serif; font-size: 8.5pt; line-height: 2;
 }
 .okuduke p { text-indent: 0; }
+
+/* -----------------------------------------------------------
+   付録A 記号一覧／B 定義集／C 反例カタログ／E 解答の方針
+   ----------------------------------------------------------- */
+.kigo-hyo { font-size: 8.4pt; line-height: 1.6; margin: .6em 0 1.2em; }
+.kigo-hyo table { width: 100%; border-collapse: collapse; }
+.kigo-hyo th {
+  font-family: "SekaishiSans", sans-serif; font-weight: 700; font-size: 8pt;
+  background: #eceff3; text-align: left; padding: .28em .5em;
+  border-bottom: .6pt solid #b9c4d0;
+}
+.kigo-hyo td { padding: .26em .5em; border-bottom: .3pt solid #dde3ea; vertical-align: top; }
+.kigo-hyo td:first-child { width: 33%; }
+.kigo-hyo td:last-child { width: 16%; white-space: nowrap; color: #6a6a68; font-size: 7.8pt; }
+.kigo-hyo tr { break-inside: avoid; }
+
+.teigishu { column-count: 2; column-gap: 6mm; font-size: 8.2pt; line-height: 1.7; }
+.teigishu .idx-group {
+  font-family: "SekaishiSans", sans-serif; font-weight: 700;
+  background: #eceff3; padding: .1em .4em; margin: .9em 0 .3em;
+  break-after: avoid; break-inside: avoid;
+}
+.teigishu ul { list-style: none; margin: 0; padding: 0; }
+.teigishu li { text-indent: -1em; padding-left: 1em; break-inside: avoid; }
+.teigishu a { text-decoration: none; color: inherit; }
+.teigishu a::after { content: leader(".") target-counter(attr(href), page); }
+
+.hanreishu { font-size: 8.4pt; line-height: 1.68; }
+.hanreishu .idx-group {
+  font-family: "SekaishiSans", sans-serif; font-weight: 700;
+  background: #f4ece9; padding: .1em .4em; margin: 1em 0 .35em;
+  break-after: avoid;
+}
+.hanreishu ul { list-style: none; margin: 0; padding: 0; }
+.hanreishu li { text-indent: -1.2em; padding-left: 1.2em; margin: .32em 0; break-inside: avoid; }
+.hanreishu a { text-decoration: none; color: inherit; }
+.hanreishu a::after { content: "（" target-counter(attr(href), page) "ページ）"; font-size: .86em; color: #8c2f1e; }
+.hanreishu .idx-term { font-family: "SekaishiSans", sans-serif; font-weight: 700; color: #8c2f1e; }
+.hanrei-lead { color: #55555a; font-size: .94em; }
+
+.tejun { font-size: 9pt; line-height: 1.78; }
+.tejun p { margin: .45em 0; text-indent: 0; }
+.tejun strong { font-family: "SekaishiSans", sans-serif; color: var(--lv2-accent); }
