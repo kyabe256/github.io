@@ -1,0 +1,221 @@
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>汎関数を延ばすとき、何を保てばよいのか。</li>
+<li>なぜ選択公理が要るのか。</li>
+<li>「分離する」とは、幾何的に何をすることなのか。</li>
+</ul>
+</div>
+
+<h3 id="s67-1">延長の問題</h3>
+
+<p>第66章で、双対空間が豊かであることを前提に議論した。<em>その前提を保証するのが、この章の定理である。</em></p>
+
+<div class="chui">
+<h4>何が問題か</h4>
+<p class="no-indent">部分空間 <m>M\subseteq E</m> の上の有界線型汎関数 <m>\varphi</m> を、<em>ノルムを増やさずに <m>E</m> 全体へ延ばせるか。</em></p>
+<p><span class="yogo-hl">一次元ずつ延ばすのは易しい。問題は、それを無限回続けられるかである。</span></p>
+<p>ヒルベルト空間なら答えは簡単——<m>M^\perp</m> の上で <m>0</m> とすればよい（第64章）。<em>一般のバナッハ空間には直交補空間がない。</em></p>
+</div>
+
+<div class="teigi" id="def-retsusenkei">
+<h4>劣線型汎関数</h4>
+<p class="no-indent">実ベクトル空間 <m>E</m> 上の <m>p \colon E\to\mathbb{R}</m> が<strong>劣線型</strong>であるとは</p>
+<M>p(x+y) \le p(x)+p(y), \qquad p(\lambda x) = \lambda p(x) \ \ (\lambda\ge0)</M>
+<p class="no-indent">を満たすことをいう。<em>ノルムは劣線型だが、劣線型汎関数は負の値を取ってもよい。</em></p>
+</div>
+
+<h3 id="s67-2">ハーン–バナッハの定理</h3>
+
+<div class="teiri" id="thm-hahn-banach">
+<h4>ハーン–バナッハの定理（実の場合）</h4>
+<p class="no-indent"><m>E</m> を実ベクトル空間、<m>p</m> を劣線型汎関数、<m>M\subseteq E</m> を部分空間、<m>\varphi \colon M\to\mathbb{R}</m> を線型で <m>\varphi\le p</m>（<m>M</m> 上）とする。</p>
+<p class="no-indent">このとき線型汎関数 <m>\Phi \colon E\to\mathbb{R}</m> で <m>\Phi|_M=\varphi</m>、<m>\Phi\le p</m>（<m>E</m> 上）なるものが存在する。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><strong>一次元だけ延ばす。</strong><m>x_0\notin M</m> とし、<m>M'=M\oplus\mathbb{R}x_0</m> の上へ延ばす。<m>\Phi(x+tx_0)=\varphi(x)+t\alpha</m> と書けるので、<m>\alpha</m> を決めればよい。</p>
+<p>条件 <m>\Phi\le p</m> は、<m>t>0</m> と <m>t<0</m> に分けると</p>
+<M>\alpha \le \frac{p(x+tx_0)-\varphi(x)}{t}, \qquad
+\alpha \ge \frac{\varphi(y)-p(y-sx_0)}{s} \qquad (t,s>0)</M>
+<p class="no-indent"><em>そのような <m>\alpha</m> が取れるのは、右の式の上限が左の式の下限以下のときである。</em>すなわち、すべての <m>x,y\in M</m> と <m>s,t>0</m> について</p>
+<M>\frac{\varphi(y)-p(y-sx_0)}{s} \ \le\ \frac{p(x+tx_0)-\varphi(x)}{t}</M>
+<p class="no-indent">を示せばよい。<em>両辺に <m>st>0</m> を掛けて整理すると <m>t\varphi(y)+s\varphi(x) \le t\,p(y-sx_0)+s\,p(x+tx_0)</m> となる。</em></p>
+<p>左辺 <m>= \varphi(ty+sx)</m>、そして <m>\varphi\le p</m> と劣加法性から</p>
+<M>\varphi(ty+sx) \le p(ty+sx) = p\big(t(y-sx_0)+s(x+tx_0)\big) \le t\,p(y-sx_0)+s\,p(x+tx_0)</M>
+<p class="no-indent"><span class="yogo-hl"><m>-tsx_0+stx_0=0</m> という相殺が、この証明の急所である。</span></p>
+<p><strong>ツォルンの補題。</strong>「<m>M</m> を含む部分空間と、その上の <m>p</m> に押さえられた延長」の対の全体を、延長の関係で順序づける。<em>鎖の上限は合併として取れる。</em>ツォルンの補題（第3章）より極大元があり、それは <m>E</m> 全体で定義されていなければならない（そうでなければ一次元延ばせる）。</p>
+</div>
+
+<div class="teiri" id="thm-hahn-banach-fukuso">
+<h4>複素の場合とノルムの保存</h4>
+<p class="no-indent"><m>E</m> をノルム空間（実または複素）、<m>M\subseteq E</m> を部分空間、<m>\varphi\in M^*</m> とする。このとき <m>\Phi\in E^*</m> で</p>
+<M>\Phi|_M = \varphi, \qquad \|\Phi\|_{E^*} = \|\varphi\|_{M^*}</M>
+<p class="no-indent">なるものが存在する。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">実の場合。<m>p(x)=\|\varphi\|\,\|x\|</m> として <ref t="thm-hahn-banach"/> を使う。</p>
+<p>複素の場合（ボネンブラスト–ソボチィク）。<m>u=\mathrm{Re}\,\varphi</m> とおくと <m>\varphi(x)=u(x)-iu(ix)</m>。<em><m>u</m> を実線型汎関数として延ばし、同じ式で複素化する。</em></p>
+<p>ノルムの保存。<m>|\Phi(x)|=\Phi(\theta x)=u(\theta x)\le\|\varphi\|\|x\|</m>（<m>\theta</m> は絶対値 <m>1</m> の適当なスカラー）。</p>
+</div>
+
+<div class="teiri" data-kind="系" id="cor-hb-kei">
+<h4>三つの系</h4>
+<p class="no-indent">（1）<m>x_0\ne0</m> なら <m>\varphi\in E^*</m> で <m>\|\varphi\|=1</m>、<m>\varphi(x_0)=\|x_0\|</m> なるものがある。<br>
+（2）<m>\|x\| = \max\{\,|\varphi(x)| \mid \varphi\in E^*,\ \|\varphi\|\le1\,\}</m>。<br>
+（3）標準埋め込み <m>J \colon E\to E^{**}</m> は等距離である。<br>
+（4）<m>M\subsetneq E</m> が閉部分空間、<m>x_0\notin M</m> なら、<m>\varphi|_M=0</m>、<m>\varphi(x_0)=\mathrm{dist}(x_0,M)</m>、<m>\|\varphi\|=1</m> なる <m>\varphi</m> がある。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">（1）<m>M=\mathbb{K}x_0</m> 上で <m>\varphi(\lambda x_0)=\lambda\|x_0\|</m> と定め、延ばす。</p>
+<p>（2）<m>\le</m> は（1）から、<m>\ge</m> は定義から。<span class="yogo-hl">第60章★★で <m>L^p</m> について述べた「ノルムを上限で書く」が、一般のバナッハ空間で成り立つ。</span></p>
+<p>（4）商空間 <m>E/M</m> を考え、<m>x_0+M</m> に（1）を使う。</p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">（4）が「双対が点を分離する」ことの内容である。<em>閉部分空間の外の点は、汎関数で見分けられる。</em></p>
+<p><span class="yogo-hl">第63章★★★で見た <m>L^p</m>（<m>p<1</m>）では、この結論が偽だった——そこには凸な近傍がない。</span></p>
+</div>
+
+<h3 id="s67-3">幾何的な形——分離定理</h3>
+
+<div class="teiri" id="thm-bunri">
+<h4>分離定理</h4>
+<p class="no-indent"><m>E</m> をノルム空間、<m>A,B\subseteq E</m> を交わらない空でない凸集合とする。</p>
+<p class="no-indent">（1）<m>A</m> が開なら、<m>\varphi\in E^*\setminus\{0\}</m> と <m>\gamma\in\mathbb{R}</m> があって</p>
+<M>\mathrm{Re}\,\varphi(a) < \gamma \le \mathrm{Re}\,\varphi(b) \qquad (a\in A,\ b\in B)</M>
+<p class="no-indent">（2）<m>A</m> がコンパクト、<m>B</m> が閉なら、<m>\varphi</m> と <m>\gamma_1<\gamma_2</m> があって</p>
+<M>\mathrm{Re}\,\varphi(a) \le \gamma_1 < \gamma_2 \le \mathrm{Re}\,\varphi(b)</M>
+<p class="no-indent">（狭義分離）。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">（1）<m>C=A-B</m> は開凸で <m>0\notin C</m>。<m>x_0\in -C</m> を取り、<m>D=C+x_0</m> は <m>0</m> を含む開凸集合。</p>
+<p><strong>ミンコフスキー汎関数。</strong><m>p_D(x)=\inf\{\,t>0 \mid x/t\in D\,\}</m> とおく。<em><m>D</m> が <m>0</m> を内点にもつ凸集合なので、<m>p_D</m> は劣線型で、<m>D=\{p_D<1\}</m>。</em></p>
+<p><m>x_0\notin D</m> なので <m>p_D(x_0)\ge1</m>。<m>M=\mathbb{R}x_0</m> の上で <m>\varphi(tx_0)=t\,p_D(x_0)</m> と定めると <m>\varphi\le p_D</m>。<ref t="thm-hahn-banach"/> で延ばす。</p>
+<p><em><m>\varphi\le p_D</m> と <m>D</m> が <m>0</m> の近傍であることから、<m>\varphi</m> は有界。</em>整理すると（1）が出る。</p>
+<p>（2）<m>\mathrm{dist}(A,B)=\delta>0</m>（<m>A</m> コンパクト、<m>B</m> 閉）。<m>A_\delta=A+B(0,\delta/2)</m> は開凸で <m>B</m> と交わらない。（1）を使う。</p>
+</div>
+
+<div class="chui">
+<h4>二つの顔</h4>
+<p class="no-indent"><span class="yogo-hl">ハーン–バナッハの定理には、解析的な形（延長）と幾何的な形（分離）がある。</span></p>
+<p><em>ミンコフスキー汎関数が、凸集合を劣線型汎関数に翻訳する。</em>「凸集合」と「劣線型汎関数」は同じものの二つの姿である。</p>
+<p>分離の形は第70章・第72章で繰り返し使う。<em>第72章のクレイン–ミルマンの定理は、分離定理の反復で証明される。</em></p>
+</div>
+
+<figure>
+<svg viewBox="0 0 470 274" width="470" height="274" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">凸集合は、超平面で切り離せる</text>
+
+  <rect x="14" y="26" width="218" height="126" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+  <text x="24" y="42" font-size="7" font-weight="700" fill="#1f3b5c">凸なら分離できる</text>
+  <path d="M40,124 C 52,96 76,82 100,88 C 122,94 130,118 118,134 L44,134 Z" fill="#dce7f0" stroke="#35618f" stroke-width="1"/>
+  <text x="80" y="118" font-size="6.4" text-anchor="middle" fill="#1f3b5c">A</text>
+  <path d="M148,58 C 172,50 202,62 210,84 C 218,106 200,124 176,120 C 152,116 140,88 148,58 Z" fill="#e6efe9" stroke="#2f6b5f" stroke-width="1"/>
+  <text x="180" y="92" font-size="6.4" text-anchor="middle" fill="#1e4a41">B</text>
+  <line x1="128.3" y1="140" x2="141.5" y2="46" stroke="#a03b2e" stroke-width="1.3" stroke-dasharray="4,2.6"/>
+  <text x="146" y="54" font-size="6.2" fill="#8c2f1e">φ ＝ γ</text>
+  <text x="24" y="146" font-size="6.2" fill="#6a6a68">破線の片側で φ &lt; γ、もう片側で φ ≥ γ</text>
+
+  <rect x="238" y="26" width="218" height="126" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+  <text x="248" y="42" font-size="7" font-weight="700" fill="#8c2f1e">凸でないとできない</text>
+  <path d="M264,126 C 276,86 300,72 324,82 C 348,92 340,110 318,110 C 298,110 294,126 312,132 C 330,138 352,128 358,106"
+        fill="none" stroke="#a03b2e" stroke-width="1.4"/>
+  <path d="M264,126 C 276,86 300,72 324,82 C 348,92 340,110 318,110 C 298,110 294,126 312,132 C 330,138 352,128 358,106 L358,136 L264,136 Z"
+        fill="#fdf6f4" stroke="none" opacity="0.8"/>
+  <circle cx="300" cy="100" r="2.4" fill="#8a3b62"/>
+  <circle cx="340" cy="120" r="2.4" fill="#8a3b62"/>
+  <line x1="300" y1="100" x2="340" y2="120" stroke="#8a3b62" stroke-width="1" stroke-dasharray="2.4,2"/>
+  <text x="320" y="98" font-size="6" text-anchor="middle" fill="#6b2a48">中点が外</text>
+  <text x="248" y="148" font-size="6.2" fill="#8c2f1e">どんな超平面でも、両側に食い込んでしまう</text>
+
+  <rect x="14" y="162" width="216" height="102" rx="4" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="24" y="177" font-size="7.6" font-weight="700" fill="#1e4a41">定理の二つの顔</text>
+  <text x="24" y="194" font-size="6.8" fill="#1e4a41">解析的　汎関数をノルムを増やさず延ばす</text>
+  <text x="24" y="207" font-size="6.8" fill="#1e4a41">幾何的　交わらない凸集合を超平面で分ける</text>
+  <text x="24" y="224" font-size="6.6" fill="#6a6a68">橋渡しはミンコフスキー汎関数</text>
+  <text x="24" y="235" font-size="6.6" fill="#6a6a68">x が D に入るまで縮める倍率の下限を取る</text>
+  <text x="24" y="251" font-size="6.6" fill="#8c2f1e">「凸集合」と「劣線型汎関数」は</text>
+  <text x="24" y="261" font-size="6.6" fill="#8c2f1e">同じものの二つの姿である</text>
+
+  <rect x="240" y="162" width="216" height="102" rx="4" fill="#f4f1ea" stroke="#8a6b2c"/>
+  <text x="250" y="177" font-size="7.6" font-weight="700" fill="#5a4520">証明の急所と、そこから出るもの</text>
+  <text x="250" y="194" font-size="6.6" fill="#5a4520">一次元の延長　→　−tsx₀ ＋ stx₀ ＝ 0 の相殺</text>
+  <text x="250" y="206" font-size="6.6" fill="#5a4520">無限回の繰り返し　→　ツォルンの補題（第3章）</text>
+  <text x="250" y="223" font-size="6.6" fill="#1e4a41">‖x‖ ＝ max{ |φ(x)| : ‖φ‖ ≤ 1 }</text>
+  <text x="250" y="235" font-size="6.6" fill="#1e4a41">標準埋め込み E → E** は等距離</text>
+  <text x="250" y="247" font-size="6.6" fill="#1e4a41">閉部分空間の外の点は、汎関数で見分けられる</text>
+  <text x="250" y="260" font-size="6.4" fill="#8c2f1e">Lᵖ（p &lt; 1）ではどれも偽——凸な近傍がない</text>
+</svg>
+<figcaption>交わらない凸集合は超平面で切り離せる。凸でないと、どんな超平面も両側に食い込む。延長の定理と分離の定理は、ミンコフスキー汎関数を介して同じ内容をもつ。</figcaption>
+</figure>
+
+<div class="lv2">
+<h4>選択公理との関係</h4>
+<p><ref t="thm-hahn-banach"/> の証明はツォルンの補題を使った。<em>どのくらいの強さの選択公理が要るのか。</em></p>
+<p><strong>ハーン–バナッハの定理は選択公理より真に弱い。</strong>ブール素イデアル定理（超フィルターの存在、第12章）から導ける。<em>逆は成り立たない</em>——ハーン–バナッハだけからは超フィルターの存在が出ない。</p>
+<p><span class="yogo-hl">階層はこうである——選択公理 <m>\Rightarrow</m> ブール素イデアル定理 <m>\Rightarrow</m> ハーン–バナッハ。どちらの矢印も逆は成り立たない。</span></p>
+<p><strong>何が「無料で」できないのか。</strong>ハーン–バナッハの定理を使わずに双対空間の元を作れる場合もある。</p>
+<p><em><m>E</m> が可分なら</em>、可算稠密集合に沿って帰納的に延長できるので、ツォルンの補題は要らない（従属選択公理で足りる）。</p>
+<p><em><m>E</m> がヒルベルト空間なら</em>、直交射影で延長できるので選択公理は不要。</p>
+<p>問題になるのは <m>\ell^\infty</m> のような非可分な空間である。<span class="yogo-hl">第66章★★★のバナッハ極限は、まさにそこで作られた。</span></p>
+<p><strong>ソロヴェイのモデルでは。</strong>第52章★★★で述べたモデル（すべての集合がルベーグ可測）では、従属選択公理は成り立つがハーン–バナッハは破れる。</p>
+<p><em>実際 <m>(\ell^\infty)^*=\ell^1</m> になり、バナッハ極限は存在しない。</em></p>
+<p><strong>構成できない汎関数。</strong>バナッハ極限も、<m>L^\infty</m> の非自明な汎関数も、<em>具体的に書き下すことができない</em>。</p>
+<p><span class="yogo-hl">第53章で「非可測集合は存在するが構成できない」と述べたのと、まったく同じ構図である。</span></p>
+<p><strong>それでも使う理由。</strong>ハーン–バナッハの定理の<em>結論</em>は、具体的な空間ではたいてい構成的に確かめられる。<m>L^p</m> の双対（<ref t="thm-lp-sotsui"/>）がその例である。</p>
+<p>定理は「そういう汎関数が存在する」ことを一般に保証し、<em>具体例では別の方法で構成できる</em>。一般論と具体論の役割分担がここにある。</p>
+</div>
+
+<div class="lv3">
+<h4>拡張定理の一般化と、限界</h4>
+<p><strong>値域を一般化する。</strong>ハーン–バナッハの定理は、値域がスカラー体だから成り立つ。<em>一般のバナッハ空間への作用素は延びるとは限らない。</em></p>
+<p><m>F</m> が<em>単射的</em>（どの延長問題も解ける）であるための条件は、ケリーの定理により <m>F\cong C(K)</m>（<m>K</m> は極めて非連結なコンパクト空間）である。</p>
+<p><span class="yogo-hl"><m>\ell^\infty</m> は単射的だが、<m>c_0</m> はそうでない。</span><em>第66章で見た <m>c_0\subseteq\ell^\infty</m> が補空間をもたないという事実は、この言い換えである。</em></p>
+<p><strong>順序をもつ場合。</strong><m>E</m> が順序ベクトル空間で、<m>M</m> が<em>優越的</em>な部分空間（どの <m>x\in E</m> にも <m>y\ge x</m> なる <m>y\in M</m> がある）なら、正の汎関数は正のまま延びる（M・リースの拡張定理）。</p>
+<p>第59章のリースの表現定理の証明で、暗黙にこの構造を使っていた。</p>
+<p><strong>不変な延長。</strong>群 <m>G</m> が <m>E</m> に作用し、<m>p</m> と <m>\varphi</m> が <m>G</m>-不変なら、<em><m>G</m> が従順なら不変な延長が取れる</em>。</p>
+<p><em>従順性</em>とは、<m>G</m> 上に左不変な有限加法的確率測度が存在すること。<span class="yogo-hl">可換群と可解群は従順で、自由群は従順でない。</span></p>
+<p>第53章のバナッハ–タルスキの定理が <m>\mathbb{R}^3</m> でだけ起こるのは、<em>回転群 <m>SO(3)</m> が自由部分群を含み従順でない</em>からだった。<m>\mathbb{R}</m> と <m>\mathbb{R}^2</m> の運動群は従順である。</p>
+<p><strong>したがって。</strong>バナッハ極限の平行移動不変性（第66章★★★）は、<m>\mathbb{Z}</m> が従順であることの帰結である。</p>
+<p><span class="yogo-hl">「不変な汎関数が作れるか」という解析の問いが、「群が従順か」という群論の問いに翻訳される。</span></p>
+<p><strong>フォン・ノイマンの問題。</strong>「従順でない群は、自由部分群を含むか」——一九八〇年にオリシャンスキーが否定的に解決した。<em>解析の道具が群論の深い問題に届いている例である。</em></p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li>ノルムが劣線型汎関数であることを確かめよ。</li>
+<li><m>p(x)=\limsup_n x_n</m> が <m>\ell^\infty</m> 上で劣線型であることを示せ。</li>
+<li><ref t="cor-hb-kei"/>（2）を示せ。</li>
+<li>ミンコフスキー汎関数 <m>p_D</m> が劣線型であることを示せ。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li><ref t="thm-hahn-banach"/> の一次元延長を、細部まで示せ。<span class="haiten">（35点）</span></li>
+<li><ref t="thm-hahn-banach"/> のツォルンの補題の適用を、鎖の上限を明示して示せ。<span class="haiten">（25点）</span></li>
+<li>複素の場合（<m>\varphi(x)=u(x)-iu(ix)</m>）を示せ。<span class="haiten">（30点）</span></li>
+<li><ref t="cor-hb-kei"/>（4）を、商空間を使って示せ。<span class="haiten">（30点）</span></li>
+<li><ref t="thm-bunri"/>（2）を（1）から導け。<span class="haiten">（30点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li>バナッハ極限を構成し、平行移動不変性を示せ。<span class="haiten">（45点）</span></li>
+<li>可分な空間では、ツォルンの補題なしに延長できることを示せ。<span class="haiten">（35点）</span></li>
+<li><m>\ell^\infty</m> が単射的であることを示せ。<span class="haiten">（45点）</span></li>
+</ol>
+</div>
+</div>

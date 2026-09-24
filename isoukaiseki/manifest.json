@@ -179,7 +179,7 @@
       "title": "関数解析の基本定理",
       "period": "解析",
       "dir": "09-kansu-kaiseki",
-      "lead": "四つの基本定理——Hahn–Banach、一様有界性、開写像、閉グラフ。前三者はBaireのカテゴリー定理から来る。位相が解析の証明を支えている場面である。",
+      "lead": "四つの基本定理——Hahn–Banach、一様有界性、開写像、閉グラフ。後三者はBaireのカテゴリー定理から、最初のものはZornの補題から来る。位相と集合論が解析の証明を支えている場面である。",
       "chapters": [
         { "n": 67, "title": "Hahn–Banachの定理", "file": "09-67-hahn-banach.html", "status": "todo" },
         { "n": 68, "title": "一様有界性の原理", "file": "09-68-ichiyou-yukai.html", "status": "todo" },

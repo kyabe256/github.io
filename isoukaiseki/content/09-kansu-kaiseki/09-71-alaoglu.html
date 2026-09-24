@@ -1,0 +1,209 @@
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>弱*位相で単位球がコンパクトになるのは、なぜか。</li>
+<li>チコノフの定理は、どこで効いているのか。</li>
+<li>コンパクト性が戻ると、何ができるようになるのか。</li>
+</ul>
+</div>
+
+<h3 id="s71-1">バナッハ–アラオグルの定理</h3>
+
+<div class="teiri" id="thm-alaoglu">
+<h4>バナッハ–アラオグルの定理</h4>
+<p class="no-indent"><m>E</m> をノルム空間とすると、<m>E^*</m> の閉単位球</p>
+<M>B_{E^*} = \{\, \varphi\in E^* \mid \|\varphi\|\le1 \,\}</M>
+<p class="no-indent">は弱*位相についてコンパクトである。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">各 <m>x\in E</m> について <m>D_x = \{\, \lambda\in\mathbb{K} \mid |\lambda|\le\|x\| \,\}</m>（コンパクト）とおき、積空間</p>
+<M>P = \prod_{x\in E} D_x</M>
+<p class="no-indent">を考える。<em>チコノフの定理（第21章）より <m>P</m> はコンパクト。</em></p>
+<p><strong>埋め込み。</strong><m>\varphi\in B_{E^*}</m> に <m>(\varphi(x))_{x\in E}\in P</m> を対応させる。<em>これは単射で、弱*位相は積位相の相対位相に一致する</em>（どちらも「各座標での収束」だから）。</p>
+<p><strong>像が閉。</strong>像は「線型性の条件」で定まる。すなわち</p>
+<M>\bigcap_{x,y\in E,\ \lambda,\mu\in\mathbb{K}} \{\, f\in P \mid f(\lambda x+\mu y)=\lambda f(x)+\mu f(y) \,\}</M>
+<p class="no-indent"><em>各条件は座標の連続関数の零点集合なので閉。</em><span class="yogo-hl">閉集合の交わりだから閉。</span></p>
+<p>コンパクト空間の閉部分集合はコンパクト（第20章）。</p>
+</div>
+
+<div class="chui">
+<h4>チコノフが本質</h4>
+<p class="no-indent"><span class="yogo-hl">この定理は、実質的にチコノフの定理の言い換えである。</span></p>
+<p>第21章で「チコノフの定理は選択公理と同値」と述べた。<em>バナッハ–アラオグルは、その弱い形（ブール素イデアル定理）と同値である</em>——コンパクト空間がハウスドルフだからである。</p>
+<p>第67章★★の階層と噛み合う。<span class="yogo-hl">ハーン–バナッハもバナッハ–アラオグルも、ブール素イデアル定理の水準にある。</span></p>
+</div>
+
+<div class="teiri" data-kind="系" id="cor-hansha-compact">
+<h4>反射性とのコンパクト性</h4>
+<p class="no-indent"><m>E</m> をバナッハ空間とすると、次は同値である。</p>
+<p class="no-indent">（1）<m>E</m> は反射的。（2）<m>B_E</m> は弱コンパクト。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">（1）から（2）。<m>J(B_E)=B_{E^{**}}</m> で、これは <ref t="thm-alaoglu"/> より <m>\sigma(E^{**},E^*)</m>-コンパクト。<em><m>J</m> は弱位相と弱*位相のあいだの同相である。</em></p>
+<p>（2）から（1）。<m>J(B_E)</m> は <m>B_{E^{**}}</m> のなかで弱*コンパクト、したがって弱*閉。<em>ゴールドスタインの定理（下）より <m>J(B_E)</m> は <m>B_{E^{**}}</m> で弱*稠密。</em>閉かつ稠密だから一致する。</p>
+</div>
+
+<div class="teiri" id="thm-goldstine">
+<h4>ゴールドスタインの定理</h4>
+<p class="no-indent"><m>J(B_E)</m> は <m>B_{E^{**}}</m> のなかで弱*稠密である。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><m>C=\overline{J(B_E)}^{w*}</m> とおく。<m>C</m> は凸で弱*閉。<m>C\subsetneq B_{E^{**}}</m> と仮定して <m>\Psi\in B_{E^{**}}\setminus C</m> を取る。</p>
+<p>分離定理（<ref t="thm-bunri"/>）を弱*位相で使う。<em>弱*位相での連続汎関数は <m>E^*</m> の元だけ（第70章★★★のマッキー–アレンス）なので、<m>\varphi\in E^*</m> と <m>\gamma</m> があって</em></p>
+<M>\mathrm{Re}\,\Psi(\varphi) > \gamma \ge \sup_{x\in B_E}\mathrm{Re}\,\varphi(x) = \|\varphi\|</M>
+<p class="no-indent">すると <m>\|\Psi\|>1</m> で矛盾。</p>
+</div>
+
+<h3 id="s71-2">コンパクト性が戻ると何ができるか</h3>
+
+<div class="teiri" id="thm-saishouchi">
+<h4>最小値の存在</h4>
+<p class="no-indent"><m>E</m> を反射的バナッハ空間、<m>C\subseteq E</m> を空でない閉凸集合、<m>f \colon C\to\mathbb{R}</m> を凸かつ下半連続とする。さらに <m>C</m> が有界であるか、<m>f</m> が<em>強圧的</em>（<m>\|x\|\to\infty</m> で <m>f(x)\to\infty</m>）であるとする。</p>
+<p class="no-indent">このとき <m>f</m> は <m>C</m> の上で最小値を取る。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">強圧的なら、十分大きい <m>R</m> について <m>C\cap \bar B(0,R)</m> で考えればよい。<em>以下 <m>C</m> は有界とする。</em></p>
+<p><m>C</m> は閉凸なのでマズールの定理（<ref t="thm-mazur"/>）より弱閉。有界かつ弱閉で、<ref t="cor-hansha-compact"/> より<span class="yogo-hl"><m>C</m> は弱コンパクト。</span></p>
+<p><m>f</m> は凸かつ下半連続なので、下位集合 <m>\{f\le\alpha\}</m> は閉凸、したがって弱閉。<em>すなわち <m>f</m> は弱下半連続。</em></p>
+<p>弱コンパクト集合の上の弱下半連続関数は最小値を取る（第46章の議論を弱位相で行う）。</p>
+</div>
+
+<div class="chui">
+<h4>第46章の壁を越える</h4>
+<p class="no-indent"><span class="yogo-hl">第63章で失った最大値の定理が、ここで戻ってきた。</span></p>
+<p><em>代償は二つ——反射性と凸性。</em>どちらも本質的である。</p>
+<p><m>C(K)</m> や <m>L^1</m> は反射的でないので、この定理が使えない。<em>凸でない <m>f</m> にも使えない。</em></p>
+<p>第XI部・第XII部で偏微分方程式の弱解を扱うとき、この定理が働く。<span class="yogo-hl">「エネルギーを最小化する関数が存在する」という主張が、これで得られる。</span></p>
+</div>
+
+<div class="rei" id="rei-jaku-compact-riyo">
+<h4>弱コンパクト性の使い方</h4>
+<p class="no-indent"><strong>最良近似。</strong>反射的空間の閉凸集合への最近点は存在する。<em>一意性は一様凸性から（第64章はヒルベルトの場合）。</em></p>
+<p><strong>測度の弱*コンパクト性。</strong><m>C(K)^*=M(K)</m>（第59章）で、確率測度の全体は弱*コンパクト。<span class="yogo-hl">確率論の「緊密性」と「分布収束」の理論は、ここに立っている。</span></p>
+<p><strong>不変測度の存在。</strong>コンパクト空間 <m>K</m> 上の連続変換 <m>T</m> に対し、<m>T</m>-不変な確率測度が存在する（クリロフ–ボゴリューボフ）。<em>弱*コンパクト性とマルコフ–角谷の不動点定理から出る。</em></p>
+<p><strong>弱解の存在。</strong>偏微分方程式の近似解の列から、弱収束部分列を取り出す。<em>第88章のソボレフ空間で実行する。</em></p>
+</div>
+
+<figure>
+<svg viewBox="0 0 470 274" width="470" height="274" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <defs>
+    <marker id="a71" markerWidth="8" markerHeight="8" refX="7" refY="2.6" orient="auto"><path d="M0,0 L7,2.6 L0,5.2 z" fill="#35618f"/></marker>
+  </defs>
+
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">汎関数を、座標の族とみなす</text>
+
+  <rect x="14" y="26" width="442" height="106" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+
+  <rect x="28" y="46" width="112" height="24" rx="3" fill="#dce7f0" stroke="#35618f"/>
+  <text x="84" y="61" font-size="6.6" text-anchor="middle" fill="#1f3b5c">φ ∈ B_{E*}</text>
+
+  <rect x="184" y="46" width="118" height="24" rx="3" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="243" y="61" font-size="6.6" text-anchor="middle" fill="#1e4a41">(φ(x))_{x ∈ E}</text>
+
+  <rect x="346" y="46" width="108" height="24" rx="3" fill="#f0e2e8" stroke="#8a3b62" stroke-width="1.2"/>
+  <text x="400" y="61" font-size="6.6" text-anchor="middle" font-weight="700" fill="#6b2a48">∏ Dₓ（コンパクト）</text>
+
+  <path d="M144,58 L180,58" stroke="#35618f" stroke-width="1.1" marker-end="url(#a71)"/>
+  <path d="M306,58 L342,58" stroke="#2f6b5f" stroke-width="1.1" marker-end="url(#a71)"/>
+
+  <text x="162" y="52" font-size="5.8" text-anchor="middle" fill="#6a6a68">各点の値</text>
+  <text x="324" y="52" font-size="5.8" text-anchor="middle" fill="#6a6a68">埋め込み</text>
+
+  <text x="24" y="86" font-size="6.4" fill="#8c2f1e">一　|φ(x)| ≤ ‖x‖ なので、各座標は閉円板 Dₓ に入る</text>
+  <text x="24" y="98" font-size="6.4" fill="#8c2f1e">二　チコノフの定理（第21章）より、その積はコンパクト</text>
+  <text x="24" y="110" font-size="6.4" fill="#8c2f1e">三　弱*位相は積位相の相対位相——どちらも「各座標での収束」</text>
+  <text x="24" y="122" font-size="6.4" fill="#8c2f1e">四　像は線型性の条件で定まる閉集合。閉部分集合はコンパクト</text>
+
+  <rect x="14" y="142" width="216" height="122" rx="4" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="24" y="157" font-size="7.6" font-weight="700" fill="#1e4a41">コンパクト性が戻ると</text>
+  <text x="24" y="174" font-size="6.6" fill="#1e4a41">反射的空間の閉単位球は弱コンパクト</text>
+  <text x="24" y="188" font-size="6.6" fill="#1e4a41">凸・下半連続な関数は最小値を取る</text>
+  <text x="24" y="205" font-size="6.4" fill="#6a6a68">仕掛けは三つ——マズールの定理（凸なら</text>
+  <text x="24" y="216" font-size="6.4" fill="#6a6a68">弱閉）、弱コンパクト性、ノルムの</text>
+  <text x="24" y="227" font-size="6.4" fill="#6a6a68">弱下半連続性</text>
+  <text x="24" y="243" font-size="6.6" fill="#8c2f1e">第63章で失った最大値の定理が戻る</text>
+  <text x="24" y="256" font-size="6.4" fill="#6b2a48">代償は、反射性と凸性を仮定すること</text>
+
+  <rect x="240" y="142" width="216" height="122" rx="4" fill="#f4f1ea" stroke="#8a6b2c"/>
+  <text x="250" y="157" font-size="7.6" font-weight="700" fill="#5a4520">どこで使うか</text>
+  <text x="250" y="174" font-size="6.6" fill="#5a4520">最良近似の存在（反射的空間）</text>
+  <text x="250" y="187" font-size="6.6" fill="#5a4520">確率測度の緊密性と分布収束</text>
+  <text x="250" y="200" font-size="6.6" fill="#5a4520">不変測度の存在（クリロフ–ボゴリューボフ）</text>
+  <text x="250" y="213" font-size="6.6" fill="#5a4520">偏微分方程式の弱解（第88章）</text>
+  <text x="250" y="230" font-size="6.4" fill="#6a6a68">C(K) と L¹ は反射的でないので使えない</text>
+  <text x="250" y="243" font-size="6.4" fill="#8c2f1e">——測度の空間では、弱*コンパクト性を</text>
+  <text x="250" y="254" font-size="6.4" fill="#8c2f1e">代わりに使う（C(K)* ＝ M(K)、第59章）</text>
+</svg>
+<figcaption>汎関数をその値の族とみなすと、有界な汎関数はコンパクトな円板の積に入る。チコノフの定理から単位球のコンパクト性が出る。そこから凸・下半連続な関数の最小値の存在が導かれる。</figcaption>
+</figure>
+
+<div class="lv2">
+<h4>エベルライン–シュミュリアンと、弱コンパクト性の判定</h4>
+<p>弱位相は距離化できないが、コンパクト性は点列で判定できる。</p>
+<p><strong>エベルライン–シュミュリアンの定理。</strong><m>A\subseteq E</m>（<m>E</m> バナッハ）について、次は同値である。</p>
+<p>（1）<m>A</m> は相対弱コンパクト。（2）<m>A</m> の任意の列は弱収束部分列をもつ。（3）<m>A</m> の任意の列は弱集積点をもつ。</p>
+<p><span class="yogo-hl">距離化できないのに、点列で足りる。</span><em>第25章で「コンパクトと点列コンパクトは一般に一致しない」と見たのと対照的である。</em></p>
+<p><strong>なぜ成り立つのか。</strong>証明の鍵は、<em>弱コンパクト集合の閉凸包が弱コンパクト</em>（クレインの定理）であることと、<em>可分な部分空間に落とせる</em>ことである。</p>
+<p>第61章★★の可分性が、ここで効いている。</p>
+<p><strong>ジェイムズの定理。</strong>さらに強い判定がある。<em>閉有界凸集合 <m>C</m> が弱コンパクトであることと、どの <m>\varphi\in E^*</m> も <m>C</m> の上で最大値を取ることは同値。</em></p>
+<p>とくに<span class="yogo-hl"><m>E</m> が反射的であることと、どの <m>\varphi\in E^*</m> も <m>B_E</m> の上でノルムを達成することは同値。</span></p>
+<p>これは非常に深い定理で、証明は一〇ページを超える。<em>「最大値を取る」という素朴な条件が、反射性という構造的な条件と同値になる。</em></p>
+<p><strong>弱コンパクト性の実用的な判定。</strong><m>L^1(\mu)</m>（反射的でない）では、ダンフォード–ペティスの定理がある。</p>
+<p><em><m>A\subseteq L^1</m> が相対弱コンパクトであることと、<m>A</m> が一様可積分（第55章★★）であることは同値。</em></p>
+<p><span class="yogo-hl">第55章で「積分と極限の交換の最善の条件」として一様可積分性を挙げた。それが弱コンパクト性の正体だった。</span></p>
+<p>ヴィタリの収束定理と、この定理は同じ事実の二つの姿である。</p>
+</div>
+
+<div class="lv3">
+<h4>不動点定理と、従順性</h4>
+<p>弱*コンパクト性は、不動点定理を通じて群論とつながる。</p>
+<p><strong>マルコフ–角谷の不動点定理。</strong><m>K</m> を局所凸空間のコンパクト凸集合、<m>\mathcal{F}</m> を <m>K</m> 上の連続アフィン写像からなる<em>可換な</em>族とすると、<m>\mathcal{F}</m> の共通不動点が存在する。</p>
+<p><em>証明の骨子。</em>一つの写像 <m>T</m> について、<m>\frac1n\sum_{k<n}T^kx</m> の弱*集積点が不動点になる。<span class="yogo-hl">平均を取る操作（チェザロ平均、第49章★★★）が、ここで効く。</span>可換性から、族全体へ拡張できる。</p>
+<p><strong>不変測度の存在。</strong>コンパクト距離空間 <m>K</m> と連続写像 <m>T \colon K\to K</m> に対し、<m>T</m>-不変な確率測度が存在する。</p>
+<p><em>確率測度の全体 <m>P(K)</m> は弱*コンパクト凸（第59章★★★）。<m>T</m> が誘導する <m>T_*</m> はアフィン連続。マルコフ–角谷を適用する。</em></p>
+<p><span class="yogo-hl">これがエルゴード理論の出発点である。</span>第55章の測度論と、本章のコンパクト性が合流する。</p>
+<p><strong>従順性の再訪。</strong>第67章★★★で、群 <m>G</m> が<em>従順</em>であるとは左不変な有限加法的確率測度をもつことだと述べた。</p>
+<p>等価な定式化——<em><m>G</m> が従順であることと、<m>G</m> が作用するどのコンパクト凸集合にも不変点があることは同値</em>（不動点性質）。</p>
+<p>マルコフ–角谷の定理は、「可換群は従順」ということの内容である。<span class="yogo-hl">可解群も従順、自由群は従順でない。</span></p>
+<p><strong>リュカン–角谷の定理。</strong>局所コンパクト群 <m>G</m> が従順であることと、<m>L^\infty(G)</m> 上に左不変な平均（第66章★★★のバナッハ極限の一般化）が存在することは同値。</p>
+<p><strong>バナッハ–タルスキとの関係。</strong>第53章でバナッハ–タルスキの定理が <m>\mathbb{R}^3</m> でだけ起こる理由を「<m>SO(3)</m> が自由部分群を含む」と述べた。</p>
+<p>正確には<em>従順でない</em>ことが理由である。<span class="yogo-hl">従順な群の作用では、不変な有限加法的測度があるので、分割して増やすことができない。</span></p>
+<p>第VII部の測度論、第IX部の凸性、そして群論が、この一点で交わっている。</p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li><m>B_{E^*}</m> の弱*位相が積位相の相対位相であることを確かめよ。</li>
+<li>像が線型性の条件で定まる閉集合であることを示せ。</li>
+<li>ヒルベルト空間で <m>B_H</m> が弱コンパクトであることを示せ。</li>
+<li><m>C[0,1]</m> の単位球が弱コンパクトでないことを示せ。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li><ref t="thm-alaoglu"/> を、細部まで示せ。<span class="haiten">（30点）</span></li>
+<li><ref t="thm-goldstine"/> を、分離定理を弱*位相で使って示せ。<span class="haiten">（35点）</span></li>
+<li><ref t="cor-hansha-compact"/> の（2）から（1）を示せ。<span class="haiten">（30点）</span></li>
+<li><ref t="thm-saishouchi"/> を、細部まで示せ。<span class="haiten">（30点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li>マルコフ–角谷の不動点定理を、一つの写像の場合に示せ。<span class="haiten">（45点）</span></li>
+<li>コンパクト距離空間上の不変確率測度の存在を示せ。<span class="haiten">（40点）</span></li>
+<li>ダンフォード–ペティスの定理の一方向（弱コンパクトなら一様可積分）を示せ。<span class="haiten">（45点）</span></li>
+</ol>
+</div>
+</div>

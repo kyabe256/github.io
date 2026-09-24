@@ -1,0 +1,214 @@
+<div class="toi">
+<h4>この章の問い</h4>
+<ul>
+<li>「各点で有界」から「一様に有界」が、なぜ出るのか。</li>
+<li>ベールのカテゴリー定理は、どう効いているのか。</li>
+<li>この原理は、何を存在させるのか。</li>
+</ul>
+</div>
+
+<h3 id="s68-1">各点から一様へ</h3>
+
+<p>第47章で、量化子の順序を入れ替えると意味が変わると述べた。<em>ところが線型な設定では、入れ替えが許される場面がある。</em></p>
+
+<div class="teiri" id="thm-ichiyou-yukai">
+<h4>一様有界性の原理（バナッハ–シュタインハウス）</h4>
+<p class="no-indent"><m>E</m> をバナッハ空間、<m>F</m> をノルム空間、<m>\{T_i\}_{i\in I}\subseteq B(E,F)</m> とする。</p>
+<M>\sup_{i\in I}\|T_ix\| < \infty \ \ (\forall x\in E) \qquad \Longrightarrow \qquad \sup_{i\in I}\|T_i\| < \infty</M>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><m>E_n = \{\, x\in E \mid \sup_i\|T_ix\| \le n \,\}</m> とおく。</p>
+<p><strong>閉集合である。</strong><m>E_n = \bigcap_i \{\,x \mid \|T_ix\|\le n\,\}</m> で、各 <m>T_i</m> が連続だから閉集合の交わり。</p>
+<p><strong>全体を覆う。</strong>仮定より <m>E=\bigcup_n E_n</m>。</p>
+<p><strong>ベールのカテゴリー定理。</strong><m>E</m> は完備距離空間なので、<em>第二類集合である</em>（第27章）。<span class="yogo-hl">よって、ある <m>E_N</m> が内点をもつ。</span></p>
+<p><m>B(x_0,r)\subseteq E_N</m> とする。<m>\|y\|\le r</m> なら <m>x_0+y\in E_N</m>、<m>x_0\in E_N</m> なので</p>
+<M>\|T_iy\| \le \|T_i(x_0+y)\| + \|T_ix_0\| \le 2N</M>
+<p class="no-indent"><em>すなわち <m>\|T_i\|\le 2N/r</m>（すべての <m>i</m>）。</em></p>
+</div>
+
+<div class="chui">
+<h4>完備性が本質</h4>
+<p class="no-indent"><span class="yogo-hl"><m>E</m> の完備性が外せない。</span></p>
+<p><em>反例。</em><m>E</m> を「有限個の項だけ非零な数列」の空間（<m>\ell^\infty</m> のノルムで、完備でない）とし、<m>T_n(x)=nx_n</m> とする。各 <m>x</m> について <m>T_nx=0</m>（<m>n</m> が大きければ）なので各点有界だが、<m>\|T_n\|=n</m>。</p>
+<p><m>F</m> の完備性は要らない。<em>この非対称性が、定理の構造を表している。</em></p>
+</div>
+
+<h3 id="s68-2">系と応用</h3>
+
+<div class="teiri" data-kind="系" id="cor-banach-steinhaus">
+<h4>バナッハ–シュタインハウスの定理</h4>
+<p class="no-indent"><m>E</m> をバナッハ空間、<m>T_n\in B(E,F)</m> とし、各 <m>x</m> で <m>Tx=\lim_n T_nx</m> が存在するとする。このとき <m>T\in B(E,F)</m> で</p>
+<M>\|T\| \le \liminf_n \|T_n\|</M>
+</div>
+
+<div class="shomei">
+<p class="no-indent">収束列は有界なので <m>\sup_n\|T_nx\|<\infty</m>（各 <m>x</m>）。<ref t="thm-ichiyou-yukai"/> より <m>M=\sup_n\|T_n\|<\infty</m>。</p>
+<p><m>T</m> は線型で <m>\|Tx\|=\lim\|T_nx\|\le M\|x\|</m>。<em>より精密には <m>\|Tx\|\le\liminf_n\|T_n\|\,\|x\|</m>。</em></p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent">第50章で「各点収束では有界性が保たれない」と述べた。<span class="yogo-hl">線型作用素については、完備な定義域があれば保たれる。</span></p>
+<p><em>線型性が、関数列の病理を封じている。</em>これが関数解析の基本的な有難みの一つである。</p>
+</div>
+
+<div class="teiri" data-kind="系" id="cor-yukai-hantei">
+<h4>有界性の判定</h4>
+<p class="no-indent">（1）<m>A\subseteq E</m> について、どの <m>\varphi\in E^*</m> についても <m>\sup_{x\in A}|\varphi(x)|<\infty</m> なら、<m>A</m> は有界（<strong>弱有界なら有界</strong>）。<br>
+（2）<m>B\subseteq E^*</m> について、どの <m>x\in E</m> についても <m>\sup_{\varphi\in B}|\varphi(x)|<\infty</m> なら、<m>B</m> は有界。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent">（2）は <ref t="thm-ichiyou-yukai"/> をそのまま（<m>E</m> は完備）。</p>
+<p>（1）<m>A</m> を <m>E^{**}</m> の部分集合 <m>J(A)</m> と見る。<em><m>E^*</m> は完備</em>（<ref t="def-sotsui"/>）なので（2）が使えて <m>J(A)</m> は有界。<ref t="cor-hb-kei"/>（3）より <m>\|x\|=\|Jx\|</m> なので <m>A</m> も有界。</p>
+</div>
+
+<div class="chui">
+<h4></h4>
+<p class="no-indent"><span class="yogo-hl">（1）の証明で、<m>E</m> が完備でなくてよいのが面白い。</span><em>使っているのは <m>E^*</m> の完備性であり、それは無条件に成り立つ。</em></p>
+<p>この系は第70章で「弱収束列は有界」という形で使う。</p>
+</div>
+
+<h3 id="s68-3">凝集原理——反例の存在を示す</h3>
+
+<div class="teiri" id="thm-gyoshu">
+<h4>凝集原理</h4>
+<p class="no-indent"><m>E</m> をバナッハ空間、<m>T_n\in B(E,F)</m> とし <m>\sup_n\|T_n\|=\infty</m> とする。このとき</p>
+<M>\Big\{\, x\in E \ \Big|\ \sup_n\|T_nx\|=\infty \,\Big\}</M>
+<p class="no-indent">は <m>E</m> の稠密な <m>G_\delta</m> 集合である。とくに第二類集合。</p>
+</div>
+
+<div class="shomei">
+<p class="no-indent"><m>U_n = \{\, x \mid \|T_nx\|>n \,\}</m> は開集合。<em><m>\bigcap_n \bigcup_{k\ge n}U_k</m> が求める集合を含む。</em></p>
+<p><m>V_n=\bigcup_{k\ge n}U_k</m> が稠密であること。そうでなければ、ある球で <m>\|T_kx\|\le k</m>（すべての <m>k\ge n</m>）となり、<ref t="thm-ichiyou-yukai"/> の議論から <m>\sup_{k\ge n}\|T_k\|<\infty</m>、<em>有限個を足しても有界で矛盾。</em></p>
+<p>ベールのカテゴリー定理より、稠密開集合の可算交わりは稠密な <m>G_\delta</m>。</p>
+</div>
+
+<div class="rei" id="rei-fourier-hassan">
+<h4>フーリエ級数が発散する連続関数</h4>
+<p class="no-indent"><m>E=C(\mathbb{T})</m>（一様ノルム）、<m>T_n f = (S_nf)(0)=\frac{1}{2\pi}\int_{\mathbb{T}}f(t)D_n(t)\,dt</m>（<m>D_n</m> はディリクレ核）とする。</p>
+<p><em><m>\|T_n\| = \frac{1}{2\pi}\int|D_n| = L_n</m>（ルベーグ定数）で、<m>L_n \sim \frac{4}{\pi^2}\log n \to\infty</m>。</em></p>
+<p><ref t="thm-gyoshu"/> より、<span class="yogo-hl"><m>0</m> でフーリエ級数が発散する連続関数の全体は、<m>C(\mathbb{T})</m> の稠密な <m>G_\delta</m> 集合である。</span></p>
+<p><em>そのような関数は「典型的」であって、例外ではない。</em>第83章で詳しく扱う。</p>
+</div>
+
+<div class="chui">
+<h4>存在証明としての使い方</h4>
+<p class="no-indent"><span class="yogo-hl">凝集原理は、具体例を作らずに反例の存在を示す。</span></p>
+<p><em>第48章★★★で「どこでも微分できない連続関数が典型的」と述べたのも、同じ論法だった。</em></p>
+<p>ベールのカテゴリー定理を使う存在証明は、<em>構成的でない</em>。だが「例外的でない」という強い情報を同時に与える。</p>
+</div>
+
+<figure>
+<svg viewBox="0 0 470 272" width="470" height="272" xmlns="http://www.w3.org/2000/svg" font-family="SekaishiSans, sans-serif">
+  <defs>
+    <marker id="a68" markerWidth="8" markerHeight="8" refX="7" refY="2.6" orient="auto"><path d="M0,0 L7,2.6 L0,5.2 z" fill="#35618f"/></marker>
+  </defs>
+
+  <text x="14" y="15" font-size="8.8" font-weight="700" fill="#1f3b5c">「どこかに厚みがある」から、全体の評価が出る</text>
+
+  <rect x="14" y="26" width="442" height="124" rx="4" fill="#f5f8fb" stroke="#c3d2e0"/>
+
+  <text x="24" y="42" font-size="7" font-weight="700" fill="#1f3b5c">Eₙ ＝ { x : すべての i で ‖Tᵢx‖ ≤ n }</text>
+
+  <rect x="30" y="52" width="150" height="80" rx="3" fill="#eef2f6" stroke="#c9c9c7"/>
+  <text x="105" y="64" font-size="6.2" text-anchor="middle" fill="#6a6a68">E（完備）</text>
+  <path d="M42,120 C 58,104 76,108 90,118 C 104,128 120,124 134,120 L134,130 L42,130 Z" fill="#dce7f0" opacity="0.5" stroke="#35618f" stroke-width="0.6"/>
+  <path d="M42,104 C 62,86 88,92 108,104 C 128,116 150,110 168,100 L168,130 L42,130 Z" fill="#dce7f0" opacity="0.4" stroke="#35618f" stroke-width="0.6"/>
+  <rect x="60" y="78" width="60" height="30" fill="#cfe0ee" stroke="#35618f" stroke-width="1.1"/>
+  <text x="90" y="96" font-size="6.2" text-anchor="middle" fill="#1f3b5c">E_N が内点をもつ</text>
+  <text x="24" y="142" font-size="6.2" fill="#6a6a68">閉集合の可算合併が全体——ベールの定理より、どれかに内点がある</text>
+
+  <text x="200" y="66" font-size="6.6" fill="#8c2f1e">一　各 Eₙ は閉（Tᵢ が連続だから）</text>
+  <text x="200" y="80" font-size="6.6" fill="#8c2f1e">二　∪ₙ Eₙ ＝ E（各点有界の仮定）</text>
+  <text x="200" y="94" font-size="6.6" fill="#8c2f1e">三　E は第二類（完備だから）</text>
+  <text x="200" y="108" font-size="6.6" fill="#1e4a41">四　ある E_N に球 B(x₀, r) が入る</text>
+  <text x="200" y="122" font-size="6.6" fill="#1e4a41">五　平行移動して ‖Tᵢ‖ ≤ 2N/r</text>
+  <text x="200" y="138" font-size="6.2" fill="#6b2a48">線型性が、球の一部の情報を全体へ運ぶ</text>
+
+  <rect x="14" y="160" width="216" height="104" rx="4" fill="#fdf6f4" stroke="#e0c3bd"/>
+  <text x="24" y="175" font-size="7.6" font-weight="700" fill="#8c2f1e">完備性は外せない</text>
+  <text x="24" y="192" font-size="6.6" fill="#8c2f1e">E ＝ 有限個の項だけ非零な数列</text>
+  <text x="24" y="204" font-size="6.6" fill="#8c2f1e">Tₙ(x) ＝ n xₙ</text>
+  <text x="24" y="218" font-size="6.4" fill="#6a6a68">各 x について、n が大きければ Tₙx ＝ 0</text>
+  <text x="24" y="229" font-size="6.4" fill="#6a6a68">——各点有界。しかし ‖Tₙ‖ ＝ n</text>
+  <text x="24" y="245" font-size="6.6" fill="#1e4a41">F の完備性は要らない</text>
+  <text x="24" y="256" font-size="6.4" fill="#6a6a68">この非対称性が定理の構造を表している</text>
+
+  <rect x="240" y="160" width="216" height="104" rx="4" fill="#e6efe9" stroke="#2f6b5f"/>
+  <text x="250" y="175" font-size="7.6" font-weight="700" fill="#1e4a41">凝集原理——反例が「典型的」だと言う</text>
+  <text x="250" y="192" font-size="6.6" fill="#1e4a41">sup ‖Tₙ‖ ＝ ∞ なら</text>
+  <text x="250" y="204" font-size="6.6" fill="#1e4a41">{ x : sup ‖Tₙx‖ ＝ ∞ } は稠密な G_δ</text>
+  <text x="250" y="221" font-size="6.6" fill="#8c2f1e">0 でフーリエ級数が発散する連続関数</text>
+  <text x="250" y="232" font-size="6.6" fill="#8c2f1e">どこでも微分できない連続関数（第48章）</text>
+  <text x="250" y="248" font-size="6.4" fill="#6a6a68">どちらも具体例を作らずに存在が出る。</text>
+  <text x="250" y="259" font-size="6.4" fill="#6a6a68">しかも「例外でなく典型」という強い情報つき</text>
+</svg>
+<figcaption>各点で有界な作用素族は、閉集合の可算合併で空間を覆う。完備性からベールのカテゴリー定理が使え、どれかに内点があることがわかる。線型性が、球の内部の評価を全体へ運ぶ。</figcaption>
+</figure>
+
+<div class="lv2">
+<h4>グライディングハンプ——ベールを使わない証明</h4>
+<p>一様有界性の原理は、<em>ベールのカテゴリー定理を使わずにも証明できる</em>。</p>
+<p><strong>補題。</strong><m>T\in B(E,F)</m>、<m>x\in E</m>、<m>r>0</m> について</p>
+<M>\sup_{y\in B(x,r)}\|Ty\| \ \ge\ r\,\|T\|</M>
+<p><em>証明。</em><m>\|z\|\le r</m> について <m>\max(\|T(x+z)\|,\|T(x-z)\|)\ge\frac12(\|T(x+z)\|+\|T(x-z)\|)\ge\|Tz\|</m>。<span class="yogo-hl">中点の議論だけで出る。</span></p>
+<p><strong>本証明。</strong><m>\sup_n\|T_n\|=\infty</m> と仮定する。部分列を取って <m>\|T_n\|\ge4^n</m> としてよい。</p>
+<p><m>x_0=0</m> とし、帰納的に <m>x_n\in B(x_{n-1},3^{-n})</m> を <m>\|T_nx_n\|\ge\frac23\cdot3^{-n}\|T_n\|</m> となるように取る（補題より可能）。</p>
+<p><em><m>(x_n)</m> はコーシー列なので極限 <m>x</m> をもち、<m>\|x-x_n\|\le\frac12\cdot3^{-n}</m>。</em>すると</p>
+<M>\|T_nx\| \ge \|T_nx_n\| - \|T_n\|\|x-x_n\| \ge \Big(\tfrac23-\tfrac12\Big)3^{-n}\|T_n\| \ge \tfrac16\Big(\tfrac43\Big)^n \to \infty</M>
+<p><span class="yogo-hl">各点有界の仮定に反する。</span></p>
+<p><strong>何が違うのか。</strong>この証明は<em>完備性しか使わない</em>——ベールのカテゴリー定理も選択公理も要らない（可算従属選択だけ）。</p>
+<p>しかも<em>発散する <m>x</m> を実際に構成している</em>。<span class="yogo-hl">ベールを使う証明が非構成的だったのと対照的である。</span></p>
+<p><strong>「滑走するこぶ」。</strong>この論法は、<em>各段で「こぶ」を少しずつずらしながら足していく</em>形をしている。第83章のカルレソンの定理の周辺や、第XI部の反例の構成で繰り返し現れる。</p>
+<p>ただし<em>凝集原理（<ref t="thm-gyoshu"/>）の「稠密な <m>G_\delta</m>」という結論は、この方法では出ない</em>。「典型的である」と言うには、やはりベールが要る。</p>
+</div>
+
+<div class="lv3">
+<h4>閉グラフ定理との等価性と、樽型空間</h4>
+<p><strong>三つの定理の関係。</strong>一様有界性・開写像・閉グラフは、いずれもベールのカテゴリー定理から来る。<em>実は互いに導き合える。</em></p>
+<p>第69章で開写像定理と閉グラフ定理の同値性を示す。<span class="yogo-hl">一様有界性も、閉グラフ定理から導ける。</span></p>
+<p><em>導き方。</em><m>\{T_i\}</m> に対し <m>S \colon E\to\ell^\infty(I,F)</m>、<m>Sx=(T_ix)_i</m> を考える。各点有界の仮定から <m>S</m> は定義され、<em>グラフが閉である</em>ことが確かめられる。閉グラフ定理より <m>S</m> は有界で、<m>\|S\|=\sup_i\|T_i\|</m>。</p>
+<p><strong>何が本質か——樽型空間。</strong>位相ベクトル空間 <m>E</m> の部分集合が<em>樽</em>であるとは、閉・凸・均衡（<m>|\lambda|\le1</m> で不変）・吸収的（どの点もスカラー倍で入る）なものをいう。</p>
+<p><em>どの樽も <m>0</m> の近傍であるとき、<m>E</m> を<strong>樽型</strong>という。</em></p>
+<p><span class="yogo-hl">一様有界性の原理は、樽型空間で成り立つ。</span>実際、<m>\{x : \sup_i\|T_ix\|\le1\}</m> が樽になる。</p>
+<p><strong>樽型な空間。</strong>バナッハ空間、フレシェ空間（第63章★★★）、そして <m>C_c^\infty(\Omega)</m> の帰納極限位相。<em>後者はフレシェ空間ですらないが樽型である。</em></p>
+<p>第87章の超関数の理論は、<m>C_c^\infty</m> の双対として組み立てられる。<span class="yogo-hl">そこで一様有界性が使えるのは、樽型性のおかげである。</span></p>
+<p><strong>樽型でない例。</strong>無限次元ノルム空間の、稠密な真部分空間。<em>完備性を失うと樽型でなくなる。</em></p>
+<p><strong>ベールからの独立。</strong>樽型性はベールのカテゴリー定理より弱い条件である。<em>ベール空間ならば樽型だが、逆は成り立たない</em>——樽型だがベール空間でない局所凸空間がある。</p>
+<p>したがって<span class="yogo-hl">一様有界性の原理の「真の理由」は、ベールではなく樽型性である。</span>ベールは、バナッハ空間で樽型性を保証する手段にすぎない。</p>
+</div>
+
+<div class="mondai">
+<h4>演習</h4>
+
+<div class="q-set">
+<span class="q-head">基本</span>
+<ol>
+<li><m>E_n</m> が閉集合であることを確かめよ。</li>
+<li>完備性を外した反例（<m>T_nx=nx_n</m>）を検証せよ。</li>
+<li>弱収束列が有界であることを <ref t="cor-yukai-hantei"/> から導け。</li>
+<li>ディリクレ核 <m>D_n(t)=\sum_{|k|\le n}e^{ikt}</m> を閉じた形で書け。</li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">証明</span>
+<ol>
+<li><ref t="thm-ichiyou-yukai"/> を、細部まで示せ。<span class="haiten">（25点）</span></li>
+<li><ref t="cor-yukai-hantei"/>（1）で <m>E</m> の完備性が不要な理由を説明せよ。<span class="haiten">（20点）</span></li>
+<li><ref t="thm-gyoshu"/> の <m>V_n</m> が稠密であることを示せ。<span class="haiten">（30点）</span></li>
+<li>ルベーグ定数 <m>L_n</m> が <m>\log n</m> のオーダーで発散することを示せ。<span class="haiten">（40点）</span></li>
+</ol>
+</div>
+
+<div class="q-set">
+<span class="q-head">発展</span>
+<ol>
+<li>「滑走するこぶ」による証明を、細部まで書け。<span class="haiten">（45点）</span></li>
+<li>閉グラフ定理から一様有界性の原理を導け。<span class="haiten">（40点）</span></li>
+<li><m>\{x : \sup_i\|T_ix\|\le1\}</m> が樽であることを確かめよ。<span class="haiten">（30点）</span></li>
+</ol>
+</div>
+</div>
