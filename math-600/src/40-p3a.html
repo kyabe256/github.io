@@ -1,0 +1,167 @@
+<!-- 大問 301-350 -->
+<div class="partbox">
+<h2 class="part" style="break-before:auto">第 III 部　フーリエ解析・調和解析<span class="en">FOURIER AND HARMONIC ANALYSIS &mdash; 301 to 450</span></h2>
+<p class="part-lead">$\widehat{f*g}=\hat f\hat g$ ― 畳み込みが掛け算に、微分が乗法になる。この一行から、収束論・特異積分・関数空間・そして数論への応用までが展開する。$\mathbb{R}$ 上の変換は $\hat f(\xi)=\int f(x)e^{-2\pi ix\xi}dx$ の流儀を用いる。</p>
+</div>
+
+<h3 class="ch">III-1　Fourier 級数の収束論<span class="rg">301–313</span></h3>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 301</span><span class="ttl">Riemann–Lebesgue の補題</span><span class="stars">★★★★☆</span></div>
+<p class="st">$f\in L^{1}(\mathbb{T})$ ならば $\hat f(n)\to0$。$\mathcal{F}:L^{1}(\mathbb{T})\to c_{0}(\mathbb{Z})$ は単射有界だが全射でないこと（開写像定理）も示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 302</span><span class="ttl">Lebesgue 定数の漸近</span><span class="stars">★★★★☆</span></div>
+<p class="st">$\displaystyle L_{N}=\frac{1}{2\pi}\int_{-\pi}^{\pi}|D_{N}|=\frac{4}{\pi^{2}}\log N+O(1)$。また $\|S_{N}\|_{C(\mathbb{T})\to C(\mathbb{T})}=L_{N}$。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 303</span><span class="ttl">Riemann の局所化原理</span><span class="stars">★★★★☆</span></div>
+<p class="st">$f,g\in L^{1}(\mathbb{T})$ が $x_{0}$ の近傍で一致すれば $S_{N}f(x_{0})-S_{N}g(x_{0})\to0$。したがって収束・発散は局所的性質である。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 304</span><span class="ttl">Dini の判定法</span><span class="stars">★★★★☆</span></div>
+<p class="st">$\int_{|t|\lt\delta}\frac{|f(x_{0}+t)-L|}{|t|}dt\lt\infty$ ならば $S_{N}f(x_{0})\to L$。系として Hölder 連続点・左右微分可能点での収束を導け。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 305</span><span class="ttl">Dirichlet–Jordan の定理</span><span class="stars">★★★★☆</span></div>
+<p class="st">有界変動関数の Fourier 級数は各点で $\frac{f(x+)+f(x-)}{2}$ に収束し、連続ならば収束は一様。第二平均値定理と $\operatorname{Si}$ の有界性を用いよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 306</span><span class="ttl">du Bois-Reymond の定理</span><span class="stars">★★★★☆</span></div>
+<p class="st">$S_{N}f(0)$ が発散する $f\in C(\mathbb{T})$ が存在し、そのような $f$ 全体は $C(\mathbb{T})$ の稠密 $G_{\delta}$ をなす。さらに発散点集合が稠密 $G_{\delta}$ となる単一の $f$ を構成せよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 307</span><span class="ttl">Kolmogorov の定理</span><span class="stars">★★★★★</span></div>
+<p class="st">Fourier 級数が至る所発散する $f\in L^{1}(\mathbb{T})$（$f\ge0$ にとれる）が存在する。$\log n$ 型の増大をもつ核の重ね合わせで構成せよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 308</span><span class="ttl">Carleson–Hunt の定理と Stein の最大原理</span><span class="stars">★★★★★</span></div>
+<p class="st">$f\in L^{p}(\mathbb{T})$（$p\gt1$）ならば $S_{N}f\to f$ a.e.（言明）。一方、Stein の最大原理を示せ：$1\le p\le2$ で平行移動可換な作用素列が a.e. 収束するなら、極大作用素は弱 $(p,p)$ 型である。つまり極大不等式は必要条件でもある。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 309</span><span class="ttl">Menshov–Rademacher の定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$\sum|c_{n}|^{2}\log^{2}(n+2)\lt\infty$ ならば直交級数 $\sum c_{n}\varphi_{n}$ は a.e. 収束する。二進ブロック分解による最大不等式
+$\|\max_{N\le n}|s_{N}|\|_{2}\le C\log n\left(\sum|c_{k}|^{2}\right)^{1/2}$ を経由せよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 310</span><span class="ttl">Cantor–Lebesgue の定理</span><span class="stars">★★★★☆</span></div>
+<p class="st">三角級数が正測度の集合上で収束すれば係数は $0$ に収束する。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 311</span><span class="ttl">Riemann の第一・第二定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$c_{n}\to0$ のとき $F(z)=\frac{c_{0}x^{2}}{2}-\sum_{n\neq0}\frac{c_{n}}{n^{2}}e^{inx}$ は連続で、級数が $x$ で $s$ に収束すれば二階対称微分 $D^{2}F(x)=s$、さらに $\frac{F(x+h)+F(x-h)-2F(x)}{h}\to0$ が一様に成り立つ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 312</span><span class="ttl">Cantor の一意性定理</span><span class="stars">★★★★★</span></div>
+<p class="st">三角級数がすべての点で $0$ に収束すればすべての係数は $0$。Schwarz の補題（$D^{2}F\equiv0\Rightarrow F$ 一次）と大問 311 から導け。可算例外集合を許しても成り立つこと（Cantor–Young）も述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 313</span><span class="ttl">Bernstein の絶対収束定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$f\in\Lambda_{\alpha}(\mathbb{T})$、$\alpha\gt1/2$ ならば $\sum|\hat f(n)|\lt\infty$。$\alpha=1/2$ では偽。二進帯域ごとに Parseval と Cauchy–Schwarz を使う。</p></div>
+
+<h3 class="ch">III-2　総和法と核<span class="rg">314–325</span></h3>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 314</span><span class="ttl">Fejér の定理</span><span class="stars">★★★★☆</span></div>
+<p class="st">$K_{N}\ge0$ は近似単位元で、$f\in C(\mathbb{T})$ なら $\sigma_{N}f\to f$ 一様、$f\in L^{p}$（$p\lt\infty$）なら $L^{p}$ 収束。左右極限をもつ点では平均値に収束する。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 315</span><span class="ttl">近似単位元の一般論</span><span class="stars">★★★★☆</span></div>
+<p class="st">$\int\Phi_{\alpha}=1$、$\sup\int|\Phi_{\alpha}|\lt\infty$、$\int_{|t|\gt\delta}|\Phi_{\alpha}|\to0$ ならば $f*\Phi_{\alpha}\to f$（$C$ で一様、$L^{p}$ でノルム収束）。$D_{N}$ が第二条件を破ることが第 III-1 章の病理の源であることを示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 316</span><span class="ttl">Weierstrass の近似定理</span><span class="stars">★★★★☆</span></div>
+<p class="st">三角多項式は $C(\mathbb{T})$ で稠密、多項式は $C[a,b]$ で稠密。Fejér 核（三角）と Landau 核（多項式）の両方で示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 317</span><span class="ttl">一意性・完全性・Parseval</span><span class="stars">★★★★☆</span></div>
+<p class="st">$\hat f\equiv0\Rightarrow f=0$ a.e.。$\{e^{inx}\}$ は $L^{2}(\mathbb{T})$ の完全正規直交系で、$\|f\|_{2}^{2}=\sum|\hat f(n)|^{2}$、$\|S_{N}f-f\|_{2}\to0$、$\mathcal{F}:L^{2}(\mathbb{T})\to\ell^{2}(\mathbb{Z})$ はユニタリ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 318</span><span class="ttl">Poisson 核・Abel 総和・Fatou の定理</span><span class="stars">★★★★☆</span></div>
+<p class="st">$P_{r}$ は近似単位元で、$A_{r}f=f*P_{r}$ は円板の Dirichlet 問題の解。$f\in L^{1}$ の Lebesgue 点で $A_{r}f\to f$、さらに非接収束（Fatou）も成り立つ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 319</span><span class="ttl">Fejér–Lebesgue の定理</span><span class="stars">★★★★☆</span></div>
+<p class="st">$f\in L^{1}(\mathbb{T})$ の Lebesgue 点で $\sigma_{N}f\to f$、とくに a.e. 収束。$K_{N}$ の radial decreasing majorant と極大関数を用いよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 320</span><span class="ttl">Hardy のタウバー型定理</span><span class="stars">★★★★☆</span></div>
+<p class="st">$\sigma_{N}\to s$ かつ $a_{n}=O(1/n)$ ならば $s_{N}\to s$。系として $\hat f(n)=O(1/|n|)$ なる $f$ については Cesàro 収束点で通常収束することを導け。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 321</span><span class="ttl">Gibbs 現象</span><span class="stars">★★★★☆</span></div>
+<p class="st">方形波について $\displaystyle\lim_{N}S_{N}f\left(\frac{\pi}{N+1}\right)=\frac{2}{\pi}\int_{0}^{\pi}\frac{\sin t}{t}dt=1.17897\ldots$。跳びの約 $8.95\%$ の超過が消えない。$\sigma_{N}$ では起きない理由（$K_{N}\ge0$）も述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 322</span><span class="ttl">Bernstein の不等式（三角多項式）</span><span class="stars">★★★★☆</span></div>
+<p class="st">次数 $N$ の三角多項式について $\|P'\|_{p}\le N\|P\|_{p}$（$1\le p\le\infty$）。定数は $P=\sin Nx$ で達成され最良。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 323</span><span class="ttl">Nikolskii の不等式</span><span class="stars">★★★★☆</span></div>
+<p class="st">次数 $N$ の三角多項式について $\|P\|_{q}\le CN^{\frac1p-\frac1q}\|P\|_{p}$（$p\lt q$）。帯域制限関数に対する $\mathbb{R}$ 上の類似（Plancherel–Pólya）も示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 324</span><span class="ttl">Fejér–Riesz の定理</span><span class="stars">★★★★★</span></div>
+<p class="st">非負な三角多項式 $P(\theta)\ge0$（次数 $N$）は $P=|Q(e^{i\theta})|^{2}$（$Q$ は次数 $N$ の多項式）と書ける。$Q$ は $\overline{\mathbb{D}}$ の外に零点をもたないように選べて、その意味で一意。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 325</span><span class="ttl">Szegő の定理（対数積分と予測誤差）</span><span class="stars">★★★★★</span></div>
+<p class="st">$d\mu=w\,\frac{d\theta}{2\pi}+d\mu_{s}$ に対し
+$\displaystyle\inf_{p}\int\left|1-\sum_{k\ge1}c_{k}e^{ik\theta}\right|^{2}d\mu=\exp\left(\int\log w\,\frac{d\theta}{2\pi}\right)$。とくに予測可能 $\iff\int\log w=-\infty$（Kolmogorov–Szegő）。</p></div>
+
+<h3 class="ch">III-3　Fourier 変換<span class="rg">326–338</span></h3>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 326</span><span class="ttl">$L^{1}$ 理論の基本</span><span class="stars">★★★★☆</span></div>
+<p class="st">$\hat f$ は有界一様連続で $0$ に減衰し、微分・乗法・平行移動・スケーリングの規則をみたす。$\mathcal{F}(L^{1})$ は $C_{0}$ の稠密真部分空間である。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 327</span><span class="ttl">反転公式</span><span class="stars">★★★★☆</span></div>
+<p class="st">$f,\hat f\in L^{1}$ ならば $f(x)=\int\hat f(\xi)e^{2\pi ix\xi}d\xi$ a.e.。一般の $f\in L^{1}$ には Gauss 総和による反転が成り立ち、Lebesgue 点で収束する。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 328</span><span class="ttl">Plancherel の定理</span><span class="stars">★★★★☆</span></div>
+<p class="st">$\mathcal{F}$ は $L^{1}\cap L^{2}$ 上等長で、$L^{2}(\mathbb{R}^{n})$ 上のユニタリ作用素に一意に拡張される。$\mathcal{F}^{4}=\mathrm{id}$、$\mathcal{F}^{-1}=\mathcal{F}^{*}$。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 329</span><span class="ttl">Hermite 関数とスペクトル分解</span><span class="stars">★★★★☆</span></div>
+<p class="st">Hermite 関数は $\mathcal{F}h_{k}=(-i)^{k}h_{k}$ をみたす $L^{2}(\mathbb{R})$ の完全正規直交系。したがって $\mathcal{F}$ の固有値は $1,-i,-1,i$ のみで各固有空間は無限次元、$\mathcal{F}=\sum(-i)^{k}P_{k}$。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 330</span><span class="ttl">畳み込み定理と Young の不等式</span><span class="stars">★★★★☆</span></div>
+<p class="st">$\frac1p+\frac1q=1+\frac1r$ のとき $\|f*g\|_{r}\le\|f\|_{p}\|g\|_{q}$、$\widehat{f*g}=\hat f\hat g$。$L^{1}$ は単位元をもたない可換 Banach 環である。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 331</span><span class="ttl">Wiener のタウバー型定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$f\in L^{1}(\mathbb{R})$ の $\hat f$ が零点をもたない $\iff$ 平行移動の張る空間が $L^{1}$ で稠密。系として、$g\in L^{\infty}$ について $(f*g)(x)\to A\int f$ ならば任意の $k\in L^{1}$ で $(k*g)(x)\to A\int k$。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 332</span><span class="ttl">Bochner の定理</span><span class="stars">★★★★★</span></div>
+<p class="st">連続正定値関数は有限正測度の Fourier 変換であり、その逆も成り立つ。Herglotz の定理（$\mathbb{Z}$ 上の正定値数列）も同時に示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 333</span><span class="ttl">Poisson の和公式</span><span class="stars">★★★★☆</span></div>
+<p class="st">$|f|+|\hat f|\le C(1+|x|)^{-1-\delta}$ をみたす連続関数について $\sum_{n}f(x+n)=\sum_{k}\hat f(k)e^{2\pi ikx}$。仮定が本質的であることも述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 334</span><span class="ttl">θ 変換公式と ζ の関数等式</span><span class="stars">★★★★★</span></div>
+<p class="st">$\theta(1/t)=\sqrt t\,\theta(t)$ を Poisson の和公式から導き、Mellin 変換により $\xi(s)=\pi^{-s/2}\Gamma(s/2)\zeta(s)$ が $\xi(s)=\xi(1-s)$ をみたすことを示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 335</span><span class="ttl">標本化定理</span><span class="stars">★★★★☆</span></div>
+<p class="st">$\operatorname{supp}\hat f\subset[-W,W]$ ならば $f(x)=\sum_{n}f\left(\frac{n}{2W}\right)\operatorname{sinc}(2Wx-n)$（$L^{2}$ かつ広義一様）。エイリアシングを Poisson の和公式で説明せよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 336</span><span class="ttl">Paley–Wiener の定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$f\in L^{2}(\mathbb{R})$ について $\operatorname{supp}\hat f\subset[-W,W]$ $\iff$ $f$ が指数型 $2\pi W$ の整関数に延び実軸上 $L^{2}$。Hardy 空間 $H^{2}$ の上半平面版（$\hat f$ が半直線に台をもつ）も示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 337</span><span class="ttl">Paley–Wiener–Schwartz の定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$u\in\mathcal{E}'$ の台が $\overline{B(0,R)}$ に含まれる $\iff$ $\hat u$ が整関数で $|\hat u(\zeta)|\le C(1+|\zeta|)^{N}e^{2\pi R|\operatorname{Im}\zeta|}$。$C_{c}^{\infty}$ に対応する条件も述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 338</span><span class="ttl">Titchmarsh の畳み込み定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$f,g\in L^{1}(0,\infty)$ に対し $\inf\operatorname{supp}(f*g)=\inf\operatorname{supp}f+\inf\operatorname{supp}g$。とくに $f*g=0$ ならば $f=0$ または $g=0$（$L^{1}(0,\infty)$ は整域）。</p></div>
+
+<h3 class="ch">III-4　補間定理<span class="rg">339–350</span></h3>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 339</span><span class="ttl">Riesz–Thorin の補間定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$T$ が $L^{p_{0}}\to L^{q_{0}}$（$M_{0}$）と $L^{p_{1}}\to L^{q_{1}}$（$M_{1}$）で有界なら、中間指数で $M_{\theta}\le M_{0}^{1-\theta}M_{1}^{\theta}$。Hadamard の三線定理（大問 57）に帰着させよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 340</span><span class="ttl">Stein の解析族の補間定理</span><span class="stars">★★★★★</span></div>
+<p class="st">帯上の解析的な作用素族 $\{T_{z}\}$ が境界で適当な増大度条件と有界性をみたすとき、中間の $z$ でも有界性が成り立つ。応用として Riesz ポテンシャルの解析接続と Stein–Weiss の重み付き不等式を導け。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 341</span><span class="ttl">Marcinkiewicz の補間定理</span><span class="stars">★★★★★</span></div>
+<p class="st">劣線形作用素が弱 $(p_{0},p_{0})$ 型かつ弱 $(p_{1},p_{1})$ 型ならば、その間で強 $(p,p)$ 型。分布関数による表示と、各 $\lambda$ での関数の分割で示せ。Riesz–Thorin との仮定・結論の違いを整理せよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 342</span><span class="ttl">Hausdorff–Young の不等式</span><span class="stars">★★★★☆</span></div>
+<p class="st">$1\le p\le2$ に対し $\|\hat f\|_{p'}\le\|f\|_{p}$。$p\gt2$ では $\mathcal{F}$ は $L^{p}\to L^{q}$ に有界でないこと（スケーリングと複素 Gauss 関数）も示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 343</span><span class="ttl">Beckner–Babenko の最良定数</span><span class="stars">★★★★★</span></div>
+<p class="st">$\|\hat f\|_{p'}\le\left(p^{1/p}/p'^{1/p'}\right)^{n/2}\|f\|_{p}$ が最良であり、等号は Gauss 関数で達成される。Young の不等式の最良定数（Beckner–Brascamp–Lieb）も述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 344</span><span class="ttl">Hardy–Littlewood–Sobolev の不等式</span><span class="stars">★★★★★</span></div>
+<p class="st">$\frac1q=\frac1p-\frac{\alpha}{n}$、$1\lt p\lt q\lt\infty$ のとき $\|I_{\alpha}f\|_{q}\le C\|f\|_{p}$。$p=1$ では弱型のみ。最良定数（Lieb）と等号を与える関数も述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 345</span><span class="ttl">Gagliardo–Nirenberg–Sobolev の不等式</span><span class="stars">★★★★★</span></div>
+<p class="st">$1\le p\lt n$、$\frac{1}{p^{*}}=\frac1p-\frac1n$ に対し $\|u\|_{p^{*}}\le C\|\nabla u\|_{p}$（$u\in C_{c}^{1}$）。$p=1$ の場合が等周不等式と同値であることを示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 346</span><span class="ttl">Lorentz 空間と実補間</span><span class="stars">★★★★★</span></div>
+<p class="st">$L^{p,q}$ を再配列で定義し、$L^{p,p}=L^{p}$、$L^{p,\infty}=$ 弱 $L^{p}$、$q_{1}\lt q_{2}\Rightarrow L^{p,q_{1}}\subset L^{p,q_{2}}$ を示せ。$K$ 汎関数による実補間 $(L^{p_{0}},L^{p_{1}})_{\theta,q}=L^{p,q}$ も導け。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 347</span><span class="ttl">複素補間法（Calderón）</span><span class="stars">★★★★★</span></div>
+<p class="st">両立対 $(X_{0},X_{1})$ に対し複素補間空間 $[X_{0},X_{1}]_{\theta}$ を構成し、$[L^{p_{0}},L^{p_{1}}]_{\theta}=L^{p}$、$[H^{s_{0}},H^{s_{1}}]_{\theta}=H^{s}$ を示せ。補間定理が自動的に従う枠組みであることを述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 348</span><span class="ttl">Stein–Weiss の重み付き不等式</span><span class="stars">★★★★★</span></div>
+<p class="st">$\left\||x|^{-\beta}I_{\alpha}(|\cdot|^{-\gamma}f)\right\|_{q}\le C\|f\|_{p}$ が成り立つ指数条件を決定し、Hardy の不等式・HLS を特別な場合として含むことを示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 349</span><span class="ttl">Khinchin の不等式</span><span class="stars">★★★★☆</span></div>
+<p class="st">独立な $\pm1$ 変数 $\varepsilon_{n}$ について $0\lt p\lt\infty$ に対し
+$A_{p}\left(\sum|a_{n}|^{2}\right)^{1/2}\le\left\|\sum\varepsilon_{n}a_{n}\right\|_{p}\le B_{p}\left(\sum|a_{n}|^{2}\right)^{1/2}$。劣 Gauss 評価から示し、最良定数（Haagerup）にも触れよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 350</span><span class="ttl">Marcinkiewicz–Zygmund の定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$T$ が $L^{p}\to L^{q}$ で有界な線形作用素ならば、そのベクトル値（$\ell^{2}$ 値）拡張も有界：
+$\left\|\left(\sum|Tf_{j}|^{2}\right)^{1/2}\right\|_{q}\le C\left\|\left(\sum|f_{j}|^{2}\right)^{1/2}\right\|_{p}$。Khinchin の不等式（大問 349）から導け。</p></div>

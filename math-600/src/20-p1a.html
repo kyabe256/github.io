@@ -1,0 +1,169 @@
+<!-- 大問 1-50 -->
+<div class="partbox">
+<h2 class="part" style="break-before:auto">第 I 部　複素関数論<span class="en">COMPLEX ANALYSIS &mdash; 1 to 150</span></h2>
+<p class="part-lead">一度微分できれば無限回微分でき、円周上の値が内部をすべて決め、実軸上の積分が平面の迂回路で落ちる。複素関数論の剛性は、他のどの分野にも似ていない。ここでは基礎定理から楕円関数・モジュラー形式の入口まで、150 の定理を順に潰す。</p>
+</div>
+
+<h3 class="ch">I-1　正則性の剛性<span class="rg">1–12</span></h3>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 1</span><span class="ttl">Goursat の定理</span><span class="stars">★★★★☆</span></div>
+<p class="st">$\Omega\subset\mathbb{C}$ を開集合、$f:\Omega\to\mathbb{C}$ が各点で複素微分可能とする（$f'$ の連続性は仮定しない）。閉三角形 $T\subset\Omega$ に対し $\displaystyle\oint_{\partial T}f(z)\,dz=0$ を示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 2</span><span class="ttl">Looman–Menchoff の定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$f=u+iv$ が領域 $\Omega$ で連続、$u_{x},u_{y},v_{x},v_{y}$ が $\Omega$ の各点で存在し、Cauchy–Riemann 方程式を至る所みたすならば $f$ は $\Omega$ で正則である。連続性の仮定が落とせないことも示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 3</span><span class="ttl">Morera の定理</span><span class="stars">★★★★☆</span></div>
+<p class="st">$f$ が領域 $\Omega$ で連続で、$\Omega$ に含まれる任意の三角形 $T$ について $\oint_{\partial T}f=0$ ならば $f$ は正則。さらに、線分 $L$ を除いて正則で $\Omega$ 上連続な関数は $\Omega$ 全体で正則であることを導け。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 4</span><span class="ttl">Weierstrass の収束定理</span><span class="stars">★★★★☆</span></div>
+<p class="st">正則関数列 $f_{n}$ が領域 $\Omega$ で $f$ に広義一様収束するならば $f$ は正則で、各 $k$ に対し $f_{n}^{(k)}\to f^{(k)}$ も広義一様。$\mathbb{R}$ 上の $C^{\infty}$ 関数列では対応する主張がすべて偽であることを例で示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 5</span><span class="ttl">Riemann の可除特異点定理</span><span class="stars">★★★★☆</span></div>
+<p class="st">$f$ が $0\lt|z-a|\lt r$ で正則かつ $\lim_{z\to a}(z-a)f(z)=0$ ならば $a$ は可除特異点。さらに「$a$ の近傍で $\operatorname{Re}f$ が上に有界」または「$|f(z)|\le C|z-a|^{-1/2}$」からも同じ結論が出ることを示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 6</span><span class="ttl">一致の定理</span><span class="stars">★★★★☆</span></div>
+<p class="st">領域 $\Omega$ 上の正則関数 $f$ の零点集合が $\Omega$ 内に集積点をもてば $f\equiv0$。系として $\mathcal{O}(\Omega)$ が整域であること、および $\Omega$ の連結性が本質的であることを示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 7</span><span class="ttl">開写像定理と局所写像定理</span><span class="stars">★★★★☆</span></div>
+<p class="st">非定数正則関数は開写像である。さらに $f(z)-f(a)$ が $a$ で $k$ 位の零点をもつならば、$a$ の十分小さい近傍で $f$ はちょうど $k$ 対 $1$ であり、$f=\varphi^{k}$（$\varphi$ は単射正則、$\varphi(a)=0$）と分解される。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 8</span><span class="ttl">最大値原理とその境界版</span><span class="stars">★★★★☆</span></div>
+<p class="st">$|f|$ が内点で最大値をとれば $f$ は定数。有界領域 $\Omega$ 上で連続・内部で正則な $f$ は $\max_{\overline\Omega}|f|=\max_{\partial\Omega}|f|$ をみたす。非有界領域でこれが破れる例を挙げ、Phragmén–Lindelöf 型の追加条件で回復することを示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 9</span><span class="ttl">Liouville の定理と多項式の特徴づけ</span><span class="stars">★★★★☆</span></div>
+<p class="st">整関数 $f$ が $|f(z)|\le A+B|z|^{k}$ をみたせば次数 $k$ 以下の多項式。また、(i) $\operatorname{Re}f$ が上に有界、(ii) $f(\mathbb{C})$ がある円板と交わらない、(iii) $f$ が二重周期的、のいずれからも $f$ が定数であることを導け。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 10</span><span class="ttl">代数学の基本定理</span><span class="stars">★★★★☆</span></div>
+<p class="st">次数 $n\ge1$ の複素係数多項式は $\mathbb{C}$ に零点をもつ。Liouville・Rouché・最大値原理・開写像定理のそれぞれを用いた 4 通りの証明を与え、各証明が「複素数の何を使っているか」を明示せよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 11</span><span class="ttl">Hurwitz の定理</span><span class="stars">★★★★☆</span></div>
+<p class="st">$f_{n}\to f$ が領域 $\Omega$ で広義一様、$f\not\equiv0$ とする。$f$ の $k$ 位の零点 $a$ の任意の近傍には、$n$ が大きいとき $f_{n}$ の零点がちょうど $k$ 個（重複込み）存在する。系：$f_{n}$ がすべて単射なら $f$ は単射か定数。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 12</span><span class="ttl">Vitali–Porter の定理</span><span class="stars">★★★★★</span></div>
+<p class="st">領域 $\Omega$ 上で局所一様有界な正則関数列 $f_{n}$ が、$\Omega$ 内に集積点をもつ集合 $E$ の各点で収束するならば、$f_{n}$ は $\Omega$ 全体で広義一様収束する。</p></div>
+
+<h3 class="ch">I-2　Cauchy 理論と冪級数<span class="rg">13–25</span></h3>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 13</span><span class="ttl">Cauchy の積分定理（ホモロジー版）</span><span class="stars">★★★★★</span></div>
+<p class="st">$\Omega$ 内のサイクル $\gamma$ が $\Omega$ でホモローグ・ゼロ（$\Omega$ の外の各点について巻き数 $0$）ならば、任意の $f\in\mathcal{O}(\Omega)$ に対し $\oint_{\gamma}f=0$ かつ $n(\gamma,a)f(a)=\frac{1}{2\pi i}\oint_{\gamma}\frac{f(z)}{z-a}dz$。Dixon の証明を再構成せよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 14</span><span class="ttl">単連結性の同値条件</span><span class="stars">★★★★★</span></div>
+<p class="st">領域 $\Omega\subset\mathbb{C}$ について次が同値：(a) $\Omega$ は単連結、(b) $\hat{\mathbb{C}}\setminus\Omega$ は連結、(c) 任意の $f\in\mathcal{O}(\Omega)$ と任意の閉曲線で $\oint f=0$、(d) 任意の $f\in\mathcal{O}(\Omega)$ が原始関数をもつ、(e) 零点をもたない $f$ は正則な対数をもつ、(f) $\Omega=\mathbb{C}$ か $\Omega\cong\mathbb{D}$。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 15</span><span class="ttl">Cauchy の評価式と Gutzmer の等式</span><span class="stars">★★★★☆</span></div>
+<p class="st">$f=\sum a_{n}z^{n}$ が $|z|\lt R$ で正則のとき $\frac{1}{2\pi}\int_{0}^{2\pi}|f(re^{i\theta})|^{2}d\theta=\sum|a_{n}|^{2}r^{2n}$。これから $|f|\le M$ のとき $\sum|a_{n}|^{2}R^{2n}\le M^{2}$ を導き、Cauchy の評価式 $|a_{n}|\le MR^{-n}$ の等号条件を決定せよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 16</span><span class="ttl">Cauchy–Hadamard の公式と収束半径</span><span class="stars">★★★★☆</span></div>
+<p class="st">$1/R=\limsup|a_{n}|^{1/n}$ を示し、$\sum a_{n}z^{n}$ の収束半径が $R$ のとき $\sum a_{n}^{2}z^{n}$, $\sum\frac{a_{n}}{n!}z^{n}$, $\sum n^{n}a_{n}z^{n}$ の収束半径を決定せよ。さらに収束円周上に必ず特異点が存在することを示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 17</span><span class="ttl">Abel の連続性定理と Tauber の定理</span><span class="stars">★★★★☆</span></div>
+<p class="st">$\sum a_{n}$ が収束すれば $\lim_{r\to1^{-}}\sum a_{n}r^{n}=\sum a_{n}$（Abel）。逆に、$\sum a_{n}r^{n}\to s$ かつ $a_{n}=o(1/n)$ ならば $\sum a_{n}=s$（Tauber）。さらに $a_{n}=O(1/n)$ で十分であること（Littlewood）を述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 18</span><span class="ttl">Pringsheim の定理</span><span class="stars">★★★★☆</span></div>
+<p class="st">$a_{n}\ge0$、$\sum a_{n}z^{n}$ の収束半径が $1$ ならば $z=1$ は $f$ の特異点である（$z=1$ を含む開円板に解析接続できない）。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 19</span><span class="ttl">Ostrowski–Hadamard の空隙定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$f(z)=\sum_{k}a_{k}z^{n_{k}}$ が収束半径 $1$ をもち、$n_{k+1}/n_{k}\ge\lambda\gt1$（Hadamard 空隙）ならば、単位円周は $f$ の自然境界である。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 20</span><span class="ttl">Fabry の空隙定理</span><span class="stars">★★★★★</span></div>
+<p class="st">上と同じ設定で、より弱い仮定 $n_{k}/k\to\infty$ からも単位円周が自然境界であることが従う。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 21</span><span class="ttl">Borel–Carathéodory の不等式</span><span class="stars">★★★★☆</span></div>
+<p class="st">$f$ が $|z|\le R$ で正則、$A(R)=\max_{|z|=R}\operatorname{Re}f$ とすると、$0\lt r\lt R$ に対し
+$\displaystyle\max_{|z|=r}|f(z)|\le\frac{2r}{R-r}A(R)+\frac{R+r}{R-r}|f(0)|$。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 22</span><span class="ttl">Schwarz の鏡像原理</span><span class="stars">★★★★☆</span></div>
+<p class="st">$\Omega$ を実軸に関して対称な領域、$f$ が $\Omega\cap\mathbb{H}$ で正則、$\Omega\cap\mathbb{R}$ まで連続に延び実数値をとるならば、$\tilde f(z)=\overline{f(\bar z)}$ による延長は $\Omega$ 全体で正則。円弧・解析弧に関する一般化も述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 23</span><span class="ttl">Runge の近似定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$K$ をコンパクト、$f$ を $K$ の近傍で正則とする。$f$ は $K$ 上一様に、極が $\mathbb{C}\setminus K$ にある有理関数で近似できる。$\hat{\mathbb{C}}\setminus K$ が連結ならば多項式で近似できる。極の押し出し補題から構成せよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 24</span><span class="ttl">Runge の不思議な例</span><span class="stars">★★★★★</span></div>
+<p class="st">多項式列 $p_{n}$ で、$\mathbb{C}\setminus\mathbb{R}$ の各点で $p_{n}\to0$、かつ $p_{n}(0)\to1$ となるものが存在する。すなわち多項式列の各点収束極限は激しく不連続になりうる。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 25</span><span class="ttl">Mergelyan の定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$K$ をコンパクトで $\mathbb{C}\setminus K$ が連結とする。$K$ 上連続で $K^{\circ}$ で正則な関数は、$K$ 上一様に多項式で近似できる。Runge の定理との差（境界での連続性しか仮定しない）がどこで効くかを明示しつつ証明せよ。</p></div>
+
+<h3 class="ch">I-3　特異点・留数・有理型関数<span class="rg">26–38</span></h3>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 26</span><span class="ttl">Laurent 展開の存在と一意性</span><span class="stars">★★★★☆</span></div>
+<p class="st">円環 $r\lt|z-a|\lt R$ で正則な $f$ は $\sum_{n\in\mathbb{Z}}c_{n}(z-a)^{n}$ と広義一様に展開でき、係数は積分表示で一意に定まる。孤立特異点の三分類（可除・極・真性）が主要部の形で特徴づけられることを示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 27</span><span class="ttl">Casorati–Weierstrass の定理</span><span class="stars">★★★★☆</span></div>
+<p class="st">$a$ が $f$ の真性特異点ならば、任意の $\varepsilon\gt0$ に対し $f(\{0\lt|z-a|\lt\varepsilon\})$ は $\mathbb{C}$ で稠密。逆も成り立つことを示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 28</span><span class="ttl">留数定理（ホモロジー版）</span><span class="stars">★★★★☆</span></div>
+<p class="st">$\Omega$ で有理型な $f$ と、極を通らずホモローグ・ゼロなサイクル $\gamma$ に対し
+$\displaystyle\frac{1}{2\pi i}\oint_{\gamma}f=\sum_{a}n(\gamma,a)\operatorname*{Res}_{z=a}f$（和は有限個）。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 29</span><span class="ttl">$\hat{\mathbb{C}}$ 上の有理型関数は有理関数</span><span class="stars">★★★★☆</span></div>
+<p class="st">Riemann 球面全体で有理型な関数は有理関数に限る。系として $\hat{\mathbb{C}}$ 上正則な関数は定数であること、および有理関数の零点と極の個数（$\hat{\mathbb{C}}$ 上、重複込み）が一致することを示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 30</span><span class="ttl">Mittag-Leffler の定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$|a_{n}|\to\infty$ と主要部 $P_{n}$ が与えられたとき、極がちょうど $\{a_{n}\}$ でそこでの主要部が $P_{n}$ である $\mathbb{C}$ 上の有理型関数が存在する。解はひとつの解と整関数の和ですべて尽くされる。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 31</span><span class="ttl">Mittag-Leffler の定理（開集合版）</span><span class="stars">★★★★★</span></div>
+<p class="st">任意の開集合 $\Omega$ と、$\Omega$ 内に集積点をもたない点列・主要部の指定に対して、同じ結論が成り立つ。$\Omega=\mathbb{C}$ の証明のどこが破綻し、Runge の定理（大問 23）がどう埋めるかを明示せよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 32</span><span class="ttl">Weierstrass の因数分解定理</span><span class="stars">★★★★★</span></div>
+<p class="st">初等因子 $E_{p}$ を用いて、任意の整関数は $f(z)=z^{m}e^{g(z)}\prod_{n}E_{p_{n}}(z/a_{n})$ と表される。逆に、$\mathbb{C}$ 内に集積点をもたない任意の点列を零点集合にもつ整関数が存在する。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 33</span><span class="ttl">有理型関数は整関数の商</span><span class="stars">★★★★☆</span></div>
+<p class="st">$\mathbb{C}$ 上の任意の有理型関数は二つの整関数の商として書ける。一般の開集合 $\Omega$ についても $\mathcal{M}(\Omega)$ が $\mathcal{O}(\Omega)$ の商体であることを示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 34</span><span class="ttl">$\pi\cot\pi z$ の部分分数展開</span><span class="stars">★★★★☆</span></div>
+<p class="st">$\displaystyle\pi\cot\pi z=\frac1z+\sum_{n\ge1}\frac{2z}{z^{2}-n^{2}}$（$\mathbb{C}\setminus\mathbb{Z}$ で広義一様収束）。留数定理による証明と、Liouville 型の一意性による証明の両方を与えよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 35</span><span class="ttl">Herglotz の技巧</span><span class="stars">★★★★☆</span></div>
+<p class="st">$\displaystyle\frac{\pi^{2}}{\sin^{2}\pi z}=\sum_{n\in\mathbb{Z}}\frac{1}{(z-n)^{2}}$ を、両辺の差が周期 $1$ の有界な整関数であることから示せ。さらに両辺の積分により大問 34 を再導出せよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 36</span><span class="ttl">留数による総和公式</span><span class="stars">★★★★☆</span></div>
+<p class="st">$f$ が有理関数で $|f(z)|=O(|z|^{-2})$、極が整数でないとき
+$\displaystyle\sum_{n\in\mathbb{Z}}f(n)=-\sum_{w}\operatorname*{Res}_{z=w}\bigl[\pi\cot(\pi z)f(z)\bigr]$。$\pi/\sin\pi z$ 版（交代和）も定式化して示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 37</span><span class="ttl">Jensen の公式</span><span class="stars">★★★★☆</span></div>
+<p class="st">$f$ が $|z|\le R$ で正則、$f(0)\neq0$、零点を $a_{1},\dots,a_{N}$ とすると
+$\displaystyle\log|f(0)|=\sum_{k}\log\frac{|a_{k}|}{R}+\frac{1}{2\pi}\int_{0}^{2\pi}\log|f(Re^{i\theta})|\,d\theta$。零点が $|z|=R$ 上にある場合も含めて論ぜよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 38</span><span class="ttl">Poisson–Jensen の公式</span><span class="stars">★★★★★</span></div>
+<p class="st">$|z|\lt R$ の各点で
+$\displaystyle\log|f(z)|=\sum_{k}\log\left|\frac{R(z-a_{k})}{R^{2}-\overline{a_{k}}z}\right|+\frac{1}{2\pi}\int_{0}^{2\pi}\frac{R^{2}-|z|^{2}}{|Re^{i\theta}-z|^{2}}\log|f(Re^{i\theta})|\,d\theta$。$z=0$ が Jensen の公式であることを確かめよ。</p></div>
+
+<h3 class="ch">I-4　偏角原理・Rouché・値分布の入口<span class="rg">39–50</span></h3>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 39</span><span class="ttl">偏角原理</span><span class="stars">★★★★☆</span></div>
+<p class="st">$f$ が $\gamma$ 上に零点・極をもたないとき $\displaystyle\frac{1}{2\pi i}\oint_{\gamma}\frac{f'}{f}=Z-P$（巻き数込み）。左辺が像曲線 $f\circ\gamma$ の原点まわりの巻き数に等しいことも示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 40</span><span class="ttl">Rouché の定理（対称版）</span><span class="stars">★★★★☆</span></div>
+<p class="st">$\gamma$ 上で $|f(z)-g(z)|\lt|f(z)|+|g(z)|$ ならば、$f$ と $g$ は $\gamma$ の内部に同数の零点をもつ。通常版 $|f-g|\lt|g|$ より真に強いことを例で示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 41</span><span class="ttl">単射正則写像の局所理論</span><span class="stars">★★★★☆</span></div>
+<p class="st">$f$ が単射正則ならば $f'$ は零点をもたず、逆写像も正則で $(f^{-1})'=1/(f'\circ f^{-1})$。さらに $f$ が単射 $\iff$ 局所単射かつ像の各点の逆像が一点、という言明の真偽を論ぜよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 42</span><span class="ttl">Bloch の定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$f$ が $\overline{\mathbb{D}}$ の近傍で正則、$f(0)=0$、$f'(0)=1$ ならば、$f(\mathbb{D})$ はある半径 $B$ の円板を含む（$B$ は $f$ によらない絶対定数で、$B\ge1/72$ をとれる）。さらに $f$ が単射になる部分領域上でそれが達成できることを示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 43</span><span class="ttl">Landau の定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$f$ が $|z|\lt R$ で正則、$0$ と $1$ を値にとらず、$f(0)=a_{0}$、$f'(0)=a_{1}\neq0$ とすると、$R\le L(a_{0},|a_{1}|)$ なる $a_{0},|a_{1}|$ のみで定まる上界が存在する。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 44</span><span class="ttl">Schottky の定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$f$ が $\mathbb{D}$ で正則、$0,1$ を値にとらず $|f(0)|\le\alpha$ とすると、$0\lt\theta\lt1$ に対し $\max_{|z|\le\theta}|f(z)|\le C(\alpha,\theta)$。定数は $f$ によらない。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 45</span><span class="ttl">Picard の小定理</span><span class="stars">★★★★★</span></div>
+<p class="st">定数でない整関数は、高々 1 つの例外を除いてすべての複素数値をとる。例外値をちょうど 1 つもつ例を挙げ、有理型関数では例外値が 2 つまで許されることと対比せよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 46</span><span class="ttl">Montel の大定理</span><span class="stars">★★★★★</span></div>
+<p class="st">領域 $\Omega$ 上の正則関数族で、$0$ と $1$ を値にとらないものは（$\hat{\mathbb{C}}$ 値として）正規族である。Schottky の定理から導け。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 47</span><span class="ttl">Picard の大定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$a$ が $f$ の真性特異点ならば、$a$ の任意の近傍で $f$ は高々 1 つの例外を除くすべての値を無限回とる。Casorati–Weierstrass（大問 27）からどれだけ強化されたかを述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 48</span><span class="ttl">Gauss–Lucas の定理</span><span class="stars">★★★★☆</span></div>
+<p class="st">多項式 $p$ の零点全体の凸包に $p'$ の零点はすべて含まれる。さらに Jensen の円（実係数の場合、共役零点対を直径とする円の和集合に $p'$ の非実零点が含まれる）を示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 49</span><span class="ttl">Eneström–Kakeya の定理</span><span class="stars">★★★★☆</span></div>
+<p class="st">$0\lt a_{0}\le a_{1}\le\cdots\le a_{n}$ のとき $p(z)=\sum_{k}a_{k}z^{k}$ の零点はすべて $|z|\le1$ にある。より精密に $\min_{k}\frac{a_{k}}{a_{k+1}}\le|z|\le\max_{k}\frac{a_{k}}{a_{k+1}}$ に含まれることを示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 50</span><span class="ttl">零点個数と増大度</span><span class="stars">★★★★☆</span></div>
+<p class="st">$n(r)$ を $|z|\lt r$ の零点数、$M(r)=\max_{|z|=r}|f|$ とすると Jensen の公式（大問 37）から
+$\displaystyle\int_{0}^{R}\frac{n(r)}{r}dr=\frac{1}{2\pi}\int_{0}^{2\pi}\log|f(Re^{i\theta})|d\theta-\log|f(0)|$、したがって $n(R/2)\le\log\frac{M(R)}{|f(0)|}/\log2$。</p></div>

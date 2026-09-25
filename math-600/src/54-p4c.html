@@ -1,0 +1,161 @@
+<!-- 大問 551-600 -->
+<h3 class="ch">IV-9　大偏差原理<span class="rg">551–562</span></h3>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 551</span><span class="ttl">大偏差原理の定義と基本性質</span><span class="stars">★★★★☆</span></div>
+<p class="st">LDP（下からは開集合、上からは閉集合）を定義し、レート関数の一意性・下半連続性・good rate function の意味を示せ。指数的緊密性から弱 LDP が完全な LDP になることも示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 552</span><span class="ttl">Cramér の定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$\mathbb{R}^{d}$ 値 i.i.d. の標本平均は、レート関数 $I=\Lambda^{*}$（対数モーメント母関数の Legendre 変換）で LDP をみたす。上界は Chernoff 限界、下界は傾斜変換（tilting）で示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 553</span><span class="ttl">Gärtner–Ellis の定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$\Lambda(\lambda)=\lim\frac1n\log E[e^{n\langle\lambda,Z_{n}\rangle}]$ が存在し原点の近傍で有限・微分可能（steepness）ならば $Z_{n}$ は $\Lambda^{*}$ を レート関数として LDP をみたす。独立性を仮定しない一般化である。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 554</span><span class="ttl">Varadhan の補題</span><span class="stars">★★★★★</span></div>
+<p class="st">LDP と適当な可積分条件のもとで
+$\displaystyle\lim_{n}\frac1n\log E\left[e^{nF(Z_{n})}\right]=\sup_{x}\left(F(x)-I(x)\right)$。Laplace 法の無限次元版であることを説明せよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 555</span><span class="ttl">Bryc の逆補題</span><span class="stars">★★★★★</span></div>
+<p class="st">指数的緊密性のもとで、すべての有界連続 $F$ について Varadhan 型の極限が存在すれば LDP が成り立ち、レート関数はその Legendre 型変換で与えられる。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 556</span><span class="ttl">縮約原理</span><span class="stars">★★★★☆</span></div>
+<p class="st">連続写像 $f$ による像は LDP をみたし、レート関数は $I'(y)=\inf\{I(x):f(x)=y\}$。近似的縮約（exponentially good approximations）による拡張も述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 557</span><span class="ttl">Sanov の定理</span><span class="stars">★★★★★</span></div>
+<p class="st">経験測度 $L_{n}=\frac1n\sum\delta_{X_{i}}$ は弱位相のもとで、レート関数 $H(\nu\mid\mu)$（相対エントロピー）の LDP をみたす。有限アルファベットの場合の型の方法（method of types）による証明も与えよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 558</span><span class="ttl">Schilder の定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$\sqrt\varepsilon B$ は $C_{0}[0,1]$ 上で、レート関数 $I(\varphi)=\frac12\int_{0}^{1}|\dot\varphi|^{2}dt$（$\varphi\in H^{1}$、それ以外は $+\infty$）の LDP をみたす。Cameron–Martin 空間の役割を説明せよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 559</span><span class="ttl">Freidlin–Wentzell の理論</span><span class="stars">★★★★★</span></div>
+<p class="st">小ノイズ SDE $dX=b(X)dt+\sqrt\varepsilon\sigma(X)dB$ の解は、レート関数 $\frac12\int|\sigma^{-1}(\dot\varphi-b(\varphi))|^{2}$ の LDP をみたす。縮約原理（大問 556）と Schilder の定理から導け。準ポテンシャルと脱出時間の Arrhenius 則にも触れよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 560</span><span class="ttl">Mogulskii の定理</span><span class="stars">★★★★★</span></div>
+<p class="st">ランダムウォークの折れ線過程は、$I(\varphi)=\int_{0}^{1}\Lambda^{*}(\dot\varphi)dt$ をレート関数として sup ノルムで LDP をみたす。有限次元 LDP からの持ち上げ（projective limit, Dawson–Gärtner）を用いよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 561</span><span class="ttl">Laplace 原理と Gibbs 測度</span><span class="stars">★★★★★</span></div>
+<p class="st">LDP と Laplace 原理が同値であることを示し、傾斜測度 $d\mu_{n}^{F}\propto e^{nF}d\mu_{n}$ が $\arg\max(F-I)$ に集中することを導け。統計力学の変分原理（自由エネルギー＝エネルギー－エントロピー）との対応を述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 562</span><span class="ttl">Donsker–Varadhan のレート関数</span><span class="stars">★★★★★</span></div>
+<p class="st">Markov 過程の占有測度の LDP のレート関数が
+$I(\nu)=-\inf_{u\gt0}\int\frac{Lu}{u}d\nu$ で与えられることを示せ。可逆な場合に Dirichlet 形式 $\mathcal{E}(\sqrt{d\nu/d\pi})$ に一致することも確かめよ。</p></div>
+
+<h3 class="ch">IV-10　エルゴード理論<span class="rg">563–575</span></h3>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 563</span><span class="ttl">保測変換とエルゴード性</span><span class="stars">★★★★☆</span></div>
+<p class="st">エルゴード性の同値条件（不変集合が自明・不変関数が定数・任意の $A,B$ で $\frac1n\sum\mu(T^{-k}A\cap B)\to\mu(A)\mu(B)$）を示せ。無理数回転・Bernoulli シフト・ガウス写像の例を確かめよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 564</span><span class="ttl">Poincaré の再帰定理</span><span class="stars">★★★★☆</span></div>
+<p class="st">有限測度の保測変換について、$\mu(A)\gt0$ ならば a.e. $x\in A$ は無限回 $A$ に戻る。Kac の公式（平均再帰時間 $=1/\mu(A)$、エルゴードの場合）も示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 565</span><span class="ttl">Birkhoff の各点エルゴード定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$f\in L^{1}$ に対し $\frac1n\sum_{k\lt n}f(T^{k}x)\to E[f\mid\mathcal{I}]$ a.e. かつ $L^{1}$。極大エルゴード定理（Garsia の証明）を経由せよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 566</span><span class="ttl">von Neumann の平均エルゴード定理</span><span class="stars">★★★★☆</span></div>
+<p class="st">Hilbert 空間の縮小作用素 $U$ について $\frac1n\sum_{k\lt n}U^{k}\to P$（不変部分空間への直交射影、強収束）。$H=\ker(I-U)\oplus\overline{R(I-U)}$ の分解で示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 567</span><span class="ttl">Kingman の劣加法エルゴード定理</span><span class="stars">★★★★★</span></div>
+<p class="st">劣加法過程 $X_{m+n}\le X_{m}+X_{n}\circ T^{m}$ について $X_{n}/n\to\gamma$ a.e.（$\gamma=\lim E[X_{n}]/n$）。応用として、ランダム行列積のノルムの増大率（最大 Lyapunov 指数）の存在を示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 568</span><span class="ttl">混合性の階層</span><span class="stars">★★★★☆</span></div>
+<p class="st">強混合 $\Rightarrow$ 弱混合 $\Rightarrow$ エルゴードで、いずれの逆も偽。弱混合 $\iff$ $T\times T$ がエルゴード $\iff$ 固有値が $1$ のみ（スペクトル的特徴づけ）を示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 569</span><span class="ttl">一意エルゴード性</span><span class="stars">★★★★★</span></div>
+<p class="st">不変確率測度が一意 $\iff$ 任意の連続関数について時間平均が一様に定数に収束する。無理数回転が一意エルゴードであることから Weyl の一様分布定理（大問 420）を再証明せよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 570</span><span class="ttl">Kolmogorov–Sinai エントロピー</span><span class="stars">★★★★★</span></div>
+<p class="st">分割のエントロピーから測度論的エントロピー $h(T)$ を定義し、Kolmogorov–Sinai の生成定理（生成分割で計算できる）を示せ。Bernoulli シフトのエントロピーが $-\sum p_{i}\log p_{i}$ であることを確かめよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 571</span><span class="ttl">Shannon–McMillan–Breiman の定理</span><span class="stars">★★★★★</span></div>
+<p class="st">エルゴードな場合 $-\frac1n\log\mu(P_{n}(x))\to h$ a.e.。情報源符号化定理（漸近等分割性）との関係を述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 572</span><span class="ttl">Ornstein の同型定理</span><span class="stars">★★★★★</span></div>
+<p class="st">同じエントロピーをもつ 2 つの Bernoulli シフトは同型である（言明）。エントロピーが完全不変量となるクラス（Bernoulli 系）と、そうでない例（K 系で非 Bernoulli）を述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 573</span><span class="ttl">Furstenberg の多重回帰定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$\mu(A)\gt0$ のとき $\liminf\frac1N\sum_{n\le N}\mu\left(A\cap T^{-n}A\cap\cdots\cap T^{-(k-1)n}A\right)\gt0$。対応原理により Szemerédi の定理と同値であることを示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 574</span><span class="ttl">Oseledets の乗法エルゴード定理</span><span class="stars">★★★★★</span></div>
+<p class="st">可積分な行列コサイクルに対し、Lyapunov 指数 $\lambda_{1}\gt\cdots\gt\lambda_{k}$ と対応する可測なフィルトレーション（可逆なら分解）が a.e. 存在する。Kingman の定理（大問 567）から導け。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 575</span><span class="ttl">エルゴード分解定理</span><span class="stars">★★★★★</span></div>
+<p class="st">不変測度全体は凸集合で、その端点がエルゴード測度。任意の不変測度はエルゴード測度上の測度の重心として一意に表される（Choquet の定理（大問 183）の応用）。</p></div>
+
+<h3 class="ch">IV-11　集中不等式とランダム行列<span class="rg">576–588</span></h3>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 576</span><span class="ttl">Hoeffding・Bernstein・Bennett の不等式</span><span class="stars">★★★★☆</span></div>
+<p class="st">有界独立和について $P(S_{n}-ES_{n}\ge t)\le\exp\left(-\frac{2t^{2}}{\sum(b_{i}-a_{i})^{2}}\right)$、分散を使う Bernstein 型 $\exp\left(-\frac{t^{2}/2}{\sigma^{2}+Mt/3}\right)$、および Bennett の精密版を示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 577</span><span class="ttl">McDiarmid の有界差分不等式</span><span class="stars">★★★★☆</span></div>
+<p class="st">各座標の変化が $c_{i}$ 以下の関数について $P(|f-Ef|\ge t)\le2\exp\left(-\frac{2t^{2}}{\sum c_{i}^{2}}\right)$。Doob マルチンゲールと Azuma の不等式（大問 499）から導け。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 578</span><span class="ttl">Talagrand の凸距離不等式</span><span class="stars">★★★★★</span></div>
+<p class="st">積空間上の凸距離 $d_{T}(x,A)$ について $P(A)\,E\left[e^{d_{T}(X,A)^{2}/4}\right]\le1$。系として凸 Lipschitz 関数の集中を導き、最長増加部分列など組合せ論への応用を述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 579</span><span class="ttl">対数 Sobolev 不等式と集中</span><span class="stars">★★★★★</span></div>
+<p class="st">Gauss 測度は $\operatorname{Ent}(f^{2})\le2E|\nabla f|^{2}$ をみたす（Gross）。Herbst の議論により Lipschitz 関数の劣 Gauss 集中 $P(|f-Ef|\ge t)\le2e^{-t^{2}/2L^{2}}$ を導け。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 580</span><span class="ttl">Gauss 等周不等式と Borell–TIS</span><span class="stars">★★★★★</span></div>
+<p class="st">Gauss 測度の等周不等式（半空間が最適）を述べ、Borell–TIS 不等式 $P(\sup_{t}X_{t}-E\sup_{t}X_{t}\ge u)\le e^{-u^{2}/2\sigma^{2}}$ を導け。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 581</span><span class="ttl">Dudley のエントロピー積分</span><span class="stars">★★★★★</span></div>
+<p class="st">劣 Gauss 過程について $E\sup_{t\in T}X_{t}\le C\int_{0}^{\infty}\sqrt{\log N(T,d,\varepsilon)}\,d\varepsilon$。chaining による証明を与え、Talagrand の generic chaining（$\gamma_{2}$ 汎関数）による最適化にも触れよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 582</span><span class="ttl">Slepian の補題と Sudakov–Fernique</span><span class="stars">★★★★★</span></div>
+<p class="st">Gauss 過程の増分の比較から期待最大値の比較が従う：$E|X_{s}-X_{t}|^{2}\le E|Y_{s}-Y_{t}|^{2}$（$\forall s,t$）ならば $E\sup X\le E\sup Y$。補間法（Gauss 積分の微分）で示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 583</span><span class="ttl">VC 次元と一様大数の法則</span><span class="stars">★★★★★</span></div>
+<p class="st">Sauer–Shelah の補題を示し、VC 次元有限なクラス上で $\sup_{A\in\mathcal{A}}|P_{n}(A)-P(A)|\to0$ a.s. を対称化と Rademacher 複雑度で示せ。Glivenko–Cantelli（大問 469）の一般化である。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 584</span><span class="ttl">Wigner の半円則</span><span class="stars">★★★★★</span></div>
+<p class="st">$n\times n$ Wigner 行列の経験スペクトル分布は半円分布 $\frac{1}{2\pi}\sqrt{4-x^{2}}$ に弱収束する。モーメント法（Catalan 数と非交差対分割）または Stieltjes 変換法で示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 585</span><span class="ttl">Marchenko–Pastur の法則</span><span class="stars">★★★★★</span></div>
+<p class="st">標本共分散行列 $\frac1nX^{*}X$（$p/n\to\lambda$）の経験スペクトル分布は Marchenko–Pastur 分布に収束する。Stieltjes 変換の自己無撞着方程式を導いて解け。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 586</span><span class="ttl">最大固有値と Tracy–Widom 則</span><span class="stars">★★★★★</span></div>
+<p class="st">GUE の最大固有値は $2\sqrt n+n^{-1/6}\chi$（$\chi\sim$ Tracy–Widom）に従う（言明）。行列式点過程と Airy 核、Fredholm 行列式（大問 295）による表現を述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 587</span><span class="ttl">行列 Bernstein 不等式</span><span class="stars">★★★★★</span></div>
+<p class="st">独立な自己共役ランダム行列の和について $P(\lambda_{\max}(\sum X_{i})\ge t)\le d\exp\left(\frac{-t^{2}/2}{\sigma^{2}+Lt/3}\right)$。Golden–Thompson の不等式（または Lieb の定理）を用いて示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 588</span><span class="ttl">自由確率と自由中心極限定理</span><span class="stars">★★★★★</span></div>
+<p class="st">自由独立性を定義し、自由畳み込みのもとでの中心極限定理の極限が半円分布であることを示せ。$R$ 変換が自由畳み込みを線形化すること（古典の $\log$ 特性関数に対応）も示せ。</p></div>
+
+<h3 class="ch">IV-12　Lévy 過程と結び<span class="rg">589–600</span></h3>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 589</span><span class="ttl">Lévy 過程と Lévy–Khinchin の公式</span><span class="stars">★★★★★</span></div>
+<p class="st">定常独立増分・確率連続な過程の特性関数は $E[e^{i\langle\theta,X_{t}\rangle}]=e^{t\psi(\theta)}$、$\psi$ は Lévy–Khinchin 形をもつ。無限分解可能分布との一対一対応を示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 590</span><span class="ttl">Lévy–Itô 分解</span><span class="stars">★★★★★</span></div>
+<p class="st">Lévy 過程は「ドリフト＋Brown 運動＋大ジャンプの複合 Poisson ＋小ジャンプの補正和」に一意に分解される。ジャンプ測度が Poisson ランダム測度であること、補正積分の $L^{2}$ 収束を示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 591</span><span class="ttl">Poisson ランダム測度と確率積分</span><span class="stars">★★★★★</span></div>
+<p class="st">Poisson ランダム測度 $N$ と補正測度 $\tilde N=N-\nu$ に対する積分を構成し、等長性・マルチンゲール性・指数公式 $E\left[e^{\int f\,dN}\right]=\exp\left(\int(e^{f}-1)d\nu\right)$ を示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 592</span><span class="ttl">安定過程と自己相似性</span><span class="stars">★★★★★</span></div>
+<p class="st">$\alpha$-安定 Lévy 過程は $X_{ct}\overset{d}{=}c^{1/\alpha}X_{t}$ をみたし、逆に自己相似な Lévy 過程は安定過程に限る。$\alpha\lt2$ での裾の重さとモーメントの非存在も示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 593</span><span class="ttl">従属化（subordination）</span><span class="stars">★★★★★</span></div>
+<p class="st">増加 Lévy 過程（subordinator）による時間変更は再び Lévy 過程を与える。Bernstein 関数と完全単調性の対応（Bochner）を示し、$\frac12$-安定 subordinator による Brown 運動の従属化が Cauchy 過程になることを確かめよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 594</span><span class="ttl">Lévy 過程の経路の性質</span><span class="stars">★★★★★</span></div>
+<p class="st">有界変動 $\iff$ $\sigma=0$ かつ $\int_{|x|\le1}|x|\nu(dx)\lt\infty$。ジャンプの総和の収束、活動度（activity）の分類、および経路が a.s. 連続 $\iff$ $\nu=0$ を示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 595</span><span class="ttl">Lévy 過程の生成作用素</span><span class="stars">★★★★★</span></div>
+<p class="st">生成作用素は擬微分作用素 $Lf(x)=\int\left(f(x+y)-f(x)-\langle\nabla f(x),y\rangle\mathbf{1}_{|y|\le1}\right)\nu(dy)+b\cdot\nabla f+\frac12\operatorname{tr}(a\nabla^{2}f)$、そのシンボルが $\psi$。$\alpha$-安定過程の生成作用素が $-(-\Delta)^{\alpha/2}$ であることを示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 596</span><span class="ttl">Wiener–Hopf 分解</span><span class="stars">★★★★★</span></div>
+<p class="st">独立指数時刻での最大値と最小値の独立分解 $X_{e_{q}}=\overline{X}_{e_{q}}+(X_{e_{q}}-\overline{X}_{e_{q}})$ と、対応する特性関数の因子分解を示せ。ladder 過程と Sparre Andersen の恒等式にも触れよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 597</span><span class="ttl">Chung–Fuchs の再帰性判定</span><span class="stars">★★★★★</span></div>
+<p class="st">ランダムウォーク（および Lévy 過程）が再帰的 $\iff$ 原点近傍で $\displaystyle\int\operatorname{Re}\frac{1}{1-\varphi(\theta)}d\theta=\infty$。これを用いて $d\le2$ で単純ランダムウォークが再帰的、$d\ge3$ で過渡的であることを示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 598</span><span class="ttl">三角配列の極限と無限分解可能性</span><span class="stars">★★★★★</span></div>
+<p class="st">微小（uniformly asymptotically negligible）な独立三角配列の和の極限分布は、無限分解可能分布に限る。逆にすべての無限分解可能分布がそのような極限として現れる。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 599</span><span class="ttl">Galton–Watson 過程</span><span class="stars">★★★★★</span></div>
+<p class="st">生成関数の反復により絶滅確率が $s=f(s)$ の最小非負解であることを示し、$m\le1$（$p_{1}\neq1$）で a.s. 絶滅、$m\gt1$ で正の生存確率を導け。$W_{n}=Z_{n}/m^{n}$ がマルチンゲールであること、Kesten–Stigum の定理（$EZ\log Z\lt\infty\iff EW\gt0$）も示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 600</span><span class="ttl">Donsker–Varadhan の変分公式と基底状態エネルギー</span><span class="stars">★★★★★</span></div>
+<p class="st">$\displaystyle\lim_{t\to\infty}\frac1t\log E^{x}\left[\exp\left(\int_{0}^{t}V(B_{s})ds\right)\right]=\sup_{\nu}\left(\int V\,d\nu-I(\nu)\right)=-\inf\operatorname{spec}\left(-\tfrac12\Delta-V\right)$。
+Feynman–Kac（大問 523）・大偏差原理（大問 562）・スペクトル定理（大問 242）の三つが一点で出会う。この等式を証明し、本書 600 題を締めくくれ。</p></div>

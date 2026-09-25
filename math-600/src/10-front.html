@@ -1,0 +1,115 @@
+<div class="cover">
+  <div class="kicker">SIX HUNDRED THEOREMS</div>
+  <div class="vol">STATEMENTS ONLY</div>
+  <h1>数学 600 大問</h1>
+  <div class="rule"></div>
+  <div class="sub">複素関数論・関数解析・調和解析・確率論</div>
+  <div class="formula">$$\widehat{f*g}=\hat f\cdot\hat g$$</div>
+  <div class="meta">
+    全 600 大問 ― すべて証明問題、すべて名前のついた定理<br>
+    第 I 部 複素関数論 150 ／ 第 II 部 関数解析 150<br>
+    第 III 部 調和解析 150 ／ 第 IV 部 確率論 150<br>
+    <br>
+    難易度：★★★★☆ 229 題 ／ ★★★★★ 371 題<br>
+    <br>
+    誘導なし・解答なし
+  </div>
+</div>
+
+<h2 class="plain">はじめに</h2>
+
+<p>本書は<strong>定理の主張だけ</strong>を 600 個並べた問題集である。誘導はない。解答もない。各問は「この定理を証明せよ」という一行の要求であり、そこから先はすべて読者の仕事になる。</p>
+
+<p>収録したのはすべて<strong>名前のついた大定理</strong>である。難易度は ★★★★☆（院試の難問から専門書の標準的な定理まで。半日）と ★★★★★（専門書の山場。一題に数日）の二段階のみ ― 入門的な問題は一題も入れていない。</p>
+
+<h3 class="sec">使用許可のルール</h3>
+<p>600 題は<strong>通し番号順に一本の階段として並んでいる</strong>。番号 $n$ の問題を解くとき、</p>
+<ul class="plain">
+  <li>$1,\dots,n-1$ のすべての結果</li>
+  <li>各分野の学部標準の基礎事実（測度論・位相・線形代数・微積分）</li>
+</ul>
+<p>は自由に使ってよい。逆に、$n$ 以降の結果を使ってはならない（循環論法になる）。この一行が、誘導の代わりに「何を使ってよいか」を完全に決めている。個別の依存関係は付録 A に地図としてまとめた。</p>
+
+<h3 class="sec">詰まったときに</h3>
+<p>本書に解答はないが、付録 B に章ごとの参考書対応表を置いた。また、誘導つき・準備章つきで同じ主題を扱った姉妹編『フーリエ解析 100 大問 ― 定義から大定理まで』があり、そちらの第 0 章には本書で使う記号・定義がすべて収録されている。定義が曖昧になったらそちらへ戻ること。</p>
+<p>そして ― <strong>一題を一晩寝かせること</strong>。翌朝に解ける問題が驚くほど多くある。600 題は逃げない。</p>
+
+<h3 class="sec">記号の約束</h3>
+<table class="sym">
+  <tr><td class="k">$\mathbb{D},\ \mathbb{H},\ \mathbb{T},\ \hat{\mathbb{C}}$</td><td>単位開円板、上半平面、円周 $\mathbb{R}/2\pi\mathbb{Z}$、Riemann 球面</td></tr>
+  <tr><td class="k">$\mathcal{O}(\Omega),\ \mathcal{M}(\Omega)$</td><td>$\Omega$ 上の正則関数全体、有理型関数全体</td></tr>
+  <tr><td class="k">$\hat f(n),\ \hat f(\xi)$</td><td>$\frac{1}{2\pi}\int_{-\pi}^{\pi}fe^{-inx}dx$（$\mathbb{T}$ 上）、$\int_{\mathbb{R}^{n}}f(x)e^{-2\pi ix\xi}dx$（$\mathbb{R}^{n}$ 上）</td></tr>
+  <tr><td class="k">$S_{N},\sigma_{N},A_{r}$</td><td>部分和、Cesàro 平均、Abel 平均。$D_{N},K_{N},P_{r}$ は Dirichlet・Fejér・Poisson 核</td></tr>
+  <tr><td class="k">$f*g$</td><td>畳み込み（$\mathbb{T}$ 上は $\frac{1}{2\pi}\int$ で正規化）</td></tr>
+  <tr><td class="k">$\mathcal{S},\ \mathcal{S}',\ \mathcal{D},\ \mathcal{D}',\ \mathcal{E}'$</td><td>Schwartz 空間、緩増加超関数、試験関数、超関数、コンパクト台超関数</td></tr>
+  <tr><td class="k">$\mathcal{B}(X),\mathcal{K}(X),\mathcal{S}_{p}$</td><td>有界作用素、コンパクト作用素、Schatten $p$ クラス</td></tr>
+  <tr><td class="k">$\sigma(T),\ r(T),\ \rho(T)$</td><td>スペクトル、スペクトル半径、レゾルベント集合</td></tr>
+  <tr><td class="k">$M f$</td><td>Hardy–Littlewood の極大関数</td></tr>
+  <tr><td class="k">$X\Rightarrow Y$, a.s., a.e.</td><td>分布収束、概収束（ほとんど確実）、ほとんど至る所</td></tr>
+  <tr><td class="k">$E[\cdot\mid\mathcal{G}]$, $\langle M\rangle$</td><td>条件付き期待値、二次変分過程</td></tr>
+  <tr><td class="k">$A\lesssim B$, $A\asymp B$</td><td>$A\le CB$、$A\lesssim B$ かつ $B\lesssim A$（$C$ は本質的変数に依らない）</td></tr>
+</table>
+
+<h2 class="plain">目次</h2>
+<ul class="toc">
+  <li class="head"><span class="t">第 I 部　複素関数論</span><span class="s">1–150</span></li>
+  <li><span class="t">I-1　正則性の剛性</span><span class="s">1–12</span></li>
+  <li><span class="t">I-2　Cauchy 理論と冪級数</span><span class="s">13–25</span></li>
+  <li><span class="t">I-3　特異点・留数・有理型関数</span><span class="s">26–38</span></li>
+  <li><span class="t">I-4　偏角原理・Rouché・値分布の入口</span><span class="s">39–50</span></li>
+  <li><span class="t">I-5　最大値原理・Schwarz–Pick・双曲計量</span><span class="s">51–63</span></li>
+  <li><span class="t">I-6　等角写像と Riemann の写像定理</span><span class="s">64–76</span></li>
+  <li><span class="t">I-7　調和関数と境界挙動</span><span class="s">77–88</span></li>
+  <li><span class="t">I-8　無限積・Γ 関数・Hadamard 理論</span><span class="s">89–101</span></li>
+  <li><span class="t">I-9　正規族と複素力学系</span><span class="s">102–113</span></li>
+  <li><span class="t">I-10　解析接続と Riemann 面</span><span class="s">114–126</span></li>
+  <li><span class="t">I-11　ζ 関数と Dirichlet 級数</span><span class="s">127–138</span></li>
+  <li><span class="t">I-12　楕円関数とモジュラー形式</span><span class="s">139–150</span></li>
+
+  <li class="head"><span class="t">第 II 部　関数解析</span><span class="s">151–300</span></li>
+  <li><span class="t">II-1　Hahn–Banach の系譜</span><span class="s">151–162</span></li>
+  <li><span class="t">II-2　Baire のカテゴリーと三大定理</span><span class="s">163–174</span></li>
+  <li><span class="t">II-3　弱位相・コンパクト性・凸性</span><span class="s">175–187</span></li>
+  <li><span class="t">II-4　Hilbert 空間と有界作用素</span><span class="s">188–199</span></li>
+  <li><span class="t">II-5　コンパクト作用素と Fredholm 理論</span><span class="s">200–212</span></li>
+  <li><span class="t">II-6　Banach 環と Gelfand 理論</span><span class="s">213–225</span></li>
+  <li><span class="t">II-7　$C^{*}$-環とスペクトル定理</span><span class="s">226–238</span></li>
+  <li><span class="t">II-8　非有界作用素</span><span class="s">239–250</span></li>
+  <li><span class="t">II-9　作用素半群</span><span class="s">251–262</span></li>
+  <li><span class="t">II-10　位相ベクトル空間と超関数</span><span class="s">263–275</span></li>
+  <li><span class="t">II-11　Banach 空間の幾何</span><span class="s">276–288</span></li>
+  <li><span class="t">II-12　Schatten クラスとトレース</span><span class="s">289–300</span></li>
+
+  <li class="head"><span class="t">第 III 部　フーリエ解析・調和解析</span><span class="s">301–450</span></li>
+  <li><span class="t">III-1　Fourier 級数の収束論</span><span class="s">301–313</span></li>
+  <li><span class="t">III-2　総和法と核</span><span class="s">314–325</span></li>
+  <li><span class="t">III-3　Fourier 変換</span><span class="s">326–338</span></li>
+  <li><span class="t">III-4　補間定理</span><span class="s">339–350</span></li>
+  <li><span class="t">III-5　極大関数と微分定理</span><span class="s">351–362</span></li>
+  <li><span class="t">III-6　Calderón–Zygmund 理論</span><span class="s">363–375</span></li>
+  <li><span class="t">III-7　Littlewood–Paley 理論と関数空間</span><span class="s">376–387</span></li>
+  <li><span class="t">III-8　Hardy 空間・BMO・重み</span><span class="s">388–400</span></li>
+  <li><span class="t">III-9　Sobolev 空間と埋め込み</span><span class="s">401–412</span></li>
+  <li><span class="t">III-10　群上の調和解析</span><span class="s">413–425</span></li>
+  <li><span class="t">III-11　不確定性・標本化・時間周波数解析</span><span class="s">426–437</span></li>
+  <li><span class="t">III-12　加法的組合せ論への応用</span><span class="s">438–450</span></li>
+
+  <li class="head"><span class="t">第 IV 部　確率論</span><span class="s">451–600</span></li>
+  <li><span class="t">IV-1　独立性と 0-1 法則</span><span class="s">451–462</span></li>
+  <li><span class="t">IV-2　収束概念と大数の法則</span><span class="s">463–475</span></li>
+  <li><span class="t">IV-3　特性関数と中心極限定理</span><span class="s">476–488</span></li>
+  <li><span class="t">IV-4　条件付き期待値とマルチンゲール</span><span class="s">489–501</span></li>
+  <li><span class="t">IV-5　Brown 運動</span><span class="s">502–513</span></li>
+  <li><span class="t">IV-6　確率積分と伊藤解析</span><span class="s">514–526</span></li>
+  <li><span class="t">IV-7　確率微分方程式</span><span class="s">527–538</span></li>
+  <li><span class="t">IV-8　Markov 過程</span><span class="s">539–550</span></li>
+  <li><span class="t">IV-9　大偏差原理</span><span class="s">551–562</span></li>
+  <li><span class="t">IV-10　エルゴード理論</span><span class="s">563–575</span></li>
+  <li><span class="t">IV-11　集中不等式とランダム行列</span><span class="s">576–588</span></li>
+  <li><span class="t">IV-12　Lévy 過程と結び</span><span class="s">589–600</span></li>
+
+  <li class="head"><span class="t">付録</span><span class="s"></span></li>
+  <li><span class="t">付録 A　分野横断の地図</span><span class="s"></span></li>
+  <li><span class="t">付録 B　参考書対応表</span><span class="s"></span></li>
+  <li><span class="t">付録 C　定理名索引（全 600 題）</span><span class="s"></span></li>
+</ul>

@@ -1,0 +1,168 @@
+<!-- 大問 51-101 -->
+<h3 class="ch">I-5　最大値原理・Schwarz–Pick・双曲計量<span class="rg">51–63</span></h3>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 51</span><span class="ttl">Schwarz の補題</span><span class="stars">★★★★☆</span></div>
+<p class="st">$f:\mathbb{D}\to\mathbb{D}$ 正則、$f(0)=\cdots=f^{(k-1)}(0)=0$ ならば $|f(z)|\le|z|^{k}$ かつ $|f^{(k)}(0)|\le k!$。どちらかで等号が一点でも成立すれば $f(z)=cz^{k}$（$|c|=1$）。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 52</span><span class="ttl">Schwarz–Pick の定理</span><span class="stars">★★★★☆</span></div>
+<p class="st">$f:\mathbb{D}\to\mathbb{D}$ 正則ならば
+$\left|\dfrac{f(z_{1})-f(z_{2})}{1-\overline{f(z_{2})}f(z_{1})}\right|\le\left|\dfrac{z_{1}-z_{2}}{1-\overline{z_{2}}z_{1}}\right|$、$\dfrac{|f'(z)|}{1-|f(z)|^{2}}\le\dfrac{1}{1-|z|^{2}}$。等号成立は $f\in\operatorname{Aut}(\mathbb{D})$ のときに限る。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 53</span><span class="ttl">$\operatorname{Aut}(\mathbb{D})$, $\operatorname{Aut}(\mathbb{H})$, $\operatorname{Aut}(\mathbb{C})$, $\operatorname{Aut}(\hat{\mathbb{C}})$ の決定</span><span class="stars">★★★★☆</span></div>
+<p class="st">単位円板の等角自己同型は $e^{i\alpha}\frac{z-a}{1-\bar az}$ に限る。同様に $\mathbb{H}$ は $\mathrm{PSL}(2,\mathbb{R})$、$\mathbb{C}$ は $az+b$、$\hat{\mathbb{C}}$ は $\mathrm{PSL}(2,\mathbb{C})$ で尽くされる。$\mathbb{D}$ の自己写像が相異なる 2 不動点をもてば恒等写像であることも示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 54</span><span class="ttl">Poincaré 計量と距離減少原理</span><span class="stars">★★★★★</span></div>
+<p class="st">$\lambda_{\mathbb{D}}(z)|dz|=\frac{2|dz|}{1-|z|^{2}}$ は曲率 $-1$ の完備計量で、その等長群は $\operatorname{Aut}(\mathbb{D})$ に一致する。任意の正則写像 $f:\mathbb{D}\to\mathbb{D}$ は双曲距離を縮める。Schwarz–Pick がこの事実の解析的表現であることを示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 55</span><span class="ttl">Ahlfors–Schwarz の補題</span><span class="stars">★★★★★</span></div>
+<p class="st">$\Omega$ 上の共形計量 $\rho|dz|$ の曲率が $\le-1$ ならば、任意の正則写像 $f:\mathbb{D}\to\Omega$ に対し $f^{*}\rho\le\lambda_{\mathbb{D}}$。系として双曲的 Riemann 面への正則写像の距離減少性と、Liouville 型定理を導け。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 56</span><span class="ttl">Hadamard の三円定理</span><span class="stars">★★★★☆</span></div>
+<p class="st">$M(r)=\max_{|z|=r}|f|$ とすると $\log M(r)$ は $\log r$ の凸関数。すなわち $r_{1}\lt r\lt r_{2}$ で
+$\log M(r)\le\frac{\log(r_{2}/r)}{\log(r_{2}/r_{1})}\log M(r_{1})+\frac{\log(r/r_{1})}{\log(r_{2}/r_{1})}\log M(r_{2})$。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 57</span><span class="ttl">Hadamard の三直線定理</span><span class="stars">★★★★☆</span></div>
+<p class="st">帯 $0\le\operatorname{Re}z\le1$ で有界正則な $f$ について $M(x)=\sup_{y}|f(x+iy)|$ は $\log M$ が $x$ の凸関数。これが Riesz–Thorin の補間定理（大問 339）の心臓部であることを確認せよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 58</span><span class="ttl">Phragmén–Lindelöf の原理（扇形）</span><span class="stars">★★★★★</span></div>
+<p class="st">$S=\{|\arg z|\lt\frac{\pi}{2\beta}\}$（$\beta\gt1/2$）で正則、$\overline S$ で連続、$\partial S$ 上 $|f|\le M$、かつある $\rho\lt\beta$ で $|f(z)|\le Ce^{|z|^{\rho}}$ ならば $S$ 全体で $|f|\le M$。$\rho=\beta$ では偽であることを示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 59</span><span class="ttl">Phragmén–Lindelöf の原理（帯状領域）</span><span class="stars">★★★★★</span></div>
+<p class="st">帯 $|\operatorname{Im}z|\lt\pi/2$ で正則、境界で $|f|\le M$、かつ $|f(z)|\le C\exp(e^{\gamma|\operatorname{Re}z|})$（$\gamma\lt1$）ならば帯全体で $|f|\le M$。$\gamma=1$ での反例を構成せよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 60</span><span class="ttl">Lindelöf の定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$f$ が $\mathbb{D}$ で有界正則、ある境界点 $\zeta$ に終わる曲線に沿って $f(z)\to L$ ならば、$f$ は $\zeta$ で非接極限 $L$ をもつ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 61</span><span class="ttl">Carathéodory–Herglotz の係数評価</span><span class="stars">★★★★☆</span></div>
+<p class="st">$f(z)=1+\sum_{n\ge1}a_{n}z^{n}$ が $\mathbb{D}$ で正則、$\operatorname{Re}f\gt0$ ならば $|a_{n}|\le2$。等号成立関数をすべて決定せよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 62</span><span class="ttl">Nevanlinna–Pick の補間定理</span><span class="stars">★★★★★</span></div>
+<p class="st">相異なる $z_{1},\dots,z_{n}\in\mathbb{D}$ と $w_{1},\dots,w_{n}\in\mathbb{D}$ に対し、$f:\mathbb{D}\to\overline{\mathbb{D}}$ 正則で $f(z_{j})=w_{j}$ となるものが存在する $\iff$ Pick 行列 $\left[\frac{1-w_{j}\overline{w_{k}}}{1-z_{j}\overline{z_{k}}}\right]_{j,k}$ が半正定値。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 63</span><span class="ttl">Julia–Carathéodory の定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$f:\mathbb{D}\to\mathbb{D}$ 正則、$\zeta\in\partial\mathbb{D}$ とする。$\displaystyle\liminf_{z\to\zeta}\frac{1-|f(z)|}{1-|z|}=\alpha\lt\infty$ ならば、$f$ は $\zeta$ で非接極限 $\eta\in\partial\mathbb{D}$ をもち、角微分 $f'(\zeta)=\alpha\eta/\zeta$ が非接的に存在する。</p></div>
+
+<h3 class="ch">I-6　等角写像と Riemann の写像定理<span class="rg">64–76</span></h3>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 64</span><span class="ttl">Möbius 変換の分類</span><span class="stars">★★★★☆</span></div>
+<p class="st">Möbius 変換は円円対応・等角・非調和比を保ち、$\hat{\mathbb{C}}$ の等角自己同型をすべて与える。トレースによる分類（楕円型・放物型・双曲型・斜航型）と、不動点・共役類の対応を示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 65</span><span class="ttl">Riemann の写像定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$\Omega\subsetneq\mathbb{C}$ を単連結領域、$z_{0}\in\Omega$ とすると、等角同型 $f:\Omega\to\mathbb{D}$ で $f(z_{0})=0$, $f'(z_{0})\gt0$ なるものがただ一つ存在する。Montel の定理・Koebe の平方根トリック・極値問題による証明を完成させよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 66</span><span class="ttl">Carathéodory の境界対応定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$\Omega$ を Jordan 領域とすると、Riemann 写像 $f:\mathbb{D}\to\Omega$ は $\overline{\mathbb{D}}\to\overline{\Omega}$ の同相写像に延長される。逆に延長可能なら $\partial\Omega$ は Jordan 曲線。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 67</span><span class="ttl">Schwarz–Christoffel の公式</span><span class="stars">★★★★★</span></div>
+<p class="st">内角 $\pi\alpha_{k}$（$\sum(\alpha_{k}-1)=-2$）の多角形 $P$ への Riemann 写像は
+$f(z)=C\int^{z}\prod_{k}(\zeta-x_{k})^{\alpha_{k}-1}d\zeta+C'$ の形に書ける。逆に、この形の写像が多角形の内部を覆うことを示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 68</span><span class="ttl">面積定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$g(z)=z+b_{0}+\sum_{n\ge1}b_{n}z^{-n}$ が $|z|\gt1$ で単射正則ならば $\sum_{n\ge1}n|b_{n}|^{2}\le1$。等号成立は像の補集合が測度 $0$ のときに限る。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 69</span><span class="ttl">Bieberbach の定理 $|a_{2}|\le2$</span><span class="stars">★★★★★</span></div>
+<p class="st">$\mathcal{S}=\{f(z)=z+a_{2}z^{2}+\cdots:\mathbb{D}\to\mathbb{C}\ \text{単射正則}\}$ に対し $|a_{2}|\le2$。等号は Koebe 関数 $k(z)=z/(1-z)^{2}$ の回転に限る。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 70</span><span class="ttl">Koebe の $1/4$ 定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$f\in\mathcal{S}$ ならば $f(\mathbb{D})\supset\mathbb{D}(0,1/4)$。定数 $1/4$ は Koebe 関数で達成され改善できない。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 71</span><span class="ttl">歪曲定理と増大度定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$f\in\mathcal{S}$, $|z|=r\lt1$ に対し
+$\dfrac{1-r}{(1+r)^{3}}\le|f'(z)|\le\dfrac{1+r}{(1-r)^{3}}$, $\dfrac{r}{(1+r)^{2}}\le|f(z)|\le\dfrac{r}{(1-r)^{2}}$。等号は Koebe 関数の回転に限る。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 72</span><span class="ttl">Löwner の方法と $|a_{3}|\le3$</span><span class="stars">★★★★★</span></div>
+<p class="st">スリット写像に対する Löwner の微分方程式 $\partial_{t}f=z\frac{\kappa(t)+z}{\kappa(t)-z}\partial_{z}f$ を導き、これを用いて $f\in\mathcal{S}$ に対し $|a_{3}|\le3$ を示せ。Bieberbach 予想 $|a_{n}|\le n$（de Branges, 1985）の位置づけも述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 73</span><span class="ttl">Carathéodory の核収束定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$f_{n}\in\mathcal{S}$ が $f$ に広義一様収束する $\iff$ 領域列 $\Omega_{n}=f_{n}(\mathbb{D})$ が $\Omega=f(\mathbb{D})$ に核の意味で収束する。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 74</span><span class="ttl">一意化定理</span><span class="stars">★★★★★</span></div>
+<p class="st">任意の単連結 Riemann 面は $\hat{\mathbb{C}}$, $\mathbb{C}$, $\mathbb{D}$ のいずれかに双正則同値である。系として、任意の Riemann 面がこれら 3 つのいずれかを普遍被覆にもつことを導け。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 75</span><span class="ttl">円環の等角不変量（modulus）</span><span class="stars">★★★★★</span></div>
+<p class="st">円環 $A(r,R)=\{r\lt|z|\lt R\}$ と $A(r',R')$ が等角同値 $\iff R/r=R'/r'$。すなわち二重連結領域の等角類は実 1 径数族をなす。Grötzsch の議論（面積・長さ法）で示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 76</span><span class="ttl">極値長（extremal length）</span><span class="stars">★★★★★</span></div>
+<p class="st">曲線族 $\Gamma$ の極値長 $\lambda(\Gamma)$ を定義し、等角不変性・直列則・並列則を示せ。応用として円環の modulus を極値長で特徴づけ、Grötzsch の極値問題を解け。</p></div>
+
+<h3 class="ch">I-7　調和関数と境界挙動<span class="rg">77–88</span></h3>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 77</span><span class="ttl">平均値性質と調和性の同値</span><span class="stars">★★★★☆</span></div>
+<p class="st">領域上の連続関数が局所的に球面平均値性質をみたす $\iff$ 調和。系として調和関数は $C^{\infty}$（実解析的）であり、広義一様収束極限も調和であること（Harnack の第一定理）を示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 78</span><span class="ttl">Poisson 積分と円板の Dirichlet 問題</span><span class="stars">★★★★☆</span></div>
+<p class="st">$\partial\mathbb{D}$ 上の連続関数 $g$ に対し $u=P[g]$ は $\mathbb{D}$ で調和、$\overline{\mathbb{D}}$ で連続、境界値 $g$ をもち、そのような $u$ は一意。$g\in L^{1}$、$g$ が測度の場合の拡張も述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 79</span><span class="ttl">Harnack の不等式と Harnack の原理</span><span class="stars">★★★★☆</span></div>
+<p class="st">$u\ge0$ が $\mathbb{D}$ で調和なら $\frac{1-r}{1+r}u(0)\le u(re^{i\theta})\le\frac{1+r}{1-r}u(0)$。増大列 $u_{1}\le u_{2}\le\cdots$ の極限は恒等的に $+\infty$ か調和関数（Harnack の原理）。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 80</span><span class="ttl">Herglotz の表現定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$u\ge0$ が $\mathbb{D}$ で調和 $\iff$ $\partial\mathbb{D}$ 上の有限正測度 $\mu$ が存在して $u=P[\mu]$。$\mu$ は一意。系として $\operatorname{Re}f\gt0$ なる正則関数の積分表示を導け。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 81</span><span class="ttl">Fatou の定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$\mu$ を $\partial\mathbb{D}$ 上の有限測度とすると、$P[\mu]$ は a.e. の境界点で非接極限をもち、その値は $\mu$ の Lebesgue 分解の絶対連続部分の密度に一致する。とくに有界正則関数は a.e. 非接境界値をもつ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 82</span><span class="ttl">Perron の方法と barrier</span><span class="stars">★★★★★</span></div>
+<p class="st">有界領域 $\Omega$ と $g\in C(\partial\Omega)$ に対し、Perron 族の上限 $u$ は調和である。境界点 $\zeta$ に barrier が存在すれば $u(z)\to g(\zeta)$。したがって $\partial\Omega$ の各点に barrier があれば Dirichlet 問題は可解。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 83</span><span class="ttl">調和測度と二定数定理</span><span class="stars">★★★★★</span></div>
+<p class="st">調和測度 $\omega(z,E,\Omega)$ を定義し、等角不変性を示せ。$f$ が $\Omega$ で正則、$|f|\le M$、$\partial\Omega$ の部分 $E$ 上で $|f|\le m$ ならば $|f(z)|\le m^{\omega(z,E)}M^{1-\omega(z,E)}$（二定数定理）。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 84</span><span class="ttl">Hopf の境界点補題</span><span class="stars">★★★★☆</span></div>
+<p class="st">$u$ が球 $B$ で調和、$u\lt u(\zeta)$（$\zeta\in\partial B$）が内部で成り立つなら、外向き法線微分は $\partial_{\nu}u(\zeta)\gt0$（存在すれば）。系として強最大値原理を導け。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 85</span><span class="ttl">Bôcher の定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$u$ が $0\lt|z|\lt r$ で正の調和関数ならば、$c\ge0$ と $\{|z|\lt r\}$ 上の調和関数 $h$ が存在して $u(z)=c\log\frac{1}{|z|}+h(z)$（$n\ge3$ では $c|x|^{2-n}+h$）。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 86</span><span class="ttl">調和関数の反射原理</span><span class="stars">★★★★☆</span></div>
+<p class="st">$u$ が $\Omega\cap\mathbb{H}$ で調和、$\Omega\cap\mathbb{R}$ 上で連続かつ $0$ ならば、奇拡張 $u(x,-y)=-u(x,y)$ は $\Omega$ で調和。正則関数版（大問 22）との関係を述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 87</span><span class="ttl">調和関数の Liouville 定理</span><span class="stars">★★★★☆</span></div>
+<p class="st">$\mathbb{R}^{n}$ 全体で調和かつ片側有界（例えば $u\ge0$）な関数は定数。さらに $u(x)=O(|x|^{k})$ ならば $u$ は次数 $k$ 以下の調和多項式であることを示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 88</span><span class="ttl">劣調和関数と Riesz の分解定理</span><span class="stars">★★★★★</span></div>
+<p class="st">劣調和関数の定義（上半連続＋劣平均値性）から最大値原理を導き、$u$ が領域 $\Omega$ で劣調和なら、$\Omega'\Subset\Omega$ 上で $u=-G\mu+h$（$\mu=\frac{1}{2\pi}\Delta u\ge0$ は Riesz 測度、$h$ は調和）と分解されることを示せ。</p></div>
+
+<h3 class="ch">I-8　無限積・Γ 関数・Hadamard 理論<span class="rg">89–101</span></h3>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 89</span><span class="ttl">無限積の収束定理</span><span class="stars">★★★★☆</span></div>
+<p class="st">$\sum|u_{n}|$ が広義一様収束すれば $\prod(1+u_{n})$ は正則関数に広義一様収束し、その零点は各因子の零点に一致する。さらに $P'/P=\sum u_{n}'/(1+u_{n})$。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 90</span><span class="ttl">$\sin$ の積表示と Wallis の公式</span><span class="stars">★★★★☆</span></div>
+<p class="st">$\sin\pi z=\pi z\prod_{n\ge1}\left(1-\frac{z^{2}}{n^{2}}\right)$。大問 34 の部分分数展開から積分して導き、$z=1/2$ から Wallis の公式を得よ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 91</span><span class="ttl">Γ 関数の Weierstrass 積</span><span class="stars">★★★★☆</span></div>
+<p class="st">$\frac{1}{\Gamma(z)}=ze^{\gamma z}\prod_{n\ge1}(1+\frac zn)e^{-z/n}$ は整関数で、零点は $0,-1,-2,\dots$（すべて 1 位）。$\Gamma(z+1)=z\Gamma(z)$、$\Gamma(n+1)=n!$、$\operatorname{Re}z\gt0$ での積分表示との一致を示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 92</span><span class="ttl">相反公式</span><span class="stars">★★★★☆</span></div>
+<p class="st">$\Gamma(z)\Gamma(1-z)=\dfrac{\pi}{\sin\pi z}$。系として $\Gamma(1/2)=\sqrt\pi$、および $\Gamma$ が零点をもたないことを示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 93</span><span class="ttl">Gauss の乗法公式</span><span class="stars">★★★★★</span></div>
+<p class="st">$\displaystyle\prod_{k=0}^{n-1}\Gamma\!\left(z+\frac kn\right)=(2\pi)^{\frac{n-1}{2}}n^{\frac12-nz}\Gamma(nz)$。$n=2$ が Legendre の倍数公式であることを確かめよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 94</span><span class="ttl">Stirling の公式（複素版・Binet）</span><span class="stars">★★★★★</span></div>
+<p class="st">$|\arg z|\lt\pi-\delta$ において
+$\log\Gamma(z)=\left(z-\tfrac12\right)\log z-z+\tfrac12\log2\pi+\displaystyle\int_{0}^{\infty}\frac{2\arctan(t/z)}{e^{2\pi t}-1}dt$ を示し、漸近展開 $\log\Gamma(z)\sim(z-\frac12)\log z-z+\frac12\log2\pi+\sum\frac{B_{2n}}{2n(2n-1)z^{2n-1}}$ を導け。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 95</span><span class="ttl">Bohr–Mollerup の定理</span><span class="stars">★★★★☆</span></div>
+<p class="st">$f:(0,\infty)\to(0,\infty)$ が $f(1)=1$、$f(x+1)=xf(x)$、$\log f$ が凸をみたせば $f=\Gamma$。すなわち Γ はこの 3 条件で一意に特徴づけられる。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 96</span><span class="ttl">整関数の位数と型</span><span class="stars">★★★★☆</span></div>
+<p class="st">位数 $\rho=\limsup\frac{\log\log M(r)}{\log r}$、型 $\sigma=\limsup\frac{\log M(r)}{r^{\rho}}$ を Taylor 係数で表す公式
+$\rho=\limsup\frac{n\log n}{\log(1/|a_{n}|)}$, $(\sigma e\rho)^{1/\rho}=\limsup n^{1/\rho}|a_{n}|^{1/n}$ を示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 97</span><span class="ttl">零点の収束指数</span><span class="stars">★★★★★</span></div>
+<p class="st">位数 $\rho$ の整関数の零点 $\{a_{n}\}$ について $n(r)=O(r^{\rho+\varepsilon})$ かつ $\sum|a_{n}|^{-(\rho+\varepsilon)}\lt\infty$。Jensen の公式（大問 37）から導け。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 98</span><span class="ttl">Hadamard の因数分解定理</span><span class="stars">★★★★★</span></div>
+<p class="st">位数 $\rho$ の整関数は $f(z)=z^{m}e^{P(z)}\prod_{n}E_{p}(z/a_{n})$（$p=\lfloor\rho\rfloor$, $\deg P\le\rho$）と表される。$f'/f$ の評価が要となる箇所を明示して証明せよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 99</span><span class="ttl">Borel の定理</span><span class="stars">★★★★★</span></div>
+<p class="st">有限位数 $\rho$ の整関数について、$\rho=\max(\deg P,\ \text{零点の収束指数})$。とくに $\rho\notin\mathbb{Z}$ ならば零点は無限個あり、その収束指数は $\rho$ に等しい。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 100</span><span class="ttl">有限位数の Picard 定理</span><span class="stars">★★★★★</span></div>
+<p class="st">有限位数の非定数整関数は、高々 1 つの例外を除いてすべての値を無限回とる。Hadamard の因数分解（大問 98）のみを用い、Bloch・Schottky を経由せずに示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 101</span><span class="ttl">Γ の Hankel 表示</span><span class="stars">★★★★☆</span></div>
+<p class="st">Hankel 経路 $H$（$+\infty$ から原点を回って $+\infty$ へ）を用いて
+$\dfrac{1}{\Gamma(z)}=\dfrac{1}{2\pi i}\displaystyle\int_{H}e^{t}t^{-z}dt$ を示し、これが $\mathbb{C}$ 全体で整関数を与えることを確かめよ。</p></div>

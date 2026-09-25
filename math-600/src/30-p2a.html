@@ -1,0 +1,160 @@
+<!-- 大問 151-199 -->
+<div class="partbox">
+<h2 class="part" style="break-before:auto">第 II 部　関数解析<span class="en">FUNCTIONAL ANALYSIS &mdash; 151 to 300</span></h2>
+<p class="part-lead">無限次元では「有界閉集合はコンパクト」が壊れる。その代償として現れたのが、Hahn–Banach（拡張）と Baire（完備性）という二本の柱、そして弱位相という新しい幾何である。最後はスペクトル定理と作用素環まで登る。</p>
+</div>
+
+<h3 class="ch">II-1　Hahn–Banach の系譜<span class="rg">151–162</span></h3>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 151</span><span class="ttl">Hahn–Banach の拡張定理</span><span class="stars">★★★★☆</span></div>
+<p class="st">実ベクトル空間 $X$ 上の劣線形汎関数 $p$ と、部分空間 $M$ 上の線形汎関数 $f\le p$ に対し、$X$ 全体への線形拡張 $F\le p$ が存在する。Zorn の補題による証明を完成させ、拡張の一意性が一般には成り立たないことを示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 152</span><span class="ttl">複素版とノルム保存拡張</span><span class="stars">★★★★☆</span></div>
+<p class="st">複素ノルム空間の部分空間上の有界線形汎関数は、ノルムを保って全体に拡張できる（Bohnenblust–Sobczyk）。系として、各 $x\neq0$ に $\|f\|=1$, $f(x)=\|x\|$ なる $f\in X^{*}$ が存在し、$X^{*}$ は $X$ の点を分離する。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 153</span><span class="ttl">凸集合の分離定理</span><span class="stars">★★★★☆</span></div>
+<p class="st">位相ベクトル空間において、交わらない凸集合 $A$（開）と $B$ は超平面で分離できる。局所凸空間では $A$ コンパクト凸・$B$ 閉凸のとき狭義分離できる。Minkowski 汎関数を用いて Hahn–Banach に帰着させよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 154</span><span class="ttl">自然埋め込みと反射性の定義</span><span class="stars">★★★★☆</span></div>
+<p class="st">$J:X\to X^{**}$, $J(x)(f)=f(x)$ は等長線形埋め込み。$J$ が全射のとき $X$ を反射的という。$X^{**}$ は $X$ の完備化を含むこと、および「$X^{*}$ が可分なら $X$ も可分」（逆は偽）を示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 155</span><span class="ttl">部分空間・商空間の双対</span><span class="stars">★★★★☆</span></div>
+<p class="st">$M\subset X$ を閉部分空間とすると $M^{*}\cong X^{*}/M^{\perp}$、$(X/M)^{*}\cong M^{\perp}$（等長）。これを用いて、$M$ と $X/M$ が反射的なら $X$ も反射的であることを示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 156</span><span class="ttl">Banach 極限</span><span class="stars">★★★★☆</span></div>
+<p class="st">$\ell^{\infty}$ 上に、正値・シフト不変・収束列上では通常の極限に一致する線形汎関数（Banach 極限）が存在する。$\liminf a_{n}\le L(a)\le\limsup a_{n}$ も示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 157</span><span class="ttl">$(\ell^{\infty})^{*}$ と有限加法的測度</span><span class="stars">★★★★★</span></div>
+<p class="st">$(\ell^{\infty})^{*}$ は $\mathbb{N}$ 上の有界な有限加法的符号付き測度全体と等長同型。とくに $(\ell^{\infty})^{*}\neq\ell^{1}$ であり、$c_{0}$ は $\ell^{\infty}$ に補空間をもたない（Phillips の補題）。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 158</span><span class="ttl">Riesz–Markov–角谷の表現定理</span><span class="stars">★★★★★</span></div>
+<p class="st">局所コンパクト Hausdorff 空間 $X$ 上の正線形汎関数 $\Lambda:C_{c}(X)\to\mathbb{C}$ に対し、$\Lambda f=\int f\,d\mu$ なる Radon 測度 $\mu$ がただ一つ存在する。$C_{0}(X)^{*}$ が有限 Radon 測度全体に等長同型であることも示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 159</span><span class="ttl">古典的双対の決定</span><span class="stars">★★★★☆</span></div>
+<p class="st">$c_{0}^{*}\cong\ell^{1}$、$(\ell^{1})^{*}\cong\ell^{\infty}$、$(L^{p})^{*}\cong L^{q}$（$1\le p\lt\infty$、$\sigma$-有限）を示し、$(L^{\infty})^{*}\supsetneq L^{1}$ を示せ。$\ell^{1}$ と $c_{0}$ が反射的でないことも結論せよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 160</span><span class="ttl">双対が自明になる空間</span><span class="stars">★★★★★</span></div>
+<p class="st">$0\lt p\lt1$ のとき $L^{p}[0,1]$（距離 $d(f,g)=\int|f-g|^{p}$）は完備距離ベクトル空間だが、連続線形汎関数は $0$ のみである。したがって局所凸性なしには Hahn–Banach はまったく成り立たない。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 161</span><span class="ttl">正線形汎関数の拡張（M. Riesz）</span><span class="stars">★★★★☆</span></div>
+<p class="st">順序ベクトル空間 $X$ と、正錐と交わる部分空間 $M$ 上の正線形汎関数は、$X$ 全体の正線形汎関数に拡張できる。Hahn–Banach の順序版としての位置づけを述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 162</span><span class="ttl">Minkowski 汎関数と凸体</span><span class="stars">★★★★☆</span></div>
+<p class="st">吸収凸集合 $C$ の Minkowski 汎関数 $p_{C}(x)=\inf\{t\gt0:x/t\in C\}$ は劣線形で、$C$ が開凸なら $C=\{p_{C}\lt1\}$。局所凸空間の位相が半ノルム族で定まることと合わせて、凸幾何と双対性の対応を整理せよ。</p></div>
+
+<h3 class="ch">II-2　Baire のカテゴリーと三大定理<span class="rg">163–174</span></h3>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 163</span><span class="ttl">Baire のカテゴリー定理</span><span class="stars">★★★★☆</span></div>
+<p class="st">完備距離空間（および局所コンパクト Hausdorff 空間）において、可算個の稠密開集合の共通部分は稠密。同値な「第二類性」の言い換えも与えよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 164</span><span class="ttl">一様有界性原理</span><span class="stars">★★★★☆</span></div>
+<p class="st">Banach 空間 $X$ 上の有界作用素族 $\{T_{\alpha}\}$ が各点有界ならばノルム有界。系（共鳴定理）：$\sup\|T_{\alpha}\|=\infty$ なら $\sup\|T_{\alpha}x\|=\infty$ となる $x$ が稠密な $G_{\delta}$ をなす。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 165</span><span class="ttl">開写像定理</span><span class="stars">★★★★☆</span></div>
+<p class="st">Banach 空間の間の全射有界線形作用素は開写像。系として全単射なら逆も有界（逆写像定理）、および同じ空間上の 2 つの完備ノルムが比較可能なら同値であることを示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 166</span><span class="ttl">閉グラフ定理</span><span class="stars">★★★★☆</span></div>
+<p class="st">Banach 空間の間の線形作用素は、グラフが閉ならば有界。完備性が両側で必要であることを反例で示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 167</span><span class="ttl">Banach の閉値域定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$T\in\mathcal{B}(X,Y)$ について次は同値：$R(T)$ が閉、$R(T^{*})$ が閉、$R(T)=N(T^{*})^{\perp}$、$R(T^{*})={}^{\perp}N(T)$。また $T$ が下から有界 $\iff$ $T$ 単射かつ $R(T)$ 閉。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 168</span><span class="ttl">Hellinger–Toeplitz の定理</span><span class="stars">★★★★☆</span></div>
+<p class="st">Hilbert 空間全体で定義された対称作用素（$\langle Tx,y\rangle=\langle x,Ty\rangle$）は有界である。したがって非有界な自己共役作用素は、定義域を真部分空間にとらざるを得ない。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 169</span><span class="ttl">連続関数の Fourier 級数の発散</span><span class="stars">★★★★☆</span></div>
+<p class="st">$\|S_{N}\|_{C(\mathbb{T})\to\mathbb{C}}=L_{N}\to\infty$（Lebesgue 定数）から、$S_{N}f(0)$ が発散する $f\in C(\mathbb{T})$ が存在し、そのような $f$ が稠密な $G_{\delta}$ をなすことを示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 170</span><span class="ttl">至る所微分不可能な連続関数の遍在</span><span class="stars">★★★★☆</span></div>
+<p class="st">$C[0,1]$ において、どの点でも微分不可能な関数の全体は稠密な $G_{\delta}$ である。Weierstrass の具体例と Baire による存在証明を対比せよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 171</span><span class="ttl">完備ノルムの一意性</span><span class="stars">★★★★☆</span></div>
+<p class="st">同一のベクトル空間上の 2 つの完備ノルムについて、一方が他方より弱い（$\|x\|_{1}\le C\|x\|_{2}$）ならば同値。系：無限次元 Banach 空間には同値でない完備でないノルムが存在する。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 172</span><span class="ttl">Osgood の定理と第一類の Baire 関数</span><span class="stars">★★★★☆</span></div>
+<p class="st">連続関数列の各点収束極限（第一類 Baire 関数）の連続点は稠密な $G_{\delta}$ をなす。したがって Dirichlet 関数は連続関数列の各点極限ではない。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 173</span><span class="ttl">Banach の不動点定理と Picard–Lindelöf</span><span class="stars">★★★★☆</span></div>
+<p class="st">完備距離空間上の縮小写像は一意な不動点をもつ。応用として、Lipschitz 条件下での常微分方程式の解の一意存在（Picard–Lindelöf）と、Fredholm 型積分方程式の Neumann 級数解を導け。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 174</span><span class="ttl">無限次元 Banach 空間の Hamel 基底</span><span class="stars">★★★★☆</span></div>
+<p class="st">無限次元 Banach 空間の Hamel 基底（代数的基底）は非可算である。Baire の定理から示し、したがって「可算基底をもつ無限次元 Banach 空間は存在しない」ことを結論せよ。</p></div>
+
+<h3 class="ch">II-3　弱位相・コンパクト性・凸性<span class="rg">175–187</span></h3>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 175</span><span class="ttl">弱位相と弱*位相</span><span class="stars">★★★★☆</span></div>
+<p class="st">$\sigma(X,X^{*})$ と $\sigma(X^{*},X)$ を定義し、無限次元では弱位相が距離化不可能であること、しかし有界集合上では $X^{*}$ が可分なら弱*位相が距離化可能であることを示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 176</span><span class="ttl">Banach–Alaoglu の定理</span><span class="stars">★★★★☆</span></div>
+<p class="st">$X^{*}$ の閉単位球は弱*コンパクト。Tychonoff の定理から示し、$X$ 可分のときは対角線論法による列コンパクト性の証明も与えよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 177</span><span class="ttl">Goldstine の定理</span><span class="stars">★★★★☆</span></div>
+<p class="st">$J(B_{X})$ は $B_{X^{**}}$ において弱*稠密。系として、$X$ が反射的 $\iff$ $B_{X}$ が弱コンパクト。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 178</span><span class="ttl">反射性の特徴づけと James の定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$X$ 反射的 $\iff$ $B_{X}$ 弱コンパクト $\iff$ $X^{*}$ 反射的。さらに James の定理（$X$ 反射的 $\iff$ 任意の $f\in X^{*}$ がノルムを達成する）を述べ、$c_{0},\ell^{1},\ell^{\infty},C[0,1]$ が反射的でないことを確かめよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 179</span><span class="ttl">Eberlein–Šmulian の定理</span><span class="stars">★★★★★</span></div>
+<p class="st">Banach 空間の部分集合について、弱コンパクト・弱点列コンパクト・弱可算コンパクトは同値。弱位相が距離化不可能でも列で判定できるという、非自明な事実である。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 180</span><span class="ttl">Mazur の定理</span><span class="stars">★★★★☆</span></div>
+<p class="st">凸集合について弱閉と（ノルム）閉は一致する。系：$x_{n}\rightharpoonup x$ ならば $x$ は $\{x_{n}\}$ の凸結合のノルム極限であり、$\|x\|\le\liminf\|x_{n}\|$。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 181</span><span class="ttl">Krein–Milman の定理</span><span class="stars">★★★★★</span></div>
+<p class="st">局所凸空間の空でないコンパクト凸集合は、その端点集合の閉凸包に等しい。とくに端点は存在する。応用として、$C[0,1]$ の単位球の端点を決定し、$c_{0}$ の単位球が端点をもたないことから $c_{0}$ が双対空間でないことを示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 182</span><span class="ttl">Milman の逆定理</span><span class="stars">★★★★★</span></div>
+<p class="st">コンパクト集合 $K$ の閉凸包 $C=\overline{\operatorname{co}}(K)$ がコンパクトならば、$C$ の端点はすべて $K$ に属する。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 183</span><span class="ttl">Choquet の表現定理</span><span class="stars">★★★★★</span></div>
+<p class="st">可分距離化可能なコンパクト凸集合 $K$ の各点は、端点集合上の確率測度の重心として表される。Krein–Milman の「積分版」であることを示し、Bernstein の完全単調関数の表現定理を系として導け。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 184</span><span class="ttl">Schauder の不動点定理</span><span class="stars">★★★★★</span></div>
+<p class="st">Banach 空間のコンパクト凸集合 $K$ 上の連続写像 $f:K\to K$ は不動点をもつ。Brouwer の定理から有限次元近似で導き、応用として Peano の存在定理（連続な右辺の ODE の解の存在）を示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 185</span><span class="ttl">Markov–角谷の不動点定理</span><span class="stars">★★★★★</span></div>
+<p class="st">コンパクト凸集合上の可換なアフィン連続写像族は共通の不動点をもつ。応用として、可換群（より一般に従順群）の上に不変平均が存在することを示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 186</span><span class="ttl">Krein–Šmulian の定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$X$ が Banach 空間のとき、$X^{*}$ の凸集合 $C$ が弱*閉である $\iff$ 任意の $r\gt0$ について $C\cap rB_{X^{*}}$ が弱*閉。系として、弱*連続な汎関数の判定法を得よ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 187</span><span class="ttl">Dunford–Pettis の定理</span><span class="stars">★★★★★</span></div>
+<p class="st">有限測度空間上で、$\mathcal{F}\subset L^{1}$ が相対弱コンパクト $\iff$ 一様可積分。応用として Vitali の収束定理と、$L^{1}$ が弱点列完備であることを示せ。</p></div>
+
+<h3 class="ch">II-4　Hilbert 空間と有界作用素<span class="rg">188–199</span></h3>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 188</span><span class="ttl">射影定理と直交分解</span><span class="stars">★★★★☆</span></div>
+<p class="st">Hilbert 空間の閉凸集合への最近点は一意に存在し、閉部分空間 $M$ について $H=M\oplus M^{\perp}$、$(M^{\perp})^{\perp}=M$。平行四辺形則が本質的であることを、$L^{p}$（$p\neq2$）で最近点が一意でない例を挙げて示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 189</span><span class="ttl">Riesz の表現定理</span><span class="stars">★★★★☆</span></div>
+<p class="st">$H$ 上の有界線形汎関数は $\varphi=\langle\cdot,y\rangle$ の形にただ一通りに書け、$\|\varphi\|=\|y\|$。系として $H$ は反射的、かつ $H^{*}$ は共役線形同型で $H$ と同一視される。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 190</span><span class="ttl">正規直交基底と Parseval</span><span class="stars">★★★★☆</span></div>
+<p class="st">正規直交系の完全性の 5 つの同値条件を示し、可分無限次元 Hilbert 空間はすべて $\ell^{2}$ と等長同型であることを結論せよ。非可分の場合の基底の濃度も論ぜよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 191</span><span class="ttl">Lax–Milgram の定理</span><span class="stars">★★★★☆</span></div>
+<p class="st">双線形形式 $a(u,v)$ が有界かつ強圧的（$|a(u,u)|\ge c\|u\|^{2}$）ならば、任意の $f\in H^{*}$ に対し $a(u,v)=f(v)$（$\forall v$）の解が一意に存在する。応用として楕円型境界値問題の弱解の存在を述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 192</span><span class="ttl">随伴作用素と 4 つの部分空間</span><span class="stars">★★★★☆</span></div>
+<p class="st">$T\in\mathcal{B}(H)$ の随伴 $T^{*}$ を構成し、$\|T^{*}T\|=\|T\|^{2}$（$C^{*}$ 恒等式）、$N(T)=R(T^{*})^{\perp}$、$\overline{R(T)}=N(T^{*})^{\perp}$ を示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 193</span><span class="ttl">スペクトルの基本性質</span><span class="stars">★★★★☆</span></div>
+<p class="st">$T\in\mathcal{B}(X)$（$X$ 複素 Banach）のスペクトル $\sigma(T)$ は空でないコンパクト集合で $\sigma(T)\subset\{|\lambda|\le\|T\|\}$。レゾルベント $R_{\lambda}$ が解析的であることと Liouville の定理から「空でない」を示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 194</span><span class="ttl">Gelfand のスペクトル半径公式</span><span class="stars">★★★★☆</span></div>
+<p class="st">$r(T)=\max\{|\lambda|:\lambda\in\sigma(T)\}=\lim_{n}\|T^{n}\|^{1/n}$。Hadamard の公式（大問 16）をレゾルベントの Laurent 展開に適用して示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 195</span><span class="ttl">自己共役作用素のスペクトル</span><span class="stars">★★★★☆</span></div>
+<p class="st">$T=T^{*}$ ならば $\sigma(T)\subset\mathbb{R}$、$r(T)=\|T\|$、$\sigma(T)\subset[m,M]$（$m=\inf\langle Tx,x\rangle$, $M=\sup$）で両端はスペクトルに属する。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 196</span><span class="ttl">正規作用素とユニタリ作用素</span><span class="stars">★★★★☆</span></div>
+<p class="st">$T$ 正規 $\iff\|Tx\|=\|T^{*}x\|\ (\forall x)$。このとき $r(T)=\|T\|$、固有空間は互いに直交する。$U$ ユニタリ $\iff$ 全射等長 $\iff\sigma(U)\subset\{|z|=1\}$ かつ正規。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 197</span><span class="ttl">極分解</span><span class="stars">★★★★☆</span></div>
+<p class="st">$T\in\mathcal{B}(H)$ は $T=U|T|$（$|T|=(T^{*}T)^{1/2}$、$U$ は $\overline{R(|T|)}$ 上の部分等長）と一意に分解される。有限次元の特異値分解との関係を述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 198</span><span class="ttl">Toeplitz–Hausdorff の定理</span><span class="stars">★★★★★</span></div>
+<p class="st">数域 $W(T)=\{\langle Tx,x\rangle:\|x\|=1\}$ は凸集合である。$\sigma(T)\subset\overline{W(T)}$、および $T$ が正規なら $\overline{W(T)}=\operatorname{co}(\sigma(T))$ を示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 199</span><span class="ttl">Weyl の判定条件</span><span class="stars">★★★★☆</span></div>
+<p class="st">$T=T^{*}$ について $\lambda\in\sigma(T)$ $\iff$ 近似固有ベクトル列（$\|x_{n}\|=1$, $\|Tx_{n}-\lambda x_{n}\|\to0$）が存在する。また Weyl の定理（コンパクト摂動で本質的スペクトルが不変）を述べよ。</p></div>
