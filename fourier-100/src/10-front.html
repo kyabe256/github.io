@@ -1,0 +1,71 @@
+<div class="cover">
+  <div class="kicker">FOURIER ANALYSIS</div>
+  <div class="vol">100 MAJOR THEOREMS</div>
+  <h1>フーリエ解析<br>100 大問</h1>
+  <div class="rule"></div>
+  <div class="sub">定義ゼロから、大定理を自分で証明する</div>
+  <div class="formula">$$\widehat{f*g}=\hat f\cdot\hat g$$</div>
+  <div class="meta">
+    全 100 大問（すべて証明問題）／ 誘導ステップ 約 430<br>
+    第 0 章に、使う記号・定義・前提定理をすべて収録<br>
+    <br>
+    予備知識：不要（微分積分の計算経験があれば十分）<br>
+    到達点：Carleson 周辺・Calderón–Zygmund・Roth の定理<br>
+    <br>
+    解答は収録していません
+  </div>
+</div>
+
+<h2 class="plain">はじめに ― この本の使い方</h2>
+
+<p>この本は、<strong>フーリエ解析をまったく習っていない人が、フーリエ解析の大定理を自分の手で証明していくため</strong>だけに作られています。100 の大問はすべて証明問題で、すべてが名前のついた定理です。計算問題は一問もありません。</p>
+
+<h3 class="sec">1. 予備知識はいりません。ただし第 0 章は飛ばせません</h3>
+<p>「位相って何」「ルベーグ積分って何だっけ」― まったく問題ありません。<strong>第 0 章（約 10 ページ）に、本書で使う記号・定義・前提となる定理をすべて書きました</strong>。集合の記号から始まり、上限・下限、距離空間、コンパクト性、可測集合、ルベーグ積分、収束定理、$L^{p}$ 空間、Hilbert 空間まで、必要なものは全部あります。</p>
+<p>第 0 章の定義には $\mathbf{(D\text{-}12)}$ のような番号が振ってあり、各大問の中で「$\mathbf{(D\text{-}12)}$ により」のように参照します。分からない記号が出てきたら、番号をたどって戻ってください。<strong>第 0 章は読み物ではなく、辞書として何十回も引くもの</strong>です。</p>
+<p>なお第 0 章の定理（単調収束定理・Fubini の定理など、測度論の基本定理）は<strong>証明なしに使ってよい</strong>ことにします。それらまで証明すると本書が測度論の本になってしまうからです。第 0 章に書いていない事実を使うときは、その都度自分で証明してください。</p>
+
+<h3 class="sec">2. 100 大問は一本の階段です</h3>
+<p>大問は独立していません。<strong>1 番から順に解くことで、フーリエ解析の理論全体が下から組み上がる</strong>ように並べてあります。各大問の冒頭には</p>
+<p class="dep" style="margin-left:1.2em"><b>依存</b>　大問 14, 21 ／ $\mathbf{(D\text{-}31)}$, $\mathbf{(T\text{-}5)}$</p>
+<p>のように、使ってよい既出の結果を明示しました。ここに挙がっていないものは（第 0 章を除き）使わずに証明してください。逆に、挙がっているものは証明抜きで自由に使えます。</p>
+<p>各大問は「主張」と「誘導」からなります。誘導は証明の骨格を 3〜6 段に割ったものです。<strong>誘導を読まずに主張だけで挑むのが最も力がつきます</strong>が、30 分考えて糸口が見えなければ誘導 (1) だけ読む、という使い方を勧めます。</p>
+
+<h3 class="sec">3. 難易度と時間の目安</h3>
+<table class="legend">
+  <tr><td class="s">★★☆☆☆</td><td>定義を正しく展開すれば書ける。30 分〜1 時間。</td></tr>
+  <tr><td class="s">★★★☆☆</td><td>標準的な大定理。ひとつ技巧が要る。1〜3 時間。</td></tr>
+  <tr><td class="s">★★★★☆</td><td>大学院講義の中心的定理。半日。</td></tr>
+  <tr><td class="s">★★★★★</td><td>専門書の山場。一日〜数日。誘導があってなお難しい。</td></tr>
+</table>
+<p>全 100 問を通して解くと、およそ <strong>300〜500 時間</strong>（週 10 時間で 1 年弱）の分量です。これは学部 3 年から大学院 1 年までの調和解析の講義 2 年分に相当します。急がないでください。</p>
+
+<h3 class="sec">4. 到達点</h3>
+<p>最後まで登ると、次のものが「自分で証明した定理」になります。</p>
+<ul class="plain">
+  <li>Fejér の定理、Parseval の等式、Riemann–Lebesgue の補題、Carleson 型の各点収束（弱い版）</li>
+  <li>Plancherel の定理、Poisson の和公式、標本化定理、Paley–Wiener の定理</li>
+  <li>Hardy–Littlewood の極大不等式、Lebesgue の微分定理、Calderón–Zygmund 分解、Hilbert 変換の $L^{p}$ 有界性</li>
+  <li>Riesz–Thorin と Marcinkiewicz の補間定理、Hausdorff–Young の不等式</li>
+  <li>Sobolev の埋め込み定理、熱・波動・Schrödinger 方程式の基本評価</li>
+  <li>Bochner の定理、Wiener のタウバー型定理、素数定理</li>
+  <li>不確定性原理（Heisenberg・Hardy・Benedicks）、等周不等式</li>
+  <li>そして最後に <strong>Roth の定理</strong>（3 項等差数列の存在）</li>
+</ul>
+
+<h3 class="sec">5. 解答について</h3>
+<p><strong>解答は載せていません。</strong>付録 A に大問ごとの一行ヒント（使う道具の名前だけ）、付録 B に参考書対応表を置きました。証明が正しいかどうかの最終判断は、いつでも「定義に戻れているか」で下せます。定義に戻る癖をつけることが、この本の裏の目的です。</p>
+
+<h2 class="plain">この本の地図</h2>
+<table class="legend">
+  <tr><th>第 0 章</th><td>準備 ― 記号・定義・前提定理（大問なし。辞書として使う）</td></tr>
+  <tr><th>第 I 部</th><td>大問 1–12　土台：Hilbert 空間・$L^{p}$ 空間・Baire の定理</td></tr>
+  <tr><th>第 II 部</th><td>大問 13–30　Fourier 級数：核の方法と収束定理</td></tr>
+  <tr><th>第 III 部</th><td>大問 31–38　収束の病理：発散例と共役関数</td></tr>
+  <tr><th>第 IV 部</th><td>大問 39–58　Fourier 変換：反転・Plancherel・補間・Paley–Wiener</td></tr>
+  <tr><th>第 V 部</th><td>大問 59–68　極大関数と特異積分：Calderón–Zygmund 理論</td></tr>
+  <tr><th>第 VI 部</th><td>大問 69–80　超関数・Sobolev 空間・偏微分方程式</td></tr>
+  <tr><th>第 VII 部</th><td>大問 81–88　群上の調和解析：双対性とタウバー型定理</td></tr>
+  <tr><th>第 VIII 部</th><td>大問 89–100　到達点：不確定性・ランダム級数・素数定理・Roth の定理</td></tr>
+  <tr><th>付録</th><td>A 一行ヒント／B 参考書対応表／C 依存関係の早見表</td></tr>
+</table>

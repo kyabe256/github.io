@@ -1,0 +1,60 @@
+<h2 class="plain">第 0 章　準備 ― 記号・定義・前提定理</h2>
+
+<p>この章に大問はない。<strong>本書で使う記号と定義をすべてここに置く</strong>。各項目の番号 $\mathbf{(D\text{-}k)}$（定義）・$\mathbf{(T\text{-}k)}$（証明なしで使ってよい定理）は、以降の大問から参照される。読み通す必要はない。分からない記号に出会ったら戻ってくる、辞書として使うこと。</p>
+
+<h3 class="sec">§0.1　論理と集合の記号</h3>
+<table class="sym">
+  <tr><td class="k">$x\in A$, $x\notin A$</td><td>$x$ は集合 $A$ の元である／でない</td></tr>
+  <tr><td class="k">$A\subset B$</td><td>$A$ の元はすべて $B$ の元（$A=B$ でもよい）</td></tr>
+  <tr><td class="k">$A\cup B,\ A\cap B,\ A\setminus B$</td><td>和集合、共通部分、差集合 $\{x\in A:x\notin B\}$</td></tr>
+  <tr><td class="k">$A^{c}$, $\emptyset$</td><td>補集合（全体集合は文脈で定まる）、空集合</td></tr>
+  <tr><td class="k">$\{x\in X: P(x)\}$</td><td>条件 $P$ をみたす $X$ の元全体</td></tr>
+  <tr><td class="k">$\forall,\ \exists$</td><td>「すべての」「ある〜が存在して」</td></tr>
+  <tr><td class="k">$\Rightarrow,\ \iff$</td><td>ならば、同値</td></tr>
+  <tr><td class="k">$:=$</td><td>左辺を右辺で定義する</td></tr>
+  <tr><td class="k">$f:X\to Y$</td><td>$X$ の各元に $Y$ の元をひとつ対応させる規則（写像・関数）</td></tr>
+  <tr><td class="k">$f(A),\ f^{-1}(B)$</td><td>像 $\{f(x):x\in A\}$、逆像 $\{x:f(x)\in B\}$（$f^{-1}$ は逆写像とは限らない）</td></tr>
+  <tr><td class="k">単射／全射／全単射</td><td>$f(x)=f(y)\Rightarrow x=y$／$f(X)=Y$／その両方</td></tr>
+  <tr><td class="k">$\mathbb{N},\mathbb{Z},\mathbb{Q},\mathbb{R},\mathbb{C}$</td><td>正整数、整数、有理数、実数、複素数の全体</td></tr>
+  <tr><td class="k">$\operatorname{Re}z,\operatorname{Im}z,\overline{z},|z|$</td><td>$z=a+bi$ に対し $a$, $b$, $a-bi$, $\sqrt{a^{2}+b^{2}}$</td></tr>
+  <tr><td class="k">$\mathbf{1}_{E}$</td><td>定義関数：$x\in E$ なら $1$、そうでなければ $0$</td></tr>
+  <tr><td class="k">$\delta_{jk}$</td><td>Kronecker のデルタ：$j=k$ なら $1$、そうでなければ $0$</td></tr>
+  <tr><td class="k">$\lfloor x\rfloor,\ \{x\}$</td><td>$x$ 以下の最大整数、小数部分 $x-\lfloor x\rfloor$</td></tr>
+  <tr><td class="k">$\#A$, $|A|$</td><td>有限集合の元の個数／（測度論の文脈では）$A$ の Lebesgue 測度</td></tr>
+</table>
+
+<h3 class="sec">§0.2　実数・極限・級数</h3>
+
+<div class="defn"><span class="tag">(D-1)</span><strong>上限・下限。</strong>$A\subset\mathbb{R}$ が上に有界とは、ある $M$ で $\forall a\in A,\ a\le M$ となること。このとき上界のうち最小のものを<strong>上限</strong>といい $\sup A$ と書く。$\mathbb{R}$ の完備性公理（実数論の出発点）とは「上に有界な空でない集合は必ず上限をもつ」こと。下限 $\inf A$ も同様。上に有界でないときは $\sup A=+\infty$ と書く。</div>
+
+<div class="defn"><span class="tag">(D-2)</span><strong>収束・Cauchy 列。</strong>数列 $(a_{n})$ が $a$ に収束する（$a_{n}\to a$）とは、$\forall\varepsilon\gt0,\ \exists N,\ \forall n\ge N,\ |a_{n}-a|\lt\varepsilon$。Cauchy 列とは $\forall\varepsilon\gt0,\exists N,\forall m,n\ge N,\ |a_{n}-a_{m}|\lt\varepsilon$。$\mathbb{R},\mathbb{C}$ では「収束する $\iff$ Cauchy 列」。</div>
+
+<div class="defn"><span class="tag">(D-3)</span><strong>上極限・下極限。</strong>$\displaystyle\limsup_{n\to\infty}a_{n}:=\lim_{N\to\infty}\sup_{n\ge N}a_{n}$、$\displaystyle\liminf_{n\to\infty}a_{n}:=\lim_{N\to\infty}\inf_{n\ge N}a_{n}$。これらは（$\pm\infty$ を許せば）つねに存在し、両者が一致することと $\lim a_{n}$ が存在することは同値。</div>
+
+<div class="defn"><span class="tag">(D-4)</span><strong>級数。</strong>$\sum_{n=1}^{\infty}a_{n}$ とは部分和 $s_{N}=\sum_{n\le N}a_{n}$ の極限。$\sum|a_{n}|\lt\infty$ のとき<strong>絶対収束</strong>といい、このとき級数は収束し、項の順序を任意に入れ替えても和は変わらない。</div>
+
+<div class="defn"><span class="tag">(D-5)</span><strong>各点収束と一様収束。</strong>関数列 $f_{n}:X\to\mathbb{C}$ が $f$ に各点収束するとは各 $x$ で $f_{n}(x)\to f(x)$。<strong>一様収束</strong>とは $\displaystyle\sup_{x\in X}|f_{n}(x)-f(x)|\to0$。一様収束の極限は、各 $f_{n}$ が連続なら連続。</div>
+
+<div class="defn"><span class="tag">(D-6)</span><strong>ランダウ記号。</strong>$f(x)=O(g(x))$（$x\to a$）とは、ある定数 $C$ と $a$ の近傍で $|f|\le C|g|$。$f=o(g)$ とは $f/g\to0$。$f\lesssim g$ は $f\le Cg$（$C$ は本質的な変数によらない定数）、$f\asymp g$ は $f\lesssim g$ かつ $g\lesssim f$。</div>
+
+<div class="stmt"><span class="tag">(T-1)</span><strong>Weierstrass の $M$ 判定法。</strong>$\sup_{x}|u_{n}(x)|\le M_{n}$ かつ $\sum M_{n}\lt\infty$ ならば $\sum u_{n}$ は一様（かつ絶対）収束する。</div>
+
+<h3 class="sec">§0.3　距離空間・位相・コンパクト性</h3>
+
+<div class="defn"><span class="tag">(D-7)</span><strong>距離空間。</strong>集合 $X$ と $d:X\times X\to[0,\infty)$ の組で、(i) $d(x,y)=0\iff x=y$、(ii) $d(x,y)=d(y,x)$、(iii) $d(x,z)\le d(x,y)+d(y,z)$（三角不等式）をみたすもの。例：$\mathbb{R}^{n}$ に $d(x,y)=|x-y|$。</div>
+
+<div class="defn"><span class="tag">(D-8)</span><strong>開集合・閉集合・稠密。</strong>開球 $B(x,r)=\{y:d(x,y)\lt r\}$。$U\subset X$ が<strong>開</strong>とは、各 $x\in U$ に対しある $r\gt0$ で $B(x,r)\subset U$。<strong>閉</strong>とは補集合が開であること（＝ 収束列の極限を含むこと）。$\overline{A}$（閉包）は $A$ を含む最小の閉集合、$A^{\circ}$（内部）は $A$ に含まれる最大の開集合。$A$ が $X$ で<strong>稠密</strong>とは $\overline{A}=X$、すなわち任意の $x\in X$ が $A$ の元でいくらでも近似できること。$A$ が<strong>疎</strong>（nowhere dense）とは $(\overline{A})^{\circ}=\emptyset$。</div>
+
+<div class="defn"><span class="tag">(D-9)</span><strong>位相空間。</strong>集合 $X$ と部分集合族 $\mathcal{T}$（「開集合全体」）の組で、$\emptyset,X\in\mathcal{T}$、$\mathcal{T}$ が任意個の和と有限個の共通部分で閉じているもの。距離空間は $\mathbf{(D\text{-}8)}$ の開集合を $\mathcal{T}$ として位相空間になる。本書で位相空間が必要になるのは第 VII 部だけで、そこでも「距離空間のようなもの」と思って差し支えない。</div>
+
+<div class="defn"><span class="tag">(D-10)</span><strong>連続。</strong>$f:X\to Y$ が連続とは、任意の開集合 $V\subset Y$ に対し $f^{-1}(V)$ が開であること。距離空間では通常の $\varepsilon$–$\delta$ 条件と同値。$f$ が<strong>一様連続</strong>とは $\forall\varepsilon\exists\delta\forall x,y\,[d(x,y)\lt\delta\Rightarrow|f(x)-f(y)|\lt\varepsilon]$（$\delta$ が $x$ によらない）。</div>
+
+<div class="defn"><span class="tag">(D-11)</span><strong>コンパクト。</strong>$K\subset X$ がコンパクトとは、$K$ の任意の開被覆（$K\subset\bigcup_{\lambda}U_{\lambda}$、$U_{\lambda}$ 開）から有限個を選んで $K$ を覆えること。</div>
+
+<div class="defn"><span class="tag">(D-12)</span><strong>完備・可分。</strong>距離空間 $X$ が<strong>完備</strong>とは、$X$ の任意の Cauchy 列が $X$ 内の点に収束すること。<strong>可分</strong>とは、可算な稠密部分集合をもつこと。</div>
+
+<div class="stmt"><span class="tag">(T-2)</span><strong>Heine–Borel。</strong>$K\subset\mathbb{R}^{n}$ がコンパクト $\iff$ $K$ は有界かつ閉。</div>
+
+<div class="stmt"><span class="tag">(T-3)</span><strong>コンパクト集合上の連続関数。</strong>コンパクト集合上の連続関数は有界で最大値・最小値をとり、一様連続である。</div>
+
+<div class="defn"><span class="tag">(D-13)</span><strong>台（support）。</strong>$f:\mathbb{R}^{n}\to\mathbb{C}$ に対し $\operatorname{supp}f:=\overline{\{x:f(x)\neq0\}}$。$C_{c}(\mathbb{R}^{n})$ は「連続かつ $\operatorname{supp}f$ がコンパクト」な関数全体、$C_{c}^{\infty}$ はさらに何回でも微分できるもの全体。$C_{0}(\mathbb{R}^{n})$ は連続で $|x|\to\infty$ のとき $f(x)\to0$ となるもの全体。</div>

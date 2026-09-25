@@ -1,0 +1,227 @@
+<h2 class="part">第 II 部　Fourier 級数<span class="en">FOURIER SERIES &mdash; PROBLEMS 13–30</span></h2>
+<p class="part-lead">円周 $\mathbb{T}$ の上で理論を作る。$S_{N}f=f*D_{N}$、$\sigma_{N}f=f*K_{N}$ ― 収束定理はすべて「核 $D_{N},K_{N},P_{r}$ の形を睨む」ことに帰着する。核の符号が暴れるか否かが、すべての分かれ目である。</p>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 13</span><span class="ttl">Fourier 係数の基本性質と畳み込み定理</span><span class="stars">★★☆☆☆</span></div>
+  <p class="dep"><b>依存</b>　$\mathbf{(D\text{-}28)}$–$\mathbf{(D\text{-}33)}$ ／ $\mathbf{(T\text{-}7)}$</p>
+  <div class="stmt"><span class="tag">主張</span>$f,g\in L^{1}(\mathbb{T})$ に対し次が成り立つ。(i) $\{e^{inx}\}_{n\in\mathbb{Z}}$ は $L^{2}(\mathbb{T})$ の正規直交系。(ii) $|\hat f(n)|\le\|f\|_{1}$。(iii) $\widehat{\tau_{h}f}(n)=e^{-inh}\hat f(n)$、$\widehat{e^{imx}f}(n)=\hat f(n-m)$、$\overline{f}$ の係数は $\overline{\hat f(-n)}$。(iv) $f*g\in L^{1}$ で $\widehat{f*g}(n)=\hat f(n)\hat g(n)$。(v) $f\in C^{1}(\mathbb{T})$ なら $\widehat{f'}(n)=in\hat f(n)$。(vi) $S_{N}f=f*D_{N}$。</div>
+  <ol class="items tight">
+    <li>(i)(ii)(iii) を定義の計算で示せ。</li>
+    <li>(iv) では、まず Tonelli で $f*g$ が a.e. 定義され $\|f*g\|_{1}\le\|f\|_{1}\|g\|_{1}$ を示し、それから Fubini を使え。</li>
+    <li>(v) を部分積分で示し、周期性が境界項を消すことを確認せよ。</li>
+    <li>(vi) を $D_{N}=\sum_{|n|\le N}e^{inx}$ の定義から直接示せ。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 14</span><span class="ttl">Riemann–Lebesgue の補題</span><span class="stars">★★★☆☆</span></div>
+  <p class="dep"><b>依存</b>　大問 9, 13 ／ $\mathbf{(T\text{-}11)}$</p>
+  <div class="stmt"><span class="tag">主張</span>$f\in L^{1}(\mathbb{T})$ ならば $\hat f(n)\to0$（$|n|\to\infty$）。同様に $f\in L^{1}(\mathbb{R})$ ならば $\hat f(\xi)\to0$（$|\xi|\to\infty$）。さらに一般に、$\lambda\to\infty$ のとき $\int f(x)e^{i\lambda x}dx\to0$。</div>
+  <ol class="items tight">
+    <li>$e^{-in(x+\pi/n)}=-e^{-inx}$ を使って $\displaystyle\hat f(n)=-\frac{1}{2\pi}\int f\left(x+\frac{\pi}{n}\right)e^{-inx}dx$ を示せ。</li>
+    <li>2 つの表示を平均して $|\hat f(n)|\le\frac12\|\tau_{-\pi/n}f-f\|_{1}$ を導き、大問 9 を適用せよ。</li>
+    <li>別証明：階段関数（または $C^{1}$ 関数）で $L^{1}$ 近似し、それらについて直接計算せよ。</li>
+    <li>逆は成り立たない ― $\hat f(n)\to0$ となる数列が与えられても $f\in L^{1}$ の係数とは限らないこと（つまり $\mathcal{F}:L^{1}(\mathbb{T})\to c_{0}(\mathbb{Z})$ は全射でない）を、大問 11 (iii) を用いて示せ。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 15</span><span class="ttl">滑らかさと係数の減衰</span><span class="stars">★★★☆☆</span></div>
+  <p class="dep"><b>依存</b>　大問 13, 14</p>
+  <div class="stmt"><span class="tag">主張</span>(i) $f\in C^{k}(\mathbb{T})$ ならば $\hat f(n)=o(|n|^{-k})$。(ii) $\sum_{n}|n|^{k}|\hat f(n)|\lt\infty$ ならば $f$ は（a.e. 修正して）$C^{k}$ で、級数は $k$ 回まで項別微分できる。(iii) $f\in\Lambda_{\alpha}(\mathbb{T})$（$0\lt\alpha\le1$）ならば $\hat f(n)=O(|n|^{-\alpha})$。</div>
+  <ol class="items tight">
+    <li>(i)：大問 13 (v) を繰り返し、大問 14 を適用せよ。</li>
+    <li>(ii)：$\mathbf{(T\text{-}1)}$ で一様収束を示し、項別微分の正当性を述べよ。</li>
+    <li>(iii)：大問 14 (1) の「半周期ずらし」の等式に Hölder 条件を代入せよ。</li>
+    <li>(iii) の指数 $\alpha$ が最良であること（$\hat f(n)=o(|n|^{-\alpha})$ にはできない）を、Weierstrass 型の関数 $\sum2^{-k\alpha}e^{i2^{k}x}$ で確かめよ。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 16</span><span class="ttl">Dirichlet 核と Lebesgue 定数</span><span class="stars">★★★★☆</span></div>
+  <p class="dep"><b>依存</b>　大問 13</p>
+  <div class="stmt"><span class="tag">主張</span>(i) $\displaystyle D_{N}(x)=\frac{\sin\left(\left(N+\frac12\right)x\right)}{\sin(x/2)}$、$\int_{\mathbb{T}}D_{N}=1$。(ii) Lebesgue 定数 $L_{N}:=\int_{\mathbb{T}}|D_{N}|$ は
+  $$L_{N}=\frac{4}{\pi^{2}}\log N+O(1)\qquad(N\to\infty)$$
+  をみたす。とくに $L_{N}\to\infty$。</div>
+  <ol class="items tight">
+    <li>(i) を等比級数の和で示せ。</li>
+    <li>$\left|\frac{1}{\sin(x/2)}-\frac{2}{x}\right|$ が $[-\pi,\pi]$ で有界であることを示し、$L_{N}=\frac{2}{\pi}\int_{0}^{\pi}\frac{|\sin((N+\frac12)x)|}{x}dx+O(1)$ に帰着せよ。</li>
+    <li>$t=(N+\frac12)x$ と置換し、$\int_{0}^{M}\frac{|\sin t|}{t}dt=\frac{2}{\pi}\log M+O(1)$ を、区間 $[k\pi,(k+1)\pi]$ ごとに $|\sin t|$ の平均が $2/\pi$ であることを使って示せ。</li>
+    <li>結論をまとめ、さらに $S_{N}:C(\mathbb{T})\to C(\mathbb{T})$ の作用素ノルムがちょうど $L_{N}$ に等しいことを示せ（$\operatorname{sgn}D_{N}$ を連続関数で近似する）。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 17</span><span class="ttl">Riemann の局所化原理</span><span class="stars">★★★☆☆</span></div>
+  <p class="dep"><b>依存</b>　大問 14, 16</p>
+  <div class="stmt"><span class="tag">主張</span>$f,g\in L^{1}(\mathbb{T})$ が $x_{0}$ のある近傍で一致するならば $S_{N}f(x_{0})-S_{N}g(x_{0})\to0$。したがって $S_{N}f(x_{0})$ の収束・発散と極限値は、$x_{0}$ のいくらでも小さい近傍における $f$ のみで決まる。</div>
+  <ol class="items tight">
+    <li>$h=f-g$ は $|t|\lt\delta$ で $0$。$S_{N}h(x_{0})=\int_{\mathbb{T}}h(x_{0}-t)D_{N}(t)dt$ を書き下せ。</li>
+    <li>被積分関数を $\frac{h(x_{0}-t)}{\sin(t/2)}\cdot\sin\left(\left(N+\frac12\right)t\right)$ と見て、前半が $L^{1}(\mathbb{T})$ に属することを確かめよ。</li>
+    <li>$\sin((N+\frac12)t)$ を $e^{\pm i(N+1/2)t}$ に分解し、大問 14 を適用せよ。</li>
+    <li>「係数は $f$ 全体の情報から作られるのに、収束は局所的に決まる」という一見の逆説を、どこで矛盾が解消しているか説明せよ。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 18</span><span class="ttl">Dini の判定法</span><span class="stars">★★★☆☆</span></div>
+  <p class="dep"><b>依存</b>　大問 14, 16, 17</p>
+  <div class="stmt"><span class="tag">主張</span>$f\in L^{1}(\mathbb{T})$、$L\in\mathbb{C}$ とする。ある $\delta\gt0$ で
+  $$\int_{|t|\lt\delta}\frac{|f(x_{0}+t)-L|}{|t|}\,dt\lt\infty$$
+  ならば $S_{N}f(x_{0})\to L$。系として、$f$ が $x_{0}$ で Hölder 連続なら $S_{N}f(x_{0})\to f(x_{0})$、$f$ が $x_{0}$ で左右微分可能なら $S_{N}f(x_{0})\to\frac{f(x_{0}+)+f(x_{0}-)}{2}$。</div>
+  <ol class="items tight">
+    <li>$\int_{\mathbb{T}}D_{N}=1$ より $S_{N}f(x_{0})-L=\int_{\mathbb{T}}\bigl(f(x_{0}-t)-L\bigr)D_{N}(t)dt$。</li>
+    <li>$|t|\ge\delta$ の部分は大問 17 の議論で $0$ に行くことを示せ。</li>
+    <li>$|t|\lt\delta$ の部分で $g(t)=\frac{f(x_{0}-t)-L}{\sin(t/2)}$ が仮定より $L^{1}$ に入ることを示し、大問 14 を適用せよ。</li>
+    <li>二つの系を、それぞれ Dini 条件の検証によって導け。左右で異なる極限をもつ場合は $D_{N}$ が偶関数であることを使う。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 19</span><span class="ttl">Dirichlet–Jordan の定理（有界変動）</span><span class="stars">★★★★☆</span></div>
+  <p class="dep"><b>依存</b>　大問 16, 17 ／ $\mathbf{(D\text{-}35)}$</p>
+  <div class="stmt"><span class="tag">主張</span>$f$ が $\mathbb{T}$ 上有界変動ならば、各点で $S_{N}f(x)\to\frac{f(x+)+f(x-)}{2}$。$f$ がさらに連続ならば収束は一様である。</div>
+  <ol class="items tight">
+    <li>有界変動関数は 2 つの単調関数の差であること（Jordan 分解）を示せ。</li>
+    <li>したがって $f$ が単調な場合に帰着できる。第 2 平均値定理
+      $\int_{a}^{b}g(t)\varphi(t)dt=g(a+)\int_{a}^{c}\varphi+g(b-)\int_{c}^{b}\varphi$（$g$ 単調、ある $c$）を述べ、証明せよ。</li>
+    <li>$\int_{0}^{u}\frac{\sin((N+\frac12)t)}{t}dt$ が $N,u$ について一様有界であること（$\mathrm{Si}$ の有界性）を示せ。</li>
+    <li>(2)(3) を組み合わせて主張を示し、連続な場合の一様性を、変動の絶対連続性から詰めよ。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 20</span><span class="ttl">Fejér の定理</span><span class="stars">★★★☆☆</span></div>
+  <p class="dep"><b>依存</b>　大問 12, 13 ／ $\mathbf{(D\text{-}34)}$</p>
+  <div class="stmt"><span class="tag">主張</span>(i) $\displaystyle K_{N}(x)=\frac{1}{N+1}\left(\frac{\sin\frac{(N+1)x}{2}}{\sin\frac{x}{2}}\right)^{2}\ge0$ であり $\{K_{N}\}$ は近似単位元。(ii) $f\in C(\mathbb{T})$ ならば $\sigma_{N}f\to f$ 一様。(iii) $f\in L^{p}(\mathbb{T})$（$1\le p\lt\infty$）ならば $\|\sigma_{N}f-f\|_{p}\to0$。(iv) $f$ が $x_{0}$ で左右極限をもてば $\sigma_{N}f(x_{0})\to\frac{f(x_{0}+)+f(x_{0}-)}{2}$。</div>
+  <ol class="items tight">
+    <li>$\sum_{k=0}^{N}D_{k}$ を計算して (i) の閉じた式を出し、$K_{N}\ge0$、$\int K_{N}=1$、$\delta\le|x|\le\pi$ で $K_{N}\le\frac{C_{\delta}}{N+1}$ を示せ。</li>
+    <li>(ii) を一様連続性と (1) の 3 条件から示せ（$3\varepsilon$ 論法）。</li>
+    <li>(iii) を大問 12 の近似定理から導け。</li>
+    <li>(iv) を示し、さらに $K_{N}\ge0$ から $\inf f\le\sigma_{N}f\le\sup f$ を導いて、Cesàro 平均には Gibbs 現象（大問 26）が起きないことを結論せよ。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 21</span><span class="ttl">Weierstrass の近似定理（三角・多項式）</span><span class="stars">★★★☆☆</span></div>
+  <p class="dep"><b>依存</b>　大問 20</p>
+  <div class="stmt"><span class="tag">主張</span>(i) 三角多項式全体は $C(\mathbb{T})$ で一様ノルムについて稠密。(ii) 多項式全体は $C[a,b]$ で稠密。</div>
+  <ol class="items tight">
+    <li>(i) は Fejér の定理そのもの。$\sigma_{N}f$ が三角多項式であることを確かめよ。</li>
+    <li>(ii)：$[a,b]$ を $[0,\pi]$ に線形変換し、$g(\theta)=f(\cos\theta)$ が偶な連続周期関数であることから、(i) の近似が $\cos$ の多項式（Chebyshev 多項式）で書けることを示せ。</li>
+    <li>$\cos n\theta$ が $\cos\theta$ の多項式であること（Chebyshev 多項式 $T_{n}$ の存在）を帰納法で示せ。</li>
+    <li>系：$C(\mathbb{T})$、$L^{p}(\mathbb{T})$（$p\lt\infty$）は可分であることを示せ。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 22</span><span class="ttl">一意性定理</span><span class="stars">★★★☆☆</span></div>
+  <p class="dep"><b>依存</b>　大問 20</p>
+  <div class="stmt"><span class="tag">主張</span>$f\in L^{1}(\mathbb{T})$ のすべての Fourier 係数が $0$ ならば $f=0$ a.e.。したがって $L^{1}(\mathbb{T})\ni f\mapsto(\hat f(n))$ は単射。</div>
+  <ol class="items tight">
+    <li>仮定から $\sigma_{N}f=0$（すべての $N$）を確かめよ。</li>
+    <li>大問 20 (iii) で $p=1$ をとり、$\|f\|_{1}=0$ を結論せよ。</li>
+    <li>$f$ が連続な場合に、(1) と一様収束から直接 $f\equiv0$ を示す別証明を書け。</li>
+    <li>系：$f,g\in L^{1}(\mathbb{T})$ が同じ係数をもてば $f=g$ a.e.。また、係数が絶対収束するなら $f$ は連続関数と a.e. 一致する。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 23</span><span class="ttl">三角系の完全性と Parseval の等式</span><span class="stars">★★★☆☆</span></div>
+  <p class="dep"><b>依存</b>　大問 5, 6, 21, 22</p>
+  <div class="stmt"><span class="tag">主張</span>$\{e^{inx}\}_{n\in\mathbb{Z}}$ は $L^{2}(\mathbb{T})$ の完全正規直交系である。したがって $f\in L^{2}(\mathbb{T})$ に対し $\|S_{N}f-f\|_{2}\to0$ かつ
+  $$\frac{1}{2\pi}\int_{-\pi}^{\pi}|f|^{2}=\sum_{n\in\mathbb{Z}}|\hat f(n)|^{2},\qquad \langle f,g\rangle=\sum_{n}\hat f(n)\overline{\hat g(n)}.$$</div>
+  <ol class="items tight">
+    <li>大問 6 の条件 (e)（係数がすべて $0$ なら $f=0$）を大問 22 から確かめよ。</li>
+    <li>あるいは条件 (a)（稠密性）を大問 21 と $\mathbf{(T\text{-}11)}$ から確かめよ。二通りで示すこと。</li>
+    <li>大問 6 により Parseval を結論せよ。</li>
+    <li>応用：$f(x)=x$ に適用して $\sum n^{-2}=\pi^{2}/6$ を導け（本書で唯一許す計算問題）。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 24</span><span class="ttl">Riesz–Fischer（係数から関数へ）</span><span class="stars">★★★☆☆</span></div>
+  <p class="dep"><b>依存</b>　大問 3, 5, 23</p>
+  <div class="stmt"><span class="tag">主張</span>$(c_{n})_{n\in\mathbb{Z}}\in\ell^{2}(\mathbb{Z})$ に対し、$\hat f(n)=c_{n}$ なる $f\in L^{2}(\mathbb{T})$ がただ一つ存在する。すなわち $\mathcal{F}:L^{2}(\mathbb{T})\to\ell^{2}(\mathbb{Z})$ はユニタリ同型。</div>
+  <ol class="items tight">
+    <li>部分和 $\sum_{|n|\le N}c_{n}e^{inx}$ が $L^{2}$ の Cauchy 列であることを示せ。</li>
+    <li>完備性（大問 3）から極限 $f$ を得て、その係数が $c_{n}$ であることを内積の連続性で確かめよ。</li>
+    <li>一意性を大問 22 から述べよ。</li>
+    <li>$\ell^{1}\subsetneq\ell^{2}$ を用いて、「係数が $\ell^{2}$ だが $\ell^{1}$ でない」例を作り、そのとき級数が $L^{2}$ 収束はするが絶対収束しないことを確かめよ。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 25</span><span class="ttl">Bernstein の絶対収束定理</span><span class="stars">★★★★★</span></div>
+  <p class="dep"><b>依存</b>　大問 2, 23</p>
+  <div class="stmt"><span class="tag">主張</span>$f\in\Lambda_{\alpha}(\mathbb{T})$ かつ $\alpha\gt\frac12$ ならば $\sum_{n}|\hat f(n)|\lt\infty$。したがって Fourier 級数は絶対一様収束する。$\alpha=\frac12$ では結論は成り立たない。</div>
+  <ol class="items tight">
+    <li>$\displaystyle\frac{1}{2\pi}\int|f(x+h)-f(x)|^{2}dx=\sum_{n}|\hat f(n)|^{2}\left|e^{inh}-1\right|^{2}$ を Parseval から示せ。</li>
+    <li>$h=\pi/2^{k}$ とおき、$2^{k-1}\lt|n|\le2^{k}$ の範囲で $|e^{inh}-1|\ge c\gt0$ となることを示して
+      $\displaystyle\sum_{2^{k-1}\lt|n|\le2^{k}}|\hat f(n)|^{2}\lesssim 2^{-2k\alpha}$ を得よ。</li>
+    <li>各帯域に Cauchy–Schwarz を使って $\displaystyle\sum_{2^{k-1}\lt|n|\le2^{k}}|\hat f(n)|\lesssim 2^{k/2}\cdot2^{-k\alpha}$ とし、$k$ について足せ。$\alpha\gt1/2$ がどこで効くかを明示せよ。</li>
+    <li>$\alpha=1/2$ での反例が存在すること（Hardy–Littlewood）を述べ、なぜ (3) の評価がちょうど臨界になるのかを説明せよ。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 26</span><span class="ttl">Gibbs 現象</span><span class="stars">★★★★☆</span></div>
+  <p class="dep"><b>依存</b>　大問 16, 18</p>
+  <div class="stmt"><span class="tag">主張</span>$f=\operatorname{sgn}$（$\mathbb{T}$ 上、跳びの高さ $2$）に対し
+  $$\lim_{N\to\infty}S_{N}f\!\left(\frac{\pi}{N+1}\right)=\frac{2}{\pi}\int_{0}^{\pi}\frac{\sin t}{t}\,dt=1.17897\ldots$$
+  すなわち部分和は跳びの約 $8.95\%$ ぶん行き過ぎ、$N\to\infty$ でもこの超過は消えない。</div>
+  <ol class="items tight">
+    <li>$S_{N}f$ を明示的に（正弦の有限和として）書き、その導関数が $\frac{\sin((N+1)x)}{\sin x}$ の定数倍であることを示せ。</li>
+    <li>積分して $S_{N}f(x)=\frac{2}{\pi}\int_{0}^{x}\frac{\sin((N+1)t)}{\sin t}dt$ の形にし、極大点が $x=\frac{\pi}{N+1}$ にあることを示せ。</li>
+    <li>置換 $u=(N+1)t$ と $\frac{1}{\sin t}=\frac1t+O(t)$ を使って極限を計算せよ。</li>
+    <li>この現象が「$D_{N}$ の $L^{1}$ ノルムの発散（大問 16）」とどう関係するかを述べ、$\sigma_{N}$ では起きない理由（大問 20 (4)）と対比せよ。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 27</span><span class="ttl">Poisson 核・Abel 総和・Fatou の定理</span><span class="stars">★★★★☆</span></div>
+  <p class="dep"><b>依存</b>　大問 12, 20</p>
+  <div class="stmt"><span class="tag">主張</span>(i) $\displaystyle P_{r}(x)=\frac{1-r^{2}}{1-2r\cos x+r^{2}}\gt0$ であり $\{P_{r}\}_{r\to1^{-}}$ は近似単位元。(ii) $f\in C(\mathbb{T})$ なら $A_{r}f\to f$ 一様、$f\in L^{p}$ なら $L^{p}$ 収束。(iii) $u(re^{i\theta})=A_{r}f(\theta)$ は単位円板上の調和関数で、境界値 $f$ をもつ（円板の Dirichlet 問題の解）。(iv) $f$ が $x_{0}$ で連続なら $A_{r}f(x_{0})\to f(x_{0})$（Fatou の定理の半径版）。</div>
+  <ol class="items tight">
+    <li>$P_{r}=\sum r^{|n|}e^{inx}$ を和して閉じた式を出し、近似単位元の 3 条件を検証せよ。</li>
+    <li>(ii) を大問 12, 20 と同じ論法で示せ。</li>
+    <li>$P_{r}(\theta-t)=\operatorname{Re}\frac{e^{it}+z}{e^{it}-z}$（$z=re^{i\theta}$）を示し、$u$ が調和（実部が正則関数）であることを導け。</li>
+    <li>解の一意性（最大値原理）を述べ、$A_{r}$ が $S_{N}$ より「よい総和法」である理由を核の符号から説明せよ。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 28</span><span class="ttl">Cantor–Lebesgue の定理</span><span class="stars">★★★★☆</span></div>
+  <p class="dep"><b>依存</b>　$\mathbf{(T\text{-}6)}$</p>
+  <div class="stmt"><span class="tag">主張</span>三角級数 $\sum_{n}c_{n}e^{inx}$ が正測度の集合 $E$ 上の各点で収束するならば $c_{n}\to0$（$|n|\to\infty$）。とくに至る所収束するならば係数は $0$ に収束する。</div>
+  <ol class="items tight">
+    <li>収束するなら項が $0$ に行くので、$a_{n}\cos nx+b_{n}\sin nx\to0$（$x\in E$）。これを $\rho_{n}\cos(nx+\varphi_{n})\to0$ と書け。</li>
+    <li>$\rho_{n}\not\to0$ と仮定して部分列をとり、$\cos^{2}(n_{k}x+\varphi_{n_{k}})\to0$（$x\in E$）を導け。</li>
+    <li>$\cos^{2}\theta=\frac{1+\cos2\theta}{2}$ と優収束定理で $\int_{E}\cos^{2}(n_{k}x+\varphi_{n_{k}})dx\to\frac{|E|}{2}$ を示し（Riemann–Lebesgue、大問 14）、矛盾を導け。</li>
+    <li>$|E|=0$ では主張が破れる例があることを述べよ。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 29</span><span class="ttl">Bernstein の不等式（三角多項式）</span><span class="stars">★★★★☆</span></div>
+  <p class="dep"><b>依存</b>　大問 13, 20</p>
+  <div class="stmt"><span class="tag">主張</span>$P$ を次数 $N$ の三角多項式とすると $\|P'\|_{\infty}\le N\|P\|_{\infty}$、また $1\le p\le\infty$ に対し $\|P'\|_{p}\le N\|P\|_{p}$。定数 $N$ は最良である。</div>
+  <ol class="items tight">
+    <li>$\|P\|_{\infty}\le1$ とし、$|P'(x_{0})|\gt N$ なる点があると仮定する。$Q(x)=\sin(N(x-\gamma))$ を適当な $\gamma$ で選び、$Q-P$ が $[0,2\pi)$ に $2N$ 個より多くの零点をもつことを示せ（中間値の定理と符号の追跡）。</li>
+    <li>次数 $N$ の非自明な三角多項式の零点は高々 $2N$ 個であることを示せ（$e^{ix}=z$ とおいて代数学の基本定理）。</li>
+    <li>(1)(2) の矛盾から $\|P'\|_{\infty}\le N\|P\|_{\infty}$ を結論せよ。</li>
+    <li>$L^{p}$ 版を、Fejér 型の核 $\Phi$ で $P'=P*\Phi$、$\|\Phi\|_{1}\le N$ と書けることから導け（$\Phi$ の構成が山場）。最良性は $P=\sin Nx$ で確かめよ。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 30</span><span class="ttl">Hardy のタウバー型定理</span><span class="stars">★★★★☆</span></div>
+  <p class="dep"><b>依存</b>　大問 20</p>
+  <div class="stmt"><span class="tag">主張</span>級数 $\sum a_{n}$ の部分和を $s_{N}$、Cesàro 平均を $\sigma_{N}$ とする。$\sigma_{N}\to s$ かつ $a_{n}=O(1/n)$ ならば $s_{N}\to s$。系：$f\in L^{1}(\mathbb{T})$ で $\hat f(n)=O(1/|n|)$ かつ $\sigma_{N}f(x_{0})\to L$ ならば $S_{N}f(x_{0})\to L$。</div>
+  <ol class="items tight">
+    <li>$s_{N}-\sigma_{N}=\frac{1}{N+1}\sum_{k\le N}k\,a_{k}$ を示せ。</li>
+    <li>$M\gt N$ に対し $\sigma_{M}-\sigma_{N}$ を $s_{k}$ の重み付き平均として書き、$s_{N}-\sigma_{M}$ を評価せよ。</li>
+    <li>$M=\lfloor(1+\varepsilon)N\rfloor$ と選び、$a_{n}=O(1/n)$ を使って誤差項が $O(\varepsilon)$ になることを示せ。</li>
+    <li>$\varepsilon\to0$ として結論し、系を Fejér の定理（大問 20 (iv)）と組み合わせて述べよ。さらに条件 $a_{n}=O(1/n)$ が外せないこと（$a_{n}=(-1)^{n}$）を確かめよ。</li>
+  </ol>
+</div>

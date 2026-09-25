@@ -1,0 +1,252 @@
+<h2 class="part">第 IV 部　Fourier 変換<span class="en">THE FOURIER TRANSFORM &mdash; PROBLEMS 39–58</span></h2>
+<p class="part-lead">周期を無限に飛ばす。和は積分に、離散スペクトルは連続スペクトルになる。$L^{1}$・$L^{2}$・$\mathcal{S}$ の三つの舞台を行き来しながら、反転公式・Plancherel・補間・Paley–Wiener という四本の柱を建てる。$\mathbb{R}$ 上では $\hat f(\xi)=\int f(x)e^{-2\pi ix\xi}dx$（$\mathbf{(D\text{-}30)}$）の流儀を使う。</p>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 39</span><span class="ttl">$L^{1}(\mathbb{R})$ 上の Fourier 変換</span><span class="stars">★★★☆☆</span></div>
+  <p class="dep"><b>依存</b>　大問 9, 14 ／ $\mathbf{(T\text{-}6)}$, $\mathbf{(T\text{-}8)}$</p>
+  <div class="stmt"><span class="tag">主張</span>$f\in L^{1}(\mathbb{R}^{n})$ に対し、(i) $\hat f$ は有界一様連続で $\|\hat f\|_{\infty}\le\|f\|_{1}$。(ii) $\hat f(\xi)\to0$（$|\xi|\to\infty$）。(iii) $\widehat{\tau_{h}f}=e^{-2\pi ih\xi}\hat f$、$\widehat{e^{2\pi ihx}f}=\tau_{h}\hat f$、$\widehat{f(\lambda\cdot)}(\xi)=|\lambda|^{-n}\hat f(\xi/\lambda)$。(iv) $f,xf\in L^{1}$ なら $\hat f\in C^{1}$ で $\partial_{\xi}\hat f=\widehat{(-2\pi ix)f}$。(v) $f,f'\in L^{1}$ で $f$ が絶対連続なら $\widehat{f'}(\xi)=2\pi i\xi\hat f(\xi)$。</div>
+  <ol class="items tight">
+    <li>(i) を優収束定理と平行移動連続性（大問 9）から示せ。</li>
+    <li>(ii) を大問 14 と同じ「半周期ずらし」$e^{-2\pi i\xi(x+\frac{1}{2\xi})}=-e^{-2\pi i\xi x}$ で示せ。</li>
+    <li>(iii) を置換積分で、(iv) を微分と積分の交換（優関数 $|xf|$）で示せ。</li>
+    <li>(v) を部分積分で示し、そのとき $f(x)\to0$（$|x|\to\infty$）が必要であること、そしてそれが $f,f'\in L^{1}$ から従うことを確かめよ。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 40</span><span class="ttl">Young の不等式（一般形）</span><span class="stars">★★★★☆</span></div>
+  <p class="dep"><b>依存</b>　大問 2, 12</p>
+  <div class="stmt"><span class="tag">主張</span>$1\le p,q,r\le\infty$ が $\frac1p+\frac1q=1+\frac1r$ をみたすとき $\|f*g\|_{r}\le\|f\|_{p}\|g\|_{q}$。とくに $L^{1}(\mathbb{R}^{n})$ は畳み込みについて可換 Banach 環をなすが、単位元をもたない。</div>
+  <ol class="items tight">
+    <li>$r=\infty$（$q=p'$）の場合を Hölder で、$r=p$（$q=1$）の場合を大問 12 (3) で示せ。</li>
+    <li>一般の場合：$|f(y)g(x-y)|=\left(|f|^{p}|g|^{q}\right)^{1/r}\cdot|f|^{p(\frac1p-\frac1r)}\cdot|g|^{q(\frac1q-\frac1r)}$ と三つに分け、指数が $\frac1r+\frac{1}{p^{*}}+\frac{1}{q^{*}}=1$ をみたすことを確かめて三項 Hölder を適用せよ。</li>
+    <li>$L^{1}$ が単位元をもたないことを、近似単位元（大問 12 (4)）を用いた背理法で示せ。</li>
+    <li>$\widehat{f*g}=\hat f\hat g$（$f,g\in L^{1}$）を Fubini で示し、$\mathcal{F}$ が Banach 環の準同型であることを確かめよ。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 41</span><span class="ttl">Gauss 核・乗法公式・近似単位元</span><span class="stars">★★★☆☆</span></div>
+  <p class="dep"><b>依存</b>　大問 12, 39 ／ $\mathbf{(T\text{-}7)}$</p>
+  <div class="stmt"><span class="tag">主張</span>(i) $\displaystyle\int_{\mathbb{R}}e^{-\pi x^{2}}dx=1$ であり $\widehat{e^{-\pi x^{2}}}=e^{-\pi\xi^{2}}$（自己双対）。(ii) 乗法公式：$f,g\in L^{1}$ に対し $\int f\hat g=\int\hat fg$。(iii) $G_{\varepsilon}(x)=\varepsilon^{-n}e^{-\pi|x/\varepsilon|^{2}}$ は近似単位元。</div>
+  <ol class="items tight">
+    <li>(i) の積分値を極座標（または Fubini で 2 乗）で計算せよ。</li>
+    <li>$u(\xi)=\widehat{e^{-\pi x^{2}}}(\xi)$ が微分方程式 $u'=-2\pi\xi u$、$u(0)=1$ をみたすことを大問 39 (iv)(v) から示し、(i) を結論せよ。</li>
+    <li>(ii) を Fubini で示せ（どこで $f,g\in L^{1}$ が効くか明示すること）。</li>
+    <li>(iii) を確かめ、$n$ 次元の場合に積の形 $e^{-\pi|x|^{2}}=\prod e^{-\pi x_{j}^{2}}$ が効くことを述べよ。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 42</span><span class="ttl">反転公式</span><span class="stars">★★★★☆</span></div>
+  <p class="dep"><b>依存</b>　大問 12, 41</p>
+  <div class="stmt"><span class="tag">主張</span>$f\in L^{1}(\mathbb{R}^{n})$ かつ $\hat f\in L^{1}(\mathbb{R}^{n})$ ならば
+  $$f(x)=\int_{\mathbb{R}^{n}}\hat f(\xi)e^{2\pi ix\xi}\,d\xi\qquad\text{a.e.}$$
+  とくに $f$ は（a.e. 修正して）連続。さらに一般の $f\in L^{1}$ に対し、Gauss 総和
+  $\displaystyle\int\hat f(\xi)e^{-\pi\varepsilon^{2}|\xi|^{2}}e^{2\pi ix\xi}d\xi\to f$（$L^{1}$ かつ Lebesgue 点で各点）。</div>
+  <ol class="items tight">
+    <li>乗法公式（大問 41 (ii)）に $g(\xi)=e^{-\pi\varepsilon^{2}|\xi|^{2}}e^{2\pi ix\xi}$ を代入し、$\hat g$ を計算せよ。</li>
+    <li>その結果が $f*G_{\varepsilon}(x)$ になることを確かめよ。</li>
+    <li>$\varepsilon\to0$ で左辺は優収束定理（$\hat f\in L^{1}$）、右辺は近似定理（大問 12）で扱い、主張を得よ。</li>
+    <li>系：$\mathcal{F}^{2}f(x)=f(-x)$、$\mathcal{F}^{4}=\mathrm{id}$（$\hat f\in L^{1}$ の範囲で）。また $\hat f\in L^{1}$ が必要であること（$f=\mathbf{1}_{[-1/2,1/2]}$）を確かめよ。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 43</span><span class="ttl">一意性と $\mathcal{F}(L^{1})\subsetneq C_{0}$</span><span class="stars">★★★☆☆</span></div>
+  <p class="dep"><b>依存</b>　大問 11, 39, 42</p>
+  <div class="stmt"><span class="tag">主張</span>(i) $f\in L^{1}$ で $\hat f\equiv0$ ならば $f=0$ a.e.。(ii) $\mathcal{F}:L^{1}(\mathbb{R})\to C_{0}(\mathbb{R})$ は単射な有界線形作用素だが全射ではない。(iii) その像は $C_{0}$ で稠密。</div>
+  <ol class="items tight">
+    <li>(i) を大問 42 の Gauss 総和から示せ。</li>
+    <li>(ii)：全射と仮定すると開写像定理（大問 11 (iii)）から $\|f\|_{1}\le C\|\hat f\|_{\infty}$ が従う。これを Dirichlet 核型の関数列（$\hat f$ が三角形、$f$ が $\operatorname{sinc}^{2}$ など）で破れ。</li>
+    <li>(iii) を Gauss 関数の線形結合の稠密性から示せ（Stone–Weierstrass か、直接近似）。</li>
+    <li>「$\hat f$ を見ただけで $f\in L^{1}$ かどうかを判定する簡単な条件は存在しない」という主張の意味を、(ii) に即して説明せよ。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 44</span><span class="ttl">Plancherel の定理</span><span class="stars">★★★★☆</span></div>
+  <p class="dep"><b>依存</b>　大問 3, 41, 42 ／ $\mathbf{(T\text{-}11)}$</p>
+  <div class="stmt"><span class="tag">主張</span>$f\in L^{1}\cap L^{2}$ に対し $\|\hat f\|_{2}=\|f\|_{2}$。したがって $\mathcal{F}$ は $L^{2}(\mathbb{R}^{n})$ 上のユニタリ作用素に一意に拡張され、$\langle f,g\rangle=\langle\hat f,\hat g\rangle$、$\mathcal{F}^{-1}=\mathcal{F}^{*}$ が成り立つ。</div>
+  <ol class="items tight">
+    <li>$g=f*\tilde f$（$\tilde f(x)=\overline{f(-x)}$）とおくと $g\in L^{1}$、$g$ は連続、$\hat g=|\hat f|^{2}\ge0$ を示せ。</li>
+    <li>$g$ に Gauss 総和（大問 42）を適用し、$x=0$ で $\int|\hat f|^{2}=g(0)=\|f\|_{2}^{2}$ を導け（単調収束定理）。</li>
+    <li>$L^{1}\cap L^{2}$ が $L^{2}$ で稠密であることから、等長作用素の一意拡張を構成せよ。</li>
+    <li>拡張された $\mathcal{F}$ が全射（＝ユニタリ）であることを、像が閉かつ稠密であることから示せ。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 45</span><span class="ttl">Schwartz 空間と Hermite 関数</span><span class="stars">★★★★☆</span></div>
+  <p class="dep"><b>依存</b>　大問 39, 42, 44 ／ $\mathbf{(D\text{-}36)}$</p>
+  <div class="stmt"><span class="tag">主張</span>(i) $\mathcal{F}:\mathcal{S}(\mathbb{R}^{n})\to\mathcal{S}(\mathbb{R}^{n})$ は線形同相（全単射で両方向連続）。(ii) $h_{k}(x)=\left(-1\right)^{k}e^{\pi x^{2}}\frac{d^{k}}{dx^{k}}\left(e^{-2\pi x^{2}}\right)$ と定めると $\mathcal{F}h_{k}=(-i)^{k}h_{k}$ であり、$\{h_{k}\}$ を正規化したものは $L^{2}(\mathbb{R})$ の完全正規直交系。(iii) したがって $\mathcal{F}$ の固有値は $1,-i,-1,i$ のみで、各固有空間は無限次元。</div>
+  <ol class="items tight">
+    <li>(i)：大問 39 (iv)(v) を繰り返し使い、$\sup|x^{\alpha}\partial^{\beta}\hat f|$ が $f$ の有限個のセミノルムで抑えられることを示せ。</li>
+    <li>(ii)：生成作用素 $A^{\pm}=\frac{1}{2\pi}\frac{d}{dx}\mp x$ を導入し、$\mathcal{F}A^{\pm}=\mp i A^{\pm}\mathcal{F}$ を示して帰納法を回せ。</li>
+    <li>$\{h_{k}\}$ の完全性を、「$\int f(x)e^{-\pi x^{2}}x^{k}dx=0\ (\forall k)\Rightarrow f=0$」を $F(z)=\int f(x)e^{-\pi x^{2}}e^{-2\pi ixz}dx$ の整関数性から示せ。</li>
+    <li>(iii) を結論し、$\mathcal{F}$ のスペクトル分解 $\mathcal{F}=\sum_{k}(-i)^{k}P_{k}$（$P_{k}$ は固有射影）を書け。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 46</span><span class="ttl">Riesz–Thorin の補間定理</span><span class="stars">★★★★★</span></div>
+  <p class="dep"><b>依存</b>　大問 2, 8</p>
+  <div class="stmt"><span class="tag">主張</span>線形作用素 $T$ が $L^{p_{0}}\to L^{q_{0}}$（ノルム $M_{0}$）かつ $L^{p_{1}}\to L^{q_{1}}$（ノルム $M_{1}$）で有界とする。$0\lt\theta\lt1$ に対し $\frac1p=\frac{1-\theta}{p_{0}}+\frac{\theta}{p_{1}}$、$\frac1q=\frac{1-\theta}{q_{0}}+\frac{\theta}{q_{1}}$ とおくと、$T$ は $L^{p}\to L^{q}$ で有界で $M_{\theta}\le M_{0}^{1-\theta}M_{1}^{\theta}$。</div>
+  <ol class="items tight">
+    <li>Hadamard の三線定理：帯 $0\le\operatorname{Re}z\le1$ で有界正則、境界で $|F|\le M_{0},M_{1}$ ならば $|F(\theta+it)|\le M_{0}^{1-\theta}M_{1}^{\theta}$ ― を、$F(z)M_{0}^{z-1}M_{1}^{-z}$ に最大値原理を適用して示せ。</li>
+    <li>単関数 $f,g$ に対し $\displaystyle F(z)=\int T(f_{z})\,g_{z}$（$f_{z}=|f|^{p(\frac{1-z}{p_{0}}+\frac{z}{p_{1}})}\operatorname{sgn}f$ 等）とおき、$F$ が帯で有界正則であることを確かめよ。</li>
+    <li>境界 $\operatorname{Re}z=0,1$ 上で $|F|\le M_{0}$, $M_{1}$ を Hölder と仮定から示せ。</li>
+    <li>(1)(3) から $|F(\theta)|\le M_{0}^{1-\theta}M_{1}^{\theta}$ を得て、双対性（大問 8）と単関数の稠密性で結論せよ。<strong>複素数を経由しないとこの定理は証明できない</strong>ことに注意すること。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 47</span><span class="ttl">Hausdorff–Young の不等式</span><span class="stars">★★★★☆</span></div>
+  <p class="dep"><b>依存</b>　大問 39, 44, 46</p>
+  <div class="stmt"><span class="tag">主張</span>$1\le p\le2$、$\frac1p+\frac1{p'}=1$ のとき $\|\hat f\|_{p'}\le\|f\|_{p}$。同様に $\mathbb{T}$ 上で $\|\hat f\|_{\ell^{p'}}\le\|f\|_{L^{p}}$（Hausdorff–Young）および $\|f\|_{L^{p'}}\le\|\hat f\|_{\ell^{p}}$。</div>
+  <ol class="items tight">
+    <li>$p=1$（大問 39 (i)）と $p=2$（大問 44）を端点として Riesz–Thorin を適用せよ。</li>
+    <li>$\mathbb{T}$ 版・$\ell^{p}$ 版を同様に導け（測度空間が違うだけであることを確認）。</li>
+    <li>最良定数が $1$ ではないこと（Babenko–Beckner の定数 $(p^{1/p}/p'^{1/p'})^{n/2}$）を述べ、Gauss 関数で等号に近づくことを確かめよ。</li>
+    <li>Young の不等式（大問 40）も Riesz–Thorin から再証明できることを示せ。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 48</span><span class="ttl">Marcinkiewicz の補間定理</span><span class="stars">★★★★★</span></div>
+  <p class="dep"><b>依存</b>　大問 2 ／ $\mathbf{(D\text{-}27)}$, $\mathbf{(T\text{-}7)}$</p>
+  <div class="stmt"><span class="tag">主張</span>$T$ を劣線形作用素（$|T(f+g)|\le|Tf|+|Tg|$）とし、弱 $(p_{0},p_{0})$ 型かつ弱 $(p_{1},p_{1})$ 型（$p_{0}\lt p_{1}\le\infty$）とする。このとき $p_{0}\lt p\lt p_{1}$ に対し $T$ は強 $(p,p)$ 型であり、$\|T\|_{L^{p}\to L^{p}}\le C(p,p_{0},p_{1})M_{0}^{1-\theta}M_{1}^{\theta}$。</div>
+  <ol class="items tight">
+    <li>分布関数による表示 $\displaystyle\|f\|_{p}^{p}=p\int_{0}^{\infty}\lambda^{p-1}d_{f}(\lambda)\,d\lambda$ を Tonelli で示せ。</li>
+    <li>各 $\lambda$ に対し $f=f\mathbf{1}_{|f|\gt c\lambda}+f\mathbf{1}_{|f|\le c\lambda}$ と分け、劣線形性から $d_{Tf}(\lambda)\le d_{Tf_{0}}(\lambda/2)+d_{Tf_{1}}(\lambda/2)$ を示せ。</li>
+    <li>各項に弱型評価を使い、(1) の積分に代入して $\lambda$ について積分せよ。$c$ を最後に最適化せよ。</li>
+    <li>$p_{1}=\infty$ の場合を別途扱い、Riesz–Thorin（大問 46）との違い ― 仮定が弱型でよい代わりに定数が悪くなる、劣線形でよい ― を整理せよ。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 49</span><span class="ttl">Poisson の和公式</span><span class="stars">★★★★☆</span></div>
+  <p class="dep"><b>依存</b>　大問 15, 22, 39</p>
+  <div class="stmt"><span class="tag">主張</span>$f$ が連続で $|f(x)|+|\hat f(x)|\le C(1+|x|)^{-1-\delta}$（$\delta\gt0$）をみたすならば
+  $$\sum_{n\in\mathbb{Z}}f(x+n)=\sum_{k\in\mathbb{Z}}\hat f(k)e^{2\pi ikx},\qquad\text{とくに}\quad\sum_{n}f(n)=\sum_{k}\hat f(k).$$
+  一般に $T\gt0$ に対し $\displaystyle\sum_{n}f(x+nT)=\frac1T\sum_{k}\hat f\!\left(\frac kT\right)e^{2\pi ikx/T}$。</div>
+  <ol class="items tight">
+    <li>$F(x)=\sum_{n}f(x+n)$ が絶対一様収束し、周期 $1$ の連続関数であることを示せ。</li>
+    <li>$F$ の Fourier 係数が $\hat f(k)$ であることを、項別積分（一様収束）で示せ。</li>
+    <li>$\sum_{k}|\hat f(k)|\lt\infty$ から、$F$ の Fourier 級数が $F$ に一様収束することを示し（大問 15 (ii), 22）、$x=0$ とおけ。</li>
+    <li>仮定を落とすと等号が破れうること（両辺が収束しても一致しない例が存在すること）を述べ、$\mathcal{S}$ に属する $f$ については無条件で成り立つことを確かめよ。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 50</span><span class="ttl">θ 関数の変換公式</span><span class="stars">★★★★☆</span></div>
+  <p class="dep"><b>依存</b>　大問 41, 49</p>
+  <div class="stmt"><span class="tag">主張</span>$\displaystyle\theta(t)=\sum_{n\in\mathbb{Z}}e^{-\pi n^{2}t}$（$t\gt0$）は $\displaystyle\theta\!\left(\frac1t\right)=\sqrt{t}\,\theta(t)$ をみたす。したがって $t\to0^{+}$ で $\theta(t)=t^{-1/2}+O\!\left(t^{-1/2}e^{-\pi/t}\right)$。</div>
+  <ol class="items tight">
+    <li>$f(x)=e^{-\pi tx^{2}}$ の Fourier 変換を大問 41 から求めよ。</li>
+    <li>Poisson の和公式（大問 49）を適用して変換公式を得よ。仮定の検証を省略しないこと。</li>
+    <li>漸近評価を導け。</li>
+    <li>応用：$\displaystyle\pi^{-s/2}\Gamma\!\left(\frac s2\right)\zeta(s)=\int_{0}^{\infty}t^{\frac s2-1}\frac{\theta(t)-1}{2}dt$ を示し、積分を $\int_{0}^{1}+\int_{1}^{\infty}$ に分けて (2) を使うことで、$\xi(s)=\xi(1-s)$（Riemann ゼータの関数等式）を導け。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 51</span><span class="ttl">標本化定理（Shannon–Whittaker）</span><span class="stars">★★★★☆</span></div>
+  <p class="dep"><b>依存</b>　大問 23, 24, 44, 49</p>
+  <div class="stmt"><span class="tag">主張</span>$f\in L^{2}(\mathbb{R})$ の $\hat f$ が $[-W,W]$ に台をもつならば、$f$ は連続関数に修正でき、
+  $$f(x)=\sum_{n\in\mathbb{Z}}f\!\left(\frac{n}{2W}\right)\operatorname{sinc}(2Wx-n),\qquad\operatorname{sinc}u=\frac{\sin\pi u}{\pi u}$$
+  が $L^{2}$ かつ広義一様に成り立つ。また $\displaystyle\|f\|_{2}^{2}=\frac{1}{2W}\sum_{n}\left|f\!\left(\frac{n}{2W}\right)\right|^{2}$。</div>
+  <ol class="items tight">
+    <li>$\hat f\in L^{2}[-W,W]\subset L^{1}[-W,W]$ を確かめ、反転公式から $f$ が連続であることを示せ。</li>
+    <li>$\hat f$ を $[-W,W]$ 上の周期関数とみなして Fourier 級数展開し、その係数が $\frac{1}{2W}f\left(\frac{n}{2W}\right)$ であることを示せ。</li>
+    <li>級数を反転公式に代入し、項別積分の正当性（$L^{2}$ 収束）を確かめて補間公式を得よ。</li>
+    <li>$\{\sqrt{2W}\operatorname{sinc}(2Wx-n)\}$ が帯域制限空間の完全正規直交系であることを示し、ノルム等式を導け。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 52</span><span class="ttl">Paley–Wiener の定理</span><span class="stars">★★★★★</span></div>
+  <p class="dep"><b>依存</b>　大問 42, 44</p>
+  <div class="stmt"><span class="tag">主張</span>$f\in L^{2}(\mathbb{R})$ について次は同値。(a) $\operatorname{supp}\hat f\subset[-W,W]$。(b) $f$ は $\mathbb{C}$ 上の整関数に拡張され、$|f(z)|\le Ce^{2\pi W|\operatorname{Im}z|}$（指数型 $2\pi W$）かつ $f|_{\mathbb{R}}\in L^{2}$。</div>
+  <ol class="items tight">
+    <li>(a)$\Rightarrow$(b)：$f(z)=\int_{-W}^{W}\hat f(\xi)e^{2\pi iz\xi}d\xi$ が整関数であることを Morera の定理（または級数展開）で示し、増大度を評価せよ。</li>
+    <li>(b)$\Rightarrow$(a)：$g_{y}(x)=f(x+iy)$ の Fourier 変換が $e^{-2\pi y\xi}\hat f(\xi)$ であることを、Cauchy の定理で長方形経路を動かして示せ。</li>
+    <li>$|\hat f(\xi)|e^{2\pi y\xi}$ の有界性から、$|\xi|\gt W$ で $\hat f=0$ を結論せよ（$y\to\pm\infty$）。</li>
+    <li>系：非自明な帯域制限関数はコンパクト台をもてない（時間制限と帯域制限は両立しない）。これを大問 91, 92 の不確定性原理と比較せよ。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 53</span><span class="ttl">Bernstein の不等式（帯域制限関数）</span><span class="stars">★★★★☆</span></div>
+  <p class="dep"><b>依存</b>　大問 51, 52</p>
+  <div class="stmt"><span class="tag">主張</span>$\hat f$ の台が $[-W,W]$ に含まれるならば、$1\le p\le\infty$ に対し $\|f'\|_{p}\le2\pi W\|f\|_{p}$。定数は最良。</div>
+  <ol class="items tight">
+    <li>$\hat f$ の台を含む滑らかなカットオフ $\psi$（$[-W,W]$ 上 $1$、$[-2W,2W]$ の外で $0$）をとり、$f=f*\Psi$（$\Psi=\check\psi$）と書けることを示せ。</li>
+    <li>$f'=f*\Psi'$ と Young の不等式（大問 40）から $\|f'\|_{p}\le\|\Psi'\|_{1}\|f\|_{p}$ を得よ。この方法で得られる定数を評価せよ。</li>
+    <li>最良定数 $2\pi W$ を得るには、$\operatorname{sinc}$ による補間公式（大問 51）の微分版
+      $f'(x)=2\pi W\sum_{n}(-1)^{n+1}\frac{f(x_{n})}{\pi(n-\frac12)^{2}}$ 型の恒等式を使う。これを導け。</li>
+    <li>$f(x)=\sin(2\pi Wx)$ で等号が達成されることを確かめよ。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 54</span><span class="ttl">Wiener の補題</span><span class="stars">★★★★★</span></div>
+  <p class="dep"><b>依存</b>　大問 13, 22</p>
+  <div class="stmt"><span class="tag">主張</span>$A(\mathbb{T})=\{f:\sum_{n}|\hat f(n)|\lt\infty\}$（Wiener 環）とする。$f\in A(\mathbb{T})$ が $\mathbb{T}$ 上で零点をもたないならば $1/f\in A(\mathbb{T})$。</div>
+  <ol class="items tight">
+    <li>$A(\mathbb{T})$ が $\|f\|_{A}=\sum|\hat f(n)|$ を norm として可換 Banach 環（$\|fg\|_{A}\le\|f\|_{A}\|g\|_{A}$）になることを示せ。</li>
+    <li>局所化：各点 $x_{0}$ の近傍で $f$ を定数 $f(x_{0})$ で近似し、$\|g\|_{A}\lt1$ なる $g$ に対する幾何級数 $\sum g^{k}$ の収束から、$x_{0}$ の近傍で $1/f$ に一致する $A(\mathbb{T})$ の元を構成せよ。</li>
+    <li>$1$ の分割（$A(\mathbb{T})$ に属する山型関数の有限和）でこれらを貼り合わせ、大域的な $1/f\in A(\mathbb{T})$ を作れ。</li>
+    <li>別証明の概略：Gelfand 理論で $A(\mathbb{T})$ の極大イデアル空間が $\mathbb{T}$ に一致することを示す、という筋を説明せよ。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 55</span><span class="ttl">Bochner の定理</span><span class="stars">★★★★★</span></div>
+  <p class="dep"><b>依存</b>　大問 27, 41, 42</p>
+  <div class="stmt"><span class="tag">主張</span>$\varphi:\mathbb{R}\to\mathbb{C}$ が連続かつ正定値（任意の $x_{1},\dots,x_{m}$、$c_{1},\dots,c_{m}\in\mathbb{C}$ に対し $\sum_{j,k}c_{j}\overline{c_{k}}\varphi(x_{j}-x_{k})\ge0$）であることと、ある有限正測度 $\mu$ が存在して $\varphi(x)=\hat\mu(-x)=\int e^{2\pi ix\xi}d\mu(\xi)$ となることは同値。</div>
+  <ol class="items tight">
+    <li>「$\Leftarrow$」を直接計算で示せ（$\left|\sum c_{j}e^{2\pi ix_{j}\xi}\right|^{2}\ge0$）。</li>
+    <li>「$\Rightarrow$」：正定値性から $\varphi(0)\ge0$、$\varphi(-x)=\overline{\varphi(x)}$、$|\varphi|\le\varphi(0)$ を導け。</li>
+    <li>$\displaystyle\Phi_{\varepsilon}(\xi)=\int\!\!\int\varphi(x-y)e^{-2\pi i(x-y)\xi}e^{-\pi\varepsilon(x^{2}+y^{2})}dxdy\ge0$ を示し、これが $\varepsilon\to0$ で $\varphi$ の「スペクトル密度」に近づくことを確かめよ。</li>
+    <li>$\Phi_{\varepsilon}\,d\xi$ の全質量が $\varphi(0)$ で一様に抑えられることから、Helly の選出定理（弱 $*$ コンパクト性）で測度 $\mu$ を取り出し、反転公式で $\varphi=\hat\mu$ を結論せよ。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 56</span><span class="ttl">Wiener のタウバー型定理</span><span class="stars">★★★★★</span></div>
+  <p class="dep"><b>依存</b>　大問 40, 43, 54</p>
+  <div class="stmt"><span class="tag">主張</span>$f\in L^{1}(\mathbb{R})$ とする。$\hat f$ が零点をもたないことと、平行移動の張る空間 $\operatorname{span}\{\tau_{h}f:h\in\mathbb{R}\}$ が $L^{1}(\mathbb{R})$ で稠密であることは同値。系（タウバー型定理）：$g\in L^{\infty}$、$f\in L^{1}$、$\hat f$ が零点をもたず、$(f*g)(x)\to A\int f$（$x\to\infty$）ならば、任意の $k\in L^{1}$ に対し $(k*g)(x)\to A\int k$。</div>
+  <ol class="items tight">
+    <li>閉平行移動不変部分空間 $I\subset L^{1}$ が畳み込みイデアルであることを示せ。</li>
+    <li>$I\neq L^{1}$ なら、大問 8 により $0\neq g\in L^{\infty}$ が $I$ を消すことを示し、$g$ の「スペクトル」$\{\xi:\hat f(\xi)=0\ \forall f\in I\}$ が空でないことを導け（ここで Wiener の補題（大問 54）の局所版が効く）。</li>
+    <li>逆向き（$\hat f$ が零点をもてば稠密でない）を示せ。</li>
+    <li>系を、$k$ を「$\hat f$ が消えない近傍で $\hat k/\hat f$ が良い」ように選んで近似することで導け。応用として大問 99（素数定理）に繋がることを確認せよ。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 57</span><span class="ttl">Hardy–Littlewood–Sobolev の不等式</span><span class="stars">★★★★★</span></div>
+  <p class="dep"><b>依存</b>　大問 48, 60</p>
+  <div class="stmt"><span class="tag">主張</span>$0\lt\alpha\lt n$、$1\lt p\lt q\lt\infty$、$\frac1q=\frac1p-\frac{\alpha}{n}$ のとき、Riesz ポテンシャル
+  $\displaystyle I_{\alpha}f(x)=\int_{\mathbb{R}^{n}}\frac{f(y)}{|x-y|^{n-\alpha}}dy$
+  は $\|I_{\alpha}f\|_{q}\le C\|f\|_{p}$ をみたす。$p=1$ では強型は成り立たず、弱 $(1,\frac{n}{n-\alpha})$ 型のみが成り立つ。</div>
+  <ol class="items tight">
+    <li>核を $|x-y|\lt R$ と $\ge R$ に分け、前者を極大関数（大問 60）で、後者を Hölder で評価せよ。</li>
+    <li>$R$ を $f$ と $x$ に応じて最適化し、点ごとの不等式 $|I_{\alpha}f(x)|\lesssim(Mf(x))^{1-\frac{\alpha p}{n}}\|f\|_{p}^{\frac{\alpha p}{n}}$ を導け。</li>
+    <li>(2) と極大不等式から $L^{p}\to L^{q}$ 有界性（$p\gt1$）を結論せよ。</li>
+    <li>スケーリング $f\mapsto f(\lambda\cdot)$ で指数関係 $\frac1q=\frac1p-\frac\alpha n$ が<strong>必然</strong>であることを示し、$p=1$ で強型が破れる例を挙げよ。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 58</span><span class="ttl">$\mathcal{F}$ は $L^{p}\to L^{p}$ に有界でない</span><span class="stars">★★★★☆</span></div>
+  <p class="dep"><b>依存</b>　大問 39, 44, 47</p>
+  <div class="stmt"><span class="tag">主張</span>$p\neq2$ のとき、$\|\hat f\|_{p}\le C\|f\|_{p}$ をみたす定数 $C$ は存在しない。また $p\gt2$ のとき、$\|\hat f\|_{q}\le C\|f\|_{p}$ が成り立つ $q$ も存在しない。</div>
+  <ol class="items tight">
+    <li>スケーリング $f_{\lambda}(x)=f(\lambda x)$ に対し $\|f_{\lambda}\|_{p}$, $\|\widehat{f_{\lambda}}\|_{q}$ が $\lambda$ にどう依存するかを計算し、$\|\hat f\|_{q}\le C\|f\|_{p}$ が可能なのは $\frac1p+\frac1q=1$ のときに限ることを示せ。</li>
+    <li>$p\gt2$（したがって $q\lt2$）で不等式が破れることを、Gauss 関数の複素パラメータ版 $e^{-(a+ib)\pi x^{2}}$（$a\to0$）を使って示せ。</li>
+    <li>$\mathbb{T}$ 上・$\mathbb{Z}$ 上ではどうなるか（$\ell^{p}$ は $p$ が大きいほど大きい・小さい、という包含の向きの違い）を整理せよ。</li>
+    <li>結論として、Hausdorff–Young（大問 47）の範囲 $1\le p\le2$ が<strong>最良</strong>であることを述べよ。</li>
+  </ol>
+</div>

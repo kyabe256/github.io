@@ -1,0 +1,62 @@
+<h2 class="plain">付録 A　学習ルートと依存関係</h2>
+
+<p>100 問を順に解くのが王道だが、時間と目的に応じていくつかの通り方がある。</p>
+
+<h3 class="sec">A-1　三つのルート</h3>
+<table class="legend">
+  <tr><th>最短ルート<br>（約 30 問）</th><td>1 → 2 → 3 → 4 → 5 → 6 → 9 → 12 → 13 → 14 → 16 → 17 → 18 → 20 → 21 → 22 → 23 → 24 → 39 → 40 → 41 → 42 → 43 → 44 → 49 → 51 → 59 → 60 → 61 → 62<br>
+    <span style="color:#6b7280">「Fourier 級数と Fourier 変換の基本定理を全部証明した」と言える最小構成。ここまでで標準的な学部講義 1 年分。</span></td></tr>
+  <tr><th>解析学ルート<br>（+25 問）</th><td>上に 10 → 11 → 31 → 32 → 37 → 46 → 47 → 48 → 63 → 64 → 65 → 66 → 67 → 68 → 69 → 70 → 71 → 73 → 74 → 76 → 77 → 78 → 90 → 57 → 80 を追加<br>
+    <span style="color:#6b7280">Calderón–Zygmund 理論と Sobolev 空間まで。大学院の調和解析・偏微分方程式の講義に対応。</span></td></tr>
+  <tr><th>完走ルート<br>（100 問）</th><td>1 から 100 まで順に。第 III 部（病理）・第 VII 部（群）・第 VIII 部（到達点）が加わる。<br>
+    <span style="color:#6b7280">週 10 時間で 1 年弱。終えたときには、調和解析の現代的な論文の導入部が読めるようになっている。</span></td></tr>
+</table>
+
+<h3 class="sec">A-2　主要な依存関係（これだけは順序を守ること）</h3>
+<table class="legend">
+  <tr><th>Baire 系</th><td>10（Baire）→ 11（一様有界性）→ 31, 32（発散例）→ 38（Stein の最大原理）→ 43 (2)</td></tr>
+  <tr><th>近似単位元系</th><td>9（平行移動連続）→ 12（Minkowski 積分不等式・近似定理）→ 20（Fejér）, 27（Poisson）, 41（Gauss）→ 42（反転）→ 44（Plancherel）</td></tr>
+  <tr><th>極大関数系</th><td>59（Vitali）→ 60（HL 極大）→ 61（Lebesgue 微分）→ 62, 63（a.e. 収束）→ 64（CZ 分解）→ 65 → 67（M. Riesz）</td></tr>
+  <tr><th>補間系</th><td>2（Hölder）→ 8（双対）→ 46（Riesz–Thorin）, 48（Marcinkiewicz）→ 47, 57, 65, 68</td></tr>
+  <tr><th>収束問題の完済</th><td>16（Lebesgue 定数）→ 31（発散）／ 37（$L^{p}$ 有界性の還元）→ 66 → 67（完済）</td></tr>
+  <tr><th>Poisson 和公式系</th><td>49 → 50（θ・ζ の関数等式）, 51（標本化）, 72（Dirac 櫛）, 92（Benedicks）</td></tr>
+  <tr><th>整関数系</th><td>52（Paley–Wiener）→ 53, 91（Hardy）, 94（Landau）</td></tr>
+  <tr><th>数論への道</th><td>84（有限群）→ 88（Weyl）→ 100（Roth）／ 56, 98（タウバー型）→ 99（素数定理）</td></tr>
+</table>
+
+<h3 class="sec">A-3　詰まったときの三つの質問</h3>
+<ul class="plain">
+  <li><strong>「定義に戻ったか？」</strong>　第 0 章の番号を引いて、記号の意味を声に出して言えるか確かめる。証明が書けない原因の半分はここにある。</li>
+  <li><strong>「良い関数で示したか？」</strong>　$C_{c}^{\infty}$ や $\mathcal{S}$ や三角多項式で先に示し、稠密性＋有界性で延ばす ― この二段構えが本書の証明の 7 割を占める。</li>
+  <li><strong>「核の形を見たか？」</strong>　収束の問題は核（$D_{N}$, $K_{N}$, $P_{r}$, $H_{t}$, $\varphi_{\varepsilon}$）の符号・$L^{1}$ ノルム・優関数の三点に帰着する。</li>
+</ul>
+
+<h2 class="plain">付録 B　参考書対応表</h2>
+<table class="legend">
+  <tr><th>第 0 章</th><td>W. Rudin, <em>Real and Complex Analysis</em> 第 1–3 章／伊藤清三『ルベーグ積分入門』／ Folland, <em>Real Analysis</em> 第 1–6 章。測度論をゼロから学ぶなら伊藤、辞書として使うなら Folland。</td></tr>
+  <tr><th>第 I 部</th><td>Rudin, <em>Functional Analysis</em> 第 1–5 章／ Brezis『関数解析』第 1–5 章。大問 8（$L^{p}$ の双対）は Folland 6.2、大問 10, 11 は Rudin FA 第 2 章。</td></tr>
+  <tr><th>第 II・III 部</th><td>Y. Katznelson, <em>An Introduction to Harmonic Analysis</em> 第 I–II 章（本書第 II・III 部はほぼこの本の構成）／ Zygmund, <em>Trigonometric Series</em>（辞書、大問 33, 35, 36, 97 の原典級）／ Stein–Shakarchi, <em>Fourier Analysis</em>（読みやすい導入）。</td></tr>
+  <tr><th>第 IV 部</th><td>Stein–Weiss, <em>Introduction to Fourier Analysis on Euclidean Spaces</em> 第 I–V 章／ Grafakos, <em>Classical Fourier Analysis</em> 第 1–2 章（補間定理は 1.3）／ Katznelson 第 VI 章（Wiener の定理）。</td></tr>
+  <tr><th>第 V 部</th><td>Stein, <em>Singular Integrals and Differentiability Properties of Functions</em> 第 I–IV 章／ Grafakos 第 4–6 章／ Duoandikoetxea, <em>Fourier Analysis</em>（最もコンパクト）。</td></tr>
+  <tr><th>第 VI 部</th><td>Hörmander, <em>The Analysis of Linear PDO I</em> 第 7 章（超関数）／ Evans, <em>PDE</em> 第 2, 5, 7 章／ Tao, <em>Nonlinear Dispersive Equations</em> 第 2 章（大問 79）。</td></tr>
+  <tr><th>第 VII 部</th><td>W. Rudin, <em>Fourier Analysis on Groups</em>／ Folland, <em>A Course in Abstract Harmonic Analysis</em>／ Knapp（Peter–Weyl）。</td></tr>
+  <tr><th>第 VIII 部</th><td>Havin–Jöricke, <em>The Uncertainty Principle in Harmonic Analysis</em>（大問 90–94）／ Kahane, <em>Some Random Series of Functions</em>（95）／ Newman, <em>Analytic Number Theory</em>（98, 99）／ Tao–Vu, <em>Additive Combinatorics</em> 第 10–11 章（100）。</td></tr>
+</table>
+
+<h2 class="plain">付録 C　第 0 章の索引</h2>
+<table class="sym">
+  <tr><td class="k">(D-1)–(D-6)</td><td>上限・収束・上極限・級数・一様収束・ランダウ記号</td></tr>
+  <tr><td class="k">(D-7)–(D-13)</td><td>距離空間・開閉集合・位相・連続・コンパクト・完備・台</td></tr>
+  <tr><td class="k">(D-14)–(D-20)</td><td>$\sigma$-加法族・測度・Lebesgue 測度・零集合と a.e.・可測関数・積分の定義・可積分</td></tr>
+  <tr><td class="k">(D-21)–(D-27)</td><td>Banach 空間・$L^{p}$・Hilbert 空間・正規直交系・有界作用素・畳み込み・弱 $L^{p}$</td></tr>
+  <tr><td class="k">(D-28)–(D-36)</td><td>複素指数・円周 $\mathbb{T}$・Fourier 係数と変換・$S_{N},\sigma_{N},A_{r}$・三角多項式・三つの核・近似単位元・Hölder と有界変動・Schwartz 空間</td></tr>
+  <tr><td class="k">(T-1)–(T-3)</td><td>Weierstrass の $M$ 判定法・Heine–Borel・コンパクト上の連続関数</td></tr>
+  <tr><td class="k">(T-4)–(T-10)</td><td>単調収束・Fatou・優収束・Fubini–Tonelli・測度の不変性・Riemann 積分との一致・積分の絶対連続性</td></tr>
+  <tr><td class="k">(T-11)–(T-12)</td><td>$C_{c}$ の稠密性・Hölder と Minkowski</td></tr>
+</table>
+
+<div class="colophon">
+  <p><strong>本書について</strong>　全 100 大問、誘導ステップ 約 430。すべて証明問題であり、すべてが名前のついた定理です。第 0 章の定義 36 項目・前提定理 12 項目を除き、本文中で使う事実はすべて本文中で証明されます（言明のみとした Carleson の定理、Radon–Nikodym の定理、Haar 測度の存在、コンパクト作用素のスペクトル定理、有限 Abel 群の構造定理を除く ― これらは該当箇所に明記しました）。</p>
+  <p><strong>解答について</strong>　収録していません。各大問の誘導が、そのまま証明の骨格です。詰まったら付録 A-3 の三つの質問に戻り、それでも進まなければ付録 B の対応箇所を開いてください。ただし ― <strong>見る前に、必ず一晩寝かせること。</strong>翌朝に解ける問題が、驚くほど多くあります。</p>
+  <p><strong>誤りについて</strong>　書き下ろしのオリジナル問題です。主張はすべて古典的な定理ですが、誘導の付け方や難易度の見積もりには著者の判断が入っています。証明が誘導どおりに進まないときは、まず自分の計算を疑い、次に本書を疑い、最後に付録 B の原典に当たってください。その三段階そのものが、数学の訓練です。</p>
+</div>

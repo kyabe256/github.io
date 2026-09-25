@@ -1,0 +1,108 @@
+<h2 class="part">第 III 部　収束の病理<span class="en">PATHOLOGIES &mdash; PROBLEMS 31–38</span></h2>
+<p class="part-lead">「連続関数の Fourier 級数は収束するに決まっている」― Fourier も Dirichlet もそう信じた。1876 年、du Bois-Reymond がそれを壊す。ここでは反例を作り、どこまでなら救えるかを見極め、最後に Riemann–Cantor の一意性定理という美しい反転を迎える。</p>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 31</span><span class="ttl">du Bois-Reymond ― 発散する連続関数</span><span class="stars">★★★★☆</span></div>
+  <p class="dep"><b>依存</b>　大問 11, 16</p>
+  <div class="stmt"><span class="tag">主張</span>$S_{N}f(0)$ が発散する $f\in C(\mathbb{T})$ が存在する。より強く、任意に与えた点 $x_{0}$ について、$\limsup_{N}|S_{N}f(x_{0})|=\infty$ となる $f\in C(\mathbb{T})$ が存在する。</div>
+  <ol class="items tight">
+    <li>$\Lambda_{N}:C(\mathbb{T})\to\mathbb{C}$, $\Lambda_{N}f=S_{N}f(0)$ が有界線形汎関数で $\|\Lambda_{N}\|=L_{N}$ であることを示せ（大問 16 (4)）。</li>
+    <li>$L_{N}\to\infty$ と一様有界性原理（大問 11 (ii)）から結論せよ。</li>
+    <li>この証明は「存在」しか言わない。実際に $f$ を書き下すには何が足りないかを述べよ。</li>
+    <li>具体的構成：$\displaystyle f(x)=\sum_{k\ge1}\frac{1}{k^{2}}\sin\bigl(n_{k}x\bigr)\cdot(\text{適当な有限和})$ の形で、$n_{k}=2^{k^{3}}$ 型の急増加列を使って $|S_{n_{k}}f(0)|\gtrsim\log n_{k}/k^{2}\to\infty$ となる例を作れ。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 32</span><span class="ttl">発散はむしろ「ふつう」である</span><span class="stars">★★★★☆</span></div>
+  <p class="dep"><b>依存</b>　大問 10, 11, 31</p>
+  <div class="stmt"><span class="tag">主張</span>(i) $E=\{f\in C(\mathbb{T}):\limsup_{N}|S_{N}f(0)|=\infty\}$ は $C(\mathbb{T})$ の稠密な $G_{\delta}$ 集合である（＝ Baire の意味で「ほとんどすべての」連続関数）。(ii) さらに、ある一つの $f\in C(\mathbb{T})$ に対して発散点の集合が $\mathbb{T}$ で稠密な $G_{\delta}$（したがって非可算）となるようにできる。</div>
+  <ol class="items tight">
+    <li>(i)：$E=\bigcap_{m}\bigcup_{N}\{f:|S_{N}f(0)|\gt m\}$ と書き、各集合が開であることを示せ。</li>
+    <li>稠密性を、大問 11 (ii) または「三角多項式＋小さい摂動」で示せ。</li>
+    <li>(ii)：可算稠密集合 $\{x_{j}\}$ をとり、各 $x_{j}$ に対する $E_{j}$ の共通部分が空でないことを Baire から示せ。</li>
+    <li>一方、Carleson の定理（$f\in L^{2}$ なら a.e. 収束、証明は本書の範囲外）により、発散点の集合は測度 $0$ でなければならない。「Baire の意味で大きい」と「測度の意味で小さい」が両立することを、具体例で納得せよ。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 33</span><span class="ttl">Kolmogorov の例 ― 至る所発散する $L^{1}$ 関数</span><span class="stars">★★★★★</span></div>
+  <p class="dep"><b>依存</b>　大問 16, 31</p>
+  <div class="stmt"><span class="tag">主張</span>$f\in L^{1}(\mathbb{T})$、$f\ge0$ で、そのFourier 級数が<strong>至る所</strong>発散するものが存在する（Kolmogorov, 1926）。</div>
+  <ol class="items tight">
+    <li>まず「核の構成」：各 $n$ に対し、$\mu_{n}=\frac1n\sum_{j=1}^{n}\delta_{a_{j}}$（$a_{j}=2\pi j/n$）型の離散測度を滑らかにした $f_{n}\ge0$、$\int_{\mathbb{T}}f_{n}=1$ で、
+      $$\max_{N\le N_{n}}|S_{N}f_{n}(x)|\ge c\log n\qquad(\forall x\in\mathbb{T})$$
+      となるものが作れることを示せ。（$D_{N}$ の主要部 $\frac{\sin(Nt)}{t}$ を、$n$ 個の等間隔デルタに対して足し上げると $\log n$ の増大が全点で得られる、というのが核心である。）</li>
+    <li>(1) の $f_{n}$ に対し、$N$ の選び方が $x$ に依存してよい点が本質である。この「各点ごとに違う $N$」をどう扱うかを整理せよ。</li>
+    <li>$f=\sum_{k}\lambda_{k}f_{n_{k}}(\cdot-\theta_{k})$（$\lambda_{k}\gt0$, $\sum\lambda_{k}=1$、$n_{k}$ は急増加）とおき、$\lambda_{k}\log n_{k}\to\infty$ かつ他の項の寄与が小さくなるようにパラメータを選べ。</li>
+    <li>各 $x$ で $\limsup_{N}|S_{N}f(x)|=\infty$ を結論せよ。さらに、この $f$ は $L^{1}$ に属するが $L\log L$ には属さないこと（Hunt の定理との整合）を述べよ。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 34</span><span class="ttl">Menshov–Rademacher の定理</span><span class="stars">★★★★★</span></div>
+  <p class="dep"><b>依存</b>　大問 23, 24</p>
+  <div class="stmt"><span class="tag">主張</span>$\sum_{n}|c_{n}|^{2}\log^{2}(n+2)\lt\infty$ ならば、直交級数 $\sum c_{n}\varphi_{n}$（$\{\varphi_{n}\}$ は任意の正規直交系）は a.e. 収束する。とくに三角級数について、この条件のもとで a.e. 収束が保証される。</div>
+  <ol class="items tight">
+    <li>二進ブロック分解：部分和 $s_{N}$ の最大値 $\max_{2^{k}\le N\lt2^{k+1}}|s_{N}-s_{2^{k}}|$ を、二進木に沿って $\log$ 段の和として評価する方針を立てよ。</li>
+    <li>Rademacher–Menshov の最大不等式
+      $\displaystyle\Bigl\|\max_{N\le n}|s_{N}|\Bigr\|_{2}\le C\log(n+1)\Bigl(\sum_{k\le n}|c_{k}|^{2}\Bigr)^{1/2}$
+      を、(1) の分解と三角不等式から示せ。</li>
+    <li>(2) と Chebyshev の不等式・Borel–Cantelli により、ブロックごとの最大値が a.e. で $0$ に収束することを示せ。</li>
+    <li>$\log^{2}$ が最良であること（Menshov の反例の存在）を述べ、三角系に限れば Carleson により $\log$ すら不要になることと比較せよ。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 35</span><span class="ttl">Riemann の第一・第二定理（形式的二重積分）</span><span class="stars">★★★★★</span></div>
+  <p class="dep"><b>依存</b>　大問 28</p>
+  <div class="stmt"><span class="tag">主張</span>三角級数 $\sum_{n\in\mathbb{Z}}c_{n}e^{inx}$ の係数が $c_{n}\to0$ をみたすとする。
+  $$F(x):=\frac{c_{0}x^{2}}{2}-\sum_{n\neq0}\frac{c_{n}}{n^{2}}e^{inx}$$
+  は $\mathbb{R}$ 上連続（絶対一様収束）であり、次が成り立つ。
+  <strong>(第一定理)</strong> 級数が点 $x$ で $s$ に収束するならば、二階対称微分
+  $\displaystyle D^{2}F(x)=\lim_{h\to0}\frac{F(x+h)+F(x-h)-2F(x)}{h^{2}}=s$。
+  <strong>(第二定理)</strong> 一様に $\displaystyle\frac{F(x+h)+F(x-h)-2F(x)}{h}\to0$（$h\to0$）。</div>
+  <ol class="items tight">
+    <li>$c_{n}\to0$ から $F$ の級数が一様収束することを示せ。</li>
+    <li>$\displaystyle\frac{F(x+h)+F(x-h)-2F(x)}{h^{2}}=c_{0}+\sum_{n\neq0}c_{n}e^{inx}\left(\frac{\sin(nh/2)}{nh/2}\right)^{2}$ を示せ。</li>
+    <li>重み $\left(\frac{\sin u}{u}\right)^{2}$ が「良い総和法（Riemann 総和法）」であること ― 収束級数に対して和を保つこと ― を、Abel 変形と重みの単調性・有界変動性から示せ。これが第一定理である。</li>
+    <li>第二定理を、$\left|\frac{\sin^{2}(nh/2)}{n^{2}h/4}\right|\le\min(|h|,\frac{1}{n^{2}|h|})$ 型の評価と $c_{n}\to0$ から示せ。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 36</span><span class="ttl">Cantor の一意性定理</span><span class="stars">★★★★★</span></div>
+  <p class="dep"><b>依存</b>　大問 28, 35</p>
+  <div class="stmt"><span class="tag">主張</span><strong>(Schwarz の補題)</strong> $F$ が区間上連続で、至る所 $D^{2}F=0$ ならば $F$ は一次関数である。<strong>(Cantor, 1870)</strong> 三角級数 $\sum c_{n}e^{inx}$ が<strong>すべての</strong> $x$ で $0$ に収束するならば、すべての $n$ で $c_{n}=0$。</div>
+  <ol class="items tight">
+    <li>Schwarz の補題：$G_{\varepsilon}(x)=F(x)-\ell(x)+\varepsilon x^{2}$（$\ell$ は両端で $F$ に一致する一次関数）に最大値原理型の議論を適用し、$\varepsilon\to0$ とせよ。</li>
+    <li>大問 28 より $c_{n}\to0$。よって大問 35 が使え、$D^{2}F\equiv0$ が従うことを確かめよ。</li>
+    <li>Schwarz の補題から $F(x)=ax+b$。一方 $F$ の定義式は $c_{0}x^{2}/2$ と周期関数の和であった。両者を比較して $c_{0}=0$、$a=0$ を導け。</li>
+    <li>残った周期関数 $\sum_{n\neq0}\frac{c_{n}}{n^{2}}e^{inx}=-b$ の Fourier 係数を計算して $c_{n}=0$ を結論せよ。さらに「可算集合を除いて収束すれば同じ結論」（Cantor–Young）へ拡張する方針を述べよ。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 37</span><span class="ttl">$S_{N}$ の $L^{p}$ 一様有界性と共役関数</span><span class="stars">★★★★★</span></div>
+  <p class="dep"><b>依存</b>　大問 13, 23</p>
+  <div class="stmt"><span class="tag">主張</span>Riesz 射影 $P_{+}f:=\sum_{n\ge0}\hat f(n)e^{inx}$、共役作用素 $\tilde{}\,:f\mapsto\sum_{n}(-i\operatorname{sgn}n)\hat f(n)e^{inx}$ とおく。次は同値である。(a) $\sup_{N}\|S_{N}\|_{L^{p}\to L^{p}}\lt\infty$。(b) $P_{+}$ は $L^{p}$ で有界。(c) $f\mapsto\tilde f$ は $L^{p}$ で有界。さらに、これらが成り立つとき $\|S_{N}f-f\|_{p}\to0$（$\forall f\in L^{p}$）が従う。</div>
+  <ol class="items tight">
+    <li>恒等式 $S_{N}f=e^{iNx}P_{+}\!\left(e^{-iNx}f\right)-e^{i(N+1)x}P_{+}\!\left(e^{-i(N+1)x}f\right)$ を係数の比較で示せ。</li>
+    <li>$P_{+}=\frac{1}{2}\left(I+i\,\tilde{}\,\right)+\frac12\hat f(0)$ 型の関係式を正確に書き、(b)$\iff$(c) を示せ。</li>
+    <li>(1)(2) から (b)$\Rightarrow$(a)、(a)$\Rightarrow$(b)（$N\to\infty$ と変調の極限）を示せ。</li>
+    <li>最後の主張を、三角多項式の稠密性（大問 21）と一様有界性から導け（$3\varepsilon$ 論法）。これで「$L^{p}$ 収束問題は Hilbert 変換の有界性ひとつに帰着した」ことになる ― その証明は大問 67 で行う。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 38</span><span class="ttl">Stein の最大原理</span><span class="stars">★★★★★</span></div>
+  <p class="dep"><b>依存</b>　大問 11, 23 ／ $\mathbf{(T\text{-}5)}$</p>
+  <div class="stmt"><span class="tag">主張</span>$1\le p\le2$ とする。$\{T_{n}\}$ を $L^{p}(\mathbb{T})$ 上の有界線形作用素の列で、平行移動と可換とする。すべての $f\in L^{p}$ に対し $T_{n}f$ が a.e. 収束するならば、極大作用素 $T^{*}f=\sup_{n}|T_{n}f|$ は弱 $(p,p)$ 型である。すなわち「各点収束が成り立つなら、必ず極大不等式が背後にある」。</div>
+  <ol class="items tight">
+    <li>もし $T^{*}$ が弱型でなければ、$\|f_{k}\|_{p}$ が小さいのに $|\{T^{*}f_{k}\gt\lambda\}|$ が $0$ に行かない列がとれることを示せ。</li>
+    <li>ランダムな平行移動 $f=\sum_{j}\pm f_{k}(\cdot-\theta_{j})$ を考え、Khinchin の不等式
+      $\left(\mathbb{E}\left|\sum\varepsilon_{j}a_{j}\right|^{p}\right)^{1/p}\asymp\left(\sum|a_{j}|^{2}\right)^{1/2}$（$\varepsilon_{j}$ は独立な $\pm1$）を述べ、$p\le2$ のとき $\|f\|_{p}$ が小さく保てることを示せ。</li>
+    <li>一方、独立に選ばれた平行移動により $T^{*}f$ が正測度の集合で大きくなり、$T_{n}f$ が a.e. 収束しないことを導け（Borel–Cantelli）。</li>
+    <li>矛盾から主張を結論し、「$p\gt2$ では成り立たない」理由（Khinchin の向きが逆になる）を述べよ。系として、Carleson の定理を示すには極大作用素 $S^{*}$ の弱 $(2,2)$ 評価が<strong>必要</strong>であることを結論せよ。</li>
+  </ol>
+</div>

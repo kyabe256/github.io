@@ -1,0 +1,150 @@
+<h2 class="part">第 VI 部　超関数・Sobolev 空間・偏微分方程式<span class="en">DISTRIBUTIONS, SOBOLEV SPACES, PDE &mdash; PROBLEMS 69–80</span></h2>
+<p class="part-lead">$\delta$ や $1$ の Fourier 変換を許す枠組みを作ると、Fourier 解析は完成形になる。そこで微分は $\xi$ を掛ける操作になり、偏微分方程式は代数方程式になる。Fourier がそもそも熱伝導のために始めた道具が、ここで一巡して戻ってくる。</p>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 69</span><span class="ttl">緩増加超関数</span><span class="stars">★★★☆☆</span></div>
+  <p class="dep"><b>依存</b>　大問 45 ／ $\mathbf{(D\text{-}36)}$</p>
+  <div class="stmt"><span class="tag">主張</span>$\mathcal{S}'(\mathbb{R}^{n})$ を $\mathcal{S}$ 上の連続線形汎関数全体とする。(i) $L^{p}$ 関数（$1\le p\le\infty$）、多項式増大の可測関数、有限測度、$\delta_{a}$ はすべて $\mathcal{S}'$ の元を定める。(ii) $\mathrm{pv}\frac1x$ は $\mathcal{S}'(\mathbb{R})$ の元。(iii) 微分 $\langle\partial^{\beta}T,\varphi\rangle=(-1)^{|\beta|}\langle T,\partial^{\beta}\varphi\rangle$、多項式倍、平行移動は $\mathcal{S}'$ 上の連続作用素。(iv) $\mathcal{S}$ は $\mathcal{S}'$ で（弱 $*$ の意味で）稠密。</div>
+  <ol class="items tight">
+    <li>$\mathcal{S}$ の位相（可算セミノルム族）を書き、$T\in\mathcal{S}'$ であることが「あるセミノルムの有限和で $|\langle T,\varphi\rangle|$ が抑えられる」ことと同値であることを示せ。</li>
+    <li>(i) の各例について、その評価を具体的に与えよ。</li>
+    <li>(ii)：$\int_{|x|\gt\varepsilon}\frac{\varphi(x)}{x}dx=\int_{|x|\lt1}\frac{\varphi(x)-\varphi(0)}{x}dx+\cdots$ と分け、$\varphi$ の 1 次のセミノルムで抑えよ。</li>
+    <li>(iii)(iv) を示し、$\left(\mathrm{pv}\frac1x\right)=\frac{d}{dx}\log|x|$、$\delta=\frac{d}{dx}H$（$H$ は Heaviside）を確かめよ。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 70</span><span class="ttl">超関数の Fourier 変換</span><span class="stars">★★★★☆</span></div>
+  <p class="dep"><b>依存</b>　大問 45, 69</p>
+  <div class="stmt"><span class="tag">主張</span>$\langle\hat T,\varphi\rangle:=\langle T,\hat\varphi\rangle$ は $\mathcal{S}'$ 上の線形同相を定め、$L^{1}$・$L^{2}$ 上の通常の変換の拡張になっている。さらに $\widehat{\partial^{\beta}T}=(2\pi i\xi)^{\beta}\hat T$、$\widehat{x^{\beta}T}=\left(\frac{i}{2\pi}\right)^{|\beta|}\partial^{\beta}\hat T$、$\mathcal{F}^{2}T=T(-\cdot)$。</div>
+  <ol class="items tight">
+    <li>定義が矛盾なく、$\mathcal{F}$ が $\mathcal{S}'\to\mathcal{S}'$ の全単射であることを大問 45 (i) から示せ。</li>
+    <li>$L^{1}$ 関数 $f$ について、$T_{f}$ の超関数的変換が $T_{\hat f}$ に一致することを乗法公式（大問 41 (ii)）から確かめよ。</li>
+    <li>微分則を、$\mathcal{S}$ 側に移して部分積分することで示せ。</li>
+    <li>$\hat\delta=1$、$\hat1=\delta$、$\widehat{\delta_{a}}=e^{-2\pi ia\xi}$、$\widehat{x^{k}}=\left(\frac{i}{2\pi}\right)^{k}\delta^{(k)}$ を計算せよ。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 71</span><span class="ttl">$\mathrm{pv}\frac1x$・$\operatorname{sgn}$・Heaviside の変換</span><span class="stars">★★★★☆</span></div>
+  <p class="dep"><b>依存</b>　大問 66, 70</p>
+  <div class="stmt"><span class="tag">主張</span>$\displaystyle\widehat{\mathrm{pv}\frac1x}(\xi)=-i\pi\operatorname{sgn}\xi$、$\displaystyle\widehat{\operatorname{sgn}}(\xi)=\frac{1}{i\pi}\mathrm{pv}\frac1\xi$、$\displaystyle\hat H=\frac12\delta+\frac{1}{2\pi i}\mathrm{pv}\frac1\xi$。したがって Hilbert 変換は $Hf=\left(\mathrm{pv}\frac{1}{\pi x}\right)*f$ と書け、その乗数は $-i\operatorname{sgn}\xi$（大問 66 と一致）。</div>
+  <ol class="items tight">
+    <li>$\mathrm{pv}\frac1x$ が奇な超関数で、スケーリング $T(\lambda\cdot)=\lambda^{-1}T$（斉次度 $-1$）をみたすことを示せ。</li>
+    <li>したがって $\hat T$ は奇で斉次度 $0$、すなわち $c\operatorname{sgn}\xi$ の形であることを導け。</li>
+    <li>定数 $c$ を、$\varphi(x)=e^{-\pi x^{2}}$ 型のテスト関数を代入し $\int_{0}^{\infty}\frac{\sin t}{t}dt=\frac\pi2$ を使って決定せよ。</li>
+    <li>残りの二つを $\operatorname{sgn}=2H-1$ と $\mathcal{F}^{2}$ の関係から導け。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 72</span><span class="ttl">Dirac 櫛の自己双対性</span><span class="stars">★★★★☆</span></div>
+  <p class="dep"><b>依存</b>　大問 49, 70</p>
+  <div class="stmt"><span class="tag">主張</span>$\displaystyle\mathrm{III}=\sum_{n\in\mathbb{Z}}\delta_{n}$ は $\mathcal{S}'(\mathbb{R})$ の元で $\widehat{\mathrm{III}}=\mathrm{III}$。これは Poisson の和公式（大問 49）の超関数的表現である。また $\mathrm{III}_{T}=\sum_{n}\delta_{nT}$ に対し $\widehat{\mathrm{III}_{T}}=\frac1T\mathrm{III}_{1/T}$。</div>
+  <ol class="items tight">
+    <li>$\mathrm{III}\in\mathcal{S}'$ を、$\sum_{n}|\varphi(n)|$ がセミノルムで抑えられることから示せ。</li>
+    <li>$\widehat{\mathrm{III}}$ が周期 $1$ の超関数であること（$e^{-2\pi i\xi}\widehat{\mathrm{III}}=\widehat{\mathrm{III}}$）を示し、そこから $\widehat{\mathrm{III}}=c\,\mathrm{III}$ の形を導け（「$(e^{-2\pi i\xi}-1)T=0\Rightarrow T$ は整数点に台をもつ」を示すのが山場）。</li>
+    <li>$c=1$ を Gauss 関数を代入して決定せよ。</li>
+    <li>標本化（大問 51）が「$\mathrm{III}_{T}$ を掛ける操作」であり、そのスペクトルが「$\frac1T$ 周期の周期化」になること（エイリアシング）を、(ii) と畳み込み定理から説明せよ。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 73</span><span class="ttl">Sobolev 空間 $H^{s}$</span><span class="stars">★★★★☆</span></div>
+  <p class="dep"><b>依存</b>　大問 44, 70</p>
+  <div class="stmt"><span class="tag">主張</span>$s\in\mathbb{R}$ に対し $H^{s}(\mathbb{R}^{n})=\left\{u\in\mathcal{S}':\left(1+|\xi|^{2}\right)^{s/2}\hat u\in L^{2}\right\}$、$\|u\|_{H^{s}}=\left\|(1+|\xi|^{2})^{s/2}\hat u\right\|_{2}$ と定める。(i) $H^{s}$ は Hilbert 空間で $\mathcal{S}$ は稠密。(ii) $s=k\in\mathbb{N}$ のとき $H^{k}=\{u\in L^{2}:\partial^{\beta}u\in L^{2}\ (|\beta|\le k)\}$ でノルムは同値。(iii) $H^{-s}$ は $H^{s}$ の双対。(iv) $s\gt t$ なら $H^{s}\subset H^{t}$（連続埋め込み）。</div>
+  <ol class="items tight">
+    <li>(i)：完備性を $L^{2}$ の完備性（大問 3）に帰着せよ。</li>
+    <li>(ii)：Plancherel と $\left(1+|\xi|^{2}\right)^{k}\asymp\sum_{|\beta|\le k}|\xi^{\beta}|^{2}$ を示せ。</li>
+    <li>(iii)：$\langle u,v\rangle$ の自然な拡張を定義し、Riesz の表現定理（大問 7）で双対性を確かめよ。</li>
+    <li>(iv) を示し、$\delta\in H^{s}$ となる $s$ の範囲を決定せよ（$\hat\delta=1$ を使う）。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 74</span><span class="ttl">Sobolev の埋め込み定理</span><span class="stars">★★★★★</span></div>
+  <p class="dep"><b>依存</b>　大問 42, 73</p>
+  <div class="stmt"><span class="tag">主張</span>(i) $s\gt\frac n2$ ならば $H^{s}(\mathbb{R}^{n})\subset C_{0}(\mathbb{R}^{n})$ で $\|u\|_{\infty}\le C\|u\|_{H^{s}}$。より一般に $s\gt\frac n2+k$ ならば $H^{s}\subset C^{k}_{0}$。(ii) $0\le s\lt\frac n2$、$\frac1q=\frac12-\frac sn$ ならば $H^{s}\subset L^{q}$。(iii) $s=\frac n2$ では $H^{s}\not\subset L^{\infty}$。</div>
+  <ol class="items tight">
+    <li>(i)：$\hat u\in L^{1}$ を Cauchy–Schwarz
+      $\int|\hat u|=\int(1+|\xi|^{2})^{-s/2}\cdot(1+|\xi|^{2})^{s/2}|\hat u|$ で示し、反転公式（大問 42）を使え。$\int(1+|\xi|^{2})^{-s}d\xi\lt\infty\iff s\gt\frac n2$ を確かめること。</li>
+    <li>(ii)：$u=G_{s}*f$（$G_{s}$ は Bessel ポテンシャル核、$\hat G_{s}=(1+|\xi|^{2})^{-s/2}$、$f\in L^{2}$）と書き、$G_{s}$ の原点近傍での挙動 $|G_{s}(x)|\lesssim|x|^{s-n}$ を用いて Hardy–Littlewood–Sobolev（大問 57）を適用せよ。</li>
+    <li>(iii)：$\hat u(\xi)=|\xi|^{-n}\left(\log\frac{1}{|\xi|}\right)^{-1}\mathbf{1}_{|\xi|\lt1/2}$ 型の例で反例を作れ。</li>
+    <li>スケーリングにより (ii) の指数関係が必然であることを確かめよ。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 75</span><span class="ttl">Rellich–Kondrachov のコンパクト性定理</span><span class="stars">★★★★★</span></div>
+  <p class="dep"><b>依存</b>　大問 7, 73, 74</p>
+  <div class="stmt"><span class="tag">主張</span>$s\gt t$、$K\subset\mathbb{R}^{n}$ をコンパクトとし、$H^{s}_{K}=\{u\in H^{s}:\operatorname{supp}u\subset K\}$ とする。このとき包含 $H^{s}_{K}\hookrightarrow H^{t}$ はコンパクト作用素である（有界列は $H^{t}$ 収束する部分列をもつ）。</div>
+  <ol class="items tight">
+    <li>$\chi\in C_{c}^{\infty}$ を $K$ 上 $1$ とすると、$u\in H^{s}_{K}$ に対し $\hat u=\hat\chi*\hat u$。これを用いて $\hat u$ が（$\hat u$ の族として）局所一様有界・同程度連続であることを示せ。</li>
+    <li>Arzelà–Ascoli と対角線論法で、$\hat u_{j}$ がコンパクト集合上一様収束する部分列を取り出せ。</li>
+    <li>$|\xi|\gt R$ の部分を $\left(\frac{1+|\xi|^{2}}{1+R^{2}}\right)^{t-s}$ の因子で評価し、$R$ を大きくとって尾を小さくせよ。</li>
+    <li>(2)(3) を合わせて $H^{t}$ ノルムでの収束を結論せよ。台のコンパクト性が外せないこと（平行移動する列）を確かめよ。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 76</span><span class="ttl">熱方程式 ― 基本解と即座の平滑化</span><span class="stars">★★★★☆</span></div>
+  <p class="dep"><b>依存</b>　大問 41, 62, 70</p>
+  <div class="stmt"><span class="tag">主張</span>$\partial_{t}u=\Delta u$、$u(\cdot,0)=f$ の解は $u=f*H_{t}$、$H_{t}(x)=(4\pi t)^{-n/2}e^{-|x|^{2}/4t}$（$\widehat{H_{t}}(\xi)=e^{-4\pi^{2}t|\xi|^{2}}$）で与えられる。(i) $t\gt0$ で $u\in C^{\infty}$。(ii) 半群性 $H_{t}*H_{s}=H_{t+s}$。(iii) $f\in L^{p}$ なら $u(\cdot,t)\to f$（$L^{p}$ かつ a.e.）。(iv) 有界な解の一意性。(v) $t\lt0$ 向きには非適切。</div>
+  <ol class="items tight">
+    <li>Fourier 変換して常微分方程式 $\partial_{t}\hat u=-4\pi^{2}|\xi|^{2}\hat u$ を解き、$H_{t}$ を逆変換で求めよ。</li>
+    <li>(i) を $\hat u$ の急減少性から、(ii) を乗数の積から、(iii) を大問 12, 62 から示せ。</li>
+    <li>(iv) を「エネルギー $\int u^{2}$ の単調性」または最大値原理から示せ。</li>
+    <li>(v)：初期値の摂動 $\varepsilon e^{2\pi iNx}$ が時刻 $-t$ で $\varepsilon e^{4\pi^{2}N^{2}t}$ に増幅されることを示し、初期値への連続依存性が破れることを定量化せよ。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 77</span><span class="ttl">波動方程式 ― エネルギーと有限伝播速度</span><span class="stars">★★★★☆</span></div>
+  <p class="dep"><b>依存</b>　大問 70, 73</p>
+  <div class="stmt"><span class="tag">主張</span>$\partial_{t}^{2}u=\Delta u$、$u(0)=f$、$\partial_{t}u(0)=g$ の解は
+  $\hat u(\xi,t)=\hat f(\xi)\cos(2\pi|\xi|t)+\hat g(\xi)\frac{\sin(2\pi|\xi|t)}{2\pi|\xi|}$。(i) エネルギー $E(t)=\int\left(|\partial_{t}u|^{2}+|\nabla u|^{2}\right)$ は保存。(ii) $f,g$ が $B(x_{0},R)$ に台をもてば $u(\cdot,t)$ は $B(x_{0},R+|t|)$ に台をもつ（有限伝播速度）。(iii) 熱方程式と違い、解は初期値より滑らかにならない。</div>
+  <ol class="items tight">
+    <li>解の公式を Fourier 変換から導け。</li>
+    <li>(i) を Plancherel で示し、乗数の絶対値が $1$ 程度であることが保存則に対応することを述べよ。</li>
+    <li>(ii) をエネルギー法（局所エネルギー $\int_{|x-x_{0}|\lt R+|t|-s}$ の単調性）で示せ。Fourier 側からは見えにくいことに注意。</li>
+    <li>(iii) を、乗数 $\cos(2\pi|\xi|t)$ が減衰しないことから説明し、$u(\cdot,t)\in H^{s}$ $\iff f\in H^{s},g\in H^{s-1}$ を示せ。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 78</span><span class="ttl">Laplace 方程式 ― Poisson 核と Harnack の不等式</span><span class="stars">★★★★☆</span></div>
+  <p class="dep"><b>依存</b>　大問 27, 63, 70</p>
+  <div class="stmt"><span class="tag">主張</span>上半空間 $\mathbb{R}^{n}_{+}$ での Dirichlet 問題 $\Delta u=0$、$u(x,0)=f(x)$ の有界解は $u=f*P_{y}$、
+  $P_{y}(x)=c_{n}\frac{y}{\left(|x|^{2}+y^{2}\right)^{(n+1)/2}}$、$\widehat{P_{y}}(\xi)=e^{-2\pi y|\xi|}$ で与えられる。さらに (i) $\{P_{y}\}$ は近似単位元で非接収束（大問 63）が成り立つ。(ii) 非負調和関数に対する Harnack の不等式。(iii) 非負な $\mathbb{R}^{n}$ 上の調和関数は定数（Liouville）。</div>
+  <ol class="items tight">
+    <li>$\hat u(\xi,y)$ が $\partial_{y}^{2}\hat u=4\pi^{2}|\xi|^{2}\hat u$ をみたすことから、有界性で $e^{-2\pi y|\xi|}$ を選ぶ理由を説明し、$P_{y}$ を逆変換で求めよ。</li>
+    <li>$P_{y}$ が radial decreasing majorant をもつことを確かめ、(i) を大問 62, 63 から導け。</li>
+    <li>(ii)：球面平均の性質から $B(x,r)\subset B(y,R)$ 型の包含で平均を比較し、$\sup_{B(x_{0},r)}u\le C\inf_{B(x_{0},r)}u$ を示せ。</li>
+    <li>(iii) を (ii) から（または平均値性質と $r\to\infty$ から）導け。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 79</span><span class="ttl">Schrödinger 方程式 ― 分散評価と Strichartz 不等式</span><span class="stars">★★★★★</span></div>
+  <p class="dep"><b>依存</b>　大問 41, 44, 57</p>
+  <div class="stmt"><span class="tag">主張</span>$i\partial_{t}u=-\Delta u$、$u(0)=f$ の解を $u(t)=e^{it\Delta}f$ と書く。(i) $\|e^{it\Delta}f\|_{2}=\|f\|_{2}$（保存）。(ii) 分散評価 $\|e^{it\Delta}f\|_{\infty}\le C|t|^{-n/2}\|f\|_{1}$。(iii) $n=1$ における Strichartz 不等式 $\|e^{it\Delta}f\|_{L^{6}_{t,x}(\mathbb{R}\times\mathbb{R})}\le C\|f\|_{2}$。</div>
+  <ol class="items tight">
+    <li>(i) を Fourier 側の乗数 $e^{-4\pi^{2}it|\xi|^{2}}$（絶対値 $1$）から示せ。</li>
+    <li>(ii)：核が $(4\pi it)^{-n/2}e^{i|x|^{2}/4t}$ であることを、Gauss 積分の解析接続（$a=\varepsilon+it$、$\varepsilon\to0$）で示せ。振動積分の扱いが山場。</li>
+    <li>(iii)：$TT^{*}$ 論法を立てよ。$\|TT^{*}F\|_{L^{6}}\le C\|F\|_{L^{6/5}}$ を (ii) と Hardy–Littlewood–Sobolev（大問 57）から導き、双対性で結論せよ。</li>
+    <li>指数 $6$ がスケーリング $u(x,t)\mapsto u(\lambda x,\lambda^{2}t)$ から一意に決まることを確かめよ。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 80</span><span class="ttl">Gagliardo–Nirenberg–Sobolev の不等式</span><span class="stars">★★★★★</span></div>
+  <p class="dep"><b>依存</b>　大問 57, 74</p>
+  <div class="stmt"><span class="tag">主張</span>$1\le p\lt n$、$\frac{1}{p^{*}}=\frac1p-\frac1n$ とすると、$u\in C_{c}^{1}(\mathbb{R}^{n})$ に対し
+  $\|u\|_{p^{*}}\le C(n,p)\|\nabla u\|_{p}$。とくに $p=1$ のとき $\|u\|_{n/(n-1)}\le C\|\nabla u\|_{1}$、そしてこれは等周不等式と同値である。</div>
+  <ol class="items tight">
+    <li>$p=1$：$|u(x)|\le\int_{\mathbb{R}}|\partial_{j}u|\,dx_{j}$（各 $j$）から出発し、$n$ 個の積の $\frac{1}{n-1}$ 乗をとって一般化 Hölder（Gagliardo–Nirenberg の補題）で積分せよ。</li>
+    <li>$p\gt1$：$|u|^{\gamma}$（適当な $\gamma$）に (1) を適用し、Hölder で整理せよ。</li>
+    <li>Fourier 的な別証明：$u=I_{1}(\nabla u)$ 型の表示を作り、Hardy–Littlewood–Sobolev（大問 57）を適用せよ。$p=1$ でこの方法が使えない理由を述べよ。</li>
+    <li>$u=\mathbf{1}_{E}$ の「近似」に $p=1$ の不等式を適用すると等周不等式 $|E|^{(n-1)/n}\le C\,\mathrm{Per}(E)$ が出ることを説明せよ（大問 89 と比較）。</li>
+  </ol>
+</div>

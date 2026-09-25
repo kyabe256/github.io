@@ -1,0 +1,158 @@
+<h2 class="part">第 VIII 部　到達点<span class="en">THE SUMMIT &mdash; PROBLEMS 89–100</span></h2>
+<p class="part-lead">最後の 12 問は、フーリエ解析が他分野へ突き抜けていく場所である。幾何（等周不等式）、量子力学（不確定性）、確率論（ランダム級数）、そして数論（素数定理と Roth の定理）。ここまで来れば、$\widehat{f*g}=\hat f\hat g$ という一行がどこまで届くかが見える。</p>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 89</span><span class="ttl">等周不等式（Hurwitz の証明）</span><span class="stars">★★★★☆</span></div>
+  <p class="dep"><b>依存</b>　大問 23</p>
+  <div class="stmt"><span class="tag">主張</span>(i)（Wirtinger）$f$ が周期 $2\pi$ の $C^{1}$ 関数で $\int_{\mathbb{T}}f=0$ ならば $\|f\|_{2}\le\|f'\|_{2}$、等号は $f=ae^{ix}+be^{-ix}$ のときに限る。(ii)（等周不等式）長さ $L$ の $C^{1}$ 級単純閉曲線が囲む面積 $A$ は $4\pi A\le L^{2}$ をみたし、等号は円に限る。</div>
+  <ol class="items tight">
+    <li>(i)：Parseval で両辺を係数に翻訳し、$|n|\ge1$ で $|n|^{2}\ge1$ を使え。等号条件も係数から読め。</li>
+    <li>(ii)：弧長で $\gamma(s)=(x(s),y(s))$、$s\in[0,L]$ とパラメータ付けし、$s=\frac{L}{2\pi}t$ で周期 $2\pi$ に直せ。$x'^{2}+y'^{2}=\left(\frac{L}{2\pi}\right)^{2}$ を確かめよ。</li>
+    <li>$A=\frac12\oint(x\,dy-y\,dx)$（Green の定理）を Parseval で係数の式に書き直せ。</li>
+    <li>$L^{2}-4\pi A$ を係数の非負和として表し、不等式と等号条件を結論せよ。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 90</span><span class="ttl">Heisenberg の不確定性原理</span><span class="stars">★★★★☆</span></div>
+  <p class="dep"><b>依存</b>　大問 39, 44</p>
+  <div class="stmt"><span class="tag">主張</span>$f\in\mathcal{S}(\mathbb{R})$、$\|f\|_{2}=1$ とすると、任意の $x_{0},\xi_{0}$ に対し
+  $$\left(\int(x-x_{0})^{2}|f(x)|^{2}dx\right)\left(\int(\xi-\xi_{0})^{2}|\hat f(\xi)|^{2}d\xi\right)\ge\frac{1}{16\pi^{2}}$$
+  であり、等号は $f$ が Gauss 関数 $ce^{2\pi i\xi_{0}x}e^{-\pi\lambda(x-x_{0})^{2}}$ のときに限る。</div>
+  <ol class="items tight">
+    <li>平行移動と変調で $x_{0}=\xi_{0}=0$ に帰着できることを示せ。</li>
+    <li>$1=\int|f|^{2}=-\int x\frac{d}{dx}|f|^{2}dx=-2\operatorname{Re}\int x f\overline{f'}$ を部分積分で示せ。</li>
+    <li>Cauchy–Schwarz と Plancherel（$\|f'\|_{2}=2\pi\|\xi\hat f\|_{2}$）から不等式を得よ。</li>
+    <li>等号条件から微分方程式 $f'=-2\pi\lambda xf$ を導き、解が Gauss 関数であることを確かめよ。$\mathcal{S}$ を一般の $L^{2}$ に緩めても成り立つことを述べよ。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 91</span><span class="ttl">Hardy の不確定性定理</span><span class="stars">★★★★★</span></div>
+  <p class="dep"><b>依存</b>　大問 41, 52</p>
+  <div class="stmt"><span class="tag">主張</span>$|f(x)|\le Ce^{-\pi a x^{2}}$ かつ $|\hat f(\xi)|\le Ce^{-\pi b\xi^{2}}$（$a,b\gt0$）とする。(i) $ab\gt1$ ならば $f\equiv0$。(ii) $ab=1$ ならば $f(x)=ce^{-\pi ax^{2}}$。(iii) $ab\lt1$ のときは無限次元の解空間がある。</div>
+  <ol class="items tight">
+    <li>$a=b=1$ に帰着せよ（スケーリング）。$\hat f$ の減衰から $f$ が整関数に延び、$|f(z)|\le Ce^{\pi|\operatorname{Im}z|^{2}}$ 型の評価をもつことを示せ（大問 52 と同じ手法）。</li>
+    <li>$g(z)=f(z)e^{\pi z^{2}}$ が整関数で、実軸上有界、虚軸上も評価をもつことを確かめよ。</li>
+    <li>各四半平面に Phragmén–Lindelöf 型の議論を適用して $g$ が有界であることを示せ。<strong>注意</strong>：増大度 $e^{\pi|z|^{2}}$ は開き角 $\pi/2$ の扇形に対してちょうど臨界であり、原理を素朴に適用することはできない（実際 $\sin(\pi z^{2})$ は両軸上で有界だが非有界である）。$f$ と $\hat f$ の Gauss 減衰をもう一段使って臨界性をどう回避するかが、本問の核心である。</li>
+    <li>(i)(ii) を結論し、(iii) の例（Hermite 関数の有限和など）を挙げよ。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 92</span><span class="ttl">Benedicks の定理</span><span class="stars">★★★★★</span></div>
+  <p class="dep"><b>依存</b>　大問 49, 61</p>
+  <div class="stmt"><span class="tag">主張</span>$f\in L^{1}(\mathbb{R}^{n})$ とし、$A=\{f\neq0\}$、$B=\{\hat f\neq0\}$ とする。$|A|\lt\infty$ かつ $|B|\lt\infty$ ならば $f=0$ a.e.。すなわち、$f$ と $\hat f$ がともに有限測度の集合の上でしか値をもたないことはありえない。</div>
+  <ol class="items tight">
+    <li>$n=1$ で考える。$|B|\lt\infty$ より、ほとんどすべての $\alpha\gt0$ に対し
+      $\sum_{k\in\mathbb{Z}}\mathbf{1}_{B}\!\left(\frac{k+\beta}{\alpha}\right)$ が（$\beta$ について）可積分で有限であることを示せ。</li>
+    <li>周期化 $F_{\alpha,x}(t)=\sum_{n}f(x+t+n\alpha)$ を考え、その Fourier 係数が $\hat f$ の格子点での値に比例すること（Poisson の和公式、大問 49）を示せ。</li>
+    <li>(1) より、この Fourier 係数の多くが $0$ になる。一方 $|A|\lt\infty$ より、ほとんどすべての $x$ で $F_{\alpha,x}$ は有限個の $n$ でしか値をもたない。両者を突き合わせて $F_{\alpha,x}\equiv0$ を導け。</li>
+    <li>$\alpha$ を動かして $f=0$ a.e. を結論せよ。系：$f$ と $\hat f$ がともにコンパクト台をもてば $f=0$（大問 52 の系の強化）。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 93</span><span class="ttl">Balian–Low の定理</span><span class="stars">★★★★★</span></div>
+  <p class="dep"><b>依存</b>　大問 44, 90</p>
+  <div class="stmt"><span class="tag">主張</span>$g\in L^{2}(\mathbb{R})$ に対し Gabor 系 $\left\{g_{m,n}(x)=e^{2\pi imx}g(x-n)\right\}_{m,n\in\mathbb{Z}}$（臨界密度 $1$）が $L^{2}(\mathbb{R})$ の正規直交基底（あるいは Riesz 基底）をなすならば、
+  $$\left(\int x^{2}|g(x)|^{2}dx\right)\left(\int\xi^{2}|\hat g(\xi)|^{2}d\xi\right)=\infty.$$
+  すなわち「時間・周波数の両方で良く局在した窓では、臨界密度の Gabor 基底は作れない」。</div>
+  <ol class="items tight">
+    <li>Zak 変換 $Zg(x,\xi)=\sum_{k}g(x-k)e^{2\pi ik\xi}$ を定義し、$Z:L^{2}(\mathbb{R})\to L^{2}([0,1]^{2})$ がユニタリであることを示せ。</li>
+    <li>$\{g_{m,n}\}$ が正規直交基底 $\iff$ $|Zg|=1$ a.e. を示せ。</li>
+    <li>$|Zg|=1$ かつ $Zg$ が連続だとすると、$[0,1]^{2}$ 上の連続な単位円値関数の巻き数から矛盾が出ることを示せ（$Zg$ は擬周期条件 $Zg(x+1,\xi)=e^{2\pi i\xi}Zg(x,\xi)$、$Zg(x,\xi+1)=Zg(x,\xi)$ をみたす）。</li>
+    <li>(3) の「$Zg$ の連続性」が、主張の左辺が有限であることから従うことを示し、結論せよ。Gauss 窓が使えない理由と、実用で密度を $1$ より大きくとる理由を述べよ。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 94</span><span class="ttl">標本化の下限（Landau の必要密度）</span><span class="stars">★★★★★</span></div>
+  <p class="dep"><b>依存</b>　大問 51, 52</p>
+  <div class="stmt"><span class="tag">主張</span>$PW_{W}=\{f\in L^{2}:\operatorname{supp}\hat f\subset[-W,W]\}$ とする。点列 $\Lambda\subset\mathbb{R}$ が $PW_{W}$ の標本化集合（$\|f\|_{2}^{2}\asymp\sum_{\lambda\in\Lambda}|f(\lambda)|^{2}$）ならば、その下密度は $2W$ 以上でなければならない。とくに Nyquist レート $2W$ を下回る等間隔標本化では復元できない。</div>
+  <ol class="items tight">
+    <li>$PW_{W}$ の再生核 $k_{x}(y)=2W\operatorname{sinc}(2W(x-y))$ を求め、$f(x)=\langle f,k_{x}\rangle$ を示せ。</li>
+    <li>区間 $[-R,R]$ への時間制限作用素と帯域制限作用素の積 $P_{W}Q_{R}$ のトレースが $\approx 2W\cdot2R$ であることを、核の対角値の積分から示せ。</li>
+    <li>標本化集合であれば、$\Lambda\cap[-R,R]$ の点数がこのトレース以上（定数倍を除き）でなければならないことを、有限次元近似の次元勘定で示せ。</li>
+    <li>$R\to\infty$ として密度の下限を結論し、等間隔の場合に大問 51 と整合することを確かめよ。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 95</span><span class="ttl">ランダム Fourier 級数</span><span class="stars">★★★★★</span></div>
+  <p class="dep"><b>依存</b>　大問 20, 38</p>
+  <div class="stmt"><span class="tag">主張</span>$(\varepsilon_{n})$ を独立な $\pm1$（Rademacher）とし、$f_{\omega}(x)=\sum_{n}\varepsilon_{n}(\omega)c_{n}e^{inx}$ とする。(i)（Khinchin）$0\lt p\lt\infty$ に対し $\left(\mathbb{E}\left|\sum\varepsilon_{n}a_{n}\right|^{p}\right)^{1/p}\asymp_{p}\left(\sum|a_{n}|^{2}\right)^{1/2}$。(ii)（Paley–Zygmund）$\sum|c_{n}|^{2}\lt\infty$ ならば、ほとんどすべての $\omega$ で $f_{\omega}\in L^{p}(\mathbb{T})$（$\forall p\lt\infty$）。(iii)（Salem–Zygmund）$\sum|c_{n}|^{2}\log n\lt\infty$（程度の条件）ならば、ほとんどすべての $\omega$ で $f_{\omega}$ は連続。(iv) 一方、$\sum|c_{n}|^{2}=\infty$ なら、ほとんどすべての $\omega$ で $f_{\omega}$ は超関数としてしか存在しない。</div>
+  <ol class="items tight">
+    <li>(i)：$\mathbb{E}e^{t\sum\varepsilon_{n}a_{n}}\le e^{t^{2}\sum a_{n}^{2}/2}$（$\cosh t\le e^{t^{2}/2}$）から劣 Gauss 評価を出し、両側を示せ（下からは Hölder と $p=2$ の値）。</li>
+    <li>(ii)：Fubini で $\mathbb{E}\|f_{\omega}\|_{p}^{p}$ を評価し、(1) を使え。</li>
+    <li>(iii)：二進ブロックに分けて各ブロックの一様ノルムを (1) の指数評価＋Bernstein の不等式（大問 29）で抑え、Borel–Cantelli を使え。</li>
+    <li>(iv) を Parseval から述べ、「ランダム化すると係数の $\ell^{2}$ 条件だけでほぼ最良の結果が得られる」という現象を、決定論的な場合（大問 25 の $\alpha\gt1/2$）と比較せよ。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 96</span><span class="ttl">Rudin–Shapiro 多項式</span><span class="stars">★★★★☆</span></div>
+  <p class="dep"><b>依存</b>　大問 23</p>
+  <div class="stmt"><span class="tag">主張</span>$P_{0}=Q_{0}=1$、$P_{k+1}=P_{k}+z^{2^{k}}Q_{k}$、$Q_{k+1}=P_{k}-z^{2^{k}}Q_{k}$ で定める。$P_{k}$ の係数はすべて $\pm1$ で次数は $N-1$（$N=2^{k}$）、かつ
+  $$\|P_{k}\|_{\infty}\le\sqrt{2N}\qquad(|z|=1).$$
+  すなわち $\ell^{2}$ ノルム $\sqrt N$ に比して一様ノルムが最小オーダーである（$\|P\|_{\infty}\ge\|P\|_{2}=\sqrt N$ は常に成立）。</div>
+  <ol class="items tight">
+    <li>$|P_{k+1}|^{2}+|Q_{k+1}|^{2}=2\left(|P_{k}|^{2}+|Q_{k}|^{2}\right)$（$|z|=1$）を示せ。</li>
+    <li>帰納法で $|P_{k}|^{2}+|Q_{k}|^{2}=2^{k+1}$ を導き、評価を結論せよ。</li>
+    <li>一方、係数 $\pm1$ の任意の多項式について $\|P\|_{\infty}\ge\sqrt N$（Parseval）を示し、Rudin–Shapiro が定数倍で最適であることを述べよ。</li>
+    <li>ランダムな $\pm1$ 係数では $\|P\|_{\infty}\asymp\sqrt{N\log N}$ となる（大問 95 (iii)）ことと比較し、「決定論的構成がランダムに勝つ」珍しい例であることを述べよ。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 97</span><span class="ttl">Hadamard 空隙級数（Zygmund の定理）</span><span class="stars">★★★★★</span></div>
+  <p class="dep"><b>依存</b>　大問 20, 23, 25</p>
+  <div class="stmt"><span class="tag">主張</span>$n_{k+1}/n_{k}\ge\lambda\gt1$（Hadamard 空隙）とし $f(x)=\sum_{k}c_{k}e^{in_{k}x}$ とする。(i) $f$ がある区間上で有界ならば $\sum|c_{k}|^{2}\lt\infty$。(ii) $f$ がある区間上で連続（あるいは単に $\Lambda_{\alpha}$）ならば $f$ は $\mathbb{T}$ 全体で同じ性質をもつ。(iii) $\sum|c_{k}|=\infty$ ならば $f$ は有界でない。(iv) 空隙級数に対しては $\sum|c_{k}|^{2}\lt\infty$ と $f\in L^{p}$（任意の $p\lt\infty$）が同値（Sidon 性）。</div>
+  <ol class="items tight">
+    <li>空隙条件から、$e^{in_{k}x}$ たちが「ほぼ独立」であることを、Fejér 核による局所化と組み合わせて定式化せよ。</li>
+    <li>(i)：区間上の有界性から、適当な滑らかなカットオフ $\varphi$ をかけて $\varphi f$ の係数を評価し、空隙のおかげで $\widehat{\varphi f}(n_{k})\approx\hat\varphi(0)c_{k}$ となることを示せ。</li>
+    <li>(iv)：Khinchin の不等式（大問 95）と空隙条件を組み合わせ、$\|f\|_{p}\asymp_{p}\left(\sum|c_{k}|^{2}\right)^{1/2}$ を示せ。</li>
+    <li>(ii)(iii) を導き、複素解析編で扱った「$\sum z^{2^{n}}$ の自然境界」との関係を述べよ。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 98</span><span class="ttl">Wiener–Ikehara のタウバー型定理</span><span class="stars">★★★★★</span></div>
+  <p class="dep"><b>依存</b>　大問 20, 40, 56</p>
+  <div class="stmt"><span class="tag">主張</span>$A(x)\ge0$ を非減少、$\displaystyle F(s)=\int_{1}^{\infty}A(x)x^{-s-1}dx$ が $\operatorname{Re}s\gt1$ で収束するとする。$F(s)-\frac{c}{s-1}$ が $\operatorname{Re}s\ge1$ を含む開集合へ連続に延びるならば $A(x)\sim cx$。</div>
+  <ol class="items tight">
+    <li>$A(x)=xB(\log x)$ と置き換え、主張を「$B$ が有界で $\int_{0}^{\infty}B(t)e^{-st}dt$ 型の積分が $\operatorname{Re}s\ge0$ に延びれば $B(t)\to c$」という形に書き直せ。</li>
+    <li>Fejér 核（大問 20）の Fourier 変換 $\left(1-\frac{|\xi|}{\lambda}\right)_{+}$ を掛けることにより、$\lambda\to\infty$ で
+      $\displaystyle\int B(t)\,K_{\lambda}(u-t)\,dt\to c$ を示せ（ここで $K_{\lambda}$ は Fejér 核の $\mathbb{R}$ 版）。</li>
+    <li>$B$ の単調性（から来る局所的な下からの評価）を使って、平均の収束から各点の収束へ渡れ（これがタウバー条件）。</li>
+    <li>大問 56 の Wiener のタウバー型定理から本定理を導く別証明の筋道も述べよ（$\hat K_{\lambda}$ が零点をもつ／もたないという点に注意）。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 99</span><span class="ttl">素数定理</span><span class="stars">★★★★★</span></div>
+  <p class="dep"><b>依存</b>　大問 50, 98</p>
+  <div class="stmt"><span class="tag">主張</span>$\displaystyle\pi(x)\sim\frac{x}{\log x}$。同値に $\vartheta(x)=\sum_{p\le x}\log p\sim x$。</div>
+  <ol class="items tight">
+    <li>Euler 積 $\zeta(s)=\prod_{p}(1-p^{-s})^{-1}$（$\operatorname{Re}s\gt1$）を示し、$-\frac{\zeta'}{\zeta}(s)=\sum_{n}\Lambda(n)n^{-s}$（$\Lambda$ は von Mangoldt 関数）を導け。</li>
+    <li>$\zeta$ が $\operatorname{Re}s\gt0$ へ $s=1$ の 1 位の極を除いて解析接続されることを、$\zeta(s)-\frac{1}{s-1}=s\int_{1}^{\infty}\frac{\lfloor x\rfloor-x}{x^{s+1}}dx$ から示せ（大問 50 (4) の関数等式を使ってもよい）。</li>
+    <li>$\operatorname{Re}s=1$ 上で $\zeta(s)\neq0$ を、恒等式 $3+4\cos\theta+\cos2\theta=2(1+\cos\theta)^{2}\ge0$ を用いて
+      $\left|\zeta(\sigma)^{3}\zeta(\sigma+it)^{4}\zeta(\sigma+2it)\right|\ge1$ から示せ。</li>
+    <li>$A(x)=\vartheta(x)$ に Wiener–Ikehara（大問 98）を適用し、$\vartheta(x)\sim x$、続いて部分和分で $\pi(x)\sim x/\log x$ を結論せよ。<strong>フーリエ解析が素数を数えた瞬間である。</strong></li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 100</span><span class="ttl">Roth の定理 ― 3 項等差数列</span><span class="stars">★★★★★</span></div>
+  <p class="dep"><b>依存</b>　大問 84, 88</p>
+  <div class="stmt"><span class="tag">主張</span>$A\subset\{1,2,\dots,N\}$ が 3 項等差数列（$a,a+d,a+2d$、$d\neq0$）を含まないならば
+  $$|A|=O\!\left(\frac{N}{\log\log N}\right).$$
+  とくに、正の上密度をもつ整数の集合は必ず 3 項等差数列を含む（Roth, 1953）。</div>
+  <ol class="items tight">
+    <li>$\mathbb{Z}/N$ 上で考え、3 項等差数列の個数を
+      $\displaystyle T(A)=\frac{1}{N}\sum_{\xi}\hat{\mathbf{1}_{A}}(\xi)^{2}\overline{\hat{\mathbf{1}_{A}}(2\xi)}$ 型の Fourier 表示で書け（大問 84）。</li>
+    <li>密度 $\alpha=|A|/N$ とする。「すべての非自明な $\xi$ で $|\hat{\mathbf{1}_{A}}(\xi)|$ が小さい（一様分布的）」ならば、主要項 $\alpha^{3}N^{2}$ が誤差を圧倒し、3 項等差数列が存在することを示せ。</li>
+    <li>逆に、ある非自明な $\xi$ で $|\hat{\mathbf{1}_{A}}(\xi)|\ge c\alpha^{2}N$ ならば、$A$ はある長さ $\asymp\sqrt N$ の等差数列の上で密度が $\alpha+c'\alpha^{2}$ 以上になることを示せ（<strong>密度増加法</strong>：大きな Fourier 係数は「構造」を意味する）。</li>
+    <li>(2)(3) を反復し、密度が $1$ を超えられないことから反復回数が $O(1/\alpha)$ で抑えられること、各回で長さが平方根になることから $\alpha\gtrsim1/\log\log N$ を導け。Szemerédi の定理（任意長の等差数列、1975）と Gowers の高次 Fourier 解析へ道が続くことを述べて、本書を終える。</li>
+  </ol>
+</div>

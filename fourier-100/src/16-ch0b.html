@@ -1,0 +1,87 @@
+<h3 class="sec">§0.4　測度とルベーグ積分 ― 「ルベーグ積分って何だっけ」への答え</h3>
+
+<p style="font-size:9.5pt;color:#4b5563">一言でいえば：Riemann 積分が「$x$ 軸を細かく切って長方形を積む」のに対し、Lebesgue 積分は<strong>「$y$ 軸を細かく切って、同じ高さの点の集まりの<em>大きさ</em>を測って積む」</strong>。「大きさを測る」ための道具が測度である。この順序の入れ替えだけで、極限と積分の交換（$\mathbf{(T\text{-}4)(T\text{-}6)}$）が桁違いに扱いやすくなる。フーリエ解析で $L^{1}$ や $L^{2}$ を扱う以上、この枠組みは避けて通れない。</p>
+
+<div class="defn"><span class="tag">(D-14)</span><strong>$\sigma$-加法族。</strong>集合 $X$ の部分集合族 $\mathcal{M}$ で、(i) $\emptyset\in\mathcal{M}$、(ii) $E\in\mathcal{M}\Rightarrow E^{c}\in\mathcal{M}$、(iii) $E_{1},E_{2},\ldots\in\mathcal{M}\Rightarrow\bigcup_{n}E_{n}\in\mathcal{M}$ をみたすもの。$\mathcal{M}$ の元を<strong>可測集合</strong>という。開集合全体を含む最小の $\sigma$-加法族を<strong>Borel 集合族</strong>という。</div>
+
+<div class="defn"><span class="tag">(D-15)</span><strong>測度。</strong>$\mu:\mathcal{M}\to[0,\infty]$ で $\mu(\emptyset)=0$、かつ互いに交わらない可算個の $E_{n}$ に対し $\mu\bigl(\bigcup E_{n}\bigr)=\sum\mu(E_{n})$（可算加法性）をみたすもの。$(X,\mathcal{M},\mu)$ を測度空間という。</div>
+
+<div class="defn"><span class="tag">(D-16)</span><strong>Lebesgue 測度。</strong>$\mathbb{R}^{n}$ 上で、区間（直方体）$I$ に対し $|I|=$ 辺の長さの積 となるように定めた測度。構成は外測度
+$m^{*}(A)=\inf\left\{\sum_{k}|I_{k}| : A\subset\bigcup_{k}I_{k}\right\}$
+を作り、Carathéodory の条件「任意の $B$ に対し $m^{*}(B)=m^{*}(B\cap E)+m^{*}(B\cap E^{c})$」をみたす $E$ を可測集合と呼ぶ、という手順で行う。$E$ の測度を $|E|$ と書く。<strong>本書では構成は認めてよい</strong>：必要なのは「$|\cdot|$ は平行移動不変な可算加法的測度で、区間の測度は長さに一致する」という性質だけである。</div>
+
+<div class="defn"><span class="tag">(D-17)</span><strong>零集合と「ほとんど至る所」。</strong>$|E|=0$ のとき $E$ を零集合という（例：可算集合、$\mathbb{Q}$）。性質 $P(x)$ が<strong>ほとんど至る所</strong>（almost everywhere, <strong>a.e.</strong>）成り立つとは、$P$ が成り立たない $x$ の全体が零集合であること。Lebesgue 積分の世界では、零集合の上で関数の値を変えても何も変わらない。</div>
+
+<div class="defn"><span class="tag">(D-18)</span><strong>可測関数。</strong>$f:X\to[-\infty,\infty]$（または $\mathbb{C}$）が可測とは、任意の開集合（または任意の $a$ に対し $\{x:f(x)\gt a\}$）の逆像が可測集合であること。連続関数は可測。可測関数の和・積・可算個の $\sup,\inf,\limsup$、各点極限はまた可測。</div>
+
+<div class="defn"><span class="tag">(D-19)</span><strong>積分の定義（三段階）。</strong>
+(i) <em>単関数</em> $s=\sum_{k=1}^{m}c_{k}\mathbf{1}_{E_{k}}$（$c_{k}\ge0$、$E_{k}$ 可測、有限和）に対し $\displaystyle\int s\,d\mu:=\sum_{k}c_{k}\mu(E_{k})$。
+(ii) <em>非負可測関数</em> $f\ge0$ に対し $\displaystyle\int f\,d\mu:=\sup\left\{\int s\,d\mu\ :\ s\ \text{は単関数},\ 0\le s\le f\right\}$（値は $+\infty$ でもよい）。
+(iii) <em>一般の場合</em>：$f=f^{+}-f^{-}$（$f^{\pm}=\max(\pm f,0)$）と分け、$\int f^{+},\int f^{-}$ がともに有限のとき $\int f:=\int f^{+}-\int f^{-}$。複素数値のときは実部と虚部に分ける。Lebesgue 測度に関する積分は $\int f\,dx$ とも書く。</div>
+
+<div class="defn"><span class="tag">(D-20)</span><strong>可積分。</strong>$\int|f|\,d\mu\lt\infty$ のとき $f$ は可積分といい、$f\in L^{1}(\mu)$ と書く。</div>
+
+<div class="stmt"><span class="tag">(T-4)</span><strong>単調収束定理（MCT）。</strong>$0\le f_{1}\le f_{2}\le\cdots$ が可測で $f_{n}\to f$（各点）ならば $\displaystyle\int f_{n}\to\int f$。</div>
+
+<div class="stmt"><span class="tag">(T-5)</span><strong>Fatou の補題。</strong>$f_{n}\ge0$ 可測ならば $\displaystyle\int\liminf_{n}f_{n}\le\liminf_{n}\int f_{n}$。</div>
+
+<div class="stmt"><span class="tag">(T-6)</span><strong>優収束定理（DCT, Lebesgue）。</strong>$f_{n}\to f$ a.e. で、ある $g\in L^{1}$ が $|f_{n}|\le g$ a.e.（すべての $n$）をみたすならば $f\in L^{1}$ かつ $\displaystyle\int f_{n}\to\int f$、さらに $\int|f_{n}-f|\to0$。</div>
+
+<div class="stmt"><span class="tag">(T-7)</span><strong>Tonelli / Fubini の定理。</strong>$\sigma$-有限な測度空間の積の上で、$F(x,y)$ が可測とする。$F\ge0$ ならば $\displaystyle\iint F=\int\!\!\left(\int F\,dy\right)dx=\int\!\!\left(\int F\,dx\right)dy$（Tonelli、値は $+\infty$ でもよい）。$\iint|F|\lt\infty$ ならば同じ等式が成り立ち、内側の積分は a.e. で定義される（Fubini）。</div>
+
+<div class="stmt"><span class="tag">(T-8)</span><strong>Lebesgue 測度の不変性。</strong>$|E+h|=|E|$（平行移動不変）、$|\lambda E|=|\lambda|^{n}|E|$、$|{-E}|=|E|$。したがって $\int f(x+h)dx=\int f(x)dx$ など。</div>
+
+<div class="stmt"><span class="tag">(T-9)</span><strong>Riemann 積分との関係。</strong>有界閉区間上 Riemann 可積分な関数は Lebesgue 可積分で、両者の積分値は一致する。したがって高校・大学初年度で計算した積分はそのまま通用する。</div>
+
+<div class="stmt"><span class="tag">(T-10)</span><strong>積分の絶対連続性。</strong>$f\in L^{1}$ ならば $\forall\varepsilon\gt0\ \exists\delta\gt0$：$|E|\lt\delta\Rightarrow\int_{E}|f|\lt\varepsilon$。</div>
+
+<div class="stmt"><span class="tag">(T-11)</span><strong>正則性・稠密性。</strong>$1\le p\lt\infty$ のとき、$C_{c}(\mathbb{R}^{n})$（したがって $C_{c}^{\infty}$）は $L^{p}(\mathbb{R}^{n})$ で稠密である。同様に、$\mathbb{T}$ 上では連続関数が $L^{p}(\mathbb{T})$ で稠密である。</div>
+
+<h3 class="sec">§0.5　ノルム空間・Banach 空間・Hilbert 空間・$L^{p}$</h3>
+
+<div class="defn"><span class="tag">(D-21)</span><strong>ノルム空間・Banach 空間。</strong>複素ベクトル空間 $X$ 上の $\|\cdot\|:X\to[0,\infty)$ が (i) $\|x\|=0\iff x=0$、(ii) $\|\alpha x\|=|\alpha|\|x\|$、(iii) $\|x+y\|\le\|x\|+\|y\|$ をみたすときノルムという。$d(x,y)=\|x-y\|$ で距離空間になり、これが完備 $\mathbf{(D\text{-}12)}$ のとき<strong>Banach 空間</strong>という。</div>
+
+<div class="defn"><span class="tag">(D-22)</span><strong>$L^{p}$ 空間。</strong>$1\le p\lt\infty$ に対し $\displaystyle\|f\|_{p}:=\left(\int_{X}|f|^{p}d\mu\right)^{1/p}$、$p=\infty$ に対し $\|f\|_{\infty}:=\operatorname*{ess\,sup}|f|=\inf\{M:|f|\le M\ \text{a.e.}\}$。$\|f\|_{p}\lt\infty$ なる可測関数全体を、<strong>a.e. 一致する関数を同一視して</strong>$L^{p}(\mu)$ と書く（この同一視をしないと $\|f\|_{p}=0\Rightarrow f=0$ が成り立たない）。</div>
+
+<div class="stmt"><span class="tag">(T-12)</span><strong>Hölder と Minkowski。</strong>$\frac1p+\frac1q=1$（$1\le p\le\infty$、$q$ を $p$ の<strong>共役指数</strong>という）のとき $\displaystyle\int|fg|\le\|f\|_{p}\|g\|_{q}$。また $\|f+g\|_{p}\le\|f\|_{p}+\|g\|_{p}$。</div>
+
+<div class="defn"><span class="tag">(D-23)</span><strong>内積空間・Hilbert 空間。</strong>$\langle\cdot,\cdot\rangle:X\times X\to\mathbb{C}$ が (i) 第 1 変数について線形、(ii) $\langle y,x\rangle=\overline{\langle x,y\rangle}$、(iii) $\langle x,x\rangle\ge0$ で $=0\iff x=0$ をみたすとき内積という。$\|x\|:=\sqrt{\langle x,x\rangle}$ はノルムになり、完備なとき<strong>Hilbert 空間</strong>という。$L^{2}$ は $\langle f,g\rangle=\int f\overline{g}$ で Hilbert 空間（大問 3）。$x\perp y$ とは $\langle x,y\rangle=0$。</div>
+
+<div class="defn"><span class="tag">(D-24)</span><strong>正規直交系と完全性。</strong>$\{e_{\lambda}\}$ が正規直交系とは $\langle e_{\lambda},e_{\mu}\rangle=\delta_{\lambda\mu}$。<strong>完全</strong>（＝完全正規直交基底）とは、その有限線形結合全体が $X$ で稠密であること。</div>
+
+<div class="defn"><span class="tag">(D-25)</span><strong>有界線形作用素。</strong>線形写像 $T:X\to Y$（ノルム空間）が有界とは $\|T\|:=\sup_{\|x\|\le1}\|Tx\|\lt\infty$。有界 $\iff$ 連続。$X$ から $\mathbb{C}$ への有界線形写像全体を双対空間 $X^{*}$ という。</div>
+
+<div class="defn"><span class="tag">(D-26)</span><strong>畳み込み。</strong>$\displaystyle(f*g)(x):=\int_{\mathbb{R}^{n}}f(y)g(x-y)\,dy$。$\mathbb{T}$ 上では $\displaystyle(f*g)(x):=\frac{1}{2\pi}\int_{-\pi}^{\pi}f(y)g(x-y)\,dy$。</div>
+
+<div class="defn"><span class="tag">(D-27)</span><strong>弱 $L^{p}$ と分布関数。</strong>$d_{f}(\lambda):=|\{x:|f(x)|\gt\lambda\}|$ を分布関数、$\|f\|_{L^{p,\infty}}:=\sup_{\lambda\gt0}\lambda\,d_{f}(\lambda)^{1/p}$ を弱 $L^{p}$ 擬ノルムという。作用素 $T$ が<strong>弱 $(p,q)$ 型</strong>とは $d_{Tf}(\lambda)\le\left(C\|f\|_{p}/\lambda\right)^{q}$、<strong>強 $(p,q)$ 型</strong>とは $\|Tf\|_{q}\le C\|f\|_{p}$。</div>
+
+<h3 class="sec">§0.6　円周・複素指数・Fourier の記号</h3>
+
+<div class="defn"><span class="tag">(D-28)</span><strong>複素指数関数。</strong>$\displaystyle e^{z}:=\sum_{n\ge0}\frac{z^{n}}{n!}$（絶対収束）。$e^{i\theta}=\cos\theta+i\sin\theta$、$|e^{i\theta}|=1$、$e^{i(\theta+\varphi)}=e^{i\theta}e^{i\varphi}$、$\overline{e^{i\theta}}=e^{-i\theta}$、$\frac{d}{d\theta}e^{i\theta}=ie^{i\theta}$。</div>
+
+<div class="defn"><span class="tag">(D-29)</span><strong>円周 $\mathbb{T}$。</strong>$\mathbb{T}:=\mathbb{R}/2\pi\mathbb{Z}$。$\mathbb{T}$ 上の関数 $=$ 周期 $2\pi$ の $\mathbb{R}$ 上の関数。積分は正規化して
+$\displaystyle\int_{\mathbb{T}}f:=\frac{1}{2\pi}\int_{-\pi}^{\pi}f(x)\,dx$
+と書く（全測度が $1$ になる）。$L^{p}(\mathbb{T})$ はこの測度に関する $\mathbf{(D\text{-}22)}$。</div>
+
+<div class="defn"><span class="tag">(D-30)</span><strong>Fourier 係数と Fourier 変換。</strong>
+$f\in L^{1}(\mathbb{T})$ に対し $\displaystyle\hat f(n):=\frac{1}{2\pi}\int_{-\pi}^{\pi}f(x)e^{-inx}dx$（$n\in\mathbb{Z}$）。
+$f\in L^{1}(\mathbb{R})$ に対し $\displaystyle\hat f(\xi):=\int_{\mathbb{R}}f(x)e^{-2\pi ix\xi}dx$（$\xi\in\mathbb{R}$）。
+<strong>本書は $\mathbb{R}$ 上ではこの $2\pi$ 込みの流儀に統一する</strong>（Plancherel と Poisson の和公式が定数なしになる）。$\mathcal{F}f=\hat f$ とも書く。</div>
+
+<div class="defn"><span class="tag">(D-31)</span><strong>部分和・Cesàro 平均・Abel 平均。</strong>
+$\displaystyle S_{N}f(x)=\sum_{|n|\le N}\hat f(n)e^{inx}$、$\displaystyle\sigma_{N}f=\frac{1}{N+1}\sum_{k=0}^{N}S_{k}f$、$\displaystyle A_{r}f(x)=\sum_{n\in\mathbb{Z}}r^{|n|}\hat f(n)e^{inx}$（$0\le r\lt1$）。</div>
+
+<div class="defn"><span class="tag">(D-32)</span><strong>三角多項式。</strong>$\displaystyle P(x)=\sum_{|n|\le N}c_{n}e^{inx}$ の形の関数。次数は $c_{n}\neq0$ なる $|n|$ の最大値。</div>
+
+<div class="defn"><span class="tag">(D-33)</span><strong>Dirichlet 核・Fejér 核・Poisson 核。</strong>
+$\displaystyle D_{N}(x)=\sum_{|n|\le N}e^{inx}$、$\displaystyle K_{N}=\frac{1}{N+1}\sum_{k=0}^{N}D_{k}$、$\displaystyle P_{r}(x)=\sum_{n\in\mathbb{Z}}r^{|n|}e^{inx}$。これらにより $S_{N}f=f*D_{N}$, $\sigma_{N}f=f*K_{N}$, $A_{r}f=f*P_{r}$（$*$ は $\mathbf{(D\text{-}26)}$ の $\mathbb{T}$ 版）。</div>
+
+<div class="defn"><span class="tag">(D-34)</span><strong>近似単位元。</strong>$\mathbb{T}$ 上の関数族 $\{\Phi_{\alpha}\}$ が近似単位元とは、(i) $\int_{\mathbb{T}}\Phi_{\alpha}=1$、(ii) $\sup_{\alpha}\int_{\mathbb{T}}|\Phi_{\alpha}|\lt\infty$、(iii) 任意の $\delta\gt0$ に対し $\int_{\delta\le|x|\le\pi}|\Phi_{\alpha}|\to0$。$\mathbb{R}$ 上では $\varphi_{\varepsilon}(x)=\varepsilon^{-n}\varphi(x/\varepsilon)$、$\int\varphi=1$ の形のものをいう。</div>
+
+<div class="defn"><span class="tag">(D-35)</span><strong>Hölder 連続・Lipschitz・有界変動。</strong>$0\lt\alpha\le1$ に対し $|f(x)-f(y)|\le C|x-y|^{\alpha}$ をみたすとき $f\in\Lambda_{\alpha}$（$\alpha=1$ のとき Lipschitz）。$f$ が $[a,b]$ 上<strong>有界変動</strong>とは $\displaystyle V(f)=\sup\sum_{k}|f(x_{k})-f(x_{k-1})|\lt\infty$（sup は分割全体）。</div>
+
+<div class="defn"><span class="tag">(D-36)</span><strong>Schwartz 空間。</strong>$\mathcal{S}(\mathbb{R}^{n}):=\{f\in C^{\infty}: \forall\alpha,\beta,\ \sup_{x}|x^{\alpha}\partial^{\beta}f(x)|\lt\infty\}$（急減少関数）。ここで $\alpha,\beta$ は多重指数（$\alpha=(\alpha_{1},\dots,\alpha_{n})$、$x^{\alpha}=x_{1}^{\alpha_{1}}\cdots$、$\partial^{\beta}=\partial_{1}^{\beta_{1}}\cdots$、$|\alpha|=\sum\alpha_{j}$）。</div>
+
+<h3 class="sec">§0.7　証明なしで使ってよいもの（まとめ）</h3>
+<p>$\mathbf{(T\text{-}1)}$〜$\mathbf{(T\text{-}12)}$、および「$\mathbb{R}$ の完備性」「$\mathbb{C}$ の代数的性質」「微積分の基本定理（Riemann 積分の範囲）」「初等関数の微積分」。<strong>それ以外はすべて証明の対象</strong>である。とくに、$L^{p}$ の完備性（大問 3）・Baire の定理（大問 12）・Hölder の不等式の等号条件なども、本書の中で証明する。</p>
+<p style="font-size:9.4pt;color:#4b5563">なお $\mathbf{(T\text{-}11)}$（連続関数の稠密性）は測度論の結果なので認めるが、これを「どこで使ったか」は毎回意識すること。フーリエ解析の証明の多くは「良い関数（連続・$C_{c}^{\infty}$・$\mathcal{S}$）でまず示し、稠密性と有界性で一般の場合へ延ばす」という形をしており、その骨格を体に入れることが本書の最大の目的のひとつである。</p>

@@ -1,0 +1,149 @@
+<h2 class="part">第 I 部　土台<span class="en">FOUNDATIONS &mdash; PROBLEMS 1–12</span></h2>
+<p class="part-lead">フーリエ解析は「関数を無限次元空間のベクトルとみなす」ことで見通しがよくなる。まずその空間 ― $L^{p}$ と Hilbert 空間 ― を自分の手で作る。ここを飛ばすと第 II 部以降の証明が「なんとなく」になる。</p>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 1</span><span class="ttl">Cauchy–Schwarz の不等式と平行四辺形則</span><span class="stars">★★☆☆☆</span></div>
+  <p class="dep"><b>依存</b>　$\mathbf{(D\text{-}23)}$</p>
+  <div class="stmt"><span class="tag">主張</span>内積空間 $X$ において、$|\langle x,y\rangle|\le\|x\|\,\|y\|$ が成り立ち、等号は $x,y$ が一次従属のときに限る。またノルムについて平行四辺形則 $\|x+y\|^{2}+\|x-y\|^{2}=2\|x\|^{2}+2\|y\|^{2}$ が成り立つ。</div>
+  <ol class="items tight">
+    <li>$t\in\mathbb{R}$, $\theta\in\mathbb{R}$ に対し $0\le\|x+te^{i\theta}y\|^{2}$ を展開し、$\theta$ を適当に選んで $t$ の 2 次式の判別式を見よ。</li>
+    <li>等号条件を、判別式 $=0$ の場合に戻って決定せよ。</li>
+    <li>平行四辺形則を展開で示し、逆に「平行四辺形則をみたすノルムは内積から来る」（Jordan–von Neumann）ことを、$\langle x,y\rangle:=\frac14\sum_{k=0}^{3}i^{k}\|x+i^{k}y\|^{2}$ とおいて確かめよ。</li>
+    <li>$L^{p}$（$p\neq2$）のノルムが平行四辺形則をみたさないことを、具体的な 2 つの関数で示せ。つまり $L^{2}$ だけが Hilbert 空間である。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 2</span><span class="ttl">Hölder と Minkowski の不等式</span><span class="stars">★★★☆☆</span></div>
+  <p class="dep"><b>依存</b>　$\mathbf{(D\text{-}19)}$–$\mathbf{(D\text{-}22)}$。本問では $\mathbf{(T\text{-}12)}$ は使わない（それを証明するのが本問である）。</p>
+  <div class="stmt"><span class="tag">主張</span>$1\le p\le\infty$、$\frac1p+\frac1q=1$ とする。(i) $\int|fg|\le\|f\|_{p}\|g\|_{q}$。(ii) $\|f+g\|_{p}\le\|f\|_{p}+\|g\|_{p}$。(iii) $1\lt p\lt\infty$ のとき (i) の等号は $|f|^{p}$ と $|g|^{q}$ が（零関数でない限り）定数倍で一致するときに限る。</div>
+  <ol class="items tight">
+    <li>Young の不等式 $ab\le\frac{a^{p}}{p}+\frac{b^{q}}{q}$（$a,b\ge0$）を、$\log$ の凹性またはは $t\mapsto\frac{t^{p}}{p}+\frac1q-t$ の最小値から示せ。</li>
+    <li>$\|f\|_{p}=\|g\|_{q}=1$ に正規化して (1) を積分し、(i) を導け。等号条件も同時に読み取れ。</li>
+    <li>$|f+g|^{p}\le|f+g|^{p-1}(|f|+|g|)$ に (i) を適用して (ii) を示せ。</li>
+    <li>$p=1,\infty$ の場合を別途確かめ、さらに $0\lt p\lt1$ では (ii) が逆向きになる例を作れ。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 3</span><span class="ttl">Riesz–Fischer の定理 ― $L^{p}$ の完備性</span><span class="stars">★★★★☆</span></div>
+  <p class="dep"><b>依存</b>　大問 2 ／ $\mathbf{(T\text{-}4)}$, $\mathbf{(T\text{-}5)}$, $\mathbf{(T\text{-}6)}$</p>
+  <div class="stmt"><span class="tag">主張</span>$1\le p\le\infty$ に対し $L^{p}(\mu)$ は Banach 空間である。さらに $p\lt\infty$ のとき、$L^{p}$ で収束する列は a.e. 収束する部分列をもつ。</div>
+  <ol class="items tight">
+    <li>Cauchy 列 $(f_{n})$ から $\|f_{n_{k+1}}-f_{n_{k}}\|_{p}\le2^{-k}$ なる部分列を取り出せ。</li>
+    <li>$g:=|f_{n_{1}}|+\sum_{k}|f_{n_{k+1}}-f_{n_{k}}|$ とおき、単調収束定理から $\|g\|_{p}\lt\infty$、したがって $g\lt\infty$ a.e. を示せ。</li>
+    <li>(2) より部分列が a.e. 収束することを示し、その極限 $f$ に対し優収束定理で $\|f_{n_{k}}-f\|_{p}\to0$ を示せ。</li>
+    <li>Cauchy 列は収束部分列をもてば収束することを用いて完備性を結論し、$p=\infty$ の場合を別途扱え。</li>
+    <li>「$L^{p}$ 収束するが至る所収束しない列」（動く区間の定義関数）を構成し、(3) の「部分列」が外せないことを確かめよ。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 4</span><span class="ttl">直交射影定理</span><span class="stars">★★★☆☆</span></div>
+  <p class="dep"><b>依存</b>　大問 1, 3</p>
+  <div class="stmt"><span class="tag">主張</span>$H$ を Hilbert 空間、$C\subset H$ を空でない閉凸集合とすると、各 $x\in H$ に対し $\|x-y\|$ を最小にする $y\in C$ がただ一つ存在する。とくに $M$ が閉部分空間のとき $H=M\oplus M^{\perp}$ であり、$x\mapsto P_{M}x$ は線形で $\|P_{M}\|\le1$、$x-P_{M}x\perp M$ が成り立つ。</div>
+  <ol class="items tight">
+    <li>$d=\inf_{y\in C}\|x-y\|$ とし、最小化列に平行四辺形則（大問 1）を適用して Cauchy 列であることを示せ。</li>
+    <li>完備性と閉性から最小元の存在・一意性を結論せよ。</li>
+    <li>$M$ が部分空間のとき、最小性から $\langle x-P_{M}x,m\rangle=0$（$\forall m\in M$）を導け（$t\mapsto\|x-P_{M}x-tm\|^{2}$ の微分）。</li>
+    <li>$M^{\perp}$ が閉部分空間であること、$M$ 閉のとき $(M^{\perp})^{\perp}=M$ を示せ。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 5</span><span class="ttl">Bessel の不等式と最良近似</span><span class="stars">★★★☆☆</span></div>
+  <p class="dep"><b>依存</b>　大問 4</p>
+  <div class="stmt"><span class="tag">主張</span>$\{e_{n}\}_{n\in\mathbb{N}}$ を Hilbert 空間 $H$ の正規直交系、$c_{n}=\langle x,e_{n}\rangle$ とする。(i) 有限和 $\sum_{n\le N}a_{n}e_{n}$ のうち $\|x-\cdot\|$ を最小にするのは $a_{n}=c_{n}$ のときであり、その最小値の 2 乗は $\|x\|^{2}-\sum_{n\le N}|c_{n}|^{2}$。(ii) $\sum_{n}|c_{n}|^{2}\le\|x\|^{2}$（Bessel）。(iii) $\sum_{n}c_{n}e_{n}$ は $H$ で収束する。</div>
+  <ol class="items tight">
+    <li>$\left\|x-\sum_{n\le N}a_{n}e_{n}\right\|^{2}=\|x\|^{2}-\sum|c_{n}|^{2}+\sum|a_{n}-c_{n}|^{2}$ を展開で示せ。</li>
+    <li>(i)(ii) を (1) から読み取れ。</li>
+    <li>部分和が Cauchy 列であることを Bessel と完備性から示し、(iii) を得よ。</li>
+    <li>逆に $(c_{n})\in\ell^{2}$ ならば $\sum c_{n}e_{n}$ が収束し、その係数が $c_{n}$ であることを示せ（Riesz–Fischer の抽象版）。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 6</span><span class="ttl">完全正規直交系の同値条件</span><span class="stars">★★★★☆</span></div>
+  <p class="dep"><b>依存</b>　大問 4, 5</p>
+  <div class="stmt"><span class="tag">主張</span>正規直交系 $\{e_{n}\}$ について次は同値。(a) 線形包が稠密（完全）。(b) $\forall x$、$x=\sum\langle x,e_{n}\rangle e_{n}$。(c) $\forall x$、$\|x\|^{2}=\sum|\langle x,e_{n}\rangle|^{2}$（Parseval）。(d) $\forall x,y$、$\langle x,y\rangle=\sum\langle x,e_{n}\rangle\overline{\langle y,e_{n}\rangle}$。(e) $\langle x,e_{n}\rangle=0\ (\forall n)\Rightarrow x=0$。</div>
+  <ol class="items tight">
+    <li>(a)$\Rightarrow$(b)：大問 5 (i) の最小性を使う。</li>
+    <li>(b)$\Rightarrow$(c)$\Rightarrow$(d)：ノルムの連続性と偏極恒等式 $\langle x,y\rangle=\frac14\sum_{k}i^{k}\|x+i^{k}y\|^{2}$。</li>
+    <li>(d)$\Rightarrow$(e)$\Rightarrow$(a)：(e) の否定から大問 4 で直交補空間の非零元を作る。</li>
+    <li>可分 Hilbert 空間は可算な完全正規直交系をもつことを Gram–Schmidt で示し、したがって任意の可分無限次元 Hilbert 空間が $\ell^{2}$ と等長同型であることを結論せよ。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 7</span><span class="ttl">Riesz の表現定理（Hilbert 空間）</span><span class="stars">★★★☆☆</span></div>
+  <p class="dep"><b>依存</b>　大問 4</p>
+  <div class="stmt"><span class="tag">主張</span>$H$ 上の任意の有界線形汎関数 $\varphi$ に対し、$\varphi(x)=\langle x,y\rangle$（$\forall x$）となる $y\in H$ がただ一つ存在し、$\|\varphi\|=\|y\|$。</div>
+  <ol class="items tight">
+    <li>$\varphi=0$ でないとき $M=\ker\varphi$ は閉部分空間で $M\neq H$。大問 4 で $z\in M^{\perp}$, $\|z\|=1$ をとれ。</li>
+    <li>任意の $x$ に対し $\varphi(x)z-\varphi(z)x\in M$ を確かめ、$z$ との内積をとって $y$ を作れ。</li>
+    <li>一意性とノルムの等式を示せ。</li>
+    <li>系：Hilbert 空間の弱収束（$\langle x_{n},y\rangle\to\langle x,y\rangle$ $\forall y$）を定義し、有界列が弱収束部分列をもつこと（可分の場合、対角線論法）を示せ。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 8</span><span class="ttl">$L^{p}$ の双対空間</span><span class="stars">★★★★★</span></div>
+  <p class="dep"><b>依存</b>　大問 2, 3, 7 ／ $\mathbf{(T\text{-}7)}$</p>
+  <div class="stmt"><span class="tag">主張</span>$\mu$ を $\sigma$-有限測度、$1\le p\lt\infty$、$q$ を共役指数とする。写像 $g\mapsto\Lambda_{g}$、$\Lambda_{g}(f)=\int fg\,d\mu$ は $L^{q}$ から $(L^{p})^{*}$ への等長同型である。とくに $\displaystyle\|g\|_{q}=\sup_{\|f\|_{p}\le1}\left|\int fg\right|$。</div>
+  <ol class="items tight">
+    <li>まず $\|\Lambda_{g}\|\le\|g\|_{q}$（Hölder）と、$f=|g|^{q-1}\overline{\operatorname{sgn}g}/\|g\|_{q}^{q-1}$ を代入して逆向きを示せ。</li>
+    <li>全射性：$\mu$ が有限のとき、$\nu(E)=\Lambda(\mathbf{1}_{E})$ が可算加法的な複素測度で $\mu$ に絶対連続であることを示し、Radon–Nikodym の定理（認めてよい）で $g$ を得よ。</li>
+    <li>$g\in L^{q}$ であることを、切断 $E_{n}=\{|g|\le n\}$ 上で (1) の議論を行って示せ。</li>
+    <li>$\sigma$-有限の場合へ拡張せよ。また $p=\infty$ では主張が偽であること（$(L^{\infty})^{*}\supsetneq L^{1}$）を、$c_{0}\subset\ell^{\infty}$ 上の汎関数の Hahn–Banach 拡張から説明せよ。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 9</span><span class="ttl">平行移動の $L^{p}$ 連続性</span><span class="stars">★★★☆☆</span></div>
+  <p class="dep"><b>依存</b>　大問 3 ／ $\mathbf{(T\text{-}8)}$, $\mathbf{(T\text{-}11)}$</p>
+  <div class="stmt"><span class="tag">主張</span>$1\le p\lt\infty$、$f\in L^{p}(\mathbb{R}^{n})$、$\tau_{h}f(x)=f(x-h)$ とすると $\displaystyle\lim_{h\to0}\|\tau_{h}f-f\|_{p}=0$。$p=\infty$ では偽である。</div>
+  <ol class="items tight">
+    <li>$f\in C_{c}$ のとき、一様連続性 $\mathbf{(T\text{-}3)}$ から主張を示せ。</li>
+    <li>一般の $f$ に対し $\mathbf{(T\text{-}11)}$ で $C_{c}$ の元 $g$ を近似にとり、$\|\tau_{h}f-f\|_{p}\le2\|f-g\|_{p}+\|\tau_{h}g-g\|_{p}$ という「$3\varepsilon$ 論法」を完成させよ。</li>
+    <li>$p=\infty$ での反例（$f=\mathbf{1}_{[0,1]}$）を挙げよ。</li>
+    <li>この命題が以降の「近似単位元」の議論すべての土台になる。実際、$\|f*\varphi_{\varepsilon}-f\|_{p}\le\int|\varphi(y)|\,\|\tau_{\varepsilon y}f-f\|_{p}\,dy$ を示せ（Minkowski の積分不等式、大問 12）。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 10</span><span class="ttl">Baire のカテゴリー定理</span><span class="stars">★★★★☆</span></div>
+  <p class="dep"><b>依存</b>　$\mathbf{(D\text{-}8)}$, $\mathbf{(D\text{-}12)}$</p>
+  <div class="stmt"><span class="tag">主張</span>完備距離空間 $X$ において、可算個の稠密開集合の共通部分は稠密である。同値に、$X$ は可算個の疎集合の和では表せない。</div>
+  <ol class="items tight">
+    <li>稠密開集合 $U_{1},U_{2},\dots$ と任意の開球 $B_{0}$ に対し、閉包が入れ子になる閉球列 $\overline{B_{k}}\subset B_{k-1}\cap U_{k}$、半径 $\to0$ を帰納的に構成せよ。</li>
+    <li>中心の列が Cauchy であることを示し、完備性から共通点を得よ。</li>
+    <li>二つの表現（稠密開集合版と疎集合版）が同値であることを確かめよ。</li>
+    <li>応用：$\mathbb{Q}$ は完備距離化できないこと、また「すべての点で微分不可能な連続関数が $C[0,1]$ に稠密に存在する」ことを示せ。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 11</span><span class="ttl">一様有界性原理と開写像定理</span><span class="stars">★★★★☆</span></div>
+  <p class="dep"><b>依存</b>　大問 10</p>
+  <div class="stmt"><span class="tag">主張</span>(i)（Banach–Steinhaus）$X$ を Banach 空間、$\{T_{\alpha}\}$ を $X\to Y$ の有界線形作用素族とする。各 $x$ で $\sup_{\alpha}\|T_{\alpha}x\|\lt\infty$ ならば $\sup_{\alpha}\|T_{\alpha}\|\lt\infty$。(ii) 対偶：$\sup_{\alpha}\|T_{\alpha}\|=\infty$ ならば、$\sup_{\alpha}\|T_{\alpha}x\|=\infty$ となる $x$ の全体は稠密な $G_{\delta}$ 集合。(iii)（開写像定理）Banach 空間の間の全射有界線形作用素は開写像であり、全単射なら逆も有界。</div>
+  <ol class="items tight">
+    <li>$E_{n}=\{x:\sup_{\alpha}\|T_{\alpha}x\|\le n\}$ が閉であることを示し、Baire を適用せよ。</li>
+    <li>内点をもつことから $\|T_{\alpha}\|$ の一様評価を導け。</li>
+    <li>(ii) を $\bigcap_{n}\{x:\sup_{\alpha}\|T_{\alpha}x\|\gt n\}$ の形に書いて示せ。</li>
+    <li>(iii) を Baire から示し、閉グラフ定理を系として導け。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 12</span><span class="ttl">Minkowski の積分不等式</span><span class="stars">★★★☆☆</span></div>
+  <p class="dep"><b>依存</b>　大問 2, 8 ／ $\mathbf{(T\text{-}7)}$</p>
+  <div class="stmt"><span class="tag">主張</span>$1\le p\lt\infty$ のとき
+  $$\left\|\int F(\cdot,y)\,dy\right\|_{L^{p}_{x}}\le\int\bigl\|F(\cdot,y)\bigr\|_{L^{p}_{x}}\,dy.$$
+  すなわち「積分のノルム $\le$ ノルムの積分」。</div>
+  <ol class="items tight">
+    <li>$p=1$ は Tonelli そのものであることを確かめよ。</li>
+    <li>$1\lt p\lt\infty$ のとき、大問 8 の双対表示 $\|G\|_{p}=\sup_{\|h\|_{q}\le1}\left|\int Gh\right|$ を使い、Fubini で順序を交換せよ。</li>
+    <li>これを用いて Young の不等式 $\|f*g\|_{p}\le\|f\|_{1}\|g\|_{p}$ を示せ。</li>
+    <li>大問 9 (4) の不等式を完成させ、「近似単位元は $L^{p}$ で恒等作用素に収束する」（$p\lt\infty$）を証明せよ。以降この事実を<strong>近似定理</strong>と呼ぶ。</li>
+  </ol>
+</div>

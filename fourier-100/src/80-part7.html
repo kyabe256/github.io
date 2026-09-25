@@ -1,0 +1,102 @@
+<h2 class="part">第 VII 部　群上の調和解析<span class="en">HARMONIC ANALYSIS ON GROUPS &mdash; PROBLEMS 81–88</span></h2>
+<p class="part-lead">$\mathbb{T}$、$\mathbb{Z}$、$\mathbb{R}$、$\mathbb{Z}/N$ ― これまで別々に扱ってきた四つの Fourier 解析は、実は<strong>ひとつの定理の四つの顔</strong>である。局所コンパクト Abel 群とその双対という言葉を導入すると、すべてが一行に畳まれる。</p>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 81</span><span class="ttl">Haar 測度の一意性</span><span class="stars">★★★★☆</span></div>
+  <p class="dep"><b>依存</b>　$\mathbf{(T\text{-}7)}$。Haar 測度の<em>存在</em>は認めてよい。</p>
+  <div class="stmt"><span class="tag">主張</span>$G$ を局所コンパクト Hausdorff 位相群（本書では Abel）とする。平行移動不変な非自明正則 Borel 測度（Haar 測度）は、正の定数倍を除いて一意である。$\mathbb{T},\mathbb{R},\mathbb{Z},\mathbb{Z}/N$ の Haar 測度をそれぞれ書け。</div>
+  <ol class="items tight">
+    <li>$\mu,\nu$ を二つの Haar 測度とし、$f,g\in C_{c}(G)$、$\int g\,d\nu\neq0$ に対し
+      $\displaystyle\frac{\int f\,d\mu}{\int g\,d\mu}$ が $\mu$ によらないことを示せば十分である ― この方針を、Fubini による二重積分の変形
+      $\int\!\!\int f(x)g(y+x)\,d\mu(x)d\nu(y)$ の二通りの計算として実行せよ。</li>
+    <li>平行移動不変性を使って変数変換 $(x,y)\mapsto(x,y-x)$ を施し、$\mu$ と $\nu$ の役割を入れ替えよ。</li>
+    <li>比が定数であることを結論せよ。</li>
+    <li>四つの例で具体的に書け（$\mathbb{T}$：$dx/2\pi$、$\mathbb{R}$：$dx$、$\mathbb{Z}$：数え上げ、$\mathbb{Z}/N$：$\frac1N\times$数え上げ、など）。本書がこれらの正規化を選んできた理由を、Plancherel の定数が $1$ になることから説明せよ。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 82</span><span class="ttl">指標と双対群</span><span class="stars">★★★★☆</span></div>
+  <p class="dep"><b>依存</b>　大問 81</p>
+  <div class="stmt"><span class="tag">主張</span>$G$ の連続指標とは連続準同型 $\chi:G\to\{z:|z|=1\}$ のこと。全体 $\hat G$ は点ごとの積で群をなし、コンパクト開位相で局所コンパクト Abel 群になる。$\hat{\mathbb{T}}\cong\mathbb{Z}$、$\hat{\mathbb{Z}}\cong\mathbb{T}$、$\hat{\mathbb{R}}\cong\mathbb{R}$、$\widehat{\mathbb{Z}/N}\cong\mathbb{Z}/N$。</div>
+  <ol class="items tight">
+    <li>$\mathbb{R}$ の連続指標が $\chi(x)=e^{2\pi ix\xi}$ に限ることを示せ（$\chi$ の局所積分から微分可能性を導き、$\chi'=c\chi$ を解く）。</li>
+    <li>$\mathbb{T}$ の連続指標が $e^{inx}$ に限ることを、(1) と周期性から導け。</li>
+    <li>$\mathbb{Z}$、$\mathbb{Z}/N$ の場合を決定せよ。</li>
+    <li>一般の $G$ について $\mathcal{F}f(\chi)=\int_{G}f(x)\overline{\chi(x)}\,d\mu(x)$ と定義すると、これまでの 4 つの変換がすべてこの一式の特別な場合になることを確かめよ。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 83</span><span class="ttl">Pontryagin の双対定理</span><span class="stars">★★★★★</span></div>
+  <p class="dep"><b>依存</b>　大問 55, 82</p>
+  <div class="stmt"><span class="tag">主張</span>自然な写像 $\alpha:G\to\hat{\hat G}$、$\alpha(x)(\chi)=\chi(x)$ は位相群としての同型である。さらに Plancherel の定理が一般の $G$ で成り立ち、$\mathcal{F}:L^{2}(G)\to L^{2}(\hat G)$ はユニタリ（Haar 測度を適切に正規化して）。</div>
+  <ol class="items tight">
+    <li>$\alpha$ が連続準同型であることを示せ。</li>
+    <li>単射性（指標が点を分離すること）を、Bochner の定理（大問 55）の一般化＝Gelfand–Raikov から導く筋道を述べよ。</li>
+    <li>全射性の証明の骨格（$L^{1}(G)$ の Gelfand 理論、逆変換定理）を述べよ。</li>
+    <li>$G=\mathbb{T},\mathbb{Z},\mathbb{R},\mathbb{Z}/N$ の各場合に定理を明示的に検証し、「$\mathbb{T}$ と $\mathbb{Z}$ が互いに双対」という事実が、Fourier 級数と Fourier 係数列の対応そのものであることを説明せよ。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 84</span><span class="ttl">有限 Abel 群上の Fourier 解析</span><span class="stars">★★★☆☆</span></div>
+  <p class="dep"><b>依存</b>　大問 82</p>
+  <div class="stmt"><span class="tag">主張</span>$G$ を有限 Abel 群とすると $\hat G\cong G$（非自然に）であり、$\{\chi\}_{\chi\in\hat G}$ は $L^{2}(G)$ の完全正規直交基底をなす。Parseval、畳み込み定理、反転公式がすべて有限和で成り立つ。$G=\mathbb{Z}/N$ の場合が離散 Fourier 変換（DFT）であり、Cooley–Tukey の分解により $O(N\log N)$ で計算できる。</div>
+  <ol class="items tight">
+    <li>有限 Abel 群の構造定理（巡回群の直積）を認めて $\hat G\cong G$ を示せ。</li>
+    <li>直交関係 $\frac{1}{|G|}\sum_{x}\chi(x)\overline{\chi'(x)}=\delta_{\chi\chi'}$ を、「非自明な指標の総和は $0$」から示せ。</li>
+    <li>DFT 行列 $F_{N}$ について $F_{N}^{2}a_{j}=Na_{-j}$、$F_{N}^{4}=N^{2}I$ を示し、固有値を決定せよ。</li>
+    <li>$N=2M$ のときの偶奇分解から $T(N)=2T(N/2)+O(N)$ を導き、FFT の計算量を結論せよ。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 85</span><span class="ttl">Peter–Weyl の定理</span><span class="stars">★★★★★</span></div>
+  <p class="dep"><b>依存</b>　大問 6, 21, 81</p>
+  <div class="stmt"><span class="tag">主張</span>$G$ をコンパクト位相群（非可換でもよい）とすると、既約ユニタリ表現の行列要素 $\left\{\sqrt{d_{\pi}}\,\pi_{ij}\right\}$ の全体は $L^{2}(G)$ の完全正規直交基底をなす。とくに $G$ が Abel なら既約表現はすべて 1 次元（＝指標）で、これは大問 23 の一般化である。</div>
+  <ol class="items tight">
+    <li>$L^{2}(G)$ 上の左正則表現を定義し、$f\in C(G)$ に対する畳み込み作用素 $T_{f}$ がコンパクト作用素であることを示せ。</li>
+    <li>コンパクト自己共役作用素のスペクトル定理（認めてよい）から、有限次元不変部分空間が十分多く存在することを導け。</li>
+    <li>Schur の直交関係 $\int_{G}\pi_{ij}\overline{\pi'_{kl}}=\frac{1}{d_{\pi}}\delta_{\pi\pi'}\delta_{ik}\delta_{jl}$ を示せ。</li>
+    <li>完全性を大問 6 (e) の形（直交するものは $0$）で確かめ、$G=\mathbb{T}$、$G$ 有限群の場合に何が言えているかを述べよ。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 86</span><span class="ttl">Stone の定理（1 パラメータユニタリ群）</span><span class="stars">★★★★★</span></div>
+  <p class="dep"><b>依存</b>　大問 44, 55</p>
+  <div class="stmt"><span class="tag">主張</span>Hilbert 空間 $H$ 上の強連続ユニタリ群 $\{U_{t}\}_{t\in\mathbb{R}}$（$U_{t+s}=U_{t}U_{s}$、$t\mapsto U_{t}x$ 連続）に対し、自己共役作用素 $A$（一般に非有界）が一意に存在して $U_{t}=e^{itA}$。逆も成り立つ。</div>
+  <ol class="items tight">
+    <li>スペクトル測度の言葉を用意せよ：$\langle U_{t}x,x\rangle$ が正定値関数（大問 55）であることを示し、Bochner の定理から測度 $\mu_{x}$ を得よ。</li>
+    <li>$\mu_{x}$ たちが整合的なスペクトル測度 $E$ を定めることを、偏極恒等式で示せ。</li>
+    <li>$A=\int\lambda\,dE(\lambda)$ を定義し、定義域 $D(A)=\{x:\int\lambda^{2}d\mu_{x}\lt\infty\}$ で自己共役であることを示せ。</li>
+    <li>$U_{t}=e^{itA}$ と一意性を確かめ、$H=L^{2}(\mathbb{R})$、$U_{t}f=f(\cdot-t)$ の場合に $A=\frac{1}{2\pi i}\frac{d}{dx}$（Fourier 変換で対角化される）となることを検証せよ。「Fourier 変換とは平行移動群の同時対角化である」という主張の意味を述べよ。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 87</span><span class="ttl">Herglotz の定理（正定値数列）</span><span class="stars">★★★★☆</span></div>
+  <p class="dep"><b>依存</b>　大問 27, 55</p>
+  <div class="stmt"><span class="tag">主張</span>数列 $(c_{n})_{n\in\mathbb{Z}}$ が正定値（任意の有限個の $a_{j}$ に対し $\sum_{j,k}a_{j}\overline{a_{k}}c_{j-k}\ge0$）であることと、$\mathbb{T}$ 上の有限正測度 $\mu$ が存在して $c_{n}=\hat\mu(n)$ となることは同値。</div>
+  <ol class="items tight">
+    <li>「$\Leftarrow$」を $\left|\sum a_{j}e^{-ijx}\right|^{2}\ge0$ の積分で示せ。</li>
+    <li>「$\Rightarrow$」：$a_{j}=r^{|j|}e^{-ijx}$ を代入して $f_{r}(x)=\sum_{n}r^{|n|}c_{n}e^{inx}\ge0$ を示せ（Poisson 核が顔を出す）。</li>
+    <li>$f_{r}\,\frac{dx}{2\pi}$ の全質量が $c_{0}$ で一定であることから、弱 $*$ コンパクト性で $r\to1^{-}$ の集積測度 $\mu$ をとれ。</li>
+    <li>$\hat\mu(n)=c_{n}$ を確かめよ。系：正定値数列は $|c_{n}|\le c_{0}$ をみたし、$(c_{n})\in\ell^{1}$ なら $\mu$ は連続密度をもつ。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 88</span><span class="ttl">Weyl の一様分布定理と van der Corput の差分定理</span><span class="stars">★★★★★</span></div>
+  <p class="dep"><b>依存</b>　大問 20, 21</p>
+  <div class="stmt"><span class="tag">主張</span>(i)（Weyl の判定法）$(x_{n})$ が $\bmod1$ で一様分布 $\iff$ $\forall k\neq0$、$\frac1N\sum_{n\le N}e^{2\pi ikx_{n}}\to0$。(ii) $\alpha$ が無理数なら $(n\alpha)$ は一様分布。(iii)（van der Corput）任意の $h\ge1$ に対し $(x_{n+h}-x_{n})$ が一様分布ならば $(x_{n})$ も一様分布。(iv) 系：任意の実係数多項式 $p$ で最高次以外の係数はどうでもよく、最高次係数が無理数なら $(p(n))$ は一様分布。</div>
+  <ol class="items tight">
+    <li>(i)：指示関数を三角多項式で上下から挟む（Fejér、大問 20, 21）。</li>
+    <li>(ii)：等比級数の和を評価せよ。</li>
+    <li>(iii)：van der Corput の不等式
+      $\left|\frac1N\sum_{n\le N}z_{n}\right|^{2}\le\frac{C}{H}+\frac{C}{H}\sum_{h=1}^{H}\left|\frac1N\sum_{n\le N}z_{n+h}\overline{z_{n}}\right|$
+      を示し（Cauchy–Schwarz と和の入れ替え）、$z_{n}=e^{2\pi ikx_{n}}$ に適用せよ。</li>
+    <li>(iv) を (iii) の帰納法で示せ（差分をとるたびに次数が下がる）。応用として $(n^{2}\sqrt2)$、$(\sqrt n)$ の一様分布性を判定せよ。</li>
+  </ol>
+</div>

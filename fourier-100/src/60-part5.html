@@ -1,0 +1,135 @@
+<h2 class="part">第 V 部　極大関数と特異積分<span class="en">MAXIMAL FUNCTIONS AND SINGULAR INTEGRALS &mdash; PROBLEMS 59–68</span></h2>
+<p class="part-lead">「ほとんど至る所の収束」を証明する道はただ一つ ― 極大作用素の評価である（大問 38 でそれが<em>必然</em>であることを見た）。ここで Hardy–Littlewood の極大不等式を作り、Calderón–Zygmund 分解を経て、第 III 部でやり残した Hilbert 変換の $L^{p}$ 有界性（大問 37 の宿題）を完済する。</p>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 59</span><span class="ttl">Vitali の被覆補題</span><span class="stars">★★★☆☆</span></div>
+  <p class="dep"><b>依存</b>　$\mathbf{(T\text{-}2)}$, $\mathbf{(D\text{-}16)}$</p>
+  <div class="stmt"><span class="tag">主張</span>（有限版）球の有限族 $B_{1},\dots,B_{N}\subset\mathbb{R}^{n}$ から、互いに交わらない部分族 $B_{i_{1}},\dots,B_{i_{k}}$ を選んで
+  $\displaystyle\left|\bigcup_{j=1}^{N}B_{j}\right|\le3^{n}\sum_{l=1}^{k}\left|B_{i_{l}}\right|$
+  とできる。（無限版）$E\subset\bigcup_{\alpha}B_{\alpha}$（半径が一様有界）ならば、互いに交わらない可算部分族で $|E|\le5^{n}\sum|B_{i}|$ とできる。</div>
+  <ol class="items tight">
+    <li>有限版：半径の大きい順に貪欲に選ぶアルゴリズムを書き、選ばれなかった球が、選ばれたある球の $3$ 倍拡大に含まれることを示せ。</li>
+    <li>$|3B|=3^{n}|B|$ を使って不等式を完成させよ。</li>
+    <li>無限版：半径を $2^{-k}$ ごとの階層に分け、各階層で Zorn の補題（または貪欲法）を使う構成を書け。</li>
+    <li>定数 $3^{n},5^{n}$ が次元に指数的に依存すること、そしてこれが高次元での困難の源であることを述べよ。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 60</span><span class="ttl">Hardy–Littlewood の極大不等式</span><span class="stars">★★★★☆</span></div>
+  <p class="dep"><b>依存</b>　大問 48, 59</p>
+  <div class="stmt"><span class="tag">主張</span>$\displaystyle Mf(x)=\sup_{r\gt0}\frac{1}{|B(x,r)|}\int_{B(x,r)}|f(y)|\,dy$ とする。(i) $M$ は弱 $(1,1)$ 型：$|\{Mf\gt\lambda\}|\le\frac{3^{n}}{\lambda}\|f\|_{1}$。(ii) $1\lt p\le\infty$ に対し $\|Mf\|_{p}\le C_{n,p}\|f\|_{p}$。(iii) $M$ は $L^{1}\to L^{1}$ には有界でない。</div>
+  <ol class="items tight">
+    <li>$E_{\lambda}=\{Mf\gt\lambda\}$ の各点に、平均が $\lambda$ を超える球をとり、Vitali（大問 59）を適用して (i) を示せ。</li>
+    <li>$p=\infty$ は自明。Marcinkiewicz の補間（大問 48）で (ii) を得よ。</li>
+    <li>補間を使わない直接証明も与えよ（$f=f\mathbf{1}_{|f|\gt\lambda/2}+\cdots$ と分けて分布関数を評価）。</li>
+    <li>(iii)：$Mf(x)\gtrsim|x|^{-n}$（$|x|$ 大）を任意の $f\neq0$ について示し、$Mf\in L^{1}$ が不可能であることを結論せよ。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 61</span><span class="ttl">Lebesgue の微分定理</span><span class="stars">★★★★☆</span></div>
+  <p class="dep"><b>依存</b>　大問 60 ／ $\mathbf{(T\text{-}11)}$</p>
+  <div class="stmt"><span class="tag">主張</span>$f\in L^{1}_{\mathrm{loc}}(\mathbb{R}^{n})$ に対し、a.e. $x$ で
+  $$\lim_{r\to0}\frac{1}{|B(x,r)|}\int_{B(x,r)}f(y)\,dy=f(x),\qquad
+    \lim_{r\to0}\frac{1}{|B(x,r)|}\int_{B(x,r)}|f(y)-f(x)|\,dy=0.$$
+  後者をみたす $x$ を $f$ の<strong>Lebesgue 点</strong>という。</div>
+  <ol class="items tight">
+    <li>連続関数については明らかであることを確かめよ。</li>
+    <li>振動量 $\Omega f(x)=\limsup_{r\to0}\left|\frac{1}{|B|}\int_{B}f-f(x)\right|$ を定義し、$g\in C_{c}$ による近似から $\Omega f\le\Omega(f-g)\le M(f-g)+|f-g|$ を示せ。</li>
+    <li>極大不等式（大問 60 (i)）と $\mathbf{(T\text{-}11)}$ を使い、$|\{\Omega f\gt\lambda\}|=0$（$\forall\lambda\gt0$）を示せ。</li>
+    <li>第 2 の主張を、$|f-c|$（$c$ は有理数）に (3) を適用し可算個の例外集合を合併することで導け。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 62</span><span class="ttl">近似単位元の各点収束</span><span class="stars">★★★★☆</span></div>
+  <p class="dep"><b>依存</b>　大問 60, 61</p>
+  <div class="stmt"><span class="tag">主張</span>$\varphi\ge0$、$\int\varphi=1$ で、$\varphi$ が「radial decreasing majorant」$\psi(|x|)$（$\psi$ は減少、$\int\psi\lt\infty$）をもつとする。このとき $\sup_{\varepsilon\gt0}|f*\varphi_{\varepsilon}(x)|\le C\,Mf(x)$、したがって $f\in L^{p}$（$1\le p\le\infty$）に対し $f*\varphi_{\varepsilon}\to f$ が a.e.（Lebesgue 点で）成り立つ。</div>
+  <ol class="items tight">
+    <li>まず $\varphi$ が「有限個の球の定義関数の正係数和」の場合に $|f*\varphi_{\varepsilon}|\le CMf$ を示せ。</li>
+    <li>一般の radial decreasing $\varphi$ をそのような和で近似（層状分解 $\psi=\int_{0}^{\infty}\mathbf{1}_{\{\psi\gt t\}}dt$）して (1) を延ばせ。</li>
+    <li>極大評価と $C_{c}$ 稠密性から a.e. 収束を導け（大問 61 と同じ構造の議論）。</li>
+    <li>Gauss 核・Poisson 核がこの条件をみたすことを確かめよ。一方、Dirichlet 核 $D_{N}$ が<strong>みたさない</strong>ことを確かめ、それが第 III 部の病理の源であることを述べよ。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 63</span><span class="ttl">Fejér–Lebesgue と Fatou の非接収束</span><span class="stars">★★★★☆</span></div>
+  <p class="dep"><b>依存</b>　大問 20, 27, 62</p>
+  <div class="stmt"><span class="tag">主張</span>(i) $f\in L^{1}(\mathbb{T})$ の Lebesgue 点 $x$ で $\sigma_{N}f(x)\to f(x)$（Fejér–Lebesgue）。とくに a.e. 収束。(ii) $u=A_{r}f$（Poisson 積分）は、$f$ の Lebesgue 点に非接領域 $\Gamma_{\alpha}(x_{0})=\{z:|z-x_{0}|\lt\alpha(1-|z|)\}$ の中から近づくとき $f(x_{0})$ に収束する（Fatou の定理）。</div>
+  <ol class="items tight">
+    <li>$K_{N}$ が radial decreasing majorant をもつこと（$K_{N}(x)\le C\min(N,\frac{1}{N x^{2}})$）を示せ。</li>
+    <li>大問 62 の論法を $\mathbb{T}$ 上に移して (i) を示せ。</li>
+    <li>Poisson 核についても同様の優関数評価 $P_{r}(x)\le C\min\left(\frac{1}{1-r},\frac{1-r}{x^{2}}\right)$ を示せ。</li>
+    <li>非接領域内で $|z-x_{0}|\le\alpha(1-|z|)$ を使い、極大関数による一様評価 $\sup_{z\in\Gamma_{\alpha}(x_{0})}|u(z)|\le C_{\alpha}Mf(x_{0})$ を導いて (ii) を結論せよ。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 64</span><span class="ttl">Calderón–Zygmund 分解</span><span class="stars">★★★★☆</span></div>
+  <p class="dep"><b>依存</b>　大問 60, 61</p>
+  <div class="stmt"><span class="tag">主張</span>$f\in L^{1}(\mathbb{R}^{n})$、$f\ge0$、$\lambda\gt0$ とする。互いに内部が交わらない二進立方体の族 $\{Q_{j}\}$ が存在して
+  $$\lambda\lt\frac{1}{|Q_{j}|}\int_{Q_{j}}f\le2^{n}\lambda,\qquad f\le\lambda\ \ \text{a.e. on}\ \left(\bigcup_{j}Q_{j}\right)^{c},\qquad \sum_{j}|Q_{j}|\le\frac{1}{\lambda}\|f\|_{1}.$$
+  したがって $f=g+b$、$g=f\mathbf{1}_{(\cup Q_{j})^{c}}+\sum_{j}\left(\frac{1}{|Q_{j}|}\int_{Q_{j}}f\right)\mathbf{1}_{Q_{j}}$、$b=\sum_{j}b_{j}$ と分解でき、$\|g\|_{\infty}\le2^{n}\lambda$、$\int b_{j}=0$、$\operatorname{supp}b_{j}\subset Q_{j}$、$\|b\|_{1}\le2\|f\|_{1}$。</div>
+  <ol class="items tight">
+    <li>二進立方体を、平均が $\lambda$ を超えるまで細分する「停止時刻」の議論で $\{Q_{j}\}$ を構成せよ。</li>
+    <li>親の立方体では平均が $\lambda$ 以下であることから上からの評価 $2^{n}\lambda$ を導け。</li>
+    <li>補集合上で $f\le\lambda$ a.e. を Lebesgue の微分定理（大問 61）から示せ。</li>
+    <li>$g,b$ の性質を確かめ、この分解が「関数を良い部分（有界）と悪い部分（平均 $0$・局所台）に分ける」ことの意味を述べよ。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 65</span><span class="ttl">Calderón–Zygmund 作用素の弱 $(1,1)$ 評価</span><span class="stars">★★★★★</span></div>
+  <p class="dep"><b>依存</b>　大問 48, 64</p>
+  <div class="stmt"><span class="tag">主張</span>$T$ を $L^{2}$ 有界な作用素とし、核 $K$（$x\notin\operatorname{supp}f$ で $Tf(x)=\int K(x,y)f(y)dy$）が Hörmander 条件
+  $$\sup_{y,y'}\int_{|x-y|\gt2|y-y'|}\bigl|K(x,y)-K(x,y')\bigr|\,dx\le A\lt\infty$$
+  をみたすとする。このとき $T$ は弱 $(1,1)$ 型であり、したがって $1\lt p\lt2$ で $L^{p}$ 有界、双対性より $2\lt p\lt\infty$ でも有界。</div>
+  <ol class="items tight">
+    <li>$f=g+b$ と CZ 分解（大問 64）し、$|\{|Tg|\gt\lambda/2\}|$ を $L^{2}$ 有界性と $\|g\|_{2}^{2}\le2^{n}\lambda\|f\|_{1}$ から評価せよ。</li>
+    <li>$Q_{j}^{*}=2\sqrt{n}Q_{j}$（拡大立方体）の外での $Tb_{j}$ を、$\int b_{j}=0$ を使って
+      $Tb_{j}(x)=\int\left(K(x,y)-K(x,y_{j})\right)b_{j}(y)dy$ と書き、Hörmander 条件で $\int_{(Q_{j}^{*})^{c}}|Tb_{j}|\le A\|b_{j}\|_{1}$ を示せ。</li>
+    <li>$\left|\bigcup Q_{j}^{*}\right|\le C\lambda^{-1}\|f\|_{1}$ と (2) を合わせて悪い部分を評価し、全体を結論せよ。</li>
+    <li>Marcinkiewicz（大問 48）と双対性で $L^{p}$ 有界性を導け。$p=1,\infty$ では強型が成り立たないことを述べよ。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 66</span><span class="ttl">Hilbert 変換の $L^{2}$ 理論</span><span class="stars">★★★★☆</span></div>
+  <p class="dep"><b>依存</b>　大問 44, 61</p>
+  <div class="stmt"><span class="tag">主張</span>$\displaystyle Hf(x)=\frac{1}{\pi}\lim_{\varepsilon\to0}\int_{|y|\gt\varepsilon}\frac{f(x-y)}{y}\,dy$ は $f\in L^{2}(\mathbb{R})$ に対し $L^{2}$ 収束の意味で存在し、
+  $$\widehat{Hf}(\xi)=-i\operatorname{sgn}(\xi)\hat f(\xi).$$
+  したがって $H$ は $L^{2}$ 上の等長作用素で $H^{2}=-\mathrm{id}$、$H^{*}=-H$。</div>
+  <ol class="items tight">
+    <li>$K_{\varepsilon,R}(x)=\frac{1}{\pi x}\mathbf{1}_{\varepsilon\lt|x|\lt R}$ の Fourier 変換を計算し、$\varepsilon\to0,R\to\infty$ で $-i\operatorname{sgn}\xi$ に有界に各点収束することを示せ。</li>
+    <li>$\int_{0}^{\infty}\frac{\sin t}{t}dt=\frac\pi2$ を用いて (1) の一様有界性を確かめよ。</li>
+    <li>優収束定理と Plancherel から $L^{2}$ 収束を結論せよ。</li>
+    <li>$H$ が平行移動と可換で、スケーリングについて $H(f(\lambda\cdot))=(Hf)(\lambda\cdot)$（$\lambda\gt0$）、$H$ は奇関数を偶関数に写すことを確かめ、「$H$ は $\mathbb{R}$ 上で平行移動・正スケーリングと可換な（定数倍を除き）唯一の非自明作用素である」という主張の意味を述べよ。</li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 67</span><span class="ttl">M. Riesz の定理 ― Hilbert 変換の $L^{p}$ 有界性</span><span class="stars">★★★★★</span></div>
+  <p class="dep"><b>依存</b>　大問 37, 65, 66</p>
+  <div class="stmt"><span class="tag">主張</span>$1\lt p\lt\infty$ に対し $\|Hf\|_{p}\le C_{p}\|f\|_{p}$。$p=1,\infty$ では成り立たない。系として、$1\lt p\lt\infty$ のとき $\mathbb{T}$ 上の共役作用素と Riesz 射影は $L^{p}$ 有界であり、したがって<strong>$f\in L^{p}(\mathbb{T})$ ならば $\|S_{N}f-f\|_{p}\to0$</strong>（大問 37 の帰結）。</div>
+  <ol class="items tight">
+    <li>核 $K(x,y)=\frac{1}{\pi(x-y)}$ が Hörmander 条件をみたすことを、平均値の定理で確かめよ。</li>
+    <li>大問 66（$L^{2}$ 有界）と大問 65 から $1\lt p\le2$ を得、双対性で $2\le p\lt\infty$ を得よ。</li>
+    <li>$p=1$ で破れることを $f=\mathbf{1}_{[0,1]}$（$Hf(x)=\frac1\pi\log\left|\frac{x}{x-1}\right|$）で示せ。$p=\infty$ の反例も作れ。</li>
+    <li>円周版への移行（$\frac{1}{\pi}\cot\frac{x}{2}$ と $\frac{2}{x}$ の差が良い核であること）を確かめ、系を結論せよ。<strong>これで大問 37 の宿題が完済し、$L^{p}$ 収束問題が解決する。</strong></li>
+  </ol>
+</div>
+
+<div class="prob mini">
+  <div class="prob-head"><span class="no">大問 68</span><span class="ttl">Mikhlin–Hörmander の乗数定理</span><span class="stars">★★★★★</span></div>
+  <p class="dep"><b>依存</b>　大問 65, 66</p>
+  <div class="stmt"><span class="tag">主張</span>$m\in C^{\lfloor n/2\rfloor+1}(\mathbb{R}^{n}\setminus\{0\})$ が
+  $\left|\partial^{\beta}m(\xi)\right|\le A|\xi|^{-|\beta|}$（$|\beta|\le\lfloor n/2\rfloor+1$）をみたすならば、$T_{m}f=\left(m\hat f\right)^{\vee}$ は $1\lt p\lt\infty$ で $L^{p}$ 有界。</div>
+  <ol class="items tight">
+    <li>Plancherel から $L^{2}$ 有界性は明らか。核 $K=\check m$ が Hörmander 条件をみたすことを示すのが本題である。</li>
+    <li>Littlewood–Paley 分解：$1=\sum_{j\in\mathbb{Z}}\psi(2^{-j}\xi)$（$\psi$ は環状台の滑らかな関数）を構成し、$m_{j}=m\psi(2^{-j}\cdot)$ とおけ。</li>
+    <li>$\|\check m_{j}\|_{L^{1}(|x|\gt R)}$ を、$\int|x|^{2N}|\check m_{j}|^{2}dx=c\int|\partial^{N}m_{j}|^{2}d\xi$（Plancherel）と Cauchy–Schwarz で評価し、$j$ について足して Hörmander 条件を検証せよ。微分回数 $\lfloor n/2\rfloor+1$ がここで必要になる理由を説明せよ。</li>
+    <li>大問 65 を適用して結論せよ。応用：$m(\xi)=\xi_{j}/|\xi|$（Riesz 変換）、$m(\xi)=\operatorname{sgn}\xi$（Hilbert 変換）がこの条件をみたすことを確かめよ。</li>
+  </ol>
+</div>
