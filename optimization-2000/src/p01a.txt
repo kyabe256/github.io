@@ -1,0 +1,126 @@
+=part 第 I 部　凸解析 | CONVEX ANALYSIS &mdash; 1 to 200
+最適化の定理のほとんどは、突き詰めると「凸集合は超平面で分離できる」という一つの幾何的事実の変奏である。分離定理から出発し、錐と選択肢定理、多面体、凸幾何、凸関数・共役・劣微分・単調作用素まで、以後の 1800 題が暗黙に使う道具をすべてここで証明する。
+
+=ch I-1　凸集合と分離
+
+*4 最近点射影定理 {proj}
+$C\subset\mathbb{R}^{n}$ を空でない閉凸集合とする。各 $x$ に対し $\|x-p\|=\operatorname{dist}(x,C)$ なる $p=P_{C}(x)\in C$ が一意に存在し、$p$ は変分不等式 $\langle x-p,\,y-p\rangle\le0\ (\forall y\in C)$ で特徴づけられる。さらに $P_{C}$ は堅非拡大 $\|P_{C}x-P_{C}y\|^{2}\le\langle P_{C}x-P_{C}y,\,x-y\rangle$ であることを示し、Hilbert 空間へ拡張せよ。
+
+*4 点と閉凸集合の強分離
+閉凸集合 $C\subset\mathbb{R}^{n}$ と $x_{0}\notin C$ に対し、$\sup_{y\in C}\langle a,y\rangle<\langle a,x_{0}\rangle$ なる $a$ が存在する。系として、閉凸集合はそれを含む閉半空間全体の共通部分に等しいことを示せ。
+
+*4 支持超平面定理 {supp}
+凸集合 $C\subset\mathbb{R}^{n}$ の境界点 $x_{0}$ では、$C$ を片側に含み $x_{0}$ を通る超平面が存在する。$C$ の内部が空の場合にも（相対境界点に対して）適切に定式化し直して証明せよ。
+
+*4 二つの凸集合の分離定理 {sep}
+$C_{1},C_{2}\subset\mathbb{R}^{n}$ を空でない凸集合とする。$C_{1},C_{2}$ が非自明な超平面で（弱）分離できるための必要十分条件は $\operatorname{ri}C_{1}\cap\operatorname{ri}C_{2}=\emptyset$ であることを示せ（Rockafellar の真分離定理）。
+
+*4 強分離とコンパクト性
+$C_{1}$ がコンパクト凸、$C_{2}$ が閉凸で交わらなければ強分離可能である。両方が閉凸で交わらないが強分離不可能な例を $\mathbb{R}^{2}$ で作り、$C_{1}-C_{2}$ が閉であることが強分離の鍵であることを説明せよ。
+
+*4 相対内部の基本性質 {ri}
+空でない凸集合 $C\subset\mathbb{R}^{n}$ に対し (a) $\operatorname{ri}C\neq\emptyset$、(b) $x\in\operatorname{ri}C$, $y\in\operatorname{cl}C$ ならば $[x,y)\subset\operatorname{ri}C$、(c) $\operatorname{cl}\operatorname{ri}C=\operatorname{cl}C$, $\operatorname{ri}\operatorname{cl}C=\operatorname{ri}C$、(d) 線形写像 $A$ について $\operatorname{ri}(AC)=A\operatorname{ri}C$ を示せ。
+
+*4 凸集合の和と像の閉性
+閉凸集合 $C_{1},C_{2}$ について、後退錐が $0^{+}C_{1}\cap(-0^{+}C_{2})=\{0\}$ をみたせば $C_{1}+C_{2}$ は閉である。線形写像 $A$ について $\ker A\cap0^{+}C=\{0\}$ ならば $AC$ は閉である。いずれも条件を落とすと偽になる例を与えよ。
+
+*4 後退錐の理論 {recc}
+閉凸集合 $C$ の後退錐 $0^{+}C=\{d:\ C+d\subset C\}$ は閉凸錐で、任意の $x\in C$ について $0^{+}C=\{d:\ x+td\in C\ \forall t\ge0\}$。$C$ が有界 $\iff0^{+}C=\{0\}$、および閉凸集合の族 $\{C_{i}\}$ の共通部分の後退錐は後退錐の共通部分であることを示せ。
+
+*4 Minkowski の端点定理（有限次元 Krein–Milman） {mink}
+$\mathbb{R}^{n}$ のコンパクト凸集合は、その端点集合の凸包に等しい。さらに端点集合が閉とは限らない例（$\mathbb{R}^{3}$）を構成し、露出点の閉包の凸包でも $C$ が得られること（Straszewicz の定理）を示せ。
+
+*4 閉凸集合の直線を含まない場合の表現
+直線を含まない閉凸集合 $C$ は $C=\operatorname{conv}(\operatorname{ext}C)+0^{+}C$ と表される。さらに一般の閉凸集合は $C=(C\cap L^{\perp})+L$（$L$ は線形空間 $0^{+}C\cap(-0^{+}C)$）と分解されることを示せ。
+
+*4 面の理論
+凸集合 $C$ の面 $F$（$F\ni\lambda x+(1-\lambda)y$, $0<\lambda<1$, $x,y\in C$ なら $x,y\in F$）について、(a) 面の面は面、(b) $\operatorname{ri}$ 全体が $C$ を分割する、(c) 露出面は面だが逆は偽、(d) $F=C\cap\operatorname{cl}F$ を示せ。
+
+*5 Hilbert 空間の分離と Hahn–Banach の幾何形
+実ノルム空間 $X$ の凸集合 $A$ が内点をもち、凸集合 $B$ と $\operatorname{int}A\cap B=\emptyset$ ならば非零の $f\in X^{*}$ で $A,B$ が分離される。内点の仮定を落とすと、$\ell^{2}$ の中で分離できない二つの交わらない凸集合が存在することを示せ。
+
+*4 凸包と閉凸包
+$S\subset\mathbb{R}^{n}$ がコンパクトならば $\operatorname{conv}S$ もコンパクトである。閉集合 $S$ について $\operatorname{conv}S$ が閉でない例、および無限次元 Hilbert 空間でコンパクト集合の凸包が閉でない例を与えよ。
+
+*4 Kakutani の補題（凸集合の分離による Hahn–Banach）
+実ベクトル空間において、交わらない二つの凸集合 $A,B$ に対し、$A\subset H$, $B\cap H=\emptyset$ で $H$ と補集合がともに凸な集合 $H$（半空間）が存在する。Zorn の補題による証明を完成させよ。
+
+*4 Mazur の定理
+ノルム空間の凸集合は、ノルム閉 $\iff$ 弱閉である。系として、弱収束列 $x_{k}\rightharpoonup x$ に対し $x$ にノルム収束する凸結合の列 $y_{k}\in\operatorname{conv}\{x_{k},x_{k+1},\dots\}$ が存在することを示し、凸性を落とすと弱閉包とノルム閉包が異なる例（$\ell^{2}$ の単位球面）を与えよ。
+
+*4 凸集合の次元と Carathéodory の定理 {cara}
+$S\subset\mathbb{R}^{n}$ の凸包の各点は、$S$ の高々 $n+1$ 点の凸結合で表される。錐包については高々 $n$ 点で十分であることを示し、$n+1$ が最良であることを例で確かめよ。
+
+*4 Fenchel–Bunt の定理
+$S\subset\mathbb{R}^{n}$ の連結成分が高々 $n$ 個ならば、$\operatorname{conv}S$ の各点は $S$ の高々 $n$ 点の凸結合で表される。
+
+*5 Motzkin の凸性判定（Chebyshev 集合）
+$\mathbb{R}^{n}$ の閉集合 $C$ で、各点がただ一つの最近点をもつもの（Chebyshev 集合）は凸である。証明を完成させ、無限次元 Hilbert 空間で同じ主張が未解決であることを述べよ。
+
+*4 凸体の Hausdorff 距離と Blaschke の選択定理
+$\mathbb{R}^{n}$ の空でないコンパクト凸集合の全体は Hausdorff 距離で完備距離空間をなし、一様有界な列は収束部分列をもつ。支持関数 $h_{C}$ を用いて $d_{H}(C,D)=\|h_{C}-h_{D}\|_{L^{\infty}(S^{n-1})}$ を示せ。
+
+*4 凸錐の分離と尖錐
+閉凸錐 $K$ が尖っている（$K\cap(-K)=\{0\}$）$\iff$ 双対錐 $K^{*}$ が内点をもつ。さらに $K$ が尖っていれば $\langle a,x\rangle\ge c\|x\|$ ($x\in K$) なる $a$, $c>0$ が存在することを示せ。
+
+=ch I-2　錐・双対錐と選択肢定理
+
+*4 Farkas の補題 {farkas}
+$A\in\mathbb{R}^{m\times n}$, $b\in\mathbb{R}^{m}$ について、次のちょうど一方が成り立つ：(i) $Ax=b$, $x\ge0$ が解をもつ、(ii) $A^{\top}y\ge0$, $\langle b,y\rangle<0$ が解をもつ。有限生成錐が閉であることを経由して証明せよ。
+
+*4 有限生成錐の閉性
+有限個のベクトルの非負結合全体 $\operatorname{cone}\{a_{1},\dots,a_{n}\}$ は閉である。Carathéodory の定理と一次独立部分族への帰着で示し、無限個では偽になる例を与えよ。
+
+*4 双対錐と双対錐定理 {bipolar}
+閉凸錐 $K$ について $K^{**}=K$。一般の集合 $S$ について $S^{**}=\operatorname{cl}\operatorname{cone}\operatorname{conv}S$ を示し、$(K_{1}\cap K_{2})^{*}=\operatorname{cl}(K_{1}^{*}+K_{2}^{*})$ で閉包が本当に必要な例を作れ。
+
+*4 Gordan の選択肢定理
+次のちょうど一方が解をもつ：(i) $Ax<0$、(ii) $A^{\top}y=0$, $y\ge0$, $y\neq0$。これから Fritz John 条件の線形版を導け。
+
+*4 Motzkin の転置定理
+$A,B,C$ を行列とする。$Ax<0$, $Bx\le0$, $Cx=0$ が解をもたない $\iff$ $A^{\top}y_{1}+B^{\top}y_{2}+C^{\top}y_{3}=0$, $y_{1}\ge0$, $y_{1}\neq0$, $y_{2}\ge0$ が解をもつ。Farkas・Gordan・Stiemke をすべて特殊化として得よ。
+
+*4 Stiemke の定理と Tucker の完全相補性
+(i) $Ax=0$, $x>0$ と (ii) $A^{\top}y\ge0$, $A^{\top}y\neq0$ のちょうど一方が解をもつ。さらに Tucker：$Ax=0$, $x\ge0$ と $A^{\top}y\ge0$ の解で $x+A^{\top}y>0$ となるものが存在することを示せ。
+
+*4 Ville の定理と Farkas の非同次版
+$Ax\le b$ が解をもたない $\iff$ $A^{\top}y=0$, $y\ge0$, $\langle b,y\rangle<0$ が解をもつ。この形の Farkas から線形計画の強双対定理を導く道筋を完成させよ。
+
+*5 無限次元 Farkas と閉性の条件
+Hilbert 空間の有界線形作用素 $A:X\to Y$ と閉凸錐 $K\subset X$ について、$b\in\operatorname{cl}(AK)\iff\langle b,y\rangle\ge0\ \forall y$ with $A^{*}y\in K^{*}$。$AK$ が閉でないとき「漸近的可解性」と真の可解性が乖離する例を作り、閉性を保証する十分条件（Slater 型）を与えよ。
+
+*4 Farkas–Minkowski 系と半無限不等式
+無限系 $\langle a_{t},x\rangle\le b_{t}$ ($t\in T$) が解をもつとき、その帰結として $\langle a,x\rangle\le b$ が成り立つ $\iff(a,b)\in\operatorname{cl}\operatorname{cone}(\{(a_{t},b_{t})\}\cup\{(0,1)\})$。閉包を外せる（Farkas–Minkowski 系である）ための条件を論ぜよ。
+
+*4 凸不等式系の選択肢定理（Fan–Glicksberg–Hoffman）
+$C$ 凸、$f_{1},\dots,f_{m}$ を $C$ 上の凸関数とする。$f_{i}(x)<0\ (\forall i)$ が $C$ 内に解をもたない $\iff$ $\lambda\ge0$, $\lambda\neq0$ で $\sum\lambda_{i}f_{i}(x)\ge0\ (\forall x\in C)$ となるものが存在する。
+
+*4 錐の極と正規錐
+閉凸集合 $C$ の点 $x$ における法錐 $N_{C}(x)=\{v:\langle v,y-x\rangle\le0\ \forall y\in C\}$ と接錐 $T_{C}(x)=\operatorname{cl}\operatorname{cone}(C-x)$ は互いの極錐である。多面体 $C=\{Ax\le b\}$ については $N_{C}(x)$ が有効制約の行ベクトルの錐であることを示せ。
+
+*4 Moreau の分解定理 {moreau-dec}
+閉凸錐 $K\subset\mathbb{R}^{n}$ と極錐 $K^{\circ}$ について、任意の $x$ は $x=P_{K}x+P_{K^{\circ}}x$, $\langle P_{K}x,P_{K^{\circ}}x\rangle=0$ と一意に分解され、この性質が $(K,K^{\circ})$ を特徴づけることを示せ。
+
+*4 自己双対錐の例
+$\mathbb{R}^{n}_{+}$、二次錐 $\mathcal{L}^{n}=\{(x,t):\|x\|\le t\}$、半正定値錐 $\mathbb{S}^{n}_{+}$（内積 $\operatorname{tr}XY$）がいずれも自己双対であることを示せ。さらに共正値錐 $\mathcal{COP}_{n}$ の双対が完全正値錐 $\mathcal{CP}_{n}$ であることを示し、$n\ge2$ でこれらが自己双対でないことを確かめよ。
+
+*4 Fejér の定理（半正定値錐の双対）
+$A\in\mathbb{S}^{n}$ が半正定値 $\iff$ すべての $B\succeq0$ で $\operatorname{tr}AB\ge0$。これを用いて SDP の Farkas 型選択肢定理を定式化し、強い選択肢が一般に成り立たない例（「弱実行不能」）を作れ。
+
+*5 錐線形系の選択肢と面縮小（Borwein–Wolkowicz）
+閉凸錐 $K$ と線形写像 $A$ について、$\{x\in K: Ax=b\}$ が $K$ の内部と交わらないとき、$K$ の真の面 $F$ で可行集合がすべて $F$ に含まれるものが存在し、有限回の縮小で Slater 条件をみたす面に到達する。縮小回数が $K$ の最長の面の鎖で抑えられることを示せ。
+
+*4 Gale の定理
+$Ax\le b$ が解をもつ $\iff$ $y\ge0$, $A^{\top}y=0$ なる任意の $y$ で $\langle b,y\rangle\ge0$。これを Fourier–Motzkin 消去法による直接証明で与えよ。
+
+*4 Fourier–Motzkin 消去法 {fm}
+線形不等式系から一変数を消去する Fourier–Motzkin 法を定式化し、消去後の系が元の系の射影を正確に記述することを証明せよ。不等式の個数が $m\mapsto m^{2}/4$ と爆発しうること、および Farkas の補題の構成的証明になることを示せ。
+
+*4 錐の双対と閉性の失敗
+二つの閉凸錐の和が閉でない例を $\mathbb{R}^{3}$ で作れ（たとえば二次錐と直線）。$\operatorname{ri}K_{1}^{*}\cap\operatorname{ri}K_{2}^{*}\neq\emptyset$ なら $(K_{1}\cap K_{2})^{*}=K_{1}^{*}+K_{2}^{*}$ が成り立つことを示せ。
+
+*4 Helly 型の不整合性定理
+$\mathbb{R}^{n}$ の有限個の閉半空間の共通部分が空ならば、そのうち高々 $n+1$ 個の共通部分がすでに空である。Farkas の補題と Carathéodory の定理から導け。
+
+*5 Dines の定理と二次形式の像の凸性
+二つの実二次形式 $q_{1},q_{2}$ について $\{(q_{1}(x),q_{2}(x)):x\in\mathbb{R}^{n}\}$ は凸錐である。これを用いて、$q_{1},q_{2}$ が共通零点 $x\neq0$ をもたないならば（$n\ge3$）ある線形結合が正定値であること（Finsler–Calabi）を示せ。

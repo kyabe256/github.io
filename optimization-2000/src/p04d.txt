@@ -1,0 +1,123 @@
+=ch IV-7　非線形最小二乗と非線形方程式
+
+*4 Gauss–Newton 法の局所収束 {gn}
+$r:\mathbb{R}^{n}\to\mathbb{R}^{m}$（$m\ge n$）の最小二乗問題で、$J(x^{*})$ がフルランクなら Gauss–Newton 法の局所収束率は $\|x_{k+1}-x^{*}\|\le c_{1}\|S(x^{*})\|\|x_{k}-x^{*}\|+c_{2}\|x_{k}-x^{*}\|^{2}$（$S=\sum r_{i}\nabla^{2}r_{i}$、$\|J^{+}S\|<1$ が収束の条件）。大残差問題で発散する例を作れ。
+
+*4 Levenberg–Marquardt 法の局所二次収束（Yamashita–Fukushima）
+非線形方程式 $F(x)=0$ の解集合 $X^{*}$ が局所誤差限界 $\operatorname{dist}(x,X^{*})\le c\|F(x)\|$ をみたせば、$\lambda_{k}=\|F(x_{k})\|^{2}$ の LM 法は、Jacobian が特異でも $\operatorname{dist}(x_{k},X^{*})$ が二次収束する。証明せよ。
+
+*4 Levenberg–Marquardt の大域計算量
+LM 法の信頼領域的解釈から、$\varepsilon$-停留点（$\|J^{\top}r\|\le\varepsilon$）を $O(\varepsilon^{-2})$ 反復で得ることを示し、ゼロ残差かつ誤差限界の下での改善（Bergou–Diouane–Kungurtsev）を述べよ。
+
+*4 変数射影法（Golub–Pereyra）
+分離可能な最小二乗 $\min_{a,\alpha}\|y-\Phi(\alpha)a\|^{2}$ で、$a$ を消去した $\min_{\alpha}\|(I-P_{\Phi(\alpha)})y\|^{2}$ の停留点が元の問題の停留点と対応すること、および射影の微分公式（Golub–Pereyra）を導け。
+
+*4 総最小二乗（TLS）
+$\min\|[\Delta A,\Delta b]\|_{F}$ s.t. $(A+\Delta A)x=b+\Delta b$ の解は $[A,b]$ の最小特異ベクトルから得られる（Golub–Van Loan）。解の存在条件と一意性を述べ、非凸なのに固有値問題で厳密に解ける理由を説明せよ。
+
+*4 非線形方程式のホモトピー法
+$H(x,t)=tF(x)+(1-t)(x-x_{0})$ の零点集合が、$0$ を正則値とする一般的な $x_{0}$ について $t=0$ から出発する滑らかな曲線を含み、$F$ が適当な境界条件をみたせば $t=1$ に到達する（Chow–Mallet-Paret–Yorke の確率 1 ホモトピー）。Sard の定理から証明せよ。
+
+*4 Brouwer 写像度と非線形方程式の可解性
+有界開集合 $\Omega$ 上の連続写像 $F$ で $0\notin F(\partial\Omega)$ かつ $\deg(F,\Omega,0)\neq0$ ならば $\Omega$ 内に零点がある。$F$ が境界で「外向き」（$\langle F(x),x\rangle>0$ on $\|x\|=R$）なら球内に零点があることを導け。
+
+*4 Poincaré–Miranda の定理
+$F=(F_{1},\dots,F_{n})$ が立方体 $[-1,1]^{n}$ 上連続で、$F_{i}\le0$ on $\{x_{i}=-1\}$, $F_{i}\ge0$ on $\{x_{i}=1\}$ ならば $F$ は零点をもつ。Brouwer の定理と同値であることを示し、区間 Newton 法による解の存在証明（Krawczyk 法）の基礎とせよ。
+
+*4 Krawczyk の定理と精度保証付き数値計算
+区間ベクトル $X$ と正則行列 $Y$ について、Krawczyk 作用素 $K(X)=\tilde x-YF(\tilde x)+(I-YF'(X))(X-\tilde x)$ が $K(X)\subset\operatorname{int}X$ をみたせば $X$ 内に $F$ の零点が一意に存在する。Brouwer と縮小写像の原理から証明せよ。
+
+*4 Newton 法の非線形方程式への大域化（メリット関数）
+$\frac{1}{2}\|F\|^{2}$ をメリット関数とした直線探索 Newton 法で、Newton 方向がメリット関数の降下方向であることを示し、極限点が $F$ の零点または $J^{\top}F=0$ の非零点（局所最小）であることを示せ。後者の例を作れ。
+
+*4 非線形相補性問題と NCP 関数
+NCP：$x\ge0$, $F(x)\ge0$, $x^{\top}F(x)=0$ を Fischer–Burmeister 関数で方程式 $\Phi(x)=0$ に書き直し、$\Psi=\frac12\|\Phi\|^{2}$ が $C^{1}$ であること、$F$ が単調なら $\Psi$ の停留点は NCP の解であること（Facchinei–Soares, De Luca–Facchinei–Kanzow）を示せ。
+
+*4 平滑化 Newton 法
+$\phi_{\mu}(a,b)=a+b-\sqrt{(a-b)^{2}+4\mu^{2}}$ などの平滑化関数で NCP を近似し、$\mu\to0$ とする平滑化 Newton 法の大域収束と局所二次収束（Chen–Qi–Sun, Qi–Sun–Zhou）を示せ。
+
+*4 Jacobian 平滑化と劣微分正則性
+平滑化関数の Jacobian の極限が Clarke 一般化 Jacobian に含まれる（Jacobian consistency）ことを示し、これが平滑化 Newton 法の超線形収束の条件であることを説明せよ。
+
+*4 非線形 Gauss–Seidel と Jacobi 法
+$F(x)=0$ の非線形 Jacobi 反復の収束条件（$F'$ が優対角）と、Gauss–Seidel の方が速い条件（M 関数、Moré–Rheinboldt）を示せ。
+
+*4 固定点反復と Banach の縮小原理
+縮小写像の反復は線形収束し、誤差の事後評価 $\|x_{k}-x^{*}\|\le\frac{q}{1-q}\|x_{k}-x_{k-1}\|$ を与える。局所縮小性がスペクトル半径 $\rho(g'(x^{*}))<1$ と同値であることを示し、非正規な $g'$ で過渡的増大が起こる例を作れ。
+
+*4 Anderson 加速の局所収束（Toth–Kelley）
+縮小写像 $g$ の不動点反復に Anderson 加速（深さ $m$）を適用すると、係数が有界なら局所的に少なくとも元の反復と同じ率で収束する（Toth–Kelley 2015）。改善の程度を係数と「最適化利得」で評価せよ（Evans–Pollock–Rebholz–Xiao）。
+
+*4 Aitken の $\Delta^{2}$ 法と Steffensen 法
+線形収束列に Aitken 加速を施すと超線形収束列が得られ、それを不動点反復に組み込んだ Steffensen 法は二次収束する。証明せよ。
+
+*4 外挿法とシャンクス変換（Wynn の $\varepsilon$ 算法）
+Shanks 変換は、誤差が $k$ 個の等比数列の和である列を厳密に極限に変換する。Wynn の $\varepsilon$ 算法による実装を与え、ベクトル版（MPE, RRE）が Krylov 法と等価であることを示せ（Sidi）。
+
+*4 位相回復問題の非凸最小二乗
+$y_{i}=|\langle a_{i},x\rangle|^{2}$ から $x$ を復元する非凸最小二乗 $\min\sum(|\langle a_{i},x\rangle|^{2}-y_{i})^{2}$ について、Gauss 測定で $m\gtrsim n\log n$ なら大域的な景観が良好（局所最小がすべて大域最小で、鞍点が厳密）であることを示せ（Sun–Qu–Wright）。
+
+*5 Wirtinger flow の収束（Candès–Li–Soltanolkotabi）
+スペクトル初期化とステップ $\mu/\|x_{0}\|^{2}$ の勾配降下（Wirtinger flow）は、$m\gtrsim n\log n$ の Gauss 測定で高確率で真の信号に線形収束する。正則性条件（局所的な強凸・平滑の組合せ）を示して証明の骨格を完成させよ。
+
+=ch IV-8　正則化 Newton 法と二階法の計算量
+
+*4 三次正則化 Newton 法（Nesterov–Polyak） {cubic}
+$\nabla^{2}f$ が $M$-Lipschitz のとき、$x_{k+1}=\operatorname{argmin}_{y}\{\langle\nabla f,y-x\rangle+\frac12\langle\nabla^{2}f(y-x),y-x\rangle+\frac{M}{6}\|y-x\|^{3}\}$ は、$\varepsilon$-二階停留点（$\|\nabla f\|\le\varepsilon$, $\lambda_{\min}\ge-\sqrt{M\varepsilon}$）を $O(\varepsilon^{-3/2})$ 反復で得る。証明せよ。
+
+*4 三次正則化部分問題の大域解の特徴づけ
+$\min_{s}g^{\top}s+\frac12s^{\top}Hs+\frac{M}{6}\|s\|^{3}$ の大域最小点 $s^{*}$ は $(H+\frac{M}{2}\|s^{*}\|I)s^{*}=-g$, $H+\frac{M}{2}\|s^{*}\|I\succeq0$ で特徴づけられる。非凸にもかかわらず大域解が効率的に求まることを示せ（Nesterov–Polyak, Cartis–Gould–Toint）。
+
+*4 適応的三次正則化（ARC, Cartis–Gould–Toint）
+$M$ の代わりに適応的パラメータ $\sigma_{k}$ を用い、部分問題を不正確に解く ARC 法が $O(\varepsilon^{-3/2})$ の一階計算量を保つことを示せ。
+
+*4 凸関数に対する三次正則化の大域率
+$f$ が凸で $\nabla^{2}f$ が $M$-Lipschitz なら、三次正則化 Newton 法は $f(x_{k})-f^{*}=O(MR^{3}/k^{2})$、加速版（Nesterov 2008）は $O(MR^{3}/k^{3})$ を達成する。証明せよ。
+
+*4 二階法の下界と最適加速（Monteiro–Svaiter, Arjevani–Shamir–Shiff）
+凸で Hessian Lipschitz な関数に対し、任意の二階法は $\Omega((MR^{3}/\varepsilon)^{2/7})$ 反復を要し、Monteiro–Svaiter の A-HPE 枠組みの加速近接 Newton 法がこれを（対数因子を除き）達成する。下界の構成と上界の骨格を述べよ。
+
+*4 $p$ 次のテンソル法（Birgin–Gardenghi–Martínez–Santos–Toint）
+$p$ 次 Taylor 展開と $(p+1)$ 次の正則化項による $p$ 次法は、$\varepsilon$-一階停留点を $O(\varepsilon^{-(p+1)/p})$ 反復で得る。この率が $p$ 次法として最良であることを述べ（Carmon–Duchi–Hinder–Sidford の下界）、$p=1,2$ の場合を確かめよ。
+
+*4 凸テンソル法の暗黙の凸性（Nesterov 2019）
+$f$ が凸で $p$ 次導関数が Lipschitz なら、正則化パラメータを $M\ge pL_{p}$ にとると $p$ 次の正則化モデルは凸となり、効率的に最小化できる。$p=3$ で部分問題が二次・三次正則化 Newton の反復で解けることを示せ。
+
+*4 非凸二階法の下界（Carmon–Duchi–Hinder–Sidford）
+Hessian Lipschitz な非凸関数に対し、決定的な $p$ 次法は $\varepsilon$-停留点を得るのに $\Omega(\varepsilon^{-(p+1)/p})$ 回のオラクル呼び出しを要する。$p=1$ で勾配法が最適、$p=2$ で三次正則化が最適であることを結論せよ。
+
+*4 勾配法の $\varepsilon^{-7/4}$ 率（Carmon–Duchi–Hinder–Sidford, Agarwal ら）
+Hessian Lipschitz な非凸関数に対し、負曲率探索と加速勾配法を組み合わせた一次法は $\tilde O(\varepsilon^{-7/4})$ 回の勾配評価で $\varepsilon$-停留点を得る。「凸であることを保証するか、非凸性の証拠を見つける」（convex until proven guilty）原理を説明せよ。
+
+*4 Hessian-free 負曲率探索
+Lanczos 法で $\lambda_{\min}(\nabla^{2}f)\ge-\varepsilon$ の判定を $\tilde O(\sqrt{L/\varepsilon})$ 回の Hessian ベクトル積で高確率で行えることを示し（Kuczyński–Woźniakowski）、二階停留点探索の計算量への影響を論ぜよ。
+
+*4 Newton 法の大域化と最悪ケースの挙動（Cartis–Gould–Toint の例）
+Armijo 直線探索付き Newton 法や信頼領域 Newton 法は、Lipschitz 連続 Hessian の関数上でも $\varepsilon$-停留点に $\Omega(\varepsilon^{-2})$ 反復を要しうる。最悪関数の構成を与え、三次正則化の優位を結論せよ。
+
+*4 正則化 Newton 法の局所二次収束（Mishchenko, Doikov–Nesterov）
+$x_{k+1}=x_{k}-(\nabla^{2}f(x_{k})+\sqrt{H\|\nabla f(x_{k})\|}I)^{-1}\nabla f(x_{k})$ は凸関数に対し大域 $O(1/k^{2})$、強凸なら局所超線形収束する。証明せよ。
+
+*4 確率的二階法（部分標本 Newton, Roosta-Khorasani–Mahoney）
+有限和 $f=\frac1n\sum f_{i}$ に対し、Hessian を部分標本で近似した Newton 法が、行列 Chernoff 不等式により高確率で局所線形・超線形収束することを示せ。
+
+*4 Newton スケッチ（Pilanci–Wainwright）
+ランダム射影 $S$ で $\nabla^{2}f=A^{\top}DA$ を $(SD^{1/2}A)^{\top}(SD^{1/2}A)$ に近似する Newton スケッチが、スケッチ次元 $O(d)$ で線形収束することを示せ（部分空間埋め込みの性質を用いる）。
+
+*4 自己共役関数の三次正則化との関係
+自己共役関数の減衰 Newton 法と三次正則化 Newton 法の計算量を比較し、アフィン不変な三次正則化（Hanzely–Kamzolov–Pasechnyuk–Gasnikov–Richtárik–Takáč）の率を述べよ。
+
+*4 Riemann 多様体上の Newton・信頼領域法
+Riemann 多様体上の Newton 法（レトラクションとベクトル輸送を用いる）の局所二次収束、および Riemann 信頼領域法の大域収束を示せ（Absil–Mahony–Sepulchre）。
+
+*4 Riemann 最適化の計算量（Boumal–Absil–Cartis）
+コンパクト Riemann 多様体上で、レトラクションの二次条件の下、Riemann 勾配法が $\varepsilon$-一階停留点を $O(\varepsilon^{-2})$ 反復で、Riemann 信頼領域法が $(\varepsilon_{g},\varepsilon_{H})$-二階停留点を $O(\max\{\varepsilon_{g}^{-2}\varepsilon_{H}^{-1},\varepsilon_{H}^{-3}\})$ 反復で得ることを示せ。
+
+*4 Hessian の悪条件と Newton 法の安定性
+Newton 系 $\nabla^{2}f\,d=-\nabla f$ を解くときの誤差が $\kappa(\nabla^{2}f)$ で増幅されても、Newton 法の局所二次収束は影響を受けにくい（誤差が勾配の小ささに比例）ことを示せ。
+
+*5 三次正則化の下での二階停留点の計算量の最良性
+Hessian Lipschitz な関数に対し、任意の（ランダム化を含む）二階法は $\varepsilon$-一階停留点に $\Omega(\varepsilon^{-3/2})$ 回のオラクル呼び出しを要する（Carmon–Duchi–Hinder–Sidford「Lower bounds for finding stationary points II」）。ゼロ連鎖と確率的抵抗オラクルの構成を再構成せよ。
+
+*5 高次正則化の計算量の完全理論（Cartis–Gould–Toint 2022）
+$q$ 次の停留点（$q$ 次までの最適性条件の近似）を $p$ 次法で求める計算量が $O(\varepsilon^{-(p+1)/(p-q+1)})$ であり、$q\le2$ で最良であることを示せ。$q\ge3$ で高次最適性の判定そのものが NP 困難になることとの関係を論ぜよ。

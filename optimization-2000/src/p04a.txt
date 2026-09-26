@@ -1,0 +1,126 @@
+=part 第 IV 部　無制約最適化のアルゴリズム | UNCONSTRAINED ALGORITHMS &mdash; 601 to 800
+条件がわかったら次は計算である。直線探索と大域収束、最急降下・Newton・準 Newton・信頼領域・共役勾配、非線形最小二乗、三次正則化と計算量の下界、非凸問題の一階法、導関数を使わない方法 ― 各アルゴリズムについて「収束するか」「どれだけ速いか」「それ以上速くできるか」の三つを問う。
+
+=ch IV-1　直線探索と大域収束
+
+*4 Armijo 条件の有限終了 {armijo}
+$f\in C^{1}$、$d$ が降下方向（$\nabla f(x)^{\top}d<0$）ならば、$0<c_{1}<1$, $0<\beta<1$ についてバックトラック $t=\beta^{j}$ は有限回で Armijo 条件 $f(x+td)\le f(x)+c_{1}t\nabla f(x)^{\top}d$ をみたす。$\nabla f$ が $L$-Lipschitz のとき受理されるステップの下界 $t\ge\min\{1,\ 2\beta(1-c_{1})|\nabla f^{\top}d|/(L\|d\|^{2})\}$ を示せ。
+
+*4 Wolfe 条件をみたすステップの存在
+$f\in C^{1}$ が下に有界で $d$ が降下方向なら、$0<c_{1}<c_{2}<1$ について Wolfe 条件（Armijo と曲率条件 $\nabla f(x+td)^{\top}d\ge c_{2}\nabla f(x)^{\top}d$）をみたす区間が存在する。強 Wolfe 条件についても同様であることを示し、区間縮小法（Moré–Thuente）が有限回で見つけることを示せ。
+
+*4 Zoutendijk の定理 {zout}
+$f$ が下に有界で $\nabla f$ が $L$-Lipschitz、各反復が Wolfe 条件をみたすならば $\sum_{k}\cos^{2}\theta_{k}\|\nabla f(x_{k})\|^{2}<\infty$（$\theta_{k}$ は $d_{k}$ と $-\nabla f(x_{k})$ のなす角）。系として、$\cos\theta_{k}\ge\delta>0$ なら $\nabla f(x_{k})\to0$ を導け。
+
+*4 Goldstein 条件と Armijo の比較
+Goldstein 条件 $f(x)+(1-c)t\nabla f^{\top}d\le f(x+td)\le f(x)+ct\nabla f^{\top}d$ でも Zoutendijk 型の結果が成り立つことを示し、Newton 法の単位ステップを排除しうる欠点を説明せよ。
+
+*4 勾配関連方向と大域収束
+方向列 $\{d_{k}\}$ が勾配関連（$\nabla f(x_{k})\to\bar g\neq0$ となる部分列で $d_{k}$ 有界かつ $\limsup\nabla f(x_{k})^{\top}d_{k}<0$）で、Armijo 規則を使えば、集積点はすべて停留点である（Bertsekas）。証明せよ。
+
+*4 非単調直線探索（Grippo–Lampariello–Lucidi）
+$f(x_{k}+td_{k})\le\max_{0\le j\le M}f(x_{k-j})+c_{1}t\nabla f(x_{k})^{\top}d_{k}$ を用いた非単調探索の大域収束を示し、Barzilai–Borwein 法と組み合わせる意義を論ぜよ。
+
+*4 Barzilai–Borwein 法
+$\alpha_{k}=\frac{s_{k-1}^{\top}s_{k-1}}{s_{k-1}^{\top}y_{k-1}}$ の勾配法は、強凸二次関数に対し（非単調ながら）R-線形収束する（Raydan, Dai–Liao）。2 次元では R-超線形収束することを示せ（Barzilai–Borwein 1988）。
+
+*4 Curry の法則と完全直線探索
+完全直線探索 $t_{k}=\operatorname{argmin}f(x_{k}+td_{k})$ では $\nabla f(x_{k+1})\perp d_{k}$。最急降下法の反復がジグザグになることを示し、完全直線探索が必ずしも有利でない理由を述べよ。
+
+*4 降下法の大域収束の一般定理（Zangwill）
+アルゴリズム写像 $A$ が閉で、降下関数 $Z$ が解集合の外で厳密に減少し、反復列がコンパクト集合に留まれば、集積点はすべて解である（Zangwill の大域収束定理）。閉性を欠くと失敗する例を作れ。
+
+*4 Capture 定理
+降下法が孤立した局所最小点 $x^{*}$ の十分近くから出発し、ステップが一様に小さければ、反復は $x^{*}$ から離れない（Bertsekas の capture theorem）。証明を完成させよ。
+
+*4 Ostrowski の定理（集積点集合の連結性）
+$\|x_{k+1}-x_{k}\|\to0$ の有界点列の集積点の集合はコンパクトかつ連結である。これから、停留点が孤立していれば降下法の反復列は収束することを導け。
+
+*4 Absil–Mahony–Andrews の定理（解析関数の降下法）
+実解析関数 $f$ に対し、十分減少条件 $f(x_{k})-f(x_{k+1})\ge\sigma\|\nabla f(x_{k})\|\|x_{k+1}-x_{k}\|$ と停止条件をみたす降下法の反復列は、有界なら一点に収束する。Łojasiewicz の不等式から証明し、Curry の反例（非解析的 $C^{\infty}$ 関数での非収束）と対比せよ。
+
+*4 降下法の収束しない例（Curry, Palis–de Melo）
+$C^{\infty}$ 関数でも勾配流の軌道が円周に漸近して一点に収束しない例（メキシカンハット型）を構成し、有界な反復列が停留点の連続体を周回し続けうることを示せ。
+
+*4 直線探索の計算量
+Armijo バックトラックの総関数評価回数が、反復数 $K$ について $K+O(\log(L/L_{0}))$ で抑えられることを示せ（Nesterov の適応的 $L$ 推定）。
+
+*4 Polyak ステップ
+最適値 $f^{*}$ が既知のとき、$t_{k}=(f(x_{k})-f^{*})/\|\nabla f(x_{k})\|^{2}$ の勾配法は、凸 $L$-平滑なら $O(1/k)$、非平滑凸（劣勾配）で $O(1/\sqrt{k})$、鋭い最小なら線形収束することを示せ。
+
+*4 Lipschitz 定数不要の降下（Malitsky–Mishchenko）
+$\alpha_{k}=\min\{\sqrt{1+\theta_{k-1}}\alpha_{k-1},\ \frac{\|x_{k}-x_{k-1}\|}{2\|\nabla f(x_{k})-\nabla f(x_{k-1})\|}\}$ の適応的勾配法は、局所 Lipschitz な凸関数に対して直線探索なしに $O(1/k)$ で収束することを示せ。
+
+*4 信頼領域 vs 直線探索の大域収束の比較
+直線探索法は降下方向の選択に、信頼領域法はモデルの近似精度に大域収束を委ねる。Newton 方向が非降下の場合（Hessian 不定）に直線探索 Newton 法が失敗し、信頼領域法が成功する例を作れ。
+
+*4 最急降下の連続極限：勾配流
+勾配流 $\dot x=-\nabla f(x)$ の解について $f(x(t))$ は非増加で、$f$ が凸なら $f(x(t))-f^{*}\le\frac{\|x_{0}-x^{*}\|^{2}}{2t}$、$\mu$-強凸なら $\|x(t)-x^{*}\|\le e^{-\mu t}\|x_{0}-x^{*}\|$。Lyapunov 関数を構成して示せ。
+
+*5 Bruck の定理と非拡大半群の漸近挙動
+Hilbert 空間の閉真凸関数 $f$ の劣勾配流 $\dot x\in-\partial f(x)$ の解は、$\operatorname{argmin}f\neq\emptyset$ なら最小点に弱収束する（Bruck 1975）。強収束しない例（Baillon の反例）の存在を述べ、Opial の補題を用いた弱収束の証明を完成させよ。
+
+*5 勾配流の有限長性と Kurdyka の定理
+o-minimal 構造で定義可能な $C^{1}$ 関数の勾配流の有界な軌道は有限長で一点に収束する（Kurdyka 1998）。Kurdyka–Łojasiewicz 不等式から軌道長 $\int\|\dot x\|dt<\infty$ を導け。
+
+=ch IV-2　最急降下法の収束解析
+
+*4 平滑非凸関数の勾配法 {gd-nc}
+$\nabla f$ が $L$-Lipschitz、$f$ が下に有界ならば、ステップ $1/L$ の勾配法は $\min_{k<K}\|\nabla f(x_{k})\|^{2}\le\frac{2L(f(x_{0})-f^{*})}{K}$。$\varepsilon$-停留点を得るのに $O(\varepsilon^{-2})$ 反復で十分であることを示せ。
+
+*4 平滑凸関数の勾配法の収束率 {gd-c}
+$f$ が凸で $L$-平滑なら、ステップ $1/L$ の勾配法は $f(x_{k})-f^{*}\le\frac{L\|x_{0}-x^{*}\|^{2}}{2k}$。さらに $\|x_{k}-x^{*}\|$ が単調非増加であることを示せ。
+
+*4 強凸関数の線形収束 {gd-sc}
+$f$ が $\mu$-強凸かつ $L$-平滑なら、ステップ $\frac{2}{\mu+L}$ の勾配法は $\|x_{k}-x^{*}\|\le\left(\frac{\kappa-1}{\kappa+1}\right)^{k}\|x_{0}-x^{*}\|$（$\kappa=L/\mu$）。この率が固定ステップの勾配法として最良であることを二次関数で示せ。
+
+*4 Kantorovich 率と完全直線探索
+強凸二次関数に完全直線探索の最急降下法を適用すると $f(x_{k+1})-f^{*}\le\left(\frac{\kappa-1}{\kappa+1}\right)^{2}(f(x_{k})-f^{*})$。Kantorovich の不等式から導き、率が達成される初期値を示せ（Akaike の二次元への吸引）。
+
+*4 Akaike の定理
+強凸二次関数に対する完全直線探索の最急降下法では、誤差の方向が最大・最小固有ベクトルが張る二次元部分空間に漸近的に吸引され、率は Kantorovich の最悪率に近づく。証明の骨格を与えよ。
+
+*4 勾配法の性能推定問題（Drori–Teboulle） {pep}
+$L$-平滑凸関数に対する $N$ ステップの勾配法の最悪ケース $f(x_{N})-f^{*}$ を求める問題（PEP）は、補間条件を用いて有限次元 SDP に帰着する。ステップ $1/L$ の勾配法の厳密な最悪率 $\frac{L\|x_{0}-x^{*}\|^{2}}{4N+2}$ を導け（Drori–Teboulle, Taylor–Hendrickx–Glineur）。
+
+*4 勾配法の最適な長ステップ（Altschuler–Parrilo の silver ステップ）
+一定でないステップ幅列を用いると、凸 $L$-平滑関数に対する勾配法は $O(1/N^{\log_{2}(1+\sqrt{2})})\approx O(N^{-1.27})$ の率を達成する（silver stepsize schedule, Altschuler–Parrilo 2023）。強凸の場合の $\kappa^{\log_{1+\sqrt2}2}$ 依存性を含め、主張を正確に述べ、二段階の場合の改善を PEP で確かめよ。
+
+*4 PL 条件下の勾配法
+$L$-平滑で PL 不等式を定数 $\mu$ でみたす $f$ について、ステップ $1/L$ の勾配法は $f(x_{k})-f^{*}\le(1-\mu/L)^{k}(f(x_{0})-f^{*})$。凸性を仮定しないことに注意し、過剰パラメータ化された最小二乗問題に適用せよ。
+
+*4 勾配法の暗黙のバイアス（最小ノルム解への収束）
+劣決定最小二乗 $\min\|Ax-b\|^{2}$ に原点から勾配法を適用すると、反復は最小ノルム解 $A^{+}b$ に収束する。線形分離可能なデータのロジスティック回帰では、勾配法の方向が最大マージン SVM 解に $O(1/\log k)$ で収束することを示せ（Soudry–Hoffer–Nacson–Gunasekar–Srebro）。
+
+*4 前処理付き勾配法と Newton 法の関係
+正定値行列 $P$ で前処理した勾配法 $x_{k+1}=x_{k}-tP^{-1}\nabla f(x_{k})$ の収束率は $\kappa(P^{-1/2}\nabla^{2}f P^{-1/2})$ で決まる。$P=\nabla^{2}f(x^{*})$ で Newton 法に一致することを示し、相対平滑性の枠組みとの関係を述べよ。
+
+*4 相対平滑性と Bregman 勾配法（Bauschke–Bolte–Teboulle, Lu–Freund–Nesterov）
+$Lh-f$ が凸（$f$ は $h$ に関して $L$-相対平滑）ならば、Bregman 勾配法 $x_{k+1}=\operatorname{argmin}\{\langle\nabla f(x_{k}),x\rangle+LD_{h}(x,x_{k})\}$ は $f(x_{k})-f^{*}\le LD_{h}(x^{*},x_{0})/k$。Lipschitz 勾配をもたないポアソン逆問題に適用せよ。
+
+*4 勾配法の下界（凸 $L$-平滑、次元非依存）
+勾配の線形結合で反復を作る任意の一次法について、$k<n/2$ で $f(x_{k})-f^{*}\ge\frac{3L\|x_{0}-x^{*}\|^{2}}{32(k+1)^{2}}$ となる二次関数が存在する（Nesterov）。三重対角行列の「最悪関数」を構成して示せ。
+
+*4 強凸関数に対する一次法の下界
+$\mu$-強凸 $L$-平滑関数に対し、無限次元（$\ell^{2}$）で任意の一次法は $\|x_{k}-x^{*}\|\ge\left(\frac{\sqrt\kappa-1}{\sqrt\kappa+1}\right)^{k}\|x_{0}-x^{*}\|$ を超えられない。Nesterov の最悪関数で示せ。
+
+*4 非凸平滑関数の一次法の下界（Carmon–Duchi–Hinder–Sidford）
+$L$-平滑な非凸関数の $\varepsilon$-停留点を求める任意の決定的一次法は、次元が十分大きいとき $\Omega(\varepsilon^{-2})$ 回の勾配評価を要する。「連鎖」型の最悪関数を構成し、勾配法が最適であることを結論せよ。
+
+*4 勾配法の離散化誤差と修正方程式
+ステップ $h$ の勾配法は、勾配流ではなく修正勾配流 $\dot x=-\nabla(f+\frac{h}{4}\|\nabla f\|^{2})$ を $O(h^{2})$ の精度で近似する（後退誤差解析、Barrett–Dherin の暗黙の正則化）。導出せよ。
+
+*4 Edge of stability と大きなステップ
+ステップ $h>2/L$ では二次関数上の勾配法は発散するが、非二次関数では $\lambda_{\max}(\nabla^{2}f(x_{k}))$ が $2/h$ 付近に自己調整されうる（Cohen ら）。一次元の例 $f(x)=\frac{1}{4}(x^{2}-1)^{2}$ などで、$h>2/L_{\text{loc}}$ のときの周期軌道の出現を解析せよ。
+
+*4 勾配法の鞍点からの脱出（摂動付き勾配法）
+$\rho$-Hessian Lipschitz な関数に対し、摂動付き勾配法（PGD, Jin–Ge–Netrapalli–Kakade–Jordan）は $\tilde O(\varepsilon^{-2})$ 反復で $\varepsilon$-二階停留点（$\|\nabla f\|\le\varepsilon$, $\lambda_{\min}\ge-\sqrt{\rho\varepsilon}$）を高確率で得る。「刺さった領域」の体積が小さいことを示す議論を完成させよ。
+
+*4 勾配法は鞍点を指数時間かけて通過しうる（Du ら）
+ランダム初期化の勾配法が、鞍点の連鎖によって次元に指数的な時間を要する例を構成せよ。摂動の必要性を論ぜよ。
+
+*5 勾配法の厳密な最悪ケース（PEP による証明の完全形）
+$L$-平滑凸関数、ステップ $h\in(0,1/L]$ 一定の勾配法について、$f(x_{N})-f^{*}\le\frac{L\|x_{0}-x^{*}\|^{2}}{2(2NhL+1)}$ が厳密（一次元の Huber 型関数で達成される）であることを、補間不等式の非負結合（双対証明書）を明示的に構成して証明せよ（Drori–Teboulle, Taylor–Hendrickx–Glineur）。$h\in(1/L,2/L)$ では $\max\{\frac{1}{2NhL+1},(1-hL)^{2N}\}$ 型の値が最悪ケースとなることを二次関数と Huber 関数の比較から説明せよ。
+
+*5 一次法の最適性の完全な理論（Nemirovski–Yudin）
+凸 $L$-平滑関数、凸 Lipschitz 関数、強凸の各クラスについて、情報ベース計算量の下界（$\Omega(\sqrt{L R^{2}/\varepsilon})$、$\Omega(G^{2}R^{2}/\varepsilon^{2})$、$\Omega(\sqrt\kappa\log(1/\varepsilon))$）を、一般の（勾配の線形結合に限らない）決定的一次法に対して証明せよ（抵抗オラクルの構成）。

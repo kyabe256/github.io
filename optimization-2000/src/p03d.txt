@@ -1,0 +1,123 @@
+=ch III-7　拡張 Lagrangian と正確ペナルティの双対
+
+*4 Rockafellar の拡張 Lagrangian {auglag}
+不等式制約付き凸計画の拡張 Lagrangian $L_{c}(x,\lambda)=f(x)+\frac{1}{2c}\sum(\max(0,\lambda_{i}+cg_{i}(x))^{2}-\lambda_{i}^{2})$ を摂動双対（二次摂動）から導き、$L_{c}$ が $\lambda$ について $C^{1}$ の凹関数で、その双対関数が元の双対関数の Moreau 包であることを示せ。
+
+*4 乗数法は双対の近接点法
+拡張 Lagrange 法（乗数法）$x_{k+1}\in\operatorname{argmin}L_{c_{k}}(x,\lambda_{k})$, $\lambda_{k+1}=\max(0,\lambda_{k}+c_{k}g(x_{k+1}))$ は双対問題に対する近接点法と一致する（Rockafellar 1976）。これから凸の場合の大域収束を導け。
+
+*4 非凸問題の拡張 Lagrangian 双対のギャップ消滅
+二階十分条件をみたす局所最小点 $x^{*}$ について、$c$ を十分大きくとると $x^{*}$ は $L_{c}(\cdot,\lambda^{*})$ の厳密局所最小点になる（Hestenes, Powell）。局所的な拡張 Lagrange 双対のギャップがゼロになることを示せ。
+
+*4 Rockafellar–Wets の大域的ゼロギャップ定理
+一般化拡張 Lagrangian $\bar L(x,y,r)=\inf_{u}\{F(x,u)-\langle y,u\rangle+r\sigma(u)\}$（$\sigma$ は増大関数）について、$F$ が一様 level-bounded ならば $r\to\infty$ でゼロ双対ギャップが成り立つ。証明を完成させよ。
+
+*4 正確ペナルティと Lagrange 乗数
+凸計画で KKT 乗数 $\lambda^{*}$ が存在すれば、$c>\|\lambda^{*}\|_{\infty}$ で $f+c\sum g_{i}^{+}$ の最小点は元の問題の最小点に一致する（Zangwill, Pietrzykowski）。$c\ge\|\lambda^{*}\|_{\infty}$ が必要十分であることを示せ。
+
+*4 正確ペナルティの非凸版
+局所最小点で MFCQ が成り立てば、$c>\max_{\lambda\in\Lambda}\|\lambda\|_{\infty}$ で $x^{*}$ は $\ell_{1}$ ペナルティ関数の局所最小点である（Han–Mangasarian）。二乗ペナルティでは有限の $c$ で正確にならないことを示せ。
+
+*4 Fletcher の平滑正確ペナルティ
+$\Phi(x)=f(x)+\lambda(x)^{\top}h(x)+\frac{c}{2}\|h(x)\|^{2}$（$\lambda(x)$ は最小二乗乗数）は、LICQ の下で十分大きな $c$ について正確かつ平滑なペナルティ関数である。証明せよ。
+
+*4 拡張 Lagrangian の二階の性質
+$L_{c}$ は $\lambda$ について一般に一回しか微分できないが、強相補性の下で局所的に $C^{2}$ である。$L_{c}$ の $x$ に関する Hessian が $\nabla^{2}_{xx}L+c\sum_{i\in I^{+}}\nabla g_{i}\nabla g_{i}^{\top}$ となることを示せ。
+
+*4 乗数法の局所線形収束率
+二階十分条件の下で乗数法の乗数列は $\|\lambda_{k+1}-\lambda^{*}\|\le\frac{M}{c}\|\lambda_{k}-\lambda^{*}\|$ で収束する（$c$ を増やすと超線形）。証明を完成させよ（Bertsekas）。
+
+*4 近接乗数法（Rockafellar）
+$x_{k+1}\in\operatorname{argmin}\{L_{c}(x,\lambda_{k})+\frac{1}{2c}\|x-x_{k}\|^{2}\}$ は主双対の組 $(x,\lambda)$ に対する近接点法（極大単調作用素 $T_{L}$ のレゾルベント）であり、主変数も収束する。
+
+*4 ADMM と拡張 Lagrangian
+ADMM は二ブロック問題 $\min f(x)+g(z)$ s.t. $Ax+Bz=c$ の拡張 Lagrangian を交互に最小化し乗数を更新する。これが双対問題に対する Douglas–Rachford 分割と一致すること（Gabay）を示せ。
+
+*4 Bregman 距離による拡張 Lagrangian
+エントロピー型の近接項を用いた乗数法（指数乗数法）が、双対問題に対する Bregman 近接点法と一致することを示し、$\lambda$ の非負性が自動的に保たれることを確かめよ（Tseng–Bertsekas）。
+
+*4 Hestenes–Powell の等式制約版
+等式制約に対する拡張 Lagrangian $f+\lambda^{\top}h+\frac{c}{2}\|h\|^{2}$ と乗数更新 $\lambda\leftarrow\lambda+ch(x)$ が、$c$ を無限大にしなくても局所収束することを示し、二乗ペナルティ法の悪条件性を回避する仕組みを説明せよ。
+
+*4 拡張 Lagrangian の双対と Moreau 包
+凸計画の拡張 Lagrange 双対関数は $d_{c}(\lambda)=\max_{\mu}\{d(\mu)-\frac{1}{2c}\|\mu-\lambda\|^{2}\}$ であり、$\nabla d_{c}$ は $1/c$-Lipschitz。これから双対上昇法としての乗数法の固定ステップ $c$ の妥当性を導け。
+
+*4 拡張 Lagrangian と錐制約（SDP の乗数法）
+SDP に対する拡張 Lagrangian $L_{c}(y,X)=b^{\top}y+\frac{1}{2c}(\|P_{\mathbb{S}_{+}}(X-c(C-\mathcal{A}^{*}y))\|^{2}-\|X\|^{2})$ を導き、SDPNAL（半平滑 Newton-CG 拡張 Lagrange 法）の各ステップが半平滑方程式になることを示せ。
+
+*4 ペナルティ関数の正確性と calmness
+問題が $x^{*}$ で calm（Clarke：摂動値関数が $0$ で下から Lipschitz）$\iff$ $\ell_{1}$ ペナルティが局所的に正確。これを用いて、calmness が最弱の「乗数存在条件」の一つであることを示せ。
+
+*4 非凸問題の双対ギャップと二次摂動
+非凸問題の Lagrange 双対ギャップが正でも、二次摂動の拡張 Lagrange 双対は局所的にギャップを閉じる。一次元の例で Lagrange 双対・拡張 Lagrange 双対の値を比較せよ。
+
+*4 Lagrange 乗数とペナルティパラメータの動的調整
+拡張 Lagrange 法における $c_{k}$ の更新規則（制約違反が十分減らなければ増やす）の下で、極限点が AKKT 点となり、CPLD（あるいは CCP）の下で KKT 点となることを示せ（ALGENCAN の理論）。
+
+*4 Lagrange 緩和の最良乗数とサブグラディエント法
+整数計画の Lagrange 緩和で、双対関数 $d(\lambda)$ は区分線形凹関数で、Polyak ステップの劣勾配法が $d^{*}$ に収束する。Held–Karp の 1-tree 緩和による TSP 下界がこの枠組みであることを示せ。
+
+*5 Rockafellar–Wets の変分解析的拡張 Lagrangian 理論
+prox-bounded な摂動関数 $F$ と二次の増大関数について、拡張 Lagrange 双対の最適解がちょうど「大域的に正確なペナルティの乗数」の集合であり、局所最小点が拡張 Lagrangian の局所鞍点となるための条件が $F$ の二階の変分的性質（prox-regularity）で特徴づけられることを示せ。
+
+=ch III-8　非凸双対・S-補題・隠れた凸性
+
+*4 Yakubovich の S-補題 {slemma}
+二次関数 $f,g$（非斉次）について、$g(\bar x)<0$ なる $\bar x$ が存在するとき、$g(x)\le0\Rightarrow f(x)\ge0$ $\iff$ $\lambda\ge0$ で $f+\lambda g\ge0$（全空間）となるものが存在する。Dines の定理（像の凸性）から証明せよ。
+
+*4 S-補題の失敗（三つの二次関数）
+三つ以上の二次制約では S-補題が成り立たない例を作れ。$n\ge3$ の斉次の場合、二つの制約なら成り立つ（Polyak の定理：$(q_{1},q_{2},q_{3})$ の像は正定値結合が存在すれば凸）ことを示せ。
+
+*4 Polyak の凸性定理
+$n\ge3$ で、ある線形結合が正定値な三つの二次形式 $q_{1},q_{2},q_{3}$ について $\{(q_{1}(x),q_{2}(x),q_{3}(x)):x\in\mathbb{R}^{n}\}$ は凸（閉凸錐）である。証明を完成させよ。
+
+*4 Brickman の定理
+$n\ge3$ で、二つの二次形式の単位球面上の像 $\{(q_{1}(x),q_{2}(x)):\|x\|=1\}$ は凸である。これから Toeplitz–Hausdorff の定理（数域の凸性）を導け。
+
+*4 Toeplitz–Hausdorff の定理
+複素行列 $A$ の数域 $W(A)=\{x^{*}Ax:\|x\|=1\}$ は凸である。$2\times2$ の場合（楕円）に帰着して証明せよ。
+
+*4 固有値の凸性（Schur–Horn） {schurhorn}
+対称行列の対角成分のベクトルは固有値ベクトルに多数化され、逆に固有値 $\lambda$ に多数化される任意のベクトルは $\lambda$ を固有値にもつ対称行列の対角となる。$\{\operatorname{diag}(Q\Lambda Q^{\top})\}=\operatorname{conv}\{P\lambda\}$ を示せ。
+
+*4 Kostant の凸性定理と Atiyah–Guillemin–Sternberg
+コンパクト Lie 群の随伴軌道の極大トーラスへの射影は Weyl 群軌道の凸包である（Kostant）。Schur–Horn がこの特殊化であること、さらにモーメント写像の像の凸性（Atiyah, Guillemin–Sternberg）の主張を述べよ。
+
+*4 非凸二次計画の SDP 緩和の厳密性（一制約）
+一つの二次制約をもつ非凸 QCQP の SDP 緩和は厳密（ランク 1 の最適解をもつ）である。S-補題あるいは Sturm–Zhang の分解から導け。
+
+*4 Fradkov–Yakubovich の定理と S-補題の一般化
+二次関数 $f_{0},f_{1},\dots,f_{m}$ について、$\{(f_{1}(x),\dots,f_{m}(x),f_{0}(x))\}+$ 正錐 が凸ならば S-手続きは損失なし。この凸性が $m=1$ で常に、$m=2$ で追加条件の下で成り立つことを整理せよ。
+
+*4 隠れた凸性：二つの二次制約の複素版
+複素変数の QCQP では、二つの制約までは SDP 緩和が厳密である（Beck–Eldar の強双対）。実の場合との違いを数域の凸性から説明せよ。
+
+*4 Lagrange 双対とランク制約の緩和
+$\min\operatorname{tr}(CX)$ s.t. $\operatorname{tr}(A_{i}X)=b_{i}$, $X\succeq0$, $\operatorname{rank}X\le r$ の Lagrange 双対は $r$ に依らず SDP 緩和と同じ値を与える。ランク制約が「凸化」される仕組みを説明せよ。
+
+*4 Burer–Monteiro の定理（局所最小の大域性）
+$p(p+1)/2>m$ ならば、$\min\operatorname{tr}(CYY^{\top})$ s.t. $\operatorname{tr}(A_{i}YY^{\top})=b_{i}$（$Y\in\mathbb{R}^{n\times p}$）の、実行可能集合が滑らかな多様体をなす一般的なコストについて、二階臨界点はすべて SDP の大域最適解を与える（Boumal–Voroninski–Bandeira）。証明の骨格を与えよ。
+
+*4 相補的双対（Gao–Strang）
+非凸な正準形式の問題に対し、Legendre 変換を二度用いた「正準双対」を定義し、双対の臨界点から主問題の大域最適解が得られる条件（正定値性）を示せ。三重井戸型ポテンシャルで具体例を解け。
+
+*4 凸でない関数の Legendre 変換と凸包
+非凸関数 $f$ の双共役 $f^{**}$ は閉凸包であり、$f=f^{**}$ となる点の集合で Lagrange 双対のゼロギャップ性が決まる。Maxwell の等面積則（熱力学の相転移）がこの現象であることを説明せよ。
+
+*4 固有値問題の双対としての Rayleigh–Ritz
+非凸な $\min x^{\top}Ax$ s.t. $\|x\|=1$ の Lagrange 双対は $\max\{\lambda: A-\lambda I\succeq0\}$ であり強双対が成り立つ。$k$ 次元部分空間版（Ky Fan）の双対を導け。
+
+*4 二次形式の同時対角化と S-補題
+二つの対称行列 $A,B$ が合同変換で同時対角化可能であるための条件（Finsler、Uhlig）を述べ、同時対角化可能な場合の QCQP の変数変換による凸化を示せ。
+
+*4 ポートフォリオの平均分散問題の隠れた凸性
+Markowitz の平均分散問題（等式・一つの非凸制約を含む変種）で、非凸にもかかわらず Lagrange 双対のギャップがゼロとなる場合を S-補題で示し、効率的フロンティアが放物線（双曲線）となることを導け。
+
+*4 非凸問題のゼロ双対ギャップの位相的判定
+像集合 $\{(g(x),f(x))\}$ の $0$ 近傍での「下側の凸性」がゼロギャップの必要十分条件であることを示し、Lyapunov の凸性定理を用いて非原子的測度上の非凸最適化（最適制御）で双対ギャップがゼロになることを導け。
+
+*5 非原子的問題のゼロ双対ギャップ（Ribeiro–Chamon, Aumann–Perles）
+$\min\int f(x(t),t)dt$ s.t. $\int g(x(t),t)dt\le0$（$t$ は非原子的測度空間上）は、$f,g$ が非凸でも双対ギャップがゼロである。Lyapunov の定理による証明を完成させ、無限幅ニューラルネットや統計的制約学習への応用を論ぜよ。
+
+*5 S-補題の完全な理論（Pólik–Terlaky）
+S-補題の同値な 10 以上の形（二次形式の像の凸性、Finsler の補題、数域の凸性、SDP 緩和の厳密性、Dines の定理など）の相互関係を整理し、非斉次・複数制約への一般化が成り立つ条件と反例を網羅的に示せ。

@@ -1,0 +1,123 @@
+=ch IV-3　Newton 法
+
+*4 Newton 法の局所二次収束 {newton}
+$F:\mathbb{R}^{n}\to\mathbb{R}^{n}$ が $C^{1}$ で $F'$ が $x^{*}$ の近傍で $\gamma$-Lipschitz、$F(x^{*})=0$, $\|F'(x^{*})^{-1}\|\le\beta$ ならば、$\|x_{0}-x^{*}\|\le\frac{1}{2\beta\gamma}$ で Newton 反復は $\|x_{k+1}-x^{*}\|\le\beta\gamma\|x_{k}-x^{*}\|^{2}$ をみたし二次収束する。証明せよ。
+
+*4 Newton–Kantorovich の定理 {kantorovich}
+$\|F'(x_{0})^{-1}\|\le\beta$, $\|F'(x_{0})^{-1}F(x_{0})\|\le\eta$, $F'$ が $\gamma$-Lipschitz で $h=\beta\gamma\eta\le\frac{1}{2}$ ならば、Newton 反復は well-defined で、球 $\bar B(x_{0},r_{-})$（$r_{-}=\frac{1-\sqrt{1-2h}}{h}\eta$）内の解に収束し、解は $B(x_{0},r_{+})$ 内で一意。多数化列（majorizing sequence）の方法で証明せよ。
+
+*4 Smale の $\alpha$ 理論 {smale-alpha}
+解析的な $F$ と $\gamma(F,x)=\sup_{k\ge2}\|F'(x)^{-1}F^{(k)}(x)/k!\|^{1/(k-1)}$, $\beta(F,x)=\|F'(x)^{-1}F(x)\|$ について、$\alpha=\beta\gamma<\frac{13-3\sqrt{17}}{4}$ ならば $x$ は近似零点（Newton 反復が初めから二次収束）である。証明を完成させよ。
+
+*4 Newton 法の吸引域と Newton フラクタル
+$z^{3}-1=0$ に対する複素 Newton 法の吸引域の境界は Julia 集合であり、三つの吸引域が共通の境界をもつ（Wada 性）。Newton 法が大域収束しない本質的理由を複素力学系から説明せよ。
+
+*4 McMullen の定理（一般収束アルゴリズムの非存在）
+多項式の根を求める「純粋に反復的な」有理アルゴリズムで、開稠密な初期値と係数に対して収束するもの（一般収束アルゴリズム）は、次数 3 では存在するが次数 4 以上では存在しない（McMullen 1987）。主張を正確に述べ、3 次で Newton 法が一般収束しない例（吸引的周期軌道をもつ $z^{3}-2z+2$）を確かめよ。
+
+*4 減衰 Newton 法と大域収束
+$f$ が強凸で $\nabla^{2}f$ が Lipschitz なら、Armijo 直線探索付き Newton 法は大域収束し、有限回の反復の後に単位ステップが受理されて二次収束する（減衰相と二次収束相）。証明せよ。
+
+*4 自己共役関数の Newton 法（Nesterov–Nemirovski） {selfconc}
+$f$ が自己共役（$|D^{3}f(x)[h,h,h]|\le2(D^{2}f(x)[h,h])^{3/2}$）ならば、Newton 減少量 $\lambda(x)=\|\nabla f(x)\|_{x}^{*}$ を用いて、ステップ $1/(1+\lambda)$ の減衰 Newton 法は $f(x_{k})-f(x_{k+1})\ge\lambda-\log(1+\lambda)$、$\lambda<1$ で $\lambda_{+}\le(\lambda/(1-\lambda))^{2}$。アフィン不変な計算量評価を導け。
+
+*4 アフィン不変性とその意義
+Newton 法の反復は変数のアフィン変換 $x=Ay$ で不変であり、収束解析もアフィン不変な量（自己共役性、Deuflhard–Heindl の条件）で行うべき理由を説明せよ。Kantorovich の定理をアフィン不変形（$\|F'(x_{0})^{-1}(F'(x)-F'(y))\|\le\omega\|x-y\|$）に書き直せ。
+
+*4 不正確 Newton 法（Dembo–Eisenstat–Steihaug） {inexact-newton}
+$\|F'(x_{k})s_{k}+F(x_{k})\|\le\eta_{k}\|F(x_{k})\|$ をみたすステップ $s_{k}$ の不正確 Newton 法は、$\eta_{k}\le\eta<1$ で局所線形、$\eta_{k}\to0$ で超線形、$\eta_{k}=O(\|F(x_{k})\|)$ で二次収束する。証明せよ。
+
+*4 Newton 法の退化解での線形収束
+$F'(x^{*})$ が特異な場合（重根）、Newton 法は一般に線形収束しかしない。$f(x)=x^{m}$ で収束率 $1-1/m$ を示し、修正 Newton $x-mF/F'$ で二次収束に戻ることを確かめよ。特異解の Griewank の収束領域（星形領域）を述べよ。
+
+*4 Halley 法と高次法
+Halley 法 $x_{k+1}=x_{k}-\frac{2FF'}{2F'^{2}-FF''}$ は単純根で三次収束する。Chebyshev 法も三次収束することを示し、効率指数（収束次数の関数評価コスト当たりのべき）で Newton 法と比較せよ（Ostrowski–Traub）。
+
+*4 Kung–Traub 予想
+関数値 $n$ 回を用いる多点反復の最大収束次数は $2^{n-1}$ である、という Kung–Traub 予想を述べ、次数 $2^{n-1}$ を達成する反復の族（Kung–Traub 法）を構成せよ。
+
+*4 セカント法の収束次数
+1 変数のセカント法は単純根で次数 $\frac{1+\sqrt5}{2}$ の超線形収束をする。誤差の漸化式 $e_{k+1}\approx Ce_{k}e_{k-1}$ から導け。
+
+*4 半平滑 Newton 法 {ssn}
+局所 Lipschitz な $F$ が半平滑で、$x^{*}$ における Clarke 一般化 Jacobian の元がすべて正則（CD 正則）ならば、$V_{k}\in\partial F(x_{k})$ を用いた Newton 法 $x_{k+1}=x_{k}-V_{k}^{-1}F(x_{k})$ は局所超線形収束する（Qi–Sun）。強半平滑なら二次収束することを示せ。
+
+*4 半平滑性の例と計算規則
+区分的 $C^{1}$ 関数、凸関数の射影 $P_{C}$（$C$ が多面体・二次錐・半正定値錐）、Fischer–Burmeister 関数が（強）半平滑であることを示し、半平滑関数の合成が半平滑であることを証明せよ。
+
+*4 Newton 法の複素力学と Hubbard–Schleicher–Sutherland
+次数 $d$ の多項式のすべての根を求めるのに十分な、初期値の有限集合（$1.11d\log^{2}d$ 点）が存在する（Hubbard–Schleicher–Sutherland）。主張を述べ、Newton 法の大域的挙動の解析へのアプローチを説明せよ。
+
+*4 Gauss–Newton 法と Newton 法の関係
+非線形最小二乗 $\frac{1}{2}\|r(x)\|^{2}$ の Newton 法の Hessian は $J^{\top}J+\sum r_{i}\nabla^{2}r_{i}$ で、第二項を無視すると Gauss–Newton 法。残差ゼロの問題では Gauss–Newton が二次収束、小残差では線形収束することを示せ。
+
+*4 Newton 法の計算量（Smale のベズー定理シリーズ）
+多項式系の解を追跡するホモトピー Newton 法で、ステップ数が経路の条件数の積分 $\int\mu(f_{t},z_{t})\|\dot f_{t}\|dt$ で抑えられること（Shub–Smale, Shub 2009）を示せ。
+
+*5 Smale の第 17 問題の解決（Beltrán–Pardo, Lairez）
+多項式系の近似解を平均多項式時間で求める一様アルゴリズムが存在する。Beltrán–Pardo のランダム化アルゴリズム（ランダムな開始系からのホモトピー継続）と、Lairez による決定的アルゴリズムの主張を述べ、ホモトピー継続の計算量の条件数による評価を証明せよ。
+
+*5 Newton 法の大域的収束性と Kantorovich 条件の最良性
+Newton–Kantorovich の定理の条件 $h\le\frac{1}{2}$ は最良であり、スカラー二次関数 $F(x)=\frac{\gamma}{2}x^{2}-\frac{x}{\beta}+\frac{\eta}{\beta}$ で等号が達成されることを示せ。さらに Newton 列の誤差評価 $\|x_{k}-x^{*}\|\le\frac{(2h)^{2^{k}}}{2^{k}h}\eta$ を導け（Gragg–Tapia の最良評価）。
+
+=ch IV-4　準 Newton 法
+
+*4 セカント条件と BFGS 更新 {bfgs}
+$s_{k}=x_{k+1}-x_{k}$, $y_{k}=\nabla f(x_{k+1})-\nabla f(x_{k})$ について、BFGS 更新 $B_{+}=B-\frac{Bss^{\top}B}{s^{\top}Bs}+\frac{yy^{\top}}{y^{\top}s}$ はセカント条件 $B_{+}s=y$ をみたし、$y^{\top}s>0$ なら正定値性を保つ。$H=B^{-1}$ の更新式を Sherman–Morrison–Woodbury で導け。
+
+*4 BFGS の変分的特徴づけ
+BFGS の逆行列更新 $H_{+}$ は、$\min\|W^{1/2}(H-H_{k})W^{1/2}\|_{F}$ s.t. $H=H^{\top}$, $Hy=s$（$W$ は $Ws=y$ をみたす任意の正定値行列）の一意解である（Goldfarb, Greenstadt）。DFP が $B$ についての対応する問題の解であることを示せ。
+
+*4 Broyden 族と Dixon の定理
+Broyden 族 $B_{\phi}=(1-\phi)B_{\text{BFGS}}+\phi B_{\text{DFP}}$ の準 Newton 法は、完全直線探索の下では $\phi$ に依らず同一の点列を生成する（Dixon 1972）。証明せよ。
+
+*4 二次関数に対する有限終了
+強凸二次関数に完全直線探索付きの Broyden 族準 Newton 法を適用すると、$n$ 回以内に最小点に到達し $B_{n}=\nabla^{2}f$。探索方向が共役方向になることを示せ。
+
+*4 Dennis–Moré の特徴づけ {dm}
+$x_{k}\to x^{*}$ で $\nabla^{2}f(x^{*})\succ0$ のとき、準 Newton 法 $x_{k+1}=x_{k}-B_{k}^{-1}\nabla f(x_{k})$ が超線形収束 $\iff\frac{\|(B_{k}-\nabla^{2}f(x^{*}))s_{k}\|}{\|s_{k}\|}\to0$。証明し、$B_{k}$ が真の Hessian に収束する必要はないことを強調せよ。
+
+*4 BFGS の局所超線形収束（Broyden–Dennis–Moré）
+$\nabla^{2}f$ が $x^{*}$ で Lipschitz、$\nabla^{2}f(x^{*})\succ0$ で、$x_{0}$ が $x^{*}$ に、$B_{0}$ が $\nabla^{2}f(x^{*})$ に十分近ければ、単位ステップの BFGS は超線形収束する。有界劣化（bounded deterioration）の性質を示して証明せよ。
+
+*4 Powell の BFGS の大域収束定理 {powell-bfgs}
+$f$ が強凸 $C^{2}$ で、BFGS を Wolfe 直線探索とともに用いると、任意の正定値 $B_{0}$ から $x_{k}\to x^{*}$ かつ超線形収束する（Powell 1976, Byrd–Nocedal–Yuan は $\phi\in[0,1)$ の Broyden 族に拡張）。トレースと行列式を組み合わせた関数 $\psi(B)=\operatorname{tr}B-\ln\det B$ を用いる証明を完成させよ。
+
+*4 BFGS の非凸での失敗（Dai, Mascarenhas）
+非凸関数に対して、Wolfe 直線探索付き BFGS が停留点に収束しない例が存在する（Dai 2002, Mascarenhas 2004）。主張を正確に述べ、Li–Fukushima の修正（cautious update）で大域収束が回復することを示せ。
+
+*4 DFP の大域収束の困難
+DFP 法は強凸関数に対しても不正確直線探索では大域収束が保証されない（未解決の部分を含む）。BFGS との違いを、自己修正性（BFGS は大きすぎる固有値を素早く修正する）の観点から説明せよ（Powell 1986, Byrd–Nocedal–Yuan）。
+
+*4 対称ランク 1（SR1）更新
+SR1 $B_{+}=B+\frac{(y-Bs)(y-Bs)^{\top}}{(y-Bs)^{\top}s}$ は正定値性を保たないが、一様一次独立なステップの下で $B_{k}\to\nabla^{2}f(x^{*})$（Conn–Gould–Toint）であり、$n+1$ ステップ超線形収束することを示せ。
+
+*4 Broyden 法（非線形方程式）
+Broyden の「良い」更新 $B_{+}=B+\frac{(y-Bs)s^{\top}}{s^{\top}s}$ の局所超線形収束を示し、線形方程式に対しては $2n$ ステップで終了すること（Gay の定理）を示せ。
+
+*4 L-BFGS と二ループ再帰
+直近 $m$ 組の $(s_{i},y_{i})$ だけを用いた L-BFGS の方向 $H_{k}\nabla f$ が二ループ再帰で $O(mn)$ で計算できることを示し、強凸関数に対する L-BFGS の R-線形収束（Liu–Nocedal）を証明せよ。
+
+*4 BFGS の非漸近的超線形率（Rodomanov–Nesterov, Jin–Mokhtari）
+強凸・Hessian Lipschitz な関数に対し、BFGS は局所的に $\left(\frac{C}{k}\right)^{k/2}$ 型の明示的超線形率をもつ。貪欲準 Newton 法（Rodomanov–Nesterov）の率 $(1-\frac{1}{n\kappa})^{k^{2}/2}$ を導け。
+
+*4 準 Newton 法の自己スケーリング（Oren–Luenberger）
+$B_{0}$ を $\frac{y^{\top}y}{s^{\top}y}I$ でスケーリングすると、BFGS の初期の条件数が改善されることを示し、自己スケーリング変数距離法の二次関数に対する収束率を述べよ。
+
+*4 構造化準 Newton 法（非線形最小二乗）
+Hessian の一部 $J^{\top}J$ が既知の場合、残りの項 $\sum r_{i}\nabla^{2}r_{i}$ のみを準 Newton 近似する方法（Dennis–Gay–Welsch の NL2SOL）の局所超線形収束を示せ。
+
+*4 準 Newton 法とセカント法の一般化としての多セカント
+直近の複数ステップのセカント条件を同時にみたす多セカント更新（Schnabel）を定式化し、対称性・正定値性との両立が一般にできないことを示せ。
+
+*4 Anderson 加速と準 Newton 法
+不動点反復 $x=g(x)$ の Anderson 加速（深さ $m$）が、多セカント型の Broyden 更新（Type II）と等価であることを示し（Fang–Saad, Walker–Ni）、線形問題では GMRES と等価であることを確かめよ。
+
+*4 準 Newton 法の確率版（oLBFGS, Byrd–Hansen–Nocedal–Singer）
+確率的勾配から曲率対 $(s,y)$ を安定に作る方法（Hessian ベクトル積の部分標本化）を述べ、確率的 L-BFGS の $O(1/k)$ 収束（強凸）を示せ。
+
+*5 BFGS の大域収束の非凸での未解決性と部分結果
+Wolfe 直線探索付き BFGS が非凸 $C^{2}$ 関数に対して $\liminf\|\nabla f(x_{k})\|=0$ を保証するかは、Dai の反例（Wolfe 条件をみたすが直線探索が特殊）を除き、「典型的な」直線探索について長く問われてきた。Dai の反例（$n=8$ の多項式関数、周期的な反復）の構成原理を再構成せよ。
+
+*5 Powell の $\psi$ 関数と BFGS の大域収束の完全証明
+Powell 1976 の定理の証明（トレースの和の増大率、$\cos\theta_{k}$ の積の下界、Zoutendijk の定理の組合せ）を、Byrd–Nocedal 1989 の簡潔な証明（「$\cos\theta_{k}$ が一定割合の反復で一様に下から抑えられる」補題）に沿って完全に与えよ。

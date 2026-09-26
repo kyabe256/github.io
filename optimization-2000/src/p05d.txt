@@ -1,0 +1,123 @@
+=ch V-7　Frank–Wolfe 法（条件付き勾配法）
+
+*4 Frank–Wolfe 法の $O(1/k)$ 収束 {fw}
+コンパクト凸集合 $C$（直径 $D$）上の $L$-平滑凸関数に対し、$s_{k}=\operatorname{argmin}_{s\in C}\langle\nabla f(x_{k}),s\rangle$, $x_{k+1}=x_{k}+\frac{2}{k+2}(s_{k}-x_{k})$ は $f(x_{k})-f^{*}\le\frac{2LD^{2}}{k+2}$。証明せよ。
+
+*4 Frank–Wolfe ギャップと双対証明書
+$g(x)=\max_{s\in C}\langle\nabla f(x),x-s\rangle\ge f(x)-f^{*}$ は計算可能な最適性ギャップであり、$\min_{i\le k}g(x_{i})=O(LD^{2}/k)$ を示せ。非凸の場合に $O(1/\sqrt k)$ で停留性を保証することも示せ（Lacoste-Julien）。
+
+*4 Frank–Wolfe の下界（Canon–Cullum, Lan）
+線形最小化オラクルのみを用いる方法は、$f(x_{k})-f^{*}=\Omega(LD^{2}/k)$ を超えられない（$k\le n/2$）。単体上の $\|x\|^{2}$ で示し、強凸関数でも $O(1/k)$ が改善されない（Canon–Cullum のジグザグ）ことを示せ。
+
+*4 強凸集合上の Frank–Wolfe の加速（Garber–Hazan）
+$C$ が $\alpha$-強凸集合で $f$ が強凸なら、Frank–Wolfe（直線探索）は $O(1/k^{2})$ で収束する。$\|\nabla f\|\ge c>0$ が $C$ 上で成り立てば線形収束する（Levitin–Polyak, Demyanov–Rubinov）ことを示せ。
+
+*4 Away-step Frank–Wolfe の線形収束（Lacoste-Julien–Jaggi）
+多面体 $C$ 上の強凸関数に対し、away-step（アクティブな頂点から離れる方向）を許す Frank–Wolfe は、ピラミッド幅 $\delta(C)$ を用いて $f(x_{k})-f^{*}\le(1-\frac{\mu}{4L}(\frac{\delta}{D})^{2})^{k/2}(f(x_{0})-f^{*})$ で線形収束する。証明せよ。
+
+*4 ピラミッド幅の計算
+単体 $\Delta_{n}$ のピラミッド幅が $2/\sqrt n$ であることを示し、ピラミッド幅が多面体の「条件数」として away-step 法の率を支配することを説明せよ。
+
+*4 Pairwise Frank–Wolfe と Blended 法
+pairwise FW（away 頂点から FW 頂点へ重みを移す）の線形収束を示し、「悪いステップ」（swap step）の数の評価が指数的になりうる困難を論ぜよ。
+
+*4 Frank–Wolfe の核ノルム球への応用
+核ノルム球 $\{\|X\|_{*}\le\tau\}$ 上の線形最小化は最大特異ベクトル（一回の Lanczos）で計算でき、FW の反復がランク 1 の更新になる。行列補完に対する計算量（射影法の SVD との比較）を論ぜよ（Jaggi–Sulovský）。
+
+*4 条件付き勾配スライディング（Lan–Zhou）
+線形最小化オラクル $O(1/\varepsilon)$ 回（最適）と勾配評価 $O(1/\sqrt\varepsilon)$ 回（最適）を同時に達成する条件付き勾配スライディング法の骨格を与えよ。
+
+*4 確率的 Frank–Wolfe と分散削減
+有限和問題の確率的 FW は、バッチサイズを増やすか分散削減を施さない限り $O(1/k)$ を達成しないことを示し、SVRF（Hazan–Luo）の計算量を述べよ。
+
+*4 Frank–Wolfe による最小包含楕円体と D-最適計画（Khachiyan, Todd–Yıldırım）
+D-最適実験計画 $\max\log\det\sum w_{i}a_{i}a_{i}^{\top}$ s.t. $w\in\Delta$ は最小体積包含楕円体の双対であり、FW（Fedorov–Wynn のアルゴリズム）が $O(n\log n+n/\varepsilon)$ 反復で $\varepsilon$-最適解を得ることを示せ。
+
+*4 Kiefer–Wolfowitz の同値定理
+D-最適計画 $w^{*}$ は G-最適（$\max_{i}a_{i}^{\top}M(w)^{-1}a_{i}$ の最小化）でもあり、最適値は $n$。Frank–Wolfe の最適性ギャップから導け（Kiefer–Wolfowitz 1960）。
+
+*4 Carathéodory 型のスパース近似（Maurey の補題）
+$x\in\operatorname{conv}S\subset$ Hilbert 空間（$\|s\|\le1$）ならば、$S$ の $k$ 点の平均で $\|x-\frac1k\sum s_{i}\|\le1/\sqrt k$ となるものがある。確率的証明（Maurey）と FW による構成的証明を与えよ。
+
+*4 Frank–Wolfe 法による Wasserstein 重心と Carathéodory の近似（Frank–Wolfe on measures）
+測度空間上の凸関数の最小化に FW を適用すると、各反復で Dirac 測度を一つ加えるスパースな近似が得られることを示し、Frank–Wolfe の率が次元に依らないことを説明せよ（Bach の条件付き勾配とカーネル・ハーディング）。
+
+*4 カーネルハーディングと FW の等価性（Bach–Lacoste-Julien–Obozinski）
+カーネルハーディングは、再生核 Hilbert 空間の平均埋め込み上での FW（ステップ $1/(k+1)$）と等価であり、有限次元の場合に $O(1/k)$ の積分誤差を与えることを示せ。
+
+*4 一般化条件付き勾配法（非平滑項つき, Bredies–Lorenz）
+$\min f(x)+g(x)$（$g$ は凸で線形最小化 $\min\langle v,x\rangle+g(x)$ が容易）への FW の拡張を定式化し、$O(1/k)$ の収束を示せ。
+
+*4 Frank–Wolfe の最終反復のスパース性と Carathéodory
+FW の $k$ 反復目の点は高々 $k+1$ 個の頂点の凸結合であり、$\varepsilon$-最適解のスパース性として $O(LD^{2}/\varepsilon)$ 頂点で十分であることを示せ。この評価が単体上で最良であることを確かめよ。
+
+*4 FW の非凸での Łojasiewicz 型収束
+多面体上の非凸関数に FW（直線探索）を適用すると、KŁ 性質の下で FW ギャップが 0 に収束し、反復列が一点に収束するか論ぜよ。
+
+*5 FW の強凸集合上での加速と局所的な率の完全な分類（Kerdreux–d'Aspremont–Pokutta）
+$C$ が $(\alpha,q)$-一様凸で $f$ が Hölder 誤差限界（シャープネス）をもつとき、FW の率が一様凸性の次数と誤差限界の指数で決まる中間的な率 $O(k^{-1/(1-\nu)})$ を補間することを示せ。
+
+*5 Frank–Wolfe 法と大域最適化：単体上二次計画の Motzkin–Straus 構造
+単体上の二次計画 $\max x^{\top}Ax$（Motzkin–Straus）に対する FW（とその変種：レプリケータ動力学）の不動点が局所最大に対応し、一般には多項式時間で大域最大を得られない（NP 困難）一方、FW の局所最大のサポートが極大クリークに対応することを示せ（Bomze の正則化）。
+
+=ch V-8　楕円体法と切除平面法
+
+*4 楕円体法の体積減少 {ellipsoid}
+$\mathbb{R}^{n}$ の楕円体 $E$ を中心を通る超平面で切った半楕円体を含む最小体積楕円体 $E_{+}$ は $\frac{|E_{+}|}{|E|}\le e^{-1/(2(n+1))}$ をみたす。明示公式を導き証明せよ。
+
+*4 楕円体法による凸最適化の計算量
+凸関数 $f$（$[-R,R]^{n}$ 上 $|f|\le B$）の $\varepsilon$-最適解を、楕円体法は $O(n^{2}\log(BR/\varepsilon))$ 回の分離オラクル呼び出しで得る。証明せよ。
+
+*4 Khachiyan の定理（LP の多項式時間可解性）
+有理データの LP の実行可能性は楕円体法で $O(n^{2}L)$ 回の反復で判定でき、各反復の算術を $O(L)$ ビット精度で行えばよい。体積の下界（実行可能なら小さな球を含む摂動系の構成）を含めて証明せよ（Khachiyan 1979）。
+
+*4 最適化と分離の等価性（Grötschel–Lovász–Schrijver） {gls}
+「十分に記述された」凸体のクラスについて、弱最適化問題と弱分離問題は多項式時間で互いに帰着できる。楕円体法による一方向と、極体への帰着による逆方向を示し、完全グラフの安定集合問題の多項式時間可解性を結論せよ。
+
+*4 重心法（Levin, Newman） {cog}
+重心を通る超平面で切る重心法は、Grünbaum の定理により体積を毎回 $1-1/e$ 倍以下にし、$O(n\log(1/\varepsilon))$ 回の反復で $\varepsilon$-最適解を得る。この反復数がオラクル計算量として最適であることを示せ。
+
+*4 ランダムウォークによる重心の近似（Bertsimas–Vempala）
+重心の代わりにランダムウォークで得たサンプルの平均を用いると、各切断で高確率で定数割合の体積が減ることを示し（近似 Grünbaum）、多項式時間の重心法を得よ。
+
+*4 解析的中心切除平面法（ACCPM, Goffin–Luo–Ye）
+現在の多面体の解析的中心で切る ACCPM が $O^{*}(n^{2}/\varepsilon^{2})$ 回の切断で凸実行可能問題を解くことを示せ（Goffin–Luo–Ye）。ポテンシャル関数の増加による議論を与えよ。
+
+*4 Vaidya の体積中心法
+体積中心（$\log\det\nabla^{2}(\text{障壁})$ の最小点）で切り、不要な制約を削除する Vaidya の方法は、$O(n\log(1/\varepsilon))$ 回のオラクル呼び出しと多項式の総計算量を達成する。制約数が $O(n)$ に保たれることを示せ。
+
+*4 Lee–Sidford–Wong の切除平面法
+$O(n\log(nR/\varepsilon))$ 回のオラクル呼び出しと $O(n^{3}\log^{O(1)})$ の追加計算量をもつ切除平面法（2015）の主張を述べ、劣モジュラ最小化や半正定値計画への応用を述べよ。
+
+*4 Kelley の切除平面法の遅さ
+Kelley の方法（下からの区分線形モデルの最小化）は収束するが、$\varepsilon$-最適解に $\Omega((1/\varepsilon)^{(n-1)/2})$ 回の反復を要する例が存在する（Nemirovski–Yudin）。証明の骨格を与えよ。
+
+*4 バンドル法（Lemaréchal, Kiwiel）
+近接項付きの切除平面モデル $\min\hat f_{k}(x)+\frac{\mu}{2}\|x-\hat x_{k}\|^{2}$ を用いる近接バンドル法の大域収束（重要ステップ・無効ステップの分類）を示し、$O(1/\varepsilon^{3})$（一般）あるいは $O(1/\varepsilon^{2})$ の計算量を述べよ（Kiwiel, Du–Ruszczyński）。
+
+*4 レベル法（Lemaréchal–Nemirovski–Nesterov）
+現在の上界と下界の間のレベル集合への射影を用いるレベル法は、Lipschitz 凸関数に対し $O(G^{2}D^{2}/\varepsilon^{2})$ 回で $\varepsilon$-最適解を得て、次元に依らない最適率を達成する。証明せよ。
+
+*4 Gomory の切除平面法の有限収束
+純整数計画に対する Gomory の分数切除平面法は、辞書式単体法と適切な切除選択の下で有限回で整数最適解を得る（Gomory 1958）。証明の骨格を与えよ。
+
+*4 分枝限定法と切除平面の組合せ
+分枝限定法の正当性（上界・下界による刈り込み）と、LP 緩和の強化（分枝切除法）が探索木を小さくする仕組みを述べ、ナップサックの被覆不等式が強い切除を与えることを示せ。
+
+*4 Lenstra の固定次元整数計画
+次元 $n$ 固定の整数計画は多項式時間で解ける（Lenstra 1983）。LLL 格子基底簡約と平坦性定理（整数点を含まない凸体の格子幅は $n$ にのみ依存する上界をもつ）を用いた証明の骨格を与えよ。
+
+*4 Khinchin の平坦性定理
+整数点を含まない $\mathbb{R}^{n}$ の凸体 $K$ について、ある非零整数ベクトル $c$ で $\max_{K}c^{\top}x-\min_{K}c^{\top}x\le f(n)$（$f(n)$ は多項式で、Banaszczyk–Litvak–Pajor–Szarek の $O(n^{3/2})$、Rudelson の $O(n^{4/3}\log^{c}n)$ を経て Reis–Rothvoss により $O(n\log^{3}n)$ まで改善された）。楕円体の場合に証明せよ。
+
+*4 LLL アルゴリズム
+格子基底の LLL 簡約（サイズ簡約と Lovász 条件 $\frac34\|b_{i}^{*}\|^{2}\le\|b_{i+1}^{*}+\mu_{i+1,i}b_{i}^{*}\|^{2}$）が多項式時間で終了し、最短ベクトルの $2^{(n-1)/2}$ 近似を与えることを示せ。
+
+*4 分離オラクルと膜オラクルからの最適化（Lee–Sidford–Vempala）
+膜オラクル（点が凸体に含まれるかのみを答える）から、$\tilde O(n^{2})$ 回の呼び出しで凸最適化ができることを述べ、分離オラクルの近似的構成（ランダムな方向の有限差分）の骨格を示せ。
+
+*5 重心法の最適性と情報ベース計算量の下界
+凸関数の最小化で、分離（劣勾配）オラクルを用いる任意の方法は、次元 $n$ で $\Omega(n\log(1/\varepsilon))$ 回の呼び出しを要する（Nemirovski–Yudin）。抵抗オラクルの構成で証明し、重心法の最適性を結論せよ。
+
+*5 劣モジュラ最小化の切除平面法による高速化（Lee–Sidford–Wong）
+劣モジュラ関数の最小化を $O(n^{2}\log(nM)\cdot\mathrm{EO}+n^{3}\log^{O(1)}(nM))$ 時間（弱多項式）あるいは $O(n^{3}\log^{2}n\cdot\mathrm{EO}+n^{4}\log^{O(1)}n)$ 時間（強多項式）で解けることを、Lovász 拡張と切除平面法から導く骨格を与えよ。

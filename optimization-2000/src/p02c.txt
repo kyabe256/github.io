@@ -1,0 +1,123 @@
+=ch II-5　制約想定と接錐
+
+*4 Bouligand 接錐と線形化錐 {tcone}
+閉集合 $C$ の Bouligand 接錐 $T_{C}(x)=\{d:\exists t_{k}\downarrow0, d_{k}\to d, x+t_{k}d_{k}\in C\}$ は閉錐で、$C=\{g\le0\}$ の線形化錐 $L(x)=\{d:\nabla g_{i}(x)^{\top}d\le0,\ i\in I(x)\}$ について常に $T_{C}(x)\subset L(x)$。包含が真になる例を作れ。
+
+*4 局所最小の幾何的必要条件
+$x^{*}$ が閉集合 $C$ 上の $f\in C^{1}$ の局所最小点ならば $\nabla f(x^{*})^{\top}d\ge0$ ($\forall d\in T_{C}(x^{*})$)、すなわち $-\nabla f(x^{*})\in\hat N_{C}(x^{*})=T_{C}(x^{*})^{\circ}$。これと Farkas の補題から、「$T_{C}^{\circ}=L^{\circ}$ なら KKT」を導け。
+
+*4 LICQ の下での接錐
+LICQ（有効制約と等式制約の勾配が一次独立）が成り立てば $T_{C}(x)=L(x)$ で、乗数は一意。陰関数定理による証明を与えよ。
+
+*4 Mangasarian–Fromovitz 制約想定 {mfcq}
+MFCQ（等式制約の勾配が一次独立かつ $\nabla h^{\top}d=0$, $\nabla g_{i}^{\top}d<0$ ($i\in I$) なる $d$ が存在）は、制約系の小さな摂動に対して実行可能集合が空にならないこと（安定性）と同値である（Robinson）。証明を完成させよ。
+
+*4 Slater 条件と MFCQ
+凸制約系では Slater 条件 $\iff$ 各実行可能点で MFCQ。非凸では MFCQ が局所的な Slater 条件にすぎないことを例で示せ。
+
+*4 Abadie の制約想定
+$T_{C}(x)=L(x)$ を Abadie の制約想定という。線形制約（多面体）では常に成り立つことを示し、Abadie が成り立つが MFCQ が成り立たない例を作れ。
+
+*4 定階数制約想定（CRCQ, Janin）
+有効制約の任意の部分族について勾配の階数が近傍で一定ならば Abadie が成り立ち、KKT 条件が必要条件となる。線形制約と非線形制約の混合で LICQ・MFCQ が破れても CRCQ が成り立つ例を作れ。
+
+*4 CPLD 制約想定（Qi–Wei, Andreani–Martínez–Schuverdt）
+正線形従属な勾配の族が近傍でも線形従属であり続けるという条件 CPLD の下で、局所最小点は KKT 点である。CRCQ $\Rightarrow$ CPLD、MFCQ $\Rightarrow$ CPLD を示せ。
+
+*4 誤差限界制約想定
+$\operatorname{dist}(x,C)\le c\,\|(g(x)_{+},h(x))\|$ が $x^{*}$ の近傍で成り立てば（局所誤差限界、calmness）Abadie が成り立つ。逆が成り立たない例を作れ。
+
+*4 Clarke 接錐と正則性
+閉集合 $C$ の Clarke 接錐 $\hat T_{C}(x)$ は常に閉凸で $\hat T_{C}(x)\subset T_{C}(x)$。$C$ が $x$ で Clarke 正則（両者一致）でない例を作り、Rockafellar の定理 $\hat T_{C}(x)=\liminf_{x'\to x}T_{C}(x')$ を証明せよ。
+
+*4 極限法錐と Mordukhovich の法錐
+正則法錐 $\hat N_{C}(x)=T_{C}(x)^{\circ}$ と極限法錐 $N_{C}(x)=\limsup\hat N_{C}(x')$ を定義し、$\hat N_{C}\subset N_{C}\subset\operatorname{cl}\operatorname{conv}N_{C}=N^{\mathrm{Clarke}}_{C}$ を示せ。$C=\{(x,y): y\ge-|x|\}$ でそれぞれを計算せよ。
+
+*4 二次錐制約の制約想定
+二次錐制約 $g(x)\in\mathcal{L}^{m}$ に対する Robinson の制約想定 $0\in\operatorname{int}\{g(x^{*})+\nabla g(x^{*})\mathbb{R}^{n}-\mathcal{L}^{m}\}$ を具体的に書き下し、非退化条件と比較せよ。
+
+*4 Robinson の制約想定 {rcq}
+Banach 空間の問題 $\min f(x)$ s.t. $G(x)\in K$（$K$ 閉凸）で、$0\in\operatorname{int}\{G(x^{*})+DG(x^{*})X-K\}$ ならば、局所最小点で乗数の集合は空でない有界集合であり、実行可能集合は計量正則である。Robinson–Ursescu の定理から導け。
+
+*4 準正規性と拡張 Fritz John
+Bertsekas–Ozdaglar の準正規性の下で、Lagrange 乗数が存在し（集合制約 $X$ が正則な場合）、さらに正確ペナルティ関数 $f+c\sum g_{i}^{+}$ が $x^{*}$ で局所最小になる $c$ が存在することを示せ。
+
+*4 Abadie と Guignard の差
+$T_{C}(x)\neq L(x)$ だが $T_{C}(x)^{\circ}=L(x)^{\circ}$ となる例（$T_{C}$ が非凸）を作り、Guignard の制約想定が KKT を保証するが Abadie は成り立たない状況を確かめよ。
+
+*4 制約想定と正確ペナルティ
+局所最小点 $x^{*}$ で局所誤差限界が成り立てば、十分大きな $c$ について $x^{*}$ は $f+c\,\|(g_{+},h)\|$ の局所最小点である（Clarke の正確ペナルティ原理）。逆は成り立たないことを示せ。
+
+*4 相対的定階数条件（RCRCQ, Minchenko–Stakhovski）
+等式制約全体と有効不等式制約の部分族からなる族のみの階数一定性で十分であることを示し、この RCRCQ が二階必要条件を保証することを示せ。
+
+*4 二階の制約想定と弱二階条件
+MFCQ の下でも、臨界錐上のすべての乗数に関する max 型二階条件 $\max_{\lambda\in\Lambda}d^{\top}\nabla^{2}_{xx}L(x^{*},\lambda)d\ge0$ は成り立つが、単一の乗数で成り立つとは限らない（Arutyunov、Anitescu の例）。例を構成せよ。
+
+*4 ベクトル値写像の計量正則性と制約想定
+$C=\{x: G(x)\in K\}$ について、写像 $x\mapsto G(x)-K$ が $(x^{*},0)$ で計量正則 $\iff$ Robinson の制約想定。これを Lyusternik–Graves の定理から導け。
+
+*5 制約想定の最弱性とアルゴリズム的意味（Andreani–Haeser–Schuverdt–Silva）
+AKKT 点が KKT 点になるための最弱の制約想定（CCP：錐連続性）を定義し、CCP が CPLD・RCPLD・CRSC・準正規性のいずれよりも弱く、しかも拡張 Lagrange 法の極限点が KKT となることを保証する最弱条件であることを示せ。
+
+=ch II-6　二次の最適性条件
+
+*4 臨界錐 {crit}
+KKT 点 $(x^{*},\lambda^{*})$ における臨界錐 $\mathcal{C}(x^{*})=\{d\in L(x^{*}):\nabla f(x^{*})^{\top}d\le0\}$ が $\{d:\nabla g_{i}^{\top}d=0\ (\lambda_{i}^{*}>0),\ \nabla g_{i}^{\top}d\le0\ (\lambda_{i}^{*}=0,i\in I)\}$ と一致することを示せ（乗数の選び方に依らないことも）。
+
+*4 二階の必要条件（LICQ） {soc-nec}
+LICQ の下で局所最小点は $d^{\top}\nabla^{2}_{xx}L(x^{*},\lambda^{*})d\ge0$ ($\forall d\in\mathcal{C}(x^{*})$) をみたす。臨界方向に沿った実行可能な二次曲線を構成して証明せよ。
+
+*4 二階の十分条件 {soc-suff}
+KKT 点 $(x^{*},\lambda^{*})$ で $d^{\top}\nabla^{2}_{xx}L(x^{*},\lambda^{*})d>0$ ($0\neq d\in\mathcal{C}(x^{*})$) ならば、$x^{*}$ は厳密局所最小で、二次成長 $f(x)\ge f(x^{*})+c\|x-x^{*}\|^{2}$ が実行可能点で成り立つ。制約想定は不要であることに注意し、背理法で証明せよ。
+
+*4 強二階十分条件
+強相補性が破れているとき、$\{d:\nabla g_{i}^{\top}d=0\ (\lambda_{i}^{*}>0)\}$ 上での正定値性（強二階十分条件）を定義し、これが KKT 点の強正則性（Robinson）と、LICQ の下で同値であることを示せ。
+
+*4 Ioffe の二階条件（乗数の max 型）
+MFCQ の下で、$\sup_{\lambda\in\Lambda(x^{*})}d^{\top}\nabla^{2}_{xx}L(x^{*},\lambda)d>0$ ($0\neq d\in\mathcal{C}$) は厳密局所最小（二次成長）と同値である。十分性と必要性を証明せよ。
+
+*4 二次成長と二階条件の同値
+MFCQ の下、局所最小点における二次成長は max 型二階十分条件と同値である（Bonnans–Ioffe）。この同値性が錐制約に拡張されると「シグマ項」（曲率項）が必要になることを二次錐の例で示せ。
+
+*4 シグマ項と非多面体錐（Kawasaki, Cominetti）
+$\min f(x)$ s.t. $G(x)\in K$（$K$ 閉凸）の二階必要条件は $d^{\top}\nabla^{2}L d-\sigma(\lambda\mid T^{2}_{K}(G(x^{*}),DG\,d))\ge0$ の形になる。$K=\mathbb{S}^{n}_{+}$ のとき $\sigma$ 項が $2\operatorname{tr}(\Lambda\,DG\,d\,G(x^{*})^{+}DG\,d)$ で与えられることを示せ（Shapiro）。
+
+*4 二階接集合
+閉集合 $C$ の二階接集合 $T^{2}_{C}(x,d)=\{w:\operatorname{dist}(x+td+\frac{t^{2}}{2}w,C)=o(t^{2})\}$ を定義し、$C$ が円板の場合に計算せよ。これを用いた二階必要条件 $\nabla f^{\top}w+d^{\top}\nabla^{2}fd\ge0$ ($w\in T^{2}_{C}(x^{*},d)$, $d$ 臨界) を示せ。
+
+*4 二階条件と局所一意性
+二階十分条件をみたす KKT 点は孤立 KKT 点とは限らない（Robinson の例）。強二階十分条件と LICQ の下では孤立であることを示せ。
+
+*4 退化した二階条件と高階条件
+二階十分条件が成り立たない場合（$d^{\top}\nabla^{2}Ld=0$ となる臨界方向がある）の三階・四階の条件を等式制約の場合に定式化し、Peano 型の反例で限界を示せ。
+
+*4 二階条件の非凸 QP での意味
+非凸 QP $\min\frac{1}{2}x^{\top}Qx+c^{\top}x$ s.t. $Ax\le b$ の局所最小性は、臨界錐上の共正性で完全に特徴づけられる（二階条件が必要十分）。局所最小の判定が NP 困難であることを共正性判定から導け。
+
+*4 二階条件と Newton 型法の収束
+LICQ・強相補性・二階十分条件の下で、KKT 系の Jacobian は正則であることを示せ。これが SQP 法の局所二次収束の根拠であることを説明せよ。
+
+*4 凸計画における二階条件
+凸計画では二階条件は冗長に見えるが、二次成長の判定には意味がある。凸関数の最小点で二次成長が成り立つことと、臨界錐上での二階 epi-導関数の正値性の同値を示せ。
+
+*4 二階条件と乗数の選択
+二階必要条件が一部の乗数でのみ成り立つ例を作り、「すべての乗数で成り立つ」「ある乗数で成り立つ」「max 型」の三つの二階条件の強弱関係を整理せよ。
+
+*4 一般化 Hessian による二階条件（$C^{1,1}$ データ）
+$f,g$ が $C^{1,1}$ のとき、一般化 Hessian による二階十分条件を定式化し証明せよ（Hiriart-Urruty–Strodiot–Nguyen の拡張）。
+
+*4 半無限計画の二階条件
+$\min f(x)$ s.t. $g(x,t)\le0\ (t\in T)$ の二階条件では、有効添字 $t$ の動きに由来する余分な曲率項（包絡線効果）が現れる。$T$ がコンパクト区間で $g(x,\cdot)$ の最大点が非退化の場合にその項を計算せよ（Hettich–Jongen, Shapiro）。
+
+*4 二階条件と Riemann 幾何
+等式制約の二階条件の Lagrangian Hessian は、制約多様体の Riemann Hessian に等しい。球面上の最適化 $\min x^{\top}Ax$ でこれを具体的に確かめ、測地線に沿った二階展開で証明せよ。
+
+*4 鞍点問題の二階条件
+凸凹関数の鞍点問題 $\min_{x}\max_{y}\phi(x,y)$ の局所鞍点に対する二階条件を定式化し、非凸非凹問題（GAN）で局所ミニマックス点（Jin–Netrapalli–Jordan）の二階特徴づけ $\nabla^{2}_{yy}\phi\prec0$, $\nabla^{2}_{xx}\phi-\nabla^{2}_{xy}\phi(\nabla^{2}_{yy}\phi)^{-1}\nabla^{2}_{yx}\phi\succ0$ を示せ。
+
+*5 錐計画の二階条件（Bonnans–Cominetti–Shapiro）
+$K$ が二次正則な閉凸集合のとき、$\min f(x)$ s.t. $G(x)\in K$ の局所最小点で二次成長が成り立つ $\iff$ シグマ項付き二階十分条件。二次正則性の定義を与え、半正定値錐と二次錐が二次正則であることを示せ。
+
+*5 二階の最適性条件と変分解析（Mordukhovich–Rockafellar）
+$\varphi$ が prox-regular かつ subdifferentially continuous なとき、$\bar x$ が $\varphi$ の傾斜安定局所最小点（tilt-stable）$\iff$ 二階劣微分 $\partial^{2}\varphi(\bar x|0)$ が正定値（$\langle z,w\rangle>0$, $z\in\partial^{2}\varphi(\bar x|0)(w)$, $w\neq0$）。証明の骨格を再構成し、非線形計画では強二階十分条件＋LICQ と同値になることを述べよ。

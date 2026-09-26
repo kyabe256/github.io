@@ -1,0 +1,123 @@
+=ch I-5　凸関数の基本
+
+*4 凸関数の局所 Lipschitz 性 {lip}
+真凸関数 $f:\mathbb{R}^{n}\to(-\infty,\infty]$ は $\operatorname{int}\operatorname{dom}f$ 上で局所 Lipschitz 連続である。コンパクト集合 $K\subset\operatorname{int}\operatorname{dom}f$ 上の Lipschitz 定数を $K$ の近傍での $f$ の振幅で評価し、相対境界では連続性が壊れうる例を与えよ。
+
+*4 Jensen の不等式（測度版）
+$f$ を閉真凸関数、$\mu$ を確率測度、$X$ を可積分な確率変数とすると $f(E X)\le E f(X)$。支持超平面から証明し、条件付き期待値版 $f(E[X\mid\mathcal{G}])\le E[f(X)\mid\mathcal{G}]$ も導け。
+
+*4 二階の凸性判定
+$C^{2}$ 関数 $f$ が開凸集合上で凸 $\iff\nabla^{2}f\succeq0$。$\nabla^{2}f\succ0$ は狭義凸の十分条件だが必要ではないこと（$x^{4}$）、および $m$-強凸 $\iff\nabla^{2}f\succeq mI$ を示せ。
+
+*4 一階条件と単調性
+微分可能な $f$ について、凸 $\iff f(y)\ge f(x)+\langle\nabla f(x),y-x\rangle\iff\nabla f$ が単調 $\langle\nabla f(x)-\nabla f(y),x-y\rangle\ge0$。強凸・狭義凸についても対応する同値性を示せ。
+
+*4 $L$-平滑凸関数の基本不等式 {smooth}
+$f$ が凸で $\nabla f$ が $L$-Lipschitz ならば、(a) $f(y)\le f(x)+\langle\nabla f(x),y-x\rangle+\frac{L}{2}\|y-x\|^{2}$、(b) $f(y)\ge f(x)+\langle\nabla f(x),y-x\rangle+\frac{1}{2L}\|\nabla f(x)-\nabla f(y)\|^{2}$、(c) $\nabla f$ は $1/L$-共強圧的。(a)〜(c) が凸性の下で同値であることを示せ。
+
+*4 強凸かつ平滑な関数の補間不等式
+$f$ が $\mu$-強凸かつ $L$-平滑ならば $\langle\nabla f(x)-\nabla f(y),x-y\rangle\ge\frac{\mu L}{\mu+L}\|x-y\|^{2}+\frac{1}{\mu+L}\|\nabla f(x)-\nabla f(y)\|^{2}$。さらに有限点のデータ $\{(x_{i},g_{i},f_{i})\}$ がこのクラスの関数で補間可能であるための必要十分条件（Taylor–Hendrickx–Glineur）を述べ証明せよ。
+
+*4 凸関数の合成規則
+$h:\mathbb{R}^{m}\to\mathbb{R}$ が凸で各成分について非減少、$g_{i}$ が凸ならば $h\circ g$ は凸。$\log\sum e^{x_{i}}$, $-\log\det X$（$X\succ0$）, $\lambda_{\max}(X)$, 上位 $k$ 個の固有値の和がすべて凸であることを示せ。
+
+*4 透視変換と凸性
+$f$ が凸ならば透視 $g(x,t)=tf(x/t)$（$t>0$）は結合凸である。これを用いて $\|x\|^{2}/t$, 相対エントロピー $\sum x_{i}\log(x_{i}/y_{i})$ の結合凸性を示せ。
+
+*4 下半連続包と閉包
+真凸関数 $f$ の閉包 $\operatorname{cl}f$（エピグラフの閉包）は $f$ 以下の最大の閉凸関数で、$\operatorname{ri}\operatorname{dom}f$ 上で $f$ と一致する。$\operatorname{cl}f(x)=\lim_{t\uparrow1}f((1-t)y+tx)$（$y\in\operatorname{ri}\operatorname{dom}f$）を示せ。
+
+*4 後退関数
+閉真凸関数 $f$ の後退関数 $f0^{+}(d)=\lim_{t\to\infty}(f(x+td)-f(x))/t$ は $x\in\operatorname{dom}f$ に依らない正斉次閉凸関数である。$f$ が強圧的（レベル集合がすべて有界）$\iff f0^{+}(d)>0\ (d\neq0)$ を示せ。
+
+*4 最小値の存在（凸版） {exist-conv}
+閉真凸関数 $f$ の最小値集合が空でなく有界 $\iff$ $f0^{+}(d)>0$ for all $d\neq0$。有界でない最小値集合を持つ場合の必要十分条件（$f0^{+}(d)\ge0$ で等号方向に $f$ が定数）について論ぜよ。
+
+*4 凸関数の下限の和と infimal convolution
+$f\,\square\,g(x)=\inf_{y}\{f(y)+g(x-y)\}$ は凸で $\operatorname{epi}(f\square g)\supset\operatorname{epi}f+\operatorname{epi}g$（狭義エピグラフでは等号）。距離関数 $d_{C}=\iota_{C}\square\|\cdot\|$ と Moreau 包 $e_{\lambda}f=f\square\frac{1}{2\lambda}\|\cdot\|^{2}$ を例に、下限が達成される条件を与えよ。
+
+*4 準凸関数と擬凸関数
+準凸（下位集合が凸）と擬凸（$\langle\nabla f(x),y-x\rangle\ge0\Rightarrow f(y)\ge f(x)$）の関係を整理せよ。微分可能な準凸関数の停留点は最小点とは限らないが、擬凸関数では最小点であることを示し、分数計画 $\frac{c^{\top}x+\alpha}{d^{\top}x+\beta}$ が擬線形であることを示せ。
+
+*4 凸関数の最大化と端点原理
+閉凸関数をコンパクト凸集合上で最大化すると、最大値は端点で達成される。多面体上の凸最大化が NP 困難になりうること（二次形式 $\max\sum x_{i}^{2}$ over $\{Ax\le b\}$）を議論せよ。
+
+*4 対数凹性と閉包性
+$f,g$ が対数凹ならば $fg$ と $f*g$ は対数凹だが、$f+g$ は一般に対数凹でない。正規分布の累積分布関数 $\Phi$ と $1-\Phi$ が対数凹であることを示せ。
+
+*4 行列関数の凸性（Löwner–Heinz）
+$0\le p\le1$ で $t\mapsto t^{p}$ は作用素単調、$1\le p\le2$ で作用素凸である。$p>2$ では作用素凸でない反例を $2\times2$ 行列で作れ。$t\mapsto\log t$ の作用素凹性も示せ。
+
+*5 Lieb の凹性定理
+$0\le t\le1$ と固定した $K$ に対し、$(A,B)\mapsto\operatorname{tr}K^{*}A^{t}KB^{1-t}$ は正定値行列の組について結合凹である。Ando の証明（テンソル積と作用素凹性）を完成させ、量子相対エントロピーの結合凸性を系として導け。
+
+*4 凸関数のスペクトル関数（Davis–Lewis）
+対称凸関数 $\phi:\mathbb{R}^{n}\to\mathbb{R}$ から作ったスペクトル関数 $F(X)=\phi(\lambda(X))$ は $\mathbb{S}^{n}$ 上の凸関数で、$F^{*}(Y)=\phi^{*}(\lambda(Y))$。von Neumann のトレース不等式 $\operatorname{tr}XY\le\lambda(X)^{\top}\lambda(Y)$ を証明して用いよ。
+
+*4 Ky Fan の最大原理
+対称行列 $A$ の上位 $k$ 個の固有値の和は $\max\{\operatorname{tr}U^{\top}AU: U^{\top}U=I_{k}\}$ に等しく、したがって $A$ の凸関数である。凸包表示 $\operatorname{conv}\{UU^{\top}\}=\{0\preceq X\preceq I,\ \operatorname{tr}X=k\}$ を示せ。
+
+*5 凸関数の Alexandrov の定理
+$\mathbb{R}^{n}$ 上の凸関数はほとんど至る所で二階微分可能（二次 Taylor 展開をもつ）である。劣微分の逆写像の Lipschitz 性と Rademacher の定理を用いる証明（Mignot / Crandall–Ishii–Lions）を完成させよ。
+
+=ch I-6　共役関数と Fenchel–Moreau
+
+*4 Fenchel 共役の基本性質 {conj}
+$f^{*}(y)=\sup_{x}\{\langle x,y\rangle-f(x)\}$ は常に閉凸で、Fenchel–Young $f(x)+f^{*}(y)\ge\langle x,y\rangle$ が成り立つ。$\|\cdot\|^{*}=\iota_{\{\|y\|_{*}\le1\}}$, $(\frac{1}{p}|x|^{p})^{*}=\frac{1}{q}|y|^{q}$, $(\iota_{C})^{*}=\sigma_{C}$, $(e^{x})^{*}=y\log y-y$ を計算せよ。
+
+*4 Fenchel–Moreau の定理 {fm-thm}
+真関数 $f$ について $f^{**}=f\iff f$ が閉凸。一般に $f^{**}=\operatorname{cl}\operatorname{conv}f$（真の閉凸包）であることをエピグラフの分離から証明せよ。
+
+*4 共役と劣微分の関係
+閉真凸関数 $f$ について $y\in\partial f(x)\iff x\in\partial f^{*}(y)\iff f(x)+f^{*}(y)=\langle x,y\rangle$。したがって $(\partial f)^{-1}=\partial f^{*}$ であることを示せ。
+
+*4 強凸性と平滑性の双対 {dual-smooth}
+閉真凸関数 $f$ が $\mu$-強凸 $\iff f^{*}$ が微分可能で $\nabla f^{*}$ が $1/\mu$-Lipschitz。有限次元の証明を与え、Hilbert 空間でも成り立つことを確かめよ。
+
+*4 Legendre 変換（本質的平滑・本質的狭義凸）
+閉真凸関数 $f$ が Legendre 型（本質的に平滑かつ本質的に狭義凸）$\iff f^{*}$ が Legendre 型であり、このとき $\nabla f:\operatorname{int}\operatorname{dom}f\to\operatorname{int}\operatorname{dom}f^{*}$ は位相同型で逆写像が $\nabla f^{*}$ である（Rockafellar の定理 26.5）。
+
+*4 共役の演算規則
+(a) $(f\square g)^{*}=f^{*}+g^{*}$、(b) $\operatorname{ri}\operatorname{dom}f\cap\operatorname{ri}\operatorname{dom}g\neq\emptyset$ ならば $(f+g)^{*}=f^{*}\square g^{*}$ で下限は達成される。(b) の条件を落とすと閉包が必要になる例を作れ。
+
+*4 線形写像との合成の共役
+$(f\circ A)^{*}(y)=\inf\{f^{*}(z): A^{\top}z=y\}$ が $\operatorname{ri}\operatorname{dom}f\cap\operatorname{range}A\neq\emptyset$ の下で成り立ち、下限が達成されることを示せ。$(Af)^{*}=f^{*}\circ A^{\top}$（像関数）も示せ。
+
+*4 支持関数とゲージの双対
+閉凸集合 $C\ni0$ のゲージ $\gamma_{C}$ と極集合 $C^{\circ}$ の支持関数について $\gamma_{C}=\sigma_{C^{\circ}}$。これを用いて双対ノルムの双対がもとのノルムであることを示せ。
+
+*4 Moreau の恒等式 {moreau-id}
+閉真凸関数 $f$ について $\operatorname{prox}_{f}(x)+\operatorname{prox}_{f^{*}}(x)=x$、および $e_{1}f(x)+e_{1}f^{*}(x)=\frac{1}{2}\|x\|^{2}$。錐の指示関数に適用すると Moreau の分解定理が得られることを確かめよ。
+
+*4 Moreau 包の平滑性 {menv}
+閉真凸関数 $f$ の Moreau 包 $e_{\lambda}f$ は $C^{1}$ で $\nabla e_{\lambda}f=\lambda^{-1}(I-\operatorname{prox}_{\lambda f})$ は $1/\lambda$-Lipschitz。$e_{\lambda}f\uparrow f$ ($\lambda\downarrow0$)、$\operatorname{argmin}e_{\lambda}f=\operatorname{argmin}f$ を示せ。
+
+*4 Fenchel の双対定理 {fenchel}
+$f,g$ を真凸関数とし、$\operatorname{ri}\operatorname{dom}f\cap\operatorname{ri}\operatorname{dom}g\neq\emptyset$ とすると $\inf_{x}\{f(x)+g(x)\}=\max_{y}\{-f^{*}(y)-g^{*}(-y)\}$（右辺は達成）。双対ギャップが生じる例を作れ。
+
+*4 エントロピーと対数和指数の双対
+$\operatorname{lse}(x)=\log\sum e^{x_{i}}$ の共役は単体上の負エントロピー $\sum y_{i}\log y_{i}$ であることを示し、これから Gibbs の変分原理 $\log\sum e^{x_{i}}=\max_{p\in\Delta}\{\langle p,x\rangle+H(p)\}$ を導け。
+
+*4 $-\log\det$ の共役
+$f(X)=-\log\det X$（$X\succ0$）の共役は $f^{*}(Y)=-\log\det(-Y)-n$（$Y\prec0$）。これを用いて最大行列式問題の双対を書け。
+
+*4 Toland–Singer の双対（DC 双対）
+$g,h$ を閉真凸関数とすると $\inf_{x}\{g(x)-h(x)\}=\inf_{y}\{h^{*}(y)-g^{*}(y)\}$。この等式に制約想定が不要であることを示し、DC アルゴリズムの双対的解釈を述べよ。
+
+*4 Brøndsted–Rockafellar の定理
+Banach 空間の閉真凸関数 $f$ と $x_{0}\in\operatorname{dom}f$, $x_{0}^{*}\in\partial_{\varepsilon}f(x_{0})$ に対し、任意の $\lambda>0$ で $\|x-x_{0}\|\le\varepsilon/\lambda$, $\|x^{*}-x_{0}^{*}\|\le\lambda$ なる $x^{*}\in\partial f(x)$ が存在する。特に $\partial f$ の定義域は $\operatorname{dom}f$ で稠密。Ekeland の変分原理から導け。
+
+*4 $\varepsilon$-劣微分の構造
+閉真凸関数の $\varepsilon$-劣微分 $\partial_{\varepsilon}f(x)=\{y: f(z)\ge f(x)+\langle y,z-x\rangle-\varepsilon\}$ は $\varepsilon>0$ で $\operatorname{dom}f$ 上至る所空でない閉凸集合で、$x\mapsto\partial_{\varepsilon}f(x)$ は内部で Hausdorff 連続（Lipschitz）である。$\partial_{\varepsilon}(f+g)\subset\bigcup_{\varepsilon_{1}+\varepsilon_{2}=\varepsilon}(\partial_{\varepsilon_{1}}f+\partial_{\varepsilon_{2}}g)$ を示せ（Hiriart-Urruty の公式）。
+
+*4 共役の連続性とエピ収束（Wijsman）
+$\mathbb{R}^{n}$ の閉真凸関数列について $f_{k}\to f$（エピ収束）$\iff f_{k}^{*}\to f^{*}$（エピ収束）。Moreau 包の各点収束による特徴づけ（Attouch）を用いて証明せよ。
+
+*5 Legendre 変換の凸解析的一意性（Artstein-Avidan–Milman）
+$\mathbb{R}^{n}$ 上の下半連続凸関数全体の集合から自身への順序逆転する全単射は、アフィン変換の合成を除いて Legendre 変換に限る。証明の骨格を再構成せよ。
+
+*4 Bregman 距離
+Legendre 型関数 $h$ について $D_{h}(x,y)=h(x)-h(y)-\langle\nabla h(y),x-y\rangle$ は $D_{h}(x,y)=D_{h^{*}}(\nabla h(y),\nabla h(x))$ をみたす。三点恒等式 $D_{h}(x,z)=D_{h}(x,y)+D_{h}(y,z)+\langle\nabla h(y)-\nabla h(z),x-y\rangle$ を示し、KL ダイバージェンスが $h=\sum x\log x$ の Bregman 距離であることを確かめよ。
+
+*4 凸関数の相補性と Young の不等式の等号
+$p,q>1$, $1/p+1/q=1$ の Young の不等式、および一般の $N$-関数（Orlicz 空間）の Young の不等式 $ab\le\Phi(a)+\Psi(b)$ を共役から導き、等号条件を決定せよ。Orlicz ノルムと Luxemburg ノルムが同値であることを示せ。

@@ -1,0 +1,123 @@
+=ch V-3　逐次二次計画法
+
+*4 SQP と KKT 系の Newton 法の等価性 {sqp}
+等式制約問題に対する SQP の部分問題 $\min\nabla f^{\top}d+\frac12d^{\top}\nabla^{2}_{xx}Ld$ s.t. $h+\nabla h^{\top}d=0$ の KKT 条件は、KKT 系 $\nabla L=0$, $h=0$ に対する Newton 法の一ステップと一致する。LICQ と二階十分条件の下で局所二次収束を示せ。
+
+*4 不等式制約 SQP の有効集合の識別（Robinson）
+LICQ・強相補性・二階十分条件の下、$x^{*}$ の近くでは SQP 部分問題（不等式制約付き QP）の有効集合が真の有効集合と一致し、局所的に等式制約 SQP と同じ二次収束をする。証明せよ。
+
+*4 強相補性を欠く SQP（Bonnans の局所収束）
+強二階十分条件と LICQ の下、強相補性がなくても SQP は局所二次収束する（Bonnans 1994、一般化方程式の Newton 法として）。Robinson の強正則性から導け。
+
+*4 準 Newton SQP の超線形収束（Boggs–Tolle–Wang）
+Hessian を $B_{k}$ で近似した SQP は、$\frac{\|P_{k}(B_{k}-\nabla^{2}_{xx}L^{*})s_{k}\|}{\|s_{k}\|}\to0$（$P_{k}$ は制約の接空間への射影）$\iff$ 超線形収束（二段超線形の意味で）。Dennis–Moré の制約付き版を示せ。
+
+*4 簡約 Hessian SQP と二段超線形収束
+接空間上の簡約 Hessian $Z^{\top}\nabla^{2}LZ$ のみを準 Newton 近似する簡約 SQP は、一般に一段超線形ではなく二段超線形（$\|x_{k+2}-x^{*}\|=o(\|x_{k}-x^{*}\|)$）収束する（Byrd–Nocedal）。理由を説明せよ。
+
+*4 Powell の減衰 BFGS 更新
+SQP で $y^{\top}s>0$ が保証されない問題に対し、Powell の減衰更新 $r=\theta y+(1-\theta)Bs$（$\theta$ で $r^{\top}s\ge0.2s^{\top}Bs$ を保証）が正定値性を保つことを示し、超線形収束が保たれる条件を論ぜよ。
+
+*4 SQP のメリット関数による大域化（Han）
+$\ell_{1}$ メリット関数 $\phi_{c}=f+c\|h\|_{1}+c\|g_{+}\|_{1}$ について、$c>\|\lambda_{k+1}\|_{\infty}$ なら SQP 方向は $\phi_{c}$ の降下方向であることを示し、直線探索付き SQP の大域収束（Han 1977）を証明せよ。
+
+*4 フィルター法（Fletcher–Leyffer） {filter}
+目的関数値と制約違反の組 $(f,h)$ で支配されない点のみを受理するフィルター SQP（信頼領域）の大域収束を示せ（Fletcher–Gould–Leyffer–Toint–Wächter）。ペナルティパラメータが不要である利点を説明せよ。
+
+*4 フィルター直線探索法の局所収束（Wächter–Biegler）
+直線探索フィルター法で Maratos 効果を回避するために二次修正を導入すると、局所超線形収束が回復することを示せ（IPOPT の理論的基礎）。
+
+*4 SQP の実行不能部分問題と弾性 SQP（SNOPT）
+線形化制約が実行不能な場合に、弾性変数で緩和した部分問題を解く弾性 SQP（Gill–Murray–Saunders の SNOPT）の性質、すなわち実行不能停留点への収束を示せ。
+
+*4 安定化 SQP（Wright, Hager）
+乗数が非一意（MFCQ のみ、あるいは制約想定なし）の退化問題に対し、安定化 SQP $\min\nabla f^{\top}d+\frac12d^{\top}Hd+\frac{\mu}{2}\|\lambda\|^{2}$ s.t. $h+\nabla h^{\top}d-\mu(\lambda-\lambda_{k})=0$ が、二階十分条件のみで局所超線形収束することを示せ（Fernández–Solodov）。
+
+*4 逐次線形二次計画（SLQP）と有効集合推定
+LP 部分問題で有効集合を推定し、等式制約 QP でステップを計算する SLQP（Byrd–Gould–Nocedal–Waltz）の枠組みを述べ、有効集合推定の正しさ（有限回識別）を示せ。
+
+*4 逐次凸計画（SCP）と凸-凹分解
+非凸制約 $g(x)\le0$ を線形化上界 $g(x_{k})+\nabla g(x_{k})^{\top}(x-x_{k})+\frac{L}{2}\|x-x_{k}\|^{2}\le0$ で置き換える逐次凸近似が、実行可能性を保ちつつ KKT 点に収束すること（内側凸近似、Marks–Wright）を示せ。
+
+*4 逐次二次制約二次計画（SQCQP）
+部分問題に制約の二次近似を含める SQCQP（Fukushima–Luo–Tseng）が Maratos 効果を回避し、ステップ 1 を受理しつつ大域・局所超線形収束することを示せ。
+
+*4 SQP の計算量（非凸、Curtis–Robinson–Samadi）
+二次のメリット関数に基づく SQP 型手法が、$\varepsilon$-KKT 点を $O(\varepsilon^{-2})$ 回の反復で見つけることを示せ（実行可能な場合）。
+
+*4 SQP による最適制御（直接法、多段射撃）
+離散化最適制御問題の SQP で、KKT 行列が帯構造をもち、Riccati 再帰で $O(N)$ で解けることを示せ（Bock–Plitt の多段射撃法、Rao–Wright–Rawlings）。
+
+*4 SQP と Newton–Lagrange 法の同値性（非線形相補性の観点）
+不等式制約の KKT 系を一般化方程式 $0\in F(z)+N_{\mathbb{R}^{n}\times\mathbb{R}^{m}_{+}}(z)$ と見なすと、SQP は Josephy–Newton 法に一致することを示せ。
+
+*4 Josephy–Newton 法の局所収束
+一般化方程式 $0\in F(x)+N_{C}(x)$ の解 $x^{*}$ が強正則なら、$0\in F(x_{k})+F'(x_{k})(x-x_{k})+N_{C}(x)$ で定める Josephy–Newton 法は局所二次収束する（Josephy 1979）。Robinson の強正則性定理から導け。
+
+*5 SQP の大域収束の完全理論（Byrd–Curtis–Nocedal のステアリング規則）
+ペナルティパラメータを線形化モデルでの制約違反の減少量に基づいて更新する「ステアリング規則」を備えた SQP は、実行可能な場合は KKT 点に、実行不能な場合は実行不能停留点に収束し、しかも局所超線形収束を損なわない。証明の骨格を完成させよ。
+
+*5 退化問題に対する Newton 型法の完全な局所理論（Izmailov–Solodov）
+臨界乗数（critical multipliers）の概念を定義し、Newton–Lagrange 法の双対列が臨界乗数に吸引されるため退化問題で収束が遅くなる現象を示せ。非臨界乗数では安定化 SQP が超線形収束することを証明せよ。
+
+=ch V-4　線形計画の内点法
+
+*4 Karmarkar の射影変換法
+Karmarkar の標準形 LP に対し、射影変換とポテンシャル関数 $\phi(x)=n\log(c^{\top}x)-\sum\log x_{j}$ を用いた方法が、各反復でポテンシャルを定数以上減らし、$O(nL)$ 反復で最適解を得ることを示せ（Karmarkar 1984）。
+
+*4 主双対パス追跡法の短ステップ版 {pd-short}
+中心パスの近傍 $\mathcal{N}_{2}(\theta)=\{(x,y,s):\|XSe-\mu e\|\le\theta\mu\}$ を用い、$\mu_{+}=(1-\frac{\delta}{\sqrt n})\mu$ と減らす短ステップ主双対法は $O(\sqrt nL)$ 反復で最適解を得る。Newton ステップが近傍に留まることを示せ（Kojima–Mizuno–Yoshise, Monteiro–Adler）。
+
+*4 長ステップ法と $\mathcal{N}_{-\infty}$ 近傍
+$\mathcal{N}_{-\infty}(\gamma)=\{x_{j}s_{j}\ge\gamma\mu\}$ を用いる長ステップ主双対法は $O(nL)$ 反復で収束する。短ステップより理論的に悪いが実用的に速い理由（「理論と実践の乖離」）を論ぜよ。
+
+*4 Mizuno–Todd–Ye の予測子修正子法
+予測子（アフィンスケーリング）と修正子（中心化）を交互に行う MTY 法が $O(\sqrt nL)$ 反復で収束し、双対ギャップが局所的に二次収束することを示せ。
+
+*4 Mehrotra の予測子修正子法
+Mehrotra の方法の中心化パラメータの適応的選択 $\sigma=(\mu_{\text{aff}}/\mu)^{3}$ と二次補正項を導き、この方法が実用的には 20〜60 反復で収束するが、多項式性の保証には修正が必要なことを示せ（Salahi–Peng–Terlaky の反例と修正）。
+
+*4 アフィンスケーリング法（Dikin）の収束
+Dikin のアフィンスケーリング法は、ステップ長 $2/3$ 以下で非退化・退化を問わず主最適解に収束する（Tsuchiya–Muramatsu）。一方ステップ長 $0.999$ ではうまくいかない例（Mascarenhas）があることを述べよ。
+
+*4 ポテンシャル還元法（Ye）
+主双対ポテンシャル $\Phi_{\rho}(x,s)=\rho\log(x^{\top}s)-\sum\log(x_{j}s_{j})$（$\rho=n+\sqrt n$）を各反復で定数減らす方法が $O(\sqrt nL)$ 反復で収束することを示せ（Ye 1991）。
+
+*4 自己双対埋め込み法（Ye–Todd–Mizuno）
+LP を自己双対な斉次モデルに埋め込むと、初期点として $(e,e)$ を使え、厳密な中心パスが存在し、解から主双対最適解あるいは実行不能性の証明書が得られる。構成と性質を証明せよ。
+
+*4 内点法の最終段階と有限終了（丸め）
+内点法の反復から最適分割 $(B,N)$ を十分小さな $\mu$ で正しく推定でき、そこから射影（あるいは交差手続き）で正確な最適解が $O(n^{3})$ で得られることを示せ（Ye の有限終了、Megiddo の交差）。
+
+*4 内点法の反復数の下界（Todd, Todd–Ye）
+主双対パス追跡法は、ある LP に対して $\Omega(n^{1/3})$ 回の反復を要する（Todd–Ye）。主張を述べ、$O(\sqrt n)$ との差を論ぜよ。
+
+*4 Vavasis–Ye の層状最小二乗法
+LP の係数行列 $A$ のみに依存する条件数 $\bar\chi_{A}$ を用い、層状最小二乗ステップを組み込んだ内点法が $O(n^{3.5}\log(\bar\chi_{A}+n))$ 反復で収束することを示せ（Vavasis–Ye 1996、$b,c$ に依存しない）。
+
+*4 Renegar の条件数と内点法
+データの実行不能性までの相対距離 $C(d)=\|d\|/\rho(d)$ を用いると、内点法の反復数は $O(\sqrt n\log(C(d)/\varepsilon))$ で抑えられる（Renegar 1995）。条件数の幾何学的意味（Eckart–Young 型の距離定理）を示せ。
+
+*4 Megiddo の線形時間 LP（固定次元）
+次元 $d$ 固定の LP は $O(2^{2^{d}}n)$ 時間で解ける（Megiddo 1984）。prune-and-search の原理を $d=2$ で完全に示せ。
+
+*4 Seidel の乱択 LP と Clarkson の方法
+固定次元 LP に対する Seidel の乱択増分アルゴリズムの期待時間 $O(d!n)$ を後方解析で示し、Clarkson のサンプリング法で $O(d^{2}n+d^{O(\sqrt d)}\log n)$ に改善されることを述べよ。
+
+*4 Matoušek–Sharir–Welzl の準指数的単体法
+LP 型問題に対する MSW のランダム化アルゴリズムは $e^{O(\sqrt{d\log n})}$ の期待時間で解く（Kalai も独立に）。LP 型問題の公理を述べ、組合せ的計算量解析の骨格を与えよ。
+
+*4 行列乗算時間での LP（Cohen–Lee–Song, van den Brand）
+LP を $\tilde O(n^{\omega}\log(1/\delta))$ 時間（$\omega$ は行列乗算の指数）で解く内点法（Cohen–Lee–Song 2019）の主要な工夫（確率的中心パス、逆行列の遅延更新）を説明せよ。
+
+*4 内点法による最大流の近線形時間（Chen–Kyng–Liu–Peng–Probst Gutenberg–Sachdeva）
+最大流・最小費用流が $m^{1+o(1)}$ 時間で解ける（2022）。$\ell_{1}$ IPM と動的な最小比率閉路データ構造の組合せという主張を正確に述べ、ポテンシャル減少の議論の骨格を示せ。
+
+*4 Lee–Sidford の $\tilde O(\sqrt{\operatorname{rank}})$ 反復
+Lewis 重み障壁を用いた重み付きパス追跡法により、LP を $\tilde O(\sqrt{\operatorname{rank}(A)}\log(1/\varepsilon))$ 反復で解ける（Lee–Sidford 2014）。$\sqrt n$ を $\sqrt m$ または $\sqrt{\operatorname{rank}}$ に改善する意義と、普遍障壁の存在（Nesterov–Nemirovski）との関係を述べよ。
+
+*5 LP の強多項式アルゴリズムの部分的解決（Tardos, Dadush–Natura–Végh）
+行列 $A$ の数値にのみ依存するアルゴリズム（Tardos 1986）、および $\bar\chi^{*}_{A}$（最適な対角スケーリング後の $\bar\chi_{A}$）に依存する Dadush–Huiberts–Natura–Végh（2020）の内点法を述べ、組合せ的 LP（二変数/制約など）の強多項式性の結果（Megiddo, Végh–Dadush–Natura–Olver）との関係を論ぜよ。
+
+*5 内点法の中心パスの幾何と曲率（Sonnevend–Stoer–Zhao）
+中心パスの Riemann 計量（障壁関数の Hessian による）での長さが反復数を支配すること（Nesterov–Todd の自己スケーリング計量上の短絡測地線）を述べ、内点法の反復数と中心パスの「曲率積分」の関係（Monteiro–Tsuchiya の曲率積分定理）を証明の骨格とともに示せ。

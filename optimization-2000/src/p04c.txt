@@ -1,0 +1,123 @@
+=ch IV-5　信頼領域法
+
+*4 Cauchy 点と十分なモデル減少 {cauchy}
+二次モデル $m(s)=g^{\top}s+\frac{1}{2}s^{\top}Bs$ の信頼領域 $\|s\|\le\Delta$ 内での Cauchy 点（$-g$ 方向の最小点）について $m(0)-m(s^{C})\ge\frac{1}{2}\|g\|\min\{\Delta,\|g\|/\|B\|\}$。証明せよ。
+
+*4 信頼領域法の大域収束（一階） {tr-global}
+$f$ が下に有界で $\nabla f$ が Lipschitz、$\|B_{k}\|$ が有界、各ステップが Cauchy 減少の定数倍を達成するなら、標準的な信頼領域法（比 $\rho_{k}$ による受理と半径更新）は $\liminf\|\nabla f(x_{k})\|=0$、さらに $\eta>0$ の受理基準なら $\lim\|\nabla f(x_{k})\|=0$（Thomas, Moré）。証明せよ。
+
+*4 信頼領域法の二階収束
+$B_{k}=\nabla^{2}f(x_{k})$ で、ステップが部分問題の最適解の定数倍の減少（固有ステップを含む）を達成すれば、集積点は二階停留点（$\nabla^{2}f\succeq0$）である（Moré–Sorensen, Shultz–Schnabel–Byrd）。証明せよ。
+
+*4 信頼領域 Newton 法の局所二次収束
+$x^{*}$ で $\nabla^{2}f(x^{*})\succ0$ なら、信頼領域 Newton 法は最終的に信頼領域制約が非有効となり Newton ステップを採用し、二次収束する。半径が 0 に縮まないことを示せ。
+
+*4 Dogleg 法
+$B\succ0$ のとき、Cauchy 点と Newton 点を結ぶ折れ線上で信頼領域境界と交わる点（dogleg ステップ）は、折れ線に沿って $\|s\|$ が増加し $m$ が減少することから一意に定まる。Cauchy 減少を達成することを示せ。
+
+*4 Steihaug–Toint の切断共役勾配法
+信頼領域部分問題に共役勾配法を適用し、負曲率または境界に達したら停止する Steihaug–Toint 法について、反復のノルムが単調増加であることを示し、Cauchy 減少の少なくとも半分を達成することを証明せよ。
+
+*4 Moré–Sorensen の部分問題解法
+信頼領域部分問題の解を $\|(B+\lambda I)^{-1}g\|=\Delta$ の $\lambda$ に関する Newton 法（$1/\|s(\lambda)\|$ に適用）で求め、hard case を固有ベクトル成分で扱うアルゴリズムの正しさを示せ。$1/\|s(\lambda)\|$ がほぼ線形である理由を説明せよ。
+
+*4 信頼領域部分問題の固有値問題としての解法（Adachi–Iwata–Nakatsukasa–Takeda）
+信頼領域部分問題は、$(2n)\times(2n)$ の一般化固有値問題の最右固有値を一回解くことで厳密に解ける。定式化と証明を与えよ。
+
+*4 Lanczos 法による GLTR
+信頼領域部分問題を Krylov 部分空間に制限して解く GLTR（Gould–Lucidi–Roma–Toint）の近似の質が、Krylov 次数について Chebyshev 多項式的に改善することを示せ（Carmon–Duchi の非凸二次問題の Krylov 法の率）。
+
+*4 信頼領域の比の検定と半径更新の頑健性
+比 $\rho_{k}=\frac{f(x_{k})-f(x_{k}+s_{k})}{m_{k}(0)-m_{k}(s_{k})}$ に基づく半径更新が、モデルの誤差 $|f(x+s)-f(x)-m(s)|\le C\|s\|^{2}$ の下で、十分小さい $\Delta$ では必ず成功ステップとなることを示せ。
+
+*4 信頼領域法の最悪ケース計算量
+信頼領域法は $\varepsilon$-一階停留点を $O(\varepsilon^{-2})$ 反復で見つけ、この評価は信頼領域 Newton 法でも改善されない（Cartis–Gould–Toint の例：勾配法と同じ $\varepsilon^{-2}$ を要する関数）ことを示せ。
+
+*4 Levenberg–Marquardt と信頼領域の等価性
+$(J^{\top}J+\lambda I)s=-J^{\top}r$ のステップは、信頼領域 $\|s\|\le\|s(\lambda)\|$ の Gauss–Newton 部分問題の解である。この等価性から Levenberg–Marquardt 法の大域収束を導け。
+
+*4 非単調信頼領域法
+非単調な受理基準（過去 $M$ 反復の最大値との比較）を用いた信頼領域法の大域収束を示せ（Toint, Deng–Xiao–Zhou）。
+
+*4 確率的モデルによる信頼領域法（Bandeira–Scheinberg–Vicente）
+各反復のモデルが確率 $p>1/2$ で「完全線形（fully linear）」なら、確率的信頼領域法は確率 1 で $\liminf\|\nabla f\|=0$ となる。劣マルチンゲールの議論で証明せよ。
+
+*4 導関数不要の信頼領域法（Conn–Scheinberg–Vicente）
+補間点集合が $\Lambda$-poised なら補間二次モデルは完全二次（fully quadratic）であり、モデル改善ステップを組み込んだ信頼領域法が一階・二階停留点に大域収束することを示せ。
+
+*4 信頼領域法と正則化の等価性
+信頼領域部分問題 $\min m(s)$ s.t. $\|s\|\le\Delta$ と正則化部分問題 $\min m(s)+\frac{\sigma}{2}\|s\|^{2}$ の解の対応を示し、半径更新と正則化パラメータ更新の関係を説明せよ。
+
+*4 楕円信頼領域とスケーリング
+信頼領域を $\|Ds\|\le\Delta$（$D$ はスケーリング行列）にとると、変数スケーリングの影響を除けることを示せ。アフィンスケーリング型信頼領域法（Coleman–Li）の有界制約問題への適用を述べよ。
+
+*4 信頼領域 SQP の Byrd–Omojokun 法
+等式制約問題の信頼領域 SQP で、ステップを法線成分（制約違反の減少）と接成分（目的関数の減少）に分解する Byrd–Omojokun 法の大域収束を述べよ。
+
+*5 信頼領域法の二階計算量（Cartis–Gould–Toint, Curtis–Robinson–Samadi）
+信頼領域法の変種（TRACE）は $\varepsilon$-一階停留点を $O(\varepsilon^{-3/2})$ 反復で得る。半径更新の規則を工夫することで三次正則化と同じ計算量を達成する仕組みを示し、証明の骨格を完成させよ。
+
+*5 信頼領域部分問題の非凸大域最適性の完全理論
+信頼領域部分問題の局所最小点・大域最小点・KKT 点の完全な分類（Martínez の局所非大域最小点の一意性、Lucidi–Palagi–Roma の等価な無制約問題への変換）を与え、hard case の摂動に対する解の不連続性を解析せよ。
+
+=ch IV-6　共役勾配法
+
+*4 共役方向法の有限終了 {cg-finite}
+$A\succ0$ に関して共役な方向 $d_{0},\dots,d_{n-1}$ に沿って完全直線探索すると、$\frac{1}{2}x^{\top}Ax-b^{\top}x$ は $n$ ステップで最小化され、$x_{k}$ は $x_{0}+\operatorname{span}\{d_{0},\dots,d_{k-1}\}$ 上の最小点である（展開部分空間定理）。
+
+*4 共役勾配法の Krylov 最適性 {cg-krylov}
+共役勾配法の反復 $x_{k}$ は $x_{0}+\mathcal{K}_{k}(A,r_{0})$ 上で $\|x-x^{*}\|_{A}$ を最小化し、残差は互いに直交、方向は $A$-共役。三項漸化式による実装（Hestenes–Stiefel）の正しさを示せ。
+
+*4 共役勾配法の Chebyshev 収束率 {cg-rate}
+$\|x_{k}-x^{*}\|_{A}\le2\left(\frac{\sqrt\kappa-1}{\sqrt\kappa+1}\right)^{k}\|x_{0}-x^{*}\|_{A}$。多項式の最小化問題 $\min_{p\in\mathcal{P}_{k},p(0)=1}\max_{\lambda\in[\lambda_{\min},\lambda_{\max}]}|p(\lambda)|$ に帰着させ Chebyshev 多項式で解け。
+
+*4 固有値分布と超線形収束
+$A$ の固有値が $m$ 個のクラスターに集中していれば、CG は約 $m$ ステップで大きく誤差を減らす。$A=I+$ 低ランクなら $\operatorname{rank}+1$ ステップで終了することを示し、前処理の設計原理を述べよ。
+
+*4 前処理付き CG
+$M\succ0$ で前処理した CG は $\kappa(M^{-1}A)$ で収束し、$M$ に関する内積での Krylov 最適性をもつ。不完全 Cholesky 前処理の有効性を議論せよ。
+
+*4 CG と Lanczos の等価性
+CG の係数から Lanczos 過程の三重対角行列 $T_{k}$ が得られ、$T_{k}$ の固有値（Ritz 値）が $A$ の極端な固有値を近似すること、CG の誤差が Gauss 求積の誤差として表されること（Golub–Meurant）を示せ。
+
+*4 有限精度 CG の Greenbaum の定理
+有限精度で実行した CG の挙動は、元の行列の各固有値の近くに固有値のクラスターをもつ大きな行列に対する厳密な CG と一致する（Greenbaum 1989）。主張を正確に述べ、Paige の Lanczos の有限精度解析との関係を説明せよ。
+
+*4 Fletcher–Reeves 法の大域収束（Al-Baali）
+非線形 CG の Fletcher–Reeves 法 $\beta_{k}=\frac{\|g_{k+1}\|^{2}}{\|g_{k}\|^{2}}$ は、強 Wolfe 条件（$c_{2}<1/2$）の下で降下方向を生成し、$\liminf\|g_{k}\|=0$ をみたす（Al-Baali 1985）。証明を完成させよ。
+
+*4 Polak–Ribière–Polyak 法の非収束（Powell の反例）
+PRP 法 $\beta_{k}=\frac{g_{k+1}^{\top}(g_{k+1}-g_{k})}{\|g_{k}\|^{2}}$ は完全直線探索でも非凸関数上で停留点に収束しない反復列を生成しうる（Powell 1984 の 3 次元の例）。一方、$\beta^{+}=\max(\beta,0)$ の PRP+ は大域収束する（Gilbert–Nocedal）ことを示せ。
+
+*4 Hager–Zhang 法（CG_DESCENT）
+$\beta_{k}^{HZ}=\frac{1}{d_{k}^{\top}y_{k}}\left(y_{k}-2d_{k}\frac{\|y_{k}\|^{2}}{d_{k}^{\top}y_{k}}\right)^{\top}g_{k+1}$ の方向は直線探索に依らず十分降下条件 $g^{\top}d\le-\frac{7}{8}\|g\|^{2}$ をみたす。証明し、強凸関数での大域収束を示せ。
+
+*4 Dai–Yuan 法
+$\beta_{k}^{DY}=\frac{\|g_{k+1}\|^{2}}{d_{k}^{\top}y_{k}}$ は標準 Wolfe 条件（強 Wolfe でなくてよい）で降下方向を生成し大域収束する（Dai–Yuan 1999）。証明せよ。
+
+*4 非線形 CG の n ステップ二次収束（Cohen）
+$n$ ステップごとにリスタートする非線形 CG は、$\nabla^{2}f(x^{*})\succ0$ の近くで $n$ ステップ二次収束 $\|x_{k+n}-x^{*}\|=O(\|x_{k}-x^{*}\|^{2})$ をする（Cohen 1972）。
+
+*4 MINRES と SYMMLQ
+対称不定行列に対する MINRES は $\mathcal{K}_{k}$ 上で残差ノルムを最小化する。CG が不定行列で破綻しうることを示し、MINRES の収束率を二つの区間上の多項式近似で評価せよ。
+
+*4 GMRES の収束と非正規性
+非対称行列の GMRES の残差は $\min_{p(0)=1}\|p(A)r_{0}\|$。任意の非増加な残差列が、任意の固有値をもつ行列で実現できる（Greenbaum–Pták–Strakoš）ことを示し、固有値だけでは GMRES の収束が決まらないことを結論せよ。
+
+*4 Chebyshev 半反復と CG の比較
+固有値区間 $[\lambda_{\min},\lambda_{\max}]$ が既知なら、Chebyshev 反復は内積を使わずに CG と同じ漸近率を達成する。Heavy-ball 法が Chebyshev 反復の定常極限であることを示せ。
+
+*4 Polyak の heavy-ball 法 {heavyball}
+強凸二次関数に対し、$x_{k+1}=x_{k}-\alpha\nabla f(x_{k})+\beta(x_{k}-x_{k-1})$ は $\alpha=\frac{4}{(\sqrt L+\sqrt\mu)^{2}}$, $\beta=\left(\frac{\sqrt\kappa-1}{\sqrt\kappa+1}\right)^{2}$ で率 $\frac{\sqrt\kappa-1}{\sqrt\kappa+1}$ を達成する。一方、強凸 $C^{2}$ 非二次関数では大域収束しない例（Lessard–Recht–Packard）が存在することを示せ。
+
+*4 積分二次制約（IQC）による一次法の解析（Lessard–Recht–Packard）
+一次法を線形系と非線形フィードバック（勾配）の結合と見なし、$\nabla f$ のセクター条件を IQC として表すと、収束率の保証が小さな LMI の実行可能性に帰着する。勾配法と Nesterov 法の率を LMI で再現せよ。
+
+*4 双共役勾配法と Lanczos 破綻
+非対称系に対する BiCG の破綻（ピボットの零）と、看破法（look-ahead Lanczos）による回避を述べ、QMR が擬似最小残差性をもつことを示せ。
+
+*5 CG の誤差の Gauss 求積表示と下界・上界（Golub–Meurant, Strakoš–Tichý）
+CG の $A$-ノルム誤差は $\|x-x_{k}\|_{A}^{2}=\|r_{0}\|^{2}\left(\int\lambda^{-1}d\omega(\lambda)-[T_{k}^{-1}]_{11}\right)$（$\omega$ はスペクトル測度）と表され、Gauss–Radau 求積により計算可能な上下界が得られる。有限精度での妥当性を含めて証明せよ。
+
+*5 CG の最適性の情報ベース計算量（Nemirovski–Yudin の下界）
+行列ベクトル積のみを用いる任意のアルゴリズムは、条件数 $\kappa$ の正定値系を相対 $A$-誤差 $\varepsilon$ まで解くのに（次元が十分大きいとき）$\Omega(\sqrt\kappa\log(1/\varepsilon))$ 回の積を要する。CG の最適性を示す最悪スペクトル（Chebyshev 零点に対応する測度）を構成せよ。

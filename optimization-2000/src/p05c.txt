@@ -1,0 +1,123 @@
+=ch V-5　自己共役障壁と錐計画の内点法
+
+*4 自己共役障壁の定義と基本不等式 {scb}
+閉凸集合 $K$ の内部上の $\nu$-自己共役障壁 $F$（自己共役かつ $|\langle\nabla F,h\rangle|\le\sqrt\nu\|h\|_{x}$）について、Dikin 楕円体 $\{y:\|y-x\|_{x}<1\}\subset\operatorname{int}K$ であり、$(1-r)^{2}\nabla^{2}F(x)\preceq\nabla^{2}F(y)\preceq(1-r)^{-2}\nabla^{2}F(x)$（$r=\|y-x\|_{x}<1$）を示せ。
+
+*4 障壁パラメータの例
+$-\sum\log x_{i}$（$\nu=n$）、$-\log\det X$（$\nu=n$）、$-\log(t^{2}-\|x\|^{2})$（$\nu=2$）が自己共役障壁であることを示せ。$\nu\ge1$ が一般に必要であることを証明せよ。
+
+*4 パス追跡法の $O(\sqrt\nu\log(1/\varepsilon))$ 計算量 {ipm-complexity}
+$\nu$-自己共役障壁 $F$ と線形目的 $c$ について、$t_{+}=(1+\frac{\gamma}{\sqrt\nu})t$ と更新し一回の Newton ステップで $tc^{\top}x+F(x)$ の中心近傍に留まる短ステップ法は、$O(\sqrt\nu\log(\nu/(t_{0}\varepsilon)))$ 反復で $\varepsilon$-最適解を得る。証明を完成させよ（Nesterov–Nemirovski）。
+
+*4 普遍障壁の存在（Nesterov–Nemirovski, Bubeck–Eldan, Chewi）
+$\mathbb{R}^{n}$ の任意の凸体は $O(n)$-自己共役障壁をもつ。Nesterov–Nemirovski の普遍障壁 $F(x)=\log|K^{\circ}_{x}|$（極体積）の $O(n)$ 性を述べ、Bubeck–Eldan のエントロピー障壁が $\nu=n(1+o(1))$、Chewi の結果で $\nu=n$ となることを述べよ。
+
+*4 Güler のハイパボリック障壁
+双曲多項式 $p$（次数 $d$）について $-\log p$ は双曲錐上の $d$-対数斉次自己共役障壁である（Güler 1997）。証明の骨格を与えよ。
+
+*4 対数斉次障壁と共役障壁
+錐 $K$ 上の $\nu$-対数斉次障壁 $F$（$F(tx)=F(x)-\nu\log t$）の Legendre 共役 $F_{*}(s)=\sup\{-\langle s,x\rangle-F(x)\}$ は $K^{*}$ 上の $\nu$-対数斉次障壁であり、$-\nabla F:\operatorname{int}K\to\operatorname{int}K^{*}$ は全単射。証明せよ。
+
+*4 Nesterov–Todd スケーリング（自己スケーリング錐）
+対称錐上の対数障壁について、$\nabla^{2}F(w)x=s$ となるスケーリング点 $w$ が一意に存在し、主双対を対称に扱う NT 方向が定義できる。$\mathbb{S}^{n}_{+}$ での $W=X^{1/2}(X^{1/2}SX^{1/2})^{-1/2}X^{1/2}$ を導け。
+
+*4 SDP の主双対探索方向（AHO, HKM, NT）
+$XS=\mu I$ の対称化の違いによる AHO・HKM（Helmberg–Rendl–Vanderbei–Wolkowicz / Kojima–Shindoh–Hara / Monteiro）・NT 方向を導き、Monteiro–Zhang 族として統一せよ。各方向の存在条件（AHO は一般に定義されないことがある）を論ぜよ。
+
+*4 SDP の内点法の多項式性（Nesterov–Nemirovski, Alizadeh）
+SDP の短ステップ主双対パス追跡法（NT 方向）が $O(\sqrt n\log(1/\varepsilon))$ 反復で収束することを、対称錐の Jordan 代数的手法で示せ。
+
+*4 双曲計画の内点法（Güler, Renegar）
+双曲錐上の錐計画に対し、ハイパボリック障壁を用いたパス追跡法が $O(\sqrt d\log(1/\varepsilon))$ 反復（$d$ は多項式の次数）で収束することを示せ。
+
+*4 非対称錐の内点法（指数錐、Skajaa–Ye, Dahl–Andersen）
+指数錐やべき錐に対する主双対内点法では NT スケーリングが存在しないため、Tunçel の「主双対対称な」スケーリングや準 Newton 型スケーリングを用いる。$O(\sqrt\nu\log(1/\varepsilon))$ 反復が保たれる条件を述べよ。
+
+*4 実行不能性の検出と斉次自己双対埋め込み（錐版）
+錐計画の斉次自己双対モデル（Luo–Sturm–Zhang, de Klerk–Roos–Terlaky）を定式化し、解から主双対最適解・主実行不能証明書・双対実行不能証明書のいずれかが得られること、ただし病的な場合（弱実行不能など）はどれも得られないことを示せ。
+
+*4 Renegar の錐計画の条件数理論
+錐計画のデータの実行不能性への距離 $\rho(d)$ と条件数 $C(d)$ を定義し、内点法の反復数が $O(\sqrt\nu\log(\nu C(d)/\varepsilon))$ であること、および $C(d)$ が解のサイズや Slater 点の深さを制御することを示せ。
+
+*4 内点法の一次法化（Primal-dual hybrid と IPM の比較）
+大規模錐計画で内点法の各反復のコスト（Newton 系の $O(m^{3}+m^{2}n^{2})$）と一次法（SCS、PDLP）の反復コストを比較し、PDLP（再スタート付き PDHG）が LP で線形収束すること（Applegate–Lubin–Hinder）の主張を述べよ。
+
+*4 内点法と CG：不正確な Newton 系
+Newton 系を反復法（前処理付き CG）で不正確に解く内点法において、残差を中心パスの近傍を保つ精度に制御すれば多項式性が保たれることを示せ（Gondzio, Monteiro–O'Neal–Tsuchiya）。
+
+*4 内点法による凸二次計画
+凸 QP の主双対内点法が $O(\sqrt nL)$ 反復で収束すること、および線形相補性問題（単調 LCP）へ拡張されることを示せ（Kojima–Megiddo–Noma–Yoshise の $P_{*}(\kappa)$ 行列）。
+
+*4 非線形凸計画の内点法（Jarre, Mehrotra–Sun）
+自己共役性をもつ制約関数 $g_{i}$ について $-\sum\log(-g_{i})$ が自己共役障壁になるための条件（相対 Lipschitz 性、Jarre の条件）を与え、パス追跡法の多項式性を示せ。
+
+*4 非凸非線形計画の内点法（IPOPT の理論）
+非凸 NLP に対する主双対内点法（障壁部分問題を直線探索フィルター法で解く）の大域収束と局所超線形収束を述べ（Wächter–Biegler）、Wächter–Biegler の反例（ある種の内点法が実行不能点に収束する）を説明せよ。
+
+*5 Nesterov–Nemirovski の自己共役理論の完全な構成
+凸計画の一般形 $\min\{c^{\top}x: x\in K\}$ に対し、(i) 自己共役性の定義から Newton 減少量の二次収束領域、(ii) 障壁パラメータから中心パスの近傍の追跡、(iii) 解析的中心からの初期化（二相法）までを一貫して証明し、計算量 $O(\sqrt\nu\log(\nu/\varepsilon))$ を導け。
+
+*5 普遍障壁のエントロピー障壁による構成（Bubeck–Eldan）
+凸体 $K$ 上の指数族 $p_{\theta}(x)\propto e^{\langle\theta,x\rangle}\mathbf{1}_{K}$ の対数分配関数 $\log Z(\theta)$ の Legendre 共役 $F$ が $n(1+o(1))$-自己共役障壁であることを示せ。自己共役性の証明（三次モーメントと二次モーメントの比較）を Brascamp–Lieb 不等式などを用いて与えよ。
+
+=ch V-6　有効制約法と射影勾配法
+
+*4 二次計画の有効制約法の有限終了 {activeset}
+凸 QP に対する原始有効制約法（作業集合への制約の追加・削除）は、退化がなければ（あるいは退化処理を施せば）有限回で最適解を得る。目的関数値の単調減少と作業集合の非反復性から示せ。
+
+*4 Goldfarb–Idnani の双対有効制約法
+強凸 QP に対し、無制約最小点から出発して違反制約を一つずつ加える双対法が有限回で最適解を得ることを示し、実行不能性の検出を論ぜよ。
+
+*4 勾配射影法の収束（Goldstein–Levitin–Polyak） {projgrad}
+閉凸集合 $C$ 上の $L$-平滑関数に対し $x_{k+1}=P_{C}(x_{k}-\frac1L\nabla f(x_{k}))$ は、凸なら $O(1/k)$、強凸なら線形収束し、非凸なら勾配写像 $G(x)=L(x-P_{C}(x-\frac1L\nabla f(x)))$ のノルムが $O(1/\sqrt k)$ で減少する。証明せよ。
+
+*4 Bertsekas の射影弧探索
+射影の弧 $x(t)=P_{C}(x-t\nabla f(x))$ に沿った Armijo 探索による勾配射影法の大域収束を示し、有限回で有効集合が識別される（非退化条件の下）ことを証明せよ（Bertsekas 1976）。
+
+*4 有効制約の有限識別（Burke–Moré, Calamai–Moré）
+非退化条件 $-\nabla f(x^{*})\in\operatorname{ri}N_{C}(x^{*})$ の下で、$x_{k}\to x^{*}$ かつ射影勾配 $\to0$ ならば、十分大きな $k$ で $x_{k}$ は $x^{*}$ と同じ面に乗る。多面体 $C$ の場合を証明せよ。
+
+*4 箱制約付き L-BFGS-B（Byrd–Lu–Nocedal–Zhu）
+一般化 Cauchy 点の計算（区分二次関数の最小化）と部分空間最小化を組み合わせる L-BFGS-B の手順を述べ、一般化 Cauchy 点が有効集合を正しく識別することを示せ。
+
+*4 簡約勾配法（Wolfe）と GRG
+線形制約 $Ax=b$, $x\ge0$ に対する Wolfe の簡約勾配法で、変数を基底・非基底に分けた簡約勾配が最適性を判定することを示し、Wolfe の元の方法が収束しない例（Wolfe 1972 の反例）と修正を述べよ。
+
+*4 零空間法と値域空間法
+等式制約 QP の KKT 系を零空間基底 $Z$ による簡約（$Z^{\top}HZ$ の Cholesky）と値域空間（$AH^{-1}A^{\top}$ の Schur 補元）で解く方法を比較し、それぞれが有利な場合を論ぜよ。
+
+*4 射影の計算：単体・$\ell^{1}$ 球
+単体への射影がソートにより $O(n\log n)$、中央値探索で期待 $O(n)$ で計算できることを示し（Held–Wolfe–Crowder, Duchi ら）、$\ell^{1}$ 球への射影に帰着させよ。
+
+*4 Dykstra の交互射影
+閉凸集合 $C_{1},\dots,C_{m}$ の共通部分への射影 $P_{\cap C_{i}}x_{0}$ を、補正項つきの巡回射影（Dykstra）で求めると強収束する（Boyle–Dykstra）。von Neumann の交互射影との違い（後者は共通部分の点に収束するが射影ではない）を示せ。
+
+*4 等式制約付き最小二乗の加重法と零空間法の同値
+$\min\|Ax-b\|$ s.t. $Cx=d$ の解が、加重最小二乗 $\min\|Ax-b\|^{2}+w^{2}\|Cx-d\|^{2}$ の $w\to\infty$ の極限であり、零空間法の解と一致することを示せ（Van Loan）。
+
+*4 相補性問題の有効集合法：Murty の主要ピボット法
+P 行列 LCP に対する Murty の単純主要ピボット法（最小添字規則）が有限回で終了することを示し、最悪の場合に指数回を要すること（Murty 1974）を述べよ。
+
+*4 有界制約 QP の射影勾配 + CG（Moré–Toraldo）
+勾配射影で面を識別し、面上で CG を行う Moré–Toraldo の方法が、非退化な厳密凸 QP で有限回で最適解を得ることを示せ。
+
+*4 半平滑 Newton による QP の有効集合法（Hintermüller–Ito–Kunisch）
+障害物問題型の QP に対し、主双対有効集合法が相補性関数 $\min(\lambda,c(x-\psi))$ の半平滑 Newton 法と等価であり、M 行列の場合に単調かつ有限回で収束することを示せ。
+
+*4 部分空間加速と識別後の Newton 法
+近接勾配法などで有効多様体を識別した後、多様体上で Newton 法（あるいは Riemann 準 Newton 法）に切り替えると超線形収束が得られることを示せ（Lewis–Wright, Bareilles–Iutzeler–Malick）。
+
+*4 Rosen の勾配射影法（非線形制約）
+非線形制約 $g(x)\le0$ に対する Rosen の勾配射影法（有効制約の接空間への射影と制約への引き戻し）を定式化し、ジャミング（非停留点への収束）の可能性と対策を論ぜよ。
+
+*4 実行可能方向法（Zoutendijk, Topkis–Veinott）
+Zoutendijk の実行可能方向法（LP で方向を求める）がジャミングしうることを示し（Wolfe の例）、Topkis–Veinott の修正（非有効制約も考慮）で大域収束することを証明せよ。
+
+*4 条件付き最適化の障害物問題とその数値解法
+$\min\frac12\int|\nabla u|^{2}-\int fu$ s.t. $u\ge\psi$ の有限要素離散化 QP の解の存在・一意性、および射影 SOR（Cryer）の収束を示せ。
+
+*5 QP の有効制約法の最悪計算量（Klee–Minty 型、Goldfarb）
+凸 QP の原始有効制約法が指数回の反復を要する例（Klee–Minty の立方体の変形）を構成し、有効制約法が LP の単体法と同じく「実用的には速いが最悪ケースは指数」であることを示せ。
+
+*5 射影勾配法と有効集合の識別の定量的理論（Nutini–Schmidt–Hare, Sun–Jeong–Nutini–Schmidt）
+$\ell^{1}$ 正則化問題で、近接勾配法が真の台を識別するまでの反復数を、非退化度 $\delta=\min_{i\notin S}(\lambda-|\nabla_{i}f(x^{*})|)$ と誤差限界の定数で上から評価する定理を証明せよ。

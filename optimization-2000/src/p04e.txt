@@ -1,0 +1,123 @@
+=ch IV-9　非凸最適化の一階法と KŁ 理論
+
+*4 Attouch–Bolte–Svaiter の収束定理 {abs}
+下半連続な $f$ が KŁ 性質をもち、反復列が (H1) 十分減少 $f(x_{k+1})+a\|x_{k+1}-x_{k}\|^{2}\le f(x_{k})$、(H2) 相対誤差 $\operatorname{dist}(0,\partial f(x_{k+1}))\le b\|x_{k+1}-x_{k}\|$、(H3) 連続性条件をみたせば、有界な反復列は有限長で一つの臨界点に収束する。証明を完成させよ。
+
+*4 PALM（近接交互線形化最小化, Bolte–Sabach–Teboulle）
+$\min f(x)+g(y)+H(x,y)$（$H$ は $C^{1}$ でブロック Lipschitz 勾配）に対する PALM の反復が、KŁ 性質の下で臨界点に大域収束することを ABS の定理から示せ。非負値行列分解への応用を述べよ。
+
+*4 近接勾配法の非凸収束
+$f$ が $L$-平滑（非凸）、$g$ が下半連続真で下に有界なとき、ステップ $<1/L$ の近接勾配法の集積点は臨界点で、KŁ 性質の下で反復列全体が収束する。$\min_{k<K}\operatorname{dist}(0,\partial F(x_{k}))=O(1/\sqrt K)$ を示せ。
+
+*4 慣性付き近接勾配法（iPiano, Ochs–Chen–Brox–Pock）
+慣性項 $\beta(x_{k}-x_{k-1})$ を加えた近接勾配法の非凸版が KŁ 性質の下で収束することを、Lyapunov 関数 $H(x,y)=F(x)+\delta\|x-y\|^{2}$ を用いて示せ。
+
+*4 DC アルゴリズム（DCA）の収束
+DC 関数 $g-h$ の DCA $x_{k+1}\in\operatorname{argmin}\{g(x)-\langle y_{k},x\rangle\}$, $y_{k}\in\partial h(x_{k})$ は目的関数を単調減少させ、集積点が臨界点（$\partial g\cap\partial h\neq\emptyset$）となる。KŁ 性質の下での反復列の収束を示せ（Le Thi–Pham Dinh, Le Thi–Huynh–Pham Dinh）。
+
+*4 凸-凹手続き（CCP）と MM アルゴリズム
+MM（majorization-minimization）アルゴリズムの反復が目的関数を単調減少させることを示し、EM アルゴリズム・反復再重み付き最小二乗（IRLS）・CCP がその例であることを確かめよ。
+
+*4 EM アルゴリズムの収束（Wu）
+EM アルゴリズムの対数尤度は単調非減少で、Wu の条件（$Q$ 関数の連続性、尤度の上界）の下で集積点は尤度の停留点である。Gauss 混合で EM が局所最大に収束しない（鞍点に留まる）例を作れ。
+
+*4 EM の局所収束率と情報行列
+EM の局所収束率は「欠損情報の割合」$I_{\text{obs}}^{-1}I_{\text{mis}}$ のスペクトル半径で与えられる（Dempster–Laird–Rubin）。証明し、情報が多く欠損すると EM が遅いことを示せ。
+
+*4 交互最小化の収束（Beck–Tetruashvili）
+二ブロック凸問題の交互最小化（ブロック座標降下）は $O(1/k)$ で収束し、非凸では各ブロック部分問題の一意解の仮定がなければ停留点に収束しない例（Powell 1973 の 3 ブロック循環の例）が存在することを示せ。
+
+*4 Powell の座標降下の非収束例
+$\mathbb{R}^{3}$ 上の $C^{1}$ 関数で、完全最小化による巡回座標降下が 6 つの非停留点の間を周回する例（Powell 1973）を再構成し、部分問題の一意性（Grippo–Sciandrone）で収束が回復することを示せ。
+
+*4 非凸問題の確率的勾配法（Ghadimi–Lan）
+$L$-平滑な非凸関数に対する SGD（分散 $\sigma^{2}$）は、$E\|\nabla f(x_{R})\|^{2}\le\varepsilon^{2}$（$R$ はランダムに選んだ反復）を $O(\varepsilon^{-4})$ 回の確率的勾配で達成する。証明し、この率が最良であること（Arjevani ら）を述べよ。
+
+*4 分散削減による非凸 SGD の改善（SPIDER, SARAH）
+有限和非凸問題に対する SPIDER/SARAH 型の再帰的分散削減推定量を用いると、$O(n+\sqrt n\varepsilon^{-2})$ 回の成分勾配評価で $\varepsilon$-停留点を得る（Fang–Li–Lin–Zhang）。証明の骨格を与え、下界との一致を述べよ。
+
+*4 弱凸関数と Moreau 包の停留性（Davis–Drusvyatskiy）
+$\rho$-弱凸関数 $f$ に対し、Moreau 包 $e_{\lambda}f$（$\lambda<1/\rho$）の勾配ノルムが近似停留性の自然な尺度であり、確率的劣勾配法が $E\|\nabla e_{\lambda}f(x_{R})\|^{2}\le\varepsilon^{2}$ を $O(\varepsilon^{-4})$ 回で達成することを示せ。
+
+*4 合成関数 $h\circ c$ の prox-linear 法
+$h$ 凸 Lipschitz、$c$ 平滑な合成最適化 $\min h(c(x))$ に対し、$x_{k+1}=\operatorname{argmin}\{h(c(x_{k})+\nabla c(x_{k})(x-x_{k}))+\frac{1}{2t}\|x-x_{k}\|^{2}\}$ が $O(\varepsilon^{-2})$ で近似停留点を得ること、鋭い最小の下で二次収束することを示せ（Drusvyatskiy–Lewis, Duchi–Ruan）。
+
+*4 深層線形ネットワークの景観（Kawaguchi）
+深層線形ネットワークの二乗損失 $\|W_{L}\cdots W_{1}X-Y\|_{F}^{2}$ の局所最小点はすべて大域最小点であり、それ以外の臨界点は鞍点である（Kawaguchi 2016, Lu–Kawaguchi）。二層の場合（Baldi–Hornik）を完全に証明せよ。
+
+*4 勾配流と深層線形ネットの平衡性
+深層線形ネットの勾配流では $W_{j+1}^{\top}W_{j+1}-W_{j}W_{j}^{\top}$ が保存量であり、平衡初期化からの勾配流が端到端行列に対する前処理付き勾配流に一致することを示せ（Arora–Cohen–Hazan）。
+
+*4 過剰パラメータ化 NN の勾配降下の大域収束（NTK）
+幅 $m$ の二層 ReLU ネットの二乗損失に対し、$m\gtrsim\operatorname{poly}(n,1/\lambda_{0})$ ならランダム初期化の勾配降下は大域最小に線形収束する（Du–Zhai–Póczos–Singh）。Gram 行列の最小固有値の安定性による証明の骨格を与えよ。
+
+*4 平均場極限と Wasserstein 勾配流（Mei–Montanari–Nguyen, Chizat–Bach）
+二層ネットの幅 $\to\infty$ の極限で、SGD の経験測度が Wasserstein 勾配流（McKean–Vlasov 型 PDE）に従うことを述べ、同次活性化での大域収束（Chizat–Bach）の主張を正確に述べよ。
+
+*4 行列補完・行列センシングの非凸景観（Ge–Lee–Ma, Bhojanapalli–Neyshabur–Srebro）
+RIP をみたす線形測定の行列センシング $\min_{U}\|\mathcal{A}(UU^{\top})-y\|^{2}$ の局所最小点はすべて大域最小点であり、鞍点は厳密である。RIP 定数 $\delta<1/5$ の下で証明せよ。
+
+*5 非平滑非凸関数の劣勾配法の収束（Davis–Drusvyatskiy–Kakade–Lee）
+o-minimal 構造で定義可能な局所 Lipschitz 関数に対し、ステップ幅 $\sum\alpha_{k}=\infty$, $\sum\alpha_{k}^{2}<\infty$ の（確率的）劣勾配法は、有界なら集積点がすべて Clarke 臨界点である。Whitney 層化と射影公式による証明の骨格を完成させ、定義可能性を落とすと失敗する例（Daniilidis–Drusvyatskiy）を述べよ。
+
+=ch IV-10　導関数を使わない最適化
+
+*4 Nelder–Mead 法の収束と非収束（Lagarias–Reeds–Wright–Wright, McKinnon）
+1 次元・2 次元の狭義凸関数に対する Nelder–Mead 法の性質（1 次元での収束、2 次元での単体の直径の減少）を示し、McKinnon の反例（2 次元の滑らかな狭義凸関数で非停留点に収束する）を再構成せよ。
+
+*4 パターン探索の大域収束（Torczon） {torczon}
+正の張る集合（positive spanning set）を方向とし、有理格子上で縮小するパターン探索法は、$f\in C^{1}$ でレベル集合がコンパクトなら $\liminf\|\nabla f(x_{k})\|=0$。証明せよ。
+
+*4 正の張る集合と余弦測度
+方向集合 $D$ が $\mathbb{R}^{n}$ を正に張る $\iff$ 任意の $v\neq0$ で $\max_{d\in D}\langle v,d\rangle>0$。余弦測度 $\kappa(D)=\min_{v}\max_{d}\cos\angle(v,d)$ と、失敗した探索から $\|\nabla f(x)\|\le\kappa(D)^{-1}(\frac{L}{2}\alpha\max\|d\|)$ を導け。最小の正の張る集合は $n+1$ 個であることを示せ。
+
+*4 直接探索法の計算量（Vicente）
+十分減少条件 $f(x+\alpha d)<f(x)-c\alpha^{2}$ を用いる直接探索法は、$\varepsilon$-停留点を $O(n^{2}\varepsilon^{-2})$ 回の関数評価で得る。証明し、次元依存性の由来を説明せよ。
+
+*4 MADS（メッシュ適応直接探索, Audet–Dennis）
+MADS の探索方向が極限で単位球面上稠密になることを示し、Clarke 微分可能性の下で極限点が Clarke 停留点（$f^{\circ}(x^{*};d)\ge0$ for all $d$）であることを証明せよ。
+
+*4 ランダム勾配推定（Nesterov–Spokoiny） {zo}
+Gauss 平滑化 $f_{\mu}(x)=Ef(x+\mu u)$ の勾配は $\nabla f_{\mu}(x)=\frac{1}{\mu}E[(f(x+\mu u)-f(x))u]$。この推定量を用いたランダム勾配法が、凸 $L$-平滑関数に $O(nL R^{2}/\varepsilon)$ 回の関数評価で $\varepsilon$-解を得ることを示し、次元 $n$ の因子が避けられないこと（Duchi–Jordan–Wainwright–Wibisono の下界）を述べよ。
+
+*4 二点推定の最適性（Duchi ら）
+凸 Lipschitz 関数の確率的ゼロ次最適化で、二点の関数値評価（$f(x+\mu u)-f(x-\mu u)$）による勾配推定は $O(\sqrt n)$ 倍の遅れで一次法の率を達成し、一点推定より本質的に良いことを示せ。
+
+*4 補間モデルと $\Lambda$-poisedness
+補間点集合 $Y$ の $\Lambda$-poisedness を Lagrange 多項式で定義し、$\Lambda$-poised な二次補間モデルの誤差 $|f(y)-m(y)|\le C\Lambda\Delta^{3}$, $\|\nabla f-\nabla m\|\le C\Lambda\Delta^{2}$（完全二次性）を示せ（Conn–Scheinberg–Vicente）。
+
+*4 Powell の NEWUOA と最小 Frobenius ノルム更新
+$m<(n+1)(n+2)/2$ 点の補間では、二次モデルの Hessian の変化の Frobenius ノルムを最小化するように決める（Powell）。この更新が一意に定まり、補間方程式の線形系として解けることを示せ。
+
+*4 Kiefer–Wolfowitz の確率近似
+雑音付き関数値のみを用いる $x_{k+1}=x_{k}-a_{k}\frac{Y(x_{k}+c_{k})-Y(x_{k}-c_{k})}{2c_{k}}$ が、$\sum a_{k}=\infty$, $\sum a_{k}c_{k}<\infty$, $\sum a_{k}^{2}/c_{k}^{2}<\infty$ で最大点に概収束することを示せ（Kiefer–Wolfowitz 1952）。最適な率 $O(k^{-1/3})$ を導け。
+
+*4 SPSA（同時摂動確率近似, Spall）
+ランダムな $\pm1$ ベクトル $\Delta$ を用いた二点推定 $\hat g_{i}=\frac{Y(x+c\Delta)-Y(x-c\Delta)}{2c\Delta_{i}}$ は、次元に依らず二回の評価で勾配の偏り $O(c^{2})$ の推定を与える。漸近正規性と、Kiefer–Wolfowitz に対する効率の利得を示せ。
+
+*4 ベイズ最適化の後悔上界（Srinivas–Krause–Kakade–Seeger）
+Gauss 過程事前分布の下で GP-UCB 法の累積後悔は $O^{*}(\sqrt{T\beta_{T}\gamma_{T}})$（$\gamma_{T}$ は最大情報利得）。二乗指数カーネルで $\gamma_{T}=O((\log T)^{d+1})$ であることを示し、準線形の後悔を結論せよ。
+
+*4 Lipschitz 最適化と DIRECT（Jones–Perttunen–Stuckman）
+Lipschitz 定数既知の大域最適化で Piyavskii–Shubert 法が $\varepsilon$-大域解を有限回で得ることを示し、定数未知の DIRECT 法が評価点を稠密にすることで大域収束すること（関数評価回数は次元に指数的）を示せ。
+
+*4 大域最適化の計算量の下界
+$L$-Lipschitz 関数の $[0,1]^{n}$ 上の $\varepsilon$-大域最小値を求めるには、決定的アルゴリズムで $(L/(2\varepsilon))^{n}$ 回程度の評価が必要十分である。敵対的議論で証明せよ（次元の呪い）。
+
+*4 シミュレーテッドアニーリングの収束（Hajek）
+有限状態でのシミュレーテッドアニーリングは、温度スケジュール $T_{k}=c/\log k$ で $c\ge d^{*}$（最深の非大域的局所最小からの脱出の深さ）のとき、大域最小集合に確率収束する（Hajek 1988）。$c<d^{*}$ では失敗することを示せ。
+
+*4 Langevin ダイナミクスによる大域最適化（Gelfand–Mitter, Raginsky–Rakhlin–Telgarsky）
+逆温度 $\beta$ の Langevin 拡散 $dX=-\nabla f(X)dt+\sqrt{2/\beta}dW$ の不変分布 $\propto e^{-\beta f}$ は $\beta\to\infty$ で大域最小点に集中する。確率的勾配 Langevin 動力学（SGLD）が非凸 $f$ の近似大域最小点を、スペクトルギャップに依存する時間で見つけることを示せ。
+
+*4 進化戦略と CMA-ES の不変性
+CMA-ES が目的関数の順序保存変換と探索空間のアフィン変換に対して不変であることを示し、凸二次関数上で共分散行列が Hessian の逆に比例する方向に適応することを論ぜよ（Hansen–Ostermeier, Akimoto–Auger–Hansen の線形収束証明の主張）。
+
+*4 ゼロ次法の計算量下界（Jamieson–Nowak–Recht）
+雑音付き関数値オラクルでの強凸最適化では、一次オラクルの $O(1/T)$ に対して $\Omega(\sqrt{n^{2}/T})$ の最適化誤差の下界がある。情報理論的議論（Fano）で示せ。
+
+*5 Nelder–Mead の 2 次元厳密凸関数での収束（Lagarias–Poonen–Wright）
+制限版 Nelder–Mead（拡大ステップなし）は、有界なレベル集合をもち正定値 Hessian をもつ $C^{2}$ の 2 次元関数に対して最小点に収束する（Lagarias–Poonen–Wright 2012）。証明の骨格（単体の形状の退化が起こらないことの証明）を再構成せよ。
+
+*5 方向直接探索法の確率的解析（Gratton–Royer–Vicente–Zhang）
+ランダムに生成した少数の方向（例えば二方向 $\pm d$）による直接探索は、確率的降下性（各反復で確率 $p>1/2$ で余弦測度が一定以上）の下で確率 1 で大域収束し、計算量が $O(n\varepsilon^{-2})$ に改善する。劣マルチンゲールの議論で証明の骨格を完成させよ。

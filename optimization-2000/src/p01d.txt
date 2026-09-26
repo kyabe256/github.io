@@ -1,0 +1,123 @@
+=ch I-7　劣微分
+
+*4 劣微分の存在と構造 {subdiff}
+真凸関数 $f$ と $x\in\operatorname{ri}\operatorname{dom}f$ について $\partial f(x)\neq\emptyset$、$x\in\operatorname{int}\operatorname{dom}f$ ならば $\partial f(x)$ は空でないコンパクト凸集合で $f'(x;d)=\max_{g\in\partial f(x)}\langle g,d\rangle$。境界点で劣微分が空になる例を与えよ。
+
+*4 方向微分の性質
+真凸関数 $f$ と $x\in\operatorname{dom}f$ について $f'(x;d)=\lim_{t\downarrow0}(f(x+td)-f(x))/t$ は存在し（$\pm\infty$ を許す）、$d$ について正斉次凸。$\operatorname{cl}f'(x;\cdot)=\sigma_{\partial f(x)}$（$\partial f(x)\neq\emptyset$ のとき）を示せ。
+
+*4 Moreau–Rockafellar の和公式 {sumrule}
+真凸関数 $f_{1},\dots,f_{m}$ について常に $\partial f_{1}(x)+\dots+\partial f_{m}(x)\subset\partial(\sum f_{i})(x)$ で、$\bigcap\operatorname{ri}\operatorname{dom}f_{i}\neq\emptyset$ なら等号。$\mathbb{R}^{2}$ で包含が真になる例を作れ。
+
+*4 連鎖律（凸版）
+$f$ 真凸、$A$ 線形、$\operatorname{range}A\cap\operatorname{ri}\operatorname{dom}f\neq\emptyset$ ならば $\partial(f\circ A)(x)=A^{\top}\partial f(Ax)$。非減少凸関数との合成 $h(g_{1},\dots,g_{m})$ の劣微分公式も導け。
+
+*4 最大値関数の劣微分（Danskin–Valadier） {danskin}
+$f(x)=\max_{t\in T}f_{t}(x)$（$T$ コンパクト、$t\mapsto f_{t}(x)$ 上半連続、各 $f_{t}$ 凸）について、$x\in\operatorname{int}$ で $\partial f(x)=\operatorname{cl}\operatorname{conv}\bigcup_{t\in T(x)}\partial f_{t}(x)$（$T(x)$ は最大を達成する添字）。$\lambda_{\max}$ の劣微分 $\operatorname{conv}\{uu^{\top}\}$ を導け。
+
+*4 最小値関数の凸性と劣微分
+$F(x,y)$ が結合凸ならば $v(x)=\inf_{y}F(x,y)$ は凸であり、下限が $y^{*}$ で達成されるとき $\partial v(x)=\{g:(g,0)\in\partial F(x,y^{*})\}$。これは摂動関数の劣微分がラグランジュ乗数であることの原型であることを説明せよ。
+
+*4 凸関数の一意劣勾配と微分可能性
+真凸関数 $f$ が $x\in\operatorname{int}\operatorname{dom}f$ で微分可能 $\iff\partial f(x)$ が一点。このとき $f$ は $x$ で実際に Fréchet 微分可能で、$\nabla f$ は微分可能点の集合上連続であることを示せ。
+
+*4 Rademacher 型定理（凸版）
+$\mathbb{R}^{n}$ の開凸集合上の凸関数は、微分不可能点の集合が Lebesgue 零集合かつ第一類（$F_{\sigma}$ で可算個の Lipschitz 曲面に含まれる）である。$n=1$ では可算集合であることを示せ（Zajíček の構造定理の一部）。
+
+*4 最適性条件（凸） {conv-opt}
+真凸関数 $f$ と凸集合 $C$ について、$x^{*}$ が $C$ 上で $f$ を最小化 $\iff$ $0\in\partial(f+\iota_{C})(x^{*})$。$\operatorname{ri}\operatorname{dom}f\cap\operatorname{ri}C\neq\emptyset$ なら $0\in\partial f(x^{*})+N_{C}(x^{*})$ と分解できることを示せ。
+
+*4 劣微分の単調性と巡回単調性
+$\partial f$ は巡回単調（任意の閉路 $x_{0},\dots,x_{m}=x_{0}$ と $g_{i}\in\partial f(x_{i})$ で $\sum\langle g_{i},x_{i+1}-x_{i}\rangle\le0$）であることを示せ。単調だが巡回単調でない線形写像（$\mathbb{R}^{2}$ の回転 $\pi/2$ に近いもの）を与え、それがいかなる凸関数の劣微分でもないことを確かめよ。
+
+*4 Rockafellar の巡回単調性定理 {rock-cyc}
+集合値写像 $T:\mathbb{R}^{n}\rightrightarrows\mathbb{R}^{n}$ が極大巡回単調 $\iff$ ある閉真凸関数 $f$ で $T=\partial f$。$f$ を $f(x)=\sup\{\sum_{i}\langle g_{i},x_{i+1}-x_{i}\rangle\}$ で構成し、$f$ が定数を除き一意であることを示せ。
+
+*4 劣勾配の有界性と Lipschitz 定数
+開凸集合 $U$ 上の凸関数 $f$ が $L$-Lipschitz $\iff$ $U$ の各点で $\partial f(x)\subset\{\|g\|\le L\}$。これを使い、$\|\cdot\|_{1}$ の劣微分から $\ell^{1}$ 正則化問題の最適性条件（LASSO の KKT）を書き下せ。
+
+*4 ノルムの劣微分
+ノルム $\|\cdot\|$ について $\partial\|x\|=\{g:\|g\|_{*}\le1,\ \langle g,x\rangle=\|x\|\}$。核ノルム $\|X\|_{*}$ の劣微分が $\{UV^{\top}+W: U^{\top}W=0,\ WV=0,\ \|W\|\le1\}$（$X=U\Sigma V^{\top}$ は簡約 SVD）であることを示せ。
+
+*4 近接写像の特徴づけ {prox}
+閉真凸関数 $f$ の近接写像 $\operatorname{prox}_{f}(x)=\operatorname{argmin}_{y}\{f(y)+\frac{1}{2}\|y-x\|^{2}\}$ は一意に定まり $\operatorname{prox}_{f}=(I+\partial f)^{-1}$ で堅非拡大。逆に堅非拡大な写像がある凸関数の prox であるための条件（Moreau：勾配写像であること）を述べ証明せよ。
+
+*4 近接写像の計算例
+$\|\cdot\|_{1}$（ソフト閾値）、$\|\cdot\|_{2}$（ブロック縮小）、核ノルム（特異値の閾値）、単体の指示関数（ソート法で $O(n\log n)$）、$\ell^{\infty}$ 球の指示関数の prox を導き、各々の正しさを証明せよ。
+
+*4 劣微分の外半連続性
+閉真凸関数 $f$ について、$x_{k}\to x$, $g_{k}\in\partial f(x_{k})$, $g_{k}\to g$, $f(x_{k})\to f(x)$ ならば $g\in\partial f(x)$。$x\in\operatorname{int}\operatorname{dom}f$ なら $f(x_{k})\to f(x)$ は自動的に成り立ち、$\partial f$ は局所有界であることを示せ。
+
+*4 近似劣微分の計算公式（Hiriart-Urruty）
+$\varepsilon$-劣微分に対して、$f=g\circ A$, $f=\max f_{i}$, $f=\sum f_{i}$ の場合の厳密な計算公式を制約想定なしで与えよ（$\varepsilon$ の分配をとる形）。制約想定なしの最適性条件（逐次的 KKT 条件）を導け。
+
+*4 距離関数の劣微分
+閉凸集合 $C$ について $d_{C}$ は凸で、$x\notin C$ で微分可能 $\nabla d_{C}(x)=(x-P_{C}x)/d_{C}(x)$、$x\in C$ で $\partial d_{C}(x)=N_{C}(x)\cap B$。$\frac{1}{2}d_{C}^{2}$ が $C^{1,1}$ であることを示せ。
+
+*4 部分的最小化と Danskin の定理（微分版）
+$\phi(x,y)$ が $x$ について $C^{1}$、$Y$ コンパクト、$f(x)=\max_{y\in Y}\phi(x,y)$ とすると $f'(x;d)=\max_{y\in Y(x)}\langle\nabla_{x}\phi(x,y),d\rangle$。最大化元が一意なら $f$ は $x$ で微分可能であることを示せ。
+
+*5 凸関数の二階劣微分と epi-微分
+閉真凸関数 $f$ の二階 epi-導関数 $d^{2}f(x|v)$ を定義し、$f$ が $x$ で二回 epi-微分可能 $\iff\operatorname{prox}_{f}$ が $x+v$ で方向微分可能であること、および $d^{2}f(x|v)$ が凸二次形式に一般化された形（一般化二次形式）となる場合と $\operatorname{prox}_{f}$ の微分可能性の対応（Poliquin–Rockafellar）を示せ。
+
+=ch I-8　凸関数の平滑化と構造
+
+*4 Nesterov の平滑化 {nest-smooth}
+$f(x)=\max_{u\in U}\{\langle Ax,u\rangle-\phi(u)\}$（$U$ コンパクト凸）に、$\sigma$-強凸な prox 関数 $d$ を加えた $f_{\mu}(x)=\max_{u}\{\langle Ax,u\rangle-\phi(u)-\mu d(u)\}$ は $\|A\|^{2}/(\mu\sigma)$-平滑で $f_{\mu}\le f\le f_{\mu}+\mu D_{U}$。これから $\varepsilon$-最適解を $O(1/\varepsilon)$ 回の反復で得られることを示せ（加速勾配法の収束率を用いてよい）。
+
+*4 Moreau 包による平滑化の誤差
+$f$ が $L$-Lipschitz 凸ならば $f-\frac{\lambda L^{2}}{2}\le e_{\lambda}f\le f$。この評価が最良であることを $f(x)=L|x|$ で確かめ、Huber 関数が $|x|$ の Moreau 包であることを示せ。
+
+*4 Lasry–Lions 正則化
+有界な関数 $f$ に対し $f_{\lambda,\mu}=(f\square\frac{1}{2\lambda}\|\cdot\|^{2})^{\wedge}$（上包との合成）は $0<\mu<\lambda$ で $C^{1,1}$ である。$f$ が凸でなくても平滑化が得られること、および $f_{\lambda,\mu}\to f$ を示せ。
+
+*4 凸関数の畳み込み平滑化
+凸関数 $f$ と対称な確率密度 $\rho_{\varepsilon}$ の畳み込み $f*\rho_{\varepsilon}$ は凸・平滑で $f\le f*\rho_{\varepsilon}$。$f$ が $L$-Lipschitz のとき Gauss 平滑化 $f_{\sigma}(x)=Ef(x+\sigma Z)$ は $\frac{L\sqrt{n}}{\sigma}$-平滑で $0\le f_{\sigma}-f\le L\sigma\sqrt{n}$ を示し、Randomized smoothing の次元依存性を論ぜよ。
+
+*4 分離可能関数と部分的双対
+$f(x)=\sum f_{i}(x_{i})$ で制約 $\sum A_{i}x_{i}=b$ のとき、双対関数が分離可能になり、各ブロックの共役の和になることを示せ。これが双対分解・価格調整の数学的基礎であることを説明せよ。
+
+*4 凸関数のエピグラフ表現と錐表現可能性
+$|x|^{p}$（$p$ 有理数 $\ge1$）、$x\log x$、$-\log x$、$\|x\|_{p}$ が二次錐または指数錐の有限個の交わりで表現できることを示せ（二次錐表現の構成と、指数錐が不要な場合の特徴づけ）。
+
+*5 二次錐で表現できない凸集合（Fawzi）
+半正定値錐 $\mathbb{S}^{3}_{+}$ は二次錐の直積の線形切断の射影として表現できない。Fawzi の証明の骨格（錐ランクと Hadamard 積による議論）を再構成せよ。
+
+*4 凸集合の射影と Scheinerman 型の分解
+凸集合 $C$ のスペクトル的に定義された集合 $\{X:\lambda(X)\in C\}$ は $C$ が置換不変凸なら凸であり、その凸包・極・支持関数が $C$ のそれから計算される（Lewis の転送原理）。$\{X:\|\lambda(X)\|_{1}\le1\}$ を例に示せ。
+
+*4 凸関数の微分可能性の遺伝
+$f$ が $\operatorname{ri}\operatorname{dom}f$ 上で微分可能でも $f^{*}$ が狭義凸とは限らないが、本質的平滑性と本質的狭義凸性は双対である（I-6 の Legendre 型）。本質的平滑性を「境界に近づくと勾配が発散」で特徴づけ、$x\log x$ が本質的平滑であることを示せ。
+
+*4 凸関数のカットと下からの近似
+閉凸関数 $f$ は $f=\sup\{a\text{ffine }\ell\le f\}$、さらに $x\in\operatorname{int}\operatorname{dom}f$ では可算個の支持アフィン関数で十分。これに基づく Kelley の切除平面法の収束（遅さも含む）を論ぜよ。
+
+*4 凸関数列の一様収束（Rockafellar の定理 10.8）
+開凸集合上の有限凸関数列が稠密集合上で各点収束すれば、極限は凸で、収束はコンパクト集合上一様である。さらに劣微分がグラフの意味で収束すること（Attouch の定理の有限次元版）を示せ。
+
+*4 凸関数の極値の一意性と狭義凸性
+$f$ が狭義凸ならば最小点は高々一つ。一様凸性・強凸性・$p$ 次一様凸性の違いを整理し、$p$ 次一様凸関数では $f(x)-f^{*}\ge c\,\|x-x^{*}\|^{p}$ となることを示せ。
+
+*4 誤差限界と二次成長の同値
+閉凸関数 $f$ と最小値集合 $S$ について、二次成長 $f(x)-f^{*}\ge\frac{\alpha}{2}d_{S}(x)^{2}$（$f(x)\le f^{*}+\nu$）と、劣微分の誤差限界 $d_{S}(x)\le c\,\operatorname{dist}(0,\partial f(x))$ が同値であることを示せ（Drusvyatskiy–Lewis、Artacho–Geoffroy）。
+
+*4 Polyak–Łojasiewicz 不等式
+$L$-平滑な $f$ が PL 不等式 $\frac{1}{2}\|\nabla f(x)\|^{2}\ge\mu(f(x)-f^{*})$ をみたせば、凸でなくても勾配法が線形収束する。PL $\Rightarrow$ 二次成長、強凸 $\Rightarrow$ PL を示し、PL だが凸でない例 $x^{2}+3\sin^{2}x$ を確かめよ（Karimi–Nutini–Schmidt の階層）。
+
+*5 Łojasiewicz の勾配不等式 {loj}
+実解析関数 $f$ と臨界点 $\bar x$ に対し、$\theta\in[1/2,1)$, $c>0$ と近傍 $U$ が存在して $|f(x)-f(\bar x)|^{\theta}\le c\|\nabla f(x)\|$（$x\in U$）。これを用いて勾配流 $\dot x=-\nabla f(x)$ の有界な軌道が有限長で一点に収束することを示し、$C^{\infty}$ では偽である例（Palis–de Melo のメキシカンハット）を述べよ。
+
+*5 Kurdyka–Łojasiewicz 不等式（非平滑・o-minimal） {kl}
+o-minimal 構造で定義可能な下半連続関数 $f$ は、各点で KL 性質 $\varphi'(f(x)-f(\bar x))\operatorname{dist}(0,\partial f(x))\ge1$（$\varphi$ は凹な脱特異化関数）をもつ（Bolte–Daniilidis–Lewis–Shiota）。凸関数では KL 性質が誤差限界と同値であることを示せ。
+
+*4 凸関数の水準集合の連続性
+閉真凸関数 $f$ について $\alpha>\inf f$ なら $\operatorname{cl}\{f<\alpha\}=\{f\le\alpha\}$ で、$\alpha\mapsto\{f\le\alpha\}$ は Hausdorff 距離で連続（有界の場合）。$\alpha=\inf f$ で不連続になりうる例を作れ。
+
+*4 凸関数の差の表現（DC 分解）
+$C^{2}$ 関数は（コンパクト集合上）二つの凸関数の差で表され、DC 関数の全体は和・積・最大・最小で閉じた線形空間をなす。Hartman の定理（局所 DC なら大域 DC）を述べ、区分的アフィン関数が二つの凸な区分的アフィン関数の差であることを示せ。
+
+*4 凸関数のスペクトル・特異値関数の微分
+絶対対称凸関数 $\phi$ と $F(X)=\phi(\sigma(X))$ について、$\partial F(X)=\{U\operatorname{Diag}(g)V^{\top}: g\in\partial\phi(\sigma(X)),\ X=U\operatorname{Diag}(\sigma)V^{\top}\}$ を示せ（Lewis）。
+
+*5 凸関数の Hessian の測度と Monge–Ampère
+凸関数 $u$ の Monge–Ampère 測度 $\mu_{u}(E)=|\partial u(E)|$ は Radon 測度で、$u\in C^{2}$ なら $\det\nabla^{2}u\,dx$ に等しい。Alexandrov の最大原理 $\sup_{\Omega}u^{-}\le C(n)\operatorname{diam}\Omega\,|\partial u(\Omega)|^{1/n}$ を証明せよ。
