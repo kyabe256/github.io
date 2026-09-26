@@ -9,7 +9,7 @@ $f=\frac1n\sum f_{i}$（各 $f_{i}$ は $L$-平滑凸、$f$ は $\mu$-強凸）�
 *4 SAGA（Defazio–Bach–Lacoste-Julien）
 非偏り推定量 $\nabla f_{j}(x)-\nabla f_{j}(\phi_{j})+\frac1n\sum\nabla f_{i}(\phi_{i})$ による SAGA が、強凸で $O((n+\kappa)\log(1/\varepsilon))$、凸で $O(n/\varepsilon)$ を達成することを Lyapunov 関数で示せ。
 
-*4 有限和問題の下界（Lan–Zhou, Woodworth–Srebro）
+*5 有限和問題の下界（Lan–Zhou, Woodworth–Srebro）
 有限和の $\mu$-強凸 $L$-平滑問題に対し、成分勾配オラクルを用いる任意の確率的アルゴリズムは $\Omega((n+\sqrt{n\kappa})\log(1/\varepsilon))$ 回の評価を要する。証明の骨格を与えよ。
 
 *4 分散削減と近接項（Prox-SVRG, Xiao–Zhang）
@@ -21,13 +21,13 @@ $f=\frac1n\sum f_{i}$（各 $f_{i}$ は $L$-平滑凸、$f$ は $\mu$-強凸）�
 *4 SARAH の再帰推定量（Nguyen–Liu–Scheinberg–Takáč）
 再帰推定量 $v_{t}=\nabla f_{i_{t}}(x_{t})-\nabla f_{i_{t}}(x_{t-1})+v_{t-1}$ が偏りをもつが分散が縮小すること、強凸で線形収束し非凸で $O(n+\sqrt n/\varepsilon^{2})$ を達成することを示せ。
 
-*4 非凸有限和の下界（Fang–Li–Lin–Zhang）
+*5 非凸有限和の下界（Fang–Li–Lin–Zhang）
 非凸有限和問題で、平均二乗平滑性の下での成分勾配評価の下界 $\Omega(\sqrt n\varepsilon^{-2})$ を示し、SPIDER の最適性を結論せよ。
 
 *4 確率的双対座標上昇と分散削減の関係
 SDCA が SAGA 型の分散削減を双対側で行っていることを示し、双対フリー SDCA（Shalev-Shwartz）の解析を述べよ。
 
-*4 Katyusha の負の運動量
+*5 Katyusha の負の運動量
 Katyusha の推定量と、参照点方向への「引き戻し」（Katyusha 運動量）が加速法の過剰な外挿による分散の増大を抑える仕組みを説明し、$O((n+\sqrt{n\kappa})\log(1/\varepsilon))$ の証明の骨格を与えよ。
 
 *4 分散削減の確率的鞍点問題への拡張（Palaniappan–Bach）
@@ -71,10 +71,10 @@ $\mu$-強凸損失列に対し、$\eta_{t}=\frac{1}{\mu t}$ のオンライン�
 *4 FTRL と後悔の一般的上界 {ftrl}
 Follow-The-Regularized-Leader $x_{t+1}=\operatorname{argmin}\{\sum_{s\le t}f_{s}(x)+\frac1\eta R(x)\}$（$R$ は強凸）の後悔が $\frac{R(u)-R(x_{1})}{\eta}+\eta\sum\|g_{t}\|_{*}^{2}$ で抑えられることを「be-the-leader」補題から示せ。
 
-*4 専門家の助言と Hedge（Littlestone–Warmuth, Freund–Schapire）
+*5 専門家の助言と Hedge（Littlestone–Warmuth, Freund–Schapire）
 $N$ 人の専門家に対する指数重みアルゴリズム（Hedge）の後悔は $\sqrt{\frac{T}{2}\ln N}$（損失 $[0,1]$）。証明し、下界 $\Omega(\sqrt{T\log N})$ を示せ。
 
-*4 オンライン学習の下界（Cesa-Bianchi–Lugosi）
+*5 オンライン学習の下界（Cesa-Bianchi–Lugosi）
 オンライン線形最適化の後悔の下界 $\Omega(DG\sqrt T)$ を、ランダムな $\pm$ 損失列の議論で示せ。
 
 *4 オンラインからバッチへの変換（Cesa-Bianchi–Conconi–Gentile）
@@ -89,7 +89,7 @@ $N$ 人の専門家に対する指数重みアルゴリズム（Hedge）の後�
 *4 オンライン凸最適化とゲームの均衡
 二人零和ゲームで両者が後悔 $R_{T}$ のアルゴリズムを用いると、平均戦略は $2R_{T}/T$-近似均衡に収束する。一般のゲームでは粗相関均衡に収束することを示せ。
 
-*4 Blackwell の接近可能性とオンライン学習の同値性（Abernethy–Bartlett–Hazan）
+*5 Blackwell の接近可能性とオンライン学習の同値性（Abernethy–Bartlett–Hazan）
 Blackwell の接近可能性とオンライン線形最適化の後悔最小化が、互いに効率的に帰着できることを示せ（Abernethy–Bartlett–Hazan 2011）。
 
 *4 内部後悔と相関均衡（Foster–Vohra, Hart–Mas-Colell）
@@ -107,7 +107,7 @@ Lovász 拡張を用いたオンライン劣モジュラ最小化の後悔 $O(n\
 *4 オンライン学習の最小後悔の値（Rakhlin–Sridharan–Tewari）
 オンライン学習ゲームの minimax 後悔を、逐次 Rademacher 複雑度で上下から特徴づけることを示し、逐次的な学習可能性の特徴づけ（Littlestone 次元、Ben-David–Pál–Shalev-Shwartz）を述べよ。
 
-*4 Littlestone 次元とオンライン分類
+*5 Littlestone 次元とオンライン分類
 二値オンライン分類で、仮説クラスが実現可能な場合の最適な誤り回数が Littlestone 次元に等しいこと（Littlestone 1988、Standard Optimal Algorithm）を証明せよ。
 
 *4 オンライン凸最適化の射影不要法（Hazan–Kale の online Frank–Wolfe）

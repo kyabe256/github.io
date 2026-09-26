@@ -6,7 +6,7 @@
 *4 不等式制約 SQP の有効集合の識別（Robinson）
 LICQ・強相補性・二階十分条件の下、$x^{*}$ の近くでは SQP 部分問題（不等式制約付き QP）の有効集合が真の有効集合と一致し、局所的に等式制約 SQP と同じ二次収束をする。証明せよ。
 
-*4 強相補性を欠く SQP（Bonnans の局所収束）
+*5 強相補性を欠く SQP（Bonnans の局所収束）
 強二階十分条件と LICQ の下、強相補性がなくても SQP は局所二次収束する（Bonnans 1994、一般化方程式の Newton 法として）。Robinson の強正則性から導け。
 
 *4 準 Newton SQP の超線形収束（Boggs–Tolle–Wang）
@@ -62,7 +62,7 @@ LP 部分問題で有効集合を推定し、等式制約 QP でステップを�
 
 =ch V-4　線形計画の内点法
 
-*4 Karmarkar の射影変換法
+*5 Karmarkar の射影変換法
 Karmarkar の標準形 LP に対し、射影変換とポテンシャル関数 $\phi(x)=n\log(c^{\top}x)-\sum\log x_{j}$ を用いた方法が、各反復でポテンシャルを定数以上減らし、$O(nL)$ 反復で最適解を得ることを示せ（Karmarkar 1984）。
 
 *4 主双対パス追跡法の短ステップ版 {pd-short}
@@ -80,7 +80,7 @@ Mehrotra の方法の中心化パラメータの適応的選択 $\sigma=(\mu_{\t
 *4 アフィンスケーリング法（Dikin）の収束
 Dikin のアフィンスケーリング法は、ステップ長 $2/3$ 以下で非退化・退化を問わず主最適解に収束する（Tsuchiya–Muramatsu）。一方ステップ長 $0.999$ ではうまくいかない例（Mascarenhas）があることを述べよ。
 
-*4 ポテンシャル還元法（Ye）
+*5 ポテンシャル還元法（Ye）
 主双対ポテンシャル $\Phi_{\rho}(x,s)=\rho\log(x^{\top}s)-\sum\log(x_{j}s_{j})$（$\rho=n+\sqrt n$）を各反復で定数減らす方法が $O(\sqrt nL)$ 反復で収束することを示せ（Ye 1991）。
 
 *4 自己双対埋め込み法（Ye–Todd–Mizuno）
@@ -89,31 +89,31 @@ LP を自己双対な斉次モデルに埋め込むと、初期点として $(e,
 *4 内点法の最終段階と有限終了（丸め）
 内点法の反復から最適分割 $(B,N)$ を十分小さな $\mu$ で正しく推定でき、そこから射影（あるいは交差手続き）で正確な最適解が $O(n^{3})$ で得られることを示せ（Ye の有限終了、Megiddo の交差）。
 
-*4 内点法の反復数の下界（Todd, Todd–Ye）
+*5 内点法の反復数の下界（Todd, Todd–Ye）
 主双対パス追跡法は、ある LP に対して $\Omega(n^{1/3})$ 回の反復を要する（Todd–Ye）。主張を述べ、$O(\sqrt n)$ との差を論ぜよ。
 
-*4 Vavasis–Ye の層状最小二乗法
+*5 Vavasis–Ye の層状最小二乗法
 LP の係数行列 $A$ のみに依存する条件数 $\bar\chi_{A}$ を用い、層状最小二乗ステップを組み込んだ内点法が $O(n^{3.5}\log(\bar\chi_{A}+n))$ 反復で収束することを示せ（Vavasis–Ye 1996、$b,c$ に依存しない）。
 
-*4 Renegar の条件数と内点法
+*5 Renegar の条件数と内点法
 データの実行不能性までの相対距離 $C(d)=\|d\|/\rho(d)$ を用いると、内点法の反復数は $O(\sqrt n\log(C(d)/\varepsilon))$ で抑えられる（Renegar 1995）。条件数の幾何学的意味（Eckart–Young 型の距離定理）を示せ。
 
-*4 Megiddo の線形時間 LP（固定次元）
+*5 Megiddo の線形時間 LP（固定次元）
 次元 $d$ 固定の LP は $O(2^{2^{d}}n)$ 時間で解ける（Megiddo 1984）。prune-and-search の原理を $d=2$ で完全に示せ。
 
 *4 Seidel の乱択 LP と Clarkson の方法
 固定次元 LP に対する Seidel の乱択増分アルゴリズムの期待時間 $O(d!n)$ を後方解析で示し、Clarkson のサンプリング法で $O(d^{2}n+d^{O(\sqrt d)}\log n)$ に改善されることを述べよ。
 
-*4 Matoušek–Sharir–Welzl の準指数的単体法
+*5 Matoušek–Sharir–Welzl の準指数的単体法
 LP 型問題に対する MSW のランダム化アルゴリズムは $e^{O(\sqrt{d\log n})}$ の期待時間で解く（Kalai も独立に）。LP 型問題の公理を述べ、組合せ的計算量解析の骨格を与えよ。
 
-*4 行列乗算時間での LP（Cohen–Lee–Song, van den Brand）
+*5 行列乗算時間での LP（Cohen–Lee–Song, van den Brand）
 LP を $\tilde O(n^{\omega}\log(1/\delta))$ 時間（$\omega$ は行列乗算の指数）で解く内点法（Cohen–Lee–Song 2019）の主要な工夫（確率的中心パス、逆行列の遅延更新）を説明せよ。
 
-*4 内点法による最大流の近線形時間（Chen–Kyng–Liu–Peng–Probst Gutenberg–Sachdeva）
+*5 内点法による最大流の近線形時間（Chen–Kyng–Liu–Peng–Probst Gutenberg–Sachdeva）
 最大流・最小費用流が $m^{1+o(1)}$ 時間で解ける（2022）。$\ell_{1}$ IPM と動的な最小比率閉路データ構造の組合せという主張を正確に述べ、ポテンシャル減少の議論の骨格を示せ。
 
-*4 Lee–Sidford の $\tilde O(\sqrt{\operatorname{rank}})$ 反復
+*5 Lee–Sidford の $\tilde O(\sqrt{\operatorname{rank}})$ 反復
 Lewis 重み障壁を用いた重み付きパス追跡法により、LP を $\tilde O(\sqrt{\operatorname{rank}(A)}\log(1/\varepsilon))$ 反復で解ける（Lee–Sidford 2014）。$\sqrt n$ を $\sqrt m$ または $\sqrt{\operatorname{rank}}$ に改善する意義と、普遍障壁の存在（Nesterov–Nemirovski）との関係を述べよ。
 
 *5 LP の強多項式アルゴリズムの部分的解決（Tardos, Dadush–Natura–Végh）

@@ -1,0 +1,63 @@
+<h2 class="plain">付録 A　依存の地図</h2>
+
+<p>2000 題は部ごとに並んでいるが、最適化の定理は互いに深く依存している。ここでは部をまたぐ主要な依存の筋を挙げる。番号は大問番号である。</p>
+
+<h3 class="sec">幹：分離定理から双対へ</h3>
+<table class="legend">
+  <tr><th>分離 → 選択肢定理</th><td>{{R:proj}}（最近点射影）→ {{R:sep}}（真分離定理）→ {{R:farkas}}（Farkas）→ {{R:mw}}（Minkowski–Weyl）→ {{R:lpdual}}（LP 強双対）→ {{R:gt}}（Goldman–Tucker）。<strong>最適化のほぼすべての双対定理は分離定理の変奏である。</strong></td></tr>
+  <tr><th>共役 → 双対</th><td>{{R:conj}}（Fenchel 共役）→ {{R:fm-thm}}（Fenchel–Moreau）→ {{R:fenchel}}（Fenchel 双対）→ {{R:pert}}（Rockafellar の摂動双対）→ {{R:fr}}（Fenchel–Rockafellar）→ {{R:kdual}}（Kantorovich 双対）→ {{R:brenier}}（Brenier）。</td></tr>
+  <tr><th>分離 → KKT</th><td>{{R:farkas}} → {{R:fj}}（Fritz John）→ {{R:kkt}}（KKT）← {{R:mfcq}}（MFCQ）, {{R:rcq}}（Robinson の制約想定）。凸では {{R:slater}}（Slater）と {{R:strongdual}}（強双対）が同じ定理の二つの顔。</td></tr>
+  <tr><th>minimax → ゲーム</th><td>{{R:lpdual}} ⇔ {{R:vn}}（von Neumann）→ {{R:sion}}（Sion）→ {{R:nash}}（Nash）。一方、Brouwer を経由する {{R:nash}} は PPAD 完全、LP を経由する {{R:vn}} は多項式時間 ― 計算量の分水嶺である。</td></tr>
+</table>
+
+<h3 class="sec">解析 → アルゴリズム</h3>
+<table class="legend">
+  <tr><th>平滑性 → 収束率</th><td>{{R:smooth}}（$L$-平滑の基本不等式）→ {{R:gd-c}}, {{R:gd-sc}}（勾配法）→ {{R:agd}}（Nesterov 加速）→ {{R:ogm}}（OGM）。下界は {{R:pep}}, {{R:pep2}}（性能推定問題）で厳密化される。</td></tr>
+  <tr><th>共役 → 平滑化</th><td>{{R:dual-smooth}}（強凸 ⇔ 共役が平滑）→ {{R:menv}}（Moreau 包）→ {{R:nest-smooth}}（Nesterov の平滑化）→ {{R:cp}}（Chambolle–Pock）。</td></tr>
+  <tr><th>単調作用素 → 分割法</th><td>{{R:minty}}（Minty）→ {{R:km}}（Krasnosel'skii–Mann）→ {{R:ppa}}（近接点法）→ {{R:fbs}}, {{R:dr}}, {{R:admm}}（前進後退・Douglas–Rachford・ADMM）→ {{R:auglag}}（拡張 Lagrangian は双対の近接点法）→ {{R:alm}}。</td></tr>
+  <tr><th>自己共役性 → 内点法</th><td>{{R:newton}}, {{R:kantorovich}}（Newton 法）→ {{R:selfconc}}（自己共役関数）→ {{R:scb}}（自己共役障壁）→ {{R:ipm-complexity}}（$O(\sqrt\nu\log(1/\varepsilon))$）→ {{R:pd-short}}（LP の主双対法）。</td></tr>
+  <tr><th>体積 → 切除平面</th><td>{{R:john}}（John の楕円体）, {{R:bm}}（Brunn–Minkowski）→ {{R:ellipsoid}}（楕円体法）→ {{R:gls}}（最適化と分離の等価性）, {{R:cog}}（重心法）。</td></tr>
+  <tr><th>誤差限界 → 線形収束</th><td>{{R:hoffman}}（Hoffman）→ {{R:mreg}}（計量正則性）→ {{R:loj}}, {{R:kl}}（Łojasiewicz・KŁ）→ {{R:abs}}（Attouch–Bolte–Svaiter）。非凸一階法の収束理論はすべてここに帰着する。</td></tr>
+</table>
+
+<h3 class="sec">緩和と確率</h3>
+<table class="legend">
+  <tr><th>S-補題 → SDP 緩和</th><td>{{R:slemma}}（S-補題）→ {{R:trs}}（信頼領域部分問題）→ {{R:sdpdual}}（SDP 双対）→ {{R:bp}}（Barvinok–Pataki）→ {{R:gw}}（Goemans–Williamson）, {{R:groth}}（Grothendieck）。</td></tr>
+  <tr><th>非負性 → SOS</th><td>{{R:hilbert}}, {{R:motzkin}}（非負 ≠ SOS）→ {{R:sos-sdp}}（SOS は SDP）→ {{R:putinar}}（Putinar）→ {{R:lasserre}}（Lasserre 階層）。</td></tr>
+  <tr><th>凸幾何 → 確率</th><td>{{R:pl}}（Prékopa–Leindler）→ 確率制約の凸性（第 IX 部）, 対数凹サンプリング（第 X 部 X-10）。{{R:sf}}（Shapley–Folkman）→ {{R:aubin}}（双対ギャップの消滅）。</td></tr>
+  <tr><th>確率近似 → SGD</th><td>{{R:rm}}（Robbins–Monro）→ {{R:ode}}（ODE 法）→ {{R:pr}}（Polyak–Ruppert）→ {{R:sgd}}, {{R:svrg}}（SGD・分散削減）→ {{R:ogd}}, {{R:ftrl}}（オンライン学習）。</td></tr>
+  <tr><th>双対 → ロバスト</th><td>{{R:lpdual}}, {{R:conedual}} → {{R:rlp}}（ロバスト LP）→ {{R:dro}}, {{R:wdro}}（分布ロバスト）。Wasserstein DRO の双対は {{R:kdual}} そのもの。</td></tr>
+</table>
+
+<h3 class="sec">無限次元への合流</h3>
+<table class="legend">
+  <tr><th>変分法 ↔ 凸解析</th><td>{{R:wlsc}}（凸汎関数の弱下半連続性）→ {{R:tonelli}}（Tonelli）→ {{R:morrey}}（準凸性）→ {{R:polyconvex}}（多凸性と Ball の定理）。</td></tr>
+  <tr><th>制御 ↔ 双対</th><td>{{R:lagrange}}（Lagrange 乗数）→ {{R:pmp}}（Pontryagin の最大原理）；{{R:bellman}}（Bellman）→ {{R:dp}}, {{R:visc}}（HJB と粘性解）→ {{R:are}}（Riccati）。</td></tr>
+  <tr><th>変分不等式</th><td>{{R:minty}}, {{R:proj}} → {{R:ls}}（Lions–Stampacchia）→ {{R:obstacle}}（障害物問題）；{{R:eg}}（外挿勾配法）は Nash 均衡・交通均衡・鞍点問題に共通のアルゴリズム。</td></tr>
+  <tr><th>最終合流点</th><td><strong>大問 {{R:finale}}</strong>：Kantorovich 双対（{{R:kdual}}）＋ Brenier（{{R:brenier}}）＋ 変位凸性 ＋ JKO スキーム ＋ 関数不等式 ＋ Langevin 動力学。凸共役・双対・変分・勾配流・確率過程が一題で出会う。</td></tr>
+</table>
+
+<h2 class="plain">付録 B　参考書対応表</h2>
+<table class="legend">
+  <tr><th>I-1 〜 I-5</th><td>Rockafellar <em>Convex Analysis</em>／Ziegler <em>Lectures on Polytopes</em>／Schrijver <em>Theory of Linear and Integer Programming</em>／Barvinok <em>A Course in Convexity</em>／Schneider <em>Convex Bodies: The Brunn–Minkowski Theory</em></td></tr>
+  <tr><th>I-6 〜 I-10</th><td>Hiriart-Urruty–Lemaréchal <em>Fundamentals of Convex Analysis</em>／Bauschke–Combettes <em>Convex Analysis and Monotone Operator Theory in Hilbert Spaces</em>／Borwein–Lewis <em>Convex Analysis and Nonlinear Optimization</em>／Zălinescu <em>Convex Analysis in General Vector Spaces</em>／Phelps <em>Convex Functions, Monotone Operators and Differentiability</em></td></tr>
+  <tr><th>II-1 〜 II-5</th><td>Bertsekas <em>Nonlinear Programming</em>／Nocedal–Wright <em>Numerical Optimization</em>（12 章）／Bazaraa–Sherali–Shetty <em>Nonlinear Programming</em>／Mangasarian <em>Nonlinear Programming</em>／Solodov "Constraint qualifications"（講義録）</td></tr>
+  <tr><th>II-6 〜 II-10</th><td>Bonnans–Shapiro <em>Perturbation Analysis of Optimization Problems</em>／Fiacco <em>Introduction to Sensitivity and Stability Analysis</em>／Facchinei–Pang <em>Finite-Dimensional Variational Inequalities and Complementarity Problems</em>／Ehrgott <em>Multicriteria Optimization</em>／Cottle–Pang–Stone <em>The Linear Complementarity Problem</em></td></tr>
+  <tr><th>III-1 〜 III-5</th><td>Boyd–Vandenberghe <em>Convex Optimization</em>／Rockafellar <em>Conjugate Duality and Optimization</em>／Luenberger <em>Optimization by Vector Space Methods</em>／Schrijver <em>Combinatorial Optimization</em>／Ben-Tal–Nemirovski <em>Lectures on Modern Convex Optimization</em></td></tr>
+  <tr><th>III-6 〜 III-10</th><td>Wolkowicz–Saigal–Vandenberghe (eds.) <em>Handbook of Semidefinite Programming</em>／Bertsekas <em>Constrained Optimization and Lagrange Multiplier Methods</em>／Pólik–Terlaky "A survey of the S-lemma"／Murota <em>Discrete Convex Analysis</em>／Villani <em>Topics in Optimal Transportation</em></td></tr>
+  <tr><th>IV-1 〜 IV-5</th><td>Nocedal–Wright <em>Numerical Optimization</em>／Dennis–Schnabel <em>Numerical Methods for Unconstrained Optimization and Nonlinear Equations</em>／Conn–Gould–Toint <em>Trust-Region Methods</em>／Nesterov <em>Lectures on Convex Optimization</em>／Deuflhard <em>Newton Methods for Nonlinear Problems</em></td></tr>
+  <tr><th>IV-6 〜 IV-10</th><td>Greenbaum <em>Iterative Methods for Solving Linear Systems</em>／Liesen–Strakoš <em>Krylov Subspace Methods</em>／Cartis–Gould–Toint <em>Evaluation Complexity of Algorithms for Nonconvex Optimization</em>／Conn–Scheinberg–Vicente <em>Introduction to Derivative-Free Optimization</em>／Audet–Hare <em>Derivative-Free and Blackbox Optimization</em></td></tr>
+  <tr><th>V-1 〜 V-5</th><td>Fiacco–McCormick <em>Nonlinear Programming: Sequential Unconstrained Minimization Techniques</em>／Birgin–Martínez <em>Practical Augmented Lagrangian Methods</em>／Izmailov–Solodov <em>Newton-Type Methods for Optimization and Variational Problems</em>／Wright <em>Primal-Dual Interior-Point Methods</em>／Nesterov–Nemirovski <em>Interior-Point Polynomial Algorithms in Convex Programming</em>／Renegar <em>A Mathematical View of Interior-Point Methods</em></td></tr>
+  <tr><th>V-6 〜 V-10</th><td>Grötschel–Lovász–Schrijver <em>Geometric Algorithms and Combinatorial Optimization</em>／Jaggi "Revisiting Frank–Wolfe"／Borgwardt <em>The Simplex Method: A Probabilistic Analysis</em>／Spielman–Teng "Smoothed analysis"／Facchinei–Pang（第 12 章）／Nisan–Roughgarden–Tardos–Vazirani <em>Algorithmic Game Theory</em></td></tr>
+  <tr><th>VI-1 〜 VI-5</th><td>Nesterov <em>Lectures on Convex Optimization</em>／Beck <em>First-Order Methods in Optimization</em>／Nemirovski–Yudin <em>Problem Complexity and Method Efficiency in Optimization</em>／Bubeck "Convex Optimization: Algorithms and Complexity"／Chambolle–Pock "An introduction to continuous optimization for imaging"</td></tr>
+  <tr><th>VI-6 〜 VI-10</th><td>Ryu–Yin <em>Large-Scale Convex Optimization: Algorithms & Analyses via Monotone Operators</em>／Wright "Coordinate descent algorithms"／d'Aspremont–Scieur–Taylor "Acceleration methods"／Lan <em>First-Order and Stochastic Optimization Methods for Machine Learning</em>／Orabona "A Modern Introduction to Online Learning"</td></tr>
+  <tr><th>VII-1 〜 VII-5</th><td>Clarke <em>Optimization and Nonsmooth Analysis</em>／Mordukhovich <em>Variational Analysis and Generalized Differentiation I, II</em>／Rockafellar–Wets <em>Variational Analysis</em>／Dontchev–Rockafellar <em>Implicit Functions and Solution Mappings</em>／Ioffe <em>Variational Analysis of Regular Mappings</em></td></tr>
+  <tr><th>VII-6 〜 VII-10</th><td>Attouch <em>Variational Convergence for Functions and Operators</em>／Dal Maso <em>An Introduction to Γ-Convergence</em>／van den Dries <em>Tame Topology and O-minimal Structures</em>／Bolte–Daniilidis–Lewis–Shiota "Clarke subgradients of stratifiable functions"／Mordukhovich <em>Second-Order Variational Analysis in Optimization</em>／Tuy <em>Convex Analysis and Global Optimization</em></td></tr>
+  <tr><th>VIII-1 〜 VIII-5</th><td>Ben-Tal–Nemirovski <em>Lectures on Modern Convex Optimization</em>／Blekherman–Parrilo–Thomas (eds.) <em>Semidefinite Optimization and Convex Algebraic Geometry</em>／Lasserre <em>Moments, Positive Polynomials and Their Applications</em>／Marshall <em>Positive Polynomials and Sums of Squares</em>／Berman–Shaked-Monderer <em>Completely Positive Matrices</em></td></tr>
+  <tr><th>VIII-6 〜 VIII-10</th><td>Williamson–Shmoys <em>The Design of Approximation Algorithms</em>／Gärtner–Matoušek <em>Approximation Algorithms and Semidefinite Programming</em>／Foucart–Rauhut <em>A Mathematical Introduction to Compressive Sensing</em>／Wright–Ma <em>High-Dimensional Data Analysis with Low-Dimensional Models</em>／Vershynin <em>High-Dimensional Probability</em>／Marcus–Spielman–Srivastava の論文群</td></tr>
+  <tr><th>IX-1 〜 IX-5</th><td>Kushner–Yin <em>Stochastic Approximation and Recursive Algorithms</em>／Borkar <em>Stochastic Approximation: A Dynamical Systems Viewpoint</em>／Cesa-Bianchi–Lugosi <em>Prediction, Learning, and Games</em>／Hazan <em>Introduction to Online Convex Optimization</em>／Lattimore–Szepesvári <em>Bandit Algorithms</em></td></tr>
+  <tr><th>IX-6 〜 IX-10</th><td>Shapiro–Dentcheva–Ruszczyński <em>Lectures on Stochastic Programming</em>／Birge–Louveaux <em>Introduction to Stochastic Programming</em>／Ben-Tal–El Ghaoui–Nemirovski <em>Robust Optimization</em>／Kuhn–Shafiee–Wiesemann "Distributionally robust optimization"／Puterman <em>Markov Decision Processes</em>／Agarwal–Jiang–Kakade–Sun <em>Reinforcement Learning: Theory and Algorithms</em>／Shalev-Shwartz–Ben-David <em>Understanding Machine Learning</em></td></tr>
+  <tr><th>X-1 〜 X-5</th><td>Gelfand–Fomin <em>Calculus of Variations</em>／Dacorogna <em>Direct Methods in the Calculus of Variations</em>／Clarke <em>Functional Analysis, Calculus of Variations and Optimal Control</em>／Liberzon <em>Calculus of Variations and Optimal Control Theory</em>／Fleming–Soner <em>Controlled Markov Processes and Viscosity Solutions</em>／Zhou–Doyle–Glover <em>Robust and Optimal Control</em></td></tr>
+  <tr><th>X-6 〜 X-10</th><td>Kinderlehrer–Stampacchia <em>An Introduction to Variational Inequalities</em>／Petrosyan–Shahgholian–Uraltseva <em>Regularity of Free Boundaries in Obstacle-Type Problems</em>／Osborne–Rubinstein <em>A Course in Game Theory</em>／Villani <em>Optimal Transport: Old and New</em>／Santambrogio <em>Optimal Transport for Applied Mathematicians</em>／Dempe <em>Foundations of Bilevel Programming</em></td></tr>
+</table>
+<p style="font-size:9.4pt;color:#4b5563">研究論文の主定理にあたる問題（平滑化解析、内点法の非強多項式性、Kadison–Singer、Lasserre 階層の収束率、UGC 下の最適近似、PPAD 完全性、KLS 予想の進展など）については、上記の文献でも証明は与えられていないか、専門論文に委ねられている。それらは「はじめに」で述べたとおり、主張の正確な再述・証明の骨格の再構成・鍵となる補題一つの完全な証明をもって解答とせよ。</p>

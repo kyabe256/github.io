@@ -1,6 +1,6 @@
 =ch VIII-3　多項式の非負性と二乗和
 
-*4 Hilbert の定理（1888） {hilbert}
+*5 Hilbert の定理（1888） {hilbert}
 $n$ 変数 $2d$ 次の非負斉次多項式がすべて二乗和（SOS）で書けるのは、$n\le2$、$2d=2$、$(n,2d)=(3,4)$ の場合に限る。$(3,4)$ の場合（三元四次形式）の SOS 性を証明の骨格とともに述べ、他の場合の反例の存在を示せ。
 
 *4 Motzkin 多項式 {motzkin}
@@ -9,13 +9,13 @@ $M(x,y)=x^{4}y^{2}+x^{2}y^{4}-3x^{2}y^{2}+1$ は非負だが SOS ではない。
 *4 SOS 判定は SDP {sos-sdp}
 次数 $2d$ の多項式 $p$ が SOS $\iff$ $p=z^{\top}Qz$（$z$ は次数 $\le d$ の単項式ベクトル）なる $Q\succeq0$ が存在する。Gram 行列法による SDP 定式化と、Newton 多面体による単項式の削減（Reznick）を示せ。
 
-*4 Artin の定理（Hilbert の第 17 問題）
+*5 Artin の定理（Hilbert の第 17 問題）
 非負多項式は有理関数の二乗和である（Artin 1927）。実閉体の理論を用いた証明の骨格を与え、分母の次数の評価（Lombardi–Perrucci–Roy）が非常に大きいことを述べよ。
 
-*4 Reznick の一様分母定理
+*5 Reznick の一様分母定理
 正定値な斉次多項式 $p$ に対し、十分大きな $r$ で $(\sum x_{i}^{2})^{r}p$ は二乗の和（実は線形形式の偶数乗の和）で書ける（Reznick 1995）。Pólya の定理との類似を示せ。
 
-*4 非負多項式の錐と SOS 錐の体積比（Blekherman）
+*5 非負多項式の錐と SOS 錐の体積比（Blekherman）
 固定次数で変数の数 $n\to\infty$ のとき、SOS 錐の体積は非負多項式錐の体積に比べて無視できるほど小さくなる（Blekherman 2006）。主張を正確に述べ、証明の骨格を与えよ。
 
 *4 二次形式・三元四次形式の SOS と Hilbert の証明
@@ -24,13 +24,13 @@ $M(x,y)=x^{4}y^{2}+x^{2}y^{4}-3x^{2}y^{2}+1$ は非負だが SOS ではない。
 *4 凸多項式と SOS 凸性（Helton–Nie, Ahmadi–Parrilo）
 多項式 $p$ の Hessian が SOS 行列 $\nabla^{2}p(x)=M(x)^{\top}M(x)$ のとき SOS 凸という。SOS 凸ならば凸だが逆は偽（Ahmadi–Parrilo の反例）であり、凸かつ SOS でない多項式が存在する（Blekherman）ことを述べよ。
 
-*4 凸性判定の NP 困難性（Ahmadi–Olshevsky–Parrilo–Tsitsiklis）
+*5 凸性判定の NP 困難性（Ahmadi–Olshevsky–Parrilo–Tsitsiklis）
 4 次多項式が凸かどうかの判定は強 NP 困難である。双二次形式の非負性判定からの帰着を示せ。
 
 *4 対称多項式の SOS と対称性の削減（Gatermann–Parrilo）
 群作用で不変な SOS 問題は、表現論（Schur の補題）により SDP のブロック対角化で大幅に小さくできることを示し、対称な 4 次形式の例で計算せよ。
 
-*4 SOS による多項式の下界と Shor の緩和
+*5 SOS による多項式の下界と Shor の緩和
 $p^{*}=\min p(x)$ の SOS 下界 $p^{\mathrm{sos}}=\max\{\gamma: p-\gamma\text{ が SOS}\}$ を定義し、次数 2 の場合に Shor の SDP 緩和と一致すること、一般に $p^{\mathrm{sos}}<p^{*}$ となる例（Motzkin）を示せ。
 
 *4 一変数多項式の非負性と SOS
@@ -42,7 +42,7 @@ $p^{*}=\min p(x)$ の SOS 下界 $p^{\mathrm{sos}}=\max\{\gamma: p-\gamma\text{ 
 *4 行列値多項式の SOS 分解（Kalyuzhnyi-Verbovetskyi, Hol–Scherer）
 一変数の非負行列値多項式が行列多項式の SOS で書けることを示し、多変数では成り立たない例を述べよ。
 
-*4 非可換 SOS と Helton の定理
+*5 非可換 SOS と Helton の定理
 非可換多項式が全次元の行列代入で半正定値となる $\iff$ 非可換 SOS（Helton 2002）。証明の骨格を与え、可換の場合との違い（Hilbert の反例が現れない）を論ぜよ。
 
 *4 DSOS・SDSOS 緩和（Ahmadi–Majumdar）
@@ -62,28 +62,28 @@ $p$ が SOS $p=\sum q_{i}^{2}$ なら、$q_{i}$ の Newton 多面体は $\frac12
 
 =ch VIII-4　Positivstellensatz とモーメント階層
 
-*4 Schmüdgen の Positivstellensatz {schmudgen}
+*5 Schmüdgen の Positivstellensatz {schmudgen}
 $K=\{g_{1}\ge0,\dots,g_{m}\ge0\}$ がコンパクトなら、$K$ 上正の多項式は前順序 $\{\sum_{S}\sigma_{S}\prod_{i\in S}g_{i}:\sigma_{S}\text{ SOS}\}$ に属する（Schmüdgen 1991）。主張を正確に述べ、Stengle の Positivstellensatz からの証明の骨格を与えよ。
 
-*4 Putinar の Positivstellensatz {putinar}
+*5 Putinar の Positivstellensatz {putinar}
 二次加群 $\{\sigma_{0}+\sum\sigma_{i}g_{i}\}$ がアルキメデス的（ある $N-\|x\|^{2}$ を含む）なら、$K$ 上正の多項式はそれに属する（Putinar 1993）。Jacobi の表現定理（関数解析的証明）を用いて示せ。
 
 *4 Krivine–Stengle の Positivstellensatz
 $p>0$ on $K$ $\iff$ 前順序の元 $s_{1},s_{2}$ で $ps_{1}=1+s_{2}$。$p\ge0$ on $K$、$p=0$ on $K$ の場合の形も述べ、実零点定理（Real Nullstellensatz）を導け。
 
-*4 Lasserre のモーメント・SOS 階層 {lasserre}
+*5 Lasserre のモーメント・SOS 階層 {lasserre}
 $\min_{x\in K}p(x)$ に対し、次数 $2r$ のモーメント緩和（モーメント行列と局所化行列の PSD 制約）とその双対の SOS 緩和を定義し、$K$ がアルキメデス的なら緩和値が $p^{*}$ に単調収束することを Putinar の定理から示せ（Lasserre 2001）。
 
 *4 モーメント行列の平坦拡張と最適解の抽出（Curto–Fialkow）
 モーメント行列 $M_{r}(y)$ が平坦（$\operatorname{rank}M_{r}=\operatorname{rank}M_{r-1}$）ならば $y$ は $\operatorname{rank}M_{r}$ 個の原子からなる測度のモーメントであり（Curto–Fialkow）、Lasserre 階層の有限収束の判定と最適解の抽出（Henrion–Lasserre）に使えることを示せ。
 
-*4 Lasserre 階層の一般的有限収束（Nie）
+*5 Lasserre 階層の一般的有限収束（Nie）
 アルキメデス性の下で、一般的な（Zariski 開稠密な）データについて Lasserre 階層は有限収束する（Nie 2014）。最適性条件（LICQ・強相補性・二階十分条件）が成り立つとき有限収束することを示せ。
 
 *4 Lasserre 階層の収束率（Baldi–Mourrain, Nie–Schweighofer, Laurent–Slot）
 単位超立方体・球面・単体上の多項式最適化で、Lasserre 階層の誤差が $O(1/r^{2})$（球面・超立方体、Fang–Fawzi, Laurent–Slot）の率で減少することを述べ、Putinar の定理の定量版（次数評価）を論ぜよ。
 
-*4 0-1 多項式最適化の Lasserre 階層の有限収束
+*5 0-1 多項式最適化の Lasserre 階層の有限収束
 $\{0,1\}^{n}$ 上の最適化で Lasserre 階層は高々 $n$ 段で厳密になる（Laurent 2003）ことを示し、Sherali–Adams・Lovász–Schrijver 階層との強さの比較を与えよ。
 
 *4 Lovász–Schrijver の持ち上げ-射影
@@ -95,19 +95,19 @@ Sherali–Adams 階層は LP による持ち上げで、Lasserre の弱い版で
 *4 モーメント問題の双対としての Lasserre 階層
 一般化モーメント問題（GMP）$\min\int f\,d\mu$ s.t. $\int g_{j}d\mu=b_{j}$, $\mu\ge0$ on $K$ の Lasserre 階層による近似と、最適制御（占有測度）・確率論の最悪ケース評価への応用を述べよ。
 
-*4 多項式の最適値の SOS 下界と Positivstellensatz の次数評価
+*5 多項式の最適値の SOS 下界と Positivstellensatz の次数評価
 Putinar の表現に必要な SOS の次数の上界（Nie–Schweighofer：$O(\exp(c\,(\deg p)^{2}n^{c}(\frac{\|p\|}{p^{*}})^{c}))$）を述べ、有効な Positivstellensatz の困難を論ぜよ。
 
 *4 Hausdorff モーメントと単体上の最適化の LP 階層（de Klerk–Laurent–Parrilo）
 単体上の多項式最適化の Pólya 型 LP 階層が $O(1/r)$ で収束することを示し、同じ次数の Lasserre 階層との比較を行え。
 
-*4 疎性を活用したモーメント階層（Waki–Kim–Kojima–Muramatsu, Lasserre）
+*5 疎性を活用したモーメント階層（Waki–Kim–Kojima–Muramatsu, Lasserre）
 相関疎性パターンが running intersection property をみたすとき、疎な Putinar 定理が成り立ち、疎な Lasserre 階層が収束することを示せ（Lasserre 2006, Grimm–Netzer–Schweighofer）。
 
 *4 TSSOS と項疎性（Wang–Magron–Lasserre）
 項疎性の反復的拡張により SOS 階層のサイズを削減する TSSOS 階層が単調に密な階層に近づくことを示せ。
 
-*4 多項式最適化の非可換版と量子最適化
+*5 多項式最適化の非可換版と量子最適化
 非可換多項式の最適化の SOS 階層（NCSOStools, Pironio–Navascués–Acín）の収束と、量子多体系の基底エネルギーの下界への応用を述べよ。
 
 *4 Lasserre 階層による多項式行列不等式

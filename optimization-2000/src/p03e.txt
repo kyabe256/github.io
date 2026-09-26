@@ -1,6 +1,6 @@
 =ch III-9　双対ギャップの評価と離散最適化の双対
 
-*4 Aubin–Ekeland の双対ギャップ評価 {aubin}
+*5 Aubin–Ekeland の双対ギャップ評価 {aubin}
 分離可能問題 $\min\sum_{i=1}^{m}f_{i}(x_{i})$ s.t. $\sum g_{i}(x_{i})\le b$（$g\in\mathbb{R}^{k}$）の双対ギャップは、各 $f_{i}$ の非凸性の尺度 $\rho(f_{i})=\sup(f_{i}-f_{i}^{**})$ の上位 $k+1$ 個の和で抑えられる。Shapley–Folkman の補題から証明せよ。
 
 *4 大規模分離問題の漸近的ゼロギャップ
@@ -9,10 +9,10 @@ Aubin–Ekeland の評価から、$m\to\infty$ で相対双対ギャップが $O
 *4 Lagrange 分解の強さ（Guignard–Kim）
 $\min\{c^{\top}x: x\in X_{1}\cap X_{2}\}$（$X_{i}$ は多面体と整数格子の交わり）で変数を複製し $x=y$ を双対化した Lagrange 分解の値は $\min\{c^{\top}x: x\in\operatorname{conv}X_{1}\cap\operatorname{conv}X_{2}\}$ に等しく、どちらか一方の制約群だけを緩和した Lagrange 緩和以上に強い。等号が成り立つ条件と、真に強くなる例を与えよ。
 
-*4 整数計画の超加法的双対（Gomory, Jeroslow）
+*5 整数計画の超加法的双対（Gomory, Jeroslow）
 純整数計画 $\max\{c^{\top}x: Ax\le b,\ x\in\mathbb{Z}^{n}_{+}\}$ の双対 $\min\{F(b): F(a_{j})\ge c_{j},\ F\text{ 超加法的非減少},\ F(0)=0\}$ について強双対が成り立つ。Chvátal 関数（丸めと非負結合の合成）で双対最適解がとれることを示せ（Blair–Jeroslow）。
 
-*4 Chvátal 関数と整数包
+*5 Chvátal 関数と整数包
 有理行列 $A$ について、$\{x\in\mathbb{Z}^{n}: Ax\le b\}$ の整数包を記述する不等式はすべて Chvátal 関数で表される不等式である。整数計画の双対証明書がこの形であることを示せ。
 
 *4 Benders 分解の双対的基礎
@@ -21,7 +21,7 @@ $\min\{c^{\top}x+q^{\top}y: Tx+Wy\ge h,\ x\in X,\ y\ge0\}$ で、$y$ に関す�
 *4 Dantzig–Wolfe 分解と列生成
 ブロック構造 LP で、各ブロックの実行可能集合を端点の凸結合で表す主問題と、価格付け部分問題の交互解法が有限回で終了すること、Lagrange 緩和と双対の関係にあることを示せ。
 
-*4 Held–Karp の下界
+*5 Held–Karp の下界
 TSP の 1-tree Lagrange 緩和の最良値は、部分巡回除去制約付き LP 緩和の値に等しい。Geoffrion の定理から導け。
 
 *4 ナップサック問題の双対ギャップ
@@ -30,19 +30,19 @@ TSP の 1-tree Lagrange 緩和の最良値は、部分巡回除去制約付き L
 *4 劣モジュラ関数の Lovász 拡張 {lovasz-ext}
 集合関数 $F$ の Lovász 拡張 $f$ が凸 $\iff F$ が劣モジュラ。このとき $\min_{S}F(S)=\min_{x\in[0,1]^{n}}f(x)$ であり、劣モジュラ最小化が凸最適化に帰着することを示せ。
 
-*4 Edmonds の多面体定理（ポリマトロイド）
+*5 Edmonds の多面体定理（ポリマトロイド）
 劣モジュラ関数 $F$ のベース多面体 $B(F)$ 上の線形最適化は貪欲法で解け、$f(x)=\max_{s\in B(F)}\langle s,x\rangle$。Edmonds の交わり定理（二つのポリマトロイドの共通部分の最大値）を LP 双対から導け。
 
-*4 マトロイド交わり定理
+*5 マトロイド交わり定理
 二つのマトロイドの共通独立集合の最大サイズは $\min_{A}\{r_{1}(A)+r_{2}(E\setminus A)\}$ に等しい（Edmonds）。二部マッチング（König）と Rado の定理が特殊化であることを示せ。
 
-*4 劣モジュラ最小化の強多項式性
+*5 劣モジュラ最小化の強多項式性
 劣モジュラ関数の最小化は（値オラクルで）強多項式時間で解ける（Iwata–Fleischer–Fujishige, Schrijver）。楕円体法による多項式時間性（Grötschel–Lovász–Schrijver）の議論を Lovász 拡張から再構成せよ。
 
-*4 離散凸解析（室田の M 凸・L 凸関数）
+*5 離散凸解析（室田の M 凸・L 凸関数）
 整数格子上の L♮ 凸関数・M♮ 凸関数を定義し、局所最適性が大域最適性を保証すること、および L♮/M♮ の共役性（離散 Fenchel 双対定理）を示せ。
 
-*4 Fenchel 型離散双対定理（室田）
+*5 Fenchel 型離散双対定理（室田）
 M♮ 凸関数 $f$ と M♮ 凹関数 $g$ について $\min\{f(x)-g(x)\}=\max\{g^{\circ}(p)-f^{\bullet}(p)\}$ で、整数データなら双対最適解も整数。マトロイド交わり定理を特殊化として得よ。
 
 *4 ラウンディングの双対ギャップ（整数性ギャップ）
@@ -80,16 +80,16 @@ $\min c^{\top}x$ s.t. $a(t)^{\top}x\ge b(t)$（$t\in T$、$T$ コンパクト、
 *4 一般化 Chebyshev 不等式の SDP 定式化（Bertsimas–Popescu, Vandenberghe–Boyd–Comanor）
 一次・二次モーメントが与えられた分布の集合について $\sup\mathbb{P}(X\in C)$ を求める問題が、$C$ が多面体（あるいは二次制約で定まる集合）の補集合の場合に SDP で厳密に解けることを示せ。
 
-*4 Kantorovich 双対定理（一般形） {kdual}
+*5 Kantorovich 双対定理（一般形） {kdual}
 ポーランド空間 $X,Y$ と下半連続コスト $c\ge0$ について $\min_{\pi\in\Pi(\mu,\nu)}\int c\,d\pi=\sup\{\int\phi d\mu+\int\psi d\nu:\phi\oplus\psi\le c\}$（最小は達成）。コンパクトの場合からの近似で証明せよ。
 
 *4 Kantorovich–Rubinstein の定理
 距離コスト $c=d$ の場合、Wasserstein-1 距離は $W_{1}(\mu,\nu)=\sup\{\int f\,d(\mu-\nu):\operatorname{Lip}f\le1\}$。Kantorovich 双対から導け。
 
-*4 Strassen の定理（確率的順序の結合）
+*5 Strassen の定理（確率的順序の結合）
 確率測度 $\mu,\nu$ について、周辺 $\mu,\nu$ をもつ結合 $\pi$ で $\pi(\{x\le y\})=1$ となるものが存在 $\iff$ 任意の非減少有界関数 $f$ で $\int f d\mu\le\int f d\nu$。Kantorovich 双対から導け。
 
-*4 マルチンゲール最適輸送の双対（Beiglböck–Henry-Labordère–Penkner）
+*5 マルチンゲール最適輸送の双対（Beiglböck–Henry-Labordère–Penkner）
 周辺 $\mu,\nu$ とマルチンゲール制約 $E[Y|X]=X$ の下での $\sup E[c(X,Y)]$ の双対が、静的ヘッジ $\phi(x)+\psi(y)+h(x)(y-x)\ge c(x,y)$ の最小コストに等しい（凸順序の下で）。一次元の場合の強双対を示し、モデル非依存の価格限界としての解釈を述べよ。
 
 *4 Monge–Kantorovich の弱双対と Monge 問題の非存在
@@ -104,19 +104,19 @@ $\max\int_{0}^{T}c(t)^{\top}x(t)dt$ s.t. $B x(t)+\int_{0}^{t}Kx(s)ds\le b(t)$, $
 *4 確率計画の双対と非予見性乗数
 二段階確率計画の非予見性制約 $x_{\omega}=E[x]$ に対する Lagrange 乗数が、確率変数としての「情報の価値」を表すことを示し、Rockafellar–Wets の段階的ヘッジ法（progressive hedging）を拡張 Lagrangian として導け。
 
-*4 分布ロバスト最適化の双対（Wasserstein 球） {dro}
+*5 分布ロバスト最適化の双対（Wasserstein 球） {dro}
 $\sup\{E_{Q}[\ell(\xi)]: W_{p}(Q,\hat P_{N})\le\rho\}$ は $\inf_{\lambda\ge0}\{\lambda\rho^{p}+\frac{1}{N}\sum_{i}\sup_{\xi}[\ell(\xi)-\lambda d(\xi,\hat\xi_{i})^{p}]\}$ に等しい（Mohajerin Esfahani–Kuhn, Gao–Kleywegt, Blanchet–Murthy）。強双対を証明せよ。
 
 *4 $\phi$-ダイバージェンス球の DRO 双対
 $\sup\{E_{Q}[\ell]: D_{\phi}(Q\|P)\le\rho\}=\inf_{\lambda\ge0,\eta}\{\lambda\rho+\eta+\lambda E_{P}[\phi^{*}((\ell-\eta)/\lambda)]\}$ を示し、KL 球の場合にリスク尺度（エントロピー的リスク）との関係を述べよ（Ben-Tal–den Hertog–De Waegenaere–Melenberg–Rennen）。
 
-*4 コヒーレントリスク尺度の双対表現（Artzner–Delbaen–Eber–Heath）
+*5 コヒーレントリスク尺度の双対表現（Artzner–Delbaen–Eber–Heath）
 コヒーレントなリスク尺度 $\rho$（単調・並進同変・正斉次・劣加法的、Fatou 性）は $\rho(X)=\sup_{Q\in\mathcal{Q}}E_{Q}[-X]$ と確率測度の集合上の最悪期待値で表される。Fenchel–Moreau から導き、CVaR の双対表現を求めよ。
 
 *4 CVaR の Rockafellar–Uryasev 表現
 $\operatorname{CVaR}_{\alpha}(X)=\min_{t}\{t+\frac{1}{1-\alpha}E[(X-t)_{+}]\}$ で、最小点は VaR。これから CVaR 最小化ポートフォリオ問題が LP に帰着することを示せ。
 
-*4 無限次元の Lagrange 乗数と正則性（Zowe–Kurcyusz）
+*5 無限次元の Lagrange 乗数と正則性（Zowe–Kurcyusz）
 Banach 空間の問題 $\min f(x)$ s.t. $G(x)\in K$ で、正則性条件 $DG(x^{*})C(x^{*})-K(G(x^{*}))=Y$（$C,K$ は錐）の下、有界な乗数集合が存在することを示せ（Zowe–Kurcyusz）。$L^{2}$ 上の状態制約付き最適制御で乗数が測度になる現象を説明せよ。
 
 *5 Kellerer の双対定理と多周辺最適輸送

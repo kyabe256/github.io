@@ -42,10 +42,10 @@ BPDN の解が $x$ の台を回復するための双対証明書（$A^{\top}u$ �
 *4 超解像（Candès–Fernandez-Granda）
 低周波 Fourier 係数 $|k|\le f_{c}$ から、最小分離 $\Delta\ge2/f_{c}$ のスパイク列が総変動ノルム最小化（SDP で解ける）で正確に復元されることを、双対多項式の構成で示せ。
 
-*4 圧縮センシングの下界（Gelfand 幅）
+*5 圧縮センシングの下界（Gelfand 幅）
 $\ell_{1}$ 球の Gelfand 幅 $d^{m}(B_{1}^{n},\ell_{2})\asymp\min\{1,\sqrt{\log(en/m)/m}\}$（Kashin, Garnaev–Gluskin）から、$s$-スパース回復に $m\gtrsim s\log(n/s)$ 個の測定が必要であることを導け。
 
-*4 Kashin の分解定理
+*5 Kashin の分解定理
 $\mathbb{R}^{2n}$ は、$\ell_{1}$ ノルムと $\sqrt{2n}\cdot\ell_{2}$ ノルムが定数倍で同値になる二つの $n$ 次元部分空間の直和に分解できる（Kashin 1977）。ランダム部分空間による証明の骨格を与えよ。
 
 *4 1 ビット圧縮センシング（Plan–Vershynin）
@@ -62,7 +62,7 @@ Gauss 行列の LASSO に対する AMP アルゴリズムの反復が、Onsager 
 
 =ch VIII-8　低ランク行列回復
 
-*4 核ノルムの凸包性（Fazel）
+*5 核ノルムの凸包性（Fazel）
 $\{X:\|X\|\le1\}$ 上で、$\operatorname{rank}X$ の凸包絡は核ノルム $\|X\|_{*}$ である（Fazel 2002）。共役を二度とって証明せよ。
 
 *4 行列 RIP と低ランク回復（Recht–Fazel–Parrilo）
@@ -74,19 +74,19 @@ $\{X:\|X\|\le1\}$ 上で、$\operatorname{rank}X$ の凸包絡は核ノルム $\
 *4 行列 Bernstein 不等式（Tropp, Ahlswede–Winter）
 独立な対称ランダム行列 $X_{k}$（$EX_{k}=0$, $\|X_{k}\|\le R$）について $\mathbb{P}(\|\sum X_{k}\|\ge t)\le2n\exp\left(\frac{-t^{2}/2}{\sigma^{2}+Rt/3}\right)$（$\sigma^{2}=\|\sum EX_{k}^{2}\|$）。Lieb の凹性定理を用いて証明せよ。
 
-*4 ロバスト主成分分析（Candès–Li–Ma–Wright, Chandrasekaran ら）
+*5 ロバスト主成分分析（Candès–Li–Ma–Wright, Chandrasekaran ら）
 $M=L_{0}+S_{0}$（低ランク＋スパース）について、$\min\|L\|_{*}+\lambda\|S\|_{1}$ s.t. $L+S=M$（$\lambda=1/\sqrt n$）が、非コヒーレンスとランダムなスパース台の下で高確率で正確に分解する。主張を述べ、双対証明書の条件を導け。
 
 *4 位相回復の PhaseLift（Candès–Strohmer–Voroninski）
 $|\langle a_{i},x\rangle|^{2}=\operatorname{tr}(a_{i}a_{i}^{\top}X)$ と持ち上げ、$\min\operatorname{tr}X$ s.t. 線形制約, $X\succeq0$ が $m\gtrsim n\log n$（改良で $m\gtrsim n$）の Gauss 測定で $xx^{\top}$ を正確に回復することを示せ。
 
-*4 低ランク行列の非凸最適化の景観（Ge–Jin–Zheng）
+*5 低ランク行列の非凸最適化の景観（Ge–Jin–Zheng）
 行列補完の非凸定式化（正則化付き）について、すべての局所最小点が大域最小点であり、鞍点が厳密であることの主張を述べ、行列センシングの場合（RIP）の証明を完成させよ。
 
 *4 Burer–Monteiro の因子分解勾配法の線形収束（Tu ら, Zheng–Lafferty）
 行列センシング $\min_{U}\|\mathcal{A}(UU^{\top})-y\|^{2}$ に対し、スペクトル初期化と勾配降下が RIP の下で線形収束する（Procrustes 距離で）ことを示せ。
 
-*4 過剰パラメータ化と暗黙の低ランク正則化（Gunasekar ら, Li–Ma–Zhang）
+*5 過剰パラメータ化と暗黙の低ランク正則化（Gunasekar ら, Li–Ma–Zhang）
 過剰パラメータ化された行列因子分解 $UU^{\top}$（$U\in\mathbb{R}^{n\times n}$）に小さな初期値から勾配降下を行うと、行列センシングで最小核ノルム解（低ランク解）に近づく（RIP の下で証明、Li–Ma–Zhang 2018）。主張を述べ骨格を示せ。
 
 *4 低ランク近似の Eckart–Young–Mirsky 定理
@@ -98,7 +98,7 @@ $|\langle a_{i},x\rangle|^{2}=\operatorname{tr}(a_{i}a_{i}^{\top}X)$ と持ち�
 *4 CUR 分解とレバレッジスコア標本化（Mahoney–Drineas）
 列と行のレバレッジスコアに比例した標本化による CUR 分解が $\|A-CUR\|_{F}\le(1+\varepsilon)\|A-A_{k}\|_{F}$ を $O(k\log k/\varepsilon^{2})$ 列で達成することを示せ。
 
-*4 テンソル分解と非凸性（Hillar–Lim）
+*5 テンソル分解と非凸性（Hillar–Lim）
 テンソルのランク・スペクトルノルム・最良ランク 1 近似の計算が NP 困難であること（Hillar–Lim 2013）を述べ、最良低ランク近似が存在しない例（de Silva–Lim）を構成せよ。
 
 *4 テンソルのべき乗法と直交分解（Anandkumar–Ge–Hsu–Kakade–Telgarsky）
@@ -107,10 +107,10 @@ $|\langle a_{i},x\rangle|^{2}=\operatorname{tr}(a_{i}a_{i}^{\top}X)$ と持ち�
 *4 部分空間クラスタリングとスパース部分空間クラスタリング（Elhamifar–Vidal, Soltanolkotabi–Candès）
 データ点を他の点の $\ell_{1}$ スパース結合で表す SSC が、部分空間が十分に離れていれば正しい部分空間に属する点のみを選ぶ（自己表現性）ことを示せ。
 
-*4 非負行列分解の計算困難性と可分性（Vavasis, Arora–Ge–Kannan–Moitra）
+*5 非負行列分解の計算困難性と可分性（Vavasis, Arora–Ge–Kannan–Moitra）
 非負行列分解（NMF）は NP 困難（Vavasis）だが、可分性（separability）の仮定の下では多項式時間で解ける（Arora–Ge–Kannan–Moitra）ことを示せ。
 
-*4 辞書学習の景観と回復（Sun–Qu–Wright, Spielman–Wang–Wright）
+*5 辞書学習の景観と回復（Sun–Qu–Wright, Spielman–Wang–Wright）
 完全な辞書に対する球面上の非凸定式化 $\min_{q\in S^{n-1}}\frac1p\sum h_{\mu}(q^{\top}y_{i})$ の良い景観（すべての局所最小点が辞書の列に対応）の主張を述べ、Riemann 信頼領域法での回復を論ぜよ。
 
 *4 スペクトル法の一致性（Davis–Kahan の応用）

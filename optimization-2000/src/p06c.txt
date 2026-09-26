@@ -18,7 +18,7 @@ LP の鞍点定式化に PDHG を適用し、正規化双対ギャップに基�
 *4 Arrow–Hurwicz–Uzawa 法
 鞍点問題の同時勾配法（Arrow–Hurwicz）は凸凹でも収束しないことがあり（双線形の例）、Uzawa 法（主変数を厳密最小化）は双対の勾配上昇として収束する（強凸な場合）ことを示せ。
 
-*4 鞍点問題の一次法の下界（Ouyang–Xu, Zhang–Hong–Zhang）
+*5 鞍点問題の一次法の下界（Ouyang–Xu, Zhang–Hong–Zhang）
 双線形結合をもつ凸凹鞍点問題に対し、一次法は $\Omega(\frac{LD^{2}}{k})$（凸凹）、$\Omega(\sqrt{\kappa_{x}\kappa_{y}}\log(1/\varepsilon))$（強凸強凹）の下界をもつ。後者を達成するアルゴリズム（Lin–Jin–Jordan、Kovalev–Gasnikov–Richtárik）の主張を述べよ。
 
 *4 非凸凹 minimax の GDA（Lin–Jin–Jordan）
@@ -39,7 +39,7 @@ $\min_{x}\max_{y}f(x)+\langle Kx,y\rangle-g^{*}(y)$（$f$ は $L$-平滑）に�
 *4 主双対法のステップ幅適応（Malitsky–Pock）
 $\|K\|$ を知らずに直線探索で $\tau,\sigma$ を調整する主双対法の収束を示せ。
 
-*4 主双対法と Frank–Wolfe の双対性（Bach）
+*5 主双対法と Frank–Wolfe の双対性（Bach）
 双対問題への Frank–Wolfe は、主問題への（エルゴード平均付き）ミラー降下／劣勾配法に対応することを示せ（Bach 2015）。
 
 *4 鞍点問題の二階法（Newton-type for minimax）
@@ -68,7 +68,7 @@ $\mu_{x}$-強凸 $\mu_{y}$-強凹、$L$-平滑な鞍点問題に対し、一次�
 *5 Douglas–Rachford 分割の収束（Lions–Mercier, Svaiter） {dr}
 極大単調 $A,B$ に対し、$z_{k+1}=z_{k}+J_{\gamma A}(2J_{\gamma B}z_{k}-z_{k})-J_{\gamma B}z_{k}$ は弱収束し、影の列 $J_{\gamma B}z_{k}$ も $\operatorname{zer}(A+B)$ の点に弱収束する（Svaiter 2011：影の列の弱収束は長く未解決だった）。証明を完成させよ。
 
-*4 ADMM の収束と Douglas–Rachford との等価性 {admm}
+*5 ADMM の収束と Douglas–Rachford との等価性 {admm}
 $\min f(x)+g(z)$ s.t. $Ax+Bz=c$ の ADMM は、双対問題 $\min f^{*}(A^{\top}\cdot)+g^{*}(B^{\top}\cdot)-\langle c,\cdot\rangle$ に対する Douglas–Rachford 分割と等価である（Gabay 1983）。これから ADMM の収束を導け。
 
 *4 ADMM の $O(1/k)$ エルゴード率（He–Yuan）
@@ -77,19 +77,19 @@ ADMM の反復のエルゴード平均が、変分不等式の意味で $O(1/k)$
 *4 ADMM の線形収束（Deng–Yin, Hong–Luo）
 $f$ が強凸かつ平滑で $A$ がフルランクなどの条件の下で ADMM が線形収束することを示し、多面体的な場合に誤差限界から線形収束を導け（Hong–Luo）。
 
-*4 多ブロック ADMM の発散（Chen–He–Ye–Yuan）
+*5 多ブロック ADMM の発散（Chen–He–Ye–Yuan）
 三ブロックの直接拡張 ADMM は、凸二次問題でも発散しうる（Chen–He–Ye–Yuan 2016 の $3\times3$ の反例）。反例を確かめ、ランダム置換 ADMM が期待値で収束すること（Sun–Luo–Ye）を述べよ。
 
-*4 Davis–Yin の三作用素分割
+*5 Davis–Yin の三作用素分割
 $0\in Ax+Bx+Cx$（$C$ は共強圧的）に対する $z_{+}=z-J_{\gamma B}z+J_{\gamma A}(2J_{\gamma B}z-z-\gamma CJ_{\gamma B}z)$ が収束することを示し、前進後退・DR・前進後退前進の統一であることを確かめよ（Davis–Yin 2017）。
 
-*4 分割法の最小のレゾルベント数（Ryu の不可能性定理）
+*5 分割法の最小のレゾルベント数（Ryu の不可能性定理）
 三つの極大単調作用素の和の零点を、各レゾルベントを一回ずつ用いる「頻度 1」の固定点反復で求める方法は、変数 1 本の持ち上げでは存在しない（Ryu 2020）が、変数 2 本では存在することを示せ。
 
 *4 Peaceman–Rachford 分割
 $z_{+}=R_{\gamma A}R_{\gamma B}z$ は非拡大にすぎず一般に収束しないが、$A$ または $B$ が強単調なら線形収束することを示せ。
 
-*4 近接点法による分割法の統一（Eckstein–Bertsekas）
+*5 近接点法による分割法の統一（Eckstein–Bertsekas）
 DR 分割がある極大単調作用素 $S_{\gamma,A,B}$ の近接点法であること（Eckstein–Bertsekas 1992）を示し、不正確な DR・過緩和 DR の収束を近接点法の理論から導け。
 
 *4 ADMM の非凸収束（Wang–Yin–Zeng, Hong–Luo–Razaviyayn）
@@ -113,7 +113,7 @@ DR 分割の収束率の厳密な評価（強単調・Lipschitz の組合せご�
 *4 分割法の加速とその限界
 ADMM や DR に Nesterov 型の加速を施すと、強凸性の下で改善が得られるが、一般の単調作用素に対して $o(1/k)$ より速い最終反復率を得られない（Halpern 型を除く）ことを論ぜよ。
 
-*4 Halpern 反復の最適率（Lieder, Sabach–Shtern）
+*5 Halpern 反復の最適率（Lieder, Sabach–Shtern）
 非拡大写像 $T$ に対し Halpern 反復 $x_{k+1}=\frac{1}{k+2}x_{0}+\frac{k+1}{k+2}Tx_{k}$ は $\|x_{k}-Tx_{k}\|\le\frac{2\|x_{0}-x^{*}\|}{k+1}$ をみたし、これが最良である（Lieder 2021、Park–Ryu の下界）。証明せよ。
 
 *5 ADMM の反例と収束の最弱条件

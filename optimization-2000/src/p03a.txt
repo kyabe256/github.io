@@ -68,7 +68,7 @@ $\min\{c^{\top}x: Ax\le b,\ x\in X\}$（$X$ は有限集合）の Lagrange 双�
 *4 von Neumann の minimax 定理 {vn}
 行列 $A$ について $\min_{x\in\Delta_{m}}\max_{y\in\Delta_{n}}x^{\top}Ay=\max_{y}\min_{x}x^{\top}Ay$。LP 双対から証明し、混合戦略の均衡の存在として解釈せよ。
 
-*4 Sion の minimax 定理 {sion}
+*5 Sion の minimax 定理 {sion}
 $X$ コンパクト凸、$Y$ 凸で、$f(x,y)$ が $x$ について下半連続準凸、$y$ について上半連続準凹ならば $\min_{x}\sup_{y}f=\sup_{y}\min_{x}f$。KKM 補題（または Komiya の初等的証明）で証明せよ。
 
 *4 Ky Fan の minimax 不等式
@@ -86,10 +86,10 @@ $X$ コンパクト凸、$Y$ 凸で、$f(x,y)$ が $x$ について下半連続�
 *4 Lagrangian 鞍点と KKT
 凸計画の Lagrangian $L(x,\lambda)$ の鞍点 $(x^{*},\lambda^{*})$（$x\in X$, $\lambda\ge0$）$\iff$ $x^{*}$ 主最適、$\lambda^{*}$ 双対最適、ゼロ双対ギャップ。非凸では鞍点の存在が双対ギャップゼロと同値であることも示せ。
 
-*4 Blackwell の接近可能性定理
+*5 Blackwell の接近可能性定理
 ベクトル報酬の反復ゲームで、閉凸集合 $S$ が接近可能 $\iff$ 任意の半空間 $H\supset S$ が一回のゲームで強制可能。この定理から、後悔最小化（$o(T)$ の外部後悔）の存在を導け。
 
-*4 Glicksberg の定理（無限ゲームの混合均衡）
+*5 Glicksberg の定理（無限ゲームの混合均衡）
 コンパクト距離空間上の連続な利得をもつ $n$ 人ゲームは混合戦略 Nash 均衡をもつ。Kakutani の不動点定理の無限次元版（Fan–Glicksberg）を用いて証明せよ。
 
 *4 Dresher–Karlin の定理（凸ゲーム）
@@ -98,25 +98,25 @@ $X$ コンパクト凸、$Y$ 凸で、$f(x,y)$ が $x$ について下半連続�
 *4 minimax 定理の双対定式化（Fenchel）
 凸凹関数 $\phi(x,y)=\langle Ax,y\rangle+f(x)-g(y)$ について、$\min_{x}\max_{y}\phi$ の値が Fenchel 双対 $\min_{x}f(x)+g^{*}(Ax)$ と $\max_{y}-g(y)-f^{*}(-A^{\top}y)$ の共通値であることを示せ。
 
-*4 minimax と LP の同値（Dantzig の主張の厳密化）
+*5 minimax と LP の同値（Dantzig の主張の厳密化）
 任意の LP は同値な行列ゲームに還元でき、逆も成り立つ。Dantzig の還元が退化の場合に失敗しうること、Adler による完全な還元（2013）を述べよ。
 
-*4 統計的決定理論の minimax 定理（Wald）
+*5 統計的決定理論の minimax 定理（Wald）
 有限パラメータ空間の統計的決定問題で、ベイズ解の極限として minimax 解が得られ、$\inf_{\delta}\sup_{\theta}R(\theta,\delta)=\sup_{\pi}\inf_{\delta}r(\pi,\delta)$。von Neumann の定理から導き、最小最大ベイズ事前分布（最も不利な事前分布）の存在を示せ。
 
-*4 minimax 後悔と Yao の原理
+*5 minimax 後悔と Yao の原理
 乱択アルゴリズムの最悪入力に対する期待計算量の最小値は、入力の確率分布に対する決定的アルゴリズムの平均計算量の最大値に等しい（有限の場合）。von Neumann の minimax から導き、下界証明への応用を述べよ。
 
 *4 非凸非凹 minimax と局所ミニマックス
 非凸非凹問題では $\min\max\neq\max\min$ が一般的であり、Nash 型の局所鞍点が存在しない例を作れ。局所ミニマックス点（Jin–Netrapalli–Jordan）の存在と一階条件を論ぜよ。
 
-*4 Kneser–Fan の minimax（凹凸でない版）
+*5 Kneser–Fan の minimax（凹凸でない版）
 $X$ コンパクト凸、$f(x,y)$ が $x$ について凸（凸様）、$y$ について凹様（concavelike）ならば minimax 等式が成り立つ（Fan 1953）。凸様性の定義を与え、線形性を仮定しない証明を完成させよ。
 
-*4 Shapley の確率ゲームと値の存在
+*5 Shapley の確率ゲームと値の存在
 割引付き二人零和確率ゲームは値をもち、定常最適戦略が存在する。Shapley 作用素が縮小写像であることから導け。
 
-*4 Mertens–Neyman の定理
+*5 Mertens–Neyman の定理
 有限状態・有限行動の非割引確率ゲームは一様値をもつ（割引値の $\beta\to1$ の極限）。Bewley–Kohlberg の割引値の Puiseux 展開と、Mertens–Neyman の戦略構成の骨格を再構成せよ。
 
 *5 Aumann の相関均衡と LP による特徴づけ

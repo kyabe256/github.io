@@ -1,12 +1,12 @@
 =ch VI-7　座標降下法
 
-*4 ランダム座標降下法（Nesterov 2012） {rcd}
+*5 ランダム座標降下法（Nesterov 2012） {rcd}
 座標ごとの Lipschitz 定数 $L_{i}$ をもつ凸関数に対し、座標 $i$ を確率 $L_{i}/\sum L_{j}$ で選び $x_{i}\leftarrow x_{i}-\frac{1}{L_{i}}\nabla_{i}f$ とするランダム座標降下法は $E f(x_{k})-f^{*}\le\frac{2\sum L_{i}R^{2}}{k+4}$、強凸なら $(1-\mu/\sum L_{i})^{k}$ で線形収束する。証明せよ。
 
 *4 加速座標降下法（Nesterov, Lee–Sidford, Allen-Zhu ら）
 加速ランダム座標降下法が $O(\sum\sqrt{L_{i}}R/\sqrt\varepsilon)$ の反復計算量を達成し、各反復のコストを座標 1 つ分に抑える実装（Lee–Sidford の変数変換）を述べよ。
 
-*4 巡回座標降下の最悪ケース（Sun–Ye）
+*5 巡回座標降下の最悪ケース（Sun–Ye）
 巡回（Gauss–Seidel 型）座標降下は、ランダム版より $O(n)$ 倍（あるいは $O(n^{2})$ 倍）遅くなりうる二次関数の例が存在する（Sun–Ye 2019）。例を構成せよ。
 
 *4 Gauss–Southwell 規則（Nutini ら）
@@ -15,7 +15,7 @@
 *4 分離非平滑項つき座標降下（Richtárik–Takáč, Tseng–Yun）
 $\min f(x)+\sum g_{i}(x_{i})$ に対するランダム座標近接勾配法の収束率を示し、$g$ が非分離なら座標降下が停留点に収束しない例（$|x_{1}-x_{2}|$）を作れ。
 
-*4 座標降下の非凸での失敗と成功（Powell, Tseng）
+*5 座標降下の非凸での失敗と成功（Powell, Tseng）
 非微分可能な非分離項があると座標降下は非停留点に止まる（Tseng 2001 の例）。$f$ が準凸で各ブロックの最小点が一意なら、巡回ブロック座標降下の集積点は停留点である（Tseng）ことを示せ。
 
 *4 並列座標降下（Richtárik–Takáč, ESO）
@@ -30,7 +30,7 @@ $\tau$ 座標を同時に更新する並列座標降下の収束率を、期待�
 *4 ランダム化 Gauss–Seidel と最小二乗
 正定値系に対するランダム座標降下（ランダム Gauss–Seidel）が $E\|x_{k}-x^{*}\|_{A}^{2}\le(1-\frac{\lambda_{\min}(A)}{\operatorname{tr}A})^{k}\|x_{0}-x^{*}\|_{A}^{2}$ をみたすことを示せ（Leventhal–Lewis）。
 
-*4 ブロック Kaczmarz とスケッチ法の統一（Gower–Richtárik）
+*5 ブロック Kaczmarz とスケッチ法の統一（Gower–Richtárik）
 ランダムスケッチ $S$ による射影 $x_{+}=x-A^{\top}S(S^{\top}AA^{\top}S)^{+}S^{\top}(Ax-b)$ は、Kaczmarz・座標降下・ブロック法をすべて含み、率が $1-\lambda_{\min}(E[Z])$ で与えられることを示せ（Gower–Richtárik 2015）。
 
 *4 非同期座標降下（Liu–Wright, Hogwild!）
@@ -45,7 +45,7 @@ LASSO・エラスティックネットの座標降下が閉形式のソフト閾
 *4 ブロック座標降下と交互最小化の $O(1/k)$ 率（Beck–Tetruashvili）
 平滑凸関数に対する巡回ブロック座標勾配降下が $O(\frac{pL_{\max}R^{2}}{k})$（$p$ はブロック数）の率をもつことを示せ。
 
-*4 座標降下の下界
+*5 座標降下の下界
 座標オラクル（一回に一座標の偏微分のみ）を用いる方法に対し、$O(n\sqrt{L/\varepsilon})$ 相当の下界が成り立つことを述べ、加速座標降下の最適性を論ぜよ。
 
 *4 座標降下の Hessian 情報版（Newton 座標）
@@ -71,13 +71,13 @@ PEP の SDP 双対の実行可能解が、補間不等式の非負結合とし�
 *4 最適化勾配法 OGM（Kim–Fessler） {ogm}
 PEP で最悪ケースを最小化するステップを求めると、OGM $f(x_{N})-f^{*}\le\frac{L\|x_{0}-x^{*}\|^{2}}{2\theta_{N}^{2}}$（$\theta_{N}\approx(N+1)/\sqrt2$）が得られ、Nesterov 法より定数倍 $2$ 良い。OGM の効率的な実装（二つの運動量）を導け。
 
-*4 OGM の厳密な最適性（Drori 2017）
+*5 OGM の厳密な最適性（Drori 2017）
 $L$-平滑凸関数に対する一次法の最悪ケース下界が OGM の上界 $\frac{LR^{2}}{2\theta_{N}^{2}}$ に正確に一致する（大次元において）ことを示せ。最悪関数の構成を述べよ。
 
-*4 勾配ノルムを最小化する最適法 OGM-G（Kim–Fessler）
+*5 勾配ノルムを最小化する最適法 OGM-G（Kim–Fessler）
 $\|\nabla f(x_{N})\|^{2}\le\frac{2L(f(x_{0})-f^{*})}{(N+1)^{2}}$ を達成する OGM-G を PEP で導き、これが最良であること（Nesterov–Gasnikov–Guminov–Dvurechensky の下界）を述べよ。
 
-*4 強凸関数の最適法：ITEM（Taylor–Drori）
+*5 強凸関数の最適法：ITEM（Taylor–Drori）
 $\mu$-強凸 $L$-平滑関数に対し、ITEM（information-theoretic exact method）が $\|z_{N}-x^{*}\|^{2}\le\frac{1}{1+q\,A_{N}}\|x_{0}-x^{*}\|^{2}$ 型の厳密な最良率を達成し、下界と一致することを示せ。
 
 *4 三項漸化式法（Van Scoy–Freeman–Lynch の TMM）
@@ -101,7 +101,7 @@ $\mu$-強凸 $L$-平滑関数に対し、ITEM（information-theoretic exact meth
 *4 非凸関数の PEP（Abbaszadehpeivasti–de Klerk–Zamani）
 $L$-平滑非凸関数に対する定ステップ勾配法の $\min_{k\le N}\|\nabla f(x_{k})\|^{2}$ の厳密な最悪ケースをステップ幅の関数として PEP で導き、ステップ $1/L$ が最適でないことを示せ。
 
-*4 演算子の PEP と Halpern 反復の最適性（Park–Ryu）
+*5 演算子の PEP と Halpern 反復の最適性（Park–Ryu）
 非拡大写像の固定点問題に対する一次法（作用素評価に基づく）の下界 $\|x_{N}-Tx_{N}\|\ge\frac{\|x_{0}-x^{*}\|}{N+1}$ を示し、Halpern 反復が定数 2 の範囲で最適であることを結論せよ。
 
 *4 Nesterov の推定列と PEP 双対の対応

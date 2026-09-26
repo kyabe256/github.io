@@ -3,10 +3,10 @@
 *4 共正値錐と完全正値錐の双対性 {cop}
 共正値錐 $\mathcal{COP}_{n}=\{A: x^{\top}Ax\ge0\ \forall x\ge0\}$ の双対錐は完全正値錐 $\mathcal{CP}_{n}=\operatorname{conv}\{xx^{\top}:x\ge0\}$ である。両者が閉凸錐で、$\mathcal{CP}_{n}\subset\mathbb{S}_{+}\cap\mathcal{N}\subset\mathbb{S}_{+}+\mathcal{N}\subset\mathcal{COP}_{n}$ であることを示せ。
 
-*4 共正値性判定の co-NP 完全性（Murty–Kabadi）
+*5 共正値性判定の co-NP 完全性（Murty–Kabadi）
 行列の共正値性判定は co-NP 完全である。部分和問題からの帰着で示せ。
 
-*4 完全正値性判定の NP 困難性（Dickinson–Gijben）
+*5 完全正値性判定の NP 困難性（Dickinson–Gijben）
 行列が完全正値かどうかの判定は NP 困難である（Dickinson–Gijben 2014）。証明の骨格を与え、完全正値ランク（cp-rank）の上界 $\binom{n+1}{2}-4$（$n\ge5$, Shaked-Monderer–Berman–Bomze–Jarre–Schachinger）を述べよ。
 
 *4 Horn 行列と $\mathcal{COP}_{5}$ の極値
@@ -18,10 +18,10 @@ Horn 行列 $H$（$5\times5$、巡回的に $1,-1,1,1,-1$）が共正値だが $
 *4 安定集合数のコポジティブ表現（de Klerk–Pasechnik）
 グラフの安定数 $\alpha(G)$ は $\min\{\lambda:\lambda(I+A_{G})-J\in\mathcal{COP}_{n}\}$ に等しい。Motzkin–Straus の定理から導け。
 
-*4 de Klerk–Pasechnik の LP・SDP 階層
+*5 de Klerk–Pasechnik の LP・SDP 階層
 コポジティブ錐の内側近似階層 $\mathcal{C}^{r}_{n}$（Pólya 型 LP）と $\mathcal{K}^{r}_{n}$（Parrilo の SDP）を安定数の問題に適用し、$r\ge\alpha(G)^{2}$ で厳密になることを示せ（de Klerk–Pasechnik 2002）。
 
-*4 Burer の完全正値再定式化の証明
+*5 Burer の完全正値再定式化の証明
 二値変数を含む非凸 QP $\min\{x^{\top}Qx+2c^{\top}x: Ax=b,\ x\ge0,\ x_{j}\in\{0,1\}\ (j\in B)\}$ の完全正値再定式化の厳密性（Burer 2009）を、実行可能集合の凸包の Minkowski 分解から証明せよ。
 
 *4 コポジティブ双対ギャップの不在と強双対性
@@ -45,7 +45,7 @@ $X\in\mathcal{CP}_{n}$ の分解 $X=BB^{\top}$（$B\ge0$）の計算が、対称
 *4 一般化 Motzkin–Straus とハイパーグラフのクリーク
 3 一様ハイパーグラフのクリーク数に対する Motzkin–Straus 型の定理（Rota Bulò–Pelillo）を述べ、単体上の 3 次多項式最適化の困難性を論ぜよ。
 
-*4 コポジティブ錐の外側近似（Yıldırım）
+*5 コポジティブ錐の外側近似（Yıldırım）
 単体の分割による共正値錐の多面体外側近似の収束を示し、標準二次計画の下界計算への応用を述べよ。
 
 *4 レプリケータ動力学と標準二次計画
@@ -65,13 +65,13 @@ $n\times n$ 完全正値行列の cp-rank の最大値 $p_{n}$ について、$p
 *5 Goemans–Williamson の MAX-CUT 近似 {gw}
 MAX-CUT の SDP 緩和の最適解のベクトル $v_{i}$ をランダム超平面で分割すると、期待カット値は SDP 値の $\alpha_{GW}=\min_{0<\theta\le\pi}\frac{2\theta}{\pi(1-\cos\theta)}\approx0.878$ 倍以上である。証明せよ（Goemans–Williamson 1995）。
 
-*4 Nesterov の $2/\pi$ 定理
+*5 Nesterov の $2/\pi$ 定理
 $\max\{x^{\top}Qx: x\in\{\pm1\}^{n}\}$ で $Q\succeq0$ のとき、SDP 緩和とランダム超平面ラウンディングで $2/\pi$ 近似が得られる（Nesterov 1998）。$\arcsin$ 恒等式 $E[\operatorname{sgn}(\langle g,u\rangle)\operatorname{sgn}(\langle g,v\rangle)]=\frac2\pi\arcsin\langle u,v\rangle$ と $\arcsin(X)-X\succeq0$ から証明せよ。
 
 *4 Grothendieck の不等式と SDP {groth}
 $\max\sum A_{ij}\langle u_{i},v_{j}\rangle$（単位ベクトル）$\le K_{G}\max\sum A_{ij}x_{i}y_{j}$（$\pm1$）が成り立つ（$K_{G}\le\frac{\pi}{2\ln(1+\sqrt2)}$, Krivine）。Krivine の証明を完成させ、カットノルムの近似（Alon–Naor）への応用を述べよ。
 
-*4 Krivine の上界の非最良性（Braverman–Makarychev–Makarychev–Naor）
+*5 Krivine の上界の非最良性（Braverman–Makarychev–Makarychev–Naor）
 Grothendieck 定数 $K_{G}$ は Krivine の上界 $\frac{\pi}{2\ln(1+\sqrt2)}$ より真に小さい（BMMN 2011）。主張と証明の構成原理（非対称な超平面ラウンディング）を述べよ。
 
 *4 MAX-2SAT・MAX-DICUT の SDP 近似（Feige–Goemans, Lewin–Livnat–Zwick）
@@ -83,28 +83,28 @@ MAX-$k$-CUT の SDP 緩和とランダムベクトルによる $k$ 分割ラウ�
 *4 グラフ彩色の SDP 近似（Karger–Motwani–Sudan）
 3 彩色可能なグラフを $\tilde O(n^{1/4})$ 色（あるいは $\tilde O(\Delta^{1/3})$ 色）で多項式時間に彩色できることを、ベクトル彩色の SDP とランダム超平面・ランダムベクトルのラウンディングで示せ。
 
-*4 疎カットの ARV アルゴリズム
+*5 疎カットの ARV アルゴリズム
 最疎カット問題に対し、$\ell_{2}^{2}$ 距離の三角不等式を加えた SDP 緩和から $O(\sqrt{\log n})$ 近似を得る（Arora–Rao–Vazirani 2004）。構造定理（well-separated sets の存在）の主張を述べ、証明の骨格を与えよ。
 
 *4 Leighton–Rao と多品種流の LP 緩和
 最疎カットの LP 緩和（多品種流）の整数性ギャップが $\Theta(\log n)$ であること（Leighton–Rao）を、Bourgain の埋め込み定理（$\ell_{1}$ への $O(\log n)$ 歪み埋め込み）から導け（Linial–London–Rabinovich）。
 
-*4 Bourgain の埋め込み定理
+*5 Bourgain の埋め込み定理
 任意の $n$ 点距離空間は $\ell_{1}$（実は $\ell_{2}$）に歪み $O(\log n)$ で埋め込める（Bourgain 1985）。Fréchet 埋め込みとランダム部分集合の構成で証明せよ。
 
-*4 Unique Games 予想と MAX-CUT の困難性
+*5 Unique Games 予想と MAX-CUT の困難性
 Unique Games 予想の下で、MAX-CUT を $\alpha_{GW}+\varepsilon$ 倍で近似するのは NP 困難である（Khot–Kindler–Mossel–O'Donnell）。主張と、証明の鍵となる「多数決が最も安定」定理（Mossel–O'Donnell–Oleszkiewicz）を述べよ。
 
-*4 Majority is Stablest（Mossel–O'Donnell–Oleszkiewicz）
+*5 Majority is Stablest（Mossel–O'Donnell–Oleszkiewicz）
 低影響度のブール関数のうち、雑音安定性を最大化するのは（漸近的に）多数決関数である。不変原理（Gauss 空間への移行）と Borell の雑音安定性定理から証明の骨格を与えよ。
 
-*4 Borell の等周定理（Gauss 空間の雑音安定性）
+*5 Borell の等周定理（Gauss 空間の雑音安定性）
 Gauss 空間で測度 $1/2$ の集合のうち、相関 $\rho$ の雑音安定性を最大化するのは半空間である（Borell 1985）。Gauss 等周不等式との関係を述べ、証明の骨格を与えよ。
 
-*4 Lovász テータとグラフの安定数の近似不可能性
+*5 Lovász テータとグラフの安定数の近似不可能性
 安定数は $n^{1-\varepsilon}$ 倍で近似するのが NP 困難である（Håstad, Zuckerman）ことを述べ、$\vartheta$ 関数が完全グラフで厳密になるにもかかわらず一般には大きなギャップ（Feige の $n/2^{O(\sqrt{\log n})}$）をもつことを示せ。
 
-*4 SDP ラウンディングの一般理論（Raghavendra の最適アルゴリズム）
+*5 SDP ラウンディングの一般理論（Raghavendra の最適アルゴリズム）
 任意の CSP について、基本 SDP 緩和と「ラウンディングスキームの有限探索」で UGC 下の最適近似率が得られること（Raghavendra 2008）を述べ、SDP の整数性ギャップが困難性の証拠に変換される（dictatorship test）仕組みを説明せよ。
 
 *4 相関クラスタリングと SDP（Charikar–Guruswami–Wirth）

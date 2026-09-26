@@ -18,7 +18,7 @@ Bregman Lagrangian $\mathcal{L}(X,\dot X,t)=e^{\alpha_{t}+\gamma_{t}}(D_{h}(X+e^
 *4 FISTA（Beck–Teboulle） {fista}
 $\min f(x)+g(x)$（$f$ は $L$-平滑凸、$g$ は近接可能な凸）に対する FISTA $x_{k}=\operatorname{prox}_{g/L}(y_{k}-\frac1L\nabla f(y_{k}))$, $t_{k+1}=\frac{1+\sqrt{1+4t_{k}^{2}}}{2}$, $y_{k+1}=x_{k}+\frac{t_{k}-1}{t_{k+1}}(x_{k}-x_{k-1})$ が $F(x_{k})-F^{*}\le\frac{2L\|x_{0}-x^{*}\|^{2}}{(k+1)^{2}}$ をみたすことを示せ。
 
-*4 FISTA の反復列の収束（Chambolle–Dossal）
+*5 FISTA の反復列の収束（Chambolle–Dossal）
 運動量 $\frac{k-1}{k+a}$（$a>2$）の FISTA 変種では反復列 $x_{k}$ 自体が最小点に弱収束し、さらに $F(x_{k})-F^{*}=o(1/k^{2})$（Attouch–Peypouquet）。$a=2$（元の FISTA）で反復の収束は長く未解決であったことを述べよ。
 
 *5 元の Nesterov 法・FISTA の反復収束
@@ -36,19 +36,19 @@ Nesterov 法は目的関数を単調に減らさず、強凸関数上で振動�
 *4 線形結合法としての加速：推定列の一般理論
 推定列 $\phi_{k}(x)$ で $\phi_{k}\le(1-\lambda_{k})f+\lambda_{k}\phi_{0}$, $f(x_{k})\le\min\phi_{k}$ をみたすものを構成すれば $f(x_{k})-f^{*}\le\lambda_{k}(\phi_{0}(x^{*})-f^{*})$ となることを示し、Nesterov 法が $\lambda_{k}=O(1/k^{2})$ を達成する構成であることを確かめよ。
 
-*4 加速近接点法（Güler）
+*5 加速近接点法（Güler）
 近接点法に Nesterov 型の外挿を施すと $f(x_{k})-f^{*}=O(1/(\sum\sqrt{\lambda_{i}})^{2})$ となる（Güler 1992）。Catalyst（Lin–Mairal–Harchaoui）がこれを不正確版として一般の一次法の加速に使うことを示せ。
 
 *4 Catalyst による分散削減法の加速
 SVRG や SAGA を内部ソルバーとする Catalyst 加速法が、有限和強凸問題に対し $\tilde O((n+\sqrt{n\kappa})\log(1/\varepsilon))$ の計算量を達成することを示せ。
 
-*4 Katyusha（Allen-Zhu）
+*5 Katyusha（Allen-Zhu）
 負の運動量（Katyusha 運動量）を用いた直接加速 SVRG が $O((n+\sqrt{n\kappa})\log(1/\varepsilon))$ を達成すること、およびこれが有限和問題の下界（Woodworth–Srebro, Lan–Zhou）と一致することを示せ。
 
 *4 加速の不可能性：確率的雑音下
 雑音分散 $\sigma^{2}$ の確率的勾配では、加速しても $O(\frac{LR^{2}}{k^{2}}+\frac{\sigma R}{\sqrt k})$ が限界であり、雑音項は改善できない。AC-SA（Lan）がこれを達成することを示せ。
 
-*4 相対平滑性での加速の不可能性（Dragomir–Taylor–d'Aspremont–Bolte）
+*5 相対平滑性での加速の不可能性（Dragomir–Taylor–d'Aspremont–Bolte）
 相対平滑性（$h$ に関して $L$-平滑）の枠組みでは、一般に $O(1/k)$ より速い Bregman 一次法は存在しない。PEP による下界の構成原理を述べよ。
 
 *4 非ユークリッド加速（Nesterov の双対平均による加速）
@@ -68,7 +68,7 @@ $L$-平滑凸関数クラスに対し、勾配スパン条件をみたす任意�
 *4 劣勾配法の $O(1/\sqrt k)$ 収束 {subgrad}
 $G$-Lipschitz 凸関数に対し、劣勾配法 $x_{k+1}=x_{k}-\alpha_{k}g_{k}$ は $\min_{i\le k}f(x_{i})-f^{*}\le\frac{R^{2}+G^{2}\sum\alpha_{i}^{2}}{2\sum\alpha_{i}}$。定ステップ $\alpha=R/(G\sqrt{k})$ で $GR/\sqrt k$ を得ることを示せ。
 
-*4 非平滑凸最適化の下界
+*5 非平滑凸最適化の下界
 $G$-Lipschitz 凸関数（$\|x_{0}-x^{*}\|\le R$）に対し、次元 $n\ge k$ で任意の一次法は $f(x_{k})-f^{*}\ge\frac{GR}{2(1+\sqrt{k+1})}$ を超えられない（Nesterov）。$\max_{i\le k+1}x_{i}+\frac{\mu}{2}\|x\|^{2}$ 型の最悪関数で示せ。
 
 *4 強凸非平滑関数の劣勾配法
@@ -86,7 +86,7 @@ $f^{*}$ 既知の Polyak ステップ劣勾配法は、鋭い最小 $f-f^{*}\ge\
 *4 劣勾配法の集合制約と射影
 射影劣勾配法が制約付き問題で同じ率を達成することを示し、射影が高価な場合の関数制約付き問題へのスイッチング劣勾配法（Polyak, Lan–Zhou）を述べよ。
 
-*4 平滑化による非平滑問題の $O(1/\varepsilon)$
+*5 平滑化による非平滑問題の $O(1/\varepsilon)$
 構造化非平滑問題 $f(x)=\max_{u\in U}\{\langle Ax,u\rangle-\phi(u)\}$ は、Nesterov の平滑化と加速法で $O(\|A\|D_{X}D_{U}/\varepsilon)$ 反復で解け、ブラックボックスの下界 $O(1/\varepsilon^{2})$ を回避できる。証明せよ（Nesterov 2005）。
 
 *4 過剰ギャップ技法（Nesterov の excessive gap）
@@ -98,13 +98,13 @@ $x_{k+1}=\operatorname{argmin}\{\sum_{i\le k}\langle g_{i},x\rangle+\beta_{k}d(x
 *4 準単調劣勾配法（Nesterov–Shikhman）
 双対平均の反復の平均を用いた準単調劣勾配法は、最終反復で $O(1/\sqrt k)$ を達成することを示せ。
 
-*4 非平滑凸最適化の楕円体法による $O(n^{2}\log(1/\varepsilon))$
+*5 非平滑凸最適化の楕円体法による $O(n^{2}\log(1/\varepsilon))$
 次元が小さい場合、非平滑凸最適化は楕円体法で $O(n^{2}\log(GR/\varepsilon))$ 回のオラクル呼び出しで解け、劣勾配法の $O(G^{2}R^{2}/\varepsilon^{2})$ と相補的である。二つの下界 $\min\{n\log(1/\varepsilon),1/\varepsilon^{2}\}$ の遷移を論ぜよ。
 
 *4 Shor の空間拡張劣勾配法と楕円体法
 劣勾配方向に空間を拡張（dilation）する Shor の方法を定式化し、特定のパラメータの選択で楕円体法（Yudin–Nemirovski, Shor 1977）と一致することを示せ。Shor の $r$-アルゴリズムが実用上速いにもかかわらず収束の理論保証が知られていないことを述べよ。
 
-*4 Hölder 平滑関数と普遍勾配法（Nesterov 2015）
+*5 Hölder 平滑関数と普遍勾配法（Nesterov 2015）
 $\nabla f$ が $\nu$-Hölder 連続（$\nu\in[0,1]$）なクラスを一つのアルゴリズム（直線探索で $L$ を推定し、目標精度 $\varepsilon$ を用いる）で扱う普遍勾配法が、各 $\nu$ で最適率 $O((M_{\nu}R^{1+\nu}/\varepsilon)^{2/(1+3\nu)})$ を達成することを示せ。
 
 *4 非平滑関数の Clarke 停留点の計算不可能性（Zhang–Lin–Jegelka–Sra–Jadbabaie）
@@ -113,7 +113,7 @@ Lipschitz な非凸非平滑関数の $\varepsilon$-Clarke 停留点（$\operato
 *4 勾配サンプリング法（Burke–Lewis–Overton）
 局所 Lipschitz 関数の近傍でランダムに勾配をサンプルし、その凸包の最小ノルム元を方向とする勾配サンプリング法が、確率 1 で Clarke 停留点に集積することを示せ（Kiwiel の改良）。
 
-*4 非平滑 BFGS の挙動（Lewis–Overton）
+*5 非平滑 BFGS の挙動（Lewis–Overton）
 BFGS を非平滑関数に適用すると、多くの場合 Clarke 停留点に線形収束的に近づくという観察（Lewis–Overton 2013）を、$f(x)=|x_{1}|+x_{2}^{2}$ 型の単純な例で解析し、$\|x\|$ に対する BFGS の挙動の理論的結果を述べよ。
 
 *4 Polyak ステップの確率版と補間

@@ -3,7 +3,7 @@
 
 =ch IV-1　直線探索と大域収束
 
-*4 Armijo 条件の有限終了 {armijo}
+*5 Armijo 条件の有限終了 {armijo}
 $f\in C^{1}$、$d$ が降下方向（$\nabla f(x)^{\top}d<0$）ならば、$0<c_{1}<1$, $0<\beta<1$ についてバックトラック $t=\beta^{j}$ は有限回で Armijo 条件 $f(x+td)\le f(x)+c_{1}t\nabla f(x)^{\top}d$ をみたす。$\nabla f$ が $L$-Lipschitz のとき受理されるステップの下界 $t\ge\min\{1,\ 2\beta(1-c_{1})|\nabla f^{\top}d|/(L\|d\|^{2})\}$ を示せ。
 
 *4 Wolfe 条件をみたすステップの存在
@@ -21,7 +21,7 @@ Goldstein 条件 $f(x)+(1-c)t\nabla f^{\top}d\le f(x+td)\le f(x)+ct\nabla f^{\to
 *4 非単調直線探索（Grippo–Lampariello–Lucidi）
 $f(x_{k}+td_{k})\le\max_{0\le j\le M}f(x_{k-j})+c_{1}t\nabla f(x_{k})^{\top}d_{k}$ を用いた非単調探索の大域収束を示し、Barzilai–Borwein 法と組み合わせる意義を論ぜよ。
 
-*4 Barzilai–Borwein 法
+*5 Barzilai–Borwein 法
 $\alpha_{k}=\frac{s_{k-1}^{\top}s_{k-1}}{s_{k-1}^{\top}y_{k-1}}$ の勾配法は、強凸二次関数に対し（非単調ながら）R-線形収束する（Raydan, Dai–Liao）。2 次元では R-超線形収束することを示せ（Barzilai–Borwein 1988）。
 
 *4 Curry の法則と完全直線探索
@@ -77,13 +77,13 @@ $f$ が $\mu$-強凸かつ $L$-平滑なら、ステップ $\frac{2}{\mu+L}$ の
 *4 Kantorovich 率と完全直線探索
 強凸二次関数に完全直線探索の最急降下法を適用すると $f(x_{k+1})-f^{*}\le\left(\frac{\kappa-1}{\kappa+1}\right)^{2}(f(x_{k})-f^{*})$。Kantorovich の不等式から導き、率が達成される初期値を示せ（Akaike の二次元への吸引）。
 
-*4 Akaike の定理
+*5 Akaike の定理
 強凸二次関数に対する完全直線探索の最急降下法では、誤差の方向が最大・最小固有ベクトルが張る二次元部分空間に漸近的に吸引され、率は Kantorovich の最悪率に近づく。証明の骨格を与えよ。
 
 *4 勾配法の性能推定問題（Drori–Teboulle） {pep}
 $L$-平滑凸関数に対する $N$ ステップの勾配法の最悪ケース $f(x_{N})-f^{*}$ を求める問題（PEP）は、補間条件を用いて有限次元 SDP に帰着する。ステップ $1/L$ の勾配法の厳密な最悪率 $\frac{L\|x_{0}-x^{*}\|^{2}}{4N+2}$ を導け（Drori–Teboulle, Taylor–Hendrickx–Glineur）。
 
-*4 勾配法の最適な長ステップ（Altschuler–Parrilo の silver ステップ）
+*5 勾配法の最適な長ステップ（Altschuler–Parrilo の silver ステップ）
 一定でないステップ幅列を用いると、凸 $L$-平滑関数に対する勾配法は $O(1/N^{\log_{2}(1+\sqrt{2})})\approx O(N^{-1.27})$ の率を達成する（silver stepsize schedule, Altschuler–Parrilo 2023）。強凸の場合の $\kappa^{\log_{1+\sqrt2}2}$ 依存性を含め、主張を正確に述べ、二段階の場合の改善を PEP で確かめよ。
 
 *4 PL 条件下の勾配法
@@ -98,13 +98,13 @@ $L$-平滑で PL 不等式を定数 $\mu$ でみたす $f$ について、ステ
 *4 相対平滑性と Bregman 勾配法（Bauschke–Bolte–Teboulle, Lu–Freund–Nesterov）
 $Lh-f$ が凸（$f$ は $h$ に関して $L$-相対平滑）ならば、Bregman 勾配法 $x_{k+1}=\operatorname{argmin}\{\langle\nabla f(x_{k}),x\rangle+LD_{h}(x,x_{k})\}$ は $f(x_{k})-f^{*}\le LD_{h}(x^{*},x_{0})/k$。Lipschitz 勾配をもたないポアソン逆問題に適用せよ。
 
-*4 勾配法の下界（凸 $L$-平滑、次元非依存）
+*5 勾配法の下界（凸 $L$-平滑、次元非依存）
 勾配の線形結合で反復を作る任意の一次法について、$k<n/2$ で $f(x_{k})-f^{*}\ge\frac{3L\|x_{0}-x^{*}\|^{2}}{32(k+1)^{2}}$ となる二次関数が存在する（Nesterov）。三重対角行列の「最悪関数」を構成して示せ。
 
-*4 強凸関数に対する一次法の下界
+*5 強凸関数に対する一次法の下界
 $\mu$-強凸 $L$-平滑関数に対し、無限次元（$\ell^{2}$）で任意の一次法は $\|x_{k}-x^{*}\|\ge\left(\frac{\sqrt\kappa-1}{\sqrt\kappa+1}\right)^{k}\|x_{0}-x^{*}\|$ を超えられない。Nesterov の最悪関数で示せ。
 
-*4 非凸平滑関数の一次法の下界（Carmon–Duchi–Hinder–Sidford）
+*5 非凸平滑関数の一次法の下界（Carmon–Duchi–Hinder–Sidford）
 $L$-平滑な非凸関数の $\varepsilon$-停留点を求める任意の決定的一次法は、次元が十分大きいとき $\Omega(\varepsilon^{-2})$ 回の勾配評価を要する。「連鎖」型の最悪関数を構成し、勾配法が最適であることを結論せよ。
 
 *4 勾配法の離散化誤差と修正方程式

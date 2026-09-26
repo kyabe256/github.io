@@ -21,7 +21,7 @@ $T_{C}(x)=L(x)$ を Abadie の制約想定という。線形制約（多面体�
 *4 定階数制約想定（CRCQ, Janin）
 有効制約の任意の部分族について勾配の階数が近傍で一定ならば Abadie が成り立ち、KKT 条件が必要条件となる。線形制約と非線形制約の混合で LICQ・MFCQ が破れても CRCQ が成り立つ例を作れ。
 
-*4 CPLD 制約想定（Qi–Wei, Andreani–Martínez–Schuverdt）
+*5 CPLD 制約想定（Qi–Wei, Andreani–Martínez–Schuverdt）
 正線形従属な勾配の族が近傍でも線形従属であり続けるという条件 CPLD の下で、局所最小点は KKT 点である。CRCQ $\Rightarrow$ CPLD、MFCQ $\Rightarrow$ CPLD を示せ。
 
 *4 誤差限界制約想定
@@ -36,7 +36,7 @@ $\operatorname{dist}(x,C)\le c\,\|(g(x)_{+},h(x))\|$ が $x^{*}$ の近傍で成
 *4 二次錐制約の制約想定
 二次錐制約 $g(x)\in\mathcal{L}^{m}$ に対する Robinson の制約想定 $0\in\operatorname{int}\{g(x^{*})+\nabla g(x^{*})\mathbb{R}^{n}-\mathcal{L}^{m}\}$ を具体的に書き下し、非退化条件と比較せよ。
 
-*4 Robinson の制約想定 {rcq}
+*5 Robinson の制約想定 {rcq}
 Banach 空間の問題 $\min f(x)$ s.t. $G(x)\in K$（$K$ 閉凸）で、$0\in\operatorname{int}\{G(x^{*})+DG(x^{*})X-K\}$ ならば、局所最小点で乗数の集合は空でない有界集合であり、実行可能集合は計量正則である。Robinson–Ursescu の定理から導け。
 
 *4 準正規性と拡張 Fritz John
@@ -51,7 +51,7 @@ $T_{C}(x)\neq L(x)$ だが $T_{C}(x)^{\circ}=L(x)^{\circ}$ となる例（$T_{C}
 *4 相対的定階数条件（RCRCQ, Minchenko–Stakhovski）
 等式制約全体と有効不等式制約の部分族からなる族のみの階数一定性で十分であることを示し、この RCRCQ が二階必要条件を保証することを示せ。
 
-*4 二階の制約想定と弱二階条件
+*5 二階の制約想定と弱二階条件
 MFCQ の下でも、臨界錐上のすべての乗数に関する max 型二階条件 $\max_{\lambda\in\Lambda}d^{\top}\nabla^{2}_{xx}L(x^{*},\lambda)d\ge0$ は成り立つが、単一の乗数で成り立つとは限らない（Arutyunov、Anitescu の例）。例を構成せよ。
 
 *4 ベクトル値写像の計量正則性と制約想定
@@ -74,13 +74,13 @@ KKT 点 $(x^{*},\lambda^{*})$ で $d^{\top}\nabla^{2}_{xx}L(x^{*},\lambda^{*})d>
 *4 強二階十分条件
 強相補性が破れているとき、$\{d:\nabla g_{i}^{\top}d=0\ (\lambda_{i}^{*}>0)\}$ 上での正定値性（強二階十分条件）を定義し、これが KKT 点の強正則性（Robinson）と、LICQ の下で同値であることを示せ。
 
-*4 Ioffe の二階条件（乗数の max 型）
+*5 Ioffe の二階条件（乗数の max 型）
 MFCQ の下で、$\sup_{\lambda\in\Lambda(x^{*})}d^{\top}\nabla^{2}_{xx}L(x^{*},\lambda)d>0$ ($0\neq d\in\mathcal{C}$) は厳密局所最小（二次成長）と同値である。十分性と必要性を証明せよ。
 
-*4 二次成長と二階条件の同値
+*5 二次成長と二階条件の同値
 MFCQ の下、局所最小点における二次成長は max 型二階十分条件と同値である（Bonnans–Ioffe）。この同値性が錐制約に拡張されると「シグマ項」（曲率項）が必要になることを二次錐の例で示せ。
 
-*4 シグマ項と非多面体錐（Kawasaki, Cominetti）
+*5 シグマ項と非多面体錐（Kawasaki, Cominetti）
 $\min f(x)$ s.t. $G(x)\in K$（$K$ 閉凸）の二階必要条件は $d^{\top}\nabla^{2}L d-\sigma(\lambda\mid T^{2}_{K}(G(x^{*}),DG\,d))\ge0$ の形になる。$K=\mathbb{S}^{n}_{+}$ のとき $\sigma$ 項が $2\operatorname{tr}(\Lambda\,DG\,d\,G(x^{*})^{+}DG\,d)$ で与えられることを示せ（Shapiro）。
 
 *4 二階接集合
@@ -92,7 +92,7 @@ $\min f(x)$ s.t. $G(x)\in K$（$K$ 閉凸）の二階必要条件は $d^{\top}\n
 *4 退化した二階条件と高階条件
 二階十分条件が成り立たない場合（$d^{\top}\nabla^{2}Ld=0$ となる臨界方向がある）の三階・四階の条件を等式制約の場合に定式化し、Peano 型の反例で限界を示せ。
 
-*4 二階条件の非凸 QP での意味
+*5 二階条件の非凸 QP での意味
 非凸 QP $\min\frac{1}{2}x^{\top}Qx+c^{\top}x$ s.t. $Ax\le b$ の局所最小性は、臨界錐上の共正性で完全に特徴づけられる（二階条件が必要十分）。局所最小の判定が NP 困難であることを共正性判定から導け。
 
 *4 二階条件と Newton 型法の収束
@@ -107,7 +107,7 @@ LICQ・強相補性・二階十分条件の下で、KKT 系の Jacobian は正�
 *4 一般化 Hessian による二階条件（$C^{1,1}$ データ）
 $f,g$ が $C^{1,1}$ のとき、一般化 Hessian による二階十分条件を定式化し証明せよ（Hiriart-Urruty–Strodiot–Nguyen の拡張）。
 
-*4 半無限計画の二階条件
+*5 半無限計画の二階条件
 $\min f(x)$ s.t. $g(x,t)\le0\ (t\in T)$ の二階条件では、有効添字 $t$ の動きに由来する余分な曲率項（包絡線効果）が現れる。$T$ がコンパクト区間で $g(x,\cdot)$ の最大点が非退化の場合にその項を計算せよ（Hettich–Jongen, Shapiro）。
 
 *4 二階条件と Riemann 幾何

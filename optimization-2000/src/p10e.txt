@@ -1,0 +1,123 @@
+=ch X-9　二段階最適化と Stackelberg 問題
+
+*4 二段階最適化の定式化と楽観的・悲観的解
+$\min_{x}F(x,y)$ s.t. $y\in S(x)=\operatorname{argmin}_{y}\{f(x,y): g(x,y)\le0\}$ で、$S(x)$ が一点でないときの楽観的解・悲観的解を定義し、悲観的問題では最小値が達成されない例を作れ（Dempe の例）。
+
+*5 線形二段階計画の NP 困難性（Jeroslow, Hansen–Jaumard–Savard）
+上位・下位ともに線形の二段階計画は強 NP 困難である（Hansen–Jaumard–Savard 1992）。KERNEL 問題あるいはナップサックからの帰着で示し、局所最適性の判定も NP 困難であること（Vicente–Savard–Júdice）を述べよ。
+
+*4 線形二段階計画の最適解は頂点にある（Bard, Bialas–Karwan）
+線形二段階計画の誘導領域（inducible region）は多面体の面の和集合で連結であり、最適解が制約多面体の頂点で達成されることを示せ。
+
+*5 KKT 再定式化の非同値性（Dempe–Dutta）
+下位問題を KKT 条件で置き換えた MPCC は、下位問題が凸で Slater 条件をみたしても、元の二段階問題と局所解が一致しない（乗数の選択に依存）ことを例で示せ（Dempe–Dutta 2012）。
+
+*5 値関数再定式化と部分 calmness（Ye–Zhu）
+二段階問題を $f(x,y)\le v(x)$（$v$ は下位問題の最適値関数）で書き直した一段階問題の最適性条件を、部分 calmness（Ye–Zhu 1995）の下で導け。
+
+*5 Scholtes の緩和法の収束
+MPCC の相補性制約 $G_{i}H_{i}=0$ を $G_{i}H_{i}\le t$ に緩和した問題の KKT 点の極限（$t\to0$）が、MPCC-LICQ の下で C-停留点であることを示せ（Scholtes 2001）。
+
+*4 超勾配の陰関数微分
+下位問題が強凸で滑らかなら、$y^{*}(x)$ は滑らかで、上位関数 $\Phi(x)=F(x,y^{*}(x))$ の勾配は $\nabla_{x}F-\nabla^{2}_{xy}f(\nabla^{2}_{yy}f)^{-1}\nabla_{y}F$。陰関数定理から導け。
+
+*4 二段階確率最適化の計算量（Ghadimi–Wang, Ji–Yang–Liang）
+下位問題が強凸なとき、近似陰関数微分（AID）あるいは反復微分（ITD）による二段階確率勾配法が $\varepsilon$-停留点を $\tilde O(\varepsilon^{-2})$（決定的）・$\tilde O(\varepsilon^{-4})$（確率的）程度の計算量で得ることを示せ。
+
+*4 反復微分の誤差と打ち切り（Franceschi ら, Shaban ら）
+下位問題を $T$ ステップの勾配法で近似し、その反復を自動微分する超勾配の誤差が $O((1-\mu/L)^{T})$ で減衰することを示し、打ち切り逆伝播の偏りを評価せよ。
+
+*4 下位問題が非凸な場合の困難と値関数法（Liu ら, Kwon ら）
+下位問題が非凸（または非強凸）のとき、陰関数微分が使えず、ペナルティ付き値関数定式化 $\min F(x,y)+\lambda(f(x,y)-v(x))$ による一次法の収束解析が必要になることを述べよ。
+
+*4 Stackelberg 均衡の存在（von Stackelberg）
+先導者と追随者のゲームで、戦略集合がコンパクトで利得が連続、追随者の最適反応が一意なら Stackelberg 均衡が存在する。追随者の最適反応が集合値の場合に弱 Stackelberg 均衡が存在しない例を作れ。
+
+*5 Stackelberg セキュリティゲームの多重 LP 解法（Conitzer–Sandholm）
+正規形の二人ゲームで先導者が混合戦略にコミットする最適 Stackelberg 戦略が、追随者の純粋戦略ごとに一つの LP を解くことで多項式時間に求まることを示せ（Conitzer–Sandholm 2006）。
+
+*4 価格設定問題（Labbé–Marcotte–Savard の通行料設定）
+ネットワークの通行料設定を二段階計画として定式化し、下位問題（最短路）の KKT による単一段階 MILP 再定式化を示せ。
+
+*5 ネットワーク阻止問題（Wood）
+予算制約付きで辺を除去して最大流を最小化する最大流阻止問題が NP 困難であること（Wood 1993）を示し、最小カットの双対による MILP 定式化を与えよ。
+
+*4 敵対的学習の min–max と二段階性
+敵対的訓練 $\min_{\theta}E\max_{\|\delta\|\le\varepsilon}\ell(\theta,x+\delta)$ の内側最大化の解に関する Danskin の定理の適用と、内側問題の非凸性による困難を論ぜよ（Madry ら）。
+
+*4 ハイパーパラメータ最適化とメタ学習（MAML）の超勾配
+MAML の目的 $\min_{\theta}\sum_{i}\mathcal{L}_{i}(\theta-\alpha\nabla\mathcal{L}_{i}(\theta))$ の勾配が二階微分を含むことを示し、一次近似（FOMAML）の誤差を評価せよ。
+
+*4 双対を用いた二段階凸計画の単一化
+下位問題が凸で強双対が成り立つとき、下位問題を双対実行可能性と強双対性の制約で置き換えた単一段階問題が元の問題と同値であることを示せ（ロバスト最適化の双対化との類似）。
+
+*4 多段階ゲームの部分ゲーム完全均衡と後ろ向き帰納法
+有限完全情報展開形ゲームは純粋戦略の部分ゲーム完全均衡をもつ（Kuhn 1953, Zermelo）。後ろ向き帰納法で証明し、ムカデゲームでの帰結を論ぜよ。
+
+*5 二段階最適化の一次法の計算量下界（Ji–Liang, Dagréou ら）
+下位問題が強凸な二段階問題で、超勾配の計算に必要な下位問題の勾配・Hessian ベクトル積の問い合わせ数の下界を示し、既存の AID 法がそれを（条件数の多項式因子の範囲で）達成することを論ぜよ。
+
+*5 悲観的二段階計画と一般化半無限計画の関係（Stein, Wiesemann–Tsoukalas–Kleniati–Rustem）
+悲観的二段階計画が一般化半無限計画 $\min F(x)$ s.t. $g(x,y)\le0\ \forall y\in Y(x)$ と密接に関係することを示し、$Y(x)$ が $x$ に依存するために実行可能集合が閉でも凸でもなくなる現象（再入角）を解析せよ。
+
+=ch X-10　大定理の合流
+
+*4 LP 双対から最大流最小カット・König・Kantorovich–Rubinstein へ
+LP の強双対定理（III 部）一つから、最大流最小カット、König–Egerváry、Birkhoff–von Neumann、離散 Kantorovich–Rubinstein（$W_{1}$ の双対）を順に導き、それぞれで全単模性・極点の整数性がどこで効いているかを明らかにせよ。
+
+*5 Hahn–Banach から Nash まで
+分離定理 $\Rightarrow$ Farkas $\Rightarrow$ LP 双対 $\Rightarrow$ von Neumann の minimax、および Brouwer $\Rightarrow$ Kakutani $\Rightarrow$ Nash $\Rightarrow$ Arrow–Debreu の二つの鎖を完全に書き下し、前者が多項式時間計算に、後者が PPAD 完全性に対応することを論ぜよ。
+
+*4 Legendre 変換の三つの顔
+Legendre–Fenchel 変換が (i) 解析力学（Lagrangian と Hamiltonian）、(ii) 熱力学（自由エネルギーとエントロピー、Maxwell の等面積則）、(iii) 最適化（双対問題と共役関数）で同じ構造を与えることを示し、Hopf–Lax 公式・Moreau 包・大偏差の Cramér 変換がすべて infimal convolution であることを確かめよ。
+
+*5 凸体の体積計算の多項式時間ランダム化アルゴリズム（Dyer–Frieze–Kannan）
+凸体の体積を相対誤差 $\varepsilon$ で近似するランダム化多項式時間アルゴリズムが存在する（Dyer–Frieze–Kannan 1991）一方、決定的アルゴリズムでは指数的な誤差が避けられない（Bárány–Füredi, Elekes）ことを示せ。
+
+*5 Elekes・Bárány–Füredi の決定的体積近似の不可能性
+膜オラクルで与えられた凸体の体積を、決定的多項式時間アルゴリズムで $2^{n}$ 倍より良く近似することは不可能である（Elekes 1986）。ある多項式個の点の凸包が体積の小さな割合しか占めないことから示せ。
+
+*4 対数凹サンプリングと最適化の対応（Dalalyan, Durmus–Moulines）
+強対数凹分布 $\pi\propto e^{-f}$ に対する未調整 Langevin アルゴリズム（ULA）の $W_{2}$ 誤差が $O(\sqrt{\kappa d h})$ の偏りを伴い幾何的に収束することを示し、「サンプリングは Wasserstein 空間での最適化である」（Wibisono）という見方を説明せよ。
+
+*5 ランダムウォークの急速混合と等周性（Lovász–Simonovits, Kannan–Lovász–Simonovits）
+凸体上のボールウォークの混合時間が、凸体の等周定数（KLS 定数）で制御されることを示し、KLS 予想の現状（Lee–Vempala の $n^{1/4}$、Chen の $n^{o(1)}$、Klartag の多重対数的上界）を述べよ。
+
+*5 KLS 予想と Bourgain のスライス問題（Klartag 2023）
+等方的対数凹測度の Cheeger 定数に関する KLS 予想と、Bourgain のスライス問題の関係（Eldan–Klartag）を述べ、Klartag による $L_{n}\le C\sqrt{\log n}$ の結果（2023）と、Guan の評価を用いたスライス問題の肯定的解決（Klartag–Lehec 2024）の主張を述べよ。
+
+*4 Eldan の確率的局所化
+Eldan の確率的局所化（測度を確率的に指数傾斜させる過程）を定義し、KLS 定数の上界の改善（Lee–Vempala, Chen）にどう使われるかを説明せよ。
+
+*4 最適化としての熱方程式：三つの勾配流
+熱方程式が (i) $L^{2}$ における Dirichlet エネルギーの勾配流、(ii) $H^{-1}$ における $\frac12\|u\|^{2}$ の勾配流、(iii) Wasserstein 空間におけるエントロピーの勾配流（JKO）であることを示し、計量の選択が「最適化アルゴリズムの幾何」に対応することを論ぜよ。
+
+*5 Kadison–Singer・Ramanujan グラフ・スペクトル疎化の統一（Batson–Spielman–Srivastava）
+任意のグラフが $O(n/\varepsilon^{2})$ 本の辺をもつスペクトル疎化をもつこと（BSS 2012）を障壁関数法で証明し、同じ手法が Kadison–Singer の解決（MSS）に発展したことを説明せよ。
+
+*4 Grothendieck の不等式の三つの顔
+Grothendieck の不等式が (i) Banach 空間論（$\ell_{1}\to\ell_{2}$ の作用素の絶対総和性）、(ii) 組合せ最適化（カットノルムの SDP 近似）、(iii) 量子情報（Bell 不等式の量子違反の上界、Tsirelson）で同じ定数 $K_{G}$ を与えることを示せ。
+
+*4 マトロイド・劣モジュラ・凸性の対応（Edmonds–Lovász–室田）
+劣モジュラ関数と凸関数の対応（Lovász 拡張）、マトロイド交わり定理と Fenchel 双対の対応、離散凸解析の M/L 凸性の共役性を一つの枠組みで整理し、多項式時間可解性がどこから来るかを論ぜよ。
+
+*4 無後悔学習から minimax・ブースティング・LP へ（Freund–Schapire）
+Hedge アルゴリズムの後悔上界から、(i) von Neumann の minimax 定理、(ii) AdaBoost の訓練誤差の減少、(iii) 被覆・パッキング LP の近似解法を統一的に導け。
+
+*4 内点法・Newton 法・中心パスの幾何的統一
+自己共役障壁の Hessian 計量の下で、Newton 法が Riemann 勾配法となり、中心パスが「ほぼ測地線」、パス追跡法の反復数が計量での長さで決まることを示し、LP の $O(\sqrt n\log(1/\varepsilon))$ と Lee–Sidford の $\tilde O(\sqrt{\operatorname{rank}})$ を同じ枠組みで説明せよ。
+
+*4 変分不等式・単調作用素・ゲームの三位一体
+凸最適化・鞍点問題・Nash 均衡・交通均衡・相補性問題がすべて単調作用素の零点問題 $0\in T(x)$ として統一されることを示し、近接点法・外挿法・分割法がそれらすべてに共通のアルゴリズムであることを論ぜよ。
+
+*4 Shannon・Kantorovich・Fenchel：情報と輸送と双対
+Donsker–Varadhan の変分公式（エントロピーの共役）、Kantorovich 双対（輸送の共役）、Talagrand の輸送不等式（$W_{2}^{2}\le2D$）、Gibbs の変分原理を、すべて凸共役の等式・不等式として統一的に証明せよ。
+
+*5 Karmarkar から Spielman–Teng まで：LP の計算量理論の総括
+単体法の指数的最悪ケース（Klee–Minty）、楕円体法の多項式性（Khachiyan）、内点法（Karmarkar, Renegar）、平滑化解析（Spielman–Teng）、強多項式性の未解決問題（Smale の第 9 問題）と部分的結果（Tardos, Vavasis–Ye, Dadush ら）、内点法の非強多項式性（Allamigeon ら）を一つの物語として整理し、各段階の鍵となる定理を証明せよ。
+
+*5 Nesterov の一次法の最適性から Adam まで：一次法の完全な地図
+凸・強凸・非凸・非平滑・確率的・有限和・分散の各設定について、下界（Nemirovski–Yudin, Nesterov, Carmon ら, Arjevani ら, Woodworth–Srebro, Scaman ら）と最適アルゴリズム（Nesterov, OGM, 劣勾配, AC-SA, Katyusha, SPIDER, MSDA）を表に整理し、各行の上界・下界の証明の骨格を与えよ。
+
+*5 凸解析・最適輸送・確率・アルゴリズムの合流 ― Brenier から Langevin まで {finale}
+次の一連の主張を順に証明し、一本の定理としてまとめよ。(i) Kantorovich 双対と $c$-巡回単調性から Brenier の定理（最適写像 $=\nabla\varphi$, $\varphi$ 凸）を導く（凸解析・双対）。(ii) 変位補間の下での相対エントロピー $H(\cdot\mid e^{-V})$ の $\kappa$-変位凸性を、$\nabla^{2}V\succeq\kappa I$ から McCann の議論で示す（変分法）。(iii) JKO スキームの極限として Fokker–Planck 方程式を得て、その解が $H$ の Wasserstein 勾配流であることを示す（最適化アルゴリズム）。(iv) 変位凸性から HWI 不等式、対数 Sobolev 不等式 $H\le\frac{1}{2\kappa}I$、Talagrand の不等式 $W_{2}^{2}\le\frac{2}{\kappa}H$ を導く（関数不等式）。(v) これらから Langevin 拡散が $H(\rho_{t}\mid\pi)\le e^{-2\kappa t}H(\rho_{0}\mid\pi)$ で平衡に収束し、未調整 Langevin アルゴリズムの非漸近的誤差評価が得られることを示す（確率・サンプリング）。凸共役・双対・変分・勾配流・確率過程が一つの定理で出会う。<strong>この一題をもって、本書 2000 題を締めくくれ。</strong>

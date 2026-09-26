@@ -21,22 +21,22 @@ $V^{\pi'}(s_{0})-V^{\pi}(s_{0})=\frac{1}{1-\gamma}E_{s\sim d^{\pi'}_{s_{0}}}E_{a
 *4 自然方策勾配の次元非依存の線形収束（Agarwal ら, Cen ら, Lan）
 softmax 表形式方策の自然方策勾配法（NPG）が、ステップ幅に応じて $O(\frac{1}{(1-\gamma)^{2}k})$、エントロピー正則化付きで線形収束することを示し、NPG が状態ごとの乗法重み更新（ミラー降下）であることを確かめよ。
 
-*4 方策ミラー降下（Lan 2022）
+*5 方策ミラー降下（Lan 2022）
 方策空間でのミラー降下（KL 距離）が、ステップを増大させると線形収束することを示し、方策反復との関係を論ぜよ。
 
-*4 TRPO・PPO の単調改善保証（Schulman ら）
+*5 TRPO・PPO の単調改善保証（Schulman ら）
 KL 制約付き代理目的関数の最大化（TRPO）が性能の単調改善下界 $J(\pi')\ge L_{\pi}(\pi')-C\max_{s}\operatorname{KL}(\pi\|\pi')$ をもつことを示せ。
 
 *4 Q 学習の有限標本複雑度（Li ら, Wainwright）
 生成モデルの下で Q 学習の標本複雑度 $\tilde O(\frac{|S||A|}{(1-\gamma)^{4}\varepsilon^{2}})$ を示し、分散削減 Q 学習で最適な $\tilde O(\frac{|S||A|}{(1-\gamma)^{3}\varepsilon^{2}})$ に改善されること（Wainwright, Sidford ら）を述べよ。
 
-*4 MDP の標本複雑度の下界（Azar–Munos–Kappen）
+*5 MDP の標本複雑度の下界（Azar–Munos–Kappen）
 生成モデルの下で $\varepsilon$-最適 Q 関数を得るには $\Omega(\frac{|S||A|}{(1-\gamma)^{3}\varepsilon^{2}}\log\frac1\delta)$ 個の標本が必要であることを示せ。
 
-*4 UCRL2 とエピソード型 RL の後悔（Jaksch–Ortner–Auer）
+*5 UCRL2 とエピソード型 RL の後悔（Jaksch–Ortner–Auer）
 平均報酬 MDP の UCRL2 が後悔 $\tilde O(DS\sqrt{AT})$（$D$ は直径）を達成することを示し、下界 $\Omega(\sqrt{DSAT})$ を述べよ。
 
-*4 UCBVI と最適後悔（Azar–Osband–Munos）
+*5 UCBVI と最適後悔（Azar–Osband–Munos）
 有限ホライズン $H$ のエピソード型 MDP で、UCBVI（Bernstein ボーナス）が後悔 $\tilde O(\sqrt{H^{2}SAT})$ を達成し、下界と一致することを示せ。
 
 *4 線形 MDP と LSVI-UCB（Jin–Yang–Wang–Jordan）
@@ -104,7 +104,7 @@ SGD の雑音構造（Hessian に比例した共分散）が鋭い最小点か�
 *4 均質ネットワークの暗黙のバイアス（Lyu–Li, Ji–Telgarsky）
 均質な NN（ReLU など）の勾配流が、分離可能データで正規化マージンを単調増加させ、方向が最大マージン問題の KKT 点に収束することを示せ。
 
-*4 行列分解の暗黙の正則化の予想と反例（Gunasekar ら, Razin–Cohen）
+*5 行列分解の暗黙の正則化の予想と反例（Gunasekar ら, Razin–Cohen）
 深層行列分解の勾配流が最小核ノルム解に収束するという予想（Gunasekar ら 2017）を述べ、Razin–Cohen（2020）による、暗黙の正則化がノルムでは記述できない（階数を最小化する方向）反例を述べよ。
 
 *4 カーネル法の最適化と汎化（Representer 定理）

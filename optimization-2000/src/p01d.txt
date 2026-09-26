@@ -21,7 +21,7 @@ $F(x,y)$ が結合凸ならば $v(x)=\inf_{y}F(x,y)$ は凸であり、下限が
 *4 凸関数の一意劣勾配と微分可能性
 真凸関数 $f$ が $x\in\operatorname{int}\operatorname{dom}f$ で微分可能 $\iff\partial f(x)$ が一点。このとき $f$ は $x$ で実際に Fréchet 微分可能で、$\nabla f$ は微分可能点の集合上連続であることを示せ。
 
-*4 Rademacher 型定理（凸版）
+*5 Rademacher 型定理（凸版）
 $\mathbb{R}^{n}$ の開凸集合上の凸関数は、微分不可能点の集合が Lebesgue 零集合かつ第一類（$F_{\sigma}$ で可算個の Lipschitz 曲面に含まれる）である。$n=1$ では可算集合であることを示せ（Zajíček の構造定理の一部）。
 
 *4 最適性条件（凸） {conv-opt}
@@ -30,7 +30,7 @@ $\mathbb{R}^{n}$ の開凸集合上の凸関数は、微分不可能点の集合
 *4 劣微分の単調性と巡回単調性
 $\partial f$ は巡回単調（任意の閉路 $x_{0},\dots,x_{m}=x_{0}$ と $g_{i}\in\partial f(x_{i})$ で $\sum\langle g_{i},x_{i+1}-x_{i}\rangle\le0$）であることを示せ。単調だが巡回単調でない線形写像（$\mathbb{R}^{2}$ の回転 $\pi/2$ に近いもの）を与え、それがいかなる凸関数の劣微分でもないことを確かめよ。
 
-*4 Rockafellar の巡回単調性定理 {rock-cyc}
+*5 Rockafellar の巡回単調性定理 {rock-cyc}
 集合値写像 $T:\mathbb{R}^{n}\rightrightarrows\mathbb{R}^{n}$ が極大巡回単調 $\iff$ ある閉真凸関数 $f$ で $T=\partial f$。$f$ を $f(x)=\sup\{\sum_{i}\langle g_{i},x_{i+1}-x_{i}\rangle\}$ で構成し、$f$ が定数を除き一意であることを示せ。
 
 *4 劣勾配の有界性と Lipschitz 定数
@@ -68,7 +68,7 @@ $f(x)=\max_{u\in U}\{\langle Ax,u\rangle-\phi(u)\}$（$U$ コンパクト凸）�
 *4 Moreau 包による平滑化の誤差
 $f$ が $L$-Lipschitz 凸ならば $f-\frac{\lambda L^{2}}{2}\le e_{\lambda}f\le f$。この評価が最良であることを $f(x)=L|x|$ で確かめ、Huber 関数が $|x|$ の Moreau 包であることを示せ。
 
-*4 Lasry–Lions 正則化
+*5 Lasry–Lions 正則化
 有界な関数 $f$ に対し $f_{\lambda,\mu}=(f\square\frac{1}{2\lambda}\|\cdot\|^{2})^{\wedge}$（上包との合成）は $0<\mu<\lambda$ で $C^{1,1}$ である。$f$ が凸でなくても平滑化が得られること、および $f_{\lambda,\mu}\to f$ を示せ。
 
 *4 凸関数の畳み込み平滑化
@@ -92,13 +92,13 @@ $f$ が $\operatorname{ri}\operatorname{dom}f$ 上で微分可能でも $f^{*}$ 
 *4 凸関数のカットと下からの近似
 閉凸関数 $f$ は $f=\sup\{a\text{ffine }\ell\le f\}$、さらに $x\in\operatorname{int}\operatorname{dom}f$ では可算個の支持アフィン関数で十分。これに基づく Kelley の切除平面法の収束（遅さも含む）を論ぜよ。
 
-*4 凸関数列の一様収束（Rockafellar の定理 10.8）
+*5 凸関数列の一様収束（Rockafellar の定理 10.8）
 開凸集合上の有限凸関数列が稠密集合上で各点収束すれば、極限は凸で、収束はコンパクト集合上一様である。さらに劣微分がグラフの意味で収束すること（Attouch の定理の有限次元版）を示せ。
 
 *4 凸関数の極値の一意性と狭義凸性
 $f$ が狭義凸ならば最小点は高々一つ。一様凸性・強凸性・$p$ 次一様凸性の違いを整理し、$p$ 次一様凸関数では $f(x)-f^{*}\ge c\,\|x-x^{*}\|^{p}$ となることを示せ。
 
-*4 誤差限界と二次成長の同値
+*5 誤差限界と二次成長の同値
 閉凸関数 $f$ と最小値集合 $S$ について、二次成長 $f(x)-f^{*}\ge\frac{\alpha}{2}d_{S}(x)^{2}$（$f(x)\le f^{*}+\nu$）と、劣微分の誤差限界 $d_{S}(x)\le c\,\operatorname{dist}(0,\partial f(x))$ が同値であることを示せ（Drusvyatskiy–Lewis、Artacho–Geoffroy）。
 
 *4 Polyak–Łojasiewicz 不等式
@@ -116,7 +116,7 @@ o-minimal 構造で定義可能な下半連続関数 $f$ は、各点で KL 性�
 *4 凸関数の差の表現（DC 分解）
 $C^{2}$ 関数は（コンパクト集合上）二つの凸関数の差で表され、DC 関数の全体は和・積・最大・最小で閉じた線形空間をなす。Hartman の定理（局所 DC なら大域 DC）を述べ、区分的アフィン関数が二つの凸な区分的アフィン関数の差であることを示せ。
 
-*4 凸関数のスペクトル・特異値関数の微分
+*5 凸関数のスペクトル・特異値関数の微分
 絶対対称凸関数 $\phi$ と $F(X)=\phi(\sigma(X))$ について、$\partial F(X)=\{U\operatorname{Diag}(g)V^{\top}: g\in\partial\phi(\sigma(X)),\ X=U\operatorname{Diag}(\sigma)V^{\top}\}$ を示せ（Lewis）。
 
 *5 凸関数の Hessian の測度と Monge–Ampère

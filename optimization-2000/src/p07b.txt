@@ -9,10 +9,10 @@ Ekeland の変分原理から Bishop–Phelps の定理（支持汎関数の稠�
 *4 Ekeland の原理と Palais–Smale 列
 $C^{1}$ 汎関数 $f$ が下に有界ならば、$f(x_{k})\to\inf f$, $f'(x_{k})\to0$ となる列（最小化 Palais–Smale 列）が存在する。Ekeland の原理から示せ。
 
-*4 Deville–Godefroy–Zizler の平滑変分原理
+*5 Deville–Godefroy–Zizler の平滑変分原理
 Banach 空間 $X$ 上に有界な Lipschitz 平滑バンプ関数があれば、下半連続で下に有界な $f$ と任意の $\varepsilon$ に対し、$\|g\|_{\infty}+\|g'\|_{\infty}<\varepsilon$ の平滑関数 $g$ で $f+g$ が強最小点をもつものが存在し、そのような $g$ は稠密 $G_{\delta}$ をなす。証明の骨格を与えよ。
 
-*4 Stegall の変分原理
+*5 Stegall の変分原理
 RNP をもつ Banach 空間の有界閉凸集合上の上半連続有界関数 $f$ について、$X^{*}$ の稠密 $G_{\delta}$ 集合に属する $x^{*}$ で $f+x^{*}$ が強露出最大点をもつ。証明の骨格を示し、Asplund 空間の双対特徴づけへの応用を述べよ。
 
 *4 Daneš のドロップ定理
@@ -21,7 +21,7 @@ Banach 空間の閉集合 $C$ と閉球 $B=\bar B(z,r)$ で $\operatorname{dist}
 *4 Borwein–Preiss による Rademacher 型定理の反例回避
 Banach 空間の Lipschitz 関数は必ずしもどこでも微分可能ではないが、Asplund 空間の凸連続関数は稠密 $G_{\delta}$ で Fréchet 微分可能（Asplund の定理の Ekeland 型証明）であることを示せ。
 
-*4 Preiss の定理（Lipschitz 関数の稠密な微分可能性）
+*5 Preiss の定理（Lipschitz 関数の稠密な微分可能性）
 Asplund 空間上の局所 Lipschitz 関数は稠密集合上で Fréchet 微分可能である（Preiss 1990）。主張を正確に述べ、Rademacher 定理の無限次元への一般化として意義を論ぜよ。
 
 *4 変分原理と非凸集合の近接点の存在（Lau, Borwein–Fitzpatrick）
@@ -68,7 +68,7 @@ Fréchet 平滑ノルムをもつ Banach 空間において、下半連続・下
 *4 Aubin 性質の特徴づけ（Mordukhovich 判定の双対形）
 閉グラフの集合値写像 $S$ が $(\bar u,\bar x)$ で Aubin 性質をもつ $\iff D^{*}S(\bar u|\bar x)(0)=\{0\}$ で、Lipschitz 係数は $|D^{*}S(\bar u|\bar x)|^{+}$。証明せよ。
 
-*4 Robinson の陰関数定理（一般化方程式）
+*5 Robinson の陰関数定理（一般化方程式）
 $0\in f(p,x)+F(x)$ の解写像について、$f$ の $x$ に関する線形化 $G(x)=f(\bar p,\bar x)+\nabla_{x}f(\bar p,\bar x)(x-\bar x)+F(x)$ の逆写像が $(0,\bar x)$ で一価 Lipschitz 局所化をもてば、元の解写像も一価 Lipschitz 局所化をもつ（Robinson 1980）。縮小写像の原理で証明せよ。
 
 *4 Dontchev–Rockafellar の陰写像定理の体系
@@ -80,7 +80,7 @@ $F$ が $(\bar x,\bar y)$ で計量劣正則（$\operatorname{dist}(x,F^{-1}(\ba
 *4 強計量正則性と一価局所化
 $F$ が強計量正則 $\iff F^{-1}$ が一価 Lipschitz 局所化をもつ。$F=f+N_{C}$（$C$ 多面体）の場合に、強計量正則性が線形化の「一貫した符号条件」（Robinson の臨界面条件）で判定できることを示せ。
 
-*4 Kummer の逆関数定理（Lipschitz 写像）
+*5 Kummer の逆関数定理（Lipschitz 写像）
 局所 Lipschitz 写像 $F$ が局所的に Lipschitz 同相である $\iff$ Thibault の極限集合（strict graphical derivative）の元がすべて単射。証明の骨格を与え、Clarke の逆関数定理より鋭いことを示せ。
 
 *4 区分的アフィン写像の同相性（Robinson, Kuhn–Löwen）
@@ -95,7 +95,7 @@ Banach 空間の間の連続写像 $f$ が $\bar x$ の近傍で線形全射 $A$
 *4 Lyusternik–Graves の定理の集合値版（Ioffe, Dmitruk–Milyutin–Osmolovskii）
 $F$ が $(\bar x,\bar y)$ で計量正則で率 $\kappa$、$g$ が Lipschitz 定数 $\mu<1/\kappa$ ならば、$F+g$ は $(\bar x,\bar y+g(\bar x))$ で計量正則で率 $\kappa/(1-\kappa\mu)$。証明せよ。
 
-*4 計量正則性の半径定理（Dontchev–Lewis–Rockafellar）
+*5 計量正則性の半径定理（Dontchev–Lewis–Rockafellar）
 計量正則な $F$ について、$F+G$ が正則でなくなる最小の線形摂動 $G$ のノルムは $1/\operatorname{reg}F(\bar x|\bar y)$ に等しい（Eckart–Young の一般化）。証明の骨格を与えよ。
 
 *4 条件数と距離定理（Renegar, Dontchev–Lewis–Rockafellar）
@@ -104,7 +104,7 @@ $F$ が $(\bar x,\bar y)$ で計量正則で率 $\kappa$、$g$ が Lipschitz 定
 *4 集合値写像の図形微分（graphical derivative）
 $DF(\bar x|\bar y)(u)=\{v:(u,v)\in T_{\operatorname{gph}F}(\bar x,\bar y)\}$ を定義し、$F$ が $(\bar x,\bar y)$ で強計量劣正則 $\iff DF(\bar x|\bar y)^{-1}(0)=\{0\}$（Levy–Rockafellar 判定）。証明せよ。
 
-*4 変分不等式の解写像の Lipschitz 安定性（Dontchev–Rockafellar 1996）
+*5 変分不等式の解写像の Lipschitz 安定性（Dontchev–Rockafellar 1996）
 多面体上の変分不等式 $0\in f(p,x)+N_{C}(x)$ の解写像について、Aubin 性質と一価 Lipschitz 局所化（強正則性）が同値であることを示せ。
 
 *4 KKT 写像の Aubin 性質と強正則性

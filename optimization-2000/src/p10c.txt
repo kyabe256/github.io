@@ -1,0 +1,123 @@
+=ch X-5　線形二次制御と Riccati 方程式
+
+*4 有限ホライズン LQR {lqr}
+$\dot x=Ax+Bu$, $\min\int_{0}^{T}(x^{\top}Qx+u^{\top}Ru)dt+x(T)^{\top}Q_{f}x(T)$（$Q,Q_{f}\succeq0$, $R\succ0$）の最適制御は $u^{*}=-R^{-1}B^{\top}P(t)x$ で、$P$ は Riccati 微分方程式 $-\dot P=A^{\top}P+PA-PBR^{-1}B^{\top}P+Q$, $P(T)=Q_{f}$ の解である。平方完成で証明し、解の大域的存在を示せ。
+
+*4 代数 Riccati 方程式の安定化解（Kalman） {are}
+$(A,B)$ が可安定、$(Q^{1/2},A)$ が可検出なら、代数 Riccati 方程式 $A^{\top}P+PA-PBR^{-1}B^{\top}P+Q=0$ は一意の半正定値な安定化解（$A-BR^{-1}B^{\top}P$ が安定）をもち、無限ホライズン LQR の最適コストは $x_{0}^{\top}Px_{0}$。証明せよ。
+
+*4 Hamilton 行列と Riccati の解の構成
+Hamilton 行列 $\mathcal{H}=\begin{pmatrix}A & -BR^{-1}B^{\top}\\ -Q & -A^{\top}\end{pmatrix}$ の固有値が虚軸に関して対称であることを示し、安定不変部分空間 $\operatorname{span}\begin{pmatrix}X_{1}\\X_{2}\end{pmatrix}$ から $P=X_{2}X_{1}^{-1}$ で安定化解が得られることを示せ（Schur 法、Laub）。
+
+*4 離散時間 LQR と DARE
+離散時間 LQR の値反復（Riccati 差分方程式）が、可安定・可検出の下で代数 Riccati 方程式の安定化解に収束することを示せ。
+
+*4 Kleinman の Newton 法
+代数 Riccati 方程式に Newton 法を適用すると、各ステップが Lyapunov 方程式 $(A-BK_{k})^{\top}P_{k+1}+P_{k+1}(A-BK_{k})+Q+K_{k}^{\top}RK_{k}=0$ になり、安定化初期ゲインから単調に二次収束する（Kleinman 1968）。これが方策反復と一致することを示せ。
+
+*4 Lyapunov 方程式の可解性
+$A^{\top}X+XA=-C$ は、$A$ と $-A^{\top}$ が共通の固有値をもたなければ一意解をもつ（Sylvester 方程式）。$A$ が安定かつ $C\succ0$ なら $X=\int_{0}^{\infty}e^{A^{\top}t}Ce^{At}dt\succ0$ を示せ。
+
+*4 LQR のロバスト性（位相余裕 60°、ゲイン余裕無限大）
+単一入力 LQR 閉ループの戻り差 $|1+K(j\omega I-A)^{-1}B|\ge1$（Kalman の不等式）を示し、ゲイン余裕 $[1/2,\infty)$ と位相余裕 $60°$ を導け。
+
+*4 LQG にはロバスト性保証がない（Doyle）
+LQG コントローラ（Kalman フィルタ＋LQR）には保証された安定余裕が存在しない（Doyle 1978 の「There are none」の例）。例を確かめよ。
+
+*4 Kalman フィルタの最適性
+線形 Gauss 状態空間モデルで、Kalman フィルタは $x_{t}$ の条件付き期待値を与え、誤差共分散は Riccati 差分方程式に従うことを示せ。線形推定量の中では非 Gauss でも最小分散であることを示せ。
+
+*4 LQR と Kalman フィルタの双対性
+LQR の Riccati 方程式と Kalman フィルタの Riccati 方程式が、$(A,B,Q,R)\leftrightarrow(A^{\top},C^{\top},W,V)$ の置換で互いに移ることを示し、可制御性と可観測性の双対性との関係を述べよ。
+
+*4 可制御性・可観測性と Gram 行列
+$(A,B)$ が可制御 $\iff$ 可制御性 Gram 行列 $W_{c}(T)=\int_{0}^{T}e^{At}BB^{\top}e^{A^{\top}t}dt\succ0$ $\iff\operatorname{rank}[B,AB,\dots,A^{n-1}B]=n$（Kalman の判定）$\iff$ PBH 判定。最小エネルギー制御が $W_{c}^{-1}$ で与えられることを示せ。
+
+*4 極配置定理（Wonham）
+$(A,B)$ が可制御なら、状態フィードバック $K$ で $A-BK$ の固有値を任意の（共役対称な）集合に配置できる。証明せよ（単一入力では Ackermann の公式）。
+
+*4 平衡実現と Hankel 特異値によるモデル縮約（Moore, Glover）
+安定な最小実現の平衡実現（可制御性・可観測性 Gram 行列が等しく対角）を構成し、平衡打ち切りの誤差が $\|G-G_{r}\|_{\infty}\le2\sum_{i>r}\sigma_{i}$（Hankel 特異値）で抑えられることを示せ（Enns, Glover）。
+
+*5 $H_{2}$・$H_{\infty}$ 最適制御と二つの Riccati 方程式（Doyle–Glover–Khargonekar–Francis）
+$H_{\infty}$ 準最適制御器が存在する $\iff$ 二つの代数 Riccati 方程式が安定化半正定値解をもち、スペクトル半径条件 $\rho(X_{\infty}Y_{\infty})<\gamma^{2}$ をみたす（DGKF 1989）。主張を述べ、骨格を示せ。
+
+*4 Youla パラメータ化と閉ループの凸性
+安定化制御器全体が安定な伝達関数 $Q$ で $K=(Y-MQ)(X-NQ)^{-1}$ とパラメータ化され（Youla–Kučera）、閉ループ伝達関数が $Q$ についてアフィンとなるため、多くの制御設計が凸最適化になることを示せ。
+
+*4 システムレベル合成（Wang–Matni–Doyle）
+閉ループ応答を直接の変数とするシステムレベルパラメータ化が、局所性・遅延などの構造制約を凸制約として扱えることを示せ。
+
+*4 LQ ゲームと結合 Riccati 方程式
+二人非零和 LQ 微分ゲームの開ループ・フィードバック Nash 均衡が結合 Riccati 方程式で特徴づけられることを示し、解の非一意性の例を作れ。
+
+*4 LQR の方策勾配の勾配優越性（Fazel ら）の証明
+LQR のコスト $C(K)=\operatorname{tr}(P_{K}\Sigma_{0})$ について、$C(K)-C(K^{*})\le\frac{\|\Sigma_{K^{*}}\|}{\sigma_{\min}(\Sigma_{0})^{2}\sigma_{\min}(R)}\|\nabla C(K)\|_{F}^{2}$ を示せ。
+
+*5 代数 Riccati 方程式の解の全体の構造（Willems, Lancaster–Rodman）
+代数 Riccati 方程式の対称解の全体が、Hamilton 行列の $n$ 次元 Lagrange 不変部分空間と一対一に対応し、半順序に関して最大解と最小解をもつ束をなすことを示せ（Willems 1971）。
+
+*5 線形系の $H_{\infty}$ ノルムの計算（Boyd–Balakrishnan–Kabamba, Bruinsma–Steinbuch）
+$\|G\|_{\infty}\ge\gamma$ $\iff$ 付随する Hamilton 行列が虚軸上に固有値をもつ、という特徴づけを証明し、二分法アルゴリズムの二次収束版（BBK 法）を導け。
+
+=ch X-6　変分不等式と自由境界問題
+
+*4 Lions–Stampacchia の定理 {ls}
+Hilbert 空間 $H$ の閉凸集合 $K$、有界な強圧的双線形形式 $a$ について、変分不等式 $a(u,v-u)\ge\langle f,v-u\rangle\ (\forall v\in K)$ は一意解をもつ。$a$ が対称なら $\frac12a(v,v)-\langle f,v\rangle$ の $K$ 上の最小化と同値であることを示せ。
+
+*5 障害物問題の解の存在と正則性 {obstacle}
+$\min\{\int|\nabla u|^{2}-2fu: u\ge\psi,\ u=0\text{ on }\partial\Omega\}$ の解は一意に存在し、$\psi\in C^{1,1}$ なら $u\in C^{1,1}$（最適正則性、Frehse, Caffarelli）であることを示せ（$C^{1,1}$ の証明の骨格を与えよ）。
+
+*5 自由境界の正則性（Caffarelli）
+障害物問題の自由境界 $\partial\{u>\psi\}$ は、正則点の近傍で $C^{1,\alpha}$（さらに解析的）な超曲面であり、特異点の集合は低次元の $C^{1}$ 多様体に含まれる（Caffarelli 1977, 1998）。主張を述べ、爆発解（blow-up）の分類の骨格を示せ。
+
+*4 Signorini 問題と薄い障害物
+弾性体の片側接触（Signorini 問題）を変分不等式として定式化し、解の最適正則性 $C^{1,1/2}$（Athanasopoulos–Caffarelli）を述べよ。
+
+*4 放物型変分不等式（Stefan 問題）
+一相 Stefan 問題が、Baiocchi 変換により障害物型の放物型変分不等式に帰着することを示し、弱解の存在と一意性を述べよ。
+
+*4 Baiocchi 変換と多孔質ダム問題
+多孔質媒体中の定常流のダム問題が、Baiocchi 変換 $w(x,y)=\int_{y}^{h}(u(x,t)-t)dt$ で障害物問題に変換されることを示せ（Baiocchi 1971）。
+
+*4 準変分不等式と Nash 均衡（一般化 Nash 均衡）
+制約集合が解自身に依存する準変分不等式 $u\in K(u)$, $\langle F(u),v-u\rangle\ge0\ (\forall v\in K(u))$ の存在定理（Chan–Pang, Mosco）を述べ、一般化 Nash 均衡問題がその例であることを示せ。
+
+*4 変分不等式の正則化と罰則近似
+障害物問題の罰則近似 $-\Delta u_{\varepsilon}-\frac1\varepsilon(\psi-u_{\varepsilon})^{+}=f$ の解が $\|u_{\varepsilon}-u\|_{H^{1}}=O(\sqrt\varepsilon)$ で収束することを示せ。
+
+*4 変分不等式の有限要素誤差評価（Falk）
+障害物問題の区分線形有限要素近似の誤差 $\|u-u_{h}\|_{H^{1}}=O(h)$（Falk 1974）を示せ。
+
+*4 変分不等式の解の連続依存性と感度（Mignot）
+障害物問題の解写像 $f\mapsto u$ が方向微分可能であり、方向微分が臨界錐上の変分不等式の解で与えられることを示せ（Mignot 1976）。
+
+*4 障害物問題の最適制御と MPEC 性
+障害物問題を状態方程式とする最適制御問題が無限次元の MPEC になり、C-停留・M-停留・強停留の概念が必要となることを述べよ（Hintermüller–Kopacka, Wachsmuth）。
+
+*4 非線形相補性問題の存在定理（Karamardian, Moré）
+$F$ が連続で強単調（あるいは $F$ が共正値的で適当な条件）なら NCP は解をもつ。Hartman–Stampacchia の定理と強圧性から示せ。
+
+*4 Lemke 法の幾何：相補錐と相補性の被覆
+LCP$(q,M)$ の相補錐 $\operatorname{cone}(\pm e_{i},\pm M_{i})$ が $\mathbb{R}^{n}$ を被覆する $\iff$ $M$ が Q 行列。P 行列では相補錐が $\mathbb{R}^{n}$ を分割（重なりなく被覆）することを示せ。
+
+*4 変分不等式と単調作用素の零点の等価性
+変分不等式 VI$(F,K)$ は $0\in F(u)+N_{K}(u)$ と同値であり、$F$ が単調連続なら $F+N_{K}$ は極大単調である（Rockafellar の和定理）ことを示せ。
+
+*4 Mosco 収束と変分不等式の安定性
+閉凸集合の列 $K_{n}\to K$（Mosco）に対し、変分不等式の解 $u_{n}\to u$（強）を示せ（Mosco 1969）。領域摂動・離散化への応用を述べよ。
+
+*4 変分不等式とゲーム：Nash 均衡の VI 定式化
+凸ゲーム（各プレイヤーの費用が自分の戦略について凸微分可能）の Nash 均衡が擬勾配写像 $F=(\nabla_{x_{i}}\theta_{i})$ の VI の解と一致することを示し、$F$ が単調なら均衡集合が凸であることを導け。
+
+*4 Rosen の対角狭義凹性と均衡の一意性
+凹ゲームで、ある正の重み $r$ について $\sigma(x,r)=(r_{i}\nabla_{i}\theta_{i}(x))$ が対角狭義凹（$\langle\sigma(x,r)-\sigma(y,r),x-y\rangle<0$）ならば、Nash 均衡は一意である（Rosen 1965）。証明せよ。
+
+*4 交通均衡の VI 定式化と Braess
+Wardrop 均衡を経路流の VI として定式化し、リンクコストが単調なら均衡リンク流が一意であることを示せ。
+
+*5 障害物問題の自由境界の特異点集合の構造（Caffarelli, Monneau, Figalli–Serra）
+障害物問題の特異自由境界点の集合が、低次元の $C^{1}$ 多様体の可算和に含まれ（Caffarelli 1998, Monneau）、さらに $C^{1,1}$（Figalli–Serra）であることを述べ、Weiss・Monneau の単調性公式の役割を説明せよ。
+
+*5 一般的な障害物問題の自由境界の正則性（Figalli–Ros-Oton–Serra）
+一般的な（generic な）障害物に対し、$n\le4$ で自由境界は特異点をもたず滑らかであること（Figalli–Ros-Oton–Serra 2020）を述べ、特異点集合の次元評価の議論の骨格を示せ。

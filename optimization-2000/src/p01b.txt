@@ -1,6 +1,6 @@
 =ch I-3　凸多面体と線形不等式系
 
-*4 Minkowski–Weyl の定理 {mw}
+*5 Minkowski–Weyl の定理 {mw}
 $P\subset\mathbb{R}^{n}$ について次は同値：(i) $P=\{x:Ax\le b\}$（H 表現）、(ii) $P=\operatorname{conv}V+\operatorname{cone}D$（$V,D$ 有限、V 表現）。錐の場合（Weyl：有限生成 $\Rightarrow$ 多面的、Minkowski：多面的 $\Rightarrow$ 有限生成）を Fourier–Motzkin と極性から示し、一般の場合を斉次化で導け。
 
 *4 頂点の代数的特徴づけ
@@ -12,7 +12,7 @@ $P=\{x:Ax\le b\}$ の点 $x$ が頂点（端点）$\iff$ $x$ で等号の成り�
 *4 多面体の射影は多面体
 多面体の線形写像による像、二つの多面体の Minkowski 和、多面体の極（原点を内部に含むとき）はいずれも多面体である。Fourier–Motzkin の観点から証明し、像の H 表現のサイズが指数的に大きくなりうる例（拡張定式化）を挙げよ。
 
-*4 Hoffman の誤差限界 {hoffman}
+*5 Hoffman の誤差限界 {hoffman}
 $A\in\mathbb{R}^{m\times n}$ に対し定数 $\tau(A)$ が存在して、$P_{b}=\{x:Ax\le b\}\neq\emptyset$ なる任意の $b$ と任意の $x$ について $\operatorname{dist}(x,P_{b})\le\tau(A)\,\|(Ax-b)_{+}\|$。$\tau(A)$ が $b$ に依らないことが核心であることを説明し、$\tau$ を $A$ の行部分集合の特異値で表す公式を導け。
 
 *4 線形不等式系の摂動と Robinson の安定性
@@ -21,16 +21,16 @@ $Ax\le b$ が Slater 点（$Ax<b$）をもつことは、$(A,b)$ の十分小さ
 *4 Motzkin の分解と多面体の正準表現
 多面体は一意の直線空間 $L$ と、$L^{\perp}$ 内の尖った多面体の和に分解される。尖った多面体は頂点の凸包と極線方向の錐の和に一意に表されることを示し、この表現が非冗長であることを確かめよ。
 
-*4 Euler–Poincaré の関係式
+*5 Euler–Poincaré の関係式
 $d$ 次元凸多面体（polytope）の $k$ 次元面の個数 $f_{k}$ について $\sum_{k=0}^{d-1}(-1)^{k}f_{k}=1-(-1)^{d}$。シェリング（Bruggesser–Mani）を用いて証明せよ。
 
 *5 上限定理（McMullen）
 $n$ 頂点の $d$ 次元凸多面体の $k$ 次元面の個数は、同じ頂点数の巡回多面体 $C(n,d)$ の個数以下である。$h$ ベクトルと Dehn–Sommerville の関係式を用いた証明を完成させよ。特にファセット数が $O(n^{\lfloor d/2\rfloor})$ であることを導け。
 
-*4 Dehn–Sommerville の関係式
+*5 Dehn–Sommerville の関係式
 単体的 $d$ 次元凸多面体の $h$ ベクトル $(h_{0},\dots,h_{d})$ は $h_{i}=h_{d-i}$ をみたす。シェリングの反転を用いて証明せよ。
 
-*4 Balinski の定理
+*5 Balinski の定理
 $d$ 次元凸多面体のグラフ（頂点と辺）は $d$ 連結である。線形汎関数による分割を用いて証明し、単体法の頂点経路の議論にどう関わるかを述べよ。
 
 *5 Hirsch 予想の反例（Santos）と多項式直径問題
@@ -45,10 +45,10 @@ $A$ が全単模（すべての小行列式が $0,\pm1$）ならば、整数 $b$
 *4 Birkhoff–von Neumann の定理 {birkhoff}
 二重確率行列全体は置換行列の凸包であり、置換行列がちょうど端点である。Hall の結婚定理を用いた証明と、全単模性を用いた証明の両方を与えよ。
 
-*4 Chvátal–Gomory 切除と整数包
+*5 Chvátal–Gomory 切除と整数包
 有理多面体 $P$ の整数包 $P_{I}=\operatorname{conv}(P\cap\mathbb{Z}^{n})$ は多面体である（Meyer）。Chvátal 閉包 $P'$ を有限回繰り返すと $P_{I}$ に到達すること（Chvátal ランクの有限性、Schrijver）を示せ。
 
-*4 Carathéodory の整数版（Eisenbrand–Shmonin）
+*5 Carathéodory の整数版（Eisenbrand–Shmonin）
 整数錐 $\{\sum\lambda_{i}a_{i}:\lambda_{i}\in\mathbb{Z}_{\ge0}\}$ の元は、$\|a_{i}\|_{\infty}\le M$ のとき高々 $2n\log_{2}(4nM)$ 個の生成元の非負整数結合で表される。鳩の巣原理による証明を完成させよ。
 
 *4 Weyl–Minkowski と LP の有界性
@@ -68,13 +68,13 @@ $\mathbb{R}^{n}$ の $n+2$ 点は、凸包が交わる二つの部分集合に�
 *4 Helly の定理 {helly}
 $\mathbb{R}^{n}$ の凸集合の有限族で、任意の $n+1$ 個が共通点をもつならば全体が共通点をもつ。無限族ではコンパクト性が必要であることを例で示し、Radon の定理からの証明を完成させよ。
 
-*4 Helly の分数版と $(p,q)$ 定理
+*5 Helly の分数版と $(p,q)$ 定理
 凸集合 $N$ 個の族で、$n+1$ 個組のうち割合 $\alpha$ 以上が共通点をもてば、ある点が $\beta(\alpha,n)N$ 個以上に含まれる（Katchalski–Liu, Kalai）。これを用いて Alon–Kleitman の $(p,q)$ 定理の証明の骨格を与えよ。
 
 *5 Tverberg の定理
 $\mathbb{R}^{n}$ の $(r-1)(n+1)+1$ 点は、凸包が共通点をもつ $r$ 個の部分集合に分割できる。Sarkaria のテンソル積による Colorful Carathéodory への帰着で証明せよ。
 
-*4 Colorful Carathéodory（Bárány）
+*5 Colorful Carathéodory（Bárány）
 $\mathbb{R}^{n}$ の $n+1$ 個の点集合 $S_{0},\dots,S_{n}$ で、各 $\operatorname{conv}S_{i}$ が原点を含むならば、各 $S_{i}$ から一点ずつ選んだ虹色の単体で原点を含むものが存在する。最短距離の議論で証明し、Colorful Helly を導け。
 
 *4 Kirchberger の定理
@@ -83,16 +83,16 @@ $\mathbb{R}^{n}$ の有限集合 $R,B$ が超平面で強分離可能 $\iff$ 任
 *4 Shapley–Folkman の補題 {sf}
 $S_{1},\dots,S_{m}\subset\mathbb{R}^{n}$ に対し、$x\in\operatorname{conv}(S_{1}+\dots+S_{m})$ は $x=\sum x_{i}$, $x_{i}\in\operatorname{conv}S_{i}$ で高々 $n$ 個を除き $x_{i}\in S_{i}$ と表せる。Carathéodory の定理から証明し、Starr の系（和の非凸性が $m$ に依らず抑えられる）を導け。
 
-*4 John の楕円体定理 {john}
+*5 John の楕円体定理 {john}
 $\mathbb{R}^{n}$ の凸体 $K$ に含まれる最大体積の楕円体 $E$ は一意で、$E\subset K\subset c+n(E-c)$。$K$ が中心対称なら $\sqrt{n}$ に改良できる。接触点による特徴づけ（$\sum\lambda_{i}u_{i}u_{i}^{\top}=I$）を証明せよ。
 
 *4 Löwner の楕円体
 凸体 $K$ を含む最小体積の楕円体は一意に存在する。John 楕円体との極双対性を示し、$\log\det$ の厳密凹性が一意性の鍵であることを説明せよ。
 
-*4 Brunn–Minkowski の不等式 {bm}
+*5 Brunn–Minkowski の不等式 {bm}
 $\mathbb{R}^{n}$ の空でないコンパクト集合 $A,B$ について $|A+B|^{1/n}\ge|A|^{1/n}+|B|^{1/n}$。箱の和への帰着（Hadwiger–Ohmann）で証明し、等周不等式を系として導け。
 
-*4 Prékopa–Leindler の不等式 {pl}
+*5 Prékopa–Leindler の不等式 {pl}
 $h((1-\lambda)x+\lambda y)\ge f(x)^{1-\lambda}g(y)^{\lambda}$ ならば $\int h\ge(\int f)^{1-\lambda}(\int g)^{\lambda}$。1 次元の輸送論法と次元に関する帰納法で証明し、Brunn–Minkowski を再導出せよ。
 
 *4 対数凹測度の周辺は対数凹
@@ -101,7 +101,7 @@ $h((1-\lambda)x+\lambda y)\ge f(x)^{1-\lambda}g(y)^{\lambda}$ ならば $\int h\
 *5 Mahler 積と Blaschke–Santaló の不等式
 中心対称凸体 $K$ について $|K|\,|K^{\circ}|\le|B^{n}|^{2}$ で等号は楕円体に限る。Steiner 対称化による証明を完成させ、下界（Mahler 予想）について Bourgain–Milman の $|K||K^{\circ}|\ge c^{n}|B^{n}|^{2}$ を述べよ。
 
-*4 Steiner 対称化の収束
+*5 Steiner 対称化の収束
 凸体 $K$ に適切な方向列で Steiner 対称化を繰り返すと Hausdorff 距離で同体積の球に収束する。Blaschke の選択定理と、対称化で周長（平均幅）が増えないことを使って証明せよ。
 
 *5 Dvoretzky の定理（凸幾何版）
@@ -119,5 +119,5 @@ $x\in\operatorname{int}\operatorname{conv}S$ ならば、$S$ の高々 $2n$ 点�
 *4 Grünbaum の重心定理
 凸体 $K$ の重心を通る任意の超平面は $K$ を体積比 $\ge(n/(n+1))^{n}\ge1/e$ の部分に切る。これが重心切除平面法の各反復で体積が定数倍縮むことを保証する理由を説明せよ。
 
-*4 Doignon–Bell–Scarf の定理
+*5 Doignon–Bell–Scarf の定理
 $\mathbb{Z}^{n}$ 上の凸集合（凸集合と $\mathbb{Z}^{n}$ の交わり）の Helly 数は $2^{n}$ である（Doignon–Bell–Scarf）。証明を完成させ、整数計画の最適性判定における意味（$2^{n}$ 個の制約で最適性が決まる）を説明せよ。

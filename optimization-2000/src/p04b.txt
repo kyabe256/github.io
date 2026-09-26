@@ -12,7 +12,7 @@ $\|F'(x_{0})^{-1}\|\le\beta$, $\|F'(x_{0})^{-1}F(x_{0})\|\le\eta$, $F'$ が $\ga
 *4 Newton 法の吸引域と Newton フラクタル
 $z^{3}-1=0$ に対する複素 Newton 法の吸引域の境界は Julia 集合であり、三つの吸引域が共通の境界をもつ（Wada 性）。Newton 法が大域収束しない本質的理由を複素力学系から説明せよ。
 
-*4 McMullen の定理（一般収束アルゴリズムの非存在）
+*5 McMullen の定理（一般収束アルゴリズムの非存在）
 多項式の根を求める「純粋に反復的な」有理アルゴリズムで、開稠密な初期値と係数に対して収束するもの（一般収束アルゴリズム）は、次数 3 では存在するが次数 4 以上では存在しない（McMullen 1987）。主張を正確に述べ、3 次で Newton 法が一般収束しない例（吸引的周期軌道をもつ $z^{3}-2z+2$）を確かめよ。
 
 *4 減衰 Newton 法と大域収束
@@ -33,7 +33,7 @@ $F'(x^{*})$ が特異な場合（重根）、Newton 法は一般に線形収束�
 *4 Halley 法と高次法
 Halley 法 $x_{k+1}=x_{k}-\frac{2FF'}{2F'^{2}-FF''}$ は単純根で三次収束する。Chebyshev 法も三次収束することを示し、効率指数（収束次数の関数評価コスト当たりのべき）で Newton 法と比較せよ（Ostrowski–Traub）。
 
-*4 Kung–Traub 予想
+*5 Kung–Traub 予想
 関数値 $n$ 回を用いる多点反復の最大収束次数は $2^{n-1}$ である、という Kung–Traub 予想を述べ、次数 $2^{n-1}$ を達成する反復の族（Kung–Traub 法）を構成せよ。
 
 *4 セカント法の収束次数
@@ -45,13 +45,13 @@ Halley 法 $x_{k+1}=x_{k}-\frac{2FF'}{2F'^{2}-FF''}$ は単純根で三次収束
 *4 半平滑性の例と計算規則
 区分的 $C^{1}$ 関数、凸関数の射影 $P_{C}$（$C$ が多面体・二次錐・半正定値錐）、Fischer–Burmeister 関数が（強）半平滑であることを示し、半平滑関数の合成が半平滑であることを証明せよ。
 
-*4 Newton 法の複素力学と Hubbard–Schleicher–Sutherland
+*5 Newton 法の複素力学と Hubbard–Schleicher–Sutherland
 次数 $d$ の多項式のすべての根を求めるのに十分な、初期値の有限集合（$1.11d\log^{2}d$ 点）が存在する（Hubbard–Schleicher–Sutherland）。主張を述べ、Newton 法の大域的挙動の解析へのアプローチを説明せよ。
 
 *4 Gauss–Newton 法と Newton 法の関係
 非線形最小二乗 $\frac{1}{2}\|r(x)\|^{2}$ の Newton 法の Hessian は $J^{\top}J+\sum r_{i}\nabla^{2}r_{i}$ で、第二項を無視すると Gauss–Newton 法。残差ゼロの問題では Gauss–Newton が二次収束、小残差では線形収束することを示せ。
 
-*4 Newton 法の計算量（Smale のベズー定理シリーズ）
+*5 Newton 法の計算量（Smale のベズー定理シリーズ）
 多項式系の解を追跡するホモトピー Newton 法で、ステップ数が経路の条件数の積分 $\int\mu(f_{t},z_{t})\|\dot f_{t}\|dt$ で抑えられること（Shub–Smale, Shub 2009）を示せ。
 
 *5 Smale の第 17 問題の解決（Beltrán–Pardo, Lairez）
@@ -83,10 +83,10 @@ $\nabla^{2}f$ が $x^{*}$ で Lipschitz、$\nabla^{2}f(x^{*})\succ0$ で、$x_{0
 *4 Powell の BFGS の大域収束定理 {powell-bfgs}
 $f$ が強凸 $C^{2}$ で、BFGS を Wolfe 直線探索とともに用いると、任意の正定値 $B_{0}$ から $x_{k}\to x^{*}$ かつ超線形収束する（Powell 1976, Byrd–Nocedal–Yuan は $\phi\in[0,1)$ の Broyden 族に拡張）。トレースと行列式を組み合わせた関数 $\psi(B)=\operatorname{tr}B-\ln\det B$ を用いる証明を完成させよ。
 
-*4 BFGS の非凸での失敗（Dai, Mascarenhas）
+*5 BFGS の非凸での失敗（Dai, Mascarenhas）
 非凸関数に対して、Wolfe 直線探索付き BFGS が停留点に収束しない例が存在する（Dai 2002, Mascarenhas 2004）。主張を正確に述べ、Li–Fukushima の修正（cautious update）で大域収束が回復することを示せ。
 
-*4 DFP の大域収束の困難
+*5 DFP の大域収束の困難
 DFP 法は強凸関数に対しても不正確直線探索では大域収束が保証されない（未解決の部分を含む）。BFGS との違いを、自己修正性（BFGS は大きすぎる固有値を素早く修正する）の観点から説明せよ（Powell 1986, Byrd–Nocedal–Yuan）。
 
 *4 対称ランク 1（SR1）更新

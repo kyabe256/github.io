@@ -15,7 +15,7 @@ LASSO $\min\frac12\|Ax-b\|^{2}+\lambda\|x\|_{1}$ に対する ISTA が、非退�
 *4 群 LASSO・核ノルムの近接勾配法
 群 LASSO（ブロック縮小）、核ノルム正則化（特異値閾値化、SVT）の近接勾配法の収束を示し、核ノルム近接写像が SVD 一回で計算できることを確かめよ（Cai–Candès–Shen）。
 
-*4 全変動正則化の近接写像（Chambolle の射影法）
+*5 全変動正則化の近接写像（Chambolle の射影法）
 画像の全変動 $TV(u)=\sum|\nabla u|$ の近接写像が双対問題 $\min\{\|u_{0}-\operatorname{div}p\|^{2}:|p|\le\lambda\}$ の解から得られ、Chambolle の不動点法が収束することを示せ（Chambolle 2004）。
 
 *4 Rudin–Osher–Fatemi モデルの双対と主双対法
@@ -42,7 +42,7 @@ $\ell_{0}$ 擬ノルムの近接写像はハード閾値化であり、反復ハ
 *4 近接勾配法の加速における運動量と台の識別の両立
 FISTA も有限回で台を識別するが、識別後の線形収束は運動量により振動することを示し、適応的リスタートとの組合せを論ぜよ（Liang–Fadili–Peyré の局所線形収束解析）。
 
-*4 合成最適化の Gauss–Newton 型法（Burke–Ferris）
+*5 合成最適化の Gauss–Newton 型法（Burke–Ferris）
 $\min h(c(x))$（$h$ は凸多面体的、$c$ は滑らか）に対し、線形化 $h(c(x_{k})+\nabla c(x_{k})d)$ を信頼領域で最小化する方法が、弱鋭い最小の下で二次収束することを示せ（Burke–Ferris 1995）。
 
 *4 分数ノルムの近接と $\ell_{p}$ 準ノルム（$0<p<1$）
@@ -101,7 +101,7 @@ Legendre 型 $h$ に対する Hessian 勾配流は、線形等式制約付き凸
 *4 加速ミラー降下（Krichene–Bayen–Bartlett, Nesterov）
 ミラー降下と双対平均を線形結合する加速ミラー降下法が $O(L D_{h}/k^{2})$ を達成することを示し、連続時間の Lyapunov 解析と離散化を示せ。
 
-*4 ミラー降下の最適性とノルムの選択（Ben-Tal–Margalit–Nemirovski）
+*5 ミラー降下の最適性とノルムの選択（Ben-Tal–Margalit–Nemirovski）
 $\ell_{p}$ 球上の Lipschitz 凸最適化で、$p$ に応じて適切な距離生成関数を選ぶと、ミラー降下が情報ベース計算量の下界を対数因子を除いて達成することを示せ（$p=1$ でエントロピー、$p=2$ でユークリッド）。
 
 *4 Bregman 距離の三角不等式の欠如と収束解析
@@ -110,7 +110,7 @@ Bregman 距離は対称でも三角不等式もみたさないが、三点恒等
 *4 オンラインミラー降下と後悔
 オンライン凸最適化でミラー降下は後悔 $O(\sqrt{T D_{h}G^{2}})$ を達成し、ゼロ和ゲームでの均衡への平均反復の収束（後悔から minimax へ）を導け。
 
-*4 楽観的ミラー降下と加速された均衡収束
+*5 楽観的ミラー降下と加速された均衡収束
 楽観的ミラー降下（前回の勾配で予測）を両プレイヤーが用いると、ゼロ和ゲームの均衡に $O(1/T)$ で収束する（Rakhlin–Sridharan, Syrgkanis–Agarwal–Luo–Schapire）。証明の骨格を与えよ。
 
 *4 Bregman 近接勾配法の非凸収束（Bolte–Sabach–Teboulle–Vaisbourd）

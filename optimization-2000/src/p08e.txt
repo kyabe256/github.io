@@ -1,21 +1,21 @@
 =ch VIII-9　非凸問題の良い景観と大域最適性
 
-*4 厳密鞍点性と勾配法の大域収束（Ge–Huang–Jin–Yuan）
+*5 厳密鞍点性と勾配法の大域収束（Ge–Huang–Jin–Yuan）
 すべての臨界点が局所最小（しかも大域最小）か厳密鞍点（Hessian が負固有値をもつ）である関数に対し、雑音付き SGD が多項式時間で大域最小の近傍に到達することを示せ（Ge–Huang–Jin–Yuan 2015 のテンソル分解への応用を含む）。
 
 *4 勾配法は厳密鞍点に確率 0 でしか収束しない（Lee–Simchowitz–Jordan–Recht）
 $\nabla f$ が $L$-Lipschitz で、ステップ $<1/L$ の勾配法写像 $g(x)=x-\alpha\nabla f(x)$ が局所微分同相であることから、中心安定多様体定理により、厳密鞍点に収束する初期値の集合が Lebesgue 零集合であることを示せ。
 
-*4 位相回復の非凸景観（Sun–Qu–Wright）
+*5 位相回復の非凸景観（Sun–Qu–Wright）
 $m\gtrsim n\log^{3}n$ の Gauss 測定で、$\min\frac1{4m}\sum(y_{i}-|a_{i}^{\top}z|^{2})^{2}$ の局所最小点はすべて大域最小点 $\pm x$ であり、他の臨界点は厳密鞍点である。主張を述べ、期待値関数の景観の解析を完成させよ。
 
 *4 Z2 同期・角度同期の Burer–Monteiro 景観（Bandeira–Boumal–Voroninski）
 Z2 同期の Burer–Monteiro 定式化 $\max\langle C,YY^{\top}\rangle$ s.t. $\|y_{i}\|=1$ について、$p=2$ でも雑音レベルが十分小さければすべての二階臨界点が大域最適（SDP の解）であることを示せ。
 
-*4 Burer–Monteiro の一般的な良い景観（Boumal–Voroninski–Bandeira）
+*5 Burer–Monteiro の一般的な良い景観（Boumal–Voroninski–Bandeira）
 $m$ 個の等式制約をもつ SDP の Burer–Monteiro 定式化で、制約多様体が滑らかかつ $\frac{p(p+1)}{2}>m$ なら、ほとんどすべてのコスト行列 $C$ について二階臨界点は大域最適である。証明の骨格を与えよ。
 
-*4 Burer–Monteiro の失敗例（Waldspurger–Waters）
+*5 Burer–Monteiro の失敗例（Waldspurger–Waters）
 $\frac{p(p+1)}{2}+p\le m$ ならば、Burer–Monteiro 定式化が非最適な二階臨界点をもつ SDP が存在する（Waldspurger–Waters 2020）。Pataki の限界の最良性との関係を述べよ。
 
 *4 主成分分析の非凸性と大域最適性
@@ -27,10 +27,10 @@ $\max\operatorname{tr}(U^{\top}AU)$ s.t. $U^{\top}U=I_{k}$ の局所最大はす
 *4 過剰パラメータ化による景観の平坦化（Soltanolkotabi–Javanmard–Lee）
 二層二次活性化ネット $f(x)=\sum_{j}(w_{j}^{\top}x)^{2}$ で、幅 $k\ge n$ なら二乗損失の局所最小がすべて大域最小であることを示せ（Du–Lee の二次活性化）。
 
-*4 ReLU ネットの悪い局所最小の存在（Safran–Shamir, Yun–Sra–Jadbabaie）
+*5 ReLU ネットの悪い局所最小の存在（Safran–Shamir, Yun–Sra–Jadbabaie）
 二層 ReLU ネットでは、実現可能な場合でも悪い局所最小が存在しうる（Safran–Shamir 2018）ことを述べ、一層の ReLU ユニットの学習問題でも球面上の損失が非凸になる例を示せ。
 
-*4 モード連結性（Garipov ら, Kuditipudi ら）
+*5 モード連結性（Garipov ら, Kuditipudi ら）
 過剰パラメータ化されたネットの異なる大域最小点が低損失の曲線で結ばれうる（モード連結性）ことを述べ、ドロップアウト安定性の仮定から連結性を示す Kuditipudi ら（2019）の議論の骨格を与えよ。
 
 *4 ランダム非凸関数の臨界点の数（Auffinger–Ben Arous–Černý）
@@ -39,7 +39,7 @@ $\max\operatorname{tr}(U^{\top}AU)$ s.t. $U^{\top}U=I_{k}$ の局所最大はす
 *4 Kac–Rice 公式
 滑らかなランダム場 $X$ の零点の期待数が $E\#\{x\in U: X(x)=0\}=\int_{U}E[|\det\nabla X(x)|\mid X(x)=0]p_{X(x)}(0)dx$ で与えられることを示せ（非退化条件の下）。
 
-*4 テンソル PCA と計算-統計ギャップ（Richard–Montanari）
+*5 テンソル PCA と計算-統計ギャップ（Richard–Montanari）
 スパイクテンソル模型 $T=\lambda v^{\otimes3}+W$ で、情報理論的には $\lambda\gtrsim\sqrt n$ で検出可能だが、既知の多項式時間アルゴリズムは $\lambda\gtrsim n^{3/4}$ を要する。SOS 下界（Hopkins–Shi–Steurer）がこのギャップを支持することを述べよ。
 
 *4 非凸問題の凸化：凸包と Carathéodory
@@ -48,7 +48,7 @@ $\max\operatorname{tr}(U^{\top}AU)$ s.t. $U^{\top}U=I_{k}$ の局所最大はす
 *4 ベンチマーク的非凸問題の大域解：信頼領域部分問題・一般化固有値
 信頼領域部分問題・一般化固有値問題・二次制約一つの QCQP が「隠れた凸性」により多項式時間で大域的に解けることを統一的に論じ、それらの景観（局所非大域最小が高々一つ）を比較せよ。
 
-*4 スパース PCA の困難性と SDP 緩和（d'Aspremont ら, Berthet–Rigollet）
+*5 スパース PCA の困難性と SDP 緩和（d'Aspremont ら, Berthet–Rigollet）
 スパース PCA の SDP 緩和と、植え込みクリーク仮説の下での計算-統計ギャップ（Berthet–Rigollet 2013）を述べよ。
 
 *4 非凸最適化の大域最適性証明書（SOS による）
@@ -65,16 +65,16 @@ Sherrington–Kirkpatrick 模型の基底状態を $(1-\varepsilon)$ 近似す�
 *4 スペクトラヘドロンの剛凸性（Helton–Vinnikov）
 スペクトラヘドロン $\{x: A_{0}+\sum x_{i}A_{i}\succeq0\}$（$A_{0}\succ0$）は剛凸（$\det(A_{0}+\sum x_{i}A_{i})$ が $0$ を通る実直線に制限したとき実根のみをもつ）であることを示せ。
 
-*4 Helton–Vinnikov の定理
+*5 Helton–Vinnikov の定理
 平面の剛凸集合は、定義多項式の次数と同じサイズのスペクトラヘドロンとして表現できる（Helton–Vinnikov 2007、Lax 予想の解決）。主張を正確に述べ、証明の骨格（Riemann 面上のテータ関数）を示せ。
 
 *4 双曲多項式の基本定理（Gårding）
 方向 $e$ に関して双曲的な斉次多項式 $p$ の双曲錐 $\Lambda_{+}(p,e)$ は凸で、$e$ の選択に依らず（同じ連結成分内の方向について）一定。$p^{1/d}$ が錐上で凹であることを示せ。
 
-*4 Renegar 微分と双曲錐の緩和
+*5 Renegar 微分と双曲錐の緩和
 双曲多項式 $p$ の方向微分 $D_{e}p$ も $e$ に関して双曲的で、その双曲錐は $\Lambda_{+}(p,e)$ を含む（Renegar 2006）。これが錐計画の階層的緩和を与えることを示せ。
 
-*4 実安定多項式と Kadison–Singer の解決（Marcus–Spielman–Srivastava）
+*5 実安定多項式と Kadison–Singer の解決（Marcus–Spielman–Srivastava）
 実安定多項式・インターレーシング族の方法を用いて、ランク 1 の正定値行列の和の最大固有値の確率的上界を示し、Weaver の予想（したがって Kadison–Singer 問題）を導く議論の骨格を与えよ。
 
 *4 インターレーシング族とラマヌジャングラフ（Marcus–Spielman–Srivastava）
@@ -83,16 +83,16 @@ Sherrington–Kirkpatrick 模型の基底状態を $(1-\varepsilon)$ 近似す�
 *4 Heilmann–Lieb の定理
 グラフのマッチング多項式の根はすべて実数で、最大の根は $2\sqrt{\Delta-1}$ 以下である（Heilmann–Lieb 1972）。証明せよ。
 
-*4 Gurvits の永久式下界と van der Waerden 予想
+*5 Gurvits の永久式下界と van der Waerden 予想
 二重確率行列の永久式 $\operatorname{per}A\ge n!/n^{n}$（van der Waerden 予想、Egorychev–Falikman）を、実安定多項式の容量の議論（Gurvits 2008）で証明せよ。
 
-*4 Brändén–Huh のローレンツ多項式と対数凹性
+*5 Brändén–Huh のローレンツ多項式と対数凹性
 ローレンツ多項式（完全対数凹多項式）の理論を用いて、マトロイドの独立集合の数列が超対数凹であること（Mason の予想の強形）を示す議論の骨格を与えよ（Anari–Liu–Oveis Gharan–Vinzant, Brändén–Huh）。
 
 *4 行列式点過程と対数凹多項式のサンプリング
 ローレンツ多項式・実安定多項式に対応する分布（強 Rayleigh 分布）からのサンプリングが、基底交換ウォークの急速混合（Anari ら）により多項式時間で可能であることを述べよ。
 
-*4 Borcea–Brändén の安定性保存作用素の特徴づけ
+*5 Borcea–Brändén の安定性保存作用素の特徴づけ
 多変数実安定多項式の安定性を保つ線形作用素の完全な特徴づけ（Borcea–Brändén 2009：シンボルが実安定であること）を述べ、Pólya–Schur の一変数の場合（乗数列）を特殊化として示せ。
 
 *4 テータ体（Gouveia–Parrilo–Thomas）
@@ -101,13 +101,13 @@ Sherrington–Kirkpatrick 模型の基底状態を $(1-\varepsilon)$ 近似す�
 *4 凸半代数集合の SDP 表現可能性と Lasserre の構成
 コンパクト凸半代数集合 $K$ が「PP-BDR 性」をもつとき、Lasserre のモーメント緩和が有限段で $K$ の凸包の厳密な SDP 表現を与えることを示せ（Helton–Nie の十分条件）。
 
-*4 Helton–Nie の定理（スペクトラヘドラル影の十分条件）
+*5 Helton–Nie の定理（スペクトラヘドラル影の十分条件）
 凸半代数集合の境界が正曲率で非特異ならば、それはスペクトラヘドラル影である（Helton–Nie 2009）。主張と証明の骨格を与えよ。
 
-*4 Scheiderer の反例（2018）
+*5 Scheiderer の反例（2018）
 $n\ge3$, $d\ge4$ など（Hilbert の例外外）の場合の非負形式の錐 $P_{n,2d}$ はスペクトラヘドラル影ではない。証明の骨格（SOS の錐との双対性と「次数の有界性」の議論）を述べよ。
 
-*4 行列凸性と非可換凸代数幾何（Helton–McCullough）
+*5 行列凸性と非可換凸代数幾何（Helton–McCullough）
 行列凸な自由半代数集合はすべて LMI 領域（自由スペクトラヘドロン）である（Helton–McCullough 2012）。主張と、可換の場合との対比を述べよ。
 
 *4 実代数多様体上の最適化と ED 次数（Draisma–Horobeț–Ottaviani–Sturmfels–Thomas）

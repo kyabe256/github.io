@@ -1,0 +1,126 @@
+=part 第 X 部　変分法・最適制御・均衡 | CALCULUS OF VARIATIONS, CONTROL AND EQUILIBRIUM &mdash; 1801 to 2000
+最適化は有限次元に留まらない。曲線を最適化する変分法、時間とともに決定する最適制御、自分以外の意思決定者がいる均衡、分布そのものを動かす最適輸送、上位と下位が入れ子になった二段階最適化 ― 最後の部では、これまでの 1800 題のすべてが無限次元と相互作用の中で合流する。
+
+=ch X-1　変分法の古典理論
+
+*4 Euler–Lagrange 方程式と du Bois-Reymond の補題 {el}
+$J(u)=\int_{a}^{b}L(t,u,u')dt$ の $C^{1}$ 極値関数は、du Bois-Reymond 形 $L_{u'}(t,u,u')=\int_{a}^{t}L_{u}ds+c$ をみたし、$u\in C^{2}$ なら Euler–Lagrange 方程式 $\frac{d}{dt}L_{u'}=L_{u}$ をみたす。du Bois-Reymond の補題を証明し、$C^{1}$ 解が自動的に $C^{2}$ となる条件（Hilbert の正則性定理：$L_{u'u'}>0$）を示せ。
+
+*4 Legendre の必要条件
+弱局所最小関数では $L_{u'u'}(t,u,u')\ge0$ が成り立つ（Legendre の条件）。第二変分の Legendre の議論で証明せよ。
+
+*4 Jacobi の条件と共役点
+Legendre の強条件 $L_{u'u'}>0$ の下で、極値関数が弱局所最小であるためには、区間 $(a,b)$ に共役点（Jacobi 方程式の非自明解の零点）が存在しないことが必要である。第二変分の正値性と共役点の関係を Sturm の比較定理で示せ。
+
+*4 Weierstrass の必要条件（$E$ 関数）
+強局所最小関数では Weierstrass の $E$ 関数 $E(t,u,p,q)=L(t,u,q)-L(t,u,p)-(q-p)L_{u'}(t,u,p)\ge0$ が成り立つ。針状変分（McShane）で証明し、これが Pontryagin の最大原理の原型であることを説明せよ。
+
+*4 十分条件：場の理論（Weierstrass, Hilbert の不変積分）
+極値関数が極値関数の場に埋め込まれ、場上で $E\ge0$ ならば強局所最小である。Hilbert の不変積分による証明を与えよ。
+
+*4 Noether の定理
+Lagrangian が一径数変換群の下で不変なら、対応する保存量が存在する。時間並進不変性から Hamiltonian（エネルギー）の保存、空間並進から運動量の保存を導け。
+
+*4 Hamilton の正準方程式と Legendre 変換
+$L$ の $u'$ についての Legendre 変換 $H(t,u,p)=\sup_{v}\{pv-L\}$ により、Euler–Lagrange 方程式が Hamilton 方程式 $u'=H_{p}$, $p'=-H_{u}$ に同値となることを示せ（$L$ が $u'$ について強凸のとき）。
+
+*4 Hamilton–Jacobi 方程式と特性曲線法
+最小作用 $S(t,x)=\min\{\int_{a}^{t}L\,ds: u(t)=x\}$ が Hamilton–Jacobi 方程式 $S_{t}+H(t,x,S_{x})=0$ をみたし、特性曲線が極値関数であることを示せ（Jacobi の定理）。
+
+*4 等周問題と Lagrange 乗数（変分法）
+制約 $\int G(t,u,u')dt=c$ 下の $\int L\,dt$ の極値関数は、ある $\lambda$ で $L+\lambda G$ の Euler–Lagrange 方程式をみたす（正則な場合）。Dido の問題を解け。
+
+*4 最速降下線（Johann Bernoulli）
+重力下で二点を結ぶ最速降下曲線がサイクロイドであることを、Beltrami の恒等式（$L$ が $t$ を含まないとき $L-u'L_{u'}=$ 定数）から導き、それが大域的最小であることを場の理論で示せ。
+
+*4 懸垂線と極小回転面（Goldschmidt 解）
+回転面の面積を最小化する問題で、端点の距離が大きいと懸垂線解が存在せず、Goldschmidt の不連続解（二枚の円板）が最小となることを示し、共役点との関係を論ぜよ。
+
+*4 自由端点と横断性条件
+端点の一方が自由な問題、あるいは曲線上を動く問題の極値関数がみたす横断性条件 $L_{u'}|_{t=b}=0$、$[L+(\varphi'-u')L_{u'}]_{t=b}=0$ を導け。
+
+*4 Tonelli の存在定理 {tonelli}
+$L(t,u,p)$ が $p$ について凸で、超線形増大 $L\ge\theta(|p|)$（$\theta(r)/r\to\infty$）をみたせば、$J$ は $W^{1,1}$ の絶対連続関数の中に最小点をもつ。弱下半連続性と Dunford–Pettis の定理で証明せよ。
+
+*5 Tonelli の部分正則性と Ball–Mizel の反例
+Tonelli の存在定理の最小点は開稠密集合上で $C^{1}$（部分正則性）であるが、至る所で Lipschitz とは限らない（Ball–Mizel 1985 の多項式 Lagrangian の例）。反例の構造を述べよ。
+
+*4 Lavrentiev 現象
+$\int_{0}^{1}(u^{3}-t)^{2}(u')^{6}dt$（$u(0)=0$, $u(1)=1$）は $W^{1,1}$ での下限が Lipschitz 関数での下限より真に小さい（Manià の例）。これを示し、数値離散化（有限要素）で誤った値に収束する危険を論ぜよ。
+
+*4 測地線と Riemann 幾何の変分法
+測地線がエネルギー $\int|\dot\gamma|^{2}$ の臨界点であり、第二変分公式 $\int(|\dot V|^{2}-\langle R(V,\dot\gamma)\dot\gamma,V\rangle)$ と共役点が最短性を決めること（Jacobi 場）を示せ。
+
+*5 Morse の指数定理（測地線）
+測地線 $\gamma:[0,T]\to M$ のエネルギーの第二変分の指数は、$(0,T)$ 内の共役点の重複度の総和に等しい（Morse 指数定理）。証明の骨格を与えよ。
+
+*4 Bonnet–Myers の定理（変分法による）
+Ricci 曲率が $\ge(n-1)k>0$ の完備 Riemann 多様体の直径は $\le\pi/\sqrt k$ である。第二変分公式から証明せよ。
+
+*5 Hilbert の第 19・20 問題と正則性（De Giorgi–Nash–Moser）
+一様楕円型で解析的な Lagrangian $F(\nabla u)$ の極小点は解析的である（Hilbert の第 19 問題）。De Giorgi の定理（有界可測係数の楕円型方程式の弱解の Hölder 連続性）を用いた証明の骨格を与えよ。
+
+*5 De Giorgi の反例とベクトル値問題の特異性
+ベクトル値の変分問題（$u:\Omega\to\mathbb{R}^{m}$, $m\ge2$）では、一様凸で滑らかな Lagrangian でも極小点が不連続になりうる（De Giorgi 1968, Giusti–Miranda, Šverák–Yan）。De Giorgi の例 $u(x)=x|x|^{-\gamma}$ を確かめ、スカラー問題との本質的違いを論ぜよ。
+
+=ch X-2　直接法と下半連続性
+
+*4 弱下半連続性と凸性（スカラー） {wlsc2}
+$F(u)=\int_{\Omega}f(x,u,\nabla u)dx$ が $W^{1,p}$ で弱下半連続であるための必要十分条件は（スカラー $u$ で、適当な正則性と増大条件の下で）$f$ が $\nabla u$ について凸であることを示せ。
+
+*5 準凸性（Morrey） {morrey}
+ベクトル値問題で、$F(u)=\int f(\nabla u)$ が $W^{1,\infty}$ で弱*下半連続 $\iff f$ が準凸（$\int_{Q}f(A+\nabla\varphi)\ge|Q|f(A)$, $\varphi\in C_{c}^{\infty}$）（Morrey 1952）。必要性を証明し、十分性の骨格を与えよ。
+
+*4 多凸性と Ball の存在定理 {polyconvex}
+$f(A)=g(A,\operatorname{adj}A,\det A)$（$g$ 凸）の形の多凸関数は準凸である。行列式の弱連続性（$\det\nabla u_{k}\rightharpoonup\det\nabla u$）を示し、非線形弾性の存在定理（Ball 1977）を導け。
+
+*4 小行列式の弱連続性（Reshetnyak, Ball）
+$u_{k}\rightharpoonup u$ in $W^{1,p}$（$p>n$）ならば $\det\nabla u_{k}\rightharpoonup\det\nabla u$（超関数の意味で）。$\det\nabla u=\operatorname{div}(\cdot)$ の構造（Piola 恒等式）を用いて証明せよ。
+
+*5 凸性の階層と Šverák の反例
+凸 $\Rightarrow$ 多凸 $\Rightarrow$ 準凸 $\Rightarrow$ 階数 1 凸 の含意を示し、$m\ge3$ で階数 1 凸だが準凸でない関数が存在すること（Šverák 1992）を述べよ。$2\times2$ の場合は未解決（Morrey の予想）であることを述べよ。
+
+*4 緩和と準凸包
+準凸でない $f$ に対し、$\inf\int f(\nabla u)=\inf\int Qf(\nabla u)$（$Qf$ は準凸包）で、$Qf$ の最小点は $f$ の最小化列の弱極限である（Dacorogna の緩和定理）。スカラーで $Qf=f^{**}$ となることを示せ。
+
+*4 Young 測度と振動（Tartar, Ball）
+有界列 $u_{k}$ に対し Young 測度 $\nu_{x}$ が存在し、$f(u_{k})\rightharpoonup\int f\,d\nu_{x}$。二重井戸ポテンシャルの最小化列が微細構造（振動）をもち、Young 測度が二点分布となることを示せ。
+
+*5 Kinderlehrer–Pedregal の勾配 Young 測度の特徴づけ
+Young 測度が勾配の列から生成される $\iff$ 準凸関数に対する Jensen の不等式をみたす（Kinderlehrer–Pedregal 1991）。主張と証明の骨格を与えよ。
+
+*4 マルテンサイトの微細構造（Ball–James）
+二つの井戸 $SO(3)U_{1}\cup SO(3)U_{2}$ の間の階数 1 結合条件（双晶方程式）$QU_{2}-U_{1}=a\otimes n$ を解き、層状微細構造による最小化列の存在を示せ。
+
+*4 補償コンパクト性（Murat–Tartar）
+$u_{k}\rightharpoonup u$, $v_{k}\rightharpoonup v$ in $L^{2}$ で $\operatorname{div}u_{k}$, $\operatorname{curl}v_{k}$ が $H^{-1}$ でコンパクトならば $u_{k}\cdot v_{k}\rightharpoonup u\cdot v$（div–curl 補題）。証明し、保存則の解の存在への応用を述べよ。
+
+*5 集中コンパクト性（Lions）
+$\mathbb{R}^{n}$ 上の確率測度の列は、部分列で (i) コンパクト性（平行移動を除いて tight）、(ii) 消失、(iii) 二分のいずれかを示す（P.-L. Lions 1984）。Sobolev 不等式の最良定数の達成への応用を述べよ。
+
+*4 Sobolev 不等式の最良定数と Talenti–Aubin の関数
+$\|u\|_{L^{2^{*}}}\le S\|\nabla u\|_{L^{2}}$ の最良定数が $(1+|x|^{2})^{-(n-2)/2}$ で達成されることを、集中コンパクト性（あるいは対称化と Bliss の不等式）で示せ。
+
+*4 Pólya–Szegő の不等式と対称化
+Schwarz 対称化 $u^{*}$ について $\|\nabla u^{*}\|_{p}\le\|\nabla u\|_{p}$。これを用いて Faber–Krahn の不等式（同体積の領域の中で第一 Dirichlet 固有値は球で最小）を導け。
+
+*4 等周不等式の最適化的証明（Gromov, 最適輸送）
+$\mathbb{R}^{n}$ の等周不等式 $\operatorname{Per}(E)\ge n|B|^{1/n}|E|^{(n-1)/n}$ を、Brenier 写像（あるいは Knothe 写像）を用いて証明せよ。
+
+*5 Plateau 問題（Douglas–Radó）
+$\mathbb{R}^{3}$ の Jordan 曲線を境界とする円板型の極小曲面が存在する（Douglas 1931, Radó）。Dirichlet 積分の最小化と共形パラメータ化（3 点条件）による証明の骨格を与えよ。
+
+*4 変分問題の $\Gamma$ 極限による次元縮小（板・膜の理論）
+薄い三次元弾性体のエネルギーの厚さ $h\to0$ の $\Gamma$ 極限が、スケーリングに応じて膜理論・板理論（Friesecke–James–Müller）を与えることを述べよ。
+
+*4 BV 関数と周長汎関数
+有界変動関数の空間 $BV$ と集合の周長を定義し、周長の下半連続性と BV のコンパクト性を示せ。Rudin–Osher–Fatemi モデルの解の存在を導け。
+
+*4 極小曲面の正則性と Bernstein の問題（Simons, Bombieri–De Giorgi–Giusti）
+$\mathbb{R}^{n}$ 上の全域的な極小グラフは $n\le7$ で超平面に限る（Bernstein–De Giorgi–Almgren–Simons）が、$n\ge8$ では非平坦なものが存在する（Bombieri–De Giorgi–Giusti）。Simons 錐の最小性を述べよ。
+
+*5 Morrey の準凸性の十分性の完全証明（Acerbi–Fusco）
+$f$ が準凸で増大条件 $0\le f(A)\le C(1+|A|^{p})$ をみたせば、$\int f(\nabla u)$ は $W^{1,p}$ で弱下半連続である（Acerbi–Fusco 1984）。Lipschitz 切断（最大関数による）を用いた証明を完成させよ。
+
+*5 Morrey の予想（$2\times2$ 階数 1 凸 vs 準凸）の現状
+$2\times2$ 行列について階数 1 凸関数が準凸であるかという Morrey の予想は未解決である。Šverák の $3\times2$ 反例の構成（周期関数の空間での階数 1 凸関数の構成）を再構成し、$2\times2$ で知られている部分的結果（Faraco–Székelyhidi、Astala–Iwaniec–Prause–Saksman の Burkholder 関数との関係）を述べよ。

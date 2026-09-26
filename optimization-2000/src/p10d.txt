@@ -1,0 +1,123 @@
+=ch X-7　ゲーム理論と均衡の存在
+
+*4 Nash の定理（Kakutani による証明） {nash}
+有限 $n$ 人ゲームは混合戦略の Nash 均衡をもつ。最適反応対応が上半連続・凸値であることを示し、Kakutani の不動点定理を適用せよ。
+
+*4 Kakutani の不動点定理
+$\mathbb{R}^{n}$ のコンパクト凸集合 $K$ 上の上半連続で空でない凸閉値の対応 $F:K\rightrightarrows K$ は不動点 $x\in F(x)$ をもつ。Brouwer の定理と近似選択（Cellina）あるいは単体分割で証明せよ。
+
+*4 Nash の定理（Brouwer による証明）
+Nash の改善写像 $x_{i}(s)\mapsto\frac{x_{i}(s)+\max(0,u_{i}(s,x_{-i})-u_{i}(x))}{1+\sum_{s'}\max(0,\cdot)}$ が連続で、不動点が均衡であることを示し、Brouwer の定理から Nash の定理を導け（Nash 1951）。
+
+*4 Debreu–Glicksberg–Fan の定理
+戦略集合がコンパクト凸、利得が連続で自分の戦略について準凹な $n$ 人ゲームは純粋戦略の Nash 均衡をもつ。証明せよ。
+
+*4 ポテンシャルゲーム（Monderer–Shapley）
+正確ポテンシャル関数 $\Phi$（$u_{i}(s_{i},s_{-i})-u_{i}(s_{i}',s_{-i})=\Phi(s_{i},s_{-i})-\Phi(s_{i}',s_{-i})$）をもつ有限ゲームは純粋 Nash 均衡をもち、最適反応ダイナミクスが有限回で収束する。混雑ゲームがポテンシャルゲームであること（Rosenthal）を示せ。
+
+*5 混雑ゲームの純粋均衡計算の PLS 完全性（Fabrikant–Papadimitriou–Talwar）
+混雑ゲームの純粋 Nash 均衡を求める問題は PLS 完全である。主張を述べ、対称ネットワーク混雑ゲームでは多項式時間で解けること（最小費用流への帰着）を示せ。
+
+*4 無秩序の代償とスムーズネス（Roughgarden）
+$(\lambda,\mu)$-スムーズなゲームでは、純粋・混合・相関・粗相関均衡のすべてについて無秩序の代償が $\frac{\lambda}{1-\mu}$ 以下である。アフィン費用の混雑ゲームで $5/2$ を導け。
+
+*5 相関均衡の LP と計算（Papadimitriou–Roughgarden）
+簡潔に表現された多人数ゲームでも、相関均衡を多項式時間で計算できること（楕円体法の「楕円体に対する楕円体」、Papadimitriou–Roughgarden 2008、Jiang–Leyton-Brown）を述べよ。
+
+*4 進化的安定戦略とレプリケータ動力学
+対称二人ゲームの ESS がレプリケータ動力学の漸近安定点であること（Taylor–Jonker, Hofbauer–Schuster–Sigmund）を示し、逆が成り立たない例を作れ。
+
+*4 Brown–von Neumann–Nash 動力学と仮想プレイ（Robinson）
+二人零和ゲームで仮想プレイ（fictitious play）の経験分布が均衡に収束すること（Robinson 1951）を示し、一般のゲームで収束しない例（Shapley の $3\times3$ ゲーム）を述べよ。
+
+*4 Arrow–Debreu の一般均衡の存在
+純粋交換経済で、選好が連続・凸・局所非飽和、初期保有が内点なら競争均衡が存在する（Arrow–Debreu 1954）。超過需要関数と Brouwer（あるいは Gale–Nikaido–Debreu の補題）で証明せよ。
+
+*4 Gale–Nikaido–Debreu の補題
+価格単体上の上半連続な凸値対応 $Z$ が Walras の法則 $\langle p,z\rangle\le0$（$z\in Z(p)$）をみたせば、$Z(\bar p)\cap\mathbb{R}^{n}_{-}\neq\emptyset$ なる $\bar p$ が存在する。Kakutani から証明せよ。
+
+*4 厚生経済学の第一・第二基本定理
+競争均衡配分は Pareto 効率的である（第一）。凸性の下で任意の Pareto 効率的配分は所得移転後の競争均衡として実現できる（第二、分離定理による）。証明せよ。
+
+*4 Eisenberg–Gale の凸計画（Fisher 市場）
+線形効用の Fisher 市場の均衡配分は $\max\sum_{i}B_{i}\log u_{i}(x_{i})$ s.t. $\sum_{i}x_{ij}\le1$ の解であり、双対変数が均衡価格である（Eisenberg–Gale 1959）。証明し、比例応答ダイナミクスがミラー降下であること（Birnbaum–Devanur–Xiao）を述べよ。
+
+*5 Arrow–Debreu 均衡の計算困難性（Chen–Dai–Du–Teng, Vazirani–Yannakakis）
+加法的分離的な区分線形凹効用の Arrow–Debreu 市場の均衡計算は PPAD 完全である。主張を述べ、線形効用では凸計画で多項式時間に解けること（Jain, Devanur–Garg–Végh）との対比を論ぜよ。
+
+*4 メカニズム設計：VCG メカニズム
+Vickrey–Clarke–Groves メカニズムが、準線形効用の下で真実申告を支配戦略とし社会的余剰を最大化することを示せ。Green–Laffont の定理（効率性・誘因両立性・予算均衡の同時不可能性）を述べよ。
+
+*5 Myerson の最適オークション
+単一財・独立私的価値の下で、期待収益を最大化するメカニズムは仮想価値 $\phi(v)=v-\frac{1-F(v)}{f(v)}$（正則な場合）の最大の入札者に配分するものであり、収益同値定理が成り立つ（Myerson 1981）。包絡線定理による証明を与えよ。
+
+*4 安定マッチング（Gale–Shapley）
+受入保留アルゴリズムは常に安定マッチングを出力し、提案側にとって最適である。安定マッチングの集合が分配束をなすこと（Conway）と、LP による記述（Vande Vate, Rothblum）を示せ。
+
+*5 Nash 均衡計算の PPAD 完全性の証明の骨格（Daskalakis–Goldberg–Papadimitriou, Chen–Deng–Teng）
+3 人（のちに 2 人）ゲームの Nash 均衡の計算が PPAD 完全であることを、Brouwer 写像の算術回路をゲームのガジェットで模倣する構成により証明の骨格を与え、近似均衡の計算についても（多項式精度で）PPAD 困難であることを述べよ。
+
+*5 Lemke–Howson アルゴリズムの正しさと指数ステップ（Savani–von Stengel）
+非退化な二行列ゲームで Lemke–Howson の相補的経路が well-defined で均衡に到達することを多面体の組合せ論で証明し、Morris の双対巡回多面体を用いた指数長経路の構成を再構成せよ。
+
+=ch X-8　最適輸送
+
+*4 Monge 問題と Kantorovich 緩和の関係 {ot}
+Monge 問題 $\inf\{\int c(x,T(x))d\mu: T_{\#}\mu=\nu\}$ と Kantorovich 問題の値が、$\mu$ が非原子的でコストが連続なら一致すること（Pratelli）を示せ。
+
+*5 Brenier の定理 {brenier}
+$\mathbb{R}^{n}$ 上の二次モーメント有限な確率測度 $\mu,\nu$ で $\mu$ が Lebesgue 絶対連続なら、二乗距離コストの最適輸送計画は一意で、ある凸関数 $\varphi$ の勾配による写像 $T=\nabla\varphi$ で与えられる（Brenier 1991）。Kantorovich 双対と $c$-巡回単調性（Rockafellar の定理）から証明せよ。
+
+*5 McCann の定理（Brenier の一般化）
+$\mu$ が絶対連続なら、任意の $\nu$ に対し $\nabla\varphi_{\#}\mu=\nu$ となる凸 $\varphi$ の勾配が $\mu$-a.e. 一意に存在する（モーメント条件なし、McCann 1995）。証明の骨格を与えよ。
+
+*4 $c$-巡回単調性と最適性
+輸送計画 $\pi$ が最適 $\iff$ 台が $c$-巡回単調（任意の有限点列で $\sum c(x_{i},y_{i})\le\sum c(x_{i},y_{\sigma(i)})$）。連続コストでこの同値性を証明せよ（Gangbo–McCann, Ambrosio–Pratelli）。
+
+*4 一次元の最適輸送
+一次元で凸コスト $c(x-y)$ の最適輸送写像は単調再配置 $T=F_{\nu}^{-1}\circ F_{\mu}$ であり、$W_{p}(\mu,\nu)=\|F_{\mu}^{-1}-F_{\nu}^{-1}\|_{L^{p}(0,1)}$。証明せよ。
+
+*5 Monge–Ampère 方程式と正則性（Caffarelli）
+Brenier ポテンシャル $\varphi$ は Monge–Ampère 方程式 $\det\nabla^{2}\varphi=f/(g\circ\nabla\varphi)$ の Alexandrov 弱解であり、台 $Y$ が凸で密度が正かつ有界なら $\varphi$ は狭義凸で $C^{1,\alpha}$（Caffarelli 1992）。主張と、凸性の仮定が必要な反例を述べよ。
+
+*4 Ma–Trudinger–Wang 条件
+一般コストの最適輸送写像の正則性には、コストの四階微分に関する MTW 条件が必要十分に近いことを述べ（Ma–Trudinger–Wang, Loeper）、球面上の二乗距離コストが MTW 条件をみたすこと（Loeper）を述べよ。
+
+*4 Benamou–Brenier の動的定式化
+$W_{2}^{2}(\mu_{0},\mu_{1})=\min\{\int_{0}^{1}\int|v_{t}|^{2}d\mu_{t}dt:\partial_{t}\mu+\operatorname{div}(\mu v)=0\}$ を示し、変数 $(\mu,m=\mu v)$ で凸最適化になることを確かめよ。
+
+*5 変位補間と McCann の変位凸性
+$\mu_{t}=((1-t)\operatorname{id}+tT)_{\#}\mu_{0}$ が $W_{2}$ の測地線であり、内部エネルギー $\int U(\rho)$ が McCann の条件（$s\mapsto s^{n}U(s^{-n})$ が凸非増加）の下で変位凸であることを示せ（McCann 1997）。
+
+*5 Wasserstein 勾配流と Fokker–Planck（Jordan–Kinderlehrer–Otto）
+自由エネルギー $\int V\rho+\int\rho\log\rho$ の JKO スキーム $\rho_{k+1}=\operatorname{argmin}\{F(\rho)+\frac{1}{2h}W_{2}^{2}(\rho,\rho_{k})\}$ の補間が $h\to0$ で Fokker–Planck 方程式の解に収束することを示せ（JKO 1998）。
+
+*5 Otto 計算と Wasserstein 空間の Riemann 構造
+Wasserstein 空間の形式的 Riemann 計量 $\|\partial_{t}\rho\|^{2}=\int|\nabla\phi|^{2}\rho$（$\partial_{t}\rho=-\operatorname{div}(\rho\nabla\phi)$）を導入し、エントロピーの勾配流が熱方程式であることを示せ（Otto 2001）。
+
+*5 Talagrand の輸送不等式（$T_{2}$）
+標準 Gauss 測度 $\gamma$ について $W_{2}^{2}(\mu,\gamma)\le2D(\mu\|\gamma)$（Talagrand 1996）。一次元の証明をテンソル化し、Otto–Villani の定理（対数 Sobolev $\Rightarrow T_{2}$）を述べよ。
+
+*4 HWI 不等式（Otto–Villani）
+$D(\mu\|\gamma)\le W_{2}(\mu,\gamma)\sqrt{I(\mu\|\gamma)}-\frac12W_{2}^{2}(\mu,\gamma)$。変位凸性から導け。
+
+*4 Lott–Sturm–Villani の曲率次元条件
+距離測度空間の Ricci 曲率下限を、Wasserstein 空間上のエントロピーの $K$-変位凸性で定義し（CD$(K,\infty)$）、Riemann 多様体では $\operatorname{Ric}\ge K$ と同値であること（von Renesse–Sturm）を述べよ。
+
+*4 エントロピー正則化最適輸送と Schrödinger 問題
+$\min\langle C,\pi\rangle+\varepsilon\operatorname{KL}(\pi\|\mu\otimes\nu)$ の解が $\pi=\operatorname{diag}(a)K\operatorname{diag}(b)$（$K=e^{-C/\varepsilon}$）の形をもち、$\varepsilon\to0$ で最適輸送計画に収束し（$\Gamma$ 収束）、Schrödinger 橋問題と同値であることを示せ（Léonard）。
+
+*4 Wasserstein 重心（Agueh–Carlier）
+$\min_{\nu}\sum\lambda_{i}W_{2}^{2}(\mu_{i},\nu)$ の解の存在と、少なくとも一つの $\mu_{i}$ が絶対連続なら一意であることを示し、Gauss 分布の場合の固定点方程式を導け。
+
+*4 最適輸送の統計的推定：次元の呪い（Dudley, Weed–Bach）
+経験測度の収束率 $EW_{1}(\hat\mu_{n},\mu)\asymp n^{-1/d}$（$d\ge3$）を示し、エントロピー正則化により $n^{-1/2}$ の率が得られること（Genevay ら, Mena–Niles-Weed）を述べよ。
+
+*4 半離散最適輸送と Laguerre 図形（Aurenhammer, Mérigot）
+絶対連続 $\mu$ から離散 $\nu=\sum\nu_{j}\delta_{y_{j}}$ への最適輸送が、重み付き Voronoi（Laguerre）セルで与えられ、重み $\psi$ の決定が滑らかな凹関数の最大化（Newton 法で解ける、Kitagawa–Mérigot–Thibert）に帰着することを示せ。
+
+*5 最適輸送写像の正則性の完全理論（Caffarelli の定理の証明）
+$\mu,\nu$ の密度が凸領域上で正かつ有界なら、Brenier ポテンシャルが狭義凸であることを Alexandrov 解の断面の幾何（Caffarelli による断面の正規化と局所評価）で示し、$C^{1,\alpha}$ 正則性を導く議論を完成させよ。
+
+*5 JKO スキームの収束の完全証明
+$\mathbb{R}^{n}$ 上の Fokker–Planck 方程式 $\partial_{t}\rho=\Delta\rho+\operatorname{div}(\rho\nabla V)$ に対し、JKO スキームの離散解の補間が $W_{2}$ で相対コンパクトであり、極限が弱解であることを、Euler–Lagrange 方程式の導出（最適写像による変分）とエネルギー散逸評価で完全に証明せよ。

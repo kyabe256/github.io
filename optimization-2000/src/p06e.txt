@@ -12,10 +12,10 @@
 *4 合意の収束率とスペクトルギャップ
 平均合意反復 $x^{k+1}=Wx^{k}$ の平均への収束率が $|\lambda_{2}(W)|$ で決まることを示し、最速混合行列の設計問題（Xiao–Boyd）が SDP で解けることを示せ。
 
-*4 Chebyshev 加速合意と最適分散法（Scaman–Bach–Bubeck–Lee–Massoulié）
+*5 Chebyshev 加速合意と最適分散法（Scaman–Bach–Bubeck–Lee–Massoulié）
 分散強凸最適化で、通信ラウンドの下界 $\Omega(\sqrt{\kappa/\gamma}\log(1/\varepsilon))$（$\gamma$ はスペクトルギャップ）と、双対加速＋Chebyshev 加速合意（MSDA）がこれを達成することを示せ。
 
-*4 分散非平滑最適化の最適法（Scaman ら, Lan–Lee–Zhou）
+*5 分散非平滑最適化の最適法（Scaman ら, Lan–Lee–Zhou）
 分散非平滑凸最適化での通信と局所計算の下界、および平滑化と加速を用いた最適法（MSPD, DCS）の主張を述べよ。
 
 *4 通信圧縮と誤差フィードバック（Stich–Cordonnier–Jaggi, Karimireddy ら）
@@ -27,7 +27,7 @@
 *4 連合学習の FedAvg とクライアントドリフト
 局所ステップ数 $K$ の FedAvg（Local SGD）が、データの非一様性（勾配の非類似度）の下で偏りを生むこと（クライアントドリフト）を示し、SCAFFOLD（Karimireddy ら）の制御変量による補正が偏りを除くことを証明せよ。
 
-*4 Local SGD の理論（Stich, Woodworth ら）
+*5 Local SGD の理論（Stich, Woodworth ら）
 同一分布の場合、Local SGD がミニバッチ SGD と比べて通信回数を減らせる条件を示し、非一様な場合に Local SGD がミニバッチ SGD より悪くなりうる下界（Woodworth–Patel–Srebro）を述べよ。
 
 *4 ADMM による分散合意と通信の削減
@@ -36,7 +36,7 @@
 *4 非同期並列 SGD（Hogwild!, Niu–Recht–Ré–Wright）
 スパースな問題でロックなしの非同期 SGD が、衝突の少なさ（超グラフのスパース性）の下で逐次 SGD とほぼ同じ率で収束することを示せ。
 
-*4 分散最適化の通信計算量の下界（Arjevani–Shamir）
+*5 分散最適化の通信計算量の下界（Arjevani–Shamir）
 二つのマシンがそれぞれ $f_{1},f_{2}$ をもつとき、$\frac12(f_{1}+f_{2})$ を $\varepsilon$-最適化するのに必要な通信ラウンド数の下界 $\Omega(\sqrt\kappa\log(1/\varepsilon))$ を示し、関数の類似度（Hessian の差）が小さければ改善できること（DANE, Shamir–Srebro–Zhang）を述べよ。
 
 *4 分散 Newton 型法（DANE, DiSCO, GIANT）
@@ -110,7 +110,7 @@ $x_{t+1}=x_{t}-\eta\operatorname{sign}(\nabla f)$ が $\ell_{\infty}$ ノルム�
 *4 スケジュールフリー最適化（Defazio ら）
 Polyak–Ruppert 平均と主反復を補間する schedule-free SGD が、学習率スケジュールなしに最終反復で最適率を達成することを示せ（オンラインから一括への変換 online-to-batch の観点から）。
 
-*4 オンラインから一括への変換（Cesa-Bianchi–Conconi–Gentile, Cutkosky）
+*5 オンラインから一括への変換（Cesa-Bianchi–Conconi–Gentile, Cutkosky）
 オンライン学習アルゴリズムの平均反復が、後悔 $R_{T}$ に対して確率的最適化誤差 $R_{T}/T$ を与えることを示し、anytime 版（Cutkosky 2019）で最終反復の保証が得られることを示せ。
 
 *4 適応的方法の暗黙のバイアス

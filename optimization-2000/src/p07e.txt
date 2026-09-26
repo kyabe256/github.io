@@ -3,22 +3,22 @@
 *4 二階劣微分（Mordukhovich）の定義と計算 {secsub}
 $\partial^{2}f(\bar x|\bar v)=D^{*}(\partial f)(\bar x|\bar v)$ を定義し、$f\in C^{2}$ なら $\partial^{2}f(\bar x|\nabla f(\bar x))(w)=\{\nabla^{2}f(\bar x)w\}$、$f=|x|$ なら $\partial^{2}f(0|v)$ を $v\in(-1,1)$ と $v=\pm1$ で計算せよ。
 
-*4 tilt-stability の定義と Poliquin–Rockafellar の特徴づけ {tilt}
+*5 tilt-stability の定義と Poliquin–Rockafellar の特徴づけ {tilt}
 $\bar x$ が $f$ の tilt-stable 局所最小点（$v\mapsto\operatorname{argmin}_{x\in B}\{f(x)-\langle v,x\rangle\}$ が $0$ の近くで一価 Lipschitz）$\iff$ $\partial^{2}f(\bar x|0)$ が正定値（$\langle z,w\rangle>0$ for $z\in\partial^{2}f(\bar x|0)(w)$, $w\neq0$）。prox-regular かつ劣微分連続な $f$ について証明せよ（Poliquin–Rockafellar 1998）。
 
-*4 tilt-stability と強二階十分条件
+*5 tilt-stability と強二階十分条件
 非線形計画 $f+\iota_{C}$ について、LICQ の下で tilt-stability $\iff$ 強二階十分条件であることを示せ（Mordukhovich–Rockafellar 2012）。MFCQ の下では異なる条件が必要になる例を作れ。
 
 *4 full stability（Levy–Poliquin–Rockafellar）
 二つのパラメータ（tilt $v$ と基本摂動 $u$）に関する局所最小点の Lipschitz 安定性（full stability）を定義し、二階劣微分による特徴づけを与えよ。
 
-*4 二回エピ微分可能性と二階展開
+*5 二回エピ微分可能性と二階展開
 $f$ が $\bar x$ で $\bar v$ に関して二回エピ微分可能ならば、$f(\bar x+tw)=f(\bar x)+t\langle\bar v,w\rangle+\frac{t^{2}}{2}d^{2}f(\bar x|\bar v)(w)+o(t^{2})$ が「エピ的に」成り立つ。完全振幅（fully amenable）関数が二回エピ微分可能であることを示せ（Rockafellar 1988）。
 
 *4 振幅関数（amenable functions）
 $f=g\circ F$（$g$ は凸多面体的、$F$ は $C^{2}$）で限定条件 $\partial^{\infty}g(F(\bar x))\cap\ker\nabla F(\bar x)^{\top}=\{0\}$ が成り立つものを完全振幅という。非線形計画の $f+\iota_{C}$ が完全振幅であること、完全振幅関数が prox-regular であることを示せ。
 
-*4 二階エピ導関数と prox の方向微分
+*5 二階エピ導関数と prox の方向微分
 凸関数 $f$ について、$\operatorname{prox}_{f}$ が $\bar x+\bar v$ で方向微分可能 $\iff f$ が $\bar x$ で $\bar v$ に関し二回エピ微分可能で、方向微分は $\operatorname{prox}_{\frac12d^{2}f(\bar x|\bar v)}$ で与えられる（Poliquin–Rockafellar 1996）。
 
 *4 二次錐・半正定値錐の二階変分解析
@@ -92,13 +92,13 @@ Lipschitz 関数の $(\delta,\varepsilon)$-Goldstein 停留点を、ランダム
 *4 ReLU ネットワークの表現力と線形領域の数
 深さ $L$、幅 $n$ の ReLU ネットの線形領域の数が深さについて指数的に増えうること（Montúfar–Pascanu–Cho–Bengio）を示し、浅いネットで同じ関数を表すには指数的な幅が必要な例（Telgarsky）を構成せよ。
 
-*4 非凸最適化の NP 困難性と局所最適性の意義
+*5 非凸最適化の NP 困難性と局所最適性の意義
 非凸二次計画の局所最小点を求める問題でさえ（多面体上で）NP 困難であること（Pardalos–Schnitger, Ahmadi–Zhang の近似局所最小の困難性）を述べ、定常点（KKT 点）の計算が多項式時間で可能な理由を論ぜよ。
 
 *4 DC 計画による $\ell_{0}$ 近似とスパース最適化
 $\|x\|_{0}$ を $\|x\|_{1}-\|x\|_{(k)}$（上位 $k$ 成分の和、Gotoh–Takeda–Tono）で表す DC 表現により、基数制約問題 $\|x\|_{0}\le k$ を DC 計画として厳密に再定式化できることを示せ。
 
-*4 DC 計画の大域最適化（分枝限定法）
+*5 DC 計画の大域最適化（分枝限定法）
 DC 計画の大域解を求める分枝限定法（凸包絡による下界）の有限 $\varepsilon$-収束を示し、凹最小化（Horst–Tuy）での円錐分割法を述べよ。
 
 *4 凹関数の多面体上の最小化と頂点列挙

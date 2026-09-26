@@ -36,7 +36,7 @@ $F_{\mu}(x,\lambda)=f(x)-\mu\sum\lambda_{i}\log(1-g_{i}(x)/\mu)$ を用いる修
 *4 ペナルティ・障壁の双対的解釈
 二乗ペナルティ法は双対問題に対する正則化（$-\frac{1}{2c}\|\lambda\|^{2}$ 付き双対）の最大化であり、対数障壁法は双対問題にエントロピー型の正則化を加えたものに対応することを示せ。
 
-*4 内点ペナルティ法の最悪計算量（Cartis–Gould–Toint）
+*5 内点ペナルティ法の最悪計算量（Cartis–Gould–Toint）
 非凸等式制約問題に対し、二乗ペナルティ法に基づく方法は $\varepsilon$-KKT 点を $O(\varepsilon^{-2})$（一次）あるいは $O(\varepsilon^{-3/2})$（二次、ARC を内部に用いる）程度の評価回数で見つける（あるいは実行不能性の近似証明書を返す）。主張を述べ骨格を示せ。
 
 *4 ペナルティ法と Tikhonov 正則化の関係
@@ -77,7 +77,7 @@ LP の中心パスの全曲率は $O(n)$ で抑えられる（一般的な場合
 *4 拡張 Lagrange 法の局所線形収束と $c$ の増大
 二階十分条件と LICQ の下、$c_{k}\ge\bar c$ で乗数の線形収束、$c_{k}\to\infty$ で超線形収束。MFCQ しか成り立たない（乗数非一意）場合にも、乗数の集合への距離が線形収束することを示せ（Fernández–Solodov）。
 
-*4 拡張 Lagrange 法の計算量（凸, Lan–Monteiro）
+*5 拡張 Lagrange 法の計算量（凸, Lan–Monteiro）
 凸で平滑な目的関数と線形等式制約に対し、加速勾配法を内部ソルバーとする拡張 Lagrange 法は $\varepsilon$-最適かつ $\varepsilon$-実行可能な解を $O(\varepsilon^{-1})$（内部反復総数）で得る。証明の骨格を与えよ。
 
 *4 線形化 ALM と主双対勾配法
@@ -89,7 +89,7 @@ LP の中心パスの全曲率は $O(n)$ で抑えられる（一般的な場合
 *4 錐計画の拡張 Lagrange 法と半平滑 Newton
 SDP の双対に対する拡張 Lagrange 法で、部分問題 $\min_{y}\{-b^{\top}y+\frac{1}{2c}\|P_{\mathbb{S}_{+}}(X-c(\mathcal{A}^{*}y-C))\|^{2}\}$ を半平滑 Newton-CG で解くと、制約非退化の下で部分問題が二次収束することを示せ（Zhao–Sun–Toh）。
 
-*4 非凸 ALM の計算量（Birgin–Martínez, Grapiglia–Yuan）
+*5 非凸 ALM の計算量（Birgin–Martínez, Grapiglia–Yuan）
 非凸等式制約問題に対し、安全化 ALM は $\varepsilon$-KKT 点または近似的な実行不能停留点を $O(|\log\varepsilon|)$ 回の外側反復、総計 $O(\varepsilon^{-2}|\log\varepsilon|)$ 程度の内側評価で得る。主張と仮定を正確に述べよ。
 
 *4 拡張 Lagrange 法と正則化された双対の滑らかさ
@@ -110,7 +110,7 @@ SDP の双対に対する拡張 Lagrange 法で、部分問題 $\min_{y}\{-b^{\t
 *4 拡張 Lagrange 法の双対平均と実行可能性違反率
 凸の場合に、ALM の主反復のエルゴード平均が $f(\bar x_{k})-f^{*}=O(1/k)$, $\|A\bar x_{k}-b\|=O(1/k)$ をみたすことを示せ（Xu, He–Yuan）。
 
-*4 ALM の最適な率と下界
+*5 ALM の最適な率と下界
 線形等式制約付き凸問題に対する一次主双対法は $O(1/k)$ より速くできない（Ouyang–Xu の下界）ことを述べ、強凸の場合の $O(1/k^{2})$ 加速版を構成せよ。
 
 *4 ALM と Bregman 反復（Osher ら）

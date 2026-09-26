@@ -9,10 +9,10 @@
 *4 ロバスト最適化と確率制約の関係
 不確実性集合 $\mathcal{U}=\{\bar a+P u:\|u\|\le\Omega\}$ のロバスト制約が、$a$ が独立な有界対称確率変数のとき違反確率 $\le\exp(-\Omega^{2}/2)$ を保証することを示せ（Ben-Tal–Nemirovski）。
 
-*4 ロバスト二次計画・SOCP の困難性
+*5 ロバスト二次計画・SOCP の困難性
 楕円体の共通部分による不確実性をもつロバスト SOCP は一般に NP 困難である（Ben-Tal–Nemirovski）ことを述べ、単一楕円体の場合の S-補題による SDP 表現を示せ。
 
-*4 調整可能ロバスト最適化とアフィン決定則（Ben-Tal–Goryashko–Guslitzer–Nemirovski）
+*5 調整可能ロバスト最適化とアフィン決定則（Ben-Tal–Goryashko–Guslitzer–Nemirovski）
 二段階ロバスト LP の調整可能ロバスト対応問題は NP 困難だが、第二段変数を不確実性のアフィン関数に制限すると扱いやすくなることを示し、アフィン決定則が最適となる場合（Bertsimas–Iancu–Parrilo の一次元の多段階問題）を述べよ。
 
 *4 アフィン決定則の最適性ギャップ（Bertsimas–Goyal）
@@ -24,19 +24,19 @@
 *4 ロバスト最適化と凸解析：支持関数による表現
 ロバスト制約 $\max_{a\in\mathcal{U}}f(a,x)\le0$（$f$ が $a$ について凹）が、Fenchel 双対により $f$ の部分共役と $\mathcal{U}$ の支持関数を用いた有限次元の凸制約に書けることを示せ（Ben-Tal–den Hertog–Vial）。
 
-*4 ロバスト MDP（Iyengar, Nilim–El Ghaoui）
+*5 ロバスト MDP（Iyengar, Nilim–El Ghaoui）
 遷移確率が $(s,a)$-矩形の不確実性集合に属するロバスト MDP のロバスト Bellman 作用素が縮小写像であり、ロバスト価値反復が収束することを示せ。矩形性がない場合に NP 困難となることを述べよ（Wiesemann–Kuhn–Rustem）。
 
 *4 ロバスト最適化の確率的保証：データ駆動の不確実性集合（Bertsimas–Gupta–Kallus）
 仮説検定から構成した不確実性集合が、ロバスト解の違反確率を $\alpha$ 以下に保証することを示せ。
 
-*4 ロバスト二値最適化と組合せ問題
+*5 ロバスト二値最適化と組合せ問題
 コスト不確実性をもつロバスト組合せ最適化（最短路、全域木）で、予算付き不確実性集合なら元の問題を $n+1$ 回解くことでロバスト解が得られること（Bertsimas–Sim 2003）を示せ。
 
-*4 minimax 後悔最適化
+*5 minimax 後悔最適化
 区間不確実性をもつ LP の minimax 後悔問題の複雑さ（区間データの最短路の minimax 後悔が NP 困難、Averbakh–Lebedev）を述べ、2 近似アルゴリズム（中点シナリオ）を示せ（Kasperski–Zieliński）。
 
-*4 ロバスト制御と $\mu$ 解析
+*5 ロバスト制御と $\mu$ 解析
 構造化不確実性に対するロバスト安定性の判定（構造化特異値 $\mu$）が NP 困難であること（Braatz ら）を述べ、$D$-スケーリングによる上界の SDP 計算を示せ。
 
 *4 ロバスト凸最適化の近似可能性（Ben-Tal–Nemirovski の近似 S-補題）
@@ -51,7 +51,7 @@ $\max\{x^{\top}Ax:x^{\top}Q_{k}x\le1\}$（$Q_{k}\succeq0$）の SDP 緩和の値
 *4 ロバストポートフォリオ最適化（Goldfarb–Iyengar）
 期待リターンと共分散の不確実性をもつ平均分散ポートフォリオ問題が、楕円体・因子モデル不確実性の下で SOCP として解けることを示せ。
 
-*4 適応的ロバスト最適化の有限適応性（Bertsimas–Caramanis, Hanasusanto–Kuhn–Wiesemann）
+*5 適応的ロバスト最適化の有限適応性（Bertsimas–Caramanis, Hanasusanto–Kuhn–Wiesemann）
 $K$ 個の候補の中から事後に一つを選ぶ $K$-適応性の定式化を与え、$K\to\infty$ で完全適応解に近づくこと、$K$ 固定でも NP 困難であることを述べよ。
 
 *5 ロバスト最適化の計算量の完全な図式（Ben-Tal–El Ghaoui–Nemirovski）
@@ -62,7 +62,7 @@ $K$ 個の候補の中から事後に一つを選ぶ $K$-適応性の定式化�
 
 =ch IX-8　分布ロバスト最適化とリスク尺度
 
-*4 モーメント不確実性集合の DRO（Delage–Ye）
+*5 モーメント不確実性集合の DRO（Delage–Ye）
 平均と共分散が楕円的な信頼領域にある分布族上の最悪期待値 $\sup_{P}E_{P}[\ell(x,\xi)]$ が、$\ell$ が区分アフィン凸なら SDP で計算できることを示せ（Delage–Ye 2010）。
 
 *4 Scarf の在庫問題（最悪分布）
@@ -83,7 +83,7 @@ $\chi^{2}$ 球の DRO が、経験リスク＋$\sqrt{2\rho\operatorname{Var}/N}$
 *4 経験尤度と DRO の統計的最適性（Duchi–Glynn–Namkoong）
 $\phi$-ダイバージェンス DRO の最適値が、経験尤度に基づく漸近的に正確な信頼上限を与えることを示せ。
 
-*4 コヒーレントリスク尺度の Kusuoka 表現
+*5 コヒーレントリスク尺度の Kusuoka 表現
 法則不変なコヒーレントリスク尺度（非原子的確率空間）は $\rho(X)=\sup_{\mu\in\mathcal{M}}\int_{0}^{1}\operatorname{CVaR}_{\alpha}(X)d\mu(\alpha)$ と表される（Kusuoka 2001）。証明の骨格を与えよ。
 
 *4 スペクトルリスク尺度と歪みリスク（Acerbi）
@@ -98,7 +98,7 @@ VaR が劣加法的でない（分散投資を罰する）例を作り、CVaR �
 *4 確率的支配制約（Dentcheva–Ruszczyński）
 二次確率的支配制約 $G(x)\succeq_{(2)}Y$ が $E[(\eta-G(x))_{+}]\le E[(\eta-Y)_{+}]$（$\forall\eta$）と同値であることを示し、その Lagrange 乗数が非減少凹効用関数として解釈できることを示せ。
 
-*4 DRO の Monge–Kantorovich 双対と最悪ケースの輸送
+*5 DRO の Monge–Kantorovich 双対と最悪ケースの輸送
 一般の輸送コストの DRO $\sup\{E_{Q}\ell:\mathcal{T}_{c}(P,Q)\le\rho\}$ の双対（Blanchet–Murthy 2019）を証明せよ。
 
 *4 分布ロバストな確率制約（Wasserstein 球）
@@ -110,7 +110,7 @@ Wasserstein 球上の確率制約 $\inf_{Q}Q(g(x,\xi)\le0)\ge1-\varepsilon$ の�
 *4 最悪ケースの Chebyshev 限界と SDP
 $\sup\{\mathbb{P}(\xi\in C): E\xi=\mu, E\xi\xi^{\top}=\Sigma\}$ が $C$ の補集合が凸なら SDP（あるいは閉形式）で計算できることを示せ（Vandenberghe–Boyd–Comanor）。
 
-*4 ベイズ的ロバスト最適化と曖昧性回避（Gilboa–Schmeidler）
+*5 ベイズ的ロバスト最適化と曖昧性回避（Gilboa–Schmeidler）
 maxmin 期待効用（多重事前分布）の公理的特徴づけ（Gilboa–Schmeidler 1989）を述べ、DRO との関係を論ぜよ。
 
 *4 DRO の一般化誤差と Rademacher 複雑度

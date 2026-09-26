@@ -9,7 +9,7 @@
 *4 非凸問題の拡張 Lagrangian 双対のギャップ消滅
 二階十分条件をみたす局所最小点 $x^{*}$ について、$c$ を十分大きくとると $x^{*}$ は $L_{c}(\cdot,\lambda^{*})$ の厳密局所最小点になる（Hestenes, Powell）。局所的な拡張 Lagrange 双対のギャップがゼロになることを示せ。
 
-*4 Rockafellar–Wets の大域的ゼロギャップ定理
+*5 Rockafellar–Wets の大域的ゼロギャップ定理
 一般化拡張 Lagrangian $\bar L(x,y,r)=\inf_{u}\{F(x,u)-\langle y,u\rangle+r\sigma(u)\}$（$\sigma$ は増大関数）について、$F$ が一様 level-bounded ならば $r\to\infty$ でゼロ双対ギャップが成り立つ。証明を完成させよ。
 
 *4 正確ペナルティと Lagrange 乗数
@@ -18,7 +18,7 @@
 *4 正確ペナルティの非凸版
 局所最小点で MFCQ が成り立てば、$c>\max_{\lambda\in\Lambda}\|\lambda\|_{\infty}$ で $x^{*}$ は $\ell_{1}$ ペナルティ関数の局所最小点である（Han–Mangasarian）。二乗ペナルティでは有限の $c$ で正確にならないことを示せ。
 
-*4 Fletcher の平滑正確ペナルティ
+*5 Fletcher の平滑正確ペナルティ
 $\Phi(x)=f(x)+\lambda(x)^{\top}h(x)+\frac{c}{2}\|h(x)\|^{2}$（$\lambda(x)$ は最小二乗乗数）は、LICQ の下で十分大きな $c$ について正確かつ平滑なペナルティ関数である。証明せよ。
 
 *4 拡張 Lagrangian の二階の性質
@@ -54,7 +54,7 @@ SDP に対する拡張 Lagrangian $L_{c}(y,X)=b^{\top}y+\frac{1}{2c}(\|P_{\mathb
 *4 Lagrange 乗数とペナルティパラメータの動的調整
 拡張 Lagrange 法における $c_{k}$ の更新規則（制約違反が十分減らなければ増やす）の下で、極限点が AKKT 点となり、CPLD（あるいは CCP）の下で KKT 点となることを示せ（ALGENCAN の理論）。
 
-*4 Lagrange 緩和の最良乗数とサブグラディエント法
+*5 Lagrange 緩和の最良乗数とサブグラディエント法
 整数計画の Lagrange 緩和で、双対関数 $d(\lambda)$ は区分線形凹関数で、Polyak ステップの劣勾配法が $d^{*}$ に収束する。Held–Karp の 1-tree 緩和による TSP 下界がこの枠組みであることを示せ。
 
 *5 Rockafellar–Wets の変分解析的拡張 Lagrangian 理論
@@ -68,19 +68,19 @@ prox-bounded な摂動関数 $F$ と二次の増大関数について、拡張 L
 *4 S-補題の失敗（三つの二次関数）
 三つ以上の二次制約では S-補題が成り立たない例を作れ。$n\ge3$ の斉次の場合、二つの制約なら成り立つ（Polyak の定理：$(q_{1},q_{2},q_{3})$ の像は正定値結合が存在すれば凸）ことを示せ。
 
-*4 Polyak の凸性定理
+*5 Polyak の凸性定理
 $n\ge3$ で、ある線形結合が正定値な三つの二次形式 $q_{1},q_{2},q_{3}$ について $\{(q_{1}(x),q_{2}(x),q_{3}(x)):x\in\mathbb{R}^{n}\}$ は凸（閉凸錐）である。証明を完成させよ。
 
-*4 Brickman の定理
+*5 Brickman の定理
 $n\ge3$ で、二つの二次形式の単位球面上の像 $\{(q_{1}(x),q_{2}(x)):\|x\|=1\}$ は凸である。これから Toeplitz–Hausdorff の定理（数域の凸性）を導け。
 
 *4 Toeplitz–Hausdorff の定理
 複素行列 $A$ の数域 $W(A)=\{x^{*}Ax:\|x\|=1\}$ は凸である。$2\times2$ の場合（楕円）に帰着して証明せよ。
 
-*4 固有値の凸性（Schur–Horn） {schurhorn}
+*5 固有値の凸性（Schur–Horn） {schurhorn}
 対称行列の対角成分のベクトルは固有値ベクトルに多数化され、逆に固有値 $\lambda$ に多数化される任意のベクトルは $\lambda$ を固有値にもつ対称行列の対角となる。$\{\operatorname{diag}(Q\Lambda Q^{\top})\}=\operatorname{conv}\{P\lambda\}$ を示せ。
 
-*4 Kostant の凸性定理と Atiyah–Guillemin–Sternberg
+*5 Kostant の凸性定理と Atiyah–Guillemin–Sternberg
 コンパクト Lie 群の随伴軌道の極大トーラスへの射影は Weyl 群軌道の凸包である（Kostant）。Schur–Horn がこの特殊化であること、さらにモーメント写像の像の凸性（Atiyah, Guillemin–Sternberg）の主張を述べよ。
 
 *4 非凸二次計画の SDP 緩和の厳密性（一制約）
@@ -95,7 +95,7 @@ $n\ge3$ で、二つの二次形式の単位球面上の像 $\{(q_{1}(x),q_{2}(x
 *4 Lagrange 双対とランク制約の緩和
 $\min\operatorname{tr}(CX)$ s.t. $\operatorname{tr}(A_{i}X)=b_{i}$, $X\succeq0$, $\operatorname{rank}X\le r$ の Lagrange 双対は $r$ に依らず SDP 緩和と同じ値を与える。ランク制約が「凸化」される仕組みを説明せよ。
 
-*4 Burer–Monteiro の定理（局所最小の大域性）
+*5 Burer–Monteiro の定理（局所最小の大域性）
 $p(p+1)/2>m$ ならば、$\min\operatorname{tr}(CYY^{\top})$ s.t. $\operatorname{tr}(A_{i}YY^{\top})=b_{i}$（$Y\in\mathbb{R}^{n\times p}$）の、実行可能集合が滑らかな多様体をなす一般的なコストについて、二階臨界点はすべて SDP の大域最適解を与える（Boumal–Voroninski–Bandeira）。証明の骨格を与えよ。
 
 *4 相補的双対（Gao–Strang）
@@ -113,7 +113,7 @@ $p(p+1)/2>m$ ならば、$\min\operatorname{tr}(CYY^{\top})$ s.t. $\operatorname
 *4 ポートフォリオの平均分散問題の隠れた凸性
 Markowitz の平均分散問題（等式・一つの非凸制約を含む変種）で、非凸にもかかわらず Lagrange 双対のギャップがゼロとなる場合を S-補題で示し、効率的フロンティアが放物線（双曲線）となることを導け。
 
-*4 非凸問題のゼロ双対ギャップの位相的判定
+*5 非凸問題のゼロ双対ギャップの位相的判定
 像集合 $\{(g(x),f(x))\}$ の $0$ 近傍での「下側の凸性」がゼロギャップの必要十分条件であることを示し、Lyapunov の凸性定理を用いて非原子的測度上の非凸最適化（最適制御）で双対ギャップがゼロになることを導け。
 
 *5 非原子的問題のゼロ双対ギャップ（Ribeiro–Chamon, Aumann–Perles）

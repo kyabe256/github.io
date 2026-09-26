@@ -24,34 +24,34 @@
 *4 最急辺規則・最大改善規則の指数的挙動
 最急辺規則（Goldfarb–Sit）・最大改善規則（Jeroslow）・Bland の規則についても指数回のピボットを要する LP 族が存在することを述べ、一つを具体的に構成せよ。
 
-*4 Friedmann の下界（Zadeh の規則とランダム辺規則）
+*5 Friedmann の下界（Zadeh の規則とランダム辺規則）
 Zadeh の最少使用規則は準指数回（$2^{\Omega(\sqrt n)}$）のピボットを要する LP が存在し（Friedmann 2011）、ランダム辺規則についても準指数下界がある（Friedmann–Hansen–Zwick）。パリティゲームからの構成原理を述べよ。
 
-*4 単体法の平均計算量（Borgwardt, Smale）
+*5 単体法の平均計算量（Borgwardt, Smale）
 回転対称な分布からのランダム LP に対し、影頂点規則による単体法の期待ピボット数は多項式である（Borgwardt 1982）。影頂点法の原理（2 次元射影の多角形の辺をたどる）を述べ、期待頂点数の評価の骨格を与えよ。
 
-*4 平滑化解析（Spielman–Teng） {st}
+*5 平滑化解析（Spielman–Teng） {st}
 任意の LP のデータに分散 $\sigma^{2}$ の Gauss 摂動を加えると、影頂点単体法の期待ピボット数は $\operatorname{poly}(n,m,1/\sigma)$ である（Spielman–Teng 2004, ゲーデル賞）。影の多角形の期待辺数の評価の骨格を与え、Dadush–Huiberts による改良 $O(d^{2}\sqrt{\log n}\,\sigma^{-2})$ を述べよ。
 
 *4 多項式 Hirsch 予想と単体法の多項式性
 多面体の組合せ的直径が多項式で抑えられないならば、どのピボット規則でも単体法は強多項式にならない。Kalai–Kleitman の $n^{\log_{2}d+2}$ 上界との関係を述べ、「多項式ピボット規則は存在するか」という問題を定式化せよ。
 
-*4 Kalai のランダム施設規則（RANDOM-FACET）
+*5 Kalai のランダム施設規則（RANDOM-FACET）
 Kalai のランダム施設規則の単体法の期待ピボット数が $e^{O(\sqrt{d\log n})}$ であることを示せ（Kalai 1992、Matoušek–Sharir–Welzl）。
 
 *4 双対単体法と感度解析
 双対単体法が双対実行可能性を保ちつつ主実行可能性を回復すること、右辺の変更後の再最適化に適することを示し、分枝限定法での利用を述べよ。
 
-*4 ネットワーク単体法
+*5 ネットワーク単体法
 最小費用流の単体法で、基底が全域木に対応し、ピボットが木の上の閉路操作になることを示せ。強多項式のネットワーク単体法（Orlin 1997）の存在を述べよ。
 
-*4 Orlin のネットワーク単体法の強多項式性
+*5 Orlin のネットワーク単体法の強多項式性
 最小費用流に対し、最良改善規則の主ネットワーク単体法の変種が $O(nm\log n\log(nC))$（弱）、さらに強多項式版が存在すること（Orlin）を述べ、主要なアイデア（費用スケーリング）の骨格を示せ。
 
-*4 Tardos の強多項式最小費用流
+*5 Tardos の強多項式最小費用流
 最小費用流問題が強多項式時間で解ける（Tardos 1985）。費用の丸めと「最適性の固定」の議論で証明の骨格を与えよ。
 
-*4 Ye の定理：割引 MDP の単体法は強多項式
+*5 Ye の定理：割引 MDP の単体法は強多項式
 割引率 $\gamma$ 固定の MDP に対する Dantzig 規則の単体法（＝政策反復の一形態）は、$O(\frac{mn}{1-\gamma}\log\frac{n}{1-\gamma})$ 回のピボットで終了する（Ye 2011）。証明の骨格を与えよ。
 
 *5 政策反復の強多項式性（Hansen–Miltersen–Zwick）
@@ -65,16 +65,16 @@ Gauss 摂動の標準偏差 $\sigma$ に対する影頂点単体法の期待ピ�
 *4 射影法と外挿勾配法（Korpelevich） {eg}
 単調かつ $L$-Lipschitz な $F$ の変分不等式に対し、射影法 $x_{k+1}=P_{C}(x_{k}-\tau F(x_{k}))$ は強単調でないと収束しないことを示し（回転の例）、外挿勾配法 $y_{k}=P_{C}(x_{k}-\tau F(x_{k}))$, $x_{k+1}=P_{C}(x_{k}-\tau F(y_{k}))$（$\tau<1/L$）が解に収束することを証明せよ。
 
-*4 外挿勾配法のエルゴード率（Nemirovski の mirror-prox）
+*5 外挿勾配法のエルゴード率（Nemirovski の mirror-prox）
 mirror-prox 法の平均反復は、有界集合上の単調 VI のギャップ関数を $O(L D^{2}/k)$ で減らす（Nemirovski 2004）。この率が一次法として最良であることを述べよ。
 
 *4 外挿勾配法の最終反復率（Golowich–Pattathil–Daskalakis–Ozdaglar, Gorbunov–Loizou–Gidel）
 単調 Lipschitz VI に対する外挿勾配法の最終反復は、自然残差（勾配ノルム）$\|F(x_{k})\|=O(1/\sqrt k)$ であり、これが最良であることを述べ、ギャップ関数の $O(1/\sqrt k)$ 率を示せ。
 
-*4 Halpern 型加速（Yoon–Ryu の外挿アンカー法）
+*5 Halpern 型加速（Yoon–Ryu の外挿アンカー法）
 アンカー付き外挿勾配法（EAG）は単調 VI の $\|F(x_{k})\|^{2}=O(1/k^{2})$ を達成し、これが最良である（Yoon–Ryu 2021）。PEP に基づく証明の骨格を与えよ。
 
-*4 Tseng の前進後退前進法
+*5 Tseng の前進後退前進法
 $0\in A(x)+B(x)$（$A$ は単調 Lipschitz、$B$ は極大単調）に対し、$y=J_{\tau B}(x-\tau Ax)$, $x_{+}=y-\tau(Ay-Ax)$ が解に弱収束する（Tseng 2000）。射影を一回で済ませる利点を述べよ。
 
 *4 楽観的勾配法（Popov, OGDA）
@@ -83,25 +83,25 @@ Popov の方法（過去の勾配で外挿）$x_{k+1}=P_{C}(x_{k}-2\tau F(x_{k})
 *4 双線形ゲームでの勾配降下上昇の発散
 $\min_{x}\max_{y}xy$ で同時勾配降下上昇（GDA）は発散し、交互 GDA は有界に周回し、外挿勾配・楽観的法は収束することを示せ。線形系の固有値の解析で証明せよ。
 
-*4 非線形相補性問題の Newton 型法（Josephy, Pang）
+*5 非線形相補性問題の Newton 型法（Josephy, Pang）
 NCP の Newton 型法（線形化 LCP を解く Josephy–Newton 法）は、解が強正則なら局所二次収束する。PATH ソルバー（Dirkse–Ferris）の路径探索法の骨格を述べよ。
 
 *4 LCP の内点法（Kojima–Megiddo–Noma–Yoshise）
 $P_{*}(\kappa)$ 行列の LCP に対する主双対内点法が $O((1+\kappa)\sqrt nL)$ 反復で収束することを示せ。P 行列一般には多項式アルゴリズムが知られていないことを述べよ。
 
-*4 LCP の計算量と PPAD
+*5 LCP の計算量と PPAD
 P 行列 LCP は解が存在し一意であるが、多項式時間アルゴリズムは未知で、問題は PPAD $\cap$ PLS に属する（Megiddo, Papadimitriou）。一般の LCP の可解性判定が NP 完全であることを示せ（Chung）。
 
 *4 Lemke–Howson アルゴリズムと二行列ゲーム
 二人非零和の双行列ゲームの Nash 均衡は LCP として定式化され、Lemke–Howson のアルゴリズムが相補的経路をたどって均衡を得る（奇数個の均衡の存在も導かれる）。経路の一意性と有限性を示せ。
 
-*4 Lemke–Howson は指数時間（Savani–von Stengel）
+*5 Lemke–Howson は指数時間（Savani–von Stengel）
 Lemke–Howson アルゴリズムが指数長の経路を要する双行列ゲームの族が存在する（Savani–von Stengel 2006）。構成の骨格を述べよ。
 
-*4 Nash 均衡の PPAD 完全性（Daskalakis–Goldberg–Papadimitriou, Chen–Deng）
+*5 Nash 均衡の PPAD 完全性（Daskalakis–Goldberg–Papadimitriou, Chen–Deng）
 2 人ゲームの Nash 均衡を求める問題は PPAD 完全である。主張を正確に述べ、END-OF-LINE 問題と Sperner の補題・Brouwer の不動点の関係を説明せよ。
 
-*4 変分不等式の正則化ギャップ関数（Fukushima）
+*5 変分不等式の正則化ギャップ関数（Fukushima）
 $\phi_{\alpha}(x)=\max_{y\in C}\{\langle F(x),x-y\rangle-\frac{\alpha}{2}\|x-y\|^{2}\}$ は $C^{1}$（$F\in C^{1}$）で、VI の解はちょうど $\phi_{\alpha}$ の $C$ 上の零点である。$F$ が強単調なら $\phi_{\alpha}$ の停留点が解であることを示せ（Fukushima 1992）。
 
 *4 D-ギャップ関数（Peng, Yamashita–Taji–Fukushima）

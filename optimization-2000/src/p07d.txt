@@ -1,6 +1,6 @@
 =ch VII-7　prox-regularity・弱凸性・下 $C^{2}$ 関数
 
-*4 prox-regular 関数の定義と Poliquin–Rockafellar の定理 {proxreg}
+*5 prox-regular 関数の定義と Poliquin–Rockafellar の定理 {proxreg}
 下半連続 $f$ が $\bar x$ で $\bar v\in\partial f(\bar x)$ に関し prox-regular（$f(x')\ge f(x)+\langle v,x'-x\rangle-\frac r2\|x'-x\|^{2}$ が $(x,v)$ の近くで成り立つ）かつ劣微分連続ならば、十分小さい $\lambda$ で $\operatorname{prox}_{\lambda f}$ は $\bar x+\lambda\bar v$ の近くで一価 Lipschitz、$e_{\lambda}f$ は $C^{1,1}$ である。証明せよ（Poliquin–Rockafellar 1996）。
 
 *4 prox-regularity と劣微分の局所単調性
@@ -48,7 +48,7 @@ prox-regular な関数 $f$ の局所最小点の近くで、非凸近接点法�
 *4 弱凸性と Burer–Monteiro の目的関数
 Burer–Monteiro 因子分解 $g(Y)=\langle C,YY^{\top}\rangle$ を実行可能多様体上で考えたとき、多様体が滑らかでないランク退化点の近くで弱凸性・prox-regularity がどう崩れるかを論ぜよ。
 
-*4 変分凸性（Rockafellar 2019）
+*5 変分凸性（Rockafellar 2019）
 下半連続関数 $f$ が $(\bar x,\bar v)$ で変分凸（局所的に凸関数 $\hat f$ があり、$\operatorname{gph}\partial f$ と $\operatorname{gph}\partial\hat f$ が近傍で一致し値も一致）ならば、局所最小性が一階条件で判定でき、非凸 ALM が局所的に凸の場合と同様に振る舞うことを示せ。
 
 *4 変分凸性と局所最適性の二階判定（Rockafellar, Khanh–Mordukhovich–Phat）
@@ -65,7 +65,7 @@ Hilbert 空間の閉集合 $C$ について、$C$ が一様 prox-regular（正�
 *4 Tarski–Seidenberg の原理 {tarski}
 半代数的集合の射影は半代数的である。これから半代数的関数の合成・最大値・下限（$\inf_{y}F(x,y)$）が半代数的であることを導け。
 
-*4 半代数的集合の有限性（Whitney, Milnor–Thom）
+*5 半代数的集合の有限性（Whitney, Milnor–Thom）
 $n$ 変数、次数 $d$ の $s$ 個の多項式で定義される半代数的集合の連結成分の数は $(sd)^{O(n)}$ で抑えられる（Milnor–Thom, Basu–Pollack–Roy）。証明の骨格を与え、多項式最適化の局所最小値の個数の評価に応用せよ。
 
 *4 o-minimal 構造の定義と例
@@ -80,7 +80,7 @@ o-minimal 構造で定義可能な一変数関数は、有限個の点を除い�
 *4 定義可能 Sard 定理（Bolte–Daniilidis–Lewis）
 定義可能な下半連続関数の（極限劣微分に関する）臨界値の集合は有限である。証明し、これが降下法の極限値の一意性に使われることを説明せよ。
 
-*4 Kurdyka–Łojasiewicz 不等式の証明（定義可能版）
+*5 Kurdyka–Łojasiewicz 不等式の証明（定義可能版）
 定義可能な $C^{1}$ 関数 $f$ と臨界点 $\bar x$ に対し、定義可能な脱特異化関数 $\varphi$ で $\varphi'(f(x)-f(\bar x))\|\nabla f(x)\|\ge1$ が近傍で成り立つ（Kurdyka 1998）。曲線選択補題と単調性定理から証明せよ。
 
 *4 半代数的関数の KŁ 指数の評価（D'Acunto–Kurdyka, Li–Mordukhovich–Pham）
@@ -113,7 +113,7 @@ Krivine–Stengle の Positivstellensatz を述べ、半代数的集合上の多
 *4 Łojasiewicz の分離不等式と誤差限界
 コンパクト集合上の実解析関数 $f,g$ について $|f(x)|\ge c\operatorname{dist}(x,f^{-1}(0))^{\alpha}$、および Łojasiewicz の分離不等式 $d(x,A)+d(x,B)\ge c\,d(x,A\cap B)^{\alpha}$（$A,B$ は部分解析的）を述べ、交互射影の非凸実行可能問題での収束率評価に応用せよ。
 
-*4 多項式最適化の計算困難性と定義可能性の限界
+*5 多項式最適化の計算困難性と定義可能性の限界
 次数 4 の多項式の大域最小化は NP 困難であり、次数 4 の多項式が下に有界かどうかの判定さえ co-NP 困難である（斉次 4 次形式 $\sum M_{ij}x_{i}^{2}x_{j}^{2}$ は下に有界 $\iff$ 非負 $\iff M$ が共正、Murty–Kabadi）ことを示せ（次数 3 では自明になる理由も説明せよ）。定義可能性が保証するのは「局所的な良い振る舞い」であって計算量ではないことを論ぜよ。
 
 *5 o-minimal 構造の細胞分解定理と次元論

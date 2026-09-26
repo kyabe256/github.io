@@ -12,7 +12,7 @@ $C\subset\mathbb{R}^{n}$ を空でない閉凸集合とする。各 $x$ に対�
 *4 支持超平面定理 {supp}
 凸集合 $C\subset\mathbb{R}^{n}$ の境界点 $x_{0}$ では、$C$ を片側に含み $x_{0}$ を通る超平面が存在する。$C$ の内部が空の場合にも（相対境界点に対して）適切に定式化し直して証明せよ。
 
-*4 二つの凸集合の分離定理 {sep}
+*5 二つの凸集合の分離定理 {sep}
 $C_{1},C_{2}\subset\mathbb{R}^{n}$ を空でない凸集合とする。$C_{1},C_{2}$ が非自明な超平面で（弱）分離できるための必要十分条件は $\operatorname{ri}C_{1}\cap\operatorname{ri}C_{2}=\emptyset$ であることを示せ（Rockafellar の真分離定理）。
 
 *4 強分離とコンパクト性
@@ -51,7 +51,7 @@ $S\subset\mathbb{R}^{n}$ がコンパクトならば $\operatorname{conv}S$ も�
 *4 凸集合の次元と Carathéodory の定理 {cara}
 $S\subset\mathbb{R}^{n}$ の凸包の各点は、$S$ の高々 $n+1$ 点の凸結合で表される。錐包については高々 $n$ 点で十分であることを示し、$n+1$ が最良であることを例で確かめよ。
 
-*4 Fenchel–Bunt の定理
+*5 Fenchel–Bunt の定理
 $S\subset\mathbb{R}^{n}$ の連結成分が高々 $n$ 個ならば、$\operatorname{conv}S$ の各点は $S$ の高々 $n$ 点の凸結合で表される。
 
 *5 Motzkin の凸性判定（Chebyshev 集合）
@@ -89,7 +89,7 @@ $Ax\le b$ が解をもたない $\iff$ $A^{\top}y=0$, $y\ge0$, $\langle b,y\rang
 *5 無限次元 Farkas と閉性の条件
 Hilbert 空間の有界線形作用素 $A:X\to Y$ と閉凸錐 $K\subset X$ について、$b\in\operatorname{cl}(AK)\iff\langle b,y\rangle\ge0\ \forall y$ with $A^{*}y\in K^{*}$。$AK$ が閉でないとき「漸近的可解性」と真の可解性が乖離する例を作り、閉性を保証する十分条件（Slater 型）を与えよ。
 
-*4 Farkas–Minkowski 系と半無限不等式
+*5 Farkas–Minkowski 系と半無限不等式
 無限系 $\langle a_{t},x\rangle\le b_{t}$ ($t\in T$) が解をもつとき、その帰結として $\langle a,x\rangle\le b$ が成り立つ $\iff(a,b)\in\operatorname{cl}\operatorname{cone}(\{(a_{t},b_{t})\}\cup\{(0,1)\})$。閉包を外せる（Farkas–Minkowski 系である）ための条件を論ぜよ。
 
 *4 凸不等式系の選択肢定理（Fan–Glicksberg–Hoffman）

@@ -80,19 +80,19 @@ $M\succ0$ で前処理した CG は $\kappa(M^{-1}A)$ で収束し、$M$ に関�
 *4 CG と Lanczos の等価性
 CG の係数から Lanczos 過程の三重対角行列 $T_{k}$ が得られ、$T_{k}$ の固有値（Ritz 値）が $A$ の極端な固有値を近似すること、CG の誤差が Gauss 求積の誤差として表されること（Golub–Meurant）を示せ。
 
-*4 有限精度 CG の Greenbaum の定理
+*5 有限精度 CG の Greenbaum の定理
 有限精度で実行した CG の挙動は、元の行列の各固有値の近くに固有値のクラスターをもつ大きな行列に対する厳密な CG と一致する（Greenbaum 1989）。主張を正確に述べ、Paige の Lanczos の有限精度解析との関係を説明せよ。
 
-*4 Fletcher–Reeves 法の大域収束（Al-Baali）
+*5 Fletcher–Reeves 法の大域収束（Al-Baali）
 非線形 CG の Fletcher–Reeves 法 $\beta_{k}=\frac{\|g_{k+1}\|^{2}}{\|g_{k}\|^{2}}$ は、強 Wolfe 条件（$c_{2}<1/2$）の下で降下方向を生成し、$\liminf\|g_{k}\|=0$ をみたす（Al-Baali 1985）。証明を完成させよ。
 
-*4 Polak–Ribière–Polyak 法の非収束（Powell の反例）
+*5 Polak–Ribière–Polyak 法の非収束（Powell の反例）
 PRP 法 $\beta_{k}=\frac{g_{k+1}^{\top}(g_{k+1}-g_{k})}{\|g_{k}\|^{2}}$ は完全直線探索でも非凸関数上で停留点に収束しない反復列を生成しうる（Powell 1984 の 3 次元の例）。一方、$\beta^{+}=\max(\beta,0)$ の PRP+ は大域収束する（Gilbert–Nocedal）ことを示せ。
 
 *4 Hager–Zhang 法（CG_DESCENT）
 $\beta_{k}^{HZ}=\frac{1}{d_{k}^{\top}y_{k}}\left(y_{k}-2d_{k}\frac{\|y_{k}\|^{2}}{d_{k}^{\top}y_{k}}\right)^{\top}g_{k+1}$ の方向は直線探索に依らず十分降下条件 $g^{\top}d\le-\frac{7}{8}\|g\|^{2}$ をみたす。証明し、強凸関数での大域収束を示せ。
 
-*4 Dai–Yuan 法
+*5 Dai–Yuan 法
 $\beta_{k}^{DY}=\frac{\|g_{k+1}\|^{2}}{d_{k}^{\top}y_{k}}$ は標準 Wolfe 条件（強 Wolfe でなくてよい）で降下方向を生成し大域収束する（Dai–Yuan 1999）。証明せよ。
 
 *4 非線形 CG の n ステップ二次収束（Cohen）

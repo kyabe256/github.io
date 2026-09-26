@@ -83,7 +83,7 @@ Hilbert 空間の閉真凸関数列について、$f_{k}\to f$（Mosco 収束）
 *4 Moreau 包の各点収束とエピ収束
 prox-bounded な関数列について、$f_{k}\to f$（エピ）$\iff e_{\lambda}f_{k}\to e_{\lambda}f$（各点、十分小さい $\lambda$）。凸の場合に証明せよ（Attouch–Wets）。
 
-*4 確率計画の SAA とエピ収束（Dupačová–Wets, Artstein–Wets）
+*5 確率計画の SAA とエピ収束（Dupačová–Wets, Artstein–Wets）
 サンプル平均近似 $\hat f_{N}(x)=\frac{1}{N}\sum F(x,\xi_{i})$ が $f(x)=EF(x,\xi)$ に確率 1 でエピ収束する（正規被積分関数、可積分下界の下で）ことを、エピグラフの大数の法則（Artstein–Wets）から示し、最適値・最適解の一致性を導け。
 
 *4 $\Gamma$ 収束の基本定理（De Giorgi）
@@ -101,7 +101,7 @@ $F_{\varepsilon}(u)=\int(\varepsilon|\nabla u|^{2}+\frac{1}{\varepsilon}W(u))dx$
 *4 エピ収束とペナルティ・障壁法の統一
 ペナルティ関数 $f+c_{k}P$ と障壁関数 $f+\mu_{k}B$ の列がともに $f+\iota_{C}$ にエピ収束することを示し、ペナルティ法・障壁法の収束をエピ収束の一般論から導け。
 
-*4 エピ収束と劣微分の極限（非凸, Poliquin）
+*5 エピ収束と劣微分の極限（非凸, Poliquin）
 一様に prox-regular な関数列について、エピ収束から劣微分の図形収束が従うことを示せ（Poliquin 1992 の拡張）。
 
 *4 エピ導関数とエピ微分可能性

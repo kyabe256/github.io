@@ -9,7 +9,7 @@
 *4 Fenchel–Rockafellar 双対定理 {fr}
 $f,g$ を閉真凸、$A$ を線形写像とし、$0\in\operatorname{ri}(\operatorname{dom}g-A\operatorname{dom}f)$ ならば $\inf_{x}\{f(x)+g(Ax)\}=\max_{y}\{-f^{*}(-A^{\top}y)-g^{*}(y)\}$。最適性条件 $-A^{\top}y^{*}\in\partial f(x^{*})$, $y^{*}\in\partial g(Ax^{*})$ を導け。
 
-*4 Fenchel–Rockafellar の Banach 空間版
+*5 Fenchel–Rockafellar の Banach 空間版
 Banach 空間では条件 $0\in\operatorname{core}(\operatorname{dom}g-A\operatorname{dom}f)$（あるいは Attouch–Brezis の閉部分空間条件）の下で同じ結論が成り立つ。Robinson–Ursescu の定理から証明せよ。
 
 *4 双対ギャップの特徴づけ
@@ -24,7 +24,7 @@ $0\in\operatorname{int}\operatorname{dom}v$ なら双対解の集合は空でな
 *4 一般化された共役双対（Moreau の $\Phi$-共役）
 結合関数 $\Phi(x,y)$ による一般化共役 $f^{\Phi}(y)=\sup_{x}\{\Phi(x,y)-f(x)\}$ について $f^{\Phi\Phi}=f\iff f$ が $\Phi$-凸。$\Phi(x,y)=-\|x-y\|^{2}$ で prox-bounded な関数の双対理論が得られることを示せ。
 
-*4 最適輸送の Kantorovich 双対の摂動双対による導出
+*5 最適輸送の Kantorovich 双対の摂動双対による導出
 Kantorovich 問題 $\inf\{\int c\,d\pi:\pi\in\Pi(\mu,\nu)\}$ の双対 $\sup\{\int\phi\,d\mu+\int\psi\,d\nu:\phi(x)+\psi(y)\le c(x,y)\}$ を、周辺制約の摂動による Fenchel–Rockafellar 双対として導け（コンパクト空間、連続コスト）。
 
 *4 $c$-凸性と双対の達成
@@ -33,7 +33,7 @@ Kantorovich 双対の最適解は $c$-共役の組 $(\phi,\phi^{c})$ にとれ�
 *4 双対性と Moreau 包の極限
 凸計画の双対を Moreau 包で正則化した主問題 $\min e_{\lambda}f+g$ から導くと、双対側に強凸項 $\frac{\lambda}{2}\|y\|^{2}$ が加わる。$\lambda\to0$ で元の双対に戻り、正則化された双対が滑らかになることを示せ（これが拡張 Lagrangian の本質）。
 
-*4 無限次元線形計画の双対（Anderson–Nash）
+*5 無限次元線形計画の双対（Anderson–Nash）
 順序付き位相ベクトル空間の線形計画 $\min\langle c,x\rangle$ s.t. $Ax-b\in K$, $x\in P$ の双対を定義し、強双対のための閉性条件（$\{(Ax-k,\langle c,x\rangle)\}$ の閉性）を示せ。
 
 *4 双対性と劣微分の合成公式の同値
@@ -45,7 +45,7 @@ DC 問題 $\inf\{g-h\}$ の Toland 双対を、摂動関数 $F(x,u)=g(x)-h(x+u)$
 *4 多段階計画の双対と Bellman 方程式
 凸多段階最適化 $\min\sum_{t}f_{t}(x_{t},x_{t-1})$ の双対を段階ごとの乗数で書き、最適値関数（Bellman 関数）の劣勾配が乗数に一致することを示せ。確率的双対動的計画（SDDP）の切除平面がこれに基づくことを説明せよ。
 
-*4 単調作用素の双対（Attouch–Théra）
+*5 単調作用素の双対（Attouch–Théra）
 極大単調作用素 $A,B$ の和の零点問題 $0\in Ax+Bx$ の双対問題 $0\in A^{-1}y-B^{-1}(-y)$ を定義し、主双対の解の対応を示せ。凸最適化の Fenchel 双対の作用素版であることを確かめよ。
 
 *4 主双対ギャップ関数
@@ -68,7 +68,7 @@ $\max\{c^{\top}x: Ax\le b,\ x\ge0\}$ と $\min\{b^{\top}y: A^{\top}y\ge c,\ y\ge
 *4 相補性定理 {cs}
 LP の主実行可能解 $x$ と双対実行可能解 $y$ がともに最適 $\iff$ $x_{j}(A^{\top}y-c)_{j}=0$, $y_{i}(b-Ax)_{i}=0$。経済学的解釈を与えよ。
 
-*4 Goldman–Tucker の強相補性定理 {gt}
+*5 Goldman–Tucker の強相補性定理 {gt}
 LP が最適解をもつならば、強相補的な最適解の組（$x_{j}+(A^{\top}y-c)_{j}>0$ for all $j$）が存在する。Tucker の定理から導き、最適解の集合の相対内部が強相補的であることを示せ。
 
 *4 LP の最適分割
@@ -116,7 +116,7 @@ von Neumann の拡大経済モデル $\max\alpha$ s.t. $Bx\ge\alpha Ax$, $x\ge0$
 *4 LP の退化と双対解の非一意性
 主問題の最適基底解が退化 $\iff$ 双対の最適解が一意とは限らない（非退化な主最適基底に対しては双対最適解は一意）ことを示し、両方が退化する例を作れ。
 
-*4 全双対整数性（Edmonds–Giles）
+*5 全双対整数性（Edmonds–Giles）
 線形系 $Ax\le b$ が全双対整数（TDI）で $b$ が整数なら、多面体 $\{Ax\le b\}$ は整数である。Edmonds の多面体マッチング定理（奇集合制約を加えたマッチング多面体の記述）がこの枠組みに入ることを述べ、TDI 性から整数性を導け。
 
 *5 Edmonds のマッチング多面体定理

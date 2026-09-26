@@ -27,13 +27,13 @@ EM の局所収束率は「欠損情報の割合」$I_{\text{obs}}^{-1}I_{\text{
 *4 交互最小化の収束（Beck–Tetruashvili）
 二ブロック凸問題の交互最小化（ブロック座標降下）は $O(1/k)$ で収束し、非凸では各ブロック部分問題の一意解の仮定がなければ停留点に収束しない例（Powell 1973 の 3 ブロック循環の例）が存在することを示せ。
 
-*4 Powell の座標降下の非収束例
+*5 Powell の座標降下の非収束例
 $\mathbb{R}^{3}$ 上の $C^{1}$ 関数で、完全最小化による巡回座標降下が 6 つの非停留点の間を周回する例（Powell 1973）を再構成し、部分問題の一意性（Grippo–Sciandrone）で収束が回復することを示せ。
 
 *4 非凸問題の確率的勾配法（Ghadimi–Lan）
 $L$-平滑な非凸関数に対する SGD（分散 $\sigma^{2}$）は、$E\|\nabla f(x_{R})\|^{2}\le\varepsilon^{2}$（$R$ はランダムに選んだ反復）を $O(\varepsilon^{-4})$ 回の確率的勾配で達成する。証明し、この率が最良であること（Arjevani ら）を述べよ。
 
-*4 分散削減による非凸 SGD の改善（SPIDER, SARAH）
+*5 分散削減による非凸 SGD の改善（SPIDER, SARAH）
 有限和非凸問題に対する SPIDER/SARAH 型の再帰的分散削減推定量を用いると、$O(n+\sqrt n\varepsilon^{-2})$ 回の成分勾配評価で $\varepsilon$-停留点を得る（Fang–Li–Lin–Zhang）。証明の骨格を与え、下界との一致を述べよ。
 
 *4 弱凸関数と Moreau 包の停留性（Davis–Drusvyatskiy）
@@ -42,16 +42,16 @@ $\rho$-弱凸関数 $f$ に対し、Moreau 包 $e_{\lambda}f$（$\lambda<1/\rho$
 *4 合成関数 $h\circ c$ の prox-linear 法
 $h$ 凸 Lipschitz、$c$ 平滑な合成最適化 $\min h(c(x))$ に対し、$x_{k+1}=\operatorname{argmin}\{h(c(x_{k})+\nabla c(x_{k})(x-x_{k}))+\frac{1}{2t}\|x-x_{k}\|^{2}\}$ が $O(\varepsilon^{-2})$ で近似停留点を得ること、鋭い最小の下で二次収束することを示せ（Drusvyatskiy–Lewis, Duchi–Ruan）。
 
-*4 深層線形ネットワークの景観（Kawaguchi）
+*5 深層線形ネットワークの景観（Kawaguchi）
 深層線形ネットワークの二乗損失 $\|W_{L}\cdots W_{1}X-Y\|_{F}^{2}$ の局所最小点はすべて大域最小点であり、それ以外の臨界点は鞍点である（Kawaguchi 2016, Lu–Kawaguchi）。二層の場合（Baldi–Hornik）を完全に証明せよ。
 
 *4 勾配流と深層線形ネットの平衡性
 深層線形ネットの勾配流では $W_{j+1}^{\top}W_{j+1}-W_{j}W_{j}^{\top}$ が保存量であり、平衡初期化からの勾配流が端到端行列に対する前処理付き勾配流に一致することを示せ（Arora–Cohen–Hazan）。
 
-*4 過剰パラメータ化 NN の勾配降下の大域収束（NTK）
+*5 過剰パラメータ化 NN の勾配降下の大域収束（NTK）
 幅 $m$ の二層 ReLU ネットの二乗損失に対し、$m\gtrsim\operatorname{poly}(n,1/\lambda_{0})$ ならランダム初期化の勾配降下は大域最小に線形収束する（Du–Zhai–Póczos–Singh）。Gram 行列の最小固有値の安定性による証明の骨格を与えよ。
 
-*4 平均場極限と Wasserstein 勾配流（Mei–Montanari–Nguyen, Chizat–Bach）
+*5 平均場極限と Wasserstein 勾配流（Mei–Montanari–Nguyen, Chizat–Bach）
 二層ネットの幅 $\to\infty$ の極限で、SGD の経験測度が Wasserstein 勾配流（McKean–Vlasov 型 PDE）に従うことを述べ、同次活性化での大域収束（Chizat–Bach）の主張を正確に述べよ。
 
 *4 行列補完・行列センシングの非凸景観（Ge–Lee–Ma, Bhojanapalli–Neyshabur–Srebro）
@@ -62,7 +62,7 @@ o-minimal 構造で定義可能な局所 Lipschitz 関数に対し、ステッ�
 
 =ch IV-10　導関数を使わない最適化
 
-*4 Nelder–Mead 法の収束と非収束（Lagarias–Reeds–Wright–Wright, McKinnon）
+*5 Nelder–Mead 法の収束と非収束（Lagarias–Reeds–Wright–Wright, McKinnon）
 1 次元・2 次元の狭義凸関数に対する Nelder–Mead 法の性質（1 次元での収束、2 次元での単体の直径の減少）を示し、McKinnon の反例（2 次元の滑らかな狭義凸関数で非停留点に収束する）を再構成せよ。
 
 *4 パターン探索の大域収束（Torczon） {torczon}
@@ -77,7 +77,7 @@ o-minimal 構造で定義可能な局所 Lipschitz 関数に対し、ステッ�
 *4 MADS（メッシュ適応直接探索, Audet–Dennis）
 MADS の探索方向が極限で単位球面上稠密になることを示し、Clarke 微分可能性の下で極限点が Clarke 停留点（$f^{\circ}(x^{*};d)\ge0$ for all $d$）であることを証明せよ。
 
-*4 ランダム勾配推定（Nesterov–Spokoiny） {zo}
+*5 ランダム勾配推定（Nesterov–Spokoiny） {zo}
 Gauss 平滑化 $f_{\mu}(x)=Ef(x+\mu u)$ の勾配は $\nabla f_{\mu}(x)=\frac{1}{\mu}E[(f(x+\mu u)-f(x))u]$。この推定量を用いたランダム勾配法が、凸 $L$-平滑関数に $O(nL R^{2}/\varepsilon)$ 回の関数評価で $\varepsilon$-解を得ることを示し、次元 $n$ の因子が避けられないこと（Duchi–Jordan–Wainwright–Wibisono の下界）を述べよ。
 
 *4 二点推定の最適性（Duchi ら）
@@ -101,10 +101,10 @@ Gauss 過程事前分布の下で GP-UCB 法の累積後悔は $O^{*}(\sqrt{T\be
 *4 Lipschitz 最適化と DIRECT（Jones–Perttunen–Stuckman）
 Lipschitz 定数既知の大域最適化で Piyavskii–Shubert 法が $\varepsilon$-大域解を有限回で得ることを示し、定数未知の DIRECT 法が評価点を稠密にすることで大域収束すること（関数評価回数は次元に指数的）を示せ。
 
-*4 大域最適化の計算量の下界
+*5 大域最適化の計算量の下界
 $L$-Lipschitz 関数の $[0,1]^{n}$ 上の $\varepsilon$-大域最小値を求めるには、決定的アルゴリズムで $(L/(2\varepsilon))^{n}$ 回程度の評価が必要十分である。敵対的議論で証明せよ（次元の呪い）。
 
-*4 シミュレーテッドアニーリングの収束（Hajek）
+*5 シミュレーテッドアニーリングの収束（Hajek）
 有限状態でのシミュレーテッドアニーリングは、温度スケジュール $T_{k}=c/\log k$ で $c\ge d^{*}$（最深の非大域的局所最小からの脱出の深さ）のとき、大域最小集合に確率収束する（Hajek 1988）。$c<d^{*}$ では失敗することを示せ。
 
 *4 Langevin ダイナミクスによる大域最適化（Gelfand–Mitter, Raginsky–Rakhlin–Telgarsky）
@@ -113,7 +113,7 @@ $L$-Lipschitz 関数の $[0,1]^{n}$ 上の $\varepsilon$-大域最小値を求�
 *4 進化戦略と CMA-ES の不変性
 CMA-ES が目的関数の順序保存変換と探索空間のアフィン変換に対して不変であることを示し、凸二次関数上で共分散行列が Hessian の逆に比例する方向に適応することを論ぜよ（Hansen–Ostermeier, Akimoto–Auger–Hansen の線形収束証明の主張）。
 
-*4 ゼロ次法の計算量下界（Jamieson–Nowak–Recht）
+*5 ゼロ次法の計算量下界（Jamieson–Nowak–Recht）
 雑音付き関数値オラクルでの強凸最適化では、一次オラクルの $O(1/T)$ に対して $\Omega(\sqrt{n^{2}/T})$ の最適化誤差の下界がある。情報理論的議論（Fano）で示せ。
 
 *5 Nelder–Mead の 2 次元厳密凸関数での収束（Lagarias–Poonen–Wright）

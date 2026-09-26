@@ -45,7 +45,7 @@ $F(x)=0$ の非線形 Jacobi 反復の収束条件（$F'$ が優対角）と、G
 *4 固定点反復と Banach の縮小原理
 縮小写像の反復は線形収束し、誤差の事後評価 $\|x_{k}-x^{*}\|\le\frac{q}{1-q}\|x_{k}-x_{k-1}\|$ を与える。局所縮小性がスペクトル半径 $\rho(g'(x^{*}))<1$ と同値であることを示し、非正規な $g'$ で過渡的増大が起こる例を作れ。
 
-*4 Anderson 加速の局所収束（Toth–Kelley）
+*5 Anderson 加速の局所収束（Toth–Kelley）
 縮小写像 $g$ の不動点反復に Anderson 加速（深さ $m$）を適用すると、係数が有界なら局所的に少なくとも元の反復と同じ率で収束する（Toth–Kelley 2015）。改善の程度を係数と「最適化利得」で評価せよ（Evans–Pollock–Rebholz–Xiao）。
 
 *4 Aitken の $\Delta^{2}$ 法と Steffensen 法
@@ -71,19 +71,19 @@ $\min_{s}g^{\top}s+\frac12s^{\top}Hs+\frac{M}{6}\|s\|^{3}$ の大域最小点 $s
 *4 適応的三次正則化（ARC, Cartis–Gould–Toint）
 $M$ の代わりに適応的パラメータ $\sigma_{k}$ を用い、部分問題を不正確に解く ARC 法が $O(\varepsilon^{-3/2})$ の一階計算量を保つことを示せ。
 
-*4 凸関数に対する三次正則化の大域率
+*5 凸関数に対する三次正則化の大域率
 $f$ が凸で $\nabla^{2}f$ が $M$-Lipschitz なら、三次正則化 Newton 法は $f(x_{k})-f^{*}=O(MR^{3}/k^{2})$、加速版（Nesterov 2008）は $O(MR^{3}/k^{3})$ を達成する。証明せよ。
 
-*4 二階法の下界と最適加速（Monteiro–Svaiter, Arjevani–Shamir–Shiff）
+*5 二階法の下界と最適加速（Monteiro–Svaiter, Arjevani–Shamir–Shiff）
 凸で Hessian Lipschitz な関数に対し、任意の二階法は $\Omega((MR^{3}/\varepsilon)^{2/7})$ 反復を要し、Monteiro–Svaiter の A-HPE 枠組みの加速近接 Newton 法がこれを（対数因子を除き）達成する。下界の構成と上界の骨格を述べよ。
 
-*4 $p$ 次のテンソル法（Birgin–Gardenghi–Martínez–Santos–Toint）
+*5 $p$ 次のテンソル法（Birgin–Gardenghi–Martínez–Santos–Toint）
 $p$ 次 Taylor 展開と $(p+1)$ 次の正則化項による $p$ 次法は、$\varepsilon$-一階停留点を $O(\varepsilon^{-(p+1)/p})$ 反復で得る。この率が $p$ 次法として最良であることを述べ（Carmon–Duchi–Hinder–Sidford の下界）、$p=1,2$ の場合を確かめよ。
 
-*4 凸テンソル法の暗黙の凸性（Nesterov 2019）
+*5 凸テンソル法の暗黙の凸性（Nesterov 2019）
 $f$ が凸で $p$ 次導関数が Lipschitz なら、正則化パラメータを $M\ge pL_{p}$ にとると $p$ 次の正則化モデルは凸となり、効率的に最小化できる。$p=3$ で部分問題が二次・三次正則化 Newton の反復で解けることを示せ。
 
-*4 非凸二階法の下界（Carmon–Duchi–Hinder–Sidford）
+*5 非凸二階法の下界（Carmon–Duchi–Hinder–Sidford）
 Hessian Lipschitz な非凸関数に対し、決定的な $p$ 次法は $\varepsilon$-停留点を得るのに $\Omega(\varepsilon^{-(p+1)/p})$ 回のオラクル呼び出しを要する。$p=1$ で勾配法が最適、$p=2$ で三次正則化が最適であることを結論せよ。
 
 *4 勾配法の $\varepsilon^{-7/4}$ 率（Carmon–Duchi–Hinder–Sidford, Agarwal ら）
@@ -92,7 +92,7 @@ Hessian Lipschitz な非凸関数に対し、負曲率探索と加速勾配法�
 *4 Hessian-free 負曲率探索
 Lanczos 法で $\lambda_{\min}(\nabla^{2}f)\ge-\varepsilon$ の判定を $\tilde O(\sqrt{L/\varepsilon})$ 回の Hessian ベクトル積で高確率で行えることを示し（Kuczyński–Woźniakowski）、二階停留点探索の計算量への影響を論ぜよ。
 
-*4 Newton 法の大域化と最悪ケースの挙動（Cartis–Gould–Toint の例）
+*5 Newton 法の大域化と最悪ケースの挙動（Cartis–Gould–Toint の例）
 Armijo 直線探索付き Newton 法や信頼領域 Newton 法は、Lipschitz 連続 Hessian の関数上でも $\varepsilon$-停留点に $\Omega(\varepsilon^{-2})$ 反復を要しうる。最悪関数の構成を与え、三次正則化の優位を結論せよ。
 
 *4 正則化 Newton 法の局所二次収束（Mishchenko, Doikov–Nesterov）

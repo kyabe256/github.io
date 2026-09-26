@@ -45,7 +45,7 @@ $x\mapsto\partial_{C}f(x)$ は上半連続（グラフが閉）で、局所有�
 *4 厳密微分可能性と Clarke 劣微分の一点性
 局所 Lipschitz 関数 $f$ が $x$ で厳密微分可能（$\frac{f(y)-f(z)-\langle\nabla f(x),y-z\rangle}{\|y-z\|}\to0$, $y,z\to x$）$\iff\partial_{C}f(x)$ が一点。至る所微分可能だが $x$ で厳密微分可能でない関数 $x^{2}\sin(1/x)$ で $\partial_{C}f(0)=[-1,1]$ を計算せよ。
 
-*4 Borwein–Moors–Wang の汎性定理
+*5 Borwein–Moors–Wang の汎性定理
 Banach 空間上の非拡大関数の空間において、汎的（残留集合上）な関数は各点で Clarke 劣微分が単位双対球全体に等しい。可分な場合の証明の骨格を与えよ。
 
 *4 Clarke の非平滑最適制御の最大原理（入門）
@@ -77,7 +77,7 @@ Lipschitz 関数 $u$ が Hamilton–Jacobi 方程式の「Clarke 一般化解」
 *4 極値原理（Mordukhovich の extremal principle）
 閉集合 $\Omega_{1},\Omega_{2}$ の局所極値点（ある小さな平行移動で交わりがなくなる）$\bar x$ で、$v\in N_{\Omega_{1}}(\bar x)\cap(-N_{\Omega_{2}}(\bar x))$, $v\neq0$ が存在する。有限次元の証明を与え、これが非凸集合の分離定理の代わりになることを説明せよ。
 
-*4 近似極値原理（Asplund 空間）
+*5 近似極値原理（Asplund 空間）
 Asplund 空間では極値原理が Fréchet 法錐の近似形（$\varepsilon$ だけずれた点での法線）で成り立ち、Asplund 空間はこの性質で特徴づけられる（Mordukhovich–Shao）。主張を述べ証明の骨格を与えよ。
 
 *4 極限法錐の計算

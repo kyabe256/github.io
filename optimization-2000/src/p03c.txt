@@ -15,46 +15,46 @@ SOCP $\min c^{\top}x$ s.t. $\|A_{i}x+b_{i}\|\le c_{i}^{\top}x+d_{i}$ の双対�
 *4 べき錐と $p$-ノルム錐
 べき錐 $K_{\alpha}=\{(x,y,z): x^{\alpha}y^{1-\alpha}\ge|z|,\ x,y\ge0\}$ の双対錐を求め、$\ell^{p}$ ノルムのエピグラフがべき錐の有限個の交わりで表現できることを示せ。
 
-*4 錐計画の双対と面縮小（Borwein–Wolkowicz）
+*5 錐計画の双対と面縮小（Borwein–Wolkowicz）
 主問題が Slater 条件をみたさない錐計画について、最小面 $F_{\min}$ を用いて主問題を $\min\{\langle c,x\rangle: Ax=b,\ x\in F_{\min}\}$ に還元し、その双対（$K^{*}$ を $F_{\min}^{*}$ に拡大）との間では強双対が成り立つことを示せ。
 
-*4 Ramana の拡張双対
+*5 Ramana の拡張双対
 SDP に対して、多項式サイズの補助変数を加えた「拡張 Lagrange–Slater 双対」は、制約想定なしに強双対（ゼロギャップかつ双対達成）を与える（Ramana 1997）。構成の骨格を与え、SDP の実行可能性判定が NP $\cap$ co-NP に属するか、あるいはともに属さないかのいずれかであることを導け。
 
 *4 錐計画の Farkas 補題と弱選択肢
 閉凸錐 $K$ について、$\{x\in K: Ax=b\}=\emptyset$ $\iff$ 任意の $\varepsilon>0$ で「$A^{*}y\in K^{*}$, $\langle b,y\rangle<0$」の $\varepsilon$-近似解が存在（弱選択肢）。$AK$ が閉なら強選択肢が成り立つことを示せ。
 
-*4 錐の像の閉性（Pataki の判定）
+*5 錐の像の閉性（Pataki の判定）
 閉凸錐 $K$ と線形写像 $A$ について $AK$ が閉であるための条件を、$K$ の面と $\ker A$ の関係で特徴づけよ（Pataki 2007：$K$ が "nice" なら $AK$ 閉 $\iff\operatorname{range}(A^{*})\cap(F^{\perp}\setminus\operatorname{lin}F^{\triangle})=\emptyset$）。
 
-*4 nice 錐と facially exposed 錐
+*5 nice 錐と facially exposed 錐
 閉凸錐 $K$ が nice（任意の面 $F$ で $K^{*}+F^{\perp}$ が閉）ならば facially exposed である。$\mathbb{S}^{n}_{+}$、二次錐、多面錐が nice であることを示し、facially exposed だが nice でない錐（Roshchina）の存在を述べよ。
 
 *4 錐計画の主双対中心パス
 自己双対錐上の錐計画で、中心パス $x(\mu)\circ s(\mu)=\mu e$（Jordan 積）が一意に存在し、$\mu\to0$ で主双対最適解（の解析的中心）に収束することを示せ。
 
-*4 対称錐とJordan 代数（Koecher–Vinberg）
+*5 対称錐とJordan 代数（Koecher–Vinberg）
 自己双対かつ等質な閉凸錐（対称錐）は Euclid Jordan 代数の平方元の錐として実現される。$\mathbb{R}^{n}_{+}$、$\mathcal{L}^{n}$、$\mathbb{S}^{n}_{+}$、Hermite 版、四元数版、$3\times3$ 八元数 Hermite 行列の錐が対称錐のすべてであることを述べ、$\mathcal{L}^{n}$ に対する Jordan 積 $x\circ y=(x^{\top}y,\ x_{0}\bar y+y_{0}\bar x)$ を確かめよ。
 
 *4 錐計画の双対ギャップと最適値の連続性
 錐計画の最適値関数 $v(b)$ の下半連続性がゼロ双対ギャップと同値であることを示し、二次錐計画で $b$ の微小摂動により最適値が不連続に変化する例を作れ。
 
-*4 コポジティブ計画による二値二次計画の厳密な再定式化（Burer）
+*5 コポジティブ計画による二値二次計画の厳密な再定式化（Burer）
 二値変数と連続変数を含む非凸二次計画は、完全正値錐 $\mathcal{CP}$ 上の線形計画として厳密に再定式化される（Burer 2009）。定式化を与え証明の骨格を示し、これが NP 困難な問題の困難さを錐に押し込めていることを説明せよ。
 
 *4 コポジティブ錐の内側近似（Parrilo 階層）
 $\mathcal{K}^{r}=\{M: (\sum x_{i}^{2})^{r}\,x^{\circ2\top}Mx^{\circ2}\text{ が SOS}\}$ は $\mathcal{COP}_{n}$ に単調に収束する内側近似であり（Pólya の定理を用いて）、$r=0$ で $\mathbb{S}_{+}+\mathcal{N}$ に一致することを示せ。
 
-*4 Pólya の定理 {polya}
+*5 Pólya の定理 {polya}
 単体上で正な斉次多項式 $p$ について、十分大きな $N$ で $(\sum x_{i})^{N}p(x)$ の係数はすべて正である。証明を完成させ、コポジティブ錐の LP 近似階層（de Klerk–Pasechnik）への応用を述べよ。
 
-*4 Diananda の定理
+*5 Diananda の定理
 $n\le4$ ではコポジティブ錐は半正定値錐と非負行列錐の和 $\mathbb{S}^{n}_{+}+\mathcal{N}^{n}$ に等しい。$n=5$ で Horn 行列が反例であることを示せ。
 
-*4 双曲錐（Gårding）
+*5 双曲錐（Gårding）
 双曲多項式 $p$ の方向 $e$ に関する双曲錐は凸であり、$\log p$ はその内部で凹である（Gårding）。半正定値錐が $\det$ に対する双曲錐であることを確かめ、双曲計画の双対を論ぜよ。
 
-*4 一般化 Lax 予想と双曲錐のスペクトル表現
+*5 一般化 Lax 予想と双曲錐のスペクトル表現
 3 変数の双曲多項式は定義的行列式表現 $p=\det(xA+yB+zC)$ をもつ（Lax 予想、Helton–Vinnikov / Lewis–Parrilo–Ramana）。したがって 3 次元の双曲錐はスペクトラヘドロンである。一般次元では未解決な「一般化 Lax 予想」を述べよ。
 
 *5 錐計画の完全双対（Klep–Schweighofer）
@@ -68,13 +68,13 @@ $\min\{\langle C,X\rangle: \langle A_{i},X\rangle=b_{i},\ X\succeq0\}$ と $\max
 *4 SDP の相補性とランク
 主双対最適解 $(X,S)$ について $\langle X,S\rangle=0\iff XS=0$、したがって $\operatorname{rank}X+\operatorname{rank}S\le n$。狭義相補性（$\operatorname{rank}X+\operatorname{rank}S=n$）が一般には成り立たない例を作れ。
 
-*4 Barvinok–Pataki のランク限界 {bp}
+*5 Barvinok–Pataki のランク限界 {bp}
 $m$ 個の線形等式制約をもつ SDP が実行可能ならば、ランク $r$ が $r(r+1)/2\le m$ をみたす実行可能解が存在し、最適解が存在するならそのような最適解が存在する。面の次元の議論で証明せよ。
 
 *4 SDP の最適解の一意性と非退化性（Alizadeh–Haeberly–Overton）
 SDP の主非退化性・双対非退化性・狭義相補性を定義し、主非退化なら双対最適解が一意、狭義相補性の下で双対非退化なら主最適解が一意であることを示せ。これらが一般的（generic）に成り立つことを述べよ。
 
-*4 SDP の一般的な性質（Pataki–Tunçel, Nie–Ranestad–Sturmfels）
+*5 SDP の一般的な性質（Pataki–Tunçel, Nie–Ranestad–Sturmfels）
 一般的なデータの SDP では最適解が一意で狭義相補性が成り立ち、Pataki の範囲 $\binom{n-r+1}{2}\le m$, $\binom{r+1}{2}\le\binom{n+1}{2}-m$ にランクが入ることを示せ。最適値の代数次数が有限であることを述べよ。
 
 *4 S-補題の SDP 的証明
@@ -86,7 +86,7 @@ $X\succeq0$ と対称行列 $A$ について、$X=\sum x_{i}x_{i}^{\top}$ で $x
 *4 Lovász のテータ関数の SDP 表示 {theta}
 グラフ $G$ の Lovász 数 $\vartheta(G)=\max\{\langle J,X\rangle: \operatorname{tr}X=1,\ X_{ij}=0\ (ij\in E),\ X\succeq0\}$ について $\alpha(G)\le\vartheta(G)\le\chi(\bar G)$（サンドイッチ定理）。双対表示を導き、完全グラフでは多項式時間で $\alpha$ が求まることを結論せよ。
 
-*4 Shannon 容量と Lovász の定理
+*5 Shannon 容量と Lovász の定理
 $\Theta(G)\le\vartheta(G)$ で、5 サイクルでは $\Theta(C_{5})=\sqrt{5}$。正規直交表現（umbrella）による証明を完成させよ。
 
 *4 SDP の双対と固有値最適化
@@ -101,13 +101,13 @@ MAX-CUT の SDP 緩和 $\max\frac{1}{4}\langle L,X\rangle$ s.t. $X_{ii}=1$, $X\s
 *4 SDP の面構造（Ramana–Goldman）
 スペクトラヘドロン $\{y: C-\sum y_{i}A_{i}\succeq0\}$ の面は、ある部分空間 $V$ について $\{y:(C-\sum y_{i}A_{i})V=0\}$ との交わりとして表され、すべての面が露出面である（facially exposed）。
 
-*4 スペクトラヘドロンの射影は一般にスペクトラヘドロンでない
+*5 スペクトラヘドロンの射影は一般にスペクトラヘドロンでない
 スペクトラヘドロンの線形射影（スペクトラヘドラル影）はスペクトラヘドロンとは限らない。Helton–Nie の予想（凸半代数集合はスペクトラヘドラル影）が Scheiderer により否定されたことを述べ、剛凸性（rigid convexity）がスペクトラヘドロンの必要条件であることを示せ。
 
 *4 Lyapunov 不等式と制御の SDP
 線形系 $\dot x=Ax$ が漸近安定 $\iff$ $P\succ0$ で $A^{\top}P+PA\prec0$ なるものが存在する（Lyapunov）。LMI の実行可能性問題として定式化し、その双対（Farkas 型選択肢）が不安定性の証明書を与えることを示せ。
 
-*4 KYP の補題（Kalman–Yakubovich–Popov）
+*5 KYP の補題（Kalman–Yakubovich–Popov）
 可制御な $(A,B)$ と対称行列 $M$ について、周波数不等式 $\begin{pmatrix}(j\omega I-A)^{-1}B\\ I\end{pmatrix}^{*}M\begin{pmatrix}(j\omega I-A)^{-1}B\\ I\end{pmatrix}\preceq0$ ($\forall\omega$) $\iff$ LMI $\begin{pmatrix}A^{\top}P+PA & PB\\ B^{\top}P & 0\end{pmatrix}+M\preceq0$ が解 $P=P^{\top}$ をもつ。S-補題による証明を与えよ。
 
 *4 SDP の感度解析

@@ -3,7 +3,7 @@
 *4 Minty の定理 {minty}
 Hilbert 空間 $H$ の単調作用素 $T$ が極大単調 $\iff\operatorname{range}(I+T)=H$。このときレゾルベント $J_{\lambda T}=(I+\lambda T)^{-1}$ は全域で定義された堅非拡大写像であることを示せ。
 
-*4 劣微分の極大単調性（Rockafellar）
+*5 劣微分の極大単調性（Rockafellar）
 Banach 空間の閉真凸関数 $f$ について $\partial f$ は極大単調である。Hilbert 空間では Minty の定理と prox の存在から、一般の Banach 空間では Rockafellar の議論（あるいは Simons の方法）で証明せよ。
 
 *5 Rockafellar の和定理
@@ -12,7 +12,7 @@ Banach 空間の閉真凸関数 $f$ について $\partial f$ は極大単調で
 *4 Fitzpatrick 関数 {fitz}
 単調作用素 $T$ の Fitzpatrick 関数 $F_{T}(x,x^{*})=\sup_{(y,y^{*})\in\operatorname{gra}T}\{\langle x,y^{*}\rangle+\langle y,x^{*}\rangle-\langle y,y^{*}\rangle\}$ は閉凸で、$T$ が極大単調なら $F_{T}\ge\langle\cdot,\cdot\rangle$ かつ等号集合が $\operatorname{gra}T$ である。これを用いて極大単調性を凸解析に還元する枠組みを説明せよ。
 
-*4 Browder–Minty の全射性定理
+*5 Browder–Minty の全射性定理
 反射的 Banach 空間 $X$ 上の単調・半連続・強圧的な作用素 $T:X\to X^{*}$ は全射である。Galerkin 近似と Minty のトリックで証明し、準線形楕円型方程式 $-\operatorname{div}(|\nabla u|^{p-2}\nabla u)=f$ の可解性を導け。
 
 *4 Krasnosel'skii–Mann 反復 {km}
@@ -21,16 +21,16 @@ Hilbert 空間の非拡大写像 $T$ が不動点をもつとき、$x_{k+1}=(1-\
 *4 Opial の補題
 Hilbert 空間の点列 $x_{k}$ と空でない集合 $S$ について、(i) 各 $s\in S$ で $\|x_{k}-s\|$ が収束し、(ii) $x_{k}$ の弱集積点がすべて $S$ に属するならば、$x_{k}$ は $S$ のある点に弱収束する。
 
-*4 Browder–Göhde–Kirk の不動点定理
+*5 Browder–Göhde–Kirk の不動点定理
 一様凸 Banach 空間（特に Hilbert 空間）の有界閉凸集合 $C$ から自身への非拡大写像は不動点をもつ。$c_{0}$ や $L^{1}$ では成り立たない例を与え、正規構造の役割を説明せよ。
 
-*4 Halpern 反復と強収束
+*5 Halpern 反復と強収束
 $x_{k+1}=\alpha_{k}u+(1-\alpha_{k})Tx_{k}$ で $\alpha_{k}\to0$, $\sum\alpha_{k}=\infty$, $\sum|\alpha_{k+1}-\alpha_{k}|<\infty$ ならば、$x_{k}$ は $u$ に最も近い不動点 $P_{\operatorname{Fix}T}u$ に強収束する（Wittmann）。Krasnosel'skii–Mann で強収束しない例（Genel–Lindenstrauss）を述べよ。
 
 *4 平均作用素と合成
 堅非拡大写像は $\frac{1}{2}$-平均写像であり、平均写像の合成は平均写像である（Ogura–Yamada, Combettes–Yamada の定数評価）。これを使って前向き後ろ向き分割 $J_{\gamma B}(I-\gamma A)$ が $\gamma<2\beta$（$A$ は $\beta$-共強圧的）で平均写像になることを示せ。
 
-*4 Baillon–Haddad の定理 {bh}
+*5 Baillon–Haddad の定理 {bh}
 Hilbert 空間の凸関数 $f$ の勾配が $L$-Lipschitz ならば、$\nabla f$ は $1/L$-共強圧的である。非凸な関数では成り立たないことを示し、証明を凸共役を用いて与えよ。
 
 *4 単調作用素の零点と変分不等式
@@ -68,16 +68,16 @@ Banach 空間 $X$ 上の下半連続真凸関数は $\operatorname{int}\operator
 *4 Banach 空間の Fenchel–Moreau
 局所凸空間 $X$ の真関数 $f$ について $f^{**}=f\iff f$ が下半連続凸（ここで $f^{**}$ は $X$ 上に制限した双共役）。Hahn–Banach の分離形から証明せよ。
 
-*4 Attouch–Brezis の条件 {ab}
+*5 Attouch–Brezis の条件 {ab}
 Banach 空間の閉真凸関数 $f,g$ について $\bigcup_{\lambda>0}\lambda(\operatorname{dom}f-\operatorname{dom}g)$ が閉部分空間ならば $(f+g)^{*}=f^{*}\square g^{*}$ で下限は達成される。Robinson–Ursescu の定理を用いて証明し、Rockafellar の内点条件より弱いことを例で示せ。
 
-*4 Robinson–Ursescu の開写像定理 {ru}
+*5 Robinson–Ursescu の開写像定理 {ru}
 Banach 空間の間の閉凸過程（グラフが閉凸な集合値写像）$F:X\rightrightarrows Y$ について $y_{0}\in\operatorname{int}\operatorname{range}F$ ならば $F$ は $(x_{0},y_{0})$ で開（線形率で）である。線形の開写像定理の一般化であることを説明せよ。
 
 *4 Bishop–Phelps の定理（凸解析版）
 Banach 空間の閉凸有界集合 $C$ の支持点は $C$ の境界で稠密であり、$C$ を支持する汎関数は $X^{*}$ で稠密である。Ekeland の変分原理から導け。
 
-*4 James の定理と弱コンパクト性
+*5 James の定理と弱コンパクト性
 Banach 空間の弱閉有界凸集合 $C$ について、$C$ が弱コンパクト $\iff$ すべての $f\in X^{*}$ が $C$ 上で最大値をとる。可分の場合の証明の骨格を与え、系として反射性の特徴づけを導け。
 
 *4 凸関数の Gâteaux 微分可能性と Mazur の定理
@@ -86,25 +86,25 @@ Banach 空間の弱閉有界凸集合 $C$ について、$C$ が弱コンパク�
 *5 Asplund 空間の双対特徴づけ
 Banach 空間 $X$ が Asplund $\iff$ 可分部分空間の双対がすべて可分 $\iff X^{*}$ が Radon–Nikodym 性質をもつ。一方向（$X^{*}$ 可分 $\Rightarrow$ Asplund）の証明を完成させよ（Stegall の変分原理を用いてよい）。
 
-*4 Borwein–Preiss の平滑変分原理
+*5 Borwein–Preiss の平滑変分原理
 Banach 空間 $X$ が Fréchet 平滑なノルムをもつとき、下半連続で下に有界な $f$ と $\varepsilon$-最小点 $x_{0}$ に対し、平滑な摂動 $f+\varepsilon\Delta$ が厳密な最小点をもち、それが $x_{0}$ の近くにある。Ekeland の原理との違い（摂動が平滑）を説明し、Fréchet 劣微分の稠密性を導け。
 
-*4 凸積分汎関数（Rockafellar）
+*5 凸積分汎関数（Rockafellar）
 正規凸被積分関数 $f(t,x)$ に対し $I_{f}(u)=\int f(t,u(t))d\mu$ の $L^{p}$ 上の共役は $I_{f^{*}}$ で与えられ（$L^{q}$ 上）、$\partial I_{f}(u)=\{v: v(t)\in\partial f(t,u(t))\ \text{a.e.}\}$。$L^{\infty}$ の場合に双対空間が特異部分を含むことによる困難を説明せよ。
 
-*4 可測選択と正規被積分関数
+*5 可測選択と正規被積分関数
 閉値集合値写像 $\Gamma:T\rightrightarrows\mathbb{R}^{n}$ が可測ならば可測選択子が存在し（Kuratowski–Ryll-Nardzewski）、Castaing 表現 $\Gamma(t)=\operatorname{cl}\{\gamma_{k}(t)\}$ をもつ。正規被積分関数の下限 $\inf_{x}f(t,x)$ が可測であることを導け。
 
-*4 Aumann 積分と Lyapunov の凸性定理
+*5 Aumann 積分と Lyapunov の凸性定理
 非原子的測度に関する集合値写像の Aumann 積分は凸である。Lyapunov の定理（非原子的ベクトル測度の値域はコンパクト凸）から導き、最適制御のバンバン原理への応用を述べよ。
 
-*4 Komlós の定理
+*5 Komlós の定理
 $L^{1}$ で有界な列は、部分列でその任意の部分列の Cesàro 平均がほとんど至る所同じ極限に収束するものをもつ。これを用いて $L^{1}$ における凸汎関数の下半連続性の議論を補え。
 
 *4 凸汎関数の弱下半連続性 {wlsc}
 Banach 空間上の凸関数は、強下半連続 $\iff$ 弱下半連続。これと反射性から、反射的空間上の強圧的な下半連続凸関数が最小点をもつことを示し、非反射的空間での反例（$c_{0}$ 上の線形汎関数の最小化など）を与えよ。
 
-*4 Choquet の定理（凸解析における表現）
+*5 Choquet の定理（凸解析における表現）
 局所凸空間の距離化可能なコンパクト凸集合 $K$ の各点は、端点集合に集中した確率測度の重心である。Choquet の方法（凸関数の上包）を用いた証明の骨格を与え、単体（Choquet simplex）で測度が一意であることを述べよ。
 
 *4 Hilbert 空間の双対錐と無限次元 SDP
@@ -116,7 +116,7 @@ Banach 空間 $X^{*}$ の弱*コンパクト凸集合と $X$ 上の劣線形連�
 *5 Simons の SSD 空間理論
 Hilbert 空間の極大単調作用素に対し、Simons の「最小値定理」から Rockafellar の和定理と Minty の定理を統一的に導く方法（SSD 空間の理論）の骨格を再構成せよ。
 
-*4 Radon–Nikodym 性質と凸集合の尖り点
+*5 Radon–Nikodym 性質と凸集合の尖り点
 Banach 空間 $X$ が RNP をもつ $\iff$ 任意の有界閉凸集合がスライスで分離できる点（dentable）をもつ（Rieffel, Huff, Davis–Phelps）。$L^{1}[0,1]$ の単位球が端点をもたないことを示し、RNP をもたないことを導け。
 
 *4 無限次元での共役の非有界性と Legendre–Fenchel 変換の限界

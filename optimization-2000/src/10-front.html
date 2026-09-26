@@ -1,0 +1,71 @@
+<div class="cover">
+  <div class="kicker">TWO THOUSAND THEOREMS</div>
+  <div class="vol">STATEMENTS ONLY</div>
+  <h1>非線形最適化 2000 大問</h1>
+  <div class="rule"></div>
+  <div class="sub">凸解析から最適輸送まで</div>
+  <div class="formula">$$\inf_{x}\{f(x)+g(Ax)\}=\max_{y}\{-f^{*}(-A^{\top}y)-g^{*}(y)\}$$</div>
+  <div class="meta">
+    全 {{STAT:TOTAL}} 大問 ― すべて証明問題、すべて名前のついた定理<br>
+    10 部 × 200 題 ／ 100 章 × 20 題<br>
+    <br>
+    難易度：★★★★☆ {{STAT:S4}} 題 ／ ★★★★★ {{STAT:S5}} 題<br>
+    <br>
+    誘導なし・解答なし
+  </div>
+</div>
+
+<h2 class="plain">はじめに</h2>
+
+<p>本書は非線形最適化の<strong>定理の主張だけ</strong>を 2000 個並べた問題集である。誘導はない。解答もない。各問は「この定理を証明せよ」という要求であり、そこから先はすべて読者の仕事になる。</p>
+
+<p>収録したのはすべて<strong>名前のついた定理</strong>、あるいは名前のついた方法の収束・計算量・最適性に関する定理である。難易度は ★★★★☆（院試の難問から専門書の標準的な定理まで。半日）と ★★★★★（専門書の山場や研究論文の主定理。一題に数日、ときに数週間）の二段階のみ ― 入門的な問題は一題も入れていない。</p>
+
+<p>全体は 10 部からなり、各部は 10 章、各章は 20 題である。</p>
+<table class="sym">
+  <tr><td class="k">第 I 部</td><td>凸解析 ― 分離定理、錐と選択肢定理、多面体、凸幾何、共役、劣微分、単調作用素、無限次元</td></tr>
+  <tr><td class="k">第 II 部</td><td>最適性条件 ― 存在、一階・二階条件、Lagrange 乗数、KKT と制約想定、感度解析、誤差限界、二次計画、多目的最適化</td></tr>
+  <tr><td class="k">第 III 部</td><td>双対理論 ― Lagrange 双対、minimax、摂動双対、LP・錐計画・SDP の双対、拡張 Lagrangian、S-補題、離散最適化と無限次元の双対</td></tr>
+  <tr><td class="k">第 IV 部</td><td>無制約最適化のアルゴリズム ― 直線探索、勾配法、Newton・準 Newton、信頼領域、共役勾配、最小二乗、三次正則化、非凸一階法、導関数不要法</td></tr>
+  <tr><td class="k">第 V 部</td><td>制約付き最適化のアルゴリズム ― ペナルティ・障壁、拡張 Lagrange 法、SQP、内点法と自己共役障壁、有効制約法、Frank–Wolfe、楕円体法、単体法、変分不等式</td></tr>
+  <tr><td class="k">第 VI 部</td><td>一次法と計算量 ― 加速、劣勾配、近接勾配、ミラー降下、主双対法、演算子分割、座標降下、性能推定問題、分散最適化、適応的方法</td></tr>
+  <tr><td class="k">第 VII 部</td><td>非平滑解析と変分解析 ― Clarke・Mordukhovich の劣微分、変分原理、計量正則性、集合とエピ収束、prox-regularity、定義可能な最適化、二階変分解析、DC 計画</td></tr>
+  <tr><td class="k">第 VIII 部</td><td>錐計画・多項式最適化・凸緩和 ― SOCP、SDP、SOS と Positivstellensatz、共正値計画、SDP 近似アルゴリズム、圧縮センシング、低ランク回復、非凸景観、凸代数幾何</td></tr>
+  <tr><td class="k">第 IX 部</td><td>確率的・オンライン・ロバスト最適化 ― 確率近似、確率的凸最適化、分散削減、オンライン学習、バンディット、確率計画、ロバスト・分布ロバスト最適化、強化学習、学習理論</td></tr>
+  <tr><td class="k">第 X 部</td><td>変分法・最適制御・均衡 ― 古典変分法、直接法、最大原理、HJB と粘性解、LQ 制御、変分不等式、ゲームと均衡、最適輸送、二段階最適化、大定理の合流</td></tr>
+</table>
+
+<h3 class="sec">使用許可のルール</h3>
+<p>2000 題は<strong>通し番号順に一本の階段として並んでいる</strong>。番号 $n$ の問題を解くとき、</p>
+<ul class="plain">
+  <li>$1,\dots,n-1$ のすべての結果</li>
+  <li>学部標準の基礎事実（線形代数・微積分・測度論と Lebesgue 積分・確率論の基礎・位相空間と関数解析の入門：Hahn–Banach、Baire、開写像、Riesz 表現、弱位相、Banach–Alaoglu、Brouwer の不動点定理の主張）</li>
+</ul>
+<p>は自由に使ってよい。それ以外の $n$ 以降の結果を使ってはならない（循環論法になる）。ただし各部は前の部の結果だけを本質的に用いるように並べてあるので、部の冒頭から読み始めてもよい。部をまたぐ依存の主な筋は付録 A に地図としてまとめた。</p>
+
+<h3 class="sec">言明のみを求める問題</h3>
+<p>後半の部には、完全な証明が論文一本から一冊の専門書に及ぶ定理（Brenier の定理の正則性、平滑化解析、Kadison–Singer の解決、Lasserre 階層の収束率、Unique Games 下の最適近似、PPAD 完全性など）がある。問題文が「主張を述べ」「骨格を与えよ」「再構成せよ」と言うときは、<strong>主張を正確に述べ直し、証明の骨格（どの定理をどの順で使うか）を再構成し、鍵となる一つの補題を完全に証明する</strong>ことをもって解答とせよ。それ自体が ★★★★★ の仕事である。</p>
+
+<h3 class="sec">詰まったときに</h3>
+<p>本書に解答はないが、付録 B に章ごとの参考書対応表を置いた。関数解析・確率論・調和解析の予備知識が足りないときは、姉妹編『数学 1000 大問』の対応する部（第 II 部 関数解析、第 IV 部 確率論）へ戻ること。</p>
+<p>そして ― <strong>一題を一晩寝かせること</strong>。翌朝に解ける問題が驚くほど多くある。2000 題は逃げない。</p>
+
+<h3 class="sec">記号の約束</h3>
+<table class="sym">
+  <tr><td class="k">$\langle\cdot,\cdot\rangle,\ \|\cdot\|,\ \|\cdot\|_{*}$</td><td>内積、ノルム（断りがなければ Euclid）、双対ノルム</td></tr>
+  <tr><td class="k">$\operatorname{int},\ \operatorname{ri},\ \operatorname{cl},\ \operatorname{conv},\ \operatorname{cone}$</td><td>内部、相対内部、閉包、凸包、錐包</td></tr>
+  <tr><td class="k">$\iota_{C},\ \sigma_{C},\ d_{C},\ P_{C}$</td><td>指示関数（$C$ 上 $0$、外で $+\infty$）、支持関数、距離関数、射影</td></tr>
+  <tr><td class="k">$T_{C}(x),\ N_{C}(x),\ K^{*},\ K^{\circ}$</td><td>接錐、法錐、双対錐 $\{y:\langle y,x\rangle\ge0\ \forall x\in K\}$、極錐 $-K^{*}$</td></tr>
+  <tr><td class="k">$f^{*},\ \partial f,\ \partial_{\varepsilon}f,\ \partial_{C}f$</td><td>Fenchel 共役、（凸・極限）劣微分、$\varepsilon$-劣微分、Clarke 劣微分</td></tr>
+  <tr><td class="k">$\operatorname{prox}_{f},\ e_{\lambda}f,\ D_{h}$</td><td>近接写像、Moreau 包、Bregman 距離</td></tr>
+  <tr><td class="k">$L$-平滑、$\mu$-強凸、$\kappa$</td><td>$\nabla f$ が $L$-Lipschitz、$f-\frac\mu2\|x\|^{2}$ が凸、条件数 $\kappa=L/\mu$</td></tr>
+  <tr><td class="k">$\mathbb{S}^{n},\ \mathbb{S}^{n}_{+},\ X\succeq0$</td><td>対称行列、半正定値錐、半正定値</td></tr>
+  <tr><td class="k">$\mathcal{L}^{n},\ \mathcal{COP}_{n},\ \mathcal{CP}_{n}$</td><td>二次錐、共正値錐、完全正値錐</td></tr>
+  <tr><td class="k">$\Delta_{n}$</td><td>単体 $\{x\ge0:\sum x_{i}=1\}$</td></tr>
+  <tr><td class="k">LICQ, MFCQ, KKT</td><td>一次独立制約想定、Mangasarian–Fromovitz 制約想定、Karush–Kuhn–Tucker 条件</td></tr>
+  <tr><td class="k">$W_{p},\ D(\cdot\Vert\cdot)$</td><td>Wasserstein 距離、相対エントロピー（Kullback–Leibler）</td></tr>
+  <tr><td class="k">$O,\ \Omega,\ \Theta,\ \tilde O$</td><td>漸近的上界・下界・同位、対数因子を無視した $O$</td></tr>
+</table>
+
+<h2 class="plain">目次</h2>
+<!--TOC-->

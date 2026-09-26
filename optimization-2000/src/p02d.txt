@@ -6,16 +6,16 @@
 *4 最適値関数の微分（包絡線定理） {envelope}
 Fiacco の定理の仮定の下で $\nabla v(p_{0})=\nabla_{p}L(x^{*},\lambda^{*},\mu^{*},p_{0})$。右辺の摂動 $g(x)\le u$ の場合 $\nabla v(0)=-\lambda^{*}$ となることを確かめよ。
 
-*4 強相補性を欠く場合の方向微分可能性（Jittorntrum）
+*5 強相補性を欠く場合の方向微分可能性（Jittorntrum）
 LICQ と強二階十分条件の下で、解 $x(p)$ は $p$ について Lipschitz 連続かつ方向微分可能であり、方向微分は二次計画（臨界錐上）の一意解で与えられる。強相補性が破れると $x(p)$ が微分可能でない例を作れ。
 
-*4 Robinson の強正則性定理 {strong-reg}
+*5 Robinson の強正則性定理 {strong-reg}
 一般化方程式 $0\in F(x,p)+N_{C}(x)$ の解 $x^{*}$ が強正則（線形化の逆写像が一価 Lipschitz）ならば、$p$ の近傍で一価 Lipschitz な解写像 $x(p)$ が存在する。これが非線形計画の Fiacco 定理の一般化であり、LICQ＋強二階十分条件と同値であることを示せ。
 
 *4 凸計画の最適値関数の劣微分
 凸計画の摂動関数 $v(u)=\inf\{f(x): g(x)\le u\}$ は凸で、$\partial v(0)=-\Lambda$（KKT 乗数の集合）。Slater 条件が $0\in\operatorname{int}\operatorname{dom}v$ と同値であることを示し、$v$ の方向微分 $v'(0;u)=\max_{\lambda\in\Lambda}(-\lambda^{\top}u)$ を導け。
 
-*4 Danskin–Gauvin–Dubeau の最適値の方向微分
+*5 Danskin–Gauvin–Dubeau の最適値の方向微分
 非凸でも MFCQ の下、最適値関数は方向微分可能で $v'(p;d)=\min_{x\in S(p)}\max_{\lambda\in\Lambda(x)}\nabla_{p}L(x,\lambda,p)^{\top}d$。Gauvin–Dubeau の上下評価と一致を示せ。
 
 *4 線形計画の感度解析と範囲
@@ -30,16 +30,16 @@ $\min\frac{1}{2}x^{\top}Qx+(c+tq)^{\top}x$ s.t. $Ax\le b$（$Q\succ0$）の解 $
 *4 Lipschitz 安定性と Aubin 性質
 解写像 $S$ が $(p_{0},x^{*})$ で Aubin 性質（Lipschitz-like）をもつ $\iff$ Mordukhovich の余微分判定 $D^{*}S(p_{0}|x^{*})(0)=\{0\}$。非線形計画の KKT 写像で Aubin 性質と強正則性が同値であること（Dontchev–Rockafellar）を述べよ。
 
-*4 上 Lipschitz 性（Robinson の多面体写像の定理）
+*5 上 Lipschitz 性（Robinson の多面体写像の定理）
 グラフが有限個の多面体の和集合である集合値写像は、各点で局所上 Lipschitz である（Robinson 1981）。これから線形相補性問題の解集合の上 Lipschitz 安定性を導け。
 
-*4 Calmness と isolated calmness
+*5 Calmness と isolated calmness
 集合値写像 $S$ の calmness（$S(p)\cap U\subset S(p_{0})+L\|p-p_{0}\|B$）と isolated calmness を定義し、KKT 写像の isolated calmness が「二階十分条件＋SMFCQ」で保証されること（Dontchev–Rockafellar, Levy）を示せ。
 
-*4 解の Hölder 安定性
+*5 解の Hölder 安定性
 二階十分条件が成り立つが MFCQ しか成り立たない（乗数が一意でない）とき、解 $x(p)$ は Lipschitz とは限らず、Hölder 指数 $1/2$ の安定性 $\|x(p)-x^{*}\|=O(\|p-p_{0}\|^{1/2})$ が成り立つことを示し、指数が最良である例を作れ。
 
-*4 摂動の二階展開（Shapiro の最適値二階展開）
+*5 摂動の二階展開（Shapiro の最適値二階展開）
 正則な摂動の下で $v(p_{0}+td)=v(p_{0})+tv'(p_{0};d)+\frac{t^{2}}{2}v''+o(t^{2})$ となる二階の係数を、臨界方向上の補助 QP の最適値で表す公式を導け。
 
 *4 最適輸送の感度と Kantorovich ポテンシャル
@@ -54,7 +54,7 @@ LICQ の下で乗数写像 $x\mapsto\lambda(x)$ は $x^{*}$ の近傍で連続�
 *4 Weyl・Hoffman–Wielandt の摂動不等式
 対称行列 $A,B$ の固有値（降順）について $|\lambda_{i}(A)-\lambda_{i}(B)|\le\|A-B\|$、$\sum(\lambda_{i}(A)-\lambda_{i}(B))^{2}\le\|A-B\|_{F}^{2}$。後者を Birkhoff–von Neumann の定理と線形計画で証明せよ。
 
-*4 Davis–Kahan の $\sin\Theta$ 定理
+*5 Davis–Kahan の $\sin\Theta$ 定理
 対称行列 $A$ と摂動 $A+E$ の固有部分空間 $U,\tilde U$ について、固有値のギャップ $\delta$ に対し $\|\sin\Theta(U,\tilde U)\|\le\|E\|/\delta$。スペクトル法の一致性解析（PCA、スペクトルクラスタリング）への応用を述べよ。
 
 *5 非線形計画の安定性の完全特徴づけ（Klatte–Kummer, Dontchev–Rockafellar）
@@ -62,10 +62,10 @@ $C^{2}$ 非線形計画の KKT 写像について、強正則性 $\iff$ Aubin �
 
 =ch II-8　誤差限界と正則性
 
-*4 Łojasiewicz の不等式（距離版）
+*5 Łojasiewicz の不等式（距離版）
 コンパクト集合 $K$ 上の実解析関数 $f\ge0$ について、$\operatorname{dist}(x,f^{-1}(0))^{\alpha}\le Cf(x)$（$x\in K$）となる $\alpha,C>0$ が存在する。半代数的な場合を Tarski–Seidenberg の原理から導け。
 
-*4 凸二次不等式系の誤差限界（Luo–Luo, Wang–Pang）
+*5 凸二次不等式系の誤差限界（Luo–Luo, Wang–Pang）
 凸二次不等式系 $\{x: q_{i}(x)\le0\}$ には一般に Lipschitz 型の大域誤差限界が存在しないが、指数 $1/2$ の Hölder 型の局所誤差限界が成り立つ。一変数の例 $x^{2}\le0$ で指数 $1/2$ が最良であることを確かめよ。
 
 *4 凸不等式系の大域誤差限界（Robinson, Mangasarian）
@@ -80,10 +80,10 @@ $C^{2}$ 非線形計画の KKT 写像について、強正則性 $\iff$ Aubin �
 *4 計量正則性・Aubin 性質・線形開性の同値
 $F$ の $(\bar x,\bar y)$ における計量正則性、$F^{-1}$ の Aubin 性質、$F$ の線形率の開性が互いに同値で、定数が一致することを示せ。
 
-*4 Mordukhovich 判定
+*5 Mordukhovich 判定
 閉グラフの集合値写像 $F:\mathbb{R}^{n}\rightrightarrows\mathbb{R}^{m}$ が $(\bar x,\bar y)$ で計量正則 $\iff\ker D^{*}F(\bar x|\bar y)=\{0\}$、かつ正則性の率は $\|D^{*}F(\bar x|\bar y)^{-1}\|^{+}$ に等しい。極限法錐の計算を用いて証明せよ。
 
-*4 Hoffman 定数の計算困難性と特徴づけ
+*5 Hoffman 定数の計算困難性と特徴づけ
 Hoffman 定数 $\tau(A)=\max_{J}1/\sigma_{\min}^{+}(A_{J})$（$J$ は $A_{J}^{\top}$ の零空間が $\mathbb{R}^{|J|}_{+}$ と正の元でのみ交わる行部分集合）を導出し（Güler–Hoffman–Rothblum, Peña–Vera–Zuluaga）、この計算が一般に NP 困難であることを論ぜよ。
 
 *4 部分的平滑性と識別
@@ -92,22 +92,22 @@ Hoffman 定数 $\tau(A)=\max_{J}1/\sigma_{\min}^{+}(A_{J})$（$J$ は $A_{J}^{\t
 *4 線形正則性と交互射影の線形収束
 閉凸集合 $C_{1},\dots,C_{m}$ が有界線形正則（$\operatorname{dist}(x,\bigcap C_{i})\le\kappa\max_{i}\operatorname{dist}(x,C_{i})$）ならば、巡回射影は率 $1-1/(m\kappa^{2})$ 程度で線形収束する（Bauschke–Borwein）。
 
-*4 区分線形-二次関数の誤差限界（Li）
+*5 区分線形-二次関数の誤差限界（Li）
 凸な区分線形二次関数 $f$ について、最小値集合までの距離は $f(x)-f^{*}$ の平方根で抑えられる（局所的に、Li 1995）。これが LASSO・SVM に対する近接勾配法の線形収束の根拠となることを説明せよ（Luo–Tseng の誤差限界）。
 
-*4 Luo–Tseng の誤差限界と降下法の線形収束
+*5 Luo–Tseng の誤差限界と降下法の線形収束
 $f(x)=h(Ax)+\langle c,x\rangle+g(x)$（$h$ は強凸平滑、$g$ は多面体的）について、$\operatorname{dist}(x,S)\le\kappa\|x-\operatorname{prox}_{g}(x-\nabla f(x))\|$ が局所的に成り立つ。これを用いて近接勾配法・座標降下法の線形収束を導け。
 
-*4 KŁ 指数と収束率の対応（Attouch–Bolte）
+*5 KŁ 指数と収束率の対応（Attouch–Bolte）
 KŁ 不等式の指数 $\theta$ について、近接点法・近接勾配法の反復は $\theta=0$ なら有限回、$\theta\in(0,1/2]$ なら線形、$\theta\in(1/2,1)$ なら $O(k^{-(1-\theta)/(2\theta-1)})$ で収束する。証明を完成させよ。
 
-*4 KŁ 指数の計算規則（Li–Pong）
+*5 KŁ 指数の計算規則（Li–Pong）
 KŁ 指数 $1/2$ が、Moreau 包・分離和・Lagrangian などの演算で保存される規則を示し、LASSO・群 LASSO・ロジスティック回帰＋$\ell^{1}$ の目的関数が指数 $1/2$ をもつことを導け。
 
 *4 誤差限界と sharp minima の双対
 凸関数 $f$ の最小点集合 $S$ で鋭い最小（$f-f^{*}\ge\alpha d_{S}$）$\iff$ $0\in\operatorname{int}\partial f(x)$ を $S$ の相対内部で一様に（正確には $\alpha B\cap N_{S}(x)\subset\partial f(x)$）。Burke–Ferris の弱鋭い最小の理論を述べよ。
 
-*4 部分空間正則性と半正定値計画の誤差限界（Sturm）
+*5 部分空間正則性と半正定値計画の誤差限界（Sturm）
 半正定値系 $\{X\succeq0: \mathcal{A}X=b\}$ の誤差限界は一般に Hölder 型で、指数は $2^{-d}$（$d$ は特異度＝面縮小の回数）で与えられる：$\operatorname{dist}(X,\mathcal{F})\le c\,\epsilon^{2^{-d}}$。$d=1$ の場合を示し、指数が最良である例を作れ。
 
 *4 変分不等式の誤差限界（Pang）

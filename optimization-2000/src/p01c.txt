@@ -15,7 +15,7 @@ $C^{2}$ 関数 $f$ が開凸集合上で凸 $\iff\nabla^{2}f\succeq0$。$\nabla^
 *4 $L$-平滑凸関数の基本不等式 {smooth}
 $f$ が凸で $\nabla f$ が $L$-Lipschitz ならば、(a) $f(y)\le f(x)+\langle\nabla f(x),y-x\rangle+\frac{L}{2}\|y-x\|^{2}$、(b) $f(y)\ge f(x)+\langle\nabla f(x),y-x\rangle+\frac{1}{2L}\|\nabla f(x)-\nabla f(y)\|^{2}$、(c) $\nabla f$ は $1/L$-共強圧的。(a)〜(c) が凸性の下で同値であることを示せ。
 
-*4 強凸かつ平滑な関数の補間不等式
+*5 強凸かつ平滑な関数の補間不等式
 $f$ が $\mu$-強凸かつ $L$-平滑ならば $\langle\nabla f(x)-\nabla f(y),x-y\rangle\ge\frac{\mu L}{\mu+L}\|x-y\|^{2}+\frac{1}{\mu+L}\|\nabla f(x)-\nabla f(y)\|^{2}$。さらに有限点のデータ $\{(x_{i},g_{i},f_{i})\}$ がこのクラスの関数で補間可能であるための必要十分条件（Taylor–Hendrickx–Glineur）を述べ証明せよ。
 
 *4 凸関数の合成規則
@@ -39,19 +39,19 @@ $f\,\square\,g(x)=\inf_{y}\{f(y)+g(x-y)\}$ は凸で $\operatorname{epi}(f\squar
 *4 準凸関数と擬凸関数
 準凸（下位集合が凸）と擬凸（$\langle\nabla f(x),y-x\rangle\ge0\Rightarrow f(y)\ge f(x)$）の関係を整理せよ。微分可能な準凸関数の停留点は最小点とは限らないが、擬凸関数では最小点であることを示し、分数計画 $\frac{c^{\top}x+\alpha}{d^{\top}x+\beta}$ が擬線形であることを示せ。
 
-*4 凸関数の最大化と端点原理
+*5 凸関数の最大化と端点原理
 閉凸関数をコンパクト凸集合上で最大化すると、最大値は端点で達成される。多面体上の凸最大化が NP 困難になりうること（二次形式 $\max\sum x_{i}^{2}$ over $\{Ax\le b\}$）を議論せよ。
 
 *4 対数凹性と閉包性
 $f,g$ が対数凹ならば $fg$ と $f*g$ は対数凹だが、$f+g$ は一般に対数凹でない。正規分布の累積分布関数 $\Phi$ と $1-\Phi$ が対数凹であることを示せ。
 
-*4 行列関数の凸性（Löwner–Heinz）
+*5 行列関数の凸性（Löwner–Heinz）
 $0\le p\le1$ で $t\mapsto t^{p}$ は作用素単調、$1\le p\le2$ で作用素凸である。$p>2$ では作用素凸でない反例を $2\times2$ 行列で作れ。$t\mapsto\log t$ の作用素凹性も示せ。
 
 *5 Lieb の凹性定理
 $0\le t\le1$ と固定した $K$ に対し、$(A,B)\mapsto\operatorname{tr}K^{*}A^{t}KB^{1-t}$ は正定値行列の組について結合凹である。Ando の証明（テンソル積と作用素凹性）を完成させ、量子相対エントロピーの結合凸性を系として導け。
 
-*4 凸関数のスペクトル関数（Davis–Lewis）
+*5 凸関数のスペクトル関数（Davis–Lewis）
 対称凸関数 $\phi:\mathbb{R}^{n}\to\mathbb{R}$ から作ったスペクトル関数 $F(X)=\phi(\lambda(X))$ は $\mathbb{S}^{n}$ 上の凸関数で、$F^{*}(Y)=\phi^{*}(\lambda(Y))$。von Neumann のトレース不等式 $\operatorname{tr}XY\le\lambda(X)^{\top}\lambda(Y)$ を証明して用いよ。
 
 *4 Ky Fan の最大原理
@@ -74,7 +74,7 @@ $f^{*}(y)=\sup_{x}\{\langle x,y\rangle-f(x)\}$ は常に閉凸で、Fenchel–Yo
 *4 強凸性と平滑性の双対 {dual-smooth}
 閉真凸関数 $f$ が $\mu$-強凸 $\iff f^{*}$ が微分可能で $\nabla f^{*}$ が $1/\mu$-Lipschitz。有限次元の証明を与え、Hilbert 空間でも成り立つことを確かめよ。
 
-*4 Legendre 変換（本質的平滑・本質的狭義凸）
+*5 Legendre 変換（本質的平滑・本質的狭義凸）
 閉真凸関数 $f$ が Legendre 型（本質的に平滑かつ本質的に狭義凸）$\iff f^{*}$ が Legendre 型であり、このとき $\nabla f:\operatorname{int}\operatorname{dom}f\to\operatorname{int}\operatorname{dom}f^{*}$ は位相同型で逆写像が $\nabla f^{*}$ である（Rockafellar の定理 26.5）。
 
 *4 共役の演算規則
@@ -104,13 +104,13 @@ $f(X)=-\log\det X$（$X\succ0$）の共役は $f^{*}(Y)=-\log\det(-Y)-n$（$Y\pr
 *4 Toland–Singer の双対（DC 双対）
 $g,h$ を閉真凸関数とすると $\inf_{x}\{g(x)-h(x)\}=\inf_{y}\{h^{*}(y)-g^{*}(y)\}$。この等式に制約想定が不要であることを示し、DC アルゴリズムの双対的解釈を述べよ。
 
-*4 Brøndsted–Rockafellar の定理
+*5 Brøndsted–Rockafellar の定理
 Banach 空間の閉真凸関数 $f$ と $x_{0}\in\operatorname{dom}f$, $x_{0}^{*}\in\partial_{\varepsilon}f(x_{0})$ に対し、任意の $\lambda>0$ で $\|x-x_{0}\|\le\varepsilon/\lambda$, $\|x^{*}-x_{0}^{*}\|\le\lambda$ なる $x^{*}\in\partial f(x)$ が存在する。特に $\partial f$ の定義域は $\operatorname{dom}f$ で稠密。Ekeland の変分原理から導け。
 
 *4 $\varepsilon$-劣微分の構造
 閉真凸関数の $\varepsilon$-劣微分 $\partial_{\varepsilon}f(x)=\{y: f(z)\ge f(x)+\langle y,z-x\rangle-\varepsilon\}$ は $\varepsilon>0$ で $\operatorname{dom}f$ 上至る所空でない閉凸集合で、$x\mapsto\partial_{\varepsilon}f(x)$ は内部で Hausdorff 連続（Lipschitz）である。$\partial_{\varepsilon}(f+g)\subset\bigcup_{\varepsilon_{1}+\varepsilon_{2}=\varepsilon}(\partial_{\varepsilon_{1}}f+\partial_{\varepsilon_{2}}g)$ を示せ（Hiriart-Urruty の公式）。
 
-*4 共役の連続性とエピ収束（Wijsman）
+*5 共役の連続性とエピ収束（Wijsman）
 $\mathbb{R}^{n}$ の閉真凸関数列について $f_{k}\to f$（エピ収束）$\iff f_{k}^{*}\to f^{*}$（エピ収束）。Moreau 包の各点収束による特徴づけ（Attouch）を用いて証明せよ。
 
 *5 Legendre 変換の凸解析的一意性（Artstein-Avidan–Milman）

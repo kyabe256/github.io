@@ -9,13 +9,13 @@ $\mathcal{L}^{n}=\{(x,t)\in\mathbb{R}^{n-1}\times\mathbb{R}:\|x\|\le t\}$ は自
 *4 二次錐表現可能な関数の演算
 二次錐表現可能（SOCr）な集合・関数が、共通部分・直積・線形像・逆像・和・透視・最大値で閉じていることを示し、$x^{p/q}$（有理指数）、$\|x\|_{p}$（有理 $p$）、幾何平均 $(\prod x_{i})^{1/n}$ が SOCr であることを構成的に示せ（Ben-Tal–Nemirovski）。
 
-*4 幾何平均の二次錐表現と表現サイズ
+*5 幾何平均の二次錐表現と表現サイズ
 $(x_{1}\cdots x_{2^{k}})^{1/2^{k}}\ge t$ が $2^{k}-1$ 個の回転二次錐制約で表現できることを示し、表現サイズの下界を論ぜよ。
 
-*4 Ben-Tal–Nemirovski の多面体近似
+*5 Ben-Tal–Nemirovski の多面体近似
 二次錐 $\mathcal{L}^{3}$ は、$O(\log(1/\varepsilon))$ 個の変数と制約をもつ多面体の射影で $\varepsilon$ 近似できる（Ben-Tal–Nemirovski 2001）。構成を与え、$\mathcal{L}^{n}$ に対するサイズ $O(n\log(1/\varepsilon))$ を導け。
 
-*4 Glineur の近似の最適性
+*5 Glineur の近似の最適性
 二次錐の多面体近似に必要な制約の数の下界 $\Omega(\log(1/\varepsilon))$ を示し、Ben-Tal–Nemirovski の構成が最適であることを論ぜよ。
 
 *4 二次錐計画の応用：ロバスト最小二乗
@@ -42,16 +42,16 @@ SOCP の非退化性・狭義相補性を Jordan 代数的に定義し（Alizade
 *4 相対エントロピー計画と SAGE 証明書（Chandrasekaran–Shah）
 signomial（$\sum c_{i}e^{\langle\alpha_{i},x\rangle}$）の非負性の十分条件 SAGE（sums of AM/GM exponentials）が相対エントロピー計画で判定できることを示し、単一の負の係数をもつ場合に非負性と同値であることを証明せよ。
 
-*4 錐表現可能性の限界（Scheiderer の定理）
+*5 錐表現可能性の限界（Scheiderer の定理）
 すべての凸半代数集合がスペクトラヘドラル影であるわけではない（Scheiderer 2018：Helton–Nie 予想の否定）。主張を正確に述べ、正定値錐の「SOS の錐」の双対が反例となる仕組みを説明せよ。
 
-*4 半正定値錐は二次錐で表現できない（Fawzi 2019）
+*5 半正定値錐は二次錐で表現できない（Fawzi 2019）
 $\mathbb{S}^{3}_{+}$ は二次錐の直積の線形切断の射影として表現できない。錐ランク（second-order cone lift の最小サイズ）と Hadamard 積の議論を再構成せよ。
 
 *4 錐リフトと非負ランク・PSD ランク（Gouveia–Parrilo–Thomas）
 多面体 $P$ が $\mathbb{S}^{k}_{+}$ リフトをもつ $\iff$ スラック行列が PSD ランク $\le k$ の分解をもつ（Yannakakis の定理の PSD 版）。証明せよ。
 
-*4 PSD リフトの下界（Lee–Raghavendra–Steurer）
+*5 PSD リフトの下界（Lee–Raghavendra–Steurer）
 相関多面体（カット多面体）・TSP 多面体は多項式サイズの半正定値リフトをもたない（Lee–Raghavendra–Steurer 2015）。主張を述べ、SOS 次数下界との関係を説明せよ。
 
 *4 ロバスト二次制約の SDP 表現
@@ -86,7 +86,7 @@ $\min\lambda_{\max}(A(x))$ の最適性条件を劣微分で導き、最適点�
 *4 行列ノルム最小化と SDP
 スペクトルノルム $\min\|A(x)\|_{2}$、核ノルム $\min\|A(x)\|_{*}$ がともに SDP で表現できることを示し、核ノルムの SDP 表現 $\|X\|_{*}=\min\{\frac12(\operatorname{tr}W_{1}+\operatorname{tr}W_{2}):\begin{pmatrix}W_{1}&X\\X^{\top}&W_{2}\end{pmatrix}\succeq0\}$ を証明せよ。
 
-*4 センサーネットワークの位置推定の SDP 緩和（Biswas–Ye, So–Ye）
+*5 センサーネットワークの位置推定の SDP 緩和（Biswas–Ye, So–Ye）
 距離情報からの位置推定の SDP 緩和が、グラフが「一意に局所化可能（universally rigid）」なら厳密であることを示せ（So–Ye 2007）。
 
 *4 剛性理論と Connelly の応力行列
@@ -98,7 +98,7 @@ $\min\lambda_{\max}(A(x))$ の最適性条件を劣微分で導き、最適点�
 *4 Z2 同期と SDP の厳密性（Abbe–Bandeira–Hall）
 確率的ブロックモデル（2 コミュニティ）の SDP 緩和が、$\frac{(\sqrt a-\sqrt b)^{2}}{2}>1$（$p=a\log n/n$, $q=b\log n/n$）で高確率で正確回復を達成し、これが情報理論的閾値に一致することを証明せよ（双対証明書の構成）。
 
-*4 最大カット以外のカット問題：最大二分割（Frieze–Jerrum）
+*5 最大カット以外のカット問題：最大二分割（Frieze–Jerrum）
 最大二分割の SDP 緩和とランダム超平面の修正ラウンディングで $0.651$ 近似を得る方法を述べ、近似率の解析の骨格を示せ。
 
 *4 Kalman フィルタ・LQR の SDP 表現
@@ -110,10 +110,10 @@ $\dot x=Ax+Bu$ が状態フィードバック $u=Kx$ で安定化可能 $\iff$ L
 *4 $H_{\infty}$ ノルムの LMI 特徴づけ（有界実補題）
 $\|G\|_{\infty}<\gamma$ $\iff$ $P\succ0$ で $\begin{pmatrix}A^{\top}P+PA & PB & C^{\top}\\ B^{\top}P & -\gamma I & D^{\top}\\ C & D & -\gamma I\end{pmatrix}\prec0$。KYP の補題から導け。
 
-*4 静的出力フィードバックの非凸性
+*5 静的出力フィードバックの非凸性
 静的出力フィードバック安定化の問題は BMI（双線形行列不等式）となり一般に NP 困難である（Blondel–Tsitsiklis）。主張を述べ、凸内側近似の方法を論ぜよ。
 
-*4 SDP による多項式の最小固有値と量子情報
+*5 SDP による多項式の最小固有値と量子情報
 エンタングルメント判定（分離可能状態の集合への所属）が NP 困難であること（Gurvits）と、Doherty–Parrilo–Spedalieri の SDP 階層（対称拡張）による判定を述べよ。
 
 *4 量子相関と NPA 階層（Navascués–Pironio–Acín）

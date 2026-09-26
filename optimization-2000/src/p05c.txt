@@ -12,7 +12,7 @@ $\nu$-自己共役障壁 $F$ と線形目的 $c$ について、$t_{+}=(1+\frac{
 *4 普遍障壁の存在（Nesterov–Nemirovski, Bubeck–Eldan, Chewi）
 $\mathbb{R}^{n}$ の任意の凸体は $O(n)$-自己共役障壁をもつ。Nesterov–Nemirovski の普遍障壁 $F(x)=\log|K^{\circ}_{x}|$（極体積）の $O(n)$ 性を述べ、Bubeck–Eldan のエントロピー障壁が $\nu=n(1+o(1))$、Chewi の結果で $\nu=n$ となることを述べよ。
 
-*4 Güler のハイパボリック障壁
+*5 Güler のハイパボリック障壁
 双曲多項式 $p$（次数 $d$）について $-\log p$ は双曲錐上の $d$-対数斉次自己共役障壁である（Güler 1997）。証明の骨格を与えよ。
 
 *4 対数斉次障壁と共役障壁
@@ -39,7 +39,7 @@ SDP の短ステップ主双対パス追跡法（NT 方向）が $O(\sqrt n\log(
 *4 Renegar の錐計画の条件数理論
 錐計画のデータの実行不能性への距離 $\rho(d)$ と条件数 $C(d)$ を定義し、内点法の反復数が $O(\sqrt\nu\log(\nu C(d)/\varepsilon))$ であること、および $C(d)$ が解のサイズや Slater 点の深さを制御することを示せ。
 
-*4 内点法の一次法化（Primal-dual hybrid と IPM の比較）
+*5 内点法の一次法化（Primal-dual hybrid と IPM の比較）
 大規模錐計画で内点法の各反復のコスト（Newton 系の $O(m^{3}+m^{2}n^{2})$）と一次法（SCS、PDLP）の反復コストを比較し、PDLP（再スタート付き PDHG）が LP で線形収束すること（Applegate–Lubin–Hinder）の主張を述べよ。
 
 *4 内点法と CG：不正確な Newton 系
