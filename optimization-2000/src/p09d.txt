@@ -1,0 +1,123 @@
+=ch IX-7　ロバスト最適化
+
+*4 ロバスト線形計画の扱いやすい再定式化（Ben-Tal–Nemirovski, Soyster） {rlp}
+不確実性集合 $\mathcal{U}$ に対するロバスト制約 $a^{\top}x\le b\ (\forall a\in\mathcal{U})$ は、$\mathcal{U}$ が多面体なら LP、楕円なら SOCP、スペクトラヘドロンなら SDP の制約で厳密に表現できる。LP 双対と錐双対を用いて示せ。
+
+*4 Bertsimas–Sim の予算付き不確実性
+各係数が $[\bar a_{j}-\hat a_{j},\bar a_{j}+\hat a_{j}]$ に入り、同時に偏る係数の数が $\Gamma$ 以下の不確実性集合に対するロバスト LP が、変数を $O(n)$ 増やした LP に等価であることを示し、制約違反確率の上界 $\exp(-\Gamma^{2}/(2n))$ を導け。
+
+*4 ロバスト最適化と確率制約の関係
+不確実性集合 $\mathcal{U}=\{\bar a+P u:\|u\|\le\Omega\}$ のロバスト制約が、$a$ が独立な有界対称確率変数のとき違反確率 $\le\exp(-\Omega^{2}/2)$ を保証することを示せ（Ben-Tal–Nemirovski）。
+
+*4 ロバスト二次計画・SOCP の困難性
+楕円体の共通部分による不確実性をもつロバスト SOCP は一般に NP 困難である（Ben-Tal–Nemirovski）ことを述べ、単一楕円体の場合の S-補題による SDP 表現を示せ。
+
+*4 調整可能ロバスト最適化とアフィン決定則（Ben-Tal–Goryashko–Guslitzer–Nemirovski）
+二段階ロバスト LP の調整可能ロバスト対応問題は NP 困難だが、第二段変数を不確実性のアフィン関数に制限すると扱いやすくなることを示し、アフィン決定則が最適となる場合（Bertsimas–Iancu–Parrilo の一次元の多段階問題）を述べよ。
+
+*4 アフィン決定則の最適性ギャップ（Bertsimas–Goyal）
+対称な不確実性集合の二段階問題で、静的ロバスト解の最適性ギャップが集合の対称性で抑えられることを示せ。
+
+*4 ロバスト最適化の正則化としての解釈（Xu–Caramanis–Mannor）
+特徴量の摂動に対するロバスト回帰 $\min_{\beta}\max_{\Delta\in\mathcal{U}}\|y-(X+\Delta)\beta\|$ が、適切な $\mathcal{U}$ で LASSO や SVM の正則化と等価であることを示せ。
+
+*4 ロバスト最適化と凸解析：支持関数による表現
+ロバスト制約 $\max_{a\in\mathcal{U}}f(a,x)\le0$（$f$ が $a$ について凹）が、Fenchel 双対により $f$ の部分共役と $\mathcal{U}$ の支持関数を用いた有限次元の凸制約に書けることを示せ（Ben-Tal–den Hertog–Vial）。
+
+*4 ロバスト MDP（Iyengar, Nilim–El Ghaoui）
+遷移確率が $(s,a)$-矩形の不確実性集合に属するロバスト MDP のロバスト Bellman 作用素が縮小写像であり、ロバスト価値反復が収束することを示せ。矩形性がない場合に NP 困難となることを述べよ（Wiesemann–Kuhn–Rustem）。
+
+*4 ロバスト最適化の確率的保証：データ駆動の不確実性集合（Bertsimas–Gupta–Kallus）
+仮説検定から構成した不確実性集合が、ロバスト解の違反確率を $\alpha$ 以下に保証することを示せ。
+
+*4 ロバスト二値最適化と組合せ問題
+コスト不確実性をもつロバスト組合せ最適化（最短路、全域木）で、予算付き不確実性集合なら元の問題を $n+1$ 回解くことでロバスト解が得られること（Bertsimas–Sim 2003）を示せ。
+
+*4 minimax 後悔最適化
+区間不確実性をもつ LP の minimax 後悔問題の複雑さ（区間データの最短路の minimax 後悔が NP 困難、Averbakh–Lebedev）を述べ、2 近似アルゴリズム（中点シナリオ）を示せ（Kasperski–Zieliński）。
+
+*4 ロバスト制御と $\mu$ 解析
+構造化不確実性に対するロバスト安定性の判定（構造化特異値 $\mu$）が NP 困難であること（Braatz ら）を述べ、$D$-スケーリングによる上界の SDP 計算を示せ。
+
+*4 ロバスト凸最適化の近似可能性（Ben-Tal–Nemirovski の近似 S-補題）
+楕円体の共通部分 $\{u: u^{\top}Q_{k}u\le1\}$ による不確実性集合で、ロバスト二次制約の SDP 近似が $O(\sqrt{\log K})$ 倍の保守性で済むことを示せ（近似 S-補題、Nemirovski–Roos–Terlaky）。
+
+*4 Nemirovski–Roos–Terlaky の定理
+$\max\{x^{\top}Ax:x^{\top}Q_{k}x\le1\}$（$Q_{k}\succeq0$）の SDP 緩和の値は真の値の $O(\log K)$ 倍以内である。確率的ラウンディングで証明せよ。
+
+*4 ロバスト最適化の幾何：不確実性集合の凸包
+ロバスト線形制約は不確実性集合をその閉凸包に置き換えても変わらないことを示し、制約ごとの（row-wise）不確実性への分解が保守的でない理由を説明せよ。
+
+*4 ロバストポートフォリオ最適化（Goldfarb–Iyengar）
+期待リターンと共分散の不確実性をもつ平均分散ポートフォリオ問題が、楕円体・因子モデル不確実性の下で SOCP として解けることを示せ。
+
+*4 適応的ロバスト最適化の有限適応性（Bertsimas–Caramanis, Hanasusanto–Kuhn–Wiesemann）
+$K$ 個の候補の中から事後に一つを選ぶ $K$-適応性の定式化を与え、$K\to\infty$ で完全適応解に近づくこと、$K$ 固定でも NP 困難であることを述べよ。
+
+*5 ロバスト最適化の計算量の完全な図式（Ben-Tal–El Ghaoui–Nemirovski）
+不確実性集合の型（多面体・楕円体・楕円体の共通部分・スペクトラヘドロン）と制約の型（LP・SOCP・SDP）の組合せごとに、ロバスト対応問題が扱いやすいか（多項式時間）NP 困難かを分類し、各困難性の証明（例えば楕円体の共通部分を不確実性とするロバスト LP 以外のケースでの帰着）の骨格を示せ。
+
+*5 調整可能ロバスト LP の NP 困難性と近似不可能性
+多面体不確実性集合の二段階調整可能ロバスト LP が NP 困難である（Guslitser, Ben-Tal ら）ことを 3 分割問題からの帰着で示し、アフィン決定則の最悪ケースの最適性ギャップが $\Theta(\sqrt m)$ でありうること（Bertsimas–Goyal）を述べよ。
+
+=ch IX-8　分布ロバスト最適化とリスク尺度
+
+*4 モーメント不確実性集合の DRO（Delage–Ye）
+平均と共分散が楕円的な信頼領域にある分布族上の最悪期待値 $\sup_{P}E_{P}[\ell(x,\xi)]$ が、$\ell$ が区分アフィン凸なら SDP で計算できることを示せ（Delage–Ye 2010）。
+
+*4 Scarf の在庫問題（最悪分布）
+平均 $\mu$・分散 $\sigma^{2}$ のみが既知の需要に対する newsvendor 問題の最悪期待コストと最適発注量の閉形式（Scarf 1958）を導け。
+
+*4 Wasserstein DRO の性能保証（Mohajerin Esfahani–Kuhn） {wdro}
+経験分布の Wasserstein 球の半径 $\rho_{N}(\beta)$ を測度集中（Fournier–Guillin）から選ぶと、真の分布が確率 $1-\beta$ で球に入り、DRO の最適値が真の期待コストの上界となる（有限標本保証）ことを示せ。
+
+*4 Wasserstein DRO と正則化の等価性（Gao–Chen–Kleywegt, Shafieezadeh-Abadeh ら）
+Lipschitz 損失に対する Wasserstein-1 DRO が、経験リスク＋$\rho\cdot\operatorname{Lip}(\ell)$ に等しく、線形モデルではノルム正則化と等価であることを示せ。
+
+*4 最悪分布の構造（Gao–Kleywegt）
+Wasserstein DRO の最悪分布が、各標本点を高々一つの点に動かすか二点に分ける（$N+1$ 点の台）ことで得られることを示せ。
+
+*4 $\phi$-ダイバージェンス DRO と分散正則化（Namkoong–Duchi）
+$\chi^{2}$ 球の DRO が、経験リスク＋$\sqrt{2\rho\operatorname{Var}/N}$ に漸近的に等しい（分散正則化）ことを示し、信頼区間の較正（経験尤度）との関係を述べよ。
+
+*4 経験尤度と DRO の統計的最適性（Duchi–Glynn–Namkoong）
+$\phi$-ダイバージェンス DRO の最適値が、経験尤度に基づく漸近的に正確な信頼上限を与えることを示せ。
+
+*4 コヒーレントリスク尺度の Kusuoka 表現
+法則不変なコヒーレントリスク尺度（非原子的確率空間）は $\rho(X)=\sup_{\mu\in\mathcal{M}}\int_{0}^{1}\operatorname{CVaR}_{\alpha}(X)d\mu(\alpha)$ と表される（Kusuoka 2001）。証明の骨格を与えよ。
+
+*4 スペクトルリスク尺度と歪みリスク（Acerbi）
+スペクトルリスク尺度 $\int_{0}^{1}\phi(p)F_{X}^{-1}(p)dp$（$\phi$ 非減少）がコヒーレントであることを示し、CVaR の混合として表せ。
+
+*4 凸リスク尺度の双対表現（Föllmer–Schied, Frittelli–Rosazza Gianin）
+凸リスク尺度は $\rho(X)=\sup_{Q}\{E_{Q}[-X]-\alpha(Q)\}$（$\alpha$ はペナルティ関数）と表される。エントロピー的リスク尺度で $\alpha(Q)=\frac1\theta D(Q\|P)$ となることを示せ。
+
+*4 VaR の非凸性と CVaR 最適化
+VaR が劣加法的でない（分散投資を罰する）例を作り、CVaR が VaR の最小の凸上界であることを示せ。
+
+*4 確率的支配制約（Dentcheva–Ruszczyński）
+二次確率的支配制約 $G(x)\succeq_{(2)}Y$ が $E[(\eta-G(x))_{+}]\le E[(\eta-Y)_{+}]$（$\forall\eta$）と同値であることを示し、その Lagrange 乗数が非減少凹効用関数として解釈できることを示せ。
+
+*4 DRO の Monge–Kantorovich 双対と最悪ケースの輸送
+一般の輸送コストの DRO $\sup\{E_{Q}\ell:\mathcal{T}_{c}(P,Q)\le\rho\}$ の双対（Blanchet–Murthy 2019）を証明せよ。
+
+*4 分布ロバストな確率制約（Wasserstein 球）
+Wasserstein 球上の確率制約 $\inf_{Q}Q(g(x,\xi)\le0)\ge1-\varepsilon$ の実行可能集合が、線形 $g$ の場合に混合整数錐計画で厳密に表現できること（Chen–Kuhn–Wiesemann, Xie）を述べよ。
+
+*4 モーメント DRO とガウス的最悪ケース（Popescu, El Ghaoui–Oks–Oustry）
+平均と共分散のみが既知の分布族上の最悪 CVaR が、閉形式 $\mu^{\top}x+\sqrt{\frac{\alpha}{1-\alpha}}\sqrt{x^{\top}\Sigma x}$ で与えられることを示せ。
+
+*4 最悪ケースの Chebyshev 限界と SDP
+$\sup\{\mathbb{P}(\xi\in C): E\xi=\mu, E\xi\xi^{\top}=\Sigma\}$ が $C$ の補集合が凸なら SDP（あるいは閉形式）で計算できることを示せ（Vandenberghe–Boyd–Comanor）。
+
+*4 ベイズ的ロバスト最適化と曖昧性回避（Gilboa–Schmeidler）
+maxmin 期待効用（多重事前分布）の公理的特徴づけ（Gilboa–Schmeidler 1989）を述べ、DRO との関係を論ぜよ。
+
+*4 DRO の一般化誤差と Rademacher 複雑度
+Wasserstein DRO の最適解の真のリスクが、経験 DRO 値＋$O(\sqrt{\text{complexity}/N})$ で抑えられることを示し、正則化との関係を論ぜよ（Lee–Raginsky）。
+
+*5 Kusuoka 表現の完全証明と法則不変性
+非原子的確率空間上の法則不変なコヒーレントリスク尺度の Kusuoka 表現を、Fatou 性・双対表現・法則不変性から完全に証明し、共単調加法性をもつ場合に単一の $\mu$（スペクトル表現）に帰着することを示せ。
+
+*5 Wasserstein DRO の強双対の完全証明（Gao–Kleywegt 2016）
+ポーランド空間上の一般の下半連続コストと上半連続損失に対し、Wasserstein DRO の強双対 $\sup_{Q:W_{c}(Q,P)\le\rho}E_{Q}\ell=\min_{\lambda\ge0}\{\lambda\rho+E_{P}[\sup_{\zeta}(\ell(\zeta)-\lambda c(\zeta,\xi))]\}$ を、経験分布に限らず一般の $P$ について証明せよ。

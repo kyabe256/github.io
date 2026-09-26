@@ -1,0 +1,123 @@
+=ch IX-9　マルコフ決定過程と強化学習の最適化
+
+*4 Bellman 作用素の縮小性と価値反復 {bellman}
+割引率 $\gamma<1$ の有限 MDP の Bellman 最適作用素 $T$ は $\ell^{\infty}$ で $\gamma$-縮小写像であり、価値反復は $\|V_{k}-V^{*}\|_{\infty}\le\gamma^{k}\|V_{0}-V^{*}\|_{\infty}$ で収束する。最適定常決定的方策の存在を導け。
+
+*4 方策反復の有限収束と単調性（Howard）
+方策反復は各ステップで価値を単調改善し、有限回（高々 $|A|^{|S|}$ 回）で最適方策に到達する。方策反復が価値関数空間での Newton 法であること（Puterman–Brumelle）を示せ。
+
+*4 MDP の線形計画定式化と双対（占有測度）
+割引 MDP は LP $\min\sum_{s}\mu_{0}(s)V(s)$ s.t. $V(s)\ge r(s,a)+\gamma\sum P(s'|s,a)V(s')$ で解け、双対変数が割引占有測度であることを示せ。制約付き MDP（Altman）の LP 解法を導け。
+
+*4 方策勾配定理（Sutton ら）
+パラメータ化方策 $\pi_{\theta}$ の目的関数 $J(\theta)=E[\sum\gamma^{t}r_{t}]$ の勾配が $\nabla J=\frac{1}{1-\gamma}E_{s\sim d^{\pi},a\sim\pi}[Q^{\pi}(s,a)\nabla\log\pi_{\theta}(a|s)]$ で与えられることを示せ。
+
+*4 方策勾配法の大域収束（Agarwal–Kakade–Lee–Mahajan）
+softmax パラメータ化の表形式 MDP で、方策勾配法は非凸にもかかわらず大域最適方策に収束する（勾配優越性：性能差補題と分布不一致係数）。$O(1/\varepsilon^{2})$ 程度の反復数の評価を与えよ。
+
+*4 性能差補題（Kakade–Langford）
+$V^{\pi'}(s_{0})-V^{\pi}(s_{0})=\frac{1}{1-\gamma}E_{s\sim d^{\pi'}_{s_{0}}}E_{a\sim\pi'}[A^{\pi}(s,a)]$。証明し、保守的方策反復（CPI）の単調改善保証を導け。
+
+*4 自然方策勾配の次元非依存の線形収束（Agarwal ら, Cen ら, Lan）
+softmax 表形式方策の自然方策勾配法（NPG）が、ステップ幅に応じて $O(\frac{1}{(1-\gamma)^{2}k})$、エントロピー正則化付きで線形収束することを示し、NPG が状態ごとの乗法重み更新（ミラー降下）であることを確かめよ。
+
+*4 方策ミラー降下（Lan 2022）
+方策空間でのミラー降下（KL 距離）が、ステップを増大させると線形収束することを示し、方策反復との関係を論ぜよ。
+
+*4 TRPO・PPO の単調改善保証（Schulman ら）
+KL 制約付き代理目的関数の最大化（TRPO）が性能の単調改善下界 $J(\pi')\ge L_{\pi}(\pi')-C\max_{s}\operatorname{KL}(\pi\|\pi')$ をもつことを示せ。
+
+*4 Q 学習の有限標本複雑度（Li ら, Wainwright）
+生成モデルの下で Q 学習の標本複雑度 $\tilde O(\frac{|S||A|}{(1-\gamma)^{4}\varepsilon^{2}})$ を示し、分散削減 Q 学習で最適な $\tilde O(\frac{|S||A|}{(1-\gamma)^{3}\varepsilon^{2}})$ に改善されること（Wainwright, Sidford ら）を述べよ。
+
+*4 MDP の標本複雑度の下界（Azar–Munos–Kappen）
+生成モデルの下で $\varepsilon$-最適 Q 関数を得るには $\Omega(\frac{|S||A|}{(1-\gamma)^{3}\varepsilon^{2}}\log\frac1\delta)$ 個の標本が必要であることを示せ。
+
+*4 UCRL2 とエピソード型 RL の後悔（Jaksch–Ortner–Auer）
+平均報酬 MDP の UCRL2 が後悔 $\tilde O(DS\sqrt{AT})$（$D$ は直径）を達成することを示し、下界 $\Omega(\sqrt{DSAT})$ を述べよ。
+
+*4 UCBVI と最適後悔（Azar–Osband–Munos）
+有限ホライズン $H$ のエピソード型 MDP で、UCBVI（Bernstein ボーナス）が後悔 $\tilde O(\sqrt{H^{2}SAT})$ を達成し、下界と一致することを示せ。
+
+*4 線形 MDP と LSVI-UCB（Jin–Yang–Wang–Jordan）
+特徴次元 $d$ の線形 MDP で、LSVI-UCB が後悔 $\tilde O(\sqrt{d^{3}H^{3}T})$ を達成することを示せ。
+
+*4 関数近似の下の RL の不可能性（Weisz–Amortila–Szepesvári, Wang–Foster–Kakade）
+最適 Q 関数が線形で実現可能でも、生成モデルの下で $\varepsilon$-最適方策を得るのに次元・ホライズンに指数的な標本が必要な場合があることを述べよ。
+
+*4 平均場ゲームと Nash 均衡の最適化的特徴づけ
+ポテンシャル型平均場ゲームの均衡が凸最適化問題（Benamou–Brenier 型）の最適性条件として得られることを述べよ（Lasry–Lions）。
+
+*4 線形二次レギュレータの方策勾配の大域収束（Fazel–Ge–Kakade–Mesbahi）
+LQR のコスト $C(K)$ は安定化ゲイン集合上で非凸だが勾配優越性をもち、方策勾配法・自然方策勾配法が大域最適ゲインに線形収束することを示せ。
+
+*4 オフライン RL と悲観主義（Jin–Yang–Wang, Rashidinejad ら）
+オフラインデータからの方策学習で、悲観的価値反復（LCB ボーナス）が単一方策集中係数 $C^{*}$ に依存する最適な標本複雑度を達成することを示せ。
+
+*5 方策勾配の大域収束の完全理論（Mei–Xiao–Szepesvári–Schuurmans）
+softmax 方策勾配（正確な勾配）が $O(1/t)$ で収束し、この率が改善できない（定数に最適方策の確率の下界が現れ、指数的に小さくなりうる）ことを示せ。エントロピー正則化で線形収束することを Łojasiewicz 型不等式で証明せよ。
+
+*5 生成モデル下の MDP の最適標本複雑度（Agarwal–Kakade–Yang, Li–Wei–Chi–Gu–Chen）
+モデルベース法（経験 MDP の計画）が、全範囲の $\varepsilon\in(0,\frac{1}{1-\gamma}]$ で最適な標本複雑度 $\tilde O(\frac{|S||A|}{(1-\gamma)^{3}\varepsilon^{2}})$ を達成すること（「バーンインなし」、Li ら 2020）を、分散を考慮した集中と leave-one-out 解析で証明せよ。
+
+=ch IX-10　学習理論と最適化の接点
+
+*4 経験リスク最小化の一様収束（Vapnik–Chervonenkis） {vc}
+二値仮説クラス $\mathcal{H}$ の VC 次元 $d$ について、$\sup_{h}|R(h)-\hat R_{n}(h)|\le C\sqrt{\frac{d+\log(1/\delta)}{n}}$ が確率 $1-\delta$ で成り立つ。対称化と Sauer–Shelah の補題で証明せよ。
+
+*4 Rademacher 複雑度による汎化誤差
+有界損失のクラスについて、$E\sup_{f}(R(f)-\hat R_{n}(f))\le2\mathfrak{R}_{n}(\mathcal{F})$、高確率版は McDiarmid の不等式で得られる。ノルム有界な線形予測子の Rademacher 複雑度 $\frac{BR}{\sqrt n}$ を計算せよ。
+
+*4 マージン理論と SVM・ブースティング（Bartlett, Schapire–Freund–Bartlett–Lee）
+マージン $\gamma$ で分類する予測子の汎化誤差が $\tilde O(\frac{BR}{\gamma\sqrt n})$ で抑えられることを示し、AdaBoost がマージンを大きくすることを示せ。
+
+*4 AdaBoost の訓練誤差（Freund–Schapire）
+弱学習器の誤差が $\frac12-\gamma_{t}$ のとき、AdaBoost の訓練誤差は $\exp(-2\sum\gamma_{t}^{2})$ 以下である。AdaBoost が指数損失の座標降下であることを示せ。
+
+*4 暗黙の正則化としての早期停止（Yao–Rosasco–Caponnetto）
+カーネル最小二乗に対する勾配降下の早期停止が、Tikhonov 正則化と同じ最適な汎化率を達成することを、スペクトルフィルタの観点から示せ。
+
+*4 補間と良性過学習（Bartlett–Long–Lugosi–Tsigler）
+過剰パラメータ化された線形回帰の最小ノルム補間解の超過リスクが、共分散行列の実効ランク $r_{k}(\Sigma)$ で特徴づけられ、良性過学習の条件を満たせば 0 に収束することを示せ。
+
+*4 二重降下（Belkin–Hsu–Ma–Mandal, Hastie–Montanari–Rosset–Tibshirani）
+ランダム特徴回帰の最小ノルム補間解のテスト誤差が、パラメータ数/標本数の比 $\gamma=1$ で発散し、$\gamma>1$ で再び減少すること（二重降下）を、ランダム行列理論（Marchenko–Pastur）で示せ。
+
+*4 Marchenko–Pastur 則
+$n\times p$ の i.i.d. 行列 $X$（分散 1）について、$p/n\to\gamma$ のとき $\frac1nX^{\top}X$ の経験スペクトル分布は Marchenko–Pastur 分布に収束する。Stieltjes 変換の自己無撞着方程式から導け。
+
+*4 ニューラル接核（Jacot–Gabriel–Hongler）
+幅無限大の極限で、勾配流による NN の出力の変化が固定されたニューラル接核（NTK）による核回帰に一致することを示し、NTK 領域（lazy training, Chizat–Oyallon–Bach）の条件を述べよ。
+
+*4 遅延学習と特徴学習の二分法
+初期化のスケールと幅によって、NN の学習が線形化（NTK）領域と平均場（特徴学習）領域に分かれることを示し、$\mu$P パラメータ化（Yang–Hu）の考え方を述べよ。
+
+*4 PAC-Bayes 境界（McAllester, Catoni）
+事前分布 $P$、事後分布 $Q$ について $E_{Q}R\le E_{Q}\hat R_{n}+\sqrt{\frac{\operatorname{KL}(Q\|P)+\log(2\sqrt n/\delta)}{2n}}$。Donsker–Varadhan の変分公式から証明し、平坦な最小点と汎化の関係を論ぜよ。
+
+*4 SGD の暗黙の正則化と平坦性（Keskar ら, Wu–Ma–E）
+SGD の雑音構造（Hessian に比例した共分散）が鋭い最小点から脱出させる（線形安定性の条件 $\lambda_{\max}\le2/\eta$）ことを示し、平坦な最小点への選好を論ぜよ。
+
+*4 ロジスティック回帰の勾配降下の方向収束（Soudry ら, Ji–Telgarsky）
+線形分離可能データで、勾配降下の方向 $w_{t}/\|w_{t}\|$ が最大マージン SVM 解に $O(\log\log t/\log t)$ で収束することを証明せよ。
+
+*4 均質ネットワークの暗黙のバイアス（Lyu–Li, Ji–Telgarsky）
+均質な NN（ReLU など）の勾配流が、分離可能データで正規化マージンを単調増加させ、方向が最大マージン問題の KKT 点に収束することを示せ。
+
+*4 行列分解の暗黙の正則化の予想と反例（Gunasekar ら, Razin–Cohen）
+深層行列分解の勾配流が最小核ノルム解に収束するという予想（Gunasekar ら 2017）を述べ、Razin–Cohen（2020）による、暗黙の正則化がノルムでは記述できない（階数を最小化する方向）反例を述べよ。
+
+*4 カーネル法の最適化と汎化（Representer 定理）
+RKHS 上の正則化経験リスク最小化の解が $\sum\alpha_{i}k(x_{i},\cdot)$ の形であること（Kimeldorf–Wahba, Schölkopf–Herbrich–Smola）を示し、有限次元の凸最適化への帰着を述べよ。
+
+*4 ランダム特徴と核近似（Rahimi–Recht）
+シフト不変カーネルのランダム Fourier 特徴による近似誤差 $\sup|k(x,y)-z(x)^{\top}z(y)|\le\varepsilon$ に必要な特徴数 $O(\frac{d}{\varepsilon^{2}}\log\frac{1}{\varepsilon})$ を示せ（Bochner の定理を用いて）。
+
+*4 最適化と汎化のトレードオフ（Bottou–Bousquet）
+近似誤差・推定誤差・最適化誤差の分解を示し、大規模学習では SGD のような「最適化が不正確な」方法が計算予算の下で最良になりうることを論ぜよ。
+
+*5 ニューラル接核の大域収束と汎化の完全な証明（Arora–Du–Hu–Li–Wang）
+二層 ReLU ネットの過剰パラメータ化の下で、勾配降下の解が NTK 回帰の解に近づき、汎化誤差がデータ依存の量 $\sqrt{y^{\top}(H^{\infty})^{-1}y/n}$ で抑えられることを証明せよ。
+
+*5 平均場 Langevin 動力学の大域収束（Mei–Montanari–Nguyen, Chizat, Nitanda–Wu–Suzuki）
+エントロピー正則化付きの二層ネットの平均場極限（McKean–Vlasov 型の Langevin 動力学）が、対数 Sobolev 不等式の下で自由エネルギーの大域最小に指数収束することを示せ。

@@ -1,0 +1,123 @@
+=ch VIII-5　共正値計画と完全正値行列
+
+*4 共正値錐と完全正値錐の双対性 {cop}
+共正値錐 $\mathcal{COP}_{n}=\{A: x^{\top}Ax\ge0\ \forall x\ge0\}$ の双対錐は完全正値錐 $\mathcal{CP}_{n}=\operatorname{conv}\{xx^{\top}:x\ge0\}$ である。両者が閉凸錐で、$\mathcal{CP}_{n}\subset\mathbb{S}_{+}\cap\mathcal{N}\subset\mathbb{S}_{+}+\mathcal{N}\subset\mathcal{COP}_{n}$ であることを示せ。
+
+*4 共正値性判定の co-NP 完全性（Murty–Kabadi）
+行列の共正値性判定は co-NP 完全である。部分和問題からの帰着で示せ。
+
+*4 完全正値性判定の NP 困難性（Dickinson–Gijben）
+行列が完全正値かどうかの判定は NP 困難である（Dickinson–Gijben 2014）。証明の骨格を与え、完全正値ランク（cp-rank）の上界 $\binom{n+1}{2}-4$（$n\ge5$, Shaked-Monderer–Berman–Bomze–Jarre–Schachinger）を述べよ。
+
+*4 Horn 行列と $\mathcal{COP}_{5}$ の極値
+Horn 行列 $H$（$5\times5$、巡回的に $1,-1,1,1,-1$）が共正値だが $\mathbb{S}_{+}+\mathcal{N}$ に属さないことを示し、$\mathcal{COP}_{5}$ の極値線であることを確かめよ。
+
+*4 標準二次計画のコポジティブ再定式化（Bomze–de Klerk）
+単体上の二次計画 $\min\{x^{\top}Qx: x\in\Delta_{n}\}$ は $\max\{\lambda: Q-\lambda ee^{\top}\in\mathcal{COP}_{n}\}$ に等しく、双対は $\min\{\langle Q,X\rangle:\langle ee^{\top},X\rangle=1,\ X\in\mathcal{CP}_{n}\}$。証明せよ。
+
+*4 安定集合数のコポジティブ表現（de Klerk–Pasechnik）
+グラフの安定数 $\alpha(G)$ は $\min\{\lambda:\lambda(I+A_{G})-J\in\mathcal{COP}_{n}\}$ に等しい。Motzkin–Straus の定理から導け。
+
+*4 de Klerk–Pasechnik の LP・SDP 階層
+コポジティブ錐の内側近似階層 $\mathcal{C}^{r}_{n}$（Pólya 型 LP）と $\mathcal{K}^{r}_{n}$（Parrilo の SDP）を安定数の問題に適用し、$r\ge\alpha(G)^{2}$ で厳密になることを示せ（de Klerk–Pasechnik 2002）。
+
+*4 Burer の完全正値再定式化の証明
+二値変数を含む非凸 QP $\min\{x^{\top}Qx+2c^{\top}x: Ax=b,\ x\ge0,\ x_{j}\in\{0,1\}\ (j\in B)\}$ の完全正値再定式化の厳密性（Burer 2009）を、実行可能集合の凸包の Minkowski 分解から証明せよ。
+
+*4 コポジティブ双対ギャップの不在と強双対性
+Burer の再定式化の双対（コポジティブ計画）との間で強双対性が成り立つ条件を述べ、双対ギャップが生じうる例を作れ。
+
+*4 共正値行列の Cottle–Habetler–Lemke の特徴づけ
+対称行列が狭義共正値 $\iff$ すべての主部分行列が「正の固有ベクトルに対応する負の固有値をもたない」（Kaplan の判定）。証明せよ。
+
+*4 共正値錐の面と極値的元の構造
+$\mathcal{COP}_{n}$ の零点集合 $V_{A}=\{x\in\Delta:x^{\top}Ax=0\}$ による極値的元の特徴づけ（Dickinson–Dür–Gijben–Hildebrand）を述べ、$n=5$ の極値的元の完全分類（Hildebrand）を述べよ。
+
+*4 完全正値行列の分解と非負行列分解
+$X\in\mathcal{CP}_{n}$ の分解 $X=BB^{\top}$（$B\ge0$）の計算が、対称非負行列分解として定式化されることを示し、cp-rank と非負ランクの関係を述べよ。
+
+*4 共正値計画による確率論的最適化（分布ロバスト）
+平均と共分散が与えられた非負確率変数の最悪期待値問題が、コポジティブ計画として厳密に定式化できること（Natarajan–Teo–Zheng）を示せ。
+
+*4 非凸 QCQP の SDP+RLT 緩和
+非凸 QCQP の SDP 緩和に RLT（再定式化線形化）制約を加えた緩和が、二重非負（$\mathbb{S}_{+}\cap\mathcal{N}$）緩和に対応することを示し、単体上の問題で強さを比較せよ。
+
+*4 一般化 Motzkin–Straus とハイパーグラフのクリーク
+3 一様ハイパーグラフのクリーク数に対する Motzkin–Straus 型の定理（Rota Bulò–Pelillo）を述べ、単体上の 3 次多項式最適化の困難性を論ぜよ。
+
+*4 コポジティブ錐の外側近似（Yıldırım）
+単体の分割による共正値錐の多面体外側近似の収束を示し、標準二次計画の下界計算への応用を述べよ。
+
+*4 レプリケータ動力学と標準二次計画
+レプリケータ方程式 $\dot x_{i}=x_{i}((Qx)_{i}-x^{\top}Qx)$ の漸近安定点が標準二次計画 $\max x^{\top}Qx$ の厳密局所最大点（ESS）に対応することを示せ（Bomze）。
+
+*4 二次錐と共正値錐の関係（Lorentz 錐の共正値性）
+行列 $A$ が $\mathcal{L}^{n}$ 上で共正値（$x^{\top}Ax\ge0$ for $x\in\mathcal{L}^{n}$）$\iff$ $A-\mu J\succeq0$（$J=\operatorname{diag}(-1,\dots,-1,1)$）なる $\mu\ge0$ が存在する（Loewy–Schneider）。S-補題から導け。
+
+*5 コポジティブ計画の複雑さと階層の収束の完全理論
+de Klerk–Pasechnik 階層の収束率（標準二次計画での誤差 $O(1/r)$、Bomze–de Klerk）と、SDP 階層（Parrilo）が $\alpha(G)$ に有限段で到達するかという問題（de Klerk–Pasechnik の予想、Gvozdenović–Laurent の部分的結果）を述べ、証明の骨格を与えよ。
+
+*5 cp-rank の上界の最良性（Bomze–Dickinson–Still）
+$n\times n$ 完全正値行列の cp-rank の最大値 $p_{n}$ について、$p_{n}\le\binom{n+1}{2}-4$（$n\ge5$）を示せ。さらに $p_{n}=\lfloor n^{2}/4\rfloor$ という Drew–Johnson–Loewy 予想が $n=7,\dots,11$ で偽である（$p_{n}>\lfloor n^{2}/4\rfloor$ となる行列が存在する）ことを述べ、反例の構成原理を説明せよ。
+
+=ch VIII-6　組合せ最適化の SDP 緩和と近似アルゴリズム
+
+*5 Goemans–Williamson の MAX-CUT 近似 {gw}
+MAX-CUT の SDP 緩和の最適解のベクトル $v_{i}$ をランダム超平面で分割すると、期待カット値は SDP 値の $\alpha_{GW}=\min_{0<\theta\le\pi}\frac{2\theta}{\pi(1-\cos\theta)}\approx0.878$ 倍以上である。証明せよ（Goemans–Williamson 1995）。
+
+*4 Nesterov の $2/\pi$ 定理
+$\max\{x^{\top}Qx: x\in\{\pm1\}^{n}\}$ で $Q\succeq0$ のとき、SDP 緩和とランダム超平面ラウンディングで $2/\pi$ 近似が得られる（Nesterov 1998）。$\arcsin$ 恒等式 $E[\operatorname{sgn}(\langle g,u\rangle)\operatorname{sgn}(\langle g,v\rangle)]=\frac2\pi\arcsin\langle u,v\rangle$ と $\arcsin(X)-X\succeq0$ から証明せよ。
+
+*4 Grothendieck の不等式と SDP {groth}
+$\max\sum A_{ij}\langle u_{i},v_{j}\rangle$（単位ベクトル）$\le K_{G}\max\sum A_{ij}x_{i}y_{j}$（$\pm1$）が成り立つ（$K_{G}\le\frac{\pi}{2\ln(1+\sqrt2)}$, Krivine）。Krivine の証明を完成させ、カットノルムの近似（Alon–Naor）への応用を述べよ。
+
+*4 Krivine の上界の非最良性（Braverman–Makarychev–Makarychev–Naor）
+Grothendieck 定数 $K_{G}$ は Krivine の上界 $\frac{\pi}{2\ln(1+\sqrt2)}$ より真に小さい（BMMN 2011）。主張と証明の構成原理（非対称な超平面ラウンディング）を述べよ。
+
+*4 MAX-2SAT・MAX-DICUT の SDP 近似（Feige–Goemans, Lewin–Livnat–Zwick）
+MAX-2SAT に対する SDP 緩和と回転ラウンディングで約 $0.940$ 近似を得る方法を述べよ。
+
+*4 MAX-3-CUT と Frieze–Jerrum
+MAX-$k$-CUT の SDP 緩和とランダムベクトルによる $k$ 分割ラウンディングで $\alpha_{k}>1-1/k$ の近似が得られることを示せ（Frieze–Jerrum）。
+
+*4 グラフ彩色の SDP 近似（Karger–Motwani–Sudan）
+3 彩色可能なグラフを $\tilde O(n^{1/4})$ 色（あるいは $\tilde O(\Delta^{1/3})$ 色）で多項式時間に彩色できることを、ベクトル彩色の SDP とランダム超平面・ランダムベクトルのラウンディングで示せ。
+
+*4 疎カットの ARV アルゴリズム
+最疎カット問題に対し、$\ell_{2}^{2}$ 距離の三角不等式を加えた SDP 緩和から $O(\sqrt{\log n})$ 近似を得る（Arora–Rao–Vazirani 2004）。構造定理（well-separated sets の存在）の主張を述べ、証明の骨格を与えよ。
+
+*4 Leighton–Rao と多品種流の LP 緩和
+最疎カットの LP 緩和（多品種流）の整数性ギャップが $\Theta(\log n)$ であること（Leighton–Rao）を、Bourgain の埋め込み定理（$\ell_{1}$ への $O(\log n)$ 歪み埋め込み）から導け（Linial–London–Rabinovich）。
+
+*4 Bourgain の埋め込み定理
+任意の $n$ 点距離空間は $\ell_{1}$（実は $\ell_{2}$）に歪み $O(\log n)$ で埋め込める（Bourgain 1985）。Fréchet 埋め込みとランダム部分集合の構成で証明せよ。
+
+*4 Unique Games 予想と MAX-CUT の困難性
+Unique Games 予想の下で、MAX-CUT を $\alpha_{GW}+\varepsilon$ 倍で近似するのは NP 困難である（Khot–Kindler–Mossel–O'Donnell）。主張と、証明の鍵となる「多数決が最も安定」定理（Mossel–O'Donnell–Oleszkiewicz）を述べよ。
+
+*4 Majority is Stablest（Mossel–O'Donnell–Oleszkiewicz）
+低影響度のブール関数のうち、雑音安定性を最大化するのは（漸近的に）多数決関数である。不変原理（Gauss 空間への移行）と Borell の雑音安定性定理から証明の骨格を与えよ。
+
+*4 Borell の等周定理（Gauss 空間の雑音安定性）
+Gauss 空間で測度 $1/2$ の集合のうち、相関 $\rho$ の雑音安定性を最大化するのは半空間である（Borell 1985）。Gauss 等周不等式との関係を述べ、証明の骨格を与えよ。
+
+*4 Lovász テータとグラフの安定数の近似不可能性
+安定数は $n^{1-\varepsilon}$ 倍で近似するのが NP 困難である（Håstad, Zuckerman）ことを述べ、$\vartheta$ 関数が完全グラフで厳密になるにもかかわらず一般には大きなギャップ（Feige の $n/2^{O(\sqrt{\log n})}$）をもつことを示せ。
+
+*4 SDP ラウンディングの一般理論（Raghavendra の最適アルゴリズム）
+任意の CSP について、基本 SDP 緩和と「ラウンディングスキームの有限探索」で UGC 下の最適近似率が得られること（Raghavendra 2008）を述べ、SDP の整数性ギャップが困難性の証拠に変換される（dictatorship test）仕組みを説明せよ。
+
+*4 相関クラスタリングと SDP（Charikar–Guruswami–Wirth）
+相関クラスタリング（重み付き）の最大化版の SDP 緩和による $0.766$ 近似を述べよ（Swamy）。
+
+*4 二次割当問題の SDP 緩和（Zhao–Karisch–Rendl–Wolkowicz）
+二次割当問題の持ち上げ SDP 緩和を定義し、置換行列の集合の凸包の SDP 外側近似としての強さを論ぜよ。
+
+*4 SDP による多重分類とベクトル計画（Kleinberg–Tardos のメトリックラベリング）
+メトリックラベリング問題の LP 緩和と、一様距離の場合の 2 近似、一般の場合の $O(\log k)$ 近似を示せ（Kleinberg–Tardos）。
+
+*5 Arora–Rao–Vazirani の構造定理の証明
+単位球面上の $\ell_{2}^{2}$ 距離（負型距離）をみたす $n$ 点で、分散が大きいものについて、ランダムな方向への射影の両端に $\Omega(n)$ 点ずつの集合で相互距離 $\Omega(1/\sqrt{\log n})$ のものが高確率で存在することを、測度集中と「チェイニング」の議論で証明せよ。
+
+*5 MAX-CUT の SDP 整数性ギャップの最良性（Feige–Schechtman）
+MAX-CUT の SDP 緩和の整数性ギャップが正確に $\alpha_{GW}$ であることを、球面上の点のグラフ（高次元の角度 $\theta^{*}$ に近い辺）で示し、Borell の等周定理を用いた最大カットの上界評価を完成させよ。

@@ -1,0 +1,126 @@
+=part 第 IX 部　確率的・オンライン・ロバスト最適化 | STOCHASTIC, ONLINE AND ROBUST OPTIMIZATION &mdash; 1601 to 1800
+データは雑音を含み、未来は不確実で、敵は適応してくる。確率近似と SGD、確率的凸最適化の計算量、分散削減、オンライン凸最適化と後悔、バンディット、確率計画、ロバスト最適化と分布ロバスト最適化、強化学習、そして学習理論と最適化の接点 ― 不確実性の下での最適化を、期待値・高確率・最悪ケースの三つの言葉で証明する。
+
+=ch IX-1　確率近似と SGD の古典理論
+
+*4 Robbins–Monro の定理 {rm}
+$M(\theta)=E[Y|\theta]$ の根 $\theta^{*}$ を求める $\theta_{n+1}=\theta_{n}-a_{n}Y_{n}$ は、$\sum a_{n}=\infty$, $\sum a_{n}^{2}<\infty$、$(\theta-\theta^{*})M(\theta)>0$、分散の増大条件の下で $\theta_{n}\to\theta^{*}$ a.s. となる。Robbins–Siegmund の概優マルチンゲール収束定理から証明せよ。
+
+*4 Robbins–Siegmund の定理
+非負確率変数列が $E[V_{n+1}|\mathcal{F}_{n}]\le(1+\alpha_{n})V_{n}+\beta_{n}-\gamma_{n}$（$\sum\alpha_{n}<\infty$, $\sum\beta_{n}<\infty$）をみたせば、$V_{n}$ は a.s. 収束し $\sum\gamma_{n}<\infty$ a.s.。証明せよ。
+
+*4 確率近似の ODE 法（Ljung, Kushner–Clark, Benaïm） {ode}
+$\theta_{n+1}=\theta_{n}+a_{n}(h(\theta_{n})+M_{n+1})$（$M$ はマルチンゲール差）の補間軌道が、$\dot\theta=h(\theta)$ の漸近的擬軌道となり、極限集合が内部連鎖推移的（ICT）集合であることを示せ（Benaïm 1996）。
+
+*4 Polyak–Ruppert 平均化の漸近最適性 {pr}
+ステップ $a_{n}=n^{-\alpha}$（$1/2<\alpha<1$）の SGD の平均 $\bar\theta_{n}$ は、$\sqrt n(\bar\theta_{n}-\theta^{*})\Rightarrow N(0,H^{-1}\Sigma H^{-1})$（$H=\nabla^{2}f(\theta^{*})$）をみたし、これが Cramér–Rao の意味で最適である（Polyak–Juditsky 1992）。証明せよ。
+
+*4 SGD の漸近正規性（Chung, Fabian）
+ステップ $a_{n}=a/n$ の SGD について $\sqrt n(\theta_{n}-\theta^{*})$ の漸近正規性を示し、漸近共分散が $a$ に依存して最適値が $a=H^{-1}$（行列ステップ）で達成されることを示せ。
+
+*4 確率的勾配流の弱近似（Li–Tai–E）
+ステップ $\eta$ の SGD が、確率微分方程式 $dX=-\nabla f(X)dt+\sqrt{\eta\Sigma(X)}dW$ に $O(\eta)$ の弱精度で近似されることを示せ（確率的修正方程式）。
+
+*4 定ステップ SGD の定常分布と偏り
+強凸二次関数に対する定ステップ SGD は定常分布に幾何的に収束し、その平均の偏りは $0$、分散は $O(\eta)$ であることを示せ（Dieuleveut–Durmus–Bach）。非二次関数では平均に $O(\eta)$ の偏りが生じ、Richardson–Romberg 外挿で除けることを示せ。
+
+*4 確率近似の二時間スケール（Borkar）
+二つの時間スケールの確率近似 $x_{n+1}=x_{n}+a_{n}(h(x_{n},y_{n})+M)$, $y_{n+1}=y_{n}+b_{n}(g(x_{n},y_{n})+N)$（$b_{n}/a_{n}\to0$）が、速い系の平衡 $\lambda(y)$ に沿った遅い ODE $\dot y=g(\lambda(y),y)$ で解析できることを示せ（Borkar 1997）。
+
+*4 確率近似の微分包含版（Benaïm–Hofbauer–Sorin）
+$\theta_{n+1}\in\theta_{n}+a_{n}(H(\theta_{n})+M_{n+1})$（$H$ は上半連続な集合値写像）の極限集合が微分包含 $\dot\theta\in H(\theta)$ の ICT 集合であることを示せ。
+
+*4 確率近似の罠の回避（Pemantle, Brandière–Duflo）
+雑音が十分に非退化なら、確率近似は不安定平衡点（ODE の線形化が正の固有値をもつ点）に確率 0 でしか収束しない（Pemantle 1990）。証明の骨格を与えよ。
+
+*4 確率近似の収束率と中心極限定理（Kushner–Yin）
+確率近似の正規化誤差 $(\theta_{n}-\theta^{*})/\sqrt{a_{n}}$ が Ornstein–Uhlenbeck 過程の定常分布に弱収束することを示し、漸近共分散が Lyapunov 方程式の解で与えられることを導け。
+
+*4 Kiefer–Wolfowitz の収束率と最適ステップ
+Kiefer–Wolfowitz 法の平均二乗誤差の最良率 $O(n^{-2/3})$ を、偏りと分散のトレードオフから導き、高次差分で $O(n^{-1+\varepsilon})$ に近づけることを示せ（Fabian）。
+
+*4 TD 学習の収束（Tsitsiklis–Van Roy）
+線形関数近似の TD(0) が、エルゴード的 Markov 連鎖の下で射影 Bellman 方程式の一意解に a.s. 収束することを、ODE 法と負定値性 $\langle\theta,A\theta\rangle<0$ から示せ。
+
+*4 Q 学習の収束（Watkins–Dayan, Tsitsiklis）
+表形式の Q 学習が、すべての状態行動対を無限回訪問しステップが Robbins–Monro 条件をみたせば最適 Q 関数に a.s. 収束することを、非同期確率近似と縮小性から示せ。
+
+*4 確率近似の非漸近誤差評価（Srikant–Ying, Chen–Maguluri–Shakkottai–Shanmugam）
+線形確率近似（Markov 雑音）の平均二乗誤差の有限時間評価 $O(\frac{\tau_{\mathrm{mix}}\log n}{n})$ を示し、TD 学習の有限標本解析に応用せよ。
+
+*4 確率的ミラー降下と ODE 法（Mertikopoulos–Staudigl）
+確率的ミラー降下の反復の ODE 近似と、ゲームにおける Nash 均衡への収束（変分安定な均衡の場合）を論ぜよ。
+
+*4 SGD と Langevin の比較：スケーリング極限
+ステップ $\eta$・バッチ $B$ の SGD の雑音の大きさが $\eta/B$ に比例することを示し、学習率とバッチサイズの線形スケーリング則（Goyal ら）の理論的根拠を論ぜよ。
+
+*4 確率近似の Lyapunov 関数法（Kushner, Métivier–Priouret）
+確率近似の a.s. 収束を、ODE の Lyapunov 関数 $V$ に対する確率的減少 $E[V(\theta_{n+1})|\mathcal{F}_{n}]\le V(\theta_{n})-a_{n}c(\theta_{n})+O(a_{n}^{2})$ から導く一般定理を述べ証明せよ。
+
+*5 Benaïm の漸近的擬軌道の理論の完全形
+ODE の流れ $\Phi$ に対する漸近的擬軌道の極限集合が内部連鎖推移的であり、逆に任意の ICT 集合が何らかの漸近的擬軌道の極限集合となることを示せ（Benaïm–Hirsch）。Lyapunov 関数が存在する場合に極限集合が平衡点の連結集合に含まれることを導け。
+
+*5 Polyak–Juditsky の平均化の非漸近版（Moulines–Bach, Bach–Moulines）
+最小二乗回帰に対する定ステップ SGD の平均反復が、強凸性の仮定なしに $O(\frac{\sigma^{2}d}{n}+\frac{\|\theta_{0}-\theta^{*}\|^{2}}{\eta n})$ の予測誤差を達成すること（Bach–Moulines 2013）を証明せよ。
+
+=ch IX-2　確率的凸最適化の計算量
+
+*4 SGD の凸 Lipschitz での $O(1/\sqrt T)$ {sgd}
+$E\|g_{t}\|^{2}\le G^{2}$ の確率的劣勾配による SGD は、平均反復で $Ef(\bar x_{T})-f^{*}\le\frac{GR}{\sqrt T}$。証明し、高確率版（Azuma）を導け。
+
+*4 強凸確率最適化の $O(1/T)$ と平均化（Rakhlin–Shamir–Sridharan）
+$\mu$-強凸関数の SGD（ステップ $\frac{1}{\mu t}$）は、単純平均だと $O(\frac{\log T}{\mu T})$ だが、後半平均（suffix averaging）や重み付き平均で $O(\frac{G^{2}}{\mu T})$ を達成することを示せ。
+
+*4 確率的凸最適化の下界（Nemirovski–Yudin, Agarwal ら）
+確率的一次オラクル下での凸 Lipschitz 最適化の下界 $\Omega(\frac{GR}{\sqrt T})$、強凸での $\Omega(\frac{G^{2}}{\mu T})$ を、Fano の不等式あるいは Le Cam の二点法で示せ。
+
+*4 確率的凸最適化の平滑項と雑音項の分離（Lan の AC-SA）
+$L$-平滑で分散 $\sigma^{2}$ の確率的勾配について、加速確率近似は $O(\frac{LR^{2}}{T^{2}}+\frac{\sigma R}{\sqrt T})$ を達成し、両項とも最適であることを示せ。
+
+*4 ミニバッチ SGD と線形加速の限界
+バッチサイズ $B$ のミニバッチ SGD は $B\lesssim\sigma^{2}/(\text{勾配ノルム}^{2})$ の範囲で反復数を $1/B$ に減らせるが、それを超えると改善しないことを示せ（臨界バッチサイズ）。
+
+*4 経験リスク最小化と確率的最適化の一様収束（Shalev-Shwartz–Shamir–Srebro–Sridharan）
+確率的凸最適化では、学習可能性が一様収束なしに成り立ちうる（ERM は失敗しうるが安定なアルゴリズムは学習する）ことを示す例を構成せよ（Shalev-Shwartz ら 2009）。
+
+*4 アルゴリズムの安定性と汎化（Bousquet–Elisseeff, Hardt–Recht–Singer）
+一様安定性 $\beta$ のアルゴリズムの汎化誤差は $\beta$ で抑えられる。凸 Lipschitz 平滑損失に対する SGD（$T$ ステップ、ステップ $\eta$）の一様安定性が $O(\frac{\eta TG^{2}}{n})$ であることを示せ。
+
+*4 SGD の一回通過の最適性（統計的最適性）
+確率的凸最適化で、一回通過の SGD（各標本を一度だけ使う）が母集団リスクに対して最適な $O(1/\sqrt n)$ を達成し、ERM の近似解法として多回通過するよりも有利な場合があることを論ぜよ。
+
+*4 高確率収束と重い裾の雑音（Gorbunov–Danilova–Gasnikov, Nguyen ら）
+雑音が有限分散のみ（重い裾）の場合、クリッピング付き SGD が $\log(1/\delta)$ の依存性で高確率収束することを示せ。
+
+*4 確率的鞍点問題の確率的ミラー・プロックス（Juditsky–Nemirovski–Tauvel）
+確率的な単調変分不等式に対する確率的ミラー・プロックスが $O(\frac{LD^{2}}{T}+\frac{\sigma D}{\sqrt T})$ を達成し最適であることを示せ。
+
+*4 ランダム座標と確率的勾配の統一（任意サンプリング、Gower–Loizou–Qian–Sailanbayev–Shulgin–Richtárik）
+期待平滑性（expected smoothness）の枠組みで、任意の標本抽出方式の SGD の収束率を統一的に導け。
+
+*4 補間の下での SGD の線形収束（Ma–Bassily–Belkin, Vaswani–Bach–Schmidt）
+過剰パラメータ化モデルで補間（すべての $f_{i}$ が共通の最小点をもつ）が成り立つとき、強凸なら定ステップ SGD が線形収束することを示し、臨界バッチサイズを導け。
+
+*4 確率的 Frank–Wolfe と射影不要の確率最適化
+確率的条件付き勾配法が、バッチサイズを増やすか運動量推定量を用いれば $O(1/\varepsilon^{2})$ の確率的勾配と $O(1/\varepsilon)$ の線形最小化で $\varepsilon$-解を得ることを示せ（Mokhtari–Hassani–Karbasi）。
+
+*4 確率的二階法の限界（Arjevani–Carmon–Duchi–Foster–Sekhari–Sridharan）
+確率的な Hessian ベクトル積を用いても、非凸確率最適化の $\varepsilon$-停留点の計算に $\Omega(\varepsilon^{-3})$ 回の問い合わせが必要であることを述べ、確率的勾配のみの $\Omega(\varepsilon^{-4})$ との比較を論ぜよ。
+
+*4 非凸確率最適化の下界（Arjevani–Carmon–Duchi–Foster–Srebro–Woodworth）
+平均二乗平滑性を仮定しない場合、確率的一次法は $\varepsilon$-停留点に $\Omega(\varepsilon^{-4})$ 回を要し、平均二乗平滑性があれば $\Omega(\varepsilon^{-3})$ で、それぞれ SGD と SPIDER/STORM で達成される。
+
+*4 STORM（Cutkosky–Orabona）
+再帰的運動量推定量 $d_{t}=\nabla f(x_{t};\xi_{t})+(1-a)(d_{t-1}-\nabla f(x_{t-1};\xi_{t}))$ による STORM が、平均二乗平滑性の下で $\tilde O(\varepsilon^{-3})$ を大バッチなしに達成することを示せ。
+
+*4 確率的近接点法と暗黙的 SGD の安定性（Toulis–Airoldi, Asi–Duchi）
+暗黙的更新 $x_{t+1}=\operatorname{argmin}\{f(x;\xi_{t})+\frac{1}{2\eta_{t}}\|x-x_{t}\|^{2}\}$ がステップ幅の誤設定に対して頑健であり（発散しない）、明示的 SGD と同じ最適率を広いステップ幅の範囲で達成することを示せ。
+
+*4 確率的構成最適化（Wang–Fang–Liu）
+$\min f(E[g(x;\xi)])$ 型の問題に対する二時間スケールの確率的合成勾配法（SCGD）の収束率 $O(T^{-1/4})$ 程度を示し、改善された方法（Ghadimi–Ruszczyński–Wang）を述べよ。
+
+*5 確率的凸最適化の情報ベース計算量の完全理論
+凸 Lipschitz・強凸・平滑の各クラスに対し、確率的一次オラクルの下界を情報理論的に（Fano の方法で）証明し、上界（SGD、AC-SA、後半平均 SGD）との一致を示せ。次元依存性がないことの意味を論ぜよ。
+
+*5 SGD の安定性に基づく汎化の最適性（Feldman–Vondrák, Bousquet–Klochkov–Zhivotovskiy）
+一様安定なアルゴリズムの汎化誤差の高確率評価を $O(\beta\log n+\frac{1}{\sqrt n})$ に改善する（Feldman–Vondrák, Bousquet ら）議論の骨格を示し、非平滑凸損失では SGD の安定性が $\Theta(\eta\sqrt T)$ となり異なる振る舞いをすること（Bassily–Feldman–Guzmán–Talwar）を述べよ。

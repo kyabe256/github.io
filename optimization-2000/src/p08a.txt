@@ -1,0 +1,126 @@
+=part 第 VIII 部　錐計画・多項式最適化・凸緩和 | CONIC, POLYNOMIAL AND RELAXATION &mdash; 1401 to 1600
+難しい問題を凸な問題で挟み撃ちにする。二次錐と半正定値錐による表現、多項式の非負性と二乗和、Positivstellensatz とモーメント階層、共正値計画、組合せ最適化の SDP 緩和と近似アルゴリズム、圧縮センシングと低ランク回復、非凸問題の良い景観、凸代数幾何 ― 「緩和が厳密になるのはいつか」を問い続ける。
+
+=ch VIII-1　二次錐計画と錐表現可能性
+
+*4 二次錐の基本性質 {soc}
+$\mathcal{L}^{n}=\{(x,t)\in\mathbb{R}^{n-1}\times\mathbb{R}:\|x\|\le t\}$ は自己双対な閉凸錐で、$\mathcal{L}^{n}=\{(x,t): \begin{pmatrix}tI & x\\ x^{\top} & t\end{pmatrix}\succeq0\}$（Schur 補元）。回転二次錐 $\{(x,y,z):\|x\|^{2}\le2yz,\ y,z\ge0\}$ が二次錐の線形像であることを示せ。
+
+*4 二次錐表現可能な関数の演算
+二次錐表現可能（SOCr）な集合・関数が、共通部分・直積・線形像・逆像・和・透視・最大値で閉じていることを示し、$x^{p/q}$（有理指数）、$\|x\|_{p}$（有理 $p$）、幾何平均 $(\prod x_{i})^{1/n}$ が SOCr であることを構成的に示せ（Ben-Tal–Nemirovski）。
+
+*4 幾何平均の二次錐表現と表現サイズ
+$(x_{1}\cdots x_{2^{k}})^{1/2^{k}}\ge t$ が $2^{k}-1$ 個の回転二次錐制約で表現できることを示し、表現サイズの下界を論ぜよ。
+
+*4 Ben-Tal–Nemirovski の多面体近似
+二次錐 $\mathcal{L}^{3}$ は、$O(\log(1/\varepsilon))$ 個の変数と制約をもつ多面体の射影で $\varepsilon$ 近似できる（Ben-Tal–Nemirovski 2001）。構成を与え、$\mathcal{L}^{n}$ に対するサイズ $O(n\log(1/\varepsilon))$ を導け。
+
+*4 Glineur の近似の最適性
+二次錐の多面体近似に必要な制約の数の下界 $\Omega(\log(1/\varepsilon))$ を示し、Ben-Tal–Nemirovski の構成が最適であることを論ぜよ。
+
+*4 二次錐計画の応用：ロバスト最小二乗
+不確実性をもつ最小二乗 $\min_{x}\max_{\|\Delta\|\le\rho}\|(A+\Delta)x-b\|$ が $\min\|Ax-b\|+\rho\|x\|$ に等しく SOCP で解けることを示せ（El Ghaoui–Lebret）。
+
+*4 施設配置と Fermat–Weber の SOCP
+$\min\sum w_{i}\|x-a_{i}\|$ を SOCP で定式化し、内点法による $O(\sqrt m\log(1/\varepsilon))$ の計算量を示せ。
+
+*4 構造最適化（トラス設計）の SOCP
+弾性トラスのコンプライアンス最小化問題が SOCP（あるいは SDP）として定式化されることを示し、双対問題の力学的意味を述べよ（Ben-Tal–Bendsøe, Lobo–Vandenberghe–Boyd–Lebret）。
+
+*4 二次錐の Jordan 代数とスペクトル分解
+$\mathcal{L}^{n}$ の Jordan 積 $x\circ y$ の下で、各元が $x=\lambda_{1}c_{1}+\lambda_{2}c_{2}$ とスペクトル分解され、$\mathcal{L}^{n}$ への射影が $\max(\lambda_{i},0)c_{i}$ の和で与えられることを示せ。
+
+*4 二次錐相補性問題と半平滑性
+二次錐相補性問題の Fischer–Burmeister 関数（Jordan 代数版）が強半平滑であることを示し、半平滑 Newton 法の局所二次収束を導け（Chen–Sun–Tseng, Hayashi–Yamashita–Fukushima）。
+
+*4 SOCP の双対と退化
+SOCP の非退化性・狭義相補性を Jordan 代数的に定義し（Alizadeh–Goldfarb）、SOCP の主双対最適解が一意となる条件を示せ。
+
+*4 指数錐計画の応用：ロジスティック回帰と幾何計画
+ロジスティック回帰の最尤推定・エントロピー最大化・幾何計画・相対エントロピー計画がすべて指数錐計画であることを示し、双対を導け。
+
+*4 相対エントロピー計画と SAGE 証明書（Chandrasekaran–Shah）
+signomial（$\sum c_{i}e^{\langle\alpha_{i},x\rangle}$）の非負性の十分条件 SAGE（sums of AM/GM exponentials）が相対エントロピー計画で判定できることを示し、単一の負の係数をもつ場合に非負性と同値であることを証明せよ。
+
+*4 錐表現可能性の限界（Scheiderer の定理）
+すべての凸半代数集合がスペクトラヘドラル影であるわけではない（Scheiderer 2018：Helton–Nie 予想の否定）。主張を正確に述べ、正定値錐の「SOS の錐」の双対が反例となる仕組みを説明せよ。
+
+*4 半正定値錐は二次錐で表現できない（Fawzi 2019）
+$\mathbb{S}^{3}_{+}$ は二次錐の直積の線形切断の射影として表現できない。錐ランク（second-order cone lift の最小サイズ）と Hadamard 積の議論を再構成せよ。
+
+*4 錐リフトと非負ランク・PSD ランク（Gouveia–Parrilo–Thomas）
+多面体 $P$ が $\mathbb{S}^{k}_{+}$ リフトをもつ $\iff$ スラック行列が PSD ランク $\le k$ の分解をもつ（Yannakakis の定理の PSD 版）。証明せよ。
+
+*4 PSD リフトの下界（Lee–Raghavendra–Steurer）
+相関多面体（カット多面体）・TSP 多面体は多項式サイズの半正定値リフトをもたない（Lee–Raghavendra–Steurer 2015）。主張を述べ、SOS 次数下界との関係を説明せよ。
+
+*4 ロバスト二次制約の SDP 表現
+楕円不確実性集合に対するロバスト二次制約 $\|A(u)x+b(u)\|\le c(u)^{\top}x+d(u)$ が、S-補題により SDP 制約で厳密に表現できることを示せ（Ben-Tal–Nemirovski）。
+
+*5 二次錐計画の内点法の多項式性（Nesterov–Todd, Monteiro–Tsuchiya）
+SOCP の主双対パス追跡法（NT 方向）が $O(\sqrt r\log(1/\varepsilon))$ 反復（$r$ は錐の個数）で収束することを、Jordan 代数のスペクトル性質から証明せよ。
+
+*5 錐リフトの計算量理論の完全な形（Fawzi–Gouveia–Parrilo–Robinson–Thomas）
+凸集合の錐リフトの存在と、スラック作用素の錐分解の同値性（一般化 Yannakakis 定理）を任意の閉凸錐について証明し、多面体・スペクトラヘドロン・二次錐リフトでの具体的な帰結を論ぜよ。
+
+=ch VIII-2　半正定値計画の応用
+
+*4 最大行列式問題（Vandenberghe–Boyd–Wu）
+$\max\log\det X$ s.t. 線形行列不等式 の双対を導き、最小体積包含楕円体・D-最適実験計画・共分散選択がこの形であることを示せ。
+
+*4 共分散選択と graphical LASSO（Banerjee–El Ghaoui–d'Aspremont, Friedman–Hastie–Tibshirani）
+$\max\log\det\Theta-\operatorname{tr}(S\Theta)-\lambda\|\Theta\|_{1}$ の双対が $\min\{-\log\det W: \|W-S\|_{\infty}\le\lambda\}$ であることを示し、ブロック座標降下（graphical LASSO）の各ステップが LASSO になることを示せ。
+
+*4 正定値行列補完（Grone–Johnson–Sá–Wolkowicz）
+部分的に指定された対称行列が正定値補完をもつための条件は、指定パターンのグラフが弦グラフ（chordal）なら、すべての完全に指定された主部分行列が正定値であることと同値である。証明し、最大行列式補完の逆行列が非指定位置で 0 になることを示せ。
+
+*4 弦グラフ分解と SDP の疎性の活用（Fukuda–Kojima–Murota–Nakata）
+疎な SDP で、データの集約疎性パターンが弦グラフなら、大きな PSD 制約を極大クリークごとの小さな PSD 制約に分解できることを示せ（Agler の定理）。
+
+*4 Agler の定理（弦グラフの PSD 分解）
+弦グラフ $G$ に台をもつ PSD 行列は、極大クリークに台をもつ PSD 行列の和に分解できる。証明せよ。
+
+*4 固有値最適化と最適設計（Overton）
+$\min\lambda_{\max}(A(x))$ の最適性条件を劣微分で導き、最適点で最大固有値が重複する（一般的に）ことを示せ。Overton の二次収束アルゴリズムの考え方を述べよ。
+
+*4 行列ノルム最小化と SDP
+スペクトルノルム $\min\|A(x)\|_{2}$、核ノルム $\min\|A(x)\|_{*}$ がともに SDP で表現できることを示し、核ノルムの SDP 表現 $\|X\|_{*}=\min\{\frac12(\operatorname{tr}W_{1}+\operatorname{tr}W_{2}):\begin{pmatrix}W_{1}&X\\X^{\top}&W_{2}\end{pmatrix}\succeq0\}$ を証明せよ。
+
+*4 センサーネットワークの位置推定の SDP 緩和（Biswas–Ye, So–Ye）
+距離情報からの位置推定の SDP 緩和が、グラフが「一意に局所化可能（universally rigid）」なら厳密であることを示せ（So–Ye 2007）。
+
+*4 剛性理論と Connelly の応力行列
+枠組みが普遍剛性をもつための十分条件（ランク $n-d-1$ の PSD 応力行列の存在、Connelly）を述べ、SDP 緩和の厳密性との関係を示せ。
+
+*4 Procrustes 問題と同期問題
+直交 Procrustes 問題 $\min_{Q\in O(d)}\|QA-B\|_{F}$ の解が SVD から得られることを示し、角度同期 $\max\sum_{ij}\operatorname{Re}(\bar z_{i}C_{ij}z_{j})$ s.t. $|z_{i}|=1$ の SDP 緩和が雑音が小さいとき厳密であること（Bandeira–Boumal–Singer）を述べよ。
+
+*4 Z2 同期と SDP の厳密性（Abbe–Bandeira–Hall）
+確率的ブロックモデル（2 コミュニティ）の SDP 緩和が、$\frac{(\sqrt a-\sqrt b)^{2}}{2}>1$（$p=a\log n/n$, $q=b\log n/n$）で高確率で正確回復を達成し、これが情報理論的閾値に一致することを証明せよ（双対証明書の構成）。
+
+*4 最大カット以外のカット問題：最大二分割（Frieze–Jerrum）
+最大二分割の SDP 緩和とランダム超平面の修正ラウンディングで $0.651$ 近似を得る方法を述べ、近似率の解析の骨格を示せ。
+
+*4 Kalman フィルタ・LQR の SDP 表現
+連続時間 LQR の最適コストが代数 Riccati 方程式の安定化解 $P$ で与えられ、$P$ が SDP $\max\operatorname{tr}P$ s.t. $\begin{pmatrix}A^{\top}P+PA+Q & PB\\ B^{\top}P & R\end{pmatrix}\succeq0$ の最大解であることを示せ（Willems）。
+
+*4 制御理論の LMI：状態フィードバック安定化
+$\dot x=Ax+Bu$ が状態フィードバック $u=Kx$ で安定化可能 $\iff$ LMI $AQ+QA^{\top}+BY+Y^{\top}B^{\top}\prec0$, $Q\succ0$ が可解で、$K=YQ^{-1}$。変数変換による凸化を示せ。
+
+*4 $H_{\infty}$ ノルムの LMI 特徴づけ（有界実補題）
+$\|G\|_{\infty}<\gamma$ $\iff$ $P\succ0$ で $\begin{pmatrix}A^{\top}P+PA & PB & C^{\top}\\ B^{\top}P & -\gamma I & D^{\top}\\ C & D & -\gamma I\end{pmatrix}\prec0$。KYP の補題から導け。
+
+*4 静的出力フィードバックの非凸性
+静的出力フィードバック安定化の問題は BMI（双線形行列不等式）となり一般に NP 困難である（Blondel–Tsitsiklis）。主張を述べ、凸内側近似の方法を論ぜよ。
+
+*4 SDP による多項式の最小固有値と量子情報
+エンタングルメント判定（分離可能状態の集合への所属）が NP 困難であること（Gurvits）と、Doherty–Parrilo–Spedalieri の SDP 階層（対称拡張）による判定を述べよ。
+
+*4 量子相関と NPA 階層（Navascués–Pironio–Acín）
+非可換多項式最適化の SDP 階層（NPA 階層）が量子相関の集合の外側近似の収束列を与えることを示し、Tsirelson の限界 $2\sqrt2$ を SDP で証明せよ。
+
+*5 MIP* = RE と NPA 階層の非収束（Ji–Natarajan–Vidick–Wright–Yuen）
+MIP* = RE の帰結として、NPA 階層の値がテンソル積量子値に収束しない非局所ゲームが存在すること（Connes の埋め込み予想の否定）を述べ、SDP 階層による近似の限界を論ぜよ。
+
+*5 SDP の完全な複雑さ：実行可能性判定の計算量
+SDP の実行可能性判定は、実数計算モデル（BSS）では NP ∩ co-NP に属し、ビットモデルでは多項式時間アルゴリズムが知られていない（解のビット長が指数的になりうる例、Khachiyan の反復平方）。例を構成し、Ramana の双対による NP ∩ co-NP（あるいはどちらでもない）の二分法を述べよ。

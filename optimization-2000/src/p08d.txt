@@ -1,0 +1,123 @@
+=ch VIII-7　圧縮センシングとスパース回復
+
+*4 零空間性質と $\ell_{1}$ 回復 {nsp}
+行列 $A$ について、すべての $s$-スパース $x$ が $\min\{\|z\|_{1}:Az=Ax\}$ の一意解 $\iff$ 零空間性質（任意の $v\in\ker A\setminus\{0\}$ と $|S|\le s$ で $\|v_{S}\|_{1}<\|v_{S^{c}}\|_{1}$）。証明せよ。
+
+*4 RIP による安定回復（Candès–Tao, Candès） {rip}
+制限等長性定数 $\delta_{2s}<\sqrt2-1$ ならば、$\min\{\|z\|_{1}:\|Az-y\|\le\varepsilon\}$ の解は $\|\hat x-x\|_{2}\le C_{0}\frac{\sigma_{s}(x)_{1}}{\sqrt s}+C_{1}\varepsilon$ をみたす。証明を完成させ、$\delta_{2s}<1/\sqrt2$ への改良（Cai–Zhang）を述べよ。
+
+*4 Gauss 行列の RIP
+$A$ が i.i.d. $N(0,1/m)$ の行列なら、$m\ge C\delta^{-2}s\log(en/s)$ で高確率で $\delta_{s}\le\delta$。Johnson–Lindenstrauss 型の集中と $\varepsilon$-ネットの議論で証明せよ（Baraniuk–Davenport–DeVore–Wakin）。
+
+*4 相転移とスパース回復の幾何（Donoho–Tanner）
+$\ell_{1}$ 回復の成功確率が、交差多面体のランダム射影の近傍性（neighborliness）で決まり、$(m/n,s/m)$ 平面で鋭い相転移を示すことを述べよ。
+
+*4 統計的次元と相転移（Amelunxen–Lotz–McCoy–Tropp）
+凸回復問題 $\min f(x)$ s.t. $Ax=y$ の成功確率が、$m$ が降下錐の統計的次元 $\delta(\mathcal{D}(f,x))$ を超えるかどうかで鋭く変わる（幅 $O(\sqrt n)$）ことを、円錐運動学公式から示せ。
+
+*4 Gordon の逃避定理と Gauss 幅（Chandrasekaran–Recht–Parrilo–Willsky）
+降下錐 $\mathcal{D}$ と $\ker A$ が交わらない確率が $m\gtrsim w(\mathcal{D}\cap S^{n-1})^{2}$ で高いこと（Gordon の "escape through the mesh"）を示し、原子ノルム最小化による一般的回復理論を導け。
+
+*4 原子ノルム（Chandrasekaran–Recht–Parrilo–Willsky）
+原子集合 $\mathcal{A}$ のゲージ $\|x\|_{\mathcal{A}}=\inf\{t:x\in t\operatorname{conv}\mathcal{A}\}$ を原子ノルムとし、$\ell_{1}$・核ノルム・置換行列の凸包ノルムが例であることを示せ。原子ノルムの双対ノルムと最適性条件を導け。
+
+*4 LASSO の予測誤差と制限固有値条件（Bickel–Ritov–Tsybakov）
+制限固有値条件 RE$(s,3)$ の下で、$\lambda\asymp\sigma\sqrt{\log p/n}$ の LASSO は $\|\hat\beta-\beta^{*}\|_{2}^{2}\lesssim\frac{s\sigma^{2}\log p}{n\kappa^{2}}$ をみたす。証明せよ。
+
+*4 LASSO の台回復と照応不可能性条件（Zhao–Yu, Wainwright）
+LASSO が台を正しく回復する必要十分条件に近い条件として、照応不可能性条件 $\|X_{S^{c}}^{\top}X_{S}(X_{S}^{\top}X_{S})^{-1}\operatorname{sgn}(\beta_{S})\|_{\infty}<1$ を導け。
+
+*4 直交マッチング追跡（OMP, Tropp）
+相互コヒーレンス $\mu(A)<\frac{1}{2s-1}$ なら、OMP は $s$ ステップで任意の $s$-スパース解を正確に回復する。証明せよ。
+
+*4 CoSaMP と IHT の RIP 保証（Needell–Tropp）
+CoSaMP が $\delta_{4s}\le0.1$ の下で線形収束により $s$-スパース近似を安定に回復することを示せ。
+
+*4 Dantzig セレクタ（Candès–Tao）
+$\min\|\beta\|_{1}$ s.t. $\|X^{\top}(y-X\beta)\|_{\infty}\le\lambda$ が LP であり、RIP の下で LASSO と同等のオラクル不等式をみたすことを示せ。
+
+*4 基底追跡のデノイジングと双対証明書
+BPDN の解が $x$ の台を回復するための双対証明書（$A^{\top}u$ が台上で $\operatorname{sgn}(x)$、台外で絶対値 $<1$）を定義し、ゴルフィング法（Gross）によるランダム構成を述べよ。
+
+*4 超解像（Candès–Fernandez-Granda）
+低周波 Fourier 係数 $|k|\le f_{c}$ から、最小分離 $\Delta\ge2/f_{c}$ のスパイク列が総変動ノルム最小化（SDP で解ける）で正確に復元されることを、双対多項式の構成で示せ。
+
+*4 圧縮センシングの下界（Gelfand 幅）
+$\ell_{1}$ 球の Gelfand 幅 $d^{m}(B_{1}^{n},\ell_{2})\asymp\min\{1,\sqrt{\log(en/m)/m}\}$（Kashin, Garnaev–Gluskin）から、$s$-スパース回復に $m\gtrsim s\log(n/s)$ 個の測定が必要であることを導け。
+
+*4 Kashin の分解定理
+$\mathbb{R}^{2n}$ は、$\ell_{1}$ ノルムと $\sqrt{2n}\cdot\ell_{2}$ ノルムが定数倍で同値になる二つの $n$ 次元部分空間の直和に分解できる（Kashin 1977）。ランダム部分空間による証明の骨格を与えよ。
+
+*4 1 ビット圧縮センシング（Plan–Vershynin）
+符号 $y=\operatorname{sgn}(Ax)$ のみから、$m\gtrsim s\log(n/s)$ で $x/\|x\|$ を凸計画で推定できることを示せ。
+
+*4 構造化スパース性とグループ LASSO の回復保証
+グループスパースな信号に対するグループ LASSO の回復に必要な測定数が $O(s_{g}(b+\log M))$（$s_{g}$ 群、群サイズ $b$、群数 $M$）であることを Gauss 幅で示せ。
+
+*5 Donoho–Tanner の相転移の厳密な計算
+Gauss 行列による $\ell_{1}$ 回復の弱閾値曲線 $\rho_{W}(\delta)$ を、交差多面体の面のランダム射影下での保存確率（Affentranger–Schneider, Vershik–Sporyshev）から導く計算を完成させよ。
+
+*5 近似メッセージ伝搬（AMP）と状態発展（Bayati–Montanari）
+Gauss 行列の LASSO に対する AMP アルゴリズムの反復が、Onsager 補正項の下でスカラー状態発展方程式に従うことを示し（Bolthausen の条件付け法）、LASSO の漸近リスクの厳密公式を導け。
+
+=ch VIII-8　低ランク行列回復
+
+*4 核ノルムの凸包性（Fazel）
+$\{X:\|X\|\le1\}$ 上で、$\operatorname{rank}X$ の凸包絡は核ノルム $\|X\|_{*}$ である（Fazel 2002）。共役を二度とって証明せよ。
+
+*4 行列 RIP と低ランク回復（Recht–Fazel–Parrilo）
+線形写像 $\mathcal{A}$ が階数 $5r$ で RIP 定数 $<1/10$ をもてば、核ノルム最小化が階数 $r$ の行列を正確に回復する。証明し、Gauss 測定で $m\gtrsim nr$ で十分であることを示せ。
+
+*4 行列補完と非コヒーレンス（Candès–Recht, Candès–Tao, Gross）
+非コヒーレンス条件をみたす階数 $r$ の $n\times n$ 行列は、一様ランダムな $m\gtrsim\mu nr\log^{2}n$ 個の成分から核ノルム最小化で高確率で正確に補完される。ゴルフィング法（Gross）による双対証明書の構成で証明せよ。
+
+*4 行列 Bernstein 不等式（Tropp, Ahlswede–Winter）
+独立な対称ランダム行列 $X_{k}$（$EX_{k}=0$, $\|X_{k}\|\le R$）について $\mathbb{P}(\|\sum X_{k}\|\ge t)\le2n\exp\left(\frac{-t^{2}/2}{\sigma^{2}+Rt/3}\right)$（$\sigma^{2}=\|\sum EX_{k}^{2}\|$）。Lieb の凹性定理を用いて証明せよ。
+
+*4 ロバスト主成分分析（Candès–Li–Ma–Wright, Chandrasekaran ら）
+$M=L_{0}+S_{0}$（低ランク＋スパース）について、$\min\|L\|_{*}+\lambda\|S\|_{1}$ s.t. $L+S=M$（$\lambda=1/\sqrt n$）が、非コヒーレンスとランダムなスパース台の下で高確率で正確に分解する。主張を述べ、双対証明書の条件を導け。
+
+*4 位相回復の PhaseLift（Candès–Strohmer–Voroninski）
+$|\langle a_{i},x\rangle|^{2}=\operatorname{tr}(a_{i}a_{i}^{\top}X)$ と持ち上げ、$\min\operatorname{tr}X$ s.t. 線形制約, $X\succeq0$ が $m\gtrsim n\log n$（改良で $m\gtrsim n$）の Gauss 測定で $xx^{\top}$ を正確に回復することを示せ。
+
+*4 低ランク行列の非凸最適化の景観（Ge–Jin–Zheng）
+行列補完の非凸定式化（正則化付き）について、すべての局所最小点が大域最小点であり、鞍点が厳密であることの主張を述べ、行列センシングの場合（RIP）の証明を完成させよ。
+
+*4 Burer–Monteiro の因子分解勾配法の線形収束（Tu ら, Zheng–Lafferty）
+行列センシング $\min_{U}\|\mathcal{A}(UU^{\top})-y\|^{2}$ に対し、スペクトル初期化と勾配降下が RIP の下で線形収束する（Procrustes 距離で）ことを示せ。
+
+*4 過剰パラメータ化と暗黙の低ランク正則化（Gunasekar ら, Li–Ma–Zhang）
+過剰パラメータ化された行列因子分解 $UU^{\top}$（$U\in\mathbb{R}^{n\times n}$）に小さな初期値から勾配降下を行うと、行列センシングで最小核ノルム解（低ランク解）に近づく（RIP の下で証明、Li–Ma–Zhang 2018）。主張を述べ骨格を示せ。
+
+*4 低ランク近似の Eckart–Young–Mirsky 定理
+任意のユニタリ不変ノルムで $\min_{\operatorname{rank}B\le r}\|A-B\|$ の解は切断 SVD である。Weyl の不等式と Ky Fan の最大原理から証明せよ。
+
+*4 ランダム化 SVD（Halko–Martinsson–Tropp）
+ガウスのテスト行列 $\Omega$ による $Y=A\Omega$ の値域近似の誤差が $E\|A-QQ^{\top}A\|\le(1+\sqrt{\frac{k}{p-1}})\sigma_{k+1}+\frac{e\sqrt{k+p}}{p}(\sum_{j>k}\sigma_{j}^{2})^{1/2}$ で抑えられることを示せ。
+
+*4 CUR 分解とレバレッジスコア標本化（Mahoney–Drineas）
+列と行のレバレッジスコアに比例した標本化による CUR 分解が $\|A-CUR\|_{F}\le(1+\varepsilon)\|A-A_{k}\|_{F}$ を $O(k\log k/\varepsilon^{2})$ 列で達成することを示せ。
+
+*4 テンソル分解と非凸性（Hillar–Lim）
+テンソルのランク・スペクトルノルム・最良ランク 1 近似の計算が NP 困難であること（Hillar–Lim 2013）を述べ、最良低ランク近似が存在しない例（de Silva–Lim）を構成せよ。
+
+*4 テンソルのべき乗法と直交分解（Anandkumar–Ge–Hsu–Kakade–Telgarsky）
+直交分解可能な対称テンソルのべき乗反復が各成分に二次収束すること、およびモーメント法による潜在変数モデルの推定への応用を述べよ。
+
+*4 部分空間クラスタリングとスパース部分空間クラスタリング（Elhamifar–Vidal, Soltanolkotabi–Candès）
+データ点を他の点の $\ell_{1}$ スパース結合で表す SSC が、部分空間が十分に離れていれば正しい部分空間に属する点のみを選ぶ（自己表現性）ことを示せ。
+
+*4 非負行列分解の計算困難性と可分性（Vavasis, Arora–Ge–Kannan–Moitra）
+非負行列分解（NMF）は NP 困難（Vavasis）だが、可分性（separability）の仮定の下では多項式時間で解ける（Arora–Ge–Kannan–Moitra）ことを示せ。
+
+*4 辞書学習の景観と回復（Sun–Qu–Wright, Spielman–Wang–Wright）
+完全な辞書に対する球面上の非凸定式化 $\min_{q\in S^{n-1}}\frac1p\sum h_{\mu}(q^{\top}y_{i})$ の良い景観（すべての局所最小点が辞書の列に対応）の主張を述べ、Riemann 信頼領域法での回復を論ぜよ。
+
+*4 スペクトル法の一致性（Davis–Kahan の応用）
+低ランク信号＋雑音行列 $M=\lambda uu^{\top}+W$ の主固有ベクトルが $u$ と $\sin\theta\le\|W\|/(\lambda-\|W\|)$ で相関することを示し、BBP 相転移（$\lambda$ が $1$ を超えると外れ値固有値が現れる、Baik–Ben Arous–Péché）を述べよ。
+
+*5 行列補完の最適な標本数（Candès–Tao, Keshavan–Montanari–Oh, Ding–Chen）
+階数 $r$ の非コヒーレントな行列補完に必要な標本数の情報理論的下界 $\Omega(nr\log n)$ を示し、核ノルム最小化（$O(nr\log^{2}n)$）と非凸法（$O(nr\log n)$ 程度）の上界を比較せよ。ゴルフィングの証明を完全に与えよ。
+
+*5 BBP 相転移の証明（Baik–Ben Arous–Péché, Benaych-Georges–Nadakuditi）
+スパイク Wigner 模型 $\frac{\theta}{n}uu^{\top}+\frac{1}{\sqrt n}W$ の最大固有値が、$\theta>1$ で $\theta+1/\theta$ に、$\theta\le1$ で $2$ に収束し、固有ベクトルの相関が $\theta>1$ で $1-\theta^{-2}$ に収束することを、Stieltjes 変換と摂動の行列式公式から証明せよ。

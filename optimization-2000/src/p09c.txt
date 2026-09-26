@@ -1,0 +1,123 @@
+=ch IX-5　バンディット最適化
+
+*4 多腕バンディットの UCB（Auer–Cesa-Bianchi–Fischer） {ucb}
+$K$ 本の腕の確率的バンディット（報酬 $[0,1]$）で、UCB1 の期待後悔は $\sum_{i:\Delta_{i}>0}\frac{8\log T}{\Delta_{i}}+O(\sum\Delta_{i})$。Hoeffding の不等式で証明し、問題非依存の上界 $O(\sqrt{KT\log T})$ を導け。
+
+*4 Lai–Robbins の下界
+一貫したアルゴリズムの後悔は $\liminf\frac{R_{T}}{\log T}\ge\sum_{i:\Delta_{i}>0}\frac{\Delta_{i}}{\operatorname{KL}(\nu_{i},\nu^{*})}$ をみたす（Lai–Robbins 1985）。変化の測度（change of measure）の議論で証明せよ。
+
+*4 Thompson サンプリングの最適性（Agrawal–Goyal, Kaufmann–Korda–Munos）
+Bernoulli バンディットで、Beta 事前分布の Thompson サンプリングが Lai–Robbins の下界を漸近的に達成することを示せ。
+
+*4 KL-UCB（Garivier–Cappé）
+KL ダイバージェンスに基づく上側信頼限界を用いる KL-UCB が、Lai–Robbins の下界を達成することを示せ。
+
+*4 敵対的バンディットと EXP3（Auer–Cesa-Bianchi–Freund–Schapire）
+敵対的な損失列に対し、重要度重み付き推定量を用いる EXP3 の期待後悔が $O(\sqrt{TK\log K})$ であることを示し、下界 $\Omega(\sqrt{TK})$ を示せ。
+
+*4 INF と Tsallis-INF（Audibert–Bubeck, Zimmert–Seldin）
+Tsallis エントロピー正則化の FTRL（Tsallis-INF）が、敵対的バンディットで最適な $O(\sqrt{KT})$ を達成し、同時に確率的バンディットで $O(\sum\frac{\log T}{\Delta_{i}})$ を達成する（best of both worlds）ことを示せ。
+
+*4 線形バンディットと LinUCB・OFUL（Abbasi-Yadkori–Pál–Szepesvári）
+線形報酬 $\langle\theta^{*},x\rangle$ の確率的線形バンディットで、自己正規化マルチンゲールの集中不等式による信頼楕円体を用いた OFUL の後悔 $\tilde O(d\sqrt T)$ を示せ。
+
+*4 自己正規化集中不等式（Abbasi-Yadkori ら, de la Peña）
+$S_{t}=\sum\eta_{s}x_{s}$（$\eta_{s}$ は条件付き sub-Gauss）について、$\|S_{t}\|_{V_{t}^{-1}}^{2}\le2\log\frac{\det(V_{t})^{1/2}\det(\lambda I)^{-1/2}}{\delta}$ が一様に高確率で成り立つことを、Laplace の方法（擬最大化）で証明せよ。
+
+*4 バンディット凸最適化（Flaxman–Kalai–McMahan）
+関数値のみが観測される敵対的凸関数列に対し、一点勾配推定 $\frac{d}{\delta}f(x+\delta u)u$ を用いたオンライン勾配法が後悔 $O(T^{3/4})$ を達成することを示せ。
+
+*4 バンディット凸最適化の最適率（Bubeck–Lee–Eldan, Lattimore）
+敵対的バンディット凸最適化の最適後悔が $\tilde\Theta(\operatorname{poly}(d)\sqrt T)$ であることを述べ、カーネル法（Bubeck–Lee–Eldan 2017）の主要なアイデアを説明せよ。
+
+*4 最良腕識別（Even-Dar–Mannor–Mansour, Garivier–Kaufmann）
+固定信頼度の最良腕識別の標本複雑度の下界 $T^{*}(\nu)\log(1/\delta)$ を変化の測度で示し、Track-and-Stop がそれを漸近的に達成することを述べよ。
+
+*4 バンディットの Gittins 指数定理
+割引無限時間のベイズ的多腕バンディットで、各腕の Gittins 指数が最大の腕を引く方策が最適である（Gittins 1979）。Weber の交換論法（prevailing charge）で証明せよ。
+
+*4 レストレス・バンディットと Whittle 指数
+レストレス・バンディットの Whittle 緩和（平均の意味での制約）と Whittle 指数方策を定義し、指数性（indexability）の条件を述べよ。レストレス・バンディットの最適化が PSPACE 困難であること（Papadimitriou–Tsitsiklis）を述べよ。
+
+*4 文脈付きバンディットと EXP4
+$N$ 個の方策の専門家を用いる EXP4 の後悔 $O(\sqrt{TK\log N})$ を示し、オラクル効率な文脈付きバンディット（Agarwal ら, Foster–Rakhlin の SquareCB）を述べよ。
+
+*4 部分観測とグラフフィードバック（Alon–Cesa-Bianchi–Gentile–Mansour）
+フィードバックグラフによる部分観測オンライン学習の後悔が、グラフの独立数 $\alpha$ に対し $\tilde\Theta(\sqrt{\alpha T})$ となることを示せ。
+
+*4 部分監視ゲームの分類（Bartók–Foster–Pál–Rakhlin–Szepesvári）
+有限の部分監視ゲームの minimax 後悔が $0$, $\Theta(\sqrt T)$, $\Theta(T^{2/3})$, $\Theta(T)$ のいずれかに分類されることを述べ、観測可能性の条件（局所・大域）を説明せよ。
+
+*4 ベイズ最適化とガウス過程バンディットの下界（Scarlett–Bogunovic–Cevher）
+RKHS ノルム有界な関数の最適化で、GP-UCB の後悔上界と、Matérn カーネルでの下界の比較を行い、ほぼ最適であることを述べよ。
+
+*4 双対バンディット（dueling bandit）と Condorcet 勝者
+ペアの比較結果のみが得られるバンディットで、Condorcet 勝者に対する後悔 $O(K\log T/\Delta^{2})$ を達成するアルゴリズム（RUCB）を述べよ。
+
+*5 情報比と Thompson サンプリングの情報理論的解析（Russo–Van Roy）
+Thompson サンプリングのベイズ後悔が $\sqrt{\bar\Gamma H(A^{*})T}$ で抑えられる（$\bar\Gamma$ は情報比の上界、$H(A^{*})$ は最適行動のエントロピー）ことを示し、線形バンディットで $\bar\Gamma\le d/2$ を導け。
+
+*5 決定推定係数（DEC）と対話的意思決定の統一理論（Foster–Kakade–Qian–Rakhlin）
+バンディット・強化学習を含む対話的意思決定の minimax 後悔が、決定推定係数（DEC）で上下から特徴づけられることを述べ、E2D アルゴリズムの後悔上界の骨格を示せ。
+
+=ch IX-6　確率計画
+
+*4 二段階確率線形計画の構造 {twostage}
+$\min c^{\top}x+E[Q(x,\xi)]$、$Q(x,\xi)=\min\{q^{\top}y: Wy=h-Tx,\ y\ge0\}$ で、$Q(\cdot,\xi)$ は区分線形凸、期待値関数 $\mathcal{Q}(x)$ は凸（離散分布なら区分線形、連続分布で $W$ が完全リコースなら微分可能）であることを示せ。
+
+*4 L 字型法（Van Slyke–Wets）
+二段階確率 LP の L 字型法（Benders 分解の確率版）が有限回の最適性・実行可能性カットで最適解に到達することを示し、多カット版（Birge–Louveaux）との比較を述べよ。
+
+*4 完全情報の期待値と確率的解の価値
+完全情報の期待値 EVPI $=\mathrm{RP}-\mathrm{WS}$ と確率的解の価値 VSS $=\mathrm{EEV}-\mathrm{RP}$ を定義し、$\mathrm{WS}\le\mathrm{RP}\le\mathrm{EEV}$（最小化）を示せ（Madansky, Birge）。
+
+*4 SAA の一致性と収束率（Shapiro） {saa}
+標本平均近似 $\hat v_{N}=\min\frac1N\sum F(x,\xi_{i})$ について、$\hat v_{N}\to v^{*}$ a.s.、$\sqrt N(\hat v_{N}-v^{*})\Rightarrow\inf_{x\in S}Y(x)$（$Y$ は Gauss 過程）を示し、解が一意なら正規分布に収束することを導け（Shapiro 1991）。
+
+*4 SAA の標本数の評価（Kleywegt–Shapiro–Homem-de-Mello）
+有限の実行可能集合 $X$ で、SAA が $\varepsilon$-最適解を確率 $1-\alpha$ で返すための標本数が $O(\frac{\sigma^{2}}{\varepsilon^{2}}\log\frac{|X|}{\alpha})$ であることを大偏差の議論で示し、連続の場合の $d\log(1/\varepsilon)$ への一般化を述べよ。
+
+*4 SAA の楽観的偏り
+$E[\hat v_{N}]\le E[\hat v_{N+1}]\le v^{*}$（最小化）を示し（Mak–Morton–Wood）、統計的下界と上界による最適性ギャップの推定法を述べよ。
+
+*4 確率制約（chance constraint）と Prékopa の定理
+$\mathbb{P}(g(x,\xi)\le0)\ge p$ で、$g$ が結合準凸、$\xi$ が対数凹分布なら実行可能集合は凸である（Prékopa）。証明し、一般には非凸になる例を作れ。
+
+*4 シナリオ法（Calafiore–Campi）
+確率制約付き凸計画を $N$ 個の標本制約で置き換えたシナリオ問題の解が、確率 $1-\beta$ で違反確率 $\le\varepsilon$ となるための標本数 $N\ge\frac2\varepsilon(\ln\frac1\beta+d)$ を示せ。支持制約の個数が高々 $d$ であることを用いよ（Campi–Garatti の厳密な評価も述べよ）。
+
+*4 CVaR による確率制約の凸近似（Nemirovski–Shapiro）
+確率制約 $\mathbb{P}(g\le0)\ge1-\varepsilon$ の最良の凸保守的近似が $\operatorname{CVaR}_{1-\varepsilon}(g)\le0$ であることを示し、Bernstein 近似を述べよ。
+
+*4 多段階確率計画と非予見性
+多段階確率計画を非予見性制約付きの問題として定式化し、シナリオ木上の動的計画方程式（コスト・トゥ・ゴー関数の凸性）を導け。
+
+*4 SDDP の収束（Pereira–Pinto, Philpott–Guan, Shapiro）
+段階間独立な多段階確率 LP に対する確率的双対動的計画（SDDP）が、有限回で最適方策を得る（確率 1 で）ことを示せ。
+
+*4 確率計画の計算量（Dyer–Stougie, Hanasusanto–Kuhn–Wiesemann）
+連続分布の二段階確率 LP の期待値の計算が #P 困難であること（Dyer–Stougie 2006）を示し、SAA の多項式標本数（Shapiro–Nemirovski）との対比を論ぜよ。
+
+*4 段階的ヘッジ法（Rockafellar–Wets）
+シナリオ分解に基づく段階的ヘッジ法（PH）が、凸な場合に非予見性制約付き問題の解に収束することを、Douglas–Rachford 分割（近接点法）として示せ。
+
+*4 確率的整数計画と Lagrange 分解（Carøe–Schultz）
+二段階確率整数計画で、非予見性制約の Lagrange 緩和によるシナリオ分解が下界を与え、分枝限定法と組み合わせて最適解が得られることを示せ。
+
+*4 確率計画の安定性と確率距離（Römisch, Rachev）
+確率計画の最適値と解集合の、確率分布の摂動に対する安定性を Wasserstein 距離（あるいは Fortet–Mourier 距離）で評価し、シナリオ削減法（Dupačová–Gröwe-Kuska–Römisch）の根拠とせよ。
+
+*4 確率的最適化における情報構造と Witsenhausen の反例
+分散制御の Witsenhausen の反例（LQG でも非線形制御が線形制御より良い）を述べ、情報構造の非古典性が非凸性を生むことを説明せよ。
+
+*4 最適停止問題（Snell 包絡）
+離散時間の最適停止問題の値が Snell 包絡 $U_{n}=\max(Z_{n},E[U_{n+1}|\mathcal{F}_{n}])$ で与えられ、最初に $U=Z$ となる時刻が最適停止時刻であることを示せ。秘書問題の $1/e$ 則を導け。
+
+*4 預言者不等式（Krengel–Sucheston–Garling, Samuel-Cahn）
+独立な非負確率変数 $X_{1},\dots,X_{n}$ について、最適停止規則は $E[\max X_{i}]/2$ 以上を得ることができ、閾値 $\tau=\text{median}(\max X_{i})$ の規則がそれを達成する（Samuel-Cahn）。$1/2$ が最良であることを示せ。
+
+*5 SAA の一様大数の法則と Glivenko–Cantelli 型の定理
+SAA の一致性の一般定理（Artstein–Wets のエピグラフの大数の法則）を正規被積分関数について証明し、解集合の Hausdorff 距離での収束率を経験過程の理論（VC 次元・被覆数）で評価せよ。
+
+*5 シナリオ法の厳密な違反確率分布（Campi–Garatti 2008）
+凸シナリオ問題（完全支持型）の解の違反確率 $V(x_{N}^{*})$ の分布が、$\mathbb{P}(V>\varepsilon)=\sum_{i=0}^{d-1}\binom{N}{i}\varepsilon^{i}(1-\varepsilon)^{N-i}$ で与えられ（ベータ分布）、問題に依らないことを証明せよ。
