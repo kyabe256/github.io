@@ -1,0 +1,161 @@
+<h3 class="ch">II-5　コンパクト作用素と Fredholm 理論<span class="rg">{{RANGE}}</span></h3>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:200}}</span><span class="ttl">コンパクト作用素の基本性質</span><span class="stars">★★★★☆</span></div>
+<p class="st">コンパクト作用素全体 $\mathcal{K}(X)$ は $\mathcal{B}(X)$ の閉両側イデアルである。$T$ コンパクト $\iff$ 弱収束列をノルム収束列に写す（$X$ 反射的のとき）。無限次元では $\mathcal{K}$ に恒等作用素は属さない。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:201}}</span><span class="ttl">有限階作用素による近似</span><span class="stars">★★★★★</span></div>
+<p class="st">Hilbert 空間ではコンパクト作用素は有限階作用素のノルム極限である。Banach 空間では一般に偽であり（Enflo の反例、近似性質をもたない空間の存在）、$\mathcal{K}(X)=\overline{\mathcal{F}(X)}$ は $X$ の近似性質と同値であることを論ぜよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:202}}</span><span class="ttl">Schauder の定理</span><span class="stars">★★★★☆</span></div>
+<p class="st">$T$ がコンパクト $\iff$ $T^{*}$ がコンパクト。Arzelà–Ascoli を双対側で使って示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:203}}</span><span class="ttl">Riesz–Schauder のスペクトル理論</span><span class="stars">★★★★★</span></div>
+<p class="st">$T$ コンパクト、$\lambda\neq0$ のとき $N(T-\lambda)$ は有限次元、$R(T-\lambda)$ は閉、$\sigma(T)\setminus\{0\}$ は高々可算で $0$ にのみ集積し、各点は有限重複度の固有値である。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:204}}</span><span class="ttl">Fredholm の交代定理</span><span class="stars">★★★★☆</span></div>
+<p class="st">$T$ コンパクト、$\lambda\neq0$ とすると、$(T-\lambda)x=y$ が任意の $y$ に対し可解 $\iff$ $(T-\lambda)x=0$ が自明解のみ。可解条件は $y\perp N(T^{*}-\bar\lambda)$。積分方程式への応用を述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:205}}</span><span class="ttl">Fredholm 作用素と指数</span><span class="stars">★★★★★</span></div>
+<p class="st">$\dim N(T)\lt\infty$, $\operatorname{codim}R(T)\lt\infty$ のとき $T$ を Fredholm、$\operatorname{ind}T=\dim N(T)-\operatorname{codim}R(T)$ とする。$R(T)$ が自動的に閉であること、$\operatorname{ind}(ST)=\operatorname{ind}S+\operatorname{ind}T$ を示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:206}}</span><span class="ttl">指数の安定性</span><span class="stars">★★★★★</span></div>
+<p class="st">Fredholm 作用素全体は開集合であり、$\operatorname{ind}$ は連続（局所定数）。またコンパクト摂動で指数は不変：$\operatorname{ind}(T+K)=\operatorname{ind}T$。片側シフトで $\operatorname{ind}=-1$ となる例を確かめよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:207}}</span><span class="ttl">Atkinson の定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$T$ が Fredholm $\iff$ Calkin 環 $\mathcal{B}(X)/\mathcal{K}(X)$ において $T$ の類が可逆。本質的スペクトル $\sigma_{ess}(T)$ を Calkin 環のスペクトルとして定義し、コンパクト摂動不変性を示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:208}}</span><span class="ttl">コンパクト自己共役作用素のスペクトル定理</span><span class="stars">★★★★☆</span></div>
+<p class="st">$T=T^{*}$ がコンパクトならば、$H$ の正規直交基底 $\{e_{n}\}$ と実数列 $\lambda_{n}\to0$ が存在して $Tx=\sum\lambda_{n}\langle x,e_{n}\rangle e_{n}$。$\|T\|$ が最大固有値の絶対値に等しいことも示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:209}}</span><span class="ttl">Hilbert–Schmidt 作用素と Mercer の定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$K\in L^{2}(X\times X)$ による積分作用素は Hilbert–Schmidt（したがってコンパクト）で $\|T\|_{HS}^{2}=\iint|K|^{2}$。$K$ が連続・対称・正定値ならば $K(x,y)=\sum\lambda_{n}e_{n}(x)\overline{e_{n}(y)}$ が絶対一様収束する（Mercer）。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:210}}</span><span class="ttl">コンパクト作用素の特異値分解</span><span class="stars">★★★★☆</span></div>
+<p class="st">コンパクト $T$ は $Tx=\sum s_{n}\langle x,e_{n}\rangle f_{n}$（$s_{n}\downarrow0$）と表される。$s_{n}(T)=\min\{\|T-F\|:\operatorname{rank}F\lt n\}$（近似数）を示し、min–max 原理（Courant–Fischer）を導け。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:211}}</span><span class="ttl">Sturm–Liouville 問題</span><span class="stars">★★★★★</span></div>
+<p class="st">正則 Sturm–Liouville 問題 $-(pu')'+qu=\lambda wu$（分離型境界条件）の固有値は単純・実で $\lambda_{n}\to\infty$、固有関数は $L^{2}(w\,dx)$ の完全正規直交系をなす。Green 関数をコンパクト作用素の核として構成して示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:212}}</span><span class="ttl">Weyl の固有値漸近法則</span><span class="stars">★★★★★</span></div>
+<p class="st">有界領域 $\Omega\subset\mathbb{R}^{n}$ の Dirichlet Laplacian の固有値について
+$N(\lambda)=\#\{\lambda_{k}\le\lambda\}\sim\frac{\omega_{n}|\Omega|}{(2\pi)^{n}}\lambda^{n/2}$。Dirichlet–Neumann 括り出し（直方体への分割）で示せ。</p></div>
+
+<h3 class="ch">II-6　Banach 環と Gelfand 理論<span class="rg">{{RANGE}}</span></h3>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:213}}</span><span class="ttl">Gelfand–Mazur の定理</span><span class="stars">★★★★☆</span></div>
+<p class="st">単位的複素 Banach 環で、$0$ でないすべての元が可逆ならば $\mathbb{C}$ に等長同型。スペクトルが空でないこと（大問 {{R:193}}）から示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:214}}</span><span class="ttl">Beurling–Gelfand のスペクトル半径公式</span><span class="stars">★★★★☆</span></div>
+<p class="st">Banach 環において $r(a)=\lim\|a^{n}\|^{1/n}=\inf_{n}\|a^{n}\|^{1/n}$。可換環では $r(a)=\|\hat a\|_{\infty}$（Gelfand 変換のノルム）。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:215}}</span><span class="ttl">正則関数カルキュラス</span><span class="stars">★★★★★</span></div>
+<p class="st">$\sigma(a)$ の近傍で正則な $f$ に対し $f(a)=\frac{1}{2\pi i}\oint f(\lambda)(\lambda-a)^{-1}d\lambda$ を定義すると、これは代数準同型でスペクトル写像定理 $\sigma(f(a))=f(\sigma(a))$ をみたす。冪等元の構成（スペクトルが分離するとき）も行え。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:216}}</span><span class="ttl">極大イデアル空間と Gelfand 変換</span><span class="stars">★★★★★</span></div>
+<p class="st">可換単位的 Banach 環 $A$ の極大イデアルは、複素準同型 $\chi:A\to\mathbb{C}$ の核と一対一に対応する。$\Delta(A)$（弱*位相）はコンパクト Hausdorff、$\hat a(\chi)=\chi(a)$ は $A\to C(\Delta(A))$ の縮小準同型で $\sigma(a)=\hat a(\Delta(A))$。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:217}}</span><span class="ttl">Gelfand 変換の核と半単純性</span><span class="stars">★★★★☆</span></div>
+<p class="st">Gelfand 変換の核は Jacobson 根基（すべての極大イデアルの共通部分）に一致し、$\hat a=0\iff r(a)=0$。半単純な環では $A$ は $C(\Delta(A))$ の部分環と同一視できる。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:218}}</span><span class="ttl">Wiener の補題</span><span class="stars">★★★★★</span></div>
+<p class="st">絶対収束 Fourier 級数 $f=\sum c_{n}e^{in\theta}$（$\sum|c_{n}|\lt\infty$）が零点をもたなければ $1/f$ も絶対収束 Fourier 級数をもつ。$\Delta(A(\mathbb{T}))=\mathbb{T}$ を示すことで Gelfand 理論から導け。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:219}}</span><span class="ttl">Stone–Weierstrass の定理</span><span class="stars">★★★★☆</span></div>
+<p class="st">コンパクト Hausdorff $X$ 上の $C(X,\mathbb{R})$ の部分代数が点を分離し定数を含めば稠密。複素版では $*$ 閉性が必要であることを示し、反例（円板代数）を挙げよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:220}}</span><span class="ttl">スペクトル写像定理と部分環のスペクトル</span><span class="stars">★★★★☆</span></div>
+<p class="st">多項式・正則関数に対するスペクトル写像定理を示し、部分環 $B\subset A$ に対し $\sigma_{B}(a)\supset\sigma_{A}(a)$、かつ $\partial\sigma_{B}(a)\subset\partial\sigma_{A}(a)$（スペクトル置換不変性）を示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:221}}</span><span class="ttl">Shilov の冪等元定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$\Delta(A)$ が互いに素な 2 つの閉集合の和ならば、それに対応する冪等元が $A$ に存在する。正則関数カルキュラス（大問 {{R:215}}）を多変数化して示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:222}}</span><span class="ttl">Shilov 境界</span><span class="stars">★★★★★</span></div>
+<p class="st">$|\hat a|$ たちの最大値を実現する最小の閉集合（Shilov 境界）が存在し一意である。円板代数 $A(\mathbb{D})$ について $\Delta=\overline{\mathbb{D}}$、Shilov 境界 $=\partial\mathbb{D}$ を確かめよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:223}}</span><span class="ttl">群環 $L^{1}(G)$ の Gelfand 理論</span><span class="stars">★★★★★</span></div>
+<p class="st">局所コンパクト Abel 群 $G$ の畳み込み環 $L^{1}(G)$ の複素準同型は、$G$ の連続指標と一対一対応する。したがって $\Delta(L^{1}(G))=\hat G$ であり、Gelfand 変換は Fourier 変換に他ならない。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:224}}</span><span class="ttl">Wiener–Lévy の定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$f\in A(\mathbb{T})$、$F$ が $f(\mathbb{T})$ の近傍で正則ならば $F\circ f\in A(\mathbb{T})$。正則関数カルキュラス（大問 {{R:215}}）から導き、$F$ が単に $C^{\infty}$ では不十分であること（Katznelson の定理）を述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:225}}</span><span class="ttl">Wiener のタウバー型定理（Gelfand 版）</span><span class="stars">★★★★★</span></div>
+<p class="st">$f\in L^{1}(\mathbb{R})$ の Fourier 変換が零点をもたない $\iff$ $f$ の平行移動が張る空間が $L^{1}(\mathbb{R})$ で稠密。$L^{1}(\mathbb{R})$ の閉イデアルと $\hat f$ の零点集合の対応として定式化せよ。</p></div>
+
+<h3 class="ch">II-7　$C^{*}$-環とスペクトル定理<span class="rg">{{RANGE}}</span></h3>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:226}}</span><span class="ttl">$C^{*}$-環の基本性質</span><span class="stars">★★★★☆</span></div>
+<p class="st">$\|a^{*}a\|=\|a\|^{2}$ から、$\|a\|=r(a)$（正規元）、$*$-準同型は自動的に縮小かつ連続、単射な $*$-準同型は等長であることを示せ。したがって $C^{*}$ ノルムは代数構造から一意に定まる。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:227}}</span><span class="ttl">可換 Gelfand–Naimark 定理</span><span class="stars">★★★★★</span></div>
+<p class="st">可換単位的 $C^{*}$-環 $A$ について、Gelfand 変換 $A\to C(\Delta(A))$ は $*$-同型（等長全射）である。単位元なしの場合は $C_{0}(\Delta(A))$ となる。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:228}}</span><span class="ttl">連続関数カルキュラス</span><span class="stars">★★★★☆</span></div>
+<p class="st">正規元 $a$ と $f\in C(\sigma(a))$ に対し $f(a)$ が定義され、$f\mapsto f(a)$ は $C(\sigma(a))$ から $C^{*}(a,1)$ への $*$-同型。スペクトル写像定理と、$\sqrt{a}$（$a\ge0$）の一意存在を導け。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:229}}</span><span class="ttl">正値元と順序</span><span class="stars">★★★★☆</span></div>
+<p class="st">$a\ge0$（$a=a^{*}$ かつ $\sigma(a)\subset[0,\infty)$）$\iff$ $a=b^{*}b$ $\iff$ $a=c^{2}$（$c=c^{*}$）。正値元の全体は閉錐をなし、$0\le a\le b\Rightarrow\|a\|\le\|b\|$。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:230}}</span><span class="ttl">GNS 構成</span><span class="stars">★★★★★</span></div>
+<p class="st">$C^{*}$-環 $A$ の状態 $\varphi$（正値・$\varphi(1)=1$）に対し、Hilbert 空間 $H_{\varphi}$、巡回ベクトル $\xi_{\varphi}$、$*$-表現 $\pi_{\varphi}$ が存在して $\varphi(a)=\langle\pi_{\varphi}(a)\xi_{\varphi},\xi_{\varphi}\rangle$。一意性も示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:231}}</span><span class="ttl">Gelfand–Naimark の定理</span><span class="stars">★★★★★</span></div>
+<p class="st">任意の $C^{*}$-環は、あるHilbert 空間上の有界作用素環の閉 $*$-部分環に等長 $*$-同型である。状態の全体から GNS 表現を直和して普遍表現を作り、Hahn–Banach で状態の十分性を示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:232}}</span><span class="ttl">自己共役作用素のスペクトル定理（乗法作用素版）</span><span class="stars">★★★★★</span></div>
+<p class="st">$T=T^{*}\in\mathcal{B}(H)$（$H$ 可分）に対し、測度空間 $(X,\mu)$、有界可測関数 $g$、ユニタリ $U:H\to L^{2}(\mu)$ が存在して $UTU^{-1}=M_{g}$（掛け算作用素）。巡回部分空間への分解から構成せよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:233}}</span><span class="ttl">射影値測度とスペクトル分解</span><span class="stars">★★★★★</span></div>
+<p class="st">$T=T^{*}$ に対し一意な射影値測度 $E$ が存在して $T=\int_{\sigma(T)}\lambda\,dE(\lambda)$。$E$ の台が $\sigma(T)$ に一致すること、$E$ が $T$ と可換な作用素すべてと可換であることを示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:234}}</span><span class="ttl">Borel 関数カルキュラス</span><span class="stars">★★★★★</span></div>
+<p class="st">有界 Borel 関数 $f$ に対し $f(T)=\int f\,dE$ を定義し、$*$-準同型性・有界収束定理的な連続性（$f_{n}\to f$ 各点かつ一様有界 $\Rightarrow f_{n}(T)\to f(T)$ 強収束）を示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:235}}</span><span class="ttl">正規作用素のスペクトル定理</span><span class="stars">★★★★★</span></div>
+<p class="st">正規作用素 $N$ に対し $\mathbb{C}$ 上の射影値測度 $E$ が存在して $N=\int\lambda\,dE(\lambda)$。ユニタリ作用素の場合に $\mathbb{T}$ 上の測度となること、およびスペクトル的重複度による完全不変系を述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:236}}</span><span class="ttl">von Neumann の二重可換子定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$\mathcal{M}\subset\mathcal{B}(H)$ を単位元を含む $*$-部分環とすると、$\mathcal{M}''=\overline{\mathcal{M}}^{\text{強}}=\overline{\mathcal{M}}^{\text{弱}}$。したがって von Neumann 環は代数的にも位相的にも特徴づけられる。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:237}}</span><span class="ttl">Kaplansky の稠密性定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$*$-部分環 $A$ の単位球は、$\overline{A}^{\text{強}}$ の単位球で強稠密である。自己共役部分・ユニタリ部分についても同様。連続関数カルキュラスを用いて示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:238}}</span><span class="ttl">Fuglede–Putnam の定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$M,N$ を正規作用素、$MT=TN$ ならば $M^{*}T=TN^{*}$。$e^{i\bar\lambda M^{*}}Te^{-i\bar\lambda N^{*}}$ が有界な整関数であることを示し Liouville を適用せよ。</p></div>
+
+<h3 class="ch">II-8　非有界作用素<span class="rg">{{RANGE}}</span></h3>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:239}}</span><span class="ttl">閉作用素と可閉性</span><span class="stars">★★★★☆</span></div>
+<p class="st">稠密に定義された作用素 $T$ について、閉・可閉・閉包・随伴 $T^{*}$ を定義し、$T^{*}$ は必ず閉、$T$ 可閉 $\iff T^{*}$ が稠密に定義される、$\overline{T}=T^{**}$ を示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:240}}</span><span class="ttl">対称作用素と自己共役作用素</span><span class="stars">★★★★★</span></div>
+<p class="st">$T\subset T^{*}$（対称）と $T=T^{*}$（自己共役）の違いを、欠損指数 $n_{\pm}=\dim N(T^{*}\mp i)$ で特徴づけよ。$n_{+}=n_{-}=0$ $\iff$ 本質的自己共役。$[0,1]$ 上の $-i\frac{d}{dx}$ で異なる境界条件が異なる自己共役拡張を与えることを確かめよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:241}}</span><span class="ttl">von Neumann の拡張理論</span><span class="stars">★★★★★</span></div>
+<p class="st">Cayley 変換 $U=(T-i)(T+i)^{-1}$ により、対称作用素の自己共役拡張と、欠損空間の間のユニタリ写像が一対一対応する。したがって自己共役拡張が存在する $\iff n_{+}=n_{-}$。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:242}}</span><span class="ttl">非有界自己共役作用素のスペクトル定理</span><span class="stars">★★★★★</span></div>
+<p class="st">自己共役 $T$ に対し $\mathbb{R}$ 上の射影値測度 $E$ が一意に存在して $T=\int\lambda\,dE$、$D(T)=\{x:\int\lambda^{2}d\langle E x,x\rangle\lt\infty\}$。有界版（大問 {{R:233}}）から Cayley 変換で導け。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:243}}</span><span class="ttl">Stone の定理</span><span class="stars">★★★★★</span></div>
+<p class="st">強連続 1 パラメータユニタリ群 $\{U_{t}\}$ に対し自己共役作用素 $A$ が一意に存在して $U_{t}=e^{itA}$。逆も成り立つ。生成子の定義域が $\{x:\lim_{t\to0}(U_{t}x-x)/t\ \text{が存在}\}$ であることを示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:244}}</span><span class="ttl">Nelson の解析ベクトル定理</span><span class="stars">★★★★★</span></div>
+<p class="st">対称作用素 $T$ が解析ベクトルの稠密集合をもてば本質的自己共役。応用として、調和振動子 $-\frac{d^{2}}{dx^{2}}+x^{2}$ が $\mathcal{S}(\mathbb{R})$ 上で本質的自己共役であることを示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:245}}</span><span class="ttl">Kato–Rellich の摂動定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$A$ 自己共役、$B$ 対称で $A$-有界（$\|Bx\|\le a\|Ax\|+b\|x\|$、$a\lt1$）ならば $A+B$ は $D(A)$ 上自己共役。応用として $-\Delta+V$（$V\in L^{2}+L^{\infty}$、$n\le3$）の自己共役性を示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:246}}</span><span class="ttl">Friedrichs 拡張</span><span class="stars">★★★★★</span></div>
+<p class="st">下に有界な対称作用素は、同じ下界をもつ自己共役拡張（Friedrichs 拡張）をもち、それは形式の定義域を最小にする拡張として特徴づけられる。二次形式と Lax–Milgram（大問 {{R:191}}）を用いて構成せよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:247}}</span><span class="ttl">Weyl の本質的スペクトル定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$A$ 自己共役、$K$ 対称コンパクトならば $\sigma_{ess}(A+K)=\sigma_{ess}(A)$。Weyl 列による特徴づけ（$\lambda\in\sigma_{ess}$ $\iff$ 正規直交列 $x_{n}$ で $\|(A-\lambda)x_{n}\|\to0$）を示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:248}}</span><span class="ttl">離散スペクトルと compact resolvent</span><span class="stars">★★★★★</span></div>
+<p class="st">自己共役 $A$ のレゾルベントがコンパクト $\iff$ スペクトルが有限重複度の固有値のみからなり $|\lambda_{n}|\to\infty$。有界領域上の Dirichlet Laplacian がこれをみたすことを Rellich–Kondrachov から示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:249}}</span><span class="ttl">Hardy の不等式と不確定性</span><span class="stars">★★★★★</span></div>
+<p class="st">$n\ge3$ のとき $\displaystyle\int_{\mathbb{R}^{n}}\frac{|u|^{2}}{|x|^{2}}dx\le\frac{4}{(n-2)^{2}}\int|\nabla u|^{2}dx$、定数は最良で達成されない。系として $-\Delta-c|x|^{-2}$ の下に有界性の臨界定数を決定せよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:250}}</span><span class="ttl">Cwikel–Lieb–Rozenblum の束縛状態評価</span><span class="stars">★★★★★</span></div>
+<p class="st">$n\ge3$ のとき $-\Delta+V$ の負固有値の個数は $N\le C_{n}\int_{\mathbb{R}^{n}}V_{-}(x)^{n/2}dx$ で抑えられる。Lieb–Thirring 不等式との関係、および $n=1,2$ で成り立たない理由を述べよ。</p></div>

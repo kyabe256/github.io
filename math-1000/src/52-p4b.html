@@ -1,0 +1,155 @@
+<h3 class="ch">IV-5　Brown 運動<span class="rg">{{RANGE}}</span></h3>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:502}}</span><span class="ttl">Wiener 測度の存在</span><span class="stars">★★★★★</span></div>
+<p class="st">Brown 運動が存在する。Lévy–Ciesielski の構成（Haar 系による級数展開と一様収束）、または Kolmogorov の拡張定理＋連続性定理による構成を完成させよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:503}}</span><span class="ttl">Kolmogorov–Chentsov の連続性定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$E|X_{t}-X_{s}|^{\alpha}\le C|t-s|^{1+\beta}$ ならば、$X$ は任意の $\gamma\lt\beta/\alpha$ について $\gamma$-Hölder 連続な修正をもつ。Brown 運動が $\gamma\lt1/2$ で Hölder 連続であることを導け。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:504}}</span><span class="ttl">Brown 運動の非微分可能性</span><span class="stars">★★★★★</span></div>
+<p class="st">Brown 運動のほとんどすべての標本路は、どの点でも微分不可能であり、実際どこでも $\gamma\gt1/2$-Hölder でない（Paley–Wiener–Zygmund）。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:505}}</span><span class="ttl">二次変分</span><span class="stars">★★★★☆</span></div>
+<p class="st">分割の幅 $\to0$ のとき $\sum(B_{t_{k+1}}-B_{t_{k}})^{2}\to t$（$L^{2}$、細分列に沿えば a.s.）。したがって標本路は有界変動でない。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:506}}</span><span class="ttl">強 Markov 性と反射原理</span><span class="stars">★★★★★</span></div>
+<p class="st">停止時刻 $\tau$ に対し $(B_{\tau+t}-B_{\tau})_{t\ge0}$ は $\mathcal{F}_{\tau}$ と独立な Brown 運動。反射原理から $P(\max_{s\le t}B_{s}\ge a)=2P(B_{t}\ge a)$、および最大値と $|B_{t}|$ の同分布性を示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:507}}</span><span class="ttl">Blumenthal の 0-1 法則</span><span class="stars">★★★★☆</span></div>
+<p class="st">$\mathcal{F}_{0+}$ の事象は確率 $0$ か $1$。系として $\inf\{t\gt0:B_{t}\gt0\}=0$ a.s.、すなわち Brown 運動は直ちに符号を無限回変える。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:508}}</span><span class="ttl">重複対数の法則（Brown 運動）</span><span class="stars">★★★★★</span></div>
+<p class="st">$\displaystyle\limsup_{t\to\infty}\frac{B_{t}}{\sqrt{2t\log\log t}}=1$ a.s.、および $t\to0^{+}$ での局所版。上からは指数マルチンゲールと Borel–Cantelli、下からは独立増分と第二補題で示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:509}}</span><span class="ttl">Donsker の不変原理</span><span class="stars">★★★★★</span></div>
+<p class="st">i.i.d.（平均 $0$・分散 $1$）のランダムウォークを線形補間・スケーリングした過程は $C[0,1]$ 上で Brown 運動に弱収束する。緊密性（Arzelà–Ascoli と最大不等式）と有限次元分布の収束で示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:510}}</span><span class="ttl">Skorokhod の埋め込み定理</span><span class="stars">★★★★★</span></div>
+<p class="st">平均 $0$・分散有限の任意の分布 $\mu$ に対し、停止時刻 $\tau$（$E\tau=\operatorname{Var}\mu$）が存在して $B_{\tau}\sim\mu$。これを用いて Donsker の不変原理と強大数の法則を再証明せよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:511}}</span><span class="ttl">Brown 運動の零点集合</span><span class="stars">★★★★★</span></div>
+<p class="st">$Z=\{t:B_{t}=0\}$ は a.s. 閉・完全・Lebesgue 測度 $0$ で、Hausdorff 次元 $1/2$。局所時間の存在と Lévy の等式 $(|B_{t}|,L_{t})\overset{d}{=}(M_{t}-B_{t},M_{t})$ にも触れよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:512}}</span><span class="ttl">Brown 運動と Dirichlet 問題</span><span class="stars">★★★★★</span></div>
+<p class="st">有界領域 $D$ と $g\in C(\partial D)$ に対し $u(x)=E^{x}[g(B_{\tau_{D}})]$ は $D$ で調和で境界値 $g$ をもつ（正則な境界点で）。平均値性質と強 Markov 性から示し、barrier 条件との関係を述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:513}}</span><span class="ttl">再帰性と次元</span><span class="stars">★★★★★</span></div>
+<p class="st">$d=1,2$ で Brown 運動は再帰的（$d=2$ では点再帰でなく近傍再帰）、$d\ge3$ では過渡的で $|B_{t}|\to\infty$ a.s.。調和関数 $|x|^{2-d}$ とマルチンゲールで示せ。</p></div>
+
+<h3 class="ch">IV-6　確率積分と伊藤解析<span class="rg">{{RANGE}}</span></h3>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:514}}</span><span class="ttl">伊藤積分の構成</span><span class="stars">★★★★★</span></div>
+<p class="st">可予測かつ $E\int_{0}^{T}H_{s}^{2}ds\lt\infty$ なる $H$ に対し $\int_{0}^{t}H\,dB$ を、単純過程からの等長拡張で構成せよ。伊藤の等長性 $E\left[\left(\int H\,dB\right)^{2}\right]=E\int H^{2}ds$ と、連続マルチンゲール性を示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:515}}</span><span class="ttl">局所化と局所マルチンゲール</span><span class="stars">★★★★☆</span></div>
+<p class="st">停止時刻列による局所化で、$\int_{0}^{T}H^{2}ds\lt\infty$ a.s. のみを仮定して伊藤積分が定義され、局所マルチンゲールになることを示せ。局所マルチンゲールだが真のマルチンゲールでない例を挙げよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:516}}</span><span class="ttl">二次変分と共変分</span><span class="stars">★★★★☆</span></div>
+<p class="st">連続局所マルチンゲール $M$ に対し $\langle M\rangle$ が一意に存在して $M^{2}-\langle M\rangle$ が局所マルチンゲール（Doob–Meyer）。分極化により $\langle M,N\rangle$ を定義し、Kunita–Watanabe の不等式を示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:517}}</span><span class="ttl">伊藤の公式</span><span class="stars">★★★★★</span></div>
+<p class="st">$f\in C^{2}$、$X$ を連続セミマルチンゲールとすると
+$f(X_{t})=f(X_{0})+\int_{0}^{t}f'(X)dX+\frac12\int_{0}^{t}f''(X)d\langle X\rangle$。多次元版と時間依存版も述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:518}}</span><span class="ttl">Lévy の特徴づけ定理</span><span class="stars">★★★★★</span></div>
+<p class="st">連続局所マルチンゲール $M$ が $M_{0}=0$, $\langle M\rangle_{t}=t$ をみたせば $M$ は Brown 運動。指数マルチンゲール $\exp(i\theta M_{t}+\theta^{2}t/2)$ に伊藤の公式を適用して示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:519}}</span><span class="ttl">Dambis–Dubins–Schwarz の定理</span><span class="stars">★★★★★</span></div>
+<p class="st">連続局所マルチンゲール $M$（$\langle M\rangle_{\infty}=\infty$）は時間変更された Brown 運動である：$M_{t}=W_{\langle M\rangle_{t}}$。すなわちすべての連続局所マルチンゲールは Brown 運動の時計を変えたものにすぎない。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:520}}</span><span class="ttl">指数マルチンゲールと Novikov の条件</span><span class="stars">★★★★★</span></div>
+<p class="st">$\mathcal{E}(M)_{t}=\exp(M_{t}-\frac12\langle M\rangle_{t})$ は常に正の局所マルチンゲール（したがって優マルチンゲール）。$E\left[e^{\frac12\langle M\rangle_{T}}\right]\lt\infty$（Novikov）ならば真のマルチンゲール。Kazamaki の条件も述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:521}}</span><span class="ttl">Girsanov の定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$dQ=\mathcal{E}(M)_{T}dP$ のもとで、$\tilde B_{t}=B_{t}-\langle B,M\rangle_{t}$ は $Q$-Brown 運動。ドリフトの除去・数理ファイナンスの同値マルチンゲール測度への応用を述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:522}}</span><span class="ttl">マルチンゲール表現定理</span><span class="stars">★★★★★</span></div>
+<p class="st">Brown フィルトレーションに関する任意の $L^{2}$ マルチンゲールは $M_{t}=M_{0}+\int_{0}^{t}H\,dB$ と一意に表される。伊藤積分の像が閉部分空間であり、指数関数の族が稠密であることから示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:523}}</span><span class="ttl">Feynman–Kac の公式</span><span class="stars">★★★★★</span></div>
+<p class="st">$\partial_{t}u=\frac12\Delta u-Vu$, $u(0)=f$ の解は $u(t,x)=E^{x}\left[f(B_{t})\exp\left(-\int_{0}^{t}V(B_{s})ds\right)\right]$。伊藤の公式と局所マルチンゲール性で示し、Schrödinger 半群への応用を述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:524}}</span><span class="ttl">Tanaka の公式と局所時間</span><span class="stars">★★★★★</span></div>
+<p class="st">$|B_{t}-a|=|B_{0}-a|+\int_{0}^{t}\operatorname{sgn}(B_{s}-a)dB_{s}+L_{t}^{a}$ により局所時間 $L^{a}$ が定義され、占有時間公式 $\int_{0}^{t}g(B_{s})ds=\int g(a)L_{t}^{a}da$ が成り立つ。伊藤–Tanaka の公式（凸関数版）も述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:525}}</span><span class="ttl">Stratonovich 積分</span><span class="stars">★★★★☆</span></div>
+<p class="st">$\int H\circ dX=\int H\,dX+\frac12\langle H,X\rangle$ と定義すると、通常の連鎖律 $df(X)=f'(X)\circ dX$ が成り立つ。伊藤積分とのトレードオフ（マルチンゲール性 vs 変換則）を説明せよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:526}}</span><span class="ttl">BDG 不等式（連続版）</span><span class="stars">★★★★★</span></div>
+<p class="st">連続局所マルチンゲールについて $c_{p}E[\langle M\rangle_{T}^{p/2}]\le E[(M_{T}^{*})^{p}]\le C_{p}E[\langle M\rangle_{T}^{p/2}]$（$0\lt p\lt\infty$）。伊藤の公式と good-$\lambda$ 不等式で示せ。</p></div>
+
+<h3 class="ch">IV-7　確率微分方程式<span class="rg">{{RANGE}}</span></h3>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:527}}</span><span class="ttl">強解の存在と一意性</span><span class="stars">★★★★★</span></div>
+<p class="st">$b,\sigma$ が Lipschitz かつ線形増大ならば $dX=b(X)dt+\sigma(X)dB$ は強解を一意にもつ。Picard 反復と Gronwall の不等式で示し、初期値への連続依存性も導け。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:528}}</span><span class="ttl">Yamada–Watanabe の定理</span><span class="stars">★★★★★</span></div>
+<p class="st">弱解の存在＋強一意性 $\Rightarrow$ 強解の存在＋分布の一意性。1 次元で $\sigma$ が $\frac12$-Hölder なら強一意性が成り立つこと（Yamada–Watanabe 条件）も示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:529}}</span><span class="ttl">拡散過程と生成作用素</span><span class="stars">★★★★☆</span></div>
+<p class="st">SDE の解は Markov 過程で、生成作用素は $L=\frac12\sum a_{ij}\partial_{i}\partial_{j}+\sum b_{i}\partial_{i}$（$a=\sigma\sigma^{T}$）。伊藤の公式から $f(X_{t})-\int_{0}^{t}Lf(X_{s})ds$ がマルチンゲールであることを示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:530}}</span><span class="ttl">Kolmogorov の前進・後退方程式</span><span class="stars">★★★★★</span></div>
+<p class="st">推移密度 $p(t,x,y)$ は後退方程式 $\partial_{t}p=L_{x}p$ と前進（Fokker–Planck）方程式 $\partial_{t}p=L_{y}^{*}p$ をみたす。楕円性のもとでの密度の存在（Hörmander 条件を含む）にも触れよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:531}}</span><span class="ttl">Stroock–Varadhan のマルチンゲール問題</span><span class="stars">★★★★★</span></div>
+<p class="st">マルチンゲール問題の解の存在と一意性が、SDE の弱解の存在と分布の一意性に同値であることを示せ。$a$ が連続・正定値・有界なら解が一意であること（Stroock–Varadhan）を述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:532}}</span><span class="ttl">比較定理</span><span class="stars">★★★★☆</span></div>
+<p class="st">1 次元 SDE で $b_{1}\le b_{2}$、$\sigma$ 共通、初期値 $X_{0}^{1}\le X_{0}^{2}$ ならば $X_{t}^{1}\le X_{t}^{2}$ a.s.。局所時間を用いた証明を与えよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:533}}</span><span class="ttl">Ornstein–Uhlenbeck 過程</span><span class="stars">★★★★☆</span></div>
+<p class="st">$dX=-\theta X\,dt+\sigma dB$ を解き、Gauss 過程であること・定常分布 $N(0,\sigma^{2}/2\theta)$・指数エルゴード性を示せ。Mehler の公式と Hermite 関数による生成作用素の対角化も述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:534}}</span><span class="ttl">不変測度の存在と一意性</span><span class="stars">★★★★★</span></div>
+<p class="st">Krylov–Bogolyubov の議論で不変測度の存在を、既約性＋強 Feller 性（Doob の定理）で一意性を示せ。Lyapunov 関数による緊密性の判定も与えよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:535}}</span><span class="ttl">再帰性・過渡性の判定</span><span class="stars">★★★★★</span></div>
+<p class="st">スケール関数と速度測度により 1 次元拡散の再帰性・爆発（Feller の判定条件）を決定せよ。多次元では Lyapunov 関数 $V$ で $LV\le-c\lt0$（コンパクト集合外）ならば正再帰であることを示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:536}}</span><span class="ttl">Malliavin 解析の入口</span><span class="stars">★★★★★</span></div>
+<p class="st">Malliavin 微分 $D$ と Skorokhod 積分 $\delta$ を定義し、部分積分公式 $E[\langle DF,u\rangle]=E[F\delta(u)]$ を示せ。Malliavin 行列が可逆なら密度が存在すること、Hörmander 条件との関係を述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:537}}</span><span class="ttl">Clark–Ocone の公式</span><span class="stars">★★★★★</span></div>
+<p class="st">$F\in\mathbb{D}^{1,2}$ に対し $F=E[F]+\int_{0}^{T}E[D_{t}F\mid\mathcal{F}_{t}]dB_{t}$。マルチンゲール表現定理（大問 {{R:522}}）の被積分関数を明示的に与えるものであることを説明せよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:538}}</span><span class="ttl">Euler–丸山法の収束次数</span><span class="stars">★★★★☆</span></div>
+<p class="st">Lipschitz 係数のもとで Euler–丸山近似は強収束次数 $1/2$、弱収束次数 $1$ をもつ。Milstein スキームが強次数 $1$ を達成すること（Lévy 面積が不要な 1 次元の場合）も示せ。</p></div>
+
+<h3 class="ch">IV-8　Markov 過程<span class="rg">{{RANGE}}</span></h3>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:539}}</span><span class="ttl">Markov 性と推移半群</span><span class="stars">★★★★☆</span></div>
+<p class="st">Markov 性・Chapman–Kolmogorov 方程式・推移半群 $P_{t}$ の対応を定式化せよ。$P_{t}$ が $C_{0}$ 上の正値縮小半群になる条件（Feller 性）を述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:540}}</span><span class="ttl">Feller 半群と生成作用素</span><span class="stars">★★★★★</span></div>
+<p class="st">Feller 半群の生成作用素は最大値原理をみたす稠密に定義された閉作用素であり、逆に Hille–Yosida–Ray の定理により、そのような作用素は Feller 半群を生成する。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:541}}</span><span class="ttl">強 Markov 性と右連続修正</span><span class="stars">★★★★★</span></div>
+<p class="st">Feller 過程は càdlàg 修正をもち、強 Markov 性をみたす。優マルチンゲールの正則化定理を用いて示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:542}}</span><span class="ttl">Dynkin の公式</span><span class="stars">★★★★☆</span></div>
+<p class="st">$E^{x}[f(X_{\tau})]=f(x)+E^{x}\left[\int_{0}^{\tau}Lf(X_{s})ds\right]$（$E\tau\lt\infty$）。応用として、Brown 運動の球からの脱出時間の期待値と脱出位置の分布を計算せよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:543}}</span><span class="ttl">Dirichlet 形式と対称 Markov 過程</span><span class="stars">★★★★★</span></div>
+<p class="st">正則 Dirichlet 形式と対称 Hunt 過程が一対一に対応する（Fukushima の定理、言明）。$\mathcal{E}(u,v)=\frac12\int\nabla u\cdot\nabla v$ が Brown 運動に対応することを確かめ、容量と例外集合の概念を導入せよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:544}}</span><span class="ttl">ポテンシャル論の確率的表現</span><span class="stars">★★★★★</span></div>
+<p class="st">Green 関数 $G(x,y)$、平衡測度、容量を Brown 運動の到達確率で表せ。Kakutani の定理（$D$ の境界点が正則 $\iff$ そこから出発した Brown 運動が直ちに $D^{c}$ に戻る）を示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:545}}</span><span class="ttl">Poisson 過程の特徴づけ</span><span class="stars">★★★★☆</span></div>
+<p class="st">計数過程が定常独立増分・単純（同時ジャンプなし）ならば Poisson 過程である。到着時間間隔が i.i.d. 指数分布であること、および順序統計量による特徴づけも示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:546}}</span><span class="ttl">連続時間 Markov 連鎖と爆発</span><span class="stars">★★★★★</span></div>
+<p class="st">$Q$ 行列から最小過程を構成し、爆発しないための条件（Reuter の判定条件）を与えよ。爆発する例（出生過程 $\lambda_{n}=n^{2}$）を構成せよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:547}}</span><span class="ttl">可逆性と詳細釣り合い</span><span class="stars">★★★★☆</span></div>
+<p class="st">詳細釣り合い $\pi_{i}q_{ij}=\pi_{j}q_{ji}$ $\iff$ 生成作用素が $L^{2}(\pi)$ で自己共役 $\iff$ 過程が時間反転で不変。スペクトルギャップと収束速度の関係も述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:548}}</span><span class="ttl">Doeblin の条件と一様エルゴード性</span><span class="stars">★★★★☆</span></div>
+<p class="st">Doeblin 条件（ある $m$, $\varepsilon$, 測度 $\nu$ で $P^{m}(x,\cdot)\ge\varepsilon\nu$）のもとで、全変動距離が幾何的に減衰する：$\|P^{n}(x,\cdot)-\pi\|_{TV}\le C\rho^{n}$。結合法（coupling）で示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:549}}</span><span class="ttl">Harris の再帰性とエルゴード定理</span><span class="stars">★★★★★</span></div>
+<p class="st">Harris 再帰的な Markov 連鎖は（$\sigma$-有限な）不変測度をもち、正 Harris 再帰なら $\|P^{n}(x,\cdot)-\pi\|_{TV}\to0$。小集合（small set）と分裂法（Nummelin splitting）を用いて示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:550}}</span><span class="ttl">Markov 連鎖の CLT</span><span class="stars">★★★★★</span></div>
+<p class="st">定常・エルゴードな Markov 連鎖について、Poisson 方程式 $(I-P)g=f-\pi f$ が可解ならばマルチンゲール近似により CLT が成り立ち、漸近分散が $\sigma^{2}=\pi(g^{2}-(Pg)^{2})$ で与えられる。</p></div>

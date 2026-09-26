@@ -1,0 +1,161 @@
+<h3 class="ch">III-9　Sobolev 空間と埋め込み<span class="rg">{{RANGE}}</span></h3>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:401}}</span><span class="ttl">Sobolev 空間の定義の同値性</span><span class="stars">★★★★☆</span></div>
+<p class="st">$W^{k,p}$（弱微分）と $H^{k}=H^{k,2}$（Fourier による $(1+|\xi|^{2})^{k/2}\hat u\in L^{2}$）が一致し、ノルムが同値であることを示せ。Bessel ポテンシャル空間 $H^{s,p}$ の定義も与えよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:402}}</span><span class="ttl">Meyers–Serrin の定理（$H=W$）</span><span class="stars">★★★★☆</span></div>
+<p class="st">任意の開集合 $\Omega$ で $C^{\infty}(\Omega)\cap W^{k,p}(\Omega)$ は $W^{k,p}(\Omega)$ で稠密（$p\lt\infty$）。境界の正則性は不要であることが要点。1 の分割と軟化子で示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:403}}</span><span class="ttl">Sobolev の拡張定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$\Omega$ が Lipschitz 境界をもてば、有界線形拡張作用素 $E:W^{k,p}(\Omega)\to W^{k,p}(\mathbb{R}^{n})$ が存在する。半空間での鏡像拡張から始め、Stein の一般化（極大関数を用いる構成）にも触れよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:404}}</span><span class="ttl">トレース定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$s\gt1/2$ のとき $u\mapsto u|_{\{x_{n}=0\}}$ は $H^{s}(\mathbb{R}^{n})\to H^{s-1/2}(\mathbb{R}^{n-1})$ の有界全射。$s=1/2$ では成立しないことも示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:405}}</span><span class="ttl">Sobolev の埋め込み定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$kp\lt n$ なら $W^{k,p}\subset L^{p^{*}}$（$\frac{1}{p^{*}}=\frac1p-\frac kn$）、$kp=n$ なら任意の $q\lt\infty$ に、$kp\gt n$ なら $C^{0,\gamma}$ に埋め込まれる。スケーリングで指数が必然であることも示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:406}}</span><span class="ttl">Morrey の不等式</span><span class="stars">★★★★☆</span></div>
+<p class="st">$p\gt n$ のとき $|u(x)-u(y)|\le C|x-y|^{1-n/p}\|\nabla u\|_{p}$。したがって $W^{1,p}\subset C^{0,1-n/p}$。球上の平均の比較による証明を与えよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:407}}</span><span class="ttl">Rellich–Kondrachov の定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$\Omega$ が有界 Lipschitz 領域、$p\lt n$、$q\lt p^{*}$ ならば $W^{1,p}(\Omega)\hookrightarrow L^{q}(\Omega)$ はコンパクト。$q=p^{*}$ ではコンパクトでない（集中する列）ことも示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:408}}</span><span class="ttl">Poincaré–Wirtinger の不等式</span><span class="stars">★★★★☆</span></div>
+<p class="st">有界連結 Lipschitz 領域で $\|u-u_{\Omega}\|_{p}\le C\|\nabla u\|_{p}$、$W^{1,p}_{0}$ では $\|u\|_{p}\le C\|\nabla u\|_{p}$。最良定数が第一固有値と結びつくこと（$p=2$）も示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:409}}</span><span class="ttl">負の指数の Sobolev 空間</span><span class="stars">★★★★☆</span></div>
+<p class="st">$H^{-s}=(H^{s})^{*}$（$\mathcal{S}'$ 内の実現）であり、$\delta\in H^{-s}$ $\iff s\gt n/2$。$H^{-1}$ が $H^{1}_{0}$ の双対として自然に現れることを弱形式の観点から述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:410}}</span><span class="ttl">Hardy の不等式（Sobolev 版）</span><span class="stars">★★★★★</span></div>
+<p class="st">$1\le p\lt n$ に対し $\left\|\frac{u}{|x|}\right\|_{p}\le\frac{p}{n-p}\|\nabla u\|_{p}$（$u\in C_{c}^{\infty}$）で定数は最良かつ非達成。$p=2$ の場合の Schrödinger 作用素への応用も述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:411}}</span><span class="ttl">Gagliardo–Nirenberg の補間不等式</span><span class="stars">★★★★★</span></div>
+<p class="st">$\|D^{j}u\|_{p}\le C\|D^{m}u\|_{r}^{\theta}\|u\|_{q}^{1-\theta}$（指数はスケーリングで定まる関係をみたす）。例外的な場合（$m-j-n/r$ が非負整数）にも注意して定式化し、証明せよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:412}}</span><span class="ttl">Trudinger–Moser の不等式</span><span class="stars">★★★★★</span></div>
+<p class="st">臨界の場合 $W^{1,n}_{0}(\Omega)\not\subset L^{\infty}$ だが、$\displaystyle\sup_{\|\nabla u\|_{n}\le1}\int_{\Omega}\exp\left(\alpha_{n}|u|^{\frac{n}{n-1}}\right)dx\lt\infty$（$\alpha_{n}=n\omega_{n-1}^{1/(n-1)}$ が最良）。Moser の再配列による証明を与えよ。</p></div>
+
+<h3 class="ch">III-10　群上の調和解析<span class="rg">{{RANGE}}</span></h3>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:413}}</span><span class="ttl">Haar 測度の存在と一意性</span><span class="stars">★★★★★</span></div>
+<p class="st">局所コンパクト群には左不変 Radon 測度が定数倍を除き一意に存在する。存在は Haar の被覆関数による構成、一意性は Fubini による比の計算で示せ。モジュラー関数 $\Delta$ とユニモジュラー性についても述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:414}}</span><span class="ttl">指標群と Pontryagin の双対定理</span><span class="stars">★★★★★</span></div>
+<p class="st">LCA 群 $G$ に対し $\hat G$ は LCA 群で、自然写像 $G\to\hat{\hat G}$ は位相群同型。$\hat{\mathbb{T}}=\mathbb{Z}$, $\hat{\mathbb{Z}}=\mathbb{T}$, $\hat{\mathbb{R}}=\mathbb{R}$, $\widehat{\mathbb{Z}/N}=\mathbb{Z}/N$ を確かめ、コンパクト $\iff$ 双対が離散、を示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:415}}</span><span class="ttl">LCA 群上の Plancherel の定理</span><span class="stars">★★★★★</span></div>
+<p class="st">Haar 測度を適切に正規化すれば $\mathcal{F}:L^{2}(G)\to L^{2}(\hat G)$ はユニタリ。反転公式（$f\in L^{1}$, $\hat f\in L^{1}$）と $L^{1}$ の Gelfand 理論（大問 {{R:223}}）との関係も述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:416}}</span><span class="ttl">Bochner の定理（LCA 版）</span><span class="stars">★★★★★</span></div>
+<p class="st">$G$ 上の連続正定値関数は $\hat G$ 上の有限正測度の Fourier–Stieltjes 変換であり、逆も成り立つ。GNS 構成（大問 {{R:230}}）を用いた証明を与えよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:417}}</span><span class="ttl">スペクトル合成と Wiener の定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$L^{1}(G)$ の閉イデアルとその零点集合の対応を述べ、Wiener のタウバー型定理（零点なし $\Rightarrow$ 稠密）を示せ。$\mathbb{R}^{3}$ の球面はスペクトル合成集合でないこと（Schwartz の反例）にも触れよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:418}}</span><span class="ttl">Peter–Weyl の定理</span><span class="stars">★★★★★</span></div>
+<p class="st">コンパクト群 $G$ の既約ユニタリ表現はすべて有限次元で、行列要素 $\{\sqrt{d_{\pi}}\pi_{ij}\}$ は $L^{2}(G)$ の完全正規直交系をなす。Schur の直交関係と、畳み込み作用素のコンパクト性から導け。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:419}}</span><span class="ttl">SNAG 定理と Stone の定理</span><span class="stars">★★★★★</span></div>
+<p class="st">LCA 群 $G$ の強連続ユニタリ表現は、$\hat G$ 上の射影値測度により $U_{g}=\int_{\hat G}\chi(g)dE(\chi)$ と表される。$G=\mathbb{R}$ の場合が Stone の定理であることを確かめよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:420}}</span><span class="ttl">Weyl の一様分布定理</span><span class="stars">★★★★☆</span></div>
+<p class="st">$(x_{n})$ が $\bmod1$ で一様分布 $\iff$ 任意の $k\neq0$ で $\frac1N\sum e^{2\pi ikx_{n}}\to0$。コンパクト群版（$\frac1N\sum\pi(g_{n})\to0$ が非自明既約表現で成り立つこと）へ一般化せよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:421}}</span><span class="ttl">有限 Abel 群上の Fourier 解析と FFT</span><span class="stars">★★★★☆</span></div>
+<p class="st">$\hat G\cong G$、指標の直交関係、Parseval、循環畳み込み定理を示せ。$\mathbb{Z}/N$ の場合に $\mathcal{F}_{N}^{4}=N^{2}I$ と固有値、Cooley–Tukey による $O(N\log N)$ アルゴリズムを導け。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:422}}</span><span class="ttl">Gauss 和と平方剰余の相互法則</span><span class="stars">★★★★★</span></div>
+<p class="st">$g_{p}=\sum_{n=0}^{p-1}e^{2\pi in^{2}/p}$ について $|g_{p}|=\sqrt p$、さらに $g_{p}=\sqrt p$（$p\equiv1$）、$i\sqrt p$（$p\equiv3\bmod4$）。これを用いて平方剰余の相互法則を証明せよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:423}}</span><span class="ttl">従順性と Følner 条件</span><span class="stars">★★★★★</span></div>
+<p class="st">離散群 $G$ について、不変平均の存在（従順性）$\iff$ Følner 列の存在 $\iff$ 正則表現が自明表現を弱包含する。可換群と有限群が従順、$F_{2}$（自由群）が従順でないことを示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:424}}</span><span class="ttl">性質 (T) と展開グラフ</span><span class="stars">★★★★★</span></div>
+<p class="st">Kazhdan の性質 (T) を定義し、$\mathrm{SL}_{3}(\mathbb{Z})$ が性質 (T) をもつこと（言明）から展開グラフ族が構成できることを示せ。Cheeger–Buser 型の不等式（スペクトルギャップと等周定数）も示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:425}}</span><span class="ttl">球面調和関数と Funk–Hecke の定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$L^{2}(S^{n-1})=\bigoplus_{k}\mathcal{H}_{k}$（$\mathcal{H}_{k}$ は $k$ 次球面調和関数）は $SO(n)$ の既約分解である。Funk–Hecke の公式 $\int_{S^{n-1}}f(\langle\xi,\eta\rangle)Y_{k}(\eta)d\sigma=\lambda_{k}Y_{k}(\xi)$ を示し、球面測度の Fourier 変換（Bessel 関数）を導け。</p></div>
+
+<h3 class="ch">III-11　不確定性・標本化・時間周波数解析<span class="rg">{{RANGE}}</span></h3>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:426}}</span><span class="ttl">Heisenberg の不確定性原理</span><span class="stars">★★★★☆</span></div>
+<p class="st">$\|f\|_{2}=1$ のとき $\left(\int(x-x_{0})^{2}|f|^{2}\right)\left(\int(\xi-\xi_{0})^{2}|\hat f|^{2}\right)\ge\frac{1}{16\pi^{2}}$、等号は Gauss 関数に限る。作用素の交換子 $[X,D]$ による定式化も与えよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:427}}</span><span class="ttl">Hardy の不確定性定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$|f|\le Ce^{-\pi ax^{2}}$, $|\hat f|\le Ce^{-\pi b\xi^{2}}$ とすると、$ab\gt1$ なら $f\equiv0$、$ab=1$ なら $f=ce^{-\pi ax^{2}}$。Phragmén–Lindelöf 型の議論（増大度がちょうど臨界であることに注意）で示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:428}}</span><span class="ttl">Benedicks の定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$|\{f\neq0\}|\lt\infty$ かつ $|\{\hat f\neq0\}|\lt\infty$ ならば $f=0$ a.e.。Poisson の和公式による周期化の議論で示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:429}}</span><span class="ttl">Amrein–Berthier の定量版</span><span class="stars">★★★★★</span></div>
+<p class="st">$|S|,|\Sigma|\lt\infty$ ならば定数 $C(S,\Sigma)$ が存在して
+$\|f\|_{2}\le C\left(\|f\|_{L^{2}(S^{c})}+\|\hat f\|_{L^{2}(\Sigma^{c})}\right)$。Nazarov による定数の明示（$Ce^{C|S||\Sigma|}$）にも触れよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:430}}</span><span class="ttl">Logvinenko–Sereda の定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$\operatorname{supp}\hat f\subset[-W,W]^{n}$ かつ $E$ が相対稠密（各立方体内で一定割合以上の測度をもつ）ならば $\|f\|_{p}\le C\|f\|_{L^{p}(E)}$。帯域制限関数は「疎に見ても全体が見える」。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:431}}</span><span class="ttl">Balian–Low の定理</span><span class="stars">★★★★★</span></div>
+<p class="st">臨界密度 $1$ の Gabor 系 $\{e^{2\pi imx}g(x-n)\}$ が $L^{2}(\mathbb{R})$ の Riesz 基底ならば
+$\left(\int x^{2}|g|^{2}\right)\left(\int\xi^{2}|\hat g|^{2}\right)=\infty$。Zak 変換の巻き数による証明を与えよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:432}}</span><span class="ttl">Zak 変換</span><span class="stars">★★★★★</span></div>
+<p class="st">$Zg(x,\xi)=\sum_{k}g(x-k)e^{2\pi ik\xi}$ は $L^{2}(\mathbb{R})\to L^{2}([0,1]^{2})$ のユニタリで、擬周期条件 $Zg(x+1,\xi)=e^{2\pi i\xi}Zg(x,\xi)$、$Zg(x,\xi+1)=Zg(x,\xi)$ をみたす。Gabor 系の正規直交性が $|Zg|=1$ と同値であることを示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:433}}</span><span class="ttl">フレームの理論</span><span class="stars">★★★★☆</span></div>
+<p class="st">フレーム条件 $A\|f\|^{2}\le\sum|\langle f,e_{j}\rangle|^{2}\le B\|f\|^{2}$ のもとで、フレーム作用素 $S$ は可逆で $f=\sum\langle f,S^{-1}e_{j}\rangle e_{j}$（双対フレーム展開）。タイトフレーム・Riesz 基底との関係も述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:434}}</span><span class="ttl">多重解像度解析と Mallat の定理</span><span class="stars">★★★★★</span></div>
+<p class="st">MRA $\{V_{j}\}$ とスケーリング関数 $\varphi$ から、ウェーブレット $\psi$ を構成し $\{2^{j/2}\psi(2^{j}x-k)\}$ が $L^{2}(\mathbb{R})$ の正規直交基底となることを示せ。Haar・Shannon・Meyer の各例を確認せよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:435}}</span><span class="ttl">Daubechies のコンパクト台ウェーブレット</span><span class="stars">★★★★★</span></div>
+<p class="st">任意の $N$ に対し、コンパクト台をもち $C^{r}$ 級（$r\asymp0.2N$）で消失モーメントを $N$ 個もつ直交ウェーブレットが存在する。フィルタのスペクトル分解（Fejér–Riesz、大問 {{R:324}}）と Cohen の条件による構成を述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:436}}</span><span class="ttl">Landau の必要密度定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$PW_{W}$ の標本化集合の下密度は $2W$ 以上、補間集合の上密度は $2W$ 以下。時間制限・帯域制限作用素の固有値分布（prolate spheroidal 関数）を用いて示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:437}}</span><span class="ttl">Beurling–Malliavin の定理</span><span class="stars">★★★★★</span></div>
+<p class="st">指数型 $\tau$ 以下の型をもつ非零関数が与えられた零点集合をもつための条件（multiplier theorem と radius of completeness）を述べ、$\{e^{i\lambda_{n}x}\}$ の完備性半径が $\Lambda$ の密度で決まることを示せ。</p></div>
+
+<h3 class="ch">III-12　加法的組合せ論への応用<span class="rg">{{RANGE}}</span></h3>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:438}}</span><span class="ttl">Erdős–Turán の不等式</span><span class="stars">★★★★★</span></div>
+<p class="st">列 $(x_{n})$ の食い違い $D_{N}$ について
+$\displaystyle D_{N}\le C\left(\frac1H+\sum_{h=1}^{H}\frac1h\left|\frac1N\sum_{n\le N}e^{2\pi ihx_{n}}\right|\right)$。Fejér 核による指示関数の近似で示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:439}}</span><span class="ttl">van der Corput の差分定理</span><span class="stars">★★★★★</span></div>
+<p class="st">すべての $h\ge1$ で $(x_{n+h}-x_{n})$ が一様分布ならば $(x_{n})$ も一様分布。van der Corput の不等式を示し、系として実係数多項式 $p$（最高次係数が無理数）に対し $(p(n))$ が一様分布することを導け。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:440}}</span><span class="ttl">Weyl 和の評価</span><span class="stars">★★★★★</span></div>
+<p class="st">$\left|\sum_{n\le N}e^{2\pi i\alpha n^{2}}\right|$ を Weyl の差分法で評価し、$\alpha$ の有理近似の分母 $q$ を用いた上界
+$\lesssim N\left(\frac1q+\frac1N+\frac{q}{N^{2}}\right)^{1/2}\log$ 型の評価を導け。Vinogradov の平均値定理にも触れよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:441}}</span><span class="ttl">Roth の定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$A\subset\{1,\dots,N\}$ が 3 項等差数列を含まなければ $|A|=O\left(\frac{N}{\log\log N}\right)$。3 項等差数列の個数の Fourier 表示と、大きな Fourier 係数からの密度増加法で示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:442}}</span><span class="ttl">Behrend の構成</span><span class="stars">★★★★★</span></div>
+<p class="st">3 項等差数列を含まない $A\subset\{1,\dots,N\}$ で $|A|\ge N e^{-C\sqrt{\log N}}$ なるものが存在する。高次元の球面上の格子点を使う構成を与え、Roth の上界との差を述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:443}}</span><span class="ttl">Cauchy–Davenport と Vosper の定理</span><span class="stars">★★★★☆</span></div>
+<p class="st">素数位数の巡回群で $|A+B|\ge\min(p,|A|+|B|-1)$。等号に近い場合の構造（Vosper）も述べよ。Fourier 解析的証明（あるいは組合せ論的証明）を与えよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:444}}</span><span class="ttl">Plünnecke–Ruzsa の不等式</span><span class="stars">★★★★★</span></div>
+<p class="st">$|A+B|\le K|A|$ ならば $|nB-mB|\le K^{n+m}|A|$。Ruzsa の三角不等式 $|A-C|\,|B|\le|A-B|\,|B-C|$ を示し、そこから導け。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:445}}</span><span class="ttl">Bogolyubov–Ruzsa の補題</span><span class="stars">★★★★★</span></div>
+<p class="st">$A\subset\mathbb{Z}/N$ が密度 $\alpha$ をもてば、$2A-2A$ は次元 $O(\alpha^{-2})$・大きさ $\ge cN$ の Bohr 集合を含む。Fourier 解析（大きなスペクトルの有限性）で示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:446}}</span><span class="ttl">Chang の定理</span><span class="stars">★★★★★</span></div>
+<p class="st">密度 $\alpha$ の集合の大きなスペクトル $\Lambda_{\rho}=\{\xi:|\hat{\mathbf{1}_{A}}(\xi)|\ge\rho\alpha N\}$ は、次元 $O(\rho^{-2}\log(1/\alpha))$ の加法的部分空間（の張る空間）に含まれる。Rudin の不等式から導け。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:447}}</span><span class="ttl">Freiman の定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$|A+A|\le K|A|$ なる有限集合 $A\subset\mathbb{Z}$ は、次元と大きさが $K$ のみで抑えられる一般化等差数列に含まれる。Ruzsa の議論（Bogolyubov の補題＋Freiman 同型）の骨格を述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:448}}</span><span class="ttl">Gowers ノルムと逆定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$U^{k}$ ノルムを定義し、$U^{2}$ ノルムが Fourier 係数の $\ell^{4}$ ノルムに一致することを示せ。$U^{3}$ の逆定理（大きい $U^{3}$ ノルムは 2 次位相との相関を意味する）を述べ、Szemerédi の定理との関係を説明せよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:449}}</span><span class="ttl">Szemerédi の定理と Furstenberg の対応原理</span><span class="stars">★★★★★</span></div>
+<p class="st">正の上密度をもつ整数集合は任意の長さの等差数列を含む。Furstenberg の対応原理により、これが多重回帰定理 $\liminf\frac1N\sum_{n}\mu(A\cap T^{-n}A\cap\cdots\cap T^{-(k-1)n}A)\gt0$ と同値であることを示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:450}}</span><span class="ttl">有限体 Kakeya 問題（Dvir の定理）</span><span class="stars">★★★★★</span></div>
+<p class="st">$\mathbb{F}_{q}^{n}$ の Kakeya 集合は $|K|\ge c_{n}q^{n}$ をみたす。多項式法（次数 $\lt q$ の消失多項式の存在と方向微分）による証明を与え、Euclid 版の Kakeya 予想との差異を述べよ。</p></div>

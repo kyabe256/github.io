@@ -1,0 +1,158 @@
+<h3 class="ch">II-13　非線形関数解析<span class="rg">{{RANGE}}</span></h3>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Brouwer の写像度と不動点定理</span><span class="stars">★★★★★</span></div>
+<p class="st">有界開集合 $\Omega\subset\mathbb{R}^{n}$、$f\in C(\overline\Omega)$、$p\notin f(\partial\Omega)$ に対し写像度 $\deg(f,\Omega,p)$ を正則値での $\sum\operatorname{sgn}\det f'$ から構成し、ホモトピー不変性・加法性・正規化を示せ。系として Brouwer の不動点定理と毛玉定理を導け。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Leray–Schauder の写像度</span><span class="stars">★★★★★</span></div>
+<p class="st">Banach 空間の有界開集合上で $I-K$（$K$ はコンパクト写像）に対する写像度を、有限次元近似と Brouwer 写像度の極限として定義し、ホモトピー不変性を示せ。コンパクト性が外せないこと（単位球が可縮）も述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Schaefer の不動点定理（Leray–Schauder の継続原理）</span><span class="stars">★★★★★</span></div>
+<p class="st">$T:X\to X$ がコンパクト連続で、$\{x:x=\lambda Tx,\ 0\le\lambda\le1\}$ が有界ならば $T$ は不動点をもつ。「解が存在すれば有界（アプリオリ評価）$\Rightarrow$ 解が存在する」という非線形楕円型方程式の標準的論法として応用せよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Banach 空間の陰関数定理</span><span class="stars">★★★★☆</span></div>
+<p class="st">$F:U\subset X\times Y\to Z$ が $C^{1}$、$F(x_{0},y_{0})=0$、$D_{y}F(x_{0},y_{0})$ が同型ならば、$x_{0}$ の近傍で $F(x,g(x))=0$ となる $C^{1}$ 写像 $g$ が一意に存在する。縮小写像原理（大問 {{R:173}}）から導け。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Nash–Moser の陰関数定理</span><span class="stars">★★★★★</span></div>
+<p class="st">Fréchet 空間の順滑な尺度（tame）において、微分が「微分の損失」を伴って逆をもつ場合でも陰関数定理が成り立つ（言明）。Newton 法と平滑化作用素の組み合わせで損失を回収する仕組みを説明し、等長埋め込み定理・KAM 理論への応用を述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Browder–Minty の定理</span><span class="stars">★★★★★</span></div>
+<p class="st">反射的 Banach 空間 $X$ 上の単調・半連続・強圧的な作用素 $A:X\to X^{*}$ は全射である。Galerkin 近似と Minty のトリックで示し、$p$-Laplace 方程式 $-\operatorname{div}(|\nabla u|^{p-2}\nabla u)=f$ の弱解の存在に応用せよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Ekeland の変分原理</span><span class="stars">★★★★★</span></div>
+<p class="st">完備距離空間上の下に有界な下半連続関数 $f$ と $\varepsilon\gt0$、$f(u)\le\inf f+\varepsilon$ に対し、$v$ が存在して $f(v)\le f(u)$、$d(u,v)\le1$、かつ $f(w)\gt f(v)-\varepsilon d(v,w)$（$w\neq v$）。系として Caristi の不動点定理との同値性を示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">峠の定理（Ambrosetti–Rabinowitz）</span><span class="stars">★★★★★</span></div>
+<p class="st">$I\in C^{1}(X)$ が Palais–Smale 条件をみたし、$I(0)=0$、$\|u\|=r$ で $I\ge\alpha\gt0$、ある $e$（$\|e\|\gt r$）で $I(e)\le0$ ならば、$c=\inf_{\gamma}\max_{t}I(\gamma(t))\ge\alpha$ は臨界値である。変形補題から示し、半線形楕円型方程式 $-\Delta u=|u|^{p-1}u$ の非自明解の存在に応用せよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Lusternik–Schnirelmann の理論</span><span class="stars">★★★★★</span></div>
+<p class="st">Palais–Smale 条件をみたす偶関数 $I$ の球面上への制限は、少なくとも（球面の種数・Krasnoselskii 種数に応じた）無限個の臨界点対をもつ。種数の性質を示し、有限次元では $\mathbb{R}P^{n-1}$ の LS カテゴリーが $n$ であることから $n$ 対の臨界点を導け。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">角谷の不動点定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$\mathbb{R}^{n}$ のコンパクト凸集合 $K$ 上の上半連続な集合値写像 $F:K\to2^{K}$ で、値が空でない閉凸集合ならば、$x\in F(x)$ なる点が存在する。Brouwer から近似選択で導き、Nash 均衡の存在を系として示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Krasnoselskii の不動点定理</span><span class="stars">★★★★☆</span></div>
+<p class="st">閉凸集合 $M$ 上で $A$ がコンパクト連続、$B$ が縮小で、$Ax+By\in M$（$\forall x,y\in M$）ならば $A+B$ は不動点をもつ。Schauder と Banach の不動点定理の合成として示し、中立型遅延方程式への応用を述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Crandall–Rabinowitz の分岐定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$F(\lambda,0)=0$、$D_{u}F(\lambda_{0},0)$ が指数 $0$ の Fredholm で核が 1 次元 $\langle u_{0}\rangle$、横断条件 $D_{\lambda}D_{u}F(\lambda_{0},0)u_{0}\notin R(D_{u}F)$ が成り立てば、$(\lambda_{0},0)$ から非自明解の $C^{1}$ 曲線が分岐する。Lyapunov–Schmidt 還元と陰関数定理で示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Rabinowitz の大域分岐定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$u=\lambda Lu+H(\lambda,u)$（$L$ コンパクト、$H=o(\|u\|)$）において、$1/\lambda_{0}$ が $L$ の奇数重複度の固有値ならば、$(\lambda_{0},0)$ から出る解の連結成分は非有界であるか、別の分岐点 $(\lambda_{1},0)$ に到達する。Leray–Schauder 写像度の跳びで示せ。</p></div>
+
+<h3 class="ch">II-14　凸解析と最適化<span class="rg">{{RANGE}}</span></h3>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Fenchel–Moreau の定理</span><span class="stars">★★★★☆</span></div>
+<p class="st">局所凸空間上の真凸関数 $f$ について $f^{**}=f$ $\iff$ $f$ は下半連続。一般に $f^{**}$ は $f$ の下半連続凸包である。分離定理（大問 {{R:153}}）で示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Fenchel–Rockafellar の双対定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$f,g$ を凸、$A$ を有界線形とし、ある点で $g$ が $A\operatorname{dom}f$ 上連続ならば
+$\inf_{x}\{f(x)+g(Ax)\}=\max_{y^{*}}\{-f^{*}(A^{*}y^{*})-g^{*}(-y^{*})\}$（右辺は達成される）。Lagrange 双対・線形計画の双対性を特別な場合として含むことを示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">劣微分の和公式（Moreau–Rockafellar）</span><span class="stars">★★★★☆</span></div>
+<p class="st">$f,g$ が真凸で、$\operatorname{dom}f$ のある点で $g$ が連続ならば $\partial(f+g)=\partial f+\partial g$。条件を落とすと包含しか成り立たない例を挙げよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Moreau の分解と近接写像</span><span class="stars">★★★★☆</span></div>
+<p class="st">Hilbert 空間の下半連続真凸関数 $f$ の近接写像 $\operatorname{prox}_{f}$ は非拡大で、$x=\operatorname{prox}_{f}(x)+\operatorname{prox}_{f^{*}}(x)$（Moreau 分解）。$f$ が閉凸集合の指示関数のとき射影定理を、錐のとき Moreau の錐分解を再現することを確かめよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Minty の定理</span><span class="stars">★★★★★</span></div>
+<p class="st">Hilbert 空間上の単調作用素 $T$ が極大単調 $\iff$ $I+T$ が全射。このときレゾルベント $(I+\lambda T)^{-1}$ は一価非拡大である。Brezis の非線形半群理論（$-T$ が生成する縮小半群）への入口を述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Rockafellar の極大単調性定理</span><span class="stars">★★★★★</span></div>
+<p class="st">Banach 空間上の下半連続真凸関数の劣微分 $\partial f$ は極大単調作用素である。さらに、巡回単調な作用素はある凸関数の劣微分に含まれること（Rockafellar の巡回単調性定理）を示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Bishop–Phelps の定理</span><span class="stars">★★★★★</span></div>
+<p class="st">Banach 空間 $X$ において、ノルムを達成する汎関数全体は $X^{*}$ で稠密である。James の定理（大問 {{R:178}}）との対比を述べ、Brøndsted–Rockafellar の定理（$\varepsilon$-劣微分の近似）を示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">無限次元の Lagrange 乗数定理</span><span class="stars">★★★★★</span></div>
+<p class="st">凸計画問題 $\min\{f(x):g(x)\in-C\}$（$C$ は閉凸錐）で Slater 条件（$g(x_{0})\in-\operatorname{int}C$）が成り立てば、最小点 $\bar x$ に対し Lagrange 乗数 $\lambda\in C^{*}$ が存在して $0\in\partial f(\bar x)+\partial(\lambda\circ g)(\bar x)$、$\langle\lambda,g(\bar x)\rangle=0$（Kuhn–Tucker 条件）。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">von Neumann–Sion の minimax 定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$X$ コンパクト凸、$Y$ 凸、$f(\cdot,y)$ が下半連続準凸、$f(x,\cdot)$ が上半連続準凹ならば $\min_{x}\sup_{y}f=\sup_{y}\min_{x}f$。KKM 補題を用いる Sion の証明を与え、二人零和ゲームの von Neumann の定理を系として導け。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Ky Fan の不等式</span><span class="stars">★★★★★</span></div>
+<p class="st">コンパクト凸集合 $K$ 上の $\varphi(x,y)$ が $x$ について下半連続、$y$ について準凹、$\varphi(y,y)\le0$ ならば、$\bar x$ が存在して $\varphi(\bar x,y)\le0$（$\forall y\in K$）。変分不等式の解の存在（Hartman–Stampacchia）を系として導け。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">変分法の直接法</span><span class="stars">★★★★★</span></div>
+<p class="st">反射的 Banach 空間上の強圧的・弱下半連続な汎関数は最小値をもつ。$\int F(x,u,\nabla u)dx$ が $\nabla u$ について凸なら $W^{1,p}$ で弱下半連続であること（Tonelli の定理）を示し、凸性が本質的であること（Young 測度の例）を述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">$\Gamma$ 収束の基本定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$F_{n}\xrightarrow{\Gamma}F$ かつ $\{F_{n}\}$ が同程度強圧的ならば、$\min F_{n}\to\min F$、最小点の集積点は $F$ の最小点。均質化 $\int a(x/\varepsilon)|\nabla u|^{2}\xrightarrow{\Gamma}\int a_{\mathrm{hom}}|\nabla u|^{2}$ と、Modica–Mortola（相分離から周長へ）を例に述べよ。</p></div>
+
+<h3 class="ch">II-15　作用素環の深層<span class="rg">{{RANGE}}</span></h3>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:stine}}</span><span class="ttl">Stinespring の拡張定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$C^{*}$-環 $A$ から $\mathcal{B}(H)$ への完全正値写像 $\varphi$ は、$*$-表現 $\pi:A\to\mathcal{B}(K)$ と有界作用素 $V:H\to K$ によって $\varphi(a)=V^{*}\pi(a)V$ と表される。GNS 構成（大問 {{R:230}}）の一般化として示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Choi の定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$\varphi:M_{n}\to M_{m}$ が完全正値 $\iff$ Choi 行列 $\sum E_{ij}\otimes\varphi(E_{ij})$ が正値 $\iff$ Kraus 表示 $\varphi(X)=\sum V_{k}^{*}XV_{k}$ をもつ。転置写像が正値だが完全正値でないことを確かめ、量子通信路との関係を述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Arveson の拡張定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$C^{*}$-環 $A$ の作用素系 $S\subset A$ 上の完全正値写像 $S\to\mathcal{B}(H)$ は $A$ 全体の完全正値写像に拡張される。$\mathcal{B}(H)$ が作用素系の圏で入射的であること（Hahn–Banach の非可換版）として述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Russo–Dye の定理</span><span class="stars">★★★★★</span></div>
+<p class="st">単位的 $C^{*}$-環の開単位球はユニタリの凸包に含まれ、閉単位球はユニタリの凸包の閉包に等しい。系として、正値写像のノルムは $\|\varphi(1)\|$ に等しいことを示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Kadison の推移性定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$C^{*}$-環の既約表現 $\pi$ について、任意の一次独立な $\xi_{1},\dots,\xi_{n}$ と任意の $\eta_{1},\dots,\eta_{n}$ に対し $\pi(a)\xi_{j}=\eta_{j}$ となる $a$ が存在する。したがって位相的既約性は代数的既約性と一致する。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Murray–von Neumann の型分類</span><span class="stars">★★★★★</span></div>
+<p class="st">射影の同値関係と有限性を定義し、任意の von Neumann 環が I 型・II$_{1}$ 型・II$_{\infty}$ 型・III 型の部分の直和に一意に分解されることを示せ。因子では次元関数の値域が $\{0,1,\dots,n\}$, $[0,1]$, $[0,\infty]$, $\{0,\infty\}$ のいずれかとなることを述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">有限因子のトレース</span><span class="stars">★★★★★</span></div>
+<p class="st">II$_{1}$ 型因子には忠実・正規な正規化トレースがただ一つ存在する。群 von Neumann 環 $L(G)$（$G$ は ICC 群）が II$_{1}$ 因子であること、超有限 II$_{1}$ 因子 $R$ が $M_{2^{n}}$ の帰納極限として得られることを示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:tt}}</span><span class="ttl">冨田–竹崎理論</span><span class="stars">★★★★★</span></div>
+<p class="st">巡回分離ベクトル $\Omega$ をもつ von Neumann 環 $M$ に対し、$S:x\Omega\mapsto x^{*}\Omega$ の極分解 $S=J\Delta^{1/2}$ について $JMJ=M'$、$\Delta^{it}M\Delta^{-it}=M$（言明）。$M=M_{n}$ と忠実状態の場合に具体的に計算し、モジュラー自己同型群と KMS 条件の関係を述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Connes のコサイクル定理と III 型の分類</span><span class="stars">★★★★★</span></div>
+<p class="st">異なる忠実正規状態のモジュラー自己同型群は内部自己同型を法として一致する（Connes のコサイクル微分定理、言明）。Connes の不変量 $S(M)$ と III$_{\lambda}$（$0\le\lambda\le1$）の分類を述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">AF 環と Elliott の分類定理</span><span class="stars">★★★★★</span></div>
+<p class="st">AF 環（有限次元 $C^{*}$-環の帰納極限）は、順序付き $K_{0}$ 群（順序単位付き次元群）によって同型を除き完全に分類される。Bratteli 図形と $K_{0}$ の計算法を述べ、CAR 環の $K_{0}=\mathbb{Z}[1/2]$ を確かめよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Voiculescu の定理</span><span class="stars">★★★★★</span></div>
+<p class="st">可分単位的 $C^{*}$-環の 2 つの忠実な（コンパクト作用素と交わらない）表現は、コンパクト作用素を法として近似的ユニタリ同値である（言明）。Weyl–von Neumann–Berg の定理（正規作用素はコンパクト摂動で対角化できる）を系として導け。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Brown–Douglas–Fillmore の理論</span><span class="stars">★★★★★</span></div>
+<p class="st">本質的正規作用素（$[T^{*},T]$ がコンパクト）は、本質的スペクトル $X\subset\mathbb{C}$ と各穴での Fredholm 指数によってコンパクト摂動・ユニタリ同値を除き分類される（$\operatorname{Ext}(X)\cong\operatorname{Hom}(K^{1}(X),\mathbb{Z})$、言明）。片側シフトの場合に確かめよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:ks}}</span><span class="ttl">Kadison–Singer 問題の解決</span><span class="stars">★★★★★</span></div>
+<p class="st">$\ell^{\infty}$（対角作用素環）上の純状態は $\mathcal{B}(\ell^{2})$ 上に一意に拡張される（Marcus–Spielman–Srivastava 2013）。Weaver の $KS_{2}$ 予想への帰着と、混合特性多項式・インターレーシング族の方法の骨格を述べよ。</p></div>
+
+<h3 class="ch">II-16　作用素論の深層<span class="rg">{{RANGE}}</span></h3>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Sz.-Nagy の膨張定理</span><span class="stars">★★★★★</span></div>
+<p class="st">Hilbert 空間の縮小作用素 $T$ には、より大きな空間上のユニタリ $U$ が存在して $T^{n}=P_{H}U^{n}|_{H}$（$n\ge0$）。最小膨張の一意性も示し、Stinespring の定理（本章前半）との関係を述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">von Neumann の不等式</span><span class="stars">★★★★★</span></div>
+<p class="st">縮小作用素 $T$ と多項式 $p$ に対し $\|p(T)\|\le\sup_{|z|\le1}|p(z)|$。膨張定理から導き、2 変数版（Andô）は成り立つが 3 変数では偽（Varopoulos）であることを述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Andô の定理</span><span class="stars">★★★★★</span></div>
+<p class="st">可換な 2 つの縮小作用素 $T_{1},T_{2}$ は可換なユニタリの組に同時膨張する。系として 2 変数の von Neumann の不等式を導け。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Beurling の不変部分空間定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$H^{2}(\mathbb{D})$ 上のシフト $S$ の非自明な閉不変部分空間は、内部関数 $\theta$ によって $\theta H^{2}$ の形に一意に表される。Wold 分解から示し、内部・外部因子分解（大問 {{R:389}}）との関係を述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Lomonosov の不変部分空間定理</span><span class="stars">★★★★★</span></div>
+<p class="st">無限次元複素 Banach 空間上の作用素 $T$ が、非零コンパクト作用素と可換な非スカラー作用素と可換ならば、$T$ は非自明な超不変部分空間をもつ。Schauder の不動点定理（大問 {{R:184}}）を用いた証明を完成させよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Aronszajn–Smith の定理</span><span class="stars">★★★★★</span></div>
+<p class="st">無限次元 Banach 空間上のコンパクト作用素は非自明な閉不変部分空間をもつ。Hilbert 空間の場合に有限次元近似と極限論法で示し、Lomonosov の定理がこれを含むことを確かめよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">不変部分空間問題の反例</span><span class="stars">★★★★★</span></div>
+<p class="st">非自明な閉不変部分空間をもたない有界作用素が存在する Banach 空間がある（Enflo 1976/87, Read 1984、言明）。$\ell^{1}$ 上に反例があること（Read）を述べ、Hilbert 空間では未解決（本書執筆時点の状況を含め）であることの意味を説明せよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Weyl–von Neumann の定理</span><span class="stars">★★★★★</span></div>
+<p class="st">可分 Hilbert 空間上の自己共役作用素 $A$ と $\varepsilon\gt0$ に対し、Hilbert–Schmidt ノルム $\lt\varepsilon$ の自己共役作用素 $K$ が存在して $A+K$ は純点スペクトル（対角化可能）。絶対連続スペクトルが Hilbert–Schmidt 摂動では壊れ、トレースクラス摂動では壊れない（大問 {{R:296}}）ことと対比せよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Riesz 射影とスペクトルの分離</span><span class="stars">★★★★☆</span></div>
+<p class="st">$\sigma(T)=\sigma_{1}\sqcup\sigma_{2}$（閉集合）ならば $P=\frac{1}{2\pi i}\oint_{\gamma}(\lambda-T)^{-1}d\lambda$ は $T$ と可換な冪等作用素で、$X=\operatorname{Ran}P\oplus\ker P$、$\sigma(T|_{\operatorname{Ran}P})=\sigma_{1}$。孤立固有値の代数的重複度を $P$ の階数で定義せよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Rota のモデル定理</span><span class="stars">★★★★★</span></div>
+<p class="st">スペクトル半径 $\lt1$ の作用素 $T$ は、$\ell^{2}(H)$ 上の後退シフトの不変部分空間への制限に相似である。系として、$r(T)\lt1$ なる作用素は同値ノルムのもとで縮小作用素に相似であることを示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Sz.-Nagy–Foias の関数モデル</span><span class="stars">★★★★★</span></div>
+<p class="st">完全非ユニタリな縮小作用素は、特性関数 $\Theta_{T}$（作用素値の内部関数）を用いたモデル空間 $H^{2}(E)\ominus\Theta_{T}H^{2}(E')$ 上の圧縮シフトにユニタリ同値である（言明）。スカラーの場合 $K_{\theta}=H^{2}\ominus\theta H^{2}$ 上の圧縮シフトについて、スペクトルが $\theta$ の零点と特異台で決まることを示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">準三角作用素と Apostol–Foias–Voiculescu</span><span class="stars">★★★★★</span></div>
+<p class="st">準三角作用素（有限階射影の増大列でほぼ不変にできる作用素）の定義を述べ、$T$ が準三角 $\iff$ $T-\lambda$ が半 Fredholm となる $\lambda$ について指数が非負（言明）。Halmos の問題群との関係を説明せよ。</p></div>

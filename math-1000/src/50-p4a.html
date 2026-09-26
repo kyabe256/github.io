@@ -1,0 +1,168 @@
+<div class="partbox">
+<h2 class="part" style="break-before:auto">第 IV 部　確率論<span class="en">PROBABILITY THEORY &mdash; 751 to 1000</span></h2>
+<p class="part-lead">測度論の上に独立性という一語を足すと、まったく新しい世界が立ち上がる。0-1 法則、大数の法則、中心極限定理、マルチンゲール、Brown 運動、確率積分 ― そして第 III 部の Fourier 解析が特性関数として再登場する。</p>
+</div>
+
+<h3 class="ch">IV-1　独立性と 0-1 法則<span class="rg">{{RANGE}}</span></h3>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:451}}</span><span class="ttl">Kolmogorov の拡張定理</span><span class="stars">★★★★★</span></div>
+<p class="st">整合的な有限次元分布族に対し、それを周辺分布にもつ確率測度が積空間 $\mathbb{R}^{T}$ 上に一意に存在する。Carathéodory の拡張と、コンパクト性による可算加法性の検証を行え。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:452}}</span><span class="ttl">$\pi$-$\lambda$ 定理と独立性の判定</span><span class="stars">★★★★☆</span></div>
+<p class="st">Dynkin の $\pi$-$\lambda$ 定理を示し、生成する $\pi$ 系の上で独立性が成り立てば生成 $\sigma$-加法族でも成り立つことを導け。分布関数・特性関数による独立性の判定も述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:453}}</span><span class="ttl">Borel–Cantelli の補題</span><span class="stars">★★★★☆</span></div>
+<p class="st">$\sum P(A_{n})\lt\infty\Rightarrow P(\limsup A_{n})=0$。独立なら $\sum P(A_{n})=\infty\Rightarrow P(\limsup A_{n})=1$。さらに Kochen–Stone の第二補題（独立性なしの部分的逆）も示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:454}}</span><span class="ttl">Kolmogorov の 0-1 法則</span><span class="stars">★★★★☆</span></div>
+<p class="st">独立列の末尾 $\sigma$-加法族の事象は確率 $0$ か $1$。応用として $\sum X_{n}$ の収束、$\limsup S_{n}/a_{n}$ が定数であることを示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:455}}</span><span class="ttl">Hewitt–Savage の 0-1 法則</span><span class="stars">★★★★★</span></div>
+<p class="st">i.i.d. 列に対する交換可能事象は確率 $0$ か $1$。末尾 $\sigma$-加法族より真に大きいことを、$\{S_{n}=0\ \text{が無限回}\}$ の例で確認せよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:456}}</span><span class="ttl">Kolmogorov の三級数定理</span><span class="stars">★★★★★</span></div>
+<p class="st">独立列 $X_{n}$ について $\sum X_{n}$ が a.s. 収束 $\iff$ ある（任意の）$c\gt0$ で $\sum P(|X_{n}|\gt c)$, $\sum E[X_{n}^{c}]$, $\sum\operatorname{Var}(X_{n}^{c})$ がすべて収束（$X^{c}$ は切断）。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:457}}</span><span class="ttl">Kolmogorov の最大不等式</span><span class="stars">★★★★☆</span></div>
+<p class="st">独立・平均 $0$・二乗可積分のとき $P\left(\max_{k\le n}|S_{k}|\ge\lambda\right)\le\frac{\operatorname{Var}(S_{n})}{\lambda^{2}}$。Doob の不等式（大問 {{R:493}}）との関係、および逆向き不等式（Kolmogorov の第二不等式）も示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:458}}</span><span class="ttl">Lévy の不等式と対称化</span><span class="stars">★★★★☆</span></div>
+<p class="st">対称独立列について $P\left(\max_{k\le n}|S_{k}|\gt\lambda\right)\le2P(|S_{n}|\gt\lambda)$。対称化の技法（独立コピーとの差）と、対称化前後の評価の関係を整理せよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:459}}</span><span class="ttl">Ottaviani の不等式</span><span class="stars">★★★★☆</span></div>
+<p class="st">独立列について $P\left(\max_{k\le n}|S_{k}|\gt2\lambda\right)\le\frac{P(|S_{n}|\gt\lambda)}{1-\max_{k}P(|S_{n}-S_{k}|\gt\lambda)}$。対称性を仮定しない最大値評価としての役割を述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:460}}</span><span class="ttl">独立級数の収束の同値性</span><span class="stars">★★★★★</span></div>
+<p class="st">独立列の部分和について、a.s. 収束・確率収束・分布収束の三者は同値である（Lévy）。マルチンゲール収束または特性関数のいずれかで示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:461}}</span><span class="ttl">Rademacher 級数と Khinchin の不等式</span><span class="stars">★★★★☆</span></div>
+<p class="st">$\sum\varepsilon_{n}a_{n}$ が a.s. 収束 $\iff\sum a_{n}^{2}\lt\infty$。さらに $\left\|\sum\varepsilon_{n}a_{n}\right\|_{p}\asymp_{p}\left(\sum a_{n}^{2}\right)^{1/2}$（Khinchin）と劣 Gauss 評価を示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:462}}</span><span class="ttl">Paley–Zygmund の不等式</span><span class="stars">★★★★☆</span></div>
+<p class="st">$Z\ge0$、$0\le\theta\le1$ に対し $P(Z\gt\theta EZ)\ge(1-\theta)^{2}\frac{(EZ)^{2}}{E[Z^{2}]}$。第二モーメント法の基本道具として、ランダムグラフ・ランダム級数への応用を述べよ。</p></div>
+
+<h3 class="ch">IV-2　収束概念と大数の法則<span class="rg">{{RANGE}}</span></h3>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:463}}</span><span class="ttl">収束概念の階層</span><span class="stars">★★★★☆</span></div>
+<p class="st">a.s. 収束 $\Rightarrow$ 確率収束 $\Rightarrow$ 分布収束、$L^{p}$ 収束 $\Rightarrow$ 確率収束。逆はすべて偽（反例）。確率収束する列は a.s. 収束部分列をもつことも示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:464}}</span><span class="ttl">一様可積分性と Vitali の収束定理</span><span class="stars">★★★★☆</span></div>
+<p class="st">$X_{n}\to X$（確率）かつ $\{X_{n}\}$ 一様可積分 $\iff$ $L^{1}$ 収束。$\sup_{n}E[|X_{n}|^{1+\delta}]\lt\infty$ が十分条件であることも示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:465}}</span><span class="ttl">弱大数の法則</span><span class="stars">★★★★☆</span></div>
+<p class="st">i.i.d. で $E|X|\lt\infty$ ならば $S_{n}/n\to EX$（確率）。さらに $nP(|X|\gt n)\to0$ のみを仮定した切断版（必要十分条件）も示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:466}}</span><span class="ttl">Kolmogorov の強大数の法則</span><span class="stars">★★★★★</span></div>
+<p class="st">i.i.d. で $E|X|\lt\infty$ ならば $S_{n}/n\to EX$ a.s.、$E|X|=\infty$ ならば $\limsup|S_{n}|/n=\infty$ a.s.。切断と三級数定理（大問 {{R:456}}）、Kronecker の補題で示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:467}}</span><span class="ttl">Etemadi の証明</span><span class="stars">★★★★★</span></div>
+<p class="st">対毎独立・同分布・$E|X|\lt\infty$ のみで強大数の法則が成り立つ。部分列 $n_{k}=\lfloor\alpha^{k}\rfloor$ と単調性による Etemadi の議論を再構成せよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:468}}</span><span class="ttl">Marcinkiewicz–Zygmund の強法則</span><span class="stars">★★★★★</span></div>
+<p class="st">$0\lt p\lt2$ とする。i.i.d. で $E|X|^{p}\lt\infty$（$1\le p\lt2$ のとき $EX=0$）$\iff$ $S_{n}/n^{1/p}\to0$ a.s.。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:469}}</span><span class="ttl">Glivenko–Cantelli の定理</span><span class="stars">★★★★☆</span></div>
+<p class="st">経験分布関数について $\sup_{x}|F_{n}(x)-F(x)|\to0$ a.s.。Vapnik–Chervonenkis 理論による一般化（VC クラス上の一様大数の法則）も述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:470}}</span><span class="ttl">Kronecker の補題と級数版強法則</span><span class="stars">★★★★☆</span></div>
+<p class="st">$b_{n}\uparrow\infty$、$\sum x_{n}/b_{n}$ 収束 $\Rightarrow$ $\frac1{b_{n}}\sum_{k\le n}x_{k}\to0$。これと三級数定理から独立列に対する $\frac{S_{n}-ES_{n}}{b_{n}}\to0$ a.s. の十分条件を導け。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:471}}</span><span class="ttl">重複対数の法則</span><span class="stars">★★★★★</span></div>
+<p class="st">i.i.d.、$EX=0$、$EX^{2}=\sigma^{2}$ のとき
+$\displaystyle\limsup_{n}\frac{S_{n}}{\sqrt{2\sigma^{2}n\log\log n}}=1$ a.s.（Hartman–Wintner）。Brown 運動版（大問 {{R:508}}）から不変原理で導く道筋も述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:472}}</span><span class="ttl">Portmanteau 定理</span><span class="stars">★★★★☆</span></div>
+<p class="st">分布収束の同値条件（有界連続関数・閉集合・開集合・境界が零測度の集合・一様連続関数）をすべて示せ。距離化（Lévy–Prohorov 距離）についても述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:473}}</span><span class="ttl">Prohorov の定理</span><span class="stars">★★★★★</span></div>
+<p class="st">Polish 空間上の確率測度族について、緊密 $\iff$ 相対弱コンパクト。Helly の選出定理を一般化する形で示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:474}}</span><span class="ttl">Skorokhod の表現定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$\mu_{n}\Rightarrow\mu$（Polish 空間）ならば、共通の確率空間上に $X_{n}\sim\mu_{n}$, $X\sim\mu$ で $X_{n}\to X$ a.s. となるものが構成できる。分布収束を a.s. 収束に「持ち上げる」技法である。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:475}}</span><span class="ttl">連続写像定理と Slutsky の定理</span><span class="stars">★★★★☆</span></div>
+<p class="st">$X_{n}\Rightarrow X$、$g$ が $P_{X}$-a.e. 連続ならば $g(X_{n})\Rightarrow g(X)$。$Y_{n}\to c$（確率）のとき $X_{n}+Y_{n}\Rightarrow X+c$, $X_{n}Y_{n}\Rightarrow cX$（Slutsky）。</p></div>
+
+<h3 class="ch">IV-3　特性関数と中心極限定理<span class="rg">{{RANGE}}</span></h3>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:476}}</span><span class="ttl">特性関数と反転公式</span><span class="stars">★★★★☆</span></div>
+<p class="st">$\varphi(t)=E[e^{itX}]$ は一様連続・正定値・$\varphi(0)=1$。反転公式
+$\displaystyle F(b)-F(a)=\lim_{T\to\infty}\frac{1}{2\pi}\int_{-T}^{T}\frac{e^{-ita}-e^{-itb}}{it}\varphi(t)dt$（連続点）と一意性定理を示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:477}}</span><span class="ttl">Lévy の連続性定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$\varphi_{n}\to\varphi$ 各点かつ $\varphi$ が $0$ で連続ならば、$\varphi$ はある分布の特性関数で $\mu_{n}\Rightarrow\mu$。緊密性の導出（$\varphi$ の $0$ での連続性から）が要点。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:478}}</span><span class="ttl">Bochner の定理（確率論版）</span><span class="stars">★★★★★</span></div>
+<p class="st">$\varphi$ が連続・正定値・$\varphi(0)=1$ $\iff$ ある確率分布の特性関数。Pólya の十分条件（偶・凸・$\varphi(0)=1$・$\varphi(\infty)=0$）も示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:479}}</span><span class="ttl">Lindeberg–Feller の中心極限定理</span><span class="stars">★★★★★</span></div>
+<p class="st">三角配列が Lindeberg 条件をみたせば $\sum_{k}X_{n,k}\Rightarrow N(0,1)$。逆に、微小性（Feller 条件）のもとで CLT が成り立てば Lindeberg 条件が必要。Lindeberg の置換法による証明も与えよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:480}}</span><span class="ttl">Lyapunov の条件と古典的 CLT</span><span class="stars">★★★★☆</span></div>
+<p class="st">Lyapunov 条件 $\Rightarrow$ Lindeberg 条件。系として i.i.d.・有限分散の CLT $\frac{S_{n}-n\mu}{\sigma\sqrt n}\Rightarrow N(0,1)$ を特性関数の Taylor 展開で示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:481}}</span><span class="ttl">Berry–Esseen の定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$E|X|^{3}\lt\infty$ のとき $\sup_{x}\left|P\left(\frac{S_{n}}{\sigma\sqrt n}\le x\right)-\Phi(x)\right|\le\frac{C\rho}{\sigma^{3}\sqrt n}$。Esseen の平滑化不等式を示して導け。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:482}}</span><span class="ttl">Cramér–Wold の方法と多次元 CLT</span><span class="stars">★★★★☆</span></div>
+<p class="st">$X_{n}\Rightarrow X$（$\mathbb{R}^{d}$）$\iff$ 任意の $\theta$ で $\langle\theta,X_{n}\rangle\Rightarrow\langle\theta,X\rangle$。これを用いて多次元 CLT と、共分散行列による極限の決定を示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:483}}</span><span class="ttl">Lévy–Khinchin の公式</span><span class="stars">★★★★★</span></div>
+<p class="st">無限分解可能分布の特性関数は
+$\displaystyle\log\varphi(t)=ibt-\frac{\sigma^{2}t^{2}}{2}+\int\left(e^{itx}-1-\frac{itx}{1+x^{2}}\right)d\nu(x)$（$\nu$ は Lévy 測度）と一意に表される。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:484}}</span><span class="ttl">安定分布と一般化 CLT</span><span class="stars">★★★★★</span></div>
+<p class="st">$\alpha$-安定分布の特性関数を決定し、i.i.d. 和の正規化極限として現れる分布は安定分布に限ることを示せ。裾が $x^{-\alpha}$ 型の場合の収束域（domain of attraction）も述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:485}}</span><span class="ttl">Poisson 極限定理と Le Cam の不等式</span><span class="stars">★★★★☆</span></div>
+<p class="st">$\mathrm{Bin}(n,\lambda/n)\Rightarrow\mathrm{Poisson}(\lambda)$。定量版として全変動距離の評価 $d_{TV}\le\sum p_{i}^{2}$（Le Cam）、および Chen–Stein 法による一般化を述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:486}}</span><span class="ttl">Cramér の分解定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$X+Y$ が正規分布に従い $X,Y$ が独立ならば、$X,Y$ はともに正規分布（退化を含む）。Hadamard の因数分解（大問 {{R:98}}）を特性関数の整関数拡張に適用して示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:487}}</span><span class="ttl">Marcinkiewicz の定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$\varphi=e^{P}$（$P$ は多項式）が特性関数ならば $\deg P\le2$、すなわち正規分布（または退化）に限る。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:488}}</span><span class="ttl">Chernoff 限界と Cramér の定理（1 次元）</span><span class="stars">★★★★☆</span></div>
+<p class="st">$P(S_{n}/n\ge a)\le e^{-nI(a)}$（$I=\Lambda^{*}$ は Legendre 変換）。さらに下からの評価（傾斜変換）により $\frac1n\log P(S_{n}/n\approx a)\to-I(a)$ を示せ。</p></div>
+
+<h3 class="ch">IV-4　条件付き期待値とマルチンゲール<span class="rg">{{RANGE}}</span></h3>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:489}}</span><span class="ttl">条件付き期待値の存在と性質</span><span class="stars">★★★★☆</span></div>
+<p class="st">Radon–Nikodym の定理（あるいは $L^{2}$ 射影）により $E[X\mid\mathcal{G}]$ が a.s. 一意に存在する。線形性・単調性・タワー則・取り出し則・Jensen の不等式を示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:490}}</span><span class="ttl">正則条件付き分布</span><span class="stars">★★★★★</span></div>
+<p class="st">Polish 空間値の確率変数に対し、正則条件付き分布（確率核）が存在する。存在の障害（一般の可測空間では存在しないこと）にも触れよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:491}}</span><span class="ttl">Doob 分解と二次変分</span><span class="stars">★★★★☆</span></div>
+<p class="st">劣マルチンゲールは $X_{n}=M_{n}+A_{n}$（$M$ マルチンゲール、$A$ 可予測増加、$A_{0}=0$）と一意に分解される。$L^{2}$ マルチンゲールの $\langle M\rangle_{n}$ と $E[M_{n}^{2}]=E[\langle M\rangle_{n}]$ も示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:492}}</span><span class="ttl">任意停止定理</span><span class="stars">★★★★☆</span></div>
+<p class="st">有界停止時刻、または一様可積分性のもとで $E[M_{\tau}]=E[M_{0}]$。応用として、単純ランダムウォークの破産問題・Wald の等式を導け。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:493}}</span><span class="ttl">Doob の最大不等式</span><span class="stars">★★★★☆</span></div>
+<p class="st">非負劣マルチンゲールについて $\lambda P(\max_{k\le n}X_{k}\ge\lambda)\le E[X_{n}\mathbf{1}]$、および $p\gt1$ で $\|\max_{k\le n}X_{k}\|_{p}\le\frac{p}{p-1}\|X_{n}\|_{p}$。$p=1$ では $L\log L$ が必要であることも示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:494}}</span><span class="ttl">上向き横断不等式とマルチンゲール収束定理</span><span class="stars">★★★★★</span></div>
+<p class="st">横断回数 $U_{n}[a,b]$ について $(b-a)E[U_{n}]\le E[(X_{n}-a)^{-}]$。したがって $\sup_{n}E|X_{n}|\lt\infty$ なるマルチンゲールは a.s. 収束する。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:495}}</span><span class="ttl">一様可積分マルチンゲール</span><span class="stars">★★★★☆</span></div>
+<p class="st">$M$ が一様可積分 $\iff$ $L^{1}$ 収束する $\iff$ $M_{n}=E[M_{\infty}\mid\mathcal{F}_{n}]$ と閉じられる。$L^{p}$（$p\gt1$）有界なら自動的に一様可積分であることも示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:496}}</span><span class="ttl">Lévy の 0-1 法則</span><span class="stars">★★★★☆</span></div>
+<p class="st">$E[X\mid\mathcal{F}_{n}]\to E[X\mid\mathcal{F}_{\infty}]$ a.s. かつ $L^{1}$。系として Kolmogorov の 0-1 法則（大問 {{R:454}}）と、条件付き Borel–Cantelli（Lévy の拡張）を導け。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:497}}</span><span class="ttl">逆マルチンゲールと強大数の法則</span><span class="stars">★★★★★</span></div>
+<p class="st">逆マルチンゲールは常に a.s. かつ $L^{1}$ 収束する。$E[X_{1}\mid\mathcal{E}_{n}]$（$\mathcal{E}_{n}$ は交換可能 $\sigma$-加法族）に適用して強大数の法則を再証明し、de Finetti の定理にも触れよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:498}}</span><span class="ttl">Burkholder–Davis–Gundy の不等式</span><span class="stars">★★★★★</span></div>
+<p class="st">$0\lt p\lt\infty$ に対し $c_{p}E\left[\langle M\rangle_{\infty}^{p/2}\right]\le E\left[(M^{*})^{p}\right]\le C_{p}E\left[\langle M\rangle_{\infty}^{p/2}\right]$。離散版を good-$\lambda$ 不等式で示し、連続時間への拡張を述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:499}}</span><span class="ttl">Azuma–Hoeffding の不等式</span><span class="stars">★★★★☆</span></div>
+<p class="st">差分が $|M_{k}-M_{k-1}|\le c_{k}$ で抑えられるマルチンゲールについて $P(|M_{n}-M_{0}|\ge\lambda)\le2\exp\left(-\frac{\lambda^{2}}{2\sum c_{k}^{2}}\right)$。McDiarmid の有界差分不等式への応用を述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:500}}</span><span class="ttl">Doob の $h$ 変換と密度過程</span><span class="stars">★★★★★</span></div>
+<p class="st">$Q\ll P$（$\mathcal{F}_{n}$ 上）のとき密度過程 $Z_{n}=\frac{dQ|_{\mathcal{F}_{n}}}{dP|_{\mathcal{F}_{n}}}$ はマルチンゲールで、$Q\ll P$（$\mathcal{F}_{\infty}$ 上）$\iff$ $\{Z_{n}\}$ が一様可積分。$h$ 変換による条件付き過程の構成も述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:501}}</span><span class="ttl">Kakutani の二分律</span><span class="stars">★★★★★</span></div>
+<p class="st">積測度 $P=\prod P_{n}$, $Q=\prod Q_{n}$（$Q_{n}\ll P_{n}$）について、$P$ と $Q$ は同値であるか互いに特異であるかのいずれかであり、前者 $\iff\prod\int\sqrt{dQ_{n}/dP_{n}}\,dP_{n}\gt0$（Hellinger 積分）。</p></div>

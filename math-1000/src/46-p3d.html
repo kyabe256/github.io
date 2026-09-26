@@ -1,0 +1,159 @@
+<h3 class="ch">III-13　振動積分と制限問題<span class="rg">{{RANGE}}</span></h3>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">停留位相法</span><span class="stars">★★★★★</span></div>
+<p class="st">$\phi$ が $\operatorname{supp}a$ 上で唯一の非退化臨界点 $x_{0}$ をもつとき
+$\displaystyle\int e^{i\lambda\phi(x)}a(x)dx=\left(\frac{2\pi}{\lambda}\right)^{n/2}\frac{e^{i\lambda\phi(x_{0})+\frac{i\pi}{4}\operatorname{sgn}\phi''(x_{0})}}{|\det\phi''(x_{0})|^{1/2}}a(x_{0})+O(\lambda^{-n/2-1})$。Morse の補題と Gauss 積分の解析接続で示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">van der Corput の補題（振動積分）</span><span class="stars">★★★★☆</span></div>
+<p class="st">$|\phi^{(k)}|\ge1$ on $[a,b]$ ならば $\left|\int_{a}^{b}e^{i\lambda\phi}\right|\le c_{k}\lambda^{-1/k}$（$k=1$ では $\phi'$ の単調性も仮定）。定数 $c_{k}$ が区間に依らないことが本質である。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">曲面測度の Fourier 減衰</span><span class="stars">★★★★★</span></div>
+<p class="st">$S\subset\mathbb{R}^{n}$ を Gauss 曲率が至る所非零のコンパクト超曲面、$\sigma$ をその上の滑らかな測度とすると $|\hat\sigma(\xi)|\lesssim|\xi|^{-(n-1)/2}$。曲率が $k$ 個の方向でのみ非零なら指数は $k/2$ であることも示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:st}}</span><span class="ttl">Stein–Tomas の制限定理</span><span class="stars">★★★★★</span></div>
+<p class="st">上の $S$ について $\|\hat f|_{S}\|_{L^{2}(\sigma)}\le C\|f\|_{L^{p}(\mathbb{R}^{n})}$（$1\le p\le\frac{2(n+1)}{n+3}$）。$TT^{*}$ 論法、$\hat\sigma$ の減衰、Stein の解析族補間（大問 {{R:340}}）で示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Knapp の例と制限予想</span><span class="stars">★★★★★</span></div>
+<p class="st">曲面の小さな帽子上に Fourier 台をもつ関数（Knapp の例）を用いて、$L^{p}\to L^{q}(S)$ 制限評価の必要条件 $\frac{n+1}{q}\le(n-1)\left(1-\frac1p\right)$、$p\lt\frac{2n}{n+1}$ を導け。$q=2$ で Stein–Tomas が最良であること、および制限予想を述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">2 次元の制限予想（Fefferman–Zygmund）</span><span class="stars">★★★★★</span></div>
+<p class="st">$n=2$、$S$ を円周とすると、$1\le p\lt4/3$、$q=\frac13p'$ で制限評価が成り立つ。$\widehat{fd\sigma}^{2}=\widehat{(fd\sigma)*(fd\sigma)}$ と畳み込み測度の評価を用いる Córdoba の議論で示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Strichartz 評価は制限定理である</span><span class="stars">★★★★★</span></div>
+<p class="st">放物面 $\{(\xi,|\xi|^{2})\}$ に対する延長作用素の評価 $\|e^{it\Delta}f\|_{L^{\frac{2(n+2)}{n}}_{t,x}}\lesssim\|f\|_{2}$ が、Stein–Tomas の放物面版の双対にほかならないことを示せ。指数 $\frac{2(n+2)}{n}$ がスケーリング $u(x,t)\mapsto u(\lambda x,\lambda^{2}t)$ から一意に定まることも確かめよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Carleson–Sjölin の定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$\mathbb{R}^{2}$ における曲率条件をみたす相関数をもつ振動積分作用素 $T_{\lambda}f(x)=\int e^{i\lambda\phi(x,y)}a(x,y)f(y)dy$ について $\|T_{\lambda}f\|_{q}\lesssim\lambda^{-2/q}\|f\|_{p}$（$q=3p'$, $q\gt4$）。系として Bochner–Riesz 予想の 2 次元の場合を導け。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Hörmander の $L^{2}$ 評価</span><span class="stars">★★★★★</span></div>
+<p class="st">相関数の混合 Hessian $\det\partial_{x}\partial_{y}\phi\neq0$ ならば $\|T_{\lambda}\|_{L^{2}\to L^{2}}\lesssim\lambda^{-n/2}$。$T_{\lambda}T_{\lambda}^{*}$ の核を部分積分で評価し、Schur 判定を適用して示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Kakeya 集合と制限予想の関係（Bourgain）</span><span class="stars">★★★★★</span></div>
+<p class="st">制限予想が成り立てば Kakeya 集合の Hausdorff 次元は $n$ であることを示せ（Kakeya 予想が制限予想より弱い）。Wolff の毛髪ブラシ論法による Kakeya 次元の下界 $\frac{n+2}{2}$ を述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">双線形制限評価</span><span class="stars">★★★★★</span></div>
+<p class="st">横断的な 2 つの曲面片 $S_{1},S_{2}$ について $\|\widehat{f_{1}d\sigma_{1}}\,\widehat{f_{2}d\sigma_{2}}\|_{L^{q}}\lesssim\|f_{1}\|_{2}\|f_{2}\|_{2}$ が $q\gt\frac{n+3}{n+1}$ で成り立つ（Tao、言明）。$n=2$、$q=2$ の場合を直接計算で示し、双線形評価から線形評価への移行法（Tao–Vargas–Vega）を説明せよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">多重線形 Kakeya（Bennett–Carbery–Tao, Guth）</span><span class="stars">★★★★★</span></div>
+<p class="st">$n$ 個の横断的な管族について $\left\|\prod_{j=1}^{n}\left(\sum_{T\in\mathbb{T}_{j}}\mathbf{1}_{T}\right)^{\frac{1}{n-1}}\right\|_{L^{1}}\lesssim\prod_{j}(\#\mathbb{T}_{j})^{\frac{1}{n-1}}$（Guth による端点版、言明）。Loomis–Whitney 不等式が軸平行の場合であることを示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:dec}}</span><span class="ttl">decoupling 定理と Vinogradov の平均値定理</span><span class="stars">★★★★★</span></div>
+<p class="st">放物面の $\delta^{1/2}$ 板への分解について $\|f\|_{L^{p}}\lesssim_{\varepsilon}\delta^{-\varepsilon}\left(\sum_{\theta}\|f_{\theta}\|_{L^{p}}^{2}\right)^{1/2}$（$2\le p\le\frac{2(n+1)}{n-1}$、Bourgain–Demeter、言明）。モーメント曲線版から Vinogradov の平均値定理（Bourgain–Demeter–Guth）が従う仕組みを説明せよ。</p></div>
+
+<h3 class="ch">III-14　各点収束の深層<span class="rg">{{RANGE}}</span></h3>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:lt}}</span><span class="ttl">Carleson の定理（Lacey–Thiele の証明）</span><span class="stars">★★★★★</span></div>
+<p class="st">Carleson 極大作用素 $\mathcal{C}f(x)=\sup_{N}\left|\int_{-\infty}^{N}\hat f(\xi)e^{2\pi ix\xi}d\xi\right|$ は $L^{2}(\mathbb{R})$ から弱 $L^{2}$ へ有界。時間周波数タイルへの離散化、質量とエネルギーの補題、木（tree）の選択アルゴリズムによる Lacey–Thiele の証明を完成させよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">双線形 Hilbert 変換の有界性</span><span class="stars">★★★★★</span></div>
+<p class="st">$H(f,g)(x)=\mathrm{pv}\int f(x-t)g(x+t)\frac{dt}{t}$ は $L^{p}\times L^{q}\to L^{r}$（$\frac1r=\frac1p+\frac1q$、$1\lt p,q\le\infty$、$\frac23\lt r\lt\infty$）で有界（Lacey–Thiele）。Calderón の予想の解決として、時間周波数解析の骨格を述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Kolmogorov–Seliverstov–Plessner の定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$f\in L^{2}(\mathbb{T})$ ならば $S_{N}f(x)=o(\sqrt{\log N})$ a.e.。Menshov–Rademacher（大問 {{R:309}}）の三角系版として示し、Carleson 以前の最良結果としての位置づけを述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Hunt の定理と Sjölin の拡張</span><span class="stars">★★★★★</span></div>
+<p class="st">$1\lt p\lt\infty$ で Carleson 極大作用素は $L^{p}$ 有界（Hunt）であり、$f\in L\log L\log\log L$ でも a.e. 収束する（Sjölin）。補間と外挿の議論で示し、Antonov による $L\log L\log\log\log L$ への改良を述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Konyagin の発散例</span><span class="stars">★★★★★</span></div>
+<p class="st">$\varphi(u)=o(u\sqrt{\log u/\log\log u})$ ならば、$\varphi(|f|)\in L^{1}$ でありながら Fourier 級数が至る所発散する $f$ が存在する（言明）。Kolmogorov の構成（大問 {{R:307}}）の精密化として、正の結果（Antonov）との隙間を述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Schrödinger 方程式の各点収束（Carleson の問題）</span><span class="stars">★★★★★</span></div>
+<p class="st">$n=1$ で $f\in H^{s}(\mathbb{R})$、$s\ge1/4$ ならば $e^{it\Delta}f(x)\to f(x)$（$t\to0$）a.e.。極大評価 $\|\sup_{0\lt t\lt1}|e^{it\Delta}f|\|_{L^{4}(B)}\lesssim\|f\|_{H^{1/4}}$ を $TT^{*}$ と振動積分の評価で示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Dahlberg–Kenig の反例</span><span class="stars">★★★★★</span></div>
+<p class="st">$s\lt1/4$ では $e^{it\Delta}f\to f$ a.e. が成り立たない $f\in H^{s}(\mathbb{R})$ が存在する。高周波の波束が小さい時間で正の測度の集合に大きな値をとる構成を与えよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">高次元の Carleson 問題</span><span class="stars">★★★★★</span></div>
+<p class="st">$n\ge2$ では $s\gt\frac{n}{2(n+1)}$ が十分（Du–Guth–Li $n=2$, Du–Zhang 一般、言明）で、$s\lt\frac{n}{2(n+1)}$ では反例がある（Bourgain）。decoupling と多項式分割がどう使われるかを概説せよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Bourgain の円極大関数定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$\mathbb{R}^{2}$ の円周平均の極大関数は $p\gt2$ で $L^{p}$ 有界（Bourgain 1986、言明）。高次元の Stein の定理（大問 {{R:362}}）の手法が $n=2$ で破綻する理由（$\hat\sigma$ の減衰が $|\xi|^{-1/2}$ しかない）と、局所平滑化による証明（Mockenhaupt–Seeger–Sogge）の骨格を述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">強極大関数と Jessen–Marcinkiewicz–Zygmund</span><span class="stars">★★★★★</span></div>
+<p class="st">軸平行な長方形上の平均による強極大関数 $M_{s}$ は $L^{p}$（$p\gt1$）で有界だが弱 $(1,1)$ ではなく、$L(\log L)^{n-1}$ の関数について Lebesgue 微分定理が成り立つ（Jessen–Marcinkiewicz–Zygmund）。一方、任意方向の長方形では $L^{\infty}$ ですら微分定理が破れる（Besicovitch 集合）ことを示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">方向極大関数（Córdoba–Fefferman, Strömberg）</span><span class="stars">★★★★★</span></div>
+<p class="st">有限個（$N$ 個）の方向の長方形に関する極大関数の $L^{2}$ ノルムは $\asymp\log N$ で増大する（Strömberg / Katz）。Lacunary な方向集合では一様有界（Nagel–Stein–Wainger）であることを Littlewood–Paley 理論で示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Bochner–Riesz 平均の各点収束</span><span class="stars">★★★★★</span></div>
+<p class="st">$\delta\gt0$ のとき、$f\in L^{p}(\mathbb{R}^{n})$、$2\le p\lt\frac{2n}{n-1-2\delta}$ に対し Bochner–Riesz 平均は a.e. 収束する（Carbery–Rubio de Francia–Vega、言明）。重み付き $L^{2}$ 評価 $\int|T^{\delta}_{*}f|^{2}|x|^{-\alpha}\lesssim\int|f|^{2}|x|^{-\alpha}$ への帰着を説明せよ。</p></div>
+
+<h3 class="ch">III-15　解析的整数論の調和解析<span class="rg">{{RANGE}}</span></h3>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">円問題（Gauss–Sierpiński）</span><span class="stars">★★★★★</span></div>
+<p class="st">$N(x)=\#\{(m,n):m^{2}+n^{2}\le x\}$ について $N(x)=\pi x+O(x^{1/3})$。Poisson の和公式（大問 {{R:333}}）を平滑化した指示関数に適用し、円板の Fourier 変換（Bessel 関数）の減衰を使って示せ。Hardy による $\Omega(x^{1/4})$ も述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Voronoi の約数問題</span><span class="stars">★★★★★</span></div>
+<p class="st">$\sum_{n\le x}d(n)=x\log x+(2\gamma-1)x+O(x^{1/3}\log x)$。Dirichlet の双曲線法による $O(\sqrt x)$ から出発し、Voronoi の和公式（$\zeta^{2}$ の関数等式の反映）を用いて改良せよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">van der Corput の指数対の方法</span><span class="stars">★★★★★</span></div>
+<p class="st">$|f''|\asymp\lambda$ on $[N,2N]$ ならば $\sum_{n}e(f(n))\ll N\lambda^{1/2}+\lambda^{-1/2}$。A 過程（Weyl 差分）と B 過程（Poisson 和＋停留位相）による指数対 $(k,l)$ の生成を定式化し、$\zeta(\frac12+it)\ll t^{1/6}\log t$ を導け。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Vinogradov の方法と素数上の指数和</span><span class="stars">★★★★★</span></div>
+<p class="st">$|\alpha-a/q|\le q^{-2}$ のとき $\sum_{n\le N}\Lambda(n)e(n\alpha)\ll(Nq^{-1/2}+N^{4/5}+N^{1/2}q^{1/2})\log^{4}N$。Vaughan の恒等式による Type I・Type II 和への分解と Cauchy–Schwarz で示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Vinogradov の三素数定理</span><span class="stars">★★★★★</span></div>
+<p class="st">十分大きな奇数は 3 つの素数の和で表され、表し方の数は $\mathfrak{S}(N)\frac{N^{2}}{2\log^{3}N}(1+o(1))$（$\mathfrak{S}(N)\gg1$）。円周法の大弧（Siegel–Walfisz）と小弧（前問）で示せ。Helfgott による完全解決（弱 Goldbach）にも触れよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Hardy–Littlewood の円周法と Waring 問題</span><span class="stars">★★★★★</span></div>
+<p class="st">$s\ge2^{k}+1$ のとき、$n=x_{1}^{k}+\cdots+x_{s}^{k}$ の解の個数は $\mathfrak{S}(n)\frac{\Gamma(1+1/k)^{s}}{\Gamma(s/k)}n^{s/k-1}(1+o(1))$。Weyl の不等式（大問 {{R:440}}）と Hua の補題で小弧を、特異級数と特異積分で大弧を処理せよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Montgomery–Vaughan の Hilbert 型不等式</span><span class="stars">★★★★★</span></div>
+<p class="st">$\delta$-分離した実数 $\lambda_{r}$ について $\left|\sum_{r\neq s}\frac{a_{r}\bar a_{s}}{\lambda_{r}-\lambda_{s}}\right|\le\frac{\pi}{\delta}\sum|a_{r}|^{2}$。系として Dirichlet 多項式の平均値定理 $\int_{0}^{T}|\sum a_{n}n^{-it}|^{2}dt=\sum|a_{n}|^{2}(T+O(n))$ を導け。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Turán–Kubilius の不等式</span><span class="stars">★★★★☆</span></div>
+<p class="st">加法的関数 $f$ について $\frac1x\sum_{n\le x}|f(n)-A(x)|^{2}\ll\sum_{p^{k}\le x}\frac{|f(p^{k})|^{2}}{p^{k}}$（$A(x)=\sum_{p^{k}\le x}f(p^{k})p^{-k}(1-p^{-1})$）。系として Hardy–Ramanujan の定理（$\omega(n)$ は正規位数 $\log\log n$ をもつ）を導け。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Erdős–Kac の定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$\displaystyle\frac1x\#\left\{n\le x:\frac{\omega(n)-\log\log n}{\sqrt{\log\log n}}\le t\right\}\to\Phi(t)$。素因数の有無をほぼ独立な Bernoulli 変数とみなし、モーメント法（篩による打ち切り）で示せ。確率論の CLT（大問 {{R:479}}）の数論版である。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Selberg の篩</span><span class="stars">★★★★★</span></div>
+<p class="st">$\Lambda^{2}$ 篩：$S(\mathcal{A},\mathcal{P},z)\le\frac{X}{G(z)}+\sum_{d\lt z^{2}}3^{\omega(d)}|r_{d}|$（$G(z)=\sum_{d\lt z,\,d\mid P(z)}\prod_{p\mid d}\frac{g(p)}{1-g(p)}$）。二次形式の最小化として重みを決定し、Brun–Titchmarsh の定理 $\pi(x;q,a)\le\frac{(2+o(1))x}{\varphi(q)\log(x/q)}$ を導け。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Brun の定理</span><span class="stars">★★★★★</span></div>
+<p class="st">双子素数の個数は $\pi_{2}(x)\ll\frac{x}{\log^{2}x}$ であり、したがって双子素数の逆数和 $\sum\left(\frac1p+\frac1{p+2}\right)$ は収束する。Brun の組合せ篩（または Selberg 篩）で示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">有界素数間隔（Zhang–Maynard）</span><span class="stars">★★★★★</span></div>
+<p class="st">$\liminf(p_{n+1}-p_{n})\lt\infty$（Zhang 2013）、さらに任意の $m$ に対し $\liminf(p_{n+m}-p_{n})\lt\infty$（Maynard–Tao、言明）。GPY 篩の重みと Bombieri–Vinogradov の定理（第 I 部 I-17）の役割を述べ、多次元篩の重みによる Maynard の改良を説明せよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Linnik の分散法と Barban–Davenport–Halberstam</span><span class="stars">★★★★★</span></div>
+<p class="st">$\displaystyle\sum_{q\le Q}\sum_{(a,q)=1}\left(\psi(x;q,a)-\frac{x}{\varphi(q)}\right)^{2}\sim Qx\log x$（$x(\log x)^{-A}\le Q\le x$、Montgomery–Hooley）。大篩不等式と Siegel–Walfisz で示せ。</p></div>
+
+<h3 class="ch">III-16　非可換調和解析<span class="rg">{{RANGE}}</span></h3>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Stone–von Neumann の定理</span><span class="stars">★★★★★</span></div>
+<p class="st">Heisenberg 群 $\mathbb{H}^{n}$ の既約ユニタリ表現で中心に非自明な指標 $e^{2\pi i\lambda t}$ で作用するものは、Schrödinger 表現 $\rho_{\lambda}$ にユニタリ同値である。Weyl の交換関係 $U(a)V(b)=e^{2\pi i\lambda ab}V(b)U(a)$ の表現の一意性として定式化し、Fourier 変換が $\rho_{\lambda}$ の自己同型を与えることを示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Weyl 変換と Weyl 量子化</span><span class="stars">★★★★★</span></div>
+<p class="st">Weyl 量子化 $a^{w}(x,D)$ は $L^{2}(\mathbb{R}^{2n})$（表象）から Hilbert–Schmidt 作用素への等長同型（定数倍）を与え、Moyal 積 $a\#b$ が作用素の合成に対応する。Wigner 分布 $W(f,f)$ との双対性を示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">メタプレクティック表現</span><span class="stars">★★★★★</span></div>
+<p class="st">シンプレクティック群 $\mathrm{Sp}(2n,\mathbb{R})$ の各元 $S$ に対し、$\rho(Sz)=\mu(S)\rho(z)\mu(S)^{-1}$ をみたすユニタリ $\mu(S)$ が符号を除き一意に存在し、これがメタプレクティック群（二重被覆）の表現を与える（Segal–Shale–Weil）。Fourier 変換・Gauss 乗算・拡大が生成元であることを示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">$\mathrm{SL}(2,\mathbb{R})$ の既約ユニタリ表現の分類（Bargmann）</span><span class="stars">★★★★★</span></div>
+<p class="st">$\mathrm{SL}(2,\mathbb{R})$ の既約ユニタリ表現は、自明表現・主系列・補系列・離散系列 $D_{k}^{\pm}$（$k\ge2$）・極限離散系列に分類される。Lie 環の $(\mathfrak{g},K)$-加群として $K=\mathrm{SO}(2)$ の重みと Casimir 作用素の固有値から決定せよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">$\mathrm{SL}(2,\mathbb{R})$ の Plancherel 定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$L^{2}(\mathrm{SL}(2,\mathbb{R}))$ の既約分解には主系列（Plancherel 密度 $\nu\tanh(\pi\nu/2)$ 型）と離散系列（形式次数 $k-1$）が現れ、補系列は現れない（Harish-Chandra、言明）。$\mathbb{H}=G/K$ 上の球 Plancherel 公式から主系列部分を導け。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">双曲平面の Helgason–Fourier 変換</span><span class="stars">★★★★★</span></div>
+<p class="st">$\mathbb{H}$ 上の $\tilde f(s,b)=\int f(z)\overline{e^{(1/2+is)\langle z,b\rangle}}d\mu(z)$ について反転公式と Plancherel 公式を示し、Plancherel 密度 $s\tanh(\pi s)$ を Harish-Chandra の $c$ 関数 $|c(s)|^{-2}$ として求めよ。Laplacian のスペクトルが $[1/4,\infty)$ であることを結論せよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:trace}}</span><span class="ttl">Selberg の跡公式</span><span class="stars">★★★★★</span></div>
+<p class="st">コンパクト双曲曲面 $X=\Gamma\backslash\mathbb{H}$ の Laplacian の固有値 $\lambda_{j}=\frac14+r_{j}^{2}$ と閉測地線の長さ $\ell(\gamma)$ について
+$\sum_{j}h(r_{j})=\frac{\operatorname{area}X}{4\pi}\int h(r)r\tanh(\pi r)dr+\sum_{\gamma}\frac{\ell(\gamma_{0})}{2\sinh(\ell(\gamma)/2)}\hat h(\ell(\gamma))$（言明）。Weyl 法則と素測地線定理を系として導け。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Gelfand 対と球関数</span><span class="stars">★★★★★</span></div>
+<p class="st">$(G,K)$ が Gelfand 対（$L^{1}(K\backslash G/K)$ が可換）である $\iff$ 各既約ユニタリ表現の $K$-不変ベクトルは高々 1 次元。Gelfand の対称性判定（反自己同型 $\theta$ が両側剰余類を保てば可換）を示し、球関数が $L^{1}(K\backslash G/K)$ の指標であることを示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Kunze–Stein 現象</span><span class="stars">★★★★★</span></div>
+<p class="st">$G=\mathrm{SL}(2,\mathbb{R})$ では $L^{2}*L^{p}\subset L^{2}$（$1\le p\lt2$）が成り立つ（Abel 群では偽）。主系列の係数の減衰（Harish-Chandra の $\Xi$ 関数）を用いて示し、非従順性との関係を述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Mackey の誘導表現の理論</span><span class="stars">★★★★★</span></div>
+<p class="st">閉部分群からの誘導表現を定義し、Frobenius の相互律・誘導の推移性を示せ。半直積 $N\rtimes H$（$N$ Abel）の既約表現が、$\hat N$ 上の $H$-軌道と安定化群の表現から誘導で得られること（Mackey 機械、正則な場合、言明）を述べ、Euclid 運動群と Poincaré 群（Wigner の分類）に適用せよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Kirillov の軌道法</span><span class="stars">★★★★★</span></div>
+<p class="st">単連結冪零 Lie 群 $N$ の既約ユニタリ表現は、余随伴軌道 $\mathfrak{n}^{*}/N$ と一対一に対応し、指標公式 $\operatorname{tr}\pi(\exp X)=\int_{\mathcal{O}}e^{i\langle\ell,X\rangle}d\beta$（言明）が成り立つ。Heisenberg 群の場合に Stone–von Neumann と整合することを確かめよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Harish-Chandra の $c$ 関数と Gindikin–Karpelevich 公式</span><span class="stars">★★★★★</span></div>
+<p class="st">階数 1 対称空間の球関数の漸近 $\varphi_{\lambda}(a_{t})\sim c(\lambda)e^{(i\lambda-\rho)t}$ の係数 $c(\lambda)$ が Γ 関数の積で与えられる（Gindikin–Karpelevich、言明）。$\mathbb{H}$ の場合に超幾何関数の接続公式（本書 I-20）から直接計算せよ。</p></div>

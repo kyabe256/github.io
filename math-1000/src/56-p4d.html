@@ -1,0 +1,157 @@
+<h3 class="ch">IV-13　極値理論と経験過程<span class="rg">{{RANGE}}</span></h3>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Fisher–Tippett–Gnedenko の定理</span><span class="stars">★★★★★</span></div>
+<p class="st">i.i.d. の最大値 $M_{n}$ について $\frac{M_{n}-b_{n}}{a_{n}}$ が非退化な分布 $G$ に収束するならば、$G$ は Gumbel・Fréchet・Weibull のいずれか（一般化極値分布）の型に属する。max-安定性の関数方程式 $G(a_{k}x+b_{k})^{k}=G(x)$ を解いて示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">最大値の吸引域</span><span class="stars">★★★★★</span></div>
+<p class="st">$F$ が Fréchet 型の吸引域に属する $\iff$ $1-F$ が指数 $-\alpha$ で正則変動（Gnedenko）。Gumbel 型については von Mises の十分条件 $\frac{d}{dx}\frac{1-F}{F'}\to0$ を示し、正規分布が Gumbel 型に属し $a_{n}=(2\log n)^{-1/2}$ となることを計算せよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">順序統計量と Rényi の表現</span><span class="stars">★★★★☆</span></div>
+<p class="st">指数分布 i.i.d. の順序統計量 $E_{(1)}\lt\cdots\lt E_{(n)}$ について、間隔 $(n-k+1)(E_{(k)}-E_{(k-1)})$ は i.i.d. 標準指数分布（Rényi）。一様分布の順序統計量が $\left(\frac{\Gamma_{k}}{\Gamma_{n+1}}\right)_{k}$（$\Gamma_{k}$ は指数和）と同分布であることを導け。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">経験過程の Donsker の定理</span><span class="stars">★★★★★</span></div>
+<p class="st">一様経験過程 $\sqrt n(F_{n}(t)-t)$ は $D[0,1]$（Skorokhod 位相）で Brown 橋に弱収束する。系として Kolmogorov–Smirnov 統計量の極限分布 $P(\sup|B^{0}_{t}|\le x)=1-2\sum_{k\ge1}(-1)^{k-1}e^{-2k^{2}x^{2}}$ を反射原理（大問 {{R:506}}）の反復で導け。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Komlós–Major–Tusnády の強近似</span><span class="stars">★★★★★</span></div>
+<p class="st">平均 $0$・分散 $1$・指数モーメントをもつ i.i.d. 和 $S_{n}$ は、Brown 運動 $B$ と同一空間上に $|S_{n}-B_{n}|=O(\log n)$ a.s. となるように構成できる（言明）。Skorokhod 埋め込み（大問 {{R:510}}）による $O(n^{1/4}(\log n)^{1/2}(\log\log n)^{1/4})$ と比較し、$O(\log n)$ が最良であることを述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Erdős–Rényi の法則</span><span class="stars">★★★★★</span></div>
+<p class="st">公正な硬貨投げの最初の $n$ 回に現れる表の最長連の長さ $R_{n}$ について $R_{n}/\log_{2}n\to1$ a.s.。より一般に、窓幅 $c\log n$ の移動平均の最大値の極限を Cramér の大偏差関数（大問 {{R:552}}）で表す Erdős–Rényi の法則を示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Rice の公式</span><span class="stars">★★★★★</span></div>
+<p class="st">滑らかな定常 Gauss 過程 $X_{t}$ が $[0,T]$ で水準 $u$ を上向きに横切る回数の期待値は $\frac{T}{2\pi}\sqrt{\frac{\lambda_{2}}{\lambda_{0}}}e^{-u^{2}/2\lambda_{0}}$（$\lambda_{j}$ はスペクトルモーメント）。Kac–Rice の計数公式から示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Gauss 過程の最大値の極限</span><span class="stars">★★★★★</span></div>
+<p class="st">定常 Gauss 列の共分散が $r(n)\log n\to0$ ならば、最大値は i.i.d. の場合と同じ Gumbel 極限をもつ（Berman の条件）。Normal comparison lemma（Slepian 型の比較、大問 {{R:582}}）を用いて示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">定常 Gauss 過程の連続性（Dudley–Fernique）</span><span class="stars">★★★★★</span></div>
+<p class="st">定常 Gauss 過程が連続な標本路をもつ $\iff$ 標準距離に関する Dudley のエントロピー積分が有限（Fernique）。十分性は大問 {{R:581}}、必要性は Sudakov の下界と定常性（Slepian の補題）から示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:tal}}</span><span class="ttl">Talagrand の majorizing measure 定理</span><span class="stars">★★★★★</span></div>
+<p class="st">中心 Gauss 過程について $E\sup_{t\in T}X_{t}\asymp\gamma_{2}(T,d)$（$\gamma_{2}$ は generic chaining 汎関数）。上界（Fernique）は chaining から、下界（Talagrand）は Sudakov の不等式と分割の構成から示す骨格を述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Strassen の関数型重複対数の法則</span><span class="stars">★★★★★</span></div>
+<p class="st">$Z_{n}(t)=\frac{B(nt)}{\sqrt{2n\log\log n}}$ の集積点の集合は、a.s. で Strassen の球 $K=\{f\in H^{1}_{0}:\int_{0}^{1}\dot f^{2}\le1\}$ に一致する。Schilder の定理（大問 {{R:558}}）と Borel–Cantelli で示し、$\limsup\int_{0}^{1}Z_{n}(t)dt=\frac{1}{\sqrt3}$ などを導け。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Chung の重複対数の法則（下極限）</span><span class="stars">★★★★★</span></div>
+<p class="st">$\displaystyle\liminf_{t\to\infty}\sqrt{\frac{\log\log t}{t}}\max_{s\le t}|B_{s}|=\frac{\pi}{\sqrt8}$ a.s.。$\max_{s\le1}|B_{s}|$ の小球確率 $P(\max|B|\le\varepsilon)\sim\frac4\pi e^{-\pi^{2}/8\varepsilon^{2}}$ を Dirichlet 固有値展開で求めて示せ。</p></div>
+
+<h3 class="ch">IV-14　確率偏微分方程式とランダム場<span class="rg">{{RANGE}}</span></h3>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">多次元 Kolmogorov の連続性定理</span><span class="stars">★★★★☆</span></div>
+<p class="st">$\{X_{x}\}_{x\in[0,1]^{d}}$ が $E|X_{x}-X_{y}|^{\alpha}\le C|x-y|^{d+\beta}$ をみたせば、任意の $\gamma\lt\beta/\alpha$ について $\gamma$-Hölder な修正をもつ。Garsia–Rodemich–Rumsey の補題による証明を与えよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Walsh の確率積分</span><span class="stars">★★★★★</span></div>
+<p class="st">時空白色雑音 $\dot W$ に対し、martingale measure としての確率積分 $\int_{0}^{t}\int_{\mathbb{R}^{d}}f(s,y)W(ds,dy)$ を構成し、等長性 $E|\int\int f\,dW|^{2}=E\int\int f^{2}dsdy$ とマルチンゲール性を示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">確率熱方程式の mild 解</span><span class="stars">★★★★★</span></div>
+<p class="st">$d=1$ で $\partial_{t}u=\frac12\partial_{x}^{2}u+\sigma(u)\dot W$（$\sigma$ Lipschitz）は mild 解 $u(t,x)=\int p_{t}(x-y)u_{0}(y)dy+\int_{0}^{t}\int p_{t-s}(x-y)\sigma(u(s,y))W(ds,dy)$ を一意にもつ。Picard 反復と BDG（大問 {{R:526}}）で示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">確率熱方程式の正則性と次元の壁</span><span class="stars">★★★★★</span></div>
+<p class="st">$d=1$ の加法ノイズ熱方程式の解は時間 $\frac14-$、空間 $\frac12-$ Hölder 連続。一方 $d\ge2$ では $\int_{0}^{t}\|p_{s}\|_{L^{2}}^{2}ds=\infty$ となり関数値の解が存在しない（超関数としてのみ存在）ことを示し、これが特異 SPDE の困難の起源であることを述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:gff}}</span><span class="ttl">Gauss 自由場</span><span class="stars">★★★★★</span></div>
+<p class="st">領域 $D\subset\mathbb{R}^{d}$ 上の Gauss 自由場 $h$ を、共分散が Dirichlet Green 関数 $G_{D}$ である中心 Gauss 超関数として構成し、$h\in H^{-\varepsilon}_{loc}$ a.s. だが $h\notin L^{2}_{loc}$、$d=2$ で等角不変であることを示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">GFF の領域 Markov 性</span><span class="stars">★★★★★</span></div>
+<p class="st">$U\subset D$ について $h_{D}=h_{U}+\varphi$、$h_{U}$ は $U$ 上の GFF で $\varphi$ は $U$ 上調和、両者は独立。$H^{1}_{0}(D)=H^{1}_{0}(U)\oplus\text{Harm}(U)$ の直交分解から示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">放物型 Anderson 模型と間欠性</span><span class="stars">★★★★★</span></div>
+<p class="st">$\partial_{t}u=\kappa\Delta u+\xi(x)u$（$\xi$ はランダムポテンシャル）の解のモーメント $E[u(t,x)^{p}]$ の Lyapunov 指数 $\gamma_{p}$ について $\gamma_{p}/p$ が $p$ について狭義増加であること（間欠性）を Feynman–Kac（大問 {{R:523}}）と Hölder の不等式で示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">KPZ 方程式と Cole–Hopf 変換</span><span class="stars">★★★★★</span></div>
+<p class="st">$\partial_{t}h=\frac12\partial_{x}^{2}h+\frac12(\partial_{x}h)^{2}+\dot W$ は、確率熱方程式 $\partial_{t}Z=\frac12\partial_{x}^{2}Z+Z\dot W$ の解 $Z\gt0$ から $h=\log Z$ で定義される（Bertini–Giacomin、言明）。$Z\gt0$（Mueller の比較定理）と、弱非対称排他過程からの収束を述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">正則構造の理論（Hairer）</span><span class="stars">★★★★★</span></div>
+<p class="st">正則構造・モデル・モデル化された分布を定義し、再構成定理（モデル化された分布から一意な超関数を得る）を述べよ（言明）。KPZ・$\Phi^{4}_{3}$ の局所解の構成と繰り込みの役割を概説せよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Da Prato–Debussche の方法と $\Phi^{4}_{2}$</span><span class="stars">★★★★★</span></div>
+<p class="st">$\mathbb{T}^{2}$ 上の確率量子化方程式 $\partial_{t}u=\Delta u-{:}u^{3}{:}+\dot\xi$ について、$u=Z+v$（$Z$ は線形解）と分けると $v$ は Wick 積 ${:}Z^{k}{:}$ を係数とする決定論的方程式をみたし、$v$ の局所解が存在することを示せ。Wick 積の構成（Hermite 多項式と Gauss 計算）を含めよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">確率 Navier–Stokes 方程式のエルゴード性</span><span class="stars">★★★★★</span></div>
+<p class="st">$\mathbb{T}^{2}$ 上の Navier–Stokes 方程式を少数の Fourier モードのみでの加法ノイズで駆動すると、不変測度は一意（Hairer–Mattingly、言明）。漸近的強 Feller 性と Malliavin 解析（大問 {{R:536}}）の役割を説明せよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Dawson–Watanabe 超過程</span><span class="stars">★★★★★</span></div>
+<p class="st">分枝 Brown 運動の粒子数 $\to\infty$・質量 $\to0$ の極限として、測度値過程（超 Brown 運動）が得られ、Laplace 汎関数 $E e^{-\langle X_{t},\phi\rangle}=e^{-\langle X_{0},v_{t}\rangle}$（$\partial_{t}v=\frac12\Delta v-v^{2}$）で特徴づけられる（言明）。$d=1$ で密度をもち、それが確率熱方程式 $\partial_{t}u=\frac12\Delta u+\sqrt u\dot W$ をみたすことを述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Gauss 乗法的カオス</span><span class="stars">★★★★★</span></div>
+<p class="st">対数相関 Gauss 場 $X$（例：2 次元 GFF）に対し $M_{\gamma}(dx)=\lim_{\varepsilon\to0}e^{\gamma X_{\varepsilon}(x)-\frac{\gamma^{2}}{2}E[X_{\varepsilon}^{2}]}dx$ は $\gamma^{2}\lt2d$ で非自明な測度に収束し、$\gamma^{2}\ge2d$ で $0$ に退化する（Kahane、言明）。$L^{2}$ 領域 $\gamma^{2}\lt d$ での収束を示し、Liouville 量子重力との関係を述べよ。</p></div>
+
+<h3 class="ch">IV-15　パーコレーションと相互作用粒子系<span class="rg">{{RANGE}}</span></h3>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">臨界確率の存在</span><span class="stars">★★★★☆</span></div>
+<p class="st">$\mathbb{Z}^{d}$（$d\ge2$）のボンドパーコレーションについて $\theta(p)=P_{p}(0\leftrightarrow\infty)$ は非減少で、$0\lt p_{c}\lt1$。上界は Peierls 論法（双対輪の数え上げ）、下界は自己回避路の数え上げ（連結定数）で示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Harris–FKG 不等式</span><span class="stars">★★★★★</span></div>
+<p class="st">積測度のもとで増加事象 $A,B$ は正相関 $P(A\cap B)\ge P(A)P(B)$。有限次元の帰納法とマルチンゲール収束で示し、FKG 格子条件 $\mu(\sigma\vee\eta)\mu(\sigma\wedge\eta)\ge\mu(\sigma)\mu(\eta)$ をみたす測度（Ising 模型）への一般化を述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">van den Berg–Kesten の不等式</span><span class="stars">★★★★★</span></div>
+<p class="st">増加事象 $A,B$ について、互いに素な証拠での同時生起 $A\circ B$ は $P(A\circ B)\le P(A)P(B)$。Reimer による任意の事象への拡張（言明）も述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Russo の公式と鋭い閾値</span><span class="stars">★★★★★</span></div>
+<p class="st">増加事象 $A$ について $\frac{d}{dp}P_{p}(A)=E_{p}[\#\text{pivotal 辺}]$。Kahn–Kalai–Linial / Talagrand の影響度評価と組み合わせて、推移的対称な増加事象の閾値幅が $O(1/\log n)$ であること（Friedgut–Kalai）を示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:rsw}}</span><span class="ttl">Russo–Seymour–Welsh 理論</span><span class="stars">★★★★★</span></div>
+<p class="st">2 次元の臨界（自己双対）パーコレーションにおいて、正方形の交差確率が $\ge c\gt0$ ならば任意のアスペクト比の長方形の交差確率も一様に正（RSW）。FKG と対称性を用いた証明を与えよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Harris–Kesten の定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$\mathbb{Z}^{2}$ のボンドパーコレーションで $p_{c}=1/2$。$\theta(1/2)=0$（Harris）を RSW と Zhang の議論で、$p\gt1/2$ で $\theta(p)\gt0$（Kesten）を Russo の公式と鋭い閾値で示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Burton–Keane の一意性定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$\mathbb{Z}^{d}$ の平行移動不変・有限エネルギーなパーコレーションで、無限クラスターは a.s. 高々 1 個。エルゴード性で個数が定数、$2\le k\lt\infty$ を局所変更で排除し、$k=\infty$ を三叉路（trifurcation）の数え上げで排除せよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">鋭い相転移（Menshikov, Aizenman–Barsky）</span><span class="stars">★★★★★</span></div>
+<p class="st">$p\lt p_{c}$ で $P_{p}(0\leftrightarrow\partial B_{n})\le e^{-cn}$（指数減衰）。Duminil-Copin–Tassion による短い証明（$\varphi_{p}(S)$ の導入）を与え、系として $\theta(p)\ge\frac{p-p_{c}}{p(1-p_{c})}$（平均場下界）を導け。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Ising 模型の相転移（Peierls）</span><span class="stars">★★★★★</span></div>
+<p class="st">$\mathbb{Z}^{2}$ の Ising 模型は低温（$\beta$ 大）で自発磁化 $\langle\sigma_{0}\rangle^{+}\gt0$ をもち、高温では $0$。Peierls の輪郭論法と高温展開で示し、Onsager の臨界値 $\beta_{c}=\frac12\log(1+\sqrt2)$ を述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Holley の不等式と確率的順序</span><span class="stars">★★★★★</span></div>
+<p class="st">$\mu_{1}(\sigma\vee\eta)\mu_{2}(\sigma\wedge\eta)\ge\mu_{1}(\sigma)\mu_{2}(\eta)$ ならば $\mu_{1}$ は $\mu_{2}$ を確率的に支配する。単調結合（Glauber 動力学による）で示し、Ising 模型の $+$ 境界条件と $-$ 境界条件での無限体積極限の存在を導け。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">接触過程の相転移</span><span class="stars">★★★★★</span></div>
+<p class="st">$\mathbb{Z}^{d}$ の接触過程に臨界感染率 $0\lt\lambda_{c}\lt\infty$ が存在し、$\lambda\lt\lambda_{c}$ で a.s. 死滅、$\lambda\gt\lambda_{c}$ で正の生存確率をもつ。グラフ的表現（Harris 構成）と、配向パーコレーションとの比較で示せ。臨界での死滅（Bezuidenhout–Grimmett）も述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">排他過程と流体力学極限</span><span class="stars">★★★★★</span></div>
+<p class="st">$\mathbb{Z}^{d}$ の対称単純排他過程の不変測度は Bernoulli 積測度の混合に限る（Liggett、言明）。拡散スケーリングでの経験密度が熱方程式に従うこと、非対称の場合 Burgers 方程式（エントロピー解）に従うこと（Rezakhanlou）を述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">臨界パーコレーションの臨界指数</span><span class="stars">★★★★★</span></div>
+<p class="st">三角格子のサイトパーコレーションでは $\theta(p)=(p-\frac12)^{5/36+o(1)}$、腕指数 $\alpha_{1}=\frac{5}{48}$ などが成り立つ（Smirnov–Werner, Lawler–Schramm–Werner、言明）。高次元（$d\ge11$）の平均場挙動 $\theta(p)\asymp(p-p_{c})$（Hara–Slade, レース展開）と対比せよ。</p></div>
+
+<h3 class="ch">IV-16　ランダムウォークとグラフ上の解析<span class="rg">{{RANGE}}</span></h3>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">局所極限定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$\mathbb{Z}^{d}$ 上の非周期的・平均 $0$・共分散 $\Gamma$ のランダムウォークについて $\sup_{x}\left|n^{d/2}P(S_{n}=x)-\frac{e^{-\langle x,\Gamma^{-1}x\rangle/2n}}{(2\pi)^{d/2}\sqrt{\det\Gamma}}\right|\to0$。特性関数の反転公式で示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Green 関数とポテンシャル核の漸近</span><span class="stars">★★★★★</span></div>
+<p class="st">単純ランダムウォークについて、$d\ge3$ で $G(x)=\frac{d\Gamma(d/2-1)}{2\pi^{d/2}}|x|^{2-d}+O(|x|^{-d})$、$d=2$ でポテンシャル核 $a(x)=\frac2\pi\log|x|+\frac{2\gamma+\log8}{\pi}+O(|x|^{-2})$。局所極限定理の精密版から導け。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">電気回路と Rayleigh の単調性原理</span><span class="stars">★★★★★</span></div>
+<p class="st">無限グラフ上のランダムウォークが再帰的 $\iff$ 無限遠への有効抵抗が無限大。Thomson の原理（有効抵抗＝単位流のエネルギーの最小値）と Rayleigh の単調性（辺抵抗を増やすと有効抵抗は増える）を示し、$\mathbb{Z}^{3}$ の過渡性を単位流の構成で示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Nash-Williams の判定法</span><span class="stars">★★★★☆</span></div>
+<p class="st">互いに素な切断集合 $\Pi_{n}$ について $\sum_{n}\left(\sum_{e\in\Pi_{n}}c(e)\right)^{-1}=\infty$ ならば再帰的。$\mathbb{Z}^{2}$ の再帰性を $\sum\frac{1}{8n+4}=\infty$ から再証明せよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:wilson}}</span><span class="ttl">Wilson のアルゴリズムと一様全域木</span><span class="stars">★★★★★</span></div>
+<p class="st">ループ消去ランダムウォークを順に根付き木へ接ぎ木していく Wilson のアルゴリズムは、有限グラフの一様全域木（UST）を正確にサンプリングする。cycle popping（スタックの表現）による証明を与えよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">行列木定理と転移電流定理</span><span class="stars">★★★★★</span></div>
+<p class="st">全域木の数は Laplacian の余因子に等しい（Kirchhoff）。UST が決定的点過程であり、辺集合の包含確率が転移電流行列の小行列式で与えられること（Burton–Pemantle）を示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Varopoulos–Carne の評価</span><span class="stars">★★★★★</span></div>
+<p class="st">可逆ランダムウォークの推移確率について $p_{n}(x,y)\le2\sqrt{\frac{\pi(y)}{\pi(x)}}\rho^{n}e^{-d(x,y)^{2}/2n}$（$\rho$ はスペクトル半径）。Chebyshev 多項式による $P^{n}$ の展開で示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Kesten の定理</span><span class="stars">★★★★★</span></div>
+<p class="st">有限生成群 $G$ 上の対称ランダムウォークのスペクトル半径 $\rho=\limsup p_{2n}(e,e)^{1/2n}$ は $1$ に等しい $\iff$ $G$ は従順（大問 {{R:423}}）。自由群 $F_{k}$ では $\rho=\frac{\sqrt{2k-1}}{k}$ となることを示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Cheeger の不等式と混合時間</span><span class="stars">★★★★★</span></div>
+<p class="st">可逆 Markov 連鎖のスペクトルギャップ $\lambda$ と伝導度 $\Phi$ について $\frac{\Phi^{2}}{2}\le\lambda\le2\Phi$。混合時間 $t_{mix}(\varepsilon)\le\frac1\lambda\log\frac{1}{\varepsilon\pi_{\min}}$ を導け。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">ランダム互換の cutoff（Diaconis–Shahshahani）</span><span class="stars">★★★★★</span></div>
+<p class="st">対称群 $S_{n}$ 上のランダム互換シャッフルは $\frac12n\log n$ ステップで全変動距離の cutoff を示す。上界は対称群の既約表現の指標（Frobenius の公式）による Fourier 解析的評価 $4\|P^{k}-U\|_{TV}^{2}\le\sum_{\rho\neq1}d_{\rho}^{2}|\chi_{\rho}(\tau)/d_{\rho}|^{2k}$ で示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">riffle shuffle と「7 回切れば十分」</span><span class="stars">★★★★★</span></div>
+<p class="st">Gilbert–Shannon–Reeds の riffle shuffle について、$k$ 回後の分布は上昇列の数だけに依存し、$n$ 枚では $\frac32\log_{2}n$ で cutoff を示す（Bayer–Diaconis）。$n=52$ で全変動距離が 7 回で初めて $0.5$ を下回ることを述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">自己回避ウォークと連結定数</span><span class="stars">★★★★★</span></div>
+<p class="st">$\mathbb{Z}^{d}$ の $n$ 歩自己回避ウォークの数 $c_{n}$ について $\mu=\lim c_{n}^{1/n}$ の存在（劣乗法性）を示せ。六角格子で $\mu=\sqrt{2+\sqrt2}$（Duminil-Copin–Smirnov、言明）を parafermionic observable の離散正則性から導く骨格を述べよ。</p></div>

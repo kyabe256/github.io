@@ -1,0 +1,160 @@
+<h3 class="ch">IV-17　確率解析と幾何・最適輸送<span class="rg">{{RANGE}}</span></h3>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">多様体上の Brown 運動</span><span class="stars">★★★★★</span></div>
+<p class="st">Riemann 多様体 $M$ 上の Brown 運動を、生成作用素 $\frac12\Delta_{M}$ の拡散として、また直交枠束上の Stratonovich SDE の射影（Eells–Elworthy–Malliavin の構成）として定義し、両者が一致することを示せ。平行移動の確率版（確率的平行移動）の意味を述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">確率完全性（Grigor'yan の判定）</span><span class="stars">★★★★★</span></div>
+<p class="st">完備多様体上の Brown 運動が爆発しない（$\int p_{t}(x,y)dy=1$）ための十分条件 $\int^{\infty}\frac{r\,dr}{\log V(x_{0},r)}=\infty$（Grigor'yan）を示せ。Ricci 曲率が下に有界な多様体が確率完全であること（Yau）を系とせよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Bochner の公式と Bakry–Émery の $\Gamma_{2}$</span><span class="stars">★★★★★</span></div>
+<p class="st">Bochner の公式 $\frac12\Delta|\nabla f|^{2}=\|\nabla^{2}f\|^{2}+\langle\nabla f,\nabla\Delta f\rangle+\operatorname{Ric}(\nabla f,\nabla f)$ を示せ。一般の拡散作用素 $L$ に $\Gamma,\Gamma_{2}$ を定義し、曲率次元条件 $CD(\rho,n)$：$\Gamma_{2}(f)\ge\rho\Gamma(f)+\frac1n(Lf)^{2}$ が $\operatorname{Ric}\ge\rho$, $\dim\le n$ の一般化であることを説明せよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:be}}</span><span class="ttl">Bakry–Émery の判定</span><span class="stars">★★★★★</span></div>
+<p class="st">$CD(\rho,\infty)$（$\rho\gt0$）をみたす Markov 半群の不変測度は、定数 $1/\rho$ の対数 Sobolev 不等式と Poincaré 不等式をみたす。$\frac{d}{dt}\operatorname{Ent}(P_{t}f)$ の半群微分と $\Gamma_{2}$ で示し、$e^{-V}dx$（$\nabla^{2}V\ge\rho$）への応用を述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Lichnerowicz の固有値評価</span><span class="stars">★★★★☆</span></div>
+<p class="st">$n$ 次元閉多様体で $\operatorname{Ric}\ge(n-1)k\gt0$ ならば第一非零固有値 $\lambda_{1}\ge nk$。Bochner の公式を固有関数に適用して示し、等号は球面に限ること（Obata）を述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Li–Yau の勾配評価</span><span class="stars">★★★★★</span></div>
+<p class="st">$\operatorname{Ric}\ge0$ の完備多様体上の正の熱方程式の解について $|\nabla\log u|^{2}-\partial_{t}\log u\le\frac{n}{2t}$。最大値原理で示し、Harnack 不等式 $u(x,s)\le u(y,t)\left(\frac ts\right)^{n/2}e^{\frac{d(x,y)^{2}}{4(t-s)}}$ を導け。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">熱核の Gauss 評価</span><span class="stars">★★★★★</span></div>
+<p class="st">$\operatorname{Ric}\ge0$ の完備多様体で $p_{t}(x,y)\asymp\frac{1}{V(x,\sqrt t)}e^{-c\frac{d(x,y)^{2}}{t}}$（Li–Yau）。一様楕円型の発散形作用素に対する Aronson 評価、および体積倍化＋Poincaré $\iff$ 放物型 Harnack $\iff$ 両側 Gauss 評価（Grigor'yan, Saloff-Coste）を述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Kantorovich 双対性</span><span class="stars">★★★★★</span></div>
+<p class="st">Polish 空間上の下半連続なコスト $c\ge0$ について
+$\inf_{\pi\in\Pi(\mu,\nu)}\int c\,d\pi=\sup\left\{\int\varphi d\mu+\int\psi d\nu:\varphi(x)+\psi(y)\le c(x,y)\right\}$、左辺の最適輸送計画は存在する。$c$-巡回単調性と $c$-凹関数で示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:brenier}}</span><span class="ttl">Brenier の定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$\mu\ll dx$ ならば、二乗コストの最適輸送計画は一意で、ある凸関数 $\varphi$ の勾配による写像 $T=\nabla\varphi$ で与えられる（$T_{\#}\mu=\nu$）。Rademacher の定理と Kantorovich 双対性から示し、Monge–Ampère 方程式との関係を述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Wasserstein 空間の位相と測地性</span><span class="stars">★★★★★</span></div>
+<p class="st">$W_{2}$ 距離について $W_{2}(\mu_{n},\mu)\to0$ $\iff$ 弱収束＋二次モーメントの収束。$(\mathcal{P}_{2}(\mathbb{R}^{d}),W_{2})$ は完備可分な測地距離空間で、測地線は McCann の変位補間 $((1-t)\mathrm{id}+tT)_{\#}\mu$ で与えられることを示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">JKO スキームと Otto 計算</span><span class="stars">★★★★★</span></div>
+<p class="st">Fokker–Planck 方程式 $\partial_{t}\rho=\Delta\rho+\nabla\cdot(\rho\nabla V)$ は、自由エネルギー $\int\rho\log\rho+\int V\rho$ の $W_{2}$ 勾配流である（Jordan–Kinderlehrer–Otto）。変分スキーム $\rho_{k+1}=\arg\min\left(\frac{1}{2h}W_{2}^{2}(\rho,\rho_{k})+F(\rho)\right)$ が $h\to0$ で解に収束することを示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Talagrand の輸送不等式と Otto–Villani</span><span class="stars">★★★★★</span></div>
+<p class="st">標準 Gauss 測度 $\gamma$ について $W_{2}(\nu,\gamma)^{2}\le2H(\nu\mid\gamma)$（Talagrand $T_{2}$）。Otto–Villani の定理（対数 Sobolev $\Rightarrow T_{2}$）を HWI 不等式経由で示し、$T_{2}$ から次元に依らない Gauss 集中が従うこと（Marton）を導け。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Prékopa–Leindler と Brunn–Minkowski</span><span class="stars">★★★★★</span></div>
+<p class="st">$h((1-t)x+ty)\ge f(x)^{1-t}g(y)^{t}$ ならば $\int h\ge(\int f)^{1-t}(\int g)^{t}$（Prékopa–Leindler）。1 次元の輸送写像による証明から帰納法で示し、Brunn–Minkowski 不等式 $|A+B|^{1/n}\ge|A|^{1/n}+|B|^{1/n}$ と等周不等式を導け。Lott–Sturm–Villani の曲率次元条件（エントロピーの変位凸性、言明）との関係を述べよ。</p></div>
+
+<h3 class="ch">IV-18　数理統計の漸近理論<span class="rg">{{RANGE}}</span></h3>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Wald の一致性定理</span><span class="stars">★★★★★</span></div>
+<p class="st">識別可能性・パラメータ空間のコンパクト性・対数尤度の上半連続性と優関数の存在のもとで、最尤推定量は a.s. 真値に収束する。Kullback–Leibler 情報量の正値性（Jensen）と一様大数の法則で示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">最尤推定量の漸近正規性</span><span class="stars">★★★★★</span></div>
+<p class="st">正則条件のもとで $\sqrt n(\hat\theta_{n}-\theta_{0})\Rightarrow N(0,I(\theta_{0})^{-1})$（$I$ は Fisher 情報行列）。スコア関数の CLT と Taylor 展開、Slutsky の定理（大問 {{R:475}}）で示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Cramér–Rao の不等式</span><span class="stars">★★★★☆</span></div>
+<p class="st">正則な統計モデルで、$g(\theta)$ の不偏推定量 $T$ は $\operatorname{Var}_{\theta}(T)\ge\frac{g'(\theta)^{2}}{I(\theta)}$ をみたし、等号は指数型分布族で $T$ が十分統計量の一次関数のときに限る。Hodges の超効率推定量で、漸近的には下界が「ほとんど至る所」でしか成り立たないことを示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Neyman–Pearson の補題</span><span class="stars">★★★★☆</span></div>
+<p class="st">単純仮説 $H_{0}:P_{0}$ 対 $H_{1}:P_{1}$ の水準 $\alpha$ の検定のうち、検出力を最大にするのは尤度比検定である。単調尤度比族での一様最強力検定（Karlin–Rubin）を系として導け。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Wilks の定理</span><span class="stars">★★★★★</span></div>
+<p class="st">帰無仮説が $k$ 次元の制約を課すとき、対数尤度比統計量 $2\log\Lambda_{n}\Rightarrow\chi^{2}_{k}$。最尤推定量の漸近正規性と二次形式の射影で示し、パラメータが境界にある場合（$\bar\chi^{2}$ 分布の混合）の変化を述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">局所漸近正規性と Le Cam の第三補題</span><span class="stars">★★★★★</span></div>
+<p class="st">正則モデルの局所尤度比 $\log\frac{dP^{n}_{\theta+h/\sqrt n}}{dP^{n}_{\theta}}=h^{T}\Delta_{n}-\frac12h^{T}Ih+o_{P}(1)$、$\Delta_{n}\Rightarrow N(0,I)$（LAN）。Le Cam の第一補題（隣接性）と第三補題（対立仮説下での極限分布のずれ）を示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Hájek の畳み込み定理と局所漸近ミニマックス定理</span><span class="stars">★★★★★</span></div>
+<p class="st">LAN モデルにおける正則推定量の極限分布は $N(0,I^{-1})*M$ の形（$M$ は何らかの分布）に分解される（畳み込み定理）。したがって $N(0,I^{-1})$ が最良であり、正則性なしでも局所ミニマックスリスクの下界として成り立つ（Hájek–Le Cam）。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Bernstein–von Mises の定理</span><span class="stars">★★★★★</span></div>
+<p class="st">正則モデルと正の連続事前密度のもとで、事後分布は全変動距離で $N(\hat\theta_{n},\frac1nI(\theta_{0})^{-1})$ に近づく。LAN と事前分布の局所的な平坦性で示し、ベイズ信用区間が頻度論的に漸近正確であることを結論せよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Stein の非許容性と James–Stein 推定量</span><span class="stars">★★★★★</span></div>
+<p class="st">$X\sim N(\theta,I_{d})$、$d\ge3$ のとき、二乗損失で $X$ は非許容であり、$\delta_{JS}(X)=\left(1-\frac{d-2}{\|X\|^{2}}\right)X$ がすべての $\theta$ で真にリスクを下げる。Stein の補題 $E[(X-\theta)g(X)]=E[\nabla\cdot g(X)]$ による不偏リスク推定で示せ。$d\le2$ では許容的であることも述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:steinm}}</span><span class="ttl">Stein の方法による正規近似</span><span class="stars">★★★★★</span></div>
+<p class="st">Stein 方程式 $f'(x)-xf(x)=h(x)-Eh(Z)$ の解の正則性評価を示し、交換可能対の方法（Stein）または依存グラフの方法で、弱依存和の正規近似誤差を Wasserstein 距離で評価せよ。Berry–Esseen（大問 {{R:481}}）を別証明で得よ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">ブートストラップの一致性</span><span class="stars">★★★★★</span></div>
+<p class="st">標本平均について、経験分布からのリサンプリングによる $\sqrt n(\bar X^{*}-\bar X)$ の条件付き分布は a.s. で $N(0,\sigma^{2})$ に収束する（Bickel–Freedman）。Mallows（Wasserstein）距離の性質を用いて示し、裾の重い分布で一致性が破れる例を挙げよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Rao–Blackwell と Lehmann–Scheffé</span><span class="stars">★★★★☆</span></div>
+<p class="st">十分統計量 $T$ による条件付けはリスクを増やさない（凸損失）。完備十分統計量の関数である不偏推定量は一様最小分散不偏推定量で一意（Lehmann–Scheffé）。Basu の定理（完備十分統計量と補助統計量の独立性）も示せ。</p></div>
+
+<h3 class="ch">IV-19　情報とエントロピー<span class="rg">{{RANGE}}</span></h3>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Shannon の情報源符号化定理</span><span class="stars">★★★★☆</span></div>
+<p class="st">i.i.d. 情報源をブロック符号化するとき、1 記号あたり $H(X)+\varepsilon$ ビットで誤り確率 $\to0$ が可能で、$H(X)-\varepsilon$ では不可能。漸近等分割性（大数の法則）で示し、Kraft の不等式による可変長符号の下界 $E\ell\ge H$ も導け。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Shannon の通信路符号化定理</span><span class="stars">★★★★★</span></div>
+<p class="st">無記憶通信路の容量 $C=\max_{P_{X}}I(X;Y)$ について、$R\lt C$ なら誤り確率 $\to0$ の符号が存在し（ランダム符号化と結合典型性）、$R\gt C$ では不可能（Fano の不等式）。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">エントロピー冪不等式（Shannon–Stam）</span><span class="stars">★★★★★</span></div>
+<p class="st">独立な $\mathbb{R}^{n}$ 値確率変数について $e^{2h(X+Y)/n}\ge e^{2h(X)/n}+e^{2h(Y)/n}$、等号は比例した共分散の Gauss に限る。de Bruijn の恒等式と Stam の Fisher 情報不等式 $\frac{1}{J(X+Y)}\ge\frac{1}{J(X)}+\frac{1}{J(Y)}$ から熱流に沿った議論で示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">de Bruijn の恒等式</span><span class="stars">★★★★☆</span></div>
+<p class="st">$\frac{d}{dt}h(X+\sqrt tZ)=\frac12J(X+\sqrt tZ)$（$Z$ は独立な標準 Gauss）。熱方程式と部分積分で示し、Gauss が固定分散のもとでエントロピーを最大化することの別証明を与えよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:entclt}}</span><span class="ttl">エントロピー的中心極限定理</span><span class="stars">★★★★★</span></div>
+<p class="st">i.i.d. で $h(X_{1})\gt-\infty$ ならば $D\left(\frac{S_{n}}{\sqrt n}\,\middle\|\,N\right)\to0$（Barron）、さらに $h(S_{n}/\sqrt n)$ は $n$ について単調増加（Artstein–Ball–Barthe–Naor、言明）。CLT を「エントロピーが増大して最大エントロピー分布に向かう」熱力学第二法則として解釈せよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Pinsker の不等式</span><span class="stars">★★★★☆</span></div>
+<p class="st">$\|P-Q\|_{TV}\le\sqrt{\frac12D(P\|Q)}$。2 点分布への還元（データ処理）と 1 変数の不等式で示し、逆向きの評価が一般には成り立たないことを例で示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">データ処理不等式と Fano の不等式</span><span class="stars">★★★★☆</span></div>
+<p class="st">Markov 連鎖 $X\to Y\to Z$ について $I(X;Z)\le I(X;Y)$。Fano の不等式 $H(X\mid Y)\le h_{2}(P_{e})+P_{e}\log(|\mathcal{X}|-1)$ を示し、統計的推定のミニマックス下界（Fano の方法）へ応用せよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Donsker–Varadhan の変分表現と Gibbs の変分原理</span><span class="stars">★★★★★</span></div>
+<p class="st">$D(\nu\|\mu)=\sup_{f}\left\{\int f\,d\nu-\log\int e^{f}d\mu\right\}$、双対的に $\log\int e^{f}d\mu=\sup_{\nu}\left\{\int f\,d\nu-D(\nu\|\mu)\right\}$（最大は Gibbs 測度 $e^{f}d\mu/Z$）。Sanov の定理（大問 {{R:557}}）との関係と PAC-Bayes 不等式への応用を述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">最大エントロピー原理と指数型分布族</span><span class="stars">★★★★☆</span></div>
+<p class="st">制約 $E[T_{i}(X)]=t_{i}$ のもとでエントロピー（参照測度に関する相対エントロピー）を最大化する分布は指数型 $\propto e^{\langle\theta,T\rangle}$ で、$\theta$ は凸な対数分配関数の Legendre 双対で決まる。Pythagorean 恒等式 $D(P\|Q)=D(P\|P^{*})+D(P^{*}\|Q)$（I-射影）を示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Marton の輸送法と Bobkov–Götze の判定</span><span class="stars">★★★★★</span></div>
+<p class="st">$\mu$ が $T_{1}$ 不等式 $W_{1}(\nu,\mu)\le\sqrt{2CD(\nu\|\mu)}$ をみたす $\iff$ すべての 1-Lipschitz $f$ について $E e^{\lambda(f-Ef)}\le e^{C\lambda^{2}/2}$（Bobkov–Götze）。Marton の議論で集中不等式を導き、テンソル化の振る舞い（$T_{2}$ は次元に依らず、$T_{1}$ は依る）を比較せよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Shearer の補題と Loomis–Whitney</span><span class="stars">★★★★★</span></div>
+<p class="st">座標部分集合族 $\mathcal{F}$ が各座標を少なくとも $k$ 回被覆するならば $kH(X_{1},\dots,X_{n})\le\sum_{F\in\mathcal{F}}H(X_{F})$。系として Loomis–Whitney 不等式 $|A|^{n-1}\le\prod|\pi_{i}(A)|$ と、グラフ中の三角形数の評価を導け。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Han の不等式とエントロピー法</span><span class="stars">★★★★★</span></div>
+<p class="st">$H(X_{1},\dots,X_{n})\le\frac{1}{n-1}\sum_{i}H(X_{-i})$（Han）。相対エントロピー版（Han の不等式のテンソル化）から対数 Sobolev 型のエントロピー劣加法性を示し、Efron–Stein 不等式と Boucheron–Lugosi–Massart のエントロピー法による集中不等式を導け。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Brascamp–Lieb 不等式</span><span class="stars">★★★★★</span></div>
+<p class="st">線形写像 $B_{j}:\mathbb{R}^{n}\to\mathbb{R}^{n_{j}}$ と指数 $p_{j}$ について $\int\prod_{j}f_{j}(B_{j}x)^{p_{j}}dx\le C\prod\left(\int f_{j}\right)^{p_{j}}$ の最良定数は中心 Gauss 関数で計算できる（Lieb、言明）。Hölder・Young（最良定数版、大問 {{R:343}}）・Loomis–Whitney がすべて特別な場合であることを確かめ、熱流単調性による Bennett–Carbery–Christ–Tao の証明を概説せよ。</p></div>
+
+<h3 class="ch">IV-20　ランダム構造と共形不変性<span class="rg">{{RANGE}}</span></h3>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Erdős–Rényi グラフの巨大成分</span><span class="stars">★★★★★</span></div>
+<p class="st">$G(n,c/n)$ において、$c\lt1$ なら最大成分は $O(\log n)$、$c\gt1$ なら唯一の巨大成分が $(1-q+o(1))n$ 頂点をもつ（$q$ は Poisson$(c)$ Galton–Watson 木の絶滅確率、大問 {{R:599}}）。探索過程のランダムウォーク近似で示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">連結性の閾値</span><span class="stars">★★★★☆</span></div>
+<p class="st">$p=\frac{\log n+c}{n}$ のとき $P(G(n,p)\ \text{連結})\to e^{-e^{-c}}$。孤立点数の Poisson 収束（モーメント法）と、孤立点がなければ連結であることの第一モーメント評価で示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">閾値関数の存在（Bollobás–Thomason）</span><span class="stars">★★★★★</span></div>
+<p class="st">任意の非自明な単調グラフ性質には閾値関数が存在する。独立なコピーの和集合による多重化の議論で示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Lovász の局所補題</span><span class="stars">★★★★★</span></div>
+<p class="st">事象 $A_{i}$ の依存グラフの次数が $\le d$、$P(A_{i})\le p$、$ep(d+1)\le1$ ならば $P(\bigcap A_{i}^{c})\gt0$。一般形（非対称版）を帰納法で示し、Moser–Tardos のアルゴリズム的版（再サンプリングで多項式時間で解が見つかる）を述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Janson の不等式</span><span class="stars">★★★★★</span></div>
+<p class="st">ランダム部分集合で増加事象 $B_{i}$（部分集合の包含）のいずれも起きない確率について $P(\bigcap B_{i}^{c})\le e^{-\mu+\Delta/2}$（$\mu=\sum P(B_{i})$、$\Delta$ は依存対の和）。$G(n,p)$ が三角形を含まない確率の漸近に応用せよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Park–Pham の定理（Kahn–Kalai 予想）</span><span class="stars">★★★★★</span></div>
+<p class="st">単調性質の閾値 $p_{c}$ は期待閾値 $q$ に対し $p_{c}\le Kq\log\ell$（$\ell$ は極小元の最大サイズ）で抑えられる（Park–Pham 2022、言明）。Frankston–Kahn–Narayanan–Park の分数版と被覆（spread）補題の骨格を述べ、完全マッチング・Hamilton 閉路の閾値への応用を説明せよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">局所弱収束（Benjamini–Schramm）</span><span class="stars">★★★★★</span></div>
+<p class="st">有限グラフ列の Benjamini–Schramm 極限を根付きグラフ上の単模的（unimodular）確率測度として定義し、$G(n,c/n)$ の極限が Poisson$(c)$ Galton–Watson 木であることを示せ。極限が再帰的なら有限グラフ上の単純ランダムウォークのスペクトル測度も収束することを述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:sle}}</span><span class="ttl">Schramm–Loewner 発展</span><span class="stars">★★★★★</span></div>
+<p class="st">$\kappa\gt0$ に対し、駆動関数 $\sqrt\kappa B_{t}$ の弦型 Loewner 方程式（大問 I-19 末）により SLE$_{\kappa}$ を定義し、尺度不変性と領域 Markov 性をもつことを示せ。等角写像による任意の単連結領域への移植を定義せよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">SLE の相と Rohde–Schramm の定理</span><span class="stars">★★★★★</span></div>
+<p class="st">SLE$_{\kappa}$ の軌跡は a.s. 連続曲線として存在し（Rohde–Schramm、$\kappa\neq8$、言明）、$\kappa\le4$ で単純曲線、$4\lt\kappa\lt8$ で自己接触、$\kappa\ge8$ で空間充填。$\kappa\le4$ で単純であることを Bessel 過程 $\frac{g_{t}(x)-\xi_{t}}{\sqrt\kappa}$ の次元 $1+\frac4\kappa$ から示せ。SLE の Hausdorff 次元 $1+\frac\kappa8$（Beffara）も述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Schramm の原理</span><span class="stars">★★★★★</span></div>
+<p class="st">単連結領域上のランダムな曲線族が、等角不変性と領域 Markov 性をもち、実軸に関する反射対称性をもつならば、それは SLE$_{\kappa}$（ある $\kappa\ge0$）である。駆動関数が連続・独立定常増分・尺度不変・対称であることから Brown 運動の定数倍であることを導け（大問 {{R:589}} の Lévy 過程の特徴づけを用いよ）。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">SLE$_{6}$ の局所性</span><span class="stars">★★★★★</span></div>
+<p class="st">SLE$_{6}$ は局所性をもつ：領域を境界から離れた部分で変形しても、最初に変形部分に触れるまでの軌跡の分布は変わらない。$\kappa=6$ だけがこの性質をもつことを伊藤の公式で示し、臨界パーコレーションの探索過程（局所的な規則のみで決まる）の極限候補が SLE$_{6}$ しかありえないことを結論せよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:smirnov}}</span><span class="ttl">Smirnov の定理 ― Cardy の公式と共形不変性</span><span class="stars">★★★★★</span></div>
+<p class="st">三角格子上の臨界サイトパーコレーション（$p=1/2$）において、Jordan 領域 $\Omega$ とその境界上の 4 点 $a,b,c,d$ に対し、メッシュ $\delta\to0$ の極限で弧 $ab$ と $cd$ を結ぶ開クラスターが存在する確率は、共形不変な極限（Cardy の公式、正三角形に写すと $c$ の像の位置の一次関数）に収束する。
+3 色の parafermionic observable $H_{a},H_{b},H_{c}$ の離散 Cauchy–Riemann 関係（色交換と $e^{2\pi i/3}$ の対称性）、RSW（本部 IV-15）による同程度連続性、Arzelà–Ascoli による部分列極限、そして極限が境界条件から一意に定まる調和関数の組となることから証明せよ。
+<br>複素関数論（第 I 部：等角写像・Riemann の写像定理・Carathéodory の境界対応）、調和解析（第 III 部：調和関数と境界値）、確率論（第 IV 部：パーコレーション・SLE）が一つの定理で出会う。<strong>この一題をもって、本書 1000 題を締めくくれ。</strong></p></div>

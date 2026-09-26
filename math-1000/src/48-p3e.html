@@ -1,0 +1,157 @@
+<h3 class="ch">III-17　幾何的測度論と Fourier 次元<span class="rg">{{RANGE}}</span></h3>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Hausdorff 測度と Hausdorff 次元</span><span class="stars">★★★★☆</span></div>
+<p class="st">Carathéodory の構成で $\mathcal{H}^{s}$ を定義し、Borel 正則な外測度であること、$\mathcal{H}^{n}$ が $\mathbb{R}^{n}$ の Lebesgue 測度の定数倍であること、Lipschitz 写像で $\dim_{H}$ が増えないことを示せ。Cantor 集合の次元 $\log2/\log3$ を計算せよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">自己相似集合と Moran の公式</span><span class="stars">★★★★★</span></div>
+<p class="st">縮小写像族 $\{S_{i}\}$ には一意なコンパクト不変集合 $K=\bigcup S_{i}(K)$ が存在する（Hutchinson）。相似写像で開集合条件をみたすとき $\dim_{H}K=s$（$\sum r_{i}^{s}=1$）であり、$0\lt\mathcal{H}^{s}(K)\lt\infty$。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:frost}}</span><span class="ttl">Frostman の補題</span><span class="stars">★★★★★</span></div>
+<p class="st">コンパクト $K\subset\mathbb{R}^{n}$ について $\mathcal{H}^{s}(K)\gt0$ $\iff$ $K$ 上の非零 Borel 測度で $\mu(B(x,r))\le Cr^{s}$ となるものが存在する。二進立方体による最大流・最小カット型の構成で示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">エネルギー積分と Fourier 表示</span><span class="stars">★★★★★</span></div>
+<p class="st">$I_{s}(\mu)=\iint|x-y|^{-s}d\mu d\mu=c\int|\hat\mu(\xi)|^{2}|\xi|^{s-n}d\xi$（$0\lt s\lt n$）。系として $\dim_{H}K=\sup\{s:I_{s}(\mu)\lt\infty\ \text{なる確率測度}\ \mu\ \text{が}\ K\ \text{上にある}\}$（容量次元）を示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Marstrand の射影定理</span><span class="stars">★★★★★</span></div>
+<p class="st">Borel 集合 $A\subset\mathbb{R}^{2}$ について、a.e. の方向 $e$ で $\dim_{H}\pi_{e}(A)=\min(\dim_{H}A,1)$、さらに $\dim_{H}A\gt1$ なら a.e. の $e$ で $|\pi_{e}(A)|\gt0$。エネルギー積分の方向平均（Kaufman の議論）で示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Kaufman の例外集合評価</span><span class="stars">★★★★★</span></div>
+<p class="st">$\dim_{H}A=s\le1$ のとき $\dim_{H}\{e:\dim_{H}\pi_{e}(A)\lt t\}\le t$（$t\le s$）。Falconer の評価（$\dim_{H}A\gt1$ のとき $|\pi_{e}(A)|=0$ となる方向の次元 $\le2-\dim_{H}A$）も示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Fourier 次元と Salem 集合</span><span class="stars">★★★★★</span></div>
+<p class="st">Fourier 次元 $\dim_{F}K=\sup\{s:\exists\mu,\ |\hat\mu(\xi)|\lesssim|\xi|^{-s/2}\}$ を定義し $\dim_{F}\le\dim_{H}$ を示せ。Brown 運動の像（Kahane）が a.s. Salem 集合（$\dim_{F}=\dim_{H}$）であることを示し、中央三分の一 Cantor 集合の Fourier 次元が $0$ であることを確かめよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Falconer の距離集合問題</span><span class="stars">★★★★★</span></div>
+<p class="st">コンパクト $A\subset\mathbb{R}^{n}$ が $\dim_{H}A\gt\frac{n+1}{2}$ ならば距離集合 $\Delta(A)=\{|x-y|\}$ は正の Lebesgue 測度をもつ。球面平均の Fourier 減衰（本部 III-13）と Mattila 積分で示せ。Falconer 予想（閾値 $n/2$）と最近の進展（Guth–Iosevich–Ou–Wang）を述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Rademacher の定理</span><span class="stars">★★★★★</span></div>
+<p class="st">Lipschitz 関数 $f:\mathbb{R}^{n}\to\mathbb{R}^{m}$ は a.e. で全微分可能である。方向微分の a.e. 存在（1 次元の Lebesgue 微分定理）と可算稠密な方向集合の議論で示せ。Stepanov の定理（局所 Lipschitz 点の集合上で a.e. 微分可能）も述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">面積公式と余面積公式</span><span class="stars">★★★★★</span></div>
+<p class="st">Lipschitz $f:\mathbb{R}^{n}\to\mathbb{R}^{m}$ について、$n\le m$ なら $\int_{\mathbb{R}^{n}}g\,Jf\,dx=\int_{\mathbb{R}^{m}}\sum_{x\in f^{-1}(y)}g(x)\,d\mathcal{H}^{n}(y)$（面積公式）、$n\ge m$ なら $\int g\,Jf\,dx=\int\int_{f^{-1}(y)}g\,d\mathcal{H}^{n-m}dy$（余面積公式）。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Besicovitch–Federer の射影定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$\mathcal{H}^{1}(E)\lt\infty$ なる $E\subset\mathbb{R}^{2}$ は、可求長部分と純不可求長部分に分解され、純不可求長集合はほとんどすべての方向の射影が測度 $0$ である（言明）。4 隅 Cantor 集合（Garnett 集合）で確かめ、解析的容量と Vitushkin 予想（David の定理）との関係を述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Federer–Fleming の等周不等式</span><span class="stars">★★★★★</span></div>
+<p class="st">$\mathbb{R}^{n}$ の $k$ 次元整カレント $T$（$\partial T=0$）は、$\mathbf{M}(S)\le C\mathbf{M}(T)^{\frac{k+1}{k}}$ となる $S$（$\partial S=T$）を張る。変形定理（多面体への押し出し）を用いた骨格を述べ、Plateau 問題の解の存在への応用を説明せよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Preiss の密度定理</span><span class="stars">★★★★★</span></div>
+<p class="st">Radon 測度 $\mu$ の $m$ 次元密度 $\lim_{r\to0}\frac{\mu(B(x,r))}{r^{m}}$ が $\mu$-a.e. で正かつ有限に存在すれば、$\mu$ は $m$-可求長である（言明）。Marstrand の定理（$m$ は整数でなければならない）と Mattila の結果を段階的に述べ、接測度（tangent measure）の概念を説明せよ。</p></div>
+
+<h3 class="ch">III-18　非線形分散方程式<span class="rg">{{RANGE}}</span></h3>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Strichartz 評価（一般形・Keel–Tao）</span><span class="stars">★★★★★</span></div>
+<p class="st">$\frac2q+\frac nr=\frac n2$、$(q,r,n)\neq(2,\infty,2)$ のとき $\|e^{it\Delta}f\|_{L^{q}_{t}L^{r}_{x}}\lesssim\|f\|_{2}$ および非斉次評価。分散評価と $TT^{*}$ で非端点を、Keel–Tao の二進分解で端点 $q=2$（$n\ge3$）を示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">NLS の局所適切性</span><span class="stars">★★★★★</span></div>
+<p class="st">$iu_{t}+\Delta u=\pm|u|^{p-1}u$ は $L^{2}$ 劣臨界（$p\lt1+\frac4n$）で $L^{2}$ 局所適切、$H^{1}$ 劣臨界で $H^{1}$ 局所適切。Strichartz 空間での縮小写像法（Tsutsumi, Ginibre–Velo, Kato）で示し、質量・エネルギー保存から大域存在を導け。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Glassey の爆発定理（virial 恒等式）</span><span class="stars">★★★★★</span></div>
+<p class="st">焦点型 NLS（$p\ge1+\frac4n$）で $xu_{0}\in L^{2}$ かつエネルギー $E(u_{0})\lt0$ ならば、解は有限時間で爆発する。virial 恒等式 $\frac{d^{2}}{dt^{2}}\int|x|^{2}|u|^{2}=16E(u)-\cdots$ を導いて示せ。質量臨界では基底状態の質量が閾値である（Weinstein）ことも述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Kato の局所平滑化効果</span><span class="stars">★★★★★</span></div>
+<p class="st">$\sup_{x_{0},R}\frac1R\int_{\mathbb{R}}\int_{B(x_{0},R)}|\nabla^{1/2}e^{it\Delta}f|^{2}dxdt\lesssim\|f\|_{2}^{2}$（半階微分の局所的な獲得）。Fourier 制限と球面上の trace 補題（Constantin–Saut, Sjölin, Vega）で示し、KdV における Kato 平滑化 $\int_{0}^{T}\int_{-R}^{R}|\partial_{x}u|^{2}\lesssim C$ を述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Bourgain の $X^{s,b}$ 空間</span><span class="stars">★★★★★</span></div>
+<p class="st">$\|u\|_{X^{s,b}}=\|\langle\xi\rangle^{s}\langle\tau+|\xi|^{2}\rangle^{b}\hat u(\tau,\xi)\|_{L^{2}}$ を定義し、$b\gt1/2$ で $X^{s,b}\subset C_{t}H^{s}$、線形評価・Duhamel 項の評価を示せ。周期 NLS（$\mathbb{T}$ 上）の $L^{4}$ Strichartz $\|u\|_{L^{4}_{t,x}}\lesssim\|u\|_{X^{0,3/8}}$ と $L^{2}$ 局所適切性を導け。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">KdV 方程式の適切性</span><span class="stars">★★★★★</span></div>
+<p class="st">KdV $u_{t}+u_{xxx}+uu_{x}=0$ は $H^{s}(\mathbb{R})$（$s\gt-3/4$）で局所適切（Kenig–Ponce–Vega, 双線形 $X^{s,b}$ 評価、言明）。可積分系としての無限個の保存量と、I-method による大域適切性（Colliander–Keel–Staffilani–Takaoka–Tao）を述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Morawetz 評価と散乱</span><span class="stars">★★★★★</span></div>
+<p class="st">脱焦点型 NLS（$n\ge3$）について $\int_{\mathbb{R}}\int\frac{|u|^{p+1}}{|x|}dxdt\lesssim\sup_{t}\|u\|_{\dot H^{1/2}}^{2}$（Lin–Strauss）。相互作用 Morawetz（Colliander–Keel–Staffilani–Takaoka–Tao）による $\|u\|_{L^{4}_{t,x}}$ 評価と、$H^{1}$ での散乱（Ginibre–Velo）の筋道を述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">profile 分解と集中コンパクト法</span><span class="stars">★★★★★</span></div>
+<p class="st">$H^{1}$ 有界列 $\{f_{n}\}$ に対する Strichartz ノルムの profile 分解 $e^{it\Delta}f_{n}=\sum_{j}e^{i(t-t_{n}^{j})\Delta}g^{j}(x-x_{n}^{j})+w_{n}^{J}$（言明）を述べ、Kenig–Merle の集中コンパクト・剛性の方法（臨界要素の存在と排除）の論理構造を説明せよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:nls}}</span><span class="ttl">エネルギー臨界 NLS の大域適切性</span><span class="stars">★★★★★</span></div>
+<p class="st">$\mathbb{R}^{3}$ の脱焦点型 $\dot H^{1}$ 臨界 NLS $iu_{t}+\Delta u=|u|^{4}u$ は任意の $\dot H^{1}$ 初期値に対し大域解をもち散乱する（Bourgain（球対称）, Colliander–Keel–Staffilani–Takaoka–Tao、言明）。Bourgain の induction on energy の発想を説明せよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">周期 Strichartz 評価（Bourgain）</span><span class="stars">★★★★★</span></div>
+<p class="st">$\mathbb{T}^{n}$ 上で $\|e^{it\Delta}P_{N}f\|_{L^{p}_{t,x}(\mathbb{T}\times\mathbb{T}^{n})}\lesssim_{\varepsilon}N^{\frac n2-\frac{n+2}{p}+\varepsilon}\|f\|_{2}$（$p\ge\frac{2(n+2)}{n}$、Bourgain–Demeter の decoupling による完全解決、言明）。$n=1$, $p=6$ の場合を格子点の数え上げ（$\#\{\xi_{1}^{2}+\xi_{2}^{2}+\xi_{3}^{2}=\cdots\}$）で論ぜよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Gibbs 測度の不変性（Bourgain）</span><span class="stars">★★★★★</span></div>
+<p class="st">$\mathbb{T}$ 上の脱焦点型 NLS について、Gibbs 測度 $d\mu=Z^{-1}e^{-\frac{1}{p+1}\int|u|^{p+1}}e^{-\frac12\int|\nabla u|^{2}}\prod du$ の台（$H^{1/2-}$）上で大域流が構成でき、$\mu$ は不変である（言明）。有限次元近似と Liouville の定理を用いる骨格を述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">波動方程式の Strichartz 評価と臨界非線形波動</span><span class="stars">★★★★★</span></div>
+<p class="st">$\|u\|_{L^{q}_{t}L^{r}_{x}}\lesssim\|u_{0}\|_{\dot H^{s}}+\|u_{1}\|_{\dot H^{s-1}}$（$\frac1q+\frac{n-1}{2r}\le\frac{n-1}{4}$、スケーリング条件）を示し、$\mathbb{R}^{3}$ のエネルギー臨界波動方程式 $\square u=-u^{5}$ の大域正則性（Struwe, Grillakis, Shatah–Struwe、言明）を述べよ。</p></div>
+
+<h3 class="ch">III-19　重み理論と sparse 支配<span class="rg">{{RANGE}}</span></h3>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Fefferman–Stein のベクトル値極大不等式</span><span class="stars">★★★★★</span></div>
+<p class="st">$1\lt p,q\lt\infty$ に対し $\left\|\left(\sum_{j}(Mf_{j})^{q}\right)^{1/q}\right\|_{p}\le C\left\|\left(\sum|f_{j}|^{q}\right)^{1/q}\right\|_{p}$。$\ell^{q}$ 値 CZ 理論と重み付き不等式 $\int Mf\,w\le C\int|f|Mw$ から示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Coifman–Fefferman の不等式</span><span class="stars">★★★★★</span></div>
+<p class="st">$w\in A_{\infty}$、$0\lt p\lt\infty$ に対し $\int|T^{*}f|^{p}w\le C\int(Mf)^{p}w$（$T^{*}$ は CZ 作用素の極大切断）。good-$\lambda$ 不等式（大問 {{R:385}}）と $A_{\infty}$ の特徴づけで示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Rubio de Francia の外挿定理</span><span class="stars">★★★★★</span></div>
+<p class="st">ある $p_{0}$ ですべての $w\in A_{p_{0}}$ について $\|f\|_{L^{p_{0}}(w)}\le C([w])\|g\|_{L^{p_{0}}(w)}$ ならば、すべての $1\lt p\lt\infty$、$w\in A_{p}$ で同じ評価が成り立つ。Rubio de Francia のアルゴリズム $\mathcal{R}h=\sum_{k}\frac{M^{k}h}{2^{k}\|M\|^{k}}$ による $A_{1}$ 重みの構成で示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Jones の因子分解定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$w\in A_{p}$ $\iff$ $w=w_{0}w_{1}^{1-p}$（$w_{0},w_{1}\in A_{1}$）。Rubio de Francia のアルゴリズムを用いた Coifman–Jones–Rubio de Francia の簡潔な証明を与え、$A_{1}$ 重みの特徴づけ（$(Mf)^{\delta}$、$0\lt\delta\lt1$、Coifman–Rochberg）も示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Buckley の定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$\|M\|_{L^{p}(w)}\lesssim[w]_{A_{p}}^{\frac{1}{p-1}}$ であり、この指数は最良。Lerner による二進停止時間を用いた短い証明を与えよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Lerner の sparse 支配</span><span class="stars">★★★★★</span></div>
+<p class="st">CZ 作用素 $T$ と $f\in C_{c}^{\infty}$ に対し、有限個の二進格子の sparse 族 $\mathcal{S}$（各 $Q$ が $|E_{Q}|\ge\frac12|Q|$ なる互いに素な $E_{Q}\subset Q$ をもつ）が存在して $|Tf|\le C\sum_{Q\in\mathcal{S}}\langle|f|\rangle_{Q}\mathbf{1}_{Q}$ 各点で成り立つ（Lerner, Lacey, Lerner–Nazarov）。grand maximal truncation を用いた Lerner の証明を完成させよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:a2}}</span><span class="ttl">$A_{2}$ 定理（Hytönen）</span><span class="stars">★★★★★</span></div>
+<p class="st">CZ 作用素について $\|T\|_{L^{2}(w)\to L^{2}(w)}\lesssim[w]_{A_{2}}$ で指数 $1$ は最良。sparse 支配から sparse 作用素の重み付き評価へ帰着させて示し、外挿で $\|T\|_{L^{p}(w)}\lesssim[w]_{A_{p}}^{\max(1,\frac{1}{p-1})}$ を導け。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Coifman–Rochberg–Weiss の交換子定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$b\in\mathrm{BMO}$ ならば交換子 $[b,T]f=bTf-T(bf)$ は $1\lt p\lt\infty$ で $L^{p}$ 有界、逆に Riesz 変換との交換子がすべて有界なら $b\in\mathrm{BMO}$。Cauchy の積分公式による「共役法」（$e^{zb}Te^{-zb}$ の微分）で示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Uchiyama のコンパクト性定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$[b,T]$ が $L^{p}$ 上コンパクト $\iff$ $b\in\mathrm{VMO}$（$\mathrm{BMO}$ における $C_{c}^{\infty}$ の閉包）。Fréchet–Kolmogorov のコンパクト性判定を用いて示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Sawyer の試験条件</span><span class="stars">★★★★★</span></div>
+<p class="st">$\|M(f\sigma)\|_{L^{p}(w)}\lesssim\|f\|_{L^{p}(\sigma)}$ $\iff$ Sawyer 試験条件 $\int_{Q}M(\mathbf{1}_{Q}\sigma)^{p}w\le C\sigma(Q)$（二重重み）。単なる二重重み $A_{p}$ 条件では不十分であることを例で示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Muckenhoupt–Wheeden の分数積分定理</span><span class="stars">★★★★★</span></div>
+<p class="st">$\frac1q=\frac1p-\frac\alpha n$ のとき $\|(I_{\alpha}f)w\|_{q}\lesssim\|fw\|_{p}$ $\iff$ $w\in A_{p,q}$：$\sup_{Q}\langle w^{q}\rangle_{Q}^{1/q}\langle w^{-p'}\rangle_{Q}^{1/p'}\lt\infty$。分数極大関数との比較で示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Rubio de Francia の Littlewood–Paley 不等式</span><span class="stars">★★★★★</span></div>
+<p class="st">$\mathbb{R}$ の互いに素な任意の区間族 $\{I_{j}\}$ について $\left\|\left(\sum|(\hat f\mathbf{1}_{I_{j}})^{\vee}|^{2}\right)^{1/2}\right\|_{p}\lesssim\|f\|_{p}$（$2\le p\lt\infty$）。二進分解が不要になる理由と、$p\lt2$ で偽であることを示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">二重重み $A_{2}$ と Hilbert 変換（Lacey–Sawyer–Shen–Uriarte-Tuero）</span><span class="stars">★★★★★</span></div>
+<p class="st">Hilbert 変換の二重重み $L^{2}$ 有界性 $\|H(f\sigma)\|_{L^{2}(w)}\lesssim\|f\|_{L^{2}(\sigma)}$ は、Poisson $A_{2}$ 条件と二つの試験条件で特徴づけられる（Nazarov–Treil–Volberg 予想の解決、言明）。一重重みの Helson–Szegő（大問 {{R:399}}）との関係を述べよ。</p></div>
+
+<h3 class="ch">III-20　離散幾何と多項式法<span class="rg">{{RANGE}}</span></h3>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Szemerédi–Trotter の定理</span><span class="stars">★★★★★</span></div>
+<p class="st">平面の $m$ 点と $n$ 直線の接続数は $I(P,L)\lesssim m^{2/3}n^{2/3}+m+n$ で、これは最良。交差数補題（Crossing Lemma）による Székely の証明を与えよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">和積問題（Erdős–Szemerédi, Elekes）</span><span class="stars">★★★★★</span></div>
+<p class="st">有限集合 $A\subset\mathbb{R}$ について $\max(|A+A|,|A\cdot A|)\gtrsim|A|^{5/4}$。Szemerédi–Trotter を点集合 $(A+A)\times(A\cdot A)$ と直線族に適用する Elekes の議論で示せ。Solymosi による $|A|^{4/3-\varepsilon}$ も述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">有限体の和積定理（Bourgain–Katz–Tao）</span><span class="stars">★★★★★</span></div>
+<p class="st">素数 $p$ と $p^{\delta}\lt|A|\lt p^{1-\delta}$ なる $A\subset\mathbb{F}_{p}$ について $\max(|A+A|,|AA|)\ge|A|^{1+\varepsilon(\delta)}$（言明）。展開性（expansion）と指数和の評価（Bourgain）への応用を述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">多項式ハムサンド定理</span><span class="stars">★★★★☆</span></div>
+<p class="st">$\mathbb{R}^{n}$ の $N$ 個の有限集合（または測度）は、次数 $\lesssim N^{1/n}$ の多項式の零点集合で同時に二等分できる。Borsuk–Ulam の定理（言明を用いてよい）で示せ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Guth–Katz の多項式分割</span><span class="stars">★★★★★</span></div>
+<p class="st">$\mathbb{R}^{n}$ の $N$ 点と $D\ge1$ に対し、次数 $\le D$ の非零多項式 $P$ が存在して $\mathbb{R}^{n}\setminus Z(P)$ の各連結成分（$\lesssim D^{n}$ 個）に高々 $\lesssim N/D^{n}$ 点しか含まれない。ハムサンド定理の反復で示し、Szemerédi–Trotter の再証明に応用せよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Joints 問題</span><span class="stars">★★★★★</span></div>
+<p class="st">$\mathbb{R}^{3}$（一般に $\mathbb{F}^{n}$）の $L$ 本の直線が作る joint（一般の位置にある $3$ 本以上の直線が交わる点）の個数は $\lesssim L^{3/2}$（Guth–Katz, Quilodrán, Kaplan–Sharir–Shustin）。消失多項式の次数最小性と方向微分による短い証明を与えよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Erdős の相異距離問題（Guth–Katz）</span><span class="stars">★★★★★</span></div>
+<p class="st">平面の $N$ 点が決める相異なる距離の個数は $\gtrsim N/\log N$（言明）。Elekes–Sharir の枠組みによる $\mathbb{R}^{3}$ の直線族の接続問題への帰着と、多項式分割・ruled surface の議論の骨格を述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">Cap set 問題（Ellenberg–Gijswijt）</span><span class="stars">★★★★★</span></div>
+<p class="st">3 項等差数列を含まない $A\subset\mathbb{F}_{3}^{n}$ は $|A|\le3\cdot(2.756)^{n}$。Croot–Lev–Pach の多項式法：低次多項式の空間の次元勘定と、$\mathbf{1}_{x+y+z=0}$ の行列のランク評価で示せ。Roth（大問 {{R:441}}）の Fourier 法による $O(3^{n}/n)$ との差に注目せよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">スライスランク（Tao）</span><span class="stars">★★★★★</span></div>
+<p class="st">3 テンソルのスライスランクを定義し、対角テンソルのスライスランクが台の大きさに等しいこと、$\delta_{x+y+z=0}$ のスライスランクが $\le3\cdot\#\{\text{次数}\le2n/3\text{ の単項式}\}$ であることを示して、cap set の評価を再証明せよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">有限体の Fourier 制限（Mockenhaupt–Tao）</span><span class="stars">★★★★★</span></div>
+<p class="st">$\mathbb{F}_{q}^{3}$ の放物面 $P=\{(x,x_{1}^{2}+x_{2}^{2})\}$ について $\|\widehat{fd\sigma}\|_{L^{4}(\mathbb{F}_{q}^{3})}\lesssim\|f\|_{L^{2}(P,d\sigma)}$ などの制限評価を示し、$-1$ が平方数か否かで $P$ が直線を含むかが変わり、制限評価の成否に影響することを説明せよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:+}}</span><span class="ttl">算術正則性補題（Green）</span><span class="stars">★★★★★</span></div>
+<p class="st">任意の $\varepsilon\gt0$ と $A\subset\mathbb{F}_{2}^{n}$ に対し、余次元 $\le$ タワー型 $(\varepsilon)$ の部分空間 $H$ が存在して、$H$ の剰余類のうち $1-\varepsilon$ 以上の割合で $A$ は Fourier 一様（$\sup_{\xi\neq0}|\widehat{\mathbf{1}_{A\cap(x+H)}}(\xi)|\le\varepsilon|H|$）。エネルギー増加法で示し、Szemerédi の正則性補題との類比を述べよ。</p></div>
+
+<div class="prob line"><div class="prob-head"><span class="no">大問 {{H:gt}}</span><span class="ttl">Green–Tao の定理と転送原理</span><span class="stars">★★★★★</span></div>
+<p class="st">素数は任意の長さの等差数列を含む（言明）。擬ランダム測度（線形形式条件）に支配される関数への Szemerédi の定理の転送原理（dense model theorem）を述べ、GPY 重みによる擬ランダム多数派の構成を説明せよ。</p></div>

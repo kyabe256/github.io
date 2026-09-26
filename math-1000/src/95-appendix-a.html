@@ -1,0 +1,77 @@
+<h2 class="plain">付録 A　分野横断の地図</h2>
+
+<p>1000 題は分野別に並んでいるが、実際には四つの分野は互いを支え合っている。ここでは部をまたぐ主要な依存の筋を挙げる。番号は大問番号である。前半は各部の古典的な幹（第 1–12 章）の間の筋、後半は現代の枝（第 13–20 章）が他の部から何を借りているかの筋である。</p>
+
+<h3 class="sec">古典的な幹の間の筋</h3>
+<table class="legend">
+  <tr><th>複素 → 関数解析</th><td>{{R:193}}（スペクトルが空でない：レゾルベントの解析性＋Liouville）→ {{R:194}}（Gelfand の半径公式：Hadamard の公式 {{R:16}}）→ {{R:213}}（Gelfand–Mazur）→ {{R:215}}（正則関数カルキュラス：Cauchy の積分公式 {{R:14}}）。<strong>作用素論の出発点はすべて複素解析である。</strong></td></tr>
+  <tr><th>複素 → 調和解析</th><td>{{R:56}}, {{R:57}}（Hadamard の三円・三直線）→ {{R:339}}（Riesz–Thorin）→ {{R:341}}–{{R:344}}（Marcinkiewicz・Hausdorff–Young・HLS）。<strong>補間定理は最大値原理の変装である。</strong></td></tr>
+  <tr><th>複素 → 確率</th><td>{{R:98}}（Hadamard の因数分解）→ {{R:486}}（Cramér の分解定理）、{{R:487}}（Marcinkiewicz の定理）。特性関数を整関数として扱う場面。</td></tr>
+  <tr><th>複素 → 数論</th><td>{{R:37}}（Jensen）→ {{R:97}}, {{R:98}}（零点の収束指数・因数分解）→ {{R:137}}（$\xi$ の積表示）→ {{R:135}}, {{R:136}}（零点計数・明示公式）→ {{R:131}}（素数定理）。</td></tr>
+  <tr><th>関数解析 → 調和解析</th><td>{{R:163}}, {{R:164}}（Baire・一様有界性）→ {{R:306}}（du Bois-Reymond）、{{R:308}}（Stein の最大原理）。／ {{R:176}}, {{R:181}}（Alaoglu・Krein–Milman）→ {{R:332}}, {{R:416}}（Bochner）。</td></tr>
+  <tr><th>関数解析 → 確率</th><td>{{R:489}}（条件付き期待値＝Radon–Nikodym または $L^{2}$ 射影 {{R:188}}）／ {{R:473}}（Prohorov）は {{R:176}}（Alaoglu）の測度版／ {{R:575}}（エルゴード分解）は {{R:183}}（Choquet）そのもの。</td></tr>
+  <tr><th>調和解析 → 関数解析</th><td>{{R:367}}（M. Riesz）→ {{R:386}}（ベクトル値特異積分）、{{R:299}}（Toeplitz の指数）は {{R:205}}, {{R:207}}（Fredholm・Atkinson）の具体例。</td></tr>
+  <tr><th>調和解析 → 確率</th><td>{{R:332}}（Bochner）→ {{R:476}}–{{R:478}}（特性関数と Lévy の連続性定理）→ {{R:479}}–{{R:484}}（CLT・安定分布）。<strong>中心極限定理は Fourier 変換の定理である。</strong></td></tr>
+  <tr><th>調和解析 → PDE</th><td>{{R:352}}–{{R:353}}（極大関数・微分定理）→ {{R:356}}, {{R:357}}（近似単位元の a.e. 収束）→ {{R:363}}–{{R:368}}（CZ 理論）→ {{R:401}}–{{R:412}}（Sobolev）。</td></tr>
+  <tr><th>確率 → 解析</th><td>{{R:512}}（Brown 運動と Dirichlet 問題）→ {{R:78}}, {{R:82}}（Poisson 積分・Perron）の確率的再証明／ {{R:523}}（Feynman–Kac）→ {{R:242}}（スペクトル定理）→ {{R:600}}。</td></tr>
+  <tr><th>確率 → 数論・組合せ論</th><td>{{R:461}}（Khinchin）→ {{R:349}}（Khinchin の不等式）→ {{R:377}}（Littlewood–Paley）／ {{R:438}}–{{R:450}}（加法的組合せ論）では {{R:462}}（Paley–Zygmund）と第二モーメント法が随所に現れる。</td></tr>
+  <tr><th>前半の合流点</th><td><strong>大問 {{R:600}}</strong>：Feynman–Kac（{{R:523}}）＋ 大偏差原理（{{R:562}}）＋ 非有界自己共役作用素のスペクトル定理（{{R:242}}）＋ Laplace 法。第 IV 部前半の到達点。</td></tr>
+</table>
+
+<h3 class="sec">現代の枝が借りているもの</h3>
+<table class="legend">
+  <tr><th>関数解析 → 複素</th><td>{{R:188}}（射影定理）と Riesz 表現 → {{R:horL2}}（Hörmander の $L^{2}$ 評価）→ {{R:bergman}}（Bergman 核）。<strong>多変数関数論の現代的な核心は Hilbert 空間論である。</strong>{{R:mrmt}}（可測 Riemann 写像定理）は Beurling 変換の $L^{p}$ 有界性（CZ 理論 {{R:363}}–{{R:368}}）と Neumann 級数で解ける。</td></tr>
+  <tr><th>複素 → 複素（深層）</th><td>{{R:72}}（Löwner の方法）→ {{R:loewner}}（放射型 Löwner 方程式）→ {{R:debranges}}（de Branges）。／ {{R:37}}（Jensen）→ {{R:nev2}}（Nevanlinna の第二主要定理）は Picard の定理の定量化。</td></tr>
+  <tr><th>調和解析 → 数論</th><td>{{R:440}}（Weyl 和）→ {{R:dec}}（decoupling と Vinogradov の平均値定理）／ 大篩 → {{R:bv}}（Bombieri–Vinogradov）→ 有界素数間隔／ {{R:449}}（Szemerédi）→ {{R:gt}}（Green–Tao）。</td></tr>
+  <tr><th>表現論 → 保型形式</th><td>{{R:418}}（Peter–Weyl）, {{R:415}}（Plancherel）→ $\mathrm{SL}(2,\mathbb{R})$ の Plancherel 定理 → {{R:trace}}（Selberg の跡公式）→ Weyl 則 {{R:212}} の双曲版。</td></tr>
+  <tr><th>関数解析 → 作用素環</th><td>{{R:226}}–{{R:238}}（$C^{*}$-環とスペクトル定理）→ {{R:stine}}（Stinespring）→ {{R:tt}}（冨田–竹崎）。{{R:ks}}（Kadison–Singer）は Weaver の予想と interlacing 多項式を経て解かれた ― 確率論（ランダム行列 {{R:584}}）との交点。</td></tr>
+  <tr><th>関数解析 → 幾何</th><td>{{R:205}}–{{R:207}}（Fredholm 指数の安定性）→ {{R:299}}（Toeplitz 指数）→ {{R:as}}（Atiyah–Singer）。熱核の短時間漸近（{{R:251}} の半群論）が McKean–Singer 経由で指数を局所化する。</td></tr>
+  <tr><th>確率 → 関数解析</th><td>{{R:521}}（Girsanov）→ {{R:cm}}（Cameron–Martin）／ {{R:533}}（Ornstein–Uhlenbeck）→ {{R:nelson}}（Nelson の超縮小性）⇔ {{R:579}}（対数 Sobolev）。／ ランダム作用素 → {{R:anderson}}（Anderson 局在）。</td></tr>
+  <tr><th>調和解析 → 調和解析（深層）</th><td>{{R:308}}（Carleson–Hunt）→ {{R:lt}}（Lacey–Thiele の時間周波数解析）／ {{R:361}}（Kakeya）→ {{R:st}}（Stein–Tomas）→ 制限予想／ Strichartz 評価 → {{R:nls}}（エネルギー臨界 NLS）。／ {{R:363}}（CZ 分解）→ sparse 支配 → {{R:a2}}（$A_{2}$ 定理）。</td></tr>
+  <tr><th>調和解析 → 確率</th><td>{{R:frost}}（Frostman）とエネルギー積分 → {{R:511}}（Brown 運動の零点集合）の次元計算／ Gaussian 過程の最大値 → {{R:tal}}（majorizing measure）は {{R:503}}（Kolmogorov–Chentsov）の最終形。</td></tr>
+  <tr><th>解析 → 確率（幾何）</th><td>{{R:579}}（対数 Sobolev）→ {{R:be}}（Bakry–Émery）／ Kantorovich 双対 → {{R:brenier}}（Brenier）→ Wasserstein 勾配流／ {{R:479}}（CLT）→ {{R:steinm}}（Stein の方法）, {{R:entclt}}（エントロピー的 CLT）。</td></tr>
+  <tr><th>複素 → 確率（共形不変性）</th><td>{{R:65}}（Riemann の写像定理）＋ {{R:loewner}}（Löwner 方程式）＋ {{R:518}}（Lévy の特徴づけ）→ {{R:sle}}（SLE）。／ {{R:gff}}（Gauss 自由場）, {{R:wilson}}（一様全域木）, {{R:rsw}}（RSW）が離散から連続への橋となる。</td></tr>
+  <tr><th>四分野の最終合流点</th><td><strong>大問 {{R:smirnov}}</strong>（Smirnov の定理）：離散正則関数（複素）＋ RSW とパーコレーション（確率）＋ Riemann の写像定理 {{R:65}} と境界対応（複素）＋ 正規族 {{R:102}}（関数論）＋ SLE$_{6}$ との同定（確率解析）。本書の最後の一題。</td></tr>
+</table>
+
+<h3 class="sec">分野内の主要な幹</h3>
+<table class="legend">
+  <tr><th>複素</th><td>{{R:1}}, {{R:13}}（Goursat・Cauchy）→ {{R:26}}–{{R:28}}（Laurent・留数）→ {{R:37}}（Jensen）→ {{R:89}}–{{R:101}}（無限積・Hadamard）→ {{R:127}}–{{R:138}}（ζ）→ 解析数論の深層。別筋：{{R:51}}–{{R:55}}（Schwarz–Pick・双曲計量）→ {{R:65}}, {{R:74}}（写像定理・一意化）→ {{R:102}}–{{R:113}}（力学系）→ 擬等角写像 → 単葉関数と調和測度。</td></tr>
+  <tr><th>関数解析</th><td>{{R:151}}–{{R:153}}（Hahn–Banach）→ {{R:175}}–{{R:187}}（弱位相）→ 凸解析と最適化／ {{R:163}}（Baire）→ {{R:164}}–{{R:167}}（三大定理）／ {{R:188}}–{{R:199}}（Hilbert）→ {{R:200}}–{{R:212}}（コンパクト）→ {{R:226}}–{{R:238}}（$C^{*}$ とスペクトル定理）→ {{R:239}}–{{R:250}}（非有界）→ スペクトル理論の深層・作用素環の深層。</td></tr>
+  <tr><th>調和解析</th><td>{{R:301}}–{{R:313}}（収束論）→ 各点収束の深層／ {{R:351}}–{{R:353}}（極大関数）→ {{R:363}}–{{R:368}}（CZ）→ {{R:376}}–{{R:387}}（Littlewood–Paley）→ {{R:388}}–{{R:400}}（$H^{p}$・BMO）→ 重み理論と sparse 支配。補間 {{R:339}}–{{R:350}} はすべてに横断的に効く。</td></tr>
+  <tr><th>確率</th><td>{{R:451}}–{{R:462}}（独立性）→ {{R:463}}–{{R:475}}（極限定理）→ {{R:476}}–{{R:488}}（CLT）→ 極値理論・数理統計／ {{R:489}}–{{R:501}}（マルチンゲール）→ {{R:502}}–{{R:513}}（Brown 運動）→ {{R:514}}–{{R:526}}（伊藤）→ {{R:527}}–{{R:550}}（SDE・Markov）→ 確率偏微分方程式・幾何と最適輸送／ {{R:551}}–{{R:562}}（大偏差）と {{R:563}}–{{R:575}}（エルゴード）は情報とエントロピーへ合流する。</td></tr>
+</table>
+
+<h2 class="plain">付録 B　参考書対応表</h2>
+<table class="legend">
+  <tr><th>I-1 〜 I-4</th><td>Ahlfors <em>Complex Analysis</em>／Rudin <em>Real and Complex Analysis</em> 10–16 章／Conway <em>Functions of One Complex Variable I</em></td></tr>
+  <tr><th>I-5 〜 I-7</th><td>Garnett <em>Bounded Analytic Functions</em>（I–II 章）／Ransford <em>Potential Theory in the Complex Plane</em>／Pommerenke <em>Boundary Behaviour of Conformal Maps</em></td></tr>
+  <tr><th>I-8 〜 I-9</th><td>Boas <em>Entire Functions</em>／Levin <em>Distribution of Zeros of Entire Functions</em>／Milnor <em>Dynamics in One Complex Variable</em>／Carleson–Gamelin <em>Complex Dynamics</em></td></tr>
+  <tr><th>I-10 〜 I-12</th><td>Forster <em>Lectures on Riemann Surfaces</em>／Titchmarsh <em>The Theory of the Riemann Zeta-Function</em>／Serre <em>A Course in Arithmetic</em>（VII 章）／Silverman <em>Arithmetic of Elliptic Curves</em>（VI 章）</td></tr>
+  <tr><th>I-13 〜 I-14</th><td>Hörmander <em>An Introduction to Complex Analysis in Several Variables</em>／Krantz <em>Function Theory of Several Complex Variables</em>／Range <em>Holomorphic Functions and Integral Representations in Several Complex Variables</em>／Chen–Shaw <em>Partial Differential Equations in Several Complex Variables</em></td></tr>
+  <tr><th>I-15 〜 I-16</th><td>Ahlfors <em>Lectures on Quasiconformal Mappings</em>／Astala–Iwaniec–Martin <em>Elliptic PDE and Quasiconformal Mappings in the Plane</em>／Lehto <em>Univalent Functions and Teichmüller Spaces</em>／Hayman <em>Meromorphic Functions</em>／Goldberg–Ostrovskii <em>Value Distribution of Meromorphic Functions</em></td></tr>
+  <tr><th>I-17 〜 I-18</th><td>Davenport <em>Multiplicative Number Theory</em>／Iwaniec–Kowalski <em>Analytic Number Theory</em>／Montgomery–Vaughan <em>Multiplicative Number Theory I</em>／Diamond–Shurman <em>A First Course in Modular Forms</em>／Iwaniec <em>Topics in Classical Automorphic Forms</em></td></tr>
+  <tr><th>I-19 〜 I-20</th><td>Duren <em>Univalent Functions</em>／Garnett–Marshall <em>Harmonic Measure</em>／Baker <em>Transcendental Number Theory</em>／Andrews–Askey–Roy <em>Special Functions</em>／Deift <em>Orthogonal Polynomials and Random Matrices: A Riemann–Hilbert Approach</em></td></tr>
+  <tr><th>II-1 〜 II-4</th><td>Rudin <em>Functional Analysis</em>／Brezis『関数解析』／Conway <em>A Course in Functional Analysis</em></td></tr>
+  <tr><th>II-5 〜 II-8</th><td>Reed–Simon <em>Methods of Modern Mathematical Physics I, II, IV</em>／Murphy <em>C*-algebras and Operator Theory</em>／Kato <em>Perturbation Theory for Linear Operators</em></td></tr>
+  <tr><th>II-9 〜 II-12</th><td>Pazy <em>Semigroups of Linear Operators</em>／Engel–Nagel <em>One-Parameter Semigroups</em>／Hörmander <em>The Analysis of Linear PDO I</em>／Simon <em>Trace Ideals</em>／Albiac–Kalton <em>Topics in Banach Space Theory</em></td></tr>
+  <tr><th>II-13 〜 II-14</th><td>Deimling <em>Nonlinear Functional Analysis</em>／Zeidler <em>Nonlinear Functional Analysis and its Applications</em>／Struwe <em>Variational Methods</em>／Bauschke–Combettes <em>Convex Analysis and Monotone Operator Theory in Hilbert Spaces</em>／Ekeland–Témam <em>Convex Analysis and Variational Problems</em></td></tr>
+  <tr><th>II-15 〜 II-16</th><td>Takesaki <em>Theory of Operator Algebras I–III</em>／Davidson <em>C*-Algebras by Example</em>／Paulsen <em>Completely Bounded Maps and Operator Algebras</em>／Sz.-Nagy–Foias <em>Harmonic Analysis of Operators on Hilbert Space</em>／Radjavi–Rosenthal <em>Invariant Subspaces</em></td></tr>
+  <tr><th>II-17 〜 II-18</th><td>Reed–Simon III, IV／Cycon–Froese–Kirsch–Simon <em>Schrödinger Operators</em>／Aizenman–Warzel <em>Random Operators</em>／Diestel–Jarchow–Tonge <em>Absolutely Summing Operators</em>／Pisier <em>Factorization of Linear Operators and Geometry of Banach Spaces</em></td></tr>
+  <tr><th>II-19 〜 II-20</th><td>Bogachev <em>Gaussian Measures</em>／Janson <em>Gaussian Hilbert Spaces</em>／Nualart <em>The Malliavin Calculus</em>／Taylor <em>Pseudodifferential Operators</em>／Lawson–Michelsohn <em>Spin Geometry</em>／Berline–Getzler–Vergne <em>Heat Kernels and Dirac Operators</em></td></tr>
+  <tr><th>III-1 〜 III-4</th><td>Katznelson <em>An Introduction to Harmonic Analysis</em>／Zygmund <em>Trigonometric Series</em>／Grafakos <em>Classical Fourier Analysis</em>／Stein–Weiss <em>Introduction to Fourier Analysis on Euclidean Spaces</em></td></tr>
+  <tr><th>III-5 〜 III-8</th><td>Stein <em>Singular Integrals</em>／Stein <em>Harmonic Analysis</em>／Duoandikoetxea <em>Fourier Analysis</em>／Grafakos <em>Modern Fourier Analysis</em></td></tr>
+  <tr><th>III-9 〜 III-12</th><td>Adams–Fournier <em>Sobolev Spaces</em>／Triebel <em>Theory of Function Spaces</em>／Rudin <em>Fourier Analysis on Groups</em>／Folland <em>A Course in Abstract Harmonic Analysis</em>／Gröchenig <em>Foundations of Time-Frequency Analysis</em>／Tao–Vu <em>Additive Combinatorics</em></td></tr>
+  <tr><th>III-13 〜 III-14</th><td>Stein <em>Harmonic Analysis</em>（VIII–XI 章）／Sogge <em>Fourier Integrals in Classical Analysis</em>／Demeter <em>Fourier Restriction, Decoupling, and Applications</em>／Muscalu–Schlag <em>Classical and Multilinear Harmonic Analysis</em>／Thiele <em>Wave Packet Analysis</em></td></tr>
+  <tr><th>III-15 〜 III-16</th><td>Iwaniec–Kowalski <em>Analytic Number Theory</em>／Graham–Kolesnik <em>Van der Corput's Method of Exponential Sums</em>／Friedlander–Iwaniec <em>Opera de Cribro</em>／Folland <em>Harmonic Analysis in Phase Space</em>／Lang <em>SL₂(R)</em>／Knapp <em>Representation Theory of Semisimple Groups</em>／Kirillov <em>Lectures on the Orbit Method</em></td></tr>
+  <tr><th>III-17 〜 III-18</th><td>Mattila <em>Fourier Analysis and Hausdorff Dimension</em>／Mattila <em>Geometry of Sets and Measures in Euclidean Spaces</em>／Federer <em>Geometric Measure Theory</em>／Tao <em>Nonlinear Dispersive Equations</em>／Cazenave <em>Semilinear Schrödinger Equations</em></td></tr>
+  <tr><th>III-19 〜 III-20</th><td>Cruz-Uribe–Martell–Pérez <em>Weights, Extrapolation and the Theory of Rubio de Francia</em>／Pereyra <em>Weighted Inequalities and Dyadic Harmonic Analysis</em>（講義録）／Guth <em>Polynomial Methods in Combinatorics</em>／Tao–Vu <em>Additive Combinatorics</em></td></tr>
+  <tr><th>IV-1 〜 IV-4</th><td>Durrett <em>Probability: Theory and Examples</em>／Kallenberg <em>Foundations of Modern Probability</em>／Billingsley <em>Convergence of Probability Measures</em>／Williams <em>Probability with Martingales</em></td></tr>
+  <tr><th>IV-5 〜 IV-8</th><td>Karatzas–Shreve <em>Brownian Motion and Stochastic Calculus</em>／Revuz–Yor <em>Continuous Martingales and Brownian Motion</em>／Mörters–Peres <em>Brownian Motion</em>／Ethier–Kurtz <em>Markov Processes</em></td></tr>
+  <tr><th>IV-9 〜 IV-12</th><td>Dembo–Zeitouni <em>Large Deviations</em>／Walters <em>An Introduction to Ergodic Theory</em>／Boucheron–Lugosi–Massart <em>Concentration Inequalities</em>／Anderson–Guionnet–Zeitouni <em>Random Matrices</em>／Sato <em>Lévy Processes and Infinitely Divisible Distributions</em></td></tr>
+  <tr><th>IV-13 〜 IV-14</th><td>Resnick <em>Extreme Values, Regular Variation and Point Processes</em>／van der Vaart–Wellner <em>Weak Convergence and Empirical Processes</em>／Talagrand <em>Upper and Lower Bounds for Stochastic Processes</em>／Walsh <em>An Introduction to Stochastic Partial Differential Equations</em>／Da Prato–Zabczyk <em>Stochastic Equations in Infinite Dimensions</em>／Hairer <em>A Theory of Regularity Structures</em></td></tr>
+  <tr><th>IV-15 〜 IV-16</th><td>Grimmett <em>Percolation</em>／Duminil-Copin <em>Introduction to Bernoulli Percolation</em>（講義録）／Liggett <em>Interacting Particle Systems</em>／Lyons–Peres <em>Probability on Trees and Networks</em>／Lawler–Limic <em>Random Walk: A Modern Introduction</em>／Levin–Peres–Wilmer <em>Markov Chains and Mixing Times</em></td></tr>
+  <tr><th>IV-17 〜 IV-18</th><td>Hsu <em>Stochastic Analysis on Manifolds</em>／Bakry–Gentil–Ledoux <em>Analysis and Geometry of Markov Diffusion Operators</em>／Villani <em>Optimal Transport: Old and New</em>／van der Vaart <em>Asymptotic Statistics</em>／Lehmann–Casella <em>Theory of Point Estimation</em></td></tr>
+  <tr><th>IV-19 〜 IV-20</th><td>Cover–Thomas <em>Elements of Information Theory</em>／Alon–Spencer <em>The Probabilistic Method</em>／Janson–Łuczak–Ruciński <em>Random Graphs</em>／Lawler <em>Conformally Invariant Processes in the Plane</em>／Werner <em>Lectures on Two-Dimensional Critical Percolation</em></td></tr>
+</table>
+<p style="font-size:9.4pt;color:#4b5563">言明のみを求めた問題（Carleson–Hunt {{R:308}}、Enflo {{R:201}}・{{R:280}}、Sullivan {{R:109}}、de Branges {{R:debranges}}、Ornstein {{R:572}}、Tracy–Widom {{R:586}}、Atiyah–Singer {{R:as}}、Kadison–Singer {{R:ks}}、エネルギー臨界 NLS {{R:nls}}、Green–Tao {{R:gt}}、Smirnov {{R:smirnov}} など）については、上記の文献でも証明は数十ページから一冊に及ぶか、専門論文に委ねられている。それらは「はじめに」で述べたとおり、主張の正確な再述・証明の骨格の再構成・鍵となる補題一つの完全な証明をもって解答とせよ。</p>

@@ -1,0 +1,62 @@
+<div class="cover">
+  <div class="kicker">ONE THOUSAND THEOREMS</div>
+  <div class="vol">STATEMENTS ONLY</div>
+  <h1>数学 1000 大問</h1>
+  <div class="rule"></div>
+  <div class="sub">複素関数論・関数解析・調和解析・確率論</div>
+  <div class="formula">$$\widehat{f*g}=\hat f\cdot\hat g,\qquad E\big[e^{i\langle \xi,B_t\rangle}\big]=e^{-t|\xi|^{2}/2}$$</div>
+  <div class="meta">
+    全 {{STAT:TOTAL}} 大問 ― すべて証明問題、すべて名前のついた定理<br>
+    第 I 部 複素関数論 250 ／ 第 II 部 関数解析 250<br>
+    第 III 部 調和解析 250 ／ 第 IV 部 確率論 250<br>
+    <br>
+    難易度：★★★★☆ {{STAT:S4}} 題 ／ ★★★★★ {{STAT:S5}} 題<br>
+    <br>
+    誘導なし・解答なし
+  </div>
+</div>
+
+<h2 class="plain">はじめに</h2>
+
+<p>本書は<strong>定理の主張だけ</strong>を 1000 個並べた問題集である。誘導はない。解答もない。各問は「この定理を証明せよ」という要求であり、そこから先はすべて読者の仕事になる。</p>
+
+<p>収録したのはすべて<strong>名前のついた大定理</strong>である。難易度は ★★★★☆（院試の難問から専門書の標準的な定理まで。半日）と ★★★★★（専門書の山場。一題に数日、ときに数週間）の二段階のみ ― 入門的な問題は一題も入れていない。</p>
+
+<p>各部は 250 題、20 章からなる。前半 12 章（各部 150 題）は四分野の<strong>古典的な幹</strong>、後半 8 章（各部 100 題）はその幹から伸びた<strong>現代の枝</strong> ― 多変数関数論・擬等角写像・Nevanlinna 理論・保型形式、非線形解析・作用素環・指数定理、制限問題・非線形分散方程式・sparse 支配・多項式法、確率偏微分方程式・パーコレーション・最適輸送・SLE ― である。後半には、証明が一冊の専門書や長大な論文に及ぶ定理も含まれる。</p>
+
+<h3 class="sec">使用許可のルール</h3>
+<p>1000 題は<strong>通し番号順に一本の階段として並んでいる</strong>。番号 $n$ の問題を解くとき、</p>
+<ul class="plain">
+  <li>$1,\dots,n-1$ のすべての結果</li>
+  <li>各分野の学部標準の基礎事実（測度論・位相・線形代数・微積分・初等的な微分幾何と代数）</li>
+  <li>問題文の中で<strong>大問番号を明示して引用された結果</strong>（番号の前後を問わない）</li>
+</ul>
+<p>は自由に使ってよい。それ以外の $n$ 以降の結果を使ってはならない（循環論法になる）。三つめの例外は、後半の章が他の部の古典的な結果（たとえば第 II 部の後半が第 III 部・第 IV 部の結果）を必要とするためのもので、引用の向きに循環がないことは確かめてある。部をまたぐ依存の主な筋は付録 A に地図としてまとめた。</p>
+
+<h3 class="sec">言明のみを求める問題</h3>
+<p>後半の章には、完全な証明が数十ページから数百ページに及ぶ定理（Atiyah–Singer、Elliott の分類、エネルギー臨界 NLS、正則構造、Kahn–Kalai 予想など）がある。これらについては、<strong>主張を正確に述べ直し、証明の骨格（どの定理をどの順で使うか）を再構成し、鍵となる一つの補題を完全に証明する</strong>ことをもって解答とせよ。それ自体が ★★★★★ の仕事である。</p>
+
+<h3 class="sec">詰まったときに</h3>
+<p>本書に解答はないが、付録 B に章ごとの参考書対応表を置いた。また、誘導つき・準備章つきで同じ主題を扱った姉妹編『フーリエ解析 100 大問 ― 定義から大定理まで』があり、そちらの第 0 章には本書の前半で使う記号・定義がすべて収録されている。定義が曖昧になったらそちらへ戻ること。</p>
+<p>そして ― <strong>一題を一晩寝かせること</strong>。翌朝に解ける問題が驚くほど多くある。1000 題は逃げない。</p>
+
+<h3 class="sec">記号の約束</h3>
+<table class="sym">
+  <tr><td class="k">$\mathbb{D},\ \mathbb{H},\ \mathbb{T},\ \hat{\mathbb{C}}$</td><td>単位開円板、上半平面、円周 $\mathbb{R}/2\pi\mathbb{Z}$、Riemann 球面</td></tr>
+  <tr><td class="k">$\mathcal{O}(\Omega),\ \mathcal{M}(\Omega)$</td><td>$\Omega$ 上の正則関数全体、有理型関数全体（$\Omega\subset\mathbb{C}^{n}$ でもよい）</td></tr>
+  <tr><td class="k">$\hat f(n),\ \hat f(\xi)$</td><td>$\frac{1}{2\pi}\int_{-\pi}^{\pi}fe^{-inx}dx$（$\mathbb{T}$ 上）、$\int_{\mathbb{R}^{n}}f(x)e^{-2\pi ix\xi}dx$（$\mathbb{R}^{n}$ 上）</td></tr>
+  <tr><td class="k">$S_{N},\sigma_{N},A_{r}$</td><td>部分和、Cesàro 平均、Abel 平均。$D_{N},K_{N},P_{r}$ は Dirichlet・Fejér・Poisson 核</td></tr>
+  <tr><td class="k">$f*g$</td><td>畳み込み（$\mathbb{T}$ 上は $\frac{1}{2\pi}\int$ で正規化）</td></tr>
+  <tr><td class="k">$\mathcal{S},\ \mathcal{S}',\ \mathcal{D},\ \mathcal{D}',\ \mathcal{E}'$</td><td>Schwartz 空間、緩増加超関数、試験関数、超関数、コンパクト台超関数</td></tr>
+  <tr><td class="k">$\mathcal{B}(X),\mathcal{K}(X),\mathcal{S}_{p}$</td><td>有界作用素、コンパクト作用素、Schatten $p$ クラス</td></tr>
+  <tr><td class="k">$\sigma(T),\ r(T),\ \rho(T)$</td><td>スペクトル、スペクトル半径、レゾルベント集合</td></tr>
+  <tr><td class="k">$M f$, $A_{p}$</td><td>Hardy–Littlewood の極大関数、Muckenhoupt 重みのクラス</td></tr>
+  <tr><td class="k">$\dim_{H},\ \mathcal{H}^{s}$</td><td>Hausdorff 次元、$s$ 次元 Hausdorff 測度</td></tr>
+  <tr><td class="k">$X\Rightarrow Y$, a.s., a.e.</td><td>分布収束、概収束（ほとんど確実）、ほとんど至る所</td></tr>
+  <tr><td class="k">$E[\cdot\mid\mathcal{G}]$, $\langle M\rangle$</td><td>条件付き期待値、二次変分過程</td></tr>
+  <tr><td class="k">$W_{p},\ H(\cdot),\ D(\cdot\Vert\cdot)$</td><td>Wasserstein 距離、エントロピー、相対エントロピー（Kullback–Leibler）</td></tr>
+  <tr><td class="k">$A\lesssim B$, $A\asymp B$</td><td>$A\le CB$、$A\lesssim B$ かつ $B\lesssim A$（$C$ は本質的変数に依らない）</td></tr>
+</table>
+
+<h2 class="plain">目次</h2>
+<!--TOC-->
