@@ -1,0 +1,126 @@
+=part 第 VII 部　非平滑解析と変分解析 | NONSMOOTH AND VARIATIONAL ANALYSIS &mdash; 1201 to 1400
+微分できない関数、凸でない集合、一価でない写像 ― 現代の最適化が扱う対象の大半はこれである。Clarke の一般化微分、Mordukhovich の極限構成、変分原理、集合値写像の正則性、集合と関数の極限、prox-regularity と弱凸性、半代数的最適化、二階変分解析、DC 計画まで、Rockafellar–Wets の『変分解析』の骨格を証明で辿る。
+
+=ch VII-1　Clarke の一般化微分
+
+*4 Clarke の一般化方向微分 {clarke}
+局所 Lipschitz 関数 $f$ の Clarke 方向微分 $f^{\circ}(x;d)=\limsup_{y\to x,t\downarrow0}\frac{f(y+td)-f(y)}{t}$ は $d$ について劣線形で、$|f^{\circ}(x;d)|\le L\|d\|$。$(x,d)\mapsto f^{\circ}(x;d)$ が上半連続であることを示せ。
+
+*4 Clarke 劣微分の基本性質 {clarke-sub}
+$\partial_{C}f(x)=\{\xi:\langle\xi,d\rangle\le f^{\circ}(x;d)\ \forall d\}$ は空でないコンパクト凸集合で、$f$ が凸なら凸解析の劣微分に、$C^{1}$ なら $\{\nabla f(x)\}$ に一致する。局所最小点で $0\in\partial_{C}f(x)$ を示せ。
+
+*4 Clarke の勾配公式 {clarke-grad}
+局所 Lipschitz 関数 $f$ について $\partial_{C}f(x)=\operatorname{conv}\{\lim\nabla f(x_{k}): x_{k}\to x,\ x_{k}\notin S\cup\Omega_{f}\}$（$\Omega_{f}$ は微分不可能点、$S$ は任意の零集合）。Rademacher の定理を用いて証明せよ。
+
+*4 Clarke 劣微分の和と連鎖律
+$\partial_{C}(f+g)(x)\subset\partial_{C}f(x)+\partial_{C}g(x)$ で、一方が strictly differentiable なら等号。一般に包含が真であること（$f=|x|$, $g=-|x|$）を示せ。連鎖律 $\partial_{C}(g\circ F)(x)\subset\operatorname{conv}\{\partial_{C}g(F(x))\partial_{C}F(x)\}$ を示せ。
+
+*4 Lebourg の平均値定理
+局所 Lipschitz 関数 $f$ と $x,y$ に対し、$z\in(x,y)$ と $\xi\in\partial_{C}f(z)$ で $f(y)-f(x)=\langle\xi,y-x\rangle$ となるものが存在する。証明せよ。
+
+*4 Clarke 正則性
+$f$ が $x$ で Clarke 正則（方向微分が存在し $f'(x;d)=f^{\circ}(x;d)$）ならば、和・最大値の劣微分公式で等号が成り立つ。凸関数・$C^{1}$ 関数・それらの最大値が正則で、$-|x|$ が正則でないことを示せ。
+
+*4 最大値関数の Clarke 劣微分
+$f=\max_{i}f_{i}$（$f_{i}\in C^{1}$）について $\partial_{C}f(x)=\operatorname{conv}\{\nabla f_{i}(x): i\in I(x)\}$ で、$f$ は Clarke 正則。最小値関数では包含しか成り立たないことを示せ。
+
+*4 Clarke の一般化 Jacobian と逆関数定理
+局所 Lipschitz 写像 $F:\mathbb{R}^{n}\to\mathbb{R}^{n}$ の一般化 Jacobian $\partial F(x)=\operatorname{conv}\{\lim JF(x_{k})\}$ がすべて正則なら、$F$ は $x$ の近傍で Lipschitz 逆写像をもつ（Clarke の逆関数定理）。証明を完成させよ。
+
+*4 Clarke の陰関数定理と非平滑方程式
+$F(x,y)=0$ で $\pi_{y}\partial F(x_{0},y_{0})$ の元がすべて正則なら、$y$ は $x$ の Lipschitz 関数として一意に解ける。区分的 $C^{1}$ 関数に対する Kummer・Robinson の逆関数定理との関係を述べよ。
+
+*4 Clarke 法錐と接錐
+閉集合 $C$ の Clarke 法錐 $N_{C}^{\mathrm{C}}(x)=\operatorname{cl}\bigcup_{\lambda\ge0}\lambda\partial_{C}d_{C}(x)$ を定義し、Clarke 接錐の極錐であることを示せ。$C$ が凸なら凸解析の法錐に一致することを確かめよ。
+
+*4 Clarke の多重規則（Fritz John 型）
+局所 Lipschitz データの問題 $\min f(x)$ s.t. $g_{i}(x)\le0$, $h_{j}(x)=0$, $x\in C$ の局所最小点で、非自明な乗数 $(\lambda_{0},\lambda,\mu)$ により $0\in\lambda_{0}\partial_{C}f+\sum\lambda_{i}\partial_{C}g_{i}+\sum\mu_{j}\partial_{C}h_{j}+N_{C}^{\mathrm{C}}$ が成り立つ。正確ペナルティと Ekeland の原理で証明せよ。
+
+*4 Clarke の正確ペナルティ原理
+$f$ が $C$ 上で局所最小、$f$ が $L$-Lipschitz なら、$x^{*}$ は $f+L'd_{C}$（$L'>L$）の無制約局所最小点である。証明し、Clarke 劣微分を用いた集合制約付き最適性条件を導け。
+
+*4 Clarke 劣微分の上半連続性
+$x\mapsto\partial_{C}f(x)$ は上半連続（グラフが閉）で、局所有界である。これにより勾配サンプリング法の極限点が Clarke 停留点になることを示せ。
+
+*4 厳密微分可能性と Clarke 劣微分の一点性
+局所 Lipschitz 関数 $f$ が $x$ で厳密微分可能（$\frac{f(y)-f(z)-\langle\nabla f(x),y-z\rangle}{\|y-z\|}\to0$, $y,z\to x$）$\iff\partial_{C}f(x)$ が一点。至る所微分可能だが $x$ で厳密微分可能でない関数 $x^{2}\sin(1/x)$ で $\partial_{C}f(0)=[-1,1]$ を計算せよ。
+
+*4 Borwein–Moors–Wang の汎性定理
+Banach 空間上の非拡大関数の空間において、汎的（残留集合上）な関数は各点で Clarke 劣微分が単位双対球全体に等しい。可分な場合の証明の骨格を与えよ。
+
+*4 Clarke の非平滑最適制御の最大原理（入門）
+Lipschitz 連続なダイナミクスとコストに対する最適制御問題で、Clarke 劣微分を用いた Pontryagin 型の必要条件（非平滑最大原理）を述べ、共状態方程式が差分包含 $-\dot p\in\partial_{C,x}H(x,p,u)$ となることを説明せよ。
+
+*4 半平滑関数の Clarke 一般化 Jacobian と Newton 法（再訪）
+$F$ が半平滑なら $V\in\partial F(x+h)$ について $F(x+h)-F(x)-Vh=o(\|h\|)$ が一様に成り立つ（Mifflin, Qi–Sun）。この性質から半平滑 Newton 法の超線形収束を導け。
+
+*4 Clarke の非平滑解析と Hamilton–Jacobi の一般化解
+Lipschitz 関数 $u$ が Hamilton–Jacobi 方程式の「Clarke 一般化解」（$H(x,\partial_{C}u)\ni0$）であることは粘性解とは一般に一致しないことを示し、最適制御の値関数の特徴づけで Clarke 劣微分を用いる場合の注意を述べよ。
+
+*5 Clarke 劣微分の計算不可能性とアルゴリズム的困難
+局所 Lipschitz 関数の Clarke 劣微分を、関数値と勾配の有限個の評価から近似する問題は一般に不可能であり（Nesterov の抵抗論法）、自動微分が非平滑点で Clarke 劣微分の元を返さない例（ReLU の合成 $\mathrm{relu}(x)-\mathrm{relu}(-x)$ の $0$ での「勾配」）を示せ。保守的場（Bolte–Pauwels）の概念でこれを正当化せよ。
+
+*5 保守的場の理論（Bolte–Pauwels）
+定義可能な局所 Lipschitz 関数 $f$ の保守的場 $D:\mathbb{R}^{n}\rightrightarrows\mathbb{R}^{n}$（任意の絶対連続曲線に沿って $\frac{d}{dt}f(\gamma)=\langle v,\dot\gamma\rangle$, $v\in D(\gamma)$）はほとんど至る所 $\{\nabla f\}$ に一致し、自動微分の出力は保守的場の元である。SGD の収束が保守的場の零点への収束として正当化されることを示せ。
+
+=ch VII-2　極限劣微分と法錐
+
+*4 正則劣微分と極限劣微分 {limsub}
+下半連続関数 $f$ の Fréchet（正則）劣微分 $\hat\partial f(x)=\{v: f(y)\ge f(x)+\langle v,y-x\rangle+o(\|y-x\|)\}$ と極限劣微分 $\partial f(x)=\limsup_{y\to_{f}x}\hat\partial f(y)$ を定義し、局所最小点で $0\in\hat\partial f(x)\subset\partial f(x)$ を示せ。$f(x)=-|x|$ で $\hat\partial f(0)=\emptyset$, $\partial f(0)=\{-1,1\}$ を計算せよ。
+
+*4 極限劣微分と Clarke 劣微分の関係
+局所 Lipschitz 関数について $\partial_{C}f(x)=\operatorname{conv}\partial f(x)$ であり、$\partial f(x)$ は一般に非凸である。これにより極限劣微分に基づく最適性条件が Clarke より鋭いことを示せ。
+
+*4 極限劣微分の和公式（Mordukhovich） {mord-sum}
+下半連続関数 $f_{1}$ と局所 Lipschitz 関数 $f_{2}$ について $\partial(f_{1}+f_{2})(x)\subset\partial f_{1}(x)+\partial f_{2}(x)$。一般の下半連続関数では、限定条件 $\partial^{\infty}f_{1}(x)\cap(-\partial^{\infty}f_{2}(x))=\{0\}$ の下で成り立つことを示せ（$\partial^{\infty}$ は特異劣微分）。
+
+*4 極値原理（Mordukhovich の extremal principle）
+閉集合 $\Omega_{1},\Omega_{2}$ の局所極値点（ある小さな平行移動で交わりがなくなる）$\bar x$ で、$v\in N_{\Omega_{1}}(\bar x)\cap(-N_{\Omega_{2}}(\bar x))$, $v\neq0$ が存在する。有限次元の証明を与え、これが非凸集合の分離定理の代わりになることを説明せよ。
+
+*4 近似極値原理（Asplund 空間）
+Asplund 空間では極値原理が Fréchet 法錐の近似形（$\varepsilon$ だけずれた点での法線）で成り立ち、Asplund 空間はこの性質で特徴づけられる（Mordukhovich–Shao）。主張を述べ証明の骨格を与えよ。
+
+*4 極限法錐の計算
+$C=\{x: g(x)\le0\}$（$g\in C^{1}$）で $\nabla g(\bar x)\neq0$ なら $N_{C}(\bar x)=\{\lambda\nabla g(\bar x):\lambda\ge0\}$。相補性集合 $\{(a,b): a\ge0,b\ge0,ab=0\}$ の原点での極限法錐 $\{(a,b): a<0,b<0\}\cup\{ab=0\}$ を計算し、Clarke 法錐（全平面）との違いを示せ。
+
+*4 制約系の極限法錐の計算規則
+$C=\{x: F(x)\in D\}$（$F\in C^{1}$, $D$ 閉）について、限定条件 $\ker\nabla F(\bar x)^{\top}\cap N_{D}(F(\bar x))=\{0\}$ の下で $N_{C}(\bar x)\subset\nabla F(\bar x)^{\top}N_{D}(F(\bar x))$。証明せよ。
+
+*4 特異劣微分とエピグラフの水平法線
+$\partial^{\infty}f(x)=\{v:(v,0)\in N_{\operatorname{epi}f}(x,f(x))\}$ を定義し、$f$ が $x$ の近くで Lipschitz $\iff\partial^{\infty}f(x)=\{0\}$ であることを示せ。
+
+*4 極限劣微分に基づく非線形計画の最適性条件
+等式・不等式・集合制約付き問題の局所最小点で、Mordukhovich の制約想定（NNAMCQ）の下で、極限劣微分と極限法錐による KKT 型条件が成り立つことを示せ。
+
+*4 MPCC の M-停留性
+相補性制約付き問題の局所最小点が、MPCC-GCQ の下で M-停留点（Mordukhovich 停留）であることを極限法錐の計算から導け。S-停留性が一般には必要条件でないことを示せ。
+
+*4 近接劣微分と近接法線
+近接劣微分 $\partial_{P}f(x)=\{v:f(y)\ge f(x)+\langle v,y-x\rangle-\sigma\|y-x\|^{2}\}$ を定義し、近接法線が最近点射影で特徴づけられること（$v\in N^{P}_{C}(x)\iff x\in P_{C}(x+tv)$ for small $t$）を示せ。近接劣微分の稠密性定理（Clarke–Ledyaev–Stern–Wolenski）を述べよ。
+
+*4 ファジー和公式（Ioffe, Borwein–Zhu）
+下半連続関数 $f_{1},f_{2}$ と $v\in\hat\partial(f_{1}+f_{2})(x)$ に対し、任意の $\varepsilon$ で $x_{i}$ が $x$ に近く $|f_{i}(x_{i})-f_{i}(x)|<\varepsilon$、$v\in\hat\partial f_{1}(x_{1})+\hat\partial f_{2}(x_{2})+\varepsilon B$ となるものが存在する。Borwein–Preiss の平滑変分原理から導け。
+
+*4 余微分（coderivative）の定義と計算
+集合値写像 $F$ の余微分 $D^{*}F(\bar x|\bar y)(y^{*})=\{x^{*}:(x^{*},-y^{*})\in N_{\operatorname{gph}F}(\bar x,\bar y)\}$ を定義し、$F$ が $C^{1}$ 一価なら $D^{*}F=\nabla F^{\top}$ であることを示せ。$F=\partial f$（$f$ 凸二次）の場合を計算せよ。
+
+*4 余微分の和・合成規則
+$D^{*}(F+G)$ と $D^{*}(G\circ F)$ の包含規則を限定条件の下で示し、一般化方程式の解写像の余微分の計算に応用せよ。
+
+*4 極限劣微分と単調性の関係
+下半連続関数 $f$ について、$\partial f$ が単調 $\iff f$ が凸。Poliquin の定理（$\partial f$ が「極大単調に近い」なら prox-regular）への布石として証明せよ。
+
+*4 限定条件の下での極限劣微分の連鎖律
+$f=g\circ F$（$g$ 下半連続、$F$ は $C^{1}$）について、限定条件 $\partial^{\infty}g(F(\bar x))\cap\ker\nabla F(\bar x)^{\top}=\{0\}$ の下で $\partial f(\bar x)\subset\nabla F(\bar x)^{\top}\partial g(F(\bar x))$。証明せよ。
+
+*4 Lipschitz 係数の劣微分による公式
+下半連続関数 $f$ の $\bar x$ における Lipschitz 係数 $\operatorname{lip}f(\bar x)=\limsup_{x,x'\to\bar x}\frac{|f(x)-f(x')|}{\|x-x'\|}$ は、$f$ が $\bar x$ の近くで Lipschitz なら $\max\{\|v\|: v\in\partial f(\bar x)\}$ に等しい（Rockafellar–Wets 定理 9.13）。証明し、凸包をとっても最大ノルムは変わらないので Clarke 劣微分でも同じ公式が成り立つことを確かめよ。
+
+*4 下半連続関数の劣微分の稠密性
+下半連続真関数 $f$ について、$\operatorname{dom}\hat\partial f$ は $\operatorname{dom}f$ で稠密（有限次元、あるいは Asplund 空間）。Ekeland あるいは Borwein–Preiss の原理から導け。
+
+*5 Mordukhovich の変分解析の基本定理群
+有限次元において、(i) 極値原理、(ii) 極限劣微分の和公式（限定条件付き）、(iii) Mordukhovich 判定（計量正則性 $\iff$ 余微分の核が自明）、(iv) 最適性条件（制約想定付き）が互いに導かれることを示し、変分解析の「極限構成」が凸解析の分離定理に相当する役割を果たすことを論ぜよ。
+
+*5 極限法錐の非凸性と近似の可能性（Ioffe の近似劣微分）
+Banach 空間の一般の場合に、Ioffe の近似劣微分 $\partial_{A}f$ を定義し、それが任意の Banach 空間で和公式をみたす最小の「信頼できる」劣微分であること、Asplund 空間では極限劣微分に一致することの骨格を示せ。

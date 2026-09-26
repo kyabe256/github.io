@@ -1,0 +1,123 @@
+=ch VI-7　座標降下法
+
+*4 ランダム座標降下法（Nesterov 2012） {rcd}
+座標ごとの Lipschitz 定数 $L_{i}$ をもつ凸関数に対し、座標 $i$ を確率 $L_{i}/\sum L_{j}$ で選び $x_{i}\leftarrow x_{i}-\frac{1}{L_{i}}\nabla_{i}f$ とするランダム座標降下法は $E f(x_{k})-f^{*}\le\frac{2\sum L_{i}R^{2}}{k+4}$、強凸なら $(1-\mu/\sum L_{i})^{k}$ で線形収束する。証明せよ。
+
+*4 加速座標降下法（Nesterov, Lee–Sidford, Allen-Zhu ら）
+加速ランダム座標降下法が $O(\sum\sqrt{L_{i}}R/\sqrt\varepsilon)$ の反復計算量を達成し、各反復のコストを座標 1 つ分に抑える実装（Lee–Sidford の変数変換）を述べよ。
+
+*4 巡回座標降下の最悪ケース（Sun–Ye）
+巡回（Gauss–Seidel 型）座標降下は、ランダム版より $O(n)$ 倍（あるいは $O(n^{2})$ 倍）遅くなりうる二次関数の例が存在する（Sun–Ye 2019）。例を構成せよ。
+
+*4 Gauss–Southwell 規則（Nutini ら）
+勾配の絶対値最大の座標を選ぶ Gauss–Southwell 規則は、$\ell_{1}$ ノルムでの強凸定数 $\mu_{1}$ を用いて $(1-\mu_{1}/L)$ の率をもち、ランダム選択（$\mu/(nL)$）より速い場合があることを示せ（Nutini–Schmidt–Laradji–Friedlander–Koepke）。
+
+*4 分離非平滑項つき座標降下（Richtárik–Takáč, Tseng–Yun）
+$\min f(x)+\sum g_{i}(x_{i})$ に対するランダム座標近接勾配法の収束率を示し、$g$ が非分離なら座標降下が停留点に収束しない例（$|x_{1}-x_{2}|$）を作れ。
+
+*4 座標降下の非凸での失敗と成功（Powell, Tseng）
+非微分可能な非分離項があると座標降下は非停留点に止まる（Tseng 2001 の例）。$f$ が準凸で各ブロックの最小点が一意なら、巡回ブロック座標降下の集積点は停留点である（Tseng）ことを示せ。
+
+*4 並列座標降下（Richtárik–Takáč, ESO）
+$\tau$ 座標を同時に更新する並列座標降下の収束率を、期待分離可能過大評価（ESO）パラメータ $v$ で表し、$f$ の部分分離度 $\omega$ に対し $v=1+\frac{(\omega-1)(\tau-1)}{n-1}$ で線形に加速することを示せ。
+
+*4 双対座標上昇（SDCA, Shalev-Shwartz–Zhang）
+正則化経験リスク最小化の双対に対する確率的双対座標上昇は、$O((n+\kappa)\log(1/\varepsilon))$ で双対ギャップを減らす。証明し、SVM の双対座標法（Hsieh ら）との関係を述べよ。
+
+*4 座標降下とカチマルツ法
+線形系 $Ax=b$ のランダム Kaczmarz 法（行 $i$ を $\|a_{i}\|^{2}$ に比例して選び射影）は $E\|x_{k}-x^{*}\|^{2}\le(1-\frac{\sigma_{\min}^{2}(A)}{\|A\|_{F}^{2}})^{k}\|x_{0}-x^{*}\|^{2}$（Strohmer–Vershynin）。これが最小二乗の双対に対する座標降下であることを示せ。
+
+*4 ランダム化 Gauss–Seidel と最小二乗
+正定値系に対するランダム座標降下（ランダム Gauss–Seidel）が $E\|x_{k}-x^{*}\|_{A}^{2}\le(1-\frac{\lambda_{\min}(A)}{\operatorname{tr}A})^{k}\|x_{0}-x^{*}\|_{A}^{2}$ をみたすことを示せ（Leventhal–Lewis）。
+
+*4 ブロック Kaczmarz とスケッチ法の統一（Gower–Richtárik）
+ランダムスケッチ $S$ による射影 $x_{+}=x-A^{\top}S(S^{\top}AA^{\top}S)^{+}S^{\top}(Ax-b)$ は、Kaczmarz・座標降下・ブロック法をすべて含み、率が $1-\lambda_{\min}(E[Z])$ で与えられることを示せ（Gower–Richtárik 2015）。
+
+*4 非同期座標降下（Liu–Wright, Hogwild!）
+遅延 $\tau$ の古い値で勾配を計算する非同期並列座標降下が、$\tau=O(\sqrt n)$ 程度まで線形加速を保つことを示せ（Liu–Wright–Ré–Bittorf–Sridhar）。
+
+*4 座標降下による LASSO の正則化パス（glmnet, Friedman–Hastie–Tibshirani）
+LASSO・エラスティックネットの座標降下が閉形式のソフト閾値更新になり、ウォームスタート付きの正則化パス計算が効率的であることを示し、収束を証明せよ。
+
+*4 座標降下の Lipschitz 定数と重要度サンプリング
+座標選択確率 $p_{i}\propto L_{i}^{\alpha}$ の最適な $\alpha$ を議論し、$\alpha=1/2$ が加速法で最適になる理由を示せ（Allen-Zhu–Qu–Richtárik–Yuan の NU_ACDM）。
+
+*4 ブロック座標降下と交互最小化の $O(1/k)$ 率（Beck–Tetruashvili）
+平滑凸関数に対する巡回ブロック座標勾配降下が $O(\frac{pL_{\max}R^{2}}{k})$（$p$ はブロック数）の率をもつことを示せ。
+
+*4 座標降下の下界
+座標オラクル（一回に一座標の偏微分のみ）を用いる方法に対し、$O(n\sqrt{L/\varepsilon})$ 相当の下界が成り立つことを述べ、加速座標降下の最適性を論ぜよ。
+
+*4 座標降下の Hessian 情報版（Newton 座標）
+各座標で二階微分を用いる座標 Newton 法の局所収束と、ロジスティック回帰での実装（Yuan–Chang–Hsieh–Lin の newGLMNET）を論ぜよ。
+
+*4 座標降下のグラフ上の最適化（Gauss–Seidel と線形系の Laplacian ソルバー）
+グラフ Laplacian 系に対するランダム座標降下・Kaczmarz が、電気回路の解釈で局所的な電位調整になることを示し、近線形時間 Laplacian ソルバー（Spielman–Teng, Kelner–Orecchia–Sidford–Zhu の簡単なソルバー）の考え方を述べよ。
+
+*5 Kelner–Orecchia–Sidford–Zhu の簡単な Laplacian ソルバー
+低伸長全域木に沿ったサイクルの電流をランダムに修正する「座標降下」が、Laplacian 系を $\tilde O(m\log^{2}n\log(1/\varepsilon))$ 時間で解くことを示せ（KOSZ 2013）。木の伸長と収束率の関係を証明せよ。
+
+*5 ランダム座標降下の収束の完全な特徴づけ（二次関数）
+強凸二次関数に対し、任意の固定された確率分布 $p$ によるランダム座標降下の期待誤差の漸近率が、行列 $I-\operatorname{Diag}(p)D^{-1}A$ の期待値ではなく、誤差の二次モーメントの線形写像のスペクトル半径で与えられることを示し、最適な $p$ を SDP で特徴づけよ。
+
+=ch VI-8　性能推定と最適な一次法
+
+*5 性能推定問題（PEP）の SDP 定式化 {pep2}
+関数クラス $\mathcal{F}_{\mu,L}$ と固定ステップの一次法について、最悪ケース性能の計算は補間条件（Taylor–Hendrickx–Glineur）により Gram 行列上の有限次元 SDP と同値である。定式化の厳密性（緩和ではない）を証明せよ。
+
+*4 PEP の双対と Lyapunov 関数
+PEP の SDP 双対の実行可能解が、補間不等式の非負結合として収束率の証明を与え、それがちょうど Lyapunov 関数による証明に対応することを示せ（Taylor–Van Scoy–Lessard）。
+
+*4 最適化勾配法 OGM（Kim–Fessler） {ogm}
+PEP で最悪ケースを最小化するステップを求めると、OGM $f(x_{N})-f^{*}\le\frac{L\|x_{0}-x^{*}\|^{2}}{2\theta_{N}^{2}}$（$\theta_{N}\approx(N+1)/\sqrt2$）が得られ、Nesterov 法より定数倍 $2$ 良い。OGM の効率的な実装（二つの運動量）を導け。
+
+*4 OGM の厳密な最適性（Drori 2017）
+$L$-平滑凸関数に対する一次法の最悪ケース下界が OGM の上界 $\frac{LR^{2}}{2\theta_{N}^{2}}$ に正確に一致する（大次元において）ことを示せ。最悪関数の構成を述べよ。
+
+*4 勾配ノルムを最小化する最適法 OGM-G（Kim–Fessler）
+$\|\nabla f(x_{N})\|^{2}\le\frac{2L(f(x_{0})-f^{*})}{(N+1)^{2}}$ を達成する OGM-G を PEP で導き、これが最良であること（Nesterov–Gasnikov–Guminov–Dvurechensky の下界）を述べよ。
+
+*4 強凸関数の最適法：ITEM（Taylor–Drori）
+$\mu$-強凸 $L$-平滑関数に対し、ITEM（information-theoretic exact method）が $\|z_{N}-x^{*}\|^{2}\le\frac{1}{1+q\,A_{N}}\|x_{0}-x^{*}\|^{2}$ 型の厳密な最良率を達成し、下界と一致することを示せ。
+
+*4 三項漸化式法（Van Scoy–Freeman–Lynch の TMM）
+強凸 $L$-平滑関数に対する固定係数の一次法として、大域線形率 $\rho=1-\sqrt{\mu/L}$（Nesterov 法の $\sqrt{1-\sqrt{\mu/L}}$ より速い）を達成する Triple Momentum 法を IQC 解析から導け。
+
+*4 PEP による近接点法の厳密解析（Güler の加速の最適性）
+近接点法の厳密な最悪ケース $f(x_{N})-f^{*}\le\frac{\|x_{0}-x^{*}\|^{2}}{4\lambda N}$ を示し、加速近接点法の最適版を PEP で導け（Kim の最適化近接点法）。
+
+*4 IQC による線形収束率の証明（Lessard–Recht–Packard）
+一次法の収束率 $\rho$ の証明が、LMI $\begin{pmatrix}A^{\top}PA-\rho^{2}P & A^{\top}PB\\ B^{\top}PA & B^{\top}PB\end{pmatrix}+\lambda M\preceq0$ の実行可能性に帰着することを示し、勾配法・heavy-ball・Nesterov の率を再現せよ。
+
+*4 勾配法の最適ステップの PEP による探索（Das Gupta–Van Parys–Ryu の BnB-PEP）
+ステップ幅列の最適化を非凸 QCQP として分枝限定法で大域的に解き、長ステップの勾配法（Grimmer）が $O(1/N^{1.0564})$ などの改善を与えることを述べよ。
+
+*4 Grimmer の長ステップ勾配法
+周期的に長いステップを含むステップ幅パターンが、平滑凸関数に対して勾配法の定数倍を真に改善することを、コンピュータ支援（PEP 証明書）で示す手法を説明し、周期 3 の具体例を確かめよ。
+
+*4 加速の必要十分条件（Lyapunov 解析の統一, Bansal–Gupta）
+一次法の加速を、エネルギー $E_{k}=a_{k}(f(x_{k})-f^{*})+\frac{b_{k}}{2}\|z_{k}-x^{*}\|^{2}$ の単調性と見なす統一的な Lyapunov 解析を与え、Nesterov・FISTA・OGM・加速近接点法がすべてこの枠組みに入ることを示せ。
+
+*4 非凸関数の PEP（Abbaszadehpeivasti–de Klerk–Zamani）
+$L$-平滑非凸関数に対する定ステップ勾配法の $\min_{k\le N}\|\nabla f(x_{k})\|^{2}$ の厳密な最悪ケースをステップ幅の関数として PEP で導き、ステップ $1/L$ が最適でないことを示せ。
+
+*4 演算子の PEP と Halpern 反復の最適性（Park–Ryu）
+非拡大写像の固定点問題に対する一次法（作用素評価に基づく）の下界 $\|x_{N}-Tx_{N}\|\ge\frac{\|x_{0}-x^{*}\|}{N+1}$ を示し、Halpern 反復が定数 2 の範囲で最適であることを結論せよ。
+
+*4 Nesterov の推定列と PEP 双対の対応
+Nesterov の推定列の方法による証明が、PEP の特定の双対実行可能解に対応することを示し、推定列が「最適」証明とは限らないことを OGM の例で確かめよ。
+
+*4 確率的 PEP と SGD の最悪ケース
+雑音つき勾配の一次法に対する PEP を分散の上界で定式化し、SGD の定ステップの最悪ケースの期待誤差を導け（Taylor–Bach の確率的 PEP）。
+
+*4 PEP による分割法の最適化（Ryu–Taylor の DR 最適パラメータ）
+DR 分割の緩和パラメータとステップの最適値を、強単調・Lipschitz 作用素の組合せごとに PEP で求め、線形収束率の閉形式を導け。
+
+*4 最適性の証明の自動化と符号化
+PEP の双対解（有理数）から、補間不等式の非負結合による厳密な証明を自動生成できること、そして数値 SDP 解の丸めによる証明の厳密化の方法（Goujaud–Moucer–Glineur–Hendrickx–Taylor–Dieuleveut の PEPit）を述べよ。
+
+*5 平滑凸最小化の厳密な情報ベース計算量（Drori, Taylor–Drori）
+$L$-平滑凸関数・$\mu$-強凸 $L$-平滑関数の各クラスについて、$N$ 回の一次オラクル呼び出しで達成可能な最悪ケース誤差の正確な値を決定し、それを達成するアルゴリズム（OGM, ITEM）と下界構成（最悪関数の明示）を与えよ。
+
+*5 heavy-ball 法の大域収束の失敗と勾配補正の必然性
+heavy-ball 法は強凸二次関数では最適率 $\frac{\sqrt\kappa-1}{\sqrt\kappa+1}$ を達成するが、強凸 $C^{1,1}$（非二次）関数では最適パラメータで大域収束しない例（Lessard–Recht–Packard の区分二次関数、周期 3 の軌道）が存在することを示せ。IQC 解析で heavy-ball の大域率が保証できるパラメータ域を求め、Nesterov 法の「外挿点での勾配評価」が非二次関数での頑健性をもたらす理由を論ぜよ。

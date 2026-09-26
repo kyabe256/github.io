@@ -1,0 +1,123 @@
+=ch VI-9　分散最適化と通信計算量
+
+*4 分散劣勾配法（Nedić–Ozdaglar） {dgd}
+連結グラフ上で各ノードが $f_{i}$ をもち、二重確率な混合行列 $W$ による平均化と局所劣勾配ステップ $x_{i}^{k+1}=\sum_{j}W_{ij}x_{j}^{k}-\alpha_{k}g_{i}^{k}$ を行うと、減衰ステップで合意と最適性が達成される。誤差が $1/(1-\lambda_{2}(W))$ に依存することを示せ。
+
+*4 定ステップ分散勾配法の偏りと EXTRA
+定ステップの分散勾配降下（DGD）は $O(\alpha/(1-\lambda_{2}))$ の偏りをもつ近似解にしか収束しないことを示し、EXTRA（Shi–Ling–Wu–Yin）が補正項により厳密解に線形収束することを証明せよ。
+
+*4 勾配追跡法（Nedić–Olshevsky–Shi, Qu–Li）
+各ノードが大域勾配の推定値 $y_{i}$ を動的平均合意で追跡する勾配追跡法が、強凸・平滑な場合に厳密解に線形収束することを示せ。有向グラフでの push-sum 版を述べよ。
+
+*4 合意の収束率とスペクトルギャップ
+平均合意反復 $x^{k+1}=Wx^{k}$ の平均への収束率が $|\lambda_{2}(W)|$ で決まることを示し、最速混合行列の設計問題（Xiao–Boyd）が SDP で解けることを示せ。
+
+*4 Chebyshev 加速合意と最適分散法（Scaman–Bach–Bubeck–Lee–Massoulié）
+分散強凸最適化で、通信ラウンドの下界 $\Omega(\sqrt{\kappa/\gamma}\log(1/\varepsilon))$（$\gamma$ はスペクトルギャップ）と、双対加速＋Chebyshev 加速合意（MSDA）がこれを達成することを示せ。
+
+*4 分散非平滑最適化の最適法（Scaman ら, Lan–Lee–Zhou）
+分散非平滑凸最適化での通信と局所計算の下界、および平滑化と加速を用いた最適法（MSPD, DCS）の主張を述べよ。
+
+*4 通信圧縮と誤差フィードバック（Stich–Cordonnier–Jaggi, Karimireddy ら）
+量子化・スパース化による通信圧縮 $C(x)$ で勾配を送る SGD に誤差フィードバック（圧縮誤差を蓄積して次回に加える）を施すと、非偏りでない圧縮器でも非圧縮 SGD と同じ漸近率が得られることを示せ。
+
+*4 QSGD と非偏り量子化（Alistarh ら）
+確率的量子化 $Q(v)$ が非偏りで分散が $\min(n/s^{2},\sqrt n/s)\|v\|^{2}$ 以下であることを示し、通信ビット数と収束率のトレードオフを定量化せよ。
+
+*4 連合学習の FedAvg とクライアントドリフト
+局所ステップ数 $K$ の FedAvg（Local SGD）が、データの非一様性（勾配の非類似度）の下で偏りを生むこと（クライアントドリフト）を示し、SCAFFOLD（Karimireddy ら）の制御変量による補正が偏りを除くことを証明せよ。
+
+*4 Local SGD の理論（Stich, Woodworth ら）
+同一分布の場合、Local SGD がミニバッチ SGD と比べて通信回数を減らせる条件を示し、非一様な場合に Local SGD がミニバッチ SGD より悪くなりうる下界（Woodworth–Patel–Srebro）を述べよ。
+
+*4 ADMM による分散合意と通信の削減
+合意 ADMM の各反復が隣接ノード間の通信一回で済むことを示し、線形収束率のグラフ依存性を導け。
+
+*4 非同期並列 SGD（Hogwild!, Niu–Recht–Ré–Wright）
+スパースな問題でロックなしの非同期 SGD が、衝突の少なさ（超グラフのスパース性）の下で逐次 SGD とほぼ同じ率で収束することを示せ。
+
+*4 分散最適化の通信計算量の下界（Arjevani–Shamir）
+二つのマシンがそれぞれ $f_{1},f_{2}$ をもつとき、$\frac12(f_{1}+f_{2})$ を $\varepsilon$-最適化するのに必要な通信ラウンド数の下界 $\Omega(\sqrt\kappa\log(1/\varepsilon))$ を示し、関数の類似度（Hessian の差）が小さければ改善できること（DANE, Shamir–Srebro–Zhang）を述べよ。
+
+*4 分散 Newton 型法（DANE, DiSCO, GIANT）
+関数類似度 $\|\nabla^{2}f_{i}-\nabla^{2}f\|\le\delta$ の下で、DANE が $O(\frac{\delta^{2}}{\mu^{2}}\log(1/\varepsilon))$ の通信ラウンドで収束することを二次関数の場合に示せ。
+
+*4 ビザンチン耐性分散最適化（Blanchard ら, Yin ら）
+一部のノードが任意の誤ったベクトルを送る場合に、座標ごとの中央値・トリム平均による集約が、統計的に最適な誤差率 $\tilde O(\frac{\alpha}{\sqrt n}+\frac{1}{\sqrt{nm}})$ を達成することを示せ（Yin–Chen–Ramchandran–Bartlett）。
+
+*4 差分プライバシー付き最適化（DP-SGD）の効用
+勾配のクリッピングと Gauss 雑音による DP-SGD が $(\varepsilon,\delta)$-差分プライバシーをみたし、凸 Lipschitz 損失の経験リスクを $\tilde O(\frac{\sqrt d}{n\varepsilon})$ まで下げ、これが最良であること（Bassily–Smith–Thakurta）を示せ。
+
+*4 分散最適化とゴシップアルゴリズム（Boyd–Ghosh–Prabhakar–Shah）
+ランダムな辺で平均化するランダム化ゴシップの平均化時間が、$W$ の期待値行列のスペクトルギャップで決まることを示し、最適化ゴシップ確率が SDP で求まることを示せ。
+
+*4 双対分解によるネットワーク効用最大化
+ネットワーク効用最大化 $\max\sum U_{s}(x_{s})$ s.t. $Rx\le c$ の双対劣勾配法が、各リンクの価格更新と各送信元の局所最適化に分解され、分散的に実装できることを示せ（Low–Lapsley）。
+
+*5 分散最適化の最適性の完全理論（Scaman–Bach–Bubeck–Lee–Massoulié 2017, 2018）
+分散平滑強凸最適化における通信ラウンド $\Omega(\sqrt{\kappa/\gamma}\log(1/\varepsilon))$ と局所勾配計算 $\Omega(\sqrt\kappa\log(1/\varepsilon))$ の同時下界を証明し、それらを同時に達成する最適アルゴリズム（加速双対法と Chebyshev 加速合意の組合せ）を構成せよ。
+
+*5 分散確率最適化の最適法（Lan–Lee–Zhou, Kovalev ら）
+分散確率的凸最適化で、通信ラウンドと確率的勾配評価の下界を同時に達成する方法（通信スライディング、ADOM）の主張を述べ、証明の骨格を与えよ。
+
+=ch VI-10　適応的方法とパラメータフリー最適化
+
+*4 AdaGrad（Duchi–Hazan–Singer, McMahan–Streeter） {adagrad}
+対角 AdaGrad $x_{t+1,i}=x_{t,i}-\frac{\eta}{\sqrt{\sum_{s\le t}g_{s,i}^{2}}}g_{t,i}$ のオンライン後悔が $O(D_{\infty}\sum_{i}\|g_{1:T,i}\|_{2})$ であり、スパースな勾配で $O(\sqrt{dT})$ より大幅に良くなりうることを示せ。
+
+*4 AdaGrad-Norm の適応性（Ward–Wu–Bottou, Levy–Yurtsever–Cevher）
+スカラーステップ $\eta_{t}=\frac{\eta}{\sqrt{b_{0}^{2}+\sum\|g_{s}\|^{2}}}$ の AdaGrad-Norm は、$L$ を知らなくても平滑非凸関数で $\tilde O(1/\sqrt T)$、平滑凸関数（決定的）で $O(1/T)$ に自動適応することを示せ。
+
+*4 Adam の非収束（Reddi–Kale–Kumar）
+Adam は凸な一次元オンライン問題で最適解に収束しない（後悔が線形になる）例が存在する。例を構成し、AMSGrad（二次モーメントの最大値を用いる）による修正で $O(\sqrt T)$ 後悔が回復することを示せ。
+
+*4 Adam の収束の条件（Zhang–Chen–Shi–Sun, Défossez ら）
+$\beta_{2}$ が 1 に十分近い（問題に依存する閾値以上）なら、Adam は修正なしで非凸問題の停留点近傍に収束することを示し、$\beta_{1}<\sqrt{\beta_{2}}$ の条件の役割を論ぜよ。
+
+*4 パラメータフリーのオンライン学習（Orabona–Pál, Cutkosky–Orabona）
+コイン投げ賭けの帰着により、比較点のノルム $\|u\|$ を知らずに後悔 $O(\|u\|\sqrt{T\log(1+\|u\|T)})$ を達成するアルゴリズムを構成し、$\sqrt{\log}$ 因子が不可避であることを示せ。
+
+*4 距離適応法 DoG・D-Adaptation（Ivgi–Hinder–Carmon, Defazio–Mishchenko）
+初期点から最適解までの距離 $D$ を反復中に推定し、ステップ $\eta_{t}=\frac{\max_{s\le t}\|x_{s}-x_{0}\|}{\sqrt{\sum\|g_{s}\|^{2}}}$ とする DoG が、Lipschitz 凸関数に対し $D$ を知る場合の最適率を対数因子の範囲で達成することを示せ。
+
+*4 Polyak ステップの未知最適値版（Hazan–Kakade）
+最適値 $f^{*}$ が未知でも、推定値を倍々に更新する Polyak ステップ劣勾配法が $O(\log)$ 因子の損失で最適率を達成することを示せ。
+
+*4 自己調整的な普遍的加速（Nesterov の普遍勾配法、Lan の一様平滑法）
+Hölder 指数 $\nu$ と定数 $M_{\nu}$ を知らずに、直線探索と目標精度だけで各 $\nu$ の最適率を達成する普遍加速勾配法を構成し、非平滑と平滑の間を補間する率を示せ。
+
+*4 適応的加速法 AcceleGrad（Levy–Yurtsever–Cevher）
+AdaGrad 型のステップと加速を組み合わせた AcceleGrad が、平滑凸で $O(1/T^{2})$、非平滑で $O(1/\sqrt T)$、確率的で $O(\sigma/\sqrt T)$ に同時に適応することを示せ。
+
+*4 一般化平滑性 $(L_{0},L_{1})$-平滑（Zhang–He–Sra–Jadbabaie）
+$\|\nabla^{2}f(x)\|\le L_{0}+L_{1}\|\nabla f(x)\|$ をみたす関数に対し、勾配クリッピング付き GD が固定ステップ GD より速く（$L_{1}$ に依存せず）停留点に到達しうることを示し、言語モデル学習での経験的観察を説明せよ。
+
+*4 正規化勾配法と準凸関数
+正規化勾配 $x_{t+1}=x_{t}-\eta\frac{\nabla f}{\|\nabla f\|}$ が準凸で局所 Lipschitz な関数に対し $\varepsilon$-最適解に $O(1/\varepsilon^{2})$ 反復で到達することを示せ（Nesterov, Hazan–Levy–Shalev-Shwartz）。
+
+*4 符号勾配法（signSGD, Bernstein ら）と $\ell_{1}$ 幾何
+$x_{t+1}=x_{t}-\eta\operatorname{sign}(\nabla f)$ が $\ell_{\infty}$ ノルムに関する最急降下であり、$\ell_{1}$ ノルムの勾配で停留性を測ると次元に好都合な率をもつことを示せ。Adam との関係を論ぜよ。
+
+*4 Shampoo・行列前処理と Kronecker 因子分解
+行列パラメータ $W$ に対して、左右の前処理 $L_{t}^{-1/4}GR_{t}^{-1/4}$ を用いる Shampoo（Gupta–Koren–Singer）のオンライン後悔上界を示し、完全行列 AdaGrad との関係を述べよ。
+
+*4 Muon と直交化勾配（スペクトルノルム最急降下）
+行列パラメータのスペクトルノルムに関する最急降下 $W\leftarrow W-\eta\,UV^{\top}$（$G=U\Sigma V^{\top}$）が、Newton–Schulz 反復で近似計算できることを示し、非凸平滑関数（スペクトルノルムに関する平滑性）での停留点への収束率を導け。
+
+*4 学習率スケジュールの理論（cosine, warmup, WSD）
+凸 Lipschitz 問題で、最終反復に対して線形減衰スケジュール $\eta_{t}\propto(1-t/T)$ が最適率 $O(GD/\sqrt T)$ を達成すること（Defazio–Cutkosky–Mehta–Mishchenko）を示し、定ステップの最終反復の $\log T$ 損失との違いを説明せよ。
+
+*4 スケジュールフリー最適化（Defazio ら）
+Polyak–Ruppert 平均と主反復を補間する schedule-free SGD が、学習率スケジュールなしに最終反復で最適率を達成することを示せ（オンラインから一括への変換 online-to-batch の観点から）。
+
+*4 オンラインから一括への変換（Cesa-Bianchi–Conconi–Gentile, Cutkosky）
+オンライン学習アルゴリズムの平均反復が、後悔 $R_{T}$ に対して確率的最適化誤差 $R_{T}/T$ を与えることを示し、anytime 版（Cutkosky 2019）で最終反復の保証が得られることを示せ。
+
+*4 適応的方法の暗黙のバイアス
+線形分離可能データのロジスティック回帰で、AdaGrad・Adam 型の方法が最大マージン解とは異なる（$\ell_{\infty}$ 幾何などに依存する）解に収束することを示せ（Gunasekar–Lee–Soudry–Srebro, Wang ら）。
+
+*5 パラメータフリー凸最適化の最適な適応性の限界（Carmon–Hinder）
+確率的凸最適化で、$D$ と $G$ の両方が未知のとき、パラメータフリーの方法が支払う適応性の代償（対数因子）の下界と、それを達成する方法を示せ。
+
+*5 適応的方法の最悪ケースの完全な特徴づけ（AdaGrad の後悔の下界と上界）
+オンライン凸最適化で、任意のアルゴリズムの後悔が $\Omega(D\sqrt{\sum_{t}\|g_{t}\|_{*}^{2}})$ を下回れないことを示し、AdaGrad（全行列版を含む）がこれを定数倍で達成すること、および対角版と全行列版の差が問題依存でどこまで開きうるかを論ぜよ。

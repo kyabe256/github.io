@@ -1,0 +1,123 @@
+=ch VII-3　変分原理とその応用
+
+*4 Ekeland の原理による Fréchet 劣微分の稠密性
+完備距離空間の Ekeland 原理から、Banach 空間の下半連続関数について $\varepsilon$-劣微分（Fréchet の $\varepsilon$ 版）が稠密な点で空でないことを導け。
+
+*4 Ekeland の原理と Bishop–Phelps の同値性
+Ekeland の変分原理から Bishop–Phelps の定理（支持汎関数の稠密性）を導け。さらに Bishop–Phelps の元の証明で用いられた錐 $K(\varepsilon)=\{(x,t): t\ge\varepsilon\|x\|\}$ に関する「極大元」の議論が、Ekeland の原理の原型（Bishop–Phelps 錐による半順序の Zorn 型論法）であることを説明せよ。
+
+*4 Ekeland の原理と Palais–Smale 列
+$C^{1}$ 汎関数 $f$ が下に有界ならば、$f(x_{k})\to\inf f$, $f'(x_{k})\to0$ となる列（最小化 Palais–Smale 列）が存在する。Ekeland の原理から示せ。
+
+*4 Deville–Godefroy–Zizler の平滑変分原理
+Banach 空間 $X$ 上に有界な Lipschitz 平滑バンプ関数があれば、下半連続で下に有界な $f$ と任意の $\varepsilon$ に対し、$\|g\|_{\infty}+\|g'\|_{\infty}<\varepsilon$ の平滑関数 $g$ で $f+g$ が強最小点をもつものが存在し、そのような $g$ は稠密 $G_{\delta}$ をなす。証明の骨格を与えよ。
+
+*4 Stegall の変分原理
+RNP をもつ Banach 空間の有界閉凸集合上の上半連続有界関数 $f$ について、$X^{*}$ の稠密 $G_{\delta}$ 集合に属する $x^{*}$ で $f+x^{*}$ が強露出最大点をもつ。証明の骨格を示し、Asplund 空間の双対特徴づけへの応用を述べよ。
+
+*4 Daneš のドロップ定理
+Banach 空間の閉集合 $C$ と閉球 $B=\bar B(z,r)$ で $\operatorname{dist}(z,C)>r$ なるものについて、点 $x$ のドロップを $D(x,B)=\operatorname{conv}(\{x\}\cup B)$ とおく。任意の $x_{0}\in C$ に対し、$a\in C\cap D(x_{0},B)$ で $C\cap D(a,B)=\{a\}$ となるものが存在することを Ekeland の原理から導け。
+
+*4 Borwein–Preiss による Rademacher 型定理の反例回避
+Banach 空間の Lipschitz 関数は必ずしもどこでも微分可能ではないが、Asplund 空間の凸連続関数は稠密 $G_{\delta}$ で Fréchet 微分可能（Asplund の定理の Ekeland 型証明）であることを示せ。
+
+*4 Preiss の定理（Lipschitz 関数の稠密な微分可能性）
+Asplund 空間上の局所 Lipschitz 関数は稠密集合上で Fréchet 微分可能である（Preiss 1990）。主張を正確に述べ、Rademacher 定理の無限次元への一般化として意義を論ぜよ。
+
+*4 変分原理と非凸集合の近接点の存在（Lau, Borwein–Fitzpatrick）
+反射的 Kadec–Klee ノルム空間の閉集合 $C$ について、最近点をもつ点の集合は稠密（Lau 1978）である。Ekeland 型の議論で証明せよ。
+
+*4 変分原理による Lagrange 乗数則の証明
+Ekeland の原理を用いて、Banach 空間の滑らかな等式制約問題に Lagrange 乗数則（値域が閉な場合）を証明せよ（開写像定理を使わない証明）。
+
+*4 Nash 均衡の変分的特徴づけ（Nikaido–Isoda 関数）
+Nikaido–Isoda 関数 $\Psi(x,y)=\sum_{i}[\theta_{i}(x)-\theta_{i}(y_{i},x_{-i})]$ を用いて、Nash 均衡が $\sup_{y}\Psi(x,y)=0$ となる $x$ に一致することを示し、正則化 NI 関数による最適化再定式化（von Heusinger–Kanzow）を述べよ。
+
+*4 Ekeland の原理と強単調変分不等式
+Ekeland の原理から、完備距離空間上の平衡問題（Ky Fan の不等式）の近似解の存在を導け（Bianchi–Kassay–Pini）。
+
+*4 変分原理の量的形式と誤差限界（Ioffe の定理）
+Ekeland の原理から、強勾配（slope）による誤差限界 $\operatorname{dist}(x,[f\le0])\le f(x)^{+}/c$ を導き（強勾配が $f>0$ の集合で $\ge c$ のとき）、これを計量正則性の判定に用いよ。
+
+*4 Ekeland の原理と近似解の変分的安定性
+パラメータ付き問題の近似解写像の下半連続性を Ekeland の原理から示し、最適値関数の Lipschitz 連続性（Aubin 性質）の判定への応用を述べよ。
+
+*4 変分原理と $\Gamma$ 収束の関係
+$\Gamma$-収束する関数列 $f_{k}\to f$ について、$f_{k}$ の $\varepsilon_{k}$-最小点の集積点が $f$ の最小点であることを示し、Ekeland の原理と組み合わせて $f_{k}$ の近似停留点の極限を論ぜよ。
+
+*4 変分原理と最適制御の $\varepsilon$-最大原理
+Ekeland の原理を最適制御の制御空間（Ekeland 距離 $d(u,v)=|\{u\neq v\}|$）に適用し、最適解の存在を仮定せずに近似最適制御が近似最大原理をみたすことを示せ（Ekeland 1974）。
+
+*4 平滑バンプの存在とノルムの平滑性
+Banach 空間に Fréchet 平滑なバンプ関数が存在すれば Asplund であることを示し、$\ell^{1}$ や $C[0,1]$ には存在しないことを確かめよ（Leach–Whitfield）。
+
+*4 変分原理による Brøndsted–Rockafellar と劣微分の最大単調性
+Ekeland 原理から Brøndsted–Rockafellar を導き、それから Banach 空間の閉真凸関数の劣微分の極大単調性（Rockafellar）を示す道筋を完成させよ。
+
+*5 Borwein–Preiss の平滑変分原理の完全証明
+Fréchet 平滑ノルムをもつ Banach 空間において、下半連続・下に有界な $f$、$\varepsilon$-最小点 $x_{0}$、$\lambda>0$, $p\ge1$ に対し、$\sum\mu_{k}\|x-v_{k}\|^{p}$ 型の摂動（$\sum\mu_{k}=1$, $v_{k}\to\bar x$）で $f+\frac{\varepsilon}{\lambda^{p}}\sum\mu_{k}\|x-v_{k}\|^{p}$ が $\bar x$ で最小になり $\|\bar x-x_{0}\|\le\lambda$ となることを証明せよ。
+
+*5 変分原理の階層と完備性の特徴づけ
+距離空間の完備性、Ekeland の原理、Caristi の不動点定理、Takahashi の最小化定理、ドロップ定理（Daneš）、花びら定理（Penot）がすべて同値であることを示せ（Penot 1986）。
+
+=ch VII-4　集合値写像の正則性と陰写像定理
+
+*4 集合値写像の連続性（Painlevé–Kuratowski）
+集合列の内極限・外極限を定義し、集合値写像の外半連続性（グラフが閉）と内半連続性を定義せよ。コンパクト値なら外半連続と上半連続が同値であることを示し、非コンパクトで異なる例を作れ。
+
+*4 Aubin 性質の特徴づけ（Mordukhovich 判定の双対形）
+閉グラフの集合値写像 $S$ が $(\bar u,\bar x)$ で Aubin 性質をもつ $\iff D^{*}S(\bar u|\bar x)(0)=\{0\}$ で、Lipschitz 係数は $|D^{*}S(\bar u|\bar x)|^{+}$。証明せよ。
+
+*4 Robinson の陰関数定理（一般化方程式）
+$0\in f(p,x)+F(x)$ の解写像について、$f$ の $x$ に関する線形化 $G(x)=f(\bar p,\bar x)+\nabla_{x}f(\bar p,\bar x)(x-\bar x)+F(x)$ の逆写像が $(0,\bar x)$ で一価 Lipschitz 局所化をもてば、元の解写像も一価 Lipschitz 局所化をもつ（Robinson 1980）。縮小写像の原理で証明せよ。
+
+*4 Dontchev–Rockafellar の陰写像定理の体系
+一般化方程式の解写像について、Aubin 性質・calmness・計量劣正則性・強正則性の各々に対し、線形化から元の写像へ遺伝する「陰写像定理」の形を整理し、それぞれを証明せよ（Dontchev–Rockafellar『Implicit Functions and Solution Mappings』）。
+
+*4 計量劣正則性と誤差限界の同値
+$F$ が $(\bar x,\bar y)$ で計量劣正則（$\operatorname{dist}(x,F^{-1}(\bar y))\le\kappa\operatorname{dist}(\bar y,F(x))$ が $x$ の近傍で）$\iff F^{-1}$ が $(\bar y,\bar x)$ で calm。制約系の誤差限界がこの特殊化であることを示せ。
+
+*4 強計量正則性と一価局所化
+$F$ が強計量正則 $\iff F^{-1}$ が一価 Lipschitz 局所化をもつ。$F=f+N_{C}$（$C$ 多面体）の場合に、強計量正則性が線形化の「一貫した符号条件」（Robinson の臨界面条件）で判定できることを示せ。
+
+*4 Kummer の逆関数定理（Lipschitz 写像）
+局所 Lipschitz 写像 $F$ が局所的に Lipschitz 同相である $\iff$ Thibault の極限集合（strict graphical derivative）の元がすべて単射。証明の骨格を与え、Clarke の逆関数定理より鋭いことを示せ。
+
+*4 区分的アフィン写像の同相性（Robinson, Kuhn–Löwen）
+区分的アフィン写像が大域同相であるための必要十分条件は、すべての選択関数の行列式が同符号（coherent orientation）であることを示せ（Eaves–Rothblum, Kuhn–Löwen）。正規写像 $F_{C}$ への応用を述べよ。
+
+*4 正規写像と Robinson の多面体変分不等式
+多面体 $C$ 上の線形変分不等式に対し、正規写像 $M_{C}(z)=M\Pi_{C}(z)+z-\Pi_{C}(z)$ が大域同相 $\iff$ すべての $q$ で LVI が一意解をもつ。coherent orientation による判定を示せ。
+
+*4 Graves の定理（非線形開写像定理）
+Banach 空間の間の連続写像 $f$ が $\bar x$ の近傍で線形全射 $A$ に Lipschitz 定数 $\mu<1/\|A^{-1}\|^{+}$ で近いなら、$f$ は $\bar x$ で線形率 $(\|A^{-1}\|^{+ -1}-\mu)$ で開である（Graves 1950）。反復構成で証明せよ。
+
+*4 Lyusternik–Graves の定理の集合値版（Ioffe, Dmitruk–Milyutin–Osmolovskii）
+$F$ が $(\bar x,\bar y)$ で計量正則で率 $\kappa$、$g$ が Lipschitz 定数 $\mu<1/\kappa$ ならば、$F+g$ は $(\bar x,\bar y+g(\bar x))$ で計量正則で率 $\kappa/(1-\kappa\mu)$。証明せよ。
+
+*4 計量正則性の半径定理（Dontchev–Lewis–Rockafellar）
+計量正則な $F$ について、$F+G$ が正則でなくなる最小の線形摂動 $G$ のノルムは $1/\operatorname{reg}F(\bar x|\bar y)$ に等しい（Eckart–Young の一般化）。証明の骨格を与えよ。
+
+*4 条件数と距離定理（Renegar, Dontchev–Lewis–Rockafellar）
+凸錐系の条件数が不良設定問題までの距離の逆数に等しいこと（Renegar）を、計量正則性の半径定理の特殊化として導け。
+
+*4 集合値写像の図形微分（graphical derivative）
+$DF(\bar x|\bar y)(u)=\{v:(u,v)\in T_{\operatorname{gph}F}(\bar x,\bar y)\}$ を定義し、$F$ が $(\bar x,\bar y)$ で強計量劣正則 $\iff DF(\bar x|\bar y)^{-1}(0)=\{0\}$（Levy–Rockafellar 判定）。証明せよ。
+
+*4 変分不等式の解写像の Lipschitz 安定性（Dontchev–Rockafellar 1996）
+多面体上の変分不等式 $0\in f(p,x)+N_{C}(x)$ の解写像について、Aubin 性質と一価 Lipschitz 局所化（強正則性）が同値であることを示せ。
+
+*4 KKT 写像の Aubin 性質と強正則性
+$C^{2}$ 非線形計画の KKT 写像について、Aubin 性質 $\iff$ 強正則性 $\iff$ LICQ＋強二階十分条件であることを、前問の多面体 VI の結果から導け。
+
+*4 開写像定理の非線形版と Newton 法の関係
+計量正則性の下で、Newton 型反復（$0\in f(x_{k})+\nabla f(x_{k})(x_{k+1}-x_{k})+F(x_{k+1})$）が well-defined で局所超線形収束することを示せ（Dontchev の Newton 法の一般化方程式版、Aubin 性質のみを仮定）。
+
+*4 集合値写像の Lipschitz 選択の非存在
+Aubin 性質をもつ集合値写像が Lipschitz 選択をもつとは限らない例を作れ。凸値の場合の Michael の選択定理（連続選択の存在）と Steiner 点による Lipschitz 選択（有限次元、Hausdorff Lipschitz な凸コンパクト値写像）の存在を示せ。
+
+*5 Ioffe の計量正則性理論の完全な形（距離空間）
+完備距離空間の間の集合値写像について、Ioffe の判定（強勾配による）とその局所版・大域版を定式化し、Lyusternik–Graves の定理、Milyutin の摂動定理、Robinson–Ursescu の定理がすべてその系として得られることを示せ（Ioffe『Variational Analysis of Regular Mappings』）。
+
+*5 強正則性の一般的特徴づけの不在と Robinson の臨界面条件
+非多面体（例えば二次錐・半正定値錐）上の変分不等式では、Aubin 性質と強正則性が同値でないことを示す例を作れ。二次錐計画の KKT 系の強正則性が「強二階十分条件＋制約非退化」と同値であること（Bonnans–Ramírez）を述べよ。

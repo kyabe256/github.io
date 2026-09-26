@@ -1,0 +1,123 @@
+=ch VII-7　prox-regularity・弱凸性・下 $C^{2}$ 関数
+
+*4 prox-regular 関数の定義と Poliquin–Rockafellar の定理 {proxreg}
+下半連続 $f$ が $\bar x$ で $\bar v\in\partial f(\bar x)$ に関し prox-regular（$f(x')\ge f(x)+\langle v,x'-x\rangle-\frac r2\|x'-x\|^{2}$ が $(x,v)$ の近くで成り立つ）かつ劣微分連続ならば、十分小さい $\lambda$ で $\operatorname{prox}_{\lambda f}$ は $\bar x+\lambda\bar v$ の近くで一価 Lipschitz、$e_{\lambda}f$ は $C^{1,1}$ である。証明せよ（Poliquin–Rockafellar 1996）。
+
+*4 prox-regularity と劣微分の局所単調性
+$f$ が prox-regular $\iff\partial f+rI$ が $(\bar x,\bar v)$ の近傍で局所単調（ある $r$）であることを示せ（Poliquin–Rockafellar）。
+
+*4 下 $C^{2}$ 関数（Rockafellar）
+$f=\max_{t\in T}f_{t}$（$T$ コンパクト、$f_{t}$ は $(x,t)$ について $C^{2}$ 一様）の形の関数を下 $C^{2}$ という。下 $C^{2}$ $\iff$ 局所的に「凸 $-\frac r2\|x\|^{2}$」（弱凸）であることを示せ。
+
+*4 弱凸関数の性質
+$\rho$-弱凸関数（$f+\frac\rho2\|x\|^{2}$ が凸）は局所 Lipschitz（内部で）、Clarke 正則で、劣微分は凸劣微分から $\rho x$ をずらしたものに等しい。$\lambda<1/\rho$ で Moreau 包が $C^{1,1}$、prox が一価 Lipschitz であることを示せ。
+
+*4 合成関数 $h\circ c$ の弱凸性
+$h$ が $L$-Lipschitz 凸、$c$ の Jacobian が $\beta$-Lipschitz なら、$h\circ c$ は $L\beta$-弱凸である。位相回復（$\frac1m\sum||\langle a_{i},x\rangle|^{2}-b_{i}|$）、ロバスト PCA、二乗損失の深層学習の一部がこの形であることを示せ。
+
+*4 prox-regular 集合と一意近接点
+閉集合 $C$ が $\bar x$ で prox-regular $\iff$ $\bar x$ の近くの点が $C$ に一意の最近点をもち、$P_{C}$ が Lipschitz。$C^{2}$ 多様体・凸集合・正の到達距離（positive reach, Federer）の集合が prox-regular であることを示せ。
+
+*4 Federer の正の到達距離の集合
+$\operatorname{reach}(C)=\sup\{r: d_{C}(x)<r\Rightarrow$ 最近点一意$\}>0$ の集合について、Steiner 型公式（平行体の体積が $r$ の多項式）が成り立つこと（Federer 1959）を述べ、$d_{C}^{2}$ が $\{d_{C}<\operatorname{reach}\}$ 上 $C^{1,1}$ であることを示せ。
+
+*4 弱凸関数の Moreau 包の勾配ノルムと近似停留性
+$\rho$-弱凸 $f$ と $\lambda<1/\rho$ について、$\|\nabla e_{\lambda}f(x)\|\le\varepsilon$ なら $\hat x=\operatorname{prox}_{\lambda f}(x)$ は $\|\hat x-x\|\le\lambda\varepsilon$ かつ $\operatorname{dist}(0,\partial f(\hat x))\le\varepsilon$。証明し、弱凸最適化の停留性の尺度としての妥当性を示せ。
+
+*4 確率的近接点法・モデルベース法（Davis–Drusvyatskiy）
+弱凸関数の確率的モデルベース法（確率的劣勾配、確率的 prox-linear、確率的近接点を統一）が $E\|\nabla e_{\lambda}f(x_{R})\|^{2}=O(1/\sqrt T)$ を達成することを示せ。
+
+*4 弱凸・鋭い関数の局所線形収束（Davis–Drusvyatskiy–MacPhee–Paquette）
+弱凸で鋭い最小（$f-f^{*}\ge\mu d_{S}$）をもつ関数に対し、Polyak ステップ劣勾配法と prox-linear 法が $S$ の近傍で局所線形収束することを示せ。ロバスト位相回復への適用を述べよ。
+
+*4 弱凸関数の Łojasiewicz 型性質と劣勾配流
+弱凸関数の劣勾配流（曲線 $\dot x\in-\partial f(x)$）の存在・一意性と、Łojasiewicz 性質の下での有限長性を示せ（Marino–Saccon–Tosques の $\varphi$-凸関数の理論）。
+
+*4 prox-regularity の二階特徴づけ
+$f$ が $(\bar x,\bar v)$ で prox-regular かつ劣微分連続ならば、二階劣微分 $\partial^{2}f(\bar x|\bar v)$ は「半正定値$-rI$」の性質をもつ。逆に二階の条件から prox-regularity を導く Poliquin–Rockafellar の結果を述べよ。
+
+*4 一次元の prox-regular 関数の特徴づけ
+一次元の下半連続関数が prox-regular $\iff$ 局所的に「凸＋$C^{2}$」の和で書ける、という特徴づけを示し、$-|x|$ が $0$ で prox-regular でないことを確かめよ。
+
+*4 弱凸関数と DC 関数の関係
+弱凸関数は DC 関数（$f=(f+\frac\rho2\|x\|^{2})-\frac\rho2\|x\|^{2}$）であり、DCA が弱凸関数では近接点法に一致することを示せ。
+
+*4 近接点法の非凸版の局所収束（Iusem–Pennanen–Svaiter）
+prox-regular な関数 $f$ の局所最小点の近くで、非凸近接点法が well-defined で局所的に最小点に収束し、tilt-stability の下で線形収束することを示せ。
+
+*4 弱凸性と Burer–Monteiro の目的関数
+Burer–Monteiro 因子分解 $g(Y)=\langle C,YY^{\top}\rangle$ を実行可能多様体上で考えたとき、多様体が滑らかでないランク退化点の近くで弱凸性・prox-regularity がどう崩れるかを論ぜよ。
+
+*4 変分凸性（Rockafellar 2019）
+下半連続関数 $f$ が $(\bar x,\bar v)$ で変分凸（局所的に凸関数 $\hat f$ があり、$\operatorname{gph}\partial f$ と $\operatorname{gph}\partial\hat f$ が近傍で一致し値も一致）ならば、局所最小性が一階条件で判定でき、非凸 ALM が局所的に凸の場合と同様に振る舞うことを示せ。
+
+*4 変分凸性と局所最適性の二階判定（Rockafellar, Khanh–Mordukhovich–Phat）
+変分凸性が、prox-regular 関数の二階劣微分の半正定値性（$\langle z,w\rangle\ge0$）で特徴づけられることを述べ、強変分凸性と tilt-stability の同値性を示せ。
+
+*5 Poliquin–Rockafellar の prox-regularity の完全理論
+prox-regular かつ劣微分連続な関数 $f$ について、次が同値：(i) prox-regularity、(ii) $\operatorname{prox}_{\lambda f}$ の局所一価 Lipschitz 性、(iii) $e_{\lambda}f$ の局所 $C^{1,1}$ 性、(iv) $\partial f$ の局所的な「極大単調＋$rI$」性。すべての同値性を証明せよ。
+
+*5 prox-regular 集合上の射影法の局所理論と到達距離（Clarke–Stern–Wolenski）
+Hilbert 空間の閉集合 $C$ について、$C$ が一様 prox-regular（正の到達距離 $r$）$\iff$ $d_{C}$ が $\{0<d_{C}<r\}$ 上で $C^{1}$ $\iff$ $P_{C}$ が一価で連続（その集合上）であることを示し（Clarke–Stern–Wolenski 1995, Poliquin–Rockafellar–Thibault 2000）、スイープ過程（Moreau の sweeping process）の解の存在に応用せよ。
+
+=ch VII-8　半代数的・定義可能な最適化
+
+*4 Tarski–Seidenberg の原理 {tarski}
+半代数的集合の射影は半代数的である。これから半代数的関数の合成・最大値・下限（$\inf_{y}F(x,y)$）が半代数的であることを導け。
+
+*4 半代数的集合の有限性（Whitney, Milnor–Thom）
+$n$ 変数、次数 $d$ の $s$ 個の多項式で定義される半代数的集合の連結成分の数は $(sd)^{O(n)}$ で抑えられる（Milnor–Thom, Basu–Pollack–Roy）。証明の骨格を与え、多項式最適化の局所最小値の個数の評価に応用せよ。
+
+*4 o-minimal 構造の定義と例
+o-minimal 構造を定義し、半代数的集合、大域部分解析的集合（$\mathbb{R}_{\text{an}}$）、指数関数を含む $\mathbb{R}_{\text{an,exp}}$（Wilkie, van den Dries–Macintyre–Marker）が o-minimal であることを述べよ。$\sin$ を全実数上で含む構造は o-minimal でないことを示せ。
+
+*4 単調性定理と細胞分解
+o-minimal 構造で定義可能な一変数関数は、有限個の点を除いて連続で、各区間で狭義単調または定数である（単調性定理）。これから定義可能集合の細胞分解の存在（$n=1,2$）を示せ。
+
+*4 定義可能曲線選択補題
+定義可能集合 $A$ と $\bar x\in\operatorname{cl}A$ に対し、定義可能な連続曲線 $\gamma:[0,1)\to A$ で $\gamma(t)\to\bar x$ となるものが存在する。これを用いて定義可能関数の臨界値の有限性を示せ。
+
+*4 定義可能 Sard 定理（Bolte–Daniilidis–Lewis）
+定義可能な下半連続関数の（極限劣微分に関する）臨界値の集合は有限である。証明し、これが降下法の極限値の一意性に使われることを説明せよ。
+
+*4 Kurdyka–Łojasiewicz 不等式の証明（定義可能版）
+定義可能な $C^{1}$ 関数 $f$ と臨界点 $\bar x$ に対し、定義可能な脱特異化関数 $\varphi$ で $\varphi'(f(x)-f(\bar x))\|\nabla f(x)\|\ge1$ が近傍で成り立つ（Kurdyka 1998）。曲線選択補題と単調性定理から証明せよ。
+
+*4 半代数的関数の KŁ 指数の評価（D'Acunto–Kurdyka, Li–Mordukhovich–Pham）
+次数 $d$ の $n$ 変数多項式の Łojasiewicz 指数が $\theta\le1-\frac{1}{d(3d-3)^{n-1}}$ で抑えられることを述べ、凸多項式では $\theta\le1-\frac{1}{(d-1)^{n}+1}$ となる（Li–Mordukhovich–Pham）ことを述べよ。
+
+*4 多項式の大域最適化と有限個の臨界値
+多項式 $p$ の臨界値の集合は有限であり、$\inf p$ は（達成されるなら）臨界値の一つである。$\inf p$ が達成されない場合に、漸近臨界値（Rabier の一般化臨界値）を用いて $\inf p$ を特徴づけよ（Hà–Pham）。
+
+*4 半代数的問題の一般的性質（Drusvyatskiy–Ioffe–Lewis）
+半代数的な最適化問題 $\min f(x)-\langle v,x\rangle$ について、一般的な（Lebesgue ほとんどすべての）$v$ では、すべての臨界点が非退化（二階十分条件＋強相補性を満たす）であることを示せ（generic nondegeneracy）。
+
+*4 一般的な非線形計画の非退化性（Spingarn–Rockafellar, Jongen–Jonker–Twilt）
+$C^{2}$ 非線形計画の一般的な線形摂動 $\min f(x)-\langle v,x\rangle$ s.t. $g(x)\le u$ に対し、ほとんどすべての $(u,v)$ で全 KKT 点が LICQ・強相補性・二階十分条件（非退化）をみたす（Spingarn–Rockafellar 1979）。Sard の定理で証明せよ。
+
+*4 定義可能関数の Clarke 劣微分の層化構造
+定義可能な局所 Lipschitz 関数 $f$ に対し、有限個の定義可能な多様体への層化で、各層上で $f$ は $C^{1}$ かつ $\partial_{C}f(x)\subset\nabla_{\mathcal{M}}f(x)+N_{\mathcal{M}}(x)$ となるもの（射影公式）が存在することを示せ（Bolte–Daniilidis–Lewis–Shiota）。
+
+*4 劣勾配流の定義可能関数での収束（Bolte–Daniilidis–Lewis）
+定義可能な下半連続関数の劣勾配流（$\dot x\in-\partial f(x)$）の有界な軌道が有限長で臨界点に収束することを示せ。
+
+*4 自動微分と定義可能性（Bolte–Pauwels, Lewis–Tian）
+定義可能な関数の合成で自動微分が返す「勾配」は保守的場の元であり、保守的場は Clarke 劣微分とほとんど至る所一致する。これにより ReLU ネットの SGD の極限点が Clarke 臨界点であることを示せ。
+
+*4 半代数的な行列関数の最適化（階数関数、スペクトル関数）
+スペクトル関数 $F(X)=\phi(\lambda(X))$ が定義可能 $\iff\phi$ が定義可能であることを示し、低ランク行列回復の非凸定式化が KŁ 性質をもつことを導け。
+
+*4 実代数幾何の Positivstellensatz と最適化の証明書
+Krivine–Stengle の Positivstellensatz を述べ、半代数的集合上の多項式の非負性（あるいは実行不能性）の代数的証明書が存在することを示せ。これが SOS 緩和の理論的基盤であることを説明せよ。
+
+*4 Łojasiewicz の分離不等式と誤差限界
+コンパクト集合上の実解析関数 $f,g$ について $|f(x)|\ge c\operatorname{dist}(x,f^{-1}(0))^{\alpha}$、および Łojasiewicz の分離不等式 $d(x,A)+d(x,B)\ge c\,d(x,A\cap B)^{\alpha}$（$A,B$ は部分解析的）を述べ、交互射影の非凸実行可能問題での収束率評価に応用せよ。
+
+*4 多項式最適化の計算困難性と定義可能性の限界
+次数 4 の多項式の大域最小化は NP 困難であり、次数 4 の多項式が下に有界かどうかの判定さえ co-NP 困難である（斉次 4 次形式 $\sum M_{ij}x_{i}^{2}x_{j}^{2}$ は下に有界 $\iff$ 非負 $\iff M$ が共正、Murty–Kabadi）ことを示せ（次数 3 では自明になる理由も説明せよ）。定義可能性が保証するのは「局所的な良い振る舞い」であって計算量ではないことを論ぜよ。
+
+*5 o-minimal 構造の細胞分解定理と次元論
+o-minimal 構造で定義可能な集合が有限個の細胞に分解でき、次元が細胞の最大次元として well-defined で、定義可能写像による像の次元が増えないことを証明せよ（van den Dries『Tame Topology and O-minimal Structures』）。
+
+*5 定義可能な非平滑最適化の確率的劣勾配法の収束（Davis–Drusvyatskiy–Kakade–Lee 2020）
+定義可能な局所 Lipschitz 関数に対し、確率的劣勾配法の有界な反復列の集積点がすべて Clarke 臨界点であり、関数値が収束することを、Benaïm–Hofbauer–Sorin の確率近似の微分包含理論と射影公式から証明せよ。

@@ -1,0 +1,123 @@
+=ch VI-5　主双対法と鞍点問題
+
+*5 Chambolle–Pock の主双対法 {cp}
+$\min_{x}\max_{y}\langle Kx,y\rangle+g(x)-f^{*}(y)$ に対し、$x_{k+1}=\operatorname{prox}_{\tau g}(x_{k}-\tau K^{*}y_{k})$, $\bar x=2x_{k+1}-x_{k}$, $y_{k+1}=\operatorname{prox}_{\sigma f^{*}}(y_{k}+\sigma K\bar x)$ は $\tau\sigma\|K\|^{2}<1$ で鞍点に収束し、エルゴード平均の制限付きギャップが $O(1/k)$。証明せよ（Chambolle–Pock 2011）。
+
+*4 PDHG は前処理付き近接点法
+Chambolle–Pock 法は、計量 $M=\begin{pmatrix}\tau^{-1}I & -K^{*}\\ -K & \sigma^{-1}I\end{pmatrix}$ に関する単調作用素 $T(x,y)=(\partial g(x)+K^{*}y,\ \partial f^{*}(y)-Kx)$ の近接点法であることを示し（He–Yuan）、収束を近接点法の理論から導け。
+
+*4 Chambolle–Pock の加速（一方が強凸）
+$g$ が $\gamma$-強凸なら、ステップを $\theta_{k}=1/\sqrt{1+2\gamma\tau_{k}}$, $\tau_{k+1}=\theta_{k}\tau_{k}$, $\sigma_{k+1}=\sigma_{k}/\theta_{k}$ と更新すると $\|x_{k}-x^{*}\|^{2}=O(1/k^{2})$。両方が強凸なら線形収束することを示せ。
+
+*4 Condat–Vũ 法
+$\min f(x)+g(x)+h(Kx)$（$f$ は平滑）に対する Condat–Vũ の主双対法が $\frac1\tau-\sigma\|K\|^{2}>\frac{L}{2}$ で収束することを示し、Chambolle–Pock と近接勾配法の共通の一般化であることを確かめよ。
+
+*4 PDHG の LP への適用と再スタート（Applegate–Hinder–Lu–Lubin）
+LP の鞍点定式化に PDHG を適用し、正規化双対ギャップに基づく適応的再スタートを施すと、鋭さ（sharpness）条件の下で線形収束し、これが一次法として最適であることを示せ（PDLP の理論的基礎）。
+
+*4 Arrow–Hurwicz–Uzawa 法
+鞍点問題の同時勾配法（Arrow–Hurwicz）は凸凹でも収束しないことがあり（双線形の例）、Uzawa 法（主変数を厳密最小化）は双対の勾配上昇として収束する（強凸な場合）ことを示せ。
+
+*4 鞍点問題の一次法の下界（Ouyang–Xu, Zhang–Hong–Zhang）
+双線形結合をもつ凸凹鞍点問題に対し、一次法は $\Omega(\frac{LD^{2}}{k})$（凸凹）、$\Omega(\sqrt{\kappa_{x}\kappa_{y}}\log(1/\varepsilon))$（強凸強凹）の下界をもつ。後者を達成するアルゴリズム（Lin–Jin–Jordan、Kovalev–Gasnikov–Richtárik）の主張を述べよ。
+
+*4 非凸凹 minimax の GDA（Lin–Jin–Jordan）
+$f(x,y)$ が $x$ について非凸、$y$ について $\mu$-強凹なら、二時間スケール GDA（$\eta_{x}/\eta_{y}=\Theta(1/\kappa^{2})$）は $\Phi(x)=\max_{y}f(x,y)$ の $\varepsilon$-停留点を $O(\kappa^{2}\varepsilon^{-2})$ 反復で得る。証明せよ。
+
+*4 Danskin の定理と最大値関数の平滑性
+$f(x,y)$ が $y$ について $\mu$-強凹で $\nabla f$ が $L$-Lipschitz なら、$\Phi(x)=\max_{y}f(x,y)$ は $L(1+\kappa)$-平滑で $\nabla\Phi(x)=\nabla_{x}f(x,y^{*}(x))$。証明せよ。
+
+*4 Nesterov の平滑化の主双対解釈
+鞍点問題の双対側に強凸正則化を加えると主問題が平滑化されること、平滑化パラメータと加速法の組合せで $O(1/\varepsilon)$ が得られる理由を、主双対ギャップの分解で説明せよ。
+
+*4 ランダム化主双対法（SPDC, Zhang–Xiao）
+経験リスク最小化の鞍点定式化で、双対変数の一成分をランダムに更新する SPDC が $O((n+\sqrt{n\kappa})\log(1/\varepsilon))$ を達成することを示せ。
+
+*4 双線形鞍点問題の外挿と加速（Chen–Lan–Ouyang）
+$\min_{x}\max_{y}f(x)+\langle Kx,y\rangle-g^{*}(y)$（$f$ は $L$-平滑）に対する加速主双対法（APD）が $O(\frac{L}{k^{2}}+\frac{\|K\|}{k})$ を達成し、これが最良であることを示せ。
+
+*4 主双対法のステップ幅適応（Malitsky–Pock）
+$\|K\|$ を知らずに直線探索で $\tau,\sigma$ を調整する主双対法の収束を示せ。
+
+*4 主双対法と Frank–Wolfe の双対性（Bach）
+双対問題への Frank–Wolfe は、主問題への（エルゴード平均付き）ミラー降下／劣勾配法に対応することを示せ（Bach 2015）。
+
+*4 鞍点問題の二階法（Newton-type for minimax）
+凸凹鞍点問題に対する Newton 法の局所二次収束と、三次正則化型の二階法で $O(\varepsilon^{-2/3})$ のギャップ率を達成する主張（Monteiro–Svaiter, Adil–Bullins–Jambulapati–Sachdeva）を述べよ。
+
+*4 最適輸送の鞍点定式化と主双対法
+離散最適輸送を $\min_{P\ge0}\max_{u,v}\langle C,P\rangle+\langle u,\mu-P\mathbf 1\rangle+\langle v,\nu-P^{\top}\mathbf 1\rangle$ と書き、PDHG による解法の反復コストと収束率を論ぜよ。
+
+*4 分散ロバスト学習の鞍点法
+DRO $\min_{\theta}\max_{Q\in\mathcal{U}}E_{Q}[\ell(\theta,\xi)]$ に対する確率的ミラー降下・上昇が $O(1/\sqrt T)$ を達成することを示せ（Namkoong–Duchi）。
+
+*4 GAN と非凸非凹ゲームの局所収束
+GAN の目的関数の局所ナッシュ均衡の近くで、同時 GDA の局所収束がヤコビ行列の固有値条件（実部正）で決まることを示し、合意最適化（consensus optimization, Mescheder–Nowozin–Geiger）がこれを改善することを示せ。
+
+*5 鞍点問題の最適一次法の完全理論（強凸強凹・双線形）
+$\mu_{x}$-強凸 $\mu_{y}$-強凹、$L$-平滑な鞍点問題に対し、一次法の計算量の下界 $\Omega(\sqrt{L^{2}/(\mu_{x}\mu_{y})}\log(1/\varepsilon))$ を示し、これを達成するアルゴリズム（Kovalev–Gasnikov の加速 GDA、あるいは Catalyst+外挿）の証明の骨格を与えよ。
+
+*5 非凸非凹 minimax の計算困難性（Daskalakis–Skoulakis–Zampetakis）
+制約付き非凸非凹 minimax 問題の局所 min–max 点（一次の意味で）を求める問題は PPAD 完全であり、勾配オラクルのみでは指数回の呼び出しを要する。主張を正確に述べ、最小化との本質的違い（局所最小は勾配法で多項式的に近似できる）を論ぜよ。
+
+=ch VI-6　演算子分割法
+
+*4 前進後退分割の収束（Lions–Mercier, Passty） {fbs}
+極大単調 $A$ と $\beta$-共強圧的 $B$ に対し、$x_{k+1}=J_{\gamma A}(x_{k}-\gamma Bx_{k})$（$\gamma<2\beta$）は $\operatorname{zer}(A+B)$ の点に弱収束する。平均写像の理論（Krasnosel'skii–Mann）から導け。
+
+*5 Douglas–Rachford 分割の収束（Lions–Mercier, Svaiter） {dr}
+極大単調 $A,B$ に対し、$z_{k+1}=z_{k}+J_{\gamma A}(2J_{\gamma B}z_{k}-z_{k})-J_{\gamma B}z_{k}$ は弱収束し、影の列 $J_{\gamma B}z_{k}$ も $\operatorname{zer}(A+B)$ の点に弱収束する（Svaiter 2011：影の列の弱収束は長く未解決だった）。証明を完成させよ。
+
+*4 ADMM の収束と Douglas–Rachford との等価性 {admm}
+$\min f(x)+g(z)$ s.t. $Ax+Bz=c$ の ADMM は、双対問題 $\min f^{*}(A^{\top}\cdot)+g^{*}(B^{\top}\cdot)-\langle c,\cdot\rangle$ に対する Douglas–Rachford 分割と等価である（Gabay 1983）。これから ADMM の収束を導け。
+
+*4 ADMM の $O(1/k)$ エルゴード率（He–Yuan）
+ADMM の反復のエルゴード平均が、変分不等式の意味で $O(1/k)$ の精度をもつことを示し、非エルゴード率 $o(1/k)$（Davis–Yin）を述べよ。
+
+*4 ADMM の線形収束（Deng–Yin, Hong–Luo）
+$f$ が強凸かつ平滑で $A$ がフルランクなどの条件の下で ADMM が線形収束することを示し、多面体的な場合に誤差限界から線形収束を導け（Hong–Luo）。
+
+*4 多ブロック ADMM の発散（Chen–He–Ye–Yuan）
+三ブロックの直接拡張 ADMM は、凸二次問題でも発散しうる（Chen–He–Ye–Yuan 2016 の $3\times3$ の反例）。反例を確かめ、ランダム置換 ADMM が期待値で収束すること（Sun–Luo–Ye）を述べよ。
+
+*4 Davis–Yin の三作用素分割
+$0\in Ax+Bx+Cx$（$C$ は共強圧的）に対する $z_{+}=z-J_{\gamma B}z+J_{\gamma A}(2J_{\gamma B}z-z-\gamma CJ_{\gamma B}z)$ が収束することを示し、前進後退・DR・前進後退前進の統一であることを確かめよ（Davis–Yin 2017）。
+
+*4 分割法の最小のレゾルベント数（Ryu の不可能性定理）
+三つの極大単調作用素の和の零点を、各レゾルベントを一回ずつ用いる「頻度 1」の固定点反復で求める方法は、変数 1 本の持ち上げでは存在しない（Ryu 2020）が、変数 2 本では存在することを示せ。
+
+*4 Peaceman–Rachford 分割
+$z_{+}=R_{\gamma A}R_{\gamma B}z$ は非拡大にすぎず一般に収束しないが、$A$ または $B$ が強単調なら線形収束することを示せ。
+
+*4 近接点法による分割法の統一（Eckstein–Bertsekas）
+DR 分割がある極大単調作用素 $S_{\gamma,A,B}$ の近接点法であること（Eckstein–Bertsekas 1992）を示し、不正確な DR・過緩和 DR の収束を近接点法の理論から導け。
+
+*4 ADMM の非凸収束（Wang–Yin–Zeng, Hong–Luo–Razaviyayn）
+非凸 $f$ と平滑な $g$、および範囲条件の下で、ADMM が拡張 Lagrangian の単調減少により臨界点に集積し、KŁ 性質の下で大域収束することを示せ。
+
+*4 分散型 ADMM と合意最適化
+グラフ上の合意問題に対する分散 ADMM の線形収束率が、グラフ Laplacian の固有値比（代数的連結度）に依存することを示せ（Shi–Ling–Yuan–Wu–Yin）。
+
+*4 DR 分割の非凸実行可能問題での挙動（Borwein–Sims, Hesse–Luke）
+球面と直線の交わりを求める非凸実行可能問題で、DR 法が局所的に収束することを示し（Borwein–Sims）、超正則集合に対する局所線形収束（Hesse–Luke）を述べよ。
+
+*4 位相回復における Fienup の HIO と DR
+Fienup の hybrid input-output 法が、Fourier 振幅制約と台制約の二つの非凸集合に対する DR 法（の特殊化）であることを示し（Bauschke–Combettes–Luke）、その停滞の問題を論ぜよ。
+
+*4 分割法の PEP による厳密解析（Ryu–Taylor–Bergeling–Giselsson）
+DR 分割の収束率の厳密な評価（強単調・Lipschitz の組合せごと）を、作用素の補間条件と SDP による性能推定問題で導く方法を述べ、線形収束率の最良値を一例で導出せよ。
+
+*4 ランダム座標版の Krasnosel'skii–Mann（Combettes–Pesquet, Peng–Wu–Xu–Yan–Yin）
+非拡大写像の一成分だけをランダムに更新する確率的 KM 反復が、概収束することを示せ（ARock の非同期版を含めて）。
+
+*4 分割法の加速とその限界
+ADMM や DR に Nesterov 型の加速を施すと、強凸性の下で改善が得られるが、一般の単調作用素に対して $o(1/k)$ より速い最終反復率を得られない（Halpern 型を除く）ことを論ぜよ。
+
+*4 Halpern 反復の最適率（Lieder, Sabach–Shtern）
+非拡大写像 $T$ に対し Halpern 反復 $x_{k+1}=\frac{1}{k+2}x_{0}+\frac{k+1}{k+2}Tx_{k}$ は $\|x_{k}-Tx_{k}\|\le\frac{2\|x_{0}-x^{*}\|}{k+1}$ をみたし、これが最良である（Lieder 2021、Park–Ryu の下界）。証明せよ。
+
+*5 ADMM の反例と収束の最弱条件
+二ブロック ADMM でも、$A,B$ が列フルランクでない場合や部分問題が解をもたない場合に、主変数が発散しうる例を作れ。凸・閉・真の関数と鞍点の存在のみから、双対変数の収束と主目的値の収束が得られること（Boyd ら）の証明を完成させ、主変数の収束に必要な追加条件を明らかにせよ。
+
+*5 演算子分割の完全な分類理論（Ryu–Hannah–Yin, Malitsky–Tam）
+$n$ 個の極大単調作用素の和に対する「頻度 1・変数 $d$ 本」の固定点型分割法が存在するための必要十分条件 $d\ge n-1$（Malitsky–Tam 2023）を述べ、$d=n-1$ を達成する構成を与えよ。

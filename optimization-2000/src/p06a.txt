@@ -1,0 +1,126 @@
+=part 第 VI 部　凸最適化の一次法と計算量 | FIRST-ORDER METHODS AND COMPLEXITY &mdash; 1001 to 1200
+大規模問題では勾配しか計算できない。では勾配だけで、どこまで速く解けるか。Nesterov の加速、劣勾配法、近接勾配、ミラー降下、主双対法、演算子分割、座標降下、性能推定問題による最適な方法の設計、分散最適化、適応的方法 ― 上界と下界が一致するまで追い詰める。
+
+=ch VI-1　加速勾配法
+
+*5 Nesterov の加速勾配法 {agd}
+$L$-平滑凸関数に対し、$y_{k}=x_{k}+\frac{k-1}{k+2}(x_{k}-x_{k-1})$, $x_{k+1}=y_{k}-\frac1L\nabla f(y_{k})$ は $f(x_{k})-f^{*}\le\frac{2L\|x_{0}-x^{*}\|^{2}}{(k+1)^{2}}$。推定列（estimate sequence）の方法と Lyapunov 関数 $E_{k}=A_{k}(f(x_{k})-f^{*})+\frac L2\|z_{k}-x^{*}\|^{2}$ の方法の両方で証明し、下界との一致を結論せよ。
+
+*4 強凸版の加速と $\sqrt\kappa$ 率
+$\mu$-強凸 $L$-平滑関数に対し、運動量 $\beta=\frac{\sqrt\kappa-1}{\sqrt\kappa+1}$ の加速勾配法は $f(x_{k})-f^{*}\le(1-1/\sqrt\kappa)^{k}(f(x_{0})-f^{*}+\frac\mu2\|x_{0}-x^{*}\|^{2})$。証明せよ。
+
+*4 加速勾配法の ODE 極限（Su–Boyd–Candès） {sbc}
+Nesterov 法のステップ $\to0$ の極限は $\ddot X+\frac3t\dot X+\nabla f(X)=0$ であり、$f(X(t))-f^{*}\le\frac{2\|x_{0}-x^{*}\|^{2}}{t^{2}}$。係数 $3$ が臨界であり、$r>3$ で $o(1/t^{2})$、$r<3$ で率が劣化することを示せ。
+
+*4 Bregman Lagrangian と加速の変分的原理（Wibisono–Wilson–Jordan）
+Bregman Lagrangian $\mathcal{L}(X,\dot X,t)=e^{\alpha_{t}+\gamma_{t}}(D_{h}(X+e^{-\alpha_{t}}\dot X,X)-e^{\beta_{t}}f(X))$ の Euler–Lagrange 方程式が、理想スケーリング条件の下で $O(e^{-\beta_{t}})$ の率を与え、Nesterov 法・高次加速法を統一することを示せ。
+
+*4 FISTA（Beck–Teboulle） {fista}
+$\min f(x)+g(x)$（$f$ は $L$-平滑凸、$g$ は近接可能な凸）に対する FISTA $x_{k}=\operatorname{prox}_{g/L}(y_{k}-\frac1L\nabla f(y_{k}))$, $t_{k+1}=\frac{1+\sqrt{1+4t_{k}^{2}}}{2}$, $y_{k+1}=x_{k}+\frac{t_{k}-1}{t_{k+1}}(x_{k}-x_{k-1})$ が $F(x_{k})-F^{*}\le\frac{2L\|x_{0}-x^{*}\|^{2}}{(k+1)^{2}}$ をみたすことを示せ。
+
+*4 FISTA の反復列の収束（Chambolle–Dossal）
+運動量 $\frac{k-1}{k+a}$（$a>2$）の FISTA 変種では反復列 $x_{k}$ 自体が最小点に弱収束し、さらに $F(x_{k})-F^{*}=o(1/k^{2})$（Attouch–Peypouquet）。$a=2$（元の FISTA）で反復の収束は長く未解決であったことを述べよ。
+
+*5 元の Nesterov 法・FISTA の反復収束
+元の FISTA（Nesterov の $t_{k}$ 列）の反復列が最小点に収束するかという長年の問題は、2025 年に肯定的に解決された（Jang–Ryu、Boţ–Fadili–Nguyen）。連続時間版 $\ddot X+\frac3t\dot X+\nabla f=0$ の軌道収束の議論と離散版への移行の困難を説明せよ。
+
+*4 加速法の非単調性とリスタート（O'Donoghue–Candès）
+Nesterov 法は目的関数を単調に減らさず、強凸関数上で振動する。関数値リスタートまたは勾配リスタートを施すと、$\mu$ を知らなくても $\sqrt\kappa$ 率が（ほぼ）回復することを示せ。
+
+*4 最適なリスタート（Roulet–d'Aspremont）
+シャープネス（Hölder 誤差限界）$f(x)-f^{*}\ge\frac{\mu}{r}d(x,S)^{r}$ をもつ関数に対し、スケジュール付きリスタートの加速法が最適率を達成し、パラメータ未知でも対数因子のみの損失で適応できることを示せ。
+
+*4 加速の幾何学的解釈（Bubeck–Lee–Singh）
+強凸関数に対し、二つの球の交わりを含む最小球の中心を反復とする「幾何学的降下」が $\sqrt\kappa$ 率を達成することを示し、加速の直観的説明を与えよ。
+
+*4 線形結合法としての加速：推定列の一般理論
+推定列 $\phi_{k}(x)$ で $\phi_{k}\le(1-\lambda_{k})f+\lambda_{k}\phi_{0}$, $f(x_{k})\le\min\phi_{k}$ をみたすものを構成すれば $f(x_{k})-f^{*}\le\lambda_{k}(\phi_{0}(x^{*})-f^{*})$ となることを示し、Nesterov 法が $\lambda_{k}=O(1/k^{2})$ を達成する構成であることを確かめよ。
+
+*4 加速近接点法（Güler）
+近接点法に Nesterov 型の外挿を施すと $f(x_{k})-f^{*}=O(1/(\sum\sqrt{\lambda_{i}})^{2})$ となる（Güler 1992）。Catalyst（Lin–Mairal–Harchaoui）がこれを不正確版として一般の一次法の加速に使うことを示せ。
+
+*4 Catalyst による分散削減法の加速
+SVRG や SAGA を内部ソルバーとする Catalyst 加速法が、有限和強凸問題に対し $\tilde O((n+\sqrt{n\kappa})\log(1/\varepsilon))$ の計算量を達成することを示せ。
+
+*4 Katyusha（Allen-Zhu）
+負の運動量（Katyusha 運動量）を用いた直接加速 SVRG が $O((n+\sqrt{n\kappa})\log(1/\varepsilon))$ を達成すること、およびこれが有限和問題の下界（Woodworth–Srebro, Lan–Zhou）と一致することを示せ。
+
+*4 加速の不可能性：確率的雑音下
+雑音分散 $\sigma^{2}$ の確率的勾配では、加速しても $O(\frac{LR^{2}}{k^{2}}+\frac{\sigma R}{\sqrt k})$ が限界であり、雑音項は改善できない。AC-SA（Lan）がこれを達成することを示せ。
+
+*4 相対平滑性での加速の不可能性（Dragomir–Taylor–d'Aspremont–Bolte）
+相対平滑性（$h$ に関して $L$-平滑）の枠組みでは、一般に $O(1/k)$ より速い Bregman 一次法は存在しない。PEP による下界の構成原理を述べよ。
+
+*4 非ユークリッド加速（Nesterov の双対平均による加速）
+$\sigma$-強凸な prox 関数 $d$ を用いた加速法 $f(x_{k})-f^{*}\le\frac{4Ld(x^{*})}{\sigma(k+1)(k+2)}$ を示し、単体上の問題で次元依存性が $\log n$ に改善されることを確かめよ。
+
+*4 共役勾配法と加速法の関係
+強凸二次関数では CG は加速勾配法と同じ $\sqrt\kappa$ 率をもつが、それに加えて Krylov 最適性をもつ。非二次関数で CG 型の最適性が失われる理由と、加速法が普遍的に働く理由を対比せよ。
+
+*5 加速の必然性：Nesterov の最適率の完全証明（下界と上界）
+$L$-平滑凸関数クラスに対し、勾配スパン条件をみたす任意の一次法の下界 $\frac{3L\|x_{0}-x^{*}\|^{2}}{32(k+1)^{2}}$ と、OGM（Kim–Fessler）による上界 $\frac{L\|x_{0}-x^{*}\|^{2}}{2\theta_{k}^{2}}$（$\theta_{k}\approx k/\sqrt2$）を示し、Drori の厳密な下界により OGM が定数まで最適であることを結論せよ。
+
+*5 Nesterov 加速の連続時間理論と離散化の困難（Shi–Du–Jordan–Su）
+高解像度 ODE $\ddot X+\frac3t\dot X+\sqrt s\nabla^{2}f(X)\dot X+(1+\frac{3\sqrt s}{2t})\nabla f(X)=0$ が Nesterov 法と heavy-ball 法を区別すること（勾配補正項）を示し、Nesterov 法が勾配ノルムを $O(1/k^{3})$（最小値の意味で）で減らすことを Lyapunov 関数から導け。
+
+=ch VI-2　劣勾配法と非平滑凸最適化
+
+*4 劣勾配法の $O(1/\sqrt k)$ 収束 {subgrad}
+$G$-Lipschitz 凸関数に対し、劣勾配法 $x_{k+1}=x_{k}-\alpha_{k}g_{k}$ は $\min_{i\le k}f(x_{i})-f^{*}\le\frac{R^{2}+G^{2}\sum\alpha_{i}^{2}}{2\sum\alpha_{i}}$。定ステップ $\alpha=R/(G\sqrt{k})$ で $GR/\sqrt k$ を得ることを示せ。
+
+*4 非平滑凸最適化の下界
+$G$-Lipschitz 凸関数（$\|x_{0}-x^{*}\|\le R$）に対し、次元 $n\ge k$ で任意の一次法は $f(x_{k})-f^{*}\ge\frac{GR}{2(1+\sqrt{k+1})}$ を超えられない（Nesterov）。$\max_{i\le k+1}x_{i}+\frac{\mu}{2}\|x\|^{2}$ 型の最悪関数で示せ。
+
+*4 強凸非平滑関数の劣勾配法
+$\mu$-強凸 $G$-Lipschitz 関数に対し、ステップ $\alpha_{k}=\frac{2}{\mu(k+1)}$ と重み付き平均で $f(\bar x_{k})-f^{*}\le\frac{2G^{2}}{\mu(k+1)}$。これが最良であることを示せ（Lacoste-Julien–Schmidt–Bach）。
+
+*4 最終反復の収束率（Shamir–Zhang, Harvey–Liaw–Plan–Randhawa）
+劣勾配法の最終反復は $O(\log k/\sqrt k)$ で、この $\log k$ は定ステップ・減衰ステップの標準的スケジュールでは除けない（Harvey ら）。一方、特殊なステップ（Jain–Nagaraj–Netrapalli）で $O(1/\sqrt k)$ が達成できることを述べよ。
+
+*4 劣勾配法のエルゴード平均と双対変数の回復
+Lagrange 双対の劣勾配法で、主変数（Lagrangian の最小点）のエルゴード平均が近似的に主実行可能・主最適になることを示せ（Nedić–Ozdaglar, Larsson–Patriksson–Strömberg）。
+
+*4 Polyak ステップの劣勾配法と鋭い最小
+$f^{*}$ 既知の Polyak ステップ劣勾配法は、鋭い最小 $f-f^{*}\ge\alpha d_{S}$ の下で線形収束する。さらに弱凸・鋭い関数（位相回復の $\ell^{1}$ 定式化）でも局所線形収束すること（Davis–Drusvyatskiy–MacPhee–Paquette）を示せ。
+
+*4 劣勾配法の集合制約と射影
+射影劣勾配法が制約付き問題で同じ率を達成することを示し、射影が高価な場合の関数制約付き問題へのスイッチング劣勾配法（Polyak, Lan–Zhou）を述べよ。
+
+*4 平滑化による非平滑問題の $O(1/\varepsilon)$
+構造化非平滑問題 $f(x)=\max_{u\in U}\{\langle Ax,u\rangle-\phi(u)\}$ は、Nesterov の平滑化と加速法で $O(\|A\|D_{X}D_{U}/\varepsilon)$ 反復で解け、ブラックボックスの下界 $O(1/\varepsilon^{2})$ を回避できる。証明せよ（Nesterov 2005）。
+
+*4 過剰ギャップ技法（Nesterov の excessive gap）
+主双対の平滑化パラメータを同時に減らす excessive gap 技法が、平滑化パラメータを事前に固定せずに $O(1/k)$ の主双対ギャップを達成することを示せ。
+
+*4 双対平均法（Nesterov の dual averaging）
+$x_{k+1}=\operatorname{argmin}\{\sum_{i\le k}\langle g_{i},x\rangle+\beta_{k}d(x)\}$ は、$\beta_{k}\sim\sqrt k$ で非平滑凸関数に $O(1/\sqrt k)$ を達成し、ステップの減衰がない（新しい劣勾配を古いものより軽視しない）利点をもつ。証明せよ。
+
+*4 準単調劣勾配法（Nesterov–Shikhman）
+双対平均の反復の平均を用いた準単調劣勾配法は、最終反復で $O(1/\sqrt k)$ を達成することを示せ。
+
+*4 非平滑凸最適化の楕円体法による $O(n^{2}\log(1/\varepsilon))$
+次元が小さい場合、非平滑凸最適化は楕円体法で $O(n^{2}\log(GR/\varepsilon))$ 回のオラクル呼び出しで解け、劣勾配法の $O(G^{2}R^{2}/\varepsilon^{2})$ と相補的である。二つの下界 $\min\{n\log(1/\varepsilon),1/\varepsilon^{2}\}$ の遷移を論ぜよ。
+
+*4 Shor の空間拡張劣勾配法と楕円体法
+劣勾配方向に空間を拡張（dilation）する Shor の方法を定式化し、特定のパラメータの選択で楕円体法（Yudin–Nemirovski, Shor 1977）と一致することを示せ。Shor の $r$-アルゴリズムが実用上速いにもかかわらず収束の理論保証が知られていないことを述べよ。
+
+*4 Hölder 平滑関数と普遍勾配法（Nesterov 2015）
+$\nabla f$ が $\nu$-Hölder 連続（$\nu\in[0,1]$）なクラスを一つのアルゴリズム（直線探索で $L$ を推定し、目標精度 $\varepsilon$ を用いる）で扱う普遍勾配法が、各 $\nu$ で最適率 $O((M_{\nu}R^{1+\nu}/\varepsilon)^{2/(1+3\nu)})$ を達成することを示せ。
+
+*4 非平滑関数の Clarke 停留点の計算不可能性（Zhang–Lin–Jegelka–Sra–Jadbabaie）
+Lipschitz な非凸非平滑関数の $\varepsilon$-Clarke 停留点（$\operatorname{dist}(0,\partial f(x))\le\varepsilon$）は、有限回の一次オラクル呼び出しでは一般に得られない。一方 $(\delta,\varepsilon)$-Goldstein 停留点はランダム化法で $O(\delta^{-1}\varepsilon^{-3})$ 回で得られることを示せ。
+
+*4 勾配サンプリング法（Burke–Lewis–Overton）
+局所 Lipschitz 関数の近傍でランダムに勾配をサンプルし、その凸包の最小ノルム元を方向とする勾配サンプリング法が、確率 1 で Clarke 停留点に集積することを示せ（Kiwiel の改良）。
+
+*4 非平滑 BFGS の挙動（Lewis–Overton）
+BFGS を非平滑関数に適用すると、多くの場合 Clarke 停留点に線形収束的に近づくという観察（Lewis–Overton 2013）を、$f(x)=|x_{1}|+x_{2}^{2}$ 型の単純な例で解析し、$\|x\|$ に対する BFGS の挙動の理論的結果を述べよ。
+
+*4 Polyak ステップの確率版と補間
+過剰パラメータ化された問題（補間：すべての成分が同時に最小化される）では、確率的 Polyak ステップの SGD が線形収束することを示せ（Loizou–Vaswani–Laradji–Lacoste-Julien）。
+
+*5 非平滑凸最適化の最適な最終反復法（Zamani–Glineur, Jain–Nagaraj–Netrapalli）
+Lipschitz 凸関数に対し、特定のステップ幅スケジュールで劣勾配法の最終反復が $\frac{GR}{\sqrt{k+1}}$ に定数倍まで一致する最適率を達成することを示し（Zamani–Glineur の厳密な最悪ケース解析）、PEP による証明の骨格を与えよ。
+
+*5 非平滑凸最適化の情報ベース計算量の完全な図式
+$n$ 次元の Lipschitz 凸最適化の決定的・乱択オラクル計算量が $\Theta(\min\{n\log(1/\varepsilon),1/\varepsilon^{2}\})$ であることを、Nemirovski–Yudin の下界構成（決定的）と、乱択に対する Woodworth–Srebro、および高次元での $1/\varepsilon^{2}$ の乱択下界の構成により証明せよ。

@@ -1,0 +1,123 @@
+=ch VI-3　近接勾配法と合成最適化
+
+*4 近接勾配法の収束（ISTA） {ista}
+$F=f+g$（$f$ は $L$-平滑凸、$g$ は閉真凸）に対し、$x_{k+1}=\operatorname{prox}_{g/L}(x_{k}-\frac1L\nabla f(x_{k}))$ は $F(x_{k})-F^{*}\le\frac{L\|x_{0}-x^{*}\|^{2}}{2k}$ をみたす。近接勾配写像の基本不等式を示して証明せよ。
+
+*4 近接勾配法の線形収束（強凸・誤差限界）
+$f$ が $\mu$-強凸なら近接勾配法は $(1-\mu/L)$ で線形収束する。強凸性がなくても、Luo–Tseng の誤差限界（あるいは近接 PL 条件）の下で線形収束することを示せ（Karimi–Nutini–Schmidt）。
+
+*4 近接写像の不正確計算の許容（Schmidt–Le Roux–Bach）
+近接勾配法・FISTA で、勾配の誤差 $e_{k}$ と近接の誤差 $\varepsilon_{k}$ が $\sum\|e_{k}\|<\infty$, $\sum\sqrt{\varepsilon_{k}}<\infty$（FISTA では $\sum k\|e_{k}\|<\infty$ など）なら元の率が保たれることを示せ。
+
+*4 反復縮小閾値法と LASSO の台の有限識別
+LASSO $\min\frac12\|Ax-b\|^{2}+\lambda\|x\|_{1}$ に対する ISTA が、非退化条件 $|A_{i}^{\top}(Ax^{*}-b)|<\lambda$（$i\notin\operatorname{supp}x^{*}$）の下で有限回で台を識別し、その後は線形収束することを示せ（Hale–Yin–Zhang）。
+
+*4 群 LASSO・核ノルムの近接勾配法
+群 LASSO（ブロック縮小）、核ノルム正則化（特異値閾値化、SVT）の近接勾配法の収束を示し、核ノルム近接写像が SVD 一回で計算できることを確かめよ（Cai–Candès–Shen）。
+
+*4 全変動正則化の近接写像（Chambolle の射影法）
+画像の全変動 $TV(u)=\sum|\nabla u|$ の近接写像が双対問題 $\min\{\|u_{0}-\operatorname{div}p\|^{2}:|p|\le\lambda\}$ の解から得られ、Chambolle の不動点法が収束することを示せ（Chambolle 2004）。
+
+*4 Rudin–Osher–Fatemi モデルの双対と主双対法
+ROF モデル $\min\frac12\|u-f\|^{2}+\lambda TV(u)$ の Fenchel 双対を導き、主双対ハイブリッド勾配法での解法を示せ。1 次元では「タウトストリング」アルゴリズムで厳密に $O(n)$ で解けることを示せ。
+
+*4 近接写像の和と Dykstra 型の計算
+$\operatorname{prox}_{g_{1}+g_{2}}$ は一般に $\operatorname{prox}_{g_{1}}\circ\operatorname{prox}_{g_{2}}$ ではないが、$g_{1}=\lambda\|\cdot\|_{1}$, $g_{2}=$ 1 次元 TV（融合 LASSO）では合成で正しく計算できる（Friedman–Hastie–Höfling–Tibshirani, Yu）。証明せよ。
+
+*4 スクリーニング規則（El Ghaoui, Fercoq–Gramfort–Salmon）
+LASSO の双対実行可能点と双対ギャップから、最適解で必ず 0 となる成分を事前に同定する「安全なスクリーニング」（ギャップ安全球）を導き、その正しさを証明せよ。
+
+*4 近接 Newton 法（Lee–Sun–Saunders）
+$x_{k+1}=\operatorname{argmin}\{\langle\nabla f,x-x_{k}\rangle+\frac12\|x-x_{k}\|^{2}_{H_{k}}+g(x)\}$（スケール付き近接写像）は、$H_{k}=\nabla^{2}f$ で局所二次、準 Newton $H_{k}$ で超線形収束することを示せ。
+
+*4 可変計量近接勾配法（Combettes–Vũ, Chouzenoux–Pesquet–Repetti）
+計量 $U_{k}$ を変える近接勾配法の収束（$U_{k}$ が一様有界かつ $U_{k+1}\preceq(1+\eta_{k})U_{k}$, $\sum\eta_{k}<\infty$）を示せ。
+
+*4 非凸正則化（SCAD, MCP）と近接勾配法
+SCAD・MCP 正則化の近接写像が閉形式で与えられることを示し、近接勾配法が臨界点に収束すること、統計的には oracle 性をもつ局所解に到達しうること（Loh–Wainwright）を論ぜよ。
+
+*4 $\ell_{0}$ 正則化の近接（ハード閾値）と IHT
+$\ell_{0}$ 擬ノルムの近接写像はハード閾値化であり、反復ハード閾値法（IHT）が RIP 定数 $\delta_{3s}<1/\sqrt{32}$ の下で $s$-スパースな解に線形収束する（Blumensath–Davies）。証明せよ。
+
+*4 近接勾配法の加速における運動量と台の識別の両立
+FISTA も有限回で台を識別するが、識別後の線形収束は運動量により振動することを示し、適応的リスタートとの組合せを論ぜよ（Liang–Fadili–Peyré の局所線形収束解析）。
+
+*4 合成最適化の Gauss–Newton 型法（Burke–Ferris）
+$\min h(c(x))$（$h$ は凸多面体的、$c$ は滑らか）に対し、線形化 $h(c(x_{k})+\nabla c(x_{k})d)$ を信頼領域で最小化する方法が、弱鋭い最小の下で二次収束することを示せ（Burke–Ferris 1995）。
+
+*4 分数ノルムの近接と $\ell_{p}$ 準ノルム（$0<p<1$）
+$|x|^{p}$（$0<p<1$）の近接写像が非連続（閾値でジャンプ）であることを示し、$p=1/2$ で閉形式（三次方程式の解）をもつことを確かめよ（Xu–Chang–Xu–Zhang）。
+
+*4 近接勾配法と Moreau 包の勾配法の等価性
+$\min f+g$ の近接勾配法は、前向き後ろ向き包 $F_{\gamma}(x)=f(x)-\frac\gamma2\|\nabla f(x)\|^{2}+e_{\gamma}g(x-\gamma\nabla f(x))$（Patrinos–Bemporad）に対する可変計量勾配法とみなせる。FBE が $f$ が二次なら凸・平滑で、元の問題と同じ最小点をもつことを示せ。
+
+*4 PANOC と前向き後ろ向き包による準 Newton（Stella–Themelis–Patrinos）
+FBE に L-BFGS 方向を用いて直線探索し、近接勾配ステップで安全化する PANOC の大域収束と局所超線形収束を示せ。
+
+*5 近接勾配法の厳密な最悪ケース（Taylor–Hendrickx–Glineur の合成版）
+合成凸問題に対するステップ $1/L$ の近接勾配法の厳密な最悪ケース $F(x_{N})-F^{*}\le\frac{L\|x_{0}-x^{*}\|^{2}}{4N}$ を PEP で導き、平滑版（勾配法の $\frac{1}{4N+2}$）との違いの理由を説明せよ。
+
+*5 近接勾配法の部分的平滑性による局所解析の完全理論（Liang–Fadili–Peyré）
+$g$ が $x^{*}$ で多様体 $\mathcal{M}$ に沿って部分的に滑らかで非退化条件が成り立つとき、近接勾配法（および FISTA、DR）は有限回で $\mathcal{M}$ を識別し、その後の局所線形収束率が、$\mathcal{M}$ 上の Riemann Hessian と $\nabla^{2}f$ で定まる線形作用素のスペクトルで正確に与えられることを示せ。
+
+=ch VI-4　ミラー降下と Bregman 法
+
+*4 ミラー降下法（Nemirovski–Yudin, Beck–Teboulle） {md}
+$\sigma$-強凸な距離生成関数 $h$ に対し、$x_{k+1}=\operatorname{argmin}\{\alpha_{k}\langle g_{k},x\rangle+D_{h}(x,x_{k})\}$ は、$\min_{i\le k}f(x_{i})-f^{*}\le\frac{D_{h}(x^{*},x_{0})+\frac{1}{2\sigma}\sum\alpha_{i}^{2}\|g_{i}\|_{*}^{2}}{\sum\alpha_{i}}$。三点恒等式から証明せよ。
+
+*4 単体上のエントロピー型ミラー降下（指数勾配法）
+単体上でエントロピー $h(x)=\sum x_{i}\log x_{i}$ を用いると、ミラー降下は乗法的更新 $x_{k+1,i}\propto x_{k,i}e^{-\alpha g_{k,i}}$ となり、$\ell_{\infty}$-Lipschitz 関数に対し $O(G_{\infty}\sqrt{\log n/k})$ を達成する。ユークリッド射影劣勾配法の $O(G_{2}\sqrt{1/k})$ と比べて次元依存性の優位を論ぜよ。
+
+*4 ミラー降下と双対平均の等価性（遅延版）
+線形化された問題ではミラー降下（遅延更新）と Nesterov の双対平均が一致することを示し、制約付き問題で両者が異なる挙動を示す例を作れ。
+
+*4 行列版ミラー降下（量子エントロピー）
+スペクトラヘドロン $\{X\succeq0,\operatorname{tr}X=1\}$ 上で von Neumann エントロピーを用いた行列指数勾配法 $X_{k+1}\propto\exp(\log X_{k}-\alpha G_{k})$ が $O(\sqrt{\log n/k})$ を達成することを示し（Tsuda–Rätsch–Warmuth）、SDP の近似解法（Arora–Kale）への応用を述べよ。
+
+*4 乗法重み更新法（MWU）と LP の近似解法
+MWU の後悔 $\sum\langle p_{t},\ell_{t}\rangle-\min_{i}\sum\ell_{t,i}\le\frac{\log n}{\eta}+\eta T$ を示し、Plotkin–Shmoys–Tardos の被覆・パッキング LP の近似解法がその応用であることを説明せよ（Arora–Hazan–Kale の総説）。
+
+*4 相対的強凸・相対的平滑と Bregman 近接勾配法の線形収束
+$f$ が $h$ に関して $\mu$-相対強凸かつ $L$-相対平滑ならば、Bregman 近接勾配法は $(1-\mu/L)$ で線形収束する（Lu–Freund–Nesterov）。証明せよ。
+
+*4 Bregman 近接点法の収束（Censor–Zenios, Chen–Teboulle）
+$x_{k+1}=\operatorname{argmin}\{f(x)+\frac{1}{\lambda_{k}}D_{h}(x,x_{k})\}$ は $f(x_{k})-f^{*}\le\frac{D_{h}(x^{*},x_{0})}{\sum\lambda_{i}}$ をみたす。証明し、制約集合の内部に反復が留まる（内点性）性質を示せ。
+
+*4 Sinkhorn アルゴリズムの Bregman 射影としての解釈
+エントロピー正則化最適輸送 $\min\langle C,P\rangle-\varepsilon H(P)$ s.t. $P\mathbf 1=\mu$, $P^{\top}\mathbf 1=\nu$ に対する Sinkhorn の行・列スケーリングは、KL ダイバージェンスに関する交互 Bregman 射影（Bregman の方法）であり、Hilbert 射影距離で線形収束する（Franklin–Lorenz）ことを示せ。
+
+*4 Sinkhorn の計算量（Altschuler–Weed–Rigollet）
+Sinkhorn 法による $\varepsilon$-近似最適輸送が $\tilde O(n^{2}\|C\|_{\infty}^{3}/\varepsilon^{3})$（改良で $\tilde O(n^{2}/\varepsilon^{2})$）時間で得られることを示し、正則化パラメータの選び方を論ぜよ。
+
+*4 Bregman ADMM と Bregman 分割法
+ADMM の二次項を Bregman 距離に置き換えた BADMM（Wang–Banerjee）の収束を示し、確率単体上の問題で射影不要になる利点を述べよ。
+
+*4 ミラー降下の連続時間版とリーマン勾配流
+ミラー降下の連続極限 $\frac{d}{dt}\nabla h(x)=-\nabla f(x)$ は、Hessian 計量 $\nabla^{2}h$ に関する Riemann 勾配流 $\dot x=-(\nabla^{2}h)^{-1}\nabla f$ と一致することを示し、エントロピーの場合のレプリケータ方程式との関係を述べよ（Alvarez–Bolte–Brahic）。
+
+*4 Hessian Riemann 勾配流の収束（Alvarez–Bolte–Brahic）
+Legendre 型 $h$ に対する Hessian 勾配流は、線形等式制約付き凸問題の最適解に収束し、LP では中心パスをたどるアフィンスケーリング流と一致することを示せ。
+
+*4 加速ミラー降下（Krichene–Bayen–Bartlett, Nesterov）
+ミラー降下と双対平均を線形結合する加速ミラー降下法が $O(L D_{h}/k^{2})$ を達成することを示し、連続時間の Lyapunov 解析と離散化を示せ。
+
+*4 ミラー降下の最適性とノルムの選択（Ben-Tal–Margalit–Nemirovski）
+$\ell_{p}$ 球上の Lipschitz 凸最適化で、$p$ に応じて適切な距離生成関数を選ぶと、ミラー降下が情報ベース計算量の下界を対数因子を除いて達成することを示せ（$p=1$ でエントロピー、$p=2$ でユークリッド）。
+
+*4 Bregman 距離の三角不等式の欠如と収束解析
+Bregman 距離は対称でも三角不等式もみたさないが、三点恒等式と「一般化 Pythagoras 不等式」$D_{h}(x,P(y))+D_{h}(P(y),y)\le D_{h}(x,y)$（$P$ は Bregman 射影）で解析が成り立つことを示せ。
+
+*4 オンラインミラー降下と後悔
+オンライン凸最適化でミラー降下は後悔 $O(\sqrt{T D_{h}G^{2}})$ を達成し、ゼロ和ゲームでの均衡への平均反復の収束（後悔から minimax へ）を導け。
+
+*4 楽観的ミラー降下と加速された均衡収束
+楽観的ミラー降下（前回の勾配で予測）を両プレイヤーが用いると、ゼロ和ゲームの均衡に $O(1/T)$ で収束する（Rakhlin–Sridharan, Syrgkanis–Agarwal–Luo–Schapire）。証明の骨格を与えよ。
+
+*4 Bregman 近接勾配法の非凸収束（Bolte–Sabach–Teboulle–Vaisbourd）
+相対平滑な非凸関数に対し、Bregman 近接勾配法が KŁ 性質の下で臨界点に大域収束することを示し、二次逆問題（位相回復の $\ell^{4}$ 型目的関数）への適用を述べよ。
+
+*5 ミラー降下の情報幾何的解釈と自然勾配（Amari, Raskutti–Mukherjee）
+指数型分布族の平均パラメータ空間でのミラー降下は、自然パラメータ空間での自然勾配法（Fisher 計量）と等価である。証明し、自然勾配法の Fisher 効率（漸近的に Cramér–Rao 限界を達成）を示せ。
+
+*5 ミラー降下の下界と $\log n$ の最適性（Nemirovski–Yudin, Agarwal–Bartlett–Ravikumar–Wainwright）
+単体上の $\ell_{\infty}$-Lipschitz 凸最適化で、任意の（確率的）一次法は $\Omega(G\sqrt{\log n/k})$ を超えられないことを、情報理論的下界（Fano の不等式を用いた多仮説検定への帰着）で証明せよ。

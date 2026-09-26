@@ -1,0 +1,123 @@
+=ch VII-5　接錐・正則性・集合の極限
+
+*4 Painlevé–Kuratowski 収束とコンパクト性 {pk}
+$\mathbb{R}^{n}$ の閉集合の列は Painlevé–Kuratowski の意味で収束する部分列をもつ（Zarankiewicz / Mrówka のコンパクト性定理）。証明し、有界なら Hausdorff 収束と同値であることを示せ。
+
+*4 Attouch–Wets 距離と集合の収束の距離化
+閉集合の空間に $d_{\rho}(C,D)=\sup_{\|x\|\le\rho}|d_{C}(x)-d_{D}(x)|$ に基づく距離を定義し、Painlevé–Kuratowski 収束と一致することを示せ（有限次元）。
+
+*4 接錐の計算規則
+$C=C_{1}\cap C_{2}$ について $T_{C}(x)\subset T_{C_{1}}(x)\cap T_{C_{2}}(x)$ で、横断性条件 $N_{C_{1}}(x)\cap(-N_{C_{2}}(x))=\{0\}$（かつ Clarke 正則性）の下で等号。横断性がなければ等号が成り立たない例（接する二つの円板）を作れ。
+
+*4 Clarke 正則性の特徴づけ
+閉集合 $C$ が $x$ で Clarke 正則 $\iff$ $\hat N_{C}(x)=N_{C}(x)$ $\iff$ $T_{C}(x)=\hat T_{C}(x)$（ここで $\hat T$ は Clarke 接錐）。凸集合と $C^{1}$ 多様体が正則であることを示せ。
+
+*4 Rockafellar の定理（接錐の内極限）
+$\hat T_{C}(\bar x)=\liminf_{x\to_{C}\bar x}T_{C}(x)$。証明を完成させよ。
+
+*4 集合の正則性の階層（超正則・部分正則）
+閉集合の超正則性（Lewis–Luke–Malick：$\langle v,y-x\rangle\le\varepsilon\|v\|\|y-x\|$ が $x$ 近傍の $v\in\hat N_{C}(x)$ で成り立つ）、prox-regularity、Clarke 正則性の包含関係を示し、各々が真の包含であることを例で確かめよ。
+
+*4 交互射影の局所線形収束（Lewis–Luke–Malick）
+閉集合 $A$ が超正則で、$A,B$ が $\bar x$ で線形正則（$N_{A}(\bar x)\cap(-N_{B}(\bar x))=\{0\}$）ならば、非凸でも交互射影は $\bar x$ の近くで線形収束し、率は法錐間の角度の余弦 $\bar c$ で $\bar c^{2}$ に近い。証明せよ。
+
+*4 低ランク行列多様体への射影と交互射影
+固定ランク行列の多様体 $\mathcal{M}_{r}$（非凸）への射影が切断 SVD で与えられ（Eckart–Young）、$\mathcal{M}_{r}$ が prox-regular であることを示し、低ランク行列の実行可能性問題での交互射影の局所線形収束を述べよ。
+
+*4 Hausdorff 距離と Lipschitz 連続集合値写像
+凸コンパクト値写像が Hausdorff Lipschitz ならば、支持関数の意味で Lipschitz であり、Steiner 選択が Lipschitz 選択を与えることを示せ。
+
+*4 二階接集合と曲率
+閉集合 $C$ の二階接集合 $T^{2}_{C}(x,d)$ と内二階接集合の違いを示し、$C$ が $C^{2}$ 多様体の場合に第二基本形式で表されることを確かめよ。
+
+*4 集合の外半連続性と法錐の閉グラフ性
+$x\mapsto N_{C}(x)$（極限法錐）は外半連続（閉グラフ）であるが、$x\mapsto\hat N_{C}(x)$ はそうでないことを示せ。これが極限法錐を導入する主要な理由であることを説明せよ。
+
+*4 凸集合列の収束と支持関数
+凸閉集合の列 $C_{k}\to C$（Painlevé–Kuratowski）$\iff$ 支持関数がエピ収束 $\sigma_{C_{k}}\to\sigma_{C}$（有限次元、Wijsman / Salinetti–Wets）。証明せよ。
+
+*4 集合値写像の図形的収束と解集合の安定性
+一般化方程式の列 $0\in F_{k}(x)$ の解集合が、$F_{k}$ の図形的収束（グラフの Painlevé–Kuratowski 収束）の下で外半連続的に収束することを示せ。
+
+*4 可測集合値写像と Castaing 表現（再訪）
+閉値集合値写像の可測性の同値な定義（Effros 可測性、グラフ可測性、Castaing 表現の存在）を完備可分距離空間で比較し、同値となる条件を示せ。
+
+*4 正則性と交わりの法錐の計算（Mordukhovich の横断性）
+$N_{C_{1}\cap C_{2}}(x)\subset N_{C_{1}}(x)+N_{C_{2}}(x)$ が $N_{C_{1}}(x)\cap(-N_{C_{2}}(x))=\{0\}$ の下で成り立つことを極値原理から示せ。
+
+*4 部分的平滑性（Lewis）と多様体識別
+凸関数 $f$ が $x$ で多様体 $\mathcal{M}$ に沿って部分的に滑らか（$f|_{\mathcal{M}}$ が滑らか、$\partial f$ が $\mathcal{M}$ 上で連続、法方向の鋭さ）であるとき、$\mathcal{M}$ が局所一意に定まることを示し、$\|x\|_{1}$, $\lambda_{\max}$ で $\mathcal{M}$ を記述せよ。
+
+*4 $\mathcal{VU}$ 分解（Lemaréchal–Oustry–Sagastizábal）
+凸関数 $f$ の $x$ における $\mathcal{V}=\operatorname{span}(\partial f(x)-g)$ と $\mathcal{U}=\mathcal{V}^{\perp}$ の分解で、$\mathcal{U}$ 方向の「$\mathcal{U}$-Lagrangian」が二回微分可能になり、$\mathcal{VU}$ 型の超線形収束アルゴリズムが得られることを示せ。
+
+*4 固有値関数の多様体構造（Arnold, Overton）
+$\lambda_{\max}$ の重複度 $r$ の固有値をもつ対称行列の集合は余次元 $r(r+1)/2-1$ の多様体であり、その上で $\lambda_{\max}$ は滑らかである。von Neumann–Wigner の余次元 2 の議論を再現せよ。
+
+*5 o-minimal 集合の Whitney 層化と射影公式（Bolte–Daniilidis–Lewis–Shiota）
+定義可能な閉集合は Whitney $(a)$-正則な層化をもち、定義可能な局所 Lipschitz 関数の Clarke 劣微分は層の接空間への射影が Riemann 勾配に等しい（射影公式）。これを用いて定義可能関数の Clarke 臨界値が有限個であること（定義可能 Sard 定理）を示せ。
+
+*5 集合値写像の集合収束のコンパクト性と変分収束の統一（Rockafellar–Wets 第 4, 5, 7 章）
+閉集合列・集合値写像・関数（エピグラフ）の収束を Painlevé–Kuratowski 収束で統一的に扱い、エピ収束・図形収束・連続収束の関係とそれぞれのコンパクト性定理を証明せよ。
+
+=ch VII-6　エピ収束と変分収束
+
+*4 エピ収束の定義と最小値の収束 {epi}
+$f_{k}\to f$（エピ収束）は $\operatorname{epi}f_{k}\to\operatorname{epi}f$（Painlevé–Kuratowski）で定義される。等レベル有界（eventually level-bounded）なら $\inf f_{k}\to\inf f$ で、$\operatorname{argmin}f_{k}$ の集積点は $\operatorname{argmin}f$ に属することを示せ。
+
+*4 エピ収束と各点収束の違い
+各点収束するがエピ収束しない列、エピ収束するが各点収束しない列（$f_{k}(x)=kx e^{-k^{2}x^{2}}$ 型）を作り、一様収束ならエピ収束することを示せ。
+
+*4 エピ収束の特徴づけ（$\liminf$ と回復列）
+$f_{k}\to f$（エピ）$\iff$ (i) 任意の $x_{k}\to x$ で $\liminf f_{k}(x_{k})\ge f(x)$、(ii) 各 $x$ に $x_{k}\to x$ で $\limsup f_{k}(x_{k})\le f(x)$ となる列が存在。これが $\Gamma$ 収束の定義と一致することを示せ。
+
+*4 エピ収束のコンパクト性
+$\mathbb{R}^{n}$ 上の関数列は、エピ収束する部分列（極限は下半連続、$\pm\infty$ を許す）をもつ。Painlevé–Kuratowski のコンパクト性から導け。
+
+*4 Attouch の定理（凸関数のエピ収束と劣微分の図形収束）
+Hilbert 空間の閉真凸関数列について、$f_{k}\to f$（Mosco 収束）かつ正規化条件の下で $\partial f_{k}\to\partial f$（図形収束）。逆も成り立つ（Attouch 1977）。有限次元で証明せよ。
+
+*4 Mosco 収束（反射的 Banach 空間）
+弱位相と強位相を組み合わせた Mosco 収束を定義し、凸関数の Mosco 収束が共役の Mosco 収束と同値（Mosco 1971）であることを示せ。
+
+*4 Moreau 包の各点収束とエピ収束
+prox-bounded な関数列について、$f_{k}\to f$（エピ）$\iff e_{\lambda}f_{k}\to e_{\lambda}f$（各点、十分小さい $\lambda$）。凸の場合に証明せよ（Attouch–Wets）。
+
+*4 確率計画の SAA とエピ収束（Dupačová–Wets, Artstein–Wets）
+サンプル平均近似 $\hat f_{N}(x)=\frac{1}{N}\sum F(x,\xi_{i})$ が $f(x)=EF(x,\xi)$ に確率 1 でエピ収束する（正規被積分関数、可積分下界の下で）ことを、エピグラフの大数の法則（Artstein–Wets）から示し、最適値・最適解の一致性を導け。
+
+*4 $\Gamma$ 収束の基本定理（De Giorgi）
+$\Gamma$ 収束は同値な等強圧性の下で最小点を最小点へ運び、連続摂動に対して安定（$f_{k}+g\to f+g$）である。$\Gamma$ 収束のコンパクト性（可分距離空間）を示せ。
+
+*4 Modica–Mortola の定理
+$F_{\varepsilon}(u)=\int(\varepsilon|\nabla u|^{2}+\frac{1}{\varepsilon}W(u))dx$（$W$ は二重井戸）は $\varepsilon\to0$ で周長汎関数 $c_{W}\operatorname{Per}(\{u=1\})$ に $\Gamma$ 収束する。一次元の場合の証明（最適プロファイルの構成）を完成させよ。
+
+*4 均質化と $\Gamma$ 収束
+周期的係数 $a(x/\varepsilon)$ をもつ Dirichlet 積分 $\int a(x/\varepsilon)|\nabla u|^{2}$ の $\Gamma$ 極限は定数係数の均質化積分であり、一次元では調和平均 $(\int_{0}^{1}a^{-1})^{-1}$ になることを示せ。
+
+*4 エピ収束による離散化の正当性（有限要素法）
+変分問題の有限要素離散化の汎関数列が元の汎関数にエピ（$\Gamma$）収束することを示し、離散最小点が連続問題の最小点に収束することを導け。
+
+*4 エピ収束とペナルティ・障壁法の統一
+ペナルティ関数 $f+c_{k}P$ と障壁関数 $f+\mu_{k}B$ の列がともに $f+\iota_{C}$ にエピ収束することを示し、ペナルティ法・障壁法の収束をエピ収束の一般論から導け。
+
+*4 エピ収束と劣微分の極限（非凸, Poliquin）
+一様に prox-regular な関数列について、エピ収束から劣微分の図形収束が従うことを示せ（Poliquin 1992 の拡張）。
+
+*4 エピ導関数とエピ微分可能性
+$f$ の一階エピ導関数 $df(x)(w)=\liminf_{t\downarrow0,w'\to w}\frac{f(x+tw')-f(x)}{t}$ と、二階エピ導関数を定義し、エピ微分可能性（差分商の関数としてのエピ収束）が凸関数の $\operatorname{prox}$ の方向微分可能性と同値であることを示せ。
+
+*4 エピ収束とアルゴリズムの近似（近似オラクルでの収束）
+近似関数 $f_{k}\to f$（エピ）を用いて各段で近似最小化する外側反復の極限が $f$ の最小点であることを示し、スムージング法・正則化法の収束をこの枠組みで扱え。
+
+*4 エピ収束の距離化（Attouch–Wets 距離）と定量的安定性
+凸関数のエピ距離 $d_{\rho}$ に関して、最小値と最小点集合が Lipschitz 的に変化する（等強凸性の下で）ことを示せ（Attouch–Wets の定量的安定性定理）。
+
+*4 確率的エピ収束と大偏差（Dupačová, Kaniovski–King–Wets）
+SAA の最適解の一致率が大偏差原理で指数的であることを示し、有限集合上の問題では SAA が正確な最適解を返す確率が指数的に 1 に近づくこと（Kleywegt–Shapiro–Homem-de-Mello）を証明せよ。
+
+*5 $\Gamma$ 収束による離散から連続への移行（Braides, Alicandro–Cicalese）
+格子上の離散エネルギー（最近接相互作用）の $\Gamma$ 極限が連続体のエネルギー（Dirichlet 積分や周長型）であることを示し、ソフトな相互作用の場合に極限の被積分関数を「セル公式」で表せ。
+
+*5 Attouch–Brezis–Mosco の変分収束の一般理論
+非反射的な Banach 空間での凸関数の変分収束（スロープ位相、Attouch–Wets 位相、Mosco 位相）の比較と、それらが共役によって保存される条件を整理し、各位相について最小点・劣微分・近接写像の安定性定理を証明せよ（Beer『Topologies on Closed and Closed Convex Sets』）。

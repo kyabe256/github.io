@@ -1,0 +1,123 @@
+=ch VII-9　二階変分解析
+
+*4 二階劣微分（Mordukhovich）の定義と計算 {secsub}
+$\partial^{2}f(\bar x|\bar v)=D^{*}(\partial f)(\bar x|\bar v)$ を定義し、$f\in C^{2}$ なら $\partial^{2}f(\bar x|\nabla f(\bar x))(w)=\{\nabla^{2}f(\bar x)w\}$、$f=|x|$ なら $\partial^{2}f(0|v)$ を $v\in(-1,1)$ と $v=\pm1$ で計算せよ。
+
+*4 tilt-stability の定義と Poliquin–Rockafellar の特徴づけ {tilt}
+$\bar x$ が $f$ の tilt-stable 局所最小点（$v\mapsto\operatorname{argmin}_{x\in B}\{f(x)-\langle v,x\rangle\}$ が $0$ の近くで一価 Lipschitz）$\iff$ $\partial^{2}f(\bar x|0)$ が正定値（$\langle z,w\rangle>0$ for $z\in\partial^{2}f(\bar x|0)(w)$, $w\neq0$）。prox-regular かつ劣微分連続な $f$ について証明せよ（Poliquin–Rockafellar 1998）。
+
+*4 tilt-stability と強二階十分条件
+非線形計画 $f+\iota_{C}$ について、LICQ の下で tilt-stability $\iff$ 強二階十分条件であることを示せ（Mordukhovich–Rockafellar 2012）。MFCQ の下では異なる条件が必要になる例を作れ。
+
+*4 full stability（Levy–Poliquin–Rockafellar）
+二つのパラメータ（tilt $v$ と基本摂動 $u$）に関する局所最小点の Lipschitz 安定性（full stability）を定義し、二階劣微分による特徴づけを与えよ。
+
+*4 二回エピ微分可能性と二階展開
+$f$ が $\bar x$ で $\bar v$ に関して二回エピ微分可能ならば、$f(\bar x+tw)=f(\bar x)+t\langle\bar v,w\rangle+\frac{t^{2}}{2}d^{2}f(\bar x|\bar v)(w)+o(t^{2})$ が「エピ的に」成り立つ。完全振幅（fully amenable）関数が二回エピ微分可能であることを示せ（Rockafellar 1988）。
+
+*4 振幅関数（amenable functions）
+$f=g\circ F$（$g$ は凸多面体的、$F$ は $C^{2}$）で限定条件 $\partial^{\infty}g(F(\bar x))\cap\ker\nabla F(\bar x)^{\top}=\{0\}$ が成り立つものを完全振幅という。非線形計画の $f+\iota_{C}$ が完全振幅であること、完全振幅関数が prox-regular であることを示せ。
+
+*4 二階エピ導関数と prox の方向微分
+凸関数 $f$ について、$\operatorname{prox}_{f}$ が $\bar x+\bar v$ で方向微分可能 $\iff f$ が $\bar x$ で $\bar v$ に関し二回エピ微分可能で、方向微分は $\operatorname{prox}_{\frac12d^{2}f(\bar x|\bar v)}$ で与えられる（Poliquin–Rockafellar 1996）。
+
+*4 二次錐・半正定値錐の二階変分解析
+指示関数 $\iota_{\mathbb{S}^{n}_{+}}$ の二階エピ導関数が、$\sigma$ 項 $2\operatorname{tr}(\Lambda HX^{\dagger}H)$ を含むことを示し、SDP の二階条件のシグマ項との一致を確かめよ（Mohammadi–Mordukhovich–Sarabi）。
+
+*4 二階劣微分の計算：多面体的関数
+$f$ が凸多面体的（区分線形）なら、$\partial^{2}f(\bar x|\bar v)(w)=N_{K}(w)$（$K$ は臨界錐）となることを示せ（Dontchev–Rockafellar）。
+
+*4 二階劣微分による強計量正則性の判定
+$\partial f$ の強計量正則性が、二階劣微分の単射性（$0\in\partial^{2}f(\bar x|\bar v)(w)\Rightarrow w=0$）と、tilt-stability に関する正定値性の関係で特徴づけられることを示せ。
+
+*4 半平滑* 性と一般化 Newton 法（Gfrerer–Outrata）
+集合値写像のグラフが半平滑* ならば、図形微分・余微分に基づく Newton 型法が一般化方程式の解に超線形収束することを示せ。
+
+*4 二階劣微分に基づく一般化 Newton 法（Mordukhovich–Sarabi, Khanh ら）
+$C^{1,1}$ 関数や prox-regular 関数の最小化に対し、$\partial^{2}f$ を用いた Newton 型法（Moreau 包への適用）が tilt-stable 最小点へ超線形収束することを示せ。
+
+*4 二次成長と二階エピ導関数
+prox-regular な $f$ が $\bar x$ で二次成長 $f(x)\ge f(\bar x)+\frac c2\|x-\bar x\|^{2}$ をもつ $\iff d^{2}f(\bar x|0)(w)\ge c\|w\|^{2}$（二回エピ微分可能な場合）。証明せよ。
+
+*4 ${\mathcal C}^{2}$-簡約可能集合（Shapiro）
+$C$ が $\bar x$ で $\mathcal{C}^{2}$-簡約可能（$C^{2}$ 写像で閉凸錐に局所的に写される）ならば二次正則であり、二階必要・十分条件の間に「ギャップがない」ことを示せ。半正定値錐・二次錐・多面体が $\mathcal{C}^{2}$-簡約可能であることを確かめよ。
+
+*4 二階変分解析と Lagrangian の二階条件の統一
+$\min\varphi(x)=f(x)+g(F(x))$（$g$ は凸で $\mathcal{C}^{2}$-簡約可能）の二階十分条件が $\nabla^{2}_{xx}L$ と $d^{2}g$ の和の正定値性で書けること（シグマ項の一般形）を示せ。
+
+*4 二階劣微分の連鎖律（Mordukhovich–Rockafellar）
+$\varphi=g\circ F$（$g$ は下半連続、$F$ は $C^{2}$）の二階劣微分に対する連鎖律 $\partial^{2}\varphi(\bar x|\bar v)(w)\subset\nabla^{2}\langle\bar y,F\rangle(\bar x)w+\nabla F(\bar x)^{\top}\partial^{2}g(F(\bar x)|\bar y)(\nabla F(\bar x)w)$ を、適切な限定条件の下で示せ。
+
+*4 ${\mathcal{VU}}$ 理論と Newton 型法の超線形収束
+部分的に滑らかな凸関数の $\mathcal{U}$ 空間での二階情報（$\mathcal{U}$-Hessian）を用いた $\mathcal{VU}$ アルゴリズムの超線形収束を示せ（Mifflin–Sagastizábal）。
+
+*4 二階変分解析による感度解析
+tilt-stable な局所最小点をもつパラメータ付き問題について、解写像の Lipschitz 定数を二階劣微分から評価し、非線形計画での Fiacco の定理を再導出せよ。
+
+*5 Rockafellar の二階変分解析と拡張 Lagrangian の局所凸化
+振幅関数に対して、拡張 Lagrangian が二階十分条件の下で局所的に強凸（variational convexity）になることを二階エピ導関数で示し、非凸問題の ALM の局所線形収束を導け（Rockafellar 2022, "Augmented Lagrangians and hidden convexity"）。
+
+*5 二階劣微分の完全な計算と一般化方程式の安定性（Mordukhovich の二階理論）
+Mordukhovich–Outrata–Ramírez などによる、二次錐・半正定値錐の指示関数の二階劣微分の明示公式を述べ、これを用いて錐計画の KKT 系の強正則性・Aubin 性質・isolated calmness の判定条件を導け。
+
+=ch VII-10　DC 計画と非凸非平滑の構造
+
+*4 DC 関数の最適性条件（Toland, Hiriart-Urruty） {dc}
+$f=g-h$（$g,h$ 凸）の局所最小点では $\partial h(x^{*})\subset\partial g(x^{*})$ が成り立ち（$h$ が $x^{*}$ で連続のとき）、これは臨界条件 $\partial g\cap\partial h\neq\emptyset$ より強い。$h$ が微分可能なら両者一致することを示せ。
+
+*4 DCA の収束と局所最小（Pham Dinh–Le Thi）
+DCA の反復は $g-h$ を単調減少させ、$\sum\|x_{k+1}-x_{k}\|^{2}<\infty$（強凸性の下）。$h$ が多面体的なら DCA は有限回で臨界点に止まることを示せ。
+
+*4 DC 分解の非一意性とアルゴリズムへの影響
+同じ関数の異なる DC 分解で DCA の挙動が変わる例を作り、「良い」DC 分解の選択基準（部分問題の容易さ・強凸性）を論ぜよ。
+
+*4 準微分可能関数（Demyanov–Rubinov）
+方向微分が二つのコンパクト凸集合の支持関数の差 $f'(x;d)=\max_{u\in\underline\partial f}\langle u,d\rangle-\max_{w\in\overline\partial f}\langle w,d\rangle$ で表される関数を準微分可能といい、DC 関数がこれに含まれることを示せ。局所最小の必要条件 $-\overline\partial f(x)\subset\underline\partial f(x)$ を導け。
+
+*4 準微分の非一意性と Demyanov 差
+準微分の対 $(\underline\partial f,\overline\partial f)$ は一意でない（$(A+C,B+C)$ も準微分）ことを示し、Demyanov 差による正準的な表現の構成を述べよ。
+
+*4 Goldstein の $\varepsilon$-劣微分と非平滑降下法
+$\partial_{\varepsilon}^{G}f(x)=\operatorname{conv}\bigcup_{y\in B_{\varepsilon}(x)}\partial_{C}f(y)$ の最小ノルム元 $g$ の方向 $-g$ に沿って、$f$ が少なくとも $\varepsilon\|g\|$ 減少することを示し、Goldstein の降下法の収束を証明せよ。
+
+*4 Goldstein 停留点の計算量（Zhang ら, Davis ら, Kornowski–Shamir）
+Lipschitz 関数の $(\delta,\varepsilon)$-Goldstein 停留点を、ランダム化一次法で $O(\delta^{-1}\varepsilon^{-3})$ 回、ゼロ次法で $O(d\delta^{-1}\varepsilon^{-3})$ 回の評価で得られることを示し、決定的アルゴリズムでは次元に依存しない評価が不可能であること（Tian–So, Kornowski–Shamir）を述べよ。
+
+*4 区分的 $C^{1}$ 関数と Scholtes の選択関数
+連続な区分的 $C^{1}$ 関数（有限個の $C^{1}$ 選択関数をもつ）が局所 Lipschitz で方向微分可能であり、方向微分が区分線形であることを示せ（Scholtes『Introduction to Piecewise Differentiable Equations』）。
+
+*4 最大-最小表現（Ovchinnikov）
+連続な区分アフィン関数はすべて $\max_{i}\min_{j\in S_{i}}\ell_{j}(x)$ の形に書けることを示し、ReLU ネットワークが区分アフィン関数を表すこととの関係を述べよ（Arora–Basu–Mianjy–Mukherjee）。
+
+*4 ReLU ネットワークの表現力と線形領域の数
+深さ $L$、幅 $n$ の ReLU ネットの線形領域の数が深さについて指数的に増えうること（Montúfar–Pascanu–Cho–Bengio）を示し、浅いネットで同じ関数を表すには指数的な幅が必要な例（Telgarsky）を構成せよ。
+
+*4 非凸最適化の NP 困難性と局所最適性の意義
+非凸二次計画の局所最小点を求める問題でさえ（多面体上で）NP 困難であること（Pardalos–Schnitger, Ahmadi–Zhang の近似局所最小の困難性）を述べ、定常点（KKT 点）の計算が多項式時間で可能な理由を論ぜよ。
+
+*4 DC 計画による $\ell_{0}$ 近似とスパース最適化
+$\|x\|_{0}$ を $\|x\|_{1}-\|x\|_{(k)}$（上位 $k$ 成分の和、Gotoh–Takeda–Tono）で表す DC 表現により、基数制約問題 $\|x\|_{0}\le k$ を DC 計画として厳密に再定式化できることを示せ。
+
+*4 DC 計画の大域最適化（分枝限定法）
+DC 計画の大域解を求める分枝限定法（凸包絡による下界）の有限 $\varepsilon$-収束を示し、凹最小化（Horst–Tuy）での円錐分割法を述べよ。
+
+*4 凹関数の多面体上の最小化と頂点列挙
+凹関数の多面体上の最小値は頂点で達成されることを示し、頂点の数が指数的でも、Tuy の切除法が有限回で大域解を得ることを述べよ。
+
+*4 双凸最適化と交互凸探索
+双凸関数（各ブロックについて凸）に対する交互凸探索（ACS）の単調性と、集積点が部分最適点（各ブロックについて最適）であることを示し、それが停留点とは限らない例を作れ（Gorski–Pfeuffer–Klamroth）。
+
+*4 非凸非平滑最適化の Moreau 包の非凸版（proximal average, Hare）
+非凸関数の近接平均の性質と、近接平均が元の関数の「凸化」を連続的に補間することを示せ。
+
+*4 合成非凸最適化の最適性測度（Lewis–Wright の近接線形化）
+$\min h(c(x))$ に対し、近接線形化ステップの長さ $\|x-x_{+}\|/t$ が停留性の尺度として Moreau 包の勾配と同値であることを示せ（Drusvyatskiy–Paquette）。
+
+*4 非凸な有限和の最大値とミニマックス最適化の平滑化
+$\max_{i}f_{i}(x)$（$f_{i}$ 非凸平滑）の $\log\sum e^{f_{i}/\mu}$ による平滑化で、停留点の近似がどの意味で得られるかを論ぜよ（Clarke 停留点の近似）。
+
+*5 DC 計画の KŁ 収束と DCA の局所線形収束の完全理論（Le Thi–Huynh–Pham Dinh, Wen–Chen–Pong）
+DCA（およびその近接外挿版 pDCAe）の反復列が、目的関数（またはその補助関数）の KŁ 性質の下で臨界点に大域収束し、KŁ 指数 $1/2$ なら局所線形収束することを示せ。基数制約付き最小二乗への適用で KŁ 指数を計算せよ。
+
+*5 非平滑非凸最適化の計算量理論の限界（Kornowski–Shamir, Jordan–Lin–Zampetakis）
+Lipschitz 非凸関数の近似 Clarke 停留点の計算不可能性、Goldstein 停留点の計算量の上下界、および決定的アルゴリズムと乱択アルゴリズムの本質的な差（次元依存性）を、抵抗オラクルの構成を含めて体系的に証明せよ。
