@@ -1,0 +1,123 @@
+=ch VIII-5　臨界点理論
+
+*4 Palais–Smale 条件と変形補題 {deformation}
+Banach 空間上の $C^{1}$ 汎関数 $\Phi$ が Palais–Smale 条件をみたし $c$ が臨界値でないなら、$\varepsilon>0$ と変形 $\eta\in C([0,1]\times X,X)$ で $\eta(1,\Phi^{c+\varepsilon})\subset\Phi^{c-\varepsilon}$ となるものが存在することを、擬勾配ベクトル場を構成して証明せよ。
+
+*4 峠の定理（Ambrosetti–Rabinowitz） {mp}
+$\Phi\in C^{1}(X)$ が (PS) をみたし、$\Phi(0)=0$、$\Phi|_{\|u\|=r}\ge\alpha>0$、$\Phi(e)\le0$（$\|e\|>r$）なら、$c=\inf_{\gamma\in\Gamma}\max_{t}\Phi(\gamma(t))\ge\alpha$ は臨界値であることを証明せよ（1973）。
+
+*4 Ghoussoub–Preiss の位置情報付き峠の定理
+峠の値 $c$ に対し、$0$ と $e$ を分離する閉集合 $F$ 上で $\inf_{F}\Phi\ge c$ なら、$F$ 上に臨界点（または (PS)$_{c}$ 列）が存在することを Ekeland 原理を用いて証明せよ（1989）。
+
+*4 超線形 Dirichlet 問題
+$-\Delta u=f(u)$（$\Omega$ 有界、$u|_{\partial\Omega}=0$）で $f$ が劣臨界増大、$f(s)=o(s)$（$s\to0$）、Ambrosetti–Rabinowitz 条件 $0<\theta F(s)\le sf(s)$（$\theta>2$、$|s|$ 大）をみたすなら正値解が存在することを {{R:mp}} で証明せよ。
+
+*4 Lusternik–Schnirelmann 理論 {ls-cat}
+コンパクト多様体（または (PS) をみたす汎関数の定義された Banach 多様体）$M$ 上の $C^{1}$ 汎関数は少なくとも $\mathrm{cat}(M)$ 個の臨界点をもつことを証明し、$S^{n-1}$ 上の偶関数が少なくとも $n$ 対の臨界点をもつことを導け。
+
+*4 Krasnosel'skii 種数と対称峠の定理
+偶汎関数 $\Phi$ について、種数による minimax 値 $c_{k}=\inf_{\gamma(A)\ge k}\sup_{A}\Phi$ が臨界値であることを示し、奇な超線形 Dirichlet 問題が無限個の解をもつことを証明せよ（Ambrosetti–Rabinowitz 1973）。
+
+*4 Clark の定理
+下に有界な偶汎関数 $\Phi\in C^{1}$ が (PS) をみたし $\Phi(0)=0$、ある $k$ 次元部分空間の小球面上で $\Phi<0$ なら、$\Phi$ は少なくとも $k$ 対の非自明臨界点をもつことを証明せよ（Clark 1972）。
+
+*4 Rabinowitz の鞍点定理と連結定理
+$X=V\oplus W$（$\dim V<\infty$）で $\sup_{\partial B_{R}\cap V}\Phi<\inf_{W}\Phi$ なら、$c=\inf_{h}\max_{B_{R}\cap V}\Phi(h(\cdot))$ が臨界値であることを証明せよ（1978）。共鳴型の非線形境界値問題に応用せよ。
+
+*5 星形エネルギー面上の周期軌道（Rabinowitz）
+$\mathbb{R}^{2n}$ の Hamilton 系で、エネルギー面 $H^{-1}(1)$ が原点に関して星形なら、その上に周期軌道が存在することを、強不定値な作用汎関数に対する Benci–Rabinowitz の連結定理で証明せよ（Rabinowitz 1978）。
+
+*4 Hilbert 多様体上の Morse 不等式（Palais–Smale）
+(PS) をみたす $C^{2}$ Morse 関数 $f$ について、$a<b$ が正則値なら $\sum_{k}m_{k}t^{k}-\sum_{k}\beta_{k}t^{k}=(1+t)Q(t)$（$Q$ は非負係数）であることを証明せよ（Palais–Smale 1964）。
+
+*4 峠点の臨界群（Hofer）
+峠の定理の状況で臨界点が孤立していれば、少なくとも一つの峠型臨界点 $u$ で臨界群 $C_{1}(\Phi,u)\neq0$ となることを示し、非退化なら Morse 指数が 1 であることを導け（Hofer 1985）。
+
+*4 Brezis–Nirenberg 問題
+$-\Delta u=u^{(n+2)/(n-2)}+\lambda u$、$u>0$（$\Omega\subset\mathbb{R}^{n}$ 有界、$u|_{\partial\Omega}=0$）は、$n\ge4$ なら $0<\lambda<\lambda_{1}$ で解をもつことを、峠の値が $\frac{1}{n}S^{n/2}$ 未満であることを示して証明せよ（Brezis–Nirenberg 1983）。
+
+*4 Struwe の大域コンパクト性定理
+$-\Delta u=|u|^{4/(n-2)}u$ に対応する汎関数の (PS) 列は、部分列をとれば弱極限と有限個の再スケールされた $\mathbb{R}^{n}$ 上の解（bubble）の和に分解し、エネルギーが加法的に分かれることを証明せよ（Struwe 1984）。
+
+*5 Bahri–Coron の定理
+有界領域 $\Omega\subset\mathbb{R}^{n}$（$n\ge3$）が非自明な位相（ある $\mathbb{Z}/2$ 係数ホモロジーが非自明）をもつなら、$-\Delta u=u^{(n+2)/(n-2)}$、$u>0$、$u|_{\partial\Omega}=0$ が解をもつことの証明の骨格を与えよ（Bahri–Coron 1988）。
+
+*4 Nehari 多様体と符号変化解
+Nehari 多様体 $\mathcal{N}=\{u\neq0:\Phi'(u)u=0\}$ 上の最小化で基底状態を構成し、符号変化 Nehari 集合 $\{u^{\pm}\in\mathcal{N}\}$ 上の最小化により最小エネルギーの符号変化解が存在し、ちょうど二つの節領域をもつことを証明せよ（Castro–Cossio–Neuberger 1997）。
+
+*4 Weinstein の最良 Gagliardo–Nirenberg 不等式
+$\|u\|_{p+1}^{p+1}\le C\|\nabla u\|_{2}^{\frac{n(p-1)}{2}}\|u\|_{2}^{2-\frac{(n-2)(p-1)}{2}}$ の最良定数が基底状態 $Q$（$-\Delta Q+Q=Q^{p}$）で達成されることを示し、質量臨界 NLS の大域存在の閾値 $\|u_{0}\|_{2}<\|Q\|_{2}$ を導け（Weinstein 1983）。
+
+*5 Conley–Zehnder の定理（トーラス上の Arnold 予想）
+$T^{2n}$ 上の周期的 Hamilton 写像（時間 1 写像）は少なくとも $2n+1$ 個の不動点をもち、非退化なら $2^{2n}$ 個以上をもつことを、作用汎関数の有限次元還元と Conley 指数で証明の骨格を与えよ（Conley–Zehnder 1983）。
+
+*4 噴水定理（Bartsch）
+コンパクト群の作用で対称な汎関数について、Borsuk–Ulam 性をみたす表現の下で臨界値の非有界列が存在すること（噴水定理）を証明し、超線形・劣臨界な奇の楕円型問題に応用せよ（Bartsch 1993）。
+
+*4 Szulkin の非平滑臨界点理論
+$I=\Phi+\psi$（$\Phi\in C^{1}$、$\psi$ 真凸下半連続）について臨界点を変分不等式で定義し、対応する (PS) 条件の下で峠の定理と Lusternik–Schnirelmann 理論が成り立つことを証明せよ（Szulkin 1986）。
+
+*4 Lyusternik–Fet の定理
+コンパクト Riemann 多様体上には少なくとも一本の非自明な閉測地線が存在することを、自由ループ空間 $\Lambda M$ 上のエネルギー汎関数の (PS) 条件とホモトピー群を用いて証明せよ（1951）。
+
+=ch VIII-6　単調作用素
+
+*4 Minty の定理 {minty}
+Hilbert 空間上の単調作用素 $A$ について、$A$ が極大単調 $\iff\mathrm{ran}(I+A)=H$ を証明せよ（Minty 1962）。
+
+*4 Browder–Minty の全射定理 {browder-minty}
+反射的 Banach 空間 $X$ から $X^{*}$ への単調・半連続・強圧的な作用素は全射であることを、Galerkin 近似と Minty の技法で証明せよ（Browder 1963、Minty 1963）。
+
+*4 Leray–Lions の定理
+$-\mathrm{div}\,a(x,u,\nabla u)+a_{0}(x,u,\nabla u)=f$ について、$a$ が $p$-増大・強圧的・$\xi$ について狭義単調なら $W_{0}^{1,p}$ に弱解が存在することを、擬単調性を示して証明せよ（Leray–Lions 1965）。
+
+*4 Brezis の擬単調作用素の全射定理
+反射的 Banach 空間上の有界・強圧的な擬単調作用素 $A:X\to X^{*}$ は全射であることを証明せよ（Brezis 1968）。
+
+*4 Rockafellar の和定理 {rock-sum}
+反射的 Banach 空間上の極大単調作用素 $A,B$ が $\mathrm{int}\,D(A)\cap D(B)\neq\emptyset$ をみたすなら $A+B$ も極大単調であることを証明せよ（Rockafellar 1970）。
+
+*4 極大単調作用素の局所有界性
+Banach 空間上の極大単調作用素は $\mathrm{int}\,D(A)$ の各点で局所有界であり、$\mathrm{int}\,D(A)$ が凸であること、$\overline{D(A)}$ が（反射的なら）凸であることを証明せよ（Rockafellar 1969）。
+
+*4 単調作用素の生成的一価性（Kenderov）
+可分 Banach 空間（より一般に Asplund 空間の適当な類）上の極大単調作用素は $\mathrm{int}\,D(A)$ の稠密 $G_{\delta}$ 集合上で一価であることを証明せよ（Zarantonello 1973、Kenderov 1975）。
+
+*5 Brezis–Haraux の値域定理
+Hilbert 空間上の極大単調作用素 $A,B$ で $A+B$ が極大単調、$B$ が 3-単調（例えば劣微分）なら $\overline{\mathrm{ran}(A+B)}=\overline{\mathrm{ran}A+\mathrm{ran}B}$、$\mathrm{int}\,\mathrm{ran}(A+B)=\mathrm{int}(\mathrm{ran}A+\mathrm{ran}B)$ を証明せよ（Brezis–Haraux 1976）。
+
+*4 Fitzpatrick 関数
+単調作用素 $A$ に対し $F_{A}(x,x^{*})=\sup_{(a,a^{*})\in A}(\langle x,a^{*}\rangle+\langle a,x^{*}\rangle-\langle a,a^{*}\rangle)$ を定義し、$A$ が極大単調なら $F_{A}\ge\langle\cdot,\cdot\rangle$ で等号集合がちょうど $A$ のグラフであることを証明せよ（Fitzpatrick 1988）。
+
+*4 Debrunner–Flor の拡張補題
+Banach 空間の弱 $*$ コンパクト凸集合 $C\subset X^{*}$ と単調集合 $M\subset X\times C$ に対し、任意の $x\in X$ について $M\cup\{(x,x^{*})\}$ が単調となる $x^{*}\in C$ が存在することを証明せよ（1964）。
+
+*4 レゾルベントと Yosida 近似
+極大単調作用素 $A$ のレゾルベント $J_{\lambda}=(I+\lambda A)^{-1}$ は非拡大、Yosida 近似 $A_{\lambda}=\lambda^{-1}(I-J_{\lambda})$ は $\lambda^{-1}$-Lipschitz かつ極大単調で、$x\in D(A)$ について $A_{\lambda}x\to A^{\circ}x$（最小ノルム元）となることを証明せよ。
+
+*4 Lions–Stampacchia の定理
+Hilbert 空間の閉凸集合 $K$ と有界強圧的双線形形式 $a$ について、変分不等式 $a(u,v-u)\ge\langle f,v-u\rangle$（$v\in K$）は一意解をもつことを証明せよ（1967）。
+
+*4 Hartman–Stampacchia の定理
+$\mathbb{R}^{n}$ のコンパクト凸集合 $K$ と連続写像 $F:K\to\mathbb{R}^{n}$ について、$\langle F(u),v-u\rangle\ge0$（$v\in K$）をみたす $u\in K$ が存在することを Brouwer の不動点定理から証明し、強圧的なら非有界な $K$ でも成り立つことを示せ（1966）。
+
+*4 障害物問題の正則性（Brezis–Kinderlehrer）
+$\min\{\int|\nabla u|^{2}-2fu:u\ge\psi,\ u|_{\partial\Omega}=0\}$ の解は、$\psi\in C^{2}$、$f$ 有界なら $W^{2,\infty}_{\mathrm{loc}}=C^{1,1}_{\mathrm{loc}}$ に属することを証明せよ（Brezis–Kinderlehrer 1974）。
+
+*4 近接点法と Güler の反例
+極大単調作用素 $A$ について近接点列 $x_{k+1}=J_{\lambda_{k}}x_{k}$（$\inf\lambda_{k}>0$）が $A^{-1}(0)\neq\emptyset$ のとき零点に弱収束することを示し（Rockafellar 1976）、一般には強収束しないことを示す劣微分の例を述べよ（Güler 1991）。
+
+*4 Opial の補題と Krasnosel'skii–Mann 反復
+Hilbert 空間の非拡大写像 $T$（$\mathrm{Fix}\,T\neq\emptyset$）について $x_{n+1}=(1-\alpha_{n})x_{n}+\alpha_{n}Tx_{n}$（$\sum\alpha_{n}(1-\alpha_{n})=\infty$）が不動点に弱収束することを、Opial の補題を経由して証明せよ。
+
+*4 Genel–Lindenstrauss の反例
+$\ell^{2}$ の閉凸集合上の非拡大写像で、Krasnosel'skii–Mann 反復が強収束しないものが存在することを示せ（Genel–Lindenstrauss 1975）。
+
+*5 Rockafellar の劣微分の極大単調性定理
+任意の（非反射的でもよい）Banach 空間上の真凸下半連続関数 $f$ について、劣微分 $\partial f$ は極大単調であることを証明せよ（Rockafellar 1970）。Brøndsted–Rockafellar の補題の役割を説明せよ。
+
+*4 Kachurovskii の定理と単調な勾配
+Gateaux 微分可能な $f:X\to\mathbb{R}$ について、$f$ が凸 $\iff$ $f'$ が単調であることを示し、このとき $f'$ が極大単調（半連続な単調作用素であること）を証明せよ（Kachurovskii 1960）。
+
+*4 Kirszbraun–Valentine の拡張定理と Minty
+Hilbert 空間の部分集合上の 1-Lipschitz 写像は全空間上の 1-Lipschitz 写像に拡張できること（Kirszbraun 1934、Valentine 1945）を、単調作用素の拡張（Minty の定理）を用いて証明せよ。

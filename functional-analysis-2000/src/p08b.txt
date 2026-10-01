@@ -1,0 +1,123 @@
+=ch VIII-3　分岐理論
+
+*4 Lyapunov–Schmidt 還元 {ls-red}
+$F(x,\lambda)=0$、$F(0,\lambda)=0$、$L=D_{x}F(0,\lambda_{0})$ が Fredholm のとき、$X=\ker L\oplus X_{1}$、$Y=\mathrm{ran}L\oplus Y_{0}$ と分解して、零点集合が有限次元の分岐方程式 $\Phi(v,\lambda)=0$（$v\in\ker L$）の解と一対一に対応することを示せ。
+
+*4 Crandall–Rabinowitz の単純固有値からの分岐 {cr}
+$F\in C^{2}$、$F(0,\lambda)=0$、$\dim\ker D_{x}F(0,\lambda_{0})=\mathrm{codim}\,\mathrm{ran}=1$（$\ker=\langle x_{0}\rangle$）、横断性条件 $D_{x\lambda}F(0,\lambda_{0})x_{0}\notin\mathrm{ran}D_{x}F(0,\lambda_{0})$ の下で、$(0,\lambda_{0})$ から非自明解の $C^{1}$ 曲線が分岐することを証明せよ（1971）。
+
+*4 Krasnosel'skii の奇数重複度分岐定理
+$x=\lambda Lx+N(x,\lambda)$（$L$ コンパクト線形、$N=o(\|x\|)$ コンパクト）について、$\lambda_{0}^{-1}$ が $L$ の奇数（代数的）重複度の固有値なら $(0,\lambda_{0})$ は分岐点であることを {{R:ls-deg}} で証明せよ。
+
+*4 Rabinowitz の大域分岐定理 {rabinowitz-global}
+前問の設定で、$(0,\lambda_{0})$ から出る非自明解の閉包の連結成分 $\mathcal{C}$ は、非有界であるか、または別の特性値 $(0,\hat\lambda)$ を含むことを証明せよ（Rabinowitz 1971）。
+
+*4 Dancer の片側大域分岐定理
+単純特性値からの分岐について、$\mathcal{C}\setminus\{(0,\lambda_{0})\}$ を $x_{0}$ 方向の正負に分けた二つの成分 $\mathcal{C}^{\pm}$ のそれぞれについて Rabinowitz の二者択一が成り立つことを証明せよ（Dancer 1974）。Rabinowitz の原論文の主張との違いを説明せよ。
+
+*4 非線形 Sturm–Liouville 問題の大域分岐と節点数
+$-(pu')'+qu=\lambda au+f(x,u,u',\lambda)$（$f=o(|u|+|u'|)$）の Dirichlet 問題について、$k$ 番目の固有値から出る連続体 $\mathcal{C}_{k}^{\pm}$ は非有界で、その上の解はちょうど $k-1$ 個の内部零点をもつことを証明せよ（Rabinowitz 1971）。
+
+*4 安定性の交換（Crandall–Rabinowitz）
+{{R:cr}} の分岐曲線 $(x(s),\lambda(s))$ 上の線形化作用素の臨界固有値 $\mu(s)$ と自明解の臨界固有値 $\gamma(\lambda)$ について、$\mu(s)\sim-s\lambda'(s)\gamma'(\lambda_{0})$ を示し、超臨界・亜臨界分岐における安定性の交換を論ぜよ（1973）。
+
+*4 Banach 空間の Hopf 分岐定理
+$\dot u=A(\lambda)u+f(u,\lambda)$ の線形化が単純な純虚固有値 $\pm i\omega_{0}$ を横断的に通過し、他の $ik\omega_{0}$ が固有値でないなら、周期解の族が分岐することを Lyapunov–Schmidt 還元で証明せよ（Crandall–Rabinowitz 1977）。
+
+*4 変分的分岐定理（Krasnosel'skii, Böhme, Marino）
+$F=\nabla\Phi$ 型の写像について、線形化の任意の固有値（重複度の偶奇によらない）が分岐点であることを、制約付き臨界点理論で証明せよ（Böhme 1972、Marino 1973）。
+
+*4 無限遠からの分岐（Rabinowitz）
+$x=\lambda Lx+H(x,\lambda)$ で $H=o(\|x\|)$（$\|x\|\to\infty$）のとき、奇数重複度の特性値から無限遠で分岐が起こることを反転 $x\mapsto x/\|x\|^{2}$ を用いて証明せよ（1973）。
+
+*4 無限次元の中心多様体定理
+$\dot u=Au+f(u)$ で $A$ のスペクトルが虚軸上の有限個の固有値と左半平面に分かれるとき、局所不変な有限次元中心多様体が存在し、近傍の力学を縮約できることを証明せよ（Vanderbauwhede–Iooss 1992）。
+
+*4 同変分岐補題（Cicogna, Vanderbauwhede）
+コンパクト群 $\Gamma$ に関して同変な分岐問題で、軸的等方部分群 $\Sigma$（$\dim\mathrm{Fix}(\Sigma)=1$）について横断性が成り立てば、$\Sigma$ 対称な解の枝が分岐することを証明せよ。
+
+*5 Alexander–Yorke の大域 Hopf 分岐定理
+Hopf 分岐点から出る周期解の連続体は、非有界（周期・振幅・パラメータのいずれかが発散）であるか、別の Hopf 点に戻ることを、$S^{1}$-同変写像度を用いて証明の骨格を与えよ（Alexander–Yorke 1978、Ize）。
+
+*4 折り返し点定理（Crandall–Rabinowitz）
+$D_{x}F(x_{0},\lambda_{0})$ の核が 1 次元で $D_{\lambda}F(x_{0},\lambda_{0})\notin\mathrm{ran}D_{x}F$ なら、零点集合は $(x_{0},\lambda_{0})$ の近傍で $C^{1}$ 曲線 $(x(s),\lambda(s))$、$\lambda'(0)=0$ であることを示せ（1973）。
+
+*4 Gelfand 問題と Joseph–Lundgren の分岐図
+単位球上の $-\Delta u=\lambda e^{u}$、$u|_{\partial B}=0$ の正値解の分岐曲線は、$3\le n\le9$ で無限回折り返し、$n\ge10$ で単調であることを証明せよ（Joseph–Lundgren 1973）。
+
+*4 Euler の座屈問題
+弾性棒の方程式 $\theta''+\lambda\sin\theta=0$、$\theta'(0)=\theta'(1)=0$ について、$\lambda_{k}=k^{2}\pi^{2}$ から超臨界の大域分岐枝が出て互いに交わらないことを証明せよ。
+
+*4 Lyapunov の中心定理
+Hamilton 系の平衡点の線形化が非共鳴な純虚固有値 $\pm i\omega$ をもつなら、周期解の 1 径数族が平衡点に収束することを証明せよ（Lyapunov 1892）。
+
+*4 Taylor 渦の分岐（Velte, Yudovich）
+同心円筒間の Couette 流について、Taylor 数が臨界値を越えると軸方向周期的な定常解（Taylor 渦）が分岐することを、Navier–Stokes 方程式の Leray–Schauder 写像度または Crandall–Rabinowitz を用いて証明せよ（1966）。
+
+*5 Weinstein–Moser の定理
+$\mathbb{R}^{2n}$ の Hamilton 系の平衡点で $D^{2}H$ が正定値なら、十分小さい各エネルギー面上に少なくとも $n$ 個の周期軌道が存在することを証明せよ（Weinstein 1973、Moser 1976）。
+
+*4 特異点論による分岐の正規形（Golubitsky–Schaeffer）
+1 変数の分岐問題 $g(x,\lambda)=0$ について、熊手分岐 $x^{3}\pm\lambda x$ への接触同値の認識条件（$g=g_{x}=g_{xx}=g_{\lambda}=0$、$g_{xxx}g_{\lambda x}\neq0$）を証明し、その普遍開折を求めよ。
+
+=ch VIII-4　変分法の直接法
+
+*4 変分法の直接法 {direct}
+反射的 Banach 空間上の汎関数 $J$ が強圧的かつ弱点列下半連続なら最小点をもつことを示し、凸かつ強下半連続なら弱下半連続であることを Mazur の補題で証明せよ。
+
+*4 Tonelli–Serrin の下半連続性定理
+$f(x,u,\xi)$ が Carathéodory 的で非負、$\xi$ について凸なら、$J(u)=\int_{\Omega}f(x,u,\nabla u)$ は $W^{1,1}$ の弱位相で下半連続であることを証明せよ（Serrin 1961、Ioffe 1977）。
+
+*4 Morrey の準凸性定理 {quasiconvex}
+$f:\mathbb{R}^{m\times n}\to\mathbb{R}$ 連続について、$J(u)=\int f(\nabla u)$ が $W^{1,\infty}$ の弱 $*$ 位相で下半連続 $\iff f$ が準凸（$f(A)\le\frac{1}{|D|}\int_{D}f(A+\nabla\varphi)$、$\varphi\in C_{c}^{\infty}$）であることを証明せよ（Morrey 1952）。
+
+*4 Acerbi–Fusco の定理
+準凸で $0\le f(\xi)\le C(1+|\xi|^{p})$ をみたす $f$ について、$J$ は $W^{1,p}$（$p\ge1$）の弱位相で下半連続であることを証明せよ（Acerbi–Fusco 1984）。
+
+*4 Ball の多凸性と非線形弾性
+多凸（小行列式の凸関数）で $\det\nabla u\to0$ のとき $W\to\infty$ となる蓄積エネルギー関数について、非線形弾性の境界値問題が最小解をもつことを、小行列式の弱連続性を用いて証明せよ（Ball 1977）。
+
+*5 Šverák の反例
+$m\ge3$、$n\ge2$ のとき、階数 1 凸だが準凸でない関数 $f:\mathbb{R}^{m\times n}\to\mathbb{R}$ が存在することを証明せよ（Šverák 1992）。$m=2$ の場合が未解決であることを述べよ。
+
+*4 Ekeland の変分原理 {ekeland}
+完備距離空間上の下に有界な下半連続関数 $f$ と $\varepsilon,\lambda>0$、$f(x_{0})\le\inf f+\varepsilon$ に対し、$f(y)\le f(x_{0})$、$d(x_{0},y)\le\lambda$、$f(x)>f(y)-\frac{\varepsilon}{\lambda}d(x,y)$（$x\neq y$）をみたす $y$ が存在することを証明せよ（Ekeland 1974）。
+
+*4 Borwein–Preiss の滑らかな変分原理
+Fréchet 微分可能な（同値）ノルムをもつ Banach 空間上の下半連続で下に有界な関数 $f$ と $\varepsilon>0$ に対し、$f+\varepsilon\sum_{n}\mu_{n}\|\cdot-v_{n}\|^{2}$（$\sum\mu_{n}=1$）が最小値をとるような点列 $v_{n}$ が存在することを証明せよ（Borwein–Preiss 1987）。Ekeland 原理との違い（摂動の滑らかさ）を説明せよ。
+
+*4 Γ-収束の基本定理 {gamma-conv}
+距離空間上の汎関数列 $F_{n}$ が $F$ に Γ-収束し同程度強圧的なら、$\min F=\lim\inf F_{n}$ であり、$F_{n}$ の近似最小点列の集積点は $F$ の最小点であることを証明せよ。Γ-極限の下半連続性も示せ。
+
+*4 Modica–Mortola の定理
+$F_{\varepsilon}(u)=\int_{\Omega}(\varepsilon|\nabla u|^{2}+\frac{1}{\varepsilon}W(u))$（$W$ は $\pm1$ で消える二重井戸）は $L^{1}$ 位相で $c_{W}\mathrm{Per}(\{u=1\},\Omega)$（$u\in BV(\Omega;\{\pm1\})$）に Γ-収束することを証明せよ（1977）。
+
+*4 Lions の集中コンパクト性原理 {cc}
+$\mathbb{R}^{n}$ 上の確率測度列 $\rho_{k}$ は、部分列をとれば (i) コンパクト性（平行移動後に緊密）、(ii) 消散、(iii) 二分化のいずれかをみたすことを証明し、部分加法的な極小化問題の極小化列のコンパクト性に応用せよ（Lions 1984）。
+
+*4 Lions の第二集中コンパクト性原理
+$u_{k}\rightharpoonup u$（$D^{1,2}(\mathbb{R}^{n})$）、$|\nabla u_{k}|^{2}\rightharpoonup^{*}\mu$、$|u_{k}|^{2^{*}}\rightharpoonup^{*}\nu$ なら、高々可算個の点 $x_{j}$ と $\nu_{j},\mu_{j}\ge0$ で $\nu=|u|^{2^{*}}+\sum\nu_{j}\delta_{x_{j}}$、$\mu\ge|\nabla u|^{2}+\sum\mu_{j}\delta_{x_{j}}$、$S\nu_{j}^{2/2^{*}}\le\mu_{j}$ となることを証明せよ（Lions 1985）。
+
+*4 緩和定理（Dacorogna）
+$f$ が連続で $p$-増大条件をみたすとき、$J(u)=\int f(\nabla u)$ の $W^{1,p}$ 弱位相に関する下半連続包が $\int Qf(\nabla u)$（$Qf$ は準凸包）であることを証明せよ。
+
+*4 Young 測度の基本定理（Ball）
+$L^{p}$ 有界な可測関数列 $u_{k}:\Omega\to\mathbb{R}^{m}$ に対し、部分列と弱 $*$ 可測な確率測度族 $(\nu_{x})$ で $g(u_{k})\rightharpoonup\int g\,d\nu_{x}$（$g$ が適当な増大度の Carathéodory 関数）となるものが存在することを証明せよ（Ball 1989）。
+
+*4 Reshetnyak の連続性定理
+$\mathbb{R}^{m}$ 値 Radon 測度 $\mu_{k}\rightharpoonup^{*}\mu$ かつ $|\mu_{k}|(\Omega)\to|\mu|(\Omega)$ なら、正斉次連続関数 $f$ について $\int f(x,\frac{d\mu_{k}}{d|\mu_{k}|})d|\mu_{k}|\to\int f(x,\frac{d\mu}{d|\mu|})d|\mu|$ を証明せよ（Reshetnyak 1968）。
+
+*4 BV のコンパクト性と等周問題の解の存在
+$BV(\Omega)$ の有界列は $L^{1}_{\mathrm{loc}}$ 相対コンパクトであり、全変動は $L^{1}$ 収束に関して下半連続であることを示し、体積制約下で周長を最小化する集合の存在を証明せよ（De Giorgi）。
+
+*4 Pólya–Szegő の不等式と Aubin–Talenti の最良定数
+対称減少再配置 $u^{*}$ について $\|\nabla u^{*}\|_{p}\le\|\nabla u\|_{p}$ を示し、Sobolev 不等式 $\|u\|_{p^{*}}\le S\|\nabla u\|_{p}$ の最良定数が $(a+b|x|^{p/(p-1)})^{1-n/p}$ 型の関数で達成されることを証明せよ（Aubin 1976、Talenti 1976）。
+
+*5 $\mathcal{A}$-準凸性と下半連続性（Fonseca–Müller）
+定数係数の一階線形微分作用素 $\mathcal{A}$ が定階数条件をみたすとき、$\int f(v)$ が $\mathcal{A}v_{k}\to0$（$W^{-1,p}$）をみたす $L^{p}$ 弱収束列について下半連続 $\iff f$ が $\mathcal{A}$-準凸であることの証明の骨格を与えよ（Fonseca–Müller 1999）。$\mathcal{A}=\mathrm{curl}$ で {{R:quasiconvex}} に帰着することを確かめよ。
+
+*4 周期均質化の Γ-収束
+$f(y,\xi)$ が $y$ について周期的で $\xi$ について凸、$p$-増大条件をみたすとき、$\int f(x/\varepsilon,\nabla u)$ は $\int f_{\mathrm{hom}}(\nabla u)$ に Γ-収束し、$f_{\mathrm{hom}}$ がセル問題で与えられることを証明せよ（Marcellini 1978）。
+
+*5 Müller–Šverák の凸積分による反例
+楕円型の変分問題の Euler–Lagrange 方程式（2×2 型系）に、Lipschitz だがいたるところ $C^{1}$ でない弱解が存在することの証明の骨格を与えよ（Müller–Šverák 2003）。

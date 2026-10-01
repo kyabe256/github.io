@@ -1,0 +1,123 @@
+=ch VIII-9　非線形分散型・流体方程式
+
+*4 $L^{2}$ 劣臨界 NLS の大域適切性（Tsutsumi）
+$iu_{t}+\Delta u=\pm|u|^{p-1}u$ は $1<p<1+\frac{4}{n}$ のとき $L^{2}(\mathbb{R}^{n})$ で大域的に適切であることを、Strichartz 評価と質量保存から証明せよ（Tsutsumi 1987）。
+
+*4 $H^{1}$ 臨界 NLS の局所適切性（Cazenave–Weissler）
+$p=1+\frac{4}{n-2}$（$n\ge3$）のエネルギー臨界 NLS が $H^{1}$ で局所適切（存在時間はデータの輪郭に依存）であり、小データでは大域解が散乱することを証明せよ（Cazenave–Weissler 1990）。
+
+*4 Bourgain の $X^{s,b}$ 空間
+$\|u\|_{X^{s,b}}=\|\langle\xi\rangle^{s}\langle\tau-|\xi|^{2}\rangle^{b}\hat u\|_{L^{2}}$ を定義し、トーラス上の 3 次 NLS が $L^{2}(\mathbb{T})$ で大域適切であることを、$L^{4}$ Strichartz 評価 $\|u\|_{L^{4}_{t,x}}\lesssim\|u\|_{X^{0,3/8}}$ から証明せよ（Bourgain 1993）。
+
+*4 KdV 方程式の局所適切性（Kenig–Ponce–Vega）
+$X^{s,b}$ 空間における双線形評価 $\|\partial_{x}(uv)\|_{X^{s,b-1}}\lesssim\|u\|_{X^{s,b}}\|v\|_{X^{s,b}}$（$s>-\frac{3}{4}$）を示し、実数直線上の KdV 方程式が $H^{s}$（$s>-\frac{3}{4}$）で局所適切であることを証明せよ（1996）。
+
+*5 I-法と KdV の大域適切性（CKSTT）
+修正エネルギーの方法（I-法）により、KdV 方程式が $H^{s}(\mathbb{R})$（$s>-\frac{3}{4}$）で大域適切であることの証明の骨格を与えよ（Colliander–Keel–Staffilani–Takaoka–Tao 2003）。
+
+*5 Kenig–Merle の集中コンパクト性・剛性法
+焦点型エネルギー臨界 NLS の動径解で $E(u_{0})<E(W)$、$\|\nabla u_{0}\|_{2}<\|\nabla W\|_{2}$（$W$ は基底状態）をみたすものは大域的に存在し散乱することの証明の骨格を、プロファイル分解と臨界元の剛性で与えよ（Kenig–Merle 2006）。
+
+*4 Glassey のビリアル爆発定理
+焦点型 NLS で $p\ge1+\frac{4}{n}$、$E(u_{0})<0$、$|x|u_{0}\in L^{2}$ なら、解は有限時間で爆発することをビリアル恒等式 $\frac{d^{2}}{dt^{2}}\int|x|^{2}|u|^{2}\le16E$ から証明せよ（Glassey 1977）。
+
+*4 最小質量爆発解の分類（Merle）
+質量臨界焦点型 NLS で $\|u_{0}\|_{2}=\|Q\|_{2}$ をみたす $H^{1}$ 有限時間爆発解は、対称性を除いて擬共形変換された基底状態 $Q$ に限ることの証明の骨格を与えよ（Merle 1993）。
+
+*4 Morawetz 評価と散乱（Ginibre–Velo）
+非焦点型 NLS（$1+\frac{4}{n}<p<1+\frac{4}{n-2}$、$n\ge3$）について Morawetz 型評価 $\iint\frac{|u|^{p+1}}{|x|}dxdt\lesssim\sup_{t}\|u\|_{H^{1}}^{2}$ を示し、$H^{1}$ 解が散乱することを証明せよ（Ginibre–Velo 1985）。
+
+*4 Klainerman のベクトル場の方法と零条件
+3 次元の準線形波動方程式で非線形項が零条件をみたすなら、小さな滑らかなデータに対する解が大域的に存在することを、Klainerman–Sobolev 不等式を用いて証明せよ（Klainerman 1986、Christodoulou 1986）。
+
+*4 John の爆発定理と Strauss 予想
+3 次元の $u_{tt}-\Delta u=|u|^{p}$ は $1<p<1+\sqrt2$ なら任意の小さな正値コンパクト台データで有限時間爆発し、$p>1+\sqrt2$ なら小データ大域解をもつことを証明せよ（John 1979）。一般次元の臨界指数（Strauss 予想）を述べよ。
+
+*4 エネルギー臨界波動方程式の大域正則性（Struwe, Grillakis）
+3 次元の非焦点型 $u_{tt}-\Delta u+u^{5}=0$ の滑らかなデータに対する解は大域的に滑らかであることを、エネルギー非集中性と Morawetz 評価から証明せよ（Struwe 1988 動径、Grillakis 1990）。
+
+*5 Caffarelli–Kohn–Nirenberg の部分正則性定理
+3 次元 Navier–Stokes 方程式の適切な弱解の特異点集合の 1 次元放物型 Hausdorff 測度が 0 であることの証明の骨格を、$\varepsilon$-正則性定理を中心に与えよ（Caffarelli–Kohn–Nirenberg 1982）。
+
+*4 Escauriaza–Seregin–Šverák の定理
+Leray–Hopf 弱解 $u$ が $L^{\infty}(0,T;L^{3}(\mathbb{R}^{3}))$ に属するなら滑らかであることを、爆発解析と後ろ向き一意接続定理を用いて証明の骨格とともに示せ（2003）。
+
+*4 Koch–Tataru の定理
+3 次元 Navier–Stokes 方程式は、初期値が $\mathrm{BMO}^{-1}$ で十分小さければ大域的な（緩和）解をもつことを証明せよ（Koch–Tataru 2001）。
+
+*4 Beale–Kato–Majda の爆発判定法
+3 次元 Euler 方程式の滑らかな解が時刻 $T^{*}$ を越えて延長できない $\iff\int_{0}^{T^{*}}\|\omega(t)\|_{L^{\infty}}dt=\infty$ であることを、対数型 Sobolev 不等式を用いて証明せよ（1984）。
+
+*4 Yudovich の一意性定理
+2 次元 Euler 方程式は、有界かつ可積分な渦度をもつ初期値に対して大域的な弱解を一意にもつことを、$L^{p}$ 評価の $p$ 依存性を用いたエネルギー法で証明せよ（Yudovich 1963）。
+
+*4 Euler 方程式の局所適切性（Kato）
+$\mathbb{R}^{n}$ の非圧縮 Euler 方程式は $H^{s}$（$s>\frac{n}{2}+1$）で局所適切であることを、交換子評価と準線形双曲型系の理論で証明せよ（Kato 1972）。
+
+*5 臨界空間での Euler 方程式の非適切性（Bourgain–Li）
+$n=2,3$ の非圧縮 Euler 方程式は臨界 Sobolev 空間 $H^{\frac{n}{2}+1}$ で強非適切（ノルムの瞬間的膨張）であることの証明の骨格を与えよ（Bourgain–Li 2015）。
+
+*4 平均化 Navier–Stokes の爆発（Tao）
+Navier–Stokes の双線形項をエネルギー恒等式と調和解析的評価を保つように平均化した方程式に、有限時間爆発解が存在することの構成の骨格を与え（Tao 2016）、超臨界性の障壁としての意味を論ぜよ。
+
+=ch VIII-10　無限次元力学系とアトラクター
+
+*4 大域アトラクターの存在 {global-attr}
+距離空間上の連続半群 $S(t)$ が有界吸収集合をもち漸近コンパクトなら、コンパクトな大域アトラクター $\mathcal{A}=\omega(B)$ が存在し、連結（空間が連結なら）であることを証明せよ。
+
+*4 2 次元 Navier–Stokes 方程式の大域アトラクター（Ladyzhenskaya）
+有界領域上の 2 次元 Navier–Stokes 方程式が $L^{2}$ 上に大域アトラクターをもつことを、エネルギー評価と $H^{1}$ 吸収集合の存在から証明せよ（Ladyzhenskaya 1972）。
+
+*4 体積収縮によるアトラクター次元評価（Constantin–Foias, Douady–Oesterlé）
+半群の線形化が $d$ 次元体積を一様に縮小する（トレース評価 $\sup\mathrm{Tr}(L\circ Q_{d})<0$）なら、アトラクターの Hausdorff 次元は $d$ 以下であることを証明せよ。
+
+*4 2 次元 Navier–Stokes アトラクターの次元評価（Constantin–Foias–Temam）
+周期境界条件の 2 次元 Navier–Stokes 方程式のアトラクターの次元が $c\,G^{2/3}(1+\log G)^{1/3}$（$G$ は Grashof 数）以下であることを、Lieb–Thirring 型不等式を用いて証明せよ（1988）。
+
+*4 Mañé の射影定理
+Banach 空間のコンパクト集合 $K$ の箱次元が $d$ なら、次元 $>2d$ の部分空間への射影の稠密（生成的）な集合が $K$ 上で単射であることを証明せよ（Mañé 1981）。
+
+*4 Hunt–Kaloshin の Hölder 埋め込み
+Hilbert 空間のコンパクト集合で箱次元と厚さ指数が有限なものは、ほとんどすべての（prevalent な）有限階射影により逆写像が Hölder 連続となるように $\mathbb{R}^{N}$ へ埋め込めることを証明せよ（Hunt–Kaloshin 1999）。
+
+*4 慣性多様体の存在（Foias–Sell–Temam）
+$u_{t}+Au=F(u)$（$A$ 正自己共役でコンパクト逆、$F$ 大域 Lipschitz）について、スペクトルギャップ条件 $\lambda_{N+1}-\lambda_{N}>2L$ の下で指数的に吸引する有限次元 Lipschitz 不変多様体が存在することを証明せよ（1988）。
+
+*4 指数アトラクター（Eden–Foias–Nicolaenko–Temam）
+平滑化性質をもつ離散半群について、有限フラクタル次元で指数的速度で吸引する正不変コンパクト集合が存在することを証明せよ（1994）。
+
+*4 勾配系のアトラクターの構造（Hale）
+Lyapunov 関数をもち平衡点が有限個で双曲的な勾配系について、大域アトラクターは平衡点の不安定多様体の和集合に等しいことを証明せよ。
+
+*4 無限次元の LaSalle 不変原理（Hale, Dafermos）
+Banach 空間上の半群で軌道が相対コンパクトかつ Lyapunov 関数 $V$ をもつとき、$\omega$-極限集合が $\{V$ が軌道上で一定$\}$ の最大不変集合に含まれることを示し、減衰波動方程式の安定化に応用せよ。
+
+*4 Henry の線形化安定性原理
+扇形作用素 $A$ と局所 Lipschitz な $f:X^{\alpha}\to X$ による半線形放物型方程式 $u_{t}+Au=f(u)$ について、平衡点 $u_{0}$ における $L=A-f'(u_{0})$ のスペクトルがある $\delta>0$ について $\{\mathrm{Re}\,\lambda>\delta\}$ に含まれれば指数安定、$\{\mathrm{Re}\,\lambda<0\}$ と交われば不安定であることを証明せよ（Henry 1981）。
+
+*4 1 次元放物型方程式の収束（Matano, Zelenyak）
+有界区間上の $u_{t}=u_{xx}+f(x,u)$（Dirichlet 条件）の有界な解は平衡点に収束することを、零点数（ラップ数）の非増加性を用いて証明せよ（Zelenyak 1968、Matano 1978）。
+
+*5 高次元放物型方程式の任意の力学の実現（Poláčik）
+$n\ge2$ の領域上のスカラー半線形放物型方程式 $u_{t}=\Delta u+f(x,u,\nabla u)$ の不変多様体上の流れとして、任意の有限次元ベクトル場の力学（特にカオス）が実現されることの証明の骨格を与えよ（Poláčik 1991）。
+
+*5 Sturm アトラクターの分類（Fiedler–Rocha）
+1 次元スカラー放物型方程式の大域アトラクター（Sturm アトラクター）は、両端での平衡点の順序を比べる Sturm 置換によって軌道同値を除いて決まることの証明の骨格を与えよ（Fiedler–Rocha 1996）。
+
+*4 アトラクターの摂動に関する上半連続性（Hale–Raugel）
+パラメータ $\varepsilon$ に依存する半群族 $S_{\varepsilon}(t)$ のアトラクターについて、一様な吸収集合と $\varepsilon\to0$ での有限時間収束から $\sup_{a\in\mathcal{A}_{\varepsilon}}\mathrm{dist}(a,\mathcal{A}_{0})\to0$ を証明せよ。下半連続性に必要な追加条件（平衡点の双曲性）を述べよ。
+
+*4 3 次元 Navier–Stokes の軌道アトラクター（Chepyzhov–Vishik）
+一意性が未知の 3 次元 Navier–Stokes 方程式について、Leray–Hopf 弱解の軌道空間上のシフト半群を考え、軌道アトラクターが存在することを証明せよ（Chepyzhov–Vishik 1997）。
+
+*4 ランダムアトラクター（Crauel–Flandoli）
+ランダム力学系の引き戻し吸収集合からランダムアトラクターを構成し、加法的雑音をもつ確率的 2 次元 Navier–Stokes 方程式に適用せよ（Crauel–Flandoli 1994）。
+
+*5 無限次元 KAM 理論（Kuksin, Pöschel, Wayne）
+1 次元の非線形波動方程式あるいは NLS（Dirichlet 境界条件）について、線形化の周波数の非共鳴性の下で有限次元不変トーラスの族が摂動後も多数存続することの証明の骨格を与えよ（Wayne 1990、Kuksin–Pöschel 1996）。
+
+*4 決定モード（Foias–Prodi）
+2 次元 Navier–Stokes 方程式で、二つの解の低周波 $N$ モードの差が $t\to\infty$ で $0$ に近づけば、解そのものの差も $0$ に近づくような $N$ が存在することを証明せよ（Foias–Prodi 1967）。
+
+*4 Navier–Stokes 解の Gevrey 正則性（Foias–Temam）
+周期境界条件の 2 次元（および短時間の 3 次元）Navier–Stokes 方程式の解は、正の時刻で Gevrey 類（空間解析的）に属し、解析性の半径が下から評価されることを証明せよ（Foias–Temam 1989）。

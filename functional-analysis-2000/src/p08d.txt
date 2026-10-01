@@ -1,0 +1,123 @@
+=ch VIII-7　凸解析
+
+*4 Fenchel–Moreau の定理 {fenchel-moreau}
+局所凸空間上の真凸関数 $f$ について、$f^{**}=f\iff f$ が下半連続であることを Hahn–Banach の分離定理から証明せよ。一般に $f^{**}$ が $f$ の閉凸包であることを示せ。
+
+*4 Fenchel–Rockafellar の双対定理 {fr-dual}
+Banach 空間 $X,Y$、真凸下半連続 $f,g$、有界線形 $A:X\to Y$ について、$0\in\mathrm{int}(\mathrm{dom}\,g-A\,\mathrm{dom}\,f)$ なら $\inf_{x}(f(x)+g(Ax))=\max_{y^{*}}(-f^{*}(A^{*}y^{*})-g^{*}(-y^{*}))$ を証明せよ。
+
+*4 Attouch–Brezis の制約想定
+真凸下半連続な $f,g$ について $\bigcup_{\lambda>0}\lambda(\mathrm{dom}\,f-\mathrm{dom}\,g)$ が閉部分空間なら、$(f+g)^{*}=f^{*}\,\square\,g^{*}$（下限畳み込み、正確）であることを証明せよ（Attouch–Brezis 1986）。
+
+*4 Brøndsted–Rockafellar の定理
+Banach 空間上の真凸下半連続関数 $f$、$x_{0}^{*}\in\partial_{\varepsilon}f(x_{0})$ と $\lambda>0$ に対し、$x^{*}\in\partial f(x)$ で $\|x-x_{0}\|\le\varepsilon/\lambda$、$\|x^{*}-x_{0}^{*}\|\le\lambda$ となるものが存在することを Ekeland 原理で証明せよ（1965）。$\mathrm{dom}\,\partial f$ が $\mathrm{dom}\,f$ で稠密であることを導け。
+
+*4 Moreau 包と Moreau 分解
+Hilbert 空間上の真凸下半連続 $f$ について、Moreau 包 $e_{\lambda}f$ が $C^{1,1}$ で $\nabla e_{\lambda}f=\lambda^{-1}(I-\mathrm{prox}_{\lambda f})$ となることを示し、$x=\mathrm{prox}_{f}x+\mathrm{prox}_{f^{*}}x$ を証明せよ（Moreau 1965）。
+
+*4 劣微分の和公式（Moreau–Rockafellar）
+真凸関数 $f,g$ の一方が $\mathrm{dom}\,f\cap\mathrm{dom}\,g$ のある点で連続なら $\partial(f+g)=\partial f+\partial g$ を証明せよ。連鎖律 $\partial(g\circ A)=A^{*}\partial g\circ A$ の条件も述べよ。
+
+*4 Legendre 型関数（Rockafellar）
+$\mathbb{R}^{n}$ 上の閉真凸関数 $f$ が本質的に滑らか $\iff f^{*}$ が本質的に狭義凸であることを示し、Legendre 型の $f$ について $\nabla f$ が $\mathrm{int\,dom}f$ から $\mathrm{int\,dom}f^{*}$ への同相で逆写像が $\nabla f^{*}$ であることを証明せよ。
+
+*4 Attouch の定理（Mosco 収束と劣微分のグラフ収束）
+Hilbert 空間上の真凸下半連続関数列について、$f_{n}\to f$（Mosco）$\iff$ 正規化条件のもとで $\partial f_{n}\to\partial f$（グラフ収束）$\iff$ レゾルベントの強収束であることを証明せよ（Attouch 1977）。
+
+*4 Mosco の共役連続性定理
+反射的 Banach 空間上の真凸下半連続関数について、$f_{n}\to f$（Mosco）$\iff f_{n}^{*}\to f^{*}$（Mosco）を証明せよ（Mosco 1971）。
+
+*4 Baillon–Haddad の定理
+Hilbert 空間上の凸 $C^{1}$ 関数 $f$ について、$\nabla f$ が $L$-Lipschitz $\iff\nabla f$ が $\frac{1}{L}$-余強圧的（$\langle\nabla f(x)-\nabla f(y),x-y\rangle\ge\frac{1}{L}\|\nabla f(x)-\nabla f(y)\|^{2}$）であることを証明せよ（1977）。
+
+*4 Rockafellar の積分汎関数の共役定理
+正規凸被積分関数 $f(t,x)$ と分解可能な関数空間 $L^{p}$ について、$I_{f}(u)=\int f(t,u(t))d\mu$ の共役が $I_{f^{*}}$ であり、$\partial I_{f}(u)=\{v:v(t)\in\partial f(t,u(t))\text{ a.e.}\}$ であることを証明せよ（Rockafellar 1968）。
+
+*4 凸関数の連続性
+Banach 空間（より一般に樽型空間）上の下半連続凸関数は $\mathrm{int\,dom}f$ 上で局所 Lipschitz 連続であることを Baire の範疇定理で証明せよ。
+
+*4 Sion のミニマックス定理
+コンパクト凸集合 $X$ と凸集合 $Y$ 上の $f(x,y)$ が $x$ について下半連続準凸、$y$ について上半連続準凹なら $\min_{x}\sup_{y}f=\sup_{y}\min_{x}f$ を証明せよ（Sion 1958）。
+
+*4 Ky Fan のミニマックス不等式
+コンパクト凸集合 $K$ 上の $\varphi(x,y)$ が $x$ について下半連続、$y$ について準凹で $\varphi(x,x)\le0$ なら、$\varphi(\bar x,y)\le0$（$y\in K$）となる $\bar x$ が存在することを KKM 補題で証明せよ（Ky Fan 1972）。
+
+*4 Toland–Singer の DC 双対性
+真凸下半連続 $g,h$ について $\inf_{x}(g(x)-h(x))=\inf_{x^{*}}(h^{*}(x^{*})-g^{*}(x^{*}))$ を証明し、局所最適性の条件 $\partial h(\bar x)\subset\partial g(\bar x)$ を導け（Toland 1979、Singer 1979）。
+
+*4 Banach 空間の Lagrange 双対と Slater 条件
+凸最適化問題 $\min\{f(x):g(x)\in-K\}$（$K$ 閉凸錐）について、$-g(x_{0})\in\mathrm{int}K$ となる $x_{0}$ が存在すれば双対ギャップがなく双対問題の最適解が存在することを、摂動関数の劣微分可能性から証明せよ。
+
+*4 測度の凸汎関数と Goffman–Serrin の公式
+$\mathbb{R}^{m}$ 値 Radon 測度 $\mu=\mu^{a}+\mu^{s}$ と凸関数 $f$ について、$\int f(\mu^{a})+\int f_{\infty}(\frac{d\mu^{s}}{d|\mu^{s}|})d|\mu^{s}|$ が $L^{1}$ 関数上の $\int f(u)$ の弱 $*$ 下半連続包であることを証明せよ（Goffman–Serrin 1964）。
+
+*4 支持関数と Hörmander の対応
+局所凸空間の閉凸集合と双対上の正斉次下半連続凸関数（支持関数）が一対一に対応することを示し、ノルム空間の有界閉凸集合の Hausdorff 距離が双対単位球上の支持関数の差の上限ノルムに等しいことを証明せよ（Hörmander 1955）。
+
+*5 Lewis のスペクトル関数の定理
+対称な凸関数 $f:\mathbb{R}^{n}\to(-\infty,\infty]$ について、$F=f\circ\lambda$（$\lambda$ は Hermite 行列の固有値の降順列）が凸で $F^{*}=f^{*}\circ\lambda$、$\partial F(X)=\{U\mathrm{diag}(y)U^{*}:y\in\partial f(\lambda(X)),\ X=U\mathrm{diag}(\lambda(X))U^{*}\}$ であることを証明せよ（Lewis 1996）。
+
+*5 Zajíček の定理
+可分 Banach 空間上の連続凸関数の Fréchet 微分不可能点全体は、可算個の d.c.（凸関数の差）超曲面で覆われることを証明せよ（Zajíček 1979）。系として微分不可能点集合が $\sigma$-多孔的であることを導け。
+
+=ch VIII-8　非線形楕円型方程式
+
+*4 優解・劣解法 {sub-super}
+$-\Delta u=f(x,u)$（$f$ は $u$ について局所 Lipschitz）について、劣解 $\underline u\le$ 優解 $\overline u$ が存在すれば、$[\underline u,\overline u]$ に最小解と最大解が存在することを単調反復で証明せよ（Amann, Sattinger 1972）。
+
+*4 Amann の三解定理
+二組の順序付けられた劣解・優解 $\underline u_{1}<\overline u_{1}$、$\underline u_{2}<\overline u_{2}$ で $\underline u_{2}\not\le\overline u_{1}$ をみたすものがあれば、少なくとも三つの解が存在することを不動点指数で証明せよ（Amann 1976）。
+
+*4 Gidas–Ni–Nirenberg の対称性定理
+球 $B$ 上で $-\Delta u=f(u)$、$u>0$、$u|_{\partial B}=0$（$f$ は Lipschitz）の解は球対称かつ動径方向に狭義減少であることを、移動平面法で証明せよ（1979）。
+
+*4 Pohozaev の恒等式と非存在
+星形の有界滑らかな領域上で $-\Delta u=|u|^{p-1}u$、$u|_{\partial\Omega}=0$ は $p\ge\frac{n+2}{n-2}$ なら非自明解をもたないことを、Pohozaev の恒等式から証明せよ（Pohozaev 1965）。
+
+*4 Gidas–Spruck の Liouville 定理と先験的評価
+$1<p<\frac{n+2}{n-2}$ のとき $-\Delta u=u^{p}$ の $\mathbb{R}^{n}$ 上の非負解は $u\equiv0$ に限ることを示し、これと爆発解析から有界領域での正値解の一様先験的評価を導け（Gidas–Spruck 1981）。
+
+*4 Caffarelli–Gidas–Spruck の分類定理
+$\mathbb{R}^{n}$ 上の $-\Delta u=u^{\frac{n+2}{n-2}}$ の正値解は $u(x)=c_{n}\left(\frac{\lambda}{\lambda^{2}+|x-x_{0}|^{2}}\right)^{\frac{n-2}{2}}$ に限ることを移動球面法で証明せよ（1989）。
+
+*4 Ambrosetti–Prodi の定理
+$-\Delta u=f(u)+t\varphi_{1}$（$f$ 凸、$f'(-\infty)<\lambda_{1}<f'(+\infty)<\lambda_{2}$）の解の個数が、ある臨界値 $t^{*}$ の一方の側で 2 個、$t=t^{*}$ で 1 個、他方の側で 0 個であることを、大域的な折り目写像として証明せよ（1972）。
+
+*4 Kazdan–Warner の障害
+$S^{2}$ 上の Gauss 曲率方程式 $-\Delta u+1=Ke^{2u}$ の解が存在すれば、第一球面調和関数 $x_{i}$ について $\int_{S^{2}}\langle\nabla K,\nabla x_{i}\rangle e^{2u}=0$ であることを示し、$K=1+\varepsilon x_{3}$ が実現されないことを導け（Kazdan–Warner 1974）。
+
+*5 山辺問題
+コンパクト Riemann 多様体（$n\ge3$）の共形類にスカラー曲率一定の計量が存在することを、山辺不変量 $Y(M,[g])<Y(S^{n})$ ならば最小化列がコンパクトになること（Trudinger, Aubin）と、等号でない場合の正質量定理による評価（Schoen 1984）を組み合わせて証明の骨格を与えよ。
+
+*4 Brezis–Merle の不等式と爆発解析
+有界領域で $-\Delta u=V(x)e^{u}$（$0\le V\le C$、$\int e^{u}\le C$）の解列は、局所一様有界、$-\infty$ へ一様発散、有限個の点で爆発（$Ve^{u}\rightharpoonup\sum\alpha_{i}\delta_{a_{i}}$、$\alpha_{i}\ge4\pi$）のいずれかであることを証明せよ（Brezis–Merle 1991）。
+
+*4 Keller–Osserman の条件
+$f$ が正値増加のとき、$\Delta u=f(u)$ が $\mathbb{R}^{n}$ 上の全域解をもたない $\iff\int^{\infty}\left(\int_{0}^{s}f\right)^{-1/2}ds<\infty$ を示し、そのとき有界領域で境界爆発解が存在することを証明せよ（Keller, Osserman 1957）。
+
+*4 Brezis–Oswald の一意性定理
+$-\Delta u=f(x,u)$ で $f(x,s)/s$ が $s>0$ について狭義減少なら、正値解は高々一つであり、存在の必要十分条件が線形化の第一固有値の符号で与えられることを証明せよ（Brezis–Oswald 1986）。
+
+*4 de Figueiredo–Lions–Nussbaum の先験的評価
+凸領域上で $-\Delta u=f(u)$ の正値解について、境界近傍での一様評価を移動平面法で得て、劣臨界増大の $f$ に対する $L^{\infty}$ 先験的評価と存在定理を導け（1982）。
+
+*4 定常 Navier–Stokes 方程式の Leray の存在定理
+有界領域で外力 $f\in H^{-1}$、斉次境界条件の定常 Navier–Stokes 方程式は任意の粘性係数で弱解をもつことを、Leray–Schauder の原理とエネルギー評価で証明せよ（Leray 1933）。
+
+*5 Leray の流束問題（Korobkov–Pileckas–Russo）
+多重連結な平面有界領域で、各境界成分の流束が任意（総流束 0）の境界値に対して定常 Navier–Stokes 方程式が解をもつことの証明の骨格を与えよ（Korobkov–Pileckas–Russo 2015）。Bernoulli 関数の役割を述べよ。
+
+*4 Serrin の過剰決定問題
+有界滑らかな領域 $\Omega$ で $-\Delta u=1$、$u|_{\partial\Omega}=0$、$\partial_{\nu}u=c$（定数）が解をもつなら $\Omega$ は球であることを移動平面法で証明せよ（Serrin 1971）。
+
+*4 Aleksandrov–Bakelman–Pucci の最大値原理
+非発散型一様楕円型作用素 $Lu=a^{ij}D_{ij}u$ について $\sup_{\Omega}u\le\sup_{\partial\Omega}u^{+}+C\,\mathrm{diam}(\Omega)\|(Lu)^{-}\|_{L^{n}(\Gamma^{+})}$（$\Gamma^{+}$ は上側接触集合）を証明せよ。
+
+*5 Ni–Takagi の境界集中
+特異摂動 Neumann 問題 $\varepsilon^{2}\Delta u-u+u^{p}=0$、$\partial_{\nu}u=0$ の最小エネルギー解は $\varepsilon\to0$ で境界のある一点に集中し、その点が境界の平均曲率の最大点に近づくことの証明の骨格を与えよ（Lin–Ni–Takagi 1988、Ni–Takagi 1991, 1993）。
+
+*4 Hamilton–Jacobi 方程式の粘性解の比較原理（Crandall–Lions）
+$H(x,u,Du)=0$ について粘性劣解・優解を定義し、$H$ が $u$ について狭義増加で適当な連続性をもつなら比較原理が成り立つことを、変数倍化法で証明せよ（Crandall–Lions 1983）。
+
+*4 二階の粘性解の一意性（Jensen, Ishii）
+退化楕円型の完全非線形方程式 $F(x,u,Du,D^{2}u)=0$ について、Jensen の最大値原理と Ishii の補題を用いて比較原理を証明せよ（Jensen 1988、Ishii 1989）。

@@ -1,0 +1,126 @@
+=part 第 VIII 部　非線形関数解析 | NONLINEAR FUNCTIONAL ANALYSIS &mdash; 1401 to 1600
+線形理論で鍛えた道具を、非線形の世界へ持ち込む。Banach 空間の微分法と陰関数定理、写像度、分岐、変分法の直接法、臨界点理論、単調作用素、凸解析、非線形楕円型方程式と発展方程式、無限次元力学系とアトラクターまで ― 「解の存在」を位相と変分とコンパクト性で掴む技術を体系的に並べる。
+
+=ch VIII-1　Banach 空間の微分法
+
+*4 Gateaux 微分と Fréchet 微分
+$f:U\subset X\to Y$ が Gateaux 微分可能で $x\mapsto df(x)\in L(X,Y)$ が作用素ノルムで連続なら $f$ は $C^{1}$（Fréchet）であることを平均値不等式 $\|f(x)-f(y)\|\le\sup_{z\in[x,y]}\|df(z)\|\|x-y\|$ を経由して証明せよ。
+
+*4 Banach 空間の逆関数定理 {ift}
+$f\in C^{k}(U,Y)$（$k\ge1$）で $f'(x_{0})$ が同型なら、$f$ は $x_{0}$ の近傍で $C^{k}$ 微分同相であることを縮小写像原理で証明せよ。
+
+*4 陰関数定理と解析的版
+$F\in C^{k}(X\times Y,Z)$、$F(x_{0},y_{0})=0$、$\partial_{y}F(x_{0},y_{0})$ が同型なら、$F(x,y)=0$ は $y=g(x)$（$g\in C^{k}$）と一意に解けることを示せ。$F$ が解析的なら $g$ も解析的であることを証明せよ。
+
+*4 Graves の開写像定理と Lyusternik の接空間定理
+$f\in C^{1}$、$f'(x_{0})$ が全射なら $f$ は $x_{0}$ の近傍で開写像であり、等位集合 $f^{-1}(f(x_{0}))$ の $x_{0}$ における接錐が $\ker f'(x_{0})$ に一致することを証明せよ。
+
+*5 Nash–Moser の陰関数定理 {nash-moser}
+tame Fréchet 空間の間の滑らかな tame 写像 $P$ について、ある近傍で $DP(f)$ が全射で滑らかな tame な右逆写像族をもつなら $P$ は局所全射であることの証明の骨格を、平滑化作用素と Newton 法の組合せで与えよ（Nash 1956, Moser 1966, Hamilton 1982）。
+
+*4 Sard–Smale の定理 {sard-smale}
+可分 Banach 多様体の間の $C^{q}$ Fredholm 写像 $f$ について、$q>\max(\mathrm{ind}f,0)$ なら正則値全体は剰余集合であることを証明せよ（Smale 1965）。
+
+*4 パラメータ付き横断性定理
+$F:X\times P\to Y$ が $C^{q}$ で各 $F(\cdot,p)$ が Fredholm、$F\pitchfork\{y_{0}\}$ なら、剰余的な $p\in P$ に対して $F(\cdot,p)\pitchfork\{y_{0}\}$ となることを {{R:sard-smale}} から導け。
+
+*4 固有値の生成的単純性（Uhlenbeck）
+有界領域 $\Omega$ 上の $-\Delta+V$ の Dirichlet 固有値は、剰余的な $V\in C^{k}(\overline\Omega)$ に対してすべて単純であることを横断性定理で証明せよ（Uhlenbeck 1976）。
+
+*4 Banach 空間の常微分方程式と Godunov の定理
+局所 Lipschitz なベクトル場に対する Picard–Lindelöf の定理を Banach 空間で示し、任意の連続ベクトル場に解が存在する（Peano 型定理）Banach 空間は有限次元に限ることを証明せよ（Godunov 1975）。
+
+*4 Hilbert 空間の Morse の補題（Palais）
+Hilbert 空間上の $C^{3}$ 関数 $f$ が非退化臨界点 $0$ をもつ（$D^{2}f(0)$ が同型）なら、局所微分同相 $\varphi$ で $f(\varphi(x))=f(0)+\frac{1}{2}\langle Ax,x\rangle$ となるものが存在することを証明せよ（Palais 1963）。
+
+*4 Gromoll–Meyer の分解補題
+Hilbert 空間上の $C^{2}$ 関数 $f$ の孤立臨界点で $D^{2}f$ が Fredholm なら、$f$ は核方向の関数と非退化 2 次形式の和に局所的に分解されることを証明せよ（Gromoll–Meyer 1969）。
+
+*4 Banach 空間上の多項式と偏極
+$n$ 次斉次多項式 $P(x)=L(x,\dots,x)$（$L$ 対称多重線形）について偏極公式を示し、$\|P\|\le\|L\|\le\frac{n^{n}}{n!}\|P\|$ を証明せよ。Hilbert 空間では $\|L\|=\|P\|$ となることを示せ（Banach 1938）。
+
+*4 Banach 空間の正則写像（Graves–Taylor–Hille–Zorn）
+複素 Banach 空間の開集合上の写像が Gateaux 正則（各複素直線上で正則）かつ局所有界なら Fréchet 正則であり、局所的に斉次多項式の和に展開されることを証明せよ。
+
+*4 弱正則性と強正則性（Dunford）
+$f:\Omega\subset\mathbb{C}\to X$ について、任意の $\ell\in X^{*}$ で $\ell\circ f$ が正則なら $f$ は（ノルム位相で）正則であることを証明せよ。さらに $\ell$ を $X^{*}$ の分離的部分空間に制限してよい条件を論ぜよ。
+
+*4 Lagrange 乗数法（Lyusternik）
+$f\in C^{1}(X)$ の制約集合 $\{g=0\}$（$g\in C^{1}(X,Y)$、$g'(x_{0})$ 全射）上の局所極値点 $x_{0}$ で $f'(x_{0})=\lambda\circ g'(x_{0})$ となる $\lambda\in Y^{*}$ が存在することを証明せよ。
+
+*4 Newton–Kantorovich の定理
+$f'(x_{0})^{-1}$ が存在し、$\|f'(x_{0})^{-1}f(x_{0})\|\le\eta$、$\|f'(x_{0})^{-1}(f'(x)-f'(y))\|\le K\|x-y\|$、$h=K\eta\le\frac{1}{2}$ なら Newton 法が $f$ の零点に収束することを証明せよ（Kantorovich 1948）。
+
+*4 Clarke の一般化勾配と Lipschitz 逆関数定理
+局所 Lipschitz 写像 $f:\mathbb{R}^{n}\to\mathbb{R}^{n}$ の Clarke 一般化 Jacobi 集合 $\partial f(x_{0})$ のすべての元が正則なら、$f$ は $x_{0}$ の近傍で Lipschitz 同相であることを証明せよ（Clarke 1976）。
+
+*4 Hadamard–Lévy の大域逆関数定理
+$f:X\to Y$ が $C^{1}$ で各点で $f'(x)$ が同型、$\|f'(x)^{-1}\|\le\omega(\|x\|)$、$\int_{0}^{\infty}\frac{dr}{\omega(r)}=\infty$ なら $f$ は大域的微分同相であることを証明せよ。
+
+*5 Preiss の微分可能性定理
+Asplund 空間上の実数値 Lipschitz 関数は稠密集合上で Fréchet 微分可能であることの証明の骨格を与えよ（Preiss 1990）。
+
+*5 Aronszajn–Christensen の定理
+可分 Banach 空間から Radon–Nikodym 性をもつ Banach 空間への Lipschitz 写像は、Aronszajn 零集合（したがって Haar 零集合）の外で Gateaux 微分可能であることを証明せよ（Aronszajn 1976、Christensen 1973、Mankiewicz 1973）。
+
+=ch VIII-2　写像度理論
+
+*4 Brouwer 写像度の存在と一意性 {brouwer-deg}
+正規化・加法性・ホモトピー不変性の 3 公理をみたす整数値写像 $\deg(f,\Omega,y)$（$f\in C(\overline\Omega,\mathbb{R}^{n})$、$y\notin f(\partial\Omega)$）が一意に存在することを、正則値での符号付き個数と Sard の定理を用いて証明せよ。
+
+*4 Leray–Schauder 写像度 {ls-deg}
+Banach 空間の有界開集合 $\Omega$ 上のコンパクト写像 $K$ について、$\deg(I-K,\Omega,y)$ を有限次元近似により定義し、それが近似によらず {{R:brouwer-deg}} と同じ 3 公理をみたすことを証明せよ（Leray–Schauder 1934）。
+
+*4 Leray–Schauder の連続体定理
+$K:\overline\Omega\times[0,1]\to X$ をコンパクト、$x\neq K(x,\lambda)$（$x\in\partial\Omega$）、$\deg(I-K(\cdot,0),\Omega,0)\neq0$ とする。解集合 $\{(x,\lambda):x=K(x,\lambda)\}$ は $\lambda=0$ と $\lambda=1$ を結ぶ連結成分を含むことを、Whyburn の補題を用いて証明せよ（Leray–Schauder 1934）。
+
+*4 Schauder の領域不変性定理
+$K$ をコンパクト写像とし、$I-K:\Omega\to X$ が単射連続なら、$I-K$ は開写像であることを {{R:ls-deg}} で証明せよ。
+
+*4 Borsuk の奇写像定理と Borsuk–Ulam
+$0\in\Omega$ が対称な有界開集合で $I-K$ が $\partial\Omega$ 上で奇かつ零点をもたないなら $\deg(I-K,\Omega,0)$ は奇数であることを示し、Borsuk–Ulam の定理（$S^{n}\to\mathbb{R}^{n}$ の連続写像は対蹠点で一致する値をとる）を導け。
+
+*4 Leray の積公式
+合成 $g\circ f$ の写像度を、$\mathbb{R}^{n}\setminus f(\partial\Omega)$ の連結成分 $\Delta_{i}$ ごとの和 $\deg(g\circ f,\Omega,y)=\sum_{i}\deg(f,\Omega,\Delta_{i})\deg(g,\Delta_{i},y)$ として表し、Jordan–Brouwer の分離定理を導け。
+
+*4 Krasnosel'skii の錐の圧縮・拡張定理
+Banach 空間の錐 $P$ 上のコンパクト写像 $T$ が、$\|Tx\|\le\|x\|$（$\|x\|=r$）かつ $\|Tx\|\ge\|x\|$（$\|x\|=R$）（またはその逆）をみたすなら、$r\le\|x\|\le R$ に不動点をもつことを証明せよ（1960）。
+
+*4 Amann の不動点指数
+Banach 空間の閉凸部分集合（より一般に retract）上のコンパクト写像に対する不動点指数を定義し、その公理を示して非負解の多重存在に応用せよ（Amann 1976）。
+
+*4 多価写像の写像度（Cellina–Lasota）
+空でない凸コンパクト値の上半連続コンパクト多価写像 $F$ について、$I-F$ の写像度を一価連続近似（Cellina の近似選択定理）により定義し、Kakutani–Fan–Glicksberg の定理を写像度の系として再証明せよ（Cellina–Lasota 1969）。
+
+*4 Lefschetz の不動点定理（Granas）
+ANR 上のコンパクト写像 $f$ について Lefschetz 数 $\Lambda(f)$ が定義され、$\Lambda(f)\neq0$ なら $f$ は不動点をもつことを証明せよ（Granas 1967）。
+
+*4 $(S_{+})$ 型写像の写像度（Browder, Skrypnik）
+反射的 Banach 空間 $X$ から $X^{*}$ への有界・半連続な $(S_{+})$ 型写像（$x_{n}\rightharpoonup x$、$\limsup\langle Ax_{n},x_{n}-x\rangle\le0\Rightarrow x_{n}\to x$）に対して写像度を定義し、準線形楕円型方程式の存在に応用せよ（Browder 1983）。
+
+*4 Mawhin の一致写像度
+指数 0 の Fredholm 作用素 $L$ と $L$-コンパクト写像 $N$ について一致写像度 $\deg(L-N,\Omega)$ を定義し、周期境界値問題の解の存在に関する継続定理を証明せよ（Mawhin 1972）。
+
+*4 Hopf の定理
+連続写像 $S^{n}\to S^{n}$ のホモトピー類は写像度で完全に分類されることを証明せよ（Hopf 1926）。
+
+*4 Poincaré–Miranda の定理
+$f=(f_{1},\dots,f_{n}):[-1,1]^{n}\to\mathbb{R}^{n}$ が $f_{i}|_{x_{i}=-1}\le0\le f_{i}|_{x_{i}=1}$ をみたすなら $f$ は零点をもつことを、写像度で証明せよ。Brouwer の不動点定理との同値性を示せ。
+
+*4 勾配写像の指数（Rothe, Krasnosel'skii, Amann）
+Hilbert 空間上の $f=\frac{1}{2}\|x\|^{2}-\Phi(x)$（$\nabla\Phi$ コンパクト）の孤立臨界点の指数は、非退化なら $(-1)^{m}$（$m$ は Morse 指数）、孤立局所最小点なら $1$ であることを証明せよ。
+
+*5 Fitzpatrick–Pejsachowicz–Rabier の写像度
+指数 0 の Fredholm 写像に対し、向き付けの代わりに「経路の奇偶性」（parity）を用いて符号まで含めた写像度を構成し、それが Leray–Schauder 写像度を拡張することの証明の骨格を与えよ（1992）。
+
+*4 Smale の mod 2 写像度
+連結 Banach 多様体の間の固有 $C^{2}$ Fredholm 写像（指数 0）について、正則値の逆像の元の個数の偶奇が正則値によらないことを {{R:sard-smale}} から証明せよ（Smale 1965）。
+
+*4 Leray–Schauder 型の Jordan 分離定理
+Banach 空間の有界閉集合 $C$ と $I-K$（$K$ コンパクト）型の単射 $h:C\to X$ について、$X\setminus C$ と $X\setminus h(C)$ の有界連結成分の個数が等しいことを示せ。
+
+*4 Dold の定理
+有限群 $G$ が自由に作用する $n$-連結空間 $X$ から $n$ 次元の自由 $G$-CW 複体への $G$-同変写像は存在しないことを証明せよ（Dold 1983）。Borsuk–Ulam を特別な場合として含むことを確かめよ。
+
+*5 Conley 指数
+局所流の孤立不変集合 $S$ に対し、指数対 $(N,L)$ の存在と、ホモトピー型 $h(S)=[N/L]$ が指数対の選び方によらないことを証明し、$h(S)\neq\bar 0$ なら $S\neq\emptyset$（Ważewski の原理の一般化）を導け（Conley 1978）。
