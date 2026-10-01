@@ -1,0 +1,123 @@
+=ch I-3　Baire のカテゴリーと三大定理
+
+*4 Baire のカテゴリー定理 {baire}
+完備距離空間（あるいは局所コンパクト Hausdorff 空間）において、可算個の稠密開集合の共通部分は稠密である。系として、完備距離空間は第一類（疎集合の可算和）ではないことを示せ。
+
+*4 一様有界性原理（Banach–Steinhaus） {ubp}
+Banach 空間 $X$ からノルム空間への有界作用素の族 $\{T_{\alpha}\}$ が各点有界ならば一様有界である。Baire の定理で証明し、さらに「各点有界でない点の集合は残留的（稠密 $G_{\delta}$）である」という凝縮版を示せ。
+
+*4 連続関数の Fourier 級数の発散
+Fourier 部分和 $S_{N}f(0)$ が発散する連続関数 $f$ が存在し、そのような $f$ は $C(\mathbb{T})$ の残留集合をなす。Dirichlet 核の $L^{1}$ ノルム（Lebesgue 定数）$\|D_{N}\|_{1}\sim\frac{4}{\pi^{2}}\log N$ と一様有界性原理から示せ（du Bois-Reymond）。
+
+*4 開写像定理 {omt}
+Banach 空間の間の有界線形全射は開写像である。Baire の定理と「近似的に全射なら全射」の補題で証明し、系として有界な線形全単射の逆が有界であること（Banach の逆写像定理）を導け。
+
+*4 閉グラフ定理 {cgt}
+Banach 空間の間の線形写像 $T$ はグラフが閉 $\iff$ 有界。開写像定理から導き、Hellinger–Toeplitz の定理（Hilbert 空間全体で定義された対称作用素は有界）を系として示せ。
+
+*4 閉値域定理（Banach） {crt}
+Banach 空間の間の有界作用素 $T$ について、$\operatorname{range}T$ が閉 $\iff\operatorname{range}T^{*}$ が閉 $\iff\operatorname{range}T=({\ker T^{*}})_{\perp}$ $\iff\operatorname{range}T^{*}=(\ker T)^{\perp}$。証明せよ。
+
+*4 開写像定理の逆：Baire 性の必要性
+不完備なノルム空間では開写像定理・閉グラフ定理・一様有界性原理がいずれも偽になりうる例を作れ。
+
+*4 Banach–Pettis の自動連続性定理
+Baire 性をもつ空間では、可測な（Baire の性質をもつ）準同型は連続である（Banach–Pettis）。$\mathbb{R}$ 上の不連続な加法的関数（Hamel 基底による）が Lebesgue 非可測であることを示せ。
+
+*4 Pettis の補題（Steinhaus の定理の一般化）
+Polish 群 $G$ の Baire の性質をもつ非疎集合 $A$ について $AA^{-1}$ は単位元の近傍を含む。Steinhaus の定理（正測度集合 $A$ で $A-A$ は $0$ の近傍を含む）も示せ。
+
+*4 至る所微分不可能な連続関数の汎性
+$C[0,1]$ において、どの点でも微分可能でない関数の集合は残留的である（Banach 1931, Mazurkiewicz）。Baire の定理で証明せよ。
+
+*4 Osgood の定理と各点極限の連続点
+完備距離空間上の連続関数列の各点極限は、残留集合上で連続である（Baire の第一類関数の連続点集合は残留的）。証明せよ。
+
+*4 二つの Banach 空間の位相の比較
+ベクトル空間上の二つの完備ノルム $\|\cdot\|_{1}\le C\|\cdot\|_{2}$ なら両者は同値である。開写像定理から導け。
+
+*4 Banach–Steinhaus と求積公式の収束（Pólya–Szegő）
+求積公式 $Q_{n}(f)=\sum w_{k}^{(n)}f(x_{k}^{(n)})$ が $C[a,b]$ のすべての $f$ について $\int f$ に収束する $\iff$ 多項式について収束し、$\sup_{n}\sum|w_{k}^{(n)}|<\infty$。証明し、Newton–Cotes 公式が収束しない理由を述べよ。
+
+*4 Lebesgue 定数と補間多項式の発散（Faber）
+任意の節点系に対し、Lagrange 補間多項式が一様収束しない連続関数が存在する（Faber 1914）。Lebesgue 定数 $\Lambda_{n}\ge\frac{2}{\pi}\log n-C$（Bernstein–Erdős）と一様有界性原理から示せ。
+
+*4 Banach の閉値域定理と Fredholm の交代
+有界作用素 $T$ について、$\ker T$ が有限次元で $\operatorname{range}T$ が閉なら半 Fredholm である。$T=I-K$（$K$ コンパクト）で値域が閉であることを示し、Fredholm の交代定理への準備とせよ。
+
+*4 Baire 空間における Banach–Steinhaus（Fréchet 空間）
+Fréchet 空間（あるいは樽型空間）上の連続線形写像の各点有界な族は同程度連続である。Baire 性と樽の議論で証明せよ。
+
+*4 Anderson–Kadec の定理
+すべての無限次元可分 Banach 空間は互いに（位相的に）同相であり、$\mathbb{R}^{\mathbb{N}}$ に同相である（Anderson–Kadec）。主張を述べ、線形同型とは全く異なる概念であることを強調せよ。
+
+*4 Ulam の問題と Hyers の安定性
+Banach 空間への写像 $f$ で $\|f(x+y)-f(x)-f(y)\|\le\varepsilon$ なら、$\|f(x)-A(x)\|\le\varepsilon$ なる加法的写像 $A$ が一意に存在する（Hyers 1941）。直接法（$A(x)=\lim2^{-n}f(2^{n}x)$）で証明せよ。
+
+*5 Baire カテゴリーによる存在証明の典型：Kuratowski–Ulam の定理
+$X\times Y$（第二可算 Baire 空間）の Baire の性質をもつ集合 $E$ が疎（第一類）$\iff$ ほとんどすべての（残留的な）$x$ について切口 $E_{x}$ が第一類。Fubini の定理のカテゴリー版として証明せよ。
+
+*5 一様有界性原理の非線形版と Nikodým の有界性定理
+$\sigma$-代数上の有界な有限加法的測度の族が各集合で有界ならば一様有界である（Nikodým）。Baire の定理（$\sigma$-代数上の擬距離）を用いて証明し、Vitali–Hahn–Saks の定理を導け。
+
+=ch I-4　双対性と弱位相
+
+*4 弱位相・弱*位相の基本性質 {weak}
+ノルム空間 $X$ の弱位相 $\sigma(X,X^{*})$ の弱収束列は有界で、$\|x\|\le\liminf\|x_{n}\|$。無限次元では弱位相が距離化可能でない（単位球面の弱閉包は単位球）ことを示せ。
+
+*4 Banach–Alaoglu の定理 {alaoglu}
+ノルム空間 $X$ の双対の閉単位球は弱*コンパクトである。Tychonoff の定理による証明を与え、$X$ が可分なら単位球の弱*位相は距離化可能で点列コンパクトであることを示せ。
+
+*4 Goldstine の定理
+$X$ の単位球の標準像は $X^{**}$ の単位球で弱*稠密である。分離定理から証明し、局所反射性（Lindenstrauss–Rosenthal の原理）の弱い形を述べよ。
+
+*4 反射性の特徴づけ（Kakutani） {reflexive}
+Banach 空間が反射的 $\iff$ 単位球が弱コンパクト。Goldstine と Alaoglu から示し、反射的空間の閉部分空間・商・双対が反射的であることを導け。
+
+*4 Eberlein–Šmulian の定理 {es}
+Banach 空間の部分集合について、弱コンパクト・弱点列コンパクト・弱可算コンパクトの各概念の相対版は同値である。証明の骨格（Whitley の証明）を与えよ。
+
+*4 James の定理 {james}
+Banach 空間 $X$ が反射的 $\iff$ すべての $f\in X^{*}$ が単位球上でノルムを達成する（James 1964）。可分の場合の証明の骨格を与え、非可分の場合の困難を述べよ。
+
+*4 James 空間（反射的でない同型的に双対と同型な空間）
+James 空間 $J$ は $J^{**}/J$ が一次元で $J$ が $J^{**}$ に等距離同型である（James 1951）。構成と主要な性質を示し、標準埋め込みでない等距離同型が存在しうることを強調せよ。
+
+*4 Krein–Šmulian の定理
+Banach 空間 $X$ の双対 $X^{*}$ の凸集合 $C$ が弱*閉 $\iff$ 任意の $r>0$ で $C\cap rB_{X^{*}}$ が弱*閉。証明し、Banach–Dieudonné の定理（有界集合上で弱*位相とプレコンパクト収束位相が一致）を述べよ。
+
+*4 Krein–Šmulian の弱コンパクト凸包定理
+Banach 空間の弱コンパクト集合の閉凸包は弱コンパクトである（Krein–Šmulian）。Krein–Šmulian の弱*閉性判定から証明せよ。
+
+*4 双対空間の可分性と元の空間
+$X^{*}$ が可分なら $X$ も可分である。逆が偽であること（$\ell^{1}$）を示せ。
+
+*4 弱 Cauchy 列と Rosenthal の $\ell^{1}$ 定理 {rosenthal}
+Banach 空間の有界列は、弱 Cauchy な部分列をもつか、$\ell^{1}$ の単位ベクトル基底と同値な部分列をもつ（Rosenthal 1974）。Ramsey 理論的な証明の骨格を与えよ。
+
+*4 Dunford–Pettis の定理（$L^{1}$ の弱コンパクト性）
+$L^{1}(\mu)$（有限測度）の有界集合が相対弱コンパクト $\iff$ 一様可積分。Eberlein–Šmulian と Radon–Nikodym を用いて証明せよ。
+
+*4 Vitali–Hahn–Saks の定理
+有限測度に絶対連続な測度の列 $\nu_{n}$ が各可測集合で収束すれば、$\nu_{n}$ は一様に絶対連続で、極限も可算加法的である。Baire の議論で証明せよ。
+
+*4 Orlicz–Pettis の定理
+Banach 空間の級数 $\sum x_{n}$ が弱無条件収束（すべての部分級数が弱収束）ならば、ノルム無条件収束する。証明せよ。
+
+*4 Bessaga–Pełczyński の $c_{0}$ 定理
+Banach 空間 $X$ に $\sum|f(x_{n})|<\infty$（$\forall f$）だがノルム無条件収束しない級数が存在 $\iff X$ が $c_{0}$ と同型な部分空間を含む。証明の骨格を与えよ。
+
+*4 Schur 性と弱点列完備性
+$L^{1}(\mu)$ は弱点列完備である（弱 Cauchy 列が弱収束）が、$C[0,1]$ はそうでない。両者を示し、弱点列完備で非反射的な空間は $\ell^{1}$ を含むか（Rosenthal の定理の系として）を論ぜよ。
+
+*4 ノルム達成作用素の稠密性（Lindenstrauss, Bourgain）
+$X$ が反射的（あるいは RNP をもつ）なら、ノルムを達成する作用素の全体は $\mathcal{B}(X,Y)$ で稠密である（Lindenstrauss 1963, Bourgain 1977）。一方 $c_{0}$ から一般の空間への作用素では稠密でない例（Lindenstrauss）を述べよ。
+
+*4 弱位相の位相的性質：Kadec–Klee 性
+一様凸空間では、$x_{n}\rightharpoonup x$ かつ $\|x_{n}\|\to\|x\|$ ならノルム収束する（Radon–Riesz 性）。これから単位球面上で弱位相とノルム位相が一致することを示せ。
+
+*5 James の定理の完全証明（Pryce, Simons, Morillon）
+非可分な Banach 空間 $X$ についても、すべての $f\in X^{*}$ が単位球上でノルムを達成するなら $X$ は反射的である。Simons の不等式（sup–limsup 定理）を用いた証明を完成させよ。
+
+*5 Eberlein–Šmulian の位相的一般化（Grothendieck の二重極限条件）
+コンパクト空間 $K$ 上の $C(K)$ の有界集合 $A$ が相対弱コンパクト $\iff$ 任意の $f_{n}\in A$, $x_{m}\in K$ で $\lim_{n}\lim_{m}f_{n}(x_{m})=\lim_{m}\lim_{n}f_{n}(x_{m})$（両方存在するとき）。Grothendieck の二重極限定理を証明し、Eberlein–Šmulian を導け。

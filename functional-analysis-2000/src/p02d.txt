@@ -1,0 +1,123 @@
+=ch II-7　積分作用素と古典的作用素
+
+*4 Schur の判定（積分作用素の有界性） {schur-test}
+正の関数 $p,q$ と定数で $\int|K(x,y)|q(y)dy\le Cp(x)$, $\int|K(x,y)|p(x)dx\le Cq(y)$ ならば、$K$ は $L^{2}$ 上で $\|K\|\le C$。証明し、Hilbert の不等式 $\sum\frac{a_{m}b_{n}}{m+n}\le\pi\|a\|\|b\|$ を導け（定数 $\pi$ は最良）。
+
+*4 Hilbert 行列のスペクトル
+Hilbert 行列 $H=(\frac{1}{i+j+1})$ は $\ell^{2}$ 上のノルム $\pi$ の有界作用素であり、スペクトルは $[0,\pi]$ で純粋に絶対連続である（Magnus）。主張を述べ、ノルムの評価を証明せよ。
+
+*4 Hardy の不等式と Hardy 作用素
+$Hf(x)=\frac1x\int_{0}^{x}f$ は $L^{p}(0,\infty)$（$1<p<\infty$）上で有界で $\|H\|=\frac{p}{p-1}$（最良）。証明し、離散版も示せ。
+
+*4 Carleman の不等式
+$\sum_{n}(a_{1}\cdots a_{n})^{1/n}<e\sum a_{n}$（$a_{n}\ge0$、定数 $e$ は最良）。Hardy の不等式の $p\to\infty$ 極限として、あるいは直接証明せよ。
+
+*4 Young の畳み込み不等式と最良定数（Beckner, Brascamp–Lieb）
+$\|f*g\|_{r}\le\|f\|_{p}\|g\|_{q}$（$1+1/r=1/p+1/q$）を示し、最良定数がガウス関数で達成されること（Beckner 1975, Brascamp–Lieb 1976）を述べよ。
+
+*4 Hilbert 変換の $L^{2}$ 理論
+$Hf=\frac1\pi\mathrm{p.v.}\int\frac{f(y)}{x-y}dy$ は $L^{2}(\mathbb{R})$ 上のユニタリ作用素（$\widehat{Hf}=-i\operatorname{sgn}\xi\hat f$）で $H^{2}=-I$。証明し、Riesz の定理（$L^{p}$ 有界性、$\|H\|_{p}=\cot\frac{\pi}{2p^{*}}$、Pichorides）を述べよ。
+
+*4 Pichorides の定理（Hilbert 変換の $L^{p}$ ノルム）
+共役関数作用素の $L^{p}(\mathbb{T})$ ノルムは $\tan\frac{\pi}{2p}$（$1<p\le2$）、$\cot\frac{\pi}{2p}$（$2\le p<\infty$）である（Pichorides 1972）。調和優関数の方法で証明の骨格を与えよ。
+
+*4 Laplace 変換作用素と Carleman 作用素
+$L^{2}(0,\infty)$ 上の Laplace 変換 $\mathcal{L}f(s)=\int_{0}^{\infty}e^{-st}f(t)dt$ は自己共役でノルム $\sqrt\pi$、$\mathcal{L}^{2}$ は Carleman 作用素（核 $\frac{1}{s+t}$）であることを示し、Mellin 変換による対角化でスペクトルを決定せよ。
+
+*4 Mellin 変換と Hardy 型作用素の対角化
+同次核 $K(x,y)$（$K(\lambda x,\lambda y)=\lambda^{-1}K(x,y)$）の積分作用素が Mellin 変換で乗算作用素に対角化され、ノルムが $\int_{0}^{\infty}K(1,t)t^{-1/2}dt$ であることを示せ（Schur, Hardy–Littlewood–Pólya の定理 319）。
+
+*4 Volterra 型積分方程式の一意可解性
+連続核の Volterra 方程式 $u(x)-\int_{0}^{x}K(x,y)u(y)dy=f(x)$ は任意の $f$ に一意解をもち、Neumann 級数が収束する。$\|V^{n}\|\le\frac{(M x)^{n}}{n!}$ を示せ。
+
+*4 Sturm–Liouville 作用素のスペクトル理論
+正則な Sturm–Liouville 問題 $-(pu')'+qu=\lambda wu$（分離型境界条件）の固有値は単純で $\lambda_{n}\to\infty$、固有関数は完全正規直交系をなし、第 $n$ 固有関数は $n-1$ 個の零点をもつ。Green 関数のコンパクト性と Sturm の比較定理で証明せよ。
+
+*4 Weyl の極限点・極限円の二分法
+特異な Sturm–Liouville 作用素 $-u''+qu$（$[0,\infty)$）について、無限遠端が極限点（すべての $\lambda$ で $L^{2}$ 解が一次元）か極限円（すべてが $L^{2}$）のいずれかであり、極限点なら自己共役拡張が境界条件 1 つで定まることを示せ（Weyl 1910）。
+
+*4 Weyl–Titchmarsh の $m$ 関数
+極限点の場合の $m$ 関数 $m(\lambda)$ が Herglotz 関数であり、そのスペクトル測度 $\mu$ によるユニタリ変換で作用素が $L^{2}(\mu)$ 上の掛け算作用素に変換されることを示せ。
+
+*4 Borg–Marchenko の一意性定理
+$[0,\infty)$ 上の Schrödinger 作用素について、$m$ 関数が一致すればポテンシャルが一致する（Borg 1952, Marchenko）。Simon の局所版（$m_{1}-m_{2}=O(e^{-2a\sqrt{-\lambda}})$ なら $[0,a]$ で一致）を述べよ。
+
+*4 Gelfand–Levitan の逆スペクトル理論
+スペクトル測度からポテンシャルを再構成する Gelfand–Levitan 積分方程式を導き、その一意可解性を示せ。
+
+*4 Jacobi 行列と直交多項式のスペクトル理論
+有界 Jacobi 行列 $J$ は $\ell^{2}(\mathbb{N})$ 上の自己共役作用素で、$e_{1}$ のスペクトル測度に関する直交多項式によって $L^{2}(\mu)$ 上の掛け算作用素とユニタリ同値である。Favard の定理との対応を示せ。
+
+*4 Killip–Simon の定理（Jacobi 行列の和則）
+Jacobi 行列 $J$ が自由 Jacobi 行列の Hilbert–Schmidt 摂動であることが、スペクトル測度の Szegő 型条件（準 Szegő 条件と固有値の和の条件）と同値である（Killip–Simon 2003）。Case 和則の役割を述べよ。
+
+*4 Szegő の定理と Verblunsky 係数
+単位円周上の確率測度 $\mu$ について、$\prod(1-|\alpha_{n}|^{2})=\exp\int\log w\frac{d\theta}{2\pi}$（$\alpha_{n}$ は Verblunsky 係数、$w$ は ac 部分の密度）（Szegő–Verblunsky の定理）。証明し、$\sum|\alpha_{n}|^{2}<\infty\iff\int\log w>-\infty$ を導け。
+
+*4 Paley–Wiener 空間と標本化定理
+帯域制限関数の空間 $PW_{\pi}=\{f\in L^{2}:\operatorname{supp}\hat f\subset[-\frac12,\frac12]\}$ が再生核 $\operatorname{sinc}(x-y)$ をもつ RKHS であり、Shannon の標本化定理 $f(x)=\sum f(n)\operatorname{sinc}(x-n)$ が成り立つことを示せ。
+
+*5 Landau の必要密度条件
+$PW_{\Omega}$ の安定な標本化集合（および補間集合）の下（上）Beurling 密度は $|\Omega|$ 以上（以下）である（Landau 1967）。時間周波数集中作用素の固有値分布（Landau–Pollak–Slepian）を用いた証明の骨格を与えよ。
+
+=ch II-8　再生核 Hilbert 空間
+
+*4 再生核の基本定理（Moore–Aronszajn） {rkhs}
+集合 $X$ 上の正定値核 $K$ に対し、$K$ を再生核とする Hilbert 空間 $H_{K}$ が一意に存在し、逆に点評価が連続な関数の Hilbert 空間は再生核をもつ（Moore–Aronszajn）。証明せよ。
+
+*4 再生核の演算（和・積・制限・引き戻し）
+二つの正定値核の和・積（Schur 積）・制限・合成 $K(\phi(x),\phi(y))$ が正定値であり、対応する RKHS が記述できることを示せ（Aronszajn 1950）。
+
+*4 Bergman 空間と Bergman 核
+領域 $\Omega\subset\mathbb{C}$ 上の二乗可積分正則関数の空間 $A^{2}(\Omega)$ は RKHS であり、単位円板では $K(z,w)=\frac{1}{\pi(1-z\bar w)^{2}}$。Bergman 核の変換則を示せ。
+
+*4 Hardy 空間 $H^{2}$ と Szegő 核
+$H^{2}(\mathbb{D})$ の再生核が $\frac{1}{1-z\bar w}$ であることを示し、$H^{2}$ 上の乗算作用素が $H^{\infty}$ の元に限ることを示せ。
+
+*4 Pick の補間定理 {pick}
+$z_{1},\dots,z_{n}\in\mathbb{D}$, $w_{1},\dots,w_{n}\in\mathbb{D}$ に対し、$f(z_{i})=w_{i}$ をみたす $\|f\|_{\infty}\le1$ の正則関数が存在 $\iff$ Pick 行列 $\left(\frac{1-w_{i}\bar w_{j}}{1-z_{i}\bar z_{j}}\right)$ が半正定値。Sarason の可換子持ち上げによる証明を与えよ。
+
+*4 完全 Pick 核（Agler–McCarthy）
+RKHS が完全 Pick 性（行列値の Pick 補間が Pick 行列の正値性で決まる）をもつ $\iff$ 核の「$1-1/K$」が正定値の階数 $\le$ 可算の形をもつ（McCullough–Quiggin, Agler–McCarthy）。Drury–Arveson 空間が普遍的な完全 Pick 空間であることを述べよ。
+
+*4 Drury–Arveson 空間と von Neumann の不等式の多変数版
+行縮小作用素の組 $(T_{1},\dots,T_{d})$（$\sum T_{i}T_{i}^{*}\le I$）について、多項式 $p$ に対し $\|p(T)\|\le\|p\|_{\text{mult}(H^{2}_{d})}$（Drury 1978）。Drury–Arveson 空間の乗算作用素ノルムで置き換える必要があることを示せ。
+
+*4 Gauss 核の RKHS と特徴写像
+Gauss 核 $e^{-\|x-y\|^{2}/2\sigma^{2}}$ の RKHS を記述し、普遍性（$C(K)$ で稠密、Steinwart）と、Bochner の定理によるランダム Fourier 特徴の正当化を述べよ。
+
+*4 Mercer の定理と RKHS のスペクトル表示
+コンパクト空間上の連続正定値核の RKHS が $\{\sum a_{n}\phi_{n}:\sum|a_{n}|^{2}/\lambda_{n}<\infty\}$ と表されることを示し、積分作用素 $L_{K}^{1/2}$ の値域として特徴づけよ。
+
+*4 Representer 定理（Kimeldorf–Wahba, Schölkopf–Herbrich–Smola）
+$\min_{f\in H_{K}}\sum\ell(y_{i},f(x_{i}))+\Omega(\|f\|)$（$\Omega$ 増加）の解は $\sum\alpha_{i}K(x_{i},\cdot)$ の形にとれる。直交分解で証明せよ。
+
+*4 カーネル平均埋め込みと特性的核（Sriperumbudur–Gretton–Fukumizu）
+確率測度 $P\mapsto\int K(x,\cdot)dP(x)$ が単射となる核（特性的核）を定義し、平行移動不変核が特性的 $\iff$ その Fourier 測度の台が全空間であることを示せ。
+
+*4 de Branges 空間
+Hermite–Biehler 関数 $E$（$|E(\bar z)|<|E(z)|$, $\operatorname{Im}z>0$）に対し、de Branges 空間 $\mathcal{H}(E)$ を再生核 $\frac{\overline{E(w)}E(z)-\overline{E^{\#}(w)}E^{\#}(z)}{2\pi i(\bar w-z)}$ をもつ RKHS として定義し、Paley–Wiener 空間が例であることを示せ。
+
+*4 de Branges の順序定理
+$\mathcal{H}(E)$ の閉部分空間で同種の de Branges 空間であるものは包含で全順序をなす（de Branges の順序定理）。主張を述べ、標準的な系（canonical system）の逆スペクトル理論との関係を論ぜよ。
+
+*4 Dirichlet 空間と容量
+Dirichlet 空間 $\mathcal{D}=\{f:\int_{\mathbb{D}}|f'|^{2}<\infty\}$ の境界値の例外集合が対数容量零の集合で特徴づけられること（Beurling 1940）を述べ、$\mathcal{D}$ の再生核 $\log\frac{e}{1-z\bar w}$ を示せ。
+
+*4 Bargmann–Segal–Fock 空間
+Fock 空間 $\mathcal{F}=\{f\text{ 整関数}:\int|f|^{2}e^{-|z|^{2}}dA<\infty\}$ の再生核 $e^{z\bar w}$ を示し、Bargmann 変換が $L^{2}(\mathbb{R})$ から $\mathcal{F}$ へのユニタリで、Hermite 関数を $z^{n}/\sqrt{\pi n!}$ に写すことを示せ。
+
+*4 Fock 空間の標本化・補間集合（Seip, Lyubarskii）
+Fock 空間の標本化集合が上（下）Beurling 密度 $>1/\pi$（$<1/\pi$）で特徴づけられる（Seip–Wallstén 1992, Lyubarskii）ことを述べ、Gabor フレームの密度定理への応用を論ぜよ。
+
+*4 Bergman 空間の標本化と補間（Seip）
+Bergman 空間 $A^{2}(\mathbb{D})$ の標本化集合と補間集合の上下の Seip 密度による完全な特徴づけ（Seip 1993）を述べよ。
+
+*4 Kolmogorov の正定値核と Gauss 過程
+正定値核 $K$ に対し、共分散 $K$ の中心化 Gauss 過程が存在することを Kolmogorov の拡張定理から示し、その Cameron–Martin 空間が $H_{K}$ であることを述べよ。
+
+*5 Agler の多重円板での Pick 補間と有界実補題
+二重円板 $\mathbb{D}^{2}$ 上の Schur 類関数（$\|f\|_{\infty}\le1$）が Agler 分解 $1-f(z)\overline{f(w)}=(1-z_{1}\bar w_{1})K_{1}+(1-z_{2}\bar w_{2})K_{2}$（$K_{i}$ 正定値）をもつこと（Agler 1990）を、Andô の膨張定理と von Neumann の不等式の二変数版から証明せよ。
+
+*5 Carleson の補間定理と Hardy 空間の補間列
+$\mathbb{D}$ の列 $\{z_{n}\}$ が $H^{\infty}$ の補間列（任意の有界数列を値としてとれる）$\iff$ 一様分離 $\inf_{n}\prod_{m\neq n}\left|\frac{z_{m}-z_{n}}{1-\bar z_{m}z_{n}}\right|>0$（Carleson 1958）。Shapiro–Shields による $H^{2}$ 版（Riesz 列の特徴づけ）とともに証明の骨格を与えよ。

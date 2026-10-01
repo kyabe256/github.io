@@ -1,0 +1,123 @@
+=ch II-3　数域・作用素不等式・行列解析
+
+*4 Toeplitz–Hausdorff の定理 {th}
+有界作用素の数域 $W(T)=\{\langle Tx,x\rangle:\|x\|=1\}$ は凸であり、$\overline{W(T)}\supset\sigma(T)$。$2\times2$ の場合の楕円定理から証明せよ。
+
+*4 数域半径の性質
+数域半径 $w(T)$ はノルムであり $\frac12\|T\|\le w(T)\le\|T\|$。$T^{2}=0$ なら $w(T)=\frac12\|T\|$ を示せ。
+
+*4 Berger のべき不等式
+$w(T^{n})\le w(T)^{n}$（Berger 1965）。Pearcy の初等的証明を与え、Halmos の予想の解決として位置づけよ。
+
+*4 Ando の数域半径の特徴づけ
+$w(T)\le1$ $\iff$ ある縮小作用素 $Z$ で $T=2(I-Z^{*}Z)^{1/2}Z$ と書ける（Ando 1973）。証明し、これから $w(T)\le1$ の作用素が $2\times2$ 作用素行列の膨張で特徴づけられることを述べよ。
+
+*4 Löwner–Heinz の不等式 {loewner-heinz}
+$A\ge B\ge0$ なら $0\le p\le1$ で $A^{p}\ge B^{p}$ だが、$p>1$ では一般に成り立たない（$2\times2$ の反例）。積分表示 $t^{p}=\frac{\sin p\pi}{\pi}\int_{0}^{\infty}\frac{t}{t+s}s^{p-1}ds$ を用いて証明せよ。
+
+*4 Löwner の定理（作用素単調関数） {loewner}
+$(0,\infty)$ 上の関数 $f$ がすべてのサイズの行列で作用素単調 $\iff f$ が上半平面に解析接続されて上半平面を自身に写す（Pick 関数）。Löwner 行列の正定値性と Pick–Nevanlinna 表示を用いた証明の骨格を与えよ。
+
+*4 Hansen–Pedersen–Jensen の作用素不等式
+作用素凸関数 $f$（$f(0)\le0$）と縮小作用素 $C$ について $f(C^{*}AC)\le C^{*}f(A)C$（Hansen–Pedersen 1982）。作用素凸性の特徴づけとして証明せよ。
+
+*4 作用素平均の Kubo–Ando 理論
+正作用素の作用素平均 $A\sigma B$ を公理的に定義し、作用素単調関数との一対一対応 $A\sigma B=A^{1/2}f(A^{-1/2}BA^{-1/2})A^{1/2}$（Kubo–Ando 1980）を示せ。幾何平均 $A\#B$ の極値的特徴づけ $\max\{X\ge0:\begin{pmatrix}A&X\\X&B\end{pmatrix}\ge0\}$ を示せ。
+
+*4 Heinz–Kato の不等式
+$|\langle Tx,y\rangle|^{2}\le\langle|T|^{2\alpha}x,x\rangle\langle|T^{*}|^{2(1-\alpha)}y,y\rangle$（$0\le\alpha\le1$）。証明せよ。
+
+*4 McIntosh–Heinz の不等式
+$\|A^{\nu}XB^{1-\nu}+A^{1-\nu}XB^{\nu}\|\le\|AX+XB\|$（$A,B\ge0$, $0\le\nu\le1$、ユニタリ不変ノルム）。補間の議論で証明の骨格を与えよ。
+
+*4 Weyl の不等式（固有値と特異値）
+$n\times n$ 行列の固有値 $|\lambda_{1}|\ge\cdots$ と特異値 $s_{1}\ge\cdots$ について $\prod_{i\le k}|\lambda_{i}|\le\prod_{i\le k}s_{i}$（Weyl 1949）。外積代数で証明し、$\sum_{i\le k}|\lambda_{i}|^{p}\le\sum_{i\le k}s_{i}^{p}$ を導け。
+
+*4 Ky Fan の支配定理とユニタリ不変ノルム
+ユニタリ不変ノルムは対称ゲージ関数 $\Phi$ により $\|A\|=\Phi(s(A))$ と表される（von Neumann）。$\|A\|\le\|B\|$ がすべてのユニタリ不変ノルムで成り立つ $\iff$ Ky Fan $k$-ノルムで成り立つことを示せ。
+
+*4 Lidskii–Wielandt の定理
+Hermite 行列 $A,B$ の固有値（降順）について、$\lambda(A+B)-\lambda(A)$ は $\lambda(B)$ の置換の凸包に属する（Lidskii 1950）。Wielandt の min-max 原理から証明せよ。
+
+*4 Horn の問題と Knutson–Tao の飽和定理
+Hermite 行列 $A,B,C=A+B$ の固有値の組として可能なものは Horn の不等式で特徴づけられる。Klyachko の定理と Knutson–Tao のハニカム（飽和予想の解決）による主張を述べよ。
+
+*4 Schur 積定理とその作用素版
+$A,B\ge0$ なら Hadamard 積 $A\circ B\ge0$（Schur）。Schur 乗数のノルムが $\|S_{M}\|=\inf\{\|X\|\|Y\|: M_{ij}=\langle x_{i},y_{j}\rangle\}$（Grothendieck–Haagerup）で与えられることを示せ。
+
+*4 Grothendieck–Haagerup の Schur 乗数定理
+行列 $M$ による Schur 乗数 $X\mapsto M\circ X$ が $\mathcal{B}(\ell^{2})$ 上で縮小 $\iff$ 単位ベクトル以下の $x_{i},y_{j}$ で $M_{ij}=\langle x_{i},y_{j}\rangle$。証明せよ。
+
+*4 主三角射影の非有界性（Kwapień–Pełczyński）
+上三角部分をとる写像は $\mathcal{B}(\ell^{2}_{n})$ 上でノルム $\asymp\log n$ をもち、$\mathcal{B}(\ell^{2})$ 上で非有界である。Hilbert 行列を用いて証明し、Schatten $p$-クラス（$1<p<\infty$）では有界（Macaev）であることを述べよ。
+
+*4 Choi の定理（完全正値写像の特徴づけ）
+線形写像 $\Phi:M_{n}\to M_{m}$ が完全正値 $\iff$ Choi 行列 $\sum E_{ij}\otimes\Phi(E_{ij})\ge0$ $\iff$ Kraus 表現 $\Phi(X)=\sum V_{k}^{*}XV_{k}$。証明し、転置写像が正だが完全正でないことを示せ。
+
+*5 Lieb–Ruskai の強劣加法性と Lieb の凹性定理
+$(A,B)\mapsto\operatorname{tr}K^{*}A^{p}KB^{1-p}$ の結合凹性（Lieb 1973）を用いて、量子エントロピーの強劣加法性 $S(\rho_{ABC})+S(\rho_{B})\le S(\rho_{AB})+S(\rho_{BC})$（Lieb–Ruskai）を証明せよ。
+
+*5 作用素単調関数の Löwner 定理の完全証明（Hansen–Pedersen, Bhatia）
+作用素単調関数 $f$ が Pick 関数であることを、作用素単調性 $\Rightarrow$ Löwner 行列の正定値性 $\Rightarrow$ $f$ の $C^{\infty}$ 性と Bernstein 型表現 $\Rightarrow$ Nevanlinna 表示、の順に完全に証明せよ。
+
+=ch II-4　コンパクト作用素
+
+*4 コンパクト作用素の基本性質 {compact}
+$\mathcal{K}(X,Y)$ は $\mathcal{B}(X,Y)$ の閉イデアルであり、$T$ がコンパクト $\iff T^{*}$ がコンパクト（Schauder）。証明せよ。
+
+*4 Hilbert 空間でのコンパクト作用素の有限ランク近似
+Hilbert 空間上のコンパクト作用素は有限ランク作用素のノルム極限である。Banach 空間では一般に成り立たない（近似性質の欠如、Enflo）ことを述べよ。
+
+*4 コンパクト自己共役作用素のスペクトル定理 {compact-st}
+Hilbert 空間上のコンパクト自己共役作用素 $A$ は $A=\sum\lambda_{n}\langle\cdot,e_{n}\rangle e_{n}$（$\lambda_{n}\to0$、$e_{n}$ 正規直交）と表される。$\pm\|A\|$ の一方が固有値であることから帰納的に証明せよ。
+
+*4 Riesz–Schauder 理論 {riesz-schauder}
+Banach 空間上のコンパクト作用素 $K$ について、$\sigma(K)\setminus\{0\}$ は有限重複度の固有値からなる高々可算集合で、集積点は $0$ のみ。$I-K$ の Riesz 分解（零空間と値域の昇降列の安定化）を用いて証明せよ。
+
+*4 Fredholm の交代定理 {fredholm-alt}
+コンパクト $K$ について、$x-Kx=y$ が任意の $y$ で可解 $\iff$ $x=Kx$ が自明解のみ。さらに $\dim\ker(I-K)=\dim\ker(I-K^{*})$ を示せ。
+
+*4 Weyl–von Neumann の定理 {wvn}
+可分 Hilbert 空間の任意の自己共役作用素 $A$ と $\varepsilon>0$ に対し、Hilbert–Schmidt ノルム $<\varepsilon$ の自己共役作用素 $K$ で $A+K$ が対角化可能なものが存在する（von Neumann）。Weyl の版（コンパクト摂動）とともに証明せよ。
+
+*4 Kuroda の定理（Schatten 摂動による対角化）
+Weyl–von Neumann の定理で、$K$ を任意の $p>1$ の Schatten $p$-クラスにとれる（Kuroda）が、$p=1$（トレースクラス）では一般に不可能（Kato–Rosenblum の定理による）ことを述べよ。
+
+*4 Calkin 環と本質的スペクトル
+Calkin 環 $\mathcal{B}(H)/\mathcal{K}(H)$ の単純性（$\mathcal{K}(H)$ が $\mathcal{B}(H)$ の唯一の非自明閉イデアル、Calkin 1941）を示し、本質的スペクトル $\sigma_{e}(T)$ をその像のスペクトルとして定義せよ。
+
+*4 Weyl の本質的スペクトル定理
+自己共役作用素の本質的スペクトルはコンパクト摂動で不変であり、孤立有限重複度固有値を除いたスペクトルに一致する。Weyl の判定条件（特異 Weyl 列）とともに示せ。
+
+*4 Lomonosov の不変部分空間定理 {lomonosov}
+非スカラーで非零コンパクト作用素と可換な作用素は非自明な超不変部分空間をもつ（Lomonosov 1973）。Schauder の不動点定理を用いた証明を完成させよ。
+
+*4 Aronszajn–Smith の定理
+Banach 空間上のコンパクト作用素は非自明な閉不変部分空間をもつ（Aronszajn–Smith 1954, von Neumann）。Lomonosov の定理から導け。
+
+*4 Volterra 作用素
+$Vf(x)=\int_{0}^{x}f$ は $L^{2}[0,1]$ 上の準冪零（$\sigma(V)=\{0\}$）コンパクト作用素であり、不変部分空間はちょうど $\{f: f=0\text{ on }[0,a]\}$ の形である（Brodskii, Donoghue）。$\|V\|=2/\pi$ を示せ。
+
+*4 Titchmarsh の畳み込み定理と Volterra の不変部分空間
+$f*g=0$ on $[0,1]$ なら、ある $a,b$（$a+b\ge1$）で $f=0$ on $[0,a]$, $g=0$ on $[0,b]$（Titchmarsh 1926）。これから Volterra 作用素の不変部分空間の決定を導け。
+
+*4 コンパクト作用素の Schauder 基底による特徴づけ（Banach 空間）
+基底をもつ Banach 空間で、コンパクト作用素が有限ランク作用素で近似できることを示し、Grothendieck の近似性質の同値条件（コンパクト集合上の恒等写像の有限ランク近似）を述べよ。
+
+*4 Enflo の近似性質の反例 {enflo}
+近似性質をもたない（したがって Schauder 基底をもたない）可分 Banach 空間が存在する（Enflo 1973）。Davie による簡略化された構成の骨格を与え、Mazur の「スコティッシュブック」の問題（ガチョウの賞品）との関係を述べよ。
+
+*4 Szankowski の定理（$\mathcal{B}(H)$ は近似性質をもたない）
+$\mathcal{B}(\ell^{2})$ は近似性質をもたない（Szankowski 1981）。主張と証明の着想を述べ、$\ell^{p}$（$p\neq2$）の部分空間で近似性質をもたないものが存在すること（Szankowski）を述べよ。
+
+*4 弱コンパクト作用素と Gantmacher の定理
+$T$ が弱コンパクト $\iff T^{**}(X^{**})\subset Y$ $\iff T^{*}$ が弱コンパクト（Gantmacher 1940）。証明せよ。
+
+*4 Davis–Figiel–Johnson–Pełczyński の因数分解
+弱コンパクト作用素は反射的 Banach 空間を経由して分解する（DFJP 1974）。補間による反射的空間の構成を与え、弱コンパクト集合が反射的空間の単位球の像に含まれることを導け。
+
+*5 Read の不変部分空間問題の反例
+非自明な閉不変部分空間をもたない有界作用素が $\ell^{1}$ 上に存在する（Read 1984, 1985；Enflo の先行構成）。主張と構成の着想を述べ、Hilbert 空間では未解決であることを強調せよ。
+
+*5 Argyros–Haydon の空間とスカラー＋コンパクト性質
+すべての有界作用素が $\lambda I+K$（$K$ コンパクト）の形となる無限次元 Banach 空間が存在する（Argyros–Haydon 2011）。この空間上のすべての作用素が非自明な不変部分空間をもつことを、Lomonosov の定理から導け。

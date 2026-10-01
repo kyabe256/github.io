@@ -1,0 +1,126 @@
+=part 第 I 部　位相ベクトル空間と基礎原理 | FOUNDATIONS &mdash; 1 to 200
+無限次元では「有界閉集合はコンパクト」が壊れる。その代償として現れたのが、Hahn–Banach（拡張）と Baire（完備性）という二本の柱、弱位相という新しい幾何、そして局所凸空間の双対理論である。ノルム空間の基礎から、Krein–Milman と Choquet、樽型空間、Fréchet 空間と帰納極限、不動点定理までを、以後の 1800 題が暗黙に使う道具としてすべて証明する。
+
+=ch I-1　ノルム空間と Banach 空間
+
+*4 Riesz の補題と有限次元性 {riesz-lemma}
+ノルム空間 $X$ の真の閉部分空間 $M$ と $0<\theta<1$ に対し、$\|x\|=1$, $\operatorname{dist}(x,M)\ge\theta$ なる $x$ が存在する。系として、閉単位球がコンパクト $\iff\dim X<\infty$ を示し、$\theta=1$ にとれない例（$C[0,1]$ の部分空間）を作れ。
+
+*4 有限次元ノルムの同値性
+有限次元ベクトル空間上の任意の二つのノルムは同値である。系として、ノルム空間の有限次元部分空間は閉で、有限次元空間上の線形写像は連続であることを示せ。
+
+*4 完備性の級数による特徴づけ
+ノルム空間 $X$ が完備 $\iff$ 絶対収束級数 $\sum\|x_{n}\|<\infty$ がつねに収束する。これを用いて $L^{p}$（$1\le p\le\infty$）の完備性（Riesz–Fischer）を示せ。
+
+*4 商空間と完備化
+$X$ が Banach 空間、$M$ が閉部分空間なら $X/M$ は商ノルムで Banach 空間である。任意のノルム空間が稠密に埋め込まれる完備化をもち、等距離同型を除いて一意であることを示せ。
+
+*4 有界線形作用素の空間
+$Y$ が Banach なら $\mathcal{B}(X,Y)$ は作用素ノルムで Banach 空間である。$X$ の稠密部分空間上の有界作用素は、ノルムを保って $X$ 全体に一意に拡張されることを示せ（BLT 定理）。
+
+*4 $c_{0}$, $\ell^{1}$, $\ell^{\infty}$ の双対
+$c_{0}^{*}\cong\ell^{1}$, $(\ell^{1})^{*}\cong\ell^{\infty}$ を等距離同型として示し、$(\ell^{\infty})^{*}$ が $\ell^{1}$ より真に大きい（有限加法的測度の空間 $ba(\mathbb{N})$）ことを示せ。
+
+*5 Riesz–Markov–角谷の表現定理 {rmk}
+局所コンパクト Hausdorff 空間 $K$ について、$C_{0}(K)^{*}$ は正則な有限符号付き Borel 測度の空間 $M(K)$ に全変動ノルムで等距離同型である。正値汎関数の場合の構成（外測度・内正則性）を完全に与えよ。
+
+*4 $L^{p}$ の双対（Riesz）
+$1\le p<\infty$ と $\sigma$-有限測度について $(L^{p})^{*}\cong L^{q}$（$1/p+1/q=1$）。Radon–Nikodym の定理から証明し、$p=\infty$ で成り立たないことを示せ。
+
+*4 Clarkson の不等式と一様凸性
+$2\le p<\infty$ で $\left\|\frac{f+g}{2}\right\|_{p}^{p}+\left\|\frac{f-g}{2}\right\|_{p}^{p}\le\frac12(\|f\|_{p}^{p}+\|g\|_{p}^{p})$。これから $L^{p}$（$1<p<\infty$）が一様凸であることを示せ（$1<p<2$ では Hanner の不等式を用いよ）。
+
+*4 Milman–Pettis の定理 {milman-pettis}
+一様凸 Banach 空間は反射的である。Goldstine の定理と一様凸性から証明し、反射的だが一様凸と同値なノルムをもたない空間の存在（Day の空間）を述べよ。
+
+*4 Banach–Mazur の普遍性定理
+任意の可分 Banach 空間は $C[0,1]$ のある閉部分空間に等距離に埋め込める。単位双対球の弱*位相とカントール集合からの連続全射を用いて証明せよ。
+
+*4 Mazur–Ulam の定理
+実ノルム空間の間の全射等距離写像はアフィンである。中点の特徴づけによる証明（Väisälä の簡単な証明）を完成させ、全射性を落とすと偽になる例を作れ。
+
+*4 Banach 空間のハメル基底の濃度
+無限次元 Banach 空間のハメル基底は非可算である。Baire のカテゴリー定理から証明し、ハメル次元が $\mathfrak{c}$ 以上であること（Lacey）を述べよ。
+
+*4 Jordan–von Neumann の定理
+ノルムが内積から来る $\iff$ 平行四辺形法則が成り立つ。極化恒等式を用いて証明し、2 次元部分空間ですべて内積的なら全体が内積的であることを示せ。
+
+*4 Kakutani の特徴づけ（Hilbert 空間）
+$\dim X\ge3$ のノルム空間で、すべての 2 次元部分空間がノルム 1 の射影の像となるならば $X$ は内積空間である（Kakutani 1939）。証明の骨格を与えよ。
+
+*4 Schur の性質（$\ell^{1}$）
+$\ell^{1}$ では弱収束列はノルム収束する（Schur の補題）。滑らかな「ずれ」の議論（gliding hump）で証明し、弱位相とノルム位相は異なる（単位球面の弱閉包が単位球）ことと矛盾しない理由を説明せよ。
+
+*4 $C(K)$ の Banach–Stone の定理
+コンパクト Hausdorff 空間 $K,L$ について、$C(K)$ と $C(L)$ が等距離同型 $\iff K$ と $L$ が同相。端点（Dirac 測度の符号付き）による証明を与えよ。
+
+*4 Stone–Weierstrass の定理
+コンパクト Hausdorff 空間 $K$ 上の $C(K)$ の部分代数で、定数を含み点を分離するものは稠密である（複素版では共役で閉じることも要する）。束の議論で証明し、複素版で共役の条件が必要な例（円板代数）を挙げよ。
+
+*5 Lindenstrauss–Pełczyński の $\mathcal{L}_{p}$ 空間
+有限次元部分空間がつねに $\ell_{p}^{n}$ に一様に近い部分空間に含まれる空間（$\mathcal{L}_{p,\lambda}$ 空間）を定義し、$\mathcal{L}_{\infty}$ 空間の双対が $\mathcal{L}_{1}$ 空間であること（Lindenstrauss–Rosenthal）、$C(K)$ と $L^{1}(\mu)$ が例であることを示せ。
+
+*5 Grothendieck の $L^{\infty}$ の Dunford–Pettis 性
+$C(K)$ と $L^{1}(\mu)$ は Dunford–Pettis 性（弱コンパクト作用素は弱 Cauchy 列をノルム収束列に写す）をもつ（Grothendieck）。証明し、無限次元反射的空間はこの性質をもたないことを示せ。
+
+=ch I-2　Hahn–Banach の系譜
+
+*4 Hahn–Banach の拡張定理（実） {hb}
+実ベクトル空間 $X$ 上の劣線形汎関数 $p$ と、部分空間 $M$ 上の線形汎関数 $f\le p$ に対し、$X$ 全体への線形拡張 $F\le p$ が存在する。一次元拡張と Zorn の補題で証明し、拡張の一意性が一般に成り立たないことを示せ。
+
+*4 複素版と Bohnenblust–Sobczyk
+複素ノルム空間の部分空間上の有界線形汎関数は、ノルムを保って全体に拡張できる（Bohnenblust–Sobczyk, Suhomlinov）。実部と虚部の関係 $f(x)=\operatorname{Re}f(x)-i\operatorname{Re}f(ix)$ から導け。
+
+*4 Hahn–Banach の系：点の分離と双対ノルム
+$\|x\|=\max\{|f(x)|:\|f\|\le1\}$（最大は達成）を示し、標準埋め込み $X\to X^{**}$ が等距離であることを導け。$\operatorname{dist}(x,M)=\max\{|f(x)|: f\in M^{\perp},\ \|f\|\le1\}$ も示せ。
+
+*4 Hahn–Banach の幾何形（分離定理）
+位相ベクトル空間の交わらない凸集合 $A,B$ で $A$ が開なら、連続線形汎関数で分離できる。局所凸空間で $A$ がコンパクト、$B$ が閉なら強分離できることを Minkowski 汎関数で証明せよ。
+
+*4 Banach 極限
+$\ell^{\infty}$ 上の線形汎関数 $L$ で、$L$ がシフト不変、正値、$\liminf x_{n}\le L(x)\le\limsup x_{n}$ をみたすものが存在する。Hahn–Banach と Markov–Kakutani の二通りで構成し、$L$ が一意でないことを示せ。
+
+*4 Banach の測度問題
+$\mathbb{R}$ および $\mathbb{R}^{2}$ 上には、すべての有界部分集合に定義された、合同不変で有限加法的な測度で Lebesgue 測度を拡張するものが存在する（Banach 1923）。可解群の従順性あるいは Hahn–Banach を用いて証明し、$\mathbb{R}^{3}$ では Banach–Tarski により不可能であることを述べよ。
+
+*5 Banach–Tarski の逆理
+$\mathbb{R}^{3}$ の単位球は有限個に分割し回転と平行移動で単位球二つに組み替えられる。自由群 $F_{2}\subset SO(3)$ の構成（Hausdorff）と逆理的分解の議論を完成させ、従順性の欠如が本質であること（Tarski の定理）を述べよ。
+
+*4 Hahn–Banach と選択公理
+Hahn–Banach の定理は選択公理より真に弱いが ZF では証明できない。Hahn–Banach からある非可測集合の存在が従うこと（Foreman–Wehrung）を述べ、Ultrafilter 補題からの証明の骨格を与えよ。
+
+*4 正値線形汎関数の拡張（M. Riesz–Krein）
+順序付きベクトル空間 $X$ の錐 $K$ と、$M+K=X$ をみたす部分空間 $M$ 上の正値線形汎関数は $X$ 上の正値線形汎関数に拡張できる。M. Riesz の拡張定理とその Hamburger モーメント問題への応用を述べよ。
+
+*4 Mazur–Orlicz の定理
+劣線形汎関数 $p$ と集合 $\{x_{t}\}$, 実数 $\{c_{t}\}$ に対し、$f\le p$ かつ $f(x_{t})\ge c_{t}$ なる線形汎関数 $f$ が存在 $\iff$ 任意の有限非負結合で $\sum\lambda_{t}c_{t}\le p(\sum\lambda_{t}x_{t})$。証明し、Hahn–Banach の一般化であることを示せ。
+
+*4 Hahn–Banach の vector 版と単射空間（Nachbin–Goodner–Kelley）
+実 Banach 空間 $Y$ が「任意の作用素がノルムを保って拡張される」（1-単射）$\iff Y\cong C(K)$（$K$ は極端に非連結なコンパクト空間）。$\ell^{\infty}$ が 1-単射であることを示し、定理の骨格を与えよ。
+
+*4 Phillips の補題と $c_{0}$ の非補空間性
+$c_{0}$ は $\ell^{\infty}$ で補空間をもたない（Phillips 1940）。$\ell^{\infty}$ から $c_{0}$ への有界射影の非存在を、非可算な概非交差族（Whitley の証明）で示せ。
+
+*4 Sobczyk の定理
+$c_{0}$ は任意の可分 Banach 空間の中で（閉部分空間として含まれれば）ノルム 2 以下の射影をもつ。証明し、可分性が必要であること（$\ell^{\infty}$）を示せ。
+
+*4 Hahn–Banach の不変版（Agnew–Morse, Markov）
+可換な線形作用素の族の下で不変な劣線形汎関数に対し、不変な拡張が存在する。Markov–Kakutani の不動点定理から導け。
+
+*4 Hahn–Banach による Lagrange 乗数の存在
+凸計画 $\min f(x)$ s.t. $g(x)\le0$（Slater 条件）の乗数の存在を、像空間での Hahn–Banach の分離から導け。
+
+*4 Hahn–Banach と Krein–Milman の同値（ZF 上）
+ZF において、Hahn–Banach ＋ Krein–Milman が選択公理と同値であること（Bell–Fremlin）を述べ、一方向の証明の骨格を与えよ。
+
+*4 Hahn–Banach 拡張の一意性（Taylor–Foguel）
+ノルム空間 $X$ のすべての部分空間上の汎関数がノルム保存の拡張を一意にもつ $\iff X^{*}$ が狭義凸。証明せよ。
+
+*4 Hahn–Banach と最良近似の双対特徴づけ
+$m^{*}\in M$ が $x$ の $M$ からの最良近似 $\iff$ $\|f\|=1$, $f\in M^{\perp}$, $f(x-m^{*})=\|x-m^{*}\|$ なる $f$ が存在する。Chebyshev 近似の交代定理を導け。
+
+*5 Hahn–Banach の非可換版（Arveson の拡張定理への布石）
+作用素系（$C^{*}$-環の自己共役な単位的部分空間）上の完全正写像の拡張問題で、正値性だけでは拡張できない例を作り、完全正値性が Hahn–Banach の「正しい」非可換版の仮定であることを説明せよ。Krein の正値拡張定理と比較せよ。
+
+*5 Hahn–Banach の幾何形と Bishop–Phelps の定理
+Banach 空間の閉凸集合 $C$ の支持点は境界で稠密で、$C$ を支持する汎関数は $X^{*}$ で稠密である（Bishop–Phelps 1961）。Bishop–Phelps 錐による Zorn 型論法で証明し、ノルム達成汎関数の稠密性を系として導け。

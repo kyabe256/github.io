@@ -1,0 +1,126 @@
+=part 第 II 部　Hilbert 空間と有界作用素 | HILBERT SPACES AND OPERATORS &mdash; 201 to 400
+内積がある空間では、射影・直交分解・随伴が使え、無限次元でも有限次元の幾何がほぼそのまま生き残る。Hilbert 空間の幾何、有界作用素と正規作用素、数域と作用素不等式、コンパクト作用素と Fredholm 理論、Schatten クラスとトレース、積分作用素、再生核、行列解析まで ― 量子力学から数値解析まで使われる「作用素の言葉」をここで証明する。
+
+=ch II-1　Hilbert 空間の幾何
+
+*4 射影定理と直交分解 {proj-h}
+Hilbert 空間 $H$ の閉凸集合 $C$ への最近点射影は一意に存在し、閉部分空間 $M$ について $H=M\oplus M^{\perp}$。$P_{M}$ が自己共役冪等作用素で、逆に自己共役冪等作用素が直交射影であることを示せ。
+
+*4 Riesz の表現定理 {riesz-rep}
+Hilbert 空間上の有界線形汎関数 $f$ は $f(x)=\langle x,y\rangle$ と一意の $y$ で表され、$\|f\|=\|y\|$。射影定理から証明し、Lax–Milgram の定理（強圧的有界双線形形式の表現）へ一般化せよ。
+
+*4 Lax–Milgram の定理 {lax-milgram}
+有界かつ強圧的な（非対称でよい）双線形形式 $a$ に対し、$a(u,v)=\langle f,v\rangle$（$\forall v$）は一意解 $u$ をもち $\|u\|\le\|f\|/\alpha$。証明し、Dirichlet 問題 $-\operatorname{div}(A\nabla u)=f$ の弱解の存在を導け。
+
+*4 Bessel の不等式と Parseval の等式
+正規直交系 $\{e_{n}\}$ について $\sum|\langle x,e_{n}\rangle|^{2}\le\|x\|^{2}$、完全系なら等号。Hilbert 空間が完全正規直交系をもつこと（Zorn）と、可分なら $\ell^{2}$ と等距離同型であることを示せ。
+
+*4 Hilbert 次元の well-definedness
+Hilbert 空間の任意の二つの完全正規直交系は同じ濃度をもつ。無限の場合の証明を与えよ。
+
+*4 Gram–Schmidt と Gram 行列式
+線形独立列の Gram–Schmidt 直交化を示し、$\operatorname{dist}(x,\operatorname{span}\{x_{1},\dots,x_{n}\})^{2}=G(x_{1},\dots,x_{n},x)/G(x_{1},\dots,x_{n})$（Gram 行列式の比）を導け。
+
+*4 Müntz–Szász の定理 {muntz}
+$0<\lambda_{1}<\lambda_{2}<\dots\to\infty$ について、$\{1,x^{\lambda_{1}},x^{\lambda_{2}},\dots\}$ の線形結合が $C[0,1]$（あるいは $L^{2}[0,1]$）で稠密 $\iff\sum1/\lambda_{n}=\infty$。$L^{2}$ の場合を Gram 行列式（Cauchy 行列式）で証明せよ。
+
+*4 直交多項式と三項漸化式
+重み $w$ に関する直交多項式は三項漸化式 $xp_{n}=a_{n+1}p_{n+1}+b_{n}p_{n}+a_{n}p_{n-1}$ をみたし、零点は単純で台の凸包の内部にあり、隣り合う次数で交互配置することを示せ。Jacobi 行列との関係を述べよ。
+
+*4 Favard の定理
+三項漸化式（$a_{n}>0$）で定まる多項式列は、ある正の測度に関する直交多項式系である（Favard）。スペクトル定理を用いて証明せよ。
+
+*4 Haar 系と Walsh 系の完全性
+Haar 系が $L^{2}[0,1]$ の完全正規直交系であることを示し、$L^{p}$（$1<p<\infty$）の無条件基底でもあること（Paley, Marcinkiewicz）を述べよ。
+
+*4 Paley–Wiener の安定性定理（基底の摂動）
+正規直交基底 $\{e_{n}\}$ と列 $\{f_{n}\}$ で $\|\sum c_{n}(e_{n}-f_{n})\|\le\lambda\|c\|_{\ell^{2}}$（$\lambda<1$）なら、$\{f_{n}\}$ は Riesz 基底である。証明し、Kadec の $1/4$ 定理（$|\lambda_{n}-n|\le L<1/4$ なら $\{e^{i\lambda_{n}t}\}$ は $L^{2}[-\pi,\pi]$ の Riesz 基底）を述べよ。
+
+*4 Kadec の 1/4 定理
+$\lambda_{n}\in\mathbb{R}$, $|\lambda_{n}-n|\le L<\frac14$ ならば $\{e^{i\lambda_{n}t}\}$ は $L^{2}[-\pi,\pi]$ の Riesz 基底であり、$1/4$ は最良である（Ingham の例）。証明を完成させよ。
+
+*4 Riesz 基底とフレーム
+Riesz 基底を有界可逆作用素による正規直交基底の像として特徴づけ、フレーム（$A\|x\|^{2}\le\sum|\langle x,f_{n}\rangle|^{2}\le B\|x\|^{2}$）の再構成公式（双対フレーム）を導け。
+
+*4 Hilbert 空間の部分空間の角度と Friedrichs 角
+閉部分空間 $M,N$ の Friedrichs 角 $c(M,N)$ を定義し、$M+N$ が閉 $\iff c(M,N)<1$、および交互射影の収束率 $\|(P_{M}P_{N})^{k}-P_{M\cap N}\|=c^{2k-1}$ を示せ。
+
+*4 二つの部分空間の相対位置（Halmos の二射影定理）
+一般の位置にある二つの部分空間 $M,N$ に対し、$H=L^{2}\oplus L^{2}$ 型の分解で $P_{M}=\begin{pmatrix}1&0\\0&0\end{pmatrix}$, $P_{N}=\begin{pmatrix}c^{2}&cs\\cs&s^{2}\end{pmatrix}$ と同時に表される（Halmos 1969）。証明せよ。
+
+*4 Hilbert 空間のテンソル積と Fock 空間
+Hilbert 空間のテンソル積 $H\otimes K$ を構成し、$L^{2}(X)\otimes L^{2}(Y)\cong L^{2}(X\times Y)$ を示せ。対称 Fock 空間 $\Gamma_{s}(H)$ と指数ベクトルの完全性を示せ。
+
+*4 Hilbert 空間の超積と有限次元近似
+Hilbert 空間の超積は Hilbert 空間であることを示し、ノルム空間の超冪が Hilbert 空間 $\iff$ もとの空間が Hilbert 空間であることを示せ。
+
+*4 等角埋め込みと Schoenberg の定理
+距離空間 $(X,d)$ が Hilbert 空間に等距離に埋め込める $\iff$ $d^{2}$ が条件付き負定値（$\sum c_{i}=0\Rightarrow\sum c_{i}c_{j}d(x_{i},x_{j})^{2}\le0$）（Schoenberg 1938）。証明し、$e^{-td^{2}}$ が正定値であることとの同値性を示せ。
+
+*5 Hilbert 空間の位相的特徴づけ：Kwapień の定理
+Banach 空間 $X$ が Hilbert 空間と同型 $\iff$ $X$ が型 2 かつ余型 2（Kwapień 1972）。Maurey の分解定理を用いた証明の骨格を与えよ。
+
+*5 Lindenstrauss–Tzafriri の補空間定理
+すべての閉部分空間が補空間をもつ Banach 空間は Hilbert 空間と同型である（Lindenstrauss–Tzafriri 1971）。Dvoretzky の定理と Kwapień の定理を用いた証明の骨格を与えよ。
+
+=ch II-2　有界作用素の基本
+
+*4 随伴作用素と零空間・値域 {adjoint}
+Hilbert 空間上の有界作用素 $T$ について $\ker T^{*}=(\operatorname{range}T)^{\perp}$, $\overline{\operatorname{range}T^{*}}=(\ker T)^{\perp}$, $\|T^{*}T\|=\|T\|^{2}$ を示せ。
+
+*4 自己共役作用素のノルムと数域
+自己共役作用素 $A$ について $\|A\|=\sup_{\|x\|=1}|\langle Ax,x\rangle|$。一般の作用素では $\|T\|\le2w(T)$（数域半径）で、最良であることを示せ。
+
+*4 正作用素の平方根 {sqrt}
+正作用素 $A\ge0$ は一意の正の平方根 $A^{1/2}$ をもち、$A$ と可換な作用素は $A^{1/2}$ とも可換である。級数（あるいは単調収束）による構成で証明せよ。
+
+*4 極分解 {polar}
+有界作用素 $T$ は $T=V|T|$（$|T|=(T^{*}T)^{1/2}$、$V$ は $\ker V=\ker T$ の部分等長）と一意に表される。$T$ が可逆なら $V$ はユニタリであることを示せ。
+
+*4 部分等長作用素の特徴づけ
+$V$ が部分等長 $\iff V^{*}V$ が射影 $\iff VV^{*}$ が射影 $\iff VV^{*}V=V$。初期空間と終空間の関係を示せ。
+
+*4 Wold 分解 {wold}
+Hilbert 空間上の等長作用素 $V$ は、ユニタリ部分と片側シフトの直和 $V=U\oplus S^{(\alpha)}$ に一意に分解される（Wold–von Neumann）。$\bigcap V^{n}H$ を用いて証明せよ。
+
+*4 片側シフトのスペクトルと不変部分空間
+$\ell^{2}$ 上の片側シフト $S$ のスペクトルは閉円板、点スペクトルは空、$S^{*}$ の点スペクトルは開円板であることを示せ。
+
+*4 Fuglede の定理 {fuglede}
+正規作用素 $N$ と可換な有界作用素は $N^{*}$ とも可換である（Fuglede 1950）。Rosenblum の証明（$e^{i\bar zN}Te^{-i\bar zN}$ の有界整関数性と Liouville）を与え、Putnam による二つの正規作用素版を導け。
+
+*4 正規作用素のノルムとスペクトル半径
+正規作用素 $N$ について $\|N\|=r(N)$、$\|N^{k}\|=\|N\|^{k}$。準正規（hyponormal, $T^{*}T\ge TT^{*}$）作用素でも $\|T\|=r(T)$ であることを示せ（Stampfli）。
+
+*4 Putnam の不等式（準正規作用素）
+準正規作用素 $T$ について $\|T^{*}T-TT^{*}\|\le\frac1\pi|\sigma(T)|$（面積）。証明の骨格を与え、準正規作用素でスペクトルの面積が零なら正規であることを結論せよ。
+
+*4 Berberian の技法とスペクトルの近似点スペクトル
+任意の作用素について、境界 $\partial\sigma(T)\subset\sigma_{ap}(T)$（近似点スペクトル）を示し、Berberian の拡大で近似固有値を真の固有値に変えられることを述べよ。
+
+*4 Rosenblum の定理（Sylvester 方程式）
+有界作用素 $A,B$ について $\sigma(A)\cap\sigma(B)=\emptyset$ なら、$AX-XB=Y$ は任意の $Y$ に対し一意解 $X$ をもつ（Rosenblum 1956）。Riesz–Dunford の積分表示 $X=\frac{1}{2\pi i}\oint(A-z)^{-1}Y(B-z)^{-1}dz$ で証明せよ。
+
+*4 Lumer–Rosenblum の定理（交換子のスペクトル）
+内部導分 $\delta_{A,B}(X)=AX-XB$ のスペクトルは $\sigma(A)-\sigma(B)$ に等しい（Lumer–Rosenblum）。証明せよ。
+
+*4 Kleinecke–Shirokov の定理
+Banach 環で $[A,[A,B]]=0$ なら $[A,B]$ は擬冪零（スペクトル半径 $0$）である。証明し、Wielandt–Wintner の定理（$AB-BA=I$ は有界作用素で不可能）を導け。
+
+*4 Brown–Pearcy の交換子の特徴づけ
+$\mathcal{B}(H)$（$H$ 可分無限次元）の元が交換子 $AB-BA$ であるための必要十分条件は、$\lambda I+K$（$\lambda\neq0$, $K$ コンパクト）の形でないことである（Brown–Pearcy 1965）。主張と証明の骨格を与えよ。
+
+*4 Pearcy–Topping の分解定理
+$\mathcal{B}(H)$（$H$ 可分無限次元）の任意の元は 4 個のユニタリ作用素の線形結合であり、5 個の冪等作用素の和である（Pearcy–Topping 1967）。前者を自己共役縮小作用素 $A=\frac12((A+i\sqrt{1-A^{2}})+(A-i\sqrt{1-A^{2}}))$ から示し、後者の証明の骨格を与えよ。
+
+*4 Russo–Dye の定理
+単位的 $C^{*}$-環の開単位球はユニタリの凸包に含まれる（Russo–Dye 1966）。Kadison–Pedersen の証明（$x=\frac{1}{n}\sum u_{k}$）を与えよ。
+
+*4 Kadison の不等式（Jensen 型）
+単位的正写像 $\Phi$ と自己共役 $A$ について $\Phi(A)^{2}\le\Phi(A^{2})$（Kadison 1952）。2-正写像では $\Phi(A)^{*}\Phi(A)\le\Phi(A^{*}A)$（Choi）を示せ。
+
+*5 Halmos の 10 の問題と準三角作用素（Apostol–Foias–Voiculescu）
+作用素 $T$ が準三角（有限ランク射影の増大列 $P_{n}\to I$ で $\|P_{n}TP_{n}-TP_{n}\|\to0$）であるための必要十分条件は、半 Fredholm 指数が負とならないこと（Apostol–Foias–Voiculescu 1973）。主張と証明の骨格を与え、片側シフト $S^{*}$ が準三角でないことを示せ。
+
+*5 Voiculescu の非可換 Weyl–von Neumann 定理
+可分 $C^{*}$-環 $A\subset\mathcal{B}(H)$ の二つの表現 $\pi,\rho$ について、$\pi\oplus\rho$ と $\pi$ はコンパクト作用素を法として近似的にユニタリ同値である（$\rho$ がコンパクト作用素を零に写すとき）（Voiculescu 1976）。主張を述べ、Weyl–von Neumann の定理を特殊化として得よ。

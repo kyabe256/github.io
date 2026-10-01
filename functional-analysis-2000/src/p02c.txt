@@ -1,0 +1,123 @@
+=ch II-5　Fredholm 作用素と指数
+
+*4 Fredholm 作用素と指数 {fredholm}
+有界作用素 $T$ が Fredholm（$\ker T$, $\operatorname{coker}T$ が有限次元）なら値域は閉である。指数 $\operatorname{ind}T=\dim\ker T-\dim\operatorname{coker}T$ を定義し、$\operatorname{ind}(I-K)=0$（$K$ コンパクト）を示せ。
+
+*4 Atkinson の定理 {atkinson}
+$T$ が Fredholm $\iff$ Calkin 環で可逆 $\iff$ $ST-I$, $TS-I$ がコンパクトとなる $S$ が存在する。証明せよ。
+
+*4 指数の乗法性
+Fredholm 作用素 $S,T$ について $\operatorname{ind}(ST)=\operatorname{ind}S+\operatorname{ind}T$。完全列の議論で証明せよ。
+
+*4 指数の安定性 {ind-stab}
+Fredholm 作用素の集合は開集合で、指数は局所定数（ノルム連続）であり、コンパクト摂動で不変である。Schechter の安定性の議論で証明せよ。
+
+*4 Fredholm 作用素の連結成分と指数（Atiyah–Jänich の原型）
+$\mathcal{B}(H)$ の Fredholm 作用素の連結成分は指数で完全に分類される（各整数に一つ）。$S^{n}$, $(S^{*})^{n}$ が各成分の代表であることを示せ。
+
+*4 半 Fredholm 作用素と Kato の摂動定理
+値域が閉で核または余核の一方が有限次元の作用素（半 Fredholm）の集合は開で、指数（$\pm\infty$ を許す）は局所定数であり、Kato の「縮小最小モジュラス」で安定性半径を評価できることを示せ。
+
+*4 Toeplitz 作用素の指数定理 {toeplitz-ind}
+単位円周上の連続関数 $\varphi$（零点なし）に対する Toeplitz 作用素 $T_{\varphi}$ は Fredholm で $\operatorname{ind}T_{\varphi}=-\operatorname{wind}(\varphi,0)$（Gohberg–Krein）。Hardy 空間とシフトを用いて証明せよ。
+
+*4 Coburn の補題
+非零の Toeplitz 作用素 $T_{\varphi}$ について、$\ker T_{\varphi}=0$ または $\ker T_{\varphi}^{*}=0$ のいずれかが成り立つ（Coburn 1966）。証明し、指数が零なら可逆であることを導け。
+
+*4 Wiener–Hopf 分解と Toeplitz 方程式
+$\varphi$ が Wiener 代数に属し回転数零なら、$\varphi=\varphi_{+}\varphi_{-}$（$\varphi_{\pm}$ は内外で可逆）と分解でき、$T_{\varphi}^{-1}=T_{\varphi_{+}^{-1}}T_{\varphi_{-}^{-1}}$。証明せよ。
+
+*4 Szegő の極限定理
+正の連続関数 $f$ の Toeplitz 行列 $T_{n}(f)$ について $\lim\frac1n\log\det T_{n}(f)=\frac{1}{2\pi}\int\log f$（Szegő の第一定理）。強 Szegő 定理 $\det T_{n}(f)\sim G(f)^{n}E(f)$（$E(f)=\exp\sum k|\widehat{\log f}(k)|^{2}$）を述べよ。
+
+*4 強 Szegő 極限定理（Ibragimov, Johansson）
+$\sum k|\widehat{\log f}(k)|^{2}<\infty$ の下で $\det T_{n}(f)/G(f)^{n}\to\exp(\sum_{k\ge1}k\widehat{\log f}(k)\widehat{\log f}(-k))$。Borodin–Okounkov の公式あるいは Widom の作用素論的証明の骨格を与えよ。
+
+*4 Fisher–Hartwig 予想
+零点・ジャンプをもつ記号の Toeplitz 行列式の漸近公式（Fisher–Hartwig）を述べ、Deift–Its–Krasovsky による解決（Riemann–Hilbert 法）を述べよ。
+
+*4 楕円型作用素の Fredholm 性（有界領域）
+滑らかな有界領域上の一様楕円型作用素 $L$ が $H^{2}\cap H^{1}_{0}\to L^{2}$ の Fredholm 作用素（指数 $0$）であることを、Gårding の不等式と Rellich のコンパクト性から示せ。
+
+*4 Fredholm 理論の Banach 環版（Ruston, Barnes）
+Banach 環のイデアル $J$ に関する Fredholm 元を定義し、Riesz 元（$J$ を法とするスペクトル半径 $0$）の性質を述べよ。
+
+*4 本質的スペクトルの諸定義と関係
+Fredholm スペクトル、Weyl スペクトル（指数零の Fredholm でない）、Browder スペクトルの関係 $\sigma_{e}\subset\sigma_{w}\subset\sigma_{b}$ を示し、それぞれが真の包含となる例を作れ。
+
+*4 Weyl の定理（作用素論の意味）
+正規作用素（より一般に準正規作用素）について、$\sigma(T)\setminus\sigma_{w}(T)$ がちょうど孤立した有限重複度の固有値の集合であること（Weyl の定理、Coburn）を示せ。
+
+*4 Fredholm 指数と分光流（spectral flow）
+自己共役 Fredholm 作用素の連続族 $A_{t}$ の分光流を定義し、$\mathbb{R}$ 上の $\partial_{t}+A_{t}$ の Fredholm 指数が分光流に等しいこと（Robbin–Salamon）を述べよ。
+
+*4 Fredholm 写像と Smale の無限次元 Sard 定理
+Banach 多様体の間の $C^{k}$ Fredholm 写像（指数 $n$, $k>\max(n,0)$）の正則値は残留集合をなす（Smale 1965）。証明の骨格を与え、指数が微分の指数で定まることを示せ。
+
+*5 Atiyah–Jänich の定理 {aj}
+コンパクト空間 $X$ について、$X$ から Fredholm 作用素の空間 $\mathcal{F}(H)$ への写像のホモトピー類は $K^{0}(X)$ に同型である：$[X,\mathcal{F}]\cong K^{0}(X)$（Atiyah–Jänich）。指数束の構成と Kuiper の定理（$\mathcal{GL}(H)$ の可縮性）を用いた証明の骨格を与えよ。
+
+*5 Kuiper の定理
+無限次元可分 Hilbert 空間の可逆作用素の群 $GL(H)$ はノルム位相で可縮である（Kuiper 1965）。証明の骨格を与え、Banach 空間では成り立たない例（Douady, Mityagin）を述べよ。
+
+=ch II-6　Schatten クラスとトレース
+
+*4 トレースクラスとトレース {trace}
+$\|T\|_{1}=\operatorname{tr}|T|<\infty$ のコンパクト作用素の空間 $\mathcal{S}_{1}$ は Banach 空間で、トレース $\operatorname{tr}T=\sum\langle Te_{n},e_{n}\rangle$ は正規直交基底に依らず well-defined である。$|\operatorname{tr}T|\le\|T\|_{1}$ を示せ。
+
+*4 Schatten クラスの双対
+$\mathcal{K}(H)^{*}\cong\mathcal{S}_{1}$, $\mathcal{S}_{1}^{*}\cong\mathcal{B}(H)$, $\mathcal{S}_{p}^{*}\cong\mathcal{S}_{q}$（$1<p<\infty$）をトレース双対性 $(A,B)\mapsto\operatorname{tr}AB$ により示せ。
+
+*4 Schatten クラスの Hölder 不等式と三角不等式
+$\|AB\|_{r}\le\|A\|_{p}\|B\|_{q}$（$1/r=1/p+1/q$）と、$\|\cdot\|_{p}$ がノルムであること（$p\ge1$）を、特異値の Ky Fan 型不等式（Horn の不等式）から示せ。
+
+*4 Lidskii のトレース定理 {lidskii}
+トレースクラス作用素 $T$ について $\operatorname{tr}T=\sum\lambda_{n}(T)$（固有値の和、重複度込み）（Lidskii 1959）。Schur の三角化と準冪零部分のトレースが零であること（Ringrose）、あるいは Fredholm 行列式の Hadamard 因数分解による証明を与えよ。
+
+*4 Fredholm 行列式 {fredholm-det}
+トレースクラス $T$ について $\det(I+zT)=\prod(1+z\lambda_{n})$ は整関数で、$|\det(I+T)|\le e^{\|T\|_{1}}$。$\det(I+T)\neq0\iff I+T$ が可逆であることを示し、Plemelj–Smithies の公式を述べよ。
+
+*4 Fredholm の積分方程式論
+連続核 $K(x,y)$ について、Fredholm 行列式 $D(\lambda)$ と Fredholm 小行列式による $(I-\lambda K)^{-1}$ の表示を導き、Hadamard の不等式を用いて級数の収束を示せ（Fredholm 1903）。
+
+*4 Weyl の不等式（Schatten クラス）
+$T\in\mathcal{S}_{p}$ なら $\sum|\lambda_{n}|^{p}\le\sum s_{n}^{p}=\|T\|_{p}^{p}$（Weyl）。$p\le1$ でも成り立つことを外積代数から示せ。
+
+*4 Hilbert–Schmidt 作用素 {hs}
+$\mathcal{S}_{2}$ は内積 $\operatorname{tr}(B^{*}A)$ で Hilbert 空間であり、$L^{2}(X)$ 上の積分作用素が Hilbert–Schmidt $\iff$ 核が $L^{2}(X\times X)$ に属することを示せ。
+
+*4 トレースクラス積分作用素と Mercer の定理 {mercer}
+コンパクト空間上の連続な正定値核 $K$ について、$K(x,y)=\sum\lambda_{n}\phi_{n}(x)\overline{\phi_{n}(y)}$ が一様収束し、$\operatorname{tr}K=\int K(x,x)dx$（Mercer 1909）。証明せよ。
+
+*4 連続核のトレースの公式の失敗（Carleman の例）
+連続核をもつ積分作用素でトレースクラスでないもの（Carleman 1918）を構成し、Duflo・Brislawn の定理（トレースクラスなら $\operatorname{tr}=\int K(x,x)$ が適当な意味で成り立つ）を述べよ。
+
+*4 Schatten クラスの補間
+$\mathcal{S}_{p}$ の族が複素補間空間をなす：$[\mathcal{S}_{p_{0}},\mathcal{S}_{p_{1}}]_{\theta}=\mathcal{S}_{p}$。これを用いて Schatten クラスの Hausdorff–Young 型不等式を示せ。
+
+*4 McCarthy の不等式と Clarkson 型不等式
+$\mathcal{S}_{p}$（$1<p<\infty$）の一様凸性と一様平滑性を、Clarkson–McCarthy の不等式から示せ。
+
+*4 Macaev のイデアルと Dixmier トレース
+Macaev イデアル $\mathcal{L}^{1,\infty}$（$\sum_{n\le N}s_{n}=O(\log N)$）を定義し、Banach 極限 $\omega$ による Dixmier トレース $\operatorname{Tr}_{\omega}(T)=\omega(\frac{1}{\log N}\sum_{n\le N}s_{n})$ が正値・ユニタリ不変・有限ランク作用素で零であることを示せ。
+
+*4 Connes のトレース定理
+閉多様体 $M^{n}$ 上の $(-n)$ 次の古典擬微分作用素 $P$ について $\operatorname{Tr}_{\omega}(P)=\frac{1}{n(2\pi)^{n}}\operatorname{Res}_{W}(P)$（Wodzicki 留数）（Connes 1988）。主張を述べ、$P=(1+\Delta)^{-n/2}$ で体積を復元することを確かめよ。
+
+*4 Calkin のイデアル対応
+$\mathcal{B}(H)$ の両側イデアルと、正の数列空間 $c_{0}^{+}$ の再配置不変で遺伝的なイデアルとの一対一対応（Calkin 1941）を示せ。
+
+*4 交換子の空間とトレースの一意性（Dykema–Figiel–Weiss–Wodzicki）
+イデアル $J$ 上のトレース（交換子で零となる線形汎関数）の存在が、$J$ の数列空間の「Cesàro 不変性」で決まること（DFWW 2004）を述べ、$\mathcal{S}_{1}$ 上のトレースが一意（スカラー倍を除いて）であることを示せ。
+
+*4 Kato–Rosenblum の定理
+自己共役作用素 $A$ のトレースクラス摂動 $B=A+V$ について、波動作用素 $W_{\pm}=\operatorname{s-lim}e^{itB}e^{-itA}P_{ac}(A)$ が存在し完全である（Kato 1957, Rosenblum）。絶対連続部分がユニタリ同値であることを結論せよ。
+
+*4 Krein のスペクトルシフト関数
+トレースクラス摂動 $B=A+V$ について、$\operatorname{tr}(f(B)-f(A))=\int f'(\lambda)\xi(\lambda)d\lambda$ となる $\xi\in L^{1}$ が存在する（Krein 1953）。$\xi$ と摂動行列式の関係 $\xi(\lambda)=\frac1\pi\lim\arg\det(I+V(A-\lambda-i0)^{-1})$ を述べよ。
+
+*5 Krein のトレース公式の作用素 Lipschitz 性（Potapov–Sukochev）
+Lipschitz 関数 $f$ は $\mathcal{S}_{p}$（$1<p<\infty$）上で作用素 Lipschitz である：$\|f(A)-f(B)\|_{p}\le C_{p}\|A-B\|_{p}$（Potapov–Sukochev 2011）。一方 $p=1,\infty$ では成り立たない（$|x|$ の反例、Kato, Farforovskaya）ことを述べ、二重作用素積分による証明の骨格を与えよ。
+
+*5 Lidskii の定理の完全証明
+トレースクラス作用素 $T$ について、$\det(I+zT)$ の零点が $-1/\lambda_{n}$ で位数が代数的重複度に等しいこと、$\log\det(I+zT)$ の Taylor 係数と $\operatorname{tr}T^{k}$ の関係、そして $|\det(I+zT)|\le\exp(\|zT\|_{1})$ と Hadamard の因数分解定理（位数 1 の整関数）を組み合わせて、$\operatorname{tr}T=\sum\lambda_{n}$ を完全に証明せよ。

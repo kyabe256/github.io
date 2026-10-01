@@ -1,0 +1,123 @@
+=ch I-5　端点・Krein–Milman・Choquet 理論
+
+*4 Krein–Milman の定理 {km}
+局所凸 Hausdorff 空間の空でないコンパクト凸集合は端点をもち、端点集合の閉凸包に等しい。Zorn の補題による極端部分集合の議論で証明せよ。
+
+*4 Milman の逆定理
+コンパクト凸集合 $K=\overline{\operatorname{conv}}(Z)$（$Z$ はコンパクト）ならば $\operatorname{ext}K\subset Z$（Milman）。証明し、$\operatorname{ext}K$ が閉とは限らないことを示せ。
+
+*4 $L^{1}$, $c_{0}$ は双対空間ではない
+$L^{1}[0,1]$ と $c_{0}$ の閉単位球がどちらも端点をもたないことを示し、Krein–Milman と Alaoglu から両者がいかなる Banach 空間の双対とも等距離同型でないことを導け。
+
+*4 $C(K)^{*}$ の単位球の端点
+$C(K)^{*}$ の単位球の端点がちょうど $\pm\lambda\delta_{x}$（$|\lambda|=1$, $x\in K$）であることを示し、Banach–Stone の定理への応用を述べよ。
+
+*4 Birkhoff の定理の無限次元版と Krein–Milman
+二重確率作用素（$L^{\infty}$ と $L^{1}$ で縮小、定数を保つ）の集合の端点が、測度保存変換で生成される作用素であるか（Lindenstrauss の問題）を論じ、有限次元の Birkhoff–von Neumann の定理を Krein–Milman から再証明せよ。
+
+*4 Stone–Weierstrass の de Branges による証明
+$C(K)$ の閉部分代数 $A$ について、$A^{\perp}$ の単位球の端点 $\mu$ の台上で $A$ の元は定数であることを示し、これから Stone–Weierstrass の定理を導け（de Branges 1959）。
+
+*4 Bishop の反対称分解
+一様代数 $A\subset C(K)$ に対し、$K$ は最大反対称集合に分割され、$f\in C(K)$ が各最大反対称集合上で $A$ に属するなら $f\in A$（Bishop の Stone–Weierstrass 定理）。de Branges の方法で証明せよ。
+
+*4 Choquet の表現定理 {choquet}
+距離化可能なコンパクト凸集合 $K$ の各点 $x$ は、$\operatorname{ext}K$（$G_{\delta}$ 集合）に集中した確率測度 $\mu$ の重心である。上包 $\hat f$ と最大測度（Bishop–de Leeuw 順序）の議論で証明せよ。
+
+*4 Bishop–de Leeuw の定理
+距離化可能でないコンパクト凸集合では $\operatorname{ext}K$ が Borel 可測でないことがあるが、各点は $\operatorname{ext}K$ を含むすべての Baire 集合に集中した測度で表現される（Bishop–de Leeuw）。主張を述べよ。
+
+*4 Choquet 単体と表現の一意性
+コンパクト凸集合 $K$ において、各点の最大表現測度が一意 $\iff K$ が Choquet 単体（$K$ が生成する錐が束をなす）。Choquet–Meyer の定理を証明の骨格とともに述べよ。
+
+*4 不変測度の集合のエルゴード分解
+コンパクト距離空間上の連続写像の不変確率測度全体は Choquet 単体であり、端点はちょうどエルゴード的測度である。Choquet の定理からエルゴード分解を導け。
+
+*4 Bernstein の定理（完全単調関数）
+$(0,\infty)$ 上の完全単調関数 $f$（$(-1)^{n}f^{(n)}\ge0$）は $f(x)=\int_{[0,\infty)}e^{-xt}d\mu(t)$ と表される。$f(0+)=1$ の完全単調関数の凸集合の端点が指数関数 $e^{-tx}$ であることを示し、Choquet の定理から導け。
+
+*4 Bochner の定理の Choquet 理論的証明
+$\mathbb{R}$ 上の連続な正定値関数で $\varphi(0)=1$ のもの全体の凸集合の端点が指標 $e^{i\xi x}$ であることを示し、Bochner の定理を Choquet 表現として導け。
+
+*4 de Finetti の定理（Hewitt–Savage）
+交換可能な確率変数列の分布は i.i.d. 列の分布の混合である。交換可能な確率測度の凸集合の端点が i.i.d. 測度であることを示し、Choquet の定理から導け。
+
+*4 Krein–Milman の逆と Lindenstrauss の定理（露出点）
+Banach 空間の弱コンパクト凸集合は、強露出点の閉凸包である（Lindenstrauss 1963, Troyanski）。証明の骨格を与えよ。
+
+*4 Krein–Milman 性と Radon–Nikodym 性
+Banach 空間 $X$ が Krein–Milman 性（有界閉凸集合が端点の閉凸包）をもつことを定義し、RNP $\Rightarrow$ KMP（Lindenstrauss）を示せ。逆は双対空間・束では成り立つ（Huff–Morris, Bourgain–Talagrand）が一般には未解決であることを述べよ。
+
+*4 面と極端部分集合の位相
+コンパクト凸集合の閉面の格子構造と、端点集合の境界性（Choquet 境界、Shilov 境界との関係）を説明し、円板代数の Shilov 境界が単位円周であることを示せ。
+
+*4 Shilov 境界の存在
+一様代数 $A\subset C(K)$ に対し、$A$ のすべての元の最大値をとる最小の閉集合（Shilov 境界）が存在する。証明し、Choquet 境界の閉包と一致すること（Bishop–de Leeuw）を述べよ。
+
+*5 Phelps の Choquet 理論の主要定理群
+距離化可能なコンパクト凸集合について、(i) 端点集合が $G_{\delta}$、(ii) Choquet の表現定理、(iii) 単体であることと表現の一意性の同値、(iv) Bauer 単体（端点集合が閉）$\iff$ $K\cong P(\operatorname{ext}K)$（確率測度空間）、をすべて証明せよ。
+
+*5 Poulsen 単体の普遍性と一意性（Lindenstrauss–Olsen–Sternfeld）
+端点集合が稠密な距離化可能 Choquet 単体（Poulsen 単体）は、アフィン同相を除いて一意で、任意の距離化可能単体を閉面として含む（Lindenstrauss–Olsen–Sternfeld 1978）。主張と、端点集合の位相の均質性の議論を述べよ。
+
+=ch I-6　局所凸空間
+
+*4 局所凸空間の半ノルムによる記述 {lcs}
+位相ベクトル空間が局所凸 $\iff$ 半ノルムの族で位相が生成される。Minkowski 汎関数を用いて証明し、局所凸空間が距離化可能 $\iff$ 可算個の半ノルムで生成されることを示せ。
+
+*4 $L^{p}$（$0<p<1$）の双対は自明
+$0<p<1$ で $L^{p}[0,1]$ は完備な距離化可能位相ベクトル空間だが、連続線形汎関数は $0$ のみである（Day 1940）。証明し、局所凸性を欠くと Hahn–Banach が破綻することを結論せよ。
+
+*4 Kolmogorov の正規化可能性判定
+Hausdorff 位相ベクトル空間がノルム化可能 $\iff$ 有界な凸の $0$ の近傍をもつ（Kolmogorov 1934）。証明せよ。
+
+*4 双対対と整合的位相（Mackey–Arens） {ma}
+双対対 $\langle X,Y\rangle$ に対し、$X$ 上の局所凸位相で双対が $Y$ となるものは、弱位相 $\sigma(X,Y)$ と Mackey 位相 $\tau(X,Y)$（$Y$ の絶対凸 $\sigma(Y,X)$-コンパクト集合上の一様収束）の間にあるものに限る（Mackey–Arens）。証明せよ。
+
+*4 双極定理
+双対対 $\langle X,Y\rangle$ について、$A\subset X$ の双極 $A^{\circ\circ}$ は $A$ の $\sigma(X,Y)$-閉絶対凸包に等しい。Hahn–Banach の分離形から証明せよ。
+
+*4 Mackey の定理（有界集合）
+局所凸空間の部分集合が有界であることは、双対に整合的なすべての位相で同じである（Mackey）。特に弱有界 $\iff$ 有界。Banach–Steinhaus から導け。
+
+*4 Grothendieck の完備化定理
+局所凸空間 $X$ の完備性を双対で特徴づけ：$X$ の完備化は、$X^{*}$ 上の線形汎関数で、$X$ の同程度連続部分集合上で弱*連続なもの全体である（Grothendieck）。証明せよ。
+
+*4 Tychonoff 積と局所凸空間の例
+$\mathbb{R}^{I}$、$C(\Omega)$（コンパクト一様収束位相）、$C^{\infty}(\Omega)$、$\mathcal{S}(\mathbb{R}^{n})$ が局所凸空間であることを示し、どれが Fréchet 空間でどれがノルム化可能でないかを判定せよ。
+
+*4 Montel 空間
+有界集合が相対コンパクトな樽型空間を Montel 空間という。$C^{\infty}(\Omega)$、$\mathcal{H}(\Omega)$（正則関数）、$\mathcal{S}$、$\mathcal{D}$ が Montel であることを示し、無限次元 Banach 空間は Montel でないことを示せ。
+
+*4 Montel 空間の反射性
+Montel 空間は反射的であり、その強双対も Montel である。証明せよ。
+
+*4 Schwartz 空間（Grothendieck の意味）と核型空間の区別
+局所凸空間が Schwartz 空間（各 $0$ の近傍 $U$ に、$U$ に関してプレコンパクトな近傍 $V$ が存在）であることを定義し、核型 $\Rightarrow$ Schwartz $\Rightarrow$（Fréchet なら）Montel の含意と、逆が成り立たない例を述べよ。
+
+*4 弱位相の完備性の失敗
+無限次元ノルム空間 $X$ は弱位相 $\sigma(X,X^{*})$ で完備でない（完備化は $X^{*}$ の代数的双対）ことを示せ。
+
+*4 Banach–Dieudonné の定理
+Fréchet 空間 $X$ の双対 $X^{*}$ 上で、弱*位相の同程度連続集合上での制限が決める最も強い位相は、$X$ の零列からなるコンパクト集合上の一様収束位相に一致する。証明せよ。
+
+*4 Krein の定理（局所凸空間の弱コンパクト凸包）
+準完備な局所凸空間の弱コンパクト集合の閉凸包は弱コンパクトである（Krein）。Krein–Šmulian の定理の局所凸版として証明せよ。
+
+*4 Banach 空間の超積と有限表現可能性
+Banach 空間の超積 $(X)_{\mathcal{U}}$ を定義し、$Y$ が $X$ で有限表現可能 $\iff Y$ が超冪 $X_{\mathcal{U}}$ に等距離に埋め込める（Stern, Heinrich）ことを示せ。$X^{**}$ が $X$ で有限表現可能であること（局所反射性）を述べよ。
+
+*4 局所反射性原理（Lindenstrauss–Rosenthal, Johnson–Rosenthal–Zippin）
+$X^{**}$ の有限次元部分空間 $E$ と $X^{*}$ の有限次元部分空間 $F$、$\varepsilon>0$ に対し、$(1+\varepsilon)$-同型 $T:E\to X$ で $E\cap X$ 上恒等、$\langle Te,f\rangle=\langle e,f\rangle$（$f\in F$）となるものが存在する。証明せよ。
+
+*4 Grothendieck の不等式による局所凸位相の比較
+可換 $C^{*}$-環上の双線形形式が有界ならば、二つの状態 $\varphi,\psi$ で $|u(x,y)|\le K_{G}\|u\|\varphi(|x|^{2})^{1/2}\psi(|y|^{2})^{1/2}$ をみたす（Grothendieck の不等式の関数解析的形）。主張を述べ、射影テンソル積と単射テンソル積のノルムの比較として解釈せよ。
+
+*4 テンソル積の位相（射影・単射）
+Banach 空間の射影テンソル積 $X\hat\otimes_{\pi}Y$ と単射テンソル積 $X\check\otimes_{\varepsilon}Y$ を定義し、$(X\hat\otimes_{\pi}Y)^{*}\cong\mathcal{B}(X,Y^{*})$、$L^{1}(\mu)\hat\otimes_{\pi}X\cong L^{1}(\mu;X)$、$C(K)\check\otimes_{\varepsilon}X\cong C(K;X)$ を示せ。
+
+*5 Grothendieck の近似性質とテンソル積
+Banach 空間 $X$ が近似性質をもつ $\iff$ すべての $Y$ で $X\hat\otimes_{\pi}Y\to X\check\otimes_{\varepsilon}Y$ が単射 $\iff$ 核作用素がトレースで well-defined（Grothendieck）。同値性を証明せよ。
+
+*5 Grothendieck の「Résumé」の基本定理
+$\ell^{1}$ から $\ell^{2}$ への任意の有界作用素は 1-総和作用素であり、$\pi_{1}(T)\le K_{G}\|T\|$ である。Grothendieck の不等式（$\ell^{\infty}\otimes\ell^{\infty}$ 上の双線形形式の版）から導け。

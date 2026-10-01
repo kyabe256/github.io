@@ -1,0 +1,123 @@
+=ch I-9　不動点定理
+
+*4 Banach の縮小写像の原理 {banach-fp}
+完備距離空間の縮小写像は一意の不動点をもち、反復は線形収束する。Picard–Lindelöf の定理と陰関数定理への応用を述べ、縮小でない（$d(Tx,Ty)<d(x,y)$）だけでは不動点がない例を作れ（コンパクトなら存在すること（Edelstein）も示せ）。
+
+*4 Schauder の不動点定理 {schauder}
+Banach 空間の閉凸集合 $C$ から $C$ への連続写像で像が相対コンパクトなものは不動点をもつ。Brouwer の定理と Schauder 射影（有限次元近似）で証明せよ。
+
+*4 Tychonoff の不動点定理
+局所凸空間のコンパクト凸集合から自身への連続写像は不動点をもつ。Schauder の方法を局所凸空間に拡張して証明せよ。
+
+*4 Schaefer の定理（Leray–Schauder の先験的評価）
+Banach 空間上のコンパクト連続写像 $T$ について、$\{x: x=\lambda Tx,\ 0\le\lambda\le1\}$ が有界なら $T$ は不動点をもつ。Schauder から導き、非線形楕円型方程式の存在証明への応用を述べよ。
+
+*4 Markov–Kakutani の不動点定理 {mk}
+局所凸空間のコンパクト凸集合 $K$ 上の可換な連続アフィン写像の族は共通不動点をもつ。証明し、可換群・可解群の従順性への応用を述べよ。
+
+*4 Kakutani の不動点定理（群版）
+局所凸空間のコンパクト凸集合に同程度連続にアフィンに作用する群は不動点をもつ（Kakutani 1938）。コンパクト群上の Haar 測度の存在を導け。
+
+*4 Ryll-Nardzewski の不動点定理 {rn}
+Banach 空間の弱コンパクト凸集合 $K$ にアフィン弱連続に作用する半群で、ノルムで非収縮（distal）なものは共通不動点をもつ（Ryll-Nardzewski 1967）。Namioka–Asplund の証明の骨格を与え、コンパクト群の Haar 測度の存在の別証明とせよ。
+
+*4 Kakutani–Fan–Glicksberg の不動点定理
+局所凸空間のコンパクト凸集合上の、凸閉値で上半連続な集合値写像は不動点をもつ。Kakutani の有限次元版から導け。
+
+*4 Browder–Göhde–Kirk の定理
+一様凸 Banach 空間の有界閉凸集合上の非拡大写像は不動点をもつ。正規構造による Kirk の証明を与えよ。
+
+*4 Alspach の例（$L^{1}$ の弱コンパクト凸集合上の固定点のない非拡大写像）
+$L^{1}[0,1]$ の弱コンパクト凸集合で、不動点をもたない等距離写像が存在する（Alspach 1981）。構成の骨格を与え、正規構造の必要性を論ぜよ。
+
+*4 Maurey の定理（反射的部分空間の不動点性）
+$L^{1}$ の反射的部分空間の閉凸有界集合上の非拡大写像は不動点をもつ（Maurey）。超積の手法による証明の骨格を述べよ。
+
+*4 Dowling–Lennard の定理（不動点性と反射性）
+$L^{1}$ の非反射的部分空間は不動点性を欠く（Dowling–Lennard 1997）。主張を述べ、Maurey の結果と合わせて $L^{1}$ の部分空間では「不動点性 $\iff$ 反射性」であることを結論せよ。
+
+*4 Caristi の定理と Ekeland の原理の同値性
+完備距離空間上の Caristi 写像（$d(x,Tx)\le\phi(x)-\phi(Tx)$）は不動点をもつ。Ekeland の変分原理と同値であることを示せ。
+
+*4 Krasnoselskii の不動点定理（縮小＋コンパクト）
+閉凸集合 $C$ 上の写像 $A+B$（$A$ はコンパクト連続、$B$ は縮小）で $Ax+By\in C$ なら不動点をもつ。Schauder と Banach から証明せよ。
+
+*4 Lefschetz の不動点定理（有限次元）と Schauder の位相的意味
+コンパクト多面体上の連続写像の Lefschetz 数が非零なら不動点が存在する。Brouwer の定理を特殊化として得て、Schauder の定理を Lefschetz–Leray の文脈に位置づけよ。
+
+*4 Darbo–Sadovskii の不動点定理（非コンパクト性測度）
+Kuratowski の非コンパクト性測度 $\alpha$ を定義し、$\alpha(T(A))\le k\alpha(A)$（$k<1$）をみたす連続写像は不動点をもつ（Darbo 1955）。証明せよ。
+
+*4 Brouwer の不動点定理の解析的証明（Milnor–Rogers）
+$B^{n}$ から $S^{n-1}$ への $C^{1}$ レトラクションが存在しないことを、体積の多項式性（Milnor の証明）あるいは微分形式（Rogers）で示し、Brouwer の定理を導け。
+
+*4 Sperner の補題と Brouwer の組合せ論的証明
+単体の三角形分割の Sperner 彩色には奇数個の完全彩色単体が存在する。これから Brouwer の不動点定理を導き、計算量（PPAD）の観点を述べよ。
+
+*4 Leray–Schauder の継続原理
+コンパクトなホモトピー $H(x,t)$ で $x\neq H(x,t)$（$x\in\partial U$）なら、$H(\cdot,0)$ と $H(\cdot,1)$ の不動点指数は等しい。Leray–Schauder 写像度の基本性質から導き、非線形境界値問題の存在定理に応用せよ。
+
+*5 Brouwer の不動点定理の無限次元での破綻と Kakutani の例
+無限次元 Hilbert 空間の閉単位球から自身への連続写像で不動点をもたないものが存在する（Kakutani 1943）。構成し、さらに単位球は単位球面へのレトラクトであり可縮である（Benyamini–Sternfeld：Lipschitz レトラクト）ことを述べよ。
+
+=ch I-10　ベクトル値測度と Bochner 積分
+
+*4 Bochner 可測性と Pettis の可測性定理 {pettis}
+Banach 空間値関数 $f$ が強可測（単関数のほとんど至る所の極限）$\iff$ 弱可測かつ本質的に可分値（Pettis 1938）。証明せよ。
+
+*4 Bochner 積分 {bochner}
+$f$ が Bochner 可積分 $\iff$ 強可測かつ $\int\|f\|<\infty$。Bochner 積分の優収束定理と、有界作用素との交換 $T\int f=\int Tf$ を示せ。
+
+*4 Pettis 積分と Bochner 積分の違い
+弱可積分で Pettis 積分をもつが Bochner 可積分でない関数の例（$c_{0}$ 値や $\ell^{2}$ 値）を作れ。
+
+*4 ベクトル測度の基本性質（Bartle–Dunford–Schwartz）
+可算加法的なベクトル測度 $F:\Sigma\to X$ は有界な半変分をもち、非負な制御測度 $\lambda$（$\lambda(E)\to0\Rightarrow\|F\|(E)\to0$）をもつ（Bartle–Dunford–Schwartz）。証明せよ。
+
+*4 Lyapunov の凸性定理 {lyapunov}
+非原子的な $\mathbb{R}^{n}$ 値ベクトル測度の値域はコンパクト凸集合である（Lyapunov 1940）。Lindenstrauss の Krein–Milman を用いた証明を与えよ。
+
+*4 Lyapunov の定理の無限次元での破綻
+$\ell^{2}$ 値の非原子的ベクトル測度で値域が凸でない、あるいは閉でない例を作れ（Lyapunov の定理は無限次元で成り立たない）。Uhl の定理（RNP をもつ空間値で有界変分なら値域の閉包は凸）を述べよ。
+
+*4 Radon–Nikodym 性質の定義と例 {rnp}
+Banach 空間 $X$ が RNP（有界変分で $\mu$ に絶対連続なベクトル測度が Bochner 可積分な密度をもつ）をもつことを定義し、反射的空間と可分な双対空間が RNP をもち、$c_{0}$, $L^{1}[0,1]$, $C[0,1]$ がもたないことを示せ。
+
+*4 Dunford–Pettis の定理（可分双対の RNP）
+可分な双対空間は RNP をもつ（Dunford–Pettis 1940）。弱*可測関数の可分性を用いて証明せよ。
+
+*4 RNP のマルチンゲールによる特徴づけ（Chatterji）
+$X$ が RNP をもつ $\iff$ $L^{1}$ 有界な $X$ 値マルチンゲールがすべて概収束する（Chatterji 1968）。証明の骨格を与えよ。
+
+*4 RNP の幾何学的特徴づけ（Rieffel, Davis–Phelps, Huff）
+$X$ が RNP をもつ $\iff$ すべての有界集合が dentable（任意の $\varepsilon$ で直径 $<\varepsilon$ のスライスをもつ）。$L^{1}$ の単位球が dentable でないことを示せ。
+
+*4 Bochner 空間 $L^{p}(\mu;X)$ の双対
+$1\le p<\infty$ について $L^{p}(\mu;X)^{*}\cong L^{q}(\mu;X^{*})$ $\iff X^{*}$ が RNP をもつ。証明せよ。
+
+*4 Vitali の収束定理（ベクトル値）
+Bochner 可積分関数列が一様可積分かつ測度収束すれば $L^{1}(\mu;X)$ で収束する。証明せよ。
+
+*4 Diestel–Faires の定理（$c_{0}$ と $\ell^{\infty}$）
+すべての有界な有限加法的 $X$ 値測度が可算加法的になるための条件、および $X$ が $c_{0}$ を含まなければ弱可算加法的ベクトル測度が可算加法的であることを述べよ（Diestel–Faires）。
+
+*4 ベクトル測度に関する積分（Bartle 積分）と表現定理
+$C(K)$ から $X$ への弱コンパクト作用素は、$X$ 値の正則ベクトル測度 $F$ によって $Tf=\int f\,dF$ と表される（Bartle–Dunford–Schwartz）。証明の骨格を与えよ。
+
+*4 Dunford–Pettis の表現定理（$L^{1}$ からの作用素）
+$L^{1}(\mu)$ から RNP をもつ空間 $X$ への有界作用素は、$\|g\|_{\infty}$ 有界な強可測関数 $g$ による $Tf=\int fg\,d\mu$ で表される（Dunford–Pettis）。証明せよ。
+
+*4 Banach 空間値の解析関数
+Banach 空間値関数が弱解析的なら強解析的である（Dunford の定理）。Cauchy の積分公式と Liouville の定理が成り立つことを示し、スペクトルの非空性の証明に用いよ。
+
+*4 ベクトル値 Riemann–Stieltjes 積分と有界変分関数
+$[a,b]$ 上の有界変分 $X$ 値関数に対する Riemann–Stieltjes 積分を定義し、$C[a,b]$ からの作用素の表現（Riesz 型）を与えよ。
+
+*4 Banach 空間値 Lebesgue 微分定理と RNP
+$X$ が RNP をもつ $\iff$ $[0,1]$ から $X$ への Lipschitz 写像がほとんど至る所微分可能（Rademacher 型、Rieffel）。$L^{1}$ 値の Lipschitz 写像 $t\mapsto\mathbf{1}_{[0,t]}$ がどこでも微分可能でないことを示せ。
+
+*5 Bourgain の RNP の特徴づけ（Bourgain–Stegall）
+閉有界凸集合 $C$ が RNP をもつ $\iff$ $C$ の任意の閉凸部分集合が強露出点をもつ $\iff$ $X^{*}$ の稠密 $G_{\delta}$ 集合の元が $C$ 上で強露出的に最大値をとる（Stegall の変分原理）。証明の骨格を与えよ。
+
+*5 RNP と Krein–Milman 性の関係（Huff–Morris, Bourgain–Talagrand）
+双対空間では KMP $\Rightarrow$ RNP（Huff–Morris）、Banach 束でも成り立つ（Bourgain–Talagrand）ことを示し、一般の Banach 空間での同値性が未解決であることを述べよ。Lindenstrauss の RNP $\Rightarrow$ KMP の証明を完全に与えよ。

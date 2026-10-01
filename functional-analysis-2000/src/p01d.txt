@@ -1,0 +1,123 @@
+=ch I-7　樽型空間と双対理論
+
+*4 樽型空間と Banach–Steinhaus {barrelled}
+局所凸空間 $X$ が樽型（すべての樽＝閉絶対凸吸収集合が $0$ の近傍）であることを定義し、Baire な局所凸空間（特に Fréchet 空間）は樽型であること、樽型空間上で各点有界な連続線形写像の族は同程度連続であることを示せ。
+
+*4 Banach–Mackey の定理
+局所凸空間の有界・閉・絶対凸・完備な集合 $B$ について、$X^{*}$ の弱*有界集合は $B$ 上で一様有界である。これから樽型空間の弱*有界集合が同程度連続であることを導け。
+
+*4 ボルノロジカル空間
+すべての有界集合を吸収する絶対凸集合が $0$ の近傍となる空間をボルノロジカルという。距離化可能な局所凸空間はボルノロジカルであり、ボルノロジカル空間上の有界線形写像（有界集合を有界集合に写す）は連続であることを示せ。
+
+*4 樽型だがボルノロジカルでない空間
+樽型だがボルノロジカルでない空間、およびボルノロジカルだが樽型でない空間の例を構成せよ（Nachbin–Shirota の定理：$C(X)$ が樽型 $\iff X$ のすべての有界閉集合がコンパクト）。
+
+*4 Nachbin–Shirota の定理
+完全正則空間 $X$ 上のコンパクト一様収束位相をもつ $C(X)$ が樽型 $\iff$ $X$ の関数的有界な閉集合がコンパクト。証明せよ。
+
+*4 強双対と反射性（局所凸）
+局所凸空間 $X$ の強双対 $X'_{\beta}$ と半反射性・反射性を定義し、$X$ が反射的 $\iff X$ が樽型かつ弱位相で有界集合が相対コンパクト、を示せ。
+
+*4 Grothendieck の DF 空間
+Fréchet 空間の強双対が DF 空間（可算基本有界集合系をもち、有界集合の可算和で吸収される同程度連続性の条件）であることを示し、DF 空間の強双対が Fréchet であること（Grothendieck）を述べよ。
+
+*4 準樽型空間と強双対の同程度連続性
+準樽型空間を定義し、ボルノロジカル空間・樽型空間がともに準樽型であること、準樽型空間の強有界集合が同程度連続であることを示せ。
+
+*4 閉グラフ定理の一般化（Ptak, Grothendieck）
+樽型空間から $B$-完備（Ptak）空間への閉グラフ線形写像は連続である（Ptak の閉グラフ定理）。Fréchet 空間が $B$-完備であることを示し、閉グラフ定理の最も一般的な形の一つとして述べよ。
+
+*4 De Wilde の閉グラフ定理（網空間）
+網（web）をもつ局所凸空間を定義し、超ボルノロジカル空間から網空間への閉グラフ写像が連続であること（De Wilde 1978）を述べよ。LF 空間・超関数空間が網空間であることを示せ。
+
+*4 Grothendieck 空間（Grothendieck 1953）
+Grothendieck 空間（双対の弱*収束列が弱収束する空間）を定義し、$\ell^{\infty}$ と $C(K)$（$K$ が極端に非連結）が Grothendieck 空間であること（Grothendieck 1953）を示せ。
+
+*4 Banach 空間の双対の弱*可分性
+Banach 空間 $X$ が可分なら $X^{*}$ の単位球は弱*距離化可能であり、逆に $X^{*}$ の単位球が弱*距離化可能なら $X$ は可分であることを示せ。$\ell^{\infty}$ の双対の単位球が弱*点列コンパクトでない（$\beta\mathbb{N}$ が点列コンパクトでない）ことを示せ。
+
+*4 Josefson–Nissenzweig の定理
+任意の無限次元 Banach 空間 $X$ の双対には、ノルム 1 で弱*に $0$ に収束する列が存在する（Josefson, Nissenzweig 1975）。証明の骨格を与え、弱*点列収束とノルム収束が無限次元で決して一致しないことを結論せよ。
+
+*4 Banach 空間の超ボルノロジカル性と帰納極限
+Banach 空間の帰納極限として表されるボルノロジカル空間（超ボルノロジカル空間）を定義し、$\mathcal{D}(\Omega)$ がそうであることを示せ。
+
+*4 Mackey 空間と双対の決定
+Mackey 位相をもつ空間（Mackey 空間）を定義し、ボルノロジカル空間・樽型空間が Mackey 空間であること、したがってそれらの位相が双対で決まることを示せ。
+
+*4 Grothendieck の完備性判定と準完備性
+局所凸空間 $X$ が準完備（有界閉集合が完備）ならば、そのコンパクト集合の閉凸包はコンパクトである。準完備だが完備でない空間（弱位相の $\ell^{2}$ の双対など）の例を作れ。
+
+*4 Eberlein の定理（局所凸版）
+準完備な局所凸空間において、弱可算コンパクトな集合は弱相対コンパクトである（Eberlein）。証明の骨格を与えよ。
+
+*4 双対対の「凸性」による Hahn–Banach の局所凸版
+双対対 $\langle X,Y\rangle$ と部分空間 $M\subset X$ について、$M$ の $\sigma(X,Y)$-閉包が $M^{\perp\perp}$ に等しいことを示し、ノルム閉と弱閉が凸集合で一致すること（Mazur）を一般の整合的位相で述べよ。
+
+*5 Köthe の超空間理論（Köthe 列空間）
+Köthe 行列 $A=(a_{n}(k))$ に対する列空間 $\lambda^{p}(A)$ を定義し、$\lambda^{p}(A)$ が Montel $\iff$ Schwartz、核型の Grothendieck–Pietsch 判定（$\sum_{k}a_{n}(k)/a_{m}(k)<\infty$）を証明せよ。整関数の空間 $\mathcal{H}(\mathbb{C})$ が Köthe 空間として表されることを示せ。
+
+*5 Fréchet 空間の分割定理と Vogt–Wagner の不変量
+Fréchet 空間の短完全列 $0\to F\to G\to E\to0$ が分裂する条件として、Vogt–Wagner の (DN)–($\Omega$) 条件を述べ、$\mathcal{S}$ の補空間（$s$ と同型な補空間）の特徴づけへの応用の主張を与えよ。
+
+=ch I-8　Fréchet 空間と帰納極限
+
+*4 Fréchet 空間の開写像定理
+Fréchet 空間の間の連続線形全射は開写像である。Banach 空間の場合と同様に Baire の定理で証明し、閉グラフ定理・一様有界性原理の Fréchet 版も導け。
+
+*4 Fréchet 空間の典型例と半ノルム
+$C^{\infty}(\Omega)$、$\mathcal{H}(\Omega)$、$\mathcal{S}(\mathbb{R}^{n})$、$s$（急減少列空間）を可算半ノルムで記述し、それぞれが完備で、ノルム化可能でないことを示せ。
+
+*4 $\mathcal{S}\cong s$（Schwartz 空間と急減少列空間の同型）
+Hermite 関数展開により $\mathcal{S}(\mathbb{R})\cong s$ を示せ（係数の急減少性と関数の Schwartz 性の対応）。
+
+*4 Borel の補題と Mityagin–Seeley 拡張
+任意の数列 $(a_{n})$ に対し $f^{(n)}(0)=a_{n}$ なる $C^{\infty}$ 関数が存在する（Borel）。$C^{\infty}([0,\infty))$ から $C^{\infty}(\mathbb{R})$ への連続線形拡張作用素の存在（Seeley 1964）を示せ。
+
+*4 Mittag-Leffler 補題（射影極限）
+Fréchet 空間（あるいは完備距離空間）の射影系 $\cdots\to X_{n+1}\to X_{n}$ で、各写像の像が稠密なら、射影極限から各 $X_{n}$ への像も稠密である（Mittag-Leffler の補題、Arens）。正則関数の Mittag-Leffler の定理・Runge の定理への応用を述べよ。
+
+*4 $\lim^{1}$ と射影極限の消滅（Palamodov–Retakh）
+Fréchet 空間の射影系の導来関手 $\operatorname{Proj}^{1}$ を定義し、その消滅が短完全列の射影極限の完全性を保証することを示せ。Mittag-Leffler 条件との関係を述べよ。
+
+*4 Banach 空間の帰納極限と正則性
+Banach 空間の増大列の帰納極限 $X=\varinjlim X_{n}$（LB 空間）が正則（有界集合がある $X_{n}$ の有界集合に含まれる）であるための条件を論じ、正則でない LB 空間の例を述べよ。
+
+*4 LF 空間 $\mathcal{D}(\Omega)$ の構造
+$\mathcal{D}(\Omega)=\varinjlim\mathcal{D}_{K_{n}}$ の帰納極限位相を定義し、列 $\varphi_{j}\to0$ $\iff$ ある $K_{n}$ に台が含まれ $\mathcal{D}_{K_{n}}$ で収束（Dieudonné–Schwartz）を示せ。$\mathcal{D}(\Omega)$ が距離化可能でないことを示せ。
+
+*4 Dieudonné–Schwartz の定理
+厳密な LF 空間（$X_{n}$ が $X_{n+1}$ の閉部分空間で位相が誘導される）では、有界集合はある $X_{n}$ の有界集合に含まれ、完備である。証明せよ。
+
+*4 LF 空間の閉グラフ定理と開写像定理（Grothendieck）
+LF 空間から LF 空間への閉グラフ線形写像は連続であり、LF 空間の間の連続線形全射は開写像である（Grothendieck）。主張と、網空間の理論による証明の骨格を述べよ。
+
+*4 Fréchet 空間の双対と超関数
+$\mathcal{E}'(\Omega)=C^{\infty}(\Omega)'$ がコンパクト台超関数の空間であること、$\mathcal{D}'$ の元の局所有限階数性（局所的に連続関数の有限階導関数）を一様有界性原理から導け。
+
+*4 Fréchet–Urysohn 性と超関数の列の収束
+$\mathcal{D}'(\Omega)$ では弱*収束する列は強収束し（Montel 性）、各点収束する超関数列の極限は超関数である。証明せよ。
+
+*4 Fréchet 空間における Banach–Alaoglu の代替（同程度連続集合）
+Fréchet 空間 $X$ の双対の同程度連続部分集合は弱*相対コンパクトであり、$X^{*}$ は同程度連続集合の可算和である。証明せよ。
+
+*4 Eidelheit の定理（Fréchet 空間の補間問題）
+Fréchet 空間 $X$ と連続線形汎関数の列 $f_{n}$ について、任意の数列 $c_{n}$ に対し $f_{n}(x)=c_{n}$ なる $x$ が存在するための条件（Eidelheit 1936）を述べ、Borel の補題がその特殊化であることを示せ。
+
+*4 連続ノルムをもたない Fréchet 空間（Bessaga–Pełczyński）
+連続ノルムをもたない Fréchet 空間は $\omega=\mathbb{K}^{\mathbb{N}}$ と同型な補空間を含む（Bessaga–Pełczyński 1957）。証明し、$C^{\infty}(\mathbb{R})$ は連続ノルムをもつが $\mathbb{K}^{\mathbb{N}}$ はもたないことを確かめよ。
+
+*4 Fréchet 空間の Hilbert 化可能性と核型性
+核型 Fréchet 空間はヒルベルト半ノルムで位相が生成されることを示し、核型 Fréchet 空間のすべての有界集合が相対コンパクト（Montel）であることを導け。
+
+*4 正則関数空間 $\mathcal{H}(\Omega)$ の同型類
+$\Omega\subset\mathbb{C}$ が単連結なら $\mathcal{H}(\Omega)$ は $\mathcal{H}(\mathbb{D})$ と同型で、$\mathcal{H}(\mathbb{C})$ とは同型でない（Dragilev 不変量）。主張を述べ、冪級数空間 $\Lambda_{1}$ と $\Lambda_{\infty}$ の区別を説明せよ。
+
+*4 冪級数空間と直径次元
+有限型冪級数空間 $\Lambda_{0}(\alpha)$ と無限型 $\Lambda_{\infty}(\alpha)$ を定義し、直径次元（Kolmogorov 幅の漸近）が同型不変量であることを示して、$\mathcal{H}(\mathbb{D})\not\cong\mathcal{H}(\mathbb{C})$ を導け。
+
+*5 Fréchet 空間の Mittag-Leffler 手続きと $\bar\partial$ 方程式の可解性
+$\Omega\subset\mathbb{C}$ 上で $\bar\partial:C^{\infty}(\Omega)\to C^{\infty}(\Omega)$ が全射であることを、コンパクト集合上の可解性（Pompeiu の公式）と Runge 近似、Mittag-Leffler 手続きで証明せよ。さらにこれが $\operatorname{Proj}^{1}$ の消滅として解釈できることを示せ。
+
+*5 Grothendieck の位相の問題（Taskinen）
+Grothendieck の「問題の密度」：Fréchet 空間 $E,F$ の射影テンソル積の有界集合が、$E,F$ の有界集合のテンソル積の閉凸包に含まれるか。Taskinen（1986）が否定的に解決したことを述べ、構成の骨格を与えよ。

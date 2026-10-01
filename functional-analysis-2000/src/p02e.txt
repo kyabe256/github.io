@@ -1,0 +1,123 @@
+=ch II-9　縮小作用素と膨張理論
+
+*4 von Neumann の不等式 {vn-ineq}
+Hilbert 空間の縮小作用素 $T$ と多項式 $p$ について $\|p(T)\|\le\sup_{|z|\le1}|p(z)|$（von Neumann 1951）。Sz.-Nagy の膨張定理から導き、Banach 空間では成り立たない例を作れ。
+
+*4 Sz.-Nagy のユニタリ膨張定理 {nagy}
+縮小作用素 $T$ に対し、より大きな Hilbert 空間 $K\supset H$ 上のユニタリ $U$ で $T^{n}=P_{H}U^{n}|_{H}$（$n\ge0$）となるものが存在し、極小なものは一意である（Sz.-Nagy 1953）。Schäffer の行列構成あるいは正定値関数の議論で証明せよ。
+
+*4 Andô の膨張定理
+可換な二つの縮小作用素 $T_{1},T_{2}$ は可換なユニタリ膨張をもち、したがって二変数の von Neumann 不等式が成り立つ（Andô 1963）。証明せよ。
+
+*4 Varopoulos・Parrott の反例（三変数）
+三つの可換な縮小作用素は一般に可換ユニタリ膨張をもたず（Parrott 1970）、三変数の von Neumann 不等式は成り立たない（Varopoulos 1974, Crabb–Davie の $8\times8$ の例）。反例を構成せよ。
+
+*4 Naimark の膨張定理
+正値作用素値測度（POVM）$E$ は、より大きな Hilbert 空間の射影値測度 $P$ の圧縮 $E(\cdot)=V^{*}P(\cdot)V$ として表される（Naimark 1943）。Stinespring の定理の特殊化として示せ。
+
+*4 Stinespring の膨張定理 {stinespring}
+$C^{*}$-環 $A$ から $\mathcal{B}(H)$ への完全正写像 $\Phi$ は $\Phi(a)=V^{*}\pi(a)V$（$\pi$ は表現）と表される（Stinespring 1955）。GNS 構成の一般化として証明せよ。
+
+*4 Arveson の拡張定理 {arveson-ext}
+作用素系 $S\subset A$ 上の完全正写像 $\Phi:S\to\mathcal{B}(H)$ は $A$ 全体の完全正写像に拡張できる（Arveson 1969）。有限次元への帰着と Choi 行列で証明せよ。
+
+*4 Wittstock の完全有界写像の分解
+完全有界写像 $\Phi:A\to\mathcal{B}(H)$ は $\Phi(a)=V^{*}\pi(a)W$ と表され、$\|\Phi\|_{cb}=\|V\|\|W\|$（Wittstock, Haagerup, Paulsen）。完全正写像の差として表されることを示せ。
+
+*4 Sz.-Nagy–Foias の特性関数 {char-fn}
+完全非ユニタリ縮小作用素 $T$ の特性関数 $\Theta_{T}(z)=[-T+zD_{T^{*}}(I-zT^{*})^{-1}D_{T}]|_{\mathcal{D}_{T}}$ が純な縮小的解析関数であり、$T$ のユニタリ同値類を完全に決定することを示せ（関数モデル）。
+
+*4 Sz.-Nagy–Foias の関数モデル
+完全非ユニタリ縮小作用素 $T$ は、$H^{2}(\mathcal{D}_{T^{*}})\oplus\overline{\Delta L^{2}(\mathcal{D}_{T})}\ominus\{\Theta_{T}w\oplus\Delta w\}$ 上の圧縮シフトとユニタリ同値である。$C_{\cdot0}$ 縮小作用素の場合（$\Delta=0$）にモデル空間 $H^{2}\ominus\Theta H^{2}$ 上の圧縮シフトとなることを示せ。
+
+*4 可換子持ち上げ定理（Sz.-Nagy–Foias, Sarason） {clt}
+縮小作用素 $T$ と、$T$ の極小等長膨張 $V$、$TX=XT$ をみたす $X$ に対し、$VY=YV$, $P_{H}Y=XP_{H}$, $\|Y\|=\|X\|$ をみたす $Y$ が存在する。証明し、Nevanlinna–Pick 補間を導け。
+
+*4 Sarason の定理（モデル空間上の可換子）
+内部関数 $\theta$ のモデル空間 $K_{\theta}=H^{2}\ominus\theta H^{2}$ 上の圧縮シフト $S_{\theta}$ と可換な作用素は $\varphi(S_{\theta})$（$\varphi\in H^{\infty}$）の形で、$\|\varphi(S_{\theta})\|=\operatorname{dist}(\varphi,\theta H^{\infty})$（Sarason 1967）。証明せよ。
+
+*4 Nehari の定理
+Hankel 作用素 $H_{\varphi}$ のノルムは $\operatorname{dist}_{L^{\infty}}(\varphi,H^{\infty})$ に等しい（Nehari 1957）。可換子持ち上げから導き、$H^{1}$ と BMOA の双対性との関係を述べよ。
+
+*4 Adamyan–Arov–Krein の定理
+Hankel 作用素の第 $k$ 特異値 $s_{k}(H_{\varphi})$ は、$\varphi$ の $H^{\infty}$ + 高々 $k$ 個の極をもつ有理関数による最良 $L^{\infty}$ 近似の誤差に等しい（AAK 1971）。$k=0$ で Nehari を回復することを示せ。
+
+*4 Kronecker の定理（有限ランク Hankel 作用素）
+Hankel 作用素 $H_{\varphi}$ が有限ランク $n$ $\iff$ $\varphi$ の反解析部分が $n$ 次の有理関数（Kronecker 1881）。証明せよ。
+
+*4 Hartman の定理（コンパクト Hankel 作用素）
+$H_{\varphi}$ がコンパクト $\iff\varphi\in H^{\infty}+C$（Hartman 1958）。証明し、Peller の定理（$H_{\varphi}\in\mathcal{S}_{p}\iff\bar P\varphi\in B^{1/p}_{p,p}$）を述べよ。
+
+*4 Peller の定理（Schatten クラスの Hankel 作用素）
+$H_{\varphi}\in\mathcal{S}_{p}$（$0<p<\infty$）$\iff$ $\varphi$ の反解析部分が Besov 空間 $B^{1/p}_{p,p}$ に属する（Peller 1980, Semmes）。$p=1$ の場合の証明の骨格を与えよ。
+
+*4 等長作用素の不変部分空間と Beurling の定理 {beurling}
+$H^{2}(\mathbb{D})$ 上のシフト $S$ の非自明な閉不変部分空間はちょうど $\theta H^{2}$（$\theta$ は内部関数）の形である（Beurling 1949）。Wold 分解から証明せよ。
+
+*4 Beurling–Lax–Halmos の定理（ベクトル値）
+$H^{2}(\mathcal{E})$ 上のシフトの不変部分空間は、内部作用素値関数 $\Theta$ により $\Theta H^{2}(\mathcal{F})$ と表される（Lax 1959, Halmos 1961）。証明の骨格を与えよ。
+
+*5 Sz.-Nagy–Foias の $C_{0}$ 理論と Jordan 標準形
+$C_{0}$ 類縮小作用素（ある非零 $H^{\infty}$ 関数で $u(T)=0$）は、内部関数の列 $\theta_{1}|\theta_{2}|\cdots$ による Jordan 模型 $\bigoplus S(\theta_{j})$ に準相似である（Sz.-Nagy–Foias, Bercovici）。有限次元の Jordan 標準形の無限次元版として主張を述べ、証明の骨格を与えよ。
+
+=ch II-10　不変部分空間と作用素の構造
+
+*4 不変部分空間問題の現状
+Hilbert 空間上のすべての有界作用素は非自明な閉不変部分空間をもつか、という問題を述べ、肯定的部分結果（コンパクト作用素、正規作用素、多項式的コンパクト（Bernstein–Robinson, Halmos）、準正規（Brown 1978 の部分的結果）、Lomonosov）と Banach 空間での反例（Enflo, Read）を整理せよ。
+
+*4 正規作用素の不変部分空間と反射性
+正規作用素は豊富な不変部分空間をもち（スペクトル射影）、その不変部分空間の格子から作用素が回復できる（反射性、Sarason 1966）。$H^{2}$ 上のシフトが反射的であることを示せ。
+
+*4 Bernstein–Robinson の定理（Halmos による初等化）
+$p(T)$ がコンパクト（$p$ は非零多項式）な作用素は非自明な不変部分空間をもつ（Bernstein–Robinson 1966、超準解析による；Halmos の標準的証明）。Halmos の証明を完成させよ。
+
+*4 Brown の定理（準正規作用素の不変部分空間）
+準正規（subnormal）作用素は非自明な不変部分空間をもつ（S. Brown 1978）。Thomson の有界点評価の定理による別証の骨格を述べよ。
+
+*4 Brown–Chevreau–Pearcy の定理
+スペクトルが単位円周を含む縮小作用素は非自明な不変部分空間をもつ（Brown–Chevreau–Pearcy 1988）。$\mathbb{A}_{1}$ 性と双対代数の理論の骨格を述べよ。
+
+*4 Scott Brown の手法と双対代数
+弱*閉作用素代数が性質 $\mathbb{A}_{1}$（すべての弱*連続汎関数が $x\otimes y$ の形で実現される）をもつとき、不変部分空間が豊富に存在することを示せ。
+
+*4 準相似と準アフィン変換
+二つの作用素の準相似（単射稠密値域の作用素による相互の交絡）を定義し、準相似が不変部分空間の格子の非自明性を保つことを示せ。
+
+*4 Donoghue 作用素と単鎖の不変部分空間格子
+重み付きシフト（Donoghue 作用素）でその不変部分空間格子が全順序（単鎖）となる例を構成せよ。
+
+*4 巣代数（nest algebra）と Ringrose の定理
+巣 $\mathcal{N}$ の巣代数 $\operatorname{Alg}\mathcal{N}$ の Jacobson 根基の特徴づけ（Ringrose 1965）と、巣代数の対角への射影の有界性を述べよ。
+
+*4 Arveson の距離公式（巣代数）
+巣代数 $\operatorname{Alg}\mathcal{N}$ について $\operatorname{dist}(T,\operatorname{Alg}\mathcal{N})=\sup_{P\in\mathcal{N}}\|(I-P)TP\|$（Arveson 1975）。証明の骨格を与えよ。
+
+*4 Lomonosov の定理の Hilbert 空間外への拡張と限界
+Lomonosov の定理（非スカラーなコンパクト作用素と可換）を、Hadwin–Nordgren–Radjavi–Rosenthal の例（Lomonosov の仮定をみたさないが不変部分空間をもつ作用素の存在）とともに論じ、Lomonosov の方法で扱えない作用素が存在することを示せ。
+
+*4 Bishop 作用素と Davie の結果
+$L^{2}[0,1]$ 上の Bishop 作用素 $T_{\alpha}f(x)=xf(\{x+\alpha\})$ について、$\alpha$ が非 Liouville 数なら非自明な超不変部分空間をもつ（Davie 1974）。主張と証明の着想を述べよ。
+
+*4 Halmos の準三角作用素と準対角作用素
+準対角作用素（有限ランク射影の列で $\|P_{n}T-TP_{n}\|\to0$）を定義し、片側シフトが準対角でないこと（Halmos）、準対角 $C^{*}$-環の概念（Voiculescu）への発展を述べよ。
+
+*4 Weyl–von Neumann–Berg の定理（正規作用素の対角化）
+可分 Hilbert 空間の正規作用素は、任意に小さいコンパクト摂動で対角作用素になる（Berg 1971）。Weyl–von Neumann の自己共役版から導く際の困難（二次元格子の扱い）を述べよ。
+
+*4 Brown–Douglas–Fillmore の理論 {bdf}
+本質的正規作用素（$T^{*}T-TT^{*}$ がコンパクト）のコンパクト摂動に関するユニタリ同値類は、本質的スペクトル $X$ と $\operatorname{Ext}(X)\cong\operatorname{Hom}(K^{1}(X),\mathbb{Z})$（$X\subset\mathbb{C}$ なら穴ごとの指数）で分類される（BDF 1973）。主張を述べ、$X\subset\mathbb{C}$ の場合の証明の骨格を与えよ。
+
+*5 Anderson の paving 予想と Kadison–Singer 問題
+任意の $\varepsilon>0$ に対し $r$ が存在して、対角成分が $0$ の任意の有限行列 $T$ について、和が $I$ となる対角射影 $P_{1},\dots,P_{r}$ で $\|P_{i}TP_{i}\|\le\varepsilon\|T\|$ となるものが存在する（Anderson の paving 予想）。これが Kadison–Singer 問題（$\ell^{\infty}$ 上の純粋状態の $\mathcal{B}(\ell^{2})$ への拡張の一意性）と同値であることを示し、Marcus–Spielman–Srivastava（2013）による肯定的解決を述べよ。
+
+*4 Lin の定理（ほぼ可換な自己共役行列）
+任意の $\varepsilon>0$ に対し $\delta>0$ が存在し、$\|A\|,\|B\|\le1$, $\|AB-BA\|<\delta$ の自己共役行列 $A,B$（任意次元）について、可換な自己共役行列 $A',B'$ で $\|A-A'\|+\|B-B'\|<\varepsilon$ となるものが存在する（Lin 1997, Friis–Rørdam の簡単な証明）。証明の骨格を与えよ。
+
+*4 Voiculescu のほぼ可換ユニタリ行列の反例
+$\|UV-VU\|\to0$ だが可換なユニタリ組に近くない $n\times n$ ユニタリ行列 $U,V$ が存在する（Voiculescu 1983）。回転数（Bott 不変量）による障害を述べよ。
+
+*5 Brown–Douglas–Fillmore の Ext 群の完全な理論
+コンパクト距離空間 $X$ に対し、$C(X)$ の拡大の同値類の集合 $\operatorname{Ext}(X)$ が群をなすこと（Voiculescu の定理による単位元の存在、Arveson による逆元の存在）、$\operatorname{Ext}$ が $K$-ホモロジー $K_{1}(X)$ に同型であることを示し、平面集合で指数写像 $\operatorname{Ext}(X)\to\operatorname{Hom}(\pi^{1}(X),\mathbb{Z})$ が同型であることを証明せよ。
+
+*5 Enflo の不変部分空間の反例の構造
+Banach 空間上の作用素で非自明な閉不変部分空間をもたないものの構成（Enflo 1976/87、Read 1985）の骨格を、多項式の「ほぼ直交」列による空間の構成と、$p(T)x$ の軌道が稠密となる仕組みとして再構成せよ。
