@@ -1,0 +1,126 @@
+=part 第 IX 部　確率と関数解析 | PROBABILITY AND FUNCTIONAL ANALYSIS &mdash; 1601 to 1800
+確率論は測度論の上に立つが、その深部は関数解析そのものである。確率測度の空間と弱収束、Banach 空間上のガウス測度、確率過程の正則性と chaining、マルチンゲールと確率積分、Markov 半群の関数不等式、Malliavin 解析、確率偏微分方程式、大偏差と集中、最適輸送、エルゴード理論とランダム行列まで ― 無限次元の確率を作用素と空間の言葉で語り直す。
+
+=ch IX-1　確率測度の空間と弱収束
+
+*4 Prokhorov の定理 {prokhorov}
+Polish 空間上の確率測度の族について、緊密 $\iff$ 弱位相で相対コンパクトであることを証明し、確率測度全体 $\mathcal{P}(S)$ が弱位相で Polish 空間になることを示せ。
+
+*4 Skorokhod の表現定理
+可分距離空間上で $\mu_{n}\Rightarrow\mu$ なら、ある確率空間上の確率変数 $X_{n}\sim\mu_{n}$、$X\sim\mu$ で $X_{n}\to X$ a.s. となるものが存在することを証明せよ。
+
+*4 Sazonov の定理
+可分 Hilbert 空間 $H$ 上の正定値関数 $\varphi$（$\varphi(0)=1$）がある Borel 確率測度の特性関数である $\iff\varphi$ が Sazonov 位相（トレース型作用素 $S$ による半ノルム $\langle Sx,x\rangle^{1/2}$ の生成する位相）で連続であることを証明せよ（Sazonov 1958）。
+
+*4 Kantorovich–Rubinstein の双対定理 {kr-dual}
+Polish 空間上の 1 次モーメント有限な $\mu,\nu$ について $W_{1}(\mu,\nu)=\sup\{\int f\,d(\mu-\nu):\mathrm{Lip}(f)\le1\}$ を証明せよ（Kantorovich–Rubinstein 1958）。
+
+*4 Wasserstein 空間の位相
+$(\mathcal{P}_{p}(S),W_{p})$ が完備可分距離空間であり、$W_{p}(\mu_{n},\mu)\to0\iff\mu_{n}\Rightarrow\mu$ かつ $p$ 次モーメントが収束することを証明せよ。
+
+*4 Strassen の結合定理
+$\mu,\nu$ について、$\mu(A)\le\nu(A^{\varepsilon})+\delta$（すべての閉集合 $A$）$\iff$ 結合 $(X,Y)$ で $\mathbb{P}(d(X,Y)>\varepsilon)\le\delta$ となるものが存在することを証明せよ（Strassen 1965）。Lévy–Prokhorov 距離の結合による表示を導け。
+
+*4 de Finetti–Hewitt–Savage の定理
+Polish 空間値の交換可能な確率変数列の分布は、i.i.d. 列の分布の混合として一意に表されることを、交換可能測度の凸集合の端点が積測度であることと Choquet 理論から証明せよ。
+
+*4 Komlós の定理
+$L^{1}$ 有界な確率変数列 $(X_{n})$ は、部分列 $(X_{n_{k}})$ と $X\in L^{1}$ で、その任意の部分列の Cesàro 平均が $X$ に a.s. 収束するものをもつことを証明せよ（Komlós 1967）。
+
+*4 Kolmogorov の拡張定理と位相の必要性
+Polish 空間上の整合的な有限次元分布の族は無限積上の確率測度に一意に拡張されることを示し、位相の仮定を外すと拡張が存在しない例（Andersen–Jessen）を構成せよ。
+
+*4 Ionescu-Tulcea の定理
+任意の可測空間の列と推移核の列 $K_{n}(x_{1},\dots,x_{n};dx_{n+1})$ に対し、無限積上に対応する確率測度が一意に存在することを、位相の仮定なしに証明せよ。
+
+*4 測度の分解定理（Rokhlin）
+Polish 空間 $X,Y$、可測写像 $\pi:X\to Y$、$\mu\in\mathcal{P}(X)$ について、$\pi_{*}\mu$-a.e. に一意な確率測度族 $(\mu_{y})$ で $\mu_{y}(\pi^{-1}(y))=1$、$\mu=\int\mu_{y}\,d(\pi_{*}\mu)(y)$ となるものが存在することを証明せよ。
+
+*4 Ando–Douglas の定理
+$L^{p}(\Omega,\mathcal{F},\mathbb{P})$（$1\le p<\infty$）上の正値で 1 を保つ縮小射影はある部分 $\sigma$-代数への条件付き期待値であることを証明せよ（Douglas 1965、Ando 1966）。
+
+*4 Choquet の容量可能性定理
+Polish 空間の解析集合は任意の Choquet 容量について容量可能であることを示し、系として解析集合が普遍可測であること、および停止時刻の到達時刻定理（début theorem）を導け。
+
+*4 Varadarajan の定理
+可分距離空間上の i.i.d. 列の経験測度 $\frac{1}{n}\sum\delta_{X_{i}}$ は a.s. で真の分布に弱収束することを証明せよ（Varadarajan 1958）。
+
+*4 Strassen の凸順序定理
+$\mathbb{R}^{d}$ 上の 1 次モーメント有限な $\mu,\nu$ について、任意の凸関数 $f$ で $\int f\,d\mu\le\int f\,d\nu$ $\iff$ マルチンゲール結合 $\mathbb{E}[Y|X]=X$（$X\sim\mu$、$Y\sim\nu$）が存在することを Hahn–Banach の定理で証明せよ（Strassen 1965）。
+
+*4 Kakutani の二分定理
+無限直積測度 $\mu=\bigotimes\mu_{n}$、$\nu=\bigotimes\nu_{n}$（$\mu_{n}\sim\nu_{n}$）は、$\prod_{n}\int\sqrt{d\mu_{n}d\nu_{n}}>0$ なら互いに絶対連続、$=0$ なら互いに特異であることを証明せよ（Kakutani 1948）。
+
+*4 Kuratowski–Ryll-Nardzewski の可測選択定理
+Polish 空間 $X$ に値をとる空でない閉集合値の弱可測な多価写像は可測な選択関数をもつことを証明せよ（1965）。
+
+*4 Lévy–Prokhorov 距離
+可分距離空間上で Lévy–Prokhorov 距離が弱収束を距離化し、基礎空間が完備なら $\mathcal{P}(S)$ も完備であることを証明せよ。有界 Lipschitz 距離との同値性を示せ。
+
+*5 Talagrand の Glivenko–Cantelli 類の特徴づけ
+可測関数族 $\mathcal{F}$ が一様大数の法則（Glivenko–Cantelli 性）をみたすための必要十分条件を、$\mathcal{F}$ のどの部分集合上でも「打ち砕き」が起こらないという組合せ論的条件で与えることの証明の骨格を述べよ（Talagrand 1987）。
+
+*5 一様中心極限定理（Dudley, Pollard）
+VC 次元有限な集合族（あるいは一様エントロピー積分有限な関数族）$\mathcal{F}$ について、経験過程 $\sqrt n(P_{n}-P)$ が $\ell^{\infty}(\mathcal{F})$ で Brown 橋に弱収束すること（Donsker 性）の証明の骨格を与えよ（Dudley 1978、Pollard 1982）。
+
+=ch IX-2　Banach 空間上のガウス測度
+
+*4 Fernique の定理 {fernique}
+可分 Banach 空間 $E$ 上の中心化ガウス測度 $\gamma$ について、ある $\alpha>0$ で $\int e^{\alpha\|x\|^{2}}d\gamma(x)<\infty$ であることを、回転不変性 $(X+Y)/\sqrt2,(X-Y)/\sqrt2$ を用いて証明せよ（Fernique 1970）。
+
+*4 Cameron–Martin の定理 {cameron-martin}
+ガウス測度 $\gamma$ の平行移動 $\gamma_{h}=\gamma(\cdot-h)$ が $\gamma$ と絶対連続 $\iff h\in H_{\gamma}$（Cameron–Martin 空間）であり、そのとき $\frac{d\gamma_{h}}{d\gamma}(x)=\exp(\hat h(x)-\frac{1}{2}\|h\|_{H}^{2})$ となることを証明せよ。$h\notin H_{\gamma}$ なら互いに特異であることも示せ。
+
+*4 Gross の抽象 Wiener 空間
+可分 Hilbert 空間 $H$ 上の標準円筒測度は、$H$ 上の可測ノルムによる完備化 $E$ 上の $\sigma$-加法的ガウス測度に拡張されることを証明し、任意の可分 Banach 空間上の中心化ガウス測度がこの形で得られることを示せ（Gross 1965）。
+
+*4 Feldman–Hájek の二分定理
+二つのガウス測度は互いに同値か互いに特異のいずれかであることを示し、Hilbert 空間上で $N(0,Q_{1})\sim N(0,Q_{2})$ となる条件（Cameron–Martin 空間の一致と $Q_{1}^{-1/2}Q_{2}Q_{1}^{-1/2}-I$ が Hilbert–Schmidt）を証明せよ（1958）。
+
+*4 Anderson の不等式
+$\mathbb{R}^{n}$ 上の対称単峰密度 $f$ と原点対称凸集合 $K$ について、$\int_{K+ty}f$ は $t\ge0$ について非増加であることを Brunn–Minkowski 不等式から証明し、中心化ガウス測度で $\gamma(K+y)\le\gamma(K)$ を導け（Anderson 1955）。
+
+*5 Ehrhard の不等式
+$\mathbb{R}^{n}$ の標準ガウス測度 $\gamma_{n}$ と Borel 集合 $A,B$、$\lambda\in[0,1]$ について $\Phi^{-1}(\gamma_{n}(\lambda A+(1-\lambda)B))\ge\lambda\Phi^{-1}(\gamma_{n}(A))+(1-\lambda)\Phi^{-1}(\gamma_{n}(B))$ を証明せよ（凸集合で Ehrhard 1983、一般の Borel 集合で Borell 2003）。
+
+*5 ガウス相関不等式（Royen）
+$\mathbb{R}^{n}$ の中心化ガウス測度 $\gamma$ と原点対称凸集合 $K,L$ について $\gamma(K\cap L)\ge\gamma(K)\gamma(L)$ であることを証明せよ（Royen 2014）。
+
+*4 Itô–Nisio の定理
+可分 Banach 空間値の独立対称確率変数の和 $S_{n}=\sum_{k\le n}X_{k}$ について、a.s. 収束、確率収束、分布収束、弱 $*$ 意味での a.s. 収束（任意の $\ell\in E^{*}$ について）が同値であることを証明せよ（Itô–Nisio 1968）。
+
+*4 Borell–TIS の不等式
+可分なガウス過程 $(X_{t})$ で $\sup X_{t}<\infty$ a.s. なら $\mathbb{E}\sup X_{t}<\infty$ であり、$\mathbb{P}(|\sup X_{t}-\mathbb{E}\sup X_{t}|>u)\le2e^{-u^{2}/2\sigma^{2}}$（$\sigma^{2}=\sup\mathrm{Var}X_{t}$）を証明せよ（Borell 1975、Tsirelson–Ibragimov–Sudakov 1976）。
+
+*4 ガウス測度の台
+可分 Banach 空間上の中心化ガウス測度の位相的台は Cameron–Martin 空間 $H_{\gamma}$ の閉包に等しいことを示し、$\gamma(H_{\gamma})=0$（$\dim H_{\gamma}=\infty$ のとき）を証明せよ。
+
+*4 ガウス測度の 0-1 法則（Kallianpur）
+中心化ガウス測度について、任意の可測線形部分空間の測度は 0 または 1 であることを証明せよ（Kallianpur 1970）。
+
+*4 Karhunen–Loève 展開
+連続な共分散をもつ $[0,1]$ 上の中心化 2 乗可積分過程 $X_{t}$ は、共分散作用素の固有展開を用いて $X_{t}=\sum\sqrt{\lambda_{k}}\xi_{k}e_{k}(t)$（$\xi_{k}$ 無相関）と $L^{2}$ 展開され、ガウスなら $\xi_{k}$ は i.i.d. $N(0,1)$ で級数は一様 a.s. 収束することを証明せよ。
+
+*4 Fourier–Hermite 展開（Cameron–Martin 1947）
+抽象 Wiener 空間 $(E,H,\gamma)$ 上で、Hermite 多項式 $\prod_{k}H_{n_{k}}(\hat e_{k})$ が $L^{2}(\gamma)$ の正規直交基底をなすことを示し、Wiener カオス分解 $L^{2}(\gamma)=\bigoplus_{n}\mathcal{H}_{n}$ を導け。
+
+*4 Hilbert 空間上のガウス測度の存在
+可分 Hilbert 空間上のガウス測度 $N(m,Q)$ が存在する $\iff Q$ が正のトレース型作用素であることを証明せよ。
+
+*4 $\gamma$-根号化作用素（Gross–Sazonov）
+Hilbert 空間 $H$ から Banach 空間 $E$ への作用素 $T$ が $\gamma$-根号化（$\sum\gamma_{k}Te_{k}$ が収束）であることを定義し、$E$ が Hilbert なら Hilbert–Schmidt と同値であることを証明せよ。
+
+*5 小球確率と距離エントロピー（Kuelbs–Li）
+ガウス測度の小球確率 $-\log\gamma(\|x\|<\varepsilon)$ の $\varepsilon\to0$ での漸近挙動と、Cameron–Martin 単位球の距離エントロピー $\log N(K_{\gamma},\varepsilon)$ の漸近挙動が互いに決定し合うことの証明の骨格を与えよ（Kuelbs–Li 1993）。
+
+*4 ガウス過程の上限の二分律
+中心化ガウス過程 $(X_{t})_{t\in T}$（$T$ 可算）について、$\mathbb{P}(\sup_{t}|X_{t}|<\infty)$ は 0 または 1 であることを証明せよ（Hoffmann-Jørgensen–Shepp–Dudley）。
+
+*4 ガウス過程の上限の分布の正則性（Tsirelson）
+可分なガウス過程の上限 $\sup X_{t}$ の分布は、その台の左端点を除いて絶対連続であることを証明せよ（Tsirelson 1975）。
+
+*4 Brascamp–Lieb の分散不等式
+$\mathbb{R}^{n}$ 上の確率測度 $d\mu=e^{-V}dx$（$V$ 狭義凸）について $\mathrm{Var}_{\mu}(f)\le\int\langle(\nabla^{2}V)^{-1}\nabla f,\nabla f\rangle d\mu$ を、$L^{2}$ 法（Hörmander の $\bar\partial$ 評価の実版）で証明せよ（Brascamp–Lieb 1976）。
+
+*4 Landau–Shepp–Marcus の裾の漸近
+可分 Banach 空間上の中心化ガウス測度について $\lim_{t\to\infty}t^{-2}\log\gamma(\|x\|>t)=-\frac{1}{2\sigma^{2}}$（$\sigma=\sup_{\|\ell\|\le1}(\int\ell^{2}d\gamma)^{1/2}$）を証明せよ（Landau–Shepp 1970、Marcus–Shepp 1972）。{{R:fernique}} の最良指数を決定せよ。

@@ -1,0 +1,123 @@
+=ch IX-3　確率過程の正則性と chaining
+
+*4 Kolmogorov–Chentsov の連続性定理 {kc}
+$\mathbb{R}^{d}$ の立方体を添字とする Banach 空間値過程が $\mathbb{E}\|X_{t}-X_{s}\|^{\alpha}\le C|t-s|^{d+\beta}$ をみたすなら、任意の $\gamma<\beta/\alpha$ について $\gamma$-Hölder 連続な修正をもつことを証明せよ。
+
+*4 Garsia–Rodemich–Rumsey の補題
+連続関数 $f$ と増加関数 $\Psi,p$ について $\iint\Psi\!\left(\frac{|f(t)-f(s)|}{p(|t-s|)}\right)dsdt\le B$ なら $|f(t)-f(s)|\le8\int_{0}^{|t-s|}\Psi^{-1}(4B/u^{2})dp(u)$ を証明し、Kolmogorov–Chentsov の定理を再証明せよ（1970）。
+
+*4 Dudley のエントロピー積分 {dudley}
+劣ガウス過程 $(X_{t})_{t\in(T,d)}$ について $\mathbb{E}\sup_{t}X_{t}\le C\int_{0}^{\infty}\sqrt{\log N(T,d,\varepsilon)}\,d\varepsilon$ を chaining で証明し、右辺が有限なら連続な修正をもつことを示せ（Dudley 1967）。
+
+*4 Fernique の定常ガウス過程の連続性判定
+$\mathbb{R}^{d}$ 上の定常ガウス過程について、連続（有界）な修正をもつ $\iff$ Dudley のエントロピー積分が有限であることを証明せよ（Fernique 1975）。
+
+*5 Talagrand の majorizing measure 定理 {mm}
+中心化ガウス過程について $\mathbb{E}\sup_{t\in T}X_{t}\asymp\gamma_{2}(T,d)=\inf_{(\mathcal{A}_{n})}\sup_{t}\sum_{n}2^{n/2}\mathrm{diam}(A_{n}(t))$ であることの証明の骨格を与えよ（下界は Talagrand 1987、上界は Fernique 1975）。
+
+*4 generic chaining と分割による $\gamma_{2}$
+許容的分割列による $\gamma_{2}$ と majorizing measure による汎関数 $\inf_{\mu}\sup_{t}\int_{0}^{\infty}\sqrt{\log\frac{1}{\mu(B(t,\varepsilon))}}d\varepsilon$ が定数倍を除いて同値であることを示し、generic chaining による上界 $\mathbb{E}\sup X_{t}\le C\gamma_{2}(T,d)$ を証明せよ。
+
+*5 Bernoulli 予想（Bednorz–Latała）
+$\mathbb{E}\sup_{t\in T}\sum_{i}\varepsilon_{i}t_{i}$（$\varepsilon_{i}$ は Rademacher）が有界なら、$T\subset T_{1}+T_{2}$ で $\gamma_{2}(T_{1},\ell^{2})$ と $\sup_{t\in T_{2}}\|t\|_{1}$ が共に支配されるような分解が存在することの証明の骨格を与えよ（Bednorz–Latała 2014）。
+
+*4 Marcus–Pisier のランダム Fourier 級数
+コンパクト可換群上のランダム Fourier 級数 $\sum a_{\gamma}\varepsilon_{\gamma}\gamma$ が一様収束 a.s. $\iff$ 対応するガウス級数が一様収束 a.s. $\iff$ 付随する並進不変距離に関する Dudley 積分が有限であることを証明せよ（Marcus–Pisier 1981）。
+
+*4 Salem–Zygmund の定理
+Rademacher 係数のランダム三角多項式 $P_{n}(x)=\sum_{k\le n}\varepsilon_{k}\cos kx$ について、$\|P_{n}\|_{\infty}\asymp\sqrt{n\log n}$ が高い確率で成り立つことを証明せよ（Salem–Zygmund 1954）。
+
+*4 Billard の定理
+ランダム Fourier 級数 $\sum a_{n}\varepsilon_{n}e^{inx}$ と $\sum a_{n}g_{n}e^{inx}$（$g_{n}$ は i.i.d. 標準ガウス）について、一方が a.s. で連続関数を表す $\iff$ 他方も a.s. で連続関数を表すことを証明せよ（Billard 1965）。
+
+*4 Lévy の連続度
+Brown 運動について $\limsup_{h\to0}\sup_{0\le t\le1-h}\frac{|B_{t+h}-B_{t}|}{\sqrt{2h\log(1/h)}}=1$ a.s. を証明せよ（Lévy 1937）。
+
+*4 Paley–Wiener–Zygmund の定理
+Brown 運動の見本路は a.s. でいたるところ微分不可能であり、さらに任意の点で $\frac{1}{2}$ より大きい指数の Hölder 条件をみたさないことを証明せよ（Paley–Wiener–Zygmund 1933、Dvoretzky 1963）。
+
+*4 Lévy–Ciesielski の構成
+Schauder 関数 $s_{n}$ と i.i.d. 標準ガウス列による $\sum\xi_{n}s_{n}(t)$ が $C[0,1]$ で a.s. 一様収束し、Brown 運動を与えることを証明せよ。
+
+*4 Ciesielski の同型と Brown 運動の Besov 正則性
+Schauder 係数の写像による Hölder 空間 $C^{\alpha}[0,1]\cong\ell^{\infty}$（$0<\alpha<1$）を示し、Brown 運動の見本路が a.s. で $B^{1/2}_{p,\infty}$（$1\le p<\infty$）に属し、$B^{1/2}_{p,q}$（$q<\infty$）に属さないことを証明せよ（Ciesielski–Kerkyacharian–Roynette 1993）。
+
+*4 Strassen の汎関数重複対数の法則
+$Z_{n}(t)=B(nt)/\sqrt{2n\log\log n}$ の集積点集合が a.s. で Cameron–Martin 単位球 $\{h:\int_{0}^{1}\dot h^{2}\le1\}$ に一致することを証明せよ（Strassen 1964）。
+
+*4 de la Peña–Montgomery-Smith の切り離し不等式
+独立確率変数列に関する $U$-統計量 $\sum_{i\neq j}h_{ij}(X_{i},X_{j})$ の裾確率が、独立な複製を用いた切り離し版 $\sum h_{ij}(X_{i},X_{j}')$ の裾確率と定数倍を除いて同値であることを証明せよ（1995）。
+
+*4 Hoffmann-Jørgensen の不等式
+Banach 空間値独立対称確率変数の部分和 $S_{n}$ について $\mathbb{P}(\max\|S_{k}\|>3t+s)\le\mathbb{P}(\max\|S_{k}\|>t)^{2}+\mathbb{P}(\max\|X_{k}\|>s)$ を示し、モーメントの同値性を導け（1974）。
+
+*4 Ledoux–Talagrand の縮約原理
+$\varphi_{i}:\mathbb{R}\to\mathbb{R}$ が 1-Lipschitz で $\varphi_{i}(0)=0$ なら、有界集合 $T\subset\mathbb{R}^{n}$ について $\mathbb{E}F(\frac{1}{2}\sup_{t}|\sum\varepsilon_{i}\varphi_{i}(t_{i})|)\le\mathbb{E}F(\sup_{t}|\sum\varepsilon_{i}t_{i}|)$（$F$ 凸増加）を証明せよ。
+
+*4 Slepian の補題と Sudakov–Fernique の不等式
+中心化ガウスベクトル $X,Y$ で $\mathbb{E}(X_{i}-X_{j})^{2}\le\mathbb{E}(Y_{i}-Y_{j})^{2}$ なら $\mathbb{E}\max X_{i}\le\mathbb{E}\max Y_{i}$ であることを Gauss 補間で証明せよ（Slepian 1962、Sudakov、Fernique）。
+
+*5 経験過程の Talagrand 集中不等式
+可算な関数族 $\mathcal{F}$（$\|f\|_{\infty}\le1$）と独立確率変数に対する $Z=\sup_{f}\sum f(X_{i})$ について、$\mathbb{P}(Z\ge\mathbb{E}Z+t)\le\exp\left(-\frac{t}{K}\log\left(1+\frac{t}{\sigma^{2}+\mathbb{E}Z}\right)\right)$ 型の Bennett 型不等式の証明の骨格を与えよ（Talagrand 1996、Bousquet の最良定数）。
+
+=ch IX-4　マルチンゲールと確率積分
+
+*4 Doob の最大不等式と $L^{p}$ 収束
+離散マルチンゲールについて $\|\max_{k\le n}|M_{k}|\|_{p}\le\frac{p}{p-1}\|M_{n}\|_{p}$（$1<p<\infty$）を示し、$L^{p}$ 有界マルチンゲールの a.s. かつ $L^{p}$ 収束を証明せよ。定数の最良性も示せ。
+
+*4 Burkholder–Davis–Gundy の不等式 {bdg}
+連続局所マルチンゲール $M$（$M_{0}=0$）と $0<p<\infty$ について $c_{p}\mathbb{E}\langle M\rangle_{\infty}^{p/2}\le\mathbb{E}\sup_{t}|M_{t}|^{p}\le C_{p}\mathbb{E}\langle M\rangle_{\infty}^{p/2}$ を証明せよ。
+
+*4 Davis の不等式と分解
+離散マルチンゲールについて $\mathbb{E}\sup_{n}|M_{n}|\asymp\mathbb{E}S(M)$（$S$ は二乗関数）を、Davis の分解（跳びが制御される部分と有界変動部分への分解）を用いて証明せよ（Davis 1970）。
+
+*4 マルチンゲール $H^{1}$–BMO 双対性
+連続マルチンゲールの $H^{1}$（$\|M\|=\mathbb{E}\langle M\rangle_{\infty}^{1/2}$）の双対が BMO マルチンゲール空間であることを、Fefferman の不等式 $\mathbb{E}\int|d\langle M,N\rangle|\le\sqrt2\|M\|_{H^{1}}\|N\|_{\mathrm{BMO}}$ を示して証明せよ（Getoor–Sharpe 1972）。
+
+*4 Gundy の分解
+$L^{1}$ 有界マルチンゲールと $\lambda>0$ に対し、$M=G+B+H$（$G$ は $L^{2}$ 評価をもつ、$B$ は有界変動、$H$ は小さい台）の分解を構成し、マルチンゲール変換の弱 $(1,1)$ 評価を導け（Gundy 1968）。
+
+*4 伊藤等長性と確率積分の構成
+発展的可測過程の空間 $L^{2}(\Omega\times[0,T])$ から $L^{2}(\Omega)$ への伊藤積分を単純過程の等長拡張として構成し、それが連続マルチンゲールを与えることを証明せよ。
+
+*4 Kunita–Watanabe の不等式と分解
+二つの連続局所マルチンゲールについて $\int|H||K||d\langle M,N\rangle|\le(\int H^{2}d\langle M\rangle)^{1/2}(\int K^{2}d\langle N\rangle)^{1/2}$ を示し、確率積分を $\langle H\cdot M,N\rangle=H\cdot\langle M,N\rangle$ により特徴づけよ（1967）。
+
+*4 マルチンゲール表現定理
+Brown 運動の生成するフィルトレーションに関する $L^{2}$ マルチンゲールはすべて $M_{t}=M_{0}+\int_{0}^{t}H_{s}dB_{s}$ と一意に表されることを、指数マルチンゲールの全体性から証明せよ（伊藤）。
+
+*4 Girsanov の定理と Novikov の判定法
+$\mathbb{E}\exp(\frac{1}{2}\int_{0}^{T}|\theta_{s}|^{2}ds)<\infty$ なら $\mathcal{E}(\theta\cdot B)$ は真のマルチンゲールであり、測度変換後 $B_{t}-\int_{0}^{t}\theta_{s}ds$ が Brown 運動となることを証明せよ（Girsanov 1960、Novikov 1972）。
+
+*4 Doob–Meyer の分解定理
+クラス (D) の右連続劣マルチンゲールは、マルチンゲールと可予測増加過程の和に一意に分解されることを、Komlós の定理（あるいは Dunford–Pettis の弱コンパクト性）を用いて証明せよ。
+
+*5 Bichteler–Dellacherie の定理
+適合 càdlàg 過程 $X$ について、単純可予測過程に対する確率積分が一様収束から確率収束への連続写像として拡張できる（良い積分子である）$\iff X$ がセミマルチンゲールであることの証明の骨格を与えよ（Bichteler 1979、Dellacherie 1980）。
+
+*5 UMD 空間における確率積分（van Neerven–Veraar–Weis）
+UMD Banach 空間 $E$ 値の発展的過程 $\Phi$ が Brown 運動について確率積分可能 $\iff\Phi$ が a.s. で $\gamma(L^{2}(0,T),E)$ に属することを示し、両側の BDG 型不等式 $\mathbb{E}\sup\|\int\Phi dW\|^{p}\asymp\mathbb{E}\|\Phi\|_{\gamma}^{p}$ の証明の骨格を与えよ（2007）。
+
+*4 Hilbert 空間値の伊藤公式
+Hilbert 空間 $H$ 上の $Q$-Wiener 過程に関する確率積分を構成し、$C^{2}$ 関数 $F$ に対する伊藤公式（Hessian のトレース項 $\frac{1}{2}\mathrm{Tr}[D^{2}F\,\Phi Q\Phi^{*}]$ を含む）を証明せよ。
+
+*4 Lévy の Brown 運動の特徴づけ
+連続局所マルチンゲール $M$ で $\langle M\rangle_{t}=t$ なら $M$ は Brown 運動であることを、伊藤公式と指数マルチンゲールで証明せよ。多次元版も示せ。
+
+*4 Dambis–Dubins-Schwarz の時間変更定理
+$\langle M\rangle_{\infty}=\infty$ の連続局所マルチンゲール $M$ について、$\tau_{s}=\inf\{t:\langle M\rangle_{t}>s\}$ による $B_{s}=M_{\tau_{s}}$ が Brown 運動であり $M_{t}=B_{\langle M\rangle_{t}}$ となることを証明せよ（1965）。
+
+*4 田中の公式と局所時間の連続性（Trotter）
+Brown 運動の局所時間 $L_{t}^{a}$ を田中の公式 $|B_{t}-a|=|a|+\int\mathrm{sgn}(B_{s}-a)dB_{s}+L_{t}^{a}$ で定義し、$(a,t)$ について連続な修正をもつこと（Trotter 1958）と占有時間公式を証明せよ。
+
+*4 Stroock–Varadhan のマルチンゲール問題
+有界連続な一様楕円型拡散係数と有界可測なドリフトについて、マルチンゲール問題が適切（解が一意に存在）であることの証明の骨格を与えよ（Stroock–Varadhan 1969）。
+
+*4 Yamada–Watanabe の定理
+SDE について、弱解の存在と道ごとの一意性から強解の存在と法則の一意性が従うことを証明せよ（Yamada–Watanabe 1971）。$\sigma$ が $\frac{1}{2}$-Hölder 連続な 1 次元の場合の道ごとの一意性も示せ。
+
+*4 Zvonkin–Veretennikov の定理
+$dX=b(X)dt+dB$（$b$ は有界可測）が一意な強解をもつことを、Zvonkin 変換によりドリフトを除去して証明せよ（Zvonkin 1974、Veretennikov 1981）。
+
+*5 Lyons のラフパスの普遍極限定理
+$p$-変動の幾何的ラフパス $\mathbf{X}$（$2\le p<3$）について、十分滑らかなベクトル場による微分方程式 $dY=f(Y)d\mathbf{X}$ の解写像が $p$-変動ラフパス距離で局所 Lipschitz 連続であることの証明の骨格を与えよ（Lyons 1998）。Brown 運動の Stratonovich 解との関係を述べよ。

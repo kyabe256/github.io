@@ -113,8 +113,8 @@ $B(H)\otimes_{\min}B(H)\neq B(H)\otimes_{\max}B(H)$（$H$ 無限次元）を、�
 *4 準対角性と従順性（Rosenberg）
 準対角 C*-環を定義し、$C_{r}^{*}(G)$ が準対角なら $G$ は従順であることを証明せよ。$C_{r}^{*}(\mathbb{F}_{2})$ が準対角でないことを導け。
 
-*4 非可換 Grothendieck 不等式（Pisier, Haagerup）
-C*-環 $A,B$ 上の有界双線形形式 $u$ に対し、$A$ の状態 $f_{1},f_{2}$ と $B$ の状態 $g_{1},g_{2}$ で $|u(a,b)|\le\|u\|\,(f_{1}(a^{*}a)+f_{2}(aa^{*}))^{1/2}(g_{1}(bb^{*})+g_{2}(b^{*}b))^{1/2}$ となるものが存在することを証明せよ（Haagerup 1985）。
+*4 Haagerup テンソル積（Christensen–Sinclair, Paulsen–Smith, Blecher–Paulsen）
+作用素空間の Haagerup テンソルノルム $\|u\|_{h}=\inf\|[x_{1}\ \cdots\ x_{n}]\|\,\|[y_{1}\ \cdots\ y_{n}]^{t}\|$ が単射的かつ射影的で結合的であることを示し、完全有界な双線形写像が $\varphi(a,b)=V^{*}\pi(a)T\rho(b)W$ と表されること（Christensen–Sinclair 1987）を証明せよ。
 
 *4 Haagerup–Paulsen–Wittstock の分解定理
 C*-環 $A$ から $B(H)$ への完全有界写像 $\varphi$ は、表現 $\pi$ と作用素 $V,W$ により $\varphi=V^{*}\pi(\cdot)W$、$\|V\|\|W\|=\|\varphi\|_{cb}$ と表されることを証明せよ。

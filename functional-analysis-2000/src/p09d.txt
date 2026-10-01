@@ -1,0 +1,123 @@
+=ch IX-7　確率偏微分方程式
+
+*4 確率畳み込みと mild 解（Da Prato–Zabczyk） {mild}
+Hilbert 空間 $H$ 上の $dX=(AX+F(X))dt+B(X)dW$（$A$ は $C_{0}$ 半群 $S(t)$ の生成作用素、$F,B$ は大域 Lipschitz、$W$ は円筒 Wiener 過程）について、$X_{t}=S(t)x+\int_{0}^{t}S(t-s)F(X_{s})ds+\int_{0}^{t}S(t-s)B(X_{s})dW_{s}$ の一意な解の存在を証明せよ。
+
+*4 因数分解法（Da Prato–Kwapień–Zabczyk）
+$\int_{0}^{t}S(t-s)\Phi(s)dW_{s}=\frac{\sin\pi\alpha}{\pi}\int_{0}^{t}(t-s)^{\alpha-1}S(t-s)Y_{\alpha}(s)ds$ の表示を示し、確率畳み込みが連続な修正をもつための十分条件を導け（1987）。
+
+*4 Krylov–Rozovskii の変分的方法
+Gelfand 三つ組 $V\subset H\subset V^{*}$ 上で、半連続・弱単調・強圧的・有界な $A(t,\cdot):V\to V^{*}$ に対する $dX=A(t,X)dt+B(t,X)dW$ が一意な変分解をもつことを、伊藤公式 $\|X_{t}\|_{H}^{2}$ の版を用いて証明せよ（Krylov–Rozovskii 1979）。
+
+*4 Walsh の確率熱方程式
+1 次元の $\partial_{t}u=\partial_{x}^{2}u+\sigma(u)\dot W$（$\dot W$ は時空ホワイトノイズ、$\sigma$ Lipschitz）が一意な mild 解をもち、時間に $\frac{1}{4}-$、空間に $\frac{1}{2}-$ の Hölder 連続性をもつことを証明せよ（Walsh 1986）。
+
+*4 Dalang の条件
+空間的に一様な共分散（スペクトル測度 $\mu$）をもつガウス雑音で駆動される確率熱方程式・波動方程式が関数値解をもつ $\iff\int\frac{\mu(d\xi)}{1+|\xi|^{2}}<\infty$ を証明せよ（Dalang 1999）。
+
+*4 Mueller の正値性定理
+$\partial_{t}u=\partial_{x}^{2}u+u\dot W$（乗法的時空ホワイトノイズ）の解は、非負非零の初期値に対して $t>0$ で a.s. 狭義正であることを証明せよ（Mueller 1991）。
+
+*4 Da Prato–Debussche の方法
+2 次元トーラス上の確率量子化方程式 $\partial_{t}\Phi=\Delta\Phi-:\Phi^{3}:+\xi$ について、線形解 $Z$ の Wick 冪を確率的に構成し、$v=\Phi-Z$ に対する決定論的方程式を解くことで局所適切性を証明せよ（Da Prato–Debussche 2003）。
+
+*5 Hairer の正則性構造の理論
+正則性構造・モデル・再構成定理を定義し、3 次元の $\Phi^{4}_{3}$ 方程式と KPZ 方程式に対して、繰り込まれた近似解が繰り込み定数を除いて極限をもつことの証明の骨格を与えよ（Hairer 2014）。
+
+*4 パラ制御解析（Gubinelli–Imkeller–Perkowski）
+Bony のパラ積分解と交換子評価を用いて、パラ制御された分布の空間で特異確率偏微分方程式（例えば 2 次元の放物型 Anderson モデル）の局所解を構成せよ（2015）。
+
+*5 縮退雑音をもつ 2 次元 Navier–Stokes のエルゴード性（Hairer–Mattingly）
+少数のフーリエモードにのみ雑音が入る 2 次元確率 Navier–Stokes 方程式が一意な不変測度をもつことを、漸近的強 Feller 性と無限次元 Hörmander 型条件で証明の骨格を与えよ（Hairer–Mattingly 2006）。
+
+*4 非縮退雑音の 2 次元確率 Navier–Stokes の一意エルゴード性（Flandoli–Maslowski）
+十分非縮退な加法的雑音をもつ 2 次元確率 Navier–Stokes 方程式について、強 Feller 性と既約性を Bismut–Elworthy–Li 公式で示し、不変測度の一意性を導け（Flandoli–Maslowski 1995）。
+
+*4 KPZ 方程式の Cole–Hopf 解と弱非対称排他過程（Bertini–Giacomin）
+弱非対称単純排他過程の高さ関数を適切にスケールしたものの指数変換が、確率熱方程式の解に収束することを証明せよ（Bertini–Giacomin 1997）。
+
+*4 雑音による正則化（Flandoli–Gubinelli–Priola）
+Hölder 連続で有界なドリフトをもつ輸送方程式 $\partial_{t}u+b\cdot\nabla u+\nabla u\circ\dot W=0$ が、決定論的な場合には失われる一意性を回復することを、確率的特性曲線の微分同相性から証明せよ（2010）。
+
+*4 無限遠からの降下（Mourrat–Weber）
+3 次元トーラス上の $\Phi^{4}_{3}$ 方程式の解は初期値によらない時刻 $t>0$ 以降で一様に評価され、したがって大域解が存在することを証明せよ（Mourrat–Weber 2017）。
+
+*4 Boué–Dupuis の変分表現
+有界可測な汎関数 $F$ について $-\log\mathbb{E}e^{-F(W)}=\inf_{v}\mathbb{E}\left[\frac{1}{2}\int_{0}^{T}|v_{s}|^{2}ds+F(W+\int_{0}^{\cdot}v_{s}ds)\right]$（$v$ は発展的可測）を証明せよ（Boué–Dupuis 1998）。小雑音の大偏差原理への応用を述べよ。
+
+*4 Kunita の確率微分同相流
+滑らかな係数の SDE の解 $X_{t}(x)$ が確率的な微分同相流をなすことを示し、伊藤–Wentzell の公式を用いて確率輸送方程式の解を逆流で表せ（Kunita 1990）。
+
+*4 Ornstein–Uhlenbeck 過程の不変測度
+$dX=AXdt+\sqrt QdW$ について、不変測度が存在する $\iff\sup_{t}\mathrm{Tr}\,Q_{t}<\infty$（$Q_{t}=\int_{0}^{t}S(s)QS(s)^{*}ds$）を示し、そのとき $N(0,Q_{\infty})$ が不変測度となることを証明せよ。
+
+*4 Ornstein–Uhlenbeck 半群の強 Feller 性
+$P_{t}$ が強 Feller $\iff S(t)(H)\subset Q_{t}^{1/2}(H)$（零可制御性）を Cameron–Martin の定理で証明し、そのとき $\|D P_{t}\varphi\|\le\|Q_{t}^{-1/2}S(t)\|\,\|\varphi\|_{\infty}$ を示せ（Da Prato–Zabczyk）。
+
+*4 確率 Navier–Stokes のマルチンゲール解（Flandoli–Gątarek）
+3 次元確率 Navier–Stokes 方程式について、Galerkin 近似の法則の緊密性と Skorokhod の表現定理を用いてマルチンゲール解の存在を証明せよ（1995）。
+
+*5 $\Phi^{4}_{3}$ 測度の構成
+3 次元の $\Phi^{4}$ Euclid 場の測度を、繰り込まれた格子近似の極限として構成し、それが非ガウス的で反射正値性をもつことの証明の骨格を、確率量子化による方法（Gubinelli–Hofmanová 2021）または Glimm–Jaffe・Feldman–Osterwalder の構成的場の理論の方法で与えよ。
+
+=ch IX-8　大偏差と集中
+
+*4 Cramér の定理 {cramer}
+$\mathbb{R}^{d}$ 値 i.i.d. 確率変数の標本平均は、レート関数 $I(x)=\sup_{\lambda}(\langle\lambda,x\rangle-\log\mathbb{E}e^{\langle\lambda,X\rangle})$ の大偏差原理をみたすことを証明せよ（$\mathbb{E}e^{\langle\lambda,X\rangle}<\infty$ が全 $\lambda$ で成立と仮定）。
+
+*4 Gärtner–Ellis の定理
+対数モーメント母関数の極限 $\Lambda(\lambda)=\lim\frac{1}{n}\log\mathbb{E}e^{n\langle\lambda,Z_{n}\rangle}$ が存在し原点の近傍で有限、本質的に滑らかなら、$Z_{n}$ が $\Lambda^{*}$ の大偏差原理をみたすことを証明せよ。
+
+*4 Sanov の定理 {sanov}
+Polish 空間上の i.i.d. 列の経験測度 $L_{n}$ は、弱位相に関して相対エントロピー $H(\nu\,|\,\mu)$ をレート関数とする大偏差原理をみたすことを証明せよ（Sanov 1957、Donsker–Varadhan）。
+
+*4 Varadhan の積分補題 {varadhan}
+$Z_{n}$ がレート $I$ の大偏差原理をみたし、$F$ が連続で適当な裾条件をみたすなら $\lim\frac{1}{n}\log\mathbb{E}e^{nF(Z_{n})}=\sup(F-I)$ を証明せよ（Varadhan 1966）。
+
+*4 縮約原理と Dawson–Gärtner の射影極限定理
+連続写像による大偏差原理の像を示し（縮約原理）、射影系の各成分の大偏差原理から射影極限の大偏差原理が従うことを証明せよ（Dawson–Gärtner 1987）。
+
+*4 Schilder の定理
+$\sqrt\varepsilon B$ は $C_{0}[0,1]$ 上でレート関数 $I(h)=\frac{1}{2}\int_{0}^{1}\dot h^{2}$（$h\in H^{1}$、それ以外 $\infty$）の大偏差原理をみたすことを証明せよ（Schilder 1966）。
+
+*4 Freidlin–Wentzell の理論と脱出問題
+$dX^{\varepsilon}=b(X^{\varepsilon})dt+\sqrt\varepsilon dB$ の大偏差原理を示し、安定平衡点の吸引域からの脱出時刻が $\varepsilon\log\tau^{\varepsilon}\to\inf_{\partial D}V$（$V$ は準ポテンシャル）をみたすことを証明せよ（Freidlin–Wentzell 1970）。
+
+*4 Donsker–Varadhan の占有測度の大偏差
+コンパクト空間上の Feller 過程の占有測度 $\frac{1}{t}\int_{0}^{t}\delta_{X_{s}}ds$ はレート関数 $I(\mu)=-\inf_{u>0}\int\frac{Lu}{u}d\mu$ の大偏差原理をみたすことを証明せよ。可逆なら $I(\mu)=\mathcal{E}(\sqrt{d\mu/d\pi})$ となることを示せ（1975）。
+
+*4 Bryc の逆 Varadhan 補題
+指数緊密な列 $Z_{n}$ について、任意の有界連続 $F$ で $\Lambda(F)=\lim\frac{1}{n}\log\mathbb{E}e^{nF(Z_{n})}$ が存在すれば、$Z_{n}$ はレート $I(x)=\sup_{F}(F(x)-\Lambda(F))$ の大偏差原理をみたすことを証明せよ（Bryc 1990）。
+
+*4 Banach 空間の Cramér の定理（Donsker–Varadhan, Bahadur–Zabell, de Acosta）
+可分 Banach 空間値の i.i.d. 列で $\mathbb{E}e^{\alpha\|X\|}<\infty$（全 $\alpha$）なら、標本平均が Legendre 変換によるレート関数の大偏差原理をみたすことを、部分加法性と凸性で証明せよ。
+
+*4 輸送–エントロピー不等式とガウス型集中（Marton, Bobkov–Götze）
+$\mu$ が $W_{1}(\nu,\mu)\le\sqrt{2CH(\nu|\mu)}$（$T_{1}$）をみたす $\iff$ 任意の 1-Lipschitz $F$ について $\int e^{\lambda(F-\int F)}d\mu\le e^{C\lambda^{2}/2}$ であることを、Kantorovich 双対性と Donsker–Varadhan の変分公式で証明せよ（Bobkov–Götze 1999）。
+
+*4 Talagrand の $T_{2}$ 不等式
+$\mathbb{R}^{n}$ の標準ガウス測度について $W_{2}(\nu,\gamma)^{2}\le2H(\nu|\gamma)$ を、1 次元での単調輸送と積構造によるテンソル化で証明せよ（Talagrand 1996）。
+
+*4 Otto–Villani の定理
+曲率条件なしに、対数 Sobolev 不等式（定数 $\rho$）$\Rightarrow T_{2}(\rho)\Rightarrow$ Poincaré 不等式（定数 $\rho$）であることを、Hamilton–Jacobi 半群を用いた Bobkov–Gentil–Ledoux の証明で示せ（Otto–Villani 2000）。
+
+*5 Gozlan の定理
+$\mu$ が $T_{2}$ 不等式をみたす $\iff$ すべての次元 $n$ で $\mu^{\otimes n}$ が次元によらないガウス型集中をみたすことを、Sanov の定理を用いて証明せよ（Gozlan 2009）。
+
+*4 McDiarmid の有界差不等式
+独立確率変数の関数 $f$ が各座標の変化に対して $c_{i}$ 以下しか変わらないなら $\mathbb{P}(f-\mathbb{E}f\ge t)\le\exp(-2t^{2}/\sum c_{i}^{2})$ を、Azuma–Hoeffding のマルチンゲール法で証明せよ（McDiarmid 1989）。
+
+*4 Efron–Stein とエントロピー法
+$\mathrm{Var}f\le\frac{1}{2}\sum\mathbb{E}(f-f^{(i)})^{2}$（Efron–Stein）を示し、エントロピーのテンソル化と修正対数 Sobolev 不等式から自己有界関数の集中不等式を導け（Boucheron–Lugosi–Massart 2000）。
+
+*4 半群によるガウス集中（Maurey–Pisier の方法）
+標準ガウスベクトル $G$ と Lipschitz 関数 $F$ について $\mathbb{E}\varphi(F(G)-F(G'))\le\mathbb{E}\varphi(\frac{\pi}{2}\langle\nabla F(G),G'\rangle)$（$\varphi$ 凸、$G'$ は独立な複製）を回転の補間で示し、$\mathbb{P}(|F-\mathbb{E}F|>t)\le2e^{-2t^{2}/\pi^{2}L^{2}}$ を導け。
+
+*4 Lévy 族と群上の集中（Gromov–Milman, Maurey）
+$SO(n)$（Haar 測度、Hilbert–Schmidt 距離）と対称群 $S_{n}$（一様測度、正規化 Hamming 距離）が正規 Lévy 族であることを、Ricci 曲率とマルチンゲール法で証明せよ（Gromov–Milman 1983、Maurey 1979）。
+
+*4 行列 Bernstein 不等式（Ahlswede–Winter, Tropp）
+独立中心化 Hermite 行列 $X_{k}$（$\|X_{k}\|\le L$）について $\mathbb{P}(\lambda_{\max}(\sum X_{k})\ge t)\le d\exp\left(\frac{-t^{2}/2}{\sigma^{2}+Lt/3}\right)$（$\sigma^{2}=\|\sum\mathbb{E}X_{k}^{2}\|$）を、Lieb の凹性定理を用いて証明せよ（Tropp 2012）。
+
+*5 Paouris の不等式
+$\mathbb{R}^{n}$ の等方的対数凹確率ベクトル $X$ について $\mathbb{P}(|X|\ge ct\sqrt n)\le e^{-t\sqrt n}$（$t\ge1$）であることの証明の骨格を与えよ（Paouris 2006）。

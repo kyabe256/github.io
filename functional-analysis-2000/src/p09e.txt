@@ -1,0 +1,123 @@
+=ch IX-9　最適輸送
+
+*4 Kantorovich の双対定理 {kantorovich}
+Polish 空間 $X,Y$ 上の下半連続で下に有界なコスト $c$ について、$\min_{\pi\in\Pi(\mu,\nu)}\int c\,d\pi=\sup\{\int\varphi\,d\mu+\int\psi\,d\nu:\varphi(x)+\psi(y)\le c(x,y)\}$ を証明し、最適計画の存在を示せ。
+
+*4 Brenier の定理 {brenier}
+$\mathbb{R}^{n}$ 上の 2 次モーメント有限な $\mu,\nu$ で $\mu$ が Lebesgue 絶対連続なら、2 乗コストの最適計画は一意で、ある凸関数 $\varphi$ の勾配 $T=\nabla\varphi$ による輸送写像 $(I\times T)_{*}\mu$ で与えられることを証明せよ（Brenier 1991）。
+
+*4 Gangbo–McCann の定理
+狭義凸なコスト $c(x-y)$（超線形増大）について、$\mu$ が絶対連続なら最適輸送写像が一意に存在し $T(x)=x-(\nabla c)^{-1}(\nabla\varphi(x))$（$\varphi$ は $c$-凹）と表されることを証明せよ（Gangbo–McCann 1996）。
+
+*4 $c$-巡回単調性と最適性
+連続コストについて、輸送計画が最適 $\iff$ その台が $c$-巡回単調であることを証明し（Schachermayer–Teichmann 2009 の一般化を含めて）、最適計画の弱極限に関する安定性を導け。
+
+*4 McCann の変位凸性
+$\mathbb{R}^{n}$ 上の内部エネルギー $\int F(\rho)$ が、$s\mapsto s^{n}F(s^{-n})$ が凸非増加ならば Wasserstein 測地線に沿って凸であることを証明せよ（McCann 1997）。ポテンシャルエネルギー・相互作用エネルギーの変位凸性の条件も示せ。
+
+*4 Benamou–Brenier の公式
+$W_{2}(\mu_{0},\mu_{1})^{2}=\inf\{\int_{0}^{1}\int|v_{t}|^{2}d\mu_{t}dt:\partial_{t}\mu_{t}+\nabla\cdot(v_{t}\mu_{t})=0\}$ を証明せよ（Benamou–Brenier 2000）。
+
+*4 Jordan–Kinderlehrer–Otto の定理
+Fokker–Planck 方程式 $\partial_{t}\rho=\Delta\rho+\nabla\cdot(\rho\nabla V)$ の解が、自由エネルギー $\int\rho\log\rho+\int V\rho$ の Wasserstein 空間における最小化運動スキーム（JKO スキーム）の極限として得られることを証明せよ（1998）。
+
+*5 Ambrosio–Gigli–Savaré の距離空間の勾配流
+完備距離空間上の $\lambda$-凸汎関数について、最小化運動スキームが収束し、極限が発展変分不等式（EVI$_{\lambda}$）をみたす一意な勾配流であって $\lambda$-縮小的であることの証明の骨格を与えよ（2005）。
+
+*4 Otto 解析と多孔質媒質方程式
+Wasserstein 空間上の形式的 Riemann 構造を導入し、多孔質媒質方程式 $\partial_{t}\rho=\Delta\rho^{m}$ がエネルギー $\frac{1}{m-1}\int\rho^{m}$ の勾配流であることを示して、自己相似解（Barenblatt 解）への収束率を導け（Otto 2001）。
+
+*4 Lott–Villani–Sturm の曲率次元条件
+測度距離空間の $CD(K,N)$ 条件をエントロピーの Wasserstein 測地線に沿った凸性で定義し、Riemann 多様体では $\mathrm{Ric}\ge K$、$\dim\le N$ と同値であること、測度付き Gromov–Hausdorff 収束で安定であることを証明せよ（2006）。
+
+*5 RCD 空間と Bakry–Émery 条件の同値性（Ambrosio–Gigli–Savaré）
+無限小 Hilbert 的な測度距離空間について、$RCD(K,\infty)$ 条件と、Cheeger エネルギーの生成する熱半群の Bakry–Émery 条件 $BE(K,\infty)$ が同値であることの証明の骨格を与えよ（2015）。
+
+*4 Brenier 写像の正則性（Caffarelli）
+$\mu,\nu$ の密度が上下に有界で目標の台が凸なら、Brenier ポテンシャル $\varphi$ は Monge–Ampère 方程式 $\det D^{2}\varphi=f/g(\nabla\varphi)$ の Alexandrov 解で、$\varphi\in C^{1,\alpha}$ となることを証明せよ（Caffarelli 1992）。
+
+*5 Ma–Trudinger–Wang の正則性理論
+一般コストの最適輸送写像の滑らかさを、コストの 4 階微分に関する条件（MTW 条件）と目標領域の $c$-凸性の下で証明の骨格とともに示し、条件が破れると不連続な最適写像が存在すること（Loeper 2009）を述べよ（Ma–Trudinger–Wang 2005）。
+
+*4 輸送による Prékopa–Leindler 不等式
+$h((1-t)x+ty)\ge f(x)^{1-t}g(y)^{t}$ なら $\int h\ge(\int f)^{1-t}(\int g)^{t}$ を、Brenier 写像（または Knothe 写像）と算術幾何平均不等式で証明し、Brunn–Minkowski 不等式を導け。
+
+*4 輸送による最良 Sobolev 不等式（Cordero-Erausquin–Nazaret–Villani）
+Brenier 写像と変位凸性を用いて、Sobolev 不等式と Gagliardo–Nirenberg 不等式の最良定数と最良関数を求めよ（2004）。
+
+*4 距離コストの Monge 問題
+$\mathbb{R}^{n}$ 上のコスト $|x-y|$ について、$\mu$ が絶対連続なら最適輸送写像が存在することを、輸送線（transport rays）への分解を用いて証明の骨格とともに示せ（Evans–Gangbo 1999、Caffarelli–Feldman–McCann 2002、Trudinger–Wang 2001）。
+
+*4 エントロピー正則化と Sinkhorn 反復
+$\min_{\pi}\int c\,d\pi+\varepsilon H(\pi|\mu\otimes\nu)$ の解が $\pi=e^{(\varphi\oplus\psi-c)/\varepsilon}\mu\otimes\nu$ の形であり、Sinkhorn 反復が Hilbert 射影距離で線形収束すること（Franklin–Lorenz 1989）、$\varepsilon\to0$ で最適輸送に Γ-収束すること（Léonard 2012）を証明せよ。
+
+*4 マルチンゲール最適輸送の双対性
+凸順序にある $\mu\le_{cx}\nu$ と上半連続コストについて、マルチンゲール輸送計画上の最大値と、セミスタティック超複製の最小コストが一致することを証明せよ（Beiglböck–Henry-Labordère–Penkner 2013）。
+
+*4 Wasserstein 重心（Agueh–Carlier）
+$\mathbb{R}^{n}$ 上の確率測度 $\nu_{1},\dots,\nu_{k}$ と重み $\lambda_{i}$ について $\min_{\mu}\sum\lambda_{i}W_{2}(\mu,\nu_{i})^{2}$ の解が存在し、ある $\nu_{i}$ が絶対連続なら一意であることを、多周辺輸送問題との同値性を通じて証明せよ（2011）。
+
+*5 輸送による定量的等周不等式（Figalli–Maggi–Pratelli）
+異方的周長 $P_{K}$ について、$P_{K}(E)-P_{K}(K_{E})\ge c(n)\,P_{K}(K_{E})\,\alpha(E)^{2}$（$\alpha$ は Fraenkel 非対称度、$K_{E}$ は同体積の Wulff 形）を、Gromov の輸送写像を用いて証明の骨格とともに示せ（2010）。
+
+=ch IX-10　エルゴード理論とランダム行列
+
+*4 Birkhoff の個別エルゴード定理
+測度保存変換 $T$ と $f\in L^{1}$ について、極大エルゴード補題（Garsia の証明）を用いて $\frac{1}{n}\sum_{k<n}f\circ T^{k}$ が a.s. 収束し、極限が $T$-不変 $\sigma$-代数への条件付き期待値であることを証明せよ。
+
+*4 Kingman の劣加法エルゴード定理
+劣加法的コサイクル $f_{n+m}\le f_{n}+f_{m}\circ T^{n}$（$f_{1}^{+}\in L^{1}$）について $\frac{1}{n}f_{n}$ が a.s. 収束することを証明せよ（Kingman 1968）。
+
+*4 Furstenberg–Kesten の定理
+定常エルゴード的なランダム行列列 $A_{n}$（$\log^{+}\|A_{1}\|\in L^{1}$）について $\frac{1}{n}\log\|A_{n}\cdots A_{1}\|$ が a.s. で定数に収束することを Kingman の定理から導け（Furstenberg–Kesten 1960）。
+
+*4 Oseledets の乗法エルゴード定理
+可逆な可測行列コサイクルについて、Lyapunov 指数 $\lambda_{1}>\cdots>\lambda_{k}$ と可測な不変分解 $\mathbb{R}^{d}=\bigoplus E_{i}(x)$ で $\lim\frac{1}{n}\log\|A^{(n)}(x)v\|=\lambda_{i}$（$v\in E_{i}(x)\setminus0$）となるものが存在することを証明せよ（Oseledets 1968、Raghunathan の証明）。
+
+*5 無限次元の乗法エルゴード定理（Ruelle, Mañé）
+Hilbert 空間（Ruelle 1982）あるいは Banach 空間（Mañé 1983、Lian–Lu 2010）上のコンパクト作用素値コサイクルについて、有限重複度の Lyapunov 指数列と対応する Oseledets 分解が存在することの証明の骨格を与えよ。
+
+*4 Furstenberg の正値性定理
+$SL(2,\mathbb{R})$ に値をとる i.i.d. ランダム行列で、生成する閉部分群が非コンパクトかつ強既約なら、最大 Lyapunov 指数が正であることを、射影直線上の定常測度を用いて証明せよ（Furstenberg 1963）。
+
+*4 Wiener–Wintner の定理
+エルゴード的測度保存系と $f\in L^{1}$ について、a.e. の $x$ で任意の $\theta\in\mathbb{R}$ に対し $\frac{1}{n}\sum_{k<n}e^{2\pi ik\theta}f(T^{k}x)$ が収束することを証明せよ（Wiener–Wintner 1941）。
+
+*5 平方数に沿った点別エルゴード定理（Bourgain）
+$f\in L^{p}$（$p>1$）について $\frac{1}{n}\sum_{k\le n}f(T^{k^{2}}x)$ が a.e. 収束することの証明の骨格を、円周法による指数和の評価と変動ノルムの評価で与えよ（Bourgain 1988）。
+
+*5 Furstenberg の多重再帰定理と Szemerédi の定理
+測度保存系 $(X,\mu,T)$ と $\mu(A)>0$ について $\liminf\frac{1}{N}\sum_{n<N}\mu(A\cap T^{-n}A\cap\cdots\cap T^{-kn}A)>0$ であることの証明の骨格（Furstenberg の構造定理）を与え、Furstenberg の対応原理により Szemerédi の定理を導け（Furstenberg 1977）。
+
+*4 多重エルゴード平均の $L^{2}$ 収束（Host–Kra）
+$\frac{1}{N}\sum_{n<N}f_{1}(T^{n}x)\cdots f_{k}(T^{kn}x)$ が $L^{2}$ 収束することを、特性因子が冪零系の逆極限であることを用いて証明の骨格とともに示せ（Host–Kra 2005）。
+
+*4 Ornstein の同型定理
+Kolmogorov–Sinai エントロピーが等しい Bernoulli シフトは同型であることを、有限決定性の概念を用いて証明の骨格とともに示せ（Ornstein 1970）。
+
+*4 Koopman–von Neumann の定理
+測度保存系が弱混合 $\iff$ Koopman 作用素が（定数関数の直交補空間上で）連続スペクトルのみをもつ $\iff$ 直積 $T\times T$ がエルゴード的であることを証明せよ。
+
+*4 Halmos–von Neumann の離散スペクトル定理
+離散スペクトルをもつエルゴード的測度保存系は、あるコンパクト可換群上の回転と同型であり、固有値群によって同型類が完全に決まることを証明せよ（1942）。
+
+*4 Bai–Yin の定理
+Wigner 行列 $X_{N}/\sqrt N$ の最大固有値は、成分の 4 次モーメントが有限なら a.s. で $2\sigma$ に収束し、4 次モーメントが無限なら $\limsup=\infty$ a.s. となることを証明せよ（Bai–Yin 1988）。
+
+*4 Tracy–Widom 分布
+GUE の最大固有値を $N^{2/3}(\lambda_{\max}/\sqrt N-2)$ と正規化したものの分布が、Airy 核の Fredholm 行列式 $F_{2}(s)=\det(I-K_{\mathrm{Ai}})_{L^{2}(s,\infty)}$ に収束し、$F_{2}$ が Painlevé II 方程式で表されることを証明せよ（Tracy–Widom 1994）。
+
+*5 局所固有値統計の普遍性（Erdős–Schlein–Yau, Tao–Vu）
+一般の Wigner 行列のバルクにおける局所固有値間隔の統計が GUE（あるいは GOE）と一致することの証明の骨格を、局所半円則、Dyson Brown 運動による緩和、4 モーメント比較の 3 段階で与えよ（2010–2011）。
+
+*4 最小特異値の評価（Rudelson–Vershynin）
+i.i.d. 劣ガウス成分の $n\times n$ 行列 $A$ について $\mathbb{P}(s_{n}(A)\le\varepsilon n^{-1/2})\le C\varepsilon+e^{-cn}$ を、逆 Littlewood–Offord 理論を用いて証明せよ（Rudelson–Vershynin 2008）。
+
+*4 円則（Tao–Vu）
+平均 0、分散 1 の i.i.d. 成分をもつ $n\times n$ 行列 $X/\sqrt n$ の経験固有値分布は、単位円板上の一様分布に a.s. 収束することを、Girko の Hermite 化と最小特異値評価を用いて証明せよ（Tao–Vu 2010）。
+
+*4 従順群のエルゴード定理（Lindenstrauss）
+従順群の測度保存作用と緩和 Følner 列 $(F_{n})$ について、$\frac{1}{|F_{n}|}\sum_{g\in F_{n}}f(gx)$ が $f\in L^{1}$ に対して a.e. 収束することを証明せよ（Lindenstrauss 2001）。
+
+*4 Howe–Moore の定理と Mautner 現象
+連結単純 Lie 群（中心有限）の、非自明な不変ベクトルをもたない既約ユニタリ表現の行列係数は無限遠で 0 に収束することを証明し、系として格子による等質空間上の非コンパクト閉部分群の作用がエルゴード的であること（Moore のエルゴード性定理）を導け（Howe–Moore 1979）。
