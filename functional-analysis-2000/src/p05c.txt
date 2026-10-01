@@ -1,0 +1,123 @@
+=ch V-5　局所理論と高次元凸幾何
+
+*4 John の定理と Banach–Mazur 距離 {john-bm}
+$n$ 次元ノルム空間 $X$ について $d(X,\ell^{2}_{n})\le\sqrt n$（John 1948）。最大体積楕円体の接触点による恒等式の分解 $\sum c_{i}u_{i}\otimes u_{i}=I$ から証明し、$d(\ell^{1}_{n},\ell^{2}_{n})=\sqrt n$ で最良であることを示せ。
+
+*4 Banach–Mazur コンパクトの直径（Gluskin）
+$n$ 次元空間の Banach–Mazur コンパクト $\mathcal{BM}_{n}$ の直径は $cn\le\operatorname{diam}\le n$ である（Gluskin 1981：ランダムな多面体による下界）。上界を John から導き、Gluskin のランダム構成の着想を述べよ。
+
+*4 Dvoretzky の定理（Milman の証明） {dvoretzky}
+任意の $n$ 次元ノルム空間は $k\ge c\varepsilon^{2}\log n/\log(1/\varepsilon)$ 次元の部分空間で $\ell^{2}_{k}$ と $(1+\varepsilon)$-同型なものを含む（Dvoretzky 1961, Milman 1971）。球面上の測度集中（Lévy の等周不等式）と $\varepsilon$-ネットで証明せよ。
+
+*4 Lévy の等周不等式と球面上の測度集中
+球面 $S^{n-1}$ 上の Lipschitz 関数 $f$ について $\sigma(|f-M_{f}|>\varepsilon)\le2e^{-n\varepsilon^{2}/2}$。球面上の等周不等式（Lévy, Schmidt）から導け。
+
+*4 Dvoretzky 次元の Milman 公式 $k(X)\simeq n(M/b)^{2}$
+Dvoretzky 次元が $k(X)\simeq n(M_{X}/b_{X})^{2}$（$M_{X}$ は球面上の平均ノルム、$b_{X}$ は Lipschitz 定数）で与えられることを示し、$\ell^{p}_{n}$ で計算せよ。
+
+*4 Figiel–Lindenstrauss–Milman の不等式（$\ell^{1}_{n}$ の大きな Euclid 切断）
+$\ell^{1}_{n}$ は比例次元 $k=\lambda n$ の部分空間で $\ell^{2}_{k}$ と $C(\lambda)$-同型なものを含む（Kashin 1977, FLM）。$\ell^{1}_{n}$ と $\ell^{2}_{n}$ のノルムの比較から証明せよ。
+
+*4 Milman の商の部分空間定理（QS 定理）
+任意の $n$ 次元空間 $X$ は、次元 $\ge\lambda n$ の部分空間の商で $\ell^{2}$ と $C(1-\lambda)^{-1}|\log(1-\lambda)|$-同型なものをもつ（Milman 1985）。主張と証明の骨格を与えよ。
+
+*4 Bourgain–Milman の逆 Santaló 不等式
+中心対称凸体について $|K||K^{\circ}|\ge c^{n}|B^{n}_{2}|^{2}$（Bourgain–Milman 1987）。Milman の $M$-楕円体を用いた証明の骨格を与え、Kuperberg の改良（$c=\pi/4$ 程度）を述べよ。
+
+*4 Milman の $M$-楕円体と逆 Brunn–Minkowski 不等式
+任意の凸体 $K$ に、体積と被覆数を「同型的に」保つ楕円体 $\mathcal{E}_{K}$ が存在し、$|K+T|^{1/n}\le C(|K|^{1/n}+|T|^{1/n})$（適当な位置で）が成り立つ（Milman 1986）。主張を述べよ。
+
+*4 Pisier の $MM^{*}$ 評価と $\ell$-位置（Lewis, Figiel–Tomczak-Jaegermann）
+任意の $n$ 次元空間について、適当な位置で $M(K)M^{*}(K)\le C\log(1+d(X,\ell^{2}_{n}))\le C\log n$（$\ell$-位置、Lewis 1979, Figiel–Tomczak-Jaegermann, Pisier）。証明の骨格を与えよ。
+
+*4 Urysohn の不等式と平均幅
+凸体 $K$ について $(|K|/|B^{n}|)^{1/n}\le w(K)/2$（平均幅）。Steiner 対称化あるいは Gauss 測度で証明せよ。
+
+*4 Sudakov の不等式と双対 Sudakov（Pajor–Tomczak-Jaegermann）
+被覆数 $N(K,\varepsilon B_{2}^{n})\le\exp(Cn(M^{*}(K)/\varepsilon)^{2})$（Sudakov）、双対版 $N(B_{2}^{n},\varepsilon K^{\circ})\le\exp(Cn(M(K)/\varepsilon)^{2})$（Pajor–Tomczak-Jaegermann）。Gauss 過程の比較（Slepian）あるいは体積比較で証明せよ。
+
+*4 体積比の理論（Szarek–Tomczak-Jaegermann）
+体積比 $\operatorname{vr}(K)=(|K|/|\mathcal{E}|)^{1/n}$（$\mathcal{E}$ は John 楕円体）が有界な空間は、比例次元の Euclid 部分空間をほとんどすべての方向にもつ（Szarek 1978）。$\ell^{1}_{n}$ に適用せよ。
+
+*4 Bourgain–Tzafriri の制限可逆性定理
+$n\times n$ 行列 $T$（列のノルム 1）に対し、$|\sigma|\ge cn/\|T\|^{2}$ なる座標部分集合 $\sigma$ で $T|_{\mathbb{R}^{\sigma}}$ が一様に可逆なものが存在する（Bourgain–Tzafriri 1987）。主張と、Spielman–Srivastava の障壁関数による証明の骨格を与えよ。
+
+*4 Sauer–Shelah 補題と Banach 空間（Elton, Pajor）
+$\ell^{1}_{k}$ のコピーを含む条件を組合せ論で特徴づける Elton の定理（$\|\sum\pm x_{i}\|\ge\delta n$ の平均から $\ell^{1}_{k}$ が比例次元で現れる）を述べ、VC 次元との関係を述べよ。
+
+*4 Talagrand の凸距離不等式
+直積確率空間で、凸距離 $d_{T}(x,A)$ について $\mathbb{P}(A)\,E[e^{d_{T}^{2}/4}]\le1$（Talagrand 1995）。証明し、凸 Lipschitz 関数の集中への応用を述べよ。
+
+*4 Gauss 測度の等周不等式（Borell, Sudakov–Tsirelson）
+Gauss 測度で、与えられた測度の集合のうち $\varepsilon$-近傍の測度を最小化するのは半空間である（Borell 1975, Sudakov–Tsirelson 1974）。Ehrhard 対称化あるいは Bobkov の関数不等式で証明せよ。
+
+*4 Klartag の中心極限定理（凸体）
+等方的凸体上の一様分布の典型的な一次元周辺分布は Gauss 分布に近い（Klartag 2007, Anttila–Ball–Perissinaki の予想）。主張を述べ、薄殻評価との関係を説明せよ。
+
+*5 Dvoretzky の定理の $\varepsilon$ 依存性（Gordon, Schechtman, Tikhomirov）
+Milman の証明の $\varepsilon^{2}\log n/\log(1/\varepsilon)$ が Gordon により $\varepsilon^{2}\log n$ に改善され、さらに一般の空間で $\varepsilon$ について一次に近い依存（Schechtman 2006）が得られることを述べよ。$\ell^{\infty}_{n}$ で $\log n$ のオーダーが最良であることを示し、ランダム部分空間についての最良評価（Tikhomirov）を述べよ。
+
+*5 Bourgain のスライス問題の解決（Klartag–Lehec 2024）
+体積 1 の凸体 $K\subset\mathbb{R}^{n}$ はある超平面切断の $(n-1)$ 次元体積が $c$（$n$ に依らない）以上である。Klartag の $\sqrt{\log n}$ 評価（2023）と、Guan の薄殻評価を用いた Klartag–Lehec の解決の主張を述べ、Eldan の確率的局所化の役割を説明せよ。
+
+=ch V-6　作用素イデアルと絶対総和作用素
+
+*4 絶対 $p$-総和作用素と Pietsch の因数分解定理 {pietsch}
+$T$ が $p$-総和作用素 $\iff$ 双対単位球上の確率測度 $\mu$ で $\|Tx\|\le C(\int|f(x)|^{p}d\mu(f))^{1/p}$ となるものが存在する（Pietsch 1967）。Hahn–Banach（あるいは Ky Fan の minimax）で証明し、$T$ が $L^{p}(\mu)$ を経由して分解することを導け。
+
+*4 Grothendieck の定理（$\ell^{1}\to\ell^{2}$ は 1-総和） {groth-thm}
+$\ell^{1}$（あるいは $L^{1}$）から Hilbert 空間への有界作用素は 1-総和作用素であり $\pi_{1}(T)\le K_{G}\|T\|$（Grothendieck 1956）。Grothendieck の不等式から導け。
+
+*4 Grothendieck の不等式（Krivine の証明） {groth-ineq}
+実行列 $(a_{ij})$ について $\sum a_{ij}\langle u_{i},v_{j}\rangle\le K_{G}\max_{|s_{i}|,|t_{j}|\le1}\sum a_{ij}s_{i}t_{j}$ で $K_{G}\le\frac{\pi}{2\log(1+\sqrt2)}$（Krivine 1979）。Gauss 確率変数の符号と $\sin$ による埋め込みのトリックで証明せよ。
+
+*4 Lindenstrauss–Pełczyński の $\mathcal{L}_{\infty}$-$\mathcal{L}_{1}$ 定理
+$\mathcal{L}_{\infty}$ 空間から $\mathcal{L}_{1}$ 空間への作用素は 2-総和作用素である（Grothendieck の定理の一般形）。証明せよ。
+
+*4 Dvoretzky–Rogers と 1-総和作用素の恒等写像
+無限次元 Banach 空間の恒等写像は $p$-総和作用素でない（Dvoretzky–Rogers の定理の作用素版）。Pietsch の因数分解から示せ。
+
+*4 Hilbert–Schmidt 作用素と 2-総和作用素の一致
+Hilbert 空間の間の作用素について、2-総和作用素 $=$ Hilbert–Schmidt 作用素で $\pi_{2}(T)=\|T\|_{2}$。証明せよ。
+
+*4 2-総和ノルムと Pietsch の John 定理（$\pi_{2}(\mathrm{id}_{X})=\sqrt n$）
+$n$ 次元空間の恒等作用素について $\pi_{2}(I_{X})=\sqrt n$（Garling–Gordon）。これから John の定理 $d(X,\ell^{2}_{n})\le\sqrt n$ の別証を与えよ。
+
+*4 核作用素と積分作用素
+核作用素 $\sum x_{i}^{*}\otimes y_{i}$（$\sum\|x_{i}^{*}\|\|y_{i}\|<\infty$）と（Grothendieck の意味の）積分作用素を定義し、Hilbert 空間では核作用素 $=$ トレースクラスであることを示せ。
+
+*4 Grothendieck の $p$-核作用素と固有値分布（König, Johnson–König–Maurey–Retherford）
+$p$-総和作用素（$p\ge2$）の固有値は $\ell^{p}$ に属し、1-総和作用素の固有値は $\ell^{2}$ に属する（Johnson–König–Maurey–Retherford 1979）。主張と証明の骨格を与えよ。
+
+*4 Weyl の不等式の Banach 空間版（König）
+Weyl 数・近似数などの $s$-数を定義し、作用素の固有値 $\lambda_{n}(T)$ が $s$-数で $\prod_{i\le n}|\lambda_{i}|\le C^{n}\prod_{i\le n}x_{i}(T)$（König）と評価されることを述べよ。
+
+*4 Carl の不等式（エントロピー数と固有値）
+コンパクト作用素の固有値とエントロピー数について $(\prod_{i\le n}|\lambda_{i}(T)|)^{1/n}\le\sqrt2e_{n}(T)$（Carl–Triebel 1980）。体積の議論で証明せよ。
+
+*4 Kolmogorov 幅と Gelfand 幅
+Kolmogorov 幅 $d_{n}(K,X)$ と Gelfand 幅 $d^{n}(K,X)$ を定義し、$d_{n}(B^{N}_{1},\ell^{N}_{2})=\sqrt{1-n/N}$ を示せ。Kashin–Garnaev–Gluskin の $d^{n}(B^{N}_{1},\ell^{N}_{2})\asymp\min\{1,\sqrt{\log(eN/n)/n}\}$ を述べよ。
+
+*4 作用素イデアルのノルム的理論（Pietsch）
+Banach 作用素イデアルの公理を述べ、コンパクト・弱コンパクト・$p$-総和・核・積分作用素がその例であることを確かめよ。双対イデアルと随伴イデアルの関係を述べよ。
+
+*4 テンソルノルムと作用素イデアルの対応（Grothendieck の 14 個のテンソルノルム）
+Grothendieck の自然なテンソルノルム（$\varepsilon,\pi,d_{p},g_{p},w_{2}$ など）と作用素イデアルの対応を述べ、$\pi$ と $\varepsilon$ の比較が恒等写像の核性に対応することを示せ。
+
+*4 Grothendieck の Résumé の問題と Pisier の反例
+Grothendieck の定理が成り立つ（$X^{*}$ と $Y^{*}$ が GT 空間）が無限次元でトレースクラス性が崩れる例、および $X\hat\otimes_{\pi}X=X\check\otimes_{\varepsilon}X$ となる無限次元空間の存在（Pisier 1983）を述べよ。
+
+*4 Pisier の空間 $P$（$X\hat\otimes_{\pi}X=X\check\otimes_{\varepsilon}X$）
+射影テンソル積と単射テンソル積が同型となる無限次元 Banach 空間が存在する（Pisier 1983）。主張を述べ、Grothendieck の問題の否定的解決として意義を述べよ。
+
+*4 Maurey の因数分解定理（$L^{p}$ を経由した分解）
+$L^{p}$（$p<2$）から余型 2 の空間への作用素は $L^{2}$（重み付き）を経由して分解する（Maurey）。Nikishin–Maurey の因数分解の理論の骨格を述べよ。
+
+*4 Nikishin の定理（測度収束への分解）
+$L^{p}$ から $L^{0}$ への連続線形作用素は、適当な密度 $g$ により $L^{q}(g\,d\mu)$ を経由して弱型に分解する（Nikishin 1970）。主張を述べ、Stein の最大原理との関係を述べよ。
+
+*5 Grothendieck 定数の非最良性（Braverman–Makarychev–Makarychev–Naor 2011）
+実 Grothendieck 定数は Krivine の上界 $\frac{\pi}{2\log(1+\sqrt2)}$ より真に小さい。Krivine の論法の「最適性」を崩す非対称ラウンディングの構成の骨格を与えよ。
+
+*5 Pisier の非可換 Grothendieck 定理と Haagerup の最良定数
+$C^{*}$-環 $A,B$ 上の有界双線形形式 $u$ について、状態 $f_{1},f_{2},g_{1},g_{2}$ で $|u(x,y)|\le\|u\|(f_{1}(x^{*}x)+f_{2}(xx^{*}))^{1/2}(g_{1}(y^{*}y)+g_{2}(yy^{*}))^{1/2}$ が成り立つ（Pisier 1978, Haagerup 1985 で定数 1）。主張と証明の骨格を与えよ。

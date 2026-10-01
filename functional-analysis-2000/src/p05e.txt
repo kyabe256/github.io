@@ -1,0 +1,123 @@
+=ch V-9　Banach 束と順序構造
+
+*4 Riesz 空間の基本（Riesz 分解と Freudenthal） {riesz-space}
+Riesz 空間の Riesz 分解性 $0\le z\le x+y\Rightarrow z=x'+y'$ を示し、Freudenthal のスペクトル定理（Dedekind 完備 Riesz 空間の元が射影成分で近似される）を述べよ。
+
+*4 Kakutani の表現定理（AL 空間・AM 空間）
+抽象 $L$ 空間（$\|x+y\|=\|x\|+\|y\|$, $x,y\ge0$）は $L^{1}(\mu)$ に束等距離同型であり（Kakutani 1941）、単位元をもつ抽象 $M$ 空間は $C(K)$ に束等距離同型である（Kakutani, Krein–Krein）。証明の骨格を与えよ。
+
+*4 Bohnenblust–Kakutani と $L^{p}$ 空間の抽象的特徴づけ
+$\|x+y\|^{p}=\|x\|^{p}+\|y\|^{p}$（$x\perp y$）をみたす Banach 束は $L^{p}(\mu)$ に束等距離同型である（Bohnenblust 1940）。証明の骨格を与えよ。
+
+*4 順序連続ノルムと Lozanovskii の分解
+Banach 束のノルムが順序連続 $\iff$ $c_{0}$ を束部分空間として含まない（Meyer-Nieberg）。順序連続ノルムをもつ Banach 束は（弱単位元をもてば）Köthe 関数空間として表現されることを示せ。
+
+*4 Lozanovskii の分解定理
+Köthe 関数空間 $X$ と Köthe 双対 $X'$ について、$f\in L^{1}$ は $f=gh$（$\|g\|_{X}\|h\|_{X'}\le(1+\varepsilon)\|f\|_{1}$）と分解される（Lozanovskii 1969）。主張を述べ、Calderón の積空間 $X^{1-\theta}Y^{\theta}$ との関係を述べよ。
+
+*4 Calderón の積空間と複素補間
+Banach 関数束の積空間 $X^{1-\theta}Y^{\theta}$ が（条件の下で）複素補間空間 $[X,Y]_{\theta}$ に一致する（Calderón 1964）ことを示せ。
+
+*4 Banach 束の $p$-凸性・$q$-凹性
+$p$-凸性 $\|(\sum|x_{i}|^{p})^{1/p}\|\le M(\sum\|x_{i}\|^{p})^{1/p}$ と $q$-凹性を定義し、$q$-凹な束は余型 $q$（$q\ge2$）をもつことを示せ。Krivine の関数計算 $(\sum|x_{i}|^{p})^{1/p}$ の定義を与えよ。
+
+*4 Krivine の関数計算（Banach 束）
+Banach 束の有限個の元 $x_{1},\dots,x_{n}$ と一次斉次連続関数 $f$ に対し $f(x_{1},\dots,x_{n})$ が well-defined であることを示し、$p$-凸性の定義に用いよ。
+
+*4 Maurey–Krivine の定理（$p$-凸化と再ノルム）
+$p$-凸な Banach 束は、$p$-凸化定数 1 の同値な束ノルムに再ノルムできることを示し、$p$-凸化 $X^{(p)}$ の構成を述べよ。
+
+*4 Banach 束上の正値作用素の Dodds–Fremlin 定理
+順序連続ノルムをもつ Banach 束の間で、コンパクト作用素に支配される正値作用素はコンパクトである（Dodds–Fremlin 1979）。主張を述べ、$L^{p}$ での Aliprantis–Burkinshaw の結果（正値作用素の積のコンパクト性）を述べよ。
+
+*4 正則作用素と Kantorovich の定理
+Dedekind 完備 Riesz 空間への正則作用素（正値作用素の差）の全体が Dedekind 完備 Riesz 空間をなすこと（Riesz–Kantorovich）と、$|T|(x)=\sup\{|Ty|:|y|\le x\}$ の公式を示せ。
+
+*4 Banach 束の Pełczyński 分解と $\ell^{1}$ の部分束
+Banach 束 $X$ が $\ell^{1}$ を含む $\iff$ $\ell^{1}$ を束部分空間として含む（Lozanovskii, Meyer-Nieberg）。主張と証明の骨格を与えよ。
+
+*4 Banach 束の超冪と有限表現可能性
+Banach 束の超冪が Banach 束であり、$\ell^{p}_{n}$ が束として有限表現可能であることを $p$-凸性・凹性と関連づけよ。
+
+*4 Grothendieck の不等式の束版（Krivine）
+Banach 束の間の作用素 $T$ について $\|(\sum|Tx_{i}|^{2})^{1/2}\|\le K_{G}\|T\|\|(\sum|x_{i}|^{2})^{1/2}\|$（Krivine 1974）。Grothendieck の不等式から導け。
+
+*4 Marcinkiewicz–Zygmund の不等式（ベクトル値拡張）
+$L^{p}$ 間の有界作用素 $T$ は $\|(\sum|Tf_{j}|^{2})^{1/2}\|_{q}\le C\|T\|\|(\sum|f_{j}|^{2})^{1/2}\|_{p}$ をみたす（Marcinkiewicz–Zygmund 1939）。Khinchin の不等式から導け。
+
+*4 Banach 束の素イデアル・帯・射影帯
+帯と射影帯を定義し、Dedekind 完備な Riesz 空間ではすべての帯が射影帯であること（Riesz の分解定理）を示せ。
+
+*4 Meyer-Nieberg の再表現と周期性
+Banach 束が反射的 $\iff$ $c_{0}$ も $\ell^{1}$ も束部分空間として含まない（Lozanovskii）。証明せよ。
+
+*4 正値作用素のスペクトルの周辺構造（de Pagter–Schep, Lotz）
+Banach 束上の正値作用素 $T$ の周辺スペクトル $\sigma(T)\cap r(T)\mathbb{T}$ が巡回的（$\lambda\in\sigma\Rightarrow\lambda^{k}/r^{k-1}\in\sigma$）であること（Lotz, Krieger）を述べよ。
+
+*5 Bohnenblust の定理の完全証明と $L^{p}$ の抽象的特徴づけ
+Banach 束での直交加法性 $\|x+y\|^{p}=\|x\|^{p}+\|y\|^{p}$ から $L^{p}$ 表現を構成する議論（Kakutani の AL 空間の表現への帰着）を完全に与え、さらに $L^{p}$ の等距離的部分空間が「ほぼ束」であること（Lamperti の等距離作用素の表現）を述べよ。
+
+*5 Lamperti の定理（$L^{p}$ の等距離作用素の表現）
+$p\neq2$ のとき、$L^{p}$ 上の等距離作用素は $Tf=h\cdot(f\circ\phi)$（$\phi$ は正則集合写像、$h$ は Radon–Nikodym 型の重み）と表される（Banach, Lamperti 1958）。Clarkson の等号条件による証明を与えよ。
+
+=ch V-10　記述集合論と Banach 空間の分類
+
+*4 可分 Banach 空間の標準 Borel 空間
+$C(\Delta)$（$\Delta$ は Cantor 集合）の閉部分空間全体に Effros–Borel 構造を入れ、可分 Banach 空間のクラスを標準 Borel 空間として扱えることを示せ（Bossard）。
+
+*4 Bossard の定理（反射的空間のクラスは非 Borel）
+可分反射的 Banach 空間の同型類全体は解析的完全（$\Pi^{1}_{1}$ 完全）で、Borel ではない（Bossard 2002）。木の階数（Szlenk 指数）による証明の骨格を与えよ。
+
+*4 Bourgain の普遍性定理（記述集合論的）
+可分 Banach 空間の解析的クラスで、すべての可分反射的空間を含むものは $C[0,1]$ を含む空間を含む（Bourgain 1980, Argyros–Dodos による強化）。証明の骨格を与えよ。
+
+*4 Szlenk 指数と順序数指数
+Szlenk 指数・$\ell^{1}$ 指数（Bourgain）を定義し、それらが可算順序数をとるときの意味（$X^{*}$ 可分 / $\ell^{1}$ を含まない）を示せ。$C(\omega^{\omega^{\alpha}})$ で計算せよ。
+
+*4 Rosenthal の $\ell^{1}$ 定理の記述集合論的精緻化（Bourgain の $\ell^{1}$ 指数）
+$\ell^{1}$ 指数が可算 $\iff X$ は $\ell^{1}$ を含まないことを示し、$\ell^{1}$ 指数の値の評価（Judd–Odell）を述べよ。
+
+*4 Banach 空間の同型関係の複雑さ（Ferenczi–Louveau–Rosendal）
+可分 Banach 空間の同型関係は解析的同値関係として完全（最も複雑）である（Ferenczi–Louveau–Rosendal 2009）。主張を述べよ。
+
+*4 Gowers の二分律の記述集合論的形式
+Gowers の Ramsey 型定理を解析的集合に対して述べ（Bagaria–López-Abad）、Borel の場合の証明を与えよ。
+
+*4 Ramsey の定理の無限次元版（Ellentuck）
+$[\mathbb{N}]^{\infty}$ の Ellentuck 位相で Baire の性質をもつ集合は完全 Ramsey である（Ellentuck 1974）。Galvin–Prikry を含むことを示せ。
+
+*4 Banach 空間の分類における普遍空間（Argyros–Dodos）
+可分 Banach 空間の解析的クラスの普遍性問題に関する Argyros–Dodos（2007）の結果の主張を述べよ。
+
+*4 Pełczyński の普遍空間とその一意性（Kadec, Pełczyński, Schechtman）
+すべての基底列を補空間として含む Pełczyński の空間 $U$ の存在と同型の意味での一意性（Pełczyński 1969, Kadec）を述べよ。
+
+*4 Gurariĭ 空間
+可分 Banach 空間で、有限次元空間の等距離埋め込みの拡張が $(1+\varepsilon)$ でつねに可能なもの（Gurariĭ 空間）が存在し、等距離同型を除いて一意である（Gurariĭ 1966, Lusky 1976, Kubiś–Solecki の短い証明）。主張と証明の骨格を与えよ。
+
+*4 Fraïssé 極限としての Gurariĭ 空間と普遍性
+Gurariĭ 空間がすべての可分 Banach 空間を等距離に含み、有限次元 Banach 空間のクラスの Fraïssé 極限として理解できること（Ben Yaacov, Kubiś）を述べよ。
+
+*4 Kalton–Randrianarivony の定理（$\ell^{p}\oplus\ell^{q}$ の剛性）
+$1<p<q<\infty$（$p,q\neq2$）のとき、$\ell^{p}\oplus\ell^{q}$ と一様同相な Banach 空間はそれと線形同型である（Kalton–Randrianarivony 2008）。グラフの粗 Lipschitz 埋め込みによる障害の議論の骨格を与え、$\ell^{1}$ の一様同相分類が未解決であることを述べよ。
+
+*4 Johnson–Lindenstrauss–Schechtman の定理
+$X$ が $\ell^{p}$（$1<p<\infty$）と一様同相なら $X\cong\ell^{p}$（JLS 1996）。主張と証明の骨格（漸近的平滑性と Ribe）を与えよ。
+
+*4 Godefroy–Kalton–Lancien の $c_{0}$ の剛性
+$c_{0}$ に Lipschitz 同型な Banach 空間は $c_{0}$ と線形同型である（Godefroy–Kalton–Lancien 2000）。主張を述べよ。
+
+*4 Banach 空間の位相的分類（Toruńczyk の定理）
+すべての無限次元 Banach 空間は、密度指標が等しければ互いに同相である（Toruńczyk 1981、Anderson–Kadec の非可分版）。主張を述べよ。
+
+*4 Banach 空間の可分双対と Lindenstrauss の問題
+可分双対をもたない可分 Banach 空間で $\ell^{1}$ を含まないもの（James tree 空間 $JT$, James 1974）の構成を述べ、Rosenthal の定理と合わせて $\ell^{1}$ の不在と可分双対の差を説明せよ。
+
+*4 James の木空間 $JT$
+James tree 空間 $JT$ は $\ell^{1}$ を含まないが双対は非可分で、$JT^{**}/JT\cong\ell^{2}(\Gamma)$（$\Gamma$ 非可算）である（James 1974）。主張と構成を与えよ。
+
+*5 Bossard の定理の完全証明
+可分 Banach 空間の標準 Borel 空間において、反射的空間の集合が $\Pi^{1}_{1}$ 完全であることを、Szlenk 指数の非有界性（任意の可算順序数より大きい Szlenk 指数をもつ反射的空間の構成）と Kunen–Martin の定理（Borel 集合上の順序数値ランクの有界性）を用いて完全に証明せよ。
+
+*5 Ferenczi–Rosendal のエルゴード性予想
+可分 Banach 空間 $X$ がエルゴード的（$X$ の部分空間の同型関係に $E_{0}$ が Borel 還元可能）であることを定義し、「$\ell^{2}$ と同型でない可分 Banach 空間はエルゴード的である」という Ferenczi–Rosendal の予想を述べよ。無条件基底をもつ空間や漸近 $\ell^{p}$ 空間での部分的解決（Ferenczi–Rosendal 2005, Cuellar Carrera）と、均質空間問題との関係を論ぜよ。

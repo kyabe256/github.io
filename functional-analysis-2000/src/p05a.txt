@@ -1,0 +1,126 @@
+=part 第 V 部　Banach 空間の幾何 | GEOMETRY OF BANACH SPACES &mdash; 801 to 1000
+すべての無限次元可分 Banach 空間は位相的には同じだが、線形同型の意味ではまったく異なる。基底、古典的空間の同型理論、凸性と平滑性、型と余型、局所理論と Dvoretzky の定理、作用素イデアル、漸近構造と Ramsey 理論、非線形幾何、Banach 束、そして Gowers–Maurey に始まる異質な空間まで ― 20 世紀後半の Banach 空間論の到達点を証明する。
+
+=ch V-1　Schauder 基底と基本列
+
+*4 Schauder 基底と基底定数 {basis}
+Banach 空間の Schauder 基底 $\{e_{n}\}$ の部分和射影 $P_{n}$ が一様有界（基底定数 $K=\sup\|P_{n}\|$）であることを一様有界性原理で示し、列 $\{e_{n}\}$ が基本列（閉包の基底）$\iff\|\sum_{i\le m}a_{i}e_{i}\|\le K\|\sum_{i\le n}a_{i}e_{i}\|$（$m\le n$）を示せ（Banach–Grunblum の判定）。
+
+*4 Mazur の補題（基本列の存在）
+任意の無限次元 Banach 空間は基本列を含む（Mazur）。有限余次元部分空間で「ほぼ直交」なベクトルを選ぶ議論で証明せよ。
+
+*4 Bessaga–Pełczyński の選択原理 {bp-select}
+基底 $\{e_{n}\}$ に関して $x_{n}\rightharpoonup0$ かつ $\inf\|x_{n}\|>0$ なら、部分列はブロック基底列と同値な基本列となる（Bessaga–Pełczyński 1958）。小さな摂動の原理とともに証明せよ。
+
+*4 小摂動の原理（Krein–Milman–Rutman）
+基本列 $\{x_{n}\}$（基底定数 $K$）と $\sum\|x_{n}-y_{n}\|/\|x_{n}\|<1/(2K)$ なる $y_{n}$ について、$\{y_{n}\}$ は $\{x_{n}\}$ と同値な基本列で、補空間性も保たれる。証明せよ。
+
+*4 無条件基底と James の定理 {james-unc}
+無条件基底をもつ Banach 空間は、反射的であるか、$c_{0}$ または $\ell^{1}$ と同型な部分空間を含む（James 1950）。縮小基底・有界完備基底の概念を用いて証明せよ。
+
+*4 縮小基底と有界完備基底
+基底が縮小的 $\iff$ 双対の座標汎関数が $X^{*}$ の基底をなす；有界完備 $\iff$ $X$ が $[e_{n}^{*}]^{*}$ と同型。基底をもつ空間が反射的 $\iff$ 基底が縮小的かつ有界完備であること（James）を示せ。
+
+*4 $L^{p}$ の Haar 基底の無条件性（Paley, Marcinkiewicz）
+Haar 系は $L^{p}[0,1]$（$1<p<\infty$）の無条件基底である。Burkholder のマルチンゲール変換の不等式から導き、無条件基底定数が $p^{*}-1$ であることを述べよ。
+
+*4 $L^{1}$ と $C[0,1]$ は無条件基底をもたない
+$L^{1}[0,1]$ と $C[0,1]$ はいかなる無条件基底ももたない（Pełczyński, Karlin）。$L^{1}$ については、無条件基底をもつ空間に $L^{1}$ が埋め込めないこと（James の定理と、$L^{1}$ が弱点列完備で $c_{0}$ を含まないこと、および $\ell^{1}$ と同型でないことを用いる）を示し、$C[0,1]$ についてはその普遍性から導け。
+
+*4 Schauder 基底をもつ古典的空間（Faber–Schauder 系）
+$C[0,1]$ が Faber–Schauder 系を基底にもつことを示し、Franklin 系が $C[0,1]$ の基底かつ $L^{p}$ の無条件基底であること（Ciesielski）を述べよ。
+
+*4 Kadec–Pełczyński の二分律
+$L^{p}$（$2<p<\infty$）の部分空間は、$\ell^{2}$ と同型（補空間あり）か、$\ell^{p}$ と同型な部分空間を含む（Kadec–Pełczyński 1962）。$L^{p}$ と $L^{2}$ のノルムの比較による証明を与えよ。
+
+*4 Kadec–Pełczyński の $L^{1}$ における分解
+$L^{1}$ の有界列は、一様可積分な部分列と、互いに素な台をもつ部分列の和に（部分列で）分解できる（subsequence splitting lemma）。証明し、反射的部分空間の特徴づけに応用せよ。
+
+*4 Rosenthal の $\ell^{1}$ 定理と spreading model の入口
+有界列は弱 Cauchy 部分列か $\ell^{1}$ 基底と同値な部分列をもつ（Rosenthal 1974）。Farahat による Ramsey 理論的証明（Nash-Williams, Galvin–Prikry）を与えよ。
+
+*4 Galvin–Prikry の定理（Borel Ramsey 定理）
+$[\mathbb{N}]^{\infty}$ の Borel 集合 $\mathcal{A}$ に対し、無限集合 $M$ で $[M]^{\infty}\subset\mathcal{A}$ または $[M]^{\infty}\cap\mathcal{A}=\emptyset$ となるものが存在する（Galvin–Prikry 1973）。開集合の場合（Nash-Williams）を証明せよ。
+
+*4 Banach 空間の基底の存在問題と Enflo
+すべての可分 Banach 空間が Schauder 基底をもつか（Banach の問題）は否定的に解決された（Enflo 1973）。近似性質と基底の関係（基底 $\Rightarrow$ 有界近似性質 $\Rightarrow$ 近似性質）と逆が成り立たないこと（Szarek：BAP をもつが基底をもたない空間）を述べよ。
+
+*4 Szarek の定理（BAP をもつが基底のない空間）
+有界近似性質をもつが Schauder 基底をもたない可分 Banach 空間が存在する（Szarek 1987）。主張と構成の着想を述べよ。
+
+*4 Pełczyński の普遍基底空間
+任意の基底と同値な基底列を補空間として含む普遍空間（Pełczyński 1969）の存在と、Schechtman による無条件基底の場合の一意性を述べよ。
+
+*4 Zippin の定理（$c_{0}$ と $\ell^{p}$ の基底の特徴づけ）
+完全に対称（あるいは部分対称で全てのブロック基底が同値）な基底をもつ空間は $c_{0}$ か $\ell^{p}$ と同型である（Zippin 1966）。証明の骨格を与えよ。
+
+*4 $\ell^{p}$ と $c_{0}$ の基底の一意性（Lindenstrauss–Pełczyński, Lindenstrauss–Zippin）
+無条件基底が（置換を除いて）一意に同値となる空間は $c_{0}$, $\ell^{1}$, $\ell^{2}$ に限る（Lindenstrauss–Zippin 1969）。主張を述べよ。
+
+*5 Gowers の二分律と hereditarily indecomposable 空間 {gowers-dich}
+任意の無限次元 Banach 空間は、無条件基底をもつ部分空間を含むか、遺伝的に分解不能（HI）な部分空間を含む（Gowers 1996）。Gowers のゲーム（Ramsey 型の性質）による証明の骨格を与えよ。
+
+*5 Gowers–Maurey の HI 空間 {gm}
+いかなる無限次元部分空間も二つの無限次元閉部分空間の直和に分解できない（遺伝的分解不能）Banach 空間が存在し、その上のすべての作用素は $\lambda I+S$（$S$ 狭義特異）の形である（Gowers–Maurey 1993）。構成の骨格（Schlumprecht 空間と特別な汎関数）を与え、無条件基底列を含まない空間であることを結論せよ。
+
+=ch V-2　古典的空間の同型理論
+
+*4 Pełczyński の分解法 {pel-decomp}
+$X$ が $Y$ の補空間と同型、$Y$ が $X$ の補空間と同型で、$X\cong\ell^{p}(X)$（あるいは $X\cong X\oplus X$ と $Y\cong Y\oplus Y$）なら $X\cong Y$（Pełczyński 1960）。証明し、$\ell^{p}$ の無限次元補空間が $\ell^{p}$ と同型であることを導け。
+
+*4 $\ell^{p}$ の素性（Pełczyński）
+$\ell^{p}$（$1\le p<\infty$）と $c_{0}$ は素空間（すべての無限次元補空間がもとの空間と同型）である。Bessaga–Pełczyński の選択原理と分解法で証明せよ。
+
+*4 $\ell^{\infty}$ の素性（Lindenstrauss）
+$\ell^{\infty}$ は素空間である（Lindenstrauss 1967）。単射性と Pełczyński の分解法で証明せよ。
+
+*4 Pitt の定理 {pitt}
+$1\le q<p<\infty$ について、$\ell^{p}$ から $\ell^{q}$（および $c_{0}$ から $\ell^{q}$）への有界作用素はコンパクトである（Pitt 1936）。証明し、$\ell^{p}$ どうしが互いに同型な部分空間を含まないことを導け。
+
+*4 $L^{p}$ の部分空間としての $\ell^{q}$（$p<q\le2$）
+$1\le p<q\le2$ なら $\ell^{q}$ は $L^{p}$ に等距離に埋め込める（$q$-安定確率変数による）が、$q>2$ では $L^{p}$（$p<2$）に埋め込めないことを示せ。
+
+*4 $L^{p}$ の同型分類（$p\neq2$）と $L^{p}\not\cong\ell^{p}$
+$1\le p<\infty$, $p\neq2$ のとき $L^{p}[0,1]\not\cong\ell^{p}$。$L^{p}$ が $\ell^{2}$ を補空間として（$p>2$ のとき）含むことを Khinchin の不等式から示せ。
+
+*4 Khinchin の不等式 {khinchin}
+Rademacher 関数について $A_{p}(\sum|a_{n}|^{2})^{1/2}\le\|\sum a_{n}r_{n}\|_{p}\le B_{p}(\sum|a_{n}|^{2})^{1/2}$。最良定数（Haagerup 1981：$p\ge2$ で $B_{p}=\sqrt2(\Gamma((p+1)/2)/\sqrt\pi)^{1/p}$）を述べ、Rademacher の張る部分空間が $L^{p}$（$1<p<\infty$）で補空間をもつことを示せ。
+
+*4 Rosenthal の不等式と $X_{p}$ 空間
+独立な平均零の確率変数について $\|\sum f_{n}\|_{p}\simeq\max\{(\sum\|f_{n}\|_{p}^{p})^{1/p},(\sum\|f_{n}\|_{2}^{2})^{1/2}\}$（$2<p<\infty$, Rosenthal 1970）。これから $L^{p}$ の新しい補空間 $X_{p}$（Rosenthal 空間）を構成せよ。
+
+*4 Johnson–Maurey–Schechtman–Tzafriri の $L^{p}$ の補空間の無数性
+$L^{p}$（$1<p<\infty$, $p\neq2$）には互いに非同型な補空間が可算無限個存在する（Rosenthal, JMST 1979）。さらに非可算個存在すること（Bourgain–Rosenthal–Schechtman 1981）を述べよ。
+
+*4 Milutin の定理（$C(K)$ の同型類）
+非可算なコンパクト距離空間 $K$ について $C(K)\cong C[0,1]$（Milutin 1966）。Cantor 集合からの全射と平均作用素（averaging operator）の構成を用いて証明の骨格を与えよ。
+
+*4 Bessaga–Pełczyński の可算コンパクト空間の $C(K)$ 分類
+可算コンパクト距離空間 $K$ について、$C(K)$ の同型類は $K$ の Cantor–Bendixson 指数（$\omega^{\omega^{\alpha}}$ の形の順序数）で分類される（Bessaga–Pełczyński 1960）。主張を述べ、$C(\omega^{\omega})\not\cong c_{0}$ を示せ。
+
+*4 Grothendieck の $C(K)$ 上の作用素
+$C(K)$ から $c_{0}$ を含まない空間への作用素は弱コンパクトである（Pełczyński の性質 (V)）。証明し、$C(K)$ の補空間の研究への応用を述べよ。
+
+*4 $L^{1}$ の補空間（Enflo–Starbird, Pełczyński の問題）
+$L^{1}[0,1]$ の補空間で $L^{1}$ を含むものは $L^{1}$ と同型である（Enflo–Starbird 1979）。$L^{1}$ が素空間か（未解決の Pełczyński の問題の一つ）を述べよ。
+
+*4 Dunford–Pettis 性と $L^{1}$, $C(K)$ の補空間
+$L^{1}$ の無限次元補空間は $\ell^{1}$ を補空間として含み、$C(K)$ の無限次元補空間は $c_{0}$ を補空間として含むことを、Dunford–Pettis 性と Pełczyński の性質から示せ。
+
+*4 Lindenstrauss–Pełczyński の $\mathcal{L}_{p}$ 空間の分類
+可分な $\mathcal{L}_{p}$ 空間（$1<p<\infty$）は $L^{p}$ の補空間と同型である（Lindenstrauss–Rosenthal）。$\mathcal{L}_{\infty}$ 空間で $C(K)$ と同型でないもの（Bourgain–Delbaen の空間）の存在を述べよ。
+
+*4 Bourgain–Delbaen 空間
+$\mathcal{L}_{\infty}$ だが $c_{0}$ を含まない（Schur 性の双対をもつ）Banach 空間が存在する（Bourgain–Delbaen 1980）。構成の骨格を与え、Argyros–Haydon の空間の基礎となったことを述べよ。
+
+*4 $H^{1}$ と $L^{1}$ の非同型性と Maurey の定理
+Hardy 空間 $H^{1}$ は無条件基底をもち（Maurey 1980, Carleson の構成）、したがって $L^{1}$ とは同型でない。Wojtaszczyk による $H^{1}$ の Franklin 系による無条件基底の構成の主張を述べよ。
+
+*4 円板代数と $C(K)$ の非同型性（Kislyakov, Bourgain）
+円板代数 $A(\mathbb{D})$ は $C(K)$ と同型でない（Henkin 1967）が、$H^{\infty}$ の双対・円板代数の双対の構造（Bourgain の「$A$ は Grothendieck 型」）を述べよ。
+
+*5 Bourgain の定理（$H^{\infty}$ は Grothendieck 空間）
+$H^{\infty}(\mathbb{D})$ は Grothendieck 空間（双対の弱*収束列は弱収束）であり、Dunford–Pettis 性をもつ（Bourgain 1983–84）。主張を述べ、証明の骨格（$H^{\infty}$ の双対の分解と $L^{1}/H^{1}_{0}$ の性質）を与えよ。
+
+*5 $L^{p}$ の補空間の問題と Johnson–Maurey–Schechtman–Tzafriri の対称構造
+$L^{p}$ の再配置不変部分空間（対称空間）の補空間的構造を研究し、$L^{p}$（$1<p<\infty$）で補空間をもつ再配置不変空間の分類（JMST の Memoir）を述べよ。

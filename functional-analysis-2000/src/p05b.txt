@@ -1,0 +1,123 @@
+=ch V-3　凸性・平滑性・再ノルム
+
+*4 一様凸性の係数と一様平滑性の双対 {uc}
+凸性係数 $\delta_{X}(\varepsilon)$ と平滑性係数 $\rho_{X}(\tau)$ を定義し、Lindenstrauss の双対公式 $\rho_{X^{*}}(\tau)=\sup_{\varepsilon}(\frac{\tau\varepsilon}{2}-\delta_{X}(\varepsilon))$ を示せ。$X$ が一様凸 $\iff X^{*}$ が一様平滑を導け。
+
+*4 $L^{p}$ の凸性・平滑性のべき型
+$L^{p}$ は $\delta(\varepsilon)\asymp\varepsilon^{\max(p,2)}$, $\rho(\tau)\asymp\tau^{\min(p,2)}$ である（Hanner の不等式）。Hanner の不等式を証明して導け。
+
+*4 Enflo の再ノルム定理（超反射性） {enflo-renorm}
+$X$ が超反射的（$X$ で有限表現可能な空間がすべて反射的）$\iff$ $X$ が一様凸な同値ノルムをもつ（Enflo 1972）。James の有限木性質を用いた証明の骨格を与えよ。
+
+*4 Pisier の定理（べき型の一様凸再ノルム）
+一様凸に再ノルムできる空間は、ある $q<\infty$ についてべき型 $q$ の一様凸ノルム（$\delta(\varepsilon)\ge c\varepsilon^{q}$）をもつ（Pisier 1975）。マルチンゲール型の不等式を用いた証明の骨格を与えよ。
+
+*4 Kadec の再ノルム（局所一様凸）
+可分 Banach 空間は局所一様凸（LUR）なノルムに再ノルムできる（Kadec 1959）。Kadec の構成（双対の可分性を用いない Troyanski の方法）の骨格を与えよ。
+
+*4 Fréchet 平滑ノルムと Asplund 空間 {asplund}
+$X^{*}$ が可分なら $X$ は Fréchet 平滑な同値ノルムをもつ（Kadec, Restrepo）。逆に、Fréchet 平滑なノルムをもつ空間は Asplund であることを示せ。
+
+*4 Asplund 空間の特徴づけ
+$X$ が Asplund（凸連続関数が稠密 $G_{\delta}$ で Fréchet 微分可能）$\iff$ すべての可分部分空間の双対が可分 $\iff X^{*}$ が RNP をもつ（Namioka–Phelps, Stegall）。同値性の骨格を与えよ。
+
+*4 Mazur の Gâteaux 微分可能性定理
+可分 Banach 空間上の連続凸関数は稠密 $G_{\delta}$ 集合上で Gâteaux 微分可能である（Mazur 1933）。証明し、$\ell^{1}$ のノルムが Fréchet 微分可能な点をもたないことを示せ。
+
+*4 $C^{k}$ 平滑バンプと Meshkov の定理
+Banach 空間が $C^{2}$ 平滑なバンプ関数をもち、かつその双対も $C^{2}$ 平滑バンプをもつなら Hilbert 空間と同型である（Meshkov 1978）。主張を述べ、$\ell^{p}$ における最良の平滑性（$C^{\infty}$ か $C^{[p]}$）を述べよ。
+
+*4 $\ell^{p}$ のノルムの最良平滑性（Bonic–Frampton）
+$\ell^{p}$（$p$ 偶数）は $C^{\infty}$ のノルムをもち、$p$ が偶数でないなら $C^{[p]}$ のノルムをもつがそれ以上の平滑なバンプはない（Bonic–Frampton 1966）。主張と証明の骨格を与えよ。
+
+*4 平滑変分原理と平滑性（Deville–Godefroy–Zizler）
+$X$ が Lipschitz で $C^{1}$ のバンプ関数をもてば、DGZ の平滑変分原理が成り立つことを示し、粘性解の理論（Crandall–Lions の無限次元版）への応用を述べよ。
+
+*4 Day の空間（狭義凸に再ノルムできない空間）
+$\ell^{\infty}(\Gamma)$（$\Gamma$ 非可算）は狭義凸な同値ノルムをもたない（Day 1955）。証明し、$\ell^{\infty}$（可算）は狭義凸に再ノルムできることを示せ。
+
+*4 Troyanski の定理（弱コンパクト生成空間の LUR 再ノルム）
+弱コンパクト生成（WCG）空間は LUR な同値ノルムをもつ（Troyanski 1971）。主張と、Amir–Lindenstrauss の射影分解（PRI）の役割を述べよ。
+
+*4 Amir–Lindenstrauss の定理（WCG 空間の構造）
+WCG 空間は射影の超限分解（PRI）をもち、$c_{0}(\Gamma)$ への有界単射作用素をもつ（Amir–Lindenstrauss 1968）。主張と証明の骨格を与えよ。
+
+*4 Šmulian の判定
+Banach 空間のノルムが $x$（$\|x\|=1$）で Fréchet 微分可能 $\iff$ $f_{n},g_{n}\in S_{X^{*}}$ で $f_{n}(x)\to1$, $g_{n}(x)\to1$ なら $\|f_{n}-g_{n}\|\to0$（Šmulian 1940）。Gâteaux 版（弱*収束）も示し、双対ノルムの強露出点との関係を述べよ。
+
+*4 Clarkson–Hanner の不等式の非可換版（Schatten クラス）
+Schatten クラス $\mathcal{S}_{p}$ の凸性・平滑性のべき型が $L^{p}$ と同じであること（Ball–Carlen–Lieb 1994 の鋭い一様凸性）を述べよ。
+
+*4 Ball–Carlen–Lieb の 2-一様凸性定理
+$1<p\le2$ で $\|\frac{x+y}{2}\|_{p}^{2}+(p-1)\|\frac{x-y}{2}\|_{p}^{2}\le\frac{\|x\|_{p}^{2}+\|y\|_{p}^{2}}{2}$ が $L^{p}$ と Schatten $p$-クラスで成り立つ（定数最良）（Ball–Carlen–Lieb 1994）。可換の場合を証明せよ。
+
+*4 Gâteaux 微分可能性空間と Preiss–Phelps–Namioka の例
+Gâteaux 微分可能性空間（GDS）だが弱 Asplund でない空間の例（Moors–Somasundaram 2006）を述べ、Asplund・弱 Asplund・GDS の階層を整理せよ。
+
+*5 Enflo の再ノルム定理の完全証明（James の有限木性質）
+$X$ が超反射的 $\iff$ $X$ が有限木性質をもたない（James 1972）$\iff$ 一様凸な同値ノルムをもつ（Enflo 1972）、を完全に証明せよ。Pisier のマルチンゲールによる別証も述べよ。
+
+*5 Haydon の木の空間（平滑ノルムをもたない Asplund 空間）
+Asplund であるが Gâteaux 平滑な同値ノルムをもたない空間 $C(T)$（$T$ は特殊な木）が存在する（Haydon 1990）。主張と構成の着想を述べ、可分でない Asplund 空間と平滑性の関係の微妙さを論ぜよ。
+
+=ch V-4　型・余型と Rademacher 平均
+
+*4 Rademacher 型・余型の定義と例 {type}
+$X$ が型 $p$（$E\|\sum\varepsilon_{i}x_{i}\|\le T(\sum\|x_{i}\|^{p})^{1/p}$）・余型 $q$ をもつことを定義し、$L^{p}$ が型 $\min(p,2)$・余型 $\max(p,2)$ をもち、それが最良であることを示せ。
+
+*4 Kahane の不等式 {kahane}
+Banach 空間値 Rademacher 和について、$(E\|\sum\varepsilon_{i}x_{i}\|^{p})^{1/p}\le K_{p,q}(E\|\sum\varepsilon_{i}x_{i}\|^{q})^{1/q}$（Kahane 1964）。超縮小性（Borell, Bonami）を用いて証明せよ。
+
+*4 Bonami–Beckner の超縮小性不等式
+Bernoulli 雑音作用素 $T_{\rho}$ について $\|T_{\rho}f\|_{q}\le\|f\|_{p}$（$\rho\le\sqrt{(p-1)/(q-1)}$）（Bonami 1970, Beckner 1975）。二点空間の不等式とテンソル化で証明せよ。
+
+*4 Maurey–Pisier の定理 {maurey-pisier}
+無限次元 Banach 空間 $X$ について、$p_{X}=\sup\{p:X\text{ は型 }p\}$ と $q_{X}=\inf\{q:\text{余型 }q\}$ とすると、$\ell^{p_{X}}$ と $\ell^{q_{X}}$ は $X$ で有限表現可能である（Maurey–Pisier 1976）。証明の骨格を与え、型 $>1$ でない空間は $\ell^{1}_{n}$ を一様に含むことを結論せよ。
+
+*4 Pisier の B-凸性定理
+$X$ が非自明な型（型 $>1$）をもつ $\iff$ $X$ が $\ell^{1}_{n}$ を一様に含まない（B-凸、Beck）（Pisier 1973）。証明せよ。
+
+*4 Kwapień の定理（型 2 かつ余型 2 は Hilbert） {kwapien}
+$X$ が型 2 かつ余型 2 $\iff$ $X$ が Hilbert 空間と同型（Kwapień 1972）。Maurey の拡張定理を用いた証明を与えよ。
+
+*4 Maurey の拡張定理
+型 2 の空間 $X$ の部分空間から余型 2 の空間 $Y$ への作用素は $X$ 全体に拡張できる（Maurey 1974）。証明の骨格を与えよ。
+
+*4 Gauss 型と Rademacher 型の同値
+Rademacher 型 $p$ と Gauss 型 $p$ が同値であること、余型についても有限余型なら同値であること（Maurey–Pisier）を示せ。$c_{0}$ では Gauss 平均と Rademacher 平均が同値でないことを示せ。
+
+*4 型・余型と $K$-凸性（Pisier）
+$X$ が $K$-凸（Rademacher 射影が $L^{2}(X)$ で有界）$\iff$ 非自明な型をもつ（Pisier 1982）。主張と証明の骨格を与えよ。
+
+*4 Pisier の $K$-凸性定数の評価
+$n$ 次元空間の $K$-凸性定数が $O(\log(1+d(X,\ell^{2}_{n})))$ で抑えられる（Pisier）。これを用いて Milman の $MM^{*}$ 評価を導け。
+
+*4 Talagrand の余型 2 と Orlicz 性
+余型 2 の空間は Orlicz 性（無条件収束級数で $\sum\|x_{n}\|^{2}<\infty$）をもつが、逆に Orlicz 性は余型 2 を含意しない（Talagrand 1992）ことを述べよ。
+
+*4 Dvoretzky–Rogers の補題 {dr}
+無限次元 Banach 空間には、無条件収束するが絶対収束しない級数が存在する（Dvoretzky–Rogers 1950）。John の楕円体を用いた有限次元補題から証明せよ。
+
+*4 Orlicz の定理（$L^{p}$ の無条件収束級数）
+$L^{p}$（$1\le p\le2$）の無条件収束級数について $\sum\|x_{n}\|^{2}<\infty$、$L^{p}$（$p>2$）では $\sum\|x_{n}\|^{p}<\infty$（Orlicz 1933）。余型から導け。
+
+*4 Banach 空間の Rademacher 平均と確率論的方法
+ランダム符号の平均により、$n$ 個の単位ベクトルに対し $\|\sum\pm x_{i}\|\le C\sqrt n$ なる符号の存在を Hilbert 空間で示し、一般の Banach 空間では型 $p$ により $n^{1/p}$ となることを示せ。
+
+*4 Lindenstrauss–Tzafriri のノルム空間の局所無条件構造（Gordon–Lewis 性）
+Gordon–Lewis 性（1-総和作用素が $L^{1}$ を通って分解）を定義し、局所無条件構造をもつ空間が Gordon–Lewis 性をもつこと、$\mathcal{B}(\ell^{2})$ がそれをもたないことを述べよ。
+
+*4 型と余型の補間
+複素補間空間 $[X_{0},X_{1}]_{\theta}$ の型・余型が端点の型・余型の補間で評価できることを示せ。
+
+*4 Banach 空間の超冪と型・余型の保存
+型・余型は超冪・有限表現可能性で保存されることを示し、型・余型が「局所的性質」であることを説明せよ。
+
+*4 型・余型と Dvoretzky の次元評価
+余型 $q$ の空間 $X^{n}$ は $c(q)n^{2/q}$ 次元の $\ell^{2}$ 切断を含む（Figiel–Lindenstrauss–Milman）。Gauss 平均と Lévy の等周不等式で証明せよ。
+
+*5 Maurey–Pisier の定理の完全証明
+$\ell^{p_{X}}$ が $X$ で有限表現可能であることを、Krivine の定理（任意の基本列のブロックに $\ell^{p}$ が $(1+\varepsilon)$-有限表現される）と、型の安定性の議論を組み合わせて完全に証明せよ。
+
+*5 Krivine の定理
+任意の基本列 $\{x_{n}\}$ に対し、ある $p\in[1,\infty]$ が存在し、$\ell^{p}$（$p=\infty$ なら $c_{0}$）が $\{x_{n}\}$ のブロック基底に $(1+\varepsilon)$-有限ブロック表現可能である（Krivine 1976）。Rosenthal・Lemberg による簡易化を用いた証明の骨格を与えよ。
