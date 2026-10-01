@@ -1,0 +1,123 @@
+=ch VII-5　冨田–竹崎のモジュラー理論
+
+*4 冨田の基本定理 {tomita}
+巡回分離ベクトル $\xi$ をもつ von Neumann 環 $M$ に対し、$S:x\xi\mapsto x^{*}\xi$ の閉包の極分解 $S=J\Delta^{1/2}$ をとると、$JMJ=M'$ かつ $\Delta^{it}M\Delta^{-it}=M$（$t\in\mathbb{R}$）であることを証明せよ（冨田 1967、竹崎 1970）。
+
+*4 KMS 条件による特徴づけ（竹崎）
+忠実正規状態 $\varphi$ のモジュラー自己同型群 $\sigma_{t}^{\varphi}=\mathrm{Ad}\,\Delta^{it}$ は、$\varphi$ が $\beta=-1$ で KMS 条件をみたす唯一の $\sigma$-弱連続な 1 径数自己同型群であることを証明せよ。
+
+*4 Connes のコサイクル定理 {connes-cocycle}
+忠実正規半有限重み $\varphi,\psi$ に対し、ユニタリ $\sigma^{\varphi}$-コサイクル $u_{t}=(D\psi:D\varphi)_{t}$ で $\sigma_{t}^{\psi}=\mathrm{Ad}\,u_{t}\circ\sigma_{t}^{\varphi}$ をみたすものが存在することを $2\times2$ 行列の技法で証明し、$\mathrm{Out}(M)$ への像が重みによらないことを導け（Connes 1973）。
+
+*4 半有限性のモジュラー判定
+$M$ が半有限 $\iff$ ある（任意の）忠実正規半有限重み $\varphi$ について $\sigma^{\varphi}$ が内部的、また $\varphi$ がトレース $\iff\sigma^{\varphi}$ が自明であることを示せ（竹崎）。
+
+*4 竹崎の条件付き期待値定理 {takesaki-ce}
+$N\subset M$ を von Neumann 部分環、$\varphi$ を $M$ の忠実正規状態とする。$\varphi\circ E=\varphi$ をみたす正規条件付き期待値 $E:M\to N$ が存在 $\iff$ $N$ が $\sigma^{\varphi}$ で大域的に不変であることを証明せよ（竹崎 1972）。
+
+*4 冨山の定理
+C*-環 $A$ からその C*-部分環 $B$ へのノルム 1 の射影 $E$ は、完全正値かつ $B$-双加群写像 $E(bab')=bE(a)b'$ であることを証明せよ（冨山 1957）。
+
+*4 標準形の存在と一意性（Haagerup）
+任意の von Neumann 環は標準形 $(M,H,J,P)$ をもち、空間的同型を除いて一意であること、さらに任意の自己同型が $P$ を保つ一意なユニタリで実装されることを証明せよ（Haagerup 1975）。
+
+*4 竹崎の双対定理と連続分解 {takesaki-dual}
+$(M\rtimes_{\sigma^{\varphi}}\mathbb{R})\rtimes_{\hat\sigma}\hat{\mathbb{R}}\cong M\bar\otimes B(L^{2}(\mathbb{R}))$ を示し、型 III の von Neumann 環が II$_{\infty}$ 環の $\mathbb{R}$ によるトレーススケーリング作用の接合積として表されることを証明せよ（竹崎 1973）。
+
+*4 Connes の離散分解
+$0<\lambda<1$ の型 III$_{\lambda}$ 因子は、II$_{\infty}$ 因子 $N$ とトレースを $\lambda$ 倍する自己同型 $\theta$ による接合積 $N\rtimes_{\theta}\mathbb{Z}$ と同型であることを示せ（Connes 1973）。
+
+*4 Haagerup の非可換 $L^{p}$ 空間
+任意の von Neumann 環に対し、重みの選び方によらない $L^{p}(M)$（$0<p\le\infty$）を連続核の $\tau$-可測作用素として構成し、$L^{p}(M)^{*}=L^{q}(M)$（$1\le p<\infty$）と Hölder の不等式を証明せよ。
+
+*4 荒木の相対エントロピーと単調性
+相対モジュラー作用素を用いて $S(\psi\,\|\,\varphi)=-\langle\log\Delta_{\varphi,\psi}\xi_{\psi},\xi_{\psi}\rangle$ を定義し、単位的な Schwarz 写像（特に完全正値写像）のもとで単調非増加であること（Uhlmann 1977）を証明せよ。
+
+*4 Pusz–Woronowicz の受動性定理
+C*-力学系 $(A,\alpha_{t})$ の状態 $\omega$ について、任意個のテンソル冪が受動的（内部ユニタリによる周期的操作で仕事を取り出せない）$\iff$ $\omega$ がある $\beta\ge0$ で KMS 状態であるか基底状態であることを証明せよ（1978）。
+
+*4 1 次元量子スピン系の KMS 状態の一意性（荒木）
+有限到達距離の並進不変相互作用をもつ 1 次元量子スピン系では、任意の逆温度 $\beta$ で KMS 状態が一意であり、そのモジュラー作用素が解析的に扱えることを示せ（荒木 1969）。
+
+*4 Connes のコサイクル定理の逆
+$\sigma^{\varphi}$-コサイクル $(u_{t})$（$u_{s+t}=u_{s}\sigma_{s}^{\varphi}(u_{t})$）が与えられれば、$(D\psi:D\varphi)_{t}=u_{t}$ となる忠実正規半有限重み $\psi$ が一意に存在することを証明せよ。
+
+*4 正規重みの Haagerup 分解
+von Neumann 環上の任意の正規重みは正規正値汎関数の和（点ごとの上限）として表されることを証明せよ（Haagerup 1975）。
+
+*4 Pedersen–竹崎の Radon–Nikodym 定理
+$\psi$ が $\sigma^{\varphi}$-不変なら、$M_{\varphi}$（中心化環）に付随する正の自己共役作用素 $h$ で $\psi=\varphi(h\,\cdot\,)$ となるものが存在し、$\sigma_{t}^{\psi}=\mathrm{Ad}\,h^{it}\circ\sigma_{t}^{\varphi}$ となることを示せ。
+
+*4 Borchers の定理
+$(M,\Omega)$ と正エネルギーの 1 径数ユニタリ群 $U(a)$ が $U(a)\Omega=\Omega$、$U(a)MU(-a)\subset M$（$a\ge0$）をみたすなら、$\Delta^{it}U(a)\Delta^{-it}=U(e^{-2\pi t}a)$、$JU(a)J=U(-a)$ であることを証明せよ（Borchers 1992）。
+
+*5 Bisognano–Wichmann の定理
+Wightman 公理系の自由（あるいは一般の）場について、楔領域 $W$ の局所代数 $\mathcal{A}(W)$ と真空のモジュラー群が $W$ を保つ Lorentz ブーストで、モジュラー共役が CPT 作用素と空間回転の合成で与えられることの証明の骨格を与えよ（1975）。
+
+*5 $R$ の自己同型の外部共役分類（Connes）
+超有限 II$_{1}$ 因子 $R$ の自己同型は、外部周期 $p$ と障害 $\gamma\in\mathbb{T}$（$\gamma^{p}=1$）の組によって外部共役を除いて完全に分類されることの証明の骨格を与えよ（Connes 1975）。Rohlin 性の役割を説明せよ。
+
+*5 Connes–Størmer の推移性定理
+可分前双対をもつ因子 $M$ が型 III$_{1}$ $\iff$ 任意の忠実正規状態 $\varphi,\psi$ と $\varepsilon>0$ に対しユニタリ $u\in M$ で $\|u\varphi u^{*}-\psi\|<\varepsilon$ となることを証明せよ（Connes–Størmer 1978）。型 III$_{\lambda}$ における状態空間の直径の公式（Connes–Haagerup–Størmer 1985）を述べよ。
+
+=ch VII-6　単射性・核型性・完全性
+
+*4 単射 von Neumann 環の同値条件
+$M\subset B(H)$ について、$M$ が作用素系の圏で単射 $\iff$ $B(H)$ から $M$ へのノルム 1 の射影（条件付き期待値）が存在 $\iff$ $M'$ が単射であることを証明せよ。
+
+*4 従順群と単射性
+離散群 $G$ について、$L(G)$ が単射 $\iff G$ が従順であることを証明せよ。超有限 von Neumann 環が単射であること（Hakeda–Tomiyama）も示せ。
+
+*5 Connes の単射因子分類定理 {connes-inj}
+可分前双対をもつ von Neumann 環について、単射 $\iff$ 半離散 $\iff$ 超有限であり、単射 II$_{1}$ 因子は $R$ に限ることを証明の骨格とともに示せ（Connes 1976）。
+
+*5 Haagerup の一意性定理
+可分前双対をもつ単射型 III$_{1}$ 因子は Araki–Woods 因子 $R_{\infty}$ と同型であることの証明の骨格を与えよ（Haagerup 1987）。これにより単射因子の分類が完結することを説明せよ。
+
+*4 単射 III$_{\lambda}$ 因子と II$_{\infty}$ 因子
+単射 II$_{\infty}$ 因子は $R\bar\otimes B(H)$、単射 III$_{\lambda}$（$0<\lambda<1$）因子は $R_{\lambda}$ に同型であることを {{R:connes-inj}} と離散分解から導け。
+
+*4 Choi–Effros–Kirchberg の核型性定理 {nuclear-c}
+C*-環 $A$ について、(i) 核型、(ii) 完全正値近似性 CPAP、(iii) $A^{**}$ が単射、が同値であることを証明せよ（Choi–Effros 1978、Kirchberg 1977、Connes）。
+
+*4 Lance の定理
+離散群 $G$ について、被約群 C*-環 $C_{r}^{*}(G)$ が核型 $\iff G$ が従順であることを証明せよ（Lance 1973）。従順なら $C^{*}(G)=C_{r}^{*}(G)$（Hulanicki）であることも示せ。
+
+*4 核型 C*-環の安定性
+型 I の C*-環、AF 環は核型であること、核型性が拡大・帰納極限・従順群による接合積で保たれることを証明せよ。
+
+*4 Kirchberg–Wassermann の完全性
+C*-環 $A$ について、$\otimes_{\min}A$ が短完全列を保つ $\iff$ $A$ が核型埋め込み可能 $\iff$ $A$ がある核型 C*-環の部分環であることを証明の骨格とともに示せ（Kirchberg 1995）。
+
+*4 群の完全性と性質 A
+有限生成群 $G$ について、$C_{r}^{*}(G)$ が完全 $\iff$ $G$ が性質 A（Yu）をもつことを証明せよ（Ozawa 2000、Higson–Roe）。
+
+*5 Kirchberg の定理
+$C^{*}(\mathbb{F}_{\infty})\otimes_{\min}B(H)=C^{*}(\mathbb{F}_{\infty})\otimes_{\max}B(H)$ を証明せよ（Kirchberg 1993）。
+
+*4 Connes 埋め込み問題と Kirchberg の同値命題
+次が同値であることを示せ：(i) 任意の可分 II$_{1}$ 因子が $R^{\omega}$ に埋め込める、(ii) $C^{*}(\mathbb{F}_{\infty})\otimes_{\min}C^{*}(\mathbb{F}_{\infty})=C^{*}(\mathbb{F}_{\infty})\otimes_{\max}C^{*}(\mathbb{F}_{\infty})$、(iii) 任意の C*-環が QWEP（Kirchberg 1993）。
+
+*5 MIP$^{*}$=RE と Connes 埋め込み問題の否定
+Ji–Natarajan–Vidick–Wright–Yuen（2020）の MIP$^{*}$=RE から、Tsirelson 問題の否定を経て $R^{\omega}$ に埋め込めない II$_{1}$ 因子が存在することを導く論理の骨格を与えよ。
+
+*4 Junge–Pisier の定理
+$B(H)\otimes_{\min}B(H)\neq B(H)\otimes_{\max}B(H)$（$H$ 無限次元）を、作用素空間の $n$ 次元部分空間の指数評価を用いて証明せよ（Junge–Pisier 1995）。
+
+*4 $B(H)$ の非完全性（Wassermann）
+無限次元 $H$ について $B(H)$ は完全 C*-環でない、したがって核型でないことを証明せよ（Wassermann 1976）。
+
+*4 Choi–Effros の持ち上げ定理
+可分核型 C*-環 $A$ から商 $B/J$ への完全正値縮小写像は、$B$ への完全正値縮小写像に持ち上がることを証明せよ（Choi–Effros 1976）。
+
+*4 準対角性と従順性（Rosenberg）
+準対角 C*-環を定義し、$C_{r}^{*}(G)$ が準対角なら $G$ は従順であることを証明せよ。$C_{r}^{*}(\mathbb{F}_{2})$ が準対角でないことを導け。
+
+*4 非可換 Grothendieck 不等式（Pisier, Haagerup）
+C*-環 $A,B$ 上の有界双線形形式 $u$ に対し、$A$ の状態 $f_{1},f_{2}$ と $B$ の状態 $g_{1},g_{2}$ で $|u(a,b)|\le\|u\|\,(f_{1}(a^{*}a)+f_{2}(aa^{*}))^{1/2}(g_{1}(bb^{*})+g_{2}(b^{*}b))^{1/2}$ となるものが存在することを証明せよ（Haagerup 1985）。
+
+*4 Haagerup–Paulsen–Wittstock の分解定理
+C*-環 $A$ から $B(H)$ への完全有界写像 $\varphi$ は、表現 $\pi$ と作用素 $V,W$ により $\varphi=V^{*}\pi(\cdot)W$、$\|V\|\|W\|=\|\varphi\|_{cb}$ と表されることを証明せよ。
+
+*4 Ruan の定理
+行列ノルムの族 $\{\|\cdot\|_{n}\}$ が Ruan の 2 公理をみたす抽象作用素空間は、ある $B(H)$ の部分空間と完全等長であることを証明せよ（Ruan 1988）。

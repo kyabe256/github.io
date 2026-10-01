@@ -1,0 +1,123 @@
+=ch VII-9　部分因子と II$_{1}$ 因子の剛性
+
+*4 Jones の指数定理 {jones}
+II$_{1}$ 因子の部分因子 $N\subset M$ の指数 $[M:N]=\dim_{N}L^{2}(M)$ について、$[M:N]\in\{4\cos^{2}(\pi/n):n\ge3\}\cup[4,\infty]$ であり、すべての値が超有限 II$_{1}$ 因子の部分因子として実現されることを証明せよ（Jones 1983）。
+
+*4 Jones の基本構成と Temperley–Lieb 関係
+$M_{1}=\langle M,e_{N}\rangle$ を構成し $[M_{1}:M]=[M:N]$ を示せ。塔 $N\subset M\subset M_{1}\subset\cdots$ の Jones 射影が $e_{i}e_{i\pm1}e_{i}=[M:N]^{-1}e_{i}$ をみたすことを証明せよ。
+
+*4 Pimsner–Popa の不等式
+有限指数の部分因子について $E_{N}(x)\ge[M:N]^{-1}x$（$x\in M_{+}$）を示し、逆に最良定数が $[M:N]^{-1}$ となることと Pimsner–Popa 基底の存在を証明せよ（1986）。
+
+*4 指数 4 以下の超有限部分因子と ADE 分類
+超有限 II$_{1}$ 因子の指数 $<4$ の部分因子の主グラフが $A_{n},D_{2n},E_{6},E_{8}$ 型の Dynkin 図形に限られることの証明の骨格を与えよ（Ocneanu, Popa）。
+
+*5 Popa の従順部分因子の分類
+超有限 II$_{1}$ 因子の強従順な部分因子は標準不変量によって完全に分類されることの証明の骨格を与えよ（Popa 1994）。
+
+*4 Popa の $\lambda$-格子再構成定理
+任意の標準 $\lambda$-格子はある有限指数部分因子の標準不変量として実現されることを示せ（Popa 1995）。
+
+*4 性質 (T) をもつ群の因子の剛性（Connes）
+ICC かつ性質 (T) の群 $\Gamma$ について、$L(\Gamma)$ の基本群と外部自己同型群 $\mathrm{Out}(L(\Gamma))$ が可算であることを証明せよ（Connes 1980）。
+
+*5 自明な基本群をもつ II$_{1}$ 因子（Popa）
+$M=L^{\infty}(\mathbb{T}^{2})\rtimes SL(2,\mathbb{Z})=L(\mathbb{Z}^{2}\rtimes SL(2,\mathbb{Z}))$ について $\mathcal{F}(M)=\{1\}$ であることを、相対性質 (T) と Popa の可変形性/剛性の手法で証明の骨格を与えよ（Popa 2006）。Kadison の問題との関係を述べよ。
+
+*4 基本群の任意性（Popa, Popa–Vaes）
+$\mathbb{R}_{+}^{*}$ の任意の可算部分群がある可分 II$_{1}$ 因子の基本群として実現されることの証明の骨格を与えよ（Popa 2006）。非可算な部分群に関する Popa–Vaes（2010）の結果を述べよ。
+
+*4 Popa の双加群による交絡定理
+$A,B\subset M$ を有限 von Neumann 部分環とするとき、$A\prec_{M}B$（$L^{2}(M)$ の $A$-$B$ 部分双加群で右 $B$-次元有限なものが存在）$\iff$ $\|E_{B}(xu_{n}y)\|_{2}\to0$（$x,y\in M$）となるユニタリ列 $u_{n}\in A$ が存在しない、を証明せよ（Popa 2006）。
+
+*4 Ozawa の固さ定理
+語双曲群 $\Gamma$ について、$L(\Gamma)$ の任意の拡散部分環の相対可換子は単射であること（固さ, solidity）を Akemann–Ostrand 性を用いて証明せよ（Ozawa 2004）。系として $L(\mathbb{F}_{n})\bar\otimes M$ の分解不能性を論ぜよ。
+
+*5 Ozawa–Popa の強い固さ
+$L(\mathbb{F}_{n})$ の任意の拡散単射部分環 $P$ について、正規化群 $\mathcal{N}(P)''$ も単射であることの証明の骨格を与えよ（Ozawa–Popa 2010）。系として Cartan 部分環の非存在を導け。
+
+*4 自由群因子の Cartan 部分環の非存在（Voiculescu）
+自由エントロピーの評価を用いて、$L(\mathbb{F}_{n})$（$n\ge2$）が Cartan 部分環をもたないことを証明せよ（Voiculescu 1996）。
+
+*5 Popa のコサイクル超剛性
+性質 (T) の群（より一般に $w$-剛性をもつ群）の Bernoulli 作用について、可算離散群に値をとる任意のコサイクルが準同型とコホモロガスであることを証明の骨格とともに示し、軌道同値超剛性を導け（Popa 2007）。
+
+*4 Bernoulli 作用の W$^{*}$-超剛性（Ioana）
+性質 (T) をもつ ICC 群 $\Gamma$ の Bernoulli 作用 $\Gamma\curvearrowright(X_{0},\mu_{0})^{\Gamma}$ について、群測度空間因子 $L^{\infty}(X)\rtimes\Gamma$ が作用を共役を除いて記憶していることの証明の骨格を与えよ（Ioana 2011）。
+
+*4 補間自由群因子（Dykema, Rădulescu）
+$1<t\le\infty$ に対し $L(\mathbb{F}_{t})$ を定義し、$L(\mathbb{F}_{t})_{\gamma}\cong L(\mathbb{F}_{1+(t-1)/\gamma^{2}})$ を示せ。系として、$L(\mathbb{F}_{n})$（$2\le n<\infty$）はすべて同型であるか互いに非同型であるかのいずれかであることを導け（1994）。
+
+*4 自由群因子の素性（Ge）
+$L(\mathbb{F}_{n})$ は二つの II$_{1}$ 因子のテンソル積として表せない（素である）ことを自由エントロピーで証明せよ（Ge 1998）。
+
+*4 Peterson の $L^{2}$-剛性
+第一 $L^{2}$-Betti 数が正の ICC 群 $\Gamma$ について、$L(\Gamma)$ は素であることを、閉可能な微分による変形を用いて証明せよ（Peterson 2009）。
+
+*5 W$^{*}$-超剛性群の存在（Ioana–Popa–Vaes）
+$L(G)\cong L(H)\Rightarrow G\cong H$ をみたす ICC 群 $G$ が存在することの証明の骨格を与えよ（Ioana–Popa–Vaes 2013）。
+
+*4 II$_{1}$ 因子の性質 (T)（Connes–Jones）
+II$_{1}$ 因子の性質 (T) を双加群（対応）を用いて定義し、ICC 群 $\Gamma$ について $L(\Gamma)$ が性質 (T) $\iff\Gamma$ が性質 (T) をもつことを証明せよ（Connes–Jones 1985）。
+
+=ch VII-10　自由確率論と群 C*-環
+
+*4 自由独立性と被約自由積（Voiculescu）
+非可換確率空間の部分環の自由独立性を定義し、自由独立な部分環が生成する環の混合モーメントが各部分環上の状態で一意に決まることを示せ。被約自由積状態の忠実性を証明せよ。
+
+*4 自由中心極限定理 {free-clt}
+自由独立・同分布で平均 0、分散 1 の非可換確率変数 $a_{i}$ について、$(a_{1}+\cdots+a_{N})/\sqrt{N}$ の分布が半円分布 $\frac{1}{2\pi}\sqrt{4-x^{2}}\,dx$ に収束することを証明せよ。
+
+*4 R 変換と自由加法畳み込み
+コンパクト台の確率測度 $\mu$ の Cauchy 変換 $G_{\mu}$ の逆関数から R 変換を定義し、$R_{\mu\boxplus\nu}=R_{\mu}+R_{\nu}$ を証明せよ（Voiculescu 1986）。
+
+*4 S 変換と自由乗法畳み込み
+$\mathbb{R}_{+}$ 上の確率測度について S 変換を定義し、$S_{\mu\boxtimes\nu}=S_{\mu}S_{\nu}$ を証明せよ（Voiculescu 1987）。
+
+*4 漸近自由性（Voiculescu 1991）
+独立な GUE 行列 $X_{N}^{(1)},\dots,X_{N}^{(k)}$ は $N\to\infty$ で自由半円系に分布収束することを証明し、Wigner の半円則を系として導け。確定的対角行列との漸近自由性も示せ。
+
+*4 非交差分割と自由キュムラント（Speicher）
+モーメント–キュムラント公式 $\varphi(a_{1}\cdots a_{n})=\sum_{\pi\in NC(n)}\kappa_{\pi}[a_{1},\dots,a_{n}]$ で自由キュムラントを定義し、自由独立性が混合キュムラントの消滅と同値であることを証明せよ（1994）。
+
+*4 自由 Poisson 分布と Marchenko–Pastur 則
+自由 Poisson 極限定理で得られる分布が Marchenko–Pastur 分布であることを示し、Wishart 行列 $\frac{1}{N}X^{*}X$ の経験スペクトル分布がこれに収束することを漸近自由性から導け。
+
+*4 Bercovici–Pata の対応
+古典的無限分解可能分布と $\boxplus$-無限分解可能分布の間に Lévy–Khintchine 型の全単射が存在し、極限定理の吸引域が一致することを証明せよ（Bercovici–Pata 1999）。
+
+*4 有限自由エントロピーと因子の性質
+自由エントロピー $\chi(X_{1},\dots,X_{n})>-\infty$ なら、$W^{*}(X_{1},\dots,X_{n})$ は性質 $\Gamma$ をもたず Cartan 部分環ももたないことを証明せよ（Voiculescu 1996）。
+
+*5 Haagerup–Thorbjørnsen の定理
+独立な GUE 行列の多項式の作用素ノルムが自由半円系の多項式のノルムに概収束すること（強収束）を証明し、系として $\mathrm{Ext}(C_{r}^{*}(\mathbb{F}_{2}))$ が群でないことを導け（2005）。
+
+*4 Haagerup の不等式 {haagerup-ineq}
+$\mathbb{F}_{k}$ 上の関数 $f$ が語長 $n$ の元に台をもつなら $\|\lambda(f)\|\le(n+1)\|f\|_{2}$ であることを証明し、$\mathbb{F}_{k}$ が急減少性（RD）をもつことを導け（Haagerup 1979）。
+
+*4 Powers の単純性定理
+$C_{r}^{*}(\mathbb{F}_{2})$ は単純であり、唯一のトレース状態をもつことを証明せよ（Powers 1975）。
+
+*5 被約群 C*-環の単純性と境界作用
+離散群 $G$ について、$C_{r}^{*}(G)$ が単純 $\iff G$ が Furstenberg 境界に（位相的に）自由に作用すること（Kalantar–Kennedy 2017）、$C_{r}^{*}(G)$ がトレース一意 $\iff$ 従順根基が自明であること（Breuillard–Kalantar–Kennedy–Ozawa 2017）の証明の骨格を与えよ。
+
+*4 Kesten の定理
+有限生成群 $G$ の対称な生成確率測度 $\mu$ について、$G$ が従順 $\iff\|\lambda(\mu)\|=1$ を証明し、$\mathbb{F}_{k}$ の標準生成系では $\|\lambda(\mu)\|=\frac{\sqrt{2k-1}}{k}$ となることを示せ（Kesten 1959）。
+
+*4 Haagerup 性
+$\mathbb{F}_{n}$ 上の $e^{-t|g|}$（$|g|$ は語長）が正定値であることを示し、$\mathbb{F}_{n}$ が Haagerup 性（$c_{0}$ に属する正定値関数による単位元の近似）をもつことを証明せよ（Haagerup 1979）。
+
+*4 Kazhdan の性質 (T)
+$SL(3,\mathbb{Z})$ が性質 (T) をもつことを示し、性質 (T) をもつ可算群が有限生成でアーベル化が有限であることを証明せよ（Kazhdan 1967）。
+
+*4 Akemann–Ostrand の定理
+$\lambda\otimes\rho:C_{r}^{*}(\mathbb{F}_{n})\odot C_{r}^{*}(\mathbb{F}_{n})\to B(\ell^{2}\mathbb{F}_{n})/K$ が最小テンソルノルムに関して連続であることを証明せよ（Akemann–Ostrand 1975）。
+
+*4 Fell の吸収原理
+局所コンパクト群 $G$ の任意のユニタリ表現 $\pi$ について $\lambda\otimes\pi\cong\lambda\otimes1_{H_{\pi}}$ を示し、系として $C^{*}(G)\to C_{r}^{*}(G)$ の性質と従順性の関係を導け。
+
+*5 Friedman の定理と強収束
+ランダムな $d$-正則グラフの隣接行列の非自明な固有値が確率 $1-o(1)$ で $2\sqrt{d-1}+\varepsilon$ 以下であること（Alon 予想、Friedman 2008）を、ランダム置換行列の $\mathbb{F}_{k}$ の正則表現への強収束（Bordenave–Collins 2019）の系として導く論理の骨格を与えよ。
+
+*4 自由半円系と自由群因子
+自由 Fock 空間上の $s_{i}=\ell(e_{i})+\ell(e_{i})^{*}$ が自由半円系をなすことを示し、$W^{*}(s_{1},\dots,s_{n})\cong L(\mathbb{F}_{n})$ を証明せよ（Voiculescu）。

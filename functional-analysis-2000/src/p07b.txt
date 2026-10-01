@@ -1,0 +1,123 @@
+=ch VII-3　von Neumann 環の基礎
+
+*4 von Neumann の二重可換子定理 {bicommutant}
+単位を含む $*$-部分環 $M\subset B(H)$ について、$M$ の弱閉包・強閉包・$\sigma$-弱閉包はすべて $M''$ に等しいことを証明せよ。
+
+*4 Kaplansky の稠密性定理 {kaplansky}
+$A\subset B(H)$ を C*-部分環とすると、$A$ の単位球（自己共役部分の単位球・ユニタリ群についても同様）は $\overline{A}^{s}$ の単位球で強稠密であることを証明せよ。
+
+*4 正規状態の特徴づけ
+von Neumann 環 $M$ 上の状態 $\omega$ について、(i) 正規（増大有界ネットの上限を保つ）、(ii) 完全加法的、(iii) $\sigma$-弱連続、(iv) $\omega=\sum_{n}\omega_{\xi_{n}}$（$\sum\|\xi_{n}\|^{2}=1$）が同値であることを証明せよ（Dixmier）。
+
+*4 Sakai の特徴づけ {sakai}
+C*-環 $A$ がある Hilbert 空間上の von Neumann 環と $*$-同型 $\iff$ $A$ が Banach 空間としてある Banach 空間 $A_{*}$ の双対であることを証明し、前双対 $A_{*}$ の一意性を示せ（Sakai 1956）。
+
+*4 射影による生成
+von Neumann 環 $M$ はその射影の有限一次結合全体のノルム閉包に等しく、$x\in M$ の極分解の部分等長と $|x|$ のスペクトル射影はすべて $M$ に属することを示せ。
+
+*4 Murray–von Neumann の比較定理 {comparison}
+von Neumann 環の射影 $e,f$ について、中心射影 $z$ で $ze\precsim zf$ かつ $(1-z)f\precsim(1-z)e$ となるものが存在することを証明せよ。
+
+*4 可換 von Neumann 環の構造
+可分 Hilbert 空間上の可換 von Neumann 環はある標準確率空間上の $L^{\infty}(X,\mu)$ と $*$-同型であり、極大可換なら重複度 1 の掛け算作用素環とユニタリ同値であることを示せ。
+
+*4 弱連続・強連続な線形汎関数
+$M\subset B(H)$ 上の線形汎関数について、強連続 $\iff$ 弱連続 $\iff$ 有限個のベクトル汎関数 $\langle\cdot\,\xi_{i},\eta_{i}\rangle$ の和であることを示し、$\sigma$-版を述べて証明せよ。
+
+*4 Sherman–Takeda の定理
+C*-環 $A$ の第二双対 $A^{**}$ は Arens 積で von Neumann 環となり、普遍表現 $\pi_{u}$ の生成する $\pi_{u}(A)''$ と同型であることを証明せよ。
+
+*4 正規 $*$-準同型の構造
+von Neumann 環の間の正規 $*$-準同型 $\pi:M\to N$ は、増幅 $x\mapsto x\otimes1$、可換子に属する射影による切り落とし、空間的同型の合成として表せることを示せ。
+
+*4 von Neumann の約化理論
+可分 Hilbert 空間上の von Neumann 環 $M$ は、中心 $L^{\infty}(X,\mu)$ 上の因子の可測場の直積分 $M=\int_{X}^{\oplus}M_{x}\,d\mu(x)$ に分解できることを証明せよ。
+
+*4 冨田の可換子定理 {tomita-comm}
+von Neumann 環 $M\subset B(H)$、$N\subset B(K)$ について $(M\bar\otimes N)'=M'\bar\otimes N'$ を証明せよ（冨田–竹崎理論を用いてよい）。
+
+*4 真に無限な射影の二等分
+射影 $e$ が真に無限なら、$e=e_{1}+e_{2}$ で $e_{1}\sim e_{2}\sim e$ となる直交分解が存在することを示し、$M$ が真に無限なら Cuntz 環 $\mathcal{O}_{\infty}$ の単位的埋め込みをもつことを導け。
+
+*4 Vigier の単調収束定理
+von Neumann 環 $M$ の自己共役元の上に有界な増大ネットは、$M$ の元に強収束しその上限に等しいことを示せ。
+
+*4 Kaplansky の公式
+von Neumann 環の射影 $e,f$ について $e\vee f-f\sim e-e\wedge f$ を極分解を用いて証明せよ。
+
+*4 Sakai の非可換 Radon–Nikodym 定理
+$M$ 上の正規正値汎関数 $\psi\le\varphi$ に対し、$0\le h\le1$ なる $h\in M$ で $\psi(x)=\varphi(hxh)$ となるものが存在することを示せ。
+
+*4 正規 Hermite 汎関数の Jordan 分解
+$M_{*}$ の Hermite 元 $\varphi$ は直交する台をもつ正規正値汎関数の差 $\varphi=\varphi_{+}-\varphi_{-}$ として一意に表され、$\|\varphi\|=\|\varphi_{+}\|+\|\varphi_{-}\|$ となることを証明せよ。
+
+*4 Kadison による W* 環の抽象的特徴づけ
+単調完備な C*-環で、正規状態の族が点を分離するものは von Neumann 環と $*$-同型であることを証明せよ（Kadison 1956）。
+
+*5 Dixmier の近似定理
+von Neumann 環 $M$ の任意の $x$ について、$\overline{\mathrm{conv}}^{\|\cdot\|}\{uxu^{*}:u\in U(M)\}\cap Z(M)\ne\emptyset$ を証明せよ。系として、有限 von Neumann 環に中心値トレースが一意に存在すること、因子なら中心値トレースがスカラー値になることを導け。
+
+*5 Haagerup の相似性定理
+C*-環 $A$ から $B(H)$ への有界準同型 $\pi$ が巡回ベクトルをもつなら、$\pi$ は $*$-表現と相似（$S\pi(\cdot)S^{-1}$ が $*$-準同型となる可逆 $S$ が存在）であることを証明せよ（Haagerup 1983）。Kadison の相似性問題との関係を述べよ。
+
+=ch VII-4　型分類と因子
+
+*4 型分解定理 {type-decomp}
+任意の von Neumann 環は型 I、II$_{1}$、II$_{\infty}$、III の直和に中心射影によって一意に分解されることを証明せよ。
+
+*4 型 I von Neumann 環の構造
+型 I 因子は $B(H)$ に同型であり、一般の型 I von Neumann 環は $\bigoplus_{n}L^{\infty}(X_{n},\mu_{n})\bar\otimes B(H_{n})$ と同型であることを示せ。
+
+*4 II$_{1}$ 因子のトレースと次元関数（Murray–von Neumann）
+II$_{1}$ 因子は一意な忠実正規トレース状態 $\tau$ をもち、射影の同値類は $\tau$ で完全に分類され、その値域が $[0,1]$ 全体であることを証明せよ。
+
+*4 群 von Neumann 環が因子になる条件
+離散群 $G$ について、$L(G)$ が因子 $\iff$ $G$ が ICC（単位元以外の共役類がすべて無限）であり、そのとき $L(G)$ は II$_{1}$ 因子であることを示せ。
+
+*4 性質 $\Gamma$ と $L(\mathbb{F}_{2})\not\cong R$ {gamma}
+超有限 II$_{1}$ 因子 $R$ は性質 $\Gamma$（非自明な中心列の存在）をもつが $L(\mathbb{F}_{2})$ はもたないことを示し、両者が非同型であることを証明せよ（Murray–von Neumann 1943）。
+
+*4 超有限 II$_{1}$ 因子の一意性 {hyperfinite}
+有限次元部分環の増大列の和が強稠密となる II$_{1}$ 因子は互いに同型であり、$R\cong\overline{\bigotimes}_{n}(M_{2}(\mathbb{C}),\mathrm{tr})$ となることを証明せよ。
+
+*4 群測度空間構成
+可算群 $\Gamma$ の確率空間への本質的自由・エルゴード的な非特異作用について、$L^{\infty}(X)\rtimes\Gamma$ は因子であり、その型が不変測度の有無（有限・無限・非存在）で II$_{1}$・II$_{\infty}$・III と決まることを示せ。
+
+*4 Powers 因子
+$0<\lambda<1$ に対し状態 $\varphi_{\lambda}=\mathrm{Tr}(\,\cdot\,\mathrm{diag}(\frac{1}{1+\lambda},\frac{\lambda}{1+\lambda}))$ の無限テンソル積による因子 $R_{\lambda}$ は型 III で、$\lambda\neq\mu$ なら $R_{\lambda}\not\cong R_{\mu}$ であることを証明せよ（Powers 1967）。
+
+*4 Araki–Woods の ITPFI 因子
+無限テンソル積因子について漸近比集合 $r_{\infty}(M)$ を定義し、それが同型不変量であり Powers 因子を区別することを示せ（Araki–Woods 1968）。
+
+*4 Connes の不変量 $S(M)$ と型 III$_{\lambda}$ の分類 {connes-s}
+$S(M)=\bigcap_{\varphi}\sigma(\Delta_{\varphi})$ を定義し、型 III 因子に対して $S(M)\setminus\{0\}$ が $\mathbb{R}_{+}^{*}$ の閉部分群であることを示して、型 III$_{0}$・III$_{\lambda}$・III$_{1}$ への分類を与えよ。$S(R_{\lambda})=\{0\}\cup\lambda^{\mathbb{Z}}$ を確かめよ。
+
+*4 基本群（Murray–von Neumann）
+II$_{1}$ 因子 $M$ の基本群 $\mathcal{F}(M)=\{\tau(p)/\tau(q):pMp\cong qMq\}$ が $\mathbb{R}_{+}^{*}$ の部分群であることを示し、$\mathcal{F}(R)=\mathbb{R}_{+}^{*}$ を証明せよ。
+
+*4 McDuff の定理 {mcduff}
+可分 II$_{1}$ 因子 $M$ について、$M\cong M\bar\otimes R$ $\iff$ 中心列環 $M'\cap M^{\omega}$ が非可換であることを証明せよ（McDuff 1970）。
+
+*4 非同型な II$_{1}$ 因子の非可算族
+互いに非同型な可分 II$_{1}$ 因子が非可算個存在することを、中心列の構造を不変量として構成せよ（McDuff 1969）。
+
+*4 超積 $M^{\omega}$
+II$_{1}$ 因子 $M$ と自由超フィルター $\omega$ に対し、トレース超積 $M^{\omega}$ が II$_{1}$ 因子であることを示し、$M$ が可分無限次元なら $M^{\omega}$ が非可分であることを証明せよ。
+
+*4 結合定数（Murray–von Neumann）
+II$_{1}$ 因子 $M$ の正規表現 $M\subset B(H)$ に対し結合定数 $\dim_{M}H$ を定義し、$M'$ が II$_{1}$ $\iff\dim_{M}H<\infty$、$\dim_{M'}H=(\dim_{M}H)^{-1}$ を示せ。
+
+*4 重みの流れ（Connes–Takesaki）
+型 III 因子の連続核 $M\rtimes_{\sigma}\mathbb{R}$ の中心上の双対作用として重みの流れを定義し、型 III$_{0}$ では非推移的エルゴード流、III$_{\lambda}$ では周期 $-\log\lambda$ の周期流、III$_{1}$ では自明となることを示せ。
+
+*5 Krieger の分類定理
+超有限（ITPFI 型）の型 III$_{0}$ 因子は、重みの流れによって同型類が完全に分類され、任意の非推移的エルゴード流が現れることを、Krieger の軌道同値の結果を用いて証明の骨格を与えよ（Krieger 1976）。
+
+*5 従順な同値関係の超有限性（Connes–Feldman–Weiss, Ornstein–Weiss）
+可測同値関係が従順 $\iff$ 超有限（有限同値関係の増大和）であることを証明の骨格とともに示し、系として従順群の自由エルゴード的な確率測度保存作用はすべて軌道同値であること（Dye, Ornstein–Weiss）を導け。
+
+*4 普遍な可分 II$_{1}$ 因子の非存在（Ozawa）
+任意の可分 II$_{1}$ 因子を部分環として含む可分 II$_{1}$ 因子は存在しないことを証明せよ（Ozawa 2004）。
+
+*4 オドメーターと Powers 因子
+$X=\{0,1\}^{\mathbb{N}}$ 上の積測度 $\mu_{\lambda}=\bigotimes(\frac{1}{1+\lambda},\frac{\lambda}{1+\lambda})$ とオドメーター（2 進加算機）$T$ について、$T$ は $\mu_{\lambda}$ に関して非特異エルゴード的であり、$L^{\infty}(X,\mu_{\lambda})\rtimes_{T}\mathbb{Z}\cong R_{\lambda}$ となることを示せ。

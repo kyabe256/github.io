@@ -1,0 +1,126 @@
+=part 第 VII 部　作用素環 | OPERATOR ALGEBRAS &mdash; 1201 to 1400
+作用素の「集まり」そのものを対象にすると、関数解析は代数・位相・幾何・確率と一斉に接続する。C*-環の公理と GNS 構成、表現論と Glimm の二分法、von Neumann 環と型分類、冨田–竹崎のモジュラー理論、Connes の単射因子の分類、K 理論と Elliott の分類計画、II$_{1}$ 因子の剛性と部分因子、自由確率論まで ― 「非可換な測度論・位相空間論」を一気に通過する。
+
+=ch VII-1　C*-環の基本
+
+*4 Gelfand–Naimark の定理 {gn}
+任意の C*-環 $A$ はある Hilbert 空間 $H$ 上の $B(H)$ のノルム閉 $*$-部分環と等長 $*$-同型である。可分なら $H$ を可分にとれることも示せ。
+
+*4 C*-ノルムの一意性
+C*-環のノルムは $\|a\|^{2}=r(a^{*}a)$ により代数構造だけで決まる。$*$-準同型 $\pi:A\to B$ は縮小的で、単射なら等長であることを示せ。
+
+*4 正値元の特徴づけ（Fukamiya–Kaplansky–Kelley–Vaught）
+$a\in A$ について $a=a^{*},\ \sigma(a)\subset[0,\infty)$ $\iff$ $a=b^{*}b$（$b\in A$）を示し、正値元全体 $A_{+}$ が閉凸錐であることを証明せよ。
+
+*4 近似単位元の存在
+任意の C*-環は $A_{+}$ の単位球に属する増大近似単位元 $(e_{\lambda})$ をもち、$A$ が可分なら列でとれることを示せ。
+
+*4 閉イデアルと商（Segal）
+C*-環の閉両側イデアル $J$ は自動的に自己共役で、$A/J$ は商ノルムで C*-環になることを、近似単位元を用いて証明せよ。
+
+*4 遺伝的部分環と閉左イデアル（Effros）
+$A$ の閉左イデアル $L$ と遺伝的 C*-部分環 $B$ は $L\mapsto L\cap L^{*}$、$B\mapsto\{a:a^{*}a\in B\}$ により一対一に対応することを示せ。
+
+*4 乗数環 $M(A)$
+$A$ を本質的イデアルとして含む最大の単位的 C*-環 $M(A)$ が二重中心化環として構成でき、$M(C_{0}(X))=C_{b}(X)$、$M(K(H))=B(H)$ となることを示せ。
+
+*4 スペクトル永続性
+$B\subset A$ が単位を共有する C*-部分環なら、任意の $b\in B$ について $\sigma_{B}(b)=\sigma_{A}(b)$ を証明せよ。
+
+*4 正値線形汎関数の自動連続性
+C*-環上の正値線形汎関数 $\varphi$ は有界で、$\|\varphi\|=\lim_{\lambda}\varphi(e_{\lambda})$（単位的なら $\varphi(1)$）。さらに $|\varphi(b^{*}a)|^{2}\le\varphi(a^{*}a)\varphi(b^{*}b)$ を示せ。
+
+*4 GNS 構成 {gns-c}
+状態 $\varphi$ に対し、巡回ベクトル $\xi_{\varphi}$ をもつ表現 $(\pi_{\varphi},H_{\varphi})$ で $\varphi(a)=\langle\pi_{\varphi}(a)\xi_{\varphi},\xi_{\varphi}\rangle$ をみたすものが存在し、ユニタリ同値を除いて一意であることを証明せよ。
+
+*4 状態の十分性
+任意の $a\in A$ に対し $\varphi(a^{*}a)=\|a\|^{2}$ となる状態 $\varphi$ が存在することを示し、普遍表現 $\bigoplus_{\varphi}\pi_{\varphi}$ が忠実であることから {{R:gn}} を導け。
+
+*4 Russo–Dye の定理
+単位的 C*-環の閉単位球はユニタリ元の凸包の閉包に等しいことを証明せよ。系として、単位的な正値写像 $\varphi$ について $\|\varphi\|=\|\varphi(1)\|$ を示せ。
+
+*4 Kadison–Pedersen の定理
+単位的 C*-環で $\|a\|<1-\frac{2}{n}$ なら、$a$ は $n$ 個のユニタリ元の算術平均として表せることを示せ。
+
+*4 Kadison–Schwarz の不等式
+単位的な正値写像 $\Phi:A\to B$ と正規元 $a$ について $\Phi(a)^{*}\Phi(a)\le\Phi(a^{*}a)$、$\Phi$ が 2-正値なら任意の $a$ について同じ不等式が成り立つことを示せ。
+
+*4 Choi の定理
+線形写像 $\Phi:M_{n}\to M_{m}$ が完全正値 $\iff$ Choi 行列 $\sum_{i,j}E_{ij}\otimes\Phi(E_{ij})\ge0$ $\iff$ $\Phi(x)=\sum_{k}V_{k}^{*}xV_{k}$（Kraus 表示、$k\le nm$）を証明せよ。
+
+*4 最小テンソルノルムの最小性（Takesaki）
+代数的テンソル積 $A\odot B$ 上の任意の C*-ノルム $\gamma$ は空間的ノルム $\|\cdot\|_{\min}$ 以上であることを示し、$\|\cdot\|_{\min}\le\gamma\le\|\cdot\|_{\max}$ を導け。
+
+*4 Pedersen イデアル
+任意の C*-環は、任意の稠密イデアルに含まれる最小稠密イデアル $K(A)$ をもつことを示し、$A=C_{0}(X)$ のとき $K(A)=C_{c}(X)$ を確かめよ。
+
+*4 Ogasawara の可換性判定
+C*-環 $A$ が可換 $\iff$ 任意の $0\le a\le b$ について $a^{2}\le b^{2}$ であることを証明せよ。
+
+*5 微分の自動連続性と内部性（Sakai, Ringrose, Kadison–Sakai）
+C*-環上の任意の微分 $\delta:A\to A$ は有界であり（Sakai 1960）、von Neumann 環上の微分はすべて内部微分 $\delta=[x,\cdot]$ であること（Kadison, Sakai 1966）を証明せよ。
+
+*5 Vidav–Palmer の定理
+単位的 Banach 環 $A$ の Hermite 元（数域が実数の元）全体を $H$ とする。$A=H+iH$ なら、$(h+ik)^{*}=h-ik$ により $A$ は元のノルムで C*-環になることを証明せよ。
+
+=ch VII-2　表現と状態空間
+
+*4 純状態と既約表現
+状態 $\varphi$ が純（状態空間の端点）$\iff$ GNS 表現 $\pi_{\varphi}$ が既約であることを、$\pi_{\varphi}(A)'$ と $\varphi$ に支配される正値汎関数の対応から証明せよ。
+
+*4 Kadison の推移性定理 {kadison-trans}
+$\pi$ が C*-環の既約表現なら、一次独立な $\xi_{1},\dots,\xi_{n}$ と任意の $\eta_{1},\dots,\eta_{n}$ に対し $\pi(a)\xi_{i}=\eta_{i}$ となる $a$ が存在すること、さらに $B(H)$ のユニタリ（自己共役）作用素で同じ対応を実現するものがあれば $a$ もユニタリ（自己共役）にとれることを示せ。特に位相的既約性は代数的既約性を意味する。
+
+*4 既約表現による点の分離
+Krein–Milman により純状態は状態空間の閉凸包を生成することを示し、既約表現全体の直和が忠実であること、および $\|a\|=\sup_{\pi\ \text{既約}}\|\pi(a)\|$ を導け。
+
+*4 非退化表現の巡回分解
+C*-環の任意の非退化表現は巡回表現の直和にユニタリ同値であることを Zorn の補題で証明せよ。
+
+*4 純状態のユニタリ同値（Glimm–Kadison）
+純状態 $\varphi,\psi$ について、GNS 表現がユニタリ同値 $\iff$ あるユニタリ $u\in\widetilde{A}$ で $\psi=\varphi\circ\mathrm{Ad}\,u$ であることを {{R:kadison-trans}} から導け。
+
+*4 $K(H)$ の表現
+$K(H)$ の任意の既約表現は恒等表現とユニタリ同値であり、任意の非退化表現は恒等表現の重複度つき直和であることを示せ。
+
+*5 Glimm の二分定理 {glimm}
+可分 C*-環 $A$ について次の同値を証明せよ：(i) $A$ は型 I（GCR）、(ii) 任意の既約表現の像が $K(H_{\pi})$ を含む、(iii) 既約表現のユニタリ同値類が核で決まる、(iv) $A$ は CAR 環を部分商にもたない。さらに非型 I なら同じ核をもつ非同値な既約表現が非可算個あることを示せ（Glimm 1961）。
+
+*4 連続トレース C*-環と Dixmier–Douady 類
+スペクトル $X$ が第二可算 Hausdorff の連続トレース C*-環 $A$ について、安定同型類が $\delta(A)\in H^{3}(X;\mathbb{Z})$ で完全に分類されることを示せ（Dixmier–Douady 1963）。
+
+*4 Dauns–Hofmann の定理
+$\mathrm{Prim}(A)$ に hull-kernel 位相を入れると、$M(A)$ の中心は $C_{b}(\mathrm{Prim}(A))$ と同型であり、$f\cdot a$ は各原始イデアルで $f(P)a$ を法として一致することを示せ。
+
+*4 純状態の切り出し（Akemann–Anderson–Pedersen）
+純状態 $\varphi$ に対し、$\|e_{n}\|=1,\ e_{n}\ge0$ で $\|e_{n}ae_{n}-\varphi(a)e_{n}^{2}\|\to0$（$a\in A$）となる列が存在することを示せ。
+
+*4 Glimm の補題
+$A\subset B(H)$ が既約で $A\cap K(H)=\{0\}$ なら、$A$ の任意の状態はベクトル状態 $\langle\cdot\,\xi,\xi\rangle$（$\xi\in H$ 単位ベクトル）の弱 $*$ 極限であることを証明せよ。
+
+*4 Fell の弱包含
+表現 $\pi,\rho$ について、$\pi$ が $\rho$ に弱包含される（$\pi$ の正値行列係数が $\rho$ の係数の和で弱 $*$ 近似される）$\iff\ker\rho\subset\ker\pi$ を示せ。
+
+*5 Voiculescu の非可換 Weyl–von Neumann 定理 {voiculescu}
+$A\subset B(H)$ を可分単位的 C*-環（$H$ 可分）、$\rho$ を $\rho|_{A\cap K(H)}=0$ をみたす $A$ の単位的表現（可分空間上）とする。$\mathrm{id}\oplus\rho$ は $\mathrm{id}$ にコンパクト摂動を法として近似ユニタリ同値（$u_{n}^{*}(a\oplus\rho(a))u_{n}-a\in K$、ノルム $\to0$）であることを証明せよ（Voiculescu 1976）。
+
+*4 Gelfand–Raikov の定理
+局所コンパクト群 $G$ の既約ユニタリ表現は $G$ の点を分離することを、群 C*-環 $C^{*}(G)$ の純状態と正定値関数の対応から証明せよ。
+
+*4 Mackey の非原始性定理と Rieffel の誘導
+閉部分群 $H\subset G$ について、$G/H$ 上の非原始系をもつ $G$ の表現は $H$ の表現から誘導されたものに限ることを、Rieffel の強 Morita 同値 $C_{0}(G/H)\rtimes G\sim_{M}C^{*}(H)$ として証明せよ。
+
+*4 高井双対定理
+可換局所コンパクト群 $G$ の作用 $(A,G,\alpha)$ について $(A\rtimes_{\alpha}G)\rtimes_{\hat\alpha}\hat G\cong A\otimes K(L^{2}(G))$ を証明せよ（Takai 1975）。
+
+*4 極小同相写像の接合積の単純性
+無限コンパクト距離空間 $X$ 上の極小同相写像 $h$ について、$C(X)\rtimes_{h}\mathbb{Z}$ は単純 C*-環であることを証明せよ（Power 1978）。
+
+*5 Brown–Green–Rieffel の安定同型定理
+$\sigma$-単位的 C*-環 $A,B$ について、$A$ と $B$ が強 Morita 同値 $\iff A\otimes K\cong B\otimes K$ であることを証明せよ（Brown–Green–Rieffel 1977）。
+
+*5 純状態の推移性（Kishimoto–Ozawa–Sakai）
+可分単純 C*-環 $A$ の自己同型群 $\mathrm{Aut}(A)$ は純状態空間に推移的に作用すること、すなわち任意の純状態 $\varphi,\psi$ に $\alpha$ で $\psi=\varphi\circ\alpha$ となるものが存在することを証明せよ（2003）。
+
+*5 一般化 Effros–Hahn 予想（Gootman–Rosenberg）
+可分 C*-力学系 $(A,G,\alpha)$ で $G$ が従順なとき、$A\rtimes_{\alpha}G$ の任意の原始イデアルは安定化部分群の既約表現から誘導された表現の核であることの証明の骨格を与えよ（Gootman–Rosenberg 1979）。

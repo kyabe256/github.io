@@ -1,0 +1,123 @@
+=ch VII-7　C*-環の K 理論
+
+*4 $K_{0}$ 群の基本性質
+射影の Murray–von Neumann 同値類の Grothendieck 群として $K_{0}(A)$ を構成し、ホモトピー不変性、安定性 $K_{0}(A\otimes K)\cong K_{0}(A)$、帰納極限に関する連続性を証明せよ。
+
+*4 六項完全列 {six-term}
+C*-環の短完全列 $0\to J\to A\to A/J\to0$ に対し、指数写像 $\partial:K_{1}(A/J)\to K_{0}(J)$ と指数関数写像 $\exp:K_{0}(A/J)\to K_{1}(J)$ を構成し、六項巡回完全列が成り立つことを証明せよ。
+
+*4 Bott 周期性 {bott}
+$K_{1}(SA)\cong K_{0}(A)$ を示し、Toeplitz 拡大を用いて $K_{0}(S^{2}A)\cong K_{0}(A)$ を証明せよ（Cuntz の証明を用いてよい）。
+
+*4 Swan の定理と位相的 K 理論
+コンパクト Hausdorff 空間 $X$ 上のベクトル束の同型類と $C(X)$ 上の有限生成射影加群の同型類が一対一に対応することを示し、$K_{*}(C(X))\cong K^{*}(X)$ を導け。
+
+*4 Pimsner–Voiculescu の完全列 {pv}
+自己同型 $\alpha$ による接合積について六項完全列 $K_{0}(A)\xrightarrow{1-\alpha_{*}}K_{0}(A)\to K_{0}(A\rtimes_{\alpha}\mathbb{Z})\to K_{1}(A)\to\cdots$ を証明し、無理数回転環 $A_{\theta}$ について $K_{0}\cong K_{1}\cong\mathbb{Z}^{2}$ を導け（1980）。
+
+*4 無理数回転環の分類
+$A_{\theta}$ の唯一のトレースによる $K_{0}(A_{\theta})$ の像が $\mathbb{Z}+\theta\mathbb{Z}$ であることを Rieffel 射影を用いて示し、$A_{\theta}\cong A_{\theta'}\iff\theta'\equiv\pm\theta\pmod{\mathbb{Z}}$ を証明せよ（Pimsner–Voiculescu, Rieffel 1981）。
+
+*4 Cuntz 環 $\mathcal{O}_{n}$
+$\mathcal{O}_{n}$（$2\le n<\infty$）が単純かつ純無限であり生成元の選び方によらないことを示し、$K_{0}(\mathcal{O}_{n})\cong\mathbb{Z}/(n-1)\mathbb{Z}$、$K_{1}(\mathcal{O}_{n})=0$ を証明せよ（Cuntz 1977, 1981）。
+
+*4 Elliott の AF 環分類と Effros–Handelman–Shen {elliott-af}
+AF 環は尺度付き順序群 $(K_{0}(A),K_{0}(A)_{+},\Sigma(A))$ で同型類が完全に分類されること（Elliott 1976）、および可算順序群が次元群となる $\iff$ 非穿孔的で Riesz 補間性をもつこと（Effros–Handelman–Shen 1980）を証明せよ。
+
+*5 Kasparov 積の存在と結合性
+可分 C*-環に対し $KK(A,B)$ を定義し、Kasparov の技術的補題を用いて積 $KK(A,B)\times KK(B,C)\to KK(A,C)$ が存在し結合的であることの証明の骨格を与えよ（Kasparov 1980）。
+
+*4 普遍係数定理（Rosenberg–Schochet）
+ブートストラップ類に属する $A$ について $0\to\mathrm{Ext}^{1}_{\mathbb{Z}}(K_{*}(A),K_{*+1}(B))\to KK(A,B)\to\mathrm{Hom}(K_{*}(A),K_{*}(B))\to0$ が完全であることを証明せよ（1987）。
+
+*4 Connes の Thom 同型
+$\mathbb{R}$ の作用 $\alpha$ について $K_{*}(A\rtimes_{\alpha}\mathbb{R})\cong K_{*+1}(A)$ を証明し、{{R:pv}} を写像トーラスを経由して導け（Connes 1981）。
+
+*4 Cuntz–Krieger 環の K 理論
+既約で置換行列でない 0-1 行列 $A$（$n\times n$）について、$K_{0}(\mathcal{O}_{A})\cong\mathrm{coker}(1-A^{t})$、$K_{1}(\mathcal{O}_{A})\cong\ker(1-A^{t})$ を証明せよ（Cuntz 1981）。
+
+*4 Kasparov の安定化定理
+可算生成な Hilbert $B$-加群 $E$ について $E\oplus H_{B}\cong H_{B}$（$H_{B}=\ell^{2}\otimes B$）を証明せよ（Kasparov 1980）。
+
+*4 核型 C*-環の Ext 群
+可分核型 C*-環 $A$ について、拡大の同値類の半群 $\mathrm{Ext}(A)$ が群であることを Choi–Effros の持ち上げ定理と Arveson の議論で示し、$\mathrm{Ext}(A)\cong KK^{1}(A,\mathbb{C})$ を説明せよ。
+
+*4 自由群の被約 C*-環の K 理論（Pimsner–Voiculescu）
+$K_{0}(C_{r}^{*}(\mathbb{F}_{n}))\cong\mathbb{Z}$、$K_{1}(C_{r}^{*}(\mathbb{F}_{n}))\cong\mathbb{Z}^{n}$ を証明し、トレースの $K_{0}$ 上の値が整数であることから $C_{r}^{*}(\mathbb{F}_{n})$ が非自明な射影をもたないことを導け（1982）。
+
+*4 純無限単純 C*-環の $K_{0}$（Cuntz）
+純無限単純 C*-環 $A$ では、$K_{0}(A)$ が $A$ の 0 でない射影の Murray–von Neumann 同値類全体と（直交和を演算として）一致することを証明せよ（Cuntz 1981）。
+
+*5 Higson による $KK$ の普遍性
+可分 C*-環の圏から加法圏への関手のうち、ホモトピー不変・安定・分裂完全なものはすべて $KK$ を一意に経由することを証明の骨格とともに示せ（Higson 1987）。
+
+*5 Karoubi 予想（Suslin–Wodzicki）
+安定 C*-環 $A\otimes K$ について代数的 K 理論と位相的 K 理論が一致すること $K_{*}^{\mathrm{alg}}(A\otimes K)\cong K_{*}^{\mathrm{top}}(A\otimes K)$ の証明の骨格を与えよ（Suslin–Wodzicki 1992）。
+
+*4 Toeplitz 拡大の指数写像
+$0\to K\to\mathcal{T}\to C(\mathbb{T})\to0$ の指数写像 $\partial:K_{1}(C(\mathbb{T}))\cong\mathbb{Z}\to K_{0}(K)\cong\mathbb{Z}$ が（符号の規約を除いて）回転数で与えられることを示し、{{R:toeplitz-ind}} を K 理論の言葉で再証明せよ。
+
+*4 Elliott–Evans の定理
+無理数回転環 $A_{\theta}$ は円周環の帰納極限（AT 環）であり、実階数 0 であることの証明の骨格を与えよ（Elliott–Evans 1993）。
+
+=ch VII-8　分類理論と構造
+
+*5 Kirchberg の $\mathcal{O}_{2}$ 定理 {kirchberg-o2}
+(i) 可分 C*-環 $A$ が完全 $\iff A$ が $\mathcal{O}_{2}$ に埋め込める、(ii) 単純・可分・単位的・核型な $A$ について $A\otimes\mathcal{O}_{2}\cong\mathcal{O}_{2}$、(iii) 同じく $A\otimes\mathcal{O}_{\infty}\cong A\iff A$ が純無限、を証明の骨格とともに示せ（Kirchberg 1994）。
+
+*5 Kirchberg–Phillips の分類定理
+UCT をみたす可分単位的 Kirchberg 環（単純・核型・純無限）は、$(K_{0}(A),[1_{A}],K_{1}(A))$ によって同型類が完全に分類され、任意の可算アーベル群の組が実現されることの証明の骨格を与えよ（Kirchberg, Phillips 2000）。
+
+*4 Jiang–Su 環 $\mathcal{Z}$
+次元降下環の帰納極限として $\mathcal{Z}$ を構成し、$\mathcal{Z}$ が単純・単一トレース・射影をもたず、$K_{*}(\mathcal{Z})\cong K_{*}(\mathbb{C})$ であることを示せ（Jiang–Su 1999）。
+
+*4 強自己吸収 C*-環（Toms–Winter）
+強自己吸収（$D\to D\otimes D$、$d\mapsto d\otimes1$ が近似ユニタリ同値な同型）の定義から、$D$ が単純・核型で単一トレースまたは純無限であることを示し、$\mathcal{Z},\mathcal{O}_{2},\mathcal{O}_{\infty}$、無限型 UHF 環がその例であることを確かめよ。
+
+*5 Toms–Winter 予想
+単純・可分・単位的・核型・非初等的な C*-環について、核次元が有限 $\iff$ $\mathcal{Z}$-安定 であること（Winter 2012、Castillejos–Evington–Tikuisis–White–Winter 2021）の証明の骨格を与え、厳密比較性との関係を述べよ。
+
+*5 Tikuisis–White–Winter の準対角性定理
+UCT をみたす可分核型 C*-環上の忠実トレースは準対角であることの証明の骨格を与え（2017）、系として従順群 $G$ の $C_{r}^{*}(G)$ が準対角であること（Rosenberg 予想）を導け。
+
+*5 単純核型 C*-環の分類の完結
+単位的・単純・可分・核型・$\mathcal{Z}$-安定で UCT をみたす C*-環は Elliott 不変量（$K_{0}$, $K_{1}$, トレース空間とその対合）で分類されることの証明の流れ（Gong–Lin–Niu, Elliott–Gong–Lin–Niu, Tikuisis–White–Winter）を述べよ。
+
+*4 Toms と Rørdam の反例
+Elliott 不変量が一致するが非同型な単純核型 AH 環の存在（Toms 2008）と、有限射影と無限射影を同時にもつ単純核型 C*-環の存在（Rørdam 2003）を説明し、$\mathcal{Z}$-安定性の仮定の必要性を論ぜよ。
+
+*4 Cuntz 半群 $\mathrm{Cu}$
+$A\otimes K$ の正値元の Cuntz 比較による半群 $\mathrm{Cu}(A)$ を定義し、それが Coward–Elliott–Ivanescu の公理をみたし帰納極限と可換であることを証明せよ（2008）。
+
+*4 Rørdam の厳密比較定理
+単純単位的な $\mathcal{Z}$-安定 C*-環は厳密比較性（任意の擬トレースで $d_{\tau}(a)<d_{\tau}(b)\Rightarrow a\precsim b$）をもつことを証明せよ（Rørdam 2004）。
+
+*4 実階数 0 の特徴づけ（Brown–Pedersen）
+C*-環 $A$ について、実階数 0 $\iff$ 有限スペクトルの自己共役元が自己共役元の中で稠密 $\iff$ 任意の遺伝的部分環が射影からなる近似単位元をもつ、を証明せよ（Brown–Pedersen 1991）。
+
+*4 安定階数（Rieffel）
+位相的安定階数 $\mathrm{tsr}$ を定義し、$\mathrm{tsr}(C(X))=\lfloor\dim X/2\rfloor+1$ を示せ（Rieffel 1983）。$\mathrm{tsr}(A_{\theta})=1$（Putnam）を述べよ。
+
+*4 核次元（Winter–Zacharias）
+核次元を定義し、$\dim_{\mathrm{nuc}}C(X)=\dim X$（$X$ コンパクト距離空間）、AF 環の核次元が 0 であること、$\mathcal{O}_{2}$ の核次元が有限であることを示せ（2010）。
+
+*4 Glimm の UHF 環分類
+UHF 環は超自然数（一般化された自然数）によって同型類が完全に分類されることを証明せよ（Glimm 1960）。
+
+*4 Bratteli 図式
+任意の AF 環は Bratteli 図式から得られることを示し、閉イデアルが図式の遺伝的方向付き部分集合と一対一に対応することを証明せよ（Bratteli 1972）。
+
+*5 Giordano–Putnam–Skau の定理
+極小 Cantor 系 $(X,\varphi)$、$(Y,\psi)$ について、強軌道同値 $\iff C(X)\rtimes_{\varphi}\mathbb{Z}\cong C(Y)\rtimes_{\psi}\mathbb{Z}\iff$ 順序 $K_{0}$ 群（単位つき）が同型であることの証明の骨格を与えよ（1995）。
+
+*4 極小同相写像の接合積の分類可能性
+有限被覆次元の無限コンパクト距離空間 $X$ 上の極小同相写像 $h$ について、$C(X)\rtimes_{h}\mathbb{Z}$ が $\mathcal{Z}$-安定であり、したがって分類可能であることを証明の骨格とともに示せ（Toms–Winter 2013）。
+
+*4 Elliott の定理 $\mathcal{O}_{2}\otimes\mathcal{O}_{2}\cong\mathcal{O}_{2}$
+フリップ自己同型が近似内部的であることを示して $\mathcal{O}_{2}\otimes\mathcal{O}_{2}\cong\mathcal{O}_{2}$ を証明せよ（Elliott 1994）。
+
+*5 完全 C*-環の擬トレースはトレース（Haagerup）
+完全 C*-環上の任意の 2-擬トレースはトレースであることの証明の骨格を与え（Haagerup 1991 年稿）、系として安定有限な単位的完全 C*-環がトレース状態をもつこと（Blackadar–Handelman 問題）を導け。
+
+*4 Lin の跡的階数 0 の分類
+UCT をみたす単位的・単純・可分・核型で跡的階数 0 の C*-環は、順序 $K$ 群で分類されることの証明の骨格を与えよ（Lin 2004）。
