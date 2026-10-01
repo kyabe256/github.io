@@ -1,0 +1,123 @@
+=ch X-3　非可換幾何
+
+*4 スペクトル三つ組と Connes の距離公式
+コンパクト spin 多様体 $M$ のスペクトル三つ組 $(C^{\infty}(M),L^{2}(M,S),D)$ について、$d(x,y)=\sup\{|f(x)-f(y)|:\|[D,f]\|\le1\}$ が測地距離に一致することを証明せよ（Connes 1989）。
+
+*5 Connes の再構成定理
+可換なスペクトル三つ組 $(\mathcal{A},H,D)$ が次元・正則性・有限性・向き付け・Poincaré 双対性などの公理をみたすなら、$\mathcal{A}=C^{\infty}(M)$ となる滑らかなコンパクト多様体 $M$ が存在することの証明の骨格を与えよ（Connes 2008/2013）。
+
+*4 巡回コホモロジーと Connes の周期性完全列
+代数 $\mathcal{A}$ の巡回コホモロジー $HC^{*}(\mathcal{A})$ を定義し、Hochschild コホモロジーとの SBI 長完全列 $\cdots\to HC^{n-1}\xrightarrow{S}HC^{n+1}\xrightarrow{I}HH^{n+1}\xrightarrow{B}HC^{n}\to\cdots$ を証明せよ（Connes 1983）。
+
+*4 Chern–Connes 指標と指数の整数性
+$p$-可和な Fredholm 加群 $(H,F)$ の Chern–Connes 指標 $\tau_{n}(a_{0},\dots,a_{n})=\mathrm{Tr}(\varepsilon F[F,a_{0}]\cdots[F,a_{n}])$ が巡回コサイクルであることを示し、射影 $e$ との対合 $\langle\tau_{n},[e]\rangle$ が $eFe:eH^{+}\to eH^{-}$ の Fredholm 指数の定数倍となること、したがって整数値であることを証明せよ。
+
+*4 Hochschild–Kostant–Rosenberg と Connes の定理
+コンパクト多様体 $M$ について、$HH_{*}(C^{\infty}(M))\cong\Omega^{*}(M)$（連続 Hochschild ホモロジー）を示し、周期巡回ホモロジーが de Rham コホモロジーの偶奇部分に一致することを証明せよ（Connes 1985）。
+
+*4 非可換トーラスの Chern 数
+非可換トーラス $A_{\theta}$ 上の 2-巡回コサイクル $\tau(a_{0},a_{1},a_{2})=\frac{1}{2\pi i}\tau(a_{0}(\delta_{1}a_{1}\delta_{2}a_{2}-\delta_{2}a_{1}\delta_{1}a_{2}))$ を定義し、Rieffel 射影との対合が整数値であることを示せ（Connes 1980）。
+
+*4 整数量子 Hall 効果（Bellissard–van Elst–Schulz-Baldes）
+磁場中の非周期的な離散 Schrödinger 作用素について、Fermi 準位がスペクトルギャップ（あるいは移動度ギャップ）にあるとき、久保公式による Hall 伝導度が Fermi 射影の Chern–Connes 指標との対合で与えられ、整数値であることを証明せよ（1994）。
+
+*5 Connes–Moscovici の局所指数公式
+正則で有限次元のスペクトル三つ組について、Chern–Connes 指標が Wodzicki 型の留数汎関数によって局所的に表されることの証明の骨格を与え（Connes–Moscovici 1995）、spin 多様体では Atiyah–Singer の局所公式に帰着することを確かめよ。
+
+*4 Lichnerowicz の公式
+spin 多様体の Dirac 作用素について $D^{2}=\nabla^{*}\nabla+\frac{R}{4}$（$R$ はスカラー曲率）を証明し、正スカラー曲率をもつコンパクト spin 多様体には零でない調和スピノルが存在しないこと、したがって $\hat A(M)=0$ を導け（Lichnerowicz 1963）。
+
+*4 スペクトル作用の漸近展開（Chamseddine–Connes）
+スペクトル三つ組 $(\mathcal{A},H,D)$ と偶関数 $f$ について、$\mathrm{Tr}f(D/\Lambda)\sim\sum_{k}f_{k}\Lambda^{k}\fint|D|^{-k}+f(0)\zeta_{D}(0)+O(\Lambda^{-1})$ を熱核展開から導き、多様体の場合に Einstein–Hilbert 作用が現れることを示せ（1997）。
+
+*4 Rieffel の変形量子化
+$\mathbb{R}^{d}$ の作用をもつ C*-環 $A$ と歪対称行列 $J$ に対し、変形された積 $a\times_{J}b=\iint\alpha_{Ju}(a)\alpha_{v}(b)e^{2\pi iu\cdot v}dudv$ を定義し、これが C*-環の連続場を与えることを証明せよ（Rieffel 1993）。
+
+*4 Woronowicz のコンパクト量子群
+コンパクト量子群 $(A,\Delta)$ 上に一意な Haar 状態が存在することを示し、既約余表現の行列成分が稠密 Hopf $*$-代数を張ること（量子 Peter–Weyl 定理）を証明せよ。$SU_{q}(2)$ を例として確かめよ（Woronowicz 1987）。
+
+*5 Connes–Skandalis の葉層の縦指数定理
+コンパクト多様体上の葉層について、縦方向に楕円的な擬微分作用素の解析的指数（葉層 C*-環の $K$ 群の元）が位相的指数と一致することの証明の骨格を与えよ（Connes–Skandalis 1984）。
+
+*4 自由群の K-従順性（Cuntz）
+自由群 $\mathbb{F}_{n}$ が K-従順であること、すなわち $C^{*}(\mathbb{F}_{n})\to C_{r}^{*}(\mathbb{F}_{n})$ が $KK$-同値であることを、木への作用による Fredholm 加群を用いて証明せよ（Cuntz 1983、Julg–Valette）。
+
+*4 巡回ホモロジーの Morita 不変性
+$HC_{*}(M_{n}(\mathcal{A}))\cong HC_{*}(\mathcal{A})$ を一般化トレース写像で示し、巡回ホモロジーが Morita 不変であることを証明せよ。
+
+*4 Goodwillie の定理
+冪零イデアル $I$ による拡大 $\mathcal{A}\to\mathcal{A}/I$ について、周期巡回ホモロジーが同型 $HP_{*}(\mathcal{A})\cong HP_{*}(\mathcal{A}/I)$ を与えることを証明せよ（Goodwillie 1985）。
+
+*5 Cuntz–Quillen の切除定理
+周期巡回ホモロジーは任意の代数の拡大 $0\to I\to\mathcal{A}\to\mathcal{A}/I\to0$ に対して切除性をみたし、六項完全列を与えることの証明の骨格を与えよ（Cuntz–Quillen 1997）。
+
+*4 内部ゆらぎとゲージ場
+スペクトル三つ組 $(\mathcal{A},H,D)$ について、内部ゆらぎ $D\mapsto D+A+JAJ^{-1}$（$A=\sum a_{i}[D,b_{i}]$ 自己共役）が Morita 同値のもとでの不変性から自然に生じることを示し、概可換多様体 $C^{\infty}(M)\otimes M_{n}(\mathbb{C})$ ではゲージ場を与えることを確かめよ（Connes 1996）。
+
+*4 Dixmier トレースの計量的性質
+$\mathcal{L}^{1,\infty}$ 上の Dixmier トレース $\mathrm{Tr}_{\omega}$ が、$T\ge0$ の固有値 $\mu_{n}$ について $\lim\frac{1}{\log N}\sum_{n\le N}\mu_{n}$ が存在すれば $\omega$ によらずその値をとること、および $\zeta$ 関数の留数 $\lim_{s\to1^{+}}(s-1)\mathrm{Tr}(T^{s})$ に等しいことを証明せよ。
+
+*4 Kasparov の Dirac–双対 Dirac 法
+$\mathbb{R}^{n}$ の Bott 元 $\beta\in KK(\mathbb{C},C_{0}(\mathbb{R}^{n}))$ と Dirac 元 $\alpha\in KK(C_{0}(\mathbb{R}^{n}),\mathbb{C})$ について $\beta\otimes\alpha=1$ を示し、Bott 周期性を $KK$ の言葉で再証明せよ（Kasparov 1980）。
+
+=ch X-4　指数定理
+
+*4 McKean–Singer の公式
+閉多様体上の楕円型作用素 $D:\Gamma(E)\to\Gamma(F)$ について、任意の $t>0$ で $\mathrm{ind}\,D=\mathrm{Tr}(e^{-tD^{*}D})-\mathrm{Tr}(e^{-tDD^{*}})$ を証明せよ（McKean–Singer 1967）。
+
+*4 Gauss–Bonnet–Chern の熱核による証明（Patodi）
+de Rham 作用素 $d+d^{*}$ の熱核超トレースの漸近展開において、Patodi の局所的な打ち消しが起こり、定数項が Pfaffian 形式 $\mathrm{Pf}(\Omega/2\pi)$ に等しいことを示して、$\chi(M)=\int_{M}\mathrm{Pf}(\Omega/2\pi)$ を証明せよ（Patodi 1971）。
+
+*5 Getzler の再スケーリングと局所指数定理
+twisted Dirac 作用素の熱核について、Getzler の再スケーリングにより超トレースの $t\to0$ 極限が調和振動子（Mehler の公式）の計算に帰着し、局所指数密度が $\hat A(M)\mathrm{ch}(E)$ の最高次成分に等しいことを証明せよ（Getzler 1983）。
+
+*4 Hirzebruch の符号数定理
+$4k$ 次元閉向き付け多様体の符号数作用素の指数が交叉形式の符号数に等しいことを示し、局所指数定理から $\mathrm{sign}(M)=\int_{M}L(M)$ を導け（Hirzebruch 1954、Atiyah–Singer）。
+
+*4 Riemann–Roch–Hirzebruch の定理
+コンパクト Kähler 多様体上の正則ベクトル束 $E$ について、Dolbeault 作用素 $\sqrt2(\bar\partial+\bar\partial^{*})$ の指数が $\chi(M,E)=\int_{M}\mathrm{Td}(M)\mathrm{ch}(E)$ に等しいことを、spin$^{c}$ Dirac 作用素との関係を用いて証明せよ。
+
+*4 Atiyah–Bott–Lefschetz の不動点公式
+楕円型複体と非退化な不動点のみをもつ幾何的自己写像について、Lefschetz 数が不動点の局所寄与 $\sum_{p}\frac{\sum(-1)^{i}\mathrm{tr}\,\varphi_{i,p}}{|\det(1-df_{p})|}$ の和に等しいことを証明せよ（Atiyah–Bott 1967）。
+
+*5 Atiyah–Patodi–Singer の指数定理
+境界付き多様体上の Dirac 型作用素に APS 大域境界条件を課すと Fredholm であり、その指数が $\int_{M}\alpha_{0}-\frac{h+\eta(0)}{2}$（$\eta$ は境界作用素の $\eta$ 不変量、$h=\dim\ker$）で与えられることの証明の骨格を与えよ（1975）。
+
+*4 Atiyah の $L^{2}$ 指数定理
+閉多様体 $M$ の Galois 被覆 $\tilde M$（被覆変換群 $\Gamma$）上の持ち上げた楕円型作用素について、群 von Neumann 環のトレースで測った $\Gamma$-指数が $M$ 上の指数に等しいことを証明せよ（Atiyah 1976）。
+
+*4 Callias の指数定理
+奇数次元の非コンパクト多様体上で、無限遠で可逆な Hermite 自己準同型 $\Phi$ を伴う Dirac 作用素 $D+i\Phi$ の指数が、無限遠の超曲面上の位相的不変量で与えられることを証明せよ（Callias 1978、Anghel、Bunke）。
+
+*4 族の指数定理
+コンパクト空間 $B$ でパラメトライズされた楕円型作用素の族 $(D_{b})$ について指数束 $\mathrm{ind}(D)\in K(B)$ を定義し、それが位相的指数と一致すること（Atiyah–Singer 1971）を述べて、$B$ が点の場合と Bott 周期性との関係を示せ。
+
+*4 Witten 変形と Morse 不等式
+Morse 関数 $f$ による変形 $d_{t}=e^{-tf}de^{tf}$ の Laplacian の低い固有値が $t\to\infty$ で臨界点に局在することを半古典解析で示し、Morse 不等式を導け（Witten 1982）。
+
+*4 Boutet de Monvel の Toeplitz 指数定理
+強擬凸領域の境界上の Toeplitz 作用素 $T_{P}$（$P$ は楕円型擬微分作用素）の指数が、対応する境界上の楕円型作用素の指数に等しいことを示し、Toeplitz 拡大の $K$ 理論で解釈せよ（Boutet de Monvel 1979）。
+
+*4 楕円型境界値問題の Fredholm 性
+楕円型作用素に Lopatinskii–Shapiro 条件をみたす境界作用素を課した境界値問題が Sobolev 空間の間の Fredholm 作用素であることを、境界での主表象の分析とパラメトリクスで証明せよ。
+
+*4 スペクトル流と指数
+自己共役 Fredholm 作用素の道 $(A_{t})_{t\in[0,1]}$（$A_{0},A_{1}$ 可逆）のスペクトル流を定義し、$\frac{d}{dt}+A_{t}$ の $L^{2}(\mathbb{R})$ 上の指数がスペクトル流に等しいことを証明せよ（APS、Robbin–Salamon 1995）。
+
+*4 歪自己共役 Fredholm 作用素の mod 2 指数
+実 Hilbert 空間上の歪自己共役 Fredholm 作用素について $\dim\ker\bmod2$ がホモトピー不変であり、その空間の連結成分を分類することを示せ（Atiyah–Singer 1969）。
+
+*4 Gromov–Lawson の拡大可能性定理
+拡大可能な（例えば非正曲率の）コンパクト spin 多様体は正スカラー曲率の計量をもたないことを、相対指数定理と Lichnerowicz の公式で証明せよ（Gromov–Lawson 1983）。
+
+*4 $\eta$ 不変量の正則性
+閉多様体上の自己共役楕円型作用素 $A$ の $\eta(s)=\sum\mathrm{sign}(\lambda)|\lambda|^{-s}$ が $\mathbb{C}$ 全体に有理型接続され、$s=0$ で正則であることの証明の骨格を与えよ（Atiyah–Patodi–Singer 1976、Gilkey）。
+
+*5 Cheeger–Müller の定理
+閉 Riemann 多様体と直交表現について、Ray–Singer の解析的捩率が Reidemeister 捩率に等しいことの証明の骨格を与えよ（Cheeger 1979、Müller 1978）。
+
+*4 楕円型作用素による Bott 周期性の証明（Atiyah）
+複素構造のある空間上の Dolbeault 作用素族の指数を用いて、$K(X\times\mathbb{R}^{2})\cong K(X)$ を示す Atiyah の楕円型作用素による Bott 周期性の証明を与えよ（Atiyah 1968）。
+
+*4 Atiyah–Segal–Singer の同変指数と Weyl の指標公式
+コンパクト Lie 群が作用する楕円型作用素の同変指数を定義し、旗多様体上の Dolbeault 作用素に固定点公式を適用して Weyl の指標公式を導け（Atiyah–Bott, Atiyah–Segal–Singer 1968）。

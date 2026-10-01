@@ -1,0 +1,126 @@
+=part 第 X 部　群・幾何・指数と大定理の合流 | GROUPS, GEOMETRY, INDEX AND CONVERGENCE &mdash; 1801 to 2000
+最後の部では、これまでの九部が一点に流れ込む。局所コンパクト群の調和解析とユニタリ表現論、非可換幾何、指数定理、Baum–Connes 予想と高次指数、数論と関数解析、距離空間と幾何学への応用、量子情報、古典的大定理の関数解析的証明、そして現代の大定理の合流 ― 関数解析が数学の中心を貫く一本の軸であることを、2000 題目まで通して確かめる。
+
+=ch X-1　局所コンパクト群上の調和解析
+
+*4 Haar 測度の存在と一意性 {haar}
+局所コンパクト Hausdorff 群上に左不変な Radon 測度が正定数倍を除いて一意に存在することを、Haar の被覆数による構成（あるいは Cartan の証明）で証明せよ。モジュラー関数 $\Delta$ を定義し、その連続性を示せ。
+
+*4 Pontryagin の双対定理 {pontryagin}
+局所コンパクト可換群 $G$ について、自然な写像 $G\to\hat{\hat G}$ が位相群の同型であることを、Gelfand 理論と Plancherel の定理を用いて証明せよ。
+
+*4 局所コンパクト可換群の Plancherel の定理
+Haar 測度を適切に正規化すると、Fourier 変換 $L^{1}\cap L^{2}(G)\to L^{2}(\hat G)$ がユニタリ作用素に拡張され、反転公式が成り立つことを証明せよ。
+
+*4 Peter–Weyl の定理 {peter-weyl}
+コンパクト群 $G$ の既約ユニタリ表現の行列係数全体が $L^{2}(G)$ で稠密であり、$L^{2}(G)\cong\bigoplus_{\pi\in\hat G}d_{\pi}\cdot H_{\pi}$ となることを、コンパクト自己共役な畳み込み作用素のスペクトル分解で証明せよ。
+
+*4 Bochner–Weil–Raikov の定理
+局所コンパクト可換群上の連続正定値関数は、$\hat G$ 上の有限正値測度の Fourier 変換として一意に表されることを証明せよ。
+
+*4 コンパクト生成 LCA 群の構造定理
+コンパクト生成な局所コンパクト可換群は $\mathbb{R}^{n}\times\mathbb{Z}^{m}\times K$（$K$ コンパクト）と同型であることを証明せよ。
+
+*4 Gelfand 対と球関数
+$K\subset G$ をコンパクト部分群とし、$G$ 上の対合的反自己同型 $\theta$ が両側 $K$-不変関数を固定するなら、$L^{1}(K\backslash G/K)$ は可換であること（Gelfand のトリック）を示し、球関数が $L^{1}(K\backslash G/K)$ の指標と対応することを証明せよ。
+
+*4 Godement の Plancherel 定理（Gelfand 対）
+Gelfand 対 $(G,K)$ について、正定値球関数の空間上に Plancherel 測度が存在し、球変換が $L^{2}(K\backslash G/K)$ からのユニタリ写像を与えることを証明せよ（Godement 1952）。
+
+*4 Segal–Mautner の Plancherel 定理
+可分なユニモジュラー型 I 局所コンパクト群について、$\hat G$ 上の Plancherel 測度 $\mu$ が存在して $\|f\|_{2}^{2}=\int_{\hat G}\|\pi(f)\|_{HS}^{2}d\mu(\pi)$ となることを、群 von Neumann 環の半有限トレースの分解で証明せよ。
+
+*5 $SL(2,\mathbb{R})$ の Plancherel 公式（Harish-Chandra）
+$SL(2,\mathbb{R})$ の Plancherel 測度が、離散系列 $D_{n}^{\pm}$ 上では形式次数 $n-1$ に比例する点質量、主系列上では $\nu\tanh\frac{\pi\nu}{2}$（偶）および $\nu\coth\frac{\pi\nu}{2}$（奇）に比例する密度で与えられることを、軌道積分と指標の計算で証明せよ（Harish-Chandra 1952）。
+
+*4 Helgason の Paley–Wiener 定理
+非コンパクト型 Riemann 対称空間 $G/K$ 上のコンパクト台滑らか関数の Helgason–Fourier 変換の像を、Weyl 群不変な指数型整関数として特徴づけよ（Helgason 1966、Gangolli）。
+
+*4 従順性の特徴づけ
+局所コンパクト群について、(i) $L^{\infty}(G)$ 上の左不変平均の存在、(ii) Følner 条件、(iii) Reiter 条件、(iv) 自明表現が左正則表現に弱包含される、が同値であることを証明せよ（Følner, Reiter, Hulanicki）。
+
+*4 Day–von Neumann の問題と Ol'shanskii の反例
+$\mathbb{F}_{2}$ を含む群は非従順であることを示し、$\mathbb{F}_{2}$ を含まない非従順群が存在すること（Ol'shanskii 1980 の Tarski 怪物、あるいは Adian の Burnside 群）の意味を論ぜよ。
+
+*4 Kunze–Stein 現象
+$G=SL(2,\mathbb{R})$ について、$1\le p<2$ なら $L^{2}(G)*L^{p}(G)\subset L^{2}(G)$ が有界であることを、主系列表現の評価から証明せよ（Kunze–Stein 1960）。
+
+*4 Eymard の Fourier 環
+局所コンパクト群 $G$ の Fourier 環 $A(G)$（正則表現の行列係数）を定義し、$A(G)^{*}=VN(G)$、$A(G)$ のスペクトルが $G$ であることを証明せよ（Eymard 1964）。Walter による $A(G)$ からの $G$ の復元を述べよ。
+
+*4 Leptin の定理
+局所コンパクト群 $G$ が従順 $\iff$ Fourier 環 $A(G)$ が有界近似単位元をもつことを証明せよ（Leptin 1968）。
+
+*4 Johnson の定理
+局所コンパクト群 $G$ について、群環 $L^{1}(G)$ が従順 Banach 環（任意の双対加群への有界微分が内部的）$\iff G$ が従順であることを証明せよ（Johnson 1972）。
+
+*4 Wendel の定理
+局所コンパクト群 $G_{1},G_{2}$ の群環の間の等長同型 $L^{1}(G_{1})\cong L^{1}(G_{2})$ は、位相群の同型と指標によって誘導されることを証明せよ（Wendel 1952）。
+
+*5 Cohen のべき等測度定理
+局所コンパクト可換群 $G$ 上の測度 $\mu$ で $\mu*\mu=\mu$ をみたすものは、Fourier–Stieltjes 変換が $\hat G$ の剰余類環に属する集合の特性関数となるものに限ることを証明せよ（Cohen 1960）。
+
+*4 Tannaka–Krein の双対定理
+コンパクト群 $G$ は、その有限次元ユニタリ表現の圏（テンソル積と共役を備えたもの）から、表現の自然変換全体として復元されることを証明せよ。
+
+=ch X-2　ユニタリ表現論
+
+*4 Mackey の機械 {mackey}
+半直積 $G=N\rtimes H$（$N$ 可換、$H$ の $\hat N$ への作用が正則）の既約ユニタリ表現は、$\hat N$ の $H$-軌道と安定化部分群（小群）の既約表現の組から誘導表現として得られ、これで尽きることを証明せよ（Mackey 1958）。
+
+*4 Wigner の Poincaré 群の分類
+Poincaré 群の普遍被覆の正エネルギー既約ユニタリ表現を、質量 $m\ge0$ とスピン（あるいはヘリシティ）で分類せよ（Wigner 1939）。{{R:mackey}} を用いよ。
+
+*4 Kirillov の軌道法
+単連結冪零 Lie 群 $N$ の既約ユニタリ表現の同値類と余随伴軌道 $\mathfrak{n}^{*}/\mathrm{Ad}^{*}N$ が一対一に対応することを、偏極部分環からの誘導表現で証明せよ（Kirillov 1962）。
+
+*4 Bargmann の $SL(2,\mathbb{R})$ の既約表現の分類
+$SL(2,\mathbb{R})$ の既約ユニタリ表現は、自明表現、主系列、補系列、離散系列（とその極限）に限ることを、Lie 環の $K$-型の構造から証明せよ（Bargmann 1947）。
+
+*4 Harish-Chandra の許容性定理
+連結簡約 Lie 群の既約ユニタリ表現は許容的（各 $K$-型の重複度が有限）であることを証明せよ（Harish-Chandra 1953）。
+
+*5 離散系列の存在定理（Harish-Chandra）
+連結半単純 Lie 群（中心有限）$G$ が離散系列表現をもつ $\iff\mathrm{rank}\,G=\mathrm{rank}\,K$ であることの証明の骨格を、不変固有超関数の理論を用いて与えよ（Harish-Chandra 1965–66）。
+
+*4 Frobenius の相互律
+コンパクト群 $G$ とその閉部分群 $H$ について、$\mathrm{Hom}_{G}(\pi,\mathrm{Ind}_{H}^{G}\sigma)\cong\mathrm{Hom}_{H}(\pi|_{H},\sigma)$ を証明せよ。局所コンパクト群での誘導表現の構成を述べよ。
+
+*4 Borel–Weil の定理
+連結コンパクト Lie 群 $G$ と支配的整ウェイト $\lambda$ について、旗多様体 $G/T$ 上の正則直線束 $L_{\lambda}$ の正則切断の空間が最高ウェイト $\lambda$ の既約表現（の双対）を与えることを証明せよ。
+
+*4 Weyl の指標公式
+連結コンパクト Lie 群の既約表現の指標が $\chi_{\lambda}=\frac{\sum_{w\in W}\varepsilon(w)e^{w(\lambda+\rho)}}{\sum_{w\in W}\varepsilon(w)e^{w\rho}}$ で与えられることを、Weyl の積分公式と指標の直交関係から証明せよ。
+
+*4 Segal–Shale–Weil 表現
+シンプレクティック群の二重被覆（メタプレクティック群）の $L^{2}(\mathbb{R}^{n})$ 上のユニタリ表現を、Heisenberg 群の Schrödinger 表現との絡み作用素として構成せよ（Weil 1964）。
+
+*4 Heisenberg 群のユニタリ双対と Plancherel
+Heisenberg 群の既約ユニタリ表現を Stone–von Neumann の定理と 1 次元指標で分類し、Plancherel 測度が $|\lambda|^{n}d\lambda$ に比例することを証明せよ。
+
+*5 Harish-Chandra の正則性定理
+連結簡約 Lie 群の既約許容表現の超関数指標は、正則半単純集合上で解析的な局所可積分関数で与えられることの証明の骨格を与えよ（Harish-Chandra 1965）。
+
+*4 尖点形式の空間の離散性（Gelfand–Graev–Piatetski-Shapiro）
+$\Gamma\subset G$ を格子とするとき、$L^{2}(\Gamma\backslash G)$ の尖点部分空間上で $\rho(f)$（$f\in C_{c}^{\infty}(G)$）がコンパクト作用素であることを示し、尖点スペクトルが有限重複度で離散的であることを証明せよ。
+
+*5 Margulis の正規部分群定理
+高階の既約格子 $\Gamma$（例えば $SL(3,\mathbb{Z})$）の正規部分群は有限であるか有限指数であることの証明の骨格を、商群の従順性（境界の議論）と性質 (T) の二本立てで与えよ（Margulis 1978）。
+
+*4 Gårding 空間と滑らかなベクトル
+局所コンパクト Lie 群 $G$ のユニタリ表現 $\pi$ について、$\{\pi(f)v:f\in C_{c}^{\infty}(G)\}$ の生成する Gårding 空間が稠密で、Lie 環の作用で不変であることを証明せよ（Gårding 1947）。
+
+*4 Nelson の積分可能性定理
+Lie 環の歪対称表現 $\rho$ が稠密な不変部分空間上で与えられ、$\Delta=\sum\rho(X_{i})^{2}$ が本質的自己共役なら、$\rho$ は単連結 Lie 群のユニタリ表現に積分されることを、解析ベクトルを用いて証明せよ（Nelson 1959）。
+
+*4 Thoma の定理
+可算離散群が型 I $\iff$ 指数有限の可換正規部分群をもつことを証明せよ（Thoma 1968）。
+
+*4 Howe 双対性（コンパクト双対対）
+Weil 表現を $O(n)\times Sp(2k,\mathbb{R})$ に制限すると、$O(n)$ の既約表現と $Sp(2k,\mathbb{R})$ の既約な最低ウェイト表現の間に一対一の対応が生じることを証明せよ（Howe 1989、柏原–Vergne）。
+
+*4 Kirillov の指標公式
+冪零 Lie 群の既約表現 $\pi_{\mathcal{O}}$ の超関数指標が、余随伴軌道上の Liouville 測度の Fourier 変換を指数写像で引き戻したもので与えられること $\mathrm{tr}\,\pi_{\mathcal{O}}(f)=\int_{\mathcal{O}}\widehat{f\circ\exp}\,d\beta_{\mathcal{O}}$ を証明せよ。
+
+*5 Atiyah–Schmid による離散系列の幾何的実現
+連結半単純 Lie 群の離散系列表現が、$G/K$ 上の twisted Dirac 作用素の $L^{2}$ 核として実現されることを、$L^{2}$ 指数定理を用いて証明の骨格とともに示せ（Atiyah–Schmid 1977）。

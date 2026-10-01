@@ -1,0 +1,123 @@
+=ch X-7　距離空間・幾何と関数解析
+
+*5 Cheeger の Rademacher 型定理
+倍測度と $(1,p)$-Poincaré 不等式をみたす測度距離空間（PI 空間）上の Lipschitz 関数は、可測な座標近傍系に関して a.e. で一意に微分可能であり、余接束が有限次元であることの証明の骨格を与えよ（Cheeger 1999）。
+
+*5 Cheeger–Kleiner の定理
+Heisenberg 群（Carnot–Carathéodory 距離）は $L^{1}$ に bi-Lipschitz 埋め込みできないことの証明の骨格を、$L^{1}$ への写像の切断測度による表現と集合の周長の正則性を用いて与えよ（Cheeger–Kleiner 2010）。
+
+*4 Lipschitz 自由空間
+基点付き距離空間 $M$ に対し、$M$ から Banach 空間への Lipschitz 写像が線形作用素に一意に拡張されるような Banach 空間 $\mathcal{F}(M)$（$\mathcal{F}(M)^{*}=\mathrm{Lip}_{0}(M)$）を構成し、$\mathcal{F}(\mathbb{R})\cong L^{1}$ を示せ（Arens–Eells、Godefroy–Kalton 2003）。
+
+*4 Gromov のプレコンパクト性定理
+被覆数が一様に制御されたコンパクト距離空間の族は Gromov–Hausdorff 距離で相対コンパクトであることを示し、$\mathrm{Ric}\ge-(n-1)$、直径 $\le D$ の $n$ 次元閉 Riemann 多様体の族に Bishop–Gromov 不等式を用いて適用せよ。
+
+*4 Fréchet–Kuratowski の埋め込みと Urysohn 空間
+任意の可分距離空間は $\ell^{\infty}$ に等距離埋め込みでき、任意のコンパクト距離空間は $C[0,1]$ に等距離埋め込みできる（Banach–Mazur）ことを示し、可分距離空間の普遍で超等質な Urysohn 空間の存在と一意性を証明せよ。
+
+*4 Assouad の埋め込み定理
+倍化距離空間 $(X,d)$ と $0<\varepsilon<1$ について、$(X,d^{\varepsilon})$ はある $\mathbb{R}^{N}$ に bi-Lipschitz 埋め込みできることを証明せよ（Assouad 1983）。$\varepsilon=1$ では一般に成り立たないこと（Heisenberg 群）を述べよ。
+
+*4 Nash–Kuiper の $C^{1}$ 等長埋め込み定理
+コンパクト Riemann 多様体 $M^{n}$ から $\mathbb{R}^{n+1}$ への短い滑らかな埋め込みは、$C^{0}$ 近くの $C^{1}$ 等長埋め込みで近似できることを、Nash の螺旋による反復で証明の骨格とともに示せ（Nash 1954、Kuiper 1955）。
+
+*4 完備多様体の $L^{2}$ Hodge 理論（Dodziuk）
+完備 Riemann 多様体上で、$L^{2}$ 調和形式の空間が簡約 $L^{2}$ コホモロジー $\ker d/\overline{\mathrm{ran}\,d}$ と同型であることを、$d+d^{*}$ の本質的自己共役性（Gaffney）を用いて証明せよ（Dodziuk 1977）。
+
+*5 Ohsawa–Takegoshi の $L^{2}$ 拡張定理
+擬凸領域 $\Omega\subset\mathbb{C}^{n}$ と超平面 $H$ について、$\Omega\cap H$ 上の $L^{2}$ 正則関数は、$\Omega$ 全体の $L^{2}$ 正則関数に一様な定数付きの評価で拡張されることの証明の骨格を、捩れた $\bar\partial$ 評価で与えよ（Ohsawa–Takegoshi 1987）。
+
+*4 Bergman 核の漸近展開（Tian–Yau–Zelditch–Catlin）
+コンパクト Kähler 多様体上の正直線束 $L$ について、$L^{k}$ の正則切断の Bergman 核の対角成分が $k\to\infty$ で $k^{n}(1+\frac{S}{2}k^{-1}+\cdots)$ と漸近展開されることの証明の骨格を与え、Fubini–Study 計量による近似への応用を述べよ。
+
+*4 Fefferman の境界拡張定理（Bell の証明）
+滑らかな有界強擬凸領域の間の双正則写像は閉包まで滑らかに拡張されることを、Bergman 射影の条件 R（Sobolev 空間の保存）を用いて証明せよ（Fefferman 1974、Bell 1981）。
+
+*4 Kohn の $\bar\partial$-Neumann 問題
+強擬凸領域上で $\bar\partial$-Neumann 作用素 $N$ が $\frac{1}{2}$-劣楕円型評価 $\|u\|_{1/2}^{2}\le C(\|\bar\partial u\|^{2}+\|\bar\partial^{*}u\|^{2}+\|u\|^{2})$ をみたすことを示し、$N$ の大域正則性を導け（Kohn 1963）。
+
+*4 Eells–Sampson の定理
+コンパクト Riemann 多様体から非正曲率のコンパクト Riemann 多様体への任意の滑らかな写像は、調和写像熱流によって調和写像にホモトープであることを証明せよ（Eells–Sampson 1964）。
+
+*4 Uhlenbeck の除去可能特異点定理
+4 次元球から 1 点を除いた領域上の有限エネルギー Yang–Mills 接続は、ゲージ変換により全体の滑らかな接続に拡張されることを、Coulomb ゲージの存在（Uhlenbeck のゲージ固定定理）を用いて証明せよ（Uhlenbeck 1982）。
+
+*4 小平の埋め込み定理
+コンパクト複素多様体上の正直線束 $L$ について、十分大きな $k$ で $L^{k}$ の正則切断が射影空間への埋め込みを与えることを、小平–中野の消滅定理（$L^{2}$ 法）を用いて証明せよ（Kodaira 1954）。
+
+*4 距離測度空間の Sobolev 空間（Shanmugalingam, Hajłasz）
+上勾配による Newton–Sobolev 空間 $N^{1,p}(X)$ を定義し、それが Banach 空間であること、および倍測度と Poincaré 不等式の下で Hajłasz–Sobolev 空間や Cheeger の空間と一致することを証明せよ（Shanmugalingam 2000）。
+
+*4 Heinonen–Koskela の定理
+Loewner 空間の間の擬対称写像（あるいは計量的擬等角写像）が幾何学的擬等角写像であることを、モジュラスの評価により証明せよ（Heinonen–Koskela 1998）。
+
+*4 Arora–Rao–Vazirani の定理
+$n$ 点の負型距離空間は歪み $O(\sqrt{\log n}\log\log n)$ で $L^{1}$ に埋め込めること（Arora–Lee–Naor 2008）を、ARV の球面上の分離構造定理（2004）から導く論理の骨格を与えよ。最疎切断問題の近似比 $O(\sqrt{\log n})$ への応用を述べよ。
+
+*4 Khot–Vishnoi の定理
+$L^{1}$ への埋め込みの歪みが $n$ について非有界となる負型距離空間の族が存在することを、一意ゲーム予想の整数性ギャップの構成から示せ（Khot–Vishnoi 2005）。
+
+*4 距離余型（Mendel–Naor）
+距離空間の距離余型を定義し、Banach 空間に対しては Rademacher 余型と一致すること、および $\ell^{\infty}$ の粗埋め込み・一様埋め込みの障害を与えることを証明せよ（Mendel–Naor 2008）。
+
+=ch X-8　量子情報と作用素論
+
+*4 Holevo の上界
+量子状態の集合 $\{p_{i},\rho_{i}\}$ を測定して得られる古典情報量は $\chi=S(\sum p_{i}\rho_{i})-\sum p_{i}S(\rho_{i})$ 以下であることを、相対エントロピーの単調性から証明せよ（Holevo 1973）。
+
+*4 Holevo–Schumacher–Westmoreland の定理
+量子通信路 $\Phi$ の古典容量が $C(\Phi)=\lim_{n}\frac{1}{n}\chi(\Phi^{\otimes n})$ で与えられることを、典型部分空間とランダム符号化で証明せよ（1997–98）。
+
+*5 Hastings の非加法性定理
+量子通信路の最小出力エントロピーが加法的でない、すなわち $S_{\min}(\Phi\otimes\bar\Phi)<2S_{\min}(\Phi)$ となる通信路が存在することを、ランダムユニタリ通信路と測度集中で証明の骨格とともに示せ（Hastings 2009）。
+
+*4 Horodecki の正値写像判定と PPT 条件
+二部系の状態 $\rho$ が分離可能 $\iff$ 任意の正値写像 $\Lambda$ について $(\mathrm{id}\otimes\Lambda)(\rho)\ge0$ を Hahn–Banach の分離定理で証明し、$2\times2$、$2\times3$ 系では部分転置の正値性（Peres 条件）と同値であることを導け（Horodecki 1996）。
+
+*4 Størmer–Woronowicz の分解可能性定理
+$M_{2}\to M_{2}$ および $M_{2}\to M_{3}$ の正値写像は完全正値写像と完全余正値写像の和に分解できることを証明せよ（Størmer 1963、Woronowicz 1976）。$M_{3}\to M_{3}$ では成り立たないこと（Choi の例）を示せ。
+
+*4 Uhlmann の定理
+密度作用素 $\rho,\sigma$ の忠実度 $F(\rho,\sigma)=\|\sqrt\rho\sqrt\sigma\|_{1}$ が、両者の純粋化の内積の絶対値の最大値に等しいことを、極分解を用いて証明せよ（Uhlmann 1976）。
+
+*4 Tsirelson の上界と Grothendieck 不等式
+CHSH 量 $\langle A_{1}B_{1}+A_{1}B_{2}+A_{2}B_{1}-A_{2}B_{2}\rangle$ の量子的最大値が $2\sqrt2$ であることを示し、二人 XOR ゲームの量子値と古典値の比が Grothendieck 定数 $K_{G}$ で抑えられることを証明せよ（Tsirelson 1980）。
+
+*4 量子 de Finetti 定理
+対称（交換可能）な状態の無限列は積状態の混合として一意に表されること（Størmer 1969、Hudson–Moody 1976）を示し、有限版の誤差評価 $O(d^{2}k/n)$（Christandl–König–Mitchison–Renner 2007）を述べよ。
+
+*4 Lindblad–Gorini–Kossakowski–Sudarshan の定理
+$B(H)$ 上のノルム連続な量子力学的半群（完全正値・単位保存）の生成作用素が $L(x)=i[H,x]+\sum_{k}(V_{k}^{*}xV_{k}-\frac{1}{2}\{V_{k}^{*}V_{k},x\})$ の形に限ることを証明せよ（Lindblad 1976、GKS 1976）。
+
+*4 Knill–Laflamme の誤り訂正条件
+符号空間への射影 $P$ と誤り演算子 $\{E_{i}\}$ について、復号の完全正値写像が存在する $\iff PE_{i}^{*}E_{j}P=\alpha_{ij}P$ となる Hermite 行列 $(\alpha_{ij})$ が存在することを証明せよ（Knill–Laflamme 1997）。
+
+*4 Stinespring 表現の連続性（Kretschmann–Schlingemann–Werner）
+二つの完全正値写像の cb ノルムの差（ダイヤモンドノルム）と、それらの Stinespring 等長作用素の最小距離が二次の関係 $\inf\|V_{1}-V_{2}\|^{2}\le\|\Phi_{1}-\Phi_{2}\|_{\diamond}\le2\inf\|V_{1}-V_{2}\|$ で結ばれることを証明せよ（2008）。
+
+*4 量子 Stein の補題
+$\rho^{\otimes n}$ 対 $\sigma^{\otimes n}$ の仮説検定で第一種の誤りを有界に保つときの第二種の誤りの最適指数が相対エントロピー $S(\rho\|\sigma)$ に等しいことを証明せよ（Hiai–Petz 1991、Ogawa–Nagaoka 2000）。
+
+*5 Fawzi–Renner の定理
+三者状態 $\rho_{ABC}$ について、条件付き相互情報量 $I(A:C|B)$ が小さければ、$B$ のみに作用する回復写像 $\mathcal{R}_{B\to BC}$ で $F(\rho_{ABC},\mathcal{R}(\rho_{AB}))^{2}\ge2^{-I(A:C|B)}$ となるものが存在することの証明の骨格を与えよ（Fawzi–Renner 2015）。強劣加法性の強化として位置づけよ。
+
+*4 分離可能性判定の NP 困難性（Gurvits）
+密度行列が分離可能かどうかを（逆多項式の精度で）判定する問題が NP 困難であることを証明せよ（Gurvits 2003）。
+
+*4 Choi–Effros の作用素系の抽象的特徴づけ
+行列順序と Archimedes 的順序単位をもつ $*$-ベクトル空間は、ある $B(H)$ の単位的自己共役部分空間（作用素系）と完全順序同型であることを証明せよ（Choi–Effros 1977）。
+
+*4 Effros–Winkler の行列凸 Hahn–Banach 定理
+$M_{n}(V)$ の行列凸集合の族と、それに属さない点に対し、行列値の線形汎関数による分離が存在することを証明せよ（Effros–Winkler 1997）。自由スペクトラヘドロンへの応用を述べよ。
+
+*5 Slofstra の定理
+量子相関の集合 $C_{q}$ が閉でないこと、すなわち有限次元のもつれでは実現できないが極限としては実現できる相関が存在することを、群の線形系ゲームと埋め込み定理を用いて証明の骨格とともに示せ（Slofstra 2019）。
+
+*4 Lieb–Robinson の上界
+有限到達距離の相互作用をもつ量子スピン系について、局所観測量 $A,B$（台の距離 $d$）に対し $\|[\tau_{t}(A),B]\|\le C\|A\|\|B\|e^{-\mu(d-v|t|)}$ を証明せよ（Lieb–Robinson 1972）。
+
+*4 Hastings の面積則
+1 次元のギャップをもつ局所 Hamilton 系の基底状態について、任意の区間のもつれエントロピーが区間長によらず一様に有界であること（面積則）の証明の骨格を与えよ（Hastings 2007）。
+
+*4 有限相関状態（Fannes–Nachtergaele–Werner）
+並進不変な有限相関状態（行列積状態）を完全正値写像で定義し、純粋で指数的な相関の減衰をもつものがギャップのある親 Hamilton 系の一意な基底状態であることを証明せよ（1992）。

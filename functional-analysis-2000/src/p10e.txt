@@ -1,0 +1,123 @@
+=ch X-9　古典的大定理の関数解析的証明
+
+*4 Korovkin の定理と Weierstrass の近似定理
+$C[a,b]$ 上の正値線形作用素列 $L_{n}$ が $1,x,x^{2}$ について $L_{n}f\to f$ なら任意の $f\in C[a,b]$ で一様収束することを証明し、Bernstein 多項式による Weierstrass の近似定理と Fejér の定理を系として導け（Korovkin 1953）。
+
+*4 Riemann の写像定理（正規族による証明）
+$\mathbb{C}$ と異なる単連結領域 $\Omega$ と $z_{0}\in\Omega$ に対し、$f(z_{0})=0$、$f'(z_{0})>0$ をみたす単位円板への双正則写像が一意に存在することを、単射正則関数の族の正規性（Montel）と Hurwitz の定理で証明せよ。
+
+*5 Gleason の定理
+$\dim H\ge3$ の Hilbert 空間の閉部分空間の格子上の確率測度（直交和に関して可算加法的）は、すべて密度作用素 $\rho$ により $\mu(P)=\mathrm{Tr}(\rho P)$ と表されることを証明せよ（Gleason 1957）。$\dim H=2$ で成り立たないことを示せ。
+
+*5 Carleson–Hunt の定理
+$f\in L^{p}(\mathbb{T})$（$1<p<\infty$）の Fourier 級数は a.e. で $f$ に収束することを、Carleson 作用素の弱型評価として、時間周波数分割（Fefferman 1973 または Lacey–Thiele 2000）による証明の骨格とともに示せ（Carleson 1966、Hunt 1968）。
+
+*5 de Branges による Bieberbach 予想の証明
+単位円板上の正規化された単射正則関数 $f(z)=z+\sum a_{n}z^{n}$ について $|a_{n}|\le n$ であることを、Löwner 微分方程式と Milin 予想、de Branges の関数系の正値性（Askey–Gasper 不等式）を用いて証明の骨格とともに示せ（de Branges 1985）。
+
+*4 Kolmogorov–Arnold の重ね合わせ定理
+$[0,1]^{n}$ 上の任意の連続関数は $f(x)=\sum_{q=0}^{2n}\Phi_{q}(\sum_{p=1}^{n}\psi_{pq}(x_{p}))$（$\psi_{pq}$ は $f$ によらない連続単調関数）と表されることを、Baire の範疇定理を用いて証明せよ（Kolmogorov 1957、Arnold、Kahane の証明）。
+
+*4 Stone の Boolean 代数の表現定理と Gelfand 双対
+任意の Boolean 代数はある全不連結コンパクト Hausdorff 空間の開閉集合の代数と同型であることを示し、これが可換 C*-環の Gelfand 双対の特別な場合として理解できることを説明せよ（Stone 1936）。
+
+*4 Riesz–Haviland の定理
+閉集合 $K\subset\mathbb{R}^{n}$ について、多項式上の線形汎関数 $L$ が $K$ 上の正値測度のモーメント汎関数である $\iff$ $K$ 上で非負な多項式に対して $L\ge0$ を、M. Riesz の正値拡張定理を用いて証明せよ（Riesz 1923、Haviland 1936）。
+
+*4 Picard の大定理（Zalcman の補題による証明）
+正規でない正則関数族に対する Zalcman の再スケール補題を示し、これと Montel の定理を用いて Picard の大定理（真性特異点の近傍で高々 1 点を除くすべての値を無限回とる）を証明せよ。
+
+*4 Jackson の定理
+$f\in C(\mathbb{T})$ の $n$ 次三角多項式による最良近似誤差が $E_{n}(f)\le C\omega(f,\frac{1}{n})$ をみたすことを、Jackson 核による畳み込みで証明せよ。Bernstein の逆定理と組み合わせて Hölder 空間を近似の速さで特徴づけよ。
+
+*4 Bohr の概周期関数と Bohr コンパクト化
+$\mathbb{R}$ 上の Bohr 概周期関数の空間が三角多項式の一様閉包に等しいことを示し、それが $\mathbb{R}$ の Bohr コンパクト化 $b\mathbb{R}=\widehat{\mathbb{R}_{d}}$ 上の連続関数環と同型であることを Gelfand 理論で証明せよ。
+
+*4 Hurwitz による等周不等式の証明
+長さ $L$ の滑らかな単純閉曲線が囲む面積 $A$ について $L^{2}\ge4\pi A$ を、Fourier 級数と Wirtinger の不等式で証明し、等号が円に限ることを示せ（Hurwitz 1902）。
+
+*4 Kronecker–Weyl の一意エルゴード性
+$(\alpha_{1},\dots,\alpha_{n},1)$ が $\mathbb{Q}$ 上一次独立なら、トーラス $\mathbb{T}^{n}$ 上の平行移動 $x\mapsto x+\alpha$ が一意エルゴード的であることを Fourier 解析で示し、Kronecker の稠密性定理と一様分布を導け。
+
+*4 Weyl の直交射影法による Dirichlet 原理
+有界領域上の Dirichlet 問題の弱解を、$L^{2}$ ベクトル場の勾配場と発散 0 場への直交分解（Weyl の補題を含む）として構成し、Dirichlet 原理を厳密化せよ（Weyl 1940）。
+
+*4 Fredholm による Dirichlet 問題の解法
+$C^{2}$ 境界をもつ有界領域で、二重層ポテンシャルにより Dirichlet 問題を第二種 Fredholm 積分方程式 $(\frac{1}{2}I+K)\varphi=g$ に帰着させ、Fredholm の択一定理と Neumann 問題の一意性から可解性を証明せよ（Fredholm 1900）。
+
+*4 Poincaré の再帰定理と Kac の補題
+確率測度保存変換 $T$ と $\mu(A)>0$ について、$A$ のほとんどすべての点が $A$ に無限回戻ることを示し、エルゴード的なら平均再帰時間が $\int_{A}\tau_{A}d\mu=1$ をみたすこと（Kac 1947）を証明せよ。
+
+*4 Krein の正定値関数の拡張定理
+区間 $(-a,a)$ 上の連続正定値関数は $\mathbb{R}$ 上の連続正定値関数に拡張できることを、対称作用素の自己共役拡張の存在から証明せよ（Krein 1940）。拡張の一意性の判定を述べよ。
+
+*4 Hamburger のモーメント問題と Carleman の条件
+実数列 $(s_{n})$ が $\mathbb{R}$ 上の測度のモーメント列 $\iff$ Hankel 行列が正定値であることを示し、Jacobi 作用素の本質的自己共役性によって測度の一意性を特徴づけ、Carleman の条件 $\sum s_{2n}^{-1/(2n)}=\infty$ が一意性を保証することを証明せよ。
+
+*4 Fejér–Riesz の定理
+$\mathbb{T}$ 上で非負な三角多項式 $p(e^{i\theta})=\sum_{|k|\le n}c_{k}e^{ik\theta}$ は、ある $n$ 次多項式 $q$ により $p=|q|^{2}$ と表され、$q$ を $\mathbb{D}$ 内に零点をもたないようにとれることを証明せよ（Fejér 1915、Riesz 1916）。作用素値版との関係を述べよ。
+
+*4 Stein の極大原理と Kolmogorov の発散例
+$L^{p}(\mathbb{T})$（$1\le p\le2$）上の平行移動と可換な作用素列について、a.e. 収束が対応する極大作用素の弱型 $(p,p)$ 評価と同値であること（Stein 1961）を示し、Fourier 級数が a.e. 発散する $L^{1}$ 関数の存在（Kolmogorov 1923）を導け。
+
+=ch X-10　大定理の合流
+
+*5 Bismut による指数定理の確率論的証明
+Dirac 作用素の熱核の超トレースを、Brown 運動の道空間上の汎関数積分（Feynman–Kac 公式と Malliavin 解析）で表し、$t\to0$ で Lévy の確率面積の特性関数を通じて $\hat A$ 種数が現れることを示して、局所指数定理を証明せよ（Bismut 1984）。
+
+*4 Sunada の方法による等スペクトル多様体
+有限群 $G$ とその部分群 $H_{1},H_{2}$ が概共役（各共役類との交わりの位数が等しい）で、$G$ が多様体 $M$ に自由に等長的に作用するなら、$M/H_{1}$ と $M/H_{2}$ は等スペクトルであることを、表現の同値性と熱核トレースで証明せよ（Sunada 1985）。
+
+*5 Green–Tao の定理
+素数は任意の長さの等差数列を含むことを、Szemerédi の定理の相対版（擬乱な優測度に関する転移原理）と Goldston–Yıldırım の打ち切り除数和を用いて証明の骨格とともに示せ（Green–Tao 2008）。稠密モデル定理における Hahn–Banach の役割を説明せよ。
+
+*4 Gowers ノルムと逆定理
+有限可換群上の Gowers の一様性ノルム $\|f\|_{U^{k}}$ がノルムであること（Gowers–Cauchy–Schwarz 不等式）を示し、$U^{2}$ の逆定理（大きな Fourier 係数の存在）を証明して、$U^{k}$ の逆定理（Green–Tao–Ziegler 2012：冪零列との相関）を述べよ。
+
+*4 近い C*-環の同型（Christensen–Sinclair–Smith–White–Winter）
+同一の Hilbert 空間上の二つの C*-環が Kadison–Kastler 距離で十分近く、一方が可分核型なら、両者はユニタリで共役であることの証明の骨格を与えよ（2012）。
+
+*4 Lieb–Simon の Thomas–Fermi 理論
+Thomas–Fermi 汎関数の最小化問題が一意解をもつことを凸解析で示し、原子番号 $Z\to\infty$ の極限で量子力学的基底エネルギーが Thomas–Fermi エネルギー $-c_{\mathrm{TF}}Z^{7/3}$ に漸近することを証明せよ（Lieb–Simon 1977）。
+
+*5 Haagerup–Schultz の不変部分空間定理
+II$_{1}$ 因子 $M$ の元 $T$ の Brown 測度が 1 点に集中しないなら、$T$ は $M$ に付随する非自明な超不変部分空間をもつことの証明の骨格を与えよ（Haagerup–Schultz 2009）。
+
+*4 Brown 測度と $R$-対角元（Haagerup–Larsen）
+有限 von Neumann 環の元 $T$ の Brown 測度を Fuglede–Kadison 行列式 $\log\Delta(T-\lambda)$ の超関数的 Laplacian として定義し、$R$-対角元の Brown 測度が回転対称で、$|T|$ の分布の S 変換で決まることを示せ（Haagerup–Larsen 2000）。
+
+*4 Bost–Connes 系
+Hecke 環上の C*-力学系で分配関数が Riemann ゼータ関数 $\zeta(\beta)$ となるものを構成し、$\beta>1$ では KMS 状態の極値が $\mathrm{Gal}(\mathbb{Q}^{ab}/\mathbb{Q})$ でパラメトライズされ、$0<\beta\le1$ では KMS 状態が一意であること（相転移）を証明せよ（Bost–Connes 1995）。
+
+*4 素測地線定理（Huber）
+コンパクト双曲曲面の素閉測地線の個数 $\pi(x)$（長さ $\le\log x$）について $\pi(x)\sim\frac{x}{\log x}$ を、Selberg の跡公式と Laplacian の固有値の Weyl 則から証明せよ（Huber 1959）。
+
+*5 Bourgain–Gamburd の展開性定理
+$SL(2,\mathbb{Z})$ の非初等的有限生成部分群 $\Gamma$ について、法 $p$ の還元 $SL(2,\mathbb{F}_{p})$ の Cayley グラフ族が一様な展開族であることを、Helfgott の積定理とランダムウォークの $\ell^{2}$-平坦化で証明の骨格とともに示せ（Bourgain–Gamburd 2008）。
+
+*4 Margulis の明示的展開グラフ
+性質 (T) をもつ群（例えば $SL(3,\mathbb{Z})$）の有限商の Cayley グラフの族が展開族であることを Kazhdan 定数から証明せよ（Margulis 1973）。
+
+*5 Ball の Lipschitz 拡張定理
+Markov 型 2 をもつ距離空間 $X$ と余型 2 の Banach 空間（の 2-一様凸な変形）$Y$ について、$X$ の部分集合上の $Y$ 値 Lipschitz 写像が定数倍の Lipschitz 定数で $X$ 全体に拡張されることの証明の骨格を与えよ（Ball 1992）。
+
+*4 グラフォン空間のコンパクト性（Lovász–Szegedy）
+グラフォンの空間を測度保存写像で割ったものが切断距離でコンパクトであることを、弱正則性補題（Frieze–Kannan）と $L^{2}$ のマルチンゲール収束で証明せよ（Lovász–Szegedy 2007）。Szemerédi の正則性補題との関係を述べよ。
+
+*4 非可換 Khintchine 不等式（Lust-Piquard–Pisier）
+$1\le p<\infty$ について Schatten クラスの係数 $x_{k}$ と Rademacher 列に対し $\mathbb{E}\|\sum\varepsilon_{k}x_{k}\|_{S_{p}}\asymp\max\{\|(\sum x_{k}^{*}x_{k})^{1/2}\|_{S_{p}},\|(\sum x_{k}x_{k}^{*})^{1/2}\|_{S_{p}}\}$（$p\ge2$；$p<2$ では下限型）を証明せよ（Lust-Piquard 1986、Lust-Piquard–Pisier 1991）。
+
+*5 Bourgain–Dyatlov のフラクタル不確定性原理
+Ahlfors–David 正則な $\delta$-次元フラクタル集合 $X,Y$（$0<\delta<1$）について $\|1_{Y}\mathcal{F}_{h}1_{X}\|_{L^{2}\to L^{2}}\le Ch^{\beta}$（$\beta>0$）を示し、凸余コンパクト双曲曲面の Laplacian の本質的スペクトルギャップへの応用の骨格を与えよ（Bourgain–Dyatlov 2018）。
+
+*5 Ten Martini 問題（Avila–Jitomirskaya）
+ほとんど Mathieu 作用素 $(H_{\lambda,\alpha,\theta}u)_{n}=u_{n+1}+u_{n-1}+2\lambda\cos2\pi(\theta+n\alpha)u_{n}$（$\lambda\neq0$、$\alpha$ 無理数）のスペクトルが Cantor 集合であることの証明の骨格を、Aubry 双対性と還元可能性を用いて与えよ（Avila–Jitomirskaya 2009）。
+
+*4 バルク–エッジ対応（Kellendonk–Richter–Schulz-Baldes）
+2 次元の量子 Hall 系について、バルクの Hall 伝導度（Chern 数）とエッジ電流の量子化（エッジ指数）が、Toeplitz 拡大の六項完全列の境界写像によって等しいことを証明せよ（2002）。{{R:six-term}} の応用として位置づけよ。
+
+*4 Kitaev の周期表と実 $K$ 理論
+対称性クラス（時間反転・粒子正孔・カイラル対称性による 10 種）のギャップのある自由フェルミオン系の位相相が、実および複素 $K$ 理論 $KO_{-q}$、$K_{-q}$ と Bott 周期性で分類されることを、Clifford 代数の拡大問題として説明せよ（Kitaev 2009）。
+
+*5 指数定理の全体像の再構成 {finale}
+Hahn–Banach・Baire・Banach–Alaoglu の三原理、コンパクト作用素の Riesz–Schauder 理論と Fredholm 指数の安定性（{{R:ind-stab}}）、Gelfand 理論とスペクトル定理（{{R:gelfand}}、{{R:cfc}}）、擬微分作用素の記号計算とパラメトリクス、C*-環の $K$ 理論と Bott 周期性（{{R:bott}}）、Toeplitz 指数定理（{{R:toeplitz-ind}}）を合流させ、Atiyah–Singer の指数定理 $\mathrm{ind}\,P=\int_{T^{*}M}\mathrm{ch}(\sigma(P))\,\mathrm{Td}(T_{\mathbb{C}}M)$ を、埋め込み・Thom 同型・切除による $K$ 理論的証明として一から再構成せよ。<strong>この一題をもって、本書 2000 題を締めくくれ。</strong>
