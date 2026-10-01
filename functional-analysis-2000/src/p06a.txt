@@ -1,0 +1,126 @@
+=part 第 VI 部　関数空間と超関数 | FUNCTION SPACES AND DISTRIBUTIONS &mdash; 1001 to 1200
+偏微分方程式を関数解析で解くには、解を探す「場所」が要る。$L^{p}$ と再配置不変空間、超関数と Fourier 変換、Sobolev 空間と埋め込み、補間理論、核型空間と Schwartz の核定理、楕円型作用素の Fredholm 理論、擬微分作用素、Hardy 空間と BMO まで ― 解析学の舞台装置をすべてここで組み立てる。
+
+=ch VI-1　$L^{p}$ 空間と再配置不変空間
+
+*4 Riesz–Thorin の補間定理 {riesz-thorin}
+$T$ が $L^{p_{0}}\to L^{q_{0}}$（ノルム $M_{0}$）と $L^{p_{1}}\to L^{q_{1}}$（$M_{1}$）で有界なら、$L^{p_{\theta}}\to L^{q_{\theta}}$ で $\|T\|\le M_{0}^{1-\theta}M_{1}^{\theta}$。Hadamard の三直線定理で証明せよ。
+
+*4 Marcinkiewicz の補間定理 {marcinkiewicz}
+劣線形作用素 $T$ が弱型 $(p_{0},p_{0})$ と弱型 $(p_{1},p_{1})$ なら、中間の $p$ で強型 $(p,p)$。分布関数の分解で証明し、定数の評価 $\frac{C}{(p-p_{0})(p_{1}-p)}$ を示せ。
+
+*4 Stein の解析族の補間定理
+作用素の解析族 $T_{z}$ が許容増大条件をみたし、$\operatorname{Re}z=0$ と $\operatorname{Re}z=1$ で有界なら中間でも有界である（Stein 1956）。証明し、Bochner–Riesz 平均への応用を述べよ。
+
+*4 再配置と Hardy–Littlewood の不等式
+減少再配置 $f^{*}$ を定義し、$\int|fg|\le\int f^{*}g^{*}$（Hardy–Littlewood）と、$\|f\|_{p}=\|f^{*}\|_{p}$ を示せ。Riesz の再配置不等式 $\iint f(x)g(x-y)h(y)\le\iint f^{*}g^{*}h^{*}$ を述べよ。
+
+*4 Riesz–Sobolev の再配置不等式
+$\iint f(x)g(y)h(x-y)dxdy\le\iint f^{*}(x)g^{*}(y)h^{*}(x-y)dxdy$（Riesz 1930, Sobolev）。一次元の場合を証明し、Brascamp–Lieb–Luttinger の多重版を述べよ。
+
+*4 Lorentz 空間 {lorentz}
+Lorentz 空間 $L^{p,q}$ を再配置で定義し、$L^{p,p}=L^{p}$, $L^{p,\infty}=$ 弱 $L^{p}$、$q_{1}<q_{2}$ で $L^{p,q_{1}}\subset L^{p,q_{2}}$ を示せ。$L^{p,q}$ が $1<p<\infty$ でノルム化可能であることを示せ。
+
+*4 Orlicz 空間 {orlicz}
+Young 関数 $\Phi$ の Orlicz 空間 $L^{\Phi}$ の Luxemburg ノルムを定義し、$\Delta_{2}$ 条件の下で $(L^{\Phi})^{*}=L^{\Psi}$（$\Psi$ は相補関数）、$L^{\Phi}$ が反射的 $\iff\Phi,\Psi$ ともに $\Delta_{2}$ をみたすことを示せ。
+
+*4 Zygmund 空間 $L\log L$ と極大関数（Stein）
+$\int_{Q}Mf<\infty$（$Q$ は有界）$\iff$ $f\in L\log L(Q)$（Stein 1969）。証明せよ。
+
+*4 再配置不変空間の Boyd 指数と補間
+再配置不変空間の Boyd 指数 $p_{X},q_{X}$ を定義し、$1<p_{X}\le q_{X}<\infty$ なら Hilbert 変換・Hardy–Littlewood 極大作用素が $X$ 上有界であること（Boyd 1969）を示せ。
+
+*4 Calderón–Mityagin の定理（$L^{1}$, $L^{\infty}$ の補間空間）
+$(L^{1},L^{\infty})$ の正確な補間空間は、$f^{**}$ の Hardy–Littlewood–Pólya 順序で単調な再配置不変空間に一致する（Calderón 1966, Mityagin 1965）。主張と証明の骨格を与えよ。
+
+*4 de la Vallée-Poussin の一様可積分性判定と Vitali の収束定理
+確率空間上の関数族 $\mathcal{F}$ が一様可積分 $\iff$ 超線形増大の凸関数 $G$ で $\sup_{f\in\mathcal{F}}\int G(|f|)<\infty$（de la Vallée-Poussin）。Vitali の収束定理（一様可積分＋測度収束 $\iff L^{1}$ 収束）とともに証明せよ。
+
+*4 Rudin–Plotkin の等測定理（$L^{p}$ の部分空間の等距離拡張）
+$p$ が偶数でないとき、$L^{p}$ の部分空間の間の等距離同型は、等測（同分布）の意味で拡張される（Plotkin 1970, Rudin 1976）。主張を述べよ。
+
+*4 $L^{0}$ の位相と Nikishin
+$L^{0}$（測度収束）の位相ベクトル空間としての性質（局所凸でない、双対は $0$）を示し、$L^{p}$（$0<p<1$）からの線形写像の構造（Kalton の定理：$L^{p}$ から $L^{0}$ への作用素）を述べよ。
+
+*4 Komlós の定理と $L^{1}$ の弱点列コンパクト性の代替
+$L^{1}$ の有界列は、部分列でそのすべての部分列の Cesàro 平均がほとんど至る所同じ極限に収束するものをもつ（Komlós 1967）。証明の骨格を与えよ。
+
+*4 Kadec–Pełczyński の二分律（再訪）と $L^{p}$ の弱収束
+$L^{p}$（$p>2$）の弱零列は、$\ell^{2}$ と同値な部分列か $\ell^{p}$ と同値な部分列をもつことを示せ。
+
+*4 $L^{p}$ 空間の Clarkson 型不等式と Hanner 不等式
+Hanner の不等式 $\|f+g\|_{p}^{p}+\|f-g\|_{p}^{p}\ge(\|f\|_{p}+\|g\|_{p})^{p}+|\|f\|_{p}-\|g\|_{p}|^{p}$（$1\le p\le2$）を証明し、$L^{p}$ の凸性係数を正確に決定せよ。
+
+*4 Lebesgue の微分定理と Vitali 被覆
+局所可積分関数のほとんどすべての点が Lebesgue 点である。Vitali 被覆補題と Hardy–Littlewood 極大不等式で証明せよ。
+
+*4 Hardy–Littlewood の極大関数定理 {hl-max}
+$M$ は弱型 $(1,1)$ かつ強型 $(p,p)$（$1<p\le\infty$）。$\|Mf\|_{p}\le C\frac{p}{p-1}\|f\|_{p}$ を示し、Stein–Strömberg の次元に依らない評価（球に関して $O(n\log n)$、$p>1$ では次元に依らない）を述べよ。
+
+*5 Stein の次元に依らない極大不等式
+$\mathbb{R}^{n}$ の球に関する Hardy–Littlewood 極大作用素の $L^{p}$ ノルム（$p>1$）は次元 $n$ に依らず有界である（Stein 1982）。球面平均の極大関数と回転法による証明の骨格を与え、弱 $(1,1)$ 定数の次元依存（Stein–Strömberg の $O(n)$、Aldaz の立方体での非有界性）を述べよ。
+
+*5 Lieb の Hardy–Littlewood–Sobolev 不等式の最良定数
+$\iint\frac{f(x)g(y)}{|x-y|^{\lambda}}\le C\|f\|_{p}\|g\|_{q}$ の対角的な場合 $p=q=\frac{2n}{2n-\lambda}$ の最良定数と最適化関数 $(1+|x|^{2})^{-(2n-\lambda)/2}$ を、再配置と共形不変性（立体射影）で決定せよ（Lieb 1983）。
+
+=ch VI-2　超関数
+
+*4 超関数の定義と局所有限階数 {distr}
+$\mathcal{D}'(\Omega)$ の元は各コンパクト集合上で有限階数 $|\langle T,\varphi\rangle|\le C\sum_{|\alpha|\le m}\|\partial^{\alpha}\varphi\|_{\infty}$ をもつ。$\mathcal{D}(\Omega)$ の帰納極限位相から導け。
+
+*4 超関数の構造定理
+コンパクト台超関数は連続関数の有限階導関数の有限和であり、一般の超関数は局所的に $T=\partial^{\alpha}f$（$f$ 連続）と書ける。証明せよ。
+
+*4 一点に台をもつ超関数
+台が $\{0\}$ の超関数は $\sum_{|\alpha|\le m}c_{\alpha}\partial^{\alpha}\delta$ の形である。証明せよ。
+
+*4 超関数の局所化と台（分割による貼り合わせ）
+超関数の局所的性質が開被覆と単位の分割で貼り合わされること（$\mathcal{D}'$ は層をなす）を示し、台の定義を与えよ。
+
+*4 超関数の畳み込みと正則化
+$T\in\mathcal{D}'$, $\varphi\in\mathcal{D}$ について $T*\varphi\in C^{\infty}$ で $\partial^{\alpha}(T*\varphi)=(\partial^{\alpha}T)*\varphi$。軟化子 $\rho_{\varepsilon}$ で $T*\rho_{\varepsilon}\to T$（$\mathcal{D}'$ で）を示せ。
+
+*4 基本解の存在（Malgrange–Ehrenpreis） {malgrange}
+任意の定数係数線形偏微分作用素 $P(D)\neq0$ は基本解 $E\in\mathcal{D}'(\mathbb{R}^{n})$（$P(D)E=\delta$）をもつ（Malgrange 1954, Ehrenpreis 1954）。Hörmander のステアケース法あるいは Rosay の簡単な証明を与えよ。
+
+*4 Laplacian・熱・波動作用素の基本解
+$\Delta$ の基本解 $\frac{1}{(2-n)\omega_{n}}|x|^{2-n}$、熱作用素の基本解 $\mathbf{1}_{t>0}(4\pi t)^{-n/2}e^{-|x|^{2}/4t}$、三次元波動作用素の遅延基本解 $\frac{\delta(t-|x|)}{4\pi|x|}$ を導出し、検証せよ。
+
+*4 Weyl の補題（楕円型正則性） {weyl-lemma}
+$T\in\mathcal{D}'(\Omega)$ が $\Delta T=0$ をみたせば $T$ は調和関数である（Weyl 1940）。基本解と軟化子、あるいは平均値の性質で証明せよ。
+
+*4 準楕円型作用素（Hörmander）
+定係数作用素 $P(D)$ が準楕円型（$P(D)u\in C^{\infty}\Rightarrow u\in C^{\infty}$）$\iff$ $|\xi|\to\infty$ で $\frac{\partial^{\alpha}P(\xi)}{P(\xi)}\to0$（Hörmander 1955）。熱作用素が準楕円型、波動作用素がそうでないことを示せ。
+
+*4 Hörmander の和の二乗定理 {hormander-sos}
+滑らかなベクトル場 $X_{0},\dots,X_{r}$ の生成する Lie 代数が各点で接空間全体を張れば、$\sum X_{j}^{2}+X_{0}$ は準楕円型である（Hörmander 1967）。主張と、Kolmogorov 作用素 $\partial_{x}^{2}+x\partial_{y}-\partial_{t}$ への適用を述べ、証明の骨格（部分楕円評価）を与えよ。
+
+*4 Lewy の非可解性の例
+$L=\partial_{x}+i\partial_{y}-2i(x+iy)\partial_{t}$ について、$Lu=f$ が任意の点の近傍で解をもたない滑らかな $f$ が存在する（Lewy 1957）。主張と証明の骨格を与えよ。
+
+*4 Nirenberg–Trèves の条件 ($\Psi$) と局所可解性
+主型の偏微分作用素の局所可解性が条件 $(\Psi)$ と同値であること（Nirenberg–Trèves の予想、Dencker 2006 による解決）を述べよ。
+
+*4 超関数の積の不可能性（Schwartz）
+連続関数の積を含み、結合的で微分の Leibniz 則をみたす超関数の積は存在しない（Schwartz の不可能性定理 1954）。$x\cdot\delta=0$ と $\mathrm{p.v.}\frac1x$ を用いた反例で示せ。
+
+*4 Colombeau 代数
+超関数を含み積が定義された結合的微分代数（Colombeau 代数）の構成を述べ、Schwartz の不可能性定理との整合（連続関数の積が超関数の積としてのみ一致する）を説明せよ。
+
+*4 波面集合 {wavefront}
+超関数 $u$ の波面集合 $WF(u)\subset T^{*}\Omega\setminus0$ を局所 Fourier 変換の急減少性で定義し、$\pi(WF(u))=\operatorname{sing\,supp}u$ を示せ。$\delta$ と $\mathrm{p.v.}\frac1x$ の波面集合を計算せよ。
+
+*4 超関数の積と引き戻しの Hörmander 判定
+$WF(u)\cap(-WF(v))=\emptyset$ なら $uv$ が定義され、写像 $f$ について $WF(u)\cap N_{f}=\emptyset$ なら引き戻し $f^{*}u$ が定義される（Hörmander）。証明せよ。
+
+*4 特異性の伝播定理（Hörmander）
+実主型の擬微分作用素 $P$ について、$WF(u)\setminus WF(Pu)$ は $P$ の主表象の零点集合に含まれ、陪特性帯に沿って不変である（Hörmander 1971）。主張と証明の骨格を与えよ。
+
+*4 Paley–Wiener–Schwartz の定理 {pws}
+コンパクト台超関数 $u$（台が $\{|x|\le R\}$）の Fourier–Laplace 変換は $|\hat u(\zeta)|\le C(1+|\zeta|)^{N}e^{R|\operatorname{Im}\zeta|}$ をみたす整関数であり、逆も成り立つ。証明せよ。
+
+*5 Malgrange–Ehrenpreis の定理の Rosay の証明と緩増加基本解
+Rosay（1991）による初等的証明（$\xi$ 方向の複素シフトと平均化）を与え、さらに緩増加な基本解の存在（Hörmander, Łojasiewicz の除法定理による）を述べよ。
+
+*5 Łojasiewicz の除法定理と Hörmander
+実解析関数（あるいは多項式）$P$ について、$\mathcal{S}'$ の超関数を $P$ で割れる：$P\cdot T=S$ となる $T\in\mathcal{S}'$ が存在する（Hörmander 1958, Łojasiewicz 1959）。Łojasiewicz の不等式を用いた証明の骨格を与えよ。

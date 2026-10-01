@@ -1,0 +1,123 @@
+=ch VI-9　Hardy 空間と BMO
+
+*4 Hardy 空間 $H^{p}(\mathbb{D})$ の基本と境界値 {hardy}
+$H^{p}(\mathbb{D})$（$0<p\le\infty$）の関数は非接境界値をほとんど至る所もち、$p\ge1$ なら境界値が $L^{p}$ ノルムを決める（Fatou, F. Riesz）。$H^{2}$ の場合を Fourier 級数で、一般の場合を Blaschke 因子の分離で示せ。
+
+*4 Riesz の因数分解と内部–外部分解 {inner-outer}
+$f\in H^{p}$（$f\neq0$）は $f=BSF$（$B$ は Blaschke 積、$S$ は特異内部関数、$F$ は外部関数）と一意に分解される。Jensen の不等式と Herglotz 表示を用いて証明せよ。
+
+*4 F. and M. Riesz の定理
+単位円周上の複素測度 $\mu$ で $\hat\mu(n)=0$（$n<0$）なら $\mu$ は Lebesgue 測度に絶対連続である（F. and M. Riesz 1916）。$H^{1}$ の理論から証明せよ。
+
+*4 Szegő の定理（$H^{2}$ における予測理論）
+$\inf_{p}\int|1-p|^{2}w\frac{d\theta}{2\pi}=\exp\int\log w\frac{d\theta}{2\pi}$（$p$ は定数項なしの解析多項式）（Szegő 1920, Kolmogorov, Krein）。Beurling の定理を用いて証明し、定常過程の予測理論への応用を述べよ。
+
+*4 実 Hardy 空間 $H^{1}(\mathbb{R}^{n})$ の極大関数による特徴づけ（Fefferman–Stein） {real-hardy}
+$f\in L^{1}(\mathbb{R}^{n})$ について、$f\in H^{1}$（Riesz 変換がすべて $L^{1}$）$\iff$ 非接極大関数 $\sup_{|y-x|<t}|f*\phi_{t}(y)|\in L^{1}$ $\iff$ グランド極大関数 $\in L^{1}$（Fefferman–Stein 1972）。証明の骨格を与えよ。
+
+*4 原子分解（Coifman, Latter） {atom}
+$H^{1}(\mathbb{R}^{n})$ の元は原子（台が球 $B$、$\|a\|_{\infty}\le|B|^{-1}$、平均零）の $\ell^{1}$ 結合で表され、$\|f\|_{H^{1}}\simeq\inf\sum|\lambda_{j}|$（Coifman 1974, Latter 1978）。Calderón–Zygmund 分解の反復で証明せよ。
+
+*4 Fefferman の双対定理 $(H^{1})^{*}=\mathrm{BMO}$ {fefferman}
+$H^{1}(\mathbb{R}^{n})$ の双対は BMO である（Fefferman 1971）。原子分解を用いた一方向と、Carleson 測度による他方向を証明せよ。
+
+*4 John–Nirenberg の不等式 {jn}
+$f\in\mathrm{BMO}$ について $|\{x\in Q:|f-f_{Q}|>\lambda\}|\le C|Q|e^{-c\lambda/\|f\|_{*}}$（John–Nirenberg 1961）。Calderón–Zygmund 分解の反復で証明し、$e^{\varepsilon|f|}$ の局所可積分性を導け。
+
+*4 Carleson 測度と Carleson の埋め込み定理 {carleson-meas}
+上半空間の測度 $\mu$ について、$\int|P_{t}*f|^{p}d\mu\le C\|f\|_{p}^{p}$（$1<p<\infty$）$\iff\mu$ が Carleson 測度（$\mu(Q\times(0,\ell(Q)))\le C|Q|$）（Carleson 1962）。証明せよ。
+
+*4 Coifman–Rochberg–Weiss の交換子定理
+$[b,R_{j}]$（$R_{j}$ は Riesz 変換）が $L^{p}$ 有界 $\iff b\in\mathrm{BMO}$（Coifman–Rochberg–Weiss 1976）。証明の骨格を与え、$H^{1}$ の弱分解（$H^{1}$ の元が $\sum(gR_{j}h+hR_{j}g)$ の和）を導け。
+
+*4 Uchiyama の定理（VMO と交換子のコンパクト性）
+$[b,T]$ がコンパクト $\iff b\in\mathrm{VMO}$（BMO における $C_{c}^{\infty}$ の閉包）（Uchiyama 1978）。主張を述べ、$\mathrm{VMO}^{*}=H^{1}$（Coifman–Weiss, Sarason）を示せ。
+
+*4 Sarason の VMO と $H^{\infty}+C$
+単位円周上で $H^{\infty}+C$ が閉部分代数であり（Sarason 1967）、$\mathrm{VMO}=\mathrm{QC}$ の構造（$QC=(H^{\infty}+C)\cap\overline{(H^{\infty}+C)}$）を述べよ。
+
+*4 $H^{1}$ と Calderón–Zygmund 作用素
+Calderón–Zygmund 作用素は $H^{1}\to L^{1}$ および $L^{\infty}\to\mathrm{BMO}$ で有界であることを原子分解で示し、補間により $L^{p}$ 有界性を導け。
+
+*4 Coifman–Lions–Meyer–Semmes の補償コンパクト性
+$E\in L^{p}$, $B\in L^{p'}$ で $\operatorname{div}E=0$, $\operatorname{curl}B=0$ なら $E\cdot B\in H^{1}$（CLMS 1993）。証明の骨格を与え、Jacobian $\det\nabla u\in H^{1}$（$u\in W^{1,n}$）の正則性（Müller）への応用を述べよ。
+
+*4 Garnett–Jones の定理（BMO への距離）
+$\operatorname{dist}_{\mathrm{BMO}}(f,L^{\infty})\simeq\inf\{\varepsilon:e^{|f|/\varepsilon}\text{ が一様に局所可積分}\}$（Garnett–Jones 1978）。主張と証明の骨格を与えよ。
+
+*4 Helson–Szegő の定理と Muckenhoupt の $A_{2}$ 条件
+重み $w$ について共役関数が $L^{2}(w)$ で有界 $\iff$ $\log w=u+\tilde v$（$\|v\|_{\infty}<\pi/2$）（Helson–Szegő 1960）$\iff w\in A_{2}$（Hunt–Muckenhoupt–Wheeden 1973）。後者の同値の骨格を与えよ。
+
+*4 Muckenhoupt の $A_{p}$ 重みと極大関数 {ap}
+$M$ が $L^{p}(w)$ で有界 $\iff w\in A_{p}$（$\sup_{Q}\fint_{Q}w(\fint_{Q}w^{-1/(p-1)})^{p-1}<\infty$）（Muckenhoupt 1972）。逆 Hölder 不等式と $A_{p}$ の開性（$A_{p}\subset A_{p-\varepsilon}$）を用いて証明せよ。
+
+*4 Hytönen の $A_{2}$ 定理 {a2}
+Calderón–Zygmund 作用素 $T$ について $\|T\|_{L^{2}(w)}\le C[w]_{A_{2}}$（$[w]_{A_{2}}$ に関して線形、最良）（Hytönen 2012）。Lerner の sparse 支配（$|Tf|\le C\sum_{Q\in\mathcal{S}}\langle|f|\rangle_{Q}\mathbf{1}_{Q}$）による証明を与えよ。
+
+*5 Fefferman の $H^{1}$–BMO 双対の完全証明とその後
+Fefferman の双対定理を原子分解を用いずに Carleson 測度と非接極大関数のみで完全に証明し（Fefferman–Stein の原論文の方法）、Chang–Fefferman による双円板（product）の場合の $H^{1}$–BMO 双対と Carleson の反例（product Carleson 測度の長方形条件の不十分性）を述べよ。
+
+*5 Lerner の sparse 支配定理の完全証明
+Calderón–Zygmund 作用素 $T$ について、任意の有界台 $f$ に対し sparse 族 $\mathcal{S}$（各 $Q$ に互いに素な $E_{Q}\subset Q$, $|E_{Q}|\ge\frac12|Q|$）で $|Tf(x)|\le C\sum_{Q\in\mathcal{S}}\langle|f|\rangle_{3Q}\mathbf{1}_{Q}(x)$ となるものが存在することを、Lerner の局所振動の方法（あるいは Lacey, Lerner–Ombrosi の簡易版）で完全に証明し、$A_{2}$ 定理を導け。
+
+=ch VI-10　関数空間上の作用素
+
+*4 合成作用素の有界性とコンパクト性（$H^{2}$）
+$\varphi:\mathbb{D}\to\mathbb{D}$ 正則のとき合成作用素 $C_{\varphi}f=f\circ\varphi$ は $H^{2}$ 上有界で $\|C_{\varphi}\|\le\sqrt{\frac{1+|\varphi(0)|}{1-|\varphi(0)|}}$（Littlewood の従属原理）。$C_{\varphi}$ がコンパクト $\iff$ Nevanlinna 計数関数の条件（Shapiro 1987）を述べよ。
+
+*4 Littlewood の従属原理
+$\varphi(0)=0$ なら $\|f\circ\varphi\|_{H^{p}}\le\|f\|_{H^{p}}$（Littlewood 1925）。劣調和関数の比較で証明せよ。
+
+*4 Shapiro のコンパクト性判定
+合成作用素 $C_{\varphi}$ が $H^{2}$ 上コンパクト $\iff\lim_{|w|\to1}\frac{N_{\varphi}(w)}{\log(1/|w|)}=0$（$N_{\varphi}$ は Nevanlinna 計数関数）（Shapiro 1987）。主張と証明の骨格を与えよ。
+
+*4 Toeplitz 作用素の Brown–Halmos 理論
+$H^{2}$ 上の Toeplitz 作用素 $T_{\varphi}$（$\varphi\in L^{\infty}$）について、$T_{\varphi}T_{\psi}=T_{\varphi\psi}\iff\bar\varphi$ または $\psi$ が解析的（Brown–Halmos 1963）。$\|T_{\varphi}\|=\|\varphi\|_{\infty}$, $\sigma(T_{\varphi})\supset\operatorname{ess\,ran}\varphi$ を示せ。
+
+*4 Hartman–Wintner と Widom の定理（Toeplitz のスペクトルの連結性）
+自己共役 Toeplitz 作用素のスペクトルは $[\operatorname{ess\,inf}\varphi,\operatorname{ess\,sup}\varphi]$（Hartman–Wintner 1954）、一般の Toeplitz 作用素のスペクトルは連結である（Widom 1964）。前者を証明せよ。
+
+*4 Bergman 空間上の Toeplitz 作用素とコンパクト性（Axler–Zheng）
+Bergman 空間 $A^{2}(\mathbb{D})$ 上の有界作用素で Toeplitz 作用素の有限和の積からなるものがコンパクト $\iff$ Berezin 変換が境界で零（Axler–Zheng 1998）。主張と Berezin 変換の定義を述べよ。
+
+*4 Berezin 変換と Berezin–Toeplitz 量子化
+RKHS 上の作用素の Berezin 変換 $\tilde A(z)=\langle Ak_{z},k_{z}\rangle$ を定義し、Bergman 空間でのその性質と、Kähler 多様体上の Berezin–Toeplitz 量子化の半古典極限 $\|T_{f}T_{g}-T_{fg}\|=O(1/k)$（Bordemann–Meinrenken–Schlichenmaier）を述べよ。
+
+*4 Hilbert 行列と Hardy 空間上の作用素（Widom）
+Hilbert 行列が $H^{p}$（$1<p<\infty$）上の有界作用素を定め、ノルムが $\frac{\pi}{\sin(\pi/p)}$ であること（Diamantopoulos–Siskakis, Dostanić–Jevtić–Vukotić）を述べよ。
+
+*4 Cesàro 作用素の $H^{p}$ 有界性（Siskakis）
+Cesàro 作用素 $\mathcal{C}f(z)=\frac1z\int_{0}^{z}\frac{f(t)}{1-t}dt$ が $H^{p}$（$0<p<\infty$）上有界で、$H^{2}$ 上のスペクトルが円板 $\{|\lambda-1|\le1\}$ であること（Siskakis 1987）を示せ。
+
+*4 Volterra 型作用素と BMOA（Aleman–Siskakis）
+$T_{g}f(z)=\int_{0}^{z}f(t)g'(t)dt$ が $H^{p}$ 上有界 $\iff g\in\mathrm{BMOA}$, コンパクト $\iff g\in\mathrm{VMOA}$（Aleman–Siskakis 1995）。証明の骨格を与えよ。
+
+*4 Dirichlet 空間の乗数と Stegenga の判定
+Dirichlet 空間 $\mathcal{D}$ の乗数 $\phi$ の特徴づけ（$|\phi'|^{2}dA$ が $\mathcal{D}$ の Carleson 測度、Stegenga 1980 の容量条件）を述べよ。
+
+*4 Brown の Hilbert 空間の乗数代数と Corona 問題
+RKHS の乗数代数 $\operatorname{Mult}(H)$ を定義し、完全 Pick 空間での Corona 定理（Costea–Sawyer–Wick 2011 の Drury–Arveson 空間）を述べよ。
+
+*4 等長作用素と RKHS（de Branges–Rovnyak 空間）
+縮小作用素 $T$ に対する de Branges–Rovnyak 空間 $\mathcal{H}(b)=(I-T_{b}T_{\bar b})^{1/2}H^{2}$（$b$ は $H^{\infty}$ の単位球の元）の再生核 $\frac{1-\overline{b(w)}b(z)}{1-\bar wz}$ を示し、$b$ が端点か否かでの構造の違いを述べよ。
+
+*4 モデル空間と Clark 測度
+内部関数 $\theta$ のモデル空間 $K_{\theta}$ 上の圧縮シフトのユニタリ摂動（Clark 摂動）$U_{\alpha}$ のスペクトル測度（Clark 測度 $\sigma_{\alpha}$）と Aleksandrov の分解定理 $\int\sigma_{\alpha}d\alpha=m$ を述べよ。
+
+*4 Aleksandrov–Clark 理論と Poltoratski の定理
+Clark 測度に関する正規化 Cauchy 変換の境界値の存在（Poltoratski 1993）を述べ、ランク 1 摂動の理論との関係を説明せよ。
+
+*4 Hankel 作用素と Sarason の BMO
+Hankel 作用素 $H_{\varphi}:H^{2}\to\overline{H^{2}_{0}}$ が有界 $\iff P_{-}\varphi\in\mathrm{BMO}$, コンパクト $\iff P_{-}\varphi\in\mathrm{VMO}$（Nehari, Hartman, Sarason）。$H^{1}$–BMO 双対から導け。
+
+*4 Schur 乗数と Hankel 行列（Peller, Pisier）
+有界 Hankel 行列が Schur 乗数となるための条件（Pisier の Hankel 行列のSchur 乗数性）を述べよ。
+
+*4 重み付き Bergman 空間とボレル測度（Luecking）
+Bergman 空間 $A^{p}$ の Carleson 測度（$\int|f|^{q}d\mu\le C\|f\|_{p}^{q}$）が擬双曲円板の測度条件で特徴づけられること（Hastings, Luecking）を示せ。
+
+*5 Axler–Zheng の定理の証明（Bergman 空間）
+Bergman 空間上の Toeplitz 作用素の有限和 $S=\sum T_{f_{1}^{j}}\cdots T_{f_{k}^{j}}$（$f_{i}^{j}\in L^{\infty}$）について、$S$ がコンパクト $\iff\tilde S(z)\to0$（$|z|\to1$）を、Möbius 変換による局所化と Berezin 変換の性質を用いて証明せよ。
+
+*5 Brown–Halmos 理論と Toeplitz 代数の構造（Coburn, Douglas）
+連続記号の Toeplitz 作用素が生成する $C^{*}$-環 $\mathcal{T}$ について、$0\to\mathcal{K}\to\mathcal{T}\to C(\mathbb{T})\to0$ が完全で（Coburn 1967）、$K$ 理論の指数写像が回転数に一致することを示せ。$H^{\infty}+C$ 記号の Fredholm 理論（Douglas, Sarason）を述べよ。

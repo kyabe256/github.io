@@ -1,0 +1,123 @@
+=ch VI-7　楕円型作用素の関数解析
+
+*4 Gårding の不等式 {garding}
+強楕円型の $2m$ 階作用素 $L$（係数は連続）について、$\operatorname{Re}\langle Lu,u\rangle\ge c\|u\|_{H^{m}}^{2}-C\|u\|_{L^{2}}^{2}$（$u\in C_{c}^{\infty}(\Omega)$）（Gårding 1953）。凍結係数法と単位の分割で証明せよ。
+
+*4 内部正則性（差分商の方法） {interior-reg}
+$Lu=-\operatorname{div}(A\nabla u)=f\in L^{2}$（$A$ は Lipschitz）の弱解 $u\in H^{1}$ は $H^{2}_{loc}$ に属する。Nirenberg の差分商の方法で証明し、$f\in H^{k}$ なら $u\in H^{k+2}_{loc}$ を導け。
+
+*4 境界正則性と Agmon–Douglis–Nirenberg 評価
+滑らかな境界と Dirichlet 境界条件で $\|u\|_{W^{2,p}}\le C(\|Lu\|_{p}+\|u\|_{p})$（$1<p<\infty$）（Agmon–Douglis–Nirenberg 1959）。境界の平坦化と Calderón–Zygmund 評価による証明の骨格を与えよ。
+
+*4 Schauder 評価
+Hölder 連続係数の楕円型作用素について $\|u\|_{C^{2,\alpha}}\le C(\|Lu\|_{C^{\alpha}}+\|u\|_{C^{0}})$（Schauder 1934）。凍結係数と Newton ポテンシャルの Hölder 評価で証明せよ。
+
+*4 Lopatinskii–Shapiro 条件と楕円型境界値問題の Fredholm 性
+楕円型作用素と境界作用素の組が Lopatinskii–Shapiro（相補）条件をみたせば、$H^{s}$ のスケールで Fredholm 作用素となる（Agmon–Douglis–Nirenberg, Lopatinskii 1953）。条件を定式化し、Dirichlet・Neumann 条件が Laplacian について条件をみたすことを確かめよ。
+
+*4 De Giorgi–Nash–Moser の定理 {dgnm}
+有界可測係数の一様楕円型方程式 $\operatorname{div}(A\nabla u)=0$ の弱解は Hölder 連続である（De Giorgi 1957, Nash 1958）。De Giorgi の反復（Caccioppoli 不等式と準位集合の測度減少）による証明を与えよ。
+
+*4 Moser の Harnack 不等式
+非負弱解について $\sup_{B_{r}}u\le C\inf_{B_{r}}u$（Moser 1961）。Moser の反復と John–Nirenberg の補題（Bombieri–Giusti の補題）で証明せよ。
+
+*4 Krylov–Safonov の Harnack 不等式（非発散型）
+非発散型の一様楕円型方程式 $a_{ij}\partial_{ij}u=0$（有界可測係数）の非負解に Harnack 不等式が成り立つ（Krylov–Safonov 1980）。Alexandrov–Bakelman–Pucci の最大値原理を用いた証明の骨格を与えよ。
+
+*4 Alexandrov–Bakelman–Pucci の最大値原理
+$a_{ij}\partial_{ij}u\ge f$ in $\Omega$, $u\le0$ on $\partial\Omega$ なら $\sup u\le C\operatorname{diam}(\Omega)\|f/\det(a)^{1/n}\|_{L^{n}(\Gamma^{+})}$。凸包と Monge–Ampère 測度で証明せよ。
+
+*4 Calderón–Zygmund の $W^{2,p}$ 評価
+$\Delta u=f\in L^{p}$ なら $\nabla^{2}u\in L^{p}$（$1<p<\infty$）。二階 Riesz 変換 $R_{i}R_{j}$ の $L^{p}$ 有界性から導き、$p=1,\infty$ で失敗する例を作れ。
+
+*4 Meyers の高可積分性定理
+有界可測係数の楕円型方程式の弱解の勾配は $L^{2+\varepsilon}_{loc}$ に属する（Meyers 1963）。Gehring の逆 Hölder 不等式の補題で証明せよ。
+
+*4 Gehring の補題
+逆 Hölder 不等式 $(\fint_{B}|f|^{q})^{1/q}\le C\fint_{2B}|f|$ をみたす関数は、より高い $L^{q+\varepsilon}$ に属する（Gehring 1973）。証明せよ。
+
+*4 Lax–Milgram とGalerkin 法（Céa の補題）
+Galerkin 近似 $u_{h}\in V_{h}$ について $\|u-u_{h}\|\le\frac{M}{\alpha}\inf_{v\in V_{h}}\|u-v\|$（Céa の補題）。非対称・不定問題での inf-sup 条件（Babuška–Brezzi）を述べよ。
+
+*4 Babuška–Brezzi の inf-sup 条件
+鞍点問題（Stokes 問題など）$a(u,v)+b(v,p)=f$, $b(u,q)=g$ の適切性が、$a$ の核上の強圧性と $\inf_{q}\sup_{v}\frac{b(v,q)}{\|v\|\|q\|}\ge\beta>0$ と同値であること（Babuška 1971, Brezzi 1974）を示せ。
+
+*4 Stokes 作用素と Ladyzhenskaya の inf-sup（発散方程式）
+有界 Lipschitz 領域で、$\operatorname{div}v=q$（$\int q=0$）が $\|v\|_{H^{1}_{0}}\le C\|q\|_{L^{2}}$ の解をもつこと（Bogovskii, Nečas の不等式）を示し、Stokes 問題の適切性を導け。
+
+*4 Hodge 分解（$L^{2}$）と Helmholtz 分解
+$L^{2}(\Omega;\mathbb{R}^{n})=\nabla H^{1}\oplus\{v:\operatorname{div}v=0,\ v\cdot\nu=0\}$（Helmholtz–Weyl 分解）を示し、Leray 射影を定義せよ。$L^{p}$ での分解（Fujiwara–Morimoto）を述べよ。
+
+*4 Weyl の Hodge 定理（閉多様体）
+閉 Riemann 多様体上で $\Omega^{k}=\mathcal{H}^{k}\oplus d\Omega^{k-1}\oplus\delta\Omega^{k+1}$ で、調和形式の空間が de Rham コホモロジーと同型である。楕円正則性と Laplacian の Fredholm 性で証明せよ。
+
+*4 楕円型作用素の固有関数の一意接続性（Aronszajn–Carleman）
+滑らかな係数の二階楕円型作用素の解は、一点で無限位数の零をもてば恒等的に零である（Aronszajn 1957, Carleman）。Carleman 評価による証明の骨格を与え、Pliś・Miller の非一意接続の例（Hölder 係数）を述べよ。
+
+*5 De Giorgi–Nash–Moser の定理の完全証明
+有界可測係数の一様楕円型方程式の弱解の局所有界性（Moser の反復）、Harnack 不等式、Hölder 連続性を完全に証明し、De Giorgi の幾何的議論と Moser の解析的議論を比較せよ。
+
+*5 非発散型の Krylov–Safonov 理論と Caffarelli の完全非線形正則性
+一様楕円型の完全非線形方程式 $F(D^{2}u)=0$（$F$ 凹）の粘性解が $C^{2,\alpha}$ であること（Evans–Krylov 1982）と、一般の $F$ では $C^{1,\alpha}$（Caffarelli 1989）にとどまり、Nadirashvili–Vlăduţ の反例（$C^{1,1}$ でない解）が存在することを述べよ。
+
+=ch VI-8　擬微分作用素
+
+*4 擬微分作用素の記号計算 {psido}
+Hörmander の記号クラス $S^{m}_{1,0}$ の擬微分作用素について、合成 $\sigma(PQ)\sim\sum\frac{1}{\alpha!}\partial_{\xi}^{\alpha}p\,D_{x}^{\alpha}q$ と随伴 $\sigma(P^{*})\sim\sum\frac{1}{\alpha!}\partial_{\xi}^{\alpha}D_{x}^{\alpha}\bar p$ を導け。
+
+*4 擬微分作用素の $L^{2}$ 有界性と Sobolev 有界性
+$S^{0}_{1,0}$ の擬微分作用素は $L^{2}$ で有界、$S^{m}$ は $H^{s+m}\to H^{s}$ で有界である。Hörmander の「平方根の技法」（$M^{2}-P^{*}P=Q^{*}Q+R$）で証明せよ。
+
+*4 楕円型擬微分作用素のパラメトリクス {parametrix}
+楕円型 $P\in S^{m}$ について、$QP-I,PQ-I\in S^{-\infty}$ となる $Q\in S^{-m}$（パラメトリクス）が存在する。記号の逐次構成で証明し、楕円正則性 $Pu\in H^{s}\Rightarrow u\in H^{s+m}_{loc}$ を導け。
+
+*4 擬微分作用素の座標変換不変性
+擬微分作用素のクラスが微分同相で不変であり、主表象が余接束上の関数として well-defined であることを示し、多様体上の擬微分作用素を定義せよ。
+
+*4 Kohn–Nirenberg の擬局所性
+擬微分作用素は擬局所的（$\operatorname{sing\,supp}Pu\subset\operatorname{sing\,supp}u$）であり、さらに $WF(Pu)\subset WF(u)$ をみたす。証明せよ。
+
+*4 閉多様体上の楕円型擬微分作用素の Fredholm 性
+閉多様体上の楕円型擬微分作用素 $P:H^{s+m}\to H^{s}$ は Fredholm であり、指数は $s$ に依らず主表象のホモトピー類のみで決まる。パラメトリクスと Rellich のコンパクト性で証明せよ。
+
+*4 Seeley の複素冪と ζ 関数
+正の楕円型作用素 $A$ の複素冪 $A^{s}$ が擬微分作用素の正則族をなし、$\zeta_{A}(s)=\operatorname{tr}A^{-s}$ が $\mathbb{C}$ に有理型接続されること（Seeley 1967）を示し、$\zeta$ 正則化行列式 $\det A=e^{-\zeta_{A}'(0)}$ を定義せよ。
+
+*4 Wodzicki 留数
+古典擬微分作用素の Wodzicki 留数 $\operatorname{res}(P)=(2\pi)^{-n}\int_{S^{*}M}\sigma_{-n}(P)$ が、擬微分作用素の代数上の唯一のトレース（$n\ge2$, 連結なら）であること（Wodzicki 1984, Guillemin）を述べよ。
+
+*4 Fourier 積分作用素の $L^{2}$ 有界性（Hörmander）
+非退化な相関数 $\phi$ と記号 $a\in S^{0}$ による Fourier 積分作用素 $\int e^{i\phi(x,\xi)}a(x,\xi)\hat f(\xi)d\xi$ が $L^{2}$ 有界であること（Hörmander 1971）を、$TT^{*}$ 論法と停留位相で証明の骨格を与えよ。
+
+*4 Seeger–Sogge–Stein の Fourier 積分作用素の $L^{p}$ 評価
+次数 $-(n-1)|\frac1p-\frac12|$ の Fourier 積分作用素は $L^{p}$（$1<p<\infty$）で有界である（Seeger–Sogge–Stein 1991）。主張と証明の骨格（二進分解と角度分解）を与え、波動方程式の $L^{p}$ 評価への応用を述べよ。
+
+*4 Calderón の交換子と Calderón 代数
+$[A,M_{a}]$（$A$ は $\frac{d}{dx}$ の Hilbert 変換型、$M_{a}$ は Lipschitz 関数の掛け算）が $L^{2}$ 有界であること（Calderón 1965）を述べ、擬微分作用素の記号計算が Lipschitz 係数でどこまで成り立つかを論ぜよ。
+
+*4 Coifman–McIntosh–Meyer の定理（Lipschitz 曲線上の Cauchy 積分）
+Lipschitz 曲線上の Cauchy 積分作用素は $L^{2}$ 有界である（Coifman–McIntosh–Meyer 1982）。主張を述べ、$T(1)$ 定理あるいは Calderón 交換子の級数による証明の骨格を与えよ。
+
+*4 $T(1)$ 定理（David–Journé） {t1}
+Calderón–Zygmund 核をもつ作用素 $T$ が $L^{2}$ 有界 $\iff$ $T(1),T^{*}(1)\in\mathrm{BMO}$ かつ弱有界性条件（David–Journé 1984）。主張と、パラ積を用いた証明の骨格を与えよ。
+
+*4 パラ積と Bony のパラ微分計算
+Bony のパラ積 $T_{a}u=\sum S_{j-2}a\,\Delta_{j}u$ を定義し、$au=T_{a}u+T_{u}a+R(a,u)$ の分解と、非線形関数のパラ線形化 $F(u)=T_{F'(u)}u+$（より滑らか）を示せ（Bony 1981）。
+
+*4 Weyl 量子化と Wigner 関数
+Weyl 量子化 $a^{w}$ と Wigner 関数 $W(f,g)(x,\xi)$ の関係 $\langle a^{w}f,g\rangle=\iint a\,W(f,g)$ を示し、Wigner 関数が一般に正でないこと、Gauss 関数でのみ正であること（Hudson の定理）を述べよ。
+
+*4 Hudson の定理
+$f\in L^{2}(\mathbb{R})$ の Wigner 関数が非負 $\iff f$ が一般化 Gauss 関数 $e^{-az^{2}+bz+c}$（$\operatorname{Re}a>0$）（Hudson 1974）。証明せよ。
+
+*4 Fefferman–Phong の不等式
+$a\in S^{2}_{1,0}$, $a\ge0$ なら $\operatorname{Re}\langle a^{w}u,u\rangle\ge-C\|u\|^{2}$（Fefferman–Phong 1978）。主張と、Calderón–Zygmund 型の分解による証明の骨格を与えよ。
+
+*4 Beals の特徴づけ
+有界作用素 $A$ が $S^{0}_{0,0}$（あるいは $S^{0}_{1,0}$）の擬微分作用素 $\iff$ 交換子 $\operatorname{ad}_{x_{j}}$, $\operatorname{ad}_{D_{j}}$ の任意回の反復が $L^{2}$ 有界（Beals 1977）。主張と証明の骨格を与えよ。
+
+*5 Atiyah–Singer の指数定理（擬微分作用素の言葉で）
+閉多様体上の楕円型擬微分作用素 $P$ の指数が主表象の $K$ 理論類のみで決まり、$\operatorname{ind}P=\int_{T^{*}M}\operatorname{ch}(\sigma(P))\operatorname{Td}(T_{\mathbb{C}}M)$ で与えられること（Atiyah–Singer 1963/68）を述べよ。指数の位相不変性（ホモトピー不変）までを完全に証明せよ。
+
+*5 Hörmander の特異性伝播の完全証明（正交換子法）
+実主型の擬微分作用素 $P$ について、正交換子法（$\operatorname{Im}\langle Pu,Au\rangle$ の評価で $A$ を陪特性帯に沿って増加する記号に選ぶ）により、$WF(u)\setminus WF(Pu)$ が陪特性帯に沿って伝播することを完全に証明せよ。

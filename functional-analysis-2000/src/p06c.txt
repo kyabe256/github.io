@@ -1,0 +1,123 @@
+=ch VI-5　補間理論
+
+*4 複素補間法（Calderón） {complex-interp}
+適合対 $(X_{0},X_{1})$ の複素補間空間 $[X_{0},X_{1}]_{\theta}$ を帯上の解析関数で定義し、補間性 $\|T\|_{[\ ]_{\theta}}\le M_{0}^{1-\theta}M_{1}^{\theta}$ を示せ。$[L^{p_{0}},L^{p_{1}}]_{\theta}=L^{p_{\theta}}$ を証明せよ。
+
+*4 実補間法（$K$ 法と $J$ 法の同値性） {real-interp}
+Peetre の $K$ 関数 $K(t,x)=\inf\{\|x_{0}\|+t\|x_{1}\|\}$ による $(X_{0},X_{1})_{\theta,q}$ と $J$ 法による空間が一致すること（基本補題）を示せ。
+
+*4 Lions–Peetre の再補間定理
+$(X_{0},X_{1})_{\theta,q}$ の再補間について $((X_{0},X_{1})_{\theta_{0},q_{0}},(X_{0},X_{1})_{\theta_{1},q_{1}})_{\eta,q}=(X_{0},X_{1})_{\theta,q}$（$\theta=(1-\eta)\theta_{0}+\eta\theta_{1}$）。証明せよ。
+
+*4 Calderón の複素補間の双対定理
+$X_{0}\cap X_{1}$ が両方で稠密で、一方が反射的なら $[X_{0},X_{1}]_{\theta}^{*}=[X_{0}^{*},X_{1}^{*}]^{\theta}=[X_{0}^{*},X_{1}^{*}]_{\theta}$（Calderón 1964）。主張と証明の骨格を与えよ。
+
+*4 Wolff の再補間定理
+四つの空間 $X_{1}\subset X_{2}\subset X_{3}\subset X_{4}$ で、$X_{2}$ が $(X_{1},X_{3})$ の補間、$X_{3}$ が $(X_{2},X_{4})$ の補間なら、$X_{2},X_{3}$ は $(X_{1},X_{4})$ の補間空間である（Wolff 1982）。主張と、$H^{p}$ の補間への応用を述べよ。
+
+*4 Hardy 空間の補間（Fefferman–Stein）
+$[H^{1},L^{p}]_{\theta}=L^{q}$ と、$T$ が $H^{1}\to L^{1}$ と $L^{2}\to L^{2}$ で有界なら $L^{p}$（$1<p<2$）で有界であること（Fefferman–Stein 1972）を示せ。$[L^{p},\mathrm{BMO}]_{\theta}=L^{q}$ も述べよ。
+
+*4 Peetre の $K$ 関数の計算（$L^{1}$, $L^{\infty}$）
+$K(t,f;L^{1},L^{\infty})=\int_{0}^{t}f^{*}(s)ds$（Peetre）。証明し、$(L^{1},L^{\infty})_{\theta,q}=L^{p,q}$（Lorentz 空間）を導け。
+
+*4 Holmstedt の公式
+$K(t,f;L^{p_{0}},L^{p_{1}})\simeq(\int_{0}^{t^{\alpha}}f^{*}(s)^{p_{0}}ds)^{1/p_{0}}+t(\int_{t^{\alpha}}^{\infty}f^{*}(s)^{p_{1}}ds)^{1/p_{1}}$（$\frac1\alpha=\frac1{p_{0}}-\frac1{p_{1}}$）（Holmstedt 1970）。証明せよ。
+
+*4 Sobolev 空間と Besov 空間の $K$ 関数
+$K(t,f;L^{p},W^{k,p})\simeq\omega_{k}(f,t^{1/k})_{p}+\min(1,t)\|f\|_{p}$（滑らかさの $k$ 次の剰余モジュラス）。これから $(L^{p},W^{k,p})_{\theta,q}=B^{\theta k}_{p,q}$ を導け。
+
+*4 Besov 空間・Triebel–Lizorkin 空間の Littlewood–Paley 定義
+$B^{s}_{p,q}=\{f:\|(2^{js}\|\Delta_{j}f\|_{p})\|_{\ell^{q}}<\infty\}$, $F^{s}_{p,q}=\{f:\|(\sum2^{jsq}|\Delta_{j}f|^{q})^{1/q}\|_{p}<\infty\}$ を定義し、$F^{s}_{p,2}=H^{s,p}$（Bessel ポテンシャル空間）, $F^{0}_{p,2}=L^{p}$ を示せ。
+
+*4 Besov 空間の埋め込みと Sobolev 埋め込みの統一
+$B^{s_{0}}_{p_{0},q}\subset B^{s_{1}}_{p_{1},q}$（$s_{0}-\frac{n}{p_{0}}=s_{1}-\frac{n}{p_{1}}$, $p_{0}\le p_{1}$）を Bernstein の不等式から示し、Sobolev の埋め込みの精密版（Jawerth–Franke の埋め込み）を述べよ。
+
+*4 Bernstein の不等式（Fourier 台制限）
+$\operatorname{supp}\hat f\subset B(0,R)$ なら $\|\partial^{\alpha}f\|_{q}\le CR^{|\alpha|+n(\frac1p-\frac1q)}\|f\|_{p}$（$p\le q$）。証明せよ。
+
+*4 ウェーブレットによる関数空間の特徴づけ（Meyer）
+滑らかな直交ウェーブレット基底が $L^{p}$（$1<p<\infty$）、$H^{1}$、$B^{s}_{p,q}$、$F^{s}_{p,q}$ の無条件基底であり、ノルムがウェーブレット係数の列ノルムで特徴づけられる（Meyer, Frazier–Jawerth）ことを示せ。
+
+*4 Daubechies のコンパクト台ウェーブレット
+任意の $N$ に対し、コンパクト台をもち $C^{N}$ な直交ウェーブレットが存在する（Daubechies 1988）。多重解像度解析とフィルタの条件から構成の骨格を与えよ。
+
+*4 Calderón–Zygmund 型の補間と弱型評価の外挿（Rubio de Francia）
+Rubio de Francia の外挿定理：ある $p_{0}$ ですべての $A_{p_{0}}$ 重みについて有界なら、すべての $1<p<\infty$ とすべての $A_{p}$ 重みで有界（Rubio de Francia 1984）。証明の骨格を与えよ。
+
+*4 Kalton の補間の非線形性と導分（Rochberg–Weiss）
+複素補間法に付随する導分 $\Omega(x)=F'(\theta)$（$F$ は $x$ の最小拡張）を定義し、交換子 $[T,\Omega]$ が有界であること（Rochberg–Weiss 1983）と、$L^{p}$ の場合に $\Omega f=f\log|f|$ 型となることを示せ。
+
+*4 Kalton–Peck の twisted sum 空間
+$\ell^{2}$ の自明でない twisted sum（$0\to\ell^{2}\to Z_{2}\to\ell^{2}\to0$ が分裂しない）である Kalton–Peck 空間 $Z_{2}$ を、導分 $\Omega(x)=x\log\frac{|x|}{\|x\|}$ により構成せよ（Kalton–Peck 1979）。
+
+*4 Brudnyi–Kruglyak の $K$-分割可能性定理
+Banach 対の $K$ 関数の分割可能性（$K(t,x)\le\sum K(t,x_{j})$ の逆向き分解）を述べ、$K$ 法で全ての補間空間が得られる対（Calderón 対）の特徴づけへの応用を述べよ。
+
+*5 Cwikel のコンパクト性補間定理
+$T$ が $X_{0}\to Y_{0}$ でコンパクト、$X_{1}\to Y_{1}$ で有界なら、$T$ は実補間空間 $(X_{0},X_{1})_{\theta,q}\to(Y_{0},Y_{1})_{\theta,q}$ でコンパクトである（Cwikel 1992、片側コンパクト性）。主張と証明の骨格を与え、複素補間での未解決問題を述べよ。
+
+*5 Calderón–Lozanovskii 空間と複素補間の完全な特徴づけ
+Banach 関数束の対 $(X_{0},X_{1})$ について、$[X_{0},X_{1}]_{\theta}=X_{0}^{1-\theta}X_{1}^{\theta}$（順序連続性の下）を完全に証明し、一般の場合に上補間 $[\ ]^{\theta}$ との差が順序連続性の欠如から生じることを示せ。
+
+=ch VI-6　核型空間と Schwartz の核定理
+
+*4 核型空間の定義（Grothendieck） {nuclear}
+局所凸空間 $X$ が核型 $\iff$ 各 $0$ の近傍 $U$ に対し、標準写像 $\hat X_{V}\to\hat X_{U}$ が核作用素となる近傍 $V\subset U$ が存在する。$\mathcal{S}$, $\mathcal{D}$, $C^{\infty}$, $\mathcal{H}(\Omega)$ が核型であることを示せ。
+
+*4 Schwartz の核定理 {kernel-thm}
+連続線形写像 $T:\mathcal{D}(X)\to\mathcal{D}'(Y)$ は一意の超関数核 $K\in\mathcal{D}'(X\times Y)$ によって $\langle T\varphi,\psi\rangle=\langle K,\varphi\otimes\psi\rangle$ と表される（Schwartz 1952）。$\mathcal{S}$ の場合を Hermite 展開で証明せよ。
+
+*4 核型空間の Grothendieck–Pietsch 判定
+Köthe 列空間 $\lambda^{p}(A)$ が核型 $\iff$ 各 $n$ に $m$ が存在して $\sum_{k}a_{n}(k)/a_{m}(k)<\infty$（Grothendieck–Pietsch）。証明し、$s$（急減少列空間）が核型であることを示せ。
+
+*4 核型空間と射影・単射テンソル積の一致
+$X$ が核型 $\iff$ すべての局所凸空間 $Y$ で $X\hat\otimes_{\pi}Y=X\hat\otimes_{\varepsilon}Y$（Grothendieck）。証明の骨格を与え、$\mathcal{S}(\mathbb{R}^{m})\hat\otimes\mathcal{S}(\mathbb{R}^{n})\cong\mathcal{S}(\mathbb{R}^{m+n})$ を示せ。
+
+*4 Dvoretzky–Rogers と核型 Banach 空間の非存在
+無限次元 Banach 空間は核型でないことを、Dvoretzky–Rogers の定理（恒等写像は絶対総和的でない）から導け。
+
+*4 核型空間の Montel 性と有界集合
+核型 Fréchet 空間は Montel 空間（有界閉集合がコンパクト）であり、Schwartz 空間であることを示せ。
+
+*4 Minlos の定理 {minlos}
+核型空間 $\mathcal{N}$ 上の連続な正定値関数 $C$（$C(0)=1$）は、双対 $\mathcal{N}'$ 上の確率測度 $\mu$ の特性汎関数 $C(\varphi)=\int e^{i\langle x,\varphi\rangle}d\mu(x)$ である（Minlos 1959）。$\mathcal{S}'$ 上のホワイトノイズ測度と自由場の Gauss 測度を構成せよ。
+
+*4 Sazonov の定理（Hilbert 空間版 Minlos）
+Hilbert 空間 $H$ 上の正定値関数 $C$ が $H$ 上の確率測度の特性関数であるための必要十分条件は、Sazonov 位相（Hilbert–Schmidt 作用素で定まる位相）について連続であること（Sazonov 1958）。証明の骨格を与え、$H$ 上の「標準 Gauss 測度」が存在しないことを示せ。
+
+*4 Bochner–Minlos と核型空間の特徴づけ（Mushtari）
+局所凸空間 $X$ について、$X$ 上のすべての連続正定値関数が $X'$ 上の測度を定める $\iff X$ が核型（Fréchet 空間の場合、Minlos–Mushtari–Umemura）。主張を述べよ。
+
+*4 Gelfand 三つ組と一般化固有関数展開（Gelfand–Maurin）
+核型空間 $\Phi\subset H\subset\Phi'$ と自己共役作用素 $A$（$A\Phi\subset\Phi$）について、$\Phi'$ の中に完全な一般化固有ベクトル系が存在する（Gelfand–Kostyuchenko–Maurin の核スペクトル定理）。主張を述べ、$-i\frac{d}{dx}$ の場合に $e^{i\lambda x}$ が一般化固有関数となることを示せ。
+
+*4 Kolmogorov の幅と核型性（Mityagin）
+Fréchet 空間の核型性が、単位近傍の Kolmogorov 幅の急減少性で特徴づけられること（Mityagin 1961）を述べ、直径次元が同型不変量であることを示せ。
+
+*4 $\mathcal{D}(\Omega)$ の同型類（Valdivia–Vogt）
+任意の開集合 $\Omega\subset\mathbb{R}^{n}$ について $\mathcal{D}(\Omega)\cong s^{(\mathbb{N})}$（急減少列空間 $s$ の可算直和）、$\mathcal{D}'(\Omega)\cong(s')^{\mathbb{N}}$ である（Valdivia 1978, Vogt 1983）。主張を述べ、$C^{\infty}_{c}(K)\cong s$（Mityagin）を用いた証明の骨格を与えよ。$\mathcal{D}(\Omega)$ の同型類が $\Omega$ に依らないことを結論せよ。
+
+*4 Schwartz の $\varepsilon$ 積とベクトル値超関数
+Schwartz の $\varepsilon$ 積 $X\varepsilon Y$ を定義し、$\mathcal{E}(\Omega)\varepsilon E\cong C^{\infty}(\Omega;E)$（$E$ 準完備）を示せ。核型性により $\varepsilon$ 積とテンソル積が一致することを示せ。
+
+*4 Ehrenpreis–Malgrange の基本原理
+凸開集合上の定数係数偏微分方程式系の $C^{\infty}$ 解（あるいは超関数解）は、指数多項式解の重ね合わせ（Fourier 積分）で表される（Ehrenpreis–Palamodov の基本原理）。主張と、一変数の場合の証明を与えよ。
+
+*4 Malgrange の近似定理と P-凸性
+定数係数作用素 $P(D)$ について、$P(D)u=f$ が $C^{\infty}(\Omega)$ で常に可解 $\iff\Omega$ が $P$-凸（台の凸性条件）であることを述べ（Malgrange 1955）、Hahn–Banach と核型性を用いた証明の骨格を与えよ。
+
+*4 Hörmander の $L^{2}$ 評価による可解性（多変数関数論）
+擬凸領域上の $\bar\partial$ 方程式が $L^{2}$ で可解であること（Hörmander 1965）の関数解析的骨格（閉稠密作用素の値域の閉性と先験評価 $\|f\|^{2}\le C(\|T^{*}f\|^{2}+\|Sf\|^{2})$）を述べよ。
+
+*4 閉値域定理による偏微分方程式の可解性（関数解析的原理）
+閉稠密作用素 $T$ の値域が閉で $\operatorname{range}T=(\ker T^{*})^{\perp}$ であるための先験評価 $\|u\|\le C\|T^{*}u\|$（$u\perp\ker T^{*}$）を示し、偏微分方程式の可解性が随伴の先験評価から従う原理を説明せよ。
+
+*4 Hörmander の不等式と局所可解性
+局所可解性 $\iff$ 随伴作用素の先験評価 $\|\varphi\|_{-k}\le C\|P^{*}\varphi\|_{l}$（$\varphi\in C_{c}^{\infty}$）（Hörmander）。閉グラフ定理を用いて証明せよ。
+
+*5 Grothendieck の核型空間の基本定理群
+核型空間について、(i) 核型性のテンソル積による特徴づけ、(ii) 核型 Fréchet 空間の双対・部分空間・商・可算直積の核型性、(iii) Schwartz の核定理の一般形（$\mathcal{L}(X,Y')\cong(X\hat\otimes Y)'$）、(iv) 核型空間の有界集合の前コンパクト性、を体系的に証明せよ（Grothendieck 1955 の Memoir）。
+
+*5 Vogt の Fréchet 空間の分裂定理と $\mathcal{S}$ の補空間
+Fréchet 空間の短完全列の分裂に関する Vogt の (DN)–($\Omega$) 定理を述べ、核型 Fréchet 空間が $s$ の補空間と同型 $\iff$ (DN) と ($\Omega$) をみたすこと（Vogt–Wagner 1980）を示す骨格を与えよ。

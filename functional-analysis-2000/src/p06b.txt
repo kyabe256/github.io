@@ -1,0 +1,123 @@
+=ch VI-3　Fourier 変換と緩増加超関数
+
+*4 Schwartz 空間上の Fourier 変換 {fourier-s}
+Fourier 変換は $\mathcal{S}(\mathbb{R}^{n})$ から自身への位相同型で、反転公式 $f(x)=\int\hat f(\xi)e^{2\pi ix\xi}d\xi$ が成り立つ。$\mathcal{S}'$ への双対的拡張と、$\delta$, $1$, $\mathrm{p.v.}\frac1x$ の Fourier 変換を計算せよ。
+
+*4 Plancherel の定理 {plancherel}
+Fourier 変換は $L^{1}\cap L^{2}$ 上で $L^{2}$ ノルムを保ち、$L^{2}$ 上のユニタリ作用素に拡張される。Hermite 関数が固有関数（固有値 $(-i)^{n}$）であることを示し、スペクトル分解を与えよ。
+
+*4 Hausdorff–Young の不等式と Beckner の最良定数
+$\|\hat f\|_{p'}\le\|f\|_{p}$（$1\le p\le2$）を Riesz–Thorin で示し、最良定数 $(p^{1/p}/p'^{1/p'})^{n/2}$（Babenko 1961：$p'$ 偶数、Beckner 1975）を述べよ。
+
+*4 Fourier 変換の値域（$L^{1}$ の像）の非特徴づけ
+$\widehat{L^{1}}$ は $C_{0}$ の真の稠密部分代数であり（Riemann–Lebesgue）、その簡潔な特徴づけは存在しないことを示せ（$C_{0}$ と $\widehat{L^{1}}$ が異なることを開写像定理で証明）。
+
+*4 Bochner の定理 {bochner-thm}
+$\mathbb{R}^{n}$ 上の連続な正定値関数は有限正測度の Fourier 変換である（Bochner 1932）。Herglotz の定理と弱*極限、あるいは Gelfand–Raikov の議論で証明せよ。
+
+*4 Fourier 乗数と Mikhlin–Hörmander の定理 {mikhlin}
+$|\partial^{\alpha}m(\xi)|\le C|\xi|^{-|\alpha|}$（$|\alpha|\le[n/2]+1$）なら乗数作用素 $T_{m}$ は $L^{p}$（$1<p<\infty$）で有界（Mikhlin 1956, Hörmander 1960）。Calderón–Zygmund 理論を用いて証明せよ。
+
+*4 Fefferman の球乗数定理
+単位球の特性関数は $n\ge2$ で $L^{p}$（$p\neq2$）の Fourier 乗数ではない（Fefferman 1971）。Kakeya（Besicovitch）集合と Meyer の補題を用いた証明を与えよ。
+
+*4 Besicovitch–Kakeya 集合の存在
+平面に、すべての方向の単位線分を含む Lebesgue 測度零の集合が存在する（Besicovitch 1919）。Perron 木の構成で証明せよ。
+
+*4 Littlewood–Paley の不等式
+Littlewood–Paley 二乗関数 $Sf=(\sum|\Delta_{j}f|^{2})^{1/2}$ について $\|Sf\|_{p}\simeq\|f\|_{p}$（$1<p<\infty$）。ベクトル値 Calderón–Zygmund 理論で証明せよ。
+
+*4 Marcinkiewicz の乗数定理
+有界変動を二進区間ごとに一様にもつ $m$ は $L^{p}(\mathbb{R})$（$1<p<\infty$）の乗数である。Littlewood–Paley 理論から導け。
+
+*4 不確定性原理（Heisenberg・Hardy・Benedicks） {uncertainty}
+(i) $\|xf\|_{2}\|\xi\hat f\|_{2}\ge\frac{1}{4\pi}\|f\|_{2}^{2}$、(ii) Hardy の不確定性原理（$|f|\le Ce^{-\pi ax^{2}}$, $|\hat f|\le Ce^{-\pi b\xi^{2}}$, $ab>1$ なら $f=0$）、(iii) Benedicks の定理（$f$ と $\hat f$ の台がともに有限測度なら $f=0$）を証明せよ。
+
+*4 Amrein–Berthier–Nazarov の定量的不確定性原理
+有限測度集合 $S,\Sigma$ について $\|f\|_{2}\le Ce^{C|S||\Sigma|}(\|f\|_{L^{2}(S^{c})}+\|\hat f\|_{L^{2}(\Sigma^{c})})$（Nazarov 1993、一次元）。主張と証明の骨格を与えよ。
+
+*4 Beurling–Malliavin の乗数定理
+重み $w$ が $\int\frac{\log w}{1+x^{2}}>-\infty$ と適当な正則性をもてば、任意の $\varepsilon>0$ で $\operatorname{supp}\hat f\subset[-\varepsilon,\varepsilon]$ の $f\ne0$ で $|f|w$ が有界なものが存在する（Beurling–Malliavin 1962）。主張と意義を述べよ。
+
+*4 Wiener のタウバー定理（$L^{1}$ 版）
+$f\in L^{1}(\mathbb{R})$ の平行移動の張る空間が $L^{1}$ で稠密 $\iff\hat f$ が零点をもたない。Wiener のタウバー定理（$f*g\to c\int f$ が $\hat f$ 零点なしの一つの $f$ で成り立てば全ての $L^{1}$ で成り立つ）を導け。
+
+*4 Paley–Wiener の定理（$L^{2}$ 版）
+$L^{2}(\mathbb{R})$ の関数で Fourier 変換の台が $[-A,A]$ に含まれるものの全体は、指数型 $2\pi A$ の整関数で実軸上 $L^{2}$ なものの全体と一致する（Paley–Wiener 1934）。証明せよ。
+
+*4 Poisson の和公式
+$\sum f(n)=\sum\hat f(n)$（$f\in\mathcal{S}$）。超関数の等式 $\sum\delta_{n}=\sum e^{2\pi inx}$ として証明し、テータ関数の変換公式を導け。
+
+*4 Fourier 変換の $L^{p}$（$p>2$）での振る舞い
+$p>2$ では $f\in L^{p}$ の Fourier 変換は一般に関数でない（超関数である）ことを示し、$L^{p}$ の関数の Fourier 変換が測度でない例を作れ。
+
+*4 Fourier 制限定理（Stein–Tomas）
+球面 $S^{n-1}$ への Fourier 制限 $\|\hat f|_{S^{n-1}}\|_{L^{2}(\sigma)}\le C\|f\|_{L^{p}}$ が $1\le p\le\frac{2(n+1)}{n+3}$ で成り立つ（Tomas 1975, Stein）。$TT^{*}$ 論法と球面測度の Fourier 減衰で証明せよ。
+
+*5 Bourgain–Guth・Guth の多項式分割と制限予想の進展
+制限予想（$\|\hat f|_{S^{n-1}}\|_{L^{q}}\le C\|f\|_{p}$ が $p<\frac{2n}{n+1}$, $q=\frac{n-1}{n+1}p'$ で成り立つ）を述べ、Bourgain–Guth（2011）の多重線形化、Guth（2016, 2018）の多項式分割による進展を述べよ。
+
+*5 Hardy の不確定性原理の Beurling による強化
+$\iint|f(x)||\hat f(\xi)|e^{2\pi|x\xi|}dxd\xi<\infty$ なら $f=0$（Beurling、Hörmander 1991 による出版）。Phragmén–Lindelöf の原理を用いた証明を与え、Hardy の定理と Morgan の定理を導け。
+
+=ch VI-4　Sobolev 空間
+
+*4 Sobolev 空間の基本と稠密性（Meyers–Serrin） {sobolev}
+$W^{k,p}(\Omega)$ を弱導関数で定義し、$C^{\infty}(\Omega)\cap W^{k,p}$ が $W^{k,p}(\Omega)$ で稠密であること（Meyers–Serrin 1964：$H=W$）を示せ。
+
+*4 Gagliardo–Nirenberg–Sobolev の不等式 {gns}
+$1\le p<n$ で $\|u\|_{L^{p^{*}}}\le C\|\nabla u\|_{L^{p}}$（$\frac1{p^{*}}=\frac1p-\frac1n$）。$p=1$ を Gagliardo の積の不等式（Loomis–Whitney）で示し、一般の $p$ を導け。
+
+*4 Sobolev 不等式の最良定数（Aubin–Talenti）
+$\|u\|_{2^{*}}\le S_{n}\|\nabla u\|_{2}$ の最良定数が $(1+|x|^{2})^{-(n-2)/2}$ で達成されること（Aubin, Talenti 1976）を、対称化と一次元の変分問題（Bliss）に帰着させて示せ。
+
+*4 Morrey の不等式 {morrey-ineq}
+$p>n$ で $W^{1,p}(\mathbb{R}^{n})\subset C^{0,1-n/p}$、$|u(x)-u(y)|\le C|x-y|^{1-n/p}\|\nabla u\|_{p}$。証明し、Sobolev 関数が絶対連続な代表をもつことを導け。
+
+*4 Rellich–Kondrachov のコンパクト性定理 {rellich}
+有界 Lipschitz 領域で $W^{1,p}(\Omega)\Subset L^{q}(\Omega)$（$q<p^{*}$）。Kolmogorov–Riesz のコンパクト性判定で証明し、$q=p^{*}$ ではコンパクトでないこと（尺度変換）を示せ。
+
+*4 Kolmogorov–Riesz–Fréchet のコンパクト性判定
+$L^{p}(\mathbb{R}^{n})$ の有界集合 $\mathcal{F}$ が相対コンパクト $\iff$ 平行移動について同程度連続（$\sup_{f}\|f(\cdot+h)-f\|_{p}\to0$）かつ無限遠で一様に小さい。証明せよ。
+
+*4 Trudinger–Moser の不等式
+$W^{1,n}_{0}(\Omega)$（$|\Omega|<\infty$）の $\|\nabla u\|_{n}\le1$ なる $u$ について $\int e^{\alpha|u|^{n/(n-1)}}\le C|\Omega|$（$\alpha\le\alpha_{n}=n\omega_{n-1}^{1/(n-1)}$）で、$\alpha_{n}$ は最良（Trudinger 1967, Moser 1971）。証明の骨格を与えよ。
+
+*4 延長定理（Stein, Calderón）
+Lipschitz 領域 $\Omega$ に対し、すべての $W^{k,p}$（$1\le p\le\infty$）で同時に有界な延長作用素 $E:W^{k,p}(\Omega)\to W^{k,p}(\mathbb{R}^{n})$ が存在する（Stein 1970）。Calderón の方法（$1<p<\infty$）の骨格を与えよ。
+
+*4 トレース定理 {trace-thm}
+滑らかな有界領域で $W^{1,p}(\Omega)$ から $W^{1-1/p,p}(\partial\Omega)$（Besov）への有界なトレース作用素が存在し全射である（Gagliardo 1957）。$p=2$ の場合を Fourier 変換で証明せよ。
+
+*4 Poincaré の不等式と Poincaré–Wirtinger
+有界連結 Lipschitz 領域で $\|u-u_{\Omega}\|_{p}\le C\|\nabla u\|_{p}$。Rellich のコンパクト性と背理法で証明し、凸領域で $C\le\frac{\operatorname{diam}}{\pi}$（Payne–Weinberger, $p=2$）を述べよ。
+
+*4 分数階 Sobolev 空間と Gagliardo 半ノルム
+$H^{s}(\mathbb{R}^{n})$ を Fourier 変換で、$W^{s,p}$ を Gagliardo 半ノルム $\iint\frac{|u(x)-u(y)|^{p}}{|x-y|^{n+sp}}$ で定義し、$p=2$ で一致することを示せ。Bourgain–Brezis–Mironescu の極限 $\lim_{s\to1}(1-s)|u|_{W^{s,p}}^{p}=K\|\nabla u\|_{p}^{p}$ を述べよ。
+
+*4 Bourgain–Brezis–Mironescu の公式
+$\lim_{s\uparrow1}(1-s)\iint\frac{|u(x)-u(y)|^{p}}{|x-y|^{n+sp}}dxdy=K_{n,p}\int|\nabla u|^{p}$（BBM 2001）。証明の骨格を与え、Maz'ya–Shaposhnikova の $s\to0$ 版を述べよ。
+
+*4 $W^{1,1}$ と BV の埋め込み・周長
+$BV(\mathbb{R}^{n})\subset L^{n/(n-1)}$ と等周不等式が同値（Federer–Fleming, Maz'ya）であることを示し、余面積公式を用いて証明せよ。
+
+*4 Hardy の不等式（Sobolev 空間）と最良定数
+$\int\frac{|u|^{p}}{|x|^{p}}\le(\frac{p}{n-p})^{p}\int|\nabla u|^{p}$（$1<p<n$）を示し、定数が最良で達成されないことを示せ。
+
+*4 Caffarelli–Kohn–Nirenberg の不等式
+重み付き不等式 $\||x|^{\gamma}u\|_{r}\le C\||x|^{\alpha}\nabla u\|_{p}^{a}\||x|^{\beta}u\|_{q}^{1-a}$ の成立条件（Caffarelli–Kohn–Nirenberg 1984）を述べ、スケール則から必要条件を導け。
+
+*4 Sobolev 空間の双対と負の Sobolev 空間
+$H^{-1}(\Omega)=(H^{1}_{0}(\Omega))^{*}$ の元が $f_{0}+\sum\partial_{i}f_{i}$（$f_{i}\in L^{2}$）と表されることを示し、Dirichlet Laplacian が $H^{1}_{0}\to H^{-1}$ の同型であることを Lax–Milgram で示せ。
+
+*4 Sobolev 空間の補間（$[H^{s_{0}},H^{s_{1}}]_{\theta}=H^{s}$）
+$\mathbb{R}^{n}$ 上の Sobolev 空間の複素補間 $[H^{s_{0}},H^{s_{1}}]_{\theta}=H^{(1-\theta)s_{0}+\theta s_{1}}$ と実補間 $(W^{k_{0},p},W^{k_{1},p})_{\theta,p}=B^{s}_{p,p}$ を示せ。
+
+*4 Sobolev 写像空間と位相的障害（Schoen–Uhlenbeck, Bethuel–Zheng）
+$n\ge2$ のとき、$W^{1,p}(B^{n};S^{1})$ で滑らかな写像が稠密 $\iff p\ge2$（$p\ge1$ の範囲で）であること（Bethuel–Zheng 1988）を示せ。特に $x/|x|\in W^{1,p}(B^{2};S^{1})$（$1\le p<2$）が滑らかな写像で近似できないことを次数（回転数）の議論で証明し、$W^{1,2}(B^{3};S^{2})$ の場合（Schoen–Uhlenbeck）を述べよ。
+
+*5 Brezis–Lieb の補題と集中コンパクト性
+$f_{n}\to f$ a.e. かつ $\sup\|f_{n}\|_{p}<\infty$ なら $\|f_{n}\|_{p}^{p}-\|f_{n}-f\|_{p}^{p}\to\|f\|_{p}^{p}$（Brezis–Lieb 1983）。これと Lions の集中コンパクト性原理を用いて、Sobolev 不等式の最適化列の（平行移動と尺度変換を除く）コンパクト性を証明せよ。
+
+*5 Bethuel の定理と Sobolev 写像の近似
+$W^{1,p}(M;N)$（$1\le p<\dim M$）で $C^{\infty}(M;N)$ が稠密 $\iff\pi_{[p]}(N)=0$（Bethuel 1991, Hang–Lin）。主張と証明の骨格（立方体分解と $[p]$-骨格への射影）を与えよ。

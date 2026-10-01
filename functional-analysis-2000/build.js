@@ -200,7 +200,7 @@ if (/\{\{[A-Z]+:?[^}]*\}\}/.test(doc)) fail('未解決のトークンが残っ�
 // ---- 7. 数式 ------------------------------------------------------------------
 const render = (tex, displayMode) => {
   try {
-    return katex.renderToString(tex.trim(), { displayMode, throwOnError: true, strict: false });
+    return katex.renderToString(tex.trim(), { displayMode, throwOnError: true, strict: false, macros: { "\\fint": "\\mathop{\\mathchoice{\\textstyle -\\!\\!\\!\\!\\int}{-\\!\\!\\!\\!\\int}{-\\!\\!\\!\\int}{-\\!\\!\\!\\int}}\\nolimits" } });
   } catch (e) {
     fail(`KaTeX: ${e.message}\n  in: ${tex.slice(0, 120)}`);
     return `<span style="color:red">${tex}</span>`;
