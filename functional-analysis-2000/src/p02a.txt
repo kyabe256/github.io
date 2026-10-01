@@ -39,7 +39,7 @@ Haar 系が $L^{2}[0,1]$ の完全正規直交系であることを示し、$L^{
 *4 Kadec の 1/4 定理
 $\lambda_{n}\in\mathbb{R}$, $|\lambda_{n}-n|\le L<\frac14$ ならば $\{e^{i\lambda_{n}t}\}$ は $L^{2}[-\pi,\pi]$ の Riesz 基底であり、$1/4$ は最良である（Ingham の例）。証明を完成させよ。
 
-*4 Riesz 基底とフレーム
+*5 Riesz 基底とフレーム
 Riesz 基底を有界可逆作用素による正規直交基底の像として特徴づけ、フレーム（$A\|x\|^{2}\le\sum|\langle x,f_{n}\rangle|^{2}\le B\|x\|^{2}$）の再構成公式（双対フレーム）を導け。
 
 *4 Hilbert 空間の部分空間の角度と Friedrichs 角
@@ -92,7 +92,7 @@ $\ell^{2}$ 上の片側シフト $S$ のスペクトルは閉円板、点スペ�
 *4 正規作用素のノルムとスペクトル半径
 正規作用素 $N$ について $\|N\|=r(N)$、$\|N^{k}\|=\|N\|^{k}$。準正規（hyponormal, $T^{*}T\ge TT^{*}$）作用素でも $\|T\|=r(T)$ であることを示せ（Stampfli）。
 
-*4 Putnam の不等式（準正規作用素）
+*5 Putnam の不等式（準正規作用素）
 準正規作用素 $T$ について $\|T^{*}T-TT^{*}\|\le\frac1\pi|\sigma(T)|$（面積）。証明の骨格を与え、準正規作用素でスペクトルの面積が零なら正規であることを結論せよ。
 
 *4 Berberian の技法とスペクトルの近似点スペクトル
@@ -107,10 +107,10 @@ $\ell^{2}$ 上の片側シフト $S$ のスペクトルは閉円板、点スペ�
 *4 Kleinecke–Shirokov の定理
 Banach 環で $[A,[A,B]]=0$ なら $[A,B]$ は擬冪零（スペクトル半径 $0$）である。証明し、Wielandt–Wintner の定理（$AB-BA=I$ は有界作用素で不可能）を導け。
 
-*4 Brown–Pearcy の交換子の特徴づけ
+*5 Brown–Pearcy の交換子の特徴づけ
 $\mathcal{B}(H)$（$H$ 可分無限次元）の元が交換子 $AB-BA$ であるための必要十分条件は、$\lambda I+K$（$\lambda\neq0$, $K$ コンパクト）の形でないことである（Brown–Pearcy 1965）。主張と証明の骨格を与えよ。
 
-*4 Pearcy–Topping の分解定理
+*5 Pearcy–Topping の分解定理
 $\mathcal{B}(H)$（$H$ 可分無限次元）の任意の元は 4 個のユニタリ作用素の線形結合であり、5 個の冪等作用素の和である（Pearcy–Topping 1967）。前者を自己共役縮小作用素 $A=\frac12((A+i\sqrt{1-A^{2}})+(A-i\sqrt{1-A^{2}}))$ から示し、後者の証明の骨格を与えよ。
 
 *4 Russo–Dye の定理

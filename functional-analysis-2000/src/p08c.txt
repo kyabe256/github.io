@@ -42,7 +42,7 @@ $-\Delta u=|u|^{4/(n-2)}u$ に対応する汎関数の (PS) 列は、部分列�
 *5 Bahri–Coron の定理
 有界領域 $\Omega\subset\mathbb{R}^{n}$（$n\ge3$）が非自明な位相（ある $\mathbb{Z}/2$ 係数ホモロジーが非自明）をもつなら、$-\Delta u=u^{(n+2)/(n-2)}$、$u>0$、$u|_{\partial\Omega}=0$ が解をもつことの証明の骨格を与えよ（Bahri–Coron 1988）。
 
-*4 Nehari 多様体と符号変化解
+*5 Nehari 多様体と符号変化解
 Nehari 多様体 $\mathcal{N}=\{u\neq0:\Phi'(u)u=0\}$ 上の最小化で基底状態を構成し、符号変化 Nehari 集合 $\{u^{\pm}\in\mathcal{N}\}$ 上の最小化により最小エネルギーの符号変化解が存在し、ちょうど二つの節領域をもつことを証明せよ（Castro–Cossio–Neuberger 1997）。
 
 *4 Weinstein の最良 Gagliardo–Nirenberg 不等式
@@ -51,7 +51,7 @@ $\|u\|_{p+1}^{p+1}\le C\|\nabla u\|_{2}^{\frac{n(p-1)}{2}}\|u\|_{2}^{2-\frac{(n-
 *5 Conley–Zehnder の定理（トーラス上の Arnold 予想）
 $T^{2n}$ 上の周期的 Hamilton 写像（時間 1 写像）は少なくとも $2n+1$ 個の不動点をもち、非退化なら $2^{2n}$ 個以上をもつことを、作用汎関数の有限次元還元と Conley 指数で証明の骨格を与えよ（Conley–Zehnder 1983）。
 
-*4 噴水定理（Bartsch）
+*5 噴水定理（Bartsch）
 コンパクト群の作用で対称な汎関数について、Borsuk–Ulam 性をみたす表現の下で臨界値の非有界列が存在すること（噴水定理）を証明し、超線形・劣臨界な奇の楕円型問題に応用せよ（Bartsch 1993）。
 
 *4 Szulkin の非平滑臨界点理論
@@ -104,7 +104,7 @@ $\mathbb{R}^{n}$ のコンパクト凸集合 $K$ と連続写像 $F:K\to\mathbb{
 *4 障害物問題の正則性（Brezis–Kinderlehrer）
 $\min\{\int|\nabla u|^{2}-2fu:u\ge\psi,\ u|_{\partial\Omega}=0\}$ の解は、$\psi\in C^{2}$、$f$ 有界なら $W^{2,\infty}_{\mathrm{loc}}=C^{1,1}_{\mathrm{loc}}$ に属することを証明せよ（Brezis–Kinderlehrer 1974）。
 
-*4 近接点法と Güler の反例
+*5 近接点法と Güler の反例
 極大単調作用素 $A$ について近接点列 $x_{k+1}=J_{\lambda_{k}}x_{k}$（$\inf\lambda_{k}>0$）が $A^{-1}(0)\neq\emptyset$ のとき零点に弱収束することを示し（Rockafellar 1976）、一般には強収束しないことを示す劣微分の例を述べよ（Güler 1991）。
 
 *4 Opial の補題と Krasnosel'skii–Mann 反復

@@ -89,7 +89,7 @@ $S^{2}$ 上の Gauss 曲率方程式 $-\Delta u+1=Ke^{2u}$ の解が存在すれ
 *5 山辺問題
 コンパクト Riemann 多様体（$n\ge3$）の共形類にスカラー曲率一定の計量が存在することを、山辺不変量 $Y(M,[g])<Y(S^{n})$ ならば最小化列がコンパクトになること（Trudinger, Aubin）と、等号でない場合の正質量定理による評価（Schoen 1984）を組み合わせて証明の骨格を与えよ。
 
-*4 Brezis–Merle の不等式と爆発解析
+*5 Brezis–Merle の不等式と爆発解析
 有界領域で $-\Delta u=V(x)e^{u}$（$0\le V\le C$、$\int e^{u}\le C$）の解列は、局所一様有界、$-\infty$ へ一様発散、有限個の点で爆発（$Ve^{u}\rightharpoonup\sum\alpha_{i}\delta_{a_{i}}$、$\alpha_{i}\ge4\pi$）のいずれかであることを証明せよ（Brezis–Merle 1991）。
 
 *4 Keller–Osserman の条件
@@ -110,8 +110,8 @@ $-\Delta u=f(x,u)$ で $f(x,s)/s$ が $s>0$ について狭義減少なら、正
 *4 Serrin の過剰決定問題
 有界滑らかな領域 $\Omega$ で $-\Delta u=1$、$u|_{\partial\Omega}=0$、$\partial_{\nu}u=c$（定数）が解をもつなら $\Omega$ は球であることを移動平面法で証明せよ（Serrin 1971）。
 
-*4 Aleksandrov–Bakelman–Pucci の最大値原理
-非発散型一様楕円型作用素 $Lu=a^{ij}D_{ij}u$ について $\sup_{\Omega}u\le\sup_{\partial\Omega}u^{+}+C\,\mathrm{diam}(\Omega)\|(Lu)^{-}\|_{L^{n}(\Gamma^{+})}$（$\Gamma^{+}$ は上側接触集合）を証明せよ。
+*5 安定解の正則性（Cabré–Figalli–Ros-Oton–Serra）
+$f$ が非負・非減少・凸な $C^{1}$ 関数のとき、有界領域上の $-\Delta u=f(u)$ の安定な弱解（$\int f'(u)\varphi^{2}\le\int|\nabla\varphi|^{2}$）は $n\le9$ なら有界かつ滑らかであることの証明の骨格を与えよ（2020）。$n\ge10$ で特異な安定解が存在することを示せ。
 
 *5 Ni–Takagi の境界集中
 特異摂動 Neumann 問題 $\varepsilon^{2}\Delta u-u+u^{p}=0$、$\partial_{\nu}u=0$ の最小エネルギー解は $\varepsilon\to0$ で境界のある一点に集中し、その点が境界の平均曲率の最大点に近づくことの証明の骨格を与えよ（Lin–Ni–Takagi 1988、Ni–Takagi 1991, 1993）。

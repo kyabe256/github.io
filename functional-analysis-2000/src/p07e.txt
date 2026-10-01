@@ -9,13 +9,13 @@ $M_{1}=\langle M,e_{N}\rangle$ を構成し $[M_{1}:M]=[M:N]$ を示せ。塔 $N
 *4 Pimsner–Popa の不等式
 有限指数の部分因子について $E_{N}(x)\ge[M:N]^{-1}x$（$x\in M_{+}$）を示し、逆に最良定数が $[M:N]^{-1}$ となることと Pimsner–Popa 基底の存在を証明せよ（1986）。
 
-*4 指数 4 以下の超有限部分因子と ADE 分類
+*5 指数 4 以下の超有限部分因子と ADE 分類
 超有限 II$_{1}$ 因子の指数 $<4$ の部分因子の主グラフが $A_{n},D_{2n},E_{6},E_{8}$ 型の Dynkin 図形に限られることの証明の骨格を与えよ（Ocneanu, Popa）。
 
 *5 Popa の従順部分因子の分類
 超有限 II$_{1}$ 因子の強従順な部分因子は標準不変量によって完全に分類されることの証明の骨格を与えよ（Popa 1994）。
 
-*4 Popa の $\lambda$-格子再構成定理
+*5 Popa の $\lambda$-格子再構成定理
 任意の標準 $\lambda$-格子はある有限指数部分因子の標準不変量として実現されることを示せ（Popa 1995）。
 
 *4 性質 (T) をもつ群の因子の剛性（Connes）
@@ -24,34 +24,34 @@ ICC かつ性質 (T) の群 $\Gamma$ について、$L(\Gamma)$ の基本群と�
 *5 自明な基本群をもつ II$_{1}$ 因子（Popa）
 $M=L^{\infty}(\mathbb{T}^{2})\rtimes SL(2,\mathbb{Z})=L(\mathbb{Z}^{2}\rtimes SL(2,\mathbb{Z}))$ について $\mathcal{F}(M)=\{1\}$ であることを、相対性質 (T) と Popa の可変形性/剛性の手法で証明の骨格を与えよ（Popa 2006）。Kadison の問題との関係を述べよ。
 
-*4 基本群の任意性（Popa, Popa–Vaes）
+*5 基本群の任意性（Popa, Popa–Vaes）
 $\mathbb{R}_{+}^{*}$ の任意の可算部分群がある可分 II$_{1}$ 因子の基本群として実現されることの証明の骨格を与えよ（Popa 2006）。非可算な部分群に関する Popa–Vaes（2010）の結果を述べよ。
 
-*4 Popa の双加群による交絡定理
+*5 Popa の双加群による交絡定理
 $A,B\subset M$ を有限 von Neumann 部分環とするとき、$A\prec_{M}B$（$L^{2}(M)$ の $A$-$B$ 部分双加群で右 $B$-次元有限なものが存在）$\iff$ $\|E_{B}(xu_{n}y)\|_{2}\to0$（$x,y\in M$）となるユニタリ列 $u_{n}\in A$ が存在しない、を証明せよ（Popa 2006）。
 
-*4 Ozawa の固さ定理
+*5 Ozawa の固さ定理
 語双曲群 $\Gamma$ について、$L(\Gamma)$ の任意の拡散部分環の相対可換子は単射であること（固さ, solidity）を Akemann–Ostrand 性を用いて証明せよ（Ozawa 2004）。系として $L(\mathbb{F}_{n})\bar\otimes M$ の分解不能性を論ぜよ。
 
 *5 Ozawa–Popa の強い固さ
 $L(\mathbb{F}_{n})$ の任意の拡散単射部分環 $P$ について、正規化群 $\mathcal{N}(P)''$ も単射であることの証明の骨格を与えよ（Ozawa–Popa 2010）。系として Cartan 部分環の非存在を導け。
 
-*4 自由群因子の Cartan 部分環の非存在（Voiculescu）
+*5 自由群因子の Cartan 部分環の非存在（Voiculescu）
 自由エントロピーの評価を用いて、$L(\mathbb{F}_{n})$（$n\ge2$）が Cartan 部分環をもたないことを証明せよ（Voiculescu 1996）。
 
 *5 Popa のコサイクル超剛性
 性質 (T) の群（より一般に $w$-剛性をもつ群）の Bernoulli 作用について、可算離散群に値をとる任意のコサイクルが準同型とコホモロガスであることを証明の骨格とともに示し、軌道同値超剛性を導け（Popa 2007）。
 
-*4 Bernoulli 作用の W$^{*}$-超剛性（Ioana）
+*5 Bernoulli 作用の W$^{*}$-超剛性（Ioana）
 性質 (T) をもつ ICC 群 $\Gamma$ の Bernoulli 作用 $\Gamma\curvearrowright(X_{0},\mu_{0})^{\Gamma}$ について、群測度空間因子 $L^{\infty}(X)\rtimes\Gamma$ が作用を共役を除いて記憶していることの証明の骨格を与えよ（Ioana 2011）。
 
-*4 補間自由群因子（Dykema, Rădulescu）
+*5 補間自由群因子（Dykema, Rădulescu）
 $1<t\le\infty$ に対し $L(\mathbb{F}_{t})$ を定義し、$L(\mathbb{F}_{t})_{\gamma}\cong L(\mathbb{F}_{1+(t-1)/\gamma^{2}})$ を示せ。系として、$L(\mathbb{F}_{n})$（$2\le n<\infty$）はすべて同型であるか互いに非同型であるかのいずれかであることを導け（1994）。
 
-*4 自由群因子の素性（Ge）
+*5 自由群因子の素性（Ge）
 $L(\mathbb{F}_{n})$ は二つの II$_{1}$ 因子のテンソル積として表せない（素である）ことを自由エントロピーで証明せよ（Ge 1998）。
 
-*4 Peterson の $L^{2}$-剛性
+*5 Peterson の $L^{2}$-剛性
 第一 $L^{2}$-Betti 数が正の ICC 群 $\Gamma$ について、$L(\Gamma)$ は素であることを、閉可能な微分による変形を用いて証明せよ（Peterson 2009）。
 
 *5 W$^{*}$-超剛性群の存在（Ioana–Popa–Vaes）
@@ -74,19 +74,19 @@ II$_{1}$ 因子の性質 (T) を双加群（対応）を用いて定義し、ICC
 *4 S 変換と自由乗法畳み込み
 $\mathbb{R}_{+}$ 上の確率測度について S 変換を定義し、$S_{\mu\boxtimes\nu}=S_{\mu}S_{\nu}$ を証明せよ（Voiculescu 1987）。
 
-*4 漸近自由性（Voiculescu 1991）
+*5 漸近自由性（Voiculescu 1991）
 独立な GUE 行列 $X_{N}^{(1)},\dots,X_{N}^{(k)}$ は $N\to\infty$ で自由半円系に分布収束することを証明し、Wigner の半円則を系として導け。確定的対角行列との漸近自由性も示せ。
 
-*4 非交差分割と自由キュムラント（Speicher）
+*5 非交差分割と自由キュムラント（Speicher）
 モーメント–キュムラント公式 $\varphi(a_{1}\cdots a_{n})=\sum_{\pi\in NC(n)}\kappa_{\pi}[a_{1},\dots,a_{n}]$ で自由キュムラントを定義し、自由独立性が混合キュムラントの消滅と同値であることを証明せよ（1994）。
 
 *4 自由 Poisson 分布と Marchenko–Pastur 則
 自由 Poisson 極限定理で得られる分布が Marchenko–Pastur 分布であることを示し、Wishart 行列 $\frac{1}{N}X^{*}X$ の経験スペクトル分布がこれに収束することを漸近自由性から導け。
 
-*4 Bercovici–Pata の対応
+*5 Bercovici–Pata の対応
 古典的無限分解可能分布と $\boxplus$-無限分解可能分布の間に Lévy–Khintchine 型の全単射が存在し、極限定理の吸引域が一致することを証明せよ（Bercovici–Pata 1999）。
 
-*4 有限自由エントロピーと因子の性質
+*5 有限自由エントロピーと因子の性質
 自由エントロピー $\chi(X_{1},\dots,X_{n})>-\infty$ なら、$W^{*}(X_{1},\dots,X_{n})$ は性質 $\Gamma$ をもたず Cartan 部分環ももたないことを証明せよ（Voiculescu 1996）。
 
 *5 Haagerup–Thorbjørnsen の定理

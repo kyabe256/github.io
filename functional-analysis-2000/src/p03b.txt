@@ -9,7 +9,7 @@
 *4 Borel 関数カルキュラスの一意性と von Neumann 環
 $f(N)$ は $N$ の生成する von Neumann 環に属し、$N$ と可換な作用素は $f(N)$ と可換である。$W^{*}(N)\cong L^{\infty}(\sigma(N),\mu)$（$\mu$ はスカラースペクトル測度）を示せ。
 
-*4 スペクトル重複度理論（Hahn–Hellinger）
+*5 スペクトル重複度理論（Hahn–Hellinger）
 自己共役作用素のユニタリ同値類は、互いに特異な測度の列 $\mu_{1}\gg\mu_{2}\gg\cdots$（重複度関数）で完全に分類される（Hahn–Hellinger）。証明の骨格を与えよ。
 
 *4 可換 von Neumann 環の構造
@@ -42,16 +42,16 @@ $f(N)$ は $N$ の生成する von Neumann 環に属し、$N$ と可換な作用
 *4 Weyl の固有値漸近則の第二項（Ivrii）
 周期的測地線が測度零の領域で、Dirichlet ラプラシアンの固有値計数関数が $N(\lambda)=c_{n}|\Omega|\lambda^{n/2}-\frac14c_{n-1}|\partial\Omega|\lambda^{(n-1)/2}+o(\lambda^{(n-1)/2})$ をみたす（Ivrii 1980）。主張を述べよ。
 
-*4 太鼓の形は聞こえるか（Kac, Gordon–Webb–Wolpert）
+*5 太鼓の形は聞こえるか（Kac, Gordon–Webb–Wolpert）
 平面領域の Dirichlet スペクトルから面積・周長・穴の数が決まる（熱核の漸近展開）が、等スペクトルで非合同な平面領域が存在する（Gordon–Webb–Wolpert 1992）。熱トレースの展開の最初の三項を導け。
 
-*4 Pólya 予想と Li–Yau の不等式
+*5 Pólya 予想と Li–Yau の不等式
 Dirichlet 固有値について $\sum_{k\le N}\lambda_{k}\ge\frac{n}{n+2}C_{n}|\Omega|^{-2/n}N^{1+2/n}$（Li–Yau 1983）を示し、Pólya 予想 $\lambda_{k}\ge C_{n}(k/|\Omega|)^{2/n}$ との関係（円板での最近の証明、Filonov–Levitin–Polterovich–Sher 2023）を述べよ。
 
 *4 Faber–Krahn と Szegő–Weinberger
 同体積の領域の中で第一 Dirichlet 固有値を最小化するのは球（Faber–Krahn）、第一非零 Neumann 固有値を最大化するのは球（Szegő–Weinberger）。前者を対称化で証明せよ。
 
-*4 Payne–Pólya–Weinberger 予想（Ashbaugh–Benguria）
+*5 Payne–Pólya–Weinberger 予想（Ashbaugh–Benguria）
 $\lambda_{2}/\lambda_{1}$ は球で最大となる（Ashbaugh–Benguria 1991）。主張を述べ、証明の骨格を与えよ。
 
 *5 スペクトル定理の三つの形の同値性の完全な証明

@@ -1,0 +1,71 @@
+<h2 class="plain">付録 A　依存の地図</h2>
+
+<p>2000 題は部ごとに並んでいるが、関数解析の定理は部をまたいで深く依存している。ここでは主要な依存の筋を挙げる。番号は大問番号である。</p>
+
+<h3 class="sec">幹：三大原理から双対へ</h3>
+<table class="legend">
+  <tr><th>Hahn–Banach → 双対</th><td>{{R:hb}}（Hahn–Banach）→ {{R:weak}}（弱位相）→ {{R:alaoglu}}（Banach–Alaoglu）→ {{R:km}}（Krein–Milman）→ {{R:choquet}}（Choquet）。<strong>凸集合・双対・端点の理論はすべてここから始まる。</strong></td></tr>
+  <tr><th>Baire → 三大定理</th><td>{{R:baire}}（Baire）→ {{R:ubp}}（一様有界性）, {{R:omt}}（開写像）→ {{R:cgt}}（閉グラフ）→ {{R:crt}}（閉値域）→ {{R:barrelled}}（樽型空間）。開写像定理は非線形版 {{R:ift}}（逆関数定理）・{{R:nash-moser}}（Nash–Moser）へ延びる。</td></tr>
+  <tr><th>反射性と弱コンパクト性</th><td>{{R:reflexive}}（Kakutani）→ {{R:es}}（Eberlein–Šmulian）→ {{R:james}}（James）；{{R:milman-pettis}}（Milman–Pettis）→ {{R:uc}}（一様凸性）→ {{R:enflo-renorm}}（超反射性）→ {{R:ribe}}（Ribe）。</td></tr>
+  <tr><th>不動点</th><td>{{R:banach-fp}}（縮小写像）→ {{R:ift}}；{{R:schauder}}（Schauder）→ {{R:ls-deg}}（Leray–Schauder 写像度）→ {{R:rabinowitz-global}}（大域分岐）；{{R:mk}}, {{R:rn}}（Markov–角谷・Ryll-Nardzewski）→ Haar 測度 {{R:haar}}。</td></tr>
+</table>
+
+<h3 class="sec">作用素とスペクトル</h3>
+<table class="legend">
+  <tr><th>コンパクト性 → 指数</th><td>{{R:compact}} → {{R:riesz-schauder}}（Riesz–Schauder）→ {{R:fredholm-alt}}（Fredholm の交代定理）→ {{R:fredholm}}, {{R:atkinson}}（Fredholm・Atkinson）→ {{R:ind-stab}}（指数の安定性）→ {{R:toeplitz-ind}}（Toeplitz 指数）→ {{R:aj}}（Atiyah–Jänich）→ {{R:six-term}}, {{R:bott}}（K 理論）→ {{R:finale}}。</td></tr>
+  <tr><th>Gelfand → スペクトル定理</th><td>{{R:spec-nonempty}}, {{R:spec-rad}} → {{R:gelfand-mazur}} → {{R:gelfand}}（Gelfand 変換）→ {{R:cfc}}（連続関数計算）→ {{R:st-mult}}, {{R:pvm}}（スペクトル定理）→ {{R:st-unbdd}}（非有界版）→ {{R:stone}}（Stone）。</td></tr>
+  <tr><th>非有界作用素 → 量子力学</th><td>{{R:closed}} → {{R:sa-crit}} → {{R:deficiency}}（不足指数）, {{R:friedrichs}}（Friedrichs 拡張）→ {{R:kato-rellich}}（Kato–Rellich）→ {{R:hvz}}（HVZ）→ {{R:cook}}, {{R:bkr}}, {{R:mourre}}（散乱理論）。</td></tr>
+  <tr><th>半群</th><td>{{R:stone}} → {{R:c0}} → {{R:hy}}（Hille–Yosida）→ {{R:lp}}（Lumer–Phillips）→ {{R:analytic-sg}}（解析半群）→ {{R:maxreg}}, {{R:weis}}（最大正則性）← {{R:umd}}（UMD）；非線形版は {{R:komura}}, {{R:brezis}} を経て {{R:minty}}（単調作用素）へ。</td></tr>
+  <tr><th>膨張と関数モデル</th><td>{{R:vn-ineq}}（von Neumann）→ {{R:nagy}}（Sz.-Nagy）→ {{R:char-fn}}（特性関数）→ {{R:clt}}（可換子持ち上げ）→ {{R:pick}}（Pick）；{{R:stinespring}} → {{R:arveson-ext}}（Arveson）→ 完全正値写像と量子情報（第 X 部 X-8）。</td></tr>
+</table>
+
+<h3 class="sec">空間の幾何と関数空間</h3>
+<table class="legend">
+  <tr><th>基底 → 構造理論</th><td>{{R:basis}} → {{R:bp-select}}（選択原理）→ {{R:james-unc}}（無条件基底）→ {{R:gowers-dich}}, {{R:gm}}（Gowers の二分律・HI 空間）→ {{R:ah}}（Argyros–Haydon）。</td></tr>
+  <tr><th>確率 → 幾何</th><td>{{R:khinchin}}, {{R:kahane}} → {{R:type}}（型・余型）→ {{R:kwapien}}（Kwapień）, {{R:maurey-pisier}}（Maurey–Pisier）→ {{R:dvoretzky}}（Dvoretzky）→ {{R:jl}}（Johnson–Lindenstrauss）。</td></tr>
+  <tr><th>Grothendieck の流れ</th><td>{{R:pietsch}}（Pietsch）→ {{R:groth-thm}}, {{R:groth-ineq}}（Grothendieck）→ {{R:nuclear}}, {{R:kernel-thm}}（核型空間と核定理）→ {{R:minlos}}（Minlos）→ ガウス測度（第 IX 部 IX-2）。</td></tr>
+  <tr><th>補間 → 調和解析</th><td>{{R:riesz-thorin}}, {{R:marcinkiewicz}} → {{R:complex-interp}}, {{R:real-interp}} → {{R:hl-max}} → {{R:mikhlin}} → {{R:fefferman}}（$H^{1}$–BMO）, {{R:jn}}（John–Nirenberg）→ {{R:t1}}（$T(1)$ 定理）→ {{R:a2}}（$A_{2}$ 定理）。</td></tr>
+  <tr><th>超関数 → 楕円型</th><td>{{R:distr}} → {{R:fourier-s}}, {{R:plancherel}} → {{R:sobolev}}, {{R:rellich}} → {{R:lax-milgram}} → {{R:garding}}, {{R:interior-reg}} → {{R:psido}}, {{R:parametrix}}（擬微分作用素）→ 指数定理（第 X 部 X-4）。</td></tr>
+</table>
+
+<h3 class="sec">作用素環と非可換幾何</h3>
+<table class="legend">
+  <tr><th>C*-環の骨格</th><td>{{R:cfc}} → {{R:gns-c}}（GNS）→ {{R:gn}}（Gelfand–Naimark）→ {{R:kadison-trans}}（Kadison の推移性）→ {{R:glimm}}（Glimm）。</td></tr>
+  <tr><th>von Neumann 環</th><td>{{R:bicommutant}}, {{R:kaplansky}} → {{R:sakai}} → {{R:comparison}} → {{R:type-decomp}}（型分解）→ {{R:hyperfinite}}, {{R:gamma}}, {{R:mcduff}}（II$_{1}$ 因子）→ {{R:jones}}（Jones の指数）。</td></tr>
+  <tr><th>モジュラー理論 → 分類</th><td>{{R:tomita}}（冨田）→ {{R:connes-cocycle}}（Connes のコサイクル）→ {{R:connes-s}}（$S(M)$）→ {{R:takesaki-dual}}（竹崎双対）→ {{R:connes-inj}}（Connes の単射因子分類）。</td></tr>
+  <tr><th>K 理論 → 分類と指数</th><td>{{R:six-term}}, {{R:bott}} → {{R:pv}}（Pimsner–Voiculescu）→ {{R:elliott-af}}（Elliott）→ {{R:kirchberg-o2}}（Kirchberg）；{{R:nuclear-c}}（核型性）→ {{R:baum-connes}}（Baum–Connes）。</td></tr>
+</table>
+
+<h3 class="sec">非線形・確率・最終合流</h3>
+<table class="legend">
+  <tr><th>変分と位相</th><td>{{R:direct}}（直接法）→ {{R:quasiconvex}}（準凸性）→ {{R:gamma-conv}}（Γ-収束）；{{R:ekeland}}（Ekeland）→ {{R:deformation}} → {{R:mp}}（峠の定理）→ {{R:ls-cat}}（Lusternik–Schnirelmann）；{{R:brouwer-deg}} → {{R:ls-deg}} → {{R:cr}}, {{R:rabinowitz-global}}（分岐）。</td></tr>
+  <tr><th>凸解析 → 輸送</th><td>{{R:fenchel-moreau}} → {{R:fr-dual}} → {{R:kr-dual}}, {{R:kantorovich}}（Kantorovich 双対）→ {{R:brenier}}（Brenier）→ 勾配流・曲率次元条件（第 IX 部 IX-9）。</td></tr>
+  <tr><th>ガウス測度 → Malliavin</th><td>{{R:prokhorov}} → {{R:fernique}}, {{R:cameron-martin}} → {{R:dudley}}, {{R:mm}}（chaining）→ {{R:bdg}} → Malliavin 解析（IX-6）→ {{R:mild}}（確率偏微分方程式）。</td></tr>
+  <tr><th>関数不等式 → 大偏差</th><td>{{R:nelson-hyp}}（Nelson）→ {{R:bakry-emery}}（Bakry–Émery）→ 集中不等式 → {{R:cramer}}, {{R:sanov}}, {{R:varadhan}}（大偏差）。</td></tr>
+  <tr><th>群と表現</th><td>{{R:haar}} → {{R:pontryagin}}, {{R:peter-weyl}} → {{R:mackey}}（Mackey の機械）→ 離散系列と $L^{2}$ 指数（X-2, X-4）。</td></tr>
+  <tr><th>最終合流点</th><td><strong>大問 {{R:finale}}</strong>：三大原理 ＋ Fredholm 指数の安定性（{{R:ind-stab}}）＋ Gelfand 理論（{{R:gelfand}}）＋ 擬微分作用素（{{R:parametrix}}）＋ K 理論と Bott 周期性（{{R:bott}}）＋ Toeplitz 指数（{{R:toeplitz-ind}}）。関数解析の全部門が一つの定理で出会う。</td></tr>
+</table>
+
+<h2 class="plain">付録 B　参考書対応表</h2>
+<table class="legend">
+  <tr><th>I-1 〜 I-5</th><td>Brezis <em>Functional Analysis, Sobolev Spaces and PDE</em>／Rudin <em>Functional Analysis</em>／Conway <em>A Course in Functional Analysis</em>／Megginson <em>An Introduction to Banach Space Theory</em>／Phelps <em>Lectures on Choquet's Theorem</em></td></tr>
+  <tr><th>I-6 〜 I-10</th><td>Schaefer–Wolff <em>Topological Vector Spaces</em>／Köthe <em>Topological Vector Spaces I, II</em>／Meise–Vogt <em>Introduction to Functional Analysis</em>／Granas–Dugundji <em>Fixed Point Theory</em>／Diestel–Uhl <em>Vector Measures</em></td></tr>
+  <tr><th>II-1 〜 II-5</th><td>Halmos <em>A Hilbert Space Problem Book</em>／Bhatia <em>Matrix Analysis</em>／Gohberg–Goldberg–Kaashoek <em>Classes of Linear Operators</em>／Douglas <em>Banach Algebra Techniques in Operator Theory</em>／Schechter <em>Principles of Functional Analysis</em></td></tr>
+  <tr><th>II-6 〜 II-10</th><td>Simon <em>Trace Ideals and Their Applications</em>／Paulsen–Raghupathi <em>An Introduction to the Theory of Reproducing Kernel Hilbert Spaces</em>／Agler–McCarthy <em>Pick Interpolation and Hilbert Function Spaces</em>／Sz.-Nagy–Foias–Bercovici–Kérchy <em>Harmonic Analysis of Operators on Hilbert Space</em>／Radjavi–Rosenthal <em>Invariant Subspaces</em></td></tr>
+  <tr><th>III-1 〜 III-5</th><td>Kaniuth <em>A Course in Commutative Banach Algebras</em>／Reed–Simon <em>Methods of Modern Mathematical Physics I, II, IV</em>／Schmüdgen <em>Unbounded Self-adjoint Operators on Hilbert Space</em>／Kato <em>Perturbation Theory for Linear Operators</em>／Teschl <em>Mathematical Methods in Quantum Mechanics</em></td></tr>
+  <tr><th>III-6 〜 III-10</th><td>Reed–Simon <em>III: Scattering Theory</em>／Yafaev <em>Mathematical Scattering Theory</em>／Zworski <em>Semiclassical Analysis</em>／Trefethen–Embree <em>Spectra and Pseudospectra</em>／Bratteli–Robinson <em>Operator Algebras and Quantum Statistical Mechanics I, II</em></td></tr>
+  <tr><th>IV-1 〜 IV-5</th><td>Engel–Nagel <em>One-Parameter Semigroups for Linear Evolution Equations</em>／Pazy <em>Semigroups of Linear Operators and Applications to PDE</em>／Lunardi <em>Analytic Semigroups and Optimal Regularity in Parabolic Problems</em>／Haase <em>The Functional Calculus for Sectorial Operators</em>／Arendt–Batty–Hieber–Neubrander <em>Vector-valued Laplace Transforms and Cauchy Problems</em></td></tr>
+  <tr><th>IV-6 〜 IV-10</th><td>Batkai–Kramar Fijavž–Rhandi <em>Positive Operator Semigroups</em>／Barbu <em>Nonlinear Differential Equations of Monotone Types in Banach Spaces</em>／Hytönen–van Neerven–Veraar–Weis <em>Analysis in Banach Spaces I–III</em>／Tucsnak–Weiss <em>Observation and Control for Operator Semigroups</em>／Benzoni-Gavage–Serre <em>Multi-dimensional Hyperbolic Partial Differential Equations</em></td></tr>
+  <tr><th>V-1 〜 V-5</th><td>Albiac–Kalton <em>Topics in Banach Space Theory</em>／Lindenstrauss–Tzafriri <em>Classical Banach Spaces I, II</em>／Deville–Godefroy–Zizler <em>Smoothness and Renormings in Banach Spaces</em>／Diestel–Jarchow–Tonge <em>Absolutely Summing Operators</em>／Artstein-Avidan–Giannopoulos–Milman <em>Asymptotic Geometric Analysis I</em></td></tr>
+  <tr><th>V-6 〜 V-10</th><td>Pisier <em>Factorization of Linear Operators and Geometry of Banach Spaces</em>／Argyros–Todorcevic <em>Ramsey Methods in Analysis</em>／Benyamini–Lindenstrauss <em>Geometric Nonlinear Functional Analysis</em>／Meyer-Nieberg <em>Banach Lattices</em>／Kechris <em>Classical Descriptive Set Theory</em>, Dodos <em>Banach Spaces and Descriptive Set Theory</em></td></tr>
+  <tr><th>VI-1 〜 VI-5</th><td>Bennett–Sharpley <em>Interpolation of Operators</em>／Hörmander <em>The Analysis of Linear Partial Differential Operators I</em>／Grafakos <em>Classical and Modern Fourier Analysis</em>／Adams–Fournier <em>Sobolev Spaces</em>／Bergh–Löfström <em>Interpolation Spaces</em>, Triebel <em>Interpolation Theory, Function Spaces, Differential Operators</em></td></tr>
+  <tr><th>VI-6 〜 VI-10</th><td>Trèves <em>Topological Vector Spaces, Distributions and Kernels</em>／Gilbarg–Trudinger <em>Elliptic Partial Differential Equations of Second Order</em>／Hörmander <em>III</em>, Taylor <em>Pseudodifferential Operators</em>／Stein <em>Harmonic Analysis</em>, Garnett <em>Bounded Analytic Functions</em>／Zhu <em>Operator Theory in Function Spaces</em>, Cowen–MacCluer <em>Composition Operators on Spaces of Analytic Functions</em></td></tr>
+  <tr><th>VII-1 〜 VII-5</th><td>Murphy <em>C*-Algebras and Operator Theory</em>／Dixmier <em>C*-Algebras</em>／Kadison–Ringrose <em>Fundamentals of the Theory of Operator Algebras I–IV</em>／Takesaki <em>Theory of Operator Algebras I–III</em>／Strătilă <em>Modular Theory in Operator Algebras</em></td></tr>
+  <tr><th>VII-6 〜 VII-10</th><td>Brown–Ozawa <em>C*-Algebras and Finite-Dimensional Approximations</em>／Rørdam–Larsen–Laustsen <em>An Introduction to K-Theory for C*-Algebras</em>, Blackadar <em>K-Theory for Operator Algebras</em>／Rørdam–Størmer <em>Classification of Nuclear C*-Algebras</em>／Jones–Sunder <em>Introduction to Subfactors</em>, Anantharaman–Popa <em>An Introduction to II$_{1}$ Factors</em>／Nica–Speicher <em>Lectures on the Combinatorics of Free Probability</em></td></tr>
+  <tr><th>VIII-1 〜 VIII-5</th><td>Deimling <em>Nonlinear Functional Analysis</em>／Zeidler <em>Nonlinear Functional Analysis and its Applications I–V</em>／Kielhöfer <em>Bifurcation Theory</em>／Dacorogna <em>Direct Methods in the Calculus of Variations</em>／Struwe <em>Variational Methods</em>, Rabinowitz <em>Minimax Methods in Critical Point Theory</em></td></tr>
+  <tr><th>VIII-6 〜 VIII-10</th><td>Brezis <em>Opérateurs maximaux monotones</em>／Bauschke–Combettes <em>Convex Analysis and Monotone Operator Theory in Hilbert Spaces</em>／Ambrosetti–Malchiodi <em>Nonlinear Analysis and Semilinear Elliptic Problems</em>／Tao <em>Nonlinear Dispersive Equations</em>, Cazenave <em>Semilinear Schrödinger Equations</em>／Temam <em>Infinite-Dimensional Dynamical Systems in Mechanics and Physics</em></td></tr>
+  <tr><th>IX-1 〜 IX-5</th><td>Billingsley <em>Convergence of Probability Measures</em>／Bogachev <em>Gaussian Measures</em>／Talagrand <em>Upper and Lower Bounds for Stochastic Processes</em>, Ledoux–Talagrand <em>Probability in Banach Spaces</em>／Revuz–Yor <em>Continuous Martingales and Brownian Motion</em>／Bakry–Gentil–Ledoux <em>Analysis and Geometry of Markov Diffusion Operators</em></td></tr>
+  <tr><th>IX-6 〜 IX-10</th><td>Nualart <em>The Malliavin Calculus and Related Topics</em>／Da Prato–Zabczyk <em>Stochastic Equations in Infinite Dimensions</em>, Hairer "A theory of regularity structures"／Dembo–Zeitouni <em>Large Deviations Techniques and Applications</em>, Boucheron–Lugosi–Massart <em>Concentration Inequalities</em>／Villani <em>Optimal Transport: Old and New</em>／Einsiedler–Ward <em>Ergodic Theory with a View towards Number Theory</em>, Anderson–Guionnet–Zeitouni <em>An Introduction to Random Matrices</em></td></tr>
+  <tr><th>X-1 〜 X-5</th><td>Folland <em>A Course in Abstract Harmonic Analysis</em>／Knapp <em>Representation Theory of Semisimple Groups</em>, Kirillov <em>Lectures on the Orbit Method</em>／Connes <em>Noncommutative Geometry</em>, Gracia-Bondía–Várilly–Figueroa <em>Elements of Noncommutative Geometry</em>／Berline–Getzler–Vergne <em>Heat Kernels and Dirac Operators</em>, Lawson–Michelsohn <em>Spin Geometry</em>／Higson–Roe <em>Analytic K-Homology</em>, Valette <em>Introduction to the Baum–Connes Conjecture</em></td></tr>
+  <tr><th>X-6 〜 X-10</th><td>Iwaniec–Kowalski <em>Analytic Number Theory</em>, Ramakrishnan–Valenza <em>Fourier Analysis on Number Fields</em>／Heinonen <em>Lectures on Analysis on Metric Spaces</em>, Ostrovskii <em>Metric Embeddings</em>／Watrous <em>The Theory of Quantum Information</em>, Wolf "Quantum Channels &amp; Operations"／Lax <em>Functional Analysis</em>, Duren <em>Univalent Functions</em>／Tao–Vu <em>Additive Combinatorics</em>, Lawson–Michelsohn（指数定理の K 理論的証明）</td></tr>
+</table>

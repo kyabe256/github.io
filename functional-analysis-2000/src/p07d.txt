@@ -57,7 +57,7 @@ $K_{0}(C_{r}^{*}(\mathbb{F}_{n}))\cong\mathbb{Z}$、$K_{1}(C_{r}^{*}(\mathbb{F}_
 *4 Toeplitz 拡大の指数写像
 $0\to K\to\mathcal{T}\to C(\mathbb{T})\to0$ の指数写像 $\partial:K_{1}(C(\mathbb{T}))\cong\mathbb{Z}\to K_{0}(K)\cong\mathbb{Z}$ が（符号の規約を除いて）回転数で与えられることを示し、{{R:toeplitz-ind}} を K 理論の言葉で再証明せよ。
 
-*4 Elliott–Evans の定理
+*5 Elliott–Evans の定理
 無理数回転環 $A_{\theta}$ は円周環の帰納極限（AT 環）であり、実階数 0 であることの証明の骨格を与えよ（Elliott–Evans 1993）。
 
 =ch VII-8　分類理論と構造
@@ -68,7 +68,7 @@ $0\to K\to\mathcal{T}\to C(\mathbb{T})\to0$ の指数写像 $\partial:K_{1}(C(\m
 *5 Kirchberg–Phillips の分類定理
 UCT をみたす可分単位的 Kirchberg 環（単純・核型・純無限）は、$(K_{0}(A),[1_{A}],K_{1}(A))$ によって同型類が完全に分類され、任意の可算アーベル群の組が実現されることの証明の骨格を与えよ（Kirchberg, Phillips 2000）。
 
-*4 Jiang–Su 環 $\mathcal{Z}$
+*5 Jiang–Su 環 $\mathcal{Z}$
 次元降下環の帰納極限として $\mathcal{Z}$ を構成し、$\mathcal{Z}$ が単純・単一トレース・射影をもたず、$K_{*}(\mathcal{Z})\cong K_{*}(\mathbb{C})$ であることを示せ（Jiang–Su 1999）。
 
 *4 強自己吸収 C*-環（Toms–Winter）
@@ -83,22 +83,22 @@ UCT をみたす可分核型 C*-環上の忠実トレースは準対角である
 *5 単純核型 C*-環の分類の完結
 単位的・単純・可分・核型・$\mathcal{Z}$-安定で UCT をみたす C*-環は Elliott 不変量（$K_{0}$, $K_{1}$, トレース空間とその対合）で分類されることの証明の流れ（Gong–Lin–Niu, Elliott–Gong–Lin–Niu, Tikuisis–White–Winter）を述べよ。
 
-*4 Toms と Rørdam の反例
+*5 Toms と Rørdam の反例
 Elliott 不変量が一致するが非同型な単純核型 AH 環の存在（Toms 2008）と、有限射影と無限射影を同時にもつ単純核型 C*-環の存在（Rørdam 2003）を説明し、$\mathcal{Z}$-安定性の仮定の必要性を論ぜよ。
 
-*4 Cuntz 半群 $\mathrm{Cu}$
+*5 Cuntz 半群 $\mathrm{Cu}$
 $A\otimes K$ の正値元の Cuntz 比較による半群 $\mathrm{Cu}(A)$ を定義し、それが Coward–Elliott–Ivanescu の公理をみたし帰納極限と可換であることを証明せよ（2008）。
 
-*4 Rørdam の厳密比較定理
+*5 Rørdam の厳密比較定理
 単純単位的な $\mathcal{Z}$-安定 C*-環は厳密比較性（任意の擬トレースで $d_{\tau}(a)<d_{\tau}(b)\Rightarrow a\precsim b$）をもつことを証明せよ（Rørdam 2004）。
 
-*4 実階数 0 の特徴づけ（Brown–Pedersen）
+*5 実階数 0 の特徴づけ（Brown–Pedersen）
 C*-環 $A$ について、実階数 0 $\iff$ 有限スペクトルの自己共役元が自己共役元の中で稠密 $\iff$ 任意の遺伝的部分環が射影からなる近似単位元をもつ、を証明せよ（Brown–Pedersen 1991）。
 
 *4 安定階数（Rieffel）
 位相的安定階数 $\mathrm{tsr}$ を定義し、$\mathrm{tsr}(C(X))=\lfloor\dim X/2\rfloor+1$ を示せ（Rieffel 1983）。$\mathrm{tsr}(A_{\theta})=1$（Putnam）を述べよ。
 
-*4 核次元（Winter–Zacharias）
+*5 核次元（Winter–Zacharias）
 核次元を定義し、$\dim_{\mathrm{nuc}}C(X)=\dim X$（$X$ コンパクト距離空間）、AF 環の核次元が 0 であること、$\mathcal{O}_{2}$ の核次元が有限であることを示せ（2010）。
 
 *4 Glimm の UHF 環分類
@@ -110,14 +110,14 @@ UHF 環は超自然数（一般化された自然数）によって同型類が�
 *5 Giordano–Putnam–Skau の定理
 極小 Cantor 系 $(X,\varphi)$、$(Y,\psi)$ について、強軌道同値 $\iff C(X)\rtimes_{\varphi}\mathbb{Z}\cong C(Y)\rtimes_{\psi}\mathbb{Z}\iff$ 順序 $K_{0}$ 群（単位つき）が同型であることの証明の骨格を与えよ（1995）。
 
-*4 極小同相写像の接合積の分類可能性
+*5 極小同相写像の接合積の分類可能性
 有限被覆次元の無限コンパクト距離空間 $X$ 上の極小同相写像 $h$ について、$C(X)\rtimes_{h}\mathbb{Z}$ が $\mathcal{Z}$-安定であり、したがって分類可能であることを証明の骨格とともに示せ（Toms–Winter 2013）。
 
-*4 Elliott の定理 $\mathcal{O}_{2}\otimes\mathcal{O}_{2}\cong\mathcal{O}_{2}$
+*5 Elliott の定理 $\mathcal{O}_{2}\otimes\mathcal{O}_{2}\cong\mathcal{O}_{2}$
 フリップ自己同型が近似内部的であることを示して $\mathcal{O}_{2}\otimes\mathcal{O}_{2}\cong\mathcal{O}_{2}$ を証明せよ（Elliott 1994）。
 
 *5 完全 C*-環の擬トレースはトレース（Haagerup）
 完全 C*-環上の任意の 2-擬トレースはトレースであることの証明の骨格を与え（Haagerup 1991 年稿）、系として安定有限な単位的完全 C*-環がトレース状態をもつこと（Blackadar–Handelman 問題）を導け。
 
-*4 Lin の跡的階数 0 の分類
+*5 Lin の跡的階数 0 の分類
 UCT をみたす単位的・単純・可分・核型で跡的階数 0 の C*-環は、順序 $K$ 群で分類されることの証明の骨格を与えよ（Lin 2004）。

@@ -27,7 +27,7 @@ $C(K)$ の閉部分代数 $A$ について、$A^{\perp}$ の単位球の端点 $
 *4 Bishop–de Leeuw の定理
 距離化可能でないコンパクト凸集合では $\operatorname{ext}K$ が Borel 可測でないことがあるが、各点は $\operatorname{ext}K$ を含むすべての Baire 集合に集中した測度で表現される（Bishop–de Leeuw）。主張を述べよ。
 
-*4 Choquet 単体と表現の一意性
+*5 Choquet 単体と表現の一意性
 コンパクト凸集合 $K$ において、各点の最大表現測度が一意 $\iff K$ が Choquet 単体（$K$ が生成する錐が束をなす）。Choquet–Meyer の定理を証明の骨格とともに述べよ。
 
 *4 不変測度の集合のエルゴード分解
@@ -42,10 +42,10 @@ $\mathbb{R}$ 上の連続な正定値関数で $\varphi(0)=1$ のもの全体の
 *4 de Finetti の定理（Hewitt–Savage）
 交換可能な確率変数列の分布は i.i.d. 列の分布の混合である。交換可能な確率測度の凸集合の端点が i.i.d. 測度であることを示し、Choquet の定理から導け。
 
-*4 Krein–Milman の逆と Lindenstrauss の定理（露出点）
+*5 Krein–Milman の逆と Lindenstrauss の定理（露出点）
 Banach 空間の弱コンパクト凸集合は、強露出点の閉凸包である（Lindenstrauss 1963, Troyanski）。証明の骨格を与えよ。
 
-*4 Krein–Milman 性と Radon–Nikodym 性
+*5 Krein–Milman 性と Radon–Nikodym 性
 Banach 空間 $X$ が Krein–Milman 性（有界閉凸集合が端点の閉凸包）をもつことを定義し、RNP $\Rightarrow$ KMP（Lindenstrauss）を示せ。逆は双対空間・束では成り立つ（Huff–Morris, Bourgain–Talagrand）が一般には未解決であることを述べよ。
 
 *4 面と極端部分集合の位相

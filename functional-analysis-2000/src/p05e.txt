@@ -3,10 +3,10 @@
 *4 Riesz 空間の基本（Riesz 分解と Freudenthal） {riesz-space}
 Riesz 空間の Riesz 分解性 $0\le z\le x+y\Rightarrow z=x'+y'$ を示し、Freudenthal のスペクトル定理（Dedekind 完備 Riesz 空間の元が射影成分で近似される）を述べよ。
 
-*4 Kakutani の表現定理（AL 空間・AM 空間）
+*5 Kakutani の表現定理（AL 空間・AM 空間）
 抽象 $L$ 空間（$\|x+y\|=\|x\|+\|y\|$, $x,y\ge0$）は $L^{1}(\mu)$ に束等距離同型であり（Kakutani 1941）、単位元をもつ抽象 $M$ 空間は $C(K)$ に束等距離同型である（Kakutani, Krein–Krein）。証明の骨格を与えよ。
 
-*4 Bohnenblust–Kakutani と $L^{p}$ 空間の抽象的特徴づけ
+*5 Bohnenblust–Kakutani と $L^{p}$ 空間の抽象的特徴づけ
 $\|x+y\|^{p}=\|x\|^{p}+\|y\|^{p}$（$x\perp y$）をみたす Banach 束は $L^{p}(\mu)$ に束等距離同型である（Bohnenblust 1940）。証明の骨格を与えよ。
 
 *4 順序連続ノルムと Lozanovskii の分解
@@ -33,7 +33,7 @@ $p$-凸な Banach 束は、$p$-凸化定数 1 の同値な束ノルムに再ノ�
 *4 正則作用素と Kantorovich の定理
 Dedekind 完備 Riesz 空間への正則作用素（正値作用素の差）の全体が Dedekind 完備 Riesz 空間をなすこと（Riesz–Kantorovich）と、$|T|(x)=\sup\{|Ty|:|y|\le x\}$ の公式を示せ。
 
-*4 Banach 束の Pełczyński 分解と $\ell^{1}$ の部分束
+*5 Banach 束の Pełczyński 分解と $\ell^{1}$ の部分束
 Banach 束 $X$ が $\ell^{1}$ を含む $\iff$ $\ell^{1}$ を束部分空間として含む（Lozanovskii, Meyer-Nieberg）。主張と証明の骨格を与えよ。
 
 *4 Banach 束の超冪と有限表現可能性
@@ -65,10 +65,10 @@ $p\neq2$ のとき、$L^{p}$ 上の等距離作用素は $Tf=h\cdot(f\circ\phi)$
 *4 可分 Banach 空間の標準 Borel 空間
 $C(\Delta)$（$\Delta$ は Cantor 集合）の閉部分空間全体に Effros–Borel 構造を入れ、可分 Banach 空間のクラスを標準 Borel 空間として扱えることを示せ（Bossard）。
 
-*4 Bossard の定理（反射的空間のクラスは非 Borel）
+*5 Bossard の定理（反射的空間のクラスは非 Borel）
 可分反射的 Banach 空間の同型類全体は解析的完全（$\Pi^{1}_{1}$ 完全）で、Borel ではない（Bossard 2002）。木の階数（Szlenk 指数）による証明の骨格を与えよ。
 
-*4 Bourgain の普遍性定理（記述集合論的）
+*5 Bourgain の普遍性定理（記述集合論的）
 可分 Banach 空間の解析的クラスで、すべての可分反射的空間を含むものは $C[0,1]$ を含む空間を含む（Bourgain 1980, Argyros–Dodos による強化）。証明の骨格を与えよ。
 
 *4 Szlenk 指数と順序数指数
@@ -77,7 +77,7 @@ Szlenk 指数・$\ell^{1}$ 指数（Bourgain）を定義し、それらが可算
 *4 Rosenthal の $\ell^{1}$ 定理の記述集合論的精緻化（Bourgain の $\ell^{1}$ 指数）
 $\ell^{1}$ 指数が可算 $\iff X$ は $\ell^{1}$ を含まないことを示し、$\ell^{1}$ 指数の値の評価（Judd–Odell）を述べよ。
 
-*4 Banach 空間の同型関係の複雑さ（Ferenczi–Louveau–Rosendal）
+*5 Banach 空間の同型関係の複雑さ（Ferenczi–Louveau–Rosendal）
 可分 Banach 空間の同型関係は解析的同値関係として完全（最も複雑）である（Ferenczi–Louveau–Rosendal 2009）。主張を述べよ。
 
 *4 Gowers の二分律の記述集合論的形式
@@ -86,25 +86,25 @@ Gowers の Ramsey 型定理を解析的集合に対して述べ（Bagaria–Lóp
 *4 Ramsey の定理の無限次元版（Ellentuck）
 $[\mathbb{N}]^{\infty}$ の Ellentuck 位相で Baire の性質をもつ集合は完全 Ramsey である（Ellentuck 1974）。Galvin–Prikry を含むことを示せ。
 
-*4 Banach 空間の分類における普遍空間（Argyros–Dodos）
+*5 Banach 空間の分類における普遍空間（Argyros–Dodos）
 可分 Banach 空間の解析的クラスの普遍性問題に関する Argyros–Dodos（2007）の結果の主張を述べよ。
 
 *4 Pełczyński の普遍空間とその一意性（Kadec, Pełczyński, Schechtman）
 すべての基底列を補空間として含む Pełczyński の空間 $U$ の存在と同型の意味での一意性（Pełczyński 1969, Kadec）を述べよ。
 
-*4 Gurariĭ 空間
+*5 Gurariĭ 空間
 可分 Banach 空間で、有限次元空間の等距離埋め込みの拡張が $(1+\varepsilon)$ でつねに可能なもの（Gurariĭ 空間）が存在し、等距離同型を除いて一意である（Gurariĭ 1966, Lusky 1976, Kubiś–Solecki の短い証明）。主張と証明の骨格を与えよ。
 
 *4 Fraïssé 極限としての Gurariĭ 空間と普遍性
 Gurariĭ 空間がすべての可分 Banach 空間を等距離に含み、有限次元 Banach 空間のクラスの Fraïssé 極限として理解できること（Ben Yaacov, Kubiś）を述べよ。
 
-*4 Kalton–Randrianarivony の定理（$\ell^{p}\oplus\ell^{q}$ の剛性）
+*5 Kalton–Randrianarivony の定理（$\ell^{p}\oplus\ell^{q}$ の剛性）
 $1<p<q<\infty$（$p,q\neq2$）のとき、$\ell^{p}\oplus\ell^{q}$ と一様同相な Banach 空間はそれと線形同型である（Kalton–Randrianarivony 2008）。グラフの粗 Lipschitz 埋め込みによる障害の議論の骨格を与え、$\ell^{1}$ の一様同相分類が未解決であることを述べよ。
 
-*4 Johnson–Lindenstrauss–Schechtman の定理
+*5 Johnson–Lindenstrauss–Schechtman の定理
 $X$ が $\ell^{p}$（$1<p<\infty$）と一様同相なら $X\cong\ell^{p}$（JLS 1996）。主張と証明の骨格（漸近的平滑性と Ribe）を与えよ。
 
-*4 Godefroy–Kalton–Lancien の $c_{0}$ の剛性
+*5 Godefroy–Kalton–Lancien の $c_{0}$ の剛性
 $c_{0}$ に Lipschitz 同型な Banach 空間は $c_{0}$ と線形同型である（Godefroy–Kalton–Lancien 2000）。主張を述べよ。
 
 *4 Banach 空間の位相的分類（Toruńczyk の定理）

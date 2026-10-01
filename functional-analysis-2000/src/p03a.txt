@@ -30,7 +30,7 @@ $a\mapsto\sigma(a)$ は上半連続だが連続ではない（Kakutani の重み
 *4 Banach 環の Jacobson 根基と半単純性
 極大左イデアルの共通部分（Jacobson 根基）$\operatorname{rad}A=\{a: r(xa)=0\ \forall x\}$ を示し、可換なら Gelfand 変換の核に等しいことを示せ。
 
-*4 Johnson の一意ノルム定理
+*5 Johnson の一意ノルム定理
 半単純な Banach 環上の完備環ノルムはすべて同値である（Johnson 1967）。主張と証明の骨格を与えよ。
 
 *4 自動連続性（Kaplansky の問題と Dales–Esterle）
@@ -74,19 +74,19 @@ $C(K)$ から Banach 環への準同型は、連続部分と「有限個の点�
 *4 Wiener–Lévy の定理
 $f\in A(\mathbb{T})$ と $f$ の値域の近傍で正則な $F$ について $F\circ f\in A(\mathbb{T})$（Lévy 1935）。正則関数カルキュラスから導け。
 
-*4 Katznelson の定理（Wiener–Lévy の逆）
+*5 Katznelson の定理（Wiener–Lévy の逆）
 $A(\mathbb{T})$ に作用する（$F\circ f\in A$ for all real $f\in A$）関数 $F$ は実解析的である（Katznelson 1959, Helson–Kahane–Katznelson–Rudin）。主張と証明の骨格を述べよ。
 
 *4 円板代数の極大イデアル空間
 円板代数 $A(\mathbb{D})$ の極大イデアル空間は閉円板 $\bar{\mathbb{D}}$ であり、Shilov 境界は単位円周であることを示せ。
 
-*4 $H^{\infty}$ の極大イデアル空間と Carleson のコロナ定理 {corona}
+*5 $H^{\infty}$ の極大イデアル空間と Carleson のコロナ定理 {corona}
 $H^{\infty}(\mathbb{D})$ の極大イデアル空間で $\mathbb{D}$ は稠密である（Carleson 1962）。$\sum|f_{j}|\ge\delta$ なら $\sum f_{j}g_{j}=1$ となる $g_{j}\in H^{\infty}$ が存在する、という同値な形を述べ、Wolff の $\bar\partial$ による証明の骨格を与えよ。
 
 *4 $L^{1}(G)$ の極大イデアル空間と Fourier 変換
 局所コンパクト可換群 $G$ について、$L^{1}(G)$ の極大イデアル空間は双対群 $\hat G$ であり、Gelfand 変換は Fourier 変換に一致する。証明せよ。
 
-*4 Shilov の冪等元定理 {shilov-idem}
+*5 Shilov の冪等元定理 {shilov-idem}
 可換 Banach 環 $A$ の極大イデアル空間が $U_{1}\sqcup U_{2}$（開閉集合）と分解されれば、$\hat e=\mathbf{1}_{U_{1}}$ となる冪等元 $e\in A$ が存在する（Shilov 1953）。多変数正則関数カルキュラス（Arens–Calderón）を用いた証明の骨格を与えよ。
 
 *4 多変数正則関数カルキュラス（Arens–Calderón, Waelbroeck）
@@ -98,7 +98,7 @@ $H^{\infty}(\mathbb{D})$ の極大イデアル空間で $\mathbb{D}$ は稠密�
 *4 正則凸性と多項式凸包
 有限生成可換 Banach 環 $A$（生成元 $a_{1},\dots,a_{n}$）の極大イデアル空間は、結合スペクトルの多項式凸包と同相である。$P(K)$（多項式で生成される一様代数）の極大イデアル空間が $\hat K$（多項式凸包）であることを示せ。
 
-*4 Mergelyan の定理
+*5 Mergelyan の定理
 $K\subset\mathbb{C}$ がコンパクトで $\mathbb{C}\setminus K$ が連結なら、$K$ 上連続で内部で正則な関数は多項式で一様近似できる（Mergelyan 1951）。証明の骨格を与えよ。
 
 *4 Gleason 部分と解析的構造

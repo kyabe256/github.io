@@ -30,7 +30,7 @@ $F=\nabla\Phi$ 型の写像について、線形化の任意の固有値（重�
 *4 無限遠からの分岐（Rabinowitz）
 $x=\lambda Lx+H(x,\lambda)$ で $H=o(\|x\|)$（$\|x\|\to\infty$）のとき、奇数重複度の特性値から無限遠で分岐が起こることを反転 $x\mapsto x/\|x\|^{2}$ を用いて証明せよ（1973）。
 
-*4 無限次元の中心多様体定理
+*5 無限次元の中心多様体定理
 $\dot u=Au+f(u)$ で $A$ のスペクトルが虚軸上の有限個の固有値と左半平面に分かれるとき、局所不変な有限次元中心多様体が存在し、近傍の力学を縮約できることを証明せよ（Vanderbauwhede–Iooss 1992）。
 
 *4 同変分岐補題（Cicogna, Vanderbauwhede）
@@ -110,8 +110,8 @@ $\mathbb{R}^{m}$ 値 Radon 測度 $\mu_{k}\rightharpoonup^{*}\mu$ かつ $|\mu_{
 *4 BV のコンパクト性と等周問題の解の存在
 $BV(\Omega)$ の有界列は $L^{1}_{\mathrm{loc}}$ 相対コンパクトであり、全変動は $L^{1}$ 収束に関して下半連続であることを示し、体積制約下で周長を最小化する集合の存在を証明せよ（De Giorgi）。
 
-*4 Pólya–Szegő の不等式と Aubin–Talenti の最良定数
-対称減少再配置 $u^{*}$ について $\|\nabla u^{*}\|_{p}\le\|\nabla u\|_{p}$ を示し、Sobolev 不等式 $\|u\|_{p^{*}}\le S\|\nabla u\|_{p}$ の最良定数が $(a+b|x|^{p/(p-1)})^{1-n/p}$ 型の関数で達成されることを証明せよ（Aubin 1976、Talenti 1976）。
+*4 Riesz の再配置不等式と Brascamp–Lieb–Luttinger
+非負関数 $f,g,h$ について $\iint f(x)g(x-y)h(y)\le\iint f^{*}(x)g^{*}(x-y)h^{*}(y)$ を、Steiner 対称化の反復と収束論法で証明せよ（Riesz 1930）。多重積分への一般化（Brascamp–Lieb–Luttinger 1974）を述べよ。
 
 *5 $\mathcal{A}$-準凸性と下半連続性（Fonseca–Müller）
 定数係数の一階線形微分作用素 $\mathcal{A}$ が定階数条件をみたすとき、$\int f(v)$ が $\mathcal{A}v_{k}\to0$（$W^{-1,p}$）をみたす $L^{p}$ 弱収束列について下半連続 $\iff f$ が $\mathcal{A}$-準凸であることの証明の骨格を与えよ（Fonseca–Müller 1999）。$\mathcal{A}=\mathrm{curl}$ で {{R:quasiconvex}} に帰着することを確かめよ。

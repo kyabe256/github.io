@@ -12,7 +12,7 @@ $f\in H^{p}$（$f\neq0$）は $f=BSF$（$B$ は Blaschke 積、$S$ は特異内�
 *4 Szegő の定理（$H^{2}$ における予測理論）
 $\inf_{p}\int|1-p|^{2}w\frac{d\theta}{2\pi}=\exp\int\log w\frac{d\theta}{2\pi}$（$p$ は定数項なしの解析多項式）（Szegő 1920, Kolmogorov, Krein）。Beurling の定理を用いて証明し、定常過程の予測理論への応用を述べよ。
 
-*4 実 Hardy 空間 $H^{1}(\mathbb{R}^{n})$ の極大関数による特徴づけ（Fefferman–Stein） {real-hardy}
+*5 実 Hardy 空間 $H^{1}(\mathbb{R}^{n})$ の極大関数による特徴づけ（Fefferman–Stein） {real-hardy}
 $f\in L^{1}(\mathbb{R}^{n})$ について、$f\in H^{1}$（Riesz 変換がすべて $L^{1}$）$\iff$ 非接極大関数 $\sup_{|y-x|<t}|f*\phi_{t}(y)|\in L^{1}$ $\iff$ グランド極大関数 $\in L^{1}$（Fefferman–Stein 1972）。証明の骨格を与えよ。
 
 *4 原子分解（Coifman, Latter） {atom}
@@ -27,7 +27,7 @@ $f\in\mathrm{BMO}$ について $|\{x\in Q:|f-f_{Q}|>\lambda\}|\le C|Q|e^{-c\lam
 *4 Carleson 測度と Carleson の埋め込み定理 {carleson-meas}
 上半空間の測度 $\mu$ について、$\int|P_{t}*f|^{p}d\mu\le C\|f\|_{p}^{p}$（$1<p<\infty$）$\iff\mu$ が Carleson 測度（$\mu(Q\times(0,\ell(Q)))\le C|Q|$）（Carleson 1962）。証明せよ。
 
-*4 Coifman–Rochberg–Weiss の交換子定理
+*5 Coifman–Rochberg–Weiss の交換子定理
 $[b,R_{j}]$（$R_{j}$ は Riesz 変換）が $L^{p}$ 有界 $\iff b\in\mathrm{BMO}$（Coifman–Rochberg–Weiss 1976）。証明の骨格を与え、$H^{1}$ の弱分解（$H^{1}$ の元が $\sum(gR_{j}h+hR_{j}g)$ の和）を導け。
 
 *4 Uchiyama の定理（VMO と交換子のコンパクト性）
@@ -39,19 +39,19 @@ $[b,T]$ がコンパクト $\iff b\in\mathrm{VMO}$（BMO における $C_{c}^{\i
 *4 $H^{1}$ と Calderón–Zygmund 作用素
 Calderón–Zygmund 作用素は $H^{1}\to L^{1}$ および $L^{\infty}\to\mathrm{BMO}$ で有界であることを原子分解で示し、補間により $L^{p}$ 有界性を導け。
 
-*4 Coifman–Lions–Meyer–Semmes の補償コンパクト性
+*5 Coifman–Lions–Meyer–Semmes の補償コンパクト性
 $E\in L^{p}$, $B\in L^{p'}$ で $\operatorname{div}E=0$, $\operatorname{curl}B=0$ なら $E\cdot B\in H^{1}$（CLMS 1993）。証明の骨格を与え、Jacobian $\det\nabla u\in H^{1}$（$u\in W^{1,n}$）の正則性（Müller）への応用を述べよ。
 
-*4 Garnett–Jones の定理（BMO への距離）
+*5 Garnett–Jones の定理（BMO への距離）
 $\operatorname{dist}_{\mathrm{BMO}}(f,L^{\infty})\simeq\inf\{\varepsilon:e^{|f|/\varepsilon}\text{ が一様に局所可積分}\}$（Garnett–Jones 1978）。主張と証明の骨格を与えよ。
 
-*4 Helson–Szegő の定理と Muckenhoupt の $A_{2}$ 条件
+*5 Helson–Szegő の定理と Muckenhoupt の $A_{2}$ 条件
 重み $w$ について共役関数が $L^{2}(w)$ で有界 $\iff$ $\log w=u+\tilde v$（$\|v\|_{\infty}<\pi/2$）（Helson–Szegő 1960）$\iff w\in A_{2}$（Hunt–Muckenhoupt–Wheeden 1973）。後者の同値の骨格を与えよ。
 
 *4 Muckenhoupt の $A_{p}$ 重みと極大関数 {ap}
 $M$ が $L^{p}(w)$ で有界 $\iff w\in A_{p}$（$\sup_{Q}\fint_{Q}w(\fint_{Q}w^{-1/(p-1)})^{p-1}<\infty$）（Muckenhoupt 1972）。逆 Hölder 不等式と $A_{p}$ の開性（$A_{p}\subset A_{p-\varepsilon}$）を用いて証明せよ。
 
-*4 Hytönen の $A_{2}$ 定理 {a2}
+*5 Hytönen の $A_{2}$ 定理 {a2}
 Calderón–Zygmund 作用素 $T$ について $\|T\|_{L^{2}(w)}\le C[w]_{A_{2}}$（$[w]_{A_{2}}$ に関して線形、最良）（Hytönen 2012）。Lerner の sparse 支配（$|Tf|\le C\sum_{Q\in\mathcal{S}}\langle|f|\rangle_{Q}\mathbf{1}_{Q}$）による証明を与えよ。
 
 *5 Fefferman の $H^{1}$–BMO 双対の完全証明とその後
@@ -68,7 +68,7 @@ $\varphi:\mathbb{D}\to\mathbb{D}$ 正則のとき合成作用素 $C_{\varphi}f=f
 *4 Littlewood の従属原理
 $\varphi(0)=0$ なら $\|f\circ\varphi\|_{H^{p}}\le\|f\|_{H^{p}}$（Littlewood 1925）。劣調和関数の比較で証明せよ。
 
-*4 Shapiro のコンパクト性判定
+*5 Shapiro のコンパクト性判定
 合成作用素 $C_{\varphi}$ が $H^{2}$ 上コンパクト $\iff\lim_{|w|\to1}\frac{N_{\varphi}(w)}{\log(1/|w|)}=0$（$N_{\varphi}$ は Nevanlinna 計数関数）（Shapiro 1987）。主張と証明の骨格を与えよ。
 
 *4 Toeplitz 作用素の Brown–Halmos 理論
@@ -77,7 +77,7 @@ $H^{2}$ 上の Toeplitz 作用素 $T_{\varphi}$（$\varphi\in L^{\infty}$）に�
 *4 Hartman–Wintner と Widom の定理（Toeplitz のスペクトルの連結性）
 自己共役 Toeplitz 作用素のスペクトルは $[\operatorname{ess\,inf}\varphi,\operatorname{ess\,sup}\varphi]$（Hartman–Wintner 1954）、一般の Toeplitz 作用素のスペクトルは連結である（Widom 1964）。前者を証明せよ。
 
-*4 Bergman 空間上の Toeplitz 作用素とコンパクト性（Axler–Zheng）
+*5 Bergman 空間上の Toeplitz 作用素とコンパクト性（Axler–Zheng）
 Bergman 空間 $A^{2}(\mathbb{D})$ 上の有界作用素で Toeplitz 作用素の有限和の積からなるものがコンパクト $\iff$ Berezin 変換が境界で零（Axler–Zheng 1998）。主張と Berezin 変換の定義を述べよ。
 
 *4 Berezin 変換と Berezin–Toeplitz 量子化
@@ -89,13 +89,13 @@ Hilbert 行列が $H^{p}$（$1<p<\infty$）上の有界作用素を定め、ノ�
 *4 Cesàro 作用素の $H^{p}$ 有界性（Siskakis）
 Cesàro 作用素 $\mathcal{C}f(z)=\frac1z\int_{0}^{z}\frac{f(t)}{1-t}dt$ が $H^{p}$（$0<p<\infty$）上有界で、$H^{2}$ 上のスペクトルが円板 $\{|\lambda-1|\le1\}$ であること（Siskakis 1987）を示せ。
 
-*4 Volterra 型作用素と BMOA（Aleman–Siskakis）
+*5 Volterra 型作用素と BMOA（Aleman–Siskakis）
 $T_{g}f(z)=\int_{0}^{z}f(t)g'(t)dt$ が $H^{p}$ 上有界 $\iff g\in\mathrm{BMOA}$, コンパクト $\iff g\in\mathrm{VMOA}$（Aleman–Siskakis 1995）。証明の骨格を与えよ。
 
 *4 Dirichlet 空間の乗数と Stegenga の判定
 Dirichlet 空間 $\mathcal{D}$ の乗数 $\phi$ の特徴づけ（$|\phi'|^{2}dA$ が $\mathcal{D}$ の Carleson 測度、Stegenga 1980 の容量条件）を述べよ。
 
-*4 Brown の Hilbert 空間の乗数代数と Corona 問題
+*5 Brown の Hilbert 空間の乗数代数と Corona 問題
 RKHS の乗数代数 $\operatorname{Mult}(H)$ を定義し、完全 Pick 空間での Corona 定理（Costea–Sawyer–Wick 2011 の Drury–Arveson 空間）を述べよ。
 
 *4 等長作用素と RKHS（de Branges–Rovnyak 空間）
@@ -104,7 +104,7 @@ RKHS の乗数代数 $\operatorname{Mult}(H)$ を定義し、完全 Pick 空間�
 *4 モデル空間と Clark 測度
 内部関数 $\theta$ のモデル空間 $K_{\theta}$ 上の圧縮シフトのユニタリ摂動（Clark 摂動）$U_{\alpha}$ のスペクトル測度（Clark 測度 $\sigma_{\alpha}$）と Aleksandrov の分解定理 $\int\sigma_{\alpha}d\alpha=m$ を述べよ。
 
-*4 Aleksandrov–Clark 理論と Poltoratski の定理
+*5 Aleksandrov–Clark 理論と Poltoratski の定理
 Clark 測度に関する正規化 Cauchy 変換の境界値の存在（Poltoratski 1993）を述べ、ランク 1 摂動の理論との関係を説明せよ。
 
 *4 Hankel 作用素と Sarason の BMO

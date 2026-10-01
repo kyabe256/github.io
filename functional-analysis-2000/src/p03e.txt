@@ -12,7 +12,7 @@ $n\times n$ 行列 $A$ について、$\sup_{k}\|A^{k}\|$ と Kreiss 定数 $\su
 *4 Schmidt–Spitzer の定理
 帯 Toeplitz 行列の有限切断の固有値は、記号 $a$ の「$\Lambda(a)$ 曲線」（$|z_{k}(\lambda)|=|z_{k+1}(\lambda)|$ をみたす $\lambda$）に集積する（Schmidt–Spitzer 1960）。主張を述べよ。
 
-*4 Keldysh の完全性定理
+*5 Keldysh の完全性定理
 $A=H(I+S)$（$H$ はコンパクト自己共役で $\mathcal{S}_{p}$ に属し、$S$ はコンパクト、$I+S$ 可逆）の根ベクトル（一般化固有ベクトル）の系は完全である（Keldysh 1951）。主張と証明の骨格を与えよ。
 
 *4 Livšic の完全性定理
@@ -24,16 +24,16 @@ $A=H(I+S)$（$H$ はコンパクト自己共役で $\mathcal{S}_{p}$ に属し�
 *4 Macaev の定理（Volterra 作用素の虚部と実部）
 Volterra 作用素 $V$ について、$\operatorname{Im}V\in\mathcal{S}_{p}$（$1<p<\infty$）なら $\operatorname{Re}V\in\mathcal{S}_{p}$ である（Macaev）。主三角射影の $\mathcal{S}_{p}$ 有界性との関係を述べよ。
 
-*4 非正規作用素の関数計算の失敗と Crouzeix の予想
+*5 非正規作用素の関数計算の失敗と Crouzeix の予想
 任意の正方行列 $A$ と数域 $W(A)$ 上の多項式 $p$ について $\|p(A)\|\le C\sup_{W(A)}|p|$ が $C=1+\sqrt2$ で成り立つ（Crouzeix–Palencia 2017）ことを述べ、Crouzeix の予想（$C=2$）との関係を論ぜよ。
 
-*4 Crouzeix–Palencia の定理
+*5 Crouzeix–Palencia の定理
 $\|f(A)\|\le(1+\sqrt2)\sup_{W(A)}|f|$（$f$ は $W(A)$ の近傍で正則）。Cauchy 変換と二重層ポテンシャルを用いた証明の骨格を与えよ。
 
 *4 von Neumann のスペクトル集合と $K$-スペクトル集合
 閉集合 $X$ がスペクトル集合（有理関数 $r$ について $\|r(T)\|\le\sup_{X}|r|$）であることを定義し、縮小作用素では閉円板がスペクトル集合であること（von Neumann）、Delyon–Delyon の $K$-スペクトル集合定理を述べよ。
 
-*4 準相似と相似の問題（Halmos の多項式有界性の反例）
+*5 準相似と相似の問題（Halmos の多項式有界性の反例）
 多項式有界（$\|p(T)\|\le C\sup_{\mathbb{D}}|p|$）だが縮小作用素に相似でない作用素が存在する（Pisier 1997、Halmos の問題の否定的解決）。主張を述べ、Paulsen の判定（相似 $\iff$ 完全多項式有界）を述べよ。
 
 *4 Paulsen の相似性判定
@@ -48,7 +48,7 @@ $\sup_{n\ge0}\|T^{n}\|<\infty$（べき有界）だが縮小作用素に相似�
 *4 Gelfand–Hille の定理
 $\sigma(T)=\{1\}$ かつ $\sup_{n\in\mathbb{Z}}\|T^{n}\|<\infty$ なら $T=I$（Gelfand 1941）。$\|T^{n}\|=O(|n|^{k})$ なら $(T-I)^{k+1}=0$（Hille）を示せ。
 
-*4 Katznelson–Tzafriri の定理
+*5 Katznelson–Tzafriri の定理
 べき有界作用素 $T$ について、$\lim\|T^{n+1}-T^{n}\|=0\iff\sigma(T)\cap\mathbb{T}\subset\{1\}$（Katznelson–Tzafriri 1986）。証明の骨格を与えよ。
 
 *4 Esterle–Strouse–Zouakia の拡張
@@ -74,7 +74,7 @@ Segal 場 $\Phi(f)=\frac{1}{\sqrt2}(a(f)+a^{*}(f))$ は有限粒子ベクトル�
 *4 無限自由度での非同値表現の存在
 無限自由度の CCR には、Fock 表現とユニタリ非同値な既約表現が無数に存在する（例えば非可算個の非同値な準自由表現）。Friedrichs、van Hove の議論で例を示せ。
 
-*4 Shale の定理（Bogoliubov 変換の実装可能性）
+*5 Shale の定理（Bogoliubov 変換の実装可能性）
 シンプレクティック変換 $T$ が Fock 表現でユニタリに実装される $\iff$ $T^{*}T-I$ が Hilbert–Schmidt（Shale 1962）。証明の骨格を与えよ。
 
 *4 Shale–Stinespring の定理（CAR の場合）
@@ -110,10 +110,10 @@ spin–boson 模型（二準位系とボソン場）の基底状態が、赤外�
 *4 Glimm–Jaffe の $\phi^{4}_{2}$ 模型
 二次元 $\phi^{4}$ 場の Hamiltonian の自己共役性と下有界性（Glimm–Jaffe, Nelson の超縮小性による）を述べ、構成的場の理論における関数解析の役割を説明せよ。
 
-*4 Osterwalder–Schrader の再構成定理
+*5 Osterwalder–Schrader の再構成定理
 Euclid Green 関数（Schwinger 関数）が反射正値性などの公理をみたせば、相対論的量子場（Wightman 理論）が再構成される（Osterwalder–Schrader 1973）。反射正値性から Hilbert 空間と Hamiltonian を構成する部分を示せ。
 
-*4 Wightman の再構成定理と Reeh–Schlieder の定理
+*5 Wightman の再構成定理と Reeh–Schlieder の定理
 Wightman 関数からの場の再構成と、真空が局所代数に関して巡回的かつ分離的であること（Reeh–Schlieder 1961）を述べよ。
 
 *5 Bisognano–Wichmann の定理

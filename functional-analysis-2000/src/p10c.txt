@@ -9,16 +9,16 @@ a-T-従順群（Haagerup 性をもつ群、特に従順群）について、係�
 *5 Lafforgue の Banach $KK$ 理論と双曲群
 語双曲群について Baum–Connes 予想（係数つき）が成り立つことを、Banach $KK$ 理論（性質 (T) をもつ群にも適用できる）と強ボリック性（Mineyev–Yu 2002）を用いて証明の骨格とともに示せ（Lafforgue 2002, 2012）。
 
-*4 Kasparov の Novikov 予想の証明
+*5 Kasparov の Novikov 予想の証明
 連結 Lie 群の離散部分群について、Dirac–双対 Dirac 法により組立写像が分裂単射であることを示し、高次符号数のホモトピー不変性（Novikov 予想）を導け（Kasparov 1988）。
 
-*4 Higson–Lafforgue–Skandalis の反例
+*5 Higson–Lafforgue–Skandalis の反例
 グラフの膨張列を粗く含む群（Gromov の怪物群）について、係数つき Baum–Connes 予想が成り立たないことを、完全性の破れと $K$ 理論の計算で示せ（2002）。
 
-*4 Kadison–Kaplansky 予想
+*5 Kadison–Kaplansky 予想
 捩れのない群 $\Gamma$ について Baum–Connes 予想が成り立てば、$C_{r}^{*}(\Gamma)$ は非自明な射影をもたないことを、Atiyah の $L^{2}$ 指数定理を用いて証明せよ。
 
-*4 Gromov–Lawson–Rosenberg 予想と Schick の反例
+*5 Gromov–Lawson–Rosenberg 予想と Schick の反例
 spin 多様体 $M$（基本群 $\Gamma$）の Rosenberg 指数 $\alpha(M)\in KO_{n}(C_{r,\mathbb{R}}^{*}\Gamma)$ が正スカラー曲率の障害であることを示し、その逆（GLR 予想）が一般には成り立たないこと（Schick 1998）を述べよ。
 
 *4 Mishchenko–Fomenko の指数理論
@@ -30,32 +30,32 @@ Hilbert C*-加群を係数とする楕円型作用素の指数を $K_{0}(A)$ の
 *5 Yu の粗 Baum–Connes 定理
 有界幾何をもつ距離空間が Hilbert 空間へ粗埋め込み可能なら、粗 Baum–Connes 予想が成り立つことの証明の骨格を与え（Yu 2000）、系として粗埋め込み可能な群について Novikov 予想を導け。
 
-*4 Roe 代数と粗指数
+*5 Roe 代数と粗指数
 固有距離空間の Roe 代数 $C^{*}(X)$ を定義し、完備 spin 多様体の Dirac 作用素の粗指数 $\mathrm{ind}(D)\in K_{*}(C^{*}(X))$ が一様正スカラー曲率なら消えることを証明せよ（Roe 1993）。
 
-*4 Connes–Moscovici の双曲群に対する高次指数
+*5 Connes–Moscovici の双曲群に対する高次指数
 双曲群の多項式増大の群コサイクルが $K_{0}(C_{r}^{*}\Gamma)$ 上に拡張されることを、急減少性（{{R:haagerup-ineq}} の一般化、de la Harpe–Jolissaint）を用いて示し、高次符号数のホモトピー不変性を導け（Connes–Moscovici 1990）。
 
-*4 Lück の近似定理
+*5 Lück の近似定理
 剰余有限群 $\Gamma$ の正規部分群の減少列 $\Gamma_{n}$（$\bigcap\Gamma_{n}=1$）について、有限被覆の Betti 数を指数で割ったものが $L^{2}$-Betti 数に収束することを証明せよ（Lück 1994）。
 
-*4 $L^{2}$-Betti 数の無理数値（Atiyah の問題）
+*5 $L^{2}$-Betti 数の無理数値（Atiyah の問題）
 有限生成群上の行列の作用素の核の von Neumann 次元が有理数であるかという Atiyah の問題について、無理数（さらに超越数）の $L^{2}$-Betti 数が現れること（Austin 2013、Grabowski）を説明し、捩れのない群に対する強い Atiyah 予想を述べよ。
 
 *4 Cheeger–Gromov の消滅定理
 無限従順群の $L^{2}$-Betti 数がすべて消えることを、Følner 列による次元の近似で証明せよ（Cheeger–Gromov 1986）。
 
-*4 Lafforgue の強い性質 (T)
+*5 Lafforgue の強い性質 (T)
 $SL(3,\mathbb{R})$ の格子が強い性質 (T)（Banach 空間上の小さな指数増大表現に対する性質 (T) の強化）をもつことを述べ、これが Baum–Connes 予想に対する従来の Dirac–双対 Dirac 法の障害となることを説明せよ（Lafforgue 2008）。
 
-*4 性質 A と粗埋め込み
+*5 性質 A と粗埋め込み
 Yu の性質 A をもつ有界幾何の距離空間は Hilbert 空間へ粗埋め込み可能であることを証明せよ（Higson–Roe 2000）。Gromov のランダム群が粗埋め込み不可能な例を与えることを述べよ。
 
-*4 Hanke–Schick の定理
+*5 Hanke–Schick の定理
 拡大可能な閉 spin 多様体の Rosenberg 指数は消えないことを、Hilbert 加群束の指数理論で証明せよ（Hanke–Schick 2006）。
 
-*4 Kasparov–Yu の定理
-一様凸 Banach 空間に粗埋め込み可能な有限生成群について、Novikov 予想が成り立つことの証明の骨格を与えよ（Kasparov–Yu 2012）。
+*5 Skandalis–Tu–Yu の粗亜群
+有界幾何の距離空間 $X$ に粗亜群 $G(X)$ を対応させ、$X$ の粗 Baum–Connes 予想が $G(X)$ の（係数つき）Baum–Connes 予想と同値であることを示し、Hilbert 空間への粗埋め込み可能性が $G(X)$ の a-T-従順性と同値であることを証明せよ（2002）。
 
 *4 自由群の Baum–Connes 予想（Julg–Valette, Pimsner–Voiculescu）
 木に作用する群に対する Julg–Valette の Fredholm 加群を構成し、$\mathbb{F}_{n}$ について組立写像が同型であることを Pimsner–Voiculescu の計算と比較して示せ。
@@ -68,13 +68,13 @@ $f(s)=\sum a_{n}n^{-s}$（$a_{n}\ge0$）が $\mathrm{Re}\,s>1$ で収束し、$f
 *4 Newman の解析的タウバー定理
 有界関数 $f$ の Laplace 変換 $g(z)=\int_{0}^{\infty}f(t)e^{-zt}dt$ が $\mathrm{Re}\,z\ge0$ に解析接続されるなら $\int_{0}^{\infty}f$ が収束することを、Newman の周回積分で証明し、素数定理の短い証明を与えよ（Newman 1980）。
 
-*4 Nyman–Beurling の判定法
+*5 Nyman–Beurling の判定法
 Riemann 予想 $\iff$ $\rho_{\theta}(x)=\{\theta/x\}-\theta\{1/x\}$（$0<\theta\le1$）の一次結合全体が $L^{2}(0,1)$ で $\chi_{(0,1)}$ を近似することを証明せよ（Nyman 1950、Beurling 1955）。
 
-*4 Báez-Duarte の判定法
+*5 Báez-Duarte の判定法
 Riemann 予想 $\iff$ $\chi_{(0,1)}$ が $\{\rho_{1/n}:n\in\mathbb{N}\}$ の一次結合で $L^{2}(0,1)$ 近似できることを証明せよ（Báez-Duarte 2003）。
 
-*4 Weil の明示公式と正値性判定
+*5 Weil の明示公式と正値性判定
 試験関数 $h$ に対する Weil の明示公式 $\sum_{\rho}\hat h(\rho)=\cdots$ を導き、Riemann 予想が適当な試験関数の族に対する Weil 汎関数の正値性と同値であることを証明せよ（Weil 1952）。
 
 *5 Tate の学位論文
@@ -92,26 +92,26 @@ $\delta$-分離した $x_{r}\in\mathbb{R}/\mathbb{Z}$ について $\sum_{r}|\su
 *4 Beurling–Selberg の極値関数
 符号関数 $\mathrm{sgn}(x)$ を上から近似する指数型 $2\pi$ の整関数 $B(x)$ で $\int(B-\mathrm{sgn})=1$ となるものが最良であることを証明せよ（Beurling 1938、Selberg、Vaaler 1985）。
 
-*4 Montgomery のペア相関定理
+*5 Montgomery のペア相関定理
 Riemann 予想を仮定し、零点の虚部の正規化された差のペア相関関数 $F(\alpha)$ を、$|\alpha|<1$ の範囲で $F(\alpha)=|\alpha|+o(1)+T^{-2|\alpha|}\log T(1+o(1))$ と決定せよ（Montgomery 1973）。GUE との一致を述べよ。
 
 *5 Connes のスペクトル実現と跡公式
 アデール類空間 $\mathbb{A}_{\mathbb{Q}}/\mathbb{Q}^{*}$ 上のイデール類群の作用について、Riemann ゼータ関数の零点が吸収スペクトルとして現れること、および Weil の明示公式が跡公式として解釈されることの骨格を与えよ（Connes 1999）。
 
-*4 Ramanujan グラフ（Lubotzky–Phillips–Sarnak）
+*5 Ramanujan グラフ（Lubotzky–Phillips–Sarnak）
 $p,q$ を異なる素数とするとき、四元数代数の算術群による Cayley グラフ $X^{p,q}$ が $(p+1)$-正則で、非自明固有値が $2\sqrt p$ 以下であることを、Ramanujan–Petersson 予想（Deligne の定理）を用いて示せ（1988）。
 
 *4 Weyl の一様分布判定法と van der Corput
 数列 $(x_{n})$ が mod 1 で一様分布 $\iff$ 任意の $h\neq0$ で $\frac{1}{N}\sum e^{2\pi ihx_{n}}\to0$ を示し、van der Corput の差分定理を用いて $n^{2}\alpha$（$\alpha$ 無理数）の一様分布を証明せよ（Weyl 1916）。
 
-*4 Dirichlet 級数の Hardy 空間（Hedenmalm–Lindqvist–Seip）
+*5 Dirichlet 級数の Hardy 空間（Hedenmalm–Lindqvist–Seip）
 $\mathcal{H}^{2}=\{\sum a_{n}n^{-s}:\sum|a_{n}|^{2}<\infty\}$ が Bohr 持ち上げにより $H^{2}(\mathbb{T}^{\infty})$ と等長同型であることを示し、乗数環が $\mathrm{Re}\,s>0$ の有界 Dirichlet 級数の空間 $\mathcal{H}^{\infty}$ であることを証明せよ（1997）。
 
 *5 Bohnenblust–Hille 不等式の次元依存性
 $m$ 次斉次多項式に対する Bohnenblust–Hille 不等式の定数が超収縮的（$C^{m}$ 型）であることを示し、系として Dirichlet 級数の Bohr の帯の幅と Bohr 半径の漸近を決定せよ（Defant–Frerick–Ortega-Cerdà–Ounaïes–Seip 2011）。
 
-*4 Karamata のタウバー定理
-非負測度 $\mu$ について $\int_{0}^{\infty}e^{-tx}d\mu(x)\sim Ct^{-\alpha}$（$t\to0$）なら $\mu([0,x])\sim\frac{C}{\Gamma(\alpha+1)}x^{\alpha}$ を、Weierstrass の近似定理を用いて証明せよ（Karamata 1931）。Weyl 則への応用を述べよ。
+*5 Li の判定法
+$\xi(s)$ の零点 $\rho$ による $\lambda_{n}=\sum_{\rho}\left(1-(1-\frac{1}{\rho})^{n}\right)$ について、Riemann 予想 $\iff$ すべての $n\ge1$ で $\lambda_{n}\ge0$ を証明せよ（Li 1997）。Bombieri–Lagarias による明示公式との関係を述べよ。
 
 *4 Voronin の普遍性定理
 $\frac{1}{2}<\mathrm{Re}\,s<1$ 内の閉円板 $K$ 上で連続かつ内部で正則な零点をもたない関数 $f$ と $\varepsilon>0$ に対し、$\max_{s\in K}|\zeta(s+i\tau)-f(s)|<\varepsilon$ となる $\tau$ の下密度が正であることを証明せよ（Voronin 1975）。
@@ -119,5 +119,5 @@ $\frac{1}{2}<\mathrm{Re}\,s<1$ 内の閉円板 $K$ 上で連続かつ内部で�
 *4 Hecke 作用素の自己共役性
 レベル $1$ の尖点形式の空間上で Hecke 作用素 $T_{n}$ が Petersson 内積に関して自己共役で互いに可換であることを示し、同時固有形式からなる基底の存在と係数の乗法性を導け。
 
-*4 Selberg の $\frac{3}{16}$ 定理
+*5 Selberg の $\frac{3}{16}$ 定理
 合同部分群 $\Gamma(N)$ について、$\Gamma(N)\backslash\mathbb{H}$ 上の Laplacian の非零固有値が $\lambda_{1}\ge\frac{3}{16}$ をみたすことを、Kloosterman 和の Weil 評価と Selberg の Kloosterman ゼータ関数の解析接続を用いて証明の骨格とともに示せ（Selberg 1965）。

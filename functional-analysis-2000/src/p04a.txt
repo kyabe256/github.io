@@ -95,7 +95,7 @@ Banach 空間の m-増大作用素（$-A$ が m-散逸的）の定義を線形�
 *4 Kolmogorov 作用素とスペクトル（Ornstein–Uhlenbeck の $L^{p}$ スペクトル）
 $L^{p}(\gamma)$（$\gamma$ はガウス測度）上の Ornstein–Uhlenbeck 作用素 $Lu=\Delta u-x\cdot\nabla u$ のスペクトルが $p$ に依らず $\{0,-1,-2,\dots\}$ であること（$1<p<\infty$）、一方 $L^{p}(\mathbb{R}^{n},dx)$ では $p$ に依存することを述べよ（Metafune–Pallara–Priola）。
 
-*4 Ornstein–Uhlenbeck 半群の $L^{p}$ スペクトルの $p$ 依存性
+*5 Ornstein–Uhlenbeck 半群の $L^{p}$ スペクトルの $p$ 依存性
 Lebesgue 測度に関する $L^{p}(\mathbb{R}^{n})$ 上の OU 作用素のスペクトルが、左半平面の $p$ 依存の扇形を含むこと（Metafune 2001）を述べよ。
 
 *4 境界条件と半群：Wentzell 境界条件
@@ -113,7 +113,7 @@ Hilbert 空間で $A$ がスキュー随伴 $\iff$ $\pm A$ がともに極大散
 *4 熱方程式の Neumann 問題と保存性
 Neumann Laplacian の熱半群が質量を保存する（$\int e^{t\Delta_{N}}f=\int f$）ことを示し、Dirichlet の場合の質量減少と比較せよ。
 
-*4 確率的完全性と Grigor'yan の判定
+*5 確率的完全性と Grigor'yan の判定
 完備 Riemann 多様体の熱半群が確率的完全（$e^{t\Delta}1=1$）であるための体積増大条件 $\int^{\infty}\frac{r\,dr}{\log V(r)}=\infty$（Grigor'yan 1986）を述べ、証明の骨格を与えよ。
 
 *4 Kato 型の摂動による生成定理（Miyadera–Voigt）

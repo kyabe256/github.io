@@ -6,7 +6,7 @@
 *4 数域半径の性質
 数域半径 $w(T)$ はノルムであり $\frac12\|T\|\le w(T)\le\|T\|$。$T^{2}=0$ なら $w(T)=\frac12\|T\|$ を示せ。
 
-*4 Berger のべき不等式
+*5 Berger のべき不等式
 $w(T^{n})\le w(T)^{n}$（Berger 1965）。Pearcy の初等的証明を与え、Halmos の予想の解決として位置づけよ。
 
 *4 Ando の数域半径の特徴づけ
@@ -15,7 +15,7 @@ $w(T)\le1$ $\iff$ ある縮小作用素 $Z$ で $T=2(I-Z^{*}Z)^{1/2}Z$ と書け
 *4 Löwner–Heinz の不等式 {loewner-heinz}
 $A\ge B\ge0$ なら $0\le p\le1$ で $A^{p}\ge B^{p}$ だが、$p>1$ では一般に成り立たない（$2\times2$ の反例）。積分表示 $t^{p}=\frac{\sin p\pi}{\pi}\int_{0}^{\infty}\frac{t}{t+s}s^{p-1}ds$ を用いて証明せよ。
 
-*4 Löwner の定理（作用素単調関数） {loewner}
+*5 Löwner の定理（作用素単調関数） {loewner}
 $(0,\infty)$ 上の関数 $f$ がすべてのサイズの行列で作用素単調 $\iff f$ が上半平面に解析接続されて上半平面を自身に写す（Pick 関数）。Löwner 行列の正定値性と Pick–Nevanlinna 表示を用いた証明の骨格を与えよ。
 
 *4 Hansen–Pedersen–Jensen の作用素不等式
@@ -27,7 +27,7 @@ $(0,\infty)$ 上の関数 $f$ がすべてのサイズの行列で作用素単�
 *4 Heinz–Kato の不等式
 $|\langle Tx,y\rangle|^{2}\le\langle|T|^{2\alpha}x,x\rangle\langle|T^{*}|^{2(1-\alpha)}y,y\rangle$（$0\le\alpha\le1$）。証明せよ。
 
-*4 McIntosh–Heinz の不等式
+*5 McIntosh–Heinz の不等式
 $\|A^{\nu}XB^{1-\nu}+A^{1-\nu}XB^{\nu}\|\le\|AX+XB\|$（$A,B\ge0$, $0\le\nu\le1$、ユニタリ不変ノルム）。補間の議論で証明の骨格を与えよ。
 
 *4 Weyl の不等式（固有値と特異値）
@@ -39,7 +39,7 @@ $n\times n$ 行列の固有値 $|\lambda_{1}|\ge\cdots$ と特異値 $s_{1}\ge\c
 *4 Lidskii–Wielandt の定理
 Hermite 行列 $A,B$ の固有値（降順）について、$\lambda(A+B)-\lambda(A)$ は $\lambda(B)$ の置換の凸包に属する（Lidskii 1950）。Wielandt の min-max 原理から証明せよ。
 
-*4 Horn の問題と Knutson–Tao の飽和定理
+*5 Horn の問題と Knutson–Tao の飽和定理
 Hermite 行列 $A,B,C=A+B$ の固有値の組として可能なものは Horn の不等式で特徴づけられる。Klyachko の定理と Knutson–Tao のハニカム（飽和予想の解決）による主張を述べよ。
 
 *4 Schur 積定理とその作用素版
@@ -104,7 +104,7 @@ $f*g=0$ on $[0,1]$ なら、ある $a,b$（$a+b\ge1$）で $f=0$ on $[0,a]$, $g=
 *4 コンパクト作用素の Schauder 基底による特徴づけ（Banach 空間）
 基底をもつ Banach 空間で、コンパクト作用素が有限ランク作用素で近似できることを示し、Grothendieck の近似性質の同値条件（コンパクト集合上の恒等写像の有限ランク近似）を述べよ。
 
-*4 Enflo の近似性質の反例 {enflo}
+*5 Enflo の近似性質の反例 {enflo}
 近似性質をもたない（したがって Schauder 基底をもたない）可分 Banach 空間が存在する（Enflo 1973）。Davie による簡略化された構成の骨格を与え、Mazur の「スコティッシュブック」の問題（ガチョウの賞品）との関係を述べよ。
 
 *4 Szankowski の定理（$\mathcal{B}(H)$ は近似性質をもたない）
@@ -119,5 +119,5 @@ $T$ が弱コンパクト $\iff T^{**}(X^{**})\subset Y$ $\iff T^{*}$ が弱コ�
 *5 Read の不変部分空間問題の反例
 非自明な閉不変部分空間をもたない有界作用素が $\ell^{1}$ 上に存在する（Read 1984, 1985；Enflo の先行構成）。主張と構成の着想を述べ、Hilbert 空間では未解決であることを強調せよ。
 
-*5 Argyros–Haydon の空間とスカラー＋コンパクト性質
-すべての有界作用素が $\lambda I+K$（$K$ コンパクト）の形となる無限次元 Banach 空間が存在する（Argyros–Haydon 2011）。この空間上のすべての作用素が非自明な不変部分空間をもつことを、Lomonosov の定理から導け。
+*5 Figiel–Johnson の定理（近似性質と有界近似性質）
+近似性質をもつが有界近似性質をもたない Banach 空間が存在することを示し（Figiel–Johnson 1973）、反射的空間または可分双対空間では近似性質から計量的近似性質が従うこと（Grothendieck）を証明せよ。

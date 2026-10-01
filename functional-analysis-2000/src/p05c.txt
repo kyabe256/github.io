@@ -18,16 +18,16 @@ Dvoretzky 次元が $k(X)\simeq n(M_{X}/b_{X})^{2}$（$M_{X}$ は球面上の平
 *4 Figiel–Lindenstrauss–Milman の不等式（$\ell^{1}_{n}$ の大きな Euclid 切断）
 $\ell^{1}_{n}$ は比例次元 $k=\lambda n$ の部分空間で $\ell^{2}_{k}$ と $C(\lambda)$-同型なものを含む（Kashin 1977, FLM）。$\ell^{1}_{n}$ と $\ell^{2}_{n}$ のノルムの比較から証明せよ。
 
-*4 Milman の商の部分空間定理（QS 定理）
+*5 Milman の商の部分空間定理（QS 定理）
 任意の $n$ 次元空間 $X$ は、次元 $\ge\lambda n$ の部分空間の商で $\ell^{2}$ と $C(1-\lambda)^{-1}|\log(1-\lambda)|$-同型なものをもつ（Milman 1985）。主張と証明の骨格を与えよ。
 
-*4 Bourgain–Milman の逆 Santaló 不等式
+*5 Bourgain–Milman の逆 Santaló 不等式
 中心対称凸体について $|K||K^{\circ}|\ge c^{n}|B^{n}_{2}|^{2}$（Bourgain–Milman 1987）。Milman の $M$-楕円体を用いた証明の骨格を与え、Kuperberg の改良（$c=\pi/4$ 程度）を述べよ。
 
 *4 Milman の $M$-楕円体と逆 Brunn–Minkowski 不等式
 任意の凸体 $K$ に、体積と被覆数を「同型的に」保つ楕円体 $\mathcal{E}_{K}$ が存在し、$|K+T|^{1/n}\le C(|K|^{1/n}+|T|^{1/n})$（適当な位置で）が成り立つ（Milman 1986）。主張を述べよ。
 
-*4 Pisier の $MM^{*}$ 評価と $\ell$-位置（Lewis, Figiel–Tomczak-Jaegermann）
+*5 Pisier の $MM^{*}$ 評価と $\ell$-位置（Lewis, Figiel–Tomczak-Jaegermann）
 任意の $n$ 次元空間について、適当な位置で $M(K)M^{*}(K)\le C\log(1+d(X,\ell^{2}_{n}))\le C\log n$（$\ell$-位置、Lewis 1979, Figiel–Tomczak-Jaegermann, Pisier）。証明の骨格を与えよ。
 
 *4 Urysohn の不等式と平均幅
@@ -39,19 +39,19 @@ $\ell^{1}_{n}$ は比例次元 $k=\lambda n$ の部分空間で $\ell^{2}_{k}$ �
 *4 体積比の理論（Szarek–Tomczak-Jaegermann）
 体積比 $\operatorname{vr}(K)=(|K|/|\mathcal{E}|)^{1/n}$（$\mathcal{E}$ は John 楕円体）が有界な空間は、比例次元の Euclid 部分空間をほとんどすべての方向にもつ（Szarek 1978）。$\ell^{1}_{n}$ に適用せよ。
 
-*4 Bourgain–Tzafriri の制限可逆性定理
+*5 Bourgain–Tzafriri の制限可逆性定理
 $n\times n$ 行列 $T$（列のノルム 1）に対し、$|\sigma|\ge cn/\|T\|^{2}$ なる座標部分集合 $\sigma$ で $T|_{\mathbb{R}^{\sigma}}$ が一様に可逆なものが存在する（Bourgain–Tzafriri 1987）。主張と、Spielman–Srivastava の障壁関数による証明の骨格を与えよ。
 
 *4 Sauer–Shelah 補題と Banach 空間（Elton, Pajor）
 $\ell^{1}_{k}$ のコピーを含む条件を組合せ論で特徴づける Elton の定理（$\|\sum\pm x_{i}\|\ge\delta n$ の平均から $\ell^{1}_{k}$ が比例次元で現れる）を述べ、VC 次元との関係を述べよ。
 
-*4 Talagrand の凸距離不等式
+*5 Talagrand の凸距離不等式
 直積確率空間で、凸距離 $d_{T}(x,A)$ について $\mathbb{P}(A)\,E[e^{d_{T}^{2}/4}]\le1$（Talagrand 1995）。証明し、凸 Lipschitz 関数の集中への応用を述べよ。
 
 *4 Gauss 測度の等周不等式（Borell, Sudakov–Tsirelson）
 Gauss 測度で、与えられた測度の集合のうち $\varepsilon$-近傍の測度を最小化するのは半空間である（Borell 1975, Sudakov–Tsirelson 1974）。Ehrhard 対称化あるいは Bobkov の関数不等式で証明せよ。
 
-*4 Klartag の中心極限定理（凸体）
+*5 Klartag の中心極限定理（凸体）
 等方的凸体上の一様分布の典型的な一次元周辺分布は Gauss 分布に近い（Klartag 2007, Anttila–Ball–Perissinaki の予想）。主張を述べ、薄殻評価との関係を説明せよ。
 
 *5 Dvoretzky の定理の $\varepsilon$ 依存性（Gordon, Schechtman, Tikhomirov）
@@ -86,7 +86,7 @@ $n$ 次元空間の恒等作用素について $\pi_{2}(I_{X})=\sqrt n$（Garlin
 *4 核作用素と積分作用素
 核作用素 $\sum x_{i}^{*}\otimes y_{i}$（$\sum\|x_{i}^{*}\|\|y_{i}\|<\infty$）と（Grothendieck の意味の）積分作用素を定義し、Hilbert 空間では核作用素 $=$ トレースクラスであることを示せ。
 
-*4 Grothendieck の $p$-核作用素と固有値分布（König, Johnson–König–Maurey–Retherford）
+*5 Grothendieck の $p$-核作用素と固有値分布（König, Johnson–König–Maurey–Retherford）
 $p$-総和作用素（$p\ge2$）の固有値は $\ell^{p}$ に属し、1-総和作用素の固有値は $\ell^{2}$ に属する（Johnson–König–Maurey–Retherford 1979）。主張と証明の骨格を与えよ。
 
 *4 Weyl の不等式の Banach 空間版（König）
@@ -110,7 +110,7 @@ Grothendieck の定理が成り立つ（$X^{*}$ と $Y^{*}$ が GT 空間）が�
 *4 Pisier の空間 $P$（$X\hat\otimes_{\pi}X=X\check\otimes_{\varepsilon}X$）
 射影テンソル積と単射テンソル積が同型となる無限次元 Banach 空間が存在する（Pisier 1983）。主張を述べ、Grothendieck の問題の否定的解決として意義を述べよ。
 
-*4 Maurey の因数分解定理（$L^{p}$ を経由した分解）
+*5 Maurey の因数分解定理（$L^{p}$ を経由した分解）
 $L^{p}$（$p<2$）から余型 2 の空間への作用素は $L^{2}$（重み付き）を経由して分解する（Maurey）。Nikishin–Maurey の因数分解の理論の骨格を述べよ。
 
 *4 Nikishin の定理（測度収束への分解）

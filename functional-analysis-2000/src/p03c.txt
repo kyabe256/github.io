@@ -33,13 +33,13 @@ $B$ が $A$-コンパクト（$B(A+i)^{-1}$ がコンパクト）なら $\sigma_
 *4 Birman–Schwinger の原理 {birman-schwinger}
 $V\le0$ について、$-\Delta+V$ の $E<0$ 以下の固有値の個数は $K_{E}=|V|^{1/2}(-\Delta-E)^{-1}|V|^{1/2}$ の $1$ 以上の固有値の個数に等しい。証明し、Cwikel–Lieb–Rozenblum の評価への応用を述べよ。
 
-*4 Cwikel–Lieb–Rozenblum の不等式
+*5 Cwikel–Lieb–Rozenblum の不等式
 $n\ge3$ で $-\Delta+V$ の負固有値の個数は $N\le C_{n}\int V_{-}^{n/2}$（CLR）。Lieb の証明（Feynman–Kac）あるいは Cwikel の弱型 Schatten 評価の骨格を与えよ。
 
 *4 Lieb–Thirring の不等式 {lieb-thirring}
 $\sum|E_{j}|^{\gamma}\le L_{\gamma,n}\int V_{-}^{\gamma+n/2}$（$\gamma\ge\frac12$ $(n=1)$, $\gamma>0$ $(n=2)$, $\gamma\ge0$ $(n\ge3)$）。$\gamma=1$ の場合を Birman–Schwinger と CLR から導き、物質の安定性（Lieb–Thirring 1975）への応用を述べよ。
 
-*4 物質の安定性（Dyson–Lenard, Lieb–Thirring）
+*5 物質の安定性（Dyson–Lenard, Lieb–Thirring）
 $N$ 個の電子と $K$ 個の原子核からなる Coulomb 系の基底エネルギーが $E_{0}\ge-C(N+K)$（線形）であること（Dyson–Lenard 1967, Lieb–Thirring 1975）を、Lieb–Thirring の不等式と Thomas–Fermi 理論の非結合定理から導く骨格を与えよ。
 
 *4 一次元・二次元の弱結合束縛状態（Simon）
@@ -74,7 +74,7 @@ $\psi\in H_{ac}$ なら $\langle\phi,e^{-itH}\psi\rangle\to0$（$t\to\infty$）�
 *4 Rajchman 測度と特異連続スペクトル
 Fourier 係数が零に収束する特異測度（Rajchman 測度）の存在（Menshov）を示し、特異連続スペクトルでも相関関数が減衰しうることを述べよ。
 
-*4 Simon–Wolff の判定条件
+*5 Simon–Wolff の判定条件
 ランク 1 摂動 $H_{\lambda}=H+\lambda\langle\delta,\cdot\rangle\delta$ について、区間 $I$ 上で Lebesgue ほとんどすべての $E$ で $\int\frac{d\mu(x)}{(x-E)^{2}}<\infty$ $\iff$ ほとんどすべての $\lambda$ で $H_{\lambda}$ のスペクトルが $I$ 上純点（Simon–Wolff 1986）。証明の骨格を与えよ。
 
 *4 Aronszajn–Donoghue の理論（ランク 1 摂動）
@@ -83,37 +83,37 @@ Fourier 係数が零に収束する特異測度（Rajchman 測度）の存在（
 *4 Gordon の補題と特異連続スペクトル（Jitomirskaya–Simon）
 一次元離散 Schrödinger 作用素で、ポテンシャルが「ほぼ周期的に繰り返す」（Gordon 条件）なら固有値をもたない。Gordon の補題（転送行列の Cayley–Hamilton）で証明せよ。
 
-*4 Simon の「特異連続スペクトルは一般的」定理
+*5 Simon の「特異連続スペクトルは一般的」定理
 有界自己共役作用素の稠密 $G_{\delta}$ 集合（適当な位相で）は純特異連続スペクトルをもつ（Simon 1995 "Operators with singular continuous spectrum: I. General operators"）。主張を述べ、Baire 論法の骨格を与えよ。
 
-*4 Kotani 理論（一次元エルゴード Schrödinger 作用素）
+*5 Kotani 理論（一次元エルゴード Schrödinger 作用素）
 エルゴード的ポテンシャルの一次元 Schrödinger 作用素で、絶対連続スペクトルの本質的台が Lyapunov 指数が零となるエネルギーの集合（の本質的閉包）に一致する（Kotani 1984, Ishii–Pastur）。主張と証明の骨格を与えよ。
 
 *4 Ishii–Pastur の定理
 エルゴード的一次元 Schrödinger 作用素について、Lyapunov 指数 $\gamma(E)>0$ のエネルギー集合上には絶対連続スペクトルがない（Ishii 1973, Pastur 1980）。Ruelle–Oseledec の定理から導け。
 
-*4 Anderson 局在（一次元、Kunz–Souillard）
+*5 Anderson 局在（一次元、Kunz–Souillard）
 i.i.d. ポテンシャルの一次元離散 Schrödinger 作用素は、ほとんど確実に純点スペクトルで固有関数は指数的に減衰する（Kunz–Souillard 1980, Gol'dsheid–Molchanov–Pastur）。証明の骨格を与えよ。
 
-*4 Aizenman–Molchanov の分数モーメント法 {am}
+*5 Aizenman–Molchanov の分数モーメント法 {am}
 多次元 Anderson 模型で、大きな乱雑さ（あるいはバンド端）においてグリーン関数の分数モーメントが指数減衰し、局在（純点スペクトル）が従う（Aizenman–Molchanov 1993）。証明の骨格を与えよ。
 
 *4 Almost Mathieu 作用素と Aubry 双対性
 $(H_{\lambda,\alpha,\theta}u)(n)=u(n+1)+u(n-1)+2\lambda\cos(2\pi(\alpha n+\theta))u(n)$ について、Aubry 双対性 $\lambda\leftrightarrow1/\lambda$ を示し、Lyapunov 指数が $\max(0,\log\lambda)$ であること（Herman, Bourgain–Jitomirskaya）を述べよ。
 
-*4 Ten Martini 問題（Avila–Jitomirskaya）
+*5 Ten Martini 問題（Avila–Jitomirskaya）
 無理数 $\alpha$ と $\lambda\neq0$ について、almost Mathieu 作用素のスペクトルは Cantor 集合である（Avila–Jitomirskaya 2009, Ten Martini 問題の解決）。主張を述べ、証明の主要な段階を述べよ。
 
-*4 Avila の大域理論（Lyapunov 指数の量子化）
+*5 Avila の大域理論（Lyapunov 指数の量子化）
 解析的一周波数擬周期 Schrödinger 作用素の Lyapunov 指数の複素化 $L(E,\varepsilon)$ が $\varepsilon$ について区分線形凸で傾きが量子化されている（Avila 2015）ことを述べ、超臨界・臨界・亜臨界の分類を説明せよ。
 
 *4 周期 Schrödinger 作用素のバンド構造（Floquet–Bloch）
 周期ポテンシャルの Schrödinger 作用素 $-\Delta+V$ は Floquet–Bloch 分解により純絶対連続スペクトルをもち、バンド構造をなす（Thomas 1973）。一次元で Hill 判別式によるバンド・ギャップの記述を与えよ。
 
-*4 Thomas の定理（周期作用素の絶対連続性）
+*5 Thomas の定理（周期作用素の絶対連続性）
 周期ポテンシャル $V\in L^{\infty}$ の $-\Delta+V$ は固有値をもたず、スペクトルは純粋に絶対連続である（Thomas 1973）。複素準運動量の議論で証明の骨格を与えよ。
 
-*4 Bethe–Sommerfeld 予想
+*5 Bethe–Sommerfeld 予想
 次元 $n\ge2$ の周期 Schrödinger 作用素のスペクトルのギャップは有限個である（Bethe–Sommerfeld 予想、Parnovski 2008 による一般的解決）。主張を述べ、一次元では無限個のギャップが一般的であることと対比せよ。
 
 *5 量子力学の時間発展とスペクトルの次元（Guarneri, Last）

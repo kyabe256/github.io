@@ -9,7 +9,7 @@ Peetre の $K$ 関数 $K(t,x)=\inf\{\|x_{0}\|+t\|x_{1}\|\}$ による $(X_{0},X_
 *4 Lions–Peetre の再補間定理
 $(X_{0},X_{1})_{\theta,q}$ の再補間について $((X_{0},X_{1})_{\theta_{0},q_{0}},(X_{0},X_{1})_{\theta_{1},q_{1}})_{\eta,q}=(X_{0},X_{1})_{\theta,q}$（$\theta=(1-\eta)\theta_{0}+\eta\theta_{1}$）。証明せよ。
 
-*4 Calderón の複素補間の双対定理
+*5 Calderón の複素補間の双対定理
 $X_{0}\cap X_{1}$ が両方で稠密で、一方が反射的なら $[X_{0},X_{1}]_{\theta}^{*}=[X_{0}^{*},X_{1}^{*}]^{\theta}=[X_{0}^{*},X_{1}^{*}]_{\theta}$（Calderón 1964）。主張と証明の骨格を与えよ。
 
 *4 Wolff の再補間定理
@@ -39,10 +39,10 @@ $\operatorname{supp}\hat f\subset B(0,R)$ なら $\|\partial^{\alpha}f\|_{q}\le 
 *4 ウェーブレットによる関数空間の特徴づけ（Meyer）
 滑らかな直交ウェーブレット基底が $L^{p}$（$1<p<\infty$）、$H^{1}$、$B^{s}_{p,q}$、$F^{s}_{p,q}$ の無条件基底であり、ノルムがウェーブレット係数の列ノルムで特徴づけられる（Meyer, Frazier–Jawerth）ことを示せ。
 
-*4 Daubechies のコンパクト台ウェーブレット
+*5 Daubechies のコンパクト台ウェーブレット
 任意の $N$ に対し、コンパクト台をもち $C^{N}$ な直交ウェーブレットが存在する（Daubechies 1988）。多重解像度解析とフィルタの条件から構成の骨格を与えよ。
 
-*4 Calderón–Zygmund 型の補間と弱型評価の外挿（Rubio de Francia）
+*5 Calderón–Zygmund 型の補間と弱型評価の外挿（Rubio de Francia）
 Rubio de Francia の外挿定理：ある $p_{0}$ ですべての $A_{p_{0}}$ 重みについて有界なら、すべての $1<p<\infty$ とすべての $A_{p}$ 重みで有界（Rubio de Francia 1984）。証明の骨格を与えよ。
 
 *4 Kalton の補間の非線形性と導分（Rochberg–Weiss）
@@ -71,7 +71,7 @@ Banach 関数束の対 $(X_{0},X_{1})$ について、$[X_{0},X_{1}]_{\theta}=X_
 *4 核型空間の Grothendieck–Pietsch 判定
 Köthe 列空間 $\lambda^{p}(A)$ が核型 $\iff$ 各 $n$ に $m$ が存在して $\sum_{k}a_{n}(k)/a_{m}(k)<\infty$（Grothendieck–Pietsch）。証明し、$s$（急減少列空間）が核型であることを示せ。
 
-*4 核型空間と射影・単射テンソル積の一致
+*5 核型空間と射影・単射テンソル積の一致
 $X$ が核型 $\iff$ すべての局所凸空間 $Y$ で $X\hat\otimes_{\pi}Y=X\hat\otimes_{\varepsilon}Y$（Grothendieck）。証明の骨格を与え、$\mathcal{S}(\mathbb{R}^{m})\hat\otimes\mathcal{S}(\mathbb{R}^{n})\cong\mathcal{S}(\mathbb{R}^{m+n})$ を示せ。
 
 *4 Dvoretzky–Rogers と核型 Banach 空間の非存在
@@ -83,7 +83,7 @@ $X$ が核型 $\iff$ すべての局所凸空間 $Y$ で $X\hat\otimes_{\pi}Y=X\
 *4 Minlos の定理 {minlos}
 核型空間 $\mathcal{N}$ 上の連続な正定値関数 $C$（$C(0)=1$）は、双対 $\mathcal{N}'$ 上の確率測度 $\mu$ の特性汎関数 $C(\varphi)=\int e^{i\langle x,\varphi\rangle}d\mu(x)$ である（Minlos 1959）。$\mathcal{S}'$ 上のホワイトノイズ測度と自由場の Gauss 測度を構成せよ。
 
-*4 Sazonov の定理（Hilbert 空間版 Minlos）
+*5 Sazonov の定理（Hilbert 空間版 Minlos）
 Hilbert 空間 $H$ 上の正定値関数 $C$ が $H$ 上の確率測度の特性関数であるための必要十分条件は、Sazonov 位相（Hilbert–Schmidt 作用素で定まる位相）について連続であること（Sazonov 1958）。証明の骨格を与え、$H$ 上の「標準 Gauss 測度」が存在しないことを示せ。
 
 *4 Bochner–Minlos と核型空間の特徴づけ（Mushtari）
@@ -95,7 +95,7 @@ Hilbert 空間 $H$ 上の正定値関数 $C$ が $H$ 上の確率測度の特性
 *4 Kolmogorov の幅と核型性（Mityagin）
 Fréchet 空間の核型性が、単位近傍の Kolmogorov 幅の急減少性で特徴づけられること（Mityagin 1961）を述べ、直径次元が同型不変量であることを示せ。
 
-*4 $\mathcal{D}(\Omega)$ の同型類（Valdivia–Vogt）
+*5 $\mathcal{D}(\Omega)$ の同型類（Valdivia–Vogt）
 任意の開集合 $\Omega\subset\mathbb{R}^{n}$ について $\mathcal{D}(\Omega)\cong s^{(\mathbb{N})}$（急減少列空間 $s$ の可算直和）、$\mathcal{D}'(\Omega)\cong(s')^{\mathbb{N}}$ である（Valdivia 1978, Vogt 1983）。主張を述べ、$C^{\infty}_{c}(K)\cong s$（Mityagin）を用いた証明の骨格を与えよ。$\mathcal{D}(\Omega)$ の同型類が $\Omega$ に依らないことを結論せよ。
 
 *4 Schwartz の $\varepsilon$ 積とベクトル値超関数
@@ -104,10 +104,10 @@ Schwartz の $\varepsilon$ 積 $X\varepsilon Y$ を定義し、$\mathcal{E}(\Ome
 *4 Ehrenpreis–Malgrange の基本原理
 凸開集合上の定数係数偏微分方程式系の $C^{\infty}$ 解（あるいは超関数解）は、指数多項式解の重ね合わせ（Fourier 積分）で表される（Ehrenpreis–Palamodov の基本原理）。主張と、一変数の場合の証明を与えよ。
 
-*4 Malgrange の近似定理と P-凸性
+*5 Malgrange の近似定理と P-凸性
 定数係数作用素 $P(D)$ について、$P(D)u=f$ が $C^{\infty}(\Omega)$ で常に可解 $\iff\Omega$ が $P$-凸（台の凸性条件）であることを述べ（Malgrange 1955）、Hahn–Banach と核型性を用いた証明の骨格を与えよ。
 
-*4 Hörmander の $L^{2}$ 評価による可解性（多変数関数論）
+*5 Hörmander の $L^{2}$ 評価による可解性（多変数関数論）
 擬凸領域上の $\bar\partial$ 方程式が $L^{2}$ で可解であること（Hörmander 1965）の関数解析的骨格（閉稠密作用素の値域の閉性と先験評価 $\|f\|^{2}\le C(\|T^{*}f\|^{2}+\|Sf\|^{2})$）を述べよ。
 
 *4 閉値域定理による偏微分方程式の可解性（関数解析的原理）

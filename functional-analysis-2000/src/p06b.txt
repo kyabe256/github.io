@@ -33,7 +33,7 @@ Littlewood–Paley 二乗関数 $Sf=(\sum|\Delta_{j}f|^{2})^{1/2}$ について 
 *4 不確定性原理（Heisenberg・Hardy・Benedicks） {uncertainty}
 (i) $\|xf\|_{2}\|\xi\hat f\|_{2}\ge\frac{1}{4\pi}\|f\|_{2}^{2}$、(ii) Hardy の不確定性原理（$|f|\le Ce^{-\pi ax^{2}}$, $|\hat f|\le Ce^{-\pi b\xi^{2}}$, $ab>1$ なら $f=0$）、(iii) Benedicks の定理（$f$ と $\hat f$ の台がともに有限測度なら $f=0$）を証明せよ。
 
-*4 Amrein–Berthier–Nazarov の定量的不確定性原理
+*5 Amrein–Berthier–Nazarov の定量的不確定性原理
 有限測度集合 $S,\Sigma$ について $\|f\|_{2}\le Ce^{C|S||\Sigma|}(\|f\|_{L^{2}(S^{c})}+\|\hat f\|_{L^{2}(\Sigma^{c})})$（Nazarov 1993、一次元）。主張と証明の骨格を与えよ。
 
 *4 Beurling–Malliavin の乗数定理
@@ -80,10 +80,10 @@ $p>n$ で $W^{1,p}(\mathbb{R}^{n})\subset C^{0,1-n/p}$、$|u(x)-u(y)|\le C|x-y|^
 *4 Kolmogorov–Riesz–Fréchet のコンパクト性判定
 $L^{p}(\mathbb{R}^{n})$ の有界集合 $\mathcal{F}$ が相対コンパクト $\iff$ 平行移動について同程度連続（$\sup_{f}\|f(\cdot+h)-f\|_{p}\to0$）かつ無限遠で一様に小さい。証明せよ。
 
-*4 Trudinger–Moser の不等式
+*5 Trudinger–Moser の不等式
 $W^{1,n}_{0}(\Omega)$（$|\Omega|<\infty$）の $\|\nabla u\|_{n}\le1$ なる $u$ について $\int e^{\alpha|u|^{n/(n-1)}}\le C|\Omega|$（$\alpha\le\alpha_{n}=n\omega_{n-1}^{1/(n-1)}$）で、$\alpha_{n}$ は最良（Trudinger 1967, Moser 1971）。証明の骨格を与えよ。
 
-*4 延長定理（Stein, Calderón）
+*5 延長定理（Stein, Calderón）
 Lipschitz 領域 $\Omega$ に対し、すべての $W^{k,p}$（$1\le p\le\infty$）で同時に有界な延長作用素 $E:W^{k,p}(\Omega)\to W^{k,p}(\mathbb{R}^{n})$ が存在する（Stein 1970）。Calderón の方法（$1<p<\infty$）の骨格を与えよ。
 
 *4 トレース定理 {trace-thm}
@@ -95,7 +95,7 @@ Lipschitz 領域 $\Omega$ に対し、すべての $W^{k,p}$（$1\le p\le\infty$
 *4 分数階 Sobolev 空間と Gagliardo 半ノルム
 $H^{s}(\mathbb{R}^{n})$ を Fourier 変換で、$W^{s,p}$ を Gagliardo 半ノルム $\iint\frac{|u(x)-u(y)|^{p}}{|x-y|^{n+sp}}$ で定義し、$p=2$ で一致することを示せ。Bourgain–Brezis–Mironescu の極限 $\lim_{s\to1}(1-s)|u|_{W^{s,p}}^{p}=K\|\nabla u\|_{p}^{p}$ を述べよ。
 
-*4 Bourgain–Brezis–Mironescu の公式
+*5 Bourgain–Brezis–Mironescu の公式
 $\lim_{s\uparrow1}(1-s)\iint\frac{|u(x)-u(y)|^{p}}{|x-y|^{n+sp}}dxdy=K_{n,p}\int|\nabla u|^{p}$（BBM 2001）。証明の骨格を与え、Maz'ya–Shaposhnikova の $s\to0$ 版を述べよ。
 
 *4 $W^{1,1}$ と BV の埋め込み・周長

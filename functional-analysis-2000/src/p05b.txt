@@ -6,19 +6,19 @@
 *4 $L^{p}$ の凸性・平滑性のべき型
 $L^{p}$ は $\delta(\varepsilon)\asymp\varepsilon^{\max(p,2)}$, $\rho(\tau)\asymp\tau^{\min(p,2)}$ である（Hanner の不等式）。Hanner の不等式を証明して導け。
 
-*4 Enflo の再ノルム定理（超反射性） {enflo-renorm}
+*5 Enflo の再ノルム定理（超反射性） {enflo-renorm}
 $X$ が超反射的（$X$ で有限表現可能な空間がすべて反射的）$\iff$ $X$ が一様凸な同値ノルムをもつ（Enflo 1972）。James の有限木性質を用いた証明の骨格を与えよ。
 
-*4 Pisier の定理（べき型の一様凸再ノルム）
+*5 Pisier の定理（べき型の一様凸再ノルム）
 一様凸に再ノルムできる空間は、ある $q<\infty$ についてべき型 $q$ の一様凸ノルム（$\delta(\varepsilon)\ge c\varepsilon^{q}$）をもつ（Pisier 1975）。マルチンゲール型の不等式を用いた証明の骨格を与えよ。
 
-*4 Kadec の再ノルム（局所一様凸）
+*5 Kadec の再ノルム（局所一様凸）
 可分 Banach 空間は局所一様凸（LUR）なノルムに再ノルムできる（Kadec 1959）。Kadec の構成（双対の可分性を用いない Troyanski の方法）の骨格を与えよ。
 
 *4 Fréchet 平滑ノルムと Asplund 空間 {asplund}
 $X^{*}$ が可分なら $X$ は Fréchet 平滑な同値ノルムをもつ（Kadec, Restrepo）。逆に、Fréchet 平滑なノルムをもつ空間は Asplund であることを示せ。
 
-*4 Asplund 空間の特徴づけ
+*5 Asplund 空間の特徴づけ
 $X$ が Asplund（凸連続関数が稠密 $G_{\delta}$ で Fréchet 微分可能）$\iff$ すべての可分部分空間の双対が可分 $\iff X^{*}$ が RNP をもつ（Namioka–Phelps, Stegall）。同値性の骨格を与えよ。
 
 *4 Mazur の Gâteaux 微分可能性定理
@@ -27,7 +27,7 @@ $X$ が Asplund（凸連続関数が稠密 $G_{\delta}$ で Fréchet 微分可�
 *4 $C^{k}$ 平滑バンプと Meshkov の定理
 Banach 空間が $C^{2}$ 平滑なバンプ関数をもち、かつその双対も $C^{2}$ 平滑バンプをもつなら Hilbert 空間と同型である（Meshkov 1978）。主張を述べ、$\ell^{p}$ における最良の平滑性（$C^{\infty}$ か $C^{[p]}$）を述べよ。
 
-*4 $\ell^{p}$ のノルムの最良平滑性（Bonic–Frampton）
+*5 $\ell^{p}$ のノルムの最良平滑性（Bonic–Frampton）
 $\ell^{p}$（$p$ 偶数）は $C^{\infty}$ のノルムをもち、$p$ が偶数でないなら $C^{[p]}$ のノルムをもつがそれ以上の平滑なバンプはない（Bonic–Frampton 1966）。主張と証明の骨格を与えよ。
 
 *4 平滑変分原理と平滑性（Deville–Godefroy–Zizler）
@@ -39,19 +39,19 @@ $\ell^{\infty}(\Gamma)$（$\Gamma$ 非可算）は狭義凸な同値ノルムを
 *4 Troyanski の定理（弱コンパクト生成空間の LUR 再ノルム）
 弱コンパクト生成（WCG）空間は LUR な同値ノルムをもつ（Troyanski 1971）。主張と、Amir–Lindenstrauss の射影分解（PRI）の役割を述べよ。
 
-*4 Amir–Lindenstrauss の定理（WCG 空間の構造）
+*5 Amir–Lindenstrauss の定理（WCG 空間の構造）
 WCG 空間は射影の超限分解（PRI）をもち、$c_{0}(\Gamma)$ への有界単射作用素をもつ（Amir–Lindenstrauss 1968）。主張と証明の骨格を与えよ。
 
 *4 Šmulian の判定
 Banach 空間のノルムが $x$（$\|x\|=1$）で Fréchet 微分可能 $\iff$ $f_{n},g_{n}\in S_{X^{*}}$ で $f_{n}(x)\to1$, $g_{n}(x)\to1$ なら $\|f_{n}-g_{n}\|\to0$（Šmulian 1940）。Gâteaux 版（弱*収束）も示し、双対ノルムの強露出点との関係を述べよ。
 
-*4 Clarkson–Hanner の不等式の非可換版（Schatten クラス）
+*5 Clarkson–Hanner の不等式の非可換版（Schatten クラス）
 Schatten クラス $\mathcal{S}_{p}$ の凸性・平滑性のべき型が $L^{p}$ と同じであること（Ball–Carlen–Lieb 1994 の鋭い一様凸性）を述べよ。
 
-*4 Ball–Carlen–Lieb の 2-一様凸性定理
+*5 Ball–Carlen–Lieb の 2-一様凸性定理
 $1<p\le2$ で $\|\frac{x+y}{2}\|_{p}^{2}+(p-1)\|\frac{x-y}{2}\|_{p}^{2}\le\frac{\|x\|_{p}^{2}+\|y\|_{p}^{2}}{2}$ が $L^{p}$ と Schatten $p$-クラスで成り立つ（定数最良）（Ball–Carlen–Lieb 1994）。可換の場合を証明せよ。
 
-*4 Gâteaux 微分可能性空間と Preiss–Phelps–Namioka の例
+*5 Gâteaux 微分可能性空間と Preiss–Phelps–Namioka の例
 Gâteaux 微分可能性空間（GDS）だが弱 Asplund でない空間の例（Moors–Somasundaram 2006）を述べ、Asplund・弱 Asplund・GDS の階層を整理せよ。
 
 *5 Enflo の再ノルム定理の完全証明（James の有限木性質）
@@ -71,7 +71,7 @@ Banach 空間値 Rademacher 和について、$(E\|\sum\varepsilon_{i}x_{i}\|^{p
 *4 Bonami–Beckner の超縮小性不等式
 Bernoulli 雑音作用素 $T_{\rho}$ について $\|T_{\rho}f\|_{q}\le\|f\|_{p}$（$\rho\le\sqrt{(p-1)/(q-1)}$）（Bonami 1970, Beckner 1975）。二点空間の不等式とテンソル化で証明せよ。
 
-*4 Maurey–Pisier の定理 {maurey-pisier}
+*5 Maurey–Pisier の定理 {maurey-pisier}
 無限次元 Banach 空間 $X$ について、$p_{X}=\sup\{p:X\text{ は型 }p\}$ と $q_{X}=\inf\{q:\text{余型 }q\}$ とすると、$\ell^{p_{X}}$ と $\ell^{q_{X}}$ は $X$ で有限表現可能である（Maurey–Pisier 1976）。証明の骨格を与え、型 $>1$ でない空間は $\ell^{1}_{n}$ を一様に含むことを結論せよ。
 
 *4 Pisier の B-凸性定理
@@ -80,19 +80,19 @@ $X$ が非自明な型（型 $>1$）をもつ $\iff$ $X$ が $\ell^{1}_{n}$ を�
 *4 Kwapień の定理（型 2 かつ余型 2 は Hilbert） {kwapien}
 $X$ が型 2 かつ余型 2 $\iff$ $X$ が Hilbert 空間と同型（Kwapień 1972）。Maurey の拡張定理を用いた証明を与えよ。
 
-*4 Maurey の拡張定理
+*5 Maurey の拡張定理
 型 2 の空間 $X$ の部分空間から余型 2 の空間 $Y$ への作用素は $X$ 全体に拡張できる（Maurey 1974）。証明の骨格を与えよ。
 
 *4 Gauss 型と Rademacher 型の同値
 Rademacher 型 $p$ と Gauss 型 $p$ が同値であること、余型についても有限余型なら同値であること（Maurey–Pisier）を示せ。$c_{0}$ では Gauss 平均と Rademacher 平均が同値でないことを示せ。
 
-*4 型・余型と $K$-凸性（Pisier）
+*5 型・余型と $K$-凸性（Pisier）
 $X$ が $K$-凸（Rademacher 射影が $L^{2}(X)$ で有界）$\iff$ 非自明な型をもつ（Pisier 1982）。主張と証明の骨格を与えよ。
 
 *4 Pisier の $K$-凸性定数の評価
 $n$ 次元空間の $K$-凸性定数が $O(\log(1+d(X,\ell^{2}_{n})))$ で抑えられる（Pisier）。これを用いて Milman の $MM^{*}$ 評価を導け。
 
-*4 Talagrand の余型 2 と Orlicz 性
+*5 Talagrand の余型 2 と Orlicz 性
 余型 2 の空間は Orlicz 性（無条件収束級数で $\sum\|x_{n}\|^{2}<\infty$）をもつが、逆に Orlicz 性は余型 2 を含意しない（Talagrand 1992）ことを述べよ。
 
 *4 Dvoretzky–Rogers の補題 {dr}

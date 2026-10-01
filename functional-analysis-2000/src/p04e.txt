@@ -3,10 +3,10 @@
 *4 発展族（evolution family）の定義と基本性質
 非自律方程式 $\dot u=A(t)u$ の発展族 $U(t,s)$（$U(t,r)U(r,s)=U(t,s)$, 強連続）を定義し、mild solution の表示と一意性を示せ。
 
-*4 Kato の双曲型発展方程式の理論（1970） {kato-hyp}
+*5 Kato の双曲型発展方程式の理論（1970） {kato-hyp}
 $A(t)$ が一様に安定（$\|\prod e^{s_{j}A(t_{j})}\|\le Me^{\omega\sum s_{j}}$）で、共通の定義域を保つ同型写像による許容性をみたすとき、発展族が存在する（Kato 1970）。主張と、区分定数近似による構成の骨格を与えよ。
 
-*4 Tanabe–Sobolevskii の放物型発展方程式
+*5 Tanabe–Sobolevskii の放物型発展方程式
 $A(t)$ が一様に解析半群を生成し、定義域が $t$ に依らず、$t\mapsto A(t)A(0)^{-1}$ が Hölder 連続なら、発展族が存在し解析的平滑化をもつ（Sobolevskii 1961, Tanabe 1960）。Levi のパラメトリクスで証明の骨格を与えよ。
 
 *4 Acquistapace–Terreni の理論（定義域が動く放物型）
@@ -24,7 +24,7 @@ Friedrichs の補題（軟化子と微分作用素の交換子が $L^{2}$ 有界
 *4 強双曲系と Kreiss の行列定理
 定係数一階系 $u_{t}=\sum A_{j}\partial_{j}u$ が $L^{2}$ 適切（強双曲的）$\iff$ 表象 $\sum A_{j}\xi_{j}$ が一様に対角化可能（Kreiss）。証明せよ。
 
-*4 Lax–Mizohata の定理
+*5 Lax–Mizohata の定理
 非線形あるいは線形の一階系で、主表象が非実固有値をもつと Cauchy 問題は（Hadamard の意味で）不適切である（Lax 1958, Mizohata）。証明の骨格を与えよ。
 
 *4 Ivrii–Petkov の条件（弱双曲型の $C^{\infty}$ 適切性）
@@ -36,7 +36,7 @@ Friedrichs の補題（軟化子と微分作用素の交換子が $L^{2}$ 有界
 *4 Schrödinger 方程式の Strichartz 評価（抽象的 $TT^{*}$ 論法）
 $\|e^{it\Delta}f\|_{L^{q}_{t}L^{r}_{x}}\le C\|f\|_{2}$（$\frac2q+\frac nr=\frac n2$, 許容対）を、分散評価 $\|e^{it\Delta}\|_{L^{1}\to L^{\infty}}\le Ct^{-n/2}$ と $TT^{*}$ 論法（端点は Keel–Tao）で証明せよ。
 
-*4 Keel–Tao の端点 Strichartz 評価
+*5 Keel–Tao の端点 Strichartz 評価
 抽象的な分散評価と $L^{2}$ 有界性をみたす作用素族について、端点 $(q,r)=(2,\frac{2n}{n-2})$（$n\ge3$）の Strichartz 評価が成り立つ（Keel–Tao 1998）。双線形補間による証明の骨格を与えよ。
 
 *4 Kato の局所平滑化効果
@@ -71,19 +71,19 @@ $\dot x=Ax+Bu$（$A$ は $C_{0}$ 半群の生成子）について、正確可�
 *4 波動方程式の境界観測不等式（乗数法）
 $n$ 次元有界領域上の波動方程式について、境界の一部 $\Gamma_{0}=\{x:(x-x_{0})\cdot\nu>0\}$ からの観測が $T>2\max|x-x_{0}|$ で可観測性を与えること（Ho, Lions の乗数法）を証明せよ。
 
-*4 Bardos–Lebeau–Rauch の幾何制御条件（可制御性）
+*5 Bardos–Lebeau–Rauch の幾何制御条件（可制御性）
 波動方程式の内部・境界可制御性が、幾何制御条件（すべての一般化測地線が時間 $T$ 内に制御領域に到達）と同値であることを述べよ（Bardos–Lebeau–Rauch 1992, Burq–Gérard）。
 
-*4 熱方程式の null 可制御性（Lebeau–Robbiano, Fursikov–Imanuvilov）
+*5 熱方程式の null 可制御性（Lebeau–Robbiano, Fursikov–Imanuvilov）
 任意の開集合 $\omega$ と時間 $T>0$ について、熱方程式は $\omega$ に台をもつ制御で null 可制御である（Lebeau–Robbiano 1995, Fursikov–Imanuvilov 1996）。Carleman 評価あるいはスペクトル不等式 $\|\sum_{\lambda_{j}\le\Lambda}a_{j}\phi_{j}\|_{L^{2}(\Omega)}\le Ce^{C\sqrt\Lambda}\|\cdot\|_{L^{2}(\omega)}$ を用いた証明の骨格を与えよ。
 
 *4 Carleman 評価と一意接続性
 二階楕円型作用素について重み付き評価 $\|e^{\tau\varphi}u\|\le C\tau^{-1/2}\|e^{\tau\varphi}Pu\|$ を導き、一意接続性（開集合で零なら全体で零）を示せ。
 
-*4 Schrödinger 方程式の可制御性（Lebeau, Jaffard）
+*5 Schrödinger 方程式の可制御性（Lebeau, Jaffard）
 トーラス上の Schrödinger 方程式は任意の開集合と任意の時間で可観測であること（Jaffard 1990, Burq–Zworski）を述べ、波動方程式との違い（無限伝播速度）を論ぜよ。
 
-*4 Weiss の許容作用素と well-posed 線形系
+*5 Weiss の許容作用素と well-posed 線形系
 非有界な制御・観測作用素の許容性（admissibility）を定義し、許容な $B$ について $\int_{0}^{t}T(t-s)Bu(s)ds\in X$ となることを示せ。Weiss の予想（レゾルベント条件 $\sup_{\operatorname{Re}\lambda>0}\sqrt{\operatorname{Re}\lambda}\|C(\lambda-A)^{-1}\|<\infty$ から許容性が従う）が一般には成り立たないこと（Jacob–Zwart 2004 らの反例）と、縮小半群・正規半群などで成り立つ場合を述べよ。
 
 *4 Salamon–Weiss の well-posed 線形系
@@ -98,7 +98,7 @@ $n$ 次元有界領域上の波動方程式について、境界の一部 $\Gamm
 *4 Gibson の定理
 有限次元制御入力（コンパクトな $B$）では、無限個の不安定な極をもつ系や、ある種のスキュー随伴系（保存的）を指数安定化できない（Gibson 1980）。証明せよ。
 
-*4 Russell の原理（可制御性と安定化の同値）
+*5 Russell の原理（可制御性と安定化の同値）
 時間可逆な保存系について、正確可制御性 $\iff$ 指数安定化可能性（Russell 1978）。証明の骨格を与えよ。
 
 *4 一意接続と近似可制御性（熱方程式）

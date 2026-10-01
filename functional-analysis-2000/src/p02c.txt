@@ -30,7 +30,7 @@ $\varphi$ が Wiener 代数に属し回転数零なら、$\varphi=\varphi_{+}\va
 *4 Szegő の極限定理
 正の連続関数 $f$ の Toeplitz 行列 $T_{n}(f)$ について $\lim\frac1n\log\det T_{n}(f)=\frac{1}{2\pi}\int\log f$（Szegő の第一定理）。強 Szegő 定理 $\det T_{n}(f)\sim G(f)^{n}E(f)$（$E(f)=\exp\sum k|\widehat{\log f}(k)|^{2}$）を述べよ。
 
-*4 強 Szegő 極限定理（Ibragimov, Johansson）
+*5 強 Szegő 極限定理（Ibragimov, Johansson）
 $\sum k|\widehat{\log f}(k)|^{2}<\infty$ の下で $\det T_{n}(f)/G(f)^{n}\to\exp(\sum_{k\ge1}k\widehat{\log f}(k)\widehat{\log f}(-k))$。Borodin–Okounkov の公式あるいは Widom の作用素論的証明の骨格を与えよ。
 
 *4 Fisher–Hartwig 予想
@@ -51,7 +51,7 @@ Fredholm スペクトル、Weyl スペクトル（指数零の Fredholm でな�
 *4 Fredholm 指数と分光流（spectral flow）
 自己共役 Fredholm 作用素の連続族 $A_{t}$ の分光流を定義し、$\mathbb{R}$ 上の $\partial_{t}+A_{t}$ の Fredholm 指数が分光流に等しいこと（Robbin–Salamon）を述べよ。
 
-*4 Fredholm 写像と Smale の無限次元 Sard 定理
+*5 Fredholm 写像と Smale の無限次元 Sard 定理
 Banach 多様体の間の $C^{k}$ Fredholm 写像（指数 $n$, $k>\max(n,0)$）の正則値は残留集合をなす（Smale 1965）。証明の骨格を与え、指数が微分の指数で定まることを示せ。
 
 *5 Atiyah–Jänich の定理 {aj}
@@ -107,7 +107,7 @@ Macaev イデアル $\mathcal{L}^{1,\infty}$（$\sum_{n\le N}s_{n}=O(\log N)$）
 *4 Calkin のイデアル対応
 $\mathcal{B}(H)$ の両側イデアルと、正の数列空間 $c_{0}^{+}$ の再配置不変で遺伝的なイデアルとの一対一対応（Calkin 1941）を示せ。
 
-*4 交換子の空間とトレースの一意性（Dykema–Figiel–Weiss–Wodzicki）
+*5 交換子の空間とトレースの一意性（Dykema–Figiel–Weiss–Wodzicki）
 イデアル $J$ 上のトレース（交換子で零となる線形汎関数）の存在が、$J$ の数列空間の「Cesàro 不変性」で決まること（DFWW 2004）を述べ、$\mathcal{S}_{1}$ 上のトレースが一意（スカラー倍を除いて）であることを示せ。
 
 *4 Kato–Rosenblum の定理

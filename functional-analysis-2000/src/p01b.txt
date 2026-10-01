@@ -74,10 +74,10 @@ $X$ の単位球の標準像は $X^{**}$ の単位球で弱*稠密である。�
 *4 反射性の特徴づけ（Kakutani） {reflexive}
 Banach 空間が反射的 $\iff$ 単位球が弱コンパクト。Goldstine と Alaoglu から示し、反射的空間の閉部分空間・商・双対が反射的であることを導け。
 
-*4 Eberlein–Šmulian の定理 {es}
+*5 Eberlein–Šmulian の定理 {es}
 Banach 空間の部分集合について、弱コンパクト・弱点列コンパクト・弱可算コンパクトの各概念の相対版は同値である。証明の骨格（Whitley の証明）を与えよ。
 
-*4 James の定理 {james}
+*5 James の定理 {james}
 Banach 空間 $X$ が反射的 $\iff$ すべての $f\in X^{*}$ が単位球上でノルムを達成する（James 1964）。可分の場合の証明の骨格を与え、非可分の場合の困難を述べよ。
 
 *4 James 空間（反射的でない同型的に双対と同型な空間）
@@ -92,7 +92,7 @@ Banach 空間の弱コンパクト集合の閉凸包は弱コンパクトであ�
 *4 双対空間の可分性と元の空間
 $X^{*}$ が可分なら $X$ も可分である。逆が偽であること（$\ell^{1}$）を示せ。
 
-*4 弱 Cauchy 列と Rosenthal の $\ell^{1}$ 定理 {rosenthal}
+*5 弱 Cauchy 列と Rosenthal の $\ell^{1}$ 定理 {rosenthal}
 Banach 空間の有界列は、弱 Cauchy な部分列をもつか、$\ell^{1}$ の単位ベクトル基底と同値な部分列をもつ（Rosenthal 1974）。Ramsey 理論的な証明の骨格を与えよ。
 
 *4 Dunford–Pettis の定理（$L^{1}$ の弱コンパクト性）
@@ -104,7 +104,7 @@ $L^{1}(\mu)$（有限測度）の有界集合が相対弱コンパクト $\iff$ 
 *4 Orlicz–Pettis の定理
 Banach 空間の級数 $\sum x_{n}$ が弱無条件収束（すべての部分級数が弱収束）ならば、ノルム無条件収束する。証明せよ。
 
-*4 Bessaga–Pełczyński の $c_{0}$ 定理
+*5 Bessaga–Pełczyński の $c_{0}$ 定理
 Banach 空間 $X$ に $\sum|f(x_{n})|<\infty$（$\forall f$）だがノルム無条件収束しない級数が存在 $\iff X$ が $c_{0}$ と同型な部分空間を含む。証明の骨格を与えよ。
 
 *4 Schur 性と弱点列完備性

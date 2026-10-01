@@ -6,22 +6,22 @@
 *4 Tsirelson 空間 {tsirelson}
 $\ell^{p}$ も $c_{0}$ も含まない反射的 Banach 空間が存在する（Tsirelson 1974）。Figiel–Johnson による陰的なノルム方程式 $\|x\|=\max\{\|x\|_{\infty},\frac12\sup\sum\|E_{i}x\|\}$ の構成を与え、性質を証明せよ。
 
-*4 Schlumprecht 空間
+*5 Schlumprecht 空間
 任意に歪められる（arbitrarily distortable）空間の最初の例として、Schlumprecht 空間 $S$（ノルム $\|x\|=\max\{\|x\|_{\infty},\sup\frac{1}{\log_{2}(n+1)}\sum_{i\le n}\|E_{i}x\|\}$）を定義し、$\ell^{1}_{n}$ が漸近的に均質に含まれることを示せ（Schlumprecht 1991）。
 
-*4 歪み問題と Odell–Schlumprecht の定理
+*5 歪み問題と Odell–Schlumprecht の定理
 $\ell^{2}$ は任意に歪められる（$\lambda$-歪み可能、すべての $\lambda$）（Odell–Schlumprecht 1994）。主張と、単位球面の「漸近的に直交する」集合の構成の骨格を述べよ。
 
-*4 Gowers の Ramsey 定理（ブロック部分空間）
+*5 Gowers の Ramsey 定理（ブロック部分空間）
 ブロック基底の空間で、Gowers のゲームの勝利戦略に関する Ramsey 型の定理（Gowers 1996）を述べ、HI 二分律の証明への応用を説明せよ。
 
-*4 Gowers の $c_{0}$ 定理（Lipschitz 関数の振動安定性）
+*5 Gowers の $c_{0}$ 定理（Lipschitz 関数の振動安定性）
 $c_{0}$ の単位球面上の Lipschitz 関数は、あるブロック部分空間で振動が小さい（安定）（Gowers 1992、FIN$_{k}$ 定理）。主張と、Hindman の定理の一般化としての意義を述べよ。
 
 *4 Hindman の定理
 $\mathbb{N}$ の有限彩色について、無限集合 $A$ で有限部分和の集合 $FS(A)$ が単色となるものが存在する（Hindman 1974）。Galvin–Glazer の冪等超フィルター（$\beta\mathbb{N}$ の左位相半群）による証明を与えよ。
 
-*4 Odell–Rosenthal の定理（$\ell^{1}$ を含まない双対）
+*5 Odell–Rosenthal の定理（$\ell^{1}$ を含まない双対）
 可分 Banach 空間 $X$ について、$X$ が $\ell^{1}$ を含まない $\iff$ $X^{**}$ の各元が $X$ の弱*収束列の極限（Baire 第一類）（Odell–Rosenthal 1975）。証明の骨格を与えよ。
 
 *4 Bourgain–Fremlin–Talagrand の定理
@@ -33,19 +33,19 @@ Polish 空間上の第一類 Baire 関数の点列コンパクト集合は Fréc
 *4 漸近 $\ell^{p}$ 空間と Maurey–Milman–Tomczak-Jaegermann の漸近構造
 漸近構造（asymptotic structure）と漸近 $\ell^{p}$ 空間を定義し、Tsirelson 空間が漸近 $\ell^{1}$ であることを示せ。
 
-*4 Argyros–Haydon の空間（スカラー＋コンパクト） {ah}
+*5 Argyros–Haydon の空間（スカラー＋コンパクト） {ah}
 すべての有界作用素が $\lambda I+K$（$K$ コンパクト）となる無限次元空間が存在する（Argyros–Haydon 2011, Bourgain–Delbaen 構成と HI 技法の組合せ）。主張と構成の骨格を与え、不変部分空間問題への帰結を述べよ。
 
-*4 Gowers の非同型問題の解決（超平面と同型でない空間）
+*5 Gowers の非同型問題の解決（超平面と同型でない空間）
 自身の超平面と同型でない Banach 空間が存在する（Gowers 1994、Banach の超平面問題の解決）。HI 空間ではすべての作用素が $\lambda I+S$ で Fredholm 指数が $0$ となることから導け。
 
-*4 Gowers の Schröder–Bernstein 問題の否定的解決
+*5 Gowers の Schröder–Bernstein 問題の否定的解決
 $X$ が $Y$ の補空間と同型、$Y$ が $X$ の補空間と同型だが $X\not\cong Y$ となる例が存在する（Gowers 1996）。主張を述べ、Pełczyński の分解法の仮定の必要性を論ぜよ。
 
-*4 Gowers の分類プログラム（四分律）
+*5 Gowers の分類プログラム（四分律）
 任意の無限次元 Banach 空間は、(i) HI 部分空間、(ii) 無条件基底をもちどの二つの互いに素なブロック部分空間も同型でない部分空間、(iii) 無条件基底をもち自身の真のブロック部分空間と同型でない部分空間、(iv) 無条件基底をもち準最小な部分空間、のいずれかを含む（Gowers 2002）。主張を述べ、各クラスの例を挙げよ。
 
-*4 均質空間問題の解決（Gowers, Komorowski–Tomczak-Jaegermann）
+*5 均質空間問題の解決（Gowers, Komorowski–Tomczak-Jaegermann）
 すべての無限次元閉部分空間と同型な Banach 空間は $\ell^{2}$ と同型である。Komorowski–Tomczak-Jaegermann（無条件基底をもつ空間で型・余型が 2 でなければ非 Hilbert 部分空間をもつ）と Gowers の二分律を組み合わせた証明の骨格を与えよ。
 
 *4 Bourgain の普遍空間の非存在（可分反射的空間）
@@ -68,19 +68,19 @@ Gowers の Ramsey 型定理（解析的集合に対するブロック列のゲ�
 *4 Figiel の定理
 Banach 空間の間の等距離埋め込み $f$（$f(0)=0$）について、ノルム 1 の線形写像 $T:\overline{\operatorname{span}}f(X)\to X$ で $T\circ f=\mathrm{id}$ となるものが存在する（Figiel 1968）。証明せよ。
 
-*4 Godefroy–Kalton の定理（Lipschitz 持ち上げ）
+*5 Godefroy–Kalton の定理（Lipschitz 持ち上げ）
 可分 Banach 空間 $X$ が Banach 空間 $Y$ に等距離に埋め込めるなら、$X$ は $Y$ に線形等距離に埋め込める（Godefroy–Kalton 2003）。Lipschitz 自由空間 $\mathcal{F}(X)$ と線形化の議論で証明の骨格を与えよ。
 
 *4 Lipschitz 自由空間（Arens–Eells 空間）
 距離空間 $M$ の Lipschitz 自由空間 $\mathcal{F}(M)$ を構成し、$\mathcal{F}(M)^{*}\cong\operatorname{Lip}_{0}(M)$、Lipschitz 写像が $\mathcal{F}$ 間の線形写像に拡張される普遍性を示せ。$\mathcal{F}(\mathbb{R})\cong L^{1}$ を示せ。
 
-*4 Heinrich–Mankiewicz の定理（Lipschitz 同型から線形埋め込み）
+*5 Heinrich–Mankiewicz の定理（Lipschitz 同型から線形埋め込み）
 $X$ と $Y$ が Lipschitz 同型で $Y$ が反射的（あるいは双対空間）なら、$X$ は $Y$（あるいは $Y^{**}$）の補空間に線形同型である（Heinrich–Mankiewicz 1982）。超冪と Rademacher 型微分定理による証明の骨格を与えよ。
 
 *4 Lipschitz 写像の Gâteaux 微分可能性（Aronszajn, Mankiewicz, Christensen）
 可分 Banach 空間から RNP をもつ空間への Lipschitz 写像は、Aronszajn 零集合（Gauss 零集合）を除いて Gâteaux 微分可能である（Aronszajn 1976, Christensen, Mankiewicz）。主張を述べ、有限次元 Rademacher 定理の無限次元版として意義を論ぜよ。
 
-*4 Ribe の定理 {ribe}
+*5 Ribe の定理 {ribe}
 一様同相な Banach 空間は互いに他方で有限表現可能である（局所構造が一様構造で決まる）（Ribe 1976）。主張と証明の骨格（Heinrich–Mankiewicz の超冪による証明）を与えよ。
 
 *4 Ribe プログラムと Bourgain の距離的特徴づけ（超反射性）
@@ -92,28 +92,28 @@ Hamming 立方体 $\{0,1\}^{n}$ の $L^{1}$ への埋め込みと $\ell^{2}$ へ
 *4 Bourgain–Milman–Wolfson の距離型
 距離空間の距離型（BMW type）を定義し、Banach 空間では非自明な距離型と非自明な Rademacher 型が同値であること（Bourgain–Milman–Wolfson 1986, Pisier）を述べよ。
 
-*4 Mendel–Naor の距離余型
+*5 Mendel–Naor の距離余型
 距離余型（metric cotype）を定義し、Banach 空間で Rademacher 余型 $q$ と距離余型 $q$ が同値であること（Mendel–Naor 2008）を述べ、超立方体の Lipschitz 埋め込みの不可能性への応用を述べよ。
 
-*4 Lindenstrauss の定理（$c_{0}$ は $\ell^{\infty}$ の Lipschitz レトラクトでない）
+*5 Lindenstrauss の定理（$c_{0}$ は $\ell^{\infty}$ の Lipschitz レトラクトでない）
 $\ell^{\infty}$ から $c_{0}$ への Lipschitz レトラクションは存在しない（Lindenstrauss 1964）。線形射影の非存在（Phillips）の非線形版として証明の骨格を与え、一方で $\ell^{\infty}$ は絶対 Lipschitz レトラクト（距離空間の部分集合からの Lipschitz 写像がノルムを保って全体に拡張できる）であることを示せ。
 
-*4 Aharoni の定理（$c_{0}$ の普遍性）
+*5 Aharoni の定理（$c_{0}$ の普遍性）
 すべての可分距離空間は $c_{0}$ に双 Lipschitz 埋め込める（Aharoni 1974 は歪み $6+\varepsilon$、Assouad が $3$、Kalton–Lancien が最良の $2$）。証明の骨格を与えよ。
 
 *4 Bourgain の距離空間埋め込み定理と Linial–London–Rabinovich
 任意の $n$ 点距離空間は $\ell^{2}$ に歪み $O(\log n)$ で埋め込める（Bourgain 1985）。Fréchet 埋め込みとランダム部分集合で証明し、展開グラフで最良であることを示せ。
 
-*4 粗埋め込みと Gromov の問題（Kasparov–Yu, Kalton）
+*5 粗埋め込みと Gromov の問題（Kasparov–Yu, Kalton）
 可分 Banach 空間が Hilbert 空間に粗埋め込めること（coarse embedding）を定義し、$\ell^{p}$（$p>2$）が Hilbert 空間に粗埋め込めない（Johnson–Randrianarivony 2006）ことを述べよ。Baum–Connes 予想との関係を述べよ。
 
-*4 Kalton の性質 Q と一様同相の障害
+*5 Kalton の性質 Q と一様同相の障害
 $c_{0}$ が反射的空間に粗埋め込めない（Kalton 2007、性質 Q）ことを述べ、反射的空間の一様構造の剛性を論ぜよ。
 
-*4 Johnson–Lindenstrauss の補題 {jl}
+*5 Johnson–Lindenstrauss の補題 {jl}
 $\ell^{2}$ の $n$ 点は $k=O(\varepsilon^{-2}\log n)$ 次元に歪み $1+\varepsilon$ で線形に埋め込める（Johnson–Lindenstrauss 1984）。ランダム射影と集中不等式で証明し、次元 $\Omega(\varepsilon^{-2}\log n)$ が最良であること（Larsen–Nelson 2017）を述べよ。
 
-*4 $\ell^{1}$ での次元削減の不可能性（Brinkman–Charikar）
+*5 $\ell^{1}$ での次元削減の不可能性（Brinkman–Charikar）
 $\ell^{1}$ の $n$ 点を歪み $D$ で $\ell^{1}_{k}$ に埋め込むには $k\ge n^{c/D^{2}}$ が必要な場合がある（Brinkman–Charikar 2005, Lee–Naor）。主張を述べよ。
 
 *5 Ribe の定理の完全証明

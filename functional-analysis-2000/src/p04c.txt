@@ -18,19 +18,19 @@ $C_{0}$ 半群が指数安定 $\iff$ すべての $x$ で $\int_{0}^{\infty}\|T(
 *4 Ingham–Karamata のタウバー定理
 $f$ が有界で、Laplace 変換 $\hat f(z)$ が $\operatorname{Re}z\ge0$ まで解析接続されるなら $\int_{0}^{\infty}f(t)dt=\hat f(0)$（Ingham, Newman の素数定理の証明）。Newman の輪郭積分による証明を与えよ。
 
-*4 Batty–Duyckaerts の量的評価
+*5 Batty–Duyckaerts の量的評価
 有界半群で $i\mathbb{R}\subset\rho(A)$ のとき、$\|T(t)A^{-1}\|\to0$ の速さがレゾルベントの虚軸上の増大度 $M(s)=\sup_{|r|\le s}\|(ir-A)^{-1}\|$ で $O(1/M^{-1}_{\log}(t))$ と評価される（Batty–Duyckaerts 2008）。主張を述べよ。
 
-*4 Borichev–Tomilov の定理
+*5 Borichev–Tomilov の定理
 Hilbert 空間の有界半群で、$\|T(t)A^{-1}\|=O(t^{-1/\alpha})\iff\|(is-A)^{-1}\|=O(|s|^{\alpha})$（Borichev–Tomilov 2010）。主張と、減衰波動方程式のエネルギー減衰率への応用を述べよ。
 
-*4 減衰波動方程式の一様安定性（Bardos–Lebeau–Rauch）
+*5 減衰波動方程式の一様安定性（Bardos–Lebeau–Rauch）
 コンパクト多様体上の減衰波動方程式 $u_{tt}-\Delta u+a(x)u_{t}=0$ のエネルギーが指数減衰 $\iff$ 減衰領域 $\{a>0\}$ が幾何制御条件（すべての測地線が有限時間で通過）をみたす（Bardos–Lebeau–Rauch 1992）。主張と、Gearhart–Prüss による定式化を述べよ。
 
-*4 Lebeau の対数減衰
+*5 Lebeau の対数減衰
 幾何制御条件がなくても、減衰波動方程式のエネルギーは滑らかな初期値に対し $O(1/\log t)$ で減衰する（Lebeau 1996）。Carleman 評価によるレゾルベントの指数評価からの導出を述べよ。
 
-*4 Jacobs–de Leeuw–Glicksberg の分解
+*5 Jacobs–de Leeuw–Glicksberg の分解
 相対コンパクトな軌道をもつ有界半群について、$X=X_{r}\oplus X_{s}$（可逆部分＝概周期部分と、安定部分）と分解される（Jacobs–de Leeuw–Glicksberg）。証明の骨格を与えよ。
 
 *4 平均エルゴード定理（半群版）
@@ -42,10 +42,10 @@ Hilbert 空間の $C_{0}$ 半群が指数安定 $\iff$ Lyapunov 方程式 $A^{*}
 *4 Katznelson–Tzafriri の連続版
 有界 $C_{0}$ 半群について、$\|T(t)AR\|\to0$ 型の結果：$\sigma(A)\cap i\mathbb{R}\subset\{0\}$ なら $\|T(t)A(I-A)^{-1}\|\to0$（Batty, Vũ）を述べよ。
 
-*4 正値半群の漸近挙動とスペクトル境界
+*5 正値半群の漸近挙動とスペクトル境界
 Banach 束上の正値 $C_{0}$ 半群では $s(A)=\omega_{0}$ が $L^{p}$ 上で成り立つ（Weis 1995）が、一般の Banach 束では成り立たないことを述べよ。
 
-*4 Weis の定理
+*5 Weis の定理
 $L^{p}$（$1\le p<\infty$）上の正値 $C_{0}$ 半群について、スペクトル上界と成長限界は一致する（Weis 1995）。主張を述べ、$L^{1}$ の場合（Derndinger, Greiner）の証明の骨格を与えよ。
 
 *4 半群のコンパクト性と漸近周期性

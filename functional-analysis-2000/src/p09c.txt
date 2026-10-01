@@ -27,10 +27,10 @@ $\varepsilon$ に依存する定数 $\beta(\varepsilon)$ の対数 Sobolev 不�
 *4 Li–Yau の勾配評価
 $\mathrm{Ric}\ge0$ の完備 $n$ 次元 Riemann 多様体上の熱方程式の正値解について $\frac{|\nabla u|^{2}}{u^{2}}-\frac{u_{t}}{u}\le\frac{n}{2t}$ を証明し、放物型 Harnack 不等式を導け（Li–Yau 1986）。
 
-*4 Wang の次元によらない Harnack 不等式
+*5 Wang の次元によらない Harnack 不等式
 $\mathrm{Ric}\ge-K$ の多様体上の熱半群について $(P_{t}f)^{\alpha}(x)\le P_{t}f^{\alpha}(y)\exp\left(\frac{\alpha K d(x,y)^{2}}{2(\alpha-1)(1-e^{-2Kt})}\right)$（$\alpha>1$、$f\ge0$）を結合の方法で証明せよ（F.-Y. Wang 1997）。
 
-*4 Caffarelli の縮小定理
+*5 Caffarelli の縮小定理
 $\mathbb{R}^{n}$ の標準ガウス測度から、$d\nu=e^{-V}dx$（$\nabla^{2}V\ge I$）への Brenier 写像は 1-Lipschitz であることを証明せよ（Caffarelli 2000）。系として $\nu$ がガウス測度の関数不等式をすべて継承することを導け。
 
 *4 Lichnerowicz の固有値評価と Obata の剛性
@@ -39,7 +39,7 @@ $\mathrm{Ric}\ge(n-1)$ のコンパクト $n$ 次元 Riemann 多様体の第一�
 *4 Muckenhoupt の判定法
 $\mathbb{R}_{+}$ 上の測度 $\mu,\nu$ について重み付き Hardy 不等式 $\int_{0}^{\infty}|\int_{0}^{x}f|^{2}d\mu\le C\int f^{2}d\nu$ が成り立つ条件 $\sup_{r}\mu([r,\infty))\int_{0}^{r}\frac{1}{\nu'}<\infty$ を示し、実数直線上の確率測度の Poincaré 不等式の判定に応用せよ（Muckenhoupt 1972）。
 
-*4 Bobkov–Götze の判定法
+*5 Bobkov–Götze の判定法
 実数直線上の確率測度 $\mu$（中央値 $m$）が対数 Sobolev 不等式をみたす $\iff\sup_{x>m}\mu([x,\infty))\log\frac{1}{\mu([x,\infty))}\int_{m}^{x}\frac{1}{p}<\infty$（左側も同様、$p$ は密度）を証明せよ（Bobkov–Götze 1999）。
 
 *5 KLS 予想と Klartag の対数評価
@@ -48,16 +48,16 @@ $\mathbb{R}_{+}$ 上の測度 $\mu,\nu$ について重み付き Hardy 不等式
 *5 Villani の低保存性（hypocoercivity）
 運動論的 Fokker–Planck 方程式 $\partial_{t}f+v\cdot\nabla_{x}f-\nabla V\cdot\nabla_{v}f=\Delta_{v}f+\nabla_{v}\cdot(vf)$ について、生成作用素が係数の意味で退化しているにもかかわらず、修正された $H^{1}$ ノルムで平衡への指数収束が成り立つことを証明せよ（Villani 2009）。
 
-*4 Dobrushin–Shlosman 条件と対数 Sobolev 不等式（Stroock–Zegarlinski）
+*5 Dobrushin–Shlosman 条件と対数 Sobolev 不等式（Stroock–Zegarlinski）
 格子スピン系の有限領域 Gibbs 測度について、Dobrushin–Shlosman 型の混合条件の下で領域によらない定数の対数 Sobolev 不等式が成り立ち、Glauber 動力学が一様に指数収束することの証明の骨格を与えよ（Stroock–Zegarlinski 1992）。
 
-*4 Bobkov の関数型等周不等式
+*5 Bobkov の関数型等周不等式
 ガウス等周プロファイル $I=\varphi\circ\Phi^{-1}$ について、$[0,1]$ 値関数 $f$ に対し $I(\int f\,d\gamma)\le\int\sqrt{I(f)^{2}+|\nabla f|^{2}}\,d\gamma$ を 2 点空間の不等式と中心極限定理から証明せよ（Bobkov 1997）。
 
-*4 Latała–Oleszkiewicz の不等式
+*5 Latała–Oleszkiewicz の不等式
 ガウス測度について $\frac{\int f^{2}-(\int|f|^{p})^{2/p}}{2-p}\le\int|\nabla f|^{2}$（$1\le p<2$）を示し、$p\to2$ で対数 Sobolev、$p=1$ で Poincaré 不等式に帰着することを確かめよ（Beckner 1989、Latała–Oleszkiewicz 2000）。
 
-*4 有限 Markov 連鎖の混合時間（Diaconis–Saloff-Coste）
+*5 有限 Markov 連鎖の混合時間（Diaconis–Saloff-Coste）
 有限状態の可逆 Markov 連鎖について、スペクトルギャップ $\lambda$ と対数 Sobolev 定数 $\alpha$ を用いた混合時間評価 $t_{\mathrm{mix}}\le\frac{1}{4\alpha}\log\log\frac{1}{\pi_{*}}+\frac{c}{\lambda}$ 型の評価を証明せよ（Diaconis–Saloff-Coste 1996）。
 
 =ch IX-6　Malliavin 解析
@@ -89,22 +89,22 @@ $F\in\mathbb{D}^{1,2}$ で $\|DF\|_{H}>0$ a.s. なら $F$ の分布は Lebesgue 
 *5 Malliavin による Hörmander の定理の確率論的証明
 SDE $dX=\sum_{i}V_{i}(X)\circ dB^{i}+V_{0}(X)dt$ の解 $X_{t}$ について、Hörmander 条件の下で Malliavin 共分散行列の逆の全モーメントが有限であることを示し、$X_{t}$ の分布が滑らかな密度をもつことの証明の骨格を与えよ（Malliavin 1976、Kusuoka–Stroock、Norris）。
 
-*4 Nualart–Peccati の 4 次モーメント定理
+*5 Nualart–Peccati の 4 次モーメント定理
 固定された次数 $q$ の Wiener カオスに属する $F_{n}$ で $\mathbb{E}F_{n}^{2}\to1$ のとき、$F_{n}\Rightarrow N(0,1)\iff\mathbb{E}F_{n}^{4}\to3$ を証明せよ（Nualart–Peccati 2005）。
 
-*4 Stein–Malliavin の評価（Nourdin–Peccati）
+*5 Stein–Malliavin の評価（Nourdin–Peccati）
 $F\in\mathbb{D}^{1,2}$、$\mathbb{E}F=0$、$\mathbb{E}F^{2}=1$ について $d_{TV}(F,N(0,1))\le2\mathbb{E}|1-\langle DF,-DL^{-1}F\rangle_{H}|$ を Stein の方法で証明し、カオスの場合に 4 次キュムラントで評価せよ（2009）。
 
 *4 Breuer–Major の定理
 定常ガウス列 $X_{k}$（相関 $\rho$）と Hermite 階数 $d$ の関数 $f$ について、$\sum_{k}|\rho(k)|^{d}<\infty$ なら $\frac{1}{\sqrt n}\sum_{k\le n}f(X_{k})$ が正規分布に収束することを 4 次モーメント定理で証明せよ（Breuer–Major 1983）。
 
-*4 Bismut–Elworthy–Li の公式
+*5 Bismut–Elworthy–Li の公式
 楕円型拡散半群について $\nabla P_{t}f(x)v=\frac{1}{t}\mathbb{E}[f(X_{t}^{x})\int_{0}^{t}\langle\sigma^{-1}(X_{s})J_{s}v,dB_{s}\rangle]$ を Malliavin の部分積分で示し、$f$ が有界可測なだけで $P_{t}f$ が微分可能であることを導け（Bismut 1984、Elworthy–Li 1994）。
 
-*4 密度の公式と評価（Nourdin–Viens）
+*5 密度の公式と評価（Nourdin–Viens）
 $F\in\mathbb{D}^{1,2}$ について $g_{F}(x)=\mathbb{E}[\langle DF,-DL^{-1}F\rangle\,|\,F=x]$ とおくと、$g_{F}>0$ のとき密度が $\rho(x)=\frac{\mathbb{E}|F|}{2g_{F}(x)}\exp(-\int_{0}^{x}\frac{y}{g_{F}(y)}dy)$ で与えられることを証明せよ（2009）。
 
-*4 共分散表現と Gauss Poincaré 不等式
+*5 共分散表現と Gauss Poincaré 不等式
 $F,G\in\mathbb{D}^{1,2}$ について $\mathrm{Cov}(F,G)=\mathbb{E}\int_{0}^{\infty}e^{-t}\langle DF,P_{t}DG\rangle_{H}dt$ を示し、$\mathrm{Var}F\le\mathbb{E}\|DF\|_{H}^{2}$ を導け（Houdré–Pérez-Abreu 1995）。
 
 *4 Kusuoka–Stroock の熱核評価

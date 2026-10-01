@@ -48,13 +48,13 @@ Hankel 作用素 $H_{\varphi}$ が有限ランク $n$ $\iff$ $\varphi$ の反解
 *4 Hartman の定理（コンパクト Hankel 作用素）
 $H_{\varphi}$ がコンパクト $\iff\varphi\in H^{\infty}+C$（Hartman 1958）。証明し、Peller の定理（$H_{\varphi}\in\mathcal{S}_{p}\iff\bar P\varphi\in B^{1/p}_{p,p}$）を述べよ。
 
-*4 Peller の定理（Schatten クラスの Hankel 作用素）
+*5 Peller の定理（Schatten クラスの Hankel 作用素）
 $H_{\varphi}\in\mathcal{S}_{p}$（$0<p<\infty$）$\iff$ $\varphi$ の反解析部分が Besov 空間 $B^{1/p}_{p,p}$ に属する（Peller 1980, Semmes）。$p=1$ の場合の証明の骨格を与えよ。
 
 *4 等長作用素の不変部分空間と Beurling の定理 {beurling}
 $H^{2}(\mathbb{D})$ 上のシフト $S$ の非自明な閉不変部分空間はちょうど $\theta H^{2}$（$\theta$ は内部関数）の形である（Beurling 1949）。Wold 分解から証明せよ。
 
-*4 Beurling–Lax–Halmos の定理（ベクトル値）
+*5 Beurling–Lax–Halmos の定理（ベクトル値）
 $H^{2}(\mathcal{E})$ 上のシフトの不変部分空間は、内部作用素値関数 $\Theta$ により $\Theta H^{2}(\mathcal{F})$ と表される（Lax 1959, Halmos 1961）。証明の骨格を与えよ。
 
 *5 Sz.-Nagy–Foias の $C_{0}$ 理論と Jordan 標準形
@@ -71,10 +71,10 @@ Hilbert 空間上のすべての有界作用素は非自明な閉不変部分空
 *4 Bernstein–Robinson の定理（Halmos による初等化）
 $p(T)$ がコンパクト（$p$ は非零多項式）な作用素は非自明な不変部分空間をもつ（Bernstein–Robinson 1966、超準解析による；Halmos の標準的証明）。Halmos の証明を完成させよ。
 
-*4 Brown の定理（準正規作用素の不変部分空間）
+*5 Brown の定理（準正規作用素の不変部分空間）
 準正規（subnormal）作用素は非自明な不変部分空間をもつ（S. Brown 1978）。Thomson の有界点評価の定理による別証の骨格を述べよ。
 
-*4 Brown–Chevreau–Pearcy の定理
+*5 Brown–Chevreau–Pearcy の定理
 スペクトルが単位円周を含む縮小作用素は非自明な不変部分空間をもつ（Brown–Chevreau–Pearcy 1988）。$\mathbb{A}_{1}$ 性と双対代数の理論の骨格を述べよ。
 
 *4 Scott Brown の手法と双対代数
@@ -89,7 +89,7 @@ $p(T)$ がコンパクト（$p$ は非零多項式）な作用素は非自明な
 *4 巣代数（nest algebra）と Ringrose の定理
 巣 $\mathcal{N}$ の巣代数 $\operatorname{Alg}\mathcal{N}$ の Jacobson 根基の特徴づけ（Ringrose 1965）と、巣代数の対角への射影の有界性を述べよ。
 
-*4 Arveson の距離公式（巣代数）
+*5 Arveson の距離公式（巣代数）
 巣代数 $\operatorname{Alg}\mathcal{N}$ について $\operatorname{dist}(T,\operatorname{Alg}\mathcal{N})=\sup_{P\in\mathcal{N}}\|(I-P)TP\|$（Arveson 1975）。証明の骨格を与えよ。
 
 *4 Lomonosov の定理の Hilbert 空間外への拡張と限界
@@ -104,13 +104,13 @@ $L^{2}[0,1]$ 上の Bishop 作用素 $T_{\alpha}f(x)=xf(\{x+\alpha\})$ につい
 *4 Weyl–von Neumann–Berg の定理（正規作用素の対角化）
 可分 Hilbert 空間の正規作用素は、任意に小さいコンパクト摂動で対角作用素になる（Berg 1971）。Weyl–von Neumann の自己共役版から導く際の困難（二次元格子の扱い）を述べよ。
 
-*4 Brown–Douglas–Fillmore の理論 {bdf}
+*5 Brown–Douglas–Fillmore の理論 {bdf}
 本質的正規作用素（$T^{*}T-TT^{*}$ がコンパクト）のコンパクト摂動に関するユニタリ同値類は、本質的スペクトル $X$ と $\operatorname{Ext}(X)\cong\operatorname{Hom}(K^{1}(X),\mathbb{Z})$（$X\subset\mathbb{C}$ なら穴ごとの指数）で分類される（BDF 1973）。主張を述べ、$X\subset\mathbb{C}$ の場合の証明の骨格を与えよ。
 
 *5 Anderson の paving 予想と Kadison–Singer 問題
 任意の $\varepsilon>0$ に対し $r$ が存在して、対角成分が $0$ の任意の有限行列 $T$ について、和が $I$ となる対角射影 $P_{1},\dots,P_{r}$ で $\|P_{i}TP_{i}\|\le\varepsilon\|T\|$ となるものが存在する（Anderson の paving 予想）。これが Kadison–Singer 問題（$\ell^{\infty}$ 上の純粋状態の $\mathcal{B}(\ell^{2})$ への拡張の一意性）と同値であることを示し、Marcus–Spielman–Srivastava（2013）による肯定的解決を述べよ。
 
-*4 Lin の定理（ほぼ可換な自己共役行列）
+*5 Lin の定理（ほぼ可換な自己共役行列）
 任意の $\varepsilon>0$ に対し $\delta>0$ が存在し、$\|A\|,\|B\|\le1$, $\|AB-BA\|<\delta$ の自己共役行列 $A,B$（任意次元）について、可換な自己共役行列 $A',B'$ で $\|A-A'\|+\|B-B'\|<\varepsilon$ となるものが存在する（Lin 1997, Friis–Rørdam の簡単な証明）。証明の骨格を与えよ。
 
 *4 Voiculescu のほぼ可換ユニタリ行列の反例

@@ -18,7 +18,7 @@ $p$-可和な Fredholm 加群 $(H,F)$ の Chern–Connes 指標 $\tau_{n}(a_{0},
 *4 非可換トーラスの Chern 数
 非可換トーラス $A_{\theta}$ 上の 2-巡回コサイクル $\tau(a_{0},a_{1},a_{2})=\frac{1}{2\pi i}\tau(a_{0}(\delta_{1}a_{1}\delta_{2}a_{2}-\delta_{2}a_{1}\delta_{1}a_{2}))$ を定義し、Rieffel 射影との対合が整数値であることを示せ（Connes 1980）。
 
-*4 整数量子 Hall 効果（Bellissard–van Elst–Schulz-Baldes）
+*5 整数量子 Hall 効果（Bellissard–van Elst–Schulz-Baldes）
 磁場中の非周期的な離散 Schrödinger 作用素について、Fermi 準位がスペクトルギャップ（あるいは移動度ギャップ）にあるとき、久保公式による Hall 伝導度が Fermi 射影の Chern–Connes 指標との対合で与えられ、整数値であることを証明せよ（1994）。
 
 *5 Connes–Moscovici の局所指数公式
@@ -27,10 +27,10 @@ $p$-可和な Fredholm 加群 $(H,F)$ の Chern–Connes 指標 $\tau_{n}(a_{0},
 *4 Lichnerowicz の公式
 spin 多様体の Dirac 作用素について $D^{2}=\nabla^{*}\nabla+\frac{R}{4}$（$R$ はスカラー曲率）を証明し、正スカラー曲率をもつコンパクト spin 多様体には零でない調和スピノルが存在しないこと、したがって $\hat A(M)=0$ を導け（Lichnerowicz 1963）。
 
-*4 スペクトル作用の漸近展開（Chamseddine–Connes）
+*5 スペクトル作用の漸近展開（Chamseddine–Connes）
 スペクトル三つ組 $(\mathcal{A},H,D)$ と偶関数 $f$ について、$\mathrm{Tr}f(D/\Lambda)\sim\sum_{k}f_{k}\Lambda^{k}\fint|D|^{-k}+f(0)\zeta_{D}(0)+O(\Lambda^{-1})$ を熱核展開から導き、多様体の場合に Einstein–Hilbert 作用が現れることを示せ（1997）。
 
-*4 Rieffel の変形量子化
+*5 Rieffel の変形量子化
 $\mathbb{R}^{d}$ の作用をもつ C*-環 $A$ と歪対称行列 $J$ に対し、変形された積 $a\times_{J}b=\iint\alpha_{Ju}(a)\alpha_{v}(b)e^{2\pi iu\cdot v}dudv$ を定義し、これが C*-環の連続場を与えることを証明せよ（Rieffel 1993）。
 
 *4 Woronowicz のコンパクト量子群
@@ -51,7 +51,7 @@ $HC_{*}(M_{n}(\mathcal{A}))\cong HC_{*}(\mathcal{A})$ を一般化トレース�
 *5 Cuntz–Quillen の切除定理
 周期巡回ホモロジーは任意の代数の拡大 $0\to I\to\mathcal{A}\to\mathcal{A}/I\to0$ に対して切除性をみたし、六項完全列を与えることの証明の骨格を与えよ（Cuntz–Quillen 1997）。
 
-*4 内部ゆらぎとゲージ場
+*5 内部ゆらぎとゲージ場
 スペクトル三つ組 $(\mathcal{A},H,D)$ について、内部ゆらぎ $D\mapsto D+A+JAJ^{-1}$（$A=\sum a_{i}[D,b_{i}]$ 自己共役）が Morita 同値のもとでの不変性から自然に生じることを示し、概可換多様体 $C^{\infty}(M)\otimes M_{n}(\mathbb{C})$ ではゲージ場を与えることを確かめよ（Connes 1996）。
 
 *4 Dixmier トレースの計量的性質
@@ -101,7 +101,7 @@ Morse 関数 $f$ による変形 $d_{t}=e^{-tf}de^{tf}$ の Laplacian の低い�
 *4 楕円型境界値問題の Fredholm 性
 楕円型作用素に Lopatinskii–Shapiro 条件をみたす境界作用素を課した境界値問題が Sobolev 空間の間の Fredholm 作用素であることを、境界での主表象の分析とパラメトリクスで証明せよ。
 
-*4 スペクトル流と指数
+*5 スペクトル流と指数
 自己共役 Fredholm 作用素の道 $(A_{t})_{t\in[0,1]}$（$A_{0},A_{1}$ 可逆）のスペクトル流を定義し、$\frac{d}{dt}+A_{t}$ の $L^{2}(\mathbb{R})$ 上の指数がスペクトル流に等しいことを証明せよ（APS、Robbin–Salamon 1995）。
 
 *4 歪自己共役 Fredholm 作用素の mod 2 指数
@@ -110,7 +110,7 @@ Morse 関数 $f$ による変形 $d_{t}=e^{-tf}de^{tf}$ の Laplacian の低い�
 *4 Gromov–Lawson の拡大可能性定理
 拡大可能な（例えば非正曲率の）コンパクト spin 多様体は正スカラー曲率の計量をもたないことを、相対指数定理と Lichnerowicz の公式で証明せよ（Gromov–Lawson 1983）。
 
-*4 $\eta$ 不変量の正則性
+*5 $\eta$ 不変量の正則性
 閉多様体上の自己共役楕円型作用素 $A$ の $\eta(s)=\sum\mathrm{sign}(\lambda)|\lambda|^{-s}$ が $\mathbb{C}$ 全体に有理型接続され、$s=0$ で正則であることの証明の骨格を与えよ（Atiyah–Patodi–Singer 1976、Gilkey）。
 
 *5 Cheeger–Müller の定理

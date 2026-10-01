@@ -36,8 +36,8 @@ C*-環上の正値線形汎関数 $\varphi$ は有界で、$\|\varphi\|=\lim_{\l
 *4 状態の十分性
 任意の $a\in A$ に対し $\varphi(a^{*}a)=\|a\|^{2}$ となる状態 $\varphi$ が存在することを示し、普遍表現 $\bigoplus_{\varphi}\pi_{\varphi}$ が忠実であることから {{R:gn}} を導け。
 
-*4 Russo–Dye の定理
-単位的 C*-環の閉単位球はユニタリ元の凸包の閉包に等しいことを証明せよ。系として、単位的な正値写像 $\varphi$ について $\|\varphi\|=\|\varphi(1)\|$ を示せ。
+*4 Kadison の等長写像定理
+単位的 C*-環の間の全射線形等長写像 $T:A\to B$ は、ユニタリ $u=T(1)$ と Jordan $*$-同型 $J$ により $T=uJ$ と表されることを証明せよ（Kadison 1951）。Jordan $*$-同型が中心射影で $*$-準同型と $*$-反準同型に分解されることも示せ。
 
 *4 Kadison–Pedersen の定理
 単位的 C*-環で $\|a\|<1-\frac{2}{n}$ なら、$a$ は $n$ 個のユニタリ元の算術平均として表せることを示せ。
@@ -45,8 +45,8 @@ C*-環上の正値線形汎関数 $\varphi$ は有界で、$\|\varphi\|=\lim_{\l
 *4 Kadison–Schwarz の不等式
 単位的な正値写像 $\Phi:A\to B$ と正規元 $a$ について $\Phi(a)^{*}\Phi(a)\le\Phi(a^{*}a)$、$\Phi$ が 2-正値なら任意の $a$ について同じ不等式が成り立つことを示せ。
 
-*4 Choi の定理
-線形写像 $\Phi:M_{n}\to M_{m}$ が完全正値 $\iff$ Choi 行列 $\sum_{i,j}E_{ij}\otimes\Phi(E_{ij})\ge0$ $\iff$ $\Phi(x)=\sum_{k}V_{k}^{*}xV_{k}$（Kraus 表示、$k\le nm$）を証明せよ。
+*4 Paulsen の $2\times2$ 行列の技法
+作用素系上の単位的写像 $\varphi$ が完全縮小的なら完全正値であることを、$\begin{pmatrix}\lambda&a\\b^{*}&\mu\end{pmatrix}$ 型の作用素系への拡張で証明せよ。値域が可換 C*-環なら有界線形写像について $\|\varphi\|_{cb}=\|\varphi\|$ となることも示せ（Paulsen）。
 
 *4 最小テンソルノルムの最小性（Takesaki）
 代数的テンソル積 $A\odot B$ 上の任意の C*-ノルム $\gamma$ は空間的ノルム $\|\cdot\|_{\min}$ 以上であることを示し、$\|\cdot\|_{\min}\le\gamma\le\|\cdot\|_{\max}$ を導け。
@@ -101,8 +101,8 @@ $A\subset B(H)$ が既約で $A\cap K(H)=\{0\}$ なら、$A$ の任意の状態�
 *4 Fell の弱包含
 表現 $\pi,\rho$ について、$\pi$ が $\rho$ に弱包含される（$\pi$ の正値行列係数が $\rho$ の係数の和で弱 $*$ 近似される）$\iff\ker\rho\subset\ker\pi$ を示せ。
 
-*5 Voiculescu の非可換 Weyl–von Neumann 定理 {voiculescu}
-$A\subset B(H)$ を可分単位的 C*-環（$H$ 可分）、$\rho$ を $\rho|_{A\cap K(H)}=0$ をみたす $A$ の単位的表現（可分空間上）とする。$\mathrm{id}\oplus\rho$ は $\mathrm{id}$ にコンパクト摂動を法として近似ユニタリ同値（$u_{n}^{*}(a\oplus\rho(a))u_{n}-a\in K$、ノルム $\to0$）であることを証明せよ（Voiculescu 1976）。
+*5 Naimark の問題（Rosenberg, Akemann–Weaver）
+既約表現がユニタリ同値を除いて一つしかない可分 C*-環は $K(H)$ に同型であることを証明せよ（Rosenberg 1953）。非可分の場合、$\diamondsuit$ 原理の下で反例が存在すること（Akemann–Weaver 2004）を述べよ。
 
 *4 Gelfand–Raikov の定理
 局所コンパクト群 $G$ の既約ユニタリ表現は $G$ の点を分離することを、群 C*-環 $C^{*}(G)$ の純状態と正定値関数の対応から証明せよ。

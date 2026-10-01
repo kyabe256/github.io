@@ -39,13 +39,13 @@ Brown 運動の見本路は a.s. でいたるところ微分不可能であり�
 *4 Lévy–Ciesielski の構成
 Schauder 関数 $s_{n}$ と i.i.d. 標準ガウス列による $\sum\xi_{n}s_{n}(t)$ が $C[0,1]$ で a.s. 一様収束し、Brown 運動を与えることを証明せよ。
 
-*4 Ciesielski の同型と Brown 運動の Besov 正則性
+*5 Ciesielski の同型と Brown 運動の Besov 正則性
 Schauder 係数の写像による Hölder 空間 $C^{\alpha}[0,1]\cong\ell^{\infty}$（$0<\alpha<1$）を示し、Brown 運動の見本路が a.s. で $B^{1/2}_{p,\infty}$（$1\le p<\infty$）に属し、$B^{1/2}_{p,q}$（$q<\infty$）に属さないことを証明せよ（Ciesielski–Kerkyacharian–Roynette 1993）。
 
 *4 Strassen の汎関数重複対数の法則
 $Z_{n}(t)=B(nt)/\sqrt{2n\log\log n}$ の集積点集合が a.s. で Cameron–Martin 単位球 $\{h:\int_{0}^{1}\dot h^{2}\le1\}$ に一致することを証明せよ（Strassen 1964）。
 
-*4 de la Peña–Montgomery-Smith の切り離し不等式
+*5 de la Peña–Montgomery-Smith の切り離し不等式
 独立確率変数列に関する $U$-統計量 $\sum_{i\neq j}h_{ij}(X_{i},X_{j})$ の裾確率が、独立な複製を用いた切り離し版 $\sum h_{ij}(X_{i},X_{j}')$ の裾確率と定数倍を除いて同値であることを証明せよ（1995）。
 
 *4 Hoffmann-Jørgensen の不等式
@@ -110,7 +110,7 @@ $\langle M\rangle_{\infty}=\infty$ の連続局所マルチンゲール $M$ に�
 *4 田中の公式と局所時間の連続性（Trotter）
 Brown 運動の局所時間 $L_{t}^{a}$ を田中の公式 $|B_{t}-a|=|a|+\int\mathrm{sgn}(B_{s}-a)dB_{s}+L_{t}^{a}$ で定義し、$(a,t)$ について連続な修正をもつこと（Trotter 1958）と占有時間公式を証明せよ。
 
-*4 Stroock–Varadhan のマルチンゲール問題
+*5 Stroock–Varadhan のマルチンゲール問題
 有界連続な一様楕円型拡散係数と有界可測なドリフトについて、マルチンゲール問題が適切（解が一意に存在）であることの証明の骨格を与えよ（Stroock–Varadhan 1969）。
 
 *4 Yamada–Watanabe の定理

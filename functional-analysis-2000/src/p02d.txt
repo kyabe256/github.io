@@ -18,7 +18,7 @@ $\|f*g\|_{r}\le\|f\|_{p}\|g\|_{q}$（$1+1/r=1/p+1/q$）を示し、最良定数�
 *4 Hilbert 変換の $L^{2}$ 理論
 $Hf=\frac1\pi\mathrm{p.v.}\int\frac{f(y)}{x-y}dy$ は $L^{2}(\mathbb{R})$ 上のユニタリ作用素（$\widehat{Hf}=-i\operatorname{sgn}\xi\hat f$）で $H^{2}=-I$。証明し、Riesz の定理（$L^{p}$ 有界性、$\|H\|_{p}=\cot\frac{\pi}{2p^{*}}$、Pichorides）を述べよ。
 
-*4 Pichorides の定理（Hilbert 変換の $L^{p}$ ノルム）
+*5 Pichorides の定理（Hilbert 変換の $L^{p}$ ノルム）
 共役関数作用素の $L^{p}(\mathbb{T})$ ノルムは $\tan\frac{\pi}{2p}$（$1<p\le2$）、$\cot\frac{\pi}{2p}$（$2\le p<\infty$）である（Pichorides 1972）。調和優関数の方法で証明の骨格を与えよ。
 
 *4 Laplace 変換作用素と Carleman 作用素
@@ -42,13 +42,13 @@ $L^{2}(0,\infty)$ 上の Laplace 変換 $\mathcal{L}f(s)=\int_{0}^{\infty}e^{-st
 *4 Borg–Marchenko の一意性定理
 $[0,\infty)$ 上の Schrödinger 作用素について、$m$ 関数が一致すればポテンシャルが一致する（Borg 1952, Marchenko）。Simon の局所版（$m_{1}-m_{2}=O(e^{-2a\sqrt{-\lambda}})$ なら $[0,a]$ で一致）を述べよ。
 
-*4 Gelfand–Levitan の逆スペクトル理論
+*5 Gelfand–Levitan の逆スペクトル理論
 スペクトル測度からポテンシャルを再構成する Gelfand–Levitan 積分方程式を導き、その一意可解性を示せ。
 
 *4 Jacobi 行列と直交多項式のスペクトル理論
 有界 Jacobi 行列 $J$ は $\ell^{2}(\mathbb{N})$ 上の自己共役作用素で、$e_{1}$ のスペクトル測度に関する直交多項式によって $L^{2}(\mu)$ 上の掛け算作用素とユニタリ同値である。Favard の定理との対応を示せ。
 
-*4 Killip–Simon の定理（Jacobi 行列の和則）
+*5 Killip–Simon の定理（Jacobi 行列の和則）
 Jacobi 行列 $J$ が自由 Jacobi 行列の Hilbert–Schmidt 摂動であることが、スペクトル測度の Szegő 型条件（準 Szegő 条件と固有値の和の条件）と同値である（Killip–Simon 2003）。Case 和則の役割を述べよ。
 
 *4 Szegő の定理と Verblunsky 係数
@@ -107,10 +107,10 @@ Dirichlet 空間 $\mathcal{D}=\{f:\int_{\mathbb{D}}|f'|^{2}<\infty\}$ の境界�
 *4 Bargmann–Segal–Fock 空間
 Fock 空間 $\mathcal{F}=\{f\text{ 整関数}:\int|f|^{2}e^{-|z|^{2}}dA<\infty\}$ の再生核 $e^{z\bar w}$ を示し、Bargmann 変換が $L^{2}(\mathbb{R})$ から $\mathcal{F}$ へのユニタリで、Hermite 関数を $z^{n}/\sqrt{\pi n!}$ に写すことを示せ。
 
-*4 Fock 空間の標本化・補間集合（Seip, Lyubarskii）
+*5 Fock 空間の標本化・補間集合（Seip, Lyubarskii）
 Fock 空間の標本化集合が上（下）Beurling 密度 $>1/\pi$（$<1/\pi$）で特徴づけられる（Seip–Wallstén 1992, Lyubarskii）ことを述べ、Gabor フレームの密度定理への応用を論ぜよ。
 
-*4 Bergman 空間の標本化と補間（Seip）
+*5 Bergman 空間の標本化と補間（Seip）
 Bergman 空間 $A^{2}(\mathbb{D})$ の標本化集合と補間集合の上下の Seip 密度による完全な特徴づけ（Seip 1993）を述べよ。
 
 *4 Kolmogorov の正定値核と Gauss 過程

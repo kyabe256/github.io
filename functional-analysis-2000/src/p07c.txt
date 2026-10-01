@@ -48,11 +48,11 @@ von Neumann 環上の任意の正規重みは正規正値汎関数の和（点�
 *4 Pedersen–竹崎の Radon–Nikodym 定理
 $\psi$ が $\sigma^{\varphi}$-不変なら、$M_{\varphi}$（中心化環）に付随する正の自己共役作用素 $h$ で $\psi=\varphi(h\,\cdot\,)$ となるものが存在し、$\sigma_{t}^{\psi}=\mathrm{Ad}\,h^{it}\circ\sigma_{t}^{\varphi}$ となることを示せ。
 
-*4 Borchers の定理
+*5 Borchers の定理
 $(M,\Omega)$ と正エネルギーの 1 径数ユニタリ群 $U(a)$ が $U(a)\Omega=\Omega$、$U(a)MU(-a)\subset M$（$a\ge0$）をみたすなら、$\Delta^{it}U(a)\Delta^{-it}=U(e^{-2\pi t}a)$、$JU(a)J=U(-a)$ であることを証明せよ（Borchers 1992）。
 
-*5 Bisognano–Wichmann の定理
-Wightman 公理系の自由（あるいは一般の）場について、楔領域 $W$ の局所代数 $\mathcal{A}(W)$ と真空のモジュラー群が $W$ を保つ Lorentz ブーストで、モジュラー共役が CPT 作用素と空間回転の合成で与えられることの証明の骨格を与えよ（1975）。
+*4 Connes スペクトルと不変量 $S(M)$
+自己同型群 $\sigma$ の Connes スペクトル $\Gamma(\sigma)=\bigcap_{e}\mathrm{Sp}(\sigma^{e})$（$e$ は不変射影、$\sigma^{e}$ は縮小環への制限）を定義し、因子 $M$ について $\Gamma(\sigma^{\varphi})$ が $\varphi$ によらず $S(M)\cap\mathbb{R}_{+}^{*}=\exp\Gamma(\sigma^{\varphi})$ となることを証明せよ（Connes 1973）。
 
 *5 $R$ の自己同型の外部共役分類（Connes）
 超有限 II$_{1}$ 因子 $R$ の自己同型は、外部周期 $p$ と障害 $\gamma\in\mathbb{T}$（$\gamma^{p}=1$）の組によって外部共役を除いて完全に分類されることの証明の骨格を与えよ（Connes 1975）。Rohlin 性の役割を説明せよ。
@@ -86,22 +86,22 @@ C*-環 $A$ について、(i) 核型、(ii) 完全正値近似性 CPAP、(iii) $
 *4 核型 C*-環の安定性
 型 I の C*-環、AF 環は核型であること、核型性が拡大・帰納極限・従順群による接合積で保たれることを証明せよ。
 
-*4 Kirchberg–Wassermann の完全性
+*5 Kirchberg–Wassermann の完全性
 C*-環 $A$ について、$\otimes_{\min}A$ が短完全列を保つ $\iff$ $A$ が核型埋め込み可能 $\iff$ $A$ がある核型 C*-環の部分環であることを証明の骨格とともに示せ（Kirchberg 1995）。
 
-*4 群の完全性と性質 A
+*5 群の完全性と性質 A
 有限生成群 $G$ について、$C_{r}^{*}(G)$ が完全 $\iff$ $G$ が性質 A（Yu）をもつことを証明せよ（Ozawa 2000、Higson–Roe）。
 
 *5 Kirchberg の定理
 $C^{*}(\mathbb{F}_{\infty})\otimes_{\min}B(H)=C^{*}(\mathbb{F}_{\infty})\otimes_{\max}B(H)$ を証明せよ（Kirchberg 1993）。
 
-*4 Connes 埋め込み問題と Kirchberg の同値命題
+*5 Connes 埋め込み問題と Kirchberg の同値命題
 次が同値であることを示せ：(i) 任意の可分 II$_{1}$ 因子が $R^{\omega}$ に埋め込める、(ii) $C^{*}(\mathbb{F}_{\infty})\otimes_{\min}C^{*}(\mathbb{F}_{\infty})=C^{*}(\mathbb{F}_{\infty})\otimes_{\max}C^{*}(\mathbb{F}_{\infty})$、(iii) 任意の C*-環が QWEP（Kirchberg 1993）。
 
 *5 MIP$^{*}$=RE と Connes 埋め込み問題の否定
 Ji–Natarajan–Vidick–Wright–Yuen（2020）の MIP$^{*}$=RE から、Tsirelson 問題の否定を経て $R^{\omega}$ に埋め込めない II$_{1}$ 因子が存在することを導く論理の骨格を与えよ。
 
-*4 Junge–Pisier の定理
+*5 Junge–Pisier の定理
 $B(H)\otimes_{\min}B(H)\neq B(H)\otimes_{\max}B(H)$（$H$ 無限次元）を、作用素空間の $n$ 次元部分空間の指数評価を用いて証明せよ（Junge–Pisier 1995）。
 
 *4 $B(H)$ の非完全性（Wassermann）

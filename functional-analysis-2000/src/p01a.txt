@@ -45,7 +45,7 @@ $2\le p<\infty$ で $\left\|\frac{f+g}{2}\right\|_{p}^{p}+\left\|\frac{f-g}{2}\r
 *4 Jordan–von Neumann の定理
 ノルムが内積から来る $\iff$ 平行四辺形法則が成り立つ。極化恒等式を用いて証明し、2 次元部分空間ですべて内積的なら全体が内積的であることを示せ。
 
-*4 Kakutani の特徴づけ（Hilbert 空間）
+*5 Kakutani の特徴づけ（Hilbert 空間）
 $\dim X\ge3$ のノルム空間で、すべての 2 次元部分空間がノルム 1 の射影の像となるならば $X$ は内積空間である（Kakutani 1939）。証明の骨格を与えよ。
 
 *4 Schur の性質（$\ell^{1}$）
@@ -86,7 +86,7 @@ $\mathbb{R}$ および $\mathbb{R}^{2}$ 上には、すべての有界部分集�
 *5 Banach–Tarski の逆理
 $\mathbb{R}^{3}$ の単位球は有限個に分割し回転と平行移動で単位球二つに組み替えられる。自由群 $F_{2}\subset SO(3)$ の構成（Hausdorff）と逆理的分解の議論を完成させ、従順性の欠如が本質であること（Tarski の定理）を述べよ。
 
-*4 Hahn–Banach と選択公理
+*5 Hahn–Banach と選択公理
 Hahn–Banach の定理は選択公理より真に弱いが ZF では証明できない。Hahn–Banach からある非可測集合の存在が従うこと（Foreman–Wehrung）を述べ、Ultrafilter 補題からの証明の骨格を与えよ。
 
 *4 正値線形汎関数の拡張（M. Riesz–Krein）
@@ -95,7 +95,7 @@ Hahn–Banach の定理は選択公理より真に弱いが ZF では証明で�
 *4 Mazur–Orlicz の定理
 劣線形汎関数 $p$ と集合 $\{x_{t}\}$, 実数 $\{c_{t}\}$ に対し、$f\le p$ かつ $f(x_{t})\ge c_{t}$ なる線形汎関数 $f$ が存在 $\iff$ 任意の有限非負結合で $\sum\lambda_{t}c_{t}\le p(\sum\lambda_{t}x_{t})$。証明し、Hahn–Banach の一般化であることを示せ。
 
-*4 Hahn–Banach の vector 版と単射空間（Nachbin–Goodner–Kelley）
+*5 Hahn–Banach の vector 版と単射空間（Nachbin–Goodner–Kelley）
 実 Banach 空間 $Y$ が「任意の作用素がノルムを保って拡張される」（1-単射）$\iff Y\cong C(K)$（$K$ は極端に非連結なコンパクト空間）。$\ell^{\infty}$ が 1-単射であることを示し、定理の骨格を与えよ。
 
 *4 Phillips の補題と $c_{0}$ の非補空間性
@@ -110,7 +110,7 @@ $c_{0}$ は任意の可分 Banach 空間の中で（閉部分空間として含�
 *4 Hahn–Banach による Lagrange 乗数の存在
 凸計画 $\min f(x)$ s.t. $g(x)\le0$（Slater 条件）の乗数の存在を、像空間での Hahn–Banach の分離から導け。
 
-*4 Hahn–Banach と Krein–Milman の同値（ZF 上）
+*5 Hahn–Banach と Krein–Milman の同値（ZF 上）
 ZF において、Hahn–Banach ＋ Krein–Milman が選択公理と同値であること（Bell–Fremlin）を述べ、一方向の証明の骨格を与えよ。
 
 *4 Hahn–Banach 拡張の一意性（Taylor–Foguel）

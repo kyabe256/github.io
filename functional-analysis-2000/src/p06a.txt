@@ -30,7 +30,7 @@ $\int_{Q}Mf<\infty$（$Q$ は有界）$\iff$ $f\in L\log L(Q)$（Stein 1969）�
 *4 再配置不変空間の Boyd 指数と補間
 再配置不変空間の Boyd 指数 $p_{X},q_{X}$ を定義し、$1<p_{X}\le q_{X}<\infty$ なら Hilbert 変換・Hardy–Littlewood 極大作用素が $X$ 上有界であること（Boyd 1969）を示せ。
 
-*4 Calderón–Mityagin の定理（$L^{1}$, $L^{\infty}$ の補間空間）
+*5 Calderón–Mityagin の定理（$L^{1}$, $L^{\infty}$ の補間空間）
 $(L^{1},L^{\infty})$ の正確な補間空間は、$f^{**}$ の Hardy–Littlewood–Pólya 順序で単調な再配置不変空間に一致する（Calderón 1966, Mityagin 1965）。主張と証明の骨格を与えよ。
 
 *4 de la Vallée-Poussin の一様可積分性判定と Vitali の収束定理
@@ -42,7 +42,7 @@ $p$ が偶数でないとき、$L^{p}$ の部分空間の間の等距離同型�
 *4 $L^{0}$ の位相と Nikishin
 $L^{0}$（測度収束）の位相ベクトル空間としての性質（局所凸でない、双対は $0$）を示し、$L^{p}$（$0<p<1$）からの線形写像の構造（Kalton の定理：$L^{p}$ から $L^{0}$ への作用素）を述べよ。
 
-*4 Komlós の定理と $L^{1}$ の弱点列コンパクト性の代替
+*5 Komlós の定理と $L^{1}$ の弱点列コンパクト性の代替
 $L^{1}$ の有界列は、部分列でそのすべての部分列の Cesàro 平均がほとんど至る所同じ極限に収束するものをもつ（Komlós 1967）。証明の骨格を与えよ。
 
 *4 Kadec–Pełczyński の二分律（再訪）と $L^{p}$ の弱収束
@@ -92,13 +92,13 @@ $T\in\mathcal{D}'(\Omega)$ が $\Delta T=0$ をみたせば $T$ は調和関数�
 *4 準楕円型作用素（Hörmander）
 定係数作用素 $P(D)$ が準楕円型（$P(D)u\in C^{\infty}\Rightarrow u\in C^{\infty}$）$\iff$ $|\xi|\to\infty$ で $\frac{\partial^{\alpha}P(\xi)}{P(\xi)}\to0$（Hörmander 1955）。熱作用素が準楕円型、波動作用素がそうでないことを示せ。
 
-*4 Hörmander の和の二乗定理 {hormander-sos}
+*5 Hörmander の和の二乗定理 {hormander-sos}
 滑らかなベクトル場 $X_{0},\dots,X_{r}$ の生成する Lie 代数が各点で接空間全体を張れば、$\sum X_{j}^{2}+X_{0}$ は準楕円型である（Hörmander 1967）。主張と、Kolmogorov 作用素 $\partial_{x}^{2}+x\partial_{y}-\partial_{t}$ への適用を述べ、証明の骨格（部分楕円評価）を与えよ。
 
-*4 Lewy の非可解性の例
+*5 Lewy の非可解性の例
 $L=\partial_{x}+i\partial_{y}-2i(x+iy)\partial_{t}$ について、$Lu=f$ が任意の点の近傍で解をもたない滑らかな $f$ が存在する（Lewy 1957）。主張と証明の骨格を与えよ。
 
-*4 Nirenberg–Trèves の条件 ($\Psi$) と局所可解性
+*5 Nirenberg–Trèves の条件 ($\Psi$) と局所可解性
 主型の偏微分作用素の局所可解性が条件 $(\Psi)$ と同値であること（Nirenberg–Trèves の予想、Dencker 2006 による解決）を述べよ。
 
 *4 超関数の積の不可能性（Schwartz）
@@ -113,7 +113,7 @@ $L=\partial_{x}+i\partial_{y}-2i(x+iy)\partial_{t}$ について、$Lu=f$ が任
 *4 超関数の積と引き戻しの Hörmander 判定
 $WF(u)\cap(-WF(v))=\emptyset$ なら $uv$ が定義され、写像 $f$ について $WF(u)\cap N_{f}=\emptyset$ なら引き戻し $f^{*}u$ が定義される（Hörmander）。証明せよ。
 
-*4 特異性の伝播定理（Hörmander）
+*5 特異性の伝播定理（Hörmander）
 実主型の擬微分作用素 $P$ について、$WF(u)\setminus WF(Pu)$ は $P$ の主表象の零点集合に含まれ、陪特性帯に沿って不変である（Hörmander 1971）。主張と証明の骨格を与えよ。
 
 *4 Paley–Wiener–Schwartz の定理 {pws}

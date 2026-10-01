@@ -6,7 +6,7 @@
 *4 内部正則性（差分商の方法） {interior-reg}
 $Lu=-\operatorname{div}(A\nabla u)=f\in L^{2}$（$A$ は Lipschitz）の弱解 $u\in H^{1}$ は $H^{2}_{loc}$ に属する。Nirenberg の差分商の方法で証明し、$f\in H^{k}$ なら $u\in H^{k+2}_{loc}$ を導け。
 
-*4 境界正則性と Agmon–Douglis–Nirenberg 評価
+*5 境界正則性と Agmon–Douglis–Nirenberg 評価
 滑らかな境界と Dirichlet 境界条件で $\|u\|_{W^{2,p}}\le C(\|Lu\|_{p}+\|u\|_{p})$（$1<p<\infty$）（Agmon–Douglis–Nirenberg 1959）。境界の平坦化と Calderón–Zygmund 評価による証明の骨格を与えよ。
 
 *4 Schauder 評価
@@ -21,7 +21,7 @@ Hölder 連続係数の楕円型作用素について $\|u\|_{C^{2,\alpha}}\le C
 *4 Moser の Harnack 不等式
 非負弱解について $\sup_{B_{r}}u\le C\inf_{B_{r}}u$（Moser 1961）。Moser の反復と John–Nirenberg の補題（Bombieri–Giusti の補題）で証明せよ。
 
-*4 Krylov–Safonov の Harnack 不等式（非発散型）
+*5 Krylov–Safonov の Harnack 不等式（非発散型）
 非発散型の一様楕円型方程式 $a_{ij}\partial_{ij}u=0$（有界可測係数）の非負解に Harnack 不等式が成り立つ（Krylov–Safonov 1980）。Alexandrov–Bakelman–Pucci の最大値原理を用いた証明の骨格を与えよ。
 
 *4 Alexandrov–Bakelman–Pucci の最大値原理
@@ -51,7 +51,7 @@ $L^{2}(\Omega;\mathbb{R}^{n})=\nabla H^{1}\oplus\{v:\operatorname{div}v=0,\ v\cd
 *4 Weyl の Hodge 定理（閉多様体）
 閉 Riemann 多様体上で $\Omega^{k}=\mathcal{H}^{k}\oplus d\Omega^{k-1}\oplus\delta\Omega^{k+1}$ で、調和形式の空間が de Rham コホモロジーと同型である。楕円正則性と Laplacian の Fredholm 性で証明せよ。
 
-*4 楕円型作用素の固有関数の一意接続性（Aronszajn–Carleman）
+*5 楕円型作用素の固有関数の一意接続性（Aronszajn–Carleman）
 滑らかな係数の二階楕円型作用素の解は、一点で無限位数の零をもてば恒等的に零である（Aronszajn 1957, Carleman）。Carleman 評価による証明の骨格を与え、Pliś・Miller の非一意接続の例（Hölder 係数）を述べよ。
 
 *5 De Giorgi–Nash–Moser の定理の完全証明
@@ -86,19 +86,19 @@ $S^{0}_{1,0}$ の擬微分作用素は $L^{2}$ で有界、$S^{m}$ は $H^{s+m}\
 *4 Wodzicki 留数
 古典擬微分作用素の Wodzicki 留数 $\operatorname{res}(P)=(2\pi)^{-n}\int_{S^{*}M}\sigma_{-n}(P)$ が、擬微分作用素の代数上の唯一のトレース（$n\ge2$, 連結なら）であること（Wodzicki 1984, Guillemin）を述べよ。
 
-*4 Fourier 積分作用素の $L^{2}$ 有界性（Hörmander）
+*5 Fourier 積分作用素の $L^{2}$ 有界性（Hörmander）
 非退化な相関数 $\phi$ と記号 $a\in S^{0}$ による Fourier 積分作用素 $\int e^{i\phi(x,\xi)}a(x,\xi)\hat f(\xi)d\xi$ が $L^{2}$ 有界であること（Hörmander 1971）を、$TT^{*}$ 論法と停留位相で証明の骨格を与えよ。
 
-*4 Seeger–Sogge–Stein の Fourier 積分作用素の $L^{p}$ 評価
+*5 Seeger–Sogge–Stein の Fourier 積分作用素の $L^{p}$ 評価
 次数 $-(n-1)|\frac1p-\frac12|$ の Fourier 積分作用素は $L^{p}$（$1<p<\infty$）で有界である（Seeger–Sogge–Stein 1991）。主張と証明の骨格（二進分解と角度分解）を与え、波動方程式の $L^{p}$ 評価への応用を述べよ。
 
 *4 Calderón の交換子と Calderón 代数
 $[A,M_{a}]$（$A$ は $\frac{d}{dx}$ の Hilbert 変換型、$M_{a}$ は Lipschitz 関数の掛け算）が $L^{2}$ 有界であること（Calderón 1965）を述べ、擬微分作用素の記号計算が Lipschitz 係数でどこまで成り立つかを論ぜよ。
 
-*4 Coifman–McIntosh–Meyer の定理（Lipschitz 曲線上の Cauchy 積分）
+*5 Coifman–McIntosh–Meyer の定理（Lipschitz 曲線上の Cauchy 積分）
 Lipschitz 曲線上の Cauchy 積分作用素は $L^{2}$ 有界である（Coifman–McIntosh–Meyer 1982）。主張を述べ、$T(1)$ 定理あるいは Calderón 交換子の級数による証明の骨格を与えよ。
 
-*4 $T(1)$ 定理（David–Journé） {t1}
+*5 $T(1)$ 定理（David–Journé） {t1}
 Calderón–Zygmund 核をもつ作用素 $T$ が $L^{2}$ 有界 $\iff$ $T(1),T^{*}(1)\in\mathrm{BMO}$ かつ弱有界性条件（David–Journé 1984）。主張と、パラ積を用いた証明の骨格を与えよ。
 
 *4 パラ積と Bony のパラ微分計算
@@ -110,10 +110,10 @@ Weyl 量子化 $a^{w}$ と Wigner 関数 $W(f,g)(x,\xi)$ の関係 $\langle a^{w
 *4 Hudson の定理
 $f\in L^{2}(\mathbb{R})$ の Wigner 関数が非負 $\iff f$ が一般化 Gauss 関数 $e^{-az^{2}+bz+c}$（$\operatorname{Re}a>0$）（Hudson 1974）。証明せよ。
 
-*4 Fefferman–Phong の不等式
+*5 Fefferman–Phong の不等式
 $a\in S^{2}_{1,0}$, $a\ge0$ なら $\operatorname{Re}\langle a^{w}u,u\rangle\ge-C\|u\|^{2}$（Fefferman–Phong 1978）。主張と、Calderón–Zygmund 型の分解による証明の骨格を与えよ。
 
-*4 Beals の特徴づけ
+*5 Beals の特徴づけ
 有界作用素 $A$ が $S^{0}_{0,0}$（あるいは $S^{0}_{1,0}$）の擬微分作用素 $\iff$ 交換子 $\operatorname{ad}_{x_{j}}$, $\operatorname{ad}_{D_{j}}$ の任意回の反復が $L^{2}$ 有界（Beals 1977）。主張と証明の骨格を与えよ。
 
 *5 Atiyah–Singer の指数定理（擬微分作用素の言葉で）

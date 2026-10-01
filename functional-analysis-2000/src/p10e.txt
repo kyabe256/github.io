@@ -71,10 +71,10 @@ Dirac 作用素の熱核の超トレースを、Brown 運動の道空間上の�
 *5 Green–Tao の定理
 素数は任意の長さの等差数列を含むことを、Szemerédi の定理の相対版（擬乱な優測度に関する転移原理）と Goldston–Yıldırım の打ち切り除数和を用いて証明の骨格とともに示せ（Green–Tao 2008）。稠密モデル定理における Hahn–Banach の役割を説明せよ。
 
-*4 Gowers ノルムと逆定理
+*5 Gowers ノルムと逆定理
 有限可換群上の Gowers の一様性ノルム $\|f\|_{U^{k}}$ がノルムであること（Gowers–Cauchy–Schwarz 不等式）を示し、$U^{2}$ の逆定理（大きな Fourier 係数の存在）を証明して、$U^{k}$ の逆定理（Green–Tao–Ziegler 2012：冪零列との相関）を述べよ。
 
-*4 近い C*-環の同型（Christensen–Sinclair–Smith–White–Winter）
+*5 近い C*-環の同型（Christensen–Sinclair–Smith–White–Winter）
 同一の Hilbert 空間上の二つの C*-環が Kadison–Kastler 距離で十分近く、一方が可分核型なら、両者はユニタリで共役であることの証明の骨格を与えよ（2012）。
 
 *4 Lieb–Simon の Thomas–Fermi 理論
@@ -83,10 +83,10 @@ Thomas–Fermi 汎関数の最小化問題が一意解をもつことを凸解�
 *5 Haagerup–Schultz の不変部分空間定理
 II$_{1}$ 因子 $M$ の元 $T$ の Brown 測度が 1 点に集中しないなら、$T$ は $M$ に付随する非自明な超不変部分空間をもつことの証明の骨格を与えよ（Haagerup–Schultz 2009）。
 
-*4 Brown 測度と $R$-対角元（Haagerup–Larsen）
+*5 Brown 測度と $R$-対角元（Haagerup–Larsen）
 有限 von Neumann 環の元 $T$ の Brown 測度を Fuglede–Kadison 行列式 $\log\Delta(T-\lambda)$ の超関数的 Laplacian として定義し、$R$-対角元の Brown 測度が回転対称で、$|T|$ の分布の S 変換で決まることを示せ（Haagerup–Larsen 2000）。
 
-*4 Bost–Connes 系
+*5 Bost–Connes 系
 Hecke 環上の C*-力学系で分配関数が Riemann ゼータ関数 $\zeta(\beta)$ となるものを構成し、$\beta>1$ では KMS 状態の極値が $\mathrm{Gal}(\mathbb{Q}^{ab}/\mathbb{Q})$ でパラメトライズされ、$0<\beta\le1$ では KMS 状態が一意であること（相転移）を証明せよ（Bost–Connes 1995）。
 
 *4 素測地線定理（Huber）
@@ -101,22 +101,22 @@ $SL(2,\mathbb{Z})$ の非初等的有限生成部分群 $\Gamma$ について、
 *5 Ball の Lipschitz 拡張定理
 Markov 型 2 をもつ距離空間 $X$ と余型 2 の Banach 空間（の 2-一様凸な変形）$Y$ について、$X$ の部分集合上の $Y$ 値 Lipschitz 写像が定数倍の Lipschitz 定数で $X$ 全体に拡張されることの証明の骨格を与えよ（Ball 1992）。
 
-*4 グラフォン空間のコンパクト性（Lovász–Szegedy）
+*5 グラフォン空間のコンパクト性（Lovász–Szegedy）
 グラフォンの空間を測度保存写像で割ったものが切断距離でコンパクトであることを、弱正則性補題（Frieze–Kannan）と $L^{2}$ のマルチンゲール収束で証明せよ（Lovász–Szegedy 2007）。Szemerédi の正則性補題との関係を述べよ。
 
-*4 非可換 Khintchine 不等式（Lust-Piquard–Pisier）
+*5 非可換 Khintchine 不等式（Lust-Piquard–Pisier）
 $1\le p<\infty$ について Schatten クラスの係数 $x_{k}$ と Rademacher 列に対し $\mathbb{E}\|\sum\varepsilon_{k}x_{k}\|_{S_{p}}\asymp\max\{\|(\sum x_{k}^{*}x_{k})^{1/2}\|_{S_{p}},\|(\sum x_{k}x_{k}^{*})^{1/2}\|_{S_{p}}\}$（$p\ge2$；$p<2$ では下限型）を証明せよ（Lust-Piquard 1986、Lust-Piquard–Pisier 1991）。
 
 *5 Bourgain–Dyatlov のフラクタル不確定性原理
 Ahlfors–David 正則な $\delta$-次元フラクタル集合 $X,Y$（$0<\delta<1$）について $\|1_{Y}\mathcal{F}_{h}1_{X}\|_{L^{2}\to L^{2}}\le Ch^{\beta}$（$\beta>0$）を示し、凸余コンパクト双曲曲面の Laplacian の本質的スペクトルギャップへの応用の骨格を与えよ（Bourgain–Dyatlov 2018）。
 
-*5 Ten Martini 問題（Avila–Jitomirskaya）
-ほとんど Mathieu 作用素 $(H_{\lambda,\alpha,\theta}u)_{n}=u_{n+1}+u_{n-1}+2\lambda\cos2\pi(\theta+n\alpha)u_{n}$（$\lambda\neq0$、$\alpha$ 無理数）のスペクトルが Cantor 集合であることの証明の骨格を、Aubry 双対性と還元可能性を用いて与えよ（Avila–Jitomirskaya 2009）。
+*5 全次数の二部 Ramanujan グラフ（Marcus–Spielman–Srivastava）
+任意の $d\ge3$ について $d$-正則な二部 Ramanujan グラフが無限個存在することを、2-持ち上げの符号付き隣接行列の特性多項式の交互族（interlacing family）と実根性を用いて証明せよ（Marcus–Spielman–Srivastava 2015）。
 
-*4 バルク–エッジ対応（Kellendonk–Richter–Schulz-Baldes）
+*5 バルク–エッジ対応（Kellendonk–Richter–Schulz-Baldes）
 2 次元の量子 Hall 系について、バルクの Hall 伝導度（Chern 数）とエッジ電流の量子化（エッジ指数）が、Toeplitz 拡大の六項完全列の境界写像によって等しいことを証明せよ（2002）。{{R:six-term}} の応用として位置づけよ。
 
-*4 Kitaev の周期表と実 $K$ 理論
+*5 Kitaev の周期表と実 $K$ 理論
 対称性クラス（時間反転・粒子正孔・カイラル対称性による 10 種）のギャップのある自由フェルミオン系の位相相が、実および複素 $K$ 理論 $KO_{-q}$、$K_{-q}$ と Bott 周期性で分類されることを、Clifford 代数の拡大問題として説明せよ（Kitaev 2009）。
 
 *5 指数定理の全体像の再構成 {finale}

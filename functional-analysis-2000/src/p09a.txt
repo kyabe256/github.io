@@ -9,8 +9,8 @@ Polish 空間上の確率測度の族について、緊密 $\iff$ 弱位相で�
 *4 Skorokhod の表現定理
 可分距離空間上で $\mu_{n}\Rightarrow\mu$ なら、ある確率空間上の確率変数 $X_{n}\sim\mu_{n}$、$X\sim\mu$ で $X_{n}\to X$ a.s. となるものが存在することを証明せよ。
 
-*4 Sazonov の定理
-可分 Hilbert 空間 $H$ 上の正定値関数 $\varphi$（$\varphi(0)=1$）がある Borel 確率測度の特性関数である $\iff\varphi$ が Sazonov 位相（トレース型作用素 $S$ による半ノルム $\langle Sx,x\rangle^{1/2}$ の生成する位相）で連続であることを証明せよ（Sazonov 1958）。
+*4 Ulam の定理と Radon 性
+Polish 空間上の任意の Borel 確率測度は緊密（内部正則）であることを証明し（Ulam）、普遍可測でない Borel 確率測度が非可分距離空間上に存在しうることの集合論的条件（実数値可測基数）を述べよ。
 
 *4 Kantorovich–Rubinstein の双対定理 {kr-dual}
 Polish 空間上の 1 次モーメント有限な $\mu,\nu$ について $W_{1}(\mu,\nu)=\sup\{\int f\,d(\mu-\nu):\mathrm{Lip}(f)\le1\}$ を証明せよ（Kantorovich–Rubinstein 1958）。

@@ -6,7 +6,7 @@ $\int_{1}^{\infty}\|Ve^{-itH_{0}}\psi\|dt<\infty$（$\psi$ の稠密集合で）
 *4 波動作用素の基本性質
 $\Omega_{\pm}$ は部分等長で、交絡関係 $H\Omega_{\pm}=\Omega_{\pm}H_{0}$ をみたし、値域は $H$ の絶対連続部分空間に含まれる。完全性（値域 $=H_{ac}(H)$）の定義と、散乱作用素 $S=\Omega_{-}^{*}\Omega_{+}$ のユニタリ性との関係を示せ。
 
-*4 Birman–Kato–Rosenblum の定理 {bkr}
+*5 Birman–Kato–Rosenblum の定理 {bkr}
 $H-H_{0}$ がトレースクラスなら波動作用素は存在して完全である（Kato 1957, Rosenblum, Birman）。Kato–Rosenblum の平滑化の議論で証明の骨格を与えよ。
 
 *4 Birman の不変性原理
@@ -15,10 +15,10 @@ $H-H_{0}$ がトレースクラスなら波動作用素は存在して完全で�
 *4 Kato の平滑性理論
 $A$ が $H$-平滑（$\int\|Ae^{-itH}\psi\|^{2}dt\le C\|\psi\|^{2}$）$\iff\sup_{\varepsilon>0,\lambda}\|A(\operatorname{Im}(H-\lambda-i\varepsilon)^{-1})A^{*}\|<\infty$（Kato 1966）。これから波動作用素の存在と完全性を導け。
 
-*4 極限吸収原理（Agmon）
+*5 極限吸収原理（Agmon）
 短距離ポテンシャル $|V(x)|\le C\langle x\rangle^{-1-\varepsilon}$ について、$\langle x\rangle^{-s}(H-\lambda\mp i0)^{-1}\langle x\rangle^{-s}$（$s>1/2$）が正のエネルギーで存在し連続である（Agmon 1975）。証明の骨格を与え、漸近完全性を導け。
 
-*4 Mourre 推定 {mourre}
+*5 Mourre 推定 {mourre}
 共役作用素 $A$（dilation 生成子）について、エネルギー区間 $I$ で $E_{I}(H)i[H,A]E_{I}(H)\ge cE_{I}(H)+K$（$K$ コンパクト）が成り立てば、$I$ 上で固有値は有限重複度で有限個に集積せず、特異連続スペクトルは存在せず、極限吸収原理が成り立つ（Mourre 1981）。主張と証明の骨格を与えよ。
 
 *4 ビリアル定理
@@ -27,7 +27,7 @@ $H=-\Delta+V$ の固有関数 $\psi$ について $\langle\psi,[H,iA]\psi\rangle
 *4 Kato の定理（正の固有値の非存在）
 $V(x)=o(|x|^{-1})$ なら $-\Delta+V$ は正の固有値をもたない（Kato 1959）。一方 Wigner–von Neumann ポテンシャル $V(r)\sim\frac{8\sin2r}{r}$ が正の固有値をもつことを示せ。
 
-*4 Enss の方法（漸近完全性の時間依存的証明）
+*5 Enss の方法（漸近完全性の時間依存的証明）
 位相空間の入射・出射への分解（Enss 1978）により、短距離ポテンシャルの漸近完全性を、時間依存的・幾何的に証明する骨格を与えよ。
 
 *4 長距離散乱と修正波動作用素（Dollard, Hörmander）
@@ -39,7 +39,7 @@ Coulomb ポテンシャルでは通常の波動作用素は存在せず、位相
 *4 散乱行列と散乱振幅
 固定エネルギーの散乱行列 $S(\lambda)$ が単位球面上のユニタリ作用素で、$S(\lambda)-I$ がコンパクトであることを示し、光学定理（前方散乱振幅の虚部と全断面積の関係）を導け。
 
-*4 Birman–Krein の公式
+*5 Birman–Krein の公式
 トレースクラス摂動について $\det S(\lambda)=e^{-2\pi i\xi(\lambda)}$（$\xi$ はスペクトルシフト関数）（Birman–Krein 1962）。証明の骨格を与えよ。
 
 *4 Levinson の定理
@@ -48,7 +48,7 @@ Coulomb ポテンシャルでは通常の波動作用素は存在せず、位相
 *4 Jost 関数と一次元散乱
 半直線の Schrödinger 方程式の Jost 解 $f(k,x)\sim e^{ikx}$ と Jost 関数 $F(k)=f(k,0)$ を定義し、$F$ の上半平面の零点が束縛状態に対応し、$S(k)=F(-k)/F(k)$ であることを示せ。
 
-*4 逆散乱法と Marchenko 方程式
+*5 逆散乱法と Marchenko 方程式
 散乱データ（反射係数と束縛状態のデータ）からポテンシャルを再構成する Marchenko 積分方程式を導き、KdV 方程式の解法（Gardner–Greene–Kruskal–Miura）における散乱データの時間発展が線形になることを示せ。
 
 *4 Lax–Phillips の散乱理論
@@ -83,7 +83,7 @@ $P_{h}=-h^{2}\Delta+V$（$V\to\infty$ あるいは $\liminf V>E$）の固有値 
 *4 Agmon 評価と固有関数の指数減衰 {agmon}
 古典的禁止領域 $\{V>E\}$ で、固有関数は Agmon 距離 $d_{E}(x)$ により $|\psi(x)|\lesssim e^{-(1-\varepsilon)d_{E}(x)/h}$ と減衰する（Agmon 1982）。Agmon の恒等式を用いて証明せよ。
 
-*4 二重井戸のトンネル効果（Helffer–Sjöstrand, Simon）
+*5 二重井戸のトンネル効果（Helffer–Sjöstrand, Simon）
 対称二重井戸 $-h^{2}\Delta+V$ の最低二つの固有値の差（トンネル分裂）が $e^{-S_{0}/h}$ の程度であること（$S_{0}$ は井戸間の Agmon 距離）（Helffer–Sjöstrand, Simon 1984）を述べ、指数の上下評価の骨格を与えよ。
 
 *4 調和近似（Simon, Helffer–Sjöstrand）
@@ -92,10 +92,10 @@ $V$ の非退化最小点の近くで、$-h^{2}\Delta+V$ の低い固有値が�
 *4 量子エルゴード性（Shnirelman–Zelditch–Colin de Verdière） {qe}
 測地流がエルゴード的な閉 Riemann 多様体では、Laplacian の固有関数の密度子列（密度 1）が Liouville 測度に弱収束する。Egorov の定理と局所 Weyl 則を用いて証明せよ。
 
-*4 量子一意エルゴード性（Lindenstrauss）
+*5 量子一意エルゴード性（Lindenstrauss）
 コンパクト算術双曲曲面の Hecke–Laplace 固有関数の質量は、全体として一様分布に収束する（量子一意エルゴード性、Lindenstrauss 2006、Soundararajan による脱出の排除）。主張を述べ、測度剛性（エントロピー正性）の役割を説明せよ。
 
-*4 Anantharaman のエントロピー評価
+*5 Anantharaman のエントロピー評価
 負曲率多様体の固有関数の半古典測度は正の Kolmogorov–Sinai エントロピーをもつ（Anantharaman 2008）。主張を述べ、固有関数が単一の閉測地線に集中できないことを結論せよ。
 
 *4 Bohr–Sommerfeld 量子化条件

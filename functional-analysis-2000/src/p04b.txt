@@ -21,7 +21,7 @@ Dirichlet Laplacian が $C_{0}(\Omega)$ 上で解析半群を生成すること�
 *4 Balakrishnan の公式
 扇形作用素 $A$ と $0<\alpha<1$ について $A^{\alpha}x=\frac{\sin\pi\alpha}{\pi}\int_{0}^{\infty}\lambda^{\alpha-1}A(\lambda+A)^{-1}xd\lambda$（Balakrishnan 1960）。証明し、分数 Laplacian の特異積分表示を導け。
 
-*4 分数 Laplacian と Caffarelli–Silvestre の拡張
+*5 分数 Laplacian と Caffarelli–Silvestre の拡張
 $(-\Delta)^{s}u=c_{n,s}\mathrm{p.v.}\int\frac{u(x)-u(y)}{|x-y|^{n+2s}}dy$ を示し、$(-\Delta)^{s}u$ が上半空間の退化楕円型方程式 $\operatorname{div}(y^{1-2s}\nabla U)=0$ の Dirichlet–Neumann 写像として得られること（Caffarelli–Silvestre 2007）を示せ。
 
 *4 Heinz の不等式と分数冪の比較（Kato）
@@ -30,7 +30,7 @@ $(-\Delta)^{s}u=c_{n,s}\mathrm{p.v.}\int\frac{u(x)-u(y)}{|x-y|^{n+2s}}dy$ を示
 *4 Kato の平方根問題（自己共役の場合）
 一様楕円型の自己共役作用素 $L=-\operatorname{div}(A\nabla)$ について $D(L^{1/2})=H^{1}$, $\|L^{1/2}u\|\simeq\|\nabla u\|$ は自明であることを示し、非自己共役の場合の問題（Kato 1961）を定式化せよ。
 
-*4 Kato の平方根予想の解決（Auscher–Hofmann–Lacey–McIntosh–Tchamitchian） {kato-sq}
+*5 Kato の平方根予想の解決（Auscher–Hofmann–Lacey–McIntosh–Tchamitchian） {kato-sq}
 複素有界可測係数の一様楕円型作用素 $L=-\operatorname{div}(A\nabla)$（$\mathbb{R}^{n}$）について $\|\sqrt Lu\|_{2}\simeq\|\nabla u\|_{2}$ が成り立つ（AHLMT 2002）。主張を述べ、Carleson 測度と $T(b)$ 定理による証明の骨格を与えよ。
 
 *4 Kato の問題の反例（McIntosh）
