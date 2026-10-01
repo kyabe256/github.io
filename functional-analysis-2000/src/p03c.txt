@@ -1,0 +1,123 @@
+=ch III-5　摂動論
+
+*4 Kato–Rellich の定理 {kato-rellich}
+自己共役作用素 $A$ と対称作用素 $B$（$D(B)\supset D(A)$）で $\|B\psi\|\le a\|A\psi\|+b\|\psi\|$（$a<1$）なら $A+B$ は $D(A)$ 上で自己共役。$A$ が下に有界なら $A+B$ も下に有界であることを示せ。
+
+*4 水素原子の自己共役性（Kato 1951）
+$-\Delta-\frac{Z}{|x|}$ は $H^{2}(\mathbb{R}^{3})$ 上で自己共役で下に有界である。$1/|x|$ が $-\Delta$ に関して相対限界 $0$ をもつこと（$\frac{1}{|x|}\in L^{2}+L^{\infty}$）を示し、多電子原子に拡張せよ。
+
+*4 KLMN の定理
+自己共役 $A\ge0$ と対称な二次形式 $\beta$ で $|\beta(\psi)|\le a\langle\psi,A\psi\rangle+b\|\psi\|^{2}$（$a<1$）なら、$\alpha+\beta$ に付随する一意の自己共役作用素が存在する（Kato–Lions–Lax–Milgram–Nelson）。デルタ関数ポテンシャルの一次元 Schrödinger 作用素に適用せよ。
+
+*4 Hardy の不等式と臨界的逆二乗ポテンシャル
+$\int\frac{|u|^{2}}{|x|^{2}}\le\frac{4}{(n-2)^{2}}\int|\nabla u|^{2}$（$n\ge3$、定数最良）。$-\Delta-\frac{c}{|x|^{2}}$ が $c\le\frac{(n-2)^{2}}{4}$ で下に有界で、それを超えると下に非有界であることを示せ。
+
+*4 解析的摂動論（Kato の正則族） {kato-analytic}
+型 (A) の正則族 $T(\kappa)=A+\kappa B$ について、孤立固有値 $\lambda_{0}$（有限重複度）は $\kappa$ の近傍で解析的な固有値（の分岐）に摂動され、全重複度は保たれる。Riesz 射影の解析性から証明し、Rayleigh–Schrödinger 級数の一次・二次の係数を導け。
+
+*4 Rellich の定理（自己共役な解析的族）
+自己共役な正則族では、孤立固有値の各分岐が実解析的に選べ、固有射影も解析的である（交差を許す）（Rellich）。証明せよ。
+
+*4 漸近級数と非解析的摂動（非調和振動子）
+$-\frac{d^{2}}{dx^{2}}+x^{2}+\beta x^{4}$ の固有値の Rayleigh–Schrödinger 級数は収束半径 $0$ だが漸近級数であり、Borel 和可能である（Simon 1970, Graffi–Grecchi–Simon）。主張を述べ、$\beta<0$ への解析接続の障害を説明せよ。
+
+*4 Stark 効果と共鳴
+水素原子に電場を加えた $-\Delta-1/r+Fx_{1}$ はスペクトルが全実軸の絶対連続スペクトルとなり、束縛状態が消えて共鳴になることを述べよ（複素スケーリング法、Aguilar–Balslev–Combes）。
+
+*4 Aguilar–Balslev–Combes の理論（複素スケーリング）
+dilation 解析的ポテンシャルに対し、スケーリング $U(\theta)HU(\theta)^{-1}$ の複素化 $H(\theta)$ の本質的スペクトルが $e^{-2i\theta}[0,\infty)$ へ回転し、共鳴が孤立固有値として現れることを示せ。
+
+*4 Weyl の定理（コンパクト摂動と本質的スペクトル）と相対コンパクト摂動
+$B$ が $A$-コンパクト（$B(A+i)^{-1}$ がコンパクト）なら $\sigma_{ess}(A+B)=\sigma_{ess}(A)$。$V\in L^{2}+L^{\infty}_{\varepsilon}$ のとき $\sigma_{ess}(-\Delta+V)=[0,\infty)$ を示せ。
+
+*4 Birman–Schwinger の原理 {birman-schwinger}
+$V\le0$ について、$-\Delta+V$ の $E<0$ 以下の固有値の個数は $K_{E}=|V|^{1/2}(-\Delta-E)^{-1}|V|^{1/2}$ の $1$ 以上の固有値の個数に等しい。証明し、Cwikel–Lieb–Rozenblum の評価への応用を述べよ。
+
+*4 Cwikel–Lieb–Rozenblum の不等式
+$n\ge3$ で $-\Delta+V$ の負固有値の個数は $N\le C_{n}\int V_{-}^{n/2}$（CLR）。Lieb の証明（Feynman–Kac）あるいは Cwikel の弱型 Schatten 評価の骨格を与えよ。
+
+*4 Lieb–Thirring の不等式 {lieb-thirring}
+$\sum|E_{j}|^{\gamma}\le L_{\gamma,n}\int V_{-}^{\gamma+n/2}$（$\gamma\ge\frac12$ $(n=1)$, $\gamma>0$ $(n=2)$, $\gamma\ge0$ $(n\ge3)$）。$\gamma=1$ の場合を Birman–Schwinger と CLR から導き、物質の安定性（Lieb–Thirring 1975）への応用を述べよ。
+
+*4 物質の安定性（Dyson–Lenard, Lieb–Thirring）
+$N$ 個の電子と $K$ 個の原子核からなる Coulomb 系の基底エネルギーが $E_{0}\ge-C(N+K)$（線形）であること（Dyson–Lenard 1967, Lieb–Thirring 1975）を、Lieb–Thirring の不等式と Thomas–Fermi 理論の非結合定理から導く骨格を与えよ。
+
+*4 一次元・二次元の弱結合束縛状態（Simon）
+$n=1,2$ では、$\int V\le0$（$V\not\equiv0$）の小さなポテンシャル $\lambda V$ について $-\Delta+\lambda V$ は負の固有値をもち、その漸近形 $E(\lambda)\sim-\frac{\lambda^{2}}{4}(\int V)^{2}$（$n=1$）が成り立つ（Simon 1976）。$n=3$ では成り立たないことを示せ。
+
+*4 Kato の不等式と diamagnetic 不等式
+磁場付き Schrödinger 作用素について $|e^{-t(-i\nabla-A)^{2}}f|\le e^{t\Delta}|f|$（diamagnetic 不等式）。Kato の不等式から導き、磁場が基底エネルギーを上げることを結論せよ。
+
+*4 Trotter の積公式と Feynman–Kac 公式
+$e^{-t(-\Delta+V)}=\operatorname{s-lim}(e^{t\Delta/n}e^{-tV/n})^{n}$（Trotter）を示し、Feynman–Kac 公式 $(e^{-tH}f)(x)=E_{x}[e^{-\int_{0}^{t}V(B_{s})ds}f(B_{t})]$ を導け。
+
+*4 HVZ 定理 {hvz}
+$N$ 体 Schrödinger 作用素（重心を除いた）の本質的スペクトルは $[\Sigma,\infty)$ で、$\Sigma$ は二つのクラスターへの分解の閾値の最小値である（Hunziker, van Winter, Zhislin）。Ruelle–Simon の幾何学的方法（IMS 局所化公式）で証明せよ。
+
+*5 Zhislin の定理（中性・正イオン原子の無限個の束縛状態）
+$Z\ge N$（中性または正イオン）の原子では、本質的スペクトルの下に無限個の固有値が存在する（Zhislin 1960）。一方 $Z<N-1$ に十分負なら有限個（Yafaev）であることを述べ、Zhislin の議論（Coulomb の長距離引力）を完成させよ。
+
+*5 Efimov 効果（Yafaev, Sobolev, Tamura）
+二体の部分系が束縛状態をもたず、少なくとも二つの部分系が零エネルギー共鳴をもつ三体系は、無限個の束縛状態をもつ（Efimov 効果、Yafaev 1974）。固有値の計数関数の漸近 $N(E)\sim c|\log|E||$（Sobolev 1993）を述べよ。
+
+=ch III-6　スペクトルの分類と時間発展
+
+*4 RAGE 定理 {rage}
+自己共役 $H$ とコンパクト作用素 $C$ について、$\psi\in H_{c}$（連続部分空間）なら $\lim\frac1T\int_{0}^{T}\|Ce^{-itH}\psi\|^{2}dt=0$、$\psi\in H_{pp}$ なら局所化が一様に保たれる（Ruelle–Amrein–Georgescu–Enss）。Wiener の定理から証明せよ。
+
+*4 Wiener の定理（測度の Fourier 変換と原子）
+有限測度 $\mu$ について $\lim\frac{1}{2T}\int_{-T}^{T}|\hat\mu(t)|^{2}dt=\sum_{x}|\mu(\{x\})|^{2}$。証明せよ。
+
+*4 Riemann–Lebesgue と絶対連続スペクトル
+$\psi\in H_{ac}$ なら $\langle\phi,e^{-itH}\psi\rangle\to0$（$t\to\infty$）。特異連続スペクトルでは一般に崩れないことを、Fourier 係数が零に収束しない特異測度（Cantor 測度）で示せ。
+
+*4 Rajchman 測度と特異連続スペクトル
+Fourier 係数が零に収束する特異測度（Rajchman 測度）の存在（Menshov）を示し、特異連続スペクトルでも相関関数が減衰しうることを述べよ。
+
+*4 Simon–Wolff の判定条件
+ランク 1 摂動 $H_{\lambda}=H+\lambda\langle\delta,\cdot\rangle\delta$ について、区間 $I$ 上で Lebesgue ほとんどすべての $E$ で $\int\frac{d\mu(x)}{(x-E)^{2}}<\infty$ $\iff$ ほとんどすべての $\lambda$ で $H_{\lambda}$ のスペクトルが $I$ 上純点（Simon–Wolff 1986）。証明の骨格を与えよ。
+
+*4 Aronszajn–Donoghue の理論（ランク 1 摂動）
+ランク 1 摂動族 $H_{\lambda}$ の特異部分が $\lambda$ ごとに互いに特異であり、絶対連続部分は $\lambda$ に依らないこと（Aronszajn–Donoghue）を、Borel 変換 $F(z)=\int\frac{d\mu(x)}{x-z}$ と $F_{\lambda}=F/(1+\lambda F)$ から示せ。
+
+*4 Gordon の補題と特異連続スペクトル（Jitomirskaya–Simon）
+一次元離散 Schrödinger 作用素で、ポテンシャルが「ほぼ周期的に繰り返す」（Gordon 条件）なら固有値をもたない。Gordon の補題（転送行列の Cayley–Hamilton）で証明せよ。
+
+*4 Simon の「特異連続スペクトルは一般的」定理
+有界自己共役作用素の稠密 $G_{\delta}$ 集合（適当な位相で）は純特異連続スペクトルをもつ（Simon 1995 "Operators with singular continuous spectrum: I. General operators"）。主張を述べ、Baire 論法の骨格を与えよ。
+
+*4 Kotani 理論（一次元エルゴード Schrödinger 作用素）
+エルゴード的ポテンシャルの一次元 Schrödinger 作用素で、絶対連続スペクトルの本質的台が Lyapunov 指数が零となるエネルギーの集合（の本質的閉包）に一致する（Kotani 1984, Ishii–Pastur）。主張と証明の骨格を与えよ。
+
+*4 Ishii–Pastur の定理
+エルゴード的一次元 Schrödinger 作用素について、Lyapunov 指数 $\gamma(E)>0$ のエネルギー集合上には絶対連続スペクトルがない（Ishii 1973, Pastur 1980）。Ruelle–Oseledec の定理から導け。
+
+*4 Anderson 局在（一次元、Kunz–Souillard）
+i.i.d. ポテンシャルの一次元離散 Schrödinger 作用素は、ほとんど確実に純点スペクトルで固有関数は指数的に減衰する（Kunz–Souillard 1980, Gol'dsheid–Molchanov–Pastur）。証明の骨格を与えよ。
+
+*4 Aizenman–Molchanov の分数モーメント法 {am}
+多次元 Anderson 模型で、大きな乱雑さ（あるいはバンド端）においてグリーン関数の分数モーメントが指数減衰し、局在（純点スペクトル）が従う（Aizenman–Molchanov 1993）。証明の骨格を与えよ。
+
+*4 Almost Mathieu 作用素と Aubry 双対性
+$(H_{\lambda,\alpha,\theta}u)(n)=u(n+1)+u(n-1)+2\lambda\cos(2\pi(\alpha n+\theta))u(n)$ について、Aubry 双対性 $\lambda\leftrightarrow1/\lambda$ を示し、Lyapunov 指数が $\max(0,\log\lambda)$ であること（Herman, Bourgain–Jitomirskaya）を述べよ。
+
+*4 Ten Martini 問題（Avila–Jitomirskaya）
+無理数 $\alpha$ と $\lambda\neq0$ について、almost Mathieu 作用素のスペクトルは Cantor 集合である（Avila–Jitomirskaya 2009, Ten Martini 問題の解決）。主張を述べ、証明の主要な段階を述べよ。
+
+*4 Avila の大域理論（Lyapunov 指数の量子化）
+解析的一周波数擬周期 Schrödinger 作用素の Lyapunov 指数の複素化 $L(E,\varepsilon)$ が $\varepsilon$ について区分線形凸で傾きが量子化されている（Avila 2015）ことを述べ、超臨界・臨界・亜臨界の分類を説明せよ。
+
+*4 周期 Schrödinger 作用素のバンド構造（Floquet–Bloch）
+周期ポテンシャルの Schrödinger 作用素 $-\Delta+V$ は Floquet–Bloch 分解により純絶対連続スペクトルをもち、バンド構造をなす（Thomas 1973）。一次元で Hill 判別式によるバンド・ギャップの記述を与えよ。
+
+*4 Thomas の定理（周期作用素の絶対連続性）
+周期ポテンシャル $V\in L^{\infty}$ の $-\Delta+V$ は固有値をもたず、スペクトルは純粋に絶対連続である（Thomas 1973）。複素準運動量の議論で証明の骨格を与えよ。
+
+*4 Bethe–Sommerfeld 予想
+次元 $n\ge2$ の周期 Schrödinger 作用素のスペクトルのギャップは有限個である（Bethe–Sommerfeld 予想、Parnovski 2008 による一般的解決）。主張を述べ、一次元では無限個のギャップが一般的であることと対比せよ。
+
+*5 量子力学の時間発展とスペクトルの次元（Guarneri, Last）
+スペクトル測度の Hausdorff 次元 $\dim_{H}\mu$ と、波束の運動量の拡散 $\langle|x|^{2}\rangle_{t}\gtrsim t^{2\dim_{H}\mu/n}$（Guarneri–Combes–Last の下界）の関係を述べ、証明の骨格を与えよ。
+
+*5 Deift–Simon の定理と一次元 ac スペクトルの保存
+エルゴード的一次元 Jacobi 行列について、絶対連続スペクトル上では一般化固有関数が「ほぼ周期的」に振る舞い、Lyapunov 指数零の集合上でスペクトル測度がほぼすべての $\theta$ で ac であること（Deift–Simon 1983, Kotani）を述べ、Kotani の決定論的ポテンシャル定理（ac スペクトルをもつなら非決定的でない）を述べよ。

@@ -1,0 +1,126 @@
+=part 第 III 部　スペクトル理論 | SPECTRAL THEORY &mdash; 401 to 600
+行列の固有値分解の無限次元版は、スペクトルという集合と、その上の射影値測度という対象を生む。Banach 環のスペクトルと Gelfand 理論、関数カルキュラス、有界・非有界自己共役作用素のスペクトル定理、自己共役拡張、摂動論、スペクトルの分類と量子力学的時間発展、Schrödinger 作用素、散乱理論まで ― 量子力学の数学的基礎をすべて証明する。
+
+=ch III-1　Banach 環のスペクトル
+
+*4 スペクトルは空でないコンパクト集合 {spec-nonempty}
+単位的複素 Banach 環の元 $a$ のスペクトル $\sigma(a)$ は空でないコンパクト集合である。レゾルベント $(a-\lambda)^{-1}$ の弱解析性と Liouville の定理で証明せよ。
+
+*4 Gelfand のスペクトル半径公式 {spec-rad}
+$r(a)=\lim\|a^{n}\|^{1/n}=\inf\|a^{n}\|^{1/n}$（Gelfand 1941）。レゾルベントの Laurent 展開の収束半径と劣乗法性（Fekete の補題）から証明せよ。
+
+*4 Gelfand–Mazur の定理 {gelfand-mazur}
+すべての非零元が可逆な複素 Banach 環は $\mathbb{C}$ に同型である。スペクトルの非空性から導き、実 Banach 環では $\mathbb{R},\mathbb{C},\mathbb{H}$ に限ること（Mazur）を述べよ。
+
+*4 スペクトルの部分代数依存性（Shilov）
+閉部分環 $B\subset A$ について $\sigma_{A}(b)\subset\sigma_{B}(b)$ で、$\partial\sigma_{B}(b)\subset\sigma_{A}(b)$（$\sigma_{B}(b)$ は $\sigma_{A}(b)$ にいくつかの「穴」を埋めたもの）。円板代数のシフトで例示せよ。
+
+*4 スペクトル写像定理（多項式・正則関数）
+多項式 $p$ について $\sigma(p(a))=p(\sigma(a))$。正則関数カルキュラス $f(a)$ についても $\sigma(f(a))=f(\sigma(a))$ を示せ。
+
+*4 $\sigma(ab)\cup\{0\}=\sigma(ba)\cup\{0\}$（Jacobson の補題）
+$1-ab$ が可逆なら $1-ba$ も可逆で $(1-ba)^{-1}=1+b(1-ab)^{-1}a$。これから非零スペクトルの一致を導き、$0$ の扱いの差を例で示せ。
+
+*4 スペクトルの上半連続性と不連続性（Newburgh）
+$a\mapsto\sigma(a)$ は上半連続だが連続ではない（Kakutani の重み付きシフトの例）。可換な Banach 環やスペクトルが全不連結な元では連続であること（Newburgh 1951）を示せ。
+
+*4 Kakutani の例（スペクトル半径の不連続性）
+重み付きシフト $T_{k}$ でスペクトル半径が正なのに、ノルムで任意に近い冪零作用素が存在する例を構成し、スペクトル半径が不連続であることを示せ。
+
+*4 Banach 環の Jacobson 根基と半単純性
+極大左イデアルの共通部分（Jacobson 根基）$\operatorname{rad}A=\{a: r(xa)=0\ \forall x\}$ を示し、可換なら Gelfand 変換の核に等しいことを示せ。
+
+*4 Johnson の一意ノルム定理
+半単純な Banach 環上の完備環ノルムはすべて同値である（Johnson 1967）。主張と証明の骨格を与えよ。
+
+*4 自動連続性（Kaplansky の問題と Dales–Esterle）
+$C(K)$ から Banach 環への不連続準同型の存在が、連続体仮説の下で成立し（Dales, Esterle 1978）、Solovay のモデルでは不在である（Solovay–Woodin）ことを述べよ。
+
+*4 Banach 環の位相的零因子と境界スペクトル
+$\partial\sigma(a)$ の点 $\lambda$ について $a-\lambda$ は位相的零因子（$\|x_{n}\|=1$, $(a-\lambda)x_{n}\to0$）であることを示せ。
+
+*4 Riesz 分解定理（スペクトルの分割）
+$\sigma(a)=\sigma_{1}\sqcup\sigma_{2}$（閉集合）なら、Riesz 射影 $p=\frac{1}{2\pi i}\oint_{\Gamma}(\lambda-a)^{-1}d\lambda$ は $a$ と可換な冪等元で、$a$ は $\sigma_{1}$ と $\sigma_{2}$ を各々スペクトルにもつ部分に分解する。証明せよ。
+
+*4 孤立固有値の代数的重複度と Riesz 射影
+作用素 $T$ の孤立スペクトル点 $\lambda$ の Riesz 射影 $P_{\lambda}$ の値域が有限次元なら $\lambda$ は固有値で、$(T-\lambda)P_{\lambda}$ は冪零であることを示せ。
+
+*4 Banach 環の指数関数と単位元の連結成分
+可逆元の群 $G(A)$ の単位元の連結成分は指数関数の有限積で生成される群であり、可換なら $\exp(A)$ に一致することを示せ。
+
+*4 Arens–Royden の定理
+可換 Banach 環 $A$ について $G(A)/\exp(A)\cong H^{1}(\mathcal{M}_{A},\mathbb{Z})$（Čech コホモロジー）（Arens 1963, Royden 1963）。主張を述べ、$C(\mathbb{T})$ で回転数との対応を確かめよ。
+
+*4 Banach 環の左逆元と Fredholm 理論の抽象化
+Banach 環で左可逆な元の集合は開で、$\sigma_{l}(a)$（左スペクトル）の境界は近似点スペクトル型の性質をもつことを示せ。
+
+*4 可換元のスペクトル半径の劣加法性と劣乗法性
+可換な $a,b$ について $r(a+b)\le r(a)+r(b)$, $r(ab)\le r(a)r(b)$。非可換では偽である例を作れ。
+
+*5 Banach 環における Wiener のタウバー定理の抽象化（Gelfand の証明）
+$f\in L^{1}(\mathbb{R})$ の平行移動の線形結合が $L^{1}$ で稠密 $\iff\hat f$ が零点をもたない。Gelfand 変換と $L^{1}$ の極大イデアル空間の決定（Wiener の補題）を用いて証明せよ。
+
+*5 Banach 環の自動連続性と Bade–Curtis の定理
+$C(K)$ から Banach 環への準同型は、連続部分と「有限個の点に集中した」不連続部分に分解される（Bade–Curtis 1960）。主張と証明の骨格を述べ、不連続準同型の存在が ZFC から独立であることとの関係を論ぜよ。
+
+=ch III-2　Gelfand 理論と可換 Banach 環
+
+*4 Gelfand 変換 {gelfand}
+可換単位的 Banach 環 $A$ の極大イデアル空間 $\mathcal{M}_{A}$（指標全体、弱*コンパクト）について、Gelfand 変換 $\hat a(\varphi)=\varphi(a)$ は縮小準同型で $\sigma(a)=\hat a(\mathcal{M}_{A})$、$\|\hat a\|_{\infty}=r(a)$。証明せよ。
+
+*4 Wiener の補題 {wiener-lemma}
+絶対収束 Fourier 級数をもつ零点のない関数 $f$ について、$1/f$ も絶対収束 Fourier 級数をもつ（Wiener 1932）。Wiener 代数の極大イデアル空間が $\mathbb{T}$ であることから導け。
+
+*4 Wiener–Lévy の定理
+$f\in A(\mathbb{T})$ と $f$ の値域の近傍で正則な $F$ について $F\circ f\in A(\mathbb{T})$（Lévy 1935）。正則関数カルキュラスから導け。
+
+*4 Katznelson の定理（Wiener–Lévy の逆）
+$A(\mathbb{T})$ に作用する（$F\circ f\in A$ for all real $f\in A$）関数 $F$ は実解析的である（Katznelson 1959, Helson–Kahane–Katznelson–Rudin）。主張と証明の骨格を述べよ。
+
+*4 円板代数の極大イデアル空間
+円板代数 $A(\mathbb{D})$ の極大イデアル空間は閉円板 $\bar{\mathbb{D}}$ であり、Shilov 境界は単位円周であることを示せ。
+
+*4 $H^{\infty}$ の極大イデアル空間と Carleson のコロナ定理 {corona}
+$H^{\infty}(\mathbb{D})$ の極大イデアル空間で $\mathbb{D}$ は稠密である（Carleson 1962）。$\sum|f_{j}|\ge\delta$ なら $\sum f_{j}g_{j}=1$ となる $g_{j}\in H^{\infty}$ が存在する、という同値な形を述べ、Wolff の $\bar\partial$ による証明の骨格を与えよ。
+
+*4 $L^{1}(G)$ の極大イデアル空間と Fourier 変換
+局所コンパクト可換群 $G$ について、$L^{1}(G)$ の極大イデアル空間は双対群 $\hat G$ であり、Gelfand 変換は Fourier 変換に一致する。証明せよ。
+
+*4 Shilov の冪等元定理 {shilov-idem}
+可換 Banach 環 $A$ の極大イデアル空間が $U_{1}\sqcup U_{2}$（開閉集合）と分解されれば、$\hat e=\mathbf{1}_{U_{1}}$ となる冪等元 $e\in A$ が存在する（Shilov 1953）。多変数正則関数カルキュラス（Arens–Calderón）を用いた証明の骨格を与えよ。
+
+*4 多変数正則関数カルキュラス（Arens–Calderón, Waelbroeck）
+可換 Banach 環の元の組 $(a_{1},\dots,a_{n})$ の結合スペクトルの近傍で正則な関数 $f$ に対し $f(a)$ を定義し、$\widehat{f(a)}=f(\hat a_{1},\dots,\hat a_{n})$ を示せ。
+
+*4 結合スペクトルと Taylor スペクトル
+可換作用素の組の結合スペクトルとして、代数的結合スペクトルと Taylor スペクトル（Koszul 複体の完全性）を定義し、Taylor の正則関数カルキュラスの存在を述べよ。
+
+*4 正則凸性と多項式凸包
+有限生成可換 Banach 環 $A$（生成元 $a_{1},\dots,a_{n}$）の極大イデアル空間は、結合スペクトルの多項式凸包と同相である。$P(K)$（多項式で生成される一様代数）の極大イデアル空間が $\hat K$（多項式凸包）であることを示せ。
+
+*4 Mergelyan の定理
+$K\subset\mathbb{C}$ がコンパクトで $\mathbb{C}\setminus K$ が連結なら、$K$ 上連続で内部で正則な関数は多項式で一様近似できる（Mergelyan 1951）。証明の骨格を与えよ。
+
+*4 Gleason 部分と解析的構造
+一様代数の極大イデアル空間の Gleason 部分（$\|\varphi-\psi\|<2$ の同値類）を定義し、$H^{\infty}$ の Gleason 部分が一点または解析的円板であること（Hoffman 1967）を述べよ。
+
+*4 正則凸と Rossi の局所最大値原理
+一様代数の極大イデアル空間において、Shilov 境界から離れた開集合上では局所最大値原理が成り立つ（Rossi 1960）。主張を述べよ。
+
+*4 Gelfand–Naimark の定理（可換）
+可換単位的 $C^{*}$-環 $A$ について、Gelfand 変換は $A$ から $C(\mathcal{M}_{A})$ への等距離 *-同型である。$C^{*}$-恒等式から $\|\hat a\|_{\infty}=\|a\|$ を示し、Stone–Weierstrass で全射性を示せ。
+
+*4 連続関数カルキュラス {cfc}
+$C^{*}$-環の正規元 $a$ について、$C(\sigma(a))\to C^{*}(a)$, $f\mapsto f(a)$ は等距離 *-同型である。スペクトル写像定理と、正元の平方根の存在を導け。
+
+*4 Wermer の極大性定理
+円周上の円板代数 $A(\mathbb{T})$（境界値）は $C(\mathbb{T})$ の極大閉部分代数である（Wermer 1953）。証明せよ。
+
+*4 Banach 環の正則性とスペクトル合成
+可換 Banach 環が正則（閉集合と点を Gelfand 変換で分離できる）であることを定義し、$L^{1}(G)$ が正則で、スペクトル合成が一般に成り立たないこと（Malliavin 1959）を述べよ。
+
+*5 Malliavin のスペクトル合成の失敗
+任意の非コンパクト局所コンパクト可換群 $G$ について、$L^{1}(G)$ にはスペクトル合成が成り立たない閉集合が存在する（Malliavin 1959）。Schwartz の $\mathbb{R}^{3}$ の球面の例（Schwartz 1948）を述べ、Malliavin の構成の骨格を与えよ。
+
+*5 コロナ定理の完全証明（Wolff の $\bar\partial$ 法）
+$f_{1},\dots,f_{n}\in H^{\infty}$, $\sum|f_{j}|\ge\delta>0$ に対し、$\bar\partial$ 方程式の有界解の存在（Carleson 測度と Wolff の補題）を用いて $\sum f_{j}g_{j}=1$ なる $g_{j}\in H^{\infty}$ を構成し、Carleson のコロナ定理を完全に証明せよ。

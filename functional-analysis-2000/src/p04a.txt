@@ -1,0 +1,126 @@
+=part 第 IV 部　作用素半群と発展方程式 | SEMIGROUPS AND EVOLUTION EQUATIONS &mdash; 601 to 800
+$\dot u=Au$ の解を $e^{tA}u_{0}$ と書くこと ― これを無限次元で正当化するのが半群理論である。$C_{0}$ 半群と Hille–Yosida、散逸作用素と Lumer–Phillips、解析半群と分数冪、近似と摂動、漸近挙動、正値半群と Markov 過程、非線形半群、最大正則性と $H^{\infty}$ 関数計算、非自律発展方程式まで、偏微分方程式を作用素論で解く技術を証明する。
+
+=ch IV-1　$C_{0}$ 半群と Hille–Yosida の定理
+
+*4 $C_{0}$ 半群の生成子の基本性質 {c0}
+Banach 空間上の強連続半群 $T(t)$ は $\|T(t)\|\le Me^{\omega t}$ をみたし、生成子 $A$ は閉で稠密に定義され、$\frac{d}{dt}T(t)x=AT(t)x=T(t)Ax$（$x\in D(A)$）。証明せよ。
+
+*4 レゾルベントの Laplace 変換表示
+$\operatorname{Re}\lambda>\omega$ について $(\lambda-A)^{-1}x=\int_{0}^{\infty}e^{-\lambda t}T(t)xdt$ で、$\|(\lambda-A)^{-n}\|\le\frac{M}{(\operatorname{Re}\lambda-\omega)^{n}}$。証明せよ。
+
+*4 Hille–Yosida の定理 {hy}
+閉稠密作用素 $A$ が縮小 $C_{0}$ 半群を生成 $\iff(0,\infty)\subset\rho(A)$ かつ $\|(\lambda-A)^{-1}\|\le1/\lambda$。Yosida 近似 $A_{\lambda}=\lambda A(\lambda-A)^{-1}$ による構成で証明せよ。
+
+*4 Feller–Miyadera–Phillips の定理
+$A$ が $\|T(t)\|\le Me^{\omega t}$ の $C_{0}$ 半群を生成 $\iff$ $\|(\lambda-A)^{-n}\|\le\frac{M}{(\lambda-\omega)^{n}}$（すべての $n$, $\lambda>\omega$）。同値ノルムの構成で Hille–Yosida に帰着させよ。
+
+*4 指数公式（Post–Widder の反転）
+$T(t)x=\lim_{n\to\infty}(I-\frac tnA)^{-n}x$（一様に $t$ のコンパクト集合上）。Chernoff の積公式あるいは確率論的議論（Gamma 分布の集中）で証明せよ。
+
+*4 一様連続半群と有界生成子
+$C_{0}$ 半群がノルム連続 $\iff$ 生成子が有界、このとき $T(t)=e^{tA}=\sum\frac{t^{n}A^{n}}{n!}$。証明せよ。
+
+*4 抽象 Cauchy 問題の適切性
+$\dot u=Au$, $u(0)=x$ が $D(A)$ のすべての初期値に一意の古典解をもち解が初期値に連続に依存する $\iff A$ が $C_{0}$ 半群を生成する。証明せよ。
+
+*4 非斉次問題と mild solution
+$\dot u=Au+f$ の mild solution $u(t)=T(t)x+\int_{0}^{t}T(t-s)f(s)ds$ を定義し、$f\in C^{1}$ あるいは $f\in C([0,T];D(A))$ なら古典解であることを示せ。$f$ が連続なだけでは古典解とは限らない例を作れ。
+
+*4 双対半群と太陽双対（sun dual）
+$C_{0}$ 半群 $T(t)$ の双対 $T(t)^{*}$ は一般に強連続でないが、$X^{\odot}=\overline{D(A^{*})}$ 上では強連続である（Phillips）。反射的なら $X^{\odot}=X^{*}$ であることを示せ。
+
+*4 $C_{0}$ 群とその生成子
+$A$ が $C_{0}$ 群を生成 $\iff\pm A$ がともに $C_{0}$ 半群を生成。Stone の定理を Banach 空間の等長群の場合に一般化し（Lumer–Phillips）、自己共役作用素の場合と比較せよ。
+
+*4 移動半群と微分作用素の半群
+$L^{p}(\mathbb{R})$ 上の平行移動群 $(T(t)f)(x)=f(x+t)$ の生成子が $\frac{d}{dx}$（定義域 $W^{1,p}$）であることを示し、$L^{\infty}$ や $C_{b}$ では強連続でないことを示せ。
+
+*4 熱半群とガウス核
+$L^{p}(\mathbb{R}^{n})$（$1\le p<\infty$）上の熱半群 $e^{t\Delta}f=G_{t}*f$ が縮小 $C_{0}$ 半群であり、生成子が $\Delta$（定義域 $W^{2,p}$, $1<p<\infty$）であることを示せ。$p=1$ では定義域が $W^{2,1}$ より大きいことを述べよ。
+
+*4 波動方程式の半群（エネルギー空間）
+$u_{tt}=\Delta u$ を $H^{1}\times L^{2}$ 上の一階系 $\frac{d}{dt}(u,v)=(v,\Delta u)$ と書き、生成子がスキュー随伴でユニタリ群を生成することを示せ。$L^{p}\times W^{-1,p}$（$p\neq2$, $n\ge2$）では半群を生成しないこと（Littman）を述べよ。
+
+*4 Littman の定理
+$n\ge2$ のとき、波動方程式の解作用素は $L^{p}$（$p\neq2$）で有界でない（Littman 1963）。主張を述べ、Fourier 乗数 $\cos(t|\xi|)$ の $L^{p}$ 非有界性として理解せよ。
+
+*4 Schrödinger 群の $L^{p}$ 非有界性
+$e^{it\Delta}$ は $L^{p}$（$p\neq2$）上で有界でない（Hörmander）。乗数 $e^{-it|\xi|^{2}}$ の $L^{p}$ 有界性が $p=2$ に限ることを示せ。
+
+*4 Hille–Yosida の定理の局所凸空間版（Yosida, Komura）
+同程度連続半群の生成子の特徴づけを局所凸空間で述べ、$\mathcal{S}'$ 上の熱方程式の解作用素に適用せよ。
+
+*4 準縮小半群と再ノルム
+$\|T(t)\|\le Me^{\omega t}$ の半群に対し、同値ノルム $|x|=\sup_{t\ge0}\|e^{-\omega t}T(t)x\|$ のもとで準縮小（$|T(t)|\le e^{\omega t}$）となることを示せ。Hilbert 空間で同値な内積で縮小にできるとは限らない例（Chernoff, Packel）を述べよ。
+
+*4 有界でない $M$ と半群の成長限界
+成長限界 $\omega_{0}=\lim\frac1t\log\|T(t)\|$ を定義し、$\omega_{0}=\inf\{\omega:\|T(t)\|\le M_{\omega}e^{\omega t}\}$、スペクトル上界 $s(A)\le\omega_{0}$ を示せ。$s(A)<\omega_{0}$ となる例（Zabczyk）を述べよ。
+
+*5 Zabczyk の例（スペクトル上界と成長限界の不一致）
+Hilbert 空間上の $C_{0}$ 群で、生成子のスペクトルが虚軸上にあるのに成長限界が正となるもの（Zabczyk 1975）を、有限次元 Jordan ブロックの直和で構成せよ。
+
+*5 Kato の自己共役半群と Kato–Trotter の定理
+Hilbert 空間の自己共役作用素 $A\le0$ の半群 $e^{tA}$ について、$e^{t(A+B)}$ の存在と Trotter の積公式 $e^{t(A+B)}=\operatorname{s-lim}(e^{tA/n}e^{tB/n})^{n}$ が、$A+B$ が形式和として自己共役（$D(A)\cap D(B)$ 上で本質的自己共役でなくてよい）なら成り立つこと（Kato 1978）を述べ、証明の骨格を与えよ。
+
+=ch IV-2　散逸作用素と Lumer–Phillips の定理
+
+*4 散逸作用素と Lumer–Phillips の定理 {lp}
+$A$ が散逸的（各 $x\in D(A)$ に双対写像 $x^{*}\in J(x)$ で $\operatorname{Re}\langle Ax,x^{*}\rangle\le0$）で $\operatorname{range}(\lambda-A)=X$（ある $\lambda>0$）なら、$A$ は縮小 $C_{0}$ 半群を生成する（Lumer–Phillips 1961）。証明せよ。
+
+*4 Hilbert 空間の極大散逸作用素
+Hilbert 空間で $A$ が縮小 $C_{0}$ 半群を生成 $\iff A$ が極大散逸的 $\iff$ $A$ が閉、散逸的、$A^{*}$ も散逸的。証明せよ。
+
+*4 Phillips の散逸拡張理論
+散逸作用素の極大散逸拡張の存在と、その記述（対称作用素の自己共役拡張の類似）を Phillips（1959）に従って述べよ。
+
+*4 楕円型作用素の半群生成（$L^{2}$）
+有界領域上の一様楕円型作用素 $Lu=\partial_{i}(a_{ij}\partial_{j}u)+b_{i}\partial_{i}u+cu$（Dirichlet 境界条件）が $L^{2}$ 上の準縮小 $C_{0}$ 半群を生成することを Lumer–Phillips と Lax–Milgram で示せ。
+
+*4 $L^{p}$ 上の散逸性（Laplacian）
+$\Delta$ が $L^{p}$（$1<p<\infty$）上で散逸的であること（$\int\Delta u\,|u|^{p-2}\bar u\le0$）を示し、熱半群が $L^{p}$ 縮小であることを再証明せよ。
+
+*4 Beurling–Deny の判定（Markov 性）
+Hilbert 空間 $L^{2}(X,\mu)$ 上の対称縮小半群が正値保存かつ $L^{\infty}$ 縮小（sub-Markov）$\iff$ 付随する二次形式が Dirichlet 形式（$\mathcal{E}(u\wedge1)\le\mathcal{E}(u)$ など）である（Beurling–Deny）。証明せよ。
+
+*4 Dirichlet 形式の基本理論（Fukushima）
+正則 Dirichlet 形式と Hunt 過程の一対一対応（Fukushima の定理）を述べ、Beurling–Deny の表現（拡散部分・跳躍部分・消滅部分）を与えよ。
+
+*4 Kato の Laplacian の $L^{1}$ 理論（m-散逸性）
+$\Delta$ の $L^{1}(\mathbb{R}^{n})$ における閉包が m-散逸的であることを示し、$L^{1}$ 上の熱半群の生成子の定義域を記述せよ。
+
+*4 非線形散逸作用素への橋（m-増大作用素）
+Banach 空間の m-増大作用素（$-A$ が m-散逸的）の定義を線形から集合値非線形へ拡張し、Hilbert 空間では極大単調作用素と一致することを示せ。
+
+*4 Kolmogorov 作用素とスペクトル（Ornstein–Uhlenbeck の $L^{p}$ スペクトル）
+$L^{p}(\gamma)$（$\gamma$ はガウス測度）上の Ornstein–Uhlenbeck 作用素 $Lu=\Delta u-x\cdot\nabla u$ のスペクトルが $p$ に依らず $\{0,-1,-2,\dots\}$ であること（$1<p<\infty$）、一方 $L^{p}(\mathbb{R}^{n},dx)$ では $p$ に依存することを述べよ（Metafune–Pallara–Priola）。
+
+*4 Ornstein–Uhlenbeck 半群の $L^{p}$ スペクトルの $p$ 依存性
+Lebesgue 測度に関する $L^{p}(\mathbb{R}^{n})$ 上の OU 作用素のスペクトルが、左半平面の $p$ 依存の扇形を含むこと（Metafune 2001）を述べよ。
+
+*4 境界条件と半群：Wentzell 境界条件
+動的境界条件（Wentzell 境界条件 $\Delta u+\beta\partial_{\nu}u=0$ on $\partial\Omega$）をもつ Laplacian が $C(\bar\Omega)$ 上の Feller 半群を生成することを述べよ（Favini–Goldstein–Goldstein–Romanelli）。
+
+*4 Feller 半群と Hille–Yosida–Ray の定理
+$C_{0}(E)$ 上の正値縮小半群（Feller 半群）の生成子が正の最大値原理をみたし、逆に正の最大値原理と値域条件をみたす作用素が Feller 半群を生成すること（Hille–Yosida–Ray）を示せ。
+
+*4 Lévy 過程の半群と Lévy–Khinchin 生成子
+Lévy 過程の遷移半群が $L^{p}$ と $C_{0}$ 上の Feller 半群で、生成子が擬微分作用素 $-\psi(D)$（$\psi$ は Lévy 指数）であることを示せ。
+
+*4 スキュー随伴作用素とユニタリ群の Lumer–Phillips 版
+Hilbert 空間で $A$ がスキュー随伴 $\iff$ $\pm A$ がともに極大散逸的 $\iff$ $A$ がユニタリ群を生成する。Stone の定理を Lumer–Phillips から再証明せよ。
+
+*4 熱方程式の Neumann 問題と保存性
+Neumann Laplacian の熱半群が質量を保存する（$\int e^{t\Delta_{N}}f=\int f$）ことを示し、Dirichlet の場合の質量減少と比較せよ。
+
+*4 確率的完全性と Grigor'yan の判定
+完備 Riemann 多様体の熱半群が確率的完全（$e^{t\Delta}1=1$）であるための体積増大条件 $\int^{\infty}\frac{r\,dr}{\log V(r)}=\infty$（Grigor'yan 1986）を述べ、証明の骨格を与えよ。
+
+*4 Kato 型の摂動による生成定理（Miyadera–Voigt）
+$A$ が $C_{0}$ 半群を生成し、$B$ が $\int_{0}^{\alpha}\|BT(t)x\|dt\le q\|x\|$（$q<1$）をみたせば、$A+B$ も $C_{0}$ 半群を生成する（Miyadera 1966, Voigt）。証明せよ。
+
+*5 Desch–Schappacher の摂動定理
+$A$ が $C_{0}$ 半群を生成し、$B:X\to X_{-1}$（外挿空間）で $\int_{0}^{t}T_{-1}(t-s)Bu(s)ds\in X$ かつ小さいとき $(A_{-1}+B)|_{X}$ が $C_{0}$ 半群を生成する（Desch–Schappacher 1984）。境界摂動への応用（Greiner の境界摂動）を述べよ。
+
+*5 Lumer–Phillips の定理の非線形版（Crandall–Liggett 生成定理）
+Banach 空間の m-散逸的（非線形・集合値）作用素 $A$ について、指数公式 $S(t)x=\lim(I-\frac tnA)^{-n}x$ が $\overline{D(A)}$ 上で一様収束して非線形縮小半群を定める（Crandall–Liggett 1971）。差分方程式の誤差評価を含めて証明せよ。

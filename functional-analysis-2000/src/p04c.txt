@@ -1,0 +1,123 @@
+=ch IV-5　半群の漸近挙動
+
+*4 スペクトル写像定理の成否
+$C_{0}$ 半群について $e^{t\sigma(A)}\subset\sigma(T(t))$ は常に成り立つが、逆の包含（スペクトル写像定理）は一般に偽である。点スペクトル・剰余スペクトルについては成り立つことを示し、連続スペクトルで失敗する例を挙げよ。
+
+*4 最終ノルム連続半群とスペクトル写像定理
+最終的にノルム連続な半群（解析半群・最終コンパクト半群を含む）ではスペクトル写像定理 $\sigma(T(t))\setminus\{0\}=e^{t\sigma(A)}$ が成り立つ。証明せよ。
+
+*4 Gearhart–Prüss の定理 {gp}
+Hilbert 空間の $C_{0}$ 半群が指数安定 $\iff$ $\{\operatorname{Re}\lambda>0\}\subset\rho(A)$ かつ $\sup_{\operatorname{Re}\lambda>0}\|(\lambda-A)^{-1}\|<\infty$（Gearhart 1978, Prüss 1984）。Plancherel の定理を用いて証明し、Banach 空間では偽であることを示せ。
+
+*4 Datko–Pazy の定理
+$C_{0}$ 半群が指数安定 $\iff$ すべての $x$ で $\int_{0}^{\infty}\|T(t)x\|^{p}dt<\infty$（ある $p\in[1,\infty)$）（Datko 1970, Pazy 1972）。一様有界性原理で証明せよ。
+
+*4 Arendt–Batty–Lyubich–Vũ の定理 {abl}
+有界 $C_{0}$ 半群について、$\sigma(A)\cap i\mathbb{R}$ が可算かつ $\sigma_{p}(A^{*})\cap i\mathbb{R}=\emptyset$ なら強安定（$T(t)x\to0$）である（Arendt–Batty 1988, Lyubich–Vũ 1988）。Laplace 変換のタウバー定理（Ingham–Korevaar の方法）で証明せよ。
+
+*4 Ingham–Karamata のタウバー定理
+$f$ が有界で、Laplace 変換 $\hat f(z)$ が $\operatorname{Re}z\ge0$ まで解析接続されるなら $\int_{0}^{\infty}f(t)dt=\hat f(0)$（Ingham, Newman の素数定理の証明）。Newman の輪郭積分による証明を与えよ。
+
+*4 Batty–Duyckaerts の量的評価
+有界半群で $i\mathbb{R}\subset\rho(A)$ のとき、$\|T(t)A^{-1}\|\to0$ の速さがレゾルベントの虚軸上の増大度 $M(s)=\sup_{|r|\le s}\|(ir-A)^{-1}\|$ で $O(1/M^{-1}_{\log}(t))$ と評価される（Batty–Duyckaerts 2008）。主張を述べよ。
+
+*4 Borichev–Tomilov の定理
+Hilbert 空間の有界半群で、$\|T(t)A^{-1}\|=O(t^{-1/\alpha})\iff\|(is-A)^{-1}\|=O(|s|^{\alpha})$（Borichev–Tomilov 2010）。主張と、減衰波動方程式のエネルギー減衰率への応用を述べよ。
+
+*4 減衰波動方程式の一様安定性（Bardos–Lebeau–Rauch）
+コンパクト多様体上の減衰波動方程式 $u_{tt}-\Delta u+a(x)u_{t}=0$ のエネルギーが指数減衰 $\iff$ 減衰領域 $\{a>0\}$ が幾何制御条件（すべての測地線が有限時間で通過）をみたす（Bardos–Lebeau–Rauch 1992）。主張と、Gearhart–Prüss による定式化を述べよ。
+
+*4 Lebeau の対数減衰
+幾何制御条件がなくても、減衰波動方程式のエネルギーは滑らかな初期値に対し $O(1/\log t)$ で減衰する（Lebeau 1996）。Carleman 評価によるレゾルベントの指数評価からの導出を述べよ。
+
+*4 Jacobs–de Leeuw–Glicksberg の分解
+相対コンパクトな軌道をもつ有界半群について、$X=X_{r}\oplus X_{s}$（可逆部分＝概周期部分と、安定部分）と分解される（Jacobs–de Leeuw–Glicksberg）。証明の骨格を与えよ。
+
+*4 平均エルゴード定理（半群版）
+有界 $C_{0}$ 半群について、Cesàro 平均 $\frac1t\int_{0}^{t}T(s)xds$ が収束する $\iff$ $x\in\ker A\oplus\overline{\operatorname{range}A}$。反射的空間ではすべての $x$ で収束する（von Neumann, Yosida–Kakutani）ことを示せ。
+
+*4 Lyapunov 方程式による指数安定性（Hilbert 空間）
+Hilbert 空間の $C_{0}$ 半群が指数安定 $\iff$ Lyapunov 方程式 $A^{*}P+PA=-I$ が有界正の解をもつ（Datko）。証明せよ。
+
+*4 Katznelson–Tzafriri の連続版
+有界 $C_{0}$ 半群について、$\|T(t)AR\|\to0$ 型の結果：$\sigma(A)\cap i\mathbb{R}\subset\{0\}$ なら $\|T(t)A(I-A)^{-1}\|\to0$（Batty, Vũ）を述べよ。
+
+*4 正値半群の漸近挙動とスペクトル境界
+Banach 束上の正値 $C_{0}$ 半群では $s(A)=\omega_{0}$ が $L^{p}$ 上で成り立つ（Weis 1995）が、一般の Banach 束では成り立たないことを述べよ。
+
+*4 Weis の定理
+$L^{p}$（$1\le p<\infty$）上の正値 $C_{0}$ 半群について、スペクトル上界と成長限界は一致する（Weis 1995）。主張を述べ、$L^{1}$ の場合（Derndinger, Greiner）の証明の骨格を与えよ。
+
+*4 半群のコンパクト性と漸近周期性
+最終的にコンパクトな半群では、$\sigma(A)$ は離散で、半群の挙動が有限個の固有値で漸近的に記述される（Riesz 分解）ことを示せ。
+
+*4 指数二分性と双曲型の半群
+$\sigma(T(1))\cap\mathbb{T}=\emptyset$ のとき半群は指数二分性（安定部分と不安定部分への分解）をもち、非斉次方程式が有界解を一意にもつこと（Perron 型の定理）を示せ。
+
+*5 Arendt–Batty の定理の完全証明
+有界 $C_{0}$ 半群で $\sigma(A)\cap i\mathbb{R}$ が可算、$\sigma_{p}(A^{*})\cap i\mathbb{R}=\emptyset$ のとき強安定であることを、超冪を用いた等長群への帰着と Gelfand–Hille の定理、あるいは Ingham の複素 Tauber 定理によって完全に証明せよ。
+
+*5 減衰波動方程式の幾何制御と Gearhart–Prüss（完全版）
+Bardos–Lebeau–Rauch の定理の「十分性」の証明の骨格（半古典測度による背理法：観測不等式の失敗から測地流不変な測度の存在）を再構成せよ。
+
+=ch IV-6　正値半群と Perron–Frobenius 理論
+
+*4 Perron–Frobenius の定理（行列） {pf}
+既約な非負行列 $A$ のスペクトル半径 $r(A)$ は単純固有値で、正の固有ベクトルをもち、他の固有値の絶対値は $\le r(A)$（原始的なら $<$）。Collatz–Wielandt の公式とともに証明せよ。
+
+*4 Krein–Rutman の定理 {kr}
+Banach 空間の閉錐 $K$（全体を生成）上で正値なコンパクト作用素 $T$ で $r(T)>0$ のものについて、$r(T)$ は $K$ 内の固有ベクトルをもつ固有値である（Krein–Rutman 1948）。錐が内点をもち $T$ が強正値なら単純で、唯一の正の固有ベクトルであることを示せ。
+
+*4 Jentzsch の定理（正の積分作用素）
+正の連続核をもつ積分作用素のスペクトル半径は単純固有値で、正の固有関数をもち、他の固有値の絶対値はそれより真に小さい（Jentzsch 1912）。Krein–Rutman から導け。
+
+*4 Banach 束の基本（Riesz 空間）
+Banach 束の定義と、$L^{p}$, $C(K)$ が Banach 束であることを示せ。正値作用素の自動連続性（Banach 束の間の正値線形写像は有界）を示せ。
+
+*4 正値作用素のスペクトル半径はスペクトルに属する
+Banach 束上の正値作用素 $T$ について $r(T)\in\sigma(T)$（Pringsheim の定理の作用素版）。レゾルベントのべき級数展開の係数の正値性から証明せよ。
+
+*4 正値半群のスペクトル上界
+正値 $C_{0}$ 半群の生成子のスペクトル上界 $s(A)$ が（スペクトルが空でなければ）スペクトルに属し、$\operatorname{Re}\lambda>\omega_{0}$ で $(\lambda-A)^{-1}=\int e^{-\lambda t}T(t)dt\ge0$ を示せ。
+
+*4 既約正値半群と de Pagter の定理
+既約な正値 $C_{0}$ 半群で $s(A)$ が極ならば、固有空間は一次元で厳密に正の固有ベクトルをもつ。コンパクトかつ既約な正値作用素はスペクトル半径が正である（de Pagter 1986）ことを示せ。
+
+*4 Kato の不等式と正値性の判定（Arendt–Nagel）
+作用素 $A$ が正値半群を生成する条件として Kato の不等式 $\langle A|x|,\phi\rangle\ge\operatorname{Re}\langle Ax,\operatorname{sgn}\bar x\,\phi\rangle$ を述べ、正の最大値原理との関係を示せ。
+
+*4 Markov 半群のエルゴード性と Doeblin 条件
+有限・可算状態の連続時間 Markov 連鎖の遷移半群について、既約かつ正再帰なら唯一の不変分布に収束する。Doeblin 条件の下で全変動距離で一様指数収束することを示せ。
+
+*4 Harris の定理（一般状態空間のエルゴード性）
+Lyapunov 関数による drift 条件と小集合上の minorization の下で、Markov 半群は重み付き全変動ノルムで不変測度に指数収束する（Harris, Meyn–Tweedie, Hairer–Mattingly の短い証明）。証明せよ。
+
+*4 不変測度の存在（Krylov–Bogoliubov）
+コンパクト距離空間上の Feller 半群は不変確率測度をもつ（Krylov–Bogoliubov）。Cesàro 平均と Prohorov の定理で証明し、非コンパクトの場合の tightness 条件を述べよ。
+
+*4 Doob の定理（強 Feller + 既約 ⇒ 一意エルゴード）
+強 Feller かつ位相的既約な Markov 半群の不変測度は高々一つで、存在すれば遷移確率と同値である（Doob, Khasminskii）。確率偏微分方程式の不変測度の一意性への応用を述べよ。
+
+*4 Perron–Frobenius の固有値の Collatz–Wielandt 特徴づけ
+既約非負行列について $r(A)=\max_{x\ge0}\min_{x_{i}>0}\frac{(Ax)_{i}}{x_{i}}=\min_{x>0}\max_{i}\frac{(Ax)_{i}}{x_{i}}$。証明し、ページランクの計算（べき乗法の収束率と第二固有値）への応用を述べよ。
+
+*4 Birkhoff–Hopf の定理（Hilbert 射影距離での縮小）
+正の行列（あるいは錐を錐の内部に写す作用素）は Hilbert 射影距離で縮小写像であり、縮小率は $\tanh(\Delta/4)$（$\Delta$ は像の射影直径）である（Birkhoff 1957, Hopf）。これから Perron–Frobenius の定理を再証明せよ。
+
+*4 Sinkhorn–Knopp の定理
+正の行列 $A$ に対し、対角行列 $D_{1},D_{2}$ で $D_{1}AD_{2}$ が二重確率行列となるものが一意（スカラーを除く）に存在し、交互正規化が収束する（Sinkhorn–Knopp 1967）。Birkhoff–Hopf の定理から証明せよ。
+
+*4 非線形 Perron–Frobenius 理論（Nussbaum, Lemmens–Nussbaum）
+錐上の一次斉次単調写像の固有ベクトルの存在と、Hilbert 射影距離・Thompson 距離での非拡大性を述べ、トロピカル代数（max-plus）の固有値問題への応用を述べよ。
+
+*4 正値半群による人口モデル（年齢構造）
+McKendrick–von Foerster の年齢構造人口モデルの半群が正値で最終コンパクトであり、Malthus パラメータ（$s(A)$）での非同期指数成長（$e^{-s(A)t}T(t)\to P$）を示せ。
+
+*4 Gärtner–Ellis と Perron–Frobenius 固有値（大偏差）
+有限状態 Markov 連鎖の加法汎関数の大偏差率関数が、傾けた遷移行列 $P_{\theta}=(p_{ij}e^{\theta f(j)})$ の Perron 根 $\rho(\theta)$ の $\log$ の Legendre 変換で与えられることを示せ。
+
+*5 Krein–Rutman の定理の非コンパクト版と本質的スペクトル半径（Nussbaum）
+錐 $K$ 上の正値作用素で本質的スペクトル半径 $r_{e}(T)<r(T)$ なら $r(T)$ は $K$ 内の固有ベクトルをもつ固有値であること（Nussbaum 1981）を、Kuratowski の非コンパクト性測度を用いて証明せよ。
+
+*5 Perron–Frobenius の定理の量子版（Evans–Høegh-Krohn）
+$M_{n}$ 上の正写像（完全正写像）$\Phi$ が既約なら、スペクトル半径は単純固有値で正定値の固有行列をもち、周辺スペクトルは有限巡回群をなす（Evans–Høegh-Krohn 1978）。証明の骨格を与えよ。

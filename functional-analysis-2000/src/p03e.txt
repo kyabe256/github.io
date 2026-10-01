@@ -1,0 +1,123 @@
+=ch III-9　非自己共役作用素のスペクトル
+
+*4 擬スペクトルとその特徴づけ {pseudospec}
+$\sigma_{\varepsilon}(T)=\{z:\|(T-z)^{-1}\|>1/\varepsilon\}$ が $\bigcup_{\|E\|<\varepsilon}\sigma(T+E)$ に等しいことを示し、正規作用素では $\sigma_{\varepsilon}=\sigma+\varepsilon\mathbb{D}$ だが、非正規作用素（Jordan ブロック）では大きく広がることを示せ。
+
+*4 Kreiss の行列定理
+$n\times n$ 行列 $A$ について、$\sup_{k}\|A^{k}\|$ と Kreiss 定数 $\sup_{|z|>1}(|z|-1)\|(z-A)^{-1}\|$ は $K\le\sup\|A^{k}\|\le enK$ で比較される（Kreiss 1962, Spijker の改良）。証明せよ。
+
+*4 Toeplitz 行列の擬スペクトルと有限切断（Reichel–Trefethen, Böttcher）
+帯 Toeplitz 行列の有限切断 $T_{n}(a)$ の擬スペクトルが、記号 $a$ の曲線で囲まれる領域（$\operatorname{wind}\neq0$）に収束することを示せ（Landau, Reichel–Trefethen, Böttcher）。固有値（Schmidt–Spitzer 曲線）とは全く異なることを示せ。
+
+*4 Schmidt–Spitzer の定理
+帯 Toeplitz 行列の有限切断の固有値は、記号 $a$ の「$\Lambda(a)$ 曲線」（$|z_{k}(\lambda)|=|z_{k+1}(\lambda)|$ をみたす $\lambda$）に集積する（Schmidt–Spitzer 1960）。主張を述べよ。
+
+*4 Keldysh の完全性定理
+$A=H(I+S)$（$H$ はコンパクト自己共役で $\mathcal{S}_{p}$ に属し、$S$ はコンパクト、$I+S$ 可逆）の根ベクトル（一般化固有ベクトル）の系は完全である（Keldysh 1951）。主張と証明の骨格を与えよ。
+
+*4 Livšic の完全性定理
+散逸的（$\operatorname{Im}A\ge0$）なコンパクト作用素 $A$ で $\operatorname{Im}A$ がトレースクラスのとき、根ベクトルの系が完全 $\iff\sum_{j}\operatorname{Im}\lambda_{j}(A)=\operatorname{tr}\operatorname{Im}A$（Livšic 1954）。Lidskii のトレース定理と、準冪零部分の虚部のトレースが零であることから証明せよ。
+
+*4 Gohberg–Krein の三角積分表示
+コンパクトな準冪零作用素 $V$ で $\operatorname{Im}V\in\mathcal{S}_{1}$ のものは、不変部分空間の極大巣 $\{P_{t}\}$ に関する三角積分 $V=2i\int P_{t}\,(\operatorname{Im}V)\,dP_{t}$ で表される（Gohberg–Krein, Brodskii）。積分 $\int_{0}^{x}$ の作用素で確かめよ。
+
+*4 Macaev の定理（Volterra 作用素の虚部と実部）
+Volterra 作用素 $V$ について、$\operatorname{Im}V\in\mathcal{S}_{p}$（$1<p<\infty$）なら $\operatorname{Re}V\in\mathcal{S}_{p}$ である（Macaev）。主三角射影の $\mathcal{S}_{p}$ 有界性との関係を述べよ。
+
+*4 非正規作用素の関数計算の失敗と Crouzeix の予想
+任意の正方行列 $A$ と数域 $W(A)$ 上の多項式 $p$ について $\|p(A)\|\le C\sup_{W(A)}|p|$ が $C=1+\sqrt2$ で成り立つ（Crouzeix–Palencia 2017）ことを述べ、Crouzeix の予想（$C=2$）との関係を論ぜよ。
+
+*4 Crouzeix–Palencia の定理
+$\|f(A)\|\le(1+\sqrt2)\sup_{W(A)}|f|$（$f$ は $W(A)$ の近傍で正則）。Cauchy 変換と二重層ポテンシャルを用いた証明の骨格を与えよ。
+
+*4 von Neumann のスペクトル集合と $K$-スペクトル集合
+閉集合 $X$ がスペクトル集合（有理関数 $r$ について $\|r(T)\|\le\sup_{X}|r|$）であることを定義し、縮小作用素では閉円板がスペクトル集合であること（von Neumann）、Delyon–Delyon の $K$-スペクトル集合定理を述べよ。
+
+*4 準相似と相似の問題（Halmos の多項式有界性の反例）
+多項式有界（$\|p(T)\|\le C\sup_{\mathbb{D}}|p|$）だが縮小作用素に相似でない作用素が存在する（Pisier 1997、Halmos の問題の否定的解決）。主張を述べ、Paulsen の判定（相似 $\iff$ 完全多項式有界）を述べよ。
+
+*4 Paulsen の相似性判定
+作用素 $T$ が縮小作用素に相似 $\iff$ $T$ が完全多項式有界（$\|p_{ij}(T)\|\le C\sup\|p_{ij}\|$ が行列値多項式で一様）（Paulsen 1984）。Arveson–Wittstock の拡張定理を用いて証明せよ。
+
+*4 Sz.-Nagy の相似定理
+$\sup_{n\in\mathbb{Z}}\|T^{n}\|<\infty$ の可逆作用素はユニタリ作用素に相似である（Sz.-Nagy 1947）。Banach 極限を用いた同値内積の構成で証明し、片側版（$\sup_{n\ge0}$）では縮小作用素に相似とは限らないこと（Foguel 1964）を述べよ。
+
+*4 Foguel の反例
+$\sup_{n\ge0}\|T^{n}\|<\infty$（べき有界）だが縮小作用素に相似でない作用素が存在する（Foguel 1964）。構成を与えよ。
+
+*4 Gelfand–Hille の定理
+$\sigma(T)=\{1\}$ かつ $\sup_{n\in\mathbb{Z}}\|T^{n}\|<\infty$ なら $T=I$（Gelfand 1941）。$\|T^{n}\|=O(|n|^{k})$ なら $(T-I)^{k+1}=0$（Hille）を示せ。
+
+*4 Katznelson–Tzafriri の定理
+べき有界作用素 $T$ について、$\lim\|T^{n+1}-T^{n}\|=0\iff\sigma(T)\cap\mathbb{T}\subset\{1\}$（Katznelson–Tzafriri 1986）。証明の骨格を与えよ。
+
+*4 Esterle–Strouse–Zouakia の拡張
+Katznelson–Tzafriri の定理の一般化：べき有界作用素と、スペクトル合成の性質をもつ関数 $f\in A^{+}(\mathbb{T})$ について $\|T^{n}f(T)\|\to0$ $\iff$ $f$ が $\sigma(T)\cap\mathbb{T}$ 上で零（Esterle–Strouse–Zouakia）を述べよ。
+
+*5 非正規行列の固有値の不安定性とランダム摂動（Śniady, Davies–Hager, Sjöstrand–Vogel）
+大きな Jordan ブロック $J_{n}$ に小さなランダム摂動 $\delta G$（$G$ は Ginibre）を加えると、固有値はほぼ確実に半径 $\delta^{1/n}$ の円周上に集積し、経験分布が円周上の一様分布に収束する（Davies–Hager 2009, Sjöstrand–Vogel）。主張を述べ、証明の骨格を与えよ。
+
+*5 Pisier の多項式有界性反例の構成
+Pisier（1997）による、多項式有界だが縮小作用素に相似でない作用素の構成の骨格（Foguel–Hankel 作用素と、作用素空間 $\max\ell^{2}$ と $\min\ell^{2}$ のノルムの比較、Haagerup–Pisier の自由群の作用素空間の評価）を再構成せよ。
+
+=ch III-10　第二量子化と CCR・CAR
+
+*4 対称・反対称 Fock 空間と第二量子化 {fock}
+Hilbert 空間 $\mathfrak{h}$ の対称 Fock 空間 $\Gamma_{s}(\mathfrak{h})$ 上の生成消滅作用素 $a^{*}(f),a(f)$ を定義し、CCR $[a(f),a^{*}(g)]=\langle f,g\rangle$ を示せ。第二量子化 $d\Gamma(h)$ と $\Gamma(U)$ の性質を示せ。
+
+*4 Segal 場作用素の本質的自己共役性
+Segal 場 $\Phi(f)=\frac{1}{\sqrt2}(a(f)+a^{*}(f))$ は有限粒子ベクトル上で本質的自己共役であり（Nelson の解析ベクトル定理）、Weyl 作用素 $W(f)=e^{i\Phi(f)}$ は Weyl 型 CCR $W(f)W(g)=e^{-\frac i2\operatorname{Im}\langle f,g\rangle}W(f+g)$ をみたす。証明せよ。
+
+*4 Stone–von Neumann の定理 {svn}
+有限自由度の Weyl 型 CCR の既約な強連続表現は、Schrödinger 表現とユニタリ同値である（Stone–von Neumann）。von Neumann の射影 $P=\int W(z)e^{-|z|^{2}/4}dz$ の議論で証明せよ。
+
+*4 無限自由度での非同値表現の存在
+無限自由度の CCR には、Fock 表現とユニタリ非同値な既約表現が無数に存在する（例えば非可算個の非同値な準自由表現）。Friedrichs、van Hove の議論で例を示せ。
+
+*4 Shale の定理（Bogoliubov 変換の実装可能性）
+シンプレクティック変換 $T$ が Fock 表現でユニタリに実装される $\iff$ $T^{*}T-I$ が Hilbert–Schmidt（Shale 1962）。証明の骨格を与えよ。
+
+*4 Shale–Stinespring の定理（CAR の場合）
+CAR の Bogoliubov 変換（直交変換）が Fock 表現で実装可能 $\iff$ 反線形部分が Hilbert–Schmidt（Shale–Stinespring 1965）。主張を述べよ。
+
+*4 CAR 環の一意性と UHF 構造
+CAR 環 $\mathrm{CAR}(\mathfrak{h})$（$\mathfrak{h}$ 可分無限次元）は $M_{2^{\infty}}$（UHF 環）に同型である（Jordan–Wigner 変換）。証明せよ。
+
+*4 準自由状態と Araki–Woods の表現
+CAR・CCR の準自由状態を定義し、その GNS 表現が生成する von Neumann 環の型（I, II, III）が二点関数で決まること（Araki–Woods 1963, Powers–Størmer）を述べよ。
+
+*4 Powers–Størmer の不等式
+正のトレースクラス作用素 $A,B$ について $\|A^{1/2}-B^{1/2}\|_{2}^{2}\le\|A-B\|_{1}$（Powers–Størmer 1970）。証明し、準自由状態の準同値性判定に用いよ。
+
+*4 自由ボソン場の Hamiltonian と Hermite 展開
+$d\Gamma(\omega)$ が $\Gamma_{s}(L^{2})$ 上の自己共役作用素であることを示し、Gauss 空間 $L^{2}(\mathcal{S}',\mu)$ との Wiener–Itô–Segal 同型の下で Ornstein–Uhlenbeck 作用素と一致することを示せ。
+
+*4 Nelson の超縮小性 {nelson-hyp}
+Ornstein–Uhlenbeck 半群 $e^{-tN}$ は $e^{2t}\ge\frac{q-1}{p-1}$ なら $L^{p}(\gamma)$ から $L^{q}(\gamma)$ への縮小である（Nelson 1973）。Gross の対数 Sobolev 不等式との同値性を用いて証明し、Hamiltonian の下に有界性（$P(\phi)_{2}$ 模型）への応用を述べよ。
+
+*4 Gross の対数 Sobolev 不等式
+標準 Gauss 測度について $\int f^{2}\log f^{2}d\gamma-\|f\|_{2}^{2}\log\|f\|_{2}^{2}\le2\int|\nabla f|^{2}d\gamma$（Gross 1975）。一次元の二点不等式から中心極限定理で導け。
+
+*4 Friedrichs 模型と共鳴
+Friedrichs 模型（離散状態と連続スペクトルの結合）の固有値問題を解き、結合により埋め込まれた固有値が消えて共鳴（Fermi の黄金律）になることを示せ。
+
+*4 Nelson 模型の紫外くりこみ（Nelson 1964）
+粒子とスカラー場の相互作用 Hamiltonian の紫外カットオフ $\Lambda$ について、自己エネルギー $E_{\Lambda}$ を引いた $H_{\Lambda}-E_{\Lambda}$ が $\Lambda\to\infty$ でノルムレゾルベント収束することを述べ、Gross 変換の役割を説明せよ。
+
+*4 Spin–boson 模型と基底状態の存在
+spin–boson 模型（二準位系とボソン場）の基底状態が、赤外条件の下で存在することを述べ（Spohn, Hübner–Spohn）、赤外発散で存在しない場合を説明せよ。
+
+*4 Glimm–Jaffe の $\phi^{4}_{2}$ 模型
+二次元 $\phi^{4}$ 場の Hamiltonian の自己共役性と下有界性（Glimm–Jaffe, Nelson の超縮小性による）を述べ、構成的場の理論における関数解析の役割を説明せよ。
+
+*4 Osterwalder–Schrader の再構成定理
+Euclid Green 関数（Schwinger 関数）が反射正値性などの公理をみたせば、相対論的量子場（Wightman 理論）が再構成される（Osterwalder–Schrader 1973）。反射正値性から Hilbert 空間と Hamiltonian を構成する部分を示せ。
+
+*4 Wightman の再構成定理と Reeh–Schlieder の定理
+Wightman 関数からの場の再構成と、真空が局所代数に関して巡回的かつ分離的であること（Reeh–Schlieder 1961）を述べよ。
+
+*5 Bisognano–Wichmann の定理
+Wightman 場の理論で、楔領域の局所代数と真空に関する冨田–竹崎のモジュラー群が楔を保つ Lorentz ブーストに一致する（Bisognano–Wichmann 1975）。主張を述べ、Unruh 効果との関係を説明せよ。
+
+*5 Haag の定理
+相互作用する場と自由場は（同じ時刻で同じ正準交換関係をみたすとしても）ユニタリ同値な表現では実現できない（Haag 1955）。Poincaré 共変性と真空の一意性から導く議論の骨格を与え、相互作用描像の数学的困難を説明せよ。

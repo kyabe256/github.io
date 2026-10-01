@@ -1,0 +1,123 @@
+=ch IV-9　非自律発展方程式と双曲系
+
+*4 発展族（evolution family）の定義と基本性質
+非自律方程式 $\dot u=A(t)u$ の発展族 $U(t,s)$（$U(t,r)U(r,s)=U(t,s)$, 強連続）を定義し、mild solution の表示と一意性を示せ。
+
+*4 Kato の双曲型発展方程式の理論（1970） {kato-hyp}
+$A(t)$ が一様に安定（$\|\prod e^{s_{j}A(t_{j})}\|\le Me^{\omega\sum s_{j}}$）で、共通の定義域を保つ同型写像による許容性をみたすとき、発展族が存在する（Kato 1970）。主張と、区分定数近似による構成の骨格を与えよ。
+
+*4 Tanabe–Sobolevskii の放物型発展方程式
+$A(t)$ が一様に解析半群を生成し、定義域が $t$ に依らず、$t\mapsto A(t)A(0)^{-1}$ が Hölder 連続なら、発展族が存在し解析的平滑化をもつ（Sobolevskii 1961, Tanabe 1960）。Levi のパラメトリクスで証明の骨格を与えよ。
+
+*4 Acquistapace–Terreni の理論（定義域が動く放物型）
+定義域が $t$ に依存する放物型発展方程式の発展族の存在条件（Acquistapace–Terreni 1987）を述べよ。
+
+*4 Friedrichs の対称双曲系
+対称双曲系 $u_{t}+\sum A_{j}(x,t)\partial_{j}u+Bu=f$（$A_{j}$ は対称）のエネルギー評価を導き、$H^{s}$（$s$ 整数）での適切性を示せ（Friedrichs 1954）。
+
+*4 Friedrichs の軟化子と弱解＝強解
+Friedrichs の補題（軟化子と微分作用素の交換子が $L^{2}$ 有界）を示し、対称双曲系の弱解が強解であることを導け。
+
+*4 有限伝播速度と依存領域
+双曲系の解が依存領域外の初期値に依存しないこと（有限伝播速度）をエネルギーの局所化で示し、波動方程式で Huygens の原理（奇数次元 $\ge3$）を述べよ。
+
+*4 強双曲系と Kreiss の行列定理
+定係数一階系 $u_{t}=\sum A_{j}\partial_{j}u$ が $L^{2}$ 適切（強双曲的）$\iff$ 表象 $\sum A_{j}\xi_{j}$ が一様に対角化可能（Kreiss）。証明せよ。
+
+*4 Lax–Mizohata の定理
+非線形あるいは線形の一階系で、主表象が非実固有値をもつと Cauchy 問題は（Hadamard の意味で）不適切である（Lax 1958, Mizohata）。証明の骨格を与えよ。
+
+*4 Ivrii–Petkov の条件（弱双曲型の $C^{\infty}$ 適切性）
+重複特性をもつ二階方程式の $C^{\infty}$ 適切性に関する Ivrii–Petkov の必要条件（Levi 条件）を述べ、例 $u_{tt}-u_{xx}+bu_{x}$ の扱いを示せ。
+
+*4 Kreiss–Lopatinskii 条件（初期値境界値問題）
+双曲型初期値境界値問題の $L^{2}$ 適切性に関する一様 Kreiss–Lopatinskii 条件を述べ、Kreiss の対称子の構成（Kreiss 1970）の役割を説明せよ。
+
+*4 Schrödinger 方程式の Strichartz 評価（抽象的 $TT^{*}$ 論法）
+$\|e^{it\Delta}f\|_{L^{q}_{t}L^{r}_{x}}\le C\|f\|_{2}$（$\frac2q+\frac nr=\frac n2$, 許容対）を、分散評価 $\|e^{it\Delta}\|_{L^{1}\to L^{\infty}}\le Ct^{-n/2}$ と $TT^{*}$ 論法（端点は Keel–Tao）で証明せよ。
+
+*4 Keel–Tao の端点 Strichartz 評価
+抽象的な分散評価と $L^{2}$ 有界性をみたす作用素族について、端点 $(q,r)=(2,\frac{2n}{n-2})$（$n\ge3$）の Strichartz 評価が成り立つ（Keel–Tao 1998）。双線形補間による証明の骨格を与えよ。
+
+*4 Kato の局所平滑化効果
+Schrödinger 方程式の解について $\int_{\mathbb{R}}\|\langle x\rangle^{-s}|D|^{1/2}e^{it\Delta}f\|_{2}^{2}dt\le C\|f\|^{2}$（$s>1/2$）（Kato 1983, Constantin–Saut, Sjölin, Vega）。Kato の平滑性理論から導け。
+
+*4 Morawetz 評価と散乱
+非線形 Klein–Gordon・Schrödinger 方程式の Morawetz 型の時空評価 $\int\int\frac{|u|^{p+1}}{|x|}dxdt\le CE$ を導き、エネルギー部分臨界の場合の散乱（Lin–Strauss, Ginibre–Velo）への応用を述べよ。
+
+*4 Segal の非線形半群理論と非線形波動方程式
+$u_{tt}-\Delta u+m^{2}u+g(u)=0$ のエネルギー空間での局所適切性を半群論的に示し、エネルギー保存による大域存在（劣臨界非線形）を導け（Segal 1963, Jörgens）。
+
+*4 発展方程式の abstract Duhamel 原理と Volterra 方程式
+非斉次方程式の解を Duhamel の原理で表し、時間遅れ・記憶をもつ Volterra 型積分微分方程式の解作用素（resolvent family, Prüss）の理論を述べよ。
+
+*4 時間周期問題と Floquet 理論（無限次元）
+時間周期的な $A(t)$ の発展族について、モノドロミー作用素 $U(T,0)$ のスペクトルが周期解の安定性を決めることを示し、放物型の場合にコンパクトであることを示せ。
+
+*5 Kato–Ponce の交換子評価と準線形双曲系
+$\|J^{s}(fg)-fJ^{s}g\|_{p}\le C(\|\nabla f\|_{\infty}\|J^{s-1}g\|_{p}+\|J^{s}f\|_{p}\|g\|_{\infty})$（$J=(1-\Delta)^{1/2}$, Kato–Ponce 1988）を証明し、準線形対称双曲系・Euler 方程式の $H^{s}$（$s>\frac n2+1$）局所適切性に応用せよ。
+
+*5 Beale–Kato–Majda の爆発判定
+三次元 Euler 方程式の滑らかな解が時刻 $T^{*}$ で爆発するならば $\int_{0}^{T^{*}}\|\omega(t)\|_{\infty}dt=\infty$（Beale–Kato–Majda 1984）。対数 Sobolev 不等式（Brezis–Gallouet 型）を用いて証明せよ。
+
+=ch IV-10　無限次元の制御理論
+
+*4 可制御性・可観測性の双対性（無限次元）
+$\dot x=Ax+Bu$（$A$ は $C_{0}$ 半群の生成子）について、正確可制御性 $\iff$ 双対系の正確可観測性（観測不等式 $\|x_{0}\|^{2}\le C\int_{0}^{T}\|B^{*}T(t)^{*}x_{0}\|^{2}dt$）、近似可制御性 $\iff$ 双対系の一意接続性を示せ。
+
+*4 Lions の HUM（Hilbert 一意性法）
+観測不等式から、最小ノルム制御を双対汎関数の最小化として構成する Lions の HUM（1988）を述べ、波動方程式の境界可制御性に適用せよ。
+
+*4 波動方程式の境界観測不等式（乗数法）
+$n$ 次元有界領域上の波動方程式について、境界の一部 $\Gamma_{0}=\{x:(x-x_{0})\cdot\nu>0\}$ からの観測が $T>2\max|x-x_{0}|$ で可観測性を与えること（Ho, Lions の乗数法）を証明せよ。
+
+*4 Bardos–Lebeau–Rauch の幾何制御条件（可制御性）
+波動方程式の内部・境界可制御性が、幾何制御条件（すべての一般化測地線が時間 $T$ 内に制御領域に到達）と同値であることを述べよ（Bardos–Lebeau–Rauch 1992, Burq–Gérard）。
+
+*4 熱方程式の null 可制御性（Lebeau–Robbiano, Fursikov–Imanuvilov）
+任意の開集合 $\omega$ と時間 $T>0$ について、熱方程式は $\omega$ に台をもつ制御で null 可制御である（Lebeau–Robbiano 1995, Fursikov–Imanuvilov 1996）。Carleman 評価あるいはスペクトル不等式 $\|\sum_{\lambda_{j}\le\Lambda}a_{j}\phi_{j}\|_{L^{2}(\Omega)}\le Ce^{C\sqrt\Lambda}\|\cdot\|_{L^{2}(\omega)}$ を用いた証明の骨格を与えよ。
+
+*4 Carleman 評価と一意接続性
+二階楕円型作用素について重み付き評価 $\|e^{\tau\varphi}u\|\le C\tau^{-1/2}\|e^{\tau\varphi}Pu\|$ を導き、一意接続性（開集合で零なら全体で零）を示せ。
+
+*4 Schrödinger 方程式の可制御性（Lebeau, Jaffard）
+トーラス上の Schrödinger 方程式は任意の開集合と任意の時間で可観測であること（Jaffard 1990, Burq–Zworski）を述べ、波動方程式との違い（無限伝播速度）を論ぜよ。
+
+*4 Weiss の許容作用素と well-posed 線形系
+非有界な制御・観測作用素の許容性（admissibility）を定義し、許容な $B$ について $\int_{0}^{t}T(t-s)Bu(s)ds\in X$ となることを示せ。Weiss の予想（レゾルベント条件 $\sup_{\operatorname{Re}\lambda>0}\sqrt{\operatorname{Re}\lambda}\|C(\lambda-A)^{-1}\|<\infty$ から許容性が従う）が一般には成り立たないこと（Jacob–Zwart 2004 らの反例）と、縮小半群・正規半群などで成り立つ場合を述べよ。
+
+*4 Salamon–Weiss の well-posed 線形系
+入力・状態・出力をもつ well-posed 線形系の抽象理論（Salamon 1987, Weiss 1989）を述べ、伝達関数が有界正則関数であることを示せ。
+
+*4 無限次元 Riccati 方程式と LQ 制御
+無限次元の LQ 最適制御問題の値が Riccati 作用素方程式の解 $P$ で与えられ、最適制御がフィードバック $u=-B^{*}Px$ であることを、有界制御の場合に示せ（Lions, Curtain–Zwart）。
+
+*4 安定化可能性と検出可能性（無限次元）
+指数安定化可能性と Riccati 方程式の解の存在の関係を述べ、有限次元制御で無限次元系を安定化できない例（Gibson の定理）を挙げよ。
+
+*4 Gibson の定理
+有限次元制御入力（コンパクトな $B$）では、無限個の不安定な極をもつ系や、ある種のスキュー随伴系（保存的）を指数安定化できない（Gibson 1980）。証明せよ。
+
+*4 Russell の原理（可制御性と安定化の同値）
+時間可逆な保存系について、正確可制御性 $\iff$ 指数安定化可能性（Russell 1978）。証明の骨格を与えよ。
+
+*4 一意接続と近似可制御性（熱方程式）
+熱方程式の近似可制御性が、Laplacian の固有関数の一意接続性から従うことを示せ。
+
+*4 Kalman の階数条件の無限次元版（Fattorini）
+対角化可能な系 $\dot x=Ax+bu$（$b$ はベクトル）の近似可制御性が、各固有値について $\langle b,\phi_{j}\rangle\neq0$ と固有値の単純性で特徴づけられることを示せ（Fattorini）。
+
+*4 モーメント問題と可制御性（Fattorini–Russell）
+一次元熱方程式の境界 null 可制御性を、指数関数族 $\{e^{-\lambda_{j}t}\}$ の双直交系の構成（Müntz 型の条件 $\sum1/\lambda_{j}<\infty$）によって証明せよ（Fattorini–Russell 1971）。
+
+*4 Ingham の不等式と非調和 Fourier 級数
+$\lambda_{n+1}-\lambda_{n}\ge\gamma>0$ なら、$T>2\pi/\gamma$ で $\int_{0}^{T}|\sum a_{n}e^{i\lambda_{n}t}|^{2}dt\simeq\sum|a_{n}|^{2}$（Ingham 1936）。証明し、梁・弦の境界可制御性に応用せよ。
+
+*4 Beurling–Malliavin の定理と完全性半径
+指数関数系 $\{e^{i\lambda_{n}t}\}$ の $L^{2}(-a,a)$ での完全性半径が、$\Lambda$ の Beurling–Malliavin 密度 $D^{*}(\Lambda)$ で $\pi D^{*}$ と与えられる（Beurling–Malliavin 1967）。主張を述べよ。
+
+*5 Lebeau–Robbiano のスペクトル不等式の完全証明
+閉多様体上で、Laplacian の固有関数の有限和 $u=\sum_{\lambda_{j}\le\Lambda}a_{j}\phi_{j}$ に対し $\|u\|_{L^{2}(M)}\le Ce^{C\sqrt\Lambda}\|u\|_{L^{2}(\omega)}$ を、補助変数 $s$ を加えた楕円型作用素 $\partial_{s}^{2}+\Delta$ の Carleman 評価（補間不等式）から完全に証明し、熱方程式の null 可制御性を導け。
+
+*5 Coron の帰還法（非線形系の可制御性）
+非線形系の局所可制御性を、非自明な軌道に沿った線形化の可制御性から導く Coron の帰還法（return method）を述べ、Euler 方程式の可制御性（Coron 1996）、Burgers 方程式への応用の骨格を示せ。

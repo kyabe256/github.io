@@ -1,0 +1,123 @@
+=ch III-3　有界正規作用素のスペクトル定理
+
+*4 スペクトル定理（掛け算作用素形） {st-mult}
+可分 Hilbert 空間上の有界自己共役作用素 $A$ は、ある有限測度空間 $(X,\mu)$ 上の $L^{2}(X,\mu)$ における実数値有界関数による掛け算作用素とユニタリ同値である。巡回ベクトルの直和分解と Riesz–Markov の定理で証明せよ。
+
+*4 射影値測度とスペクトル定理（積分形） {pvm}
+正規作用素 $N$ に対し、$\sigma(N)$ 上の射影値測度 $E$ が一意に存在して $N=\int\lambda\,dE(\lambda)$。Borel 関数カルキュラス $f\mapsto f(N)=\int f\,dE$ が *-準同型で、有界 Borel 関数の各点有界収束を強収束に写すことを示せ。
+
+*4 Borel 関数カルキュラスの一意性と von Neumann 環
+$f(N)$ は $N$ の生成する von Neumann 環に属し、$N$ と可換な作用素は $f(N)$ と可換である。$W^{*}(N)\cong L^{\infty}(\sigma(N),\mu)$（$\mu$ はスカラースペクトル測度）を示せ。
+
+*4 スペクトル重複度理論（Hahn–Hellinger）
+自己共役作用素のユニタリ同値類は、互いに特異な測度の列 $\mu_{1}\gg\mu_{2}\gg\cdots$（重複度関数）で完全に分類される（Hahn–Hellinger）。証明の骨格を与えよ。
+
+*4 可換 von Neumann 環の構造
+可分 Hilbert 空間上の極大可換 von Neumann 環は $L^{\infty}[0,1]$、$\ell^{\infty}(\{1,\dots,n\})$、$\ell^{\infty}(\mathbb{N})$ の直和にユニタリ同値である。単純スペクトルの作用素の存在から導け。
+
+*4 スペクトルの分解（点・ac・sc）
+自己共役作用素 $A$ について $H=H_{pp}\oplus H_{ac}\oplus H_{sc}$（スペクトル測度の Lebesgue 分解による）と分解され、各部分空間が $A$ で不変であることを示せ。
+
+*4 正規作用素の同時対角化（可換族）
+可換な正規作用素の族は、共通の射影値測度により同時に掛け算作用素として表される（可換 $C^{*}$-環の表現）。可換 $C^{*}$-環のスペクトル定理として証明せよ。
+
+*4 ユニタリ作用素のスペクトル定理と Herglotz の定理
+ユニタリ $U$ に対し $\langle U^{n}x,x\rangle=\int_{\mathbb{T}}z^{n}d\mu_{x}$（Herglotz：正定値数列は円周上の測度の Fourier 係数）。Herglotz の定理を証明しスペクトル定理を導け。
+
+*4 Stone の定理への準備：一径数ユニタリ群のスペクトル表示
+強連続一径数ユニタリ群 $U(t)$ は $U(t)=\int e^{it\lambda}dE(\lambda)$ と表される。Bochner の定理（正定値関数）から導け。
+
+*4 正規作用素の平方根・極分解・関数の連続性
+正規作用素の Borel 関数カルキュラスにおいて、$f_{n}\to f$ 一様なら $f_{n}(N)\to f(N)$ ノルム収束、各点有界なら強収束であることを示し、$\sqrt{N^{*}N}$, $\operatorname{sgn}$ 等の計算に用いよ。
+
+*4 Weyl の判定条件 {weyl-crit}
+自己共役作用素 $A$ について $\lambda\in\sigma(A)$ $\iff$ $\|x_{n}\|=1$, $\|(A-\lambda)x_{n}\|\to0$ なる列（Weyl 列）が存在する。$\lambda\in\sigma_{ess}(A)$ $\iff$ 弱零収束する Weyl 列が存在することも示せ。
+
+*4 min-max 原理（Courant–Fischer–Weyl） {minmax}
+下に有界な自己共役作用素 $A$ について $\mu_{n}(A)=\sup_{\phi_{1},\dots,\phi_{n-1}}\inf_{\psi\perp\phi_{i},\|\psi\|=1}\langle\psi,A\psi\rangle$ は、本質的スペクトルの下端より下の固有値（重複込み）を順に与え、そうでなければ本質的スペクトルの下端に等しい。証明せよ。
+
+*4 Dirichlet–Neumann ブラケティング
+領域の分割で Dirichlet 境界条件を加えると固有値が上がり、Neumann を加えると下がる。これを用いて Weyl の固有値漸近則 $N(\lambda)\sim\frac{|\Omega|\omega_{n}}{(2\pi)^{n}}\lambda^{n/2}$ を証明せよ。
+
+*4 Weyl の固有値漸近則の第二項（Ivrii）
+周期的測地線が測度零の領域で、Dirichlet ラプラシアンの固有値計数関数が $N(\lambda)=c_{n}|\Omega|\lambda^{n/2}-\frac14c_{n-1}|\partial\Omega|\lambda^{(n-1)/2}+o(\lambda^{(n-1)/2})$ をみたす（Ivrii 1980）。主張を述べよ。
+
+*4 太鼓の形は聞こえるか（Kac, Gordon–Webb–Wolpert）
+平面領域の Dirichlet スペクトルから面積・周長・穴の数が決まる（熱核の漸近展開）が、等スペクトルで非合同な平面領域が存在する（Gordon–Webb–Wolpert 1992）。熱トレースの展開の最初の三項を導け。
+
+*4 Pólya 予想と Li–Yau の不等式
+Dirichlet 固有値について $\sum_{k\le N}\lambda_{k}\ge\frac{n}{n+2}C_{n}|\Omega|^{-2/n}N^{1+2/n}$（Li–Yau 1983）を示し、Pólya 予想 $\lambda_{k}\ge C_{n}(k/|\Omega|)^{2/n}$ との関係（円板での最近の証明、Filonov–Levitin–Polterovich–Sher 2023）を述べよ。
+
+*4 Faber–Krahn と Szegő–Weinberger
+同体積の領域の中で第一 Dirichlet 固有値を最小化するのは球（Faber–Krahn）、第一非零 Neumann 固有値を最大化するのは球（Szegő–Weinberger）。前者を対称化で証明せよ。
+
+*4 Payne–Pólya–Weinberger 予想（Ashbaugh–Benguria）
+$\lambda_{2}/\lambda_{1}$ は球で最大となる（Ashbaugh–Benguria 1991）。主張を述べ、証明の骨格を与えよ。
+
+*5 スペクトル定理の三つの形の同値性の完全な証明
+有界正規作用素について、(i) 掛け算作用素形、(ii) 射影値測度形、(iii) 連続関数カルキュラスの Borel 拡張形、が互いに導かれることを完全に示し、非可分 Hilbert 空間でも成り立つ形（局所化可能な測度空間）に一般化せよ。
+
+*5 Weyl 則の剰余項と古典力学（Duistermaat–Guillemin）
+閉 Riemann 多様体上の Laplacian の固有値計数関数について、周期測地流の測度が零なら $N(\lambda)=c\lambda^{n/2}+o(\lambda^{(n-1)/2})$ である（Duistermaat–Guillemin 1975）。波動トレースの特異性と閉測地線の長さの対応（Poisson 関係式）を述べよ。
+
+=ch III-4　非有界作用素
+
+*4 閉作用素・可閉作用素・随伴 {closed}
+稠密に定義された作用素 $T$ の随伴 $T^{*}$ は閉作用素で、$T$ が可閉 $\iff T^{*}$ が稠密に定義され、このとき $\bar T=T^{**}$。グラフの直交補空間 $\Gamma(T^{*})=J\Gamma(T)^{\perp}$ を用いて証明せよ。
+
+*4 対称作用素と自己共役作用素の基本判定 {sa-crit}
+閉対称作用素 $A$ について、$A$ が自己共役 $\iff\operatorname{range}(A\pm i)=H$ $\iff\ker(A^{*}\pm i)=0$。$A$ が本質的自己共役 $\iff\operatorname{range}(A\pm i)$ が稠密を示せ。
+
+*4 $-d^{2}/dx^{2}$ の自己共役性と境界条件
+$L^{2}(0,1)$ 上の $-d^{2}/dx^{2}$（定義域 $C_{c}^{\infty}(0,1)$）は自己共役でなく、不足指数 $(2,2)$ で、自己共役拡張は境界条件の $U(2)$ 族で与えられることを示せ。
+
+*4 運動量作用素の自己共役拡張
+$L^{2}(0,1)$ 上の $-i\frac{d}{dx}$（$C_{c}^{\infty}$）の自己共役拡張が周期条件 $\psi(1)=e^{i\theta}\psi(0)$ で尽きること、$L^{2}(0,\infty)$ 上では自己共役拡張をもたないこと（不足指数 $(1,0)$）を示せ。
+
+*4 非有界自己共役作用素のスペクトル定理 {st-unbdd}
+自己共役作用素 $A$ は $L^{2}(X,\mu)$ 上の実数値可測関数（非有界でよい）による掛け算作用素とユニタリ同値である。Cayley 変換 $U=(A-i)(A+i)^{-1}$ のスペクトル定理から導け。
+
+*4 Cayley 変換
+閉対称作用素 $A$ の Cayley 変換は $\operatorname{range}(A+i)$ から $\operatorname{range}(A-i)$ への等長写像であり、$A$ が自己共役 $\iff$ Cayley 変換がユニタリ。逆変換の公式を示せ。
+
+*4 Stone の定理 {stone}
+強連続一径数ユニタリ群 $U(t)$ は自己共役作用素 $A$ により $U(t)=e^{itA}$ と一意に表され、逆に自己共役 $A$ から強連続ユニタリ群が得られる（Stone 1932）。生成子の定義域の稠密性（Gårding 型の平均化）を含めて証明せよ。
+
+*4 Nelson の解析ベクトル定理
+対称作用素 $A$ の定義域に解析ベクトル（$\sum\frac{\|A^{n}x\|}{n!}t^{n}<\infty$）の全体集合が稠密に存在すれば、$A$ は本質的自己共役である（Nelson 1959）。証明せよ。
+
+*4 Nelson の可換性判定と反例
+二つの本質的自己共役作用素が共通の不変稠密定義域で可換でも、スペクトル射影が可換とは限らない（Nelson の反例）。例を述べ、Nelson の判定（$A^{2}+B^{2}$ の本質的自己共役性）を述べよ。
+
+*4 Friedrichs 拡張 {friedrichs}
+下に有界な対称作用素 $A$ は、同じ下界をもつ自己共役拡張（Friedrichs 拡張）をもち、それは二次形式の閉包に付随する作用素である。形式の完備化を用いて証明せよ。
+
+*4 二次形式と自己共役作用素の対応（表現定理）
+下に有界な閉二次形式 $q$ と下に有界な自己共役作用素 $A$ は $q(\psi)=\|(A+c)^{1/2}\psi\|^{2}-c\|\psi\|^{2}$ によって一対一に対応する（Kato の第一・第二表現定理）。証明せよ。
+
+*4 不足指数と von Neumann の拡張理論 {deficiency}
+閉対称作用素 $A$ の不足指数 $n_{\pm}=\dim\ker(A^{*}\mp i)$ について、自己共役拡張が存在 $\iff n_{+}=n_{-}$ であり、拡張は $\ker(A^{*}-i)$ から $\ker(A^{*}+i)$ へのユニタリと一対一対応する（von Neumann の第二公式）。証明せよ。
+
+*4 実作用素の自己共役拡張の存在（von Neumann）
+共役作用 $C$（反ユニタリ $C^{2}=I$）と可換な対称作用素は $n_{+}=n_{-}$ をみたし、自己共役拡張をもつ。$-\Delta+V$（実ポテンシャル）に適用せよ。
+
+*4 Krein–Vishik–Birman の拡張理論
+正定値対称作用素 $A$ の非負自己共役拡張全体が、Friedrichs 拡張 $A_{F}$ と Krein–von Neumann 拡張 $A_{K}$ の間に（形式の順序で）あり、$A_{K}\le\tilde A\le A_{F}$ をみたすことを示せ（Krein 1947）。
+
+*4 境界三つ組（boundary triples）による拡張の記述
+閉対称作用素 $A$ の境界三つ組 $(\mathcal{H},\Gamma_{0},\Gamma_{1})$ を定義し、自己共役拡張が $\mathcal{H}$ 上の自己共役線形関係と対応すること、Weyl 関数（Krein の $Q$ 関数）とレゾルベントの Krein 公式を導け。
+
+*4 Krein のレゾルベント公式
+同一の対称作用素の二つの自己共役拡張 $A_{1},A_{2}$ のレゾルベントの差が有限ランク（不足指数有限のとき）で、$(A_{1}-z)^{-1}-(A_{2}-z)^{-1}=\gamma(z)(\Theta-M(z))^{-1}\gamma(\bar z)^{*}$ と表されることを示せ。
+
+*4 Laplacian の本質的自己共役性（$\mathbb{R}^{n}$ と多様体）
+$-\Delta$ は $C_{c}^{\infty}(\mathbb{R}^{n})$ 上で本質的自己共役である。完備 Riemann 多様体上でも本質的自己共役であること（Gaffney, Chernoff, Strichartz）を示せ。
+
+*4 Chernoff の定理（双曲型方程式による本質的自己共役性）
+有限伝播速度をもつ対称双曲系の生成子は本質的自己共役である（Chernoff 1973）。完備多様体上の Dirac 作用素・Laplacian の本質的自己共役性に応用せよ。
+
+*5 Schrödinger 作用素の本質的自己共役性（Kato の不等式と Simon の定理）
+$V\in L^{2}_{loc}(\mathbb{R}^{n})$, $V\ge0$ なら $-\Delta+V$ は $C_{c}^{\infty}$ 上で本質的自己共役である（Kato 1972）。Kato の超関数不等式 $\Delta|u|\ge\operatorname{Re}(\operatorname{sgn}\bar u\,\Delta u)$ を証明して用いよ。
+
+*5 Weyl の極限点・極限円理論と不足指数（完全版）
+$\tau=-\frac{d}{dx}p\frac{d}{dx}+q$ の最小作用素の不足指数が、各端点が極限点か極限円かで $(0,0),(1,1),(2,2)$ に決まることを示し、Weyl の円の縮小（$m$ 関数の Weyl 円）の議論を完全に与えよ。

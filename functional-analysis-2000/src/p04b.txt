@@ -1,0 +1,123 @@
+=ch IV-3　解析半群と分数冪
+
+*4 解析半群の特徴づけ {analytic-sg}
+$C_{0}$ 半群 $T(t)$ について次は同値：(i) 扇形 $\Sigma_{\delta}$ に有界解析的に拡張される、(ii) $\|(\lambda-A)^{-1}\|\le\frac{M}{|\lambda|}$（$\lambda\in\Sigma_{\pi/2+\delta}$）、(iii) $\sup_{t\in(0,1]}\|tAT(t)\|<\infty$。証明せよ。
+
+*4 扇形作用素の Dunford 積分による半群の構成
+扇形作用素 $A$（角 $<\pi/2$）に対し $e^{-tA}=\frac{1}{2\pi i}\int_{\Gamma}e^{-t\lambda}(\lambda-A)^{-1}d\lambda$ が解析半群を定めることを示し、$\|A^{k}e^{-tA}\|\le C_{k}t^{-k}$ を導け。
+
+*4 自己共役作用素の半群は解析的
+Hilbert 空間の下に有界な自己共役作用素 $A$ について $e^{-tA}$ は角 $\pi/2$ の解析半群である。スペクトル定理から示せ。
+
+*4 楕円型作用素の $L^{p}$ 解析半群（Agmon の技法）
+滑らかな有界領域上の強楕円型作用素（Dirichlet 境界条件）が $L^{p}$（$1<p<\infty$）上で解析半群を生成することを、Agmon–Douglis–Nirenberg 評価と Agmon の補助変数の技法で示せ。
+
+*4 Stewart の定理（$C(\bar\Omega)$ 上の解析半群）
+Dirichlet Laplacian が $C_{0}(\Omega)$ 上で解析半群を生成すること（Stewart 1974）を述べ、Masuda の結果との関係を述べよ。
+
+*4 分数冪の定義と基本性質 {frac-pow}
+扇形作用素 $A$（$0\in\rho(A)$）に対し $A^{-\alpha}=\frac{1}{\Gamma(\alpha)}\int_{0}^{\infty}t^{\alpha-1}e^{-tA}dt$, $A^{\alpha}=(A^{-\alpha})^{-1}$ を定義し、$A^{\alpha}A^{\beta}=A^{\alpha+\beta}$ と $\|A^{\alpha}e^{-tA}\|\le Ct^{-\alpha}$ を示せ。
+
+*4 Balakrishnan の公式
+扇形作用素 $A$ と $0<\alpha<1$ について $A^{\alpha}x=\frac{\sin\pi\alpha}{\pi}\int_{0}^{\infty}\lambda^{\alpha-1}A(\lambda+A)^{-1}xd\lambda$（Balakrishnan 1960）。証明し、分数 Laplacian の特異積分表示を導け。
+
+*4 分数 Laplacian と Caffarelli–Silvestre の拡張
+$(-\Delta)^{s}u=c_{n,s}\mathrm{p.v.}\int\frac{u(x)-u(y)}{|x-y|^{n+2s}}dy$ を示し、$(-\Delta)^{s}u$ が上半空間の退化楕円型方程式 $\operatorname{div}(y^{1-2s}\nabla U)=0$ の Dirichlet–Neumann 写像として得られること（Caffarelli–Silvestre 2007）を示せ。
+
+*4 Heinz の不等式と分数冪の比較（Kato）
+正の自己共役作用素 $A,B$ で $D(A)\subset D(B)$, $\|Bx\|\le\|Ax\|$ なら $\|B^{\alpha}x\|\le\|A^{\alpha}x\|$（$0\le\alpha\le1$）（Heinz–Kato）。複素補間で証明せよ。
+
+*4 Kato の平方根問題（自己共役の場合）
+一様楕円型の自己共役作用素 $L=-\operatorname{div}(A\nabla)$ について $D(L^{1/2})=H^{1}$, $\|L^{1/2}u\|\simeq\|\nabla u\|$ は自明であることを示し、非自己共役の場合の問題（Kato 1961）を定式化せよ。
+
+*4 Kato の平方根予想の解決（Auscher–Hofmann–Lacey–McIntosh–Tchamitchian） {kato-sq}
+複素有界可測係数の一様楕円型作用素 $L=-\operatorname{div}(A\nabla)$（$\mathbb{R}^{n}$）について $\|\sqrt Lu\|_{2}\simeq\|\nabla u\|_{2}$ が成り立つ（AHLMT 2002）。主張を述べ、Carleson 測度と $T(b)$ 定理による証明の骨格を与えよ。
+
+*4 Kato の問題の反例（McIntosh）
+一般の極大散逸作用素では $D(A^{1/2})=D(A^{*1/2})$ が成り立たない（McIntosh 1972 の反例）ことを述べ、形式から来る作用素で成り立つかという Kato の問題の意味を説明せよ。
+
+*4 補間空間と分数冪の定義域
+$D(A^{\alpha})$ と実補間空間 $(X,D(A))_{\alpha,p}$ の関係：$(X,D(A))_{\alpha,1}\subset D(A^{\alpha})\subset(X,D(A))_{\alpha,\infty}$、さらに $A$ が有界虚数冪をもつなら $D(A^{\alpha})=[X,D(A)]_{\alpha}$（Triebel）を示せ。
+
+*4 有界虚数冪（BIP）
+扇形作用素 $A$ が有界虚数冪（$\|A^{is}\|\le Ce^{\theta|s|}$）をもつことを定義し、$L^{p}$ 上の楕円型作用素がこれをもつこと（Seeley 1971）を述べよ。
+
+*4 解析半群による放物型方程式の正則性
+解析半群 $T(t)$ の下で、mild solution $u(t)=T(t)x+\int_{0}^{t}T(t-s)f(s)ds$ が $f$ の Hölder 連続性の下で古典解となり、$Au\in C^{\theta}$ が成り立つこと（Sinestrari, Lunardi の最適正則性）を示せ。
+
+*4 Gevrey 半群と微分可能半群
+微分可能半群（$T(t)X\subset D(A)$, $t>0$）の生成子のレゾルベントの特徴づけ（Pazy）を述べ、解析半群との違いを例で示せ。
+
+*4 熱核の Gauss 評価と半群の $L^{p}$ 解析性
+熱核が Gauss 型上界 $|p_{t}(x,y)|\le Ct^{-n/2}e^{-c|x-y|^{2}/t}$ をもつ自己共役半群は、すべての $L^{p}$（$1\le p<\infty$）で解析的であり、スペクトルは $p$ に依らない（Hempel–Voigt, Davies）。主張を述べよ。
+
+*4 Davies–Gaffney 評価と有限伝播速度
+自己共役作用素 $L$ について、Davies–Gaffney 評価 $|\langle e^{-tL}f,g\rangle|\le e^{-d(E,F)^{2}/4t}\|f\|\|g\|$ が波動方程式 $\cos(t\sqrt L)$ の有限伝播速度と同値であること（Sikora）を示せ。
+
+*5 De Giorgi–Nash–Moser の定理と熱核の Gauss 評価（Aronson）
+有界可測係数の一様楕円型作用素 $L=-\operatorname{div}(A\nabla)$（実対称）の熱核が二側 Gauss 評価 $c_{1}t^{-n/2}e^{-C_{1}|x-y|^{2}/t}\le p_{t}(x,y)\le c_{2}t^{-n/2}e^{-C_{2}|x-y|^{2}/t}$ をみたす（Aronson 1967）ことを、Nash の不等式と Moser の Harnack 不等式から導く骨格を与えよ。
+
+*5 Grigor'yan–Saloff-Coste の定理（Harnack 不等式の幾何学的特徴づけ）
+完備 Riemann 多様体上で、放物型 Harnack 不等式 $\iff$ 体積倍増条件＋Poincaré 不等式 $\iff$ 二側 Gauss 熱核評価（Grigor'yan 1991, Saloff-Coste 1992）。主張と証明の骨格を与えよ。
+
+=ch IV-4　近似・摂動・積公式
+
+*4 有界摂動定理
+$A$ が $\|T(t)\|\le Me^{\omega t}$ の $C_{0}$ 半群を生成し $B$ が有界なら、$A+B$ は $\|S(t)\|\le Me^{(\omega+M\|B\|)t}$ の $C_{0}$ 半群を生成し、Dyson–Phillips 級数 $S(t)=\sum S_{n}(t)$ で表される。証明せよ。
+
+*4 Trotter–Kato の近似定理 {trotter-kato}
+一様に $\|T_{n}(t)\|\le Me^{\omega t}$ の半群列について、$T_{n}(t)x\to T(t)x$（一様に $t$ のコンパクト集合上）$\iff$ ある $\lambda$ でレゾルベントが強収束し、極限が稠密値域をもつ。証明せよ。
+
+*4 Chernoff の積公式 {chernoff}
+$F(t)$ が $\|F(t)^{n}\|\le Me^{\omega nt}$, $F(0)=I$ で、$F'(0)x=Ax$ が半群の生成子の芯上で成り立てば、$F(t/n)^{n}x\to e^{tA}x$（Chernoff 1968）。証明し、Trotter の積公式と指数公式を系として導け。
+
+*4 Lie–Trotter 積公式と演算子分割法の誤差
+$e^{t(A+B)}=\lim(e^{tA/n}e^{tB/n})^{n}$ を Chernoff から導き、Strang 分割 $e^{tA/2n}e^{tB/n}e^{tA/2n}$ の局所誤差 $O(t^{3})$ を有界作用素について示せ。非有界の場合の次数低下を論ぜよ。
+
+*4 Feynman–Kac–Itô 公式と磁場
+磁場付き Schrödinger 半群の Feynman–Kac–Itô 公式 $(e^{-tH}f)(x)=E_{x}[e^{-i\int A(B_{s})\circ dB_{s}-\int V(B_{s})ds}f(B_{t})]$ を Trotter–Kato から導け。
+
+*4 相対有界摂動による解析半群の生成
+$A$ が解析半群を生成し、$B$ が $A$-有界（相対限界が十分小さい）なら $A+B$ も解析半群を生成する。証明し、$C_{0}$ 半群では相対有界摂動で生成性が保たれない例を作れ。
+
+*4 Lie 群上の左不変微分作用素の半群（Langlands, Nelson）
+Lie 群の表現における Laplacian（Casimir 型の楕円元）の半群と Gårding 部分空間、Nelson の解析ベクトルの稠密性を論ぜよ。
+
+*4 Kato の非自律半群の摂動（time-dependent Trotter）
+時間依存の生成子族 $A(t)$ の発展作用素を、時間分割の積 $\prod e^{(t_{k+1}-t_{k})A(t_{k})}$ の極限として構成できる条件を述べよ。
+
+*4 半群の数値近似：Lax の同値定理
+整合的な一段数値スキームについて、安定性 $\iff$ 収束（Lax–Richtmyer の同値定理）を Banach 空間の半群の文脈で示せ。
+
+*4 Brenner–Thomée の定理（有理近似の安定性）
+$A$ が解析半群を生成するとき、A-安定な有理関数 $r$ による近似 $r(tA/n)^{n}$ の安定性と収束率 $O(n^{-p})$（$p$ は近似の次数）を示せ（Brenner–Thomée 1979, Crouzeix–Larsson–Piskarev–Thomée）。
+
+*4 Hille–Phillips の関数計算
+$C_{0}$ 半群の生成子 $A$ と、有界測度 $\mu$ の Laplace 変換 $f(z)=\int e^{-tz}d\mu(t)$ について $f(-A)=\int T(t)d\mu(t)$ を定義し、準同型性を示せ。
+
+*4 従属（subordination）と分数冪半群（Bochner）
+$C_{0}$ 縮小半群 $T(t)$ と Bernstein 関数 $f$ について、従属半群 $T^{f}(t)=\int_{0}^{\infty}T(s)\eta_{t}^{f}(ds)$ の生成子が $-f(-A)$ であることを示し、$e^{-t(-\Delta)^{\alpha}}$（安定過程）の構成に用いよ。
+
+*4 Phillips の定理（Bernstein 関数と生成子）
+$f$ が Bernstein 関数なら $-f(-A)$ は $C_{0}$ 縮小半群を生成する（Phillips 1952）。Lévy–Khinchin 型表示 $f(\lambda)=a+b\lambda+\int(1-e^{-\lambda t})\nu(dt)$ から示せ。
+
+*4 Arendt–Batty–Hieber–Neubrander の Laplace 変換の手法
+Widder の定理（Laplace 変換の像の特徴づけ）の Banach 空間版（Arendt 1987：$\|\frac{d^{n}}{d\lambda^{n}}r(\lambda)\|\le\frac{Mn!}{\lambda^{n+1}}$ なら $r$ は Lipschitz 関数の Laplace 変換）を述べ、積分半群の理論への応用を述べよ。
+
+*4 積分半群と C-半群
+稠密に定義されない作用素や Hille–Yosida 条件をみたさない作用素に対し、$n$ 回積分半群・正則化半群（C-半群）による解の理論を述べ、Schrödinger 型作用素の $L^{p}$ での扱いに応用せよ。
+
+*4 Feller の拡散の境界分類と半群
+一次元拡散 $\frac12a(x)u''+b(x)u'$ の境界点の Feller による分類（正則・流出・流入・自然）と、それぞれの場合に $C[a,b]$ 上で Feller 半群を生成する境界条件を述べよ。
+
+*4 Chernoff の定理による Feynman 経路積分の近似（Smolyanov）
+Chernoff の積公式による Schrödinger 群の近似（Feynman の経路積分の時間分割公式）を、$e^{-itH}$ について強収束の意味で正当化せよ（Nelson 1964 の解析接続法を含めて）。
+
+*4 Kato–Rellich と半群：形式和の Trotter 公式
+形式和 $A\dotplus B$ の半群が Trotter 積公式で近似されること（Kato 1978）を、$A,B\ge0$ の自己共役作用素について示せ。
+
+*5 Trotter–Kato の定理の Banach 空間での完全証明と Kurtz の拡張
+Trotter–Kato の近似定理を完全に証明し、マルコフ過程の弱収束（Kurtz の定理：生成子の収束から過程の弱収束）への応用として、ランダムウォークの Brown 運動への収束を半群の収束として導け。
+
+*5 Chernoff 積公式の収束率（Zagrebnov, Neidhardt–Ichinose–Tamura）
+自己共役作用素 $A,B\ge0$ について Trotter 積公式の作用素ノルム収束 $\|(e^{-tA/n}e^{-tB/n})^{n}-e^{-t(A+B)}\|=O(n^{-1}\log n)$ などの収束率の結果（Ichinose–Tamura, Neidhardt–Zagrebnov）を述べ、証明の骨格を与えよ。

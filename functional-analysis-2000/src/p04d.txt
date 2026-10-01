@@ -1,0 +1,123 @@
+=ch IV-7　非線形半群と非線形発展方程式
+
+*4 Kōmura の定理（Hilbert 空間の非線形半群） {komura}
+Hilbert 空間の極大単調作用素 $A$ について、$\frac{du}{dt}+Au\ni0$ は $\overline{D(A)}$ の各初期値に一意の弱解をもち、解写像は非線形縮小半群をなす（Kōmura 1967）。Yosida 近似 $A_{\lambda}$ の解の収束で証明せよ。
+
+*4 Brezis の劣微分の勾配流理論 {brezis}
+閉真凸関数 $\varphi$ について、$\frac{du}{dt}+\partial\varphi(u)\ni0$ の解は任意の初期値 $u_{0}\in\overline{D(\varphi)}$ で $t>0$ において強解となり（平滑化効果）、$\varphi(u(t))\le\varphi(v)+\frac{\|u_{0}-v\|^{2}}{2t}$。証明せよ。
+
+*4 非線形半群の指数公式（Crandall–Liggett）の誤差評価
+Crandall–Liggett の指数公式の誤差 $\|(I+\frac tnA)^{-n}x-S(t)x\|\le\frac{2t}{\sqrt n}|Ax|$ を示せ。
+
+*4 Bénilan の積分解と Banach 空間の発展方程式
+Banach 空間の m-増大作用素に対する Bénilan の積分解を定義し、Crandall–Liggett の半群の軌道が一意の積分解であることを述べよ。
+
+*4 多孔質媒質方程式の $L^{1}$ 縮小半群
+$u_{t}=\Delta(u^{m})$（$m>1$）の作用素 $Au=-\Delta(|u|^{m-1}u)$ が $L^{1}(\mathbb{R}^{n})$ 上で m-増大的であり（Brezis–Strauss）、Crandall–Liggett により $L^{1}$ 縮小半群が得られることを示せ。
+
+*4 Brezis–Strauss の定理
+$\beta$ が極大単調グラフで $0\in\beta(0)$ のとき、$-\Delta u+\beta(u)\ni f$ は任意の $f\in L^{1}(\mathbb{R}^{n})$（$n\ge3$）に一意解をもつ（Brezis–Strauss 1973）。$L^{1}$ 縮小性を示せ。
+
+*4 Kružkov のエントロピー解（スカラー保存則）
+スカラー保存則 $u_{t}+\operatorname{div}f(u)=0$ のエントロピー解が一意に存在し、解写像が $L^{1}$ 縮小半群をなす（Kružkov 1970）。変数二重化の方法で縮小性を証明せよ。
+
+*4 Crandall の $L^{1}$ 縮小とエントロピー解の半群
+スカラー保存則の作用素が $L^{1}$ で m-増大的（の閉包）であり、Crandall–Liggett の半群がエントロピー解に一致すること（Crandall 1972）を述べよ。
+
+*4 非線形 Trotter–Kato と Brezis–Pazy の近似定理
+非線形縮小半群の列の収束を、レゾルベントの収束で特徴づける Brezis–Pazy の定理を述べ、非線形 Chernoff の積公式を導け。
+
+*4 非線形半群の漸近挙動（Baillon の非線形エルゴード定理）
+Hilbert 空間の非線形縮小半群（不動点あり）の Cesàro 平均 $\frac1t\int_{0}^{t}S(s)xds$ は不動点に弱収束する（Baillon 1975）。証明の骨格を与えよ。
+
+*4 Bruck の定理（劣微分流の弱収束）
+閉真凸関数の劣微分流の軌道は（最小点が存在すれば）最小点に弱収束する（Bruck 1975）。Opial の補題で証明し、強収束しない例（Baillon 1978）を述べよ。
+
+*4 Lojasiewicz–Simon 不等式と勾配流の収束
+Hilbert 空間の解析的汎関数 $E$ の臨界点 $\bar u$ の近くで $|E(u)-E(\bar u)|^{1-\theta}\le C\|E'(u)\|$（Simon 1983）が成り立ち、勾配流の有界な軌道が一点に収束することを示せ。半線形熱方程式の解の収束に応用せよ。
+
+*4 半線形発展方程式の局所適切性（Segal, Kato）
+$\dot u=Au+F(u)$（$A$ は $C_{0}$ 半群の生成子、$F$ は局所 Lipschitz）の mild solution の局所存在・一意性・最大存在時間の爆発判定（有限時間で $\|u\|\to\infty$）を示せ。
+
+*4 Fujita の臨界指数
+$u_{t}=\Delta u+u^{p}$（$\mathbb{R}^{n}$、非負初期値）について、$1<p\le1+\frac2n$ ならすべての非自明解が有限時間で爆発し、$p>1+\frac2n$ なら小さい初期値に大域解が存在する（Fujita 1966）。証明の骨格を与えよ。
+
+*4 Kato の準線形発展方程式の理論
+準線形双曲型方程式 $\dot u+A(u)u=f(u)$ の局所適切性に対する Kato の理論（1975）の主要な仮定（$A(u)$ の安定性と同型写像 $S$ による交絡）を述べ、圧縮性 Euler 方程式・KdV への応用を述べよ。
+
+*4 抽象 Cauchy–Kowalevski の定理（Nirenberg–Nishida）
+Banach 空間のスケール $X_{s}$ 上の $\dot u=F(t,u)$（$\|F(u)-F(v)\|_{s'}\le\frac{C}{s-s'}\|u-v\|_{s}$）が、局所的に一意解をもつ（Ovsyannikov, Nirenberg 1972, Nishida 1977）。証明せよ。
+
+*4 Navier–Stokes 方程式の Fujita–Kato 理論
+三次元 Navier–Stokes 方程式が $H^{1/2}$（あるいは $L^{3}$, Kato 1984）の初期値で局所適切で、小さい初期値に大域解をもつ（Fujita–Kato 1964）。Stokes 半群の解析性と分数冪の評価を用いて証明の骨格を与えよ。
+
+*4 Leray の弱解の存在
+三次元 Navier–Stokes 方程式の任意の $L^{2}$ 初期値に対し、エネルギー不等式をみたす大域弱解が存在する（Leray 1934）。Galerkin 近似とコンパクト性（Aubin–Lions の補題）で証明せよ。
+
+*4 Aubin–Lions–Simon のコンパクト性補題
+Banach 空間 $X_{0}\Subset X\subset X_{1}$ について、$\{u\in L^{p}(0,T;X_{0}):\dot u\in L^{q}(0,T;X_{1})\}$ は $L^{p}(0,T;X)$ でコンパクトに埋め込まれる（Aubin 1963, Lions, Simon 1987）。証明せよ。
+
+*5 Buckmaster–Vicol の Navier–Stokes の弱解の非一意性
+三次元 Navier–Stokes 方程式の有限エネルギーの弱解（Leray 解より弱い意味）が一意でない（Buckmaster–Vicol 2019、凸積分）ことを述べ、Leray–Hopf 解の非一意性については Albritton–Brué–Colombo（2022、外力付き）の結果を述べよ。
+
+=ch IV-8　最大正則性と $H^{\infty}$ 関数計算
+
+*4 最大正則性の定義と必要条件 {maxreg}
+$\dot u=Au+f$, $u(0)=0$ について、$f\in L^{p}(0,T;X)$ に対し $\dot u,Au\in L^{p}(0,T;X)$ となる性質（最大 $L^{p}$ 正則性）を定義し、それが成り立てば $A$ は解析半群を生成することを示せ（Dore）。
+
+*4 de Simon の定理（Hilbert 空間の最大正則性）
+Hilbert 空間で、解析半群の生成子は最大 $L^{p}$ 正則性（$1<p<\infty$）をもつ（de Simon 1964）。Plancherel の定理（ベクトル値 Fourier 乗数）で証明せよ。
+
+*4 Kalton–Lancien の反例
+Hilbert 空間と同型でない任意の（無条件基底をもつ）Banach 空間には、最大正則性をもたない解析半群の生成子が存在する（Kalton–Lancien 2000）。主張を述べ、Hilbert 空間の特別性を論ぜよ。
+
+*4 Weis の定理（最大正則性の R-有界性による特徴づけ） {weis}
+UMD 空間 $X$ 上の解析半群の生成子 $A$ について、最大 $L^{p}$ 正則性 $\iff$ $\{\lambda(\lambda-A)^{-1}:\lambda\in i\mathbb{R}\setminus\{0\}\}$ が R-有界（Weis 2001）。作用素値 Mikhlin 乗数定理を用いて証明の骨格を与えよ。
+
+*4 R-有界性と Rademacher 平均
+作用素族 $\mathcal{T}$ の R-有界性 $E\|\sum\varepsilon_{j}T_{j}x_{j}\|\le CE\|\sum\varepsilon_{j}x_{j}\|$ を定義し、Hilbert 空間では有界性と一致し、$L^{p}$ では二乗関数評価 $\|(\sum|T_{j}x_{j}|^{2})^{1/2}\|\le C\|(\sum|x_{j}|^{2})^{1/2}\|$ と同値であることを示せ。
+
+*4 UMD 空間と Burkholder の定理 {umd}
+Banach 空間 $X$ がマルチンゲール差の無条件性（UMD）をもつ $\iff$ Hilbert 変換が $L^{p}(\mathbb{R};X)$ 上で有界（Burkholder 1983, Bourgain 1983）。Burkholder の $\zeta$-凸性による方向を証明せよ。
+
+*4 Burkholder の最良定数
+スカラー（あるいは Hilbert 空間値）マルチンゲール変換の $L^{p}$ 最良定数は $p^{*}-1$（$p^{*}=\max(p,p/(p-1))$）である（Burkholder 1984）。Burkholder 関数による証明を与えよ。
+
+*4 $H^{\infty}$ 関数計算（McIntosh） {hinf}
+扇形作用素 $A$ と、扇形 $S_{\theta}$ 上の有界正則関数 $f$ について $f(A)$ を定義し、$\|f(A)\|\le C\|f\|_{\infty}$（有界 $H^{\infty}$ 関数計算）が二乗関数評価 $\int_{0}^{\infty}\|\psi(tA)x\|^{2}\frac{dt}{t}\simeq\|x\|^{2}$ と同値である（Hilbert 空間、McIntosh 1986）ことを示せ。
+
+*4 Hilbert 空間の極大散逸作用素の $H^{\infty}$ 計算
+Hilbert 空間の極大散逸作用素は角 $\pi/2$ の有界 $H^{\infty}$ 関数計算をもつ。von Neumann の不等式から導け。
+
+*4 Le Merdy の定理（$H^{\infty}$ 計算と相似性）
+Hilbert 空間の扇形作用素 $A$ が有界 $H^{\infty}$ 関数計算をもつ $\iff$ $A$ が m-増大作用素（極大散逸の符号反転）に相似である（Le Merdy 1998）。主張を述べよ。
+
+*4 Kalton–Weis の定理（$H^{\infty}$ 計算と R-有界性）
+UMD 空間上で有界 $H^{\infty}$ 関数計算をもつ作用素は R-有界 $H^{\infty}$ 関数計算をもち、したがって最大正則性をもつ（Kalton–Weis 2001）。主張と証明の骨格を与えよ。
+
+*4 $L^{p}$ 上の楕円型作用素の $H^{\infty}$ 計算
+Gauss 熱核評価をもつ自己共役作用素は $L^{p}$（$1<p<\infty$）で有界 $H^{\infty}$ 関数計算をもつ（Duong–McIntosh 1999、特異積分論による）。主張を述べ、$p=1$ での弱型評価を説明せよ。
+
+*4 スペクトル乗数定理（Hörmander 型、Christ, Duong–Ouhabaz–Sikora）
+Gauss 熱核評価をもつ非負自己共役作用素 $L$ について、$\sup_{t}\|\eta F(t\cdot)\|_{W^{s,2}}<\infty$（$s>n/2$）なら $F(L)$ は $L^{p}$ 有界（$1<p<\infty$）である。主張と証明の骨格を与えよ。
+
+*4 Riesz 変換の $L^{p}$ 有界性（多様体）
+非負 Ricci 曲率の完備多様体上で Riesz 変換 $\nabla\Delta^{-1/2}$ は $L^{p}$（$1<p<\infty$）で有界である（Bakry 1987）。一方、体積倍増と Gauss 評価のみでは $p>2$ で失敗しうること（Coulhon–Duong、二つの Euclid 空間の連結和）を述べよ。
+
+*4 Coulhon–Duong の定理（Riesz 変換の $p<2$）
+体積倍増条件と Gauss 熱核上界をみたす多様体では Riesz 変換は $1<p\le2$ で $L^{p}$ 有界である（Coulhon–Duong 1999）。Calderón–Zygmund 分解の熱半群版で証明の骨格を与えよ。
+
+*4 最大正則性の非線形放物型方程式への応用（Prüss, Amann）
+準線形放物型方程式 $\dot u+A(u)u=f(u)$ の局所適切性を、最大正則性と縮小写像の原理で示す枠組み（Clément–Li, Prüss）を述べよ。
+
+*4 最大正則性と非自律問題（Lions の問題）
+時間依存形式 $a(t;u,v)$ に付随する非自律放物型問題で、$L^{2}$ 最大正則性が $t$ の可測性だけで成り立つか（J.-L. Lions の問題）。Fackler の反例（形式が指数 $<1/2$ の Hölder 連続性しかもたないと最大正則性が失敗しうる、2017）と、指数 $>1/2$ の Hölder 連続性の下での肯定的結果（Haak–Ouhabaz, Arendt–Dier–Laasri–Ouhabaz）を述べよ。
+
+*4 Littlewood–Paley–Stein 理論（対称拡散半群）
+対称拡散半群 $T_{t}$ について、二乗関数 $g(f)=(\int_{0}^{\infty}|t\partial_{t}T_{t}f|^{2}\frac{dt}{t})^{1/2}$ が $L^{p}$ ノルムと同値（$1<p<\infty$）であり（Stein 1970）、$T_{t}$ の $L^{p}$ 解析性と最大不等式が成り立つことを示せ。
+
+*5 Weis の作用素値 Mikhlin 乗数定理
+UMD 空間 $X,Y$ について、$m:\mathbb{R}\setminus\{0\}\to\mathcal{B}(X,Y)$ が $\{m(t)\},\{tm'(t)\}$ の R-有界性をみたせば、$T_{m}$ は $L^{p}(\mathbb{R};X)\to L^{p}(\mathbb{R};Y)$ で有界である（Weis 2001）。Littlewood–Paley 分解と Bourgain の UMD 空間の Littlewood–Paley 理論を用いて証明の骨格を与えよ。
+
+*5 McIntosh の $H^{\infty}$ 計算と二乗関数の同値性の完全証明
+Hilbert 空間の一対一扇形作用素 $A$ について、(i) 有界 $H^{\infty}(S_{\mu})$ 関数計算（ある $\mu>\omega$）、(ii) 二乗関数評価 $\int\|\psi(tA)x\|^{2}dt/t\le C\|x\|^{2}$ と $A^{*}$ についての同様の評価、(iii) $D(A^{\alpha})=[H,D(A)]_{\alpha}$ の同値性を完全に証明せよ（McIntosh 1986, Yagi）。
