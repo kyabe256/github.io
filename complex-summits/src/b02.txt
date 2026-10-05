@@ -1,0 +1,75 @@
+=ch 第 3 章　単葉関数 ― Koebe の 1/4 定理と Bieberbach の不等式
+
+*4 Gronwall の面積定理 {area}
+$g(z)=z+b_{0}+\sum_{n\ge1}b_{n}z^{-n}$ が $\{|z|>1\}$ で単射な有理型関数なら $\sum_{n\ge1}n|b_{n}|^{2}\le1$ であることを、$|z|=r>1$ の像曲線が囲む領域の面積を Green の定理で計算して証明せよ（Gronwall 1914）。
+
+*4 平方根変換
+$\mathcal{S}$ を $\mathbb{D}$ 上の単射正則関数で $f(0)=0$、$f'(0)=1$ をみたすものの全体とする。$f\in\mathcal{S}$ に対し $h(z)=\sqrt{f(z^{2})}$ が $\mathcal{S}$ に属する奇関数として定まることを証明せよ。
+
+*4 Koebe 関数
+$k(z)=\frac{z}{(1-z)^{2}}=\sum_{n\ge1}nz^{n}$ が $\mathcal{S}$ に属し、$\mathbb{D}$ を $\mathbb{C}\setminus(-\infty,-\frac{1}{4}]$ に全単射に写すことを証明せよ。
+
+*5 Bieberbach の不等式 $|a_{2}|\le2$ {bieb2}
+$f(z)=z+a_{2}z^{2}+\cdots\in\mathcal{S}$ について $|a_{2}|\le2$ を、平方根変換した関数の逆数 $1/h(1/z)$ に面積定理を適用して証明し、等号は Koebe 関数の回転 $e^{-i\theta}k(e^{i\theta}z)$ に限ることを示せ（Bieberbach 1916）。
+
+*4 Koebe 変換
+$f\in\mathcal{S}$ と $a\in\mathbb{D}$ に対し $F(z)=\frac{f\left(\frac{z+a}{1+\bar az}\right)-f(a)}{(1-|a|^{2})f'(a)}$ が $\mathcal{S}$ に属することを示し、その第 2 係数を計算して $\left|\frac{(1-|a|^{2})f''(a)}{f'(a)}-2\bar a\right|\le4$ を導け。
+
+*4 歪曲定理
+$f\in\mathcal{S}$ について $\frac{1-|z|}{(1+|z|)^{3}}\le|f'(z)|\le\frac{1+|z|}{(1-|z|)^{3}}$ を前問から証明せよ。等号の場合を決定せよ。
+
+*4 増大定理
+$f\in\mathcal{S}$ について $\frac{|z|}{(1+|z|)^{2}}\le|f(z)|\le\frac{|z|}{(1-|z|)^{2}}$ を歪曲定理から証明せよ。
+
+*4 族 $\mathcal{S}$ のコンパクト性
+$\mathcal{S}$ が広義一様収束の位相でコンパクト（任意の点列が $\mathcal{S}$ に属する極限に広義一様収束する部分列をもつ）であることを、増大定理と Montel・Hurwitz の定理で証明せよ。
+
+*4 Carathéodory の補題
+$p(z)=1+\sum_{n\ge1}c_{n}z^{n}$ が $\mathbb{D}$ で正則で $\mathrm{Re}\,p>0$ なら $|c_{n}|\le2$ であることを、Herglotz の表現（あるいは $\mathrm{Re}\,p$ の Fourier 係数の計算）で証明せよ。
+
+*5 星形関数の係数評価
+$f\in\mathcal{S}$ が星形（$f(\mathbb{D})$ が原点に関して星形）なら $\mathrm{Re}\,\frac{zf'(z)}{f(z)}>0$ であることを示し、Carathéodory の補題から $|a_{n}|\le n$ をすべての $n$ について証明せよ（Nevanlinna 1921）。
+
+*5 Koebe の 1/4 定理 {koebe}
+$f\in\mathcal{S}$ について $f(\mathbb{D})\supset\{|w|<\frac{1}{4}\}$ であることを、$w_{0}\notin f(\mathbb{D})$ なら $\frac{w_{0}f}{w_{0}-f}\in\mathcal{S}$ となることと {{R:bieb2}} を組み合わせて証明し、定数 $\frac{1}{4}$ が最良であることを示せ（Koebe 1907、Bieberbach 1916）。
+
+*5 境界までの距離の評価
+領域 $\Omega$ 上の単射正則関数 $F$ と $z\in\Omega$ について $\frac{1}{4}|F'(z)|\,d(z,\partial\Omega)\le d(F(z),\partial F(\Omega))\le4|F'(z)|\,d(z,\partial\Omega)$ を {{R:koebe}} から証明せよ。
+
+=ch 第 4 章　Picard の定理
+
+*4 Bloch の定理 {bloch}
+$f$ が閉単位円板の近傍で正則で $f'(0)=1$ なら、$f(\mathbb{D})$ はある絶対定数 $b>0$（$f$ によらない）を半径とする円板を含むことを証明せよ（Bloch 1925）。具体的な $b$ の値を一つ与えよ。
+
+*4 二値を除く整関数の変換
+整関数 $f$ が値 $0,1$ をとらなければ、整関数 $H$ で、$f$ が定数でなければ $H$ も定数でなく、かつ $H(\mathbb{C})$ が半径 $1$ の開円板を一つも含まないものが存在することを、$F=\frac{1}{2\pi i}\log f$、$\sqrt{F}-\sqrt{F-1}$ の対数をとる構成で証明せよ。
+
+*5 Picard の小定理 {little-picard}
+定数でない整関数は、高々一つの例外を除くすべての複素数値をとることを、前二問から証明せよ（Picard 1879）。
+
+*4 Schottky の定理
+$\mathbb{D}$ 上で正則で $0,1$ をとらず $|f(0)|\le\alpha$ をみたす $f$ について、$\alpha$ と $r<1$ のみに依存する定数 $C(\alpha,r)$ で $|z|\le r$ において $|f(z)|\le C(\alpha,r)$ となることを証明せよ（Schottky 1904）。
+
+*4 Montel の基本正規族定理
+領域上の正則関数族で、すべての元が二つの固定された値 $a\neq b$ をとらないものは正規族（任意の点列が広義一様収束するか、広義一様に $\infty$ に発散する部分列をもつ）であることを、Schottky の定理から証明せよ（Montel 1912）。
+
+*5 Picard の大定理 {big-picard}
+$f$ が $0<|z-a|<r$ で正則で $a$ が真性特異点なら、$a$ の任意の近傍で $f$ は高々一つの例外を除くすべての複素数値を無限回とることを、Montel の基本正規族定理を $f_{n}(z)=f(a+2^{-n}(z-a))$ に適用して証明せよ（Picard 1879）。
+
+*4 Zalcman の補題
+$\mathbb{D}$ 上の正則関数族 $\mathcal{F}$ が $z_{0}$ のどの近傍でも正規でないなら、$z_{n}\to z_{0}$、$\rho_{n}\to0^{+}$、$f_{n}\in\mathcal{F}$ で $f_{n}(z_{n}+\rho_{n}\zeta)$ が $\mathbb{C}$ 上の定数でない整関数に広義一様収束するものが存在することを、球面微分 $f^{\#}=\frac{|f'|}{1+|f|^{2}}$ を用いて証明せよ（Zalcman 1975）。
+
+*4 Zalcman の補題による正規族定理の別証明
+Zalcman の補題と Picard の小定理から、Montel の基本正規族定理を再証明せよ。
+
+*4 $\mathbb{C}$ 上の有理型関数への拡張
+$\mathbb{C}$ 上の有理型関数が三つの相異なる値をとらなければ定数であることを、Picard の小定理から証明せよ。$\tan z$ が二つの値を除くことを確かめよ。
+
+*4 指数和の恒等式
+整関数 $f,g$ が $e^{f}+e^{g}=1$ をみたせば $f,g$ は定数であることを証明せよ。
+
+*5 不動点をもたない反復
+整関数 $f$ について $f\circ f$ が不動点をもたなければ $f(z)=z+c$（$c\neq0$）であることを、$\frac{f(f(z))-z}{f(z)-z}$ に Picard の小定理を適用して証明せよ。
+
+*5 超越整関数の値分布
+多項式でない整関数は、高々一つの例外を除くすべての値を無限回とることを、{{R:big-picard}} を $f(1/z)$ に適用して証明せよ。$e^{z}$ と $\sin z$ の例外値を決定せよ。

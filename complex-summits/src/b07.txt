@@ -1,0 +1,78 @@
+=ch 第 13 章　Phragmén–Lindelöf の原理の帰結 ― Riesz–Thorin・Carlson・Müntz
+
+*4 Hadamard の三線定理 {three-lines}
+帯 $\{0\le\mathrm{Re}\,z\le1\}$ で有界連続、内部で正則な $f$ について、$M(x)=\sup_{y}|f(x+iy)|$ とおくと $M(x)\le M(0)^{1-x}M(1)^{x}$ であることを証明せよ。
+
+*4 Hadamard の三円定理
+$f$ が円環 $\{r_{1}<|z|<r_{2}\}$ で正則なら、$M(r)=\max_{|z|=r}|f|$ について $\log M(r)$ は $\log r$ の凸関数であることを証明せよ。
+
+*5 Riesz–Thorin の補間定理 {riesz-thorin}
+$1\le p_{0},p_{1},q_{0},q_{1}\le\infty$、線形作用素 $T$ が $L^{p_{j}}\to L^{q_{j}}$ でノルム $M_{j}$ の有界作用素（$j=0,1$、単関数上で定義）なら、$\frac{1}{p_{\theta}}=\frac{1-\theta}{p_{0}}+\frac{\theta}{p_{1}}$、$\frac{1}{q_{\theta}}=\frac{1-\theta}{q_{0}}+\frac{\theta}{q_{1}}$ について $\|T\|_{L^{p_{\theta}}\to L^{q_{\theta}}}\le M_{0}^{1-\theta}M_{1}^{\theta}$ であることを、三線定理を用いて証明せよ（Riesz 1926、Thorin 1939）。測度論の基礎は既知としてよい。
+
+*4 Hausdorff–Young の不等式
+$1\le p\le2$、$\frac{1}{p}+\frac{1}{p'}=1$ について、$f\in L^{p}(\mathbb{T})$ の Fourier 係数が $\|(\hat f(n))\|_{\ell^{p'}}\le\|f\|_{L^{p}}$ をみたすことを Riesz–Thorin の定理で証明せよ。
+
+*4 Young の畳み込み不等式
+$1+\frac{1}{r}=\frac{1}{p}+\frac{1}{q}$（$1\le p,q,r\le\infty$）について $\|f*g\|_{r}\le\|f\|_{p}\|g\|_{q}$ を、Riesz–Thorin の定理を二回適用して証明せよ。
+
+*5 Lindelöf の定理
+$f$ が $\mathbb{D}$ で有界正則で、$\mathbb{D}$ 内の曲線に沿って境界点 $\zeta$ に近づくとき $f\to L$ なら、$f$ は $\zeta$ で非接的極限 $L$ をもつ（$\zeta$ を頂点とする任意の Stolz 角内から近づくとき $f\to L$）ことを証明せよ（Lindelöf 1915）。
+
+*4 右半平面の Phragmén–Lindelöf の原理
+$F$ が閉右半平面で連続、開右半平面で正則で、$|F(z)|\le Ce^{\tau|z|}$、虚軸上で $|F(iy)|\le Ce^{c|y|}$ なら、$\mathrm{Re}\,z\ge0$ で $|F(x+iy)|\le C'e^{\tau x+c|y|}$ 型の評価が成り立つことを証明せよ。
+
+*5 Carlson の定理 {carlson}
+$F$ が閉右半平面で連続、開右半平面で正則で、$|F(z)|\le Ce^{\tau|z|}$（ある $\tau$）、虚軸上で $|F(iy)|\le Ce^{c|y|}$（$c<\pi$）、かつ $F(n)=0$（$n=0,1,2,\dots$）なら $F\equiv0$ であることを証明せよ（Carlson 1914）。
+
+*4 Carlson の定理の最良性と応用
+$\sin\pi z$ が $c=\pi$ で Carlson の定理の仮定を（$c<\pi$ 以外）みたすことを示して条件の最良性を確かめよ。Carlson の定理から、適当な増大条件のもとで $n!$ を補間する関数が $\Gamma(z+1)$ に限ることを論ぜよ。
+
+*4 半平面の Blaschke 条件
+右半平面で有界な正則関数 $F\not\equiv0$ の零点 $a_{n}$ について $\sum_{n}\frac{\mathrm{Re}\,a_{n}}{1+|a_{n}|^{2}}<\infty$ を、一次分数変換で円板に移して証明せよ。
+
+*4 Müntz の補助関数
+$0<\lambda_{1}<\lambda_{2}<\cdots\to\infty$、$\sum\frac{1}{\lambda_{n}}<\infty$ なら、$B(z)=\frac{z}{(z+2)^{3}}\prod_{n}\frac{\lambda_{n}-z}{\lambda_{n}+2+z}$ が $\mathrm{Re}\,z>-1$ で有界な正則関数に収束し、$z=\lambda_{n}$ と $z=0$ で零点をもつことを証明せよ。
+
+*5 Müntz–Szász の定理 {muntz}
+$0<\lambda_{1}<\lambda_{2}<\cdots\to\infty$ について、$\{1,x^{\lambda_{1}},x^{\lambda_{2}},\dots\}$ の一次結合全体が $C[0,1]$ で一様稠密 $\iff\sum_{n}\frac{1}{\lambda_{n}}=\infty$ を、Hahn–Banach の定理と Riesz の表現定理（既知としてよい）により、測度 $\mu$ に対する $\int_{0}^{1}t^{z}d\mu(t)$ の零点の問題に帰着して証明せよ（Müntz 1914、Szász 1916）。
+
+=part 第 IV 部　数論の大定理 | THE GREAT THEOREMS OF NUMBER THEORY &mdash; 157 to 216
+素数は整数の世界の対象なのに、その分布を支配するのは複素平面上の関数である。Riemann のゼータ関数の関数等式、平方剰余の相互法則、分割数の漸近公式、Dirichlet の算術級数定理、そして最終目標の素数定理 ― 本書の 216 題は、ここで素数の分布という一つの山頂に集まる。
+
+=ch 第 14 章　Riemann のゼータ関数 ― 関数等式と零点の個数
+
+*4 Euler 積
+$\mathrm{Re}\,s>1$ で $\zeta(s)=\sum n^{-s}=\prod_{p}(1-p^{-s})^{-1}$ を証明し、$\mathrm{Re}\,s>1$ で $\zeta(s)\neq0$ であることを示せ。$\sum_{p}\frac{1}{p}=\infty$ を導け。
+
+*4 臨界帯への延長
+$\zeta(s)=\frac{s}{s-1}-s\int_{1}^{\infty}\frac{\{x\}}{x^{s+1}}dx$（$\{x\}$ は小数部分）を示し、$\zeta(s)-\frac{1}{s-1}$ が $\mathrm{Re}\,s>0$ で正則であることを証明せよ。$\frac{1}{2}\le\sigma\le2$、$|t|\ge1$ で $|\zeta(\sigma+it)|\le C|t|$ を導け。
+
+*4 テータ関数による Mellin 表示
+$\omega(t)=\sum_{n\ge1}e^{-\pi n^{2}t}$ とすると、$\mathrm{Re}\,s>1$ で $\pi^{-s/2}\Gamma(s/2)\zeta(s)=\int_{0}^{\infty}\omega(t)t^{s/2-1}dt$ であることを証明せよ。
+
+*5 Riemann の関数等式 {fe}
+$\Lambda(s)=\pi^{-s/2}\Gamma(s/2)\zeta(s)$ が $\mathbb{C}$ 上の有理型関数に延長され、極は $s=0,1$ の単純極のみで、$\Lambda(s)=\Lambda(1-s)$ をみたすことを、テータ関数の変換公式（大問 {{R:theta}}）を用いて証明せよ（Riemann 1859）。系として $\zeta$ が $s=1$ にのみ留数 1 の単純極をもつ有理型関数であることを導け。
+
+*4 自明な零点と $\zeta(0)$
+$\zeta$ の $\mathrm{Re}\,s<0$ における零点がちょうど $s=-2,-4,-6,\dots$（単純零点）であることを関数等式から示し、$\zeta(0)=-\frac{1}{2}$ を証明せよ。
+
+*4 負の整数での値
+Hankel 型の積分表示 $\zeta(s)=\frac{\Gamma(1-s)}{2\pi i}\int_{H}\frac{(-t)^{s-1}}{e^{t}-1}dt$ を示し、$\zeta(1-n)=-\frac{B_{n}}{n}$（$n\ge2$）を証明せよ。$\zeta(-1)=-\frac{1}{12}$ を確かめよ。
+
+*4 直線 $\mathrm{Re}\,s=1$ 上の非零性 {zeta-nonzero}
+$\sigma>1$ について $|\zeta(\sigma)^{3}\zeta(\sigma+it)^{4}\zeta(\sigma+2it)|\ge1$ を $3+4\cos\theta+\cos2\theta\ge0$ から示し、$t\neq0$ について $\zeta(1+it)\neq0$ を証明せよ（Hadamard 1896、de la Vallée Poussin 1896）。
+
+*4 $\xi$ 関数の位数
+$\xi(s)=\frac{1}{2}s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s)$ が位数 1 の整関数で $\xi(s)=\xi(1-s)$、$\xi(\bar s)=\overline{\xi(s)}$ をみたすことを、Stirling の公式（大問 {{R:stirling}}）を用いて証明せよ。
+
+*4 非自明な零点の存在
+$\xi$ の零点がちょうど $\zeta$ の非自明な零点（$0\le\mathrm{Re}\,s\le1$ 内の零点）であり、それが無限個あって $\sum_{\rho}\frac{1}{|\rho|}=\infty$、$\sum_{\rho}\frac{1}{|\rho|^{1+\varepsilon}}<\infty$ をみたすことを、Hadamard の因数分解定理（大問 {{R:hadamard}}）から証明せよ。
+
+*4 対数微分の部分分数展開
+$\frac{\zeta'(s)}{\zeta(s)}=B-\frac{1}{s-1}+\frac{1}{2}\log\pi-\frac{1}{2}\frac{\Gamma'}{\Gamma}\left(\frac{s}{2}+1\right)+\sum_{\rho}\left(\frac{1}{s-\rho}+\frac{1}{\rho}\right)$（$B$ は定数）を $\xi$ の Hadamard 積から証明せよ。
+
+*4 零点の局所的な個数
+$T\ge2$ について、$|\mathrm{Im}\,\rho-T|\le1$ をみたす非自明な零点の個数が $O(\log T)$ であることを、前問を $s=2+iT$ で用いて証明せよ。
+
+*5 Riemann–von Mangoldt の公式 {rvm}
+$0<\mathrm{Im}\,\rho\le T$ をみたす非自明な零点の個数 $N(T)$ について $N(T)=\frac{T}{2\pi}\log\frac{T}{2\pi}-\frac{T}{2\pi}+O(\log T)$ を、長方形の周上での $\xi'/\xi$ の積分と Stirling の公式、前問を用いて証明せよ（Riemann 1859、von Mangoldt 1905）。

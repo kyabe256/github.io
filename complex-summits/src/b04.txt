@@ -1,0 +1,75 @@
+=ch 第 7 章　Gamma 関数の全貌 ― Stirling の公式まで
+
+*4 Gamma 関数の解析接続
+$\Gamma(s)=\int_{0}^{\infty}t^{s-1}e^{-t}dt$ が $\mathrm{Re}\,s>0$ で正則で $\Gamma(s+1)=s\Gamma(s)$ をみたし、$\mathbb{C}$ 上の有理型関数に延長されて、極は $s=-n$（$n=0,1,2,\dots$）の単純極で留数が $\frac{(-1)^{n}}{n!}$ であることを証明せよ。
+
+*4 Gauss の極限公式
+$\Gamma(s)=\lim_{n\to\infty}\frac{n!\,n^{s}}{s(s+1)\cdots(s+n)}$ を、まず $\mathrm{Re}\,s>0$ で $\int_{0}^{n}t^{s-1}(1-t/n)^{n}dt$ を計算して示し、次に解析接続により極以外のすべての $s$ で証明せよ。
+
+*4 Weierstrass の積表示 {gamma-prod}
+$\frac{1}{\Gamma(s)}=se^{\gamma s}\prod_{n\ge1}\left(1+\frac{s}{n}\right)e^{-s/n}$（$\gamma$ は Euler 定数）を示し、$\frac{1}{\Gamma}$ が位数 1 の整関数で $\Gamma$ が零点をもたないことを証明せよ。
+
+*4 相補公式 {reflection}
+$\Gamma(s)\Gamma(1-s)=\frac{\pi}{\sin\pi s}$ を、積表示と正弦関数の積表示から証明せよ。$\Gamma(\frac{1}{2})=\sqrt\pi$ を導け。
+
+*4 Legendre の倍数公式
+$\Gamma(s)\Gamma\left(s+\frac{1}{2}\right)=2^{1-2s}\sqrt\pi\,\Gamma(2s)$ を、Gauss の極限公式（あるいは Beta 関数）を用いて証明せよ。
+
+*5 Bohr–Mollerup の定理
+$(0,\infty)$ 上の正値関数 $F$ が $F(1)=1$、$F(x+1)=xF(x)$、$\log F$ が凸をみたすなら $F=\Gamma$ であることを証明せよ（Bohr–Mollerup 1922）。これを用いて倍数公式を再証明せよ。
+
+*4 Beta 関数
+$\mathrm{Re}\,a,\mathrm{Re}\,b>0$ について $B(a,b)=\int_{0}^{1}t^{a-1}(1-t)^{b-1}dt=\frac{\Gamma(a)\Gamma(b)}{\Gamma(a+b)}$ を、二重積分の変数変換で証明せよ。$\int_{0}^{\infty}\frac{x^{a-1}}{1+x}dx=B(a,1-a)$ を示し、相補公式との関係を述べよ。
+
+*4 Hankel の積分表示
+負の実軸を囲む Hankel の積分路 $H$ について $\frac{1}{\Gamma(s)}=\frac{1}{2\pi i}\int_{H}e^{t}t^{-s}dt$ がすべての $s\in\mathbb{C}$ で成り立つことを証明し、この表示から $\frac{1}{\Gamma}$ が整関数であることを再証明せよ。
+
+*4 ディガンマ関数
+$\psi=\frac{\Gamma'}{\Gamma}$ について $\psi(s)=-\gamma+\sum_{n\ge0}\left(\frac{1}{n+1}-\frac{1}{n+s}\right)$ を示し、$\psi(1)=-\gamma$、$\psi(\frac{1}{2})=-\gamma-2\log2$、$\psi(s+1)=\psi(s)+\frac{1}{s}$ を証明せよ。
+
+*4 Gauss の乗法公式
+正の整数 $n$ について $\prod_{k=0}^{n-1}\Gamma\left(s+\frac{k}{n}\right)=(2\pi)^{\frac{n-1}{2}}n^{\frac{1}{2}-ns}\Gamma(ns)$ を証明せよ。
+
+*4 $n$ 次元球の体積
+$\mathbb{R}^{n}$ の単位球の体積が $\frac{\pi^{n/2}}{\Gamma(\frac{n}{2}+1)}$ であることを、$\int_{\mathbb{R}^{n}}e^{-|x|^{2}}dx$ を二通りに計算して証明し、$n\to\infty$ で $0$ に近づくことを示せ。
+
+*5 Stirling の公式（複素版） {stirling}
+任意の $\delta>0$ について、扇形 $|\arg s|\le\pi-\delta$ で一様に $\log\Gamma(s)=\left(s-\frac{1}{2}\right)\log s-s+\frac{1}{2}\log2\pi+O\left(\frac{1}{|s|}\right)$（$|s|\to\infty$、対数は主値）を、Binet の積分表示または Euler–Maclaurin の和公式を用いて証明せよ。系として、$\sigma$ を固定すると $|\Gamma(\sigma+it)|\sim\sqrt{2\pi}\,|t|^{\sigma-\frac{1}{2}}e^{-\pi|t|/2}$（$|t|\to\infty$）を導け。
+
+=ch 第 8 章　楕円関数 ― 三次曲線の群構造まで
+
+*4 Liouville の第一・第二定理
+格子 $\Lambda=\mathbb{Z}\omega_{1}+\mathbb{Z}\omega_{2}$（$\omega_{2}/\omega_{1}\notin\mathbb{R}$）について、正則な楕円関数（$\Lambda$ の各元を周期とする有理型関数）は定数であること、基本平行四辺形内の留数の和が $0$ であること、したがって単純極を一つだけもつ楕円関数が存在しないことを証明せよ。
+
+*4 楕円関数の位数
+定数でない楕円関数 $f$ は、基本平行四辺形内で（重複度込みで）すべての値を同じ回数（$f$ の位数）だけとることを、偏角の原理で証明せよ。
+
+*4 Abel の関係式
+楕円関数の基本平行四辺形内の零点を $a_{i}$、極を $b_{i}$（重複度込み）とすると $\sum a_{i}-\sum b_{i}\in\Lambda$ であることを、$\frac{1}{2\pi i}\int\frac{zf'(z)}{f(z)}dz$ を平行四辺形の周上で計算して証明せよ。
+
+*4 Eisenstein 級数の収束
+$G_{k}(\Lambda)=\sum_{\omega\in\Lambda\setminus\{0\}}\omega^{-k}$ が $k>2$ で絶対収束し、$\sum'|\omega|^{-2}$ が発散することを証明せよ。奇数 $k$ について $G_{k}=0$ を示せ。
+
+*4 Weierstrass の $\wp$ 関数
+$\wp(z)=\frac{1}{z^{2}}+\sum_{\omega\neq0}\left(\frac{1}{(z-\omega)^{2}}-\frac{1}{\omega^{2}}\right)$ が $\Lambda$ の各点に 2 位の極をもつ偶関数の楕円関数であることを、まず $\wp'$ の周期性を示し、次に積分定数を偶関数性で消して証明せよ。
+
+*4 $\wp$ の微分方程式
+$\wp(z)=z^{-2}+3G_{4}z^{2}+5G_{6}z^{4}+O(z^{6})$ を示し、$\wp'(z)^{2}=4\wp(z)^{3}-g_{2}\wp(z)-g_{3}$（$g_{2}=60G_{4}$、$g_{3}=140G_{6}$）を Liouville の定理で証明せよ。
+
+*4 三つの半周期の値
+$e_{1}=\wp(\frac{\omega_{1}}{2})$、$e_{2}=\wp(\frac{\omega_{2}}{2})$、$e_{3}=\wp(\frac{\omega_{1}+\omega_{2}}{2})$ が $4x^{3}-g_{2}x-g_{3}$ の相異なる三根であることを示し、判別式 $g_{2}^{3}-27g_{3}^{2}\neq0$ を証明せよ。
+
+*4 楕円関数体の構造
+$\Lambda$ に関する楕円関数全体は $\mathbb{C}(\wp,\wp')$ に等しく、偶関数の楕円関数全体は $\mathbb{C}(\wp)$ に等しいことを証明せよ。
+
+*4 $\wp$ の加法定理
+$z,w,z+w\notin\Lambda$、$\wp(z)\neq\wp(w)$ について $\wp(z+w)=\frac{1}{4}\left(\frac{\wp'(z)-\wp'(w)}{\wp(z)-\wp(w)}\right)^{2}-\wp(z)-\wp(w)$ を証明せよ。
+
+*4 Weierstrass の $\sigma$ 関数と Legendre の関係式
+$\sigma(z)=z\prod_{\omega\neq0}\left(1-\frac{z}{\omega}\right)e^{\frac{z}{\omega}+\frac{z^{2}}{2\omega^{2}}}$ が $\Lambda$ をちょうど単純零点とする整関数で $-(\log\sigma)''=\wp$ であることを示し、$\zeta=\sigma'/\sigma$ の擬周期 $\zeta(z+\omega_{i})=\zeta(z)+\eta_{i}$ について Legendre の関係式 $\eta_{1}\omega_{2}-\eta_{2}\omega_{1}=2\pi i$（$\mathrm{Im}(\omega_{2}/\omega_{1})>0$）を証明せよ。
+
+*5 複素トーラスと三次曲線
+$z\mapsto[\wp(z):\wp'(z):1]$（$z\notin\Lambda$）、$0\mapsto[0:1:0]$ が、$\mathbb{C}/\Lambda$ から射影三次曲線 $E:y^{2}=4x^{3}-g_{2}x-g_{3}$ への全単射であり、各点の近傍で正則な座標変換を与えることを証明せよ。
+
+*5 三次曲線の群構造
+前問の対応のもとで、$\mathbb{C}/\Lambda$ の三点 $z_{1},z_{2},z_{3}$ について $z_{1}+z_{2}+z_{3}\in\Lambda\iff$ 対応する $E$ 上の三点が（重複度込みで）一直線上にあることを、Abel の関係式を一次式 $ax+by+c$ に適用して証明せよ。これにより $E$ 上の「直線で定める加法」が可換群の公理をみたすことを導け。

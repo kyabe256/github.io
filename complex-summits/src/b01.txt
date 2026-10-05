@@ -1,0 +1,78 @@
+=part 第 I 部　位相と等角写像の大定理 | TOPOLOGY AND CONFORMAL MAPS &mdash; 1 to 48
+回転数という一つの整数から、平面の位相の大定理（Brouwer、Borsuk–Ulam、ハムサンドイッチ）が出る。正規族という一つのコンパクト性から、Riemann の写像定理、Koebe の 1/4 定理、Picard の大定理が出る。授業で習った Cauchy の定理と最大値原理が、ここで初めて本当の威力を見せる。
+
+=ch 第 1 章　回転数と平面の位相 ― Brouwer・Borsuk–Ulam・ハムサンドイッチ
+
+*4 連続写像の写像度 {deg}
+連続写像 $f:S^{1}\to\mathbb{C}\setminus\{0\}$ に対し、連続関数 $\theta:[0,2\pi]\to\mathbb{R}$ で $f(e^{it})=|f(e^{it})|e^{i\theta(t)}$ となるものが存在し、$\deg f=\frac{\theta(2\pi)-\theta(0)}{2\pi}$ が $\theta$ の選び方によらない整数であることを証明せよ。$f$ が区分的 $C^{1}$ なら $\deg f=\frac{1}{2\pi i}\int_{f}\frac{dw}{w}$ を示せ。
+
+*4 ホモトピー不変性と「犬の散歩」の補題
+$S^{1}$ から $\mathbb{C}\setminus\{0\}$ への二つの写像が $\mathbb{C}\setminus\{0\}$ 内でホモトピックなら写像度が等しいことを示し、$S^{1}$ 上で $|f-g|<|f|$ なら $\deg f=\deg g$ であることを証明せよ。
+
+*4 写像度の乗法性
+$\deg(fg)=\deg f+\deg g$、$\deg(z^{n})=n$、$\deg\bar f=-\deg f$ を証明せよ。
+
+*4 円板に延びる写像の写像度
+$f:S^{1}\to\mathbb{C}\setminus\{0\}$ が閉円板 $\overline{\mathbb{D}}$ 上の零点をもたない連続写像に延長できるなら $\deg f=0$ であることを証明せよ。
+
+*4 代数学の基本定理（位相的証明）
+次数 $n\ge1$ の多項式 $p$ について、十分大きな $R$ で $t\mapsto p(Re^{it})$ の写像度が $n$ であることを示し、大問 {{R:deg}} 以降の結果だけを用いて $p$ が零点をもつことを証明せよ（複素微分は使わない）。
+
+*4 円板は円周にレトラクトしない
+連続写像 $r:\overline{\mathbb{D}}\to S^{1}$ で $r|_{S^{1}}=\mathrm{id}$ となるものは存在しないことを証明せよ。
+
+*5 Brouwer の不動点定理（2 次元）
+閉円板 $\overline{\mathbb{D}}$ から自分自身への任意の連続写像は不動点をもつことを証明せよ。閉円板と同相な任意のコンパクト集合（例えば三角形）についても成り立つことを示せ。
+
+*4 正値行列の Perron の定理（3 次）
+成分がすべて正の $3\times3$ 実行列 $A$ は、成分がすべて正の固有ベクトルをもち、その固有値が正であることを、標準単体上の写像 $x\mapsto Ax/\sum_{i}(Ax)_{i}$ に Brouwer の不動点定理を適用して証明せよ。
+
+*4 奇写像の写像度は奇数
+連続写像 $f:S^{1}\to S^{1}$ が $f(-z)=-f(z)$ をみたすなら $\deg f$ は奇数であることを証明せよ。
+
+*5 Borsuk–Ulam の定理（2 次元）
+任意の連続写像 $F:S^{2}\to\mathbb{R}^{2}$ について $F(x)=F(-x)$ となる $x\in S^{2}$ が存在することを証明せよ。系として「地球上には気温と気圧が等しい対蹠点の組が存在する」を述べよ。
+
+*4 Lusternik–Schnirelmann の定理
+球面 $S^{2}$ を三つの閉集合で覆うと、そのうちの一つは対蹠点の組を含むことを Borsuk–Ulam の定理から証明せよ。
+
+*5 ハムサンドイッチ定理
+$\mathbb{R}^{3}$ の三つの有界な Lebesgue 可測集合に対し、三つすべての体積をそれぞれ二等分する平面が存在することを、Borsuk–Ulam の定理を用いて証明せよ。
+
+=ch 第 2 章　Riemann の写像定理
+
+*4 Arzelà–Ascoli の定理
+開集合 $U\subset\mathbb{C}$ 上の連続関数族 $\mathcal{F}$ が各コンパクト集合上で一様有界かつ同程度連続なら、$\mathcal{F}$ の任意の点列は $U$ 上で広義一様収束する部分列をもつことを、対角線論法で証明せよ。
+
+*4 Montel の定理 {montel}
+開集合上の正則関数族が広義一様有界なら、その任意の点列は広義一様収束する部分列をもつことを、Cauchy の評価式による同程度連続性から証明せよ。
+
+*4 Hurwitz の定理と単射性の保存 {hurwitz-inj}
+領域上の単射な正則関数の列が広義一様収束するなら、極限は単射であるか定数であることを、偏角の原理を用いて証明せよ。
+
+*4 Schwarz の補題と円板の自己同型
+正則な $f:\mathbb{D}\to\mathbb{D}$ が $f(0)=0$ をみたせば $|f'(0)|\le1$ で、等号は回転に限ることを示し、$\mathbb{D}$ の正則な自己同型が $e^{i\theta}\frac{z-a}{1-\bar az}$ に限ることを証明せよ。
+
+*4 Cauchy の定理（ホモロジー形）
+開集合 $U$ 内の閉曲線 $\gamma$ がすべての $a\notin U$ について $n(\gamma,a)=0$ をみたすなら、$U$ 上の任意の正則関数 $f$ について $\int_{\gamma}f\,dz=0$ であることを、Dixon の方法（差分商 $\frac{f(z)-f(w)}{z-w}$ と Liouville の定理）で証明せよ。
+
+*4 単連結領域上の平方根 {sqrt-sc}
+領域 $\Omega$ が単連結（任意の閉曲線 $\gamma\subset\Omega$ と $a\notin\Omega$ について $n(\gamma,a)=0$）なら、$\Omega$ 上で零点をもたない正則関数 $f$ は正則な対数と平方根をもつことを証明せよ。
+
+*4 Koebe の平方根のトリック
+単連結領域 $\Omega\neq\mathbb{C}$ と $a\in\Omega$ に対し、単射な正則関数 $f:\Omega\to\mathbb{D}$ で $f(a)=0$ となるものが存在することを、$b\notin\Omega$ について $\sqrt{z-b}$ を用いて証明せよ。
+
+*4 極値問題の解の存在
+前問の関数の族 $\mathcal{F}=\{f:\Omega\to\mathbb{D}\ \text{単射正則},\ f(a)=0\}$ について、$\sup_{f\in\mathcal{F}}|f'(a)|$ が有限で、ある $f_{0}\in\mathcal{F}$ で達成されることを、Montel と Hurwitz の定理で証明せよ。
+
+*5 極値関数の全射性
+前問の $f_{0}$ が $\Omega$ から $\mathbb{D}$ への全射であることを、もし $w_{0}\in\mathbb{D}\setminus f_{0}(\Omega)$ があれば、円板の自己同型と平方根を組み合わせて $|g'(a)|>|f_{0}'(a)|$ となる $g\in\mathcal{F}$ が作れることを示して証明せよ。
+
+*4 写像の一意性
+単連結領域 $\Omega\neq\mathbb{C}$ から $\mathbb{D}$ への正則な全単射で、$f(a)=0$、$f'(a)>0$ をみたすものは高々一つであることを Schwarz の補題で証明せよ。
+
+*5 Riemann の写像定理 {rmt}
+$\mathbb{C}$ と異なる単連結領域 $\Omega$ と $a\in\Omega$ に対し、$f(a)=0$、$f'(a)>0$ をみたす $\Omega$ から単位円板 $\mathbb{D}$ への正則な全単射がちょうど一つ存在することを、本章の結果をまとめて証明せよ（Riemann 1851、Koebe・Carathéodory による証明）。
+
+*4 単連結領域の分類
+大問 {{R:rmt}} を用いて、$\mathbb{C}$ の単連結領域は $\mathbb{C}$ か $\mathbb{D}$ に正則同型（双正則）であり、したがって任意の単連結領域は円板に同相であることを示せ。$\mathbb{C}$ と $\mathbb{D}$ が正則同型でないことを証明せよ。

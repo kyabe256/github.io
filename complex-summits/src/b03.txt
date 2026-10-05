@@ -1,0 +1,78 @@
+=part 第 II 部　関数の構造の大定理 | THE STRUCTURE OF FUNCTIONS &mdash; 49 to 108
+多項式が零点で決まるように、整関数も零点（と増大度）でほぼ決まる。Weierstrass と Mittag-Leffler の定理、Hadamard の因数分解、Gamma 関数、二重周期をもつ楕円関数、そしてテータ関数の変換公式から、Jacobi の四平方定理という数論の宝石までを一気に登る。
+
+=ch 第 5 章　Weierstrass の因数分解定理と Mittag-Leffler の定理
+
+*4 無限積の収束
+$\sum|a_{n}|<\infty$ なら $\prod(1+a_{n})$ は収束し、その値が $0$ となるのはある因子が $0$ のときに限ることを示せ。開集合上の正則関数 $f_{n}$ について $\sum|f_{n}|$ が広義一様収束すれば $\prod(1+f_{n})$ は正則関数に広義一様収束し、その零点が各因子の零点の和集合（重複度込み）であることを証明せよ。
+
+*4 Weierstrass の基本因子
+$E_{0}(z)=1-z$、$E_{p}(z)=(1-z)\exp\left(z+\frac{z^{2}}{2}+\cdots+\frac{z^{p}}{p}\right)$ について、$|z|\le1$ で $|1-E_{p}(z)|\le|z|^{p+1}$ を証明せよ。
+
+*5 Weierstrass の因数分解定理 {wf}
+$0$ でない複素数の列 $a_{n}$ が $|a_{n}|\to\infty$ をみたすなら、$\prod_{n}E_{n}(z/a_{n})$ は $\{a_{n}\}$ をちょうど零点（重複度は出現回数）とする整関数であることを示し、任意の整関数が $f(z)=z^{m}e^{g(z)}\prod_{n}E_{n}(z/a_{n})$（$g$ は整関数）と表されることを証明せよ（Weierstrass 1876）。
+
+*4 有理型関数は整関数の商
+$\mathbb{C}$ 上の任意の有理型関数は二つの整関数の商として表されることを証明せよ。
+
+*5 Mittag-Leffler の定理 {mittag}
+集積点をもたない点列 $b_{n}\in\mathbb{C}$ と、各 $b_{n}$ における任意の主要部（$(z-b_{n})^{-1}$ の多項式で定数項なし）$P_{n}$ が与えられたとき、主要部がちょうど $P_{n}$ である $\mathbb{C}$ 上の有理型関数が存在することを、$P_{n}$ から適当な Taylor 多項式を引いて収束させることで証明せよ（Mittag-Leffler 1877）。
+
+*4 $\pi^{2}/\sin^{2}\pi z$ の部分分数展開
+$\frac{\pi^{2}}{\sin^{2}\pi z}=\sum_{n\in\mathbb{Z}}\frac{1}{(z-n)^{2}}$ を、両辺の差が有界な整関数であることを示して証明せよ。
+
+*4 正弦関数の積表示
+前問を二回積分して $\pi\cot\pi z=\frac{1}{z}+\sum_{n\ge1}\frac{2z}{z^{2}-n^{2}}$ を示し、$\sin\pi z=\pi z\prod_{n\ge1}\left(1-\frac{z^{2}}{n^{2}}\right)$ を {{R:wf}} の $e^{g}$ を決定することで証明せよ。
+
+*4 Blaschke 積
+$a_{n}\in\mathbb{D}\setminus\{0\}$ が $\sum(1-|a_{n}|)<\infty$ をみたせば、$B(z)=\prod_{n}\frac{|a_{n}|}{a_{n}}\frac{a_{n}-z}{1-\bar a_{n}z}$ は $\mathbb{D}$ 上の有界正則関数で $|B|<1$、零点がちょうど $\{a_{n}\}$ であることを証明せよ。逆に $\mathbb{D}$ 上の有界正則関数の零点は $\sum(1-|a_{n}|)<\infty$ をみたすことも証明せよ。
+
+*4 整関数による補間
+集積点をもたない相異なる点列 $a_{n}$ と任意の複素数列 $w_{n}$ に対し、$f(a_{n})=w_{n}$ をみたす整関数 $f$ が存在することを、{{R:wf}} と {{R:mittag}} を組み合わせて証明せよ。
+
+*5 Bézout の等式（整関数版）
+共通零点をもたない整関数 $f,g$ に対し、$af+bg=1$ をみたす整関数 $a,b$ が存在することを証明せよ（Wedderburn 1915）。
+
+*4 整関数の環の有限生成イデアル
+整関数の環 $\mathcal{O}(\mathbb{C})$ の有限生成イデアルは単項イデアルであることを前問から証明し、零点が有限個しかない整関数全体のなすイデアルが単項でないことを示せ。
+
+*5 Weierstrass–Mittag-Leffler の補間定理
+集積点をもたない点列 $b_{n}$ の各点で、任意の主要部 $P_{n}$ と任意の有限次の Taylor 多項式 $T_{n}$ を指定するとき、各 $b_{n}$ の近傍で $f-P_{n}-T_{n}=O((z-b_{n})^{\deg T_{n}+1})$ となる $\mathbb{C}$ 上の有理型関数 $f$ が存在することを証明せよ。
+
+=ch 第 6 章　Hadamard の因数分解定理
+
+*4 Jensen の公式 {jensen}
+$f$ が $|z|\le R$ の近傍で正則、$f(0)\neq0$、$|z|<R$ 内の零点が $a_{1},\dots,a_{n}$（円周上に零点なし）なら $\log|f(0)|=\frac{1}{2\pi}\int_{0}^{2\pi}\log|f(Re^{i\theta})|d\theta-\sum\log\frac{R}{|a_{k}|}$ を証明せよ。円周上に零点がある場合にも成り立つことを示せ。
+
+*4 位数と零点の個数
+整関数の位数 $\rho=\limsup_{r\to\infty}\frac{\log\log M(r)}{\log r}$（$M(r)=\max_{|z|=r}|f|$）が有限なら、零点の個数 $n(r)$ について $n(r)=O(r^{\rho+\varepsilon})$ であり、$\sum_{a_{n}\neq0}|a_{n}|^{-\rho-\varepsilon}<\infty$ であることを Jensen の公式から証明せよ。
+
+*4 標準積の位数
+$\sum|a_{n}|^{-(p+1)}<\infty$ となる最小の整数 $p\ge0$ について、標準積 $P(z)=\prod E_{p}(z/a_{n})$ の位数が収束指数 $\lambda=\inf\{s:\sum|a_{n}|^{-s}<\infty\}$ に等しいことを証明せよ。
+
+*4 Borel–Carathéodory の不等式
+$f$ が $|z|\le R$ で正則なら、$r<R$ について $\max_{|z|=r}|f(z)|\le\frac{2r}{R-r}\max_{|z|=R}\mathrm{Re}\,f(z)+\frac{R+r}{R-r}|f(0)|$ を証明せよ。
+
+*4 標準積の下からの評価
+前問の標準積 $P$ と $\varepsilon>0$ について、各零点 $a_{n}$ を中心とする半径 $|a_{n}|^{-\lambda-1}$ の円板の外で $\log|P(z)|\ge-|z|^{\lambda+\varepsilon}$（$|z|$ 十分大）が成り立つことを証明せよ。
+
+*5 Hadamard の因数分解定理 {hadamard}
+位数 $\rho<\infty$ の整関数は $f(z)=z^{m}e^{Q(z)}P(z)$（$P$ は零点の標準積、$Q$ は次数 $\le\rho$ の多項式）と表されることを、前二問と Borel–Carathéodory の不等式を用いて証明せよ（Hadamard 1893）。
+
+*4 非整数位数の整関数の零点
+位数が整数でない整関数は無限個の零点をもつことを証明せよ。
+
+*4 零点をもたない有限位数の整関数
+零点をもたない有限位数の整関数は $e^{Q}$（$Q$ は多項式）に限ることを示せ。位数が無限の反例を挙げよ。
+
+*4 位数の計算
+$\sin z$、$\cos\sqrt{z}$、$\sum_{n\ge0}\frac{z^{n}}{(n!)^{a}}$（$a>0$）、$e^{e^{z}}$ の位数をそれぞれ $1,\frac{1}{2},\frac{1}{a},\infty$ と決定し、$\cos\sqrt z$ について {{R:hadamard}} の表示を具体的に書け。
+
+*4 有限位数の整関数に対する Picard の小定理
+有限位数の整関数が二つの値 $0,1$ をとらなければ定数であることを、Hadamard の因数分解定理だけを用いて（Bloch の定理を用いずに）証明せよ。
+
+*4 $e^{z}-z$ の値分布
+すべての複素数 $a$ について $e^{z}-z=a$ が無限個の解をもつことを、位数 1 の整関数としての因数分解から証明せよ。
+
+*5 Laguerre の定理
+実数の零点のみをもつ種数 $\le1$ の実整関数 $f(z)=cz^{m}e^{\alpha z}\prod_{n}\left(1-\frac{z}{a_{n}}\right)e^{z/a_{n}}$（$c,\alpha,a_{n}\in\mathbb{R}$、$\sum a_{n}^{-2}<\infty$）について、導関数 $f'$ もまた実数の零点のみをもち、$f$ の相隣る零点の間にちょうど一つずつ（重複度込み）あることを、$\left(\frac{f'}{f}\right)'<0$（実軸上）を示して証明せよ（Laguerre 1882）。

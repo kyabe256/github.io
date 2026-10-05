@@ -1,0 +1,48 @@
+<h2 class="plain">付録 A　依存の地図</h2>
+
+<p>18 本の登山道は独立ではない。ある章の山頂が、別の章の足場になる。ここでは章をまたぐ主な依存の筋を挙げる。番号は大問番号である。</p>
+
+<h3 class="sec">第 I 部：位相と等角写像</h3>
+<table class="legend">
+  <tr><th>回転数 → 位相</th><td>{{R:deg}}（写像度）→ Brouwer → Borsuk–Ulam → ハムサンドイッチ。複素微分を使わない「代数学の基本定理」もここにある。</td></tr>
+  <tr><th>正規族 → 等角写像</th><td>{{R:montel}}（Montel）＋ {{R:hurwitz-inj}}（Hurwitz）＋ {{R:sqrt-sc}}（単連結領域の平方根）→ {{R:rmt}}（Riemann の写像定理）。同じ正規族の議論が {{R:area}}（面積定理）→ {{R:bieb2}}（Bieberbach）→ {{R:koebe}}（Koebe の 1/4）を支える。</td></tr>
+  <tr><th>Picard</th><td>{{R:bloch}}（Bloch）→ {{R:little-picard}}（Picard の小定理）；Schottky → Montel の基本正規族定理 → {{R:big-picard}}（Picard の大定理）。第 6 章では有限位数に限って Hadamard から小定理を別証明する。</td></tr>
+</table>
+
+<h3 class="sec">第 II 部：関数の構造</h3>
+<table class="legend">
+  <tr><th>零点から関数へ</th><td>{{R:wf}}（Weierstrass）, {{R:mittag}}（Mittag-Leffler）→ {{R:jensen}}（Jensen）→ {{R:hadamard}}（Hadamard）。第 12 章で Runge を経て任意の開集合へ拡張される（{{R:weier-open}}）。</td></tr>
+  <tr><th>Gamma 関数</th><td>{{R:wf}} → {{R:gamma-prod}}（積表示）→ {{R:reflection}}（相補公式）→ {{R:stirling}}（Stirling）。Stirling の公式は第 14 章の $\xi$ の位数と零点の個数で不可欠になる。</td></tr>
+  <tr><th>テータ関数</th><td>Poisson の和公式 → {{R:theta}}（テータの変換公式）→ {{R:fe}}（ゼータの関数等式）、Landsberg–Schaar；{{R:jtp}}（三重積）→ 五角数定理 → 分割数（第 16 章）；{{R:eta}}（$\eta$ の変換公式）→ {{R:e2}}（$E_{2}$）→ {{R:four-squares}}（四平方定理）、および分割数の精密な評価。</td></tr>
+</table>
+
+<h3 class="sec">第 III 部：解析学</h3>
+<table class="legend">
+  <tr><th>超越数</th><td>Hermite の恒等式 → {{R:e-trans}}（$e$）→ {{R:pi-trans}}（$\pi$）→ {{R:lw}}（Lindemann–Weierstrass）；Siegel の補題＋ Schwarz 型補題 → {{R:gelfond}}（Gelfond–Schneider）。</td></tr>
+  <tr><th>Phragmén–Lindelöf</th><td>{{R:pl-sector}}（扇形の PL）→ {{R:pw}}（Paley–Wiener）→ {{R:hardy-unc}}（Hardy の不確定性原理）；{{R:three-lines}}（三線定理）→ {{R:riesz-thorin}}（Riesz–Thorin）；右半平面の PL → {{R:carlson}}（Carlson）→ {{R:muntz}}（Müntz–Szász）。</td></tr>
+  <tr><th>近似</th><td>{{R:runge}}（Runge）→ 単連結性の特徴づけ → {{R:weier-open}} → すべての開集合は正則領域。</td></tr>
+</table>
+
+<h3 class="sec">第 IV 部：数論 ― すべての道は素数定理へ</h3>
+<table class="legend">
+  <tr><th>ゼータ関数</th><td>{{R:theta}} ＋ {{R:stirling}} ＋ {{R:hadamard}} → {{R:fe}}（関数等式）→ {{R:zeta-nonzero}}（$\zeta(1+it)\neq0$）→ {{R:rvm}}（Riemann–von Mangoldt）。</td></tr>
+  <tr><th>Gauss 和</th><td>留数定理 → {{R:gauss-sum}}（Gauss 和の値）→ {{R:qr}}（平方剰余の相互法則）；同じ値が第 17 章の $L(1,\chi)$ の公式に現れる。</td></tr>
+  <tr><th>分割数</th><td>{{R:eta}} ＋ 鞍点法 → {{R:hardy-ramanujan}}（Hardy–Ramanujan）。円周法の原型であり、素数定理とは別の「生成関数の特異点から係数の漸近を読む」技法。</td></tr>
+  <tr><th>素数</th><td>Euler 積 → Landau の定理 → {{R:dirichlet}}（Dirichlet の算術級数定理）；{{R:zeta-nonzero}} ＋ {{R:newman}}（Newman のタウバー定理）→ <strong>大問 {{R:finale}}（素数定理）</strong>。Cauchy の積分公式が、本書の最後の一歩をそのまま担う。</td></tr>
+</table>
+
+<h2 class="plain">付録 B　参考書対応表</h2>
+<table class="legend">
+  <tr><th>第 1 章</th><td>Fulton <em>Algebraic Topology: A First Course</em>（回転数と Brouwer）／Matoušek <em>Using the Borsuk–Ulam Theorem</em></td></tr>
+  <tr><th>第 2〜4 章</th><td>Ahlfors <em>Complex Analysis</em>（Riemann の写像定理、正規族）／Stein–Shakarchi <em>Complex Analysis</em>（第 8 章 等角写像）／Duren <em>Univalent Functions</em>（面積定理、Koebe の 1/4 定理）／Conway <em>Functions of One Complex Variable I</em>（Bloch、Schottky、Picard）／Schiff <em>Normal Families</em>（Zalcman の補題）</td></tr>
+  <tr><th>第 5〜6 章</th><td>Ahlfors（Weierstrass、Mittag-Leffler、Hadamard）／Conway（Runge と Mittag-Leffler）／Levin <em>Lectures on Entire Functions</em>（位数、標準積、Laguerre の定理）</td></tr>
+  <tr><th>第 7〜8 章</th><td>Whittaker–Watson <em>A Course of Modern Analysis</em>（Gamma 関数、楕円関数）／Artin <em>The Gamma Function</em>（Bohr–Mollerup）／Silverman <em>The Arithmetic of Elliptic Curves</em>（第 VI 章 複素トーラス）</td></tr>
+  <tr><th>第 9 章</th><td>Serre <em>A Course in Arithmetic</em>（第 VII 章 モジュラー形式）／Koblitz <em>Introduction to Elliptic Curves and Modular Forms</em>（$\Gamma_{0}(4)$ と四平方定理）／Apostol <em>Modular Functions and Dirichlet Series</em>（$\eta$ 関数、Siegel の証明）</td></tr>
+  <tr><th>第 10 章</th><td>Baker <em>Transcendental Number Theory</em>（Hermite、Lindemann、Gelfond–Schneider）／Niven <em>Irrational Numbers</em></td></tr>
+  <tr><th>第 11 章</th><td>Stein–Shakarchi <em>Complex Analysis</em>（第 4 章 Fourier 変換と Paley–Wiener、Hardy の定理）／Dym–McKean <em>Fourier Series and Integrals</em></td></tr>
+  <tr><th>第 12〜13 章</th><td>Rudin <em>Real and Complex Analysis</em>（Runge、Müntz–Szász、Phragmén–Lindelöf）／Stein–Weiss <em>Introduction to Fourier Analysis on Euclidean Spaces</em>（Riesz–Thorin）／Boas <em>Entire Functions</em>（Carlson の定理）</td></tr>
+  <tr><th>第 14 章</th><td>Titchmarsh <em>The Theory of the Riemann Zeta-Function</em>／Davenport <em>Multiplicative Number Theory</em>（関数等式、零点の個数）／Edwards <em>Riemann's Zeta Function</em></td></tr>
+  <tr><th>第 15 章</th><td>Ireland–Rosen <em>A Classical Introduction to Modern Number Theory</em>（Gauss 和、相互法則）／Berndt–Evans–Williams <em>Gauss and Jacobi Sums</em>（Mordell の積分路、Landsberg–Schaar）</td></tr>
+  <tr><th>第 16 章</th><td>Andrews <em>The Theory of Partitions</em>／Apostol <em>Modular Functions and Dirichlet Series</em>（第 5 章 Rademacher の公式）／Hardy <em>Ramanujan: Twelve Lectures</em></td></tr>
+  <tr><th>第 17〜18 章</th><td>Davenport <em>Multiplicative Number Theory</em>（Dirichlet の定理、明示公式、零点のない領域）／Apostol <em>Introduction to Analytic Number Theory</em>（Chebyshev、Mertens、Dirichlet）／Newman "Simple analytic proof of the prime number theorem"（<em>Amer. Math. Monthly</em> 1980）／Zagier "Newman's short proof of the prime number theorem"（同 1997）</td></tr>
+</table>

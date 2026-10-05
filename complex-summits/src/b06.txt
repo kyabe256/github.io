@@ -1,0 +1,75 @@
+=ch 第 11 章　Paley–Wiener の定理と Hardy の不確定性原理
+
+*4 Gauss 関数の Fourier 変換
+$\int_{-\infty}^{\infty}e^{-\pi x^{2}}e^{-2\pi ix\xi}dx=e^{-\pi\xi^{2}}$ を、積分路を実軸から $\mathrm{Im}\,z=\xi$ へ平行移動して証明せよ。$a>0$ について $e^{-\pi ax^{2}}$ の Fourier 変換を求めよ。
+
+*4 台がコンパクトな関数の Fourier 変換
+$f\in L^{1}(\mathbb{R})$ が $[-A,A]$ の外で 0 なら、$\hat f(z)=\int f(x)e^{-2\pi ixz}dx$ は $|\hat f(z)|\le\|f\|_{1}e^{2\pi A|\mathrm{Im}\,z|}$ をみたす整関数であることを示し、$f\neq0$ なら $\hat f$ はどの区間上でも恒等的に 0 にならないことを証明せよ。系として、$f$ と $\hat f$ の台がともにコンパクトなら $f=0$ であることを導け。
+
+*4 扇形領域の Phragmén–Lindelöf の原理 {pl-sector}
+$f$ が開き角 $\pi/\alpha$ の扇形 $S$ で正則で閉包まで連続、境界上で $|f|\le M$、$S$ 内で $|f(z)|\le Ce^{|z|^{\beta}}$（$\beta<\alpha$）なら、$S$ 上で $|f|\le M$ であることを証明せよ。$\beta=\alpha$ では成り立たない例を挙げよ。
+
+*4 指数型の整関数の増大
+指数型 $A$（$|F(z)|\le C_{\varepsilon}e^{(A+\varepsilon)|z|}$）の整関数 $F$ が実軸上で有界なら、$|F(x+iy)|\le\sup_{\mathbb{R}}|F|\cdot e^{A|y|}$ であることを、上半平面と下半平面で Phragmén–Lindelöf の原理を適用して証明せよ。
+
+*5 Paley–Wiener の定理 {pw}
+整関数 $F$ について、$F$ が指数型 $\le2\pi A$ で実軸上 $L^{2}$ $\iff$ ある $f\in L^{2}(-A,A)$ により $F(z)=\int_{-A}^{A}f(t)e^{2\pi itz}dt$ と表される、を証明せよ（Paley–Wiener 1934）。Plancherel の定理は既知としてよい。
+
+*4 Paley–Wiener–Schwartz の定理（滑らかな関数）
+$f\in C_{c}^{\infty}(\mathbb{R})$ の台が $[-A,A]$ に含まれる $\iff\hat f$ が整関数で、すべての $N$ について $|\hat f(z)|\le C_{N}(1+|z|)^{-N}e^{2\pi A|\mathrm{Im}\,z|}$ をみたす、を証明せよ。
+
+*4 Shannon の標本化定理
+$F$ が指数型 $\le\pi$ で実軸上 $L^{2}$ なら、$F(z)=\sum_{n\in\mathbb{Z}}F(n)\frac{\sin\pi(z-n)}{\pi(z-n)}$ が広義一様収束することを、Paley–Wiener の定理と Fourier 級数で証明せよ。
+
+*5 Bernstein の不等式（指数型関数）
+指数型 $A$ の整関数 $F$ が実軸上で有界なら $\sup_{\mathbb{R}}|F'|\le A\sup_{\mathbb{R}}|F|$ であることを証明せよ（Bernstein 1923）。三角多項式に対する $\|T'\|_{\infty}\le n\|T\|_{\infty}$ を系として導け。
+
+*4 Heisenberg の不確定性原理
+$f\in\mathcal{S}(\mathbb{R})$ について $\left(\int x^{2}|f|^{2}\right)\left(\int\xi^{2}|\hat f|^{2}\right)\ge\frac{1}{16\pi^{2}}\left(\int|f|^{2}\right)^{2}$ を証明し、等号が Gauss 関数に限ることを示せ。
+
+*4 Gauss 型減衰と Fourier 変換の増大
+$|f(x)|\le Ce^{-\pi ax^{2}}$ なら $\hat f$ は整関数に延び、$|\hat f(x+iy)|\le C'e^{\pi y^{2}/a}$ をみたすことを証明せよ。
+
+*4 Hardy の補題
+整関数 $G$ が $|G(z)|\le Ce^{c|z|^{2}}$ と、実軸上で $|G(x)|\le Ce^{-cx^{2}}$（同じ定数 $c>0$）をみたすなら、$G(z)=Ae^{-cz^{2}}$ であることを、$e^{cz^{2}}G(z)$ に各象限で Phragmén–Lindelöf の原理を適用して証明せよ。
+
+*5 Hardy の不確定性原理 {hardy-unc}
+$|f(x)|\le Ce^{-\pi ax^{2}}$、$|\hat f(\xi)|\le Ce^{-\pi b\xi^{2}}$（$a,b>0$）とする。$ab>1$ なら $f=0$、$ab=1$ なら $f(x)=ce^{-\pi ax^{2}}$ であることを証明せよ（Hardy 1933）。
+
+=ch 第 12 章　Runge の近似定理
+
+*4 コンパクト集合上の Cauchy の積分公式
+開集合 $U$ とコンパクト集合 $K\subset U$ に対し、$U\setminus K$ 内の有限個の有向線分からなる閉路 $\Gamma$ で、$U$ 上の任意の正則関数 $f$ と $z\in K$ について $f(z)=\frac{1}{2\pi i}\int_{\Gamma}\frac{f(\zeta)}{\zeta-z}d\zeta$ となるものが存在することを、正方形の格子を用いて証明せよ。
+
+*4 有理関数による近似
+前問の積分を Riemann 和で近似して、$f$ が $K$ 上で、$\Gamma$ 上にのみ極をもつ有理関数で一様近似できることを証明せよ。
+
+*4 極の移動
+$\hat{\mathbb{C}}\setminus K$ の同じ連結成分に属する二点 $a,b$ について、$a$ にのみ極をもつ有理関数は、$b$ にのみ極をもつ有理関数（$b=\infty$ なら多項式）で $K$ 上一様近似できることを証明せよ。
+
+*5 Runge の定理 {runge}
+$K$ をコンパクト集合、$A$ を $\hat{\mathbb{C}}\setminus K$ の各連結成分と交わる集合とする。$K$ の近傍で正則な任意の関数は、極が $A$ に含まれる有理関数で $K$ 上一様近似できることを証明せよ（Runge 1885）。
+
+*4 多項式近似
+$\mathbb{C}\setminus K$ が連結なら、$K$ の近傍で正則な任意の関数は多項式で $K$ 上一様近似できることを示せ。逆に $\mathbb{C}\setminus K$ が有界な成分をもち $a$ がそこに属するなら、$\frac{1}{z-a}$ は多項式で $K$ 上一様近似できないことを証明せよ。
+
+*4 単連結領域の特徴づけ
+領域 $\Omega$ について、(i) $\Omega$ が単連結、(ii) $\Omega$ 上の任意の正則関数は多項式の列で広義一様近似できる、(iii) $\Omega$ 上の任意の正則関数は原始関数をもつ、が同値であることを証明せよ。
+
+*5 不連続関数に各点収束する多項式列
+多項式の列 $p_{n}$ で、すべての $z\in\mathbb{C}$ について $p_{n}(z)\to0$（$z\neq0$）、$p_{n}(0)\to1$ となるものが存在することを、Runge の定理を適当なコンパクト集合の列に適用して証明せよ。
+
+*5 任意の開集合上の Mittag-Leffler の定理
+開集合 $U\subset\mathbb{C}$ と、$U$ 内に集積点をもたない点列 $b_{n}$ とその主要部 $P_{n}$ が与えられたとき、主要部がちょうど $P_{n}$ である $U$ 上の有理型関数が存在することを、Runge の定理を用いて証明せよ。
+
+*5 任意の開集合上の Weierstrass の定理 {weier-open}
+開集合 $U\subset\mathbb{C}$ と、$U$ 内に集積点をもたない点列 $a_{n}$ に対し、零点がちょうど $\{a_{n}\}$（重複度込み）である $U$ 上の正則関数が存在することを証明し、$U$ 上の任意の有理型関数が二つの正則関数の商であることを導け。
+
+*5 Birkhoff の普遍整関数
+整関数 $F$ で、任意の整関数 $g$ に対し平行移動の部分列 $F(z+n_{k})$ が $g$ に広義一様収束するようなものが存在することを、Runge の定理を用いて構成せよ（Birkhoff 1929）。
+
+*4 境界の各点で拡張できない正則関数（円板）
+$\mathbb{D}$ 上の正則関数で、単位円周のどの点の近傍にも正則に拡張できないものの例を、空隙級数あるいは Blaschke 積で与えよ。
+
+*5 すべての開集合は正則領域である
+任意の開集合 $U\subsetneq\mathbb{C}$ に対し、$U$ 上の正則関数で、$\partial U$ のどの点を中心とする円板にも（$U$ との共通部分の連結成分から）正則に延長できないものが存在することを、大問 {{R:weier-open}} を用いて、$\partial U$ に集積する零点列を配置して証明せよ。

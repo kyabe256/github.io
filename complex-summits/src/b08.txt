@@ -1,0 +1,75 @@
+=ch 第 15 章　Gauss 和と平方剰余の相互法則
+
+*4 Euler の規準
+奇素数 $p$ と $p\nmid a$ について、Legendre 記号が $\left(\frac{a}{p}\right)\equiv a^{(p-1)/2}\pmod p$ をみたすことを、原始根の存在（既知としてよい）から証明せよ。$\left(\frac{-1}{p}\right)=(-1)^{(p-1)/2}$ を導け。
+
+*4 二次 Gauss 和の基本性質
+$G(a;N)=\sum_{n=0}^{N-1}e^{2\pi ian^{2}/N}$ とおく。奇素数 $p$ と $p\nmid a$ について $G(a;p)=\left(\frac{a}{p}\right)G(1;p)$、$G(1;p)=\sum_{n=1}^{p-1}\left(\frac{n}{p}\right)e^{2\pi in/p}$ を証明せよ。
+
+*4 Gauss 和の 2 乗
+奇素数 $p$ について $G(1;p)^{2}=\left(\frac{-1}{p}\right)p$ を証明せよ。これだけでは $G(1;p)$ の符号が決まらないことを確かめよ。
+
+*5 Gauss 和の値（Mordell の積分路） {gauss-sum}
+正の整数 $N$ について $G(1;N)=\frac{1+i^{-N}}{1+i^{-1}}\sqrt N$ を、$\frac{e^{2\pi iz^{2}/N}}{e^{2\pi iz}-1}$ を平行四辺形の周上で積分する方法で証明せよ（Gauss 1805 が 4 年かけて決定した符号）。
+
+*4 Gauss 和の値の場合分け
+前問から、$N\equiv1\pmod4$ なら $G(1;N)=\sqrt N$、$N\equiv3$ なら $i\sqrt N$、$N\equiv2$ なら $0$、$N\equiv0$ なら $(1+i)\sqrt N$ であることを導け。
+
+*4 Gauss 和の乗法性
+互いに素な正の整数 $m,n$ について $G(1;mn)=G(n;m)G(m;n)$ を中国剰余定理で証明し、相異なる奇素数 $p,q$ について $G(1;pq)=\left(\frac{q}{p}\right)\left(\frac{p}{q}\right)G(1;p)G(1;q)$ を導け。
+
+*4 第二補充法則
+奇素数 $p$ について $\left(\frac{2}{p}\right)=(-1)^{(p^{2}-1)/8}$ を、1 の原始 8 乗根 $\zeta_{8}$ について $(\zeta_{8}+\zeta_{8}^{-1})^{2}=2$ を用い、$\mathbb{Z}[\zeta_{8}]$ で $p$ 乗を計算して証明せよ。
+
+*4 Gauss の補題
+奇素数 $p$ と $p\nmid a$ について、$a,2a,\dots,\frac{p-1}{2}a$ を $p$ で割った最小絶対剰余のうち負のものの個数を $\mu$ とすると $\left(\frac{a}{p}\right)=(-1)^{\mu}$ であることを証明せよ。
+
+*4 Eisenstein の三角関数表示
+相異なる奇素数 $p,q$ について $\left(\frac{q}{p}\right)=\prod_{a=1}^{(p-1)/2}\frac{\sin(2\pi qa/p)}{\sin(2\pi a/p)}$ を Gauss の補題から証明せよ。
+
+*5 Landsberg–Schaar の恒等式
+正の整数 $p,q$ について $\frac{1}{\sqrt p}\sum_{n=0}^{p-1}e^{\pi in^{2}q/p}=\frac{e^{\pi i/4}}{\sqrt{2q}}\sum_{n=0}^{2q-1}e^{-\pi in^{2}p/(2q)}$ を、テータ関数の変換公式（大問 {{R:theta}}）を $\tau=\frac{2q}{p}+i\varepsilon$（$\varepsilon\to0^{+}$）で用いて証明せよ。
+
+*4 $-3$ が平方剰余となる素数
+$p>3$ の素数について $\left(\frac{-3}{p}\right)=1\iff p\equiv1\pmod3$ を、1 の原始 3 乗根の存在と $(2\omega+1)^{2}=-3$ を用いて証明せよ。
+
+*5 平方剰余の相互法則 {qr}
+相異なる奇素数 $p,q$ について $\left(\frac{p}{q}\right)\left(\frac{q}{p}\right)=(-1)^{\frac{p-1}{2}\frac{q-1}{2}}$ を、Gauss 和の乗法性と大問 {{R:gauss-sum}} の値を比較して証明せよ。系として Jacobi 記号の相互法則と、$\left(\frac{3}{p}\right)=1\iff p\equiv\pm1\pmod{12}$ を導け。
+
+=ch 第 16 章　分割数 ― Hardy–Ramanujan の漸近公式
+
+*4 分割数の母関数
+$|q|<1$ で $P(q)=\prod_{n\ge1}\frac{1}{1-q^{n}}=\sum_{n\ge0}p(n)q^{n}$ が正則であることを示し、相異なる部分への分割の数と奇数の部分への分割の数が等しいこと（Euler）を母関数で証明せよ。
+
+*4 部分の大きさに上限のある分割
+$k$ 以下の部分への分割の数 $p_{k}(n)$ について、$\prod_{j=1}^{k}\frac{1}{1-q^{j}}$ の $q=1$ における $k$ 位の極の主要部から $p_{k}(n)\sim\frac{n^{k-1}}{k!(k-1)!}$（$n\to\infty$）を証明せよ。
+
+*4 母関数の実軸上の挙動
+$t\to0^{+}$ のとき $\log P(e^{-t})\sim\frac{\pi^{2}}{6t}$ を示し、さらにすべての $t>0$ で $\log P(e^{-t})\le\frac{\pi^{2}}{6t}$ を証明せよ。
+
+*4 $\eta$ 関数による精密化
+Dedekind の $\eta$ 関数の変換公式（大問 {{R:eta}}）から、$y>0$ について $P(e^{-2\pi y})=\sqrt{y}\,e^{\frac{\pi}{12y}-\frac{\pi y}{12}}P(e^{-2\pi/y})$ を導き、$\log P(e^{-t})=\frac{\pi^{2}}{6t}+\frac{1}{2}\log\frac{t}{2\pi}+O(t)$（$t\to0^{+}$）を証明せよ。
+
+*4 分割数の上界
+すべての $n\ge1$ について $p(n)\le e^{\pi\sqrt{2n/3}}$ を、$p(n)\le e^{nt}P(e^{-t})$ と前々問から最適な $t$ を選んで証明せよ。
+
+*4 単調数列のタウバー型定理
+$a_{n}\ge0$ が非減少で、$t\to0^{+}$ のとき $\log\sum a_{n}e^{-nt}\sim\frac{c}{t}$（$c>0$）なら、$\log a_{n}\sim2\sqrt{cn}$ であることを証明せよ。
+
+*4 分割数の対数漸近
+$\log p(n)\sim\pi\sqrt{\frac{2n}{3}}$ を前二問から証明せよ。相異なる部分への分割の数 $q(n)$ について $\log q(n)\sim\pi\sqrt{\frac{n}{3}}$ を示せ。
+
+*4 1 の冪根の近くでの母関数
+$0<r<1$、$k\ge2$、$\gcd(h,k)=1$ について、$|P(re^{2\pi ih/k})|$ が $r\to1^{-}$ で $P(r)$ に比べて指数的に小さいこと、具体的に $\log|P(re^{2\pi ih/k})|\le\frac{\pi^{2}}{6k^{2}(1-r)}+O\left(\log\frac{1}{1-r}\right)$ 型の評価が成り立つことを証明せよ。
+
+*5 鞍点の近傍の寄与
+$n$ に対し $r=e^{-t}$、$t=\pi/\sqrt{6n}$ とおき、$p(n)=\frac{1}{2\pi i}\int_{|q|=r}\frac{P(q)}{q^{n+1}}dq$ の積分路のうち $|\arg q|\le t^{1+\delta}$（$\delta$ は小さな正数）の部分が $\frac{1}{4n\sqrt3}e^{\pi\sqrt{2n/3}}(1+o(1))$ を与えることを、$\eta$ による精密化と Gauss 積分で証明せよ。
+
+*5 Ramanujan の合同式
+$p(5n+4)\equiv0\pmod5$ を、$q\prod(1-q^{n})^{4}=q\prod(1-q^{n})\prod(1-q^{n})^{3}$ に Euler の五角数定理と Jacobi の三乗恒等式を適用して $q^{5m}$ の係数を調べ、$\prod(1-q^{n})^{5}\equiv\prod(1-q^{5n})\pmod5$ と組み合わせて証明せよ（Ramanujan 1919）。
+
+*4 残りの積分路の評価
+前々問の設定で、積分路の残りの部分 $t^{1+\delta}\le|\arg q|\le\pi$ の寄与が主要項に比べて $o\left(\frac{1}{n}e^{\pi\sqrt{2n/3}}\right)$ であることを、1 の冪根の近くでの評価と $|P(q)|\le P(|q|)$ の精密化を用いて証明せよ。
+
+*5 Hardy–Ramanujan の漸近公式 {hardy-ramanujan}
+$p(n)\sim\frac{1}{4n\sqrt3}e^{\pi\sqrt{2n/3}}$（$n\to\infty$）を前三問から証明せよ（Hardy–Ramanujan 1918）。$p(200)=3972999029388$ と主要項の値を比較せよ。

@@ -1,0 +1,75 @@
+=ch 第 17 章　Dirichlet の算術級数定理
+
+*4 Dirichlet 指標と直交関係
+$(\mathbb{Z}/q\mathbb{Z})^{\times}$ の指標（準同型 $\chi:(\mathbb{Z}/q\mathbb{Z})^{\times}\to\mathbb{C}^{\times}$）がちょうど $\varphi(q)$ 個あることを有限可換群の構造定理（既知としてよい）から示し、直交関係 $\sum_{\chi}\overline{\chi(a)}\chi(n)=\varphi(q)\cdot[n\equiv a]$（$\gcd(a,q)=1$）を証明せよ。
+
+*4 Dirichlet の $L$ 関数
+$L(s,\chi)=\sum\chi(n)n^{-s}$ が $\mathrm{Re}\,s>1$ で Euler 積 $\prod_{p}(1-\chi(p)p^{-s})^{-1}$ をもつことを示し、$\chi$ が単位指標でなければ $L(s,\chi)$ は $\mathrm{Re}\,s>0$ で正則であること、単位指標 $\chi_{0}$ については $L(s,\chi_{0})=\zeta(s)\prod_{p\mid q}(1-p^{-s})$ であることを証明せよ。
+
+*4 素数の算術級数への分解
+$\sigma\to1^{+}$ のとき $\sum_{\chi}\overline{\chi(a)}\log L(\sigma,\chi)=\varphi(q)\sum_{p\equiv a\ (q)}p^{-\sigma}+O(1)$ を証明せよ。ここで $\log L$ は Euler 積から定まる分枝とする。
+
+*4 複素指標に対する非零性
+$\sigma>1$ について $\prod_{\chi}L(\sigma,\chi)\ge1$ を示し、$L(1,\chi)=0$ となる指標は高々一つで、それは実指標であることを証明せよ。
+
+*4 Landau の定理
+係数が非負の Dirichlet 級数 $\sum a_{n}n^{-s}$ の収束横座標を $\sigma_{c}$ とすると、その和は $s=\sigma_{c}$ の近傍に正則に延長できないことを証明せよ（Landau 1905）。
+
+*5 実指標に対する非零性
+実指標 $\chi\neq\chi_{0}$ について $L(1,\chi)\neq0$ を、$F(s)=\zeta(s)L(s,\chi)$ の係数 $\sum_{d\mid n}\chi(d)$ が非負で $n$ が平方数のとき $\ge1$ であることと Landau の定理から証明せよ。
+
+*5 Dirichlet の算術級数定理 {dirichlet}
+$\gcd(a,q)=1$ なら、$p\equiv a\pmod q$ をみたす素数は無限個存在し、さらに $\sum_{p\equiv a\ (q)}\frac{1}{p}=\infty$ であることを証明せよ（Dirichlet 1837）。
+
+*4 原始指標の Gauss 和
+原始指標 $\chi\bmod q$ の Gauss 和 $\tau(\chi)=\sum_{a\bmod q}\chi(a)e^{2\pi ia/q}$ について、$\sum_{a}\chi(a)e^{2\pi ian/q}=\overline{\chi(n)}\tau(\chi)$（すべての $n$）と $|\tau(\chi)|=\sqrt q$ を証明せよ。
+
+*5 $L$ 関数の関数等式
+原始指標 $\chi\bmod q$（$\chi(-1)=(-1)^{\kappa}$、$\kappa\in\{0,1\}$）について、$\Lambda(s,\chi)=\left(\frac{q}{\pi}\right)^{(s+\kappa)/2}\Gamma\left(\frac{s+\kappa}{2}\right)L(s,\chi)$ が整関数に延長され、$\Lambda(s,\chi)=\frac{\tau(\chi)}{i^{\kappa}\sqrt q}\Lambda(1-s,\bar\chi)$ をみたすことを、指標つきテータ級数の変換公式から証明せよ。
+
+*4 $L(1,\chi)$ の値の例
+$\chi_{-4}$（法 4 の非単位指標）と $\chi_{-3}$（法 3 の非単位指標）について $L(1,\chi_{-4})=\frac{\pi}{4}$、$L(1,\chi_{-3})=\frac{\pi}{3\sqrt3}$ を証明せよ。
+
+*5 奇な実指標の $L(1,\chi)$
+$q\equiv3\pmod4$ を素数、$\chi=\left(\frac{\cdot}{q}\right)$ とすると $L(1,\chi)=-\frac{\pi}{q^{3/2}}\sum_{a=1}^{q-1}a\left(\frac{a}{q}\right)$ であることを、Gauss 和の値（大問 {{R:gauss-sum}}）と $\sum_{n\ge1}\frac{\sin2\pi na/q}{n}=\pi\left(\frac{1}{2}-\frac{a}{q}\right)$ から証明せよ。系として $\sum_{a=1}^{q-1}a\left(\frac{a}{q}\right)<0$ を導け。
+
+*5 算術級数の Mertens 型定理
+$\gcd(a,q)=1$ について $\sum_{p\le x,\ p\equiv a\ (q)}\frac{\log p}{p}=\frac{1}{\varphi(q)}\log x+O(1)$ を証明せよ。素数が $\varphi(q)$ 個の既約剰余類に「平等に」分布することの最初の定量的な形であることを説明せよ。
+
+=ch 第 18 章　素数定理
+
+*4 Chebyshev の評価
+$\theta(x)=\sum_{p\le x}\log p$ について $\theta(x)=O(x)$ を、$\binom{2n}{n}$ が $n<p\le2n$ のすべての素数で割り切れることから証明せよ。$\pi(x)\gg\frac{x}{\log x}$ も示せ。
+
+*4 Mertens の定理
+$\sum_{p\le x}\frac{\log p}{p}=\log x+O(1)$ を、$\log(n!)$ の素因数分解と Stirling の公式から証明せよ（Mertens 1874）。
+
+*4 素数定理の同値な言い換え
+$\psi(x)=\sum_{p^{k}\le x}\log p$ について $\psi(x)-\theta(x)=O(\sqrt x\log^{2}x)$ を示し、$\pi(x)\sim\frac{x}{\log x}\iff\theta(x)\sim x\iff\psi(x)\sim x$ を部分和の公式で証明せよ。
+
+*4 $\Phi(s)$ の直線 $\mathrm{Re}\,s=1$ への延長
+$\Phi(s)=\sum_{p}\frac{\log p}{p^{s}}$ について、$\Phi(s)-\frac{1}{s-1}$ が閉半平面 $\mathrm{Re}\,s\ge1$ の近傍で正則に延長されることを、$-\frac{\zeta'(s)}{\zeta(s)}=\Phi(s)+\sum_{p}\frac{\log p}{p^{s}(p^{s}-1)}$ と大問 {{R:zeta-nonzero}} から証明せよ。
+
+*5 Newman の解析的タウバー定理 {newman}
+$f:[0,\infty)\to\mathbb{C}$ が有界で局所可積分、$g(z)=\int_{0}^{\infty}f(t)e^{-zt}dt$（$\mathrm{Re}\,z>0$）が $\mathrm{Re}\,z\ge0$ の近傍に正則に延長されるなら、$\int_{0}^{\infty}f(t)dt$ が収束して $g(0)$ に等しいことを、Cauchy の積分公式を巧みな積分路と補正因子 $\left(1+\frac{z^{2}}{R^{2}}\right)$ で用いて証明せよ（Newman 1980）。
+
+*4 積分の収束
+$\int_{1}^{\infty}\frac{\theta(x)-x}{x^{2}}dx$ が収束することを、$f(t)=\theta(e^{t})e^{-t}-1$ に Newman の定理を適用して証明せよ。
+
+*4 $\theta(x)\sim x$
+前問の積分の収束と $\theta$ の単調性から $\theta(x)\sim x$ を証明せよ。
+
+*4 $n$ 番目の素数
+$n$ 番目の素数 $p_{n}$ について $p_{n}\sim n\log n\iff\pi(x)\sim\frac{x}{\log x}$ を証明せよ。
+
+*5 Wiener–池原のタウバー定理
+$a_{n}\ge0$ で、$F(s)=\sum a_{n}n^{-s}$ が $\mathrm{Re}\,s>1$ で収束し、$F(s)-\frac{A}{s-1}$ が $\mathrm{Re}\,s\ge1$ まで連続に延びるなら $\sum_{n\le x}a_{n}\sim Ax$ であることを証明せよ（Wiener 1932、池原 1931）。これを $-\zeta'/\zeta$ に適用して $\psi(x)\sim x$ を再証明せよ。
+
+*5 von Mangoldt の明示公式
+$x>1$（素数冪でない）について $\psi(x)=x-\sum_{\rho}\frac{x^{\rho}}{\rho}-\log2\pi-\frac{1}{2}\log(1-x^{-2})$（$\rho$ にわたる和は $|\mathrm{Im}\,\rho|\le T$ の部分和の $T\to\infty$ の極限）を、Perron の公式 $\frac{1}{2\pi i}\int_{c-i\infty}^{c+i\infty}\frac{y^{s}}{s}ds$ と大問 {{R:rvm}} の周辺の評価を用いて証明せよ（von Mangoldt 1895）。
+
+*5 de la Vallée Poussin の零点のない領域
+ある定数 $c>0$ について、$\sigma\ge1-\frac{c}{\log(|t|+2)}$ をみたす $s=\sigma+it$ で $\zeta(s)\neq0$ であることを、$3+4\cos\theta+\cos2\theta\ge0$ と $\zeta'/\zeta$ の部分分数展開から証明せよ（de la Vallée Poussin 1899）。
+
+*5 素数定理 {finale}
+$\pi(x)\sim\frac{x}{\log x}$（$x\to\infty$）、すなわち $x$ 以下の素数の個数が $\frac{x}{\log x}$ に漸近することを、本章の結果をまとめて証明せよ（Hadamard 1896、de la Vallée Poussin 1896）。さらに前二問を用いて、誤差項つきの形 $\pi(x)=\int_{2}^{x}\frac{dt}{\log t}+O\left(xe^{-c\sqrt{\log x}}\right)$ を導け。Gauss が少年時代に素数表から予想し、Riemann が複素関数論の問題に変え、百年をかけて証明されたこの定理こそ、授業で習った Cauchy の積分定理の最も遠い到達点である。<strong>この一題をもって、本書 216 題を締めくくれ。</strong>

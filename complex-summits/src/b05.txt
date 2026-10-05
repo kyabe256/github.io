@@ -1,0 +1,78 @@
+=ch 第 9 章　テータ関数とモジュラー形式 ― Jacobi の四平方定理
+
+*4 テータ関数の正則性と周期性
+上半平面 $\mathbb{H}$ 上で $\vartheta(\tau)=\sum_{n\in\mathbb{Z}}e^{\pi in^{2}\tau}$ が広義一様絶対収束して正則であり、$\vartheta(\tau+2)=\vartheta(\tau)$ をみたすことを証明せよ。
+
+*4 Poisson の和公式
+$f:\mathbb{R}\to\mathbb{C}$ が連続で $|f(x)|,|\hat f(x)|\le C(1+|x|)^{-1-\delta}$（$\hat f(\xi)=\int f(x)e^{-2\pi ix\xi}dx$）をみたすなら $\sum_{n\in\mathbb{Z}}f(n)=\sum_{n\in\mathbb{Z}}\hat f(n)$ であることを、$\sum_{n}f(x+n)$ の Fourier 級数展開で証明せよ。
+
+*4 テータ関数の変換公式 {theta}
+$t>0$ について $\vartheta(it)=t^{-1/2}\vartheta(i/t)$ を Poisson の和公式と $e^{-\pi x^{2}}$ の Fourier 変換から示し、一致の定理により $\vartheta(-1/\tau)=\sqrt{\tau/i}\,\vartheta(\tau)$（主値の平方根）を $\mathbb{H}$ 全体で証明せよ。
+
+*5 Jacobi の三重積公式 {jtp}
+$|q|<1$、$z\neq0$ について $\prod_{n\ge1}(1-q^{2n})(1+q^{2n-1}z)(1+q^{2n-1}z^{-1})=\sum_{n\in\mathbb{Z}}q^{n^{2}}z^{n}$ を、左辺を $z$ の Laurent 級数として関数等式 $F(q^{2}z)=(qz)^{-1}F(z)$ から係数を決定して証明せよ（Jacobi 1829）。
+
+*4 Euler の五角数定理
+$\prod_{n\ge1}(1-q^{n})=\sum_{k\in\mathbb{Z}}(-1)^{k}q^{k(3k-1)/2}$ を三重積公式から証明し、分割数 $p(n)$ の漸化式 $p(n)=\sum_{k\neq0}(-1)^{k+1}p\left(n-\frac{k(3k-1)}{2}\right)$ を導け。
+
+*4 Jacobi の三乗恒等式
+$\prod_{n\ge1}(1-q^{n})^{3}=\sum_{n\ge0}(-1)^{n}(2n+1)q^{n(n+1)/2}$ を三重積公式から証明せよ。
+
+*5 Dedekind の $\eta$ 関数の変換公式 {eta}
+$\eta(\tau)=e^{\pi i\tau/12}\prod_{n\ge1}(1-e^{2\pi in\tau})$ について $\eta(-1/\tau)=\sqrt{\tau/i}\,\eta(\tau)$ を、$\log\eta(iy)-\log\eta(i/y)$ を関数 $\cot(\pi z)\cot(\pi z/y)/z$ の留数の和として計算する Siegel の方法で証明せよ（Siegel 1954）。
+
+*4 $E_{2}$ の擬モジュラー性 {e2}
+$E_{2}(\tau)=1-24\sum_{n\ge1}\sigma(n)q^{n}$（$q=e^{2\pi i\tau}$、$\sigma(n)$ は約数和）について $E_{2}=\frac{12}{\pi i}\frac{\eta'}{\eta}$ を示し、$\eta$ の変換公式から $E_{2}(-1/\tau)=\tau^{2}E_{2}(\tau)+\frac{6\tau}{\pi i}$ を導け。
+
+*4 $\theta^{4}$ のモジュラー性
+$\theta(\tau)=\vartheta(2\tau)=\sum_{n}q^{n^{2}}$（$q=e^{2\pi i\tau}$）について、$\theta(\tau)^{4}$ が群 $\Gamma_{0}(4)=\left\{\begin{pmatrix}a&b\\c&d\end{pmatrix}\in SL_{2}(\mathbb{Z}):4\mid c\right\}$ に関する重さ 2 の正則モジュラー形式であることを、$\Gamma_{0}(4)$ が $\pm\begin{pmatrix}1&1\\0&1\end{pmatrix}$ と $\begin{pmatrix}1&0\\4&1\end{pmatrix}$ で生成されることを用いて {{R:theta}} から証明せよ。
+
+*4 Eisenstein 級数の組合せ
+$E_{2}(\tau)-2E_{2}(2\tau)$ と $E_{2}(\tau)-4E_{2}(4\tau)$ が $\Gamma_{0}(4)$ に関する重さ 2 の正則モジュラー形式であること（{{R:e2}} の非正則な補正項が打ち消し合うこと）を証明せよ。
+
+*5 Valence 公式と消滅補題
+$SL_{2}(\mathbb{Z})$ に関する重さ $k$ の 0 でないモジュラー形式 $f$ について $\mathrm{ord}_{\infty}f+\frac{1}{2}\mathrm{ord}_{i}f+\frac{1}{3}\mathrm{ord}_{\rho}f+\sum_{p}\mathrm{ord}_{p}f=\frac{k}{12}$ を基本領域の周上での $\frac{f'}{f}$ の積分で証明せよ。これを用いて、$\Gamma_{0}(4)$ に関する重さ 2 のモジュラー形式で $q$ 展開の $q^{0},q^{1}$ の係数がともに 0 のものは恒等的に 0 であることを、剰余類にわたる積をとって示せ。
+
+*5 Jacobi の四平方定理 {four-squares}
+正の整数 $n$ を四つの整数の平方和として表す方法の数 $r_{4}(n)$ について $r_{4}(n)=8\sum_{d\mid n,\ 4\nmid d}d$ を、$\theta^{4}=-\frac{1}{3}\bigl(E_{2}(\tau)-4E_{2}(4\tau)\bigr)$ を前三問から示して証明せよ（Jacobi 1834）。系として、すべての正の整数は四つの平方数の和で表されること（Lagrange 1770）を導け。
+
+=part 第 III 部　解析学の大定理 | THE GREAT THEOREMS OF ANALYSIS &mdash; 109 to 156
+複素積分は、実数や整数についての深い事実を証明する道具になる。$e$ と $\pi$ の超越性、Gelfond–Schneider の定理、Paley–Wiener の定理と Hardy の不確定性原理、Runge の近似定理、Phragmén–Lindelöf の原理から Riesz–Thorin の補間定理と Müntz の定理まで ― 複素関数論が解析学全体の推進力であることを示す。
+
+=ch 第 10 章　超越数 ― $e$、$\pi$ から Gelfond–Schneider まで
+
+*4 $e$ と $\pi$ の無理性
+$e$ が無理数であることを級数から、$\pi$ が無理数であることを $\int_{0}^{\pi}\frac{x^{n}(\pi-x)^{n}}{n!}\sin x\,dx$ を用いて（Niven の方法で）証明せよ。
+
+*4 Hermite の恒等式
+多項式 $f$（次数 $m$）と $t\in\mathbb{C}$ について、$I(t)=\int_{0}^{t}e^{t-u}f(u)\,du$（線分 $[0,t]$ 上の積分）が $I(t)=e^{t}\sum_{j=0}^{m}f^{(j)}(0)-\sum_{j=0}^{m}f^{(j)}(t)$ をみたすことと、$|I(t)|\le|t|e^{|t|}\max_{[0,t]}|f|$ を証明せよ。
+
+*5 $e$ の超越性 {e-trans}
+$e$ が超越数であることを、整数係数の代数方程式 $\sum a_{k}e^{k}=0$ を仮定し、$f(x)=x^{p-1}\prod_{k=1}^{n}(x-k)^{p}$（$p$ は大きな素数）に Hermite の恒等式を適用して矛盾を導くことで証明せよ（Hermite 1873）。
+
+*4 代数的整数と対称式
+代数的整数（整数係数のモニック多項式の根）の和と積が代数的整数であること、および代数的数 $\alpha_{1},\dots,\alpha_{n}$ がある整数係数多項式の根の全体であるとき、それらの整数係数対称多項式の値が有理数（主係数を掛ければ整数）であることを証明せよ。
+
+*5 $\pi$ の超越性 {pi-trans}
+$\pi$ が超越数であることを、$i\pi$ が代数的なら $\prod(1+e^{\alpha_{j}})=0$（$\alpha_{j}$ は $i\pi$ の共役）となることから出発し、Hermite の恒等式と前問を用いて証明せよ（Lindemann 1882）。
+
+*4 円積問題の不可能性
+定規とコンパスで作図できる長さは代数的数であることを示し、$\pi$ の超越性から「与えられた円と等しい面積の正方形を作図すること」が不可能であることを証明せよ。
+
+*5 Lindemann–Weierstrass の定理 {lw}
+相異なる代数的数 $\alpha_{1},\dots,\alpha_{n}$ と、すべては $0$ でない代数的数 $\beta_{1},\dots,\beta_{n}$ について $\sum\beta_{j}e^{\alpha_{j}}\neq0$ であることを証明せよ（Lindemann 1882、Weierstrass 1885）。
+
+*4 Lindemann–Weierstrass の系
+$0$ でない代数的数 $\alpha$ について $e^{\alpha}$、$\sin\alpha$、$\cos\alpha$、$\tan\alpha$ が超越数であり、$1$ 以外の正の代数的数 $\alpha$ について $\log\alpha$ が超越数であることを証明せよ。
+
+*4 Siegel の補題
+$M<N$ のとき、絶対値が $B$ 以下の整数を係数とする $M$ 個の $N$ 変数一次方程式は、$|x_{j}|\le(NB)^{M/(N-M)}$ をみたす $0$ でない整数解をもつことを、鳩の巣原理で証明せよ（Siegel 1929）。
+
+*4 多くの零点をもつ関数の Schwarz 型補題
+$f$ が $|z|\le R$ で正則で、$|z|\le r$（$r<R$）内に重複度込みで $N$ 個の零点をもつなら、$\max_{|z|\le r}|f|\le\left(\frac{2rR}{R^{2}-r^{2}}\right)^{N}\max_{|z|=R}|f|$、特に $R\ge2r$ のとき $\max_{|z|\le r}|f|\le\left(\frac{3r}{R}\right)^{N}\max_{|z|=R}|f|$ となることを最大値原理で証明せよ。
+
+*4 指数多項式の零点の重複度の評価
+相異なる複素数 $w_{1},\dots,w_{m}$ と次数 $<L$ の多項式 $P_{j}$（すべては 0 でない）について、$F(z)=\sum_{j}P_{j}(z)e^{w_{j}z}$ の任意の点における零点の重複度は $mL-1$ 以下であることを、$m$ に関する帰納法と微分作用素を用いて証明せよ。
+
+*5 Gelfond–Schneider の定理 {gelfond}
+$\alpha\neq0,1$ と $\beta\notin\mathbb{Q}$ が代数的数なら、$\alpha^{\beta}$（任意の値）は超越数であることを、Siegel の補題で構成した補助関数 $F(z)=\sum_{k,l}c_{kl}e^{(k+l\beta)z\log\alpha}$ に前二問を適用して証明せよ（Gelfond 1934、Schneider 1934）。$2^{\sqrt2}$、$e^{\pi}$、$\frac{\log3}{\log2}$ の超越性を導け。
