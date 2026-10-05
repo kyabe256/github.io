@@ -1,0 +1,123 @@
+=ch 第 11 回　留数定理
+
+*3 留数定理 {residue-thm}
+$\Omega$ を円板から有限個の閉円板を除いた形の有界領域（あるいは円板そのもの）とし、$f$ が $\overline\Omega$ の近傍で $\Omega$ 内の有限個の点 $a_{1},\dots,a_{k}$ を除いて正則なら、$\int_{\partial\Omega}f\,dz=2\pi i\sum_{j}\mathrm{Res}_{z=a_{j}}f$ であることを証明せよ。ここで留数は Laurent 展開の $(z-a)^{-1}$ の係数である。
+
+*3 単純極における留数 {res-simple}
+$a$ が $f$ の単純極なら $\mathrm{Res}_{z=a}f=\lim_{z\to a}(z-a)f(z)$ を示し、$g,h$ が $a$ で正則、$g(a)\neq0$、$h$ が $a$ に単純零点をもつなら $\mathrm{Res}_{z=a}\frac{g}{h}=\frac{g(a)}{h'(a)}$ であることを証明せよ。
+
+*3 高位の極における留数
+$a$ が $f$ の高々 $m$ 位の極なら $\mathrm{Res}_{z=a}f=\frac{1}{(m-1)!}\lim_{z\to a}\frac{d^{m-1}}{dz^{m-1}}\bigl((z-a)^{m}f(z)\bigr)$ であることを証明せよ。
+
+*3 無限遠点の留数と留数の総和
+$\mathrm{Res}_{z=\infty}f=-\frac{1}{2\pi i}\int_{|z|=R}f\,dz$（$R$ 大）と定義し、$\mathrm{Res}_{z=\infty}f=-\mathrm{Res}_{w=0}\frac{1}{w^{2}}f\left(\frac{1}{w}\right)$ を示せ。有理関数の、無限遠点を含むすべての留数の総和が $0$ であることを証明せよ。
+
+*3 留数による周回積分の計算
+$\int_{|z|=2}\frac{e^{z}}{z(z-1)^{2}}dz=2\pi i$、$\int_{|z|=1}\frac{dz}{\sin z}=2\pi i$、$\int_{|z|=1}z^{n}e^{1/z}dz=\frac{2\pi i}{(n+1)!}$（$n\ge0$）を留数を用いて証明せよ。
+
+*3 偏角の原理 {argp}
+$f$ が $\overline\Omega$（大問 {{R:residue-thm}} と同じ型の領域）の近傍で有理型で $\partial\Omega$ 上に零点も極ももたないなら、$\frac{1}{2\pi i}\int_{\partial\Omega}\frac{f'}{f}dz$ が $\Omega$ 内の零点の個数から極の個数を引いたもの（重複度込み）に等しいことを証明せよ。
+
+*3 Rouché の定理 {rouche}
+$f,g$ が閉円板 $|z-a|\le r$ の近傍で正則で、$|z-a|=r$ 上で $|f-g|<|f|$ なら、$f$ と $g$ は $|z-a|<r$ に同じ個数の零点（重複度込み）をもつことを証明せよ。
+
+*3 Rouché の定理による根の個数
+$z^{5}+3z+1$ は $|z|<1$ にちょうど 1 個、$|z|<2$ にちょうど 5 個の零点をもつことを証明せよ。Rouché の定理を用いて代数学の基本定理を再証明せよ。
+
+*4 Hurwitz の定理 {hurwitz}
+領域上の正則関数列 $f_{n}$ が $f\not\equiv0$ に広義一様収束するなら、$f$ の零点 $a$ の任意の小さな近傍で、十分大きな $n$ について $f_{n}$ は $f$ と同じ個数の零点をもつことを証明せよ。系として、単射な正則関数の広義一様極限は単射か定数であることを示せ。
+
+*4 開写像定理 {open}
+領域上の定数でない正則関数は開写像であることを、偏角の原理を用いて証明せよ。$f'(a)=0$ のとき $f$ は $a$ の近くで $m$ 対 1（$m$ は $f-f(a)$ の零点の位数）であることを示せ。
+
+*4 局所逆関数とその積分表示
+$f'(a)\neq0$ なら $f$ は $a$ の近傍で単射であり、逆関数が $f^{-1}(w)=\frac{1}{2\pi i}\int_{|z-a|=r}\frac{zf'(z)}{f(z)-w}dz$（$w$ は $f(a)$ に十分近い）で与えられ正則であることを証明せよ。
+
+*4 Lagrange の反転公式
+$\varphi$ が $0$ の近傍で正則で $\varphi(0)\neq0$ のとき、$w=\frac{z}{\varphi(z)}$ の逆関数 $z=\sum_{n\ge1}b_{n}w^{n}$ について $b_{n}=\frac{1}{n}[z^{n-1}]\varphi(z)^{n}$ を留数を用いて証明せよ。$z=we^{z}$ の解について $z=\sum\frac{n^{n-1}}{n!}w^{n}$ を導け。
+
+*4 $\pi\cot\pi z$ の部分分数展開 {cot}
+$\pi\cot\pi z=\frac{1}{z}+\sum_{n\ge1}\frac{2z}{z^{2}-n^{2}}$ を、両辺の差が有界な整関数であることを示して（あるいは正方形の周上での留数計算で）証明せよ。
+
+*4 $\zeta(2)$ と $\zeta(4)$
+$\frac{\pi\cot\pi z}{z^{2}}$、$\frac{\pi\cot\pi z}{z^{4}}$ の正方形 $|\mathrm{Re}\,z|,|\mathrm{Im}\,z|\le N+\frac{1}{2}$ の周上の積分が $N\to\infty$ で $0$ に近づくことを示し、$\sum_{n\ge1}\frac{1}{n^{2}}=\frac{\pi^{2}}{6}$、$\sum_{n\ge1}\frac{1}{n^{4}}=\frac{\pi^{4}}{90}$ を証明せよ。
+
+*4 交代級数の和
+$a>0$ について $\sum_{n\in\mathbb{Z}}\frac{(-1)^{n}}{n^{2}+a^{2}}=\frac{\pi}{a\sinh\pi a}$ を、$\frac{\pi}{\sin\pi z}$ を用いた留数計算で証明せよ。
+
+*4 超越方程式の根の個数
+$\lambda>1$ のとき、方程式 $ze^{\lambda-z}=1$ は単位円板内にちょうど 1 個の解をもち、それが正の実数であることを証明せよ。
+
+*4 零点の冪和
+$f$ が閉円板の近傍で正則で、円周上に零点をもたず、内部の零点が $z_{1},\dots,z_{n}$（重複度込み）なら、$\frac{1}{2\pi i}\int\frac{z^{k}f'(z)}{f(z)}dz=\sum_{j}z_{j}^{k}$ を証明せよ。より一般に、正則関数 $g$ について $\sum_{j}g(z_{j})$ の積分表示を与えよ。
+
+*4 Eneström–掛谷の定理
+$0<a_{0}\le a_{1}\le\cdots\le a_{n}$ なら、$p(z)=\sum_{k=0}^{n}a_{k}z^{k}$ のすべての零点は $|z|\le1$ にあることを、$(1-z)p(z)$ を考えて証明せよ。
+
+*5 $\zeta(2k)$ と Bernoulli 数
+$\frac{z}{e^{z}-1}=\sum\frac{B_{n}}{n!}z^{n}$ と $\pi\cot\pi z$ の部分分数展開を比べて、$\sum_{n\ge1}\frac{1}{n^{2k}}=\frac{(-1)^{k+1}B_{2k}(2\pi)^{2k}}{2\,(2k)!}$ をすべての正の整数 $k$ について証明せよ。
+
+*5 単射な整関数
+単射な整関数は $f(z)=az+b$（$a\neq0$）に限ることを、無限遠点が真性特異点でないこと（Casorati–Weierstrass の定理と開写像定理）を用いて証明せよ。
+
+=ch 第 12 回　実関数の定積分への留数定理の応用
+
+*3 三角関数の有理式の積分
+$a>|b|$ について $\int_{0}^{2\pi}\frac{d\theta}{a+b\cos\theta}=\frac{2\pi}{\sqrt{a^{2}-b^{2}}}$ を、$z=e^{i\theta}$ と置換して留数定理で証明せよ。
+
+*3 冪の積分
+$\int_{0}^{2\pi}\cos^{2n}\theta\,d\theta=\frac{2\pi}{4^{n}}\binom{2n}{n}$ を、$\cos\theta=\frac{z+z^{-1}}{2}$ と留数を用いて証明せよ。
+
+*3 有理関数の積分の一般定理 {rational-int}
+多項式 $P,Q$ について $\deg Q\ge\deg P+2$ で $Q$ が実軸上に零点をもたないなら、$\int_{-\infty}^{\infty}\frac{P(x)}{Q(x)}dx=2\pi i\sum_{\mathrm{Im}\,a>0}\mathrm{Res}_{z=a}\frac{P}{Q}$ を証明せよ。
+
+*3 $1/(1+x^{4})$ の積分
+$\int_{-\infty}^{\infty}\frac{dx}{1+x^{4}}=\frac{\pi}{\sqrt2}$ を前問を用いて証明せよ。
+
+*3 $(1+x^{2})^{-n-1}$ の積分
+$\int_{-\infty}^{\infty}\frac{dx}{(1+x^{2})^{n+1}}=\frac{\pi}{4^{n}}\binom{2n}{n}$ を、$z=i$ における $n+1$ 位の極の留数を計算して証明せよ。
+
+*3 Jordan の補題 {jordan}
+$C_{R}$ を上半平面の半円 $|z|=R$、$\mathrm{Im}\,z\ge0$ とし、$\max_{C_{R}}|f|\to0$（$R\to\infty$）なら、$a>0$ について $\int_{C_{R}}f(z)e^{iaz}dz\to0$ であることを、$\sin\theta\ge\frac{2\theta}{\pi}$（$0\le\theta\le\frac{\pi}{2}$）を用いて証明せよ。
+
+*3 Fourier 型積分
+$\int_{-\infty}^{\infty}\frac{\cos ax}{1+x^{2}}dx=\pi e^{-|a|}$（$a\in\mathbb{R}$）を、Jordan の補題を用いて証明せよ。
+
+*4 鍵穴積分 {keyhole}
+$0<a<1$ について $\int_{0}^{\infty}\frac{x^{a-1}}{1+x}dx=\frac{\pi}{\sin\pi a}$ を、正の実軸に切れ目を入れた鍵穴型の積分路で証明せよ。
+
+*4 偶関数の Mellin 型積分
+$0<a<2$ について $\int_{0}^{\infty}\frac{x^{a-1}}{1+x^{2}}dx=\frac{\pi}{2\sin\frac{\pi a}{2}}$ を、前問への置換または上半平面の積分路で証明せよ。
+
+*4 対数を含む積分
+$\int_{0}^{\infty}\frac{\log x}{1+x^{2}}dx=0$、$\int_{0}^{\infty}\frac{(\log x)^{2}}{1+x^{2}}dx=\frac{\pi^{3}}{8}$ を、上半平面の切れ込みを避けた半円環の積分路で $\frac{(\mathrm{Log}\,z)^{2}}{1+z^{2}}$ などを積分して証明せよ。
+
+*4 $\log\sin$ の積分
+$\int_{0}^{\pi}\log\sin\theta\,d\theta=-\pi\log2$ を、$\mathrm{Log}(1-e^{2i\theta})$ を考えて（または $1-z$ の対数を単位円周上で積分して）証明せよ。広義積分の収束も示せ。
+
+*4 $\sin^{2}x/x^{2}$ の積分
+$\int_{-\infty}^{\infty}\frac{\sin^{2}x}{x^{2}}dx=\pi$ を、$\frac{1-e^{2iz}}{z^{2}}$ を原点を避ける半円付きの積分路で積分して証明せよ。
+
+*4 指数関数を含む長方形積分路
+$0<a<1$ について $\int_{-\infty}^{\infty}\frac{e^{ax}}{1+e^{x}}dx=\frac{\pi}{\sin\pi a}$ を、長方形 $[-R,R]\times[0,2\pi]$ の周上の積分で証明せよ。大問 {{R:keyhole}} との関係を述べよ。
+
+*4 扇形積分路
+$n\ge2$ について $\int_{0}^{\infty}\frac{dx}{1+x^{n}}=\frac{\pi/n}{\sin(\pi/n)}$ を、中心角 $\frac{2\pi}{n}$ の扇形の周上で積分して証明せよ。
+
+*4 半留数の補題と主値積分
+$f$ が $a$ に単純極をもつとき、$a$ を中心とする角度 $\alpha$ の円弧 $C_{\varepsilon}$ について $\int_{C_{\varepsilon}}f\,dz\to i\alpha\,\mathrm{Res}_{z=a}f$（$\varepsilon\to0$）を証明し、主値 $\mathrm{p.v.}\int_{-\infty}^{\infty}\frac{e^{ix}}{x}dx=i\pi$ を導け。
+
+*4 $x\sin x/(x^{2}+a^{2})$ の積分
+$a>0$ について $\int_{0}^{\infty}\frac{x\sin x}{x^{2}+a^{2}}dx=\frac{\pi}{2}e^{-a}$ を証明せよ。被積分関数が絶対可積分でないことに注意し、Jordan の補題の役割を明確にせよ。
+
+*4 原点に極をもつ Fourier 型積分
+$a,b>0$ について $\int_{0}^{\infty}\frac{\sin ax}{x(x^{2}+b^{2})}dx=\frac{\pi}{2b^{2}}(1-e^{-ab})$ を、半留数の補題を用いて証明せよ。
+
+*5 $1/\cosh$ の Fourier 変換
+$\int_{-\infty}^{\infty}\frac{e^{i\xi x}}{\cosh\pi x}dx=\frac{1}{\cosh(\xi/2)}$（$\xi\in\mathbb{R}$）を、長方形 $[-R,R]\times[0,1]$ の周上の積分で証明せよ。$\frac{1}{\cosh\pi x}$ が Fourier 変換で（定数倍とスケールを除いて）自分自身に移ることを確かめよ。
+
+*5 Gamma 関数の相補公式
+$0<s<1$ について $\Gamma(s)\Gamma(1-s)=\frac{\pi}{\sin\pi s}$ を、ベータ積分 $\int_{0}^{\infty}\frac{x^{s-1}}{1+x}dx=\Gamma(s)\Gamma(1-s)$ と大問 {{R:keyhole}} から証明せよ。
+
+*5 Gauss 和
+正の整数 $N$ について $\sum_{n=0}^{N-1}e^{2\pi in^{2}/N}=\frac{1+i^{-N}}{1+i^{-1}}\sqrt N$ を、$\frac{e^{2\pi iz^{2}/N}}{e^{2\pi iz}-1}$ を平行四辺形の周上で積分する方法（Mordell）で証明せよ。

@@ -1,0 +1,123 @@
+=ch 第 3 回　初等関数
+
+*3 指数関数の加法定理 {exp-add}
+$e^{z}=\sum_{n\ge0}\frac{z^{n}}{n!}$ がすべての $z\in\mathbb{C}$ で絶対収束することを示し、Cauchy 積を用いて $e^{z+w}=e^{z}e^{w}$ を証明せよ。系として $e^{z}\neq0$、$(e^{z})^{-1}=e^{-z}$ を導け。
+
+*3 Euler の公式 {euler}
+$\cos\theta=\sum\frac{(-1)^{n}\theta^{2n}}{(2n)!}$、$\sin\theta=\sum\frac{(-1)^{n}\theta^{2n+1}}{(2n+1)!}$ として、実数 $\theta$ について $e^{i\theta}=\cos\theta+i\sin\theta$ を証明し、$|e^{z}|=e^{\mathrm{Re}\,z}$、$\overline{e^{z}}=e^{\bar z}$ を示せ。
+
+*3 指数関数の周期性
+$e^{z}=1\iff z\in2\pi i\mathbb{Z}$ を証明し、$e^{z}=e^{w}\iff z-w\in2\pi i\mathbb{Z}$ を導け。
+
+*3 複素三角関数と加法定理
+$\cos z=\frac{e^{iz}+e^{-iz}}{2}$、$\sin z=\frac{e^{iz}-e^{-iz}}{2i}$ と定義し、$\cos^{2}z+\sin^{2}z=1$ と加法定理 $\sin(z+w)=\sin z\cos w+\cos z\sin w$ をすべての複素数 $z,w$ について証明せよ。
+
+*3 三角関数の零点
+$\sin z=0\iff z\in\pi\mathbb{Z}$、$\cos z=0\iff z\in\frac{\pi}{2}+\pi\mathbb{Z}$ を証明せよ。すなわち複素数の範囲に新しい零点は現れない。
+
+*3 正弦関数の非有界性
+$|\sin(x+iy)|^{2}=\sin^{2}x+\sinh^{2}y$、$|\cos(x+iy)|^{2}=\cos^{2}x+\sinh^{2}y$ を示し、$\sin z$、$\cos z$ が $\mathbb{C}$ 上で有界でないことを証明せよ。
+
+*3 対数の多価性と主値 {log}
+$z\neq0$ に対し $e^{w}=z$ の解全体が $\log|z|+i\arg z+2\pi i\mathbb{Z}$ であることを示し、主値 $\mathrm{Log}\,z=\log|z|+i\,\mathrm{Arg}\,z$（$-\pi<\mathrm{Arg}\,z\le\pi$）が $\mathbb{C}\setminus(-\infty,0]$ で連続であり、負の実軸上で不連続であることを証明せよ。
+
+*3 主値の対数法則の破れ
+$\mathrm{Log}(zw)\equiv\mathrm{Log}\,z+\mathrm{Log}\,w\pmod{2\pi i}$ を示し、等号が成り立たない例を挙げよ。$-\pi<\mathrm{Arg}\,z+\mathrm{Arg}\,w\le\pi$ なら等号が成り立つことを証明せよ。
+
+*3 複素数の冪
+$z^{\alpha}=e^{\alpha\log z}$ の値全体を決定し、$i^{i}$ のすべての値が正の実数であることを示せ。$z^{\alpha}$ の値が有限個となる $\alpha$ の条件を求め、そのとき値の個数を決定せよ。
+
+*3 Dirichlet 核の公式
+$\theta\notin2\pi\mathbb{Z}$ について $\sum_{k=-n}^{n}e^{ik\theta}=\frac{\sin(n+\frac{1}{2})\theta}{\sin\frac{\theta}{2}}$ と $\sum_{k=0}^{n}\cos k\theta=\frac{1}{2}+\frac{\sin(n+\frac{1}{2})\theta}{2\sin\frac{\theta}{2}}$ を等比数列の和として証明せよ。
+
+*4 三角関数の全射性と逆三角関数
+任意の $w\in\mathbb{C}$ について $\sin z=w$、$\cos z=w$ が解をもつことを示し、$\sin z=w$ の解全体が $-i\log\bigl(iw+\sqrt{1-w^{2}}\bigr)$（$\sqrt{\ }$ は両方の値）で与えられることを証明せよ。
+
+*4 正接関数の値域
+$\tan z=\frac{\sin z}{\cos z}$ は $\pm i$ 以外のすべての複素数値をとり、$\pm i$ をとらないことを証明せよ。
+
+*4 指数関数の単射領域
+$e^{z}$ が帯 $\{a<\mathrm{Im}\,z\le a+2\pi\}$ 上で単射であり、$\mathbb{C}\setminus\{0\}$ への全単射を与えることを証明せよ。開帯 $\{a<\mathrm{Im}\,z<a+2\pi\}$ の像を決定せよ。
+
+*4 指数関数の極限表示
+任意の $z\in\mathbb{C}$ について $\lim_{n\to\infty}\left(1+\frac{z}{n}\right)^{n}=e^{z}$ を証明せよ。
+
+*4 指数関数の評価
+$|e^{z}-1|\le e^{|z|}-1\le|z|e^{|z|}$ をすべての $z$ について証明し、$|z|\le1$ なら $\frac{1}{4}|z|\le|e^{z}-1|\le\frac{7}{4}|z|$ を示せ。
+
+*4 余弦が実数となる点
+$\cos z\in\mathbb{R}\iff z\in\mathbb{R}$ または $\mathrm{Re}\,z\in\pi\mathbb{Z}$ を証明せよ。$\cos z\in[-1,1]\iff z\in\mathbb{R}$ を示せ。
+
+*4 双曲線関数と三角関数
+$\cosh z=\cos(iz)$、$\sinh z=-i\sin(iz)$ を示し、$\cosh^{2}z-\sinh^{2}z=1$ と $|\sinh y|\le|\sin(x+iy)|\le\cosh y$ を証明せよ。
+
+*5 連続な対数の非存在
+単位円周 $S^{1}$ 上の連続関数 $f$ で $e^{f(z)}=z$（$z\in S^{1}$）をみたすものは存在しないこと、また $g(z)^{2}=z$ をみたす連続関数 $g$ も存在しないことを証明せよ。
+
+*5 円周への連続準同型
+$(\mathbb{R},+)$ から $(S^{1},\cdot)$ への連続な準同型は $t\mapsto e^{iat}$（$a\in\mathbb{R}$）に限ること、$(\mathbb{C},+)$ から $(\mathbb{C}\setminus\{0\},\cdot)$ への連続な準同型は $z\mapsto e^{az+b\bar z}$ に限ることを証明せよ。
+
+*5 円周率の解析的定義
+$\cos$ を級数で定義し、$\cos x$ が $(0,2)$ にちょうど一つの零点をもつことを示して、その零点の 2 倍を $\pi$ と定義せよ。このとき $t\mapsto e^{it}$（$0\le t\le2\pi$）が単位円周を一周し、その弧長が $2\pi$ に等しいことを証明せよ。
+
+=ch 第 4 回　複素数列と複素関数の極限・連続性
+
+*3 複素数列の収束
+$z_{n}\to z\iff\mathrm{Re}\,z_{n}\to\mathrm{Re}\,z$ かつ $\mathrm{Im}\,z_{n}\to\mathrm{Im}\,z$ を示し、$z_{n}\to z$ なら $|z_{n}|\to|z|$、$\bar z_{n}\to\bar z$ となることを証明せよ。
+
+*3 複素数の完備性 {complete}
+$\mathbb{C}$ の Cauchy 列は収束することを、実数の完備性から証明せよ。
+
+*3 Bolzano–Weierstrass の定理
+$\mathbb{C}$ の有界な数列は収束する部分列をもつことを証明せよ。
+
+*3 絶対収束と再配列
+複素級数 $\sum z_{n}$ が絶対収束すれば収束することを示し、絶対収束する級数は項の順序を任意に並べ替えても同じ和に収束することを証明せよ。
+
+*3 比判定法と根判定法
+複素級数について、$\limsup|z_{n+1}/z_{n}|<1$ または $\limsup|z_{n}|^{1/n}<1$ なら絶対収束し、$\liminf|z_{n+1}/z_{n}|>1$ または $\limsup|z_{n}|^{1/n}>1$ なら発散することを証明せよ。
+
+*3 複素関数の極限と連続性
+$f=u+iv$ が $a$ で連続 $\iff u,v$ が $a$ で連続であることを示せ。$\lim_{z\to0}\frac{\bar z}{z}$ と $\lim_{z\to0}\frac{\mathrm{Re}\,z\cdot\mathrm{Im}\,z}{|z|^{2}}$ が存在しないことを証明せよ。
+
+*3 有界閉集合上の連続関数
+有界閉集合 $K\subset\mathbb{C}$ 上の連続関数 $f$ について、$|f|$ が最大値と最小値をとること、$f$ が一様連続であることを証明せよ。
+
+*3 多項式の無限遠での挙動
+次数 $n\ge1$ の多項式 $p$ について、$R$ を十分大きくとれば $|z|\ge R$ で $\frac{1}{2}|a_{n}||z|^{n}\le|p(z)|\le2|a_{n}||z|^{n}$ となることを証明せよ。特に $|p(z)|\to\infty$（$|z|\to\infty$）である。
+
+*3 等比級数
+$\sum_{n\ge0}z^{n}$ は $|z|<1$ で $\frac{1}{1-z}$ に収束し、$|z|\ge1$ で発散することを証明せよ。$|z|\le r<1$ で一様収束することを示せ。
+
+*4 単位円周上の条件収束
+$\sum_{n\ge1}\frac{z^{n}}{n}$ が $|z|=1$、$z\neq1$ で収束することを、Abel の部分和公式（Dirichlet の判定法）を用いて証明せよ。
+
+*4 Weierstrass の M 判定法
+集合 $E$ 上の関数列 $f_{n}$ について $|f_{n}(z)|\le M_{n}$、$\sum M_{n}<\infty$ なら $\sum f_{n}$ は $E$ 上で一様絶対収束することを示し、連続関数の一様収束極限が連続であることを証明せよ。
+
+*4 Cauchy–Hadamard の公式 {ch}
+冪級数 $\sum a_{n}(z-c)^{n}$ は $R=1/\limsup|a_{n}|^{1/n}$ について、$|z-c|<R$ で絶対収束し $|z-c|>R$ で発散すること、$|z-c|\le r<R$ で一様収束することを証明せよ。
+
+*4 Abel の補題
+冪級数 $\sum a_{n}z^{n}$ が $z_{0}\neq0$ で収束すれば、$|z|<|z_{0}|$ をみたすすべての $z$ で絶対収束することを証明せよ。
+
+*4 Mertens の定理
+$\sum a_{n}$ が絶対収束し $\sum b_{n}$ が収束するなら、Cauchy 積 $\sum c_{n}$（$c_{n}=\sum_{k\le n}a_{k}b_{n-k}$）は $(\sum a_{n})(\sum b_{n})$ に収束することを証明せよ。両方が条件収束のときに成り立たない例を挙げよ。
+
+*4 Heine–Borel の定理
+$\mathbb{C}$ の部分集合について、有界閉 $\iff$ 任意の開被覆が有限部分被覆をもつ $\iff$ 任意の点列が集積点を集合内にもつ、を証明せよ。
+
+*4 領域の折れ線連結性
+連結な開集合 $D\subset\mathbb{C}$ の任意の 2 点は、座標軸に平行な線分からなる折れ線で $D$ 内で結べることを証明せよ。
+
+*4 連続性の位相的特徴づけ
+$f:D\to\mathbb{C}$（$D$ 開集合）が連続 $\iff$ 任意の開集合の逆像が開集合であることを示し、連続関数の零点集合が $D$ の相対閉集合であることを証明せよ。
+
+*4 対数の極限表示
+$z\in\mathbb{C}\setminus(-\infty,0]$ について $\lim_{n\to\infty}n\bigl(z^{1/n}-1\bigr)=\mathrm{Log}\,z$（$z^{1/n}=e^{\frac{1}{n}\mathrm{Log}\,z}$）を証明せよ。
+
+*5 平方根の Newton 法
+$a\neq0$ とし、$z_{n+1}=\frac{1}{2}\left(z_{n}+\frac{a}{z_{n}}\right)$ を考える。$z_{0}$ が $a$ の二つの平方根の垂直二等分線上にないなら、$z_{n}$ は $z_{0}$ に近い方の平方根に収束することを、一次分数変換で $z\mapsto z^{2}$ に共役であることを示して証明せよ。
+
+*5 Abel の極限定理 {abel}
+$\sum a_{n}$ が収束するとき、$f(z)=\sum a_{n}z^{n}$ について、$z$ が $1$ に Stolz 角 $\{|1-z|\le M(1-|z|)\}$ 内から近づくなら $f(z)\to\sum a_{n}$ となることを証明せよ。$\sum\frac{(-1)^{n+1}}{n}=\log2$ を導け。

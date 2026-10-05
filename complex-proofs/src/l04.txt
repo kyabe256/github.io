@@ -1,0 +1,126 @@
+=part 第 III 部　複素積分と Cauchy の定理 | COMPLEX INTEGRATION &mdash; 121 to 180
+授業の第 7 回〜第 9 回に対応する。曲線に沿う複素積分の定義、原始関数、回転数、Goursat の補題から Cauchy の積分定理、Cauchy の積分公式とその帰結（Liouville、最大値原理、Morera）までを証明する。複素関数論の心臓部である。
+
+=ch 第 7 回　複素積分
+
+*3 径数付けによらないこと
+区分的 $C^{1}$ 曲線 $\gamma:[a,b]\to\mathbb{C}$ と連続関数 $f$ について $\int_{\gamma}f\,dz=\int_{a}^{b}f(\gamma(t))\gamma'(t)\,dt$ と定義する。向きを保つ $C^{1}$ 級の径数変換で積分値が変わらず、向きを逆にすると符号が反転することを証明せよ。
+
+*3 ML 不等式 {ml}
+$\left|\int_{\gamma}f\,dz\right|\le\int_{\gamma}|f||dz|\le\max_{\gamma}|f|\cdot L(\gamma)$ を証明せよ。ただし $L(\gamma)=\int_{a}^{b}|\gamma'(t)|\,dt$ は $\gamma$ の長さである。
+
+*3 基本積分
+円 $|z-a|=r$ を正の向きに一周する曲線について、$\int(z-a)^{n}dz$ が $n=-1$ なら $2\pi i$、それ以外の整数 $n$ なら $0$ であることを証明せよ。
+
+*3 原始関数と積分 {primitive}
+$F$ が $\gamma$ を含む開集合上で正則で $F'=f$（$f$ 連続）なら $\int_{\gamma}f\,dz=F(\gamma(b))-F(\gamma(a))$ を示し、特に閉曲線上の積分が $0$ になることを証明せよ。
+
+*3 $1/z$ は原始関数をもたない
+$\frac{1}{z}$ は $\mathbb{C}\setminus\{0\}$ 上に原始関数をもたないことを証明せよ。$\mathbb{C}\setminus(-\infty,0]$ 上では原始関数をもつことを示せ。
+
+*3 実線積分による表示
+$f=u+iv$、$dz=dx+i\,dy$ について $\int_{\gamma}f\,dz=\int_{\gamma}(u\,dx-v\,dy)+i\int_{\gamma}(v\,dx+u\,dy)$ を証明せよ。
+
+*3 積分と極限の交換
+$\gamma$ 上で $f_{n}\to f$ が一様収束するなら $\int_{\gamma}f_{n}\,dz\to\int_{\gamma}f\,dz$ を示し、冪級数を収束円内の曲線上で項別積分できることを証明せよ。
+
+*3 曲線の長さ
+$C^{1}$ 曲線の長さ $L(\gamma)$ が径数付けによらないことを示し、半径 $r$ の円周の長さが $2\pi r$、$\gamma(t)=e^{(-1+i)t}$（$0\le t<\infty$）の長さが $\sqrt2$ であることを証明せよ。
+
+*4 原始関数の存在の判定
+領域 $D$ 上の連続関数 $f$ が $D$ 上に原始関数をもつ $\iff$ $D$ 内のすべての区分的 $C^{1}$ 閉曲線 $\gamma$ について $\int_{\gamma}f\,dz=0$ であることを証明せよ。
+
+*4 Green の定理による Cauchy の定理
+$f$ が有界領域 $\Omega$（区分的に滑らかな境界をもち Green の定理が適用できるもの）の閉包の近傍で正則で $f'$ が連続なら、$\int_{\partial\Omega}f\,dz=0$ であることを、Green の定理と Cauchy–Riemann の方程式から証明せよ。
+
+*4 $\bar z$ の積分と面積
+Green の定理が適用できる有界領域 $\Omega$ について $\int_{\partial\Omega}\bar z\,dz=2i\,|\Omega|$（$|\Omega|$ は面積）を証明せよ。$\int_{\partial\Omega}\bar z^{2}dz$ と重心の関係を述べよ。
+
+*4 回転数の整数性 {winding}
+$a$ を通らない区分的 $C^{1}$ 閉曲線 $\gamma$ について、$n(\gamma,a)=\frac{1}{2\pi i}\int_{\gamma}\frac{dz}{z-a}$ が整数であることを、$h(t)=\exp\left(-\int_{0}^{t}\frac{\gamma'(s)}{\gamma(s)-a}ds\right)(\gamma(t)-a)$ が定数であることを示して証明せよ。
+
+*4 回転数の局所定数性
+$n(\gamma,a)$ は $a$ について $\mathbb{C}\setminus\gamma$ の各連結成分上で一定であり、非有界な成分上で $0$ であることを証明せよ。
+
+*4 円の回転数
+円 $|z-c|=r$ を正の向きに一周する曲線について、$|a-c|<r$ なら $n(\gamma,a)=1$、$|a-c|>r$ なら $0$ であることを証明せよ。
+
+*4 Cauchy 型積分の正則性 {cauchy-type}
+区分的 $C^{1}$ 曲線 $\gamma$ 上の連続関数 $\varphi$ について、$F(z)=\int_{\gamma}\frac{\varphi(\zeta)}{\zeta-z}d\zeta$ は $\mathbb{C}\setminus\gamma$ で正則であり、各点 $a\notin\gamma$ の周りで $\mathrm{dist}(a,\gamma)$ を半径とする円板内で冪級数展開できることを証明せよ。$F^{(n)}(z)=n!\int_{\gamma}\frac{\varphi(\zeta)}{(\zeta-z)^{n+1}}d\zeta$ を示せ。
+
+*4 指数関数の周回積分
+$\int_{0}^{2\pi}e^{e^{i\theta}}d\theta=2\pi$ と $\int_{0}^{2\pi}e^{\cos\theta}\cos(\sin\theta-n\theta)\,d\theta=\frac{2\pi}{n!}$（$n\ge0$）を、冪級数の項別積分で証明せよ。
+
+*4 三角形上の積分が 0 なら原始関数
+凸領域 $D$ 上の連続関数 $f$ が、$D$ 内のすべての三角形の周 $\partial T$ について $\int_{\partial T}f\,dz=0$ をみたすなら、$F(z)=\int_{[z_{0},z]}f\,d\zeta$ が $f$ の原始関数であることを証明せよ。
+
+*4 折れ線近似
+区分的 $C^{1}$ 曲線 $\gamma$ と $\gamma$ の近傍で連続な $f$ について、$\gamma$ に内接する折れ線 $\gamma_{n}$（分割の幅 $\to0$）で $\int_{\gamma_{n}}f\,dz\to\int_{\gamma}f\,dz$ となることを、$f$ が正則な場合と一般の連続関数の場合とでそれぞれ証明せよ。
+
+*5 回転数のホモトピー不変性
+$\mathbb{C}\setminus\{a\}$ 内で（閉曲線のまま）連続変形できる二つの区分的 $C^{1}$ 閉曲線の回転数が等しいことを、偏角の連続な持ち上げを用いて証明せよ。
+
+*5 多角形に対する Jordan の曲線定理
+自己交差のない閉折れ線 $P$ について、$\mathbb{C}\setminus P$ がちょうど二つの連結成分（有界なものと非有界なもの）をもち、有界な成分の点 $a$ について $n(P,a)=\pm1$ であることを証明せよ。
+
+=ch 第 8 回　Cauchy の積分定理
+
+*3 Goursat の補題 {goursat}
+$f$ が開集合 $U$ 上で正則（$f'$ の連続性は仮定しない）なら、$U$ に含まれる任意の閉三角形 $T$ について $\int_{\partial T}f\,dz=0$ であることを、三角形の 4 分割を繰り返す方法で証明せよ。
+
+*3 凸領域の Cauchy の定理 {cauchy-convex}
+凸領域上の正則関数は原始関数をもち、領域内の任意の区分的 $C^{1}$ 閉曲線に沿う積分は $0$ であることを証明せよ。
+
+*3 星形領域の Cauchy の定理
+星形領域（ある点 $z_{0}$ と任意の点を結ぶ線分が領域に含まれる）上の正則関数について、前問と同じ結論が成り立つことを証明せよ。
+
+*3 円環での積分の半径によらないこと
+$f$ が円環 $\{r_{1}<|z-a|<r_{2}\}$ で正則なら、$\int_{|z-a|=r}f\,dz$ は $r\in(r_{1},r_{2})$ によらないことを証明せよ。
+
+*3 部分分数による周回積分
+Cauchy の定理と基本積分を用いて、$\int_{|z|=2}\frac{dz}{z^{2}-1}=0$、$\int_{|z|=2}\frac{z\,dz}{z^{2}-1}=2\pi i$、$\int_{|z-1|=1}\frac{dz}{z^{2}-1}=\pi i$ を証明せよ。
+
+*3 楕円上の積分
+楕円 $\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}=1$ を正の向きに一周する曲線について $\int\frac{dz}{z}=2\pi i$ を Cauchy の定理で示し、それを用いて $\int_{0}^{2\pi}\frac{d\theta}{a^{2}\cos^{2}\theta+b^{2}\sin^{2}\theta}=\frac{2\pi}{ab}$ を証明せよ。
+
+*4 例外点をもつ Goursat の補題
+$f$ が $U$ で連続で、$U$ の 1 点 $p$ を除いて正則なら、Goursat の補題の結論がなお成り立つことを証明せよ。
+
+*4 単連結領域の対数
+単連結領域（ここでは「任意の閉曲線が領域内で 1 点に連続変形できる」ものとする）$D$ 上の零点をもたない正則関数 $f$ に対し、$e^{g}=f$ をみたす正則関数 $g$ が存在することを証明せよ。系として $\sqrt{f}$ の正則な分枝の存在を示せ。
+
+*4 ホモトピー形の Cauchy の定理
+領域 $D$ 内で端点を固定してホモトピックな二つの曲線に沿う、$D$ 上の正則関数の積分は等しいことを証明せよ。閉曲線のホモトピーについても同様の結論を示せ。
+
+*4 Dirichlet 積分 {dirichlet}
+$\frac{e^{iz}}{z}$ を、実軸上の $[-R,-\varepsilon]$、$[\varepsilon,R]$ と上半平面の半円からなる曲線上で積分して、$\int_{0}^{\infty}\frac{\sin x}{x}dx=\frac{\pi}{2}$（広義積分）を証明せよ。
+
+*4 Gauss 積分の Fourier 変換
+長方形 $[-R,R]\times[0,b]$ の周上で $e^{-z^{2}}$ を積分して、$\int_{-\infty}^{\infty}e^{-x^{2}}\cos(2bx)\,dx=\sqrt\pi\,e^{-b^{2}}$ を証明せよ。$\int e^{-x^{2}}dx=\sqrt\pi$ は既知としてよい。
+
+*4 Fresnel 積分
+扇形 $\{re^{i\theta}:0\le r\le R,\ 0\le\theta\le\frac{\pi}{4}\}$ の周上で $e^{iz^{2}}$ を積分して、$\int_{0}^{\infty}\cos(x^{2})dx=\int_{0}^{\infty}\sin(x^{2})dx=\frac{1}{2}\sqrt{\frac{\pi}{2}}$ を証明せよ。
+
+*4 対数の平均値 {log-mean}
+$0<r<1$ について $\int_{0}^{2\pi}\log|1-re^{i\theta}|\,d\theta=0$ を、$\mathrm{Log}(1-z)$ の冪級数展開を用いて証明せよ。
+
+*4 複数の境界をもつ領域の Cauchy の定理
+円板 $|z|<R$ から互いに交わらない閉円板 $\overline{D_{1}},\dots,\overline{D_{m}}$ を除いた領域の閉包の近傍で正則な $f$ について、$\int_{|z|=R}f\,dz=\sum_{k}\int_{\partial D_{k}}f\,dz$（いずれも正の向き）を証明せよ。
+
+*4 円環上の原始関数の存在条件
+$f$ が円環 $A=\{r_{1}<|z|<r_{2}\}$ で正則なとき、$f$ が $A$ 上に原始関数をもつ $\iff\int_{|z|=r}f\,dz=0$（ある $r$ について）であることを証明せよ。
+
+*5 閉包まで連続な関数に対する Cauchy の定理
+$\Omega$ を星形の有界領域でその境界が区分的 $C^{1}$ の Jordan 閉曲線 $\gamma$ であるものとし、$f$ が $\overline\Omega$ で連続、$\Omega$ で正則なら $\int_{\gamma}f\,dz=0$ であることを、$\gamma$ を中心に向かって縮めた曲線への近似によって証明せよ。
+
+*5 円周版の Morera 型定理
+$f$ が円板上で連続で、円板に含まれるすべての円周 $C$ について $\int_{C}f\,dz=0$ なら、$f$ は正則であることを証明せよ（三角形でなく円周のみを仮定することに注意）。
+
+*3 複素積分の部分積分
+$f,g$ が区分的 $C^{1}$ 曲線 $\gamma$ の近傍で正則なら $\int_{\gamma}fg'\,dz=f(\gamma(b))g(\gamma(b))-f(\gamma(a))g(\gamma(a))-\int_{\gamma}f'g\,dz$ を証明し、$\int_{|z|=1}\bar z^{\,n}z^{m}\,dz$ をすべての整数 $m,n\ge0$ について求めよ。
+
+*4 $\log|e^{i\theta}-a|$ の平均
+$|a|\neq1$ について $\int_{0}^{2\pi}\log|e^{i\theta}-a|\,d\theta=2\pi\log\max(1,|a|)$ を、大問 {{R:log-mean}} を用いて証明せよ。
+
+*5 回転した積分路による Mellin 型積分
+$0<a<1$ について、第一象限の扇形の周上で $z^{a-1}e^{-z}$ を積分し、$\int_{0}^{\infty}x^{a-1}\cos x\,dx=\Gamma(a)\cos\frac{\pi a}{2}$、$\int_{0}^{\infty}x^{a-1}\sin x\,dx=\Gamma(a)\sin\frac{\pi a}{2}$ を証明せよ。ここで $\Gamma(a)=\int_{0}^{\infty}t^{a-1}e^{-t}dt$ である。

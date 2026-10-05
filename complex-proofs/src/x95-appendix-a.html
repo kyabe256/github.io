@@ -1,0 +1,40 @@
+<h2 class="plain">付録 A　依存の地図</h2>
+
+<p>授業の各回は前の回の上に積み上がる。ここでは、260 題のなかで特に多くの問題の土台となる結果の筋を挙げる。番号は大問番号である。</p>
+
+<h3 class="sec">数と関数の土台（第 1〜4 回）</h3>
+<table class="legend">
+  <tr><th>極形式 → 冪根</th><td>{{R:triangle}}（三角不等式）, {{R:demoivre}}（de Moivre）→ 1 の冪根・複素数の冪根 → 一次分数変換 {{R:mobius}} → 円板の自己同型 {{R:disk-aut}}。</td></tr>
+  <tr><th>級数 → 初等関数</th><td>{{R:complete}}（完備性）→ {{R:ch}}（Cauchy–Hadamard）→ {{R:exp-add}}（指数関数の加法定理）→ {{R:euler}}（Euler の公式）→ {{R:log}}（対数の主値）。<strong>授業で「定義」として与えられる初等関数の性質は、すべて冪級数の収束から出る。</strong></td></tr>
+  <tr><th>級数の境界での挙動</th><td>{{R:ch}} → {{R:abel}}（Abel の極限定理）→ 第 10 回の二項級数・第 13 回の Wallis の公式。</td></tr>
+</table>
+
+<h3 class="sec">微分から積分へ（第 5〜9 回）</h3>
+<table class="legend">
+  <tr><th>複素微分</th><td>{{R:termwise}}（冪級数の項別微分）, {{R:inverse}}（逆関数の微分）→ {{R:cr-nec}}, {{R:cr-suf}}（Cauchy–Riemann）→ {{R:harmonic}}（調和関数）。</td></tr>
+  <tr><th>積分の基本</th><td>{{R:ml}}（ML 不等式）, {{R:primitive}}（原始関数）→ {{R:winding}}（回転数）→ {{R:cauchy-type}}（Cauchy 型積分の正則性）。</td></tr>
+  <tr><th>Cauchy 理論の幹</th><td>{{R:goursat}}（Goursat）→ {{R:cauchy-convex}}（凸領域の Cauchy の定理）→ {{R:cif}}（Cauchy の積分公式）→ {{R:liouville}}（Liouville）, {{R:maxmod}}（最大値原理）, {{R:morera}}（Morera）→ {{R:taylor}}（Taylor 展開）→ {{R:identity}}（一致の定理）。<strong>本書の後半はすべてこの一本の幹から伸びる枝である。</strong></td></tr>
+  <tr><th>関数列</th><td>{{R:morera}} → {{R:weierstrass}}（Weierstrass の収束定理）→ {{R:hurwitz}}（Hurwitz）→ 第 13 回の $\zeta$・$\Gamma$・Montel。</td></tr>
+  <tr><th>円板の幾何</th><td>{{R:disk-aut}} ＋ {{R:maxmod}} → {{R:schwarz}}（Schwarz の補題）→ Schwarz–Pick；{{R:cif}} → {{R:poisson}}（Poisson の積分公式）→ 第 13 回の Dirichlet 問題。</td></tr>
+</table>
+
+<h3 class="sec">展開と留数（第 10〜13 回）</h3>
+<table class="legend">
+  <tr><th>特異点</th><td>{{R:cauchy-convex}} → {{R:laurent}}（Laurent 展開）→ {{R:removable}}（除去可能特異点）→ {{R:cw}}（Casorati–Weierstrass）→ 単射な整関数・自己同型の決定。</td></tr>
+  <tr><th>留数</th><td>{{R:laurent}} → {{R:residue-thm}}（留数定理）→ {{R:res-simple}}（単純極の留数）→ {{R:argp}}（偏角の原理）→ {{R:rouche}}（Rouché）→ {{R:open}}（開写像定理）。</td></tr>
+  <tr><th>実積分</th><td>{{R:residue-thm}} ＋ {{R:jordan}}（Jordan の補題）→ {{R:rational-int}}（有理関数の積分）→ {{R:keyhole}}（鍵穴積分）；第 8 回の {{R:dirichlet}}（Dirichlet 積分）は留数を使わずに Cauchy の定理だけで示せる。</td></tr>
+  <tr><th>最終合流点</th><td><strong>大問 {{R:finale}}</strong>：{{R:cot}}（$\pi\cot\pi z$ の部分分数展開）＋ {{R:euler-prod}}（Euler の正弦積）＋ {{R:keyhole}}（鍵穴積分）。級数・無限積・定積分・Gamma 関数が、同じ一つの関数 $\frac{\pi}{\sin\pi z}$ の別の顔として出会う。</td></tr>
+</table>
+
+<h2 class="plain">付録 B　参考書対応表</h2>
+<p style="font-size:9.4pt;color:#4b5563">授業のテキストと参考書（シラバス記載）を中心に、各回の内容が扱われている本を挙げる。章番号は版によって異なるので、各書の目次で該当する主題を探すこと。</p>
+<table class="legend">
+  <tr><th>全体</th><td>今吉洋一『複素関数概説』（サイエンス社）＝授業のテキスト／神保道夫『複素関数入門』（岩波書店）／原惟行・松永秀章『複素解析入門』（共立出版）／E. クライツィグ『複素関数論』（培風館）</td></tr>
+  <tr><th>第 1〜2 回</th><td>上記各書の「複素数と複素平面」「一次分数変換」の章／Needham <em>Visual Complex Analysis</em>（写像の視覚化、一次分数変換、Riemann 球面）</td></tr>
+  <tr><th>第 3〜4 回</th><td>上記各書の「初等関数」「数列と級数」「冪級数」の章／杉浦光夫『解析入門 I』（級数と一様収束、指数関数・三角関数の級数による定義）</td></tr>
+  <tr><th>第 5〜6 回</th><td>上記各書の「正則関数」「Cauchy–Riemann の方程式」の章／Ahlfors <em>Complex Analysis</em>（解析関数、調和関数）</td></tr>
+  <tr><th>第 7〜9 回</th><td>上記各書の「複素積分」「Cauchy の積分定理・積分公式」の章／Ahlfors（一般形の Cauchy の定理）／Stein–Shakarchi <em>Complex Analysis</em>（Goursat の定理、Cauchy の積分公式とその応用）</td></tr>
+  <tr><th>第 10〜11 回</th><td>上記各書の「Taylor 展開と Laurent 展開」「孤立特異点」「留数定理」の章／Stein–Shakarchi（有理型関数、偏角の原理、Rouché の定理）</td></tr>
+  <tr><th>第 12 回</th><td>上記各書の「留数定理の応用（定積分の計算）」の章／一松信『留数解析』（共立出版）</td></tr>
+  <tr><th>第 13 回</th><td>Ahlfors（無限積、Gamma 関数、Jensen の公式、正規族）／Stein–Shakarchi（Phragmén–Lindelöf、Montel の定理）／高木貞治『解析概論』（$\pi\cot\pi z$、正弦積、Gamma 関数）</td></tr>
+</table>

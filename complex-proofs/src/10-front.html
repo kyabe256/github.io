@@ -1,0 +1,67 @@
+<div class="cover">
+  <div class="kicker">PROVE EVERYTHING YOU COMPUTE</div>
+  <div class="vol">A COMPANION TO THE COURSE</div>
+  <h1>複素関数論 証明問題集</h1>
+  <div class="rule"></div>
+  <div class="sub">授業 13 回の「計算」をすべて証明する 260 題</div>
+  <div class="formula">$$\int_{\partial\Omega}f(z)\,dz=2\pi i\sum_{a\in\Omega}\operatorname*{Res}_{z=a}f$$</div>
+  <div class="meta">
+    全 {{STAT:TOTAL}} 大問 ― すべて証明問題<br>
+    13 章（授業 13 回）× 20 題<br>
+    <br>
+    難易度：★★★☆☆ {{STAT:S3}} 題 ／ ★★★★☆ {{STAT:S4}} 題 ／ ★★★★★ {{STAT:S5}} 題<br>
+    <br>
+    誘導なし・解答なし
+  </div>
+</div>
+
+<h2 class="plain">はじめに</h2>
+
+<p>本書は、学部の「複素関数論」（全 13 回）の授業計画に章立てを合わせた<strong>証明だけの問題集</strong>である。授業は「定義や基本性質を理解し、それを用いた計算ができること」を目標にしている。その計算はやさしい。だから本書では向きを逆にして、<strong>授業で計算の道具として使う事実を、一つ残らず自分で証明する</strong>。</p>
+
+<p>各章は授業の 1 回分に対応し、20 題ずつ並ぶ。誘導はない。解答もない。各問は「この主張を証明せよ」という要求である。難易度は三段階：</p>
+<table class="sym">
+  <tr><td class="k">★★★☆☆</td><td>授業で使う定理・公式そのものの証明。教科書に証明が載っている水準。まずここを全部埋める。</td></tr>
+  <tr><td class="k">★★★★☆</td><td>授業の一歩先。同じ道具で示せるが、議論の組み立てを自分で考える必要がある。</td></tr>
+  <tr><td class="k">★★★★★</td><td>授業範囲の外まで踏み出す問題。一題に数時間〜数日かけてよい。</td></tr>
+</table>
+
+<table class="sym">
+  <tr><td class="k">第 I 部</td><td>第 1〜4 回 ― 複素数と複素平面、複素関数の視覚化、初等関数、極限と連続性</td></tr>
+  <tr><td class="k">第 II 部</td><td>第 5〜6 回 ― 複素微分、Cauchy–Riemann の方程式</td></tr>
+  <tr><td class="k">第 III 部</td><td>第 7〜9 回 ― 複素積分、Cauchy の積分定理、Cauchy の積分公式</td></tr>
+  <tr><td class="k">第 IV 部</td><td>第 10〜12 回 ― Taylor 展開と Laurent 展開・孤立特異点、留数定理、実積分への応用</td></tr>
+  <tr><td class="k">第 V 部</td><td>第 13 回 ― まとめ（総合問題）</td></tr>
+</table>
+
+<h3 class="sec">使用許可のルール</h3>
+<p>260 題は<strong>通し番号順に一本の階段として並んでいる</strong>。番号 $n$ の問題を解くとき、</p>
+<ul class="plain">
+  <li>$1,\dots,n-1$ のすべての結果</li>
+  <li>微分積分学（実数の完備性、一変数・多変数の微積分、Green の定理、一様収束と項別積分）と線形代数の基礎事実</li>
+</ul>
+<p>は自由に使ってよい。それ以外の、番号 $n$ 以降の結果を使ってはならない（循環論法になる）。とくに、授業では先に名前を聞いている定理（Liouville の定理、留数定理など）も、その番号に達するまでは使えない。章の順序は授業の順序そのままなので、<strong>授業の進度に合わせて同じ回の章を解く</strong>のがいちばん効果的である。依存の主な筋は付録 A にまとめた。</p>
+
+<h3 class="sec">「計算」と「証明」の違い</h3>
+<p>たとえば授業では「$\int_{-\infty}^{\infty}\frac{dx}{1+x^{4}}=\frac{\pi}{\sqrt2}$ を留数定理で計算せよ」と問われる。本書の第 12 回の問題は同じ等式を扱うが、半円の上の積分が $0$ に近づくこと、留数の公式が使えること、広義積分が収束することまで、<strong>計算の各段階の根拠を全部書く</strong>ことを求める。計算問題として既に答えを知っている問題でも、根拠を書き切れるかどうかを確かめてほしい。</p>
+
+<h3 class="sec">詰まったときに</h3>
+<p>本書に解答はないが、付録 B に授業回ごとの参考書対応表を置いた。授業のテキストのほか、参考書に挙がっている本の該当箇所を開くこと。複素関数論をさらに先まで学びたいときは、姉妹編『複素関数論 演習問題集』（全 2 巻、一行ヒントつき）や『数学 1000 大問』第 I 部へ進むとよい。</p>
+<p>そして ― <strong>一題を一晩寝かせること</strong>。翌朝に解ける問題が驚くほど多くある。</p>
+
+<h3 class="sec">記号の約束</h3>
+<table class="sym">
+  <tr><td class="k">$\mathbb{D},\ \mathbb{H},\ \hat{\mathbb{C}}$</td><td>単位円板 $\{|z|<1\}$、上半平面 $\{\mathrm{Im}\,z>0\}$、Riemann 球面 $\mathbb{C}\cup\{\infty\}$</td></tr>
+  <tr><td class="k">$\bar z,\ |z|,\ \mathrm{Re}\,z,\ \mathrm{Im}\,z$</td><td>共役、絶対値、実部、虚部</td></tr>
+  <tr><td class="k">$\arg z,\ \mathrm{Arg}\,z$</td><td>偏角（$2\pi$ の整数倍の不定性つき）、主値 $-\pi<\mathrm{Arg}\,z\le\pi$</td></tr>
+  <tr><td class="k">$\log z,\ \mathrm{Log}\,z$</td><td>多価な対数、主値 $\log|z|+i\,\mathrm{Arg}\,z$</td></tr>
+  <tr><td class="k">領域</td><td>連結な開集合</td></tr>
+  <tr><td class="k">正則</td><td>開集合の各点で複素微分可能</td></tr>
+  <tr><td class="k">曲線</td><td>断りがなければ区分的 $C^{1}$ 級の曲線。円周は正の向き（反時計回り）に一周するものとする</td></tr>
+  <tr><td class="k">$n(\gamma,a)$</td><td>閉曲線 $\gamma$ の点 $a$ のまわりの回転数</td></tr>
+  <tr><td class="k">$\mathrm{Res}_{z=a}f$</td><td>$f$ の $a$ における留数（Laurent 展開の $(z-a)^{-1}$ の係数）</td></tr>
+  <tr><td class="k">広義一様収束</td><td>各コンパクト集合上で一様収束すること</td></tr>
+</table>
+
+<h2 class="plain">目次</h2>
+<!--TOC-->
