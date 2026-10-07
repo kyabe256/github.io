@@ -1,0 +1,110 @@
+<h1 class="part">総合演習<small>分野をまたぐ入試レベルの問題 31 題 ── 解法の「型」をまとめて身につける</small></h1>
+<p>ここでは複数の章の知識を組み合わせて解く問題を集めました。まず自分で 10〜15 分考え、手が止まったら <b>💡方針</b> だけ読んでもう一度挑戦し、最後に解答で確認しましょう。</p>
+
+<h2 class="cont" style="page-break-before:auto">A　中学総合（高校入試レベル）</h2>
+
+<div class="box q"><b>A1【関数と図形】</b>放物線 $y=x^2$ 上に2点 A(1, 1)、B(2, 4) がある。$y$ 軸上に点 P をとり、AP+PB が最小になるときの P の座標を求めよ。</div>
+<div class="box hint">A と B は $y$ 軸の<b>同じ側</b>。A を $y$ 軸に関して対称移動した点 A′ をとると AP = A′P。A′P+PB が最小 ⇔ A′, P, B が一直線（光の反射と同じ原理）。</div>
+<div class="box sol">A′(−1, 1)。直線 A′B：傾き $\frac{4-1}{2-(-1)}=1$、$y=x+2$。$y$ 軸との交点 <b>P(0, 2)</b>。<br><small>2点が $y$ 軸の反対側にあるなら、線分 AB と $y$ 軸の交点がそのまま答え。「同じ側なら折り返す」がコツ。</small></div>
+
+<div class="box q"><b>A2【方程式の利用】</b>ある品物を定価の 2 割引で売ると 1 個あたり 80 円の利益、定価の 3 割引で売ると 1 個あたり 20 円の損失になる。原価と定価を求めよ。</div>
+<div class="box sol">定価 $x$、原価 $y$。$0.8x-y=80,\ 0.7x-y=-20$。引いて $0.1x=100$ → $x=1000$、$y=720$。<b>原価 720 円、定価 1000 円</b></div>
+
+<div class="box q"><b>A3【相似と三平方】</b>AB=6、BC=8 の長方形 ABCD を、対角線 BD で折り返したとき、点 C が移る点を C′、BC′ と AD の交点を E とする。AE の長さを求めよ。</div>
+<div class="box hint">折り返しで ∠EBD=∠CBD。AD∥BC より ∠EDB=∠CBD（錯角）。よって △EBD は EB=ED の二等辺三角形。</div>
+<div class="box sol">AE $=x$ とすると ED $=8-x$ = EB。△ABE で三平方：$6^2+x^2=(8-x)^2$ → $36+x^2=64-16x+x^2$ → $x=\frac74$。<b>AE $=\frac74$</b></div>
+
+<div class="box q"><b>A4【確率と図形】</b>正六角形 ABCDEF の頂点から異なる3点を選んで三角形を作る。直角三角形ができる確率を求めよ。</div>
+<div class="box sol">三角形は ${}_6\mathrm C_3=20$ 個。正六角形は円に内接し、直径は AD, BE, CF の 3 本。直径を1辺とする三角形は直角三角形（円周角 90°）で、1 本の直径につき残り 4 点から 1 点 → $3\times4=12$ 個。確率 $\frac{12}{20}=\boldsymbol{\frac35}$</div>
+
+<div class="box q"><b>A5【規則性】</b>1 辺 1cm の正方形のタイルを、1 段目 1 枚、2 段目 3 枚、3 段目 5 枚、…とピラミッド状に $n$ 段積む。使うタイルの枚数と、図形の周の長さを $n$ で表せ。</div>
+<div class="box sol">枚数：$1+3+5+\cdots+(2n-1)=\boldsymbol{n^2}$（第12・28章の奇数の和）。<br>周：階段状の図形の周は、外接する長方形（横 $2n-1$、縦 $n$）の周と等しい（階段の凹凸を外へ押し出すと長方形になる）。$2\{(2n-1)+n\}=\boldsymbol{6n-2}$ cm</div>
+
+<h2 class="cont" style="page-break-before:auto">B　数学I・A</h2>
+
+<div class="box q"><b>B1【二次関数・場合分け】</b>$f(x)=x^2-2ax+a$ の $0\le x\le2$ における最大値 $M(a)$ を求めよ。</div>
+<div class="box hint">下に凸の放物線の最大値は<b>範囲の端</b>のどちらか。軸 $x=a$ が範囲の中央 $x=1$ より左か右かで決まる。</div>
+<div class="box sol">$f(0)=a,\ f(2)=4-3a$。<br>$a\le1$（軸が中央以左）：$x=2$ で最大 $M=4-3a$。$a>1$：$x=0$ で最大 $M=a$。<br>（$a=1$ では両端とも 1 で一致）</div>
+
+<div class="box q"><b>B2【三角比・最大】</b>半径 1 の円に内接する △ABC で、$A=60^\circ$ のとき、$b+c$ の最大値を求めよ。</div>
+<div class="box sol">正弦定理より $b=2\sin B,\ c=2\sin C$、$C=120^\circ-B$。<br>$b+c=2\{\sin B+\sin(120^\circ-B)\}=2\left(\frac32\sin B+\frac{\sqrt3}2\cos B\right)=2\sqrt3\sin(B+30^\circ)$。<br>$0^\circ<B<120^\circ$ で $B=60^\circ$ のとき<b>最大値 $2\sqrt3$</b>（正三角形）。</div>
+
+<div class="box q"><b>B3【場合の数】</b>1, 2, 3, 4, 5 の 5 個の数字を 1 回ずつ使ってできる 5 けたの整数のうち、3 の倍数でかつ偶数であるものは何個か。また、それらを小さい順に並べたとき 30 番目の数は？</div>
+<div class="box sol">各位の和は 15 で常に 3 の倍数。偶数は一の位が 2 か 4 → $2\times4!=\boldsymbol{48}$ 個。<br>小さい順：万の位が 1 のもの（一の位 2 or 4、残り3つを並べる）$2\times3!=12$ 個、万の位 2：一の位は 4 のみで $3!=6$ 個（計18）、万の位 3：$2\times3!=12$ 個（計30）。30 番目は万の位 3 の最大 → <b>35412</b>。</div>
+
+<div class="box q"><b>B4【確率・反復試行】</b>数直線上の原点に点 P がある。硬貨を投げて表なら +1、裏なら −1 動く。6 回投げたとき、P が原点にある確率と、6 回の途中で一度も負の位置に行かずに原点に戻る確率を求めよ。</div>
+<div class="box sol">原点に戻る：表 3 回、裏 3 回。${}_6\mathrm C_3\left(\frac12\right)^6=\boldsymbol{\frac{20}{64}=\frac5{16}}$。<br>負にならない並べ方は「カタラン数」で 5 通り（＋＋＋−−−、＋＋−＋−−、＋＋−−＋−、＋−＋＋−−、＋−＋−＋−）。確率 $\boldsymbol{\frac5{64}}$。<br><small>（一般に $n$ 組なら $\frac{1}{n+1}{}_{2n}\mathrm C_n$ 通り。$n=3$ で $\frac{20}4=5$）</small></div>
+
+<div class="box q"><b>B5【整数】</b>$xy-2x-3y=0$ を満たす自然数の組 $(x,y)$ をすべて求めよ。</div>
+<div class="box hint">「積の形 = 整数」に変形するのが整数問題の王道。$(x-3)(y-2)=6$ を作る。</div>
+<div class="box sol">$xy-2x-3y+6=6$ → $(x-3)(y-2)=6$。$x\ge1,y\ge1$ より $x-3\ge-2,\ y-2\ge-1$。<br>積が 6 になる組で条件を満たすのは $(1,6),(2,3),(3,2),(6,1)$（負×負は $(-1,-6)$ 等で範囲外）。<br>$(x,y)=\boldsymbol{(4,8),(5,5),(6,4),(9,3)}$</div>
+
+<div class="box q"><b>B6【データ】</b>10 人のテストの平均が 60 点、分散が 100 だった。後から 2 人（70 点と 50 点）が加わった 12 人の平均と分散を求めよ。</div>
+<div class="box sol">合計 $600+70+50=720$ なので平均は <b>60</b> のまま。<br>偏差の2乗の和：元の 10 人は $100\times10=1000$、追加の 2 人は $10^2+(-10)^2=200$。<br>分散 $=\frac{1200}{12}=\boldsymbol{100}$（変わらない）。<br><small>平均からの距離（偏差 ±10）が元の標準偏差 10 と同じ値を加えたので、散らばりは変わらない。</small></div>
+
+<h2 class="cont" style="page-break-before:auto">C　数学II・B・C</h2>
+
+<div class="box q"><b>C1【微分・接線】</b>曲線 $y=x^3-3x$ に点 $(2,a)$ から 3 本の接線が引けるような $a$ の範囲を求めよ。</div>
+<div class="box hint">接点を $t$ とおき、「$t$ の方程式が異なる 3 つの実数解をもつ」条件に言い換える（3次関数では接点と接線が1対1）。</div>
+<div class="box sol">接線：$y=(3t^2-3)(x-t)+t^3-3t=(3t^2-3)x-2t^3$。$(2,a)$ を通る：$a=-2t^3+6t^2-6$。<br>$g(t)=-2t^3+6t^2-6$、$g'(t)=-6t(t-2)$：極小 $g(0)=-6$、極大 $g(2)=2$。<br>$y=a$ と 3 点で交わるのは $\boldsymbol{-6<a<2}$</div>
+
+<div class="box q"><b>C2【積分・面積】</b>放物線 $y=x^2$ と、点 $(1,3)$ を通る直線で囲まれた部分の面積の最小値を求めよ。</div>
+<div class="box sol">直線 $y=m(x-1)+3$。交点 $\alpha,\beta$ は $x^2-mx+m-3=0$ の解。$D=m^2-4m+12>0$（常に成立）。<br>面積 $S=\frac{(\beta-\alpha)^3}6$、$(\beta-\alpha)^2=D=(m-2)^2+8$。<br>$m=2$ で最小：$\beta-\alpha=2\sqrt2$、$S=\frac{(2\sqrt2)^3}{6}=\frac{16\sqrt2}{6}=\boldsymbol{\frac{8\sqrt2}{3}}$</div>
+
+<div class="box q"><b>C3【三角関数】</b>$0\le\theta<2\pi$ のとき、$\cos2\theta+2\sin\theta$ の最大値・最小値。</div>
+<div class="box sol">$t=\sin\theta\ (-1\le t\le1)$。$1-2t^2+2t=-2\left(t-\frac12\right)^2+\frac32$。<br>$t=\frac12$ で<b>最大 $\frac32$</b>、$t=-1$ で<b>最小 $-3$</b>。</div>
+
+<div class="box q"><b>C4【指数・対数】</b>$2^{2x}-3\cdot2^{x+1}+8\le0$ を解け。また $\log_2x+\log_x4=3$ を解け。</div>
+<div class="box sol">(前半) $t=2^x$：$t^2-6t+8\le0$ → $2\le t\le4$ → $\boldsymbol{1\le x\le2}$。<br>(後半) 底は $x>0,x\neq1$。$\log_x4=\frac{2}{\log_2x}$。$s=\log_2x$：$s+\frac2s=3$ → $s^2-3s+2=0$ → $s=1,2$。$\boldsymbol{x=2,4}$</div>
+
+<div class="box q"><b>C5【数列・漸化式】</b>$a_1=1,\ a_{n+1}=3a_n+2^n$ の一般項を求めよ。</div>
+<div class="box hint">両辺を $3^{n+1}$ で割って $b_n=\frac{a_n}{3^n}$ とおくと階差数列型になる。</div>
+<div class="box sol">$\frac{a_{n+1}}{3^{n+1}}=\frac{a_n}{3^n}+\frac13\left(\frac23\right)^n$。$b_1=\frac13$、$n\ge2$：$b_n=\frac13+\sum_{k=1}^{n-1}\frac13\left(\frac23\right)^k=\frac13+\frac23\left\{1-\left(\frac23\right)^{n-1}\right\}=1-\left(\frac23\right)^n$。<br>$a_n=3^nb_n=\boldsymbol{3^n-2^n}$（$n=1$ でも成立。検算：$a_2=3\cdot1+2=5=9-4$ ✓）</div>
+
+<div class="box q"><b>C6【ベクトル】</b>△OAB で $|\vec{OA}|=2,\ |\vec{OB}|=3,\ \vec{OA}\cdot\vec{OB}=2$。O から AB に下ろした垂線の足を H とするとき、$\vec{OH}$ を $\vec a,\vec b$ で表せ。</div>
+<div class="box sol">$\vec{OH}=(1-t)\vec a+t\vec b$。$\vec{OH}\perp\vec{AB}$：$\{(1-t)\vec a+t\vec b\}\cdot(\vec b-\vec a)=0$。<br>展開：$(1-t)(2-4)+t(9-2)=0$ → $-2+2t+7t=0$ → $t=\frac29$。<br>$\vec{OH}=\boldsymbol{\frac79\vec a+\frac29\vec b}$</div>
+
+<div class="box q"><b>C7【図形と方程式】</b>円 $x^2+y^2=4$ と円 $(x-3)^2+(y-1)^2=r^2$ が異なる 2 点で交わる $r$ の範囲と、$r=2$ のとき 2 交点を通る直線の方程式。</div>
+<div class="box sol">中心間距離 $d=\sqrt{10}$。2 点で交わる ⇔ $|r-2|<\sqrt{10}<r+2$ → $\boldsymbol{\sqrt{10}-2<r<\sqrt{10}+2}$。<br>$r=2$：2式を引く：$x^2+y^2-4-\{(x-3)^2+(y-1)^2-4\}=0$ → $6x+2y-10=0$ → $\boldsymbol{3x+y=5}$</div>
+
+<div class="box q"><b>C8【統計】</b>ある工場の製品の重さは標準偏差 4g の正規分布に従う。100 個を調べたら平均 250g だった。母平均を信頼度 95% で推定せよ。また区間の幅を 1g 以下にするには何個以上調べればよいか。</div>
+<div class="box sol">$250\pm1.96\times\frac{4}{10}=250\pm0.784$ → $\boldsymbol{249.216\le m\le250.784}$。<br>幅 $2\times1.96\times\frac4{\sqrt n}\le1$ → $\sqrt n\ge15.68$ → $n\ge245.9$。<b>246 個以上</b></div>
+
+<div class="box q"><b>C9【複素数平面】</b>$z^6=-64$ を解け。また解を表す点を結んでできる図形の面積を求めよ。</div>
+<div class="box sol">$z=r(\cos\theta+i\sin\theta)$：$r^6=64,\ 6\theta=\pi+2k\pi$。$r=2$、$\theta=\frac\pi6+\frac{k\pi}3\ (k=0,\dots,5)$。<br>$z=\pm\sqrt3\pm i,\ \pm2i$。6点は半径 2 の円に内接する<b>正六角形</b>。面積 $6\times\frac{\sqrt3}4\cdot2^2=\boldsymbol{6\sqrt3}$</div>
+
+<div class="box q"><b>C10【二次曲線】</b>楕円 $\frac{x^2}{4}+y^2=1$ に内接する長方形の面積の最大値を求めよ（辺は座標軸に平行）。</div>
+<div class="box sol">第1象限の頂点 $(2\cos\theta,\sin\theta)\ (0<\theta<\frac\pi2)$。面積 $=4\cdot2\cos\theta\sin\theta=4\sin2\theta$。$\theta=\frac\pi4$ で<b>最大 4</b>。</div>
+
+<h2 class="cont" style="page-break-before:auto">D　数学III</h2>
+
+<div class="box q"><b>D1【極限】</b>$\displaystyle\lim_{n\to\infty}n\left(\sqrt[n]{2}-1\right)$ を求めよ。</div>
+<div class="box sol">$h=\frac1n$ とおくと $\frac{2^h-1}{h}\to(2^x)'|_{x=0}=\log2$。<b>答え $\log2$</b><br><small>「微分係数の定義」に持ち込むのは極限計算の強力な手。</small></div>
+
+<div class="box q"><b>D2【微分・最大】</b>半径 $R$ の球に内接する円柱の体積の最大値を求めよ。</div>
+<div class="box sol">円柱の高さ $2h$、底面の半径 $r$ とすると $r^2=R^2-h^2$。$V=\pi(R^2-h^2)\cdot2h\ (0<h<R)$。<br>$V'=2\pi(R^2-3h^2)=0$ → $h=\frac{R}{\sqrt3}$。<br>最大値 $V=2\pi\cdot\frac{2R^2}{3}\cdot\frac{R}{\sqrt3}=\boldsymbol{\frac{4\sqrt3}{9}\pi R^3}$（球の体積の $\frac{1}{\sqrt3}$ 倍）</div>
+
+<div class="box q"><b>D3【不等式の証明】</b>$x>0$ のとき $\log(1+x)>x-\frac{x^2}2$ を示せ。</div>
+<div class="box sol">$f(x)=\log(1+x)-x+\frac{x^2}2$。$f'(x)=\frac1{1+x}-1+x=\frac{x^2}{1+x}>0$。$f(0)=0$ で増加なので $x>0$ で $f(x)>0$。■</div>
+
+<div class="box q"><b>D4【定積分】</b>$\displaystyle\int_0^{\pi}x\sin x\,dx$ と $\displaystyle\int_0^{\pi}\sin^2x\,dx$ を求めよ。</div>
+<div class="box sol">部分積分：$[-x\cos x]_0^\pi+\int_0^\pi\cos x\,dx=\pi+0=\boldsymbol\pi$。<br>$\int_0^\pi\frac{1-\cos2x}2dx=\boldsymbol{\frac\pi2}$</div>
+
+<div class="box q"><b>D5【面積】</b>曲線 $y=\log x$ と $x$ 軸、直線 $x=e$ で囲まれた部分の面積と、それを $x$ 軸のまわりに回転した体積。</div>
+<div class="box sol">面積 $\int_1^e\log x\,dx=[x\log x-x]_1^e=0-(-1)=\boldsymbol1$。<br>体積 $\pi\int_1^e(\log x)^2dx$。部分積分：$=\pi\left\{[x(\log x)^2]_1^e-2\int_1^e\log x\,dx\right\}=\pi(e-2)$。<b>$\pi(e-2)$</b></div>
+
+<div class="box q"><b>D6【区分求積】</b>$\displaystyle\lim_{n\to\infty}\frac{1}{n}\sum_{k=1}^{n}\sqrt{1-\left(\frac kn\right)^2}$</div>
+<div class="box sol">$=\int_0^1\sqrt{1-x^2}dx=\boldsymbol{\frac\pi4}$（四分円の面積）</div>
+
+<div class="box q"><b>D7【媒介変数】</b>サイクロイド $x=\theta-\sin\theta,\ y=1-\cos\theta\ (0\le\theta\le2\pi)$ の弧の長さを求めよ。</div>
+<div class="box sol">$\left(\frac{dx}{d\theta}\right)^2+\left(\frac{dy}{d\theta}\right)^2=(1-\cos\theta)^2+\sin^2\theta=2-2\cos\theta=4\sin^2\frac\theta2$。<br>$L=\int_0^{2\pi}2\sin\frac\theta2d\theta=\left[-4\cos\frac\theta2\right]_0^{2\pi}=\boldsymbol8$（転がる円の直径の 4 倍！）</div>
+
+<div class="box q"><b>D8【微分方程式的発想】</b>関数 $f(x)$ が $f(x)=x+\int_0^1 tf(t)\,dt$ を満たすとき $f(x)$ を求めよ。</div>
+<div class="box sol">$\int_0^1tf(t)dt$ は定数なので $=k$ とおくと $f(x)=x+k$。<br>$k=\int_0^1t(t+k)dt=\frac13+\frac k2$ → $k=\frac23$。$\boldsymbol{f(x)=x+\frac23}$</div>
+
+<div class="box q"><b>D9【はさみうち】</b>$\displaystyle\lim_{n\to\infty}\frac{n}{2^n}$ を、二項定理を用いて求めよ。</div>
+<div class="box sol">$n\ge2$ で $2^n=(1+1)^n\ge1+n+\frac{n(n-1)}{2}>\frac{n(n-1)}2$。<br>よって $0<\frac n{2^n}<\frac{2}{n-1}\to0$。はさみうちで <b>0</b>。</div>
+
+<div class="box q"><b>D10【総まとめ】</b>$e^\pi$ と $\pi^e$ の大小を比べよ。</div>
+<div class="box hint">両辺の対数を $e\pi$ で割ると $\frac{\log e}{e}$ と $\frac{\log\pi}{\pi}$ の比較。関数 $f(x)=\frac{\log x}{x}$ の増減を調べる。</div>
+<div class="box sol">$f'(x)=\frac{1-\log x}{x^2}$ は $x>e$ で負なので、$f$ は $x\ge e$ で減少。$e<\pi$ より $f(e)>f(\pi)$：$\frac1e>\frac{\log\pi}{\pi}$ → $\pi>e\log\pi$ → $e^\pi>\pi^e$。<b>$e^\pi$ の方が大きい</b>。<br><small>中学の「大小比較」から、対数・微分を総動員する問題へ。ここまで来ればゴールです！</small></div>

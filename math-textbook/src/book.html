@@ -1,0 +1,1018 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>中学〜高校数学 一気読み教科書</title>
+<link rel="stylesheet" href="node_modules/katex/dist/katex.min.css">
+<script src="node_modules/katex/dist/katex.min.js"></script>
+<script src="node_modules/katex/dist/contrib/auto-render.min.js"></script>
+<style>
+@page { size: A4; margin: 16mm 15mm 18mm 15mm; }
+:root { --main:#1f5fa8; --sub:#e8f0fb; --acc:#e0702a; --accbg:#fff3ea; --ok:#2e8b57; --okbg:#ecf8f1; --ink:#222; }
+body { font-family: "IPAPGothic","IPAGothic",sans-serif; color:var(--ink); font-size:10.5pt; line-height:1.75; background:#fff; margin:0; }
+h1.part { page-break-before: always; background:var(--main); color:#fff; padding:28mm 10mm; font-size:28pt; margin:0 0 6mm; border-radius:6px; }
+h1.part small { display:block; font-size:12pt; opacity:.85; margin-top:4mm; font-weight:normal; }
+h2 { page-break-before: always; font-size:17pt; color:var(--main); border-bottom:3px solid var(--main); padding-bottom:2mm; margin:0 0 4mm; }
+h2 .no { display:inline-block; background:var(--main); color:#fff; border-radius:4px; padding:0 8px; margin-right:8px; font-size:13pt; }
+h2.cont { page-break-before: auto; margin-top:8mm; }
+h3 { font-size:12.5pt; color:var(--main); margin:5mm 0 2mm; border-left:6px solid var(--main); padding-left:3mm; }
+.box { border-radius:6px; padding:3mm 4mm; margin:3mm 0; page-break-inside: avoid; }
+.point { background:var(--sub); border:2px solid var(--main); }
+.point::before { content:"★ ここだけ覚える"; display:block; font-weight:bold; color:var(--main); margin-bottom:1mm; }
+.image { background:var(--accbg); border-left:6px solid var(--acc); }
+.image::before { content:"💡 イメージで言うと"; display:block; font-weight:bold; color:var(--acc); margin-bottom:1mm; }
+.ex { border:1.5px dashed #888; }
+.ex::before { content:"✏ 例題"; display:block; font-weight:bold; margin-bottom:1mm; }
+.ans { background:var(--okbg); border-left:6px solid var(--ok); }
+.ans::before { content:"✔ 練習の答え"; display:block; font-weight:bold; color:var(--ok); margin-bottom:1mm; }
+.prac { border:1.5px solid var(--ok); }
+.prac::before { content:"🔁 練習問題"; display:block; font-weight:bold; color:var(--ok); margin-bottom:1mm; }
+.warn { background:#fdecec; border-left:6px solid #c0392b; }
+.warn::before { content:"⚠ よくあるミス"; display:block; font-weight:bold; color:#c0392b; margin-bottom:1mm; }
+.tag { display:inline-block; font-size:8.5pt; background:#666; color:#fff; border-radius:3px; padding:0 6px; margin-left:6px; vertical-align:middle; }
+table { border-collapse:collapse; margin:2mm 0; page-break-inside: avoid; }
+td, th { border:1px solid #999; padding:1mm 3mm; text-align:center; }
+th { background:var(--sub); }
+.fig { text-align:center; margin:2mm 0; page-break-inside: avoid; }
+.fig svg { max-width:100%; }
+.two { display:flex; gap:5mm; align-items:flex-start; }
+.two > div { flex:1; }
+.cover { height:255mm; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; background:linear-gradient(160deg,#1f5fa8,#3a8be0); color:#fff; border-radius:8px; }
+.cover h1 { font-size:34pt; margin:0; line-height:1.3; }
+.cover p { font-size:13pt; opacity:.92; }
+.toc { columns:2; font-size:10pt; }
+.toc div { break-inside: avoid; }
+ol li, ul li { margin:0.5mm 0; }
+.katex { font-size:1.05em; }
+.map td { text-align:left; }
+</style>
+</head>
+<body>
+
+<!-- ================= 表紙 ================= -->
+<div class="cover">
+  <p style="font-size:15pt;letter-spacing:.3em">ざーッと一気に</p>
+  <h1>中学数学 → 高校数学<br>超わかりやすい教科書</h1>
+  <p>中1 正負の数 から 数学III 積分 まで<br>「なぜそうなるか」をイメージでつかむ全34章</p>
+</div>
+
+<h2 style="page-break-before:always">この本の使い方</h2>
+<ul>
+  <li><b>1章 = 2〜3ページ。</b> 細かい例外より「つまり何をしているのか」を優先しています。</li>
+  <li>各章は <b>★ここだけ覚える → 💡イメージ → ✏例題 → 🔁練習</b> の順。練習の答えは章の最後にあります。</li>
+  <li>わからない章があったら、<b>前の章に戻る</b>のが一番の近道です。数学は積み上げです。</li>
+  <li>全部を完璧にしなくてOK。まず一周ざーッと読んで「全体の地図」を頭に入れましょう。</li>
+</ul>
+
+<h3>数学の全体地図</h3>
+<table class="map" style="width:100%">
+<tr><th>流れ</th><th>中学</th><th>高校</th></tr>
+<tr><td><b>数と式</b><br>計算の道具</td><td>正負の数 → 文字式 → 平方根 → 展開・因数分解</td><td>数と式 → 式と証明・複素数 → 指数・対数 → 複素数平面</td></tr>
+<tr><td><b>方程式</b><br>未知数を求める</td><td>一次方程式 → 連立 → 二次方程式</td><td>不等式 → 高次方程式</td></tr>
+<tr><td><b>関数</b><br>変化を見る</td><td>比例・一次関数 → $y=ax^2$</td><td>二次関数 → 三角関数・指数・対数 → 微分・積分 → 極限</td></tr>
+<tr><td><b>図形</b><br>形と長さ</td><td>角・合同 → 相似 → 三平方 → 円</td><td>三角比 → 図形の性質 → 図形と方程式 → ベクトル → 2次曲線</td></tr>
+<tr><td><b>確率・データ</b><br>不確かさ</td><td>確率 → データの活用</td><td>場合の数・確率 → データの分析 → 統計的推測</td></tr>
+</table>
+
+<h3>目次</h3>
+<div class="toc">
+<div><b>第1部 中学数学</b></div>
+<div>1. 正負の数</div><div>2. 文字式</div><div>3. 一次方程式</div><div>4. 連立方程式</div>
+<div>5. 比例・反比例・一次関数</div><div>6. 平面図形・空間図形</div><div>7. 合同と三角形・四角形</div>
+<div>8. 平方根</div><div>9. 展開と因数分解</div><div>10. 二次方程式</div><div>11. 関数 $y=ax^2$</div>
+<div>12. 相似・三平方の定理・円</div><div>13. 確率とデータ</div>
+<div><b>第2部 数学I・A</b></div>
+<div>14. 数と式・不等式</div><div>15. 集合と論理</div><div>16. 二次関数</div><div>17. 三角比</div>
+<div>18. データの分析</div><div>19. 場合の数と確率</div><div>20. 整数の性質</div><div>21. 図形の性質</div>
+<div><b>第3部 数学II・B・C</b></div>
+<div>22. 式と証明・複素数・高次方程式</div><div>23. 図形と方程式</div><div>24. 三角関数</div>
+<div>25. 指数関数・対数関数</div><div>26. 微分(数II)</div><div>27. 積分(数II)</div>
+<div>28. 数列</div><div>29. 統計的推測</div><div>30. ベクトル</div><div>31. 複素数平面・2次曲線</div>
+<div><b>第4部 数学III</b></div>
+<div>32. 極限</div><div>33. 微分法(数III)</div><div>34. 積分法(数III)</div>
+<div><b>付録</b> 公式まとめ</div>
+</div>
+
+<!-- ================= 第1部 ================= -->
+<h1 class="part">第1部 中学数学<small>計算の道具をそろえ、関数と図形の基礎をつくる</small></h1>
+<p>中学数学は「高校数学の道具箱」です。特に <b>文字式・方程式・因数分解・一次関数・三平方の定理</b> は高校で毎日使います。ここが速く正確になるだけで高校数学はぐっと楽になります。</p>
+
+<!-- 1 -->
+<h2><span class="no">1</span>正負の数 <span class="tag">中1</span></h2>
+<div class="box point">
+・マイナスは「<b>逆向き</b>」のこと。数直線で 0 より左。<br>
+・ひき算は「<b>逆向きのたし算</b>」：$a-b = a+(-b)$<br>
+・かけ算・わり算の符号：<b>マイナスが偶数個なら＋、奇数個なら−</b><br>
+・計算の順番：<b>( ) → 累乗 → ×÷ → ＋−</b>
+</div>
+<div class="box image">
+数直線を歩く人を想像しよう。「$+3$」は右へ3歩、「$-3$」は左へ3歩。<br>
+「$-$ をかける」は「<b>回れ右</b>」。回れ右を2回すると元の向き。だから $(-)\times(-)=(+)$。
+</div>
+<div class="fig"><svg width="460" height="60" viewBox="0 0 460 60">
+<line x1="10" y1="30" x2="450" y2="30" stroke="#333" stroke-width="2" marker-end="url(#ar)"/>
+<defs><marker id="ar" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#333"/></marker></defs>
+<g font-size="12" text-anchor="middle">
+<line x1="50" y1="24" x2="50" y2="36" stroke="#333"/><text x="50" y="52">−5</text>
+<line x1="130" y1="24" x2="130" y2="36" stroke="#333"/><text x="130" y="52">−3</text>
+<line x1="210" y1="24" x2="210" y2="36" stroke="#333"/><text x="210" y="52">−1</text>
+<line x1="250" y1="20" x2="250" y2="40" stroke="#c00" stroke-width="2"/><text x="250" y="52" fill="#c00">0</text>
+<line x1="290" y1="24" x2="290" y2="36" stroke="#333"/><text x="290" y="52">1</text>
+<line x1="370" y1="24" x2="370" y2="36" stroke="#333"/><text x="370" y="52">3</text>
+<line x1="430" y1="24" x2="430" y2="36" stroke="#333"/><text x="430" y="52">5</text>
+<text x="130" y="14" fill="#1f5fa8">← 負の方向</text><text x="370" y="14" fill="#e0702a">正の方向 →</text></g></svg></div>
+<h3>絶対値</h3>
+<p>0 からの<b>距離</b>のこと。$|-5|=5$、$|3|=3$。向きを無視した「大きさ」です。</p>
+<h3>累乗の注意</h3>
+<p>$(-3)^2 = (-3)\times(-3) = 9$ だが、$-3^2 = -(3\times 3) = -9$。<b>かっこの有無で答えが変わる</b>。</p>
+<div class="box ex">
+$-2 + 5 \times (-3) - (-4)^2 \div 8$ を計算せよ。<br>
+<b>解</b>　累乗：$(-4)^2=16$。×÷：$5\times(-3)=-15$, $16\div 8=2$。<br>
+よって $-2-15-2 = \boldsymbol{-19}$
+</div>
+<div class="box prac">
+(1) $-7+(-3)-(-12)$　(2) $(-2)^3\times 3$　(3) $-2^4 + (-6)\div(-2)$
+</div>
+<div class="box ans">(1) $2$　(2) $-24$　(3) $-16+3=-13$</div>
+
+<!-- 2 -->
+<h2><span class="no">2</span>文字式 <span class="tag">中1・中2</span></h2>
+<div class="box point">
+・文字は「<b>まだ決まっていない数の入れ物</b>」。<br>
+・ルール：×は省略（$3\times a = 3a$）、数字を前に、÷は分数に（$a\div 2=\frac{a}{2}$）。<br>
+・<b>同類項</b>（文字の部分が同じ項）だけまとめられる：$3x+5x=8x$、でも $3x+5y$ はそのまま。<br>
+・分配法則：$a(b+c)=ab+ac$
+</div>
+<div class="box image">
+$x$ を「りんご」、$y$ を「みかん」と思おう。りんご3個＋りんご5個＝りんご8個。でもりんご3個＋みかん5個は、まとめて「8個の何か」にはできません。
+</div>
+<div class="box ex">
+$3(2x-y) - 2(x-4y)$ を簡単にせよ。<br>
+<b>解</b>　$=6x-3y-2x+8y = \boldsymbol{4x+5y}$　（$-2$ をかけるとき、<b>後ろの項の符号も変わる</b>のに注意）
+</div>
+<h3>式の値・等式の変形</h3>
+<p>「$x=-2$ のとき $x^2-3x$ の値」→ そのまま代入：$(-2)^2-3(-2)=4+6=10$。負の数は<b>必ずかっこ付き</b>で代入。</p>
+<p>等式の変形（例：$2x+3y=6$ を $y$ について解く）：$3y = 6-2x$ → $y = \dfrac{6-2x}{3}$。方程式と同じ操作です。</p>
+<div class="box prac">(1) $5a-3b-2a+7b$　(2) $\dfrac{x+1}{2}-\dfrac{x-2}{3}$　(3) $V=\frac{1}{3}Sh$ を $h$ について解け</div>
+<div class="box ans">(1) $3a+4b$　(2) $\dfrac{3(x+1)-2(x-2)}{6}=\dfrac{x+7}{6}$　(3) $h=\dfrac{3V}{S}$</div>
+
+<!-- 3 -->
+<h2><span class="no">3</span>一次方程式 <span class="tag">中1</span></h2>
+<div class="box point">
+・方程式＝「<b>天秤がつり合っている</b>」状態。<b>両辺に同じことをすれば</b>つり合いは崩れない。<br>
+・<b>移項</b>：項を反対側へ移すと符号が変わる。<br>
+・手順：①かっこ・分数をなくす → ②$x$ を左、数を右へ移項 → ③まとめる → ④$x$ の係数でわる
+</div>
+<div class="box image">
+天秤の左に「箱 $x$ ×2 と おもり3」、右に「おもり11」。両側から3を取り除くと「箱2個 = 11−3 = 8」。箱1個は4。これが $2x+3=11 \Rightarrow x=4$ です。
+</div>
+<div class="box ex">
+$\dfrac{x-1}{3} = \dfrac{x}{2} - 1$ を解け。<br>
+<b>解</b>　両辺に 6 をかける：$2(x-1) = 3x - 6$ → $2x-2=3x-6$ → $-x=-4$ → $\boldsymbol{x=4}$
+</div>
+<h3>文章題のコツ</h3>
+<ol><li>求めたいものを $x$ とおく</li><li>「等しいもの」を2通りに表して $=$ で結ぶ</li><li>解いたら<b>問題に合うか確かめる</b>（人数が負になっていないか等）</li></ol>
+<div class="box ex">
+1個120円のパンと1個80円のおにぎりを合わせて10個買い、1000円だった。パンは何個？<br>
+<b>解</b>　パン $x$ 個、おにぎり $(10-x)$ 個。$120x+80(10-x)=1000$ → $40x=200$ → $\boldsymbol{x=5}$ 個
+</div>
+<div class="box prac">(1) $5x-7=2x+8$　(2) $0.3x+1.2=0.5x$　(3) 比例式 $x:6=4:3$</div>
+<div class="box ans">(1) $x=5$　(2) 10倍して $3x+12=5x$ → $x=6$　(3) 外項の積=内項の積：$3x=24$ → $x=8$</div>
+
+<!-- 4 -->
+<h2><span class="no">4</span>連立方程式 <span class="tag">中2</span></h2>
+<div class="box point">
+・文字が2つなら式も2本必要。<b>1つの文字を消して</b>一次方程式にする。<br>
+・<b>加減法</b>：式をたしたりひいたりして消す。<b>代入法</b>：$y=\cdots$ の形を他方に代入。
+</div>
+<div class="box image">
+「りんご2個とみかん1個で 300円」「りんご1個とみかん1個で 200円」。2つを比べると差は「りんご1個＝100円」。このように<b>比べて片方を消す</b>のが加減法。
+</div>
+<div class="box ex">
+$\begin{cases} 2x+3y=12 \\ 3x-y=7 \end{cases}$<br>
+<b>解</b>　下の式を3倍：$9x-3y=21$。上の式とたす：$11x=33$ → $x=3$。代入：$9-y=7$ → $y=2$。<br>
+答え $\boldsymbol{(x,y)=(3,2)}$
+</div>
+<div class="box prac">(1) $\begin{cases}x+y=10\\x-y=4\end{cases}$　(2) $\begin{cases}y=2x-1\\3x+2y=12\end{cases}$</div>
+<div class="box ans">(1) $(7,3)$　(2) $3x+2(2x-1)=12$ → $7x=14$ → $(x,y)=(2,3)$</div>
+
+<!-- 5 -->
+<h2><span class="no">5</span>比例・反比例・一次関数 <span class="tag">中1・中2</span></h2>
+<div class="box point">
+・<b>関数</b>：$x$ を決めると $y$ がただ1つ決まる関係（自販機：ボタンを押すと商品が1つ出る）。<br>
+・比例 $y=ax$（原点を通る直線）／反比例 $y=\dfrac{a}{x}$（双曲線, $xy=a$ 一定）<br>
+・一次関数 $y=ax+b$：$a$＝<b>傾き</b>（$x$ が1増えたときの $y$ の増え方）、$b$＝<b>切片</b>（$y$軸との交点）<br>
+・傾き $a = \dfrac{y\text{の増加量}}{x\text{の増加量}}$（変化の割合）
+</div>
+<div class="two"><div>
+<div class="fig"><svg width="230" height="220" viewBox="-115 -110 230 220">
+<line x1="-105" y1="0" x2="105" y2="0" stroke="#999"/><line x1="0" y1="105" x2="0" y2="-105" stroke="#999"/>
+<text x="98" y="14" font-size="11">x</text><text x="5" y="-98" font-size="11">y</text>
+<line x1="-70" y1="100" x2="50" y2="-100" stroke="#1f5fa8" stroke-width="2.5"/>
+<text x="40" y="-70" font-size="11" fill="#1f5fa8">y=2x+1</text>
+<circle cx="0" cy="-20" r="3.5" fill="#e0702a"/><text x="6" y="-22" font-size="10" fill="#e0702a">切片 1</text>
+<path d="M0,-20 L20,-20 L20,-60" fill="none" stroke="#e0702a" stroke-dasharray="3,2"/>
+<text x="4" y="-8" font-size="9">右へ1</text><text x="24" y="-38" font-size="9">上へ2</text>
+</svg></div></div><div>
+<div class="box image">
+一次関数は「<b>基本料金 + 従量料金</b>」。スマホ代が「基本 $b$ 円 + 1GB ごと $a$ 円」なら $y=ax+b$。<br>グラフは $y$ 軸の $b$ からスタートして、右に1進むごとに $a$ 上がる直線。
+</div></div></div>
+<h3>直線の式の求め方</h3>
+<div class="box ex">
+2点 $(1,3)$, $(3,7)$ を通る直線の式は？<br>
+<b>解</b>　傾き $a=\dfrac{7-3}{3-1}=2$。$y=2x+b$ に $(1,3)$ を代入：$3=2+b$ → $b=1$。<b>$y=2x+1$</b>
+</div>
+<p><b>2直線の交点</b> ＝ 2つの式の<b>連立方程式の解</b>。グラフと方程式はつながっています。</p>
+<div class="box prac">(1) $y$ は $x$ に反比例し、$x=3$ のとき $y=4$。$x=6$ のとき $y$ は？<br>(2) 傾き $-3$、点 $(2,1)$ を通る直線の式　(3) $y=x+1$ と $y=-x+5$ の交点</div>
+<div class="box ans">(1) $xy=12$ より $y=2$　(2) $y=-3x+7$　(3) $x+1=-x+5$ → $(2,3)$</div>
+
+<!-- 6 -->
+<h2><span class="no">6</span>平面図形・空間図形 <span class="tag">中1</span></h2>
+<div class="box point">
+・円：周 $=2\pi r$、面積 $=\pi r^2$<br>
+・おうぎ形（中心角 $a^\circ$）：弧 $=2\pi r\times\dfrac{a}{360}$、面積 $=\pi r^2\times\dfrac{a}{360}$ $\left(=\dfrac12 \ell r\right)$<br>
+・柱の体積 $=$ 底面積 $\times$ 高さ、錐の体積 $=\dfrac13\times$ 底面積 $\times$ 高さ<br>
+・球：体積 $\dfrac43\pi r^3$、表面積 $4\pi r^2$
+</div>
+<div class="box image">
+おうぎ形は「ピザの一切れ」。中心角が 90° なら丸ごと1枚の $\frac{90}{360}=\frac14$。だから面積も弧も全体の $\frac14$。<br>
+錐が柱の $\frac13$ なのは、同じ底・同じ高さの円錐3杯分の水でちょうど円柱がいっぱいになるから。
+</div>
+<p>球の公式の覚え方：体積「<b>身の上に心配ある参上</b>」 $\frac{4}{3}\pi r^3$、表面積「<b>心配ある事情</b>」 $4\pi r^2$。</p>
+<div class="box ex">
+半径 6cm、中心角 120° のおうぎ形の弧の長さと面積。<br>
+<b>解</b>　$\frac{120}{360}=\frac13$。弧 $=12\pi\times\frac13=\boldsymbol{4\pi}$ cm、面積 $=36\pi\times\frac13=\boldsymbol{12\pi}$ cm²
+</div>
+<div class="box prac">(1) 底面の半径 3、高さ 5 の円錐の体積　(2) 半径 3 の球の体積と表面積</div>
+<div class="box ans">(1) $\frac13\times9\pi\times5=15\pi$　(2) 体積 $36\pi$、表面積 $36\pi$</div>
+
+<!-- 7 -->
+<h2><span class="no">7</span>合同と三角形・四角形 <span class="tag">中2</span></h2>
+<div class="box point">
+・<b>対頂角は等しい</b>／平行線の<b>同位角・錯角は等しい</b><br>
+・三角形の内角の和 $180^\circ$、$n$ 角形の内角の和 $180^\circ\times(n-2)$、外角の和は常に $360^\circ$<br>
+・三角形の外角 $=$ となりにない2つの内角の和<br>
+・合同条件：①3辺 ②2辺とその間の角 ③1辺とその両端の角<br>
+・直角三角形の合同：④斜辺と1鋭角 ⑤斜辺と他の1辺
+</div>
+<div class="fig"><svg width="420" height="130" viewBox="0 0 420 130">
+<line x1="10" y1="40" x2="300" y2="40" stroke="#333" stroke-width="2"/><line x1="10" y1="100" x2="300" y2="100" stroke="#333" stroke-width="2"/>
+<line x1="80" y1="125" x2="220" y2="10" stroke="#1f5fa8" stroke-width="2"/>
+<path d="M 172 50 A 14 14 0 0 0 186 38" fill="none" stroke="#e0702a" stroke-width="2"/>
+<path d="M 112 99 A 14 14 0 0 1 98 112" fill="none" stroke="#e0702a" stroke-width="2"/>
+<path d="M 128 88 A 14 14 0 0 0 112 100" fill="none" stroke="#2e8b57" stroke-width="2"/>
+<text x="190" y="58" font-size="11" fill="#e0702a">a</text><text x="88" y="124" font-size="11" fill="#e0702a">a 対頂角</text>
+<text x="130" y="84" font-size="11" fill="#2e8b57">a 錯角</text>
+<text x="310" y="45" font-size="11">ℓ</text><text x="310" y="105" font-size="11">m</text>
+<text x="330" y="75" font-size="11">ℓ // m なら</text><text x="330" y="90" font-size="11">錯角が等しい</text>
+</svg></div>
+<h3>証明の書き方（型）</h3>
+<p>「△ABC と △DEF において　①仮定より AB=DE ……　②…… ③……　①②③より、<b>2辺とその間の角がそれぞれ等しいので</b> △ABC≡△DEF」。根拠 → 条件 → 結論 の順に書くだけ。</p>
+<h3>特別な三角形・四角形</h3>
+<table><tr><th>図形</th><th>性質</th></tr>
+<tr><td>二等辺三角形</td><td>底角が等しい／頂角の二等分線は底辺を垂直に二等分</td></tr>
+<tr><td>平行四辺形</td><td>2組の対辺・対角がそれぞれ等しい／対角線はそれぞれの中点で交わる</td></tr>
+<tr><td>ひし形</td><td>4辺が等しい／対角線が垂直に交わる</td></tr>
+<tr><td>長方形</td><td>4角が等しい／対角線の長さが等しい</td></tr>
+<tr><td>正方形</td><td>ひし形と長方形の性質を両方もつ</td></tr></table>
+<div class="box prac">(1) 正六角形の1つの内角　(2) 内角の和が $1440^\circ$ の多角形は何角形？</div>
+<div class="box ans">(1) $720^\circ\div6=120^\circ$　(2) $180(n-2)=1440$ → $n=10$、十角形</div>
+
+<!-- 8 -->
+<h2><span class="no">8</span>平方根 <span class="tag">中3</span></h2>
+<div class="box point">
+・$\sqrt{a}$＝「<b>2乗すると $a$ になる正の数</b>」。$a$ の平方根は $\pm\sqrt a$。<br>
+・$\sqrt a\sqrt b=\sqrt{ab}$、$\sqrt{a^2 b}=a\sqrt b$（中の2乗を外に出す）<br>
+・たし算は<b>中身が同じものだけ</b>：$2\sqrt3+5\sqrt3=7\sqrt3$、$\sqrt2+\sqrt3\neq\sqrt5$<br>
+・<b>有理化</b>：分母の $\sqrt{}$ を消す。$\dfrac{1}{\sqrt2}=\dfrac{\sqrt2}{2}$
+</div>
+<div class="box image">
+面積 2 の正方形の1辺が $\sqrt2$（約1.414）。「面積から辺の長さを逆算する」ボタンが $\sqrt{}$ です。<br>
+$\sqrt{}$ は文字式の $x$ のようなもの。$\sqrt3$ を「くま」と思えば、くま2匹＋くま5匹＝くま7匹。
+</div>
+<p>よく使う値：$\sqrt2\approx1.414$（ひとよひとよに）、$\sqrt3\approx1.732$（ひとなみに）、$\sqrt5\approx2.236$（ふじさんろく）</p>
+<div class="box ex">
+$\sqrt{12}+\sqrt{27}-\dfrac{6}{\sqrt3}$<br>
+<b>解</b>　$=2\sqrt3+3\sqrt3-\dfrac{6\sqrt3}{3}=2\sqrt3+3\sqrt3-2\sqrt3=\boldsymbol{3\sqrt3}$
+</div>
+<div class="box prac">(1) $\sqrt{50}-\sqrt{8}$　(2) $(\sqrt3+1)^2$　(3) $\dfrac{2}{\sqrt5-\sqrt3}$ を有理化</div>
+<div class="box ans">(1) $5\sqrt2-2\sqrt2=3\sqrt2$　(2) $3+2\sqrt3+1=4+2\sqrt3$　(3) 分母分子に $\sqrt5+\sqrt3$：$\dfrac{2(\sqrt5+\sqrt3)}{5-3}=\sqrt5+\sqrt3$</div>
+
+<!-- 9 -->
+<h2><span class="no">9</span>展開と因数分解 <span class="tag">中3</span></h2>
+<div class="box point">
+<b>乗法公式（左→右が展開、右→左が因数分解）</b><br>
+① $(x+a)(x+b)=x^2+(a+b)x+ab$<br>
+② $(x+a)^2=x^2+2ax+a^2$　　③ $(x-a)^2=x^2-2ax+a^2$<br>
+④ $(x+a)(x-a)=x^2-a^2$
+</div>
+<div class="two"><div>
+<div class="fig"><svg width="200" height="170" viewBox="0 0 200 170">
+<rect x="10" y="10" width="110" height="110" fill="#e8f0fb" stroke="#1f5fa8"/>
+<rect x="120" y="10" width="50" height="110" fill="#fff3ea" stroke="#e0702a"/>
+<rect x="10" y="120" width="110" height="40" fill="#fff3ea" stroke="#e0702a"/>
+<rect x="120" y="120" width="50" height="40" fill="#ecf8f1" stroke="#2e8b57"/>
+<text x="55" y="70" font-size="14">x²</text><text x="135" y="70" font-size="13">ax</text>
+<text x="55" y="145" font-size="13">bx</text><text x="132" y="145" font-size="13">ab</text>
+<text x="60" y="8" font-size="10">x</text><text x="142" y="8" font-size="10">a</text>
+<text x="175" y="70" font-size="10">x</text><text x="175" y="145" font-size="10">b</text>
+</svg></div></div><div>
+<div class="box image">
+展開は「<b>長方形の面積を分割して数える</b>」こと。縦 $x+b$、横 $x+a$ の長方形は4つのブロックに分かれ、合計 $x^2+ax+bx+ab$。<br>因数分解はその逆で「バラバラのブロックを長方形に組み立て直す」作業です。
+</div></div></div>
+<h3>因数分解の手順</h3>
+<ol><li><b>共通因数</b>をくくり出す：$3x^2-6x=3x(x-2)$</li>
+<li>公式に当てはめる。①は「<b>かけて $ab$、たして $a+b$</b>」になる2数を探す</li></ol>
+<div class="box ex">
+$x^2-x-12$ を因数分解。<br>
+<b>解</b>　かけて $-12$、たして $-1$ → $3$ と $-4$。答え $\boldsymbol{(x+3)(x-4)}$
+</div>
+<div class="box warn">$(a+b)^2=a^2+b^2$ は<b>まちがい</b>！ 真ん中の $2ab$ を忘れない。図の2つのオレンジの長方形の分です。</div>
+<div class="box prac">(1) $(2x-3)^2$ を展開　(2) $x^2+7x+10$　(3) $4x^2-9$　(4) $2x^2-8x+8$</div>
+<div class="box ans">(1) $4x^2-12x+9$　(2) $(x+2)(x+5)$　(3) $(2x+3)(2x-3)$　(4) $2(x-2)^2$</div>
+
+<!-- 10 -->
+<h2><span class="no">10</span>二次方程式 <span class="tag">中3</span></h2>
+<div class="box point">
+・まず<b>因数分解</b>を試す：$AB=0$ なら $A=0$ または $B=0$<br>
+・ダメなら<b>解の公式</b>：$ax^2+bx+c=0$ の解は　$x=\dfrac{-b\pm\sqrt{b^2-4ac}}{2a}$<br>
+・$x^2=k$ の形なら $x=\pm\sqrt k$
+</div>
+<div class="box image">
+「かけて0」になるのは、どちらかが0のときだけ。だから $(x-2)(x+5)=0$ なら $x=2$ か $x=-5$。<br>
+解の公式は「どんな二次方程式でも開けられる<b>マスターキー</b>」。時間はかかるけど必ず開く。
+</div>
+<h3>解の公式はどこから？（平方完成）</h3>
+<p>$x^2+6x+2=0$ → $x^2+6x+9=7$ → $(x+3)^2=7$ → $x=-3\pm\sqrt7$。<br>この「$(x+\square)^2$ を作る」操作を一般の $ax^2+bx+c$ でやると解の公式になります。<b>平方完成</b>は高校の二次関数でも主役です。</p>
+<div class="box ex">
+$2x^2-3x-1=0$<br>
+<b>解</b>　$a=2,b=-3,c=-1$。$x=\dfrac{3\pm\sqrt{9+8}}{4}=\boldsymbol{\dfrac{3\pm\sqrt{17}}{4}}$
+</div>
+<div class="box prac">(1) $x^2-5x+6=0$　(2) $(x-1)^2=5$　(3) $x^2+4x-1=0$</div>
+<div class="box ans">(1) $x=2,3$　(2) $x=1\pm\sqrt5$　(3) $x=\dfrac{-4\pm\sqrt{20}}{2}=-2\pm\sqrt5$</div>
+
+<!-- 11 -->
+<h2><span class="no">11</span>関数 $y=ax^2$ <span class="tag">中3</span></h2>
+<div class="box point">
+・グラフは原点を頂点とする<b>放物線</b>。$a\gt 0$ で下に凸（お椀）、$a\lt 0$ で上に凸（山）。<br>
+・$|a|$ が大きいほど<b>細い</b>。$y$ 軸について左右対称。<br>
+・変化の割合（$x$ が $p$ から $q$ まで）$=a(p+q)$ ← 一次関数と違い<b>一定でない</b>
+</div>
+<div class="fig"><svg width="300" height="200" viewBox="-150 -170 300 200">
+<line x1="-140" y1="0" x2="140" y2="0" stroke="#999"/><line x1="0" y1="25" x2="0" y2="-165" stroke="#999"/>
+<path d="M -60,-144 Q 0,144 60,-144" fill="none" stroke="#c0392b" stroke-width="2"/>
+<path d="M -120,-144 Q 0,144 120,-144" fill="none" stroke="#1f5fa8" stroke-width="2.5"/>
+<path d="M -130,-42 Q 0,42 130,-42" fill="none" stroke="#2e8b57" stroke-width="2"/>
+<text x="62" y="-140" font-size="11" fill="#c0392b">y=4x²</text>
+<text x="100" y="-110" font-size="11" fill="#1f5fa8">y=x²</text>
+<text x="95" y="-20" font-size="11" fill="#2e8b57">y=¼x²</text>
+</svg><br><small>（目盛は模式的）$a$ が大きいほど細い</small></div>
+<div class="box image">
+ボールを落とすと、落ちる距離は時間の2乗に比例します（$y=4.9x^2$）。1秒で4.9m、2秒で19.6m（4倍）、3秒で44.1m（9倍）。<b>だんだん加速する</b>のが2乗の関数の特徴です。
+</div>
+<div class="box ex">
+$y=2x^2$ で $x$ が 1 から 3 まで増えるときの変化の割合。<br>
+<b>解</b>　$\dfrac{18-2}{3-1}=8$。（公式 $a(p+q)=2\times4=8$ でもOK）
+</div>
+<div class="box prac">(1) $y=ax^2$ が点 $(2,-12)$ を通る。$a$ は？　(2) $y=x^2$ で $-1\le x\le 2$ のときの $y$ の範囲</div>
+<div class="box ans">(1) $-12=4a$ → $a=-3$　(2) $x=0$ で最小 0、$x=2$ で最大 4。$0\le y\le4$（端の値だけで判断しないこと！）</div>
+
+<!-- 12 -->
+<h2><span class="no">12</span>相似・三平方の定理・円 <span class="tag">中3</span></h2>
+<div class="box point">
+・<b>相似</b>＝拡大・縮小した関係。相似比 $m:n$ なら、<b>面積比 $m^2:n^2$、体積比 $m^3:n^3$</b><br>
+・相似条件：①3辺の比 ②2辺の比とその間の角 ③<b>2角</b>（一番よく使う）<br>
+・<b>三平方の定理</b>：直角三角形で $a^2+b^2=c^2$（$c$ は斜辺）<br>
+・<b>円周角の定理</b>：同じ弧に対する円周角は等しく、中心角の半分。直径に対する円周角は $90^\circ$
+</div>
+<div class="two"><div>
+<div class="fig"><svg width="220" height="200" viewBox="0 0 220 200">
+<polygon points="40,160 160,160 40,70" fill="#e8f0fb" stroke="#1f5fa8" stroke-width="2"/>
+<rect x="40" y="148" width="12" height="12" fill="none" stroke="#333"/>
+<text x="95" y="178" font-size="13">a</text><text x="22" y="120" font-size="13">b</text><text x="105" y="108" font-size="13" fill="#c0392b">c</text>
+<text x="40" y="30" font-size="13">a² + b² = c²</text>
+</svg></div></div><div>
+<div class="box image">
+相似比 2 倍の図形は、縦も横も2倍なので面積は $2\times2=4$ 倍。立体なら縦横高さ全部2倍で8倍。<b>Mサイズのピザの2倍の直径のピザは4倍の量</b>。
+</div></div></div>
+<h3>特別な直角三角形（超重要）</h3>
+<table><tr><th>角</th><th>辺の比</th></tr>
+<tr><td>$45^\circ,45^\circ,90^\circ$</td><td>$1:1:\sqrt2$</td></tr>
+<tr><td>$30^\circ,60^\circ,90^\circ$</td><td>$1:\sqrt3:2$</td></tr></table>
+<p>三平方の応用：2点 $(x_1,y_1),(x_2,y_2)$ 間の距離 $=\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}$、直方体の対角線 $=\sqrt{a^2+b^2+c^2}$。</p>
+<h3>中点連結定理・平行線と比</h3>
+<p>三角形の2辺の中点を結ぶ線分は、残りの辺に<b>平行で長さは半分</b>。平行線で切られた線分の比は等しい。</p>
+<div class="box ex">
+直角をはさむ2辺が 5 と 12 の直角三角形の斜辺は？　<b>解</b> $\sqrt{25+144}=\sqrt{169}=\boldsymbol{13}$
+</div>
+<div class="box prac">(1) 1辺 6 の正三角形の高さ　(2) 相似比 $2:3$ の2つの円錐の体積比　(3) 中心角 $140^\circ$ に対する円周角</div>
+<div class="box ans">(1) $30^\circ$-$60^\circ$-$90^\circ$ の三角形より $3\sqrt3$　(2) $8:27$　(3) $70^\circ$</div>
+
+<!-- 13 -->
+<h2><span class="no">13</span>確率とデータ <span class="tag">中1〜中3</span></h2>
+<div class="box point">
+・確率 $=\dfrac{\text{その事柄が起こる場合の数}}{\text{起こりうるすべての場合の数}}$（どれも<b>同様に確からしい</b>とき）<br>
+・「少なくとも1回」は <b>1 −（1回も起こらない確率）</b><br>
+・データ：平均値・中央値（真ん中の値）・最頻値（一番多い値）・範囲（最大−最小）<br>
+・四分位数と<b>箱ひげ図</b>：データを4等分する区切り $Q_1, Q_2(\text{中央値}), Q_3$。四分位範囲 $=Q_3-Q_1$
+</div>
+<div class="box image">
+サイコロ2個は「<b>6×6のマス目表</b>」を書けば全36通りが見える。数えもれも重複もなくなるので、迷ったら表か樹形図！
+</div>
+<div class="box ex">
+サイコロ2個で、目の和が 5 になる確率。<br>
+<b>解</b>　(1,4),(2,3),(3,2),(4,1) の4通り。$\dfrac{4}{36}=\boldsymbol{\dfrac19}$
+</div>
+<div class="fig"><svg width="420" height="70" viewBox="0 0 420 70">
+<line x1="20" y1="35" x2="80" y2="35" stroke="#333" stroke-width="2"/><line x1="20" y1="25" x2="20" y2="45" stroke="#333" stroke-width="2"/>
+<rect x="80" y="20" width="160" height="30" fill="#e8f0fb" stroke="#1f5fa8" stroke-width="2"/>
+<line x1="150" y1="20" x2="150" y2="50" stroke="#c0392b" stroke-width="2.5"/>
+<line x1="240" y1="35" x2="380" y2="35" stroke="#333" stroke-width="2"/><line x1="380" y1="25" x2="380" y2="45" stroke="#333" stroke-width="2"/>
+<g font-size="10" text-anchor="middle"><text x="20" y="62">最小</text><text x="80" y="62">Q₁</text><text x="150" y="62" fill="#c0392b">中央値</text><text x="240" y="62">Q₃</text><text x="380" y="62">最大</text></g>
+<text x="160" y="14" font-size="10" text-anchor="middle">← 箱にデータの真ん中50% →</text>
+</svg></div>
+<div class="box prac">(1) 硬貨を3回投げて少なくとも1回表が出る確率　(2) データ 3,5,5,7,10 の平均値・中央値・最頻値</div>
+<div class="box ans">(1) $1-\frac18=\frac78$　(2) 平均 6、中央値 5、最頻値 5</div>
+
+<!-- ================= 第2部 ================= -->
+<h1 class="part">第2部 数学I・A<small>中学の道具を「一般化」して使いこなす</small></h1>
+<p>高校数学は中学の延長です。違いは「文字が増える」「場合分けが増える」「なぜ？を説明する」の3点。中学の計算に自信があれば必ずついていけます。</p>
+
+<!-- 14 -->
+<h2><span class="no">14</span>数と式・不等式 <span class="tag">数I</span></h2>
+<div class="box point">
+・3乗の公式：$(a+b)^3=a^3+3a^2b+3ab^2+b^3$、$a^3+b^3=(a+b)(a^2-ab+b^2)$<br>
+・因数分解のコツ：<b>最も次数の低い文字で整理</b>／同じカタマリを1文字に置き換える<br>
+・実数：有理数（分数で書ける）＋無理数（$\sqrt2,\pi$ など）<br>
+・$|x|=\begin{cases}x & (x\ge0)\\ -x & (x\lt 0)\end{cases}$　　$\sqrt{a^2}=|a|$<br>
+・不等式：<b>負の数をかける・わると不等号の向きが逆</b>
+</div>
+<div class="box image">
+「$-$ をかけると向きが逆」は数直線を<b>鏡に映す</b>イメージ。$2\lt 5$ を鏡に映すと $-2\gt -5$。大小が入れ替わります。
+</div>
+<div class="box ex">
+(1) $(x+y)^2-3(x+y)-10$ を因数分解　(2) $|x-2|\lt 3$ を解け<br>
+<b>解</b> (1) $x+y=A$ とおくと $A^2-3A-10=(A-5)(A+2)$。答え $\boldsymbol{(x+y-5)(x+y+2)}$<br>
+(2) 「2 からの距離が 3 未満」なので $-3\lt x-2\lt 3$ → $\boldsymbol{-1\lt x\lt 5}$
+</div>
+<h3>対称式</h3>
+<p>$x+y$ と $xy$ がわかれば、$x^2+y^2=(x+y)^2-2xy$ などで計算できる。</p>
+<div class="box prac">(1) $-2x+3\gt 9$　(2) $x=\sqrt3+1,\ y=\sqrt3-1$ のとき $x^2+y^2$　(3) $\dfrac{1}{\sqrt2+1}$ の整数部分</div>
+<div class="box ans">(1) $-2x\gt 6$ → $x\lt -3$　(2) $x+y=2\sqrt3, xy=2$ → $12-4=8$　(3) $=\sqrt2-1\approx0.414$ より 0</div>
+
+<!-- 15 -->
+<h2><span class="no">15</span>集合と論理 <span class="tag">数I</span></h2>
+<div class="box point">
+・$A\cap B$（かつ・共通部分）、$A\cup B$（または・和集合）、$\overline{A}$（補集合）<br>
+・ド・モルガン：$\overline{A\cup B}=\overline A\cap\overline B$、$\overline{A\cap B}=\overline A\cup\overline B$<br>
+・$p\Rightarrow q$ が真のとき、$p$ は $q$ の<b>十分条件</b>、$q$ は $p$ の<b>必要条件</b><br>
+・<b>対偶</b>「$\overline q\Rightarrow\overline p$」は元の命題と真偽が一致<br>
+・背理法：「結論が成り立たない」と仮定して矛盾を導く
+</div>
+<div class="fig"><svg width="360" height="130" viewBox="0 0 360 130">
+<circle cx="140" cy="65" r="50" fill="#1f5fa8" fill-opacity=".25" stroke="#1f5fa8"/>
+<circle cx="210" cy="65" r="50" fill="#e0702a" fill-opacity=".25" stroke="#e0702a"/>
+<text x="110" y="70" font-size="14">A</text><text x="232" y="70" font-size="14">B</text><text x="160" y="70" font-size="11">A∩B</text>
+<rect x="60" y="5" width="230" height="120" fill="none" stroke="#666"/><text x="270" y="20" font-size="11">U</text>
+</svg></div>
+<div class="box image">
+「東京都民 ⇒ 日本人」は真。小さい集合（東京都民）が大きい集合（日本人）に<b>含まれる</b>。<br>
+・東京都民であることは、日本人であるための<b>十分</b>条件（それだけで十分）<br>
+・日本人であることは、東京都民であるための<b>必要</b>条件（少なくとも必要）<br>
+覚え方：<b>矢印の根元が「十分」、先が「必要」</b>。「小さい⊂大きい」で、小さい方が十分。
+</div>
+<div class="box ex">
+$x=2$ は $x^2=4$ であるための何条件？<br>
+<b>解</b>　$x=2\Rightarrow x^2=4$ は真、$x^2=4\Rightarrow x=2$ は偽（$x=-2$）。よって<b>十分条件だが必要条件でない</b>。
+</div>
+<div class="box prac">(1) 「$n^2$ が偶数 ⇒ $n$ は偶数」の対偶を書け　(2) $xy=0$ は $x=0$ であるための何条件？</div>
+<div class="box ans">(1) 「$n$ が奇数 ⇒ $n^2$ は奇数」（これは真なので元も真）　(2) 必要条件だが十分条件でない</div>
+
+<!-- 16 -->
+<h2><span class="no">16</span>二次関数 <span class="tag">数I</span></h2>
+<div class="box point">
+・$y=a(x-p)^2+q$ は、$y=ax^2$ を <b>$x$ 方向に $p$、$y$ 方向に $q$ 平行移動</b>したもの。頂点 $(p,q)$、軸 $x=p$<br>
+・$y=ax^2+bx+c$ は<b>平方完成</b>して上の形に：$y=a\left(x+\dfrac{b}{2a}\right)^2-\dfrac{b^2-4ac}{4a}$<br>
+・最大・最小は「<b>頂点と範囲の端</b>」を比べる<br>
+・判別式 $D=b^2-4ac$：$D\gt 0$ で $x$ 軸と2点、$D=0$ で接する、$D\lt 0$ で共有点なし
+</div>
+<div class="fig"><svg width="330" height="210" viewBox="-60 -190 330 210">
+<line x1="-50" y1="0" x2="260" y2="0" stroke="#999"/><line x1="0" y1="15" x2="0" y2="-185" stroke="#999"/>
+<path d="M -50,-125 Q 0,125 50,-125" fill="none" stroke="#999" stroke-width="1.5" stroke-dasharray="4,3"/>
+<path d="M 70,-165 Q 120,85 170,-165" fill="none" stroke="#1f5fa8" stroke-width="2.5"/>
+<circle cx="120" cy="-40" r="4" fill="#e0702a"/><text x="128" y="-34" font-size="11" fill="#e0702a">頂点 (p, q)</text>
+<line x1="120" y1="0" x2="120" y2="-185" stroke="#e0702a" stroke-dasharray="3,3"/><text x="124" y="-170" font-size="10" fill="#e0702a">軸 x=p</text>
+<path d="M 4,-6 L 112,-36" stroke="#2e8b57" stroke-width="1.5" marker-end="url(#ar)"/>
+<text x="20" y="-40" font-size="10" fill="#2e8b57">平行移動</text>
+<text x="-45" y="-140" font-size="10" fill="#888">y=ax²</text>
+</svg></div>
+<div class="box image">
+どんな二次関数も、基本の形 $y=ax^2$ を<b>スライドさせただけ</b>。平方完成は「どこへスライドしたか（頂点）を読み取る作業」です。
+</div>
+<div class="box ex">
+$y=x^2-4x+1\ (0\le x\le 5)$ の最大値・最小値。<br>
+<b>解</b>　$y=(x-2)^2-3$。頂点 $(2,-3)$ は範囲内なので<b>最小値 $-3$</b>（$x=2$）。端は $x=0$ で $1$、$x=5$ で $6$。軸から遠い $x=5$ で<b>最大値 6</b>。
+</div>
+<h3>二次不等式</h3>
+<p>$x^2-x-6\gt 0$ → $(x+2)(x-3)\gt 0$。グラフが <b>$x$ 軸より上</b>の部分なので $x\lt -2,\ 3\lt x$。$\lt 0$ なら間の $-2\lt x\lt 3$。<b>グラフを描けば一瞬</b>。</p>
+<div class="box prac">(1) $y=2x^2+8x+5$ の頂点　(2) $x^2-5x+4\le0$　(3) $x^2+2x+k=0$ が実数解をもつ $k$ の範囲</div>
+<div class="box ans">(1) $y=2(x+2)^2-3$ → $(-2,-3)$　(2) $(x-1)(x-4)\le0$ → $1\le x\le4$　(3) $D/4=1-k\ge0$ → $k\le1$</div>
+
+<!-- 17 -->
+<h2><span class="no">17</span>三角比 <span class="tag">数I</span></h2>
+<div class="box point">
+・直角三角形で：$\sin\theta=\dfrac{\text{対辺}}{\text{斜辺}}$、$\cos\theta=\dfrac{\text{底辺}}{\text{斜辺}}$、$\tan\theta=\dfrac{\text{対辺}}{\text{底辺}}$<br>
+・相互関係：$\sin^2\theta+\cos^2\theta=1$、$\tan\theta=\dfrac{\sin\theta}{\cos\theta}$<br>
+・<b>正弦定理</b>：$\dfrac{a}{\sin A}=\dfrac{b}{\sin B}=\dfrac{c}{\sin C}=2R$（$R$：外接円の半径）<br>
+・<b>余弦定理</b>：$a^2=b^2+c^2-2bc\cos A$<br>
+・面積：$S=\dfrac12 bc\sin A$
+</div>
+<div class="two"><div>
+<div class="fig"><svg width="220" height="190" viewBox="-20 -170 220 190">
+<line x1="-15" y1="0" x2="195" y2="0" stroke="#999"/><line x1="0" y1="10" x2="0" y2="-165" stroke="#999"/>
+<path d="M 150,0 A 150 150 0 0 0 0,-150" fill="none" stroke="#1f5fa8" stroke-width="2"/>
+<line x1="0" y1="0" x2="106" y2="-106" stroke="#333" stroke-width="2"/>
+<line x1="106" y1="-106" x2="106" y2="0" stroke="#c0392b" stroke-width="2.5"/>
+<line x1="0" y1="0" x2="106" y2="0" stroke="#2e8b57" stroke-width="3"/>
+<circle cx="106" cy="-106" r="4" fill="#333"/>
+<text x="112" y="-110" font-size="11">P(cosθ, sinθ)</text>
+<text x="110" y="-50" font-size="11" fill="#c0392b">sinθ</text><text x="40" y="14" font-size="11" fill="#2e8b57">cosθ</text>
+<text x="20" y="-8" font-size="11">θ</text><text x="40" y="-60" font-size="11">1</text>
+</svg></div></div><div>
+<div class="box image">
+半径1の円の上を点 P が回る。角 $\theta$ のとき、P の <b>$x$ 座標が $\cos\theta$、$y$ 座標が $\sin\theta$</b>。<br>
+こう定義すると $90^\circ$ を超える角（鈍角）でも使えます。三平方の定理から $\sin^2\theta+\cos^2\theta=1$ も一目瞭然。
+</div></div></div>
+<table><tr><th>$\theta$</th><th>$0^\circ$</th><th>$30^\circ$</th><th>$45^\circ$</th><th>$60^\circ$</th><th>$90^\circ$</th><th>$120^\circ$</th><th>$135^\circ$</th><th>$150^\circ$</th><th>$180^\circ$</th></tr>
+<tr><td>$\sin$</td><td>0</td><td>$\frac12$</td><td>$\frac{\sqrt2}{2}$</td><td>$\frac{\sqrt3}{2}$</td><td>1</td><td>$\frac{\sqrt3}{2}$</td><td>$\frac{\sqrt2}{2}$</td><td>$\frac12$</td><td>0</td></tr>
+<tr><td>$\cos$</td><td>1</td><td>$\frac{\sqrt3}{2}$</td><td>$\frac{\sqrt2}{2}$</td><td>$\frac12$</td><td>0</td><td>$-\frac12$</td><td>$-\frac{\sqrt2}{2}$</td><td>$-\frac{\sqrt3}{2}$</td><td>$-1$</td></tr>
+<tr><td>$\tan$</td><td>0</td><td>$\frac{1}{\sqrt3}$</td><td>1</td><td>$\sqrt3$</td><td>なし</td><td>$-\sqrt3$</td><td>$-1$</td><td>$-\frac1{\sqrt3}$</td><td>0</td></tr></table>
+<p><b>使い分け</b>：「向かい合う辺と角のペア」が出てきたら正弦定理、「3辺と1角」の関係なら余弦定理。余弦定理は<b>三平方の定理の拡張版</b>（$A=90^\circ$ なら $\cos A=0$ で三平方そのもの）。</p>
+<div class="box ex">
+$b=3, c=5, A=120^\circ$ のとき $a$ と面積。<br>
+<b>解</b>　$a^2=9+25-2\cdot3\cdot5\cdot(-\frac12)=49$ → $\boldsymbol{a=7}$。面積 $=\frac12\cdot3\cdot5\cdot\frac{\sqrt3}{2}=\boldsymbol{\frac{15\sqrt3}{4}}$
+</div>
+<div class="box prac">(1) $\sin\theta=\frac35\ (0^\circ\lt \theta\lt 90^\circ)$ のとき $\cos\theta,\tan\theta$　(2) $a=6, A=30^\circ$ のとき外接円の半径 $R$</div>
+<div class="box ans">(1) $\cos\theta=\frac45,\ \tan\theta=\frac34$　(2) $2R=\frac{6}{1/2}=12$ → $R=6$</div>
+
+<!-- 18 -->
+<h2><span class="no">18</span>データの分析 <span class="tag">数I</span></h2>
+<div class="box point">
+・<b>分散</b> $s^2=$（偏差の2乗）の平均 $=\overline{x^2}-(\bar x)^2$　（偏差 $=$ 各値 $-$ 平均）<br>
+・<b>標準偏差</b> $s=\sqrt{\text{分散}}$：データの<b>散らばり具合</b><br>
+・<b>相関係数</b> $r=\dfrac{s_{xy}}{s_x s_y}$（$-1\le r\le1$）。1に近いと正の相関、$-1$ に近いと負の相関<br>
+・変量変換 $y=ax+b$ なら：平均 $\bar y=a\bar x+b$、標準偏差 $s_y=|a|s_x$
+</div>
+<div class="box image">
+平均点が同じ60点の2クラス。片方は全員55〜65点、もう片方は0点〜100点がバラバラ。この「<b>バラつき</b>」を1つの数で表したのが標準偏差。<br>
+偏差をそのまま平均すると＋と−が打ち消して0になるので、<b>2乗してから平均</b>（分散）→ 単位を戻すため $\sqrt{}$（標準偏差）。
+</div>
+<div class="box ex">
+データ 2, 4, 6, 8 の分散と標準偏差。<br>
+<b>解</b>　平均 5。偏差 $-3,-1,1,3$。2乗の平均 $\frac{9+1+1+9}{4}=\boldsymbol5$。標準偏差 $\boldsymbol{\sqrt5}$
+</div>
+<div class="warn box">相関があっても<b>因果関係があるとは限らない</b>（アイスの売上と水難事故は相関するが、原因は「暑さ」）。</div>
+<div class="box prac">データの平均 50、標準偏差 10。全員の得点を2倍して5を足すと、平均と標準偏差は？</div>
+<div class="box ans">平均 $2\times50+5=105$、標準偏差 $2\times10=20$（足し算は散らばりに影響しない）</div>
+
+<!-- 19 -->
+<h2><span class="no">19</span>場合の数と確率 <span class="tag">数A</span></h2>
+<div class="box point">
+・<b>和の法則</b>（AまたはB）：たす／<b>積の法則</b>（Aしてから続けてB）：かける<br>
+・<b>順列</b>（並べる）${}_n\mathrm{P}_r=n(n-1)\cdots(n-r+1)$、$n!$ 個の並べ方<br>
+・<b>組合せ</b>（選ぶだけ）${}_n\mathrm{C}_r=\dfrac{{}_n\mathrm{P}_r}{r!}$<br>
+・円順列 $(n-1)!$、重複順列 $n^r$<br>
+・独立な試行：$P=P(A)\times P(B)$。反復試行：${}_n\mathrm C_r\,p^r(1-p)^{n-r}$<br>
+・条件付き確率：$P_A(B)=\dfrac{P(A\cap B)}{P(A)}$
+</div>
+<div class="box image">
+5人から<b>委員長と副委員長</b>を選ぶ → 役割が違うので「並べる」：$5\times4=20$ 通り（順列）。<br>
+5人から<b>委員2人</b>を選ぶ → 役割なし。AB と BA は同じなので2で割る：$20\div2=10$ 通り（組合せ）。<br>
+<b>「区別するか？」</b>が P と C の分かれ目。
+</div>
+<div class="box ex">
+サイコロを4回投げ、1の目がちょうど2回出る確率。<br>
+<b>解</b>　どの2回で出るか ${}_4\mathrm C_2=6$ 通り。$6\times\left(\frac16\right)^2\left(\frac56\right)^2=\dfrac{6\cdot25}{1296}=\boldsymbol{\dfrac{25}{216}}$
+</div>
+<h3>期待値</h3>
+<p>（値 × その確率）の合計。サイコロの目の期待値 $=\frac{1+2+\cdots+6}{6}=3.5$。「平均するとどれくらい？」の答え。</p>
+<div class="box prac">(1) ${}_6\mathrm C_2$　(2) 男子4人女子3人から3人選ぶとき、女子が少なくとも1人入る選び方　(3) 6人の円順列</div>
+<div class="box ans">(1) 15　(2) 全体 ${}_7\mathrm C_3=35$ から男子のみ ${}_4\mathrm C_3=4$ を引いて 31　(3) $5!=120$</div>
+
+<!-- 20 -->
+<h2><span class="no">20</span>整数の性質 <span class="tag">数A</span></h2>
+<div class="box point">
+・<b>素因数分解</b>：$360=2^3\cdot3^2\cdot5$。約数の個数 $=(3+1)(2+1)(1+1)=24$<br>
+・最大公約数 $G$・最小公倍数 $L$ について　$ab=GL$<br>
+・<b>ユークリッドの互除法</b>：$a$ を $b$ で割った余り $r$ について　$\gcd(a,b)=\gcd(b,r)$<br>
+・不定方程式 $ax+by=c$：1組の解を見つけ、引き算して一般解へ<br>
+・$n$ 進法：$1011_{(2)}=1\cdot2^3+0\cdot2^2+1\cdot2+1=11$
+</div>
+<div class="box image">
+互除法は「<b>長方形を正方形で切り取っていく</b>」こと。$48\times18$ の長方形から $18\times18$ を2枚取ると $12\times18$ が残る。次に $12\times12$ を取ると $12\times6$、$6\times6$ がぴったり2枚。最後の正方形の辺 6 が最大公約数。
+</div>
+<div class="box ex">
+$3x+5y=1$ の整数解をすべて求めよ。<br>
+<b>解</b>　$x=2,y=-1$ が1つの解：$3\cdot2+5\cdot(-1)=1$。引くと $3(x-2)=-5(y+1)$。3と5は互いに素なので $x-2=5k$。<br>
+よって $\boldsymbol{x=5k+2,\ y=-3k-1}$（$k$ は整数）
+</div>
+<p><b>余りで分類</b>：整数は「3で割った余り0,1,2」の3種類に分けられる。$n=3k,3k+1,3k+2$ とおいて証明するのが定番。</p>
+<div class="box prac">(1) 72 の正の約数の個数　(2) 互除法で $\gcd(391,323)$　(3) $25$ を2進法で</div>
+<div class="box ans">(1) $2^3\cdot3^2$ → $4\times3=12$ 個　(2) $391=323+68,\ 323=68\cdot4+51,\ 68=51+17,\ 51=17\cdot3$ → 17　(3) $11001_{(2)}$</div>
+
+<!-- 21 -->
+<h2><span class="no">21</span>図形の性質 <span class="tag">数A</span></h2>
+<div class="box point">
+・三角形の5心：<b>重心</b>（中線の交点、中線を $2:1$ に内分）、<b>外心</b>（垂直二等分線、外接円の中心）、<b>内心</b>（角の二等分線、内接円の中心）、垂心、傍心<br>
+・角の二等分線：$\mathrm{BD}:\mathrm{DC}=\mathrm{AB}:\mathrm{AC}$<br>
+・<b>チェバの定理</b>：$\dfrac{\mathrm{BP}}{\mathrm{PC}}\cdot\dfrac{\mathrm{CQ}}{\mathrm{QA}}\cdot\dfrac{\mathrm{AR}}{\mathrm{RB}}=1$　<b>メネラウスの定理</b>も同じ形（一周たどる）<br>
+・円に内接する四角形：対角の和 $180^\circ$<br>
+・<b>方べきの定理</b>：$\mathrm{PA}\cdot\mathrm{PB}=\mathrm{PC}\cdot\mathrm{PD}$<br>
+・接弦定理：接線と弦のつくる角 ＝ その弧に対する円周角
+</div>
+<div class="fig"><svg width="260" height="190" viewBox="0 0 260 190">
+<polygon points="130,15 20,175 240,175" fill="#e8f0fb" stroke="#1f5fa8" stroke-width="2"/>
+<line x1="130" y1="15" x2="130" y2="175" stroke="#e0702a" stroke-dasharray="4,3"/>
+<line x1="20" y1="175" x2="185" y2="95" stroke="#e0702a" stroke-dasharray="4,3"/>
+<line x1="240" y1="175" x2="75" y2="95" stroke="#e0702a" stroke-dasharray="4,3"/>
+<circle cx="130" cy="121.7" r="4.5" fill="#c0392b"/><text x="138" y="125" font-size="11" fill="#c0392b">G 重心</text>
+<text x="80" y="140" font-size="10">2</text><text x="160" y="105" font-size="10"></text>
+<text x="133" y="70" font-size="10">2</text><text x="133" y="152" font-size="10">1</text>
+</svg><br><small>重心は中線を頂点側から 2:1 に分ける（＝厚紙の三角形を指1本で支えられる点）</small></div>
+<div class="box image">
+チェバ・メネラウスは「<b>頂点 → 分点 → 頂点 → 分点…と一筆書きで一周</b>」しながら比をかけると1になる、とだけ覚えればOK。
+</div>
+<div class="box prac">(1) AB=6, AC=4, BC=5 の△ABCで、∠A の二等分線が BC と交わる点 D について BD は？<br>(2) 円の2つの弦 AB, CD が P で交わり、PA=3, PB=4, PC=2 のとき PD は？</div>
+<div class="box ans">(1) BD:DC=6:4 → BD $=5\times\frac{6}{10}=3$　(2) $3\cdot4=2\cdot\mathrm{PD}$ → PD=6</div>
+
+<!-- ================= 第3部 ================= -->
+<h1 class="part">第3部 数学II・B・C<small>新しい「数」と「関数」、そして微分積分の入口</small></h1>
+
+<!-- 22 -->
+<h2><span class="no">22</span>式と証明・複素数・高次方程式 <span class="tag">数II</span></h2>
+<div class="box point">
+・<b>二項定理</b>：$(a+b)^n=\sum_{r=0}^{n}{}_n\mathrm C_r\,a^{n-r}b^r$<br>
+・<b>相加平均 ≥ 相乗平均</b>：$a,b\gt 0$ のとき $\dfrac{a+b}{2}\ge\sqrt{ab}$（等号は $a=b$）<br>
+・<b>虚数単位</b> $i$：$i^2=-1$。複素数 $a+bi$。<br>
+・解と係数の関係：$ax^2+bx+c=0$ の解 $\alpha,\beta$ について $\alpha+\beta=-\frac ba,\ \alpha\beta=\frac ca$<br>
+・<b>剰余の定理</b>：$P(x)$ を $x-a$ で割った余りは $P(a)$。<b>因数定理</b>：$P(a)=0 \iff P(x)$ は $x-a$ で割り切れる
+</div>
+<div class="box image">
+「2乗して $-1$ になる数」なんて無い……ので<b>新しく作った</b>のが $i$。負の数を発明したときと同じ発想です。これで、どんな二次方程式も必ず解ける（$D\lt 0$ でも虚数解がある）ようになりました。
+</div>
+<div class="box ex">
+$x^3-3x^2-x+3=0$ を解け。<br>
+<b>解</b>　$P(1)=1-3-1+3=0$ なので $x-1$ が因数。割り算して $(x-1)(x^2-2x-3)=(x-1)(x+1)(x-3)$。<b>$x=1,-1,3$</b><br>
+<small>（「定数項の約数」を代入して0になるものを探すのがコツ）</small>
+</div>
+<div class="box ex">
+$x\gt 0$ のとき $x+\dfrac{4}{x}$ の最小値。<br>
+<b>解</b>　相加相乗より $x+\frac4x\ge2\sqrt{x\cdot\frac4x}=4$。等号は $x=\frac4x$ つまり $x=2$。<b>最小値 4</b>
+</div>
+<div class="box prac">(1) $(2+3i)(1-i)$　(2) $(x+2)^5$ の $x^3$ の係数　(3) $x^2-3x+5=0$ の解を $\alpha,\beta$ として $\alpha^2+\beta^2$</div>
+<div class="box ans">(1) $2-2i+3i-3i^2=5+i$　(2) ${}_5\mathrm C_2\cdot2^2=40$　(3) $(\alpha+\beta)^2-2\alpha\beta=9-10=-1$</div>
+
+<!-- 23 -->
+<h2><span class="no">23</span>図形と方程式 <span class="tag">数II</span></h2>
+<div class="box point">
+・内分点（$m:n$）：$\left(\dfrac{nx_1+mx_2}{m+n},\ \dfrac{ny_1+my_2}{m+n}\right)$　中点は $\left(\frac{x_1+x_2}{2},\frac{y_1+y_2}{2}\right)$<br>
+・直線：点 $(x_1,y_1)$ を通り傾き $m$：$y-y_1=m(x-x_1)$<br>
+・2直線が<b>平行</b> ⇔ 傾きが等しい、<b>垂直</b> ⇔ 傾きの積 $=-1$<br>
+・点と直線の距離：$d=\dfrac{|ax_1+by_1+c|}{\sqrt{a^2+b^2}}$<br>
+・円：中心 $(a,b)$、半径 $r$：$(x-a)^2+(y-b)^2=r^2$<br>
+・不等式の表す領域：$y\gt f(x)$ はグラフの<b>上側</b>
+</div>
+<div class="box image">
+図形を<b>座標（住所）</b>で表すと、図形の問題が「計算問題」に変わります。円の式は「中心からの距離が $r$」を三平方の定理で書いただけ。
+</div>
+<div class="box ex">
+円 $x^2+y^2=5$ と直線 $y=2x+k$ が接するときの $k$。<br>
+<b>解</b>　中心 $(0,0)$ と直線 $2x-y+k=0$ の距離が半径 $\sqrt5$：$\dfrac{|k|}{\sqrt5}=\sqrt5$ → $\boldsymbol{k=\pm5}$
+</div>
+<div class="box prac">(1) $x^2+y^2-4x+6y-3=0$ の中心と半径　(2) 点 $(1,2)$ を通り $y=3x$ に垂直な直線　(3) 2点 $(1,1),(7,4)$ を $2:1$ に内分する点</div>
+<div class="box ans">(1) $(x-2)^2+(y+3)^2=16$ → 中心 $(2,-3)$、半径 4　(2) $y=-\frac13x+\frac73$　(3) $(5,3)$</div>
+
+<!-- 24 -->
+<h2><span class="no">24</span>三角関数 <span class="tag">数II</span></h2>
+<div class="box point">
+・<b>弧度法</b>：$180^\circ=\pi$ ラジアン。半径1の円で「弧の長さ＝角度」<br>
+・単位円で角を<b>一般角</b>（何周でも、マイナスでも）に拡張。$\sin,\cos$ は周期 $2\pi$、$\tan$ は周期 $\pi$<br>
+・<b>加法定理</b>：$\sin(\alpha\pm\beta)=\sin\alpha\cos\beta\pm\cos\alpha\sin\beta$<br>
+　　　　　　$\cos(\alpha\pm\beta)=\cos\alpha\cos\beta\mp\sin\alpha\sin\beta$<br>
+・2倍角：$\sin2\theta=2\sin\theta\cos\theta$、$\cos2\theta=1-2\sin^2\theta=2\cos^2\theta-1$<br>
+・<b>合成</b>：$a\sin\theta+b\cos\theta=\sqrt{a^2+b^2}\sin(\theta+\alpha)$
+</div>
+<div class="fig"><svg width="480" height="140" viewBox="-20 -65 480 140">
+<line x1="-10" y1="0" x2="460" y2="0" stroke="#999"/><line x1="0" y1="-60" x2="0" y2="60" stroke="#999"/>
+<path d="M0,0 C 35,-66 105,-66 140,0 S 245,66 280,0 S 385,-66 420,0" fill="none" stroke="#1f5fa8" stroke-width="2.5"/>
+<path d="M0,-50 C 35,-50 70,-25 70,0 S 105,50 140,50 S 175,50 210,0 S 245,-50 280,-50 S 315,-50 350,0 S 385,50 420,50" fill="none" stroke="#e0702a" stroke-width="2" stroke-dasharray="5,3"/>
+<g font-size="10" text-anchor="middle"><text x="70" y="14">π/2</text><text x="140" y="14">π</text><text x="210" y="14">3π/2</text><text x="280" y="14">2π</text><text x="420" y="14">3π</text></g>
+<text x="-14" y="-46" font-size="10">1</text><text x="-16" y="54" font-size="10">−1</text>
+<text x="300" y="-50" font-size="11" fill="#1f5fa8">y = sin x</text><text x="300" y="62" font-size="11" fill="#e0702a">y = cos x</text>
+</svg></div>
+<div class="box image">
+観覧車のゴンドラの<b>高さ</b>を時間ごとにグラフにすると $\sin$ のなみなみ。<b>横の位置</b>が $\cos$。回り続けるものはすべて三角関数で表せます（音・電波・振り子・季節）。
+</div>
+<div class="box ex">
+$\sin\theta+\sqrt3\cos\theta$ の最大値（$0\le\theta\lt 2\pi$）。<br>
+<b>解</b>　$\sqrt{1+3}=2$。$=2\left(\frac12\sin\theta+\frac{\sqrt3}{2}\cos\theta\right)=2\sin\left(\theta+\frac\pi3\right)$。<b>最大値 2</b>（$\theta=\frac\pi6$）
+</div>
+<div class="box prac">(1) $\sin75^\circ$ の値　(2) $\cos\theta=\frac13$ のとき $\cos2\theta$　(3) $0\le\theta\lt 2\pi$ で $\sin\theta=\frac{\sqrt3}{2}$ を解け</div>
+<div class="box ans">(1) $\sin(45^\circ+30^\circ)=\frac{\sqrt2}2\cdot\frac{\sqrt3}2+\frac{\sqrt2}2\cdot\frac12=\frac{\sqrt6+\sqrt2}{4}$　(2) $2\cdot\frac19-1=-\frac79$　(3) $\theta=\frac\pi3,\frac{2\pi}3$</div>
+
+<!-- 25 -->
+<h2><span class="no">25</span>指数関数・対数関数 <span class="tag">数II</span></h2>
+<div class="box point">
+・指数法則：$a^m a^n=a^{m+n}$、$(a^m)^n=a^{mn}$、$a^0=1$、$a^{-n}=\dfrac1{a^n}$、$a^{\frac mn}=\sqrt[n]{a^m}$<br>
+・<b>対数</b>：$a^p=M \iff p=\log_a M$（「$a$ を何乗したら $M$？」の答え）<br>
+・$\log_a MN=\log_a M+\log_a N$、$\log_a\frac MN=\log_a M-\log_a N$、$\log_a M^k=k\log_a M$<br>
+・底の変換：$\log_a b=\dfrac{\log_c b}{\log_c a}$<br>
+・$a\gt 1$ なら $y=a^x$, $y=\log_a x$ は増加。$0\lt a\lt 1$ なら減少（不等式の向きに注意）
+</div>
+<div class="box image">
+紙を半分に折るたびに厚さは2倍。$x$ 回折ると $2^x$ 倍 ── これが<b>指数関数</b>（爆発的に増える）。<br>
+逆に「1024倍の厚さにするには何回折る？」の答え $\log_2 1024=10$ が<b>対数</b>。対数は<b>「桁数」や「何回かけたか」を数える道具</b>です。
+</div>
+<div class="fig"><svg width="270" height="270" viewBox="-105 -165 270 270"><line x1="-100" y1="0" x2="160" y2="0" stroke="#999"/><line x1="0" y1="100" x2="0" y2="-160" stroke="#999"/>
+<line x1="-95" y1="95" x2="155" y2="-155" stroke="#bbb" stroke-dasharray="3,3"/><text x="135" y="-140" font-size="9" fill="#888">y=x</text>
+<polyline points="-99.0,-3.0 -97.5,-3.2 -96.0,-3.3 -94.5,-3.4 -93.0,-3.5 -91.5,-3.6 -90.0,-3.8 -88.5,-3.9 -87.0,-4.0 -85.5,-4.2 -84.0,-4.3 -82.5,-4.5 -81.0,-4.6 -79.5,-4.8 -78.0,-4.9 -76.5,-5.1 -75.0,-5.3 -73.5,-5.5 -72.0,-5.7 -70.5,-5.9 -69.0,-6.1 -67.5,-6.3 -66.0,-6.5 -64.5,-6.8 -63.0,-7.0 -61.5,-7.2 -60.0,-7.5 -58.5,-7.8 -57.0,-8.0 -55.5,-8.3 -54.0,-8.6 -52.5,-8.9 -51.0,-9.2 -49.5,-9.6 -48.0,-9.9 -46.5,-10.2 -45.0,-10.6 -43.5,-11.0 -42.0,-11.4 -40.5,-11.8 -39.0,-12.2 -37.5,-12.6 -36.0,-13.1 -34.5,-13.5 -33.0,-14.0 -31.5,-14.5 -30.0,-15.0 -28.5,-15.5 -27.0,-16.1 -25.5,-16.6 -24.0,-17.2 -22.5,-17.8 -21.0,-18.5 -19.5,-19.1 -18.0,-19.8 -16.5,-20.5 -15.0,-21.2 -13.5,-22.0 -12.0,-22.7 -10.5,-23.5 -9.0,-24.4 -7.5,-25.2 -6.0,-26.1 -4.5,-27.0 -3.0,-28.0 -1.5,-29.0 0.0,-30.0 1.5,-31.1 3.0,-32.2 4.5,-33.3 6.0,-34.5 7.5,-35.7 9.0,-36.9 10.5,-38.2 12.0,-39.6 13.5,-41.0 15.0,-42.4 16.5,-43.9 18.0,-45.5 19.5,-47.1 21.0,-48.7 22.5,-50.5 24.0,-52.2 25.5,-54.1 27.0,-56.0 28.5,-58.0 30.0,-60.0 31.5,-62.1 33.0,-64.3 34.5,-66.6 36.0,-68.9 37.5,-71.4 39.0,-73.9 40.5,-76.5 42.0,-79.2 43.5,-82.0 45.0,-84.9 46.5,-87.8 48.0,-90.9 49.5,-94.2 51.0,-97.5 52.5,-100.9 54.0,-104.5 55.5,-108.2 57.0,-112.0 58.5,-115.9 60.0,-120.0 61.5,-124.2 63.0,-128.6 64.5,-133.1 66.0,-137.8 67.5,-142.7 69.0,-147.7" fill="none" stroke="#1f5fa8" stroke-width="2.5"/>
+<polyline points="3.0,99.0 3.2,97.5 3.3,96.0 3.4,94.5 3.5,93.0 3.6,91.5 3.8,90.0 3.9,88.5 4.0,87.0 4.2,85.5 4.3,84.0 4.5,82.5 4.6,81.0 4.8,79.5 4.9,78.0 5.1,76.5 5.3,75.0 5.5,73.5 5.7,72.0 5.9,70.5 6.1,69.0 6.3,67.5 6.5,66.0 6.8,64.5 7.0,63.0 7.2,61.5 7.5,60.0 7.8,58.5 8.0,57.0 8.3,55.5 8.6,54.0 8.9,52.5 9.2,51.0 9.6,49.5 9.9,48.0 10.2,46.5 10.6,45.0 11.0,43.5 11.4,42.0 11.8,40.5 12.2,39.0 12.6,37.5 13.1,36.0 13.5,34.5 14.0,33.0 14.5,31.5 15.0,30.0 15.5,28.5 16.1,27.0 16.6,25.5 17.2,24.0 17.8,22.5 18.5,21.0 19.1,19.5 19.8,18.0 20.5,16.5 21.2,15.0 22.0,13.5 22.7,12.0 23.5,10.5 24.4,9.0 25.2,7.5 26.1,6.0 27.0,4.5 28.0,3.0 29.0,1.5 30.0,-0.0 31.1,-1.5 32.2,-3.0 33.3,-4.5 34.5,-6.0 35.7,-7.5 36.9,-9.0 38.2,-10.5 39.6,-12.0 41.0,-13.5 42.4,-15.0 43.9,-16.5 45.5,-18.0 47.1,-19.5 48.7,-21.0 50.5,-22.5 52.2,-24.0 54.1,-25.5 56.0,-27.0 58.0,-28.5 60.0,-30.0 62.1,-31.5 64.3,-33.0 66.6,-34.5 68.9,-36.0 71.4,-37.5 73.9,-39.0 76.5,-40.5 79.2,-42.0 82.0,-43.5 84.9,-45.0 87.8,-46.5 90.9,-48.0 94.2,-49.5 97.5,-51.0 100.9,-52.5 104.5,-54.0 108.2,-55.5 112.0,-57.0 115.9,-58.5 120.0,-60.0 124.2,-61.5 128.6,-63.0 133.1,-64.5 137.8,-66.0 142.7,-67.5 147.7,-69.0" fill="none" stroke="#e0702a" stroke-width="2.5"/>
+<circle cx="0" cy="-30" r="3" fill="#1f5fa8"/><text x="-22" y="-34" font-size="9" fill="#1f5fa8">1</text>
+<circle cx="30" cy="0" r="3" fill="#e0702a"/><text x="27" y="13" font-size="9" fill="#e0702a">1</text>
+<text x="-95" y="-14" font-size="11" fill="#1f5fa8">y=2ˣ</text><text x="105" y="-50" font-size="11" fill="#e0702a">y=log₂x</text></svg><br><small>指数と対数は $y=x$ に関して対称（逆関数どうし）</small></div>
+<div class="box ex">
+$2^{50}$ は何桁か（$\log_{10}2=0.3010$）。<br>
+<b>解</b>　$\log_{10}2^{50}=50\times0.3010=15.05$。$10^{15}\le2^{50}\lt 10^{16}$ なので <b>16桁</b>
+</div>
+<div class="box prac">(1) $8^{\frac23}$　(2) $\log_2 12-\log_2 3$　(3) $\log_3 x\lt 2$ を解け</div>
+<div class="box ans">(1) $(2^3)^{\frac23}=4$　(2) $\log_2 4=2$　(3) 真数条件 $x\gt 0$ と $x\lt 9$ より $0\lt x\lt 9$</div>
+
+<!-- 26 -->
+<h2><span class="no">26</span>微分 <span class="tag">数II</span></h2>
+<div class="box point">
+・<b>微分係数</b> $f'(a)=\displaystyle\lim_{h\to0}\frac{f(a+h)-f(a)}{h}$ ＝ 点 $x=a$ での<b>接線の傾き</b>（瞬間の変化率）<br>
+・公式：$(x^n)'=nx^{n-1}$、$(c)'=0$、和や定数倍はバラバラに微分してよい<br>
+・接線：$y-f(a)=f'(a)(x-a)$<br>
+・$f'(x)\gt 0$ の区間で増加、$f'(x)\lt 0$ で減少。$f'(x)=0$ で<b>極大・極小</b>の候補 → <b>増減表</b>
+</div>
+<div class="two"><div>
+<div class="fig"><svg width="230" height="190" viewBox="0 0 230 190">
+<path d="M 10,170 Q 120,160 210,20" fill="none" stroke="#1f5fa8" stroke-width="2.5"/>
+<circle cx="120" cy="125" r="4" fill="#c0392b"/><circle cx="185" cy="60" r="4" fill="#333"/>
+<line x1="120" y1="125" x2="185" y2="60" stroke="#999" stroke-dasharray="4,3"/>
+<line x1="40" y1="170" x2="210" y2="70" stroke="#c0392b" stroke-width="2"/>
+<text x="125" y="145" font-size="10" fill="#c0392b">接線の傾き＝f′(a)</text>
+<text x="160" y="105" font-size="10" fill="#888">h→0 で近づく</text>
+</svg></div></div><div>
+<div class="box image">
+車のスピードメーター。1時間で60km進んだ「平均の速さ」ではなく、<b>今この瞬間</b>の速さを知りたい。区間 $h$ をどんどん短くした極限が微分です。<br>「位置」を微分すると「速度」。
+</div></div></div>
+<div class="box ex">
+$f(x)=x^3-3x$ の極値。<br>
+<b>解</b>　$f'(x)=3x^2-3=3(x+1)(x-1)$。<br>
+<table><tr><th>$x$</th><td>…</td><td>$-1$</td><td>…</td><td>$1$</td><td>…</td></tr>
+<tr><th>$f'(x)$</th><td>＋</td><td>0</td><td>−</td><td>0</td><td>＋</td></tr>
+<tr><th>$f(x)$</th><td>↗</td><td>2</td><td>↘</td><td>$-2$</td><td>↗</td></tr></table>
+<b>極大値 2（$x=-1$）、極小値 $-2$（$x=1$）</b>
+</div>
+<div class="box prac">(1) $f(x)=2x^3-x^2+5$ のとき $f'(x)$　(2) $y=x^2$ の $x=3$ における接線　(3) $f(x)=-x^2+4x$ の最大値（微分で）</div>
+<div class="box ans">(1) $6x^2-2x$　(2) $y-9=6(x-3)$ → $y=6x-9$　(3) $f'(x)=-2x+4=0$ → $x=2$ で最大値 4</div>
+
+<!-- 27 -->
+<h2><span class="no">27</span>積分 <span class="tag">数II</span></h2>
+<div class="box point">
+・<b>積分は微分の逆</b>：$\displaystyle\int x^n\,dx=\frac{x^{n+1}}{n+1}+C$（$C$：積分定数）<br>
+・定積分：$\displaystyle\int_a^b f(x)\,dx=\Big[F(x)\Big]_a^b=F(b)-F(a)$<br>
+・<b>面積</b>：$a\le x\le b$ で $f(x)\ge g(x)$ なら　$S=\displaystyle\int_a^b\{f(x)-g(x)\}\,dx$（上 − 下）<br>
+・便利公式：$\displaystyle\int_\alpha^\beta(x-\alpha)(x-\beta)\,dx=-\frac{(\beta-\alpha)^3}{6}$
+</div>
+<div class="two"><div>
+<div class="fig"><svg width="230" height="170" viewBox="0 0 230 170">
+<line x1="10" y1="150" x2="220" y2="150" stroke="#999"/>
+<path d="M 20,120 Q 110,-20 210,90" fill="none" stroke="#1f5fa8" stroke-width="2.5"/>
+<g fill="#e8f0fb" stroke="#1f5fa8" stroke-width=".8">
+<rect x="50" y="78" width="20" height="72"/><rect x="70" y="62" width="20" height="88"/><rect x="90" y="53" width="20" height="97"/>
+<rect x="110" y="50" width="20" height="100"/><rect x="130" y="53" width="20" height="97"/><rect x="150" y="60" width="20" height="90"/></g>
+<text x="50" y="164" font-size="10">a</text><text x="168" y="164" font-size="10">b</text>
+</svg></div></div><div>
+<div class="box image">
+面積を細い長方形に切って<b>全部たす</b>。幅を限りなく細くした極限が定積分（$\int$ は Sum の S を伸ばした記号）。<br>
+「速度」を積分すると「進んだ距離」。<b>微分（細かく見る）と積分（足し集める）は表裏一体</b>です。
+</div></div></div>
+<div class="box ex">
+放物線 $y=x^2$ と直線 $y=x+2$ で囲まれた面積。<br>
+<b>解</b>　交点：$x^2=x+2$ → $x=-1,2$。間では直線が上。<br>
+$S=\displaystyle\int_{-1}^{2}(x+2-x^2)\,dx=-\int_{-1}^{2}(x+1)(x-2)\,dx=\frac{3^3}{6}=\boldsymbol{\frac92}$
+</div>
+<div class="box prac">(1) $\int(3x^2-4x+1)\,dx$　(2) $\int_0^2(x^2+1)\,dx$　(3) $y=x^2-4$ と $x$ 軸で囲まれた面積</div>
+<div class="box ans">(1) $x^3-2x^2+x+C$　(2) $\frac83+2=\frac{14}3$　(3) $\frac{4^3}{6}=\frac{32}3$</div>
+
+<!-- 28 -->
+<h2><span class="no">28</span>数列 <span class="tag">数B</span></h2>
+<div class="box point">
+・<b>等差数列</b>（同じ数をたす）：$a_n=a+(n-1)d$、和 $S_n=\dfrac{n(a_1+a_n)}{2}$<br>
+・<b>等比数列</b>（同じ数をかける）：$a_n=ar^{n-1}$、和 $S_n=\dfrac{a(1-r^n)}{1-r}\ (r\neq1)$<br>
+・$\displaystyle\sum_{k=1}^{n}k=\frac{n(n+1)}2$、$\displaystyle\sum k^2=\frac{n(n+1)(2n+1)}6$、$\displaystyle\sum k^3=\left\{\frac{n(n+1)}2\right\}^2$<br>
+・<b>階差数列</b> $b_n=a_{n+1}-a_n$ なら $a_n=a_1+\sum_{k=1}^{n-1}b_k\ (n\ge2)$<br>
+・<b>漸化式</b> $a_{n+1}=pa_n+q$：$\alpha=p\alpha+q$ を解いて $a_{n+1}-\alpha=p(a_n-\alpha)$ と変形<br>
+・<b>数学的帰納法</b>：① $n=1$ で成立　② $n=k$ で成立 ⇒ $n=k+1$ で成立
+</div>
+<div class="box image">
+等差数列の和は「<b>逆順に並べて足す</b>」（ガウス少年の方法）。1+2+…+100 を、100+99+…+1 と上下に並べると各ペアが101で100組 → $101\times100\div2=5050$。<br>
+数学的帰納法は<b>ドミノ倒し</b>。最初の1枚が倒れ、どの1枚も次を倒すなら、全部倒れる。
+</div>
+<div class="box ex">
+$a_1=1,\ a_{n+1}=2a_n+1$ の一般項。<br>
+<b>解</b>　$\alpha=2\alpha+1$ → $\alpha=-1$。$a_{n+1}+1=2(a_n+1)$。$\{a_n+1\}$ は初項2、公比2の等比数列。<br>
+$a_n+1=2^n$ → $\boldsymbol{a_n=2^n-1}$
+</div>
+<div class="box prac">(1) 等差数列 3, 7, 11, … の第20項と初項から第20項までの和　(2) $\sum_{k=1}^{10}(2k+1)$　(3) $1+3+9+\cdots+3^{n-1}$</div>
+<div class="box ans">(1) $a_{20}=3+19\cdot4=79$、$S=\frac{20(3+79)}2=820$　(2) $2\cdot55+10=120$　(3) $\frac{3^n-1}{2}$</div>
+
+<!-- 29 -->
+<h2><span class="no">29</span>統計的推測 <span class="tag">数B</span></h2>
+<div class="box point">
+・確率変数 $X$ の期待値 $E(X)=\sum x_k p_k$、分散 $V(X)=E(X^2)-\{E(X)\}^2$、標準偏差 $\sigma=\sqrt{V(X)}$<br>
+・$E(aX+b)=aE(X)+b$、$V(aX+b)=a^2V(X)$<br>
+・<b>二項分布</b> $B(n,p)$：$E=np$、$V=np(1-p)$<br>
+・<b>正規分布</b> $N(m,\sigma^2)$：左右対称の釣鐘型。$Z=\dfrac{X-m}{\sigma}$ で標準正規分布 $N(0,1)$ に<br>
+・標本平均 $\bar X$ は $N\left(m,\dfrac{\sigma^2}{n}\right)$ に近い。母平均の<b>95%信頼区間</b>：$\bar X\pm1.96\dfrac{\sigma}{\sqrt n}$
+</div>
+<div class="fig"><svg width="360" height="140" viewBox="0 0 360 140">
+<line x1="10" y1="120" x2="350" y2="120" stroke="#999"/>
+<path d="M 70,118 C 110,110 130,20 180,20 S 250,110 290,118 Z" fill="#e8f0fb" stroke="none"/>
+<path d="M 10,120 C 60,119 120,20 180,20 S 300,119 350,120" fill="none" stroke="#1f5fa8" stroke-width="2.5"/>
+<line x1="180" y1="20" x2="180" y2="120" stroke="#e0702a" stroke-dasharray="4,3"/>
+<g font-size="10" text-anchor="middle"><text x="180" y="134">m</text><text x="70" y="134">m−1.96σ</text><text x="290" y="134">m+1.96σ</text></g>
+<text x="180" y="90" font-size="11" text-anchor="middle" fill="#1f5fa8">約95%</text>
+</svg></div>
+<div class="box image">
+鍋のスープ全部（母集団）を飲まなくても、<b>よく混ぜて一口（標本）</b>飲めば味はわかる。一口の量 $n$ を増やすほど誤差は $\frac{1}{\sqrt n}$ で小さくなる。これが統計的推測の考え方です。
+</div>
+<p><b>仮説検定</b>：「差がない」と仮定（帰無仮説）して、観測結果がめったに起こらない（確率5%未満など）なら仮定を<b>棄却</b>する。背理法の確率版です。</p>
+<div class="box prac">(1) サイコロを180回投げて1が出る回数 $X$ の期待値と標準偏差　(2) $\bar X=50,\ \sigma=10,\ n=100$ のとき母平均の95%信頼区間</div>
+<div class="box ans">(1) $E=30$、$V=180\cdot\frac16\cdot\frac56=25$ → $\sigma=5$　(2) $50\pm1.96$ → $48.04\le m\le51.96$</div>
+
+<!-- 30 -->
+<h2><span class="no">30</span>ベクトル <span class="tag">数C</span></h2>
+<div class="box point">
+・ベクトル＝<b>向きと大きさ</b>をもつ矢印。$\vec a=(a_1,a_2)$、大きさ $|\vec a|=\sqrt{a_1^2+a_2^2}$<br>
+・和：矢印をつなぐ（$\overrightarrow{\mathrm{AB}}+\overrightarrow{\mathrm{BC}}=\overrightarrow{\mathrm{AC}}$）。$\overrightarrow{\mathrm{AB}}=\vec b-\vec a$（終点 − 始点）<br>
+・<b>内積</b>：$\vec a\cdot\vec b=|\vec a||\vec b|\cos\theta=a_1b_1+a_2b_2$<br>
+・$\vec a\perp\vec b \iff \vec a\cdot\vec b=0$、$\vec a\parallel\vec b\iff\vec b=k\vec a$<br>
+・内分点：$\dfrac{n\vec a+m\vec b}{m+n}$、重心：$\dfrac{\vec a+\vec b+\vec c}{3}$<br>
+・空間ベクトルも成分が1つ増えるだけ：$(a_1,a_2,a_3)$
+</div>
+<div class="two"><div>
+<div class="fig"><svg width="220" height="160" viewBox="0 0 220 160">
+<defs><marker id="ab" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#1f5fa8"/></marker>
+<marker id="ao" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#e0702a"/></marker>
+<marker id="ag" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#2e8b57"/></marker></defs>
+<line x1="20" y1="140" x2="130" y2="110" stroke="#1f5fa8" stroke-width="2.5" marker-end="url(#ab)"/>
+<line x1="130" y1="110" x2="190" y2="30" stroke="#e0702a" stroke-width="2.5" marker-end="url(#ao)"/>
+<line x1="20" y1="140" x2="186" y2="35" stroke="#2e8b57" stroke-width="2.5" marker-end="url(#ag)"/>
+<text x="70" y="142" font-size="12" fill="#1f5fa8">a</text><text x="168" y="80" font-size="12" fill="#e0702a">b</text><text x="80" y="80" font-size="12" fill="#2e8b57">a+b</text>
+</svg></div></div><div>
+<div class="box image">
+ベクトルは「<b>移動の指示書</b>」。「東へ3、北へ4」と「さらに東へ1、北へ2」を続けると「東へ4、北へ6」。<br>
+内積は「$\vec b$ のうち $\vec a$ と<b>同じ向きの成分</b>がどれだけあるか」。荷物を斜めに引っぱったとき、前に進むのに役立つ力の量です。
+</div></div></div>
+<div class="box ex">
+$\vec a=(1,2),\ \vec b=(3,-1)$ のなす角 $\theta$。<br>
+<b>解</b>　$\vec a\cdot\vec b=3-2=1$、$|\vec a|=\sqrt5$、$|\vec b|=\sqrt{10}$。$\cos\theta=\dfrac{1}{\sqrt{50}}=\dfrac{1}{5\sqrt2}$
+</div>
+<div class="box prac">(1) $\vec a=(2,1),\ \vec b=(x,4)$ が垂直になる $x$　(2) $|\vec a|=2,|\vec b|=3,\vec a\cdot\vec b=1$ のとき $|\vec a+\vec b|$</div>
+<div class="box ans">(1) $2x+4=0$ → $x=-2$　(2) $|\vec a+\vec b|^2=4+2+9=15$ → $\sqrt{15}$</div>
+
+<!-- 31 -->
+<h2><span class="no">31</span>複素数平面・2次曲線 <span class="tag">数C</span></h2>
+<div class="box point">
+・複素数 $z=a+bi$ を平面上の点 $(a,b)$ とみる。$|z|=\sqrt{a^2+b^2}$<br>
+・<b>極形式</b>：$z=r(\cos\theta+i\sin\theta)$<br>
+・<b>かけ算 ＝ 回転と拡大</b>：絶対値はかけ算、偏角はたし算<br>
+・<b>ド・モアブルの定理</b>：$(\cos\theta+i\sin\theta)^n=\cos n\theta+i\sin n\theta$<br>
+・2次曲線：放物線 $y^2=4px$、楕円 $\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1$、双曲線 $\dfrac{x^2}{a^2}-\dfrac{y^2}{b^2}=1$
+</div>
+<div class="box image">
+$i$ をかけると、点が原点のまわりに<b>90°回転</b>する（$1\to i\to-1\to-i\to1$）。$i^2=-1$ は「90°回転を2回すると180°回転（反対向き）」という意味。<br>
+第1章の「マイナスは回れ右」が、ここで「$i$ は90°左向け」に拡張されたわけです。
+</div>
+<div class="fig"><svg width="440" height="150" viewBox="0 0 440 150">
+<ellipse cx="80" cy="75" rx="65" ry="40" fill="none" stroke="#1f5fa8" stroke-width="2.5"/>
+<circle cx="29" cy="75" r="3" fill="#c0392b"/><circle cx="131" cy="75" r="3" fill="#c0392b"/>
+<text x="40" y="140" font-size="11">楕円：2焦点からの距離の和が一定</text>
+<path d="M 200,15 Q 300,240 400,15" fill="none" stroke="#e0702a" stroke-width="2.5" transform="translate(-10,0)"/>
+<text x="230" y="140" font-size="11">放物線：焦点と準線から等距離</text>
+</svg></div>
+<div class="box ex">
+$(1+i)^8$ を計算せよ。<br>
+<b>解</b>　$1+i=\sqrt2\left(\cos\frac\pi4+i\sin\frac\pi4\right)$。$(1+i)^8=(\sqrt2)^8(\cos2\pi+i\sin2\pi)=\boldsymbol{16}$
+</div>
+<div class="box prac">(1) $z=2+i$ を原点まわりに $90^\circ$ 回転した点　(2) 楕円 $\frac{x^2}{25}+\frac{y^2}{9}=1$ の焦点</div>
+<div class="box ans">(1) $iz=2i+i^2=-1+2i$　(2) $\sqrt{25-9}=4$ → $(\pm4,0)$</div>
+
+<!-- ================= 第4部 ================= -->
+<h1 class="part">第4部 数学III<small>極限を武器に、あらゆる関数を微分・積分する</small></h1>
+
+<!-- 32 -->
+<h2><span class="no">32</span>極限 <span class="tag">数III</span></h2>
+<div class="box point">
+・$\infty/\infty$ 型は<b>最高次でわる</b>：$\displaystyle\lim_{n\to\infty}\frac{3n^2+1}{n^2-n}=3$<br>
+・$\infty-\infty$ 型で $\sqrt{}$ を含むなら<b>有理化</b><br>
+・等比数列 $r^n$：$|r|\lt 1$ で 0 に収束、$r\gt 1$ で発散<br>
+・<b>無限等比級数</b> $\sum ar^{n-1}=\dfrac{a}{1-r}\ (|r|\lt 1)$<br>
+・重要極限：$\displaystyle\lim_{x\to0}\frac{\sin x}{x}=1$、$\displaystyle\lim_{h\to0}(1+h)^{\frac1h}=e\ (\approx2.718)$
+</div>
+<div class="box image">
+$0.999\cdots=1$ は無限等比級数 $\frac{9}{10}+\frac{9}{100}+\cdots=\frac{9/10}{1-1/10}=1$。<br>
+「アキレスと亀」のように<b>無限個たしても有限の値に落ち着く</b>ことがある ── それを正確に扱うのが極限です。
+</div>
+<div class="box ex">
+$\displaystyle\lim_{n\to\infty}(\sqrt{n^2+n}-n)$<br>
+<b>解</b>　有理化：$=\dfrac{n}{\sqrt{n^2+n}+n}=\dfrac{1}{\sqrt{1+\frac1n}+1}\to\boldsymbol{\dfrac12}$
+</div>
+<div class="box prac">(1) $\displaystyle\lim_{n\to\infty}\frac{2^n+3^n}{3^n}$　(2) $\displaystyle\lim_{x\to0}\frac{\sin3x}{x}$　(3) $1+\frac12+\frac14+\cdots$</div>
+<div class="box ans">(1) $\left(\frac23\right)^n+1\to1$　(2) $3\cdot\frac{\sin3x}{3x}\to3$　(3) $\frac{1}{1-\frac12}=2$</div>
+
+<!-- 33 -->
+<h2><span class="no">33</span>微分法 <span class="tag">数III</span></h2>
+<div class="box point">
+・積：$(fg)'=f'g+fg'$　商：$\left(\dfrac fg\right)'=\dfrac{f'g-fg'}{g^2}$<br>
+・<b>合成関数</b>：$\{f(g(x))\}'=f'(g(x))\cdot g'(x)$（外を微分 × 中を微分）<br>
+・$(\sin x)'=\cos x$、$(\cos x)'=-\sin x$、$(\tan x)'=\dfrac1{\cos^2x}$<br>
+・$(e^x)'=e^x$、$(\log x)'=\dfrac1x$（$\log$ は底 $e$ の自然対数）<br>
+・第2次導関数 $f''(x)$：$\gt 0$ で下に凸、$\lt 0$ で上に凸。符号が変わる点が<b>変曲点</b>
+</div>
+<div class="box image">
+合成関数の微分は<b>歯車</b>。$x$ が1回転すると $g$ は $g'$ 回転、$g$ が1回転すると $f$ は $f'$ 回転。だから $x$ に対する $f$ の回転は<b>かけ算</b> $f'\cdot g'$。<br>
+$e^x$ は「<b>微分しても変わらない</b>」特別な関数。だから自然界の成長・減衰の式に必ず登場します。
+</div>
+<div class="box ex">
+(1) $y=(2x+1)^5$　(2) $y=x^2e^x$　(3) $y=\sin^2x$ を微分せよ。<br>
+<b>解</b> (1) $5(2x+1)^4\cdot2=\boldsymbol{10(2x+1)^4}$<br>
+(2) $2xe^x+x^2e^x=\boldsymbol{(x^2+2x)e^x}$<br>
+(3) $2\sin x\cdot\cos x=\boldsymbol{\sin2x}$
+</div>
+<div class="box prac">(1) $y=\log(x^2+1)$　(2) $y=\dfrac{x}{x+1}$　(3) $y=e^{-x^2}$</div>
+<div class="box ans">(1) $\dfrac{2x}{x^2+1}$　(2) $\dfrac{(x+1)-x}{(x+1)^2}=\dfrac{1}{(x+1)^2}$　(3) $-2xe^{-x^2}$</div>
+
+<!-- 34 -->
+<h2><span class="no">34</span>積分法 <span class="tag">数III</span></h2>
+<div class="box point">
+・基本：$\int\frac1x\,dx=\log|x|+C$、$\int e^x\,dx=e^x+C$、$\int\sin x\,dx=-\cos x+C$、$\int\cos x\,dx=\sin x+C$<br>
+・<b>置換積分</b>：$\displaystyle\int f(g(x))g'(x)\,dx=\int f(t)\,dt$（$t=g(x)$。合成関数の微分の逆）<br>
+・<b>部分積分</b>：$\displaystyle\int f(x)g'(x)\,dx=f(x)g(x)-\int f'(x)g(x)\,dx$（積の微分の逆）<br>
+・<b>体積</b>：断面積 $S(x)$ を積分　$V=\displaystyle\int_a^b S(x)\,dx$。回転体なら $V=\pi\displaystyle\int_a^b\{f(x)\}^2dx$<br>
+・<b>区分求積法</b>：$\displaystyle\lim_{n\to\infty}\frac1n\sum_{k=1}^n f\!\left(\frac kn\right)=\int_0^1 f(x)\,dx$
+</div>
+<div class="box image">
+体積は「<b>薄切りハムの断面積をたし集める</b>」。きゅうりを輪切りにして、1枚1枚の面積×厚さを全部たせばきゅうり全体の体積。回転体の断面は円なので $\pi r^2=\pi\{f(x)\}^2$。
+</div>
+<div class="box ex">
+(1) $\displaystyle\int_0^1 xe^x\,dx$　(2) $\displaystyle\int 2x(x^2+1)^3\,dx$<br>
+<b>解</b> (1) 部分積分：$\Big[xe^x\Big]_0^1-\displaystyle\int_0^1e^x\,dx=e-(e-1)=\boldsymbol1$<br>
+(2) $t=x^2+1$ とおくと $dt=2x\,dx$。$\int t^3\,dt=\frac{t^4}4+C=\boldsymbol{\dfrac{(x^2+1)^4}{4}+C}$
+</div>
+<div class="box ex">
+$y=\sqrt x\ (0\le x\le4)$ を $x$ 軸のまわりに1回転してできる立体の体積。<br>
+<b>解</b>　$V=\pi\displaystyle\int_0^4 x\,dx=\pi\Big[\frac{x^2}{2}\Big]_0^4=\boldsymbol{8\pi}$
+</div>
+<div class="box prac">(1) $\int_1^e\frac1x\,dx$　(2) $\int_0^{\pi}\sin x\,dx$　(3) 半径 $r$ の球の体積を積分で求めよ（$y=\sqrt{r^2-x^2}$ の回転体）</div>
+<div class="box ans">(1) $\log e-\log1=1$　(2) $[-\cos x]_0^\pi=1+1=2$　(3) $\pi\int_{-r}^{r}(r^2-x^2)dx=\pi\left(2r^3-\frac23r^3\right)=\frac43\pi r^3$ ← 中1の公式がここで証明できた！</div>
+
+<h2 class="cont" style="page-break-before:always">おわりに ── 全体を一本の線でつなぐと</h2>
+<div class="box image">
+<b>数</b>は「自然数 → 負の数 → 分数 → $\sqrt{}$（無理数）→ $i$（複素数）」と、方程式を解くために拡張されてきた。<br>
+<b>関数</b>は「一次 → 二次 → 三角・指数・対数」と種類が増え、<b>微分</b>で「変化の瞬間」を、<b>積分</b>で「変化の積み重ね」をとらえる。<br>
+<b>図形</b>は「合同・相似 → 三平方 → 三角比 → 座標 → ベクトル → 複素数平面」と、<b>計算で解ける形</b>に翻訳されていった。<br>
+<b>確率・統計</b>は「数える → 確率 → 分布 → 推測」と、不確かな世界で判断する道具になった。
+</div>
+<p>最後の練習問題で、中1で暗記した「球の体積 $\frac43\pi r^3$」を積分で証明できました。<b>中学から高校までの数学は、すべて一本につながっている</b>のです。</p>
+
+<!-- 付録 -->
+<h2>付録　公式まとめ（1枚で見返す）</h2>
+<table style="width:100%;font-size:9.5pt" class="map">
+<tr><th style="width:22%">分野</th><th>公式</th></tr>
+<tr><td>展開・因数分解</td><td>$(a\pm b)^2=a^2\pm2ab+b^2$、$(a+b)(a-b)=a^2-b^2$、$a^3\pm b^3=(a\pm b)(a^2\mp ab+b^2)$</td></tr>
+<tr><td>解の公式</td><td>$x=\dfrac{-b\pm\sqrt{b^2-4ac}}{2a}$、判別式 $D=b^2-4ac$</td></tr>
+<tr><td>平方完成</td><td>$ax^2+bx+c=a\left(x+\frac{b}{2a}\right)^2-\frac{b^2-4ac}{4a}$</td></tr>
+<tr><td>図形</td><td>三平方 $a^2+b^2=c^2$、相似比 $m:n$ → 面積比 $m^2:n^2$、体積比 $m^3:n^3$、球 $V=\frac43\pi r^3,\ S=4\pi r^2$</td></tr>
+<tr><td>三角比</td><td>$\sin^2\theta+\cos^2\theta=1$、正弦定理 $\frac{a}{\sin A}=2R$、余弦定理 $a^2=b^2+c^2-2bc\cos A$、$S=\frac12bc\sin A$</td></tr>
+<tr><td>場合の数</td><td>${}_n\mathrm P_r=\frac{n!}{(n-r)!}$、${}_n\mathrm C_r=\frac{n!}{r!(n-r)!}$、反復試行 ${}_n\mathrm C_r p^r(1-p)^{n-r}$</td></tr>
+<tr><td>データ</td><td>分散 $=\overline{x^2}-\bar x^2$、相関係数 $r=\frac{s_{xy}}{s_xs_y}$</td></tr>
+<tr><td>加法定理</td><td>$\sin(\alpha\pm\beta)=\sin\alpha\cos\beta\pm\cos\alpha\sin\beta$、$\cos(\alpha\pm\beta)=\cos\alpha\cos\beta\mp\sin\alpha\sin\beta$</td></tr>
+<tr><td>指数・対数</td><td>$a^ma^n=a^{m+n}$、$\log_aMN=\log_aM+\log_aN$、$\log_ab=\frac{\log_cb}{\log_ca}$</td></tr>
+<tr><td>図形と方程式</td><td>点と直線の距離 $\frac{|ax_1+by_1+c|}{\sqrt{a^2+b^2}}$、円 $(x-a)^2+(y-b)^2=r^2$</td></tr>
+<tr><td>数列</td><td>等差 $a_n=a+(n-1)d$、等比 $a_n=ar^{n-1}$、$\sum k=\frac{n(n+1)}2$、$\sum k^2=\frac{n(n+1)(2n+1)}6$</td></tr>
+<tr><td>ベクトル</td><td>$\vec a\cdot\vec b=|\vec a||\vec b|\cos\theta=a_1b_1+a_2b_2$、内分点 $\frac{n\vec a+m\vec b}{m+n}$</td></tr>
+<tr><td>統計</td><td>二項分布 $E=np,\ V=np(1-p)$、95%信頼区間 $\bar X\pm1.96\frac{\sigma}{\sqrt n}$</td></tr>
+<tr><td>微分</td><td>$(x^n)'=nx^{n-1}$、$(fg)'=f'g+fg'$、$(e^x)'=e^x$、$(\log x)'=\frac1x$、$(\sin x)'=\cos x$、$(\cos x)'=-\sin x$</td></tr>
+<tr><td>積分</td><td>$\int x^ndx=\frac{x^{n+1}}{n+1}+C$、$\int\frac1xdx=\log|x|+C$、部分積分 $\int fg'=fg-\int f'g$、$\int_\alpha^\beta(x-\alpha)(x-\beta)dx=-\frac{(\beta-\alpha)^3}6$</td></tr>
+</table>
+
+<script>
+renderMathInElement(document.body,{delimiters:[{left:"$",right:"$",display:false}],throwOnError:false});
+document.body.setAttribute('data-done','1');
+</script>
+</body>
+</html>

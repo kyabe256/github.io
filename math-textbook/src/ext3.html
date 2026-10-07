@@ -1,0 +1,488 @@
+<!--EXT 22-->
+<h3 class="deep">じっくり解説① パスカルの三角形と二項定理</h3>
+<div class="fig"><svg width="300" height="150" viewBox="0 0 300 150">
+<g font-size="13" text-anchor="middle">
+<text x="150" y="18">1</text>
+<text x="135" y="40">1</text><text x="165" y="40">1</text>
+<text x="120" y="62">1</text><text x="150" y="62">2</text><text x="180" y="62">1</text>
+<text x="105" y="84">1</text><text x="135" y="84">3</text><text x="165" y="84">3</text><text x="195" y="84">1</text>
+<text x="90" y="106">1</text><text x="120" y="106">4</text><text x="150" y="106" fill="#c0392b">6</text><text x="180" y="106">4</text><text x="210" y="106">1</text>
+<text x="75" y="128">1</text><text x="105" y="128">5</text><text x="135" y="128">10</text><text x="165" y="128">10</text><text x="195" y="128">5</text><text x="225" y="128">1</text></g>
+</svg><br><small>上の2つの和が下の数。$n$ 段目が $(a+b)^n$ の係数</small></div>
+<p>$(a+b)^4=a^4+4a^3b+6a^2b^2+4ab^3+b^4$。$a^2b^2$ の係数6は「4つのカッコから $b$ を2つ選ぶ方法」${}_4\mathrm C_2=6$ です。</p>
+<div class="box ex">
+$\left(x^2-\dfrac1x\right)^6$ の定数項。<br>
+<b>解</b>　一般項 ${}_6\mathrm C_r(x^2)^{6-r}\left(-\frac1x\right)^r={}_6\mathrm C_r(-1)^rx^{12-3r}$。$12-3r=0$ → $r=4$。定数項 ${}_6\mathrm C_4=\boldsymbol{15}$
+</div>
+<h3 class="deep">じっくり解説② 整式の割り算</h3>
+<p>$A=BQ+R$（$R$ の次数 $<$ $B$ の次数）。筆算は小学校のわり算と同じ要領です。</p>
+<div class="box ex">
+$x^3+2x^2-5x+1$ を $x-2$ で割った商と余り。<br>
+<b>解</b>　筆算（または組立除法）で、商 $x^2+4x+3$、余り $7$。<br>
+確認：剰余の定理 $P(2)=8+8-10+1=7$ ✓
+</div>
+<div class="box ex">
+<b>【余りの問題】</b>$P(x)$ を $x-1$ で割ると余り 3、$x+2$ で割ると余り −3。$P(x)$ を $(x-1)(x+2)$ で割った余りは？<br>
+<b>解</b>　2次式で割った余りは1次以下なので $ax+b$ とおく。$P(x)=(x-1)(x+2)Q(x)+ax+b$。<br>
+$P(1)=a+b=3,\ P(-2)=-2a+b=-3$ → $a=2,b=1$。余り $\boldsymbol{2x+1}$
+</div>
+<h3 class="deep">じっくり解説③ 恒等式</h3>
+<p>$x$ にどんな値を入れても成り立つ等式。両辺の<b>係数を比較</b>するか、<b>都合のよい値を代入</b>して係数を決めます。</p>
+<div class="box ex">
+$\dfrac{1}{x(x+1)}=\dfrac ax+\dfrac{b}{x+1}$ が恒等式となる $a,b$。<br>
+<b>解</b>　分母を払う：$1=a(x+1)+bx$。$x=0$ で $a=1$、$x=-1$ で $b=-1$。<br>
+<small>これは<b>部分分数分解</b>。数列の和や積分で大活躍：$\frac1{k(k+1)}=\frac1k-\frac1{k+1}$</small>
+</div>
+<h3 class="deep">じっくり解説④ 不等式の証明</h3>
+<p>基本方針：<b>(左辺)−(右辺) ≥ 0</b> を示す。平方の形 $(\ )^2\ge0$ を作るのが定番です。</p>
+<div class="box ex">
+$a^2+b^2\ge 2ab$ を証明せよ。<br>
+<b>解</b>　$a^2+b^2-2ab=(a-b)^2\ge0$。等号は $a=b$ のとき。■
+</div>
+<div class="box ex">
+<b>相加相乗平均の証明</b>：$a,b>0$ のとき $\frac{a+b}2-\sqrt{ab}=\frac{(\sqrt a)^2-2\sqrt a\sqrt b+(\sqrt b)^2}{2}=\frac{(\sqrt a-\sqrt b)^2}2\ge0$。■<br>
+<small>図形的意味：直径 $a+b$ の円で、半径 $\frac{a+b}2$ は弦の半分 $\sqrt{ab}$（方べきの定理）以上。</small>
+</div>
+<h3 class="deep">じっくり解説⑤ 判別式と解の判別（複素数の範囲）</h3>
+<table><tr><th>$D=b^2-4ac$</th><th>解</th></tr>
+<tr><td>$D>0$</td><td>異なる2つの実数解</td></tr>
+<tr><td>$D=0$</td><td>重解（実数）</td></tr>
+<tr><td>$D<0$</td><td>異なる2つの虚数解（互いに共役 $p\pm qi$）</td></tr></table>
+<div class="box ex">
+$x^2+2x+5=0$ を解け。<br>
+<b>解</b>　$x=-1\pm\sqrt{1-5}=-1\pm\sqrt{-4}=\boldsymbol{-1\pm2i}$
+</div>
+<h3 class="deep">じっくり解説⑥ 解と係数の関係の応用</h3>
+<p>$\alpha,\beta$ を解とする二次方程式は $x^2-(\alpha+\beta)x+\alpha\beta=0$。</p>
+<div class="box ex">
+和が 4、積が 7 の2数を求めよ。<br>
+<b>解</b>　$x^2-4x+7=0$ の解。$x=2\pm\sqrt3 i$
+</div>
+<p>3次方程式 $ax^3+bx^2+cx+d=0$ の解 $\alpha,\beta,\gamma$ では：$\alpha+\beta+\gamma=-\frac ba,\ \alpha\beta+\beta\gamma+\gamma\alpha=\frac ca,\ \alpha\beta\gamma=-\frac da$。</p>
+<div class="box challenge">
+$x^3=1$ の虚数解の1つを $\omega$ とする。$\omega^2+\omega+1$ と $\omega^{100}+\omega^{50}$ の値。<br>
+<b>解</b>　$x^3-1=(x-1)(x^2+x+1)=0$ で、$\omega$ は $x^2+x+1=0$ の解なので $\omega^2+\omega+1=\boldsymbol0$。<br>
+$\omega^3=1$ より $\omega^{100}=\omega^{99}\omega=\omega$、$\omega^{50}=\omega^{48}\omega^2=\omega^2$。和 $=\omega+\omega^2=\boldsymbol{-1}$
+</div>
+
+<!--EXT 23-->
+<h3 class="deep">じっくり解説① 直線の方程式のいろいろな形</h3>
+<table><tr><th>形</th><th>式</th></tr>
+<tr><td>傾き・切片</td><td>$y=mx+n$</td></tr>
+<tr><td>1点と傾き</td><td>$y-y_1=m(x-x_1)$</td></tr>
+<tr><td>2点</td><td>$y-y_1=\frac{y_2-y_1}{x_2-x_1}(x-x_1)$</td></tr>
+<tr><td>一般形</td><td>$ax+by+c=0$（$y$ 軸平行の直線も表せる）</td></tr></table>
+<p>直線 $ax+by+c=0$ に<b>垂直なベクトル</b>は $(a,b)$（法線ベクトル）。これを知っていると、垂直な直線がすぐ書けます：点 $(p,q)$ を通り $ax+by+c=0$ に垂直な直線は $b(x-p)-a(y-q)=0$。</p>
+<h3 class="deep">じっくり解説② 対称な点</h3>
+<div class="box ex">
+直線 $y=2x$ に関して点 A(5, 0) と対称な点 B。<br>
+<b>解</b>　B$(p,q)$。① AB の中点 $\left(\frac{5+p}{2},\frac q2\right)$ が直線上：$\frac q2=5+p$<br>
+② AB ⊥ 直線：$\frac{q}{p-5}\cdot2=-1$ → $p=5-2q$。<br>
+連立：$q=10+2p=10+10-4q$ → $q=4$、$p=-3$。<b>B(−3, 4)</b>
+</div>
+<h3 class="deep">じっくり解説③ 円と直線の位置関係</h3>
+<p>中心と直線の距離 $d$ と半径 $r$ を比べる：$d<r$ で2点で交わる、$d=r$ で接する、$d>r$ で共有点なし。（連立して判別式を使ってもよい）</p>
+<p><b>円上の点 $(x_1,y_1)$ における接線</b>：円 $x^2+y^2=r^2$ なら $x_1x+y_1y=r^2$。</p>
+<div class="box ex">
+円 $x^2+y^2=25$ 上の点 $(3,4)$ における接線。<br>
+<b>解</b>　$\boldsymbol{3x+4y=25}$
+</div>
+<div class="box ex">
+円 $x^2+y^2=4$ によって直線 $y=x+1$ が切り取られる弦の長さ。<br>
+<b>解</b>　中心と直線 $x-y+1=0$ の距離 $d=\frac1{\sqrt2}$。弦の半分 $=\sqrt{4-\frac12}=\sqrt{\frac72}$。弦 $=2\sqrt{\frac72}=\boldsymbol{\sqrt{14}}$
+</div>
+<h3 class="deep">じっくり解説④ 軌跡</h3>
+<p>「条件を満たす点 P 全体が描く図形」が軌跡。手順：① P$(x,y)$ とおく ② 条件を $x,y$ の式で表す ③ 式を整理して図形を読み取る。</p>
+<div class="box ex">
+2点 A(−2,0)、B(2,0) からの距離の比が $\mathrm{PA}:\mathrm{PB}=3:1$ である点 P の軌跡。<br>
+<b>解</b>　$\mathrm{PA}=3\mathrm{PB}$ → $\mathrm{PA}^2=9\mathrm{PB}^2$：$(x+2)^2+y^2=9\{(x-2)^2+y^2\}$。<br>
+整理：$8x^2-40x+8y^2+32=0$ → $x^2-5x+y^2+4=0$ → $\left(x-\frac52\right)^2+y^2=\frac94$。<br>
+<b>中心 $\left(\frac52,0\right)$、半径 $\frac32$ の円</b>（アポロニウスの円）
+</div>
+<h3 class="deep">じっくり解説⑤ 領域と最大・最小</h3>
+<div class="box ex">
+$x\ge0,\ y\ge0,\ x+2y\le8,\ 3x+y\le9$ のとき $x+y$ の最大値。<br>
+<b>解</b>　領域は4点 $(0,0),(3,0),(2,3),(0,4)$ を頂点とする四角形。$x+y=k$ の直線を動かして、領域と共有点をもつ最大の $k$ を探す。<br>
+頂点で調べると $(2,3)$ で $k=5$ が最大。<b>最大値 5</b>（$x=2,y=3$）
+</div>
+<div class="fig"><svg width="230" height="200" viewBox="-20 -180 230 200">
+<line x1="-15" y1="0" x2="200" y2="0" stroke="#999"/><line x1="0" y1="15" x2="0" y2="-175" stroke="#999"/>
+<polygon points="0,0 90,0 60,-90 0,-120" fill="#e8f0fb" stroke="#1f5fa8" stroke-width="2"/>
+<line x1="-10" y1="-160" x2="165" y2="15" stroke="#e0702a" stroke-dasharray="4,3"/>
+<circle cx="60" cy="-90" r="4" fill="#c0392b"/><text x="66" y="-94" font-size="11" fill="#c0392b">(2,3)</text>
+<text x="100" y="-40" font-size="10" fill="#e0702a">x+y=5</text>
+</svg></div>
+<div class="box challenge">
+点 $(1,2)$ を通り、円 $x^2+y^2=1$ に接する直線の方程式。<br>
+<b>解</b>　$x=1$ は円に接する（点 $(1,0)$）ので1本目。<br>
+傾き $m$ の直線 $y-2=m(x-1)$、すなわち $mx-y+2-m=0$。中心からの距離 $=1$：$\frac{|2-m|}{\sqrt{m^2+1}}=1$ → $4-4m+m^2=m^2+1$ → $m=\frac34$。<br>
+答え $\boldsymbol{x=1}$ と $\boldsymbol{y=\frac34x+\frac54}$<br>
+<small>傾きでおくと $y$ 軸平行の直線を見落としやすいので注意。</small>
+</div>
+
+<!--EXT 24-->
+<h3 class="deep">じっくり解説① 弧度法になじもう</h3>
+<table><tr><th>度</th><td>30°</td><td>45°</td><td>60°</td><td>90°</td><td>120°</td><td>135°</td><td>150°</td><td>180°</td><td>270°</td><td>360°</td></tr>
+<tr><th>rad</th><td>$\frac\pi6$</td><td>$\frac\pi4$</td><td>$\frac\pi3$</td><td>$\frac\pi2$</td><td>$\frac{2\pi}3$</td><td>$\frac{3\pi}4$</td><td>$\frac{5\pi}6$</td><td>$\pi$</td><td>$\frac{3\pi}2$</td><td>$2\pi$</td></tr></table>
+<p>なぜ弧度法を使うのか：おうぎ形の弧の長さが $r\theta$、面積が $\frac12r^2\theta$ とシンプルになり、何より微分で $(\sin x)'=\cos x$ がきれいに成り立つのは<b>弧度法のときだけ</b>だからです。</p>
+<h3 class="deep">じっくり解説② グラフの変形</h3>
+<table><tr><th>式</th><th>変化</th></tr>
+<tr><td>$y=A\sin x$</td><td>縦に $A$ 倍（振幅 $A$）</td></tr>
+<tr><td>$y=\sin kx$</td><td>横に $\frac1k$ 倍（周期 $\frac{2\pi}{k}$）</td></tr>
+<tr><td>$y=\sin(x-p)$</td><td>右に $p$ 平行移動</td></tr></table>
+<div class="box ex">
+$y=2\sin\left(2x-\frac\pi3\right)$ の周期と振幅。<br>
+<b>解</b>　$=2\sin2\left(x-\frac\pi6\right)$。振幅 2、周期 $\frac{2\pi}2=\pi$、$y=2\sin2x$ を右に $\frac\pi6$ ずらしたもの。
+</div>
+<h3 class="deep">じっくり解説③ 加法定理から生まれる公式たち</h3>
+<p>加法定理さえ覚えれば、あとは全部作れます。</p>
+<ul>
+<li><b>2倍角</b>：$\beta=\alpha$ とおく → $\sin2\alpha=2\sin\alpha\cos\alpha$、$\cos2\alpha=\cos^2\alpha-\sin^2\alpha$</li>
+<li><b>半角</b>：$\cos2\alpha=1-2\sin^2\alpha$ を変形 → $\sin^2\frac\alpha2=\frac{1-\cos\alpha}{2}$、$\cos^2\frac\alpha2=\frac{1+\cos\alpha}2$</li>
+<li><b>3倍角</b>：$\sin3\alpha=3\sin\alpha-4\sin^3\alpha$、$\cos3\alpha=4\cos^3\alpha-3\cos\alpha$</li>
+<li><b>積和・和積</b>：$\sin\alpha\cos\beta=\frac12\{\sin(\alpha+\beta)+\sin(\alpha-\beta)\}$ など</li>
+<li><b>tan の加法定理</b>：$\tan(\alpha+\beta)=\dfrac{\tan\alpha+\tan\beta}{1-\tan\alpha\tan\beta}$</li></ul>
+<div class="box ex">
+<b>【2直線のなす角】</b>$y=3x$ と $y=\frac12x$ のなす角 $\theta$（鋭角）。<br>
+<b>解</b>　傾き角を $\alpha,\beta$ とすると $\tan\alpha=3,\ \tan\beta=\frac12$。$\tan(\alpha-\beta)=\frac{3-\frac12}{1+\frac32}=1$。$\boldsymbol{\theta=\frac\pi4}$
+</div>
+<h3 class="deep">じっくり解説④ 三角方程式・不等式</h3>
+<p>単位円で考えるのが鉄則。$\sin\theta=k$ → 高さ $k$ の水平線と単位円の交点。$\cos\theta=k$ → 横 $k$ の垂直線との交点。</p>
+<div class="box ex">
+$0\le\theta<2\pi$ で $2\cos^2\theta+\sin\theta-1=0$。<br>
+<b>解</b>　$\cos^2\theta=1-\sin^2\theta$ で sin にそろえる：$2-2\sin^2\theta+\sin\theta-1=0$ → $2\sin^2\theta-\sin\theta-1=0$ → $(2\sin\theta+1)(\sin\theta-1)=0$。<br>
+$\sin\theta=1$ → $\theta=\frac\pi2$。$\sin\theta=-\frac12$ → $\theta=\frac{7\pi}6,\frac{11\pi}6$。
+</div>
+<div class="box ex">
+$0\le\theta<2\pi$ で $\sin\theta>\frac12$。<br>
+<b>解</b>　単位円で高さ $\frac12$ より上の部分：$\boldsymbol{\frac\pi6<\theta<\frac{5\pi}6}$
+</div>
+<h3 class="deep">じっくり解説⑤ 合成の意味</h3>
+<p>$a\sin\theta+b\cos\theta$ で、点 $(a,b)$ を考えます。原点からの距離 $r=\sqrt{a^2+b^2}$、偏角 $\alpha$ とすると $a=r\cos\alpha,\ b=r\sin\alpha$。<br>
+$a\sin\theta+b\cos\theta=r(\sin\theta\cos\alpha+\cos\theta\sin\alpha)=r\sin(\theta+\alpha)$（加法定理の逆）。<b>2つの波を足すと、1つの波になる</b>ということです。</p>
+<div class="box challenge">
+$0\le\theta\le\pi$ のとき $y=\sin2\theta+\sin\theta+\cos\theta$ の最大値と最小値。<br>
+<b>解</b>　$t=\sin\theta+\cos\theta=\sqrt2\sin\left(\theta+\frac\pi4\right)$ とおくと、$\frac\pi4\le\theta+\frac\pi4\le\frac{5\pi}4$ より $-1\le t\le\sqrt2$。<br>
+$t^2=1+\sin2\theta$ なので $y=t^2-1+t=\left(t+\frac12\right)^2-\frac54$。<br>
+$t=\sqrt2$ で<b>最大 $1+\sqrt2$</b>、$t=-\frac12$ で<b>最小 $-\frac54$</b>
+</div>
+
+<!--EXT 25-->
+<h3 class="deep">じっくり解説① 指数の拡張の筋道</h3>
+<p>$a^n$ は最初「$a$ を $n$ 回かける」でした。これを自然に広げます。</p>
+<ul><li>$a^3\div a^2=a^{3-2}=a^1$ を続けると $a^0=a^{1-1}=a\div a=1$</li>
+<li>$a^{-1}=a^{0-1}=\frac1a$、$a^{-n}=\frac1{a^n}$</li>
+<li>$(a^{\frac12})^2=a^1$ になるべきだから $a^{\frac12}=\sqrt a$。一般に $a^{\frac mn}=\sqrt[n]{a^m}$</li></ul>
+<p><b>指数法則が壊れないように</b>定義を広げた、というのがポイント。</p>
+<h3 class="deep">じっくり解説② 指数方程式・不等式</h3>
+<div class="box ex">
+$4^x-3\cdot2^{x+1}+8=0$<br>
+<b>解</b>　$2^x=t\ (t>0)$ とおくと $t^2-6t+8=0$ → $t=2,4$。$2^x=2,4$ → $\boldsymbol{x=1,2}$
+</div>
+<div class="box ex">
+$\left(\frac12\right)^x>8$<br>
+<b>解</b>　$2^{-x}>2^3$。底 2 > 1 なので $-x>3$ → $\boldsymbol{x<-3}$
+</div>
+<h3 class="deep">じっくり解説③ 対数の公式の理由</h3>
+<p>$\log_aM=p,\ \log_aN=q$ とすると $M=a^p,\ N=a^q$。$MN=a^{p+q}$ なので $\log_aMN=p+q$。<b>かけ算がたし算に変わる</b>のが対数の魔法です。昔は天文学者がこの性質を使って、巨大な数のかけ算を「対数表＋たし算」で済ませていました。</p>
+<h3 class="deep">じっくり解説④ 対数方程式・不等式（真数条件に注意）</h3>
+<div class="box ex">
+$\log_2(x-1)+\log_2(x+1)=3$<br>
+<b>解</b>　<b>真数条件</b>：$x-1>0,\ x+1>0$ → $x>1$。<br>
+$\log_2(x-1)(x+1)=3$ → $x^2-1=8$ → $x=\pm3$。$x>1$ より $\boldsymbol{x=3}$
+</div>
+<div class="box ex">
+$\log_{\frac12}(x-2)>-1$<br>
+<b>解</b>　真数条件 $x>2$。$-1=\log_{\frac12}2$。底 $\frac12<1$ なので<b>不等号が逆</b>：$x-2<2$ → $x<4$。答え $\boldsymbol{2<x<4}$
+</div>
+<h3 class="deep">じっくり解説⑤ 常用対数の活用</h3>
+<p>$\log_{10}2\approx0.3010,\ \log_{10}3\approx0.4771$ を使うと、巨大な数・小さな数の大きさがわかります。</p>
+<div class="box ex">
+$\left(\frac13\right)^{20}$ は小数第何位に初めて 0 でない数字が現れるか。<br>
+<b>解</b>　$\log_{10}3^{-20}=-20\times0.4771=-9.542$。$10^{-10}<3^{-20}<10^{-9}$ なので<b>小数第10位</b>
+</div>
+<div class="box ex">
+<b>【複利】</b>年利 5% の複利で預金が2倍以上になるのは何年後？（$\log_{10}1.05\approx0.0212$）<br>
+<b>解</b>　$1.05^n\ge2$ → $n\ge\frac{0.3010}{0.0212}\approx14.2$。<b>15年後</b>
+</div>
+<p>身近な対数：地震のマグニチュード（1 増えるとエネルギー約 32 倍）、音の大きさのデシベル、酸性度の pH。いずれも「桁」が大きく変わる量を扱いやすくしています。</p>
+<div class="box challenge">
+$2^x=3^y=6^z$（$xyz\neq0$）のとき、$\frac1x+\frac1y=\frac1z$ を示せ。<br>
+<b>解</b>　$=k$ とおき常用対数をとる：$x=\frac{\log k}{\log2},\ y=\frac{\log k}{\log3},\ z=\frac{\log k}{\log6}$。<br>
+$\frac1x+\frac1y=\frac{\log2+\log3}{\log k}=\frac{\log6}{\log k}=\frac1z$。■
+</div>
+
+<!--EXT 26-->
+<h3 class="deep">じっくり解説① 平均変化率から微分係数へ</h3>
+<p>$f(x)=x^2$ で、$x=1$ から $x=1+h$ までの平均変化率は<br>
+$\frac{(1+h)^2-1}{h}=\frac{2h+h^2}{h}=2+h$。</p>
+<table><tr><th>$h$</th><td>1</td><td>0.1</td><td>0.01</td><td>0.001</td><td>→0</td></tr>
+<tr><th>平均変化率</th><td>3</td><td>2.1</td><td>2.01</td><td>2.001</td><td>→2</td></tr></table>
+<p>$h$ を 0 に近づけた極限 2 が $f'(1)$。これが「$x=1$ での瞬間の変化率」＝接線の傾きです。</p>
+<h3 class="deep">じっくり解説② 導関数の公式を定義から</h3>
+<p>$f(x)=x^3$：$\frac{(x+h)^3-x^3}{h}=\frac{3x^2h+3xh^2+h^3}{h}=3x^2+3xh+h^2\to3x^2$。<br>
+一般に $(x^n)'=nx^{n-1}$。「肩の数を前に出して、肩を1減らす」。</p>
+<h3 class="deep">じっくり解説③ 接線の応用</h3>
+<div class="box ex">
+<b>【曲線外の点から引く接線】</b>点 $(0,-2)$ から曲線 $y=x^3$ に引いた接線。<br>
+<b>解</b>　接点を $(t,t^3)$ とおく。接線は $y=3t^2(x-t)+t^3=3t^2x-2t^3$。<br>
+これが $(0,-2)$ を通る：$-2=-2t^3$ → $t=1$。接線 $\boldsymbol{y=3x-2}$<br>
+<small>「接点を文字でおく」のが鉄則。</small>
+</div>
+<h3 class="deep">じっくり解説④ グラフを描く手順</h3>
+<ol><li>$f'(x)$ を求め、$f'(x)=0$ となる $x$ を求める</li>
+<li>増減表を書く（$f'$ の符号を調べる）</li>
+<li>極値、$y$ 切片、（わかれば）$x$ 切片を求める</li>
+<li>表に従って描く</li></ol>
+<div class="fig"><svg width="280" height="200" viewBox="-140 -100 280 200">
+<line x1="-135" y1="0" x2="135" y2="0" stroke="#999"/><line x1="0" y1="95" x2="0" y2="-95" stroke="#999"/>
+<polyline fill="none" stroke="#1f5fa8" stroke-width="2.5" points="-100,93.75 -90,68.6 -80,44.8 -70,24.2 -60,7.2 -50,-6.2 -40,-16 -30,-22.6 -20,-26.4 -10,-27.9 0,-27.4 10,-25.6 20,-22.4 30,-18.2 40,-13.3 50,-8 60,-2.9 70,1.6 80,5 90,6.9 100,6.9 110,4.5 120,-0.6"/>
+<text x="20" y="-60" font-size="10" fill="#1f5fa8">（参考）3次関数の山と谷</text>
+</svg><br><small>$x^3$ の係数が正なら「右上がりで、途中に山と谷」、負なら逆</small></div>
+<h3 class="deep">じっくり解説⑤ 方程式の実数解の個数</h3>
+<div class="box ex">
+$x^3-3x-a=0$ が異なる3つの実数解をもつ $a$ の範囲。<br>
+<b>解</b>　$x^3-3x=a$ と変形し、$y=x^3-3x$ と水平線 $y=a$ の交点を考える（<b>定数分離</b>）。<br>
+$y=x^3-3x$ は極大値 2（$x=-1$）、極小値 −2（$x=1$）。3点で交わるのは $\boldsymbol{-2<a<2}$
+</div>
+<h3 class="deep">じっくり解説⑥ 最大・最小の応用</h3>
+<div class="box ex">
+1辺 12cm の正方形の厚紙の四隅から1辺 $x$ cm の正方形を切り取り、ふたのない箱を作る。容積の最大値は？<br>
+<b>解</b>　$V=x(12-2x)^2\ (0<x<6)$。$V=4x^3-48x^2+144x$、$V'=12x^2-96x+144=12(x-2)(x-6)$。<br>
+$0<x<6$ で $x=2$ のとき極大かつ最大。$V=2\times8^2=\boldsymbol{128}$ cm³
+</div>
+<div class="box challenge">
+$x\ge0$ のとき、不等式 $x^3+4\ge3x^2$ を証明せよ。<br>
+<b>解</b>　$f(x)=x^3-3x^2+4$ とおく。$f'(x)=3x^2-6x=3x(x-2)$。<br>
+$x\ge0$ での最小値は $x=2$ のとき $f(2)=8-12+4=0$。よって $f(x)\ge0$。■<br>
+<small>（実は $f(x)=(x+1)(x-2)^2$ と因数分解もできる）</small>
+</div>
+
+<!--EXT 27-->
+<h3 class="deep">じっくり解説① 不定積分と積分定数</h3>
+<p>微分して $2x$ になる関数は $x^2,\ x^2+1,\ x^2-5,\dots$ と無数にあります（定数は微分すると消えるから）。そこで $\int2x\,dx=x^2+C$ と、<b>積分定数 $C$</b> をつけて全部まとめて表します。</p>
+<h3 class="deep">じっくり解説② 定積分の性質</h3>
+<ul><li>$\int_a^a f\,dx=0$、$\int_b^a f\,dx=-\int_a^b f\,dx$</li>
+<li>$\int_a^b f\,dx+\int_b^c f\,dx=\int_a^c f\,dx$</li>
+<li><b>偶関数・奇関数</b>：$\int_{-a}^{a}x^{偶数}dx=2\int_0^ax^{偶数}dx$、$\int_{-a}^ax^{奇数}dx=0$</li></ul>
+<div class="box ex">
+$\int_{-2}^{2}(x^3+3x^2-x+1)\,dx$<br>
+<b>解</b>　奇数次は消える：$=2\int_0^2(3x^2+1)dx=2[x^3+x]_0^2=2\times10=\boldsymbol{20}$
+</div>
+<h3 class="deep">じっくり解説③ 微分積分学の基本定理</h3>
+<p>$\dfrac{d}{dx}\displaystyle\int_a^xf(t)\,dt=f(x)$。<b>「積分してから微分すると元に戻る」</b>。面積の増え方（微分）が、ちょうどそのときの高さ $f(x)$ になる、という意味です。</p>
+<div class="box ex">
+$\int_1^xf(t)\,dt=x^2-3x+a$ を満たす $f(x)$ と $a$。<br>
+<b>解</b>　両辺を微分：$f(x)=2x-3$。$x=1$ を代入すると左辺 0：$0=1-3+a$ → $a=2$。
+</div>
+<h3 class="deep">じっくり解説④ 面積のいろいろ</h3>
+<div class="box ex">
+<b>【$x$ 軸の下にある部分】</b>$y=x^2-2x$ と $x$ 軸で囲まれた面積。<br>
+<b>解</b>　$0\le x\le2$ でグラフは $x$ 軸の下。面積 $=-\int_0^2(x^2-2x)dx=-\left[\frac{x^3}3-x^2\right]_0^2=-\left(\frac83-4\right)=\boldsymbol{\frac43}$
+</div>
+<div class="box ex">
+<b>【2つの放物線】</b>$y=x^2$ と $y=-x^2+2x+4$ で囲まれた面積。<br>
+<b>解</b>　交点：$2x^2-2x-4=0$ → $x=-1,2$。<br>
+$S=\int_{-1}^2(-2x^2+2x+4)dx=-2\int_{-1}^{2}(x+1)(x-2)dx=2\cdot\frac{3^3}6=\boldsymbol9$
+</div>
+<h3 class="deep">じっくり解説⑤ $\frac16$ 公式の証明</h3>
+<p>$\int_\alpha^\beta(x-\alpha)(x-\beta)dx$ で、$(x-\beta)=(x-\alpha)-(\beta-\alpha)$ と変形：<br>
+$=\int_\alpha^\beta\{(x-\alpha)^2-(\beta-\alpha)(x-\alpha)\}dx=\left[\frac{(x-\alpha)^3}{3}-(\beta-\alpha)\frac{(x-\alpha)^2}{2}\right]_\alpha^\beta=\frac{(\beta-\alpha)^3}3-\frac{(\beta-\alpha)^3}{2}=-\frac{(\beta-\alpha)^3}{6}$。■</p>
+<h3 class="deep">じっくり解説⑥ 速度と道のり</h3>
+<p>速度 $v(t)$ のとき、時刻 $a$ から $b$ までの<b>位置の変化</b>は $\int_a^bv(t)\,dt$、<b>道のり</b>（実際に動いた距離）は $\int_a^b|v(t)|\,dt$。</p>
+<div class="box ex">
+$v(t)=t^2-4t+3$ で動く点の、$t=0$ から $t=3$ までの位置の変化と道のり。<br>
+<b>解</b>　位置の変化 $\int_0^3(t^2-4t+3)dt=9-18+9=0$（元の位置に戻った）。<br>
+$v=(t-1)(t-3)$ は $0<t<1$ で正、$1<t<3$ で負。道のり $=\int_0^1v\,dt-\int_1^3v\,dt=\frac43+\frac43=\boldsymbol{\frac83}$
+</div>
+<div class="box challenge">
+放物線 $y=x^2$ 上の点 $(1,1)$ における接線と、放物線および $y$ 軸で囲まれた部分の面積。<br>
+<b>解</b>　接線 $y=2x-1$。$0\le x\le1$ で放物線が上：$S=\int_0^1(x^2-2x+1)dx=\int_0^1(x-1)^2dx=\left[\frac{(x-1)^3}3\right]_0^1=\boldsymbol{\frac13}$
+</div>
+
+<!--EXT 28-->
+<h3 class="deep">じっくり解説① 等比数列の和の公式の導き方</h3>
+<p>$S=a+ar+ar^2+\cdots+ar^{n-1}$<br>
+$rS=\phantom{a+{}}ar+ar^2+\cdots+ar^{n-1}+ar^n$<br>
+引き算すると真ん中がすべて消えて $S-rS=a-ar^n$ → $S=\frac{a(1-r^n)}{1-r}$。<b>「ずらして引く」</b>テクニックは $\sum kr^k$ 型の和でも使います。</p>
+<div class="box ex">
+$S=1+2\cdot2+3\cdot2^2+\cdots+n\cdot2^{n-1}$<br>
+<b>解</b>　$2S=1\cdot2+2\cdot2^2+\cdots+(n-1)2^{n-1}+n2^n$。<br>
+$S-2S=1+2+2^2+\cdots+2^{n-1}-n2^n=(2^n-1)-n2^n$。$S=\boldsymbol{(n-1)2^n+1}$
+</div>
+<h3 class="deep">じっくり解説② Σ の計算</h3>
+<p>$\sum$ は「足し算の命令」。$\sum_{k=1}^n(2k+1)$ は「$k=1$ から $n$ まで $2k+1$ を全部足せ」。性質：$\sum(a_k+b_k)=\sum a_k+\sum b_k$、$\sum ca_k=c\sum a_k$、$\sum_{k=1}^nc=nc$。</p>
+<div class="box ex">
+$\sum_{k=1}^n k(k+1)$<br>
+<b>解</b>　$=\sum k^2+\sum k=\frac{n(n+1)(2n+1)}6+\frac{n(n+1)}{2}=\frac{n(n+1)(2n+4)}{6}=\boldsymbol{\frac{n(n+1)(n+2)}3}$
+</div>
+<div class="box ex">
+<b>【部分分数分解】</b>$\sum_{k=1}^n\frac1{k(k+1)}$<br>
+<b>解</b>　$=\sum\left(\frac1k-\frac1{k+1}\right)=\left(1-\frac12\right)+\left(\frac12-\frac13\right)+\cdots+\left(\frac1n-\frac1{n+1}\right)=1-\frac1{n+1}=\boldsymbol{\frac{n}{n+1}}$<br>
+<small>隣どうしが打ち消し合う「望遠鏡和」。</small>
+</div>
+<h3 class="deep">じっくり解説③ 和から一般項を求める</h3>
+<p>$S_n$（初項から第 $n$ 項までの和）がわかっているとき：$a_1=S_1$、$n\ge2$ で $a_n=S_n-S_{n-1}$。</p>
+<div class="box ex">
+$S_n=n^2+2n$ のとき $a_n$。<br>
+<b>解</b>　$a_1=3$。$n\ge2$：$a_n=(n^2+2n)-\{(n-1)^2+2(n-1)\}=2n+1$。これは $n=1$ でも成り立つので $\boldsymbol{a_n=2n+1}$
+</div>
+<h3 class="deep">じっくり解説④ 漸化式のパターン</h3>
+<table><tr><th>型</th><th>解き方</th></tr>
+<tr><td>$a_{n+1}=a_n+d$</td><td>等差数列</td></tr>
+<tr><td>$a_{n+1}=ra_n$</td><td>等比数列</td></tr>
+<tr><td>$a_{n+1}=a_n+f(n)$</td><td>階差数列：$a_n=a_1+\sum_{k=1}^{n-1}f(k)$</td></tr>
+<tr><td>$a_{n+1}=pa_n+q$</td><td>特性方程式 $\alpha=p\alpha+q$ で等比に</td></tr>
+<tr><td>$a_{n+1}=pa_n+q^n$</td><td>両辺を $q^{n+1}$ で割る</td></tr>
+<tr><td>$a_{n+2}=pa_{n+1}+qa_n$</td><td>$t^2=pt+q$ の解で等比に</td></tr></table>
+<div class="box ex">
+$a_1=1,\ a_{n+1}=a_n+2n$<br>
+<b>解</b>　$n\ge2$：$a_n=1+\sum_{k=1}^{n-1}2k=1+(n-1)n=n^2-n+1$（$n=1$ でも成立）
+</div>
+<div class="box ex">
+<b>【フィボナッチ型】</b>$a_1=1,a_2=1,\ a_{n+2}=a_{n+1}+a_n$ は 1,1,2,3,5,8,13,21,… 。一般項は $\frac{1}{\sqrt5}\left\{\left(\frac{1+\sqrt5}2\right)^n-\left(\frac{1-\sqrt5}2\right)^n\right\}$。整数の列なのに $\sqrt5$ が出てくる不思議な式です（黄金比 $\frac{1+\sqrt5}{2}$ が登場）。
+</div>
+<h3 class="deep">じっくり解説⑤ 数学的帰納法の書き方</h3>
+<div class="box ex">
+すべての自然数 $n$ について $1+3+5+\cdots+(2n-1)=n^2$ を証明せよ。<br>
+<b>証明</b>　[1] $n=1$ のとき：左辺 1、右辺 1 で成立。<br>
+[2] $n=k$ のとき成立すると仮定：$1+3+\cdots+(2k-1)=k^2$。<br>
+$n=k+1$ のとき：左辺 $=k^2+(2k+1)=(k+1)^2$ で成立。<br>
+[1][2] よりすべての自然数 $n$ で成立。■
+</div>
+<div class="box challenge">
+ある池の魚は毎年 20% 減るが、毎年 1000 匹放流する。最初 2000 匹のとき、$n$ 年後の数 $a_n$ と、長い年月の後の数。<br>
+<b>解</b>　$a_{n+1}=0.8a_n+1000$。$\alpha=0.8\alpha+1000$ → $\alpha=5000$。<br>
+$a_n-5000=(2000-5000)(0.8)^n$ → $a_n=5000-3000(0.8)^n$。$n\to\infty$ で <b>5000 匹に近づく</b>。
+</div>
+
+<!--EXT 29-->
+<h3 class="deep">じっくり解説① 確率変数と確率分布</h3>
+<p>サイコロの目 $X$ のように、<b>確率的に値が決まる変数</b>を確率変数といいます。各値と確率をまとめた表が確率分布です。</p>
+<table><tr><th>$X$</th><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><th>計</th></tr>
+<tr><th>$P$</th><td>$\frac16$</td><td>$\frac16$</td><td>$\frac16$</td><td>$\frac16$</td><td>$\frac16$</td><td>$\frac16$</td><td>1</td></tr></table>
+<p>$E(X)=3.5$、$E(X^2)=\frac{91}6$、$V(X)=\frac{91}6-\frac{49}4=\frac{35}{12}$。</p>
+<h3 class="deep">じっくり解説② 和と積の期待値・分散</h3>
+<ul><li>$E(X+Y)=E(X)+E(Y)$（いつでも成立）</li>
+<li>$X,Y$ が<b>独立</b>なら $E(XY)=E(X)E(Y)$、$V(X+Y)=V(X)+V(Y)$</li></ul>
+<p>二項分布 $B(n,p)$ は「1回の成功で 1、失敗で 0」となる独立な $n$ 個の変数の和なので、$E=np$、$V=np(1-p)$ がすぐ出ます。</p>
+<h3 class="deep">じっくり解説③ 正規分布表の使い方</h3>
+<p>標準正規分布 $N(0,1)$ で、$P(0\le Z\le u)$ の値の表を使います。よく使う値：</p>
+<table><tr><th>$u$</th><td>1.00</td><td>1.64</td><td>1.96</td><td>2.00</td><td>2.58</td><td>3.00</td></tr>
+<tr><th>$P(0\le Z\le u)$</th><td>0.3413</td><td>0.4495</td><td>0.4750</td><td>0.4772</td><td>0.4951</td><td>0.4987</td></tr></table>
+<p>つまり平均 ± 1σ に約 68%、± 2σ に約 95%、± 3σ に約 99.7% が入ります。</p>
+<div class="box ex">
+ある試験の得点が $N(60,10^2)$ に従う。80 点以上の人の割合は？<br>
+<b>解</b>　$Z=\frac{80-60}{10}=2$。$P(Z\ge2)=0.5-0.4772=\boldsymbol{0.0228}$（約 2.3%）
+</div>
+<div class="box ex">
+<b>【二項分布の正規近似】</b>サイコロを 720 回投げて1の目が 140 回以上出る確率。<br>
+<b>解</b>　$X\sim B(720,\frac16)$：$E=120,\ \sigma=\sqrt{720\cdot\frac16\cdot\frac56}=10$。$n$ が大きいので $N(120,10^2)$ で近似。<br>
+$P(X\ge140)=P(Z\ge2)\approx\boldsymbol{0.0228}$
+</div>
+<h3 class="deep">じっくり解説④ 推定：信頼区間の意味</h3>
+<p>「95% 信頼区間」は、「同じ方法で何度も標本をとって区間を作ると、そのうち約 95% の区間が本当の母平均を含む」という意味です。「母平均がこの区間に入る確率が 95%」とは少し違うので注意。</p>
+<div class="box ex">
+<b>【母比率の推定】</b>400 人に調査したら 160 人が賛成。賛成率の 95% 信頼区間は？<br>
+<b>解</b>　標本比率 $p=0.4$。$1.96\sqrt{\frac{0.4\times0.6}{400}}=1.96\times0.0245\approx0.048$。<br>
+区間 $\boldsymbol{0.352\le p\le0.448}$（約 35%〜45%）
+</div>
+<h3 class="deep">じっくり解説⑤ 仮説検定の手順</h3>
+<ol><li><b>帰無仮説</b>（否定したい仮説）を立てる：例「このコインは公平（$p=\frac12$）」</li>
+<li><b>有意水準</b>を決める（通常 5%）</li>
+<li>帰無仮説のもとで、観測結果以上に極端なことが起こる確率を計算</li>
+<li>その確率が有意水準より小さければ帰無仮説を<b>棄却</b></li></ol>
+<div class="box challenge">
+硬貨を 400 回投げたら表が 220 回出た。この硬貨は公平でないと言えるか（有意水準 5%、両側検定）。<br>
+<b>解</b>　帰無仮説 $p=\frac12$ のもと、表の回数は $B(400,\frac12)$ で $E=200,\ \sigma=10$。<br>
+$Z=\frac{220-200}{10}=2>1.96$ なので、棄却域に入る。<b>帰無仮説は棄却され、公平でないと判断できる</b>。
+</div>
+
+<!--EXT 30-->
+<h3 class="deep">じっくり解説① ベクトルの基本操作</h3>
+<ul><li><b>実数倍</b>：$k\vec a$ は向きはそのまま（$k<0$ なら逆向き）、長さ $|k|$ 倍</li>
+<li><b>差</b>：$\vec a-\vec b=\vec a+(-\vec b)$。図では「$\vec b$ の先から $\vec a$ の先へ」</li>
+<li><b>単位ベクトル</b>（長さ1）：$\frac{\vec a}{|\vec a|}$</li>
+<li><b>1次独立</b>：$\vec a,\vec b$ が平行でない（かつ $\vec 0$ でない）なら、平面上の任意のベクトルは $s\vec a+t\vec b$ とただ1通りに表せる</li></ul>
+<h3 class="deep">じっくり解説② 内積の性質と計算</h3>
+<p>$|\vec a|^2=\vec a\cdot\vec a$ が超重要。長さの問題は2乗して内積で展開します。</p>
+<p>$|\vec a+\vec b|^2=|\vec a|^2+2\vec a\cdot\vec b+|\vec b|^2$（文字式の展開と同じ感覚）</p>
+<div class="box ex">
+△OAB で $|\vec{OA}|=3,\ |\vec{OB}|=2,\ \angle AOB=60^\circ$ のとき、面積と $|\vec{AB}|$。<br>
+<b>解</b>　$\vec a\cdot\vec b=3\cdot2\cdot\frac12=3$。$|\vec{AB}|^2=|\vec b-\vec a|^2=4-6+9=7$ → $\sqrt7$。<br>
+面積 $=\frac12\sqrt{|\vec a|^2|\vec b|^2-(\vec a\cdot\vec b)^2}=\frac12\sqrt{36-9}=\boldsymbol{\frac{3\sqrt3}2}$
+</div>
+<p>成分なら面積 $=\frac12|a_1b_2-a_2b_1|$ が便利。</p>
+<h3 class="deep">じっくり解説③ 位置ベクトルと図形</h3>
+<div class="box ex">
+△OAB で OA を $2:1$ に内分する点 C、OB の中点 D をとり、AD と BC の交点を P とする。$\vec{OP}$ を $\vec a,\vec b$ で表せ。<br>
+<b>解</b>　AP:PD $=s:(1-s)$ とすると $\vec{OP}=(1-s)\vec a+\frac s2\vec b$。<br>
+BP:PC $=t:(1-t)$ とすると $\vec{OP}=\frac{2t}{3}\vec a+(1-t)\vec b$。<br>
+$\vec a,\vec b$ は1次独立なので係数比較：$1-s=\frac{2t}3,\ \frac s2=1-t$。解いて $s=\frac12,\ t=\frac34$。<br>
+$\vec{OP}=\boldsymbol{\frac12\vec a+\frac14\vec b}$
+</div>
+<h3 class="deep">じっくり解説④ ベクトル方程式</h3>
+<table><tr><th>図形</th><th>ベクトル方程式</th></tr>
+<tr><td>点 A を通り $\vec d$ に平行な直線</td><td>$\vec p=\vec a+t\vec d$</td></tr>
+<tr><td>2点 A, B を通る直線</td><td>$\vec p=(1-t)\vec a+t\vec b$</td></tr>
+<tr><td>線分 AB</td><td>上の式で $0\le t\le1$</td></tr>
+<tr><td>中心 C、半径 $r$ の円</td><td>$|\vec p-\vec c|=r$</td></tr>
+<tr><td>点 A を通り $\vec n$ に垂直な直線</td><td>$\vec n\cdot(\vec p-\vec a)=0$</td></tr></table>
+<h3 class="deep">じっくり解説⑤ 空間ベクトル</h3>
+<p>成分が3つになるだけで、内積・大きさの計算は同じ。空間では「平面の方程式」$ax+by+cz+d=0$（法線ベクトル $(a,b,c)$）や、「球の方程式」$(x-a)^2+(y-b)^2+(z-c)^2=r^2$ が登場します。</p>
+<div class="box ex">
+3点 A(1,0,0)、B(0,2,0)、C(0,0,3) を通る平面に垂直なベクトルを1つ。<br>
+<b>解</b>　$\vec n=(p,q,r)$ が $\vec{AB}=(-1,2,0),\ \vec{AC}=(-1,0,3)$ と垂直：$-p+2q=0,\ -p+3r=0$。$p=6$ とすると $\boldsymbol{\vec n=(6,3,2)}$<br>
+<small>平面の方程式は $6x+3y+2z=6$、つまり $x+\frac y2+\frac z3=1$。</small>
+</div>
+<div class="box challenge">
+四面体 OABC で、△ABC の重心を G とする。OG を $3:1$ に内分する点を P とするとき $\vec{OP}$ を $\vec a,\vec b,\vec c$ で表せ。<br>
+<b>解</b>　$\vec{OG}=\frac{\vec a+\vec b+\vec c}3$。$\vec{OP}=\frac34\vec{OG}=\boldsymbol{\frac{\vec a+\vec b+\vec c}{4}}$<br>
+<small>これは四面体の重心（4頂点の平均）。三角形の重心は中線を $2:1$、四面体の重心は $3:1$ に分ける。</small>
+</div>
+
+<!--EXT 31-->
+<h3 class="deep">じっくり解説① 共役複素数と絶対値</h3>
+<p>$z=a+bi$ の共役 $\bar z=a-bi$ は、実軸に関して<b>折り返した点</b>。$z\bar z=a^2+b^2=|z|^2$ が重要。</p>
+<p>2点 $z,w$ の距離は $|z-w|$。中心 $\alpha$、半径 $r$ の円は $|z-\alpha|=r$。</p>
+<h3 class="deep">じっくり解説② かけ算・わり算の図形的意味</h3>
+<p>$z_1=r_1(\cos\theta_1+i\sin\theta_1),\ z_2=r_2(\cos\theta_2+i\sin\theta_2)$ のとき<br>
+$z_1z_2=r_1r_2\{\cos(\theta_1+\theta_2)+i\sin(\theta_1+\theta_2)\}$（加法定理そのもの）<br>
+$\frac{z_1}{z_2}=\frac{r_1}{r_2}\{\cos(\theta_1-\theta_2)+i\sin(\theta_1-\theta_2)\}$</p>
+<div class="box ex">
+点 $z=3+i$ を原点のまわりに $\frac\pi3$ 回転した点。<br>
+<b>解</b>　$\left(\frac12+\frac{\sqrt3}2i\right)(3+i)=\frac32+\frac i2+\frac{3\sqrt3}{2}i-\frac{\sqrt3}2=\boldsymbol{\frac{3-\sqrt3}{2}+\frac{1+3\sqrt3}{2}i}$
+</div>
+<div class="box ex">
+<b>【点のまわりの回転】</b>点 $\beta$ を点 $\alpha$ のまわりに $\theta$ 回転した点 $\gamma$：$\gamma-\alpha=(\cos\theta+i\sin\theta)(\beta-\alpha)$。<br>
+<small>「$\alpha$ を原点に移して回転し、元に戻す」と考える。</small>
+</div>
+<h3 class="deep">じっくり解説③ $1$ の $n$ 乗根</h3>
+<p>$z^n=1$ の解は、単位円上で<b>正 $n$ 角形の頂点</b>に並びます：$z_k=\cos\frac{2k\pi}{n}+i\sin\frac{2k\pi}{n}\ (k=0,1,\dots,n-1)$。</p>
+<div class="fig"><svg width="170" height="170" viewBox="-85 -85 170 170">
+<circle cx="0" cy="0" r="65" fill="none" stroke="#999"/>
+<line x1="-80" y1="0" x2="80" y2="0" stroke="#ccc"/><line x1="0" y1="-80" x2="0" y2="80" stroke="#ccc"/>
+<polygon points="65,0 20.1,-61.8 -52.6,-38.2 -52.6,38.2 20.1,61.8" fill="#e8f0fb" stroke="#1f5fa8" stroke-width="2"/>
+<g fill="#c0392b"><circle cx="65" cy="0" r="4"/><circle cx="20.1" cy="-61.8" r="4"/><circle cx="-52.6" cy="-38.2" r="4"/><circle cx="-52.6" cy="38.2" r="4"/><circle cx="20.1" cy="61.8" r="4"/></g>
+<text x="40" y="-6" font-size="10">1</text>
+</svg><br><small>$z^5=1$ の5つの解は正五角形</small></div>
+<h3 class="deep">じっくり解説④ 複素数と図形</h3>
+<ul><li>3点 $\alpha,\beta,\gamma$ が一直線上 ⇔ $\frac{\gamma-\alpha}{\beta-\alpha}$ が実数</li>
+<li>$\alpha\beta\perp\alpha\gamma$ ⇔ $\frac{\gamma-\alpha}{\beta-\alpha}$ が純虚数</li>
+<li>$\frac{\gamma-\alpha}{\beta-\alpha}=\cos\frac\pi3\pm i\sin\frac\pi3$ ⇔ 正三角形</li></ul>
+<h3 class="deep">じっくり解説⑤ 2次曲線の詳細</h3>
+<table><tr><th>曲線</th><th>標準形</th><th>焦点</th><th>特徴</th></tr>
+<tr><td>放物線</td><td>$y^2=4px$</td><td>$(p,0)$</td><td>準線 $x=-p$ と焦点から等距離</td></tr>
+<tr><td>楕円</td><td>$\frac{x^2}{a^2}+\frac{y^2}{b^2}=1\ (a>b)$</td><td>$(\pm\sqrt{a^2-b^2},0)$</td><td>2焦点からの距離の和 $=2a$</td></tr>
+<tr><td>双曲線</td><td>$\frac{x^2}{a^2}-\frac{y^2}{b^2}=1$</td><td>$(\pm\sqrt{a^2+b^2},0)$</td><td>距離の差 $=2a$、漸近線 $y=\pm\frac bax$</td></tr></table>
+<p>パラボラアンテナが放物線の形なのは、軸に平行に入ってきた電波が反射してすべて<b>焦点に集まる</b>からです。惑星の軌道は太陽を焦点の1つとする楕円（ケプラーの法則）。</p>
+<h3 class="deep">じっくり解説⑥ 媒介変数表示と極座標</h3>
+<ul><li>円 $x^2+y^2=r^2$：$x=r\cos\theta,\ y=r\sin\theta$</li>
+<li>楕円：$x=a\cos\theta,\ y=b\sin\theta$</li>
+<li><b>サイクロイド</b>（転がる円上の点の軌跡）：$x=a(\theta-\sin\theta),\ y=a(1-\cos\theta)$</li>
+<li>極座標 $(r,\theta)$：$x=r\cos\theta,\ y=r\sin\theta$。カージオイド $r=1+\cos\theta$ などのきれいな曲線が表せる</li></ul>
+<div class="box challenge">
+$z+\frac1z$ が実数となるような複素数 $z$（$z\neq0$）は、複素数平面上でどのような図形を描くか。<br>
+<b>解</b>　$z+\frac1z=\overline{z+\frac1z}$ → $z-\bar z+\frac1z-\frac1{\bar z}=0$ → $(z-\bar z)\left(1-\frac1{z\bar z}\right)=0$。<br>
+よって $z=\bar z$（実数）または $|z|^2=1$。<b>実軸（原点を除く）と単位円</b>
+</div>

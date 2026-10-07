@@ -1,0 +1,179 @@
+<!--EXT 32-->
+<h3 class="deep">じっくり解説① 数列の極限の分類</h3>
+<table><tr><th>ふるまい</th><th>例</th></tr>
+<tr><td>収束（ある値に近づく）</td><td>$\frac1n\to0$、$\frac{2n+1}{n}\to2$</td></tr>
+<tr><td>正の無限大に発散</td><td>$n^2\to\infty$</td></tr>
+<tr><td>負の無限大に発散</td><td>$-2^n\to-\infty$</td></tr>
+<tr><td>振動（どれでもない）</td><td>$(-1)^n$：$-1,1,-1,1,\dots$</td></tr></table>
+<h3 class="deep">じっくり解説② 不定形の処理</h3>
+<p>$\frac\infty\infty,\ \infty-\infty,\ \frac00,\ 0\times\infty$ は<b>不定形</b>：そのままでは値が決まらないので変形が必要。</p>
+<div class="box ex">
+$\displaystyle\lim_{n\to\infty}\frac{3^n-2^n}{3^{n+1}+2^n}$<br>
+<b>解</b>　分母分子を一番大きい $3^n$ で割る：$\frac{1-\left(\frac23\right)^n}{3+\left(\frac23\right)^n}\to\boldsymbol{\frac13}$
+</div>
+<div class="box ex">
+$\displaystyle\lim_{n\to\infty}\frac{r^n}{1+r^n}$ を $r$ の値で場合分け。<br>
+<b>解</b>　$|r|<1$：$r^n\to0$ なので $0$。$r=1$：$\frac12$。$r>1$：分母分子を $r^n$ で割って $\frac{1}{r^{-n}+1}\to1$。$r<-1$：同様に $1$。（$r=-1$ は $1+r^n=0$ となる $n$ があり定義されない）
+</div>
+<h3 class="deep">じっくり解説③ はさみうちの原理</h3>
+<p>$a_n\le c_n\le b_n$ で $a_n,b_n$ がともに $\alpha$ に収束するなら、$c_n$ も $\alpha$ に収束。</p>
+<div class="box ex">
+$\displaystyle\lim_{n\to\infty}\frac{\sin n}{n}$<br>
+<b>解</b>　$-1\le\sin n\le1$ より $-\frac1n\le\frac{\sin n}{n}\le\frac1n$。両端 → 0 なので $\boldsymbol0$
+</div>
+<h3 class="deep">じっくり解説④ $\frac{\sin x}{x}\to1$ の証明</h3>
+<p>半径1、中心角 $x$（$0<x<\frac\pi2$）の図で、面積を比べると<br>
+三角形 OAB $<$ おうぎ形 OAB $<$ 三角形 OAT：$\frac12\sin x<\frac12x<\frac12\tan x$。<br>
+$\sin x$ で割って逆数をとると $\cos x<\frac{\sin x}{x}<1$。$x\to0$ で $\cos x\to1$ なので、はさみうちで $\frac{\sin x}{x}\to1$。■</p>
+<div class="fig"><svg width="220" height="170" viewBox="-10 -160 220 170">
+<path d="M 150,0 A 150 150 0 0 0 106,-106" fill="#e8f0fb" stroke="#1f5fa8"/>
+<line x1="0" y1="0" x2="150" y2="0" stroke="#333"/><line x1="0" y1="0" x2="150" y2="-150" stroke="#333"/>
+<line x1="106" y1="-106" x2="150" y2="0" stroke="#e0702a" stroke-width="2"/>
+<line x1="150" y1="0" x2="150" y2="-150" stroke="#c0392b" stroke-width="2"/>
+<path d="M0,0 L150,0 A150 150 0 0 0 106,-106 Z" fill="#1f5fa8" fill-opacity=".12"/>
+<text x="-8" y="12" font-size="11">O</text><text x="152" y="12" font-size="11">A</text><text x="96" y="-112" font-size="11">B</text><text x="155" y="-150" font-size="11">T</text>
+<text x="22" y="-8" font-size="10">x</text><text x="154" y="-70" font-size="10" fill="#c0392b">tan x</text>
+</svg></div>
+<h3 class="deep">じっくり解説⑤ 無限級数</h3>
+<p>$\sum_{n=1}^\infty a_n$ が収束するなら $a_n\to0$。<b>逆は成り立たない</b>：$\sum\frac1n=1+\frac12+\frac13+\cdots$（調和級数）は $\frac1n\to0$ なのに発散します。</p>
+<p>理由：$\frac13+\frac14>\frac14+\frac14=\frac12$、$\frac15+\cdots+\frac18>\frac48=\frac12$、…と、$\frac12$ 以上のかたまりが無限に作れるから。</p>
+<div class="box ex">
+循環小数 $0.\dot{1}\dot{2}=0.121212\cdots$ を分数に。<br>
+<b>解</b>　$=\frac{12}{100}+\frac{12}{100^2}+\cdots=\frac{\frac{12}{100}}{1-\frac1{100}}=\frac{12}{99}=\boldsymbol{\frac4{33}}$
+</div>
+<h3 class="deep">じっくり解説⑥ 関数の極限と連続性</h3>
+<p>$f(x)$ が $x=a$ で<b>連続</b> ⇔ $\lim_{x\to a}f(x)=f(a)$（グラフがつながっている）。</p>
+<p><b>中間値の定理</b>：閉区間 $[a,b]$ で連続な関数について、$f(a)$ と $f(b)$ の符号が異なれば、$f(c)=0$ となる $c$ が $a$ と $b$ の間に少なくとも1つ存在する。方程式の解の存在を示すときに使います。</p>
+<div class="box ex">
+$x^3+x-1=0$ は $0<x<1$ に実数解をもつことを示せ。<br>
+<b>解</b>　$f(x)=x^3+x-1$ は連続で、$f(0)=-1<0$、$f(1)=1>0$。中間値の定理より $0<x<1$ に解がある。■
+</div>
+<div class="box challenge">
+$\displaystyle\lim_{x\to\infty}\left(1+\frac1x\right)^x=e$ を使って $\displaystyle\lim_{x\to\infty}\left(1-\frac{2}{x}\right)^{x}$ を求めよ。<br>
+<b>解</b>　$-\frac2x=\frac1t$ とおくと $x=-2t$、$x\to\infty$ で $t\to-\infty$。<br>
+$\left(1+\frac1t\right)^{-2t}=\left\{\left(1+\frac1t\right)^t\right\}^{-2}\to e^{-2}$。答え $\boldsymbol{\frac1{e^2}}$<br>
+<small>（$t\to-\infty$ でも $\left(1+\frac1t\right)^t\to e$ が成り立つ）</small>
+</div>
+
+<!--EXT 33-->
+<h3 class="deep">じっくり解説① 積・商の微分公式の理由</h3>
+<p><b>積</b>：縦 $f$、横 $g$ の長方形の面積 $fg$ を考える。$x$ が少し増えて縦が $\Delta f$、横が $\Delta g$ 伸びると、面積の増加は $f\Delta g+g\Delta f+\Delta f\Delta g$。最後の項は小さすぎて無視でき、$(fg)'=f'g+fg'$。</p>
+<h3 class="deep">じっくり解説② 自然対数の底 $e$</h3>
+<p>$e=\lim_{h\to0}(1+h)^{\frac1h}=2.71828\cdots$。$e$ は「<b>微分しても形が変わらない指数関数の底</b>」として選ばれた特別な数です。</p>
+<p>$(a^x)'=a^x\log a$。$a=e$ のときだけ $\log e=1$ で $(e^x)'=e^x$ となります。</p>
+<p>利子で考えると：年利 100% で、1年1回の複利なら2倍、半年ごと（50%を2回）なら $1.5^2=2.25$ 倍、毎月なら $\left(1+\frac1{12}\right)^{12}\approx2.613$ 倍、……と細かくしていくと $e\approx2.718$ 倍に近づきます。</p>
+<h3 class="deep">じっくり解説③ 対数微分法</h3>
+<div class="box ex">
+$y=x^x\ (x>0)$ を微分せよ。<br>
+<b>解</b>　両辺の対数をとる：$\log y=x\log x$。両辺を $x$ で微分：$\frac{y'}{y}=\log x+1$。<br>
+$y'=\boldsymbol{x^x(\log x+1)}$
+</div>
+<h3 class="deep">じっくり解説④ 陰関数・媒介変数の微分</h3>
+<div class="box ex">
+<b>【陰関数】</b>円 $x^2+y^2=25$ 上の点 $(3,4)$ における接線の傾き。<br>
+<b>解</b>　両辺を $x$ で微分：$2x+2yy'=0$ → $y'=-\frac xy=\boldsymbol{-\frac34}$
+</div>
+<div class="box ex">
+<b>【媒介変数】</b>$x=t^2,\ y=t^3$ のとき $\frac{dy}{dx}$。<br>
+<b>解</b>　$\frac{dy}{dx}=\frac{dy/dt}{dx/dt}=\frac{3t^2}{2t}=\boldsymbol{\frac32t}$
+</div>
+<h3 class="deep">じっくり解説⑤ グラフの概形（凹凸・漸近線）</h3>
+<p>手順：① 定義域 ② $f'$ で増減 ③ $f''$ で凹凸 ④ 漸近線（$x\to\pm\infty$、分母 → 0 の挙動）⑤ 対称性・切片</p>
+<div class="box ex">
+$y=xe^{-x}$ のグラフ。<br>
+<b>解</b>　$y'=(1-x)e^{-x}$：$x=1$ で極大値 $\frac1e$。$y''=(x-2)e^{-x}$：$x=2$ で変曲点 $\left(2,\frac2{e^2}\right)$。<br>
+$x\to\infty$ で $y\to0$（$x$ 軸が漸近線）、$x\to-\infty$ で $y\to-\infty$。
+</div>
+<div class="fig"><svg width="320" height="160" viewBox="-80 -110 320 160">
+<line x1="-75" y1="0" x2="235" y2="0" stroke="#999"/><line x1="0" y1="45" x2="0" y2="-105" stroke="#999"/>
+<polyline fill="none" stroke="#1f5fa8" stroke-width="2.5" points="-30,40.8 -20,22.2 -10,9.6 0,0 10,-6.5 20,-11 30,-14 40,-15.4 50,-16.3 60,-16.5 80,-16.2 100,-14.7 120,-13 140,-11 160,-9.2 180,-7.6 200,-6 220,-4.8"/>
+<g transform="scale(1,1)"></g>
+<circle cx="60" cy="-16.5" r="3" fill="#c0392b"/><text x="45" y="-28" font-size="10" fill="#c0392b">極大 (1, 1/e)</text>
+<circle cx="120" cy="-13" r="3" fill="#2e8b57"/><text x="110" y="-48" font-size="10" fill="#2e8b57">変曲点 x=2</text>
+<text x="-70" y="-90" font-size="10">（縦は拡大）y = x e^(−x)</text>
+</svg></div>
+<h3 class="deep">じっくり解説⑥ 平均値の定理と不等式</h3>
+<p><b>平均値の定理</b>：$\frac{f(b)-f(a)}{b-a}=f'(c)$ となる $c$ が $a<c<b$ に存在する。「平均の速さと同じ瞬間の速さの時刻が必ずある」ということ（高速道路のオービスと区間平均速度の取り締まりの関係）。</p>
+<div class="box ex">
+$x>0$ のとき $e^x>1+x$ を証明せよ。<br>
+<b>解</b>　$f(x)=e^x-1-x$。$f'(x)=e^x-1>0\ (x>0)$ なので増加。$f(0)=0$ だから $x>0$ で $f(x)>0$。■
+</div>
+<h3 class="deep">じっくり解説⑦ 速度・加速度と近似式</h3>
+<p>位置 $x(t)$ を微分すると速度 $v=x'(t)$、もう一度微分すると加速度 $a=x''(t)$。</p>
+<p><b>1次近似</b>：$h$ が小さいとき $f(a+h)\approx f(a)+f'(a)h$。例：$\sqrt{1.02}\approx1+\frac12\times0.02=1.01$、$\sin x\approx x$、$e^x\approx1+x$。</p>
+<div class="box challenge">
+方程式 $e^x=ax$ が異なる2つの実数解をもつような $a$ の範囲。<br>
+<b>解</b>　$x=0$ は解でないので $a=\frac{e^x}{x}$ と定数分離。$g(x)=\frac{e^x}x$、$g'(x)=\frac{(x-1)e^x}{x^2}$。<br>
+$x>0$ では $x=1$ で極小値 $e$、$x\to+0$ で $+\infty$、$x\to\infty$ で $+\infty$。$x<0$ では $g(x)<0$ で単調減少。<br>
+$y=a$ と2点で交わるのは $\boldsymbol{a>e}$
+</div>
+
+<!--EXT 34-->
+<h3 class="deep">じっくり解説① 置換積分のコツ</h3>
+<p>「<b>中身の微分が外にある</b>」形を見つけたら置換。$\int f(g(x))g'(x)dx$ で $t=g(x)$。</p>
+<table><tr><th>形</th><th>置き方</th><th>結果</th></tr>
+<tr><td>$\int\frac{f'(x)}{f(x)}dx$</td><td>$t=f(x)$</td><td>$\log|f(x)|+C$</td></tr>
+<tr><td>$\int\sin^nx\cos x\,dx$</td><td>$t=\sin x$</td><td>$\frac{\sin^{n+1}x}{n+1}+C$</td></tr>
+<tr><td>$\int\sqrt{a^2-x^2}dx$</td><td>$x=a\sin\theta$</td><td>円の面積に関係</td></tr>
+<tr><td>$\int\frac{dx}{x^2+a^2}$</td><td>$x=a\tan\theta$</td><td>定積分で $\pi$ が出る</td></tr></table>
+<div class="box ex">
+$\int_0^1\sqrt{1-x^2}\,dx$<br>
+<b>解</b>　$x=\sin\theta$ とおくと $dx=\cos\theta d\theta$、$x:0\to1$ で $\theta:0\to\frac\pi2$。<br>
+$=\int_0^{\frac\pi2}\cos^2\theta\,d\theta=\int_0^{\frac\pi2}\frac{1+\cos2\theta}2d\theta=\left[\frac\theta2+\frac{\sin2\theta}4\right]_0^{\frac\pi2}=\boldsymbol{\frac\pi4}$<br>
+<small>半径1の円の $\frac14$ の面積。図形的にも明らか！</small>
+</div>
+<div class="box ex">
+$\int_0^1\frac{dx}{1+x^2}$<br>
+<b>解</b>　$x=\tan\theta$：$dx=\frac{d\theta}{\cos^2\theta}$、$1+\tan^2\theta=\frac1{\cos^2\theta}$。$=\int_0^{\frac\pi4}d\theta=\boldsymbol{\frac\pi4}$
+</div>
+<h3 class="deep">じっくり解説② 部分積分のコツ</h3>
+<p>$\int f\cdot g'\,dx=fg-\int f'g\,dx$。<b>微分すると簡単になるもの</b>を $f$ に、<b>積分しやすいもの</b>を $g'$ に。優先順位の目安：「<b>対数 > 多項式 > 三角・指数</b>」の順に $f$ に選ぶ。</p>
+<div class="box ex">
+$\int\log x\,dx$<br>
+<b>解</b>　$\log x=\log x\cdot1$ と見て、$f=\log x,\ g'=1$。$=x\log x-\int x\cdot\frac1xdx=\boldsymbol{x\log x-x+C}$
+</div>
+<div class="box ex">
+$\int x^2e^xdx$<br>
+<b>解</b>　2回部分積分：$=x^2e^x-\int2xe^xdx=x^2e^x-2(xe^x-e^x)+C=\boldsymbol{(x^2-2x+2)e^x+C}$
+</div>
+<h3 class="deep">じっくり解説③ 区分求積法</h3>
+<div class="box ex">
+$\displaystyle\lim_{n\to\infty}\frac1n\left\{\left(\frac1n\right)^2+\left(\frac2n\right)^2+\cdots+\left(\frac nn\right)^2\right\}$<br>
+<b>解</b>　$=\int_0^1x^2dx=\boldsymbol{\frac13}$<br>
+<small>区間 [0,1] を $n$ 等分した細長い長方形（幅 $\frac1n$、高さ $\left(\frac kn\right)^2$）の面積の合計の極限。</small>
+</div>
+<div class="box ex">
+$\displaystyle\lim_{n\to\infty}\left(\frac1{n+1}+\frac1{n+2}+\cdots+\frac1{2n}\right)$<br>
+<b>解</b>　$=\lim\frac1n\sum_{k=1}^n\frac{1}{1+\frac kn}=\int_0^1\frac{dx}{1+x}=\boldsymbol{\log2}$
+</div>
+<h3 class="deep">じっくり解説④ 定積分と不等式</h3>
+<p>$a\le x\le b$ で $f(x)\ge g(x)$ なら $\int_a^bf\,dx\ge\int_a^bg\,dx$。これを使うと和の評価ができます。</p>
+<div class="box ex">
+$1+\frac12+\frac13+\cdots+\frac1n>\log(n+1)$ を示せ。<br>
+<b>解</b>　$k\le x\le k+1$ で $\frac1k\ge\frac1x$（等号は $x=k$ のみ）なので $\frac1k>\int_k^{k+1}\frac{dx}x$。<br>
+$k=1$ から $n$ まで足すと $\sum\frac1k>\int_1^{n+1}\frac{dx}x=\log(n+1)$。■<br>
+<small>右辺は $n\to\infty$ で発散するので、調和級数が発散することもわかる。</small>
+</div>
+<h3 class="deep">じっくり解説⑤ 体積の求め方いろいろ</h3>
+<div class="box ex">
+<b>【断面積から】</b>底面の半径 $r$、高さ $h$ の円錐の体積を積分で。<br>
+<b>解</b>　頂点から距離 $x$ の断面は半径 $\frac{r}{h}x$ の円。$V=\int_0^h\pi\frac{r^2}{h^2}x^2dx=\pi\frac{r^2}{h^2}\cdot\frac{h^3}3=\boldsymbol{\frac13\pi r^2h}$<br>
+<small>中1で覚えた「錐は柱の $\frac13$」の証明です。</small>
+</div>
+<div class="box ex">
+<b>【$y$ 軸のまわりの回転】</b>$y=x^2\ (0\le x\le2)$ と $y=4$、$y$ 軸で囲まれた部分を $y$ 軸のまわりに回転。<br>
+<b>解</b>　$x^2=y$ なので $V=\pi\int_0^4x^2dy=\pi\int_0^4y\,dy=\boldsymbol{8\pi}$
+</div>
+<h3 class="deep">じっくり解説⑥ 曲線の長さ</h3>
+<p>曲線 $y=f(x)$（$a\le x\le b$）の長さ：$L=\int_a^b\sqrt{1+\{f'(x)\}^2}\,dx$。媒介変数表示なら $L=\int\sqrt{\left(\frac{dx}{dt}\right)^2+\left(\frac{dy}{dt}\right)^2}dt$。小さな直角三角形の斜辺（三平方の定理）を足し集める考え方です。</p>
+<div class="box ex">
+円 $x=r\cos t,\ y=r\sin t\ (0\le t\le2\pi)$ の周の長さ。<br>
+<b>解</b>　$\sqrt{r^2\sin^2t+r^2\cos^2t}=r$。$L=\int_0^{2\pi}r\,dt=\boldsymbol{2\pi r}$（中1の公式と一致！）
+</div>
+<h3 class="deep">じっくり解説⑦ 微分方程式への入口</h3>
+<p>「変化の速さが今の量に比例する」⇔ $\frac{dy}{dx}=ky$。この解は $y=Ce^{kx}$。人口増加、放射性物質の崩壊、コーヒーの冷め方など、自然現象の多くがこの形で表されます。微分・積分は「変化の法則」から「未来の姿」を計算する道具なのです。</p>
+<div class="box challenge">
+ある放射性物質は 30 年で半分になる（半減期 30 年）。90 年後には最初の何分の1？ また $y=y_0e^{-kt}$ の $k$ を求めよ。<br>
+<b>解</b>　30 年ごとに $\frac12$ なので 90 年で $\left(\frac12\right)^3=\boldsymbol{\frac18}$。<br>
+$\frac12=e^{-30k}$ → $k=\frac{\log2}{30}\approx0.0231$。
+</div>

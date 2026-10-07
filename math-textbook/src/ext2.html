@@ -1,0 +1,376 @@
+<!--EXT 14-->
+<h3 class="deep">じっくり解説① 因数分解の上級テクニック</h3>
+<p><b>(1) たすきがけ</b>：$ax^2+bx+c$ で $a\neq1$ のとき。$a=pr,\ c=qs$ と分けて、$ps+qr=b$ となる組を探す。</p>
+<div class="fig"><svg width="300" height="100" viewBox="0 0 300 100">
+<g font-size="15"><text x="20" y="30">2</text><text x="20" y="70">3</text><text x="100" y="30">−1</text><text x="100" y="70">  2</text>
+<text x="170" y="30">→ −3</text><text x="170" y="70">→   4</text><text x="170" y="95" fill="#c0392b">計  1 ✓</text></g>
+<line x1="35" y1="25" x2="95" y2="62" stroke="#1f5fa8"/><line x1="35" y1="62" x2="95" y2="25" stroke="#1f5fa8"/>
+</svg><br><small>$6x^2+x-2=(2x-1)(3x+2)$：交差してかけた $2\times2=4$ と $3\times(-1)=-3$ の和が中央の係数 1</small></div>
+<p><b>(2) 次数の低い文字で整理</b>：文字が複数あるときの最強の手。</p>
+<div class="box ex">
+$x^2+xy-2y^2+2x+7y-3$ を因数分解。<br>
+<b>解</b>　$x$ について整理：$x^2+(y+2)x-(2y^2-7y+3)$。<br>
+定数部分 $2y^2-7y+3=(2y-1)(y-3)$。かけて $-(2y-1)(y-3)$、たして $y+2$ となる2つは $(2y-1)$ と $-(y-3)$。<br>
+答え $\boldsymbol{(x+2y-1)(x-y+3)}$
+</div>
+<p><b>(3) 複二次式</b>：$x^4+x^2+1=(x^2+1)^2-x^2=(x^2+x+1)(x^2-x+1)$。「平方の差」を作るのがコツ。</p>
+<h3 class="deep">じっくり解説② 絶対値の考え方</h3>
+<p>$|a|$ は「<b>数直線上で 0 からの距離</b>」、$|a-b|$ は「<b>$a$ と $b$ の距離</b>」です。</p>
+<ul><li>$|x-3|=2$：3 からの距離が 2 → $x=1,5$</li>
+<li>$|x-3|<2$：3 からの距離が 2 未満 → $1<x<5$</li>
+<li>$|x-3|>2$：3 からの距離が 2 より大きい → $x<1,\ 5<x$</li></ul>
+<div class="box ex">
+<b>【場合分けが必要なとき】</b>$|x-1|+|x+2|=5$<br>
+<b>解</b>　中身の符号が変わる $x=1,-2$ で区切る。<br>
+(i) $x<-2$：$-(x-1)-(x+2)=5$ → $-2x-1=5$ → $x=-3$（範囲内 ○）<br>
+(ii) $-2\le x<1$：$-(x-1)+(x+2)=3\neq5$（解なし）<br>
+(iii) $x\ge1$：$(x-1)+(x+2)=5$ → $x=2$（○）<br>
+答え $\boldsymbol{x=-3,\ 2}$。<small>「1 と −2 からの距離の和が 5」と読めば図で一発。</small>
+</div>
+<h3 class="deep">じっくり解説③ 二重根号と分母の有理化</h3>
+<p>$\sqrt{a+b+2\sqrt{ab}}=\sqrt a+\sqrt b$（$(\sqrt a+\sqrt b)^2=a+b+2\sqrt{ab}$ だから）。</p>
+<div class="box ex">
+$\sqrt{7-2\sqrt{10}}$<br>
+<b>解</b>　たして 7、かけて 10 → 5 と 2。$=\sqrt5-\sqrt2$（大きい方を前に！ 正の値になるように）
+</div>
+<div class="box ex">
+$\sqrt{4+\sqrt{12}}$<br>
+<b>解</b>　$\sqrt{12}=2\sqrt3$ と見て、たして 4、かけて 3 → 3 と 1。$=\boldsymbol{\sqrt3+1}$
+</div>
+<h3 class="deep">じっくり解説④ 連立不等式と文章題</h3>
+<p>連立不等式は、それぞれ解いて<b>数直線で共通部分</b>をとります。</p>
+<div class="box ex">
+$\begin{cases}3x-1>2x+1\\ 2(x+1)\le 3x-4\end{cases}$<br>
+<b>解</b>　上：$x>2$。下：$2x+2\le3x-4$ → $x\ge6$。共通部分 $\boldsymbol{x\ge6}$
+</div>
+<div class="box ex">
+1個 80 円のりんごと 1個 120 円の梨を合わせて 15 個買い、代金を 1500 円以下にしたい。梨は最大何個？<br>
+<b>解</b>　梨 $x$ 個：$120x+80(15-x)\le1500$ → $40x\le300$ → $x\le7.5$。最大 <b>7個</b>
+</div>
+<div class="box challenge">
+$x=\dfrac{1}{2-\sqrt3}$ のとき、$x+\dfrac1x$ と $x^2+\dfrac1{x^2}$ と $x^3+\dfrac1{x^3}$ の値。<br>
+<b>解</b>　$x=2+\sqrt3$、$\frac1x=2-\sqrt3$。$x+\frac1x=4$。<br>
+$x^2+\frac1{x^2}=\left(x+\frac1x\right)^2-2=14$。$x^3+\frac1{x^3}=\left(x+\frac1x\right)^3-3\left(x+\frac1x\right)=64-12=52$。<br>
+<small>対称式は「基本対称式（和と積）」で表すのが鉄則。</small>
+</div>
+
+<!--EXT 15-->
+<h3 class="deep">じっくり解説① 集合の要素の個数</h3>
+<p>$n(A\cup B)=n(A)+n(B)-n(A\cap B)$。重なりを2回数えているので1回ひきます。</p>
+<div class="box ex">
+1 から 100 までの整数で、2 または 3 で割り切れる数の個数。<br>
+<b>解</b>　2の倍数 50個、3の倍数 33個、6の倍数 16個。$50+33-16=\boldsymbol{67}$ 個
+</div>
+<p>3つの集合なら $n(A\cup B\cup C)=n(A)+n(B)+n(C)-n(A\cap B)-n(B\cap C)-n(C\cap A)+n(A\cap B\cap C)$。</p>
+<h3 class="deep">じっくり解説② 命題と反例</h3>
+<p><b>命題</b>：正しいか正しくないか（真か偽か）がはっきり決まる文。「$x>2$ ならば $x>1$」は真。「$x^2>1$ ならば $x>1$」は偽 — <b>反例</b> $x=-2$ が1つあれば偽と言えます。</p>
+<p>条件と集合の関係：$p$ を満たすものの集合を $P$、$q$ を満たすものの集合を $Q$ とすると、<br>「$p\Rightarrow q$ が真」⇔ $P\subset Q$（$P$ が $Q$ にすっぽり含まれる）</p>
+<div class="box ex">
+$|x|<1$ は $x<2$ であるための何条件？<br>
+<b>解</b>　$P=\{-1<x<1\}$、$Q=\{x<2\}$。$P\subset Q$ だが $Q\not\subset P$。<b>十分条件だが必要条件ではない</b>
+</div>
+<h3 class="deep">じっくり解説③ 「かつ」「または」の否定</h3>
+<ul><li>「$p$ かつ $q$」の否定 ＝「$\overline p$ または $\overline q$」</li>
+<li>「$p$ または $q$」の否定 ＝「$\overline p$ かつ $\overline q$」</li>
+<li>「すべての $x$ で $p$」の否定 ＝「ある $x$ で $\overline p$」</li>
+<li>「ある $x$ で $p$」の否定 ＝「すべての $x$ で $\overline p$」</li></ul>
+<p>例：「$x=1$ かつ $y=2$」の否定は「$x\neq1$ または $y\neq2$」。「全員合格」の否定は「少なくとも1人は不合格」（「全員不合格」ではない！）。</p>
+<h3 class="deep">じっくり解説④ 対偶を使った証明</h3>
+<div class="box ex">
+整数 $n$ について、「$n^2$ が3の倍数ならば $n$ は3の倍数」を証明せよ。<br>
+<b>解</b>　対偶「$n$ が3の倍数でない ⇒ $n^2$ は3の倍数でない」を示す。<br>
+$n=3k\pm1$ とおくと $n^2=9k^2\pm6k+1=3(3k^2\pm2k)+1$。3で割ると1余るので3の倍数でない。対偶が真なので元の命題も真。■
+</div>
+<h3 class="deep">じっくり解説⑤ 背理法：$\sqrt2$ は無理数</h3>
+<div class="box ex">
+<b>証明</b>　$\sqrt2$ が有理数だと仮定すると、$\sqrt2=\dfrac pq$（$p,q$ は互いに素な自然数）と書ける。<br>
+両辺を2乗して $2q^2=p^2$。左辺は偶数なので $p^2$ は偶数、よって $p$ も偶数（上の例と同様に対偶で示せる）。<br>
+$p=2m$ とおくと $2q^2=4m^2$ → $q^2=2m^2$。よって $q$ も偶数。<br>
+$p,q$ がともに偶数となり、「互いに素」に<b>矛盾</b>。したがって $\sqrt2$ は無理数。■
+</div>
+<div class="box challenge">
+$a,b$ が有理数で $a+b\sqrt2=0$ ならば $a=b=0$ であることを示せ。<br>
+<b>解</b>　$b\neq0$ と仮定すると $\sqrt2=-\frac ab$ となり、右辺は有理数なので $\sqrt2$ が無理数であることに矛盾。よって $b=0$、すると $a=0$。■<br>
+<small>応用：$a+b\sqrt2=3+5\sqrt2$（$a,b$ 有理数）なら $a=3,b=5$ と決まる。</small>
+</div>
+
+<!--EXT 16-->
+<h3 class="deep">じっくり解説① 平方完成を丁寧に</h3>
+<p>$y=2x^2-8x+3$ を平方完成する手順：</p>
+<ol><li>$x^2$ の係数でくくる（定数項は外）：$y=2(x^2-4x)+3$</li>
+<li>$x$ の係数の半分の2乗を足して引く：$y=2\{(x^2-4x+4)-4\}+3$</li>
+<li>平方の形に：$y=2\{(x-2)^2-4\}+3$</li>
+<li>カッコを外す：$y=2(x-2)^2-8+3=2(x-2)^2-5$</li></ol>
+<p>頂点 $(2,-5)$、軸 $x=2$、下に凸。</p>
+<h3 class="deep">じっくり解説② グラフの移動のルール</h3>
+<table><tr><th>移動</th><th>式の変え方</th></tr>
+<tr><td>$x$ 方向に $p$、$y$ 方向に $q$ 平行移動</td><td>$x\to x-p$、$y\to y-q$</td></tr>
+<tr><td>$x$ 軸に関して対称移動</td><td>$y\to -y$</td></tr>
+<tr><td>$y$ 軸に関して対称移動</td><td>$x\to -x$</td></tr>
+<tr><td>原点に関して対称移動</td><td>$x\to-x,\ y\to-y$</td></tr></table>
+<p>「右に $p$ 動かすのに $x-p$？」と迷ったら：元のグラフで $x=0$ だった点が、移動後は $x=p$ にある。$x=p$ を入れて $0$ になるのは $x-p$。</p>
+<h3 class="deep">じっくり解説③ 最大・最小の場合分け（文字を含むとき）</h3>
+<div class="box ex">
+$f(x)=x^2-2ax+3\ (0\le x\le2)$ の最小値を $a$ で場合分けして求めよ。<br>
+<b>解</b>　$f(x)=(x-a)^2-a^2+3$。軸 $x=a$ と範囲の位置関係で3通り。<br>
+(i) $a<0$（軸が範囲の左）：$x=0$ で最小値 $3$<br>
+(ii) $0\le a\le2$（軸が範囲内）：$x=a$ で最小値 $-a^2+3$<br>
+(iii) $a>2$（軸が範囲の右）：$x=2$ で最小値 $7-4a$
+</div>
+<div class="fig"><svg width="440" height="110" viewBox="0 0 440 110">
+<g stroke="#999"><line x1="10" y1="90" x2="140" y2="90"/><line x1="155" y1="90" x2="285" y2="90"/><line x1="300" y1="90" x2="430" y2="90"/></g>
+<g fill="#e8f0fb" opacity=".8"><rect x="70" y="10" width="50" height="80"/><rect x="195" y="10" width="50" height="80"/><rect x="320" y="10" width="50" height="80"/></g>
+<path d="M10,20 Q40,130 70,20" fill="none" stroke="#1f5fa8" stroke-width="2"/>
+<path d="M175,20 Q220,130 265,20" fill="none" stroke="#1f5fa8" stroke-width="2"/>
+<path d="M370,20 Q400,130 430,20" fill="none" stroke="#1f5fa8" stroke-width="2"/>
+<g font-size="10"><text x="40" y="105">(i) 軸が左</text><text x="190" y="105">(ii) 軸が中</text><text x="330" y="105">(iii) 軸が右</text></g>
+</svg><br><small>網かけ部分が定義域。最小になるのは「軸に一番近いところ」</small></div>
+<h3 class="deep">じっくり解説④ 二次関数の決定</h3>
+<table><tr><th>条件</th><th>おき方</th></tr>
+<tr><td>頂点や軸がわかる</td><td>$y=a(x-p)^2+q$</td></tr>
+<tr><td>3点を通る</td><td>$y=ax^2+bx+c$ に代入して連立</td></tr>
+<tr><td>$x$ 軸との交点 $\alpha,\beta$ がわかる</td><td>$y=a(x-\alpha)(x-\beta)$</td></tr></table>
+<div class="box ex">
+頂点が $(1,-2)$ で点 $(3,6)$ を通る放物線。<br>
+<b>解</b>　$y=a(x-1)^2-2$ に代入：$6=4a-2$ → $a=2$。<b>$y=2(x-1)^2-2$</b>
+</div>
+<h3 class="deep">じっくり解説⑤ 判別式とグラフ</h3>
+<p>$y=ax^2+bx+c$ と $x$ 軸の共有点は、方程式 $ax^2+bx+c=0$ の<b>実数解</b>。判別式 $D=b^2-4ac$ の符号で個数がわかります。</p>
+<div class="box ex">
+<b>【すべての $x$ で成り立つ】</b>すべての実数 $x$ について $x^2+2kx+k+6>0$ となる $k$ の範囲。<br>
+<b>解</b>　下に凸の放物線が常に $x$ 軸より上 ⇔ $x$ 軸と共有点なし ⇔ $D<0$。<br>
+$D/4=k^2-(k+6)<0$ → $(k-3)(k+2)<0$ → $\boldsymbol{-2<k<3}$
+</div>
+<div class="box ex">
+<b>【解の配置】</b>$x^2-2mx+m+2=0$ が異なる2つの正の解をもつ $m$ の範囲。<br>
+<b>解</b>　$f(x)=x^2-2mx+m+2$ のグラフが $x>0$ の部分で $x$ 軸と2点で交わる条件：<br>
+① $D/4=m^2-m-2>0$ → $m<-1,\ 2<m$　② 軸 $m>0$　③ $f(0)=m+2>0$ → $m>-2$<br>
+共通部分 $\boldsymbol{m>2}$
+</div>
+<div class="box challenge">
+周の長さが 20 の長方形の面積の最大値。<br>
+<b>解</b>　縦 $x$、横 $10-x$（$0<x<10$）。面積 $S=x(10-x)=-(x-5)^2+25$。$x=5$ で<b>最大 25</b>（正方形のとき）。
+</div>
+
+<!--EXT 17-->
+<h3 class="deep">じっくり解説① 三角比の覚え方と意味</h3>
+<p>直角三角形の筆記体の頭文字で覚える方法：$s$（sin）は斜辺 → 対辺、$c$（cos）は斜辺 → 底辺、$t$（tan）は底辺 → 対辺 の順に書く。</p>
+<p>意味としては：<b>$\sin$ は「高さの割合」、$\cos$ は「横の割合」、$\tan$ は「傾き」</b>。坂の角度が $\theta$ なら、斜面を 1 進むと $\sin\theta$ 上がり、$\cos\theta$ 横に進む。坂の勾配は $\tan\theta$。</p>
+<div class="box ex">
+<b>【測量】</b>木から 20m 離れた地点から木の先端を見上げた角が $30^\circ$、目の高さが 1.5m。木の高さは？<br>
+<b>解</b>　$20\tan30^\circ=\frac{20}{\sqrt3}=\frac{20\sqrt3}{3}\approx11.5$。木の高さ $\approx11.5+1.5=\boldsymbol{13.0}$ m
+</div>
+<h3 class="deep">じっくり解説② $90^\circ-\theta$ と $180^\circ-\theta$ の公式</h3>
+<table><tr><th>$90^\circ-\theta$</th><th>$180^\circ-\theta$</th></tr>
+<tr><td>$\sin(90^\circ-\theta)=\cos\theta$</td><td>$\sin(180^\circ-\theta)=\sin\theta$</td></tr>
+<tr><td>$\cos(90^\circ-\theta)=\sin\theta$</td><td>$\cos(180^\circ-\theta)=-\cos\theta$</td></tr>
+<tr><td>$\tan(90^\circ-\theta)=\frac{1}{\tan\theta}$</td><td>$\tan(180^\circ-\theta)=-\tan\theta$</td></tr></table>
+<p>単位円で見ると、$180^\circ-\theta$ の点は $\theta$ の点を <b>$y$ 軸で折り返した点</b>。高さ（sin）は同じで、横（cos）は符号が逆になります。</p>
+<h3 class="deep">じっくり解説③ 相互関係を使った計算</h3>
+<div class="box ex">
+$\cos\theta=-\frac13\ (0^\circ\le\theta\le180^\circ)$ のとき $\sin\theta,\ \tan\theta$。<br>
+<b>解</b>　$\sin^2\theta=1-\frac19=\frac89$。$0^\circ\le\theta\le180^\circ$ では $\sin\theta\ge0$ なので $\sin\theta=\frac{2\sqrt2}{3}$。<br>
+$\tan\theta=\frac{\sin\theta}{\cos\theta}=\boldsymbol{-2\sqrt2}$
+</div>
+<p>もう1つの相互関係 $1+\tan^2\theta=\dfrac1{\cos^2\theta}$（$\sin^2+\cos^2=1$ を $\cos^2$ でわる）も重要。</p>
+<h3 class="deep">じっくり解説④ 正弦定理・余弦定理の証明のアイデア</h3>
+<p><b>正弦定理</b>：外接円の直径 BA' を引くと、円周角の定理で ∠A'=∠A、∠BCA'=90°。直角三角形 A'BC で $a=2R\sin A$。</p>
+<p><b>余弦定理</b>：C から AB に垂線 CH を下ろすと、AH $=b\cos A$、CH $=b\sin A$、BH $=c-b\cos A$。△BCH で三平方：$a^2=(b\sin A)^2+(c-b\cos A)^2=b^2+c^2-2bc\cos A$。</p>
+<h3 class="deep">じっくり解説⑤ 三角形の解法パターン</h3>
+<table><tr><th>与えられたもの</th><th>使う定理</th></tr>
+<tr><td>2辺とその間の角</td><td>余弦定理で残りの辺</td></tr>
+<tr><td>3辺</td><td>余弦定理（変形版）$\cos A=\dfrac{b^2+c^2-a^2}{2bc}$</td></tr>
+<tr><td>1辺と2角</td><td>正弦定理</td></tr>
+<tr><td>外接円の半径が関係</td><td>正弦定理</td></tr></table>
+<div class="box ex">
+$a=7,\ b=5,\ c=3$ の △ABC で、$A$ と面積と内接円の半径 $r$。<br>
+<b>解</b>　$\cos A=\frac{25+9-49}{30}=-\frac12$ → $A=120^\circ$。面積 $S=\frac12\cdot5\cdot3\cdot\frac{\sqrt3}2=\frac{15\sqrt3}4$。<br>
+内接円：$S=\frac12r(a+b+c)$ より $\frac{15\sqrt3}{4}=\frac{15}{2}r$ → $r=\boldsymbol{\frac{\sqrt3}{2}}$
+</div>
+<p><b>ヘロンの公式</b>：$s=\frac{a+b+c}2$ として $S=\sqrt{s(s-a)(s-b)(s-c)}$。3辺だけで面積が出せます。</p>
+<div class="box challenge">
+<b>【空間図形】</b>1辺 6 の正四面体 ABCD で、辺 CD の中点を M とする。$\cos\angle AMB$ を求めよ。<br>
+<b>解</b>　AM, BM は正三角形の高さで $3\sqrt3$。AB=6。余弦定理：$\cos\angle AMB=\frac{27+27-36}{2\cdot27}=\boldsymbol{\frac13}$
+</div>
+
+<!--EXT 18-->
+<h3 class="deep">じっくり解説① 代表値の使い分け</h3>
+<table><tr><th>代表値</th><th>長所</th><th>弱点</th></tr>
+<tr><td>平均値</td><td>全データを反映</td><td>極端な値（外れ値）に引っぱられる</td></tr>
+<tr><td>中央値</td><td>外れ値に強い</td><td>データの細かい情報を捨てる</td></tr>
+<tr><td>最頻値</td><td>「一番よくある値」がわかる</td><td>データが少ないと不安定</td></tr></table>
+<p>例：年収データに億万長者が1人混ざると、平均は大きく上がるが中央値はほぼ変わらない。「平均年収」より「年収の中央値」の方が実感に近いことが多いのはこのためです。</p>
+<h3 class="deep">じっくり解説② 四分位数の求め方</h3>
+<p>データを小さい順に並べ、中央値で前半・後半に分ける。前半の中央値が第1四分位数 $Q_1$、後半の中央値が第3四分位数 $Q_3$。（データが奇数個のときは、中央値自身はどちらにも入れない）</p>
+<div class="box ex">
+データ：2, 3, 5, 6, 8, 9, 11, 12, 15（9個）<br>
+<b>解</b>　中央値 $Q_2=8$（5番目）。前半 2,3,5,6 → $Q_1=4$。後半 9,11,12,15 → $Q_3=11.5$。<br>
+四分位範囲 $=11.5-4=7.5$
+</div>
+<p><b>外れ値</b>の目安：$Q_1-1.5\times(\text{四分位範囲})$ 以下、または $Q_3+1.5\times(\text{四分位範囲})$ 以上の値。</p>
+<h3 class="deep">じっくり解説③ 分散の2つの公式</h3>
+<p>定義：$s^2=\dfrac{1}{n}\sum(x_i-\bar x)^2$<br>
+計算用：$s^2=\overline{x^2}-(\bar x)^2$（2乗の平均 − 平均の2乗）</p>
+<p>平均が整数でないときは計算用の公式が楽です。</p>
+<div class="box ex">
+データ 1, 2, 4, 5, 8 の分散。<br>
+<b>解</b>　$\bar x=4$、$\overline{x^2}=\frac{1+4+16+25+64}5=22$。$s^2=22-16=\boldsymbol6$
+</div>
+<h3 class="deep">じっくり解説④ 散布図と相関係数</h3>
+<div class="fig"><svg width="440" height="120" viewBox="0 0 440 120">
+<g stroke="#999"><rect x="10" y="10" width="120" height="100" fill="none"/><rect x="160" y="10" width="120" height="100" fill="none"/><rect x="310" y="10" width="120" height="100" fill="none"/></g>
+<g fill="#1f5fa8">
+<circle cx="25" cy="95" r="3"/><circle cx="40" cy="85" r="3"/><circle cx="50" cy="80" r="3"/><circle cx="62" cy="62" r="3"/><circle cx="75" cy="60" r="3"/><circle cx="88" cy="45" r="3"/><circle cx="100" cy="38" r="3"/><circle cx="115" cy="22" r="3"/>
+<circle cx="175" cy="40" r="3"/><circle cx="200" cy="90" r="3"/><circle cx="215" cy="30" r="3"/><circle cx="230" cy="70" r="3"/><circle cx="245" cy="50" r="3"/><circle cx="260" cy="95" r="3"/><circle cx="190" cy="60" r="3"/><circle cx="268" cy="25" r="3"/>
+<circle cx="325" cy="22" r="3"/><circle cx="340" cy="35" r="3"/><circle cx="352" cy="42" r="3"/><circle cx="365" cy="58" r="3"/><circle cx="378" cy="65" r="3"/><circle cx="390" cy="78" r="3"/><circle cx="405" cy="85" r="3"/><circle cx="418" cy="98" r="3"/></g>
+<g font-size="10" text-anchor="middle"><text x="70" y="8">正の相関 r≈0.95</text><text x="220" y="8">相関なし r≈0</text><text x="370" y="8">負の相関 r≈−0.95</text></g>
+</svg></div>
+<p><b>共分散</b> $s_{xy}=\frac1n\sum(x_i-\bar x)(y_i-\bar y)$：右上・左下の点が多いと正、左上・右下が多いと負。これを標準偏差で割って $-1$〜$1$ に収めたのが相関係数です。</p>
+<div class="box ex">
+$(x,y)=(1,2),(2,3),(3,5),(4,6)$ の相関係数。<br>
+<b>解</b>　$\bar x=2.5,\ \bar y=4$。偏差 $x$：$-1.5,-0.5,0.5,1.5$、$y$：$-2,-1,1,2$。<br>
+$s_{xy}=\frac{3+0.5+0.5+3}{4}=1.75$、$s_x^2=\frac{2.25+0.25+0.25+2.25}{4}=1.25$、$s_y^2=\frac{4+1+1+4}4=2.5$。<br>
+$r=\frac{1.75}{\sqrt{1.25\times2.5}}=\frac{1.75}{\sqrt{3.125}}\approx\boldsymbol{0.99}$（非常に強い正の相関）
+</div>
+<h3 class="deep">じっくり解説⑤ 仮説検定の考え方（数I）</h3>
+<p>「コインを 20 回投げて表が 15 回出た。このコインは表が出やすいと言えるか？」<br>
+「表裏の出やすさは同じ」と仮定すると、20 回中 15 回以上表が出る確率は約 2%。これは「めったに起こらない（例えば 5% 未満）」ので、仮定が誤りと判断し「表が出やすい」と言える。<b>確率が小さいことを根拠に仮定を否定する</b>のが仮説検定です。</p>
+<div class="box challenge">
+5人の数学の点数 $x$ の平均 60、分散 64。全員に $y=\frac{x-60}{8}$ という変換をした。$y$ の平均と分散は？<br>
+<b>解</b>　$\bar y=\frac{60-60}8=0$、$s_y^2=\frac{1}{64}\times64=1$。<br>
+<small>平均 0、分散 1 にするこの変換を<b>標準化</b>という。偏差値は標準化した値を 10 倍して 50 を足したもの。</small>
+</div>
+
+<!--EXT 19-->
+<h3 class="deep">じっくり解説① 順列の公式の意味</h3>
+<p>${}_5\mathrm P_3$：5人から3人選んで1列に並べる。1番目は5通り、2番目は残り4通り、3番目は残り3通り。$5\times4\times3=60$。<b>「大きい方から $r$ 個かける」</b>。</p>
+<p>$n!$（$n$ の階乗）$=n\times(n-1)\times\cdots\times1$。$0!=1$ と約束します。</p>
+<h3 class="deep">じっくり解説② 順列のいろいろ</h3>
+<div class="box ex">
+<b>【隣り合う】</b>男子3人、女子2人が1列に並ぶ。女子2人が隣り合う並び方は？<br>
+<b>解</b>　女子2人を1セットとみて4つを並べる $4!=24$、セットの中で女子の並び $2!=2$。$24\times2=\boldsymbol{48}$ 通り
+</div>
+<div class="box ex">
+<b>【隣り合わない】</b>上と同じ状況で女子が隣り合わない並び方は？<br>
+<b>解</b>　先に男子を並べる $3!=6$。男子の間と両端の4か所から2か所選んで女子を並べる ${}_4\mathrm P_2=12$。$6\times12=\boldsymbol{72}$ 通り（全体 120 − 48 = 72 でも OK）
+</div>
+<div class="box ex">
+<b>【同じものを含む】</b>AABBBC の6文字を並べる方法は？<br>
+<b>解</b>　$\frac{6!}{2!\,3!\,1!}=\frac{720}{12}=\boldsymbol{60}$ 通り<br>
+<small>（全部区別して並べてから、区別できない分の重複で割る）</small>
+</div>
+<div class="box ex">
+<b>【最短経路】</b>右に4区画、上に3区画の碁盤目の道を、左下から右上へ最短で行く方法は？<br>
+<b>解</b>　「→4つ、↑3つ」を並べる方法なので $\frac{7!}{4!3!}={}_7\mathrm C_3=\boldsymbol{35}$ 通り
+</div>
+<h3 class="deep">じっくり解説③ 組合せの性質</h3>
+<ul><li>${}_n\mathrm C_r={}_n\mathrm C_{n-r}$（$r$ 個選ぶ＝残す $n-r$ 個を選ぶ）。${}_{10}\mathrm C_8={}_{10}\mathrm C_2=45$</li>
+<li>${}_n\mathrm C_r={}_{n-1}\mathrm C_{r-1}+{}_{n-1}\mathrm C_r$（特定の1人を含むか含まないか）</li></ul>
+<div class="box ex">
+<b>【組分け】</b>6人を2人ずつ3組に分ける方法は？<br>
+<b>解</b>　A組・B組・C組と名前がついていれば ${}_6\mathrm C_2\times{}_4\mathrm C_2\times{}_2\mathrm C_2=15\times6\times1=90$。<br>
+組に区別がないので $3!$ で割る：$\boldsymbol{15}$ 通り
+</div>
+<div class="box ex">
+<b>【重複組合せ】</b>りんご・みかん・かきの3種類から合計5個を選ぶ（同じ種類を何個選んでもよい）。<br>
+<b>解</b>　○5個と仕切り｜2本の並べ方：$\frac{7!}{5!2!}={}_7\mathrm C_2=\boldsymbol{21}$ 通り
+</div>
+<h3 class="deep">じっくり解説④ 確率の加法定理・余事象</h3>
+<p>$A,B$ が同時に起こらない（<b>排反</b>）なら $P(A\cup B)=P(A)+P(B)$。一般には $P(A\cup B)=P(A)+P(B)-P(A\cap B)$。</p>
+<p>「少なくとも」「〜でない」は<b>余事象</b> $P(\overline A)=1-P(A)$ が便利です。</p>
+<h3 class="deep">じっくり解説⑤ 条件付き確率とベイズ的な考え方</h3>
+<div class="box ex">
+ある病気の人は全体の 1%。検査は、病気の人を 99% の確率で陽性と判定し、健康な人を 2% の確率で誤って陽性と判定する。陽性と出た人が本当に病気である確率は？<br>
+<b>解</b>　10000 人で考える。病気 100 人のうち陽性 99 人。健康 9900 人のうち陽性 198 人。<br>
+陽性は合計 297 人で、そのうち病気は 99 人。$\frac{99}{297}=\boldsymbol{\frac13}$（約 33%！）<br>
+<small>「99% 正確な検査」でも、陽性者の 3 人に 2 人は健康。条件付き確率の直感に反する好例です。</small>
+</div>
+<div class="box challenge">
+赤玉4個、白玉3個の入った袋から同時に3個取り出す。赤玉が2個以上である確率は？<br>
+<b>解</b>　全体 ${}_7\mathrm C_3=35$。赤2白1：${}_4\mathrm C_2\cdot{}_3\mathrm C_1=18$、赤3：${}_4\mathrm C_3=4$。$\frac{22}{35}$
+</div>
+
+<!--EXT 20-->
+<h3 class="deep">じっくり解説① 約数の個数・総和の仕組み</h3>
+<p>$72=2^3\cdot3^2$ の約数は $2^a\cdot3^b$（$a=0,1,2,3$、$b=0,1,2$）の形。$a$ の選び方4通り × $b$ の選び方3通り ＝ 12 個。</p>
+<p>約数の総和は $(1+2+4+8)(1+3+9)=15\times13=195$。展開すると全約数が1回ずつ現れるからです。</p>
+<h3 class="deep">じっくり解説② 最大公約数と最小公倍数</h3>
+<p>$a=GA',\ b=GB'$（$A',B'$ は互いに素）とすると、$L=GA'B'$、$ab=GL$。</p>
+<div class="box ex">
+最大公約数 12、最小公倍数 360 の2つの自然数 $a<b$ の組をすべて求めよ。<br>
+<b>解</b>　$a=12A',\ b=12B'$、$12A'B'=360$ → $A'B'=30$、$A'<B'$、互いに素。<br>
+$(A',B')=(1,30),(2,15),(3,10),(5,6)$。よって $(a,b)=\boldsymbol{(12,360),(24,180),(36,120),(60,72)}$
+</div>
+<h3 class="deep">じっくり解説③ 合同式（あまりの計算）</h3>
+<p>「$a$ と $b$ を $m$ で割った余りが等しい」ことを $a\equiv b\pmod m$ と書きます。合同式は<b>たし算・ひき算・かけ算・累乗がそのままできる</b>のが便利。</p>
+<div class="box ex">
+$3^{100}$ を 7 で割った余り。<br>
+<b>解</b>　$3^1\equiv3,\ 3^2\equiv2,\ 3^3\equiv6,\ 3^4\equiv4,\ 3^5\equiv5,\ 3^6\equiv1 \pmod 7$。<br>
+$3^{100}=(3^6)^{16}\cdot3^4\equiv1\cdot4=\boldsymbol4$
+</div>
+<div class="box ex">
+$n^3-n$ は 6 の倍数であることを示せ。<br>
+<b>解</b>　$n^3-n=(n-1)n(n+1)$ は連続する3整数の積。連続する2整数には偶数が、連続する3整数には3の倍数が必ず含まれるので、2の倍数かつ3の倍数、つまり6の倍数。■
+</div>
+<h3 class="deep">じっくり解説④ 互除法の原理</h3>
+<p>$a=bq+r$ のとき、$a$ と $b$ の公約数は $b$ と $r$ の公約数でもある（$r=a-bq$ だから）。逆も同様。だから $\gcd(a,b)=\gcd(b,r)$。数が小さくなっていくので、いつか必ず割り切れて終わります。</p>
+<p>互除法を逆にたどると、$ax+by=\gcd(a,b)$ の整数解が見つかります。</p>
+<div class="box ex">
+$17x+5y=1$ の整数解を1つ。<br>
+<b>解</b>　$17=5\cdot3+2,\ 5=2\cdot2+1$。逆にたどる：$1=5-2\cdot2=5-(17-5\cdot3)\cdot2=5\cdot7-17\cdot2$。<br>
+よって $\boldsymbol{x=-2,\ y=7}$
+</div>
+<h3 class="deep">じっくり解説⑤ 記数法</h3>
+<p>10進法の 253 は $2\cdot10^2+5\cdot10+3$。$n$ 進法も同じで、位が $n$ の累乗になります。コンピュータは 0 と 1 だけの<b>2進法</b>で計算しています。</p>
+<p>10進 → $n$ 進：$n$ で割り続けて、余りを下から読む。</p>
+<div class="box ex">
+45 を 2 進法で：$45\to22$ 余1、$22\to11$ 余0、$11\to5$ 余1、$5\to2$ 余1、$2\to1$ 余0、$1\to0$ 余1。下から読んで $\boldsymbol{101101_{(2)}}$
+</div>
+<div class="box challenge">
+$\sqrt{n^2+40}$ が整数となる自然数 $n$ をすべて求めよ。<br>
+<b>解</b>　$\sqrt{n^2+40}=m$ とおくと $m^2-n^2=40$ → $(m+n)(m-n)=40$。$m+n>m-n>0$ で、$m+n$ と $m-n$ の偶奇は一致する。<br>
+両方偶数の組：$(20,2),(10,4)$。$(m,n)=(11,9),(7,3)$。<b>$n=3,\ 9$</b>
+</div>
+
+<!--EXT 21-->
+<h3 class="deep">じっくり解説① 三角形の5心まとめ</h3>
+<table><tr><th>名前</th><th>作り方</th><th>性質</th></tr>
+<tr><td>重心 G</td><td>3本の中線の交点</td><td>中線を $2:1$ に内分。座標は3頂点の平均</td></tr>
+<tr><td>外心 O</td><td>3辺の垂直二等分線の交点</td><td>3頂点から等距離（外接円の中心）</td></tr>
+<tr><td>内心 I</td><td>3つの内角の二等分線の交点</td><td>3辺から等距離（内接円の中心）</td></tr>
+<tr><td>垂心 H</td><td>3頂点から対辺への垂線の交点</td><td>鋭角三角形では内部、鈍角では外部</td></tr>
+<tr><td>傍心</td><td>1つの内角と2つの外角の二等分線の交点</td><td>3つある</td></tr></table>
+<p>正三角形では重心・外心・内心・垂心が<b>すべて一致</b>します。</p>
+<h3 class="deep">じっくり解説② チェバ・メネラウスの使い方</h3>
+<div class="box ex">
+△ABC の辺 AB を $2:1$ に内分する点 R、辺 AC を $3:2$ に内分する点 Q をとり、BQ と CR の交点を O、AO の延長と BC の交点を P とする。BP:PC は？<br>
+<b>解</b>　チェバの定理：$\frac{BP}{PC}\cdot\frac{CQ}{QA}\cdot\frac{AR}{RB}=1$ → $\frac{BP}{PC}\cdot\frac23\cdot\frac21=1$ → $\frac{BP}{PC}=\frac34$。<b>BP:PC=3:4</b>
+</div>
+<div class="box ex">
+上の図で、AO:OP は？（メネラウスの定理を △ABP と直線 RC に使う）<br>
+<b>解</b>　$\frac{AR}{RB}\cdot\frac{BC}{CP}\cdot\frac{PO}{OA}=1$ → $\frac21\cdot\frac74\cdot\frac{PO}{OA}=1$ → $\frac{PO}{OA}=\frac27$。<b>AO:OP=7:2</b>
+</div>
+<h3 class="deep">じっくり解説③ 円の性質：接線・内接四角形</h3>
+<ul><li>円外の点から引いた<b>2本の接線の長さは等しい</b></li>
+<li>四角形が円に内接する ⇔ 対角の和が 180° ⇔ 1つの外角がその内対角に等しい</li>
+<li>四角形が円に外接する ⇔ 対辺の和が等しい（AB+CD=BC+DA）</li></ul>
+<div class="box ex">
+直角三角形（直角をはさむ辺 $a,b$、斜辺 $c$）の内接円の半径 $r$。<br>
+<b>解</b>　接線の長さが等しいことから $c=(a-r)+(b-r)$ → $r=\boldsymbol{\frac{a+b-c}{2}}$。例：3,4,5 なら $r=1$
+</div>
+<h3 class="deep">じっくり解説④ 方べきの定理の3パターン</h3>
+<p>点 P を通る2本の直線が円と A, B および C, D で交わるとき $PA\cdot PB=PC\cdot PD$。P が円の内部でも外部でも成り立ち、片方が接線（接点 T）なら $PA\cdot PB=PT^2$。</p>
+<h3 class="deep">じっくり解説⑤ 空間図形：オイラーの多面体定理</h3>
+<p>凸多面体で <b>頂点の数 − 辺の数 ＋ 面の数 ＝ 2</b>。</p>
+<table><tr><th>正多面体</th><th>面の形</th><th>頂点</th><th>辺</th><th>面</th></tr>
+<tr><td>正四面体</td><td>正三角形</td><td>4</td><td>6</td><td>4</td></tr>
+<tr><td>正六面体</td><td>正方形</td><td>8</td><td>12</td><td>6</td></tr>
+<tr><td>正八面体</td><td>正三角形</td><td>6</td><td>12</td><td>8</td></tr>
+<tr><td>正十二面体</td><td>正五角形</td><td>20</td><td>30</td><td>12</td></tr>
+<tr><td>正二十面体</td><td>正三角形</td><td>12</td><td>30</td><td>20</td></tr></table>
+<p>正多面体はこの<b>5種類しかない</b>ことが知られています（1つの頂点に集まる角の和が 360° 未満でなければならないため）。</p>
+<div class="box challenge">
+サッカーボール（切頂二十面体）は正五角形 12 枚と正六角形 20 枚でできている。頂点と辺の数は？<br>
+<b>解</b>　辺：$(5\cdot12+6\cdot20)\div2=90$（各辺は2枚の面で共有）。頂点：オイラーの定理 $v-90+32=2$ → $v=60$。<br>
+（各頂点に3枚の面が集まるので $(60+120)\div3=60$ でも確認できる）
+</div>
