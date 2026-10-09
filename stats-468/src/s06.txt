@@ -1,0 +1,113 @@
+=ch II-3　中心極限定理
+
+*3 Laplace の定理（de Moivre–Laplace の積分定理）
+$X\sim\mathrm{Bin}(n,p)$（$0<p<1$ 固定）について $P\left(a\le\frac{X-np}{\sqrt{np(1-p)}}\le b\right)\to\Phi(b)-\Phi(a)$ を、局所極限定理（大問 {{R:local-lt}}）を Riemann 和として足し合わせて証明せよ（Laplace 1812）。
+
+*4 特性関数の基本性質
+特性関数 $\varphi(t)=E[e^{itX}]$ がすべての確率変数について存在し、$|\varphi|\le1$、一様連続、$\varphi_{aX+b}(t)=e^{ibt}\varphi(at)$、独立和で積になることを示し、$E[X^{2}]<\infty$ なら $\varphi(t)=1+itE[X]-\frac{t^{2}}{2}E[X^{2}]+o(t^{2})$ を証明せよ。
+
+*5 Lévy の連続性定理 {levy}
+$\varphi_{n}(t)\to\varphi(t)$ がすべての $t$ で成り立ち、$\varphi$ が $t=0$ で連続なら、$\varphi$はある分布の特性関数であり $X_{n}$ はその分布に分布収束することを、分布列の緊密性と Helly の選出定理（既知としてよい）で証明せよ（Lévy 1925）。
+
+*4 i.i.d. の中心極限定理
+i.i.d. 列で $0<\sigma^{2}<\infty$ なら $\frac{S_{n}-n\mu}{\sigma\sqrt n}\to N(0,1)$（分布収束）を、特性関数の展開と Lévy の連続性定理で証明せよ。
+
+*4 積率母関数による証明
+積率母関数が $0$ の近傍で有限な i.i.d. 列について、標準化した和の積率母関数が $e^{t^{2}/2}$ に収束することを示し、積率母関数の連続性定理から中心極限定理を再証明せよ。
+
+*4 Lindeberg の置き換え法
+$f\in C^{3}$ で $f''',f'',f'$ が有界なら、i.i.d. で分散 1 の $X_{i}$ と独立な $N(0,1)$ の $Z_{i}$ について $\left|E\left[f\left(\frac{\sum X_{i}}{\sqrt n}\right)\right]-E\left[f\left(\frac{\sum Z_{i}}{\sqrt n}\right)\right]\right|\to0$ を、変数を一つずつ置き換える Taylor 展開で証明し、中心極限定理を導け（Lindeberg 1922）。
+
+*4 Lyapunov の条件
+独立な $X_{i}$（平均 0、$s_{n}^{2}=\sum_{i\le n}\mathrm{Var}(X_{i})$）について、ある $\delta>0$ で $\frac{1}{s_{n}^{2+\delta}}\sum E|X_{i}|^{2+\delta}\to0$（Lyapunov 条件）なら Lindeberg 条件 $\frac{1}{s_{n}^{2}}\sum E[X_{i}^{2};|X_{i}|>\varepsilon s_{n}]\to0$ が成り立つことを証明せよ。
+
+*5 Lindeberg–Feller の中心極限定理
+独立な $X_{i}$（平均 0、分散有限）が Lindeberg 条件をみたせば $\frac{S_{n}}{s_{n}}\to N(0,1)$ であることを証明し、逆に $\max_{i\le n}\frac{\mathrm{Var}(X_{i})}{s_{n}^{2}}\to0$ のもとで漸近正規性から Lindeberg 条件が従うこと（Feller 1935）の証明の骨格を与えよ。
+
+*4 Slutsky の定理 {slutsky}
+$X_{n}\to X$（分布収束）、$Y_{n}\to c$（確率収束、$c$ は定数）なら $X_{n}+Y_{n}\to X+c$、$X_{n}Y_{n}\to cX$、$c\neq0$ なら $X_{n}/Y_{n}\to X/c$（いずれも分布収束）を証明せよ。$c$ が確率変数のとき成り立たない例を挙げよ。
+
+*4 多変量中心極限定理
+i.i.d. なランダムベクトル（共分散行列 $\Sigma$）について $\frac{1}{\sqrt n}\sum(X_{i}-\mu)\to N(0,\Sigma)$ を、Cramér–Wold の方法で一変量の場合に帰着して証明せよ。
+
+*4 中心極限定理の応用例
+$\mathrm{Po}(n)$ と $\mathrm{Ga}(n,1)$ の標準化が $N(0,1)$ に収束することを中心極限定理から示し、$\lim_{n\to\infty}e^{-n}\sum_{k=0}^{n}\frac{n^{k}}{k!}=\frac{1}{2}$ を導け。
+
+*5 Berry–Esseen の定理
+i.i.d. 列で $E|X|^{3}=\rho<\infty$ なら、絶対定数 $C$ について $\sup_{x}\left|P\left(\frac{S_{n}-n\mu}{\sigma\sqrt n}\le x\right)-\Phi(x)\right|\le\frac{C\rho}{\sigma^{3}\sqrt n}$ であることを、Esseen の平滑化不等式（特性関数の差の積分による分布関数の差の評価）を示して証明せよ（Berry 1941、Esseen 1942）。オーダー $n^{-1/2}$ が改良できない例を挙げよ。
+
+=ch II-4　カイ二乗分布と標本分散の分布
+
+*3 カイ二乗分布の基本
+$\chi^{2}_{n}$ の積率母関数が $(1-2t)^{-n/2}$ であることを示し、平均 $n$、分散 $2n$、独立な $\chi^{2}_{m}$ と $\chi^{2}_{n}$ の和が $\chi^{2}_{m+n}$ であることを証明せよ。
+
+*3 標本分散の不偏性
+分散 $\sigma^{2}<\infty$ の i.i.d. 標本について $S^{2}=\frac{1}{n-1}\sum(X_{i}-\bar X)^{2}$ が $E[S^{2}]=\sigma^{2}$ をみたすことを、分布の仮定なしに証明せよ。
+
+*4 直交変換と Helmert 行列
+独立な $N(0,\sigma^{2})$ のベクトルに直交行列を掛けてもまた独立な $N(0,\sigma^{2})$ のベクトルになることを示し、第 1 行が $\frac{1}{\sqrt n}(1,\dots,1)$ の直交行列（Helmert 行列）を具体的に構成せよ。
+
+*4 Fisher の定理 {fisher-thm}
+$N(\mu,\sigma^{2})$ の i.i.d. 標本について、$\bar X$ と $S^{2}$ が独立で、$\bar X\sim N(\mu,\frac{\sigma^{2}}{n})$、$\frac{(n-1)S^{2}}{\sigma^{2}}\sim\chi^{2}_{n-1}$ であることを、Helmert 変換で証明せよ（Fisher 1925）。
+
+*4 冪等行列と二次形式
+$Z\sim N_{n}(0,I)$ と対称行列 $A$ について、$A^{2}=A$ で $\mathrm{rank}A=r$ なら $Z^{\top}AZ\sim\chi^{2}_{r}$ を示し、逆に $Z^{\top}AZ\sim\chi^{2}_{r}$ なら $A$ が階数 $r$ の冪等行列であることを、固有値と積率母関数の比較で証明せよ。
+
+*5 Cochran の定理 {cochran}
+対称行列 $A_{1},\dots,A_{k}$ が $\sum A_{i}=I_{n}$ をみたすとき、$Z\sim N_{n}(0,I)$ の二次形式 $Q_{i}=Z^{\top}A_{i}Z$ が互いに独立で $Q_{i}\sim\chi^{2}_{r_{i}}$ となる $\iff\sum\mathrm{rank}A_{i}=n$ であることを証明せよ（Cochran 1934）。分散分析の平方和の分解への応用を述べよ。
+
+*5 Craig の定理
+$Z\sim N_{n}(0,I)$ と対称行列 $A,B$ について、$Z^{\top}AZ$ と $Z^{\top}BZ$ が独立 $\iff AB=0$ を証明せよ（Craig 1943、Sakamoto、Ogawa；十分性は容易だが必要性は難しい）。
+
+*4 非心カイ二乗分布
+$X\sim N_{n}(\mu,I)$ について $|X|^{2}$ の分布が $\lambda=|\mu|^{2}$ のみに依存することを示し、それが平均 $\frac{\lambda}{2}$ の Poisson 分布 $K$ を用いた混合 $\chi^{2}_{n+2K}$ で表されること、平均が $n+\lambda$ であることを証明せよ。
+
+*4 一般の分布での標本分散の分散
+4 次中心モーメント $\mu_{4}$ が有限なら $\mathrm{Var}(S^{2})=\frac{1}{n}\left(\mu_{4}-\frac{n-3}{n-1}\sigma^{4}\right)$ を証明し、正規分布のとき $\frac{2\sigma^{4}}{n-1}$ になることを確かめよ。
+
+*4 カイ二乗分布の正規近似
+$\frac{\chi^{2}_{n}-n}{\sqrt{2n}}\to N(0,1)$ を示し、$\sqrt{2\chi^{2}_{n}}-\sqrt{2n-1}\to N(0,1)$（Fisher の近似）をデルタ法の考え方で証明せよ。
+
+*4 標本平均と標本分散の独立性から導かれる関数方程式
+分散有限な i.i.d. 標本で $\bar X$ と $S^{2}$ が独立なら、特性関数 $\varphi$ が $0$ の近傍で $\varphi\varphi''-(\varphi')^{2}=-\sigma^{2}\varphi^{2}$ をみたすことを、$E[(n-1)S^{2}e^{itn\bar X}]=(n-1)\sigma^{2}E[e^{itn\bar X}]$ を展開して示せ。
+
+*5 Geary の定理
+分散有限な i.i.d. 標本（$n\ge2$）で $\bar X$ と $S^{2}$ が独立なら、母集団分布は正規分布であることを、前問の微分方程式を解いて証明せよ（Geary 1936、Lukacs 1942）。大問 {{R:fisher-thm}} の逆であることを確かめよ。
+
+=ch II-5　$t$ 分布と $F$ 分布
+
+*3 $t$ 分布の密度
+独立な $Z\sim N(0,1)$、$V\sim\chi^{2}_{n}$ について $T=\frac{Z}{\sqrt{V/n}}$ の密度 $\frac{\Gamma(\frac{n+1}{2})}{\sqrt{n\pi}\Gamma(\frac{n}{2})}\left(1+\frac{t^{2}}{n}\right)^{-(n+1)/2}$ を変数変換で導き、$t_{1}$ が Cauchy 分布であることを確かめよ。
+
+*3 $F$ 分布の密度
+独立な $U\sim\chi^{2}_{m}$、$V\sim\chi^{2}_{n}$ について $F=\frac{U/m}{V/n}$ の密度を導き、$T\sim t_{n}$ なら $T^{2}\sim F(1,n)$、$F\sim F(m,n)$ なら $\frac{1}{F}\sim F(n,m)$ であることを証明せよ。
+
+*4 $t$ 分布の正規収束と Scheffé の補題
+$t_{n}$ の密度が $n\to\infty$ で標準正規の密度に各点収束することを示し、密度の各点収束から全変動距離の収束が従うこと（Scheffé の補題）を証明せよ。
+
+*4 $t$ 分布のモーメント
+$T\sim t_{n}$ について $E|T|^{k}<\infty\iff k<n$ を示し、$n>2$ なら $\mathrm{Var}(T)=\frac{n}{n-2}$ であることを証明せよ。
+
+*4 $F$ 分布とベータ分布
+$F\sim F(m,n)$ なら $\frac{mF/n}{1+mF/n}\sim\mathrm{Beta}(\frac{m}{2},\frac{n}{2})$ であることを、大問 {{R:beta-gamma}} から証明せよ。
+
+*4 $t$ 統計量の分布
+$N(\mu,\sigma^{2})$ の i.i.d. 標本について $\frac{\sqrt n(\bar X-\mu)}{S}\sim t_{n-1}$ を、Fisher の定理から証明せよ。$\sigma$ を含まない枢軸量であることの意味を説明せよ。
+
+*4 $t$ 分布は正規分布の尺度混合
+$\tau\sim\mathrm{Ga}(\frac{n}{2},\frac{n}{2})$ を与えて $X\sim N(0,\frac{1}{\tau})$ とすると $X\sim t_{n}$ であることを証明せよ。$t$ 分布の裾が正規分布より重い理由を説明せよ。
+
+*4 非心 $t$ 分布と検定の検出力
+$Z\sim N(\delta,1)$ と独立な $V\sim\chi^{2}_{n}$ について $\frac{Z}{\sqrt{V/n}}$（非心 $t$ 分布）の分布関数が $\delta$ について単調減少であることを示し、片側 $t$ 検定の検出力が $\frac{\sqrt n(\mu-\mu_{0})}{\sigma}$ の増加関数であることを証明せよ。
+
+*4 標本標準偏差の期待値
+$N(\mu,\sigma^{2})$ の標本について $E[S]=\sigma c_{n}$、$c_{n}=\sqrt{\frac{2}{n-1}}\frac{\Gamma(n/2)}{\Gamma((n-1)/2)}<1$ を示し、$t$ 信頼区間の長さの期待値を求めよ。$c_{n}\to1$ を確かめよ。
+
+*4 $t$ 統計量の漸近的頑健性
+母集団が正規でなくても分散が有限なら $\frac{\sqrt n(\bar X-\mu)}{S}\to N(0,1)$ であることを、中心極限定理と Slutsky の定理（大問 {{R:slutsky}}）で証明せよ。
+
+*5 Wishart 行列の逆行列の二次形式
+$W\sim W_{p}(m,I)$（$m\ge p$、$W=\sum_{i=1}^{m}Y_{i}Y_{i}^{\top}$、$Y_{i}$ は独立な $N_{p}(0,I)$）と固定した単位ベクトル $u$ について $\frac{1}{u^{\top}W^{-1}u}\sim\chi^{2}_{m-p+1}$ であることを、回転不変性で $u=e_{p}$ に帰着し、Schur 補行列を Gram–Schmidt の残差の 2 乗として表して証明せよ。
+
+*5 Hotelling の $T^{2}$ 分布
+$N_{p}(\mu,\Sigma)$ の i.i.d. 標本（$n>p$）の標本平均 $\bar X$ と標本共分散行列 $S$ について、$T^{2}=n(\bar X-\mu)^{\top}S^{-1}(\bar X-\mu)$ が $\frac{p(n-1)}{n-p}F(p,n-p)$ に従うことを、前問と $\bar X$、$S$ の独立性を用いて証明せよ（Hotelling 1931）。$p=1$ で $t^{2}$ に帰着することを確かめよ。

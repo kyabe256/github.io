@@ -1,0 +1,69 @@
+<div class="cover">
+  <div class="kicker">THREE COURSES IN ONE BOOK</div>
+  <div class="vol">PROBABILITY · ESTIMATION · TESTING</div>
+  <h1>確率と統計的推測 468 大問</h1>
+  <div class="rule"></div>
+  <div class="sub">確率・統計／統計的推測 I／統計的推測 II ― 全 39 回をすべて証明する</div>
+  <div class="formula">$$2\log\frac{\sup_{\Theta}L(\theta)}{\sup_{\Theta_{0}}L(\theta)}\ \xrightarrow{\ d\ }\ \chi^{2}_{\dim\Theta-\dim\Theta_{0}}$$</div>
+  <div class="meta">
+    全 {{STAT:TOTAL}} 大問 ― すべて証明問題<br>
+    3 部（3 科目）× 13 章（授業 13 回）× 12 題<br>
+    <br>
+    難易度：★★★☆☆ {{STAT:S3}} 題 ／ ★★★★☆ {{STAT:S4}} 題 ／ ★★★★★ {{STAT:S5}} 題<br>
+    <br>
+    誘導なし・解答なし
+  </div>
+</div>
+
+<h2 class="plain">はじめに</h2>
+
+<p>本書は、学部の確率・統計の三つの科目 ― 「確率・統計」（確率変数と確率分布）、「統計的推測 I」（標本分布と推定）、「統計的推測 II」（種々の統計的検定）― の授業計画全 39 回を、そのまま 39 の章にした<strong>証明だけの問題集</strong>である。授業では公式として使い、計算して答えを出す事実を、ここではすべて証明する。</p>
+
+<p>ただし、授業の内容を順になぞるだけではない。<strong>各章は、その回の主題の先にある大きな定理で終わる</strong>。分布関数の回は分岐過程の絶滅定理へ、積率母関数の回は Cramér の大偏差定理へ、正規分布の回は Cramér の分解定理と Darmois–Skitovich の定理へ、平均二乗誤差の回は Stein のパラドックスへ、多重比較の回は Benjamini–Hochberg の定理へ、そして最後の回は Wilks の定理へ。授業の 1 回分を、その分野の山頂まで登りきる 12 題の登山道として並べた。</p>
+
+<table class="sym">
+  <tr><td class="k">★★★☆☆</td><td>授業で使う公式・定理そのものの証明。まずここを全部埋める。</td></tr>
+  <tr><td class="k">★★★★☆</td><td>授業の一歩先。教科書の演習や大学院入試の水準。</td></tr>
+  <tr><td class="k">★★★★★</td><td>各章の山頂。研究論文の主定理や専門書の山場。一題に数日かけてよい。</td></tr>
+</table>
+
+<table class="sym">
+  <tr><td class="k">第 I 部</td><td>確率・統計（I-1〜I-13）― 確率と独立性、離散・連続・多変量の確率変数、期待値と条件付き期待値、積率母関数、二項・多項・Poisson・ガンマ・ベータ・正規・多変量正規分布、シミュレーション</td></tr>
+  <tr><td class="k">第 II 部</td><td>統計的推測 I（II-1〜II-13）― 変数変換、大数の法則、中心極限定理、カイ二乗・$t$・$F$ 分布、不偏・一致・有効推定量、Cramér–Rao の限界、最尤推定、検定の基本、最強力検定</td></tr>
+  <tr><td class="k">第 III 部</td><td>統計的推測 II（III-1〜III-13）― 正規平均・分散・平均の差・分散比の検定、検出力と標本数、多重検定、比率の検定、適合度検定と分割表、最小二乗法と線形仮説、尤度比・スコア・Wald 検定</td></tr>
+</table>
+<p>章番号 I-$n$、II-$n$、III-$n$ は、それぞれの科目の第 $n$ 回の授業に対応する。</p>
+
+<h3 class="sec">使用許可のルール</h3>
+<p>468 題は<strong>通し番号順に一本の階段として並んでいる</strong>。番号 $n$ の問題を解くとき、</p>
+<ul class="plain">
+  <li>$1,\dots,n-1$ のすべての結果</li>
+  <li>微分積分学（多重積分の変数変換を含む）と線形代数の基礎事実、確率空間の公理（$\sigma$-加法族と可算加法性）</li>
+  <li>問題文で「既知としてよい」と断った事実（特性関数による分布の一意性、Helly の選出定理、$\pi$-$\lambda$ 定理、Hadamard の因数分解定理など）</li>
+</ul>
+<p>は自由に使ってよい。それ以外の、番号 $n$ 以降の結果を使ってはならない。科目の順序（確率・統計 → 統計的推測 I → 統計的推測 II）は授業の履修順と同じなので、<strong>いま受けている授業の回と同じ章を解く</strong>のがいちばん効果的である。部をまたぐ依存の主な筋は付録 A にまとめた。</p>
+
+<h3 class="sec">★★★★★ の問題について</h3>
+<p>山頂の問題（Kolmogorov の 0-1 法則、Cramér の大偏差定理、Berry–Esseen の定理、Lehmann–Scheffé の定理、Wald の一致性定理、Neyman–Pearson の補題、Pearson の定理、Wilks の定理など）のいくつかは、測度論的な確率論（後続科目「ルベーグ積分と確率論」の内容）を用いると見通しがよくなる。問題文が「証明の骨格を与えよ」と言うときは、<strong>主張を正確に述べ直し、証明の骨格（どの定理をどの順で使うか）を再構成し、鍵となる一つの補題を完全に証明する</strong>ことをもって解答とせよ。</p>
+
+<h3 class="sec">詰まったときに</h3>
+<p>本書に解答はないが、付録 B に授業回ごとの参考書対応表を置いた。三科目のうち二つのテキストである白旗慎吾『統計解析入門』の該当節（シラバスに記載のもの）を中心に挙げてある。複素関数論を使う問題（積率母関数の一意性、Cramér・Raikov・Marcinkiewicz の定理）では、姉妹編『複素関数論で登る大定理』が役に立つ。</p>
+<p>そして ― <strong>一題を一晩寝かせること</strong>。翌朝に解ける問題が驚くほど多くある。</p>
+
+<h3 class="sec">記号の約束</h3>
+<table class="sym">
+  <tr><td class="k">$P,\ E,\ \mathrm{Var},\ \mathrm{Cov}$</td><td>確率、期待値、分散、共分散</td></tr>
+  <tr><td class="k">$F,\ f,\ \varphi(t),\ M(t)$</td><td>分布関数、密度（確率関数）、特性関数 $E[e^{itX}]$、積率母関数 $E[e^{tX}]$</td></tr>
+  <tr><td class="k">$\mathrm{Bin},\ \mathrm{Mult},\ \mathrm{Po},\ \mathrm{Exp}(\lambda),\ \mathrm{Ga}(a,\lambda),\ \mathrm{Beta}$</td><td>二項、多項、Poisson、指数（率 $\lambda$）、ガンマ（形状 $a$、率 $\lambda$）、ベータ分布</td></tr>
+  <tr><td class="k">$N(\mu,\sigma^{2}),\ N_{p}(\mu,\Sigma),\ \Phi,\ \varphi$</td><td>正規分布、多変量正規分布、標準正規の分布関数と密度（文脈で特性関数と区別）</td></tr>
+  <tr><td class="k">$\chi^{2}_{n},\ t_{n},\ F(m,n)$</td><td>自由度 $n$ のカイ二乗分布、$t$ 分布、自由度 $(m,n)$ の $F$ 分布</td></tr>
+  <tr><td class="k">$z_{\alpha},\ t_{n,\alpha},\ \chi^{2}_{n,\alpha}$</td><td>上側 $\alpha$ 点（$P(Z>z_{\alpha})=\alpha$ など）</td></tr>
+  <tr><td class="k">$\bar X,\ S^{2},\ X_{(k)}$</td><td>標本平均、不偏標本分散 $\frac{1}{n-1}\sum(X_{i}-\bar X)^{2}$、$k$ 番目の順序統計量</td></tr>
+  <tr><td class="k">$I(\theta),\ \ell(\theta),\ U(\theta)$</td><td>Fisher 情報量（1 観測あたり）、対数尤度、スコア</td></tr>
+  <tr><td class="k">$\to$（確率収束）、$\to$（分布収束）</td><td>文中で「確率収束」「分布収束」「概収束」と明示する</td></tr>
+  <tr><td class="k">$D(p\|q),\ H(p)$</td><td>相対エントロピー（Kullback–Leibler 情報量）、エントロピー</td></tr>
+  <tr><td class="k">UMP、UMPU、UMVUE、BLUE</td><td>一様最強力、一様最強力不偏、一様最小分散不偏推定量、最良線形不偏推定量</td></tr>
+</table>
+
+<h2 class="plain">目次</h2>
+<!--TOC-->

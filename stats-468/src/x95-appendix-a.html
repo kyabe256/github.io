@@ -1,0 +1,46 @@
+<h2 class="plain">付録 A　依存の地図</h2>
+
+<p>三つの科目は一本の流れをなしている。確率分布の性質（第 I 部）が標本分布と推定量の性質（第 II 部）を支え、それが検定の理論（第 III 部）を支える。ここでは部をまたぐ主な依存の筋を挙げる。番号は大問番号である。</p>
+
+<h3 class="sec">第 I 部 → 第 II 部：確率から標本分布へ</h3>
+<table class="legend">
+  <tr><th>分布関数</th><td>{{R:axioms}}（確率の公理）→ {{R:cdf}}（分布関数の性質）→ {{R:quantile}}（分位点変換）→ 乱数生成（I-13）、確率的順序、Kolmogorov–Smirnov 統計量の分布の普遍性。</td></tr>
+  <tr><th>変数変換</th><td>{{R:conv}}（畳み込み）→ {{R:beta-gamma}}（ベータとガンマ）→ $t$・$F$ 分布（II-5）；{{R:renyi}}（Rényi 表現）→ 極値分布。</td></tr>
+  <tr><th>積率母関数</th><td>{{R:mgf-unique}}（一意性定理）→ 再生性、多項分布の中心極限定理 {{R:mult-clt}}、Cramér–Wold の方法 → 多変量中心極限定理（II-3）。複素関数論の一致の定理がここで使われる。</td></tr>
+  <tr><th>二項分布の極限</th><td>{{R:local-lt}}（局所極限定理）→ Laplace の定理（II-3）→ 比率の検定（III-8）。Poisson 極限、Le Cam の不等式、Raikov の定理（{{R:po-pgf}}）は別の極限の系統。</td></tr>
+  <tr><th>正規分布の特徴づけ</th><td>Herschel–Maxwell、Bernstein、Cramér の分解定理、Darmois–Skitovich（I-4、I-11、I-12）と、Geary の定理（II-4）は、すべて「独立性が正規性を強制する」という一つの現象の異なる顔である。</td></tr>
+</table>
+
+<h3 class="sec">第 II 部の幹：極限定理と推定</h3>
+<table class="legend">
+  <tr><th>極限定理</th><td>{{R:slln4}}（4 次モーメントの強法則）→ Glivenko–Cantelli；Khinchin・Etemadi の大数の法則（II-2）；{{R:levy}}（Lévy の連続性定理）→ 中心極限定理 → {{R:slutsky}}（Slutsky）→ {{R:delta}}（デルタ法）。この三つ（大数の法則、中心極限定理、Slutsky）が漸近統計学のすべての道具である。</td></tr>
+  <tr><th>標本分布</th><td>{{R:fisher-thm}}（Fisher の定理）→ {{R:cochran}}（Cochran）→ $t$ 検定（III-4）、分散分析（III-7）、線形仮説の $F$ 検定 {{R:f-test}}。</td></tr>
+  <tr><th>最良の推定量</th><td>{{R:factorization}}（因子分解定理）→ Rao–Blackwell → {{R:lehmann-scheffe}}（Lehmann–Scheffé）→ Basu；{{R:cramer-rao}}（Cramér–Rao）→ 有効推定量と指数型分布族；平均二乗誤差 → Stein のパラドックス。</td></tr>
+  <tr><th>最尤法</th><td>相対エントロピー → Wald の一致性定理 → {{R:mle-an}}（漸近正規性）→ {{R:lan}}（局所漸近正規性）→ 尤度に基づく三つの検定（III-13）。</td></tr>
+</table>
+
+<h3 class="sec">第 II 部 → 第 III 部：推定から検定へ</h3>
+<table class="legend">
+  <tr><th>最強力検定</th><td>{{R:np}}（Neyman–Pearson）→ {{R:karlin-rubin}}（Karlin–Rubin）→ 片側 $z$・$t$・$\chi^{2}$・$F$ 検定の UMP 性；一般化された Neyman–Pearson の補題 → 両側 $z$ 検定・$t$ 検定・二標本 $t$ 検定・Fisher の正確検定（{{R:odds-cond}}）の UMPU 性。</td></tr>
+  <tr><th>適合度</th><td>{{R:mult-clt}}（多項分布の中心極限定理）＋射影の補題 → {{R:pearson}}（Pearson の定理）→ Fisher の自由度の定理 → Chernoff–Lehmann の定理。</td></tr>
+  <tr><th>効率</th><td>局所対立仮説での漸近検出力 → Pitman 効率 → 符号検定 $\frac{2}{\pi}$、Wilcoxon 検定 $\frac{3}{\pi}$ → Hodges–Lehmann の $\frac{108}{125}$。</td></tr>
+  <tr><th>最終合流点</th><td><strong>大問 {{R:finale}}（Wilks の定理）</strong>：{{R:lan}} ＋ {{R:mle-an}} ＋ 射影の補題。$t$ 検定、分散分析と線形仮説の $F$ 検定（{{R:f-test}}）、Pearson の適合度検定（{{R:pearson}}）、分割表の独立性の検定が、すべて「尤度比の対数の 2 倍は $\chi^{2}$」という一つの原理に統一される。</td></tr>
+</table>
+
+<h2 class="plain">付録 B　参考書対応表</h2>
+<p style="font-size:9.4pt;color:#4b5563">テキスト白旗慎吾『統計解析入門』（共立出版）の章・節はシラバスの記載に従った（確率・統計：第 2・3 章、統計的推測 I：第 4・5 章の各節、統計的推測 II：参考書として第 6・7・9・10 章）。★★★★★ の問題には専門書を併記した。</p>
+<table class="legend">
+  <tr><th>I-1〜I-6</th><td>白旗『統計解析入門』第 2・3 章／Feller <em>An Introduction to Probability Theory and Its Applications I</em>（組合せ確率、ランダムウォーク、確率母関数、分岐過程）／Durrett <em>Probability: Theory and Examples</em>（Borel–Cantelli、0-1 法則、大偏差）／Dembo–Zeitouni <em>Large Deviations Techniques and Applications</em></td></tr>
+  <tr><th>I-7〜I-13</th><td>白旗 第 2・3 章／Feller I（二項分布、Poisson 分布、Pólya の再帰定理、逆正弦法則）／Kagan–Linnik–Rao <em>Characterization Problems in Mathematical Statistics</em>（Cramér、Raikov、Lukacs、Darmois–Skitovich、Geary）／Cover–Thomas <em>Elements of Information Theory</em>（型の方法、Sanov の定理）／Devroye <em>Non-Uniform Random Variate Generation</em>（乱数生成）</td></tr>
+  <tr><th>II-1</th><td>白旗 4.1 節（変数変換とヤコビアン）／David–Nagaraja <em>Order Statistics</em>（Rényi 表現、極値分布）</td></tr>
+  <tr><th>II-2〜II-3</th><td>白旗 4.2 節（大数の法則、中心極限定理、ラプラスの定理）／Durrett（Etemadi の強法則、Lindeberg–Feller、Berry–Esseen）／Billingsley <em>Probability and Measure</em></td></tr>
+  <tr><th>II-4〜II-5</th><td>白旗 4.3 節（カイ二乗分布）、4.4・4.5 節（$t$ 分布、$F$ 分布）／Anderson <em>An Introduction to Multivariate Statistical Analysis</em>（Cochran の定理、Wishart 分布、Hotelling の $T^{2}$）</td></tr>
+  <tr><th>II-6〜II-7</th><td>白旗 5.1 節（点推定、区間推定、不偏推定量、一致推定量、平均二乗誤差）／Lehmann–Casella <em>Theory of Point Estimation</em>（十分性、完備性、Lehmann–Scheffé、Basu、Stein のパラドックス）</td></tr>
+  <tr><th>II-8〜II-9</th><td>白旗 5.2 節（Cramér–Rao の限界、有効推定量）／Lehmann–Casella（情報不等式、超有効性）／van der Vaart <em>Asymptotic Statistics</em>（Hodges の推定量、Le Cam の定理）</td></tr>
+  <tr><th>II-10〜II-11</th><td>白旗 5.3 節（最尤推定量）／van der Vaart（Wald の一致性、漸近正規性、1 ステップ推定量）／McLachlan–Krishnan <em>The EM Algorithm and Extensions</em></td></tr>
+  <tr><th>II-12〜II-13</th><td>白旗 5.5 節（検定の基本概念）、5.6 節（最強力検定、棄却域）／Lehmann–Romano <em>Testing Statistical Hypotheses</em>（Neyman–Pearson、Karlin–Rubin、一般化された補題）／Wald <em>Sequential Analysis</em></td></tr>
+  <tr><th>III-1〜III-4</th><td>授業の配布資料／白旗 第 6・7 章（参考書）／Lehmann–Romano（UMPU 検定、不変検定、Stein の二段階法）／Hollander–Wolfe–Chicken <em>Nonparametric Statistical Methods</em>（符号検定、Wilcoxon 検定、Pitman 効率）／Benjamini–Hochberg (1995) <em>J. R. Statist. Soc. B</em> 57, 289–300</td></tr>
+  <tr><th>III-5〜III-8</th><td>授業の配布資料／白旗 第 6・7 章（参考書）／Box (1953) "Non-normality and tests on variances", <em>Biometrika</em> 40／Agresti <em>Categorical Data Analysis</em>（比率の検定、Fisher の正確検定、McNemar、Mantel–Haenszel）</td></tr>
+  <tr><th>III-9〜III-10</th><td>授業の配布資料／白旗 第 9・10 章（参考書）／Cramér <em>Mathematical Methods of Statistics</em>（Pearson の定理、Fisher の自由度の定理）／Agresti（分割表）／Chernoff–Lehmann (1954) <em>Ann. Math. Statist.</em> 25</td></tr>
+  <tr><th>III-11〜III-13</th><td>授業の配布資料／Seber–Lee <em>Linear Regression Analysis</em>（線形仮説、Gauss–Markov、回帰診断）／Cook–Weisberg <em>Residuals and Influence in Regression</em>／van der Vaart（LAN、Wilks の定理、局所対立仮説）／Cox–Hinkley <em>Theoretical Statistics</em>（尤度比・スコア・Wald 検定）</td></tr>
+</table>

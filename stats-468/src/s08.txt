@@ -1,0 +1,113 @@
+=ch II-9　有効推定量の計算
+
+*3 代表的な有効推定量
+$\bar X$ が $N(\mu,\sigma^{2})$（$\sigma$ 既知）の $\mu$ と $\mathrm{Po}(\lambda)$ の $\lambda$ の、標本比率 $\hat p$ が $\mathrm{Ber}(p)$ の $p$ の有効推定量（Cramér–Rao の下界を達成する不偏推定量）であることを証明せよ。
+
+*3 指数分布の二つの母数化
+平均 $\theta$ で母数化した指数分布では $\bar X$ が有効推定量であることを示し、率 $\lambda=1/\theta$ で母数化すると $\frac{1}{\bar X}$ は不偏でなく、不偏推定量 $\frac{n-1}{\sum X_{i}}$ の分散 $\frac{\lambda^{2}}{n-2}$ が下界 $\frac{\lambda^{2}}{n}$ を超えることを証明せよ。
+
+*4 既知平均の正規分散
+$N(\mu,\sigma^{2})$ で $\mu$ が既知なら $\frac{1}{n}\sum(X_{i}-\mu)^{2}$ が $\sigma^{2}$ の有効推定量であることを示し、$\mu$ が未知のとき有効推定量が存在しないことを大問 {{R:cramer-rao}} の等号条件から証明せよ。
+
+*4 Chapman–Robbins の下界
+正則条件を仮定せずに、$\theta$ の不偏推定量 $T$ について $\mathrm{Var}_{\theta}(T)\ge\sup_{h}\frac{h^{2}}{E_{\theta}\left[\left(\frac{f(X;\theta+h)}{f(X;\theta)}\right)^{2}\right]-1}$ を証明し、$U(0,\theta)$ に適用せよ（Chapman–Robbins 1951）。
+
+*4 下界を達成しない UMVUE の分散
+Poisson 分布の $e^{-\lambda}$ の UMVUE $\left(1-\frac{1}{n}\right)^{\sum X_{i}}$ の分散が $e^{-2\lambda}(e^{\lambda/n}-1)$ であることを示し、Cramér–Rao の下界 $\frac{\lambda e^{-2\lambda}}{n}$ を真に超えるが、比が $n\to\infty$ で $1$ に近づくことを証明せよ。
+
+*4 Laplace 分布での中央値
+Laplace 分布 $\frac{1}{2}e^{-|x-\theta|}$ の Fisher 情報量が $1$ であることを示し、標本中央値の漸近分散 $\frac{1}{n}$ が下界を漸近的に達成すること、標本平均に対する漸近相対効率が $2$ であることを証明せよ。
+
+*4 Hodges の超有効推定量
+$X_{i}\sim N(\theta,1)$ について $T_{n}=\bar X\mathbf{1}_{|\bar X|\ge n^{-1/4}}$ とすると、$nE_{\theta}(T_{n}-\theta)^{2}\to1$（$\theta\neq0$）、$\to0$（$\theta=0$）であることを証明し、Cramér–Rao の下界が漸近的にも破れうることを示せ（Hodges 1951）。
+
+*4 Hodges 推定量の局所的な振る舞い
+前問の $T_{n}$ について、$\theta_{n}=\frac{1}{2}n^{-1/4}$ とすると $nE_{\theta_{n}}(T_{n}-\theta_{n})^{2}\to\infty$ であることを示し、$\sup_{|\theta|\le C}nE_{\theta}(T_{n}-\theta)^{2}\to\infty$（局所最大リスクの発散）を証明せよ。超有効性の代償を説明せよ。
+
+*4 Cauchy 位置母数の推定
+Cauchy 位置母数族の Fisher 情報量が $\frac{1}{2}$ であることを示し、標本中央値の漸近分散が $\frac{\pi^{2}}{4n}$（したがって漸近効率 $\frac{8}{\pi^{2}}$）であることを、標本分位点の漸近正規性から証明せよ。
+
+*4 指数型分布族の平均母数
+指数型分布族 $h(x)\exp(\eta T(x)-A(\eta))$ で、平均母数 $\mu=A'(\eta)$ について $\bar T$ が有効推定量であり、自然母数 $\eta$ には（一般に）有効推定量が存在しないが、その最尤推定量は漸近的に下界を達成することを証明せよ。
+
+*3 独立な不偏推定量の最適な結合
+同じ $\theta$ の独立な不偏推定量 $T_{1},\dots,T_{k}$（分散 $v_{i}$ 既知）の一次結合 $\sum w_{i}T_{i}$（$\sum w_{i}=1$）で分散を最小にする重みが $w_{i}\propto\frac{1}{v_{i}}$ であり、最小分散が $\left(\sum\frac{1}{v_{i}}\right)^{-1}$ であることを証明せよ。
+
+*5 超有効点の集合は測度 0（Le Cam、Bahadur）
+$X_{i}\sim N(\theta,1)$ の推定量列 $T_{n}$ が、すべての $\theta$ で $\sqrt n(T_{n}-\theta)$ がある分布 $L_{\theta}$ に分布収束するなら、$\{\theta:L_{\theta}\ \text{の 2 次モーメント}<1\}$ は Lebesgue 測度 $0$ であることを、事前分布 $N(0,\tau^{2})$ のもとでの Bayes リスクとの比較で証明せよ（Le Cam 1953、Bahadur 1964 の簡略版）。
+
+=ch II-10　最尤推定量
+
+*3 最尤推定量の計算
+$N(\mu,\sigma^{2})$ の $(\mu,\sigma^{2})$、$\mathrm{Ber}(p)$、$\mathrm{Po}(\lambda)$、$\mathrm{Exp}(\lambda)$ の最尤推定量を求め、それが実際に尤度の大域的最大点であることを証明せよ。
+
+*3 一様分布の最尤推定
+$U(0,\theta)$ の最尤推定量 $X_{(n)}$ が偏りをもつことを示し、$U(\theta,\theta+1)$ では区間 $[X_{(n)}-1,X_{(1)}]$ のすべての点が最尤推定量となり一意でないことを証明せよ。
+
+*4 最尤推定量の不変性（Zehna）
+任意の関数 $g$ について、誘導尤度 $L^{*}(\eta)=\sup_{\theta:g(\theta)=\eta}L(\theta)$ の最大点が $g(\hat\theta)$ であることを示し、$g$ が単射でなくても「$g(\theta)$ の最尤推定量は $g(\hat\theta)$」が意味をもつことを証明せよ（Zehna 1966）。
+
+*4 指数型分布族の最尤推定
+自然指数型分布族で対数尤度が自然母数について狭義凹であることを示し、最尤推定量が存在するのは $\bar T$ が $T$ の凸台の内部にあるときに限り、そのとき尤度方程式 $\bar T=A'(\hat\eta)$ の一意解であることを証明せよ。
+
+*4 最尤推定量が存在しない例
+$\mathrm{Ber}(p)$（$p\in(0,1)$）で全観測が $0$ のとき最尤推定量が存在しないこと、正規混合 $\frac{1}{2}N(\mu_{1},\sigma_{1}^{2})+\frac{1}{2}N(\mu_{2},\sigma_{2}^{2})$ の尤度が非有界であることを証明せよ。
+
+*4 相対エントロピーと識別可能性
+識別可能な（$\theta\neq\theta_{0}\Rightarrow f_{\theta}\neq f_{\theta_{0}}$）分布族について、$E_{\theta_{0}}[\log f(X;\theta)]$ が $\theta=\theta_{0}$ で一意に最大になることを Jensen の不等式で証明せよ。これが最尤法の正当化の出発点であることを説明せよ。
+
+*4 有限母数空間での一致性
+母数空間が有限集合で分布族が識別可能なら、最尤推定量が真の値に確率 1 で（十分大きな $n$ から先）一致することを、大数の強法則と前問から証明せよ。
+
+*4 Neyman–Scott の問題
+$X_{i1},X_{i2}\sim N(\mu_{i},\sigma^{2})$（$i=1,\dots,n$、すべて独立）で局外母数 $\mu_{i}$ の個数が $n$ とともに増えるとき、$\sigma^{2}$ の最尤推定量が $\frac{\sigma^{2}}{2}$ に収束し一致性をもたないことを証明せよ（Neyman–Scott 1948）。
+
+*4 最尤推定量と十分統計量
+最尤推定量が一意に存在すれば、それは任意の十分統計量の関数であることを因子分解定理（大問 {{R:factorization}}）から証明せよ。最尤推定量そのものは十分統計量とは限らない例を挙げよ。
+
+*4 arg max の連続写像定理
+母数空間上の確率的な関数 $M_{n}$ と確定的な関数 $M$ について、$\sup_{\theta}|M_{n}(\theta)-M(\theta)|\to0$（確率収束）で、$M$ が $\theta_{0}$ で分離した最大値をもつ（$\sup_{|\theta-\theta_{0}|\ge\varepsilon}M(\theta)<M(\theta_{0})$）なら、$M_{n}$ の近似最大点 $\hat\theta_{n}$ は $\theta_{0}$ に確率収束することを証明せよ。
+
+*5 一様大数の法則
+コンパクトな母数空間 $\Theta$ 上で $\theta\mapsto g(x,\theta)$ が連続で、$E\sup_{\theta}|g(X,\theta)|<\infty$ なら、$\sup_{\theta\in\Theta}\left|\frac{1}{n}\sum g(X_{i},\theta)-E[g(X,\theta)]\right|\to0$（概収束）を、有限被覆と単調収束定理で証明せよ（Le Cam 1953、Jennrich 1969）。
+
+*5 Wald の一致性定理
+コンパクトな母数空間、識別可能性、$\log f(x;\theta)$ の $\theta$ についての上半連続性と可積分な上界の条件のもとで、最尤推定量が強一致的（$\hat\theta_{n}\to\theta_{0}$ 概収束）であることを証明せよ（Wald 1949）。
+
+=ch II-11　最尤推定量の計算と漸近理論
+
+*3 Newton–Raphson 法と Fisher のスコア法
+尤度方程式を解く Newton–Raphson 法 $\theta_{k+1}=\theta_{k}-\frac{\ell'(\theta_{k})}{\ell''(\theta_{k})}$ と Fisher のスコア法 $\theta_{k+1}=\theta_{k}+\frac{\ell'(\theta_{k})}{nI(\theta_{k})}$ を導き、自然指数型分布族で両者が一致することを証明せよ。
+
+*3 正規線形回帰の最尤推定
+$Y=X\beta+\varepsilon$、$\varepsilon\sim N(0,\sigma^{2}I)$ で $\beta$ の最尤推定量が最小二乗推定量 $(X^{\top}X)^{-1}X^{\top}Y$ に一致し、$\sigma^{2}$ の最尤推定量が残差平方和を $n$ で割ったもの（偏りあり）であることを証明せよ。
+
+*4 EM アルゴリズムの単調性
+完全データ $(X,Z)$ の尤度を用いた EM アルゴリズム（E ステップ：$Q(\theta|\theta_{k})=E_{\theta_{k}}[\log f(X,Z;\theta)|X]$、M ステップ：$Q$ の最大化）で観測データの尤度が単調非減少であることを、Jensen の不等式で証明せよ（Dempster–Laird–Rubin 1977）。
+
+*4 正規混合の EM アルゴリズム
+2 成分の正規混合 $\pi N(\mu_{1},\sigma_{1}^{2})+(1-\pi)N(\mu_{2},\sigma_{2}^{2})$ について、所属を潜在変数とした EM アルゴリズムの更新式（事後所属確率による重み付き平均と分散）を導出せよ。
+
+*4 遺伝的連鎖の例（Rao の多項モデル）
+4 区分の多項分布で確率が $\left(\frac{1}{2}+\frac{\theta}{4},\frac{1-\theta}{4},\frac{1-\theta}{4},\frac{\theta}{4}\right)$ のとき、第 1 区分を二つに分ける潜在変数を導入した EM 反復を導き、それが尤度方程式の解に収束することを証明せよ。
+
+*4 尤度方程式の解の局所的一致性（Cramér）
+正則条件のもとで、確率が $1$ に近づく事象上で尤度方程式は $\theta_{0}$ の任意の近傍に解をもち、そのような解の列が $\theta_{0}$ に確率収束することを証明せよ（Cramér 1946）。
+
+*4 最尤推定量の漸近正規性（1 母数） {mle-an}
+Cramér の正則条件のもとで、一致的な尤度方程式の解 $\hat\theta_{n}$ について $\sqrt n(\hat\theta_{n}-\theta_{0})\to N\left(0,\frac{1}{I(\theta_{0})}\right)$ を、スコアの Taylor 展開、中心極限定理、Slutsky の定理で証明せよ。
+
+*4 観測情報量と Wald 信頼区間
+観測情報量 $-\frac{1}{n}\ell''(\hat\theta_{n})$ が $I(\theta_{0})$ の一致推定量であることを示し、$\hat\theta_{n}\pm\frac{z_{\alpha/2}}{\sqrt{-\ell''(\hat\theta_{n})}}$ の被覆確率が $1-\alpha$ に収束することを証明せよ。
+
+*4 ガンマ分布の最尤推定
+ガンマ分布 $\mathrm{Ga}(\alpha,\lambda)$ の最尤推定で、形状母数が方程式 $\log\alpha-\psi(\alpha)=\log\bar X-\overline{\log X}$（$\psi$ はディガンマ関数）の解として一意に定まることを、右辺が正であること（相加相乗平均の不等式）と左辺の単調性から証明せよ。
+
+*5 1 ステップ推定量
+$\sqrt n$-一致推定量 $\tilde\theta_{n}$ から Newton 法を 1 回だけ行った $\hat\theta_{n}=\tilde\theta_{n}-\frac{\ell'(\tilde\theta_{n})}{\ell''(\tilde\theta_{n})}$ が、最尤推定量と同じ漸近分布 $N(0,\frac{1}{I(\theta_{0})})$ をもつことを証明せよ（Le Cam 1956）。Cauchy 位置母数で中央値から出発する例に適用せよ。
+
+*4 Cauchy 位置母数の尤度方程式
+Cauchy 位置母数族の尤度方程式が多くの根をもちうること（$n$ 個の観測で最大 $2n-1$ 個）を示し、局所最大点の個数の期待値が $n\to\infty$ で有界であること（Reeds 1985）を述べよ。標本中央値に最も近い根が一致推定量であることを、大問 {{R:mle-an}} と前問の考え方で論ぜよ。
+
+*5 最尤推定量の漸近有効性（多母数）
+多母数の正則条件のもとで、一致的な最尤推定量について $\sqrt n(\hat\theta_{n}-\theta_{0})\to N_{k}(0,I(\theta_{0})^{-1})$ を証明し、Hodges の例が示すように「すべての推定量のなかで最良」とは言えないが、正則な推定量のなかでは漸近分散が最小であること（Hájek の畳み込み定理）の意味を述べよ（Fisher 1925、Cramér 1946）。

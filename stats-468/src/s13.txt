@@ -1,0 +1,113 @@
+=ch III-11　最小二乗法 ― 係数の検定と線形仮説の検定
+
+*3 正規方程式と射影
+$Y=X\beta+\varepsilon$（$X$ は $n\times p$、階数 $p$）の最小二乗推定量が $\hat\beta=(X^{\top}X)^{-1}X^{\top}Y$ であり、ハット行列 $H=X(X^{\top}X)^{-1}X^{\top}$ が列空間への直交射影（対称かつ冪等）で、残差 $e=(I-H)Y$ が $X$ の列と直交することを証明せよ。
+
+*3 最小二乗推定量の平均と分散
+$E[\varepsilon]=0$、$\mathrm{Cov}(\varepsilon)=\sigma^{2}I$ のもとで $E[\hat\beta]=\beta$、$\mathrm{Cov}(\hat\beta)=\sigma^{2}(X^{\top}X)^{-1}$、$E[\mathrm{RSS}]=(n-p)\sigma^{2}$ を証明し、$s^{2}=\frac{\mathrm{RSS}}{n-p}$ が $\sigma^{2}$ の不偏推定量であることを示せ。
+
+*4 正規誤差のもとでの分布
+$\varepsilon\sim N(0,\sigma^{2}I)$ なら $\hat\beta\sim N(\beta,\sigma^{2}(X^{\top}X)^{-1})$、$\frac{\mathrm{RSS}}{\sigma^{2}}\sim\chi^{2}_{n-p}$ で、$\hat\beta$ と $\mathrm{RSS}$ が独立であることを、$H$ と $I-H$ への分解と Cochran の定理から証明せよ。
+
+*4 個々の係数の $t$ 検定
+$c_{jj}$ を $(X^{\top}X)^{-1}$ の対角成分とすると $\frac{\hat\beta_{j}-\beta_{j}}{s\sqrt{c_{jj}}}\sim t_{n-p}$ を示し、「係数が $0$ でない」ことの検定と $\beta_{j}$ の信頼区間を構成せよ。
+
+*4 制約つき最小二乗
+線形制約 $C\beta=d$（$C$ は $q\times p$、階数 $q$）のもとでの最小二乗解が $\tilde\beta=\hat\beta-(X^{\top}X)^{-1}C^{\top}[C(X^{\top}X)^{-1}C^{\top}]^{-1}(C\hat\beta-d)$ であることを、Lagrange の未定乗数法で証明せよ。
+
+*4 残差平方和の増分
+前問の制約つき解の残差平方和 $\mathrm{RSS}_{0}$ について $\mathrm{RSS}_{0}-\mathrm{RSS}=(C\hat\beta-d)^{\top}[C(X^{\top}X)^{-1}C^{\top}]^{-1}(C\hat\beta-d)$ を、Pythagoras の定理（射影の入れ子）で証明せよ。
+
+*4 尤度比検定としての $F$ 検定
+正規線形モデルで線形仮説 $H_{0}:C\beta=d$ の一般化尤度比が $\Lambda=\left(\frac{\mathrm{RSS}}{\mathrm{RSS}_{0}}\right)^{n/2}$ であり、尤度比検定が $F$ 検定に一致することを証明せよ。
+
+*4 決定係数と全体の $F$ 検定
+切片を含むモデルで「切片以外の係数がすべて $0$」の $F$ 統計量が $\frac{R^{2}/(p-1)}{(1-R^{2})/(n-p)}$ に等しいことを証明せよ。$R^{2}$ が説明変数を加えると減少しないことを示せ。
+
+*4 信頼楕円体と Working–Hotelling の信頼帯
+$\{\beta:(\beta-\hat\beta)^{\top}X^{\top}X(\beta-\hat\beta)\le ps^{2}F_{p,n-p,\alpha}\}$ が $\beta$ の信頼係数 $1-\alpha$ の信頼楕円体であることを示し、単回帰の回帰直線全体に対する同時信頼帯 $\hat y(x)\pm\sqrt{2F_{2,n-2,\alpha}}\,s\sqrt{\frac{1}{n}+\frac{(x-\bar x)^{2}}{S_{xx}}}$ を導け（Working–Hotelling 1929）。
+
+*4 予測区間
+新しい説明変数 $x_{0}$ での将来の観測 $Y_{0}$ に対する予測区間 $x_{0}^{\top}\hat\beta\pm t_{n-p,\alpha/2}\,s\sqrt{1+x_{0}^{\top}(X^{\top}X)^{-1}x_{0}}$ の被覆確率がちょうど $1-\alpha$ であることを証明し、平均応答の信頼区間との違いを説明せよ。
+
+*4 対立仮説のもとでの $F$ 統計量
+$C\beta\neq d$ のとき、線形仮説の $F$ 統計量が非心度 $\lambda=\frac{(C\beta-d)^{\top}[C(X^{\top}X)^{-1}C^{\top}]^{-1}(C\beta-d)}{\sigma^{2}}$ の非心 $F$ 分布に従うことを示し、検出力が $\lambda$ の増加関数であることを証明せよ。
+
+*5 線形仮説の $F$ 検定 {f-test}
+正規線形モデルで $H_{0}:C\beta=d$ のもとで $F=\frac{(\mathrm{RSS}_{0}-\mathrm{RSS})/q}{\mathrm{RSS}/(n-p)}\sim F(q,n-p)$ を、分子と分母が独立な $\chi^{2}$ であることを射影の直交分解から示して証明せよ。分散分析・回帰の係数の検定・$t$ 検定がすべてこの特別な場合であることを説明せよ。
+
+=ch III-12　最小二乗法の事例 ― 回帰診断と推定量の最良性
+
+*3 単回帰の公式
+単回帰 $y=\beta_{0}+\beta_{1}x$ の最小二乗推定量が $\hat\beta_{1}=\frac{S_{xy}}{S_{xx}}=r\frac{s_{y}}{s_{x}}$、$\hat\beta_{0}=\bar y-\hat\beta_{1}\bar x$ であり、決定係数が相関係数の 2 乗 $r^{2}$ に等しいことを証明せよ。
+
+*5 Gauss–Markov の定理
+$E[\varepsilon]=0$、$\mathrm{Cov}(\varepsilon)=\sigma^{2}I$ のもとで、$\beta$ の任意の線形不偏推定量 $\tilde\beta=AY$ について $\mathrm{Cov}(\tilde\beta)-\mathrm{Cov}(\hat\beta)$ が半正定値であること（最小二乗推定量が最良線形不偏推定量 BLUE であること）を証明せよ（Gauss 1821、Markov 1900）。正規性が不要であることを強調せよ。
+
+*4 一般化最小二乗（Aitken の定理）
+$\mathrm{Cov}(\varepsilon)=\sigma^{2}V$（$V$ は既知の正定値行列）なら、$\hat\beta_{GLS}=(X^{\top}V^{-1}X)^{-1}X^{\top}V^{-1}Y$ が BLUE であることを、$V^{-1/2}$ による変換で Gauss–Markov の定理に帰着して証明せよ（Aitken 1935）。
+
+*4 Frisch–Waugh–Lovell の定理
+$Y=X_{1}\beta_{1}+X_{2}\beta_{2}+\varepsilon$ で、$\hat\beta_{2}$ が「$Y$ と $X_{2}$ をそれぞれ $X_{1}$ に回帰した残差どうしの回帰係数」に等しく、残差も一致することを、射影 $M_{1}=I-X_{1}(X_{1}^{\top}X_{1})^{-1}X_{1}^{\top}$ を用いて証明せよ（Frisch–Waugh 1933、Lovell 1963）。
+
+*4 てこ比の性質
+ハット行列の対角成分（てこ比）$h_{ii}$ について $0\le h_{ii}\le1$、$\sum h_{ii}=p$、切片を含むモデルでは $h_{ii}\ge\frac{1}{n}$ を示し、$\mathrm{Var}(e_{i})=\sigma^{2}(1-h_{ii})$ を証明せよ。
+
+*4 1 個抜きの公式と PRESS
+$i$ 番目の観測を除いた推定量について $\hat\beta-\hat\beta_{(i)}=\frac{(X^{\top}X)^{-1}x_{i}e_{i}}{1-h_{ii}}$ を Sherman–Morrison の公式で証明し、交差検証の予測誤差平方和が $\mathrm{PRESS}=\sum\left(\frac{e_{i}}{1-h_{ii}}\right)^{2}$ と一回の当てはめから計算できることを示せ。
+
+*4 Cook の距離
+Cook の距離 $D_{i}=\frac{(\hat\beta-\hat\beta_{(i)})^{\top}X^{\top}X(\hat\beta-\hat\beta_{(i)})}{ps^{2}}$ が $\frac{e_{i}^{2}}{ps^{2}}\frac{h_{ii}}{(1-h_{ii})^{2}}$ に等しいことを前問から証明せよ（Cook 1977）。てこ比と残差の両方が影響を決めることを説明せよ。
+
+*4 変数の欠落による偏り
+真のモデルが $Y=X_{1}\beta_{1}+X_{2}\beta_{2}+\varepsilon$ のとき $X_{2}$ を欠落させた回帰の推定量の期待値が $\beta_{1}+(X_{1}^{\top}X_{1})^{-1}X_{1}^{\top}X_{2}\beta_{2}$ であることを示し、偏りが消える条件を述べよ。
+
+*4 多重共線性と分散拡大係数
+$\mathrm{Var}(\hat\beta_{j})=\frac{\sigma^{2}}{S_{jj}(1-R_{j}^{2})}$（$S_{jj}$ は $x_{j}$ の偏差平方和、$R_{j}^{2}$ は $x_{j}$ を他の説明変数に回帰した決定係数）を Frisch–Waugh–Lovell の定理から証明せよ。
+
+*4 平均への回帰（Galton）
+親子の身長 $(X,Y)$ が同じ周辺分布の 2 変量正規分布（相関 $\rho<1$）に従うとき、$E[Y-\mu|X=x]=\rho(x-\mu)$ で、背の高い親の子は平均すると親ほど高くないことを示し、逆向きの回帰 $E[X|Y]$ でも同じことが起きる（因果ではなく統計的現象である）ことを証明せよ（Galton 1886）。
+
+*4 不均一分散と頑健な標準誤差
+$\mathrm{Cov}(\varepsilon)=\mathrm{diag}(\sigma_{i}^{2})$ のとき、最小二乗推定量の共分散行列がサンドイッチ型 $(X^{\top}X)^{-1}X^{\top}\mathrm{diag}(\sigma_{i}^{2})X(X^{\top}X)^{-1}$ であることを示し、$\sigma_{i}^{2}$ を $e_{i}^{2}$ で置き換えた White の推定量が（適当な条件のもとで）一致的であることを証明せよ（White 1980）。
+
+*5 Hoerl–Kennard の定理
+リッジ推定量 $\hat\beta_{\lambda}=(X^{\top}X+\lambda I)^{-1}X^{\top}Y$ について、すべての $\beta,\sigma^{2}$ に対しある $\lambda>0$ が存在して $E|\hat\beta_{\lambda}-\beta|^{2}<E|\hat\beta-\beta|^{2}$ となることを、固有値分解による平均二乗誤差の表示 $\sum_{j}\frac{\sigma^{2}d_{j}+\lambda^{2}\gamma_{j}^{2}}{(d_{j}+\lambda)^{2}}$ を $\lambda=0$ で微分して証明せよ（Hoerl–Kennard 1970）。Gauss–Markov の定理と矛盾しない理由を述べよ。
+
+=ch III-13　最尤法による検定 ― 尤度比検定・スコア検定・Wald 検定
+
+*3 正規平均での三つの検定の一致
+$\sigma$ 既知の正規分布で $H_{0}:\mu=\mu_{0}$ の尤度比統計量 $2\log\frac{L(\hat\mu)}{L(\mu_{0})}$、スコア統計量 $\frac{U(\mu_{0})^{2}}{nI(\mu_{0})}$、Wald 統計量 $nI(\hat\mu)(\hat\mu-\mu_{0})^{2}$ がすべて $\frac{n(\bar X-\mu_{0})^{2}}{\sigma^{2}}$ に一致することを証明せよ。
+
+*3 Bernoulli 分布での三つの検定
+$\mathrm{Ber}(p)$ で $H_{0}:p=p_{0}$ の三つの統計量をそれぞれ計算し、スコア検定が $\frac{n(\hat p-p_{0})^{2}}{p_{0}(1-p_{0})}$、Wald 検定が $\frac{n(\hat p-p_{0})^{2}}{\hat p(1-\hat p)}$ であることを示せ。Wilson 区間と Wald 区間がそれぞれの反転であることを確かめよ。
+
+*4 対数尤度の局所漸近正規性 {lan}
+Cramér の正則条件のもとで $\ell_{n}(\theta_{0}+\frac{h}{\sqrt n})-\ell_{n}(\theta_{0})=h^{\top}\Delta_{n}-\frac{1}{2}h^{\top}I(\theta_{0})h+o_{P}(1)$、$\Delta_{n}=\frac{1}{\sqrt n}\nabla\ell_{n}(\theta_{0})\to N(0,I(\theta_{0}))$ を、2 次の Taylor 展開と大数の法則・中心極限定理で証明せよ（Le Cam 1960）。
+
+*4 スコア検定の漸近分布
+単純帰無仮説 $H_{0}:\theta=\theta_{0}$（$\theta\in\mathbb{R}^{k}$）のもとで、スコア統計量 $\frac{1}{n}\nabla\ell_{n}(\theta_{0})^{\top}I(\theta_{0})^{-1}\nabla\ell_{n}(\theta_{0})$ が $\chi^{2}_{k}$ に分布収束することを証明せよ（Rao 1948）。
+
+*4 Wald 検定の漸近分布
+最尤推定量の漸近正規性と $I(\hat\theta)\to I(\theta_{0})$（確率収束）から、Wald 統計量 $n(\hat\theta-\theta_{0})^{\top}I(\hat\theta)(\hat\theta-\theta_{0})$ が $\chi^{2}_{k}$ に分布収束することを証明せよ（Wald 1943）。
+
+*4 Wilks の定理（単純帰無仮説）
+単純帰無仮説のもとで $2\log\frac{L(\hat\theta)}{L(\theta_{0})}\to\chi^{2}_{k}$ を、対数尤度を $\hat\theta$ のまわりで 2 次まで展開して Wald 統計量との差が $o_{P}(1)$ であることを示して証明せよ。
+
+*4 三つの検定の漸近同等性
+単純帰無仮説のもとで、尤度比・スコア・Wald の三つの統計量の互いの差が $0$ に確率収束することを、大問 {{R:lan}} を用いて証明せよ。有限標本では三者が異なり、例えば正規線形モデルで Wald $\ge$ 尤度比 $\ge$ スコアとなることを示せ。
+
+*4 Wald 検定の再母数化に対する非不変性
+$H_{0}:\theta=1$ を $H_{0}:\theta^{r}=1$ と書き換えると、Wald 統計量の値が $r$ によって変わり、$r$ を選べば（同じデータで）任意に大きくも小さくもできることを例で示せ（Gregory–Veall 1985）。尤度比統計量とスコア統計量が再母数化で不変であることを証明せよ。
+
+*4 局外母数があるときのスコア検定
+$\theta=(\psi,\lambda)$ で $H_{0}:\psi=\psi_{0}$（$\psi\in\mathbb{R}^{q}$、$\lambda$ は局外母数）のスコア検定が、制約つき最尤推定量 $\tilde\lambda$ を用いて $\nabla_{\psi}\ell^{\top}\,[I^{\psi\psi}]\,\nabla_{\psi}\ell/n$（$I^{\psi\psi}$ は $I^{-1}$ の $\psi\psi$ ブロック）の形になり、$\chi^{2}_{q}$ に分布収束することを証明せよ。
+
+*5 局所対立仮説のもとでの三つの検定
+$\theta_{n}=\theta_{0}+\frac{h}{\sqrt n}$ のもとで、尤度比・スコア・Wald の三つの統計量がすべて非心度 $\lambda=h^{\top}I(\theta_{0})h$ の非心 $\chi^{2}_{k}$ に分布収束すること（局外母数がある場合は有効情報行列 $I_{\psi\psi}-I_{\psi\lambda}I_{\lambda\lambda}^{-1}I_{\lambda\psi}$ を用いた非心度）を、Le Cam の第 3 補題（あるいは LAN 展開と同時漸近正規性）を用いて証明せよ。
+
+*5 境界上の帰無仮説（Chernoff の定理）
+$\theta\in[0,\infty)$ で $H_{0}:\theta=0$（母数空間の境界）を検定するとき、正則条件のもとで尤度比統計量 $2\log\Lambda$ の極限分布が $\frac{1}{2}\chi^{2}_{0}+\frac{1}{2}\chi^{2}_{1}$（確率 $\frac{1}{2}$ で $0$、確率 $\frac{1}{2}$ で $\chi^{2}_{1}$）であることを証明せよ（Chernoff 1954）。分散成分が $0$ かどうかの検定への応用を述べよ。
+
+*5 Wilks の定理 {finale}
+$\Theta\subset\mathbb{R}^{k}$ の開集合で、帰無仮説が $q$ 個の滑らかな制約で定まる $(k-q)$ 次元の部分多様体 $\Theta_{0}$ のとき、正則条件のもとで、$\theta_{0}\in\Theta_{0}$ が真なら $2\log\frac{\sup_{\Theta}L}{\sup_{\Theta_{0}}L}\to\chi^{2}_{q}$ であることを、LAN 展開（大問 {{R:lan}}）により尤度比を正規平均の模型の二次形式に帰着し、射影の補題を適用して証明せよ（Wilks 1938）。$t$ 検定、分散分析の $F$ 検定（大問 {{R:f-test}}）、Pearson の $\chi^{2}$ 検定（大問 {{R:pearson}}）、分割表の独立性の検定が、すべてこの定理の具体例（あるいはその漸近同等物）であることを示し、本書の三科目で学んだ検定が一つの原理に統一されることを確かめよ。<strong>この一題をもって、本書 468 題を締めくくれ。</strong>

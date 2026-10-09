@@ -1,0 +1,113 @@
+=ch I-7　Bernoulli 試行と二項分布
+
+*3 二項分布の基本
+独立な $n$ 回の Bernoulli 試行の成功回数が二項分布 $\mathrm{Bin}(n,p)$ に従うことを示し、その平均 $np$ と分散 $np(1-p)$ を、指示関数の和として証明せよ。
+
+*3 二項分布の最頻値
+$\mathrm{Bin}(n,p)$ の確率関数の比 $\frac{P(X=k+1)}{P(X=k)}$ を計算して、最頻値が $\lfloor(n+1)p\rfloor$（$(n+1)p$ が整数なら二つ）であることを証明せよ。
+
+*4 二項分布の裾と不完全ベータ関数
+$X\sim\mathrm{Bin}(n,p)$ について $P(X\ge k)=\frac{n!}{(k-1)!(n-k)!}\int_{0}^{p}t^{k-1}(1-t)^{n-k}dt$ を、一様乱数の順序統計量の解釈（$U_{(k)}\le p\iff$ $p$ 以下の $U_{i}$ が $k$ 個以上）で証明せよ。
+
+*4 Bernstein 多項式と Weierstrass の近似定理
+$f\in C[0,1]$ について $B_{n}f(p)=E\left[f\left(\frac{X}{n}\right)\right]=\sum_{k}f\left(\frac{k}{n}\right)\binom{n}{k}p^{k}(1-p)^{n-k}$ が $f$ に一様収束することを、Chebyshev の不等式と一様連続性で証明せよ（Bernstein 1912）。
+
+*4 Stirling の公式（初等的証明）
+$n!\sim\sqrt{2\pi n}\left(\frac{n}{e}\right)^{n}$ を、$\log n!$ と $\int_{1}^{n}\log x\,dx$ の差の収束と Wallis の公式による定数の決定で証明せよ。
+
+*5 de Moivre–Laplace の局所極限定理 {local-lt}
+$0<p<1$ を固定し、$x_{k}=\frac{k-np}{\sqrt{np(1-p)}}$ とすると、$|x_{k}|\le A$ をみたす $k$ について一様に $\sqrt{np(1-p)}\,P(X=k)\to\frac{1}{\sqrt{2\pi}}e^{-x_{k}^{2}/2}$ であることを、Stirling の公式で証明せよ（de Moivre 1733、Laplace 1812）。
+
+*4 単純ランダムウォークの原点復帰確率
+対称な単純ランダムウォーク $S_{n}$ について $P(S_{2n}=0)=\binom{2n}{n}4^{-n}\sim\frac{1}{\sqrt{\pi n}}$ を示し、原点に戻る回数の期待値が無限大であることから、1 次元のランダムウォークが確率 1 で原点に無限回戻ることを証明せよ。
+
+*4 Penney のゲーム
+公正な硬貨投げで、パターン HH が初めて現れるまでの平均回数が 6、HT が初めて現れるまでの平均回数が 4 であることを、マルチンゲール（公正な賭けの累積）または状態の漸化式で証明せよ。HH と HT が等確率で現れるにもかかわらず待ち時間が違う理由を説明せよ。
+
+*5 逆正弦法則
+$2n$ 歩の対称ランダムウォークで最後に原点にいた時刻を $L_{2n}$ とすると $P(L_{2n}=2k)=P(S_{2k}=0)P(S_{2n-2k}=0)$ であることを示し、$P\left(\frac{L_{2n}}{2n}\le x\right)\to\frac{2}{\pi}\arcsin\sqrt x$ を証明せよ（Lévy 1939、Chung–Feller）。
+
+*4 非一様な Bernoulli 和の分散
+成功確率 $p_{1},\dots,p_{n}$ の独立な Bernoulli 変数の和について、平均 $\sum p_{i}=n\bar p$ を固定すると分散は $p_{i}=\bar p$ のとき最大になることを示し、Poisson 二項分布は同じ平均の二項分布より「集中している」ことを説明せよ。
+
+*4 二項分布の大偏差
+$\frac{1}{n}\log P(X\ge na)\to-\left(a\log\frac{a}{p}+(1-a)\log\frac{1-a}{1-p}\right)$（$p<a<1$）を、Stirling の公式を用いて直接（積率母関数を使わずに）証明せよ。
+
+*5 Pólya の再帰定理
+$\mathbb{Z}^{d}$ 上の単純対称ランダムウォークは、$d=1,2$ なら確率 1 で原点に戻り（再帰的）、$d\ge3$ なら確率 1 未満でしか戻らない（過渡的）ことを、原点にいる時間の期待値 $\sum_{n}P(S_{2n}=0)$ の収束・発散で判定して証明せよ（Pólya 1921）。
+
+=ch I-8　多項分布
+
+*3 多項分布の基本
+$n$ 回の独立試行で各回 $k$ 種類の結果が確率 $p_{1},\dots,p_{k}$ で起こるとき、度数 $(X_{1},\dots,X_{k})$ の確率関数を導き、各 $X_{i}\sim\mathrm{Bin}(n,p_{i})$、$\mathrm{Cov}(X_{i},X_{j})=-np_{i}p_{j}$（$i\neq j$）を証明せよ。
+
+*3 多項分布の条件付き分布
+$X_{k}=m$ を与えたときの $(X_{1},\dots,X_{k-1})$ の条件付き分布が、確率 $\frac{p_{i}}{1-p_{k}}$ の $n-m$ 回の多項分布であることを証明せよ。二項分布から多項分布を帰納的に導け。
+
+*4 Poisson 化
+独立な $N_{i}\sim\mathrm{Po}(\lambda p_{i})$（$i=1,\dots,k$）について、$\sum N_{i}=n$ を与えた $(N_{1},\dots,N_{k})$ の条件付き分布が多項分布 $\mathrm{Mult}(n;p_{1},\dots,p_{k})$ であることを証明せよ。逆に、$N\sim\mathrm{Po}(\lambda)$ 回の多項試行の度数が独立な Poisson 分布に従うことを示せ。
+
+*4 多項分布の共分散行列
+多項分布の共分散行列 $n\Sigma$（$\Sigma=\mathrm{diag}(p)-pp^{\top}$）が半正定値で階数 $k-1$ であり、$\Sigma\mathbf{1}=0$ であることを示せ。$\mathrm{diag}(p)^{-1}$ が $\Sigma$ の一般化逆行列（$\Sigma\,\mathrm{diag}(p)^{-1}\Sigma=\Sigma$）であることを証明せよ。
+
+*4 多項分布の中心極限定理 {mult-clt}
+$\frac{X-np}{\sqrt n}$ が多変量正規分布 $N(0,\Sigma)$ に分布収束することを、積率母関数の収束（あるいは Cramér–Wold の方法）で証明せよ。
+
+*4 空き箱の個数
+$n$ 個の玉を $N$ 個の箱に独立一様に入れるとき、空き箱の個数の期待値 $N(1-\frac{1}{N})^{n}$ と分散を求めよ。$n=N\log N+cN$ のとき空き箱の個数が平均 $e^{-c}$ の Poisson 分布に近づくことを、階乗モーメントの収束で示せ。
+
+*4 誕生日問題
+$N$ 日のなかから $n$ 人の誕生日を独立一様に選ぶとき、全員が異なる確率 $p_{n}=\prod_{k<n}(1-\frac{k}{N})$ について $p_{n}\le e^{-n(n-1)/(2N)}$ を示し、$n\sim\sqrt{2N\log2}$ で $p_{n}\to\frac{1}{2}$ となることを証明せよ。$N=365$ で $n=23$ のとき $p_{n}<\frac{1}{2}$ を確かめよ。
+
+*4 クーポン収集の集中
+$n$ 種類のクーポンの収集時間 $T_{n}$ について $\frac{T_{n}}{n\log n}\to1$（確率収束）を、平均と分散の評価と Chebyshev の不等式で証明せよ。
+
+*5 クーポン収集の Gumbel 極限（Erdős–Rényi）
+$P(T_{n}\le n\log n+cn)\to\exp(-e^{-c})$（$c\in\mathbb{R}$）を、未収集のクーポンの個数に包除原理を適用して証明せよ（Erdős–Rényi 1961）。
+
+*4 多項分布の最尤推定と Gibbs の不等式
+確率ベクトル $p,q$ について $\sum p_{i}\log\frac{p_{i}}{q_{i}}\ge0$（等号は $p=q$）を示し、多項分布の最尤推定量が相対度数 $\hat p=X/n$ であることを証明せよ。
+
+*4 型の数え上げ
+$k$ 文字のアルファベット上の長さ $n$ の系列について、型（各文字の相対度数）の個数が $\binom{n+k-1}{k-1}\le(n+1)^{k}$ 以下であること、型 $q$ の系列の個数 $|T_{q}|$ が $(n+1)^{-k}e^{nH(q)}\le|T_{q}|\le e^{nH(q)}$（$H$ はエントロピー）をみたすことを証明せよ。
+
+*5 Sanov の定理（有限アルファベット）
+i.i.d. 系列の経験分布 $\hat p_{n}$ と、確率単体の部分集合 $E$ で $E$ の閉包が $E$ の内部の閉包に等しいものについて $\lim\frac{1}{n}\log P(\hat p_{n}\in E)=-\inf_{q\in E}D(q\|p)$（$D$ は相対エントロピー）を、型の方法で証明せよ（Sanov 1957）。
+
+=ch I-9　Poisson 分布
+
+*3 二項分布の Poisson 極限
+$np_{n}\to\lambda$ なら $\mathrm{Bin}(n,p_{n})$ の確率関数が $\mathrm{Po}(\lambda)$ の確率関数 $e^{-\lambda}\frac{\lambda^{k}}{k!}$ に各点収束することを証明せよ。
+
+*3 Poisson 分布の再生性と分割
+独立な $\mathrm{Po}(\lambda)$ と $\mathrm{Po}(\mu)$ の和が $\mathrm{Po}(\lambda+\mu)$ であることを示し、$N\sim\mathrm{Po}(\lambda)$ の各点を確率 $p$ で独立に色分けすると、二色の個数が独立な $\mathrm{Po}(\lambda p)$、$\mathrm{Po}(\lambda(1-p))$ に従うこと（分割の独立性）を証明せよ。
+
+*4 Poisson 過程の構成
+独立な $\mathrm{Exp}(\lambda)$ の到着間隔で定めた計数過程 $N(t)$ について、$N(t)\sim\mathrm{Po}(\lambda t)$ であり、互いに交わらない区間の増分が独立であることを証明せよ。
+
+*4 到着時刻の条件付き分布
+$N(t)=n$ を与えたとき、Poisson 過程の $n$ 個の到着時刻が $[0,t]$ 上の一様分布の $n$ 個の独立標本の順序統計量と同分布であることを証明せよ。
+
+*4 Poisson 過程の公理的特徴づけ
+定常独立増分をもち、$P(N(h)=1)=\lambda h+o(h)$、$P(N(h)\ge2)=o(h)$ をみたす計数過程は強度 $\lambda$ の Poisson 過程であることを、$P(N(t)=k)$ の満たす微分方程式を解いて証明せよ。
+
+*4 稀な事象の法則
+独立な $\mathrm{Ber}(p_{n,i})$（$i=1,\dots,n$）の和について、$\max_{i}p_{n,i}\to0$、$\sum_{i}p_{n,i}\to\lambda$ なら和が $\mathrm{Po}(\lambda)$ に分布収束することを、確率母関数で証明せよ。
+
+*4 Poisson 分布とガンマ分布の関係
+$N\sim\mathrm{Po}(\lambda t)$ と $G\sim\mathrm{Ga}(k,\lambda)$ について $P(N\ge k)=P(G\le t)$ を、Poisson 過程の $k$ 番目の到着時刻の解釈と、部分積分による直接計算の二通りで証明せよ。
+
+*4 Poisson 分布の裾の評価
+$X\sim\mathrm{Po}(\lambda)$ と $\delta>0$ について $P(X\ge(1+\delta)\lambda)\le\left(\frac{e^{\delta}}{(1+\delta)^{1+\delta}}\right)^{\lambda}$ を Chernoff の方法で証明せよ。
+
+*4 待ち時間の逆説
+強度 $\lambda$ の Poisson 過程で、固定時刻 $t$ を含む到着間隔の長さの期待値が $t\to\infty$ で $\frac{2}{\lambda}$（平均到着間隔の 2 倍）に近づくことを証明し、「バスを待つ逆説」を説明せよ。
+
+*4 Poisson 確率母関数の零点 {po-pgf}
+$\mathrm{Po}(\lambda)$ の確率母関数 $e^{\lambda(s-1)}$ が零点をもたない位数 1 の整関数であることを確かめ、非負整数値の独立な確率変数 $X,Y$（$P(Y=0)>0$）が $X+Y\sim\mathrm{Po}(\lambda)$ をみたすなら、$X$ の確率母関数は零点をもたない整関数で $|G_{X}(s)|\le e^{\lambda(|s|-1)}/P(Y=0)$ をみたすことを示せ。
+
+*5 Le Cam の不等式
+独立な $\mathrm{Ber}(p_{i})$ の和 $S$ と $\lambda=\sum p_{i}$ について、全変動距離が $\sup_{A}|P(S\in A)-\mathrm{Po}(\lambda)(A)|\le\sum p_{i}^{2}$ をみたすことを、各 $\mathrm{Ber}(p_{i})$ と $\mathrm{Po}(p_{i})$ の最適な結合を用いて証明せよ（Le Cam 1960）。
+
+*5 Raikov の定理
+独立な確率変数 $X,Y$ の和が Poisson 分布に従うなら、$X$ と $Y$ はそれぞれ（定数だけずらした）Poisson 分布に従うことを、大問 {{R:po-pgf}} と Hadamard の因数分解定理（既知としてよい）を用いて証明せよ（Raikov 1938）。

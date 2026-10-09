@@ -1,0 +1,116 @@
+=ch I-13　正規分布の総合演習 ― 乱数とシミュレーション
+
+*3 逆関数法
+$U\sim U(0,1)$ と分布関数 $F$ について $F^{-1}(U)\sim F$（大問 {{R:quantile}}）を用いて、$-\frac{1}{\lambda}\log U\sim\mathrm{Exp}(\lambda)$、$\tan(\pi(U-\frac{1}{2}))$ が Cauchy 分布に従うことを示し、離散分布 $P(X=x_{k})=p_{k}$ を一つの一様乱数から生成する方法の正しさを証明せよ。
+
+*4 線形合同法の周期（Hull–Dobell の定理）
+$x_{n+1}\equiv ax_{n}+c\pmod m$ が任意の初期値で周期 $m$ をもつ $\iff$ (i) $\gcd(c,m)=1$、(ii) $m$ の任意の素因数が $a-1$ を割る、(iii) $4\mid m$ なら $4\mid a-1$、を証明せよ（Hull–Dobell 1962）。
+
+*4 Box–Muller 法と極座標法
+独立な $U_{1},U_{2}\sim U(0,1)$ について $\sqrt{-2\log U_{1}}\cos(2\pi U_{2})$ と $\sqrt{-2\log U_{1}}\sin(2\pi U_{2})$ が独立な $N(0,1)$ であることを変数変換で示し、単位円板上の一様点 $(V_{1},V_{2})$ を用いる Marsaglia の極座標法 $V_{i}\sqrt{-2\log S/S}$（$S=V_{1}^{2}+V_{2}^{2}$）の正しさを証明せよ（Box–Muller 1958、Marsaglia 1964）。
+
+*4 相関をもつ正規乱数の生成
+独立な $Z_{1},Z_{2}\sim N(0,1)$ から $(Z_{1},\rho Z_{1}+\sqrt{1-\rho^{2}}Z_{2})$ が相関 $\rho$ の 2 変量標準正規分布に従うことを示し、一般に $\Sigma=LL^{\top}$（Cholesky 分解）について $\mu+LZ\sim N_{p}(\mu,\Sigma)$ であることを証明せよ。
+
+*4 棄却法
+密度 $f\le Mg$ について、$Y\sim g$ と独立な $U$ をとり $U\le\frac{f(Y)}{Mg(Y)}$ なら $Y$ を採択することを繰り返すと、採択された値が密度 $f$ に従い、一回の採択に要する試行回数が平均 $M$ の幾何分布に従うことを証明せよ（von Neumann 1951）。
+
+*4 Monte Carlo 積分の誤差
+$\hat I_{n}=\frac{1}{n}\sum g(X_{i})$（$X_{i}\sim f$）が $I=\int gf$ の不偏推定量で分散 $\frac{\sigma^{2}}{n}$ をもつことを示し、$\hat I_{n}\pm z_{\alpha/2}\frac{\hat\sigma_{n}}{\sqrt n}$ の被覆確率が $n\to\infty$ で $1-\alpha$ に収束することを、中心極限定理と Slutsky の定理（第 II 部で証明するが、ここでは既知としてよい）から証明せよ。
+
+*4 重点サンプリング
+提案密度 $h$（$gf\neq0$ で $h>0$）について $\frac{1}{n}\sum\frac{g(Y_{i})f(Y_{i})}{h(Y_{i})}$（$Y_{i}\sim h$）が不偏であることを示し、分散を最小にする $h$ が $|g|f$ に比例すること、$g\ge0$ ならそのとき分散が $0$ になることを証明せよ。
+
+*4 対称変量法
+$g$ が単調なら $\mathrm{Cov}(g(U),g(1-U))\le0$ であることを Chebyshev の相関不等式から示し、$\frac{1}{2}(g(U)+g(1-U))$ の分散が独立な二標本の平均の分散以下であることを証明せよ。
+
+*4 制御変量法
+$E[C]$ が既知の制御変量 $C$ を用いた推定量 $g(X)-b(C-E[C])$ の分散を最小にする $b$ が $\frac{\mathrm{Cov}(g,C)}{\mathrm{Var}(C)}$ であり、そのとき分散が $(1-\rho^{2})$ 倍になることを証明せよ。
+
+*4 4 次モーメントによる強法則 {slln4}
+i.i.d. 列で $E[X^{4}]<\infty$ なら $E[(S_{n}-n\mu)^{4}]\le Cn^{2}$ を示し、Borel–Cantelli の補題から $\frac{S_{n}}{n}\to\mu$（概収束）を証明せよ。
+
+*4 Kolmogorov–Smirnov 統計量の分布の普遍性
+連続な分布関数 $F$ からの標本の経験分布関数 $F_{n}$ について、$\sup_{x}|F_{n}(x)-F(x)|$ の分布が $F$ によらない（一様分布の場合に等しい）ことを、確率積分変換で証明せよ。
+
+*5 Glivenko–Cantelli の定理
+i.i.d. 標本の経験分布関数 $F_{n}$ について $\sup_{x}|F_{n}(x)-F(x)|\to0$（概収束）を、有限個の分位点で区間を分割し、各点での強法則（大問 {{R:slln4}}）と単調性を組み合わせて証明せよ（Glivenko 1933、Cantelli 1933）。「統計学の基本定理」と呼ばれる理由を述べよ。
+
+=part 第 II 部　統計的推測 I ― 標本分布と推定 | SAMPLING DISTRIBUTIONS AND ESTIMATION &mdash; 157 to 312
+授業「統計的推測 I」の第 1〜13 回に対応する。変数変換、大数の法則と中心極限定理、カイ二乗・$t$・$F$ 分布、不偏性・一致性・有効性、最尤推定、検定の基本と最強力検定。その先に、Etemadi の強法則、Berry–Esseen の定理、Cochran と Geary の定理、Hotelling の $T^{2}$、Lehmann–Scheffé と Basu の定理、Stein のパラドックス、Wald の一致性定理、最尤推定量の漸近有効性、Neyman–Pearson の補題と Chernoff–Stein の補題が待つ。
+
+=ch II-1　確率変数の関数の分布 ― 変数変換と Jacobi 行列式
+
+*3 多変数の変数変換公式
+$X$ が開集合 $U\subset\mathbb{R}^{n}$ 上の密度 $f$ をもち、$g:U\to V$ が $C^{1}$ 級の全単射で逆写像も $C^{1}$ なら、$Y=g(X)$ の密度が $f(g^{-1}(y))\,|\det Dg^{-1}(y)|$ であることを、多重積分の変数変換公式から証明せよ。
+
+*3 積と商の分布
+独立な $X,Y$（密度 $f,g$）について、$XY$ と $X/Y$ の密度が $\int f(x)g(z/x)\frac{dx}{|x|}$、$\int f(zy)g(y)|y|\,dy$ であることを、補助変数を加えた変換で証明せよ。独立な $\mathrm{Exp}(1)$ の比の分布を求めよ。
+
+*4 正規分布の極座標
+独立な $X,Y\sim N(0,1)$ について、$R^{2}=X^{2}+Y^{2}\sim\mathrm{Exp}(\frac{1}{2})$、$\Theta\sim U(0,2\pi)$ で、両者が独立であることを証明せよ。Box–Muller 法の逆向きの主張であることを確かめよ。
+
+*4 高次元の極座標とカイ二乗分布
+独立な $Z_{1},\dots,Z_{n}\sim N(0,1)$ について、$|Z|^{2}$ の密度が球面の面積 $\frac{2\pi^{n/2}}{\Gamma(n/2)}$ を用いて $\chi^{2}_{n}$ の密度になることを示し、$|Z|$ と方向 $Z/|Z|$ が独立で、方向が単位球面上の一様分布に従うことを証明せよ。
+
+*4 二つの順序統計量の同時密度
+密度 $f$、分布関数 $F$ の i.i.d. 標本について、$(X_{(i)},X_{(j)})$（$i<j$）の同時密度が $\frac{n!}{(i-1)!(j-i-1)!(n-j)!}F(x)^{i-1}(F(y)-F(x))^{j-i-1}(1-F(y))^{n-j}f(x)f(y)$（$x<y$）であることを証明せよ。
+
+*4 一様標本の範囲
+$U(0,1)$ の $n$ 個の標本の範囲 $X_{(n)}-X_{(1)}$ の密度が $n(n-1)r^{n-2}(1-r)$（$0<r<1$）であることを前問から証明せよ。
+
+*4 Irwin–Hall 分布
+独立な $n$ 個の $U(0,1)$ の和の密度が $\frac{1}{(n-1)!}\sum_{k=0}^{\lfloor x\rfloor}(-1)^{k}\binom{n}{k}(x-k)^{n-1}$（$0\le x\le n$）であることを、帰納法と畳み込みで証明せよ。
+
+*4 Dirichlet 積分
+$a_{i}>0$ について $\int_{x_{i}\ge0,\ \sum x_{i}\le1}\prod_{i=1}^{n}x_{i}^{a_{i}-1}\,dx=\frac{\prod\Gamma(a_{i})}{\Gamma(1+\sum a_{i})}$ を、ガンマ分布の変数変換を用いて証明せよ。単体の体積 $\frac{1}{n!}$ を確かめよ。
+
+*4 指数分布の順序統計量の Rényi 表現 {renyi}
+i.i.d. な $\mathrm{Exp}(1)$ の順序統計量について、$X_{(k)}\overset{d}{=}\sum_{j=1}^{k}\frac{E_{j}}{n-j+1}$（$E_{j}$ は独立な $\mathrm{Exp}(1)$）、すなわち間隔 $(n-j+1)(X_{(j)}-X_{(j-1)})$ が独立な $\mathrm{Exp}(1)$ であることを、Jacobi 行列式の計算で証明せよ（Rényi 1953）。
+
+*4 一様順序統計量の指数表現
+独立な $E_{1},\dots,E_{n+1}\sim\mathrm{Exp}(1)$ について $\left(\frac{E_{1}+\cdots+E_{k}}{E_{1}+\cdots+E_{n+1}}\right)_{k=1}^{n}$ が $U(0,1)$ の $n$ 個の標本の順序統計量と同分布であることを証明せよ。
+
+*4 指数分布の最大値
+i.i.d. な $\mathrm{Exp}(1)$ の最大値 $M_{n}$ について $E[M_{n}]=H_{n}$、$\mathrm{Var}(M_{n})=\sum_{k\le n}\frac{1}{k^{2}}$ を Rényi 表現から示し、$P(M_{n}-\log n\le x)\to\exp(-e^{-x})$（Gumbel 分布）を証明せよ。
+
+*5 極値分布の三類型（Fisher–Tippett–Gnedenko）
+i.i.d. 標本の最大値を $a_{n}M_{n}+b_{n}$ と正規化して非退化な分布に収束するなら、その極限は Gumbel 型 $\exp(-e^{-x})$、Fréchet 型 $\exp(-x^{-\alpha})$、Weibull 型 $\exp(-(-x)^{\alpha})$ のいずれかであることの証明の骨格（極限分布の max-安定性からの関数方程式）を与え、指数分布・Pareto 分布・一様分布がそれぞれの型に収束することを証明せよ（Fisher–Tippett 1928、Gnedenko 1943）。
+
+=ch II-2　大数の弱法則とその先
+
+*3 Chebyshev の不等式と大数の弱法則
+i.i.d. 列で分散 $\sigma^{2}<\infty$ なら $P(|\bar X_{n}-\mu|\ge\varepsilon)\le\frac{\sigma^{2}}{n\varepsilon^{2}}$ を示し、$\bar X_{n}\to\mu$（確率収束）を証明せよ。
+
+*3 正規変数の和の分布（畳み込みによる証明）
+独立な $N(\mu_{1},\sigma_{1}^{2})$ と $N(\mu_{2},\sigma_{2}^{2})$ の和が $N(\mu_{1}+\mu_{2},\sigma_{1}^{2}+\sigma_{2}^{2})$ に従うことを、積率母関数を使わずに畳み込み積分の平方完成で証明せよ。
+
+*4 相関をもつ列の大数の法則
+$\mathrm{Var}(X_{i})\le C$ かつ $|\mathrm{Cov}(X_{i},X_{j})|\le c(|i-j|)$、$c(k)\to0$ なら $\bar X_{n}-\frac{1}{n}\sum E[X_{i}]\to0$（確率収束）を証明せよ。
+
+*4 確率収束の演算
+$X_{n}\to X$、$Y_{n}\to Y$（確率収束）なら $X_{n}+Y_{n}\to X+Y$、$X_{n}Y_{n}\to XY$ であり、連続関数 $g$ について $g(X_{n})\to g(X)$ であることを証明せよ（連続写像定理）。
+
+*5 Khinchin の大数の弱法則
+i.i.d. 列で $E|X|<\infty$（分散は有限と限らない）なら $\bar X_{n}\to\mu$（確率収束）を、切断 $X_{i}\mathbf{1}_{|X_{i}|\le n}$ と Chebyshev の不等式で証明せよ（Khinchin 1929）。
+
+*4 Cauchy 分布の標本平均
+i.i.d. な Cauchy 分布の標本平均がまた同じ Cauchy 分布に従うこと（したがって大数の法則が成り立たないこと）を、特性関数 $e^{-|t|}$ を用いて証明せよ。
+
+*5 St. Petersburg の逆説（Feller）
+確率 $2^{-k}$ で賞金 $2^{k}$ を得る賭け（期待値無限大）の i.i.d. 列の和 $S_{n}$ について $\frac{S_{n}}{n\log_{2}n}\to1$（確率収束）を、$n\log_{2}n$ で切断して証明せよ（Feller 1945）。概収束は成り立たないことを述べよ。
+
+*4 概収束と確率収束
+概収束なら確率収束することを示し、確率収束するが概収束しない例（$[0,1]$ 上の移動する区間の指示関数）を構成せよ。確率収束する列は概収束する部分列をもつことを証明せよ。
+
+*4 Kolmogorov の最大不等式
+独立で平均 0、分散有限な $X_{i}$ の部分和について $P\left(\max_{k\le n}|S_{k}|\ge\varepsilon\right)\le\frac{\mathrm{Var}(S_{n})}{\varepsilon^{2}}$ を証明せよ（Kolmogorov 1928）。
+
+*4 Kolmogorov の収束判定と Kronecker の補題
+独立で $\sum\mathrm{Var}(X_{n})<\infty$ なら $\sum(X_{n}-E[X_{n}])$ が概収束することを最大不等式から示し、Kronecker の補題を用いて $\sum\frac{\mathrm{Var}(X_{n})}{n^{2}}<\infty$ なら $\frac{S_{n}-E[S_{n}]}{n}\to0$（概収束）を証明せよ。
+
+*4 強法則の必要性
+i.i.d. 列について $E|X|<\infty\iff\sum P(|X|>n)<\infty$ を示し、$E|X|=\infty$ なら $\limsup\frac{|S_{n}|}{n}=\infty$（概収束）であることを Borel–Cantelli の第二補題で証明せよ。
+
+*5 Etemadi の大数の強法則
+二つずつ独立で同分布な列で $E|X|<\infty$ なら $\bar X_{n}\to\mu$（概収束）を、正部分と負部分に分け、切断と等比的な部分列 $k_{n}=\lfloor\alpha^{n}\rfloor$ 上の Chebyshev の評価、単調性による補間で証明せよ（Etemadi 1981）。

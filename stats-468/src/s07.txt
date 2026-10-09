@@ -1,0 +1,113 @@
+=ch II-6　点推定・区間推定・不偏推定量
+
+*3 標本平均と標本分散の不偏性
+$\bar X$ が $\mu$ の、$S^{2}$ が $\sigma^{2}$ の不偏推定量であることを示し、$S$ は $\sigma$ の不偏推定量でない（$E[S]<\sigma$）ことを Jensen の不等式で証明せよ。
+
+*3 枢軸量による区間推定
+$N(\mu,\sigma^{2})$（$\sigma$ 既知）について $\bar X\pm z_{\alpha/2}\frac{\sigma}{\sqrt n}$ の被覆確率がちょうど $1-\alpha$ であることを示し、一般に分布が母数によらない枢軸量 $Q(X,\theta)$ から信頼区間が作れることを証明せよ。指数分布の平均の信頼区間を $\chi^{2}$ 分布で構成せよ。
+
+*4 不偏推定の限界（二項分布）
+$X\sim\mathrm{Bin}(n,p)$ について、不偏推定量をもつ $p$ の関数はちょうど次数 $n$ 以下の多項式であることを示し、特に $\frac{1}{p}$ や $\frac{p}{1-p}$ には不偏推定量が存在しないことを証明せよ。
+
+*4 ばかげた不偏推定量
+$X\sim\mathrm{Po}(\lambda)$ の一つの観測から $e^{-2\lambda}$ を推定するとき、不偏推定量は $(-1)^{X}$ ただ一つであることを証明せよ。この推定量が $(0,1]$ に値をとる量を $\pm1$ で推定することの不合理を論ぜよ。
+
+*4 Fisher–Neyman の因子分解定理 {factorization}
+統計量 $T$ が $\theta$ の十分統計量（$T$ を与えた標本の条件付き分布が $\theta$ によらない）である $\iff$ 尤度が $f(x;\theta)=g(T(x);\theta)h(x)$ と分解できること、を離散の場合と密度の場合に証明せよ（Fisher 1922、Neyman 1935）。
+
+*4 最小十分統計量
+「$T(x)=T(y)\iff\frac{f(x;\theta)}{f(y;\theta)}$ が $\theta$ によらない」をみたす $T$ は最小十分統計量（他のすべての十分統計量の関数）であることを証明し、$N(\mu,\sigma^{2})$ で $(\bar X,S^{2})$、$U(0,\theta)$ で $X_{(n)}$、Cauchy 位置母数族で順序統計量全体が最小十分であることを示せ。
+
+*4 Rao–Blackwell の定理
+$T$ が十分統計量、$\delta$ が $g(\theta)$ の推定量なら、$\delta^{*}=E[\delta|T]$ は $\theta$ によらない統計量で、すべての $\theta$ について $E(\delta^{*}-g(\theta))^{2}\le E(\delta-g(\theta))^{2}$（$\delta$ が不偏なら $\delta^{*}$ も不偏）であることを証明せよ（Rao 1945、Blackwell 1947）。
+
+*4 指数型分布族の完備性
+$f(x;\theta)=h(x)\exp(\theta T(x)-A(\theta))$（$\theta$ が開区間を動く）について、$T$ が完備（$E_{\theta}[g(T)]=0\ \forall\theta\Rightarrow g(T)=0$ a.s.）であることを、Laplace 変換の一意性から証明せよ。
+
+*5 Lehmann–Scheffé の定理 {lehmann-scheffe}
+$T$ が完備十分統計量で $\delta(T)$ が $g(\theta)$ の不偏推定量なら、$\delta(T)$ は一様最小分散不偏推定量（UMVUE）であり、しかも一意であることを証明せよ（Lehmann–Scheffé 1950）。
+
+*4 UMVUE の計算
+Lehmann–Scheffé の定理を用いて、Poisson 分布の $e^{-\lambda}$ の UMVUE が $\left(1-\frac{1}{n}\right)^{\sum X_{i}}$、Bernoulli 分布の $p^{2}$ の UMVUE が $\frac{T(T-1)}{n(n-1)}$（$T=\sum X_{i}$）、$U(0,\theta)$ の $\theta$ の UMVUE が $\frac{n+1}{n}X_{(n)}$ であることを証明せよ。
+
+*4 補助統計量
+分布が母数によらない統計量（補助統計量）について、位置母数族で $X_{(n)}-X_{(1)}$ や $(X_{i}-\bar X)_{i}$ が、尺度母数族で $\frac{X_{1}}{X_{2}}$ が補助統計量であることを示せ。補助統計量が十分統計量と独立とは限らない例を挙げよ。
+
+*5 Basu の定理
+有界完備十分統計量 $T$ と補助統計量 $V$ は（すべての $\theta$ で）独立であることを証明せよ（Basu 1955）。これを用いて、正規分布で $\bar X$ と $S^{2}$ が独立であること、指数分布で $\sum X_{i}$ と $\frac{X_{1}}{\sum X_{i}}$ が独立であることを再証明せよ。
+
+=ch II-7　一致推定量と平均二乗誤差
+
+*3 平均二乗誤差の分解
+$\mathrm{MSE}(\hat\theta)=E(\hat\theta-\theta)^{2}=\mathrm{Var}(\hat\theta)+\mathrm{bias}(\hat\theta)^{2}$ を示し、$\mathrm{MSE}\to0$ なら $\hat\theta$ は一致推定量（確率収束）であることを証明せよ。
+
+*3 分散の推定量の比較
+$N(\mu,\sigma^{2})$ の標本について、$cS^{2}$ の形の推定量のうち平均二乗誤差を最小にするのは $c=\frac{n-1}{n+1}$（すなわち $\frac{1}{n+1}\sum(X_{i}-\bar X)^{2}$）であることを証明し、不偏推定量 $S^{2}$ も最尤推定量 $\frac{1}{n}\sum(X_{i}-\bar X)^{2}$ も MSE 最小でないことを確かめよ。
+
+*4 一致性と不偏性の独立性
+一致的だが偏りのある推定量と、不偏だが一致的でない推定量の例を挙げよ。さらに、一致推定量の列で $\mathrm{MSE}\not\to0$（さらには $\mathrm{MSE}=\infty$）となる例を構成せよ。
+
+*4 モーメント法の一致性
+モーメント $m_{k}(\theta)=E_{\theta}[X^{k}]$ が $\theta$ の連続な逆写像をもつとき、モーメント法推定量が一致的であることを大数の法則と連続写像定理で証明せよ。ガンマ分布の形状・尺度母数のモーメント推定量を求めよ。
+
+*4 デルタ法 {delta}
+$\sqrt n(T_{n}-\theta)\to N(0,\sigma^{2})$ で $g$ が $\theta$ で微分可能なら $\sqrt n(g(T_{n})-g(\theta))\to N(0,g'(\theta)^{2}\sigma^{2})$ を Slutsky の定理で証明し、多変量版 $\sqrt n(g(T_{n})-g(\theta))\to N(0,\nabla g^{\top}\Sigma\nabla g)$ を示せ。$g'(\theta)=0$ のときの二次のデルタ法も述べよ。
+
+*4 分散安定化変換
+デルタ法を用いて、$\sqrt n(\arcsin\sqrt{\hat p}-\arcsin\sqrt p)\to N(0,\frac{1}{4})$、$X\sim\mathrm{Po}(\lambda)$ で $\sqrt X-\sqrt\lambda\to N(0,\frac{1}{4})$（$\lambda\to\infty$）、2 変量正規の標本相関係数 $r$ について Fisher の $z$ 変換 $\sqrt n(\tanh^{-1}r-\tanh^{-1}\rho)\to N(0,1)$ を証明せよ。
+
+*5 標本分位点の漸近正規性
+分布関数 $F$ が $\xi_{p}=F^{-1}(p)$ で正の密度 $f(\xi_{p})$ をもつなら、標本 $p$ 分位点 $\hat\xi_{p}$ について $\sqrt n(\hat\xi_{p}-\xi_{p})\to N\left(0,\frac{p(1-p)}{f(\xi_{p})^{2}}\right)$ を、$P(\hat\xi_{p}\le x)$ を二項分布の確率として書き直して証明せよ。正規分布で標本中央値の標本平均に対する漸近相対効率が $\frac{2}{\pi}$ であることを導け。
+
+*5 一次元正規平均の許容性
+$X_{1},\dots,X_{n}\sim N(\theta,1)$ について、$\bar X$ は二乗損失で許容的（すべての $\theta$ でリスクが $\frac{1}{n}$ 以下で、ある $\theta$ で真に小さい推定量は存在しない）であることを、Cramér–Rao の不等式を偏りのある推定量に適用する方法（Hodges–Lehmann 1951）または Blyth の方法で証明せよ。
+
+*4 Stein の恒等式（多変量）
+$X\sim N_{p}(\theta,I)$ と弱微分可能な $g:\mathbb{R}^{p}\to\mathbb{R}^{p}$（適当な可積分性）について $E[(X-\theta)^{\top}g(X)]=E[\nabla\cdot g(X)]$ を、一次元の Stein の補題を各成分に適用して証明せよ。
+
+*4 Stein の不偏リスク推定量
+前問を用いて、推定量 $X+g(X)$ のリスクが $E|X+g(X)-\theta|^{2}=p+E\left[|g(X)|^{2}+2\nabla\cdot g(X)\right]$ であることを証明せよ（Stein 1981）。
+
+*4 James–Stein 推定量のリスク
+$p\ge3$ について $\delta_{JS}(X)=\left(1-\frac{p-2}{|X|^{2}}\right)X$ のリスクが $p-(p-2)^{2}E\left[\frac{1}{|X|^{2}}\right]$ であることを前問から証明せよ。
+
+*5 Stein のパラドックス
+$X\sim N_{p}(\theta,I)$、$p\ge3$ のとき、二乗損失のもとで $X$ は非許容的であり、James–Stein 推定量がすべての $\theta$ で真に小さいリスクをもつことを証明せよ（Stein 1956、James–Stein 1961）。正部分推定量 $\left(1-\frac{p-2}{|X|^{2}}\right)_{+}X$ がさらに James–Stein 推定量を改良することを示せ。
+
+=ch II-8　Cramér–Rao の限界と有効推定量
+
+*3 スコアと Fisher 情報量
+正則条件（微分と積分の交換、台が $\theta$ によらない）のもとで、スコア $U(\theta)=\frac{\partial}{\partial\theta}\log f(X;\theta)$ が $E_{\theta}[U]=0$ をみたし、Fisher 情報量が $I(\theta)=\mathrm{Var}_{\theta}(U)=-E_{\theta}\left[\frac{\partial^{2}}{\partial\theta^{2}}\log f\right]$ であることを証明せよ。
+
+*3 Fisher 情報量の計算
+$n$ 個の i.i.d. 標本の Fisher 情報量が $nI(\theta)$ であることを示し、$N(\mu,\sigma^{2})$（$\sigma$ 既知）、$\mathrm{Ber}(p)$、$\mathrm{Po}(\lambda)$、$\mathrm{Exp}$（平均 $\theta$）の Fisher 情報量を計算せよ。
+
+*4 Cramér–Rao の不等式 {cramer-rao}
+正則条件のもとで、$\theta$ の任意の不偏推定量 $T$ について $\mathrm{Var}_{\theta}(T)\ge\frac{1}{nI(\theta)}$ を、$\mathrm{Cov}(T,U)=1$ と Cauchy–Schwarz の不等式から証明せよ（Cramér 1946、Rao 1945、Fréchet 1943）。
+
+*4 偏りのある推定量と関数の推定
+$E_{\theta}[T]=g(\theta)$ なら $\mathrm{Var}_{\theta}(T)\ge\frac{g'(\theta)^{2}}{nI(\theta)}$ を示し、偏り $b(\theta)$ をもつ推定量について $\mathrm{MSE}\ge\frac{(1+b'(\theta))^{2}}{nI(\theta)}+b(\theta)^{2}$ を証明せよ。
+
+*4 Cramér–Rao の不等式の等号条件
+不偏推定量 $T$ が Cramér–Rao の下界を達成する $\iff$ スコアが $U(\theta)=a(\theta)(T-g(\theta))$ と表される、を Cauchy–Schwarz の等号条件から証明せよ。
+
+*4 多母数の Cramér–Rao の不等式
+$\theta\in\mathbb{R}^{k}$ で Fisher 情報行列 $I(\theta)$ が正定値なら、$E[T]=g(\theta)$ をみたす推定量について $\mathrm{Cov}(T)\succeq\frac{1}{n}\nabla g^{\top}I(\theta)^{-1}\nabla g$（半正定値順序）を証明せよ。局外母数が未知だと情報が減ることを $N(\mu,\sigma^{2})$ で確かめよ。
+
+*4 位置母数族の Fisher 情報量
+位置母数族 $f(x-\theta)$ の Fisher 情報量が $\int\frac{f'(x)^{2}}{f(x)}dx$ で $\theta$ によらないことを示し、分散 $\sigma^{2}$ の密度について $I\ge\frac{1}{\sigma^{2}}$、等号が正規分布に限ることを Cauchy–Schwarz の不等式で証明せよ。再母数化 $\theta=h(\eta)$ のもとで $I_{\eta}=I_{\theta}h'(\eta)^{2}$ を示せ。
+
+*4 正則条件の破れ
+$U(0,\theta)$ の $\theta$ の UMVUE $\frac{n+1}{n}X_{(n)}$ の分散が $\frac{\theta^{2}}{n(n+2)}$ であり、「Cramér–Rao の下界」のオーダー $\frac{1}{n}$ より速く $0$ に近づくことを示し、どの正則条件が破れているかを説明せよ。
+
+*4 下界を達成しない UMVUE
+$N(\mu,\sigma^{2})$（ともに未知）で $S^{2}$ は $\sigma^{2}$ の UMVUE だがその分散 $\frac{2\sigma^{4}}{n-1}$ が Cramér–Rao の下界 $\frac{2\sigma^{4}}{n}$ より大きいこと、また $\sigma$ の UMVUE $\frac{S}{c_{n}}$ も下界を達成しないことを証明せよ。
+
+*4 Fisher 情報量と相対エントロピー
+正則条件のもとで $D(f_{\theta}\|f_{\theta+h})=\frac{1}{2}I(\theta)h^{2}+o(h^{2})$ を証明し、Fisher 情報量が「近い母数の分布の見分けやすさ」を測る量であることを説明せよ。
+
+*5 Stam の不等式（Fisher 情報量の畳み込み不等式）
+独立な $X,Y$（滑らかな密度をもつ）について $\frac{1}{I(X+Y)}\ge\frac{1}{I(X)}+\frac{1}{I(Y)}$ を、$X+Y$ のスコアが $X$ のスコアの条件付き期待値として表されることを用いて証明し、等号が正規分布に限ることを示せ（Stam 1959、Blachman 1965）。
+
+*5 有効推定量の存在と指数型分布族
+正則条件のもとで、$g(\theta)$ のある不偏推定量がすべての $\theta$ で Cramér–Rao の下界を達成する $\iff$ 分布族が指数型 $f(x;\theta)=h(x)\exp(c(\theta)T(x)-A(\theta))$ で、$g(\theta)=E_{\theta}[T]$（の一次関数）であることを、等号条件の微分方程式を積分して証明せよ（Darmois、Koopman、Pitman 1935–36）。
