@@ -1,0 +1,44 @@
+{
+ "title": "中高国語 一気読み教科書",
+ "cover_title": "中学国語 → 高校国語<br>超わかりやすい教科書",
+ "cover_sub": "漢字・文法 から 評論・古文・漢文・小論文 まで<br>「読み方のコツ」をイメージでつかむ全25章",
+ "color": "#2c6e49", "color2": "#4c956c", "subcolor": "#eaf4ee",
+ "drill_name": "一問一答ドリル",
+ "intro_html": "<h3>国語の全体地図</h3><table class='l w'><tr><th>柱</th><th>中学</th><th>高校</th></tr><tr><td><b>ことばの知識</b></td><td>漢字・語彙・文法（品詞・活用・敬語）</td><td>評論の重要語・古典文法・漢文の句形</td></tr><tr><td><b>読む（現代文）</b></td><td>説明文・小説・詩歌</td><td>評論・近代小説</td></tr><tr><td><b>読む（古典）</b></td><td>古文入門・漢文入門</td><td>古文読解・漢文読解・古典常識</td></tr><tr><td><b>書く</b></td><td>作文・意見文</td><td>小論文</td></tr></table><p><b>国語は「なんとなく」読む科目ではありません。</b>説明文なら「筆者の主張はどこか」、小説なら「心情はどこに表れているか」、古文なら「主語はだれか」──<b>決まった見方（型）</b>があります。この本ではその型を一つずつ身につけます。</p>",
+ "extra_css": ".kanbun { font-size:14pt; letter-spacing:.08em; background:#fbfaf3; border:1px solid #ddd; border-radius:4px; padding:2mm 4mm; margin:2mm 0; } .kanbun sub { font-size:9.5pt; font-weight:bold; color:#c0392b; vertical-align:-0.4em; margin:0 1px; } .kanbun sup { font-size:7.5pt; color:#1f5fa8; vertical-align:0.6em; } .koten { background:#fbfaf3; border-left:4px solid #b08d57; padding:2mm 4mm; margin:2mm 0; font-size:11pt; } .haiku { font-size:13pt; letter-spacing:.15em; }",
+ "parts": [
+  {"title": "第1部 中学国語", "sub": "ことばのしくみと、読む・書くの型をそろえる",
+   "intro": "<p>中学国語の土台は<b>文法（品詞・活用）</b>と<b>読み方の型</b>です。文法は古文を読むときにもそのまま使います。説明文・小説の読み方は、高校の評論・小説の基礎になります。</p>",
+   "chapters": [
+    {"no": 1, "title": "漢字のきほん", "tag": "中1"},
+    {"no": 2, "title": "語彙（熟語・四字熟語・ことわざ・慣用句）", "tag": "中1〜中3"},
+    {"no": 3, "title": "言葉の単位と文の成分", "tag": "中1"},
+    {"no": 4, "title": "品詞の分類", "tag": "中2"},
+    {"no": 5, "title": "用言の活用（動詞・形容詞・形容動詞）", "tag": "中2"},
+    {"no": 6, "title": "助詞と助動詞", "tag": "中2・中3"},
+    {"no": 7, "title": "敬語", "tag": "中2"},
+    {"no": 8, "title": "説明文・論説文の読み方", "tag": "中1〜中3"},
+    {"no": 9, "title": "小説・物語の読み方", "tag": "中1〜中3"},
+    {"no": 10, "title": "詩・短歌・俳句", "tag": "中1〜中3"},
+    {"no": 11, "title": "古文入門", "tag": "中1〜中3"},
+    {"no": 12, "title": "漢文入門", "tag": "中2・中3"},
+    {"no": 13, "title": "作文・意見文", "tag": "中1〜中3"}
+   ]},
+  {"title": "第2部 高校国語", "sub": "評論・近代小説・古典文法・漢文句形・小論文",
+   "intro": "<p>高校国語は<b>現代文（評論・小説）</b>と<b>古典（古文・漢文）</b>の2本立てです。現代文は「抽象と具体」「対比」を追う力、古典は「文法と単語で正確に訳す力」がカギになります。</p>",
+   "chapters": [
+    {"no": 14, "title": "評論の読み方", "tag": "高校"},
+    {"no": 15, "title": "評論の頻出テーマとキーワード", "tag": "高校"},
+    {"no": 16, "title": "近代小説の読み方と代表作", "tag": "高校"},
+    {"no": 17, "title": "古典文法①　用言の活用", "tag": "高校"},
+    {"no": 18, "title": "古典文法②　助動詞", "tag": "高校"},
+    {"no": 19, "title": "古典文法③　助詞と敬語", "tag": "高校"},
+    {"no": 20, "title": "古文読解の技術と和歌の修辞", "tag": "高校"},
+    {"no": 21, "title": "古典常識と古典文学史", "tag": "高校"},
+    {"no": 22, "title": "漢文の句形", "tag": "高校"},
+    {"no": 23, "title": "漢文読解・漢詩・思想", "tag": "高校"},
+    {"no": 24, "title": "小論文の書き方", "tag": "高校"},
+    {"no": 25, "title": "近代・現代の文学史", "tag": "高校"}
+   ]}
+ ]
+}
