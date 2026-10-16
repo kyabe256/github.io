@@ -1,0 +1,53 @@
+<!--CH 1-->
+<div class="pat"><h4>因数分解は「最も次数の低い文字」で整理</h4>
+<div class="when">文字が2種類以上ある式の因数分解で、公式がすぐ見えない。</div>
+<div class="how">①共通因数 → ②公式 → ③<b>次数の最も低い文字</b>について降べきの順に整理 → 係数を因数分解 → たすきがけ。次数が同じなら、どの文字でもよい（1つに決める）。</div>
+<div class="pex">$x^2+xy-2y^2+2x+7y-3$ を因数分解せよ。<br>
+<b>解</b>　$x$ について整理：$x^2+(y+2)x-(2y^2-7y+3)=x^2+(y+2)x-(2y-1)(y-3)$。たすきがけで $(x+2y-1)(x-y+3)$。</div>
+</div>
+
+<div class="pat"><h4>複2次式は「平方の差」を作る</h4>
+<div class="when">$x^4+px^2+q$ の形で、$x^2=t$ とおいても $t$ の式が因数分解できない。</div>
+<div class="how">$x^4$ と定数項から $(x^2+a)^2$ を作り、足りない・余る $x^2$ の項を $-(bx)^2$ の形にして $A^2-B^2=(A+B)(A-B)$。</div>
+<div class="pex">$x^4+4$ を因数分解せよ。<br>
+<b>解</b>　$x^4+4x^2+4-4x^2=(x^2+2)^2-(2x)^2=(x^2+2x+2)(x^2-2x+2)$</div>
+</div>
+
+<div class="pat"><h4>対称式の値は $x+y,\ xy$ に直す</h4>
+<div class="when">$x,y$ が無理数（$\sqrt{\ }$ を含む）や2次方程式の解で、$x^2+y^2,\ x^3+y^3,\ \frac yx+\frac xy$ などの値を求める。</div>
+<div class="how">まず $x+y$ と $xy$ を求める。次に<br>
+$x^2+y^2=(x+y)^2-2xy$、$x^3+y^3=(x+y)^3-3xy(x+y)$、$\frac yx+\frac xy=\frac{x^2+y^2}{xy}$、$x^4+y^4=(x^2+y^2)^2-2(xy)^2$。</div>
+<div class="pex">$x+\frac1x=3$ のとき $x^3+\frac1{x^3}$ を求めよ。<br>
+<b>解</b>　$x\cdot\frac1x=1$ なので $x^3+\frac1{x^3}=\left(x+\frac1x\right)^3-3\left(x+\frac1x\right)=27-9=18$</div>
+</div>
+
+<div class="pat"><h4>無理数の整数部分・小数部分</h4>
+<div class="when">「$\sqrt{\ }$ を含む数の整数部分を $a$、小数部分を $b$ とする」。</div>
+<div class="how">①有理化して形を整える → ②<b>平方数ではさむ</b>（$\sqrt{9}\lt\sqrt{10}\lt\sqrt{16}$ など）で整数部分 $a$ を決める → ③<b>小数部分 $b=$ もとの数 $-a$</b>（式のまま扱う）。</div>
+<div class="pex">$\sqrt{7}$ の小数部分を $b$ とするとき、$b^2+4b$ の値を求めよ。<br>
+<b>解</b>　$2\lt\sqrt7\lt3$ より $b=\sqrt7-2$。$b^2+4b=b(b+4)=(\sqrt7-2)(\sqrt7+2)=3$</div>
+<div class="pnote">小数部分は「0.645…」のような近似値ではなく、<b>$\sqrt7-2$ のような正確な式</b>で答える。</div>
+</div>
+
+<div class="pat"><h4>二重根号は「足して $a$、かけて $b$」</h4>
+<div class="when">$\sqrt{p\pm2\sqrt q}$ や $\sqrt{p\pm\sqrt q}$ の形。</div>
+<div class="how">$\sqrt{p\pm 2\sqrt q}$ は、<b>足して $p$、かけて $q$</b> になる2数 $a\gt b\gt 0$ を見つけて $\sqrt a\pm\sqrt b$。中が「$2\sqrt{\ }$」でないときは、$\sqrt{p+\sqrt q}=\sqrt{\frac{2p+2\sqrt q}{4}}$ のように分母分子に2をかけて「$2\sqrt{\ }$」を作る。</div>
+<div class="pex">$\sqrt{4-\sqrt{15}}$ を簡単にせよ。<br>
+<b>解</b>　$\sqrt{\frac{8-2\sqrt{15}}{2}}=\frac{\sqrt5-\sqrt3}{\sqrt2}=\frac{\sqrt{10}-\sqrt6}{2}$</div>
+<div class="pnote">マイナスのときは<b>大きい方を前</b>に（$\sqrt5-\sqrt3$）。逆にすると負の数になってしまう。</div>
+</div>
+
+<div class="pat"><h4>絶対値は「中身＝0」で場合分け、または距離で見る</h4>
+<div class="when">絶対値記号を含む方程式・不等式・関数。</div>
+<div class="how">①中身が0になる $x$ を境目に場合分けしてはずす（各場合の範囲に入るか確認）。②$|X|\lt B\iff -B\lt X\lt B$、$|X|\gt B\iff X\lt -B$ または $X\gt B$（$B$ が式でも成立）。③$|x-a|$ は数直線上の距離と見ると速い。</div>
+<div class="pex">$|x-2|\lt 3$ を満たす整数 $x$ の個数は？<br>
+<b>解</b>　$-3\lt x-2\lt 3$ より $-1\lt x\lt 5$。整数は $0,1,2,3,4$ の <b>5個</b>。</div>
+</div>
+
+<div class="pat"><h4>文字係数の1次不等式は係数の符号で3通り</h4>
+<div class="when">$ax\gt b$ のように、$x$ の係数に文字を含む不等式。</div>
+<div class="how">$a\gt0$ なら $x\gt\frac ba$、$a\lt0$ なら $x\lt\frac ba$（<b>不等号が逆向き</b>）、$a=0$ なら $0\cdot x\gt b$ となり、$b\lt0$ のときすべての実数、$b\geqq0$ のとき解なし。</div>
+<div class="pex">$ax+1\gt x+a^2$ を解け。<br>
+<b>解</b>　$(a-1)x\gt a^2-1=(a-1)(a+1)$。$a\gt1$ のとき $x\gt a+1$、$a\lt1$ のとき $x\lt a+1$、$a=1$ のとき $0\gt0$ で解なし。</div>
+<div class="pnote">文字で割るときは「0でないか」「正か負か」を必ず確認する。</div>
+</div>

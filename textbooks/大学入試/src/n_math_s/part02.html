@@ -1,0 +1,595 @@
+<!--CH 2-->
+<div class="pat"><h4>下に凸の最小値は「軸が区間の左・中・右」の3通り</h4>
+<div class="when">$f(x)=x^2-2ax+\cdots$ のように軸が文字を含み、決まった区間での最小値を求める。</div>
+<div class="how">①平方完成して軸 $x=a$ を出す。②区間 $p\leqq x\leqq q$ に対して、軸が<b>区間の左（$a\lt p$）・区間内（$p\leqq a\leqq q$）・区間の右（$a\gt q$）</b>で場合分け。③最小値はそれぞれ $f(p)$、頂点の値 $f(a)$、$f(q)$。上に凸のときの最大値も同じ考え方。</div>
+<div class="pex">$f(x)=x^2-2ax+3\ (0\leqq x\leqq 2)$ の最小値 $m(a)$ を求めよ。<br>
+<b>解</b>　$f(x)=(x-a)^2-a^2+3$。<br>
+$a\lt0$ のとき $m=f(0)=3$、$0\leqq a\leqq2$ のとき $m=f(a)=-a^2+3$、$a\gt2$ のとき $m=f(2)=7-4a$。</div>
+<div class="pnote">答えは $a$ の範囲ごとにまとめて書く。境目の $a=0,\ 2$ がどこかの場合に必ず含まれているか確認する。</div>
+</div>
+
+<div class="pat"><h4>下に凸の最大値は「軸と区間の中央」を比べる</h4>
+<div class="when">軸が動く下に凸の放物線で、区間での最大値を求める。</div>
+<div class="how">最大値は区間の両端のうち<b>軸から遠い方</b>でとる。区間の中央 $\frac{p+q}{2}$ と軸 $a$ を比べ、$a\lt\frac{p+q}2$ なら $f(q)$、$a\gt\frac{p+q}2$ なら $f(p)$、$a=\frac{p+q}{2}$ なら両端で最大。</div>
+<div class="pex">$f(x)=x^2-2ax+3\ (0\leqq x\leqq 2)$ の最大値 $M(a)$ を求めよ。<br>
+<b>解</b>　区間の中央は $x=1$。$a\lt1$ のとき $M=f(2)=7-4a$、$a=1$ のとき $M=f(0)=f(2)=3$、$a\gt1$ のとき $M=f(0)=3$。</div>
+</div>
+
+<div class="pat"><h4>区間が動くときは「区間をスライドさせて」場合分け</h4>
+<div class="when">$t\leqq x\leqq t+1$ のように、区間の方が文字を含む。</div>
+<div class="how">グラフ（軸）を固定し、区間を左から右へ動かして考える。最小値（下に凸）は「区間が軸より左（$t+1\lt$ 軸）」「区間が軸を含む」「区間が軸より右（$t\gt$ 軸）」の3通り。最大値は区間の中央 $t+\frac12$ と軸を比べる。</div>
+<div class="pex">$f(x)=x^2-4x+5\ (t\leqq x\leqq t+1)$ の最小値 $m(t)$ を求めよ。<br>
+<b>解</b>　$f(x)=(x-2)^2+1$、軸は $x=2$。<br>
+$t+1\lt2$ すなわち $t\lt1$ のとき $m=f(t+1)=t^2-2t+2$。<br>
+$t\leqq2\leqq t+1$ すなわち $1\leqq t\leqq2$ のとき $m=f(2)=1$。<br>
+$t\gt2$ のとき $m=f(t)=t^2-4t+5$。</div>
+</div>
+
+<div class="pat"><h4>解の配置は「判別式・軸・端点の値」の3条件</h4>
+<div class="when">2次方程式の解が「2つとも正」「2つとも $k$ より大きい」「$k$ をはさむ」など、解の位置に条件がある。</div>
+<div class="how">$f(x)$（$x^2$ の係数が正）のグラフをかいて条件を読む。<br>
+・異なる2解がともに $k$ より大きい：$D\gt0$、軸 $\gt k$、$f(k)\gt0$<br>
+・2解の間に $k$ がある（一方が $k$ より大、他方が $k$ より小）：$f(k)\lt0$ だけでよい<br>
+・異なる2解がともに $p\lt x\lt q$ にある：$D\gt0$、$p\lt$ 軸 $\lt q$、$f(p)\gt0$、$f(q)\gt0$</div>
+<div class="pex">$x^2-2ax+a+6=0$ が異なる2つの正の解をもつような $a$ の範囲を求めよ。<br>
+<b>解</b>　$f(x)=x^2-2ax+a+6$ とおく。$\frac D4=a^2-a-6=(a-3)(a+2)\gt0$ より $a\lt-2,\ 3\lt a$。軸 $x=a\gt0$。$f(0)=a+6\gt0$ より $a\gt-6$。共通部分をとって $\boldsymbol{a\gt3}$。</div>
+<div class="pnote">「正の解」は解と係数の関係（$\alpha+\beta\gt0,\ \alpha\beta\gt0$、第10章）でも処理できるが、「$k$ より大きい」型はグラフの3条件の方が確実。</div>
+</div>
+
+<div class="pat"><h4>「すべての実数 $x$ で成り立つ」は $x^2$ の係数と判別式</h4>
+<div class="when">$ax^2+bx+c\gt0$ がすべての実数 $x$ について成り立つ条件（絶対不等式）。</div>
+<div class="how">$a\gt0$ かつ $D\lt0$（$\geqq0$ なら $a\gt0$ かつ $D\leqq0$）。<b>$x^2$ の係数が文字のときは、係数 $=0$ の場合を別に調べる</b>（2次不等式でなくなるため）。</div>
+<div class="pex">すべての実数 $x$ について $ax^2+2ax+3\gt0$ が成り立つような $a$ の範囲を求めよ。<br>
+<b>解</b>　$a=0$ のとき $3\gt0$ となり成り立つ。$a\neq0$ のとき、$a\gt0$ かつ $\frac D4=a^2-3a\lt0$、すなわち $0\lt a\lt3$。合わせて $\boldsymbol{0\leqq a\lt3}$。</div>
+</div>
+
+<div class="pat"><h4>「区間でつねに成り立つ」は（最小値）$\gt0$ に言いかえる</h4>
+<div class="when">$p\leqq x\leqq q$ のすべての $x$ で $f(x)\gt0$ となる条件。</div>
+<div class="how">「区間での最小値 $\gt0$」と同じこと。最小値を軸の位置（区間の左・中・右）で場合分けして求め、<b>各場合の範囲との共通部分</b>をとり、最後にすべて合わせる。</div>
+<div class="pex">$0\leqq x\leqq2$ のすべての $x$ で $x^2-2ax+a+2\gt0$ となる $a$ の範囲を求めよ。<br>
+<b>解</b>　$f(x)=(x-a)^2-a^2+a+2$。<br>
+$a\lt0$ のとき：最小値 $f(0)=a+2\gt0$ より $-2\lt a\lt0$。<br>
+$0\leqq a\leqq2$ のとき：最小値 $-a^2+a+2=-(a-2)(a+1)\gt0$ より $-1\lt a\lt2$。よって $0\leqq a\lt2$。<br>
+$a\gt2$ のとき：最小値 $f(2)=6-3a\gt0$ より $a\lt2$ となり不適。<br>
+以上より $\boldsymbol{-2\lt a\lt2}$。</div>
+</div>
+
+<div class="pat"><h4>解の個数は「定数を分離」して横線との交点を数える</h4>
+<div class="when">$|x^2-2x-3|=k$ のように、定数 $k$ を含む方程式の実数解の個数。</div>
+<div class="how">$f(x)=k$ の形に変形し、$y=f(x)$ のグラフと<b>横線 $y=k$</b> の共有点の個数を数える。$k$ を上下に動かし、頂点や端点の高さが境目になる。絶対値のグラフは、$x$ 軸より下の部分を上に折り返す。</div>
+<div class="pex">方程式 $|x^2-2x-3|=k$ の異なる実数解の個数を、定数 $k$ の値によって分類せよ。
+<div class="two"><div><b>解</b>　$y=|(x-3)(x+1)|$ のグラフは、頂点 $(1,-4)$ のまわりが折り返されて $(1,4)$ の山になる（右図）。横線 $y=k$ との共有点を数えて<br>
+$k\lt0$ のとき <b>0個</b><br>$k=0$ のとき <b>2個</b><br>$0\lt k\lt4$ のとき <b>4個</b><br>$k=4$ のとき <b>3個</b><br>$k\gt4$ のとき <b>2個</b></div>
+<div style="flex:0 0 58mm"><svg class="fig" width="210" height="150" viewBox="0 0 210 150">
+<line x1="12.0" y1="123.8" x2="198.0" y2="123.8" stroke="#333" stroke-width="1"/>
+<line x1="76.8" y1="10.0" x2="76.8" y2="140.0" stroke="#333" stroke-width="1"/>
+<line x1="12.0" y1="51.5" x2="198.0" y2="51.5" stroke="#d9701e" stroke-width="1" stroke-dasharray="4,3"/>
+<line x1="12.0" y1="87.6" x2="198.0" y2="87.6" stroke="#2e8b57" stroke-width="1" stroke-dasharray="4,3"/>
+<path d="M20.5,33.5 L22.8,42.4 L25.2,51.0 L27.5,59.4 L29.8,67.6 L32.2,75.5 L34.5,83.1 L36.9,90.5 L39.2,97.7 L41.6,104.6 L43.9,111.2 L46.3,117.6 L48.6,123.8 L51.0,117.9 L53.3,112.2 L55.7,106.8 L58.0,101.7 L60.4,96.8 L62.7,92.2 L65.1,87.8 L67.4,83.6 L69.8,79.7 L72.1,76.1 L74.5,72.7 L76.8,69.6 L79.2,66.7 L81.5,64.1 L83.9,61.7 L86.2,59.6 L88.6,57.7 L90.9,56.0 L93.3,54.7 L95.6,53.5 L98.0,52.7 L100.3,52.0 L102.7,51.7 L105.0,51.5 L107.3,51.7 L109.7,52.0 L112.0,52.7 L114.4,53.5 L116.7,54.7 L119.1,56.0 L121.4,57.7 L123.8,59.6 L126.1,61.7 L128.5,64.1 L130.8,66.7 L133.2,69.6 L135.5,72.7 L137.9,76.1 L140.2,79.7 L142.6,83.6 L144.9,87.8 L147.3,92.2 L149.6,96.8 L152.0,101.7 L154.3,106.8 L156.7,112.2 L159.0,117.9 L161.4,123.8 L163.7,117.6 L166.1,111.2 L168.4,104.6 L170.8,97.7 L173.1,90.5 L175.5,83.1 L177.8,75.5 L180.2,67.6 L182.5,59.4 L184.8,51.0 L187.2,42.4 L189.5,33.5" fill="none" stroke="#1f3f8f" stroke-width="1.8"/>
+<text x="194.0" y="134.8" font-size="10" text-anchor="end">x</text>
+<text x="80.8" y="19.0" font-size="10">y</text>
+<text x="48.6" y="134.8" font-size="10" text-anchor="middle">−1</text>
+<text x="161.4" y="134.8" font-size="10" text-anchor="middle">3</text>
+<text x="73.8" y="134.8" font-size="10" text-anchor="end">O</text>
+<text x="105.0" y="47.5" font-size="10" text-anchor="middle">(1, 4)</text>
+<text x="145.9" y="48.5" font-size="10" fill="#d9701e">y=4</text>
+<text x="105.0" y="84.6" font-size="10" text-anchor="middle" fill="#2e8b57">y=k</text>
+</svg></div></div></div>
+</div>
+
+<div class="pat"><h4>条件つきの2変数は「1文字消去＋残る文字の変域」</h4>
+<div class="when">$x+2y=4$ などの条件のもとで、$x^2+y^2$ などの最大値・最小値。</div>
+<div class="how">条件式で1文字を消去し、1変数の2次関数にする。<b>消した文字の条件（$x\geqq0$ など）を、残った文字の変域に翻訳</b>するのを忘れない。</div>
+<div class="pex">$x\geqq0,\ y\geqq0,\ x+2y=4$ のとき、$x^2+y^2$ の最大値と最小値を求めよ。<br>
+<b>解</b>　$x=4-2y\geqq0$ より $0\leqq y\leqq2$。<br>
+$x^2+y^2=(4-2y)^2+y^2=5y^2-16y+16=5\left(y-\frac85\right)^2+\frac{16}5$。<br>
+$y=\frac85$（$x=\frac45$）で最小値 $\boldsymbol{\frac{16}{5}}$。端の値は $y=0$ で $16$、$y=2$ で $4$ なので、$y=0$（$x=4$）で最大値 $\boldsymbol{16}$。</div>
+</div>
+
+<div class="pat"><h4>置き換えたら、まず新しい文字の変域を求める</h4>
+<div class="when">$(x^2-2x)^2-2(x^2-2x)+3$ のように、同じ式のかたまりを含む4次関数など。</div>
+<div class="how">$t=x^2-2x$ とおき、<b>$x$ の区間から $t$ の変域を求めてから</b>、$t$ の2次関数として最大・最小を考える。最後にそのときの $x$ を求める。</div>
+<div class="pex">$y=(x^2-2x)^2-2(x^2-2x)+3\ (0\leqq x\leqq3)$ の最大値と最小値を求めよ。<br>
+<b>解</b>　$t=x^2-2x=(x-1)^2-1$ は、$0\leqq x\leqq3$ で $-1\leqq t\leqq3$。$y=t^2-2t+3=(t-1)^2+2$。<br>
+$t=1$ のとき最小値 $\boldsymbol{2}$（$x^2-2x-1=0$ より $x=1+\sqrt2$）。$t=-1,\ 3$ のとき最大値 $\boldsymbol{6}$（$x=1,\ 3$）。</div>
+<div class="pnote">$t$ の変域を $t\geqq-1$ だけにすると最大値が「なし」になってしまう。$x$ の区間の端も $t$ に反映させる。</div>
+</div>
+
+<div class="box memo"><table class="l w">
+<tr><th>項目</th><th>公式・事実</th></tr>
+<tr><td>平方完成</td><td>$ax^2+bx+c=a\left(x+\frac{b}{2a}\right)^2-\frac{b^2-4ac}{4a}$、軸 $x=-\frac{b}{2a}$</td></tr>
+<tr><td>判別式</td><td>$D=b^2-4ac$。$D\gt0$：異なる2つの実数解（$x$ 軸と2点）、$D=0$：重解（接する）、$D\lt0$：実数解なし</td></tr>
+<tr><td>平行移動</td><td>$y=f(x)$ を $x$ 軸方向に $p$、$y$ 軸方向に $q$：$y-q=f(x-p)$</td></tr>
+<tr><td>対称移動</td><td>$x$ 軸：$-y=f(x)$、$y$ 軸：$y=f(-x)$、原点：$-y=f(-x)$</td></tr>
+<tr><td>2次不等式</td><td>$a\gt0,\ \alpha\lt\beta$ のとき<br>$a(x-\alpha)(x-\beta)\gt0\iff x\lt\alpha,\ \beta\lt x$、$a(x-\alpha)(x-\beta)\lt0\iff\alpha\lt x\lt\beta$</td></tr>
+<tr><td>最大・最小</td><td>下に凸の最小値：軸が区間の左・内・右　　下に凸の最大値：軸と区間の中央の比較</td></tr>
+</table></div>
+
+<!--CH 3-->
+<div class="pat"><h4>正弦定理と余弦定理の使い分け</h4>
+<div class="when">三角形の辺・角・外接円の半径を求める。</div>
+<div class="how">・2辺とその間の角 → 余弦定理 $a^2=b^2+c^2-2bc\cos A$ で残りの辺<br>
+・3辺 → 余弦定理 $\cos A=\frac{b^2+c^2-a^2}{2bc}$ で角<br>
+・外接円の半径、または向かい合う「辺と角」の組が2つ → 正弦定理 $\frac{a}{\sin A}=2R$<br>
+まず図に「わかっているもの」と「求めるもの」を書き込んでから選ぶ。</div>
+<div class="pex">$\triangle\mathrm{ABC}$ で $a=7,\ b=5,\ c=3$ のとき、$A$ と外接円の半径 $R$ を求めよ。<br>
+<b>解</b>　$\cos A=\frac{25+9-49}{2\cdot5\cdot3}=-\frac12$ より $\boldsymbol{A=120^\circ}$。$2R=\frac{7}{\sin120^\circ}=\frac{14}{\sqrt3}$ より $\boldsymbol{R=\frac{7\sqrt3}{3}}$。</div>
+</div>
+
+<div class="pat"><h4>3辺から面積：$\cos\to\sin\to S$、内接円は $S=\frac12r(a+b+c)$</h4>
+<div class="when">3辺の長さがわかっている三角形の面積・内接円の半径。</div>
+<div class="how">①余弦定理で1つの角の $\cos$ ②$\sin=\sqrt{1-\cos^2}$（三角形の内角なら $\sin\gt0$）③$S=\frac12ab\sin C$ ④内接円の半径 $r$ は $S=\frac12r(a+b+c)$ から。ヘロンの公式 $S=\sqrt{s(s-a)(s-b)(s-c)}\ \left(s=\frac{a+b+c}{2}\right)$ でもよい。</div>
+<div class="pex">3辺の長さが $5,6,7$ の三角形の面積 $S$ と内接円の半径 $r$ を求めよ。<br>
+<b>解</b>　長さ7の辺の対角を $C$ とすると $\cos C=\frac{25+36-49}{2\cdot5\cdot6}=\frac15$、$\sin C=\sqrt{1-\frac1{25}}=\frac{2\sqrt6}{5}$。<br>
+$S=\frac12\cdot5\cdot6\cdot\frac{2\sqrt6}5=\boldsymbol{6\sqrt6}$。$6\sqrt6=\frac12r\cdot18$ より $\boldsymbol{r=\frac{2\sqrt6}{3}}$。</div>
+</div>
+
+<div class="pat"><h4>角の二等分線の長さは「面積の和」で</h4>
+<div class="when">$\angle\mathrm A$ の二等分線と辺 BC の交点を D とするとき、AD の長さ。</div>
+<div class="how">$\triangle\mathrm{ABC}=\triangle\mathrm{ABD}+\triangle\mathrm{ACD}$ を、それぞれ $\frac12\times$（2辺）$\times\sin$ で書いて AD の方程式を作る。$A$ がわからないときは、$\mathrm{BD:DC=AB:AC}$ で BD を出し、$\triangle\mathrm{ABD}$ で余弦定理（$\cos B$ は $\triangle\mathrm{ABC}$ から）。</div>
+<div class="pex">$\mathrm{AB}=3,\ \mathrm{AC}=6,\ A=120^\circ$ の $\triangle\mathrm{ABC}$ で、$\angle\mathrm A$ の二等分線と辺 BC の交点を D とする。AD を求めよ。<br>
+<b>解</b>　$\mathrm{AD}=x$ とすると $\frac12\cdot3\cdot6\sin120^\circ=\frac12\cdot3x\sin60^\circ+\frac12\cdot6x\sin60^\circ$。<br>
+$\frac{9\sqrt3}{2}=\frac{9\sqrt3}{4}x$ より $\boldsymbol{x=2}$。</div>
+</div>
+
+<div class="pat"><h4>円に内接する四角形は「対角の和 $180^\circ$」で対角線を2通りに表す</h4>
+<div class="when">円に内接する四角形の4辺がわかっていて、角・対角線・面積を求める。</div>
+<div class="how">対角線 AC を $\triangle\mathrm{ABC}$ と $\triangle\mathrm{ACD}$ の両方で余弦定理により表す。$D=180^\circ-B$ より $\cos D=-\cos B$、$\sin D=\sin B$。2式を等しいとおいて $\cos B$ を求める。面積は2つの三角形の和。</div>
+<div class="pex">円に内接する四角形 ABCD で $\mathrm{AB}=2,\ \mathrm{BC}=3,\ \mathrm{CD}=1,\ \mathrm{DA}=2$。$B$、AC、四角形の面積 $S$ を求めよ。<br>
+<b>解</b>　$\mathrm{AC}^2=4+9-12\cos B=1+4-4\cos D=5+4\cos B$ より $16\cos B=8$、$\cos B=\frac12$、$\boldsymbol{B=60^\circ}$。<br>
+$\mathrm{AC}^2=13-6=7$ より $\boldsymbol{\mathrm{AC}=\sqrt7}$。$S=\frac12\cdot2\cdot3\sin60^\circ+\frac12\cdot1\cdot2\sin120^\circ=\frac{3\sqrt3}{2}+\frac{\sqrt3}{2}=\boldsymbol{2\sqrt3}$。</div>
+</div>
+
+<div class="pat"><h4>$\sin\theta+\cos\theta$ の値は2乗して $\sin\theta\cos\theta$ へ</h4>
+<div class="when">$\sin\theta+\cos\theta=p$ から、$\sin\theta\cos\theta$、$\sin^3\theta+\cos^3\theta$、$\sin\theta-\cos\theta$ を求める。</div>
+<div class="how">両辺を2乗して $1+2\sin\theta\cos\theta=p^2$。3乗の和は対称式の変形で。差は $(\sin\theta-\cos\theta)^2=1-2\sin\theta\cos\theta$ を求めてから、<b>$\theta$ の範囲から符号を決める</b>。</div>
+<div class="pex">$0^\circ\lt\theta\lt180^\circ$、$\sin\theta+\cos\theta=\frac12$ のとき、$\sin\theta\cos\theta$、$\sin^3\theta+\cos^3\theta$、$\sin\theta-\cos\theta$ の値を求めよ。<br>
+<b>解</b>　$1+2\sin\theta\cos\theta=\frac14$ より $\sin\theta\cos\theta=\boldsymbol{-\frac38}$。<br>
+$\sin^3\theta+\cos^3\theta=\left(\frac12\right)^3-3\left(-\frac38\right)\cdot\frac12=\boldsymbol{\frac{11}{16}}$。<br>
+$(\sin\theta-\cos\theta)^2=1+\frac34=\frac74$。$\sin\theta\gt0$ で積が負だから $\cos\theta\lt0$、よって $\sin\theta-\cos\theta\gt0$ で $\boldsymbol{\frac{\sqrt7}{2}}$。</div>
+</div>
+
+<div class="pat"><h4>三角形の形状は「辺だけの式」にして因数分解</h4>
+<div class="when">$a\cos A=b\cos B$ のような辺と角の関係式から、三角形の形を決める。</div>
+<div class="how">正弦定理 $\sin A=\frac{a}{2R}$、余弦定理 $\cos A=\frac{b^2+c^2-a^2}{2bc}$ を代入して<b>辺だけの式</b>にし、因数分解する。「$a=b$（二等辺三角形）」「$a^2+b^2=c^2$（$C=90^\circ$ の直角三角形）」などを読みとる。</div>
+<div class="pex">$a\cos A=b\cos B$ を満たす $\triangle\mathrm{ABC}$ はどのような三角形か。<br>
+<b>解</b>　$a\cdot\frac{b^2+c^2-a^2}{2bc}=b\cdot\frac{c^2+a^2-b^2}{2ca}$。両辺に $2abc$ をかけて $a^2(b^2+c^2-a^2)=b^2(c^2+a^2-b^2)$。<br>
+整理すると $c^2(a^2-b^2)-(a^4-b^4)=0$、すなわち $(a^2-b^2)(c^2-a^2-b^2)=0$。<br>
+よって <b>$a=b$ の二等辺三角形、または $C=90^\circ$ の直角三角形</b>。</div>
+<div class="pnote">「または」を「かつ」（直角二等辺三角形）としない。また、両辺を $a^2-b^2$ で割ると $a=b$ の場合が抜け落ちる。</div>
+</div>
+
+<div class="pat"><h4>鋭角・鈍角は「最大辺の2乗」と「他の2辺の2乗の和」の比較</h4>
+<div class="when">3辺が文字で表された三角形が、鋭角・直角・鈍角三角形になる条件。</div>
+<div class="how">①三角形の成立条件：（最大辺）$\lt$（他の2辺の和）。②最大辺 $c$ の対角 $C$ について、$c^2\lt a^2+b^2\iff$ 鋭角三角形、$c^2=a^2+b^2\iff$ 直角三角形、$c^2\gt a^2+b^2\iff$ 鈍角三角形（$\cos C$ の符号）。</div>
+<div class="pex">3辺の長さが $x,\ x+1,\ x+2$ の三角形が鈍角三角形となる $x$ の範囲を求めよ。<br>
+<b>解</b>　最大辺は $x+2$。成立条件 $x+(x+1)\gt x+2$ より $x\gt1$。<br>
+鈍角の条件 $(x+2)^2\gt x^2+(x+1)^2$ より $x^2-2x-3\lt0$、$-1\lt x\lt3$。よって $\boldsymbol{1\lt x\lt3}$。</div>
+</div>
+
+<div class="pat"><h4>空間図形は「平面を取り出す」。等しい3辺があれば外心</h4>
+<div class="when">四面体・角錐の高さ・体積、内接球の半径。</div>
+<div class="how">・求めたい線分を含む<b>三角形を取り出して</b>平面図形として解く。<br>
+・$\mathrm{OA=OB=OC}$ の四面体 OABC では、O から平面 ABC に下ろした垂線の足 H は $\triangle\mathrm{ABC}$ の<b>外心</b>（$\mathrm{HA=HB=HC}$）。高さは $\mathrm{OH}=\sqrt{\mathrm{OA}^2-R^2}$。<br>
+・内接球の半径 $r$ は $V=\frac13r\times$（表面積）から。</div>
+<div class="pex">$\mathrm{OA=OB=OC}=4$、$\mathrm{AB=BC=CA}=6$ の四面体 OABC の体積 $V$ を求めよ。<br>
+<b>解</b>　$\triangle\mathrm{ABC}$ の外接円の半径は $R=\frac{6}{2\sin60^\circ}=2\sqrt3$。$\mathrm{OH}=\sqrt{16-12}=2$。<br>
+$V=\frac13\cdot\frac{\sqrt3}{4}\cdot6^2\cdot2=\boldsymbol{6\sqrt3}$。</div>
+</div>
+
+<div class="box memo"><table class="l w">
+<tr><th>項目</th><th>公式・事実</th></tr>
+<tr><td>相互関係</td><td>$\sin^2\theta+\cos^2\theta=1$、$\tan\theta=\frac{\sin\theta}{\cos\theta}$、$1+\tan^2\theta=\frac1{\cos^2\theta}$</td></tr>
+<tr><td>$180^\circ-\theta$</td><td>$\sin(180^\circ-\theta)=\sin\theta$、$\cos(180^\circ-\theta)=-\cos\theta$、$\tan(180^\circ-\theta)=-\tan\theta$</td></tr>
+<tr><td>正弦定理</td><td>$\frac{a}{\sin A}=\frac{b}{\sin B}=\frac{c}{\sin C}=2R$（$R$ は外接円の半径）</td></tr>
+<tr><td>余弦定理</td><td>$a^2=b^2+c^2-2bc\cos A$、$\cos A=\frac{b^2+c^2-a^2}{2bc}$</td></tr>
+<tr><td>面積</td><td>$S=\frac12bc\sin A=\frac12r(a+b+c)$、ヘロン $S=\sqrt{s(s-a)(s-b)(s-c)}$</td></tr>
+<tr><td>体積・表面積</td><td>錐体 $V=\frac13Sh$、球 $V=\frac43\pi r^3$、球の表面積 $4\pi r^2$</td></tr>
+</table></div>
+
+<!--CH 4-->
+<div class="pat"><h4>四分位数は「前半・後半の中央値」、外れ値は $1.5\times$ 四分位範囲</h4>
+<div class="when">データから四分位数・四分位範囲を求め、外れ値を判定する。</div>
+<div class="how">小さい順に並べ、中央値 $Q_2$ で前半と後半に分ける（個数が奇数なら中央値はどちらにも入れない）。前半の中央値が $Q_1$、後半の中央値が $Q_3$、四分位範囲は $Q_3-Q_1$。<br>
+<b>外れ値</b>：$Q_1-1.5(Q_3-Q_1)$ 以下の値、または $Q_3+1.5(Q_3-Q_1)$ 以上の値。</div>
+<div class="pex">データ $2,3,5,6,7,8,9,11,12,25$ の四分位数を求め、外れ値があれば答えよ。<br>
+<b>解</b>　10個なので $Q_2=\frac{7+8}2=7.5$。前半 $2,3,5,6,7$ より $Q_1=5$、後半 $8,9,11,12,25$ より $Q_3=11$。<br>
+四分位範囲は $6$、$1.5\times6=9$。$5-9=-4$ 以下、$11+9=20$ 以上の値が外れ値なので、<b>25 が外れ値</b>。</div>
+</div>
+
+<div class="pat"><h4>箱ひげ図から「言えること」は順位で考える</h4>
+<div class="when">箱ひげ図を見て「〇点以上の人が△人以上いる」などの正誤を判断する。</div>
+<div class="how">個数 $n$ から、四分位数が<b>何番目の値（何番目と何番目の平均）</b>かを確定させる。例：$n=40$ なら $Q_1$ は10番目と11番目、$Q_2$ は20番目と21番目、$Q_3$ は30番目と31番目の平均。平均値は箱ひげ図からは読み取れない。</div>
+<div class="pex">40人の得点で $Q_1=45,\ Q_2=60,\ Q_3=72$ であった。次は正しいか。(a) 60点以上の人は20人以上いる。(b) 45点以下の人はちょうど10人である。(c) 平均点は60点である。<br>
+<b>解</b>　(a) $Q_2$ は20番目と21番目の平均なので、21番目は60点以上。21〜40番目の20人が60点以上だから<b>正しい</b>。<br>
+(b) 10番目は45点以下なので、45点以下は<b>少なくとも</b>10人。11番目以降にも45点の人がいることがあるので<b>正しいとは限らない</b>。<br>
+(c) 平均値は箱ひげ図から決まらないので<b>正しいとは限らない</b>。</div>
+</div>
+
+<div class="pat"><h4>分散は「2乗の平均 − 平均の2乗」。合併も2乗の平均を経由</h4>
+<div class="when">分散を手早く計算する／平均・分散がわかっている2つのグループを合わせる。</div>
+<div class="how">$s^2=\overline{x^2}-(\bar x)^2$。合併するときは、各グループの<b>合計</b> $n\bar x$ と<b>2乗の合計</b> $n(s^2+\bar x^2)$ を求めて足し、全体の個数で割る。</div>
+<div class="pex">A組10人は平均60点・分散25、B組15人は平均70点・分散16である。25人全体の平均と分散を求めよ。<br>
+<b>解</b>　合計 $600+1050=1650$ より平均 $\boldsymbol{66}$ 点。<br>
+2乗の合計は $10(25+60^2)+15(16+70^2)=36250+73740=109990$。2乗の平均は $4399.6$。<br>
+分散 $=4399.6-66^2=\boldsymbol{43.6}$。</div>
+<div class="pnote">全体の分散は「分散の平均」$\frac{10\cdot25+15\cdot16}{25}=19.6$ ではない。2組の平均の差による散らばりが加わる。</div>
+</div>
+
+<div class="pat"><h4>データの修正・追加は「合計」と「2乗の合計」を直す</h4>
+<div class="when">一部のデータに誤りが見つかった、またはデータが追加された。</div>
+<div class="how">個数 $n$、平均 $\bar x$、分散 $s^2$ から、合計 $n\bar x$ と2乗の合計 $n(s^2+\bar x^2)$ を復元する。誤った値を引いて正しい値を加え、平均と分散を計算しなおす。</div>
+<div class="pex">10個のデータの平均が6、分散が4であったが、そのうちの値3は8の誤りであった。正しい平均と分散を求めよ。<br>
+<b>解</b>　合計 $60$、2乗の合計 $10(4+6^2)=400$。修正後は合計 $60-3+8=65$、2乗の合計 $400-9+64=455$。<br>
+平均 $\boldsymbol{6.5}$、分散 $45.5-6.5^2=\boldsymbol{3.25}$。</div>
+</div>
+
+<div class="pat"><h4>変量変換 $y=ax+b$：平均は同じ式、分散は $a^2$ 倍</h4>
+<div class="when">単位の変換、仮平均、得点の調整など、データを1次式で変換する。</div>
+<div class="how">$y=ax+b$ のとき $\bar y=a\bar x+b$、$s_y^2=a^2s_x^2$、$s_y=|a|s_x$。<br>
+$u=ax+b,\ v=cw+d$ のとき、共分散 $s_{uv}=ac\,s_{xw}$。相関係数は $ac\gt0$ なら $r_{uv}=r_{xw}$、$ac\lt0$ なら $r_{uv}=-r_{xw}$。</div>
+<div class="pex">(1) 変量 $x$ の平均が50、分散が16のとき、$y=-2x+30$ の平均・分散・標準偏差を求めよ。(2) 変量 $x,w$ の相関係数が $0.6$ のとき、$u=2x+1,\ v=-3w+5$ の相関係数を求めよ。<br>
+<b>解</b>　(1) 平均 $-2\cdot50+30=\boldsymbol{-70}$、分散 $(-2)^2\cdot16=\boldsymbol{64}$、標準偏差 $\boldsymbol8$。<br>
+(2) $2\cdot(-3)\lt0$ なので符号だけが変わり $\boldsymbol{-0.6}$。</div>
+</div>
+
+<div class="pat"><h4>共分散・相関係数は「偏差の表」を作って計算</h4>
+<div class="when">2つの変量のデータから共分散・相関係数を求める。</div>
+<div class="how">表に偏差 $x-\bar x$、$y-\bar y$ と、その積・2乗を並べる。<br>
+$s_{xy}=\frac1n\sum(x_k-\bar x)(y_k-\bar y)$、$r=\frac{s_{xy}}{s_xs_y}$（$-1\leqq r\leqq1$）。</div>
+<div class="pex">5組のデータ $(x,y)=(1,2),(2,4),(3,3),(4,6),(5,5)$ の相関係数を求めよ。<br>
+<b>解</b>　$\bar x=3,\ \bar y=4$。偏差は $x$：$-2,-1,0,1,2$、$y$：$-2,0,-1,2,1$。<br>
+積の和 $4+0+0+2+2=8$ より $s_{xy}=\frac85=1.6$。$s_x^2=\frac{10}{5}=2$、$s_y^2=\frac{10}{5}=2$。<br>
+$r=\frac{1.6}{\sqrt2\cdot\sqrt2}=\boldsymbol{0.8}$。</div>
+</div>
+
+<div class="pat"><h4>仮説検定は「偶然と仮定して、その確率が基準以下か」</h4>
+<div class="when">「この結果から〇〇と判断してよいか」を、基準となる確率（5% など）で判定する。</div>
+<div class="how">①主張したいこと（例：表が出やすい）の<b>反対</b>の仮説を立てる（例：表と裏は等しい確率で出る）。②その仮説のもとで、観測された結果<b>以上に極端なこと</b>が起こる確率を、計算や実験（シミュレーション）の結果から求める。③それが基準以下なら仮説は誤りと考え、主張は正しいと判断する。基準より大きければ「主張が正しいとは判断できない」。</div>
+<div class="pex">コインを10回投げたら表が9回出た。「このコインは表が出やすい」と、基準となる確率5%で判断してよいか。<br>
+<b>解</b>　表と裏が等しい確率で出ると仮定すると、表が9回以上出る確率は $\frac{{}_{10}\mathrm{C}_9+{}_{10}\mathrm{C}_{10}}{2^{10}}=\frac{11}{1024}\fallingdotseq0.011$。これは $0.05$ 以下なので、仮説は誤りと考えられ、<b>表が出やすいと判断してよい</b>。</div>
+<div class="pnote">仮説が否定されなかったときに「表と裏は等しい確率で出る」と結論づけない。「表が出やすいとは判断できない」と答える。</div>
+</div>
+
+<div class="box memo"><table class="l w">
+<tr><th>項目</th><th>公式・事実</th></tr>
+<tr><td>分散・標準偏差</td><td>$s^2=\frac1n\sum(x_k-\bar x)^2=\overline{x^2}-(\bar x)^2$、$s=\sqrt{s^2}$</td></tr>
+<tr><td>共分散</td><td>$s_{xy}=\frac1n\sum(x_k-\bar x)(y_k-\bar y)=\overline{xy}-\bar x\,\bar y$</td></tr>
+<tr><td>相関係数</td><td>$r=\frac{s_{xy}}{s_xs_y}$、$-1\leqq r\leqq1$（$\pm1$ に近いほど直線的な関係が強い）</td></tr>
+<tr><td>変量変換</td><td>$y=ax+b$：$\bar y=a\bar x+b$、$s_y^2=a^2s_x^2$、$s_y=|a|s_x$</td></tr>
+<tr><td>四分位数</td><td>四分位範囲 $Q_3-Q_1$、四分位偏差 $\frac{Q_3-Q_1}{2}$</td></tr>
+<tr><td>外れ値</td><td>$Q_1-1.5(Q_3-Q_1)$ 以下、または $Q_3+1.5(Q_3-Q_1)$ 以上の値</td></tr>
+</table></div>
+
+<!--CH 5-->
+<div class="pat"><h4>「隣り合う」はまとめる、「隣り合わない」はすき間に入れる</h4>
+<div class="when">並び方の問題で、特定のものが隣り合う・隣り合わない条件がある。</div>
+<div class="how">・隣り合う：そのかたまりを1つとみなして並べ、かたまりの中の並び方をかける。<br>
+・隣り合わない：<b>他のものを先に並べ</b>、その間と両端のすき間に入れる。</div>
+<div class="pex">男子4人、女子3人が1列に並ぶ。(1) 女子3人が隣り合う並び方　(2) 女子どうしが隣り合わない並び方は、それぞれ何通りか。<br>
+<b>解</b>　(1) 女子3人を1人とみなした5人の並び方 $5!$、女子の中の並び方 $3!$。$120\times6=\boldsymbol{720}$ 通り。<br>
+(2) 男子を並べて $4!$、男子の間と両端の5か所から3か所を選んで女子を並べて ${}_5\mathrm{P}_3$。$24\times60=\boldsymbol{1440}$ 通り。</div>
+</div>
+
+<div class="pat"><h4>円順列は「1つを固定」して残りを並べる</h4>
+<div class="when">円形に並べる。回転して重なるものは同じとみなす。</div>
+<div class="how">$n$ 個の円順列は $(n-1)!$。<b>特定の1つを固定</b>して残りを並べると考えると、条件つきでも数えやすい。裏返しても同じもの（じゅず順列）は $\frac{(n-1)!}{2}$。</div>
+<div class="pex">男子3人、女子3人が円卓に座る。男女が交互に座る座り方は何通りか。<br>
+<b>解</b>　男子1人を固定すると、残りの男子2人の座り方は $2!$、女子3人はその間の3席に $3!$。$2\times6=\boldsymbol{12}$ 通り。</div>
+</div>
+
+<div class="pat"><h4>同じものを含む順列：最短経路と「順序が決まった並び」</h4>
+<div class="when">碁盤の目の最短経路の数、特定のものの順序が決まった並べ方。</div>
+<div class="how">・右に $a$ 区画、上に $b$ 区画の最短経路は「→ $a$ 個、↑ $b$ 個」の並べ方で $\frac{(a+b)!}{a!\,b!}={}_{a+b}\mathrm{C}_a$。点 P を通る経路は（A→P）×（P→B）、通らない経路は 全体 − 通る経路。<br>
+・$n$ 個のうち特定の $r$ 個の順序が決まっている並べ方は、その $r$ 個を同じもの ○ とみなして $\frac{n!}{r!}$。</div>
+<div class="pex">右へ5区画、上へ4区画の碁盤の目状の道がある。左下の A から右上の B への最短経路の総数と、A から右へ2、上へ1進んだ点 P を通る最短経路の数を求めよ。<br>
+<b>解</b>　総数は ${}_9\mathrm{C}_4=\boldsymbol{126}$ 通り。P を通るものは ${}_3\mathrm{C}_1\times{}_6\mathrm{C}_3=3\times20=\boldsymbol{60}$ 通り。</div>
+<div class="pnote">順序固定の例：1〜7の7枚のカードを並べるとき、1, 2, 3 がこの順に並ぶのは $\frac{7!}{3!}=840$ 通り（○ に左から 1, 2, 3 を入れる）。</div>
+</div>
+
+<div class="pat"><h4>0 を含む数字の並べ方は「最高位」と「条件のある位」から</h4>
+<div class="when">0 を含む数字のカードで整数を作る。偶数・5の倍数などの条件がつく。</div>
+<div class="how">最高位に 0 は置けない。偶数・5の倍数のように一の位に条件があるときは、<b>一の位が 0 かどうかで場合分け</b>してから、最高位 → 残りの位の順に決める。</div>
+<div class="pex">0, 1, 2, 3, 4, 5 から異なる3個の数字を使ってできる3桁の偶数は何個か。<br>
+<b>解</b>　一の位が 0 のとき：百の位と十の位は残り5個から ${}_5\mathrm{P}_2=20$ 通り。<br>
+一の位が 2 か 4 のとき：百の位は 0 と一の位以外の4通り、十の位は残りの4通りで $2\times4\times4=32$ 通り。<br>
+合計 $\boldsymbol{52}$ 個。</div>
+</div>
+
+<div class="pat"><h4>組分けは「区別のない同じ人数の組の数」の階乗で割る</h4>
+<div class="when">人やものをいくつかの組に分ける。組に名前がない。</div>
+<div class="how">まず組に名前（A, B, C）をつけて数え、組に区別がなければ、<b>同じ人数の組の個数の階乗</b>で割る。人数が異なる組どうしは区別がつくので割らない。</div>
+<div class="pex">9人を3人ずつの3つの組に分ける方法は何通りか。<br>
+<b>解</b>　A, B, C の組に分けると ${}_9\mathrm{C}_3\times{}_6\mathrm{C}_3=84\times20=1680$ 通り。組の区別をなくすと $\frac{1680}{3!}=\boldsymbol{280}$ 通り。</div>
+<div class="pnote">2人・3人・4人の組に分けるなら割らない（${}_9\mathrm{C}_2\times{}_7\mathrm{C}_3=1260$ 通り）。4人・4人・1人なら $2!$ で割る。</div>
+</div>
+
+<div class="pat"><h4>部屋割りは重複順列、空き部屋なしは「引いて足す」</h4>
+<div class="when">区別のある人を区別のある部屋（箱）に入れる。「どの部屋にも1人以上」の条件がつく。</div>
+<div class="how">$n$ 人を $k$ 部屋に入れる方法（空き部屋があってもよい）は $k^n$ 通り。空き部屋がないものは、全体から「空き部屋がある」場合を除く。3部屋なら<br>
+（空き部屋がちょうど1つ）$=3(2^n-2)$、（ちょうど2つ）$=3$ より、$3^n-3(2^n-2)-3$。</div>
+<div class="pex">5人を A, B, C の3部屋に入れる。どの部屋にも少なくとも1人が入る入れ方は何通りか。<br>
+<b>解</b>　全体 $3^5=243$ 通り。空き部屋がちょうど1つ：空く部屋の選び方3通り、残り2部屋に1人以上ずつ $2^5-2=30$ 通りで $90$ 通り。空き部屋が2つ：3通り。<br>
+$243-90-3=\boldsymbol{150}$ 通り。</div>
+</div>
+
+<div class="pat"><h4>重複組合せは「○ と｜の並べ方」</h4>
+<div class="when">$x+y+z=n$ の整数解の個数、区別のない玉を区別のある箱に分ける、同じものを重複して選ぶ。</div>
+<div class="how">$x+y+z=n$ の<b>0以上</b>の整数解は、○ $n$ 個と仕切り｜2本の並べ方で ${}_{n+2}\mathrm{C}_2$。<b>正の</b>整数解は、○ の間の $n-1$ か所から2か所を選んで仕切りを入れ ${}_{n-1}\mathrm{C}_2$（または $x=x'+1$ などとおきかえて0以上の解に直す）。</div>
+<div class="pex">$x+y+z=10$ を満たす (1) 0以上の整数の組 (2) 正の整数の組 $(x,y,z)$ の個数を求めよ。<br>
+<b>解</b>　(1) ○10個と｜2本の並べ方で ${}_{12}\mathrm{C}_2=\boldsymbol{66}$ 個。(2) ○の間の9か所から2か所を選んで ${}_9\mathrm{C}_2=\boldsymbol{36}$ 個。</div>
+</div>
+
+<div class="pat"><h4>「〜でない」「少なくとも」は余事象と包除原理</h4>
+<div class="when">「AでもBでもない」「少なくとも1つ」の個数を数える。</div>
+<div class="how">$n(A\cup B)=n(A)+n(B)-n(A\cap B)$。「AでもBでもない」は 全体 $-\,n(A\cup B)$。3つなら<br>
+$n(A\cup B\cup C)=n(A)+n(B)+n(C)-n(A\cap B)-n(B\cap C)-n(C\cap A)+n(A\cap B\cap C)$。</div>
+<div class="pex">1から100までの整数のうち、2でも3でも割り切れないものは何個か。<br>
+<b>解</b>　2の倍数50個、3の倍数33個、6の倍数16個。$100-(50+33-16)=\boldsymbol{33}$ 個。</div>
+</div>
+
+<div class="pat"><h4>図形の個数は「頂点の選び方」から条件に合わないものを除く</h4>
+<div class="when">多角形の頂点を結んでできる三角形・対角線などの個数。</div>
+<div class="how">$n$ 角形の頂点から3つ選べば三角形が1つ決まる：${}_n\mathrm{C}_3$ 個。対角線は ${}_n\mathrm{C}_2-n$ 本。「辺を共有しない」などの条件は、<b>共有する辺の本数で分類</b>して除く。</div>
+<div class="pex">正八角形の頂点から3つを選んで三角形を作る。(1) 三角形の総数 (2) 正八角形と辺を共有しない三角形の数を求めよ。<br>
+<b>解</b>　(1) ${}_8\mathrm{C}_3=\boldsymbol{56}$ 個。<br>
+(2) 2辺を共有するもの（連続する3頂点）は8個。1辺だけを共有するものは、8本の辺それぞれについて、辺の両端とそれらに隣り合う頂点を除いた4個から1つ選んで $8\times4=32$ 個。$56-8-32=\boldsymbol{16}$ 個。</div>
+</div>
+
+<div class="box memo"><table class="l w">
+<tr><th>項目</th><th>公式・事実</th></tr>
+<tr><td>順列・組合せ</td><td>${}_n\mathrm{P}_r=\frac{n!}{(n-r)!}$、${}_n\mathrm{C}_r=\frac{n!}{r!\,(n-r)!}$、${}_n\mathrm{C}_r={}_n\mathrm{C}_{n-r}$、${}_n\mathrm{C}_r={}_{n-1}\mathrm{C}_{r-1}+{}_{n-1}\mathrm{C}_r$</td></tr>
+<tr><td>円順列・じゅず順列</td><td>$(n-1)!$、$\frac{(n-1)!}{2}$</td></tr>
+<tr><td>重複順列</td><td>$n$ 種類から重複を許して $r$ 個並べる：$n^r$</td></tr>
+<tr><td>同じものを含む順列</td><td>$\frac{n!}{p!\,q!\,r!}$（$p+q+r=n$）</td></tr>
+<tr><td>重複組合せ</td><td>$n$ 種類から重複を許して $r$ 個選ぶ：${}_{n+r-1}\mathrm{C}_r$</td></tr>
+<tr><td>和集合の要素の個数</td><td>$n(A\cup B)=n(A)+n(B)-n(A\cap B)$、$n(\overline A)=n(U)-n(A)$</td></tr>
+</table></div>
+
+<!--CH 6-->
+<div class="pat"><h4>確率は「すべて区別して」数える</h4>
+<div class="when">同じ色の玉など、見た目で区別がつかないものを含む確率。</div>
+<div class="how">確率では、<b>同じ色の玉にも番号をつけて区別</b>する。そうすると、どの取り出し方も同様に確からしくなる。分母と分子は同じ数え方（組合せどうし、順列どうし）でそろえる。</div>
+<div class="pex">赤玉3個、白玉2個が入った袋から2個を同時に取り出す。2個とも赤玉である確率を求めよ。<br>
+<b>解</b>　5個を区別すると $\frac{{}_3\mathrm{C}_2}{{}_5\mathrm{C}_2}=\frac{3}{10}$。</div>
+<div class="pnote">「赤赤・赤白・白白の3通りだから $\frac13$」は誤り。この3通りは同様に確からしくない。</div>
+</div>
+
+<div class="pat"><h4>「少なくとも1回」は余事象</h4>
+<div class="when">「少なくとも1回（1個）〜」「〜でない」の確率。</div>
+<div class="how">$P(A)=1-P(\overline A)$。「少なくとも1回起こる」の余事象は「1回も起こらない」で、こちらは積で簡単に計算できる。</div>
+<div class="pex">さいころを3回投げるとき、少なくとも1回6の目が出る確率を求めよ。<br>
+<b>解</b>　1回も6の目が出ない確率は $\left(\frac56\right)^3=\frac{125}{216}$。求める確率は $1-\frac{125}{216}=\frac{91}{216}$。</div>
+</div>
+
+<div class="pat"><h4>反復試行は ${}_n\mathrm{C}_r\,p^r(1-p)^{n-r}$</h4>
+<div class="when">同じ試行を $n$ 回くり返し、ある事象がちょうど $r$ 回起こる確率。</div>
+<div class="how">1回で事象 A の起こる確率が $p$ のとき、$n$ 回中ちょうど $r$ 回 A が起こる確率は ${}_n\mathrm{C}_r\,p^r(1-p)^{n-r}$。${}_n\mathrm{C}_r$ は「何回目に A が起こるか」の選び方。</div>
+<div class="pex">さいころを5回投げるとき、1の目がちょうど2回出る確率を求めよ。<br>
+<b>解</b>　${}_5\mathrm{C}_2\left(\frac16\right)^2\left(\frac56\right)^3=10\cdot\frac{125}{7776}=\frac{625}{3888}$。</div>
+</div>
+
+<div class="pat"><h4>最大値が $k$ ＝「すべて $k$ 以下」−「すべて $k-1$ 以下」</h4>
+<div class="when">何回か投げたさいころの目の最大値・最小値に関する確率。</div>
+<div class="how">（最大値 $=k$）$=$（すべて $k$ 以下）$-$（すべて $k-1$ 以下）。最小値なら（すべて $k$ 以上）$-$（すべて $k+1$ 以上）。「すべて〜以下」は各回の確率の積で求まる。</div>
+<div class="pex">さいころを3回投げるとき、出た目の最大値が4である確率を求めよ。<br>
+<b>解</b>　すべて4以下の確率 $\left(\frac46\right)^3$ から、すべて3以下の確率 $\left(\frac36\right)^3$ を引いて $\frac{64-27}{216}=\frac{37}{216}$。</div>
+</div>
+
+<div class="pat"><h4>じゃんけんは「誰が勝つか」と「どの手で勝つか」を選ぶ</h4>
+<div class="when">$n$ 人でじゃんけんをするときの、勝者の人数やあいこの確率。</div>
+<div class="how">手の出し方は全部で $3^n$ 通り。ちょうど $r$ 人が勝つ（$1\leqq r\leqq n-1$）のは、勝つ人の選び方 ${}_n\mathrm{C}_r$ × 勝つ手の選び方3通り。あいこの確率は 1 −（だれかが勝つ確率）。</div>
+<div class="pex">3人で1回じゃんけんをするとき、(1) 1人だけが勝つ確率 (2) あいこになる確率を求めよ。<br>
+<b>解</b>　(1) $\frac{{}_3\mathrm{C}_1\times3}{3^3}=\frac{9}{27}=\frac13$。<br>
+(2) 2人が勝つ確率も $\frac{{}_3\mathrm{C}_2\times3}{27}=\frac13$ なので、あいこの確率は $1-\frac13-\frac13=\frac13$。</div>
+</div>
+
+<div class="pat"><h4>条件付き確率 $P_A(B)=\frac{P(A\cap B)}{P(A)}$：結果から原因を問う</h4>
+<div class="when">「〜であったとき、それが…である確率」。取り出した結果から原因の確率を問う。</div>
+<div class="how">「原因 → 結果」の順に樹形図をかき、乗法定理 $P(A\cap B)=P(A)P_A(B)$ で各枝の確率を求める。結果 $E$ が起きたときに原因が $H$ である確率は $P_E(H)=\frac{P(H\cap E)}{P(E)}$。分母は $E$ に至る<b>すべての枝の確率の和</b>。</div>
+<div class="pex">ある製品の60%を工場A、40%を工場Bで作っている。不良品の割合は、Aでは2%、Bでは5%である。製品を1個取り出したところ不良品であった。それが工場Aの製品である確率を求めよ。<br>
+<b>解</b>　Aの製品で不良品である確率は $0.6\times0.02=0.012$、Bの製品で不良品である確率は $0.4\times0.05=0.02$。<br>
+求める確率は $\frac{0.012}{0.012+0.02}=\frac{12}{32}=\frac38$。</div>
+</div>
+
+<div class="pat"><h4>点の移動は「進む回数」を未知数にして反復試行へ</h4>
+<div class="when">コインやさいころの結果で数直線・座標平面上を点が動き、$n$ 回後の位置の確率を求める。</div>
+<div class="how">$n$ 回のうち $+1$ が $x$ 回、$-1$ が $n-x$ 回なら、位置は $x-(n-x)=2x-n$。位置の条件から $x$ を決め、反復試行の確率で計算する。「途中で〜を通る」などの条件は、最短経路と同じように経路を数える。</div>
+<div class="pex">数直線上の点 P は原点から出発し、コインを投げて表なら $+1$、裏なら $-1$ だけ動く。コインを6回投げた後に P が座標2にある確率を求めよ。<br>
+<b>解</b>　表が $x$ 回出たとすると $x-(6-x)=2$ より $x=4$。${}_6\mathrm{C}_4\left(\frac12\right)^6=\frac{15}{64}$。</div>
+</div>
+
+<div class="pat"><h4>確率の最大は「隣どうしの比」と 1 を比べる</h4>
+<div class="when">「ちょうど $k$ 回起こる確率 $p_k$ が最大となる $k$」を求める。</div>
+<div class="how">$\frac{p_{k+1}}{p_k}$ を計算する（${}_n\mathrm{C}_r$ の階乗が約分されて簡単な分数式になる）。$\frac{p_{k+1}}{p_k}\gt1\iff p_k\lt p_{k+1}$（増加）となる $k$ の範囲を求め、増加から減少に変わる $k$ が最大。</div>
+<div class="pex">さいころを20回投げて1の目がちょうど $k$ 回出る確率を $p_k$ とする。$p_k$ が最大となる $k$ を求めよ。<br>
+<b>解</b>　$p_k={}_{20}\mathrm{C}_k\left(\frac16\right)^k\left(\frac56\right)^{20-k}$ より $\frac{p_{k+1}}{p_k}=\frac{20-k}{k+1}\cdot\frac15$。<br>
+これが1より大きい $\iff 20-k\gt5(k+1)\iff k\lt\frac52$。よって $p_0\lt p_1\lt p_2\lt p_3$、$p_3\gt p_4\gt\cdots\gt p_{20}$ となり、最大は $\boldsymbol{k=3}$。</div>
+<div class="pnote">$\frac{p_{k+1}}{p_k}=1$ となる $k$ があるときは $p_k=p_{k+1}$ で、最大となる $k$ が2つある。</div>
+</div>
+
+<div class="pat"><h4>期待値は「確率分布の表」を作って（値 × 確率）の和</h4>
+<div class="when">得点・賞金・目の数などの期待値。</div>
+<div class="how">とりうる値 $x_1,\dots,x_n$ とその確率 $p_1,\dots,p_n$ の表を作り、$E=x_1p_1+x_2p_2+\cdots+x_np_n$。確率の合計が1になることで検算できる。</div>
+<div class="pex">さいころを2個投げて、出た目の大きい方（同じ目ならその目）を $X$ とする。$X$ の期待値を求めよ。<br>
+<b>解</b>　$X\leqq k$ となる確率は $\frac{k^2}{36}$ なので、$P(X=k)=\frac{k^2-(k-1)^2}{36}=\frac{2k-1}{36}$。<br>
+$E=\frac{1\cdot1+2\cdot3+3\cdot5+4\cdot7+5\cdot9+6\cdot11}{36}=\frac{161}{36}$。</div>
+</div>
+
+<div class="box memo"><table class="l w">
+<tr><th>項目</th><th>公式・事実</th></tr>
+<tr><td>余事象</td><td>$P(\overline A)=1-P(A)$</td></tr>
+<tr><td>和事象</td><td>$P(A\cup B)=P(A)+P(B)-P(A\cap B)$（$A,B$ が排反なら $P(A)+P(B)$）</td></tr>
+<tr><td>独立な試行</td><td>試行 $S$ の事象 $A$ と、$S$ と独立な試行 $T$ の事象 $B$ がともに起こる確率は $P(A)P(B)$</td></tr>
+<tr><td>反復試行</td><td>${}_n\mathrm{C}_r\,p^r(1-p)^{n-r}$</td></tr>
+<tr><td>条件付き確率</td><td>$P_A(B)=\frac{P(A\cap B)}{P(A)}$、乗法定理 $P(A\cap B)=P(A)P_A(B)$</td></tr>
+<tr><td>期待値</td><td>$E=x_1p_1+x_2p_2+\cdots+x_np_n$</td></tr>
+</table></div>
+
+<!--CH 7-->
+<div class="pat"><h4>角の二等分線は「辺の比」：内角は内分、外角は外分</h4>
+<div class="when">三角形の角の二等分線と対辺（またはその延長）の交点の位置。</div>
+<div class="how">$\angle\mathrm A$ の二等分線と辺 BC の交点 D：$\mathrm{BD:DC=AB:AC}$（内分）。<br>
+$\angle\mathrm A$ の外角の二等分線と直線 BC の交点 E：$\mathrm{BE:EC=AB:AC}$（外分。$\mathrm{AB\neq AC}$ のとき）。</div>
+<div class="pex">$\mathrm{AB}=6,\ \mathrm{AC}=4,\ \mathrm{BC}=5$ の $\triangle\mathrm{ABC}$ で、$\angle\mathrm A$ の二等分線と辺 BC の交点を D、$\angle\mathrm A$ の外角の二等分線と直線 BC の交点を E とする。BD と DE を求めよ。<br>
+<b>解</b>　$\mathrm{BD}=5\cdot\frac{6}{6+4}=\boldsymbol3$（$\mathrm{DC}=2$）。E は BC を $3:2$ に外分するので C の外側にある。$\mathrm{CE}=x$ とおくと $(5+x):x=3:2$ より $x=10$。$\mathrm{DE}=2+10=\boldsymbol{12}$。</div>
+</div>
+
+<div class="pat"><h4>面積比は「底辺の比」、角を共有すれば「2辺の積の比」</h4>
+<div class="when">三角形の内部の点や辺上の点で作られる三角形の面積の比。</div>
+<div class="how">・高さが共通なら、面積比 ＝ 底辺の比。<br>
+・$\angle\mathrm A$ を共有する $\triangle\mathrm{APQ}$ と $\triangle\mathrm{ABC}$ では（面積 $=\frac12bc\sin A$ より）$\frac{\triangle\mathrm{APQ}}{\triangle\mathrm{ABC}}=\frac{\mathrm{AP}}{\mathrm{AB}}\cdot\frac{\mathrm{AQ}}{\mathrm{AC}}$。</div>
+<div class="pex">$\triangle\mathrm{ABC}$ の辺 AB を $2:1$ に内分する点を P、辺 AC を $1:3$ に内分する点を Q とする。$\triangle\mathrm{APQ}$ の面積は $\triangle\mathrm{ABC}$ の何倍か。<br>
+<b>解</b>　$\frac{\mathrm{AP}}{\mathrm{AB}}\cdot\frac{\mathrm{AQ}}{\mathrm{AC}}=\frac23\times\frac14=\boldsymbol{\frac16}$ 倍。</div>
+</div>
+
+<div class="pat"><h4>メネラウスの定理は「頂点 → 分点 → 頂点」と一周する</h4>
+<div class="when">2本の線分の交点が、それぞれの線分をどんな比に分けるかを求める。</div>
+<div class="how">直線が $\triangle\mathrm{ABC}$ の辺 AB, BC, CA（またはその延長）と P, Q, R で交わるとき $\frac{\mathrm{AP}}{\mathrm{PB}}\cdot\frac{\mathrm{BQ}}{\mathrm{QC}}\cdot\frac{\mathrm{CR}}{\mathrm{RA}}=1$。<br>
+<b>どの三角形</b>と<b>どの直線</b>に使うかを先に決め、頂点と分点を交互にたどって一周する。</div>
+<div class="pex">$\triangle\mathrm{ABC}$ の辺 AB を $1:2$ に内分する点を D、辺 BC を $3:1$ に内分する点を E とし、AE と CD の交点を O とする。AO:OE と、$\triangle\mathrm{OBC}$ の面積が $\triangle\mathrm{ABC}$ の何倍かを求めよ。<br>
+<b>解</b>　$\triangle\mathrm{ABE}$ と直線 DC（D, O, C が一直線上）に使うと $\frac{\mathrm{AD}}{\mathrm{DB}}\cdot\frac{\mathrm{BC}}{\mathrm{CE}}\cdot\frac{\mathrm{EO}}{\mathrm{OA}}=1$。<br>
+$\frac12\cdot\frac41\cdot\frac{\mathrm{EO}}{\mathrm{OA}}=1$ より $\boldsymbol{\mathrm{AO:OE}=2:1}$。<br>
+$\triangle\mathrm{OBC}$ と $\triangle\mathrm{ABC}$ は底辺 BC が共通で、高さの比は $\mathrm{OE:AE}=1:3$ だから $\boldsymbol{\frac13}$ 倍。</div>
+</div>
+
+<div class="pat"><h4>チェバの定理は「3本の線が1点で交わる」とき</h4>
+<div class="when">三角形の頂点と内部の1点を結ぶ3本の直線について、辺の比を求める。</div>
+<div class="how">$\triangle\mathrm{ABC}$ の内部の点 O と頂点 A, B, C を結ぶ直線が、対辺と P（BC上）、Q（CA上）、R（AB上）で交わるとき $\frac{\mathrm{AR}}{\mathrm{RB}}\cdot\frac{\mathrm{BP}}{\mathrm{PC}}\cdot\frac{\mathrm{CQ}}{\mathrm{QA}}=1$。2つの辺の比から3つ目が出る。</div>
+<div class="pex">前のカードと同じ図（AD:DB $=1:2$、BE:EC $=3:1$、O は AE と CD の交点）で、BO の延長と辺 CA の交点を F とする。AF:FC を求めよ。<br>
+<b>解</b>　$\frac{\mathrm{AD}}{\mathrm{DB}}\cdot\frac{\mathrm{BE}}{\mathrm{EC}}\cdot\frac{\mathrm{CF}}{\mathrm{FA}}=1$ より $\frac12\cdot3\cdot\frac{\mathrm{CF}}{\mathrm{FA}}=1$、$\frac{\mathrm{CF}}{\mathrm{FA}}=\frac23$。よって $\boldsymbol{\mathrm{AF:FC}=3:2}$。</div>
+</div>
+
+<div class="pat"><h4>重心・内心・外心の性質を使い分ける</h4>
+<div class="when">三角形の五心（重心・内心・外心・垂心・傍心）が登場する問題。</div>
+<div class="how">・重心 G：中線を頂点から $2:1$ に内分する。<br>
+・内心 I：角の二等分線の交点。AI と BC の交点を D とすると $\mathrm{AI:ID}=(b+c):a$。$\angle\mathrm{BIC}=90^\circ+\frac A2$。<br>
+・外心 O：各辺の垂直二等分線の交点。$A$ が鋭角なら $\angle\mathrm{BOC}=2A$（円周角の定理）。</div>
+<div class="pex">$\mathrm{AB}=6,\ \mathrm{AC}=4,\ \mathrm{BC}=5$ の $\triangle\mathrm{ABC}$ の内心を I とし、直線 AI と辺 BC の交点を D とする。AI:ID を求めよ。<br>
+<b>解</b>　$\mathrm{BD:DC}=6:4$ より $\mathrm{BD}=3$。$\triangle\mathrm{ABD}$ で BI は $\angle\mathrm B$ の二等分線だから、$\mathrm{AI:ID=BA:BD}=6:3=\boldsymbol{2:1}$。（$(b+c):a=10:5$ とも一致する。）</div>
+</div>
+
+<div class="pat"><h4>方べきの定理は「点から円までの2つの長さの積」が一定</h4>
+<div class="when">円と、円の外部（または内部）の点を通る直線・接線の長さ。</div>
+<div class="how">点 P を通る2直線が円と A, B および C, D で交わるとき $\mathrm{PA\cdot PB=PC\cdot PD}$（P が円の内部でも外部でも成り立つ）。一方が接線（接点 T）なら $\mathrm{PA\cdot PB=PT^2}$。</div>
+<div class="pex">円の外部の点 P を通る直線が円と2点 A, B（$\mathrm{PA}\lt\mathrm{PB}$）で交わり、$\mathrm{PA}=4,\ \mathrm{AB}=5$ である。P から引いた接線の長さ PT を求めよ。また、P を通る別の直線が円と C, D（$\mathrm{PC}\lt\mathrm{PD}$）で交わり $\mathrm{PC}=3$ のとき、CD を求めよ。<br>
+<b>解</b>　$\mathrm{PT}^2=\mathrm{PA\cdot PB}=4\times9=36$ より $\boldsymbol{\mathrm{PT}=6}$。$3\cdot\mathrm{PD}=36$ より $\mathrm{PD}=12$、$\boldsymbol{\mathrm{CD}=9}$。</div>
+</div>
+
+<div class="pat"><h4>接線と弦のつくる角は「反対側の円周角」に等しい</h4>
+<div class="when">円の接線が登場する角度の問題。</div>
+<div class="how">接弦定理：円の接線と、接点を通る弦のつくる角は、その角の内部にある弧に対する円周角に等しい。円周角の定理、円に内接する四角形の性質（対角の和 $180^\circ$、外角はそれと隣り合う内角の対角に等しい）と組み合わせて角を追う。</div>
+<div class="pex">$\triangle\mathrm{ABC}$ で $B=40^\circ,\ C=70^\circ$ である。外接円の点 A における接線と直線 BC の交点を T とするとき、$\angle\mathrm{ATB}$ を求めよ。<br>
+<b>解</b>　$B\lt C$ より T は辺 BC の C の側の延長上にある。接弦定理より $\angle\mathrm{TAC}=\angle\mathrm{ABC}=40^\circ$。$\angle\mathrm{ACT}=180^\circ-70^\circ=110^\circ$ だから、$\triangle\mathrm{ACT}$ で $\angle\mathrm{ATB}=180^\circ-40^\circ-110^\circ=\boldsymbol{30^\circ}$。</div>
+<div class="pnote">T がどちら側にあるかは図で必ず確認する。T が B の側にあるとすると $\angle\mathrm{TAB}=C=70^\circ$、$\angle\mathrm{ABT}=140^\circ$ で和が $180^\circ$ を超え、矛盾する。</div>
+</div>
+
+<div class="pat"><h4>2円の共通接線の長さは「中心を結ぶ線分」を斜辺とする直角三角形で</h4>
+<div class="when">2円の共通接線の、接点間の距離。</div>
+<div class="how">半径 $r_1,\ r_2$、中心間の距離 $d$ のとき、一方の中心から他方の半径に平行な線を引いて直角三角形を作る。<br>
+共通外接線：$\sqrt{d^2-(r_1-r_2)^2}$　　共通内接線（$d\gt r_1+r_2$ のとき）：$\sqrt{d^2-(r_1+r_2)^2}$</div>
+<div class="pex">半径5と半径2の2円の中心間の距離が9である。共通外接線、共通内接線について、2つの接点の間の距離をそれぞれ求めよ。<br>
+<b>解</b>　共通外接線 $\sqrt{81-9}=\boldsymbol{6\sqrt2}$、共通内接線 $\sqrt{81-49}=\boldsymbol{4\sqrt2}$。</div>
+</div>
+
+<div class="pat"><h4>多面体はオイラーの多面体定理 $v-e+f=2$</h4>
+<div class="when">多面体の頂点・辺・面の数を求める。</div>
+<div class="how">凸多面体の頂点の数 $v$、辺の数 $e$、面の数 $f$ について $v-e+f=2$。辺の数は「各面の辺の数の合計 ÷ 2」（1本の辺は2つの面で共有）、頂点の数は「各面の頂点の数の合計 ÷（1つの頂点に集まる面の数）」で数えられる。</div>
+<div class="pex">正五角形12枚と正六角形20枚で囲まれた凸多面体がある（各頂点に3つの面が集まる）。頂点と辺の数を求めよ。<br>
+<b>解</b>　$f=32$、$e=\frac{12\cdot5+20\cdot6}{2}=\boldsymbol{90}$、$v=\frac{12\cdot5+20\cdot6}{3}=\boldsymbol{60}$。確かに $60-90+32=2$。</div>
+</div>
+
+<div class="box memo"><table class="l w">
+<tr><th>項目</th><th>公式・事実</th></tr>
+<tr><td>角の二等分線</td><td>$\mathrm{BD:DC=AB:AC}$（外角の二等分線は外分）</td></tr>
+<tr><td>メネラウスの定理</td><td>$\frac{\mathrm{AP}}{\mathrm{PB}}\cdot\frac{\mathrm{BQ}}{\mathrm{QC}}\cdot\frac{\mathrm{CR}}{\mathrm{RA}}=1$（直線が辺 AB, BC, CA またはその延長と P, Q, R で交わる）</td></tr>
+<tr><td>チェバの定理</td><td>$\frac{\mathrm{AR}}{\mathrm{RB}}\cdot\frac{\mathrm{BP}}{\mathrm{PC}}\cdot\frac{\mathrm{CQ}}{\mathrm{QA}}=1$（AP, BQ, CR が1点で交わる）</td></tr>
+<tr><td>方べきの定理</td><td>$\mathrm{PA\cdot PB=PC\cdot PD}$、$\mathrm{PA\cdot PB=PT^2}$（PT は接線）</td></tr>
+<tr><td>2円の位置関係</td><td>$d\gt r_1+r_2$：離れている、$d=r_1+r_2$：外接、$|r_1-r_2|\lt d\lt r_1+r_2$：2点で交わる、$d=|r_1-r_2|$：内接、$d\lt|r_1-r_2|$：一方が他方の内部</td></tr>
+<tr><td>三角形の成立条件</td><td>$|b-c|\lt a\lt b+c$。大きい辺の対角ほど大きい</td></tr>
+<tr><td>オイラーの多面体定理</td><td>$v-e+f=2$</td></tr>
+</table></div>
+
+<!--CH 8-->
+<div class="pat"><h4>約数の個数・総和は素因数分解から</h4>
+<div class="when">正の約数の個数、約数の総和を求める。</div>
+<div class="how">$N=p^a q^b r^c$（$p,q,r$ は異なる素数）のとき、約数は $p^iq^jr^k$（$0\leqq i\leqq a$ など）の形なので<br>
+個数 $(a+1)(b+1)(c+1)$、総和 $(1+p+\cdots+p^a)(1+q+\cdots+q^b)(1+r+\cdots+r^c)$。</div>
+<div class="pex">360 の正の約数の個数と、その総和を求めよ。<br>
+<b>解</b>　$360=2^3\cdot3^2\cdot5$。個数は $4\cdot3\cdot2=\boldsymbol{24}$ 個。総和は $(1+2+4+8)(1+3+9)(1+5)=15\cdot13\cdot6=\boldsymbol{1170}$。</div>
+</div>
+
+<div class="pat"><h4>最大公約数はユークリッドの互除法</h4>
+<div class="when">大きな2数の最大公約数、分数の約分、互いに素であることの証明。</div>
+<div class="how">$a$ を $b$ で割った商を $q$、余りを $r$ とすると（$a=bq+r$）、<b>$a$ と $b$ の最大公約数は $b$ と $r$ の最大公約数に等しい</b>。割り算をくり返し、割り切れたときの割る数が最大公約数。</div>
+<div class="pex">391 と 299 の最大公約数を求めよ。<br>
+<b>解</b>　$391=299\cdot1+92$、$299=92\cdot3+23$、$92=23\cdot4$。よって最大公約数は $\boldsymbol{23}$。</div>
+</div>
+
+<div class="pat"><h4>1次不定方程式 $ax+by=c$ は「1組見つけて引き算」</h4>
+<div class="when">$ax+by=c$ の整数解をすべて求める。</div>
+<div class="how">①1組の解 $(x_0,y_0)$ を見つける（見つけにくいときは互除法を逆にたどる）。②もとの式から引いて $a(x-x_0)=-b(y-y_0)$。$a,b$ が互いに素なら $x-x_0$ は $b$ の倍数なので、$x=x_0+bk,\ y=y_0-ak$（$k$ は整数）。</div>
+<div class="pex">$11x+7y=1$ の整数解をすべて求めよ。<br>
+<b>解</b>　$11=7\cdot1+4,\ 7=4\cdot1+3,\ 4=3\cdot1+1$ を逆にたどると<br>
+$1=4-3=4-(7-4)=2\cdot4-7=2(11-7)-7=11\cdot2+7\cdot(-3)$。<br>
+もとの式から引いて $11(x-2)=-7(y+3)$。11と7は互いに素なので $x-2=7k$ とおけて、<b>$x=7k+2,\ y=-11k-3$（$k$ は整数）</b>。</div>
+</div>
+
+<div class="pat"><h4>最大公約数 $g$ が与えられたら $a=ga',\ b=gb'$ とおく</h4>
+<div class="when">2数の最大公約数・最小公倍数の条件から、2数を求める。</div>
+<div class="how">$a=ga',\ b=gb'$（$a',b'$ は互いに素な自然数）とおく。最小公倍数は $l=ga'b'$、また $ab=gl$。「互いに素」の条件で候補を絞る。</div>
+<div class="pex">最大公約数が6、最小公倍数が72である2つの自然数 $a,b\ (a\lt b)$ の組をすべて求めよ。<br>
+<b>解</b>　$a=6a',\ b=6b'$（$a'\lt b'$、互いに素）とおくと $6a'b'=72$、$a'b'=12$。<br>
+$(a',b')=(1,12),\ (3,4)$（$(2,6)$ は互いに素でない）。よって $\boldsymbol{(a,b)=(6,72),\ (18,24)}$。</div>
+</div>
+
+<div class="pat"><h4>$xy+ax+by=c$ は「積 ＝ 整数」の形に変形</h4>
+<div class="when">2つの文字の積を含む方程式の整数解。</div>
+<div class="how">$(x+b)(y+a)=c+ab$ と変形し、右辺の約数の組を調べる。<b>各因数のとりうる範囲</b>（$x\geqq1$ なら $x+b\geqq1+b$ など）で候補を絞る。</div>
+<div class="pex">$xy-2x-3y=0$ を満たす正の整数の組 $(x,y)$ をすべて求めよ。<br>
+<b>解</b>　$(x-3)(y-2)=6$。$x-3\geqq-2,\ y-2\geqq-1$ なので、両方が負だとすると $y-2=-1$ で積は2以下となり不適。よって両方正で<br>
+$(x-3,\ y-2)=(1,6),(2,3),(3,2),(6,1)$、$\boldsymbol{(x,y)=(4,8),(5,5),(6,4),(9,3)}$。</div>
+</div>
+
+<div class="pat"><h4>分数の和の方程式は「大小を仮定して不等式で絞る」</h4>
+<div class="when">$\frac1x+\frac1y+\frac1z=1$ のような、文字を入れかえても変わらない方程式の自然数解。</div>
+<div class="how">$x\leqq y\leqq z$ と仮定し、最小の文字で全体をおさえる：$\frac1x+\frac1y+\frac1z\leqq\frac3x$。これで $x$ の候補が有限個になる。1つ決めるごとに同じ方法をくり返す。</div>
+<div class="pex">$\frac1x+\frac1y+\frac1z=1,\ x\leqq y\leqq z$ を満たす自然数の組 $(x,y,z)$ をすべて求めよ。<br>
+<b>解</b>　$1\leqq\frac3x$ より $x\leqq3$。$x=1$ は不適なので $x=2,\ 3$。<br>
+$x=2$ のとき：$\frac1y+\frac1z=\frac12$ より $(y-2)(z-2)=4$。$y\leqq z$ から $(y,z)=(3,6),(4,4)$。<br>
+$x=3$ のとき：$\frac23=\frac1y+\frac1z\leqq\frac2y$ より $y\leqq3$。$y\geqq3$ なので $y=3,\ z=3$。<br>
+答 $\boldsymbol{(2,3,6),\ (2,4,4),\ (3,3,3)}$。</div>
+</div>
+
+<div class="pat"><h4>余りで分類：$n=3k,\ 3k+1,\ 3k+2$</h4>
+<div class="when">「すべての整数 $n$ について〜を示せ」「〜となる素数を求めよ」。</div>
+<div class="how">$n$ を $m$ で割った余りで $m$ 通りに分類する（$3k\pm1$ と書くと計算が楽）。よく使う事実：平方数を3で割った余りは0か1、4で割った余りは0か1。連続する $m$ 個の整数の中には $m$ の倍数がある。</div>
+<div class="pex">$p,\ p+2,\ p+4$ がすべて素数となる素数 $p$ をすべて求めよ。<br>
+<b>解</b>　$p=3$ のとき $3,5,7$ で適する。<br>
+$p=3k+1$ のとき $p+2=3(k+1)$ は3より大きい3の倍数で素数でない。$p=3k+2$ のとき $p+4=3(k+2)$ も同様。<br>
+$p=3k$ の形の素数は3だけなので、$\boldsymbol{p=3}$。</div>
+</div>
+
+<div class="pat"><h4>大きな累乗の余りは合同式で「1 か −1」を探す</h4>
+<div class="when">$3^{100}$ を7で割った余りなど、大きな累乗の余り。</div>
+<div class="how">$a\equiv b\pmod m$ のとき $a+c\equiv b+c$、$ac\equiv bc$、$a^n\equiv b^n\pmod m$。$a^k\equiv1$ または $-1$ となる $k$ を見つけて、指数を小さくする。</div>
+<div class="pex">$3^{100}$ を7で割った余りを求めよ。<br>
+<b>解</b>　$3^3=27\equiv-1\pmod7$。$3^{100}=(3^3)^{33}\cdot3\equiv(-1)^{33}\cdot3=-3\equiv4\pmod7$。余りは $\boldsymbol4$。</div>
+</div>
+
+<div class="pat"><h4>$n!$ に含まれる素因数 $p$ の個数は $\left[\frac np\right]+\left[\frac n{p^2}\right]+\cdots$</h4>
+<div class="when">$n!$ が $p$ で何回割り切れるか、$n!$ の末尾に並ぶ0の個数。</div>
+<div class="how">1から $n$ までに $p$ の倍数は $\left[\frac np\right]$ 個、$p^2$ の倍数は $\left[\frac n{p^2}\right]$ 個、…（$[\ ]$ は小数点以下を切り捨てた整数部分）。$p^2$ の倍数は2回目、$p^3$ の倍数は3回目に数えられるので、これらをすべて足す。末尾の0の個数は $10=2\cdot5$ より、少ない方の5の個数。</div>
+<div class="pex">$100!$ を計算したとき、末尾に0は何個並ぶか。<br>
+<b>解</b>　素因数5の個数は $\left[\frac{100}5\right]+\left[\frac{100}{25}\right]=20+4=24$。素因数2の個数（$50+25+12+6+3+1=97$）の方が多いので、0は $\boldsymbol{24}$ 個。</div>
+</div>
+
+<div class="box memo"><table class="l w">
+<tr><th>項目</th><th>公式・事実</th></tr>
+<tr><td>割り算の等式</td><td>$a=bq+r\ (0\leqq r\lt b)$</td></tr>
+<tr><td>互除法</td><td>$a=bq+r$ のとき（$a$ と $b$ の最大公約数）＝（$b$ と $r$ の最大公約数）</td></tr>
+<tr><td>最大公約数 $g$ と最小公倍数 $l$</td><td>$a=ga',\ b=gb'$（$a',b'$ は互いに素）、$l=ga'b'$、$ab=gl$</td></tr>
+<tr><td>1次不定方程式</td><td>$a,b$ が互いに素で $ax_0+by_0=c$ のとき、$ax+by=c$ の整数解は $x=x_0+bk,\ y=y_0-ak$</td></tr>
+<tr><td>合同式</td><td>$a\equiv b,\ c\equiv d\pmod m$ ならば $a+c\equiv b+d$、$ac\equiv bd$、$a^n\equiv b^n$</td></tr>
+<tr><td>$n$ 進法</td><td>$abc_{(n)}=a\cdot n^2+b\cdot n+c$。例：$101101_{(2)}=45$、$100=10201_{(3)}$</td></tr>
+</table></div>

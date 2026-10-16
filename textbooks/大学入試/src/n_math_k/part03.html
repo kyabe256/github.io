@@ -1,0 +1,557 @@
+<!--CH 9-->
+<div class="box point">
+・<b>二項定理</b>：$(a+b)^n={}_n\mathrm{C}_0a^n+{}_n\mathrm{C}_1a^{n-1}b+\cdots+{}_n\mathrm{C}_ra^{n-r}b^r+\cdots+{}_n\mathrm{C}_nb^n$。一般項は ${}_n\mathrm{C}_r\,a^{n-r}b^r$<br>
+・<b>多項定理</b>：$(a+b+c)^n$ の展開式で $a^pb^qc^r\ (p+q+r=n)$ の係数は $\dfrac{n!}{p!\,q!\,r!}$<br>
+・<b>整式の除法</b>：$A=BQ+R$（$R$ は $0$ か、$B$ より次数が低い）。<b>恒等式</b>は係数比較法・数値代入法で決める<br>
+・<b>相加平均と相乗平均の関係</b>：$a>0,\ b>0$ のとき $\dfrac{a+b}{2}\geqq\sqrt{ab}$（等号は $a=b$ のとき）<br>
+・<b>コーシー・シュワルツの不等式</b>：$(a^2+b^2)(x^2+y^2)\geqq(ax+by)^2$（等号は $ay=bx$ のとき）
+</div>
+<h3>講義1　二項定理と多項定理</h3>
+<div class="box lect">
+$(a+b)^n=(a+b)(a+b)\cdots(a+b)$ を展開すると、各項は $n$ 個の因数のそれぞれから $a$ か $b$ を1つずつ選んでかけたものになる。$a^{n-r}b^r$ ができるのは<b>どの $r$ 個の因数から $b$ を選ぶか</b>を決めたときで、その選び方 ${}_n\mathrm{C}_r$ 通りが係数になる（<b>二項係数</b>）。<br>
+同様に、$(a+b+c)^n$ の $a^pb^qc^r$ の係数は、$a$ を $p$ 個、$b$ を $q$ 個、$c$ を $r$ 個並べる<b>同じものを含む順列</b>の数 $\dfrac{n!}{p!q!r!}$ である。特定の項の係数は、<b>一般項を書いて指数を調べる</b>のが確実。
+</div>
+<div class="box ex">
+(1) $\left(2x-\dfrac1x\right)^6$ の展開式における $x^2$ の係数と定数項を求めよ。　(2) $(a+2b-c)^6$ の展開式における $a^2b^3c$ の係数を求めよ。
+<div class="solx"><b>解</b>　(1) 一般項は ${}_6\mathrm{C}_r(2x)^{6-r}\left(-\dfrac1x\right)^r={}_6\mathrm{C}_r\,2^{6-r}(-1)^rx^{6-2r}$。<br>
+$x^2$ の項は $6-2r=2$ より $r=2$ で、係数は ${}_6\mathrm{C}_2\cdot2^4\cdot(-1)^2=15\cdot16=\boldsymbol{240}$<br>
+定数項は $6-2r=0$ より $r=3$ で、${}_6\mathrm{C}_3\cdot2^3\cdot(-1)^3=20\cdot8\cdot(-1)=\boldsymbol{-160}$<br>
+(2) 一般項は $\dfrac{6!}{p!q!r!}a^p(2b)^q(-c)^r$。$p=2,\ q=3,\ r=1$ として $\dfrac{6!}{2!\,3!\,1!}\cdot2^3\cdot(-1)^1=60\cdot8\cdot(-1)=\boldsymbol{-480}$</div>
+</div>
+<h3>講義2　整式の除法と分数式</h3>
+<div class="box lect">
+整式 $A$ を整式 $B$ で割ると、$A=BQ+R$（$R$ は $0$ か $B$ より次数が低い）を満たす<b>商 $Q$ と余り $R$ がただ1通りに決まる</b>。筆算は両方を<b>降べきの順</b>に並べ、欠けている次数の項は空けておく。<br>
+分数式は分数と同様に、約分は因数分解してから、加減は通分して行う。$\dfrac{1}{k(k+1)}=\dfrac1k-\dfrac1{k+1}$ のように<b>差に分ける（部分分数分解）</b>と、和の途中が次々に消える（数列の和でも使う）。
+</div>
+<div class="box ex">
+(1) $2x^3-3x^2+4x-5$ を $x^2-x+2$ で割った商と余りを求めよ。<br>
+(2) $\dfrac{1}{x(x+1)}+\dfrac{1}{(x+1)(x+2)}+\dfrac{1}{(x+2)(x+3)}$ を計算せよ。
+<div class="solx"><b>解</b>　(1) 商の最初の項は $2x$。$2x(x^2-x+2)=2x^3-2x^2+4x$ を引くと $-x^2-5$。次の項は $-1$。$-(x^2-x+2)$ を引くと $-x-3$ で、次数が $1$ になったので終わり。<br>
+商 $\boldsymbol{2x-1}$、余り $\boldsymbol{-x-3}$（検算：$(x^2-x+2)(2x-1)+(-x-3)=2x^3-3x^2+4x-5$）<br>
+(2) 与式 $=\left(\dfrac1x-\dfrac1{x+1}\right)+\left(\dfrac1{x+1}-\dfrac1{x+2}\right)+\left(\dfrac1{x+2}-\dfrac1{x+3}\right)=\dfrac1x-\dfrac1{x+3}=\boldsymbol{\dfrac{3}{x(x+3)}}$</div>
+</div>
+<h3>講義3　恒等式と等式の証明</h3>
+<div class="box lect">
+文字にどんな値を代入しても成り立つ等式を<b>恒等式</b>という。整式の恒等式では<b>両辺の同じ次数の項の係数が等しい</b>（係数比較法）。値を代入して係数を求める数値代入法では、得られるのは必要条件なので、求めた値で恒等式になることを確かめる。<br>
+等式 $A=B$ の証明は、$A$ を変形して $B$ にするか、$A-B=0$ を示す。<b>条件つき</b>なら条件式で<b>文字を1つ消去</b>する。比例式 $\dfrac ab=\dfrac cd$ は $=k$ とおき、$a=bk,\ c=dk$ を代入する。
+</div>
+<div class="box ex">
+(1) 等式 $x^3-2x^2+3x-4=a(x-1)^3+b(x-1)^2+c(x-1)+d$ が $x$ についての恒等式となるように、定数 $a,b,c,d$ の値を定めよ。<br>
+(2) $a+b+c=0$ のとき、$a^2-bc=b^2-ca$ が成り立つことを証明せよ。
+<div class="solx"><b>解</b>　(1) $x-1=t$ とおくと $x=t+1$ で、左辺 $=(t+1)^3-2(t+1)^2+3(t+1)-4=t^3+t^2+2t-2$。<br>
+これが $at^3+bt^2+ct+d$ と恒等的に等しいので、係数を比較して $\boldsymbol{a=1,\ b=1,\ c=2,\ d=-2}$<br>
+(2) 条件より $c=-a-b$。これを代入すると<br>
+左辺 $=a^2-b(-a-b)=a^2+ab+b^2$、右辺 $=b^2-(-a-b)a=a^2+ab+b^2$。よって 左辺＝右辺。■</div>
+</div>
+<h3>講義4　不等式の証明 ― 相加・相乗平均とコーシー・シュワルツ</h3>
+<div class="box lect">
+$A\geqq B$ の証明は <b>$A-B\geqq0$ を示す</b>のが基本で、$A-B$ を $(\ \ )^2+(\ \ )^2$ の形に変形する。両辺が正なら $A^2-B^2\geqq0$ を示してもよい。<br>
+<b>相加・相乗平均の関係</b>は $a+b-2\sqrt{ab}=(\sqrt a-\sqrt b)^2\geqq0$ から得られ、<b>積が一定</b>のときの<b>和の最小値</b>に使う。<b>コーシー・シュワルツの不等式</b>は $(a^2+b^2)(x^2+y^2)-(ax+by)^2=(ay-bx)^2\geqq0$ から得られ、<b>2乗の和が一定</b>のときの1次式の最大・最小に使う。どちらも<b>等号が成り立つ場合を必ず確認</b>する。
+</div>
+<div class="box ex">
+(1) $a>0,\ b>0$ のとき、$\left(a+\dfrac1b\right)\left(b+\dfrac4a\right)\geqq9$ を証明せよ。また、等号が成り立つのはどのようなときか。<br>
+(2) 実数 $x,y$ が $x^2+y^2=1$ を満たすとき、$3x+4y$ の最大値を求めよ。
+<div class="solx"><b>解</b>　(1) 左辺を展開すると $ab+4+1+\dfrac4{ab}=ab+\dfrac4{ab}+5$。$ab>0,\ \dfrac4{ab}>0$ なので、相加平均・相乗平均の関係より<br>
+$ab+\dfrac4{ab}\geqq2\sqrt{ab\cdot\dfrac4{ab}}=4$。よって 左辺 $\geqq4+5=9$。■<br>
+等号は $ab=\dfrac4{ab}$、すなわち $(ab)^2=4$ より $\boldsymbol{ab=2}$ のとき（例えば $a=1,\ b=2$）。<br>
+(2) コーシー・シュワルツの不等式より $(3x+4y)^2\leqq(3^2+4^2)(x^2+y^2)=25$ なので $-5\leqq3x+4y\leqq5$。等号は $3y=4x$ のときで、$x^2+y^2=1$ と合わせると $x=\dfrac35,\ y=\dfrac45$ のとき $3x+4y=5$ となる。最大値 $\boldsymbol5$</div>
+</div>
+<div class="box chk">
+(1) $(1+x+x^2)^6$ の展開式における $x^4$ の係数を求めよ。　(2) $x^4+2x^3-x+3$ を $x^2+x-1$ で割った商と余りを求めよ。　(3) $\dfrac{x+7}{x^2-x-2}=\dfrac{a}{x-2}+\dfrac{b}{x+1}$ が $x$ についての恒等式となるように、定数 $a,b$ の値を定めよ。　(4) $x>0$ のとき、$x+\dfrac{9}{x+1}$ の最小値を求めよ。
+</div>
+<div class="box aim">
+二項定理は<b>余りの計算</b>にも使う。$11^{10}=(1+10)^{10}=1+{}_{10}\mathrm{C}_1\cdot10+{}_{10}\mathrm{C}_2\cdot10^2+\cdots$ の4項目以降は $1000$ の倍数なので、$11^{10}$ を $1000$ で割った余りは $1+100+4500=4601$ より $601$。不等式で最大・最小を求めるときは、<b>等号成立条件</b>まで書いて初めて満点になる。
+</div>
+<h3 class="deep">講義5　コーシー・シュワルツの不等式の2通りの証明</h3>
+<div class="box lect">
+<b>証明1（差をとる）</b>　$(a^2+b^2)(x^2+y^2)-(ax+by)^2=a^2y^2-2abxy+b^2x^2=(ay-bx)^2\geqq0$。3組でも<br>
+$(a^2+b^2+c^2)(x^2+y^2+z^2)-(ax+by+cz)^2=(ay-bx)^2+(bz-cy)^2+(cx-az)^2\geqq0$<br>
+<b>証明2（判別式）</b>　どんな実数 $t$ に対しても $(at-x)^2+(bt-y)^2\geqq0$。左辺 $=(a^2+b^2)t^2-2(ax+by)t+(x^2+y^2)$ は、$a^2+b^2>0$ のとき、つねに $0$ 以上の2次式なので判別式 $D\leqq0$：$\dfrac D4=(ax+by)^2-(a^2+b^2)(x^2+y^2)\leqq0$。■（$a=b=0$ なら両辺とも $0$。）この方法は文字が何組あっても同じ形で通用する。
+</div>
+<p>応用：$x^2+y^2+z^2=1$ のとき $(x+2y+2z)^2\leqq(1+4+4)(x^2+y^2+z^2)=9$ より、$x+2y+2z$ の最大値は $3$（$x=\frac13,\ y=z=\frac23$）。ベクトルの内積の性質（第18章）と同じ内容である。</p>
+<div class="box warn">
+相加・相乗平均の関係を<b>2回使い、等号が同時に成り立たない</b>ミス。講義4の例題(1)で $a+\dfrac1b\geqq2\sqrt{\dfrac ab}$、$b+\dfrac4a\geqq2\sqrt{\dfrac{4b}a}$ を辺々かけると「左辺 $\geqq8$」となるが、等号の条件 $ab=1$ と $ab=4$ が同時には成り立たないので、$8$ は最小値ではない（最小値は $9$）。また、相加・相乗平均の関係は<b>正の数</b>にしか使えない。
+</div>
+<div class="box ans">
+(1) $1^px^q(x^2)^r$ で $p+q+r=6,\ q+2r=4$ となるのは $(p,q,r)=(2,4,0),(3,2,1),(4,0,2)$ なので、$\frac{6!}{2!4!}+\frac{6!}{3!2!1!}+\frac{6!}{4!2!}=15+60+15=90$　(2) 商 $x^2+x$、余り $3$　(3) 分母を払って $x+7=a(x+1)+b(x-2)$。$x=2,\ -1$ を代入して $a=3,\ b=-2$（このとき確かに恒等式）　(4) $(x+1)+\frac9{x+1}-1\geqq2\sqrt9-1=5$。等号は $x+1=3$ すなわち $x=2$ のとき。最小値 $5$
+</div>
+
+<!--CH 10-->
+<div class="box point">
+・虚数単位 $i$（$i^2=-1$）。$a,b,c,d$ が実数のとき $a+bi=c+di\iff a=c$ かつ $b=d$。$a>0$ のとき $\sqrt{-a}=\sqrt a\,i$<br>
+・実数係数の2次方程式 $ax^2+bx+c=0$ の判別式 $D=b^2-4ac$：$D>0\iff$ 異なる2つの実数解、$D=0\iff$ 重解、$D<0\iff$ 異なる2つの虚数解<br>
+・<b>解と係数の関係</b>：$\alpha+\beta=-\dfrac ba,\ \alpha\beta=\dfrac ca$。3次方程式 $ax^3+bx^2+cx+d=0$ では $\alpha+\beta+\gamma=-\dfrac ba,\ \alpha\beta+\beta\gamma+\gamma\alpha=\dfrac ca,\ \alpha\beta\gamma=-\dfrac da$<br>
+・<b>剰余の定理</b>：$P(x)$ を $x-a$ で割った余りは $P(a)$。<b>因数定理</b>：$P(a)=0\iff P(x)$ は $x-a$ で割り切れる<br>
+・<b>1の虚数立方根</b> $\omega$：$\omega^3=1,\ \omega^2+\omega+1=0$。もう1つの虚数立方根は $\omega^2\ (=\overline{\omega})$
+</div>
+<h3>講義1　複素数とその計算</h3>
+<div class="box lect">
+2乗して $-1$ になる数 $i$ を<b>虚数単位</b>といい、$a+bi$（$a,b$ は実数）を<b>複素数</b>（$a$ が実部、$b$ が虚部）、$b\neq0$ のものを<b>虚数</b>という。計算は $i$ を文字として扱い、$i^2$ を $-1$ におき換えるだけである。<br>
+$z=a+bi$ と<b>共役な複素数</b> $\overline z=a-bi$ について $z\overline z=a^2+b^2$ は実数なので、<b>分母に虚数があれば、分母と共役な複素数を分母・分子にかける</b>（有理化と同じ発想）。負の数の平方根は、まず $\sqrt{-3}=\sqrt3\,i$ と書き直してから計算する。
+</div>
+<div class="box ex">
+(1) $\dfrac{3+i}{1-2i}$ を $a+bi$（$a,b$ は実数）の形で表せ。　(2) $(2+i)(x+yi)=1+8i$ を満たす実数 $x,y$ を求めよ。
+<div class="solx"><b>解</b>　(1) $\dfrac{(3+i)(1+2i)}{(1-2i)(1+2i)}=\dfrac{3+6i+i+2i^2}{1+4}=\dfrac{1+7i}{5}=\boldsymbol{\dfrac15+\dfrac75i}$<br>
+(2) 左辺 $=2x+2yi+xi+yi^2=(2x-y)+(x+2y)i$。$2x-y,\ x+2y$ は実数なので、実部と虚部を比べて $2x-y=1,\ x+2y=8$。これを解いて $\boldsymbol{x=2,\ y=3}$</div>
+</div>
+<h3>講義2　判別式と解と係数の関係</h3>
+<div class="box lect">
+解の公式 $x=\dfrac{-b\pm\sqrt{b^2-4ac}}{2a}$ の根号の中 $D=b^2-4ac$ の符号で解の種類が決まる。複素数まで考えれば、2次方程式はつねに2つの解（重解は2つと数える）をもつ。<br>
+2つの解を $\alpha,\beta$ とすると $ax^2+bx+c=a(x-\alpha)(x-\beta)=a\{x^2-(\alpha+\beta)x+\alpha\beta\}$ が恒等式なので、係数を比べて<b>解と係数の関係</b>が得られる。逆に、2数 $p,q$ を解とする2次方程式の1つは $x^2-(p+q)x+pq=0$。$\alpha^2+\beta^2$ などの<b>対称式</b>は $\alpha+\beta,\ \alpha\beta$ で表せる（第1章）ので、解を求めずに値がわかる。
+</div>
+<div class="box ex">
+2次方程式 $x^2-3x+5=0$ の2つの解を $\alpha,\beta$ とする。(1) $\alpha^2+\beta^2,\ \alpha^3+\beta^3$ の値を求めよ。(2) $\alpha^2,\ \beta^2$ を解とする2次方程式を1つ作れ。
+<div class="solx"><b>解</b>　解と係数の関係より $\alpha+\beta=3,\ \alpha\beta=5$（$D=9-20<0$ なので $\alpha,\beta$ は虚数だが、計算は同じ）。<br>
+(1) $\alpha^2+\beta^2=(\alpha+\beta)^2-2\alpha\beta=9-10=\boldsymbol{-1}$、$\alpha^3+\beta^3=(\alpha+\beta)^3-3\alpha\beta(\alpha+\beta)=27-45=\boldsymbol{-18}$<br>
+(2) 和は $\alpha^2+\beta^2=-1$、積は $\alpha^2\beta^2=(\alpha\beta)^2=25$。よって $\boldsymbol{x^2+x+25=0}$</div>
+</div>
+<h3>講義3　剰余の定理・因数定理と高次方程式</h3>
+<div class="box lect">
+$P(x)=(x-a)Q(x)+R$ に $x=a$ を代入すると $R=P(a)$（<b>剰余の定理</b>）。特に $P(a)=0$ なら $x-a$ で割り切れる（<b>因数定理</b>）。2次式で割った余りは1次以下なので <b>$ax+b$ とおき</b>、割る式の因数 $x-\alpha,\ x-\beta$ に対して $x=\alpha,\ \beta$ を代入する。<br>
+3次以上の方程式は、因数定理で1次の因数を見つけて次数を下げる。整数係数の方程式の有理数の解は、$\pm\dfrac qp$（$q$ は定数項の約数、$p$ は最高次の係数の約数）の中から探せばよい。
+</div>
+<div class="box ex">
+(1) 整式 $P(x)$ を $x-1$ で割ると余りが $3$、$x+2$ で割ると余りが $-6$ である。$P(x)$ を $(x-1)(x+2)$ で割った余りを求めよ。<br>
+(2) 方程式 $2x^3-3x^2+3x-1=0$ を解け。
+<div class="solx"><b>解</b>　(1) 余りを $ax+b$ とおくと $P(x)=(x-1)(x+2)Q(x)+ax+b$。剰余の定理より $P(1)=a+b=3$、$P(-2)=-2a+b=-6$。これを解いて $a=3,\ b=0$。余りは $\boldsymbol{3x}$<br>
+(2) $P(x)=2x^3-3x^2+3x-1$ とおく。候補 $\pm1,\ \pm\dfrac12$ を調べると $P\left(\dfrac12\right)=\dfrac14-\dfrac34+\dfrac32-1=0$。よって $P(x)$ は $2x-1$ を因数にもち、$P(x)=(2x-1)(x^2-x+1)$。$x^2-x+1=0$ を解いて、答は $\boldsymbol{x=\dfrac12,\ \dfrac{1\pm\sqrt3\,i}{2}}$</div>
+</div>
+<h3>講義4　1の虚数立方根 ω</h3>
+<div class="box lect">
+$x^3=1$ を解くと、$x^3-1=(x-1)(x^2+x+1)=0$ より $x=1,\ \dfrac{-1\pm\sqrt3\,i}{2}$。虚数解の一方を $\omega$ とすると<br>
+<b>$\omega^3=1$、$\omega^2+\omega+1=0$</b><br>
+が成り立つ。$\omega$ の値を代入せず、<b>この2式だけで計算する</b>のがコツ。$\omega^n$ は $n$ を3で割った余りによって $1,\ \omega,\ \omega^2$ のどれかになる。また、$x^2+x+1=0$ の2解の積は $1$ なので、もう1つの虚数解は $\dfrac1\omega=\omega^2$ で、これは $\overline\omega$ に等しい。
+</div>
+<div class="box ex">
+$\omega$ を、1の3乗根のうち虚数であるものの1つとする。(1) $\omega^{100}+\omega^{50}+1$ の値を求めよ。(2) $x^{100}$ を $x^2+x+1$ で割った余りを求めよ。
+<div class="solx"><b>解</b>　(1) $100=3\cdot33+1,\ 50=3\cdot16+2$ より $\omega^{100}=(\omega^3)^{33}\omega=\omega$、$\omega^{50}=(\omega^3)^{16}\omega^2=\omega^2$。よって 与式 $=\omega^2+\omega+1=\boldsymbol0$<br>
+(2) 余りを $ax+b$（$a,b$ は実数）とおくと $x^{100}=(x^2+x+1)Q(x)+ax+b$。$x=\omega$ を代入すると $\omega^{100}=a\omega+b$、すなわち $(a-1)\omega+b=0$。$a-1\neq0$ なら $\omega=-\dfrac b{a-1}$ が実数となって矛盾するので $a=1$、したがって $b=0$。余りは $\boldsymbol x$</div>
+</div>
+<div class="box chk">
+(1) $(1+i)^{10}$ を計算せよ。　(2) 2次方程式 $x^2+2(k-1)x+k+5=0$ が虚数解をもつような定数 $k$ の値の範囲を求めよ。　(3) $x^3+ax^2+bx+6$ が $x^2-x-2$ で割り切れるように、定数 $a,b$ の値を定めよ。　(4) 方程式 $x^4-x^2-12=0$ を解け。　(5) $\omega$ を1の虚数立方根とするとき、$(1-\omega)(1-\omega^2)$ の値を求めよ。
+</div>
+<div class="box aim">
+「解と係数の関係」＋「対称式」は2次方程式の定番で、2つの解がともに正である条件（$D\geqq0,\ \alpha+\beta>0,\ \alpha\beta>0$）などにも使われる。剰余の定理では、<b>3次式で割った余りは $ax^2+bx+c$ とおく</b>。$(x-1)^2(x+2)$ で割る問題では、「$(x-1)^2$ で割った余り」の情報を使って未知数を減らすのが定石。$\omega$ の問題は $\omega^3=1$ と $\omega^2+\omega+1=0$ の2本立てで処理する。
+</div>
+<h3 class="deep">講義5　実数係数の方程式と共役な虚数解</h3>
+<p>係数がすべて実数の方程式 $P(x)=0$ が虚数解 $\alpha$ をもつなら、<b>共役な複素数 $\overline\alpha$ も解</b>である。</p>
+<div class="box lect">
+複素数 $z,w$ について $\overline{z+w}=\overline z+\overline w$、$\overline{zw}=\overline z\,\overline w$ が成り立つ（$z=a+bi,\ w=c+di$ とおいて計算すれば確かめられる）。$P(x)=a_nx^n+\cdots+a_1x+a_0$ の係数 $a_k$ は実数なので $\overline{a_k}=a_k$ であり<br>
+$\overline{P(\alpha)}=a_n\overline\alpha^{\,n}+\cdots+a_1\overline\alpha+a_0=P(\overline\alpha)$。よって $P(\alpha)=0$ ならば $P(\overline\alpha)=\overline0=0$。■
+</div>
+<p>例：$x^3+ax^2+bx-15=0$（$a,b$ は実数）が $1+2i$ を解にもつとき、$1-2i$ も解。この2数の和は $2$、積は $5$ なので $x^3+ax^2+bx-15=(x^2-2x+5)(x-\gamma)$ と表せる。定数項を比べて $-5\gamma=-15$、$\gamma=3$。$(x^2-2x+5)(x-3)=x^3-5x^2+11x-15$ より $a=-5,\ b=11$、他の解は $1-2i,\ 3$。</p>
+<div class="box warn">
+$\sqrt{-2}\sqrt{-3}=\sqrt{(-2)(-3)}=\sqrt6$ としてしまうミス。$\sqrt a\sqrt b=\sqrt{ab}$ は $a<0$ かつ $b<0$ のときは成り立たない。正しくは $\sqrt{-2}\sqrt{-3}=\sqrt2\,i\cdot\sqrt3\,i=\sqrt6\,i^2=-\sqrt6$。また、虚数には大小関係がない。判別式で解を分類できるのは<b>係数が実数</b>のときに限る。
+</div>
+<div class="box ans">
+(1) $(1+i)^2=2i$ より $(1+i)^{10}=(2i)^5=32i^5=32i$　(2) $\dfrac D4=(k-1)^2-(k+5)=k^2-3k-4=(k-4)(k+1)<0$ より $-1<k<4$　(3) $x^2-x-2=(x-2)(x+1)$ なので、$P(2)=4a+2b+14=0,\ P(-1)=a-b+5=0$。$a=-4,\ b=1$　(4) $(x^2-4)(x^2+3)=0$ より $x=\pm2,\ \pm\sqrt3\,i$　(5) 展開して $1-(\omega+\omega^2)+\omega^3=1-(-1)+1=3$
+</div>
+
+<!--CH 11-->
+<div class="box point">
+・2点 $\mathrm A(x_1,y_1),\ \mathrm B(x_2,y_2)$ 間の距離 $\mathrm{AB}=\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}$。線分 AB を $m:n$ に内分する点は $\left(\dfrac{nx_1+mx_2}{m+n},\ \dfrac{ny_1+my_2}{m+n}\right)$<br>
+・2直線 $y=m_1x+n_1,\ y=m_2x+n_2$ は、平行 $\iff m_1=m_2$、垂直 $\iff m_1m_2=-1$<br>
+・<b>点と直線の距離</b>：点 $(x_1,y_1)$ と直線 $ax+by+c=0$ の距離は $d=\dfrac{|ax_1+by_1+c|}{\sqrt{a^2+b^2}}$<br>
+・<b>円</b>：$(x-a)^2+(y-b)^2=r^2$（中心 $(a,b)$、半径 $r$）。円と直線は、中心と直線の距離 $d$ と $r$ の大小で判定（$d<r$：2点で交わる、$d=r$：接する、$d>r$：共有点なし）<br>
+・円 $x^2+y^2=r^2$ 上の点 $(x_1,y_1)$ における接線は $x_1x+y_1y=r^2$
+</div>
+<h3>講義1　点と直線 ― 距離と対称点</h3>
+<div class="box lect">
+直線 $ax+by+c=0$ はベクトル $(a,b)$ に垂直である（$x,y$ の係数が<b>法線</b>の向き）。点と直線の距離の公式の導き方は、第18章のベクトルで扱う。<br>
+直線 $\ell$ に関して点 A と対称な点 A$'$ は、①線分 AA$'$ の<b>中点が $\ell$ 上</b>　②<b>AA$'\perp\ell$</b>（傾きの積が $-1$）の2条件で決める。A, B が $\ell$ に関して同じ側にあるとき、$\ell$ 上の点 P について $\mathrm{AP}+\mathrm{PB}=\mathrm{A'P}+\mathrm{PB}\geqq\mathrm{A'B}$ なので、<b>折れ線の長さの最小値</b>は線分 A$'$B の長さになる。
+</div>
+<div class="box ex">
+直線 $\ell:2x+y-4=0$ と2点 $\mathrm A(-1,1),\ \mathrm B(0,-3)$ がある。(1) 点 A と直線 $\ell$ の距離を求めよ。(2) $\ell$ に関して A と対称な点 A$'$ の座標を求めよ。(3) 点 P が $\ell$ 上を動くとき、$\mathrm{AP}+\mathrm{PB}$ の最小値と、そのときの P の座標を求めよ。
+<div class="solx"><b>解</b>　(1) $\dfrac{|2\cdot(-1)+1-4|}{\sqrt{2^2+1^2}}=\dfrac5{\sqrt5}=\boldsymbol{\sqrt5}$<br>
+(2) $\mathrm A'(p,q)$ とおく。中点 $\left(\dfrac{p-1}2,\ \dfrac{q+1}2\right)$ が $\ell$ 上にあるから $(p-1)+\dfrac{q+1}2-4=0$、すなわち $2p+q=9$。$\ell$ の傾きは $-2$ なので AA$'$ の傾きは $\dfrac12$：$\dfrac{q-1}{p+1}=\dfrac12$、すなわち $p-2q=-3$。これを解いて $\boldsymbol{\mathrm A'(3,\ 3)}$<br>
+(3) $2x+y-4$ に A, B の座標を代入すると $-5,\ -7$ で同符号なので、A, B は $\ell$ に関して同じ側にある。$\mathrm{AP}=\mathrm{A'P}$ より<br>
+$\mathrm{AP}+\mathrm{PB}=\mathrm{A'P}+\mathrm{PB}\geqq\mathrm{A'B}=\sqrt{3^2+6^2}=3\sqrt5$<br>
+等号は P が直線 A$'$B：$y=2x-3$ と $\ell$ の交点のとき。$2x+(2x-3)-4=0$ より $x=\dfrac74$。<br>
+最小値 $\boldsymbol{3\sqrt5}$、そのとき $\boldsymbol{\mathrm P\left(\dfrac74,\ \dfrac12\right)}$</div>
+</div>
+<h3>講義2　円の方程式と、円と直線</h3>
+<div class="box lect">
+円 $(x-a)^2+(y-b)^2=r^2$ を展開すると $x^2+y^2+lx+my+n=0$ の形（一般形）。<b>3点を通る円</b>は一般形に代入して連立方程式を解く。逆に一般形は平方完成して中心と半径を読む。<br>
+円と直線の位置関係は、<b>中心と直線の距離 $d$ と半径 $r$ の比較</b>で調べると計算が軽い（交点の座標が必要なら、連立して判別式や解を調べる）。円が直線から切り取る<b>弦の長さ</b>は、三平方の定理より $2\sqrt{r^2-d^2}$。
+</div>
+<div class="box ex">
+(1) 3点 $(5,5),\ (-3,1),\ (6,-2)$ を通る円の方程式を求め、中心と半径を答えよ。<br>
+(2) 円 $x^2+y^2=5$ と直線 $y=2x+k$ が接するとき、定数 $k$ の値と接点の座標を求めよ。
+<div class="solx"><b>解</b>　(1) 求める円を $x^2+y^2+lx+my+n=0$ とおき、3点の座標を代入すると<br>
+$5l+5m+n=-50,\ \ -3l+m+n=-10,\ \ 6l-2m+n=-40$<br>
+第1式−第2式、第3式−第2式 より $2l+m=-10,\ 3l-m=-10$。よって $l=-4,\ m=-2,\ n=-20$。<br>
+円は $\boldsymbol{x^2+y^2-4x-2y-20=0}$。$(x-2)^2+(y-1)^2=25$ より<b>中心 $(2,1)$、半径 $5$</b><br>
+(2) 直線 $2x-y+k=0$ と中心 $(0,0)$ の距離が半径 $\sqrt5$ に等しいので $\dfrac{|k|}{\sqrt5}=\sqrt5$、$\boldsymbol{k=\pm5}$。<br>
+$k=5$ のとき、$y=2x+5$ を $x^2+y^2=5$ に代入して $5x^2+20x+20=0$、$(x+2)^2=0$ より $x=-2$。接点 $\boldsymbol{(-2,\ 1)}$。同様に $k=-5$ のとき接点 $\boldsymbol{(2,\ -1)}$</div>
+</div>
+<h3>講義3　軌跡</h3>
+<div class="box lect">
+条件を満たす点全体の集合を<b>軌跡</b>という。①動点 P の座標を $(x,y)$ とおく　②条件を $x,y$ の式で表す　③その図形を答える　④<b>逆に</b>、図形上の点が条件を満たすか（除く点はないか）を確かめる。P がパラメータ $m$ とともに動くときは、P の座標を $m$ で表して <b>$m$ を消去</b>する（$m$ の範囲によって $x$ の範囲が制限されることがある）。<br>
+2定点からの距離の比が $m:n\ (m\neq n)$ である点の軌跡は円（<b>アポロニウスの円</b>）で、2定点を結ぶ線分を $m:n$ に内分する点と外分する点を直径の両端とする。
+</div>
+<div class="box ex">
+(1) 2点 $\mathrm O(0,0),\ \mathrm A(6,0)$ に対し、$\mathrm{OP}:\mathrm{AP}=2:1$ を満たす点 P の軌跡を求めよ。<br>
+(2) 放物線 $y=x^2$ と直線 $y=mx+1$ の2つの交点を結ぶ線分の中点 M の軌跡を求めよ。
+<div class="solx"><b>解</b>　(1) $\mathrm P(x,y)$ とおく。$\mathrm{OP}^2=4\mathrm{AP}^2$ より $x^2+y^2=4\{(x-6)^2+y^2\}$。整理して $3x^2+3y^2-48x+144=0$、すなわち $(x-8)^2+y^2=16$。逆に、この円上の点は条件を満たす。軌跡は<b>中心 $(8,0)$、半径 $4$ の円</b>（OA を $2:1$ に内分する点 $(4,0)$ と外分する点 $(12,0)$ を直径の両端とする円）。<br>
+(2) $x^2=mx+1$、すなわち $x^2-mx-1=0$ の判別式は $m^2+4>0$ なので、どんな $m$ でも2点で交わる。2解を $\alpha,\beta$ とすると $\alpha+\beta=m$。$\mathrm M(X,Y)$ とおくと $X=\dfrac{\alpha+\beta}2=\dfrac m2$、M は直線上にあるので $Y=mX+1$。$m=2X$ を代入して $Y=2X^2+1$。$m$ はすべての実数をとるので $X$ もすべての実数をとる。軌跡は<b>放物線 $y=2x^2+1$</b></div>
+</div>
+<h3>講義4　不等式の表す領域と最大・最小</h3>
+<div class="box lect">
+$y>f(x)$ は曲線 $y=f(x)$ の<b>上側</b>、$y<f(x)$ は<b>下側</b>、$(x-a)^2+(y-b)^2<r^2$ は円の<b>内部</b>。連立不等式の表す領域は<b>共通部分</b>で、図示では境界を含むかどうかも明記する。<br>
+領域内の点について $x+y$ の最大・最小を求めるには、<b>$x+y=k$ とおいて直線とみる</b>。直線 $y=-x+k$ が領域と共有点をもつ範囲で、$y$ 切片 $k$ を動かす。最大・最小は、領域の頂点を通るときや境界の円に接するときに起こることが多い。
+</div>
+<div class="box ex">
+$x,y$ が4つの不等式 $x\geqq0,\ y\geqq0,\ x+2y\leqq8,\ 3x+y\leqq9$ を満たすとき、$x+y$ の最大値と、そのときの $x,y$ の値を求めよ。
+<div class="solx"><b>解</b>　4つの不等式の表す領域は、4点 $(0,0),\ (3,0),\ (2,3),\ (0,4)$ を頂点とする四角形の周および内部（下図）。$(2,3)$ は2直線 $x+2y=8,\ 3x+y=9$ の交点である。<br>
+$x+y=k$ とおくと、$y=-x+k$ は傾き $-1$、$y$ 切片 $k$ の直線。傾き $-1$ は2本の境界線の傾き $-\dfrac12$ と $-3$ の間にあるので、この直線が点 $(2,3)$ を通るとき $k$ は最大になる。<br>
+最大値 $\boldsymbol5$（$\boldsymbol{x=2,\ y=3}$ のとき）
+<svg class="fig" width="229" height="198" viewBox="0 0 229 198" xmlns="http://www.w3.org/2000/svg"><polygon points="24.8,170.5 117.8,170.5 86.8,77.5 24.8,46.5" fill="#dbe4f6" stroke="#1f3f8f"/><line x1="0" y1="170.5" x2="228" y2="170.5" stroke="#444" stroke-width="1"/><polygon points="229,170.5 222,167.5 222,173.5" fill="#444"/><line x1="24.8" y1="198" x2="24.8" y2="1" stroke="#444" stroke-width="1"/><polygon points="24.8,0 21.8,7 27.8,7" fill="#444"/><text x="220" y="183.5" font-size="11" font-style="italic" text-anchor="start" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif" stroke="#fff" stroke-width="2.6" stroke-linejoin="round" paint-order="stroke">x</text><text x="30.8" y="10" font-size="11" font-style="italic" text-anchor="start" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif" stroke="#fff" stroke-width="2.6" stroke-linejoin="round" paint-order="stroke">y</text><text x="13.8" y="182.5" font-size="11" font-style="italic" text-anchor="start" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif" stroke="#fff" stroke-width="2.6" stroke-linejoin="round" paint-order="stroke">O</text><line x1="6.2" y1="37.2" x2="223.2" y2="145.7" stroke="#1f3f8f" stroke-width="1.2"/><line x1="65.1" y1="12.4" x2="125.5" y2="193.8" stroke="#1f3f8f" stroke-width="1.2"/><line x1="15.5" y1="6.2" x2="198.4" y2="189.1" stroke="#d9701e" stroke-width="1.4" stroke-dasharray="5 3"/><circle cx="86.8" cy="77.5" r="2.6" fill="#d9701e" stroke="#d9701e" stroke-width="1.2"/><text x="92.4" y="72.9" font-size="11" text-anchor="start" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif" stroke="#fff" stroke-width="2.6" stroke-linejoin="round" paint-order="stroke">(2, 3)</text><line x1="21.8" y1="46.5" x2="27.8" y2="46.5" stroke="#444"/><text x="19.8" y="50.5" font-size="10" text-anchor="end" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif" stroke="#fff" stroke-width="2.6" stroke-linejoin="round" paint-order="stroke">4</text><line x1="117.8" y1="167.5" x2="117.8" y2="173.5" stroke="#444"/><text x="111.0" y="183.5" font-size="10" text-anchor="middle" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif" stroke="#fff" stroke-width="2.6" stroke-linejoin="round" paint-order="stroke">3</text><text x="148.8" y="100.8" font-size="10.5" font-style="italic" text-anchor="start" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif" stroke="#fff" stroke-width="2.6" stroke-linejoin="round" paint-order="stroke">x+2y=8</text><text x="75.0" y="14.0" font-size="10.5" font-style="italic" text-anchor="start" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif" stroke="#fff" stroke-width="2.6" stroke-linejoin="round" paint-order="stroke">3x+y=9</text><text x="162.8" y="141.0" font-size="10.5" font-style="italic" text-anchor="start" fill="#d9701e" font-family="Liberation Serif,DejaVu Serif,serif" stroke="#fff" stroke-width="2.6" stroke-linejoin="round" paint-order="stroke">x+y=5</text></svg></div>
+</div>
+<div class="box chk">
+(1) 点 $(2,-1)$ を通り、直線 $3x+2y-1=0$ に垂直な直線の方程式を求めよ。　(2) 円 $x^2+y^2-4x+6y-3=0$ の中心と半径を求めよ。　(3) 円 $x^2+y^2=10$ が直線 $x+y=2$ から切り取る弦の長さを求めよ。　(4) 円 $x^2+y^2=25$ 上の点 $(3,4)$ における接線の方程式を求めよ。　(5) 点 $(x,y)$ が不等式 $x^2+y^2\leqq5$ の表す領域を動くとき、$x+2y$ の最大値と最小値を求めよ。
+</div>
+<div class="box aim">
+円と直線の問題は「<b>中心と直線の距離</b>」で考えると計算が軽い。「$k$ の値にかかわらず定点を通る」は、<b>$k$ についての恒等式</b>とみる。例えば $(x+y-3)+k(x-2y)=0$ は、$x+y-3=0,\ x-2y=0$ を解いて定点 $(2,1)$ を通る。軌跡では<b>除外点や $x$ の範囲</b>で差がつく。領域と最大・最小では<b>傾きの比較</b>でどの頂点を通るときに最大・最小になるかを判断する。
+</div>
+<h3 class="deep">講義5　2つの円の交点を通る図形</h3>
+<div class="box lect">
+2つの円 $C_1: f(x,y)=0,\ C_2: g(x,y)=0$ が2点で交わるとき、定数 $k$ を用いた $f(x,y)+k\,g(x,y)=0$ ……(＊) を考える。2円の交点では $f=0$ かつ $g=0$ なので、(＊) は $k$ の値によらず<b>2つの交点を通る</b>。$x^2,\ y^2$ の係数は $1+k$ なので、$k\neq-1$ なら(＊)は円、$k=-1$ なら<b>2交点を通る直線（共通弦）</b>を表す。交点の座標を求めずに済むのが利点である。<br>
+例：$C_1: x^2+y^2-4=0$、$C_2: x^2+y^2-4x-2y=0$（中心間の距離 $\sqrt5$ が半径の差 $\sqrt5-2$ と和 $2+\sqrt5$ の間にあるので、2点で交わる）。<br>
+・$k=-1$ として、共通弦は $(x^2+y^2-4)-(x^2+y^2-4x-2y)=0$ より $2x+y-2=0$<br>
+・2交点と点 $(1,1)$ を通る円：(＊)に $(1,1)$ を代入して $-2-4k=0$、$k=-\dfrac12$。(＊)を2倍して整理すると $x^2+y^2+4x+2y-8=0$
+</div>
+<div class="box warn">
+軌跡を求めたあと<b>除外点を確かめない</b>ミス。例えば「$\angle\mathrm{APB}=90^\circ$ となる点 P の軌跡」は AB を直径とする円だが、A, B 自身は除く。また、直線を $y=m(x-a)+b$ とおくと、$y$ 軸に平行な直線 $x=a$ が漏れる（接線を求めるときに要注意）。講義5の(＊)で「2交点を通るすべての円」を表せると考えるのも誤りで、$C_2$ 自身は表せない。
+</div>
+<div class="box ans">
+(1) 直線 $3x+2y-1=0$ の傾きは $-\dfrac32$ なので、垂直な直線の傾きは $\dfrac23$。$y+1=\dfrac23(x-2)$ より $2x-3y-7=0$　(2) $(x-2)^2+(y+3)^2=16$ より中心 $(2,-3)$、半径 $4$　(3) 中心と直線の距離 $d=\dfrac{|-2|}{\sqrt2}=\sqrt2$。弦の長さは $2\sqrt{10-2}=4\sqrt2$　(4) $3x+4y=25$　(5) $x+2y=k$ が円 $x^2+y^2=5$ に接するとき $\dfrac{|k|}{\sqrt5}=\sqrt5$ より $k=\pm5$。最大値 $5$（$x=1,\ y=2$）、最小値 $-5$（$x=-1,\ y=-2$）
+</div>
+
+<!--CH 12-->
+<div class="box point">
+・<b>弧度法</b>：$180^\circ=\pi$ ラジアン。半径 $r$、中心角 $\theta$ の扇形の弧の長さ $l=r\theta$、面積 $S=\dfrac12r^2\theta=\dfrac12rl$<br>
+・<b>周期</b>：$\sin\theta,\ \cos\theta$ は $2\pi$、$\tan\theta$ は $\pi$。$y=\sin k\theta\ (k>0)$ の周期は $\dfrac{2\pi}{k}$<br>
+・<b>加法定理</b>：$\sin(\alpha\pm\beta)=\sin\alpha\cos\beta\pm\cos\alpha\sin\beta$、$\cos(\alpha\pm\beta)=\cos\alpha\cos\beta\mp\sin\alpha\sin\beta$<br>
+　　　　　　$\tan(\alpha\pm\beta)=\dfrac{\tan\alpha\pm\tan\beta}{1\mp\tan\alpha\tan\beta}$<br>
+・<b>2倍角</b>：$\sin2\alpha=2\sin\alpha\cos\alpha$、$\cos2\alpha=\cos^2\alpha-\sin^2\alpha=1-2\sin^2\alpha=2\cos^2\alpha-1$<br>
+・<b>半角</b>：$\sin^2\dfrac\alpha2=\dfrac{1-\cos\alpha}2$、$\cos^2\dfrac\alpha2=\dfrac{1+\cos\alpha}2$<br>
+・<b>合成</b>：$a\sin\theta+b\cos\theta=\sqrt{a^2+b^2}\sin(\theta+\alpha)$（ただし $\cos\alpha=\dfrac a{\sqrt{a^2+b^2}},\ \sin\alpha=\dfrac b{\sqrt{a^2+b^2}}$）
+</div>
+<h3>講義1　一般角・弧度法と三角関数のグラフ</h3>
+<div class="box lect">
+単位円で、中心角 $\theta$ に対する弧の長さが $\theta$ になるように角を測るのが<b>弧度法</b>（$360^\circ=2\pi$）。回転の向きと回数も含めた角を<b>一般角</b>といい、$\theta+2n\pi$（$n$ は整数）は同じ動径を表す。単位円周上で角 $\theta$ の点を $(x,y)$ とすると $\cos\theta=x,\ \sin\theta=y,\ \tan\theta=\dfrac yx$。<br>
+$y=a\sin k(\theta-p)$（$a>0,\ k>0$）は、$y=\sin\theta$ のグラフを $y$ 軸方向に $a$ 倍、$\theta$ 軸方向に $\dfrac1k$ 倍し、$\theta$ 軸方向に $p$ だけ平行移動したもの（周期 $\dfrac{2\pi}k$）。$\sin(k\theta-q)$ の形は、<b>$k$ をくくり出して</b> $\sin k\left(\theta-\dfrac qk\right)$ としてから移動量を読む。
+</div>
+<div class="box ex">
+(1) 半径 $6$、中心角 $120^\circ$ の扇形の弧の長さと面積を求めよ。<br>
+(2) $y=2\sin\left(2\theta-\dfrac\pi3\right)$ の周期を求めよ。また、このグラフは $y=2\sin2\theta$ のグラフをどのように平行移動したものか。
+<div class="solx"><b>解</b>　(1) $120^\circ=\dfrac23\pi$ より、弧の長さは $6\cdot\dfrac23\pi=\boldsymbol{4\pi}$、面積は $\dfrac12\cdot6^2\cdot\dfrac23\pi=\boldsymbol{12\pi}$<br>
+(2) $y=2\sin2\left(\theta-\dfrac\pi6\right)$ と変形できる。周期は $\dfrac{2\pi}2=\boldsymbol\pi$。グラフは $y=2\sin2\theta$ のグラフを <b>$\theta$ 軸方向に $\dfrac\pi6$ だけ平行移動</b>したもの。最大値 $2$（$\theta=\dfrac5{12}\pi+n\pi$）、最小値 $-2$（$\theta=\dfrac{11}{12}\pi+n\pi$）、$n$ は整数。
+<svg class="fig" width="324" height="147" viewBox="0 0 324 147" xmlns="http://www.w3.org/2000/svg"><line x1="15.7" y1="20.2" x2="299.2" y2="20.2" stroke="#bbb" stroke-width="0.8" stroke-dasharray="2 2"/><line x1="15.7" y1="128.2" x2="299.2" y2="128.2" stroke="#bbb" stroke-width="0.8" stroke-dasharray="2 2"/><polyline points="15.7,74.2 16.9,71.4 18.1,68.6 19.3,65.8 20.5,63.0 21.6,60.3 22.8,57.6 24.0,54.9 25.2,52.3 26.4,49.7 27.5,47.2 28.7,44.8 29.9,42.5 31.1,40.3 32.2,38.1 33.4,36.1 34.6,34.1 35.8,32.3 37.0,30.6 38.1,29.0 39.3,27.5 40.5,26.1 41.7,24.9 42.8,23.8 44.0,22.9 45.2,22.1 46.4,21.4 47.6,20.9 48.7,20.5 49.9,20.3 51.1,20.2 52.3,20.3 53.4,20.5 54.6,20.9 55.8,21.4 57.0,22.1 58.2,22.9 59.3,23.8 60.5,24.9 61.7,26.1 62.9,27.5 64.1,29.0 65.2,30.6 66.4,32.3 67.6,34.1 68.8,36.1 69.9,38.1 71.1,40.3 72.3,42.5 73.5,44.8 74.7,47.2 75.8,49.7 77.0,52.3 78.2,54.9 79.4,57.6 80.5,60.3 81.7,63.0 82.9,65.8 84.1,68.6 85.3,71.4 86.4,74.2 87.6,77.1 88.8,79.9 90.0,82.7 91.1,85.5 92.3,88.2 93.5,90.9 94.7,93.6 95.9,96.2 97.0,98.8 98.2,101.2 99.4,103.7 100.6,106.0 101.8,108.2 102.9,110.4 104.1,112.4 105.3,114.4 106.5,116.2 107.6,117.9 108.8,119.5 110.0,121.0 111.2,122.4 112.4,123.6 113.5,124.7 114.7,125.6 115.9,126.4 117.1,127.1 118.2,127.6 119.4,128.0 120.6,128.2 121.8,128.2 123.0,128.2 124.1,128.0 125.3,127.6 126.5,127.1 127.7,126.4 128.8,125.6 130.0,124.7 131.2,123.6 132.4,122.4 133.6,121.0 134.7,119.5 135.9,117.9 137.1,116.2 138.3,114.4 139.5,112.4 140.6,110.4 141.8,108.2 143.0,106.0 144.2,103.7 145.3,101.2 146.5,98.8 147.7,96.2 148.9,93.6 150.1,90.9 151.2,88.2 152.4,85.5 153.6,82.7 154.8,79.9 155.9,77.1 157.1,74.3 158.3,71.4 159.5,68.6 160.7,65.8 161.8,63.0 163.0,60.3 164.2,57.6 165.4,54.9 166.5,52.3 167.7,49.7 168.9,47.3 170.1,44.8 171.3,42.5 172.4,40.3 173.6,38.1 174.8,36.1 176.0,34.1 177.1,32.3 178.3,30.6 179.5,29.0 180.7,27.5 181.9,26.1 183.0,24.9 184.2,23.8 185.4,22.9 186.6,22.1 187.8,21.4 188.9,20.9 190.1,20.5 191.3,20.3 192.5,20.2 193.6,20.3 194.8,20.5 196.0,20.9 197.2,21.4 198.4,22.1 199.5,22.9 200.7,23.8 201.9,24.9 203.1,26.1 204.2,27.5 205.4,29.0 206.6,30.6 207.8,32.3 209.0,34.1 210.1,36.1 211.3,38.1 212.5,40.3 213.7,42.5 214.8,44.8 216.0,47.3 217.2,49.7 218.4,52.3 219.6,54.9 220.7,57.6 221.9,60.3 223.1,63.0 224.3,65.8 225.5,68.6 226.6,71.4 227.8,74.2 229.0,77.1 230.2,79.9 231.3,82.7 232.5,85.5 233.7,88.2 234.9,90.9 236.1,93.6 237.2,96.2 238.4,98.8 239.6,101.3 240.8,103.7 241.9,106.0 243.1,108.2 244.3,110.4 245.5,112.4 246.7,114.4 247.8,116.2 249.0,117.9 250.2,119.5 251.4,121.0 252.5,122.4 253.7,123.6 254.9,124.7 256.1,125.6 257.3,126.4 258.4,127.1 259.6,127.6 260.8,128.0 262.0,128.2 263.2,128.2 264.3,128.2 265.5,128.0 266.7,127.6 267.9,127.1 269.0,126.4 270.2,125.6 271.4,124.7 272.6,123.6 273.8,122.4 274.9,121.0 276.1,119.5 277.3,117.9 278.5,116.2 279.6,114.4 280.8,112.4 282.0,110.4 283.2,108.2 284.4,106.0 285.5,103.7 286.7,101.2 287.9,98.8 289.1,96.2 290.2,93.6 291.4,90.9 292.6,88.2 293.8,85.5 295.0,82.7 296.1,79.9 297.3,77.1 298.5,74.3" fill="none" stroke="#888" stroke-width="1.2" stroke-dasharray="4 3"/><polyline points="15.7,121.0 16.9,119.5 18.1,117.9 19.3,116.2 20.5,114.4 21.6,112.4 22.8,110.4 24.0,108.2 25.2,106.0 26.4,103.7 27.5,101.2 28.7,98.8 29.9,96.2 31.1,93.6 32.2,90.9 33.4,88.2 34.6,85.5 35.8,82.7 37.0,79.9 38.1,77.1 39.3,74.2 40.5,71.4 41.7,68.6 42.8,65.8 44.0,63.0 45.2,60.3 46.4,57.6 47.6,54.9 48.7,52.3 49.9,49.7 51.1,47.3 52.3,44.8 53.4,42.5 54.6,40.3 55.8,38.1 57.0,36.1 58.2,34.1 59.3,32.3 60.5,30.6 61.7,29.0 62.9,27.5 64.1,26.1 65.2,24.9 66.4,23.8 67.6,22.9 68.8,22.1 69.9,21.4 71.1,20.9 72.3,20.5 73.5,20.3 74.7,20.2 75.8,20.3 77.0,20.5 78.2,20.9 79.4,21.4 80.5,22.1 81.7,22.9 82.9,23.8 84.1,24.9 85.3,26.1 86.4,27.5 87.6,29.0 88.8,30.6 90.0,32.3 91.1,34.1 92.3,36.1 93.5,38.1 94.7,40.3 95.9,42.5 97.0,44.8 98.2,47.2 99.4,49.7 100.6,52.3 101.8,54.9 102.9,57.6 104.1,60.3 105.3,63.0 106.5,65.8 107.6,68.6 108.8,71.4 110.0,74.2 111.2,77.1 112.4,79.9 113.5,82.7 114.7,85.5 115.9,88.2 117.1,90.9 118.2,93.6 119.4,96.2 120.6,98.8 121.8,101.2 123.0,103.7 124.1,106.0 125.3,108.2 126.5,110.4 127.7,112.4 128.8,114.4 130.0,116.2 131.2,117.9 132.4,119.5 133.6,121.0 134.7,122.4 135.9,123.6 137.1,124.7 138.3,125.6 139.5,126.4 140.6,127.1 141.8,127.6 143.0,128.0 144.2,128.2 145.3,128.2 146.5,128.2 147.7,128.0 148.9,127.6 150.1,127.1 151.2,126.4 152.4,125.6 153.6,124.7 154.8,123.6 155.9,122.4 157.1,121.0 158.3,119.5 159.5,117.9 160.7,116.2 161.8,114.4 163.0,112.4 164.2,110.4 165.4,108.2 166.5,106.0 167.7,103.7 168.9,101.3 170.1,98.8 171.3,96.2 172.4,93.6 173.6,90.9 174.8,88.2 176.0,85.5 177.1,82.7 178.3,79.9 179.5,77.1 180.7,74.3 181.9,71.4 183.0,68.6 184.2,65.8 185.4,63.0 186.6,60.3 187.8,57.6 188.9,54.9 190.1,52.3 191.3,49.7 192.5,47.2 193.6,44.8 194.8,42.5 196.0,40.3 197.2,38.1 198.4,36.1 199.5,34.1 200.7,32.3 201.9,30.6 203.1,29.0 204.2,27.5 205.4,26.1 206.6,24.9 207.8,23.8 209.0,22.9 210.1,22.1 211.3,21.4 212.5,20.9 213.7,20.5 214.8,20.3 216.0,20.2 217.2,20.3 218.4,20.5 219.6,20.9 220.7,21.4 221.9,22.1 223.1,22.9 224.3,23.8 225.5,24.9 226.6,26.1 227.8,27.5 229.0,29.0 230.2,30.6 231.3,32.3 232.5,34.1 233.7,36.1 234.9,38.1 236.1,40.3 237.2,42.5 238.4,44.8 239.6,47.3 240.8,49.7 241.9,52.3 243.1,54.9 244.3,57.6 245.5,60.3 246.7,63.0 247.8,65.8 249.0,68.6 250.2,71.4 251.4,74.2 252.5,77.1 253.7,79.9 254.9,82.7 256.1,85.5 257.3,88.2 258.4,90.9 259.6,93.6 260.8,96.2 262.0,98.8 263.2,101.2 264.3,103.7 265.5,106.0 266.7,108.2 267.9,110.4 269.0,112.4 270.2,114.4 271.4,116.2 272.6,117.9 273.8,119.5 274.9,121.0 276.1,122.4 277.3,123.6 278.5,124.7 279.6,125.6 280.8,126.4 282.0,127.1 283.2,127.6 284.4,128.0 285.5,128.2 286.7,128.2 287.9,128.2 289.1,128.0 290.2,127.6 291.4,127.1 292.6,126.4 293.8,125.6 295.0,124.7 296.1,123.6 297.3,122.4 298.5,121.0" fill="none" stroke="#1f3f8f" stroke-width="1.8"/><line x1="0" y1="74.2" x2="323" y2="74.2" stroke="#444" stroke-width="1"/><polygon points="324,74.2 317,71.2 317,77.2" fill="#444"/><line x1="15.7" y1="147" x2="15.7" y2="1" stroke="#444" stroke-width="1"/><polygon points="15.7,0 12.7,7 18.7,7" fill="#444"/><text x="315" y="87.2" font-size="11" font-style="italic" text-anchor="start" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif" stroke="#fff" stroke-width="2.6" stroke-linejoin="round" paint-order="stroke">θ</text><text x="21.7" y="10" font-size="11" font-style="italic" text-anchor="start" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif" stroke="#fff" stroke-width="2.6" stroke-linejoin="round" paint-order="stroke">y</text><text x="4.699999999999999" y="86.2" font-size="11" font-style="italic" text-anchor="start" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif" stroke="#fff" stroke-width="2.6" stroke-linejoin="round" paint-order="stroke">O</text><line x1="39.3" y1="71.2" x2="39.3" y2="77.2" stroke="#444"/><text x="39.3" y="87.2" font-size="10" text-anchor="middle" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif" stroke="#fff" stroke-width="2.6" stroke-linejoin="round" paint-order="stroke">π/6</text><line x1="74.7" y1="71.2" x2="74.7" y2="77.2" stroke="#444"/><text x="74.7" y="98.2" font-size="10" text-anchor="middle" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif" stroke="#fff" stroke-width="2.6" stroke-linejoin="round" paint-order="stroke">5π/12</text><line x1="157.1" y1="71.2" x2="157.1" y2="77.2" stroke="#444"/><text x="157.1" y="87.2" font-size="10" text-anchor="middle" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif" stroke="#fff" stroke-width="2.6" stroke-linejoin="round" paint-order="stroke">π</text><line x1="298.5" y1="71.2" x2="298.5" y2="77.2" stroke="#444"/><text x="298.5" y="87.2" font-size="10" text-anchor="middle" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif" stroke="#fff" stroke-width="2.6" stroke-linejoin="round" paint-order="stroke">2π</text><line x1="74.7" y1="74.2" x2="74.7" y2="20.2" stroke="#d9701e" stroke-width="0.8" stroke-dasharray="2 2"/><circle cx="74.7" cy="20.2" r="2.4" fill="#d9701e" stroke="#d9701e" stroke-width="1.2"/><line x1="12.7" y1="20.2" x2="18.7" y2="20.2" stroke="#444"/><text x="10.7" y="24.2" font-size="10" text-anchor="end" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif" stroke="#fff" stroke-width="2.6" stroke-linejoin="round" paint-order="stroke">2</text><line x1="12.7" y1="128.2" x2="18.7" y2="128.2" stroke="#444"/><text x="10.7" y="132.2" font-size="10" text-anchor="end" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif" stroke="#fff" stroke-width="2.6" stroke-linejoin="round" paint-order="stroke">−2</text></svg>
+<p style="text-align:center;font-size:9pt;margin:0">実線：$y=2\sin\left(2\theta-\frac\pi3\right)$　点線：$y=2\sin2\theta$</p></div>
+</div>
+<h3>講義2　加法定理と2倍角・半角の公式</h3>
+<div class="box lect">
+加法定理（証明は講義5）で $\beta=\alpha$ とおくと<b>2倍角の公式</b>。$\cos2\alpha=1-2\sin^2\alpha$ を $\sin^2\alpha$ について解き、$\alpha$ を $\dfrac\alpha2$ におき換えると<b>半角の公式</b>になる。<br>
+2倍角の公式は<b>次数を下げる</b>道具でもある：$\sin^2\theta=\dfrac{1-\cos2\theta}2,\ \cos^2\theta=\dfrac{1+\cos2\theta}2,\ \sin\theta\cos\theta=\dfrac{\sin2\theta}2$。また、$15^\circ=45^\circ-30^\circ$ のように<b>有名角の和・差</b>に分けると値が求まる。
+</div>
+<div class="box ex">
+(1) $\sin\dfrac5{12}\pi$ と $\tan\dfrac\pi{12}$ の値を求めよ。<br>
+(2) $\dfrac\pi2<\alpha<\pi$、$\sin\alpha=\dfrac35$ のとき、$\sin2\alpha,\ \cos2\alpha,\ \cos\dfrac\alpha2$ の値を求めよ。
+<div class="solx"><b>解</b>　(1) $\sin\dfrac5{12}\pi=\sin\left(\dfrac\pi4+\dfrac\pi6\right)=\sin\dfrac\pi4\cos\dfrac\pi6+\cos\dfrac\pi4\sin\dfrac\pi6=\dfrac{\sqrt2}2\cdot\dfrac{\sqrt3}2+\dfrac{\sqrt2}2\cdot\dfrac12=\boldsymbol{\dfrac{\sqrt6+\sqrt2}4}$<br>
+$\tan\dfrac\pi{12}=\tan\left(\dfrac\pi3-\dfrac\pi4\right)=\dfrac{\sqrt3-1}{1+\sqrt3\cdot1}=\dfrac{(\sqrt3-1)^2}{(\sqrt3+1)(\sqrt3-1)}=\dfrac{4-2\sqrt3}2=\boldsymbol{2-\sqrt3}$<br>
+(2) $\alpha$ は第2象限の角なので $\cos\alpha<0$ で、$\cos\alpha=-\sqrt{1-\dfrac9{25}}=-\dfrac45$。<br>
+$\sin2\alpha=2\cdot\dfrac35\cdot\left(-\dfrac45\right)=\boldsymbol{-\dfrac{24}{25}}$、$\cos2\alpha=1-2\cdot\dfrac9{25}=\boldsymbol{\dfrac7{25}}$<br>
+$\cos^2\dfrac\alpha2=\dfrac{1+\cos\alpha}2=\dfrac1{10}$。$\dfrac\pi4<\dfrac\alpha2<\dfrac\pi2$ より $\cos\dfrac\alpha2>0$ なので $\cos\dfrac\alpha2=\dfrac1{\sqrt{10}}=\boldsymbol{\dfrac{\sqrt{10}}{10}}$</div>
+</div>
+<h3>講義3　三角関数の合成と方程式・不等式</h3>
+<div class="box lect">
+点 $(a,b)$ の原点からの距離を $r=\sqrt{a^2+b^2}$、$x$ 軸の正の向きとのなす角を $\alpha$ とすると $a=r\cos\alpha,\ b=r\sin\alpha$ なので、$a\sin\theta+b\cos\theta=r(\sin\theta\cos\alpha+\cos\theta\sin\alpha)=r\sin(\theta+\alpha)$（加法定理を逆に使う）。<br>
+方程式・不等式は、①<b>1種類の三角関数</b>にそろえる（または合成する）　②<b>角の範囲</b>を確認する（合成したら $\theta+\alpha$ の範囲に直す）　③単位円で読む（$\sin$ は $y$ 座標、$\cos$ は $x$ 座標）、の順に解く。
+</div>
+<div class="box ex">
+$0\leqq\theta<2\pi$ のとき、次の方程式・不等式を解け。(1) $\sin\theta+\sqrt3\cos\theta=1$　(2) $2\cos^2\theta+3\sin\theta-3\geqq0$
+<div class="solx"><b>解</b>　(1) 点 $(1,\sqrt3)$ は $r=2$、$\alpha=\dfrac\pi3$ なので、左辺 $=2\sin\left(\theta+\dfrac\pi3\right)$。よって $\sin\left(\theta+\dfrac\pi3\right)=\dfrac12$。<br>
+$\dfrac\pi3\leqq\theta+\dfrac\pi3<\dfrac73\pi$ の範囲で $\theta+\dfrac\pi3=\dfrac56\pi,\ \dfrac{13}6\pi$。よって $\boldsymbol{\theta=\dfrac\pi2,\ \dfrac{11}6\pi}$<br>
+(2) $\cos^2\theta=1-\sin^2\theta$ で $\sin\theta$ にそろえると $-2\sin^2\theta+3\sin\theta-1\geqq0$、すなわち $(2\sin\theta-1)(\sin\theta-1)\leqq0$。<br>
+よって $\dfrac12\leqq\sin\theta\leqq1$。単位円で $y$ 座標が $\dfrac12$ 以上の部分を読んで $\boldsymbol{\dfrac\pi6\leqq\theta\leqq\dfrac56\pi}$</div>
+</div>
+<h3>講義4　最大・最小 ― 置き換えと変域</h3>
+<div class="box lect">
+最大・最小は<b>1つの文字に置き換え、その変域で考える</b>のが基本。代表的な型は3つ。<br>
+①$\sin\theta$ だけで表せる式 → $t=\sin\theta\ (-1\leqq t\leqq1)$ とおいて2次関数の問題にする。<br>
+②$\sin^2\theta,\ \sin\theta\cos\theta,\ \cos^2\theta$ だけの式 → 2倍角の公式で次数を下げ、合成する。<br>
+③$\sin\theta+\cos\theta$ と $\sin\theta\cos\theta$ を含む式 → $t=\sin\theta+\cos\theta$ とおくと $t^2=1+2\sin\theta\cos\theta$ より $\sin\theta\cos\theta=\dfrac{t^2-1}2$。$t$ の変域は $t=\sqrt2\sin\left(\theta+\dfrac\pi4\right)$ と合成して求める。
+</div>
+<div class="box ex">
+(1) $0\leqq\theta<2\pi$ のとき、$y=\cos2\theta+2\sin\theta$ の最大値・最小値と、そのときの $\theta$ の値を求めよ。<br>
+(2) $0\leqq\theta\leqq\pi$ のとき、$y=\sin\theta+\cos\theta+\sin\theta\cos\theta$ の最大値・最小値を求めよ。
+<div class="solx"><b>解</b>　(1) $t=\sin\theta$ とおくと $-1\leqq t\leqq1$ で、$y=1-2t^2+2t=-2\left(t-\dfrac12\right)^2+\dfrac32$。<br>
+$t=\dfrac12$ のとき最大値 $\boldsymbol{\dfrac32}$（$\boldsymbol{\theta=\dfrac\pi6,\ \dfrac56\pi}$）、$t=-1$ のとき最小値 $\boldsymbol{-3}$（$\boldsymbol{\theta=\dfrac32\pi}$）<br>
+(2) $t=\sin\theta+\cos\theta=\sqrt2\sin\left(\theta+\dfrac\pi4\right)$ とおく。$\dfrac\pi4\leqq\theta+\dfrac\pi4\leqq\dfrac54\pi$ より $-\dfrac1{\sqrt2}\leqq\sin\left(\theta+\dfrac\pi4\right)\leqq1$、よって $-1\leqq t\leqq\sqrt2$。<br>
+$y=t+\dfrac{t^2-1}2=\dfrac12(t+1)^2-1$ は、この範囲で増加する。<br>
+$t=\sqrt2$（$\theta=\dfrac\pi4$）のとき最大値 $\dfrac12(\sqrt2+1)^2-1=\boldsymbol{\sqrt2+\dfrac12}$、$t=-1$（$\theta=\pi$）のとき最小値 $\boldsymbol{-1}$</div>
+</div>
+<div class="box chk">
+(1) $\sin\dfrac43\pi,\ \cos\left(-\dfrac\pi4\right),\ \tan\dfrac56\pi$ の値を求めよ。　(2) $\alpha,\beta$ は鋭角で、$\tan\alpha=2,\ \tan\beta=3$ のとき、$\alpha+\beta$ の値を求めよ。　(3) $0\leqq\theta<2\pi$ のとき、方程式 $\sin2\theta=\cos\theta$ を解け。　(4) $0\leqq\theta\leqq\dfrac\pi2$ のとき、$y=\sin^2\theta+2\sin\theta\cos\theta+3\cos^2\theta$ の最大値・最小値と、そのときの $\theta$ の値を求めよ。
+</div>
+<div class="box aim">
+三角関数の最大・最小は、共通テストでも二次試験でも頻出。何を $t$ とおくかは、<b>式に含まれる角（$\theta$ か $2\theta$ か）と次数</b>で決まる。置き換えたら<b>必ず $t$ の変域</b>を求めること。方程式・不等式では、合成した後の角の範囲を書き出してから単位円を見る。
+</div>
+<h3 class="deep">講義5　加法定理の証明</h3>
+<div class="box lect">
+単位円周上に2点 $\mathrm P(\cos\alpha,\sin\alpha),\ \mathrm Q(\cos\beta,\sin\beta)$ をとる。距離の公式より<br>
+$\mathrm{PQ}^2=(\cos\alpha-\cos\beta)^2+(\sin\alpha-\sin\beta)^2=2-2(\cos\alpha\cos\beta+\sin\alpha\sin\beta)$<br>
+一方、2点を原点のまわりに $-\beta$ だけ回転すると、Q は $\mathrm Q'(1,0)$ に、P は $\mathrm P'(\cos(\alpha-\beta),\ \sin(\alpha-\beta))$ に移る。回転しても距離は変わらないので<br>
+$\mathrm{PQ}^2=\mathrm{P'Q'}^2=\{\cos(\alpha-\beta)-1\}^2+\sin^2(\alpha-\beta)=2-2\cos(\alpha-\beta)$<br>
+2式を比べて $\cos(\alpha-\beta)=\cos\alpha\cos\beta+\sin\alpha\sin\beta$。■<br>
+$\beta$ を $-\beta$ におき換えると $\cos(\alpha+\beta)$ の公式が、$\sin(\alpha+\beta)=\cos\left\{\left(\dfrac\pi2-\alpha\right)-\beta\right\}$ を展開すると $\sin$ の加法定理が得られる。
+</div>
+<p>この証明は $\alpha,\beta$ がどんな角でも通用する（三角形の図を使う証明は鋭角の場合に限られる）。さらに加法定理を足し引きすると、<b>積和の公式</b> $\sin\alpha\cos\beta=\dfrac12\{\sin(\alpha+\beta)+\sin(\alpha-\beta)\}$ なども得られる。</p>
+<div class="box warn">
+・$y=2\sin\left(2\theta-\dfrac\pi3\right)$ を「$\theta$ 軸方向に $\dfrac\pi3$ だけ平行移動」と読むミス。$2$ をくくり出して $2\left(\theta-\dfrac\pi6\right)$ とすれば、移動量は $\dfrac\pi6$。<br>
+・置き換えた $t$ の変域を、いつも $-1\leqq t\leqq1$ と決めつけるミス（講義4の例題(2)では $-1\leqq t\leqq\sqrt2$）。<br>
+・半角の公式で、$\cos\dfrac\alpha2$ の<b>符号</b>を $\dfrac\alpha2$ の範囲から決め忘れる。
+</div>
+<div class="box ans">
+(1) $-\dfrac{\sqrt3}2,\ \dfrac{\sqrt2}2,\ -\dfrac{\sqrt3}3$　(2) $\tan(\alpha+\beta)=\dfrac{2+3}{1-2\cdot3}=-1$。$0<\alpha+\beta<\pi$ より $\alpha+\beta=\dfrac34\pi$　(3) $2\sin\theta\cos\theta-\cos\theta=\cos\theta(2\sin\theta-1)=0$。$\cos\theta=0$ より $\theta=\dfrac\pi2,\ \dfrac32\pi$、$\sin\theta=\dfrac12$ より $\theta=\dfrac\pi6,\ \dfrac56\pi$　(4) 次数を下げて $y=\dfrac{1-\cos2\theta}2+\sin2\theta+\dfrac{3(1+\cos2\theta)}2=\sqrt2\sin\left(2\theta+\dfrac\pi4\right)+2$。$\dfrac\pi4\leqq2\theta+\dfrac\pi4\leqq\dfrac54\pi$ より、$\theta=\dfrac\pi8$ のとき最大値 $2+\sqrt2$、$\theta=\dfrac\pi2$ のとき最小値 $1$
+</div>
+
+<!--CH 13-->
+<div class="box point">
+・<b>指数法則</b>（$a>0,\ b>0$、$r,s$ は有理数）：$a^ra^s=a^{r+s}$、$(a^r)^s=a^{rs}$、$(ab)^r=a^rb^r$。$a^0=1$、$a^{-n}=\dfrac1{a^n}$、$a^{\frac mn}=\sqrt[n]{a^m}$<br>
+・$y=a^x$、$y=\log_ax$ は、$a>1$ なら増加関数、$0<a<1$ なら減少関数<br>
+・<b>対数の定義</b>：$a>0,\ a\neq1,\ M>0$ のとき $a^p=M\iff p=\log_aM$<br>
+・<b>対数の性質</b>：$\log_aMN=\log_aM+\log_aN$、$\log_a\dfrac MN=\log_aM-\log_aN$、$\log_aM^k=k\log_aM$<br>
+・<b>底の変換</b>：$\log_ab=\dfrac{\log_cb}{\log_ca}$（$b>0$、$c>0,\ c\neq1$）<br>
+・<b>桁数</b>：正の数 $N$ の整数部分が $n$ 桁 $\iff10^{n-1}\leqq N<10^n\iff n-1\leqq\log_{10}N<n$
+</div>
+<h3>講義1　指数の拡張と累乗根</h3>
+<div class="box lect">
+<b>指数法則がそのまま成り立つように</b>指数の意味を広げる。$a^0\cdot a^n=a^n$ から $a^0=1$、$a^{-n}\cdot a^n=a^0=1$ から $a^{-n}=\dfrac1{a^n}$。$a>0$ のとき、$n$ 乗して $a$ になる正の数を $\sqrt[n]a$ と書き、$a^{\frac mn}=\left(\sqrt[n]a\right)^m=\sqrt[n]{a^m}$ と定める。<br>
+計算は<b>累乗根を分数の指数に直し、底を素因数にそろえる</b>のが確実。累乗根の大小は、<b>何乗かして根号をはずして</b>比べる（正の数どうしなら $A<B\iff A^n<B^n$）。
+</div>
+<div class="box ex">
+(1) $\left(\dfrac{8}{27}\right)^{-\frac23}$ と $\sqrt[3]{24}+\sqrt[3]{81}-\sqrt[3]3$ を計算せよ。　(2) $\sqrt2,\ \sqrt[3]3,\ \sqrt[6]6$ を小さい順に並べよ。<br>
+(3) $2^x+2^{-x}=3$ のとき、$4^x+4^{-x}$ と $8^x+8^{-x}$ の値を求めよ。
+<div class="solx"><b>解</b>　(1) $\left(\dfrac8{27}\right)^{-\frac23}=\left\{\left(\dfrac23\right)^3\right\}^{-\frac23}=\left(\dfrac23\right)^{-2}=\boldsymbol{\dfrac94}$<br>
+$\sqrt[3]{24}=\sqrt[3]{2^3\cdot3}=2\sqrt[3]3,\ \sqrt[3]{81}=\sqrt[3]{3^3\cdot3}=3\sqrt[3]3$ より、与式 $=(2+3-1)\sqrt[3]3=\boldsymbol{4\sqrt[3]3}$<br>
+(2) 3数はすべて正なので、6乗して比べる。$(\sqrt2)^6=8,\ (\sqrt[3]3)^6=9,\ (\sqrt[6]6)^6=6$ より $\boldsymbol{\sqrt[6]6<\sqrt2<\sqrt[3]3}$<br>
+(3) $2^x\cdot2^{-x}=1$ なので対称式の計算が使える。$4^x+4^{-x}=(2^x+2^{-x})^2-2=\boldsymbol7$、$8^x+8^{-x}=(2^x+2^{-x})^3-3(2^x+2^{-x})=27-9=\boldsymbol{18}$</div>
+</div>
+<h3>講義2　対数とその性質</h3>
+<div class="box lect">
+$a>0,\ a\neq1$ のとき、正の数 $M$ に対して $a^p=M$ を満たす $p$ がただ1つあり、これを $\log_aM$ と書く（$a$ を<b>底</b>、$M$ を<b>真数</b>という）。真数はつねに正である（<b>真数条件</b>）。<b>対数とは「指数」</b>のことで、性質は指数法則の言いかえにすぎない。例えば $a^p=M,\ a^q=N$ なら $MN=a^{p+q}$ なので $\log_aMN=p+q=\log_aM+\log_aN$。<br>
+<b>底の変換</b>：$\log_ab=p$ とおくと $a^p=b$。両辺の $c$ を底とする対数をとって $p\log_ca=\log_cb$（$c>0,\ c\neq1$）。底の異なる対数が混ざったら、<b>まず底をそろえる</b>。
+</div>
+<div class="box ex">
+(1) $\log_2\dfrac43+2\log_2\sqrt6$ と $\log_32\cdot\log_427$ の値を求めよ。　(2) $\log_{10}2=a,\ \log_{10}3=b$ とするとき、$\log_512$ を $a,b$ で表せ。
+<div class="solx"><b>解</b>　(1) $2\log_2\sqrt6=\log_26$ より、与式 $=\log_2\left(\dfrac43\cdot6\right)=\log_28=\boldsymbol3$<br>
+$\log_427=\dfrac{\log_227}{\log_24}=\dfrac{3\log_23}{2}$、$\log_32=\dfrac1{\log_23}$ より、$\log_32\cdot\log_427=\dfrac1{\log_23}\cdot\dfrac{3\log_23}2=\boldsymbol{\dfrac32}$<br>
+(2) $\log_512=\dfrac{\log_{10}12}{\log_{10}5}$。$\log_{10}12=\log_{10}(2^2\cdot3)=2a+b$、$\log_{10}5=\log_{10}\dfrac{10}2=1-a$。よって $\log_512=\boldsymbol{\dfrac{2a+b}{1-a}}$</div>
+</div>
+<h3>講義3　指数・対数の方程式・不等式</h3>
+<div class="box lect">
+方針は「<b>底をそろえる</b>」か「<b>置き換える</b>」。$a^x$ を含む式は $t=a^x$ とおき、<b>$t>0$</b> に注意する（$4^x=(2^x)^2,\ 2^{x+1}=2\cdot2^x$）。対数の方程式は、まず<b>真数条件</b>を書き、$\log_aM=\log_aN\iff M=N$ を使う。<br>
+不等式は<b>底と1の大小</b>で向きが決まる：$a>1$ なら $\log_aM<\log_aN\iff0<M<N$、$0<a<1$ なら $\log_aM<\log_aN\iff M>N>0$。指数も同様に、$a>1$ なら $a^p<a^q\iff p<q$、$0<a<1$ なら $a^p<a^q\iff p>q$。
+</div>
+<svg class="fig" width="224" height="159" viewBox="0 0 224 159" xmlns="http://www.w3.org/2000/svg"><line x1="12.0" y1="81.0" x2="216.0" y2="81.0" stroke="#444" stroke-width="1"/><polyline points="30.8,157.5 31.7,152.1 32.6,147.3 33.5,143.0 34.5,139.1 35.4,135.5 36.3,132.2 37.2,129.1 38.1,126.2 39.0,123.5 39.9,121.0 40.8,118.6 41.7,116.3 42.6,114.1 43.5,112.1 44.4,110.1 45.3,108.2 46.2,106.4 47.1,104.7 48.0,103.0 48.9,101.4 49.9,99.9 50.8,98.4 51.7,97.0 52.6,95.6 53.5,94.2 54.4,92.9 55.3,91.6 56.2,90.4 57.1,89.2 58.0,88.0 58.9,86.9 59.8,85.8 60.7,84.7 61.6,83.6 62.5,82.6 63.4,81.6 64.3,80.6 65.3,79.7 66.2,78.7 67.1,77.8 68.0,76.9 68.9,76.0 69.8,75.2 70.7,74.3 71.6,73.5 72.5,72.7 73.4,71.9 74.3,71.1 75.2,70.3 76.1,69.5 77.0,68.8 77.9,68.1 78.8,67.3 79.7,66.6 80.7,65.9 81.6,65.2 82.5,64.6 83.4,63.9 84.3,63.3 85.2,62.6 86.1,62.0 87.0,61.3 87.9,60.7 88.8,60.1 89.7,59.5 90.6,58.9 91.5,58.3 92.4,57.8 93.3,57.2 94.2,56.6 95.1,56.1 96.1,55.5 97.0,55.0 97.9,54.5 98.8,53.9 99.7,53.4 100.6,52.9 101.5,52.4 102.4,51.9 103.3,51.4 104.2,50.9 105.1,50.4 106.0,49.9 106.9,49.4 107.8,49.0 108.7,48.5 109.6,48.1 110.5,47.6 111.5,47.1 112.4,46.7 113.3,46.3 114.2,45.8 115.1,45.4 116.0,45.0 116.9,44.5 117.8,44.1 118.7,43.7 119.6,43.3 120.5,42.9 121.4,42.5 122.3,42.1 123.2,41.7 124.1,41.3 125.0,40.9 125.9,40.5 126.9,40.1 127.8,39.7 128.7,39.4 129.6,39.0 130.5,38.6 131.4,38.3 132.3,37.9 133.2,37.5 134.1,37.2 135.0,36.8 135.9,36.5 136.8,36.1 137.7,35.8 138.6,35.4 139.5,35.1 140.4,34.8 141.3,34.4 142.2,34.1 143.2,33.8 144.1,33.4 145.0,33.1 145.9,32.8 146.8,32.5 147.7,32.1 148.6,31.8 149.5,31.5 150.4,31.2 151.3,30.9 152.2,30.6 153.1,30.3 154.0,30.0 154.9,29.7 155.8,29.4 156.7,29.1 157.6,28.8 158.6,28.5 159.5,28.2 160.4,27.9 161.3,27.6 162.2,27.3 163.1,27.1 164.0,26.8 164.9,26.5 165.8,26.2 166.7,26.0 167.6,25.7 168.5,25.4 169.4,25.1 170.3,24.9 171.2,24.6 172.1,24.3 173.0,24.1 174.0,23.8 174.9,23.5 175.8,23.3 176.7,23.0 177.6,22.8 178.5,22.5 179.4,22.3 180.3,22.0 181.2,21.8 182.1,21.5 183.0,21.3 183.9,21.0 184.8,20.8 185.7,20.5 186.6,20.3 187.5,20.1 188.4,19.8 189.4,19.6 190.3,19.3 191.2,19.1 192.1,18.9 193.0,18.6 193.9,18.4 194.8,18.2 195.7,17.9 196.6,17.7 197.5,17.5 198.4,17.3 199.3,17.0 200.2,16.8 201.1,16.6 202.0,16.4 202.9,16.2 203.8,15.9 204.8,15.7 205.7,15.5 206.6,15.3 207.5,15.1 208.4,14.9 209.3,14.7 210.2,14.4 211.1,14.2 212.0,14.0" fill="none" stroke="#1f3f8f" stroke-width="1.8"/><polyline points="30.8,4.5 31.7,9.9 32.6,14.7 33.5,19.0 34.5,22.9 35.4,26.5 36.3,29.8 37.2,32.9 38.1,35.8 39.0,38.5 39.9,41.0 40.8,43.4 41.7,45.7 42.6,47.9 43.5,49.9 44.4,51.9 45.3,53.8 46.2,55.6 47.1,57.3 48.0,59.0 48.9,60.6 49.9,62.1 50.8,63.6 51.7,65.0 52.6,66.4 53.5,67.8 54.4,69.1 55.3,70.4 56.2,71.6 57.1,72.8 58.0,74.0 58.9,75.1 59.8,76.2 60.7,77.3 61.6,78.4 62.5,79.4 63.4,80.4 64.3,81.4 65.3,82.3 66.2,83.3 67.1,84.2 68.0,85.1 68.9,86.0 69.8,86.8 70.7,87.7 71.6,88.5 72.5,89.3 73.4,90.1 74.3,90.9 75.2,91.7 76.1,92.5 77.0,93.2 77.9,93.9 78.8,94.7 79.7,95.4 80.7,96.1 81.6,96.8 82.5,97.4 83.4,98.1 84.3,98.7 85.2,99.4 86.1,100.0 87.0,100.7 87.9,101.3 88.8,101.9 89.7,102.5 90.6,103.1 91.5,103.7 92.4,104.2 93.3,104.8 94.2,105.4 95.1,105.9 96.1,106.5 97.0,107.0 97.9,107.5 98.8,108.1 99.7,108.6 100.6,109.1 101.5,109.6 102.4,110.1 103.3,110.6 104.2,111.1 105.1,111.6 106.0,112.1 106.9,112.6 107.8,113.0 108.7,113.5 109.6,113.9 110.5,114.4 111.5,114.9 112.4,115.3 113.3,115.7 114.2,116.2 115.1,116.6 116.0,117.0 116.9,117.5 117.8,117.9 118.7,118.3 119.6,118.7 120.5,119.1 121.4,119.5 122.3,119.9 123.2,120.3 124.1,120.7 125.0,121.1 125.9,121.5 126.9,121.9 127.8,122.3 128.7,122.6 129.6,123.0 130.5,123.4 131.4,123.7 132.3,124.1 133.2,124.5 134.1,124.8 135.0,125.2 135.9,125.5 136.8,125.9 137.7,126.2 138.6,126.6 139.5,126.9 140.4,127.2 141.3,127.6 142.2,127.9 143.2,128.2 144.1,128.6 145.0,128.9 145.9,129.2 146.8,129.5 147.7,129.9 148.6,130.2 149.5,130.5 150.4,130.8 151.3,131.1 152.2,131.4 153.1,131.7 154.0,132.0 154.9,132.3 155.8,132.6 156.7,132.9 157.6,133.2 158.6,133.5 159.5,133.8 160.4,134.1 161.3,134.4 162.2,134.7 163.1,134.9 164.0,135.2 164.9,135.5 165.8,135.8 166.7,136.0 167.6,136.3 168.5,136.6 169.4,136.9 170.3,137.1 171.2,137.4 172.1,137.7 173.0,137.9 174.0,138.2 174.9,138.5 175.8,138.7 176.7,139.0 177.6,139.2 178.5,139.5 179.4,139.7 180.3,140.0 181.2,140.2 182.1,140.5 183.0,140.7 183.9,141.0 184.8,141.2 185.7,141.5 186.6,141.7 187.5,141.9 188.4,142.2 189.4,142.4 190.3,142.7 191.2,142.9 192.1,143.1 193.0,143.4 193.9,143.6 194.8,143.8 195.7,144.1 196.6,144.3 197.5,144.5 198.4,144.7 199.3,145.0 200.2,145.2 201.1,145.4 202.0,145.6 202.9,145.8 203.8,146.1 204.8,146.3 205.7,146.5 206.6,146.7 207.5,146.9 208.4,147.1 209.3,147.3 210.2,147.6 211.1,147.8 212.0,148.0" fill="none" stroke="#d9701e" stroke-width="1.8"/><line x1="0" y1="81.0" x2="223" y2="81.0" stroke="#444" stroke-width="1"/><polygon points="224,81.0 217,78.0 217,84.0" fill="#444"/><line x1="24.0" y1="159" x2="24.0" y2="1" stroke="#444" stroke-width="1"/><polygon points="24.0,0 21.0,7 27.0,7" fill="#444"/><text x="215" y="94.0" font-size="11" font-style="italic" text-anchor="start" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif" stroke="#fff" stroke-width="2.6" stroke-linejoin="round" paint-order="stroke">x</text><text x="30.0" y="10" font-size="11" font-style="italic" text-anchor="start" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif" stroke="#fff" stroke-width="2.6" stroke-linejoin="round" paint-order="stroke">y</text><text x="13.0" y="93.0" font-size="11" font-style="italic" text-anchor="start" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif" stroke="#fff" stroke-width="2.6" stroke-linejoin="round" paint-order="stroke">O</text><line x1="104.0" y1="78.0" x2="104.0" y2="84.0" stroke="#444"/><text x="104.0" y="94.0" font-size="10" text-anchor="middle" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif" stroke="#fff" stroke-width="2.6" stroke-linejoin="round" paint-order="stroke">2</text><line x1="184.0" y1="78.0" x2="184.0" y2="84.0" stroke="#444"/><text x="184.0" y="94.0" font-size="10" text-anchor="middle" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif" stroke="#fff" stroke-width="2.6" stroke-linejoin="round" paint-order="stroke">4</text><text x="72.0" y="94.0" font-size="10" text-anchor="middle" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif" stroke="#fff" stroke-width="2.6" stroke-linejoin="round" paint-order="stroke">1</text><circle cx="64.0" cy="81.0" r="2.2" fill="#444" stroke="#444" stroke-width="1.2"/><circle cx="104.0" cy="51.0" r="2.6" fill="#1f3f8f" stroke="#1f3f8f" stroke-width="1.2"/><circle cx="184.0" cy="21.0" r="2.6" fill="#1f3f8f" stroke="#1f3f8f" stroke-width="1.2"/><circle cx="104.0" cy="111.0" r="2.6" fill="#d9701e" stroke="#d9701e" stroke-width="1.2"/><circle cx="184.0" cy="141.0" r="2.6" fill="#d9701e" stroke="#d9701e" stroke-width="1.2"/><line x1="104.0" y1="81.0" x2="104.0" y2="51.0" stroke="#bbb" stroke-width="0.8" stroke-dasharray="2 2"/><line x1="104.0" y1="81.0" x2="104.0" y2="111.0" stroke="#bbb" stroke-width="0.8" stroke-dasharray="2 2"/><line x1="184.0" y1="81.0" x2="184.0" y2="21.0" stroke="#bbb" stroke-width="0.8" stroke-dasharray="2 2"/><line x1="184.0" y1="81.0" x2="184.0" y2="141.0" stroke="#bbb" stroke-width="0.8" stroke-dasharray="2 2"/><line x1="21.0" y1="51.0" x2="27.0" y2="51.0" stroke="#444"/><text x="19.0" y="55.0" font-size="10" text-anchor="end" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif" stroke="#fff" stroke-width="2.6" stroke-linejoin="round" paint-order="stroke">1</text><line x1="21.0" y1="111.0" x2="27.0" y2="111.0" stroke="#444"/><text x="19.0" y="115.0" font-size="10" text-anchor="end" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif" stroke="#fff" stroke-width="2.6" stroke-linejoin="round" paint-order="stroke">−1</text><text x="126.0" y="19.5" font-size="11" font-style="italic" text-anchor="start" fill="#1f3f8f" font-family="Liberation Serif,DejaVu Serif,serif" stroke="#fff" stroke-width="2.6" stroke-linejoin="round" paint-order="stroke">y=log<tspan font-size="8" dy="3">2</tspan><tspan dy="-3"> x</tspan></text><text x="126.0" y="151.5" font-size="11" font-style="italic" text-anchor="start" fill="#d9701e" font-family="Liberation Serif,DejaVu Serif,serif" stroke="#fff" stroke-width="2.6" stroke-linejoin="round" paint-order="stroke">y=log<tspan font-size="8" dy="3">1/2</tspan><tspan dy="-3"> x</tspan></text></svg>
+<p style="text-align:center;font-size:9pt;margin:0 0 2mm">$y=\log_2x$（増加）と $y=\log_{\frac12}x$（減少）。$\log_{\frac12}x=-\log_2x$ なので、2つのグラフは $x$ 軸に関して対称</p>
+<div class="box ex">
+次の方程式・不等式を解け。(1) $4^x-3\cdot2^{x+1}+8=0$　(2) $\log_2(x-1)+\log_2(x+2)=2$　(3) $\log_{\frac12}(x-1)\geqq-2$
+<div class="solx"><b>解</b>　(1) $t=2^x\ (t>0)$ とおくと $t^2-6t+8=0$、$(t-2)(t-4)=0$。$t=2,\ 4$（ともに $t>0$ を満たす）より $2^x=2,\ 2^x=4$。$\boldsymbol{x=1,\ 2}$<br>
+(2) 真数条件 $x-1>0$ かつ $x+2>0$ より $x>1$。方程式は $\log_2(x-1)(x+2)=\log_24$ となり、$(x-1)(x+2)=4$、$x^2+x-6=0$、$(x+3)(x-2)=0$。$x>1$ より $\boldsymbol{x=2}$<br>
+(3) 真数条件より $x>1$。$-2=\log_{\frac12}\left(\dfrac12\right)^{-2}=\log_{\frac12}4$ なので、不等式は $\log_{\frac12}(x-1)\geqq\log_{\frac12}4$。底 $\dfrac12$ は $1$ より小さいので、不等号の向きが変わって $x-1\leqq4$。真数条件と合わせて $\boldsymbol{1<x\leqq5}$</div>
+</div>
+<h3>講義4　常用対数 ― 桁数と最高位の数字</h3>
+<div class="box lect">
+$10$ を底とする対数が<b>常用対数</b>。正の数を $N=a\times10^n$（$1\leqq a<10$、$n$ は整数）と表すと、$\log_{10}N=n+\log_{10}a$（$0\leqq\log_{10}a<1$）。<br>
+・<b>整数部分</b> $n$ から桁数がわかる（$N\geqq1$ なら $n+1$ 桁）。$n=-m<0$ なら $10^{-m}\leqq N<10^{-m+1}$ で、<b>小数第 $m$ 位</b>に初めて $0$ でない数字が現れる。<br>
+・<b>小数部分</b> $\log_{10}a$ から最高位の数字がわかる（$\log_{10}k\leqq\log_{10}a<\log_{10}(k+1)$ なら最高位は $k$）。<br>
+入試では $\log_{10}2=0.3010,\ \log_{10}3=0.4771,\ \log_{10}7=0.8451$ が与えられることが多い（$\log_{10}5=1-\log_{10}2$ も使う）。
+</div>
+<div class="box ex">
+$\log_{10}2=0.3010,\ \log_{10}3=0.4771$ とする。(1) $6^{30}$ は何桁の整数か。また、最高位の数字を求めよ。(2) $\left(\dfrac13\right)^{20}$ を小数で表したとき、小数第何位に初めて $0$ でない数字が現れるか。
+<div class="solx"><b>解</b>　(1) $\log_{10}6^{30}=30(\log_{10}2+\log_{10}3)=30\times0.7781=23.343$。$23\leqq\log_{10}6^{30}<24$ より $10^{23}\leqq6^{30}<10^{24}$ で、<b>24桁</b>。<br>
+小数部分 $0.343$ は $\log_{10}2=0.3010\leqq0.343<0.4771=\log_{10}3$ を満たすので、$2\times10^{23}\leqq6^{30}<3\times10^{23}$。最高位の数字は $\boldsymbol2$<br>
+(2) $\log_{10}\left(\dfrac13\right)^{20}=-20\log_{10}3=-9.542$。$-10\leqq-9.542<-9$ より $10^{-10}\leqq\left(\dfrac13\right)^{20}<10^{-9}$。<b>小数第10位</b></div>
+</div>
+<div class="box chk">
+(1) $\sqrt[4]{16}\times8^{-\frac23}\div4^{-\frac32}$ を計算せよ。　(2) $\log_23\cdot\log_35\cdot\log_58$ の値を求めよ。　(3) 方程式 $9^x-2\cdot3^x-3=0$ を解け。　(4) 不等式 $2\log_3x<\log_3(x+6)$ を解け。　(5) $\log_{10}2=0.3010,\ \log_{10}3=0.4771$ とする。$1.5^n>1000$ となる最小の自然数 $n$ を求めよ。
+</div>
+<div class="box aim">
+指数・対数の方程式・不等式は「<b>置き換え → 2次方程式・2次不等式</b>」が定番で、置き換えた文字の範囲が鍵になる（$t=2^x$ なら $t>0$、$t=\log_2x$ は $x$ の範囲に応じて制限される）。対数では<b>真数条件を最初に書く</b>。底に文字 $a$ を含むときは $a>1$ と $0<a<1$ で場合分けする。常用対数の問題は、与えられた近似値だけで<b>不等式ではさむ</b>こと。
+</div>
+<h3 class="deep">講義5　$\log_23$ が無理数であることと、$\log_{10}2$ の見積もり</h3>
+<div class="box lect">
+<b>$\log_23$ は無理数</b>　$\log_23$ が有理数であると仮定する。$\log_23>\log_21=0$ なので、自然数 $m,n$ を用いて $\log_23=\dfrac mn$ と表せる。$2^{\frac mn}=3$ の両辺を $n$ 乗して $2^m=3^n$。左辺は偶数、右辺は奇数なので矛盾。よって $\log_23$ は無理数である（第1章の背理法）。■<br>
+<b>$\log_{10}2$ の見積もり</b>　$2^{10}=1024>10^3$ より $10\log_{10}2>3$、すなわち $\log_{10}2>0.3$。また $2^{13}=8192<10^4$ より $13\log_{10}2<4$、すなわち $\log_{10}2<\dfrac4{13}=0.307\cdots$。
+</div>
+<p>同様に、$3^3=27<32=2^5$ より $3<2^{\frac53}$、よって $\log_23<\dfrac53$ とわかる。「近似値を与えずに大小や桁数の範囲を示せ」という問題は、<b>整数の累乗の大小</b>に直して解く。</p>
+<div class="box warn">
+・<b>真数条件を忘れる</b>：講義3の例題(2)で $x=-3$ を答えに含めると誤り（真数 $x-1$ が負になる）。<br>
+・底が $1$ より小さい対数・指数の不等式で、<b>不等号の向きを変え忘れる</b>。<br>
+・$\log_a(M+N)=\log_aM+\log_aN$ としてしまう（正しくは $\log_aMN=\log_aM+\log_aN$）。$\log_ax^2=2\log_ax$ は $x>0$ のときに限る。
+</div>
+<div class="box ans">
+(1) $2\times2^{-2}\div2^{-3}=2^{1-2+3}=4$　(2) 底を2にそろえて $\log_23\cdot\dfrac{\log_25}{\log_23}\cdot\dfrac{\log_28}{\log_25}=\log_28=3$　(3) $t=3^x\ (t>0)$ とおくと $t^2-2t-3=(t-3)(t+1)=0$。$t>0$ より $t=3$、$x=1$　(4) 真数条件 $x>0$。不等式は $\log_3x^2<\log_3(x+6)$ で、底 $3>1$ より $x^2<x+6$、$(x-3)(x+2)<0$ から $-2<x<3$。真数条件と合わせて $0<x<3$　(5) $\log_{10}1.5=\log_{10}\dfrac32=0.4771-0.3010=0.1761$。$1.5^n>10^3\iff n\times0.1761>3\iff n>17.03\cdots$。最小の $n$ は $18$
+</div>
+
+<!--CH 14-->
+<div class="box point">
+・<b>微分係数</b>：$f'(a)=\displaystyle\lim_{h\to0}\frac{f(a+h)-f(a)}{h}$（曲線 $y=f(x)$ の点 $(a,f(a))$ における接線の傾き）<br>
+・<b>導関数の公式</b>：$(x^n)'=nx^{n-1}$（$n$ は自然数）、$(c)'=0$（$c$ は定数）、$\{kf(x)+lg(x)\}'=kf'(x)+lg'(x)$<br>
+・<b>接線</b>：曲線 $y=f(x)$ 上の点 $(a,f(a))$ における接線は $y-f(a)=f'(a)(x-a)$<br>
+・<b>増減と極値</b>：$f'(x)>0$ の区間で増加、$f'(x)<0$ の区間で減少。$f'(x)$ の符号が $+$ から $-$ に変わる点で<b>極大</b>、$-$ から $+$ に変わる点で<b>極小</b><br>
+・<b>方程式 $f(x)=a$ の実数解の個数</b>＝曲線 $y=f(x)$ と直線 $y=a$ の共有点の個数
+</div>
+<h3>講義1　極限と微分係数・導関数</h3>
+<div class="box lect">
+$x$ が $a$ から $a+h$ まで変わるときの<b>平均変化率</b> $\dfrac{f(a+h)-f(a)}{h}$ は、曲線上の2点を結ぶ直線の傾き。$h\to0$ としたときの極限値が<b>微分係数</b> $f'(a)$ で、接線の傾きを表す。極限の計算では、$h$ で約分してから $h\to0$ とする。<br>
+分数式の極限で「<b>分母 $\to0$ なのに極限値が存在するなら、分子 $\to0$</b>」という考え方は、未知の定数を決めるときに使う（必要条件なので、最後に極限値を確かめる）。<br>
+$f'(a)$ の $a$ を $x$ にした関数が<b>導関数</b> $f'(x)$。例えば $(x^3)'=\displaystyle\lim_{h\to0}\frac{(x+h)^3-x^3}h=\lim_{h\to0}(3x^2+3xh+h^2)=3x^2$。二項定理で $(x+h)^n$ を展開すれば $(x^n)'=nx^{n-1}$ がわかる。
+</div>
+<div class="box ex">
+(1) $f(x)=x^2-3x$ について、定義に従って微分係数 $f'(2)$ を求めよ。　(2) $\displaystyle\lim_{x\to1}\frac{x^2+ax+b}{x-1}=3$ が成り立つように、定数 $a,b$ の値を定めよ。
+<div class="solx"><b>解</b>　(1) $f(2+h)-f(2)=\{(2+h)^2-3(2+h)\}-(4-6)=h^2+h$ なので $f'(2)=\displaystyle\lim_{h\to0}\frac{h^2+h}h=\lim_{h\to0}(h+1)=\boldsymbol1$<br>
+(2) $x\to1$ のとき分母 $\to0$ なので、極限値が存在するためには分子 $\to0$：$1+a+b=0$、$b=-a-1$。このとき分子 $=x^2+ax-a-1=(x-1)(x+a+1)$ で、左辺 $=\displaystyle\lim_{x\to1}(x+a+1)=a+2$。$a+2=3$ より $\boldsymbol{a=1,\ b=-2}$</div>
+</div>
+<h3>講義2　接線 ―「点における」と「点を通る」</h3>
+<div class="box lect">
+曲線 $y=f(x)$ 上の点 $(a,f(a))$ における接線は、傾き $f'(a)$ で点 $(a,f(a))$ を通る直線 $y-f(a)=f'(a)(x-a)$ である。<br>
+一方、「点 A を<b>通る</b>接線」は、A が曲線上にあってもなくても、<b>接点の $x$ 座標を $t$ とおく</b>のが鉄則：接線 $y=f'(t)(x-t)+f(t)$ が A を通る条件から $t$ を求める。3次関数では接点が異なれば接線も異なるので、$t$ の方程式の<b>異なる実数解の個数が接線の本数</b>になる。
+</div>
+<div class="box ex">
+曲線 $C:y=x^3-3x$ について　(1) $C$ 上の点 $(2,2)$ における接線の方程式を求めよ。　(2) 点 $(2,2)$ を通る $C$ の接線の方程式をすべて求めよ。
+<div class="solx"><b>解</b>　$y'=3x^2-3$。<br>
+(1) $x=2$ のとき $y'=9$。接線は $y-2=9(x-2)$、すなわち $\boldsymbol{y=9x-16}$<br>
+(2) 接点を $(t,\ t^3-3t)$ とおくと、接線は $y=(3t^2-3)(x-t)+t^3-3t$、すなわち $y=(3t^2-3)x-2t^3$。これが点 $(2,2)$ を通るので $2=2(3t^2-3)-2t^3$。整理して $t^3-3t^2+4=0$、$(t-2)^2(t+1)=0$。<br>
+$t=2$ のとき $y=9x-16$、$t=-1$ のとき $y=2$。答 $\boldsymbol{y=9x-16,\ y=2}$<br>
+（(1) の接線のほかに、点 $(-1,2)$ で $C$ に接する直線 $y=2$ も点 $(2,2)$ を通る。）</div>
+</div>
+<h3>講義3　増減と極値・3次関数のグラフ</h3>
+<div class="box lect">
+$f'(x)>0$ となる区間では接線の傾きが正なので、$f(x)$ は増加する。$f'(x)$ の符号を調べて<b>増減表</b>をかけば、グラフの概形・極値・最大最小がわかる。<br>
+極値をとる点では $f'(a)=0$ だが、<b>逆は成り立たない</b>。$f(x)=x^3$ は $f'(0)=0$ でも、前後で $f'(x)\geqq0$ のまま（ずっと増加）なので極値ではない。<b>$f'(x)$ の符号が変わること</b>が極値の条件である。<br>
+3次関数 $f(x)$ が極値をもつ $\iff f'(x)=0$ が異なる2つの実数解をもつ $\iff$ 2次方程式 $f'(x)=0$ の判別式 $D>0$。区間での最大・最小は、<b>極値と区間の端の値</b>を比べて決める。
+</div>
+<div class="box ex">
+$f(x)=x^3-6x^2+9x-2$ について　(1) 増減を調べ、極値を求めよ。　(2) $0\leqq x\leqq4$ における最大値と最小値を求めよ。
+<div class="solx"><b>解</b>　(1) $f'(x)=3x^2-12x+9=3(x-1)(x-3)$。増減表は次のようになる。
+<table><tr><th>$x$</th><td>$\cdots$</td><td>$1$</td><td>$\cdots$</td><td>$3$</td><td>$\cdots$</td></tr><tr><th>$f'(x)$</th><td>$+$</td><td>$0$</td><td>$-$</td><td>$0$</td><td>$+$</td></tr><tr><th>$f(x)$</th><td>↗</td><td>$2$</td><td>↘</td><td>$-2$</td><td>↗</td></tr></table>
+$x=1$ で<b>極大値 $2$</b>、$x=3$ で<b>極小値 $-2$</b><br>
+(2) 区間の端の値は $f(0)=-2,\ f(4)=64-96+36-2=2$。極値と比べて、<b>最大値 $2$（$x=1,\ 4$）、最小値 $-2$（$x=0,\ 3$）</b>
+<svg class="fig" width="224" height="155" viewBox="0 0 224 155" xmlns="http://www.w3.org/2000/svg"><line x1="28.0" y1="30.0" x2="188.0" y2="30.0" stroke="#bbb" stroke-width="0.8" stroke-dasharray="2 2"/><line x1="28.0" y1="130.0" x2="148.0" y2="130.0" stroke="#bbb" stroke-width="0.8" stroke-dasharray="2 2"/><line x1="68.0" y1="80.0" x2="68.0" y2="30.0" stroke="#bbb" stroke-width="0.8" stroke-dasharray="2 2"/><line x1="148.0" y1="80.0" x2="148.0" y2="130.0" stroke="#bbb" stroke-width="0.8" stroke-dasharray="2 2"/><line x1="188.0" y1="80.0" x2="188.0" y2="30.0" stroke="#bbb" stroke-width="0.8" stroke-dasharray="2 2"/><polyline points="24.4,151.2 25.3,145.6 26.2,140.3 27.1,135.0 28.0,129.9 28.9,125.0 29.8,120.2 30.7,115.6 31.6,111.1 32.5,106.7 33.4,102.5 34.2,98.5 35.1,94.5 36.0,90.7 36.9,87.0 37.8,83.5 38.7,80.1 39.6,76.8 40.5,73.7 41.4,70.7 42.2,67.8 43.1,65.0 44.0,62.3 44.9,59.8 45.8,57.3 46.7,55.0 47.6,52.8 48.5,50.8 49.4,48.8 50.3,46.9 51.2,45.2 52.0,43.5 52.9,42.0 53.8,40.5 54.7,39.2 55.6,38.0 56.5,36.8 57.4,35.8 58.3,34.8 59.2,33.9 60.0,33.2 60.9,32.5 61.8,31.9 62.7,31.4 63.6,30.9 64.5,30.6 65.4,30.3 66.3,30.1 67.2,30.0 68.1,30.0 68.9,30.0 69.8,30.2 70.7,30.3 71.6,30.6 72.5,30.9 73.4,31.3 74.3,31.8 75.2,32.3 76.1,32.8 77.0,33.5 77.8,34.2 78.7,34.9 79.6,35.7 80.5,36.6 81.4,37.5 82.3,38.4 83.2,39.4 84.1,40.5 85.0,41.6 85.9,42.7 86.8,43.9 87.6,45.1 88.5,46.4 89.4,47.7 90.3,49.0 91.2,50.4 92.1,51.7 93.0,53.2 93.9,54.6 94.8,56.1 95.7,57.6 96.5,59.1 97.4,60.6 98.3,62.2 99.2,63.8 100.1,65.4 101.0,67.0 101.9,68.6 102.8,70.2 103.7,71.9 104.5,73.5 105.4,75.2 106.3,76.9 107.2,78.5 108.1,80.2 109.0,81.9 109.9,83.5 110.8,85.2 111.7,86.9 112.6,88.5 113.4,90.2 114.3,91.8 115.2,93.4 116.1,95.0 117.0,96.6 117.9,98.2 118.8,99.7 119.7,101.3 120.6,102.8 121.5,104.3 122.3,105.8 123.2,107.2 124.1,108.6 125.0,110.0 125.9,111.3 126.8,112.7 127.7,113.9 128.6,115.2 129.5,116.4 130.4,117.6 131.2,118.7 132.1,119.8 133.0,120.8 133.9,121.8 134.8,122.7 135.7,123.6 136.6,124.5 137.5,125.3 138.4,126.0 139.3,126.7 140.2,127.3 141.0,127.9 141.9,128.4 142.8,128.8 143.7,129.2 144.6,129.5 145.5,129.7 146.4,129.9 147.3,130.0 148.2,130.0 149.0,129.9 149.9,129.8 150.8,129.6 151.7,129.3 152.6,129.0 153.5,128.5 154.4,128.0 155.3,127.4 156.2,126.7 157.1,125.9 157.9,125.0 158.8,124.0 159.7,122.9 160.6,121.7 161.5,120.5 162.4,119.1 163.3,117.6 164.2,116.1 165.1,114.4 166.0,112.6 166.8,110.7 167.7,108.7 168.6,106.6 169.5,104.4 170.4,102.1 171.3,99.6 172.2,97.0 173.1,94.4 174.0,91.5 174.9,88.6 175.8,85.6 176.6,82.4 177.5,79.1 178.4,75.6 179.3,72.1 180.2,68.4 181.1,64.5 182.0,60.6 182.9,56.4 183.8,52.2 184.7,47.8 185.5,43.3 186.4,38.6 187.3,33.8 188.2,28.8 189.1,23.7 190.0,18.4 190.9,13.0 191.8,7.4 192.7,1.7" fill="none" stroke="#1f3f8f" stroke-width="1.8"/><line x1="0" y1="80.0" x2="223" y2="80.0" stroke="#444" stroke-width="1"/><polygon points="224,80.0 217,77.0 217,83.0" fill="#444"/><line x1="28.0" y1="155" x2="28.0" y2="1" stroke="#444" stroke-width="1"/><polygon points="28.0,0 25.0,7 31.0,7" fill="#444"/><text x="215" y="93.0" font-size="11" font-style="italic" text-anchor="start" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif" stroke="#fff" stroke-width="2.6" stroke-linejoin="round" paint-order="stroke">x</text><text x="34.0" y="10" font-size="11" font-style="italic" text-anchor="start" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif" stroke="#fff" stroke-width="2.6" stroke-linejoin="round" paint-order="stroke">y</text><text x="17.0" y="92.0" font-size="11" font-style="italic" text-anchor="start" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif" stroke="#fff" stroke-width="2.6" stroke-linejoin="round" paint-order="stroke">O</text><line x1="68.0" y1="77.0" x2="68.0" y2="83.0" stroke="#444"/><text x="68.0" y="74.0" font-size="10" text-anchor="middle" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif" stroke="#fff" stroke-width="2.6" stroke-linejoin="round" paint-order="stroke">1</text><line x1="148.0" y1="77.0" x2="148.0" y2="83.0" stroke="#444"/><text x="148.0" y="74.0" font-size="10" text-anchor="middle" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif" stroke="#fff" stroke-width="2.6" stroke-linejoin="round" paint-order="stroke">3</text><line x1="188.0" y1="77.0" x2="188.0" y2="83.0" stroke="#444"/><text x="188.0" y="93.0" font-size="10" text-anchor="middle" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif" stroke="#fff" stroke-width="2.6" stroke-linejoin="round" paint-order="stroke">4</text><line x1="108.0" y1="77.0" x2="108.0" y2="83.0" stroke="#444"/><text x="100.8" y="93.0" font-size="10" text-anchor="middle" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif" stroke="#fff" stroke-width="2.6" stroke-linejoin="round" paint-order="stroke">2</text><line x1="25.0" y1="30.0" x2="31.0" y2="30.0" stroke="#444"/><text x="23.0" y="34.0" font-size="10" text-anchor="end" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif" stroke="#fff" stroke-width="2.6" stroke-linejoin="round" paint-order="stroke">2</text><line x1="25.0" y1="130.0" x2="31.0" y2="130.0" stroke="#444"/><text x="23.0" y="134.0" font-size="10" text-anchor="end" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif" stroke="#fff" stroke-width="2.6" stroke-linejoin="round" paint-order="stroke">−2</text><circle cx="68.0" cy="30.0" r="2.6" fill="#1f3f8f" stroke="#1f3f8f" stroke-width="1.2"/><circle cx="148.0" cy="130.0" r="2.6" fill="#1f3f8f" stroke="#1f3f8f" stroke-width="1.2"/><circle cx="28.0" cy="130.0" r="2.2" fill="#444" stroke="#444" stroke-width="1.2"/><circle cx="188.0" cy="30.0" r="2.2" fill="#444" stroke="#444" stroke-width="1.2"/><circle cx="108.0" cy="80.0" r="3" fill="#fff" stroke="#d9701e" stroke-width="1.2"/><text x="68.0" y="21.3" font-size="10" text-anchor="middle" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif" stroke="#fff" stroke-width="2.6" stroke-linejoin="round" paint-order="stroke">極大</text><text x="148.0" y="148.8" font-size="10" text-anchor="middle" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif" stroke="#fff" stroke-width="2.6" stroke-linejoin="round" paint-order="stroke">極小</text><text x="112.0" y="66.3" font-size="10" text-anchor="start" fill="#d9701e" font-family="Liberation Serif,DejaVu Serif,serif" stroke="#fff" stroke-width="2.6" stroke-linejoin="round" paint-order="stroke">(2, 0)</text></svg></div>
+</div>
+<h3>講義4　方程式の実数解の個数 ― 定数を分離する</h3>
+<div class="box lect">
+文字定数 $a$ を含む方程式の実数解の個数は、<b>$a$ を分離して $f(x)=a$ の形</b>にし、曲線 $y=f(x)$（動かない）と直線 $y=a$（$x$ 軸に平行で上下に動く）の共有点の個数として数える。グラフをかいておけば、直線を上下に動かすだけで場合分けが一目でわかる。「正の解が2個」など<b>解の符号</b>を問われたら、共有点が $y$ 軸の右にあるか左にあるかを見る。<br>
+$a$ を分離しにくいときは、「3次方程式 $g(x)=0$ が異なる3つの実数解をもつ $\iff g(x)$ が極値をもち、極大値と極小値が異符号」を使う方法もある。
+</div>
+<div class="box ex">
+方程式 $2x^3-3x^2-12x-a=0$ について　(1) 異なる実数解の個数を、定数 $a$ の値によって分類せよ。　(2) 異なる2つの正の解と1つの負の解をもつような $a$ の値の範囲を求めよ。
+<div class="solx"><b>解</b>　(1) $2x^3-3x^2-12x=a$ と変形し、$g(x)=2x^3-3x^2-12x$ とおく。$g'(x)=6x^2-6x-12=6(x+1)(x-2)$ より、$g(x)$ は $x=-1$ で極大値 $g(-1)=7$、$x=2$ で極小値 $g(2)=-20$ をとる。曲線 $y=g(x)$ と直線 $y=a$ の共有点の個数を数えて<br>
+$\boldsymbol{a<-20,\ 7<a}$ のとき <b>1個</b>、$\boldsymbol{a=-20,\ 7}$ のとき <b>2個</b>、$\boldsymbol{-20<a<7}$ のとき <b>3個</b><br>
+(2) $g(0)=0$ に注意してグラフを見ると、直線 $y=a$ が $y$ 軸の右側で2点、左側で1点と交わるのは $\boldsymbol{-20<a<0}$ のとき。
+<svg class="fig" width="229" height="203" viewBox="0 0 229 203" xmlns="http://www.w3.org/2000/svg"><line x1="3.1" y1="31.2" x2="223.2" y2="31.2" stroke="#888" stroke-width="0.9" stroke-dasharray="4 3"/><line x1="3.1" y1="171.6" x2="223.2" y2="171.6" stroke="#888" stroke-width="0.9" stroke-dasharray="4 3"/><line x1="3.1" y1="114.4" x2="223.2" y2="114.4" stroke="#d9701e" stroke-width="1.4"/><line x1="65.1" y1="67.6" x2="65.1" y2="31.2" stroke="#bbb" stroke-width="0.8" stroke-dasharray="2 2"/><line x1="158.1" y1="67.6" x2="158.1" y2="171.6" stroke="#bbb" stroke-width="0.8" stroke-dasharray="2 2"/><polyline points="15.0,197.0 15.9,190.8 16.7,184.7 17.6,178.7 18.4,172.9 19.2,167.3 20.1,161.7 20.9,156.3 21.8,151.1 22.6,145.9 23.4,140.9 24.3,136.1 25.1,131.3 26.0,126.7 26.8,122.2 27.6,117.9 28.5,113.6 29.3,109.5 30.2,105.5 31.0,101.7 31.8,97.9 32.7,94.3 33.5,90.8 34.4,87.4 35.2,84.1 36.0,80.9 36.9,77.8 37.7,74.9 38.6,72.0 39.4,69.3 40.2,66.7 41.1,64.2 41.9,61.7 42.8,59.4 43.6,57.2 44.4,55.1 45.3,53.1 46.1,51.1 47.0,49.3 47.8,47.6 48.6,46.0 49.5,44.4 50.3,43.0 51.2,41.6 52.0,40.4 52.8,39.2 53.7,38.1 54.5,37.1 55.3,36.2 56.2,35.3 57.0,34.6 57.9,33.9 58.7,33.3 59.5,32.8 60.4,32.3 61.2,32.0 62.1,31.7 62.9,31.4 63.7,31.3 64.6,31.2 65.4,31.2 66.3,31.3 67.1,31.4 67.9,31.6 68.8,31.8 69.6,32.2 70.5,32.5 71.3,33.0 72.1,33.5 73.0,34.1 73.8,34.7 74.7,35.3 75.5,36.1 76.3,36.9 77.2,37.7 78.0,38.6 78.9,39.5 79.7,40.5 80.5,41.5 81.4,42.6 82.2,43.7 83.1,44.9 83.9,46.1 84.7,47.3 85.6,48.6 86.4,49.9 87.3,51.3 88.1,52.7 88.9,54.1 89.8,55.6 90.6,57.1 91.5,58.6 92.3,60.2 93.1,61.8 94.0,63.4 94.8,65.0 95.6,66.7 96.5,68.4 97.3,70.1 98.2,71.8 99.0,73.6 99.8,75.3 100.7,77.1 101.5,78.9 102.4,80.8 103.2,82.6 104.0,84.4 104.9,86.3 105.7,88.2 106.6,90.0 107.4,91.9 108.2,93.8 109.1,95.7 109.9,97.6 110.8,99.5 111.6,101.4 112.4,103.3 113.3,105.2 114.1,107.1 115.0,109.0 115.8,110.9 116.6,112.8 117.5,114.6 118.3,116.5 119.2,118.4 120.0,120.2 120.8,122.0 121.7,123.9 122.5,125.7 123.4,127.5 124.2,129.2 125.0,131.0 125.9,132.7 126.7,134.4 127.6,136.1 128.4,137.8 129.2,139.4 130.1,141.0 130.9,142.6 131.8,144.2 132.6,145.7 133.4,147.2 134.3,148.7 135.1,150.1 135.9,151.5 136.8,152.9 137.6,154.2 138.5,155.5 139.3,156.7 140.1,157.9 141.0,159.1 141.8,160.2 142.7,161.3 143.5,162.3 144.3,163.3 145.2,164.2 146.0,165.1 146.9,165.9 147.7,166.7 148.5,167.5 149.4,168.1 150.2,168.7 151.1,169.3 151.9,169.8 152.7,170.3 153.6,170.6 154.4,171.0 155.3,171.2 156.1,171.4 156.9,171.5 157.8,171.6 158.6,171.6 159.5,171.5 160.3,171.4 161.1,171.1 162.0,170.8 162.8,170.5 163.7,170.0 164.5,169.5 165.3,168.9 166.2,168.2 167.0,167.5 167.9,166.6 168.7,165.7 169.5,164.7 170.4,163.6 171.2,162.4 172.1,161.2 172.9,159.8 173.7,158.4 174.6,156.8 175.4,155.2 176.2,153.5 177.1,151.7 177.9,149.7 178.8,147.7 179.6,145.6 180.4,143.4 181.3,141.1 182.1,138.6 183.0,136.1 183.8,133.5 184.6,130.8 185.5,127.9 186.3,125.0 187.2,121.9 188.0,118.7 188.8,115.4 189.7,112.0 190.5,108.5 191.4,104.9 192.2,101.1 193.0,97.3 193.9,93.3 194.7,89.2 195.6,84.9 196.4,80.6 197.2,76.1 198.1,71.5 198.9,66.7 199.8,61.9 200.6,56.9 201.4,51.7 202.3,46.5 203.1,41.1 204.0,35.5 204.8,29.9 205.6,24.1 206.5,18.1 207.3,12.0 208.2,5.8" fill="none" stroke="#1f3f8f" stroke-width="1.8"/><line x1="0" y1="67.6" x2="228" y2="67.6" stroke="#444" stroke-width="1"/><polygon points="229,67.6 222,64.6 222,70.6" fill="#444"/><line x1="96.1" y1="203" x2="96.1" y2="1" stroke="#444" stroke-width="1"/><polygon points="96.1,0 93.1,7 99.1,7" fill="#444"/><text x="220" y="80.6" font-size="11" font-style="italic" text-anchor="start" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif" stroke="#fff" stroke-width="2.6" stroke-linejoin="round" paint-order="stroke">x</text><text x="102.1" y="10" font-size="11" font-style="italic" text-anchor="start" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif" stroke="#fff" stroke-width="2.6" stroke-linejoin="round" paint-order="stroke">y</text><text x="85.1" y="79.6" font-size="11" font-style="italic" text-anchor="start" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif" stroke="#fff" stroke-width="2.6" stroke-linejoin="round" paint-order="stroke">O</text><line x1="65.1" y1="64.6" x2="65.1" y2="70.6" stroke="#444"/><text x="65.1" y="80.6" font-size="10" text-anchor="middle" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif" stroke="#fff" stroke-width="2.6" stroke-linejoin="round" paint-order="stroke">−1</text><line x1="158.1" y1="64.6" x2="158.1" y2="70.6" stroke="#444"/><text x="158.1" y="61.599999999999994" font-size="10" text-anchor="middle" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif" stroke="#fff" stroke-width="2.6" stroke-linejoin="round" paint-order="stroke">2</text><line x1="93.1" y1="31.2" x2="99.1" y2="31.2" stroke="#444"/><text x="92.1" y="35.2" font-size="10" text-anchor="end" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif" stroke="#fff" stroke-width="2.6" stroke-linejoin="round" paint-order="stroke">7</text><text x="101.1" y="184.6" font-size="10" text-anchor="start" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif" stroke="#fff" stroke-width="2.6" stroke-linejoin="round" paint-order="stroke">−20</text><text x="223.8" y="110.2" font-size="10.5" font-style="italic" text-anchor="end" fill="#d9701e" font-family="Liberation Serif,DejaVu Serif,serif" stroke="#fff" stroke-width="2.6" stroke-linejoin="round" paint-order="stroke">y=a</text><text x="198.4" y="14.0" font-size="10.5" font-style="italic" text-anchor="end" fill="#1f3f8f" font-family="Liberation Serif,DejaVu Serif,serif" stroke="#fff" stroke-width="2.6" stroke-linejoin="round" paint-order="stroke">y=g(x)</text><circle cx="65.1" cy="31.2" r="2.6" fill="#1f3f8f" stroke="#1f3f8f" stroke-width="1.2"/><circle cx="158.1" cy="171.6" r="2.6" fill="#1f3f8f" stroke="#1f3f8f" stroke-width="1.2"/></svg></div>
+</div>
+<div class="box chk">
+(1) $f(x)=(2x-1)(x^2+3)$ を微分せよ。　(2) 点 $(0,4)$ から放物線 $y=-x^2+4x$ に引いた接線の方程式を求めよ。　(3) $f(x)=x^3+ax^2+3x$ が極値をもつような定数 $a$ の値の範囲を求めよ。　(4) $f(x)=-x^3+3x+1$ の $-2\leqq x\leqq3$ における最大値と最小値を求めよ。　(5) 方程式 $x^3-3x-a=0$ が異なる3つの実数解をもつような定数 $a$ の値の範囲を求めよ。
+</div>
+<div class="box aim">
+数学IIの微分の入試問題の中心は「<b>増減表をかく</b>」こと。極値をもつ条件（$f'(x)=0$ の判別式 $D>0$）、接線の本数（接点 $t$ の方程式の実数解の個数）、実数解の個数（定数分離）、不等式の証明（$f(x)\geqq0$ は「最小値 $\geqq0$」を示す）は、すべて増減表に帰着する。共通テストでは、導関数のグラフ $y=f'(x)$ から $y=f(x)$ の増減を読み取る問題も出る。
+</div>
+<h3 class="deep">講義5　3次関数のグラフの対称性</h3>
+<p>講義3の例題のグラフは、点 $(2,0)$ に関して点対称に見える。これは偶然ではない。</p>
+<div class="box lect">
+3次関数 $f(x)=ax^3+bx^2+cx+d$ で、$p=-\dfrac b{3a}$ として $x=X+p$ とおくと、$X^2$ の項が消えて $f(X+p)=aX^3+qX+r$（$q,r$ は定数）の形になる。$aX^3+qX$ は奇関数（グラフは原点対称）なので、<b>曲線 $y=f(x)$ は点 $(p,\ f(p))$ に関して点対称</b>である。この点は曲線の曲がる向きが変わる点で、数学IIIでは<b>変曲点</b>と呼ぶ。<br>
+講義3の例題では $p=-\dfrac{-6}{3}=2$、$f(2)=0$ で、実際に $f(X+2)=X^3-3X$。極大点 $(1,2)$ と極小点 $(3,-2)$ の中点が $(2,0)$ になっている。
+</div>
+<p>この性質から、3次関数が極値をもつとき、<b>極値をとる2つの $x$ の中点は $p$、極大値と極小値の和は $2f(p)$</b> とわかる。また、$f'(x)=3a(x-\alpha)(x-\beta)$ とすると、極値の差は $f(\alpha)-f(\beta)=\displaystyle\int_\beta^\alpha f'(x)\,dx=\frac a2(\beta-\alpha)^3$ と、第15章の $\frac16$ 公式で計算できる（講義3の例題では $\frac12\cdot2^3=4=2-(-2)$）。</p>
+<div class="box warn">
+・$f'(a)=0$ だけで「極値をとる」と判断するミス（$f(x)=x^3$ の $x=0$）。極値の条件から定数を求めたら、<b>$f'(x)$ の符号の変化を確認</b>する。<br>
+・「点 A <b>における</b>接線」と「点 A <b>を通る</b>接線」の混同（講義2の例題）。<br>
+・区間での最大・最小で、<b>区間の端の値</b>との比較を忘れる。
+</div>
+<div class="box ans">
+(1) 展開すると $2x^3-x^2+6x-3$ なので $f'(x)=6x^2-2x+6$　(2) 接点 $(t,\ -t^2+4t)$ における接線は $y=(-2t+4)x+t^2$。$(0,4)$ を通るので $t^2=4$、$t=\pm2$。$y=4,\ y=8x+4$　(3) $f'(x)=3x^2+2ax+3=0$ が異なる2つの実数解をもつ条件 $\dfrac D4=a^2-9>0$ より $a<-3,\ 3<a$　(4) $f'(x)=-3(x+1)(x-1)$。$f(-2)=3,\ f(-1)=-1,\ f(1)=3,\ f(3)=-17$ より、最大値 $3$（$x=-2,\ 1$）、最小値 $-17$（$x=3$）　(5) $g(x)=x^3-3x$ は極大値 $g(-1)=2$、極小値 $g(1)=-2$ をとるので、$y=g(x)$ と $y=a$ が3点で交わる条件は $-2<a<2$
+</div>
+
+<!--CH 15-->
+<div class="box point">
+・<b>不定積分</b>：$\displaystyle\int x^n\,dx=\frac{x^{n+1}}{n+1}+C$（$n=0,1,2,\cdots$、$C$ は積分定数）<br>
+・<b>定積分</b>：$F'(x)=f(x)$ のとき $\displaystyle\int_a^bf(x)\,dx=\Big[F(x)\Big]_a^b=F(b)-F(a)$<br>
+・<b>面積</b>：$a\leqq x\leqq b$ で $f(x)\geqq g(x)$ のとき、2つのグラフと2直線 $x=a,\ x=b$ で囲まれた部分の面積は<br>
+　$\displaystyle S=\int_a^b\{f(x)-g(x)\}\,dx$<br>
+・<b>$\frac16$ 公式</b>：$\displaystyle\int_\alpha^\beta(x-\alpha)(x-\beta)\,dx=-\frac{(\beta-\alpha)^3}6$<br>
+・<b>定積分で表された関数</b>：$a$ が定数のとき $\displaystyle\frac{d}{dx}\int_a^xf(t)\,dt=f(x)$
+</div>
+<h3>講義1　不定積分と定積分</h3>
+<div class="box lect">
+微分すると $f(x)$ になる関数を $f(x)$ の<b>不定積分</b>という。$F(x)$ が不定積分の1つなら、他はすべて $F(x)+C$ の形（定数は微分すると $0$）。$f(1)=2$ のような条件があれば $C$ が決まる。定積分 $F(b)-F(a)$ では $C$ は打ち消し合う。<br>
+性質：$\displaystyle\int_a^af(x)\,dx=0$、$\displaystyle\int_b^af(x)\,dx=-\int_a^bf(x)\,dx$、$\displaystyle\int_a^cf(x)\,dx+\int_c^bf(x)\,dx=\int_a^bf(x)\,dx$。積分区間が $-a$ から $a$ のときは、<b>奇数次の項は $0$、偶数次の項は $0$ から $a$ までの2倍</b>になり、計算量が大きく減る。
+</div>
+<div class="box ex">
+(1) $f'(x)=3x^2-4x+1,\ f(1)=2$ を満たす関数 $f(x)$ を求めよ。　(2) $\displaystyle\int_{-1}^2(x^2-2x+3)\,dx$ を求めよ。　(3) $\displaystyle\int_{-2}^2(x^3+3x^2-2x+1)\,dx$ を求めよ。
+<div class="solx"><b>解</b>　(1) $f(x)=\displaystyle\int(3x^2-4x+1)\,dx=x^3-2x^2+x+C$。$f(1)=C=2$ より $\boldsymbol{f(x)=x^3-2x^2+x+2}$<br>
+(2) $\displaystyle\Big[\frac{x^3}3-x^2+3x\Big]_{-1}^2=\left(\frac83-4+6\right)-\left(-\frac13-1-3\right)=\frac{14}3+\frac{13}3=\boldsymbol9$<br>
+(3) 奇数次の項 $x^3,\ -2x$ は消えるので、$\displaystyle 2\int_0^2(3x^2+1)\,dx=2\Big[x^3+x\Big]_0^2=2\cdot10=\boldsymbol{20}$</div>
+</div>
+<h3>講義2　定積分と面積</h3>
+<div class="box lect">
+$a\leqq x\leqq b$ で $f(x)\geqq0$ のとき、$\displaystyle\int_a^bf(x)\,dx$ は曲線 $y=f(x)$ と $x$ 軸、2直線 $x=a,\ x=b$ で囲まれた部分の面積を表す。曲線が $x$ 軸より<b>下</b>にある区間では定積分が負になるので、面積は $\displaystyle-\int_a^bf(x)\,dx$。<br>
+一般に、2つのグラフで囲まれた部分の面積は「<b>（上の式）−（下の式）</b>」を積分し、上下が入れかわる点で積分区間を分ける。$|f(x)|$ の定積分も、$f(x)$ の符号が変わる点で区間を分けて絶対値をはずす。<b>必ずグラフをかいて上下関係を確認</b>しよう。
+</div>
+<div class="box ex">
+(1) 曲線 $y=x^3-x^2-2x$ と $x$ 軸で囲まれた2つの部分の面積の和 $S$ を求めよ。　(2) $\displaystyle\int_0^3|x^2-2x|\,dx$ を求めよ。
+<div class="solx"><b>解</b>　(1) $x^3-x^2-2x=x(x+1)(x-2)$ より、曲線は $x=-1,\ 0,\ 2$ で $x$ 軸と交わり、$-1\leqq x\leqq0$ で $y\geqq0$、$0\leqq x\leqq2$ で $y\leqq0$（下図）。<br>
+$\displaystyle S_1=\int_{-1}^0(x^3-x^2-2x)\,dx=\Big[\frac{x^4}4-\frac{x^3}3-x^2\Big]_{-1}^0=-\left(\frac14+\frac13-1\right)=\frac5{12}$<br>
+$\displaystyle S_2=-\int_0^2(x^3-x^2-2x)\,dx=-\left(4-\frac83-4\right)=\frac83$。よって $S=S_1+S_2=\dfrac5{12}+\dfrac{32}{12}=\boldsymbol{\dfrac{37}{12}}$
+<svg class="fig" width="241" height="189" viewBox="0 0 241 189" xmlns="http://www.w3.org/2000/svg"><polygon points="30.8,77.0 31.5,75.4 32.2,73.8 32.9,72.3 33.6,70.8 34.3,69.4 35.0,68.1 35.7,66.8 36.4,65.5 37.1,64.3 37.8,63.2 38.5,62.1 39.2,61.0 39.9,60.0 40.6,59.1 41.3,58.1 42.0,57.3 42.7,56.5 43.4,55.7 44.1,55.0 44.8,54.3 45.5,53.7 46.2,53.1 46.9,52.6 47.6,52.1 48.3,51.6 49.0,51.2 49.7,50.8 50.4,50.5 51.1,50.2 51.8,49.9 52.5,49.7 53.2,49.5 53.9,49.4 54.6,49.3 55.3,49.3 56.0,49.2 56.7,49.2 57.4,49.3 58.1,49.4 58.8,49.5 59.5,49.7 60.2,49.8 60.9,50.1 61.6,50.3 62.3,50.6 63.0,50.9 63.7,51.3 64.4,51.7 65.1,52.1 65.8,52.5 66.5,53.0 67.2,53.5 67.9,54.0 68.6,54.6 69.3,55.1 70.0,55.7 70.7,56.4 71.4,57.0 72.1,57.7 72.8,58.4 73.5,59.2 74.2,59.9 74.9,60.7 75.6,61.5 76.3,62.3 77.0,63.2 77.7,64.1 78.4,64.9 79.1,65.8 79.8,66.8 80.5,67.7 81.2,68.7 81.9,69.7 82.6,70.7 83.3,71.7 84.0,72.7 84.7,73.8 85.4,74.8 86.1,75.9 86.8,77.0 86.8,77.0" fill="#fde3cf" stroke="none"/><polygon points="86.8,77.0 88.2,79.2 89.6,81.5 91.0,83.8 92.4,86.2 93.8,88.6 95.2,91.0 96.6,93.5 98.0,96.0 99.4,98.5 100.8,101.1 102.2,103.6 103.6,106.2 105.0,108.7 106.4,111.3 107.8,113.9 109.2,116.4 110.6,119.0 112.0,121.5 113.4,124.0 114.8,126.5 116.2,129.0 117.6,131.4 119.0,133.8 120.4,136.1 121.8,138.4 123.2,140.7 124.6,142.9 126.0,145.1 127.4,147.2 128.8,149.2 130.2,151.1 131.6,153.0 133.0,154.8 134.4,156.6 135.8,158.2 137.2,159.8 138.6,161.2 140.0,162.6 141.4,163.8 142.8,165.0 144.2,166.0 145.6,167.0 147.0,167.8 148.4,168.5 149.8,169.0 151.2,169.5 152.6,169.8 154.0,169.9 155.4,169.9 156.8,169.8 158.2,169.5 159.6,169.1 161.0,168.5 162.4,167.7 163.8,166.8 165.2,165.7 166.6,164.4 168.0,163.0 169.4,161.3 170.8,159.5 172.2,157.5 173.6,155.3 175.0,152.8 176.4,150.2 177.8,147.4 179.2,144.3 180.6,141.1 182.0,137.6 183.4,133.9 184.8,129.9 186.2,125.8 187.6,121.4 189.0,116.7 190.4,111.8 191.8,106.6 193.2,101.2 194.6,95.6 196.0,89.7 197.4,83.5 198.8,77.0" fill="#dbe4f6" stroke="none"/><polyline points="11.2,146.6 12.0,142.6 12.9,138.6 13.7,134.8 14.6,131.0 15.4,127.4 16.3,123.8 17.1,120.4 18.0,117.0 18.8,113.7 19.7,110.5 20.5,107.4 21.4,104.4 22.2,101.5 23.1,98.7 23.9,96.0 24.8,93.4 25.6,90.8 26.4,88.3 27.3,86.0 28.1,83.7 29.0,81.5 29.8,79.3 30.7,77.3 31.5,75.3 32.4,73.4 33.2,71.6 34.1,69.9 34.9,68.2 35.8,66.7 36.6,65.2 37.5,63.7 38.3,62.4 39.2,61.1 40.0,59.9 40.8,58.7 41.7,57.7 42.5,56.7 43.4,55.7 44.2,54.9 45.1,54.1 45.9,53.3 46.8,52.6 47.6,52.0 48.5,51.5 49.3,51.0 50.2,50.6 51.0,50.2 51.9,49.9 52.7,49.7 53.5,49.5 54.4,49.3 55.2,49.3 56.1,49.2 56.9,49.3 57.8,49.3 58.6,49.5 59.5,49.6 60.3,49.9 61.2,50.2 62.0,50.5 62.9,50.9 63.7,51.3 64.6,51.7 65.4,52.3 66.3,52.8 67.1,53.4 67.9,54.0 68.8,54.7 69.6,55.4 70.5,56.2 71.3,57.0 72.2,57.8 73.0,58.7 73.9,59.6 74.7,60.5 75.6,61.5 76.4,62.5 77.3,63.5 78.1,64.6 79.0,65.7 79.8,66.8 80.7,67.9 81.5,69.1 82.3,70.3 83.2,71.5 84.0,72.8 84.9,74.0 85.7,75.3 86.6,76.7 87.4,78.0 88.3,79.4 89.1,80.7 90.0,82.1 90.8,83.5 91.7,84.9 92.5,86.4 93.4,87.8 94.2,89.3 95.1,90.8 95.9,92.3 96.7,93.8 97.6,95.3 98.4,96.8 99.3,98.3 100.1,99.9 101.0,101.4 101.8,102.9 102.7,104.5 103.5,106.0 104.4,107.6 105.2,109.1 106.1,110.7 106.9,112.2 107.8,113.8 108.6,115.3 109.5,116.9 110.3,118.4 111.1,120.0 112.0,121.5 112.8,123.0 113.7,124.5 114.5,126.0 115.4,127.5 116.2,129.0 117.1,130.5 117.9,131.9 118.8,133.4 119.6,134.8 120.5,136.2 121.3,137.6 122.2,139.0 123.0,140.4 123.9,141.7 124.7,143.1 125.5,144.4 126.4,145.7 127.2,146.9 128.1,148.2 128.9,149.4 129.8,150.6 130.6,151.7 131.5,152.9 132.3,154.0 133.2,155.1 134.0,156.1 134.9,157.1 135.7,158.1 136.6,159.1 137.4,160.0 138.2,160.9 139.1,161.7 139.9,162.5 140.8,163.3 141.6,164.0 142.5,164.7 143.3,165.4 144.2,166.0 145.0,166.6 145.9,167.1 146.7,167.6 147.6,168.1 148.4,168.5 149.3,168.8 150.1,169.1 151.0,169.4 151.8,169.6 152.6,169.8 153.5,169.9 154.3,169.9 155.2,170.0 156.0,169.9 156.9,169.8 157.7,169.6 158.6,169.4 159.4,169.2 160.3,168.8 161.1,168.4 162.0,168.0 162.8,167.5 163.7,166.9 164.5,166.3 165.4,165.6 166.2,164.8 167.0,164.0 167.9,163.1 168.7,162.1 169.6,161.1 170.4,160.0 171.3,158.8 172.1,157.6 173.0,156.3 173.8,154.9 174.7,153.4 175.5,151.9 176.4,150.3 177.2,148.6 178.1,146.8 178.9,145.0 179.8,143.1 180.6,141.1 181.4,139.0 182.3,136.8 183.1,134.6 184.0,132.3 184.8,129.8 185.7,127.3 186.5,124.7 187.4,122.1 188.2,119.3 189.1,116.5 189.9,113.5 190.8,110.5 191.6,107.4 192.5,104.1 193.3,100.8 194.2,97.4 195.0,93.9 195.8,90.3 196.7,86.6 197.5,82.8 198.4,78.9 199.2,74.9 200.1,70.8 200.9,66.6 201.8,62.3 202.6,57.9 203.5,53.4 204.3,48.8 205.2,44.1 206.0,39.3 206.9,34.3 207.7,29.3 208.6,24.1 209.4,18.9 210.2,13.5 211.1,8.0 211.9,2.4" fill="none" stroke="#1f3f8f" stroke-width="1.8"/><line x1="0" y1="77.0" x2="240" y2="77.0" stroke="#444" stroke-width="1"/><polygon points="241,77.0 234,74.0 234,80.0" fill="#444"/><line x1="86.8" y1="189" x2="86.8" y2="1" stroke="#444" stroke-width="1"/><polygon points="86.8,0 83.8,7 89.8,7" fill="#444"/><text x="232" y="90.0" font-size="11" font-style="italic" text-anchor="start" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif" stroke="#fff" stroke-width="2.6" stroke-linejoin="round" paint-order="stroke">x</text><text x="92.8" y="10" font-size="11" font-style="italic" text-anchor="start" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif" stroke="#fff" stroke-width="2.6" stroke-linejoin="round" paint-order="stroke">y</text><text x="75.8" y="89.0" font-size="11" font-style="italic" text-anchor="start" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif" stroke="#fff" stroke-width="2.6" stroke-linejoin="round" paint-order="stroke">O</text><line x1="30.8" y1="74.0" x2="30.8" y2="80.0" stroke="#444"/><line x1="198.8" y1="74.0" x2="198.8" y2="80.0" stroke="#444"/><text x="38.6" y="90.0" font-size="10" text-anchor="middle" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif" stroke="#fff" stroke-width="2.6" stroke-linejoin="round" paint-order="stroke">−1</text><text x="191.0" y="72.0" font-size="10" text-anchor="middle" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif" stroke="#fff" stroke-width="2.6" stroke-linejoin="round" paint-order="stroke">2</text><text x="58.8" y="69.5" font-size="11" font-style="italic" text-anchor="middle" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif" stroke="#fff" stroke-width="2.6" stroke-linejoin="round" paint-order="stroke">S<tspan font-size="8" dy="3">1</tspan></text><text x="145.6" y="123.2" font-size="11" font-style="italic" text-anchor="middle" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif" stroke="#fff" stroke-width="2.6" stroke-linejoin="round" paint-order="stroke">S<tspan font-size="8" dy="3">2</tspan></text><text x="5.6" y="13.2" font-size="10.5" font-style="italic" text-anchor="start" fill="#1f3f8f" font-family="Liberation Serif,DejaVu Serif,serif" stroke="#fff" stroke-width="2.6" stroke-linejoin="round" paint-order="stroke">y=x³−x²−2x</text></svg>
+(2) $0\leqq x\leqq2$ で $x^2-2x\leqq0$、$2\leqq x\leqq3$ で $x^2-2x\geqq0$ なので<br>
+$\displaystyle\int_0^2(-x^2+2x)\,dx+\int_2^3(x^2-2x)\,dx=\Big[-\frac{x^3}3+x^2\Big]_0^2+\Big[\frac{x^3}3-x^2\Big]_2^3=\frac43+\frac43=\boldsymbol{\frac83}$</div>
+</div>
+<h3>講義3　放物線と直線で囲まれた面積 ―「6分の1公式」</h3>
+<div class="box lect">
+放物線と直線で囲まれた部分の面積では、$\displaystyle\int_\alpha^\beta(x-\alpha)(x-\beta)\,dx$ が必ず現れる。$(x-\alpha)(x-\beta)=(x-\alpha)^2-(\beta-\alpha)(x-\alpha)$ と変形すると<br>
+$\displaystyle\int_\alpha^\beta(x-\alpha)(x-\beta)\,dx=\Big[\frac{(x-\alpha)^3}3-(\beta-\alpha)\cdot\frac{(x-\alpha)^2}2\Big]_\alpha^\beta=\frac{(\beta-\alpha)^3}3-\frac{(\beta-\alpha)^3}2=-\frac{(\beta-\alpha)^3}6$<br>
+放物線 $y=f(x)$ と直線 $y=g(x)$ が $x=\alpha,\ \beta\ (\alpha<\beta)$ で交わるとき、$f(x)-g(x)=a(x-\alpha)(x-\beta)$（$a$ は $f(x)-g(x)$ の $x^2$ の係数）なので、囲まれた面積は $\boldsymbol{S=\dfrac{|a|}6(\beta-\alpha)^3}$。2つの放物線のときは、$a$ を<b>$x^2$ の係数の差</b>にすればよい。交点の座標より、<b>解の差 $\beta-\alpha$</b> がわかればよい。
+</div>
+<div class="box ex">
+(1) 放物線 $y=x^2-2x$ と直線 $y=x+4$ で囲まれた部分の面積を求めよ。　(2) 2つの放物線 $y=x^2$ と $y=-x^2+2x+4$ で囲まれた部分の面積を求めよ。
+<div class="solx"><b>解</b>　(1) 交点の $x$ 座標は、$x^2-2x=x+4$ より $x^2-3x-4=0$、$(x+1)(x-4)=0$ で $x=-1,\ 4$。$-1\leqq x\leqq4$ では直線が上にあるので<br>
+$\displaystyle S=\int_{-1}^4\{(x+4)-(x^2-2x)\}\,dx=-\int_{-1}^4(x+1)(x-4)\,dx=\frac{\{4-(-1)\}^3}6=\boldsymbol{\frac{125}6}$<br>
+(2) $x^2=-x^2+2x+4$ より $2x^2-2x-4=0$、$x^2-x-2=0$ で $x=-1,\ 2$。$-1\leqq x\leqq2$ では $-x^2+2x+4\geqq x^2$ なので<br>
+$\displaystyle S=\int_{-1}^2(-2x^2+2x+4)\,dx=-2\int_{-1}^2(x+1)(x-2)\,dx=2\cdot\frac{3^3}6=\boldsymbol9$</div>
+</div>
+<h3>講義4　定積分で表された関数</h3>
+<div class="box lect">
+<b>①積分区間の両端が定数</b>：$\displaystyle\int_0^1f(t)\,dt$ は<b>定数</b>なので $k$ とおき、$f(x)$ を $k$ で表してから $k$ の方程式を作る。積分変数 $t$ と無関係な $x$ は外に出せる：$\displaystyle\int_0^1xf(t)\,dt=x\int_0^1f(t)\,dt$。<br>
+<b>②上端が $x$</b>：$F'(t)=f(t)$ とすると $\displaystyle\int_a^xf(t)\,dt=F(x)-F(a)$ で、$x$ で微分すると $f(x)$。すなわち $\displaystyle\frac d{dx}\int_a^xf(t)\,dt=f(x)$。さらに $x=a$ を代入すると $\displaystyle\int_a^af(t)\,dt=0$。この2つ（<b>微分する</b>・<b>$x=a$ を代入する</b>）をセットで使う。
+</div>
+<div class="box ex">
+(1) $\displaystyle f(x)=3x^2+\int_0^1xf(t)\,dt$ を満たす関数 $f(x)$ を求めよ。　(2) $\displaystyle\int_a^xf(t)\,dt=x^2-3x+2$ を満たす関数 $f(x)$ と定数 $a$ の値を求めよ。
+<div class="solx"><b>解</b>　(1) $\displaystyle\int_0^1xf(t)\,dt=x\int_0^1f(t)\,dt$。$\displaystyle k=\int_0^1f(t)\,dt$（定数）とおくと $f(x)=3x^2+kx$。これを代入して<br>
+$\displaystyle k=\int_0^1(3t^2+kt)\,dt=1+\frac k2$、よって $k=2$。$\boldsymbol{f(x)=3x^2+2x}$<br>
+(2) 両辺を $x$ で微分して $\boldsymbol{f(x)=2x-3}$。また、$x=a$ を代入すると左辺は $0$ なので $a^2-3a+2=0$、$(a-1)(a-2)=0$ より $\boldsymbol{a=1,\ 2}$</div>
+</div>
+<div class="box chk">
+(1) $\displaystyle\int_1^3(x-1)(x-3)\,dx$ を求めよ。　(2) $\displaystyle\int_0^2|x^2-1|\,dx$ を求めよ。　(3) 放物線 $y=x^2$ と直線 $y=mx+1$ で囲まれた部分の面積 $S$ の最小値を求めよ。　(4) $\displaystyle F(x)=\int_0^x(t^2-1)\,dt$ の極値を求めよ。
+</div>
+<div class="box aim">
+面積の問題は、<b>グラフをかいて上下関係と交点を確認 → 積分の式を立てる → 計算</b>の3段階。放物線がからめば $\frac16$ 公式で計算量を大きく減らせる。共通テストでは「定積分で表された関数」の微分（②型）と、面積を文字で表して最小値を求める問題がよく出る。
+</div>
+<h3 class="deep">講義5　放物線と2本の接線で囲まれた図形</h3>
+<div class="box lect">
+放物線 $y=f(x)=ax^2+bx+c\ (a>0)$ 上の $x=\alpha,\ \beta\ (\alpha<\beta)$ の点における接線を $y=g_1(x),\ y=g_2(x)$ とする。$f(x)-g_1(x)$ は $x=\alpha$ を重解にもつので $a(x-\alpha)^2$、同様に $f(x)-g_2(x)=a(x-\beta)^2$。2接線の交点では $a(x-\alpha)^2=a(x-\beta)^2$ なので、交点の $x$ 座標は $\dfrac{\alpha+\beta}2$。よって面積は<br>
+$\displaystyle S=\int_\alpha^{\frac{\alpha+\beta}2}a(x-\alpha)^2dx+\int_{\frac{\alpha+\beta}2}^\beta a(x-\beta)^2dx=\frac a3\left(\frac{\beta-\alpha}2\right)^3\times2=\frac a{12}(\beta-\alpha)^3$
+</div>
+<p>例：放物線 $y=x^2$ 上の点 $(-1,1),\ (3,9)$ における接線は $y=-2x-1,\ y=6x-9$ で、交点の $x$ 座標は $1$。囲まれた部分の面積は $\dfrac1{12}\{3-(-1)\}^3=\dfrac{16}3$。</p>
+<div class="box warn">
+・$\frac16$ 公式で<b>係数 $a$ をかけ忘れる</b>：講義3の例題(2)を $\dfrac{3^3}6=\dfrac92$ としてしまう（差の $x^2$ の係数は $-2$）。<br>
+・$x$ 軸より下の部分の定積分を負のまま足してしまう。講義2の例題(1)を $\displaystyle\int_{-1}^2(x^3-x^2-2x)\,dx$ と一気に計算すると $\dfrac5{12}-\dfrac83=-\dfrac94$ となり、面積にならない。<br>
+・②型で、微分して $f(x)$ を求めたあと、<b>$x=a$ を代入する条件</b>を使い忘れる。
+</div>
+<div class="box ans">
+(1) $-\dfrac{(3-1)^3}6=-\dfrac43$　(2) $\displaystyle\int_0^1(1-x^2)\,dx+\int_1^2(x^2-1)\,dx=\frac23+\frac43=2$　(3) $x^2-mx-1=0$ の2解を $\alpha<\beta$ とすると、判別式 $m^2+4>0$ で $\beta-\alpha=\sqrt{m^2+4}$。$S=\dfrac16(\beta-\alpha)^3=\dfrac16\left(\sqrt{m^2+4}\right)^3$ は $m=0$ のとき最小で、最小値 $\dfrac16\cdot2^3=\dfrac43$　(4) $F'(x)=x^2-1=(x+1)(x-1)$、$F(x)=\dfrac{x^3}3-x$。$x=-1$ で極大値 $\dfrac23$、$x=1$ で極小値 $-\dfrac23$
+</div>

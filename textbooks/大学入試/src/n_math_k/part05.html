@@ -1,0 +1,563 @@
+<!--CH 22-->
+<div class="box point">
+・不定形の処理：$\frac{\infty}{\infty}$ は<b>分母の最高次の項（指数なら底の絶対値が最大の項）で分母・分子をわる</b>。$\infty-\infty$ は<b>有理化</b>するか最高次でくくる。<br>
+・$\{r^n\}$ は $r\gt1$ で $\infty$ に発散、$r=1$ で $1$、$|r|\lt1$ で $0$ に収束、$r\leqq-1$ で振動。<b>収束条件は $-1\lt r\leqq1$</b>。<br>
+・無限等比級数 $\displaystyle\sum_{n=1}^{\infty}ar^{n-1}$ は、$a=0$ なら和 $0$。$a\neq0$ なら<b>$|r|\lt1$ のときに限り収束</b>し、和は $\dfrac{a}{1-r}$。<br>
+・<b>はさみうちの原理</b>、$\displaystyle\lim_{x\to0}\frac{\sin x}{x}=1$、$\displaystyle e=\lim_{h\to0}(1+h)^{\frac1h}=\lim_{n\to\infty}\left(1+\frac1n\right)^n=2.71828\cdots$<br>
+・$\displaystyle\lim_{h\to0}\frac{\log(1+h)}{h}=1$、$\displaystyle\lim_{h\to0}\frac{e^h-1}{h}=1$（$\log$ は自然対数）<br>
+・<b>中間値の定理</b>：$f(x)$ が $[a,b]$ で連続で $f(a)f(b)\lt0$ ならば、$f(c)=0,\ a\lt c\lt b$ を満たす $c$ が少なくとも1つある。
+</div>
+<h3>講義1　数列の極限と不定形</h3>
+<div class="box lect">
+数列 $\{a_n\}$ が一定の値 $\alpha$ に限りなく近づくことを<b>収束</b>（$\displaystyle\lim_{n\to\infty}a_n=\alpha$）といい、収束しないことを<b>発散</b>という。発散には $\infty$ に発散、$-\infty$ に発散、<b>振動</b>（どちらでもない）がある。<br>
+$\frac{\infty}{\infty}$ や $\infty-\infty$ の形は値が決まらない（<b>不定形</b>。$\frac{n^2}{n}\to\infty$、$\frac{2n}{n}\to2$ のように何にでもなりうる）ので、「$\frac1n\to0$ が使える形」に変形する。<br>
+・分数式は<b>分母の最高次の項で分母・分子をわる</b>。指数を含むなら<b>底の絶対値が最大の項</b>でわる。<br>
+・根号の差は<b>分子の有理化</b>：$\sqrt{A}-\sqrt{B}=\dfrac{A-B}{\sqrt A+\sqrt B}$。<br>
+$\{r^n\}$ の極限の根拠：$r\gt1$ なら $r=1+h\ (h\gt0)$ とおくと二項定理より $r^n\geqq1+nh\to\infty$。$0\lt|r|\lt1$ なら $\frac1{|r|}\gt1$ だから $|r^n|=\frac{1}{(1/|r|)^n}\to0$。$r\leqq-1$ なら符号が交互に変わり、振動する。
+</div>
+<div class="box ex">
+次の極限を求めよ。(1) $\displaystyle\lim_{n\to\infty}\frac{3n^2-n+1}{n^2+2n}$　(2) $\displaystyle\lim_{n\to\infty}(\sqrt{n^2+3n}-n)$　(3) $\displaystyle\lim_{n\to\infty}\frac{3^{n+1}-2^n}{3^n+2^n}$
+<div class="solx"><b>解</b>　(1) 分母・分子を $n^2$ でわって $\dfrac{3-\frac1n+\frac1{n^2}}{1+\frac2n}\to\boldsymbol{3}$<br>
+(2) $\sqrt{n^2+3n}-n=\dfrac{(n^2+3n)-n^2}{\sqrt{n^2+3n}+n}=\dfrac{3n}{\sqrt{n^2+3n}+n}=\dfrac{3}{\sqrt{1+\frac3n}+1}\to\boldsymbol{\dfrac32}$<br>
+(3) 分母・分子を $3^n$ でわって $\dfrac{3-\left(\frac23\right)^n}{1+\left(\frac23\right)^n}$。$\left(\frac23\right)^n\to0$ だから、極限は $\boldsymbol{3}$</div>
+</div>
+<h3>講義2　無限級数の和</h3>
+<div class="box lect">
+無限級数 $\displaystyle\sum_{n=1}^{\infty}a_n=a_1+a_2+\cdots$ の和とは、<b>部分和</b> $S_n=a_1+a_2+\cdots+a_n$ の極限 $\displaystyle\lim_{n\to\infty}S_n$ のことである。だから、まず $S_n$ を $n$ の式で表すのが基本。<br>
+・$a_n$ が分数式なら<b>部分分数に分解</b>して、項を消し合わせる：$\dfrac{1}{n(n+2)}=\dfrac12\left(\dfrac1n-\dfrac1{n+2}\right)$。<br>
+・無限等比級数は $S_n=\dfrac{a(1-r^n)}{1-r}\ (r\neq1)$ で、$|r|\lt1$ なら $r^n\to0$ より $S_n\to\dfrac{a}{1-r}$。<br>
+・$\sum a_n$ が収束すれば $a_n=S_n-S_{n-1}\to0$。対偶をとると「<b>$a_n$ が $0$ に収束しなければ $\sum a_n$ は発散</b>」。$a\neq0,\ |r|\geqq1$ の無限等比級数が発散するのはこのため。ただし逆は成り立たない（$\frac1n\to0$ だが $\sum\frac1n$ は発散。第25章の発展）。
+</div>
+<div class="box ex">
+(1) 無限級数 $\displaystyle\sum_{n=1}^{\infty}\frac{1}{n(n+2)}$ の和を求めよ。<br>
+(2) 無限級数 $x+x(1-x)+x(1-x)^2+\cdots+x(1-x)^{n-1}+\cdots$ が収束するような実数 $x$ の値の範囲と、そのときの和を求めよ。
+<div class="solx"><b>解</b>　(1) $\dfrac{1}{k(k+2)}=\dfrac12\left(\dfrac1k-\dfrac1{k+2}\right)$ より<br>
+$S_n=\dfrac12\left\{\left(1-\dfrac13\right)+\left(\dfrac12-\dfrac14\right)+\left(\dfrac13-\dfrac15\right)+\cdots+\left(\dfrac1n-\dfrac1{n+2}\right)\right\}=\dfrac12\left(1+\dfrac12-\dfrac1{n+1}-\dfrac1{n+2}\right)$<br>
+よって和は $\dfrac12\cdot\dfrac32=\boldsymbol{\dfrac34}$<br>
+(2) 初項 $x$、公比 $1-x$ の無限等比級数である。<br>
+・$x=0$ のとき、すべての項が $0$ なので収束し、和は $0$。<br>
+・$x\neq0$ のとき、収束条件は $|1-x|\lt1$、すなわち $0\lt x\lt2$。和は $\dfrac{x}{1-(1-x)}=1$。<br>
+以上より、範囲は $\boldsymbol{0\leqq x\lt2}$。和は <b>$x=0$ のとき $0$、$0\lt x\lt2$ のとき $1$</b>。</div>
+</div>
+<h3>講義3　関数の極限、はさみうち、$\frac{\sin x}{x}$ と $e$</h3>
+<div class="box lect">
+・<b>片側極限</b>：右から（$x\to a+0$）と左から（$x\to a-0$）の極限が一致するときだけ $\displaystyle\lim_{x\to a}f(x)$ が存在する。例えば $\frac{|x|}{x}$ は $x\to+0$ で $1$、$x\to-0$ で $-1$ なので、$x\to0$ の極限はない。<br>
+・$x\to-\infty$ は、$x=-t$ とおいて $t\to\infty$ に直すと符号のミスを防げる。<br>
+・直接計算できないときは<b>はさみうち</b>。$|\sin x|\leqq1$ のような「有界な部分」を不等式で押さえるのが典型。
+<div class="two"><div>
+<b>$\displaystyle\lim_{x\to0}\frac{\sin x}{x}=1$ の証明</b>　$0\lt x\lt\frac\pi2$ とする。半径1、中心角 $x$ の扇形 OAP と、A における円の接線と直線 OP の交点 T を考える（右図）。面積を比べると △OAP ＜ 扇形 OAP ＜ △OAT だから<br>
+$\dfrac12\sin x\lt\dfrac12x\lt\dfrac12\tan x$<br>
+各辺を $\frac12\sin x\ (\gt0)$ でわって逆数をとると $\cos x\lt\dfrac{\sin x}{x}\lt1$。$x\to+0$ のとき $\cos x\to1$ なので、はさみうちの原理より $\dfrac{\sin x}{x}\to1$。$\dfrac{\sin x}{x}$ は偶関数だから $x\to-0$ でも同じ。■
+</div><div style="flex:0 0 235px"><svg class="fig" width="230" height="205" viewBox="0 0 230 205"><defs><marker id="ah22" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7 z" fill="#555"/></marker></defs><line x1="15.0" y1="180.0" x2="215.0" y2="180.0" stroke="#555" stroke-width="1" marker-end="url(#ah22)"/><line x1="30.0" y1="196.0" x2="30.0" y2="8.0" stroke="#555" stroke-width="1" marker-end="url(#ah22)"/><polygon points="30.0,180.0 180.0,180.0 180.0,25.6" fill="#fde7d4" stroke="#d9701e" stroke-width="1"/><path d="M30.0,180.0 L180.0,180.0 A150,150 0 0 0 134.5,72.4 Z" fill="#cfdcf5" stroke="none"/><polygon points="30.0,180.0 180.0,180.0 134.5,72.4" fill="#9fb6e6" stroke="#1f3f8f" stroke-width="1"/><polyline points="180.0,180.0 180.0,176.6 179.8,173.3 179.7,169.9 179.4,166.5 179.1,163.2 178.6,159.8 178.1,156.5 177.6,153.1 176.9,149.8 176.2,146.5 175.4,143.3 174.6,140.0 173.6,136.7 172.6,133.5 171.5,130.3 170.4,127.2 169.2,124.0 167.9,120.9 166.5,117.8 165.1,114.8 163.6,111.7 162.0,108.7 160.4,105.8 158.7,102.9 156.9,100.0 155.1,97.2 153.2,94.4 151.2,91.6 149.2,88.9 147.1,86.3 145.0,83.7 142.8,81.1 140.5,78.6 138.2,76.1 135.8,73.7 133.4,71.4 131.0,69.1 128.4,66.8 125.9,64.6 123.2,62.5 120.6,60.4 117.9,58.4 115.1,56.5 112.3,54.6 109.5,52.8 106.6,51.0 103.7,49.3 100.7,47.7 97.7,46.1 94.7,44.7 91.6,43.2 88.5,41.9 85.4,40.6 82.3,39.4 79.1,38.3 75.9,37.2 72.6,36.2 69.4,35.3 66.1,34.4 62.9,33.6" stroke="#1f3f8f" stroke-width="1.8" fill="none"/><line x1="30.0" y1="180.0" x2="180.0" y2="25.6" stroke="#d9701e" stroke-width="1.2"/><path d="M52.0,180.0 A22,22 0 0 0 45.3,164.2" stroke="#333" fill="none"/><text x="60.6" y="172.3" font-size="11" text-anchor="middle" font-style="italic">x</text><text x="21.0" y="193.0" font-size="11" text-anchor="middle">O</text><text x="189.0" y="193.0" font-size="11" text-anchor="middle">A</text><text x="127.5" y="66.4" font-size="11" text-anchor="middle">P</text><text x="190.0" y="29.6" font-size="11" text-anchor="middle">T</text><text x="105.0" y="193.0" font-size="11" text-anchor="middle">1</text><text x="184.0" y="106.8" font-size="10" text-anchor="start" font-style="italic">tan</text><text x="202.0" y="106.8" font-size="10" text-anchor="start" font-style="italic">x</text></svg></div></div>
+</div>
+<div class="box lect">
+<b>$e$ について</b>　$(1+h)^{\frac1h}$ は $h\to0$ のときある値に収束することが知られていて、その値を $e$ とする（$e=2.71828\cdots$、無理数）。$e$ を底とする対数を<b>自然対数</b>といい、数学IIIでは単に $\log x$ と書く。すると $\dfrac{\log(1+h)}{h}=\log(1+h)^{\frac1h}\to\log e=1$。また $e^h-1=u$ とおくと $h=\log(1+u)$ で、$h\to0$ のとき $u\to0$ だから $\dfrac{e^h-1}{h}=\dfrac{u}{\log(1+u)}\to1$。
+</div>
+<div class="box ex">
+次の極限を求めよ。(1) $\displaystyle\lim_{x\to0}\frac{\sin3x}{x}$　(2) $\displaystyle\lim_{x\to0}\frac{1-\cos x}{x^2}$　(3) $\displaystyle\lim_{x\to\infty}\frac{\sin x}{x}$　(4) $\displaystyle\lim_{n\to\infty}\left(1+\frac2n\right)^n$
+<div class="solx"><b>解</b>　(1) $\dfrac{\sin3x}{x}=3\cdot\dfrac{\sin3x}{3x}$。$x\to0$ のとき $3x\to0$ なので $3\cdot1=\boldsymbol{3}$<br>
+(2) 分母・分子に $1+\cos x$ をかけて $\dfrac{1-\cos^2x}{x^2(1+\cos x)}=\left(\dfrac{\sin x}{x}\right)^2\cdot\dfrac{1}{1+\cos x}\to1^2\cdot\dfrac12=\boldsymbol{\dfrac12}$<br>
+(3) $x\gt0$ のとき $-\dfrac1x\leqq\dfrac{\sin x}{x}\leqq\dfrac1x$ で、$\pm\dfrac1x\to0$。はさみうちの原理より $\boldsymbol{0}$<br>
+(4) $\dfrac2n=h$ とおくと、$n\to\infty$ のとき $h\to+0$ で、$\left(1+\dfrac2n\right)^n=\left\{(1+h)^{\frac1h}\right\}^2\to\boldsymbol{e^2}$</div>
+</div>
+<h3>講義4　関数の連続性と中間値の定理</h3>
+<div class="box lect">
+$f(x)$ が $x=a$ で<b>連続</b>であるとは、$\displaystyle\lim_{x\to a}f(x)=f(a)$ が成り立つこと（$f(a)$ が定義され、左右の極限が一致し、その値が $f(a)$ に等しい）。多項式・分数関数・三角関数・指数関数・対数関数は定義域で連続で、連続関数の和・差・積・商・合成も連続になる。<br>
+連続関数のグラフは切れ目なくつながっているので、<b>中間値の定理</b>が成り立つ：$f(x)$ が閉区間 $[a,b]$ で連続で $f(a)\neq f(b)$ ならば、$f(a)$ と $f(b)$ の間の任意の値 $k$ に対して、$f(c)=k$ となる $c$ が $a\lt c\lt b$ に少なくとも1つ存在する。特に $f(a)f(b)\lt0$ なら、$f(x)=0$ は $a\lt x\lt b$ に実数解をもつ。解が求められなくても「存在」が示せるのが強みである。<br>
+また、$\displaystyle f(x)=\lim_{n\to\infty}(\cdots)$ のように極限で定義される関数は、<b>$|x|\lt1$、$x=\pm1$、$|x|\gt1$ に分けて</b> $x^n$ の極限を調べる（講義1の $\{r^n\}$）。
+</div>
+<div class="box ex">
+(1) 関数 $\displaystyle f(x)=\lim_{n\to\infty}\frac{x^{2n+1}+ax^2+bx+1}{x^{2n}+1}$ がすべての実数 $x$ で連続となるように、定数 $a,b$ の値を定めよ。
+<div class="solx"><b>解</b>　$|x|\lt1$ のとき、$x^{2n}\to0,\ x^{2n+1}\to0$ より $f(x)=ax^2+bx+1$。<br>
+$|x|\gt1$ のとき、分母・分子を $x^{2n}$ でわると $\dfrac{x+\frac{ax^2+bx+1}{x^{2n}}}{1+\frac{1}{x^{2n}}}\to x$ より $f(x)=x$。<br>
+また $f(1)=\dfrac{a+b+2}{2}$、$f(-1)=\dfrac{a-b}{2}$。$|x|\lt1$、$|x|\gt1$ の各範囲では $f(x)$ は多項式で連続だから、$x=\pm1$ で連続となる条件を求めればよい。<br>
+$x=1$：左からの極限 $a+b+1$ と右からの極限 $1$ が一致する条件は $a+b+1=1$。このとき $f(1)=1$ も成り立つ。<br>
+$x=-1$：右からの極限 $a-b+1$ と左からの極限 $-1$ が一致する条件は $a-b+1=-1$。このとき $f(-1)=-1$ も成り立つ。<br>
+$a+b=0,\ a-b=-2$ を解いて $\boldsymbol{a=-1,\ b=1}$</div>
+</div>
+<div class="box ex">
+(2) 方程式 $\cos x=x$ は $0\lt x\lt\dfrac\pi2$ の範囲に少なくとも1つの実数解をもつことを示せ。
+<div class="solx"><b>解</b>　$g(x)=\cos x-x$ とおくと、$g(x)$ は $\left[0,\frac\pi2\right]$ で連続で、$g(0)=1\gt0$、$g\left(\frac\pi2\right)=-\frac\pi2\lt0$。中間値の定理より、$g(c)=0$ となる $c$ が $0\lt c\lt\frac\pi2$ に少なくとも1つ存在する。■</div>
+</div>
+<div class="box chk">
+(1) $r\neq-1$ のとき、$\displaystyle\lim_{n\to\infty}\frac{r^{n+1}}{r^n+1}$ を求めよ。　(2) $\displaystyle\sum_{n=1}^{\infty}\frac{1}{(2n-1)(2n+1)}$ の和を求めよ。　(3) $\displaystyle\lim_{x\to-\infty}(\sqrt{x^2+x}+x)$ を求めよ。　(4) $\displaystyle\lim_{x\to0}\frac{x\sin x}{1-\cos x}$ を求めよ。　(5) $\displaystyle\lim_{x\to0}(1+3x)^{\frac1x}$、$\displaystyle\lim_{x\to0}\frac{e^{2x}-1}{x}$ を求めよ。
+</div>
+<div class="box aim">
+入試では、①$r^n$ を含む極限の<b>場合分け</b>（$|r|\lt1$、$r=1$、$r=-1$、$|r|\gt1$）、②極限で定義された関数の連続性、③<b>はさみうち</b>（不等式を自分で作る）、④漸化式で定まる数列の極限（下の発展）が頻出。$\lim\frac{\sin x}{x}=1$ を使うときは<b>$\sin$ の中身と分母をそろえる</b>（$\frac{\sin3x}{x}=3\cdot\frac{\sin3x}{3x}$）。ここでの極限計算は、第24章の漸近線、第25章の区分求積法の土台になる。
+</div>
+<h3 class="deep">講義5　漸化式で定まる数列の極限</h3>
+<p>一般項が求められない漸化式でも、はさみうちを使えば極限は求められる。$a_1=1,\ a_{n+1}=\sqrt{a_n+2}$ で定まる数列 $\{a_n\}$ を例に、定石の3段階を示す。</p>
+<div class="box lect">
+<b>①極限を予想する</b>　$a_n\to\alpha$ と仮定すると $\alpha=\sqrt{\alpha+2}$。$\alpha\geqq0$、$\alpha^2-\alpha-2=0$ より $\alpha=2$。ただし、これは予想であり、収束することの証明ではない。<br>
+<b>②差を評価する</b>　$a_n\gt0$（帰納法で明らか）だから<br>
+$|a_{n+1}-2|=|\sqrt{a_n+2}-2|=\dfrac{|a_n-2|}{\sqrt{a_n+2}+2}\lt\dfrac12|a_n-2|$（分母 $\gt2$ より）<br>
+<b>③はさみうち</b>　これをくり返して $0\leqq|a_n-2|\leqq\left(\dfrac12\right)^{n-1}|a_1-2|=\left(\dfrac12\right)^{n-1}\to0$。よって $\displaystyle\lim_{n\to\infty}a_n=2$。■
+</div>
+<p>「$|a_{n+1}-\alpha|\leqq r|a_n-\alpha|$（$0\lt r\lt1$ は定数）」の形を作るのが鍵。実際、$a_2=\sqrt3\fallingdotseq1.732$、$a_3\fallingdotseq1.932$、$a_4\fallingdotseq1.983$ と、$2$ との差はおよそ $\frac14$ ずつに縮んでいく。</p>
+<div class="box warn">
+・$\infty-\infty=0$、$\frac{\infty}{\infty}=1$ としてしまう。不定形は必ず式変形してから極限をとる（例：$\sqrt{n^2+3n}-n\to\frac32$）。<br>
+・「$a_n\to0$ だから $\sum a_n$ は収束する」は誤り。$\sum\frac1n$ は $\frac1n\to0$ なのに発散する。<br>
+・無限等比級数の収束条件で、<b>初項が $0$ の場合</b>を落とす（講義2の例題(2)の $x=0$）。<br>
+・$\lim(a_n+b_n)=\lim a_n+\lim b_n$ と分けてよいのは、<b>それぞれが収束するとき</b>だけ。無限級数を2つに分けるときも同じ。
+</div>
+<div class="box ans">
+(1) $|r|\lt1$ のとき $0$、$r=1$ のとき $\frac12$、$|r|\gt1$ のとき分母・分子を $r^n$ でわって $\frac{r}{1+(1/r)^n}\to r$　(2) $\frac12\left(\frac1{2n-1}-\frac1{2n+1}\right)$ と分解して $S_n=\frac12\left(1-\frac1{2n+1}\right)\to\frac12$　(3) $x=-t$ とおくと $\sqrt{t^2-t}-t=\frac{-t}{\sqrt{t^2-t}+t}=\frac{-1}{\sqrt{1-\frac1t}+1}\to-\frac12$　(4) 分母・分子に $1+\cos x$ をかけて $\frac{x\sin x(1+\cos x)}{\sin^2x}=\frac{x}{\sin x}(1+\cos x)\to2$　(5) $3x=h$ とおくと $(1+h)^{\frac3h}=\{(1+h)^{\frac1h}\}^3\to e^3$。また $\frac{e^{2x}-1}{x}=2\cdot\frac{e^{2x}-1}{2x}\to2$
+</div>
+
+<!--CH 23-->
+<div class="box point">
+・$f(x)$ が $x=a$ で微分可能 $\Longrightarrow$ $x=a$ で連続（逆は成り立たない）<br>
+・$\{f(x)g(x)\}'=f'(x)g(x)+f(x)g'(x)$、$\left\{\dfrac{f(x)}{g(x)}\right\}'=\dfrac{f'(x)g(x)-f(x)g'(x)}{\{g(x)\}^2}$、合成関数 $\dfrac{dy}{dx}=\dfrac{dy}{du}\cdot\dfrac{du}{dx}$<br>
+・$(x^\alpha)'=\alpha x^{\alpha-1}$（$x\gt0$、$\alpha$ は実数）、$(\sin x)'=\cos x$、$(\cos x)'=-\sin x$、$(\tan x)'=\dfrac{1}{\cos^2x}$<br>
+・$(e^x)'=e^x$、$(a^x)'=a^x\log a$、$(\log|x|)'=\dfrac1x$、$(\log_a|x|)'=\dfrac{1}{x\log a}$（$a\gt0,\ a\neq1$）<br>
+・逆関数 $\dfrac{dy}{dx}=\dfrac{1}{\ dx/dy\ }$、媒介変数表示 $\dfrac{dy}{dx}=\dfrac{dy/dt}{dx/dt}$
+</div>
+<h3>講義1　微分可能性と連続性</h3>
+<div class="box lect">
+$f'(a)=\displaystyle\lim_{h\to0}\frac{f(a+h)-f(a)}{h}$ が存在するとき、$f(x)$ は $x=a$ で<b>微分可能</b>という。<br>
+<b>微分可能なら連続</b>：$h\to0$ のとき $f(a+h)-f(a)=\dfrac{f(a+h)-f(a)}{h}\cdot h\to f'(a)\cdot0=0$ だから ${\displaystyle\lim_{h\to0}f(a+h)=f(a)}$。<br>
+<b>逆は成り立たない</b>：$f(x)=|x|$ は $x=0$ で連続だが、$\dfrac{|h|}{h}$ は $h\to+0$ で $1$、$h\to-0$ で $-1$ となるので、微分可能でない（グラフが折れ曲がっている）。<br>
+場合分けで定義された関数がつなぎ目で微分可能かどうかは、①<b>連続か</b>、②<b>左右からの微分係数が一致するか</b>、の順に調べる。
+</div>
+<div class="box ex">
+関数 $f(x)=\begin{cases}x^2 & (x\leqq1)\\ ax+b & (x\gt1)\end{cases}$ が $x=1$ で微分可能となるように、定数 $a,b$ の値を定めよ。
+<div class="solx"><b>解</b>　微分可能なら連続だから、まず $x=1$ で連続：$\displaystyle\lim_{x\to1+0}(ax+b)=a+b$ が $f(1)=1$ に等しく、$a+b=1$ …①<br>
+次に左右からの微分係数。$h\lt0$ のとき $\dfrac{f(1+h)-f(1)}{h}=\dfrac{(1+h)^2-1}{h}=2+h\to2$。$h\gt0$ のとき、①を用いて $\dfrac{a(1+h)+b-1}{h}=\dfrac{ah}{h}=a$。<br>
+一致する条件は $a=2$。①より $\boldsymbol{a=2,\ b=-1}$<br>
+（直線 $y=2x-1$ は、放物線 $y=x^2$ の点 $(1,1)$ における接線になっている。）</div>
+</div>
+<h3>講義2　積・商・合成関数の微分</h3>
+<div class="box lect">
+<b>積の微分</b>は、$f(x+h)g(x+h)-f(x)g(x)=\{f(x+h)-f(x)\}g(x+h)+f(x)\{g(x+h)-g(x)\}$ と分けて $h$ でわり、$h\to0$ とすれば得られる（$g$ は連続なので $g(x+h)\to g(x)$）。<br>
+<b>商の微分</b>は、$\left\{\dfrac1{g(x)}\right\}'=-\dfrac{g'(x)}{\{g(x)\}^2}$ を定義から示し、積の微分と組み合わせる。これから、$n$ が負の整数でも ${(x^n)'=nx^{n-1}}$ が成り立つ。<br>
+<b>合成関数の微分</b>：$y=f(u),\ u=g(x)$ のとき $\dfrac{dy}{dx}=\dfrac{dy}{du}\cdot\dfrac{du}{dx}$、すなわち $\{f(g(x))\}'=f'(g(x))\,g'(x)$。「<b>外側を微分して、中身の微分をかける</b>」と覚える。例：$\{(3x+1)^4\}'=4(3x+1)^3\cdot3$。
+</div>
+<div class="box ex">
+次の関数を微分せよ。(1) $y=(2x+1)^3(x-2)$　(2) $y=\dfrac{x}{x^2+1}$　(3) $y=\sqrt{x^2+1}$
+<div class="solx"><b>解</b>　(1) $y'=3(2x+1)^2\cdot2\cdot(x-2)+(2x+1)^3=(2x+1)^2\{6(x-2)+(2x+1)\}=\boldsymbol{(2x+1)^2(8x-11)}$<br>
+(2) $y'=\dfrac{1\cdot(x^2+1)-x\cdot2x}{(x^2+1)^2}=\boldsymbol{\dfrac{1-x^2}{(x^2+1)^2}}$<br>
+(3) $y=(x^2+1)^{\frac12}$ より $y'=\dfrac12(x^2+1)^{-\frac12}\cdot2x=\boldsymbol{\dfrac{x}{\sqrt{x^2+1}}}$（指数が実数の場合の公式は講義4で示す）</div>
+</div>
+<h3>講義3　三角関数・対数関数・指数関数の導関数</h3>
+<div class="box lect">
+<b>$(\sin x)'=\cos x$</b>：和を積に直す公式より<br>
+$\dfrac{\sin(x+h)-\sin x}{h}=\dfrac{2\cos\left(x+\frac h2\right)\sin\frac h2}{h}=\cos\left(x+\dfrac h2\right)\cdot\dfrac{\sin\frac h2}{\frac h2}\to\cos x\cdot1$<br>
+$(\cos x)'$ は $\cos x=\sin\left(x+\frac\pi2\right)$ と合成関数の微分から $\cos\left(x+\frac\pi2\right)=-\sin x$。${(\tan x)'=\left(\dfrac{\sin x}{\cos x}\right)'=\dfrac{\cos^2x+\sin^2x}{\cos^2x}=\dfrac1{\cos^2x}}$。
+</div>
+<div class="box lect">
+<b>$(\log x)'=\dfrac1x$</b>：$\dfrac{\log(x+h)-\log x}{h}=\dfrac1h\log\left(1+\dfrac hx\right)=\dfrac1x\log\left(1+\dfrac hx\right)^{\frac xh}$。$\frac hx=k$ とおくと $h\to0$ のとき $k\to0$ だから、${\dfrac1x\log(1+k)^{\frac1k}\to\dfrac1x\log e=\dfrac1x}$（第22章の $e$ の定義）。<br>
+$x\lt0$ のときは $\log|x|=\log(-x)$ を合成関数として微分して $\dfrac{-1}{-x}=\dfrac1x$。よって<b>$(\log|x|)'=\dfrac1x$</b>。底の変換公式から ${(\log_a|x|)'=\left(\dfrac{\log|x|}{\log a}\right)'=\dfrac{1}{x\log a}}$。<br>
+<b>$(e^x)'=e^x$</b>：$\dfrac{e^{x+h}-e^x}{h}=e^x\cdot\dfrac{e^h-1}{h}\to e^x$。$a^x=e^{x\log a}$ と書けるので $(a^x)'=e^{x\log a}\cdot\log a=a^x\log a$。$e$ を底にすると係数が $1$ になる。これが微積分で自然対数を使う理由である。
+</div>
+<div class="box ex">
+次の関数を微分せよ。(1) $y=\sin^2 3x$　(2) $y=e^{-x}\cos x$　(3) $y=\log\left(x+\sqrt{x^2+1}\right)$
+<div class="solx"><b>解</b>　(1) $y'=2\sin3x\cdot(\sin3x)'=2\sin3x\cdot3\cos3x=\boldsymbol{3\sin6x}$<br>
+(2) $y'=-e^{-x}\cos x+e^{-x}(-\sin x)=\boldsymbol{-e^{-x}(\sin x+\cos x)}$<br>
+(3) $y'=\dfrac{\left(x+\sqrt{x^2+1}\right)'}{x+\sqrt{x^2+1}}=\dfrac{1+\frac{x}{\sqrt{x^2+1}}}{x+\sqrt{x^2+1}}=\dfrac{\sqrt{x^2+1}+x}{\sqrt{x^2+1}\left(x+\sqrt{x^2+1}\right)}=\boldsymbol{\dfrac{1}{\sqrt{x^2+1}}}$</div>
+</div>
+<h3>講義4　逆関数の微分と対数微分法</h3>
+<div class="box lect">
+<b>逆関数の微分</b>：$y=f^{-1}(x)$ は $x=f(y)$ と同じこと。両辺を $x$ で微分すると $1=f'(y)\dfrac{dy}{dx}$、よって ${\dfrac{dy}{dx}=\dfrac{1}{f'(y)}=\dfrac{1}{\ dx/dy\ }}$（$f'(y)\neq0$）。例えば $y=\sqrt[3]{x}\ (x\neq0)$ は $x=y^3$ だから $\dfrac{dy}{dx}=\dfrac1{3y^2}=\dfrac{1}{3\sqrt[3]{x^2}}$。<br>
+<b>対数微分法</b>：積・商・累乗が複雑な関数や、$x^x$ のように<b>底にも指数にも $x$ を含む</b>関数は、両辺の（絶対値の）自然対数をとってから微分する。合成関数の微分により $(\log|y|)'=\dfrac{y'}{y}$ となる。<br>
+これで $(x^\alpha)'=\alpha x^{\alpha-1}$（$x\gt0$、$\alpha$ は実数）も示せる：$y=x^\alpha$ の対数をとって $\log y=\alpha\log x$。微分して $\dfrac{y'}{y}=\dfrac\alpha x$、よって ${y'=\alpha\cdot\dfrac{x^\alpha}{x}=\alpha x^{\alpha-1}}$。
+</div>
+<div class="box ex">
+(1) $y=x^x\ (x\gt0)$ を微分せよ。<br>
+(2) $f(x)=x^3+x$ の逆関数を $g(x)$ とするとき、$g'(2)$ の値を求めよ。
+<div class="solx"><b>解</b>　(1) $y\gt0$ なので両辺の自然対数をとって $\log y=x\log x$。両辺を $x$ で微分して $\dfrac{y'}{y}=\log x+x\cdot\dfrac1x=\log x+1$。よって $\boldsymbol{y'=x^x(\log x+1)}$<br>
+(2) $f'(x)=3x^2+1\gt0$ より $f(x)$ は増加関数で、逆関数をもつ。$g(2)=b$ とおくと $f(b)=2$、すなわち $b^3+b-2=(b-1)(b^2+b+2)=0$。$b^2+b+2\gt0$ より $b=1$。<br>
+$y=g(x)$ のとき $x=f(y)$ だから $g'(x)=\dfrac{1}{f'(y)}$。$x=2$ のとき $y=1$ なので $g'(2)=\dfrac{1}{f'(1)}=\boldsymbol{\dfrac14}$</div>
+</div>
+<h3>講義5　高次導関数、陰関数・媒介変数表示の関数の微分</h3>
+<div class="box lect">
+<b>高次導関数</b>：$y'$ をさらに微分した $y''=\dfrac{d^2y}{dx^2}$ を第2次導関数、$n$ 回微分したものを第 $n$ 次導関数 $y^{(n)}=\dfrac{d^ny}{dx^n}$ という。$y^{(n)}$ は、何回か微分して規則を予想し、<b>数学的帰納法</b>で証明する。<br>
+<b>陰関数</b>：$x^2+y^2=1$ のような $F(x,y)=0$ の形の式は、<b>$y$ を $x$ の関数とみて</b>両辺をそのまま $x$ で微分する。$y^2$ の微分は合成関数の微分で $2y\cdot y'$ になる（例：$x^2+y^2=1$ から $2x+2yy'=0$、$y'=-\frac xy$）。<br>
+<b>媒介変数表示</b>：$x=f(t),\ y=g(t)$ のとき $\dfrac{dy}{dx}=\dfrac{g'(t)}{f'(t)}$。第2次導関数は「<b>$\dfrac{dy}{dx}$ を $t$ で微分して、$\dfrac{dx}{dt}$ でわる</b>」<br>
+　$\dfrac{d^2y}{dx^2}=\dfrac{d}{dx}\left(\dfrac{dy}{dx}\right)=\dfrac{d}{dt}\left(\dfrac{dy}{dx}\right)\cdot\dfrac{dt}{dx}$（合成関数の微分）
+</div>
+<div class="box ex">
+(1) $x^2+xy+y^2=3$ のとき、$\dfrac{dy}{dx}$ を $x,y$ で表せ。<br>
+(2) $x=\theta-\sin\theta,\ y=1-\cos\theta\ (0\lt\theta\lt2\pi)$ のとき、$\dfrac{dy}{dx}$ と $\dfrac{d^2y}{dx^2}$ を $\theta$ で表せ。
+<div class="solx"><b>解</b>　(1) 両辺を $x$ で微分して $2x+(y+xy')+2yy'=0$。$(x+2y)y'=-(2x+y)$ より、$x+2y\neq0$ のとき $\boldsymbol{\dfrac{dy}{dx}=-\dfrac{2x+y}{x+2y}}$<br>
+(2) $\dfrac{dx}{d\theta}=1-\cos\theta\ (\gt0)$、$\dfrac{dy}{d\theta}=\sin\theta$ より $\boldsymbol{\dfrac{dy}{dx}=\dfrac{\sin\theta}{1-\cos\theta}}$<br>
+$\dfrac{d}{d\theta}\left(\dfrac{\sin\theta}{1-\cos\theta}\right)=\dfrac{\cos\theta(1-\cos\theta)-\sin\theta\cdot\sin\theta}{(1-\cos\theta)^2}=\dfrac{\cos\theta-1}{(1-\cos\theta)^2}=-\dfrac{1}{1-\cos\theta}$。これを $\dfrac{dx}{d\theta}$ でわって $\boldsymbol{\dfrac{d^2y}{dx^2}=-\dfrac{1}{(1-\cos\theta)^2}}$</div>
+</div>
+<div class="box ex">
+(3) $y=xe^x$ の第 $n$ 次導関数を求めよ。
+<div class="solx"><b>解</b>　$y'=(x+1)e^x$、$y''=(x+2)e^x$ から $y^{(n)}=(x+n)e^x$ と予想する。$n=k$ で成り立つと仮定すると $y^{(k+1)}=\{(x+k)e^x\}'=e^x+(x+k)e^x=(x+k+1)e^x$ となり、$n=k+1$ でも成り立つ。よって $\boldsymbol{y^{(n)}=(x+n)e^x}$</div>
+</div>
+<div class="box chk">
+(1) $y=\dfrac{\sin x}{1+\cos x}$、$y=\log|\cos x|$ をそれぞれ微分せよ。　(2) $y=x^{\sin x}\ (x\gt0)$ を微分せよ。　(3) $\sqrt x+\sqrt y=1\ (x\gt0,\ y\gt0)$ のとき、$\dfrac{dy}{dx}$ を $x,y$ で表せ。　(4) $y=\sin x$ の第 $n$ 次導関数を求めよ。
+</div>
+<div class="box aim">
+・<b>微分係数の定義に戻る</b>問題（下の発展）や、つなぎ目での微分可能性は頻出。「微分可能 ⇒ 連続」だから、まず連続の条件を使う。<br>
+・計算では<b>合成関数の「中身の微分」を忘れない</b>：$(\sin3x)'=3\cos3x$、$(e^{-x})'=-e^{-x}$、$\{\log(x^2+1)\}'=\frac{2x}{x^2+1}$。<br>
+・$x^x$ や $\frac{(x+1)^3}{(x-2)^2}$ のような形は<b>対数微分法</b>。媒介変数表示の第2次導関数は、二次試験で計算ミスの多い所。
+</div>
+<h3 class="deep">講義6　微分係数の定義を使う極限</h3>
+<p>「$f(x)$ は微分可能」とだけ与えられて式がわからないときは、<b>定義の形 $\dfrac{f(\bigcirc)-f(a)}{\bigcirc-a}$（$\bigcirc\to a$）を作る</b>のが鍵。分母と $f$ の中身の「ずれ」をそろえることを意識する。</p>
+<div class="box lect">
+(1) $\lim\limits_{h\to0}\frac{f(a+2h)-f(a-h)}{h}$：$f(a)$ を引いて足し、2つの定義の形に分ける。<br>
+$\dfrac{f(a+2h)-f(a)}{h}-\dfrac{f(a-h)-f(a)}{h}=2\cdot\dfrac{f(a+2h)-f(a)}{2h}+\dfrac{f(a-h)-f(a)}{-h}\to2f'(a)+f'(a)=3f'(a)$<br>
+(2) $\lim\limits_{x\to a}\frac{x^2f(a)-a^2f(x)}{x-a}$：$a^2f(a)$ を引いて足す。<br>
+$\dfrac{(x^2-a^2)f(a)-a^2\{f(x)-f(a)\}}{x-a}=(x+a)f(a)-a^2\cdot\dfrac{f(x)-f(a)}{x-a}\to2af(a)-a^2f'(a)$<br>
+(3) 既知の関数の微分係数とみる：$\displaystyle\lim_{x\to0}\frac{\sin x}{x}$ は、$f(x)=\sin x$ の $x=0$ における微分係数 ${\displaystyle\lim_{x\to0}\frac{f(x)-f(0)}{x-0}=f'(0)=\cos0=1}$ と読める。ただし $(\sin x)'$ を導くときにこの極限を使っているので、「$(\sin x)'=\cos x$ を証明せよ」という問題でこの見方をすると<b>循環論法</b>になる。
+</div>
+<div class="box warn">
+・$(a^x)'=xa^{x-1}$ としてしまう。$x^\alpha$（底が変数）と $a^x$（指数が変数）は別物で、$(a^x)'=a^x\log a$。$x^x$ はどちらの公式も使えず、対数微分法による。<br>
+・媒介変数表示で $\dfrac{d^2y}{dx^2}=\dfrac{d^2y/dt^2}{d^2x/dt^2}$ としてしまう。正しくは $\dfrac{d}{dt}\left(\dfrac{dy}{dx}\right)\div\dfrac{dx}{dt}$。<br>
+・陰関数の微分で $(y^2)'=2y$ とする（正しくは $2yy'$）。$(xy)'=y+xy'$ も積の微分。
+</div>
+<div class="box ans">
+(1) $\frac{\cos x(1+\cos x)+\sin^2x}{(1+\cos x)^2}=\frac{1+\cos x}{(1+\cos x)^2}=\frac{1}{1+\cos x}$。$\frac{(\cos x)'}{\cos x}=-\frac{\sin x}{\cos x}=-\tan x$　(2) $\log y=\sin x\log x$ より $\frac{y'}{y}=\cos x\log x+\frac{\sin x}{x}$、$y'=x^{\sin x}\left(\cos x\log x+\frac{\sin x}{x}\right)$　(3) $\frac{1}{2\sqrt x}+\frac{y'}{2\sqrt y}=0$ より $y'=-\frac{\sqrt y}{\sqrt x}$　(4) $y'=\cos x=\sin\left(x+\frac\pi2\right)$ のように、微分するたびに $\frac\pi2$ ずつ進むので $y^{(n)}=\sin\left(x+\frac{n\pi}{2}\right)$（帰納法で確かめられる）
+</div>
+
+<!--CH 24-->
+<div class="box point">
+・接線 $y-f(a)=f'(a)(x-a)$、法線 $y-f(a)=-\dfrac{1}{f'(a)}(x-a)$（$f'(a)\neq0$）<br>
+・<b>平均値の定理</b>：$f(x)$ が $[a,b]$ で連続、$(a,b)$ で微分可能なら、$\dfrac{f(b)-f(a)}{b-a}=f'(c)$、$a\lt c\lt b$ を満たす $c$ が存在する<br>
+・$f'(x)\gt0$ の区間で増加、$f''(x)\gt0$ の区間で下に凸。$f''(x)$ の符号が変わる点が<b>変曲点</b><br>
+・漸近線 $y=px+q$：$p=\displaystyle\lim_{x\to\pm\infty}\frac{f(x)}{x}$、$q=\displaystyle\lim_{x\to\pm\infty}\{f(x)-px\}$<br>
+・速度 $v=\dfrac{dx}{dt}$、加速度 $\alpha=\dfrac{d^2x}{dt^2}$。近似式 $f(a+h)\fallingdotseq f(a)+f'(a)h$（$|h|$ が小さいとき）
+</div>
+<h3>講義1　接線と法線</h3>
+<div class="box lect">
+曲線 $y=f(x)$ 上の点 $(a,f(a))$ における接線の傾きは $f'(a)$。<b>法線</b>はその点で接線に垂直な直線で、傾きは $-\dfrac1{f'(a)}$（$f'(a)=0$ のときは直線 $x=a$）。<br>
+<b>曲線外の点から引く接線</b>は、接点がわからないので<b>接点を $(t,f(t))$ とおいて</b>接線の方程式を作り、それが与えられた点を通る条件から $t$ を求める。異なる $t$ が異なる接線を与えるなら、接線の本数は $t$ の方程式の実数解の個数に一致する。<br>
+陰関数や媒介変数表示の曲線でも、第23章の方法で傾き $\dfrac{dy}{dx}$ を求めれば同じように扱える。
+</div>
+<div class="box ex">
+(1) 原点から曲線 $y=\log x$ に引いた接線の方程式と、接点の座標を求めよ。<br>
+(2) 曲線 $y=e^x$ 上の点 $(1,e)$ における法線の方程式を求めよ。
+<div class="solx"><b>解</b>　(1) $y'=\dfrac1x$ より、接点を $(t,\log t)\ (t\gt0)$ とすると接線は $y-\log t=\dfrac1t(x-t)$、すなわち $y=\dfrac xt+\log t-1$。これが原点を通るので $\log t-1=0$、$t=e$。<br>
+よって接線は $\boldsymbol{y=\dfrac1ex}$、接点は $\boldsymbol{(e,\ 1)}$<br>
+(2) $y'=e^x$ より点 $(1,e)$ における接線の傾きは $e$、法線の傾きは $-\dfrac1e$。$y-e=-\dfrac1e(x-1)$ より $\boldsymbol{y=-\dfrac1ex+e+\dfrac1e}$</div>
+</div>
+<h3>講義2　平均値の定理</h3>
+<div class="box lect">
+平均値の定理は、「2点 $\mathrm{A}(a,f(a))$、$\mathrm{B}(b,f(b))$ を結ぶ線分と<b>平行な接線</b>が、A と B の間のどこかで引ける」ことを表す。$f(a)=f(b)$ の場合（$f'(c)=0$）を特に<b>ロルの定理</b>という。<br>
+$c$ の値はわからなくても、<b>$a\lt c\lt b$ という範囲</b>がわかることが重要で、次のように使う。<br>
+・<b>不等式の証明</b>：$\frac{f(b)-f(a)}{b-a}$ の形が見えたら、$f'(c)$ を $a\lt c\lt b$ から評価する。<br>
+・<b>極限</b>：$f(b)-f(a)=f'(c)(b-a)$ と書きかえ、$c$ をはさみうちで処理する。<br>
+・<b>増減の判定の根拠</b>：区間で常に $f'(x)\gt0$ なら、区間内の $x_1\lt x_2$ に対して $f(x_2)-f(x_1)=f'(c)(x_2-x_1)\gt0$。これが「$f'\gt0$ なら増加」の証明である。
+</div>
+<div class="box ex">
+$0\lt a\lt b$ のとき、不等式 $\dfrac{b-a}{b}\lt\log\dfrac ba\lt\dfrac{b-a}{a}$ を証明せよ。
+<div class="solx"><b>解</b>　$f(x)=\log x$ は $x\gt0$ で微分可能で $f'(x)=\dfrac1x$。区間 $[a,b]$ で平均値の定理を用いると、<br>
+$\dfrac{\log b-\log a}{b-a}=\dfrac1c$、$a\lt c\lt b$ を満たす $c$ が存在する。<br>
+$a\lt c\lt b$ より $\dfrac1b\lt\dfrac1c\lt\dfrac1a$ だから $\dfrac1b\lt\dfrac{\log b-\log a}{b-a}\lt\dfrac1a$。各辺に $b-a\ (\gt0)$ をかけて $\dfrac{b-a}{b}\lt\log\dfrac ba\lt\dfrac{b-a}{a}$。■</div>
+</div>
+<h3>講義3　増減・凹凸とグラフの概形</h3>
+<div class="box lect">
+グラフの概形は、①定義域・対称性・座標軸との交点、②$f'(x)$ の符号 → 増減・極値、③$f''(x)$ の符号 → 凹凸・変曲点、④定義域の端（$x\to\pm\infty$ など）での極限 → 漸近線、の順に調べて<b>増減表</b>にまとめる。<br>
+<b>凹凸</b>：$f''(x)\gt0$ の区間では $f'(x)$（接線の傾き）が増加するので、グラフは<b>下に凸</b>。$f''(x)\lt0$ なら<b>上に凸</b>。凹凸が入れかわる点が<b>変曲点</b>で、$f''(a)=0$ かつ $x=a$ の前後で $f''(x)$ の符号が変わる点である（$y=x^4$ の原点は $f''(0)=0$ だが変曲点ではない）。<br>
+<b>漸近線</b>：$x\to a+0$ または $x\to a-0$ で $f(x)\to\pm\infty$ なら直線 $x=a$。$x\to\infty$（または $-\infty$）で $f(x)-(px+q)\to0$ なら直線 $y=px+q$。分数関数は割り算で「多項式＋分数」の形にすると一目でわかる。<br>
+極値の判定には $f''$ も使える：$f'(a)=0$ かつ $f''(a)\lt0$ なら極大、$f''(a)\gt0$ なら極小。
+</div>
+<div class="box ex">
+関数 $y=xe^{-x}$ の増減、極値、グラフの凹凸、変曲点を調べ、グラフの概形をかけ。ただし $\displaystyle\lim_{x\to\infty}xe^{-x}=0$ を用いてよい。
+<div class="solx"><b>解</b>　$y'=e^{-x}-xe^{-x}=(1-x)e^{-x}$、$y''=-e^{-x}-(1-x)e^{-x}=(x-2)e^{-x}$。$e^{-x}\gt0$ だから、$y'$ の符号は $1-x$、$y''$ の符号は $x-2$ の符号と一致する。
+<table><tr><th>$x$</th><td>$\cdots$</td><td>$1$</td><td>$\cdots$</td><td>$2$</td><td>$\cdots$</td></tr>
+<tr><th>$y'$</th><td>$+$</td><td>$0$</td><td>$-$</td><td>$-$</td><td>$-$</td></tr>
+<tr><th>$y''$</th><td>$-$</td><td>$-$</td><td>$-$</td><td>$0$</td><td>$+$</td></tr>
+<tr><th>$y$</th><td>増加・上に凸</td><td>$\frac1e$</td><td>減少・上に凸</td><td>$\frac2{e^2}$</td><td>減少・下に凸</td></tr></table>
+$x=1$ で<b>極大値 $\dfrac1e$</b>（極小値はない）、<b>変曲点は $\left(2,\ \dfrac{2}{e^2}\right)$</b>。<br>
+$x\to\infty$ のとき $y\to0$ なので <b>$x$ 軸が漸近線</b>。$x\to-\infty$ のとき $y\to-\infty$。グラフは原点を通り、下図のようになる（破線 $y=a$ は講義4で使う）。</div>
+</div>
+<svg class="fig" width="380" height="210" viewBox="0 0 380 210"><defs><marker id="ah24" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7 z" fill="#555"/></marker></defs><line x1="10.0" y1="100.0" x2="374.0" y2="100.0" stroke="#555" stroke-width="1" marker-end="url(#ah24)"/><line x1="40.0" y1="206.0" x2="40.0" y2="8.0" stroke="#555" stroke-width="1" marker-end="url(#ah24)"/><polyline points="22.5,203.9 23.4,197.2 24.2,190.6 25.1,184.3 25.9,178.2 26.8,172.2 27.6,166.4 28.5,160.8 29.4,155.3 30.2,150.1 31.0,145.0 31.9,140.0 32.8,135.2 33.6,130.6 34.5,126.0 35.3,121.7 36.2,117.5 37.0,113.4 37.9,109.4 38.7,105.6 39.5,101.9 40.4,98.3 41.2,94.9 42.1,91.5 43.0,88.3 43.8,85.2 44.6,82.2 45.5,79.3 46.4,76.5 47.2,73.8 48.0,71.2 48.9,68.7 49.8,66.3 50.6,64.0 51.5,61.8 52.3,59.6 53.2,57.5 54.0,55.6 54.9,53.7 55.7,51.8 56.6,50.1 57.4,48.4 58.2,46.8 59.1,45.3 60.0,43.8 60.8,42.4 61.7,41.0 62.5,39.7 63.3,38.5 64.2,37.4 65.1,36.3 65.9,35.2 66.8,34.2 67.6,33.3 68.5,32.4 69.3,31.5 70.2,30.7 71.0,30.0 71.9,29.3 72.7,28.6 73.6,28.0 74.4,27.4 75.2,26.8 76.1,26.3 77.0,25.9 77.8,25.5 78.7,25.1 79.5,24.7 80.3,24.4 81.2,24.1 82.1,23.8 82.9,23.6 83.8,23.4 84.6,23.2 85.5,23.1 86.3,23.0 87.2,22.9 88.0,22.8 88.9,22.8 89.7,22.7 90.6,22.7 91.4,22.8 92.3,22.8 93.1,22.9 94.0,23.0 94.8,23.1 95.7,23.2 96.5,23.3 97.4,23.5 98.2,23.7 99.1,23.9 99.9,24.1 100.8,24.3 101.6,24.5 102.5,24.8 103.3,25.0 104.1,25.3 105.0,25.6 105.9,25.9 106.7,26.2 107.6,26.5 108.4,26.9 109.3,27.2 110.1,27.5 111.0,27.9 111.8,28.3 112.7,28.6 113.5,29.0 114.4,29.4 115.2,29.8 116.1,30.2 116.9,30.6 117.8,31.0 118.6,31.5 119.5,31.9 120.3,32.3 121.2,32.8 122.0,33.2 122.9,33.6 123.7,34.1 124.6,34.5 125.4,35.0 126.3,35.5 127.1,35.9 128.0,36.4 128.8,36.9 129.7,37.3 130.5,37.8 131.4,38.3 132.2,38.7 133.1,39.2 133.9,39.7 134.8,40.2 135.6,40.7 136.5,41.1 137.3,41.6 138.2,42.1 139.0,42.6 139.9,43.1 140.7,43.6 141.6,44.0 142.4,44.5 143.2,45.0 144.1,45.5 145.0,46.0 145.8,46.4 146.7,46.9 147.5,47.4 148.4,47.9 149.2,48.4 150.1,48.8 150.9,49.3 151.8,49.8 152.6,50.3 153.5,50.7 154.3,51.2 155.2,51.7 156.0,52.1 156.9,52.6 157.7,53.0 158.6,53.5 159.4,54.0 160.3,54.4 161.1,54.9 162.0,55.3 162.8,55.8 163.7,56.2 164.5,56.6 165.4,57.1 166.2,57.5 167.1,58.0 167.9,58.4 168.8,58.8 169.6,59.2 170.5,59.7 171.3,60.1 172.2,60.5 173.0,60.9 173.9,61.3 174.7,61.8 175.6,62.2 176.4,62.6 177.3,63.0 178.1,63.4 179.0,63.8 179.8,64.2 180.7,64.5 181.5,64.9 182.4,65.3 183.2,65.7 184.1,66.1 184.9,66.4 185.8,66.8 186.6,67.2 187.5,67.6 188.3,67.9 189.2,68.3 190.0,68.6 190.9,69.0 191.7,69.3 192.6,69.7 193.4,70.0 194.3,70.4 195.1,70.7 196.0,71.0 196.8,71.4 197.7,71.7 198.5,72.0 199.4,72.4 200.2,72.7 201.1,73.0 201.9,73.3 202.8,73.6 203.6,73.9 204.5,74.2 205.3,74.5 206.2,74.8 207.0,75.1 207.9,75.4 208.7,75.7 209.6,76.0 210.4,76.3 211.3,76.6 212.1,76.9 213.0,77.1 213.8,77.4 214.7,77.7 215.5,78.0 216.4,78.2 217.2,78.5 218.1,78.8 218.9,79.0 219.8,79.3 220.6,79.5 221.4,79.8 222.3,80.0 223.2,80.3 224.0,80.5 224.9,80.7 225.7,81.0 226.6,81.2 227.4,81.5 228.3,81.7 229.1,81.9 230.0,82.1 230.8,82.4 231.7,82.6 232.5,82.8 233.4,83.0 234.2,83.2 235.1,83.4 235.9,83.6 236.8,83.8 237.6,84.1 238.5,84.3 239.3,84.5 240.2,84.6 241.0,84.8 241.8,85.0 242.7,85.2 243.5,85.4 244.4,85.6 245.3,85.8 246.1,86.0 247.0,86.1 247.8,86.3 248.7,86.5 249.5,86.7 250.3,86.8 251.2,87.0 252.0,87.2 252.9,87.3 253.8,87.5 254.6,87.7 255.5,87.8 256.3,88.0 257.1,88.1 258.0,88.3 258.9,88.5 259.7,88.6 260.5,88.8 261.4,88.9 262.2,89.0 263.1,89.2 264.0,89.3 264.8,89.5 265.6,89.6 266.5,89.7 267.4,89.9 268.2,90.0 269.1,90.1 269.9,90.3 270.8,90.4 271.6,90.5 272.4,90.7 273.3,90.8 274.2,90.9 275.0,91.0 275.9,91.1 276.7,91.3 277.5,91.4 278.4,91.5 279.2,91.6 280.1,91.7 281.0,91.8 281.8,91.9 282.7,92.0 283.5,92.2 284.4,92.3 285.2,92.4 286.1,92.5 286.9,92.6 287.8,92.7 288.6,92.8 289.5,92.9 290.3,93.0 291.2,93.1 292.0,93.1 292.9,93.2 293.7,93.3 294.6,93.4 295.4,93.5 296.3,93.6 297.1,93.7 298.0,93.8 298.8,93.9 299.7,93.9 300.5,94.0 301.4,94.1 302.2,94.2 303.1,94.3 303.9,94.3 304.8,94.4 305.6,94.5 306.5,94.6 307.3,94.6 308.2,94.7 309.0,94.8 309.9,94.9 310.7,94.9 311.6,95.0 312.4,95.1 313.3,95.1 314.1,95.2 315.0,95.3 315.8,95.3 316.7,95.4 317.5,95.5 318.4,95.5 319.2,95.6 320.1,95.7 320.9,95.7 321.8,95.8 322.6,95.8 323.5,95.9 324.3,95.9 325.2,96.0 326.0,96.1 326.9,96.1 327.7,96.2 328.6,96.2 329.4,96.3 330.3,96.3 331.1,96.4 332.0,96.4 332.8,96.5 333.7,96.5 334.5,96.6 335.4,96.6 336.2,96.7 337.1,96.7 337.9,96.8 338.8,96.8 339.6,96.9 340.5,96.9 341.3,96.9 342.2,97.0 343.0,97.0 343.9,97.1 344.7,97.1 345.6,97.2 346.4,97.2 347.2,97.2 348.1,97.3 348.9,97.3 349.8,97.3 350.6,97.4 351.5,97.4 352.4,97.5 353.2,97.5 354.1,97.5 354.9,97.6 355.8,97.6 356.6,97.6 357.4,97.7 358.3,97.7 359.1,97.7 360.0,97.8" stroke="#1f3f8f" stroke-width="1.8" fill="none"/><line x1="20.0" y1="58.0" x2="340.0" y2="58.0" stroke="#d9701e" stroke-width="1.2" stroke-dasharray="5,3"/><text x="344.0" y="62.0" font-size="10" text-anchor="start" font-style="italic">y=a</text><line x1="40.0" y1="22.7" x2="90.0" y2="22.7" stroke="#888" stroke-dasharray="3,3"/><line x1="90.0" y1="22.7" x2="90.0" y2="100.0" stroke="#888" stroke-dasharray="3,3"/><text x="90.0" y="114.0" font-size="11" text-anchor="middle">1</text><line x1="140.0" y1="43.2" x2="140.0" y2="100.0" stroke="#888" stroke-dasharray="3,3"/><text x="140.0" y="114.0" font-size="11" text-anchor="middle">2</text><circle cx="90.0" cy="22.7" r="3" fill="#1f3f8f"/><circle cx="140.0" cy="43.2" r="3" fill="#1f3f8f"/><text x="35.0" y="26.7" font-size="10" text-anchor="end" font-style="italic">1/e</text><text x="90.0" y="14.7" font-size="10" text-anchor="middle">極大</text><text x="147.0" y="34.2" font-size="10" text-anchor="start">変曲点</text><text x="147.0" y="47.2" font-size="10" text-anchor="start" font-style="italic">(2, 2/e²)</text><text x="33.0" y="114.0" font-size="11" text-anchor="middle">O</text><text x="372.0" y="94.0" font-size="11" text-anchor="end" font-style="italic">x</text><text x="48.0" y="16.0" font-size="11" text-anchor="start" font-style="italic">y</text><text x="255.0" y="78.7" font-size="10" text-anchor="middle" font-style="italic">y=xe<tspan dy="-4" font-size="8">−x</tspan></text></svg>
+<h3>講義4　最大・最小、不等式、方程式の実数解の個数</h3>
+<div class="box lect">
+<b>最大・最小</b>：区間での増減表を作り、<b>極値と区間の端の値</b>を比べる。極大値が最大値とは限らない。<br>
+<b>不等式 $f(x)\gt g(x)$ の証明</b>：差 $F(x)=f(x)-g(x)$ の最小値が正であることを示す。$F'(x)$ の符号がすぐにわからないときは、<b>$F''(x)$ を調べて $F'(x)$ の符号を決める</b>（2段階の増減）。<br>
+<b>方程式 $f(x)=a$ の実数解の個数</b>：$y=f(x)$ のグラフと直線 $y=a$ の<b>共有点の個数</b>として数える（<b>定数分離</b>）。グラフを正確にかくために、極値と端（$x\to\pm\infty$ など）での極限が必要になる。
+</div>
+<div class="box ex">
+(1) 関数 $f(x)=x+2\cos x\ (0\leqq x\leqq\pi)$ の最大値・最小値を求めよ。<br>
+(2) $x\gt0$ のとき、不等式 $e^x\gt1+x+\dfrac{x^2}{2}$ を証明せよ。
+<div class="solx"><b>解</b>　(1) $f'(x)=1-2\sin x=0$ より $\sin x=\frac12$、$x=\frac\pi6,\ \frac56\pi$。$f'(x)$ は $0\leqq x\lt\frac\pi6$ で正、$\frac\pi6\lt x\lt\frac56\pi$ で負、$\frac56\pi\lt x\leqq\pi$ で正。<br>
+$f(0)=2$、$f\left(\frac\pi6\right)=\frac\pi6+\sqrt3\ (\fallingdotseq2.26)$、$f\left(\frac56\pi\right)=\frac56\pi-\sqrt3\ (\fallingdotseq0.89)$、$f(\pi)=\pi-2\ (\fallingdotseq1.14)$。<br>
+よって<b>最大値 $\frac\pi6+\sqrt3$（$x=\frac\pi6$）、最小値 $\frac56\pi-\sqrt3$（$x=\frac56\pi$）</b><br>
+(2) $F(x)=e^x-1-x-\dfrac{x^2}{2}$ とおくと、$F'(x)=e^x-1-x$、$F''(x)=e^x-1$。<br>
+$x\gt0$ で $F''(x)\gt0$ だから $F'(x)$ は $x\geqq0$ で増加し、$F'(0)=0$ より $x\gt0$ で $F'(x)\gt0$。<br>
+よって $F(x)$ は $x\geqq0$ で増加し、$F(0)=0$ より $x\gt0$ で $F(x)\gt0$。■</div>
+</div>
+<div class="box ex">
+(3) 方程式 $xe^{-x}=a$ の異なる実数解の個数を、定数 $a$ の値によって分類せよ。
+<div class="solx"><b>解</b>　講義3のグラフ $y=xe^{-x}$ と直線 $y=a$ の共有点を数える。$y$ は $x\leqq1$ で $-\infty$ から $\frac1e$ まで増加し、$x\geqq1$ では減少しながら $0$ に近づく（$x\gt0$ で $y\gt0$）。よって<br>
+<b>$a\gt\frac1e$ のとき 0個、$a=\frac1e$ のとき 1個、$0\lt a\lt\frac1e$ のとき 2個、$a\leqq0$ のとき 1個</b></div>
+</div>
+<h3>講義5　速度・加速度と近似式</h3>
+<div class="box lect">
+数直線上を動く点の時刻 $t$ における座標が $x=f(t)$ のとき、<b>速度</b> $v=\dfrac{dx}{dt}$、<b>加速度</b> $\alpha=\dfrac{dv}{dt}=\dfrac{d^2x}{dt^2}$。$v$ の符号は進む向き（$v\gt0$ なら正の向き）を表し、$|v|$ を<b>速さ</b>という。<br>
+平面上を動く点 $\mathrm{P}(x,y)$ では、速度・加速度は<b>ベクトル</b>で、<br>
+　速度 $\vec v=\left(\dfrac{dx}{dt},\ \dfrac{dy}{dt}\right)$、速さ $|\vec v|=\sqrt{\left(\dfrac{dx}{dt}\right)^2+\left(\dfrac{dy}{dt}\right)^2}$、加速度 $\vec\alpha=\left(\dfrac{d^2x}{dt^2},\ \dfrac{d^2y}{dt^2}\right)$<br>
+<b>近似式</b>：微分係数の定義から、$|h|$ が小さいとき $f(a+h)\fallingdotseq f(a)+f'(a)h$（曲線を接線で近似している）。$a=0$ とすると、$|x|$ が小さいとき $f(x)\fallingdotseq f(0)+f'(0)x$。例：$(1+x)^p\fallingdotseq1+px$、$\sin x\fallingdotseq x$、$e^x\fallingdotseq1+x$、$\log(1+x)\fallingdotseq x$。
+</div>
+<div class="box ex">
+(1) 数直線上を動く点の時刻 $t$ における座標が $x=t^3-6t^2+9t$ のとき、$t=2$ における速度と加速度を求めよ。また、$t\gt0$ で点が運動の向きを変える時刻を求めよ。<br>
+(2) 座標平面上を動く点 P の時刻 $t$ における座標が $(t-\sin t,\ 1-\cos t)\ (0\leqq t\leqq2\pi)$ のとき、P の速さの最大値を求めよ。<br>
+(3) 近似式を用いて、$\sqrt[3]{1.03}$ の近似値を小数第2位まで求めよ。
+<div class="solx"><b>解</b>　(1) $v=3t^2-12t+9=3(t-1)(t-3)$、$\alpha=6t-12$。$t=2$ で<b>速度 $-3$、加速度 $0$</b>。$v$ は $t=1,\ 3$ の前後で符号を変えるので、向きを変えるのは <b>$t=1,\ 3$</b><br>
+(2) $\dfrac{dx}{dt}=1-\cos t$、$\dfrac{dy}{dt}=\sin t$。速さの2乗は $(1-\cos t)^2+\sin^2t=2-2\cos t=4\sin^2\dfrac t2$ だから、速さは $2\left|\sin\dfrac t2\right|$。最大値は $\boldsymbol{2}$（$t=\pi$ のとき）<br>
+(3) $(1+x)^{\frac13}\fallingdotseq1+\dfrac13x$ に $x=0.03$ を代入して $\sqrt[3]{1.03}\fallingdotseq1+0.01=\boldsymbol{1.01}$（真の値は $1.0099\cdots$）</div>
+</div>
+<div class="box chk">
+(1) 曲線 $y=\sqrt x$ 上の点 $(4,2)$ における接線と法線の方程式を求めよ。　(2) 関数 $y=\dfrac{x^2}{x-1}$ の極値と漸近線を求めよ。　(3) 関数 $y=\dfrac{\log x}{x}$ の最大値を求めよ。　(4) (3)を利用して、$e^\pi$ と $\pi^e$ の大小を比較せよ。
+</div>
+<div class="box aim">
+・「曲線外の点から引ける接線の本数」は「接点の $x$ 座標 $t$ の方程式の実数解の個数」に言いかえる（3次関数のグラフでは、異なる接点は異なる接線を与える）。<br>
+・実数解の個数は<b>定数分離</b>が最も確実。端での極限（$\displaystyle\lim_{x\to\infty}\frac{x}{e^x}=0$、$\displaystyle\lim_{x\to\infty}\frac{\log x}{x}=0$ など）を正確に押さえる。<br>
+・不等式の証明は「差をとって微分」。1回の微分で符号がわからなければ2回微分する。$e^\pi$ と $\pi^e$ のような大小比較は、<b>うまい関数を作って</b>単調性を使う。
+</div>
+<h3 class="deep">講義6　凹凸と不等式</h3>
+<p>グラフの凹凸は、接線や弦（曲線上の2点を結ぶ線分）との位置関係を教えてくれる。これを使うと、微分をくり返さずに不等式が示せる。</p>
+<div class="box lect">
+区間で $f''(x)\lt0$（上に凸）のとき、次が成り立つ。<br>
+①<b>グラフは接線の下にある</b>：$x=a$ における接線を $y=l(x)$ とし、$g(x)=f(x)-l(x)$ とおく。$g'(x)=f'(x)-f'(a)$ は減少関数で $g'(a)=0$ だから、$g(x)$ は $x=a$ で最大値 $g(a)=0$ をとり、$f(x)\leqq l(x)$。<br>
+②<b>グラフは弦の上にある</b>：区間 $[p,q]$ の両端を結ぶ弦を $y=m(x)$ とし、$h(x)=f(x)-m(x)$ とおくと $h(p)=h(q)=0$。ロルの定理より $h'(c)=0\ (p\lt c\lt q)$ となる $c$ があり、$h'$ は減少関数だから $p\lt x\lt c$ で $h'\gt0$、$c\lt x\lt q$ で $h'\lt0$。よって $h$ は $[p,c]$ で増加、$[c,q]$ で減少し、両端で $0$ だから $h(x)\geqq0$。<br>
+<b>例</b>　$0\leqq x\leqq\dfrac\pi2$ のとき $\dfrac{2}{\pi}x\leqq\sin x\leqq x$。<br>
+$y=\sin x$ は $0\lt x\lt\frac\pi2$ で $y''=-\sin x\lt0$、つまり上に凸。原点における接線は $y=x$ だから①より $\sin x\leqq x$。2点 $(0,0)$、$\left(\frac\pi2,1\right)$ を結ぶ弦は $y=\frac2\pi x$ だから②より $\frac2\pi x\leqq\sin x$。■
+</div>
+<p>下に凸（$f''\gt0$）なら不等号の向きが逆になる（例：$e^x\geqq1+x$ は $y=e^x$ が接線 $y=1+x$ の上にあること）。この種の不等式は、はさみうちや定積分の評価（第25章）でよく使われる。</p>
+<div class="box warn">
+・$f'(a)=0$ だけで極値と判断する。$y=x^3$ の $x=0$ のように、前後で $f'$ の符号が変わらなければ極値ではない。変曲点も $f''$ の符号の変化を確認する。<br>
+・区間の最大・最小で、<b>端点の値</b>と比べるのを忘れる。<br>
+・速度と速さの混同。速度は向き（符号）をもつ量で、速さはその絶対値。
+</div>
+<div class="box ans">
+(1) $y'=\frac{1}{2\sqrt x}$ より傾き $\frac14$。接線 $y=\frac14x+1$、法線 $y=-4x+18$　(2) $y=x+1+\frac{1}{x-1}$、$y'=1-\frac{1}{(x-1)^2}=\frac{x(x-2)}{(x-1)^2}$。$x=0$ で極大値 $0$、$x=2$ で極小値 $4$。漸近線は $x=1$ と $y=x+1$　(3) $y'=\frac{1-\log x}{x^2}$ より、$x=e$ で最大値 $\frac1e$　(4) $y=\frac{\log x}{x}$ は $x\geqq e$ で減少し、$e\lt\pi$ だから $\frac{\log\pi}{\pi}\lt\frac{\log e}{e}$。両辺に $e\pi$ をかけて $e\log\pi\lt\pi$、すなわち $\log\pi^e\lt\log e^\pi$。よって $\pi^e\lt e^\pi$
+</div>
+
+<!--CH 25-->
+<div class="box point">
+・$\displaystyle\int x^\alpha dx=\frac{x^{\alpha+1}}{\alpha+1}+C\ (\alpha\neq-1)$、$\displaystyle\int\frac{dx}{x}=\log|x|+C$、$\displaystyle\int e^xdx=e^x+C$、$\displaystyle\int a^xdx=\frac{a^x}{\log a}+C$（$C$ は積分定数）<br>
+・$\displaystyle\int\sin x\,dx=-\cos x+C$、$\displaystyle\int\cos x\,dx=\sin x+C$、$\displaystyle\int\frac{dx}{\cos^2x}=\tan x+C$<br>
+・置換積分 $\displaystyle\int f(g(x))g'(x)\,dx=\int f(u)\,du$（$u=g(x)$）、特に $\displaystyle\int\frac{g'(x)}{g(x)}dx=\log|g(x)|+C$<br>
+・部分積分 $\displaystyle\int f(x)g'(x)\,dx=f(x)g(x)-\int f'(x)g(x)\,dx$<br>
+・$\displaystyle\frac{d}{dx}\int_a^xf(t)\,dt=f(x)$、区分求積法 $\displaystyle\lim_{n\to\infty}\frac1n\sum_{k=1}^nf\left(\frac kn\right)=\int_0^1f(x)\,dx$
+</div>
+<h3>講義1　基本の不定積分と置換積分</h3>
+<div class="box lect">
+不定積分は微分の逆で、公式はすべて「右辺を微分すると被積分関数に戻る」ことで確かめられる（例：$(\log|x|)'=\frac1x$ だから $\int\frac{dx}x=\log|x|+C$）。<br>
+<b>置換積分</b>は合成関数の微分の逆である。$F'(u)=f(u)$ のとき $\{F(g(x))\}'=f(g(x))g'(x)$ だから $\int f(g(x))g'(x)\,dx=F(g(x))+C$。実際には $u=g(x)$ とおき、$du=g'(x)\,dx$ と形式的に書きかえて計算する。よく使う形は次の3つ。<br>
+・中身が1次式：$\displaystyle\int f(ax+b)\,dx=\frac1aF(ax+b)+C$（例：$\int\cos2x\,dx=\frac12\sin2x+C$）<br>
+・中身の微分がかかっている：$\int f(g(x))\,g'(x)\,dx$（例：$\int\sin^2x\cos x\,dx=\frac{\sin^3x}{3}+C$）<br>
+・分子が分母の微分：$\displaystyle\int\frac{g'(x)}{g(x)}dx=\log|g(x)|+C$
+</div>
+<div class="box ex">
+次の不定積分を求めよ。(1) $\displaystyle\int(2x+1)^5dx$　(2) $\displaystyle\int x\sqrt{x^2+1}\,dx$　(3) $\displaystyle\int\tan x\,dx$
+<div class="solx"><b>解</b>　(1) $\dfrac12\cdot\dfrac{(2x+1)^6}{6}+C=\boldsymbol{\dfrac{(2x+1)^6}{12}+C}$<br>
+(2) $u=x^2+1$ とおくと $du=2x\,dx$ だから $\displaystyle\int\sqrt u\cdot\frac12\,du=\frac12\cdot\frac23u^{\frac32}+C=\boldsymbol{\frac13(x^2+1)\sqrt{x^2+1}+C}$<br>
+(3) $\tan x=\dfrac{\sin x}{\cos x}=-\dfrac{(\cos x)'}{\cos x}$ だから $\boldsymbol{-\log|\cos x|+C}$</div>
+</div>
+<h3>講義2　部分積分</h3>
+<div class="box lect">
+積の微分 $\{f(x)g(x)\}'=f'(x)g(x)+f(x)g'(x)$ の両辺を積分して移項すると<br>
+$\displaystyle\int f(x)g'(x)\,dx=f(x)g(x)-\int f'(x)g(x)\,dx$（<b>部分積分法</b>）<br>
+「積分しやすい方を $g'$、微分すると簡単になる方を $f$」に選ぶ。目安は次の通り。<br>
+・<b>多項式 × $e^x$、$\sin x$、$\cos x$</b>：多項式を $f$ にする（微分して次数を下げる）。<br>
+・<b>多項式 × $\log x$</b>：$\log x$ を $f$ にする（微分すると $\frac1x$ になり $\log$ が消える）。$\int\log x\,dx$ は $\log x=(x)'\log x$ とみる。<br>
+・<b>$e^x\sin x$ 型</b>：2回部分積分すると<b>もとの積分が再び現れる</b>ので、方程式として解く。<br>
+定積分では $\displaystyle\int_a^bf(x)g'(x)\,dx=\Big[f(x)g(x)\Big]_a^b-\int_a^bf'(x)g(x)\,dx$。
+</div>
+<div class="box ex">
+次の不定積分を求めよ。(1) $\displaystyle\int xe^x\,dx$　(2) $\displaystyle\int\log x\,dx$　(3) $\displaystyle\int e^x\sin x\,dx$
+<div class="solx"><b>解</b>　(1) $\displaystyle\int x(e^x)'\,dx=xe^x-\int e^x\,dx=\boldsymbol{(x-1)e^x+C}$<br>
+(2) $\displaystyle\int(x)'\log x\,dx=x\log x-\int x\cdot\frac1x\,dx=\boldsymbol{x\log x-x+C}$<br>
+(3) $I=\displaystyle\int e^x\sin x\,dx$ とおき、$e^x=(e^x)'$ とみて2回部分積分する。<br>
+$I=e^x\sin x-\displaystyle\int e^x\cos x\,dx=e^x\sin x-\left(e^x\cos x+\int e^x\sin x\,dx\right)=e^x(\sin x-\cos x)-I$<br>
+よって $2I=e^x(\sin x-\cos x)$（積分定数は最後にまとめてつける）より $\boldsymbol{I=\dfrac12e^x(\sin x-\cos x)+C}$</div>
+</div>
+<h3>講義3　三角関数・分数関数の積分</h3>
+<div class="box lect">
+<b>三角関数</b>は、1次の $\sin,\ \cos$ か「$f(\sin x)\cos x$」の形に直してから積分する。<br>
+・<b>次数下げ</b>：$\sin^2x=\frac{1-\cos2x}{2}$、$\cos^2x=\frac{1+\cos2x}{2}$<br>
+・<b>積を和に</b>：$\sin\alpha\cos\beta=\frac12\{\sin(\alpha+\beta)+\sin(\alpha-\beta)\}$、$\cos\alpha\cos\beta=\frac12\{\cos(\alpha+\beta)+\cos(\alpha-\beta)\}$、<br>
+　　　　　$\sin\alpha\sin\beta=-\frac12\{\cos(\alpha+\beta)-\cos(\alpha-\beta)\}$<br>
+・<b>奇数乗</b>は1つ残して置換：$\sin^3x=(1-\cos^2x)\sin x$ とし、$\cos x=u$ とおく。<br>
+<b>分数関数</b>は、①分子の次数が分母の次数以上なら<b>割り算</b>で次数を下げる、②分子が分母の微分なら $\log|g(x)|$、③分母が因数分解できれば<b>部分分数に分解</b>、の順に考える。
+</div>
+<div class="box ex">
+(1) $\displaystyle\int_0^{\pi}\sin^2x\,dx$ を求めよ。　(2) $\displaystyle\int\sin3x\cos x\,dx$ を求めよ。　(3) $\displaystyle\int\frac{x+5}{x^2+x-2}\,dx$ を求めよ。
+<div class="solx"><b>解</b>　(1) $\displaystyle\int_0^\pi\frac{1-\cos2x}{2}\,dx=\left[\frac x2-\frac{\sin2x}{4}\right]_0^\pi=\boldsymbol{\frac\pi2}$<br>
+(2) $\sin3x\cos x=\dfrac12(\sin4x+\sin2x)$ より $\boldsymbol{-\dfrac18\cos4x-\dfrac14\cos2x+C}$<br>
+(3) $\dfrac{x+5}{(x-1)(x+2)}=\dfrac{A}{x-1}+\dfrac{B}{x+2}$ とおくと $x+5=A(x+2)+B(x-1)$。$x=1$ として $A=2$、$x=-2$ として $B=-1$。<br>
+よって $\displaystyle\int\left(\frac2{x-1}-\frac1{x+2}\right)dx=\boldsymbol{2\log|x-1|-\log|x+2|+C}$</div>
+</div>
+<h3>講義4　定積分の置換積分</h3>
+<div class="box lect">
+定積分で $x=g(t)$ と置換するときは、<b>積分区間も $t$ の区間に書きかえる</b>（$x=a$ のとき $t=\alpha$、$x=b$ のとき $t=\beta$）。もとの変数に戻す必要はない。<br>
+$\displaystyle\int_a^bf(x)\,dx=\int_\alpha^\beta f(g(t))\,g'(t)\,dt$<br>
+根号や分母が次の形のときの置換は定番である（$a\gt0$）。
+<table class="l"><tr><th>含まれる形</th><th>置換</th><th>使う関係</th><th>$\theta$ の範囲</th></tr>
+<tr><td>$\sqrt{a^2-x^2}$</td><td>$x=a\sin\theta$</td><td>$1-\sin^2\theta=\cos^2\theta$</td><td>$-\frac\pi2\leqq\theta\leqq\frac\pi2$ の中で</td></tr>
+<tr><td>$\dfrac{1}{x^2+a^2}$</td><td>$x=a\tan\theta$</td><td>$1+\tan^2\theta=\dfrac{1}{\cos^2\theta}$</td><td>$-\frac\pi2\lt\theta\lt\frac\pi2$ の中で</td></tr></table>
+また、$f(x)$ が<b>偶関数</b>なら $\displaystyle\int_{-a}^af(x)\,dx=2\int_0^af(x)\,dx$、<b>奇関数</b>なら $\displaystyle\int_{-a}^af(x)\,dx=0$。
+</div>
+<div class="box ex">
+次の定積分を求めよ。(1) $\displaystyle\int_0^{\sqrt3}\sqrt{4-x^2}\,dx$　(2) $\displaystyle\int_0^1\frac{dx}{x^2+1}$
+<div class="solx"><b>解</b>　(1) $x=2\sin\theta$ とおくと $dx=2\cos\theta\,d\theta$、$x:0\to\sqrt3$ のとき $\theta:0\to\frac\pi3$。この範囲で $\cos\theta\gt0$ だから $\sqrt{4-x^2}=2\cos\theta$。<br>
+$\displaystyle\int_0^{\frac\pi3}2\cos\theta\cdot2\cos\theta\,d\theta=\int_0^{\frac\pi3}2(1+\cos2\theta)\,d\theta=\Big[2\theta+\sin2\theta\Big]_0^{\frac\pi3}=\boldsymbol{\frac23\pi+\frac{\sqrt3}2}$<br>
+（図形的には半径2の円の一部で、中心角 $\frac\pi3$ の扇形 $\frac23\pi$ と直角三角形 $\frac{\sqrt3}2$ の和になっている。）<br>
+(2) $x=\tan\theta$ とおくと $dx=\dfrac{d\theta}{\cos^2\theta}$、$x:0\to1$ のとき $\theta:0\to\frac\pi4$。<br>
+$\displaystyle\int_0^{\frac\pi4}\frac{1}{1+\tan^2\theta}\cdot\frac{1}{\cos^2\theta}\,d\theta=\int_0^{\frac\pi4}d\theta=\boldsymbol{\frac\pi4}$</div>
+</div>
+<h3>講義5　定積分で表された関数と区分求積法</h3>
+<div class="box lect">
+<b>微分と積分の関係</b>：$F'(t)=f(t)$ とすると $\displaystyle\int_a^xf(t)\,dt=F(x)-F(a)$ だから（$a$ は定数）<br>
+　$\displaystyle\frac{d}{dx}\int_a^xf(t)\,dt=f(x)$、上端が $g(x)$ なら合成関数の微分で $\displaystyle\frac{d}{dx}\int_a^{g(x)}f(t)\,dt=f(g(x))\,g'(x)$<br>
+被積分関数に $x$ が含まれているときは、<b>$x$ を積分の外に出してから</b>微分する（積分変数は $t$ で、$x$ は定数とみる）。<br>
+<b>区分求積法</b>：区間 $[0,1]$ を $n$ 等分し、幅 $\frac1n$、高さ $f\left(\frac kn\right)$ の長方形の面積の和をとると、$n\to\infty$ でグラフの下の面積に近づく。<br>
+　$\displaystyle\lim_{n\to\infty}\frac1n\sum_{k=1}^nf\left(\frac kn\right)=\int_0^1f(x)\,dx$（$k=0$ から $n-1$ までの和でも同じ）<br>
+和の極限を求めるには、<b>$\frac1n$ をくくり出し、残りを $\frac kn$ だけの式にして</b> $f$ を見つける。$\frac kn\to x$、$\frac1n\to dx$、$\sum\to\int_0^1$ と対応させる。
+</div>
+<div class="box ex">
+(1) $\displaystyle\frac{d}{dx}\int_0^x(x-t)\sin t\,dt$ を求めよ。　(2) $\displaystyle\lim_{n\to\infty}\sum_{k=1}^n\frac{n}{n^2+k^2}$ を求めよ。
+<div class="solx"><b>解</b>　(1) $\displaystyle\int_0^x(x-t)\sin t\,dt=x\int_0^x\sin t\,dt-\int_0^xt\sin t\,dt$ と分けてから微分すると<br>
+$\displaystyle\int_0^x\sin t\,dt+x\sin x-x\sin x=\Big[-\cos t\Big]_0^x=\boldsymbol{1-\cos x}$<br>
+(2) $\dfrac{n}{n^2+k^2}=\dfrac1n\cdot\dfrac{1}{1+\left(\frac kn\right)^2}$ だから、$f(x)=\dfrac{1}{1+x^2}$ として<br>
+$\displaystyle\lim_{n\to\infty}\frac1n\sum_{k=1}^n\frac{1}{1+\left(\frac kn\right)^2}=\int_0^1\frac{dx}{1+x^2}=\boldsymbol{\frac\pi4}$（講義4の(2)）</div>
+</div>
+<div class="box chk">
+次の不定積分・定積分・極限を求めよ。(1) $\displaystyle\int x\cos x\,dx$、$\displaystyle\int\frac{\log x}{x}\,dx$　(2) $\displaystyle\int_0^{\frac\pi2}\sin^3x\,dx$　(3) $\displaystyle\int_0^1\frac{dx}{\sqrt{4-x^2}}$　(4) $\displaystyle\lim_{n\to\infty}\left(\frac1{n+1}+\frac1{n+2}+\cdots+\frac1{2n}\right)$
+</div>
+<div class="box aim">
+・置換積分か部分積分かを<b>一目で判断できる</b>ことが大切。「中身の微分」が見えれば置換、種類の違う関数の積なら部分積分。<br>
+・$\sqrt{a^2-x^2}$ を含む定積分は、<b>円の面積</b>（扇形＋三角形）で検算できる。<br>
+・<b>区分求積法</b>は二次試験の頻出テーマ。和が $k=1$ から $2n$ までなら積分区間は $[0,2]$ になる（${\frac1n\sum_{k=1}^{2n}f\left(\frac kn\right)\to\int_0^2f(x)\,dx}$）。<br>
+・定積分を含む等式から $f(x)$ を決める問題では、$\int_a^bf(t)\,dt$（定数）は $k$ などとおき、$\int_a^xf(t)\,dt$ を含むなら両辺を微分する。
+</div>
+<h3 class="deep">講義6　定積分と不等式（和の評価）</h3>
+<p>区間 $[a,b]$ で $f(x)\leqq g(x)$ ならば $\displaystyle\int_a^bf(x)\,dx\leqq\int_a^bg(x)\,dx$。$f,g$ が連続で、常には等しくないなら等号は成り立たない。これを使うと、<b>計算できない和を積分で評価</b>できる。</p>
+<div class="box lect">
+$n\geqq2$ のとき、$\log(n+1)\lt1+\dfrac12+\dfrac13+\cdots+\dfrac1n\lt1+\log n$ を示そう。<br>
+$y=\frac1x$ は $x\gt0$ で減少するから、$k\leqq x\leqq k+1$ で $\dfrac1{k+1}\leqq\dfrac1x\leqq\dfrac1k$（等号は端点のみ）。各辺を $k$ から $k+1$ まで積分して<br>
+$\dfrac1{k+1}\lt\displaystyle\int_k^{k+1}\frac{dx}{x}\lt\frac1k$<br>
+・右側を $k=1,2,\ldots,n$ で加えると $\displaystyle\log(n+1)=\int_1^{n+1}\frac{dx}{x}\lt\sum_{k=1}^n\frac1k$（左図：長方形の和は曲線の下の面積より大きい）<br>
+・左側を $k=1,2,\ldots,n-1$ で加えると $\displaystyle\sum_{k=2}^{n}\frac1k\lt\int_1^n\frac{dx}{x}=\log n$。両辺に $1$ を加えればよい（右図）。■
+</div>
+<div class="two"><div><svg class="fig" width="250" height="160" viewBox="0 0 250 160"><rect x="54.0" y="30.0" width="36.0" height="110.0" fill="#fde7d4" stroke="#d9701e" stroke-width="0.8"/><rect x="90.0" y="85.0" width="36.0" height="55.0" fill="#fde7d4" stroke="#d9701e" stroke-width="0.8"/><rect x="126.0" y="103.3" width="36.0" height="36.7" fill="#fde7d4" stroke="#d9701e" stroke-width="0.8"/><rect x="162.0" y="112.5" width="36.0" height="27.5" fill="#fde7d4" stroke="#d9701e" stroke-width="0.8"/><rect x="198.0" y="118.0" width="36.0" height="22.0" fill="#fde7d4" stroke="#d9701e" stroke-width="0.8"/><defs><marker id="ah25u" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7 z" fill="#555"/></marker></defs><line x1="6.0" y1="140.0" x2="246.0" y2="140.0" stroke="#555" stroke-width="1" marker-end="url(#ah25u)"/><line x1="18.0" y1="156.0" x2="18.0" y2="6.0" stroke="#555" stroke-width="1" marker-end="url(#ah25u)"/><polyline points="48.6,10.6 49.6,14.7 50.6,18.5 51.6,22.1 52.6,25.5 53.6,28.7 54.6,31.8 55.6,34.7 56.6,37.4 57.6,40.0 58.6,42.4 59.6,44.8 60.6,47.0 61.6,49.1 62.6,51.2 63.6,53.1 64.6,55.0 65.6,56.8 66.6,58.5 67.6,60.1 68.6,61.7 69.6,63.2 70.6,64.7 71.6,66.1 72.6,67.4 73.6,68.7 74.6,70.0 75.6,71.2 76.6,72.4 77.6,73.5 78.6,74.6 79.6,75.7 80.6,76.7 81.6,77.7 82.6,78.7 83.6,79.6 84.6,80.5 85.6,81.4 86.6,82.2 87.6,83.1 88.6,83.9 89.6,84.7 90.6,85.4 91.6,86.2 92.6,86.9 93.6,87.6 94.6,88.3 95.6,88.9 96.6,89.6 97.6,90.2 98.6,90.8 99.5,91.4 100.5,92.0 101.5,92.6 102.5,93.2 103.5,93.7 104.5,94.2 105.5,94.8 106.5,95.3 107.5,95.8 108.5,96.3 109.5,96.7 110.5,97.2 111.5,97.7 112.5,98.1 113.5,98.5 114.5,99.0 115.5,99.4 116.5,99.8 117.5,100.2 118.5,100.6 119.5,101.0 120.5,101.4 121.5,101.7 122.5,102.1 123.5,102.5 124.5,102.8 125.5,103.2 126.5,103.5 127.5,103.8 128.5,104.2 129.5,104.5 130.5,104.8 131.5,105.1 132.5,105.4 133.5,105.7 134.5,106.0 135.5,106.3 136.5,106.6 137.5,106.9 138.5,107.1 139.5,107.4 140.5,107.7 141.5,107.9 142.5,108.2 143.5,108.4 144.5,108.7 145.5,108.9 146.5,109.2 147.5,109.4 148.5,109.7 149.5,109.9 150.5,110.1 151.5,110.3 152.5,110.6 153.5,110.8 154.5,111.0 155.5,111.2 156.5,111.4 157.5,111.6 158.5,111.8 159.5,112.0 160.5,112.2 161.5,112.4 162.5,112.6 163.5,112.8 164.5,113.0 165.5,113.1 166.5,113.3 167.5,113.5 168.5,113.7 169.5,113.9 170.5,114.0 171.5,114.2 172.5,114.4 173.5,114.5 174.5,114.7 175.5,114.9 176.5,115.0 177.5,115.2 178.5,115.3 179.5,115.5 180.5,115.6 181.5,115.8 182.5,115.9 183.5,116.1 184.5,116.2 185.5,116.4 186.5,116.5 187.5,116.6 188.5,116.8 189.5,116.9 190.5,117.0 191.5,117.2 192.5,117.3 193.5,117.4 194.5,117.6 195.5,117.7 196.5,117.8 197.5,117.9 198.5,118.1 199.4,118.2 200.4,118.3 201.4,118.4 202.4,118.5 203.4,118.6 204.4,118.8 205.4,118.9 206.4,119.0 207.4,119.1 208.4,119.2 209.4,119.3 210.4,119.4 211.4,119.5 212.4,119.6 213.4,119.7 214.4,119.8 215.4,119.9 216.4,120.0 217.4,120.1 218.4,120.2 219.4,120.3 220.4,120.4 221.4,120.5 222.4,120.6 223.4,120.7 224.4,120.8 225.4,120.9 226.4,121.0 227.4,121.1 228.4,121.2 229.4,121.3 230.4,121.4 231.4,121.4 232.4,121.5 233.4,121.6 234.4,121.7 235.4,121.8 236.4,121.9 237.4,122.0 238.4,122.0 239.4,122.1 240.4,122.2 241.4,122.3 242.4,122.4 243.4,122.4 244.4,122.5 245.4,122.6 246.4,122.7 247.4,122.7 248.4,122.8" stroke="#1f3f8f" stroke-width="1.8" fill="none"/><text x="54.0" y="153.0" font-size="10" text-anchor="middle">1</text><text x="90.0" y="153.0" font-size="10" text-anchor="middle">2</text><text x="126.0" y="153.0" font-size="10" text-anchor="middle">3</text><text x="162.0" y="153.0" font-size="10" text-anchor="middle">4</text><text x="198.0" y="153.0" font-size="10" text-anchor="middle">5</text><text x="234.0" y="153.0" font-size="10" text-anchor="middle">6</text><text x="12.0" y="34.0" font-size="10" text-anchor="end">1</text><line x1="16.0" y1="30.0" x2="20.0" y2="30.0" stroke="#555" stroke-width="1"/><text x="208.8" y="107.2" font-size="10" text-anchor="middle" font-style="italic">y=1/x</text><text x="244.0" y="135.0" font-size="11" text-anchor="end" font-style="italic">x</text></svg><div style="text-align:center;font-size:9pt">長方形の和 $\sum_{k=1}^{5}\frac1k$ ＞ $\log6$</div></div><div><svg class="fig" width="250" height="160" viewBox="0 0 250 160"><rect x="54.0" y="85.0" width="36.0" height="55.0" fill="#cfdcf5" stroke="#1f3f8f" stroke-width="0.8"/><rect x="90.0" y="103.3" width="36.0" height="36.7" fill="#cfdcf5" stroke="#1f3f8f" stroke-width="0.8"/><rect x="126.0" y="112.5" width="36.0" height="27.5" fill="#cfdcf5" stroke="#1f3f8f" stroke-width="0.8"/><rect x="162.0" y="118.0" width="36.0" height="22.0" fill="#cfdcf5" stroke="#1f3f8f" stroke-width="0.8"/><rect x="198.0" y="121.7" width="36.0" height="18.3" fill="#cfdcf5" stroke="#1f3f8f" stroke-width="0.8"/><defs><marker id="ah25l" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7 z" fill="#555"/></marker></defs><line x1="6.0" y1="140.0" x2="246.0" y2="140.0" stroke="#555" stroke-width="1" marker-end="url(#ah25l)"/><line x1="18.0" y1="156.0" x2="18.0" y2="6.0" stroke="#555" stroke-width="1" marker-end="url(#ah25l)"/><polyline points="48.6,10.6 49.6,14.7 50.6,18.5 51.6,22.1 52.6,25.5 53.6,28.7 54.6,31.8 55.6,34.7 56.6,37.4 57.6,40.0 58.6,42.4 59.6,44.8 60.6,47.0 61.6,49.1 62.6,51.2 63.6,53.1 64.6,55.0 65.6,56.8 66.6,58.5 67.6,60.1 68.6,61.7 69.6,63.2 70.6,64.7 71.6,66.1 72.6,67.4 73.6,68.7 74.6,70.0 75.6,71.2 76.6,72.4 77.6,73.5 78.6,74.6 79.6,75.7 80.6,76.7 81.6,77.7 82.6,78.7 83.6,79.6 84.6,80.5 85.6,81.4 86.6,82.2 87.6,83.1 88.6,83.9 89.6,84.7 90.6,85.4 91.6,86.2 92.6,86.9 93.6,87.6 94.6,88.3 95.6,88.9 96.6,89.6 97.6,90.2 98.6,90.8 99.5,91.4 100.5,92.0 101.5,92.6 102.5,93.2 103.5,93.7 104.5,94.2 105.5,94.8 106.5,95.3 107.5,95.8 108.5,96.3 109.5,96.7 110.5,97.2 111.5,97.7 112.5,98.1 113.5,98.5 114.5,99.0 115.5,99.4 116.5,99.8 117.5,100.2 118.5,100.6 119.5,101.0 120.5,101.4 121.5,101.7 122.5,102.1 123.5,102.5 124.5,102.8 125.5,103.2 126.5,103.5 127.5,103.8 128.5,104.2 129.5,104.5 130.5,104.8 131.5,105.1 132.5,105.4 133.5,105.7 134.5,106.0 135.5,106.3 136.5,106.6 137.5,106.9 138.5,107.1 139.5,107.4 140.5,107.7 141.5,107.9 142.5,108.2 143.5,108.4 144.5,108.7 145.5,108.9 146.5,109.2 147.5,109.4 148.5,109.7 149.5,109.9 150.5,110.1 151.5,110.3 152.5,110.6 153.5,110.8 154.5,111.0 155.5,111.2 156.5,111.4 157.5,111.6 158.5,111.8 159.5,112.0 160.5,112.2 161.5,112.4 162.5,112.6 163.5,112.8 164.5,113.0 165.5,113.1 166.5,113.3 167.5,113.5 168.5,113.7 169.5,113.9 170.5,114.0 171.5,114.2 172.5,114.4 173.5,114.5 174.5,114.7 175.5,114.9 176.5,115.0 177.5,115.2 178.5,115.3 179.5,115.5 180.5,115.6 181.5,115.8 182.5,115.9 183.5,116.1 184.5,116.2 185.5,116.4 186.5,116.5 187.5,116.6 188.5,116.8 189.5,116.9 190.5,117.0 191.5,117.2 192.5,117.3 193.5,117.4 194.5,117.6 195.5,117.7 196.5,117.8 197.5,117.9 198.5,118.1 199.4,118.2 200.4,118.3 201.4,118.4 202.4,118.5 203.4,118.6 204.4,118.8 205.4,118.9 206.4,119.0 207.4,119.1 208.4,119.2 209.4,119.3 210.4,119.4 211.4,119.5 212.4,119.6 213.4,119.7 214.4,119.8 215.4,119.9 216.4,120.0 217.4,120.1 218.4,120.2 219.4,120.3 220.4,120.4 221.4,120.5 222.4,120.6 223.4,120.7 224.4,120.8 225.4,120.9 226.4,121.0 227.4,121.1 228.4,121.2 229.4,121.3 230.4,121.4 231.4,121.4 232.4,121.5 233.4,121.6 234.4,121.7 235.4,121.8 236.4,121.9 237.4,122.0 238.4,122.0 239.4,122.1 240.4,122.2 241.4,122.3 242.4,122.4 243.4,122.4 244.4,122.5 245.4,122.6 246.4,122.7 247.4,122.7 248.4,122.8" stroke="#1f3f8f" stroke-width="1.8" fill="none"/><text x="54.0" y="153.0" font-size="10" text-anchor="middle">1</text><text x="90.0" y="153.0" font-size="10" text-anchor="middle">2</text><text x="126.0" y="153.0" font-size="10" text-anchor="middle">3</text><text x="162.0" y="153.0" font-size="10" text-anchor="middle">4</text><text x="198.0" y="153.0" font-size="10" text-anchor="middle">5</text><text x="234.0" y="153.0" font-size="10" text-anchor="middle">6</text><text x="12.0" y="34.0" font-size="10" text-anchor="end">1</text><line x1="16.0" y1="30.0" x2="20.0" y2="30.0" stroke="#555" stroke-width="1"/><text x="208.8" y="107.2" font-size="10" text-anchor="middle" font-style="italic">y=1/x</text><text x="244.0" y="135.0" font-size="11" text-anchor="end" font-style="italic">x</text></svg><div style="text-align:center;font-size:9pt">長方形の和 $\sum_{k=2}^{6}\frac1k$ ＜ $\log6$</div></div></div>
+<p>左の不等式から、$n\to\infty$ のとき $\log(n+1)\to\infty$ なので $\displaystyle\sum_{k=1}^n\frac1k\to\infty$。つまり<b>調和級数 $\sum\frac1n$ は発散する</b>（第22章）。さらに両側を $\log n$ でわれば、はさみうちで $\displaystyle\lim_{n\to\infty}\frac{1}{\log n}\sum_{k=1}^n\frac1k=1$ もわかる。</p>
+<div class="box warn">
+・不定積分で<b>積分定数 $C$</b> を書き忘れる。<br>
+・$\displaystyle\int\frac{dx}{x}=\log x+C$ と絶対値を落とす。$x\lt0$ でも成り立つのは $\log|x|+C$。<br>
+・定積分の置換で<b>積分区間を書きかえ忘れる</b>。また $\sqrt{\cos^2\theta}=|\cos\theta|$ なので、$\theta$ の範囲で $\cos\theta\geqq0$ を確認する。<br>
+・$\displaystyle\int\frac{dx}{x^2+1}$ を $\log(x^2+1)$ としてしまう（分子が分母の微分 $2x$ になっていない）。
+</div>
+<div class="box ans">
+(1) $x\sin x-\int\sin x\,dx=x\sin x+\cos x+C$。$\log x=u$ とおくと $\int u\,du=\frac12(\log x)^2+C$　(2) $\int_0^{\frac\pi2}(1-\cos^2x)\sin x\,dx$ で $\cos x=u$ とおくと $\int_0^1(1-u^2)\,du=\frac23$　(3) $x=2\sin\theta$ とおくと $\theta:0\to\frac\pi6$ で $\int_0^{\frac\pi6}\frac{2\cos\theta}{2\cos\theta}\,d\theta=\frac\pi6$　(4) $\frac1n\sum_{k=1}^n\frac{1}{1+\frac kn}\to\int_0^1\frac{dx}{1+x}=\log2$
+</div>
+
+<!--CH 26-->
+<div class="box point">
+・面積 $S=\displaystyle\int_a^b|f(x)-g(x)|\,dx$（上下関係で区間を分ける）。$x=h(y)$ の形なら $y$ で積分する<br>
+・媒介変数表示 $x=f(t),\ y=g(t)$ の曲線と $x$ 軸の間の面積は $\displaystyle\int_a^by\,dx=\int_\alpha^\beta g(t)f'(t)\,dt$（$x=a,\ b$ に $t=\alpha,\ \beta$ が対応）<br>
+・体積 $V=\displaystyle\int_a^bS(x)\,dx$（$S(x)$ は断面積）。$x$ 軸回転 $V=\pi\displaystyle\int_a^by^2\,dx$、$y$ 軸回転 $V=\pi\displaystyle\int_c^dx^2\,dy$<br>
+・曲線の長さ $L=\displaystyle\int_\alpha^\beta\sqrt{\left(\frac{dx}{dt}\right)^2+\left(\frac{dy}{dt}\right)^2}\,dt=\int_a^b\sqrt{1+\left(\frac{dy}{dx}\right)^2}\,dx$<br>
+・速度 $v(t)$ で数直線上を動く点の、$t=a$ から $b$ までの位置の変化は $\displaystyle\int_a^bv\,dt$、<b>道のり</b>は $\displaystyle\int_a^b|v|\,dt$
+</div>
+<h3>講義1　面積</h3>
+<div class="box lect">
+$a\leqq x\leqq b$ で $f(x)\geqq g(x)$ のとき、2曲線の間の面積は ${\displaystyle\int_a^b\{f(x)-g(x)\}\,dx}$（上 − 下）。上下が入れかわるなら、交点で区間を分ける。<br>
+<b>$y$ で積分する</b>方が楽なことも多い。曲線が $x=h(y)$ の形で表しやすいとき、$x$ で積分すると区間を分ける必要があるときなどである。$c\leqq y\leqq d$ で $h_1(y)\leqq h_2(y)$ なら、面積は $\displaystyle\int_c^d\{h_2(y)-h_1(y)\}\,dy$（右 − 左）。<br>
+まず<b>グラフをかいて、上下（左右）関係と交点を確認する</b>ことが出発点である。
+</div>
+<div class="box ex">
+(1) 2曲線 $y=\sin x,\ y=\cos x$ の $\frac\pi4\leqq x\leqq\frac54\pi$ の部分で囲まれた図形の面積を求めよ。<br>
+(2) 曲線 $y=\log x$ と、原点からこの曲線に引いた接線、および $x$ 軸で囲まれた図形の面積を求めよ。
+<div class="solx"><b>解</b>　(1) $\sin x=\cos x$ となるのは $x=\frac\pi4,\ \frac54\pi$ で、その間では $\sin x\geqq\cos x$。<br>
+$\displaystyle S=\int_{\frac\pi4}^{\frac54\pi}(\sin x-\cos x)\,dx=\Big[-\cos x-\sin x\Big]_{\frac\pi4}^{\frac54\pi}=\sqrt2-(-\sqrt2)=\boldsymbol{2\sqrt2}$<br>
+(2) 第24章の講義1より、接線は $y=\dfrac xe$、接点は $(e,1)$。図形は $0\leqq y\leqq1$ の範囲で、左側を直線 $x=ey$、右側を曲線 $x=e^y$ にはさまれている。<br>
+$\displaystyle S=\int_0^1(e^y-ey)\,dy=\Big[e^y-\frac e2y^2\Big]_0^1=\left(e-\frac e2\right)-1=\boldsymbol{\frac e2-1}$<br>
+（$x$ で積分するなら、直線の下の三角形の面積 $\frac12\cdot e\cdot1$ から $\displaystyle\int_1^e\log x\,dx=1$ を引いても同じ結果になる。）</div>
+</div>
+<h3>講義2　媒介変数表示の曲線と面積</h3>
+<div class="box lect">
+曲線が $x=f(t),\ y=g(t)$ で表され、$y\geqq0$ とする。$x$ 軸との間の面積 $S=\displaystyle\int_a^by\,dx$ を、<b>$t$ に置換して</b>計算する。${dx=f'(t)\,dt}$、$x=a$ のとき $t=\alpha$、$x=b$ のとき $t=\beta$ として<br>
+$S=\displaystyle\int_\alpha^\beta g(t)f'(t)\,dt$<br>
+$y$ を $x$ の式で表す必要はない。ただし、<b>$t$ が増えると $x$ が減る</b>部分では $\alpha\gt\beta$ になるので、区間の向きに注意する（$x$ が $a$ から $b$ へ進むように $t$ の区間を対応させる）。
+</div>
+<div class="box ex">
+サイクロイド $x=\theta-\sin\theta,\ y=1-\cos\theta\ (0\leqq\theta\leqq2\pi)$ と $x$ 軸で囲まれた図形の面積 $S$ を求めよ。
+<svg class="fig" width="300" height="125" viewBox="0 0 300 125"><polygon points="22.0,105.0 22.0,105.0 22.0,104.9 22.0,104.9 22.0,104.8 22.0,104.7 22.0,104.5 22.0,104.3 22.1,104.1 22.1,103.9 22.1,103.6 22.2,103.4 22.2,103.0 22.3,102.7 22.3,102.3 22.4,102.0 22.5,101.5 22.6,101.1 22.7,100.6 22.8,100.2 22.9,99.6 23.1,99.1 23.3,98.5 23.4,98.0 23.6,97.4 23.8,96.7 24.1,96.1 24.3,95.4 24.6,94.7 24.8,94.0 25.1,93.3 25.4,92.5 25.8,91.8 26.1,91.0 26.5,90.2 26.9,89.4 27.3,88.5 27.8,87.7 28.2,86.8 28.7,85.9 29.2,85.0 29.8,84.1 30.3,83.2 30.9,82.2 31.5,81.3 32.2,80.3 32.8,79.3 33.5,78.4 34.2,77.4 35.0,76.4 35.7,75.4 36.5,74.3 37.3,73.3 38.2,72.3 39.0,71.3 39.9,70.2 40.9,69.2 41.8,68.1 42.8,67.1 43.8,66.0 44.8,65.0 45.9,64.0 47.0,62.9 48.1,61.9 49.2,60.8 50.4,59.8 51.6,58.7 52.8,57.7 54.1,56.7 55.4,55.7 56.7,54.6 58.0,53.6 59.4,52.6 60.7,51.6 62.1,50.7 63.6,49.7 65.0,48.7 66.5,47.8 68.0,46.8 69.6,45.9 71.1,45.0 72.7,44.1 74.3,43.2 76.0,42.3 77.6,41.5 79.3,40.6 81.0,39.8 82.7,39.0 84.4,38.2 86.2,37.5 88.0,36.7 89.8,36.0 91.6,35.3 93.4,34.6 95.3,33.9 97.1,33.3 99.0,32.6 100.9,32.0 102.8,31.5 104.8,30.9 106.7,30.4 108.7,29.8 110.7,29.4 112.6,28.9 114.6,28.5 116.6,28.0 118.7,27.7 120.7,27.3 122.7,27.0 124.8,26.6 126.8,26.4 128.9,26.1 131.0,25.9 133.0,25.7 135.1,25.5 137.2,25.3 139.3,25.2 141.4,25.1 143.5,25.1 145.6,25.0 147.7,25.0 149.8,25.0 151.9,25.1 153.9,25.1 156.0,25.2 158.1,25.3 160.2,25.5 162.3,25.7 164.4,25.9 166.4,26.1 168.5,26.4 170.5,26.6 172.6,27.0 174.6,27.3 176.7,27.7 178.7,28.0 180.7,28.5 182.7,28.9 184.7,29.4 186.6,29.8 188.6,30.4 190.6,30.9 192.5,31.5 194.4,32.0 196.3,32.6 198.2,33.3 200.1,33.9 201.9,34.6 203.8,35.3 205.6,36.0 207.4,36.7 209.1,37.5 210.9,38.2 212.6,39.0 214.4,39.8 216.0,40.6 217.7,41.5 219.4,42.3 221.0,43.2 222.6,44.1 224.2,45.0 225.8,45.9 227.3,46.8 228.8,47.8 230.3,48.7 231.7,49.7 233.2,50.7 234.6,51.6 236.0,52.6 237.3,53.6 238.7,54.6 240.0,55.7 241.2,56.7 242.5,57.7 243.7,58.7 244.9,59.8 246.1,60.8 247.2,61.9 248.3,62.9 249.4,64.0 250.5,65.0 251.5,66.0 252.5,67.1 253.5,68.1 254.5,69.2 255.4,70.2 256.3,71.3 257.2,72.3 258.0,73.3 258.8,74.3 259.6,75.4 260.4,76.4 261.1,77.4 261.8,78.4 262.5,79.3 263.2,80.3 263.8,81.3 264.4,82.2 265.0,83.2 265.5,84.1 266.1,85.0 266.6,85.9 267.1,86.8 267.5,87.7 268.0,88.5 268.4,89.4 268.8,90.2 269.2,91.0 269.5,91.8 269.9,92.5 270.2,93.3 270.5,94.0 270.8,94.7 271.0,95.4 271.3,96.1 271.5,96.7 271.7,97.4 271.9,98.0 272.1,98.5 272.2,99.1 272.4,99.6 272.5,100.2 272.6,100.6 272.7,101.1 272.8,101.5 272.9,102.0 273.0,102.3 273.1,102.7 273.1,103.0 273.2,103.4 273.2,103.6 273.2,103.9 273.3,104.1 273.3,104.3 273.3,104.5 273.3,104.7 273.3,104.8 273.3,104.9 273.3,104.9 273.3,105.0 273.3,105.0" fill="#cfdcf5" stroke="none"/><defs><marker id="ah26" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7 z" fill="#555"/></marker></defs><line x1="8.0" y1="105.0" x2="294.0" y2="105.0" stroke="#555" stroke-width="1" marker-end="url(#ah26)"/><line x1="22.0" y1="121.0" x2="22.0" y2="6.0" stroke="#555" stroke-width="1" marker-end="url(#ah26)"/><polyline points="22.0,105.0 22.0,105.0 22.0,104.9 22.0,104.9 22.0,104.8 22.0,104.7 22.0,104.5 22.0,104.3 22.1,104.1 22.1,103.9 22.1,103.6 22.2,103.4 22.2,103.0 22.3,102.7 22.3,102.3 22.4,102.0 22.5,101.5 22.6,101.1 22.7,100.6 22.8,100.2 22.9,99.6 23.1,99.1 23.3,98.5 23.4,98.0 23.6,97.4 23.8,96.7 24.1,96.1 24.3,95.4 24.6,94.7 24.8,94.0 25.1,93.3 25.4,92.5 25.8,91.8 26.1,91.0 26.5,90.2 26.9,89.4 27.3,88.5 27.8,87.7 28.2,86.8 28.7,85.9 29.2,85.0 29.8,84.1 30.3,83.2 30.9,82.2 31.5,81.3 32.2,80.3 32.8,79.3 33.5,78.4 34.2,77.4 35.0,76.4 35.7,75.4 36.5,74.3 37.3,73.3 38.2,72.3 39.0,71.3 39.9,70.2 40.9,69.2 41.8,68.1 42.8,67.1 43.8,66.0 44.8,65.0 45.9,64.0 47.0,62.9 48.1,61.9 49.2,60.8 50.4,59.8 51.6,58.7 52.8,57.7 54.1,56.7 55.4,55.7 56.7,54.6 58.0,53.6 59.4,52.6 60.7,51.6 62.1,50.7 63.6,49.7 65.0,48.7 66.5,47.8 68.0,46.8 69.6,45.9 71.1,45.0 72.7,44.1 74.3,43.2 76.0,42.3 77.6,41.5 79.3,40.6 81.0,39.8 82.7,39.0 84.4,38.2 86.2,37.5 88.0,36.7 89.8,36.0 91.6,35.3 93.4,34.6 95.3,33.9 97.1,33.3 99.0,32.6 100.9,32.0 102.8,31.5 104.8,30.9 106.7,30.4 108.7,29.8 110.7,29.4 112.6,28.9 114.6,28.5 116.6,28.0 118.7,27.7 120.7,27.3 122.7,27.0 124.8,26.6 126.8,26.4 128.9,26.1 131.0,25.9 133.0,25.7 135.1,25.5 137.2,25.3 139.3,25.2 141.4,25.1 143.5,25.1 145.6,25.0 147.7,25.0 149.8,25.0 151.9,25.1 153.9,25.1 156.0,25.2 158.1,25.3 160.2,25.5 162.3,25.7 164.4,25.9 166.4,26.1 168.5,26.4 170.5,26.6 172.6,27.0 174.6,27.3 176.7,27.7 178.7,28.0 180.7,28.5 182.7,28.9 184.7,29.4 186.6,29.8 188.6,30.4 190.6,30.9 192.5,31.5 194.4,32.0 196.3,32.6 198.2,33.3 200.1,33.9 201.9,34.6 203.8,35.3 205.6,36.0 207.4,36.7 209.1,37.5 210.9,38.2 212.6,39.0 214.4,39.8 216.0,40.6 217.7,41.5 219.4,42.3 221.0,43.2 222.6,44.1 224.2,45.0 225.8,45.9 227.3,46.8 228.8,47.8 230.3,48.7 231.7,49.7 233.2,50.7 234.6,51.6 236.0,52.6 237.3,53.6 238.7,54.6 240.0,55.7 241.2,56.7 242.5,57.7 243.7,58.7 244.9,59.8 246.1,60.8 247.2,61.9 248.3,62.9 249.4,64.0 250.5,65.0 251.5,66.0 252.5,67.1 253.5,68.1 254.5,69.2 255.4,70.2 256.3,71.3 257.2,72.3 258.0,73.3 258.8,74.3 259.6,75.4 260.4,76.4 261.1,77.4 261.8,78.4 262.5,79.3 263.2,80.3 263.8,81.3 264.4,82.2 265.0,83.2 265.5,84.1 266.1,85.0 266.6,85.9 267.1,86.8 267.5,87.7 268.0,88.5 268.4,89.4 268.8,90.2 269.2,91.0 269.5,91.8 269.9,92.5 270.2,93.3 270.5,94.0 270.8,94.7 271.0,95.4 271.3,96.1 271.5,96.7 271.7,97.4 271.9,98.0 272.1,98.5 272.2,99.1 272.4,99.6 272.5,100.2 272.6,100.6 272.7,101.1 272.8,101.5 272.9,102.0 273.0,102.3 273.1,102.7 273.1,103.0 273.2,103.4 273.2,103.6 273.2,103.9 273.3,104.1 273.3,104.3 273.3,104.5 273.3,104.7 273.3,104.8 273.3,104.9 273.3,104.9 273.3,105.0 273.3,105.0" stroke="#1f3f8f" stroke-width="1.8" fill="none"/><circle cx="105.8" cy="65.0" r="40" fill="none" stroke="#888" stroke-dasharray="4,3"/><line x1="105.8" y1="65.0" x2="71.1" y2="45.0" stroke="#888"/><line x1="105.8" y1="65.0" x2="105.8" y2="105.0" stroke="#888"/><path d="M105.8,76.0 A11,11 0 0 1 96.2,59.5" stroke="#555" fill="none"/><circle cx="71.1" cy="45.0" r="2.8" fill="#d9701e"/><text x="63.1" y="42.0" font-size="11" text-anchor="middle">P</text><text x="89.3" y="78.5" font-size="10" text-anchor="middle" font-style="italic">θ</text><text x="273.3" y="119.0" font-size="11" text-anchor="middle">2π</text><text x="147.7" y="119.0" font-size="11" text-anchor="middle">π</text><line x1="147.7" y1="103.0" x2="147.7" y2="107.0" stroke="#555" stroke-width="1"/><text x="16.0" y="29.0" font-size="11" text-anchor="end">2</text><line x1="20.0" y1="25.0" x2="147.7" y2="25.0" stroke="#888" stroke-dasharray="3,3"/><text x="16.0" y="119.0" font-size="11" text-anchor="middle">O</text><text x="147.7" y="83.0" font-size="12" text-anchor="middle" font-style="italic">S</text><text x="292.0" y="100.0" font-size="11" text-anchor="end" font-style="italic">x</text></svg>
+<div class="solx"><b>解</b>　$\dfrac{dx}{d\theta}=1-\cos\theta\geqq0$ より、$\theta$ が $0$ から $2\pi$ まで増えると $x$ は $0$ から $2\pi$ まで増加する。また $y\geqq0$。<br>
+$\displaystyle S=\int_0^{2\pi}y\,dx=\int_0^{2\pi}(1-\cos\theta)(1-\cos\theta)\,d\theta=\int_0^{2\pi}(1-2\cos\theta+\cos^2\theta)\,d\theta$<br>
+$\displaystyle=\int_0^{2\pi}\left(\frac32-2\cos\theta+\frac{\cos2\theta}{2}\right)d\theta=\Big[\frac32\theta-2\sin\theta+\frac{\sin2\theta}{4}\Big]_0^{2\pi}=\boldsymbol{3\pi}$<br>
+（転がる円の面積 $\pi$ のちょうど3倍になる。）</div>
+</div>
+<h3>講義3　体積（断面積と $x$ 軸のまわりの回転体）</h3>
+<div class="box lect">
+立体を $x$ 軸に垂直な平面で切った断面積が $S(x)$ のとき、薄い板（厚さ $dx$）を積み重ねる考えで体積は ${\displaystyle V=\int_a^bS(x)\,dx}$。体積の問題は、<b>どの方向に切れば断面が簡単になるか</b>を考えることから始まる。<br>
+<b>回転体</b>：曲線 $y=f(x)$ と $x$ 軸の間（$a\leqq x\leqq b$）を $x$ 軸のまわりに回転すると、断面は半径 $|f(x)|$ の円。2曲線 $0\leqq g(x)\leqq f(x)$ の間なら、断面は円から円を除いた形（ドーナツ形）になる。<br>
+　$\displaystyle V=\pi\int_a^b\{f(x)\}^2\,dx$、　$\displaystyle V=\pi\int_a^b\left[\{f(x)\}^2-\{g(x)\}^2\right]dx$
+</div>
+<div class="box ex">
+(1) 曲線 $y=\sin x\ (0\leqq x\leqq\pi)$ と $x$ 軸で囲まれた図形を、$x$ 軸のまわりに1回転してできる立体の体積を求めよ。<br>
+(2) 底面の半径が $a$ で高さが $a$ 以上の直円柱がある。底面の直径 AB を含み、底面と $45^\circ$ の角をなす平面でこの円柱を切ったとき、小さい方の立体の体積を求めよ。
+<div class="solx"><b>解</b>　(1) $\displaystyle V=\pi\int_0^\pi\sin^2x\,dx=\pi\cdot\frac\pi2=\boldsymbol{\frac{\pi^2}{2}}$（第25章 講義3の(1)）<br>
+(2) 底面の中心を原点、直線 AB を $x$ 軸にとる（$-a\leqq x\leqq a$）。$x$ 軸に垂直な平面で切ると、断面は直角をはさむ2辺がともに $\sqrt{a^2-x^2}$ の<b>直角二等辺三角形</b>（$45^\circ$ だから高さ＝底辺）で、$S(x)=\dfrac12(a^2-x^2)$。<br>
+$\displaystyle V=\int_{-a}^a\frac12(a^2-x^2)\,dx=\int_0^a(a^2-x^2)\,dx=\boldsymbol{\frac23a^3}$（偶関数であることを利用）</div>
+</div>
+<h3>講義4　$y$ 軸のまわりの回転体</h3>
+<div class="box lect">
+$y$ 軸のまわりに回転するときは、$y$ 軸に垂直に切る。断面は半径 $|x|$ の円なので、曲線を <b>$x=h(y)$ の形に表して</b> ${\displaystyle V=\pi\int_c^d\{h(y)\}^2\,dy}$。<br>
+$x=h(y)$ と解きにくいときは、<b>$y=f(x)$ のまま置換積分</b>する：$dy=f'(x)\,dx$ とし、$y$ の区間を $x$ の区間に書きかえて ${\displaystyle V=\pi\int x^2f'(x)\,dx}$ の形で計算する（講義6）。
+</div>
+<div class="box ex">
+曲線 $y=e^x$、$y$ 軸、直線 $y=e$ で囲まれた図形を、$y$ 軸のまわりに1回転してできる立体の体積を求めよ。
+<div class="solx"><b>解</b>　図形は $1\leqq y\leqq e$ の範囲にあり、高さ $y$ での断面は半径 $x=\log y$ の円である。よって ${\displaystyle V=\pi\int_1^e(\log y)^2\,dy}$。<br>
+部分積分を2回用いて $\displaystyle\int(\log y)^2\,dy=y(\log y)^2-\int y\cdot\frac{2\log y}{y}\,dy=y(\log y)^2-2(y\log y-y)+C$<br>
+$V=\pi\Big[y(\log y)^2-2y\log y+2y\Big]_1^e=\pi\{(e-2e+2e)-2\}=\boldsymbol{\pi(e-2)}$</div>
+</div>
+<h3>講義5　曲線の長さと道のり</h3>
+<div class="box lect">
+曲線 $x=f(t),\ y=g(t)\ (\alpha\leqq t\leqq\beta)$ の長さは、小さな部分を線分 $\sqrt{(\Delta x)^2+(\Delta y)^2}$ で近似して足し合わせる考えから<br>
+$L=\displaystyle\int_\alpha^\beta\sqrt{\left(\frac{dx}{dt}\right)^2+\left(\frac{dy}{dt}\right)^2}\,dt$。$y=f(x)$ なら $x$ を媒介変数とみて $L=\displaystyle\int_a^b\sqrt{1+\{f'(x)\}^2}\,dx$。<br>
+これは「速さ」の積分でもある。平面上の点の速さは $\sqrt{\left(\frac{dx}{dt}\right)^2+\left(\frac{dy}{dt}\right)^2}$（第24章）だから、$L$ は点が動いた<b>道のり</b>に等しい。<br>
+数直線上を速度 $v(t)$ で動く点の、$t=a$ から $b$ までの<br>
+・<b>位置の変化</b>：$\displaystyle\int_a^bv(t)\,dt$（逆向きに進んだ分は差し引かれる）<br>
+・<b>道のり</b>：$\displaystyle\int_a^b|v(t)|\,dt$（$v$ の符号が変わる時刻で区間を分ける）
+</div>
+<div class="box ex">
+(1) サイクロイド $x=\theta-\sin\theta,\ y=1-\cos\theta\ (0\leqq\theta\leqq2\pi)$ の長さを求めよ。<br>
+(2) 曲線 $y=\dfrac{e^x+e^{-x}}{2}\ (0\leqq x\leqq1)$ の長さを求めよ。
+<div class="solx"><b>解</b>　(1) $\left(\dfrac{dx}{d\theta}\right)^2+\left(\dfrac{dy}{d\theta}\right)^2=(1-\cos\theta)^2+\sin^2\theta=2(1-\cos\theta)=4\sin^2\dfrac\theta2$。$0\leqq\theta\leqq2\pi$ で $\sin\dfrac\theta2\geqq0$ だから<br>
+$\displaystyle L=\int_0^{2\pi}2\sin\frac\theta2\,d\theta=\Big[-4\cos\frac\theta2\Big]_0^{2\pi}=4-(-4)=\boldsymbol{8}$<br>
+(2) $y'=\dfrac{e^x-e^{-x}}2$ より $1+(y')^2=\dfrac{4+e^{2x}-2+e^{-2x}}{4}=\left(\dfrac{e^x+e^{-x}}{2}\right)^2$。<br>
+$\displaystyle L=\int_0^1\frac{e^x+e^{-x}}{2}\,dx=\Big[\frac{e^x-e^{-x}}{2}\Big]_0^1=\boldsymbol{\frac12\left(e-\frac1e\right)}$</div>
+</div>
+<div class="box ex">
+(3) 数直線上を動く点の時刻 $t$ における速度が $v(t)=t^2-3t+2$ のとき、$t=0$ から $t=3$ までの位置の変化と道のりを求めよ。
+<div class="solx"><b>解</b>　$v=(t-1)(t-2)$ は $0\lt t\lt1$、$2\lt t\lt3$ で正、$1\lt t\lt2$ で負。$\int_0^1v\,dt=\frac56$、$\int_1^2v\,dt=-\frac16$、$\int_2^3v\,dt=\frac56$。<br>
+位置の変化は $\frac56-\frac16+\frac56=\boldsymbol{\frac32}$、道のりは $\frac56+\frac16+\frac56=\boldsymbol{\frac{11}{6}}$</div>
+</div>
+<div class="box chk">
+(1) 楕円 $x=2\cos\theta,\ y=\sin\theta\ (0\leqq\theta\leqq2\pi)$ で囲まれた図形の面積を、媒介変数表示を用いて求めよ。　(2) 曲線 $y=\dfrac23x\sqrt x\ (0\leqq x\leqq3)$ の長さを求めよ。　(3) アステロイド $x=\cos^3\theta,\ y=\sin^3\theta\ (0\leqq\theta\leqq2\pi)$ の全長を求めよ。　(4) 数直線上を動く点が時刻 $t=0$ に原点を出発し、速度 $v(t)=\cos\pi t$ で動く。$t=\frac32$ における点の座標と、それまでの道のりを求めよ。
+</div>
+<div class="box aim">
+・面積・体積は<b>図をかいて</b>、積分する変数（$x$ か $y$ か）と区間を決める。$y$ で積分すると区間を分けずに済むことが多い。<br>
+・回転体で、図形が<b>回転軸の両側にある</b>ときは、軸の片側に折り返して重ね、外側の曲線だけを使う。<br>
+・媒介変数表示の面積・長さ（サイクロイド、アステロイド、楕円）は頻出。<b>根号の中が完全平方になる</b>ように、半角の公式などで整理する。<br>
+・「道のり」は $|v|$ の積分。符号の変わり目で区間を分ける。
+</div>
+<h3 class="deep">講義6　$y$ 軸のまわりの回転体とバームクーヘン積分</h3>
+<p>曲線 $y=\sin x\ (0\leqq x\leqq\pi)$ と $x$ 軸で囲まれた図形を、$y$ 軸のまわりに1回転してできる立体の体積 $V$ を求めたい。$x$ を $y$ の式で表すのが難しいので、2通りの方法を示す。</p>
+<div class="box lect">
+<b>方法1（置換積分）</b>　$0\leqq y\leqq1$ に対し $\sin x=y$ となる $x$ を $x_1\ \left(0\leqq x_1\leqq\frac\pi2\right)$、$x_2\ \left(\frac\pi2\leqq x_2\leqq\pi\right)$ とすると、高さ $y$ の断面は半径 $x_2$ の円から半径 $x_1$ の円を除いた形。<br>
+$V=\pi\displaystyle\int_0^1x_2^{\,2}\,dy-\pi\int_0^1x_1^{\,2}\,dy$。それぞれ $y=\sin x$、$dy=\cos x\,dx$ と置換すると（$x_2$ は $y:0\to1$ で $\pi\to\frac\pi2$）<br>
+$V=\pi\displaystyle\int_\pi^{\frac\pi2}x^2\cos x\,dx-\pi\int_0^{\frac\pi2}x^2\cos x\,dx=-\pi\int_0^\pi x^2\cos x\,dx$<br>
+部分積分2回で $\displaystyle\int x^2\cos x\,dx=x^2\sin x+2x\cos x-2\sin x+C$ だから $\displaystyle\int_0^\pi x^2\cos x\,dx=-2\pi$。よって $V=2\pi^2$。<br>
+<b>方法2（バームクーヘン積分）</b>　$x$ から $x+\Delta x$ までの細い帯を $y$ 軸のまわりに回すと、半径 $x$、高さ $f(x)$、厚さ $\Delta x$ の薄い円筒ができ、その体積はおよそ $2\pi x\cdot f(x)\cdot\Delta x$（円周 × 高さ × 厚さ）。これを足し合わせて<br>
+$V=2\pi\displaystyle\int_a^bxf(x)\,dx$（$0\leqq a\lt b$、$f(x)\geqq0$）<br>
+いまの例では $V=2\pi\displaystyle\int_0^\pi x\sin x\,dx=2\pi\Big[-x\cos x+\sin x\Big]_0^\pi=2\pi\cdot\pi=2\pi^2$ となり、方法1と一致する。
+</div>
+<p>方法2の公式は教科書の本文では扱われないことが多いので、記述式の答案では方法1で書くか、公式を導いてから使うのが安全である（方法1の式を部分積分すると、方法2の式が導ける）。</p>
+<div class="box warn">
+・2曲線の間の回転体を $\pi\displaystyle\int(f-g)^2\,dx$ としてしまう。正しくは $\pi\displaystyle\int(f^2-g^2)\,dx$（大きい円から小さい円を引く）。<br>
+・媒介変数表示の面積で、$t$ の区間の向き（$x$ が減少する部分）を誤り、面積が負になる。<br>
+・道のりを $\int v\,dt$ で計算してしまう（それは位置の変化）。<br>
+・曲線の長さで $\sqrt{\sin^2\frac\theta2}$ を、符号を確認せずに $\sin\frac\theta2$ とする。
+</div>
+<div class="box ans">
+(1) 上半分（$0\leqq\theta\leqq\pi$）では $x$ が $2$ から $-2$ へ減少するので、$S=2\int_{-2}^2y\,dx=2\int_\pi^0\sin\theta\cdot(-2\sin\theta)\,d\theta=4\int_0^\pi\sin^2\theta\,d\theta=2\pi$　(2) $y'=\sqrt x$ より $\int_0^3\sqrt{1+x}\,dx=\left[\frac23(1+x)^{\frac32}\right]_0^3=\frac23(8-1)=\frac{14}3$　(3) $\left(\frac{dx}{d\theta}\right)^2+\left(\frac{dy}{d\theta}\right)^2=9\sin^2\theta\cos^2\theta$。対称性から $4\int_0^{\frac\pi2}3\sin\theta\cos\theta\,d\theta=4\cdot\frac32=6$　(4) 座標は $\int_0^{\frac32}\cos\pi t\,dt=\left[\frac{\sin\pi t}{\pi}\right]_0^{\frac32}=-\frac1\pi$。道のりは $\int_0^{\frac12}\cos\pi t\,dt-\int_{\frac12}^{\frac32}\cos\pi t\,dt=\frac1\pi+\frac2\pi=\frac3\pi$
+</div>

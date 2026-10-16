@@ -1,0 +1,649 @@
+<!--CH 16-->
+<div class="box point">
+・<b>等差数列</b>（初項 $a$、公差 $d$）：$a_n=a+(n-1)d$、和 $S_n=\dfrac{n(a+l)}{2}=\dfrac n2\{2a+(n-1)d\}$（$l$ は末項）<br>
+・<b>等比数列</b>（初項 $a$、公比 $r$）：$a_n=ar^{n-1}$、和 $S_n=\dfrac{a(1-r^n)}{1-r}=\dfrac{a(r^n-1)}{r-1}\ (r\neq1)$、$r=1$ のとき $S_n=na$<br>
+・<b>和の公式</b>：$\displaystyle\sum_{k=1}^{n}k=\frac12n(n+1)$、$\displaystyle\sum_{k=1}^{n}k^2=\frac16n(n+1)(2n+1)$、$\displaystyle\sum_{k=1}^{n}k^3=\left\{\frac12n(n+1)\right\}^2$、$\displaystyle\sum_{k=1}^{n}c=nc$<br>
+・<b>階差数列</b> $b_n=a_{n+1}-a_n$：$n\geqq2$ のとき $\displaystyle a_n=a_1+\sum_{k=1}^{n-1}b_k$。<b>和 $S_n$ から</b>：$a_1=S_1$、$n\geqq2$ のとき $a_n=S_n-S_{n-1}$<br>
+・<b>漸化式</b> $a_{n+1}=pa_n+q\ (p\neq1)$ は、$\alpha=p\alpha+q$ を満たす $\alpha$ を用いて $a_{n+1}-\alpha=p(a_n-\alpha)$ と変形する
+</div>
+<h3>講義1　等差数列・等比数列と Σ の計算</h3>
+<div class="box lect">
+等差数列の和は、$S_n=a_1+a_2+\dots+a_n$ と、項を逆順に並べた $S_n=a_n+a_{n-1}+\dots+a_1$ を加えると、上下の組の和がすべて $a_1+a_n$ になるので $2S_n=n(a_1+a_n)$。<br>
+等比数列の和は、$S_n-rS_n$ を作るとほとんどの項が打ち消し合い、$(1-r)S_n=a(1-r^n)$ となる（$1-r$ で割れるのは $r\neq1$ のときだけなので、$r=1$ は別扱い）。<br>
+Σ は<b>線形性</b> $\sum(pa_k+qb_k)=p\sum a_k+q\sum b_k$ を使って公式に帰着させる。公式がそのまま使えない形は次の2つが定番。<br>
+①<b>分数の和</b>：部分分数分解 $\dfrac{1}{k(k+1)}=\dfrac1k-\dfrac1{k+1}$ で「差の形」にし、隣どうしを打ち消す。<br>
+②<b>（等差）×（等比）の和</b>：$S-rS$ を作って等比数列の和に帰着させる。
+</div>
+<div class="box ex">
+次の和を求めよ。(1) $\displaystyle\sum_{k=1}^{n}k(k+2)$　(2) $\displaystyle\sum_{k=1}^{n}\frac{1}{(2k-1)(2k+1)}$　(3) $S=1+2\cdot2+3\cdot2^2+\dots+n\cdot2^{n-1}$
+<div class="solx"><b>解</b>　(1) $\displaystyle\sum_{k=1}^{n}(k^2+2k)=\frac16n(n+1)(2n+1)+n(n+1)=\frac16n(n+1)\{(2n+1)+6\}=\boldsymbol{\frac16n(n+1)(2n+7)}$<br>
+(2) $\dfrac{1}{(2k-1)(2k+1)}=\dfrac12\left(\dfrac1{2k-1}-\dfrac1{2k+1}\right)$ より、和は<br>
+$\dfrac12\left\{\left(1-\dfrac13\right)+\left(\dfrac13-\dfrac15\right)+\dots+\left(\dfrac1{2n-1}-\dfrac1{2n+1}\right)\right\}=\dfrac12\left(1-\dfrac1{2n+1}\right)=\boldsymbol{\dfrac{n}{2n+1}}$<br>
+(3) $2S=1\cdot2+2\cdot2^2+\dots+(n-1)\cdot2^{n-1}+n\cdot2^n$。$S-2S$ を計算すると<br>
+$-S=1+2+2^2+\dots+2^{n-1}-n\cdot2^n=(2^n-1)-n\cdot2^n$　よって $S=\boldsymbol{(n-1)\cdot2^n+1}$</div>
+</div>
+<h3>講義2　階差数列と漸化式の基本形</h3>
+<div class="box lect">
+規則が見えにくい数列は、隣り合う項の差 $b_n=a_{n+1}-a_n$（<b>階差数列</b>）を調べる。$a_n=a_1+(a_2-a_1)+(a_3-a_2)+\dots+(a_n-a_{n-1})$ だから $a_n=a_1+\sum_{k=1}^{n-1}b_k$。Σ の上端が $n-1$ なので、この式は $n\geqq2$ でしか使えない。<b>最後に $n=1$ で成り立つかを確かめる</b>。<br>
+漸化式（前の項から次の項を決める式）の基本形は次の3つ。<br>
+・$a_{n+1}=a_n+d$（等差型）　・$a_{n+1}=ra_n$（等比型）　・$a_{n+1}=a_n+f(n)$（階差型：$f(n)$ が階差数列）<br>
+$a_{n+1}=pa_n+q$ 型は、$a_{n+1}$ と $a_n$ をともに $\alpha$ でおきかえた式 $\alpha=p\alpha+q$（<b>特性方程式</b>）の解 $\alpha$ を使う。もとの式から $\alpha=p\alpha+q$ を辺々引くと $a_{n+1}-\alpha=p(a_n-\alpha)$ となり、数列 $\{a_n-\alpha\}$ が公比 $p$ の等比数列になる。
+</div>
+<div class="box ex">
+(1) 数列 $2,\ 3,\ 6,\ 11,\ 18,\ \dots$ の一般項を求めよ。<br>
+(2) $a_1=1,\ a_{n+1}=3a_n+2$ で定まる数列 $\{a_n\}$ の一般項を求めよ。
+<div class="solx"><b>解</b>　(1) 階差数列は $1,3,5,7,\dots$ で、$b_n=2n-1$。$n\geqq2$ のとき<br>
+$\displaystyle a_n=2+\sum_{k=1}^{n-1}(2k-1)=2+2\cdot\frac12(n-1)n-(n-1)=n^2-2n+3$<br>
+これは $n=1$ のとき $1-2+3=2$ となり成り立つ。よって $\boldsymbol{a_n=n^2-2n+3}$<br>
+(2) $\alpha=3\alpha+2$ より $\alpha=-1$。$a_{n+1}+1=3(a_n+1)$ で、$a_1+1=2$。よって $a_n+1=2\cdot3^{n-1}$、$\boldsymbol{a_n=2\cdot3^{n-1}-1}$</div>
+</div>
+<h3>講義3　いろいろな漸化式</h3>
+<div class="box lect">
+方針は「<b>変形して基本形に帰着させる</b>」こと。<br>
+・$a_{n+1}=pa_n+r^n$ 型：両辺を $r^{n+1}$ で割ると、$b_n=\dfrac{a_n}{r^n}$ について $b_{n+1}=\dfrac prb_n+\dfrac1r$ となる（$p^{n+1}$ で割って階差型にしてもよい）。<br>
+・$a_{n+1}=pa_n+f(n)$ 型（$f(n)$ は $n$ の1次式）：例えば $a_{n+1}=2a_n+n$ は $a_{n+1}+(n+1)+1=2(a_n+n+1)$ と変形できる（$a_n+\alpha n+\beta$ が等比数列になるように $\alpha,\beta$ を決める）。$n$ を $n+1$ にした式との差をとり、階差 $a_{n+1}-a_n$ の漸化式にする方法もある。<br>
+・<b>分数型</b> $a_{n+1}=\dfrac{a_n}{pa_n+q}$：すべての $n$ で $a_n\neq0$ を確かめてから<b>逆数</b>をとると $\dfrac1{a_{n+1}}=q\cdot\dfrac{1}{a_n}+p$ となり、$\dfrac1{a_n}$ についての基本形に帰着する。<br>
+・<b>隣接3項間</b> $a_{n+2}=pa_{n+1}+qa_n$：$x^2=px+q$ の2解を $\alpha,\beta$ とすると $\alpha+\beta=p,\ \alpha\beta=-q$ なので、$a_{n+2}-\alpha a_{n+1}=\beta(a_{n+1}-\alpha a_n)$ と $a_{n+2}-\beta a_{n+1}=\alpha(a_{n+1}-\beta a_n)$ がともに成り立つ。$\alpha\neq\beta$ なら、この2式から得られる2つの等比数列の式から $a_{n+1}$ を消去する。
+</div>
+<div class="box ex">
+次の条件で定まる数列 $\{a_n\}$ の一般項を求めよ。<br>
+(1) $a_1=1,\ a_{n+1}=2a_n+3^n$　(2) $a_1=1,\ a_{n+1}=\dfrac{a_n}{3a_n+1}$　(3) $a_1=1,\ a_2=4,\ a_{n+2}=5a_{n+1}-6a_n$
+<div class="solx"><b>解</b>　(1) 両辺を $3^{n+1}$ で割ると $\dfrac{a_{n+1}}{3^{n+1}}=\dfrac23\cdot\dfrac{a_n}{3^n}+\dfrac13$。$b_n=\dfrac{a_n}{3^n}$ とおくと $b_{n+1}=\dfrac23b_n+\dfrac13$ で、特性方程式の解は $1$ なので $b_{n+1}-1=\dfrac23(b_n-1)$。$b_1-1=\dfrac13-1=-\dfrac23$ より $b_n-1=-\left(\dfrac23\right)^n$。よって $a_n=3^nb_n=\boldsymbol{3^n-2^n}$<br>
+(2) $a_1\gt0$ で、$a_n\gt0$ ならば $a_{n+1}\gt0$ なので、すべての $n$ で $a_n\gt0$。逆数をとって $\dfrac{1}{a_{n+1}}=\dfrac{1}{a_n}+3$。$\left\{\dfrac1{a_n}\right\}$ は初項1、公差3の等差数列で $\dfrac1{a_n}=3n-2$。よって $\boldsymbol{a_n=\dfrac{1}{3n-2}}$<br>
+(3) $x^2=5x-6$ の解は $x=2,\ 3$。<br>
+$a_{n+2}-2a_{n+1}=3(a_{n+1}-2a_n)$ より $a_{n+1}-2a_n=(a_2-2a_1)\cdot3^{n-1}=2\cdot3^{n-1}$ …①<br>
+$a_{n+2}-3a_{n+1}=2(a_{n+1}-3a_n)$ より $a_{n+1}-3a_n=(a_2-3a_1)\cdot2^{n-1}=2^{n-1}$ …②<br>
+①−② より $\boldsymbol{a_n=2\cdot3^{n-1}-2^{n-1}}$</div>
+</div>
+<h3>講義4　数学的帰納法</h3>
+<div class="box lect">
+自然数 $n$ に関する命題 $P(n)$ がすべての自然数 $n$ で成り立つことを示すには、次の2つを示せばよい。<br>
+[I] $n=1$ のとき成り立つ。　[II] $n=k$ のとき成り立つと仮定すると、$n=k+1$ のときも成り立つ。<br>
+[I] から $P(1)$、[II] から $P(2)$、$P(3)$、… と、ドミノ倒しのように続く。[II] では<b>仮定 $P(k)$ を必ず使う</b>。$P(k+1)$ の式の中に $P(k)$ の式を見つけるのがコツ。<br>
+不等式では「(示したい式の右辺) − (仮定から得られる左辺の上限) $\geqq0$」を示す。漸化式から一般項を<b>推定</b>し、それを帰納法で証明するという使い方も多い。
+</div>
+<div class="box ex">
+すべての自然数 $n$ について、$\displaystyle\sum_{k=1}^{n}\frac{1}{k^2}\leqq2-\frac1n$ が成り立つことを証明せよ。
+<div class="solx"><b>解</b>　[I] $n=1$ のとき、左辺 $=1$、右辺 $=2-1=1$ で成り立つ。<br>
+[II] $n=k$ のとき成り立つと仮定すると $\displaystyle\sum_{j=1}^{k+1}\frac1{j^2}\leqq2-\frac1k+\frac1{(k+1)^2}$。ここで<br>
+$\left(2-\dfrac1{k+1}\right)-\left(2-\dfrac1k+\dfrac1{(k+1)^2}\right)=\dfrac{1}{k(k+1)}-\dfrac1{(k+1)^2}=\dfrac{1}{k(k+1)^2}\gt0$<br>
+よって $\displaystyle\sum_{j=1}^{k+1}\frac1{j^2}\lt 2-\frac1{k+1}$ となり、$n=k+1$ のときも成り立つ。<br>
+[I]、[II] より、すべての自然数 $n$ について成り立つ。■</div>
+</div>
+<h3>講義5　群数列</h3>
+<div class="box lect">
+数列をいくつかずつの組（<b>群</b>）に区切ったものを<b>群数列</b>という。考え方は次の2段階。<br>
+①第 $n$ 群に含まれる項の個数を調べ、<b>第 $n$ 群の末項がもとの数列の第何項か</b>（第1群から第 $n$ 群までの項数の和）を求める。<br>
+②「もとの数列の第 $N$ 項が第何群か」は、（第 $n-1$ 群の末項の番号）$\lt N\leqq$（第 $n$ 群の末項の番号）を満たす $n$ を探す。<br>
+<b>もとの数列での番号</b>と<b>群の中での番号</b>を区別して扱うことが大切。
+</div>
+<div class="box ex">
+奇数の列を $1\ |\ 3,\ 5\ |\ 7,\ 9,\ 11\ |\ 13,\ \dots$ のように、第 $n$ 群が $n$ 個の数を含むように分ける。<br>
+(1) 第 $n$ 群の最初の数を求めよ。　(2) 第 $n$ 群に含まれる数の和を求めよ。　(3) 99 は第何群の何番目の数か。
+<div class="solx"><b>解</b>　(1) 第 $n-1$ 群の末項までに $1+2+\dots+(n-1)=\frac12n(n-1)$ 個の奇数がある。第 $n$ 群の最初の数は $\frac12n(n-1)+1$ 番目の奇数なので $2\left\{\frac12n(n-1)+1\right\}-1=\boldsymbol{n^2-n+1}$（$n=1$ のときも正しい）<br>
+(2) 初項 $n^2-n+1$、公差2、項数 $n$ の等差数列の和だから $\frac n2\{2(n^2-n+1)+2(n-1)\}=\boldsymbol{n^3}$<br>
+(3) 99 は50番目の奇数。$\frac12n(n-1)\lt50\leqq\frac12n(n+1)$ を満たす $n$ は $n=10$（$45\lt50\leqq55$）。第10群の最初の数は46番目の奇数なので、99 は<b>第10群の5番目</b>。（第10群は $91,93,95,97,99,\dots$）</div>
+</div>
+<div class="box chk">
+(1) 第5項が13、第12項が34である等差数列の一般項と、初項から第20項までの和を求めよ。<br>
+(2) 初項から第 $n$ 項までの和が $S_n=2n^2+n+1$ である数列 $\{a_n\}$ の一般項を求めよ。<br>
+(3) $a_1=3,\ a_{n+1}=4a_n-3$ で定まる数列の一般項を求めよ。<br>
+(4) $\displaystyle\sum_{k=1}^{n}\frac{1}{\sqrt{k+1}+\sqrt k}$ を求めよ。<br>
+(5) $n$ が自然数のとき、$5^n-1$ は4の倍数であることを数学的帰納法で証明せよ。
+</div>
+<div class="box aim">
+漸化式は<b>型の見きわめ</b>がすべて。$pa_n+q$ 型・階差型・分数型（逆数）・$r^n$ で割る型・隣接3項間の5つを確実にし、見慣れない式は「どう変形すればこの5つのどれかになるか」を考える。共通テストでは、誘導に従って $b_n=a_{n+1}-a_n$ や $b_n=\dfrac{a_n}{2^n}$ などのおきかえを行う形が多い。和 $S_n$ を含む漸化式は、$S_{n+1}-S_n=a_{n+1}$ を使って $S_n$ を消す。二次試験では、一般項を推定して数学的帰納法で示す問題や、不等式の帰納法が頻出。
+</div>
+<h3 class="deep">講義6　和の公式はなぜ成り立つか（差分の考え方）</h3>
+<p>$\sum k^2$ の公式は、「差の形の和」を利用して導ける。これは講義1の部分分数分解と同じ発想である。</p>
+<div class="box lect">
+恒等式 $(k+1)^3-k^3=3k^2+3k+1$ で $k=1,2,\dots,n$ とした $n$ 個の式を辺々加えると、左辺は隣どうしが打ち消し合って $(n+1)^3-1^3$ だけが残る。よって<br>
+$\displaystyle(n+1)^3-1=3\sum_{k=1}^{n}k^2+3\cdot\frac12n(n+1)+n$<br>
+これを $\sum k^2$ について解くと $\displaystyle\sum_{k=1}^{n}k^2=\frac13\left\{(n+1)^3-1-\frac32n(n+1)-n\right\}=\frac16n(n+1)(2n+1)$。<br>
+一般に、$a_k=f(k+1)-f(k)$ と表せれば $\displaystyle\sum_{k=1}^{n}a_k=f(n+1)-f(1)$ となる。例えば $k(k+1)=\frac13\{k(k+1)(k+2)-(k-1)k(k+1)\}$ より、$\displaystyle\sum_{k=1}^{n}k(k+1)=\frac13n(n+1)(n+2)$ がすぐに得られる。
+</div>
+<div class="box warn">
+・階差数列や $S_n-S_{n-1}$ を使った式は $n\geqq2$ のときの式。<b>$n=1$ の確認</b>を忘れない（確認問題(2)のように、$a_1$ だけ別の形になることがある）。<br>
+・$\displaystyle\sum_{k=1}^{n-1}k=\frac12(n-1)n$ のように、上端が $n-1$ のときは公式の $n$ を $n-1$ におきかえる。また $\displaystyle\sum_{k=1}^{n}1=n$（$1$ ではない）。<br>
+・等比数列の和の公式は $r\neq1$ のときだけ使える。公比が文字なら $r=1$ の場合を分ける。
+</div>
+<div class="box ans">
+(1) $a+4d=13,\ a+11d=34$ より $a=1,\ d=3$。$a_n=3n-2$、和は $\frac{20(1+58)}{2}=590$<br>
+(2) $a_1=S_1=4$。$n\geqq2$ で $a_n=S_n-S_{n-1}=4n-1$（$n=1$ を代入すると $3\neq4$）。よって $a_1=4$、$n\geqq2$ のとき $a_n=4n-1$<br>
+(3) $\alpha=4\alpha-3$ より $\alpha=1$。$a_n-1=(3-1)\cdot4^{n-1}$ より $a_n=2\cdot4^{n-1}+1$<br>
+(4) 有理化して $\frac{1}{\sqrt{k+1}+\sqrt k}=\sqrt{k+1}-\sqrt k$。和は $\sqrt{n+1}-1$<br>
+(5) [I] $n=1$ で $5-1=4$。[II] $5^k-1=4m$（$m$ は整数）と仮定すると $5^{k+1}-1=5(5^k-1)+4=4(5m+1)$ で4の倍数。よって成り立つ
+</div>
+
+<!--CH 17-->
+<div class="box point">
+・確率変数 $X$ の<b>期待値</b> $E(X)=m=\sum x_kp_k$、<b>分散</b> $V(X)=E((X-m)^2)=E(X^2)-\{E(X)\}^2$、<b>標準偏差</b> $\sigma(X)=\sqrt{V(X)}$<br>
+・$E(aX+b)=aE(X)+b$、$V(aX+b)=a^2V(X)$、$\sigma(aX+b)=|a|\sigma(X)$。$E(X+Y)=E(X)+E(Y)$。$X,Y$ が<b>独立</b>なら $E(XY)=E(X)E(Y)$、$V(X+Y)=V(X)+V(Y)$<br>
+・<b>二項分布</b> $B(n,p)$：$P(X=r)={}_n\mathrm{C}_rp^rq^{n-r}\ (q=1-p)$、$E(X)=np$、$V(X)=npq$<br>
+・<b>正規分布</b> $N(m,\sigma^2)$ は $Z=\dfrac{X-m}{\sigma}$ で<b>標準正規分布</b> $N(0,1)$ に移る。母平均 $m$、母標準偏差 $\sigma$ の母集団から大きさ $n$ の無作為標本をとると、$n$ が大きいとき標本平均 $\overline{X}$ は近似的に $N\left(m,\dfrac{\sigma^2}{n}\right)$ に従う<br>
+・信頼度95%の信頼区間：母平均は $\overline{X}-1.96\dfrac{\sigma}{\sqrt n}\leqq m\leqq\overline{X}+1.96\dfrac{\sigma}{\sqrt n}$、母比率は $R-1.96\sqrt{\dfrac{R(1-R)}{n}}\leqq p\leqq R+1.96\sqrt{\dfrac{R(1-R)}{n}}$
+</div>
+<h3>講義1　確率変数・期待値・分散</h3>
+<div class="box lect">
+試行の結果によって値が決まり、各値をとる確率が定まっている変数を<b>確率変数</b>、値と確率の対応を<b>確率分布</b>という（確率の総和は1）。<br>
+期待値 $m$ は分布の「重心」、分散は「$m$ からのずれの2乗」の期待値で、散らばりの大きさを表す。$E((X-m)^2)=E(X^2)-2mE(X)+m^2=E(X^2)-m^2$ なので、計算には $V(X)=E(X^2)-m^2$ が便利。<br>
+$Y=aX+b$ では、値をすべて $a$ 倍して $b$ ずらすので、平均も同じように $am+b$ になる。一方、散らばりは平行移動 $b$ の影響を受けず、幅が $|a|$ 倍になるので分散は $a^2$ 倍になる。
+</div>
+<div class="box ex">
+1 から 5 までの数字を1つずつ書いた5枚のカードから同時に2枚取り出し、大きい方の数を $X$ とする。$X$ の期待値・分散・標準偏差を求めよ。また、$Y=2X-3$ の期待値と分散を求めよ。
+<div class="solx"><b>解</b>　取り出し方は ${}_5\mathrm{C}_2=10$ 通り。$X=k$ となるのは、もう1枚が $k$ より小さいときで $k-1$ 通り。
+<table><tr><th>$X$</th><td>2</td><td>3</td><td>4</td><td>5</td><th>計</th></tr><tr><th>$P$</th><td>$\frac1{10}$</td><td>$\frac2{10}$</td><td>$\frac3{10}$</td><td>$\frac4{10}$</td><td>1</td></tr></table>
+$E(X)=\dfrac{2\cdot1+3\cdot2+4\cdot3+5\cdot4}{10}=\boldsymbol4$、$E(X^2)=\dfrac{4\cdot1+9\cdot2+16\cdot3+25\cdot4}{10}=17$ より $V(X)=17-4^2=\boldsymbol1$、$\sigma(X)=\boldsymbol1$<br>
+$E(Y)=2\cdot4-3=\boldsymbol5$、$V(Y)=2^2\cdot1=\boldsymbol4$</div>
+</div>
+<h3>講義2　確率変数の和と二項分布</h3>
+<div class="box lect">
+2つの確率変数 $X,Y$ について、$E(X+Y)=E(X)+E(Y)$ は<b>独立でなくても</b>成り立つ。一方、$E(XY)=E(X)E(Y)$ と $V(X+Y)=V(X)+V(Y)$ は<b>独立</b>のときに成り立つ（一般には $V(X+Y)=V(X)+V(Y)+2\{E(XY)-E(X)E(Y)\}$）。<br>
+1回の試行で事象 $A$ の起こる確率を $p$ とし、この試行を $n$ 回くり返すとき、$A$ の起こる回数 $X$ の分布が<b>二項分布</b> $B(n,p)$ である。<br>
+$k$ 回目に $A$ が起これば1、起こらなければ0をとる確率変数を $X_k$ とすると $X=X_1+X_2+\dots+X_n$ で、$E(X_k)=p$、$V(X_k)=E(X_k^2)-p^2=p-p^2=pq$。$X_1,\dots,X_n$ は独立なので、$E(X)=np$、$V(X)=npq$ が得られる。
+</div>
+<div class="box ex">
+(1) 1個のさいころを4回投げるとき、3の倍数の目が出る回数を $X$ とする。$P(X=2)$ と、$X$ の期待値・分散を求めよ。<br>
+(2) 1個のさいころを180回投げるとき、1の目が出る回数 $Y$ の期待値と標準偏差を求めよ。
+<div class="solx"><b>解</b>　(1) $X$ は二項分布 $B\left(4,\frac13\right)$ に従う。$P(X=2)={}_4\mathrm{C}_2\left(\frac13\right)^2\left(\frac23\right)^2=6\cdot\frac{4}{81}=\boldsymbol{\frac{8}{27}}$、$E(X)=4\cdot\frac13=\boldsymbol{\frac43}$、$V(X)=4\cdot\frac13\cdot\frac23=\boldsymbol{\frac89}$<br>
+(2) $Y$ は $B\left(180,\frac16\right)$ に従うので $E(Y)=180\cdot\frac16=\boldsymbol{30}$。$V(Y)=180\cdot\frac16\cdot\frac56=25$ より $\sigma(Y)=\boldsymbol5$</div>
+</div>
+<h3>講義3　正規分布と正規分布表</h3>
+<div class="box lect">
+身長や測定誤差のように連続的な値をとる確率変数 $X$ では、確率を<b>確率密度関数</b> $f(x)$ のグラフと $x$ 軸の間の面積で表す：$P(a\leqq X\leqq b)=\displaystyle\int_a^bf(x)\,dx$（全体の面積は1）。<br>
+<b>正規分布</b> $N(m,\sigma^2)$ の密度関数のグラフは、直線 $x=m$ に関して対称な釣鐘型で、$\sigma$ が大きいほど低く横に広がる。$Z=\dfrac{X-m}{\sigma}$ と<b>標準化</b>すると $Z$ は $N(0,1)$ に従うので、どんな正規分布の確率も<b>正規分布表</b>（$p(u)=P(0\leqq Z\leqq u)$ の値の表。下図の色の部分）で求められる。<br>
+対称性から $P(Z\geqq0)=0.5$、$P(-u\leqq Z\leqq0)=p(u)$。例えば $P(Z\geqq u)=0.5-p(u)$。また $P(|Z|\leqq1)\fallingdotseq0.683$、$P(|Z|\leqq2)\fallingdotseq0.954$、$P(|Z|\leqq1.96)\fallingdotseq0.95$。<br>
+二項分布 $B(n,p)$ は、$n$ が大きいとき正規分布 $N(np,\ npq)$ で近似できる。
+</div>
+<svg class="fig" width="330" height="140" viewBox="0 0 330 140"><polygon points="165,116 165,16.3 166.5,16.3 167.9,16.5 169.4,16.7 170.8,17.1 172.3,17.6 173.8,18.1 175.2,18.8 176.7,19.6 178.2,20.4 179.6,21.4 181.1,22.4 182.6,23.6 184,24.8 185.5,26.1 186.9,27.4 188.4,28.9 189.9,30.4 191.3,32 192.8,33.6 194.2,35.3 195.7,37 197.2,38.8 198.6,40.6 200.1,42.4 201.6,44.3 203,46.2 204.5,48.1 205.9,50.1 207.4,52 208.9,54 210.3,56 211.8,57.9 213.3,59.9 214.7,61.8 216.2,63.8 217.7,65.7 219.1,67.6 220.6,69.5 222,71.3 223.5,73.2 223.5,116" fill="#d6e0f5" stroke="none"/><line x1="10" y1="116" x2="318" y2="116" stroke="#888" stroke-width="1"/><polygon points="318,116 313,113.8 313,118.2" fill="#888"/><path d="M12,115.7 L14.2,115.6 L16.5,115.6 L18.8,115.5 L21,115.4 L23.2,115.3 L25.5,115.2 L27.8,115 L30,114.9 L32.2,114.7 L34.5,114.5 L36.8,114.3 L39,114 L41.2,113.7 L43.5,113.4 L45.8,113 L48,112.6 L50.3,112.1 L52.5,111.6 L54.8,111 L57,110.4 L59.3,109.7 L61.5,108.9 L63.8,108.1 L66,107.1 L68.2,106.1 L70.5,105 L72.8,103.8 L75,102.5 L77.3,101.1 L79.5,99.6 L81.8,98 L84,96.3 L86.3,94.4 L88.5,92.5 L90.8,90.4 L93,88.3 L95.3,86 L97.5,83.6 L99.8,81.1 L102,78.6 L104.3,75.9 L106.5,73.2 L108.8,70.3 L111,67.5 L113.2,64.5 L115.5,61.5 L117.8,58.5 L120,55.5 L122.3,52.5 L124.5,49.5 L126.8,46.5 L129,43.6 L131.3,40.7 L133.5,37.9 L135.8,35.3 L138,32.7 L140.2,30.3 L142.5,28 L144.8,25.9 L147,23.9 L149.3,22.2 L151.5,20.7 L153.8,19.3 L156,18.2 L158.2,17.4 L160.5,16.8 L162.8,16.4 L165,16.3 L167.2,16.4 L169.5,16.8 L171.8,17.4 L174,18.2 L176.3,19.3 L178.5,20.7 L180.8,22.2 L183,23.9 L185.2,25.9 L187.5,28 L189.8,30.3 L192,32.7 L194.2,35.3 L196.5,37.9 L198.8,40.7 L201,43.6 L203.2,46.5 L205.5,49.5 L207.8,52.5 L210,55.5 L212.2,58.5 L214.5,61.5 L216.8,64.5 L219,67.5 L221.3,70.3 L223.5,73.2 L225.8,75.9 L228,78.6 L230.3,81.1 L232.5,83.6 L234.8,86 L237,88.3 L239.3,90.4 L241.5,92.5 L243.8,94.4 L246,96.3 L248.2,98 L250.5,99.6 L252.8,101.1 L255,102.5 L257.2,103.8 L259.5,105 L261.8,106.1 L264,107.1 L266.2,108.1 L268.5,108.9 L270.8,109.7 L273,110.4 L275.2,111 L277.5,111.6 L279.8,112.1 L282,112.6 L284.3,113 L286.5,113.4 L288.8,113.7 L291,114 L293.2,114.3 L295.5,114.5 L297.8,114.7 L300,114.9 L302.2,115 L304.5,115.2 L306.8,115.3 L309,115.4 L311.2,115.5 L313.5,115.6 L315.8,115.6 L318,115.7" fill="none" stroke="#1f3f8f" stroke-width="1.6"/><line x1="165" y1="116" x2="165" y2="16.3" stroke="#888" stroke-width="0.8" stroke-dasharray="3,2"/><line x1="223.5" y1="116" x2="223.5" y2="73.2" stroke="#1f3f8f" stroke-width="1"/><text x="165" y="130" font-size="12" text-anchor="middle" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif">0</text><text x="223.5" y="130" font-size="12" text-anchor="middle" fill="#222" font-style="italic" font-family="Liberation Serif,DejaVu Serif,serif">u</text><text x="314" y="130" font-size="12" text-anchor="middle" fill="#222" font-style="italic" font-family="Liberation Serif,DejaVu Serif,serif">z</text><text x="192.9" y="73.5" font-size="12" text-anchor="middle" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif">p(u)</text><text x="93" y="43.5" font-size="12" text-anchor="middle" fill="#1f3f8f" font-family="Liberation Serif,DejaVu Serif,serif">N(0, 1)</text></svg>
+<table class="w"><tr><th>$u$</th><td>0.5</td><td>1.0</td><td>1.5</td><td>1.64</td><td>1.96</td><td>2.0</td><td>2.5</td><td>3.0</td></tr><tr><th>$p(u)$</th><td>0.1915</td><td>0.3413</td><td>0.4332</td><td>0.4495</td><td>0.4750</td><td>0.4772</td><td>0.4938</td><td>0.4987</td></tr></table>
+<p style="text-align:center;font-size:9pt">正規分布表（この章で使う値の抜粋）</p>
+<div class="box ex">
+(1) ある試験の得点 $X$ は正規分布 $N(60,15^2)$ に従うとする。$X\geqq75$ となる確率と、$45\leqq X\leqq90$ となる確率を求めよ。<br>
+(2) 講義2の例題(2)の $Y$ について、$Y\geqq40$ となる確率を、正規分布で近似して求めよ。
+<div class="solx"><b>解</b>　(1) $Z=\dfrac{X-60}{15}$ とおくと、$Z$ は $N(0,1)$ に従う。<br>
+$P(X\geqq75)=P(Z\geqq1)=0.5-p(1)=0.5-0.3413=\boldsymbol{0.1587}$<br>
+$P(45\leqq X\leqq90)=P(-1\leqq Z\leqq2)=p(1)+p(2)=0.3413+0.4772=\boldsymbol{0.8185}$<br>
+(2) $Y$ は近似的に $N(30,5^2)$ に従う。$Z=\dfrac{Y-30}{5}$ として $P(Y\geqq40)=P(Z\geqq2)=0.5-0.4772=\boldsymbol{0.0228}$<br>
+（二項分布のまま正確に計算すると約0.032。正規分布による近似は、$n$ が大きいほど精度がよくなる。）</div>
+</div>
+<h3>講義4　標本平均の分布と推定</h3>
+<div class="box lect">
+調査の対象全体を<b>母集団</b>、その中から取り出した一部を<b>標本</b>という。母集団の変量の平均・標準偏差を<b>母平均</b> $m$、<b>母標準偏差</b> $\sigma$ とよぶ。大きさ $n$ の標本を無作為に（復元抽出で、または母集団が十分大きいとして）取り出すと、標本平均 $\overline{X}=\frac1n(X_1+\dots+X_n)$ は確率変数で、<br>
+$E(\overline{X})=m$、$\sigma(\overline{X})=\dfrac{\sigma}{\sqrt n}$（$X_1,\dots,X_n$ が独立なので $V(\overline X)=\frac{1}{n^2}\cdot n\sigma^2=\frac{\sigma^2}{n}$）<br>
+さらに $n$ が大きければ、母集団の分布によらず $\overline{X}$ は近似的に正規分布 $N\left(m,\frac{\sigma^2}{n}\right)$ に従う。<br>
+$2p(1.96)=0.95$ なので $P\left(|\overline X-m|\leqq1.96\frac{\sigma}{\sqrt n}\right)\fallingdotseq0.95$。これを $m$ について解いた区間 $\overline{X}-1.96\frac{\sigma}{\sqrt n}\leqq m\leqq\overline{X}+1.96\frac{\sigma}{\sqrt n}$ を、母平均 $m$ に対する<b>信頼度95%の信頼区間</b>という。「この方法で区間を作ることをくり返すと、約95%の区間が $m$ を含む」という意味である。$\sigma$ がわからないときは、$n$ が大きければ標本の標準偏差で代用する。<br>
+母比率 $p$ の推定では、標本比率 $R$ が近似的に $N\left(p,\frac{p(1-p)}{n}\right)$ に従うことを使い、$p(1-p)$ を $R(1-R)$ で代用する。
+</div>
+<div class="box ex">
+(1) 母平均50、母標準偏差20の母集団から大きさ100の無作為標本をとる。標本平均 $\overline{X}$ が53以上となる確率を求めよ。<br>
+(2) ある工場の製品から400個を無作為に抽出して重さを測ると、平均102.0 g、標準偏差5.0 g であった。製品全体の重さの平均 $m$ を信頼度95%で推定せよ。<br>
+(3) ある町で400人を無作為に選んで調べたところ、80人がある政策を支持していた。町全体の支持率 $p$ を信頼度95%で推定せよ（小数第3位まで）。
+<div class="solx"><b>解</b>　(1) $\overline X$ は近似的に $N\left(50,\frac{20^2}{100}\right)=N(50,2^2)$ に従う。$P(\overline X\geqq53)=P\left(Z\geqq\frac{53-50}{2}\right)=P(Z\geqq1.5)=0.5-0.4332=\boldsymbol{0.0668}$<br>
+(2) $1.96\cdot\dfrac{5.0}{\sqrt{400}}=0.49$ より $\boldsymbol{101.51\leqq m\leqq102.49}$（単位は g）<br>
+(3) $R=\dfrac{80}{400}=0.2$、$\sqrt{\dfrac{0.2\times0.8}{400}}=0.02$、$1.96\times0.02=0.0392$ より $0.1608\leqq p\leqq0.2392$、すなわち $\boldsymbol{0.161\leqq p\leqq0.239}$</div>
+</div>
+<h3>講義5　仮説検定</h3>
+<div class="box lect">
+得られたデータから、ある主張が正しいといえるかを確率を用いて判断する方法が<b>仮説検定</b>である。<br>
+①主張したいこと（<b>対立仮説</b>）に反する仮説（<b>帰無仮説</b>）を立てる。<br>
+②帰無仮説が正しいとしたときに、起こる確率が<b>有意水準</b>（ふつう5%）以下となるような、かたよった値の範囲（<b>棄却域</b>）を定める。<br>
+③データが棄却域に入れば帰無仮説を<b>棄却</b>し、対立仮説が正しいと判断する。入らなければ「棄却できない」（帰無仮説が正しいと証明されたわけではない）。<br>
+有意水準5%の棄却域は、標準化した $Z$ について次のとおり。<br>
+・<b>両側検定</b>（「$p$ は $p_0$ と異なる」）：$|Z|\geqq1.96$　・<b>片側検定</b>（「$p$ は $p_0$ より大きい」）：$Z\geqq1.64$（$p(1.64)\fallingdotseq0.45$ より）<br>
+どちらを使うかは、<b>データを見る前に、対立仮説の内容で決める</b>。
+</div>
+<div class="box ex">
+(1) 1枚の硬貨を400回投げたところ、表が220回出た。この硬貨は表と裏の出やすさが異なるといえるか。有意水準5%で検定せよ。<br>
+(2) ある病気の従来の治療法で治る割合は60%である。新しい治療法を150人に行ったところ101人が治った。新しい治療法は従来より治る割合が高いといえるか。有意水準5%で検定せよ。
+<div class="solx"><b>解</b>　(1) 帰無仮説を「表の出る確率は $\frac12$」とする。このとき表の回数 $X$ は $B\left(400,\frac12\right)$ に従い、$E(X)=200$、$\sigma(X)=\sqrt{400\cdot\frac12\cdot\frac12}=10$ で、近似的に $N(200,10^2)$ に従う。「異なる」かどうかを調べるので両側検定。$Z=\dfrac{220-200}{10}=2.0$ は $|Z|\geqq1.96$ を満たし、棄却域に入る。帰無仮説は棄却され、<b>表と裏の出やすさは異なるといえる</b>。<br>
+(2) 帰無仮説を「治る割合は0.6」とする。治る人数 $X$ は $B(150,\ 0.6)$ に従い、$E(X)=90$、$\sigma(X)=\sqrt{150\cdot0.6\cdot0.4}=6$。「高い」かどうかを調べるので片側検定（棄却域 $Z\geqq1.64$）。$Z=\dfrac{101-90}{6}\fallingdotseq1.83\geqq1.64$ より帰無仮説は棄却され、<b>治る割合は従来より高いといえる</b>。<br>
+（同じデータでも両側検定なら $1.83\lt1.96$ で棄却できない。どちらの検定を使うかを問題文から正しく判断することが重要。）</div>
+</div>
+<div class="box chk">
+(1) 確率変数 $X$ のとる値が $1,2,3$ で、その確率がそれぞれ $\frac12,\frac13,\frac16$ のとき、$E(X)$、$V(X)$、$E(-3X+2)$、$V(-3X+2)$ を求めよ。<br>
+(2) 独立な確率変数 $X,Y$ について $E(X)=2,\ V(X)=3,\ E(Y)=-1,\ V(Y)=4$ のとき、$E(2X-Y)$ と $V(2X-Y)$ を求めよ。<br>
+(3) $X$ が正規分布 $N(50,10^2)$ に従うとき、$P(40\leqq X\leqq75)$ を求めよ。<br>
+(4) 1600人を無作為に選んで調べたところ、640人が「はい」と答えた。全体で「はい」と答える人の割合 $p$ を信頼度95%で推定せよ（小数第3位まで）。<br>
+(5) さいころを720回投げたところ、1の目が140回出た。このさいころの1の目の出る確率は $\frac16$ ではないといえるか。有意水準5%で検定せよ。
+</div>
+<div class="box aim">
+共通テストの「統計的な推測」は、<b>二項分布の平均・分散 → 正規分布による近似 → 推定・検定</b>という流れの誘導形式で出題される。標準化 $Z=\dfrac{X-m}{\sigma}$、$\sigma(\overline X)=\dfrac{\sigma}{\sqrt n}$ の $\sqrt n$、正規分布表の $p(u)$ の読み方（0 から $u$ までの確率）でミスをしないこと。信頼区間の幅は $2\times1.96\dfrac{\sigma}{\sqrt n}$ で、<b>$n$ を4倍にすると幅は半分</b>になる。検定では、帰無仮説・対立仮説と、両側か片側かを最初に明記する。
+</div>
+<h3 class="deep">講義6　信頼区間の幅と必要な標本の大きさ</h3>
+<p>推定の精度を上げるには標本を大きくすればよいが、調査には費用がかかる。「必要な精度を得るには何人調べればよいか」は、信頼区間の幅から逆算できる。</p>
+<div class="box lect">
+母比率の信頼度95%の信頼区間の幅は $L=2\times1.96\sqrt{\dfrac{R(1-R)}{n}}$ である。$R(1-R)=\frac14-\left(R-\frac12\right)^2\leqq\frac14$ なので、調査前に $R$ がわからなくても $L\leqq2\times1.96\sqrt{\dfrac{1}{4n}}=\dfrac{1.96}{\sqrt n}$ が成り立つ。<br>
+例えば幅を0.1以下にしたいなら、$\dfrac{1.96}{\sqrt n}\leqq0.1$ すなわち $\sqrt n\geqq19.6$、$n\geqq384.16$ より、<b>385人以上</b>調べれば十分である。幅を0.05以下にするには $n\geqq1536.64$、つまり1537人以上が必要になる。精度を2倍にするには、約4倍の標本が要る。
+</div>
+<div class="box warn">
+・$V(aX+b)=aV(X)+b$ としてしまうミス。正しくは $V(aX+b)=a^2V(X)$（$b$ は散らばりに無関係）。$V(X-Y)$ も、独立なら $V(X)+V(Y)$（引き算にはならない）。<br>
+・正規分布表の値 $p(u)$ は $0\leqq Z\leqq u$ の確率。$P(Z\geqq u)$ は $0.5-p(u)$、$P(|Z|\leqq u)$ は $2p(u)$。<br>
+・標本平均の標準偏差に母標準偏差 $\sigma$ をそのまま使うミス。$\overline X$ の標準偏差は $\dfrac{\sigma}{\sqrt n}$。
+</div>
+<div class="box ans">
+(1) $E(X)=\frac53$、$E(X^2)=\frac{10}{3}$ より $V(X)=\frac{10}3-\frac{25}9=\frac59$。$E(-3X+2)=-3$、$V(-3X+2)=9\cdot\frac59=5$<br>
+(2) $E(2X-Y)=2\cdot2-(-1)=5$、$V(2X-Y)=2^2\cdot3+(-1)^2\cdot4=16$<br>
+(3) $P(-1\leqq Z\leqq2.5)=0.3413+0.4938=0.8351$<br>
+(4) $R=0.4$、$1.96\sqrt{\frac{0.4\times0.6}{1600}}\fallingdotseq0.024$ より $0.376\leqq p\leqq0.424$<br>
+(5) 帰無仮説「1の目の出る確率は $\frac16$」のもとで、回数は $B\left(720,\frac16\right)$ に従い $E=120$、$\sigma=\sqrt{720\cdot\frac16\cdot\frac56}=10$。$Z=\frac{140-120}{10}=2.0$、$|Z|\geqq1.96$ より棄却。$\frac16$ ではないといえる
+</div>
+
+<!--CH 18-->
+<div class="box point">
+・$\vec a\neq\vec0,\ \vec b\neq\vec0$ のとき、$\vec a\parallel\vec b\iff\vec b=k\vec a$ となる実数 $k$ がある。3点 A, B, C が一直線上 $\iff\overrightarrow{\mathrm{AC}}=k\overrightarrow{\mathrm{AB}}$ となる実数 $k$ がある<br>
+・線分 AB を $m:n$ に内分する点 $\dfrac{n\vec a+m\vec b}{m+n}$、外分する点 $\dfrac{-n\vec a+m\vec b}{m-n}$、△ABC の重心 $\dfrac{\vec a+\vec b+\vec c}{3}$<br>
+・内積 $\vec a\cdot\vec b=|\vec a||\vec b|\cos\theta=a_1b_1+a_2b_2$（$0^\circ\leqq\theta\leqq180^\circ$）。$\vec a\neq\vec0,\ \vec b\neq\vec0$ のとき $\vec a\perp\vec b\iff\vec a\cdot\vec b=0$<br>
+・△OAB の面積 $S=\dfrac12\sqrt{|\vec a|^2|\vec b|^2-(\vec a\cdot\vec b)^2}=\dfrac12|a_1b_2-a_2b_1|$<br>
+・$\vec a,\vec b$ が1次独立（$\vec0$ でなく平行でない）なら $s\vec a+t\vec b=s'\vec a+t'\vec b\iff s=s',\ t=t'$
+</div>
+<h3>講義1　ベクトルの演算と位置ベクトル</h3>
+<div class="box lect">
+ベクトルは「向きと大きさ」をもつ量で、平行移動して重なるものは等しいとみなす。和 $\vec a+\vec b$ は矢印のつなぎ合わせであり、$\overrightarrow{\mathrm{AB}}=\overrightarrow{\mathrm{OB}}-\overrightarrow{\mathrm{OA}}$（<b>終点 − 始点</b>）がすべての計算の基本になる。<br>
+点 O を基準にして点 P を $\vec p=\overrightarrow{\mathrm{OP}}$ で表したものを、P の<b>位置ベクトル</b>という。線分 AB を $m:n$ に内分する点 P は、A から B へ向かって全体の $\frac{m}{m+n}$ だけ進んだ点なので<br>
+$\vec p=\vec a+\dfrac{m}{m+n}(\vec b-\vec a)=\dfrac{n\vec a+m\vec b}{m+n}$<br>
+外分は $n$ を $-n$ におきかえればよい。3点が一直線上にあることは、「$\overrightarrow{\mathrm{AC}}=k\overrightarrow{\mathrm{AB}}$ となる $k$ を見つける」ことで示す。
+</div>
+<div class="box ex">
+△OAB において $\overrightarrow{\mathrm{OA}}=\vec a,\ \overrightarrow{\mathrm{OB}}=\vec b$ とする。辺 OA を $1:2$ に内分する点を P、辺 AB を $3:1$ に内分する点を Q、辺 OB を $3:2$ に外分する点を R とする。3点 P, Q, R は一直線上にあることを示し、PQ : QR を求めよ。
+<div class="solx"><b>解</b>　$\overrightarrow{\mathrm{OP}}=\dfrac13\vec a$、$\overrightarrow{\mathrm{OQ}}=\dfrac{\vec a+3\vec b}{4}$、$\overrightarrow{\mathrm{OR}}=\dfrac{-2\cdot\vec 0+3\vec b}{3-2}=3\vec b$。<br>
+$\overrightarrow{\mathrm{PQ}}=\dfrac{\vec a+3\vec b}{4}-\dfrac13\vec a=\dfrac{-\vec a+9\vec b}{12}$、$\overrightarrow{\mathrm{PR}}=3\vec b-\dfrac13\vec a=\dfrac{-\vec a+9\vec b}{3}$<br>
+よって $\overrightarrow{\mathrm{PR}}=4\overrightarrow{\mathrm{PQ}}$ となり、P, Q, R は一直線上にある。PQ : PR $=1:4$ より <b>PQ : QR $=1:3$</b></div>
+</div>
+<h3>講義2　成分と内積</h3>
+<div class="box lect">
+$\vec a=(a_1,a_2)$ のとき $|\vec a|=\sqrt{a_1^2+a_2^2}$。$\vec a,\vec b$ のなす角 $\theta\ (0^\circ\leqq\theta\leqq180^\circ)$ を用いて、内積を $\vec a\cdot\vec b=|\vec a||\vec b|\cos\theta$ と定める。<br>
+△OAB に余弦定理を使うと $|\vec b-\vec a|^2=|\vec a|^2+|\vec b|^2-2|\vec a||\vec b|\cos\theta$ なので、両辺を成分で計算して $\vec a\cdot\vec b=a_1b_1+a_2b_2$ が導かれる。<br>
+内積は文字式と同じように展開できる：$|\vec a+\vec b|^2=|\vec a|^2+2\vec a\cdot\vec b+|\vec b|^2$。<b>大きさの条件は2乗して内積の式にする</b>のが定石である。
+</div>
+<div class="box ex">
+(1) $\vec a=(1,3),\ \vec b=(2,1)$ のなす角 $\theta$ を求めよ。<br>
+(2) $|\vec a|=2,\ |\vec b|=3,\ |\vec a-\vec b|=\sqrt7$ のとき、$\vec a\cdot\vec b$ と、$\vec a,\vec b$ のなす角を求めよ。さらに、$t$ が実数全体を動くとき、$|\vec a+t\vec b|$ の最小値とそのときの $t$ の値を求めよ。
+<div class="solx"><b>解</b>　(1) $\vec a\cdot\vec b=2+3=5$、$|\vec a|=\sqrt{10}$、$|\vec b|=\sqrt5$ より $\cos\theta=\dfrac{5}{\sqrt{50}}=\dfrac{1}{\sqrt2}$。$\boldsymbol{\theta=45^\circ}$<br>
+(2) $|\vec a-\vec b|^2=|\vec a|^2-2\vec a\cdot\vec b+|\vec b|^2$ より $7=4-2\vec a\cdot\vec b+9$、$\boldsymbol{\vec a\cdot\vec b=3}$。$\cos\theta=\dfrac{3}{2\cdot3}=\dfrac12$ より $\boldsymbol{\theta=60^\circ}$。<br>
+$|\vec a+t\vec b|^2=|\vec a|^2+2t\,\vec a\cdot\vec b+t^2|\vec b|^2=9t^2+6t+4=9\left(t+\dfrac13\right)^2+3$。よって $\boldsymbol{t=-\dfrac13}$ のとき最小値 $\boldsymbol{\sqrt3}$。<br>
+（このとき $(\vec a+t\vec b)\cdot\vec b=3+9t=0$ で、$\vec a+t\vec b\perp\vec b$ となっている。）</div>
+</div>
+<h3>講義3　三角形の面積と交点の位置ベクトル</h3>
+<div class="box lect">
+△OAB の面積は $S=\frac12|\vec a||\vec b|\sin\theta$。$\sin\theta=\sqrt{1-\cos^2\theta}$ に $\cos\theta=\dfrac{\vec a\cdot\vec b}{|\vec a||\vec b|}$ を代入すると $S=\frac12\sqrt{|\vec a|^2|\vec b|^2-(\vec a\cdot\vec b)^2}$、さらに成分で計算すると $S=\frac12|a_1b_2-a_2b_1|$ となる。<br>
+2直線の交点の位置ベクトルは、交点 P を<b>2通りに表して係数を比較</b>する。P が直線 AD 上にあることから $\vec p=(1-s)\vec a+s\vec d$、直線 BC 上にあることから $\vec p=(1-t)\vec b+t\vec c$ のように、<b>それぞれ別の文字</b>を使う。$\vec a,\vec b$ が1次独立なので、$\vec a,\vec b$ で表したときの係数が一致する。
+</div>
+<div class="box ex">
+(1) 3点 O(0, 0), A(3, 1), B(1, 4) を頂点とする △OAB の面積を求めよ。<br>
+(2) △OAB において、辺 OA を $2:1$ に内分する点を C、辺 OB を $1:2$ に内分する点を D とし、線分 AD と BC の交点を P とする。$\overrightarrow{\mathrm{OA}}=\vec a,\ \overrightarrow{\mathrm{OB}}=\vec b$ として $\overrightarrow{\mathrm{OP}}$ を $\vec a,\vec b$ で表せ。また、直線 OP と辺 AB の交点を Q とするとき、AQ : QB を求めよ。
+<svg class="fig" width="300" height="180" viewBox="0 0 300 180"><polygon points="25,160 275,160 150,20" fill="none" stroke="#222" stroke-width="1.3"/><line x1="275" y1="160" x2="66.7" y2="113.3" stroke="#1f3f8f" stroke-width="1.2"/><line x1="150" y1="20" x2="191.7" y2="160" stroke="#1f3f8f" stroke-width="1.2"/><line x1="25" y1="160" x2="250" y2="132" stroke="#888" stroke-width="1" stroke-dasharray="4,3"/><circle cx="25" cy="160" r="2.4" fill="#222"/><circle cx="275" cy="160" r="2.4" fill="#222"/><circle cx="150" cy="20" r="2.4" fill="#222"/><circle cx="191.7" cy="160" r="2.4" fill="#222"/><circle cx="66.7" cy="113.3" r="2.4" fill="#222"/><circle cx="185.7" cy="140" r="2.4" fill="#222"/><circle cx="250" cy="132" r="2.4" fill="#222"/><text x="17" y="164" font-size="12" text-anchor="middle" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif">O</text><text x="284" y="164" font-size="12" text-anchor="middle" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif">A</text><text x="150" y="14" font-size="12" text-anchor="middle" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif">B</text><text x="191.7" y="174" font-size="12" text-anchor="middle" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif">C</text><text x="57.7" y="113.3" font-size="12" text-anchor="middle" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif">D</text><text x="182.7" y="133" font-size="12" text-anchor="middle" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif">P</text><text x="259" y="130" font-size="12" text-anchor="middle" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif">Q</text></svg>
+<div class="solx"><b>解</b>　(1) $S=\dfrac12|3\cdot4-1\cdot1|=\boldsymbol{\dfrac{11}{2}}$<br>
+(2) AP : PD $=s:(1-s)$ とすると $\overrightarrow{\mathrm{OP}}=(1-s)\vec a+\dfrac s3\vec b$。BP : PC $=t:(1-t)$ とすると $\overrightarrow{\mathrm{OP}}=\dfrac{2t}{3}\vec a+(1-t)\vec b$。<br>
+$\vec a,\vec b$ は1次独立なので $1-s=\dfrac{2t}3$、$\dfrac s3=1-t$。これを解いて $s=\dfrac37,\ t=\dfrac67$。よって $\boldsymbol{\overrightarrow{\mathrm{OP}}=\dfrac47\vec a+\dfrac17\vec b}$<br>
+Q は直線 OP 上にあるので $\overrightarrow{\mathrm{OQ}}=k\overrightarrow{\mathrm{OP}}=\dfrac{4k}{7}\vec a+\dfrac k7\vec b$。Q は直線 AB 上にあるので係数の和が1（講義4）：$\dfrac{5k}{7}=1$、$k=\dfrac75$。$\overrightarrow{\mathrm{OQ}}=\dfrac{4\vec a+\vec b}{5}$ より <b>AQ : QB $=1:4$</b></div>
+</div>
+<h3>講義4　ベクトル方程式</h3>
+<div class="box lect">
+点 A$(\vec a)$ を通り $\vec d\ (\neq\vec0)$ に平行な直線上の点 P$(\vec p)$ は $\vec p=\vec a+t\vec d$（$t$ は実数。$\vec d$ を<b>方向ベクトル</b>という）。2点 A, B を通る直線は $\vec p=(1-t)\vec a+t\vec b$、すなわち $\vec p=s\vec a+t\vec b,\ s+t=1$。さらに $s\geqq0,\ t\geqq0$ なら線分 AB、$s+t\leqq1,\ s\geqq0,\ t\geqq0$ なら △OAB の周および内部を表す。<br>
+点 A を通り $\vec n\ (\neq\vec0)$ に垂直な直線は $\vec n\cdot(\vec p-\vec a)=0$。$\vec n=(a,b)$、A$(x_0,y_0)$ なら $a(x-x_0)+b(y-y_0)=0$ で、$\vec n$ を<b>法線ベクトル</b>という（直線 $ax+by+c=0$ の法線ベクトルは $(a,b)$）。<br>
+中心 C$(\vec c)$、半径 $r$ の円は $|\vec p-\vec c|=r$。2点 A, B を直径の両端とする円は、円周角が $90^\circ$ であることから $(\vec p-\vec a)\cdot(\vec p-\vec b)=0$。
+</div>
+<div class="box ex">
+(1) △OAB において、$\overrightarrow{\mathrm{OP}}=s\overrightarrow{\mathrm{OA}}+t\overrightarrow{\mathrm{OB}}$、$2s+t=2,\ s\geqq0,\ t\geqq0$ を満たす点 P の存在範囲を求めよ。<br>
+(2) 2点 A(1, 2), B(5, 4) を直径の両端とする円の方程式を、ベクトルを用いて求めよ。
+<div class="solx"><b>解</b>　(1) $2s+t=2$ より $s+\dfrac t2=1$。$\overrightarrow{\mathrm{OP}}=s\overrightarrow{\mathrm{OA}}+\dfrac t2\left(2\overrightarrow{\mathrm{OB}}\right)$ と変形し、$2\overrightarrow{\mathrm{OB}}=\overrightarrow{\mathrm{OB'}}$ となる点 B' をとると、$\overrightarrow{\mathrm{OP}}=s\overrightarrow{\mathrm{OA}}+\dfrac t2\overrightarrow{\mathrm{OB'}}$、$s+\dfrac t2=1,\ s\geqq0,\ \dfrac t2\geqq0$。<br>
+よって P の存在範囲は、<b>辺 OB を $2:1$ に外分する点を B' としたときの線分 AB'</b>。<br>
+(2) 円上の点 P$(x,y)$ について $\overrightarrow{\mathrm{AP}}\cdot\overrightarrow{\mathrm{BP}}=0$（P が A, B と一致するときも成り立つ）。$(x-1)(x-5)+(y-2)(y-4)=0$ を整理して $\boldsymbol{(x-3)^2+(y-3)^2=5}$</div>
+</div>
+<div class="box chk">
+(1) $\vec a=(2,-1),\ \vec b=(1,3)$ のとき、$\vec a+t\vec b$ と $\vec a-\vec b$ が垂直になる実数 $t$ の値を求めよ。<br>
+(2) $\vec a=(3,4)$ に垂直な単位ベクトルを求めよ。<br>
+(3) 3点 A(1, 1), B(4, 2), C(3, 6) を頂点とする △ABC の面積を求めよ。<br>
+(4) $|\vec a|=1,\ |\vec b|=2,\ \vec a\cdot\vec b=-1$ のとき、$|2\vec a+\vec b|$ と、$\vec a,\vec b$ のなす角を求めよ。<br>
+(5) △OAB において、辺 OA の中点を M、辺 OB を $2:1$ に内分する点を N とし、線分 AN と BM の交点を P とする。$\overrightarrow{\mathrm{OP}}$ を $\vec a=\overrightarrow{\mathrm{OA}},\ \vec b=\overrightarrow{\mathrm{OB}}$ で表せ。
+</div>
+<div class="box aim">
+平面ベクトルの入試問題の大半は、<b>(i) 2つの基本ベクトル $\vec a,\vec b$ ですべてを表す、(ii) 交点は2通りに表して係数比較、(iii) 長さ・角は内積で</b>、の3つで解ける。$|\vec a|,\ |\vec b|,\ \vec a\cdot\vec b$ の3つの値がわかれば、図形の長さ・角・面積はすべて計算できる。共通テストでは、内積の値を求めてから垂直条件・面積に進む誘導が定番である。
+</div>
+<h3 class="deep">講義5　$\alpha\overrightarrow{\mathrm{PA}}+\beta\overrightarrow{\mathrm{PB}}+\gamma\overrightarrow{\mathrm{PC}}=\vec0$ と面積比</h3>
+<p>△ABC と等式 $3\overrightarrow{\mathrm{PA}}+4\overrightarrow{\mathrm{PB}}+5\overrightarrow{\mathrm{PC}}=\vec0$ を満たす点 P の位置を調べよう。入試頻出のテーマで、結果は面積比にきれいに表れる。</p>
+<div class="box lect">
+始点を A にそろえる。$\overrightarrow{\mathrm{PA}}=-\overrightarrow{\mathrm{AP}}$、$\overrightarrow{\mathrm{PB}}=\overrightarrow{\mathrm{AB}}-\overrightarrow{\mathrm{AP}}$、$\overrightarrow{\mathrm{PC}}=\overrightarrow{\mathrm{AC}}-\overrightarrow{\mathrm{AP}}$ を代入すると $-12\overrightarrow{\mathrm{AP}}+4\overrightarrow{\mathrm{AB}}+5\overrightarrow{\mathrm{AC}}=\vec0$。よって<br>
+$\overrightarrow{\mathrm{AP}}=\dfrac{4\overrightarrow{\mathrm{AB}}+5\overrightarrow{\mathrm{AC}}}{12}=\dfrac{9}{12}\cdot\dfrac{4\overrightarrow{\mathrm{AB}}+5\overrightarrow{\mathrm{AC}}}{9}$<br>
+$\overrightarrow{\mathrm{AD}}=\dfrac{4\overrightarrow{\mathrm{AB}}+5\overrightarrow{\mathrm{AC}}}{9}$ とおくと、D は辺 BC を $5:4$ に内分する点で、$\overrightarrow{\mathrm{AP}}=\dfrac34\overrightarrow{\mathrm{AD}}$ より AP : PD $=3:1$。<br>
+△ABC の面積を $S$ とすると、△PBC $=\frac14S$、△PCA $=\frac34\cdot\frac49S=\frac13S$、△PAB $=\frac34\cdot\frac59S=\frac5{12}S$ となり、<b>△PBC : △PCA : △PAB $=3:4:5$</b>。一般に、$\alpha,\beta,\gamma\gt0$ で $\alpha\overrightarrow{\mathrm{PA}}+\beta\overrightarrow{\mathrm{PB}}+\gamma\overrightarrow{\mathrm{PC}}=\vec0$ なら、面積比は係数の比 $\alpha:\beta:\gamma$ になる。
+</div>
+<div class="box warn">
+・$\vec a\cdot\vec b=|\vec a||\vec b|$ としたり、$|\vec a+\vec b|=|\vec a|+|\vec b|$ としたりするミス。大きさは<b>2乗して展開</b>する。<br>
+・交点を求めるとき、2つの直線に同じ文字 $t$ を使ってしまうミス。別々の文字を使う。<br>
+・係数比較は、$\vec a,\vec b$ が1次独立（$\vec0$ でなく平行でない）であることを述べてから行う。
+</div>
+<div class="box ans">
+(1) $\vec a+t\vec b=(2+t,\,-1+3t)$、$\vec a-\vec b=(1,-4)$。内積 $=(2+t)-4(-1+3t)=6-11t=0$ より $t=\frac6{11}$<br>
+(2) 求めるベクトルを $(x,y)$ とおくと $3x+4y=0,\ x^2+y^2=1$ より $\pm\left(\frac45,\,-\frac35\right)$<br>
+(3) $\overrightarrow{\mathrm{AB}}=(3,1),\ \overrightarrow{\mathrm{AC}}=(2,5)$ より $\frac12|3\cdot5-1\cdot2|=\frac{13}2$<br>
+(4) $|2\vec a+\vec b|^2=4|\vec a|^2+4\vec a\cdot\vec b+|\vec b|^2=4-4+4=4$ より $2$。$\cos\theta=\frac{-1}{1\cdot2}=-\frac12$ より $120^\circ$<br>
+(5) $\overrightarrow{\mathrm{OP}}=(1-s)\vec a+\frac{2s}{3}\vec b=\frac t2\vec a+(1-t)\vec b$ と2通りに表して係数比較すると $s=\frac34,\ t=\frac12$。$\overrightarrow{\mathrm{OP}}=\frac14\vec a+\frac12\vec b$
+</div>
+
+<!--CH 19-->
+<div class="box point">
+・2点 A$(x_1,y_1,z_1)$, B$(x_2,y_2,z_2)$ 間の距離 $\mathrm{AB}=\sqrt{(x_2-x_1)^2+(y_2-y_1)^2+(z_2-z_1)^2}$<br>
+・$\vec a=(a_1,a_2,a_3),\ \vec b=(b_1,b_2,b_3)$ の内積 $\vec a\cdot\vec b=a_1b_1+a_2b_2+a_3b_3=|\vec a||\vec b|\cos\theta$<br>
+・同じ平面上にない4点 O, A, B, C について、点 P が平面 ABC 上にある $\iff\overrightarrow{\mathrm{OP}}=\alpha\overrightarrow{\mathrm{OA}}+\beta\overrightarrow{\mathrm{OB}}+\gamma\overrightarrow{\mathrm{OC}},\ \alpha+\beta+\gamma=1$（$\iff\overrightarrow{\mathrm{AP}}=s\overrightarrow{\mathrm{AB}}+t\overrightarrow{\mathrm{AC}}$）<br>
+・$\vec a,\vec b,\vec c$ が1次独立（$\vec0$ でなく、同じ平面上にない）なら、$\vec p=l\vec a+m\vec b+n\vec c$ の表し方はただ1通り<br>
+・中心 $(a,b,c)$、半径 $r$ の球面：$(x-a)^2+(y-b)^2+(z-c)^2=r^2$
+</div>
+<h3>講義1　空間座標と成分・内積</h3>
+<div class="box lect">
+空間では、原点 O で互いに直交する $x$ 軸・$y$ 軸・$z$ 軸をとり、点を3つの数の組 $(x,y,z)$ で表す。$xy$ 平面は $z=0$、$yz$ 平面は $x=0$、$zx$ 平面は $y=0$ で表される。<br>
+点 $(a,b,c)$ と $xy$ 平面に関して対称な点は $(a,b,-c)$、$x$ 軸に関して対称な点は $(a,-b,-c)$、原点に関して対称な点は $(-a,-b,-c)$。<br>
+空間ベクトルも、成分が1つ増えるだけで平面と同じように計算できる。<b>2つのベクトルの両方に垂直なベクトル</b> $\vec n=(x,y,z)$ は、内積が0という2つの条件から比 $x:y:z$ を求める（大きさは自由に決められる）。
+</div>
+<div class="box ex">
+3点 A(1, 0, 2), B(2, 1, 0), C(0, 2, 1) がある。<br>
+(1) $\angle\mathrm{BAC}$ と △ABC の面積を求めよ。　(2) $\overrightarrow{\mathrm{AB}},\ \overrightarrow{\mathrm{AC}}$ の両方に垂直な単位ベクトルを求めよ。
+<div class="solx"><b>解</b>　(1) $\overrightarrow{\mathrm{AB}}=(1,1,-2)$、$\overrightarrow{\mathrm{AC}}=(-1,2,-1)$。$\overrightarrow{\mathrm{AB}}\cdot\overrightarrow{\mathrm{AC}}=-1+2+2=3$、$|\overrightarrow{\mathrm{AB}}|=|\overrightarrow{\mathrm{AC}}|=\sqrt6$ より $\cos\angle\mathrm{BAC}=\dfrac36=\dfrac12$、$\boldsymbol{\angle\mathrm{BAC}=60^\circ}$。<br>
+面積は $\dfrac12\cdot\sqrt6\cdot\sqrt6\cdot\sin60^\circ=\boldsymbol{\dfrac{3\sqrt3}{2}}$（実は BC $=\sqrt6$ で、△ABC は正三角形）<br>
+(2) $\vec n=(x,y,z)$ とすると $x+y-2z=0$、$-x+2y-z=0$。辺々加えて $3y-3z=0$ より $y=z$、このとき $x=2z-y=z$。よって $\vec n=(z,z,z)$ で、$|\vec n|=1$ より $\boldsymbol{\pm\left(\dfrac{1}{\sqrt3},\ \dfrac{1}{\sqrt3},\ \dfrac{1}{\sqrt3}\right)}$</div>
+</div>
+<h3>講義2　平面上の点の条件と、直線と平面の交点</h3>
+<div class="box lect">
+点 P が3点 A, B, C の定める平面上にある条件は、$\overrightarrow{\mathrm{AP}}=s\overrightarrow{\mathrm{AB}}+t\overrightarrow{\mathrm{AC}}$ となる実数 $s,t$ があること。始点を O にすると<br>
+$\overrightarrow{\mathrm{OP}}=\overrightarrow{\mathrm{OA}}+s(\overrightarrow{\mathrm{OB}}-\overrightarrow{\mathrm{OA}})+t(\overrightarrow{\mathrm{OC}}-\overrightarrow{\mathrm{OA}})=(1-s-t)\overrightarrow{\mathrm{OA}}+s\overrightarrow{\mathrm{OB}}+t\overrightarrow{\mathrm{OC}}$<br>
+となり、<b>係数の和が1</b>になる（直線上の点の「係数の和が1」の空間版）。<br>
+直線と平面の交点 P は、①直線上にあることから $\overrightarrow{\mathrm{OP}}=k\overrightarrow{\mathrm{OG}}$ などと1つの文字で表し、②それを平面を定める3点の位置ベクトルで表し直して「係数の和 $=1$」とおく。
+</div>
+<div class="box ex">
+四面体 OABC において、辺 OA の中点を L、辺 OB の中点を M、辺 OC を $1:2$ に内分する点を N とし、△ABC の重心を G とする。直線 OG と平面 LMN の交点を P とするとき、$\overrightarrow{\mathrm{OP}}$ を $\vec a=\overrightarrow{\mathrm{OA}},\ \vec b=\overrightarrow{\mathrm{OB}},\ \vec c=\overrightarrow{\mathrm{OC}}$ で表せ。また OP : OG を求めよ。
+<div class="solx"><b>解</b>　P は直線 OG 上にあるので $\overrightarrow{\mathrm{OP}}=k\overrightarrow{\mathrm{OG}}=\dfrac k3(\vec a+\vec b+\vec c)$。$\vec a=2\overrightarrow{\mathrm{OL}},\ \vec b=2\overrightarrow{\mathrm{OM}},\ \vec c=3\overrightarrow{\mathrm{ON}}$ を代入すると<br>
+$\overrightarrow{\mathrm{OP}}=\dfrac{2k}{3}\overrightarrow{\mathrm{OL}}+\dfrac{2k}{3}\overrightarrow{\mathrm{OM}}+k\overrightarrow{\mathrm{ON}}$<br>
+P は平面 LMN 上にあるので $\dfrac{2k}3+\dfrac{2k}3+k=1$、$k=\dfrac37$。よって $\boldsymbol{\overrightarrow{\mathrm{OP}}=\dfrac17(\vec a+\vec b+\vec c)}$、<b>OP : OG $=3:7$</b></div>
+</div>
+<h3>講義3　垂線の足</h3>
+<div class="box lect">
+点 P から平面 ABC に下ろした垂線の足 H は、次の連立で求める。<br>
+①H が平面上にある：$\overrightarrow{\mathrm{AH}}=s\overrightarrow{\mathrm{AB}}+t\overrightarrow{\mathrm{AC}}$<br>
+②$\overrightarrow{\mathrm{PH}}$ が平面上の平行でない2つのベクトルに垂直：$\overrightarrow{\mathrm{PH}}\cdot\overrightarrow{\mathrm{AB}}=0,\ \overrightarrow{\mathrm{PH}}\cdot\overrightarrow{\mathrm{AC}}=0$<br>
+（直線が平面上の交わる2直線に垂直なら、その直線は平面に垂直である。）$|\overrightarrow{\mathrm{PH}}|$ は四面体の高さになり、体積の計算に使える。<br>
+点 P から直線 AB に下ろした垂線の足も同様で、$\overrightarrow{\mathrm{AH}}=t\overrightarrow{\mathrm{AB}}$、$\overrightarrow{\mathrm{PH}}\cdot\overrightarrow{\mathrm{AB}}=0$ から $t$ を決める。
+</div>
+<div class="box ex">
+4点 O(0, 0, 0), A(1, 0, 0), B(0, 2, 0), C(0, 0, 2) がある。O から平面 ABC に下ろした垂線の足 H の座標と、線分 OH の長さを求めよ。また、△ABC の面積を求めよ。
+<div class="solx"><b>解</b>　H は平面 ABC 上にあるので $\overrightarrow{\mathrm{OH}}=\overrightarrow{\mathrm{OA}}+s\overrightarrow{\mathrm{AB}}+t\overrightarrow{\mathrm{AC}}=(1-s-t,\ 2s,\ 2t)$。<br>
+$\overrightarrow{\mathrm{AB}}=(-1,2,0)$、$\overrightarrow{\mathrm{AC}}=(-1,0,2)$ との内積が0なので<br>
+$-(1-s-t)+4s=0$、$-(1-s-t)+4t=0$　すなわち　$5s+t=1$、$s+5t=1$。これを解いて $s=t=\dfrac16$。<br>
+よって $\boldsymbol{\mathrm{H}\left(\dfrac23,\ \dfrac13,\ \dfrac13\right)}$、$\mathrm{OH}=\dfrac13\sqrt{4+1+1}=\boldsymbol{\dfrac{\sqrt6}{3}}$。<br>
+四面体 OABC の体積は、△OAB を底面とみて $\dfrac13\cdot\left(\dfrac12\cdot1\cdot2\right)\cdot2=\dfrac23$。これは $\dfrac13\cdot\triangle\mathrm{ABC}\cdot\mathrm{OH}$ にも等しいので、$\triangle\mathrm{ABC}=\dfrac{3\cdot\frac23}{\frac{\sqrt6}{3}}=\boldsymbol{\sqrt6}$</div>
+</div>
+<h3>講義4　球面の方程式</h3>
+<div class="box lect">
+点 C$(a,b,c)$ からの距離が $r$ である点全体が球面で、その方程式は $(x-a)^2+(y-b)^2+(z-c)^2=r^2$。展開した形 $x^2+y^2+z^2+Ax+By+Cz+D=0$ は、平方完成して中心と半径を読みとる。<br>
+球面と平面の交わりは円になる。例えば $xy$ 平面との交わりは $z=0$ を代入して得られる。球の中心から平面までの距離を $d$ とすると、交わりの円の半径は $\sqrt{r^2-d^2}$（三平方の定理）。
+</div>
+<div class="box ex">
+(1) 2点 A(1, 2, 3), B(3, 0, −1) を直径の両端とする球面の方程式を求めよ。<br>
+(2) 球面 $x^2+y^2+z^2-2x+4y-4z-7=0$ の中心と半径を求めよ。また、この球面と $xy$ 平面の交わりの円の中心と半径を求めよ。
+<div class="solx"><b>解</b>　(1) 中心は AB の中点 $(2,1,1)$、半径は $\dfrac12\mathrm{AB}=\dfrac12\sqrt{2^2+(-2)^2+(-4)^2}=\sqrt6$。$\boldsymbol{(x-2)^2+(y-1)^2+(z-1)^2=6}$<br>
+(2) $(x-1)^2+(y+2)^2+(z-2)^2=16$ より、中心 $\boldsymbol{(1,-2,2)}$、半径 $\boldsymbol4$。<br>
+$z=0$ を代入すると $(x-1)^2+(y+2)^2=12$。交わりは<b>中心 $(1,-2,0)$、半径 $2\sqrt3$ の円</b>（中心と $xy$ 平面の距離 $d=2$ から $\sqrt{16-4}$ としてもよい）。</div>
+</div>
+<div class="box chk">
+(1) 点 A(2, −1, 3) の、$xy$ 平面に関して対称な点と、$y$ 軸に関して対称な点の座標を求めよ。<br>
+(2) $\vec a=(1,-2,1),\ \vec b=(-1,1,0)$ のなす角を求めよ。<br>
+(3) 3点 A(1, 0, 0), B(0, 2, 0), C(0, 0, 3) の定める平面と、原点 O と点 D(1, 1, 1) を通る直線の交点 P の座標を求めよ。<br>
+(4) 4点 A(1, 1, 0), B(2, 0, 1), C(0, 1, 2), P($x$, 3, 1) が同じ平面上にあるように、$x$ の値を定めよ。<br>
+(5) 中心が $(1,-2,3)$ で $xy$ 平面に接する球面の方程式を求めよ。
+</div>
+<div class="box aim">
+空間ベクトルの入試問題は、<b>四面体の中の点の位置（係数比較・係数の和）</b>と、<b>座標空間での垂線・距離・体積</b>が二本柱。四面体では $\vec a,\vec b,\vec c$ の3つですべてを表し、$|\vec a|,|\vec b|,|\vec c|$ と3つの内積 $\vec a\cdot\vec b,\ \vec b\cdot\vec c,\ \vec c\cdot\vec a$ を求めておけば、長さ・角はすべて計算できる。座標の問題では、垂線の足 → 高さ → 体積という流れを一度自分で通しておくこと。
+</div>
+<h3 class="deep">講義5　平面の方程式と点と平面の距離</h3>
+<p>平面ベクトルで直線を法線ベクトルで表したように、空間では<b>平面</b>を法線ベクトルで表せる（教科書では発展として扱われることが多いが、検算にとても便利）。</p>
+<div class="box lect">
+点 A$(x_0,y_0,z_0)$ を通り、$\vec n=(a,b,c)\neq\vec0$ に垂直な平面上の点 P$(x,y,z)$ は $\vec n\cdot\overrightarrow{\mathrm{AP}}=0$ を満たすので、平面の方程式は $a(x-x_0)+b(y-y_0)+c(z-z_0)=0$、整理すると $ax+by+cz+d=0$ の形になる。<br>
+点 $(x_1,y_1,z_1)$ とこの平面の距離は $\dfrac{|ax_1+by_1+cz_1+d|}{\sqrt{a^2+b^2+c^2}}$（点と直線の距離の公式の空間版）。<br>
+講義3の例題の平面 ABC は、切片が $x$ 軸で1、$y$ 軸で2、$z$ 軸で2なので $\dfrac x1+\dfrac y2+\dfrac z2=1$、すなわち $2x+y+z=2$。原点との距離は $\dfrac{|-2|}{\sqrt{4+1+1}}=\dfrac{\sqrt6}{3}$ で、垂線の足の計算と一致する。法線ベクトル $(2,1,1)$ を使って $\overrightarrow{\mathrm{OH}}=k(2,1,1)$ とおき、平面の式に代入すれば $6k=2$ から $k=\frac13$ となり、H の座標もすぐに求まる。
+</div>
+<div class="box warn">
+・平面上の点の条件で係数の和が1になるのは、<b>平面の外の点（O など）を始点とし、平面上の3点の位置ベクトルで表したとき</b>。$\overrightarrow{\mathrm{AP}}=s\overrightarrow{\mathrm{AB}}+t\overrightarrow{\mathrm{AC}}$ の形では $s,t$ に条件はない。<br>
+・垂線の足は、平面上の1つのベクトルとの垂直だけでは決まらない。<b>平行でない2つのベクトル</b>との垂直を使う。<br>
+・球面の方程式を平方完成するとき、足した定数を右辺にも加え忘れるミス。
+</div>
+<div class="box ans">
+(1) $xy$ 平面に関して $(2,-1,-3)$、$y$ 軸に関して $(-2,-1,-3)$<br>
+(2) $\vec a\cdot\vec b=-1-2+0=-3$、$|\vec a|=\sqrt6,\ |\vec b|=\sqrt2$ より $\cos\theta=\frac{-3}{\sqrt{12}}=-\frac{\sqrt3}{2}$、$\theta=150^\circ$<br>
+(3) $\overrightarrow{\mathrm{OP}}=k(1,1,1)=k\overrightarrow{\mathrm{OA}}+\frac k2\overrightarrow{\mathrm{OB}}+\frac k3\overrightarrow{\mathrm{OC}}$。係数の和 $\frac{11}{6}k=1$ より $k=\frac{6}{11}$。$\mathrm{P}\left(\frac6{11},\frac6{11},\frac6{11}\right)$<br>
+(4) $\overrightarrow{\mathrm{AP}}=(x-1,2,1)=s(1,-1,1)+t(-1,0,2)$。$y,z$ 成分から $s=-2,\ t=\frac32$、$x$ 成分から $x-1=s-t=-\frac72$。$x=-\frac52$<br>
+(5) 半径は中心と $xy$ 平面の距離 3。$(x-1)^2+(y+2)^2+(z-3)^2=9$
+</div>
+
+<!--CH 20-->
+<div class="box point">
+・複素数 $z=a+bi$ を座標平面上の点 $(a,b)$ に対応させた平面が<b>複素数平面</b>。$\bar z=a-bi$、$|z|=\sqrt{a^2+b^2}$、$|z|^2=z\bar z$。2点 $\alpha,\beta$ 間の距離は $|\beta-\alpha|$<br>
+・$z$ が実数 $\iff\bar z=z$。$z$ が純虚数 $\iff\bar z=-z,\ z\neq0$<br>
+・<b>極形式</b> $z=r(\cos\theta+i\sin\theta)$（$r=|z|$、$\theta=\arg z$）。積は「絶対値は積、偏角は和」、商は「絶対値は商、偏角は差」<br>
+・<b>ド・モアブルの定理</b>：$(\cos\theta+i\sin\theta)^n=\cos n\theta+i\sin n\theta$（$n$ は整数）<br>
+・点 $\beta$ を点 $\alpha$ のまわりに $\theta$ だけ回転した点は $\gamma=(\beta-\alpha)(\cos\theta+i\sin\theta)+\alpha$。$\arg\dfrac{\gamma-\alpha}{\beta-\alpha}$ は、半直線 AB から半直線 AC までの回転角
+</div>
+<h3>講義1　複素数平面と極形式</h3>
+<div class="box lect">
+複素数 $z=a+bi$ を点 $(a,b)$ と同一視すると、複素数の計算が図形の操作になる。<br>
+・和 $\alpha+\beta$：ベクトルの和（平行四辺形の対角線）　・$\bar z$：実軸に関して対称な点　・$-z$：原点に関して対称な点<br>
+・$|z|$ は原点からの距離、$|\beta-\alpha|$ は2点間の距離<br>
+$z\neq0$ のとき、$r=|z|$、実軸の正の部分から半直線 Oz までの回転角を $\theta$（<b>偏角</b>、$\arg z$）とすると $a=r\cos\theta,\ b=r\sin\theta$ なので $z=r(\cos\theta+i\sin\theta)$（<b>極形式</b>）。偏角は $2\pi$ の整数倍の違いを除いて定まる。<br>
+共役な複素数の性質 $\overline{\alpha\pm\beta}=\bar\alpha\pm\bar\beta$、$\overline{\alpha\beta}=\bar\alpha\,\bar\beta$、$\overline{\left(\dfrac\alpha\beta\right)}=\dfrac{\bar\alpha}{\bar\beta}$ と $|z|^2=z\bar z$ は、実数条件や絶対値の計算で使う。
+</div>
+<div class="box ex">
+(1) 2点 $2+i$、$-1+3i$ 間の距離を求めよ。また、$-\sqrt3+i$ を極形式で表せ（$0\leqq\theta\lt2\pi$）。<br>
+(2) $|z|=1$ のとき、$z+\dfrac1z$ は実数であることを示せ。
+<div class="solx"><b>解</b>　(1) $|(-1+3i)-(2+i)|=|-3+2i|=\sqrt{9+4}=\boldsymbol{\sqrt{13}}$。<br>
+$|-\sqrt3+i|=2$ で、$\cos\theta=-\dfrac{\sqrt3}{2},\ \sin\theta=\dfrac12$ より $\theta=\dfrac56\pi$。$\boldsymbol{-\sqrt3+i=2\left(\cos\dfrac56\pi+i\sin\dfrac56\pi\right)}$<br>
+(2) $|z|^2=z\bar z=1$ より $\dfrac1z=\bar z$。よって $w=z+\dfrac1z=z+\bar z$ とおくと $\bar w=\bar z+z=w$ となるので、$w$ は実数である。■（$z=a+bi$ なら $w=2a$）</div>
+</div>
+<h3>講義2　積・商と回転</h3>
+<div class="box lect">
+$z_1=r_1(\cos\theta_1+i\sin\theta_1)$、$z_2=r_2(\cos\theta_2+i\sin\theta_2)$ の積を展開し、加法定理を使うと<br>
+$z_1z_2=r_1r_2\{(\cos\theta_1\cos\theta_2-\sin\theta_1\sin\theta_2)+i(\sin\theta_1\cos\theta_2+\cos\theta_1\sin\theta_2)\}=r_1r_2\{\cos(\theta_1+\theta_2)+i\sin(\theta_1+\theta_2)\}$<br>
+つまり、<b>$z$ に $r(\cos\theta+i\sin\theta)$ を掛けることは、点 $z$ を原点のまわりに $\theta$ だけ回転して $r$ 倍に拡大すること</b>。特に $i$ を掛けると $\frac\pi2$ 回転。商も同様に $\dfrac{z_1}{z_2}=\dfrac{r_1}{r_2}\{\cos(\theta_1-\theta_2)+i\sin(\theta_1-\theta_2)\}$。<br>
+点 $\alpha$ のまわりの回転は、$\alpha$ が原点に来るように平行移動（$\beta-\alpha$）してから回転し、もとに戻す（$+\alpha$）。
+</div>
+<div class="box ex">
+(1) $\alpha=1+\sqrt3i,\ \beta=1+i$ のとき、$\alpha\beta$ と $\dfrac\alpha\beta$ を極形式で表せ。また、それを利用して $\cos\dfrac{\pi}{12}$ の値を求めよ。<br>
+(2) 2点 A$(1)$, B$(3+2i)$ に対し、△ABC が正三角形となるような点 C$(\gamma)$ を求めよ。
+<div class="solx"><b>解</b>　(1) $\alpha=2\left(\cos\dfrac\pi3+i\sin\dfrac\pi3\right)$、$\beta=\sqrt2\left(\cos\dfrac\pi4+i\sin\dfrac\pi4\right)$ より<br>
+$\boldsymbol{\alpha\beta=2\sqrt2\left(\cos\dfrac{7}{12}\pi+i\sin\dfrac{7}{12}\pi\right)}$、$\boldsymbol{\dfrac\alpha\beta=\sqrt2\left(\cos\dfrac{\pi}{12}+i\sin\dfrac{\pi}{12}\right)}$<br>
+一方、$\dfrac\alpha\beta=\dfrac{(1+\sqrt3i)(1-i)}{(1+i)(1-i)}=\dfrac{1+\sqrt3}{2}+\dfrac{\sqrt3-1}{2}i$。実部を比べて $\sqrt2\cos\dfrac\pi{12}=\dfrac{1+\sqrt3}2$、$\boldsymbol{\cos\dfrac{\pi}{12}=\dfrac{\sqrt6+\sqrt2}{4}}$<br>
+(2) C は、B を A のまわりに $\pm\dfrac\pi3$ 回転した点。$\gamma=(\beta-1)\left\{\cos\left(\pm\dfrac\pi3\right)+i\sin\left(\pm\dfrac\pi3\right)\right\}+1=(2+2i)\left(\dfrac12\pm\dfrac{\sqrt3}2i\right)+1$<br>
+よって $\boldsymbol{\gamma=(2-\sqrt3)+(1+\sqrt3)i,\ \ (2+\sqrt3)+(1-\sqrt3)i}$</div>
+</div>
+<h3>講義3　ド・モアブルの定理と $n$ 乗根</h3>
+<div class="box lect">
+積の規則をくり返すと、$(\cos\theta+i\sin\theta)^n=\cos n\theta+i\sin n\theta$（<b>ド・モアブルの定理</b>）が自然数 $n$ について成り立つ（数学的帰納法で示せる）。$\dfrac{1}{\cos\theta+i\sin\theta}=\cos(-\theta)+i\sin(-\theta)$ なので、負の整数 $n$ でも成り立つ。<br>
+方程式 $z^n=\alpha$ の解（<b>$\alpha$ の $n$ 乗根</b>）は、$z=r(\cos\theta+i\sin\theta)$、$\alpha=R(\cos\varphi+i\sin\varphi)$ とおいて、<b>絶対値と偏角を比較</b>する：$r^n=R$、$n\theta=\varphi+2k\pi$（$k$ は整数）。<br>
+$k=0,1,\dots,n-1$ で異なる $n$ 個の解が得られ、それらは原点を中心とする半径 $\sqrt[n]{R}$ の円に内接する正 $n$ 角形の頂点になる。偏角の比較で $2k\pi$ を忘れないこと。
+</div>
+<div class="box ex">
+(1) $(1+\sqrt3i)^{10}$ を計算せよ。　(2) 方程式 $z^3=8i$ を解け。
+<div class="solx"><b>解</b>　(1) $1+\sqrt3i=2\left(\cos\dfrac\pi3+i\sin\dfrac\pi3\right)$ より<br>
+$(1+\sqrt3i)^{10}=2^{10}\left(\cos\dfrac{10}3\pi+i\sin\dfrac{10}3\pi\right)=1024\left(\cos\dfrac43\pi+i\sin\dfrac43\pi\right)=1024\left(-\dfrac12-\dfrac{\sqrt3}2i\right)=\boldsymbol{-512-512\sqrt3i}$<br>
+(2) $z=r(\cos\theta+i\sin\theta)\ (r\gt0)$ とおく。$8i=8\left(\cos\dfrac\pi2+i\sin\dfrac\pi2\right)$ なので、$r^3=8$、$3\theta=\dfrac\pi2+2k\pi$（$k$ は整数）。<br>
+$r=2$、$\theta=\dfrac\pi6+\dfrac{2k\pi}{3}$。$0\leqq\theta\lt2\pi$ では $k=0,1,2$ で $\theta=\dfrac\pi6,\ \dfrac56\pi,\ \dfrac32\pi$。<br>
+よって $\boldsymbol{z=\sqrt3+i,\ -\sqrt3+i,\ -2i}$（下図のように、半径2の円に内接する正三角形の頂点）</div>
+<svg class="fig" width="220" height="220" viewBox="0 0 220 220"><line x1="12" y1="105" x2="210" y2="105" stroke="#888" stroke-width="1"/><polygon points="210,105 205,102.8 205,107.2" fill="#888"/><line x1="110" y1="212" x2="110" y2="10" stroke="#888" stroke-width="1"/><polygon points="110,10 107.8,15 112.2,15" fill="#888"/><text x="207" y="99" font-size="12" text-anchor="middle" fill="#222" font-style="italic" font-family="Liberation Serif,DejaVu Serif,serif">x</text><text x="117" y="18" font-size="12" text-anchor="start" fill="#222" font-style="italic" font-family="Liberation Serif,DejaVu Serif,serif">y</text><circle cx="110" cy="105" r="80" fill="none" stroke="#888" stroke-width="1"/><polygon points="179.3,65 40.7,65 110,185" fill="#d6e0f5" fill-opacity="0.6" stroke="#1f3f8f" stroke-width="1.4"/><circle cx="179.3" cy="65" r="2.6" fill="#1f3f8f"/><circle cx="40.7" cy="65" r="2.6" fill="#1f3f8f"/><circle cx="110" cy="185" r="2.6" fill="#1f3f8f"/><text x="185.3" y="58" font-size="12" text-anchor="start" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif">√3+i</text><text x="34.7" y="58" font-size="12" text-anchor="end" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif">−√3+i</text><text x="116" y="199" font-size="12" text-anchor="start" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif">−2i</text><text x="102" y="118" font-size="12" text-anchor="middle" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif">O</text><text x="194" y="118" font-size="12" text-anchor="start" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif">2</text><text x="105" y="21" font-size="12" text-anchor="end" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif">2i</text></svg>
+</div>
+<h3>講義4　図形への応用</h3>
+<div class="box lect">
+3点 A$(\alpha)$, B$(\beta)$, C$(\gamma)$ に対し、$\dfrac{\gamma-\alpha}{\beta-\alpha}=r(\cos\theta+i\sin\theta)\ (-\pi\lt\theta\leqq\pi)$ とすると、$r=\dfrac{\mathrm{AC}}{\mathrm{AB}}$ で、$\theta$ は半直線 AB から AC までの回転角（$\angle\mathrm{BAC}=|\theta|$）。これから<br>
+・3点 A, B, C が<b>一直線上</b>にある $\iff\dfrac{\gamma-\alpha}{\beta-\alpha}$ が<b>実数</b><br>
+・<b>AB ⊥ AC</b> $\iff\dfrac{\gamma-\alpha}{\beta-\alpha}$ が<b>純虚数</b><br>
+三角形の形状は、この比の値を極形式で表して、辺の比と角を読みとる。
+</div>
+<div class="box ex">
+異なる3点 A$(\alpha)$, B$(\beta)$, C$(\gamma)$ が $\dfrac{\gamma-\alpha}{\beta-\alpha}=1+\sqrt3i$ を満たすとき、△ABC の3つの角の大きさを求めよ。
+<div class="solx"><b>解</b>　$1+\sqrt3i=2\left(\cos\dfrac\pi3+i\sin\dfrac\pi3\right)$ より、$\mathrm{AC}=2\mathrm{AB}$、$\angle\mathrm{BAC}=\dfrac\pi3$。<br>
+AB $=a$ とおくと AC $=2a$ で、余弦定理より $\mathrm{BC}^2=a^2+4a^2-2\cdot a\cdot2a\cos\dfrac\pi3=3a^2$。<br>
+$\mathrm{AB}^2+\mathrm{BC}^2=4a^2=\mathrm{AC}^2$ より $\angle\mathrm{B}=\dfrac\pi2$。よって $\boldsymbol{\angle\mathrm{A}=\dfrac\pi3,\ \angle\mathrm{B}=\dfrac\pi2,\ \angle\mathrm{C}=\dfrac\pi6}$</div>
+</div>
+<h3>講義5　複素数平面上の軌跡</h3>
+<div class="box lect">
+複素数で表した条件を、図形の言葉に読みかえる。<br>
+・$|z-\alpha|=r$：点 $\alpha$ を中心とする半径 $r$ の円　・$|z-\alpha|=|z-\beta|$：2点 $\alpha,\beta$ を結ぶ線分の垂直二等分線<br>
+・$|z-\alpha|=k|z-\beta|\ (k\gt0,\ k\neq1)$：<b>アポロニウスの円</b>（2点からの距離の比が一定である点の軌跡）<br>
+読みかえにくい式は、①両辺を2乗して $|z|^2=z\bar z$ で展開する、②$z=x+yi$ とおいて $x,y$ の式にする、のどちらかで処理する。<br>
+点 $w=f(z)$ の軌跡は、<b>$z$ を $w$ で表し、$z$ の満たす条件に代入</b>して $w$ の満たす式を作る。
+</div>
+<div class="box ex">
+(1) $|z-3i|=2|z|$ を満たす点 $z$ 全体はどのような図形か。<br>
+(2) 点 $z$ が円 $|z-1|=1$ 上の原点以外の点を動くとき、点 $w=\dfrac1z$ はどのような図形を描くか。
+<div class="solx"><b>解</b>　(1) 両辺を2乗して $(z-3i)(\bar z+3i)=4z\bar z$。展開して $z\bar z+3iz-3i\bar z+9=4z\bar z$、すなわち $z\bar z-iz+i\bar z-3=0$。<br>
+$(z+i)(\bar z-i)=z\bar z-iz+i\bar z+1$ なので $(z+i)(\bar z-i)=4$、つまり $|z+i|^2=4$。<br>
+よって<b>点 $-i$ を中心とする半径2の円</b>。（$z=x+yi$ とおくと $x^2+(y+1)^2=4$）<br>
+(2) $w\neq0$ で $z=\dfrac1w$。これを $|z-1|=1$ に代入して $\left|\dfrac1w-1\right|=1$、両辺に $|w|$ を掛けて $|1-w|=|w|$。<br>
+これは点 $w$ が2点 0, 1 から等距離にあることを表すので、$w$ は<b>2点 0, 1 を結ぶ線分の垂直二等分線（実部が $\frac12$ の直線）</b>を描く。</div>
+</div>
+<div class="box chk">
+(1) $z=\dfrac{1+3i}{1-i}$ を $a+bi$ の形で表し、$|z|$ と $\bar z$ を求めよ。<br>
+(2) $(\sqrt3-i)^6$ を計算せよ。<br>
+(3) 方程式 $z^4=-4$ を解け。<br>
+(4) 3点 A$(1+i)$, B$(3+2i)$, C$(x+4i)$（$x$ は実数）について、A, B, C が一直線上にあるときと、AB ⊥ AC となるときの $x$ の値をそれぞれ求めよ。<br>
+(5) $|z+2|=2|z-1|$ を満たす点 $z$ 全体はどのような図形か。
+</div>
+<div class="box aim">
+複素数平面の入試問題は、<b>「回転と拡大」＝掛け算</b>という見方ができるかが鍵。正三角形・直角二等辺三角形の頂点は回転で一気に求まる。$z^n=\alpha$ 型の方程式は極形式で解き、$|z|=1$ の条件は $\bar z=\dfrac1z$ に読みかえる。軌跡では、$w=f(z)$ を $z$ について解いて条件に代入する流れを確実に。図形の条件と式の条件を行き来する練習をしておくこと。
+</div>
+<h3 class="deep">講義6　1の5乗根と正五角形</h3>
+<p>ド・モアブルの定理を使うと、正五角形に現れる $\cos\dfrac{2\pi}{5}$ の値を代数的に求められる。</p>
+<div class="box lect">
+$\omega=\cos\dfrac{2\pi}5+i\sin\dfrac{2\pi}5$ とおくと、ド・モアブルの定理より $\omega^5=\cos2\pi+i\sin2\pi=1$ で、$1,\omega,\omega^2,\omega^3,\omega^4$ は単位円に内接する正五角形の頂点になる。<br>
+$\omega^5-1=(\omega-1)(\omega^4+\omega^3+\omega^2+\omega+1)=0$ で $\omega\neq1$ なので $\omega^4+\omega^3+\omega^2+\omega+1=0$。両辺を $\omega^2$ で割ると<br>
+$\omega^2+\omega+1+\dfrac1\omega+\dfrac1{\omega^2}=0$、すなわち $\left(\omega+\dfrac1\omega\right)^2+\left(\omega+\dfrac1\omega\right)-1=0$<br>
+$|\omega|=1$ より $\dfrac1\omega=\bar\omega$ なので $t=\omega+\dfrac1\omega=\omega+\bar\omega=2\cos\dfrac{2\pi}5\gt0$。$t^2+t-1=0$ を解いて $t=\dfrac{-1+\sqrt5}{2}$、よって $\cos\dfrac{2\pi}{5}=\dfrac{\sqrt5-1}{4}$。<br>
+「$z^n=1$ の解」と「$z+\dfrac1z$ のおきかえ」の組み合わせは、入試で非常によく使われる。
+</div>
+<div class="box warn">
+・偏角を比較するとき $n\theta=\varphi$ だけにして $+2k\pi$ を忘れ、解を1つしか求めないミス。$\alpha\neq0$ の $n$ 乗根は $n$ 個ある。<br>
+・回転の式で、回転の中心 $\alpha$ を引いて足すのを忘れるミス（原点のまわりの回転になってしまう）。<br>
+・$|z-\alpha|$ を $|z|-|\alpha|$ のように分けてしまうミス。絶対値は2乗して $z\bar z$ で展開する。
+</div>
+<div class="box ans">
+(1) $z=\frac{(1+3i)(1+i)}{(1-i)(1+i)}=\frac{-2+4i}{2}=-1+2i$、$|z|=\sqrt5$、$\bar z=-1-2i$<br>
+(2) $\sqrt3-i=2\left\{\cos\left(-\frac\pi6\right)+i\sin\left(-\frac\pi6\right)\right\}$ より $2^6\{\cos(-\pi)+i\sin(-\pi)\}=-64$<br>
+(3) $-4=4(\cos\pi+i\sin\pi)$。$r^4=4$ より $r=\sqrt2$、$4\theta=\pi+2k\pi$ より $\theta=\frac\pi4+\frac{k\pi}{2}$（$k=0,1,2,3$）。$z=1+i,\ -1+i,\ -1-i,\ 1-i$<br>
+(4) $\frac{\gamma-\alpha}{\beta-\alpha}=\frac{(x-1)+3i}{2+i}=\frac{(2x+1)+(7-x)i}{5}$。一直線上：虚部 $=0$ より $x=7$。垂直：実部 $=0$ より $x=-\frac12$（このとき虚部は $0$ でない）<br>
+(5) $z=x+yi$ とおくと $(x+2)^2+y^2=4\{(x-1)^2+y^2\}$ より $(x-2)^2+y^2=4$。点 2 を中心とする半径 2 の円
+</div>
+
+<!--CH 21-->
+<div class="box point">
+・<b>放物線</b> $y^2=4px\ (p\neq0)$：焦点 $(p,0)$、準線 $x=-p$。焦点と準線から等距離にある点の軌跡<br>
+・<b>楕円</b> $\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1\ (a\gt b\gt0)$：焦点 $(\pm\sqrt{a^2-b^2},\ 0)$。2焦点からの距離の和が $2a$<br>
+・<b>双曲線</b> $\dfrac{x^2}{a^2}-\dfrac{y^2}{b^2}=1\ (a\gt0,\ b\gt0)$：焦点 $(\pm\sqrt{a^2+b^2},\ 0)$。2焦点からの距離の差が $2a$。漸近線 $y=\pm\dfrac bax$<br>
+・曲線上の点 $(x_1,y_1)$ における接線：$y_1y=2p(x+x_1)$、$\dfrac{x_1x}{a^2}+\dfrac{y_1y}{b^2}=1$、$\dfrac{x_1x}{a^2}-\dfrac{y_1y}{b^2}=1$<br>
+・媒介変数表示：楕円 $(a\cos\theta,\ b\sin\theta)$、サイクロイド $(a(\theta-\sin\theta),\ a(1-\cos\theta))$。極座標：$x=r\cos\theta,\ y=r\sin\theta,\ r^2=x^2+y^2$
+</div>
+<h3>講義1　放物線</h3>
+<div class="box lect">
+定点 F（<b>焦点</b>）と、F を通らない定直線 $l$（<b>準線</b>）から等距離にある点の軌跡を<b>放物線</b>という。F$(p,0)$、$l:x=-p$ とすると、点 P$(x,y)$ について「PF と、P から $l$ までの距離が等しい」ことから<br>
+$\sqrt{(x-p)^2+y^2}=|x+p|$。両辺を2乗して整理すると $y^2=4px$。<br>
+$x$ と $y$ を入れかえた $x^2=4py$ は、焦点 $(0,p)$、準線 $y=-p$ の放物線（$y=\frac{1}{4p}x^2$ と同じ）。例えば数学Iの放物線 $y=ax^2$ は、焦点 $\left(0,\ \frac1{4a}\right)$ をもつ。
+</div>
+<div class="box ex">
+(1) 放物線 $x^2=8y$ の焦点と準線を求めよ。<br>
+(2) 点 F(3, 0) を焦点、直線 $x=-1$ を準線とする放物線の方程式を求めよ。
+<div class="solx"><b>解</b>　(1) $x^2=4\cdot2\cdot y$ より、焦点 $\boldsymbol{(0,\ 2)}$、準線 $\boldsymbol{y=-2}$<br>
+(2) 放物線上の点 P$(x,y)$ について $\sqrt{(x-3)^2+y^2}=|x+1|$。2乗して $x^2-6x+9+y^2=x^2+2x+1$、よって $\boldsymbol{y^2=8(x-1)}$。<br>
+（これは $y^2=8x$ を $x$ 軸方向に1だけ平行移動したもの。頂点 $(1,0)$ は焦点と準線のちょうど中間にある。）</div>
+</div>
+<h3>講義2　楕円と双曲線</h3>
+<div class="box lect">
+2定点 F, F'（<b>焦点</b>）からの距離の<b>和</b>が一定である点の軌跡が<b>楕円</b>、距離の<b>差</b>が一定（0 でない）である点の軌跡が<b>双曲線</b>である。<br>
+F$(c,0)$、F'$(-c,0)$、PF + PF' $=2a\ (a\gt c\gt0)$ とする。$\sqrt{(x-c)^2+y^2}=2a-\sqrt{(x+c)^2+y^2}$ の両辺を2乗すると $a\sqrt{(x+c)^2+y^2}=a^2+cx$、もう一度2乗して整理すると $(a^2-c^2)x^2+a^2y^2=a^2(a^2-c^2)$。$b=\sqrt{a^2-c^2}$ とおけば $\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1$。$2a$ を<b>長軸</b>、$2b$ を<b>短軸</b>の長さという。楕円は、円 $x^2+y^2=a^2$ を $y$ 軸方向に $\dfrac ba$ 倍に縮めた図形でもある。<br>
+双曲線は $|\mathrm{PF}-\mathrm{PF'}|=2a\ (c\gt a\gt0)$ から同様に $\dfrac{x^2}{a^2}-\dfrac{y^2}{b^2}=1\ (b=\sqrt{c^2-a^2})$。$y=\pm\dfrac bax\sqrt{1-\dfrac{a^2}{x^2}}$ と変形すると、$|x|$ が大きいとき直線 $y=\pm\dfrac bax$ に限りなく近づくことがわかる（<b>漸近線</b>）。<br>
+焦点が $y$ 軸上にあるのは、楕円では $b\gt a$ のとき（焦点 $(0,\pm\sqrt{b^2-a^2})$）、双曲線では右辺が $-1$ の $\dfrac{x^2}{a^2}-\dfrac{y^2}{b^2}=-1$ のとき（焦点 $(0,\pm\sqrt{a^2+b^2})$、漸近線は同じ $y=\pm\dfrac bax$）。
+</div>
+<div class="two"><div><svg class="fig" width="230" height="186" viewBox="0 0 230 186"><line x1="8" y1="94" x2="222" y2="94" stroke="#888" stroke-width="1"/><polygon points="222,94 217,91.8 217,96.2" fill="#888"/><line x1="115" y1="168" x2="115" y2="8" stroke="#888" stroke-width="1"/><polygon points="115,8 112.8,13 117.2,13" fill="#888"/><text x="219" y="88" font-size="12" text-anchor="middle" fill="#222" font-style="italic" font-family="Liberation Serif,DejaVu Serif,serif">x</text><text x="122" y="16" font-size="12" text-anchor="start" fill="#222" font-style="italic" font-family="Liberation Serif,DejaVu Serif,serif">y</text><path d="M200,94 L199.9,90.4 L199.5,86.9 L199,83.4 L198.1,79.9 L197.1,76.4 L195.8,73 L194.4,69.6 L192.7,66.3 L190.7,63.1 L188.6,60 L186.3,57 L183.8,54 L181.1,51.2 L178.2,48.5 L175.1,45.9 L171.9,43.5 L168.5,41.2 L165,39 L161.3,37 L157.5,35.1 L153.6,33.4 L149.6,31.9 L145.5,30.5 L141.3,29.3 L137,28.3 L132.7,27.5 L128.3,26.8 L123.9,26.4 L119.4,26.1 L115,26 L110.6,26.1 L106.1,26.4 L101.7,26.8 L97.3,27.5 L93,28.3 L88.7,29.3 L84.5,30.5 L80.4,31.9 L76.4,33.4 L72.5,35.1 L68.7,37 L65,39 L61.5,41.2 L58.1,43.5 L54.9,45.9 L51.8,48.5 L48.9,51.2 L46.2,54 L43.7,57 L41.4,60 L39.3,63.1 L37.3,66.3 L35.6,69.6 L34.2,73 L32.9,76.4 L31.9,79.9 L31,83.4 L30.5,86.9 L30.1,90.4 L30,94 L30.1,97.6 L30.5,101.1 L31,104.6 L31.9,108.1 L32.9,111.6 L34.2,115 L35.6,118.4 L37.3,121.7 L39.3,124.9 L41.4,128 L43.7,131 L46.2,134 L48.9,136.8 L51.8,139.5 L54.9,142.1 L58.1,144.5 L61.5,146.8 L65,149 L68.7,151 L72.5,152.9 L76.4,154.6 L80.4,156.1 L84.5,157.5 L88.7,158.7 L93,159.7 L97.3,160.5 L101.7,161.2 L106.1,161.6 L110.6,161.9 L115,162 L119.4,161.9 L123.9,161.6 L128.3,161.2 L132.7,160.5 L137,159.7 L141.3,158.7 L145.5,157.5 L149.6,156.1 L153.6,154.6 L157.5,152.9 L161.3,151 L165,149 L168.5,146.8 L171.9,144.5 L175.1,142.1 L178.2,139.5 L181.1,136.8 L183.8,134 L186.3,131 L188.6,128 L190.7,124.9 L192.7,121.7 L194.4,118.4 L195.8,115 L197.1,111.6 L198.1,108.1 L199,104.6 L199.5,101.1 L199.9,97.6 L200,94" fill="none" stroke="#1f3f8f" stroke-width="1.6"/><line x1="153.6" y1="33.4" x2="166" y2="94" stroke="#c0392b" stroke-width="1.1"/><line x1="153.6" y1="33.4" x2="64" y2="94" stroke="#c0392b" stroke-width="1.1"/><circle cx="153.6" cy="33.4" r="2.4" fill="#222"/><circle cx="166" cy="94" r="2.4" fill="#222"/><circle cx="64" cy="94" r="2.4" fill="#222"/><text x="166" y="108" font-size="12" text-anchor="middle" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif">F</text><text x="64" y="108" font-size="12" text-anchor="middle" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif">F′</text><text x="158.6" y="28.4" font-size="12" text-anchor="start" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif">P</text><text x="203" y="107" font-size="12" text-anchor="start" fill="#222" font-style="italic" font-family="Liberation Serif,DejaVu Serif,serif">a</text><text x="111" y="22" font-size="12" text-anchor="end" fill="#222" font-style="italic" font-family="Liberation Serif,DejaVu Serif,serif">b</text><text x="115" y="184" font-size="12" text-anchor="middle" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif">PF + PF′ = 2a</text></svg></div><div><svg class="fig" width="230" height="186" viewBox="0 0 230 186"><line x1="8" y1="94" x2="222" y2="94" stroke="#888" stroke-width="1"/><polygon points="222,94 217,91.8 217,96.2" fill="#888"/><line x1="115" y1="168" x2="115" y2="8" stroke="#888" stroke-width="1"/><polygon points="115,8 112.8,13 117.2,13" fill="#888"/><text x="219" y="88" font-size="12" text-anchor="middle" fill="#222" font-style="italic" font-family="Liberation Serif,DejaVu Serif,serif">x</text><text x="122" y="16" font-size="12" text-anchor="start" fill="#222" font-style="italic" font-family="Liberation Serif,DejaVu Serif,serif">y</text><line x1="8.6" y1="173.8" x2="221.4" y2="14.2" stroke="#888" stroke-width="1" stroke-dasharray="4,3"/><line x1="8.6" y1="14.2" x2="221.4" y2="173.8" stroke="#888" stroke-width="1" stroke-dasharray="4,3"/><path d="M217.5,158.4 L214.1,155.3 L210.9,152.4 L207.8,149.5 L204.9,146.8 L202.1,144.1 L199.5,141.5 L197,138.9 L194.7,136.5 L192.4,134.1 L190.3,131.8 L188.4,129.5 L186.5,127.3 L184.8,125.2 L183.1,123.1 L181.6,121.1 L180.2,119.1 L178.9,117.1 L177.7,115.2 L176.6,113.3 L175.6,111.5 L174.7,109.6 L174,107.8 L173.3,106 L172.7,104.3 L172.1,102.5 L171.7,100.8 L171.4,99.1 L171.2,97.4 L171,95.7 L171,94 L171,92.3 L171.2,90.6 L171.4,88.9 L171.7,87.2 L172.1,85.5 L172.7,83.7 L173.3,82 L174,80.2 L174.7,78.4 L175.6,76.5 L176.6,74.7 L177.7,72.8 L178.9,70.9 L180.2,68.9 L181.6,66.9 L183.1,64.9 L184.8,62.8 L186.5,60.7 L188.4,58.5 L190.3,56.2 L192.4,53.9 L194.7,51.5 L197,49.1 L199.5,46.5 L202.1,43.9 L204.9,41.2 L207.8,38.5 L210.9,35.6 L214.1,32.7 L217.5,29.6" fill="none" stroke="#1f3f8f" stroke-width="1.6"/><path d="M12.5,158.4 L15.9,155.3 L19.1,152.4 L22.2,149.5 L25.1,146.8 L27.9,144.1 L30.5,141.5 L33,138.9 L35.3,136.5 L37.6,134.1 L39.7,131.8 L41.6,129.5 L43.5,127.3 L45.2,125.2 L46.9,123.1 L48.4,121.1 L49.8,119.1 L51.1,117.1 L52.3,115.2 L53.4,113.3 L54.4,111.5 L55.3,109.6 L56,107.8 L56.7,106 L57.3,104.3 L57.9,102.5 L58.3,100.8 L58.6,99.1 L58.8,97.4 L59,95.7 L59,94 L59,92.3 L58.8,90.6 L58.6,88.9 L58.3,87.2 L57.9,85.5 L57.3,83.7 L56.7,82 L56,80.2 L55.3,78.4 L54.4,76.5 L53.4,74.7 L52.3,72.8 L51.1,70.9 L49.8,68.9 L48.4,66.9 L46.9,64.9 L45.2,62.8 L43.5,60.7 L41.6,58.5 L39.7,56.2 L37.6,53.9 L35.3,51.5 L33,49.1 L30.5,46.5 L27.9,43.9 L25.1,41.2 L22.2,38.5 L19.1,35.6 L15.9,32.7 L12.5,29.6" fill="none" stroke="#1f3f8f" stroke-width="1.6"/><line x1="187.5" y1="59.5" x2="185" y2="94" stroke="#c0392b" stroke-width="1.1"/><line x1="187.5" y1="59.5" x2="45" y2="94" stroke="#c0392b" stroke-width="1.1"/><circle cx="187.5" cy="59.5" r="2.4" fill="#222"/><circle cx="185" cy="94" r="2.4" fill="#222"/><circle cx="45" cy="94" r="2.4" fill="#222"/><text x="187" y="108" font-size="12" text-anchor="middle" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif">F</text><text x="43" y="108" font-size="12" text-anchor="middle" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif">F′</text><text x="183.5" y="53.5" font-size="12" text-anchor="end" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif">P</text><text x="181.8" y="37.4" font-size="10" text-anchor="end" fill="#888">漸近線</text><text x="115" y="184" font-size="12" text-anchor="middle" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif">|PF − PF′| = 2a</text></svg></div></div>
+<div class="box ex">
+(1) 2点 $(3,0),\ (-3,0)$ からの距離の和が10である点の軌跡を求めよ。<br>
+(2) 楕円 $4x^2+9y^2=36$ の焦点と、長軸・短軸の長さを求めよ。<br>
+(3) 双曲線 $\dfrac{x^2}{16}-\dfrac{y^2}{9}=1$ の焦点と漸近線を求めよ。<br>
+(4) 2つの焦点が $(0,\pm\sqrt{10})$ で、漸近線が $y=\pm3x$ である双曲線の方程式を求めよ。
+<div class="solx"><b>解</b>　(1) $2a=10$ より $a=5$、$c=3$ より $b^2=25-9=16$。$\boldsymbol{\dfrac{x^2}{25}+\dfrac{y^2}{16}=1}$<br>
+(2) $\dfrac{x^2}9+\dfrac{y^2}4=1$。$\sqrt{9-4}=\sqrt5$ より焦点 $\boldsymbol{(\pm\sqrt5,\ 0)}$、長軸の長さ $\boldsymbol6$、短軸の長さ $\boldsymbol4$<br>
+(3) $\sqrt{16+9}=5$ より焦点 $\boldsymbol{(\pm5,\ 0)}$、漸近線 $\boldsymbol{y=\pm\dfrac34x}$<br>
+(4) 焦点が $y$ 軸上にあるので $\dfrac{x^2}{a^2}-\dfrac{y^2}{b^2}=-1$ とおく。漸近線から $\dfrac ba=3$、焦点から $a^2+b^2=10$。$b=3a$ を代入して $10a^2=10$、$a^2=1,\ b^2=9$。$\boldsymbol{x^2-\dfrac{y^2}{9}=-1}$</div>
+</div>
+<h3>講義3　接線と平行移動</h3>
+<div class="box lect">
+楕円 $\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1$ 上の点 $(x_1,y_1)$ における接線は $\dfrac{x_1x}{a^2}+\dfrac{y_1y}{b^2}=1$。両辺を $x$ で微分すると（数学III）$\dfrac{2x}{a^2}+\dfrac{2y}{b^2}\cdot\dfrac{dy}{dx}=0$ なので、$y_1\neq0$ のとき接線の傾きは $-\dfrac{b^2x_1}{a^2y_1}$。点 $(x_1,y_1)$ を通るこの傾きの直線の式を整理し、$\dfrac{x_1^2}{a^2}+\dfrac{y_1^2}{b^2}=1$ を使うと上の式になる。「$x^2\to x_1x$、$y^2\to y_1y$」と覚えるとよい（放物線は「$y^2\to y_1y$、$x\to\frac{x+x_1}2$」）。<br>
+曲線外の点から引いた接線は、接点を $(x_1,y_1)$ とおいて公式を使うか、直線の式を代入した2次方程式の<b>判別式 $D=0$</b> を使う。<br>
+曲線 $F(x,y)=0$ を $x$ 軸方向に $p$、$y$ 軸方向に $q$ だけ平行移動した曲線は $F(x-p,\ y-q)=0$。焦点や漸近線も同じだけ移動する。$x^2,\ y^2$ の係数が同符号なら楕円、異符号なら双曲線の平行移動を疑い、<b>平方完成</b>する。
+</div>
+<div class="box ex">
+(1) 楕円 $\dfrac{x^2}{8}+\dfrac{y^2}{2}=1$ 上の点 $(2,1)$ における接線の方程式を求めよ。<br>
+(2) 点 $(0,2)$ から楕円 $\dfrac{x^2}{4}+y^2=1$ に引いた接線の方程式を求めよ。<br>
+(3) 曲線 $x^2+4y^2-2x+16y+13=0$ はどのような曲線か。焦点も求めよ。
+<div class="solx"><b>解</b>　(1) $\dfrac{2x}{8}+\dfrac{1\cdot y}{2}=1$ より $\boldsymbol{x+2y=4}$<br>
+(2) 直線 $x=0$ は楕円と2点で交わるので接線ではない。接線を $y=mx+2$ とおいて楕円の式に代入し、整理すると $(1+4m^2)x^2+16mx+12=0$。<br>
+接する条件は $\dfrac D4=(8m)^2-12(1+4m^2)=16m^2-12=0$、$m=\pm\dfrac{\sqrt3}2$。$\boldsymbol{y=\pm\dfrac{\sqrt3}2x+2}$<br>
+(3) $(x-1)^2+4(y+2)^2=4$ より $\dfrac{(x-1)^2}{4}+(y+2)^2=1$。<b>楕円 $\dfrac{x^2}4+y^2=1$ を $x$ 軸方向に1、$y$ 軸方向に $-2$ だけ平行移動した楕円</b>。もとの焦点 $(\pm\sqrt3,\ 0)$ を移して、焦点は $\boldsymbol{(1\pm\sqrt3,\ -2)}$</div>
+</div>
+<h3>講義4　媒介変数表示とサイクロイド</h3>
+<div class="box lect">
+曲線上の点の座標を、1つの変数（<b>媒介変数</b>）$t$ や $\theta$ の関数 $x=f(t),\ y=g(t)$ で表したものを<b>媒介変数表示</b>という。<br>
+・円 $x^2+y^2=r^2$：$x=r\cos\theta,\ y=r\sin\theta$　・楕円：$x=a\cos\theta,\ y=b\sin\theta$　・双曲線：$x=\dfrac{a}{\cos\theta},\ y=b\tan\theta$<br>
+媒介変数を消去すれば $x,y$ の方程式が得られるが、<b>$x,y$ の動く範囲</b>に注意する。<br>
+半径 $a$ の円が $x$ 軸上をすべらずに転がるとき、円周上の定点 P（はじめ原点にある）が描く曲線を<b>サイクロイド</b>という。円が角 $\theta$ だけ回転すると、接点 T は原点から弧 PT の長さ $a\theta$ だけ進むので、中心は C$(a\theta,\ a)$。P は C から見て真下の方向から（時計回りに）$\theta$ だけ回った位置にあるので<br>
+$x=a\theta-a\sin\theta=a(\theta-\sin\theta)$、$y=a-a\cos\theta=a(1-\cos\theta)$
+</div>
+<svg class="fig" width="260" height="108" viewBox="0 0 260 108"><line x1="6" y1="88" x2="254" y2="88" stroke="#888" stroke-width="1"/><polygon points="254,88 249,85.8 249,90.2" fill="#888"/><line x1="18" y1="104" x2="18" y2="8" stroke="#888" stroke-width="1"/><polygon points="18,8 15.8,13 20.2,13" fill="#888"/><text x="251" y="82" font-size="12" text-anchor="middle" fill="#222" font-style="italic" font-family="Liberation Serif,DejaVu Serif,serif">x</text><text x="25" y="16" font-size="12" text-anchor="start" fill="#222" font-style="italic" font-family="Liberation Serif,DejaVu Serif,serif">y</text><path d="M18,88 L18,88 L18,87.8 L18,87.6 L18.1,87.3 L18.1,86.9 L18.2,86.4 L18.3,85.8 L18.4,85.1 L18.6,84.4 L18.8,83.6 L19,82.7 L19.3,81.7 L19.7,80.6 L20.1,79.5 L20.6,78.3 L21.1,77.1 L21.7,75.8 L22.4,74.4 L23.2,73 L24,71.5 L24.9,70 L25.9,68.4 L26.9,66.8 L28.1,65.2 L29.3,63.5 L30.6,61.9 L32.1,60.2 L33.6,58.4 L35.2,56.7 L36.8,55 L38.6,53.3 L40.5,51.6 L42.4,49.8 L44.5,48.1 L46.6,46.5 L48.8,44.8 L51.1,43.2 L53.5,41.6 L56,40 L58.5,38.5 L61.2,37 L63.9,35.6 L66.7,34.2 L69.5,32.9 L72.4,31.7 L75.4,30.5 L78.4,29.4 L81.5,28.3 L84.7,27.3 L87.9,26.4 L91.1,25.6 L94.4,24.9 L97.8,24.2 L101.1,23.6 L104.5,23.1 L107.9,22.7 L111.3,22.4 L114.8,22.2 L118.2,22 L121.7,22 L125.1,22 L128.6,22.2 L132,22.4 L135.4,22.7 L138.9,23.1 L142.2,23.6 L145.6,24.2 L148.9,24.9 L152.2,25.6 L155.5,26.4 L158.7,27.3 L161.8,28.3 L164.9,29.4 L167.9,30.5 L170.9,31.7 L173.8,32.9 L176.7,34.2 L179.5,35.6 L182.2,37 L184.8,38.5 L187.4,40 L189.8,41.6 L192.2,43.2 L194.5,44.8 L196.7,46.5 L198.9,48.1 L200.9,49.8 L202.9,51.6 L204.7,53.3 L206.5,55 L208.2,56.7 L209.8,58.4 L211.3,60.2 L212.7,61.9 L214,63.5 L215.3,65.2 L216.4,66.8 L217.5,68.4 L218.5,70 L219.4,71.5 L220.2,73 L220.9,74.4 L221.6,75.8 L222.2,77.1 L222.8,78.3 L223.2,79.5 L223.7,80.6 L224,81.7 L224.3,82.7 L224.6,83.6 L224.8,84.4 L224.9,85.1 L225.1,85.8 L225.2,86.4 L225.2,86.9 L225.3,87.3 L225.3,87.6 L225.3,87.8 L225.3,88 L225.3,88" fill="none" stroke="#1f3f8f" stroke-width="1.6"/><circle cx="87.1" cy="55" r="33" fill="none" stroke="#888" stroke-width="1"/><line x1="87.1" y1="55" x2="58.5" y2="38.5" stroke="#c0392b" stroke-width="1.1"/><line x1="87.1" y1="55" x2="87.1" y2="88" stroke="#888" stroke-width="1" stroke-dasharray="3,2"/><circle cx="87.1" cy="55" r="2.4" fill="#222"/><circle cx="58.5" cy="38.5" r="2.4" fill="#222"/><circle cx="87.1" cy="88" r="2.4" fill="#222"/><text x="52.5" y="34.5" font-size="12" text-anchor="end" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif">P</text><text x="92.1" y="52" font-size="12" text-anchor="start" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif">C</text><text x="89.1" y="101" font-size="12" text-anchor="middle" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif">T</text><text x="11" y="101" font-size="12" text-anchor="middle" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif">O</text><text x="225.3" y="101" font-size="12" text-anchor="middle" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif">2πa</text><text x="125.7" y="19" font-size="12" text-anchor="start" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif">2a</text><path d="M87.1,65 A10,10 0 0,1 78.5,50" fill="none" stroke="#222" stroke-width="0.9"/><text x="72.4" y="67.5" font-size="12" text-anchor="middle" fill="#222" font-style="italic" font-family="Liberation Serif,DejaVu Serif,serif">θ</text></svg>
+<div class="box ex">
+(1) $x=2\cos\theta+1,\ y=3\sin\theta-2$ で表される曲線を、$x,y$ の方程式で表せ。<br>
+(2) $x=2t+1,\ y=4t^2-1$ で表される曲線を、$x,y$ の方程式で表せ。
+<div class="solx"><b>解</b>　(1) $\cos\theta=\dfrac{x-1}2,\ \sin\theta=\dfrac{y+2}3$ を $\cos^2\theta+\sin^2\theta=1$ に代入して $\boldsymbol{\dfrac{(x-1)^2}{4}+\dfrac{(y+2)^2}{9}=1}$（中心 $(1,-2)$ の楕円）<br>
+(2) $t=\dfrac{x-1}2$ を代入して $y=(x-1)^2-1$、すなわち $\boldsymbol{y=x^2-2x}$（$t$ が実数全体を動くと $x$ も実数全体を動くので、放物線全体）</div>
+</div>
+<h3>講義5　極座標と極方程式</h3>
+<div class="box lect">
+平面上に点 O（<b>極</b>）と半直線 OX（<b>始線</b>）を定め、点 P を OP $=r$ と、OX から OP までの回転角 $\theta$ の組 $(r,\theta)$ で表したものを<b>極座標</b>という。直交座標との関係は<br>
+$x=r\cos\theta,\ y=r\sin\theta$、$r=\sqrt{x^2+y^2}$<br>
+曲線を $r$ と $\theta$ の関係式で表したものを<b>極方程式</b>という。例えば $r=a\ (a\gt0)$ は極を中心とする半径 $a$ の円、$\theta=\alpha$ は極を通る直線（$r$ が負の値もとると考える）。極方程式を直交座標の式に直すには、$r\cos\theta,\ r\sin\theta,\ r^2$ の形を作って $x,\ y,\ x^2+y^2$ におきかえる（必要なら両辺に $r$ を掛ける）。
+</div>
+<div class="box ex">
+(1) 極座標が $\left(2,\ \dfrac23\pi\right)$ である点の直交座標と、直交座標が $(1,-1)$ である点の極座標（$0\leqq\theta\lt2\pi$）を求めよ。<br>
+(2) 極方程式 $r=4\cos\theta$ を直交座標の方程式で表せ。<br>
+(3) 直線 $x+\sqrt3y=2$ を極方程式で表せ。
+<div class="solx"><b>解</b>　(1) $x=2\cos\dfrac23\pi=-1$、$y=2\sin\dfrac23\pi=\sqrt3$ より $\boldsymbol{(-1,\ \sqrt3)}$。$r=\sqrt2$、$\cos\theta=\dfrac1{\sqrt2},\ \sin\theta=-\dfrac1{\sqrt2}$ より $\boldsymbol{\left(\sqrt2,\ \dfrac74\pi\right)}$<br>
+(2) 両辺に $r$ を掛けて $r^2=4r\cos\theta$、$x^2+y^2=4x$。$\boldsymbol{(x-2)^2+y^2=4}$（中心 $(2,0)$、半径2の円。極 O も $\theta=\frac\pi2$ のとき $r=0$ で含まれる）<br>
+(3) $r\cos\theta+\sqrt3r\sin\theta=2$。左辺を合成して $2r\cos\left(\theta-\dfrac\pi3\right)=2$、$\boldsymbol{r\cos\left(\theta-\dfrac\pi3\right)=1}$</div>
+</div>
+<div class="box chk">
+(1) 放物線 $y^2=-6x$ の焦点と準線を求めよ。<br>
+(2) 楕円 $\dfrac{x^2}{9}+\dfrac{y^2}{25}=1$ の焦点を求めよ。<br>
+(3) 双曲線 $x^2-4y^2=4$ の焦点と漸近線を求めよ。<br>
+(4) 双曲線 $\dfrac{x^2}{4}-\dfrac{y^2}{2}=1$ 上の点 $(2\sqrt2,\ \sqrt2)$ における接線の方程式を求めよ。<br>
+(5) $x=\cos\theta+\sin\theta,\ y=\sin\theta\cos\theta$ で表される曲線を、$x,y$ の方程式で表せ（$x$ の範囲も示せ）。<br>
+(6) 極方程式 $r^2\cos2\theta=1$ を直交座標の方程式で表せ。
+</div>
+<div class="box aim">
+2次曲線は、<b>標準形 → 焦点・漸近線</b>の読みとりが基本で、共通テストでも二次試験でも小問の入口になる。二次試験では、接線・法線と、楕円の媒介変数表示 $(a\cos\theta,\ b\sin\theta)$ を使った最大・最小（楕円上の点と直線の距離、内接する長方形の面積など）が頻出。サイクロイドは数学IIIの積分（面積・曲線の長さ）と組み合わせて出題される。極方程式は、直交座標に直して図形を判定する問題が中心である。
+</div>
+<h3 class="deep">講義6　離心率による2次曲線の統一</h3>
+<p>放物線は「焦点と準線からの距離が等しい」曲線だった。この距離の比を1以外にすると、楕円や双曲線も同じ形で表せる。</p>
+<div class="box lect">
+定点 F と、F を通らない定直線 $l$ があり、点 P から $l$ に下ろした垂線を PH とする。$\dfrac{\mathrm{PF}}{\mathrm{PH}}=e$（一定）を満たす点 P の軌跡は、<br>
+$0\lt e\lt1$ のとき<b>楕円</b>、$e=1$ のとき<b>放物線</b>、$e\gt1$ のとき<b>双曲線</b><br>
+となる。$e$ を<b>離心率</b>という。楕円 $\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1\ (a\gt b\gt0)$ では $e=\dfrac{\sqrt{a^2-b^2}}{a}$ で、焦点 $(\pm ae,\ 0)$ に対応する準線は $x=\pm\dfrac{a}{e}$。<br>
+F を極、$l$ を直線 $x=-d\ (d\gt0)$ とすると、PF $=r$、PH $=r\cos\theta+d$ なので $r=e(r\cos\theta+d)$、すなわち<br>
+$r=\dfrac{ed}{1-e\cos\theta}$<br>
+となり、3種類の2次曲線が1つの極方程式で表せる。例えば $e=\frac12,\ d=3$ のとき $r=\dfrac{3}{2-\cos\theta}$。$2r-r\cos\theta=3$ より $2r=x+3$、両辺を2乗して $4(x^2+y^2)=(x+3)^2$、整理して $\dfrac{(x-1)^2}{4}+\dfrac{y^2}{3}=1$。これは中心 $(1,0)$、焦点 $(0,0),\ (2,0)$ の楕円で、確かに極が焦点になっている（離心率 $\frac{\sqrt{4-3}}{2}=\frac12$）。
+</div>
+<div class="box warn">
+・楕円の焦点は $\sqrt{a^2-b^2}$、双曲線の焦点は $\sqrt{a^2+b^2}$。取り違えない。また、楕円で $b\gt a$ のときは焦点が $y$ 軸上の $(0,\pm\sqrt{b^2-a^2})$ になる（確認問題(2)）。<br>
+・媒介変数を消去したあと、$x,y$ の範囲を書き忘れるミス（確認問題(5)）。$\cos\theta,\ \sin\theta$ や $t^2$ を含むときは特に注意。<br>
+・極方程式を直交座標に直すとき、両辺に $r$ を掛けたり2乗したりした場合は、極（原点）などの余分な点が加わっていないかを確認する。
+</div>
+<div class="box ans">
+(1) $4p=-6$ より $p=-\frac32$。焦点 $\left(-\frac32,\ 0\right)$、準線 $x=\frac32$<br>
+(2) $b\gt a$ なので焦点は $y$ 軸上。$\sqrt{25-9}=4$ より $(0,\ \pm4)$<br>
+(3) $\frac{x^2}{4}-y^2=1$。$\sqrt{4+1}=\sqrt5$ より焦点 $(\pm\sqrt5,\ 0)$、漸近線 $y=\pm\frac12x$<br>
+(4) $\frac{2\sqrt2x}{4}-\frac{\sqrt2y}{2}=1$ の両辺に $\sqrt2$ を掛けて $x-y=\sqrt2$<br>
+(5) $x^2=1+2\sin\theta\cos\theta=1+2y$ より $y=\frac{x^2-1}{2}$。$x=\sqrt2\sin\left(\theta+\frac\pi4\right)$ より $-\sqrt2\leqq x\leqq\sqrt2$<br>
+(6) $r^2(\cos^2\theta-\sin^2\theta)=x^2-y^2$ より $x^2-y^2=1$（直角双曲線）
+</div>

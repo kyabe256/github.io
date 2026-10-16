@@ -1,0 +1,494 @@
+<!--CH 14-->
+<div class="pat"><h4>曲線外の点を通る接線は「接点を $t$ とおく」</h4>
+<div class="when">「点 $(p,q)$ から曲線 $y=f(x)$ に引いた接線」「点 $(p,q)$ を通る接線」。その点が曲線上にあるとは限らない。</div>
+<div class="how">①接点を $(t,\ f(t))$ とおき、接線 $y=f'(t)(x-t)+f(t)$ を書く → ②この直線が $(p,q)$ を通る条件 $q=f'(t)(p-t)+f(t)$ を $t$ の方程式として解く → ③求めた $t$ を接線の式に戻す。</div>
+<div class="pex">点 $(0,2)$ から曲線 $y=x^3-x$ に引いた接線の方程式を求めよ。<br>
+<b>解</b>　接点を $(t,\ t^3-t)$ とすると、接線は $y=(3t^2-1)(x-t)+t^3-t=(3t^2-1)x-2t^3$。$(0,2)$ を通るので $2=-2t^3$、$t=-1$。よって <b>$y=2x+2$</b>。</div>
+<div class="pnote">$(0,2)$ は曲線上の点ではない。「点 $(0,2)$ における接線」と思って $f'(0)$ を使うのは誤り。</div>
+</div>
+
+<div class="pat"><h4>接線の本数＝接点の個数（3次関数）</h4>
+<div class="when">「点 $(p,q)$ から3次関数のグラフに接線が3本引けるような $q$（または $p$）の範囲」。</div>
+<div class="how">前のカードの手順で $t$ の3次方程式を作る。<b>3次関数のグラフでは、接点が異なれば接線も異なる</b>ので、接線の本数＝実数解 $t$ の個数。方程式を「（定数）＝（$t$ の式）」と分離し、グラフと直線の共有点を数える。</div>
+<div class="pex"><svg class="fig" style="float:right;margin:0 0 1mm 3mm" width="210" height="150" viewBox="0 0 210 150"><rect x="22" y="77.8" width="178" height="27.9" fill="#d9701e" fill-opacity="0.13"/><line x1="22" y1="22.0" x2="200" y2="22.0" stroke="#333" stroke-width="0.8"/><line x1="77.8" y1="142" x2="77.8" y2="8" stroke="#333" stroke-width="0.8"/><text x="194" y="19.0" font-size="11" font-style="italic">t</text><text x="81.8" y="17" font-size="11" font-style="italic">y</text><text x="67.8" y="19.0" font-size="10">O</text><line x1="22" y1="77.8" x2="200" y2="77.8" stroke="#888" stroke-dasharray="3,2" stroke-width="0.7"/><text x="60.8" y="75.8" font-size="10">−2</text><line x1="22" y1="105.7" x2="200" y2="105.7" stroke="#888" stroke-dasharray="3,2" stroke-width="0.7"/><text x="60.8" y="115.7" font-size="10">−3</text><line x1="147.6" y1="22.0" x2="147.6" y2="77.8" stroke="#888" stroke-dasharray="2,2" stroke-width="0.7"/><text x="144.6" y="19.0" font-size="10">1</text><line x1="22" y1="91.8" x2="200" y2="91.8" stroke="#d9701e" stroke-width="1.3"/><text x="23" y="102.8" font-size="10" fill="#d9701e">y=a</text><polyline points="22.0,23.5 22.6,25.6 23.2,27.6 23.8,29.5 24.4,31.5 25.0,33.4 25.6,35.3 26.2,37.1 26.7,38.9 27.3,40.7 27.9,42.5 28.5,44.2 29.1,45.9 29.7,47.6 30.3,49.2 30.9,50.9 31.5,52.4 32.1,54.0 32.7,55.5 33.3,57.0 33.9,58.5 34.5,60.0 35.1,61.4 35.6,62.8 36.2,64.1 36.8,65.5 37.4,66.8 38.0,68.1 38.6,69.3 39.2,70.6 39.8,71.8 40.4,73.0 41.0,74.1 41.6,75.3 42.2,76.4 42.8,77.5 43.4,78.5 44.0,79.6 44.5,80.6 45.1,81.6 45.7,82.6 46.3,83.5 46.9,84.4 47.5,85.3 48.1,86.2 48.7,87.0 49.3,87.9 49.9,88.7 50.5,89.5 51.1,90.2 51.7,91.0 52.3,91.7 52.9,92.4 53.4,93.1 54.0,93.8 54.6,94.4 55.2,95.0 55.8,95.6 56.4,96.2 57.0,96.8 57.6,97.3 58.2,97.8 58.8,98.3 59.4,98.8 60.0,99.3 60.6,99.7 61.2,100.2 61.8,100.6 62.3,101.0 62.9,101.3 63.5,101.7 64.1,102.1 64.7,102.4 65.3,102.7 65.9,103.0 66.5,103.3 67.1,103.5 67.7,103.8 68.3,104.0 68.9,104.2 69.5,104.4 70.1,104.6 70.7,104.8 71.2,104.9 71.8,105.1 72.4,105.2 73.0,105.3 73.6,105.4 74.2,105.5 74.8,105.5 75.4,105.6 76.0,105.6 76.6,105.7 77.2,105.7 77.8,105.7 78.4,105.7 79.0,105.7 79.6,105.7 80.1,105.6 80.7,105.6 81.3,105.5 81.9,105.4 82.5,105.3 83.1,105.3 83.7,105.2 84.3,105.0 84.9,104.9 85.5,104.8 86.1,104.6 86.7,104.5 87.3,104.3 87.9,104.1 88.5,104.0 89.0,103.8 89.6,103.6 90.2,103.4 90.8,103.2 91.4,103.0 92.0,102.7 92.6,102.5 93.2,102.2 93.8,102.0 94.4,101.7 95.0,101.5 95.6,101.2 96.2,100.9 96.8,100.7 97.4,100.4 97.9,100.1 98.5,99.8 99.1,99.5 99.7,99.2 100.3,98.9 100.9,98.6 101.5,98.3 102.1,97.9 102.7,97.6 103.3,97.3 103.9,97.0 104.5,96.6 105.1,96.3 105.7,95.9 106.3,95.6 106.8,95.3 107.4,94.9 108.0,94.6 108.6,94.2 109.2,93.9 109.8,93.5 110.4,93.2 111.0,92.8 111.6,92.4 112.2,92.1 112.8,91.7 113.4,91.4 114.0,91.0 114.6,90.7 115.2,90.3 115.7,90.0 116.3,89.6 116.9,89.2 117.5,88.9 118.1,88.6 118.7,88.2 119.3,87.9 119.9,87.5 120.5,87.2 121.1,86.8 121.7,86.5 122.3,86.2 122.9,85.8 123.5,85.5 124.1,85.2 124.6,84.9 125.2,84.6 125.8,84.3 126.4,84.0 127.0,83.7 127.6,83.4 128.2,83.1 128.8,82.8 129.4,82.5 130.0,82.2 130.6,82.0 131.2,81.7 131.8,81.5 132.4,81.2 133.0,81.0 133.5,80.7 134.1,80.5 134.7,80.3 135.3,80.1 135.9,79.9 136.5,79.7 137.1,79.5 137.7,79.3 138.3,79.2 138.9,79.0 139.5,78.8 140.1,78.7 140.7,78.6 141.3,78.5 141.9,78.3 142.4,78.2 143.0,78.1 143.6,78.1 144.2,78.0 144.8,77.9 145.4,77.9 146.0,77.8 146.6,77.8 147.2,77.8 147.8,77.8 148.4,77.8 149.0,77.8 149.6,77.9 150.2,77.9 150.8,78.0 151.3,78.0 151.9,78.1 152.5,78.2 153.1,78.3 153.7,78.5 154.3,78.6 154.9,78.8 155.5,78.9 156.1,79.1 156.7,79.3 157.3,79.5 157.9,79.8 158.5,80.0 159.1,80.3 159.7,80.6 160.2,80.8 160.8,81.2 161.4,81.5 162.0,81.8 162.6,82.2 163.2,82.6 163.8,83.0 164.4,83.4 165.0,83.8 165.6,84.3 166.2,84.7 166.8,85.2 167.4,85.7 168.0,86.3 168.6,86.8 169.1,87.4 169.7,88.0 170.3,88.6 170.9,89.2 171.5,89.8 172.1,90.5 172.7,91.2 173.3,91.9 173.9,92.6 174.5,93.3 175.1,94.1 175.7,94.9 176.3,95.7 176.9,96.6 177.5,97.4 178.0,98.3 178.6,99.2 179.2,100.1 179.8,101.1 180.4,102.0 181.0,103.0 181.6,104.0 182.2,105.1 182.8,106.2 183.4,107.2 184.0,108.4 184.6,109.5 185.2,110.7 185.8,111.8 186.4,113.1 186.9,114.3 187.5,115.6 188.1,116.9 188.7,118.2 189.3,119.5 189.9,120.9 190.5,122.3 191.1,123.7 191.7,125.2 192.3,126.6 192.9,128.2 193.5,129.7 194.1,131.2 194.7,132.8 195.3,134.5 195.8,136.1 196.4,137.8 197.0,139.5 197.6,141.2" fill="none" stroke="#1f3f8f" stroke-width="1.6"/><circle cx="52.3" cy="91.8" r="2.2" fill="#d9701e"/><circle cx="112.8" cy="91.8" r="2.2" fill="#d9701e"/><circle cx="173.2" cy="91.8" r="2.2" fill="#d9701e"/><text x="151.1" y="125.3" font-size="10" fill="#1f3f8f">y=g(t)</text></svg>点 $(1,a)$ から曲線 $y=x^3-3x$ に3本の接線が引けるような定数 $a$ の値の範囲を求めよ。<br>
+<b>解</b>　接点 $(t,\ t^3-3t)$ における接線は $y=(3t^2-3)x-2t^3$。$(1,a)$ を通るから $a=-2t^3+3t^2-3$。<br>
+$g(t)=-2t^3+3t^2-3$ とおくと $g'(t)=-6t(t-1)$ で、極小値 $g(0)=-3$、極大値 $g(1)=-2$。直線 $y=a$ が曲線 $y=g(t)$ と3点で交わる条件から <b>$-3<a<-2$</b>。<div style="clear:both"></div></div>
+<div class="pnote">4次関数などでは異なる2点で接する直線があるので、「本数＝接点の個数」とは限らない。</div>
+</div>
+
+<div class="pat"><h4>3次関数が極値をもつ ⇔ $f'(x)=0$ の判別式 $D>0$</h4>
+<div class="when">「3次関数が極値をもつ（もたない）」「つねに増加する」ような係数の条件。</div>
+<div class="how">$f(x)=ax^3+bx^2+cx+d\ (a\neq0)$ で、$f'(x)=3ax^2+2bx+c$ の判別式を $D$ とする。<br>
+極値をもつ $\iff D>0$（$f'(x)$ の符号が変わる点が2つ）。極値をもたない $\iff D\leqq0$（$a>0$ なら単調に増加）。</div>
+<div class="pex">$f(x)=x^3+ax^2+3x+1$ が極値をもつような定数 $a$ の値の範囲を求めよ。<br>
+<b>解</b>　$f'(x)=3x^2+2ax+3$。$\frac D4=a^2-9>0$ より <b>$a<-3,\ 3<a$</b>。</div>
+<div class="pnote">$D=0$ のとき $f'(x)\geqq0$ で、$f'(x)=0$ となる点はあっても前後で符号が変わらないので極値ではない。「$f'(\alpha)=0$ ならば極値」は誤り。</div>
+</div>
+
+<div class="pat"><h4>極値の条件から係数を決めたら、最後に十分性を確認</h4>
+<div class="when">「$x=1$ で極小値 $-3$ をとるように $a,b$ を定めよ」。</div>
+<div class="how">①$f'(1)=0$、$f(1)=-3$ を連立して $a,b$ を求める（これは<b>必要条件</b>）→ ②求めた係数で $f'(x)$ を因数分解し、本当に $x=1$ で極小になるか符号を確かめる（十分性）。</div>
+<div class="pex">$f(x)=x^3+ax^2+bx$ が $x=1$ で極小値 $-3$ をとるとき、定数 $a,b$ を求めよ。<br>
+<b>解</b>　$f'(x)=3x^2+2ax+b$。$f'(1)=3+2a+b=0$、$f(1)=1+a+b=-3$ より $a=1,\ b=-5$。このとき $f'(x)=3x^2+2x-5=(3x+5)(x-1)$ で、$x=1$ の前後で $f'(x)$ は負から正に変わるから確かに極小。<b>$a=1,\ b=-5$</b>。</div>
+<div class="pnote">十分性の確認を省くと減点される。$f'(1)=0$ でも、極大だったり極値でなかったりすることがある。</div>
+</div>
+
+<div class="pat"><h4>極大値と極小値の差は積分で一気に</h4>
+<div class="when">3次関数の「極大値と極小値の差」が与えられる・問われる。</div>
+<div class="how">$f'(x)=3a(x-\alpha)(x-\beta)\ (\alpha<\beta)$ なら、$f(\alpha)-f(\beta)=-\int_\alpha^\beta f'(x)\,dx=\frac a2(\beta-\alpha)^3$ より、<b>極大値と極小値の差は $\frac{|a|}2(\beta-\alpha)^3$</b>。$\beta-\alpha$ は解と係数の関係 $(\beta-\alpha)^2=(\alpha+\beta)^2-4\alpha\beta$ で求める。<br>
+極値そのものが必要なら、$f(x)$ を $f'(x)$ で割った余り $R(x)$（1次式）を使うと $f(\alpha)=R(\alpha)$ で計算が軽い。</div>
+<div class="pex">$k>0$ とする。$f(x)=x^3-3kx$ の極大値と極小値の差が 4 となる $k$ を求めよ。<br>
+<b>解</b>　$f'(x)=3(x^2-k)$ より $\alpha=-\sqrt k,\ \beta=\sqrt k$。差は $\frac12(2\sqrt k)^3=4k\sqrt k$。$4k\sqrt k=4$ より <b>$k=1$</b>。</div>
+</div>
+
+<div class="pat"><h4>文字定数を含む方程式の実数解の個数は「定数分離」</h4>
+<div class="when">「方程式 $x^3-3x^2-a=0$ が異なる3つの実数解をもつ $a$ の範囲」など。</div>
+<div class="how">定数 $a$ を分離して $f(x)=a$ の形にし、<b>曲線 $y=f(x)$ と直線 $y=a$ の共有点の個数</b>を数える。「正の解が2個」などの条件も、共有点の $x$ 座標の位置で読み取れる。</div>
+<div class="pex">方程式 $x^3-3x^2-a=0$ が異なる3つの実数解をもつような $a$ の値の範囲を求めよ。<br>
+<b>解</b>　$x^3-3x^2=a$。$g(x)=x^3-3x^2$ とおくと $g'(x)=3x(x-2)$ で、極大値 $g(0)=0$、極小値 $g(2)=-4$。直線 $y=a$ が3点で交わるのは <b>$-4<a<0$</b>。</div>
+<div class="pnote">$a=0,\ -4$ のときは共有点が2個（重解をもつ）。端の値を含めるかどうかに注意。</div>
+</div>
+
+<div class="pat"><h4>区間での最大・最小は「極値と端点」をすべて比べる</h4>
+<div class="when">「$0\leqq x\leqq4$ における最大値・最小値を求めよ」。</div>
+<div class="how">区間内で増減表を書き、<b>極値と区間の両端の値</b>を並べて比べる。極大値がそのまま最大値になるとは限らない。</div>
+<div class="pex">$f(x)=x^3-6x^2+9x\ (0\leqq x\leqq4)$ の最大値・最小値を求めよ。<br>
+<b>解</b>　$f'(x)=3(x-1)(x-3)$。$f(0)=0,\ f(1)=4,\ f(3)=0,\ f(4)=4$。<b>最大値 4（$x=1,4$）、最小値 0（$x=0,3$）</b>。</div>
+</div>
+
+<div class="pat"><h4>区間の端が文字なら「グラフを固定して区間を動かす」</h4>
+<div class="when">「$0\leqq x\leqq a$ における最大値 $M(a)$ を求めよ」のように区間に文字を含む。</div>
+<div class="how">グラフは固定し、区間の右端 $a$ を少しずつ右へ動かして場合分け。境目は<b>極値をとる $x$</b> と、<b>端点や極値と同じ値をとる別の $x$</b>。</div>
+<div class="pex">$a>0$ とする。$f(x)=x^3-3x\ (0\leqq x\leqq a)$ の最大値 $M(a)$ を求めよ。<br>
+<b>解</b>　$f'(x)=3(x+1)(x-1)$ より、$0\leqq x\leqq1$ で減少、$x\geqq1$ で増加。$f(x)=f(0)=0$ となる正の $x$ は $\sqrt3$ だから<br>
+<b>$0<a\leqq\sqrt3$ のとき $M(a)=0$（$x=0$）、$a>\sqrt3$ のとき $M(a)=a^3-3a$（$x=a$）</b>。</div>
+</div>
+
+<div class="pat"><h4>「つねに $f(x)\geqq0$」は（最小値）$\geqq0$</h4>
+<div class="when">「$x\geqq0$ のとき、つねに $x^3-3x+a\geqq0$ となる $a$ の範囲」「不等式 $f(x)\geqq g(x)$ を証明せよ」。</div>
+<div class="how">$F(x)=(\text{左辺})-(\text{右辺})$ とおき、指定された範囲での<b>最小値 $\geqq0$</b> を示す（または条件にする）。定数を分離して「$a\geqq h(x)$ の最大値」としてもよい。</div>
+<div class="pex">$x\geqq0$ でつねに $x^3-3x+a\geqq0$ が成り立つような $a$ の値の範囲を求めよ。<br>
+<b>解</b>　$f(x)=x^3-3x+a$ とおくと $f'(x)=3(x+1)(x-1)$。$x\geqq0$ では $x=1$ で最小値 $f(1)=a-2$。$a-2\geqq0$ より <b>$a\geqq2$</b>。</div>
+<div class="pnote">範囲が $x\geqq0$ に限られているときは、範囲外の極値（ここでは $x=-1$）を使わない。</div>
+</div>
+
+<div class="box memo"><table class="l w">
+<tr><th>項目</th><th>公式・方法</th></tr>
+<tr><td>接線</td><td>接点 $(t,f(t))$ とおいて $y=f'(t)(x-t)+f(t)$</td></tr>
+<tr><td>極値をもつ条件（3次関数）</td><td>$f'(x)=0$ が異なる2つの実数解をもつ $\iff D>0$</td></tr>
+<tr><td>極大値−極小値</td><td>$f'(x)=3a(x-\alpha)(x-\beta)$ のとき $\frac{|a|}2(\beta-\alpha)^3$</td></tr>
+<tr><td>極値の計算</td><td>$f(x)=f'(x)Q(x)+R(x)$ と割ると $f(\alpha)=R(\alpha)$</td></tr>
+<tr><td>実数解の個数</td><td>$f(x)=a$ と分離 → $y=f(x)$ と $y=a$ の共有点の個数</td></tr>
+<tr><td>最大・最小</td><td>極値と区間の端の値をすべて比べる</td></tr>
+<tr><td>不等式 $f(x)\geqq0$</td><td>範囲内での（最小値）$\geqq0$ を示す</td></tr>
+</table></div>
+
+<!--CH 15-->
+<div class="pat"><h4>放物線と直線で囲まれた面積は $\frac16$ 公式</h4>
+<div class="when">放物線と直線、または2つの放物線で囲まれた部分の面積。</div>
+<div class="how">交点の $x$ 座標を $\alpha<\beta$ とすると $\int_\alpha^\beta(x-\alpha)(x-\beta)\,dx=-\frac16(\beta-\alpha)^3$。<br>
+（上の式）−（下の式）$=-a(x-\alpha)(x-\beta)$ と因数分解できれば、面積は <b>$\frac{|a|}6(\beta-\alpha)^3$</b>（$a$ は差の $x^2$ の係数）。</div>
+<div class="pex">放物線 $y=x^2$ と直線 $y=x+2$ で囲まれた部分の面積 $S$ を求めよ。<br>
+<b>解</b>　$x^2=x+2$ より $x=-1,2$。$S=\int_{-1}^2\{(x+2)-x^2\}\,dx=-\int_{-1}^2(x+1)(x-2)\,dx=\frac16\cdot3^3=\frac92$。</div>
+<div class="pnote">2つの放物線 $y=x^2$ と $y=-x^2+2x+4$ なら、差は $-2(x+1)(x-2)$ で $S=\frac26\cdot3^3=9$。係数 2 を忘れない。</div>
+</div>
+
+<div class="pat"><h4>放物線と2本の接線で囲まれた面積は $\frac1{12}$ 公式</h4>
+<div class="when">放物線 $y=ax^2+bx+c$ と、その2本の接線で囲まれた部分の面積。</div>
+<div class="how">接点の $x$ 座標を $\alpha<\beta$ とすると、2接線の交点の $x$ 座標は $\frac{\alpha+\beta}2$、面積は <b>$\frac{|a|}{12}(\beta-\alpha)^3$</b>。<br>
+記述式では、（放物線）−（接線）$=a(x-\alpha)^2$ を使って $\int_\alpha^{\frac{\alpha+\beta}2}a(x-\alpha)^2dx+\int_{\frac{\alpha+\beta}2}^\beta a(x-\beta)^2dx$ を計算する。</div>
+<div class="pex">点 $(1,-2)$ から放物線 $y=x^2$ に引いた2本の接線と、この放物線で囲まれた部分の面積 $S$ を求めよ。<br>
+<b>解</b>　接点 $(t,t^2)$ における接線 $y=2tx-t^2$ が $(1,-2)$ を通るので $t^2-2t-2=0$、$t=1\pm\sqrt3$。$\beta-\alpha=2\sqrt3$ より $S=\frac1{12}(2\sqrt3)^3=2\sqrt3$。</div>
+</div>
+
+<div class="pat"><h4>3次関数と接線で囲まれた面積は $\frac1{12}(\beta-\alpha)^4$</h4>
+<div class="when">3次関数のグラフと、その接線で囲まれた部分の面積。</div>
+<div class="how">接点の $x$ 座標を $\alpha$、もう1つの交点を $\beta$ とすると、（3次式）−（接線の式）$=a(x-\alpha)^2(x-\beta)$。<br>
+$\int_\alpha^\beta(x-\alpha)^2(x-\beta)\,dx=-\frac1{12}(\beta-\alpha)^4$ より、面積は <b>$\frac{|a|}{12}(\beta-\alpha)^4$</b>。</div>
+<div class="pex">曲線 $y=x^3-3x$ と、その上の点 $(-1,2)$ における接線で囲まれた部分の面積 $S$ を求めよ。<br>
+<b>解</b>　$y'=3x^2-3$ は $x=-1$ で 0 なので、接線は $y=2$。$x^3-3x-2=(x+1)^2(x-2)$ より $S=\frac1{12}\{2-(-1)\}^4=\frac{81}{12}=\frac{27}4$。</div>
+<div class="pnote">差の式は必ず $(x-\alpha)^2$ を因数にもつ。組立除法で $x-\alpha$ を2回割ると因数分解が速い。</div>
+</div>
+
+<div class="pat"><h4>絶対値の積分は「中身の符号」で区間を分ける</h4>
+<div class="when">$\int|f(x)|\,dx$ の計算。</div>
+<div class="how">①$f(x)=0$ となる $x$ で積分区間を分ける → ②$f(x)<0$ の区間は $-f(x)$ にして積分。原始関数 $F(x)$ を1つ作って値をまとめて代入すると計算ミスが減る。</div>
+<div class="pex">$\int_0^3|x^2-3x+2|\,dx$ を求めよ。<br>
+<b>解</b>　$x^2-3x+2=(x-1)(x-2)$ は $1<x<2$ で負。$F(x)=\frac{x^3}3-\frac{3x^2}2+2x$ とすると $F(0)=0,\ F(1)=\frac56,\ F(2)=\frac23,\ F(3)=\frac32$。<br>
+与式 $=\{F(1)-F(0)\}-\{F(2)-F(1)\}+\{F(3)-F(2)\}=\frac56+\frac16+\frac56=\frac{11}6$。</div>
+</div>
+
+<div class="pat"><h4>$\int_0^1|x-a|\,dx$ は $a$ の位置で3通り</h4>
+<div class="when">絶対値の中に文字を含む定積分を、その文字の関数とみて最小値などを求める。</div>
+<div class="how">積分区間 $0\leqq x\leqq1$ と $a$ の位置関係で、$a<0$、$0\leqq a\leqq1$、$a>1$ に分ける。$y=|x-a|$ のグラフの下の面積（三角形・台形）として求めてもよい。</div>
+<div class="pex">$I(a)=\int_0^1|x-a|\,dx$ の最小値を求めよ。<br>
+<b>解</b>　$0\leqq a\leqq1$ のとき $I(a)=\int_0^a(a-x)\,dx+\int_a^1(x-a)\,dx=\frac{a^2}2+\frac{(1-a)^2}2=\left(a-\frac12\right)^2+\frac14$。<br>
+$a<0$ のとき $I(a)=\frac12-a>\frac12$、$a>1$ のとき $I(a)=a-\frac12>\frac12$。よって最小値 <b>$\frac14$（$a=\frac12$）</b>。</div>
+</div>
+
+<div class="pat"><h4>区間が定数の定積分は「$=k$ とおく」</h4>
+<div class="when">$f(x)=x^2+x\int_0^1f(t)\,dt+1$ のように、積分区間が定数の定積分を含む関数方程式。</div>
+<div class="how">$\int_0^1f(t)\,dt$ は<b>定数</b>なので $k$ とおく → $f(x)$ を $k$ で表す → それを $k=\int_0^1f(t)\,dt$ に代入して $k$ の方程式を解く。</div>
+<div class="pex">$f(x)=x^2+x\int_0^1f(t)\,dt+1$ を満たす関数 $f(x)$ を求めよ。<br>
+<b>解</b>　$\int_0^1f(t)\,dt=k$ とおくと $f(x)=x^2+kx+1$。$k=\int_0^1(t^2+kt+1)\,dt=\frac13+\frac k2+1$ より $k=\frac83$。<b>$f(x)=x^2+\frac83x+1$</b>。</div>
+</div>
+
+<div class="pat"><h4>上端が $x$ の定積分は「微分」と「$x=a$ の代入」</h4>
+<div class="when">$\int_a^xf(t)\,dt=x^2-3x+2$ のように、積分の上端が $x$ の等式。</div>
+<div class="how">$\frac d{dx}\int_a^xf(t)\,dt=f(x)$（$a$ は定数）で $f(x)$ を求める。さらに両辺に $x=a$ を代入すると左辺 $=\int_a^af(t)\,dt=0$ となり、$a$ の条件が得られる。</div>
+<div class="pex">等式 $\int_a^xf(t)\,dt=x^2-3x+2$ を満たす関数 $f(x)$ と定数 $a$ を求めよ。<br>
+<b>解</b>　両辺を $x$ で微分して <b>$f(x)=2x-3$</b>。$x=a$ を代入すると $0=a^2-3a+2$ より <b>$a=1,2$</b>。</div>
+</div>
+
+<div class="pat"><h4>積分の中に $x$ があれば、外に出してから微分</h4>
+<div class="when">$\int_0^x(x-t)f(t)\,dt$ のように、被積分関数に $x$ と $t$ が混在している。</div>
+<div class="how">$t$ で積分するとき $x$ は定数。$\int_0^x(x-t)f(t)\,dt=x\int_0^xf(t)\,dt-\int_0^xtf(t)\,dt$ と分けてから微分する（前の項は積の微分）。</div>
+<div class="pex">すべての $x$ で $\int_0^x(x-t)f(t)\,dt=x^3+x^2$ を満たす $f(x)$ を求めよ。<br>
+<b>解</b>　左辺 $=x\int_0^xf(t)\,dt-\int_0^xtf(t)\,dt$。微分すると $\int_0^xf(t)\,dt+xf(x)-xf(x)=3x^2+2x$、つまり $\int_0^xf(t)\,dt=3x^2+2x$。もう一度微分して <b>$f(x)=6x+2$</b>。</div>
+<div class="pnote">$x$ を中に入れたまま「微分すると $(x-x)f(x)=0$」とするのは誤り。</div>
+</div>
+
+<div class="pat"><h4>面積の最小は「$\beta-\alpha$ の最小」に帰着</h4>
+<div class="when">定点を通る直線と放物線で囲まれた部分の面積の最小値。</div>
+<div class="how">面積は $\frac{|a|}6(\beta-\alpha)^3$。$\alpha,\beta$ は交点の方程式の解なので、$(\beta-\alpha)^2=(\alpha+\beta)^2-4\alpha\beta$ を判別式 $D$ で表す（$x^2$ の係数が 1 なら $(\beta-\alpha)^2=D$）。</div>
+<div class="pex">点 $(1,2)$ を通る傾き $m$ の直線と放物線 $y=x^2$ で囲まれた部分の面積 $S$ の最小値を求めよ。<br>
+<b>解</b>　$x^2=m(x-1)+2$、すなわち $x^2-mx+m-2=0$ の判別式は $D=m^2-4m+8=(m-2)^2+4>0$。$(\beta-\alpha)^2=D$ より $S=\frac16D^{\frac32}$。$D$ の最小値は 4（$m=2$）なので、$S$ の最小値は <b>$\frac16\cdot4^{\frac32}=\frac43$</b>。</div>
+</div>
+
+<div class="box memo"><table class="l w">
+<tr><th>項目</th><th>公式・方法</th></tr>
+<tr><td>$\frac16$ 公式</td><td>$\int_\alpha^\beta(x-\alpha)(x-\beta)\,dx=-\frac16(\beta-\alpha)^3$</td></tr>
+<tr><td>放物線と2接線</td><td>面積 $\frac{|a|}{12}(\beta-\alpha)^3$、2接線の交点の $x$ 座標は $\frac{\alpha+\beta}2$</td></tr>
+<tr><td>3次関数と接線</td><td>$\int_\alpha^\beta(x-\alpha)^2(x-\beta)\,dx=-\frac1{12}(\beta-\alpha)^4$</td></tr>
+<tr><td>解の差</td><td>$ax^2+bx+c=0$ の2解について $(\beta-\alpha)^2=\frac{b^2-4ac}{a^2}$</td></tr>
+<tr><td>微分と積分</td><td>$\frac d{dx}\int_a^xf(t)\,dt=f(x)$、$\int_a^af(t)\,dt=0$</td></tr>
+<tr><td>区間が定数の定積分</td><td>$\int_a^bf(t)\,dt=k$（定数）とおく</td></tr>
+</table></div>
+
+<!--CH 16-->
+<div class="pat"><h4>Σ の計算は公式と「差に分けて消える和」</h4>
+<div class="when">$\sum$ の計算。特に $\sum\frac1{k(k+1)}$ や $\sum\frac1{\sqrt{k+1}+\sqrt k}$ のような分数の和。</div>
+<div class="how">$\sum_{k=1}^nk=\frac12n(n+1)$、$\sum_{k=1}^nk^2=\frac16n(n+1)(2n+1)$、$\sum_{k=1}^nk^3=\left\{\frac12n(n+1)\right\}^2$。<br>
+分数は $\frac1{k(k+1)}=\frac1k-\frac1{k+1}$ のように<b>差の形</b>に分け、書き並べて途中を消す。$\frac1{\sqrt{k+1}+\sqrt k}=\sqrt{k+1}-\sqrt k$ も同じ考え方。</div>
+<div class="pex">$\sum_{k=1}^n\frac1{(2k-1)(2k+1)}$ を求めよ。<br>
+<b>解</b>　$\frac1{(2k-1)(2k+1)}=\frac12\left(\frac1{2k-1}-\frac1{2k+1}\right)$ より、与式 $=\frac12\left(1-\frac1{2n+1}\right)=\frac n{2n+1}$。</div>
+<div class="pnote">係数 $\frac12$（分母の2つの因数の差の逆数）を忘れやすい。分けたら通分して元に戻るか確かめる。</div>
+</div>
+
+<div class="pat"><h4>（等差）×（等比）の和は $S-rS$</h4>
+<div class="when">$\sum_{k=1}^nk\cdot2^{k-1}$ のように、等差数列と等比数列の積の和。</div>
+<div class="how">$S$ と $rS$（$r$ は等比部分の公比）を、<b>同じ累乗の項が上下にそろうように</b>書いて引く → 等比数列の和が現れる。</div>
+<div class="pex">$S=\sum_{k=1}^nk\cdot2^{k-1}$ を求めよ。<br>
+<b>解</b>　$S=1+2\cdot2+3\cdot2^2+\cdots+n\cdot2^{n-1}$、$2S=1\cdot2+2\cdot2^2+\cdots+(n-1)2^{n-1}+n\cdot2^n$。<br>
+引くと $-S=(1+2+2^2+\cdots+2^{n-1})-n\cdot2^n=2^n-1-n\cdot2^n$。よって <b>$S=(n-1)2^n+1$</b>。</div>
+<div class="pnote">最後の項 $-n\cdot2^n$ を落とすミスが多い。$n=1,2$ を代入して検算（$S=1,\ 5$）。</div>
+</div>
+
+<div class="pat"><h4>階差数列は $a_n=a_1+\sum_{k=1}^{n-1}b_k$</h4>
+<div class="when">数列の規則が見えないとき（隣り合う項の差をとる）。漸化式 $a_{n+1}=a_n+f(n)$ もこの型。</div>
+<div class="how">$b_n=a_{n+1}-a_n$ とすると、$n\geqq2$ のとき $a_n=a_1+\sum_{k=1}^{n-1}b_k$。最後に<b>$n=1$ でも成り立つか確認</b>する。</div>
+<div class="pex">数列 $1,\ 2,\ 5,\ 10,\ 17,\ \cdots$ の一般項 $a_n$ を求めよ。<br>
+<b>解</b>　階差数列は $1,3,5,7,\cdots$ で $b_n=2n-1$。$n\geqq2$ のとき $a_n=1+\sum_{k=1}^{n-1}(2k-1)=1+(n-1)^2=n^2-2n+2$。$n=1$ のときも $1$ で成り立つ。<b>$a_n=n^2-2n+2$</b>。</div>
+<div class="pnote">Σ の上端は $n-1$。公式の $n$ を $n-1$ に置き換えて使う（$\sum_{k=1}^{n-1}k=\frac12(n-1)n$）。</div>
+</div>
+
+<div class="pat"><h4>$a_{n+1}=pa_n+q$ は $\alpha=p\alpha+q$ の解で等比数列へ</h4>
+<div class="when">$a_{n+1}=3a_n+2$ のような1次の漸化式（$p\neq1$）。</div>
+<div class="how">$\alpha=p\alpha+q$ の解 $\alpha$ を使うと $a_{n+1}-\alpha=p(a_n-\alpha)$。数列 $\{a_n-\alpha\}$ は公比 $p$ の等比数列なので $a_n-\alpha=(a_1-\alpha)p^{n-1}$。</div>
+<div class="pex">$a_1=1,\ a_{n+1}=3a_n+2$ で定まる数列の一般項を求めよ。<br>
+<b>解</b>　$\alpha=3\alpha+2$ より $\alpha=-1$。$a_{n+1}+1=3(a_n+1)$、$a_1+1=2$ より $a_n+1=2\cdot3^{n-1}$。<b>$a_n=2\cdot3^{n-1}-1$</b>。</div>
+<div class="pnote">答案には $\alpha$ の方程式を書かず、「$a_{n+1}+1=3(a_n+1)$ と変形できる」と書けば十分。</div>
+</div>
+
+<div class="pat"><h4>$q^{n+1}$ で割る・逆数をとる → 基本形に帰着</h4>
+<div class="when">$a_{n+1}=pa_n+q^n$ 型、$a_{n+1}=\frac{a_n}{pa_n+q}$ 型（分数型）の漸化式。</div>
+<div class="how">・$a_{n+1}=pa_n+q^n$ → 両辺を $q^{n+1}$ で割り $b_n=\frac{a_n}{q^n}$ とおくと $b_{n+1}=\frac pqb_n+\frac1q$（前のカードの型）。$p^{n+1}$ で割れば階差型になる。<br>
+・$a_{n+1}=\frac{a_n}{pa_n+q}$ → 逆数をとって $\frac1{a_{n+1}}=p+\frac q{a_n}$。$b_n=\frac1{a_n}$ で1次の漸化式。</div>
+<div class="pex">$a_1=1,\ a_{n+1}=2a_n+3^n$ で定まる数列の一般項を求めよ。<br>
+<b>解</b>　両辺を $3^{n+1}$ で割り $b_n=\frac{a_n}{3^n}$ とおくと $b_{n+1}=\frac23b_n+\frac13$。$b_{n+1}-1=\frac23(b_n-1)$、$b_1-1=\frac13-1=-\frac23$ より $b_n-1=-\left(\frac23\right)^n$。$a_n=3^nb_n$ より <b>$a_n=3^n-2^n$</b>。</div>
+<div class="pnote">逆数をとるときは $a_n\neq0$ であることを確認する（帰納法で $a_n>0$ を示すなど）。</div>
+</div>
+
+<div class="pat"><h4>3項間漸化式は $x^2=px+q$ の解で変形</h4>
+<div class="when">$a_{n+2}=pa_{n+1}+qa_n$ の形の漸化式。</div>
+<div class="how">$x^2=px+q$ の2解を $\alpha,\beta$ とすると $a_{n+2}-\alpha a_{n+1}=\beta(a_{n+1}-\alpha a_n)$（$\alpha,\beta$ を入れかえた式も成立）。<br>
+・解の一方が 1 なら、階差数列が等比数列になる。<br>
+・$\alpha\neq\beta$ なら、$a_{n+1}-\alpha a_n=(a_2-\alpha a_1)\beta^{n-1}$ と $a_{n+1}-\beta a_n=(a_2-\beta a_1)\alpha^{n-1}$ の差をとって $a_{n+1}$ を消去する。</div>
+<div class="pex">$a_1=1,\ a_2=3,\ a_{n+2}=3a_{n+1}-2a_n$ で定まる数列の一般項を求めよ。<br>
+<b>解</b>　$x^2=3x-2$ の解は $1,2$。$a_{n+2}-a_{n+1}=2(a_{n+1}-a_n)$ より、階差 $a_{n+1}-a_n=(a_2-a_1)2^{n-1}=2^n$。$n\geqq2$ のとき $a_n=1+\sum_{k=1}^{n-1}2^k=2^n-1$（$n=1$ でも成立）。<b>$a_n=2^n-1$</b>。</div>
+<div class="pnote">重解 $\alpha=\beta$ のときは、$a_{n+1}-\alpha a_n=(a_2-\alpha a_1)\alpha^{n-1}$ の両辺を $\alpha^{n+1}$ で割って階差型にする。</div>
+</div>
+
+<div class="pat"><h4>和 $S_n$ が与えられたら $a_n=S_n-S_{n-1}$</h4>
+<div class="when">「初項から第 $n$ 項までの和が $S_n=n^2+2n+3$」「$S_n=2a_n-n$」のように、和と一般項の関係が与えられる。</div>
+<div class="how">$a_1=S_1$、$n\geqq2$ のとき $a_n=S_n-S_{n-1}$。関係式の場合は、$n$ を $n+1$ にした式との差をとり $a_{n+1}=S_{n+1}-S_n$ を使って漸化式にする。</div>
+<div class="pex">(1) $S_n=n^2+2n+3$ のとき $a_n$ を求めよ。(2) $S_n=2a_n-n$ のとき $a_n$ を求めよ。<br>
+<b>解</b>　(1) $a_1=S_1=6$。$n\geqq2$ のとき $a_n=S_n-S_{n-1}=2n+1$。<b>$a_1=6$、$n\geqq2$ のとき $a_n=2n+1$</b>。<br>
+(2) $n=1$ とすると $a_1=2a_1-1$ より $a_1=1$。$a_{n+1}=S_{n+1}-S_n=2a_{n+1}-2a_n-1$ より $a_{n+1}=2a_n+1$。$a_{n+1}+1=2(a_n+1)$、$a_1+1=2$ から <b>$a_n=2^n-1$</b>。</div>
+<div class="pnote">(1) のように $S_n$ に余分な定数項があると、$a_1$ は $2n+1$ の式に含まれない。$n\geqq2$ で求めた式に $n=1$ を代入して $S_1$ と一致するか必ず確かめる。</div>
+</div>
+
+<div class="pat"><h4>群数列は「第 $n$ 群の最初の項」から攻める</h4>
+<div class="when">数列を $1\mid3,5\mid7,9,11\mid\cdots$ のように区切った数列。</div>
+<div class="how">①第 $(n-1)$ 群の末項までの項数 $\sum_{k=1}^{n-1}(\text{第 }k\text{ 群の項数})$ を求める → ②第 $n$ 群の最初の項は、もとの数列の「その項数 $+1$」番目 → ③「ある項は第何群か」は、群の末項までの項数ではさんで決める。</div>
+<div class="pex">正の奇数を $1\mid3,5\mid7,9,11\mid\cdots$ と、第 $n$ 群が $n$ 個の数を含むように分ける。(1) 第 $n$ 群の最初の数と、第 $n$ 群の和を求めよ。(2) 301 は第何群の何番目か。<br>
+<b>解</b>　(1) 第 $(n-1)$ 群までに $\frac12n(n-1)$ 個あるので、第 $n$ 群の最初の数は $\frac12n(n-1)+1$ 番目の奇数で <b>$n^2-n+1$</b>。和は初項 $n^2-n+1$、公差 2、項数 $n$ の等差数列の和で $n(n^2-n+1)+\frac12n(n-1)\cdot2=$<b>$n^3$</b>。<br>
+(2) 301 は 151 番目の奇数。$\frac12\cdot16\cdot17=136<151\leqq153=\frac12\cdot17\cdot18$ より第17群に含まれ、$151-136=15$。<b>第17群の15番目</b>。</div>
+</div>
+
+<div class="pat"><h4>数学的帰納法は「$n=k$ の仮定を必ず使う」</h4>
+<div class="when">「すべての自然数 $n$（または $n\geqq4$）について〜を証明せよ」、漸化式から推測した一般項の証明。</div>
+<div class="how">[1] 最初の $n$（$n=1$ や $n=4$）で成り立つことを示す。[2] $n=k$ で成り立つと仮定し、それを使って $n=k+1$ で成り立つことを示す。不等式なら、仮定を代入したあと「示したい式との差」が正であることを示す。</div>
+<div class="pex">$n\geqq4$ のとき $2^n\geqq n^2$ を証明せよ。<br>
+<b>解</b>　[1] $n=4$ のとき $16\geqq16$ で成り立つ。[2] $k\geqq4$ として $2^k\geqq k^2$ を仮定すると $2^{k+1}=2\cdot2^k\geqq2k^2$。ここで $2k^2-(k+1)^2=(k-1)^2-2>0$ より $2^{k+1}>(k+1)^2$。よって $n=k+1$ のときも成り立つ。[1][2] より、$n\geqq4$ のすべての自然数で成り立つ。</div>
+<div class="pnote">[2] で仮定を使っていない答案、「$n=k+1$ で成り立つと仮定して $n=k$ を示す」逆向きの答案は大きく減点される。</div>
+</div>
+
+<div class="box memo"><table class="l w">
+<tr><th>項目</th><th>公式・方法</th></tr>
+<tr><td>Σ の公式</td><td>$\sum_{k=1}^nk=\frac12n(n+1)$、$\sum_{k=1}^nk^2=\frac16n(n+1)(2n+1)$、$\sum_{k=1}^nk^3=\left\{\frac12n(n+1)\right\}^2$</td></tr>
+<tr><td>等比数列の和</td><td>$\sum_{k=1}^nar^{k-1}=\frac{a(1-r^n)}{1-r}\ (r\neq1)$</td></tr>
+<tr><td>階差数列</td><td>$a_n=a_1+\sum_{k=1}^{n-1}b_k\ (n\geqq2)$</td></tr>
+<tr><td>$a_{n+1}=pa_n+q$</td><td>$a_{n+1}-\alpha=p(a_n-\alpha)$（$\alpha=p\alpha+q$）</td></tr>
+<tr><td>$a_{n+1}=pa_n+q^n$</td><td>両辺を $q^{n+1}$（または $p^{n+1}$）で割る</td></tr>
+<tr><td>$a_{n+1}=\frac{a_n}{pa_n+q}$</td><td>逆数 $b_n=\frac1{a_n}$ をとる</td></tr>
+<tr><td>$a_{n+2}=pa_{n+1}+qa_n$</td><td>$x^2=px+q$ の解 $\alpha,\beta$ で $a_{n+2}-\alpha a_{n+1}=\beta(a_{n+1}-\alpha a_n)$</td></tr>
+<tr><td>和と一般項</td><td>$a_1=S_1$、$a_n=S_n-S_{n-1}\ (n\geqq2)$</td></tr>
+</table></div>
+
+<!--CH 17-->
+<div class="pat"><h4>期待値・分散は性質を使って計算を減らす</h4>
+<div class="when">確率変数 $X$ を1次式で変換した $aX+b$、2つの確率変数の和 $X+Y$ の期待値・分散。</div>
+<div class="how">$V(X)=E(X^2)-\{E(X)\}^2$。$E(aX+b)=aE(X)+b$、$V(aX+b)=a^2V(X)$、$\sigma(aX+b)=|a|\sigma(X)$。<br>
+$E(X+Y)=E(X)+E(Y)$（いつでも成立）。$X,Y$ が<b>独立</b>なら $V(X+Y)=V(X)+V(Y)$、$E(XY)=E(X)E(Y)$。</div>
+<div class="pex">1個のさいころを投げて出る目を $X$ とする。$E(X)$、$V(X)$ と、$Y=3X-2$ の期待値・分散を求めよ。また、2個のさいころを投げたときの目の和 $S$ の分散を求めよ。<br>
+<b>解</b>　$E(X)=\frac72$、$E(X^2)=\frac{91}6$ より $V(X)=\frac{91}6-\frac{49}4=\frac{35}{12}$。$E(Y)=3\cdot\frac72-2=\frac{17}2$、$V(Y)=9\cdot\frac{35}{12}=\frac{105}4$。2個の目は独立なので $V(S)=2\cdot\frac{35}{12}=\frac{35}6$。</div>
+<div class="pnote">$V(3X-2)=3V(X)-2$ は誤り。分散は $a^2$ 倍になり、定数 $b$ は分散に影響しない。</div>
+</div>
+
+<div class="pat"><h4>連続型確率変数は「面積＝確率」</h4>
+<div class="when">確率密度関数 $f(x)$ が与えられた問題。</div>
+<div class="how">$P(a\leqq X\leqq b)=\int_a^bf(x)\,dx$、全体で $\int f(x)\,dx=1$。$E(X)=\int xf(x)\,dx$、$V(X)=\int x^2f(x)\,dx-\{E(X)\}^2$（積分範囲は $X$ のとりうる値の全体）。</div>
+<div class="pex">確率変数 $X$ の確率密度関数が $f(x)=ax\ (0\leqq x\leqq2)$ のとき、定数 $a$、$P(X\leqq1)$、$E(X)$、$V(X)$ を求めよ。<br>
+<b>解</b>　$\int_0^2ax\,dx=2a=1$ より $a=\frac12$。$P(X\leqq1)=\int_0^1\frac x2\,dx=\frac14$。$E(X)=\int_0^2\frac{x^2}2\,dx=\frac43$、$\int_0^2\frac{x^3}2\,dx=2$ より $V(X)=2-\frac{16}9=\frac29$。</div>
+</div>
+
+<div class="pat"><h4>二項分布は $E=np$、$V=np(1-p)$</h4>
+<div class="when">「$n$ 回の独立な試行で、確率 $p$ の事象が起こる回数」の分布・期待値・分散。</div>
+<div class="how">回数 $X$ は二項分布 $B(n,p)$ に従い、$P(X=r)={}_n\mathrm{C}_rp^r(1-p)^{n-r}$、$E(X)=np$、$V(X)=np(1-p)$、$\sigma(X)=\sqrt{np(1-p)}$。</div>
+<div class="pex">確率変数 $X$ が二項分布 $B(n,p)$ に従い、$E(X)=12$、$V(X)=8$ である。$n,p$ を求めよ。<br>
+<b>解</b>　$np=12$、$np(1-p)=8$ より $1-p=\frac23$。<b>$p=\frac13$、$n=36$</b>。</div>
+<div class="pnote">分散と標準偏差を取り違えない。「標準偏差が 8」なら $np(1-p)=64$。</div>
+</div>
+
+<div class="pat"><h4>正規分布は標準化 $Z=\frac{X-m}\sigma$ してから表を引く</h4>
+<div class="when">「$X$ は正規分布 $N(m,\sigma^2)$ に従う。$P(X\geqq\cdots)$ を求めよ」。</div>
+<div class="how">$Z=\frac{X-m}\sigma$ は標準正規分布 $N(0,1)$ に従う。正規分布表の値 $u(z)=P(0\leqq Z\leqq z)$ と、左右対称であること（$P(Z\geqq0)=0.5$）を組み合わせる。</div>
+<div class="pex">$X$ が $N(50,10^2)$ に従うとき、$P(X\geqq65)$ と $P(40\leqq X\leqq65)$ を求めよ。ただし $u(1)=0.3413$、$u(1.5)=0.4332$ とする。<br>
+<b>解</b>　$Z=\frac{X-50}{10}$。$P(X\geqq65)=P(Z\geqq1.5)=0.5-0.4332=0.0668$。$P(40\leqq X\leqq65)=P(-1\leqq Z\leqq1.5)=0.3413+0.4332=0.7745$。</div>
+<div class="pnote">$N(50,10^2)$ の2番目は<b>分散</b>。標準化では $\sigma=10$ で割る（100 で割らない）。</div>
+</div>
+
+<div class="pat"><h4>$n$ が大きい二項分布は正規分布で近似</h4>
+<div class="when">$B(n,p)$ で $n$ が大きく、${}_n\mathrm{C}_r$ を直接計算するのが大変な確率。</div>
+<div class="how">$n$ が大きいとき、$B(n,p)$ は近似的に $N(np,\ np(1-p))$ に従う → $Z=\frac{X-np}{\sqrt{np(1-p)}}$ と標準化して表を使う。</div>
+<div class="pex">1個のさいころを 720 回投げるとき、1 の目が 140 回以上出る確率の近似値を求めよ。ただし $u(2)=0.4772$ とする。<br>
+<b>解</b>　1 の目の回数 $X$ は $B\left(720,\frac16\right)$ に従い、$E(X)=120$、$\sigma(X)=\sqrt{720\cdot\frac16\cdot\frac56}=10$。$P(X\geqq140)\fallingdotseq P(Z\geqq2)=0.5-0.4772=0.0228$。</div>
+<div class="pnote">あくまで近似値（二項分布で正確に計算すると約 0.027）。問題文の「正規分布で近似して」という指示に従って答える。</div>
+</div>
+
+<div class="pat"><h4>標本平均は $E(\overline X)=m$、$\sigma(\overline X)=\frac\sigma{\sqrt n}$</h4>
+<div class="when">母集団から大きさ $n$ の標本を無作為抽出したときの、標本平均 $\overline X$ の確率。</div>
+<div class="how">母平均 $m$、母標準偏差 $\sigma$ のとき $E(\overline X)=m$、$V(\overline X)=\frac{\sigma^2}n$。$n$ が大きければ、$\overline X$ は近似的に正規分布 $N\left(m,\frac{\sigma^2}n\right)$ に従う。</div>
+<div class="pex">母平均 60、母標準偏差 12 の母集団から大きさ 36 の標本を無作為抽出する。標本平均 $\overline X$ が 57 以上 63 以下となる確率を求めよ（$u(1.5)=0.4332$）。<br>
+<b>解</b>　$\sigma(\overline X)=\frac{12}{\sqrt{36}}=2$。$Z=\frac{\overline X-60}2$ とすると、求める確率は $P(-1.5\leqq Z\leqq1.5)=2\times0.4332=0.8664$。</div>
+<div class="pnote">標本平均の標準偏差は $\sqrt n$ で割る。$n$ で割るのは分散のとき。</div>
+</div>
+
+<div class="pat"><h4>母平均の推定（信頼度95%）は $\overline X\pm1.96\frac\sigma{\sqrt n}$</h4>
+<div class="when">「母平均 $m$ に対する信頼度 95% の信頼区間を求めよ」。</div>
+<div class="how">信頼区間は $\left[\overline X-1.96\frac\sigma{\sqrt n},\ \overline X+1.96\frac\sigma{\sqrt n}\right]$。母標準偏差 $\sigma$ がわからないときは、$n$ が大きければ標本標準偏差で代用する。信頼度 99% なら 1.96 を 2.58 にする。</div>
+<div class="pex">ある母集団から大きさ 100 の標本を抽出したところ、標本平均は 52.0 であった。母標準偏差を 10 として、母平均 $m$ に対する信頼度 95% の信頼区間を求めよ。<br>
+<b>解</b>　$1.96\times\frac{10}{\sqrt{100}}=1.96$ より <b>$[50.04,\ 53.96]$</b>。</div>
+<div class="pnote">信頼区間の幅は $\frac1{\sqrt n}$ に比例する。幅を半分にするには、標本の大きさを<b>4倍</b>にする必要がある。</div>
+</div>
+
+<div class="pat"><h4>母比率の推定は $p_0\pm1.96\sqrt{\frac{p_0(1-p_0)}n}$</h4>
+<div class="when">標本比率から母比率を推定する（支持率、不良品の割合など）。</div>
+<div class="how">標本比率を $p_0$、標本の大きさを $n$（大きい）とすると、母比率 $p$ に対する信頼度 95% の信頼区間は $\left[p_0-1.96\sqrt{\frac{p_0(1-p_0)}n},\ p_0+1.96\sqrt{\frac{p_0(1-p_0)}n}\right]$。</div>
+<div class="pex">無作為に選んだ 400 人のうち 80 人がある意見に賛成した。賛成者の母比率 $p$ に対する信頼度 95% の信頼区間を求めよ。<br>
+<b>解</b>　$p_0=\frac{80}{400}=0.2$、$\sqrt{\frac{0.2\times0.8}{400}}=0.02$。$1.96\times0.02=0.0392$ より <b>$[0.1608,\ 0.2392]$</b>。</div>
+</div>
+
+<div class="pat"><h4>仮説検定は「帰無仮説のもとで、めったに起きないか」</h4>
+<div class="when">「この硬貨は表と裏の出やすさに偏りがあると判断してよいか。有意水準 5% で検定せよ」。</div>
+<div class="how">①帰無仮説（例：表の出る確率は $\frac12$）を立てる → ②そのもとでの $X$ の分布を考えて標準化 → ③有意水準 5% の両側検定なら棄却域は $|Z|\geqq1.96$。$Z$ が棄却域に入れば帰無仮説を棄却し、対立仮説が正しいと判断する。「表が出やすいか」のような片側検定では、棄却域を $Z\geqq1.64$ とする（$u(1.64)\fallingdotseq0.45$）。</div>
+<div class="pex">ある硬貨を 400 回投げたら表が 220 回出た。この硬貨は表と裏の出やすさに偏りがあると判断してよいか。有意水準 5% で検定せよ。<br>
+<b>解</b>　帰無仮説「表の出る確率は $\frac12$」のもとで、表の回数 $X$ は $B\left(400,\frac12\right)$ に従い、近似的に $N(200,10^2)$ に従う。$Z=\frac{220-200}{10}=2\geqq1.96$ で棄却域に入る。帰無仮説は棄却され、<b>偏りがあると判断してよい</b>。</div>
+<div class="pnote">棄却されなかったときは「帰無仮説が正しい」とは言えない。「偏りがあるとは判断できない」と答える。</div>
+</div>
+
+<div class="box memo"><table class="l w">
+<tr><th>項目</th><th>公式・方法</th></tr>
+<tr><td>分散</td><td>$V(X)=E(X^2)-\{E(X)\}^2$、$V(aX+b)=a^2V(X)$</td></tr>
+<tr><td>独立な $X,Y$</td><td>$E(XY)=E(X)E(Y)$、$V(X+Y)=V(X)+V(Y)$</td></tr>
+<tr><td>確率密度関数</td><td>$P(a\leqq X\leqq b)=\int_a^bf(x)\,dx$、$E(X)=\int xf(x)\,dx$</td></tr>
+<tr><td>二項分布 $B(n,p)$</td><td>$E(X)=np$、$V(X)=np(1-p)$</td></tr>
+<tr><td>標準化</td><td>$Z=\frac{X-m}\sigma$ は $N(0,1)$ に従う</td></tr>
+<tr><td>標本平均</td><td>$E(\overline X)=m$、$\sigma(\overline X)=\frac\sigma{\sqrt n}$</td></tr>
+<tr><td>母平均の推定（95%）</td><td>$\overline X\pm1.96\frac\sigma{\sqrt n}$（99% なら 2.58）</td></tr>
+<tr><td>母比率の推定（95%）</td><td>$p_0\pm1.96\sqrt{\frac{p_0(1-p_0)}n}$</td></tr>
+<tr><td>検定（有意水準5%）</td><td>両側：$|Z|\geqq1.96$、片側（上側）：$Z\geqq1.64$ が棄却域</td></tr>
+</table></div>
+
+<!--CH 18-->
+<div class="pat"><h4>交点の位置ベクトルは「2通りに表して係数比較」</h4>
+<div class="when">△OAB の2本の線分の交点 P を $\vec a=\overrightarrow{\mathrm{OA}},\ \vec b=\overrightarrow{\mathrm{OB}}$ で表す。</div>
+<div class="how">P が線分 AD 上 → $\overrightarrow{\mathrm{OP}}=(1-s)\overrightarrow{\mathrm{OA}}+s\overrightarrow{\mathrm{OD}}$、線分 BC 上 → $\overrightarrow{\mathrm{OP}}=(1-t)\overrightarrow{\mathrm{OB}}+t\overrightarrow{\mathrm{OC}}$ と2通りに表す。$\vec a,\vec b$ は1次独立（$\vec0$ でなく、平行でない）なので、係数を比較して $s,t$ を求める。</div>
+<div class="pex">△OAB で、辺 OA を $1:2$ に内分する点を C、辺 OB を $3:1$ に内分する点を D とし、線分 AD と BC の交点を P とする。$\overrightarrow{\mathrm{OP}}$ を $\vec a,\vec b$ で表せ。<br>
+<b>解</b>　$\overrightarrow{\mathrm{OP}}=(1-s)\vec a+\frac34s\vec b=\frac t3\vec a+(1-t)\vec b$。係数を比較して $1-s=\frac t3$、$\frac34s=1-t$。これを解いて $s=\frac89,\ t=\frac13$。<b>$\overrightarrow{\mathrm{OP}}=\frac19\vec a+\frac23\vec b$</b>。</div>
+<div class="pnote">係数比較の前に「$\vec a,\vec b$ は1次独立だから」と書く。メネラウスの定理で比を求めてもよい。</div>
+</div>
+
+<div class="pat"><h4>直線 AB 上の点 ⇔ 係数の和が 1</h4>
+<div class="when">「直線 OP と辺 AB の交点 Q」のように、直線 AB との交点を求める。</div>
+<div class="how">$\overrightarrow{\mathrm{OQ}}=x\vec a+y\vec b$ について、Q が直線 AB 上 $\iff x+y=1$。Q が直線 OP 上なら $\overrightarrow{\mathrm{OQ}}=k\overrightarrow{\mathrm{OP}}$ とおき、係数の和 $=1$ から $k$ を決める。</div>
+<div class="pex">△OAB で $\overrightarrow{\mathrm{OP}}=\frac{2\vec a+3\vec b}6$ とする。直線 OP と辺 AB の交点を Q とするとき、$\overrightarrow{\mathrm{OQ}}$ と $\mathrm{OP}:\mathrm{PQ}$ を求めよ。<br>
+<b>解</b>　$\overrightarrow{\mathrm{OQ}}=k\overrightarrow{\mathrm{OP}}=\frac{2k}6\vec a+\frac{3k}6\vec b$。$\frac{2k}6+\frac{3k}6=1$ より $k=\frac65$。<b>$\overrightarrow{\mathrm{OQ}}=\frac{2\vec a+3\vec b}5$</b>（Q は AB を $3:2$ に内分する点）。$\mathrm{OQ}=\frac65\mathrm{OP}$ より <b>$\mathrm{OP}:\mathrm{PQ}=5:1$</b>。</div>
+</div>
+
+<div class="pat"><h4>内積は「$|\ \ |^2$ を展開」して引き出す</h4>
+<div class="when">$|\vec a|,\ |\vec b|,\ |\vec a-\vec b|$ などの大きさが与えられ、内積・なす角・別のベクトルの大きさを求める。</div>
+<div class="how">$|\vec a\pm\vec b|^2=|\vec a|^2\pm2\vec a\cdot\vec b+|\vec b|^2$ に代入して $\vec a\cdot\vec b$ を求める。なす角は $\cos\theta=\frac{\vec a\cdot\vec b}{|\vec a||\vec b|}$。</div>
+<div class="pex">$|\vec a|=2,\ |\vec b|=3,\ |\vec a-\vec b|=\sqrt7$ のとき、$\vec a,\vec b$ のなす角 $\theta$ と $|\vec a+2\vec b|$ を求めよ。<br>
+<b>解</b>　$7=4-2\vec a\cdot\vec b+9$ より $\vec a\cdot\vec b=3$。$\cos\theta=\frac36=\frac12$ より <b>$\theta=60^\circ$</b>。$|\vec a+2\vec b|^2=4+4\cdot3+4\cdot9=52$ より <b>$|\vec a+2\vec b|=2\sqrt{13}$</b>。</div>
+<div class="pnote">$|\vec a+2\vec b|^2$ の展開は $|\vec a|^2+4\vec a\cdot\vec b+4|\vec b|^2$。$\vec b$ の係数の2乗を忘れない。</div>
+</div>
+
+<div class="pat"><h4>三角形の面積はベクトルの公式で</h4>
+<div class="when">2辺のベクトル（または頂点の座標）がわかっている三角形の面積。</div>
+<div class="how">$S=\frac12\sqrt{|\overrightarrow{\mathrm{AB}}|^2|\overrightarrow{\mathrm{AC}}|^2-(\overrightarrow{\mathrm{AB}}\cdot\overrightarrow{\mathrm{AC}})^2}$。成分で $\overrightarrow{\mathrm{AB}}=(a_1,a_2)$、$\overrightarrow{\mathrm{AC}}=(b_1,b_2)$ なら <b>$S=\frac12|a_1b_2-a_2b_1|$</b>。</div>
+<div class="pex">3点 $\mathrm{A}(1,\,2)$、$\mathrm{B}(4,\,3)$、$\mathrm{C}(2,\,6)$ を頂点とする三角形の面積を求めよ。<br>
+<b>解</b>　$\overrightarrow{\mathrm{AB}}=(3,1)$、$\overrightarrow{\mathrm{AC}}=(1,4)$ より $S=\frac12|3\cdot4-1\cdot1|=\frac{11}2$。</div>
+</div>
+
+<div class="pat"><h4>$|\vec a+t\vec b|$ の最小は $t$ の2次関数</h4>
+<div class="when">「$|\vec a+t\vec b|$ の最小値と、そのときの $t$ を求めよ」。</div>
+<div class="how">$|\vec a+t\vec b|^2=|\vec b|^2t^2+2(\vec a\cdot\vec b)t+|\vec a|^2$ を平方完成。最小となるとき $(\vec a+t\vec b)\perp\vec b$（点から直線に下ろした垂線の長さ）。</div>
+<div class="pex">$\vec a=(3,1),\ \vec b=(1,2)$ のとき、$|\vec a+t\vec b|$ の最小値を求めよ。<br>
+<b>解</b>　$|\vec a+t\vec b|^2=5t^2+10t+10=5(t+1)^2+5$。$t=-1$ のとき最小値 <b>$\sqrt5$</b>。このとき $\vec a-\vec b=(2,-1)$ は $\vec b$ と垂直になっている。</div>
+<div class="pnote">2乗の最小値 5 で答えを止めない。最後に $\sqrt{\ }$ をつける。</div>
+</div>
+
+<div class="pat"><h4>$\overrightarrow{\mathrm{PA}}\cdot\overrightarrow{\mathrm{PB}}$ は中点 M で $\mathrm{PM}^2-\mathrm{MA}^2$</h4>
+<div class="when">動点 P について、内積 $\overrightarrow{\mathrm{PA}}\cdot\overrightarrow{\mathrm{PB}}$ の最大・最小。</div>
+<div class="how">線分 AB の中点を M とすると $\overrightarrow{\mathrm{PA}}=\overrightarrow{\mathrm{PM}}+\overrightarrow{\mathrm{MA}}$、$\overrightarrow{\mathrm{PB}}=\overrightarrow{\mathrm{PM}}-\overrightarrow{\mathrm{MA}}$ より $\overrightarrow{\mathrm{PA}}\cdot\overrightarrow{\mathrm{PB}}=|\overrightarrow{\mathrm{PM}}|^2-|\overrightarrow{\mathrm{MA}}|^2$。→ <b>距離 PM の最大・最小</b>に帰着する。</div>
+<div class="pex">$\mathrm{A}(1,\,0)$、$\mathrm{B}(3,\,0)$ とし、点 P が円 $x^2+y^2=1$ 上を動くとき、$\overrightarrow{\mathrm{PA}}\cdot\overrightarrow{\mathrm{PB}}$ の最大値・最小値を求めよ。<br>
+<b>解</b>　中点 $\mathrm{M}(2,\,0)$、$\mathrm{MA}=1$ より $\overrightarrow{\mathrm{PA}}\cdot\overrightarrow{\mathrm{PB}}=\mathrm{PM}^2-1$。円の中心 O と M の距離は 2 なので $1\leqq\mathrm{PM}\leqq3$。<b>最大値 8（$\mathrm{P}(-1,\,0)$）、最小値 0（$\mathrm{P}(1,\,0)$）</b>。</div>
+</div>
+
+<div class="pat"><h4>点の存在範囲は「係数の和を 1 にそろえる」</h4>
+<div class="when">$\overrightarrow{\mathrm{OP}}=s\overrightarrow{\mathrm{OA}}+t\overrightarrow{\mathrm{OB}}$ で、$s,t$ に条件（$s+t\leqq1$ など）があるときの点 P の存在範囲。</div>
+<div class="how">・$s+t=1$ → 直線 AB。さらに $s\geqq0,\ t\geqq0$ なら線分 AB。<br>
+・$s+t\leqq1,\ s\geqq0,\ t\geqq0$ → △OAB の周および内部。<br>
+・$s+t=k\ (k>0)$ → $\overrightarrow{\mathrm{OP}}=\frac sk(k\overrightarrow{\mathrm{OA}})+\frac tk(k\overrightarrow{\mathrm{OB}})$ と変形し、係数の和を 1 にする。</div>
+<div class="pex"><svg class="fig" style="float:right;margin:0 0 1mm 3mm" width="200" height="130" viewBox="0 0 200 130"><polygon points="95.0,118.0 170.0,118.0 80.0,14.0 50.0,66.0" fill="#d9701e" fill-opacity="0.2" stroke="#d9701e" stroke-width="1.3"/><line x1="20" y1="118" x2="170" y2="118" stroke="#333" stroke-width="0.9"/><line x1="20" y1="118" x2="80" y2="14" stroke="#333" stroke-width="0.9"/><line x1="95" y1="118" x2="50" y2="66" stroke="#1f3f8f" stroke-width="1.3"/><circle cx="20" cy="118" r="1.8" fill="#333"/><text x="8" y="122" font-size="11">O</text><circle cx="95" cy="118" r="1.8" fill="#333"/><text x="92" y="130" font-size="11">A</text><circle cx="50" cy="66" r="1.8" fill="#333"/><text x="38" y="66" font-size="11">B</text><circle cx="170" cy="118" r="1.8" fill="#333"/><text x="166" y="130" font-size="11">A′</text><circle cx="80" cy="14" r="1.8" fill="#333"/><text x="66" y="16" font-size="11">B′</text><text x="84.8" y="83.0" font-size="10" fill="#d9701e">1≦s+t≦2</text></svg>$\overrightarrow{\mathrm{OP}}=s\overrightarrow{\mathrm{OA}}+t\overrightarrow{\mathrm{OB}}$、$1\leqq s+t\leqq2$、$s\geqq0$、$t\geqq0$ のとき、点 P の存在範囲を図示し、その面積を △OAB の面積 $S$ で表せ。<br>
+<b>解</b>　$s+t=k\ (1\leqq k\leqq2)$ のとき、P は $k\overrightarrow{\mathrm{OA}},\ k\overrightarrow{\mathrm{OB}}$ の終点を結ぶ線分上を動く。$\overrightarrow{\mathrm{OA'}}=2\overrightarrow{\mathrm{OA}}$、$\overrightarrow{\mathrm{OB'}}=2\overrightarrow{\mathrm{OB}}$ とすると、存在範囲は<b>台形 $\mathrm{AA'B'B}$ の周および内部</b>（右図）。面積は $\triangle\mathrm{OA'B'}-\triangle\mathrm{OAB}=4S-S=$<b>$3S$</b>。<div style="clear:both"></div></div>
+</div>
+
+<div class="pat"><h4>$|\vec p-\vec c|=r$ は円：係数でくくって中心を見つける</h4>
+<div class="when">$|3\vec p-\vec a-2\vec b|=6$ のようなベクトルの大きさの方程式、または $(\vec p-\vec a)\cdot(\vec p-\vec b)=0$。</div>
+<div class="how">$\vec p$ の係数でくくって $|\vec p-\vec c|=r$ の形にする → 中心 $\vec c$、半径 $r$ の円。$(\vec p-\vec a)\cdot(\vec p-\vec b)=0$ は<b>線分 AB を直径とする円</b>（$\angle\mathrm{APB}=90^\circ$）。</div>
+<div class="pex">△OAB と点 P が $|3\overrightarrow{\mathrm{OP}}-\overrightarrow{\mathrm{OA}}-2\overrightarrow{\mathrm{OB}}|=6$ を満たすとき、P はどのような図形を描くか。<br>
+<b>解</b>　$3\left|\overrightarrow{\mathrm{OP}}-\frac{\overrightarrow{\mathrm{OA}}+2\overrightarrow{\mathrm{OB}}}3\right|=6$。$\frac{\overrightarrow{\mathrm{OA}}+2\overrightarrow{\mathrm{OB}}}3$ は辺 AB を $2:1$ に内分する点 C の位置ベクトルなので、P は <b>C を中心とする半径 2 の円</b>を描く。</div>
+<div class="pnote">3 でくくったら右辺も 3 で割る。半径は 6 ではなく 2。</div>
+</div>
+
+<div class="pat"><h4>外心は「$\overrightarrow{\mathrm{OP}}\cdot\vec a=\frac12|\vec a|^2$」の2式で</h4>
+<div class="when">三角形の外心（または垂心）の位置ベクトルを $\vec a,\vec b$ で表す。</div>
+<div class="how">外心 P は辺 OA の垂直二等分線上にあるので、OA の中点を M として $\overrightarrow{\mathrm{MP}}\cdot\vec a=0$、すなわち $\overrightarrow{\mathrm{OP}}\cdot\vec a=\frac12|\vec a|^2$。同様に $\overrightarrow{\mathrm{OP}}\cdot\vec b=\frac12|\vec b|^2$。$\overrightarrow{\mathrm{OP}}=s\vec a+t\vec b$ とおいて連立する。<br>
+垂心 H なら $\overrightarrow{\mathrm{OH}}\cdot(\vec b-\vec a)=0$、$\overrightarrow{\mathrm{AH}}\cdot\vec b=0$ の2式。</div>
+<div class="pex">△OAB で $|\vec a|=2,\ |\vec b|=3,\ \vec a\cdot\vec b=3$ のとき、外心 P について $\overrightarrow{\mathrm{OP}}$ を $\vec a,\vec b$ で表せ。<br>
+<b>解</b>　$\overrightarrow{\mathrm{OP}}=s\vec a+t\vec b$ とおく。$\overrightarrow{\mathrm{OP}}\cdot\vec a=4s+3t=2$、$\overrightarrow{\mathrm{OP}}\cdot\vec b=3s+9t=\frac92$。これを解いて $s=\frac16,\ t=\frac49$。<b>$\overrightarrow{\mathrm{OP}}=\frac16\vec a+\frac49\vec b$</b>。</div>
+</div>
+
+<div class="box memo"><table class="l w">
+<tr><th>項目</th><th>公式・方法</th></tr>
+<tr><td>内分点・重心</td><td>$m:n$ に内分する点 $\frac{n\vec a+m\vec b}{m+n}$、重心 $\frac{\vec a+\vec b+\vec c}3$</td></tr>
+<tr><td>直線 AB 上</td><td>$\overrightarrow{\mathrm{OP}}=s\vec a+t\vec b$ で $s+t=1$</td></tr>
+<tr><td>内積</td><td>$\vec a\cdot\vec b=|\vec a||\vec b|\cos\theta=a_1b_1+a_2b_2$、垂直 $\iff\vec a\cdot\vec b=0$</td></tr>
+<tr><td>三角形の面積</td><td>$\frac12\sqrt{|\vec a|^2|\vec b|^2-(\vec a\cdot\vec b)^2}=\frac12|a_1b_2-a_2b_1|$</td></tr>
+<tr><td>点の存在範囲</td><td>$s+t\leqq1,\ s\geqq0,\ t\geqq0$ → △OAB の周および内部</td></tr>
+<tr><td>円</td><td>$|\vec p-\vec c|=r$、$(\vec p-\vec a)\cdot(\vec p-\vec b)=0$（AB が直径）</td></tr>
+<tr><td>中点の利用</td><td>$\overrightarrow{\mathrm{PA}}\cdot\overrightarrow{\mathrm{PB}}=\mathrm{PM}^2-\mathrm{MA}^2$</td></tr>
+</table></div>
+
+<!--CH 19-->
+<div class="pat"><h4>平面 LMN 上の点 ⇔ 係数の和が 1</h4>
+<div class="when">四面体 OABC で、直線と平面の交点（例：直線 OG と平面 LMN の交点）。</div>
+<div class="how">$\overrightarrow{\mathrm{OP}}=x\overrightarrow{\mathrm{OL}}+y\overrightarrow{\mathrm{OM}}+z\overrightarrow{\mathrm{ON}}$ と表したとき、P が平面 LMN 上 $\iff x+y+z=1$。直線上の点は $\overrightarrow{\mathrm{OP}}=k\overrightarrow{\mathrm{OG}}$ とおき、平面を作る3点のベクトルで書き直して係数の和 $=1$ とする。</div>
+<div class="pex">四面体 OABC で、辺 OA の中点を L、辺 OB の中点を M、辺 OC を $1:2$ に内分する点を N、△ABC の重心を G とする。直線 OG と平面 LMN の交点を P とするとき、$\overrightarrow{\mathrm{OP}}$ を $\vec a,\vec b,\vec c$ で表せ。<br>
+<b>解</b>　$\vec a=2\overrightarrow{\mathrm{OL}}$、$\vec b=2\overrightarrow{\mathrm{OM}}$、$\vec c=3\overrightarrow{\mathrm{ON}}$ より $\overrightarrow{\mathrm{OP}}=k\overrightarrow{\mathrm{OG}}=\frac k3(\vec a+\vec b+\vec c)=\frac{2k}3\overrightarrow{\mathrm{OL}}+\frac{2k}3\overrightarrow{\mathrm{OM}}+k\overrightarrow{\mathrm{ON}}$。$\frac{2k}3+\frac{2k}3+k=1$ より $k=\frac37$。<b>$\overrightarrow{\mathrm{OP}}=\frac17(\vec a+\vec b+\vec c)$</b>。</div>
+<div class="pnote">「係数の和 $=1$」で平面 LMN 上と判定できるのは、L, M, N が一直線上にないから。また $\vec a,\vec b,\vec c$ は同一平面上にない（1次独立）ので、$\overrightarrow{\mathrm{OP}}$ の表し方は1通りに決まる。</div>
+</div>
+
+<div class="pat"><h4>空間図形の計量は「基本の内積」をそろえてから</h4>
+<div class="when">正四面体などで、線分の長さ・角・垂直を調べる。</div>
+<div class="how">$\vec a,\vec b,\vec c$ の大きさと互いの内積を最初に求めておく（1辺 1 の正四面体なら $\vec a\cdot\vec b=\vec b\cdot\vec c=\vec c\cdot\vec a=\frac12$）。目的のベクトルを $\vec a,\vec b,\vec c$ で表し、$|\ \ |^2$ を展開する。</div>
+<div class="pex">1辺の長さが 1 の正四面体 OABC で、辺 OA の中点を M、辺 BC の中点を N とする。MN の長さを求め、$\mathrm{OA}\perp\mathrm{BC}$ を示せ。<br>
+<b>解</b>　$\overrightarrow{\mathrm{MN}}=\frac{\vec b+\vec c-\vec a}2$。$|\vec b+\vec c-\vec a|^2=3+2\left(\frac12-\frac12-\frac12\right)=2$ より <b>$\mathrm{MN}=\frac{\sqrt2}2$</b>。また $\vec a\cdot(\vec c-\vec b)=\frac12-\frac12=0$ より $\mathrm{OA}\perp\mathrm{BC}$。</div>
+</div>
+
+<div class="pat"><h4>4点が同一平面上 ⇔ $\overrightarrow{\mathrm{AD}}=s\overrightarrow{\mathrm{AB}}+t\overrightarrow{\mathrm{AC}}$</h4>
+<div class="when">「4点 A, B, C, D が同一平面上にあるような $x$ を求めよ」（成分で与えられる）。</div>
+<div class="how">$\overrightarrow{\mathrm{AD}}=s\overrightarrow{\mathrm{AB}}+t\overrightarrow{\mathrm{AC}}$ を成分で書き、3つの式を連立する。（3点 A, B, C が一直線上 $\iff\overrightarrow{\mathrm{AC}}=k\overrightarrow{\mathrm{AB}}$。）</div>
+<div class="pex">4点 $\mathrm{A}(1,0,0)$、$\mathrm{B}(0,1,0)$、$\mathrm{C}(0,0,1)$、$\mathrm{D}(x,2,3)$ が同一平面上にあるような $x$ を求めよ。<br>
+<b>解</b>　$(x-1,\ 2,\ 3)=s(-1,1,0)+t(-1,0,1)$ より $s=2,\ t=3$、$x-1=-s-t=-5$。<b>$x=-4$</b>。</div>
+</div>
+
+<div class="pat"><h4>直線と座標平面の交点は「$t$ で表して代入」</h4>
+<div class="when">2点を通る直線と $xy$ 平面（$z=0$）などとの交点。</div>
+<div class="how">直線 AB 上の点は $\overrightarrow{\mathrm{OP}}=\overrightarrow{\mathrm{OA}}+t\overrightarrow{\mathrm{AB}}$。成分 $(x,y,z)$ を $t$ で表し、平面の条件（$z=0$ など）に代入して $t$ を決める。</div>
+<div class="pex">2点 $\mathrm{A}(1,2,3)$、$\mathrm{B}(3,-2,-1)$ を通る直線と $xy$ 平面の交点を求めよ。<br>
+<b>解</b>　$\overrightarrow{\mathrm{OP}}=(1+2t,\ 2-4t,\ 3-4t)$。$3-4t=0$ より $t=\frac34$。交点は <b>$\left(\frac52,\ -1,\ 0\right)$</b>。</div>
+</div>
+
+<div class="pat"><h4>垂線の足 H は「平面上の点」＋「2本と垂直」</h4>
+<div class="when">点 P から平面 OAB に下ろした垂線の足 H、点と平面の距離。</div>
+<div class="how">①$\overrightarrow{\mathrm{OH}}=s\overrightarrow{\mathrm{OA}}+t\overrightarrow{\mathrm{OB}}$（H は平面 OAB 上）→ ②$\overrightarrow{\mathrm{PH}}\cdot\overrightarrow{\mathrm{OA}}=0$、$\overrightarrow{\mathrm{PH}}\cdot\overrightarrow{\mathrm{OB}}=0$（平面上の平行でない2本と垂直）→ $s,t$ の連立方程式を解く。</div>
+<div class="pex">$\mathrm{O}(0,0,0)$、$\mathrm{A}(1,1,0)$、$\mathrm{B}(0,1,1)$、$\mathrm{P}(1,2,3)$ とする。P から平面 OAB に下ろした垂線の足 H の座標と、PH の長さを求めよ。<br>
+<b>解</b>　$\overrightarrow{\mathrm{OH}}=(s,\ s+t,\ t)$、$\overrightarrow{\mathrm{PH}}=(s-1,\ s+t-2,\ t-3)$。$\overrightarrow{\mathrm{PH}}\cdot\overrightarrow{\mathrm{OA}}=2s+t-3=0$、$\overrightarrow{\mathrm{PH}}\cdot\overrightarrow{\mathrm{OB}}=s+2t-5=0$ より $s=\frac13,\ t=\frac73$。<b>$\mathrm{H}\left(\frac13,\frac83,\frac73\right)$</b>。$\overrightarrow{\mathrm{PH}}=\left(-\frac23,\frac23,-\frac23\right)$ より <b>$\mathrm{PH}=\frac{2\sqrt3}3$</b>。</div>
+</div>
+
+<div class="pat"><h4>四面体の体積は「法線ベクトルで高さ」</h4>
+<div class="when">成分で与えられた四面体の体積、点と平面の距離。</div>
+<div class="how">①平面 ABC の法線ベクトル $\vec n$ を、$\vec n\cdot\overrightarrow{\mathrm{AB}}=0$、$\vec n\cdot\overrightarrow{\mathrm{AC}}=0$ から1つ求める → ②高さ $h=\frac{|\overrightarrow{\mathrm{AD}}\cdot\vec n|}{|\vec n|}$（$\overrightarrow{\mathrm{AD}}$ の $\vec n$ 方向の成分の大きさ）→ ③$V=\frac13\times\triangle\mathrm{ABC}\times h$。</div>
+<div class="pex">$\mathrm{A}(1,0,0)$、$\mathrm{B}(0,1,0)$、$\mathrm{C}(0,0,1)$、$\mathrm{D}(2,2,2)$ を頂点とする四面体の体積を求めよ。<br>
+<b>解</b>　$\overrightarrow{\mathrm{AB}}=(-1,1,0)$、$\overrightarrow{\mathrm{AC}}=(-1,0,1)$ の両方に垂直な $\vec n=(1,1,1)$。$\overrightarrow{\mathrm{AD}}=(1,2,2)$ より $h=\frac{|1+2+2|}{\sqrt3}=\frac5{\sqrt3}$。$\triangle\mathrm{ABC}=\frac12\sqrt{2\cdot2-1^2}=\frac{\sqrt3}2$。$V=\frac13\cdot\frac{\sqrt3}2\cdot\frac5{\sqrt3}=\frac56$。</div>
+<div class="pnote">垂線の足を求めなくても高さは出せる。体積の $\frac13$、三角形の面積の $\frac12$ を忘れていないか確認。</div>
+</div>
+
+<div class="pat"><h4>球面は平方完成、平面との交わりは円</h4>
+<div class="when">$x^2+y^2+z^2+\cdots=0$ の形の球面の中心・半径、球面と座標平面の交わり。</div>
+<div class="how">$x,y,z$ それぞれ平方完成して $(x-a)^2+(y-b)^2+(z-c)^2=r^2$。$xy$ 平面との交わりは $z=0$ を代入した円で、中心 $(a,b,0)$、半径 $\sqrt{r^2-c^2}$（$|c|<r$ のとき）。</div>
+<div class="pex">球面 $x^2+y^2+z^2-2x+4y-6z-11=0$ の中心と半径、および $xy$ 平面との交わりを求めよ。<br>
+<b>解</b>　$(x-1)^2+(y+2)^2+(z-3)^2=25$ より <b>中心 $(1,-2,3)$、半径 5</b>。$z=0$ とすると $(x-1)^2+(y+2)^2=16$。交わりは <b>$xy$ 平面上の、中心 $(1,-2,0)$、半径 4 の円</b>。</div>
+</div>
+
+<div class="pat"><h4>直線上で定点に最も近い点は「$t$ の2次関数」か「垂直」</h4>
+<div class="when">直線 AB 上の点 P のうち、原点（定点）に最も近い点とその距離。</div>
+<div class="how">$\overrightarrow{\mathrm{OP}}=\overrightarrow{\mathrm{OA}}+t\overrightarrow{\mathrm{AB}}$ として、$|\overrightarrow{\mathrm{OP}}|^2$ を $t$ の2次関数として平方完成。最小のとき $\overrightarrow{\mathrm{OP}}\perp\overrightarrow{\mathrm{AB}}$ なので、$\overrightarrow{\mathrm{OP}}\cdot\overrightarrow{\mathrm{AB}}=0$ から $t$ を求めてもよい。</div>
+<div class="pex">2点 $\mathrm{A}(5,1,0)$、$\mathrm{B}(1,3,4)$ を通る直線上の点 P で、原点 O に最も近い点の座標とその距離を求めよ。<br>
+<b>解</b>　$\overrightarrow{\mathrm{OP}}=(5-4t,\ 1+2t,\ 4t)$。$|\overrightarrow{\mathrm{OP}}|^2=36t^2-36t+26=36\left(t-\frac12\right)^2+17$。<b>$\mathrm{P}(3,2,2)$、距離 $\sqrt{17}$</b>。（$\overrightarrow{\mathrm{OP}}\cdot\overrightarrow{\mathrm{AB}}=-12+4+8=0$ で確認できる。）</div>
+</div>
+
+<div class="box memo"><table class="l w">
+<tr><th>項目</th><th>公式・方法</th></tr>
+<tr><td>平面 ABC 上の点</td><td>$\overrightarrow{\mathrm{OP}}=s\vec a+t\vec b+u\vec c$ で $s+t+u=1$</td></tr>
+<tr><td>4点が同一平面上</td><td>$\overrightarrow{\mathrm{AD}}=s\overrightarrow{\mathrm{AB}}+t\overrightarrow{\mathrm{AC}}$</td></tr>
+<tr><td>垂線の足</td><td>平面上の点とおき、平面内の平行でない2ベクトルとの内積を 0</td></tr>
+<tr><td>高さ（法線ベクトル）</td><td>$h=\frac{|\overrightarrow{\mathrm{AD}}\cdot\vec n|}{|\vec n|}$</td></tr>
+<tr><td>四面体の体積</td><td>$V=\frac13\times(\text{底面積})\times(\text{高さ})$</td></tr>
+<tr><td>球面</td><td>$(x-a)^2+(y-b)^2+(z-c)^2=r^2$</td></tr>
+<tr><td>（参考）点と平面の距離</td><td>平面 $ax+by+cz+d=0$ と点 $(x_1,y_1,z_1)$ の距離は $\frac{|ax_1+by_1+cz_1+d|}{\sqrt{a^2+b^2+c^2}}$</td></tr>
+</table></div>
