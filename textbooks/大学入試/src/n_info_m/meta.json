@@ -1,0 +1,87 @@
+{
+ "subject": "情報",
+ "math": true,
+ "color": "#0b5f84",
+ "color2": "#3f8fb7",
+ "subcolor": "#e6f2f8",
+ "parts": [
+  {
+   "title": "第1部 情報社会",
+   "sub": "",
+   "chapters": [
+    {
+     "no": 1,
+     "title": "情報社会と問題解決"
+    },
+    {
+     "no": 2,
+     "title": "情報モラルと法・知的財産"
+    },
+    {
+     "no": 3,
+     "title": "情報デザイン"
+    }
+   ]
+  },
+  {
+   "title": "第2部 デジタルとコンピュータ",
+   "sub": "",
+   "chapters": [
+    {
+     "no": 4,
+     "title": "デジタル表現"
+    },
+    {
+     "no": 5,
+     "title": "コンピュータのしくみ"
+    }
+   ]
+  },
+  {
+   "title": "第3部 プログラミング",
+   "sub": "",
+   "chapters": [
+    {
+     "no": 6,
+     "title": "アルゴリズムとプログラミングの基本"
+    },
+    {
+     "no": 7,
+     "title": "関数・探索・整列"
+    },
+    {
+     "no": 8,
+     "title": "モデル化とシミュレーション"
+    }
+   ]
+  },
+  {
+   "title": "第4部 ネットワークとデータ",
+   "sub": "",
+   "chapters": [
+    {
+     "no": 9,
+     "title": "ネットワークのしくみ"
+    },
+    {
+     "no": 10,
+     "title": "情報セキュリティ"
+    },
+    {
+     "no": 11,
+     "title": "データベースとデータの収集"
+    },
+    {
+     "no": 12,
+     "title": "データの分析"
+    }
+   ]
+  }
+ ],
+ "intro_html": "<h3>この3冊の使い分け</h3><table class='l w'><tr><th>本</th><th>役割</th><th>使うタイミング</th></tr><tr><td><b>教科書（講義編）</b></td><td>情報Iの入試範囲を体系的に理解する</td><td>単元の学習・復習の最初</td></tr><tr><td><b>参考書（解法・整理編）</b></td><td>「こう出たらこう解く」の解法カードで、設問と解き方・知識を結びつける</td><td>問題演習の前後、直前期の総整理</td></tr><tr><td><b>問題集（演習編）</b></td><td>A基本・B標準・C発展の演習で実戦力をつける</td><td>講義を読んだ後、くり返し</td></tr></table><p>3冊とも<b>章番号が共通</b>です（全12章）。</p>",
+ "kind": "問題集",
+ "title": "大学入試 情報 問題集（演習編）",
+ "cover_title": "情報I<br>入試情報 演習",
+ "cover_sub": "A 基本・B 標準・C 発展の3段階<br>くわしい解答・解説つき",
+ "extra_css": ".bun { background:#f7f7f7; border-left:4px solid #999; padding:2mm 3.5mm; margin:2mm 0; line-height:1.8; } .shiryo { background:#fbfaf3; border-left:4px solid #b08d57; padding:2mm 3.5mm; margin:2mm 0; line-height:1.8; } pre.code { font-family:\"IPAGothic\",monospace; font-size:9pt; line-height:1.5; background:#f5f8fa; border:1px solid #c9d6de; border-left:4px solid #3f8fb7; padding:2mm 3mm; margin:2mm 0; white-space:pre-wrap; } code { font-family:\"IPAGothic\",monospace; font-size:9.2pt; background:#eef3f6; padding:0 1px; }"
+}

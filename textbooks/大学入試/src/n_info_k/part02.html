@@ -1,0 +1,617 @@
+<!--CH 7-->
+<div class="box point">
+・<b>関数</b>＝ひとまとまりの処理に名前をつけたもの。<b>引数</b>（渡す値）を受けとり、結果を<b>戻り値</b>として返す<br>
+・<b>線形探索</b>は先頭から順に調べる（最大 $n$ 回）。<b>二分探索</b>は<b>整列済み</b>のデータで中央と比べて範囲を半分にしていく（最大でおよそ $\log_2 n$ 回）<br>
+・<b>選択ソート</b>は「残りの最小値を先頭へ」、<b>バブルソート</b>は「隣どうしを比べて逆順なら交換」。どちらも比較回数は $n(n-1)\div2$<br>
+・<b>計算量</b>：データ量 $n$ が増えたときの手間の増え方。$n$ が2倍になると、線形探索は2倍、バブルソートは約4倍、二分探索は1回増えるだけ
+</div>
+<h3>講義1　関数 ― 引数と戻り値</h3>
+<div class="box lect">
+<code>要素数(Data)</code> は配列 Data を<b>引数</b>として受けとり、要素の個数を<b>戻り値</b>として返す<b>関数</b>である。共通テストでは、使う関数の働きはその都度問題文で説明される。本書でも、<code>要素数(配列)</code>、<code>整数(x)</code>（x の小数点以下を切り捨てた値を返す）、<code>乱数()</code>（0 以上 1 未満の数をランダムに返す。第8章）などを、説明を添えて使う。<br>
+関数は自分で作ることもできる。たとえば「個数 kosu と単価 tanka を受けとり、10 個以上なら1割引きした金額を、そうでなければ kosu × tanka を返す関数 <code>kingaku(kosu, tanka)</code>」は、Python では次のように書く。
+<pre class="code">def kingaku(kosu, tanka):
+    if kosu &gt;= 10:
+        return kosu * tanka * 9 // 10   # 9割（整数）
+    else:
+        return kosu * tanka</pre>
+関数にまとめると、①同じ処理を何度も書かずに<b>呼び出すだけ</b>で使える、②プログラムの見通しがよくなる、③修正が<b>1か所</b>で済む、という利点がある。呼び出す側は、関数の中身を知らなくても「何を渡すと何が返るか」さえ知っていれば使える。
+</div>
+<div class="box ex">
+上の関数 kingaku を使う次のプログラムについて答えよ。
+<pre class="code">(01) goukei = kingaku(12, 150) + kingaku(4, 300)
+(02) 表示する(goukei)</pre>
+(1) 表示される値を求めよ。　(2) <code>kingaku(10, 80)</code> と <code>kingaku(9, 80)</code> の戻り値を求め、この料金設定の問題点を述べよ。
+<div class="solx"><b>解</b>　(1) <code>kingaku(12, 150)</code> は 12 個（10 個以上）なので $12\times150\times9÷10=1620$、<code>kingaku(4, 300)</code> は $4\times300=1200$。合計 <b>2820</b>。<br>
+(2) どちらも <b>720</b>（$10\times80\times0.9=720$、$9\times80=720$）。10 個買っても 9 個と同じ金額になり、9 個買う人は 10 個買ったほうが得になる。割引の境目の前後で金額が逆転・一致しないか、<b>境界の値</b>で確かめることが大切である。</div>
+</div>
+<h3>講義2　線形探索と二分探索</h3>
+<div class="box lect">
+配列の中から目的の値を探す処理を<b>探索</b>という。<br>
+・<b>線形探索</b>：先頭から順に1つずつ比べる。データが整列していなくても使える。$n$ 個のデータでは最大 $n$ 回の比較が必要。<br>
+・<b>二分探索</b>：データが<b>小さい順（または大きい順）に整列</b>しているとき、探す範囲の中央の値と比べ、目的の値がその左右どちら側にあるかを判断して、範囲を<b>半分ずつ</b>にしぼる。範囲が空になったら「見つからない」。<br>
+下の図は、15 個のデータから 26 を二分探索するようすで、わずか3回で見つかる（線形探索なら6回）。
+<svg class="fig" width="600" height="124" viewBox="0 0 600 124" xmlns="http://www.w3.org/2000/svg"><text x="105.5" y="16" font-size="9.5" text-anchor="middle" fill="#555">0</text><text x="132.5" y="16" font-size="9.5" text-anchor="middle" fill="#555">1</text><text x="159.5" y="16" font-size="9.5" text-anchor="middle" fill="#555">2</text><text x="186.5" y="16" font-size="9.5" text-anchor="middle" fill="#555">3</text><text x="213.5" y="16" font-size="9.5" text-anchor="middle" fill="#555">4</text><text x="240.5" y="16" font-size="9.5" text-anchor="middle" fill="#555">5</text><text x="267.5" y="16" font-size="9.5" text-anchor="middle" fill="#555">6</text><text x="294.5" y="16" font-size="9.5" text-anchor="middle" fill="#555">7</text><text x="321.5" y="16" font-size="9.5" text-anchor="middle" fill="#555">8</text><text x="348.5" y="16" font-size="9.5" text-anchor="middle" fill="#555">9</text><text x="375.5" y="16" font-size="9.5" text-anchor="middle" fill="#555">10</text><text x="402.5" y="16" font-size="9.5" text-anchor="middle" fill="#555">11</text><text x="429.5" y="16" font-size="9.5" text-anchor="middle" fill="#555">12</text><text x="456.5" y="16" font-size="9.5" text-anchor="middle" fill="#555">13</text><text x="483.5" y="16" font-size="9.5" text-anchor="middle" fill="#555">14</text><text x="84" y="16" font-size="9.5" text-anchor="end" fill="#555">添字</text><rect x="92" y="22" width="27" height="22" rx="0" fill="#e6f2f8" stroke="#0b5f84" stroke-width="0.8"/><text x="105.5" y="37" font-size="10" text-anchor="middle" fill="#1e1e1e">3</text><rect x="119" y="22" width="27" height="22" rx="0" fill="#e6f2f8" stroke="#0b5f84" stroke-width="0.8"/><text x="132.5" y="37" font-size="10" text-anchor="middle" fill="#1e1e1e">8</text><rect x="146" y="22" width="27" height="22" rx="0" fill="#e6f2f8" stroke="#0b5f84" stroke-width="0.8"/><text x="159.5" y="37" font-size="10" text-anchor="middle" fill="#1e1e1e">12</text><rect x="173" y="22" width="27" height="22" rx="0" fill="#e6f2f8" stroke="#0b5f84" stroke-width="0.8"/><text x="186.5" y="37" font-size="10" text-anchor="middle" fill="#1e1e1e">15</text><rect x="200" y="22" width="27" height="22" rx="0" fill="#e6f2f8" stroke="#0b5f84" stroke-width="0.8"/><text x="213.5" y="37" font-size="10" text-anchor="middle" fill="#1e1e1e">21</text><rect x="227" y="22" width="27" height="22" rx="0" fill="#e6f2f8" stroke="#0b5f84" stroke-width="0.8"/><text x="240.5" y="37" font-size="10" text-anchor="middle" fill="#1e1e1e">26</text><rect x="254" y="22" width="27" height="22" rx="0" fill="#e6f2f8" stroke="#0b5f84" stroke-width="0.8"/><text x="267.5" y="37" font-size="10" text-anchor="middle" fill="#1e1e1e">30</text><rect x="281" y="22" width="27" height="22" rx="0" fill="#ffe3c8" stroke="#0b5f84" stroke-width="1.6"/><text x="294.5" y="37" font-size="10" text-anchor="middle" fill="#1e1e1e" font-weight="bold">37</text><rect x="308" y="22" width="27" height="22" rx="0" fill="#e6f2f8" stroke="#0b5f84" stroke-width="0.8"/><text x="321.5" y="37" font-size="10" text-anchor="middle" fill="#1e1e1e">41</text><rect x="335" y="22" width="27" height="22" rx="0" fill="#e6f2f8" stroke="#0b5f84" stroke-width="0.8"/><text x="348.5" y="37" font-size="10" text-anchor="middle" fill="#1e1e1e">46</text><rect x="362" y="22" width="27" height="22" rx="0" fill="#e6f2f8" stroke="#0b5f84" stroke-width="0.8"/><text x="375.5" y="37" font-size="10" text-anchor="middle" fill="#1e1e1e">52</text><rect x="389" y="22" width="27" height="22" rx="0" fill="#e6f2f8" stroke="#0b5f84" stroke-width="0.8"/><text x="402.5" y="37" font-size="10" text-anchor="middle" fill="#1e1e1e">58</text><rect x="416" y="22" width="27" height="22" rx="0" fill="#e6f2f8" stroke="#0b5f84" stroke-width="0.8"/><text x="429.5" y="37" font-size="10" text-anchor="middle" fill="#1e1e1e">63</text><rect x="443" y="22" width="27" height="22" rx="0" fill="#e6f2f8" stroke="#0b5f84" stroke-width="0.8"/><text x="456.5" y="37" font-size="10" text-anchor="middle" fill="#1e1e1e">70</text><rect x="470" y="22" width="27" height="22" rx="0" fill="#e6f2f8" stroke="#0b5f84" stroke-width="0.8"/><text x="483.5" y="37" font-size="10" text-anchor="middle" fill="#1e1e1e">77</text><text x="84" y="37" font-size="10" text-anchor="end" fill="#1e1e1e">1回目</text><text x="505" y="37" font-size="10" text-anchor="start" fill="#1e1e1e">37 &gt; 26 → 左半分へ</text><rect x="92" y="56" width="27" height="22" rx="0" fill="#e6f2f8" stroke="#0b5f84" stroke-width="0.8"/><text x="105.5" y="71" font-size="10" text-anchor="middle" fill="#1e1e1e">3</text><rect x="119" y="56" width="27" height="22" rx="0" fill="#e6f2f8" stroke="#0b5f84" stroke-width="0.8"/><text x="132.5" y="71" font-size="10" text-anchor="middle" fill="#1e1e1e">8</text><rect x="146" y="56" width="27" height="22" rx="0" fill="#e6f2f8" stroke="#0b5f84" stroke-width="0.8"/><text x="159.5" y="71" font-size="10" text-anchor="middle" fill="#1e1e1e">12</text><rect x="173" y="56" width="27" height="22" rx="0" fill="#ffe3c8" stroke="#0b5f84" stroke-width="1.6"/><text x="186.5" y="71" font-size="10" text-anchor="middle" fill="#1e1e1e" font-weight="bold">15</text><rect x="200" y="56" width="27" height="22" rx="0" fill="#e6f2f8" stroke="#0b5f84" stroke-width="0.8"/><text x="213.5" y="71" font-size="10" text-anchor="middle" fill="#1e1e1e">21</text><rect x="227" y="56" width="27" height="22" rx="0" fill="#e6f2f8" stroke="#0b5f84" stroke-width="0.8"/><text x="240.5" y="71" font-size="10" text-anchor="middle" fill="#1e1e1e">26</text><rect x="254" y="56" width="27" height="22" rx="0" fill="#e6f2f8" stroke="#0b5f84" stroke-width="0.8"/><text x="267.5" y="71" font-size="10" text-anchor="middle" fill="#1e1e1e">30</text><rect x="281" y="56" width="27" height="22" rx="0" fill="#f3f3f3" stroke="#aaa" stroke-width="0.8"/><text x="294.5" y="71" font-size="10" text-anchor="middle" fill="#aaa">37</text><rect x="308" y="56" width="27" height="22" rx="0" fill="#f3f3f3" stroke="#aaa" stroke-width="0.8"/><text x="321.5" y="71" font-size="10" text-anchor="middle" fill="#aaa">41</text><rect x="335" y="56" width="27" height="22" rx="0" fill="#f3f3f3" stroke="#aaa" stroke-width="0.8"/><text x="348.5" y="71" font-size="10" text-anchor="middle" fill="#aaa">46</text><rect x="362" y="56" width="27" height="22" rx="0" fill="#f3f3f3" stroke="#aaa" stroke-width="0.8"/><text x="375.5" y="71" font-size="10" text-anchor="middle" fill="#aaa">52</text><rect x="389" y="56" width="27" height="22" rx="0" fill="#f3f3f3" stroke="#aaa" stroke-width="0.8"/><text x="402.5" y="71" font-size="10" text-anchor="middle" fill="#aaa">58</text><rect x="416" y="56" width="27" height="22" rx="0" fill="#f3f3f3" stroke="#aaa" stroke-width="0.8"/><text x="429.5" y="71" font-size="10" text-anchor="middle" fill="#aaa">63</text><rect x="443" y="56" width="27" height="22" rx="0" fill="#f3f3f3" stroke="#aaa" stroke-width="0.8"/><text x="456.5" y="71" font-size="10" text-anchor="middle" fill="#aaa">70</text><rect x="470" y="56" width="27" height="22" rx="0" fill="#f3f3f3" stroke="#aaa" stroke-width="0.8"/><text x="483.5" y="71" font-size="10" text-anchor="middle" fill="#aaa">77</text><text x="84" y="71" font-size="10" text-anchor="end" fill="#1e1e1e">2回目</text><text x="505" y="71" font-size="10" text-anchor="start" fill="#1e1e1e">15 &lt; 26 → 右半分へ</text><rect x="92" y="90" width="27" height="22" rx="0" fill="#f3f3f3" stroke="#aaa" stroke-width="0.8"/><text x="105.5" y="105" font-size="10" text-anchor="middle" fill="#aaa">3</text><rect x="119" y="90" width="27" height="22" rx="0" fill="#f3f3f3" stroke="#aaa" stroke-width="0.8"/><text x="132.5" y="105" font-size="10" text-anchor="middle" fill="#aaa">8</text><rect x="146" y="90" width="27" height="22" rx="0" fill="#f3f3f3" stroke="#aaa" stroke-width="0.8"/><text x="159.5" y="105" font-size="10" text-anchor="middle" fill="#aaa">12</text><rect x="173" y="90" width="27" height="22" rx="0" fill="#f3f3f3" stroke="#aaa" stroke-width="0.8"/><text x="186.5" y="105" font-size="10" text-anchor="middle" fill="#aaa">15</text><rect x="200" y="90" width="27" height="22" rx="0" fill="#e6f2f8" stroke="#0b5f84" stroke-width="0.8"/><text x="213.5" y="105" font-size="10" text-anchor="middle" fill="#1e1e1e">21</text><rect x="227" y="90" width="27" height="22" rx="0" fill="#ffe3c8" stroke="#0b5f84" stroke-width="1.6"/><text x="240.5" y="105" font-size="10" text-anchor="middle" fill="#1e1e1e" font-weight="bold">26</text><rect x="254" y="90" width="27" height="22" rx="0" fill="#e6f2f8" stroke="#0b5f84" stroke-width="0.8"/><text x="267.5" y="105" font-size="10" text-anchor="middle" fill="#1e1e1e">30</text><rect x="281" y="90" width="27" height="22" rx="0" fill="#f3f3f3" stroke="#aaa" stroke-width="0.8"/><text x="294.5" y="105" font-size="10" text-anchor="middle" fill="#aaa">37</text><rect x="308" y="90" width="27" height="22" rx="0" fill="#f3f3f3" stroke="#aaa" stroke-width="0.8"/><text x="321.5" y="105" font-size="10" text-anchor="middle" fill="#aaa">41</text><rect x="335" y="90" width="27" height="22" rx="0" fill="#f3f3f3" stroke="#aaa" stroke-width="0.8"/><text x="348.5" y="105" font-size="10" text-anchor="middle" fill="#aaa">46</text><rect x="362" y="90" width="27" height="22" rx="0" fill="#f3f3f3" stroke="#aaa" stroke-width="0.8"/><text x="375.5" y="105" font-size="10" text-anchor="middle" fill="#aaa">52</text><rect x="389" y="90" width="27" height="22" rx="0" fill="#f3f3f3" stroke="#aaa" stroke-width="0.8"/><text x="402.5" y="105" font-size="10" text-anchor="middle" fill="#aaa">58</text><rect x="416" y="90" width="27" height="22" rx="0" fill="#f3f3f3" stroke="#aaa" stroke-width="0.8"/><text x="429.5" y="105" font-size="10" text-anchor="middle" fill="#aaa">63</text><rect x="443" y="90" width="27" height="22" rx="0" fill="#f3f3f3" stroke="#aaa" stroke-width="0.8"/><text x="456.5" y="105" font-size="10" text-anchor="middle" fill="#aaa">70</text><rect x="470" y="90" width="27" height="22" rx="0" fill="#f3f3f3" stroke="#aaa" stroke-width="0.8"/><text x="483.5" y="105" font-size="10" text-anchor="middle" fill="#aaa">77</text><text x="84" y="105" font-size="10" text-anchor="end" fill="#1e1e1e">3回目</text><text x="505" y="105" font-size="10" text-anchor="start" fill="#c0392b">一致</text></svg>
+<pre class="code">(01) Data = [3, 8, 12, 15, 21, 26, 30, 37, 41, 46, 52, 58, 63, 70, 77]
+(02) atai = 26
+(03) hidari = 0
+(04) migi = 要素数(Data) - 1
+(05) basho = -1
+(06) hidari &lt;= migi and basho == -1 の間繰り返す:
+(07) ｜ aida = (hidari + migi) ÷ 2
+(08) ｜ もし Data[aida] == atai ならば:
+(09) ｜ ｜ basho = aida
+(10) ｜ そうでなくもし Data[aida] &lt; atai ならば:
+(11) ｜ ｜ hidari = aida + 1
+(12) ｜ そうでなければ:
+(13) ⎿ ⎿ migi = aida - 1
+(14) 表示する(basho)</pre>
+</div>
+<div class="box ex">
+上のプログラムで、(02) を <code>atai = 40</code> に変えて実行する。各回の hidari・migi・aida・Data[aida] をトレースし、表示される値と、Data[aida] と atai を比べた回数を答えよ。
+<div class="solx"><b>解</b>
+<table style="margin:1mm 0"><tr><th>回</th><th>hidari</th><th>migi</th><th>aida</th><th>Data[aida]</th><th>判定</th></tr>
+<tr><td>1</td><td>0</td><td>14</td><td>7</td><td>37</td><td>37 ＜ 40 → hidari＝8</td></tr>
+<tr><td>2</td><td>8</td><td>14</td><td>11</td><td>58</td><td>58 ＞ 40 → migi＝10</td></tr>
+<tr><td>3</td><td>8</td><td>10</td><td>9</td><td>46</td><td>46 ＞ 40 → migi＝8</td></tr>
+<tr><td>4</td><td>8</td><td>8</td><td>8</td><td>41</td><td>41 ＞ 40 → migi＝7</td></tr></table>
+hidari＝8 ＞ migi＝7 となり繰り返しを終える。40 は見つからず、<b>−1</b> が表示される。比べた回数は <b>4 回</b>（15 個なら最大4回：$2^4=16\gt 15$）。</div>
+</div>
+<h3>講義3　整列 ― 選択ソートとバブルソート</h3>
+<div class="box lect">
+データを小さい順（<b>昇順</b>）や大きい順（<b>降順</b>）に並べかえる処理を<b>整列</b>（ソート）という。<br>
+・<b>選択ソート</b>：未整列の部分から<b>最小値</b>を探し、未整列部分の先頭と交換する。これを1つずつ範囲を狭めてくり返す。<br>
+・<b>バブルソート</b>：隣り合う2つを比べ、逆順なら交換する。1回の走査（パス）で最大値が末尾に移動する（泡が浮かぶように）。<br>
+[5, 3, 8, 1, 4] を選択ソートすると、1回目に最小の 1 と先頭の 5 を交換して [1, 3, 8, 5, 4]、2回目は 3 がすでに最小で交換なし、3回目に 4 と 8 を交換して [1, 3, 4, 5, 8]、4回目は交換なし。比較は $4+3+2+1=10$ 回、交換は2回。
+<pre class="code">(01) Data = [5, 3, 8, 1, 4]
+(02) n = 要素数(Data)
+(03) i を 0 から n - 2 まで 1 ずつ増やしながら繰り返す:
+(04) ｜ j を 0 から n - 2 - i まで 1 ずつ増やしながら繰り返す:
+(05) ｜ ｜ もし Data[j] &gt; Data[j + 1] ならば:
+(06) ｜ ｜ ｜ tmp = Data[j]
+(07) ｜ ｜ ｜ Data[j] = Data[j + 1]
+(08) ⎿ ⎿ ⎿ Data[j + 1] = tmp
+(09) 表示する(Data)</pre>
+</div>
+<div class="box ex">
+上のバブルソートのプログラムについて、(1) i＝0, 1, 2, 3 の各パスが終わった直後の Data を書け。(2) (05) の比較の回数と、交換の回数を求めよ。(3) 大きい順に並べるには、どこをどう変えればよいか。
+<div class="solx"><b>解</b>　(1) i＝0：[3, 5, 1, 4, <b>8</b>]（5↔3、8↔1、8↔4 の3回交換）　i＝1：[3, 1, 4, <b>5, 8</b>]（2回）　i＝2：[<b>1, 3, 4, 5, 8</b>]（1回）　i＝3：変化なし<br>
+(2) j の回数は $4+3+2+1=$ <b>10 回</b>、交換は $3+2+1=$ <b>6 回</b>。<br>
+(3) (05) の条件を <b>Data[j] &lt; Data[j + 1]</b> に変える（右のほうが大きければ交換）。</div>
+</div>
+<h3>講義4　計算量の考え方</h3>
+<div class="box lect">
+アルゴリズムの効率は、データの個数 $n$ が増えたときに手間（比較や交換の回数）が<b>どのように増えるか</b>で比べる。これを<b>計算量</b>といい、$O(n)$ のように表すこともある。
+<table class="w"><tr><th>$n$</th><th>10</th><th>100</th><th>1000</th><th>10000</th><th>増え方</th></tr>
+<tr><td>二分探索の最大回数（約 $\log_2 n$）</td><td>4</td><td>7</td><td>10</td><td>14</td><td>$n$ が2倍で＋1回</td></tr>
+<tr><td>線形探索の最大回数 $n$</td><td>10</td><td>100</td><td>1000</td><td>10000</td><td>$n$ に比例</td></tr>
+<tr><td>選択・バブルソートの比較 $\frac{n(n-1)}{2}$</td><td>45</td><td>4950</td><td>499500</td><td>49995000</td><td>ほぼ $n^2$ に比例</td></tr></table>
+二分探索は回数が非常に少ないが、データを<b>整列しておく手間</b>がかかる。何度も探索するなら一度整列しておく価値がある。データが少ないうちはどの方法でも差は小さいが、大量のデータでは計算量の差が決定的になる。
+</div>
+<div class="box ex">
+(1) あるコンピュータでバブルソートを使うと、1000 件の整列に 0.2 秒かかった。5000 件ではおよそ何秒かかるか。<br>
+(2) 整列済みの 100 万件のデータから1件を探す。線形探索と二分探索の、比較の最大回数をそれぞれ答えよ。
+<div class="solx"><b>解</b>　(1) 手間は $n^2$ にほぼ比例するので、$n$ が5倍なら $5^2=25$ 倍。$0.2\times25=$ <b>5 秒</b>。<br>
+(2) 線形探索は<b>100 万回</b>。二分探索は、$2^{19}=524{,}288\lt 10^6\lt 2^{20}=1{,}048{,}576$ より最大 <b>20 回</b>。</div>
+</div>
+<div class="box chk">
+(1) 関数において、呼び出すときに渡す値と、関数が返す値をそれぞれ何というか。<br>
+(2) 二分探索を使うために、データが満たしていなければならない条件は何か。<br>
+(3) [4, 2, 5, 1] をバブルソートで昇順に並べるとき、1回目のパスが終わった直後の並びを書け。<br>
+(4) 整列済みの 1000 件のデータを二分探索するとき、比較の最大回数は何回か。
+</div>
+<div class="box aim">
+・探索・整列は、プログラムの<b>空欄補充</b>（中央の添字 <code>(hidari + migi) ÷ 2</code>、範囲の更新 <code>aida + 1</code>／<code>aida - 1</code>、交換の3行）と、<b>途中経過のトレース</b>が定番。<br>
+・「見つからない場合」の終了条件（hidari ＞ migi）や、<b>比較回数・交換回数</b>を数えさせる設問に注意。<br>
+・計算量は「$n$ を○倍にすると時間は何倍か」の形で問われる。
+</div>
+<h3 class="deep">講義5　分割統治 ― マージソート</h3>
+<p>選択ソートやバブルソートの手間は $n^2$ に比例する。より速い整列法の代表が、問題を小さく分けて解き、結果を組み合わせる<b>分割統治</b>の考え方を使う<b>マージソート</b>である。</p>
+<div class="box lect">
+①データを半分ずつに分け、1個ずつになるまで分割する。②整列済みの2つの列を、それぞれの<b>先頭どうしを比べて小さいほうを取り出す</b>ことをくり返して1つの整列済みの列にまとめる（<b>マージ</b>）。<br>
+例：[38, 27, 43, 3, 9, 82, 10, 15] → [27, 38] [3, 43] [9, 82] [10, 15] → [3, 27, 38, 43] [9, 10, 15, 82] → [3, 9, 10, 15, 27, 38, 43, 82]<br>
+最後のマージは、先頭どうしの比較（3と9、27と9、27と10、27と15、27と82、38と82、43と82）の7回で済み、残った 82 を後ろにつける。<br>
+分割の段数は約 $\log_2 n$ 段、各段のマージの手間は $n$ に比例するので、全体の手間は約 $n\log_2 n$ に比例する。$n=10^6$ では、$\frac{n(n-1)}{2}\fallingdotseq5\times10^{11}$ 回に対し $n\log_2 n\fallingdotseq2\times10^{7}$ 回で、2万倍以上の差になる。
+</div>
+<div class="box warn">
+・整列していないデータに二分探索を使う。<br>
+・中央の添字を <code>(hidari + migi) / 2</code> として小数にしてしまう（<code>÷</code> で整数にする）。範囲の更新を <code>hidari = aida</code> とすると、終わらなくなることがある。<br>
+・バブルソートの比較回数を $n^2$ や $n(n-1)$ とする。1回目のパスは $n-1$ 回、2回目は $n-2$ 回…なので合計 $\frac{n(n-1)}{2}$ 回。
+</div>
+<div class="box ans">
+(1) 引数、戻り値　(2) 小さい順（または大きい順）に整列されていること　(3) 4↔2 交換 → [2, 4, 5, 1]、4 と 5 はそのまま、5↔1 交換 → [2, 4, 1, 5]　(4) $2^9=512\lt1000\lt2^{10}=1024$ より 10 回
+</div>
+<!--CH 8-->
+<div class="box point">
+・<b>モデル</b>＝現実の事物や現象から、目的に必要な要素だけを取り出して単純化したもの。表し方で<b>物理モデル・図的モデル・数式モデル</b>に分けられる<br>
+・時間で変化するかで<b>静的／動的</b>、偶然の要素を含むかで<b>確定的／確率的</b>モデルに分けられる<br>
+・<b>シミュレーション</b>＝モデルを使って、現象の変化や結果を予測・検証すること。確定的モデルは「次の値＝今の値＋変化量」をくり返し計算する<br>
+・確率的モデルは<b>乱数</b>で偶然を表す。乱数で多数の試行を行い近似値を求める方法が<b>モンテカルロ法</b><br>
+・<b>待ち行列</b>：開始時刻＝max（到着時刻, 前の人の終了時刻）、待ち時間＝開始時刻－到着時刻
+</div>
+<h3>講義1　モデル化とモデルの分類</h3>
+<div class="box lect">
+<b>表現の形式</b>による分類：<br>
+・<b>物理モデル</b>：実物や模型で表す。実物大の<b>実物モデル</b>（自動車の衝突実験用の人形）、大きさを変えた<b>縮尺モデル</b>（地球儀、風洞実験の模型）。<br>
+・<b>図的モデル</b>：図で表す。路線図、フローチャート、回路図、状態の移り変わりを表す状態遷移図など。<br>
+・<b>数式モデル</b>：数式で表す。落下距離 $y=\frac12gt^2$、預金の残高、人口の増減など。<br>
+<b>時間</b>による分類：時間で変化しない<b>静的モデル</b>（建物の間取り図）と、時間とともに変化する<b>動的モデル</b>（人口の推移）。<br>
+<b>不確定な要素</b>による分類：条件が決まれば結果が1通りに決まる<b>確定的モデル</b>（預金の利息）と、偶然に左右される要素を含む<b>確率的モデル</b>（サイコロ、客の来店）。<br>
+モデル化は、①<b>目的</b>を明確にする → ②目的に関係する<b>要素</b>を取り出し、関係の薄いものは省く → ③要素どうしの<b>関係</b>を式や図で表す → ④シミュレーションする → ⑤結果を現実と比べて<b>検証</b>し、必要ならモデルを修正する、という手順で行う。
+</div>
+<div class="box ex">
+次の①〜④は、表現の形式ではどのモデルにあたるか。また、③・④は確定的・確率的のどちらか。<br>
+① 自動車の空気抵抗を調べるための縮小模型　② 鉄道の路線図　③ 年利 1 % の複利で預けた預金の10年後の残高の計算　④ 客がいつ来るかわからないスーパーのレジの待ち時間の予測
+<div class="solx"><b>解</b>　① <b>物理モデル</b>（縮尺モデル）　② <b>図的モデル</b>（駅の順序とつながりだけを残している）　③ <b>数式モデル</b>・<b>確定的</b>（利率と期間が決まれば残高は1通り）　④ <b>確率的</b>（客の到着に偶然の要素がある。数式モデルや、乱数を使うシミュレーションで扱う）</div>
+</div>
+<h3>講義2　確定的モデルのシミュレーション</h3>
+<div class="box lect">
+<div class="two"><div>空の水そうに毎分 20 L の水を入れ、同時に、そのときの水量の 10 % が毎分流れ出るとする。$n$ 分後の水量を $V_n$ とすると<br>
+　$V_{n+1}=V_n+20-0.1V_n$、$V_0=0$<br>
+これを順に計算すると、$V_1=20$、$V_2=38$、$V_3=54.2$、…となる。表計算ソフトなら、1行目の値から次の行を求める式（例：<code>=B2+20-0.1*B2</code>）を下の行へ複写するだけでよい。<br>
+グラフ（右）から、水量は増え方がしだいに小さくなり、<b>200 L</b> に近づくことがわかる。200 L では、入る量 20 L と出る量 $0.1\times200=20$ L がつり合うからである。</div>
+<div style="flex:0 0 290px"><svg class="fig" width="290" height="182" viewBox="0 0 290 182" xmlns="http://www.w3.org/2000/svg"><line x1="40" y1="150" x2="280" y2="150" stroke="#555" stroke-width="1.2"/><text x="35" y="154" font-size="9.5" text-anchor="end" fill="#1e1e1e">0</text><line x1="40" y1="118" x2="280" y2="118" stroke="#e4e4e4" stroke-width="0.8"/><text x="35" y="122" font-size="9.5" text-anchor="end" fill="#1e1e1e">50</text><line x1="40" y1="86" x2="280" y2="86" stroke="#e4e4e4" stroke-width="0.8"/><text x="35" y="90" font-size="9.5" text-anchor="end" fill="#1e1e1e">100</text><line x1="40" y1="54" x2="280" y2="54" stroke="#e4e4e4" stroke-width="0.8"/><text x="35" y="58" font-size="9.5" text-anchor="end" fill="#1e1e1e">150</text><line x1="40" y1="22" x2="280" y2="22" stroke="#e4e4e4" stroke-width="0.8"/><text x="35" y="26" font-size="9.5" text-anchor="end" fill="#1e1e1e">200</text><line x1="40" y1="150" x2="40" y2="153" stroke="#555" stroke-width="1"/><text x="40" y="164" font-size="9.5" text-anchor="middle" fill="#1e1e1e">0</text><line x1="80" y1="150" x2="80" y2="153" stroke="#555" stroke-width="1"/><text x="80" y="164" font-size="9.5" text-anchor="middle" fill="#1e1e1e">5</text><line x1="120" y1="150" x2="120" y2="153" stroke="#555" stroke-width="1"/><text x="120" y="164" font-size="9.5" text-anchor="middle" fill="#1e1e1e">10</text><line x1="160" y1="150" x2="160" y2="153" stroke="#555" stroke-width="1"/><text x="160" y="164" font-size="9.5" text-anchor="middle" fill="#1e1e1e">15</text><line x1="200" y1="150" x2="200" y2="153" stroke="#555" stroke-width="1"/><text x="200" y="164" font-size="9.5" text-anchor="middle" fill="#1e1e1e">20</text><line x1="240" y1="150" x2="240" y2="153" stroke="#555" stroke-width="1"/><text x="240" y="164" font-size="9.5" text-anchor="middle" fill="#1e1e1e">25</text><line x1="280" y1="150" x2="280" y2="153" stroke="#555" stroke-width="1"/><text x="280" y="164" font-size="9.5" text-anchor="middle" fill="#1e1e1e">30</text><line x1="40" y1="150" x2="40" y2="14.3" stroke="#555" stroke-width="1.2"/><line x1="40" y1="22" x2="280" y2="22" stroke="#c0392b" stroke-width="1" stroke-dasharray="4,3"/><text x="280" y="18" font-size="9.5" text-anchor="end" fill="#c0392b">200 L</text><polyline points="40,150 48,137.2 56,125.7 64,115.3 72,106 80,97.6 88,90 96,83.2 104,77.1 112,71.6 120,66.6 128,62.2 136,58.2 144,54.5 152,51.3 160,48.4 168,45.7 176,43.3 184,41.2 192,39.3 200,37.6 208,36 216,34.6 224,33.3 232,32.2 240,31.2 248,30.3 256,29.4 264,28.7 272,28 280,27.4" fill="none" stroke="#0b5f84" stroke-width="1.6"/><circle cx="40" cy="150" r="1.9" fill="#0b5f84" stroke="#0b5f84" stroke-width="0.5"/><circle cx="48" cy="137.2" r="1.9" fill="#0b5f84" stroke="#0b5f84" stroke-width="0.5"/><circle cx="56" cy="125.7" r="1.9" fill="#0b5f84" stroke="#0b5f84" stroke-width="0.5"/><circle cx="64" cy="115.3" r="1.9" fill="#0b5f84" stroke="#0b5f84" stroke-width="0.5"/><circle cx="72" cy="106" r="1.9" fill="#0b5f84" stroke="#0b5f84" stroke-width="0.5"/><circle cx="80" cy="97.6" r="1.9" fill="#0b5f84" stroke="#0b5f84" stroke-width="0.5"/><circle cx="88" cy="90" r="1.9" fill="#0b5f84" stroke="#0b5f84" stroke-width="0.5"/><circle cx="96" cy="83.2" r="1.9" fill="#0b5f84" stroke="#0b5f84" stroke-width="0.5"/><circle cx="104" cy="77.1" r="1.9" fill="#0b5f84" stroke="#0b5f84" stroke-width="0.5"/><circle cx="112" cy="71.6" r="1.9" fill="#0b5f84" stroke="#0b5f84" stroke-width="0.5"/><circle cx="120" cy="66.6" r="1.9" fill="#0b5f84" stroke="#0b5f84" stroke-width="0.5"/><circle cx="128" cy="62.2" r="1.9" fill="#0b5f84" stroke="#0b5f84" stroke-width="0.5"/><circle cx="136" cy="58.2" r="1.9" fill="#0b5f84" stroke="#0b5f84" stroke-width="0.5"/><circle cx="144" cy="54.5" r="1.9" fill="#0b5f84" stroke="#0b5f84" stroke-width="0.5"/><circle cx="152" cy="51.3" r="1.9" fill="#0b5f84" stroke="#0b5f84" stroke-width="0.5"/><circle cx="160" cy="48.4" r="1.9" fill="#0b5f84" stroke="#0b5f84" stroke-width="0.5"/><circle cx="168" cy="45.7" r="1.9" fill="#0b5f84" stroke="#0b5f84" stroke-width="0.5"/><circle cx="176" cy="43.3" r="1.9" fill="#0b5f84" stroke="#0b5f84" stroke-width="0.5"/><circle cx="184" cy="41.2" r="1.9" fill="#0b5f84" stroke="#0b5f84" stroke-width="0.5"/><circle cx="192" cy="39.3" r="1.9" fill="#0b5f84" stroke="#0b5f84" stroke-width="0.5"/><circle cx="200" cy="37.6" r="1.9" fill="#0b5f84" stroke="#0b5f84" stroke-width="0.5"/><circle cx="208" cy="36" r="1.9" fill="#0b5f84" stroke="#0b5f84" stroke-width="0.5"/><circle cx="216" cy="34.6" r="1.9" fill="#0b5f84" stroke="#0b5f84" stroke-width="0.5"/><circle cx="224" cy="33.3" r="1.9" fill="#0b5f84" stroke="#0b5f84" stroke-width="0.5"/><circle cx="232" cy="32.2" r="1.9" fill="#0b5f84" stroke="#0b5f84" stroke-width="0.5"/><circle cx="240" cy="31.2" r="1.9" fill="#0b5f84" stroke="#0b5f84" stroke-width="0.5"/><circle cx="248" cy="30.3" r="1.9" fill="#0b5f84" stroke="#0b5f84" stroke-width="0.5"/><circle cx="256" cy="29.4" r="1.9" fill="#0b5f84" stroke="#0b5f84" stroke-width="0.5"/><circle cx="264" cy="28.7" r="1.9" fill="#0b5f84" stroke="#0b5f84" stroke-width="0.5"/><circle cx="272" cy="28" r="1.9" fill="#0b5f84" stroke="#0b5f84" stroke-width="0.5"/><circle cx="280" cy="27.4" r="1.9" fill="#0b5f84" stroke="#0b5f84" stroke-width="0.5"/><text x="160" y="178" font-size="9.5" text-anchor="middle" fill="#1e1e1e">経過時間 n（分）</text><text x="10" y="10.3" font-size="9.5" text-anchor="start" fill="#1e1e1e">水量（L）</text></svg></div></div>
+このように「<b>次の状態＝今の状態＋（増える量－減る量）</b>」と表し、短い時間ごとにくり返し計算するのが動的なシミュレーションの基本である。人口の増減、預金の残高、感染症の広がり、物体の運動なども同じ考え方で扱える。
+</div>
+<div class="box ex">
+上の水そうのモデルについて答えよ。(1) $V_4$ を求めよ。(2) はじめて 150 L を超えるのは何分後か（$V_n=200(1-0.9^n)$ を使ってよい）。(3) 流れ出る割合が毎分 20 % になると、水量はいくらに近づくか。
+<div class="solx"><b>解</b>　(1) $V_4=54.2+20-5.42=$ <b>68.78 L</b><br>
+(2) $200(1-0.9^n)\gt150$ より $0.9^n\lt0.25$。$0.9^{13}\fallingdotseq0.254$、$0.9^{14}\fallingdotseq0.229$ なので <b>14 分後</b>（$V_{14}\fallingdotseq154.2$ L、$V_{13}\fallingdotseq149.2$ L）。<br>
+(3) つり合う水量を $V$ とすると $20=0.2V$ より <b>100 L</b>。</div>
+</div>
+<h3>講義3　乱数とモンテカルロ法</h3>
+<div class="box lect">
+確率的な現象は<b>乱数</b>（規則性がなく予測できない数）で表す。<code>乱数()</code> が 0 以上 1 未満の数を等しい確からしさで返すとき、<code>整数(乱数() * 6) + 1</code> は 1〜6 の整数を等しい確率で返し、サイコロの代わりになる。<br>
+<b>モンテカルロ法</b>は、乱数で多数回の試行を行い、その結果から値を推定する方法である。1辺 1 の正方形の中にでたらめに点を打つと、半径 1 の四分円の内側に入る割合は面積の比 $\frac{\pi}{4}$ に近づく。したがって「内側の点の数 ÷ 全体の点の数 × 4」が円周率の推定値になる。
+<div class="two"><div><pre class="code" style="margin:0">(01) kaisu = 10000
+(02) naibu = 0
+(03) i を 1 から kaisu まで 1 ずつ増やしながら繰り返す:
+(04) ｜ x = 乱数()
+(05) ｜ y = 乱数()
+(06) ｜ もし x * x + y * y &lt; 1 ならば:
+(07) ⎿ ⎿ naibu = naibu + 1
+(08) 表示する(4 * naibu / kaisu)</pre>
+Python では <code>import random</code> として、<code>乱数()</code> のかわりに <code>random.random()</code> を使えば、ほぼ同じ形で書ける（繰り返しは <code>for i in range(kaisu):</code>）。<br>
+(06) の条件は「点 (x, y) が原点から距離 1 未満にある」こと（$x^2+y^2\lt1$）を表している。</div>
+<div style="flex:0 0 196px"><svg class="fig" width="196" height="190" viewBox="0 0 196 190" xmlns="http://www.w3.org/2000/svg"><rect x="24" y="16" width="156" height="156" rx="0" fill="#fff" stroke="#555" stroke-width="1.2"/><polygon points="180,172 179.9,167.9 179.8,163.8 179.5,159.8 179.1,155.7 178.7,151.6 178.1,147.6 177.4,143.6 176.6,139.6 175.7,135.6 174.7,131.6 173.6,127.7 172.4,123.8 171.1,119.9 169.6,116.1 168.1,112.3 166.5,108.5 164.8,104.8 163,101.2 161.1,97.6 159.1,94 157,90.5 154.8,87 152.6,83.6 150.2,80.3 147.8,77 145.2,73.8 142.6,70.7 139.9,67.6 137.2,64.6 134.3,61.7 131.4,58.8 128.4,56.1 125.3,53.4 122.2,50.8 119,48.2 115.7,45.8 112.4,43.4 109,41.2 105.5,39 102,36.9 98.4,34.9 94.8,33 91.2,31.2 87.5,29.5 83.7,27.9 79.9,26.4 76.1,24.9 72.2,23.6 68.3,22.4 64.4,21.3 60.4,20.3 56.4,19.4 52.4,18.6 48.4,17.9 44.4,17.3 40.3,16.9 36.2,16.5 32.2,16.2 28.1,16.1 24,16 24,172" fill="#e6f2f8" stroke="#0b5f84" stroke-width="1.4"/><circle cx="121.2" cy="56.3" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="148.1" cy="25" r="1.6" fill="#fff" stroke="#555" stroke-width="0.7"/><circle cx="139.4" cy="28.1" r="1.6" fill="#fff" stroke="#555" stroke-width="0.7"/><circle cx="28.5" cy="99.4" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="171.2" cy="70.8" r="1.6" fill="#fff" stroke="#555" stroke-width="0.7"/><circle cx="164.5" cy="154.3" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="97.2" cy="133.5" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="108.8" cy="82.5" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="26" cy="138.2" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="67.6" cy="29.1" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="143.5" cy="147.1" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="148.4" cy="150.4" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="120.3" cy="152.2" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="24.3" cy="36.1" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="56.7" cy="138.4" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="177.3" cy="35.9" r="1.6" fill="#fff" stroke="#555" stroke-width="0.7"/><circle cx="69.1" cy="22" r="1.6" fill="#fff" stroke="#555" stroke-width="0.7"/><circle cx="108.1" cy="66.3" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="55.9" cy="25.2" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="131.7" cy="21.2" r="1.6" fill="#fff" stroke="#555" stroke-width="0.7"/><circle cx="163.4" cy="125.4" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="80.3" cy="146.1" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="46.7" cy="161.8" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="71" cy="77.9" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="24.5" cy="66.2" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="76.7" cy="123.6" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="151.7" cy="97" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="73.3" cy="96.9" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="133.9" cy="163.1" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="176.1" cy="168.4" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="141" cy="40.2" r="1.6" fill="#fff" stroke="#555" stroke-width="0.7"/><circle cx="26.8" cy="49.1" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="81.1" cy="81.8" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="25.4" cy="164.7" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="52.2" cy="23" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="54.7" cy="54.1" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="169" cy="25" r="1.6" fill="#fff" stroke="#555" stroke-width="0.7"/><circle cx="77.7" cy="116.7" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="105.9" cy="51" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="40.9" cy="55.2" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="148.4" cy="37.9" r="1.6" fill="#fff" stroke="#555" stroke-width="0.7"/><circle cx="29.7" cy="24.5" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="38.2" cy="118.8" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="119.3" cy="28.8" r="1.6" fill="#fff" stroke="#555" stroke-width="0.7"/><circle cx="77" cy="27.8" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="109" cy="123.3" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="73.4" cy="144.3" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="36.2" cy="148.8" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="131.5" cy="16.5" r="1.6" fill="#fff" stroke="#555" stroke-width="0.7"/><circle cx="49.2" cy="164.4" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="177.9" cy="88.8" r="1.6" fill="#fff" stroke="#555" stroke-width="0.7"/><circle cx="87.3" cy="135" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="116.7" cy="43.1" r="1.6" fill="#fff" stroke="#555" stroke-width="0.7"/><circle cx="95.1" cy="106.2" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="32.7" cy="29.1" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="29.1" cy="95" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="154.8" cy="151.6" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="138.1" cy="23.8" r="1.6" fill="#fff" stroke="#555" stroke-width="0.7"/><circle cx="122.3" cy="49.1" r="1.6" fill="#fff" stroke="#555" stroke-width="0.7"/><circle cx="40.6" cy="104.2" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="47.3" cy="40.2" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="70" cy="101.3" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="179.9" cy="39" r="1.6" fill="#fff" stroke="#555" stroke-width="0.7"/><circle cx="176.3" cy="101.2" r="1.6" fill="#fff" stroke="#555" stroke-width="0.7"/><circle cx="100.2" cy="58.2" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="98.7" cy="126.6" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="87" cy="149.1" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="82.8" cy="17.8" r="1.6" fill="#fff" stroke="#555" stroke-width="0.7"/><circle cx="173.7" cy="74.2" r="1.6" fill="#fff" stroke="#555" stroke-width="0.7"/><circle cx="101.9" cy="119.2" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="37.9" cy="129.5" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="146" cy="36.7" r="1.6" fill="#fff" stroke="#555" stroke-width="0.7"/><circle cx="80.4" cy="49.4" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="144.9" cy="63.6" r="1.6" fill="#fff" stroke="#555" stroke-width="0.7"/><circle cx="127.6" cy="53.5" r="1.6" fill="#fff" stroke="#555" stroke-width="0.7"/><circle cx="80.7" cy="62.1" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="67.8" cy="96.2" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="144.1" cy="64.2" r="1.6" fill="#fff" stroke="#555" stroke-width="0.7"/><circle cx="69.8" cy="24.5" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="125.4" cy="81.4" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="25.8" cy="86.7" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="63.1" cy="67.2" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="96.2" cy="44.6" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="125" cy="47.6" r="1.6" fill="#fff" stroke="#555" stroke-width="0.7"/><circle cx="78.3" cy="71.5" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="139.1" cy="42.8" r="1.6" fill="#fff" stroke="#555" stroke-width="0.7"/><circle cx="78.6" cy="40.5" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="159.7" cy="64.6" r="1.6" fill="#fff" stroke="#555" stroke-width="0.7"/><circle cx="176.3" cy="22.8" r="1.6" fill="#fff" stroke="#555" stroke-width="0.7"/><circle cx="104.8" cy="89.4" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="49.9" cy="41.5" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="170.2" cy="97.6" r="1.6" fill="#fff" stroke="#555" stroke-width="0.7"/><circle cx="131.9" cy="59.7" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="137.9" cy="145.2" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="145.7" cy="81.4" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="127.8" cy="106.4" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="121.3" cy="51.1" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="123.4" cy="59.6" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="28.3" cy="147" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="92.8" cy="70.6" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="58.2" cy="65" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="122.4" cy="165.5" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="97.6" cy="136.7" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="32.4" cy="151.2" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="73.5" cy="143.7" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="54.2" cy="166.4" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="96.6" cy="112.7" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="119.4" cy="79.9" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="61.1" cy="31.1" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="24.1" cy="108.8" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="67.5" cy="108" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="42" cy="42.3" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="82.3" cy="166.4" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="119.7" cy="157.2" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="109.1" cy="119.1" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="114.6" cy="22.5" r="1.6" fill="#fff" stroke="#555" stroke-width="0.7"/><circle cx="151.7" cy="106.6" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="150.8" cy="71.8" r="1.6" fill="#fff" stroke="#555" stroke-width="0.7"/><circle cx="81.6" cy="149.8" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="117" cy="84" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="173.3" cy="21" r="1.6" fill="#fff" stroke="#555" stroke-width="0.7"/><circle cx="118.9" cy="117.2" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="163.4" cy="171.9" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="40.8" cy="83.7" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="120" cy="150.1" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="122.2" cy="33" r="1.6" fill="#fff" stroke="#555" stroke-width="0.7"/><circle cx="82.6" cy="104.7" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="59.3" cy="126.5" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="175.7" cy="112.8" r="1.6" fill="#fff" stroke="#555" stroke-width="0.7"/><circle cx="173.9" cy="29.5" r="1.6" fill="#fff" stroke="#555" stroke-width="0.7"/><circle cx="116.9" cy="131.5" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="177" cy="94.6" r="1.6" fill="#fff" stroke="#555" stroke-width="0.7"/><circle cx="88.8" cy="122.2" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="177.5" cy="95.3" r="1.6" fill="#fff" stroke="#555" stroke-width="0.7"/><circle cx="68.7" cy="97.6" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="43" cy="75" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="93.2" cy="126.3" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="145.9" cy="43" r="1.6" fill="#fff" stroke="#555" stroke-width="0.7"/><circle cx="26.1" cy="88.9" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="66.7" cy="26.1" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="146" cy="133.7" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="65.8" cy="147.9" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="178.3" cy="126.3" r="1.6" fill="#fff" stroke="#555" stroke-width="0.7"/><circle cx="118.9" cy="98" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="124.6" cy="77.8" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="140" cy="153.6" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="142.6" cy="125.1" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="107.2" cy="119.6" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="70.3" cy="89.3" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="96.4" cy="115.7" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="140.2" cy="79.8" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="29.7" cy="132.6" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="95.1" cy="29" r="1.6" fill="#fff" stroke="#555" stroke-width="0.7"/><circle cx="162.5" cy="86.9" r="1.6" fill="#fff" stroke="#555" stroke-width="0.7"/><circle cx="26.3" cy="50.6" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="90.7" cy="82.2" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="134.5" cy="73.4" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="99.2" cy="29.8" r="1.6" fill="#fff" stroke="#555" stroke-width="0.7"/><circle cx="84.1" cy="110.9" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="156.9" cy="141.4" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="70.2" cy="42.5" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="34.3" cy="41.5" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="132.4" cy="104.5" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="68.7" cy="50.2" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="166.1" cy="149.7" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="98.6" cy="86.3" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="101.6" cy="120.4" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="48" cy="80.6" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="150.6" cy="161.3" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="59.9" cy="44.1" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="147.5" cy="68.5" r="1.6" fill="#fff" stroke="#555" stroke-width="0.7"/><circle cx="28" cy="59.3" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="176.7" cy="16.3" r="1.6" fill="#fff" stroke="#555" stroke-width="0.7"/><circle cx="133.4" cy="164.4" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="155.4" cy="137.8" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="124.7" cy="23.4" r="1.6" fill="#fff" stroke="#555" stroke-width="0.7"/><circle cx="135.1" cy="151" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="69.6" cy="28.8" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="47.4" cy="76.7" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="88.6" cy="146.9" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="121.1" cy="165.2" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="40.9" cy="112.8" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="35.2" cy="163" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="113.7" cy="56.2" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="161" cy="151" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="91.3" cy="122.9" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="117.6" cy="95.6" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="170.4" cy="113.6" r="1.6" fill="#fff" stroke="#555" stroke-width="0.7"/><circle cx="32.7" cy="63.2" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="47.6" cy="73.5" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="102.9" cy="30" r="1.6" fill="#fff" stroke="#555" stroke-width="0.7"/><circle cx="110.6" cy="75.1" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="65.1" cy="85.9" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="63.7" cy="54.9" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="104.7" cy="151.1" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="60.6" cy="114.1" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="138.9" cy="144" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="135.3" cy="69.8" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="37.3" cy="67.8" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="38.2" cy="152.5" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="116.7" cy="134.8" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="160.8" cy="97" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="74.4" cy="47.8" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="28.6" cy="58.9" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="32.4" cy="148.5" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="172.5" cy="65.7" r="1.6" fill="#fff" stroke="#555" stroke-width="0.7"/><circle cx="58.8" cy="153.9" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="175.7" cy="68.3" r="1.6" fill="#fff" stroke="#555" stroke-width="0.7"/><circle cx="152" cy="150.2" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="121.5" cy="116.7" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="60.7" cy="120" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="119.7" cy="117.6" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="84.2" cy="150.7" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="153.7" cy="70.9" r="1.6" fill="#fff" stroke="#555" stroke-width="0.7"/><circle cx="149.5" cy="104.4" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="156.8" cy="91.3" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="116.4" cy="82.6" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="139.5" cy="110.3" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="39.1" cy="166.8" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="55.6" cy="165.8" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="162.7" cy="97" r="1.6" fill="#fff" stroke="#555" stroke-width="0.7"/><circle cx="142.6" cy="171.9" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="97.3" cy="33.2" r="1.6" fill="#fff" stroke="#555" stroke-width="0.7"/><circle cx="120.6" cy="105.1" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="96.6" cy="156.4" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="48.1" cy="147.2" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="82.4" cy="111.8" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="161.3" cy="148.3" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="63.6" cy="128.7" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="49.2" cy="127.2" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="60.7" cy="96.8" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="29" cy="27.8" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="81.6" cy="25.7" r="1.6" fill="#fff" stroke="#555" stroke-width="0.7"/><circle cx="131.3" cy="66.9" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="97.6" cy="24.5" r="1.6" fill="#fff" stroke="#555" stroke-width="0.7"/><circle cx="42.4" cy="67.7" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="69.4" cy="66.8" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="137.8" cy="146.5" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="55.4" cy="168.1" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="60" cy="159.8" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="86.6" cy="20.1" r="1.6" fill="#fff" stroke="#555" stroke-width="0.7"/><circle cx="80.8" cy="123.4" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="97" cy="127.8" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="138.2" cy="60" r="1.6" fill="#fff" stroke="#555" stroke-width="0.7"/><circle cx="49.5" cy="134.5" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="128.9" cy="25.3" r="1.6" fill="#fff" stroke="#555" stroke-width="0.7"/><circle cx="124.8" cy="104.8" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="176.2" cy="171" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="33.5" cy="50.4" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="88" cy="165" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="109.6" cy="17.6" r="1.6" fill="#fff" stroke="#555" stroke-width="0.7"/><circle cx="105" cy="117.4" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="38.6" cy="160.9" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="164.2" cy="95.4" r="1.6" fill="#fff" stroke="#555" stroke-width="0.7"/><circle cx="170" cy="163.6" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="62" cy="164.1" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="86" cy="162.6" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="63.8" cy="108.4" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="71.7" cy="164" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="29.9" cy="20.4" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="52" cy="92.7" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="86.8" cy="89.1" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="37.2" cy="123" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="40.8" cy="87.5" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="167.7" cy="78.7" r="1.6" fill="#fff" stroke="#555" stroke-width="0.7"/><circle cx="157.7" cy="138.6" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="26.7" cy="87.8" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="99.9" cy="82.9" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="82.8" cy="74.5" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="137.2" cy="29.6" r="1.6" fill="#fff" stroke="#555" stroke-width="0.7"/><circle cx="72" cy="101.9" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="152.9" cy="137.1" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="42" cy="123.4" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="37.7" cy="51.5" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="151.8" cy="123.2" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="44.3" cy="159.2" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="62.2" cy="158.8" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="90.9" cy="82" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="62.3" cy="162.4" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="133.3" cy="164.5" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="55.2" cy="127.4" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="82.3" cy="156.6" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="89.6" cy="123" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="141.4" cy="85.3" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="163.8" cy="70" r="1.6" fill="#fff" stroke="#555" stroke-width="0.7"/><circle cx="142.5" cy="82.3" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="93" cy="44.6" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="126.3" cy="23.1" r="1.6" fill="#fff" stroke="#555" stroke-width="0.7"/><circle cx="137.6" cy="62.6" r="1.6" fill="#fff" stroke="#555" stroke-width="0.7"/><circle cx="65.8" cy="45.3" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="83.7" cy="151.7" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="34.3" cy="145.6" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="65" cy="66.6" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="68.5" cy="162.1" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="143.2" cy="85.1" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="28.3" cy="164.1" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="44.3" cy="116.3" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="158.1" cy="23.9" r="1.6" fill="#fff" stroke="#555" stroke-width="0.7"/><circle cx="119.5" cy="135.9" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><circle cx="90.9" cy="115.5" r="1.6" fill="#c0392b" stroke="#c0392b" stroke-width="0.7"/><text x="24" y="185" font-size="9.5" text-anchor="middle" fill="#1e1e1e">0</text><text x="180" y="185" font-size="9.5" text-anchor="middle" fill="#1e1e1e">1</text><text x="18" y="20" font-size="9.5" text-anchor="end" fill="#1e1e1e">1</text><text x="102" y="185" font-size="10" text-anchor="middle" fill="#1e1e1e">x</text><text x="16" y="94" font-size="10" text-anchor="end" fill="#1e1e1e">y</text></svg><div style="font-size:9pt;text-align:center">300 点の実行例（内側 236 点）</div></div></div>
+</div>
+<div class="box ex">
+(1) <code>整数(乱数() * 6) + 1</code> がとりうる値をすべて答えよ。また、「+ 1」がないとどうなるか。<br>
+(2) 上の図の実行例と、10000 点で 7853 点が内側に入った実行例から、それぞれ円周率を推定せよ（小数第3位を四捨五入）。<br>
+(3) 推定の精度を上げるにはどうすればよいか。また、同じプログラムを実行するたびに結果が少しずつ異なるのはなぜか。
+<div class="solx"><b>解</b>　(1) <code>乱数() * 6</code> は 0 以上 6 未満なので、整数部分は 0〜5。+1 して <b>1, 2, 3, 4, 5, 6</b>。+1 がないと 0〜5 になってしまう。<br>
+(2) $4\times236\div300\fallingdotseq$ <b>3.15</b>、$4\times7853\div10000=3.1412\fallingdotseq$ <b>3.14</b><br>
+(3) 打つ点の数（試行回数）を増やす。ただし誤差は試行回数の平方根に反比例する程度にしか小さくならず、精度を10倍にするには約100倍の試行が必要。結果が毎回異なるのは、乱数の値が実行ごとに変わるからである（確率的モデルの特徴）。</div>
+</div>
+<h3>講義4　待ち行列のシミュレーション</h3>
+<div class="box lect">
+窓口に客が来て、順番にサービスを受ける状況を<b>待ち行列</b>という（レジ、ATM、病院の受付、データ通信の処理待ちなど）。客の<b>到着の間隔</b>と1人あたりの<b>サービス時間</b>が偶然に左右されるとき、サイコロや乱数で値を決めて、次のように時刻を順に計算する。<br>
+・サービスの<b>開始時刻</b>＝（その客の到着時刻）と（前の客の終了時刻）の<b>遅いほう</b><br>
+・<b>終了時刻</b>＝開始時刻＋サービス時間　・<b>待ち時間</b>＝開始時刻－到着時刻<br>
+これを多数の客、多数回について行うと、平均の待ち時間や行列の長さが推定でき、窓口の数を増やすべきかどうかなどを、実際に試さずに検討できる。
+</div>
+<div class="box ex">
+窓口が1つの店に、5人の客が次の時刻（開店からの分）に到着した。各客のサービスの開始時刻・終了時刻・待ち時間を求め、平均の待ち時間を求めよ。また、窓口を2つにして、空いている窓口（両方空いていれば番号の小さいほう）に到着順に入るとすると、平均の待ち時間はどうなるか。
+<table class="w"><tr><th>客</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th></tr><tr><td>到着時刻</td><td>0</td><td>2</td><td>3</td><td>7</td><td>8</td></tr><tr><td>サービス時間</td><td>3</td><td>4</td><td>2</td><td>2</td><td>3</td></tr></table>
+<div class="solx"><b>解</b>　開始時刻は 0, 3, 7, 9, 11、終了時刻は 3, 7, 9, 11, 14、待ち時間は 0, 1, 4, 2, 3。<br>
+平均の待ち時間は $(0+1+4+2+3)\div5=$ <b>2.0 分</b>。<br>
+窓口が2つなら、1人目は窓口1（0〜3分）、2人目は窓口2（2〜6分）、3人目は窓口1（3〜5分）、4人目は窓口1（7〜9分）、5人目は窓口2（8〜11分）となり、全員の待ち時間が 0 で、平均は <b>0 分</b>。
+<svg class="fig" width="470" height="134" viewBox="0 0 470 134" xmlns="http://www.w3.org/2000/svg"><line x1="66" y1="10" x2="66" y2="98" stroke="#eeeeee" stroke-width="0.8"/><text x="66" y="110" font-size="9.5" text-anchor="middle" fill="#1e1e1e">0</text><line x1="92" y1="10" x2="92" y2="98" stroke="#eeeeee" stroke-width="0.8"/><text x="92" y="110" font-size="9.5" text-anchor="middle" fill="#1e1e1e">1</text><line x1="118" y1="10" x2="118" y2="98" stroke="#eeeeee" stroke-width="0.8"/><text x="118" y="110" font-size="9.5" text-anchor="middle" fill="#1e1e1e">2</text><line x1="144" y1="10" x2="144" y2="98" stroke="#eeeeee" stroke-width="0.8"/><text x="144" y="110" font-size="9.5" text-anchor="middle" fill="#1e1e1e">3</text><line x1="170" y1="10" x2="170" y2="98" stroke="#eeeeee" stroke-width="0.8"/><text x="170" y="110" font-size="9.5" text-anchor="middle" fill="#1e1e1e">4</text><line x1="196" y1="10" x2="196" y2="98" stroke="#eeeeee" stroke-width="0.8"/><text x="196" y="110" font-size="9.5" text-anchor="middle" fill="#1e1e1e">5</text><line x1="222" y1="10" x2="222" y2="98" stroke="#eeeeee" stroke-width="0.8"/><text x="222" y="110" font-size="9.5" text-anchor="middle" fill="#1e1e1e">6</text><line x1="248" y1="10" x2="248" y2="98" stroke="#eeeeee" stroke-width="0.8"/><text x="248" y="110" font-size="9.5" text-anchor="middle" fill="#1e1e1e">7</text><line x1="274" y1="10" x2="274" y2="98" stroke="#eeeeee" stroke-width="0.8"/><text x="274" y="110" font-size="9.5" text-anchor="middle" fill="#1e1e1e">8</text><line x1="300" y1="10" x2="300" y2="98" stroke="#eeeeee" stroke-width="0.8"/><text x="300" y="110" font-size="9.5" text-anchor="middle" fill="#1e1e1e">9</text><line x1="326" y1="10" x2="326" y2="98" stroke="#eeeeee" stroke-width="0.8"/><text x="326" y="110" font-size="9.5" text-anchor="middle" fill="#1e1e1e">10</text><line x1="352" y1="10" x2="352" y2="98" stroke="#eeeeee" stroke-width="0.8"/><text x="352" y="110" font-size="9.5" text-anchor="middle" fill="#1e1e1e">11</text><line x1="378" y1="10" x2="378" y2="98" stroke="#eeeeee" stroke-width="0.8"/><text x="378" y="110" font-size="9.5" text-anchor="middle" fill="#1e1e1e">12</text><line x1="404" y1="10" x2="404" y2="98" stroke="#eeeeee" stroke-width="0.8"/><text x="404" y="110" font-size="9.5" text-anchor="middle" fill="#1e1e1e">13</text><line x1="430" y1="10" x2="430" y2="98" stroke="#eeeeee" stroke-width="0.8"/><text x="430" y="110" font-size="9.5" text-anchor="middle" fill="#1e1e1e">14</text><text x="436" y="110" font-size="9.5" text-anchor="start" fill="#1e1e1e">（分）</text><text x="58" y="25" font-size="10" text-anchor="end" fill="#1e1e1e">1人目</text><rect x="66" y="17" width="78" height="11" rx="0" fill="#3f8fb7" stroke="#0b5f84" stroke-width="1"/><polygon points="66,22 62,15 70,15" fill="#c0392b" stroke="#c0392b" stroke-width="1"/><text x="58" y="41" font-size="10" text-anchor="end" fill="#1e1e1e">2人目</text><line x1="118" y1="38" x2="144" y2="38" stroke="#d9701e" stroke-width="2.2" stroke-dasharray="3,2"/><rect x="144" y="33" width="104" height="11" rx="0" fill="#3f8fb7" stroke="#0b5f84" stroke-width="1"/><polygon points="118,38 114,31 122,31" fill="#c0392b" stroke="#c0392b" stroke-width="1"/><text x="58" y="57" font-size="10" text-anchor="end" fill="#1e1e1e">3人目</text><line x1="144" y1="54" x2="248" y2="54" stroke="#d9701e" stroke-width="2.2" stroke-dasharray="3,2"/><rect x="248" y="49" width="52" height="11" rx="0" fill="#3f8fb7" stroke="#0b5f84" stroke-width="1"/><polygon points="144,54 140,47 148,47" fill="#c0392b" stroke="#c0392b" stroke-width="1"/><text x="58" y="73" font-size="10" text-anchor="end" fill="#1e1e1e">4人目</text><line x1="248" y1="70" x2="300" y2="70" stroke="#d9701e" stroke-width="2.2" stroke-dasharray="3,2"/><rect x="300" y="65" width="52" height="11" rx="0" fill="#3f8fb7" stroke="#0b5f84" stroke-width="1"/><polygon points="248,70 244,63 252,63" fill="#c0392b" stroke="#c0392b" stroke-width="1"/><text x="58" y="89" font-size="10" text-anchor="end" fill="#1e1e1e">5人目</text><line x1="274" y1="86" x2="352" y2="86" stroke="#d9701e" stroke-width="2.2" stroke-dasharray="3,2"/><rect x="352" y="81" width="78" height="11" rx="0" fill="#3f8fb7" stroke="#0b5f84" stroke-width="1"/><polygon points="274,86 270,79 278,79" fill="#c0392b" stroke="#c0392b" stroke-width="1"/><polygon points="70,126 66,119 74,119" fill="#c0392b" stroke="#c0392b" stroke-width="1"/><text x="80" y="126" font-size="10" text-anchor="start" fill="#1e1e1e">到着</text><line x1="126" y1="122" x2="150" y2="122" stroke="#d9701e" stroke-width="2.2" stroke-dasharray="3,2"/><text x="156" y="126" font-size="10" text-anchor="start" fill="#1e1e1e">待ち</text><rect x="196" y="117" width="24" height="10" rx="0" fill="#3f8fb7" stroke="#0b5f84" stroke-width="1"/><text x="226" y="126" font-size="10" text-anchor="start" fill="#1e1e1e">窓口で対応中</text></svg></div>
+</div>
+<div class="box chk">
+(1) 地球儀は、物理モデル・図的モデル・数式モデルのどれか。また静的・動的のどちらか。<br>
+(2) 毎年、そのときの人数の 2 % だけ増える町の人口のモデルを、$P_{n+1}$ を $P_n$ で表す式で書け。<br>
+(3) <code>整数(乱数() * 10)</code> がとりうる値の範囲を答えよ。<br>
+(4) 待ち行列のシミュレーションで、前の客の終了時刻が 12 分、次の客の到着時刻が 10 分、その客のサービス時間が 3 分のとき、その客の待ち時間と終了時刻を求めよ。
+</div>
+<div class="box aim">
+・モデルの分類は、<b>3つの観点</b>（表現の形式・時間・不確定要素）を区別して答える。<br>
+・確定的モデルは「次の値を求める式」（漸化式・表計算の式）の空欄補充と、数値の推移の読みとりが中心。<b>つり合い（平衡）</b>の値も問われる。<br>
+・確率的モデルは、乱数から整数を作る式（<code>整数(乱数() * n) + 1</code>）と、試行回数を増やすと結果が安定することが要点。待ち行列は<b>開始＝max（到着, 前の終了）</b>で表を埋める。
+</div>
+<h3 class="deep">講義5　窓口の混み具合と待ち時間 ― 利用率の考え方</h3>
+<p>平均して1分間に $\lambda$ 人の客が来て、1つの窓口が平均して1分間に $\mu$ 人を処理できるとき、$\rho=\dfrac{\lambda}{\mu}$ を<b>利用率</b>（窓口が忙しい時間の割合）という。$\rho\geqq1$ なら、行列はどこまでも長くなる。</p>
+<div class="box lect">
+客がランダムに到着し、サービス時間もランダムにばらつく典型的な場合には、待ち行列の理論から、平均の待ち時間は<b>平均サービス時間の $\dfrac{\rho}{1-\rho}$ 倍</b>になることが知られている。
+<table style="margin:1mm auto"><tr><th>利用率 $\rho$</th><th>0.5</th><th>0.8</th><th>0.9</th><th>0.95</th></tr><tr><td>平均待ち時間（平均サービス時間の何倍か）</td><td>1</td><td>4</td><td>9</td><td>19</td></tr></table>
+たとえば平均サービス時間が1分の窓口では、利用率が 0.8 から 0.9 に上がるだけで、平均待ち時間は4分から9分へと2倍以上になる（40万人分の客で乱数シミュレーションを行うと、$\rho=0.5,\ 0.8,\ 0.9$ でそれぞれ約 1.0 分、4.0 分、9.1 分になり、理論とよく合う）。<br>
+「窓口が9割忙しい」のは効率がよさそうに見えるが、ばらつきのある現実では長い行列を生む。<b>余裕を残した設計</b>が待ち時間を大きく減らすことを、シミュレーションは数値で示してくれる。
+</div>
+<div class="box warn">
+・「確率的モデル」を「数式で表せないモデル」と考える。確率的モデルも式や乱数を使ったプログラムで表せる。区別の観点は<b>偶然の要素があるかどうか</b>。<br>
+・<code>整数(乱数() * 6)</code> を 1〜6 と考える（0〜5 になる）。<br>
+・待ち行列で、開始時刻を「前の客の終了時刻」だけで決めてしまい、客が来る前に開始してしまう。<br>
+・モンテカルロ法の結果を正確な値と考える。あくまで<b>推定値</b>で、実行ごとに変わる。
+</div>
+<div class="box ans">
+(1) 物理モデル（縮尺モデル）、静的モデル　(2) $P_{n+1}=P_n+0.02P_n$（$=1.02P_n$）　(3) 0 以上 9 以下の整数　(4) 開始は 12 分なので待ち時間 2 分、終了時刻 15 分
+</div>
+<!--CH 9-->
+<div class="box point">
+・<b>LAN</b>（建物内などの狭い範囲のネットワーク）を<b>ルータ</b>でつなぎ合わせた、世界規模のネットワークのネットワークが<b>インターネット</b><br>
+・データは<b>パケット</b>に分けて送る（パケット交換方式）。通信の約束ごとが<b>プロトコル</b>で、インターネットでは <b>TCP/IP</b> の4階層モデルを使う<br>
+・<b>IP アドレス</b>（IPv4 は 32 ビット）＝ネットワーク部＋ホスト部。/$n$ のネットワークに割り当てられる機器は $2^{32-n}-2$ 台<br>
+・<b>DNS</b> がドメイン名を IP アドレスに変換する（名前解決）。Web は <b>HTTP(S)</b>、メールの送信は <b>SMTP</b>、受信は <b>POP</b>・<b>IMAP</b><br>
+・転送時間（秒）＝データ量（ビット）÷（通信速度（bps）× 伝送効率）
+</div>
+<h3>講義1　LAN とインターネット、パケット通信</h3>
+<div class="box lect">
+家庭・学校・会社の中のネットワークを <b>LAN</b>、離れた地点の LAN どうしを結ぶ広域のネットワークを <b>WAN</b> という。LAN の中では、<b>スイッチ</b>（ハブ）や<b>無線 LAN アクセスポイント</b>（AP）が機器をつなぎ、<b>ルータ</b>が異なるネットワークの間でデータを中継して、宛先までの経路を選ぶ。インターネットへの接続は <b>ISP</b>（インターネットサービスプロバイダ）が提供する。
+<svg class="fig" width="604" height="182" viewBox="0 0 604 182" xmlns="http://www.w3.org/2000/svg"><rect x="8" y="22" width="262" height="150" rx="6" fill="#f7fbfd" stroke="#555" stroke-width="1" stroke-dasharray="4,3"/><text x="14" y="36" font-size="10" text-anchor="start" fill="#555" font-weight="bold">家庭・学校の LAN</text><line x1="86" y1="62" x2="116" y2="104" stroke="#555" stroke-width="1.3"/><rect x="14" y="51" width="72" height="22" rx="4" fill="#fff" stroke="#0b5f84" stroke-width="1.3"/><text x="50" y="66" font-size="10" text-anchor="middle" fill="#1e1e1e">PC</text><line x1="86" y1="104" x2="116" y2="104" stroke="#3f8fb7" stroke-width="1.3" stroke-dasharray="3,2"/><rect x="10" y="93" width="80" height="22" rx="4" fill="#fff" stroke="#0b5f84" stroke-width="1.3"/><text x="50" y="108" font-size="10" text-anchor="middle" fill="#1e1e1e">スマートフォン</text><line x1="86" y1="146" x2="116" y2="104" stroke="#555" stroke-width="1.3"/><rect x="14" y="135" width="72" height="22" rx="4" fill="#fff" stroke="#0b5f84" stroke-width="1.3"/><text x="50" y="150" font-size="10" text-anchor="middle" fill="#1e1e1e">プリンタ</text><text x="103" y="118" font-size="9" text-anchor="middle" fill="#3f8fb7">無線</text><rect x="116" y="93" width="68" height="22" rx="4" fill="#e6f2f8" stroke="#0b5f84" stroke-width="1.3"/><text x="150" y="108" font-size="10" text-anchor="middle" fill="#1e1e1e">AP・スイッチ</text><line x1="184" y1="104" x2="206" y2="104" stroke="#555" stroke-width="1.3"/><rect x="206" y="93" width="48" height="22" rx="4" fill="#ffe9d2" stroke="#d9701e" stroke-width="1.3"/><text x="230" y="108" font-size="10" text-anchor="middle" fill="#1e1e1e">ルータ</text><line x1="254" y1="104" x2="294" y2="104" stroke="#555" stroke-width="1.5"/><rect x="294" y="93" width="52" height="22" rx="4" fill="#fff" stroke="#0b5f84" stroke-width="1.3"/><text x="320" y="108" font-size="10" text-anchor="middle" fill="#1e1e1e">ISP</text><circle cx="400" cy="106" r="30" fill="#eef4f8" stroke="#c9d6de" stroke-width="1"/><circle cx="432" cy="86" r="34" fill="#eef4f8" stroke="#c9d6de" stroke-width="1"/><circle cx="470" cy="94" r="30" fill="#eef4f8" stroke="#c9d6de" stroke-width="1"/><circle cx="484" cy="116" r="26" fill="#eef4f8" stroke="#c9d6de" stroke-width="1"/><circle cx="446" cy="122" r="30" fill="#eef4f8" stroke="#c9d6de" stroke-width="1"/><circle cx="410" cy="124" r="24" fill="#eef4f8" stroke="#c9d6de" stroke-width="1"/><circle cx="400" cy="106" r="28.8" fill="#eef4f8" stroke="none" stroke-width="0"/><circle cx="432" cy="86" r="32.8" fill="#eef4f8" stroke="none" stroke-width="0"/><circle cx="470" cy="94" r="28.8" fill="#eef4f8" stroke="none" stroke-width="0"/><circle cx="484" cy="116" r="24.8" fill="#eef4f8" stroke="none" stroke-width="0"/><circle cx="446" cy="122" r="28.8" fill="#eef4f8" stroke="none" stroke-width="0"/><circle cx="410" cy="124" r="22.8" fill="#eef4f8" stroke="none" stroke-width="0"/><line x1="394" y1="108" x2="434" y2="78" stroke="#aaa" stroke-width="1.1"/><line x1="434" y1="78" x2="478" y2="96" stroke="#aaa" stroke-width="1.1"/><line x1="478" y1="96" x2="444" y2="128" stroke="#aaa" stroke-width="1.1"/><line x1="444" y1="128" x2="394" y2="108" stroke="#aaa" stroke-width="1.1"/><line x1="394" y1="108" x2="478" y2="96" stroke="#aaa" stroke-width="1.1"/><circle cx="394" cy="108" r="7" fill="#ffe9d2" stroke="#d9701e" stroke-width="1.2"/><text x="394" y="111.5" font-size="9" text-anchor="middle" fill="#d9701e" font-weight="bold">R</text><circle cx="434" cy="78" r="7" fill="#ffe9d2" stroke="#d9701e" stroke-width="1.2"/><text x="434" y="81.5" font-size="9" text-anchor="middle" fill="#d9701e" font-weight="bold">R</text><circle cx="478" cy="96" r="7" fill="#ffe9d2" stroke="#d9701e" stroke-width="1.2"/><text x="478" y="99.5" font-size="9" text-anchor="middle" fill="#d9701e" font-weight="bold">R</text><circle cx="444" cy="128" r="7" fill="#ffe9d2" stroke="#d9701e" stroke-width="1.2"/><text x="444" y="131.5" font-size="9" text-anchor="middle" fill="#d9701e" font-weight="bold">R</text><text x="440" y="162" font-size="10.5" text-anchor="middle" fill="#0b5f84" font-weight="bold">インターネット</text><line x1="346" y1="104" x2="387" y2="108" stroke="#555" stroke-width="1.5"/><line x1="485" y1="96" x2="522" y2="44" stroke="#555" stroke-width="1.2"/><rect x="522" y="33" width="76" height="22" rx="4" fill="#eef7ee" stroke="#2e8b57" stroke-width="1.3"/><text x="560" y="48" font-size="10" text-anchor="middle" fill="#1e1e1e">Web サーバ</text><line x1="485" y1="96" x2="522" y2="100" stroke="#555" stroke-width="1.2"/><rect x="522" y="89" width="76" height="22" rx="4" fill="#eef7ee" stroke="#2e8b57" stroke-width="1.3"/><text x="560" y="104" font-size="10" text-anchor="middle" fill="#1e1e1e">DNS サーバ</text><line x1="485" y1="96" x2="522" y2="156" stroke="#555" stroke-width="1.2"/><rect x="522" y="145" width="76" height="22" rx="4" fill="#eef7ee" stroke="#2e8b57" stroke-width="1.3"/><text x="560" y="160" font-size="10" text-anchor="middle" fill="#1e1e1e">メールサーバ</text><text x="230" y="132" font-size="9" text-anchor="middle" fill="#d9701e">（境界で IP アドレスを変換）</text></svg>
+電話のように通信の間じゅう回線を占有する方式を<b>回線交換方式</b>という。インターネットでは、データを小さな<b>パケット</b>に分け、それぞれに宛先・送信元・順番などを書いた<b>ヘッダ</b>をつけて送る<b>パケット交換方式</b>を使う。1本の回線を多くの通信で<b>共有</b>でき、途中の経路に障害があってもルータが<b>別の経路</b>で送ることができ、誤りがあればそのパケットだけを<b>再送</b>すればよい。受信側はヘッダの情報をもとにパケットを並べ直して元のデータに戻す。
+</div>
+<div class="box ex">
+(1) 4500 バイトのデータを送る。1つのパケットに入れられるデータは最大 1000 バイトで、各パケットに 40 バイトのヘッダをつける。パケットはいくつ必要か。また、送信する総バイト数を求めよ。<br>
+(2) パケット交換方式が回線交換方式よりすぐれている点を2つ挙げよ。
+<div class="solx"><b>解</b>　(1) $4500\div1000=4.5$ なので <b>5 個</b>（1000 バイトが4個と 500 バイトが1個）。総バイト数は $4500+40\times5=$ <b>4700 バイト</b>。<br>
+(2) 例：1本の回線を複数の通信で共有でき、回線を効率よく使える／障害が起きても別の経路でパケットを届けられる／誤りが生じたパケットだけを再送すればよい。</div>
+</div>
+<h3>講義2　プロトコルと TCP/IP</h3>
+<div class="box lect">
+異なる機種やソフトウェアどうしが通信するための約束ごとを<b>プロトコル</b>という。インターネットでは、役割ごとに4つの層に分けた <b>TCP/IP</b> のプロトコル群を使う。
+<table class="l w"><tr><th>層</th><th>役割</th><th>おもなプロトコル・しくみ</th></tr>
+<tr><td><b>アプリケーション層</b></td><td>アプリケーションごとのやりとりの決まり</td><td>HTTP・HTTPS（Web）、SMTP・POP・IMAP（メール）、DNS</td></tr>
+<tr><td><b>トランスポート層</b></td><td>データを確実に（または速く）届ける。<b>ポート番号</b>でアプリを区別</td><td><b>TCP</b>（到着の確認・再送・順番の整列で確実に）、<b>UDP</b>（確認を省いて速く）</td></tr>
+<tr><td><b>インターネット層</b></td><td>IP アドレスをもとに、ルータが宛先まで中継する</td><td><b>IP</b></td></tr>
+<tr><td><b>ネットワークインタフェース層</b></td><td>直接つながった機器の間で信号を送る</td><td>イーサネット（有線 LAN）、Wi-Fi（無線 LAN）、機器固有の MAC アドレス</td></tr></table>
+送信側では上の層から順に各層のヘッダをつけ（カプセル化）、受信側では下の層から順に外していく。層を分けておくと、ある層のしくみを変えても他の層に影響しない。たとえば有線 LAN を Wi-Fi に変えても、Web ブラウザはそのまま使える。
+</div>
+<div class="box ex">
+(1) 次の①〜④は、TCP/IP のどの層のプロトコルか。　① IP　② HTTP　③ TCP　④ イーサネット<br>
+(2) ビデオ通話やライブ映像の配信では、トランスポート層に TCP ではなく UDP が使われることが多い。その理由を述べよ。
+<div class="solx"><b>解</b>　(1) ① <b>インターネット層</b>　② <b>アプリケーション層</b>　③ <b>トランスポート層</b>　④ <b>ネットワークインタフェース層</b><br>
+(2) TCP は届いたことを確認し、失われたデータを再送するので、そのぶん遅れが生じる。通話やライブ配信では、少しのデータが欠けることよりも<b>遅れずに届く</b>ことが重要なので、確認や再送を省いて速い UDP が適している。</div>
+</div>
+<h3>講義3　IP アドレスとサブネット、ドメイン名と DNS</h3>
+<div class="box lect">
+<b>IPv4</b> の IP アドレスは 32 ビットで、8 ビットずつ区切った4つの10進数で「192.168.10.37」のように書く。表せる数は $2^{32}=4{,}294{,}967{,}296$（約43億）で不足するため、128 ビット（$2^{128}\fallingdotseq3.4\times10^{38}$ 通り）の <b>IPv6</b> への移行が進んでいる。<br>
+IP アドレスは、どのネットワークかを表す<b>ネットワーク部</b>と、その中の機器を表す<b>ホスト部</b>からなる。「192.168.10.37/26」の /26 は、先頭 26 ビットがネットワーク部であることを表し、これを1が26個並ぶ<b>サブネットマスク</b> 255.255.255.192 でも表す。IP アドレスとサブネットマスクのビットごとの AND をとると、ネットワークのアドレス（ホスト部がすべて 0）が得られる。ホスト部がすべて 0 のアドレスとすべて 1 のアドレス（ブロードキャストアドレス）は機器に割り当てないので、/$n$ のネットワークで使える台数は $2^{32-n}-2$ である。<br>
+人が覚えやすい <b>ドメイン名</b>（www.example.co.jp）は、右から jp（国）、co（組織の種類＝企業）、example（組織名）と階層になっており、左端の www はサーバの名前（ホスト名）である。ドメイン名から IP アドレスを調べることを<b>名前解決</b>といい、<b>DNS</b> サーバが担う。
+</div>
+<div class="box ex">
+IP アドレス 192.168.10.37/26 のパソコンについて答えよ。(1) サブネットマスクを10進数で表せ。(2) このパソコンが属するネットワークのアドレスとブロードキャストアドレスを求めよ。(3) このネットワークで機器に割り当てられる IP アドレスはいくつか。(4) 192.168.10.70 の機器は同じネットワークにあるか。
+<div class="solx"><b>解</b>　(1) 先頭 26 ビットが 1 なので、第4オクテットは $11000000_{(2)}=192$。<b>255.255.255.192</b><br>
+(2) 第4オクテットの $37=00100101_{(2)}$ と $11000000$ の AND は $00000000$。ネットワークアドレスは <b>192.168.10.0</b>、ホスト部をすべて 1 にした <b>192.168.10.63</b> がブロードキャストアドレス。<br>
+(3) ホスト部は $32-26=6$ ビットなので $2^6-2=$ <b>62 個</b>（192.168.10.1〜192.168.10.62）。<br>
+(4) $70=01000110_{(2)}$ と $11000000$ の AND は $01000000=64$ で、ネットワークアドレスが 192.168.10.64 になるので<b>同じネットワークではない</b>（通信にはルータを経由する）。</div>
+</div>
+<h3>講義4　Web と電子メールのしくみ、通信速度</h3>
+<div class="box lect">
+<b>Web</b>：URL「https://www.example.jp/info/index.html」は、通信の方式（<b>https</b>）、サーバのドメイン名（<b>www.example.jp</b>）、サーバ内のファイルの場所（<b>/info/index.html</b>）を表す。ブラウザは DNS で IP アドレスを調べ、Web サーバに HTTP で<b>リクエスト</b>を送り、サーバは HTML などを<b>レスポンス</b>として返す（見つからなければエラー「404 Not Found」）。<b>HTTPS</b> は通信を暗号化し、電子証明書でサーバが本物であることを確かめる（第10章）。<br>
+<b>電子メール</b>：送信者のメールソフト → <b>SMTP</b> → 送信側のメールサーバ → <b>SMTP</b> → 受信側のメールサーバ（メールボックス）→ 受信者が <b>POP</b> または <b>IMAP</b> で受けとる。POP はメールを端末に取りこんで読む方式、IMAP はメールをサーバに置いたまま読む方式で、複数の端末から同じ状態で読める。宛先の <b>BCC</b> に入れたアドレスは、ほかの受信者に表示されない。<br>
+<b>通信速度</b>は1秒間に送れるビット数で、単位は <b>bps</b>（ビット毎秒）。通信速度の k・M・G はふつう $10^3$・$10^6$・$10^9$ 倍を表す。実際には制御のための情報や混雑があるので、理論上の速度に対する実際の割合（<b>伝送効率</b>）を掛けて考える。
+</div>
+<div class="box ex">
+(1) 600 MB のファイルを、通信速度 100 Mbps、伝送効率 80 % の回線でダウンロードするのに何秒かかるか（1 MB＝$10^6$ バイト）。<br>
+(2) 50 MB の動画を 10 秒で送るには、少なくとも何 Mbps の通信速度が必要か（伝送効率 100 %、1 MB＝$10^6$ バイト）。
+<div class="solx"><b>解</b>　(1) データ量は $600\times10^6\times8=4.8\times10^9$ ビット。実際の速度は $100\times10^6\times0.8=8\times10^7$ bps。$4.8\times10^9\div(8\times10^7)=$ <b>60 秒</b>。<br>
+(2) $50\times10^6\times8=4\times10^8$ ビットを 10 秒で送るので、$4\times10^7$ bps＝<b>40 Mbps</b>。</div>
+</div>
+<div class="box chk">
+(1) ルータの役割を簡潔に述べよ。<br>
+(2) IPv4 の IP アドレスは何ビットか。また IPv6 は何ビットか。<br>
+(3) /24 のネットワークで、機器に割り当てられる IP アドレスはいくつか。<br>
+(4) 1枚 3 MB の写真 20 枚を、20 Mbps の回線で送るのに何秒かかるか（伝送効率 100 %、1 MB＝$10^6$ バイト）。
+</div>
+<div class="box aim">
+・通信時間の計算は「<b>バイト → ビット（×8）</b>」「<b>伝送効率</b>」「1 MB を $10^6$ とするか $2^{20}$ とするか」の指示を確認する。<br>
+・IP アドレスは、<b>ネットワーク部の長さ</b>から割り当て可能な台数（ホスト部が $h$ ビットなら $2^h-2$）や、同じネットワークかどうかの判定（AND をとって比べる）が問われる。<br>
+・TCP/IP の層とプロトコルの対応、TCP と UDP の使い分け、POP と IMAP の違い、DNS の役割は知識問題の定番。
+</div>
+<h3 class="deep">講義5　プライベート IP アドレスとアドレス変換（NAT）</h3>
+<p>IPv4 のアドレスは足りないので、LAN の中では、インターネット上では使われない<b>プライベート IP アドレス</b>を使うことが多い。インターネット上で一意に割り当てられるアドレスは<b>グローバル IP アドレス</b>という。</p>
+<div class="box lect">
+プライベート IP アドレスの範囲は、10.0.0.0〜10.255.255.255、172.16.0.0〜172.31.255.255、192.168.0.0〜192.168.255.255 と決められている。異なる LAN で同じプライベートアドレスを使ってもかまわない。<br>
+LAN の機器がインターネット上のサーバと通信するときは、境界のルータが、パケットの送信元をプライベートアドレスから自分のグローバルアドレスに書きかえて送り、返ってきたパケットの宛先を元に戻す（<b>NAT</b>、アドレス変換）。さらに<b>ポート番号</b>も組み合わせて変換すれば（NAPT）、1つのグローバルアドレスを LAN 内の多数の機器で共有できる。家庭のルータはふつうこの働きをもつ。<br>
+外部から LAN 内の機器に直接パケットを送りにくくなるので、結果として防御にも役立つ。ただし、それだけで安全になるわけではなく、ファイアウォールなどの対策と組み合わせる（第10章）。
+</div>
+<div class="box warn">
+・バイトとビットの換算忘れ（通信速度は<b>ビット</b>毎秒）。<br>
+・/$n$ の割り当て台数で「$-2$」を忘れる（ネットワークアドレスとブロードキャストアドレスは使えない）。<br>
+・DNS を「Web ページを保存するサーバ」と誤解する。DNS は<b>ドメイン名と IP アドレスの対応</b>を答えるしくみ。<br>
+・TCP を「速い」、UDP を「確実」と逆に覚える。
+</div>
+<div class="box ans">
+(1) 異なるネットワークの間でパケットを中継し、宛先までの経路を選ぶ。　(2) IPv4 は 32 ビット、IPv6 は 128 ビット　(3) $2^8-2=254$ 個　(4) $3\times10^6\times20\times8=4.8\times10^8$ ビット。$4.8\times10^8\div(20\times10^6)=24$ 秒
+</div>
+<!--CH 10-->
+<div class="box point">
+・情報セキュリティの3要素：<b>機密性</b>（許可された人だけが使える）・<b>完全性</b>（正確で改ざんされていない）・<b>可用性</b>（必要なときに使える）<br>
+・認証の3要素：<b>知識</b>（パスワード）・<b>所有</b>（スマートフォン・IC カード）・<b>生体</b>（指紋・顔）。異なる要素を組み合わせるのが<b>多要素認証</b><br>
+・<b>共通鍵暗号</b>は同じ鍵で暗号化・復号（速いが鍵の受け渡しが難しい）。<b>公開鍵暗号</b>は受信者の<b>公開鍵</b>で暗号化し、受信者の<b>秘密鍵</b>で復号<br>
+・<b>デジタル署名</b>は送信者の秘密鍵で作り、送信者の公開鍵で確かめる → なりすましと改ざんを検出<br>
+・<b>パリティビット</b>で1の個数の偶奇をそろえ、1ビットの誤りを検出する
+</div>
+<h3>講義1　情報セキュリティの3要素と脅威</h3>
+<div class="box lect">
+・<b>機密性</b>：許可された人だけが情報にアクセスできること。対策は、アクセス制御、認証、暗号化。<br>
+・<b>完全性</b>：情報が正確で、不正に書きかえられていないこと。対策は、アクセス権の設定、変更履歴、デジタル署名。<br>
+・<b>可用性</b>：必要なときにいつでも情報やシステムを使えること。対策は、バックアップ、予備の機器（冗長化）、無停電電源装置。<br>
+<b>マルウェア</b>（悪意のあるソフトウェア）には、他のプログラムに寄生して増える<b>ウイルス</b>、単独で自分を複製しネットワークを通じて広がる<b>ワーム</b>、役に立つソフトを装って入りこむ<b>トロイの木馬</b>、情報を盗み出す<b>スパイウェア</b>、ファイルを暗号化するなどして使えなくし、元に戻す代わりに金銭を要求する<b>ランサムウェア</b>などがある。<br>
+攻撃の手口には、本物そっくりの偽サイトに誘導して ID やパスワード、カード番号を入力させる<b>フィッシング</b>、特定の組織を狙って業務を装ったメールを送る<b>標的型攻撃</b>、大量のデータを送りつけてサービスを止める <b>DoS 攻撃</b>（多数の機器から行うものは DDoS 攻撃）、人の油断や心理的なすきを突いてパスワードなどを聞き出す<b>ソーシャルエンジニアリング</b>などがある。<br>
+基本の対策は、①OS やソフトウェアを<b>更新</b>して弱点（脆弱性・セキュリティホール）をふさぐ、②ウイルス対策ソフトを使う、③<b>ファイアウォール</b>で許可されない通信を遮断する、④不審なメールの添付ファイルや URL を開かない、⑤<b>バックアップ</b>をとる、である。
+</div>
+<div class="box ex">
+(1) 次の被害は、おもに3要素のどれが損なわれたものか。　① 通信販売のサイトが大量のアクセスを受けて利用できなくなった　② 会員名簿が外部に流出した　③ 学校の Web ページの内容が不正に書きかえられた<br>
+(2) 次のマルウェアの名称を答えよ。　① 無料のゲームを装ってインストールさせ、裏で利用者の情報を盗む　② パソコン内のファイルを暗号化して開けなくし、復元と引き換えに金銭を要求する
+<div class="solx"><b>解</b>　(1) ① <b>可用性</b>（DoS 攻撃など）　② <b>機密性</b>　③ <b>完全性</b>（改ざん）<br>
+(2) ① <b>トロイの木馬</b>（情報を盗む働きに注目すればスパイウェアの一種ともいえる）　② <b>ランサムウェア</b>（バックアップが有効な対策）</div>
+</div>
+<h3>講義2　認証とパスワードの強さ</h3>
+<div class="box lect">
+利用者が本人であることを確かめることを<b>認証</b>という。認証に使う情報は次の3種類に分けられる。<br>
+・<b>知識情報</b>：本人だけが知っていること（パスワード、暗証番号）<br>
+・<b>所有情報</b>：本人だけが持っているもの（スマートフォン、IC カード、ワンタイムパスワードを表示する機器）<br>
+・<b>生体情報</b>：本人の身体の特徴（指紋、顔、静脈、虹彩）<br>
+異なる種類を2つ以上組み合わせる<b>多要素認証</b>（例：パスワード＋スマートフォンに届く確認コード）は、パスワードが漏れても不正ログインを防げる。パスワードと「秘密の質問」の組合せは、どちらも知識情報なので多要素認証ではない。<br>
+パスワードを1文字ずつ全通り試す<b>総当たり攻撃</b>に対しては、使える文字が $k$ 種類で長さが $L$ 文字なら $k^L$ 通りあるので、<b>種類を増やし、長くする</b>ほど強くなる。ただし、辞書の単語や誕生日などは<b>辞書攻撃</b>で推測されやすい。また、別のサービスから漏れた ID とパスワードの組を試す攻撃があるので、<b>使い回しをしない</b>。
+</div>
+<div class="box ex">
+1秒間に $10^{10}$ 通りのパスワードを試せる攻撃者が、すべての組合せを試すのにかかる時間を考える。次の場合について、組合せの数と時間を求めよ（有効数字2けた）。<br>
+① 数字4けた　② 英大文字・小文字・数字（62種類）の8文字　③ ②と同じ文字の12文字
+<div class="solx"><b>解</b>　① $10^4$ 通り。$10^4\div10^{10}=10^{-6}$ 秒で、<b>一瞬</b>。<br>
+② $62^8\fallingdotseq2.2\times10^{14}$ 通り。$2.2\times10^{4}$ 秒 ＝ 約 <b>6.1 時間</b>。<br>
+③ $62^{12}\fallingdotseq3.2\times10^{21}$ 通り。$3.2\times10^{11}$ 秒 ＝ 約 <b>1.0 万年</b>（$3.2\times10^{11}\div(3600\times24\times365)\fallingdotseq1.0\times10^4$）。<br>
+長さを 8 文字から 12 文字にするだけで、$62^4\fallingdotseq1.5\times10^7$ 倍になる。</div>
+</div>
+<h3>講義3　暗号とデジタル署名</h3>
+<div class="box lect">
+元の文を<b>平文</b>、読めないように変換した文を<b>暗号文</b>、変換を<b>暗号化</b>、元に戻すことを<b>復号</b>といい、変換の手順に使う値を<b>鍵</b>という。アルファベットを一定の数だけずらす<b>シーザー暗号</b>（3文字ずらすと INFO → LQIR）は、鍵が25通りしかないので総当たりですぐ破られる。現代の暗号は、鍵の候補が天文学的な数になるように作られている。<br>
+・<b>共通鍵暗号方式</b>：暗号化と復号に<b>同じ鍵</b>を使う。処理は速いが、鍵を相手に安全に渡す方法が問題になり、$n$ 人が互いに通信するには $\frac{n(n-1)}{2}$ 個の鍵が必要。<br>
+・<b>公開鍵暗号方式</b>：対になる<b>公開鍵</b>（誰に知られてもよい）と<b>秘密鍵</b>（本人だけが持つ）を使う。送信者は<b>受信者の公開鍵</b>で暗号化し、それを復号できるのは<b>受信者の秘密鍵</b>だけ。鍵を渡す問題は解決するが、処理は遅い。$n$ 人で $2n$ 個の鍵で済む。<br>
+Web の HTTPS（SSL/TLS）では、公開鍵暗号で共通鍵を安全に送り、データ本体は速い共通鍵暗号で暗号化する（<b>ハイブリッド方式</b>）。<br>
+<b>デジタル署名</b>：送信者は文書から<b>ハッシュ値</b>（文書が1文字でも変わると全く違う値になる、短い要約値）を求め、それを<b>自分の秘密鍵</b>で暗号化して署名とし、文書に添えて送る。受信者は<b>送信者の公開鍵</b>で署名を復号し、受けとった文書から求めたハッシュ値と比べる。一致すれば、①送信者本人が作ったこと（なりすましでない）、②途中で改ざんされていないこと、が確かめられる。公開鍵が本当にその人のものであることは、<b>認証局</b>が発行する<b>電子証明書</b>で保証する。
+</div>
+<div class="box ex">
+(1) 3文字後ろにずらすシーザー暗号でつくった暗号文「PDWK」を復号せよ。<br>
+(2) 50 人が互いに秘密の通信をするとき、共通鍵暗号方式と公開鍵暗号方式では、それぞれ全部で何個の鍵が必要か。<br>
+(3) A さんが B さんに、公開鍵暗号方式で秘密の文書を送る。暗号化と復号にはそれぞれ誰のどの鍵を使うか。<br>
+(4) A さんが文書にデジタル署名をつけて B さんに送る。署名の作成と検証にはそれぞれ誰のどの鍵を使うか。
+<div class="solx"><b>解</b>　(1) 各文字を3文字前に戻して P→M、D→A、W→T、K→H で「<b>MATH</b>」。<br>
+(2) 共通鍵：$\frac{50\times49}{2}=$ <b>1225 個</b>。公開鍵：1人2個（公開鍵と秘密鍵）で <b>100 個</b>。<br>
+(3) 暗号化は <b>B さんの公開鍵</b>、復号は <b>B さんの秘密鍵</b>。<br>
+(4) 作成は <b>A さんの秘密鍵</b>、検証は <b>A さんの公開鍵</b>（A さんの秘密鍵を持つのは A さんだけなので、A さん本人の署名だとわかる）。</div>
+</div>
+<h3>講義4　誤り検出 ― パリティビット</h3>
+<div class="box lect">
+通信や記録の途中で、雑音などにより 0 と 1 が入れかわる誤りが起こることがある。<b>パリティビット</b>は、データに1ビットを追加して、全体の1の個数を偶数（<b>偶数パリティ</b>）または奇数（<b>奇数パリティ</b>）にそろえる方法である。たとえば 7 ビットのデータ 1011001 は1が4個なので、偶数パリティでは 0 を追加して 10110010 とする。受信側で1の個数を数え、奇数なら誤りがあるとわかる。<br>
+ただし、2ビットが同時に反転すると偶奇が変わらないので検出できない（検出できるのは<b>奇数個</b>の誤り）。また、どのビットが誤っているかはわからない。<br>
+そこで、データを縦横に並べて行ごと・列ごとにパリティをつける<b>水平垂直パリティ</b>を使うと、1ビットの誤りなら、偶奇が合わない行と列の交わる位置として<b>場所を特定して訂正</b>できる。書籍の ISBN や商品のバーコードの末尾の数字（<b>チェックディジット</b>）も、読み取りの誤りを検出するためのものである。
+</div>
+<div class="box ex">
+(1) 7 ビットのデータ 1101100 と 0110100 に、偶数パリティのビットを末尾に追加せよ。<br>
+(2) 偶数パリティを末尾につけた 8 ビットのデータ 11010110 を受信した。誤りはあるか。<br>
+<div class="two"><div>(3) 4ビット×4行のデータの各行の右端と最下行に偶数パリティをつけて送ったところ、右の表のように受信した。誤っているビットの位置を答え、訂正せよ。</div>
+<div style="flex:0 0 auto"><table style="margin:0"><tr><th></th><th>1列</th><th>2列</th><th>3列</th><th>4列</th><th>パリティ</th></tr>
+<tr><th>1行</th><td>1</td><td>0</td><td>1</td><td>1</td><td>1</td></tr><tr><th>2行</th><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><th>3行</th><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td></tr><tr><th>4行</th><td>0</td><td>1</td><td>0</td><td>1</td><td>0</td></tr>
+<tr><th>パリティ</th><td>0</td><td>1</td><td>0</td><td>0</td><td>1</td></tr></table></div></div>
+<div class="solx"><b>解</b>　(1) 1101100 は1が4個 → <b>11011000</b>。0110100 は1が3個 → <b>01101001</b>。<br>
+(2) 1が5個（奇数）なので、<b>誤りがある</b>（どこかは特定できない）。<br>
+(3) 各行の1の個数は 4, <b>1</b>, 2, 2, 2 で、2行目だけが奇数。各列は 2, 4, <b>1</b>, 2, 2 で、3列目だけが奇数。よって<b>2行3列</b>のビットが誤り。0 を <b>1</b> に訂正すると、2行目は 0110（パリティ 0）となり、すべての行・列が偶数になる。</div>
+</div>
+<div class="box chk">
+(1) 定期的にデータのバックアップをとることは、3要素のうち主にどれを高める対策か。<br>
+(2)「パスワード」と「秘密の質問の答え」を組み合わせた認証は多要素認証といえるか。理由も答えよ。<br>
+(3) 10 人が互いに共通鍵暗号方式で通信するには、鍵は何個必要か。<br>
+(4) 7 ビットのデータ 1011010 に、奇数パリティのビットを末尾に追加せよ。
+</div>
+<div class="box aim">
+・3要素は「何が損なわれたか」「どの対策がどれを高めるか」を事例で判断させる。<br>
+・公開鍵暗号とデジタル署名は「<b>誰の・どちらの鍵</b>か」がすべて。暗号化は<b>受信者</b>の公開鍵、署名は<b>送信者</b>の秘密鍵。<br>
+・鍵の個数（$\frac{n(n-1)}{2}$ と $2n$）、パスワードの組合せ数（$k^L$）、パリティの計算と誤りの位置の特定は計算問題の定番。
+</div>
+<h3 class="deep">講義5　公開鍵暗号のしくみ ― 小さな数で RSA 暗号を体験する</h3>
+<p>代表的な公開鍵暗号の <b>RSA 暗号</b>は、「大きな2つの素数の積は簡単に計算できるが、積から元の素数を求める（素因数分解する）のは非常に難しい」ことを安全性の根拠にしている。ここでは小さな数で計算を体験する。</p>
+<div class="box lect">
+①素数 $p=5,\ q=11$ を選び、$n=pq=55$、$(p-1)(q-1)=40$ とする。②40 と互いに素な $e=3$ を選ぶ。③$e\times d$ を 40 で割った余りが 1 になる $d$ を求めると $d=27$（$3\times27=81=2\times40+1$）。<br>
+<b>公開鍵</b>は $(n,e)=(55,\ 3)$、<b>秘密鍵</b>は $d=27$（$p,q$ も秘密にする）。<br>
+平文 $m=7$ を暗号化すると、$c=m^e$ を $n$ で割った余り $=7^3=343=6\times55+13$ より $c=13$。<br>
+復号は、$c^d=13^{27}$ を 55 で割った余りを計算すると、確かに 7 に戻る（Python の <code>pow(13, 27, 55)</code> で確かめられる）。<br>
+$e$ と $n$ を知っていても、$d$ を求めるには $n$ を $p\times q$ に分解する必要がある。実際の RSA 暗号では $n$ が 600 けた程度の数なので、現在のコンピュータでは現実的な時間で分解できない。
+</div>
+<div class="box warn">
+・公開鍵暗号で「送信者の公開鍵で暗号化する」と誤る。それでは送信者の秘密鍵でしか復号できず、受信者が読めない。<br>
+・デジタル署名で暗号化と同じ鍵の使い方をしてしまう。署名は<b>送信者の秘密鍵</b>で作る。<br>
+・パリティで「誤りを必ず検出できる」と考える。偶数個のビットの誤りは検出できない。<br>
+・パスワードの組合せ数を $L^k$（長さの種類乗）と逆にする。正しくは $k^L$。
+</div>
+<div class="box ans">
+(1) 可用性（壊れたり消えたりしても復元して使い続けられる）　(2) いえない。どちらも知識情報で、異なる種類の要素を組み合わせていないから。　(3) $\frac{10\times9}{2}=45$ 個　(4) 1 が4個なので、奇数にするため 1 を追加して 10110101
+</div>
+<!--CH 11-->
+<div class="box point">
+・データの尺度：<b>名義尺度</b>（区別だけ）・<b>順序尺度</b>（順序に意味）・<b>間隔尺度</b>（差に意味）・<b>比例尺度</b>（比にも意味）。前の2つが<b>質的データ</b>、後の2つが<b>量的データ</b><br>
+・<b>関係データベース</b>はデータを表で管理する。行＝<b>レコード</b>、列＝<b>フィールド</b>。各行を一意に識別する列（の組）が<b>主キー</b><br>
+・関係演算：<b>選択</b>（条件に合う行を取り出す）・<b>射影</b>（列を取り出す）・<b>結合</b>（共通の列で表をつなぐ）<br>
+・<b>オープンデータ</b>＝誰でも二次利用できるルールで、機械判読に適した形式で、無償で公開されたデータ<br>
+・分析の前に、欠損値・外れ値・表記ゆれ・単位の不統一などを処理する（<b>前処理</b>）
+</div>
+<h3>講義1　データの種類と尺度</h3>
+<div class="box lect">
+<table class="l w"><tr><th>尺度</th><th>性質</th><th>例</th><th>意味のある計算・代表値</th></tr>
+<tr><td style="white-space:nowrap"><b>名義尺度</b></td><td>区別するためだけの値</td><td>血液型、都道府県、出席番号、郵便番号</td><td>度数、最頻値</td></tr>
+<tr><td style="white-space:nowrap"><b>順序尺度</b></td><td>順序に意味があるが、間隔は等しいとは限らない</td><td>順位、満足度（5段階）、評定 A・B・C</td><td>＋中央値</td></tr>
+<tr><td style="white-space:nowrap"><b>間隔尺度</b></td><td>目盛りが等間隔で差に意味がある。0 は「何もない」ことを表さない</td><td>気温（℃）、西暦年</td><td>＋差、平均値</td></tr>
+<tr><td style="white-space:nowrap"><b>比例尺度</b></td><td>0 が「何もない」ことを表し、比（○倍）にも意味がある</td><td>身長、重さ、金額、時間、個数</td><td>＋比</td></tr></table>
+名義尺度と順序尺度のデータを<b>質的データ</b>（カテゴリーデータ）、間隔尺度と比例尺度のデータを<b>量的データ</b>という。数字で書かれていても、出席番号や郵便番号は名義尺度で、平均を求めても意味がない。<br>
+また、表の形に整理された<b>構造化データ</b>に対して、文章・画像・音声・動画のように決まった形をもたないデータを<b>非構造化データ</b>という。SNS の投稿やセンサーの記録など、ビッグデータには非構造化データが多い。
+</div>
+<div class="box ex">
+(1) 次のデータの尺度を答えよ。　① 出席番号　② 気温（℃）　③ 通学時間（分）　④ アンケートの「満足・やや満足・やや不満・不満」　⑤ 西暦年　⑥ 体重<br>
+(2)「今日の最高気温 20 ℃は、昨日の 10 ℃の2倍暑い」という言い方が適切でない理由を述べよ。
+<div class="solx"><b>解</b>　(1) ① <b>名義</b>　② <b>間隔</b>　③ <b>比例</b>　④ <b>順序</b>　⑤ <b>間隔</b>　⑥ <b>比例</b><br>
+(2) 摂氏温度は間隔尺度で、0 ℃は「熱がまったくない」状態ではない（0 の位置は水の凍る温度に決めたもの）。差（10 ℃高い）には意味があるが、比（2倍）には意味がない。</div>
+</div>
+<h3>講義2　データベースと主キー</h3>
+<div class="box lect">
+<b>データベース</b>は、大量のデータを、検索・追加・更新しやすいように整理して蓄積したものである。データベースを管理するソフトウェア（<b>DBMS</b>）は、①データに矛盾が生じないようにする（<b>一貫性</b>の維持）、②複数の利用者が同時に更新しても正しく処理する（<b>同時実行制御</b>。同じ座席を二重に予約させない）、③障害が起きても元の状態に<b>回復</b>できるようにする、④利用者ごとに<b>アクセス権</b>を設定する、といった役割をもつ。<br>
+<b>関係データベース</b>（リレーショナルデータベース）は、データを<b>表</b>（テーブル）で管理する。表の1行が1件のデータ（<b>レコード</b>）、各列が項目（<b>フィールド</b>、属性）である。<br>
+各レコードを一意に識別するための列を<b>主キー</b>という。主キーの値は、①<b>重複しない</b>、②<b>空（未入力）にならない</b>、ことが必要である。1つの列で決まらないときは、複数の列の組合せを主キーにする（<b>複合キー</b>）。ほかの表の主キーを参照する列を<b>外部キー</b>といい、表どうしを関連づけるのに使う。<br>
+なお、大量で多様なデータを高速に扱うため、表の形にこだわらない <b>NoSQL</b>（キーと値の組で管理するものなど）も使われている。
+</div>
+<div class="box ex">
+ある高校の生徒の表は、「生徒番号・氏名・クラス・出席番号・住所」の列からなる。生徒番号は入学時に全員に異なる番号がつけられ、出席番号はクラスごとに 1 から振られている。<br>
+(1) 1つの列で主キーにできるものはどれか。　(2)「氏名」を主キーにできない理由を述べよ。　(3) 2つの列の組合せで主キーにできるものを答えよ。
+<div class="solx"><b>解</b>　(1) <b>生徒番号</b>　(2) 同姓同名の生徒がいる可能性があり、値が重複しうるから。　(3) <b>クラスと出席番号</b>の組合せ（同じクラスに同じ出席番号はなく、クラスが違えば同じ出席番号でも区別できる）。</div>
+</div>
+<h3>講義3　関係演算 ― 選択・射影・結合</h3>
+<div class="box lect">
+<div class="two"><div><b>生徒</b>
+<table style="margin:0.5mm 0"><tr><th>番号</th><th>氏名</th><th>学年</th><th>部コード</th></tr>
+<tr><td>1001</td><td>青木</td><td>2</td><td>B01</td></tr><tr><td>1002</td><td>石田</td><td>1</td><td>B02</td></tr><tr><td>1003</td><td>上野</td><td>2</td><td>B01</td></tr><tr><td>1004</td><td>江藤</td><td>3</td><td>B03</td></tr><tr><td>1005</td><td>小川</td><td>1</td><td>B02</td></tr></table></div>
+<div><b>部活動</b>
+<table style="margin:0.5mm 0"><tr><th>部コード</th><th>部名</th><th>活動場所</th></tr>
+<tr><td>B01</td><td>情報部</td><td>PC室</td></tr><tr><td>B02</td><td>写真部</td><td>美術室</td></tr><tr><td>B03</td><td>吹奏楽部</td><td>音楽室</td></tr></table>
+「生徒」の主キーは番号、「部活動」の主キーは部コード。「生徒」の部コードは外部キーである。</div></div>
+<div class="two"><div>・<b>選択</b>：条件に合う<b>行</b>を取り出す（例：学年が 2 の行 → 青木と上野の2行）。<br>
+・<b>射影</b>：指定した<b>列</b>を取り出す（例：氏名と部コードの列だけの表）。<br>
+・<b>結合</b>：共通の列（部コード）の値が等しい行どうしをつないで1つの表にする（各生徒の行に部名と活動場所が加わる）。</div>
+<div style="flex:0 0 300px">問い合わせ言語 <b>SQL</b> では、「1年生の氏名と部名」は次のように書く（SELECT が射影、WHERE が選択、JOIN が結合）。
+<pre class="code" style="margin:1mm 0 0">SELECT 氏名, 部名
+FROM 生徒 JOIN 部活動
+  ON 生徒.部コード = 部活動.部コード
+WHERE 学年 = 1;</pre></div></div>
+</div>
+<div class="box ex">
+上の2つの表について答えよ。(1) 上の SQL を実行した結果の表を書け。(2)「活動場所が PC室 である生徒の氏名」を求めるには、選択・射影・結合をどの順に行えばよいか。また、結果を答えよ。
+<div class="solx"><b>解</b>　(1) 2つの表を部コードで結合し、学年が 1 の行を選択して、氏名と部名を射影する。
+<table style="margin:1mm 0"><tr><th>氏名</th><th>部名</th></tr><tr><td>石田</td><td>写真部</td></tr><tr><td>小川</td><td>写真部</td></tr></table>
+(2) ①「生徒」と「部活動」を部コードで<b>結合</b> → ② 活動場所が PC室 の行を<b>選択</b> → ③ 氏名の列を<b>射影</b>。結果は<b>青木、上野</b>。</div>
+</div>
+<h3>講義4　データの収集・前処理とオープンデータ</h3>
+<div class="box lect">
+<b>データの収集</b>：アンケート、観察・実験、センサーによる計測、Web 上の公開データなど。アンケートでは、回答を誘導する質問や、1つの質問で2つのことを聞く質問（「授業はわかりやすく楽しいですか」）を避ける。対象全体を調べる<b>全数調査</b>ができないときは、一部を調べる<b>標本調査</b>を行い、偏りがないよう<b>無作為</b>に選ぶ。<br>
+<b>オープンデータ</b>：国・地方公共団体・企業などが保有するデータを、①誰でも<b>二次利用</b>できるルール（利用規約やライセンス）で、②コンピュータで処理しやすい（<b>機械判読に適した</b>）形式で、③<b>無償</b>で公開したもの。表形式のデータは、値をカンマで区切って並べた <b>CSV</b> 形式がよく使われる。<br>
+<b>前処理</b>（データクレンジング）：集めたデータには、<b>欠損値</b>（空欄）、<b>外れ値・異常値</b>（入力ミスなど）、<b>表記ゆれ</b>（全角と半角、「（株）」と「株式会社」）、単位の不統一、重複などがある。欠損値は除くか補い、異常値は原因を確かめて修正・除外し、表記や単位はそろえてから分析する。前処理をどう行ったかも記録しておく。
+</div>
+<div class="box ex">
+<div class="two"><div style="flex:0 0 190px"><pre class="code" style="margin:0">番号,学年,通学時間（分）
+1,2,35
+2,２,20
+3,1,
+4,3,1500
+5,2,40
+6,1,25</pre></div>
+<div>左は、生徒の通学時間を調べたアンケートの CSV ファイルである。<br>(1) このデータの問題点を3つ挙げよ。<br>(2) 問題のある値を適切に処理したうえで、通学時間の平均値を求めよ。<br>(3) 番号4 の値をそのまま含めて平均値と中央値を求めると、どうなるか（番号3 は除く）。</div></div>
+<div class="solx"><b>解</b>　(1) ① 番号2 の学年が全角の「２」（<b>表記ゆれ</b>）　② 番号3 の通学時間が空欄（<b>欠損値</b>）　③ 番号4 の 1500 分（25 時間）は通学時間としてありえず、入力ミスと考えられる（<b>異常値</b>）。<br>
+(2) 学年を半角にそろえ、番号3 と番号4 を除いて（番号4 は本人に確認できれば修正する）、$(35+20+40+25)\div4=$ <b>30 分</b>。<br>
+(3) 平均値は $(35+20+1500+40+25)\div5=$ <b>324 分</b>と大きくずれるが、中央値は小さい順の3番目で <b>35 分</b>。平均値は外れ値の影響を強く受ける（第12章）。</div>
+</div>
+<div class="box chk">
+(1)「好きな教科」を答えてもらったデータの尺度は何か。<br>
+(2) 主キーの値が満たすべき条件を2つ答えよ。<br>
+(3) 表から、指定した列だけを取り出す関係演算を何というか。<br>
+(4) オープンデータの3つの条件を答えよ。
+</div>
+<div class="box aim">
+・尺度は「平均に意味があるか」「比に意味があるか」で判断する問題が多い。数字で表されたデータでも名義尺度のことがある。<br>
+・関係データベースは、<b>主キー</b>の選び方（重複・空がないか、複合キー）と、<b>選択・射影・結合</b>の結果の表を書かせる問題が定番。結合は「共通の列の値が等しい行どうし」をつなぐ。<br>
+・データの前処理は、具体的なデータから欠損値・異常値・表記ゆれを見つけ、処理による結果の違い（平均と中央値）を考えさせる形で出る。
+</div>
+<h3 class="deep">講義5　正規化 ― 表を分けるのはなぜか</h3>
+<p>講義3では、生徒の情報と部活動の情報を2つの表に分けていた。もし次のように1つの表にまとめていたら、どんな不都合があるだろうか。</p>
+<div class="box lect">
+<table style="margin:0.5mm auto"><tr><th>番号</th><th>氏名</th><th>学年</th><th>部コード</th><th>部名</th><th>活動場所</th></tr>
+<tr><td>1001</td><td>青木</td><td>2</td><td>B01</td><td>情報部</td><td>PC室</td></tr><tr><td>1002</td><td>石田</td><td>1</td><td>B02</td><td>写真部</td><td>美術室</td></tr><tr><td>1003</td><td>上野</td><td>2</td><td>B01</td><td>情報部</td><td>PC室</td></tr><tr><td>…</td><td>…</td><td>…</td><td>…</td><td>…</td><td>…</td></tr></table>
+①<b>重複</b>：部名と活動場所が部員の数だけくり返し記録され、容量のむだになる。②<b>更新時の矛盾</b>：情報部の活動場所が変わると、情報部員の全行を書きかえる必要があり、一部を書き忘れると「同じ部なのに活動場所が違う」矛盾が生じる。③<b>登録・削除の不都合</b>：部員のいない新しい部は登録できず、ある部の最後の部員の行を消すと、その部の情報まで消えてしまう。<br>
+そこで、「生徒の情報」と「部活動の情報」を別の表に分け、部コードで結びつける。このように、データの重複をなくして矛盾が起きにくい表の構成にすることを<b>正規化</b>という。必要なときは結合すれば、元の1つの表と同じ情報が得られる。
+</div>
+<div class="box warn">
+・出席番号や郵便番号を量的データと考え、平均を求めてしまう。<br>
+・選択と射影の取り違え。<b>選択＝行</b>（横方向）を、<b>射影＝列</b>（縦方向）を取り出す。<br>
+・主キーに氏名や生年月日など、重複しうる列を選ぶ。<br>
+・欠損値（空欄）を 0 として計算してしまう。空欄は「0 分」ではなく「わからない」である。
+</div>
+<div class="box ans">
+(1) 名義尺度　(2) 値が重複しないこと、空（未入力）にならないこと　(3) 射影　(4) 誰でも二次利用できるルールで公開されていること、機械判読に適した形式であること、無償で利用できること
+</div>
+<!--CH 12-->
+<div class="box point">
+・代表値：<b>平均値</b>・<b>中央値</b>・<b>最頻値</b>。平均値は外れ値の影響を受けやすく、中央値は受けにくい<br>
+・散らばり：<b>分散</b> $s^2=\dfrac1n\sum(x_i-\bar x)^2$（偏差の2乗の平均）、<b>標準偏差</b> $s=\sqrt{s^2}$（データと同じ単位）<br>
+・<b>箱ひげ図</b>は最小値・第1四分位数・中央値・第3四分位数・最大値（五数要約）を表す。<b>四分位範囲</b>＝$Q_3-Q_1$<br>
+・<b>相関係数</b> $r=\dfrac{s_{xy}}{s_xs_y}$（$-1\leqq r\leqq1$）。<b>回帰直線</b> $y=ax+b$ は $a=\dfrac{s_{xy}}{s_x^2}$、点 $(\bar x,\bar y)$ を通る<br>
+・相関があっても<b>因果関係</b>があるとは限らない。<b>仮説検定</b>は「偶然では起こりにくいか」を確率で判断する
+</div>
+<h3>講義1　代表値と散らばり</h3>
+<div class="box lect">
+データの中心を表す値を<b>代表値</b>という。<b>平均値</b> $\bar x$（合計÷個数）、<b>中央値</b>（小さい順に並べたときの中央の値。個数が偶数なら中央の2つの平均）、<b>最頻値</b>（最も多く現れる値）がある。平均値は極端な値（<b>外れ値</b>）に引っぱられやすいので、所得のように一部に極端に大きな値があるデータでは中央値も見る。<br>
+データの散らばりは、<b>範囲</b>（最大値－最小値）のほか、各値と平均値の差（<b>偏差</b>）を使って表す。偏差の合計は必ず 0 になるので、偏差を2乗して平均した<b>分散</b> $s^2$ を使い、その正の平方根を<b>標準偏差</b> $s$ という。標準偏差はデータと同じ単位をもち、大きいほど散らばりが大きい。表計算ソフトでは、平均値は AVERAGE、中央値は MEDIAN、分散は VAR.P、標準偏差は STDEV.P などの関数で求められる。
+</div>
+<div class="box ex">
+10 人の小テスト（10 点満点）の得点が 3, 5, 6, 6, 7, 8, 8, 8, 9, 10 であった。(1) 平均値・中央値・最頻値を求めよ。(2) 分散と標準偏差を求めよ（標準偏差は小数第2位を四捨五入）。(3) 10 点の人の得点が誤って 30 点と入力されていたとすると、平均値と中央値はどうなるか。
+<div class="solx"><b>解</b>　(1) 平均値 $70\div10=$ <b>7 点</b>。中央値は5番目と6番目の平均 $(7+8)\div2=$ <b>7.5 点</b>。最頻値は <b>8 点</b>（3人）。<br>
+(2) 偏差は $-4,-2,-1,-1,0,1,1,1,2,3$。2乗の和は $16+4+1+1+0+1+1+1+4+9=38$。分散 $38\div10=$ <b>3.8</b>、標準偏差 $\sqrt{3.8}\fallingdotseq$ <b>1.9 点</b>。<br>
+(3) 合計が 20 増えて平均値は <b>9 点</b>になるが、中央値は <b>7.5 点</b>のまま（並び順の中央は変わらない）。</div>
+</div>
+<h3>講義2　四分位数と箱ひげ図</h3>
+<div class="box lect">
+データを小さい順に並べ、中央値で前半と後半に分ける（個数が奇数のときは中央値を除く）。前半の中央値を<b>第1四分位数</b> $Q_1$、全体の中央値を<b>第2四分位数</b> $Q_2$、後半の中央値を<b>第3四分位数</b> $Q_3$ という。$Q_3-Q_1$ を<b>四分位範囲</b>といい、中央付近の約半数のデータの散らばりを表す。最小値・$Q_1$・$Q_2$・$Q_3$・最大値の5つ（<b>五数要約</b>）を図にしたものが<b>箱ひげ図</b>で、箱の中に約半数のデータが入る。平均値を ＋ で書きこむこともある。<br>
+$Q_1-1.5\times(Q_3-Q_1)$ より小さい値や、$Q_3+1.5\times(Q_3-Q_1)$ より大きい値を<b>外れ値</b>とみなし、ひげの外に点で示す方法もある。<br>
+箱ひげ図は、複数の集団の分布を並べて比べるのに向いている。ただし、分布の細かな形（山が2つあるかなど）はわからないので、必要に応じて<b>ヒストグラム</b>も見る。
+<svg class="fig" width="480" height="134" viewBox="0 0 480 134" xmlns="http://www.w3.org/2000/svg"><line x1="60" y1="112" x2="440" y2="112" stroke="#555" stroke-width="1.2"/><line x1="60" y1="112" x2="60" y2="116" stroke="#555" stroke-width="1"/><text x="60" y="128" font-size="9.5" text-anchor="middle" fill="#1e1e1e">0</text><line x1="60" y1="8" x2="60" y2="112" stroke="#eeeeee" stroke-width="0.8"/><line x1="98" y1="112" x2="98" y2="116" stroke="#555" stroke-width="1"/><text x="98" y="128" font-size="9.5" text-anchor="middle" fill="#1e1e1e">2</text><line x1="98" y1="8" x2="98" y2="112" stroke="#eeeeee" stroke-width="0.8"/><line x1="136" y1="112" x2="136" y2="116" stroke="#555" stroke-width="1"/><text x="136" y="128" font-size="9.5" text-anchor="middle" fill="#1e1e1e">4</text><line x1="136" y1="8" x2="136" y2="112" stroke="#eeeeee" stroke-width="0.8"/><line x1="174" y1="112" x2="174" y2="116" stroke="#555" stroke-width="1"/><text x="174" y="128" font-size="9.5" text-anchor="middle" fill="#1e1e1e">6</text><line x1="174" y1="8" x2="174" y2="112" stroke="#eeeeee" stroke-width="0.8"/><line x1="212" y1="112" x2="212" y2="116" stroke="#555" stroke-width="1"/><text x="212" y="128" font-size="9.5" text-anchor="middle" fill="#1e1e1e">8</text><line x1="212" y1="8" x2="212" y2="112" stroke="#eeeeee" stroke-width="0.8"/><line x1="250" y1="112" x2="250" y2="116" stroke="#555" stroke-width="1"/><text x="250" y="128" font-size="9.5" text-anchor="middle" fill="#1e1e1e">10</text><line x1="250" y1="8" x2="250" y2="112" stroke="#eeeeee" stroke-width="0.8"/><line x1="288" y1="112" x2="288" y2="116" stroke="#555" stroke-width="1"/><text x="288" y="128" font-size="9.5" text-anchor="middle" fill="#1e1e1e">12</text><line x1="288" y1="8" x2="288" y2="112" stroke="#eeeeee" stroke-width="0.8"/><line x1="326" y1="112" x2="326" y2="116" stroke="#555" stroke-width="1"/><text x="326" y="128" font-size="9.5" text-anchor="middle" fill="#1e1e1e">14</text><line x1="326" y1="8" x2="326" y2="112" stroke="#eeeeee" stroke-width="0.8"/><line x1="364" y1="112" x2="364" y2="116" stroke="#555" stroke-width="1"/><text x="364" y="128" font-size="9.5" text-anchor="middle" fill="#1e1e1e">16</text><line x1="364" y1="8" x2="364" y2="112" stroke="#eeeeee" stroke-width="0.8"/><line x1="402" y1="112" x2="402" y2="116" stroke="#555" stroke-width="1"/><text x="402" y="128" font-size="9.5" text-anchor="middle" fill="#1e1e1e">18</text><line x1="402" y1="8" x2="402" y2="112" stroke="#eeeeee" stroke-width="0.8"/><line x1="440" y1="112" x2="440" y2="116" stroke="#555" stroke-width="1"/><text x="440" y="128" font-size="9.5" text-anchor="middle" fill="#1e1e1e">20</text><line x1="440" y1="8" x2="440" y2="112" stroke="#eeeeee" stroke-width="0.8"/><text x="448" y="128" font-size="9.5" text-anchor="start" fill="#1e1e1e">（点）</text><text x="48" y="36" font-size="10.5" text-anchor="end" fill="#1e1e1e" font-weight="bold">A 組</text><line x1="136" y1="32" x2="212" y2="32" stroke="#1e1e1e" stroke-width="1.3"/><line x1="326" y1="32" x2="421" y2="32" stroke="#1e1e1e" stroke-width="1.3"/><line x1="136" y1="25" x2="136" y2="39" stroke="#1e1e1e" stroke-width="1.3"/><line x1="421" y1="25" x2="421" y2="39" stroke="#1e1e1e" stroke-width="1.3"/><rect x="212" y="20" width="114" height="24" rx="0" fill="#e6f2f8" stroke="#0b5f84" stroke-width="1.4"/><line x1="269" y1="20" x2="269" y2="44" stroke="#c0392b" stroke-width="2"/><text x="269" y="36" font-size="13" text-anchor="middle" fill="#d9701e" font-weight="bold">+</text><text x="48" y="82" font-size="10.5" text-anchor="end" fill="#1e1e1e" font-weight="bold">B 組</text><line x1="174" y1="78" x2="240.5" y2="78" stroke="#1e1e1e" stroke-width="1.3"/><line x1="335.5" y1="78" x2="383" y2="78" stroke="#1e1e1e" stroke-width="1.3"/><line x1="174" y1="71" x2="174" y2="85" stroke="#1e1e1e" stroke-width="1.3"/><line x1="383" y1="71" x2="383" y2="85" stroke="#1e1e1e" stroke-width="1.3"/><rect x="240.5" y="66" width="95" height="24" rx="0" fill="#e6f2f8" stroke="#0b5f84" stroke-width="1.4"/><line x1="297.5" y1="66" x2="297.5" y2="90" stroke="#c0392b" stroke-width="2"/><text x="288" y="82" font-size="13" text-anchor="middle" fill="#d9701e" font-weight="bold">+</text></svg>
+</div>
+<div class="box ex">
+上の図は、A 組（11人）と B 組（12人）の小テスト（20 点満点）の箱ひげ図である（＋は平均値）。A 組の得点は 4, 7, 8, 9, 10, 11, 12, 12, 14, 15, 19 であった。<br>
+(1) A 組の五数要約と四分位範囲を求めよ。<br>
+(2) 図から読みとれることとして<b>正しいもの</b>をすべて選べ。　① 中央値は B 組のほうが大きい　② 四分位範囲は A 組のほうが大きい　③ どちらの組にも 5 点以下の生徒がいる　④ A 組で第3四分位数以上の生徒は、全員が B 組の最高点以上である
+<div class="solx"><b>解</b>　(1) 中央値は6番目の <b>11</b>。前半 4, 7, 8, 9, 10 の中央値 $Q_1=$ <b>8</b>、後半 12, 12, 14, 15, 19 の中央値 $Q_3=$ <b>14</b>。最小値 <b>4</b>、最大値 <b>19</b>。四分位範囲 $14-8=$ <b>6</b>。<br>
+(2) <b>①・②</b>。B 組は $Q_1=9.5$、中央値 12.5、$Q_3=14.5$ で、① $12.5\gt11$（正）、② A 組 6、B 組 $14.5-9.5=5$（正）、③ B 組の最小値は 6 点（誤）、④ A 組の $Q_3=14$ 点は B 組の最高点 17 点より低い（誤）。</div>
+</div>
+<h3>講義3　散布図・相関係数・回帰直線</h3>
+<div class="box lect">
+<div class="two"><div>2つの量の関係は<b>散布図</b>で見る。右上がりの傾向を<b>正の相関</b>、右下がりを<b>負の相関</b>、どちらでもないものを<b>相関がない</b>という。<br>
+強さは<b>相関係数</b> $r=\dfrac{s_{xy}}{s_xs_y}$ で表す。$s_{xy}=\dfrac1n\sum(x_i-\bar x)(y_i-\bar y)$ を<b>共分散</b>という。$r$ は $-1$ 以上 $1$ 以下で、$1$ に近いほど強い正の相関、$-1$ に近いほど強い負の相関、$0$ に近いほど直線的な関係が弱い。<br>
+データの傾向を表す直線 $y=ax+b$ を<b>回帰直線</b>といい、$a=\dfrac{s_{xy}}{s_x^2}$、$b=\bar y-a\bar x$ で求める（各点と直線との縦方向のずれの2乗の和が最小になる直線）。回帰直線は必ず平均の点 $(\bar x,\bar y)$ を通り、$x$ から $y$ を<b>予測</b>するのに使える。</div>
+<div style="flex:0 0 310px"><svg class="fig" width="310" height="206" viewBox="0 0 310 206" xmlns="http://www.w3.org/2000/svg"><line x1="44" y1="170" x2="294" y2="170" stroke="#555" stroke-width="1.2"/><text x="39" y="174" font-size="9.5" text-anchor="end" fill="#1e1e1e">20</text><line x1="44" y1="148.6" x2="294" y2="148.6" stroke="#ececec" stroke-width="0.8"/><text x="39" y="152.6" font-size="9.5" text-anchor="end" fill="#1e1e1e">30</text><line x1="44" y1="127.1" x2="294" y2="127.1" stroke="#ececec" stroke-width="0.8"/><text x="39" y="131.1" font-size="9.5" text-anchor="end" fill="#1e1e1e">40</text><line x1="44" y1="105.7" x2="294" y2="105.7" stroke="#ececec" stroke-width="0.8"/><text x="39" y="109.7" font-size="9.5" text-anchor="end" fill="#1e1e1e">50</text><line x1="44" y1="84.3" x2="294" y2="84.3" stroke="#ececec" stroke-width="0.8"/><text x="39" y="88.3" font-size="9.5" text-anchor="end" fill="#1e1e1e">60</text><line x1="44" y1="62.9" x2="294" y2="62.9" stroke="#ececec" stroke-width="0.8"/><text x="39" y="66.9" font-size="9.5" text-anchor="end" fill="#1e1e1e">70</text><line x1="44" y1="41.4" x2="294" y2="41.4" stroke="#ececec" stroke-width="0.8"/><text x="39" y="45.4" font-size="9.5" text-anchor="end" fill="#1e1e1e">80</text><line x1="44" y1="20" x2="294" y2="20" stroke="#ececec" stroke-width="0.8"/><text x="39" y="24" font-size="9.5" text-anchor="end" fill="#1e1e1e">90</text><line x1="44" y1="170" x2="44" y2="174" stroke="#555" stroke-width="1"/><text x="44" y="185" font-size="9.5" text-anchor="middle" fill="#1e1e1e">0</text><line x1="94" y1="170" x2="94" y2="174" stroke="#555" stroke-width="1"/><text x="94" y="185" font-size="9.5" text-anchor="middle" fill="#1e1e1e">2</text><line x1="144" y1="170" x2="144" y2="174" stroke="#555" stroke-width="1"/><text x="144" y="185" font-size="9.5" text-anchor="middle" fill="#1e1e1e">4</text><line x1="194" y1="170" x2="194" y2="174" stroke="#555" stroke-width="1"/><text x="194" y="185" font-size="9.5" text-anchor="middle" fill="#1e1e1e">6</text><line x1="244" y1="170" x2="244" y2="174" stroke="#555" stroke-width="1"/><text x="244" y="185" font-size="9.5" text-anchor="middle" fill="#1e1e1e">8</text><line x1="294" y1="170" x2="294" y2="174" stroke="#555" stroke-width="1"/><text x="294" y="185" font-size="9.5" text-anchor="middle" fill="#1e1e1e">10</text><line x1="44" y1="170" x2="44" y2="15.7" stroke="#555" stroke-width="1.2"/><line x1="69" y1="146.4" x2="294" y2="21.1" stroke="#c0392b" stroke-width="1.5"/><text x="294" y="148.6" font-size="9.5" text-anchor="end" fill="#c0392b">赤線：回帰直線 y = 6.5x + 24.5</text><circle cx="94" cy="140" r="3.6" fill="#3f8fb7" stroke="#0b5f84" stroke-width="1.2"/><circle cx="119" cy="122.9" r="3.6" fill="#3f8fb7" stroke="#0b5f84" stroke-width="1.2"/><circle cx="119" cy="116.4" r="3.6" fill="#3f8fb7" stroke="#0b5f84" stroke-width="1.2"/><circle cx="144" cy="120.7" r="3.6" fill="#3f8fb7" stroke="#0b5f84" stroke-width="1.2"/><circle cx="144" cy="82.1" r="3.6" fill="#3f8fb7" stroke="#0b5f84" stroke-width="1.2"/><circle cx="219" cy="45.7" r="3.6" fill="#3f8fb7" stroke="#0b5f84" stroke-width="1.2"/><circle cx="244" cy="50" r="3.6" fill="#3f8fb7" stroke="#0b5f84" stroke-width="1.2"/><circle cx="269" cy="47.9" r="3.6" fill="#3f8fb7" stroke="#0b5f84" stroke-width="1.2"/><circle cx="169" cy="90.7" r="3.4" fill="#fff" stroke="#d9701e" stroke-width="1.6"/><text x="175" y="103.7" font-size="9.5" text-anchor="start" fill="#d9701e">平均 (5, 57)</text><text x="169" y="200" font-size="9.5" text-anchor="middle" fill="#1e1e1e">1日の家庭学習時間 x（×10分）</text><text x="8" y="9.7" font-size="9.5" text-anchor="start" fill="#1e1e1e">得点 y（点）</text></svg></div></div>
+ただし、相関は<b>因果関係</b>を意味しない。「アイスクリームの売上」と「水難事故の件数」には正の相関があるが、どちらも「気温」という<b>第3の要因</b>に左右されているだけである（<b>疑似相関</b>）。また、データの範囲の外まで回帰直線で予測すると、大きく外れることがある。
+</div>
+<div class="box ex">
+8人の1日の家庭学習時間 $x$（×10 分）とテストの得点 $y$（点）を調べた（上の散布図）。
+<table class="w"><tr><th>$x$</th><td>2</td><td>3</td><td>3</td><td>4</td><td>4</td><td>7</td><td>8</td><td>9</td><th>合計</th></tr>
+<tr><th>$y$</th><td>34</td><td>42</td><td>45</td><td>43</td><td>61</td><td>78</td><td>76</td><td>77</td><td></td></tr>
+<tr><th>$x-\bar x$</th><td>$-3$</td><td>$-2$</td><td>$-2$</td><td>$-1$</td><td>$-1$</td><td>2</td><td>3</td><td>4</td><td>0</td></tr>
+<tr><th>$y-\bar y$</th><td>$-23$</td><td>$-15$</td><td>$-12$</td><td>$-14$</td><td>4</td><td>21</td><td>19</td><td>20</td><td>0</td></tr>
+<tr><th>$(x-\bar x)(y-\bar y)$</th><td>69</td><td>30</td><td>24</td><td>14</td><td>$-4$</td><td>42</td><td>57</td><td>80</td><td>312</td></tr></table>
+$\bar x=5$、$\bar y=57$、$(x-\bar x)^2$ の合計は 48、$(y-\bar y)^2$ の合計は 2312 である。(1) 相関係数を求めよ（小数第3位を四捨五入。$\sqrt6=2.449$ とする）。(2) 回帰直線の式を求め、学習時間が 60 分の人の得点を予測せよ。
+<div class="solx"><b>解</b>　(1) $s_x^2=48\div8=6$、$s_y^2=2312\div8=289$ より $s_x=\sqrt6$、$s_y=17$。$s_{xy}=312\div8=39$。<br>
+$r=\dfrac{39}{\sqrt6\times17}=\dfrac{39}{41.633}\fallingdotseq$ <b>0.94</b>（強い正の相関）。<br>
+(2) $a=\dfrac{39}{6}=6.5$、$b=57-6.5\times5=24.5$ より <b>$y=6.5x+24.5$</b>。60 分は $x=6$ なので $6.5\times6+24.5=$ <b>63.5 点</b>。</div>
+</div>
+<h3>講義4　クロス集計</h3>
+<div class="box lect">
+質的データどうしの関係は、2つの項目の組合せごとに人数を数えた<b>クロス集計表</b>で調べる。人数のままでは集団の大きさが違うと比べにくいので、<b>行（または列）ごとの割合</b>に直して比べる。どちらの合計を 100 % にするかは、何と何を比べたいかで決める。<br>
+クロス集計で差が見られても、それが原因と結果の関係とは限らない。ほかの要因（年齢、学年、生活時間など）で集団を分けて集計し直すと、差が消えたり逆転したりすることもある。
+</div>
+<div class="box ex">
+<div class="two"><div style="flex:0 0 370px"><table style="margin:0"><tr><th></th><th>眠くなることが多い</th><th>少ない</th><th>計</th></tr>
+<tr><th>朝食を毎日とる</th><td>36</td><td>114</td><td>150</td></tr><tr><th>毎日はとらない</th><td>20</td><td>30</td><td>50</td></tr><tr><th>計</th><td>56</td><td>144</td><td>200</td></tr></table></div>
+<div>ある高校の生徒 200 人に、朝食と授業中の眠気について調べた（左の表）。<br>(1) 朝食を「毎日とる」生徒と「毎日はとらない」生徒のそれぞれについて、「眠くなることが多い」生徒の割合を求めよ。(2) この結果から「朝食をとれば眠気が減る」と結論づけてよいか。</div></div>
+<div class="solx"><b>解</b>　(1) 毎日とる：$36\div150=$ <b>24 %</b>、毎日はとらない：$20\div50=$ <b>40 %</b>。人数では 36 人と 20 人で前者が多いが、割合では後者が高い。<br>
+(2) <b>結論づけられない</b>。睡眠時間が短いなどの第3の要因が、朝食と眠気の両方に関わっている可能性がある。睡眠時間をそろえて比べるなどの追加の調査が必要。</div>
+</div>
+<div class="box chk">
+(1) データ 2, 4, 4, 5, 10 の平均値と中央値を求めよ。　(2) データ 1, 3, 5, 7, 9 の分散と標準偏差を求めよ。<br>
+(3) データ 3, 5, 6, 8, 9, 12, 14 の第1四分位数・第3四分位数・四分位範囲を求めよ。<br>
+(4) 変量 $x,y$ について $s_x=4$、$s_y=5$、$s_{xy}=-12$ のとき、相関係数を求めよ。
+</div>
+<div class="box aim">
+・箱ひげ図・散布図などの<b>読みとり</b>と表計算での<b>集計の手順</b>が頻出。相関係数・回帰直線は偏差の表から計算させる形が多い（回帰直線が $(\bar x,\bar y)$ を通ることで検算）。<br>
+・「相関＝因果」ではないこと、クロス集計では<b>割合</b>で比べることが、考察問題の正解の柱になる。
+</div>
+<h3 class="deep">講義5　仮説検定の考え方 ― 偶然かどうかを確率で判断する</h3>
+<p>あるコインを 20 回投げたら表が 15 回出た。このコインは「表が出やすい」といえるだろうか。</p>
+<div class="box lect">
+①主張したいこと（表が出やすい）と反対の仮説「<b>表と裏の出やすさは同じ</b>（表の確率 $\frac12$）」を立てる。<br>
+②この仮説が正しいとして、表が 15 回以上出る確率を求める。表が 15〜20 回となる出方は ${}_{20}\mathrm{C}_{15}+\cdots+{}_{20}\mathrm{C}_{20}=15504+4845+1140+190+20+1=21700$ 通りなので、確率は $21700\div2^{20}=21700\div1048576\fallingdotseq0.021$。<br>
+③あらかじめ決めた基準（<b>有意水準</b>。5 % がよく使われる）より小さいので、「仮説のもとではめったに起こらないことが起きた」と考えて仮説を<b>棄却</b>し、「表が出やすい」と判断する。<br>
+表が 14 回なら、14 回以上の確率は約 0.058（5 % より大）で仮説は棄却できず、「表が出やすいとはいえない」となる（出やすさが同じだと証明されたわけではない）。
+</div>
+<div class="box warn">
+・分散を求めるとき、偏差の2乗の平均ではなく偏差の平均（必ず 0）を計算してしまう。<br>
+・個数が奇数のときの四分位数で、中央値を前半・後半に含めてしまう。<br>
+・箱ひげ図の箱が長いほど「人数が多い」と考える。箱にはどちらの組も約半数のデータが入る。
+</div>
+<div class="box ans">
+(1) 平均値 5、中央値 4　(2) 偏差 $-4,-2,0,2,4$ より分散 $40\div5=8$、標準偏差 $2\sqrt2\fallingdotseq2.83$　(3) 前半 3, 5, 6 より $Q_1=5$、後半 9, 12, 14 より $Q_3=12$、四分位範囲 7　(4) $r=-12\div(4\times5)=-0.6$
+</div>
