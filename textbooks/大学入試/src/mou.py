@@ -78,6 +78,27 @@ USAGE = [
     "まず指針を隠して自分で方針を立て、解答と見比べる。解けなかった例題は練習で確かめ、日をおいてもう一度解こう。",
 ]
 dist = "　".join(f"{'★' * k}：{cnt[k]}題" for k in LV)
+# 圧縮版（COMPACT=1）：内容はそのまま、章ごとの改ページをやめ、文字・余白を詰め、練習の答えを2段組にする
+COMPACT = bool(os.environ.get("COMPACT"))
+COMPACT_CSS = """
+body { font-size:9.1pt; line-height:1.47; }
+h2 { page-break-before:auto; font-size:13pt; margin:4mm 0 2mm; padding-bottom:0.8mm; border-bottom-width:2px; }
+h2.np, h2.ansh { page-break-before:always; margin-top:0; }
+h2 .no { font-size:10.5pt; padding:0 6px; }
+h3 { font-size:10.5pt; padding:0.6mm 2.5mm; margin:3mm 0 1.5mm; }
+.base { padding:1.2mm 2.6mm; margin:0 0 1.8mm; font-size:8.8pt; }
+.rei { margin:0 0 2.2mm; border-width:1.1px; }
+.rh { padding:0.5mm 2.5mm; } .rno { font-size:9.8pt; }
+.rq { padding:1mm 2.5mm 0.8mm; }
+.hint, .note { padding:0.8mm 2.5mm; font-size:8.6pt; }
+.rsol { padding:1mm 2.5mm; }
+.ren { padding:0.8mm 2.5mm; }
+.toc { font-size:8.3pt; line-height:1.35; }
+.ans { columns:2; column-gap:6mm; font-size:8.3pt; line-height:1.42; }
+.ah { break-after:avoid; margin:2mm 0 0.8mm; }
+"""
+if COMPACT:
+    vol = dict(vol, sub=vol["sub"] + "<br><small>（圧縮版：内容はそのまま、ページを詰めて軽くした版）</small>")
 title = f'{meta["series"]}　第{VOL}巻　{vol["title"]}'
 cover = f'''<div class="cover"><div class="series">{meta["series"]}</div>
 <div class="kind">第{VOL}巻<small>{vol["title"]}</small></div>
@@ -133,12 +154,13 @@ h3.tch {{ background:none; color:var(--main); padding:0; border-left:5px solid v
 .ai {{ margin:0 0 0.8mm; break-inside:avoid; }} .ai b {{ color:var(--main); }}
 ul li {{ margin:0.5mm 0; }}
 .katex {{ font-size:1.04em; }}
+{COMPACT_CSS if COMPACT else ""}
 </style></head><body>
 {cover}
 {esc_math("".join(body))}
-<h2>練習の答え</h2><div class="ans">{esc_math("".join(answers))}</div>
+<h2 class="ansh">練習の答え</h2><div class="ans">{esc_math("".join(answers))}</div>
 <script>renderMathInElement(document.body,{{delimiters:[{{left:"$",right:"$",display:false}}],throwOnError:false}});document.body.setAttribute("data-done","1");</script>
 </body></html>"""
-out = os.environ.get("OUT", f"vol{VOL}.html")
+out = os.environ.get("OUT", f"vol{VOL}{'_c' if COMPACT else ''}.html")
 open(os.path.join(d, out), "w", encoding="utf-8").write(html)
 print("ok", title, f"例題 {n}", cnt)
