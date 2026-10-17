@@ -45,6 +45,7 @@ for no in chs:
             assert it["lv"] in LV
     data[no] = ch
 
+WIDE = {int(x) for x in os.environ.get("WIDE", "").split(",") if x.strip()}  # 2段組で段からはみ出す例題（その例題だけ縮小して段に収める）
 n = 0
 body, toc, answers = [], [], []
 cnt = {k: 0 for k in LV}
@@ -63,7 +64,7 @@ for no in chs:
             cnt[it["lv"]] += 1
             note = f'<div class="note"><span class="lb">検討</span>{it["note"]}</div>' if it.get("note") else ""
             body.append(
-                f'<div class="rei lv{it["lv"]}"><div class="rhq"><div class="rh"><span class="rno">例題 {n}</span>{stars(it["lv"])}<span class="rt">{it["title"]}</span></div>'
+                f'<div class="rei lv{it["lv"]}{" wide" if n in WIDE else ""}" id="r{n}"><div class="rhq"><div class="rh"><span class="rno">例題 {n}</span>{stars(it["lv"])}<span class="rt">{it["title"]}</span></div>'
                 f'<div class="rq">{it["q"]}</div></div>'
                 f'<div class="hint"><span class="lb">指針</span>{it["hint"]}</div>'
                 f'<div class="rsol"><span class="lb">解答</span>{it["sol"]}</div>{note}'
@@ -96,6 +97,36 @@ h3 { font-size:10.5pt; padding:0.6mm 2.5mm; margin:3mm 0 1.5mm; }
 .toc { font-size:8.3pt; line-height:1.35; }
 .ans { columns:2; column-gap:6mm; font-size:8.3pt; line-height:1.42; }
 .ah { break-after:avoid; margin:2mm 0 0.8mm; }
+"""
+# COMPACT=2：さらに詰めた版（文字 8.4pt、余白最小、練習の答えは3段組）。描画は余白の狭い render_nc2.js で
+if os.environ.get("COMPACT") in ("2", "3"):
+    COMPACT_CSS += """
+body { font-size:8.4pt; line-height:1.4; }
+h2 { font-size:12pt; margin:3mm 0 1.5mm; } h2 .no { font-size:10pt; }
+h3 { font-size:9.8pt; padding:0.4mm 2mm; margin:2.2mm 0 1.2mm; }
+.base { padding:0.9mm 2.2mm; margin:0 0 1.4mm; font-size:8.1pt; }
+.rei { margin:0 0 1.6mm; border-width:1px; border-radius:3px; }
+.rh { padding:0.3mm 2.2mm; border-radius:3px 3px 0 0; } .rno { font-size:9pt; margin-right:2mm; }
+.rq { padding:0.7mm 2.2mm 0.5mm; }
+.hint, .note { padding:0.5mm 2.2mm; font-size:7.9pt; }
+.rsol { padding:0.7mm 2.2mm; }
+.ren { padding:0.5mm 2.2mm; border-radius:0 0 3px 3px; }
+.lb { margin-right:1.8mm; }
+svg.fig { margin:0.8mm auto; } .rq svg.fig, .rsol svg.fig { margin:0.3mm 0 0.6mm 3mm; }
+table { margin:1mm 0; } td, th { padding:0.3mm 1.6mm; }
+.ans { columns:2; column-gap:5mm; font-size:7.6pt; line-height:1.38; }
+.katex { font-size:1.03em; }
+"""
+# COMPACT=3：COMPACT=2 に加えて本文を2段組にする（はみ出す例題は WIDE で縮小）
+if os.environ.get("COMPACT") == "3":
+    COMPACT_CSS += """
+.cols { columns:2; column-gap:4.5mm; }
+body { font-size:8.2pt; line-height:1.38; }
+.hint, .note { font-size:7.8pt; }
+.cols h2 { column-span:all; }
+.rei.wide { zoom:0.76; }
+.rq svg.fig, .rsol svg.fig { float:none; display:block; margin:0.6mm auto; max-width:100%; height:auto; }
+.cols .two { flex-wrap:wrap; }
 """
 if COMPACT:
     vol = dict(vol, sub=vol["sub"] + "<br><small>（圧縮版：内容はそのまま、ページを詰めて軽くした版）</small>")
@@ -157,10 +188,10 @@ ul li {{ margin:0.5mm 0; }}
 {COMPACT_CSS if COMPACT else ""}
 </style></head><body>
 {cover}
-{esc_math("".join(body))}
+{'<div class="cols">' if os.environ.get("COMPACT") == "3" else ""}{esc_math("".join(body))}{"</div>" if os.environ.get("COMPACT") == "3" else ""}
 <h2 class="ansh">練習の答え</h2><div class="ans">{esc_math("".join(answers))}</div>
 <script>renderMathInElement(document.body,{{delimiters:[{{left:"$",right:"$",display:false}}],throwOnError:false}});document.body.setAttribute("data-done","1");</script>
 </body></html>"""
-out = os.environ.get("OUT", f"vol{VOL}{'_c' if COMPACT else ''}.html")
+out = os.environ.get("OUT", f"vol{VOL}{('_c' + (os.environ['COMPACT'] if os.environ.get('COMPACT') in ('2', '3') else '')) if COMPACT else ''}.html")
 open(os.path.join(d, out), "w", encoding="utf-8").write(html)
 print("ok", title, f"例題 {n}", cnt)
