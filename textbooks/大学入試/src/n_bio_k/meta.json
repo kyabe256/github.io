@@ -1,0 +1,105 @@
+{
+ "subject": "生物",
+ "math": false,
+ "color": "#2e6b30",
+ "color2": "#56a05a",
+ "subcolor": "#ebf6ec",
+ "parts": [
+  {
+   "title": "第1部 細胞と代謝",
+   "sub": "",
+   "chapters": [
+    {
+     "no": 1,
+     "title": "細胞と生物の共通性"
+    },
+    {
+     "no": 2,
+     "title": "代謝と酵素"
+    },
+    {
+     "no": 3,
+     "title": "呼吸と光合成"
+    }
+   ]
+  },
+  {
+   "title": "第2部 遺伝情報",
+   "sub": "",
+   "chapters": [
+    {
+     "no": 4,
+     "title": "DNAの構造と複製"
+    },
+    {
+     "no": 5,
+     "title": "遺伝子の発現と調節"
+    },
+    {
+     "no": 6,
+     "title": "バイオテクノロジー"
+    },
+    {
+     "no": 7,
+     "title": "遺伝の法則"
+    }
+   ]
+  },
+  {
+   "title": "第3部 体内環境と動物の反応",
+   "sub": "",
+   "chapters": [
+    {
+     "no": 8,
+     "title": "体内環境と恒常性"
+    },
+    {
+     "no": 9,
+     "title": "免疫"
+    },
+    {
+     "no": 10,
+     "title": "神経と行動"
+    }
+   ]
+  },
+  {
+   "title": "第4部 発生と植物",
+   "sub": "",
+   "chapters": [
+    {
+     "no": 11,
+     "title": "生殖と発生"
+    },
+    {
+     "no": 12,
+     "title": "植物の環境応答"
+    }
+   ]
+  },
+  {
+   "title": "第5部 生態と進化",
+   "sub": "",
+   "chapters": [
+    {
+     "no": 13,
+     "title": "生態系と物質循環"
+    },
+    {
+     "no": 14,
+     "title": "個体群と生物群集"
+    },
+    {
+     "no": 15,
+     "title": "進化と系統"
+    }
+   ]
+  }
+ ],
+ "intro_html": "<h3>この3冊の使い分け</h3><table class='l w'><tr><th>本</th><th>役割</th><th>使うタイミング</th></tr><tr><td><b>教科書（講義編）</b></td><td>生物基礎・生物の入試範囲を体系的に理解する</td><td>単元の学習・復習の最初</td></tr><tr><td><b>参考書（解法・整理編）</b></td><td>「こう出たらこう解く」の解法カードで、設問と解き方・知識を結びつける</td><td>問題演習の前後、直前期の総整理</td></tr><tr><td><b>問題集（演習編）</b></td><td>A基本・B標準・C発展の演習で実戦力をつける</td><td>講義を読んだ後、くり返し</td></tr></table><p>3冊とも<b>章番号が共通</b>です（全15章）。</p>",
+ "kind": "教科書",
+ "title": "大学入試 生物 教科書（講義編）",
+ "cover_title": "生物基礎・生物<br>入試生物の講義",
+ "cover_sub": "共通テストから国公立二次・難関私大まで<br>入試に必要な理解を15章で体系的に",
+ "extra_css": ".bun { background:#f7f7f7; border-left:4px solid #999; padding:2mm 3.5mm; margin:2mm 0; line-height:1.8; } .shiryo { background:#fbfaf3; border-left:4px solid #b08d57; padding:2mm 3.5mm; margin:2mm 0; line-height:1.8; }"
+}
