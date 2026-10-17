@@ -1,0 +1,103 @@
+{
+ "subject": "化学",
+ "math": true,
+ "color": "#6d2a86",
+ "color2": "#9b5bb8",
+ "subcolor": "#f3ecf8",
+ "parts": [
+  {
+   "title": "第1部 理論化学",
+   "sub": "",
+   "chapters": [
+    {
+     "no": 1,
+     "title": "物質の構成と化学結合"
+    },
+    {
+     "no": 2,
+     "title": "物質量と化学反応式"
+    },
+    {
+     "no": 3,
+     "title": "酸と塩基・中和"
+    },
+    {
+     "no": 4,
+     "title": "酸化還元・電池・電気分解"
+    },
+    {
+     "no": 5,
+     "title": "物質の状態と気体"
+    },
+    {
+     "no": 6,
+     "title": "溶液"
+    },
+    {
+     "no": 7,
+     "title": "化学反応とエネルギー"
+    },
+    {
+     "no": 8,
+     "title": "反応速度と化学平衡"
+    },
+    {
+     "no": 9,
+     "title": "電離平衡"
+    }
+   ]
+  },
+  {
+   "title": "第2部 無機化学",
+   "sub": "",
+   "chapters": [
+    {
+     "no": 10,
+     "title": "非金属元素"
+    },
+    {
+     "no": 11,
+     "title": "金属元素"
+    }
+   ]
+  },
+  {
+   "title": "第3部 有機化学",
+   "sub": "",
+   "chapters": [
+    {
+     "no": 12,
+     "title": "有機化合物の基礎と脂肪族化合物"
+    },
+    {
+     "no": 13,
+     "title": "芳香族化合物"
+    },
+    {
+     "no": 14,
+     "title": "有機化合物の構造決定"
+    }
+   ]
+  },
+  {
+   "title": "第4部 高分子化合物",
+   "sub": "",
+   "chapters": [
+    {
+     "no": 15,
+     "title": "天然高分子化合物"
+    },
+    {
+     "no": 16,
+     "title": "合成高分子化合物"
+    }
+   ]
+  }
+ ],
+ "intro_html": "<h3>この3冊の使い分け</h3><table class='l w'><tr><th>本</th><th>役割</th><th>使うタイミング</th></tr><tr><td><b>教科書（講義編）</b></td><td>化学基礎・化学の入試範囲を体系的に理解する</td><td>単元の学習・復習の最初</td></tr><tr><td><b>参考書（解法・整理編）</b></td><td>「こう出たらこう解く」の解法カードで、設問と解き方・知識を結びつける</td><td>問題演習の前後、直前期の総整理</td></tr><tr><td><b>問題集（演習編）</b></td><td>A基本・B標準・C発展の演習で実戦力をつける</td><td>講義を読んだ後、くり返し</td></tr></table><p>3冊とも<b>章番号が共通</b>です（全16章）。</p>",
+ "kind": "教科書",
+ "title": "大学入試 化学 教科書（講義編）",
+ "cover_title": "化学基礎・化学<br>入試化学の講義",
+ "cover_sub": "共通テストから国公立二次・難関私大まで<br>入試に必要な理解を16章で体系的に",
+ "extra_css": ".bun { background:#f7f7f7; border-left:4px solid #999; padding:2mm 3.5mm; margin:2mm 0; line-height:1.8; } .shiryo { background:#fbfaf3; border-left:4px solid #b08d57; padding:2mm 3.5mm; margin:2mm 0; line-height:1.8; }"
+}

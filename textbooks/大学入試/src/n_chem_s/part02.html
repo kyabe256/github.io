@@ -1,0 +1,773 @@
+<!--CH 9-->
+<div class="pat"><h4>弱酸の pH は「$[\mathrm{H^+}]=\sqrt{cK_\mathrm{a}}$」— $1-\alpha\fallingdotseq1$ の近似で</h4>
+<div class="when">酢酸などの弱酸の濃度と電離定数から、pH や電離度を求める。</div>
+<div class="how">$\mathrm{HA\rightleftarrows H^++A^-}$ で、濃度 $c$、電離度 $\alpha$ とすると $K_\mathrm{a}=\dfrac{c\alpha^2}{1-\alpha}\fallingdotseq c\alpha^2$（$\alpha\ll1$）。<br>
+<b>$\alpha=\sqrt{\dfrac{K_\mathrm{a}}{c}}$、$[\mathrm{H^+}]=c\alpha=\sqrt{cK_\mathrm{a}}$</b>。薄めるほど $\alpha$ は大きくなる。<br>
+対数の計算は $\mathrm{pH}=-\frac12(\log c+\log K_\mathrm{a})$ とすると速い。</div>
+<div class="pex">0.10 mol/L 酢酸水溶液の pH と電離度を求めよ。酢酸の $K_\mathrm{a}=1.8\times10^{-5}$ mol/L、$\log2=0.30$、$\log3=0.48$<br>
+<b>解</b>　$[\mathrm{H^+}]=\sqrt{0.10\times1.8\times10^{-5}}=\sqrt{1.8\times10^{-6}}$。$\log1.8=\log2+2\log3-1=0.26$ より<br>
+$\mathrm{pH}=-\frac12(0.26-6)=$ <b>2.87</b>。$\alpha=\sqrt{\dfrac{1.8\times10^{-5}}{0.10}}=\sqrt{1.8\times10^{-4}}=$ <b>$1.3\times10^{-2}$</b></div>
+<div class="pnote">濃度が非常に小さく $\alpha$ が大きくなるときは $1-\alpha\fallingdotseq1$ の近似が使えない。$K_\mathrm{a}=\frac{c\alpha^2}{1-\alpha}$ の 2 次方程式を解く。</div>
+</div>
+
+<div class="pat"><h4>弱塩基は「$[\mathrm{OH^-}]=\sqrt{cK_\mathrm{b}}$」→ pOH → pH</h4>
+<div class="when">アンモニア水などの弱塩基の pH。</div>
+<div class="how">$\mathrm{NH_3+H_2O\rightleftarrows NH_4^++OH^-}$、$K_\mathrm{b}=\dfrac{[\mathrm{NH_4^+}][\mathrm{OH^-}]}{[\mathrm{NH_3}]}$（水の濃度は一定とみなして含めない）。<br>
+弱酸と同じ近似で $[\mathrm{OH^-}]=\sqrt{cK_\mathrm{b}}$。$\mathrm{pH}=14-\mathrm{pOH}$。</div>
+<div class="pex">0.10 mol/L アンモニア水の pH を求めよ。$K_\mathrm{b}=1.8\times10^{-5}$ mol/L、$\log2=0.30$、$\log3=0.48$<br>
+<b>解</b>　$[\mathrm{OH^-}]=\sqrt{1.8\times10^{-6}}$ より $\mathrm{pOH}=2.87$。$\mathrm{pH}=14-2.87=$ <b>11.13</b></div>
+</div>
+
+<div class="pat"><h4>緩衝液の pH は「$[\mathrm{H^+}]=K_\mathrm{a}\times\dfrac{\text{酸の mol}}{\text{塩の mol}}$」</h4>
+<div class="when">弱酸とその塩（または弱塩基とその塩）の混合溶液の pH。</div>
+<div class="how">塩は完全に電離するので $[\mathrm{A^-}]\fallingdotseq$（塩の濃度）、弱酸は $\mathrm{A^-}$ が多いのでほとんど電離せず $[\mathrm{HA}]\fallingdotseq$（酸の濃度）。<br>
+$K_\mathrm{a}=\dfrac{[\mathrm{H^+}][\mathrm{A^-}]}{[\mathrm{HA}]}$ より <b>$[\mathrm{H^+}]=K_\mathrm{a}\dfrac{[\mathrm{HA}]}{[\mathrm{A^-}]}$</b>。同じ溶液の中なので、濃度の比は<b>物質量の比</b>でよい。<br>
+緩衝作用：加えた $\mathrm{H^+}$ は $\mathrm{A^-}$ が、加えた $\mathrm{OH^-}$ は $\mathrm{HA}$ が受け止める。</div>
+<div class="pex">0.10 mol/L 酢酸 100 mL と 0.10 mol/L 酢酸ナトリウム水溶液 50 mL を混合した溶液の pH を求めよ。$K_\mathrm{a}=1.8\times10^{-5}$ mol/L、$\log2=0.30$、$\log3=0.48$<br>
+<b>解</b>　$[\mathrm{H^+}]=1.8\times10^{-5}\times\dfrac{1.0\times10^{-2}}{5.0\times10^{-3}}=3.6\times10^{-5}$。$\log3.6=2\log6-1=0.56$ より $\mathrm{pH}=5-0.56=$ <b>4.44</b></div>
+<div class="pnote">緩衝液に少量の $\mathrm{HCl}$ を加えたときは、$\mathrm{A^-+H^+\to HA}$ で酸が増え塩が減った<b>反応後の物質量</b>で同じ式を使う（酸・塩 0.010 mol ずつの緩衝液に $\mathrm{HCl}$ 0.0010 mol を加えても、pH は 4.74 から 4.66 にしか下がらない）。</div>
+</div>
+
+<div class="pat"><h4>中和の途中は緩衝液 — ちょうど半分中和した点では $\mathrm{pH}=\mathrm{p}K_\mathrm{a}$</h4>
+<div class="when">弱酸を強塩基で滴定している途中の pH（滴定曲線のなだらかな部分）。</div>
+<div class="how">加えた $\mathrm{NaOH}$ と同じ物質量の $\mathrm{HA}$ が $\mathrm{A^-}$ に変わる。（残った酸）と（できた塩）の物質量で緩衝液の式を使う。<br>
+ちょうど半分を中和したとき $[\mathrm{HA}]=[\mathrm{A^-}]$ となり、<b>$[\mathrm{H^+}]=K_\mathrm{a}$、$\mathrm{pH}=\mathrm{p}K_\mathrm{a}=-\log K_\mathrm{a}$</b>。</div>
+<div class="pex">0.20 mol/L 酢酸 100 mL に 0.10 mol/L $\mathrm{NaOH}$ 水溶液 100 mL を加えた溶液の pH を求めよ。$K_\mathrm{a}=1.8\times10^{-5}$ mol/L、$\log2=0.30$、$\log3=0.48$<br>
+<b>解</b>　酢酸 $2.0\times10^{-2}$ mol のうち $1.0\times10^{-2}$ mol が中和され、酸と塩が $1.0\times10^{-2}$ mol ずつ。$[\mathrm{H^+}]=K_\mathrm{a}$ より $\mathrm{pH}=5-\log1.8=5-0.26=$ <b>4.74</b></div>
+</div>
+
+<div class="pat"><h4>中和点の pH は「塩の加水分解」— $[\mathrm{OH^-}]=\sqrt{\dfrac{cK_\mathrm{w}}{K_\mathrm{a}}}$</h4>
+<div class="when">弱酸の塩（または弱塩基の塩）の水溶液の pH、弱酸を強塩基で中和した点の pH。</div>
+<div class="how">$\mathrm{CH_3COO^-+H_2O\rightleftarrows CH_3COOH+OH^-}$、加水分解定数 $K_\mathrm{h}=\dfrac{K_\mathrm{w}}{K_\mathrm{a}}$。<br>
+<b>$[\mathrm{OH^-}]=\sqrt{cK_\mathrm{h}}=\sqrt{\dfrac{cK_\mathrm{w}}{K_\mathrm{a}}}$</b>。$\mathrm{NH_4Cl}$ なら $[\mathrm{H^+}]=\sqrt{\dfrac{cK_\mathrm{w}}{K_\mathrm{b}}}$。<br>
+中和点では、混合で薄まったあとの塩の濃度を $c$ に使う。</div>
+<div class="pex">0.10 mol/L 酢酸ナトリウム水溶液の pH を求めよ。$K_\mathrm{a}=1.8\times10^{-5}$ mol/L、$K_\mathrm{w}=1.0\times10^{-14}\ (\mathrm{mol/L})^2$、$\log2=0.30$、$\log3=0.48$<br>
+<b>解</b>　$[\mathrm{OH^-}]=\sqrt{\dfrac{0.10\times1.0\times10^{-14}}{1.8\times10^{-5}}}$ より $\mathrm{pOH}=-\frac12\{-15-(0.26-5)\}=5.13$。$\mathrm{pH}=14-5.13=$ <b>8.87</b></div>
+</div>
+
+<div class="pat"><h4>溶解度積は「溶けている分のイオン濃度の積」— 共通イオンがあると溶けにくい</h4>
+<div class="when">溶解度積 $K_\mathrm{sp}$ から溶解度（mol/L）を求める。共通イオン効果。</div>
+<div class="how">$\mathrm{AgCl(固)\rightleftarrows Ag^++Cl^-}$、$K_\mathrm{sp}=[\mathrm{Ag^+}][\mathrm{Cl^-}]$。<br>
+純水中の溶解度 $s$：$s^2=K_\mathrm{sp}$ より $s=\sqrt{K_\mathrm{sp}}$。<br>
+共通イオン（$\mathrm{Cl^-}$ が $c$ mol/L）があると $s\times c=K_\mathrm{sp}$ より $s=\dfrac{K_\mathrm{sp}}{c}$ と非常に小さくなる。<br>
+$\mathrm{A}_m\mathrm{B}_n$ 型では $K_\mathrm{sp}=(ms)^m(ns)^n$。</div>
+<div class="pex">$\mathrm{AgCl}$ の $K_\mathrm{sp}=1.8\times10^{-10}\ (\mathrm{mol/L})^2$ とする。(1) 純水 (2) 0.10 mol/L $\mathrm{NaCl}$ 水溶液 に対する $\mathrm{AgCl}$ の溶解度（mol/L）を求めよ。$\sqrt{1.8}=1.34$<br>
+<b>解</b>　(1) $s=\sqrt{1.8\times10^{-10}}=$ <b>$1.3\times10^{-5}$ mol/L</b>　(2) $s=\dfrac{1.8\times10^{-10}}{0.10}=$ <b>$1.8\times10^{-9}$ mol/L</b></div>
+<div class="pnote">型の違う塩は $K_\mathrm{sp}$ の大小で溶解度を比べられない。$\mathrm{Ag_2CrO_4}$ の $K_\mathrm{sp}=1.1\times10^{-12}\ (\mathrm{mol/L})^3$ は $\mathrm{AgCl}$ より小さいが、溶解度 $\sqrt[3]{K_\mathrm{sp}/4}\fallingdotseq6.5\times10^{-5}$ mol/L は $\mathrm{AgCl}$ より大きい。</div>
+</div>
+
+<div class="pat"><h4>沈殿するかは「混合直後のイオン濃度の積」と $K_\mathrm{sp}$ を比べる</h4>
+<div class="when">2 つの水溶液を混ぜたとき、沈殿が生じるかどうかの判定。</div>
+<div class="how">① 混合後の体積で薄めた濃度を出す（等体積なら半分）② イオン濃度の積（$K_\mathrm{sp}$ と同じ形でべき乗する）を計算 ③ <b>積 ＞ $K_\mathrm{sp}$ なら沈殿が生じる</b>（積が $K_\mathrm{sp}$ になるまで沈殿）、積 ≦ $K_\mathrm{sp}$ なら沈殿しない。</div>
+<div class="pex">$2.0\times10^{-4}$ mol/L の $\mathrm{AgNO_3}$ 水溶液 10 mL と、$2.0\times10^{-4}$ mol/L の $\mathrm{NaCl}$ 水溶液 10 mL を混合すると、$\mathrm{AgCl}$ の沈殿は生じるか。$K_\mathrm{sp}=1.8\times10^{-10}\ (\mathrm{mol/L})^2$<br>
+<b>解</b>　混合後 $[\mathrm{Ag^+}]=[\mathrm{Cl^-}]=1.0\times10^{-4}$ mol/L。積は $1.0\times10^{-8}\gt1.8\times10^{-10}$ なので<b>沈殿が生じる</b>。</div>
+<div class="pnote">クロム酸カリウムを指示薬とする $\mathrm{Ag^+}$ の滴定（モール法）では、まず $\mathrm{AgCl}$（白）が沈殿し、$\mathrm{Cl^-}$ がほぼなくなってから赤褐色の $\mathrm{Ag_2CrO_4}$ が沈殿し始める。これが終点の目印。</div>
+</div>
+
+<div class="pat"><h4>硫化物の沈殿は「pH で $[\mathrm{S^{2-}}]$ が変わる」— 酸性では $K_\mathrm{sp}$ の小さいものだけ</h4>
+<div class="when">$\mathrm{H_2S}$ を通じたとき、どの金属イオンが沈殿するか。pH との関係。</div>
+<div class="how">2 段階の電離をまとめて $\mathrm{H_2S\rightleftarrows 2H^++S^{2-}}$、$K_1K_2=\dfrac{[\mathrm{H^+}]^2[\mathrm{S^{2-}}]}{[\mathrm{H_2S}]}$。<br>
+<b>$[\mathrm{S^{2-}}]=\dfrac{K_1K_2[\mathrm{H_2S}]}{[\mathrm{H^+}]^2}$</b> → 酸性（$[\mathrm{H^+}]$ 大）では $[\mathrm{S^{2-}}]$ が非常に小さい。<br>
+$K_\mathrm{sp}$ が非常に小さい $\mathrm{CuS,\ PbS,\ Ag_2S,\ CdS}$ は酸性でも沈殿し、$\mathrm{ZnS,\ FeS,\ MnS,\ NiS}$ は中性〜塩基性でのみ沈殿する。</div>
+<div class="pex">$[\mathrm{H_2S}]=0.10$ mol/L、$K_1K_2=1.2\times10^{-21}\ (\mathrm{mol/L})^2$ とする。$[\mathrm{H^+}]=0.10$ mol/L の溶液に $\mathrm{Cu^{2+}}$ と $\mathrm{Zn^{2+}}$ がそれぞれ 0.010 mol/L 含まれるとき、沈殿するのはどちらか。$K_\mathrm{sp}$：$\mathrm{CuS}$ $6.5\times10^{-30}$、$\mathrm{ZnS}$ $2.2\times10^{-18}\ (\mathrm{mol/L})^2$ とする。<br>
+<b>解</b>　$[\mathrm{S^{2-}}]=\dfrac{1.2\times10^{-21}\times0.10}{0.10^2}=1.2\times10^{-20}$ mol/L。イオン濃度の積はどちらも $0.010\times1.2\times10^{-20}=1.2\times10^{-22}$。<br>
+$\mathrm{CuS}$ の $K_\mathrm{sp}$ より大きく、$\mathrm{ZnS}$ の $K_\mathrm{sp}$ より小さいので、沈殿するのは <b>$\mathrm{Cu^{2+}}$（$\mathrm{CuS}$、黒）</b>だけ。</div>
+</div>
+
+<div class="box memo"><table class="l w">
+<tr><th>溶液</th><th>近似式</th><th>使う条件</th></tr>
+<tr><td>弱酸</td><td>$[\mathrm{H^+}]=\sqrt{cK_\mathrm{a}}$、$\alpha=\sqrt{K_\mathrm{a}/c}$</td><td>$\alpha\ll1$</td></tr>
+<tr><td>弱塩基</td><td>$[\mathrm{OH^-}]=\sqrt{cK_\mathrm{b}}$</td><td>$\alpha\ll1$</td></tr>
+<tr><td>緩衝液</td><td>$[\mathrm{H^+}]=K_\mathrm{a}\dfrac{c_\text{酸}}{c_\text{塩}}$（物質量の比でよい）</td><td>半分中和した点で $\mathrm{pH}=\mathrm{p}K_\mathrm{a}$</td></tr>
+<tr><td>弱酸の塩</td><td>$[\mathrm{OH^-}]=\sqrt{cK_\mathrm{w}/K_\mathrm{a}}$</td><td>中和点の pH</td></tr>
+<tr><td>弱塩基の塩</td><td>$[\mathrm{H^+}]=\sqrt{cK_\mathrm{w}/K_\mathrm{b}}$</td><td>中和点の pH</td></tr>
+<tr><td>溶解度積</td><td>$K_\mathrm{sp}=[\mathrm{M^+}][\mathrm{X^-}]$、純水中 $s=\sqrt{K_\mathrm{sp}}$</td><td>イオン濃度の積 ＞ $K_\mathrm{sp}$ で沈殿</td></tr>
+<tr><td>硫化水素</td><td>$[\mathrm{S^{2-}}]=K_1K_2[\mathrm{H_2S}]/[\mathrm{H^+}]^2$</td><td>酸性で $[\mathrm{S^{2-}}]$ 小</td></tr>
+<tr><td>対数</td><td>$\log2=0.30$、$\log3=0.48$、$\log1.8=0.26$、$\log5=1-\log2=0.70$</td><td>$\mathrm{pH}=-\log[\mathrm{H^+}]$</td></tr>
+</table></div>
+
+<!--CH 10-->
+<div class="pat"><h4>気体の製法は「反応の型」で決める</h4>
+<div class="when">気体の発生に用いる試薬の組合せや反応式を答える。</div>
+<div class="how">① <b>弱酸の塩＋強酸</b> → 弱酸が気体で出る：$\mathrm{FeS+H_2SO_4\to FeSO_4+H_2S}$、$\mathrm{CaCO_3+2HCl\to CaCl_2+H_2O+CO_2}$<br>
+② <b>揮発性の酸の塩＋不揮発性の酸（濃硫酸）</b>を加熱：$\mathrm{NaCl+H_2SO_4\to NaHSO_4+HCl}$、$\mathrm{CaF_2+H_2SO_4\to CaSO_4+2HF}$<br>
+③ <b>弱塩基の塩＋強塩基</b>：$\mathrm{2NH_4Cl+Ca(OH)_2\to CaCl_2+2H_2O+2NH_3}$<br>
+④ <b>酸化還元</b>：$\mathrm{Zn}$＋希硫酸 → $\mathrm{H_2}$、$\mathrm{Cu}$＋熱濃硫酸 → $\mathrm{SO_2}$、$\mathrm{Cu}$＋希硝酸 → $\mathrm{NO}$、$\mathrm{Cu}$＋濃硝酸 → $\mathrm{NO_2}$、$\mathrm{MnO_2}$＋濃塩酸（加熱）→ $\mathrm{Cl_2}$<br>
+⑤ <b>分解</b>：$\mathrm{2H_2O_2\to 2H_2O+O_2}$（$\mathrm{MnO_2}$ 触媒）、$\mathrm{HCOOH\to H_2O+CO}$（濃硫酸で脱水）</div>
+<div class="pex">次の操作で気体が発生する反応を化学反応式で表せ。(1) 硫化鉄(II) に希硫酸を加える　(2) 塩化アンモニウムと水酸化カルシウムの混合物を加熱する　(3) 銅に濃硝酸を加える<br>
+<b>解</b>　(1) $\mathrm{FeS+H_2SO_4\to FeSO_4+H_2S}$　(2) $\mathrm{2NH_4Cl+Ca(OH)_2\to CaCl_2+2H_2O+2NH_3}$<br>
+(3) $\mathrm{Cu+4HNO_3\to Cu(NO_3)_2+2H_2O+2NO_2}$</div>
+</div>
+
+<div class="pat"><h4>発生装置は「加熱が要るか」「固体だけか」で選ぶ</h4>
+<div class="when">発生装置の選択（試験管の向き、キップの装置、加熱の有無）。</div>
+<div class="how">・<b>固体＋固体を加熱</b>（$\mathrm{NH_3}$、$\mathrm{KClO_3}$ からの $\mathrm{O_2}$）：試験管の口を少し下げる（生じた水が加熱部に流れて試験管が割れるのを防ぐ）<br>
+・<b>固体（塊）＋液体で加熱不要</b>：キップの装置が使える（$\mathrm{H_2,\ H_2S,\ CO_2}$）<br>
+・<b>加熱が必要</b>（$\mathrm{Cl_2}$、$\mathrm{HCl}$、$\mathrm{Cu}$ からの $\mathrm{SO_2}$）：丸底フラスコをガスバーナーで加熱</div>
+<div class="pex">次の気体のうち、キップの装置で発生させることができるものをすべて選べ。$\mathrm{H_2,\ Cl_2,\ NH_3,\ CO_2,\ HCl,\ H_2S}$<br>
+<b>解</b>　<b>$\mathrm{H_2}$</b>（亜鉛＋希硫酸）、<b>$\mathrm{CO_2}$</b>（石灰石＋希塩酸）、<b>$\mathrm{H_2S}$</b>（硫化鉄(II)＋希硫酸）</div>
+</div>
+
+<div class="pat"><h4>捕集法は「水への溶けやすさ → 空気との重さ」、乾燥剤は「酸と塩基の組合せ」を避ける</h4>
+<div class="when">気体の捕集法と、乾燥剤の選択。</div>
+<div class="how"><b>捕集法</b>：水に溶けにくい → 水上置換（$\mathrm{H_2,\ O_2,\ N_2,\ NO,\ CO,\ CH_4}$）。水に溶ける気体のうち、空気（平均分子量 約 29）より軽い → 上方置換（$\mathrm{NH_3}$）、重い → 下方置換（$\mathrm{Cl_2,\ HCl,\ H_2S,\ SO_2,\ NO_2,\ CO_2}$）。<br>
+<b>乾燥剤</b>：酸性の乾燥剤（濃硫酸、十酸化四リン）は塩基性の $\mathrm{NH_3}$ に使えない。塩基性の乾燥剤（ソーダ石灰、酸化カルシウム）は酸性の気体に使えない。中性の塩化カルシウムも $\mathrm{NH_3}$ には使えない（$\mathrm{NH_3}$ を吸収する）。濃硫酸は $\mathrm{H_2S}$ を酸化するので使えない。</div>
+<div class="pex">$\mathrm{NH_3}$ と $\mathrm{Cl_2}$ について、適する捕集法と乾燥剤をそれぞれ答えよ。<br>
+<b>解</b>　$\mathrm{NH_3}$：<b>上方置換、ソーダ石灰</b>　$\mathrm{Cl_2}$：<b>下方置換、濃硫酸（または塩化カルシウム）</b></div>
+<div class="pnote">$\mathrm{CO_2}$ は水に少し溶けるが、水上置換でも捕集できる。</div>
+</div>
+
+<div class="pat"><h4>ハロゲンは「上ほど酸化力が強い」— 塩素の精製は 水 → 濃硫酸 の順</h4>
+<div class="when">ハロゲンの単体・化合物の反応、塩素の発生と精製。</div>
+<div class="how">酸化力 $\mathrm{F_2\gt Cl_2\gt Br_2\gt I_2}$：$\mathrm{Cl_2+2KBr\to 2KCl+Br_2}$（上のハロゲンが下のハロゲン化物イオンを酸化する）。<br>
+$\mathrm{F_2}$ は水と激しく反応して $\mathrm{O_2}$ を出す。$\mathrm{Cl_2+H_2O\rightleftarrows HCl+HClO}$（$\mathrm{HClO}$ が殺菌・漂白）。<br>
+$\mathrm{HF}$ は弱酸でガラスを溶かす（$\mathrm{SiO_2+6HF\to H_2SiF_6+2H_2O}$）のでポリエチレン容器に保存。ハロゲン化銀：$\mathrm{AgF}$ は水に溶け、$\mathrm{AgCl}$ 白・$\mathrm{AgBr}$ 淡黄・$\mathrm{AgI}$ 黄の沈殿。<br>
+塩素の発生：$\mathrm{MnO_2+4HCl\to MnCl_2+2H_2O+Cl_2}$（加熱）。</div>
+<div class="pex">酸化マンガン(IV)と濃塩酸から発生させた塩素を、2 つの洗気びんに通して精製する。1 つ目と 2 つ目の洗気びんに入れる液体と、それぞれが除く物質を答えよ。また、順序を逆にしてはいけない理由を述べよ。<br>
+<b>解</b>　1 つ目：<b>水</b>（$\mathrm{HCl}$ を除く）、2 つ目：<b>濃硫酸</b>（水蒸気を除く）。逆にすると、乾燥させたあとで水を通るので、再び水蒸気が混じってしまうから。</div>
+</div>
+
+<div class="pat"><h4>硫酸は「希硫酸＝強酸」「濃硫酸＝不揮発性・吸湿性・脱水作用・（熱濃硫酸の）酸化作用」</h4>
+<div class="when">硫黄の化合物（$\mathrm{SO_2,\ H_2S,\ H_2SO_4}$）の反応で、どの性質が使われたかを問われる。</div>
+<div class="how">$\mathrm{SO_2}$：主に還元剤（漂白作用）。$\mathrm{H_2S}$ に対しては酸化剤（$\mathrm{SO_2+2H_2S\to 3S+2H_2O}$）。<br>
+$\mathrm{H_2S}$：還元剤、弱酸、腐卵臭で有毒。<br>
+濃硫酸：<b>不揮発性</b>（揮発性の酸の塩から $\mathrm{HCl}$ などを遊離）、<b>吸湿性</b>（乾燥剤）、<b>脱水作用</b>（有機化合物から H と O を $\mathrm{H_2O}$ の形で奪う）、<b>熱濃硫酸の酸化作用</b>（Cu・Ag を溶かして $\mathrm{SO_2}$ を出す）。<br>
+濃硫酸を薄めるときは、<b>水に濃硫酸を少しずつ</b>加える（逆は激しく発熱して危険）。</div>
+<div class="pex">次の変化で利用されている濃硫酸の性質を答えよ。(1) 塩化ナトリウムに加えて加熱すると $\mathrm{HCl}$ が発生する　(2) スクロースに加えると黒くなる　(3) 銅に加えて加熱すると $\mathrm{SO_2}$ が発生する　(4) 気体の乾燥に用いる<br>
+<b>解</b>　(1) <b>不揮発性</b>　(2) <b>脱水作用</b>　(3) <b>酸化作用</b>　(4) <b>吸湿性</b></div>
+<div class="pnote">亜鉛と反応して $\mathrm{H_2}$ を出すのは<b>希硫酸</b>（強酸としての性質）。濃硫酸と希硫酸の性質を混同しない。</div>
+</div>
+
+<div class="pat"><h4>窒素の酸化物は「NO は無色で水に溶けない、$\mathrm{NO_2}$ は赤褐色で水に溶ける」</h4>
+<div class="when">窒素の化合物（$\mathrm{NH_3,\ NO,\ NO_2,\ HNO_3}$）の性質と、反応の量的関係。</div>
+<div class="how">$\mathrm{NO}$：無色、水に溶けにくい（水上置換）、空気中ですぐに酸化される（$\mathrm{2NO+O_2\to 2NO_2}$）。<br>
+$\mathrm{NO_2}$：赤褐色・刺激臭、水に溶けて硝酸になる（$\mathrm{3NO_2+H_2O\to 2HNO_3+NO}$）、下方置換。$\mathrm{2NO_2\rightleftarrows N_2O_4}$（無色）。<br>
+$\mathrm{HNO_3}$：強酸で強い酸化剤。光で分解するので褐色びんに保存。希硝酸は $\mathrm{NO}$（$\mathrm{e^-}$ 3 個）、濃硝酸は $\mathrm{NO_2}$（$\mathrm{e^-}$ 1 個）に変化する。</div>
+<div class="pex">銅 3.2 g を希硝酸にすべて溶かしたとき、発生する $\mathrm{NO}$ の標準状態での体積を求めよ。$\mathrm{Cu}=64$<br>
+<b>解</b>　$\mathrm{3Cu+8HNO_3\to 3Cu(NO_3)_2+2NO+4H_2O}$。Cu 0.050 mol → $\mathrm{NO}$ $0.050\times\frac23=0.0333$ mol → <b>0.75 L</b><br>
+（電子で考えると、Cu が出す $\mathrm{e^-}$ 0.10 mol を $\mathrm{NO}$ 1 mol あたり 3 mol で受け取るので $\frac{0.10}{3}$ mol）</div>
+</div>
+
+<div class="pat"><h4>炭素とケイ素：$\mathrm{CO_2}$ は「白濁 → 過剰で透明」、$\mathrm{SiO_2}$ は「HF と融解した NaOH に溶ける」</h4>
+<div class="when">$\mathrm{CO,\ CO_2,\ SiO_2}$、ケイ酸塩の性質と変化。</div>
+<div class="how">$\mathrm{CO}$：無色無臭で有毒、還元剤（$\mathrm{Fe_2O_3+3CO\to 2Fe+3CO_2}$）、水に溶けにくい。<br>
+$\mathrm{CO_2}$：酸性酸化物。石灰水を白濁させる（$\mathrm{Ca(OH)_2+CO_2\to CaCO_3+H_2O}$）。さらに通じると溶けて透明になる（$\mathrm{CaCO_3+H_2O+CO_2\to Ca(HCO_3)_2}$）。<br>
+$\mathrm{SiO_2}$：共有結合の結晶（石英・水晶）。$\mathrm{NaOH}$ と融解 → $\mathrm{Na_2SiO_3}$ → 水を加えて加熱 → 水ガラス → 塩酸を加える → ケイ酸 → 加熱乾燥 → <b>シリカゲル</b>（多孔質で乾燥剤）。<br>
+$\mathrm{Si}$：共有結合の結晶で、半導体の材料。</div>
+<div class="pex">石灰水に $\mathrm{CO_2}$ を通じ続けたときの変化を、化学反応式とともに説明せよ。<br>
+<b>解</b>　はじめ $\mathrm{CaCO_3}$ が沈殿して<b>白濁</b>する（$\mathrm{Ca(OH)_2+CO_2\to CaCO_3+H_2O}$）。さらに通じると、炭酸水素カルシウムとなって溶け、<b>透明</b>になる（$\mathrm{CaCO_3+H_2O+CO_2\to Ca(HCO_3)_2}$）。</div>
+<div class="pnote">鍾乳洞はこの反応で石灰岩が溶けてでき、鍾乳石は逆向きの反応で $\mathrm{CaCO_3}$ が析出してできる。</div>
+</div>
+
+<div class="pat"><h4>気体の検出は「色・におい・試薬の変化」で絞り込む</h4>
+<div class="when">性質の記述から気体を特定する。</div>
+<div class="how">・色：$\mathrm{Cl_2}$ 黄緑色、$\mathrm{NO_2}$ 赤褐色、$\mathrm{O_3}$ 淡青色、ほかの主な気体は無色<br>
+・におい：$\mathrm{NH_3,\ HCl,\ SO_2,\ Cl_2,\ NO_2}$ は刺激臭、$\mathrm{H_2S}$ は腐卵臭<br>
+・検出：$\mathrm{NH_3}$ — 濃塩酸を近づけると白煙（$\mathrm{NH_4Cl}$）、湿った赤色リトマス紙が青　$\mathrm{H_2S}$ — 酢酸鉛(II)紙が黒（$\mathrm{PbS}$）　$\mathrm{Cl_2}$ — 湿ったヨウ化カリウムデンプン紙が青　$\mathrm{CO_2}$ — 石灰水が白濁　$\mathrm{O_2}$ — 火のついた線香が炎を上げる　$\mathrm{NO}$ — 空気にふれると赤褐色</div>
+<div class="pex">気体 A〜C は $\mathrm{NH_3,\ H_2S,\ Cl_2,\ CO_2}$ のいずれかである。A は無色で腐卵臭がある。B は湿ったヨウ化カリウムデンプン紙を青くする。C は無色無臭で、石灰水を白濁させる。A〜C を答えよ。<br>
+<b>解</b>　A <b>$\mathrm{H_2S}$</b>　B <b>$\mathrm{Cl_2}$</b>　C <b>$\mathrm{CO_2}$</b></div>
+</div>
+
+<div class="box memo"><table class="l w">
+<tr><th>気体</th><th>製法（化学反応式）</th><th>捕集</th><th>性質・検出</th></tr>
+<tr><td>$\mathrm{H_2}$</td><td>$\mathrm{Zn+H_2SO_4\to ZnSO_4+H_2}$</td><td>水上</td><td>無色無臭、最も軽い</td></tr>
+<tr><td>$\mathrm{O_2}$</td><td>$\mathrm{2H_2O_2\to 2H_2O+O_2}$（$\mathrm{MnO_2}$）</td><td>水上</td><td>助燃性</td></tr>
+<tr><td>$\mathrm{N_2}$</td><td>$\mathrm{NH_4NO_2\to N_2+2H_2O}$（加熱）</td><td>水上</td><td>空気の約 78％、反応しにくい</td></tr>
+<tr><td>$\mathrm{Cl_2}$</td><td>$\mathrm{MnO_2+4HCl\to MnCl_2+2H_2O+Cl_2}$（加熱）</td><td>下方</td><td>黄緑色・刺激臭、KI デンプン紙が青</td></tr>
+<tr><td>$\mathrm{HCl}$</td><td>$\mathrm{NaCl+H_2SO_4\to NaHSO_4+HCl}$（加熱）</td><td>下方</td><td>刺激臭、$\mathrm{NH_3}$ と白煙</td></tr>
+<tr><td>$\mathrm{H_2S}$</td><td>$\mathrm{FeS+H_2SO_4\to FeSO_4+H_2S}$</td><td>下方</td><td>腐卵臭・有毒、酢酸鉛(II)紙が黒</td></tr>
+<tr><td>$\mathrm{SO_2}$</td><td>$\mathrm{Cu+2H_2SO_4\to CuSO_4+2H_2O+SO_2}$（加熱）</td><td>下方</td><td>刺激臭、還元性（漂白）</td></tr>
+<tr><td>$\mathrm{NH_3}$</td><td>$\mathrm{2NH_4Cl+Ca(OH)_2\to CaCl_2+2H_2O+2NH_3}$（加熱）</td><td>上方</td><td>刺激臭、水溶液は塩基性</td></tr>
+<tr><td>$\mathrm{NO}$</td><td>$\mathrm{3Cu+8HNO_3\to 3Cu(NO_3)_2+4H_2O+2NO}$</td><td>水上</td><td>無色、空気中で $\mathrm{NO_2}$ に</td></tr>
+<tr><td>$\mathrm{NO_2}$</td><td>$\mathrm{Cu+4HNO_3\to Cu(NO_3)_2+2H_2O+2NO_2}$</td><td>下方</td><td>赤褐色・刺激臭</td></tr>
+<tr><td>$\mathrm{CO_2}$</td><td>$\mathrm{CaCO_3+2HCl\to CaCl_2+H_2O+CO_2}$</td><td>下方</td><td>無色無臭、石灰水が白濁</td></tr>
+<tr><td>$\mathrm{CO}$</td><td>$\mathrm{HCOOH\to H_2O+CO}$（濃硫酸、加熱）</td><td>水上</td><td>無色無臭・有毒、還元性</td></tr>
+</table>
+<table class="l w">
+<tr><th>乾燥剤</th><th>性質</th><th>使えない気体</th></tr>
+<tr><td>濃硫酸、十酸化四リン</td><td>酸性</td><td>$\mathrm{NH_3}$（濃硫酸は $\mathrm{H_2S}$ も不可）</td></tr>
+<tr><td>ソーダ石灰、酸化カルシウム</td><td>塩基性</td><td>$\mathrm{Cl_2,\ HCl,\ H_2S,\ SO_2,\ NO_2,\ CO_2}$ などの酸性の気体</td></tr>
+<tr><td>塩化カルシウム</td><td>中性</td><td>$\mathrm{NH_3}$</td></tr>
+</table>
+<p>貴ガス（He, Ne, Ar など）は単原子分子で反応しにくい。Ar は空気中に約 0.9％ 含まれる。</p></div>
+
+<!--CH 11-->
+<div class="pat"><h4>1族・2族は「炎色反応」と「Be・Mg と Ca・Sr・Ba の違い」で区別する</h4>
+<div class="when">アルカリ金属・アルカリ土類金属の単体・化合物の性質と判別。</div>
+<div class="how">・<b>炎色反応</b>：Li 赤、Na 黄、K 赤紫、Ca 橙赤、Sr 紅（深赤）、Ba 黄緑、Cu 青緑<br>
+・1族：単体は空気中の酸素や水と反応しやすいので石油（灯油）中に保存。$\mathrm{2Na+2H_2O\to 2NaOH+H_2}$<br>
+・2族：Be・Mg は炎色反応を示さず、常温の水とはほとんど反応しない（Mg は熱水と反応）。Ca・Sr・Ba は常温の水と反応する。<br>
+・硫酸塩：$\mathrm{MgSO_4}$ は水に溶けるが、$\mathrm{CaSO_4,\ BaSO_4}$ は溶けにくい。水酸化物：$\mathrm{Mg(OH)_2}$ は水に溶けにくい弱塩基、$\mathrm{Ca(OH)_2,\ Ba(OH)_2}$ は強塩基。炭酸塩は 2 族ではどれも水に溶けにくい。</div>
+<div class="pex">水溶液 A、B は $\mathrm{MgCl_2}$、$\mathrm{BaCl_2}$ のいずれかである。希硫酸を加えると A だけ白色沈殿が生じ、炎色反応は A が黄緑色を示し、B は示さなかった。A、B はそれぞれ何か。<br>
+<b>解</b>　A <b>$\mathrm{BaCl_2}$</b>（$\mathrm{BaSO_4}$ の白色沈殿）、B <b>$\mathrm{MgCl_2}$</b></div>
+</div>
+
+<div class="pat"><h4>両性金属（Al・Zn・Sn・Pb）は「酸にも強塩基にも溶ける」</h4>
+<div class="when">Al・Zn の単体や水酸化物と、酸・強塩基との反応、反応の量的関係。</div>
+<div class="how">$\mathrm{2Al+6HCl\to 2AlCl_3+3H_2}$、$\mathrm{2Al+2NaOH+6H_2O\to 2Na[Al(OH)_4]+3H_2}$<br>
+$\mathrm{Zn+2NaOH+2H_2O\to Na_2[Zn(OH)_4]+H_2}$<br>
+水酸化物 $\mathrm{Al(OH)_3,\ Zn(OH)_2}$ も過剰の $\mathrm{NaOH}$ 水溶液に溶ける。$\mathrm{Zn(OH)_2}$ は過剰のアンモニア水にも溶ける（$\mathrm{[Zn(NH_3)_4]^{2+}}$）が、$\mathrm{Al(OH)_3}$ は溶けない。Al は濃硝酸で不動態になる。</div>
+<div class="pex">Al 2.7 g を過剰の $\mathrm{NaOH}$ 水溶液に溶かすと、標準状態で何 L の $\mathrm{H_2}$ が発生するか。$\mathrm{Al}=27$<br>
+<b>解</b>　Al 0.10 mol から $\mathrm{H_2}$ 0.15 mol。$0.15\times22.4=3.36$ → <b>3.4 L</b></div>
+<div class="pnote">発生する $\mathrm{H_2}$ の量は、塩酸に溶かしても $\mathrm{NaOH}$ 水溶液に溶かしても同じ（Al 1 mol が $\mathrm{e^-}$ 3 mol を出し、$\mathrm{H_2}$ 1.5 mol になる）。</div>
+</div>
+
+<div class="pat"><h4>錯イオンは「配位数で形が決まる」、名称は 数・配位子・金属・酸化数 の順</h4>
+<div class="when">錯イオンの名称・色・立体構造。</div>
+<div class="how">名称：配位子の数（ジ 2・テトラ 4・ヘキサ 6）＋配位子名（アンミン $\mathrm{NH_3}$、シアニド $\mathrm{CN^-}$、ヒドロキシド $\mathrm{OH^-}$、アクア $\mathrm{H_2O}$、クロリド $\mathrm{Cl^-}$）＋金属名＋（酸化数）。陰イオンの錯イオンは「〜酸イオン」。<br>
+形：配位数 2 → 直線（$\mathrm{[Ag(NH_3)_2]^+}$）、配位数 4 → 正方形（$\mathrm{[Cu(NH_3)_4]^{2+}}$）または正四面体（$\mathrm{[Zn(NH_3)_4]^{2+}}$、$\mathrm{[Al(OH)_4]^-}$）、配位数 6 → 正八面体（$\mathrm{[Fe(CN)_6]^{3-}}$、$\mathrm{[Fe(CN)_6]^{4-}}$）。</div>
+<div class="pex">次の錯イオンの名称・色・形を答えよ。(1) $\mathrm{[Cu(NH_3)_4]^{2+}}$　(2) $\mathrm{[Ag(NH_3)_2]^+}$　(3) $\mathrm{[Fe(CN)_6]^{4-}}$<br>
+<b>解</b>　(1) <b>テトラアンミン銅(II)イオン</b>、深青色、正方形　(2) <b>ジアンミン銀(I)イオン</b>、無色、直線<br>
+(3) <b>ヘキサシアニド鉄(II)酸イオン</b>、淡黄色、正八面体</div>
+</div>
+
+<div class="pat"><h4>金属イオンは「過剰の $\mathrm{NaOH}$・$\mathrm{NH_3}$ で溶けるか」で分ける</h4>
+<div class="when">金属イオンの水溶液に、$\mathrm{NaOH}$ 水溶液やアンモニア水を少量、さらに過剰に加えたときの変化。</div>
+<div class="how">・少量：多くの金属イオンが水酸化物の沈殿（$\mathrm{Ag^+}$ は酸化銀 $\mathrm{Ag_2O}$）をつくる。<br>
+・過剰の <b>$\mathrm{NaOH}$ で溶ける</b>：Al・Zn・Sn・Pb（両性）→ ヒドロキシド錯イオン<br>
+・過剰の <b>$\mathrm{NH_3}$ で溶ける</b>：Ag・Cu・Zn（Ni・Co も）→ アンミン錯イオン<br>
+・沈殿の色：$\mathrm{Fe(OH)_3}$ 赤褐、$\mathrm{Fe(OH)_2}$ 緑白、$\mathrm{Cu(OH)_2}$ 青白、$\mathrm{Al(OH)_3,\ Zn(OH)_2}$ 白、$\mathrm{Ag_2O}$ 褐</div>
+<div class="pex">水溶液 A〜D は $\mathrm{Al^{3+},\ Zn^{2+},\ Cu^{2+},\ Fe^{3+}}$ のどれか 1 種類を含む。過剰の $\mathrm{NaOH}$ 水溶液で沈殿が溶けるのは A と B、過剰のアンモニア水で沈殿が溶けるのは B と C であった。A〜D を答えよ。<br>
+<b>解</b>　A <b>$\mathrm{Al^{3+}}$</b>　B <b>$\mathrm{Zn^{2+}}$</b>（どちらにも溶ける）　C <b>$\mathrm{Cu^{2+}}$</b>（深青色の溶液）　D <b>$\mathrm{Fe^{3+}}$</b>（赤褐色の沈殿が残る）</div>
+</div>
+
+<div class="pat"><h4>系統分析は「$\mathrm{HCl}$ → $\mathrm{H_2S}$（酸性）→ $\mathrm{NH_3}$ → $\mathrm{H_2S}$（塩基性）→ $\mathrm{(NH_4)_2CO_3}$ → 炎色」の順</h4>
+<div class="when">多種類の金属イオンを含む水溶液から、順に沈殿させて分離する。</div>
+<div class="how">① <b>希塩酸</b>：$\mathrm{AgCl}$（白）、$\mathrm{PbCl_2}$（白、熱水に溶ける）<br>
+② <b>酸性で $\mathrm{H_2S}$</b>：$\mathrm{CuS}$（黒）、$\mathrm{PbS}$（黒）、$\mathrm{CdS}$（黄）<br>
+③ 煮沸して $\mathrm{H_2S}$ を追い出し、希硝酸で $\mathrm{Fe^{2+}}$ を $\mathrm{Fe^{3+}}$ に戻してから <b>過剰の $\mathrm{NH_3}$ 水</b>：$\mathrm{Fe(OH)_3}$（赤褐）、$\mathrm{Al(OH)_3}$（白）。$\mathrm{Zn^{2+}}$ は錯イオンとして溶液に残る<br>
+④ <b>塩基性で $\mathrm{H_2S}$</b>：$\mathrm{ZnS}$（白）（$\mathrm{MnS}$ 淡赤、$\mathrm{NiS}$ 黒）<br>
+⑤ <b>$\mathrm{(NH_4)_2CO_3}$</b>：$\mathrm{CaCO_3,\ BaCO_3}$（白）<br>
+⑥ 残った $\mathrm{Na^+,\ K^+}$ は炎色反応で確認</div>
+<div class="pex">$\mathrm{Ag^+,\ Cu^{2+},\ Fe^{3+},\ Zn^{2+},\ Ca^{2+},\ Na^+}$ を含む水溶液を、上の ①〜⑤ の順に操作した。各段階で得られる沈殿の化学式を答えよ。<br>
+<b>解</b>　① <b>$\mathrm{AgCl}$</b>　② <b>$\mathrm{CuS}$</b>　③ <b>$\mathrm{Fe(OH)_3}$</b>　④ <b>$\mathrm{ZnS}$</b>　⑤ <b>$\mathrm{CaCO_3}$</b>（$\mathrm{Na^+}$ は炎色反応で黄色）</div>
+<div class="pnote">②で $\mathrm{H_2S}$（還元剤）により $\mathrm{Fe^{3+}}$ が $\mathrm{Fe^{2+}}$ に還元されているので、③の前に硝酸で酸化する。煮沸を忘れると、$\mathrm{NH_3}$ 水を加えたときに残った $\mathrm{H_2S}$ で $\mathrm{ZnS}$ まで沈殿してしまう。</div>
+</div>
+
+<div class="pat"><h4>遷移元素は「酸化数と色」をセットで覚え、$\mathrm{Fe^{2+}}$・$\mathrm{Fe^{3+}}$ は試薬で区別する</h4>
+<div class="when">遷移元素のイオンの色や、検出反応から物質を答える。</div>
+<div class="how">・Fe：$\mathrm{Fe^{2+}}$ 淡緑色、$\mathrm{Fe^{3+}}$ 黄褐色。$\mathrm{Fe^{2+}}$＋$\mathrm{K_3[Fe(CN)_6]}$ → 濃青色沈殿、$\mathrm{Fe^{3+}}$＋$\mathrm{K_4[Fe(CN)_6]}$ → 濃青色沈殿、$\mathrm{Fe^{3+}}$＋$\mathrm{KSCN}$ → 血赤色の溶液<br>
+・Cr：$\mathrm{CrO_4^{2-}}$ 黄色、$\mathrm{Cr_2O_7^{2-}}$ 赤橙色。$\mathrm{2CrO_4^{2-}+2H^+\rightleftarrows Cr_2O_7^{2-}+H_2O}$（酸性で $\mathrm{Cr_2O_7^{2-}}$、塩基性で $\mathrm{CrO_4^{2-}}$）。$\mathrm{PbCrO_4}$ 黄、$\mathrm{BaCrO_4}$ 黄、$\mathrm{Ag_2CrO_4}$ 赤褐の沈殿<br>
+・Mn：$\mathrm{MnO_4^-}$ 赤紫色、$\mathrm{Mn^{2+}}$ ほぼ無色（淡桃色）、$\mathrm{MnO_2}$ 黒（酸化剤・触媒）<br>
+・Cu：$\mathrm{Cu^{2+}}$ 青色、$\mathrm{CuO}$ 黒、$\mathrm{Cu_2O}$ 赤、$\mathrm{CuSO_4}$ 無水物は白（水で青）</div>
+<div class="pex">次の (1)〜(3) に当てはまるイオンを答えよ。(1) $\mathrm{KSCN}$ 水溶液を加えると血赤色になる　(2) クロムを含む黄色のイオンで、酸性にすると赤橙色に変わる　(3) 希塩酸を加えると白色沈殿を生じ、その沈殿は熱湯に溶ける<br>
+<b>解</b>　(1) <b>$\mathrm{Fe^{3+}}$</b>　(2) <b>$\mathrm{CrO_4^{2-}}$</b>（$\mathrm{Cr_2O_7^{2-}}$ に変わる）　(3) <b>$\mathrm{Pb^{2+}}$</b></div>
+</div>
+
+<div class="pat"><h4>工業的製法（窒素・硫黄）は「全体の式にまとめると 1 : 1」で量を出す</h4>
+<div class="when">ハーバー・ボッシュ法、オストワルト法、接触法の反応と量的関係。</div>
+<div class="how">・ハーバー・ボッシュ法：$\mathrm{N_2+3H_2\to 2NH_3}$（四酸化三鉄を主成分とする触媒、高温・高圧）<br>
+・オストワルト法：$\mathrm{4NH_3+5O_2\to 4NO+6H_2O}$（Pt 触媒）、$\mathrm{2NO+O_2\to 2NO_2}$、$\mathrm{3NO_2+H_2O\to 2HNO_3+NO}$（$\mathrm{NO}$ は再利用）→ 全体 <b>$\mathrm{NH_3+2O_2\to HNO_3+H_2O}$</b>。$\mathrm{NH_3}$ 1 mol → $\mathrm{HNO_3}$ 1 mol<br>
+・接触法：$\mathrm{S+O_2\to SO_2}$、$\mathrm{2SO_2+O_2\to 2SO_3}$（$\mathrm{V_2O_5}$ 触媒）、$\mathrm{SO_3}$ を濃硫酸に吸収させて発煙硫酸とし、希硫酸で薄める。<b>S 1 mol → $\mathrm{H_2SO_4}$ 1 mol</b></div>
+<div class="pex">$\mathrm{NH_3}$ 1.7 kg がすべて $\mathrm{HNO_3}$ になるとすると、質量パーセント濃度 63％ の硝酸は何 kg 得られるか。$\mathrm{NH_3}=17,\ \mathrm{HNO_3}=63$<br>
+<b>解</b>　$\mathrm{NH_3}$ 100 mol → $\mathrm{HNO_3}$ 100 mol ＝ 6.3 kg → 63％ の硝酸は <b>10 kg</b></div>
+<div class="pnote">$\mathrm{3NO_2+H_2O\to 2HNO_3+NO}$ だけを見て「$\mathrm{NO_2}$ の $\frac23$ しか硝酸にならない」とするのは誤り。生じた $\mathrm{NO}$ を再び酸化して使うので、全体では 1 : 1 になる。</div>
+</div>
+
+<div class="pat"><h4>金属の製錬は「酸化物を還元」、電解でつくる金属は $\mathrm{e^-}$ の mol で量を出す</h4>
+<div class="when">鉄の製錬、アルミニウムの溶融塩電解、銅の電解精錬、アンモニアソーダ法。</div>
+<div class="how">・鉄：溶鉱炉でコークスからできた $\mathrm{CO}$ で還元（$\mathrm{Fe_2O_3+3CO\to 2Fe+3CO_2}$）→ 銑鉄（C 約 4％）→ 転炉で $\mathrm{O_2}$ を吹き込み鋼にする。<br>
+・Al：ボーキサイトから得た酸化アルミニウムを、融解した氷晶石に溶かして電気分解（<b>溶融塩電解</b>）。陰極 $\mathrm{Al^{3+}+3e^-\to Al}$、陽極の炭素が $\mathrm{O^{2-}}$ と反応して $\mathrm{CO,\ CO_2}$。<br>
+・Cu：粗銅を陽極、純銅を陰極として硫酸銅(II)水溶液を電気分解（<b>電解精錬</b>）。Cu よりイオン化傾向の大きい Zn・Fe・Ni はイオンとして溶液中に、小さい Ag・Au は陽極泥になる。<br>
+・アンモニアソーダ法：$\mathrm{NaCl+H_2O+NH_3+CO_2\to NaHCO_3+NH_4Cl}$、$\mathrm{2NaHCO_3\to Na_2CO_3+H_2O+CO_2}$。全体 $\mathrm{2NaCl+CaCO_3\to Na_2CO_3+CaCl_2}$</div>
+<div class="pex">アルミニウム 27 kg を溶融塩電解でつくるのに必要な電気量は何 C か。$\mathrm{Al}=27$、$F=9.65\times10^4\ \mathrm{C/mol}$<br>
+<b>解</b>　Al $1.0\times10^3$ mol に $\mathrm{e^-}$ $3.0\times10^3$ mol。$3.0\times10^3\times9.65\times10^4=$ <b>$2.9\times10^8$ C</b></div>
+<div class="pnote">Al はイオン化傾向が大きいので、水溶液を電気分解すると陰極で $\mathrm{H_2}$ が発生し、Al は得られない。だから<b>溶融塩電解</b>を使う（Na も $\mathrm{NaCl}$ の溶融塩電解でつくる）。</div>
+</div>
+
+<div class="box memo"><table class="l w">
+<tr><th>加える試薬（イオン）</th><th>沈殿と色</th></tr>
+<tr><td>$\mathrm{Cl^-}$</td><td>$\mathrm{AgCl}$ 白（光で黒くなる）、$\mathrm{PbCl_2}$ 白（熱水に溶ける）</td></tr>
+<tr><td>$\mathrm{SO_4^{2-}}$</td><td>$\mathrm{BaSO_4}$ 白、$\mathrm{CaSO_4}$ 白、$\mathrm{PbSO_4}$ 白</td></tr>
+<tr><td>$\mathrm{CO_3^{2-}}$</td><td>$\mathrm{CaCO_3}$ 白、$\mathrm{BaCO_3}$ 白</td></tr>
+<tr><td>$\mathrm{CrO_4^{2-}}$</td><td>$\mathrm{PbCrO_4}$ 黄、$\mathrm{BaCrO_4}$ 黄、$\mathrm{Ag_2CrO_4}$ 赤褐</td></tr>
+<tr><td>$\mathrm{S^{2-}}$（酸性でも沈殿）</td><td>$\mathrm{CuS}$ 黒、$\mathrm{PbS}$ 黒、$\mathrm{Ag_2S}$ 黒、$\mathrm{CdS}$ 黄</td></tr>
+<tr><td>$\mathrm{S^{2-}}$（中性・塩基性で沈殿）</td><td>$\mathrm{ZnS}$ 白、$\mathrm{FeS}$ 黒、$\mathrm{NiS}$ 黒、$\mathrm{MnS}$ 淡赤</td></tr>
+<tr><td>$\mathrm{OH^-}$（少量）</td><td>$\mathrm{Fe(OH)_3}$ 赤褐、$\mathrm{Fe(OH)_2}$ 緑白、$\mathrm{Cu(OH)_2}$ 青白、$\mathrm{Al(OH)_3}$ 白、$\mathrm{Zn(OH)_2}$ 白、$\mathrm{Ag_2O}$ 褐</td></tr>
+</table>
+<table class="l w">
+<tr><th>工業的製法</th><th>製品</th><th>要点</th></tr>
+<tr><td>ハーバー・ボッシュ法</td><td>$\mathrm{NH_3}$</td><td>$\mathrm{N_2+3H_2\to2NH_3}$、四酸化三鉄が主成分の触媒</td></tr>
+<tr><td>オストワルト法</td><td>$\mathrm{HNO_3}$</td><td>Pt 触媒、全体 $\mathrm{NH_3+2O_2\to HNO_3+H_2O}$</td></tr>
+<tr><td>接触法</td><td>$\mathrm{H_2SO_4}$</td><td>$\mathrm{V_2O_5}$ 触媒、$\mathrm{SO_3}$ を濃硫酸に吸収</td></tr>
+<tr><td>アンモニアソーダ法</td><td>$\mathrm{Na_2CO_3}$</td><td>全体 $\mathrm{2NaCl+CaCO_3\to Na_2CO_3+CaCl_2}$</td></tr>
+<tr><td>溶融塩電解</td><td>Al, Na</td><td>Al は氷晶石に酸化アルミニウムを溶かして電解</td></tr>
+<tr><td>電解精錬</td><td>Cu</td><td>陽極に粗銅、陽極泥に Ag・Au</td></tr>
+</table></div>
+
+<!--CH 12-->
+<div class="pat"><h4>元素分析は「$\mathrm{CO_2}\times\frac{12}{44}$、$\mathrm{H_2O}\times\frac{2}{18}$、O は残り」</h4>
+<div class="when">燃焼で生じた $\mathrm{CO_2}$・$\mathrm{H_2O}$ の質量から組成式・分子式を求める。</div>
+<div class="how">C の質量 $=\mathrm{CO_2}$ の質量 $\times\frac{12}{44}$、H の質量 $=\mathrm{H_2O}$ の質量 $\times\frac{2}{18}$、O の質量＝試料 − C − H。<br>
+それぞれを原子量で割って最も簡単な整数比 → 組成式。分子量がわかれば 分子式＝（組成式）$_n$。<br>
+装置：試料を酸化銅(II)とともに燃焼 → <b>塩化カルシウム管（$\mathrm{H_2O}$ を吸収）→ ソーダ石灰管（$\mathrm{CO_2}$ を吸収）</b>の順。</div>
+<div class="pex">C・H・O からなる化合物 23.0 mg を完全燃焼させると、$\mathrm{CO_2}$ 44.0 mg、$\mathrm{H_2O}$ 27.0 mg が生じた。分子量を 46 として分子式を求めよ。<br>
+<b>解</b>　C 12.0 mg、H 3.0 mg、O $23.0-12.0-3.0=8.0$ mg。C : H : O $=\frac{12.0}{12}:\frac{3.0}{1.0}:\frac{8.0}{16}=1.0:3.0:0.50=2:6:1$。<br>
+組成式 $\mathrm{C_2H_6O}$（式量 46）なので、分子式も <b>$\mathrm{C_2H_6O}$</b></div>
+<div class="pnote">吸収管の順を逆にすると、ソーダ石灰が $\mathrm{CO_2}$ と $\mathrm{H_2O}$ の両方を吸収してしまい、C と H を区別できなくなる。</div>
+</div>
+
+<div class="pat"><h4>不飽和度で「二重結合・環の数」を見積もる</h4>
+<div class="when">分子式から、二重結合・環・ベンゼン環の有無など構造の見当をつける。</div>
+<div class="how">$\mathrm{C}_x\mathrm{H}_y\mathrm{O}_z$ の不飽和度 $=\dfrac{2x+2-y}{2}$（O は無関係、ハロゲンは H と同じに数える）。<br>
+不飽和度 1 ＝ 二重結合（C=C または C=O）1 つ か 環 1 つ、2 ＝ 三重結合 1 つ など、<b>4 以上ならベンゼン環</b>（不飽和度 4）を疑う。</div>
+<div class="pex">次の分子式の不飽和度を求め、考えられる構造の特徴を答えよ。(1) $\mathrm{C_4H_8}$　(2) $\mathrm{C_8H_{10}}$　(3) $\mathrm{C_3H_6O}$<br>
+<b>解</b>　(1) <b>1</b>：アルケン（C=C 1 つ）またはシクロアルカン　(2) <b>4</b>：ベンゼン環 1 つ（エチルベンゼン、キシレン）<br>
+(3) <b>1</b>：C=O（アルデヒド・ケトン）、C=C（と −OH またはエーテル結合）、または環</div>
+</div>
+
+<div class="pat"><h4>構造異性体は「炭素骨格 → 官能基の位置」の順に数える</h4>
+<div class="when">分子式から構造異性体の数を求める。</div>
+<div class="how">① 官能基の種類を決める（$\mathrm{C}_n\mathrm{H}_{2n+2}\mathrm{O}$ ならアルコールとエーテル）② 炭素骨格（直鎖・枝分かれ）をすべて書く ③ 各骨格について、官能基をつける位置を<b>対称性で重複しないように</b>数える。エーテルは O の両側の炭素数の分け方で数える。</div>
+<div class="pex">分子式 $\mathrm{C_4H_{10}O}$ の構造異性体の数を求めよ。<br>
+<b>解</b>　アルコール：直鎖の骨格で 2 通り（1-ブタノール、2-ブタノール）、枝分かれの骨格で 2 通り（2-メチル-1-プロパノール、2-メチル-2-プロパノール）→ 4 種。<br>
+エーテル：O の両側が C1 と C3（C3 は直鎖・枝分かれの 2 通り）、C2 と C2 → 3 種。合計 <b>7 種</b></div>
+<div class="pnote">立体異性体まで含めると、2-ブタノールに鏡像異性体が 1 対あるので 8 種になる。</div>
+</div>
+
+<div class="pat"><h4>立体異性体は「C=C の両端が異なる 2 基」「4 つの異なる基をもつ C（不斉炭素原子）」</h4>
+<div class="when">シス−トランス異性体・鏡像異性体の有無と数。</div>
+<div class="how">・<b>シス−トランス異性体</b>：C=C の 2 つの炭素原子のそれぞれに、異なる 2 つの原子・原子団が結合している。<br>
+・<b>鏡像異性体</b>：4 つの異なる原子・原子団が結合した炭素（不斉炭素原子）が 1 個あれば 1 対。旋光性などが異なり、ほかの物理的・化学的性質はほぼ同じ（乳酸 $\mathrm{CH_3CH(OH)COOH}$ など）。</div>
+<div class="pex">分子式 $\mathrm{C_4H_8}$ の異性体の数を、立体異性体も含めて求めよ。<br>
+<b>解</b>　鎖式：1-ブテン、2-ブテン（シス・トランスの 2 種）、2-メチルプロペン。環式：シクロブタン、メチルシクロプロパン。合計 <b>6 種</b></div>
+<div class="pnote">1-ブテン（$\mathrm{CH_2=}$ の炭素に H が 2 つ）や 2-メチルプロペン（一方の炭素に $\mathrm{CH_3}$ が 2 つ）には、シス−トランス異性体はない。</div>
+</div>
+
+<div class="pat"><h4>付加反応の量は「C=C 1 つに $\mathrm{H_2}$・$\mathrm{Br_2}$ 1 分子」</h4>
+<div class="when">アルケン・アルキンへの付加反応の生成物と量的関係。</div>
+<div class="how">C=C 1 つに $\mathrm{H_2,\ Br_2,\ HCl,\ H_2O}$ が 1 分子付加。C≡C には 2 分子まで付加できる。臭素の赤褐色が消えることで不飽和結合を検出できる。<br>
+アセチレン：$\mathrm{H_2O}$ 付加 → （ビニルアルコール）→ アセトアルデヒド、$\mathrm{HCl}$ 付加 → 塩化ビニル、$\mathrm{CH_3COOH}$ 付加 → 酢酸ビニル、3 分子重合 → ベンゼン。アセチレンは $\mathrm{CaC_2+2H_2O\to Ca(OH)_2+C_2H_2}$ でつくる。</div>
+<div class="pex">あるアルケン 2.8 g に臭素を付加させると、臭素 8.0 g が反応した。このアルケンの分子式を求めよ。$\mathrm{Br_2}=160$<br>
+<b>解</b>　$\mathrm{Br_2}$ 0.050 mol → アルケンも 0.050 mol → 分子量 $\frac{2.8}{0.050}=56$。$\mathrm{C}_n\mathrm{H}_{2n}$ で $14n=56$、$n=4$ → <b>$\mathrm{C_4H_8}$</b></div>
+</div>
+
+<div class="pat"><h4>アルコールは「級数で酸化生成物が決まる」、脱水は温度で分子間・分子内</h4>
+<div class="when">アルコールの酸化・脱水・Na との反応から構造を決める。</div>
+<div class="how">・第一級 $\mathrm{R-CH_2OH}$ → アルデヒド $\mathrm{R-CHO}$ → カルボン酸 $\mathrm{R-COOH}$<br>
+・第二級 → ケトン　・第三級 → 酸化されにくい<br>
+・濃硫酸と加熱：エタノールは 130〜140℃ で分子間脱水（ジエチルエーテル）、160〜170℃ で分子内脱水（エチレン）<br>
+・Na と反応して $\mathrm{H_2}$：$\mathrm{2R-OH+2Na\to 2R-ONa+H_2}$（−OH 2 個で $\mathrm{H_2}$ 1 分子）。エーテルは Na と反応しない。</div>
+<div class="pex">分子式 $\mathrm{C_4H_{10}O}$ のアルコール A は、硫酸酸性の二クロム酸カリウムで酸化するとケトンになり、不斉炭素原子をもつ。A の示性式と名称を答えよ。<br>
+<b>解</b>　酸化でケトンになるので第二級アルコール。$\mathrm{C_4H_{10}O}$ の第二級アルコールは 1 種類だけ：<b>$\mathrm{CH_3CH(OH)CH_2CH_3}$、2-ブタノール</b></div>
+</div>
+
+<div class="pat"><h4>銀鏡・フェーリングは「−CHO」、ヨードホルムは「$\mathrm{CH_3CO-}$ か $\mathrm{CH_3CH(OH)-}$」</h4>
+<div class="when">検出反応の結果からアルデヒド・ケトン・アルコールなどを区別する。</div>
+<div class="how">・<b>銀鏡反応</b>（アンモニア性硝酸銀水溶液 → Ag）・<b>フェーリング液の還元</b>（→ $\mathrm{Cu_2O}$ の赤色沈殿）：アルデヒド（$\mathrm{HCHO,\ CH_3CHO}$）、ギ酸、ギ酸エステル、還元性の糖<br>
+・<b>ヨードホルム反応</b>（ヨウ素と $\mathrm{NaOH}$ 水溶液で $\mathrm{CHI_3}$ の黄色沈殿・特異臭）：$\mathrm{CH_3CO-R}$ または $\mathrm{CH_3CH(OH)-R}$（R は H または炭化水素基）をもつもの。エタノール、2-プロパノール、アセトン、アセトアルデヒド、2-ブタノールなど。酢酸・酢酸エチルは示さない。</div>
+<div class="pex">次の化合物のうち、銀鏡反応とヨードホルム反応の両方を示すものを選べ。エタノール、アセトアルデヒド、アセトン、ギ酸、メタノール<br>
+<b>解</b>　<b>アセトアルデヒド</b>（−CHO と $\mathrm{CH_3CO-}$ の両方をもつ）。エタノール・アセトンはヨードホルム反応だけ、ギ酸は銀鏡反応だけ、メタノールはどちらも示さない。</div>
+</div>
+
+<div class="pat"><h4>油脂の計算は「油脂 1 mol ＝ エステル結合 3 ＝ KOH 3 mol」、C=C の数はヨウ素価から</h4>
+<div class="when">けん化価・ヨウ素価、油脂の分子量や二重結合の数。</div>
+<div class="how">油脂はグリセリンと脂肪酸 3 分子のエステル。けん化には油脂 1 mol に $\mathrm{NaOH}$（$\mathrm{KOH}$）3 mol が必要。<br>
+<b>けん化価</b>（油脂 1 g のけん化に必要な KOH の mg 数）$=\dfrac{3\times56\times10^3}{M}$<br>
+<b>ヨウ素価</b>（油脂 100 g に付加する $\mathrm{I_2}$ の g 数）$=\dfrac{254\,n\times100}{M}$（$n$：1 分子中の C=C の数）<br>
+セッケンは弱酸と強塩基の塩で水溶液は弱塩基性。硬水（$\mathrm{Ca^{2+},\ Mg^{2+}}$）では沈殿して泡立ちが悪い。合成洗剤（硫酸ドデシルナトリウムなど）は中性で、硬水でも使える。</div>
+<div class="pex">分子量 884 の油脂のヨウ素価は 86 である。(1) この油脂 1 分子中の C=C の数 (2) けん化価 を求めよ。$\mathrm{I_2}=254,\ \mathrm{KOH}=56$<br>
+<b>解</b>　(1) $n=\dfrac{86\times884}{100\times254}=2.99$ → <b>3 個</b>　(2) $\dfrac{3\times56\times10^3}{884}=$ <b>190</b></div>
+<div class="pnote">C=C の多い油脂（ヨウ素価が大きい）は空気中で固まりやすい（乾性油）。ニッケルを触媒として $\mathrm{H_2}$ を付加すると硬化油になる。</div>
+</div>
+
+<div class="box memo"><table class="l w">
+<tr><th>化合物</th><th>一般式・例</th><th>主な反応・検出</th></tr>
+<tr><td>アルカン</td><td>$\mathrm{C}_n\mathrm{H}_{2n+2}$、メタン</td><td>光と $\mathrm{Cl_2}$ で置換反応</td></tr>
+<tr><td>アルケン</td><td>$\mathrm{C}_n\mathrm{H}_{2n}$、エチレン</td><td>付加反応（臭素の脱色）、付加重合</td></tr>
+<tr><td>アルキン</td><td>$\mathrm{C}_n\mathrm{H}_{2n-2}$、アセチレン</td><td>付加反応（2 段階）、$\mathrm{CaC_2+2H_2O}$ で生成</td></tr>
+<tr><td>アルコール</td><td>$\mathrm{R-OH}$、エタノール</td><td>Na で $\mathrm{H_2}$、酸化（級数で生成物が違う）、脱水</td></tr>
+<tr><td>エーテル</td><td>$\mathrm{R-O-R'}$、ジエチルエーテル</td><td>Na と反応しない、沸点が低い</td></tr>
+<tr><td>アルデヒド</td><td>$\mathrm{R-CHO}$、アセトアルデヒド</td><td>還元性（銀鏡反応・フェーリング液の還元）</td></tr>
+<tr><td>ケトン</td><td>$\mathrm{R-CO-R'}$、アセトン</td><td>還元性なし。アセトンはヨードホルム反応</td></tr>
+<tr><td>カルボン酸</td><td>$\mathrm{R-COOH}$、酢酸</td><td>$\mathrm{NaHCO_3}$ で $\mathrm{CO_2}$、エステル化（ギ酸は還元性あり）</td></tr>
+<tr><td>エステル</td><td>$\mathrm{R-COO-R'}$、酢酸エチル</td><td>加水分解・けん化</td></tr>
+<tr><td>ヨードホルム反応</td><td>$\mathrm{CH_3CO-R}$、$\mathrm{CH_3CH(OH)-R}$</td><td>$\mathrm{CHI_3}$ の黄色沈殿</td></tr>
+</table></div>
+
+<!--CH 13-->
+<div class="pat"><h4>ベンゼンは「付加より置換」— 試薬と条件で生成物が決まる</h4>
+<div class="when">ベンゼン・トルエンなどの反応と生成物。</div>
+<div class="how">・<b>ハロゲン化</b>：$\mathrm{Cl_2}$＋鉄粉（$\mathrm{FeCl_3}$）→ クロロベンゼン<br>
+・<b>ニトロ化</b>：濃硝酸＋濃硫酸（混酸）、約 60℃ → ニトロベンゼン<br>
+・<b>スルホン化</b>：濃硫酸と加熱 → ベンゼンスルホン酸<br>
+・付加は起こりにくいが、光をあてて $\mathrm{Cl_2}$ → 1,2,3,4,5,6-ヘキサクロロシクロヘキサン、Ni 触媒・高温高圧で $\mathrm{H_2}$ → シクロヘキサン<br>
+・<b>側鎖の酸化</b>：$\mathrm{KMnO_4}$ で、ベンゼン環に直接結合した炭化水素基は（炭素数によらず）$\mathrm{-COOH}$ になる</div>
+<div class="pex">次の反応の主な有機生成物の名称を答えよ。(1) ベンゼン＋濃硝酸＋濃硫酸（加熱）　(2) ベンゼン＋塩素（光）　(3) エチルベンゼンを $\mathrm{KMnO_4}$ で酸化　(4) ベンゼン＋塩素（鉄粉）<br>
+<b>解</b>　(1) <b>ニトロベンゼン</b>　(2) <b>1,2,3,4,5,6-ヘキサクロロシクロヘキサン</b>　(3) <b>安息香酸</b>　(4) <b>クロロベンゼン</b></div>
+</div>
+
+<div class="pat"><h4>芳香族の異性体は「側鎖 1 本か、置換基 2 つ（o・m・p）か」で分ける</h4>
+<div class="when">芳香族化合物の構造異性体の数を数える。</div>
+<div class="how">ベンゼン環以外の炭素・酸素を、「1 本の側鎖にまとめる」「2 つの置換基に分ける」…と場合分けする。<br>
+二置換体は <b>o−、m−、p− の 3 種</b>。三置換体は、3 つとも同じ → 3 種、2 つが同じ → 6 種、すべて異なる → 10 種。</div>
+<div class="pex">次の分子式をもつ芳香族化合物の構造異性体の数を求めよ。(1) $\mathrm{C_8H_{10}}$（炭化水素）　(2) $\mathrm{C_7H_8O}$<br>
+<b>解</b>　(1) エチルベンゼン＋キシレン（o, m, p）＝ <b>4 種</b><br>
+(2) ベンジルアルコール、メチルフェニルエーテル、クレゾール（o, m, p）＝ <b>5 種</b></div>
+</div>
+
+<div class="pat"><h4>フェノールは「炭酸より弱い酸」— 酸の強さの順で遊離を判断する</h4>
+<div class="when">フェノール類の性質、酸の強さと塩の反応。</div>
+<div class="how">酸の強さ：<b>塩酸・硫酸 ＞ スルホン酸 ＞ カルボン酸 ＞ 炭酸 ＞ フェノール</b>。弱い酸の塩に強い酸を加えると、弱い酸が遊離する。<br>
+フェノールは $\mathrm{NaOH}$ 水溶液には溶ける（ナトリウムフェノキシド）が、$\mathrm{NaHCO_3}$ 水溶液とは反応しない。<br>
+検出：塩化鉄(III)水溶液で紫色（青〜赤紫）。臭素水で 2,4,6-トリブロモフェノールの白色沈殿。</div>
+<div class="pex">(1) ナトリウムフェノキシドの水溶液に $\mathrm{CO_2}$ を通じたときの変化を化学反応式で表せ。(2) 安息香酸とフェノールを区別するのに使える水溶液を 1 つ答えよ。<br>
+<b>解</b>　(1) <b>$\mathrm{C_6H_5ONa+CO_2+H_2O\to C_6H_5OH+NaHCO_3}$</b>（フェノールが遊離して白濁する）<br>
+(2) <b>$\mathrm{NaHCO_3}$ 水溶液</b>（安息香酸だけが $\mathrm{CO_2}$ を出して溶ける）。塩化鉄(III)水溶液でもよい（フェノールだけ呈色）。</div>
+</div>
+
+<div class="pat"><h4>フェノールの製法は 3 つ — 工業的にはクメン法でアセトンも得る</h4>
+<div class="when">フェノールの合成経路、クメン法の量的関係。</div>
+<div class="how">① <b>クメン法</b>：ベンゼン＋プロペン → クメン → 酸素で酸化 → クメンヒドロペルオキシド → 希硫酸で分解 → フェノール＋アセトン<br>
+② ベンゼンスルホン酸 → $\mathrm{NaOH}$ と融解（アルカリ融解）→ ナトリウムフェノキシド → 酸を加える<br>
+③ クロロベンゼン＋$\mathrm{NaOH}$ 水溶液（高温・高圧）→ ナトリウムフェノキシド → 酸を加える</div>
+<div class="pex">クメン法でフェノール 94 kg をつくるとき、同時に得られるアセトンは何 kg か。$\mathrm{C_6H_5OH}=94,\ \mathrm{CH_3COCH_3}=58$<br>
+<b>解</b>　フェノール $1.0\times10^3$ mol と同じ物質量のアセトンが生じる → <b>58 kg</b></div>
+</div>
+
+<div class="pat"><h4>サリチル酸は「−OH と −COOH の両方」— どちらを反応させたかで $\mathrm{FeCl_3}$ の呈色が変わる</h4>
+<div class="when">サリチル酸の合成と、その誘導体（アセチルサリチル酸・サリチル酸メチル）の性質。</div>
+<div class="how">ナトリウムフェノキシド＋$\mathrm{CO_2}$（高温・高圧）→ サリチル酸ナトリウム → 希硫酸 → サリチル酸。<br>
+・＋無水酢酸（−OH をアセチル化）→ <b>アセチルサリチル酸</b>（解熱鎮痛剤）。フェノール性 −OH がないので $\mathrm{FeCl_3}$ で<b>呈色しない</b>。<br>
+・＋メタノール・濃硫酸（−COOH をエステル化）→ <b>サリチル酸メチル</b>（消炎鎮痛剤）。−OH が残るので $\mathrm{FeCl_3}$ で<b>呈色する</b>。$\mathrm{NaHCO_3}$ とは反応しない。</div>
+<div class="pex">サリチル酸 2.76 g から得られるアセチルサリチル酸は、最大で何 g か。サリチル酸 $\mathrm{C_7H_6O_3}=138$、アセチルサリチル酸 $\mathrm{C_9H_8O_4}=180$<br>
+<b>解</b>　$\frac{2.76}{138}=0.0200$ mol → $0.0200\times180=$ <b>3.60 g</b></div>
+<div class="pnote">合成したアセチルサリチル酸に未反応のサリチル酸が残っていると $\mathrm{FeCl_3}$ で紫色になる。純度の確認に使える。</div>
+</div>
+
+<div class="pat"><h4>アニリンは「ニトロベンゼンの還元」でつくり、さらし粉で赤紫色</h4>
+<div class="when">アニリンの製法・性質・検出。</div>
+<div class="how">ニトロベンゼン＋スズ（または鉄）＋濃塩酸 → アニリン塩酸塩 → $\mathrm{NaOH}$ 水溶液 → アニリン（弱塩基、水に溶けにくい油状の液体、塩酸には溶ける）。<br>
+検出：さらし粉水溶液で<b>赤紫色</b>。硫酸酸性の $\mathrm{K_2Cr_2O_7}$ で酸化すると黒色のアニリンブラック。<br>
+無水酢酸と反応してアセトアニリド（アミド結合をもつ）。空気中で徐々に酸化されて褐色になる。</div>
+<div class="pex">ニトロベンゼンからアニリンを得る操作を、使う試薬の順に説明せよ。<br>
+<b>解</b>　<b>スズと濃塩酸</b>で還元してアニリン塩酸塩 $\mathrm{C_6H_5NH_3Cl}$ とし、<b>$\mathrm{NaOH}$ 水溶液</b>を加えて弱塩基のアニリンを遊離させる（エーテルで抽出して取り出す）。</div>
+</div>
+
+<div class="pat"><h4>ジアゾ化は「5℃以下で $\mathrm{NaNO_2}$＋$\mathrm{HCl}$」、カップリングでアゾ化合物</h4>
+<div class="when">塩化ベンゼンジアゾニウムの生成・分解とカップリング。</div>
+<div class="how">アニリン＋塩酸＋亜硝酸ナトリウム（氷冷、0〜5℃）→ 塩化ベンゼンジアゾニウム $\mathrm{C_6H_5N_2Cl}$（ジアゾ化）。<br>
+温度が上がると分解：$\mathrm{C_6H_5N_2Cl+H_2O\to C_6H_5OH+N_2+HCl}$。<br>
+ナトリウムフェノキシドの水溶液に加えると、p-ヒドロキシアゾベンゼン（p-フェニルアゾフェノール、橙赤色）が生じる（カップリング）。アゾ基 −N=N− をもつ化合物はアゾ染料として使われる。</div>
+<div class="pex">塩化ベンゼンジアゾニウムの水溶液を 5℃ 以下に保つ理由を述べ、温めたときの変化を化学反応式で表せ。<br>
+<b>解</b>　不安定で、温度が上がると水と反応して<b>分解</b>してしまうため。<b>$\mathrm{C_6H_5N_2Cl+H_2O\to C_6H_5OH+N_2+HCl}$</b></div>
+</div>
+
+<div class="pat"><h4>抽出は「酸・塩基を加えて塩にし、水層へ移す」— 弱い酸ほど強い塩基が必要</h4>
+<div class="when">芳香族化合物の混合物（エーテル溶液）を、分液漏斗で分離する。</div>
+<div class="how">塩（イオン）になると水層へ、分子のままならエーテル層に残る。<br>
+・<b>塩酸</b>：塩基（アニリン）が塩になって水層へ<br>
+・<b>$\mathrm{NaHCO_3}$ 水溶液</b>：カルボン酸（安息香酸・サリチル酸）だけが水層へ（フェノールは炭酸より弱いので残る）<br>
+・<b>$\mathrm{NaOH}$ 水溶液</b>：フェノール類が水層へ<br>
+・中性の物質（トルエン、ニトロベンゼンなど）は最後までエーテル層<br>
+水層から取り出すには、より強い酸（塩基）を加えて遊離させ、再びエーテルで抽出する。</div>
+<div class="pex">アニリン、フェノール、安息香酸、トルエンを含むエーテル溶液に、① 塩酸、② $\mathrm{NaHCO_3}$ 水溶液、③ $\mathrm{NaOH}$ 水溶液 の順に加えて振り混ぜ、そのつど水層を分けた。①〜③ の水層と、最後のエーテル層に含まれる物質を答えよ。<br>
+<b>解</b>　① <b>アニリン塩酸塩</b>　② <b>安息香酸ナトリウム</b>　③ <b>ナトリウムフェノキシド</b>　エーテル層：<b>トルエン</b></div>
+<div class="pnote">②と③を逆にすると、$\mathrm{NaOH}$ で安息香酸とフェノールが両方とも水層に移ってしまい、分離できない。</div>
+</div>
+
+<div class="box memo"><table class="l w">
+<tr><th>化合物</th><th>主な製法</th><th>性質・検出</th></tr>
+<tr><td>ニトロベンゼン</td><td>ベンゼン＋混酸（ニトロ化）</td><td>中性、淡黄色の油状液体</td></tr>
+<tr><td>アニリン</td><td>ニトロベンゼンを Sn＋HCl で還元 → NaOH</td><td>弱塩基、さらし粉で赤紫色</td></tr>
+<tr><td>フェノール</td><td>クメン法（アセトンも生成）など</td><td>炭酸より弱い酸、$\mathrm{FeCl_3}$ で紫色、臭素水で白色沈殿</td></tr>
+<tr><td>安息香酸</td><td>トルエンの酸化</td><td>$\mathrm{NaHCO_3}$ と反応して $\mathrm{CO_2}$</td></tr>
+<tr><td>サリチル酸</td><td>ナトリウムフェノキシド＋$\mathrm{CO_2}$（高温・高圧）→ 酸</td><td>$\mathrm{FeCl_3}$ で紫色、$\mathrm{NaHCO_3}$ で $\mathrm{CO_2}$</td></tr>
+<tr><td>アセチルサリチル酸</td><td>サリチル酸＋無水酢酸</td><td>$\mathrm{FeCl_3}$ で呈色しない</td></tr>
+<tr><td>サリチル酸メチル</td><td>サリチル酸＋メタノール（濃硫酸）</td><td>$\mathrm{FeCl_3}$ で紫色、$\mathrm{NaHCO_3}$ とは反応しない</td></tr>
+<tr><td>フタル酸</td><td>o-キシレンの酸化</td><td>加熱すると無水フタル酸（分子内脱水）</td></tr>
+<tr><td>テレフタル酸</td><td>p-キシレンの酸化</td><td>ポリエチレンテレフタラートの原料</td></tr>
+<tr><td>塩化ベンゼンジアゾニウム</td><td>アニリン＋$\mathrm{NaNO_2}$＋HCl（0〜5℃）</td><td>温めると分解して $\mathrm{N_2}$、カップリングでアゾ化合物</td></tr>
+</table></div>
+
+<!--CH 14-->
+<div class="pat"><h4>分子式は「組成式 × $n$」、$n$ は分子量から決める</h4>
+<div class="when">元素分析の質量百分率と分子量から分子式を求め、構造の候補を考える。</div>
+<div class="how">各元素の％を原子量で割って比を出し、最小の値で割って整数比にする（0.5 や 0.33 が出たら 2 倍・3 倍する）。<br>
+分子量は、気体の状態方程式・凝固点降下・中和滴定（価数のわかる酸）などから求める。</div>
+<div class="pex">C 40.0％、H 6.7％、O 53.3％ の化合物がある。分子量は 60 で、$\mathrm{NaHCO_3}$ 水溶液に加えると $\mathrm{CO_2}$ を発生した。分子式と示性式を答えよ。<br>
+<b>解</b>　C : H : O $=\frac{40.0}{12}:\frac{6.7}{1.0}:\frac{53.3}{16}=3.33:6.7:3.33=1:2:1$ → 組成式 $\mathrm{CH_2O}$（式量 30）。$n=2$ で <b>$\mathrm{C_2H_4O_2}$</b>。<br>
+カルボン酸なので <b>$\mathrm{CH_3COOH}$</b>（酢酸）</div>
+<div class="pnote">$\mathrm{C_2H_4O_2}$ にはギ酸メチル $\mathrm{HCOOCH_3}$ もある。分子式だけで決めず、反応の情報で絞り込む。</div>
+</div>
+
+<div class="pat"><h4>候補は「不飽和度 → 官能基 → 骨格」の順に漏れなく書き出す</h4>
+<div class="when">構造決定の最初に、条件を満たす異性体をすべて挙げる。</div>
+<div class="how">① 不飽和度を求める ② O の数から考えられる官能基（O 1 個：アルコール・エーテル・アルデヒド・ケトン、O 2 個：カルボン酸・エステルなど）③ 炭素骨格を書き、官能基を対称性に注意して置く。<br>
+鏡像異性体を区別するかどうかは問題文で確認する。</div>
+<div class="pex">分子式 $\mathrm{C_5H_{12}O}$ のアルコールの構造異性体の数と、そのうち不斉炭素原子をもつものの数を求めよ。<br>
+<b>解</b>　直鎖の骨格：1-、2-、3-ペンタノール（3 種）。2-メチルブタンの骨格：2-メチル-1-ブタノール、3-メチル-1-ブタノール、2-メチル-2-ブタノール、3-メチル-2-ブタノール（4 種）。2,2-ジメチルプロパンの骨格：2,2-ジメチル-1-プロパノール（1 種）。合計 <b>8 種</b>。<br>
+不斉炭素原子をもつもの：2-ペンタノール、2-メチル-1-ブタノール、3-メチル-2-ブタノールの <b>3 種</b></div>
+</div>
+
+<div class="pat"><h4>官能基は「反応の結果」から逆算する</h4>
+<div class="when">反応性の記述から官能基や構造を決める。</div>
+<div class="how">・Na で $\mathrm{H_2}$ → −OH または −COOH　・$\mathrm{NaHCO_3}$ で $\mathrm{CO_2}$ → −COOH（スルホン酸も）<br>
+・$\mathrm{FeCl_3}$ で呈色 → フェノール性 −OH　・銀鏡反応・フェーリング液 → −CHO（ギ酸・ギ酸エステルも）<br>
+・ヨードホルム反応 → $\mathrm{CH_3CO-}$ または $\mathrm{CH_3CH(OH)-}$　・臭素の脱色 → C=C、C≡C<br>
+・加水分解される → エステル・アミド　・酸化でアルデヒド → 第一級アルコール、ケトン → 第二級アルコール</div>
+<div class="pex">分子式 $\mathrm{C_3H_8O}$ の化合物 A、B、C がある。A を酸化すると銀鏡反応を示す化合物が得られる。B はヨードホルム反応を示す。C は Na と反応しない。A〜C の示性式を答えよ。<br>
+<b>解</b>　A <b>$\mathrm{CH_3CH_2CH_2OH}$</b>（1-プロパノール、酸化でプロピオンアルデヒド）　B <b>$\mathrm{CH_3CH(OH)CH_3}$</b>（2-プロパノール）　C <b>$\mathrm{CH_3OCH_2CH_3}$</b>（エチルメチルエーテル）</div>
+</div>
+
+<div class="pat"><h4>エステルは「加水分解で酸とアルコールに分けて」それぞれを決める</h4>
+<div class="when">エステルの構造決定（$\mathrm{C}_n\mathrm{H}_{2n}\mathrm{O_2}$ など）。</div>
+<div class="how">$\mathrm{R-COO-R'+H_2O\to R-COOH+R'-OH}$。<br>
+生じたカルボン酸の性質（銀鏡反応を示す → ギ酸）と、アルコールの性質（ヨードホルム反応 → $\mathrm{CH_3CH(OH)-}$ をもつ、酸化してケトン → 第二級）から R・R' を決め、炭素数の合計が分子式と合うか確かめる。</div>
+<div class="pex">分子式 $\mathrm{C_4H_8O_2}$ のエステル A を加水分解すると、カルボン酸 X とアルコール Y が得られた。X は銀鏡反応を示し、Y はヨードホルム反応を示した。A の示性式と名称を答えよ。<br>
+<b>解</b>　X は銀鏡反応を示すのでギ酸 $\mathrm{HCOOH}$。Y は炭素数 3 のアルコールでヨードホルム反応を示すので 2-プロパノール。<br>
+A は <b>$\mathrm{HCOOCH(CH_3)_2}$</b>（ギ酸イソプロピル）</div>
+<div class="pnote">$\mathrm{C_4H_8O_2}$ のエステルは $\mathrm{HCOOCH_2CH_2CH_3}$、$\mathrm{HCOOCH(CH_3)_2}$、$\mathrm{CH_3COOC_2H_5}$、$\mathrm{C_2H_5COOCH_3}$ の 4 種。</div>
+</div>
+
+<div class="pat"><h4>アルケンの構造は「酸化開裂の生成物の C=O どうしをつなぐ」</h4>
+<div class="when">アルケンをオゾン分解（または $\mathrm{KMnO_4}$ で酸化開裂）した生成物から、もとの構造を決める。</div>
+<div class="how">オゾン分解：$\mathrm{R^1R^2C=CR^3R^4\to R^1R^2C=O+O=CR^3R^4}$。2 つの生成物の C=O の炭素どうしを二重結合でつなぎ直せば、もとのアルケンになる。<br>
+生成物がアルデヒド → その炭素に H が結合していた。ケトン → H がなかった。<br>
+（$\mathrm{KMnO_4}$ で強く酸化すると、アルデヒドはさらにカルボン酸に、$\mathrm{CH_2=}$ の部分は $\mathrm{CO_2}$ になる。）</div>
+<div class="pex">分子式 $\mathrm{C_5H_{10}}$ のアルケン A をオゾン分解すると、アセトンとアセトアルデヒドが得られた。A の示性式と名称を答えよ。<br>
+<b>解</b>　$\mathrm{(CH_3)_2C=O}$ と $\mathrm{O=CHCH_3}$ をつなぐと <b>$\mathrm{(CH_3)_2C=CHCH_3}$</b>、<b>2-メチル-2-ブテン</b></div>
+</div>
+
+<div class="pat"><h4>シス−トランス異性体は「性質の違い」でも区別できる — 加熱で酸無水物になるのはシス形</h4>
+<div class="when">マレイン酸・フマル酸など、立体異性体を性質の違いから区別する。</div>
+<div class="how">・<b>マレイン酸（シス形）</b>：2 つの −COOH が同じ側にあり近いので、加熱すると分子内で脱水して無水マレイン酸になる。<br>
+・<b>フマル酸（トランス形）</b>：−COOH が反対側にあり、分子内で脱水しにくい。融点はフマル酸の方が高い。<br>
+・どちらも $\mathrm{H_2}$ を付加するとコハク酸になる（立体異性がなくなる）。<br>
+・不斉炭素原子をもつかどうかも、構造決定の最後の絞り込みによく使われる。</div>
+<div class="pex">分子式 $\mathrm{C_4H_4O_4}$ のジカルボン酸 A、B は互いにシス−トランス異性体である。A を加熱すると酸無水物 $\mathrm{C_4H_2O_3}$ が生じたが、B は同じ条件では変化しにくかった。A、B の名称を答えよ。<br>
+<b>解</b>　A <b>マレイン酸</b>（シス形）　B <b>フマル酸</b>（トランス形）</div>
+</div>
+
+<div class="pat"><h4>二置換ベンゼンの位置は「酸化生成物」と「環の H を 1 つ置換した異性体の数」で決める</h4>
+<div class="when">芳香族化合物の置換基の位置（o・m・p）を決める。</div>
+<div class="how">・$\mathrm{KMnO_4}$ で側鎖を酸化：側鎖 1 本 → 安息香酸、2 本 → ベンゼンジカルボン酸（フタル酸・イソフタル酸・テレフタル酸）。o-体のフタル酸だけが加熱で酸無水物（無水フタル酸）になる。<br>
+・ベンゼン環の H 1 個を Cl などで置換した化合物の数：o-キシレン 2 種、m-キシレン 3 種、<b>p-キシレン 1 種</b>、エチルベンゼン 3 種。対称性の高い p-体ほど少ない。</div>
+<div class="pex">分子式 $\mathrm{C_8H_{10}}$ の芳香族炭化水素 A を $\mathrm{KMnO_4}$ で酸化して得た化合物を加熱すると、酸無水物が生じた。A の名称を答えよ。また、$\mathrm{C_8H_{10}}$ の芳香族炭化水素のうち、ベンゼン環の H 原子 1 個を Cl で置換した化合物が 1 種類しかないものはどれか。<br>
+<b>解</b>　A は <b>o-キシレン</b>（酸化でフタル酸 → 無水フタル酸）。1 種類しかないのは <b>p-キシレン</b>。</div>
+</div>
+
+<div class="pat"><h4>総合問題は「分子式 → 加水分解でばらす → 断片を同定 → 組み立てる」</h4>
+<div class="when">いくつもの反応条件が与えられる構造決定の総合問題。</div>
+<div class="how">① 分子式と不飽和度（4 以上ならベンゼン環）② エステル・アミドなら加水分解して断片に分ける ③ 断片ごとに検出反応で官能基・位置を決める ④ 炭素数・水素数の合計が分子式と合うか確かめる ⑤ 残りの条件（不斉炭素原子、異性体の数など）で最終決定する。</div>
+<div class="pex">分子式 $\mathrm{C_8H_8O_2}$ の芳香族エステル A を加水分解すると、化合物 B と C が得られた。B は塩化鉄(III)水溶液で紫色を示した。C は銀鏡反応を示さず、$\mathrm{NaHCO_3}$ 水溶液と反応して $\mathrm{CO_2}$ を発生した。A の示性式と名称を答えよ。<br>
+<b>解</b>　不飽和度 5（ベンゼン環 4＋C=O 1）。B はフェノール類（炭素数 6 以上）、C はギ酸以外のカルボン酸（炭素数 2 以上）。合計 8 なので B はフェノール、C は酢酸。<br>
+A は <b>$\mathrm{CH_3COOC_6H_5}$</b>（酢酸フェニル）</div>
+<div class="pnote">$\mathrm{C_8H_8O_2}$ の芳香族エステルには、安息香酸メチル、ギ酸ベンジル、ギ酸のクレゾールエステル（o, m, p）もある。「C が銀鏡反応を示さない」でギ酸エステルが、「B が $\mathrm{FeCl_3}$ で呈色」で安息香酸メチルが除かれる。</div>
+</div>
+
+<div class="box memo"><table class="l w">
+<tr><th>実験結果</th><th>わかること</th></tr>
+<tr><td>Na と反応して $\mathrm{H_2}$</td><td>−OH（アルコール・フェノール）または −COOH</td></tr>
+<tr><td>$\mathrm{NaHCO_3}$ で $\mathrm{CO_2}$</td><td>−COOH（またはスルホン酸）</td></tr>
+<tr><td>$\mathrm{FeCl_3}$ で紫色</td><td>フェノール性 −OH</td></tr>
+<tr><td>銀鏡反応・フェーリング液の還元</td><td>−CHO（アルデヒド、ギ酸、ギ酸エステル）</td></tr>
+<tr><td>ヨードホルム反応</td><td>$\mathrm{CH_3CO-R}$、$\mathrm{CH_3CH(OH)-R}$</td></tr>
+<tr><td>臭素水の脱色</td><td>C=C、C≡C（フェノールは置換で白色沈殿）</td></tr>
+<tr><td>加熱で分子内脱水（酸無水物）</td><td>マレイン酸（シス形）、フタル酸（o-体）</td></tr>
+<tr><td>不飽和度</td><td>$\dfrac{2x+2-y}{2}$（$\mathrm{C}_x\mathrm{H}_y\mathrm{O}_z$）。4 以上ならベンゼン環を疑う</td></tr>
+</table>
+<table class="l w">
+<tr><th>よく出る異性体の数</th><th>内訳</th></tr>
+<tr><td>$\mathrm{C_4H_{10}O}$：7 種</td><td>アルコール 4（うち 2-ブタノールに鏡像異性体）＋エーテル 3</td></tr>
+<tr><td>$\mathrm{C_5H_{12}O}$ のアルコール：8 種</td><td>不斉炭素原子をもつもの 3 種</td></tr>
+<tr><td>$\mathrm{C_4H_8}$：6 種（立体異性体を含む）</td><td>鎖式 4（2-ブテンのシス・トランスを含む）＋環式 2</td></tr>
+<tr><td>$\mathrm{C_4H_8O_2}$ のエステル：4 種</td><td>ギ酸エステル 2、酢酸エチル、プロピオン酸メチル</td></tr>
+<tr><td>$\mathrm{C_8H_{10}}$（芳香族）：4 種</td><td>エチルベンゼン、o・m・p-キシレン</td></tr>
+<tr><td>$\mathrm{C_7H_8O}$（芳香族）：5 種</td><td>ベンジルアルコール、メチルフェニルエーテル、o・m・p-クレゾール</td></tr>
+</table></div>
+
+<!--CH 15-->
+<div class="pat"><h4>糖の還元性は「開環して −CHO（$\mathrm{-CO-CH_2OH}$）が出られるか」、量は問題文の約束で</h4>
+<div class="when">単糖・二糖の還元性（銀鏡反応・フェーリング液の還元）、加水分解とフェーリング液の還元の量的関係。</div>
+<div class="how">・単糖（グルコース・フルクトース・ガラクトース）はすべて還元性を示す（フルクトースは $\mathrm{-CO-CH_2OH}$ の部分が還元性を示す）。<br>
+・二糖：マルトース・セロビオース・ラクトースは還元性を示す。<b>スクロース</b>は、グルコースとフルクトースが還元性を示す部分どうしで結合しているので<b>還元性を示さない</b>（トレハロースも示さない）。<br>
+・デンプン・セルロースは還元性を示さない。<br>
+・スクロースを加水分解した転化糖（グルコース＋フルクトース）は還元性を示す。量的関係は、問題文の「還元糖 1 mol から $\mathrm{Cu_2O}$ 1 mol」などの約束に従う。</div>
+<div class="pex">スクロース 3.42 g を完全に加水分解し、生じた単糖をすべてフェーリング液と反応させた。還元糖 1 mol から $\mathrm{Cu_2O}$ が 1 mol 生じるとすると、$\mathrm{Cu_2O}$ は何 g 生じるか。スクロース $=342$、$\mathrm{Cu_2O}=143$<br>
+<b>解</b>　スクロース 0.0100 mol → グルコース 0.0100 mol とフルクトース 0.0100 mol、合計 0.0200 mol。$\mathrm{Cu_2O}$ は $0.0200\times143=$ <b>2.86 g</b></div>
+<div class="pnote">加水分解する前のスクロースはフェーリング液を還元しない。「加水分解したかどうか」を必ず確認する。</div>
+</div>
+
+<div class="pat"><h4>多糖は「$\mathrm{(C_6H_{10}O_5)_n}$」— 加水分解・発酵の量は単位 162 で計算</h4>
+<div class="when">デンプン・セルロースの加水分解、アルコール発酵、重合度、多糖の構造の違い。</div>
+<div class="how">$\mathrm{(C_6H_{10}O_5)_n+nH_2O\to nC_6H_{12}O_6}$：単位 162 g からグルコース 180 g。アルコール発酵 $\mathrm{C_6H_{12}O_6\to 2C_2H_5OH+2CO_2}$。重合度 $n=\frac{\text{分子量}}{162}$。<br>
+・アミロース：α-グルコースが 1,4 結合で直鎖状（らせん構造）、ヨウ素デンプン反応で濃青色<br>
+・アミロペクチン：1,6 結合で枝分かれ、赤紫色　・グリコーゲン：さらに枝分かれが多い、赤褐色<br>
+・セルロース：β-グルコースが 1,4 結合で直線状、ヨウ素デンプン反応を示さない</div>
+<div class="pex">デンプン 81 g を完全に加水分解してグルコースとし、さらにすべてアルコール発酵させた。得られるエタノールは何 g か。$\mathrm{C_6H_{10}O_5}=162,\ \mathrm{C_2H_5OH}=46$<br>
+<b>解</b>　単位 $\frac{81}{162}=0.50$ mol → グルコース 0.50 mol（90 g）→ エタノール 1.0 mol ＝ <b>46 g</b></div>
+</div>
+
+<div class="pat"><h4>セルロースの誘導体は「1 単位に −OH が 3 つ」で質量を計算する</h4>
+<div class="when">トリアセチルセルロース・トリニトロセルロースの生成量、エステル化された −OH の数。</div>
+<div class="how">セルロースは $\mathrm{[C_6H_7O_2(OH)_3]_n}$ と書ける。3 つの −OH をすべてエステル化すると<br>
+・アセチル化 → $\mathrm{[C_6H_7O_2(OCOCH_3)_3]_n}$（単位 288）　・ニトロ化 → $\mathrm{[C_6H_7O_2(ONO_2)_3]_n}$（単位 297）<br>
+−OH 1 つあたり、アセチル化で 42、ニトロ化で 45 だけ質量が増える。一部だけ反応したときは、質量の増加から反応した −OH の数を求める。<br>
+再生繊維：ビスコースレーヨン、銅アンモニアレーヨン（シュワイツァー試薬に溶かす）。半合成繊維：アセテート。</div>
+<div class="pex">セルロース 16.2 g をすべてトリニトロセルロースにすると、何 g になるか。$\mathrm{C_6H_{10}O_5}=162$<br>
+<b>解</b>　単位 $\frac{16.2}{162}=0.100$ mol → $0.100\times297=$ <b>29.7 g</b></div>
+<div class="pnote">アセテート繊維は、トリアセチルセルロースを一部加水分解してアセトンに溶けるようにした（ジアセチルセルロース）ものからつくる。</div>
+</div>
+
+<div class="pat"><h4>アミノ酸の電荷は「pH と等電点の大小」で判断する</h4>
+<div class="when">アミノ酸の電離平衡、電気泳動での移動方向、等電点。</div>
+<div class="how">アミノ酸は結晶中や水溶液中で双性イオン（$\mathrm{H_3N^+-CHR-COO^-}$）として存在する。<br>
+<b>pH ＜ 等電点 → 陽イオンが多く陰極へ</b>、<b>pH ＞ 等電点 → 陰イオンが多く陽極へ</b>、pH ＝ 等電点ではほとんど移動しない。<br>
+等電点：中性アミノ酸 約 6（グリシン 6.0、アラニン 6.0）、酸性アミノ酸（グルタミン酸 3.2）は小さく、塩基性アミノ酸（リシン 9.7）は大きい。</div>
+<div class="pex">pH 6.0 の緩衝液中で、アラニン（等電点 6.0）、グルタミン酸（3.2）、リシン（9.7）の混合物を電気泳動した。それぞれどちらの極へ移動するか。<br>
+<b>解</b>　アラニン：<b>ほとんど移動しない</b>　グルタミン酸：陰イオン → <b>陽極</b>へ　リシン：陽イオン → <b>陰極</b>へ</div>
+<div class="pnote">「陽イオンは陰極へ」。電極の名前と、移動するイオンの電荷の符号を取り違えない。</div>
+</div>
+
+<div class="pat"><h4>ペプチドの種類は「並べ方の数」、分子量は「和 − 18 ×（結合の数）」</h4>
+<div class="when">ジペプチド・トリペプチドの種類の数、ペプチドの分子量。</div>
+<div class="how">鎖状のペプチドは N 末端と C 末端を区別するので、アミノ酸の並び順が違えば別の物質。<br>
+異なる 3 種類を 1 分子ずつ → $3!=6$ 種。2 種類から重複を許してつくるジペプチド → $2^2=4$ 種（鏡像異性体は問題の指示に従う）。<br>
+分子量＝$\Sigma$（アミノ酸の分子量）$-18\times$（ペプチド結合の数）。</div>
+<div class="pex">グリシン（分子量 75）、アラニン（89）、フェニルアラニン（165）を 1 分子ずつ含む鎖状のトリペプチドについて、(1) 考えられる構造の数 (2) 分子量 を求めよ。<br>
+<b>解</b>　(1) $3!=$ <b>6 種</b>　(2) $75+89+165-2\times18=$ <b>293</b></div>
+</div>
+
+<div class="pat"><h4>タンパク質の検出反応は「何をもつと陽性か」で対応づける</h4>
+<div class="when">検出反応の結果から、タンパク質・ペプチド・アミノ酸の特徴を答える。</div>
+<div class="how">・<b>ビウレット反応</b>（$\mathrm{NaOH}$ 水溶液＋$\mathrm{CuSO_4}$ 水溶液 → 赤紫色）：ペプチド結合を 2 つ以上もつ（トリペプチド以上）<br>
+・<b>キサントプロテイン反応</b>（濃硝酸で加熱 → 黄色、さらにアンモニア水で橙黄色）：ベンゼン環をもつアミノ酸（チロシン、フェニルアラニン）<br>
+・<b>硫黄の検出</b>（$\mathrm{NaOH}$ で加熱し、酢酸鉛(II)水溶液 → 黒色の $\mathrm{PbS}$）：硫黄を含むアミノ酸（システインなど）<br>
+・<b>ニンヒドリン反応</b>（赤紫〜青紫色）：アミノ基（アミノ酸自身も陽性）<br>
+・変性：熱・強酸・強塩基・重金属イオン・アルコールなどで立体構造がこわれる。</div>
+<div class="pex">あるペプチドは、ビウレット反応は陰性、キサントプロテイン反応は陽性、ニンヒドリン反応は陽性であった。このペプチドについてわかることを答えよ。<br>
+<b>解</b>　ペプチド結合が 1 つの<b>ジペプチド</b>であり、<b>ベンゼン環をもつアミノ酸</b>を含む。</div>
+</div>
+
+<div class="pat"><h4>窒素の定量は「逆滴定で $\mathrm{NH_3}$ → N の質量 → ÷0.16」</h4>
+<div class="when">食品などの窒素の量からタンパク質の含有率を求める（ケルダール法）。</div>
+<div class="how">試料中の N をすべて $\mathrm{NH_3}$ に変え、過剰の硫酸に吸収させてから、残った酸を $\mathrm{NaOH}$ 水溶液で滴定する（逆滴定、第3章）。<br>
+N の質量＝$\mathrm{NH_3}$ の物質量 × 14。タンパク質は N を約 16％ 含むので、<b>タンパク質の質量＝N の質量 ÷ 0.16</b>。</div>
+<div class="pex">食品 0.50 g 中の窒素をすべて $\mathrm{NH_3}$ とし、0.050 mol/L の硫酸 25.0 mL に吸収させた。残った硫酸を 0.10 mol/L $\mathrm{NaOH}$ 水溶液で滴定すると 10.0 mL を要した。タンパク質の窒素含有率を 16％ として、食品中のタンパク質の質量パーセントを求めよ。$\mathrm{N}=14$<br>
+<b>解</b>　$\mathrm{H^+}$ $2\times0.050\times25.0\times10^{-3}=2.5\times10^{-3}$ mol、$\mathrm{OH^-}$ $1.0\times10^{-3}$ mol → $\mathrm{NH_3}$ $1.5\times10^{-3}$ mol。<br>
+N は 21 mg、タンパク質は $\frac{21}{0.16}=131$ mg。$\frac{131}{500}\times100=$ <b>26％</b></div>
+</div>
+
+<div class="pat"><h4>酵素は「最適温度・最適 pH・基質特異性」、核酸は「塩基の相補性」</h4>
+<div class="when">酵素の性質、DNA・RNA の構造と塩基の組成。</div>
+<div class="how">・<b>酵素</b>：タンパク質でできた触媒。最適温度（多くは 35〜40℃ 付近。高温では変性して失活）、最適 pH（ペプシン 約 2、トリプシン 約 8、だ液のアミラーゼ 約 7）、特定の物質（基質）にだけはたらく<b>基質特異性</b>。<br>
+・<b>核酸</b>：ヌクレオチド（リン酸＋糖＋塩基）の重合体。<br>
+DNA：糖はデオキシリボース、塩基は A・G・C・T、二重らせん構造。A と T、G と C が水素結合で対をつくる（相補性）→ <b>A ＝ T、G ＝ C</b>（物質量）。<br>
+RNA：糖はリボース、塩基は A・G・C・U、ふつう 1 本鎖。</div>
+<div class="pex">ある 2 本鎖 DNA に含まれる塩基のうち、A が物質量で 30％ を占める。G、C、T はそれぞれ何％か。<br>
+<b>解</b>　T ＝ A ＝ <b>30％</b>、G ＝ C ＝ $\frac{100-60}{2}=$ <b>20％</b></div>
+</div>
+
+<div class="box memo"><table class="l w">
+<tr><th>糖</th><th>分子式</th><th>構成する単糖・構造</th><th>還元性</th></tr>
+<tr><td>グルコース・フルクトース・ガラクトース</td><td>$\mathrm{C_6H_{12}O_6}$</td><td>単糖</td><td>あり</td></tr>
+<tr><td>マルトース</td><td>$\mathrm{C_{12}H_{22}O_{11}}$</td><td>α-グルコース 2 分子</td><td>あり</td></tr>
+<tr><td>セロビオース</td><td>$\mathrm{C_{12}H_{22}O_{11}}$</td><td>β-グルコース 2 分子</td><td>あり</td></tr>
+<tr><td>ラクトース</td><td>$\mathrm{C_{12}H_{22}O_{11}}$</td><td>ガラクトース＋グルコース</td><td>あり</td></tr>
+<tr><td>スクロース</td><td>$\mathrm{C_{12}H_{22}O_{11}}$</td><td>グルコース＋フルクトース</td><td>なし</td></tr>
+<tr><td>デンプン</td><td>$\mathrm{(C_6H_{10}O_5)_n}$</td><td>α-グルコース（アミロース・アミロペクチン）</td><td>なし（ヨウ素で青〜赤紫）</td></tr>
+<tr><td>セルロース</td><td>$\mathrm{(C_6H_{10}O_5)_n}$</td><td>β-グルコース、直線状</td><td>なし</td></tr>
+</table>
+<table class="l w">
+<tr><th>酵素</th><th>はたらき</th><th>酵素</th><th>はたらき</th></tr>
+<tr><td>アミラーゼ</td><td>デンプン → マルトース</td><td>マルターゼ</td><td>マルトース → グルコース</td></tr>
+<tr><td>インベルターゼ（スクラーゼ）</td><td>スクロース → グルコース＋フルクトース</td><td>ラクターゼ</td><td>ラクトース → ガラクトース＋グルコース</td></tr>
+<tr><td>ペプシン・トリプシン</td><td>タンパク質 → ペプチド</td><td>リパーゼ</td><td>油脂 → 脂肪酸＋モノグリセリド</td></tr>
+<tr><td>セルラーゼ</td><td>セルロース → セロビオース</td><td>チマーゼ</td><td>グルコース → エタノール＋$\mathrm{CO_2}$</td></tr>
+</table></div>
+
+<!--CH 16-->
+<div class="pat"><h4>重合の型は「単量体の構造」で決まる — C=C は付加、2 つの官能基は縮合、環は開環</h4>
+<div class="when">高分子の単量体と重合の種類を答える。</div>
+<div class="how">・<b>付加重合</b>：C=C をもつ単量体（エチレン、プロペン、塩化ビニル、スチレン、アクリロニトリル、酢酸ビニル、メタクリル酸メチル）<br>
+・<b>縮合重合</b>：2 つの官能基をもつ単量体どうしが、$\mathrm{H_2O}$ などを取り除きながら結合（ナイロン66、ポリエチレンテレフタラート）<br>
+・<b>開環重合</b>：環状の単量体の環が開いて結合（ε-カプロラクタム → ナイロン6）<br>
+・<b>付加縮合</b>：付加反応と縮合反応のくり返し（フェノール樹脂、尿素樹脂、メラミン樹脂）<br>
+・<b>共重合</b>：2 種類以上の単量体をいっしょに重合（SBR、NBR）</div>
+<div class="pex">次の高分子の単量体と重合の種類を答えよ。(1) ポリ塩化ビニル　(2) ナイロン6　(3) ポリエチレンテレフタラート　(4) フェノール樹脂<br>
+<b>解</b>　(1) 塩化ビニル $\mathrm{CH_2=CHCl}$、<b>付加重合</b>　(2) ε-カプロラクタム、<b>開環重合</b>　(3) テレフタル酸とエチレングリコール、<b>縮合重合</b>　(4) フェノールとホルムアルデヒド、<b>付加縮合</b></div>
+</div>
+
+<div class="pat"><h4>重合度は「平均分子量 ÷ 繰り返し単位の式量」、結合の数は単位あたりで数える</h4>
+<div class="when">重合度や、1 分子中のアミド結合・エステル結合の数を求める。</div>
+<div class="how">繰り返し単位の式量を求める（縮合重合では、単量体の分子量の和 − $18\times2$）。重合度 $n=\dfrac{M}{\text{単位の式量}}$（末端は無視）。<br>
+・ナイロン66：$\mathrm{-[CO(CH_2)_4CO-NH(CH_2)_6NH]-}$、単位 226、アミド結合は 1 単位に 2 個<br>
+・ポリエチレンテレフタラート：$\mathrm{-[OC-C_6H_4-COO-(CH_2)_2-O]-}$、単位 192、エステル結合は 1 単位に 2 個</div>
+<div class="pex">平均分子量 $4.52\times10^4$ のナイロン66 について、重合度と 1 分子中のアミド結合の数を求めよ。$\mathrm{H}=1.0,\ \mathrm{C}=12,\ \mathrm{N}=14,\ \mathrm{O}=16$<br>
+<b>解</b>　単位 $\mathrm{C_{12}H_{22}N_2O_2}=226$。$n=\frac{4.52\times10^4}{226}=$ <b>200</b>。アミド結合は $2\times200=$ <b>400 個</b></div>
+<div class="pnote">繰り返し単位のとり方によって $n$ の値が変わる。問題文が単位をどう定義しているかを必ず確認する。</div>
+</div>
+
+<div class="pat"><h4>高分子の平均分子量は「浸透圧 $\Pi=cRT$」で測る</h4>
+<div class="when">高分子の溶液の浸透圧から、平均分子量・重合度を求める。</div>
+<div class="how">高分子は質量の割に物質量が小さく、凝固点降下はごくわずかで測りにくいが、浸透圧なら測定できる。$M=\dfrac{wRT}{\Pi V}$。<br>
+高分子には分子量の分布があるので、得られるのは<b>平均分子量</b>。</div>
+<div class="pex">ポリスチレン 1.0 g を溶媒に溶かして 100 mL とした溶液の、27℃ での浸透圧は $2.4\times10^2$ Pa であった。ポリスチレンの平均分子量と重合度を求めよ。$R=8.3\times10^3\ \mathrm{Pa\cdot L/(K\cdot mol)}$、スチレン $\mathrm{C_8H_8}=104$<br>
+<b>解</b>　$M=\dfrac{1.0\times8.3\times10^3\times300}{2.4\times10^2\times0.100}=1.04\times10^5$ → <b>$1.0\times10^5$</b>。$n=\frac{1.04\times10^5}{104}=$ <b>$1.0\times10^3$</b></div>
+</div>
+
+<div class="pat"><h4>ビニロンは「ポリ酢酸ビニル → けん化 → PVA → アセタール化」、−OH 2 個に HCHO 1 分子</h4>
+<div class="when">ビニロンの合成経路、アセタール化の割合と質量。</div>
+<div class="how">酢酸ビニル → 付加重合 → ポリ酢酸ビニル → $\mathrm{NaOH}$ でけん化 → ポリビニルアルコール（PVA、水に溶ける）→ 紡糸してホルムアルデヒドで<b>アセタール化</b>（−OH の 30〜40％）→ 水に溶けない繊維。残った −OH のため吸湿性がある。<br>
+−OH 2 個＋HCHO 1 分子 → $\mathrm{-O-CH_2-O-}$＋$\mathrm{H_2O}$：2 単位（88）あたり質量が $30-18=12$ 増える。</div>
+<div class="pex">ポリビニルアルコール 88 g の −OH の 40％ をアセタール化した。得られるビニロンの質量を求めよ。$\mathrm{-CH_2CH(OH)-}=44$、$\mathrm{HCHO}=30$、$\mathrm{H_2O}=18$<br>
+<b>解</b>　−OH 2.0 mol のうち 0.80 mol が反応 → HCHO 0.40 mol が結合し、$\mathrm{H_2O}$ 0.40 mol が取れる。$88+0.40\times(30-18)=92.8$ → <b>93 g</b></div>
+<div class="pnote">ビニルアルコールは不安定ですぐにアセトアルデヒドに変わるので、PVA はビニルアルコールの重合ではなく、ポリ酢酸ビニルのけん化でつくる。</div>
+</div>
+
+<div class="pat"><h4>熱可塑性か熱硬化性かは「鎖状か立体網目状か」</h4>
+<div class="when">合成樹脂の分類と性質。</div>
+<div class="how">・<b>熱可塑性樹脂</b>：鎖状構造で、加熱すると軟らかくなり成形しやすい。付加重合でできるものの多く（ポリエチレン、ポリプロピレン、ポリ塩化ビニル、ポリスチレン、ポリメタクリル酸メチル）や、ポリエチレンテレフタラート、ナイロン。<br>
+・<b>熱硬化性樹脂</b>：立体網目状構造で、加熱すると硬くなり、再び軟らかくならない。付加縮合でできるもの（フェノール樹脂、尿素樹脂、メラミン樹脂）や、アルキド樹脂。<br>
+フェノール樹脂：酸触媒でノボラック（硬化剤を加えて加熱）、塩基触媒でレゾール（加熱だけで硬化）。</div>
+<div class="pex">次の樹脂を熱可塑性樹脂と熱硬化性樹脂に分けよ。ポリエチレン、フェノール樹脂、ポリスチレン、尿素樹脂、ポリ塩化ビニル、メラミン樹脂<br>
+<b>解</b>　熱可塑性：<b>ポリエチレン、ポリスチレン、ポリ塩化ビニル</b>　熱硬化性：<b>フェノール樹脂、尿素樹脂、メラミン樹脂</b></div>
+</div>
+
+<div class="pat"><h4>ゴムは「シス形ポリイソプレン＋硫黄の橋かけ」、共重合体の組成は付加した量から</h4>
+<div class="when">天然ゴム・合成ゴムの構造、加硫、共重合体の組成の計算。</div>
+<div class="how">天然ゴム：イソプレン $\mathrm{CH_2=C(CH_3)CH=CH_2}$ の付加重合体で、<b>シス形</b>（トランス形のグッタペルカは硬い）。単位の中に C=C が 1 つ残り、空気中で酸化されて劣化する。<br>
+加硫：硫黄を数％加えて加熱し、鎖の間に橋かけ → 弾性・強度が増す。多量（30〜40％）でエボナイト。<br>
+合成ゴム：ブタジエンゴム、クロロプレンゴム、SBR（スチレン−ブタジエン）、NBR（アクリロニトリル−ブタジエン）。共重合体の組成は、ブタジエン単位に残る C=C に付加した $\mathrm{Br_2}$（$\mathrm{H_2}$）の量から求める。</div>
+<div class="pex">スチレンとブタジエンの共重合体（SBR）10.6 g に臭素を付加させると、16.0 g が付加した。スチレン単位とブタジエン単位の物質量の比を求めよ。$\mathrm{C_8H_8}=104,\ \mathrm{C_4H_6}=54,\ \mathrm{Br_2}=160$<br>
+<b>解</b>　$\mathrm{Br_2}$ 0.100 mol → ブタジエン単位 0.100 mol（5.4 g）。スチレン単位は $\frac{10.6-5.4}{104}=0.050$ mol。<b>スチレン : ブタジエン ＝ 1 : 2</b></div>
+</div>
+
+<div class="pat"><h4>イオン交換樹脂は「交換したイオンの電荷の総量 ＝ 出てきた $\mathrm{H^+}$（$\mathrm{OH^-}$）」</h4>
+<div class="when">陽イオン交換樹脂・陰イオン交換樹脂に塩の水溶液を通したときの量的関係。</div>
+<div class="how">・<b>陽イオン交換樹脂</b>（$\mathrm{R-SO_3H}$）：陽イオンを $\mathrm{H^+}$ と交換する。$\mathrm{Ca^{2+}}$ 1 個 → $\mathrm{H^+}$ 2 個。スチレンと p-ジビニルベンゼンの共重合体をスルホン化してつくる。<br>
+・<b>陰イオン交換樹脂</b>（$\mathrm{R-N^+(CH_3)_3OH^-}$）：陰イオンを $\mathrm{OH^-}$ と交換する。<br>
+両方に通すと純水（脱イオン水）が得られる。使用後は、陽イオン交換樹脂は希塩酸、陰イオン交換樹脂は $\mathrm{NaOH}$ 水溶液で再生できる。</div>
+<div class="pex">濃度未知の $\mathrm{CaCl_2}$ 水溶液 10.0 mL を陽イオン交換樹脂に通し、流出液をすべて 0.100 mol/L $\mathrm{NaOH}$ 水溶液で滴定すると 12.0 mL を要した。$\mathrm{CaCl_2}$ 水溶液の濃度を求めよ。<br>
+<b>解</b>　$\mathrm{H^+}=0.100\times12.0\times10^{-3}=1.20\times10^{-3}$ mol → $\mathrm{Ca^{2+}}$ $6.00\times10^{-4}$ mol → <b>$6.00\times10^{-2}\ \mathrm{mol/L}$</b></div>
+</div>
+
+<div class="pat"><h4>機能性高分子は「構造の特徴 → 機能」で結びつける</h4>
+<div class="when">吸水性高分子・導電性高分子・生分解性高分子・感光性樹脂などの構造と用途。</div>
+<div class="how">・<b>吸水性高分子</b>（ポリアクリル酸ナトリウムの網目構造）：水を吸うと $\mathrm{-COONa}$ が電離し、網目の内側のイオン濃度が大きくなって浸透圧で水が入り込む。$\mathrm{-COO^-}$ どうしの反発で網目が広がる（紙おむつ、土壌の保水剤）。<br>
+・<b>導電性高分子</b>：ポリアセチレンにヨウ素などを加える（ドーピング）と、金属に近い電気伝導性を示す。<br>
+・<b>生分解性高分子</b>：ポリ乳酸、ポリグリコール酸。エステル結合が微生物や体内で加水分解される（手術用の縫合糸）。<br>
+・<b>感光性樹脂</b>：光があたると橋かけが進んで硬化する（印刷の版、歯科の詰め物）。</div>
+<div class="pex">次の (1)〜(3) に最も適する高分子を、語群から選べ。(1) 紙おむつの吸水材　(2) 体内で分解・吸収される手術用の縫合糸　(3) ヨウ素を加えると電気を通すようになる高分子<br>
+語群：ポリアクリル酸ナトリウム、ポリグリコール酸、ポリアセチレン<br>
+<b>解</b>　(1) <b>ポリアクリル酸ナトリウム</b>　(2) <b>ポリグリコール酸</b>　(3) <b>ポリアセチレン</b></div>
+</div>
+
+<div class="box memo"><table class="l w">
+<tr><th>高分子</th><th>単量体</th><th>重合</th><th>特徴・用途</th></tr>
+<tr><td>ポリエチレン</td><td>$\mathrm{CH_2=CH_2}$</td><td>付加</td><td>袋・容器、熱可塑性</td></tr>
+<tr><td>ポリ塩化ビニル</td><td>$\mathrm{CH_2=CHCl}$</td><td>付加</td><td>パイプ・ホース</td></tr>
+<tr><td>ポリスチレン</td><td>$\mathrm{CH_2=CH-C_6H_5}$</td><td>付加</td><td>発泡スチロール</td></tr>
+<tr><td>ポリメタクリル酸メチル</td><td>$\mathrm{CH_2=C(CH_3)COOCH_3}$</td><td>付加</td><td>透明（有機ガラス）</td></tr>
+<tr><td>アクリル繊維</td><td>$\mathrm{CH_2=CHCN}$（主成分）</td><td>付加（共重合）</td><td>羊毛に似た風合い</td></tr>
+<tr><td>ナイロン66</td><td>アジピン酸＋ヘキサメチレンジアミン</td><td>縮合</td><td>アミド結合、単位 226</td></tr>
+<tr><td>ナイロン6</td><td>ε-カプロラクタム</td><td>開環</td><td>アミド結合</td></tr>
+<tr><td>ポリエチレンテレフタラート</td><td>テレフタル酸＋エチレングリコール</td><td>縮合</td><td>エステル結合、単位 192、ペットボトル・繊維</td></tr>
+<tr><td>アラミド繊維</td><td>p-フェニレンジアミン＋テレフタル酸ジクロリド</td><td>縮合</td><td>高強度・耐熱性</td></tr>
+<tr><td>ビニロン</td><td>酢酸ビニル（→ PVA）＋HCHO</td><td>付加 → けん化 → アセタール化</td><td>適度な吸湿性</td></tr>
+<tr><td>フェノール樹脂</td><td>フェノール＋HCHO</td><td>付加縮合</td><td>熱硬化性</td></tr>
+<tr><td>天然ゴム</td><td>イソプレン</td><td>付加</td><td>シス形、加硫で弾性向上</td></tr>
+<tr><td>SBR</td><td>スチレン＋ブタジエン</td><td>付加（共重合）</td><td>タイヤ</td></tr>
+<tr><td>ポリ乳酸</td><td>乳酸</td><td>縮合</td><td>生分解性</td></tr>
+</table></div>

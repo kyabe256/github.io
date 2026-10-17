@@ -1,0 +1,854 @@
+<!--CH 9-->
+<div class="box point">
+・弱酸 HA（濃度 $c$、電離度 $\alpha$）：$K_\mathrm{a}=\dfrac{[\mathrm{H^+}][\mathrm{A^-}]}{[\mathrm{HA}]}=\dfrac{c\alpha^2}{1-\alpha}$。$\alpha\ll1$ なら $\alpha=\sqrt{\dfrac{K_\mathrm{a}}{c}}$、$[\mathrm{H^+}]=\sqrt{cK_\mathrm{a}}$（弱塩基は $[\mathrm{OH^-}]=\sqrt{cK_\mathrm{b}}$）<br>
+・<b>緩衝液</b>（弱酸とその塩の混合溶液）：$[\mathrm{H^+}]=K_\mathrm{a}\times\dfrac{[\mathrm{HA}]}{[\mathrm{A^-}]}$。$[\mathrm{HA}]$≒酸の濃度、$[\mathrm{A^-}]$≒塩の濃度とおける<br>
+・<b>塩の加水分解</b>：弱酸と強塩基の塩の水溶液は塩基性。$K_\mathrm{h}=\dfrac{K_\mathrm{w}}{K_\mathrm{a}}$、$[\mathrm{OH^-}]=\sqrt{\dfrac{cK_\mathrm{w}}{K_\mathrm{a}}}$<br>
+・<b>溶解度積</b>：$K_\mathrm{sp}=[\mathrm{Ag^+}][\mathrm{Cl^-}]$ など。混合直後のイオン濃度の積が $K_\mathrm{sp}$ をこえると沈殿が生じる
+</div>
+<h3>講義1　弱酸・弱塩基の電離定数と pH</h3>
+<div class="box lect" style="page-break-inside:auto">
+弱酸の電離平衡 $\mathrm{CH_3COOH \rightleftarrows CH_3COO^- + H^+}$ に化学平衡の法則（第8章）をあてはめた $K_\mathrm{a}=\dfrac{[\mathrm{CH_3COO^-}][\mathrm{H^+}]}{[\mathrm{CH_3COOH}]}$ を<b>電離定数</b>という（温度一定なら一定）。<br>
+濃度 $c$、電離度 $\alpha$ のとき、平衡時は $[\mathrm{CH_3COOH}]=c(1-\alpha)$、$[\mathrm{CH_3COO^-}]=[\mathrm{H^+}]=c\alpha$ なので $K_\mathrm{a}=\dfrac{c\alpha^2}{1-\alpha}$。
+弱酸では $1-\alpha\fallingdotseq1$ とみなせて $K_\mathrm{a}\fallingdotseq c\alpha^2$、すなわち $\alpha=\sqrt{\dfrac{K_\mathrm{a}}{c}}$、$[\mathrm{H^+}]=c\alpha=\sqrt{cK_\mathrm{a}}$。
+<b>うすめるほど電離度は大きくなる</b>（$[\mathrm{H^+}]$ 自体は小さくなる）。<br>
+弱塩基 $\mathrm{NH_3+H_2O \rightleftarrows NH_4^+ + OH^-}$ では、ほぼ一定の $[\mathrm{H_2O}]$ を定数に含めて $K_\mathrm{b}=\dfrac{[\mathrm{NH_4^+}][\mathrm{OH^-}]}{[\mathrm{NH_3}]}$、$[\mathrm{OH^-}]=\sqrt{cK_\mathrm{b}}$。水溶液中では常に $[\mathrm{H^+}][\mathrm{OH^-}]=K_\mathrm{w}=1.0\times10^{-14}\ (\mathrm{mol/L})^2$（25 ℃）。<br>
+<b>計算のコツ</b>：$\mathrm{pH}=-\dfrac12\log_{10}(cK_\mathrm{a})$ と対数の性質を使えば、平方根を計算しなくてすむ。
+</div>
+<div class="box ex">
+25 ℃ の 0.10 mol/L 酢酸水溶液について、電離度 $\alpha$ と pH を求めよ。酢酸の電離定数 $K_\mathrm{a}=2.7\times10^{-5}\ \mathrm{mol/L}$、$\sqrt{2.7}=1.64$、$\log_{10}2.7=0.43$ とし、$\alpha$ は 1 に比べて十分小さいとする。
+<div class="solx"><b>解</b>　$\alpha=\sqrt{\dfrac{2.7\times10^{-5}}{0.10}}=\sqrt{2.7}\times10^{-2}\fallingdotseq\boldsymbol{1.6\times10^{-2}}$（1 に比べて十分小さく、近似は妥当）<br>
+$\mathrm{pH}=-\dfrac12\log_{10}(2.7\times10^{-6})=-\dfrac12(0.43-6)=2.785$　よって $\boldsymbol{\mathrm{pH}\fallingdotseq2.8}$（同じ濃度の塩酸なら pH 1.0）</div>
+</div>
+<h3>講義2　緩衝液</h3>
+<div class="box lect" style="page-break-inside:auto">
+少量の酸や塩基を加えても pH がほとんど変わらない溶液を<b>緩衝液</b>という。代表例は酢酸と酢酸ナトリウムの混合水溶液。<br>
+<b>しくみ</b>：$\mathrm{CH_3COONa}$ はほぼ完全に電離して多量の $\mathrm{CH_3COO^-}$ を生じ、酢酸の電離平衡は左に偏る（<b>共通イオン効果</b>）。溶液中には $\mathrm{CH_3COOH}$ と $\mathrm{CH_3COO^-}$ が<b>どちらも多量に</b>あり、<br>
+・酸を加えると　$\mathrm{CH_3COO^- + H^+ \to CH_3COOH}$　　・塩基を加えると　$\mathrm{CH_3COOH + OH^- \to CH_3COO^- + H_2O}$<br>
+と消費されるので、$[\mathrm{H^+}]$ はほとんど変化しない。<br>
+<b>計算</b>：$[\mathrm{H^+}]=K_\mathrm{a}\times\dfrac{[\mathrm{CH_3COOH}]}{[\mathrm{CH_3COO^-}]}$ に、酢酸と塩の濃度（同じ溶液中なので<b>物質量の比</b>でもよい）を代入する。等量なら $[\mathrm{H^+}]=K_\mathrm{a}$。
+$\mathrm{NH_3}$ と $\mathrm{NH_4Cl}$ の混合水溶液も緩衝液（$[\mathrm{OH^-}]=K_\mathrm{b}\times\dfrac{[\mathrm{NH_3}]}{[\mathrm{NH_4^+}]}$）。弱酸を強塩基で途中まで中和した溶液も緩衝液になる。血液は炭酸と炭酸水素イオンなどの緩衝作用で pH 約 7.4 に保たれている。
+</div>
+<div class="box ex">
+0.10 mol/L 酢酸水溶液 500 mL と 0.10 mol/L 酢酸ナトリウム水溶液 500 mL を混合した。$K_\mathrm{a}=2.7\times10^{-5}\ \mathrm{mol/L}$、$\log_{10}2=0.30$、$\log_{10}3=0.48$、$\log_{10}2.7=0.43$ とする。<br>
+(1) この緩衝液の pH を求めよ。　(2) これに塩化水素 0.010 mol を吹き込んだ後の pH を求めよ（体積変化は無視）。
+<div class="solx"><b>解</b>　(1) 混合後の 1.0 L 中に $\mathrm{CH_3COOH}$、$\mathrm{CH_3COO^-}$ がともに 0.050 mol。$[\mathrm{H^+}]=K_\mathrm{a}=2.7\times10^{-5}\ \mathrm{mol/L}$<br>
+$\mathrm{pH}=5-0.43=4.57$　よって $\boldsymbol{\mathrm{pH}\fallingdotseq4.6}$<br>
+(2) $\mathrm{CH_3COO^- + H^+ \to CH_3COOH}$ より $\mathrm{CH_3COO^-}$ 0.040 mol、$\mathrm{CH_3COOH}$ 0.060 mol。$[\mathrm{H^+}]=2.7\times10^{-5}\times\dfrac{0.060}{0.040}=2.7\times1.5\times10^{-5}$<br>
+$\mathrm{pH}=5-\log_{10}2.7-(\log_{10}3-\log_{10}2)=5-0.43-0.18=4.39$　よって $\boldsymbol{\mathrm{pH}\fallingdotseq4.4}$<br>
+純水 1.0 L に同じ量の HCl を加えると pH 2.0 になる。変化が約 0.2 ですむのが緩衝作用である。</div>
+</div>
+<h3>講義3　塩の加水分解と中和点の pH</h3>
+<div class="box lect" style="page-break-inside:auto">
+酢酸ナトリウム水溶液が塩基性なのは、$\mathrm{CH_3COO^-}$ の一部が水と反応して $\mathrm{OH^-}$ を生じるから（<b>塩の加水分解</b>）：$\mathrm{CH_3COO^- + H_2O \rightleftarrows CH_3COOH + OH^-}$。<br>
+この平衡定数（<b>加水分解定数</b>）は、分母・分子に $[\mathrm{H^+}]$ をかけると
+$K_\mathrm{h}=\dfrac{[\mathrm{CH_3COOH}][\mathrm{OH^-}]}{[\mathrm{CH_3COO^-}]}=\dfrac{[\mathrm{CH_3COOH}]}{[\mathrm{CH_3COO^-}][\mathrm{H^+}]}\times[\mathrm{H^+}][\mathrm{OH^-}]=\dfrac{K_\mathrm{w}}{K_\mathrm{a}}$。
+弱酸の電離と同じ形なので、塩の濃度を $c$ として $[\mathrm{OH^-}]=\sqrt{\dfrac{cK_\mathrm{w}}{K_\mathrm{a}}}$。
+同様に $\mathrm{NH_4Cl}$ 水溶液は $\mathrm{NH_4^+ + H_2O \rightleftarrows NH_3 + H_3O^+}$ で酸性、$[\mathrm{H^+}]=\sqrt{\dfrac{cK_\mathrm{w}}{K_\mathrm{b}}}$。<br>
+弱酸を強塩基で滴定すると、中和点は<b>塩だけの水溶液</b>なので塩基性側にくる。滴定曲線は ①弱酸だけ、②緩衝液（半分中和した点で $[\mathrm{H^+}]=K_\mathrm{a}$）、③中和点（加水分解）、④過剰の NaOH の4区間に分けて計算できる。指示薬は変色域が中和点の pH を含むフェノールフタレイン。
+</div>
+<svg class="fig" width="370" height="206" viewBox="0 0 370 206"><rect x="40" y="66.8" width="222" height="20.1" fill="#f9d9e8"/><rect x="40" y="127.0" width="222" height="14.5" fill="#fde3cf"/><text x="268" y="80.8" font-size="9.5" text-anchor="start" fill="#b0306a" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-family="IPAPGothic,IPAGothic,sans-serif">フェノールフタレイン</tspan></text><text x="268" y="138.2" font-size="9.5" text-anchor="start" fill="#d9701e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-family="IPAPGothic,IPAGothic,sans-serif">メチルオレンジ</tspan></text><line x1="40" y1="176.0" x2="262" y2="176.0" stroke="#e4e4e4" stroke-width="0.6"/><text x="34" y="180.0" font-size="10" text-anchor="end" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>0</tspan></text><line x1="40" y1="153.7" x2="262" y2="153.7" stroke="#e4e4e4" stroke-width="0.6"/><text x="34" y="157.7" font-size="10" text-anchor="end" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>2</tspan></text><line x1="40" y1="131.4" x2="262" y2="131.4" stroke="#e4e4e4" stroke-width="0.6"/><text x="34" y="135.4" font-size="10" text-anchor="end" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>4</tspan></text><line x1="40" y1="109.1" x2="262" y2="109.1" stroke="#e4e4e4" stroke-width="0.6"/><text x="34" y="113.1" font-size="10" text-anchor="end" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>6</tspan></text><line x1="40" y1="86.9" x2="262" y2="86.9" stroke="#e4e4e4" stroke-width="0.6"/><text x="34" y="90.9" font-size="10" text-anchor="end" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>8</tspan></text><line x1="40" y1="64.6" x2="262" y2="64.6" stroke="#e4e4e4" stroke-width="0.6"/><text x="34" y="68.6" font-size="10" text-anchor="end" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>10</tspan></text><line x1="40" y1="42.3" x2="262" y2="42.3" stroke="#e4e4e4" stroke-width="0.6"/><text x="34" y="46.3" font-size="10" text-anchor="end" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>12</tspan></text><line x1="40" y1="20.0" x2="262" y2="20.0" stroke="#e4e4e4" stroke-width="0.6"/><text x="34" y="24.0" font-size="10" text-anchor="end" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>14</tspan></text><line x1="40.0" y1="20" x2="40.0" y2="176" stroke="#e4e4e4" stroke-width="0.6"/><text x="40.0" y="189" font-size="10" text-anchor="middle" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>0</tspan></text><line x1="95.5" y1="20" x2="95.5" y2="176" stroke="#e4e4e4" stroke-width="0.6"/><text x="95.5" y="189" font-size="10" text-anchor="middle" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>5</tspan></text><line x1="151.0" y1="20" x2="151.0" y2="176" stroke="#e4e4e4" stroke-width="0.6"/><text x="151.0" y="189" font-size="10" text-anchor="middle" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>10</tspan></text><line x1="206.5" y1="20" x2="206.5" y2="176" stroke="#e4e4e4" stroke-width="0.6"/><text x="206.5" y="189" font-size="10" text-anchor="middle" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>15</tspan></text><line x1="262.0" y1="20" x2="262.0" y2="176" stroke="#e4e4e4" stroke-width="0.6"/><text x="262.0" y="189" font-size="10" text-anchor="middle" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>20</tspan></text><line x1="40" y1="176" x2="262" y2="176" stroke="#222" stroke-width="1"/><line x1="40" y1="20" x2="40" y2="176" stroke="#222" stroke-width="1"/><text x="36" y="12" font-size="10.5" text-anchor="end" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>pH</tspan></text><text x="151.0" y="203" font-size="10" text-anchor="middle" fill="#222" font-family="IPAPGothic,IPAGothic,sans-serif"><tspan font-family="IPAPGothic,IPAGothic,sans-serif">加えた</tspan><tspan> NaOH </tspan><tspan font-family="IPAPGothic,IPAGothic,sans-serif">水溶液の体積〔</tspan><tspan>mL</tspan><tspan font-family="IPAPGothic,IPAGothic,sans-serif">〕</tspan></text><polyline points="40.0,164.9 40.6,164.8 41.1,164.8 41.7,164.7 42.2,164.7 42.8,164.6 43.3,164.6 43.9,164.5 44.4,164.5 45.0,164.4 45.5,164.4 46.1,164.3 46.7,164.3 47.2,164.2 47.8,164.2 48.3,164.1 48.9,164.1 49.4,164.0 50.0,164.0 50.5,163.9 51.1,163.9 51.7,163.8 52.2,163.8 52.8,163.7 53.3,163.7 53.9,163.6 54.4,163.6 55.0,163.5 55.5,163.5 56.1,163.4 56.6,163.4 57.2,163.3 57.8,163.3 58.3,163.2 58.9,163.2 59.4,163.1 60.0,163.1 60.5,163.0 61.1,163.0 61.6,162.9 62.2,162.9 62.8,162.8 63.3,162.8 63.9,162.7 64.4,162.7 65.0,162.6 65.5,162.6 66.1,162.5 66.6,162.5 67.2,162.4 67.8,162.4 68.3,162.3 68.9,162.3 69.4,162.2 70.0,162.2 70.5,162.1 71.1,162.1 71.6,162.0 72.2,162.0 72.7,161.9 73.3,161.9 73.9,161.8 74.4,161.8 75.0,161.7 75.5,161.6 76.1,161.6 76.6,161.5 77.2,161.5 77.7,161.4 78.3,161.4 78.8,161.3 79.4,161.3 80.0,161.2 80.5,161.2 81.1,161.1 81.6,161.0 82.2,161.0 82.7,160.9 83.3,160.9 83.8,160.8 84.4,160.8 85.0,160.7 85.5,160.6 86.1,160.6 86.6,160.5 87.2,160.5 87.7,160.4 88.3,160.3 88.8,160.3 89.4,160.2 90.0,160.2 90.5,160.1 91.1,160.0 91.6,160.0 92.2,159.9 92.7,159.9 93.3,159.8 93.8,159.7 94.4,159.7 94.9,159.6 95.5,159.5 96.1,159.5 96.6,159.4 97.2,159.3 97.7,159.3 98.3,159.2 98.8,159.1 99.4,159.1 99.9,159.0 100.5,158.9 101.0,158.9 101.6,158.8 102.2,158.7 102.7,158.7 103.3,158.6 103.8,158.5 104.4,158.4 104.9,158.4 105.5,158.3 106.0,158.2 106.6,158.1 107.2,158.1 107.7,158.0 108.3,157.9 108.8,157.8 109.4,157.8 109.9,157.7 110.5,157.6 111.0,157.5 111.6,157.4 112.2,157.4 112.7,157.3 113.3,157.2 113.8,157.1 114.4,157.0 114.9,156.9 115.5,156.8 116.0,156.7 116.6,156.7 117.1,156.6 117.7,156.5 118.3,156.4 118.8,156.3 119.4,156.2 119.9,156.1 120.5,156.0 121.0,155.9 121.6,155.8 122.1,155.7 122.7,155.6 123.2,155.4 123.8,155.3 124.4,155.2 124.9,155.1 125.5,155.0 126.0,154.9 126.6,154.7 127.1,154.6 127.7,154.5 128.2,154.4 128.8,154.2 129.4,154.1 129.9,153.9 130.5,153.8 131.0,153.7 131.6,153.5 132.1,153.4 132.7,153.2 133.2,153.0 133.8,152.9 134.3,152.7 134.9,152.5 135.5,152.3 136.0,152.2 136.6,152.0 137.1,151.8 137.7,151.5 138.2,151.3 138.8,151.1 139.3,150.9 139.9,150.6 140.5,150.3 141.0,150.1 141.6,149.8 142.1,149.5 142.7,149.2 143.2,148.8 143.8,148.4 144.3,148.0 144.9,147.6 145.4,147.1 146.0,146.6 146.6,146.0 147.1,145.4 147.7,144.6 148.2,143.7 148.8,142.6 149.3,141.2 149.9,139.2 150.4,135.9 151.0,98.0 151.6,60.1 152.1,56.8 152.7,54.9 153.2,53.5 153.8,52.4 154.3,51.5 154.9,50.8 155.4,50.2 156.0,49.6 156.6,49.1 157.1,48.7 157.7,48.3 158.2,47.9 158.8,47.5 159.3,47.2 159.9,46.9 160.4,46.6 161.0,46.4 161.5,46.1 162.1,45.9 162.7,45.7 163.2,45.4 163.8,45.2 164.3,45.0 164.9,44.9 165.4,44.7 166.0,44.5 166.5,44.3 167.1,44.2 167.7,44.0 168.2,43.9 168.8,43.7 169.3,43.6 169.9,43.5 170.4,43.3 171.0,43.2 171.5,43.1 172.1,43.0 172.6,42.9 173.2,42.7 173.8,42.6 174.3,42.5 174.9,42.4 175.4,42.3 176.0,42.2 176.5,42.1 177.1,42.0 177.6,42.0 178.2,41.9 178.8,41.8 179.3,41.7 179.9,41.6 180.4,41.5 181.0,41.4 181.5,41.4 182.1,41.3 182.6,41.2 183.2,41.1 183.7,41.1 184.3,41.0 184.9,40.9 185.4,40.9 186.0,40.8 186.5,40.7 187.1,40.7 187.6,40.6 188.2,40.5 188.7,40.5 189.3,40.4 189.8,40.4 190.4,40.3 191.0,40.2 191.5,40.2 192.1,40.1 192.6,40.1 193.2,40.0 193.7,40.0 194.3,39.9 194.8,39.9 195.4,39.8 196.0,39.8 196.5,39.7 197.1,39.7 197.6,39.6 198.2,39.6 198.7,39.5 199.3,39.5 199.8,39.4 200.4,39.4 200.9,39.3 201.5,39.3 202.1,39.3 202.6,39.2 203.2,39.2 203.7,39.1 204.3,39.1 204.8,39.0 205.4,39.0 205.9,39.0 206.5,38.9 207.1,38.9 207.6,38.9 208.2,38.8 208.7,38.8 209.3,38.7 209.8,38.7 210.4,38.7 210.9,38.6 211.5,38.6 212.1,38.6 212.6,38.5 213.2,38.5 213.7,38.5 214.3,38.4 214.8,38.4 215.4,38.4 215.9,38.3 216.5,38.3 217.0,38.3 217.6,38.2 218.2,38.2 218.7,38.2 219.3,38.1 219.8,38.1 220.4,38.1 220.9,38.1 221.5,38.0 222.0,38.0 222.6,38.0 223.2,37.9 223.7,37.9 224.3,37.9 224.8,37.9 225.4,37.8 225.9,37.8 226.5,37.8 227.0,37.8 227.6,37.7 228.1,37.7 228.7,37.7 229.3,37.7 229.8,37.6 230.4,37.6 230.9,37.6 231.5,37.6 232.0,37.5 232.6,37.5 233.1,37.5 233.7,37.5 234.2,37.4 234.8,37.4 235.4,37.4 235.9,37.4 236.5,37.3 237.0,37.3 237.6,37.3 238.1,37.3 238.7,37.2 239.2,37.2 239.8,37.2 240.4,37.2 240.9,37.2 241.5,37.1 242.0,37.1 242.6,37.1 243.1,37.1 243.7,37.1 244.2,37.0 244.8,37.0 245.3,37.0 245.9,37.0 246.5,37.0 247.0,36.9 247.6,36.9 248.1,36.9 248.7,36.9 249.2,36.9 249.8,36.8 250.3,36.8 250.9,36.8 251.5,36.8 252.0,36.8 252.6,36.8 253.1,36.7 253.7,36.7 254.2,36.7 254.8,36.7 255.3,36.7 255.9,36.6 256.4,36.6 257.0,36.6 257.6,36.6 258.1,36.6 258.7,36.6 259.2,36.5 259.8,36.5 260.3,36.5 260.9,36.5 261.4,36.5 262.0,36.5" fill="none" stroke="#999" stroke-width="1.4" stroke-dasharray="4,3"/><polyline points="40.0,144.9 40.6,144.2 41.1,143.4 41.7,142.7 42.2,142.1 42.8,141.4 43.3,140.8 43.9,140.3 44.4,139.8 45.0,139.3 45.5,138.9 46.1,138.5 46.7,138.1 47.2,137.7 47.8,137.3 48.3,137.0 48.9,136.7 49.4,136.4 50.0,136.1 50.5,135.8 51.1,135.6 51.7,135.3 52.2,135.1 52.8,134.9 53.3,134.6 53.9,134.4 54.4,134.2 55.0,134.0 55.5,133.8 56.1,133.6 56.6,133.4 57.2,133.2 57.8,133.1 58.3,132.9 58.9,132.7 59.4,132.5 60.0,132.4 60.5,132.2 61.1,132.1 61.6,131.9 62.2,131.8 62.8,131.6 63.3,131.5 63.9,131.3 64.4,131.2 65.0,131.0 65.5,130.9 66.1,130.8 66.6,130.6 67.2,130.5 67.8,130.4 68.3,130.3 68.9,130.1 69.4,130.0 70.0,129.9 70.5,129.8 71.1,129.6 71.6,129.5 72.2,129.4 72.7,129.3 73.3,129.2 73.9,129.1 74.4,128.9 75.0,128.8 75.5,128.7 76.1,128.6 76.6,128.5 77.2,128.4 77.7,128.3 78.3,128.2 78.8,128.1 79.4,128.0 80.0,127.9 80.5,127.8 81.1,127.7 81.6,127.6 82.2,127.4 82.7,127.3 83.3,127.2 83.8,127.1 84.4,127.0 85.0,126.9 85.5,126.8 86.1,126.7 86.6,126.6 87.2,126.5 87.7,126.4 88.3,126.3 88.8,126.2 89.4,126.2 90.0,126.1 90.5,126.0 91.1,125.9 91.6,125.8 92.2,125.7 92.7,125.6 93.3,125.5 93.8,125.4 94.4,125.3 94.9,125.2 95.5,125.1 96.1,125.0 96.6,124.9 97.2,124.8 97.7,124.7 98.3,124.6 98.8,124.5 99.4,124.4 99.9,124.3 100.5,124.2 101.0,124.1 101.6,124.0 102.2,123.9 102.7,123.8 103.3,123.7 103.8,123.6 104.4,123.5 104.9,123.4 105.5,123.3 106.0,123.2 106.6,123.1 107.2,123.0 107.7,122.9 108.3,122.8 108.8,122.7 109.4,122.6 109.9,122.5 110.5,122.4 111.0,122.3 111.6,122.2 112.2,122.1 112.7,122.0 113.3,121.9 113.8,121.8 114.4,121.7 114.9,121.6 115.5,121.4 116.0,121.3 116.6,121.2 117.1,121.1 117.7,121.0 118.3,120.9 118.8,120.8 119.4,120.6 119.9,120.5 120.5,120.4 121.0,120.3 121.6,120.2 122.1,120.0 122.7,119.9 123.2,119.8 123.8,119.6 124.4,119.5 124.9,119.4 125.5,119.2 126.0,119.1 126.6,119.0 127.1,118.8 127.7,118.7 128.2,118.5 128.8,118.4 129.4,118.2 129.9,118.1 130.5,117.9 131.0,117.8 131.6,117.6 132.1,117.4 132.7,117.2 133.2,117.1 133.8,116.9 134.3,116.7 134.9,116.5 135.5,116.3 136.0,116.1 136.6,115.9 137.1,115.7 137.7,115.4 138.2,115.2 138.8,115.0 139.3,114.7 139.9,114.5 140.5,114.2 141.0,113.9 141.6,113.6 142.1,113.3 142.7,112.9 143.2,112.6 143.8,112.2 144.3,111.8 144.9,111.3 145.4,110.8 146.0,110.3 146.6,109.7 147.1,109.0 147.7,108.3 148.2,107.4 148.8,106.3 149.3,104.8 149.9,102.9 150.4,99.5 151.0,79.8 151.6,60.1 152.1,56.8 152.7,54.9 153.2,53.5 153.8,52.4 154.3,51.5 154.9,50.8 155.4,50.2 156.0,49.6 156.6,49.1 157.1,48.7 157.7,48.3 158.2,47.9 158.8,47.5 159.3,47.2 159.9,46.9 160.4,46.6 161.0,46.4 161.5,46.1 162.1,45.9 162.7,45.7 163.2,45.4 163.8,45.2 164.3,45.0 164.9,44.9 165.4,44.7 166.0,44.5 166.5,44.3 167.1,44.2 167.7,44.0 168.2,43.9 168.8,43.7 169.3,43.6 169.9,43.5 170.4,43.3 171.0,43.2 171.5,43.1 172.1,43.0 172.6,42.9 173.2,42.7 173.8,42.6 174.3,42.5 174.9,42.4 175.4,42.3 176.0,42.2 176.5,42.1 177.1,42.0 177.6,42.0 178.2,41.9 178.8,41.8 179.3,41.7 179.9,41.6 180.4,41.5 181.0,41.4 181.5,41.4 182.1,41.3 182.6,41.2 183.2,41.1 183.7,41.1 184.3,41.0 184.9,40.9 185.4,40.9 186.0,40.8 186.5,40.7 187.1,40.7 187.6,40.6 188.2,40.5 188.7,40.5 189.3,40.4 189.8,40.4 190.4,40.3 191.0,40.2 191.5,40.2 192.1,40.1 192.6,40.1 193.2,40.0 193.7,40.0 194.3,39.9 194.8,39.9 195.4,39.8 196.0,39.8 196.5,39.7 197.1,39.7 197.6,39.6 198.2,39.6 198.7,39.5 199.3,39.5 199.8,39.4 200.4,39.4 200.9,39.3 201.5,39.3 202.1,39.3 202.6,39.2 203.2,39.2 203.7,39.1 204.3,39.1 204.8,39.0 205.4,39.0 205.9,39.0 206.5,38.9 207.1,38.9 207.6,38.9 208.2,38.8 208.7,38.8 209.3,38.7 209.8,38.7 210.4,38.7 210.9,38.6 211.5,38.6 212.1,38.6 212.6,38.5 213.2,38.5 213.7,38.5 214.3,38.4 214.8,38.4 215.4,38.4 215.9,38.3 216.5,38.3 217.0,38.3 217.6,38.2 218.2,38.2 218.7,38.2 219.3,38.1 219.8,38.1 220.4,38.1 220.9,38.1 221.5,38.0 222.0,38.0 222.6,38.0 223.2,37.9 223.7,37.9 224.3,37.9 224.8,37.9 225.4,37.8 225.9,37.8 226.5,37.8 227.0,37.8 227.6,37.7 228.1,37.7 228.7,37.7 229.3,37.7 229.8,37.6 230.4,37.6 230.9,37.6 231.5,37.6 232.0,37.5 232.6,37.5 233.1,37.5 233.7,37.5 234.2,37.4 234.8,37.4 235.4,37.4 235.9,37.4 236.5,37.3 237.0,37.3 237.6,37.3 238.1,37.3 238.7,37.2 239.2,37.2 239.8,37.2 240.4,37.2 240.9,37.2 241.5,37.1 242.0,37.1 242.6,37.1 243.1,37.1 243.7,37.1 244.2,37.0 244.8,37.0 245.3,37.0 245.9,37.0 246.5,37.0 247.0,36.9 247.6,36.9 248.1,36.9 248.7,36.9 249.2,36.9 249.8,36.8 250.3,36.8 250.9,36.8 251.5,36.8 252.0,36.8 252.6,36.8 253.1,36.7 253.7,36.7 254.2,36.7 254.8,36.7 255.3,36.7 255.9,36.6 256.4,36.6 257.0,36.6 257.6,36.6 258.1,36.6 258.7,36.6 259.2,36.5 259.8,36.5 260.3,36.5 260.9,36.5 261.4,36.5 262.0,36.5" fill="none" stroke="#6d2a86" stroke-width="2.2"/><circle cx="95.5" cy="125.1" r="3.2" fill="#d9701e"/><text x="100.5" y="142.1" font-size="9.5" text-anchor="start" fill="#d9701e" font-family="Liberation Serif,DejaVu Serif,serif" stroke="#fff" stroke-width="3" stroke-linejoin="round" paint-order="stroke"><tspan font-family="IPAPGothic,IPAGothic,sans-serif">半分中和</tspan><tspan> pH≒4.6</tspan></text><circle cx="151.0" cy="79.8" r="3.2" fill="#c0392b"/><text x="157.0" y="93.8" font-size="9.5" text-anchor="start" fill="#c0392b" font-family="Liberation Serif,DejaVu Serif,serif" stroke="#fff" stroke-width="3" stroke-linejoin="round" paint-order="stroke"><tspan font-family="IPAPGothic,IPAGothic,sans-serif">中和点</tspan><tspan> pH≒8.6</tspan></text><line x1="151.0" y1="79.8" x2="151.0" y2="176" stroke="#c0392b" stroke-width="0.8" stroke-dasharray="2,2"/><text x="217.6" y="121.4" font-size="9.5" text-anchor="middle" fill="#777" font-family="IPAPGothic,IPAGothic,sans-serif" stroke="#fff" stroke-width="3" stroke-linejoin="round" paint-order="stroke"><tspan>HCl </tspan><tspan font-family="IPAPGothic,IPAGothic,sans-serif">の場合（点線）</tspan></text><text x="50.0" y="36" font-size="10.5" text-anchor="middle" fill="#6d2a86" font-family="IPAPGothic,IPAGothic,sans-serif"><tspan>①</tspan></text><text x="95.5" y="36" font-size="10.5" text-anchor="middle" fill="#6d2a86" font-family="IPAPGothic,IPAGothic,sans-serif"><tspan>②</tspan></text><text x="151.0" y="36" font-size="10.5" text-anchor="middle" fill="#6d2a86" font-family="IPAPGothic,IPAGothic,sans-serif"><tspan>③</tspan></text><text x="217.6" y="36" font-size="10.5" text-anchor="middle" fill="#6d2a86" font-family="IPAPGothic,IPAGothic,sans-serif"><tspan>④</tspan></text></svg>
+<p style="text-align:center;font-size:9pt;margin-top:0">0.10 mol/L 酢酸 10.0 mL を 0.10 mol/L NaOH 水溶液で滴定したときの滴定曲線（計算値）</p>
+<div class="box ex">
+0.10 mol/L 酢酸水溶液 10.0 mL を 0.10 mol/L 水酸化ナトリウム水溶液で滴定した。$K_\mathrm{a}=2.7\times10^{-5}\ \mathrm{mol/L}$、$K_\mathrm{w}=1.0\times10^{-14}\ (\mathrm{mol/L})^2$、$\log_{10}2=0.30$、$\log_{10}2.7=0.43$ とする。<br>
+(1) 中和点の pH を求めよ。　(2) 指示薬はメチルオレンジとフェノールフタレインのどちらが適当か。
+<div class="solx"><b>解</b>　(1) 中和点は NaOH 水溶液 10.0 mL のとき。全体 20.0 mL 中の $\mathrm{CH_3COO^-}$ は $0.10\times\dfrac{10.0}{20.0}=0.050\ \mathrm{mol/L}$。<br>
+$[\mathrm{OH^-}]^2=\dfrac{5.0\times10^{-2}\times1.0\times10^{-14}}{2.7\times10^{-5}}=\dfrac{5.0}{2.7}\times10^{-11}$ より
+$\log_{10}[\mathrm{OH^-}]=\dfrac12(0.70-0.43-11)=-5.365$（$\log_{10}5.0=1-\log_{10}2$）<br>
+$\mathrm{pH}=14-5.365=8.635$　よって $\boldsymbol{\mathrm{pH}\fallingdotseq8.6}$<br>
+(2) 中和点が塩基性側にあるので、変色域 pH 8.0〜9.8 の<b>フェノールフタレイン</b>。メチルオレンジ（pH 3.1〜4.4）では中和点より前に変色する。</div>
+</div>
+<h3>講義4　溶解度積と沈殿の生成</h3>
+<div class="box lect">
+AgCl の飽和水溶液では $\mathrm{AgCl(\text{固}) \rightleftarrows Ag^+ + Cl^-}$ の溶解平衡が成り立ち、固体の濃度は一定とみなせるので $K_\mathrm{sp}=[\mathrm{Ag^+}][\mathrm{Cl^-}]$（<b>溶解度積</b>）が温度一定で一定になる。<br>
+<b>沈殿生成の判定</b>：混合した直後（沈殿する前）のイオン濃度の積が $K_\mathrm{sp}$ より大きければ沈殿が生じ（積が $K_\mathrm{sp}$ になるまで沈殿する）、$K_\mathrm{sp}$ 以下なら沈殿しない。<br>
+<b>溶解度 $s$〔mol/L〕との関係</b>：AgCl は $K_\mathrm{sp}=s^2$。$\mathrm{Ag_2CrO_4 \rightleftarrows 2Ag^+ + CrO_4^{2-}}$ は $[\mathrm{Ag^+}]=2s$ なので $K_\mathrm{sp}=(2s)^2\cdot s=4s^3$。組成の違う塩どうしは $K_\mathrm{sp}$ の数値だけで溶けやすさを比べられない。<br>
+<b>共通イオン効果</b>：NaCl を加えて $[\mathrm{Cl^-}]$ を大きくすると、$[\mathrm{Ag^+}]=K_\mathrm{sp}/[\mathrm{Cl^-}]$ が小さくなり、AgCl はいっそう溶けにくくなる。
+</div>
+<div class="box ex">
+AgCl の溶解度積を $K_\mathrm{sp}=1.8\times10^{-10}\ (\mathrm{mol/L})^2$、$\sqrt{1.8}=1.34$ とする。(1) 純水に対する AgCl の溶解度〔mol/L〕を求めよ。(2) $2.0\times10^{-4}$ mol/L $\mathrm{AgNO_3}$ 水溶液 10 mL と $2.0\times10^{-4}$ mol/L NaCl 水溶液 10 mL を混合すると、沈殿は生じるか。(3) 0.10 mol/L NaCl 水溶液に対する AgCl の溶解度を求めよ。
+<div class="solx"><b>解</b>　(1) $s^2=1.8\times10^{-10}$ より $s=1.34\times10^{-5}\fallingdotseq\boldsymbol{1.3\times10^{-5}\ \mathrm{mol/L}}$<br>
+(2) 体積が 2 倍になるので、混合直後は $[\mathrm{Ag^+}]=[\mathrm{Cl^-}]=1.0\times10^{-4}\ \mathrm{mol/L}$。積 $1.0\times10^{-8}\gt K_\mathrm{sp}$ なので<b>沈殿は生じる</b>。<br>
+(3) $[\mathrm{Cl^-}]=0.10\ \mathrm{mol/L}$（溶けた分は無視できる）。$s=[\mathrm{Ag^+}]=\dfrac{1.8\times10^{-10}}{0.10}=\boldsymbol{1.8\times10^{-9}\ \mathrm{mol/L}}$（純水中の約 7500 分の 1）</div>
+</div>
+<div class="box chk">
+(1) 0.040 mol/L のある1価の弱酸の電離度は 0.025 であった。電離定数と pH を求めよ（$1-\alpha\fallingdotseq1$）。<br>
+(2) 0.20 mol/L アンモニア水の pH を求めよ。$K_\mathrm{b}=1.8\times10^{-5}\ \mathrm{mol/L}$、$\log_{10}2=0.30$、$\log_{10}3=0.48$ とする。<br>
+(3) アンモニア 0.10 mol と塩化アンモニウム 0.10 mol を水に溶かして 1.0 L とした水溶液の pH を求めよ（数値は (2) と同じ）。<br>
+(4) クロム酸銀 $\mathrm{Ag_2CrO_4}$ の溶解度を $s$〔mol/L〕とするとき、溶解度積 $K_\mathrm{sp}$ を $s$ で表せ。
+</div>
+<div class="box aim">
+・電離平衡の問題は「<b>溶液中に何が多量にあるか</b>」で式を選ぶ。弱酸だけ → $\sqrt{cK_\mathrm{a}}$、弱酸＋その塩 → 緩衝液の式、塩だけ → 加水分解、強酸・強塩基が余る → 余った量で決まる。滴定曲線のどの点もこの4通りのどれか。<br>
+・近似 $1-\alpha\fallingdotseq1$ は $\alpha$ が小さいときだけ。濃度が非常に小さいときなどは $c\alpha^2+K_\mathrm{a}\alpha-K_\mathrm{a}=0$ を解く（問題文の指示に従う）。<br>
+・<b>モール法</b>（沈殿滴定）：指示薬 $\mathrm{K_2CrO_4}$ を加えた $\mathrm{Cl^-}$ の溶液を $\mathrm{AgNO_3}$ 水溶液で滴定すると、白色の AgCl が先に沈殿し、$\mathrm{Cl^-}$ がほぼなくなると赤褐色の $\mathrm{Ag_2CrO_4}$ が沈殿し始めて終点がわかる。どちらが先かは、沈殿し始めるのに必要な $[\mathrm{Ag^+}]$ を比べて判断する。
+</div>
+<h3 class="deep">講義5　硫化物の沈殿と pH ― 系統分析へのつながり</h3>
+<div class="box lect" style="page-break-inside:auto">
+硫化水素は2段階に電離する：$\mathrm{H_2S \rightleftarrows H^+ + HS^-}$（$K_1$）、$\mathrm{HS^- \rightleftarrows H^+ + S^{2-}}$（$K_2$）。平衡定数をかけ合わせると
+$K_1K_2=\dfrac{[\mathrm{H^+}]^2[\mathrm{S^{2-}}]}{[\mathrm{H_2S}]}$、すなわち $[\mathrm{S^{2-}}]=\dfrac{K_1K_2[\mathrm{H_2S}]}{[\mathrm{H^+}]^2}$ で、<b>$[\mathrm{S^{2-}}]$ は $[\mathrm{H^+}]$ の2乗に反比例する</b>。<br>
+例えば $K_1K_2=1.0\times10^{-21}\ (\mathrm{mol/L})^2$、$[\mathrm{H_2S}]=0.10\ \mathrm{mol/L}$（飽和）とすると、$[\mathrm{S^{2-}}]$ は pH 1 で $1.0\times10^{-20}\ \mathrm{mol/L}$、pH 7 で $1.0\times10^{-8}\ \mathrm{mol/L}$（$10^{12}$ 倍）。
+金属イオン 0.010 mol/L とのイオン濃度の積は、pH 1 で $1.0\times10^{-22}$、pH 7 で $1.0\times10^{-10}\ (\mathrm{mol/L})^2$ となる。$K_\mathrm{sp}$ がきわめて小さい CuS は酸性でも沈殿するが、$K_\mathrm{sp}$ が比較的大きい ZnS は酸性では沈殿せず、中性〜塩基性で沈殿する。これが第11章の系統分析で「酸性で $\mathrm{H_2S}$ → CuS」「塩基性で $\mathrm{H_2S}$ → ZnS」と分けられる理由である。
+</div>
+<div class="box warn">
+・混合すると体積が増えて濃度が下がる。緩衝液・沈殿の判定では<b>混合後の濃度</b>（または物質量の比）を使う。<br>
+・加水分解では $K_\mathrm{h}=K_\mathrm{w}/K_\mathrm{a}$ を使う。$K_\mathrm{a}$ をそのまま使ってしまうミスが多い。<br>
+・$\mathrm{Ag_2CrO_4}$ の溶解度積を $2s\cdot s$ や $2s^2\cdot s$ としない。正しくは $(2s)^2s=4s^3$ で、単位も $(\mathrm{mol/L})^3$（AgCl は $(\mathrm{mol/L})^2$）。
+</div>
+<div class="box ans">
+(1) $K_\mathrm{a}\fallingdotseq c\alpha^2=0.040\times(0.025)^2=2.5\times10^{-5}\ \mathrm{mol/L}$。$[\mathrm{H^+}]=c\alpha=1.0\times10^{-3}\ \mathrm{mol/L}$ より pH 3.0<br>
+(2) $[\mathrm{OH^-}]=\sqrt{3.6\times10^{-6}}$。$\log_{10}3.6=2\log_{10}2+2\log_{10}3-1=0.56$ より $\mathrm{pOH}=-\frac12(0.56-6)=2.72$、pH $=11.28$≒11.3<br>
+(3) $[\mathrm{OH^-}]=K_\mathrm{b}=1.8\times10^{-5}\ \mathrm{mol/L}$。$\log_{10}1.8=0.30+0.96-1=0.26$ より $\mathrm{pOH}=4.74$、pH $=9.26$≒9.3<br>
+(4) $K_\mathrm{sp}=[\mathrm{Ag^+}]^2[\mathrm{CrO_4^{2-}}]=(2s)^2\times s=4s^3$
+</div>
+<!--CH 10-->
+<div class="box point">
+・<b>ハロゲン</b>（17族）：単体は二原子分子で、酸化力は $\mathrm{F_2\gt Cl_2\gt Br_2\gt I_2}$。HF は弱酸でガラスを溶かす。HCl・HBr・HI は強酸<br>
+・<b>硫黄・窒素の化合物</b>：濃硫酸は不揮発性・吸湿性・脱水作用・（熱濃硫酸の）酸化作用。銅と反応すると、希硝酸では NO、濃硝酸では $\mathrm{NO_2}$ が発生する<br>
+・<b>気体の製法</b>は「弱酸の遊離」「揮発性の酸の遊離」「弱塩基の遊離」「酸化還元」「分解」の型で整理する<br>
+・<b>捕集法</b>：水に溶けにくい → 水上置換、溶けて空気より軽い → 上方置換、溶けて重い → 下方置換。<b>乾燥剤</b>は気体と酸・塩基の組み合わせが反応しないものを選ぶ
+</div>
+<h3>講義1　水素・貴ガス・ハロゲン</h3>
+<div class="box lect" style="page-break-inside:auto">
+<b>水素</b> $\mathrm{H_2}$：最も軽い気体。亜鉛に希硫酸を加えて発生させ（$\mathrm{Zn+H_2SO_4 \to ZnSO_4+H_2}$）、水上置換で捕集する。<br>
+<b>貴ガス</b>（He, Ne, Ar, Kr, Xe, Rn）：電子配置が安定で化合物をほとんどつくらない単原子分子（価電子の数は 0 とみなす）。空気中に Ar が体積で約 0.9 % 含まれる。<br>
+<b>ハロゲン</b>（F, Cl, Br, I）：価電子 7 個で1価の陰イオンになりやすい。単体は分子量が大きいほど分子間力が強く、<br>
+　$\mathrm{F_2}$ 淡黄色の気体、$\mathrm{Cl_2}$ 黄緑色の気体、$\mathrm{Br_2}$ 赤褐色の液体、$\mathrm{I_2}$ 黒紫色の固体（昇華性）<br>
+酸化力は $\mathrm{F_2\gt Cl_2\gt Br_2\gt I_2}$ なので、$\mathrm{2KBr+Cl_2 \to 2KCl+Br_2}$ は起こるが逆は起こらない。
+$\mathrm{F_2}$ は水を酸化し（$\mathrm{2F_2+2H_2O \to 4HF+O_2}$）、$\mathrm{Cl_2}$ は一部が水と反応して次亜塩素酸を生じる（$\mathrm{Cl_2+H_2O \rightleftarrows HCl+HClO}$、HClO の酸化作用で殺菌・漂白）。$\mathrm{I_2}$ はデンプンで青紫色（ヨウ素デンプン反応）。<br>
+<b>ハロゲン化水素</b>：HF は水素結合のため沸点が高く、水溶液（フッ化水素酸）は弱酸で、ガラスを溶かす（ポリエチレン容器に保存）。HCl は NaCl に濃硫酸を加えて加熱してつくり（$\mathrm{NaCl+H_2SO_4 \to NaHSO_4+HCl}$）、$\mathrm{NH_3}$ に触れると白煙（$\mathrm{NH_4Cl}$）を生じる。
+ハロゲン化銀は AgF だけが水に溶け、AgCl（白）・AgBr（淡黄）・AgI（黄）は沈殿する。
+</div>
+<div class="box ex">
+酸化マンガン(IV) に濃塩酸を加えて加熱し、発生した気体を、水の入った洗気びん A、濃硫酸の入った洗気びん B の順に通して捕集した。<br>
+(1) 化学反応式を書け。　(2) A・B はそれぞれ何を除くためか。また、A と B の順を逆にしてはいけない理由を述べよ。　(3) 捕集法を答えよ。　(4) $\mathrm{MnO_2}$ 8.7 g がすべて反応したとき、発生する気体は標準状態で何 L か（$\mathrm{MnO_2}=87$）。
+<div class="solx"><b>解</b>　(1) $\boldsymbol{\mathrm{MnO_2+4HCl \to MnCl_2+Cl_2+2H_2O}}$（$\mathrm{MnO_2}$ が酸化剤）<br>
+(2) A は揮発した塩化水素を除く（HCl は水にきわめてよく溶ける）。B は水蒸気を除く（乾燥）。逆にすると、乾燥させた後に水の中を通るので、再び水蒸気を含んでしまう。<br>
+(3) $\mathrm{Cl_2}$ は水に溶け、空気より重い（分子量 71 ＞ 29）ので<b>下方置換</b>。<br>
+(4) $\mathrm{MnO_2}$ $\dfrac{8.7}{87}=0.10$ mol から $\mathrm{Cl_2}$ 0.10 mol。$22.4\times0.10=2.24$　よって <b>2.2 L</b></div>
+</div>
+<h3>講義2　酸素・硫黄</h3>
+<div class="box lect" style="page-break-inside:auto">
+<b>酸素</b>：$\mathrm{H_2O_2}$ 水に $\mathrm{MnO_2}$（触媒）を加える（$\mathrm{2H_2O_2 \to 2H_2O+O_2}$）か、$\mathrm{KClO_3}$ に $\mathrm{MnO_2}$ を加えて加熱する（$\mathrm{2KClO_3 \to 2KCl+3O_2}$）。
+同素体の<b>オゾン</b> $\mathrm{O_3}$ は酸素中の無声放電や紫外線で生じる（$\mathrm{3O_2 \to 2O_3}$）淡青色・特異臭の気体で、強い酸化作用をもつ。<br>
+<b>酸化物</b>：非金属の酸化物（$\mathrm{CO_2}$、$\mathrm{SO_2}$、$\mathrm{P_4O_{10}}$ など）は<b>酸性酸化物</b>、金属の酸化物（$\mathrm{Na_2O}$、CaO など）は<b>塩基性酸化物</b>、$\mathrm{Al_2O_3}$・ZnO は<b>両性酸化物</b>。<br>
+<b>硫黄</b>：同素体に斜方硫黄・単斜硫黄・ゴム状硫黄。<br>
+・<b>硫化水素</b> $\mathrm{H_2S}$：FeS に希硫酸（$\mathrm{FeS+H_2SO_4 \to FeSO_4+H_2S}$）。無色・腐卵臭・有毒。還元性が強く、水溶液は弱酸性。金属イオンと硫化物の沈殿をつくる（CuS・PbS・$\mathrm{Ag_2S}$ は黒、ZnS は白、CdS は黄）。<br>
+・<b>二酸化硫黄</b> $\mathrm{SO_2}$：Cu に濃硫酸を加えて加熱（$\mathrm{Cu+2H_2SO_4 \to CuSO_4+SO_2+2H_2O}$）、または $\mathrm{NaHSO_3}$ に希硫酸。無色・刺激臭・有毒。ふつうは還元剤（漂白作用）だが、$\mathrm{H_2S}$ に対しては酸化剤（$\mathrm{SO_2+2H_2S \to 3S+2H_2O}$）。<br>
+・<b>硫酸</b>：工業的には接触法（第11章）。濃硫酸は ①不揮発性、②吸湿性（乾燥剤）、③脱水作用（スクロースを炭化：$\mathrm{C_{12}H_{22}O_{11} \to 12C+11H_2O}$）、④熱濃硫酸の酸化作用（Cu・Ag を溶かす）をもつ。希釈は発熱が大きいので<b>水に濃硫酸を少しずつ加える</b>。希硫酸は強酸。
+</div>
+<div class="box ex">
+濃硫酸に関する (a)〜(d) は、それぞれ下の①〜④のどの性質によるか。<br>
+(a) 塩化ナトリウムに濃硫酸を加えて加熱すると、塩化水素が発生する。　(b) スクロースに濃硫酸をかけると黒くなる。<br>
+(c) 銅に濃硫酸を加えて加熱すると、二酸化硫黄が発生する。　(d) 濃硫酸を開放容器に入れて放置すると、質量が増える。<br>
+①酸化作用　②脱水作用　③吸湿性　④不揮発性
+<div class="solx"><b>解</b>　<b>(a) ④　(b) ②　(c) ①　(d) ③</b><br>
+(a) 不揮発性の酸が揮発性の酸 HCl を追い出す。(b) 分子中の H と O を 2：1 の割合で奪う（吸湿性は水分子そのものを吸収する点で異なる）。(c) S の酸化数が +6 → +4（$\mathrm{SO_2}$）と減少しており、濃硫酸が酸化剤。(d) 空気中の水蒸気を吸収する。</div>
+</div>
+<h3>講義3　窒素・リン・炭素・ケイ素</h3>
+<div class="box lect" style="page-break-inside:auto">
+<b>窒素</b>：$\mathrm{N_2}$ は空気の体積の約 78 %。常温では反応しにくい。<br>
+・<b>アンモニア</b>：$\mathrm{NH_4Cl}$ と $\mathrm{Ca(OH)_2}$ の混合物を加熱。無色・刺激臭で水によく溶け、弱塩基性（例題）。<br>
+・<b>一酸化窒素</b> NO：銅に希硝酸（$\mathrm{3Cu+8HNO_3 \to 3Cu(NO_3)_2+2NO+4H_2O}$）。無色で水に溶けにくい（水上置換）。空気中ですぐ酸化される（$\mathrm{2NO+O_2 \to 2NO_2}$）。<br>
+・<b>二酸化窒素</b> $\mathrm{NO_2}$：銅に濃硝酸（$\mathrm{Cu+4HNO_3 \to Cu(NO_3)_2+2NO_2+2H_2O}$）。赤褐色・刺激臭・有毒で水に溶けやすい（下方置換）。一部は無色の $\mathrm{N_2O_4}$ と平衡（$\mathrm{2NO_2 \rightleftarrows N_2O_4}$）。<br>
+・<b>硝酸</b>：工業的にはオストワルト法（第11章）。強酸で強い酸化剤。光で分解する（$\mathrm{4HNO_3 \to 4NO_2+O_2+2H_2O}$）ので褐色びんに保存。Fe・Ni・Al は濃硝酸中で表面にち密な酸化物の膜ができて溶けない（<b>不動態</b>）。<br>
+<b>リン</b>：黄リン（$\mathrm{P_4}$、猛毒、自然発火するので水中に保存）と赤リン（毒性が低い、マッチの側薬）。燃焼で生じる $\mathrm{P_4O_{10}}$ は吸湿性が強い乾燥剤で、水と加熱するとリン酸（$\mathrm{P_4O_{10}+6H_2O \to 4H_3PO_4}$）。<br>
+<b>炭素</b>：同素体にダイヤモンド・黒鉛（電気を通す）・フラーレン・カーボンナノチューブ。CO はギ酸と濃硫酸を加熱してつくる（$\mathrm{HCOOH \to CO+H_2O}$）。無色・無臭・有毒で水に溶けにくく、還元性がある。$\mathrm{CO_2}$ は $\mathrm{CaCO_3}$ に希塩酸（$\mathrm{CaCO_3+2HCl \to CaCl_2+H_2O+CO_2}$）。<br>
+<b>ケイ素</b>：単体は共有結合の結晶で半導体の材料。$\mathrm{SiO_2}$ は Si と O が立体網目状に結合した結晶（石英）。NaOH と融解するとケイ酸ナトリウム $\mathrm{Na_2SiO_3}$、水と加熱すると<b>水ガラス</b>、塩酸を加えるとケイ酸 $\mathrm{H_2SiO_3}$、これを加熱・脱水すると<b>シリカゲル</b>（多孔質で表面の −OH が水を吸着する乾燥剤）。
+</div>
+<div class="box ex">
+塩化アンモニウムと水酸化カルシウムの混合物を試験管に入れて加熱し、アンモニアを発生させた。<br>
+(1) 化学反応式を書け。(2) 試験管の口を少し下げる理由を述べよ。(3) 乾燥剤にソーダ石灰を使い、濃硫酸や塩化カルシウムを使わない理由を述べよ。(4) $\mathrm{NH_4Cl}$ 5.35 g がすべて反応したとき、発生する $\mathrm{NH_3}$ は標準状態で何 L か（$\mathrm{NH_4Cl}=53.5$）。
+<div class="solx"><b>解</b>　(1) $\boldsymbol{\mathrm{2NH_4Cl+Ca(OH)_2 \to CaCl_2+2H_2O+2NH_3}}$（弱塩基の塩＋強塩基 → 弱塩基の遊離）<br>
+(2) 生じた水が加熱部に流れて、試験管が割れるのを防ぐため。<br>
+(3) 塩基性の $\mathrm{NH_3}$ は濃硫酸と中和し、$\mathrm{CaCl_2}$ とは $\mathrm{CaCl_2\cdot8NH_3}$ をつくって吸収される。塩基性のソーダ石灰（CaO と NaOH）とは反応しない。上方置換で捕集する。<br>
+(4) $\dfrac{5.35}{53.5}=0.100$ mol の $\mathrm{NH_4Cl}$ から $\mathrm{NH_3}$ 0.100 mol。$22.4\times0.100=$ <b>2.24 L</b></div>
+</div>
+<h3>講義4　気体の製法・捕集法・乾燥剤</h3>
+<table class="l w" style="font-size:9pt">
+<tr><th>気体</th><th>試薬</th><th>反応の型</th><th>加熱</th><th>捕集</th></tr>
+<tr><td>$\mathrm{H_2}$</td><td>Zn ＋ 希 $\mathrm{H_2SO_4}$</td><td>酸化還元</td><td>不要</td><td>水上</td></tr>
+<tr><td>$\mathrm{O_2}$</td><td>$\mathrm{H_2O_2}$（触媒 $\mathrm{MnO_2}$）</td><td>分解</td><td>不要</td><td>水上</td></tr>
+<tr><td>$\mathrm{Cl_2}$</td><td>$\mathrm{MnO_2}$ ＋ 濃 HCl</td><td>酸化還元</td><td>必要</td><td>下方</td></tr>
+<tr><td>HCl</td><td>NaCl ＋ 濃 $\mathrm{H_2SO_4}$</td><td>揮発性の酸の遊離</td><td>必要</td><td>下方</td></tr>
+<tr><td>$\mathrm{H_2S}$</td><td>FeS ＋ 希 $\mathrm{H_2SO_4}$</td><td>弱酸の遊離</td><td>不要</td><td>下方</td></tr>
+<tr><td>$\mathrm{SO_2}$</td><td>Cu ＋ 濃 $\mathrm{H_2SO_4}$　／　$\mathrm{NaHSO_3}$ ＋ 希 $\mathrm{H_2SO_4}$</td><td>酸化還元／弱酸の遊離</td><td>必要／不要</td><td>下方</td></tr>
+<tr><td>$\mathrm{NH_3}$</td><td>$\mathrm{NH_4Cl}$ ＋ $\mathrm{Ca(OH)_2}$</td><td>弱塩基の遊離</td><td>必要</td><td>上方</td></tr>
+<tr><td>NO／$\mathrm{NO_2}$</td><td>Cu ＋ 希 $\mathrm{HNO_3}$　／　Cu ＋ 濃 $\mathrm{HNO_3}$</td><td>酸化還元</td><td>不要</td><td>水上／下方</td></tr>
+<tr><td>$\mathrm{CO_2}$</td><td>$\mathrm{CaCO_3}$ ＋ 希 HCl</td><td>弱酸の遊離</td><td>不要</td><td>下方</td></tr>
+<tr><td>CO</td><td>HCOOH ＋ 濃 $\mathrm{H_2SO_4}$</td><td>脱水</td><td>必要</td><td>水上</td></tr>
+</table>
+<div class="box lect">
+<b>捕集法</b>：水に溶けにくい気体（$\mathrm{H_2}$、$\mathrm{O_2}$、$\mathrm{N_2}$、NO、CO など）は水上置換。水に溶ける気体は、空気（平均分子量 約 29）より軽い $\mathrm{NH_3}$ は上方置換、重いものは下方置換。<br>
+<b>乾燥剤</b>：酸性の乾燥剤（濃硫酸・十酸化四リン）は塩基性の $\mathrm{NH_3}$ に使えない。濃硫酸は還元性の $\mathrm{H_2S}$ も酸化してしまうので使えない。中性の塩化カルシウムも $\mathrm{NH_3}$ には使えない。塩基性の乾燥剤（ソーダ石灰・酸化カルシウム）は酸性の気体（$\mathrm{CO_2}$、$\mathrm{Cl_2}$、HCl、$\mathrm{SO_2}$、$\mathrm{H_2S}$、$\mathrm{NO_2}$）に使えない。
+</div>
+<div class="box ex">
+次の気体 (a)〜(e) について、捕集法と、濃硫酸で乾燥できるかどうかを答えよ。<br>
+(a) $\mathrm{H_2}$　(b) $\mathrm{NH_3}$　(c) $\mathrm{H_2S}$　(d) HCl　(e) NO
+<div class="solx"><b>解</b>　(a) <b>水上置換・できる</b>　(b) <b>上方置換・できない</b>（中和反応する）　(c) <b>下方置換・できない</b>（$\mathrm{H_2S}$ が濃硫酸に酸化される）　(d) <b>下方置換・できる</b>（酸性の気体どうし）　(e) <b>水上置換・できる</b>（NO は水に溶けにくい中性の気体）</div>
+</div>
+<div class="box chk">
+(1) 常温で液体のハロゲンの単体の化学式と色を答えよ。<br>
+(2) オゾンを湿ったヨウ化カリウムデンプン紙に当てると青くなる。オゾンとヨウ化カリウム水溶液の反応を化学反応式で示せ。<br>
+(3) フッ化水素酸をガラス容器に保存できない理由を、化学反応式を用いて説明せよ。<br>
+(4) 石灰水に二酸化炭素を通じると白濁し、さらに通じ続けると透明になる。それぞれの変化を化学反応式で示せ。
+</div>
+<div class="box aim">
+・気体の発生は「<b>反応の型</b>」で考えると、初めて見る組み合わせでも生成物が書ける。弱酸の塩＋強酸 → 弱酸の遊離（$\mathrm{H_2S}$、$\mathrm{CO_2}$、$\mathrm{SO_2}$）、揮発性の酸の塩＋不揮発性の酸 → 揮発性の酸の遊離（HCl）、弱塩基の塩＋強塩基 → 弱塩基の遊離（$\mathrm{NH_3}$）。<br>
+・装置図の問題では「加熱の有無」「固体どうしを加熱するときは試験管の口を下げる」「洗気びんの順（水 → 濃硫酸）」「捕集法」がよく問われる。<br>
+・$\mathrm{Cl_2}$・$\mathrm{SO_2}$・NO・$\mathrm{NO_2}$ の発生の反応式は、第4章の半反応式（例：$\mathrm{HNO_3+3H^++3e^- \to NO+2H_2O}$）から組み立てられるようにしておく。
+</div>
+<h3 class="deep">講義5　オキソ酸の強さと酸化数</h3>
+<p>分子中に酸素原子を含む酸を<b>オキソ酸</b>という。塩素のオキソ酸では、中心の Cl の酸化数が大きい（O 原子が多い）ものほど強い酸である。</p>
+<table class="l w" style="font-size:9.3pt">
+<tr><th>オキソ酸</th><td>$\mathrm{HClO}$ 次亜塩素酸</td><td>$\mathrm{HClO_2}$ 亜塩素酸</td><td>$\mathrm{HClO_3}$ 塩素酸</td><td>$\mathrm{HClO_4}$ 過塩素酸</td></tr>
+<tr><th>Cl の酸化数</th><td>＋1</td><td>＋3</td><td>＋5</td><td>＋7</td></tr>
+<tr><th>酸の強さ</th><td>弱酸</td><td colspan="3">→ 強くなる（$\mathrm{HClO_4}$ はきわめて強い酸）</td></tr>
+</table>
+<div class="box lect">
+オキソ酸は中心原子 X に −O−H と O 原子が結合した構造をもつ。電気陰性度の大きい O 原子が X に多く結合しているほど、O−H 結合の電子が X の側に引き寄せられ、$\mathrm{H^+}$ が離れやすくなる。また、電離後の陰イオンでは負電荷が多くの O 原子に分散して安定になる。同じ理由で $\mathrm{H_2SO_4\gt H_2SO_3}$、$\mathrm{HNO_3\gt HNO_2}$ である。<br>
+なお、<b>酸としての強さと酸化作用の強さは別の性質</b>である。次亜塩素酸 HClO は弱酸だが、強い酸化作用をもつ。
+</div>
+<div class="box warn">
+・銅と硝酸：<b>希硝酸 → NO、濃硝酸 → $\mathrm{NO_2}$</b>。逆にしない。また、Cu は水素よりイオン化傾向が小さいので、塩酸や希硫酸には溶けない。<br>
+・$\mathrm{NH_3}$ を塩化カルシウムで乾燥させない（中性の乾燥剤でも反応する）。<br>
+・濃硫酸に水を加えて希釈しない（急に沸騰して飛び散る）。水に濃硫酸を少しずつ加える。<br>
+・ハロゲン化水素酸は「すべて強酸」ではない。HF は弱酸。
+</div>
+<div class="box ans">
+(1) $\mathrm{Br_2}$、赤褐色　(2) $\mathrm{O_3+2KI+H_2O \to I_2+2KOH+O_2}$　(3) $\mathrm{SiO_2+6HF \to H_2SiF_6+2H_2O}$ のように、ガラスの主成分 $\mathrm{SiO_2}$ を溶かすから（ポリエチレン容器に保存する）　(4) $\mathrm{Ca(OH)_2+CO_2 \to CaCO_3+H_2O}$（白濁）、$\mathrm{CaCO_3+H_2O+CO_2 \to Ca(HCO_3)_2}$（水に溶けて透明になる）
+</div>
+<!--CH 11-->
+<div class="box point">
+・<b>アルカリ金属</b>（1族）は水と激しく反応して強塩基を生じる。<b>アルカリ土類金属</b>（2族）のうち Ca・Sr・Ba は常温の水と反応する。炎色反応：Li 赤、Na 黄、K 赤紫、Ca 橙赤、Sr 紅、Ba 黄緑、Cu 青緑<br>
+・<b>両性金属</b>（Al, Zn, Sn, Pb）は酸にも強塩基にも溶ける。$\mathrm{Zn(OH)_2}$ は過剰のアンモニア水にも溶けるが、$\mathrm{Al(OH)_3}$ は溶けない<br>
+・<b>遷移元素</b>は複数の酸化数をとり、有色のイオンや<b>錯イオン</b>をつくる。過剰のアンモニア水で錯イオンになるのは $\mathrm{Cu^{2+}}$、$\mathrm{Zn^{2+}}$、$\mathrm{Ag^+}$ など<br>
+・<b>工業的製法</b>：ハーバー・ボッシュ法（$\mathrm{NH_3}$）、オストワルト法（$\mathrm{HNO_3}$）、接触法（$\mathrm{H_2SO_4}$）、アンモニアソーダ法（$\mathrm{Na_2CO_3}$）、溶融塩電解（Al, Na）
+</div>
+<h3>講義1　典型金属元素 ― アルカリ金属・アルカリ土類金属・両性金属</h3>
+<div class="box lect" style="page-break-inside:auto">
+<b>アルカリ金属</b>（Li, Na, K など）：価電子1個で1価の陽イオンになりやすく、還元力が強い。水と激しく反応する（$\mathrm{2Na+2H_2O \to 2NaOH+H_2}$）ので灯油（石油）中に保存する。<br>
+・NaOH は空気中の水分を吸収して溶ける（<b>潮解</b>）。$\mathrm{Na_2CO_3\cdot10H_2O}$ の結晶は空気中で水和水の一部を失って粉末になる（<b>風解</b>）。$\mathrm{NaHCO_3}$ は加熱すると分解する（例題）。<br>
+<b>アルカリ土類金属</b>（2族）：2価の陽イオンになる。Ca・Sr・Ba は常温の水と反応し（$\mathrm{Ca+2H_2O \to Ca(OH)_2+H_2}$）、Mg は熱水と反応する。Be・Mg は炎色反応を示さない。<br>
+・石灰石 $\mathrm{CaCO_3}$ を強熱すると生石灰 CaO、CaO に水を加えると発熱して消石灰 $\mathrm{Ca(OH)_2}$。セッコウ $\mathrm{CaSO_4\cdot2H_2O}$ を加熱すると焼きセッコウ $\mathrm{CaSO_4\cdot\frac12H_2O}$。$\mathrm{MgSO_4}$ は水に溶けるが $\mathrm{CaSO_4}$・$\mathrm{BaSO_4}$ は溶けにくい。<br>
+<b>両性金属</b>：Al・Zn・Sn・Pb は酸とも強塩基とも反応して $\mathrm{H_2}$ を発生する。例えば<br>
+　$\mathrm{2Al+2NaOH+6H_2O \to 2Na[Al(OH)_4]+3H_2}$　　$\mathrm{Zn+2NaOH+2H_2O \to Na_2[Zn(OH)_4]+H_2}$<br>
+水酸化物も両性で、過剰の NaOH 水溶液に溶ける（$\mathrm{Al(OH)_3+NaOH \to Na[Al(OH)_4]}$）。Al は濃硝酸中で不動態になる。Al 粉末と $\mathrm{Fe_2O_3}$ に点火すると激しく反応して融解した鉄が得られる（テルミット反応 $\mathrm{2Al+Fe_2O_3 \to Al_2O_3+2Fe}$）。
+</div>
+<div class="box ex">
+炭酸水素ナトリウム 8.4 g を十分に加熱した。(1) 化学反応式を書け。(2) 加熱後に残る固体の質量を求めよ。(3) 質量は何 g 減少するか（$\mathrm{NaHCO_3}=84$、$\mathrm{Na_2CO_3}=106$）。
+<div class="solx"><b>解</b>　(1) $\boldsymbol{\mathrm{2NaHCO_3 \to Na_2CO_3+H_2O+CO_2}}$<br>
+(2) $\mathrm{NaHCO_3}$ $\dfrac{8.4}{84}=0.10$ mol から $\mathrm{Na_2CO_3}$ 0.050 mol。$106\times0.050=$ <b>5.3 g</b>（$\mathrm{Na_2CO_3}$ は加熱しても分解しない）<br>
+(3) $8.4-5.3=$ <b>3.1 g</b>（気体として出ていった $\mathrm{H_2O}$ 0.90 g と $\mathrm{CO_2}$ 2.2 g の和に等しい）</div>
+</div>
+<h3>講義2　遷移元素と錯イオン</h3>
+<div class="box lect" style="page-break-inside:auto">
+遷移元素（3〜12族）は最外殻電子が1〜2個で、周期表で隣り合う元素どうしの性質が似ている。複数の酸化数をとり、有色のイオンが多い。<br>
+<b>錯イオン</b>：金属イオンに、非共有電子対をもつ分子や陰イオン（<b>配位子</b>：$\mathrm{NH_3}$、$\mathrm{H_2O}$、$\mathrm{CN^-}$、$\mathrm{OH^-}$ など）が<b>配位結合</b>したイオン。配位子の数を<b>配位数</b>という。
+<table class="l w" style="font-size:9pt;background:#fff">
+<tr><th>錯イオン</th><th>名称</th><th>配位数・形・色</th></tr>
+<tr><td>$\mathrm{[Ag(NH_3)_2]^+}$</td><td>ジアンミン銀(I)イオン</td><td>2・直線形・無色</td></tr>
+<tr><td>$\mathrm{[Cu(NH_3)_4]^{2+}}$</td><td>テトラアンミン銅(II)イオン</td><td>4・正方形・深青色</td></tr>
+<tr><td>$\mathrm{[Zn(NH_3)_4]^{2+}}$</td><td>テトラアンミン亜鉛(II)イオン</td><td>4・正四面体形・無色</td></tr>
+<tr><td>$\mathrm{[Fe(CN)_6]^{3-}}$</td><td>ヘキサシアニド鉄(III)酸イオン（$\mathrm{[Fe(CN)_6]^{4-}}$ は鉄(II)酸イオン）</td><td>6・正八面体形</td></tr>
+<tr><td>$\mathrm{[Al(OH)_4]^-}$</td><td>テトラヒドロキシドアルミン酸イオン</td><td>4・無色</td></tr>
+</table>
+<b>鉄</b>：$\mathrm{Fe^{2+}}$ は淡緑色、$\mathrm{Fe^{3+}}$ は黄褐色。NaOH 水溶液を加えると、$\mathrm{Fe^{2+}}$ からは緑白色の $\mathrm{Fe(OH)_2}$、$\mathrm{Fe^{3+}}$ からは赤褐色の沈殿（水酸化鉄(III)、ふつう $\mathrm{Fe(OH)_3}$ と表す）。
+検出：$\mathrm{Fe^{2+}}$ ＋ $\mathrm{K_3[Fe(CN)_6]}$ → 濃青色沈殿、$\mathrm{Fe^{3+}}$ ＋ $\mathrm{K_4[Fe(CN)_6]}$ → 濃青色沈殿、$\mathrm{Fe^{3+}}$ ＋ KSCN → 血赤色溶液。<br>
+<b>銅</b>：$\mathrm{Cu^{2+}}$ は青色。NaOH 水溶液や少量のアンモニア水で青白色の $\mathrm{Cu(OH)_2}$、過剰のアンモニア水で深青色の $\mathrm{[Cu(NH_3)_4]^{2+}}$。$\mathrm{Cu(OH)_2}$ を加熱すると黒色の CuO。$\mathrm{CuSO_4\cdot5H_2O}$（青色）は加熱すると白色の $\mathrm{CuSO_4}$ になる（水の検出に利用）。<br>
+<b>銀</b>：$\mathrm{Ag^+}$ に NaOH 水溶液を加えると褐色の $\mathrm{Ag_2O}$（$\mathrm{2Ag^++2OH^- \to Ag_2O+H_2O}$）。AgCl（白）はアンモニア水に溶ける（$\mathrm{AgCl+2NH_3 \to [Ag(NH_3)_2]^++Cl^-}$）。ハロゲン化銀は光で分解して銀を遊離する（感光性）。<br>
+<b>クロム</b>：$\mathrm{CrO_4^{2-}}$（黄色）と $\mathrm{Cr_2O_7^{2-}}$（赤橙色）は液性で移り変わる（$\mathrm{2CrO_4^{2-}+2H^+ \rightleftarrows Cr_2O_7^{2-}+H_2O}$）。$\mathrm{CrO_4^{2-}}$ は $\mathrm{Ag^+}$ と赤褐色の $\mathrm{Ag_2CrO_4}$、$\mathrm{Pb^{2+}}$ と黄色の $\mathrm{PbCrO_4}$ を沈殿する。$\mathrm{Cr_2O_7^{2-}}$ は硫酸酸性で強い酸化剤（→ $\mathrm{Cr^{3+}}$、緑色）。<br>
+<b>マンガン</b>：$\mathrm{MnO_4^-}$（赤紫色）は硫酸酸性で強い酸化剤（→ $\mathrm{Mn^{2+}}$、ほぼ無色）。$\mathrm{MnO_2}$（黒色）は酸化剤・触媒。
+</div>
+<div class="box ex">
+$\mathrm{Al^{3+}}$、$\mathrm{Zn^{2+}}$、$\mathrm{Fe^{3+}}$、$\mathrm{Cu^{2+}}$、$\mathrm{Ag^+}$ のいずれか1種類を含む水溶液 A〜E がある。NaOH 水溶液を少量加えるとすべて沈殿し、過剰に加えると A・B の沈殿だけが溶けた。アンモニア水を過剰に加えると B・D・E は溶液になり（D は深青色）、A・C は沈殿が残った（C は赤褐色）。<br>
+(1) A〜E に含まれるイオンを答えよ。(2) B・D にアンモニア水を過剰に加えたときに生じた錯イオンの化学式を書け。(3) E に NaOH 水溶液を少量加えたときの沈殿の化学式と色を答えよ。
+<div class="solx"><b>解</b>　(1) 過剰の NaOH に溶ける A・B は両性元素で Al か Zn。そのうち過剰のアンモニア水にも溶ける B が Zn。<br>
+<b>A：$\mathrm{Al^{3+}}$　B：$\mathrm{Zn^{2+}}$　C：$\mathrm{Fe^{3+}}$（赤褐色の沈殿）　D：$\mathrm{Cu^{2+}}$（深青色）　E：$\mathrm{Ag^+}$</b><br>
+(2) B：$\boldsymbol{\mathrm{[Zn(NH_3)_4]^{2+}}}$　D：$\boldsymbol{\mathrm{[Cu(NH_3)_4]^{2+}}}$　(3) $\boldsymbol{\mathrm{Ag_2O}}$、<b>褐色</b></div>
+</div>
+<h3>講義3　金属イオンの分離と系統分析</h3>
+<div class="box lect">
+複数の金属イオンを含む水溶液は、試薬を加える順序を工夫して1種類ずつ沈殿させて分離する（下図）。ポイントは、①希塩酸で $\mathrm{Ag^+}$・$\mathrm{Pb^{2+}}$（$\mathrm{PbCl_2}$ は熱水に溶けるので AgCl と分けられる）、②<b>酸性</b>で $\mathrm{H_2S}$ を通じると $K_\mathrm{sp}$ のきわめて小さい CuS などだけが沈殿（第9章講義5）、③過剰のアンモニア水で $\mathrm{Fe(OH)_3}$・$\mathrm{Al(OH)_3}$ が沈殿し $\mathrm{Zn^{2+}}$ は錯イオンとして残る、④<b>塩基性</b>で $\mathrm{H_2S}$ → ZnS、⑤炭酸アンモニウムで $\mathrm{CaCO_3}$・$\mathrm{BaCO_3}$、⑥ $\mathrm{Na^+}$・$\mathrm{K^+}$ は炎色反応、という流れ。
+</div>
+<svg class="fig" width="470" height="280" viewBox="0 0 470 280"><rect x="4" y="4" width="462" height="24" rx="4" fill="#f3ecf8" stroke="#6d2a86" stroke-width="1.2"/><text x="235.0" y="20.5" font-size="11" text-anchor="middle" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>Ag</tspan><tspan dy="-4.2" font-size="7.9">+</tspan><tspan dy="4.2" font-family="IPAPGothic,IPAGothic,sans-serif">，</tspan><tspan>Cu</tspan><tspan dy="-4.2" font-size="7.9">2+</tspan><tspan dy="4.2" font-family="IPAPGothic,IPAGothic,sans-serif">，</tspan><tspan>Fe</tspan><tspan dy="-4.2" font-size="7.9">3+</tspan><tspan dy="4.2" font-family="IPAPGothic,IPAGothic,sans-serif">，</tspan><tspan>Zn</tspan><tspan dy="-4.2" font-size="7.9">2+</tspan><tspan dy="4.2" font-family="IPAPGothic,IPAGothic,sans-serif">，</tspan><tspan>Ca</tspan><tspan dy="-4.2" font-size="7.9">2+</tspan><tspan dy="4.2" font-family="IPAPGothic,IPAGothic,sans-serif">，</tspan><tspan>Na</tspan><tspan dy="-4.2" font-size="7.9">+</tspan><tspan dy="4.2"> </tspan><tspan font-family="IPAPGothic,IPAGothic,sans-serif">を含む水溶液</tspan></text><line x1="26" y1="28" x2="26" y2="60" stroke="#222" stroke-width="1.2"/><text x="34" y="52" font-size="10.5" text-anchor="start" fill="#6d2a86" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>① </tspan><tspan font-family="IPAPGothic,IPAGothic,sans-serif">希塩酸</tspan></text><line x1="26" y1="60" x2="294.0" y2="60.0" stroke="#222" stroke-width="1.1"/><polygon points="300,60 294.0,62.7 294.0,57.3" fill="#222"/><text x="274" y="56" font-size="9.5" text-anchor="middle" fill="#555" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-family="IPAPGothic,IPAGothic,sans-serif">沈殿</tspan></text><rect x="300" y="48" width="166" height="24" rx="4" fill="#fff" stroke="#222" stroke-width="1"/><text x="383.0" y="64.5" font-size="10.5" text-anchor="middle" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>AgCl</tspan><tspan font-family="IPAPGothic,IPAGothic,sans-serif">（白）</tspan></text><line x1="26" y1="60" x2="26" y2="100" stroke="#222" stroke-width="1.2"/><text x="34" y="73" font-size="9.5" text-anchor="start" fill="#555" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-family="IPAPGothic,IPAGothic,sans-serif">ろ液</tspan></text><text x="34" y="92" font-size="10.5" text-anchor="start" fill="#6d2a86" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>② H</tspan><tspan dy="2.9" font-size="7.6">2</tspan><tspan dy="-2.9">S </tspan><tspan font-family="IPAPGothic,IPAGothic,sans-serif">を通じる（酸性）</tspan></text><line x1="26" y1="100" x2="294.0" y2="100.0" stroke="#222" stroke-width="1.1"/><polygon points="300,100 294.0,102.7 294.0,97.3" fill="#222"/><text x="274" y="96" font-size="9.5" text-anchor="middle" fill="#555" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-family="IPAPGothic,IPAGothic,sans-serif">沈殿</tspan></text><rect x="300" y="88" width="166" height="24" rx="4" fill="#fff" stroke="#222" stroke-width="1"/><text x="383.0" y="104.5" font-size="10.5" text-anchor="middle" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>CuS</tspan><tspan font-family="IPAPGothic,IPAGothic,sans-serif">（黒）</tspan></text><line x1="26" y1="100" x2="26" y2="140" stroke="#222" stroke-width="1.2"/><text x="34" y="113" font-size="9.5" text-anchor="start" fill="#555" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-family="IPAPGothic,IPAGothic,sans-serif">ろ液</tspan></text><text x="34" y="132" font-size="10.5" text-anchor="start" fill="#6d2a86" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>③ </tspan><tspan font-family="IPAPGothic,IPAGothic,sans-serif">煮沸</tspan><tspan> → </tspan><tspan font-family="IPAPGothic,IPAGothic,sans-serif">希硝酸</tspan><tspan> → NH</tspan><tspan dy="2.9" font-size="7.6">3</tspan><tspan dy="-2.9"> </tspan><tspan font-family="IPAPGothic,IPAGothic,sans-serif">水（過剰）</tspan></text><line x1="26" y1="140" x2="294.0" y2="140.0" stroke="#222" stroke-width="1.1"/><polygon points="300,140 294.0,142.7 294.0,137.3" fill="#222"/><text x="274" y="136" font-size="9.5" text-anchor="middle" fill="#555" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-family="IPAPGothic,IPAGothic,sans-serif">沈殿</tspan></text><rect x="300" y="128" width="166" height="24" rx="4" fill="#fff" stroke="#222" stroke-width="1"/><text x="383.0" y="144.5" font-size="10.5" text-anchor="middle" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>Fe(OH)</tspan><tspan dy="2.9" font-size="7.6">3</tspan><tspan dy="-2.9" font-family="IPAPGothic,IPAGothic,sans-serif">（赤褐）</tspan></text><line x1="26" y1="140" x2="26" y2="180" stroke="#222" stroke-width="1.2"/><text x="34" y="153" font-size="9.5" text-anchor="start" fill="#555" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-family="IPAPGothic,IPAGothic,sans-serif">ろ液（</tspan><tspan>[Zn(NH</tspan><tspan dy="2.7" font-size="6.8">3</tspan><tspan dy="-2.7">)</tspan><tspan dy="2.7" font-size="6.8">4</tspan><tspan dy="-2.7">]</tspan><tspan dy="-3.6" font-size="6.8">2+</tspan><tspan dy="3.6"> </tspan><tspan font-family="IPAPGothic,IPAGothic,sans-serif">など）</tspan></text><text x="34" y="172" font-size="10.5" text-anchor="start" fill="#6d2a86" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>④ H</tspan><tspan dy="2.9" font-size="7.6">2</tspan><tspan dy="-2.9">S </tspan><tspan font-family="IPAPGothic,IPAGothic,sans-serif">を通じる（塩基性）</tspan></text><line x1="26" y1="180" x2="294.0" y2="180.0" stroke="#222" stroke-width="1.1"/><polygon points="300,180 294.0,182.7 294.0,177.3" fill="#222"/><text x="274" y="176" font-size="9.5" text-anchor="middle" fill="#555" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-family="IPAPGothic,IPAGothic,sans-serif">沈殿</tspan></text><rect x="300" y="168" width="166" height="24" rx="4" fill="#fff" stroke="#222" stroke-width="1"/><text x="383.0" y="184.5" font-size="10.5" text-anchor="middle" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>ZnS</tspan><tspan font-family="IPAPGothic,IPAGothic,sans-serif">（白）</tspan></text><line x1="26" y1="180" x2="26" y2="220" stroke="#222" stroke-width="1.2"/><text x="34" y="193" font-size="9.5" text-anchor="start" fill="#555" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-family="IPAPGothic,IPAGothic,sans-serif">ろ液</tspan></text><text x="34" y="212" font-size="10.5" text-anchor="start" fill="#6d2a86" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>⑤ (NH</tspan><tspan dy="2.9" font-size="7.6">4</tspan><tspan dy="-2.9">)</tspan><tspan dy="2.9" font-size="7.6">2</tspan><tspan dy="-2.9">CO</tspan><tspan dy="2.9" font-size="7.6">3</tspan><tspan dy="-2.9"> </tspan><tspan font-family="IPAPGothic,IPAGothic,sans-serif">水溶液</tspan></text><line x1="26" y1="220" x2="294.0" y2="220.0" stroke="#222" stroke-width="1.1"/><polygon points="300,220 294.0,222.7 294.0,217.3" fill="#222"/><text x="274" y="216" font-size="9.5" text-anchor="middle" fill="#555" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-family="IPAPGothic,IPAGothic,sans-serif">沈殿</tspan></text><rect x="300" y="208" width="166" height="24" rx="4" fill="#fff" stroke="#222" stroke-width="1"/><text x="383.0" y="224.5" font-size="10.5" text-anchor="middle" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>CaCO</tspan><tspan dy="2.9" font-size="7.6">3</tspan><tspan dy="-2.9" font-family="IPAPGothic,IPAGothic,sans-serif">（白）</tspan></text><line x1="26" y1="220" x2="26.0" y2="243.0" stroke="#222" stroke-width="1.2"/><polygon points="26,249 23.3,243.0 28.7,243.0" fill="#222"/><text x="34" y="238" font-size="9.5" text-anchor="start" fill="#555" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-family="IPAPGothic,IPAGothic,sans-serif">ろ液</tspan></text><rect x="4" y="250" width="462" height="24" rx="4" fill="#fff" stroke="#222" stroke-width="1"/><text x="235.0" y="266.5" font-size="10.5" text-anchor="middle" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>Na</tspan><tspan dy="-4.0" font-size="7.6">+</tspan><tspan dy="4.0"> </tspan><tspan font-family="IPAPGothic,IPAGothic,sans-serif">･･･</tspan><tspan> </tspan><tspan font-family="IPAPGothic,IPAGothic,sans-serif">炎色反応（黄色）で確認</tspan></text></svg>
+<div class="box ex">
+上の図の操作で、$\mathrm{Ag^+}$、$\mathrm{Cu^{2+}}$、$\mathrm{Fe^{3+}}$、$\mathrm{Zn^{2+}}$、$\mathrm{Ca^{2+}}$、$\mathrm{Na^+}$ を分離した。<br>
+(1) ③で、アンモニア水を加える前に煮沸し、希硝酸を加える理由をそれぞれ述べよ。<br>
+(2) 試料に $\mathrm{Al^{3+}}$ も含まれていた場合、③の沈殿には何が混じるか。また、その沈殿から鉄とアルミニウムを分けるにはどうすればよいか。
+<div class="solx"><b>解</b>　(1) <b>煮沸</b>：溶液に残った $\mathrm{H_2S}$ を除くため（残っていると、アンモニア水で塩基性にしたとき ZnS も沈殿してしまう）。<b>希硝酸</b>：②で $\mathrm{H_2S}$ に還元されて生じた $\mathrm{Fe^{2+}}$ を $\mathrm{Fe^{3+}}$ に酸化し、沈殿しやすい $\mathrm{Fe(OH)_3}$ として分離するため。<br>
+(2) 白色の <b>$\mathrm{Al(OH)_3}$</b> が混じる。沈殿に<b>過剰の NaOH 水溶液を加える</b>と、$\mathrm{Al(OH)_3}$ は $\mathrm{[Al(OH)_4]^-}$ となって溶け、$\mathrm{Fe(OH)_3}$ だけが残る（ろ過して分ける）。</div>
+</div>
+<h3>講義4　工業的製法</h3>
+<div class="box lect" style="page-break-inside:auto">
+<b>ハーバー・ボッシュ法</b>（アンモニア）：$\mathrm{N_2+3H_2 \rightleftarrows 2NH_3}$　$\Delta H=-92\ \mathrm{kJ}$。低温・高圧ほど平衡は右に偏る（ルシャトリエの原理）が、低温では反応が遅いので、四酸化三鉄 $\mathrm{Fe_3O_4}$ を主成分とする触媒を使い、約 500 ℃・約 $10^7$ Pa で反応させる。<br>
+<b>オストワルト法</b>（硝酸）：① $\mathrm{4NH_3+5O_2 \to 4NO+6H_2O}$（白金触媒、約 800 ℃）② $\mathrm{2NO+O_2 \to 2NO_2}$ ③ $\mathrm{3NO_2+H_2O \to 2HNO_3+NO}$（NO は②へ戻して再利用）。全体では $\mathrm{NH_3+2O_2 \to HNO_3+H_2O}$ で、$\mathrm{NH_3}$ 1 mol から $\mathrm{HNO_3}$ 1 mol。<br>
+<b>接触法</b>（硫酸）：$\mathrm{S+O_2 \to SO_2}$、$\mathrm{2SO_2+O_2 \to 2SO_3}$（酸化バナジウム(V) $\mathrm{V_2O_5}$ 触媒）。$\mathrm{SO_3}$ を濃硫酸に吸収させて発煙硫酸とし、希硫酸でうすめて濃硫酸にする（$\mathrm{SO_3+H_2O \to H_2SO_4}$）。$\mathrm{SO_3}$ を直接水に吸収させないのは、発熱が大きく霧状になって吸収されにくいため。<br>
+<b>アンモニアソーダ法</b>（ソルベー法、炭酸ナトリウム）：<br>
+　① $\mathrm{NaCl+H_2O+NH_3+CO_2 \to NaHCO_3+NH_4Cl}$（溶解度の小さい $\mathrm{NaHCO_3}$ が沈殿）<br>
+　② $\mathrm{2NaHCO_3 \to Na_2CO_3+H_2O+CO_2}$　③ $\mathrm{CaCO_3 \to CaO+CO_2}$　④ $\mathrm{CaO+H_2O \to Ca(OH)_2}$<br>
+　⑤ $\mathrm{Ca(OH)_2+2NH_4Cl \to CaCl_2+2H_2O+2NH_3}$<br>
+　全体：$\mathrm{2NaCl+CaCO_3 \to Na_2CO_3+CaCl_2}$（$\mathrm{NH_3}$ と $\mathrm{CO_2}$ は回収して再利用する）<br>
+<b>溶融塩電解</b>：イオン化傾向の大きい Al・Na などは、水溶液を電気分解しても $\mathrm{H_2}$ が発生するだけなので、融解した塩や酸化物を電気分解する。Al は、ボーキサイトから得た酸化アルミニウム（アルミナ）を融解した氷晶石 $\mathrm{Na_3AlF_6}$ に溶かし、炭素電極で電気分解する（陰極 $\mathrm{Al^{3+}+3e^- \to Al}$、陽極では炭素が $\mathrm{O^{2-}}$ と反応して CO・$\mathrm{CO_2}$ になり消耗する）。<br>
+<b>その他</b>：鉄は溶鉱炉で鉄鉱石を CO で還元（$\mathrm{Fe_2O_3+3CO \to 2Fe+3CO_2}$）して銑鉄とし、転炉で炭素を減らして鋼にする。銅は粗銅を陽極として<b>電解精錬</b>する（第4章）。
+</div>
+<div class="box ex">
+(1) オストワルト法で $\mathrm{NH_3}$ 34 kg がすべて硝酸になると、63 % の硝酸は何 kg 得られるか（$\mathrm{NH_3}=17$、$\mathrm{HNO_3}=63$）。<br>
+(2) アンモニアソーダ法で $\mathrm{Na_2CO_3}$ 106 kg をつくるのに必要な NaCl は何 kg か（$\mathrm{NaCl}=58.5$、$\mathrm{Na_2CO_3}=106$）。
+<div class="solx"><b>解</b>　(1) N 原子の保存より、$\mathrm{NH_3}$ $34\times10^3\div17=2.0\times10^3$ mol から $\mathrm{HNO_3}$ $2.0\times10^3$ mol $=126\ \mathrm{kg}$。63 % の硝酸は $126\div0.63=$ <b>200 kg</b><br>
+(2) 全体の式 $\mathrm{2NaCl+CaCO_3 \to Na_2CO_3+CaCl_2}$ より NaCl は $2.0\times10^3$ mol。$58.5\times2.0\times10^3\ \mathrm{g}=$ <b>117 kg</b></div>
+</div>
+<div class="box chk">
+(1) 炎色反応で黄色、赤紫色、橙赤色、青緑色を示す元素をそれぞれ答えよ。<br>
+(2) $\mathrm{Fe^{2+}}$ を含む水溶液に $\mathrm{K_3[Fe(CN)_6]}$ 水溶液を加えると、どのような変化が見られるか。<br>
+(3) テトラアンミン銅(II)イオンの化学式と立体構造を答えよ。<br>
+(4) アルミニウムの製造で、酸化アルミニウムを氷晶石に溶かして電気分解する理由を述べよ。
+</div>
+<div class="box aim">
+・「<b>NaOH 水溶液・アンモニア水を少量 → 過剰</b>」の表で覚える。過剰の NaOH に溶ける ＝ 両性（Al, Zn, Sn, Pb）、過剰のアンモニア水に溶ける ＝ アンミン錯イオン（Cu, Zn, Ag, Ni）。両方に溶けるのは $\mathrm{Zn^{2+}}$。<br>
+・沈殿の色：白（AgCl, $\mathrm{BaSO_4}$, $\mathrm{CaCO_3}$, ZnS, $\mathrm{Al(OH)_3}$）、黒（CuS, PbS, CuO）、黄（AgI, $\mathrm{PbCrO_4}$, CdS）、赤褐（$\mathrm{Fe(OH)_3}$, $\mathrm{Ag_2CrO_4}$）、褐（$\mathrm{Ag_2O}$）。<br>
+・工業的製法の計算は、途中の式を足し合わせなくても<b>注目する原子（N・S・Na など）の保存</b>で解ける。
+</div>
+<h3 class="deep">講義5　錯イオンの形と異性体</h3>
+<div class="two"><div style="flex:1.6"><div class="box lect">
+錯イオンの形は配位数でほぼ決まる（2：直線形、4：正四面体形か正方形、6：正八面体形）。正方形の $\mathrm{[Pt(NH_3)_2Cl_2]}$ には、2個の Cl が隣り合うシス形と向かい合うトランス形がある（シス-トランス異性体、右図）。シス形（シスプラチン）は抗がん剤に使われる。正四面体形ではどの2頂点も隣り合うので、この異性体は生じない。異性体が2種類あることから、正方形とわかる。
+</div></div><div style="flex:1"><svg class="fig" width="250" height="108" viewBox="0 0 250 108"><line x1="53.6" y1="35.6" x2="38.6" y2="20.6" stroke="#222" stroke-width="1.4"/><text x="36.4" y="18.4" font-size="11" text-anchor="end" fill="#1a7a3a" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>Cl</tspan></text><line x1="70.4" y1="35.6" x2="85.4" y2="20.6" stroke="#222" stroke-width="1.4"/><text x="87.6" y="18.4" font-size="11" text-anchor="start" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>NH</tspan><tspan dy="3.1" font-size="7.9">3</tspan></text><line x1="53.6" y1="52.4" x2="38.6" y2="67.4" stroke="#222" stroke-width="1.4"/><text x="36.4" y="77.6" font-size="11" text-anchor="end" fill="#1a7a3a" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>Cl</tspan></text><line x1="70.4" y1="52.4" x2="85.4" y2="67.4" stroke="#222" stroke-width="1.4"/><text x="87.6" y="77.6" font-size="11" text-anchor="start" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>NH</tspan><tspan dy="3.1" font-size="7.9">3</tspan></text><text x="62" y="48" font-size="12" text-anchor="middle" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif" font-weight="bold"><tspan>Pt</tspan></text><text x="62" y="102" font-size="10.5" text-anchor="middle" fill="#222" font-family="IPAPGothic,IPAGothic,sans-serif"><tspan font-family="IPAPGothic,IPAGothic,sans-serif">シス形（シスプラチン）</tspan></text><line x1="187.6" y1="35.6" x2="172.6" y2="20.6" stroke="#222" stroke-width="1.4"/><text x="170.4" y="18.4" font-size="11" text-anchor="end" fill="#1a7a3a" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>Cl</tspan></text><line x1="204.4" y1="35.6" x2="219.4" y2="20.6" stroke="#222" stroke-width="1.4"/><text x="221.6" y="18.4" font-size="11" text-anchor="start" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>NH</tspan><tspan dy="3.1" font-size="7.9">3</tspan></text><line x1="187.6" y1="52.4" x2="172.6" y2="67.4" stroke="#222" stroke-width="1.4"/><text x="170.4" y="77.6" font-size="11" text-anchor="end" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>NH</tspan><tspan dy="3.1" font-size="7.9">3</tspan></text><line x1="204.4" y1="52.4" x2="219.4" y2="67.4" stroke="#222" stroke-width="1.4"/><text x="221.6" y="77.6" font-size="11" text-anchor="start" fill="#1a7a3a" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>Cl</tspan></text><text x="196" y="48" font-size="12" text-anchor="middle" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif" font-weight="bold"><tspan>Pt</tspan></text><text x="196" y="102" font-size="10.5" text-anchor="middle" fill="#222" font-family="IPAPGothic,IPAGothic,sans-serif"><tspan font-family="IPAPGothic,IPAGothic,sans-serif">トランス形</tspan></text></svg></div></div>
+<div class="box warn">
+・$\mathrm{Ag^+}$ に NaOH 水溶液を加えて生じるのは褐色の $\mathrm{Ag_2O}$。AgOH と書かない。<br>
+・$\mathrm{Al(OH)_3}$ は過剰のアンモニア水には溶けない（$\mathrm{Zn(OH)_2}$ との区別に使う）。<br>
+・$\mathrm{Fe^{2+}}$ の検出は $\mathrm{K_3[Fe(CN)_6]}$、$\mathrm{Fe^{3+}}$ の検出は $\mathrm{K_4[Fe(CN)_6]}$ または KSCN。組み合わせを取り違えやすい。
+</div>
+<div class="box ans">
+(1) 黄色 Na、赤紫色 K、橙赤色 Ca、青緑色 Cu　(2) 濃青色の沈殿が生じる　(3) $\mathrm{[Cu(NH_3)_4]^{2+}}$、正方形　(4) 酸化アルミニウムは融点（約 2000 ℃）が高いので、氷晶石に溶かして低温で融解させるため
+</div>
+<!--CH 12-->
+<div class="box point">
+・有機化合物は<b>炭素骨格 ＋ 官能基</b>で分類する。化学的性質はおもに官能基で決まる<br>
+・<b>元素分析</b>：試料を完全燃焼 → $\mathrm{H_2O}$ を塩化カルシウム管、$\mathrm{CO_2}$ をソーダ石灰管で吸収 → C・H・O の質量 → <b>組成式</b> → 分子量から<b>分子式</b><br>
+・<b>異性体</b>：構造異性体（骨格・官能基の位置や種類が違う）と立体異性体（シス-トランス異性体・鏡像異性体）<br>
+・アルコールの酸化：第一級 → アルデヒド → カルボン酸、第二級 → ケトン、第三級は酸化されにくい。アルデヒドは還元性（銀鏡反応・フェーリング液の還元）<br>
+・エステル化・加水分解・けん化。油脂はグリセリンと高級脂肪酸のエステル、セッケンは高級脂肪酸のナトリウム塩
+</div>
+<h3>講義1　有機化合物の分類と元素分析</h3>
+<table class="l w" style="font-size:8.8pt">
+<tr><th>官能基</th><th>名称 → 化合物</th><th>官能基</th><th>名称 → 化合物</th><th>官能基</th><th>名称 → 化合物</th></tr>
+<tr><td>−OH</td><td>ヒドロキシ基 → アルコール</td><td>−CHO</td><td>ホルミル基（アルデヒド基）→ アルデヒド</td><td>＞C＝O</td><td>カルボニル基（ケトン基）→ ケトン</td></tr>
+<tr><td>−COOH</td><td>カルボキシ基 → カルボン酸</td><td>−O−</td><td>エーテル結合 → エーテル</td><td>−COO−</td><td>エステル結合 → エステル</td></tr>
+<tr><td>$\mathrm{-NH_2}$</td><td>アミノ基 → アミン</td><td>$\mathrm{-NO_2}$</td><td>ニトロ基 → ニトロ化合物</td><td>$\mathrm{-SO_3H}$</td><td>スルホ基 → スルホン酸</td></tr>
+</table>
+<div class="box lect">
+<b>元素分析</b>（C, H, O からなる化合物）：試料を乾燥した酸素を送りながら酸化銅(II)（酸化剤。不完全燃焼を防ぐ）とともに加熱して完全燃焼させ、生じた $\mathrm{H_2O}$ を<b>塩化カルシウム管</b>、$\mathrm{CO_2}$ を<b>ソーダ石灰管</b>に吸収させて質量増加を測る。ソーダ石灰は $\mathrm{H_2O}$ も $\mathrm{CO_2}$ も吸収するので、<b>先に塩化カルシウム管</b>で $\mathrm{H_2O}$ だけを吸収させる。<br>
+計算：C の質量 $=\mathrm{CO_2}$ の質量 $\times\dfrac{12}{44}$、H の質量 $=\mathrm{H_2O}$ の質量 $\times\dfrac{2.0}{18}$、O の質量 ＝ 試料 −（C ＋ H）。
+物質量の比（C の質量 ÷ 12）：（H の質量 ÷ 1.0）：（O の質量 ÷ 16） を最も簡単な整数比にしたものが<b>組成式</b>。分子式は組成式の整数倍で、分子量から決める。
+</div>
+<div class="box ex">
+C, H, O からなる化合物 23.0 mg を完全燃焼させると、$\mathrm{CO_2}$ 44.0 mg と $\mathrm{H_2O}$ 27.0 mg が生じた。分子量を 46 として分子式を求め、考えられる構造を示性式で2つ示せ（H = 1.0、C = 12、O = 16）。
+<div class="solx"><b>解</b>　C：$44.0\times\dfrac{12}{44}=12.0$ mg　H：$27.0\times\dfrac{2.0}{18}=3.0$ mg　O：$23.0-12.0-3.0=8.0$ mg<br>
+$\mathrm{C:H:O}=(12.0\div12):(3.0\div1.0):(8.0\div16)=1.0:3.0:0.50=2:6:1$ → 組成式 $\mathrm{C_2H_6O}$（式量 46）＝ 分子式 $\boldsymbol{\mathrm{C_2H_6O}}$<br>
+構造：$\boldsymbol{\mathrm{C_2H_5OH}}$（エタノール）と $\boldsymbol{\mathrm{CH_3OCH_3}}$（ジメチルエーテル）。金属 Na と反応して $\mathrm{H_2}$ を発生するのはエタノールだけなので、区別できる。</div>
+</div>
+<h3>講義2　炭化水素と異性体</h3>
+<div class="box lect" style="page-break-inside:auto">
+<b>アルカン</b> $\mathrm{C_{\mathit{n}}H_{2\mathit{n}+2}}$（単結合のみ）：安定。光を当てて塩素と反応させると<b>置換反応</b>が起こる（$\mathrm{CH_4+Cl_2 \to CH_3Cl+HCl}$、さらに $\mathrm{CH_2Cl_2}$、$\mathrm{CHCl_3}$、$\mathrm{CCl_4}$）。環状のものはシクロアルカン $\mathrm{C_{\mathit{n}}H_{2\mathit{n}}}$。<br>
+<b>アルケン</b> $\mathrm{C_{\mathit{n}}H_{2\mathit{n}}}$（C=C を1つ）：C=C の周りの原子は同一平面上にあり、C=C は回転できない。<b>付加反応</b>を起こしやすく、臭素水の赤褐色を消す（$\mathrm{CH_2{=}CH_2+Br_2 \to CH_2Br{-}CH_2Br}$、不飽和結合の検出）。エチレンはエタノールと濃硫酸を 160〜170 ℃ に加熱してつくる。<br>
+<b>アルキン</b> $\mathrm{C_{\mathit{n}}H_{2\mathit{n}-2}}$（C≡C を1つ）：アセチレンは $\mathrm{CaC_2+2H_2O \to C_2H_2+Ca(OH)_2}$ でつくる。付加反応で $\mathrm{H_2O}$（触媒 $\mathrm{HgSO_4}$）→ ビニルアルコール（不安定）→ アセトアルデヒド、HCl → 塩化ビニル $\mathrm{CH_2{=}CHCl}$、$\mathrm{CH_3COOH}$ → 酢酸ビニル $\mathrm{CH_2{=}CHOCOCH_3}$。3分子が重合するとベンゼン。<br>
+<b>異性体</b>（分子式が同じで構造が異なる化合物）：<br>
+・<b>構造異性体</b>：炭素骨格・官能基の位置・官能基の種類が異なるもの。<br>
+・<b>シス-トランス異性体</b>：C=C が回転できないため、置換基が同じ側（シス形）か反対側（トランス形）かで区別される。C=C の両方の炭素に、それぞれ異なる2つの原子（団）が結合しているときに生じる。<br>
+・<b>鏡像異性体</b>：4つの異なる原子・原子団が結合した炭素原子（<b>不斉炭素原子</b>）をもつ化合物には、互いに鏡像の関係で重ね合わせられない1対の異性体がある。融点などはほぼ同じだが、偏光に対する性質（旋光性）や生体内でのはたらきが異なる。
+</div>
+<svg class="fig" width="470" height="118" viewBox="0 0 470 118"><line x1="46.0" y1="44.4" x2="64.0" y2="44.4" stroke="#222" stroke-width="1.3"/><line x1="46.0" y1="39.6" x2="64.0" y2="39.6" stroke="#222" stroke-width="1.3"/><text x="39" y="46" font-size="12" text-anchor="middle" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>C</tspan></text><text x="71" y="46" font-size="12" text-anchor="middle" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>C</tspan></text><line x1="35.5" y1="35.9" x2="29.0" y2="24.7" stroke="#222" stroke-width="1.3"/><text x="26.0" y="20.9" font-size="11.5" text-anchor="end" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>H</tspan><tspan dy="3.2" font-size="8.3">3</tspan><tspan dy="-3.2">C</tspan></text><line x1="35.5" y1="48.1" x2="29.0" y2="59.3" stroke="#222" stroke-width="1.3"/><text x="26.0" y="71.1" font-size="11.5" text-anchor="end" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>H</tspan></text><line x1="74.5" y1="35.9" x2="81.0" y2="24.7" stroke="#222" stroke-width="1.3"/><text x="84.0" y="20.9" font-size="11.5" text-anchor="start" fill="#6d2a86" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>CH</tspan><tspan dy="3.2" font-size="8.3">3</tspan></text><line x1="74.5" y1="48.1" x2="81.0" y2="59.3" stroke="#222" stroke-width="1.3"/><text x="84.0" y="71.1" font-size="11.5" text-anchor="start" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>H</tspan></text><line x1="161.0" y1="44.4" x2="179.0" y2="44.4" stroke="#222" stroke-width="1.3"/><line x1="161.0" y1="39.6" x2="179.0" y2="39.6" stroke="#222" stroke-width="1.3"/><text x="154" y="46" font-size="12" text-anchor="middle" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>C</tspan></text><text x="186" y="46" font-size="12" text-anchor="middle" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>C</tspan></text><line x1="150.5" y1="35.9" x2="144.0" y2="24.7" stroke="#222" stroke-width="1.3"/><text x="141.0" y="20.9" font-size="11.5" text-anchor="end" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>H</tspan><tspan dy="3.2" font-size="8.3">3</tspan><tspan dy="-3.2">C</tspan></text><line x1="150.5" y1="48.1" x2="144.0" y2="59.3" stroke="#222" stroke-width="1.3"/><text x="141.0" y="71.1" font-size="11.5" text-anchor="end" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>H</tspan></text><line x1="189.5" y1="35.9" x2="196.0" y2="24.7" stroke="#222" stroke-width="1.3"/><text x="199.0" y="20.9" font-size="11.5" text-anchor="start" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>H</tspan></text><line x1="189.5" y1="48.1" x2="196.0" y2="59.3" stroke="#222" stroke-width="1.3"/><text x="199.0" y="71.1" font-size="11.5" text-anchor="start" fill="#6d2a86" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>CH</tspan><tspan dy="3.2" font-size="8.3">3</tspan></text><text x="55" y="96" font-size="10.5" text-anchor="middle" fill="#222" font-family="IPAPGothic,IPAGothic,sans-serif"><tspan font-family="IPAPGothic,IPAGothic,sans-serif">シス</tspan><tspan>-2-</tspan><tspan font-family="IPAPGothic,IPAGothic,sans-serif">ブテン</tspan></text><text x="170" y="96" font-size="10.5" text-anchor="middle" fill="#222" font-family="IPAPGothic,IPAGothic,sans-serif"><tspan font-family="IPAPGothic,IPAGothic,sans-serif">トランス</tspan><tspan>-2-</tspan><tspan font-family="IPAPGothic,IPAGothic,sans-serif">ブテン</tspan></text><line x1="237" y1="6" x2="237" y2="104" stroke="#ccc" stroke-width="1"/><text x="300" y="56" font-size="12" text-anchor="middle" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>C</tspan></text><line x1="300.0" y1="45.0" x2="300.0" y2="28.0" stroke="#222" stroke-width="1.3"/><text x="300.0" y="23.0" font-size="11" text-anchor="middle" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>COOH</tspan></text><line x1="294.3" y1="56.0" x2="280.3" y2="65.8" stroke="#222" stroke-width="1.3"/><text x="276.7" y="74.9" font-size="11" text-anchor="end" fill="#6d2a86" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>H</tspan><tspan dy="3.1" font-size="7.9">3</tspan><tspan dy="-3.1">C</tspan></text><polygon points="304.9,55.4 319.3,68.1 321.7,64.6" fill="#222"/><text x="323.3" y="75.9" font-size="11" text-anchor="start" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>OH</tspan></text><line x1="307.3" y1="49.8" x2="307.0" y2="49.1" stroke="#222" stroke-width="1.0"/><line x1="310.4" y1="49.0" x2="309.8" y2="47.6" stroke="#222" stroke-width="1.0"/><line x1="313.5" y1="48.3" x2="312.7" y2="46.2" stroke="#222" stroke-width="1.0"/><line x1="316.6" y1="47.6" x2="315.5" y2="44.7" stroke="#222" stroke-width="1.0"/><line x1="319.7" y1="46.8" x2="318.4" y2="43.3" stroke="#222" stroke-width="1.0"/><line x1="322.8" y1="46.1" x2="321.2" y2="41.9" stroke="#222" stroke-width="1.0"/><text x="327.4" y="45.1" font-size="11" text-anchor="start" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>H</tspan></text><text x="410" y="56" font-size="12" text-anchor="middle" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>C</tspan></text><line x1="410.0" y1="45.0" x2="410.0" y2="28.0" stroke="#222" stroke-width="1.3"/><text x="410.0" y="23.0" font-size="11" text-anchor="middle" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>COOH</tspan></text><line x1="415.7" y1="56.0" x2="429.7" y2="65.8" stroke="#222" stroke-width="1.3"/><text x="433.3" y="74.9" font-size="11" text-anchor="start" fill="#6d2a86" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>CH</tspan><tspan dy="3.1" font-size="7.9">3</tspan></text><polygon points="405.1,55.4 388.3,64.6 390.7,68.1" fill="#222"/><text x="386.7" y="75.9" font-size="11" text-anchor="end" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>HO</tspan></text><line x1="403.0" y1="49.1" x2="402.7" y2="49.8" stroke="#222" stroke-width="1.0"/><line x1="400.2" y1="47.6" x2="399.6" y2="49.0" stroke="#222" stroke-width="1.0"/><line x1="397.3" y1="46.2" x2="396.5" y2="48.3" stroke="#222" stroke-width="1.0"/><line x1="394.5" y1="44.7" x2="393.4" y2="47.6" stroke="#222" stroke-width="1.0"/><line x1="391.6" y1="43.3" x2="390.3" y2="46.8" stroke="#222" stroke-width="1.0"/><line x1="388.8" y1="41.9" x2="387.2" y2="46.1" stroke="#222" stroke-width="1.0"/><text x="382.6" y="45.1" font-size="11" text-anchor="end" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>H</tspan></text><line x1="355" y1="12" x2="355" y2="84" stroke="#888" stroke-width="1" stroke-dasharray="4,3"/><text x="355" y="96" font-size="10" text-anchor="middle" fill="#888" font-family="IPAPGothic,IPAGothic,sans-serif"><tspan font-family="IPAPGothic,IPAGothic,sans-serif">鏡</tspan></text><text x="355" y="112" font-size="10" text-anchor="middle" fill="#222" font-family="IPAPGothic,IPAGothic,sans-serif"><tspan font-family="IPAPGothic,IPAGothic,sans-serif">乳酸の鏡像異性体（くさび：手前、破線：奥）</tspan></text></svg>
+<div class="box ex">
+分子式 $\mathrm{C_4H_8}$ で表される化合物をすべて答えよ。シス-トランス異性体は区別して数えよ。
+<div class="solx"><b>解</b>　アルカン $\mathrm{C_4H_{10}}$ より H が2個少ないので、C=C を1つもつアルケンか、環を1つもつシクロアルカン。<br>
+アルケン：$\mathrm{CH_2{=}CH{-}CH_2{-}CH_3}$（1-ブテン）、$\mathrm{CH_3{-}CH{=}CH{-}CH_3}$（2-ブテン：<b>シス形とトランス形</b>）、$\mathrm{CH_2{=}C(CH_3)_2}$（2-メチルプロペン）<br>
+シクロアルカン：シクロブタン（4員環）、メチルシクロプロパン（3員環に $\mathrm{CH_3}$）　　合計 <b>6 種類</b>（1-ブテン・2-メチルプロペンは C=C の一方の炭素に同じ原子団が2つつくので、シス-トランス異性体はない）</div>
+</div>
+<h3>講義3　アルコール・エーテル・アルデヒド・ケトン</h3>
+<div class="box lect" style="page-break-inside:auto">
+<b>アルコール</b> R−OH：−OH が結合した炭素につく炭化水素基の数で<b>第一級・第二級・第三級</b>に分ける。水素結合のため、分子量が同程度の炭化水素やエーテルより沸点が高い。水溶液は中性。<br>
+・Na と反応して $\mathrm{H_2}$ を発生：$\mathrm{2C_2H_5OH+2Na \to 2C_2H_5ONa+H_2}$（ナトリウムエトキシド）<br>
+・濃硫酸と加熱すると脱水：130〜140 ℃ では分子間脱水でジエチルエーテル（$\mathrm{2C_2H_5OH \to C_2H_5OC_2H_5+H_2O}$）、160〜170 ℃ では分子内脱水でエチレン（$\mathrm{C_2H_5OH \to CH_2{=}CH_2+H_2O}$）。<br>
+・酸化（二クロム酸カリウムの硫酸酸性溶液など）：第一級 $\mathrm{R{-}CH_2OH}$ → アルデヒド $\mathrm{R{-}CHO}$ → カルボン酸 $\mathrm{R{-}COOH}$。第二級 $\mathrm{R{-}CH(OH){-}R'}$ → ケトン $\mathrm{R{-}CO{-}R'}$。第三級は酸化されにくい。<br>
+<b>エーテル</b> R−O−R'：アルコールの構造異性体だが Na と反応しない。ジエチルエーテルは沸点が低く（約 34 ℃）引火しやすい。<br>
+<b>アルデヒド</b>：還元性をもつ（自身は酸化されてカルボン酸になる）。アンモニア性硝酸銀水溶液と温めると銀が析出し（<b>銀鏡反応</b>）、フェーリング液と加熱すると赤色の $\mathrm{Cu_2O}$ が沈殿する。例：ホルムアルデヒド HCHO（水溶液がホルマリン）、アセトアルデヒド $\mathrm{CH_3CHO}$。<br>
+<b>ケトン</b>：還元性はない。アセトン $\mathrm{CH_3COCH_3}$ は 2-プロパノールの酸化や酢酸カルシウムの乾留で得られる。<br>
+<b>ヨードホルム反応</b>：$\mathrm{CH_3CO{-}R}$ または $\mathrm{CH_3CH(OH){-}R}$（R は H または炭化水素基）の構造をもつ化合物に、ヨウ素と NaOH 水溶液を加えて温めると、特有のにおいをもつ黄色のヨードホルム $\mathrm{CHI_3}$ が沈殿する。
+</div>
+<div class="box ex">
+分子式 $\mathrm{C_4H_{10}O}$ のアルコール4種類について答えよ。(1) 示性式と級を示せ。(2) 酸化されにくいものはどれか。(3) 酸化するとケトンを生じるものと、そのケトンの示性式。(4) ヨードホルム反応を示すもの。(5) 不斉炭素原子をもつもの。
+<div class="solx"><b>解</b>　(1) $\mathrm{CH_3CH_2CH_2CH_2OH}$（1-ブタノール、第一級）、$\mathrm{CH_3CH_2CH(OH)CH_3}$（2-ブタノール、第二級）、$\mathrm{(CH_3)_2CHCH_2OH}$（2-メチル-1-プロパノール、第一級）、$\mathrm{(CH_3)_3COH}$（2-メチル-2-プロパノール、第三級）<br>
+(2) <b>2-メチル-2-プロパノール</b>（第三級）　(3) <b>2-ブタノール</b> → $\boldsymbol{\mathrm{CH_3COCH_2CH_3}}$（2-ブタノン）<br>
+(4) $\mathrm{CH_3CH(OH){-}}$ をもつ <b>2-ブタノール</b>　(5) <b>2-ブタノール</b>（C2 に H、OH、$\mathrm{CH_3}$、$\mathrm{C_2H_5}$ が結合）</div>
+</div>
+<h3>講義4　カルボン酸・エステル・油脂とセッケン</h3>
+<div class="box lect" style="page-break-inside:auto">
+<b>カルボン酸</b> R−COOH：水溶液は弱酸性だが炭酸より強く、$\mathrm{NaHCO_3}$ と反応して $\mathrm{CO_2}$ を発生する（$\mathrm{CH_3COOH+NaHCO_3 \to CH_3COONa+H_2O+CO_2}$）。ギ酸 HCOOH はホルミル基をもつので還元性がある。酢酸2分子から水がとれると無水酢酸 $\mathrm{(CH_3CO)_2O}$。マレイン酸（シス形）とフマル酸（トランス形）では、マレイン酸だけが加熱で分子内脱水して無水マレイン酸になる。<br>
+<b>エステル</b>：カルボン酸とアルコールを濃硫酸（触媒）とともに加熱すると脱水縮合してエステルができる（<b>エステル化</b>）。
+$\mathrm{CH_3COOH+C_2H_5OH \rightleftarrows CH_3COOC_2H_5+H_2O}$（酢酸エチル、芳香をもつ）。酸を触媒に水と加熱すると<b>加水分解</b>、塩基による加水分解を<b>けん化</b>という（$\mathrm{CH_3COOC_2H_5+NaOH \to CH_3COONa+C_2H_5OH}$）。<br>
+<b>油脂</b>：グリセリン $\mathrm{C_3H_5(OH)_3}$ と高級脂肪酸3分子のエステル。飽和脂肪酸（パルミチン酸 $\mathrm{C_{15}H_{31}COOH}$、ステアリン酸 $\mathrm{C_{17}H_{35}COOH}$）が多いと常温で固体（脂肪）、不飽和脂肪酸（オレイン酸 $\mathrm{C_{17}H_{33}COOH}$、リノール酸 $\mathrm{C_{17}H_{31}COOH}$）が多いと液体（脂肪油）。脂肪油に Ni を触媒として $\mathrm{H_2}$ を付加すると固体の<b>硬化油</b>になる。<br>
+・<b>けん化価</b>：油脂 1 g をけん化するのに必要な KOH の mg 数（油脂 1 mol に KOH 3 mol）。分子量が小さい油脂ほど大きい。<br>
+・<b>ヨウ素価</b>：油脂 100 g に付加する $\mathrm{I_2}$ の g 数。C=C が多いほど大きい。<br>
+<b>セッケン</b>：油脂を NaOH でけん化して得られる高級脂肪酸のナトリウム塩 RCOONa。疎水性の炭化水素基と親水性の $\mathrm{-COO^-}$ をもち、水中で疎水基を内側にした<b>ミセル</b>をつくり、油汚れを取り囲んで水中に分散させる（<b>乳化作用</b>）。水溶液は弱塩基性で、硬水中では $\mathrm{Ca^{2+}}$・$\mathrm{Mg^{2+}}$ と水に溶けにくい塩をつくる。合成洗剤（アルキルベンゼンスルホン酸ナトリウムなど）は水溶液が中性で、硬水中でも使える。
+</div>
+<div class="box ex">
+オレイン酸 $\mathrm{C_{17}H_{33}COOH}$ だけからなる油脂（分子量 884）について答えよ（KOH = 56、$\mathrm{I_2}$ = 254）。<br>
+(1) この油脂 8.84 g を完全にけん化するのに必要な KOH は何 g か。(2) けん化価を求めよ。(3) ヨウ素価を求めよ。
+<div class="solx"><b>解</b>　(1) 油脂 $\dfrac{8.84}{884}=0.0100$ mol に KOH 0.0300 mol。$56\times0.0300=$ <b>1.68 g</b><br>
+(2) 油脂 1 g あたり $\dfrac{1}{884}\times3\times56\times10^3\ \mathrm{mg}=190$　よって <b>190</b><br>
+(3) オレイン酸は C=C を1つもつ（飽和なら $\mathrm{C_{17}H_{35}}$）ので、この油脂 1 分子に C=C は 3 つ。100 g に付加する $\mathrm{I_2}$ は $\dfrac{100}{884}\times3\times254=86.2$　よって <b>約 86</b></div>
+</div>
+<div class="box chk">
+(1) エタノールに濃硫酸を加えて 130〜140 ℃ に加熱したときの主生成物の名称と示性式を答えよ。<br>
+(2) アセチレンに水を付加させたとき、最終的に得られる化合物の名称と示性式を答えよ。<br>
+(3) メタノール、エタノール、アセトン、酢酸、2-プロパノールのうち、ヨードホルム反応を示すものをすべて選べ。<br>
+(4) プロペン、2-ブテン、$\mathrm{ClCH{=}CHCl}$、2-メチルプロペンのうち、シス-トランス異性体が存在するものをすべて選べ。<br>
+(5) セッケンの水溶液が弱塩基性を示す理由を述べよ。
+</div>
+<div class="box aim">
+・脂肪族の反応は、<b>エチレン・アセチレン・エタノールを中心にした反応の地図</b>として整理する（エチレン ⇄ エタノール → アセトアルデヒド → 酢酸 → 酢酸エチル、アセチレン → アセトアルデヒド・塩化ビニル・酢酸ビニル）。<br>
+・検出反応と、それでわかる構造：臭素水の脱色 → C=C・C≡C、Na で $\mathrm{H_2}$ → −OH（−COOH も）、$\mathrm{NaHCO_3}$ で $\mathrm{CO_2}$ → −COOH、銀鏡反応・フェーリング液 → −CHO（ギ酸も）、ヨードホルム反応 → $\mathrm{CH_3CO{-}}$・$\mathrm{CH_3CH(OH){-}}$。第14章の構造決定ですべて使う。
+</div>
+<h3 class="deep">講義5　付加と脱離の向き ― マルコフニコフ則とザイツェフ則</h3>
+<div class="box lect">
+非対称なアルケンへの付加やアルコールの脱水では生成物が2種類考えられ、どちらが主になるかに経験則がある。<br>
+<b>マルコフニコフ則</b>：HX や $\mathrm{H_2O}$ が非対称なアルケンに付加するとき、H 原子は<b>H 原子を多くもつほうの二重結合炭素</b>に結合しやすい。例えばプロペンに水を付加させると、主生成物は 2-プロパノール（$\mathrm{CH_2{=}CH{-}CH_3+H_2O \to CH_3{-}CH(OH){-}CH_3}$）で、1-プロパノールは少ない。<br>
+<b>ザイツェフ則</b>：アルコールの分子内脱水では、−OH が結合した炭素の隣の炭素のうち、<b>H 原子の少ないほうから H が取れ</b>、より多くの炭化水素基が結合した C=C ができやすい。例えば 2-ブタノールの脱水では、2-ブテン（シス形・トランス形）が主生成物で、1-ブテンは少ない。
+</div>
+<div class="box warn">
+・フェーリング液の還元で生じるのは赤色の $\mathrm{Cu_2O}$（Cu ではない）。銀鏡反応で析出するのは Ag。<br>
+・ギ酸はカルボン酸だが銀鏡反応を示す。アセトン（ケトン）は示さない。<br>
+・元素分析で塩化カルシウム管とソーダ石灰管の順を逆にしない。O の質量は差で求める。<br>
+・酢酸は $\mathrm{CH_3CO{-}}$ をもつがヨードホルム反応を示さない（R が −OH のため）。エタノールは $\mathrm{CH_3CH(OH){-}}$ をもつので示す。
+</div>
+<div class="box ans">
+(1) ジエチルエーテル、$\mathrm{C_2H_5OC_2H_5}$　(2) アセトアルデヒド、$\mathrm{CH_3CHO}$（不安定なビニルアルコール $\mathrm{CH_2{=}CHOH}$ を経て生じる）　(3) エタノール、アセトン、2-プロパノール　(4) 2-ブテン、$\mathrm{ClCH{=}CHCl}$　(5) 弱酸（高級脂肪酸）と強塩基（NaOH）からなる塩で、$\mathrm{RCOO^-}$ の一部が加水分解して $\mathrm{OH^-}$ を生じるため（$\mathrm{RCOO^-+H_2O \rightleftarrows RCOOH+OH^-}$）
+</div>
+<!--CH 13-->
+<div class="box point">
+・ベンゼン $\mathrm{C_6H_6}$ は正六角形の平面分子で、C−C 結合はすべて同じ長さ。付加反応より<b>置換反応</b>（ハロゲン化・ニトロ化・スルホン化）を起こしやすい<br>
+・<b>フェノール類</b>（ベンゼン環に −OH が直接結合）：炭酸より弱い酸。塩化鉄(III) 水溶液で青紫〜赤紫色に呈色。臭素水で 2,4,6-トリブロモフェノールの白色沈殿<br>
+・<b>アニリン</b>：ニトロベンゼンをスズと塩酸で還元してつくる弱塩基。ジアゾ化（5 ℃以下）→ カップリングでアゾ化合物（染料）<br>
+・酸の強さ：塩酸・スルホン酸 ＞ カルボン酸 ＞ 炭酸 ＞ フェノール。これを使って<b>抽出</b>で分離する
+</div>
+<h3>講義1　ベンゼンの構造と反応</h3>
+<div class="box lect" style="page-break-inside:avoid">
+ベンゼンの C−C 結合の長さはすべて等しく、単結合と二重結合の中間（約 0.14 nm）。電子が環全体に広がって安定化しているので、付加反応は起こりにくく、<b>H 原子が他の原子団と置き換わる置換反応</b>が起こりやすい。<br>
+<b>置換反応</b><br>
+・ハロゲン化：鉄（または塩化鉄(III)）を触媒に $\mathrm{Cl_2}$ → クロロベンゼン（$\mathrm{C_6H_6+Cl_2 \to C_6H_5Cl+HCl}$）<br>
+・ニトロ化：濃硝酸と濃硫酸の混合物（混酸）と約 60 ℃ で → ニトロベンゼン（淡黄色の油状液体で水より重い）<br>
+・スルホン化：濃硫酸と加熱 → ベンゼンスルホン酸（強酸）<br>
+<div class="two"><div style="flex:1.8"><b>付加反応</b>：Ni 触媒・高温・高圧で $\mathrm{H_2}$ → シクロヘキサン、紫外線を当てて $\mathrm{Cl_2}$ → $\mathrm{C_6H_6Cl_6}$。<br>
+<b>側鎖の酸化</b>：トルエンを過マンガン酸カリウムで酸化すると安息香酸 $\mathrm{C_6H_5COOH}$（環に直接結合した炭素が −COOH になる）。<br>
+<b>二置換体</b>：置換基の位置により o-（オルト）・m-（メタ）・p-（パラ）の3種類の異性体がある（右図）。</div><div style="flex:1"><svg class="fig" width="240" height="120" viewBox="0 0 240 120"><line x1="32.0" y1="26.0" x2="45.9" y2="34.0" stroke="#222" stroke-width="1.3"/><line x1="32.1" y1="30.9" x2="41.5" y2="36.4" stroke="#222" stroke-width="1.3"/><line x1="45.9" y1="34.0" x2="45.9" y2="50.0" stroke="#222" stroke-width="1.3"/><line x1="45.9" y1="50.0" x2="32.0" y2="58.0" stroke="#222" stroke-width="1.3"/><line x1="41.5" y1="47.6" x2="32.1" y2="53.1" stroke="#222" stroke-width="1.3"/><line x1="32.0" y1="58.0" x2="18.1" y2="50.0" stroke="#222" stroke-width="1.3"/><line x1="18.1" y1="50.0" x2="18.1" y2="34.0" stroke="#222" stroke-width="1.3"/><line x1="22.3" y1="47.4" x2="22.3" y2="36.6" stroke="#222" stroke-width="1.3"/><line x1="18.1" y1="34.0" x2="32.0" y2="26.0" stroke="#222" stroke-width="1.3"/><line x1="32.0" y1="26.0" x2="32.0" y2="15.0" stroke="#222" stroke-width="1.3"/><text x="32.0" y="11.0" font-size="11" text-anchor="middle" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>Cl</tspan></text><line x1="45.9" y1="34.0" x2="55.4" y2="28.5" stroke="#222" stroke-width="1.3"/><text x="57.4" y="32.5" font-size="11" text-anchor="start" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>Cl</tspan></text><text x="32" y="96" font-size="11" text-anchor="middle" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>o-</tspan></text><line x1="112.0" y1="26.0" x2="125.9" y2="34.0" stroke="#222" stroke-width="1.3"/><line x1="112.1" y1="30.9" x2="121.5" y2="36.4" stroke="#222" stroke-width="1.3"/><line x1="125.9" y1="34.0" x2="125.9" y2="50.0" stroke="#222" stroke-width="1.3"/><line x1="125.9" y1="50.0" x2="112.0" y2="58.0" stroke="#222" stroke-width="1.3"/><line x1="121.5" y1="47.6" x2="112.1" y2="53.1" stroke="#222" stroke-width="1.3"/><line x1="112.0" y1="58.0" x2="98.1" y2="50.0" stroke="#222" stroke-width="1.3"/><line x1="98.1" y1="50.0" x2="98.1" y2="34.0" stroke="#222" stroke-width="1.3"/><line x1="102.3" y1="47.4" x2="102.3" y2="36.6" stroke="#222" stroke-width="1.3"/><line x1="98.1" y1="34.0" x2="112.0" y2="26.0" stroke="#222" stroke-width="1.3"/><line x1="112.0" y1="26.0" x2="112.0" y2="15.0" stroke="#222" stroke-width="1.3"/><text x="112.0" y="11.0" font-size="11" text-anchor="middle" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>Cl</tspan></text><line x1="125.9" y1="50.0" x2="135.4" y2="55.5" stroke="#222" stroke-width="1.3"/><text x="137.4" y="59.5" font-size="11" text-anchor="start" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>Cl</tspan></text><text x="112" y="96" font-size="11" text-anchor="middle" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>m-</tspan></text><line x1="192.0" y1="26.0" x2="205.9" y2="34.0" stroke="#222" stroke-width="1.3"/><line x1="192.1" y1="30.9" x2="201.5" y2="36.4" stroke="#222" stroke-width="1.3"/><line x1="205.9" y1="34.0" x2="205.9" y2="50.0" stroke="#222" stroke-width="1.3"/><line x1="205.9" y1="50.0" x2="192.0" y2="58.0" stroke="#222" stroke-width="1.3"/><line x1="201.5" y1="47.6" x2="192.1" y2="53.1" stroke="#222" stroke-width="1.3"/><line x1="192.0" y1="58.0" x2="178.1" y2="50.0" stroke="#222" stroke-width="1.3"/><line x1="178.1" y1="50.0" x2="178.1" y2="34.0" stroke="#222" stroke-width="1.3"/><line x1="182.3" y1="47.4" x2="182.3" y2="36.6" stroke="#222" stroke-width="1.3"/><line x1="178.1" y1="34.0" x2="192.0" y2="26.0" stroke="#222" stroke-width="1.3"/><line x1="192.0" y1="26.0" x2="192.0" y2="15.0" stroke="#222" stroke-width="1.3"/><text x="192.0" y="11.0" font-size="11" text-anchor="middle" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>Cl</tspan></text><line x1="192.0" y1="58.0" x2="192.0" y2="69.0" stroke="#222" stroke-width="1.3"/><text x="192.0" y="81.0" font-size="11" text-anchor="middle" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>Cl</tspan></text><text x="192" y="96" font-size="11" text-anchor="middle" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>p-</tspan></text><text x="120" y="114" font-size="10" text-anchor="middle" fill="#222" font-family="IPAPGothic,IPAGothic,sans-serif"><tspan font-family="IPAPGothic,IPAGothic,sans-serif">ジクロロベンゼン</tspan><tspan> C</tspan><tspan dy="2.8" font-size="7.2">6</tspan><tspan dy="-2.8">H</tspan><tspan dy="2.8" font-size="7.2">4</tspan><tspan dy="-2.8">Cl</tspan><tspan dy="2.8" font-size="7.2">2</tspan><tspan dy="-2.8"> </tspan><tspan font-family="IPAPGothic,IPAGothic,sans-serif">の異性体</tspan></text></svg></div></div>
+</div>
+<div class="box ex">
+ベンゼンから (1) ニトロベンゼン、(2) ベンゼンスルホン酸、(3) クロロベンゼンをつくるときの試薬・条件と化学反応式を書け。
+<div class="solx"><b>解</b>　(1) 濃硝酸と濃硫酸（混酸）、約 60 ℃：$\boldsymbol{\mathrm{C_6H_6+HNO_3 \to C_6H_5NO_2+H_2O}}$<br>
+(2) 濃硫酸、加熱：$\boldsymbol{\mathrm{C_6H_6+H_2SO_4 \to C_6H_5SO_3H+H_2O}}$<br>
+(3) 鉄粉または塩化鉄(III)（触媒）、塩素：$\boldsymbol{\mathrm{C_6H_6+Cl_2 \to C_6H_5Cl+HCl}}$　（いずれも置換反応）</div>
+</div>
+<h3>講義2　フェノール類と芳香族カルボン酸</h3>
+<div class="box lect" style="page-break-inside:auto">
+<b>フェノール類</b>：ベンゼン環に −OH が直接結合した化合物（フェノール $\mathrm{C_6H_5OH}$、クレゾール $\mathrm{C_6H_4(CH_3)OH}$ など）。ベンジルアルコール $\mathrm{C_6H_5CH_2OH}$ は −OH が側鎖にあるのでアルコールである。<br>
+・弱酸性（炭酸より弱い）。NaOH とは中和してナトリウムフェノキシドになる（$\mathrm{C_6H_5OH+NaOH \to C_6H_5ONa+H_2O}$）が、$\mathrm{NaHCO_3}$ とは反応しない。ナトリウムフェノキシドの水溶液に $\mathrm{CO_2}$ を通じるとフェノールが遊離する（$\mathrm{C_6H_5ONa+CO_2+H_2O \to C_6H_5OH+NaHCO_3}$）。塩化鉄(III) 水溶液で青紫〜赤紫色（検出）。<br>
+・−OH のためベンゼンより置換反応が起こりやすく、臭素水を加えると 2,4,6-トリブロモフェノールの白色沈殿を生じる（$\mathrm{C_6H_5OH+3Br_2 \to C_6H_2Br_3OH+3HBr}$）。<br>
+<b>フェノールの製法</b>：①<b>クメン法</b>（工業的）：ベンゼンとプロペンからクメン $\mathrm{C_6H_5CH(CH_3)_2}$ をつくり、酸素で酸化してクメンヒドロペルオキシドとし、希硫酸で分解するとフェノールとアセトン。②ベンゼンスルホン酸ナトリウムのアルカリ融解（NaOH と融解）、③クロロベンゼンと NaOH 水溶液を高温・高圧で反応、で得たナトリウムフェノキシドに酸を加える。<br>
+<b>芳香族カルボン酸</b>：安息香酸 $\mathrm{C_6H_5COOH}$（トルエンの酸化）。フタル酸 $\mathrm{C_6H_4(COOH)_2}$（o-キシレンの酸化）は加熱すると分子内で脱水して無水フタル酸になる。p-キシレンを酸化して得られるテレフタル酸（p-体）は PET の原料（第16章）。<br>
+<b>サリチル酸</b> $\mathrm{C_6H_4(OH)COOH}$：ナトリウムフェノキシドに高温・高圧で $\mathrm{CO_2}$ を反応させてサリチル酸ナトリウムとし、希硫酸を加えて得る。−OH と −COOH の両方の性質を示し、無水酢酸でアセチル化するとアセチルサリチル酸、メタノールと濃硫酸でエステル化するとサリチル酸メチルになる（下図）。
+</div>
+<svg class="fig" width="450" height="144" viewBox="0 0 450 144"><line x1="60.0" y1="36.0" x2="79.1" y2="47.0" stroke="#222" stroke-width="1.3"/><line x1="60.9" y1="41.4" x2="73.9" y2="48.9" stroke="#222" stroke-width="1.3"/><line x1="79.1" y1="47.0" x2="79.1" y2="69.0" stroke="#222" stroke-width="1.3"/><line x1="79.1" y1="69.0" x2="60.0" y2="80.0" stroke="#222" stroke-width="1.3"/><line x1="73.9" y1="67.1" x2="60.9" y2="74.6" stroke="#222" stroke-width="1.3"/><line x1="60.0" y1="80.0" x2="40.9" y2="69.0" stroke="#222" stroke-width="1.3"/><line x1="40.9" y1="69.0" x2="40.9" y2="47.0" stroke="#222" stroke-width="1.3"/><line x1="45.1" y1="65.5" x2="45.1" y2="50.5" stroke="#222" stroke-width="1.3"/><line x1="40.9" y1="47.0" x2="60.0" y2="36.0" stroke="#222" stroke-width="1.3"/><line x1="60.0" y1="36.0" x2="60.0" y2="20.0" stroke="#222" stroke-width="1.3"/><text x="60.0" y="16.0" font-size="11" text-anchor="middle" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>COOH</tspan></text><line x1="79.1" y1="47.0" x2="92.9" y2="39.0" stroke="#222" stroke-width="1.3"/><text x="94.9" y="43.0" font-size="11" text-anchor="start" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>OH</tspan></text><line x1="205.0" y1="36.0" x2="224.1" y2="47.0" stroke="#222" stroke-width="1.3"/><line x1="205.9" y1="41.4" x2="218.9" y2="48.9" stroke="#222" stroke-width="1.3"/><line x1="224.1" y1="47.0" x2="224.1" y2="69.0" stroke="#222" stroke-width="1.3"/><line x1="224.1" y1="69.0" x2="205.0" y2="80.0" stroke="#222" stroke-width="1.3"/><line x1="218.9" y1="67.1" x2="205.9" y2="74.6" stroke="#222" stroke-width="1.3"/><line x1="205.0" y1="80.0" x2="185.9" y2="69.0" stroke="#222" stroke-width="1.3"/><line x1="185.9" y1="69.0" x2="185.9" y2="47.0" stroke="#222" stroke-width="1.3"/><line x1="190.1" y1="65.5" x2="190.1" y2="50.5" stroke="#222" stroke-width="1.3"/><line x1="185.9" y1="47.0" x2="205.0" y2="36.0" stroke="#222" stroke-width="1.3"/><line x1="205.0" y1="36.0" x2="205.0" y2="20.0" stroke="#222" stroke-width="1.3"/><text x="205.0" y="16.0" font-size="11" text-anchor="middle" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>COOH</tspan></text><line x1="224.1" y1="47.0" x2="237.9" y2="39.0" stroke="#222" stroke-width="1.3"/><text x="239.9" y="43.0" font-size="11" text-anchor="start" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>OCOCH</tspan><tspan dy="3.1" font-size="7.9">3</tspan></text><line x1="370.0" y1="36.0" x2="389.1" y2="47.0" stroke="#222" stroke-width="1.3"/><line x1="370.9" y1="41.4" x2="383.9" y2="48.9" stroke="#222" stroke-width="1.3"/><line x1="389.1" y1="47.0" x2="389.1" y2="69.0" stroke="#222" stroke-width="1.3"/><line x1="389.1" y1="69.0" x2="370.0" y2="80.0" stroke="#222" stroke-width="1.3"/><line x1="383.9" y1="67.1" x2="370.9" y2="74.6" stroke="#222" stroke-width="1.3"/><line x1="370.0" y1="80.0" x2="350.9" y2="69.0" stroke="#222" stroke-width="1.3"/><line x1="350.9" y1="69.0" x2="350.9" y2="47.0" stroke="#222" stroke-width="1.3"/><line x1="355.1" y1="65.5" x2="355.1" y2="50.5" stroke="#222" stroke-width="1.3"/><line x1="350.9" y1="47.0" x2="370.0" y2="36.0" stroke="#222" stroke-width="1.3"/><line x1="370.0" y1="36.0" x2="370.0" y2="20.0" stroke="#222" stroke-width="1.3"/><text x="370.0" y="16.0" font-size="11" text-anchor="middle" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>COOCH</tspan><tspan dy="3.1" font-size="7.9">3</tspan></text><line x1="389.1" y1="47.0" x2="402.9" y2="39.0" stroke="#222" stroke-width="1.3"/><text x="404.9" y="43.0" font-size="11" text-anchor="start" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>OH</tspan></text><text x="60" y="120" font-size="10.5" text-anchor="middle" fill="#222" font-family="IPAPGothic,IPAGothic,sans-serif"><tspan font-family="IPAPGothic,IPAGothic,sans-serif">サリチル酸</tspan></text><text x="205" y="120" font-size="10.5" text-anchor="middle" fill="#222" font-family="IPAPGothic,IPAGothic,sans-serif"><tspan font-family="IPAPGothic,IPAGothic,sans-serif">アセチルサリチル酸</tspan></text><text x="370" y="120" font-size="10.5" text-anchor="middle" fill="#222" font-family="IPAPGothic,IPAGothic,sans-serif"><tspan font-family="IPAPGothic,IPAGothic,sans-serif">サリチル酸メチル</tspan></text><text x="205" y="136" font-size="9.5" text-anchor="middle" fill="#555" font-family="IPAPGothic,IPAGothic,sans-serif"><tspan font-family="IPAPGothic,IPAGothic,sans-serif">（解熱鎮痛剤・</tspan><tspan>FeCl</tspan><tspan dy="2.7" font-size="6.8">3</tspan><tspan dy="-2.7"> </tspan><tspan font-family="IPAPGothic,IPAGothic,sans-serif">で呈色しない）</tspan></text><text x="370" y="136" font-size="9.5" text-anchor="middle" fill="#555" font-family="IPAPGothic,IPAGothic,sans-serif"><tspan font-family="IPAPGothic,IPAGothic,sans-serif">（消炎鎮痛剤・</tspan><tspan>FeCl</tspan><tspan dy="2.7" font-size="6.8">3</tspan><tspan dy="-2.7"> </tspan><tspan font-family="IPAPGothic,IPAGothic,sans-serif">で呈色する）</tspan></text><line x1="110" y1="66" x2="144.0" y2="66.0" stroke="#6d2a86" stroke-width="1.2"/><polygon points="150,66 144.0,68.7 144.0,63.3" fill="#6d2a86"/><text x="130" y="60" font-size="9" text-anchor="middle" fill="#6d2a86" font-family="IPAPGothic,IPAGothic,sans-serif"><tspan font-family="IPAPGothic,IPAGothic,sans-serif">無水酢酸</tspan></text></svg>
+<div class="box ex">
+サリチル酸 13.8 g を無水酢酸と完全に反応させた（H = 1.0、C = 12、O = 16）。<br>
+(1) 化学反応式を書け。(2) 得られるアセチルサリチル酸は何 g か。(3) 生成物に未反応のサリチル酸が残っているかどうかを調べるには、何を用いればよいか。
+<div class="solx"><b>解</b>　(1) $\boldsymbol{\mathrm{C_6H_4(OH)COOH+(CH_3CO)_2O \to C_6H_4(OCOCH_3)COOH+CH_3COOH}}$（−OH のアセチル化）<br>
+(2) $\mathrm{C_7H_6O_3}=138$、$\mathrm{C_9H_8O_4}=180$。$\dfrac{13.8}{138}=0.100$ mol から $180\times0.100=$ <b>18.0 g</b><br>
+(3) <b>塩化鉄(III) 水溶液</b>。サリチル酸はフェノール性 −OH をもつので呈色するが、アセチルサリチル酸は −OH がエステルになっているので呈色しない。</div>
+</div>
+<h3>講義3　芳香族アミンとアゾ化合物</h3>
+<div class="box lect" style="page-break-inside:auto">
+<b>アニリン</b> $\mathrm{C_6H_5NH_2}$：ニトロベンゼンをスズ（または鉄）と濃塩酸で還元するとアニリン塩酸塩 $\mathrm{C_6H_5NH_3Cl}$ になり、NaOH 水溶液を加えるとアニリンが遊離する。<br>
+　$\mathrm{2C_6H_5NO_2+3Sn+14HCl \to 2C_6H_5NH_3Cl+3SnCl_4+4H_2O}$　　$\mathrm{C_6H_5NH_3Cl+NaOH \to C_6H_5NH_2+NaCl+H_2O}$<br>
+・無色の油状液体（空気中で酸化されて褐色になる）。弱塩基で、塩酸には塩となって溶ける。さらし粉水溶液で赤紫色（検出）、二クロム酸カリウムで酸化すると黒色のアニリンブラック。無水酢酸でアセチル化するとアセトアニリド $\mathrm{C_6H_5NHCOCH_3}$（アミド結合 −NH−CO−）。<br>
+<b>ジアゾ化</b>：アニリンの希塩酸溶液を氷で冷やしながら（5 ℃以下）亜硝酸ナトリウム水溶液を加えると、塩化ベンゼンジアゾニウムが生じる。<br>
+　$\mathrm{C_6H_5NH_2+NaNO_2+2HCl \to C_6H_5N_2Cl+NaCl+2H_2O}$<br>
+塩化ベンゼンジアゾニウムは不安定で、温度が上がると分解してフェノールと窒素になる（$\mathrm{C_6H_5N_2Cl+H_2O \to C_6H_5OH+N_2+HCl}$）ので、低温に保つ。<br>
+<b>カップリング</b>：塩化ベンゼンジアゾニウムの水溶液にナトリウムフェノキシドの水溶液を加えると、橙赤色の p-ヒドロキシアゾベンゼン（p-フェニルアゾフェノール）が生じる。<br>
+　$\mathrm{C_6H_5N_2Cl+C_6H_5ONa \to C_6H_5{-}N{=}N{-}C_6H_4{-}OH+NaCl}$<br>
+−N=N− を<b>アゾ基</b>といい、アゾ基をもつ化合物（アゾ化合物）は黄〜赤色のものが多く、染料や指示薬（メチルオレンジなど）に使われる。
+</div>
+<div class="box ex">
+次の経路で p-ヒドロキシアゾベンゼンを合成した。ベンゼン →(a)→ A →(b)→ アニリン塩酸塩 →(c)→ アニリン →(d)→ B →(e)→ p-ヒドロキシアゾベンゼン<br>
+(1) A、B の名称と示性式を答えよ。(2) (a)〜(c) の試薬を答えよ。(3) (d) の試薬と温度条件を答え、その温度にする理由を述べよ。(4) (e) で加える化合物を答えよ。
+<div class="solx"><b>解</b>　(1) A：<b>ニトロベンゼン $\mathrm{C_6H_5NO_2}$</b>　B：<b>塩化ベンゼンジアゾニウム $\mathrm{C_6H_5N_2Cl}$</b><br>
+(2) (a) 濃硝酸と濃硫酸　(b) スズと濃塩酸　(c) 水酸化ナトリウム水溶液<br>
+(3) 亜硝酸ナトリウムと塩酸、<b>5 ℃以下（氷冷）</b>。温度が高いと B が分解してフェノールと窒素になってしまうため。<br>
+(4) <b>ナトリウムフェノキシド $\mathrm{C_6H_5ONa}$</b>（の水溶液）</div>
+</div>
+<h3>講義4　有機化合物の分離（抽出）</h3>
+<div class="box lect">
+多くの有機化合物はエーテルに溶け、水に溶けにくいが、酸性・塩基性の化合物は<b>塩にすると水に溶ける</b>。エーテル溶液に酸や塩基の水溶液を加えて分液漏斗でふり混ぜると、塩になった化合物だけが水層に移る（<b>抽出</b>。エーテル層は上層）。判断の原則は「<b>弱い酸の塩 ＋ 強い酸 → 強い酸の塩 ＋ 弱い酸</b>」。<br>
+・塩酸を加える → 塩基のアニリンが $\mathrm{C_6H_5NH_3Cl}$ となって水層へ。<br>
+・$\mathrm{NaHCO_3}$ 水溶液を加える → 炭酸より強い酸（カルボン酸）だけが塩となって水層へ（$\mathrm{CO_2}$ が発生）。フェノールはエーテル層に残る。<br>
+・NaOH 水溶液を加える → フェノール類もナトリウムフェノキシドとなって水層へ。<br>
+・最後までエーテル層に残るのは中性の化合物（トルエン、ニトロベンゼンなど）。<br>
+水層に移した塩は、逆の操作（酸の塩には塩酸、アニリン塩酸塩には NaOH 水溶液）で元の化合物に戻してから、エーテルで抽出して取り出す。
+</div>
+<svg class="fig" width="470" height="200" viewBox="0 0 470 200"><rect x="4" y="4" width="462" height="24" rx="4" fill="#f3ecf8" stroke="#6d2a86" stroke-width="1.2"/><text x="235.0" y="20.5" font-size="11" text-anchor="middle" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-family="IPAPGothic,IPAGothic,sans-serif">エーテル溶液：アニリン・安息香酸・フェノール・ニトロベンゼン</tspan></text><line x1="26" y1="28" x2="26" y2="60" stroke="#222" stroke-width="1.2"/><text x="34" y="52" font-size="10.5" text-anchor="start" fill="#6d2a86" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>① </tspan><tspan font-family="IPAPGothic,IPAGothic,sans-serif">希塩酸を加えてふり混ぜる</tspan></text><line x1="26" y1="60" x2="324.0" y2="60.0" stroke="#222" stroke-width="1.1"/><polygon points="330,60 324.0,62.7 324.0,57.3" fill="#222"/><text x="304" y="56" font-size="9.5" text-anchor="middle" fill="#555" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-family="IPAPGothic,IPAGothic,sans-serif">水層</tspan><tspan> A</tspan></text><rect x="330" y="48" width="136" height="24" rx="4" fill="#fff" stroke="#222" stroke-width="1"/><text x="398.0" y="64.5" font-size="10.5" text-anchor="middle" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>C</tspan><tspan dy="2.9" font-size="7.6">6</tspan><tspan dy="-2.9">H</tspan><tspan dy="2.9" font-size="7.6">5</tspan><tspan dy="-2.9">NH</tspan><tspan dy="2.9" font-size="7.6">3</tspan><tspan dy="-2.9">Cl</tspan></text><line x1="26" y1="60" x2="26" y2="100" stroke="#222" stroke-width="1.2"/><text x="34" y="73" font-size="9.5" text-anchor="start" fill="#555" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-family="IPAPGothic,IPAGothic,sans-serif">エーテル層</tspan></text><text x="34" y="92" font-size="10.5" text-anchor="start" fill="#6d2a86" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>② NaHCO</tspan><tspan dy="2.9" font-size="7.6">3</tspan><tspan dy="-2.9"> </tspan><tspan font-family="IPAPGothic,IPAGothic,sans-serif">水溶液（</tspan><tspan>CO</tspan><tspan dy="2.9" font-size="7.6">2</tspan><tspan dy="-2.9"> </tspan><tspan font-family="IPAPGothic,IPAGothic,sans-serif">発生）</tspan></text><line x1="26" y1="100" x2="324.0" y2="100.0" stroke="#222" stroke-width="1.1"/><polygon points="330,100 324.0,102.7 324.0,97.3" fill="#222"/><text x="304" y="96" font-size="9.5" text-anchor="middle" fill="#555" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-family="IPAPGothic,IPAGothic,sans-serif">水層</tspan><tspan> B</tspan></text><rect x="330" y="88" width="136" height="24" rx="4" fill="#fff" stroke="#222" stroke-width="1"/><text x="398.0" y="104.5" font-size="10.5" text-anchor="middle" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>C</tspan><tspan dy="2.9" font-size="7.6">6</tspan><tspan dy="-2.9">H</tspan><tspan dy="2.9" font-size="7.6">5</tspan><tspan dy="-2.9">COONa</tspan></text><line x1="26" y1="100" x2="26" y2="140" stroke="#222" stroke-width="1.2"/><text x="34" y="113" font-size="9.5" text-anchor="start" fill="#555" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-family="IPAPGothic,IPAGothic,sans-serif">エーテル層</tspan></text><text x="34" y="132" font-size="10.5" text-anchor="start" fill="#6d2a86" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>③ NaOH </tspan><tspan font-family="IPAPGothic,IPAGothic,sans-serif">水溶液</tspan></text><line x1="26" y1="140" x2="324.0" y2="140.0" stroke="#222" stroke-width="1.1"/><polygon points="330,140 324.0,142.7 324.0,137.3" fill="#222"/><text x="304" y="136" font-size="9.5" text-anchor="middle" fill="#555" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-family="IPAPGothic,IPAGothic,sans-serif">水層</tspan><tspan> C</tspan></text><rect x="330" y="128" width="136" height="24" rx="4" fill="#fff" stroke="#222" stroke-width="1"/><text x="398.0" y="144.5" font-size="10.5" text-anchor="middle" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>C</tspan><tspan dy="2.9" font-size="7.6">6</tspan><tspan dy="-2.9">H</tspan><tspan dy="2.9" font-size="7.6">5</tspan><tspan dy="-2.9">ONa</tspan></text><line x1="26" y1="140" x2="26.0" y2="163.0" stroke="#222" stroke-width="1.2"/><polygon points="26,169 23.3,163.0 28.7,163.0" fill="#222"/><text x="34" y="158" font-size="9.5" text-anchor="start" fill="#555" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-family="IPAPGothic,IPAGothic,sans-serif">エーテル層</tspan></text><rect x="4" y="170" width="462" height="24" rx="4" fill="#fff" stroke="#222" stroke-width="1"/><text x="235.0" y="186.5" font-size="10.5" text-anchor="middle" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-family="IPAPGothic,IPAGothic,sans-serif">エーテル層</tspan><tspan> D</tspan><tspan font-family="IPAPGothic,IPAGothic,sans-serif">：ニトロベンゼン</tspan><tspan> C</tspan><tspan dy="2.9" font-size="7.6">6</tspan><tspan dy="-2.9">H</tspan><tspan dy="2.9" font-size="7.6">5</tspan><tspan dy="-2.9">NO</tspan><tspan dy="2.9" font-size="7.6">2</tspan><tspan dy="-2.9" font-family="IPAPGothic,IPAGothic,sans-serif">（中性）</tspan></text></svg>
+<div class="box ex">
+アニリン、安息香酸、フェノール、ニトロベンゼンを含むエーテル溶液を、上の図の操作で分離した。<br>
+(1) 水層 A〜C とエーテル層 D に含まれる化合物の名称を答えよ。(2) 操作②と③の順序を逆にすると、どのような不都合が生じるか。
+<div class="solx"><b>解</b>　(1) A：<b>アニリン塩酸塩</b>　B：<b>安息香酸ナトリウム</b>　C：<b>ナトリウムフェノキシド</b>　D：<b>ニトロベンゼン</b><br>
+(2) 先に NaOH 水溶液を加えると、安息香酸とフェノールがどちらも塩になって同じ水層に移り、両者を分離できない。</div>
+</div>
+<div class="box chk">
+(1) フェノール、ベンジルアルコール、o-クレゾール、サリチル酸、アセチルサリチル酸のうち、塩化鉄(III) 水溶液で呈色するものをすべて選べ。<br>
+(2) トルエンを過マンガン酸カリウムで酸化して得られる化合物の名称と示性式を答えよ。<br>
+(3) o-キシレンを酸化して得られる化合物と、それを加熱して得られる化合物の名称を答えよ。<br>
+(4) 安息香酸、炭酸、フェノール、ベンゼンスルホン酸を、酸として強い順に並べよ。
+</div>
+<div class="box aim">
+・芳香族は「<b>ベンゼンからの反応系統図</b>」を自分で書けるかが勝負。ベンゼン → ニトロベンゼン → アニリン → 塩化ベンゼンジアゾニウム → アゾ化合物／ベンゼン → ベンゼンスルホン酸 →（アルカリ融解）→ ナトリウムフェノキシド → フェノール・サリチル酸 → アセチルサリチル酸・サリチル酸メチル／ベンゼン → クメン → フェノール ＋ アセトン。<br>
+・抽出では、試薬ごとに「どの化合物が塩になるか」を酸・塩基の強さで判断する。
+</div>
+<h3 class="deep">講義5　置換反応の配向性</h3>
+<div class="box lect">
+ベンゼン環にすでに置換基があると、2つ目の置換基が入る位置は、はじめの置換基の種類でおおよそ決まる。<br>
+・<b>オルト・パラ配向性</b>：−OH、$\mathrm{-NH_2}$、$\mathrm{-CH_3}$、−Cl など。例えばトルエンをニトロ化すると、おもに o-ニトロトルエンと p-ニトロトルエンが生じ、さらにニトロ化を進めると 2,4,6-トリニトロトルエン（TNT、爆薬）になる。フェノールの臭素化が 2,4,6-位で起こるのも同じ理由。<br>
+・<b>メタ配向性</b>：$\mathrm{-NO_2}$、−COOH、$\mathrm{-SO_3H}$、−CHO など。例えばニトロベンゼンをさらにニトロ化すると、おもに m-ジニトロベンゼンが生じる。<br>
+一般に、オルト・パラ配向性の基（ハロゲンを除く）は環の電子を豊富にして置換反応を<b>起こりやすく</b>し、メタ配向性の基は環の電子を引きつけて置換反応を<b>起こりにくく</b>する。
+</div>
+<div class="box warn">
+・フェノールは $\mathrm{NaHCO_3}$ と反応しない（炭酸より弱い酸）。カルボン酸との区別の決め手になる。<br>
+・ベンジルアルコール $\mathrm{C_6H_5CH_2OH}$ はフェノール類ではない（塩化鉄(III) で呈色せず、NaOH とも反応しない）。<br>
+・ニトロベンゼンをスズと塩酸で還元して直接得られるのはアニリン塩酸塩。NaOH 水溶液を加えてはじめてアニリンになる。
+</div>
+<div class="box ans">
+(1) フェノール、o-クレゾール、サリチル酸　(2) 安息香酸、$\mathrm{C_6H_5COOH}$　(3) フタル酸 → 無水フタル酸　(4) ベンゼンスルホン酸 ＞ 安息香酸 ＞ 炭酸 ＞ フェノール
+</div>
+<!--CH 14-->
+<div class="box point">
+・<b>分子式の決定</b>：元素分析 → 組成式。分子量（気体の状態方程式・凝固点降下・中和滴定など）→ 分子式 ＝（組成式）× 整数<br>
+・<b>不飽和度</b> $=\dfrac{2\times(\text{C の数})+2-(\text{H の数})}{2}$（O は無関係、ハロゲンは H と同じに数える）。C=C・C=O・環が1つにつき 1、C≡C は 2、ベンゼン環は 4<br>
+・<b>反応から部分構造</b>：Na → −OH、$\mathrm{NaHCO_3}$ → −COOH、塩化鉄(III) → フェノール性 −OH、銀鏡反応 → −CHO、ヨードホルム反応 → $\mathrm{CH_3CO{-}}$／$\mathrm{CH_3CH(OH){-}}$、臭素水の脱色 → 不飽和結合<br>
+・総合問題は「分子式 → 不飽和度 → 官能基 → 炭素骨格 → 立体異性体」の順に候補をしぼる
+</div>
+<h3>講義1　分子式の決定と不飽和度</h3>
+<div class="box lect">
+元素分析（第12章）で組成式を求めたら、分子量を求めて分子式を決める。分子量の求め方は次の3通りが代表的。<br>
+・揮発性の物質：気体の状態方程式 $PV=\dfrac{w}{M}RT$ より $M=\dfrac{wRT}{PV}$<br>
+・溶液：凝固点降下 $\Delta t=K_\mathrm{f}m$（$m$ は質量モル濃度）や浸透圧 $\Pi V=nRT$ から物質量を求める<br>
+・カルボン酸：中和滴定で物質量を求める（価数に注意）<br>
+分子式がわかったら<b>不飽和度</b>を計算する。飽和鎖式の化合物（$\mathrm{C_{\mathit{n}}H_{2\mathit{n}+2}O_{\mathit{x}}}$）に比べて H が2個少ないごとに、二重結合か環が1つある。<br>
+例：$\mathrm{C_4H_8O_2}$ は $\dfrac{10-8}{2}=1$ で、C=C・C=O・環のどれか1つ。$\mathrm{C_8H_{10}}$ は $\dfrac{18-10}{2}=4$ で、ベンゼン環1つだけと考えるのが自然（側鎖は飽和）。
+</div>
+<div class="box ex">
+C, H, O からなる中性の化合物 X 4.40 mg を完全燃焼させると、$\mathrm{CO_2}$ 8.80 mg と $\mathrm{H_2O}$ 3.60 mg が生じた。また、X を気化させると、127 ℃、$1.00\times10^5$ Pa で 2.20 g の蒸気の体積は 0.831 L であった。X の分子式と不飽和度を求めよ（$R=8.31\times10^3\ \mathrm{Pa\cdot L/(K\cdot mol)}$、H = 1.0、C = 12、O = 16）。
+<div class="solx"><b>解</b>　C：$8.80\times\dfrac{12}{44}=2.40$ mg　H：$3.60\times\dfrac{2.0}{18}=0.400$ mg　O：$4.40-2.40-0.400=1.60$ mg<br>
+$\mathrm{C:H:O}=(2.40\div12):(0.400\div1.0):(1.60\div16)=0.200:0.400:0.100=2:4:1$ → 組成式 $\mathrm{C_2H_4O}$（式量 44）<br>
+$M=\dfrac{wRT}{PV}=\dfrac{2.20\times8.31\times10^3\times400}{1.00\times10^5\times0.831}=88.0$ → $44\times2=88$ より分子式 $\boldsymbol{\mathrm{C_4H_8O_2}}$<br>
+不飽和度 $=(2\times4+2-8)\div2=\boldsymbol{1}$</div>
+</div>
+<h3>講義2　異性体の数え上げ</h3>
+<div class="box lect">
+もれなく・重複なく数えるには、<b>炭素骨格 → 官能基の位置</b>の順に考える。<br>
+① 不飽和度から、官能基の種類（アルコールかエーテルか、など）を決める。<br>
+② 炭素骨格（直鎖・枝分かれ）をすべて書き出す。<br>
+③ それぞれの骨格で、<b>対称性を考えて</b>官能基をつける位置を数える（左右対称な位置は1つと数える）。<br>
+④ 最後に、不斉炭素原子（鏡像異性体）や C=C（シス-トランス異性体）の有無を確認して立体異性体を加える。<br>
+よく使う数：$\mathrm{C_4H_9{-}}$（ブチル基）は4種類、$\mathrm{C_5H_{11}{-}}$ は8種類。芳香族では、$\mathrm{C_8H_{10}}$ はエチルベンゼンと o-・m-・p-キシレンの4種類、$\mathrm{C_7H_8O}$ はベンジルアルコール、メチルフェニルエーテル（アニソール）、o-・m-・p-クレゾールの5種類。<br>
+ベンゼン環の H 1個を Cl で置換した化合物の種類は分子の対称性で決まり、トルエン・m-キシレンは3種類、o-キシレンは2種類、p-キシレンは1種類。
+</div>
+<svg class="fig" width="440" height="100" viewBox="0 0 440 100"><line x1="20" y1="50" x2="46" y2="36" stroke="#222" stroke-width="1.6"/><line x1="46" y1="36" x2="72" y2="50" stroke="#222" stroke-width="1.6"/><line x1="72" y1="50" x2="98" y2="36" stroke="#222" stroke-width="1.6"/><line x1="98" y1="36" x2="124" y2="50" stroke="#222" stroke-width="1.6"/><circle cx="20" cy="50" r="4" fill="#222"/><circle cx="20" cy="65" r="7.5" fill="#fde3cf" stroke="#d9701e" stroke-width="1"/><text x="20" y="69" font-size="10" text-anchor="middle" fill="#a04d00" font-family="IPAPGothic,IPAGothic,sans-serif"><tspan>1</tspan></text><circle cx="46" cy="36" r="4" fill="#222"/><circle cx="46" cy="21" r="7.5" fill="#fde3cf" stroke="#d9701e" stroke-width="1"/><text x="46" y="25" font-size="10" text-anchor="middle" fill="#a04d00" font-family="IPAPGothic,IPAGothic,sans-serif"><tspan>2</tspan></text><circle cx="72" cy="50" r="4" fill="#222"/><circle cx="72" cy="65" r="7.5" fill="#fde3cf" stroke="#d9701e" stroke-width="1"/><text x="72" y="69" font-size="10" text-anchor="middle" fill="#a04d00" font-family="IPAPGothic,IPAGothic,sans-serif"><tspan>3</tspan></text><circle cx="98" cy="36" r="4" fill="#222"/><circle cx="124" cy="50" r="4" fill="#222"/><text x="72" y="92" font-size="10.5" text-anchor="middle" fill="#222" font-family="IPAPGothic,IPAGothic,sans-serif"><tspan font-family="IPAPGothic,IPAGothic,sans-serif">直鎖：</tspan><tspan>①</tspan><tspan font-family="IPAPGothic,IPAGothic,sans-serif">〜</tspan><tspan>③</tspan></text><line x1="168" y1="50" x2="194" y2="36" stroke="#222" stroke-width="1.6"/><line x1="194" y1="36" x2="220" y2="50" stroke="#222" stroke-width="1.6"/><line x1="220" y1="50" x2="246" y2="36" stroke="#222" stroke-width="1.6"/><line x1="194" y1="36" x2="194" y2="12" stroke="#222" stroke-width="1.6"/><circle cx="168" cy="50" r="4" fill="#222"/><circle cx="168" cy="65" r="7.5" fill="#fde3cf" stroke="#d9701e" stroke-width="1"/><text x="168" y="69" font-size="10" text-anchor="middle" fill="#a04d00" font-family="IPAPGothic,IPAGothic,sans-serif"><tspan>4</tspan></text><circle cx="194" cy="36" r="4" fill="#222"/><circle cx="209" cy="36" r="7.5" fill="#fde3cf" stroke="#d9701e" stroke-width="1"/><text x="209" y="40" font-size="10" text-anchor="middle" fill="#a04d00" font-family="IPAPGothic,IPAGothic,sans-serif"><tspan>5</tspan></text><circle cx="220" cy="50" r="4" fill="#222"/><circle cx="220" cy="65" r="7.5" fill="#fde3cf" stroke="#d9701e" stroke-width="1"/><text x="220" y="69" font-size="10" text-anchor="middle" fill="#a04d00" font-family="IPAPGothic,IPAGothic,sans-serif"><tspan>6</tspan></text><circle cx="246" cy="36" r="4" fill="#222"/><circle cx="246" cy="21" r="7.5" fill="#fde3cf" stroke="#d9701e" stroke-width="1"/><text x="246" y="25" font-size="10" text-anchor="middle" fill="#a04d00" font-family="IPAPGothic,IPAGothic,sans-serif"><tspan>7</tspan></text><circle cx="194" cy="12" r="4" fill="#222"/><text x="202" y="16" font-size="9" text-anchor="start" fill="#777" font-family="IPAPGothic,IPAGothic,sans-serif"><tspan>←④</tspan><tspan font-family="IPAPGothic,IPAGothic,sans-serif">と同じ</tspan></text><text x="220" y="92" font-size="10.5" text-anchor="middle" fill="#222" font-family="IPAPGothic,IPAGothic,sans-serif"><tspan font-family="IPAPGothic,IPAGothic,sans-serif">枝分かれ</tspan><tspan>1</tspan><tspan font-family="IPAPGothic,IPAGothic,sans-serif">つ：</tspan><tspan>④</tspan><tspan font-family="IPAPGothic,IPAGothic,sans-serif">〜</tspan><tspan>⑦</tspan></text><line x1="385" y1="42" x2="359" y2="42" stroke="#222" stroke-width="1.6"/><line x1="385" y1="42" x2="411" y2="42" stroke="#222" stroke-width="1.6"/><line x1="385" y1="42" x2="385" y2="18" stroke="#222" stroke-width="1.6"/><line x1="385" y1="42" x2="385" y2="66" stroke="#222" stroke-width="1.6"/><circle cx="385" cy="42" r="4" fill="#222"/><circle cx="359" cy="42" r="4" fill="#222"/><circle cx="359" cy="27" r="7.5" fill="#fde3cf" stroke="#d9701e" stroke-width="1"/><text x="359" y="31" font-size="10" text-anchor="middle" fill="#a04d00" font-family="IPAPGothic,IPAGothic,sans-serif"><tspan>8</tspan></text><circle cx="411" cy="42" r="4" fill="#222"/><circle cx="385" cy="18" r="4" fill="#222"/><circle cx="385" cy="66" r="4" fill="#222"/><text x="385" y="92" font-size="10.5" text-anchor="middle" fill="#222" font-family="IPAPGothic,IPAGothic,sans-serif"><tspan font-family="IPAPGothic,IPAGothic,sans-serif">枝分かれ</tspan><tspan>2</tspan><tspan font-family="IPAPGothic,IPAGothic,sans-serif">つ：</tspan><tspan>⑧</tspan></text></svg>
+<div class="box ex">
+分子式 $\mathrm{C_5H_{12}O}$ のアルコールについて答えよ。(1) 構造異性体はいくつあるか。(2) 第三級アルコールの示性式を書け。(3) 不斉炭素原子をもつものをすべて答えよ。(4) 鏡像異性体を区別すると全部で何種類か。
+<div class="solx"><b>解</b>　(1) 上の図のように、炭素骨格ごとに −OH の位置を数えると <b>8 種類</b>。<br>
+①$\mathrm{CH_3(CH_2)_4OH}$　②$\mathrm{CH_3CH(OH)CH_2CH_2CH_3}$　③$\mathrm{CH_3CH_2CH(OH)CH_2CH_3}$　④$\mathrm{HOCH_2CH(CH_3)CH_2CH_3}$<br>
+⑤$\mathrm{(CH_3)_2C(OH)CH_2CH_3}$　⑥$\mathrm{(CH_3)_2CHCH(OH)CH_3}$　⑦$\mathrm{(CH_3)_2CHCH_2CH_2OH}$　⑧$\mathrm{(CH_3)_3CCH_2OH}$<br>
+(2) ⑤ $\boldsymbol{\mathrm{(CH_3)_2C(OH)CH_2CH_3}}$（2-メチル-2-ブタノール）<br>
+(3) <b>②、④、⑥</b>（③は C3 に同じ $\mathrm{C_2H_5}$ が2つつくので不斉炭素ではない）<br>
+(4) 不斉炭素原子を1つもつ3種類はそれぞれ1対の鏡像異性体をもつので、$8+3=$ <b>11 種類</b></div>
+</div>
+<h3>講義3　反応から構造を推定する</h3>
+<div class="box lect" style="page-break-inside:auto">
+<table class="l w" style="font-size:9pt;background:#fff">
+<tr><th>実験・試薬</th><th>結果</th><th>わかること</th></tr>
+<tr><td>金属 Na</td><td>$\mathrm{H_2}$ 発生</td><td>−OH（アルコール・フェノール類）または −COOH</td></tr>
+<tr><td>$\mathrm{NaHCO_3}$ 水溶液</td><td>$\mathrm{CO_2}$ 発生</td><td>−COOH（炭酸より強い酸）</td></tr>
+<tr><td>塩化鉄(III) 水溶液</td><td>青紫〜赤紫色</td><td>フェノール性 −OH</td></tr>
+<tr><td>銀鏡反応・フェーリング液</td><td>Ag 析出・$\mathrm{Cu_2O}$ の赤色沈殿</td><td>−CHO（ギ酸・ギ酸エステルも陽性）</td></tr>
+<tr><td>ヨウ素 ＋ NaOH 水溶液</td><td>$\mathrm{CHI_3}$ の黄色沈殿</td><td>$\mathrm{CH_3CO{-}R}$ または $\mathrm{CH_3CH(OH){-}R}$（R は H か炭化水素基）</td></tr>
+<tr><td>臭素水</td><td>赤褐色が消える</td><td>C=C、C≡C</td></tr>
+<tr><td>二クロム酸カリウム（酸化）</td><td>アルデヒド／ケトン／変化なし</td><td>第一級／第二級／第三級アルコール</td></tr>
+<tr><td>加水分解（けん化後に酸性に）</td><td>カルボン酸とアルコール</td><td>エステル</td></tr>
+</table>
+エステルの問題では、加水分解して<b>酸 A とアルコール B に分け、それぞれの構造を決めてからつなぎ直す</b>。A と B の炭素数の和は元のエステルの炭素数に等しい。
+</div>
+<div class="box ex">
+例題（講義1）の X（$\mathrm{C_4H_8O_2}$）に $\mathrm{NaHCO_3}$ 水溶液を加えても気体は発生しなかった。X を NaOH 水溶液で加水分解したのち酸性にすると、カルボン酸 A とアルコール B が得られた。A は銀鏡反応を示した。B を二クロム酸カリウムで酸化するとケトン C が得られ、C はヨードホルム反応を示した。X、A、B、C の示性式を書け。
+<div class="solx"><b>解</b>　$\mathrm{NaHCO_3}$ と反応せず加水分解されるので X は<b>エステル</b>（不飽和度 1 は C=O）。$\mathrm{C_4H_8O_2}$ のエステルは $\mathrm{HCOOCH_2CH_2CH_3}$、$\mathrm{HCOOCH(CH_3)_2}$、$\mathrm{CH_3COOC_2H_5}$、$\mathrm{C_2H_5COOCH_3}$ の4種類。<br>
+A は銀鏡反応を示すカルボン酸なので<b>ギ酸</b>。よって B は炭素数 3 のアルコールで、酸化するとケトンになるので第二級の 2-プロパノール。<br>
+A：$\boldsymbol{\mathrm{HCOOH}}$　B：$\boldsymbol{\mathrm{CH_3CH(OH)CH_3}}$　C：$\boldsymbol{\mathrm{CH_3COCH_3}}$（アセトン。ヨードホルム反応陽性で条件に合う）　X：$\boldsymbol{\mathrm{HCOOCH(CH_3)_2}}$</div>
+</div>
+<h3>講義4　総合問題の解き方 ― 芳香族化合物の例</h3>
+<div class="box lect">
+芳香族の構造決定は、次の順に考えるとよい。<br>
+① 分子式と不飽和度：不飽和度 4 ならベンゼン環1つで側鎖は飽和、5 以上なら側鎖に C=O や C=C がある。<br>
+② 官能基：Na・$\mathrm{NaHCO_3}$・塩化鉄(III) などの結果から、アルコール・フェノール類・カルボン酸・エーテル・エステルなどを区別する。<br>
+③ 置換基の数と位置：過マンガン酸カリウムで側鎖を酸化すると、ベンゼン環に直接ついた炭素が −COOH になる。安息香酸が得られれば<b>一置換体</b>、フタル酸類が得られれば<b>二置換体</b>（o-・m-・p- は酸化生成物や置換体の種類の数で決める）。<br>
+④ 側鎖の構造：ヨードホルム反応・不斉炭素原子の有無などで決める。
+</div>
+<div class="box ex">
+芳香族化合物 Y（$\mathrm{C_8H_{10}O}$）は Na と反応して $\mathrm{H_2}$ を発生するが、塩化鉄(III) 水溶液では呈色しない。Y を過マンガン酸カリウムで十分に酸化すると安息香酸が得られた。また、Y はヨードホルム反応を示し、不斉炭素原子をもつ。Y の示性式を書け。また、Y を二クロム酸カリウムでおだやかに酸化して得られる化合物 Z の示性式を書け。
+<div class="solx"><b>解</b>　不飽和度 $\dfrac{18-10}{2}=4$ → ベンゼン環のほかは飽和。Na と反応し塩化鉄(III) で呈色しない → アルコール。安息香酸が得られる → 一置換体。候補は $\mathrm{C_6H_5CH_2CH_2OH}$ と $\mathrm{C_6H_5CH(OH)CH_3}$。<br>
+ヨードホルム反応を示し不斉炭素原子をもつのは後者。Y：$\boldsymbol{\mathrm{C_6H_5CH(OH)CH_3}}$（1-フェニルエタノール）<br>
+Y は第二級アルコールなので、酸化するとケトン。Z：$\boldsymbol{\mathrm{C_6H_5COCH_3}}$（アセトフェノン）</div>
+</div>
+<div class="box chk">
+(1) $\mathrm{C_6H_6}$、$\mathrm{C_3H_6O}$、$\mathrm{C_5H_{10}}$ の不飽和度をそれぞれ求めよ。<br>
+(2) $\mathrm{C_4H_9Cl}$ の構造異性体はいくつあるか。<br>
+(3) 分子式 $\mathrm{C_3H_6O}$ のカルボニル化合物のうち、銀鏡反応を示すものとヨードホルム反応を示すものの示性式を書け。<br>
+(4) ある炭化水素 0.10 mol を完全燃焼させると、$\mathrm{CO_2}$ 17.6 g と $\mathrm{H_2O}$ 7.2 g が生じた。分子式を求めよ。
+</div>
+<div class="box aim">
+・構造決定は<b>情報を1つずつ使って候補を消していく</b>作業。問題文の各文が「どの部分構造を示すか」を余白に書き出してから組み立てる。<br>
+・エステルは「加水分解生成物 A（酸）と B（アルコール）」に分け、炭素数と不飽和度の配分を考える。ギ酸エステルが銀鏡反応を示す点は頻出。<br>
+・「不斉炭素原子をもつ」「シス-トランス異性体が存在する」「臭素を付加すると不斉炭素原子ができる」などの立体の条件が、最後の決め手になることが多い。
+</div>
+<h3 class="deep">講義5　二重結合の位置を決める ― オゾン分解</h3>
+<div class="box lect">
+アルケンにオゾンを反応させたのち、亜鉛などで還元的に処理すると、C=C が切れてそれぞれの炭素が C=O になる（<b>オゾン分解</b>）。<br>
+　$\mathrm{R^1R^2C{=}CR^3R^4 \to R^1R^2C{=}O+O{=}CR^3R^4}$<br>
+例えば $\mathrm{C_4H_8}$ のアルケンでは、1-ブテン → HCHO ＋ $\mathrm{CH_3CH_2CHO}$、2-ブテン → $\mathrm{CH_3CHO}$ 2分子、2-メチルプロペン → HCHO ＋ $\mathrm{CH_3COCH_3}$ となり、生成物から元のアルケンが決まる。<br>
+過マンガン酸カリウムで強く酸化した場合も C=C は切断されるが、生じたアルデヒドはさらに酸化されてカルボン酸になる（HCHO は $\mathrm{CO_2}$ まで酸化される）。ケトンはそのまま残る。
+</div>
+<div class="box warn">
+・O の質量は「試料 −（C ＋ H）」で求める。組成式の式量と分子量は一致するとは限らない（分子式は組成式の整数倍）。<br>
+・異性体を数えるとき、同じ構造を別の向きから見て二重に数えない（1-ブタノールと「4-ブタノール」は同じもの）。<br>
+・不斉炭素原子の判定は「結合する4つの<b>原子団</b>がすべて異なるか」。3-ペンタノールの C3 は $\mathrm{C_2H_5}$ が2つなので不斉炭素原子ではない。
+</div>
+<div class="box ans">
+(1) $\mathrm{C_6H_6}$：4、$\mathrm{C_3H_6O}$：1、$\mathrm{C_5H_{10}}$：1　(2) 4（$\mathrm{CH_3CH_2CH_2CH_2Cl}$、$\mathrm{CH_3CH_2CHClCH_3}$、$\mathrm{(CH_3)_2CHCH_2Cl}$、$\mathrm{(CH_3)_3CCl}$）　(3) 銀鏡反応：$\mathrm{CH_3CH_2CHO}$、ヨードホルム反応：$\mathrm{CH_3COCH_3}$　(4) $\mathrm{CO_2}$ 0.40 mol、$\mathrm{H_2O}$ 0.40 mol より C 4、H 8 → $\mathrm{C_4H_8}$
+</div>
+<!--CH 15-->
+<div class="box point">
+・単糖 $\mathrm{C_6H_{12}O_6}$（グルコース・フルクトース・ガラクトース）は、水溶液中で環状構造と鎖状構造が平衡になっていて、すべて<b>還元性</b>を示す<br>
+・二糖 $\mathrm{C_{12}H_{22}O_{11}}$：マルトース・ラクトース・セロビオースは還元性あり、<b>スクロースは還元性なし</b>。多糖 $\mathrm{(C_6H_{10}O_5)_{\mathit{n}}}$：デンプン（α-グルコース）、セルロース（β-グルコース）<br>
+・α-アミノ酸 $\mathrm{RCH(NH_2)COOH}$ は結晶中・水溶液中で双性イオン。ペプチド結合 −CO−NH− でつながってタンパク質になる。検出：ビウレット反応・キサントプロテイン反応・ニンヒドリン反応・硫黄の検出<br>
+・酵素はタンパク質でできた触媒（基質特異性・最適温度・最適 pH）。核酸は塩基・糖・リン酸からなるヌクレオチドの重合体
+</div>
+<h3>講義1　単糖と二糖</h3>
+<div class="box lect" style="page-break-inside:auto">
+<b>単糖</b>（$\mathrm{C_6H_{12}O_6}$）・<b>グルコース</b>（ブドウ糖）：水溶液中では α 形・鎖状構造・β 形の平衡混合物（下図）。鎖状構造がホルミル基 −CHO をもつので還元性を示す。<br>
+・<b>フルクトース</b>（果糖）：鎖状構造の $\mathrm{-CO{-}CH_2OH}$ の部分が還元性を示す。<br>
+・<b>アルコール発酵</b>：酵母のもつ酵素群（チマーゼ）により $\mathrm{C_6H_{12}O_6 \to 2C_2H_5OH+2CO_2}$。<br>
+<b>二糖</b>（$\mathrm{C_{12}H_{22}O_{11}}$）：単糖2分子が脱水縮合（<b>グリコシド結合</b>）したもの。
+<table class="l w" style="font-size:9pt;background:#fff">
+<tr><th>二糖</th><th>マルトース（麦芽糖）</th><th>スクロース（ショ糖）</th><th>ラクトース（乳糖）</th><th>セロビオース</th></tr>
+<tr><th>構成</th><td>α-グルコース 2分子</td><td>α-グルコース ＋ β-フルクトース</td><td>β-ガラクトース ＋ グルコース</td><td>β-グルコース 2分子</td></tr>
+<tr><th>酵素</th><td>マルターゼ</td><td>インベルターゼ</td><td>ラクターゼ</td><td>セロビアーゼ</td></tr>
+<tr><th>還元性</th><td>あり</td><td><b>なし</b></td><td>あり</td><td>あり</td></tr>
+</table>
+スクロースは2つの単糖の<b>還元性を示す部分どうしで結合</b>しているので還元性がない。加水分解で得られる等量混合物（<b>転化糖</b>）は還元性を示す。
+</div>
+<svg class="fig" width="400" height="134" viewBox="0 0 400 134"><line x1="127.0" y1="58.0" x2="103.0" y2="80.0" stroke="#222" stroke-width="3.2"/><line x1="103.0" y1="80.0" x2="51.0" y2="80.0" stroke="#222" stroke-width="3.2"/><line x1="51.0" y1="80.0" x2="23.0" y2="58.0" stroke="#222" stroke-width="3.2"/><line x1="23.0" y1="58.0" x2="47.0" y2="36.0" stroke="#222" stroke-width="1.3"/><line x1="47.0" y1="36.0" x2="93.0" y2="36.0" stroke="#222" stroke-width="1.3"/><line x1="103.7" y1="39.7" x2="127.0" y2="58.0" stroke="#222" stroke-width="1.3"/><text x="99" y="40" font-size="12" text-anchor="middle" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>O</tspan></text><line x1="127" y1="58" x2="127" y2="76" stroke="#c0392b" stroke-width="1.3"/><text x="127" y="87" font-size="10.5" text-anchor="middle" fill="#c0392b" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>OH</tspan></text><line x1="103" y1="80" x2="103" y2="98" stroke="#222" stroke-width="1.3"/><text x="103" y="109" font-size="10.5" text-anchor="middle" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>OH</tspan></text><line x1="51" y1="80" x2="51" y2="65" stroke="#222" stroke-width="1.3"/><text x="51" y="62" font-size="10.5" text-anchor="middle" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>OH</tspan></text><line x1="23" y1="58" x2="23" y2="76" stroke="#222" stroke-width="1.3"/><text x="23" y="87" font-size="10.5" text-anchor="middle" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>HO</tspan></text><line x1="47" y1="36" x2="47" y2="18" stroke="#222" stroke-width="1.3"/><text x="47" y="15" font-size="10.5" text-anchor="middle" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>CH</tspan><tspan dy="2.9" font-size="7.6">2</tspan><tspan dy="-2.9">OH</tspan></text><text x="133" y="54" font-size="8.5" text-anchor="start" fill="#888" font-family="IPAPGothic,IPAGothic,sans-serif"><tspan>1</tspan></text><text x="12" y="54" font-size="8.5" text-anchor="start" fill="#888" font-family="IPAPGothic,IPAGothic,sans-serif"><tspan>4</tspan></text><text x="35" y="38" font-size="8.5" text-anchor="start" fill="#888" font-family="IPAPGothic,IPAGothic,sans-serif"><tspan>5</tspan></text><line x1="377.0" y1="58.0" x2="353.0" y2="80.0" stroke="#222" stroke-width="3.2"/><line x1="353.0" y1="80.0" x2="301.0" y2="80.0" stroke="#222" stroke-width="3.2"/><line x1="301.0" y1="80.0" x2="273.0" y2="58.0" stroke="#222" stroke-width="3.2"/><line x1="273.0" y1="58.0" x2="297.0" y2="36.0" stroke="#222" stroke-width="1.3"/><line x1="297.0" y1="36.0" x2="343.0" y2="36.0" stroke="#222" stroke-width="1.3"/><line x1="353.7" y1="39.7" x2="377.0" y2="58.0" stroke="#222" stroke-width="1.3"/><text x="349" y="40" font-size="12" text-anchor="middle" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>O</tspan></text><line x1="377" y1="58" x2="377" y2="40" stroke="#c0392b" stroke-width="1.3"/><text x="377" y="37" font-size="10.5" text-anchor="middle" fill="#c0392b" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>OH</tspan></text><line x1="353" y1="80" x2="353" y2="98" stroke="#222" stroke-width="1.3"/><text x="353" y="109" font-size="10.5" text-anchor="middle" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>OH</tspan></text><line x1="301" y1="80" x2="301" y2="65" stroke="#222" stroke-width="1.3"/><text x="301" y="62" font-size="10.5" text-anchor="middle" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>OH</tspan></text><line x1="273" y1="58" x2="273" y2="76" stroke="#222" stroke-width="1.3"/><text x="273" y="87" font-size="10.5" text-anchor="middle" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>HO</tspan></text><line x1="297" y1="36" x2="297" y2="18" stroke="#222" stroke-width="1.3"/><text x="297" y="15" font-size="10.5" text-anchor="middle" fill="#222" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>CH</tspan><tspan dy="2.9" font-size="7.6">2</tspan><tspan dy="-2.9">OH</tspan></text><text x="383" y="54" font-size="8.5" text-anchor="start" fill="#888" font-family="IPAPGothic,IPAGothic,sans-serif"><tspan>1</tspan></text><text x="262" y="54" font-size="8.5" text-anchor="start" fill="#888" font-family="IPAPGothic,IPAGothic,sans-serif"><tspan>4</tspan></text><text x="285" y="38" font-size="8.5" text-anchor="start" fill="#888" font-family="IPAPGothic,IPAGothic,sans-serif"><tspan>5</tspan></text><text x="75" y="126" font-size="10.5" text-anchor="middle" fill="#222" font-family="IPAPGothic,IPAGothic,sans-serif"><tspan>α-</tspan><tspan font-family="IPAPGothic,IPAGothic,sans-serif">グルコース</tspan></text><text x="325" y="126" font-size="10.5" text-anchor="middle" fill="#222" font-family="IPAPGothic,IPAGothic,sans-serif"><tspan>β-</tspan><tspan font-family="IPAPGothic,IPAGothic,sans-serif">グルコース</tspan></text><text x="200" y="52" font-size="11" text-anchor="middle" fill="#222" font-family="IPAPGothic,IPAGothic,sans-serif"><tspan>⇄  </tspan><tspan font-family="IPAPGothic,IPAGothic,sans-serif">鎖状構造</tspan><tspan>  ⇄</tspan></text><text x="200" y="70" font-size="10" text-anchor="middle" fill="#555" font-family="IPAPGothic,IPAGothic,sans-serif"><tspan font-family="IPAPGothic,IPAGothic,sans-serif">（</tspan><tspan>1</tspan><tspan font-family="IPAPGothic,IPAGothic,sans-serif">位の</tspan><tspan> C </tspan><tspan font-family="IPAPGothic,IPAGothic,sans-serif">が</tspan><tspan> -CHO</tspan><tspan font-family="IPAPGothic,IPAGothic,sans-serif">）</tspan></text><text x="200" y="104" font-size="9.5" text-anchor="middle" fill="#c0392b" font-family="IPAPGothic,IPAGothic,sans-serif"><tspan font-family="IPAPGothic,IPAGothic,sans-serif">赤：</tspan><tspan>1</tspan><tspan font-family="IPAPGothic,IPAGothic,sans-serif">位の</tspan><tspan> -OH</tspan></text><text x="200" y="117" font-size="9.5" text-anchor="middle" fill="#c0392b" font-family="IPAPGothic,IPAGothic,sans-serif"><tspan font-family="IPAPGothic,IPAGothic,sans-serif">（</tspan><tspan>α </tspan><tspan font-family="IPAPGothic,IPAGothic,sans-serif">は環の下、</tspan><tspan>β </tspan><tspan font-family="IPAPGothic,IPAGothic,sans-serif">は上）</tspan></text><text x="200" y="130" font-size="9" text-anchor="middle" fill="#777" font-family="IPAPGothic,IPAGothic,sans-serif"><tspan font-family="IPAPGothic,IPAGothic,sans-serif">環の</tspan><tspan> H </tspan><tspan font-family="IPAPGothic,IPAGothic,sans-serif">原子は省略</tspan></text></svg>
+<div class="box ex">
+グルコース 9.0 g について答えよ（$\mathrm{C_6H_{12}O_6}=180$、$\mathrm{C_2H_5OH}=46$、Ag = 108）。(1) 完全にアルコール発酵させたとき生じるエタノールの質量と、$\mathrm{CO_2}$ の標準状態での体積を求めよ。(2) 銀鏡反応で析出する銀の質量を求めよ（グルコース 1 mol から銀 2 mol が析出するとする）。
+<div class="solx"><b>解</b>　グルコースは $9.0\div180=0.050$ mol。<br>
+(1) $\mathrm{C_6H_{12}O_6 \to 2C_2H_5OH+2CO_2}$ より、エタノール 0.10 mol で $46\times0.10=$ <b>4.6 g</b>。$\mathrm{CO_2}$ 0.10 mol で $22.4\times0.10=2.24$　よって <b>2.2 L</b><br>
+(2) 銀 0.10 mol で $108\times0.10=10.8$　よって <b>11 g</b></div>
+</div>
+<h3>講義2　多糖</h3>
+<div class="box lect">
+<b>デンプン</b>：多数の α-グルコースが縮合重合した $\mathrm{(C_6H_{10}O_5)_{\mathit{n}}}$。<br>
+・<b>アミロース</b>：α-1,4-グリコシド結合だけでつながった直鎖状で、らせん構造をとる。温水に溶けやすい。ヨウ素デンプン反応で濃青色。<br>
+・<b>アミロペクチン</b>：α-1,4 結合に加えて α-1,6 結合で枝分かれした構造。温水に溶けにくい。ヨウ素デンプン反応で赤紫色。<br>
+・<b>グリコーゲン</b>：動物の肝臓・筋肉に蓄えられ、さらに枝分かれが多い。ヨウ素で赤褐色。<br>
+・加水分解：デンプン →（アミラーゼ）→ デキストリン → マルトース →（マルターゼ）→ グルコース。<br>
+<b>セルロース</b>：多数の β-グルコースが β-1,4 結合でつながった直鎖状の分子。分子が平行に並んで分子間に多くの水素結合ができるので、丈夫な繊維になり、水に溶けない。ヨウ素デンプン反応を示さない。セルラーゼ・セロビアーゼでグルコースまで加水分解される。繰り返し単位は $\mathrm{[C_6H_7O_2(OH)_3]}$（−OH が3個）。<br>
+・<b>再生繊維</b>（セルロースを溶かして再び繊維にしたもの）：ビスコースレーヨン（NaOH と二硫化炭素で処理）、銅アンモニアレーヨン（キュプラ、シュバイツァー試薬に溶かす）。<b>半合成繊維</b>：アセテート（トリアセチルセルロースを一部加水分解したジアセチルセルロース）。
+</div>
+<div class="box ex">
+(1) デンプン 81 g を完全に加水分解すると、グルコースは何 g 得られるか。<br>
+(2) 分子量 $8.1\times10^4$ のアミロースの重合度 $n$ を求めよ。<br>
+(3) セルロース 16.2 g の −OH をすべてアセチル化すると、トリアセチルセルロースは何 g 得られるか（$\mathrm{C_6H_{10}O_5}=162$、$\mathrm{C_6H_{12}O_6}=180$）。
+<div class="solx"><b>解</b>　(1) $\mathrm{(C_6H_{10}O_5)_{\mathit{n}}}+n\mathrm{H_2O \to}\ n\mathrm{C_6H_{12}O_6}$。単位 $\dfrac{81}{162}=0.50$ mol からグルコース 0.50 mol。$180\times0.50=$ <b>90 g</b><br>
+(2) $n=\dfrac{8.1\times10^4}{162}=$ <b>500</b><br>
+(3) −OH 1個が $\mathrm{-OCOCH_3}$ になると式量は 42（$\mathrm{C_2H_2O}$ 分）増える。繰り返し単位 $\mathrm{[C_6H_7O_2(OCOCH_3)_3]}$ の式量は $162+42\times3=288$。単位 0.100 mol から $288\times0.100=$ <b>28.8 g</b></div>
+</div>
+<h3>講義3　アミノ酸とタンパク質</h3>
+<div class="box lect" style="page-break-inside:auto">
+<b>α-アミノ酸</b>：同じ炭素原子にアミノ基とカルボキシ基が結合した $\mathrm{RCH(NH_2)COOH}$。タンパク質を構成するのは約 20 種類。グリシン（R が H）以外は不斉炭素原子をもち、天然のものはほとんどが L 形。<br>
+・結晶中や水溶液中では<b>双性イオン</b> $\mathrm{R{-}CH(NH_3^+){-}COO^-}$ として存在するため、融点が高く、水に溶けやすく有機溶媒に溶けにくい。電荷の総和が 0 になる pH を<b>等電点</b>という。ニンヒドリン水溶液と温めると赤紫〜青紫色（<b>ニンヒドリン反応</b>）。<br>
+<b>ペプチド</b>：アミノ酸の −COOH と別のアミノ酸の $\mathrm{-NH_2}$ が脱水縮合してできる −CO−NH− を<b>ペプチド結合</b>という。2分子からジペプチド、多数からポリペプチド。<br>
+<b>タンパク質</b>：ポリペプチドが特有の立体構造をとったもの。一次構造（アミノ酸の配列）、二次構造（α-ヘリックス・β-シート：ペプチド結合の間の水素結合による）、三次構造（ジスルフィド結合 −S−S− なども関わる立体構造）。熱・強酸・強塩基・重金属イオン・有機溶媒などで立体構造がこわれ、性質が変わる（<b>変性</b>）。
+<table class="l w" style="font-size:9pt;background:#fff">
+<tr><th>検出反応</th><th>操作</th><th>結果</th><th>わかること</th></tr>
+<tr><td>ビウレット反応</td><td>NaOH 水溶液と硫酸銅(II) 水溶液</td><td>赤紫色</td><td>ペプチド結合2つ以上（トリペプチド以上）</td></tr>
+<tr><td>キサントプロテイン反応</td><td>濃硝酸を加えて加熱 → 冷却後にアンモニア水</td><td>黄色 → 橙黄色</td><td>ベンゼン環をもつアミノ酸（チロシンなど）</td></tr>
+<tr><td>硫黄の検出</td><td>NaOH を加えて加熱 → 酢酸鉛(II) 水溶液</td><td>黒色沈殿（PbS）</td><td>硫黄を含むアミノ酸（システインなど）</td></tr>
+</table>
+</div>
+<div class="box ex">
+グリシン（Gly、分子量 75）、アラニン（Ala、89）、システイン（Cys、121）を1分子ずつ含む鎖状のトリペプチドについて答えよ（$\mathrm{H_2O}=18$）。<br>
+(1) アミノ酸の配列順序の違いによる異性体は何種類あるか（鏡像異性体は考えない）。(2) このトリペプチドの分子量を求めよ。(3) ビウレット反応・キサントプロテイン反応・硫黄の検出反応のうち、陽性になるものを答えよ。
+<div class="solx"><b>解</b>　(1) ペプチドには $\mathrm{-NH_2}$ 末端（N 末端）と −COOH 末端（C 末端）の区別があるので、Gly−Ala−Cys と Cys−Ala−Gly は別の物質。並べ方は $3!=$ <b>6 種類</b><br>
+(2) ペプチド結合が2つでき、水 2 分子がとれる。$75+89+121-2\times18=$ <b>249</b><br>
+(3) <b>ビウレット反応</b>（ペプチド結合が2つ）と<b>硫黄の検出反応</b>（Cys が S を含む）。ベンゼン環をもつアミノ酸がないので、キサントプロテイン反応は陰性。</div>
+</div>
+<h3>講義4　酵素と核酸</h3>
+<div class="box lect">
+<b>酵素</b>：生体内の化学反応の触媒としてはたらくタンパク質。<br>
+・<b>基質特異性</b>：酵素の活性部位に合う特定の物質（<b>基質</b>）にだけ作用する。<br>
+・<b>最適温度</b>（多くは 35〜40 ℃付近）と<b>最適 pH</b>（ペプシンは約 2、アミラーゼは約 7、トリプシンは約 8）がある。高温や極端な pH では変性してはたらきを失う（<b>失活</b>）。<br>
+・例：アミラーゼ（デンプン → マルトース）、ペプシン・トリプシン（タンパク質 → ペプチド）、リパーゼ（油脂 → 脂肪酸 ＋ モノグリセリド）、カタラーゼ（$\mathrm{2H_2O_2 \to 2H_2O+O_2}$）。<br>
+<b>核酸</b>：塩基・五炭糖（ペントース）・リン酸が結合した<b>ヌクレオチド</b>が、糖とリン酸の部分で縮合重合した高分子。<br>
+・<b>DNA</b>（デオキシリボ核酸）：糖はデオキシリボース $\mathrm{C_5H_{10}O_4}$。塩基はアデニン（A）・グアニン（G）・シトシン（C）・チミン（T）。2本の鎖が塩基どうしの水素結合（A と T の間に2本、G と C の間に3本）で対をつくり、<b>二重らせん構造</b>をとる。遺伝情報を担う。<br>
+・<b>RNA</b>（リボ核酸）：糖はリボース $\mathrm{C_5H_{10}O_5}$。塩基は A・G・C・ウラシル（U）。ふつう1本鎖で、タンパク質の合成にはたらく。<br>
+二本鎖 DNA では、A と T、G と C の数がそれぞれ等しい。
+</div>
+<div class="box ex">
+ある二本鎖 DNA では、全塩基数のうち 21 % がグアニン（G）であった。(1) アデニン（A）、チミン（T）、シトシン（C）はそれぞれ何 % か。(2) この DNA が 1000 塩基対からなるとき、塩基対の間の水素結合は全部で何本か。
+<div class="solx"><b>解</b>　(1) G と C は対をつくるので C も 21 %。残り $100-42=58$ % を A と T が等しく分けるので、<b>A 29 %、T 29 %、C 21 %</b><br>
+(2) 全塩基 2000 個のうち G と C は 42 % で 840 個、つまり G−C 対は 420 対、A−T 対は 580 対。水素結合は $420\times3+580\times2=$ <b>2420 本</b></div>
+</div>
+<div class="box chk">
+(1) グルコース、フルクトース、スクロース、マルトース、デンプンのうち、還元性を示すものをすべて選べ。<br>
+(2) アミロースとアミロペクチンの構造上の違いを述べ、それぞれのヨウ素デンプン反応の色を答えよ。<br>
+(3) グリシンが水溶液中でとる双性イオンの示性式を書け。<br>
+(4) 卵白の水溶液に濃硝酸を加えて加熱すると黄色になった。この反応の名称と、これからわかることを答えよ。<br>
+(5) DNA と RNA で異なる糖と塩基をそれぞれ答えよ。
+</div>
+<div class="box aim">
+・糖の計算は<b>単位の式量（$\mathrm{C_6H_{10}O_5}=162$）と、加水分解で加わる $\mathrm{H_2O}$</b> がカギ。二糖では $\mathrm{C_{12}H_{22}O_{11}+H_2O \to 2C_6H_{12}O_6}$。<br>
+・ペプチドの問題：$n$ 個のアミノ酸からなる鎖状ペプチドの分子量 ＝（アミノ酸の分子量の和）$-18(n-1)$。配列の数え上げでは N 末端と C 末端を区別する。
+</div>
+<h3 class="deep">講義5　アミノ酸の電離平衡と等電点</h3>
+<div class="box lect" style="page-break-inside:auto">
+グリシンは水溶液中で、陽イオン $\mathrm{H_3N^+{-}CH_2{-}COOH}$（$\mathrm{Gly^+}$）、双性イオン $\mathrm{H_3N^+{-}CH_2{-}COO^-}$（$\mathrm{Gly^{\pm}}$）、陰イオン $\mathrm{H_2N{-}CH_2{-}COO^-}$（$\mathrm{Gly^-}$）が平衡にある。<br>
+$\mathrm{Gly^+ \rightleftarrows Gly^{\pm}+H^+}$　$K_1=\dfrac{[\mathrm{Gly^{\pm}}][\mathrm{H^+}]}{[\mathrm{Gly^+}]}$　　$\mathrm{Gly^{\pm} \rightleftarrows Gly^-+H^+}$　$K_2=\dfrac{[\mathrm{Gly^-}][\mathrm{H^+}]}{[\mathrm{Gly^{\pm}}]}$<br>
+酸性では陽イオン、塩基性では陰イオンが多い。等電点では $[\mathrm{Gly^+}]=[\mathrm{Gly^-}]$ なので、2式をかけると $K_1K_2=[\mathrm{H^+}]^2$、すなわち $[\mathrm{H^+}]=\sqrt{K_1K_2}$。<br>
+例えば $K_1=5.0\times10^{-3}\ \mathrm{mol/L}$、$K_2=2.0\times10^{-10}\ \mathrm{mol/L}$ とすると、$[\mathrm{H^+}]=\sqrt{1.0\times10^{-12}}=1.0\times10^{-6}\ \mathrm{mol/L}$ で、等電点は pH 6.0。<br>
+等電点はアミノ酸によって異なり（グルタミン酸 約 3.2、リシン 約 9.7）、<b>電気泳動</b>でアミノ酸を分離できる。等電点より酸性の溶液中では陽イオンが多く陰極へ、塩基性の溶液中では陰イオンが多く陽極へ移動する。
+</div>
+<div class="box warn">
+・スクロースは還元性を示さない（加水分解した転化糖は示す）。デンプン・セルロースも還元性をほとんど示さない。<br>
+・ビウレット反応はジペプチドでは陰性（ペプチド結合が2つ以上必要）。ニンヒドリン反応はアミノ酸だけでも陽性。<br>
+・グリシンには不斉炭素原子がない。
+</div>
+<div class="box ans">
+(1) グルコース、フルクトース、マルトース　(2) アミロースは直鎖状（α-1,4 結合のみ）で濃青色、アミロペクチンは α-1,6 結合で枝分かれしていて赤紫色　(3) $\mathrm{H_3N^+{-}CH_2{-}COO^-}$　(4) キサントプロテイン反応。ベンゼン環をもつアミノ酸を含むこと　(5) 糖：DNA はデオキシリボース、RNA はリボース。塩基：DNA はチミン（T）、RNA はウラシル（U）
+</div>
+<!--CH 16-->
+<div class="box point">
+・重合の型：<b>付加重合</b>（C=C をもつ単量体）、<b>縮合重合</b>（$\mathrm{H_2O}$ などがとれてつながる）、<b>開環重合</b>（環状の単量体が環を開いてつながる）、<b>付加縮合</b>（付加と縮合をくり返す）<br>
+・合成繊維：ナイロン66・ナイロン6（ポリアミド）、ポリエチレンテレフタラート（ポリエステル）、アクリル繊維、ビニロン<br>
+・合成樹脂：鎖状構造の<b>熱可塑性樹脂</b>と、立体網目構造の<b>熱硬化性樹脂</b>。ゴムは<b>加硫</b>で弾性が増す<br>
+・高分子は分子量がそろっていないので<b>平均分子量</b>で表す。重合度 $n$ ＝ 平均分子量 ÷ 繰り返し単位の式量
+</div>
+<h3>講義1　高分子化合物と重合の種類</h3>
+<div class="box lect" style="page-break-inside:auto">
+分子量がおよそ1万以上の化合物を<b>高分子化合物</b>という。小さな分子（<b>単量体</b>、モノマー）が多数結合（<b>重合</b>）してできた<b>重合体</b>（ポリマー）で、繰り返し単位の数を<b>重合度</b> $n$ という。<br>
+・分子の大きさがそろっていないので、分子量は<b>平均分子量</b>で表す。<br>
+・明確な融点を示さず、加熱すると徐々に軟らかくなる（<b>軟化点</b>）。分子が規則正しく並んだ結晶部分と、不規則な非結晶部分がある。<br>
+<b>付加重合</b>：$\mathrm{CH_2{=}CHX}$ 型の単量体が二重結合を開いて次々に付加する。$n\mathrm{CH_2{=}CHX \to [\,CH_2{-}CHX\,]}_n$
+<table class="l w" style="font-size:9pt;background:#fff">
+<tr><th>X</th><th>単量体 → 重合体</th><th>おもな用途</th><th>X</th><th>単量体 → 重合体</th><th>おもな用途</th></tr>
+<tr><td>H</td><td>エチレン → ポリエチレン</td><td>袋・容器</td><td>$\mathrm{C_6H_5}$</td><td>スチレン → ポリスチレン</td><td>発泡スチロール</td></tr>
+<tr><td>$\mathrm{CH_3}$</td><td>プロペン → ポリプロピレン</td><td>容器・繊維</td><td>CN</td><td>アクリロニトリル → ポリアクリロニトリル</td><td>アクリル繊維</td></tr>
+<tr><td>Cl</td><td>塩化ビニル → ポリ塩化ビニル</td><td>水道管・ホース</td><td>$\mathrm{OCOCH_3}$</td><td>酢酸ビニル → ポリ酢酸ビニル</td><td>接着剤・ビニロンの原料</td></tr>
+</table>
+メタクリル酸メチル $\mathrm{CH_2{=}C(CH_3)COOCH_3}$ の重合体は透明で、有機ガラスに使われる。<br>
+<b>縮合重合</b>：2つの官能基をもつ単量体どうしが、$\mathrm{H_2O}$ などの簡単な分子がとれながらつながる（ナイロン66、PET など）。<br>
+<b>開環重合</b>：環状の単量体が環を開きながらつながる（ε-カプロラクタム → ナイロン6）。<br>
+<b>付加縮合</b>：付加反応と縮合反応をくり返してつながる（フェノール樹脂・尿素樹脂・メラミン樹脂）。
+</div>
+<div class="box ex">
+ナイロン66 は、ヘキサメチレンジアミン $\mathrm{H_2N(CH_2)_6NH_2}$ とアジピン酸 $\mathrm{HOOC(CH_2)_4COOH}$ の縮合重合で得られる（H = 1.0、C = 12、N = 14、O = 16）。<br>
+(1) 化学反応式を書け。(2) 平均分子量 $2.26\times10^4$ のナイロン66 の重合度 $n$ と、1分子中のアミド結合の数を求めよ（末端の影響は無視する）。(3) ナイロン66 を 113 kg つくるのに必要なアジピン酸は何 kg か（アジピン酸 = 146）。
+<div class="solx"><b>解</b>　(1) $n\mathrm{H_2N(CH_2)_6NH_2}+n\mathrm{HOOC(CH_2)_4COOH \to [\,NH(CH_2)_6NH{-}CO(CH_2)_4CO\,]}_n+2n\mathrm{H_2O}$<br>
+(2) 繰り返し単位 $\mathrm{C_{12}H_{22}N_2O_2}$ の式量は 226（＝ 116 ＋ 146 − 2×18）。$n=\dfrac{2.26\times10^4}{226}=$ <b>100</b>。繰り返し単位1つにアミド結合 −CO−NH− が2つあるので <b>200 個</b><br>
+(3) 繰り返し単位 $\dfrac{113\times10^3}{226}=500$ mol にアジピン酸 500 mol が必要。$146\times500\ \mathrm{g}=$ <b>73.0 kg</b></div>
+</div>
+<h3>講義2　合成繊維</h3>
+<div class="box lect" style="page-break-inside:auto">
+<b>ポリアミド系</b>（アミド結合 −CO−NH− でつながる）<br>
+・ナイロン66：ヘキサメチレンジアミンとアジピン酸の縮合重合。世界初の合成繊維で、カロザースが開発した。<br>
+・ナイロン6：ε-カプロラクタム（7員環の環状アミド）の開環重合で $\mathrm{[\,NH(CH_2)_5CO\,]}_n$ となる。<br>
+・アラミド繊維：p-フェニレンジアミンとテレフタル酸ジクロリドの縮合重合で得られ、ベンゼン環を含むので強度・耐熱性が非常に大きい（防弾チョッキ・消防服）。<br>
+<b>ポリエステル系</b>：ポリエチレンテレフタラート（PET）は、テレフタル酸とエチレングリコールの縮合重合で得られる。<br>
+　$n\mathrm{HOOC{-}C_6H_4{-}COOH}+n\mathrm{HO(CH_2)_2OH \to [\,CO{-}C_6H_4{-}COO(CH_2)_2O\,]}_n+2n\mathrm{H_2O}$<br>
+繊維のほか、ペットボトルなどの容器に使われる。<br>
+<b>アクリル繊維</b>：アクリロニトリルを主成分とする付加重合体。羊毛に似た風合いをもつ。<br>
+<b>ビニロン</b>（日本で開発された合成繊維）：ビニルアルコール $\mathrm{CH_2{=}CHOH}$ は不安定で単量体として使えないので、次のようにつくる。<br>
+　酢酸ビニル →（付加重合）→ ポリ酢酸ビニル →（NaOH でけん化）→ ポリビニルアルコール（PVA）→ 紡糸してホルムアルデヒドで処理（<b>アセタール化</b>）→ ビニロン<br>
+PVA は −OH が多く水に溶けるが、−OH の一部（30〜40 %）を $\mathrm{-O{-}CH_2{-}O{-}}$ の形にすると水に溶けなくなる。残った −OH のため、適度な吸湿性をもつ。
+</div>
+<div class="box ex">
+ポリビニルアルコール（繰り返し単位 $\mathrm{[\,CH_2{-}CH(OH)\,]}$、式量 44）88 g の −OH の 40 % をホルムアルデヒドでアセタール化してビニロンをつくった。(1) 反応したホルムアルデヒドの質量を求めよ。(2) 得られるビニロンの質量を求めよ（HCHO = 30、$\mathrm{H_2O}$ = 18）。
+<div class="solx"><b>解</b>　−OH は $\dfrac{88}{44}=2.0$ mol で、反応したのは $2.0\times0.40=0.80$ mol。<br>
+(1) 隣り合う2個の −OH が HCHO 1分子と反応して $\mathrm{-O{-}CH_2{-}O{-}}$ の橋かけ（6員環）をつくり、$\mathrm{H_2O}$ 1分子がとれる。よって HCHO は 0.40 mol。$30\times0.40=$ <b>12 g</b><br>
+(2) HCHO 1 mol が反応するごとに $30-18=12$ g ずつ増える。$88+12\times0.40=92.8$　よって <b>約 93 g</b></div>
+</div>
+<h3>講義3　合成樹脂（プラスチック）</h3>
+<div class="box lect">
+<b>熱可塑性樹脂</b>：<b>鎖状構造</b>の高分子。加熱すると軟らかくなり、冷やすと硬くなるので、成形・再加工しやすい。ポリエチレン、ポリプロピレン、ポリ塩化ビニル、ポリスチレン、PET など（付加重合体の多くと、鎖状の縮合重合体）。<br>
+<b>熱硬化性樹脂</b>：<b>立体網目構造</b>の高分子。成形後に加熱すると網目がさらに発達して硬くなり、再び軟らかくならない。耐熱性・耐薬品性にすぐれる。<br>
+・<b>フェノール樹脂</b>（ベークライト）：フェノールとホルムアルデヒドの付加縮合。酸を触媒とするとノボラック（硬化剤を加えて加熱）、塩基を触媒とするとレゾール（加熱だけで硬化）という中間生成物を経て立体網目構造になる。最初に工業化された合成樹脂である。<br>
+・<b>尿素樹脂</b>（ユリア樹脂）：尿素 $\mathrm{CO(NH_2)_2}$ とホルムアルデヒドの付加縮合。<br>
+・<b>メラミン樹脂</b>：メラミンとホルムアルデヒドの付加縮合。硬く、食器などに使われる。<br>
+・アルキド樹脂（無水フタル酸とグリセリン）も熱硬化性で、塗料に使われる。
+</div>
+<svg class="fig" width="420" height="136" viewBox="0 0 420 136"><polyline points="12,22.0 16,25.1 20,27.3 24,28.0 28,26.9 32,24.3 36,21.1 40,18.1 44,16.3 48,16.2 52,17.8 56,20.6 60,23.9 64,26.6 68,27.9 72,27.5 76,25.5 80,22.4 84,19.3 88,16.9 92,16.0 96,16.9 100,19.3 104,22.5 108,25.6 112,27.6 116,27.9 120,26.5 124,23.8 128,20.6 132,17.7 136,16.2 140,16.3 144,18.1 148,21.1 152,24.3 156,26.9 160,28.0 164,27.3 168,25.1 172,21.9" fill="none" stroke="#6d2a86" stroke-width="1.8"/><polyline points="12,47.8 16,47.8 20,46.1 24,43.1 28,39.9 32,37.3 36,36.0 40,36.6 44,38.7 48,41.8 52,45.0 56,47.3 60,48.0 64,47.0 68,44.5 72,41.3 76,38.2 80,36.4 84,36.1 88,37.6 92,40.4 96,43.7 100,46.4 104,47.9 108,47.6 112,45.7 116,42.6 120,39.4 124,37.0 128,36.0 132,36.8 136,39.1 140,42.3 144,45.4 148,47.5 152,47.9 156,46.7 160,44.0 164,40.8 168,37.9 172,36.2" fill="none" stroke="#6d2a86" stroke-width="1.8"/><polyline points="12,65.1 16,61.9 20,58.8 24,56.6 28,56.0 32,57.2 36,59.8 40,63.0 44,65.9 48,67.7 52,67.8 56,66.2 60,63.3 64,60.1 68,57.4 72,56.1 76,56.5 80,58.5 84,61.6 88,64.8 92,67.2 96,68.0 100,67.1 104,64.7 108,61.4 112,58.4 116,56.4 120,56.1 124,57.5 128,60.2 132,63.5 136,66.3 140,67.9 144,67.7 148,65.8 152,62.8 156,59.6 160,57.1 164,56.0 168,56.7 172,59.0" fill="none" stroke="#6d2a86" stroke-width="1.8"/><polyline points="12,77.9 16,76.2 20,76.2 24,78.0 28,80.9 32,84.2 36,86.8 40,88.0 44,87.4 48,85.3 52,82.1 56,79.0 60,76.7 64,76.0 68,77.1 72,79.6 76,82.8 80,85.8 84,87.7 88,87.9 92,86.3 96,83.5 100,80.3 104,77.5 108,76.1 112,76.4 116,78.4 120,81.4 124,84.6 128,87.1 132,88.0 136,87.2 140,84.8 144,81.6 148,78.6 152,76.5 156,76.1 160,77.4 164,80.0 168,83.3 172,86.2" fill="none" stroke="#6d2a86" stroke-width="1.8"/><text x="92" y="116" font-size="10.5" text-anchor="middle" fill="#222" font-family="IPAPGothic,IPAGothic,sans-serif"><tspan font-family="IPAPGothic,IPAGothic,sans-serif">熱可塑性樹脂（鎖状構造）</tspan></text><text x="92" y="130" font-size="9.5" text-anchor="middle" fill="#555" font-family="IPAPGothic,IPAGothic,sans-serif"><tspan font-family="IPAPGothic,IPAGothic,sans-serif">加熱すると分子が動いて軟らかくなる</tspan></text><line x1="240" y1="16" x2="276" y2="16" stroke="#6d2a86" stroke-width="1.8"/><line x1="240" y1="16" x2="248" y2="42" stroke="#d9701e" stroke-width="1.5"/><line x1="248" y1="42" x2="284" y2="42" stroke="#6d2a86" stroke-width="1.8"/><line x1="248" y1="42" x2="240" y2="68" stroke="#d9701e" stroke-width="1.5"/><line x1="240" y1="68" x2="276" y2="68" stroke="#6d2a86" stroke-width="1.8"/><line x1="240" y1="68" x2="248" y2="94" stroke="#d9701e" stroke-width="1.5"/><line x1="248" y1="94" x2="284" y2="94" stroke="#6d2a86" stroke-width="1.8"/><line x1="276" y1="16" x2="312" y2="16" stroke="#6d2a86" stroke-width="1.8"/><line x1="276" y1="16" x2="284" y2="42" stroke="#d9701e" stroke-width="1.5"/><line x1="284" y1="42" x2="320" y2="42" stroke="#6d2a86" stroke-width="1.8"/><line x1="284" y1="42" x2="276" y2="68" stroke="#d9701e" stroke-width="1.5"/><line x1="276" y1="68" x2="312" y2="68" stroke="#6d2a86" stroke-width="1.8"/><line x1="276" y1="68" x2="284" y2="94" stroke="#d9701e" stroke-width="1.5"/><line x1="284" y1="94" x2="320" y2="94" stroke="#6d2a86" stroke-width="1.8"/><line x1="312" y1="16" x2="348" y2="16" stroke="#6d2a86" stroke-width="1.8"/><line x1="312" y1="16" x2="320" y2="42" stroke="#d9701e" stroke-width="1.5"/><line x1="320" y1="42" x2="356" y2="42" stroke="#6d2a86" stroke-width="1.8"/><line x1="320" y1="42" x2="312" y2="68" stroke="#d9701e" stroke-width="1.5"/><line x1="312" y1="68" x2="348" y2="68" stroke="#6d2a86" stroke-width="1.8"/><line x1="312" y1="68" x2="320" y2="94" stroke="#d9701e" stroke-width="1.5"/><line x1="320" y1="94" x2="356" y2="94" stroke="#6d2a86" stroke-width="1.8"/><line x1="348" y1="16" x2="384" y2="16" stroke="#6d2a86" stroke-width="1.8"/><line x1="348" y1="16" x2="356" y2="42" stroke="#d9701e" stroke-width="1.5"/><line x1="356" y1="42" x2="392" y2="42" stroke="#6d2a86" stroke-width="1.8"/><line x1="356" y1="42" x2="348" y2="68" stroke="#d9701e" stroke-width="1.5"/><line x1="348" y1="68" x2="384" y2="68" stroke="#6d2a86" stroke-width="1.8"/><line x1="348" y1="68" x2="356" y2="94" stroke="#d9701e" stroke-width="1.5"/><line x1="356" y1="94" x2="392" y2="94" stroke="#6d2a86" stroke-width="1.8"/><line x1="384" y1="16" x2="392" y2="42" stroke="#d9701e" stroke-width="1.5"/><line x1="392" y1="42" x2="384" y2="68" stroke="#d9701e" stroke-width="1.5"/><line x1="384" y1="68" x2="392" y2="94" stroke="#d9701e" stroke-width="1.5"/><circle cx="240" cy="16" r="2.6" fill="#222"/><circle cx="248" cy="42" r="2.6" fill="#222"/><circle cx="240" cy="68" r="2.6" fill="#222"/><circle cx="248" cy="94" r="2.6" fill="#222"/><circle cx="276" cy="16" r="2.6" fill="#222"/><circle cx="284" cy="42" r="2.6" fill="#222"/><circle cx="276" cy="68" r="2.6" fill="#222"/><circle cx="284" cy="94" r="2.6" fill="#222"/><circle cx="312" cy="16" r="2.6" fill="#222"/><circle cx="320" cy="42" r="2.6" fill="#222"/><circle cx="312" cy="68" r="2.6" fill="#222"/><circle cx="320" cy="94" r="2.6" fill="#222"/><circle cx="348" cy="16" r="2.6" fill="#222"/><circle cx="356" cy="42" r="2.6" fill="#222"/><circle cx="348" cy="68" r="2.6" fill="#222"/><circle cx="356" cy="94" r="2.6" fill="#222"/><circle cx="384" cy="16" r="2.6" fill="#222"/><circle cx="392" cy="42" r="2.6" fill="#222"/><circle cx="384" cy="68" r="2.6" fill="#222"/><circle cx="392" cy="94" r="2.6" fill="#222"/><text x="320" y="116" font-size="10.5" text-anchor="middle" fill="#222" font-family="IPAPGothic,IPAGothic,sans-serif"><tspan font-family="IPAPGothic,IPAGothic,sans-serif">熱硬化性樹脂（立体網目構造）</tspan></text><text x="320" y="130" font-size="9.5" text-anchor="middle" fill="#555" font-family="IPAPGothic,IPAGothic,sans-serif"><tspan font-family="IPAPGothic,IPAGothic,sans-serif">橋かけ（橙）で固定され、加熱しても軟化しない</tspan></text></svg>
+<div class="box ex">
+次の (a)〜(f) を熱可塑性樹脂と熱硬化性樹脂に分け、それぞれの原料（単量体）を答えよ。<br>
+(a) ポリスチレン　(b) フェノール樹脂　(c) ポリ塩化ビニル　(d) 尿素樹脂　(e) ポリエチレンテレフタラート　(f) メラミン樹脂
+<div class="solx"><b>解</b>　<b>熱可塑性樹脂</b>：(a) スチレン $\mathrm{CH_2{=}CH{-}C_6H_5}$、(c) 塩化ビニル $\mathrm{CH_2{=}CHCl}$、(e) テレフタル酸とエチレングリコール<br>
+<b>熱硬化性樹脂</b>：(b) フェノールとホルムアルデヒド、(d) 尿素とホルムアルデヒド、(f) メラミンとホルムアルデヒド<br>
+熱硬化性樹脂は、ホルムアルデヒドが付加縮合で3方向以上に橋かけし、立体網目構造をつくる点が共通している。</div>
+</div>
+<h3>講義4　ゴムと機能性高分子</h3>
+<div class="box lect" style="page-break-inside:auto">
+<b>天然ゴム</b>：ゴムノキの樹液（ラテックス）からとれる。イソプレン $\mathrm{CH_2{=}C(CH_3){-}CH{=}CH_2}$ が付加重合した構造 $\mathrm{[\,CH_2{-}C(CH_3){=}CH{-}CH_2\,]}_n$ をもち、C=C の部分は<b>シス形</b>。分子が折れ曲がった形をとるので弾性を示す。<br>
+・<b>加硫</b>：数 % の硫黄を加えて加熱すると、分子の間に S 原子による橋かけ構造（架橋）ができ、弾性・強度・耐久性が増す。硫黄を 30〜40 % 加えて長時間加熱すると、硬いエボナイトになる。<br>
+<b>合成ゴム</b>：ブタジエンゴム、クロロプレンゴム（$\mathrm{CH_2{=}CCl{-}CH{=}CH_2}$ の重合体）、スチレン-ブタジエンゴム（SBR）など。2種類以上の単量体をまぜて重合させることを<b>共重合</b>という。<br>
+<b>機能性高分子</b><br>
+・<b>イオン交換樹脂</b>：スチレンと p-ジビニルベンゼンの共重合体（立体網目構造）に、スルホ基 $\mathrm{-SO_3H}$ を導入したものが<b>陽イオン交換樹脂</b>（$\mathrm{R{-}SO_3H+Na^+ \rightleftarrows R{-}SO_3Na+H^+}$）、$\mathrm{-CH_2N^+(CH_3)_3OH^-}$ などを導入したものが<b>陰イオン交換樹脂</b>（$\mathrm{R{-}N^+(CH_3)_3OH^-+Cl^- \rightleftarrows R{-}N^+(CH_3)_3Cl^-+OH^-}$）。両方に塩の水溶液を通すと純水（脱イオン水）が得られる。使用後は、強酸や強塩基の水溶液を流すと再生できる。<br>
+・<b>吸水性高分子</b>：ポリアクリル酸ナトリウム $\mathrm{[\,CH_2{-}CH(COONa)\,]}_n$ を架橋した網目構造。水中で $\mathrm{-COO^-}$ どうしが反発して網目が広がり、多量の水を吸収・保持する（紙おむつ、土の保水剤）。<br>
+・<b>生分解性高分子</b>：ポリ乳酸など。微生物によって分解される（手術用の縫合糸など）。<br>
+・<b>導電性高分子</b>：ポリアセチレンにヨウ素などを加えると、金属のような電気伝導性を示す（白川英樹らが発見、2000年ノーベル化学賞）。
+</div>
+<div class="box ex">
+陽イオン交換樹脂（R−$\mathrm{SO_3H}$ 型）を詰めたカラムに 0.050 mol/L 塩化カルシウム水溶液 10.0 mL を通し、さらに純水で十分に洗って、流出液をすべて集めた。(1) 樹脂で起こる変化をイオン反応式で書け。(2) 流出液を中和するのに必要な 0.10 mol/L 水酸化ナトリウム水溶液は何 mL か。
+<div class="solx"><b>解</b>　(1) $\boldsymbol{\mathrm{2R{-}SO_3H+Ca^{2+} \to (R{-}SO_3)_2Ca+2H^+}}$<br>
+(2) $\mathrm{Ca^{2+}}$ は $0.050\times\dfrac{10.0}{1000}=5.0\times10^{-4}$ mol で、2価なので $\mathrm{H^+}$ が $1.0\times10^{-3}$ mol 流出する（流出液は塩酸）。<br>
+NaOH 水溶液の体積は $\dfrac{1.0\times10^{-3}}{0.10}=1.0\times10^{-2}\ \mathrm{L}=$ <b>10.0 mL</b></div>
+</div>
+<div class="box chk">
+(1) ポリ塩化ビニルの単量体の名称と示性式を答えよ。<br>
+(2) ナイロン6 の単量体の名称と、その重合の種類を答えよ。<br>
+(3) 平均分子量 $2.8\times10^4$ のポリエチレンの重合度を求めよ。<br>
+(4) 天然ゴムに硫黄を加えて加熱する操作の名称と、その目的を答えよ。<br>
+(5) 紙おむつなどに使われる吸水性高分子の名称を答えよ。
+</div>
+<div class="box aim">
+・繰り返し単位の式量は「<b>単量体の式量の和 − とれた $\mathrm{H_2O}$ の式量</b>」。縮合重合の計算で $\mathrm{H_2O}$ を引き忘れない。<br>
+・付加重合体の構造は、単量体の C=C を開いて $\mathrm{-CH_2{-}CHX{-}}$ とするだけ。単量体 ⇄ 重合体の両方向で書けるようにしておく。<br>
+・「熱可塑性か熱硬化性か」「付加重合・縮合重合・開環重合・付加縮合のどれか」の分類は正誤問題の定番。
+</div>
+<h3 class="deep">講義5　高分子の分子量の測定 ― 浸透圧</h3>
+<div class="box lect">
+高分子化合物は分子量が大きいので、同じ質量を溶かしても溶質粒子の物質量が小さい。凝固点降下はごくわずかで測定が難しいが、浸透圧は十分に測定できる大きさになる。<br>
+ファントホッフの式 $\Pi V=\dfrac{w}{M}RT$ より $M=\dfrac{wRT}{\Pi V}$。<br>
+例えば、あるポリスチレン 1.0 g をトルエンに溶かして 100 mL とした溶液の浸透圧が、27 ℃ で 249 Pa だったとすると、
+$M=\dfrac{1.0\times8.31\times10^3\times300}{249\times0.100}\fallingdotseq1.0\times10^5$。<br>
+249 Pa は水柱にして約 2.5 cm に相当し、液面の高さの差として十分に測定できる。一方、この溶液の凝固点降下は 1000 分の 1 K にも満たない。<br>
+浸透圧は溶質粒子の<b>数</b>で決まるので、こうして求めた分子量は、分子1個あたりの平均（<b>数平均分子量</b>）である。
+</div>
+<div class="box warn">
+・ナイロン66 の繰り返し単位にはアミド結合が2つある（アミド結合の数は $2n$）。<br>
+・ビニロンの原料はビニルアルコールではない。酢酸ビニル → ポリ酢酸ビニル →（けん化）→ ポリビニルアルコールの順につくる。<br>
+・熱硬化性樹脂は「加熱すると硬くなる（網目が発達する）」のであって、「熱に弱い」わけではない。<br>
+・イオン交換樹脂で $\mathrm{Ca^{2+}}$ 1 mol と交換される $\mathrm{H^+}$ は 2 mol。
+</div>
+<div class="box ans">
+(1) 塩化ビニル、$\mathrm{CH_2{=}CHCl}$　(2) ε-カプロラクタム、開環重合　(3) $2.8\times10^4\div28=1.0\times10^3$（繰り返し単位 $\mathrm{C_2H_4}$ = 28）　(4) 加硫。分子間に硫黄による橋かけ構造をつくり、弾性・強度を高めるため　(5) ポリアクリル酸ナトリウム
+</div>
