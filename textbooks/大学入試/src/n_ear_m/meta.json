@@ -1,0 +1,87 @@
+{
+ "subject": "地学",
+ "math": true,
+ "color": "#7a4a1f",
+ "color2": "#b07a45",
+ "subcolor": "#f7efe6",
+ "parts": [
+  {
+   "title": "第1部 固体地球",
+   "sub": "",
+   "chapters": [
+    {
+     "no": 1,
+     "title": "地球の形と内部構造"
+    },
+    {
+     "no": 2,
+     "title": "プレートテクトニクスと地震"
+    },
+    {
+     "no": 3,
+     "title": "火山と火成岩"
+    },
+    {
+     "no": 4,
+     "title": "地層・岩石と地質構造"
+    },
+    {
+     "no": 5,
+     "title": "地球の歴史"
+    }
+   ]
+  },
+  {
+   "title": "第2部 大気と海洋",
+   "sub": "",
+   "chapters": [
+    {
+     "no": 6,
+     "title": "大気の構造と熱収支"
+    },
+    {
+     "no": 7,
+     "title": "大気の運動と天気"
+    },
+    {
+     "no": 8,
+     "title": "海洋と気候"
+    }
+   ]
+  },
+  {
+   "title": "第3部 宇宙",
+   "sub": "",
+   "chapters": [
+    {
+     "no": 9,
+     "title": "太陽系と惑星"
+    },
+    {
+     "no": 10,
+     "title": "太陽と恒星"
+    },
+    {
+     "no": 11,
+     "title": "銀河と宇宙"
+    }
+   ]
+  },
+  {
+   "title": "第4部 地球環境",
+   "sub": "",
+   "chapters": [
+    {
+     "no": 12,
+     "title": "地球環境と自然災害"
+    }
+   ]
+  }
+ ],
+ "intro_html": "<h3>この3冊の使い分け</h3><table class='l w'><tr><th>本</th><th>役割</th><th>使うタイミング</th></tr><tr><td><b>教科書（講義編）</b></td><td>地学基礎・地学の入試範囲を体系的に理解する</td><td>単元の学習・復習の最初</td></tr><tr><td><b>参考書（解法・整理編）</b></td><td>「こう出たらこう解く」の解法カードで、設問と解き方・知識を結びつける</td><td>問題演習の前後、直前期の総整理</td></tr><tr><td><b>問題集（演習編）</b></td><td>A基本・B標準・C発展の演習で実戦力をつける</td><td>講義を読んだ後、くり返し</td></tr></table><p>3冊とも<b>章番号が共通</b>です（全12章）。</p>",
+ "kind": "問題集",
+ "title": "大学入試 地学 問題集（演習編）",
+ "cover_title": "地学基礎・地学<br>入試地学 演習",
+ "cover_sub": "A 基本・B 標準・C 発展の3段階<br>くわしい解答・解説つき",
+ "extra_css": ".bun { background:#f7f7f7; border-left:4px solid #999; padding:2mm 3.5mm; margin:2mm 0; line-height:1.8; } .shiryo { background:#fbfaf3; border-left:4px solid #b08d57; padding:2mm 3.5mm; margin:2mm 0; line-height:1.8; }"
+}

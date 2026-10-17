@@ -1,0 +1,105 @@
+{
+ "subject": "日本史",
+ "math": false,
+ "color": "#8b1e3f",
+ "color2": "#c0506e",
+ "subcolor": "#f9eaef",
+ "parts": [
+  {
+   "title": "第1部 原始・古代",
+   "sub": "",
+   "chapters": [
+    {
+     "no": 1,
+     "title": "日本文化のあけぼの"
+    },
+    {
+     "no": 2,
+     "title": "律令国家の形成"
+    },
+    {
+     "no": 3,
+     "title": "平安時代の政治と文化"
+    }
+   ]
+  },
+  {
+   "title": "第2部 中世",
+   "sub": "",
+   "chapters": [
+    {
+     "no": 4,
+     "title": "武家政権の成立"
+    },
+    {
+     "no": 5,
+     "title": "室町幕府と戦国時代"
+    }
+   ]
+  },
+  {
+   "title": "第3部 近世",
+   "sub": "",
+   "chapters": [
+    {
+     "no": 6,
+     "title": "織豊政権と江戸幕府の成立"
+    },
+    {
+     "no": 7,
+     "title": "江戸時代の政治と経済"
+    },
+    {
+     "no": 8,
+     "title": "江戸時代の文化"
+    }
+   ]
+  },
+  {
+   "title": "第4部 近代",
+   "sub": "",
+   "chapters": [
+    {
+     "no": 9,
+     "title": "開国と明治維新"
+    },
+    {
+     "no": 10,
+     "title": "立憲国家の成立と日清・日露戦争"
+    },
+    {
+     "no": 11,
+     "title": "近代産業と文化"
+    },
+    {
+     "no": 12,
+     "title": "政党政治と恐慌"
+    },
+    {
+     "no": 13,
+     "title": "第二次世界大戦"
+    }
+   ]
+  },
+  {
+   "title": "第5部 現代とテーマ史",
+   "sub": "",
+   "chapters": [
+    {
+     "no": 14,
+     "title": "占領と戦後の日本"
+    },
+    {
+     "no": 15,
+     "title": "テーマ史の整理"
+    }
+   ]
+  }
+ ],
+ "intro_html": "<h3>この3冊の使い分け</h3><table class='l w'><tr><th>本</th><th>役割</th><th>使うタイミング</th></tr><tr><td><b>教科書（講義編）</b></td><td>日本史探究の入試範囲を体系的に理解する</td><td>単元の学習・復習の最初</td></tr><tr><td><b>参考書（解法・整理編）</b></td><td>「こう出たらこう解く」の解法カードで、設問と解き方・知識を結びつける</td><td>問題演習の前後、直前期の総整理</td></tr><tr><td><b>問題集（演習編）</b></td><td>A基本・B標準・C発展の演習で実戦力をつける</td><td>講義を読んだ後、くり返し</td></tr></table><p>3冊とも<b>章番号が共通</b>です（全15章）。</p>",
+ "kind": "問題集",
+ "title": "大学入試 日本史 問題集（演習編）",
+ "cover_title": "日本史探究<br>入試日本史 演習",
+ "cover_sub": "A 基本・B 標準・C 発展の3段階<br>くわしい解答・解説つき",
+ "extra_css": ".bun { background:#f7f7f7; border-left:4px solid #999; padding:2mm 3.5mm; margin:2mm 0; line-height:1.8; } .shiryo { background:#fbfaf3; border-left:4px solid #b08d57; padding:2mm 3.5mm; margin:2mm 0; line-height:1.8; }"
+}

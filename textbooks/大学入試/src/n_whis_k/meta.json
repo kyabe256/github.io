@@ -1,0 +1,103 @@
+{
+ "subject": "世界史",
+ "math": false,
+ "color": "#1f6f78",
+ "color2": "#4ea2aa",
+ "subcolor": "#e8f5f6",
+ "parts": [
+  {
+   "title": "第1部 古代",
+   "sub": "",
+   "chapters": [
+    {
+     "no": 1,
+     "title": "古代オリエントと地中海世界"
+    },
+    {
+     "no": 2,
+     "title": "南アジア・東南アジアの古代"
+    },
+    {
+     "no": 3,
+     "title": "中国の古代から隋・唐へ"
+    }
+   ]
+  },
+  {
+   "title": "第2部 中世",
+   "sub": "",
+   "chapters": [
+    {
+     "no": 4,
+     "title": "イスラーム世界の形成と発展"
+    },
+    {
+     "no": 5,
+     "title": "中世ヨーロッパ"
+    },
+    {
+     "no": 6,
+     "title": "宋・元・明・清と東アジア"
+    },
+    {
+     "no": 7,
+     "title": "アジアの諸帝国"
+    }
+   ]
+  },
+  {
+   "title": "第3部 近世・近代",
+   "sub": "",
+   "chapters": [
+    {
+     "no": 8,
+     "title": "ルネサンス・宗教改革・大航海時代"
+    },
+    {
+     "no": 9,
+     "title": "主権国家体制と絶対王政"
+    },
+    {
+     "no": 10,
+     "title": "市民革命と産業革命"
+    },
+    {
+     "no": 11,
+     "title": "19世紀の欧米と国民国家"
+    },
+    {
+     "no": 12,
+     "title": "帝国主義とアジア・アフリカ"
+    }
+   ]
+  },
+  {
+   "title": "第4部 現代",
+   "sub": "",
+   "chapters": [
+    {
+     "no": 13,
+     "title": "第一次世界大戦と戦間期"
+    },
+    {
+     "no": 14,
+     "title": "第二次世界大戦"
+    },
+    {
+     "no": 15,
+     "title": "冷戦と脱植民地化"
+    },
+    {
+     "no": 16,
+     "title": "グローバル化と現代世界"
+    }
+   ]
+  }
+ ],
+ "intro_html": "<h3>この3冊の使い分け</h3><table class='l w'><tr><th>本</th><th>役割</th><th>使うタイミング</th></tr><tr><td><b>教科書（講義編）</b></td><td>世界史探究の入試範囲を体系的に理解する</td><td>単元の学習・復習の最初</td></tr><tr><td><b>参考書（解法・整理編）</b></td><td>「こう出たらこう解く」の解法カードで、設問と解き方・知識を結びつける</td><td>問題演習の前後、直前期の総整理</td></tr><tr><td><b>問題集（演習編）</b></td><td>A基本・B標準・C発展の演習で実戦力をつける</td><td>講義を読んだ後、くり返し</td></tr></table><p>3冊とも<b>章番号が共通</b>です（全16章）。</p>",
+ "kind": "教科書",
+ "title": "大学入試 世界史 教科書（講義編）",
+ "cover_title": "世界史探究<br>入試世界史の講義",
+ "cover_sub": "共通テストから国公立二次・難関私大まで<br>入試に必要な理解を16章で体系的に",
+ "extra_css": ".bun { background:#f7f7f7; border-left:4px solid #999; padding:2mm 3.5mm; margin:2mm 0; line-height:1.8; } .shiryo { background:#fbfaf3; border-left:4px solid #b08d57; padding:2mm 3.5mm; margin:2mm 0; line-height:1.8; }"
+}

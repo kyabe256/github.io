@@ -1,0 +1,598 @@
+<!--CH 1-->
+<div class="pat"><h4>地球の大きさは「弧の長さ：全周＝中心角：$360^\circ$」</h4>
+<div class="when">同じ経線上の2地点の距離と、太陽の南中高度（または北極星の高度）の差から、地球の全周・半径を求める（エラトステネスの方法）。</div>
+<div class="how">太陽光は平行とみなせるので、<b>同じ日の南中高度の差＝2地点の緯度の差＝中心角 $\theta$</b>（北極星の高度の差でも同じ）。<br>
+$\frac{L}{2\pi R}=\frac{\theta}{360^\circ}$ より　全周 $2\pi R=L\times\frac{360^\circ}{\theta}$、半径 $R=$ 全周 $\div2\pi$。</div>
+<div class="pex">同じ経線上にあり、南北に $555\ \mathrm{km}$ 離れた2地点 A（北）・B（南）で、同じ日の太陽の南中高度は A で $50.0^\circ$、B で $55.0^\circ$ であった。地球の全周と半径を求めよ。<br>
+<b>解</b>　中心角は $55.0^\circ-50.0^\circ=5.0^\circ$。全周 $=555\times\frac{360}{5.0}=39960\fallingdotseq4.0\times10^4\ \mathrm{km}$。半径 $=\frac{39960}{2\pi}\fallingdotseq6.4\times10^3\ \mathrm{km}$。</div>
+<div class="pnote">2地点が同じ経線上（真南北）にないと、南中高度の差は緯度差にならない。エラトステネスはシエネとアレクサンドリアの間で約 $7.2^\circ$（全周の $\frac1{50}$）の差を用いた。</div>
+</div>
+
+<div class="pat"><h4>緯度1°の長さは高緯度ほど長い → 極方向につぶれた回転楕円体</h4>
+<div class="when">緯度差1°に対する子午線の長さの比較から地球の形を推定する。偏平率を計算する。</div>
+<div class="how">地表の曲がり方がゆるやかな（曲率半径が大きい）所ほど、同じ中心角1°に対応する弧が長い。測量によると緯度1°の長さは赤道付近で約 $110.6\ \mathrm{km}$、極付近で約 $111.7\ \mathrm{km}$。→ 極付近ほど平たい → 赤道方向にふくらみ、極方向につぶれた<b>回転楕円体</b>（原因は自転による遠心力）。<br>
+偏平率 $f=\frac{a-b}{a}$（$a$：赤道半径、$b$：極半径）。地球は $f\fallingdotseq\frac1{300}$ で、ほとんど球に近い。</div>
+<div class="pex">赤道半径を $6378\ \mathrm{km}$、極半径を $6357\ \mathrm{km}$ として、地球の偏平率を分数で表せ。<br>
+<b>解</b>　$f=\frac{6378-6357}{6378}=\frac{21}{6378}\fallingdotseq\frac{1}{304}$、すなわち約 $\frac{1}{300}$。</div>
+<div class="pnote">「緯度1°の長さが長い所は地球の半径が大きい」と考えるのは誤り。極は中心からの距離は小さいが、<b>曲がり方がゆるやか</b>なので1°の弧が長い。</div>
+</div>
+
+<div class="pat"><h4>重力＝万有引力＋遠心力。重力は赤道で最小、極で最大</h4>
+<div class="when">場所（緯度）によって重力の大きさが違う理由や、遠心力の大きさを問われる。</div>
+<div class="how">重力は、地球の万有引力と自転による遠心力の合力。遠心力は自転軸からの距離 $R\cos\varphi$（$\varphi$：緯度）に比例し、単位質量あたり $R\omega^2\cos\varphi$。赤道で最大、極で0。さらに赤道は中心から遠いので万有引力も小さい。<br>
+→ 重力加速度は<b>赤道で最小（約 $9.78\ \mathrm{m/s^2}$）、極で最大（約 $9.83\ \mathrm{m/s^2}$）</b>。赤道と極以外では、重力の向き（鉛直線）は地球の中心からわずかにずれる。</div>
+<div class="pex">地球の半径を $6.4\times10^6\ \mathrm m$、自転周期を $8.6\times10^4\ \mathrm s$ として、赤道上の物体にはたらく遠心力による加速度の大きさを求めよ。また、それは重力加速度 $9.78\ \mathrm{m/s^2}$ の約何分の1か。<br>
+<b>解</b>　$\omega=\frac{2\pi}{8.6\times10^4}\fallingdotseq7.3\times10^{-5}\ \mathrm{rad/s}$。$R\omega^2=6.4\times10^6\times(7.3\times10^{-5})^2\fallingdotseq0.034\ \mathrm{m/s^2}$。$\frac{9.78}{0.034}\fallingdotseq290$ より、約 $\frac{1}{290}$。</div>
+<div class="pnote">自転周期は1恒星日（約23時間56分）。遠心力は小さいが、地球を偏平にするには十分。</div>
+</div>
+
+<div class="pat"><h4>ブーゲー異常：正なら地下に重い物質、負なら軽い物質</h4>
+<div class="when">重力の測定結果（重力異常の分布）から地下の構造を推定する。</div>
+<div class="how">実測の重力に、測定点の高さの補正（フリーエア補正）と、測定点と基準面の間にある岩石の引力を除く補正（ブーゲー補正）を加え、緯度だけで決まる標準重力を引いたものが<b>ブーゲー異常</b>。<br>
+・<b>正</b>：地下に平均より密度の大きい物質（浅いマントル、玄武岩質の岩体、金属鉱床など）。<br>
+・<b>負</b>：密度の小さい物質（厚い堆積層がたまった盆地、カルデラ、厚い地殻の「山の根」など）。</div>
+<div class="pex">大山脈ではブーゲー異常が大きな負、海洋では大きな正の値になる。それぞれの理由を答えよ。<br>
+<b>解</b>　山脈の下には密度の小さい地殻が深くまで張り出している（山の根）ので負。海洋は地殻が薄く、密度の大きいマントルが浅い所まであるので正。どちらもアイソスタシーで説明できる。</div>
+<div class="pnote">ブーゲー異常は高さや地形の影響を除いた後の値。「山の上は地球の中心から遠いので負」という説明は誤り。</div>
+</div>
+
+<div class="pat"><h4>アイソスタシーは「補償面より上の柱の重さが等しい」で式を立てる</h4>
+<div class="when">山の根の深さ、地殻の厚さ、氷床がとけた後の隆起量を求める。</div>
+<div class="how">地殻はマントルに浮いてつりあっている。十分深い面（補償面）をとり、そこより上の断面積の等しい柱で<b>（密度×厚さ）の和が等しい</b>とおく。<br>
+地殻の密度 $\rho_1$、マントルの密度 $\rho_2$ のとき、標高 $h$ の山の根の深さ $r$ は $\rho_1h=(\rho_2-\rho_1)r$。<br>
+荷重（氷床など）がとり除かれると、その重さの分だけマントルが流れ込んで隆起する：隆起量 $=\dfrac{\rho_{\mathrm{ice}}\times(\text{氷の厚さ})}{\rho_2}$。</div>
+<div class="pex">地殻の密度 $2.7\ \mathrm{g/cm^3}$、マントルの密度 $3.3\ \mathrm{g/cm^3}$ とする。標高 $0\ \mathrm m$ の地域で地殻の厚さが $30\ \mathrm{km}$ のとき、標高 $3.0\ \mathrm{km}$ の山脈の地殻の厚さを求めよ。<br>
+<b>解</b>　山の根を $r\ [\mathrm{km}]$ とすると、山脈の柱と平地の柱で $2.7\times(3.0+30+r)=2.7\times30+3.3r$。$2.7\times3.0=0.6r$ より $r=13.5\ \mathrm{km}$。厚さは $3.0+30+13.5=46.5\fallingdotseq47\ \mathrm{km}$。</div>
+<div class="pnote">根は山の高さの $\frac{2.7}{0.6}=4.5$ 倍にもなる。厚さ $2200\ \mathrm m$、密度 $0.90\ \mathrm{g/cm^3}$ の氷床がとけると $\frac{0.90\times2200}{3.3}=600\ \mathrm m$ 隆起する（スカンジナビア半島の隆起はこのしくみ）。</div>
+</div>
+
+<div class="pat"><h4>S波が通らない＝液体。シャドーゾーンで核を見分ける</h4>
+<div class="when">地震波の伝わり方から、地球内部の層構造（とくに外核が液体であること）を説明する。</div>
+<div class="how">P波は固体・液体中を伝わり、S波は固体中しか伝わらない。速度は境界で不連続に変わり、波は屈折する。<br>
+・モホ面（深さ 約5〜60 km）：P波が約 $6\sim7\to8\ \mathrm{km/s}$ に速くなる（地殻 → マントル）。<br>
+・深さ約 2900 km（グーテンベルク不連続面）：P波が急に遅くなり、S波は伝わらない（<b>外核は液体</b>）。<br>
+・深さ約 5100 km（レーマン不連続面）：P波が速くなる（<b>内核は固体</b>）。<br>
+震央からの角距離で <b>約 $103^\circ\sim143^\circ$ は P波の影（シャドーゾーン）</b>、<b>約 $103^\circ$ より遠くには S波が届かない</b>。</div>
+<div class="pex">震央からの角距離が (1) $60^\circ$、(2) $120^\circ$、(3) $160^\circ$ の観測点で、P波・S波は観測されるか。<br>
+<b>解</b>　(1) P波・S波とも届く。(2) P波の影にあたり、強いP波は届かない（内核で屈折・反射した弱いP波だけが届く）。S波は届かない。(3) 核を通過したP波は届くが、S波は届かない。</div>
+<div class="pnote">P波の影ができるのは、核に入ると P波が遅くなって<b>屈折する</b>から。S波の影が $103^\circ$ 以遠全部に広がることが、外核が液体である根拠。</div>
+</div>
+
+<div class="pat"><h4>走時曲線の折れ曲がり：傾きの逆数が速度、交差距離から地殻の厚さ</h4>
+<div class="when">震源（爆破点）からの距離と P波の到着時間のグラフ（走時曲線）が、途中で折れ曲がっている。</div>
+<div class="how">近い所では地殻を直接伝わる波（直接波）が先に着き、遠い所ではモホ面の下のマントル最上部を速く伝わる屈折波が先に着く。<br>
+①各直線の<b>傾きの逆数が速度</b>（$V_1$：地殻、$V_2$：マントル最上部）。<br>
+②折れ曲がる距離（交差距離）$x_c$ から、地殻の厚さ $H=\frac{x_c}{2}\sqrt{\frac{V_2-V_1}{V_2+V_1}}$（式は問題文で与えられることが多い）。地殻が厚いほど $x_c$ は大きい。</div>
+<div class="pex">ある爆破地震の走時曲線は右図のようになり、震源距離 $150\ \mathrm{km}$ で折れ曲がった。地殻とマントル最上部の P波の速度、および地殻の厚さを求めよ。
+<div class="two"><div><b>解</b>　$V_1=\frac{150}{25}=6.0\ \mathrm{km/s}$。<br>$V_2=\frac{230-150}{35-25}=8.0\ \mathrm{km/s}$。<br>
+$H=\frac{150}{2}\sqrt{\frac{8.0-6.0}{8.0+6.0}}=75\times\sqrt{\frac17}\fallingdotseq28\ \mathrm{km}$。</div>
+<div style="flex:0 0 64mm"><svg class="fig" width="235" height="165" viewBox="0 0 235 165"><line x1="28" y1="140" x2="225" y2="140" stroke="#222" stroke-width="1.1"/><polygon points="231,140 225,143 225,137" fill="#222" stroke="#222" stroke-width="0.5"/><line x1="32" y1="144" x2="32" y2="12" stroke="#222" stroke-width="1.1"/><polygon points="32,6 35,12 29,12" fill="#222" stroke="#222" stroke-width="0.5"/><text x="231" y="135" font-size="9.5" text-anchor="end">距離 [km]</text><text x="36" y="12" font-size="9.5">時間 [s]</text><line x1="32" y1="140" x2="141" y2="70" stroke="#1f5f8f" stroke-width="1.8"/><line x1="141" y1="70" x2="213.7" y2="23.3" stroke="#1f5f8f" stroke-width="1" stroke-dasharray="3,2"/><line x1="78.7" y1="100" x2="213.7" y2="35" stroke="#c0392b" stroke-width="1.8"/><line x1="141" y1="70" x2="78.7" y2="100" stroke="#c0392b" stroke-width="0.8"/><line x1="141" y1="70" x2="141" y2="140" stroke="#888" stroke-width="0.8" stroke-dasharray="2,2"/><line x1="32" y1="70" x2="141" y2="70" stroke="#888" stroke-width="0.8" stroke-dasharray="2,2"/><circle cx="141" cy="70" r="2" fill="#222" stroke="#222" stroke-width="1"/><text x="141" y="152" font-size="9.5" text-anchor="middle">150</text><text x="29" y="73.5" font-size="9.5" text-anchor="end">25</text><line x1="199.2" y1="42" x2="199.2" y2="140" stroke="#888" stroke-width="0.8" stroke-dasharray="2,2"/><line x1="32" y1="42" x2="199.2" y2="42" stroke="#888" stroke-width="0.8" stroke-dasharray="2,2"/><circle cx="199.2" cy="42" r="2" fill="#222" stroke="#222" stroke-width="1"/><text x="199.2" y="152" font-size="9.5" text-anchor="middle">230</text><text x="29" y="45.5" font-size="9.5" text-anchor="end">35</text><text x="29" y="152" font-size="9.5" text-anchor="end">O</text><text x="42.2" y="103.6" font-size="9.5" fill="#1f5f8f">直接波</text><text x="93.8" y="23.8" font-size="9.5" fill="#c0392b">屈折波</text><text x="93.8" y="34.8" font-size="9" fill="#c0392b">（モホ面経由）</text></svg></div></div></div>
+<div class="pnote">グラフの傾きは「時間÷距離」なので、速度はその<b>逆数</b>。速く伝わる層ほど走時曲線の傾きはゆるやか。</div>
+</div>
+
+<div class="pat"><h4>地磁気は「全磁力・水平分力・鉛直分力」の直角三角形で解く</h4>
+<div class="when">地磁気の要素（偏角・伏角・全磁力・水平分力・鉛直分力）を計算する。</div>
+<div class="how">全磁力 $F$ を水平分力 $H$ と鉛直分力 $Z$ に分けると $H=F\cos I$、$Z=F\sin I$、$\tan I=\frac ZH$（$I$：伏角）。<br>
+<b>偏角</b>は水平分力の向き（磁北）と真北のなす角（日本では西偏 約 $5^\circ\sim10^\circ$）。<b>伏角</b>は磁気赤道で $0^\circ$、北へ行くほど大きく北磁極で $90^\circ$（日本では約 $40^\circ\sim60^\circ$）。地球の磁場はおもに外核の液体金属の運動（ダイナモ作用）でつくられ、地球の中心に置いた棒磁石（S極が北側）で近似できる。</div>
+<div class="pex">ある地点で水平分力が $3.0\times10^4\ \mathrm{nT}$、伏角が $49^\circ$ であった。全磁力と鉛直分力を求めよ。$\cos49^\circ=0.656$、$\tan49^\circ=1.150$ とする。<br>
+<b>解</b>　$F=\frac{H}{\cos I}=\frac{3.0\times10^4}{0.656}\fallingdotseq4.6\times10^4\ \mathrm{nT}$。$Z=H\tan I=3.0\times10^4\times1.150\fallingdotseq3.5\times10^4\ \mathrm{nT}$。</div>
+<div class="pnote">北半球で方位磁針の N極が下を向く（伏角が下向き）のは、地球という棒磁石の S極が北にあるから。</div>
+</div>
+
+<div class="box memo"><table class="l w">
+<tr><th>項目</th><th>数値・事実</th></tr>
+<tr><td>地球の大きさ・形</td><td>半径 約 $6400\ \mathrm{km}$、全周 約 $4.0\times10^4\ \mathrm{km}$、偏平率 約 $\frac1{300}$（極方向につぶれた回転楕円体）</td></tr>
+<tr><td>重力</td><td>万有引力＋遠心力。赤道 約 $9.78\ \mathrm{m/s^2}$（最小）、極 約 $9.83\ \mathrm{m/s^2}$（最大）</td></tr>
+<tr><td>地殻</td><td>大陸地殻：厚さ 約30〜50 km（大山脈の下では60 km以上）、上部は花こう岩質・下部は玄武岩質。海洋地殻：約5〜10 km、玄武岩質</td></tr>
+<tr><td>マントル</td><td>モホ面〜深さ約 2900 km。かんらん岩質の固体</td></tr>
+<tr><td>外核／内核</td><td>外核 2900〜5100 km：液体の鉄（ニッケルなどを含む）。内核 5100 km〜中心（約6400 km）：固体の鉄・ニッケル</td></tr>
+<tr><td>リソスフェア／アセノスフェア</td><td>かたさによる区分。リソスフェア（地殻＋マントル最上部、厚さ約100 km）＝プレート。その下のやわらかく流動しやすい層がアセノスフェア</td></tr>
+<tr><td>アイソスタシー</td><td>補償面より上で（密度×厚さ）の和が等しい。山の根 $\rho_1h=(\rho_2-\rho_1)r$</td></tr>
+<tr><td>地震波</td><td>P波：固体・液体・気体を伝わる。S波：固体だけ。P波の影 $103^\circ\sim143^\circ$、S波は $103^\circ$ 以遠に届かない</td></tr>
+<tr><td>地磁気</td><td>$H=F\cos I$、$Z=F\sin I$。偏角＝磁北と真北の角、伏角＝磁針が水平面となす角</td></tr>
+</table></div>
+
+<!--CH 2-->
+<div class="pat"><h4>プレート境界は「離れる・近づく・すれ違う」の3種類で地形と現象を対応させる</h4>
+<div class="when">地形や地震・火山の分布から、プレート境界の種類を判定する。</div>
+<div class="how">・<b>発散境界（離れる）</b>：中央海嶺、アイスランド、東アフリカの地溝帯。プレートが生まれる。浅い地震、玄武岩質マグマの火山活動、正断層。<br>
+・<b>収束境界（近づく）</b>：①沈み込み帯＝海溝と島弧・陸弧（日本列島、アンデス）。浅い〜深い地震、火山。②衝突帯＝大陸どうしがぶつかり大山脈ができる（ヒマラヤ山脈）。<br>
+・<b>すれ違う境界</b>：トランスフォーム断層（海嶺と海嶺をつなぐ部分、北アメリカのサンアンドレアス断層）。浅い地震、横ずれ断層。火山はほとんどない。</div>
+<div class="pex">次の地形が属するプレート境界の種類を答えよ。(1) 大西洋中央海嶺　(2) 日本海溝　(3) ヒマラヤ山脈　(4) サンアンドレアス断層<br>
+<b>解</b>　(1) 発散境界　(2) 収束境界（沈み込み帯）　(3) 収束境界（衝突帯）　(4) すれ違う境界（トランスフォーム断層）</div>
+<div class="pnote">海嶺をずらしているトランスフォーム断層で地震が起こるのは、<b>海嶺と海嶺にはさまれた区間だけ</b>。その外側の延長部（断裂帯）では両側が同じ向きに動くので、すれ違いは起こらない。</div>
+</div>
+
+<div class="pat"><h4>海洋底の拡大速度は「海嶺からの距離÷年代」</h4>
+<div class="when">地磁気の縞模様（地磁気の逆転の記録）や海洋底の岩石の年代から、プレートの移動速度を求める。</div>
+<div class="how">海嶺でできた玄武岩はそのときの地磁気の向きに磁化したまま両側へ運ばれる → 海嶺をはさんで<b>対称な縞模様</b>。海嶺から遠いほど海洋底は古く、深く、上にたまった堆積物が厚い。<br>
+片側のプレートの速さ $v=\dfrac{\text{海嶺からの距離}}{\text{年代}}$。両側のプレートが離れる速さはその<b>2倍</b>。<br>
+単位換算：$1\ \mathrm{km}$/100万年 $=\frac{10^5\ \mathrm{cm}}{10^6\ \text{年}}=0.1\ \mathrm{cm}$/年（$=1\ \mathrm{mm}$/年）。</div>
+<div class="pex">海嶺の軸から $60\ \mathrm{km}$ 離れた地点の海洋底の年代は200万年であった。片側のプレートの移動速度と、両側のプレートが離れる速さを $\mathrm{cm}$/年で求めよ。<br>
+<b>解</b>　$60\ \mathrm{km}=6.0\times10^6\ \mathrm{cm}$ より $v=\frac{6.0\times10^6}{2.0\times10^6}=3.0\ \mathrm{cm}$/年。離れる速さは $6.0\ \mathrm{cm}$/年。</div>
+<div class="pnote">最も古い海洋底でも約2億年前のもので、大陸の岩石（約40億年前のものもある）よりはるかに新しい。海洋プレートは海溝で沈み込んで失われるから。</div>
+</div>
+
+<div class="pat"><h4>ホットスポットの火山島列：古い島の方向へプレートが動いている</h4>
+<div class="when">火山島や海山の列の年代と距離から、プレートの運動の向きと速さを求める。</div>
+<div class="how">ホットスポットはマントル深部から上昇する高温のプルームの上にあり、位置がほぼ動かない。その上を通過するプレートに次々と火山ができ、運ばれて列になる。<br>
+・活動中の火山がホットスポットの真上。<b>ホットスポットから遠い島ほど古い</b>。<br>
+・プレートは<b>古い島が並ぶ方向へ</b>動いている。速さ $=\dfrac{\text{島の間の距離}}{\text{年代の差}}$。<br>
+・列が折れ曲がっていれば、そのころプレートの運動の向きが変わったと考えられる（ハワイ諸島と天皇海山列の屈曲は約4700万年前）。</div>
+<div class="pex">ホットスポットの上で活動中の火山島 A から北西へ $2400\ \mathrm{km}$ の位置に、年代3000万年の火山島 B がある。このプレートの運動の向きと速さ（$\mathrm{cm}$/年）を求めよ。<br>
+<b>解</b>　B は A の位置でできてから北西へ運ばれたので、プレートは<b>北西</b>へ動いている。$2400\ \mathrm{km}=2.4\times10^8\ \mathrm{cm}$ より、速さは $\frac{2.4\times10^8}{3.0\times10^7}=8.0\ \mathrm{cm}$/年。</div>
+<div class="pnote">「若い島の方向へ動く」と逆にしない。火山をつくる場所（ホットスポット）が固定で、プレートが動く。</div>
+</div>
+
+<div class="pat"><h4>古地磁気の伏角から当時の緯度：$\tan I=2\tan\varphi$</h4>
+<div class="when">岩石の残留磁化から、その岩石ができた当時の緯度や、大陸の移動を推定する。</div>
+<div class="how">岩石はできたときの地磁気の向きを記録している（残留磁化）。地磁気の極は長い時間で平均すると自転軸の極に一致するとみなし、地球の磁場を中心の棒磁石で近似すると、伏角 $I$ と緯度 $\varphi$ の間に $\tan I=2\tan\varphi$ が成り立つ（式は問題文で与えられる）。<b>伏角が大きいほど高緯度</b>。<br>
+各大陸の岩石から求めた過去の磁極の位置をつないだ線（見かけの極移動曲線）が大陸ごとに異なる → 動いたのは大陸の方（大陸移動の証拠）。</div>
+<div class="pex">現在北緯 $35^\circ$ にある地域で、1億年前の岩石の残留磁化の伏角は下向きに $30^\circ$ であった。当時この地域は北緯何度にあったか。$\tan30^\circ=0.577$、$\tan16^\circ=0.287$ とする。<br>
+<b>解</b>　$\tan\varphi=\frac{\tan30^\circ}{2}=\frac{0.577}{2}\fallingdotseq0.289$。これは $\tan16^\circ$ にほぼ等しいので、当時は<b>約北緯 $16^\circ$</b>（その後、約 $19^\circ$ 北へ移動した）。</div>
+<div class="pnote">伏角が上向きなら、当時は南半球にあった（地磁気が現在と同じ向きだった場合）。</div>
+</div>
+
+<div class="pat"><h4>マグニチュードが1大きいとエネルギー約32倍、2大きいと1000倍</h4>
+<div class="when">マグニチュードの差からエネルギーの比を求める。震度との違いを問われる。</div>
+<div class="how">$\log_{10}E=4.8+1.5M$（$E$ の単位は J）。差が $\Delta M$ ならエネルギーは $10^{1.5\Delta M}$ 倍。<br>
+<b>$\Delta M=1$ で $10^{1.5}\fallingdotseq32$ 倍、$\Delta M=2$ で $10^3=1000$ 倍、$\Delta M=0.2$ で $10^{0.3}\fallingdotseq2$ 倍</b>。<br>
+マグニチュード＝地震そのものの規模（1つの地震に1つの値）。震度＝各地点の揺れの強さ（0〜7の10階級。5と6は弱・強に分かれる）。</div>
+<div class="pex">M8.2 の地震のエネルギーは、M7.0 の地震のエネルギーの約何倍か。<br>
+<b>解</b>　$\Delta M=1.2$ より $10^{1.5\times1.2}=10^{1.8}\fallingdotseq63$ 倍（「1.0 で32倍、0.2 で2倍」から約64倍と見積もってもよい）。</div>
+<div class="pnote">「M が1大きいとエネルギーは10倍」は誤り（約32倍）。震度は震源からの距離や地盤のかたさで変わり、M が大きくても遠ければ小さい。</div>
+</div>
+
+<div class="pat"><h4>日本付近の地震は「プレート境界・沈み込むプレート内・陸のプレート内」の3タイプ</h4>
+<div class="when">震源の分布図・断面図から、地震のタイプやプレートの沈み込みの様子を読み取る。</div>
+<div class="how">・<b>プレート境界の地震（海溝型）</b>：海溝付近で、沈み込む海洋プレートと陸のプレートの境界がずれる（低角の逆断層）。M8〜9級になり、津波を伴うことがある。<br>
+・<b>沈み込むプレート内の地震</b>：沈み込んだ海洋プレートの内部で起こる。震源は海溝から陸側へ向かって深くなる面（<b>和達-ベニオフ帯</b>、深さ約700 kmまで）に沿って並ぶ。<br>
+・<b>陸のプレート内の地震（内陸地殻内地震）</b>：深さ約20 kmより浅い活断層で起こる。M7程度でも直下では大きな被害が出る。</div>
+<div class="pex">東北日本を横切る東西の断面で震源の分布を見ると、日本海溝付近の浅い所から西へ向かうほど深くなる面に沿って並んでいた。この面は何を表すか。また、そのプレートはどちらへ沈み込んでいるか。<br>
+<b>解</b>　沈み込む海洋プレート（太平洋プレート）の位置（和達-ベニオフ帯）。プレートは<b>西</b>へ沈み込んでいる。</div>
+<div class="pnote">深さ約300 kmより深い地震（深発地震）は、プレートが沈み込んでいる所でしか起こらない。海嶺の地震はすべて浅い。</div>
+</div>
+
+<div class="pat"><h4>震源距離は大森公式 $D=kT$、発震時刻は P波の到着時刻から逆算</h4>
+<div class="when">初期微動継続時間（PS時間）から震源距離を求める。地震の発生時刻（発震時刻）を求める。</div>
+<div class="how">P波の速さ $V_p$、S波の速さ $V_s$、震源距離 $D$ とすると、初期微動継続時間 $T=\frac{D}{V_s}-\frac{D}{V_p}$。<br>
+これを解いて $D=\frac{V_pV_s}{V_p-V_s}\,T=kT$（<b>大森公式</b>。$k$ は地下の地震波の速さで決まる定数）。<br>
+発震時刻＝P波の到着時刻 $-\frac{D}{V_p}$。</div>
+<div class="pex">P波の速さを $6.0\ \mathrm{km/s}$、S波の速さを $3.5\ \mathrm{km/s}$ とする。ある観測点で P波が10時15分20.0秒、S波が10時15分32.0秒に到着した。震源距離と発震時刻を求めよ。<br>
+<b>解</b>　$T=12.0\ \mathrm s$。$k=\frac{6.0\times3.5}{6.0-3.5}=8.4\ \mathrm{km/s}$ より $D=8.4\times12.0=100.8\fallingdotseq1.0\times10^2\ \mathrm{km}$。P波は震源から $\frac{100.8}{6.0}=16.8\ \mathrm s$ かかったので、発震時刻は<b>10時15分03.2秒</b>。</div>
+<div class="pnote">大森公式で求まるのは<b>震源</b>距離で、震央距離ではない。初期微動継続時間は震源距離に比例する。</div>
+</div>
+
+<div class="pat"><h4>震央は3つの円の共通弦の交点、震源の深さは三平方の定理</h4>
+<div class="when">3地点以上の震源距離から、震央の位置と震源の深さを求める（作図）。</div>
+<div class="how">①各観測点を中心に、震源距離を半径とする円をかく。②2つずつの円の交点を結ぶ線（共通弦）を3本引くと、1点で交わる → そこが<b>震央</b>。③震央距離 $\Delta$ と震源距離 $D$ から、震源の深さ $h=\sqrt{D^2-\Delta^2}$。</div>
+<div class="pex">観測点 A・B・C の震源距離を半径とする円をかき、震央を求めた（右図）。A の震源距離は $50\ \mathrm{km}$、震央は A から $30\ \mathrm{km}$ の位置にあった。震源の深さを求めよ。
+<div class="two"><div><b>解</b>　震源は震央の真下にあるので、A・震央・震源は直角三角形をつくる。<br>
+$h=\sqrt{50^2-30^2}=40\ \mathrm{km}$。<br><br>
+（図の円は、震央の真下 $h$ の深さにある震源から各観測点までの距離を半径とする円。3本の共通弦は必ず1点（震央）で交わる。）</div>
+<div style="flex:0 0 66mm"><svg class="fig" width="248" height="239.4" viewBox="0 0 248 239.4"><circle cx="75.1" cy="87.1" r="71.1" fill="none" stroke="#1f5f8f" stroke-width="1.1"/><circle cx="75.1" cy="87.1" r="2.2" fill="#1f5f8f" stroke="#1f5f8f" stroke-width="1"/><circle cx="163.6" cy="84.4" r="80.4" fill="none" stroke="#2e8b57" stroke-width="1.1"/><circle cx="163.6" cy="84.4" r="2.2" fill="#2e8b57" stroke="#2e8b57" stroke-width="1"/><circle cx="120.9" cy="158.9" r="76.5" fill="none" stroke="#d9701e" stroke-width="1.1"/><circle cx="120.9" cy="158.9" r="2.2" fill="#d9701e" stroke="#d9701e" stroke-width="1"/><line x1="109.5" y1="24.9" x2="113.2" y2="147.1" stroke="#444" stroke-width="1" stroke-dasharray="4,2"/><line x1="197.4" y1="157.4" x2="83.5" y2="92.1" stroke="#444" stroke-width="1" stroke-dasharray="4,2"/><line x1="44.8" y1="151.4" x2="146.2" y2="86.6" stroke="#444" stroke-width="1" stroke-dasharray="4,2"/><line x1="75.1" y1="87.1" x2="112" y2="108.5" stroke="#1f5f8f" stroke-width="1.2"/><text x="85.6" y="112.8" font-size="9.5" text-anchor="middle" fill="#1f5f8f">30 km</text><line x1="75.1" y1="87.1" x2="20.6" y2="41.4" stroke="#1f5f8f" stroke-width="0.9" stroke-dasharray="3,2"/><text x="41.9" y="66.3" font-size="9.5" text-anchor="end" fill="#1f5f8f">50 km</text><circle cx="112" cy="108.5" r="3.2" fill="#c0392b" stroke="#c0392b" stroke-width="1"/><text x="116" y="122.5" font-size="10" fill="#c0392b">震央</text><text x="62.1" y="89.1" font-size="11" fill="#1f5f8f">A</text><text x="168.6" y="80.4" font-size="11" fill="#2e8b57">B</text><text x="126.9" y="170.9" font-size="11" fill="#d9701e">C</text></svg></div></div></div>
+<div class="pnote">震源が深いほど、どの円も大きくなる。円が交わらないときは震源距離の読み取りを見直す。</div>
+</div>
+
+<div class="box memo"><table class="l w">
+<tr><th>項目</th><th>公式・事実</th></tr>
+<tr><td>プレート境界</td><td>発散：海嶺・地溝帯／収束：海溝と島弧（沈み込み帯）、大山脈（衝突帯）／すれ違い：トランスフォーム断層</td></tr>
+<tr><td>海洋底</td><td>海嶺から遠いほど古い・深い・堆積物が厚い。地磁気の縞模様は海嶺に対称。最古でも約2億年</td></tr>
+<tr><td>拡大速度</td><td>片側 $v=$ 距離÷年代、両側が離れる速さはその2倍。$1\ \mathrm{km}$/100万年 $=1\ \mathrm{mm}$/年</td></tr>
+<tr><td>ホットスポット</td><td>遠い島ほど古い。プレートは古い島の方向へ動く</td></tr>
+<tr><td>古地磁気</td><td>$\tan I=2\tan\varphi$。見かけの極移動曲線が大陸ごとに違う → 大陸移動</td></tr>
+<tr><td>マグニチュード</td><td>$\log_{10}E=4.8+1.5M$。$\Delta M=1$ で約32倍、$\Delta M=2$ で1000倍</td></tr>
+<tr><td>震度</td><td>0・1・2・3・4・5弱・5強・6弱・6強・7 の10階級（地点ごとの揺れ）</td></tr>
+<tr><td>大森公式</td><td>$D=kT$、$k=\frac{V_pV_s}{V_p-V_s}$。発震時刻＝P波到着時刻 $-\frac D{V_p}$</td></tr>
+<tr><td>震源の深さ</td><td>$h=\sqrt{D^2-\Delta^2}$（$D$：震源距離、$\Delta$：震央距離）</td></tr>
+</table></div>
+
+<!--CH 3-->
+<div class="pat"><h4>マグマは「圧力の低下」か「水の付加」でマントルが部分融解してできる</h4>
+<div class="when">海嶺・沈み込み帯・ホットスポットでマグマができるしくみを説明する。</div>
+<div class="how">マントルのかんらん岩は、ふつうは融け始める温度より低温なので固体。次のどちらかで融け始める温度を超えると、一部が融けて玄武岩質マグマができる（部分融解）。<br>
+・<b>海嶺・ホットスポット</b>：高温のマントルが上昇 → 温度があまり下がらないまま<b>圧力が下がる</b> → 融け始める温度が下がって融ける（減圧融解）。<br>
+・<b>沈み込み帯</b>：沈み込む海洋プレートから<b>水</b>が放出されて上のマントルに加わる → かんらん岩の融け始める温度が下がって融ける。<br>
+沈み込み帯の火山は海溝と平行に帯状に並び、その海溝側の境界線が<b>火山前線</b>。火山前線の下では、沈み込んだプレートの上面が深さ約100 kmにある。</div>
+<div class="pex">次の地域でマグマが発生するおもな原因を、(a) 圧力の低下、(b) 水の付加 から選べ。(1) アイスランド　(2) 日本列島　(3) ハワイ<br>
+<b>解</b>　(1) a（海嶺）　(2) b（沈み込み帯）　(3) a（ホットスポット）</div>
+<div class="pnote">「マントルは液体」は誤り。マントルは固体で、条件がそろった所でごく一部が融けてマグマになる。火山前線より海溝側には火山がない。</div>
+</div>
+
+<div class="pat"><h4>$\mathrm{SiO_2}$ が多く温度が低いマグマほど粘りけが強い → 噴火と火山の形が決まる</h4>
+<div class="when">火山の形・噴火のようす・溶岩の色から、マグマの性質を推定する。</div>
+<div class="how"><table class="l w">
+<tr><th>マグマ</th><th>玄武岩質</th><th>安山岩質</th><th>デイサイト質・流紋岩質</th></tr>
+<tr><td>$\mathrm{SiO_2}$・温度</td><td>少ない・高温</td><td>中間</td><td>多い・低温</td></tr>
+<tr><td>粘性</td><td>小さい</td><td>中間</td><td>大きい</td></tr>
+<tr><td>噴火</td><td>穏やか、溶岩流</td><td>爆発と溶岩流をくり返す</td><td>爆発的、火砕流</td></tr>
+<tr><td>火山の形</td><td>盾状火山・溶岩台地</td><td>成層火山</td><td>溶岩ドーム</td></tr>
+<tr><td>例</td><td>マウナロア・キラウエア</td><td>浅間山・桜島</td><td>昭和新山・平成新山</td></tr>
+</table>
+マグマに溶けている水などの揮発性成分が多いほど、噴火は爆発的になりやすい。大規模な噴火で地下のマグマが大量に抜けると、陥没してカルデラができる（阿蘇山など）。</div>
+<div class="pex">白っぽい溶岩でできたドーム状の火山がある。このマグマの $\mathrm{SiO_2}$ の量と粘性、起こしやすい現象を推定せよ。<br>
+<b>解</b>　$\mathrm{SiO_2}$ が多く（デイサイト質〜流紋岩質）、粘性が大きい。爆発的な噴火や、溶岩ドームの崩壊による火砕流を起こしやすい。</div>
+<div class="pnote">火山の形は粘性だけでは決まらない。富士山は玄武岩質だが、溶岩と火山砕屑物が交互に積み重なった成層火山。</div>
+</div>
+
+<div class="pat"><h4>火成岩は「組織（でき方）× $\mathrm{SiO_2}$ の量」の表で名前を決める</h4>
+<div class="when">組織・鉱物組成・$\mathrm{SiO_2}$ の量から岩石名を答える。</div>
+<div class="how">①<b>組織で縦（でき方）を決める</b>：斑状組織（斑晶＋石基）→ <b>火山岩</b>（地表付近で急に冷えた）。等粒状組織（大きな結晶だけ）→ <b>深成岩</b>（地下深くでゆっくり冷えた）。<br>
+②<b>$\mathrm{SiO_2}$ の量・鉱物・色で横を決める</b>：苦鉄質（約45〜52%）／中間質（約52〜63%）／ケイ長質（約63%以上）。<br>
+火山岩は 玄武岩・安山岩・流紋岩（デイサイト）、深成岩は 斑れい岩・閃緑岩・花こう岩 の順。石英があればケイ長質、かんらん石があれば苦鉄質。</div>
+<div class="pex">次の岩石の名称を答えよ。(1) 斑状組織で、斑晶は輝石と斜長石、$\mathrm{SiO_2}$ は55%　(2) 等粒状組織で、石英・カリ長石・斜長石・黒雲母からなる　(3) 等粒状組織で、かんらん石・輝石・斜長石からなり黒っぽい<br>
+<b>解</b>　(1) 安山岩　(2) 花こう岩　(3) 斑れい岩</div>
+<div class="pnote">斑状組織の斑晶は地下でゆっくり成長した結晶、石基は噴出後に急冷してできた細かい結晶や火山ガラス。斑状組織は<b>2段階の冷却</b>を表す。</div>
+</div>
+
+<div class="pat"><h4>色指数・化学組成で苦鉄質かケイ長質かを判定する</h4>
+<div class="when">薄片の鉱物の割合（色指数）や化学分析値から、岩石の種類を判定する。</div>
+<div class="how"><b>色指数</b>＝岩石中の有色鉱物の体積の割合（%）。苦鉄質岩ほど大きく、ケイ長質岩ほど小さい。薄片上の格子点で鉱物を数えると、点の数の割合 $\fallingdotseq$ 体積の割合。<br>
+苦鉄質岩ほど $\mathrm{MgO}$・$\mathrm{FeO}$・$\mathrm{CaO}$ が多く、黒っぽく密度が大きい。ケイ長質岩ほど $\mathrm{SiO_2}$・$\mathrm{Na_2O}$・$\mathrm{K_2O}$ が多く、白っぽく密度が小さい。</div>
+<div class="pex">等粒状組織の岩石の薄片で500点の鉱物を調べたところ、斜長石260点、輝石160点、かんらん石80点であった。色指数を求め、岩石名を答えよ。<br>
+<b>解</b>　有色鉱物は輝石とかんらん石で240点。色指数 $=\frac{240}{500}\times100=48$。有色鉱物が多く、かんらん石を含み石英を含まないので苦鉄質。等粒状組織なので<b>斑れい岩</b>。</div>
+<div class="pnote">斜長石は無色鉱物。黒雲母は有色鉱物だがケイ長質岩に多い。色指数だけでなく有色鉱物の種類にも注目する。</div>
+</div>
+
+<div class="pat"><h4>造岩鉱物は $\mathrm{SiO_4}$ 四面体のつながり方で整理する</h4>
+<div class="when">造岩鉱物の結晶構造、へき開、化学組成の違いを問われる。</div>
+<div class="how">ケイ酸塩鉱物の基本単位は、Si 1個を O 4個が囲む $\mathrm{SiO_4}$ 四面体。つながり方で分類できる。<br>
+・かんらん石：<b>独立</b>（四面体どうしは Mg・Fe のイオンで結びつく）<br>
+・輝石：<b>1本の鎖</b>（単鎖）　・角閃石：<b>2本の鎖</b>（複鎖）<br>
+・黒雲母：<b>平面の網</b> → 一方向に薄くはがれる（へき開）<br>
+・石英・長石：<b>立体の網</b><br>
+つながりが多いほど、O に対する Si の割合が大きい。有色鉱物（かんらん石・輝石・角閃石・黒雲母）は Fe・Mg を含み、無色鉱物（石英・長石）は含まない。</div>
+<div class="pex">黒雲母が薄くはがれやすい理由を、結晶構造から説明せよ。<br>
+<b>解</b>　$\mathrm{SiO_4}$ 四面体が平面状の網目につながった層が重なった構造をもち、層と層の間の結合が弱いため、層に平行に薄くはがれる。</div>
+<div class="pnote">石英は $\mathrm{SiO_2}$ だけからなり、四面体がすべての O を共有している。</div>
+</div>
+
+<div class="pat"><h4>固溶体は高温側の成分から晶出：斜長石は Ca → Na、かんらん石は Mg → Fe</h4>
+<div class="when">斑晶の累帯構造や、晶出する鉱物の組成の変化を問われる。</div>
+<div class="how">結晶構造を変えずに、似た大きさのイオンがたがいに置き換わる鉱物を<b>固溶体</b>という。<br>
+・かんらん石：$\mathrm{Mg_2SiO_4}$（高温側）〜 $\mathrm{Fe_2SiO_4}$。$\mathrm{Mg^{2+}}$ と $\mathrm{Fe^{2+}}$ が置き換わる。<br>
+・斜長石：$\mathrm{CaAl_2Si_2O_8}$（高温側）〜 $\mathrm{NaAlSi_3O_8}$。$\mathrm{Ca^{2+}}$・$\mathrm{Al^{3+}}$ の組と $\mathrm{Na^{+}}$・$\mathrm{Si^{4+}}$ の組が置き換わる。<br>
+マグマが冷えるにつれて、晶出する結晶は低温側の成分に富むようになる → 斑晶は<b>中心ほど Ca（Mg）に富み、外側ほど Na（Fe）に富む</b>（累帯構造）。</div>
+<div class="pex">安山岩中の斜長石の斑晶は、中心部が Ca に富み、外側ほど Na に富んでいた。この理由を説明せよ。<br>
+<b>解</b>　斜長石は高温ほど Ca に富む組成のものが晶出する固溶体である。マグマが冷えていく間に結晶が成長したため、高温でできた中心部ほど Ca に富み、低温で成長した外側ほど Na に富む。</div>
+<div class="pnote">$\mathrm{Ca^{2+}}$ と $\mathrm{Na^+}$ だけを入れかえると電荷がそろわない。$\mathrm{Al^{3+}}$ と $\mathrm{Si^{4+}}$ の入れかえと組になっている。</div>
+</div>
+
+<div class="pat"><h4>結晶分化：早く晶出する鉱物が除かれると、残りのマグマは $\mathrm{SiO_2}$ に富む</h4>
+<div class="when">玄武岩質マグマから安山岩質・流紋岩質のマグマができるしくみ。残ったマグマの組成の計算。</div>
+<div class="how">晶出の順（ボーエンの反応系列）：有色鉱物は かんらん石 → 輝石 → 角閃石 → 黒雲母、無色鉱物は Ca に富む斜長石 → Na に富む斜長石、最後に カリ長石・石英。<br>
+早く晶出する鉱物（かんらん石など）はマグマより $\mathrm{SiO_2}$ が少なく $\mathrm{MgO}$・$\mathrm{FeO}$ が多い → それが沈んで除かれると、<b>残ったマグマは $\mathrm{SiO_2}$ に富み $\mathrm{MgO}$・$\mathrm{FeO}$ に乏しくなる</b>（結晶分化作用）。<br>
+残液の含有率 $=\dfrac{\text{もとの量}-\text{結晶に入った量}}{\text{残ったマグマの量}}\times100$。</div>
+<div class="pex">$\mathrm{SiO_2}$ を50%含む玄武岩質マグマ $100\ \mathrm g$ から、$\mathrm{SiO_2}$ を40%含むかんらん石が $20\ \mathrm g$ 晶出して取り除かれた。残ったマグマの $\mathrm{SiO_2}$ の割合を求めよ。<br>
+<b>解</b>　$\mathrm{SiO_2}$ は $50-20\times0.40=42\ \mathrm g$、マグマは $100-20=80\ \mathrm g$。$\frac{42}{80}\times100=52.5\fallingdotseq53\%$。</div>
+<div class="pnote">$\mathrm{SiO_2}$ に富むマグマは、地殻の岩石が融けたり、マグマが周囲の岩石を取り込んだりしてもできる。結晶分化だけが原因ではない。</div>
+</div>
+
+<div class="pat"><h4>火山砕屑物は粒径で区分：$2\ \mathrm{mm}$ と $64\ \mathrm{mm}$ が境目</h4>
+<div class="when">火山噴出物の分類、軽石とスコリアの区別、火山ガスの成分を問われる。</div>
+<div class="how">火山噴出物＝溶岩・火山砕屑物（テフラ）・火山ガス。<br>
+火山砕屑物の粒径：<b>火山灰 2 mm 以下、火山礫 2〜64 mm、火山岩塊 64 mm 以上</b>。特徴的なもの：火山弾（空中で冷えて特有の形になったもの）、軽石（白っぽく多孔質、ケイ長質）、スコリア（黒っぽく多孔質、苦鉄質）。<br>
+火山ガスの大部分は<b>水蒸気</b>で、ほかに二酸化炭素・二酸化硫黄・硫化水素など。マグマが上昇して圧力が下がると、溶けていたガスが泡になる（発泡）→ 爆発的噴火や多孔質な噴出物のもと。<br>
+火山灰層は短時間に広い範囲に堆積するので、地層の対比に使う<b>鍵層</b>になる。</div>
+<div class="pex">(1) 直径 $30\ \mathrm{mm}$ で、黒っぽく多孔質な噴出物は何と呼ばれるか。(2) 火山ガスに最も多く含まれる成分は何か。<br>
+<b>解</b>　(1) 大きさは火山礫の範囲で、黒っぽく多孔質なので<b>スコリア</b>。(2) 水蒸気（$\mathrm{H_2O}$）</div>
+<div class="pnote">火山灰は燃えかすの「灰」ではない。マグマが砕けて急冷した細かい岩片・鉱物・火山ガラス。</div>
+</div>
+
+<div class="box memo"><table class="l w">
+<tr><th>火成岩の分類</th><th>苦鉄質</th><th>中間質</th><th>ケイ長質</th></tr>
+<tr><td>$\mathrm{SiO_2}$ の量</td><td>約45〜52%</td><td>約52〜63%</td><td>約63%以上</td></tr>
+<tr><td>火山岩（斑状組織）</td><td>玄武岩</td><td>安山岩</td><td>流紋岩（デイサイト）</td></tr>
+<tr><td>深成岩（等粒状組織）</td><td>斑れい岩</td><td>閃緑岩</td><td>花こう岩</td></tr>
+<tr><td>おもな鉱物</td><td>かんらん石・輝石・Ca に富む斜長石</td><td>輝石・角閃石・斜長石</td><td>石英・カリ長石・Na に富む斜長石・黒雲母</td></tr>
+<tr><td>色指数・密度</td><td>大きい（黒っぽい）・大</td><td>中間</td><td>小さい（白っぽい）・小</td></tr>
+<tr><td>マグマ</td><td>高温・粘性小・穏やかな噴火</td><td>中間</td><td>低温・粘性大・爆発的な噴火</td></tr>
+<tr><td>火山の形</td><td>盾状火山・溶岩台地</td><td>成層火山</td><td>溶岩ドーム</td></tr>
+<tr><td colspan="4">$\mathrm{SiO_2}$ 約45%未満の超苦鉄質岩：かんらん岩（おもにかんらん石。上部マントルの岩石）。晶出順：かんらん石 → 輝石 → 角閃石 → 黒雲母、Ca 斜長石 → Na 斜長石 → カリ長石・石英</td></tr>
+</table></div>
+
+<!--CH 4-->
+<div class="pat"><h4>流水の作用は「流速と粒径の関係図」で、侵食・運搬・堆積を判断する</h4>
+<div class="when">流速と粒子の大きさから、侵食・運搬・堆積のどれが起こるかを判断する（ユールストローム図など）。</div>
+<div class="how">・<b>侵食され始める流速</b>：砂（粒径約0.1〜0.5 mm）で最も小さい。それより粗いれきは重いため、細かい泥は粒子どうしがくっつき合うため、<b>大きな流速が必要</b>。<br>
+・<b>堆積し始める流速</b>：粒径が小さいほど小さい。泥はいったん運ばれると、流れがほとんどない所まで運ばれてからゆっくり沈む。<br>
+→ 川の上流から河口・沖合へ向かって、れき → 砂 → 泥 の順に堆積しやすい。</div>
+<div class="pex">泥・砂・れきが混じった川底で、流速をしだいに大きくした。(1) 最初に動き出すのはどれか。(2) その後、流速をしだいに小さくしたとき、最後まで運搬され続けるのはどれか。<br>
+<b>解</b>　(1) 砂　(2) 泥</div>
+<div class="pnote">「粒が小さいほど侵食されやすい」は誤り。泥は粘着力があるので、砂よりも侵食されにくい。</div>
+</div>
+
+<div class="pat"><h4>堆積岩は「何がたまったか」で分け、砕屑岩は粒径 $2\ \mathrm{mm}$・$\frac1{16}\ \mathrm{mm}$ で分ける</h4>
+<div class="when">堆積岩の名称・成因、石灰岩とチャートの見分け方を問われる。</div>
+<div class="how">・<b>砕屑岩</b>：れき岩（粒径 2 mm 以上）、砂岩（$\frac1{16}$〜2 mm）、泥岩（$\frac1{16}$ mm 以下。シルト岩・粘土岩）。<br>
+・<b>火山砕屑岩</b>：凝灰岩（火山灰が固まったもの）、凝灰角礫岩など。<br>
+・<b>生物岩</b>：石灰岩（サンゴ・フズリナ・有孔虫などの $\mathrm{CaCO_3}$ の殻）、チャート（放散虫などの $\mathrm{SiO_2}$ の殻）。<br>
+・<b>化学岩</b>：水に溶けていた成分の沈殿（岩塩・石こう、石灰岩やチャートの一部）。<br>
+堆積物は、圧縮と粒子の間への鉱物の沈殿（セメント化）で固まって岩石になる（続成作用）。<br>
+見分け方：<b>希塩酸をかけて泡（$\mathrm{CO_2}$）が出れば石灰岩</b>。チャートは泡が出ず、非常にかたく鋼鉄のくぎで傷がつかない。</div>
+<div class="pex">白っぽい堆積岩 X・Y がある。X に希塩酸をかけると泡が出たが、Y では出なかった。Y は鉄くぎで傷がつかなかった。X・Y の岩石名とおもな成分を答えよ。<br>
+<b>解</b>　X：石灰岩（$\mathrm{CaCO_3}$）、Y：チャート（$\mathrm{SiO_2}$）</div>
+<div class="pnote">砕屑物の区分は「何の粒か」ではなく「粒の大きさ」による。石英の粒でも 2 mm 以上ならばれき。</div>
+</div>
+
+<div class="pat"><h4>地層の上下は堆積構造で判定する（級化層理・斜交葉理・流痕）</h4>
+<div class="when">急傾斜した地層や褶曲した地層で、どちらが上位（新しい）かを判定する。</div>
+<div class="how"><div class="two"><div>・<b>級化層理</b>：1枚の層の中で下ほど粗く上ほど細かい（混濁流から粗い粒が先に沈む）→ <b>細かい方が上</b>。<br>
+・<b>斜交葉理</b>：葉理が上の面で切られ、下の面には接するように曲がる → <b>切られている方が上</b>。</div>
+<div style="flex:0 0 70mm"><svg class="fig" width="262" height="112" viewBox="0 0 262 112"><rect x="12" y="18" width="100" height="39" fill="#f3e6d3" stroke="#7a4a1f" stroke-width="1"/><circle cx="17.6" cy="54" r="2.9" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="25.4" cy="54" r="2.9" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="33" cy="54" r="2.9" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="40.9" cy="54" r="2.9" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="48.8" cy="54" r="2.9" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="55.9" cy="54" r="2.9" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="62.9" cy="54" r="2.9" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="71.2" cy="54" r="2.9" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="78.6" cy="54" r="2.9" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="85.9" cy="54" r="2.9" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="94.4" cy="54" r="2.9" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="102.1" cy="54" r="2.9" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="110.4" cy="54" r="2.9" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="18.4" cy="47.2" r="2.4" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="24.7" cy="47.2" r="2.4" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="31.7" cy="47.2" r="2.4" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="39.1" cy="47.2" r="2.4" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="46" cy="47.2" r="2.4" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="53.2" cy="47.2" r="2.4" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="60.3" cy="47.2" r="2.4" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="66.5" cy="47.2" r="2.4" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="73.7" cy="47.2" r="2.4" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="80.7" cy="47.2" r="2.4" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="87.3" cy="47.2" r="2.4" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="93.4" cy="47.2" r="2.4" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="100.8" cy="47.2" r="2.4" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="107.6" cy="47.2" r="2.4" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="18.7" cy="41.3" r="2.1" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="25.1" cy="41.3" r="2.1" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="31.8" cy="41.3" r="2.1" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="37.7" cy="41.3" r="2.1" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="44.2" cy="41.3" r="2.1" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="50.1" cy="41.3" r="2.1" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="56.9" cy="41.3" r="2.1" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="63.5" cy="41.3" r="2.1" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="68.9" cy="41.3" r="2.1" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="74.4" cy="41.3" r="2.1" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="80.1" cy="41.3" r="2.1" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="86.8" cy="41.3" r="2.1" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="92.8" cy="41.3" r="2.1" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="99" cy="41.3" r="2.1" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="104.8" cy="41.3" r="2.1" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="110.9" cy="41.3" r="2.1" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="16.8" cy="36.2" r="1.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="22.3" cy="36.2" r="1.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="27.8" cy="36.2" r="1.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="33.8" cy="36.2" r="1.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="39.4" cy="36.2" r="1.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="45.4" cy="36.2" r="1.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="51.3" cy="36.2" r="1.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="57.4" cy="36.2" r="1.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="63.1" cy="36.2" r="1.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="68" cy="36.2" r="1.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="73.9" cy="36.2" r="1.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="79.9" cy="36.2" r="1.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="85.9" cy="36.2" r="1.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="91.4" cy="36.2" r="1.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="97.1" cy="36.2" r="1.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="102" cy="36.2" r="1.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="107.9" cy="36.2" r="1.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="16.3" cy="31.8" r="1.4" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="20.4" cy="31.8" r="1.4" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="25.7" cy="31.8" r="1.4" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="31.2" cy="31.8" r="1.4" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="35.4" cy="31.8" r="1.4" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="40.6" cy="31.8" r="1.4" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="45.3" cy="31.8" r="1.4" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="49.6" cy="31.8" r="1.4" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="54" cy="31.8" r="1.4" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="59.2" cy="31.8" r="1.4" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="64.6" cy="31.8" r="1.4" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="68.7" cy="31.8" r="1.4" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="73.6" cy="31.8" r="1.4" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="77.7" cy="31.8" r="1.4" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="82.9" cy="31.8" r="1.4" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="87.4" cy="31.8" r="1.4" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="92.7" cy="31.8" r="1.4" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="98.3" cy="31.8" r="1.4" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="103" cy="31.8" r="1.4" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="108.6" cy="31.8" r="1.4" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="15.4" cy="27.9" r="1.2" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="19.8" cy="27.9" r="1.2" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="23.4" cy="27.9" r="1.2" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="27.2" cy="27.9" r="1.2" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="31.3" cy="27.9" r="1.2" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="35.8" cy="27.9" r="1.2" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="39.5" cy="27.9" r="1.2" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="43.1" cy="27.9" r="1.2" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="48" cy="27.9" r="1.2" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="52" cy="27.9" r="1.2" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="56.9" cy="27.9" r="1.2" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="61.8" cy="27.9" r="1.2" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="65.9" cy="27.9" r="1.2" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="70.1" cy="27.9" r="1.2" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="74.4" cy="27.9" r="1.2" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="78.9" cy="27.9" r="1.2" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="83.3" cy="27.9" r="1.2" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="87.7" cy="27.9" r="1.2" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="92.1" cy="27.9" r="1.2" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="97.1" cy="27.9" r="1.2" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="101.4" cy="27.9" r="1.2" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="105.5" cy="27.9" r="1.2" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="110.1" cy="27.9" r="1.2" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="15.8" cy="24.6" r="0.9" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="20.4" cy="24.6" r="0.9" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="24.3" cy="24.6" r="0.9" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="28.2" cy="24.6" r="0.9" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="31.3" cy="24.6" r="0.9" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="35" cy="24.6" r="0.9" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="38.9" cy="24.6" r="0.9" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="42" cy="24.6" r="0.9" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="46" cy="24.6" r="0.9" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="50.1" cy="24.6" r="0.9" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="53.2" cy="24.6" r="0.9" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="57.3" cy="24.6" r="0.9" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="61" cy="24.6" r="0.9" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="65.1" cy="24.6" r="0.9" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="68.7" cy="24.6" r="0.9" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="72.9" cy="24.6" r="0.9" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="77.1" cy="24.6" r="0.9" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="80.2" cy="24.6" r="0.9" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="83.4" cy="24.6" r="0.9" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="87.5" cy="24.6" r="0.9" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="92" cy="24.6" r="0.9" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="95.4" cy="24.6" r="0.9" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="99.2" cy="24.6" r="0.9" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="103.2" cy="24.6" r="0.9" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="106.7" cy="24.6" r="0.9" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="110.4" cy="24.6" r="0.9" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="15.9" cy="21.7" r="0.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="19.4" cy="21.7" r="0.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="22.6" cy="21.7" r="0.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="25.9" cy="21.7" r="0.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="29.7" cy="21.7" r="0.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="32.5" cy="21.7" r="0.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="36" cy="21.7" r="0.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="39.8" cy="21.7" r="0.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="43" cy="21.7" r="0.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="46" cy="21.7" r="0.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="49.9" cy="21.7" r="0.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="53" cy="21.7" r="0.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="55.9" cy="21.7" r="0.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="59.3" cy="21.7" r="0.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="63" cy="21.7" r="0.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="65.9" cy="21.7" r="0.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="69.1" cy="21.7" r="0.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="72.3" cy="21.7" r="0.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="76.2" cy="21.7" r="0.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="79.6" cy="21.7" r="0.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="83.5" cy="21.7" r="0.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="86.5" cy="21.7" r="0.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="89.7" cy="21.7" r="0.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="93.4" cy="21.7" r="0.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="97.4" cy="21.7" r="0.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="100.8" cy="21.7" r="0.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="103.8" cy="21.7" r="0.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="106.7" cy="21.7" r="0.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="110.2" cy="21.7" r="0.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><rect x="12" y="57" width="100" height="39" fill="#f3e6d3" stroke="#7a4a1f" stroke-width="1"/><circle cx="19.3" cy="93" r="2.9" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="27.6" cy="93" r="2.9" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="34.9" cy="93" r="2.9" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="42.3" cy="93" r="2.9" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="50.5" cy="93" r="2.9" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="58.4" cy="93" r="2.9" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="66.7" cy="93" r="2.9" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="74.2" cy="93" r="2.9" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="81.4" cy="93" r="2.9" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="88.8" cy="93" r="2.9" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="97" cy="93" r="2.9" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="104.4" cy="93" r="2.9" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="111.9" cy="93" r="2.9" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="17.7" cy="86.2" r="2.4" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="24.4" cy="86.2" r="2.4" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="31.9" cy="86.2" r="2.4" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="38.2" cy="86.2" r="2.4" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="44.3" cy="86.2" r="2.4" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="51.8" cy="86.2" r="2.4" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="59.2" cy="86.2" r="2.4" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="66.8" cy="86.2" r="2.4" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="73.6" cy="86.2" r="2.4" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="81.1" cy="86.2" r="2.4" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="88.6" cy="86.2" r="2.4" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="95" cy="86.2" r="2.4" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="102.2" cy="86.2" r="2.4" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="109.5" cy="86.2" r="2.4" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="17.6" cy="80.3" r="2.1" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="23.4" cy="80.3" r="2.1" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="29.2" cy="80.3" r="2.1" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="34.8" cy="80.3" r="2.1" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="40.2" cy="80.3" r="2.1" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="46.4" cy="80.3" r="2.1" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="52.2" cy="80.3" r="2.1" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="58.7" cy="80.3" r="2.1" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="64.1" cy="80.3" r="2.1" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="70.7" cy="80.3" r="2.1" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="77.1" cy="80.3" r="2.1" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="83.8" cy="80.3" r="2.1" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="90.4" cy="80.3" r="2.1" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="97.1" cy="80.3" r="2.1" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="103.2" cy="80.3" r="2.1" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="108.6" cy="80.3" r="2.1" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="16.2" cy="75.2" r="1.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="21.3" cy="75.2" r="1.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="26.9" cy="75.2" r="1.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="32.3" cy="75.2" r="1.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="37.6" cy="75.2" r="1.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="43.6" cy="75.2" r="1.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="49.2" cy="75.2" r="1.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="54.3" cy="75.2" r="1.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="59.3" cy="75.2" r="1.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="65.2" cy="75.2" r="1.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="70.6" cy="75.2" r="1.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="76.4" cy="75.2" r="1.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="81.5" cy="75.2" r="1.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="86.4" cy="75.2" r="1.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="91.9" cy="75.2" r="1.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="97.7" cy="75.2" r="1.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="102.6" cy="75.2" r="1.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="108.4" cy="75.2" r="1.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="17.8" cy="70.8" r="1.4" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="23.1" cy="70.8" r="1.4" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="27.2" cy="70.8" r="1.4" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="32.1" cy="70.8" r="1.4" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="37.5" cy="70.8" r="1.4" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="41.6" cy="70.8" r="1.4" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="46" cy="70.8" r="1.4" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="50.5" cy="70.8" r="1.4" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="55.3" cy="70.8" r="1.4" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="60" cy="70.8" r="1.4" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="64.7" cy="70.8" r="1.4" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="69.9" cy="70.8" r="1.4" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="73.9" cy="70.8" r="1.4" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="78.1" cy="70.8" r="1.4" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="82.3" cy="70.8" r="1.4" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="86.5" cy="70.8" r="1.4" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="90.7" cy="70.8" r="1.4" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="96.1" cy="70.8" r="1.4" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="101.5" cy="70.8" r="1.4" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="105.6" cy="70.8" r="1.4" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="110.4" cy="70.8" r="1.4" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="16.1" cy="66.9" r="1.2" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="20.2" cy="66.9" r="1.2" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="24.7" cy="66.9" r="1.2" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="29.1" cy="66.9" r="1.2" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="33.1" cy="66.9" r="1.2" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="36.9" cy="66.9" r="1.2" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="41" cy="66.9" r="1.2" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="44.7" cy="66.9" r="1.2" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="49" cy="66.9" r="1.2" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="53.6" cy="66.9" r="1.2" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="57.7" cy="66.9" r="1.2" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="61.4" cy="66.9" r="1.2" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="65.2" cy="66.9" r="1.2" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="69.2" cy="66.9" r="1.2" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="73.7" cy="66.9" r="1.2" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="78.4" cy="66.9" r="1.2" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="82.5" cy="66.9" r="1.2" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="87.2" cy="66.9" r="1.2" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="91.6" cy="66.9" r="1.2" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="95.8" cy="66.9" r="1.2" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="99.9" cy="66.9" r="1.2" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="104.2" cy="66.9" r="1.2" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="108.8" cy="66.9" r="1.2" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="17" cy="63.6" r="0.9" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="20.8" cy="63.6" r="0.9" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="24.2" cy="63.6" r="0.9" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="28.1" cy="63.6" r="0.9" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="32.3" cy="63.6" r="0.9" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="35.4" cy="63.6" r="0.9" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="39.2" cy="63.6" r="0.9" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="42.9" cy="63.6" r="0.9" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="47.3" cy="63.6" r="0.9" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="51.8" cy="63.6" r="0.9" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="55.4" cy="63.6" r="0.9" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="59.8" cy="63.6" r="0.9" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="64.1" cy="63.6" r="0.9" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="67.6" cy="63.6" r="0.9" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="71.4" cy="63.6" r="0.9" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="74.6" cy="63.6" r="0.9" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="78.9" cy="63.6" r="0.9" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="83" cy="63.6" r="0.9" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="87.4" cy="63.6" r="0.9" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="91.7" cy="63.6" r="0.9" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="95.8" cy="63.6" r="0.9" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="100" cy="63.6" r="0.9" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="103.9" cy="63.6" r="0.9" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="107.1" cy="63.6" r="0.9" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="14.8" cy="60.7" r="0.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="17.7" cy="60.7" r="0.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="21.5" cy="60.7" r="0.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="24.3" cy="60.7" r="0.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="27.1" cy="60.7" r="0.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="30" cy="60.7" r="0.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="34" cy="60.7" r="0.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="37" cy="60.7" r="0.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="39.7" cy="60.7" r="0.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="43.7" cy="60.7" r="0.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="46.5" cy="60.7" r="0.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="50.5" cy="60.7" r="0.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="54.2" cy="60.7" r="0.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="58.2" cy="60.7" r="0.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="62.3" cy="60.7" r="0.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="65.8" cy="60.7" r="0.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="69.7" cy="60.7" r="0.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="72.5" cy="60.7" r="0.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="76.3" cy="60.7" r="0.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="79.8" cy="60.7" r="0.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="83.6" cy="60.7" r="0.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="86.4" cy="60.7" r="0.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="90.3" cy="60.7" r="0.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="94.4" cy="60.7" r="0.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="97.1" cy="60.7" r="0.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="100.3" cy="60.7" r="0.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="103.9" cy="60.7" r="0.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><circle cx="107.8" cy="60.7" r="0.7" fill="#b07a45" stroke="#7a4a1f" stroke-width="0.4"/><text x="62" y="108" font-size="10" text-anchor="middle">級化層理</text><rect x="148" y="18" width="102" height="39" fill="#f3e6d3" stroke="#7a4a1f" stroke-width="1"/><clipPath id="cl18"><rect x="148" y="18" width="102" height="39"/></clipPath><g clip-path="url(#cl18)"><path d="M115,18 Q131,57 165,57" fill="none" stroke="#7a4a1f" stroke-width="0.8"/><path d="M126,18 Q142,57 176,57" fill="none" stroke="#7a4a1f" stroke-width="0.8"/><path d="M137,18 Q153,57 187,57" fill="none" stroke="#7a4a1f" stroke-width="0.8"/><path d="M148,18 Q164,57 198,57" fill="none" stroke="#7a4a1f" stroke-width="0.8"/><path d="M159,18 Q175,57 209,57" fill="none" stroke="#7a4a1f" stroke-width="0.8"/><path d="M170,18 Q186,57 220,57" fill="none" stroke="#7a4a1f" stroke-width="0.8"/><path d="M181,18 Q197,57 231,57" fill="none" stroke="#7a4a1f" stroke-width="0.8"/><path d="M192,18 Q208,57 242,57" fill="none" stroke="#7a4a1f" stroke-width="0.8"/><path d="M203,18 Q219,57 253,57" fill="none" stroke="#7a4a1f" stroke-width="0.8"/><path d="M214,18 Q230,57 264,57" fill="none" stroke="#7a4a1f" stroke-width="0.8"/><path d="M225,18 Q241,57 275,57" fill="none" stroke="#7a4a1f" stroke-width="0.8"/><path d="M236,18 Q252,57 286,57" fill="none" stroke="#7a4a1f" stroke-width="0.8"/><path d="M247,18 Q263,57 297,57" fill="none" stroke="#7a4a1f" stroke-width="0.8"/><path d="M258,18 Q274,57 308,57" fill="none" stroke="#7a4a1f" stroke-width="0.8"/><path d="M269,18 Q285,57 319,57" fill="none" stroke="#7a4a1f" stroke-width="0.8"/></g><rect x="148" y="57" width="102" height="39" fill="#f3e6d3" stroke="#7a4a1f" stroke-width="1"/><clipPath id="cl57"><rect x="148" y="57" width="102" height="39"/></clipPath><g clip-path="url(#cl57)"><path d="M115,57 Q131,96 165,96" fill="none" stroke="#7a4a1f" stroke-width="0.8"/><path d="M126,57 Q142,96 176,96" fill="none" stroke="#7a4a1f" stroke-width="0.8"/><path d="M137,57 Q153,96 187,96" fill="none" stroke="#7a4a1f" stroke-width="0.8"/><path d="M148,57 Q164,96 198,96" fill="none" stroke="#7a4a1f" stroke-width="0.8"/><path d="M159,57 Q175,96 209,96" fill="none" stroke="#7a4a1f" stroke-width="0.8"/><path d="M170,57 Q186,96 220,96" fill="none" stroke="#7a4a1f" stroke-width="0.8"/><path d="M181,57 Q197,96 231,96" fill="none" stroke="#7a4a1f" stroke-width="0.8"/><path d="M192,57 Q208,96 242,96" fill="none" stroke="#7a4a1f" stroke-width="0.8"/><path d="M203,57 Q219,96 253,96" fill="none" stroke="#7a4a1f" stroke-width="0.8"/><path d="M214,57 Q230,96 264,96" fill="none" stroke="#7a4a1f" stroke-width="0.8"/><path d="M225,57 Q241,96 275,96" fill="none" stroke="#7a4a1f" stroke-width="0.8"/><path d="M236,57 Q252,96 286,96" fill="none" stroke="#7a4a1f" stroke-width="0.8"/><path d="M247,57 Q263,96 297,96" fill="none" stroke="#7a4a1f" stroke-width="0.8"/><path d="M258,57 Q274,96 308,96" fill="none" stroke="#7a4a1f" stroke-width="0.8"/><path d="M269,57 Q285,96 319,96" fill="none" stroke="#7a4a1f" stroke-width="0.8"/></g><text x="199" y="108" font-size="10" text-anchor="middle">斜交葉理</text><line x1="130" y1="80" x2="130" y2="32" stroke="#222" stroke-width="1.1"/><polygon points="130,26 133,32 127,32" fill="#222" stroke="#222" stroke-width="0.5"/><text x="130" y="18" font-size="10" text-anchor="middle">上</text></svg></div></div>
+・<b>流痕（ソールマーク）</b>：流れが泥の表面を削ったくぼみを上の砂が埋めたもの → 砂岩層の<b>下面</b>に出っぱりとして残る。<br>
+・波による対称な漣痕（リプルマーク）はとがった方が上。生物の巣穴の化石、不整合面の上の基底礫岩なども手がかりになる。</div>
+<div class="pex">ほぼ垂直に立った砂岩層を観察すると、1枚の層の中で東側ほど粒が粗く、西側ほど細かかった。どちら側が上位（新しい）か。<br>
+<b>解</b>　級化層理では細かい方が上なので、<b>西側</b>が上位。</div>
+<div class="pnote">「下にある地層ほど古い」（地層累重の法則）は、地層が逆転していないことを確かめてから使う。</div>
+</div>
+
+<div class="pat"><h4>不整合は「隆起 → 陸上で侵食 → 沈降 → 再び堆積」の記録</h4>
+<div class="when">不整合の判定と、不整合から読み取れる地殻変動の順序を答える。</div>
+<div class="how">連続して堆積した地層の重なりが<b>整合</b>。堆積が長い期間とぎれ、下の地層が削られたあとに上の地層がたまった関係が<b>不整合</b>。<br>
+・不整合面のすぐ上には、下の地層や岩石のかけらを含む<b>基底礫岩</b>が見られることが多い。<br>
+・上下の地層が平行なら平行不整合、下の地層が傾いたり褶曲したりしていれば傾斜不整合。<br>
+・水中でたまった地層の間に不整合が1つあれば、<b>隆起 → 侵食 → 沈降</b>が起こった。</div>
+<div class="pex">海でたまった傾いた地層 A の上に、基底礫岩をはさんで、海でたまった水平な地層 B が重なっている。A が堆積してから B が堆積するまでの出来事を順に答えよ。<br>
+<b>解</b>　A が傾いて隆起し、陸になる → 陸上で侵食される → 沈降して再び海底になる → B が堆積する。</div>
+<div class="pnote">基底礫岩のれきの種類から、その岩石が当時すでに地表に出て侵食されていたことがわかる（地史の組み立てで使う）。</div>
+</div>
+
+<div class="pat"><h4>断層は上盤の動きで判定：下がれば正断層（引っぱり）、上がれば逆断層（圧縮）</h4>
+<div class="when">断面図や地表のずれから断層の種類と、はたらいた力の向きを答える。</div>
+<div class="how">傾いた断層面の上側の岩盤が<b>上盤</b>、下側が<b>下盤</b>。<br>
+・<b>正断層</b>：上盤が下盤に対してずり下がる。両側へ引っぱる力（張力）による。海嶺や地溝帯に多い。<br>
+・<b>逆断層</b>：上盤がずり上がる。両側から押す力（圧縮）による。日本列島のような沈み込み帯に多い。<br>
+・<b>横ずれ断層</b>：水平方向にずれる。断層の向こう側が右へずれて見えれば右横ずれ、左なら左横ずれ。<br>
+最近の地質時代にくり返し活動し、今後も活動する可能性がある断層が<b>活断層</b>。</div>
+<div class="pex">東へ傾いた断層面をはさんで、東側の地層が西側の同じ地層より低い位置にずれていた。断層の種類とはたらいた力を答えよ。<br>
+<b>解</b>　断層面が東へ傾くので、東側が上盤。上盤がずり下がっているので<b>正断層</b>。東西方向に引っぱる力がはたらいた。</div>
+<div class="pnote">横ずれの右・左は、断層をはさんで反対側の地面が動いた向きで決める。断層のどちら側に立って見ても同じ答えになる。</div>
+</div>
+
+<div class="pat"><h4>褶曲は地表の地層の新旧で判定：中心が古ければ背斜、新しければ向斜</h4>
+<div class="when">地質図や断面図で背斜・向斜を判定する。</div>
+<div class="how">地層が波状に曲がったものが褶曲。山形に曲がった部分が<b>背斜</b>、谷形に曲がった部分が<b>向斜</b>。地表が平らに削られている場合：<br>
+・背斜：軸をはさんで同じ地層が対称に分布し、<b>中心ほど古い地層</b>。地層は軸から外側へ向かって傾き下がる。<br>
+・向斜：<b>中心ほど新しい地層</b>。地層は軸へ向かって傾き下がる。<br>
+褶曲も逆断層と同じく、水平方向の圧縮によってできる。</div>
+<div class="pex">東西方向に歩くと、地表に地層が C・B・A・B・C の順に現れた（A が最も古い）。地層は中央の A から東西両側へ傾き下がっていた。この構造は何か。<br>
+<b>解</b>　中心が最も古く、両側へ傾き下がるので<b>背斜</b>。</div>
+<div class="pnote">背斜・向斜は地形の山・谷とは一致しない。背斜の部分が侵食されて谷になっていることもある。</div>
+</div>
+
+<div class="pat"><h4>地質図の走向・傾斜は「同じ標高の2点を結ぶ走向線」で求める</h4>
+<div class="when">等高線と地層境界線がかかれた地質図から、地層の走向・傾斜を求める。</div>
+<div class="how">①地層境界線と<b>ある標高の等高線との交点2つを結ぶ</b> → その直線（走向線）の向きが<b>走向</b>。<br>
+②別の標高でも走向線を引き、2本の走向線の水平距離 $d$ と標高差 $\Delta h$ から、傾斜角 $\delta$ は $\tan\delta=\frac{\Delta h}{d}$。<b>傾斜の向きは、低い方の走向線がある側</b>。<br>
+・水平な地層：境界線は等高線と平行。　・垂直な地層：境界線は地形に関係なく直線。<br>
+記録は「走向 N30°E、傾斜 40°SE」のように書く（走向は北から東または西へ測った角度）。</div>
+<div class="pex">ある地層の上面の境界線が標高 200 m の等高線と交わる2点を結ぶと、東西方向の直線になった。標高 150 m の等高線と交わる2点を結ぶ直線はこれと平行で、水平距離で 50 m 南にあった。この地層の走向・傾斜を答えよ。<br>
+<b>解</b>　走向は<b>東西</b>（EW）。$\tan\delta=\frac{200-150}{50}=1$ より $\delta=45^\circ$。低い走向線が南にあるので、<b>南へ $45^\circ$ 傾斜</b>（45°S）。</div>
+<div class="pnote">交点は必ず同じ標高のものどうしを結ぶ。走向線は直線だが、地層境界線は地形の凹凸に合わせて曲がる。</div>
+</div>
+
+<div class="pat"><h4>変成岩は「熱だけで狭い範囲」→接触変成、「圧力と熱で広い範囲」→広域変成</h4>
+<div class="when">変成岩の名称、もとの岩石、変成作用の種類や条件を答える。</div>
+<div class="how">岩石が固体のまま高温・高圧にさらされ、鉱物の組み合わせや組織が変わること（再結晶）が変成作用。全体の化学組成はほとんど変わらない。<br>
+・<b>接触変成作用</b>：貫入したマグマの熱による。岩体の周囲の狭い範囲。泥岩・砂岩 → <b>ホルンフェルス</b>（かたく緻密）、石灰岩 → <b>結晶質石灰岩（大理石）</b>（方解石の結晶が大きくなる）。<br>
+・<b>広域変成作用</b>：沈み込み帯などで、広い範囲が高い圧力と熱を受ける。<b>結晶片岩</b>（片理が発達。低温高圧型に多い）、<b>片麻岩</b>（縞状の組織。高温型）。<br>
+$\mathrm{Al_2SiO_5}$ の組成をもつ3つの鉱物（同質異像）：<b>紅柱石（低圧）・藍晶石（高圧）・珪線石（高温）</b> → 変成の温度・圧力の推定に使う。</div>
+<div class="pex">花こう岩体の周囲で、石灰岩が方解石の粗い結晶の集まりになっていた。この岩石の名称と、変成作用の種類を答えよ。<br>
+<b>解</b>　結晶質石灰岩（大理石）、接触変成作用</div>
+<div class="pnote">片理は、圧力のもとで鉱物が一方向にそろって並んでできた面構造。接触変成岩のホルンフェルスには片理がない。</div>
+</div>
+
+<div class="box memo"><table class="l w">
+<tr><th>項目</th><th>要点</th></tr>
+<tr><td>砕屑物の粒径</td><td>れき 2 mm 以上、砂 $\frac1{16}$〜2 mm、泥 $\frac1{16}$ mm 以下</td></tr>
+<tr><td>堆積岩</td><td>砕屑岩（れき岩・砂岩・泥岩）、火山砕屑岩（凝灰岩）、生物岩（石灰岩 $\mathrm{CaCO_3}$・チャート $\mathrm{SiO_2}$）、化学岩（岩塩・石こうなど）</td></tr>
+<tr><td>上下の判定</td><td>級化層理：細かい方が上／斜交葉理：切られている方が上／流痕：砂岩層の下面に出っぱる</td></tr>
+<tr><td>不整合</td><td>隆起 → 侵食 → 沈降 → 堆積。基底礫岩。平行不整合・傾斜不整合</td></tr>
+<tr><td>断層</td><td>正断層：上盤が下がる・張力／逆断層：上盤が上がる・圧縮／横ずれ断層：右横ずれ・左横ずれ</td></tr>
+<tr><td>褶曲</td><td>背斜：中心ほど古い／向斜：中心ほど新しい（水平方向の圧縮でできる）</td></tr>
+<tr><td>走向・傾斜</td><td>走向＝同じ標高の2交点を結ぶ線の向き、$\tan\delta=\frac{\Delta h}{d}$、低い走向線の側へ傾く</td></tr>
+<tr><td>変成岩</td><td>接触変成：ホルンフェルス・結晶質石灰岩／広域変成：結晶片岩・片麻岩</td></tr>
+</table></div>
+
+<!--CH 5-->
+<div class="pat"><h4>放射年代は「残っている割合 $=\left(\frac12\right)^{t/T}$」：$\frac14$ なら半減期の2倍</h4>
+<div class="when">放射性同位体の残存量（親と娘の量の比）と半減期から、岩石や化石の年代を求める。</div>
+<div class="how">放射性同位体（親）は一定の割合で崩壊して別の原子（娘）に変わる。半減期 $T$ ごとに親の量は半分になる：$N=N_0\left(\frac12\right)^{t/T}$。<br>
+・残存率が $\frac12,\ \frac14,\ \frac18$ なら、経過時間は $T,\ 2T,\ 3T$。<br>
+・<b>親：娘＝1：3</b> なら、もとの量は $1+3=4$ なので親の残存率は $\frac14$ → $2T$（娘がすべて親から生じた場合）。</div>
+<div class="pex">(1) ある岩石中の $^{235}\mathrm U$ と、それが崩壊してできた $^{207}\mathrm{Pb}$ の原子数の比は 1：3 であった。$^{235}\mathrm U$ の半減期を7.0億年として、岩石の年代を求めよ。(2) 木片中の $^{14}\mathrm C$ の割合が、生きている木の $\frac18$ であった。$^{14}\mathrm C$ の半減期を5730年として、木が枯れてからの年数を求めよ。<br>
+<b>解</b>　(1) 親の残存率 $\frac{1}{1+3}=\frac14$ より $2T=14$ 億年。(2) $\frac18=\left(\frac12\right)^3$ より $3\times5730=17190\fallingdotseq1.7$ 万年。</div>
+<div class="pnote">「娘：親＝3」を「残存率 $\frac13$」としない。残存率は 親÷（親＋娘）。</div>
+</div>
+
+<div class="pat"><h4>年代測定法は対象と時間の長さで選ぶ。堆積岩の年代は火成岩ではさむ</h4>
+<div class="when">年代測定法の選び方、堆積岩の数値年代（絶対年代）の推定を問われる。</div>
+<div class="how">・<b>$^{14}\mathrm C$ 法</b>（半減期 約5730年）：木片・骨・貝殻など生物の遺骸。約5万年前までの若いもの。<br>
+・<b>K-Ar 法</b>（$^{40}\mathrm K$ の半減期 約13億年）：火山岩などカリウムを含む岩石。<br>
+・<b>U-Pb 法</b>（$^{238}\mathrm U$ の半減期 約45億年）：ジルコンなど。数十億年前の古い岩石にも使える。<br>
+堆積岩の中の粒子は、堆積する前にできたものなので、測っても堆積の年代にならない。→ <b>上下の凝灰岩層（火山灰）や、地層を貫く火成岩の年代ではさむ</b>。</div>
+<div class="pex">堆積岩の地層 X は、1.20億年前の凝灰岩層の上に整合に重なり、0.95億年前にできた岩脈に貫かれている。X が堆積した時期を答えよ。<br>
+<b>解</b>　X は凝灰岩より新しく、X を貫く岩脈より古いので、<b>1.20億年前〜0.95億年前</b>の間。</div>
+<div class="pnote">半減期が対象の年代に比べて短すぎると親がほとんど残らず、長すぎると娘がほとんどできていない。どちらも測定できない。</div>
+</div>
+
+<div class="pat"><h4>示準化石は「短い期間・広い範囲・多い個体数」、示相化石は「限られた環境」</h4>
+<div class="when">示準化石と示相化石の条件や、化石から当時の環境を推定する問題。</div>
+<div class="how">・<b>示準化石</b>（地層の時代を決める）：①生存期間が短い（種の変化が速い）、②分布が広い、③個体数が多い。<br>
+・<b>示相化石</b>（堆積した環境を示す）：生活できる環境が限られていて、現在も近い仲間が生きている。<br>
+例：造礁サンゴ → 暖かく浅いきれいな海、シジミ → 河口付近の汽水、アサリ → 浅い海の砂泥底、ブナ → 温帯のやや寒冷な気候。<br>
+化石の産状にも注意：生活していた姿勢のまま埋まった化石（現地性）でないと、環境の推定には使えない。</div>
+<div class="pex">ある地層から造礁サンゴの化石が、生活していた状態のまま見つかった。この地層が堆積した環境を答えよ。<br>
+<b>解</b>　暖かく、浅く、澄んだ海（日光が届く熱帯〜亜熱帯の浅海）。</div>
+<div class="pnote">長い期間生存した生物（例 シャミセンガイ）は、示準化石には向かない。</div>
+</div>
+
+<div class="pat"><h4>示準化石は「代」と「紀」をセットで覚える</h4>
+<div class="when">化石から地層の地質時代を答える。複数の地層の新旧を比べる。</div>
+<div class="how">・<b>古生代</b>：三葉虫（カンブリア紀〜ペルム紀）、フデイシ（オルドビス紀〜シルル紀）、クサリサンゴ（オルドビス紀〜シルル紀）、ロボク・リンボク（石炭紀）、<b>フズリナ（石炭紀〜ペルム紀）</b><br>
+・<b>中生代</b>：アンモナイト、恐竜、モノチス（三畳紀）、トリゴニア、<b>イノセラムス（白亜紀）</b><br>
+・<b>新生代</b>：<b>貨幣石（古第三紀）</b>、<b>ビカリア</b>・デスモスチルス（新第三紀）、ナウマンゾウ・マンモス（第四紀）</div>
+<div class="pex">地層 P からはフズリナ、地層 Q からはアンモナイトとイノセラムス、地層 R からはビカリアの化石が見つかった。それぞれの地質時代と、古い順を答えよ。<br>
+<b>解</b>　P：古生代（石炭紀〜ペルム紀）、Q：中生代白亜紀、R：新生代新第三紀。古い順に <b>P → Q → R</b>。</div>
+<div class="pnote">アンモナイトは古生代にも出現しているが、示準化石としては中生代の代表。三葉虫とフズリナはペルム紀末に絶滅した。</div>
+</div>
+
+<div class="pat"><h4>先カンブリア時代は「酸素の歴史」で並べる</h4>
+<div class="when">先カンブリア時代の出来事を古い順に並べる。大気の酸素が増えたしくみを説明する。</div>
+<div class="how">地球の誕生（約46億年前）→ 最古の岩石（約40億年前）→ 生命の痕跡（約38億年前）→ <b>シアノバクテリアの光合成</b>で酸素が発生（ストロマトライトをつくる。約27億年前には繁栄）→ 海水中に溶けていた鉄が酸化されて沈殿し<b>縞状鉄鉱層</b>（約25億〜20億年前にとくに多い）→ <b>大気中の酸素が増加</b> → 真核生物の出現（約20億年前）→ 全球凍結（約7億〜6億年前にも）→ エディアカラ生物群（先カンブリア時代末）。<br>
+酸素が増えると上空に<b>オゾン層</b>ができ、有害な紫外線が地表に届きにくくなる → 古生代に生物が陸上へ進出。</div>
+<div class="pex">次の出来事を古い順に並べよ。(a) 縞状鉄鉱層が大量に形成された　(b) 生物が陸上に進出した　(c) シアノバクテリアが酸素を放出し始めた　(d) 大気中の酸素が増加した<br>
+<b>解</b>　(c) → (a) → (d) → (b)</div>
+<div class="pnote">初期の大気は二酸化炭素が多く、酸素はほとんどなかった。二酸化炭素は海に溶けて石灰岩などとして固定され、減っていった。</div>
+</div>
+
+<div class="pat"><h4>古生代以降は「出現・繁栄・絶滅」を紀に結びつける</h4>
+<div class="when">生物の出現・大量絶滅と地質時代を対応させる。大量絶滅の原因や証拠を問われる。</div>
+<div class="how">カンブリア紀：多様な動物が一気に出現（バージェス動物群など）／オルドビス紀〜シルル紀：植物の陸上進出（シルル紀のクックソニア）／デボン紀：魚類の繁栄、両生類の出現／石炭紀：シダ植物の大森林（石炭のもと）、爬虫類の出現／ペルム紀：超大陸パンゲア<br>
+三畳紀：恐竜・哺乳類の出現／ジュラ紀：恐竜の繁栄、鳥類（始祖鳥）／白亜紀：被子植物の出現／新生代：哺乳類の繁栄、第四紀に人類の発展（猿人は約700万年前、新人ホモ・サピエンスは約30万〜20万年前にアフリカで出現）<br>
+<b>大量絶滅</b>：とくに大きいのは <b>ペルム紀末</b>（史上最大。海の生物種の大部分が絶滅）と <b>白亜紀末</b>（恐竜・アンモナイトが絶滅）。</div>
+<div class="pex">白亜紀末の大量絶滅の原因と考えられている出来事と、その証拠を答えよ。<br>
+<b>解</b>　巨大な隕石（小天体）の衝突。証拠：白亜紀と古第三紀の境界の粘土層にイリジウムが異常に多く含まれる、衝撃を受けた石英が見つかる、メキシコのユカタン半島に巨大なクレーター（チクシュルーブ・クレーター）がある。</div>
+<div class="pnote">イリジウムは地殻には少なく隕石に多い元素なので、地球外から大量にもたらされた証拠になる。</div>
+</div>
+
+<div class="pat"><h4>地史の組み立ては「重なり・切断・取り込み」の3原則</h4>
+<div class="when">露頭や断面図に、地層・貫入岩・断層・不整合が描かれ、できた順を答える。</div>
+<div class="how">①<b>重なり</b>：逆転していなければ、下の地層ほど古い（地層累重の法則）。<br>
+②<b>切断</b>：他を切っている（貫入している・ずらしている）方が新しい。不整合面に切られているものは、不整合より古い。<br>
+③<b>取り込み</b>：れきとして含まれている岩石の方が古い（基底礫岩）。マグマの熱で変成している岩石は、貫入より前からあった。<br>
+最後に、不整合ごとに「隆起・侵食・沈降」を入れる。</div>
+<div class="pex">ある露頭で次のことがわかった。地層 A の上に地層 B が整合に重なる。花こう岩 G が A と B を貫き、接する部分の B はホルンフェルスになっている。断層 F が A・B・G をずらしている。これらはすべて侵食面で切られ、その上に水平な地層 C が重なる。C の最下部の礫岩には G のれきが含まれる。できごとを古い順に並べよ。<br>
+<b>解</b>　A の堆積 → B の堆積 → G の貫入 → 断層 F → 隆起・侵食 → 沈降 → C の堆積</div>
+<div class="pnote">F は G を切るので G より新しい。F は C を切らないので C より古い。根拠を1つずつ確かめながら並べる。</div>
+</div>
+
+<div class="pat"><h4>柱状図の対比は鍵層の「標高」をそろえて比べる</h4>
+<div class="when">数地点の柱状図から地層を対比し、地層の傾きや、別の地点での深さを求める。</div>
+<div class="how">①<b>鍵層</b>（凝灰岩層など、短時間に広く堆積して見分けやすい層）や示準化石で同じ地層を見つける。<br>
+②各地点で「地表の標高 − 地表からの深さ」で、鍵層の<b>標高</b>を出す（深さのまま比べない）。<br>
+③地層が平面で一様に傾いていれば、標高の差 ÷ 水平距離 が傾き。比例で別の地点の標高を求める。</div>
+<div class="pex">東西に一直線に並ぶ3地点を調べた。地点 A（標高 120 m）では凝灰岩層の上面が地表から 20 m の深さにあり、A の東 400 m の地点 B（標高 100 m）では 40 m の深さにあった。地層は南北の走向で一様に傾いているとすると、A の東 800 m の地点 C（標高 80 m）では、凝灰岩層の上面は地表から何 m の深さにあるか。<br>
+<b>解</b>　凝灰岩上面の標高は A で $120-20=100\ \mathrm m$、B で $100-40=60\ \mathrm m$。400 m 東へ行くごとに 40 m 低くなる（東へ傾く）ので、C では $100-80=20\ \mathrm m$。深さは $80-20=60\ \mathrm m$。</div>
+<div class="pnote">「深さ」は地表の標高によって変わる。必ず標高に直してから比べる。</div>
+</div>
+
+<div class="box memo"><table class="l w"><colgroup><col style="width:9%"><col style="width:14.5%"><col style="width:24%"><col></colgroup>
+<tr><th>代</th><th>紀</th><th>年代（約）</th><th>おもな出来事・示準化石</th></tr>
+<tr><td rowspan="3">新生代</td><td>第四紀</td><td>258万年前〜</td><td>氷期・間氷期のくり返し、人類の発展。ナウマンゾウ・マンモス</td></tr>
+<tr><td>新第三紀</td><td>2300万〜258万年前</td><td>日本海の形成。ビカリア・デスモスチルス</td></tr>
+<tr><td>古第三紀</td><td>6600万〜2300万年前</td><td>哺乳類の多様化。貨幣石（ヌンムリテス）</td></tr>
+<tr><td rowspan="3">中生代</td><td>白亜紀</td><td>1.45億〜6600万年前</td><td>被子植物の出現。イノセラムス・アンモナイト・恐竜。末に大量絶滅</td></tr>
+<tr><td>ジュラ紀</td><td>2.0億〜1.45億年前</td><td>恐竜の繁栄、始祖鳥（鳥類）</td></tr>
+<tr><td>三畳紀</td><td>2.5億〜2.0億年前</td><td>恐竜・哺乳類の出現。モノチス</td></tr>
+<tr><td rowspan="6">古生代</td><td>ペルム紀</td><td>3.0億〜2.5億年前</td><td>パンゲア。フズリナ。末に史上最大の大量絶滅</td></tr>
+<tr><td>石炭紀</td><td>3.6億〜3.0億年前</td><td>シダ植物の大森林、爬虫類の出現。ロボク・リンボク・フズリナ</td></tr>
+<tr><td>デボン紀</td><td>4.2億〜3.6億年前</td><td>魚類の繁栄、両生類の出現</td></tr>
+<tr><td>シルル紀</td><td>4.4億〜4.2億年前</td><td>植物の陸上進出（クックソニア）。クサリサンゴ・フデイシ</td></tr>
+<tr><td>オルドビス紀</td><td>4.9億〜4.4億年前</td><td>あごのない魚類の多様化。フデイシ。末に大量絶滅</td></tr>
+<tr><td>カンブリア紀</td><td>5.4億〜4.9億年前</td><td>多様な動物の出現（バージェス動物群）。三葉虫</td></tr>
+<tr><td colspan="2">先カンブリア時代</td><td>46億〜5.4億年前</td><td>生命の誕生、シアノバクテリア（ストロマトライト）、縞状鉄鉱層、全球凍結、エディアカラ生物群</td></tr>
+</table></div>
+
+<!--CH 6-->
+<div class="pat"><h4>乾燥空気は 窒素78%・酸素21%・アルゴン0.9%・二酸化炭素0.04%（体積比）</h4>
+<div class="when">大気の組成と、その起源・変化を問われる。</div>
+<div class="how">地表付近の乾燥空気の体積比：$\mathrm{N_2}$ 約78%、$\mathrm{O_2}$ 約21%、<b>$\mathrm{Ar}$ 約0.9%</b>、$\mathrm{CO_2}$ 約0.04%（約420 ppm、2020年代）。水蒸気は場所や時間で0〜数%と大きく変わるので、乾燥空気とは別に扱う。<br>
+高度約80 kmまでは、対流や乱流でよくかき混ぜられているので、組成はほぼ一定。<br>
+起源：酸素はおもに光合成でつくられた。アルゴンの大部分は、岩石中の $^{40}\mathrm K$ の放射性崩壊でできた $^{40}\mathrm{Ar}$。</div>
+<div class="pex">乾燥空気の成分のうち、体積比が3番目に大きいものは何か。<br>
+<b>解</b>　アルゴン（約0.9%）。二酸化炭素（約0.04%）よりはるかに多い。</div>
+<div class="pnote">「3番目は二酸化炭素」は誤り。$\mathrm{CO_2}$ は量は少ないが、温室効果ガスとして重要。$0.04\%=400\ \mathrm{ppm}$（ppm は100万分の1）。</div>
+</div>
+
+<div class="pat"><h4>大気の層は気温の変化で4つ：対流圏・成層圏・中間圏・熱圏</h4>
+<div class="when">気温の鉛直分布のグラフを読む。各層の特徴、上空の気温の計算。</div>
+<div class="how">・<b>対流圏</b>（地表〜約11 km。低緯度で約17 km、高緯度で約8 km）：上ほど気温が低い（平均 約0.65 ℃/100 m）。雲・降水などの気象現象が起こる。<br>
+・<b>成層圏</b>（〜約50 km）：上ほど気温が高い。オゾンが太陽の紫外線を吸収して大気を暖める。オゾン層（オゾン濃度が大きい層）は高度約20〜30 km。<br>
+・<b>中間圏</b>（〜約80 km）：上ほど気温が低い。上端付近は大気中で最も低温（約 −90 ℃）。<br>
+・<b>熱圏</b>（約80 km〜）：太陽からの X線や紫外線を吸収して、上ほど高温。オーロラが現れる。</div>
+<div class="pex">地表の気温が 15 ℃ のとき、高度 11 km の対流圏界面の気温を求めよ。対流圏の気温減率を 6.5 ℃/km とする。<br>
+<b>解</b>　$15-6.5\times11=-56.5$ より、約 $-57$ ℃。</div>
+<div class="pnote">オゾン濃度が最大の高度（約25 km）と、成層圏で気温が最も高い高度（約50 km）は一致しない。上空ほど紫外線が強く、空気が薄いので、単位質量あたりに吸収するエネルギーが大きいから。</div>
+</div>
+
+<div class="pat"><h4>気圧は「上にある空気の重さ」。約5.5 km 上がるごとに半分になる</h4>
+<div class="when">高度と気圧の関係、ある高さより下にある大気の質量の割合を求める。</div>
+<div class="how">気圧は、その高さより上にある空気の重さによる圧力。1気圧 $=1013\ \mathrm{hPa}$（水銀柱 76 cm）、$1\ \mathrm{hPa}=100\ \mathrm{Pa}$。<br>
+空気は圧縮されやすいので下層ほど密度が大きく、気圧は高さとともに急に減る：<b>約5.5 km ごとに半分</b>（11 km で約 $\frac14$、16.5 km で約 $\frac18$）。地表付近では、約 8 m 上がると 1 hPa 下がる。<br>
+（ある高さの気圧）÷（地上の気圧）＝ その高さより上にある空気の質量の割合。</div>
+<div class="pex">地上の気圧を 1000 hPa とする。高度 11 km の気圧を求め、地表〜11 km（対流圏）に大気全体の質量の何%があるか答えよ。<br>
+<b>解</b>　$11\ \mathrm{km}=5.5\ \mathrm{km}\times2$ より、$1000\times\left(\frac12\right)^2=250\ \mathrm{hPa}$。それより上の空気は全体の25%なので、対流圏には約 <b>75%</b> の大気がある。</div>
+<div class="pnote">対流圏は薄いが、大気の質量の約4分の3以上がここにある。気象現象が対流圏で起こるのは、空気も水蒸気もここに集中しているから。</div>
+</div>
+
+<div class="pat"><h4>放射のピーク波長は温度に反比例、放射の強さは温度の4乗に比例</h4>
+<div class="when">太陽放射と地球放射の波長の違い、放射エネルギーの比較。</div>
+<div class="how">物体は温度に応じた電磁波を放射する（黒体放射）。<br>
+・<b>ウィーンの変位則</b>：$\lambda_{\max}=\frac{2.9\times10^{-3}}{T}\ [\mathrm m]$（$T$ は絶対温度）。高温ほど短い波長で最も強く放射する。<br>
+・<b>シュテファン・ボルツマンの法則</b>：単位面積から毎秒放射するエネルギー $E=\sigma T^4$（$\sigma=5.67\times10^{-8}\ \mathrm{W/(m^2\cdot K^4)}$）。温度が2倍なら16倍。<br>
+太陽放射（表面 約5800 K）は可視光が中心、地球放射（約255〜290 K）は赤外線。</div>
+<div class="pex">太陽の表面温度を 5800 K、地表の温度を 290 K として、それぞれの放射が最も強くなる波長と、単位面積から放射されるエネルギーの比を求めよ。<br>
+<b>解</b>　太陽 $\frac{2.9\times10^{-3}}{5800}=5.0\times10^{-7}\ \mathrm m=0.50\ \mathrm{\mu m}$（可視光）。地表 $\frac{2.9\times10^{-3}}{290}=1.0\times10^{-5}\ \mathrm m=10\ \mathrm{\mu m}$（赤外線）。比は $\left(\frac{5800}{290}\right)^4=20^4=1.6\times10^5$ 倍。</div>
+<div class="pnote">温度は必ず絶対温度（K）で計算する。℃のまま4乗しない。</div>
+</div>
+
+<div class="pat"><h4>地球が受ける太陽放射は「断面積で受けて、表面積で平均」→ 太陽定数の $\frac14$</h4>
+<div class="when">太陽定数から、地球全体の平均の受熱量や放射平衡温度を求める。</div>
+<div class="how"><b>太陽定数</b> $S\fallingdotseq1.37\ \mathrm{kW/m^2}$：大気の上端で、太陽光に垂直な $1\ \mathrm{m^2}$ が毎秒受けるエネルギー。<br>
+地球は断面積 $\pi R^2$ で受け、表面積 $4\pi R^2$ から放射するので、平均は $\frac S4\fallingdotseq342\ \mathrm{W/m^2}$。反射率（アルベド）$A\fallingdotseq0.3$ の分を除くと、吸収量は $\frac{S(1-A)}{4}\fallingdotseq240\ \mathrm{W/m^2}$。<br>
+<b>放射平衡</b>（吸収＝放射）：$\sigma T^4=\frac{S(1-A)}{4}$ から $T$ を求める。</div>
+<div class="pex">$S=1.37\times10^3\ \mathrm{W/m^2}$、$A=0.30$、$\sigma=5.67\times10^{-8}\ \mathrm{W/(m^2\cdot K^4)}$ として、地球の放射平衡温度を求めよ。<br>
+<b>解</b>　$\frac{1370\times0.70}{4}\fallingdotseq240\ \mathrm{W/m^2}$。$T^4=\frac{240}{5.67\times10^{-8}}\fallingdotseq4.23\times10^9$ より $T\fallingdotseq255\ \mathrm K$（約 $-18$ ℃）。</div>
+<div class="pnote">実際の地表の平均気温は約15 ℃（288 K）。放射平衡温度との差（約33 K）が温室効果による。</div>
+</div>
+
+<div class="pat"><h4>温室効果は「可視光は通し、赤外線を吸収して地表へ戻す」。1層モデルで計算</h4>
+<div class="when">温室効果のしくみの説明、大気を1層とみなした地表温度の計算。</div>
+<div class="how">大気は太陽放射（おもに可視光）をよく通すが、地表から出る赤外線は水蒸気・二酸化炭素・メタンなどの<b>温室効果ガス</b>が吸収し、上下に再放射する。下向きの放射が地表をさらに暖める。<br>
+<b>1層モデル</b>（大気は太陽放射をすべて通し、地表からの赤外線をすべて吸収して上下に同じだけ放射する）：大気の温度を $T_a$、地表を $T_s$ とすると、<br>
+宇宙へ出る量：$\sigma T_a^4=240\ \mathrm{W/m^2}$ → $T_a=255\ \mathrm K$<br>
+地表の収支：$\sigma T_s^4=240+\sigma T_a^4=2\sigma T_a^4$ → $T_s=\sqrt[4]{2}\,T_a$</div>
+<div class="pex">上の1層モデルで、地表の温度を求めよ。$\sqrt[4]{2}=1.19$ とする。<br>
+<b>解</b>　$T_s=1.19\times255\fallingdotseq303\ \mathrm K$（約30 ℃）。</div>
+<div class="pnote">実際（288 K）より高くなるのは、大気が赤外線をすべては吸収しないことや、対流・潜熱で熱が上空へ運ばれることを無視したため。温室効果への寄与が最も大きい気体は水蒸気。</div>
+</div>
+
+<div class="pat"><h4>熱収支は「宇宙・大気・地表のそれぞれで、入る量＝出る量」</h4>
+<div class="when">太陽放射を100とした熱収支の図で、空欄の値を求める。</div>
+<div class="how">3か所それぞれで収支の式を立てる。数値の例（大気上端に入る太陽放射を100とする）：<br>
+・反射：大気・雲 22、地表 9（合計31）　・吸収：大気 20、地表 49<br>
+・地表から出る：赤外放射 114（うち12は大気を素通りして宇宙へ）、潜熱＋顕熱 30（潜熱の方が大きい）<br>
+・大気から出る：地表へ 95、宇宙へ 57<br>
+確認：宇宙 $22+9+12+57=100$、大気 $20+(114-12)+30=152=95+57$、地表 $49+95=144=114+30$。</div>
+<div class="pex">上の例で「潜熱＋顕熱」が空欄のとき、その値を地表の収支から求めよ。<br>
+<b>解</b>　地表に入る量 $49+95$ ＝ 出る量 $114+x$ より、$x=30$。</div>
+<div class="pnote">地表の赤外放射（114）が太陽放射（100）より大きいのは矛盾ではない。地表は大気からの赤外放射（95）を受けているから（温室効果）。</div>
+</div>
+
+<div class="pat"><h4>受熱量は太陽高度の $\sin$ に比例。低緯度で熱が余り、高緯度で不足する</h4>
+<div class="when">太陽高度と受熱量の関係、緯度による熱の過不足と熱の輸送。</div>
+<div class="how">水平な地面の単位面積が受ける日射は、太陽高度 $h$ の $\sin h$ に比例する（斜めに当たると光が広がる）。北緯 $\varphi$ の南中高度は、夏至 $90^\circ-\varphi+23.4^\circ$、冬至 $90^\circ-\varphi-23.4^\circ$。<br>
+年平均すると、<b>低緯度では 吸収する太陽放射 ＞ 放射する地球放射（熱が余る）</b>、<b>高緯度では 吸収 ＜ 放射（不足する）</b>。境目は緯度35〜40°付近。余った熱は<b>大気の循環と海流</b>によって高緯度へ運ばれる。</div>
+<div class="pex">北緯 $35^\circ$ の地点で、冬至の南中時に水平な地面が受ける日射は、夏至の南中時の約何倍か。地軸の傾きを $23.4^\circ$ とし、大気の影響は考えない。$\sin31.6^\circ=0.524$、$\sin78.4^\circ=0.980$ とする。<br>
+<b>解</b>　夏至 $h=90^\circ-35^\circ+23.4^\circ=78.4^\circ$、冬至 $h=31.6^\circ$。$\frac{0.524}{0.980}\fallingdotseq0.53$ 倍。</div>
+<div class="pnote">地球放射の量は、吸収する太陽放射ほどには緯度によって変わらない。そのため低緯度で余り、高緯度で足りなくなる。熱の輸送がなければ、低緯度はもっと暑く、高緯度はもっと寒くなる。</div>
+</div>
+
+<div class="box memo"><table class="l w">
+<tr><th>層</th><th>高さ</th><th>気温の変化</th><th>特徴</th></tr>
+<tr><td>熱圏</td><td>約80 km〜</td><td>上ほど高い</td><td>X線・紫外線を吸収。オーロラ</td></tr>
+<tr><td>中間圏</td><td>約50〜80 km</td><td>上ほど低い</td><td>上端が大気中の最低温（約 −90 ℃）</td></tr>
+<tr><td>成層圏</td><td>約11〜50 km</td><td>上ほど高い</td><td>オゾン層（約20〜30 km）が紫外線を吸収</td></tr>
+<tr><td>対流圏</td><td>地表〜約11 km</td><td>上ほど低い（約0.65 ℃/100 m）</td><td>気象現象。大気の質量の約4分の3以上</td></tr>
+</table>
+<table class="l w">
+<tr><th>項目</th><th>公式・数値</th></tr>
+<tr><td>大気の組成</td><td>$\mathrm{N_2}$ 78%、$\mathrm{O_2}$ 21%、$\mathrm{Ar}$ 0.9%、$\mathrm{CO_2}$ 0.04%（乾燥空気の体積比）</td></tr>
+<tr><td>気圧</td><td>約5.5 km ごとに半分。1気圧 $=1013\ \mathrm{hPa}$</td></tr>
+<tr><td>放射の法則</td><td>$\lambda_{\max}=\frac{2.9\times10^{-3}}{T}\ [\mathrm m]$、$E=\sigma T^4$</td></tr>
+<tr><td>太陽定数</td><td>$S\fallingdotseq1.37\ \mathrm{kW/m^2}$。地球全体の平均は $\frac S4$、吸収は $\frac{S(1-A)}4\fallingdotseq240\ \mathrm{W/m^2}$</td></tr>
+<tr><td>温度</td><td>放射平衡温度 約255 K（−18 ℃）、実際の地表 約288 K（15 ℃）</td></tr>
+<tr><td>熱の過不足</td><td>低緯度で余り、高緯度で不足。大気と海洋が熱を運ぶ</td></tr>
+</table></div>
