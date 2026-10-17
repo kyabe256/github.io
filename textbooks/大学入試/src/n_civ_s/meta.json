@@ -1,0 +1,103 @@
+{
+ "subject": "公共・倫理・政治経済",
+ "math": true,
+ "color": "#4b3f7a",
+ "color2": "#7d70b0",
+ "subcolor": "#efedf8",
+ "parts": [
+  {
+   "title": "第1部 倫理",
+   "sub": "",
+   "chapters": [
+    {
+     "no": 1,
+     "title": "青年期と自己形成"
+    },
+    {
+     "no": 2,
+     "title": "源流思想"
+    },
+    {
+     "no": 3,
+     "title": "西洋近代思想"
+    },
+    {
+     "no": 4,
+     "title": "現代の思想"
+    },
+    {
+     "no": 5,
+     "title": "日本の思想"
+    }
+   ]
+  },
+  {
+   "title": "第2部 政治",
+   "sub": "",
+   "chapters": [
+    {
+     "no": 6,
+     "title": "民主政治の原理と日本国憲法"
+    },
+    {
+     "no": 7,
+     "title": "基本的人権"
+    },
+    {
+     "no": 8,
+     "title": "日本の統治機構"
+    },
+    {
+     "no": 9,
+     "title": "地方自治・選挙・政党"
+    },
+    {
+     "no": 10,
+     "title": "国際政治"
+    }
+   ]
+  },
+  {
+   "title": "第3部 経済",
+   "sub": "",
+   "chapters": [
+    {
+     "no": 11,
+     "title": "市場経済と経済学説"
+    },
+    {
+     "no": 12,
+     "title": "国民所得・景気・財政"
+    },
+    {
+     "no": 13,
+     "title": "金融"
+    },
+    {
+     "no": 14,
+     "title": "日本経済・労働・社会保障"
+    },
+    {
+     "no": 15,
+     "title": "国際経済"
+    }
+   ]
+  },
+  {
+   "title": "第4部 現代の課題",
+   "sub": "",
+   "chapters": [
+    {
+     "no": 16,
+     "title": "現代社会の諸課題"
+    }
+   ]
+  }
+ ],
+ "intro_html": "<h3>この3冊の使い分け</h3><table class='l w'><tr><th>本</th><th>役割</th><th>使うタイミング</th></tr><tr><td><b>教科書（講義編）</b></td><td>公共・倫理・政治経済の入試範囲を体系的に理解する</td><td>単元の学習・復習の最初</td></tr><tr><td><b>参考書（解法・整理編）</b></td><td>「こう出たらこう解く」の解法カードで、設問と解き方・知識を結びつける</td><td>問題演習の前後、直前期の総整理</td></tr><tr><td><b>問題集（演習編）</b></td><td>A基本・B標準・C発展の演習で実戦力をつける</td><td>講義を読んだ後、くり返し</td></tr></table><p>3冊とも<b>章番号が共通</b>です（全16章）。</p>",
+ "kind": "参考書",
+ "title": "大学入試 公共・倫理・政治経済 参考書（解法・整理編）",
+ "cover_title": "公共・倫理・政治経済<br>入試公共・倫理・政治経済 解法の整理",
+ "cover_sub": "「こう出たら → こう解く」<br>入試に必要な解法と知識を、カードで一目に",
+ "extra_css": ".bun { background:#f7f7f7; border-left:4px solid #999; padding:2mm 3.5mm; margin:2mm 0; line-height:1.8; } .shiryo { background:#fbfaf3; border-left:4px solid #b08d57; padding:2mm 3.5mm; margin:2mm 0; line-height:1.8; }"
+}
