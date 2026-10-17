@@ -1,0 +1,773 @@
+<!--CH 1-->
+<div class="pat"><h4>等加速度直線運動は「3つの式」から選ぶ。時間が要らなければ $v^2-v_0^2=2ax$</h4>
+<div class="when">一直線上を一定の加速度で運動する物体の速度・位置・時間を求める。</div>
+<div class="how">正の向きを1つ決め、$v_0,\ a,\ v,\ x$ を<b>符号つき</b>で書き出す。<br>
+①$v=v_0+at$　②$x=v_0t+\frac12at^2$　③$v^2-v_0^2=2ax$<br>
+与えられてもいず、問われてもいない量を含まない式を選ぶ。時間 $t$ が出てこない問題なら③。</div>
+<div class="pex">速さ $20\ \mathrm{m/s}$ で走っていた自動車がブレーキをかけ、一定の加速度で $40\ \mathrm m$ 進んで止まった。加速度と、止まるまでの時間を求めよ。<br>
+<b>解</b>　進む向きを正とする。③より $0^2-20^2=2a\times40$、$a=-5.0\ \mathrm{m/s^2}$（進む向きと逆向きに $5.0\ \mathrm{m/s^2}$）。①より $0=20-5.0t$、$t=4.0\ \mathrm s$。</div>
+<div class="pnote">減速は「負の加速度」。大きさだけを式に入れると符号を誤る。</div>
+</div>
+
+<div class="pat"><h4>v-t グラフは「傾き＝加速度、面積＝変位（軸より下は負）」</h4>
+<div class="when">v-t グラフが与えられ、加速度・変位・道のりを問われる。</div>
+<div class="how">傾き $\frac{\Delta v}{\Delta t}$ が加速度。グラフと $t$ 軸で囲まれた面積が変位で、$t$ 軸より上は正、下は負として足す。<b>道のり</b>（動いた距離の合計）は面積をすべて正として足す。$v=0$ となる時刻が折り返し点。x-t グラフでは接線の傾きが速度。</div>
+<div class="pex">速度が $v=6-2t$（単位は m/s、s）のように変化する物体について、$t=0\sim5\ \mathrm s$ の加速度、変位、道のりを求めよ。
+<div class="two"><div><b>解</b>　傾きから $a=-2.0\ \mathrm{m/s^2}$。$t=3\ \mathrm s$ で $v=0$ となり折り返す（右図）。<br>
+$0\sim3\ \mathrm s$ の面積は $+\frac12\times3\times6=+9\ \mathrm m$、$3\sim5\ \mathrm s$ は $-\frac12\times2\times4=-4\ \mathrm m$。<br>
+変位 $9-4=5\ \mathrm m$、道のり $9+4=13\ \mathrm m$。</div>
+<div style="flex:0 0 58mm"><svg class="fig" width="210" height="140" viewBox="0 0 210 140">
+<defs><marker id="a1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#333"/></marker></defs>
+<polygon points="30.0,80.0 30.0,20.0 126.0,80.0" fill="#2e8b57" fill-opacity="0.35" stroke="none"/>
+<polygon points="126.0,80.0 190.0,120.0 190.0,80.0" fill="#d9701e" fill-opacity="0.35" stroke="none"/>
+<line x1="22.0" y1="80.0" x2="209.2" y2="80.0" stroke="#333" stroke-width="1" marker-end="url(#a1)"/>
+<line x1="30.0" y1="130.0" x2="30.0" y2="10.0" stroke="#333" stroke-width="1" marker-end="url(#a1)"/>
+<path d="M30.0,20.0 L190.0,120.0" fill="none" stroke="#1d4e89" stroke-width="1.8"/>
+<line x1="190.0" y1="80.0" x2="190.0" y2="120.0" stroke="#999" stroke-width="1" stroke-dasharray="3,2"/>
+<line x1="30.0" y1="120.0" x2="190.0" y2="120.0" stroke="#999" stroke-width="1" stroke-dasharray="3,2"/>
+<text x="209.2" y="93.0" font-size="10" text-anchor="end">t [s]</text>
+<text x="34.0" y="14.0" font-size="10">v [m/s]</text>
+<text x="26.0" y="24.0" font-size="10" text-anchor="end">6</text>
+<text x="26.0" y="124.0" font-size="10" text-anchor="end">−4</text>
+<text x="26.0" y="92.0" font-size="10" text-anchor="end">O</text>
+<text x="126.0" y="76.0" font-size="10" text-anchor="middle">3</text>
+<text x="193.0" y="76.0" font-size="10">5</text>
+<text x="58.8" y="64.0" font-size="10" fill="#2e8b57">+9 m</text>
+<text x="172.4" y="97.5" font-size="9" text-anchor="middle" fill="#d9701e">−4 m</text>
+</svg></div></div></div>
+</div>
+
+<div class="pat"><h4>鉛直投げ上げは上向きを正にして、1本の式で地面まで</h4>
+<div class="when">投げ上げた物体が、最高点を過ぎて投げた点より下まで落ちる（ビルの屋上から投げ上げるなど）。</div>
+<div class="how">上向きを正、加速度は $-g$。投げた点を原点にすると $y=v_0t-\frac12gt^2$、$v=v_0-gt$。<b>上昇と下降で式を分けない</b>。最高点は $v=0$、地面は $y=-h$（負）とおいて解く。最高点の高さは $\frac{v_0^2}{2g}$。</div>
+<div class="pex">高さ $24.5\ \mathrm m$ のビルの屋上から、小球を鉛直上向きに $19.6\ \mathrm{m/s}$ で投げた。地面に落ちるまでの時間と、地面に達する直前の速さを求めよ。$g=9.8\ \mathrm{m/s^2}$ とする（以下同じ）。<br>
+<b>解</b>　$-24.5=19.6t-4.9t^2$ より $t^2-4t-5=0$、$(t-5)(t+1)=0$、$t=5.0\ \mathrm s$。$v=19.6-9.8\times5.0=-29.4$ より、下向きに $29.4\ \mathrm{m/s}$。</div>
+<div class="pnote">「最高点まで」と「最高点から」に分けると計算が倍になり、符号ミスも増える。2次方程式の負の解は捨てる。</div>
+</div>
+
+<div class="pat"><h4>水平投射は「水平：等速、鉛直：自由落下」に分ける</h4>
+<div class="when">水平に投げ出された物体の落下時間・水平到達距離・着地の速さ。</div>
+<div class="how">水平方向は力がはたらかないので等速 $x=v_0t$。鉛直方向は自由落下 $y=\frac12gt^2$（下向き正）。<b>落下時間は鉛直方向だけで決まる</b>ので、先に鉛直の式で $t$ を求め、水平の式に代入する。速さは $v=\sqrt{v_x^2+v_y^2}$、向きは $\tan\theta=\frac{v_y}{v_x}$。</div>
+<div class="pex">高さ $19.6\ \mathrm m$ のがけの上から、小石を水平に $5.0\ \mathrm{m/s}$ で投げた。落下時間、水平到達距離、地面に達する直前の速さを求めよ。<br>
+<b>解</b>　鉛直：$19.6=\frac12\times9.8t^2$ より $t=2.0\ \mathrm s$。水平：$x=5.0\times2.0=10\ \mathrm m$。$v_y=9.8\times2.0=19.6\ \mathrm{m/s}$ より $v=\sqrt{5.0^2+19.6^2}\fallingdotseq20\ \mathrm{m/s}$。</div>
+</div>
+
+<div class="pat"><h4>斜方投射は初速度を成分に分け、最高点で $v_y=0$</h4>
+<div class="when">斜め上に投げ上げた物体の最高点の高さ、同じ高さに戻るまでの水平距離。</div>
+<div class="how">$v_{0x}=v_0\cos\theta$、$v_{0y}=v_0\sin\theta$。最高点は $v_y=0$ で、時刻 $t_1=\frac{v_0\sin\theta}{g}$、高さ $H=\frac{(v_0\sin\theta)^2}{2g}$。同じ高さに戻る時刻は $2t_1$（対称性）なので、水平到達距離 $R=v_0\cos\theta\times2t_1=\frac{v_0^2\sin2\theta}{g}$。$R$ は $\theta=45^\circ$ で最大。</div>
+<div class="pex">水平な地面から、初速 $20\ \mathrm{m/s}$、水平と $30^\circ$ の向きに小球を投げた。最高点の高さと水平到達距離を求めよ。<br>
+<b>解</b>　$v_{0y}=10\ \mathrm{m/s}$、$v_{0x}=10\sqrt3\ \mathrm{m/s}$。$H=\frac{10^2}{2\times9.8}\fallingdotseq5.1\ \mathrm m$。滞空時間 $\frac{2\times10}{9.8}\ \mathrm s$ より $R=10\sqrt3\times\frac{20}{9.8}\fallingdotseq35\ \mathrm m$。</div>
+<div class="pnote">$R$ の公式は「投げた点と同じ高さに落ちる」ときだけ使える。がけの上から投げる場合などは、鉛直方向の式から時間を出す。</div>
+</div>
+
+<div class="pat"><h4>相対速度は「相手の速度 − 自分の速度」（ベクトルの引き算）</h4>
+<div class="when">動いている人から見た他の物体の速度（雨の降る向き、すれ違う電車など）。</div>
+<div class="how">A から見た B の相対速度 $\vec v_{\mathrm{AB}}=\vec v_{\mathrm B}-\vec v_{\mathrm A}$。1次元なら符号つきの引き算。2次元なら成分ごとに引くか、$\vec v_{\mathrm B}$ に $-\vec v_{\mathrm A}$ をつないで作図する。</div>
+<div class="pex">雨が鉛直に $4.0\ \mathrm{m/s}$ で落ちている。東へ $3.0\ \mathrm{m/s}$ で歩く人から見た雨の速さと向きを求めよ。<br>
+<b>解</b>　東を $x$、鉛直上向きを $y$ の正とすると、相対速度は $(0,\ -4.0)-(3.0,\ 0)=(-3.0,\ -4.0)$。速さ $\sqrt{3.0^2+4.0^2}=5.0\ \mathrm{m/s}$。向きは鉛直下向きから西へ角 $\theta$（$\tan\theta=\frac34$）傾いた向きで、人には前方（東）の斜め上から降ってくるように見える。</div>
+<div class="pnote">「自分 − 相手」と逆にしやすい。「見ている人を止めるために、全体に $-\vec v_{\text{自分}}$ を足す」と考えると迷わない。</div>
+</div>
+
+<div class="pat"><h4>同時に投げた2物体の相対運動は等速直線運動</h4>
+<div class="when">2つの物体を同時に投げたり落としたりして、空中で出会う条件・時刻を問う（モンキーハンティングなど）。</div>
+<div class="how">どちらも加速度は $\vec g$ で等しいので、<b>相対加速度は0</b>。一方から見た他方は、はじめの相対速度のままの等速直線運動。出会う時刻＝はじめの距離 ÷ 相対速さ。</div>
+<div class="pex">地面から小球 A を鉛直上向きに $19.6\ \mathrm{m/s}$ で投げ上げると同時に、A の真上 $19.6\ \mathrm m$ の高さから小球 B を静かに放した。A と B が出会う時刻と高さを求めよ。<br>
+<b>解</b>　B から見た A は上向き $19.6\ \mathrm{m/s}$ の等速運動なので、$t=\frac{19.6}{19.6}=1.0\ \mathrm s$。高さは B の位置で $19.6-\frac12\times9.8\times1.0^2=14.7\ \mathrm m$（A の式 $19.6\times1.0-4.9\times1.0^2$ でも同じ）。</div>
+<div class="pnote">木の上の的をねらって弾を撃ち、発射と同時に的が落ち始めても、地面に落ちる前なら必ず命中する（モンキーハンティング）のも同じ理由。</div>
+</div>
+
+<div class="pat"><h4>追いつく＝位置が等しい、最も離れる＝速度が等しい</h4>
+<div class="when">2つの物体が同じ直線上を運動し、追いつく時刻や、最も離れるときの距離を問う。</div>
+<div class="how">共通の原点・時刻で両方の位置 $x_{\mathrm A}(t),\ x_{\mathrm B}(t)$ を式にする。追いつく：$x_{\mathrm A}=x_{\mathrm B}$。2物体の距離が最大（最小）になるのは<b>速度が等しくなる瞬間</b>（v-t グラフ2本の交点）。</div>
+<div class="pex">静止していた車 A が加速度 $2.0\ \mathrm{m/s^2}$ で発進した瞬間、A の横を車 B が一定の速さ $10\ \mathrm{m/s}$ で追い越した。A が B に追いつく時刻と、それまでに両者が最も離れたときの距離を求めよ。<br>
+<b>解</b>　$x_{\mathrm A}=\frac12\times2.0t^2=t^2$、$x_{\mathrm B}=10t$。$t^2=10t$ より $t=10\ \mathrm s$。速度が等しいのは $2.0t=10$ の $t=5.0\ \mathrm s$ で、距離は $10\times5.0-5.0^2=25\ \mathrm m$。</div>
+</div>
+
+<div class="box memo"><table class="l w">
+<tr><th>項目</th><th>公式・事実</th></tr>
+<tr><td>等加速度直線運動</td><td>$v=v_0+at$、$x=v_0t+\frac12at^2$、$v^2-v_0^2=2ax$</td></tr>
+<tr><td>グラフ</td><td>x-t の傾き＝速度、v-t の傾き＝加速度、v-t の面積＝変位</td></tr>
+<tr><td>自由落下（下向き正）</td><td>$v=gt$、$y=\frac12gt^2$、$v^2=2gy$</td></tr>
+<tr><td>鉛直投げ上げ（上向き正）</td><td>$v=v_0-gt$、$y=v_0t-\frac12gt^2$、最高点 $\frac{v_0^2}{2g}$（時刻 $\frac{v_0}{g}$）</td></tr>
+<tr><td>水平投射</td><td>$x=v_0t$、$y=\frac12gt^2$（下向き正）</td></tr>
+<tr><td>斜方投射</td><td>$x=v_0\cos\theta\cdot t$、$y=v_0\sin\theta\cdot t-\frac12gt^2$、同じ高さまで $R=\frac{v_0^2\sin2\theta}{g}$</td></tr>
+<tr><td>相対速度</td><td>A から見た B：$\vec v_{\mathrm{AB}}=\vec v_{\mathrm B}-\vec v_{\mathrm A}$</td></tr>
+</table></div>
+
+<!--CH 2-->
+<div class="pat"><h4>力は「重力 ＋ 触れているものから」の順に書き出す</h4>
+<div class="when">物体にはたらく力をすべて図示し、つりあいや運動方程式を立てる（すべての力学の問題の出発点）。</div>
+<div class="how">①重力 $mg$（鉛直下向き）を書く。②物体に<b>触れているもの</b>（面・糸・ばね・他の物体）を1つずつ見て、面なら垂直抗力 $N$ と摩擦力、糸なら張力 $T$（糸の向きに引く）、ばねなら弾性力 $kx$。③触れていないのにはたらく力は、重力（万有引力）・電気力・磁気力だけ。「勢いの力」は存在しない。<br>
+斜面では重力を、斜面に平行な成分 $mg\sin\theta$ と垂直な成分 $mg\cos\theta$ に分ける。</div>
+<div class="pex">傾き $30^\circ$ の粗い斜面上に、質量 $2.0\ \mathrm{kg}$ の物体が静止している。垂直抗力と静止摩擦力の大きさを求めよ。<br>
+<b>解</b>　斜面に垂直：$N=mg\cos30^\circ=2.0\times9.8\times\frac{\sqrt3}{2}\fallingdotseq17\ \mathrm N$。斜面に平行：$f=mg\sin30^\circ=9.8\ \mathrm N$（斜面上向き）。</div>
+<div class="pnote">重力の分解は「角 $\theta$ をはさむ側が $\cos$」。斜面に垂直な成分が $mg\cos\theta$。</div>
+</div>
+
+<div class="pat"><h4>作用・反作用は「2つの物体の間」、つりあいは「1つの物体の上」</h4>
+<div class="when">「〜の反作用は何か」「〜とつりあう力は何か」を区別する問題。</div>
+<div class="how">作用・反作用：「A が B を押す力」と「B が A を押す力」のように、主語と目的語を入れかえた関係。<b>別々の物体</b>にはたらき、つねに同じ大きさ・逆向き（加速中でも成り立つ）。<br>
+つりあい：<b>同じ物体</b>にはたらく力どうしで、合力が0になっている。力を「◯が△を…する力」と言葉にすると区別できる。</div>
+<div class="pex">机の上に静止した本について、(1)本にはたらく重力の反作用、(2)本にはたらく重力とつりあう力を答えよ。<br>
+<b>解</b>　(1)重力は「地球が本を引く力」なので、反作用は<b>本が地球を引く力</b>。(2)<b>机が本を押す力（垂直抗力）</b>。</div>
+<div class="pnote">垂直抗力と重力は、静止しているから大きさが等しい（つりあい）だけで、作用・反作用の関係ではない。机ごと加速すれば等しくなくなる。</div>
+</div>
+
+<div class="pat"><h4>運動方程式は「物体ごとに、運動の向きに」立てて連立</h4>
+<div class="when">糸や滑車でつながった複数の物体の加速度と張力。</div>
+<div class="how">①物体ごとに力を図示。②それぞれの運動の向きを正とする（糸でつながっていれば加速度の大きさは共通の $a$）。③物体ごとに $ma=$（運動の向きの力の和）。④連立して $a$ と $T$ を求める。各式を足すと張力（内力）が消えて $a$ が出る。</div>
+<div class="pex">なめらかな水平台上の物体 A（$3.0\ \mathrm{kg}$）と、台の端の滑車を通してつるした物体 B（$2.0\ \mathrm{kg}$）を糸で結び、静かに放した。加速度の大きさと糸の張力を求めよ。<br>
+<b>解</b>　A：$3.0a=T$、B：$2.0a=2.0\times9.8-T$。足して $5.0a=19.6$、$a=3.92\fallingdotseq3.9\ \mathrm{m/s^2}$。$T=3.0\times3.92\fallingdotseq12\ \mathrm N$。</div>
+<div class="pnote">つるした B の張力を $mg$（$19.6\ \mathrm N$）としない。B は加速しているので $T\lt mg$。</div>
+</div>
+
+<div class="pat"><h4>接触した2物体は「全体で加速度、片方だけで押し合う力」</h4>
+<div class="when">押されて一緒に動く2物体の間の力、重ねて一緒に動く物体の間の力。</div>
+<div class="how">①2物体を一体とみなし、外力だけで $a=\frac{F}{m_1+m_2}$。②押し合う力（内力）は、<b>はたらく力が少ない方</b>の物体1つについて運動方程式を立てて求める。</div>
+<div class="pex">なめらかな床の上で、接して並べた物体 A（$3.0\ \mathrm{kg}$）と B（$1.0\ \mathrm{kg}$）を、A の側から水平に $8.0\ \mathrm N$ で押した。A が B を押す力の大きさを求めよ。<br>
+<b>解</b>　全体：$4.0a=8.0$、$a=2.0\ \mathrm{m/s^2}$。B だけ：$1.0\times2.0=N$、$N=2.0\ \mathrm N$。</div>
+<div class="pnote">押す力 $8.0\ \mathrm N$ がそのまま B に伝わるわけではない。B を加速させるのに必要な分だけが伝わる。</div>
+</div>
+
+<div class="pat"><h4>摩擦は「まず最大摩擦力と比べる」</h4>
+<div class="when">力を加えた物体が動くかどうか、動いたときの加速度。</div>
+<div class="how">①静止しているときの静止摩擦力 $f$ は、<b>つりあいの式から決まる</b>（$\mu N$ とは限らない）。②必要な $f$ が最大摩擦力 $\mu N$ を超えるとすべり出す。③すべっている間は動摩擦力 $\mu'N$（一定、すべる向きと逆向き）。ふつう $\mu'\lt\mu$。</div>
+<div class="pex">水平な床に置いた $5.0\ \mathrm{kg}$ の物体（静止摩擦係数 $0.40$、動摩擦係数 $0.20$）を水平に押す。押す力が (1) $15\ \mathrm N$、(2) $25\ \mathrm N$ のときの摩擦力の大きさと、(2)の加速度を求めよ。<br>
+<b>解</b>　最大摩擦力は $0.40\times5.0\times9.8=19.6\ \mathrm N$。(1) $15\lt19.6$ なので静止したまま。摩擦力はつりあいから $15\ \mathrm N$。(2) すべり出し、動摩擦力 $0.20\times5.0\times9.8=9.8\ \mathrm N$。$5.0a=25-9.8$ より $a\fallingdotseq3.0\ \mathrm{m/s^2}$。</div>
+<div class="pnote">(1) で摩擦力を $19.6\ \mathrm N$ とすると、押す力より大きな力で押し返されて動き出すことになり矛盾する。</div>
+</div>
+
+<div class="pat"><h4>粗い斜面は「すべる向き」で摩擦の向きが変わる</h4>
+<div class="when">粗い斜面を物体がすべり上がる・すべり下りる。</div>
+<div class="how">垂直抗力 $N=mg\cos\theta$、動摩擦力 $\mu'mg\cos\theta$ は<b>すべる向きと逆</b>。<br>
+すべり下りる：$a=g(\sin\theta-\mu'\cos\theta)$（斜面下向き）<br>
+すべり上がる：$a=g(\sin\theta+\mu'\cos\theta)$（斜面下向き、減速）<br>
+静止していた物体がすべり出すのは $\tan\theta\gt\mu$ のとき。</div>
+<div class="pex">傾き $30^\circ$、動摩擦係数 $0.20$ の斜面で、(1)すべり下りるときの加速度、(2)斜面に沿って上向きに打ち出した物体が上っている間の加速度を求めよ。<br>
+<b>解</b>　(1) $9.8\times(0.50-0.20\times0.866)\fallingdotseq3.2\ \mathrm{m/s^2}$（斜面下向き）。(2) $9.8\times(0.50+0.20\times0.866)\fallingdotseq6.6\ \mathrm{m/s^2}$（斜面下向き）。</div>
+<div class="pnote">上りと下りで加速度の大きさが違うので、往復の運動は2つに分けて計算する。最高点で止まったまま動かないか、すべり下りるかは $\tan\theta$ と $\mu$ の大小で判定。</div>
+</div>
+
+<div class="pat"><h4>重ねた物体が一緒に動くかは「上の物体に必要な静止摩擦力」で判定</h4>
+<div class="when">板の上に物体をのせて板を引く。物体が板の上をすべり出す条件。</div>
+<div class="how">①一緒に動くと仮定し、全体で $a=\frac{F}{M+m}$。②上の物体の運動方程式 $ma=f$ から、必要な静止摩擦力 $f$ を出す。③$f\leqq\mu mg$ なら一緒に動く。超えたらすべるので、それぞれ動摩擦力で運動方程式を立て直す。</div>
+<div class="pex">なめらかな床の上に板（$4.0\ \mathrm{kg}$）を置き、その上に物体（$1.0\ \mathrm{kg}$、板との静止摩擦係数 $0.30$）をのせた。板を水平に引くとき、物体が板の上をすべらない引く力の最大値を求めよ。<br>
+<b>解</b>　一緒に動くとき $a=\frac F{5.0}$。物体：$1.0\times a=f\leqq0.30\times1.0\times9.8=2.94$ より $a\leqq2.94\ \mathrm{m/s^2}$。よって $F\leqq5.0\times2.94\fallingdotseq15\ \mathrm N$。</div>
+</div>
+
+<div class="pat"><h4>速さに比例する抵抗は「加速度0」で終端速度</h4>
+<div class="when">空気抵抗 $kv$ を受けて落下する物体（雨滴など）の最終的な速さ。</div>
+<div class="how">運動方程式 $ma=mg-kv$。速さが増すと抵抗が増え、加速度が減っていく。$a=0$ になる速さが終端速度 $v_{\mathrm f}=\frac{mg}{k}$。v-t グラフは、傾き $g$ で始まり $v_{\mathrm f}$ に近づく曲線。</div>
+<div class="pex">質量 $0.50\ \mathrm{kg}$ の物体が、速さ $v$ に比例する抵抗力 $0.98v$（N）を受けて落下する。終端速度と、速さが $2.0\ \mathrm{m/s}$ のときの加速度を求めよ。<br>
+<b>解</b>　$v_{\mathrm f}=\frac{0.50\times9.8}{0.98}=5.0\ \mathrm{m/s}$。$0.50a=4.9-0.98\times2.0$ より $a\fallingdotseq5.9\ \mathrm{m/s^2}$。</div>
+</div>
+
+<div class="box memo"><table class="l w">
+<tr><th>項目</th><th>公式・事実</th></tr>
+<tr><td>運動方程式</td><td>$m\vec a=\vec F$（$\vec F$ は合力）、$1\ \mathrm N=1\ \mathrm{kg\cdot m/s^2}$</td></tr>
+<tr><td>重力・弾性力</td><td>$W=mg$、フックの法則 $F=kx$（$x$ は自然長からの伸び・縮み）</td></tr>
+<tr><td>摩擦力</td><td>静止摩擦力はつりあいから決まり、最大 $\mu N$。動摩擦力 $\mu'N$</td></tr>
+<tr><td>斜面</td><td>平行成分 $mg\sin\theta$、垂直成分 $mg\cos\theta$、すべり出す条件 $\tan\theta\gt\mu$</td></tr>
+<tr><td>作用・反作用</td><td>2物体間で、同じ大きさ・逆向き・同じ作用線上</td></tr>
+<tr><td>つりあい</td><td>1つの物体にはたらく力の合力 $=\vec 0$（成分ごとに和が0）</td></tr>
+<tr><td>終端速度</td><td>抵抗 $kv$ のとき $v_{\mathrm f}=\frac{mg}{k}$</td></tr>
+</table></div>
+
+<!--CH 3-->
+<div class="pat"><h4>仕事は「力 × 移動の向きの成分」、垂直な力は仕事0</h4>
+<div class="when">斜めに引く、摩擦がある、物体が曲線上を動く場合の仕事。</div>
+<div class="how">$W=Fx\cos\theta$（$\theta$ は力と移動の向きのなす角）。$\theta\lt90^\circ$ で正、$\theta=90^\circ$ で0（垂直抗力、等速円運動の向心力、ローレンツ力）、$\theta\gt90^\circ$ で負（動摩擦力は必ず負）。すべての力の仕事の和が、運動エネルギーの変化に等しい。</div>
+<div class="pex">水平な床の上の物体を、水平から $60^\circ$ 上向きに $10\ \mathrm N$ の力で引いて $5.0\ \mathrm m$ 動かした。床からの動摩擦力は $4.0\ \mathrm N$ であった。引く力・動摩擦力・重力のした仕事と、仕事の和を求めよ。<br>
+<b>解</b>　引く力：$10\times5.0\times\cos60^\circ=25\ \mathrm J$。動摩擦力：$-4.0\times5.0=-20\ \mathrm J$。重力：移動と垂直なので $0$。和は $5.0\ \mathrm J$（運動エネルギーが $5.0\ \mathrm J$ 増える）。</div>
+</div>
+
+<div class="pat"><h4>仕事率は $P=\frac Wt=Fv$</h4>
+<div class="when">モーターやエンジンが物体を一定の速さで動かすときの仕事率。</div>
+<div class="how">仕事率は単位時間あたりの仕事 $P=\frac Wt$（単位 $\mathrm W=\mathrm{J/s}$）。一定の力 $F$ で速さ $v$ で動かしているなら $P=Fv$。速さが一定なら力はつりあっているので、$F$ は抵抗力や重力の大きさに等しい。</div>
+<div class="pex">質量 $60\ \mathrm{kg}$ の荷物を、モーターで一定の速さ $0.50\ \mathrm{m/s}$ で鉛直に引き上げる。モーターの仕事率を求めよ。<br>
+<b>解</b>　一定の速さなので引く力は $mg=60\times9.8=588\ \mathrm N$。$P=588\times0.50=294\fallingdotseq2.9\times10^2\ \mathrm W$。</div>
+</div>
+
+<div class="pat"><h4>「距離 → 速さ」は仕事と運動エネルギーの関係で一発</h4>
+<div class="when">一定の距離だけ力がはたらいた後の速さ、止まるまでの距離（時間は問われない）。</div>
+<div class="how">$\frac12mv^2-\frac12mv_0^2=W$（$W$ はすべての力のした仕事の和）。加速度を求めずに済む。時間を問われたら運動方程式（等加速度の式）に戻る。</div>
+<div class="pex">速さ $6.0\ \mathrm{m/s}$ で、粗い水平面（動摩擦係数 $0.30$）に入った物体が止まるまでにすべる距離を求めよ。<br>
+<b>解</b>　$0-\frac12m\times6.0^2=-0.30mg\times x$ より $x=\frac{36}{2\times0.30\times9.8}\fallingdotseq6.1\ \mathrm m$（質量によらない）。</div>
+</div>
+
+<div class="pat"><h4>力学的エネルギー保存は「仕事をする力が保存力だけ」のとき</h4>
+<div class="when">なめらかな曲面・振り子など、途中の加速度が一定でない運動での速さ。</div>
+<div class="how">重力・弾性力（保存力）以外の力が仕事をしなければ（垂直抗力や糸の張力は運動の向きに垂直で仕事0）、$\frac12mv^2+mgh+\frac12kx^2=$ 一定。はじめの位置と知りたい位置で等式を立てる。高さの基準はどこにとってもよい。</div>
+<div class="pex">なめらかな曲面上の高さ $2.5\ \mathrm m$ の点から物体を静かに放した。最下点（高さ0）と、高さ $1.6\ \mathrm m$ の点での速さを求めよ。<br>
+<b>解</b>　$mg\times2.5=\frac12mv^2$ より $v=\sqrt{2\times9.8\times2.5}=7.0\ \mathrm{m/s}$。高さ $1.6\ \mathrm m$ では $\frac12mv^2=mg(2.5-1.6)$ より $v=\sqrt{2\times9.8\times0.90}=4.2\ \mathrm{m/s}$。</div>
+<div class="pnote">摩擦や空気抵抗が仕事をするときは保存しない（「非保存力の仕事」のカード）。</div>
+</div>
+
+<div class="pat"><h4>弾性エネルギー $\frac12kx^2$ の $x$ は自然長からの伸び・縮み</h4>
+<div class="when">ばねで物体を打ち出す、ばねに物体がぶつかって縮む。</div>
+<div class="how">弾性エネルギー $U=\frac12kx^2$（$x$ は自然長からの変位の大きさ。伸びでも縮みでも正）。なめらかな面で、ばねが自然長に戻ると弾性エネルギーはすべて運動エネルギーになる。</div>
+<div class="pex">ばね定数 $100\ \mathrm{N/m}$ のばねを $0.20\ \mathrm m$ 縮め、なめらかな水平面上の $0.50\ \mathrm{kg}$ の物体を押し出した。ばねを離れたときの速さと、その後なめらかな斜面を上る高さを求めよ。<br>
+<b>解</b>　$\frac12\times100\times0.20^2=2.0\ \mathrm J$。$\frac12\times0.50v^2=2.0$ より $v=\sqrt{8.0}\fallingdotseq2.8\ \mathrm{m/s}$。$0.50\times9.8\times h=2.0$ より $h\fallingdotseq0.41\ \mathrm m$。</div>
+</div>
+
+<div class="pat"><h4>鉛直ばねを自然長で放すと、最大の伸びはつりあいの伸びの2倍</h4>
+<div class="when">鉛直につるしたばねの下端におもりをつけ、自然長の位置で静かに放す。</div>
+<div class="how">重力の位置エネルギーと弾性エネルギーの両方を入れて保存則を立てる。最下点（速さ0）で $mgx=\frac12kx^2$ より $x=\frac{2mg}{k}$ で、つりあいの伸び $x_0=\frac{mg}{k}$ の2倍。速さが最大になるのはつりあいの位置（加速度0）。第6章の単振動として見ると、振動の中心がつりあいの位置、振幅 $x_0$。</div>
+<div class="pex">ばね定数 $49\ \mathrm{N/m}$ のばねに $0.50\ \mathrm{kg}$ のおもりをつけ、自然長の位置で静かに放した。最大の伸びと、最大の速さを求めよ。<br>
+<b>解</b>　$x_0=\frac{0.50\times9.8}{49}=0.10\ \mathrm m$ なので、最大の伸びは $0.20\ \mathrm m$。つりあいの位置で $\frac12\times0.50v^2=0.50\times9.8\times0.10-\frac12\times49\times0.10^2=0.245$ より $v\fallingdotseq0.99\ \mathrm{m/s}$。</div>
+<div class="pnote">手で支えながらゆっくり下ろすと、つりあいの位置で止まる。このときは手が負の仕事をするので、力学的エネルギーは保存しない。</div>
+</div>
+
+<div class="pat"><h4>非保存力の仕事＝力学的エネルギーの変化</h4>
+<div class="when">摩擦や空気抵抗があり、力学的エネルギーが保存しない運動。</div>
+<div class="how">（後の力学的エネルギー）−（前の力学的エネルギー）＝（非保存力のした仕事）。動摩擦力の仕事は $-\mu'N\times$（すべった距離）。失われた力学的エネルギーは熱になる。</div>
+<div class="pex">高さ $5.0\ \mathrm m$ の粗い斜面の上端から、$1.0\ \mathrm{kg}$ の物体が静かにすべり出し、下端で速さ $8.0\ \mathrm{m/s}$ になった。この間に動摩擦力がした仕事を求めよ。<br>
+<b>解</b>　$W=\frac12\times1.0\times8.0^2-1.0\times9.8\times5.0=32-49=-17\ \mathrm J$（$17\ \mathrm J$ の熱が発生）。</div>
+</div>
+
+<div class="pat"><h4>糸でつながった物体は「全体」でエネルギー保存</h4>
+<div class="when">滑車や糸でつながった複数の物体が動いた後の速さ。</div>
+<div class="how">糸が伸び縮みしなければ、張力は一方に正、他方に負の同じ大きさの仕事をして打ち消し合う。摩擦がなければ、系全体で $\sum\frac12mv^2+\sum mgh$ が保存する。</div>
+<div class="pex">なめらかな水平台上の物体 A（$2.0\ \mathrm{kg}$）と、滑車を通してつるした物体 B（$1.0\ \mathrm{kg}$）を糸で結び、静かに放した。B が $0.50\ \mathrm m$ 下がったときの速さを求めよ。<br>
+<b>解</b>　B の位置エネルギーの減少が A と B の運動エネルギーになる：$1.0\times9.8\times0.50=\frac12\times(2.0+1.0)v^2$。$v^2\fallingdotseq3.27$ より $v\fallingdotseq1.8\ \mathrm{m/s}$。</div>
+<div class="pnote">A だけ、B だけでエネルギー保存を立てるのは誤り（それぞれには張力が仕事をしている）。</div>
+</div>
+
+<div class="box memo"><table class="l w">
+<tr><th>項目</th><th>公式・事実</th></tr>
+<tr><td>仕事・仕事率</td><td>$W=Fx\cos\theta$（J）、$P=\frac Wt=Fv$（W）</td></tr>
+<tr><td>運動エネルギーと仕事</td><td>$K=\frac12mv^2$、$\frac12mv^2-\frac12mv_0^2=W$（全部の力の仕事の和）</td></tr>
+<tr><td>位置エネルギー</td><td>重力 $U=mgh$、弾性力 $U=\frac12kx^2$</td></tr>
+<tr><td>力学的エネルギー保存</td><td>保存力だけが仕事をするとき $K+U=$ 一定</td></tr>
+<tr><td>非保存力</td><td>（後の力学的エネルギー）−（前）＝（非保存力のした仕事）</td></tr>
+<tr><td>摩擦熱</td><td>$Q=\mu'N\times$（面に対してすべった距離）</td></tr>
+</table></div>
+
+<!--CH 4-->
+<div class="pat"><h4>力積＝運動量の変化。はね返りは速度の符号が変わる</h4>
+<div class="when">ボールを打ち返す、壁ではね返るときの力積や平均の力。</div>
+<div class="how">$m\vec v'-m\vec v=\vec F\Delta t$（力積）。1次元なら正の向きを決め、速度を符号つきで入れる。<b>はね返ると速度の符号が変わる</b>ので、運動量の変化は「大きさの和」になる。F-t グラフの面積が力積で、平均の力＝力積 ÷ 接触時間。</div>
+<div class="pex">速さ $30\ \mathrm{m/s}$ で飛んできた $0.15\ \mathrm{kg}$ のボールを、逆向きに $20\ \mathrm{m/s}$ で打ち返した。ボールが受けた力積の大きさと、接触時間を $0.010\ \mathrm s$ としたときの平均の力の大きさを求めよ。<br>
+<b>解</b>　打ち返した向きを正とすると、$0.15\times20-0.15\times(-30)=7.5\ \mathrm{N\cdot s}$。平均の力は $\frac{7.5}{0.010}=7.5\times10^2\ \mathrm N$。</div>
+<div class="pnote">$0.15\times(30-20)$ としない。速度はベクトル（1次元では符号つき）。</div>
+</div>
+
+<div class="pat"><h4>合体・分裂は運動量保存。運動エネルギーは別に計算する</h4>
+<div class="when">衝突して一体になる、静止した物体が分裂する、人が台車から飛び降りる。</div>
+<div class="how">外力の力積が無視できれば $m_1\vec v_1+m_2\vec v_2=m_1\vec v_1'+m_2\vec v_2'$。合体では運動エネルギーは必ず減る（熱などになる）。分裂では内部のエネルギー（火薬・ばねなど）が運動エネルギーになる。<b>運動エネルギーが保存すると仮定しない</b>。</div>
+<div class="pex">なめらかな水平面上で、速さ $3.0\ \mathrm{m/s}$ の物体 A（$2.0\ \mathrm{kg}$）が静止した物体 B（$1.0\ \mathrm{kg}$）に衝突して一体になった。衝突後の速さと、失われた運動エネルギーを求めよ。<br>
+<b>解</b>　$2.0\times3.0=3.0v$ より $v=2.0\ \mathrm{m/s}$。$\frac12\times2.0\times3.0^2-\frac12\times3.0\times2.0^2=9.0-6.0=3.0\ \mathrm J$。</div>
+<div class="pnote">静止した物体が2つに分裂すると、運動量の和が0なので2つは必ず逆向きに飛び、速さは質量に反比例する。</div>
+</div>
+
+<div class="pat"><h4>反発係数の式は運動量保存とセットで連立</h4>
+<div class="when">2物体が一直線上で衝突し、反発係数 $e$ が与えられる。</div>
+<div class="how">①運動量保存 $m_1v_1+m_2v_2=m_1v_1'+m_2v_2'$。②反発係数 $e=-\frac{v_1'-v_2'}{v_1-v_2}$（遠ざかる速さ ÷ 近づく速さ）。速度はすべて同じ向きを正にして符号つき。2式を連立する。$e=1$ 弾性衝突、$0\lt e\lt1$ 非弾性衝突、$e=0$ 完全非弾性衝突（一体になる）。</div>
+<div class="pex">速度 $+3.0\ \mathrm{m/s}$ の物体 A（$2.0\ \mathrm{kg}$）が、静止した物体 B（$1.0\ \mathrm{kg}$）に衝突した。$e=0.50$ のとき、衝突後の速度を求めよ。<br>
+<b>解</b>　$2.0\times3.0=2.0v_{\mathrm A}'+1.0v_{\mathrm B}'$、$v_{\mathrm B}'-v_{\mathrm A}'=0.50\times3.0$。連立して $v_{\mathrm A}'=+1.5\ \mathrm{m/s}$、$v_{\mathrm B}'=+3.0\ \mathrm{m/s}$。</div>
+</div>
+
+<div class="pat"><h4>静止した相手への弾性衝突は公式で。等しい質量なら速度が入れかわる</h4>
+<div class="when">静止した物体への1次元の弾性衝突（$e=1$）。</div>
+<div class="how">質量 $m$、速度 $v$ の物体が静止した質量 $M$ の物体に弾性衝突すると<br>
+$v'=\frac{m-M}{m+M}v$、$V'=\frac{2m}{m+M}v$。<br>
+$m=M$ なら $v'=0$、$V'=v$（速度の入れかわり）。$m\lt M$ なら $v'\lt0$ ではね返る。</div>
+<div class="pex">速さ $4.0\ \mathrm{m/s}$ の $1.0\ \mathrm{kg}$ の球が、静止した $3.0\ \mathrm{kg}$ の球に弾性衝突した。衝突後の速度を求めよ。<br>
+<b>解</b>　$v'=\frac{1.0-3.0}{4.0}\times4.0=-2.0\ \mathrm{m/s}$（はね返る）、$V'=\frac{2\times1.0}{4.0}\times4.0=2.0\ \mathrm{m/s}$。運動エネルギーは衝突前 $8.0\ \mathrm J$、後 $2.0+6.0=8.0\ \mathrm J$ で保存している。</div>
+<div class="pnote">平面上で、静止した同じ質量の球に斜めに弾性衝突すると、衝突後の2球は互いに直角の向きに進む。</div>
+</div>
+
+<div class="pat"><h4>床・壁との衝突は「垂直成分だけ $e$ 倍」</h4>
+<div class="when">床ではね返るボールの高さ、なめらかな面に斜めに衝突するときの速さと向き。</div>
+<div class="how">なめらかな面では、面に平行な速度成分は変わらず、垂直な成分だけが向きを変えて $e$ 倍になる。高さ $h$ から落とすと、はね返る速さは $e$ 倍、はね上がる高さは $e^2h$。逆に、はね上がる高さ $h'$ から $e=\sqrt{\frac{h'}{h}}$。</div>
+<div class="pex">(1)高さ $2.0\ \mathrm m$ から落としたボール（床との反発係数 $0.50$）がはね上がる高さを求めよ。(2)なめらかな床に、床と $45^\circ$ の角をなして速さ $4.0\ \mathrm{m/s}$ で衝突した（$e=0.50$）。はね返った直後の速さを求めよ。<br>
+<b>解</b>　(1)$0.50^2\times2.0=0.50\ \mathrm m$。(2)平行成分 $2\sqrt2\ \mathrm{m/s}$ はそのまま、垂直成分は $2\sqrt2\times0.50=\sqrt2\ \mathrm{m/s}$。速さ $\sqrt{8+2}=\sqrt{10}\fallingdotseq3.2\ \mathrm{m/s}$（床となす角 $\theta$ は $\tan\theta=0.50$）。</div>
+</div>
+
+<div class="pat"><h4>平面上の衝突は成分ごとに運動量保存</h4>
+<div class="when">平面上で異なる向きに動く物体が衝突・合体する、斜めに分裂する。</div>
+<div class="how">$x$ 成分・$y$ 成分のそれぞれについて運動量保存の式を立てる。運動量はベクトルなので、ベクトルの和の作図（三角形）で考えてもよい。</div>
+<div class="pex">なめらかな水平面上で、東向き $3.0\ \mathrm{m/s}$ の物体 A（$2.0\ \mathrm{kg}$）と、北向き $2.0\ \mathrm{m/s}$ の物体 B（$3.0\ \mathrm{kg}$）が衝突して一体になった。衝突後の速さと向きを求めよ。<br>
+<b>解</b>　東向き成分：$2.0\times3.0=5.0v_x$、北向き成分：$3.0\times2.0=5.0v_y$ より $v_x=v_y=1.2\ \mathrm{m/s}$。速さ $1.2\sqrt2\fallingdotseq1.7\ \mathrm{m/s}$、向きは北東（東から北へ $45^\circ$）。</div>
+</div>
+
+<div class="pat"><h4>台の上をすべる物体は「一体になる速さ」と「摩擦熱」</h4>
+<div class="when">なめらかな床上の台に物体がすべり込み、摩擦でやがて一緒に動く。</div>
+<div class="how">①物体と台の間の摩擦力は内力なので、全体の運動量は保存 → 一体になったときの速さ。②失われた運動エネルギー＝摩擦熱 $=\mu'mg\times$（台に対してすべった距離）。時間を問われたら、それぞれの運動方程式から加速度を出す。</div>
+<div class="pex">なめらかな床上に静止した台（$4.0\ \mathrm{kg}$）に、物体（$1.0\ \mathrm{kg}$）が速さ $5.0\ \mathrm{m/s}$ ですべり込んだ。動摩擦係数を $0.50$ とする。一体になったときの速さ、発生した熱、物体が台の上をすべった距離を求めよ。<br>
+<b>解</b>　$1.0\times5.0=5.0V$ より $V=1.0\ \mathrm{m/s}$。熱 $Q=\frac12\times1.0\times5.0^2-\frac12\times5.0\times1.0^2=10\ \mathrm J$。$10=0.50\times1.0\times9.8\times l$ より $l\fallingdotseq2.0\ \mathrm m$。</div>
+<div class="pnote">摩擦熱の距離は、床に対してではなく「台に対して」すべった距離。</div>
+</div>
+
+<div class="pat"><h4>外力がなければ重心は動かない（人とボート）</h4>
+<div class="when">静止したボートや台車の上を人が歩く。はじめ全体が静止していて、水平方向の外力がない。</div>
+<div class="how">運動量の和が0のまま → 重心の位置が変わらない。重心 $x_{\mathrm G}=\frac{m_1x_1+m_2x_2}{m_1+m_2}$ の前後を等しくおく。人が台に対して $L$ 動くと、台は逆向きに $\frac{m}{m+M}L$ 動く（$m$：人、$M$：台）。</div>
+<div class="pex">静かな水面に浮かぶ長さ $5.0\ \mathrm m$、質量 $90\ \mathrm{kg}$ のボートの一端に、質量 $60\ \mathrm{kg}$ の人が立っている。人が他端まで歩くと、ボートはどれだけ動くか。水の抵抗は無視する。<br>
+<b>解</b>　ボートが逆向きに $d$ 動くと、人は水面に対して $5.0-d$ 動く。重心が動かないので $60(5.0-d)=90d$、$d=2.0\ \mathrm m$。</div>
+</div>
+
+<div class="box memo"><table class="l w">
+<tr><th>項目</th><th>公式・事実</th></tr>
+<tr><td>運動量と力積</td><td>$\vec p=m\vec v$（$\mathrm{kg\cdot m/s}$）、$m\vec v'-m\vec v=\vec F\Delta t$（$\mathrm{N\cdot s}$）、F-t グラフの面積＝力積</td></tr>
+<tr><td>運動量保存</td><td>外力の力積が0のとき $m_1\vec v_1+m_2\vec v_2=m_1\vec v_1'+m_2\vec v_2'$</td></tr>
+<tr><td>反発係数</td><td>$e=-\frac{v_1'-v_2'}{v_1-v_2}$、床：$e=\frac{|v'|}{|v|}=\sqrt{\frac{h'}{h}}$</td></tr>
+<tr><td>弾性衝突（相手が静止）</td><td>$v'=\frac{m-M}{m+M}v$、$V'=\frac{2m}{m+M}v$</td></tr>
+<tr><td>合体で失われるエネルギー</td><td>$\frac12\cdot\frac{m_1m_2}{m_1+m_2}(v_1-v_2)^2$</td></tr>
+<tr><td>重心</td><td>$x_{\mathrm G}=\frac{m_1x_1+m_2x_2}{m_1+m_2}$、外力がなければ重心の速度は一定</td></tr>
+</table></div>
+
+<!--CH 5-->
+<div class="pat"><h4>等速円運動は $v=r\omega$、加速度 $r\omega^2=\frac{v^2}{r}$（中心向き）</h4>
+<div class="when">回転の速さ・周期・加速度を求める。</div>
+<div class="how">角速度 $\omega=\frac{2\pi}{T}$（rad/s）、回転数 $n=\frac1T$。速さ $v=r\omega$。加速度は中心向きに $a=r\omega^2=\frac{v^2}{r}=v\omega$。速さが一定でも向きが変わるので加速度がある。</div>
+<div class="pex">半径 $2.0\ \mathrm m$ の円周上を、周期 $4.0\ \mathrm s$ で等速円運動する物体の角速度・速さ・加速度の大きさを求めよ。<br>
+<b>解</b>　$\omega=\frac{2\pi}{4.0}=\frac\pi2\fallingdotseq1.6\ \mathrm{rad/s}$、$v=2.0\times\frac\pi2\fallingdotseq3.1\ \mathrm{m/s}$、$a=2.0\times\left(\frac\pi2\right)^2\fallingdotseq4.9\ \mathrm{m/s^2}$。</div>
+</div>
+
+<div class="pat"><h4>円運動の運動方程式は「中心向きを正」。向心力は合力の呼び名</h4>
+<div class="when">糸・面・重力などによって円運動する物体の張力・周期（円すい振り子など）。</div>
+<div class="how">①力を図示する（「向心力」という力を別に書き加えない）。②力を中心方向と、それに垂直な方向に分ける。③中心方向：$m\frac{v^2}{r}=mr\omega^2=$（中心向きの力の和）。垂直な方向：つりあい。</div>
+<div class="pex">長さ $0.50\ \mathrm m$ の糸に $0.20\ \mathrm{kg}$ のおもりをつけ、糸が鉛直と $60^\circ$ をなすように水平面内で等速円運動させた（円すい振り子）。糸の張力と周期を求めよ。<br>
+<b>解</b>　鉛直：$T\cos60^\circ=mg$ より $T=2mg=3.92\fallingdotseq3.9\ \mathrm N$。半径 $r=L\sin60^\circ$ で、中心方向：$T\sin60^\circ=mr\omega^2$ より $\omega^2=\frac{T}{mL}=\frac{g}{L\cos60^\circ}$。周期 $2\pi\sqrt{\frac{L\cos60^\circ}{g}}=2\pi\sqrt{\frac{0.25}{9.8}}\fallingdotseq1.0\ \mathrm s$。</div>
+</div>
+
+<div class="pat"><h4>回転する円板上の物体は「静止摩擦力が向心力」</h4>
+<div class="when">回転する円板（ターンテーブル）上の物体がすべり出す角速度、カーブを曲がる自動車。</div>
+<div class="how">物体は円板とともに等速円運動していて、中心向きの力は静止摩擦力だけ：$mr\omega^2=f$。すべらない条件 $f\leqq\mu mg$ より $\omega\leqq\sqrt{\frac{\mu g}{r}}$。外側（$r$ が大きい）ほどすべりやすい。</div>
+<div class="pex">回転軸から $0.20\ \mathrm m$ の位置に置いた物体（静止摩擦係数 $0.50$）が、すべり出さない角速度の最大値を求めよ。<br>
+<b>解</b>　$\omega=\sqrt{\frac{0.50\times9.8}{0.20}}=\sqrt{24.5}\fallingdotseq4.9\ \mathrm{rad/s}$。</div>
+</div>
+
+<div class="pat"><h4>加速する乗り物の中では慣性力 $-m\vec a$ を加えてつりあい</h4>
+<div class="when">加速する電車・エレベーターの中の物体を、乗り物とともに動く人の立場で考える。</div>
+<div class="how">加速度 $\vec a$ で動く観測者から見ると、実際の力に加えて<b>慣性力 $-m\vec a$</b>（加速度と逆向き）がはたらくように見える。乗り物の中で静止している物体では、実際の力＋慣性力＝0。重力と慣性力の合力を「見かけの重力」$m\vec g'$ とみなせる。</div>
+<div class="pex">水平に加速度 $4.9\ \mathrm{m/s^2}$ で加速する電車の天井から、$0.20\ \mathrm{kg}$ のおもりを糸でつるした。糸が鉛直となす角 $\theta$ について $\tan\theta$ と、張力の大きさを求めよ。<br>
+<b>解</b>　電車内では、重力 $mg$（下向き）、慣性力 $ma$（後ろ向き）、張力がつりあう。$\tan\theta=\frac ag=0.50$（後方に傾く）。$T=m\sqrt{g^2+a^2}=0.20\times\sqrt{9.8^2+4.9^2}\fallingdotseq2.2\ \mathrm N$。</div>
+<div class="pnote">慣性力は「乗り物の中の人から見たとき」だけ書く。地上から見るなら書かずに、運動方程式 $ma=T\sin\theta$ を立てる。両方を混ぜない。</div>
+</div>
+
+<div class="pat"><h4>エレベーター内の見かけの重さは $m(g\pm a)$</h4>
+<div class="when">加速するエレベーター内の体重計の目盛り、糸の張力。</div>
+<div class="how">上向きの加速度 $a$（上昇しながら加速、または下降しながら減速）なら慣性力は下向き $ma$ で、見かけの重力加速度は $g+a$。下向きの加速度 $a$ なら $g-a$。自由落下するエレベーター内では $g'=0$（無重量状態）。</div>
+<div class="pex">質量 $50\ \mathrm{kg}$ の人がエレベーター内の体重計に乗っている。エレベーターが (1)上向きに $2.0\ \mathrm{m/s^2}$、(2)下向きに $2.0\ \mathrm{m/s^2}$ の加速度で動くとき、体重計が人を押す力の大きさを求めよ。<br>
+<b>解</b>　(1)$N=m(g+a)=50\times11.8=590\ \mathrm N$。(2)$N=50\times7.8=390\ \mathrm N$。</div>
+<div class="pnote">「上向きに動いている」と「上向きの加速度」は別。一定の速さで動いていれば $a=0$ で $N=mg$。</div>
+</div>
+
+<div class="pat"><h4>回転する立場では遠心力 $mr\omega^2$ を加えてつりあい</h4>
+<div class="when">回転する円筒の内壁にはりつく人など、回転するものの上の観測者から見る問題。</div>
+<div class="how">物体とともに回転する観測者から見ると物体は静止していて、実際の力と<b>遠心力</b>（中心から外向きに $mr\omega^2=m\frac{v^2}{r}$）がつりあう。立てた式は、地上から見た円運動の運動方程式と同じ形になる。</div>
+<div class="pex">半径 $2.5\ \mathrm m$ の円筒が鉛直な軸のまわりに回転し、人が内壁にはりついている（壁との静止摩擦係数 $0.40$）。床を取り去っても人がすべり落ちない角速度の最小値を求めよ。<br>
+<b>解</b>　回転する立場で、水平：$N=mr\omega^2$（垂直抗力と遠心力のつりあい）、鉛直：$f=mg$。$f\leqq\mu N$ より $mg\leqq\mu mr\omega^2$、$\omega\geqq\sqrt{\frac{g}{\mu r}}=\sqrt{\frac{9.8}{1.0}}\fallingdotseq3.1\ \mathrm{rad/s}$。</div>
+</div>
+
+<div class="pat"><h4>鉛直面内の円運動は「エネルギー保存 ＋ 中心方向の運動方程式」</h4>
+<div class="when">糸につけたおもりや、円筒面の内側をすべる物体が鉛直面内で回る。最高点まで回る条件。</div>
+<div class="how">①速さはエネルギー保存で求める（速さが変わるので等速円運動ではない）。②張力・垂直抗力は中心方向の運動方程式で求める。最高点では $m\frac{v^2}{r}=T+mg$。③糸がたるまない（面から離れない）条件は $T\geqq0$（$N\geqq0$）。最高点で $v^2\geqq gr$。</div>
+<div class="pex">長さ $0.40\ \mathrm m$ の糸につけたおもりを、最下点で水平に速さ $v_0$ で動かした。糸がたるまずに1回転する $v_0$ の最小値を求めよ。<br>
+<b>解</b>　最高点の速さを $v$ として $\frac12mv_0^2=\frac12mv^2+mg\times2L$。最高点で $v^2\geqq gL$ より $v_0^2\geqq5gL$、$v_0\geqq\sqrt{5\times9.8\times0.40}\fallingdotseq4.4\ \mathrm{m/s}$。</div>
+<div class="pnote">糸ではなく軽い棒なら、棒は押す力も及ぼせるので、条件は「最高点で $v\geqq0$」（$v_0^2\geqq4gL$）になる。</div>
+</div>
+
+<div class="pat"><h4>面から離れる点は「垂直抗力 $N=0$」</h4>
+<div class="when">球面の外側をすべり下りる物体が面から離れる位置。</div>
+<div class="how">頂上から角 $\theta$ の位置での $v^2$ をエネルギー保存で $\theta$ の式にし、中心方向の式 $m\frac{v^2}{R}=mg\cos\theta-N$ に代入する。$N=0$ とおいて $\theta$ を決める。離れた後は放物運動。</div>
+<div class="pex">半径 $0.90\ \mathrm m$ のなめらかな半球面の頂上から、小物体が静かにすべり出した。面から離れる点の、球の中心からの高さと、そのときの速さを求めよ。<br>
+<b>解</b>　鉛直と $\theta$ をなす半径の位置で $v^2=2gR(1-\cos\theta)$。$N=0$ より $m\frac{v^2}{R}=mg\cos\theta$、$2(1-\cos\theta)=\cos\theta$、$\cos\theta=\frac23$。高さ $R\cos\theta=0.60\ \mathrm m$。$v=\sqrt{gR\cos\theta}=\sqrt{9.8\times0.60}\fallingdotseq2.4\ \mathrm{m/s}$。</div>
+</div>
+
+<div class="box memo"><table class="l w">
+<tr><th>項目</th><th>公式・事実</th></tr>
+<tr><td>等速円運動</td><td>$v=r\omega$、$T=\frac{2\pi}{\omega}=\frac{2\pi r}{v}$、$a=r\omega^2=\frac{v^2}{r}$（中心向き）</td></tr>
+<tr><td>運動方程式（中心方向）</td><td>$mr\omega^2=m\frac{v^2}{r}=F$（中心向きの力の和）</td></tr>
+<tr><td>慣性力</td><td>加速度 $\vec a$ の観測者から見て $-m\vec a$。見かけの重力加速度 $\vec g'=\vec g-\vec a$</td></tr>
+<tr><td>遠心力</td><td>回転する観測者から見て外向きに $mr\omega^2$</td></tr>
+<tr><td>円すい振り子</td><td>周期 $2\pi\sqrt{\frac{L\cos\theta}{g}}$</td></tr>
+<tr><td>鉛直面内の円運動（糸）</td><td>1回転する条件：最高点で $v^2\geqq gr$（最下点で $v_0^2\geqq5gr$）</td></tr>
+</table></div>
+
+<!--CH 6-->
+<div class="pat"><h4>単振動は $x=A\sin\omega t$、$v_{\max}=A\omega$、$a=-\omega^2x$</h4>
+<div class="when">振幅と周期から最大の速さ・加速度を求める、任意の位置での加速度を求める。</div>
+<div class="how">$x=A\sin(\omega t+\phi_0)$、$v=A\omega\cos(\omega t+\phi_0)$、$a=-A\omega^2\sin(\omega t+\phi_0)=-\omega^2x$。周期 $T=\frac{2\pi}{\omega}$。速さが最大 $A\omega$ になるのは振動の中心、加速度の大きさが最大 $A\omega^2$ になるのは両端（加速度の向きはつねに中心向き）。</div>
+<div class="pex">振幅 $0.20\ \mathrm m$、周期 $2.0\ \mathrm s$ の単振動の、速さの最大値と加速度の大きさの最大値を求めよ。<br>
+<b>解</b>　$\omega=\frac{2\pi}{2.0}=\pi\ \mathrm{rad/s}$。$v_{\max}=0.20\pi\fallingdotseq0.63\ \mathrm{m/s}$、$a_{\max}=0.20\pi^2\fallingdotseq2.0\ \mathrm{m/s^2}$。</div>
+</div>
+
+<div class="pat"><h4>「$ma=-Kx$」の形を作れば、周期は $2\pi\sqrt{\frac mK}$</h4>
+<div class="when">ばね・浮力など、どんな力による振動でも、単振動かどうかの判定と周期・振幅。</div>
+<div class="how">①<b>つりあいの位置</b>を原点にとる。②原点から $x$ ずれたときの合力を求め、$F=-Kx$（$K$ は正の定数）の形なら単振動。③$\omega=\sqrt{\frac Km}$、$T=2\pi\sqrt{\frac mK}$。振動の中心はつりあいの位置、振幅は中心から端（速さ0の点）までの距離。鉛直ばねでも、重力は中心をずらすだけで周期は $2\pi\sqrt{\frac mk}$。</div>
+<div class="pex">ばね定数 $4.9\ \mathrm{N/m}$ の鉛直ばねに $0.10\ \mathrm{kg}$ のおもりをつけ、自然長の位置で静かに放した。振動の中心、振幅、周期、最大の速さを求めよ。<br>
+<b>解</b>　つりあいの伸び $\frac{0.10\times9.8}{4.9}=0.20\ \mathrm m$ の位置が中心。自然長の位置で速さ0なので振幅 $0.20\ \mathrm m$。$\omega=\sqrt{\frac{4.9}{0.10}}=7.0\ \mathrm{rad/s}$、$T=\frac{2\pi}{7.0}\fallingdotseq0.90\ \mathrm s$、$v_{\max}=0.20\times7.0=1.4\ \mathrm{m/s}$。</div>
+<div class="pnote">液体に浮かぶ物体（断面積 $S$、液体の密度 $\rho$）を $x$ 押し下げると、浮力の増加 $\rho Sxg$ が復元力になり $K=\rho Sg$。</div>
+</div>
+
+<div class="pat"><h4>単振り子の周期は $2\pi\sqrt{\frac Lg}$（振幅にも質量にもよらない）</h4>
+<div class="when">振り子の周期、周期から糸の長さや $g$ を求める。</div>
+<div class="how">振れの角が小さいとき、復元力は $-mg\sin\theta\fallingdotseq-\frac{mg}{L}x$ なので $K=\frac{mg}{L}$、$T=2\pi\sqrt{\frac Lg}$。おもりの質量にも振幅にもよらない（振り子の等時性）。長さを4倍にすると周期は2倍。</div>
+<div class="pex">周期 $2.0\ \mathrm s$ の単振り子の糸の長さを求めよ。<br>
+<b>解</b>　$L=g\left(\frac{T}{2\pi}\right)^2=\frac{9.8}{\pi^2}\fallingdotseq0.99\ \mathrm m$。</div>
+<div class="pnote">$L$ は支点からおもりの<b>重心</b>までの長さ。</div>
+</div>
+
+<div class="pat"><h4>乗り物の中の振り子は「見かけの重力加速度 $g'$」で周期を出す</h4>
+<div class="when">エレベーターや電車の中の単振り子、電場中の帯電した振り子の周期。</div>
+<div class="how">重力と慣性力（や電気力）の合力を見かけの重力 $mg'$ とし、$T=2\pi\sqrt{\frac{L}{g'}}$。上向きの加速度 $a$ のエレベーターでは $g'=g+a$。水平に加速度 $a$ で走る電車では $g'=\sqrt{g^2+a^2}$ で、振動の中心は鉛直から傾いた向き（$\tan\theta=\frac ag$）。</div>
+<div class="pex">水平に加速度 $\frac34g$ で加速する電車内で、長さ $0.49\ \mathrm m$ の単振り子を小さく振らせた。周期を求めよ。<br>
+<b>解</b>　$g'=\sqrt{g^2+\left(\frac34g\right)^2}=\frac54g=12.25\ \mathrm{m/s^2}$。$T=2\pi\sqrt{\frac{0.49}{12.25}}=2\pi\times0.20\fallingdotseq1.3\ \mathrm s$（静止した電車内では $1.4\ \mathrm s$）。</div>
+</div>
+
+<div class="pat"><h4>単振動のエネルギーは $\frac12mv^2+\frac12Kx^2=\frac12KA^2$</h4>
+<div class="when">単振動の途中の位置での速さや、振幅を求める。</div>
+<div class="how">$x$ はつりあいの位置（振動の中心）からの変位。$\frac12mv^2+\frac12Kx^2=\frac12KA^2$ より $v=\omega\sqrt{A^2-x^2}$。鉛直ばねでも、中心からの変位 $x$ を使えば、重力の位置エネルギーを別に書かなくてよい。</div>
+<div class="pex">ばね定数 $100\ \mathrm{N/m}$ のばねにつけた $1.0\ \mathrm{kg}$ の物体が、なめらかな水平面上で振幅 $0.10\ \mathrm m$ の単振動をしている。中心から $0.060\ \mathrm m$ の位置での速さを求めよ。<br>
+<b>解</b>　$\omega=\sqrt{\frac{100}{1.0}}=10\ \mathrm{rad/s}$。$v=10\times\sqrt{0.10^2-0.060^2}=10\times0.080=0.80\ \mathrm{m/s}$。</div>
+</div>
+
+<div class="pat"><h4>ばねが2本なら、ずらしたときの合力から合成ばね定数</h4>
+<div class="when">2本のばねで物体をはさむ、ばねを直列・並列につなぐ。</div>
+<div class="how">物体を $x$ ずらしたときの合力を $-Kx$ の形にして $K$ を求める。<br>
+・物体の両側にばね（両端は壁）、並列（同じだけ伸びる）：$K=k_1+k_2$<br>
+・直列（同じ力がかかる）：$\frac1K=\frac1{k_1}+\frac1{k_2}$</div>
+<div class="pex">なめらかな水平面上の $0.25\ \mathrm{kg}$ の物体の左右に、ばね定数 $30\ \mathrm{N/m}$ と $70\ \mathrm{N/m}$ のばねをつけ、それぞれの他端を壁に固定した。振動の周期を求めよ。<br>
+<b>解</b>　つりあいの位置から $x$ ずらすと、一方のばねの伸びと他方の縮みがどちらも $x$ だけ変わり、合力は $-(30+70)x$。$T=2\pi\sqrt{\frac{0.25}{100}}=0.10\pi\fallingdotseq0.31\ \mathrm s$。</div>
+<div class="pnote">同じ2本を直列につなぐと $K=\frac{30\times70}{30+70}=21\ \mathrm{N/m}$ で、1本のときより小さくなる。</div>
+</div>
+
+<div class="pat"><h4>かかる時間は「等速円運動の正射影」で角度に直す</h4>
+<div class="when">単振動で、ある位置から別の位置まで移動するのにかかる時間。</div>
+<div class="how">単振動は、半径 $A$、角速度 $\omega$ の等速円運動を直径上に正射影した運動。2つの位置に対応する円周上の点の中心角 $\Delta\theta$ を求めて、$t=\frac{\Delta\theta}{\omega}=\frac{\Delta\theta}{2\pi}T$。</div>
+<div class="pex">周期 $1.2\ \mathrm s$、振幅 $A$ の単振動で、物体が中心 $x=0$ から $x=\frac A2$ まで動く時間と、$x=\frac A2$ から $x=A$ まで動く時間を求めよ。<br>
+<b>解</b>　$\sin\theta=\frac12$ より中心角 $\frac\pi6$ で、$\frac T{12}=0.10\ \mathrm s$。$\frac A2$ から $A$ までは $\frac\pi2-\frac\pi6=\frac\pi3$ で、$\frac T6=0.20\ \mathrm s$。</div>
+<div class="pnote">中心付近は速く、端の近くは遅い。「距離が半分なら時間も半分」にはならない。</div>
+</div>
+
+<div class="pat"><h4>動摩擦があっても「半周期ごとに中心がずれた単振動」</h4>
+<div class="when">粗い水平面上で、ばねにつけた物体が往復する。折り返す位置や止まる位置。</div>
+<div class="how">一方向に動いている間は動摩擦力 $\mu'mg$ が一定なので、その半周期は単振動になる。自然長を原点、右向きを正とすると、左向きに動く間の振動の中心は $x=+\frac{\mu'mg}{k}$、右向きに動く間は $x=-\frac{\mu'mg}{k}$（ばねの力と動摩擦力がつりあう位置）。周期 $2\pi\sqrt{\frac mk}$ は摩擦がないときと同じで、片道ごとに振幅が $\frac{2\mu'mg}{k}$ ずつ減る。</div>
+<div class="pex">ばね定数 $19.6\ \mathrm{N/m}$ のばねにつけた $1.0\ \mathrm{kg}$ の物体を、粗い水平面上で自然長から右へ $0.30\ \mathrm m$ 引いて静かに放した（動摩擦係数 $0.10$）。物体の速度が初めて0になる位置と時刻を求めよ。<br>
+<b>解</b>　左向きに動く間の中心は $x=\frac{0.10\times1.0\times9.8}{19.6}=+0.050\ \mathrm m$。振幅 $0.30-0.050=0.25\ \mathrm m$ の単振動の半周期で、$x=0.050-0.25=-0.20\ \mathrm m$ に達する。時刻は $\pi\sqrt{\frac{1.0}{19.6}}\fallingdotseq0.71\ \mathrm s$。</div>
+</div>
+
+<div class="box memo"><table class="l w">
+<tr><th>項目</th><th>公式・事実</th></tr>
+<tr><td>単振動の式</td><td>$x=A\sin(\omega t+\phi_0)$、$v=A\omega\cos(\omega t+\phi_0)$、$a=-\omega^2x$</td></tr>
+<tr><td>周期・振動数</td><td>$T=\frac{2\pi}{\omega}$、$f=\frac1T$</td></tr>
+<tr><td>復元力と周期</td><td>$F=-Kx$ のとき $T=2\pi\sqrt{\frac mK}$（中心はつりあいの位置）</td></tr>
+<tr><td>ばね振り子</td><td>$T=2\pi\sqrt{\frac mk}$（水平でも鉛直でも同じ）</td></tr>
+<tr><td>単振り子</td><td>$T=2\pi\sqrt{\frac Lg}$（振れが小さいとき）。加速する乗り物内では $g\to g'$</td></tr>
+<tr><td>エネルギー</td><td>$\frac12mv^2+\frac12Kx^2=\frac12KA^2$、$v_{\max}=A\omega$、$a_{\max}=A\omega^2$</td></tr>
+<tr><td>合成ばね定数</td><td>並列・両側 $k_1+k_2$、直列 $\frac{k_1k_2}{k_1+k_2}$</td></tr>
+</table></div>
+
+<!--CH 7-->
+<div class="pat"><h4>ケプラーの第3法則 $\frac{T^2}{a^3}=$ 一定 は「同じ中心天体」どうしで</h4>
+<div class="when">惑星や衛星の周期と軌道の大きさの関係。</div>
+<div class="how">同じ中心天体のまわりを回る天体では $\frac{T^2}{a^3}$ が共通（$a$ は楕円の半長軸、円なら半径）。比で解く：$\frac{T_2}{T_1}=\left(\frac{a_2}{a_1}\right)^{\frac32}$。円軌道なら $\frac{T^2}{r^3}=\frac{4\pi^2}{GM}$。</div>
+<div class="pex">太陽からの平均距離が地球の4倍の惑星の公転周期は何年か。<br>
+<b>解</b>　$T=1\times4^{\frac32}=8$ 年。</div>
+<div class="pnote">月（地球のまわり）と惑星（太陽のまわり）は中心天体が違うので、同じ定数は使えない。</div>
+</div>
+
+<div class="pat"><h4>第2法則（面積速度一定）で、近日点と遠日点の速さを比べる</h4>
+<div class="when">楕円軌道上の、中心天体に最も近い点と最も遠い点の速さの比。</div>
+<div class="how">面積速度 $\frac12rv\sin\theta$ が一定。近日点・遠日点では速度が動径に垂直なので $r_1v_1=r_2v_2$。中心天体に近いほど速い。エネルギー保存と組み合わせると速さそのものが求まる（「楕円軌道」のカード）。</div>
+<div class="pex">近日点距離 $r$、遠日点距離 $3r$ の楕円軌道を回る惑星の、遠日点での速さは近日点での速さの何倍か。<br>
+<b>解</b>　$rv_1=3rv_2$ より $\frac{v_2}{v_1}=\frac13$ 倍。</div>
+</div>
+
+<div class="pat"><h4>$G$ や $M$ がなければ $GM=gR^2$ と置きかえる</h4>
+<div class="when">万有引力定数 $G$ や地球の質量 $M$ が与えられず、$g$ と地球の半径 $R$ が与えられる。高さによる重力の変化。</div>
+<div class="how">地表で $mg=\frac{GMm}{R^2}$ より $GM=gR^2$。地球の中心から距離 $r$ の位置での重力加速度は $g\left(\frac Rr\right)^2$（距離の2乗に反比例）。</div>
+<div class="pex">地表からの高さが地球の半径 $R$ に等しい位置での重力加速度を求めよ。<br>
+<b>解</b>　中心からの距離が $2R$ なので $g\times\frac14=2.45\ \mathrm{m/s^2}$。</div>
+<div class="pnote">「地表からの高さ $h$」と「中心からの距離 $r=R+h$」を取り違えない。</div>
+</div>
+
+<div class="pat"><h4>円軌道の速さは「万有引力＝向心力」から $v=\sqrt{\frac{GM}{r}}$</h4>
+<div class="when">人工衛星の速さ・周期、第1宇宙速度。</div>
+<div class="how">$m\frac{v^2}{r}=\frac{GMm}{r^2}$ より $v=\sqrt{\frac{GM}{r}}$、周期 $T=\frac{2\pi r}{v}$。地表すれすれ（$r=R$）なら $v_1=\sqrt{gR}\fallingdotseq7.9\ \mathrm{km/s}$（第1宇宙速度）。高い軌道ほど速さは小さく、周期は長い。</div>
+<div class="pex">地球の半径を $6.4\times10^6\ \mathrm m$ として、第1宇宙速度と、地表すれすれを回る衛星の周期を求めよ。<br>
+<b>解</b>　$v_1=\sqrt{9.8\times6.4\times10^6}\fallingdotseq7.9\times10^3\ \mathrm{m/s}$。$T=\frac{2\pi R}{v_1}\fallingdotseq5.1\times10^3\ \mathrm s$（約85分）。</div>
+</div>
+
+<div class="pat"><h4>静止衛星は「周期が地球の自転と同じ円軌道」</h4>
+<div class="when">静止衛星の軌道半径・高度。</div>
+<div class="how">赤道上空を、地球の自転と同じ向き・同じ周期 $T$ で回る衛星。$mr\left(\frac{2\pi}{T}\right)^2=\frac{GMm}{r^2}$ より $r^3=\frac{GMT^2}{4\pi^2}=\frac{gR^2T^2}{4\pi^2}$。</div>
+<div class="pex">周期を $24$ 時間（$8.64\times10^4\ \mathrm s$）、地球の半径を $6.4\times10^6\ \mathrm m$ として、静止衛星の軌道半径を求めよ。<br>
+<b>解</b>　$r^3=\frac{9.8\times(6.4\times10^6)^2\times(8.64\times10^4)^2}{4\pi^2}\fallingdotseq7.6\times10^{22}\ \mathrm{m^3}$ より $r\fallingdotseq4.2\times10^7\ \mathrm m$（地球の半径の約6.6倍）。</div>
+</div>
+
+<div class="pat"><h4>遠くまで行く運動は、位置エネルギー $-\frac{GMm}{r}$ で保存則</h4>
+<div class="when">鉛直に打ち上げた物体の到達高度など、高さが地球の半径に比べて無視できない運動。</div>
+<div class="how">無限遠を基準として $U=-\frac{GMm}{r}$。力学的エネルギー保存 $\frac12mv^2-\frac{GMm}{r}=$ 一定。$mgh$ は地表付近でだけ使える近似なので、ここでは使わない。</div>
+<div class="pex">地表から鉛直上向きに打ち上げた物体が、地表からの高さ $R$（地球の半径）まで達するための初速を求めよ。<br>
+<b>解</b>　$\frac12mv_0^2-\frac{GMm}{R}=-\frac{GMm}{2R}$ より $v_0=\sqrt{\frac{GM}{R}}=\sqrt{gR}\fallingdotseq7.9\times10^3\ \mathrm{m/s}$。</div>
+<div class="pnote">$mgh$ で計算すると $v_0=\sqrt{2gR}$ となり誤り（高いところほど重力は弱い）。</div>
+</div>
+
+<div class="pat"><h4>脱出速度は「力学的エネルギー $\geqq0$」</h4>
+<div class="when">地球の引力圏から脱出する最小の速さ（第2宇宙速度）。</div>
+<div class="how">無限遠（$U=0$）で運動エネルギーが $0$ 以上であればよいので、$\frac12mv^2-\frac{GMm}{R}\geqq0$。$v_2=\sqrt{\frac{2GM}{R}}=\sqrt{2gR}\fallingdotseq11.2\ \mathrm{km/s}$。半径 $r$ の円軌道上の衛星の力学的エネルギーは $-\frac{GMm}{2r}$（負）で、地球に束縛されている。</div>
+<div class="pex">地表から打ち出して、地球から無限に遠ざかるための最小の速さを求めよ（$R=6.4\times10^6\ \mathrm m$）。<br>
+<b>解</b>　$v_2=\sqrt{2\times9.8\times6.4\times10^6}\fallingdotseq1.1\times10^4\ \mathrm{m/s}$。</div>
+<div class="pnote">第2宇宙速度は第1宇宙速度の $\sqrt2$ 倍。</div>
+</div>
+
+<div class="pat"><h4>楕円軌道は「面積速度一定 ＋ エネルギー保存」の連立</h4>
+<div class="when">近地点・遠地点の距離が与えられた楕円軌道の速さ、円軌道から楕円軌道への乗りかえ。</div>
+<div class="how">近地点 $r_1$・速さ $v_1$、遠地点 $r_2$・速さ $v_2$ として<br>
+$r_1v_1=r_2v_2$、　$\frac12mv_1^2-\frac{GMm}{r_1}=\frac12mv_2^2-\frac{GMm}{r_2}$<br>
+を連立する。</div>
+<div class="pex">近地点距離 $r$、遠地点距離 $3r$ の楕円軌道の、近地点での速さは、半径 $r$ の円軌道の速さの何倍か。<br>
+<b>解</b>　$v_2=\frac{v_1}{3}$ を代入すると $\frac12v_1^2\left(1-\frac19\right)=GM\left(\frac1r-\frac1{3r}\right)$、$v_1^2=\frac{3GM}{2r}$。円軌道の速さの2乗は $\frac{GM}{r}$ なので $\sqrt{\frac32}\fallingdotseq1.2$ 倍。</div>
+</div>
+
+<div class="box memo"><table class="l w">
+<tr><th>項目</th><th>公式・事実</th></tr>
+<tr><td>ケプラーの法則</td><td>第1：楕円軌道（太陽は焦点の1つ）　第2：面積速度一定　第3：$\frac{T^2}{a^3}=$ 一定</td></tr>
+<tr><td>万有引力</td><td>$F=G\frac{Mm}{r^2}$、$G=6.67\times10^{-11}\ \mathrm{N\cdot m^2/kg^2}$</td></tr>
+<tr><td>重力との関係</td><td>$mg=\frac{GMm}{R^2}$ より $GM=gR^2$</td></tr>
+<tr><td>位置エネルギー</td><td>$U=-\frac{GMm}{r}$（無限遠が基準）</td></tr>
+<tr><td>円軌道</td><td>$v=\sqrt{\frac{GM}{r}}$、力学的エネルギー $-\frac{GMm}{2r}$</td></tr>
+<tr><td>宇宙速度</td><td>第1 $\sqrt{gR}\fallingdotseq7.9\ \mathrm{km/s}$、第2 $\sqrt{2gR}\fallingdotseq11.2\ \mathrm{km/s}$</td></tr>
+</table></div>
+
+<!--CH 8-->
+<div class="pat"><h4>力のモーメントは「力 × うでの長さ」</h4>
+<div class="when">回転させるはたらきの大きさ、斜めに力を加えたときのモーメント。</div>
+<div class="how">$M=Fl$（$l$ は回転軸から<b>力の作用線</b>までの距離＝うでの長さ）。斜めの力は $M=Fr\sin\theta$（$r$ は軸から作用点まで、$\theta$ は $r$ の向きと力のなす角）。反時計回りを正などと決めて符号をつける。</div>
+<div class="pex">長さ $0.50\ \mathrm m$ のスパナの端に、柄と $30^\circ$ をなす向きに $20\ \mathrm N$ の力を加えた。ボルトのまわりの力のモーメントの大きさを求めよ。<br>
+<b>解</b>　$M=20\times0.50\times\sin30^\circ=5.0\ \mathrm{N\cdot m}$。</div>
+</div>
+
+<div class="pat"><h4>つりあいは「力の和0」と「モーメントの和0」。軸は未知の力が集まる点に</h4>
+<div class="when">棒や板が静止しているとき、それを支える力を求める。</div>
+<div class="how">①すべての力を作用点の位置にかく（重力は重心から）。②水平・鉛直それぞれの力のつりあい。③任意の点のまわりのモーメントのつりあい。<b>未知の力の作用点を軸に選ぶ</b>と、その力が式から消えて計算が楽になる。</div>
+<div class="pex">長さ $2.0\ \mathrm m$、重さ $40\ \mathrm N$ の一様な棒を両端 A、B で水平に支え、A から $0.50\ \mathrm m$ の位置に重さ $60\ \mathrm N$ のおもりをつるした。A、B が棒を支える力を求めよ。<br>
+<b>解</b>　A のまわり：$N_{\mathrm B}\times2.0=40\times1.0+60\times0.50$ より $N_{\mathrm B}=35\ \mathrm N$。力のつりあい：$N_{\mathrm A}=100-35=65\ \mathrm N$。</div>
+</div>
+
+<div class="pat"><h4>立てかけたはしごは「床の摩擦」と「足元のまわりのモーメント」</h4>
+<div class="when">なめらかな壁に立てかけた棒（はしご）がすべらない条件。</div>
+<div class="how">力は、重力 $W$（中点）、床の垂直抗力 $N$ と静止摩擦力 $f$、壁の垂直抗力 $R$（水平）。鉛直：$N=W$、水平：$f=R$。床との接点のまわり：$R\cdot L\sin\theta=W\cdot\frac L2\cos\theta$（$\theta$ は棒と床のなす角）。すべらない条件 $f\leqq\mu N$ より $\tan\theta\geqq\frac1{2\mu}$。</div>
+<div class="pex">重さ $200\ \mathrm N$ の一様なはしごが、床と $60^\circ$ をなしてなめらかな壁に立てかけてある。壁がはしごを押す力と、すべらないための床の静止摩擦係数の最小値を求めよ。<br>
+<b>解</b>　$R=\frac{W}{2\tan60^\circ}=\frac{200}{2\sqrt3}\fallingdotseq58\ \mathrm N$。$f=R\leqq\mu\times200$ より $\mu\geqq\frac1{2\sqrt3}\fallingdotseq0.29$。</div>
+</div>
+
+<div class="pat"><h4>重心は「質量 × 位置」の平均。くりぬいた部分は負の質量</h4>
+<div class="when">複数の物体を組み合わせたもの、穴のあいた板の重心。</div>
+<div class="how">$x_{\mathrm G}=\frac{m_1x_1+m_2x_2+\cdots}{m_1+m_2+\cdots}$。一様な板では質量は面積に比例する。くりぬいた板は「もとの板」と「くりぬいた部分の負の質量」の組み合わせと考える。</div>
+<div class="pex">半径 $R$ の一様な円板から、中心から $\frac R2$ 離れた点を中心とする半径 $\frac R2$ の円をくりぬいた。残りの板の重心の位置を求めよ。<br>
+<b>解</b>　もとの円板の中心を原点、くりぬいた円の中心を $x=\frac R2$ とする。面積の比は $4:1$ なので $x_{\mathrm G}=\frac{4\times0-1\times\frac R2}{4-1}=-\frac R6$。くりぬいた側と反対側へ $\frac R6$ の位置。</div>
+</div>
+
+<div class="pat"><h4>3つの力でつりあうとき、作用線は1点で交わる</h4>
+<div class="when">壁にちょうつがいで取りつけた棒を糸で支えるなど、ある点で受ける力の向きがわからない。</div>
+<div class="how">剛体に3つの力だけがはたらいてつりあうとき、3力の作用線は1点で交わる（平行な場合を除く）。未知の力の向きは、他の2力の作用線の交点を通る向き。計算では、未知の力の作用点（ちょうつがい）のまわりのモーメントから先に解く。</div>
+<div class="pex">重さ $50\ \mathrm N$ の一様な棒の一端 O を壁にちょうつがいで取りつけ、他端と壁の点を糸で結んで棒を水平に保った。糸と棒のなす角は $30^\circ$ である。糸の張力と、ちょうつがいが棒に及ぼす力の大きさと向きを求めよ。<br>
+<b>解</b>　O のまわり：$T\sin30^\circ\times L=50\times\frac L2$ より $T=50\ \mathrm N$。ちょうつがいの力は、水平成分 $T\cos30^\circ=25\sqrt3\ \mathrm N$（壁から離れる向き）、鉛直成分 $50-T\sin30^\circ=25\ \mathrm N$（上向き）。大きさ $50\ \mathrm N$、水平から $30^\circ$ 上向き。</div>
+<div class="pnote">ちょうつがいの力を「棒に沿った向き」と決めつけない。棒に沿うのは、棒の重さが無視できるときだけ。</div>
+</div>
+
+<div class="pat"><h4>押したとき「すべるか倒れるか」は、それぞれに必要な力の大小</h4>
+<div class="when">床の上の直方体を横から押す。すべり出すのが先か、倒れるのが先か。</div>
+<div class="how">すべり出す力：$F=\mu W$。倒れ始める力：倒れる直前には垂直抗力と摩擦力の作用点が<b>倒れる側の下端</b>に移るので、その点のまわりで $Fh=W\frac a2$（$a$ は底面の幅、$h$ は押す高さ）。小さい方の力で先に起こる。</div>
+<div class="pex">底面の幅 $0.40\ \mathrm m$、高さ $1.0\ \mathrm m$、重さ $W$ の一様な直方体を、床から高さ $h$ の点で水平に押す（静止摩擦係数 $0.50$）。倒れずにすべり出すための $h$ の条件を求めよ。<br>
+<b>解</b>　すべり出す力 $0.50W$、倒れ始める力 $\frac{W\times0.20}{h}$。$0.50W\lt\frac{0.20W}{h}$ より $h\lt0.40\ \mathrm m$。</div>
+</div>
+
+<div class="pat"><h4>斜面上の物体が倒れるのは「重心の真下が底面からはみ出すとき」</h4>
+<div class="when">斜面の傾きを大きくしていくとき、物体がすべるか倒れるか。</div>
+<div class="how">倒れる条件：重心を通る鉛直線が、底面の低い側の端より外に出る。一様な直方体（底面の幅 $a$、高さ $b$）では $\tan\theta\gt\frac ab$。すべる条件：$\tan\theta\gt\mu$。傾きを大きくしていくと、小さい方の角で先に起こる。</div>
+<div class="pex">底面の幅 $0.30\ \mathrm m$、高さ $0.60\ \mathrm m$ の一様な直方体を斜面に置き、傾きを徐々に大きくした（静止摩擦係数 $0.60$）。すべるのと倒れるのとどちらが先か。<br>
+<b>解</b>　倒れる：$\tan\theta\gt\frac{0.30}{0.60}=0.50$、すべる：$\tan\theta\gt0.60$。$0.50\lt0.60$ なので、$\tan\theta=0.50$ を超えたところで<b>倒れる方が先</b>。</div>
+</div>
+
+<div class="box memo"><table class="l w">
+<tr><th>項目</th><th>公式・事実</th></tr>
+<tr><td>力のモーメント</td><td>$M=Fl=Fr\sin\theta$（$\mathrm{N\cdot m}$）</td></tr>
+<tr><td>剛体のつりあい</td><td>力の和 $=\vec 0$、かつ任意の点のまわりのモーメントの和 $=0$</td></tr>
+<tr><td>重心</td><td>$x_{\mathrm G}=\frac{\sum m_ix_i}{\sum m_i}$（くりぬきは負の質量）</td></tr>
+<tr><td>偶力</td><td>同じ大きさで逆向きの平行な2力。モーメント $Fd$ はどの点のまわりでも同じで、回転だけを起こす</td></tr>
+<tr><td>3力のつりあい</td><td>作用線が1点で交わる</td></tr>
+<tr><td>倒れる・すべる</td><td>斜面上の直方体：倒れる $\tan\theta\gt\frac ab$、すべる $\tan\theta\gt\mu$</td></tr>
+</table></div>
+
+<!--CH 9-->
+<div class="pat"><h4>熱量の保存は「高温が失う熱＝低温（と容器）が得る熱」</h4>
+<div class="when">温度の異なる物体を接触させたときの最終温度（熱平衡）、比熱の測定。</div>
+<div class="how">$Q=mc\Delta T=C\Delta T$（$C$ は熱容量）。外に熱が逃げなければ、高温側が失う熱＝低温側が得る熱。容器（熱量計・かき混ぜ棒）は熱容量 $C$ として低温側に加える。$\Delta T$ をどちらも「高い温度 − 低い温度」で書くと符号ミスがない。</div>
+<div class="pex">熱容量 $84\ \mathrm{J/K}$ の容器に $20^\circ\mathrm C$ の水 $100\ \mathrm g$ が入っている。そこへ $90^\circ\mathrm C$ に熱した金属球（$200\ \mathrm g$、比熱 $0.42\ \mathrm{J/(g\cdot K)}$）を入れた。全体の温度を求めよ。水の比熱は $4.2\ \mathrm{J/(g\cdot K)}$ とする。<br>
+<b>解</b>　$200\times0.42\times(90-t)=(100\times4.2+84)(t-20)$、すなわち $84(90-t)=504(t-20)$ より $t=30^\circ\mathrm C$。</div>
+</div>
+
+<div class="pat"><h4>氷を入れたら「全部とけるか」を先に判定する</h4>
+<div class="when">氷と水（湯）を混ぜるなど、状態変化を含む熱平衡。</div>
+<div class="how">状態変化の間は温度が一定で、融解熱・蒸発熱（潜熱）を吸収する。①湯が $0^\circ\mathrm C$ まで冷えるときに出す熱と、氷をすべてとかすのに必要な熱を比べる。②前者が大きければ全部とけて最終温度は $0^\circ\mathrm C$ より高い。小さければ $0^\circ\mathrm C$ で氷が残る。③その結果に合わせて式を立てる。</div>
+<div class="pex">$40^\circ\mathrm C$ の水 $100\ \mathrm g$ に $0^\circ\mathrm C$ の氷 $30\ \mathrm g$ を入れた。最終温度を求めよ。氷の融解熱 $334\ \mathrm{J/g}$、水の比熱 $4.2\ \mathrm{J/(g\cdot K)}$ とし、容器への熱は無視する。<br>
+<b>解</b>　水が $0^\circ\mathrm C$ まで冷えると $100\times4.2\times40=16800\ \mathrm J$、氷の融解には $30\times334=10020\ \mathrm J$ なので、全部とける。$100\times4.2\times(40-t)=10020+30\times4.2\times t$ より $t\fallingdotseq12^\circ\mathrm C$。</div>
+</div>
+
+<div class="pat"><h4>仕事がすべて熱になれば $W=mc\Delta T$</h4>
+<div class="when">落下・摩擦・かき混ぜなどで、力学的エネルギーが熱に変わったときの温度上昇。</div>
+<div class="how">失われた力学的エネルギー $W$（J）がすべて物体の温度上昇に使われれば $W=mc\Delta T$（熱と仕事は同じエネルギー：ジュールの実験）。単位をそろえる：$4.2\ \mathrm{J/(g\cdot K)}=4.2\times10^3\ \mathrm{J/(kg\cdot K)}$。</div>
+<div class="pex">高さ $42\ \mathrm m$ の滝を落ちる水の位置エネルギーが、すべて水の温度上昇に使われたとすると、水温は何 K 上がるか。<br>
+<b>解</b>　$mgh=mc\Delta T$ より $\Delta T=\frac{9.8\times42}{4.2\times10^3}\fallingdotseq0.098\ \mathrm K$（質量によらない）。</div>
+</div>
+
+<div class="pat"><h4>気体の量が変わらなければ $\frac{pV}{T}=$ 一定（$T$ は絶対温度）</h4>
+<div class="when">圧力・体積・温度のうち2つが変わったときの、残りの量。</div>
+<div class="how">状態方程式 $pV=nRT$。物質量 $n$ が一定ならボイル・シャルルの法則 $\frac{p_1V_1}{T_1}=\frac{p_2V_2}{T_2}$。<b>温度は必ず絶対温度</b>（$T=t+273$）。比で解くときは、圧力・体積の単位は両辺でそろっていればよい。</div>
+<div class="pex">$27^\circ\mathrm C$、$1.0\times10^5\ \mathrm{Pa}$、$6.0\ \mathrm L$ の気体を、$127^\circ\mathrm C$、$4.0\ \mathrm L$ にした。圧力を求めよ。<br>
+<b>解</b>　$p=1.0\times10^5\times\frac{6.0}{4.0}\times\frac{400}{300}=2.0\times10^5\ \mathrm{Pa}$。</div>
+<div class="pnote">$\frac{127}{27}$ のようにセルシウス温度のまま計算するのは典型的なミス。</div>
+</div>
+
+<div class="pat"><h4>気体の圧力は「ピストン（液面）の力のつりあい」で決める</h4>
+<div class="when">ピストンつきのシリンダー、液柱、水中の気泡の圧力。</div>
+<div class="how">ピストンが静止していれば、ピストンにはたらく力（気体の圧力 × 面積、大気圧 × 面積、ピストンの重さ、ばねの力など）がつりあう。鉛直シリンダーなら $pS=p_0S+Mg$、$p=p_0+\frac{Mg}{S}$。液体中の深さ $h$ では $p=p_0+\rho gh$。</div>
+<div class="pex">断面積 $2.0\times10^{-3}\ \mathrm{m^2}$ の鉛直なシリンダーに、質量 $4.0\ \mathrm{kg}$ のなめらかなピストンで気体を閉じこめた。大気圧を $1.0\times10^5\ \mathrm{Pa}$ として、気体の圧力を求めよ。<br>
+<b>解</b>　$p=1.0\times10^5+\frac{4.0\times9.8}{2.0\times10^{-3}}=1.0\times10^5+1.96\times10^4\fallingdotseq1.2\times10^5\ \mathrm{Pa}$。</div>
+<div class="pnote">ピストンがゆっくり動く間も（加速度が無視できれば）この関係が成り立つので、その変化は定圧変化になる。</div>
+</div>
+
+<div class="pat"><h4>容器をつなぐときは「物質量の和」が保存</h4>
+<div class="when">コックで仕切られた2つの容器の気体を混ぜる。</div>
+<div class="how">$n=\frac{pV}{RT}$ の和が保存：$\frac{p_1V_1}{RT_1}+\frac{p_2V_2}{RT_2}=\frac{p(V_1+V_2)}{RT}$。温度が等しければ $p_1V_1+p_2V_2=p(V_1+V_2)$。</div>
+<div class="pex">$2.0\ \mathrm L$、$3.0\times10^5\ \mathrm{Pa}$ の容器 A と、$3.0\ \mathrm L$、$1.0\times10^5\ \mathrm{Pa}$ の容器 B をつなぐコックを開いた。温度は一定とする。全体の圧力を求めよ。<br>
+<b>解</b>　$3.0\times10^5\times2.0+1.0\times10^5\times3.0=p\times5.0$ より $p=1.8\times10^5\ \mathrm{Pa}$。</div>
+</div>
+
+<div class="pat"><h4>気体分子運動論は「1回の衝突の力積 → 衝突の回数 → 圧力」</h4>
+<div class="when">気体の圧力を分子の運動から導く。分子の平均運動エネルギー、二乗平均速度。</div>
+<div class="how">1辺 $L$ の立方体容器で、質量 $m$ の分子が壁に1回衝突すると壁に力積 $2mv_x$、単位時間に $\frac{v_x}{2L}$ 回衝突。$N$ 個について $\overline{v_x^2}=\frac13\overline{v^2}$ を使うと<br>
+$p=\frac{Nm\overline{v^2}}{3V}$。$pV=nRT$ と比べて $\frac12m\overline{v^2}=\frac32kT$（$k=\frac{R}{N_{\mathrm A}}$：ボルツマン定数）。二乗平均速度 $\sqrt{\overline{v^2}}=\sqrt{\frac{3RT}{M}}$（$M$ はモル質量、kg/mol）。</div>
+<div class="pex">$300\ \mathrm K$ の窒素（モル質量 $2.8\times10^{-2}\ \mathrm{kg/mol}$）の分子の二乗平均速度を求めよ。気体定数 $R=8.31\ \mathrm{J/(mol\cdot K)}$ とする。<br>
+<b>解</b>　$\sqrt{\frac{3\times8.31\times300}{2.8\times10^{-2}}}\fallingdotseq5.2\times10^2\ \mathrm{m/s}$。</div>
+<div class="pnote">モル質量を $28\ \mathrm{g/mol}$ のまま入れると、答えが $\sqrt{1000}$ 倍ずれる。</div>
+</div>
+
+<div class="pat"><h4>単原子分子の内部エネルギーは $\frac32nRT$。断熱容器での混合は和が保存</h4>
+<div class="when">単原子分子理想気体の内部エネルギー、断熱容器内で気体を混ぜたときの温度。</div>
+<div class="how">単原子分子理想気体の内部エネルギー $U=N\times\frac32kT=\frac32nRT=\frac32pV$。温度だけで決まる。外部と熱も仕事もやりとりしない混合では内部エネルギーの和が保存：$\frac32n_1RT_1+\frac32n_2RT_2=\frac32(n_1+n_2)RT$。</div>
+<div class="pex">断熱容器内で、$300\ \mathrm K$ の単原子分子理想気体 $1.0\ \mathrm{mol}$ と、$400\ \mathrm K$ の同じ気体 $3.0\ \mathrm{mol}$ を混ぜた。全体の温度を求めよ。<br>
+<b>解</b>　$T=\frac{1.0\times300+3.0\times400}{4.0}=375\ \mathrm K$。</div>
+</div>
+
+<div class="box memo"><table class="l w">
+<tr><th>項目</th><th>公式・事実</th></tr>
+<tr><td>熱量</td><td>$Q=mc\Delta T=C\Delta T$。水の比熱 $4.2\ \mathrm{J/(g\cdot K)}$</td></tr>
+<tr><td>潜熱</td><td>融解熱・蒸発熱。状態変化の間は温度が一定</td></tr>
+<tr><td>絶対温度</td><td>$T=t+273$（K）</td></tr>
+<tr><td>状態方程式</td><td>$pV=nRT$、$R=8.31\ \mathrm{J/(mol\cdot K)}$。$n$ 一定なら $\frac{pV}{T}=$ 一定</td></tr>
+<tr><td>分子運動論</td><td>$p=\frac{Nm\overline{v^2}}{3V}$、$\frac12m\overline{v^2}=\frac32kT$、$\sqrt{\overline{v^2}}=\sqrt{\frac{3RT}{M}}$</td></tr>
+<tr><td>内部エネルギー</td><td>単原子分子 $U=\frac32nRT$（二原子分子は常温で $\frac52nRT$）</td></tr>
+</table></div>
+
+<!--CH 10-->
+<div class="pat"><h4>第1法則は $\Delta U=Q+W$。$W$ は「された仕事」</h4>
+<div class="when">気体に熱を与えたり仕事をしたりしたときの内部エネルギーの変化。</div>
+<div class="how">$\Delta U=Q+W$（$Q$：気体が吸収した熱、$W$：気体が外部から<b>された</b>仕事）。気体が外部に<b>した</b>仕事 $W'=-W$ を使うと $Q=\Delta U+W'$。膨張なら $W'\gt0$、圧縮なら $W'\lt0$。熱を放出したら $Q\lt0$。</div>
+<div class="pex">気体に $500\ \mathrm J$ の熱を与えたところ、気体は膨張して外部に $200\ \mathrm J$ の仕事をした。内部エネルギーの変化を求めよ。<br>
+<b>解</b>　$Q=500\ \mathrm J$、$W=-200\ \mathrm J$ より $\Delta U=500-200=300\ \mathrm J$（増加）。</div>
+<div class="pnote">問題文の「した仕事」「された仕事」を読み分け、表にまとめてから符号を決める。</div>
+</div>
+
+<div class="pat"><h4>気体がした仕事は「p-V グラフの面積」</h4>
+<div class="when">圧力が一定、または変化しながら体積が変わるときの仕事。</div>
+<div class="how">定圧なら $W'=p\Delta V$。圧力が変わるときは、p-V グラフと $V$ 軸で囲まれた面積（膨張で正、圧縮で負）。サイクル（一周）では、グラフで囲まれた面積が1サイクルで気体がした正味の仕事（時計回りなら正）。</div>
+<div class="pex">圧力 $2.0\times10^5\ \mathrm{Pa}$ のまま、気体の体積が $1.0\ \mathrm L$ から $3.0\ \mathrm L$ に増えた。気体がした仕事を求めよ。<br>
+<b>解</b>　$W'=2.0\times10^5\times(3.0-1.0)\times10^{-3}=4.0\times10^2\ \mathrm J$。</div>
+<div class="pnote">$1\ \mathrm L=10^{-3}\ \mathrm{m^3}$。L のまま計算すると1000倍ずれる。</div>
+</div>
+
+<div class="pat"><h4>定積・定圧の熱はモル比熱で $Q=nC\Delta T$</h4>
+<div class="when">定積変化・定圧変化で気体が吸収する熱、した仕事、内部エネルギーの変化。</div>
+<div class="how">定積：$W'=0$ で $Q=\Delta U=nC_V\Delta T$。定圧：$Q=nC_p\Delta T$、$W'=p\Delta V=nR\Delta T$。マイヤーの関係 $C_p=C_V+R$。単原子分子では $C_V=\frac32R$、$C_p=\frac52R$。<b>$\Delta U=nC_V\Delta T$ はどんな変化でも成り立つ</b>（理想気体）。</div>
+<div class="pex">単原子分子理想気体 $1.0\ \mathrm{mol}$ を、圧力一定のまま $100\ \mathrm K$ 温度を上げた。吸収した熱、気体がした仕事、内部エネルギーの増加を求めよ（$R=8.31\ \mathrm{J/(mol\cdot K)}$）。<br>
+<b>解</b>　$Q=\frac52\times8.31\times100\fallingdotseq2.08\times10^3\ \mathrm J$、$W'=8.31\times100=831\ \mathrm J$、$\Delta U=\frac32\times8.31\times100\fallingdotseq1.25\times10^3\ \mathrm J$（$Q=\Delta U+W'$ を満たす）。</div>
+</div>
+
+<div class="pat"><h4>p-V グラフ上の直線変化は「$\Delta U=\frac32\Delta(pV)$、$W'$＝台形の面積」</h4>
+<div class="when">定積・定圧・等温・断熱のどれでもない、p-V グラフ上の直線に沿った変化。</div>
+<div class="how">単原子分子なら $\Delta U=\frac32nR\Delta T=\frac32(p_2V_2-p_1V_1)$。$W'$ はグラフの下の台形の面積。熱は $Q=\Delta U+W'$ で求める（この変化のモル比熱は与えられていないので使えない）。</div>
+<div class="pex">単原子分子理想気体を、p-V グラフ上で状態 A（$1.0\times10^5\ \mathrm{Pa}$、$2.0\ \mathrm L$）から B（$3.0\times10^5\ \mathrm{Pa}$、$4.0\ \mathrm L$）まで直線的に変化させた。$\Delta U$、$W'$、$Q$ を求めよ。<br>
+<b>解</b>　$\Delta U=\frac32\times(3.0\times10^5\times4.0\times10^{-3}-1.0\times10^5\times2.0\times10^{-3})=1.5\times10^3\ \mathrm J$。$W'=\frac{(1.0+3.0)\times10^5}{2}\times2.0\times10^{-3}=4.0\times10^2\ \mathrm J$。$Q=1.9\times10^3\ \mathrm J$。</div>
+</div>
+
+<div class="pat"><h4>p-V グラフの温度は「$pV$ の大小」で読む</h4>
+<div class="when">状態変化の途中で温度が最高になる点、どの過程で温度が上がるか。</div>
+<div class="how">$T=\frac{pV}{nR}$ なので、p-V グラフ上で $pV$ が大きい点ほど高温。等温変化のグラフは $pV=$ 一定の双曲線で、右上にある双曲線ほど高温。直線上の変化では $pV$ を $V$ の2次関数で表して最大を探す。等温変化では $\Delta U=0$ で $Q=W'$。</div>
+<div class="pex">一定量の理想気体を、p-V グラフ上で A（$3p_0$, $V_0$）から B（$p_0$, $3V_0$）まで直線に沿って変化させた。温度が最高になるときの体積と、その温度は A の温度の何倍かを求めよ。<br>
+<b>解</b>　直線は $p=p_0\left(4-\frac{V}{V_0}\right)$。$pV=p_0V\left(4-\frac{V}{V_0}\right)$ は $V=2V_0$ で最大値 $4p_0V_0$。A では $pV=3p_0V_0$ なので、温度は $\frac43$ 倍。</div>
+</div>
+
+<div class="pat"><h4>断熱変化は $Q=0$ で $\Delta U=W$、ポアソンの法則 $pV^\gamma=$ 一定</h4>
+<div class="when">急激な膨張・圧縮、断熱材で囲まれたシリンダー。</div>
+<div class="how">$Q=0$ より $\Delta U=W=-W'$。断熱圧縮（$W\gt0$）で温度が上がり、断熱膨張で下がる。$pV^\gamma=$ 一定、$TV^{\gamma-1}=$ 一定（$\gamma=\frac{C_p}{C_V}$、単原子分子で $\frac53$）。p-V グラフでは等温線より傾きが急な曲線。</div>
+<div class="pex">$300\ \mathrm K$ の単原子分子理想気体を断熱的に圧縮し、体積を $\frac18$ にした。温度と、圧力が何倍になるかを求めよ。<br>
+<b>解</b>　$TV^{\frac23}=$ 一定 より $T=300\times8^{\frac23}=1200\ \mathrm K$。$pV^{\frac53}=$ 一定 より圧力は $8^{\frac53}=32$ 倍。</div>
+</div>
+
+<div class="pat"><h4>熱効率の分母は「吸収した熱だけ」の和</h4>
+<div class="when">サイクル（熱機関）の熱効率。</div>
+<div class="how">1サイクルでもとの状態に戻るので $\Delta U=0$。$e=\frac{W'}{Q_{\mathrm{in}}}=1-\frac{Q_{\mathrm{out}}}{Q_{\mathrm{in}}}$。各過程の $Q$ を求め、<b>正のもの（吸収）だけを足して</b> $Q_{\mathrm{in}}$ とする。正味の仕事 $W'$ はグラフで囲まれた面積（＝吸収した熱 − 放出した熱）。</div>
+<div class="pex">単原子分子理想気体を、図の A→B→C→D→A のように変化させた。この熱機関の熱効率を求めよ。
+<div class="two"><div><b>解</b>　熱を吸収するのは A→B と B→C。<br>
+A→B（定積）：$Q=\frac32(2p_0V_0-p_0V_0)=\frac32p_0V_0$<br>
+B→C（定圧）：$Q=\frac52\times2p_0(2V_0-V_0)=5p_0V_0$<br>
+$Q_{\mathrm{in}}=\frac{13}{2}p_0V_0$、$W'=p_0V_0$（長方形の面積）より $e=\frac{2}{13}\fallingdotseq0.15$。</div>
+<div style="flex:0 0 52mm"><svg class="fig" width="190" height="125" viewBox="0 0 190 125">
+<defs><marker id="a6" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#333"/></marker></defs>
+<defs><marker id="a6m" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1d4e89"/></marker></defs>
+<line x1="28.0" y1="108.0" x2="184.0" y2="108.0" stroke="#333" stroke-width="1" marker-end="url(#a6)"/>
+<line x1="28.0" y1="108.0" x2="28.0" y2="6.0" stroke="#333" stroke-width="1" marker-end="url(#a6)"/>
+<line x1="88.0" y1="68.0" x2="88.0" y2="28.0" stroke="#1d4e89" stroke-width="1.8"/>
+<line x1="88.0" y1="52.8" x2="88.0" y2="43.2" stroke="#1d4e89" stroke-width="1.8" marker-end="url(#a6m)"/>
+<line x1="88.0" y1="28.0" x2="148.0" y2="28.0" stroke="#1d4e89" stroke-width="1.8"/>
+<line x1="110.8" y1="28.0" x2="125.2" y2="28.0" stroke="#1d4e89" stroke-width="1.8" marker-end="url(#a6m)"/>
+<line x1="148.0" y1="28.0" x2="148.0" y2="68.0" stroke="#1d4e89" stroke-width="1.8"/>
+<line x1="148.0" y1="43.2" x2="148.0" y2="52.8" stroke="#1d4e89" stroke-width="1.8" marker-end="url(#a6m)"/>
+<line x1="148.0" y1="68.0" x2="88.0" y2="68.0" stroke="#1d4e89" stroke-width="1.8"/>
+<line x1="125.2" y1="68.0" x2="110.8" y2="68.0" stroke="#1d4e89" stroke-width="1.8" marker-end="url(#a6m)"/>
+<circle cx="88.0" cy="68.0" r="2.4" fill="#1d4e89"/>
+<text x="83.0" y="80.0" font-size="10" text-anchor="end">A</text>
+<circle cx="88.0" cy="28.0" r="2.4" fill="#1d4e89"/>
+<text x="83.0" y="24.0" font-size="10" text-anchor="end">B</text>
+<circle cx="148.0" cy="28.0" r="2.4" fill="#1d4e89"/>
+<text x="153.0" y="24.0" font-size="10">C</text>
+<circle cx="148.0" cy="68.0" r="2.4" fill="#1d4e89"/>
+<text x="153.0" y="80.0" font-size="10">D</text>
+<line x1="88.0" y1="108.0" x2="88.0" y2="68.0" stroke="#999" stroke-width="0.8" stroke-dasharray="3,2"/>
+<text x="88.0" y="120.0" font-size="9" text-anchor="middle">V<tspan font-size='7' dy='2'>0</tspan></text>
+<line x1="148.0" y1="108.0" x2="148.0" y2="68.0" stroke="#999" stroke-width="0.8" stroke-dasharray="3,2"/>
+<text x="148.0" y="120.0" font-size="9" text-anchor="middle">2V<tspan font-size='7' dy='2'>0</tspan></text>
+<line x1="28.0" y1="68.0" x2="88.0" y2="68.0" stroke="#999" stroke-width="0.8" stroke-dasharray="3,2"/>
+<text x="25.0" y="71.0" font-size="9" text-anchor="end">p<tspan font-size='7' dy='2'>0</tspan></text>
+<line x1="28.0" y1="28.0" x2="88.0" y2="28.0" stroke="#999" stroke-width="0.8" stroke-dasharray="3,2"/>
+<text x="25.0" y="31.0" font-size="9" text-anchor="end">2p<tspan font-size='7' dy='2'>0</tspan></text>
+<text x="184.0" y="120.0" font-size="10" text-anchor="end">V</text>
+<text x="33.0" y="12.0" font-size="10">p</text>
+<text x="25.0" y="119.0" font-size="9" text-anchor="end">O</text>
+</svg></div></div></div>
+<div class="pnote">C→D、D→A は放出（$Q\lt0$）なので分母に入れない。放出した熱を差し引いた値を分母にする誤りが多い。</div>
+</div>
+
+<div class="pat"><h4>真空への膨張（断熱自由膨張）では温度が変わらない</h4>
+<div class="when">断熱容器の一方にある気体が、仕切りやコックを開いて真空の部分に広がる。</div>
+<div class="how">真空に向かって広がるとき、気体は押しのける相手がないので $W'=0$。断熱なので $Q=0$。よって $\Delta U=0$ で、理想気体の温度は変わらない。圧力はボイルの法則で決まる。ピストンを押して膨張する断熱膨張（温度が下がる）と区別する。</div>
+<div class="pex">断熱容器が仕切りで体積 $V$ と $2V$ に分けられ、体積 $V$ の側に温度 $T$、圧力 $p$ の理想気体が入り、他方は真空である。仕切りを取り除いた後の温度と圧力を求めよ。<br>
+<b>解</b>　$Q=0$、$W'=0$ より $\Delta U=0$ で、温度は $T$ のまま。体積が $3V$ になるので、圧力は $\frac p3$。</div>
+</div>
+
+<div class="box memo"><table class="l w">
+<tr><th>項目</th><th>公式・事実</th></tr>
+<tr><td>熱力学第1法則</td><td>$\Delta U=Q+W$（$W$：された仕事）、$Q=\Delta U+W'$（$W'$：した仕事）</td></tr>
+<tr><td>定積変化</td><td>$W'=0$、$Q=\Delta U=nC_V\Delta T$</td></tr>
+<tr><td>定圧変化</td><td>$W'=p\Delta V=nR\Delta T$、$Q=nC_p\Delta T$</td></tr>
+<tr><td>等温変化</td><td>$\Delta U=0$、$Q=W'$</td></tr>
+<tr><td>断熱変化</td><td>$Q=0$、$\Delta U=-W'$、$pV^\gamma=$ 一定、$TV^{\gamma-1}=$ 一定</td></tr>
+<tr><td>モル比熱</td><td>$C_p=C_V+R$。単原子分子 $C_V=\frac32R$、$C_p=\frac52R$、$\gamma=\frac53$</td></tr>
+<tr><td>熱効率</td><td>$e=\frac{W'}{Q_{\mathrm{in}}}=1-\frac{Q_{\mathrm{out}}}{Q_{\mathrm{in}}}$（熱力学第2法則により $e\lt1$）</td></tr>
+</table></div>

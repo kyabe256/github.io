@@ -1,0 +1,869 @@
+<!--CH 1-->
+<div class="box point">
+・<b>速度</b>は位置の変化の割合 $v=\dfrac{\Delta x}{\Delta t}$、<b>加速度</b>は速度の変化の割合 $a=\dfrac{\Delta v}{\Delta t}$。$v$-$t$ グラフの<b>傾き＝加速度</b>、<b>面積＝変位</b><br>
+・<b>等加速度直線運動</b>：$v=v_0+at$、$x=v_0t+\dfrac12at^2$、$v^2-v_0^2=2ax$（3式とも $v$-$t$ グラフから導ける）<br>
+・<b>相対速度</b>：A から見た B の速度は $\vec v_{AB}=\vec v_B-\vec v_A$（見られる側 − 見る側）<br>
+・<b>落体・放物運動</b>：水平方向は等速度、鉛直方向は加速度 $g$（下向き）の等加速度運動に分けて考える
+</div>
+<h3>講義1　速度・加速度と v-t グラフ</h3>
+<div class="box lect">
+直線上の運動では、正の向きを決めて位置を座標 $x$ で表す。時間 $\Delta t$ の間の位置の変化 $\Delta x$ が<b>変位</b>で、$\dfrac{\Delta x}{\Delta t}$ を平均の速度、$\Delta t$ を限りなく小さくしたものを（瞬間の）<b>速度</b>という。速度の大きさが<b>速さ</b>である。同じように、速度の変化の割合 $a=\dfrac{\Delta v}{\Delta t}$ が<b>加速度</b>で、単位は $\mathrm{m/s^2}$。<br>
+$v$-$t$ グラフでは、①<b>傾き</b>が加速度、②グラフと $t$ 軸の間の<b>面積</b>が変位になる（$t$ 軸より下の部分は負の変位）。②は、時間を細かく区切ると各区間の変位 $v\Delta t$ が細長い長方形の面積になり、それを足し合わせたものだからである。<br>
+加速度が一定（<b>等加速度</b>）なら、グラフは傾き $a$ の直線 $v=v_0+at$。その下の面積を長方形と三角形に分けると、$x=v_0t+\dfrac12at^2$ が得られる。
+<svg class="fig" width="370" height="170" viewBox="0 0 370 170" xmlns="http://www.w3.org/2000/svg"><line x1="40" y1="150" x2="274" y2="150" stroke="#555" stroke-width="1.1"/><polygon points="280,150 274,152.6 274,147.4" fill="#555"/><line x1="40" y1="150" x2="40" y2="16" stroke="#555" stroke-width="1.1"/><polygon points="40,10 42.6,16 37.4,16" fill="#555"/><text x="36" y="163" font-size="11" text-anchor="end" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">O</tspan></text><text x="282" y="164" font-size="11" text-anchor="end" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">t</tspan></text><text x="46" y="18" font-size="11" text-anchor="start" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">v</tspan></text><polygon points="40,150 40,110 240,110 240,150" fill="#dfe8f5" stroke="none" stroke-width="0"/><polygon points="40,110 240,30 240,110" fill="#fde3cc" stroke="none" stroke-width="0"/><line x1="40" y1="110" x2="240" y2="30" stroke="#1d4e89" stroke-width="2.4"/><line x1="240" y1="150" x2="240" y2="30" stroke="#555" stroke-width="0.9" stroke-dasharray="3,2"/><line x1="40" y1="30" x2="240" y2="30" stroke="#555" stroke-width="0.9" stroke-dasharray="3,2"/><text x="35" y="114" font-size="12" text-anchor="end" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">v</tspan><tspan dy="3.5" font-size="0.78em"><tspan>0</tspan></tspan><tspan dy="-3.5"> </tspan></text><text x="35" y="34" font-size="12" text-anchor="end" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">v</tspan></text><text x="240" y="164" font-size="12" text-anchor="middle" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">t</tspan></text><text x="140" y="134" font-size="12" text-anchor="middle" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">v</tspan><tspan dy="3.5" font-size="0.78em"><tspan>0</tspan></tspan><tspan dy="-3.5"> </tspan><tspan font-style="italic">t</tspan></text><text x="140" y="148" font-size="9.5" text-anchor="middle" fill="#1e1e1e">長方形</text><text x="172" y="94" font-size="12" text-anchor="middle" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>½</tspan><tspan font-style="italic">a</tspan><tspan font-style="italic">t</tspan><tspan dy="-4.5" font-size="0.78em"><tspan>2</tspan></tspan><tspan dy="4.5"> </tspan></text><text x="172" y="106" font-size="9.5" text-anchor="middle" fill="#1e1e1e">三角形</text><line x1="80" y1="94" x2="120" y2="94" stroke="#d9701e" stroke-width="1"/><line x1="120" y1="94" x2="120" y2="78" stroke="#d9701e" stroke-width="1"/><text x="82" y="72" font-size="9.5" text-anchor="start" fill="#d9701e">傾き＝</text><text x="112" y="72" font-size="11" text-anchor="start" fill="#d9701e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">a</tspan></text><text x="248" y="60" font-size="10" text-anchor="start" fill="#1d4e89">変位 <tspan font-family="Liberation Serif,DejaVu Serif,serif" font-size="11.2"><tspan font-style="italic">x</tspan></tspan> ＝ 面積</text><text x="248" y="76" font-size="11.5" text-anchor="start" fill="#1d4e89" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>=</tspan><tspan> </tspan><tspan font-style="italic">v</tspan><tspan dy="3.5" font-size="0.78em"><tspan>0</tspan></tspan><tspan dy="-3.5"> </tspan><tspan font-style="italic">t</tspan><tspan> </tspan><tspan>+</tspan><tspan> </tspan><tspan>½</tspan><tspan font-style="italic">a</tspan><tspan font-style="italic">t</tspan><tspan dy="-4.5" font-size="0.78em"><tspan>2</tspan></tspan><tspan dy="4.5"> </tspan></text></svg>
+</div>
+<div class="box ex">
+<div class="two"><div>直線道路を走る自動車の速度が、右の $v$-$t$ グラフのように変化した。<br>
+(1) $0\sim4\ \mathrm{s}$ の加速度を求めよ。<br>
+(2) $13\ \mathrm{s}$ 間に進んだ距離を求めよ。<br>
+(3) $10\sim13\ \mathrm{s}$ の加速度を求めよ。</div><div><svg class="fig" width="340" height="148" viewBox="0 0 340 148" xmlns="http://www.w3.org/2000/svg"><line x1="45" y1="128" x2="287.2" y2="128" stroke="#555" stroke-width="1.1"/><polygon points="293.2,128 287.2,130.6 287.2,125.4" fill="#555"/><line x1="45" y1="128" x2="45" y2="25.2" stroke="#555" stroke-width="1.1"/><polygon points="45,19.2 47.6,25.2 42.4,25.2" fill="#555"/><text x="41" y="141" font-size="11" text-anchor="end" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">O</tspan></text><polygon points="45,128 113,32 215,32 266,128" fill="#e8eef8" stroke="none" stroke-width="0"/><polyline points="45,128 113,32 215,32 266,128" fill="none" stroke="#1d4e89" stroke-width="2.4"/><line x1="113" y1="128" x2="113" y2="32" stroke="#555" stroke-width="0.8" stroke-dasharray="3,2"/><line x1="215" y1="128" x2="215" y2="32" stroke="#555" stroke-width="0.8" stroke-dasharray="3,2"/><line x1="45" y1="32" x2="113" y2="32" stroke="#555" stroke-width="0.8" stroke-dasharray="3,2"/><text x="113" y="141" font-size="11" text-anchor="middle" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>4</tspan></text><text x="215" y="141" font-size="11" text-anchor="middle" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>1</tspan><tspan>0</tspan></text><text x="266" y="141" font-size="11" text-anchor="middle" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>1</tspan><tspan>3</tspan></text><text x="40" y="36" font-size="11" text-anchor="end" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>1</tspan><tspan>2</tspan></text><text x="51" y="27.2" font-size="11" text-anchor="start" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">v</tspan></text><text x="59" y="27.2" font-size="9.5" text-anchor="start" fill="#1e1e1e">〔m/s〕</text><text x="299.2" y="132" font-size="9.5" text-anchor="start" fill="#1e1e1e"><tspan font-family="Liberation Serif,DejaVu Serif,serif" font-size="10.6"><tspan font-style="italic">t</tspan></tspan>〔s〕</text></svg></div></div>
+<div class="solx"><b>解</b>　(1) 傾きを読んで $a=\dfrac{12-0}{4}=\boldsymbol{3.0\ \mathrm{m/s^2}}$<br>
+(2) 台形の面積：$\dfrac12\times(6+13)\times12=\boldsymbol{114\ \mathrm{m}}$（$24+72+18$ と分けて足してもよい）<br>
+(3) $a=\dfrac{0-12}{13-10}=\boldsymbol{-4.0\ \mathrm{m/s^2}}$（進む向きと逆向きに大きさ $4.0\ \mathrm{m/s^2}$）</div>
+</div>
+<h3>講義2　等加速度直線運動の3式</h3>
+<div class="box lect">
+初速度 $v_0$、加速度 $a$ の等加速度直線運動では<br>
+　(A) $v=v_0+at$（グラフの直線の式）　(B) $x=v_0t+\dfrac12at^2$（グラフの面積）<br>
+(C) は (A)(B) から $t$ を消去して得る。台形の面積から $x=\dfrac{v_0+v}{2}t$、(A) から $v-v_0=at$。辺々掛けると $(v-v_0)(v+v_0)=2ax$、すなわち　(C) $v^2-v_0^2=2ax$。<br>
+時間が与えられず、問われてもいないときは (C) が速い。加速度が負とは「正の向きと逆向きの加速度」のことで、「減速」と同じではない（負の向きに動いていれば、負の加速度で速くなる）。また、途中で向きが変わる運動では、<b>変位</b>（位置の変化）と<b>道のり</b>（実際に動いた距離）が異なる。
+</div>
+<div class="box ex">
+$x$ 軸上を、原点を正の向きに速さ $20\ \mathrm{m/s}$ で通過した物体が、その後一定の加速度 $-4.0\ \mathrm{m/s^2}$ で運動した。原点通過の時刻を $t=0$ とする。<br>
+(1) 速度が $0$ になる時刻と、そのときの位置を求めよ。　(2) 再び原点を通る時刻を求めよ。<br>
+(3) $t=8.0\ \mathrm{s}$ での位置と速度、および $0\sim8.0\ \mathrm{s}$ の道のりを求めよ。
+<div class="solx"><b>解</b>　(1) $0=20-4.0t$ より $\boldsymbol{t=5.0\ \mathrm{s}}$。$x=20\times5.0-\dfrac12\times4.0\times5.0^2=\boldsymbol{50\ \mathrm{m}}$（(C) を使って $0-20^2=2\times(-4.0)x$ からも得られる）<br>
+(2) $0=20t-2.0t^2=2.0t(10-t)$、$t>0$ より $\boldsymbol{t=10\ \mathrm{s}}$<br>
+(3) $x=20\times8.0-2.0\times8.0^2=\boldsymbol{32\ \mathrm{m}}$、$v=20-4.0\times8.0=\boldsymbol{-12\ \mathrm{m/s}}$（負の向きに $12\ \mathrm{m/s}$）。道のりは、$x=50\ \mathrm{m}$ まで進んで $50-32=18\ \mathrm{m}$ 戻ったので $\boldsymbol{68\ \mathrm{m}}$。</div>
+</div>
+<h3>講義3　相対速度</h3>
+<div class="box lect">
+速度 $\vec v_A$ で動く A から見ると、A 自身は止まって見え、他の物体はすべて「自分の速度から $\vec v_A$ を引いた速度」で動いて見える。そこで、A から見た B の速度（A に対する B の<b>相対速度</b>）は $\vec v_{AB}=\vec v_B-\vec v_A$。<br>
+一直線上なら、正の向きを決めて符号つきの数で引き算する。平面上ならベクトルの引き算で、$\vec v_B$ に $-\vec v_A$ を足す作図をすればよい。
+</div>
+<div class="box ex">
+<div class="two"><div>無風のとき、雨滴が鉛直下向きに速さ $8.0\ \mathrm{m/s}$ で落ちている。水平に速さ $6.0\ \mathrm{m/s}$ で走る人から見た雨滴の速さを求めよ。また、雨滴はどの向きから降ってくるように見えるか。</div><div><svg class="fig" width="270" height="140" viewBox="0 0 270 140" xmlns="http://www.w3.org/2000/svg"><line x1="120" y1="22" x2="120" y2="103" stroke="#1d4e89" stroke-width="2"/><polygon points="120,110 116.8,103 123.2,103" fill="#1d4e89"/><line x1="120" y1="110" x2="61" y2="110" stroke="#d9701e" stroke-width="2"/><polygon points="54,110 61,106.8 61,113.2" fill="#d9701e"/><line x1="120" y1="22" x2="58.2" y2="104.4" stroke="#c0392b" stroke-width="2.4"/><polygon points="54,110 55.6,102.5 60.8,106.3" fill="#c0392b"/><text x="126" y="70" font-size="9.5" text-anchor="start" fill="#1e1e1e">雨の速度（地面から）</text><text x="126" y="83" font-size="9.5" text-anchor="start" fill="#1e1e1e">下向き 8.0 m/s</text><text x="87" y="124" font-size="9.5" text-anchor="middle" fill="#d9701e">−（人の速度） 6.0 m/s</text><text x="50" y="60" font-size="9.5" text-anchor="end" fill="#c0392b">人から見た</text><text x="50" y="73" font-size="9.5" text-anchor="end" fill="#c0392b">雨の速度</text><path d="M120,44 A22,22 0 0 1 106.8,39.6" fill="none" stroke="#555" stroke-width="1"/><text x="111" y="56" font-size="11" text-anchor="middle" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">θ</tspan></text><line x1="185" y1="122" x2="244" y2="122" stroke="#1d4e89" stroke-width="1.6"/><polygon points="251,122 244,125.2 244,118.8" fill="#1d4e89"/><text x="218" y="115" font-size="9" text-anchor="middle" fill="#1d4e89">人の速度 6.0 m/s</text></svg></div></div>
+<div class="solx"><b>解</b>　人から見た雨滴の速度は（雨滴の速度）$-$（人の速度）で、鉛直下向き $8.0\ \mathrm{m/s}$ と、人の進む向きと逆向き $6.0\ \mathrm{m/s}$ の合成。<br>
+速さは $\sqrt{8.0^2+6.0^2}=\boldsymbol{10\ \mathrm{m/s}}$。雨滴は斜め後方へ動いて見えるので、<b>前方の斜め上から</b>降ってくるように見える。鉛直となす角 $\theta$ は $\tan\theta=\dfrac{6.0}{8.0}=0.75$（約 $37^\circ$）。</div>
+</div>
+<h3>講義4　落体の運動と放物運動</h3>
+<div class="box lect">
+空気抵抗を無視すると、物体は質量によらず鉛直下向きに大きさ $g$（<b>重力加速度</b>、約 $9.8\ \mathrm{m/s^2}$）の加速度で運動する。<br>
+・<b>自由落下</b>（下向き正）：$v=gt$、$y=\dfrac12gt^2$　・<b>鉛直投げ上げ</b>（上向き正）：$v=v_0-gt$、$y=v_0t-\dfrac12gt^2$。最高点では $v=0$ で、$t=\dfrac{v_0}{g}$、高さ $\dfrac{v_0^2}{2g}$。<br>
+<b>放物運動</b>では、水平方向には力がはたらかないので<b>等速度</b>、鉛直方向は投げ上げと同じ<b>等加速度</b>。速さ $v_0$、仰角 $\theta$ の<b>斜方投射</b>なら $x=v_0\cos\theta\cdot t$、$y=v_0\sin\theta\cdot t-\dfrac12gt^2$。最高点（鉛直成分 $=0$）に達する時刻 $t_1=\dfrac{v_0\sin\theta}{g}$、高さ $H=\dfrac{v_0^2\sin^2\theta}{2g}$。着地は対称性から $2t_1$ で、水平到達距離 $R=v_0\cos\theta\cdot2t_1=\dfrac{v_0^2\sin2\theta}{g}$ は $\theta=45^\circ$ で最大。<b>水平投射</b>は $\theta=0$ の場合である。
+<svg class="fig" width="400" height="170" viewBox="0 0 400 170" xmlns="http://www.w3.org/2000/svg"><line x1="20" y1="150" x2="365" y2="150" stroke="#555" stroke-width="1.3"/><polyline points="40,150 45,143 50,136.2 55,129.6 60,123.3 65,117.3 70,111.4 75,105.8 80,100.5 85,95.4 90,90.5 95,85.9 100,81.4 105,77.3 110,73.4 115,69.7 120,66.2 125,63 130,60 135,57.3 140,54.8 145,52.5 150,50.5 155,48.7 160,47.2 165,45.9 170,44.8 175,44 180,43.4 185,43 190,42.9 195,43 200,43.4 205,44 210,44.8 215,45.9 220,47.2 225,48.7 230,50.5 235,52.5 240,54.8 245,57.3 250,60 255,63 260,66.2 265,69.7 270,73.4 275,77.3 280,81.4 285,85.9 290,90.5 295,95.4 300,100.5 305,105.8 310,111.4 315,117.3 320,123.3 325,129.6 330,136.2 335,143 340,150" fill="none" stroke="#1d4e89" stroke-width="2.2"/><line x1="94.5" y1="150" x2="94.5" y2="72.2" stroke="#999" stroke-width="0.8" stroke-dasharray="3,2"/><line x1="40" y1="72.2" x2="94.5" y2="72.2" stroke="#999" stroke-width="0.8" stroke-dasharray="3,2"/><line x1="40" y1="150" x2="87.5" y2="150" stroke="#d9701e" stroke-width="1.6"/><polygon points="94.5,150 87.5,153.2 87.5,146.8" fill="#d9701e"/><line x1="40" y1="150" x2="40" y2="79.2" stroke="#d9701e" stroke-width="1.6"/><polygon points="40,72.2 43.2,79.2 36.8,79.2" fill="#d9701e"/><line x1="40" y1="150" x2="90.5" y2="77.9" stroke="#c0392b" stroke-width="2.2"/><polygon points="94.5,72.2 93.1,79.8 87.9,76.1" fill="#c0392b"/><text x="98.5" y="70.2" font-size="12" text-anchor="start" fill="#c0392b" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">v</tspan><tspan dy="3.5" font-size="0.78em"><tspan>0</tspan></tspan><tspan dy="-3.5"> </tspan></text><text x="67.2" y="164" font-size="11" text-anchor="middle" fill="#d9701e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">v</tspan><tspan dy="3.5" font-size="0.78em"><tspan>0</tspan></tspan><tspan dy="-3.5"> </tspan><tspan>cos</tspan><tspan font-style="italic">θ</tspan></text><text x="36" y="111.1" font-size="11" text-anchor="end" fill="#d9701e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">v</tspan><tspan dy="3.5" font-size="0.78em"><tspan>0</tspan></tspan><tspan dy="-3.5"> </tspan><tspan>sin</tspan><tspan font-style="italic">θ</tspan></text><path d="M60,150 A20,20 0 0 0 51.5,133.6" fill="none" stroke="#555" stroke-width="1"/><text x="62" y="142" font-size="11" text-anchor="start" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">θ</tspan></text><line x1="190" y1="42.9" x2="237.5" y2="42.9" stroke="#d9701e" stroke-width="1.6"/><polygon points="244.5,42.9 237.5,46.1 237.5,39.7" fill="#d9701e"/><text x="247.5" y="46.9" font-size="11" text-anchor="start" fill="#d9701e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">v</tspan><tspan dy="3.5" font-size="0.78em"><tspan>0</tspan></tspan><tspan dy="-3.5"> </tspan><tspan>cos</tspan><tspan font-style="italic">θ</tspan></text><circle cx="190" cy="42.9" r="3" fill="#1d4e89" stroke="#1d4e89" stroke-width="1.2"/><line x1="190" y1="42.9" x2="190" y2="150" stroke="#555" stroke-width="0.8" stroke-dasharray="3,2"/><text x="194" y="100.4" font-size="12" text-anchor="start" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">H</tspan></text><text x="184" y="34.9" font-size="9.5" text-anchor="end" fill="#1e1e1e">最高点（鉛直方向の速度 0）</text><text x="338" y="164" font-size="12" text-anchor="end" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">R</tspan></text><circle cx="340" cy="150" r="3" fill="#1d4e89" stroke="#1d4e89" stroke-width="1.2"/></svg>
+</div>
+<div class="box ex">
+水平な地面から、速さ $19.6\ \mathrm{m/s}$、仰角 $30^\circ$ で小球を投げた。重力加速度の大きさを $9.8\ \mathrm{m/s^2}$ とし、空気抵抗は無視する。<br>
+(1) 最高点に達するまでの時間と、最高点の高さを求めよ。<br>
+(2) 地面に落ちるまでの時間と、水平到達距離を求めよ（$\sqrt3=1.73$）。<br>
+(3) 同じ速さで投げるとき、水平到達距離が最大になる仰角と、その距離を求めよ。
+<div class="solx"><b>解</b>　初速度の成分は、水平 $19.6\cos30^\circ=9.8\sqrt3\ \mathrm{m/s}$、鉛直 $19.6\sin30^\circ=9.8\ \mathrm{m/s}$。<br>
+(1) 鉛直成分が $0$：$0=9.8-9.8t$ より $\boldsymbol{1.0\ \mathrm{s}}$。高さ $\dfrac{9.8^2}{2\times9.8}=\boldsymbol{4.9\ \mathrm{m}}$<br>
+(2) 上りと下りは対称なので $\boldsymbol{2.0\ \mathrm{s}}$。距離 $9.8\sqrt3\times2.0=19.6\times1.73\fallingdotseq\boldsymbol{34\ \mathrm{m}}$<br>
+(3) $R=\dfrac{v_0^2\sin2\theta}{g}$ は $\sin2\theta=1$ のとき最大なので $\boldsymbol{45^\circ}$。$R=\dfrac{19.6^2}{9.8}=39.2\fallingdotseq\boldsymbol{39\ \mathrm{m}}$</div>
+</div>
+<div class="box chk">
+(1) 静止していた物体が一定の加速度 $2.0\ \mathrm{m/s^2}$ で動き出した。$10\ \mathrm{s}$ 後の速さと、その間に進んだ距離を求めよ。<br>
+(2) 速さ $15\ \mathrm{m/s}$ で走る自動車がブレーキをかけ、一定の加速度で $22.5\ \mathrm{m}$ 進んで止まった。加速度の大きさを求めよ。<br>
+(3) 地上 $24.5\ \mathrm{m}$ のビルの屋上から、小球を鉛直上向きに $19.6\ \mathrm{m/s}$ で投げ上げた。最高点の地上からの高さと、投げてから地面に達するまでの時間を求めよ（重力加速度の大きさ $9.8\ \mathrm{m/s^2}$）。<br>
+(4) 東向きに $20\ \mathrm{m/s}$ で走る自動車 A から見た、西向きに $15\ \mathrm{m/s}$ で走る自動車 B の速度を求めよ。
+</div>
+<div class="box aim">
+・運動の問題は、まず<b>正の向き</b>と<b>原点</b>を決め、3式に符号つきで代入する。上向きを正とすれば重力加速度は $-g$。<br>
+・放物運動は<b>水平・鉛直に分解</b>し、両方に共通な<b>時刻 $t$</b> でつなぐ。「最高点」は鉛直成分 $=0$、「着地」は鉛直方向の座標が地面の値になるとき。<br>
+・$v$-$t$ グラフが与えられたら傾きと面積を読む。共通テストでは、グラフの読み取りや、$x$-$t$・$v$-$t$・$a$-$t$ グラフの対応が頻出。
+</div>
+<h3 class="deep">講義5　微分・積分で見る運動</h3>
+<p>加速度が一定でない運動でも、速度・加速度は「変化の割合」なので<b>微分</b>で表せる：$v=\dfrac{dx}{dt}$、$a=\dfrac{dv}{dt}$。逆に、$v$-$t$ グラフの面積が変位になったのは、変位が速度の<b>積分</b> $\displaystyle x=\int v\,dt$ だからである。</p>
+<div class="box lect">
+例えば、位置が $x=-t^3+6t^2\ [\mathrm{m}]\ (t\geqq0)$ で表される直線運動では、$v=\dfrac{dx}{dt}=-3t^2+12t$、$a=\dfrac{dv}{dt}=-6t+12$。$t=1\ \mathrm{s}$ で $v=9\ \mathrm{m/s}$、$a=6\ \mathrm{m/s^2}$。加速度が $0$ になる $t=2\ \mathrm{s}$ で速度は最大値 $12\ \mathrm{m/s}$ をとる。<br>
+加速度 $a$ が一定なら、$\displaystyle v=\int a\,dt=v_0+at$、$\displaystyle x=\int v\,dt=v_0t+\frac12at^2$（積分定数は $t=0$ での速度 $v_0$ と位置 $0$）となり、講義2の式が再び得られる。
+</div>
+<div class="box warn">
+・「速さ」と「速度」の混同。速度は向きをもつ（一直線上では符号つき）。例題の $-12\ \mathrm{m/s}$ を「速さ $-12\ \mathrm{m/s}$」と書かない。<br>
+・折り返す運動で、変位を道のりとしてしまう。道のりは折り返し点で区切って足す。<br>
+・斜方投射の最高点で「速度 $0$」とする。$0$ になるのは<b>鉛直成分だけ</b>で、水平成分 $v_0\cos\theta$ は残る。<br>
+・相対速度の引き算の順序を逆にする。「A から見た B」は $v_B-v_A$。
+</div>
+<div class="box ans">
+(1) $v=2.0\times10=20\ \mathrm{m/s}$、$x=\frac12\times2.0\times10^2=1.0\times10^2\ \mathrm{m}$<br>
+(2) $0^2-15^2=2a\times22.5$ より $a=-5.0\ \mathrm{m/s^2}$。大きさ $5.0\ \mathrm{m/s^2}$<br>
+(3) 屋上から $\frac{19.6^2}{2\times9.8}=19.6\ \mathrm{m}$ 上がるので、地上 $44.1\ \mathrm{m}$。屋上を原点・上向き正として $-24.5=19.6t-4.9t^2$、$t^2-4t-5=0$、$(t-5)(t+1)=0$ より $t=5.0\ \mathrm{s}$<br>
+(4) 東向きを正として $v_{AB}=(-15)-20=-35\ \mathrm{m/s}$。西向きに $35\ \mathrm{m/s}$
+</div>
+<!--CH 2-->
+<div class="box point">
+・物体が受ける力は、<b>重力</b> $mg$ と、<b>接触している物体から受ける力</b>（垂直抗力・摩擦力・張力・弾性力など）。ばねの弾性力は $F=kx$（<b>フックの法則</b>、$x$ は自然長からの伸び・縮み）<br>
+・<b>作用反作用の法則</b>は2物体の間の力の関係、<b>力のつりあい</b>は1物体にはたらく力の関係（合力 $=\vec 0$）<br>
+・<b>運動方程式</b> $ma=F$（$F$ は合力）。物体ごとに、加速度の向きを正として立てる<br>
+・<b>静止摩擦力</b>はつりあいで決まり、その最大値（最大摩擦力）が $\mu N$。すべっているときは<b>動摩擦力</b> $\mu' N$<br>
+・速さに比例する空気抵抗 $kv$ を受けて落ちる物体は、<b>終端速度</b> $v_f=\dfrac{mg}{k}$ に近づく
+</div>
+<h3>講義1　力の見つけ方・つりあい・作用反作用</h3>
+<div class="box lect">
+力を描くときは、注目する物体を1つ決め、①<b>重力</b>（地球が引く力）②その物体に<b>触れているもの</b>から受ける力 を描く。触れていないものからは力を受けない（重力と、後で学ぶ電気力・磁気力などを除く）。<br>
+・<b>垂直抗力</b> $N$：面が物体を面に垂直に押す力。いつも $N=mg$ とは限らない。<br>
+・<b>張力</b> $T$：糸が物体を引く力。軽い糸なら、糸のどこでも同じ大きさ。<br>
+・<b>弾性力</b>：ばねが自然長に戻ろうとする力 $F=kx$（$k$：ばね定数 $[\mathrm{N/m}]$）。<br>
+物体が静止していれば、力は<b>つりあっている</b>（合力 $=\vec 0$）。斜めの力は<b>直交する2方向に分解</b>し、方向ごとにつりあいの式を立てる。<br>
+<b>作用反作用</b>は2つの物体が互いに及ぼし合う力の組、<b>つりあい</b>は1つの物体にはたらく力の関係である。机の上の本では、「本にはたらく重力」と「机が本を押す垂直抗力」がつりあい、「机が本を押す力」と「本が机を押す力」が作用反作用の関係にある。
+</div>
+<div class="box ex">
+<div class="two"><div>質量 $2.0\ \mathrm{kg}$ の小球を、天井から伸びた糸 A と、壁に水平につないだ糸 B でつるしたところ、糸 A が鉛直と $30^\circ$ をなして静止した。重力加速度の大きさを $9.8\ \mathrm{m/s^2}$ として、糸 A、B の張力の大きさ $T_A$、$T_B$ を求めよ。</div><div><svg class="fig" width="280" height="185" viewBox="0 0 280 185" xmlns="http://www.w3.org/2000/svg"><line x1="40" y1="22" x2="175" y2="22" stroke="#555" stroke-width="1.6"/><line x1="40" y1="22" x2="44.2" y2="17.8" stroke="#555" stroke-width="0.8"/><line x1="48" y1="22" x2="52.2" y2="17.8" stroke="#555" stroke-width="0.8"/><line x1="56" y1="22" x2="60.2" y2="17.8" stroke="#555" stroke-width="0.8"/><line x1="64" y1="22" x2="68.2" y2="17.8" stroke="#555" stroke-width="0.8"/><line x1="72" y1="22" x2="76.2" y2="17.8" stroke="#555" stroke-width="0.8"/><line x1="80" y1="22" x2="84.2" y2="17.8" stroke="#555" stroke-width="0.8"/><line x1="88" y1="22" x2="92.2" y2="17.8" stroke="#555" stroke-width="0.8"/><line x1="96" y1="22" x2="100.2" y2="17.8" stroke="#555" stroke-width="0.8"/><line x1="104" y1="22" x2="108.2" y2="17.8" stroke="#555" stroke-width="0.8"/><line x1="112" y1="22" x2="116.2" y2="17.8" stroke="#555" stroke-width="0.8"/><line x1="120" y1="22" x2="124.2" y2="17.8" stroke="#555" stroke-width="0.8"/><line x1="128" y1="22" x2="132.2" y2="17.8" stroke="#555" stroke-width="0.8"/><line x1="136" y1="22" x2="140.2" y2="17.8" stroke="#555" stroke-width="0.8"/><line x1="144" y1="22" x2="148.2" y2="17.8" stroke="#555" stroke-width="0.8"/><line x1="152" y1="22" x2="156.2" y2="17.8" stroke="#555" stroke-width="0.8"/><line x1="160" y1="22" x2="164.2" y2="17.8" stroke="#555" stroke-width="0.8"/><line x1="168" y1="22" x2="172.2" y2="17.8" stroke="#555" stroke-width="0.8"/><line x1="262" y1="60" x2="262" y2="165" stroke="#555" stroke-width="1.6"/><line x1="262" y1="60" x2="257.8" y2="64.2" stroke="#555" stroke-width="0.8"/><line x1="262" y1="68" x2="257.8" y2="72.2" stroke="#555" stroke-width="0.8"/><line x1="262" y1="76" x2="257.8" y2="80.2" stroke="#555" stroke-width="0.8"/><line x1="262" y1="84" x2="257.8" y2="88.2" stroke="#555" stroke-width="0.8"/><line x1="262" y1="92" x2="257.8" y2="96.2" stroke="#555" stroke-width="0.8"/><line x1="262" y1="100" x2="257.8" y2="104.2" stroke="#555" stroke-width="0.8"/><line x1="262" y1="108" x2="257.8" y2="112.2" stroke="#555" stroke-width="0.8"/><line x1="262" y1="116" x2="257.8" y2="120.2" stroke="#555" stroke-width="0.8"/><line x1="262" y1="124" x2="257.8" y2="128.2" stroke="#555" stroke-width="0.8"/><line x1="262" y1="132" x2="257.8" y2="136.2" stroke="#555" stroke-width="0.8"/><line x1="262" y1="140" x2="257.8" y2="144.2" stroke="#555" stroke-width="0.8"/><line x1="262" y1="148" x2="257.8" y2="152.2" stroke="#555" stroke-width="0.8"/><line x1="262" y1="156" x2="257.8" y2="160.2" stroke="#555" stroke-width="0.8"/><line x1="262" y1="164" x2="257.8" y2="168.2" stroke="#555" stroke-width="0.8"/><line x1="98" y1="22" x2="150" y2="112" stroke="#999" stroke-width="1.2"/><line x1="150" y1="112" x2="262" y2="112" stroke="#999" stroke-width="1.2"/><circle cx="150" cy="112" r="8" fill="#e8eef8" stroke="#555" stroke-width="1.2"/><line x1="150" y1="112" x2="118.5" y2="57.4" stroke="#c0392b" stroke-width="2"/><polygon points="115,51.4 121.3,55.8 115.7,59" fill="#c0392b"/><line x1="150" y1="112" x2="178" y2="112" stroke="#c0392b" stroke-width="2"/><polygon points="185,112 178,115.2 178,108.8" fill="#c0392b"/><line x1="150" y1="112" x2="150" y2="165.6" stroke="#c0392b" stroke-width="2"/><polygon points="150,172.6 146.8,165.6 153.2,165.6" fill="#c0392b"/><line x1="115" y1="51.4" x2="150" y2="51.4" stroke="#c0392b" stroke-width="0.8" stroke-dasharray="3,2"/><line x1="115" y1="51.4" x2="115" y2="112" stroke="#c0392b" stroke-width="0.8" stroke-dasharray="3,2"/><text x="111" y="53.4" font-size="12" text-anchor="end" fill="#c0392b" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">T</tspan><tspan dy="3.5" font-size="0.78em"><tspan font-style="italic">A</tspan></tspan><tspan dy="-3.5"> </tspan></text><text x="187" y="106" font-size="12" text-anchor="start" fill="#c0392b" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">T</tspan><tspan dy="3.5" font-size="0.78em"><tspan font-style="italic">B</tspan></tspan><tspan dy="-3.5"> </tspan></text><text x="156" y="172.6" font-size="12" text-anchor="start" fill="#c0392b" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">m</tspan><tspan font-style="italic">g</tspan></text><line x1="150" y1="112" x2="150" y2="72" stroke="#555" stroke-width="0.7" stroke-dasharray="2,2"/><path d="M150,86 A26,26 0 0 0 137,89.5" fill="none" stroke="#555" stroke-width="1"/><text x="146" y="82" font-size="9.5" text-anchor="end" fill="#1e1e1e">30°</text><text x="90" y="36" font-size="10" text-anchor="end" fill="#1e1e1e">糸A</text><text x="222" y="107" font-size="10" text-anchor="start" fill="#1e1e1e">糸B</text></svg></div></div>
+<div class="solx"><b>解</b>　$T_A$ を水平・鉛直に分解する。<br>
+水平：$T_A\sin30^\circ=T_B$　鉛直：$T_A\cos30^\circ=mg$<br>
+$T_A=\dfrac{mg}{\cos30^\circ}=\dfrac{2.0\times9.8}{\sqrt3/2}\fallingdotseq\boldsymbol{23\ \mathrm{N}}$、$T_B=mg\tan30^\circ=\dfrac{19.6}{\sqrt3}\fallingdotseq\boldsymbol{11\ \mathrm{N}}$</div>
+</div>
+<h3>講義2　運動方程式と摩擦力</h3>
+<div class="box lect">
+<b>ニュートンの運動の法則</b>　第1法則（慣性の法則）：合力が $0$ なら、物体は静止または等速直線運動を続ける。第2法則：加速度は合力に比例し質量に反比例する、$ma=F$（<b>運動方程式</b>）。$1\ \mathrm{N}$ は質量 $1\ \mathrm{kg}$ の物体に $1\ \mathrm{m/s^2}$ の加速度を生じる力。第3法則：作用反作用の法則。<br>
+<b>解き方</b>　①物体を決めて力をすべて描く　②加速度の向きと、それに垂直な向きに分解する　③加速度の向きには $ma=$（合力）、垂直な向きにはつりあいの式を立てる。<br>
+<div class="two"><div><b>摩擦力</b>　物体が静止しているときの<b>静止摩擦力</b>は、他の力とつりあう大きさになる。その上限が<b>最大摩擦力</b> $\mu N$（$\mu$：静止摩擦係数）。引く力がこれを超えるとすべり出し、すべっている間は<b>動摩擦力</b> $\mu'N$（$\mu'$：動摩擦係数、ふつう $\mu'<\mu$）が、面に対する運動と逆向きにはたらく。</div><div><svg class="fig" width="310" height="150" viewBox="0 0 310 150" xmlns="http://www.w3.org/2000/svg"><line x1="40" y1="130" x2="284" y2="130" stroke="#555" stroke-width="1.1"/><polygon points="290,130 284,132.6 284,127.4" fill="#555"/><line x1="40" y1="130" x2="40" y2="21" stroke="#555" stroke-width="1.1"/><polygon points="40,15 42.6,21 37.4,21" fill="#555"/><text x="36" y="143" font-size="11" text-anchor="end" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">O</tspan></text><text x="290" y="145" font-size="10" text-anchor="end" fill="#1e1e1e">引く力 <tspan font-style="italic" font-family="Liberation Serif,serif">F</tspan></text><text x="46" y="25" font-size="10" text-anchor="start" fill="#1e1e1e">摩擦力の大きさ</text><line x1="40" y1="130" x2="132" y2="38" stroke="#1d4e89" stroke-width="2.4"/><line x1="132" y1="38" x2="132" y2="68" stroke="#1d4e89" stroke-width="1" stroke-dasharray="3,2"/><line x1="132" y1="68" x2="280" y2="68" stroke="#c0392b" stroke-width="2.4"/><line x1="40" y1="38" x2="132" y2="38" stroke="#555" stroke-width="0.8" stroke-dasharray="3,2"/><line x1="132" y1="130" x2="132" y2="68" stroke="#555" stroke-width="0.8" stroke-dasharray="3,2"/><text x="36" y="42" font-size="11" text-anchor="end" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">μ</tspan><tspan font-style="italic">N</tspan></text><text x="36" y="72" font-size="11" text-anchor="end" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">μ</tspan><tspan>′</tspan><tspan font-style="italic">N</tspan></text><text x="70" y="110" font-size="9.5" text-anchor="start" fill="#1d4e89">静止摩擦力</text><text x="70" y="122" font-size="9.5" text-anchor="start" fill="#1d4e89">（＝引く力）</text><text x="136" y="34" font-size="9.5" text-anchor="start" fill="#1d4e89">最大摩擦力</text><text x="205" y="62" font-size="9.5" text-anchor="middle" fill="#c0392b">動摩擦力</text><text x="86" y="144" font-size="9.5" text-anchor="middle" fill="#1e1e1e">静止</text><text x="205" y="144" font-size="9.5" text-anchor="middle" fill="#1e1e1e">すべっている</text></svg></div></div>
+傾き $\theta$ の斜面上の物体では、重力を斜面方向 $mg\sin\theta$ と垂直方向 $mg\cos\theta$ に分解し、$N=mg\cos\theta$。置いた物体が静止できる条件は $mg\sin\theta\leqq\mu mg\cos\theta$、すなわち $\tan\theta\leqq\mu$。
+</div>
+<div class="box ex">
+傾きの角 $\theta$（$\sin\theta=0.60$、$\cos\theta=0.80$）のあらい斜面上に、質量 $m$ の物体を静かに置いた。重力加速度の大きさを $9.8\ \mathrm{m/s^2}$ とする。<br>
+(1) 物体が静止したままでいるには、静止摩擦係数 $\mu$ はいくら以上必要か。<br>
+(2) 実際は $\mu=0.50$ で、物体はすべり出した。動摩擦係数が $0.25$ のとき、すべり下りる加速度の大きさを求めよ。
+<div class="solx"><b>解</b>　(1) $\mu\geqq\tan\theta=\dfrac{0.60}{0.80}=\boldsymbol{0.75}$<br>
+(2) 斜面に垂直な方向のつりあいから $N=mg\cos\theta$。斜面に沿って下向きを正とすると<br>
+$ma=mg\sin\theta-\mu'mg\cos\theta$　より　$a=g(\sin\theta-\mu'\cos\theta)=9.8\times(0.60-0.25\times0.80)\fallingdotseq\boldsymbol{3.9\ \mathrm{m/s^2}}$（$m$ によらない）</div>
+</div>
+<h3>講義3　連結された物体の運動</h3>
+<div class="box lect">
+糸でつながった物体は、糸がたるまない限り<b>同じ大きさの加速度</b>で動く。物体ごとに運動方程式を立てて連立すると、張力 $T$ は2つの式に逆向きに現れ、足し合わせると消える。これは、2物体をまとめて1つとみなし、外から受ける力だけで立てた式と同じである。<br>
+ただし一体とみなす式からは張力（内力）は求められないので、張力を問われたら物体ごとの式を使う。
+</div>
+<div class="box ex">
+<div class="two"><div>水平な台の上に質量 $M=3.0\ \mathrm{kg}$ の物体 A を置き、軽い糸で台の端のなめらかな滑車を通して質量 $m=2.0\ \mathrm{kg}$ の物体 B をつるした。静かに放すと A は動き出した。A と台の間の動摩擦係数を $0.20$、重力加速度の大きさを $9.8\ \mathrm{m/s^2}$ として、加速度の大きさ $a$ と糸の張力 $T$ を求めよ。</div><div><svg class="fig" width="330" height="205" viewBox="0 0 330 205" xmlns="http://www.w3.org/2000/svg"><rect x="20" y="82" width="195" height="12" fill="#eee" stroke="#555" stroke-width="1.2"/><rect x="30" y="94" width="8" height="70" fill="#eee" stroke="#555" stroke-width="1.2"/><rect x="197" y="94" width="8" height="70" fill="#eee" stroke="#555" stroke-width="1.2"/><line x1="211" y1="82" x2="223" y2="70" stroke="#555" stroke-width="1.2"/><circle cx="223" cy="70" r="10" fill="#fff" stroke="#555" stroke-width="1.2"/><circle cx="223" cy="70" r="2" fill="#555" stroke="#555" stroke-width="1.2"/><rect x="85" y="48" width="52" height="34" fill="#e8eef8" stroke="#555" stroke-width="1.2"/><text x="111" y="70" font-size="13" text-anchor="middle" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">A</tspan></text><line x1="137" y1="60" x2="223" y2="60" stroke="#555" stroke-width="1.1"/><line x1="233" y1="70" x2="233" y2="128" stroke="#555" stroke-width="1.1"/><rect x="217" y="128" width="32" height="30" fill="#e8eef8" stroke="#555" stroke-width="1.2"/><text x="233" y="148" font-size="13" text-anchor="middle" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">B</tspan></text><line x1="139" y1="69" x2="167.2" y2="69" stroke="#c0392b" stroke-width="2"/><polygon points="174.2,69 167.2,72.2 167.2,65.8" fill="#c0392b"/><text x="178.2" y="74" font-size="12" text-anchor="start" fill="#c0392b" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">T</tspan></text><line x1="89" y1="80" x2="67.3" y2="80" stroke="#c0392b" stroke-width="2"/><polygon points="60.3,80 67.3,76.8 67.3,83.2" fill="#c0392b"/><text x="58.3" y="74" font-size="11" text-anchor="end" fill="#c0392b" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">μ</tspan><tspan>′</tspan><tspan font-style="italic">M</tspan><tspan font-style="italic">g</tspan></text><line x1="111" y1="48" x2="111" y2="25" stroke="#c0392b" stroke-width="1.8"/><polygon points="111,18 114.2,25 107.8,25" fill="#c0392b"/><text x="115" y="28" font-size="12" text-anchor="start" fill="#c0392b" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">N</tspan></text><line x1="111" y1="70" x2="111" y2="97" stroke="#c0392b" stroke-width="1.8"/><polygon points="111,104 107.8,97 114.2,97" fill="#c0392b"/><text x="116" y="110" font-size="11" text-anchor="start" fill="#c0392b" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">M</tspan><tspan font-style="italic">g</tspan></text><line x1="253" y1="132" x2="253" y2="103.8" stroke="#c0392b" stroke-width="2"/><polygon points="253,96.8 256.2,103.8 249.8,103.8" fill="#c0392b"/><text x="257" y="114" font-size="12" text-anchor="start" fill="#c0392b" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">T</tspan></text><line x1="233" y1="158" x2="233" y2="180.4" stroke="#c0392b" stroke-width="2"/><polygon points="233,187.4 229.8,180.4 236.2,180.4" fill="#c0392b"/><text x="238" y="185.4" font-size="11" text-anchor="start" fill="#c0392b" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">m</tspan><tspan font-style="italic">g</tspan></text><text x="23" y="22" font-size="9.5" text-anchor="start" fill="#1e1e1e">A：<tspan font-family="Liberation Serif,DejaVu Serif,serif" font-size="10.6"><tspan font-style="italic">M</tspan></tspan> ＝ 3.0 kg</text><text x="255" y="154" font-size="9.5" text-anchor="start" fill="#1e1e1e">B：<tspan font-family="Liberation Serif,DejaVu Serif,serif" font-size="10.6"><tspan font-style="italic">m</tspan></tspan> ＝ 2.0 kg</text><text x="20" y="180" font-size="9.5" text-anchor="start" fill="#1e1e1e">A と台の間の動摩擦係数 0.20</text></svg></div></div>
+<div class="solx"><b>解</b>　A：$Ma=T-\mu'Mg$　…①　　B：$ma=mg-T$　…②<br>
+①＋②：$(M+m)a=mg-\mu'Mg$　より　$a=\dfrac{19.6-0.20\times3.0\times9.8}{5.0}=\dfrac{19.6-5.88}{5.0}\fallingdotseq\boldsymbol{2.7\ \mathrm{m/s^2}}$<br>
+②より $T=m(g-a)=2.0\times(9.8-2.744)\fallingdotseq\boldsymbol{14\ \mathrm{N}}$。B は加速しながら落ちるので、$T$ は $mg=19.6\ \mathrm{N}$ より小さい。</div>
+</div>
+<h3>講義4　空気抵抗と終端速度</h3>
+<div class="box lect">
+<div class="two"><div>速さがあまり大きくない物体は、速さ $v$ に比例する空気抵抗 $kv$ を運動と逆向きに受ける。落下する物体の運動方程式（下向き正）は $ma=mg-kv$。<br>
+はじめ $v=0$ で $a=g$。速くなるほど抵抗が増えて加速度は小さくなり、$mg=kv$ となったところで $a=0$、以後は等速になる。この速さが<b>終端速度</b> $v_f=\dfrac{mg}{k}$。雨滴が地表付近でほぼ一定の速さで落ちてくるのはこのためである。</div><div><svg class="fig" width="255" height="128" viewBox="0 0 255 128" xmlns="http://www.w3.org/2000/svg"><line x1="35" y1="112" x2="234" y2="112" stroke="#555" stroke-width="1.1"/><polygon points="240,112 234,114.6 234,109.4" fill="#555"/><line x1="35" y1="112" x2="35" y2="23" stroke="#555" stroke-width="1.1"/><polygon points="35,17 37.6,23 32.4,23" fill="#555"/><text x="31" y="125" font-size="11" text-anchor="end" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">O</tspan></text><text x="242" y="126" font-size="11" text-anchor="end" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">t</tspan></text><text x="41" y="25" font-size="11" text-anchor="start" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">v</tspan></text><line x1="35" y1="42" x2="235" y2="42" stroke="#555" stroke-width="0.9" stroke-dasharray="4,3"/><line x1="35" y1="112" x2="77.8" y2="45.5" stroke="#d9701e" stroke-width="1" stroke-dasharray="3,2"/><polyline points="35,112 38,107.5 41,103.3 44,99.3 47,95.6 50,92.2 53,88.9 56,85.9 59,83.1 62,80.4 65,77.9 68,75.6 71,73.5 74,71.4 77,69.5 80,67.8 83,66.1 86,64.5 89,63.1 92,61.7 95,60.5 98,59.3 101,58.1 104,57.1 107,56.1 110,55.2 113,54.4 116,53.6 119,52.8 122,52.1 125,51.5 128,50.9 131,50.3 134,49.8 137,49.3 140,48.8 143,48.4 146,47.9 149,47.6 152,47.2 155,46.9 158,46.6 161,46.3 164,46 167,45.7 170,45.5 173,45.3 176,45.1 179,44.9 182,44.7 185,44.5 188,44.3 191,44.2 194,44 197,43.9 200,43.8 203,43.7 206,43.6 209,43.5 212,43.4 215,43.3 218,43.2 221,43.1 224,43 227,43 230,42.9" fill="none" stroke="#1d4e89" stroke-width="2.3"/><text x="31" y="46" font-size="12" text-anchor="end" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">v</tspan><tspan dy="3.5" font-size="0.78em"><tspan font-style="italic">f</tspan></tspan><tspan dy="-3.5"> </tspan></text><text x="147" y="36" font-size="9.5" text-anchor="middle" fill="#1e1e1e">終端速度 <tspan font-style="italic" font-family="Liberation Serif,serif">v</tspan><tspan font-size="7" dy="3">f</tspan><tspan dy="-3"> </tspan> ＝ <tspan font-style="italic" font-family="Liberation Serif,serif">mg</tspan>/<tspan font-style="italic" font-family="Liberation Serif,serif">k</tspan></text><text x="85" y="90" font-size="9" text-anchor="start" fill="#d9701e">はじめの傾き</text><text x="143" y="90" font-size="10.5" text-anchor="start" fill="#d9701e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>=</tspan><tspan> </tspan><tspan font-style="italic">g</tspan></text></svg></div></div>
+</div>
+<div class="box ex">
+質量 $0.50\ \mathrm{kg}$ の物体が、速さ $v$ に比例する空気抵抗 $kv$（$k=0.98\ \mathrm{kg/s}$）を受けて鉛直に落下する。重力加速度の大きさを $9.8\ \mathrm{m/s^2}$ とする。(1) 終端速度の大きさを求めよ。(2) 速さが $2.0\ \mathrm{m/s}$ のときの加速度の大きさを求めよ。
+<div class="solx"><b>解</b>　(1) $v_f=\dfrac{mg}{k}=\dfrac{0.50\times9.8}{0.98}=\boldsymbol{5.0\ \mathrm{m/s}}$<br>
+(2) $a=g-\dfrac{kv}{m}=9.8-\dfrac{0.98\times2.0}{0.50}=5.88\fallingdotseq\boldsymbol{5.9\ \mathrm{m/s^2}}$</div>
+</div>
+<div class="box chk">
+(1) ばね定数 $49\ \mathrm{N/m}$ の軽いばねに質量 $0.50\ \mathrm{kg}$ のおもりをつるして静止させた。ばねの伸びを求めよ（重力加速度の大きさ $9.8\ \mathrm{m/s^2}$）。<br>
+(2) なめらかな水平面上で接している物体 A（$2.0\ \mathrm{kg}$）と B（$3.0\ \mathrm{kg}$）を、A の側から水平に $10\ \mathrm{N}$ の力で押した。加速度の大きさと、A が B を押す力の大きさを求めよ。<br>
+(3) あらい水平な床の上に質量 $5.0\ \mathrm{kg}$ の物体がある（静止摩擦係数 $0.40$、動摩擦係数 $0.30$、重力加速度の大きさ $9.8\ \mathrm{m/s^2}$）。(a) 水平に $15\ \mathrm{N}$ で引いたが動かなかった。摩擦力の大きさは。(b) 動き出したあと、水平に $25\ \mathrm{N}$ で引き続けたときの加速度の大きさは。<br>
+(4) 鉛直上向きに $2.0\ \mathrm{m/s^2}$ の加速度で上昇するエレベーターの床に、質量 $60\ \mathrm{kg}$ の人が立っている。床が人を押す力の大きさを求めよ（重力加速度の大きさ $9.8\ \mathrm{m/s^2}$）。
+</div>
+<div class="box aim">
+・力の図は<b>物体ごと</b>に描き、「何が何から受ける力か」を言えるようにする。<br>
+・運動方程式は「$ma=$（加速度の向きの力）$-$（逆向きの力）」。<b>加速度の向きを先に仮定</b>し、負の値が出たら逆向き。<br>
+・摩擦の問題は、まず<b>すべるか・すべらないか</b>を判定する（必要な静止摩擦力と $\mu N$ を比べる）。
+</div>
+<h3 class="deep">講義5　重ねた物体 ― 一緒に動くか、すべるか</h3>
+<p>なめらかな床の上に質量 $M$ の板 B を置き、その上に質量 $m$ の物体 A をのせる。A と B の間の静止摩擦係数を $\mu$、動摩擦係数を $\mu'$ とし、B を水平な力 $F$ で引く（重力加速度の大きさ $g$）。</p>
+<div class="box lect">
+<b>一緒に動くとき</b>　一体とみなして加速度は $a=\dfrac{F}{M+m}$。A を水平に加速させているのは、B から受ける<b>静止摩擦力</b> $f$ だけなので、$ma=f$ より $f=\dfrac{mF}{M+m}$。<br>
+これが最大摩擦力 $\mu mg$ 以下なら一緒に動ける：$\dfrac{mF}{M+m}\leqq\mu mg$　すなわち　$F\leqq\mu(M+m)g$。<br>
+<b>すべるとき</b>　$F$ がこれを超えると A は B の上をすべる。A には動摩擦力 $\mu'mg$ が B の進む向きに、B にはその反作用が逆向きにはたらき、$a_A=\mu'g$、$a_B=\dfrac{F-\mu'mg}{M}$（$a_B>a_A$）となる。<br>
+A を前へ引っぱっているのは摩擦力である。摩擦力は<b>接触面どうしのすべり（相対運動）を妨げる向き</b>にはたらく。
+</div>
+<div class="box warn">
+・作用反作用の2力を「つりあっている」と言ってしまう。2力は<b>別々の物体</b>にはたらくので、つりあいの関係にはならない。<br>
+・斜面上で垂直抗力を $mg$ とする。斜面に垂直な力が重力と垂直抗力だけなら $N=mg\cos\theta$。<br>
+・静止摩擦力をいつも $\mu N$ と計算する。$\mu N$ は<b>最大値</b>。確認問題(3)(a) の摩擦力は $15\ \mathrm{N}$ で、$19.6\ \mathrm{N}$ ではない。<br>
+・運動方程式の右辺に「$ma$」という力を書き加える。
+</div>
+<div class="box ans">
+(1) $kx=mg$ より $x=\frac{0.50\times9.8}{49}=0.10\ \mathrm{m}$<br>
+(2) 一体として $5.0a=10$ より $a=2.0\ \mathrm{m/s^2}$。B について $3.0\times2.0=6.0\ \mathrm{N}$<br>
+(3) (a) 最大摩擦力 $0.40\times5.0\times9.8=19.6\ \mathrm{N}$ が $15\ \mathrm{N}$ より大きいので静止。つりあいより摩擦力は $15\ \mathrm{N}$　(b) $5.0a=25-0.30\times5.0\times9.8=10.3$ より $a\fallingdotseq2.1\ \mathrm{m/s^2}$<br>
+(4) 上向き正：$60\times2.0=N-60\times9.8$ より $N=60\times11.8=708\fallingdotseq7.1\times10^2\ \mathrm{N}$
+</div>
+<!--CH 3-->
+<div class="box point">
+・<b>仕事</b> $W=Fx\cos\theta$（$\theta$：力と移動の向きのなす角）。移動と垂直な力は仕事をしない。<b>仕事率</b> $P=\dfrac Wt=Fv$<br>
+・<b>運動エネルギー</b> $\dfrac12mv^2$ の変化は、物体がされた仕事に等しい：$\dfrac12mv^2-\dfrac12mv_0^2=W$<br>
+・<b>位置エネルギー</b>：重力 $mgh$、弾性力 $\dfrac12kx^2$。仕事が経路によらない力（<b>保存力</b>）についてだけ定義できる<br>
+・<b>力学的エネルギー保存則</b>：保存力だけが仕事をするとき $K+U=$ 一定。非保存力（摩擦など）が仕事 $W$ をすると、力学的エネルギーの変化 $=W$
+</div>
+<h3>講義1　仕事と仕事率</h3>
+<div class="box lect">
+物体に一定の力 $F$ を加えて、力の向きに $x$ 動かしたとき、力がした<b>仕事</b>は $W=Fx$（単位 $\mathrm{J}=\mathrm{N\cdot m}$）。力と移動の向きが角 $\theta$ をなすときは、移動方向の成分 $F\cos\theta$ だけが仕事をして $W=Fx\cos\theta$。$\theta>90^\circ$ なら負の仕事（動摩擦力、上昇する物体にはたらく重力など）、$\theta=90^\circ$ なら $0$（垂直抗力など）。<br>
+力が変化するときは、$F$-$x$ グラフの<b>面積</b>が仕事になる。ばねを自然長から $x$ だけ伸ばす仕事は、三角形の面積 $\dfrac12kx^2$。
+<svg class="fig" width="400" height="125" viewBox="0 0 400 125" xmlns="http://www.w3.org/2000/svg"><line x1="30" y1="108" x2="174" y2="108" stroke="#555" stroke-width="1.1"/><polygon points="180,108 174,110.6 174,105.4" fill="#555"/><line x1="30" y1="108" x2="30" y2="22" stroke="#555" stroke-width="1.1"/><polygon points="30,16 32.6,22 27.4,22" fill="#555"/><text x="26" y="121" font-size="11" text-anchor="end" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">O</tspan></text><text x="182" y="122" font-size="11" text-anchor="end" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">x</tspan></text><text x="36" y="24" font-size="11" text-anchor="start" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">F</tspan></text><rect x="30" y="58" width="110" height="50" fill="#dfe8f5" stroke="none" stroke-width="0"/><line x1="30" y1="58" x2="165" y2="58" stroke="#1d4e89" stroke-width="2.2"/><line x1="140" y1="108" x2="140" y2="58" stroke="#555" stroke-width="0.8" stroke-dasharray="3,2"/><text x="85" y="86" font-size="12" text-anchor="middle" fill="#1d4e89" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">W</tspan><tspan> </tspan><tspan>=</tspan><tspan> </tspan><tspan font-style="italic">F</tspan><tspan font-style="italic">x</tspan></text><text x="26" y="62" font-size="11" text-anchor="end" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">F</tspan></text><text x="140" y="121" font-size="11" text-anchor="middle" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">x</tspan></text><text x="105" y="16" font-size="10" text-anchor="middle" fill="#1e1e1e">一定の力</text><line x1="215" y1="108" x2="359" y2="108" stroke="#555" stroke-width="1.1"/><polygon points="365,108 359,110.6 359,105.4" fill="#555"/><line x1="215" y1="108" x2="215" y2="22" stroke="#555" stroke-width="1.1"/><polygon points="215,16 217.6,22 212.4,22" fill="#555"/><text x="211" y="121" font-size="11" text-anchor="end" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">O</tspan></text><text x="367" y="122" font-size="11" text-anchor="end" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">x</tspan></text><text x="221" y="24" font-size="11" text-anchor="start" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">F</tspan></text><polygon points="215,108 325,31 325,108" fill="#fde3cc" stroke="none" stroke-width="0"/><line x1="215" y1="108" x2="345" y2="17" stroke="#1d4e89" stroke-width="2.2"/><line x1="325" y1="108" x2="325" y2="31" stroke="#555" stroke-width="0.8" stroke-dasharray="3,2"/><line x1="215" y1="31" x2="325" y2="31" stroke="#555" stroke-width="0.8" stroke-dasharray="3,2"/><text x="291" y="94" font-size="12" text-anchor="middle" fill="#d9701e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>½</tspan><tspan font-style="italic">k</tspan><tspan font-style="italic">x</tspan><tspan dy="-4.5" font-size="0.78em"><tspan>2</tspan></tspan><tspan dy="4.5"> </tspan></text><text x="211" y="35" font-size="11" text-anchor="end" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">k</tspan><tspan font-style="italic">x</tspan></text><text x="325" y="121" font-size="11" text-anchor="middle" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">x</tspan></text><text x="290" y="16" font-size="10" text-anchor="middle" fill="#1e1e1e">ばねの弾性力</text><text x="333" y="16" font-size="11" text-anchor="start" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">F</tspan><tspan> </tspan><tspan>=</tspan><tspan> </tspan><tspan font-style="italic">k</tspan><tspan font-style="italic">x</tspan></text></svg>
+<b>仕事率</b>は単位時間あたりの仕事 $P=\dfrac Wt$（単位 $\mathrm{W}=\mathrm{J/s}$）。速さ $v$ で動く物体に、運動の向きに力 $F$ がはたらくとき、$P=\dfrac{Fx}{t}=Fv$。
+</div>
+<div class="box ex">
+質量 $2.0\ \mathrm{kg}$ の物体を、傾き $30^\circ$ のなめらかな斜面に沿って、斜面に平行な力でゆっくりと $4.0\ \mathrm{m}$ 引き上げた。重力加速度の大きさを $9.8\ \mathrm{m/s^2}$ とする。<br>
+(1) 引く力の大きさと、その力がした仕事を求めよ。　(2) 重力がした仕事と、垂直抗力がした仕事を求めよ。<br>
+(3) 引き上げるのに $8.0\ \mathrm{s}$ かかった。引く力の平均の仕事率を求めよ。
+<div class="solx"><b>解</b>　(1)「ゆっくり」は加速度 $0$ とみなせるので、斜面方向のつりあいから $F=mg\sin30^\circ=\boldsymbol{9.8\ \mathrm{N}}$。$W=9.8\times4.0=39.2\fallingdotseq\boldsymbol{39\ \mathrm{J}}$<br>
+(2) 重力は移動の向きと $120^\circ$ をなすので $2.0\times9.8\times4.0\times\cos120^\circ\fallingdotseq\boldsymbol{-39\ \mathrm{J}}$（高さ $2.0\ \mathrm{m}$ 上がるので $-mgh$ と同じ）。垂直抗力は移動の向きと垂直なので $\boldsymbol{0}$。<br>
+(3) $P=\dfrac{39.2}{8.0}=\boldsymbol{4.9\ \mathrm{W}}$</div>
+</div>
+<h3>講義2　運動エネルギーと仕事の関係</h3>
+<div class="box lect">
+質量 $m$ の物体に一定の合力 $F$ が運動の向きにはたらき、距離 $x$ 進む間に速さが $v_0$ から $v$ になったとする。等加速度の式 $v^2-v_0^2=2ax$ の両辺に $\dfrac m2$ を掛けると<br>
+　$\dfrac12mv^2-\dfrac12mv_0^2=max=Fx$<br>
+右辺は合力がした仕事。つまり「<b>運動エネルギーの変化＝物体がされた仕事</b>」である。この関係は、力が変化する場合や曲線運動でも成り立つ（仕事は、はたらくすべての力の仕事の和）。<br>
+エネルギーとは「仕事をする能力」のこと。速さ $v$ の物体は、止まるまでに他の物体へ $\dfrac12mv^2$ の仕事をすることができる。
+</div>
+<div class="box ex">
+水平な道路を速さ $20\ \mathrm{m/s}$ で走る質量 $1.0\times10^3\ \mathrm{kg}$ の自動車が急ブレーキをかけ、タイヤがすべって止まった。タイヤと路面の動摩擦係数を $0.50$、重力加速度の大きさを $9.8\ \mathrm{m/s^2}$ とする。<br>
+(1) 止まるまでに動摩擦力がした仕事を求めよ。　(2) 止まるまでにすべった距離を求めよ。<br>
+(3) 速さが $10\ \mathrm{m/s}$ だったら、すべる距離はいくらか。
+<div class="solx"><b>解</b>　(1) 運動エネルギーの変化に等しいので $0-\dfrac12\times1.0\times10^3\times20^2=\boldsymbol{-2.0\times10^5\ \mathrm{J}}$<br>
+(2) 動摩擦力 $\mu'mg$ が距離 $d$ でする仕事は $-\mu'mgd$。$-\mu'mgd=-\dfrac12mv^2$ より $d=\dfrac{v^2}{2\mu'g}=\dfrac{20^2}{2\times0.50\times9.8}\fallingdotseq\boldsymbol{41\ \mathrm{m}}$<br>
+(3) $d$ は $v^2$ に比例するので $\dfrac14$ 倍、$\dfrac{10^2}{2\times0.50\times9.8}\fallingdotseq\boldsymbol{10\ \mathrm{m}}$。速さが2倍になると止まるまでの距離は4倍になる。</div>
+</div>
+<h3>講義3　位置エネルギーと力学的エネルギー保存則</h3>
+<div class="box lect">
+重力が物体にする仕事は、高さ $h$ だけ下がれば $mgh$ で、<b>途中の経路によらない</b>（斜めに動いても、重力の向きの移動成分は $h$）。このように仕事が始点と終点だけで決まる力を<b>保存力</b>といい、基準点まで動く間に保存力がする仕事を<b>位置エネルギー</b>と定める。重力では $U=mgh$（$h$：基準からの高さ）、ばねの弾性力では $U=\dfrac12kx^2$（$x$：自然長からの伸び・縮み）。<br>
+保存力がする仕事は、位置エネルギーの減少 $U_1-U_2$ に等しい。保存力だけが仕事をするなら、講義2の関係 $K_2-K_1=U_1-U_2$ を移項して<br>
+　$K_1+U_1=K_2+U_2$（<b>力学的エネルギー保存則</b>）<br>
+垂直抗力や糸の張力のように<b>仕事をしない力</b>がはたらいていても成り立つ。
+</div>
+<div class="box ex">
+なめらかな水平面上で、ばね定数 $98\ \mathrm{N/m}$ の軽いばねを $0.20\ \mathrm{m}$ 縮め、質量 $0.10\ \mathrm{kg}$ の小球を押し当てて静かに放した。小球はばねを離れたあと、なめらかな曲面を上っていった。重力加速度の大きさを $9.8\ \mathrm{m/s^2}$ とする。<br>
+(1) ばねを離れるときの速さ　(2) 小球が達する最高点の高さ　(3) 高さ $1.0\ \mathrm{m}$ の点を通過するときの速さ を求めよ。
+<div class="solx"><b>解</b>　ばねの位置エネルギーは $\dfrac12\times98\times0.20^2=1.96\ \mathrm{J}$。これがすべて小球の力学的エネルギーになる。<br>
+(1) $\dfrac12\times0.10v^2=1.96$ より $v=\sqrt{39.2}\fallingdotseq\boldsymbol{6.3\ \mathrm{m/s}}$　(2) $0.10\times9.8\times h=1.96$ より $h=\boldsymbol{2.0\ \mathrm{m}}$<br>
+(3) $\dfrac12\times0.10v^2+0.10\times9.8\times1.0=1.96$ より $v^2=19.6$、$v\fallingdotseq\boldsymbol{4.4\ \mathrm{m/s}}$</div>
+</div>
+<h3>講義4　非保存力がはたらくとき</h3>
+<div class="box lect">
+摩擦力・空気抵抗・人が加える力などは、する仕事が経路によるので位置エネルギーを定義できない（<b>非保存力</b>）。これらが仕事 $W$ をするとき、講義2の関係を書き直すと<br>
+　$(K_2+U_2)-(K_1+U_1)=W$（<b>力学的エネルギーの変化＝非保存力がした仕事</b>）<br>
+動摩擦力の仕事は $-\mu'N\times$（すべった道のり）。往復してすべる場合も、動摩擦力は常に運動と逆向きなので、<b>道のりの合計</b>で計算する。失われた力学的エネルギーは熱などになる（第9章）。
+</div>
+<div class="box ex">
+図のように、なめらかな曲面上の高さ $1.6\ \mathrm{m}$ の点から小球を静かに放した。水平面のうち AB 間（長さ $1.5\ \mathrm{m}$）だけがあらく、動摩擦係数は $0.40$、他はなめらかである。重力加速度の大きさを $9.8\ \mathrm{m/s^2}$ とする。<br>
+(1) 初めて A を通過するときの速さ　(2) B の先の曲面を上る高さ　(3) 小球が最終的に止まる位置 を求めよ。
+<svg class="fig" width="371.0" height="170" viewBox="0 0 371.0 170" xmlns="http://www.w3.org/2000/svg"><polyline points="69,39 69.1,44 69.5,49 70.2,54 71.1,59 72.3,63.8 73.7,68.7 75.4,73.4 77.3,78 79.5,82.6 81.9,87 84.5,91.3 87.3,95.4 90.4,99.4 93.7,103.2 97.1,106.9 100.8,110.3 104.6,113.6 108.6,116.7 112.7,119.5 117,122.1 121.4,124.5 126,126.7 130.6,128.6 135.3,130.3 140.2,131.7 145,132.9 150,133.8 155,134.5 160,134.9 165,135" fill="none" stroke="#555" stroke-width="1.8"/><polyline points="255,135 260,134.9 265,134.5 270,133.8 275,132.9 279.8,131.7 284.7,130.3 289.4,128.6 294,126.7 298.6,124.5 303,122.1 307.3,119.5 311.4,116.7 315.4,113.6 319.2,110.3 322.9,106.9 326.3,103.2 329.6,99.4 332.7,95.4 335.5,91.3 338.1,87 340.5,82.6 342.7,78 344.6,73.4 346.3,68.7 347.7,63.8 348.9,59 349.8,54 350.5,49 350.9,44 351,39" fill="none" stroke="#555" stroke-width="1.8"/><line x1="165" y1="135" x2="255" y2="135" stroke="#555" stroke-width="1.8"/><line x1="165" y1="135" x2="160" y2="141" stroke="#d9701e" stroke-width="0.9"/><line x1="171" y1="135" x2="166" y2="141" stroke="#d9701e" stroke-width="0.9"/><line x1="177" y1="135" x2="172" y2="141" stroke="#d9701e" stroke-width="0.9"/><line x1="183" y1="135" x2="178" y2="141" stroke="#d9701e" stroke-width="0.9"/><line x1="189" y1="135" x2="184" y2="141" stroke="#d9701e" stroke-width="0.9"/><line x1="195" y1="135" x2="190" y2="141" stroke="#d9701e" stroke-width="0.9"/><line x1="201" y1="135" x2="196" y2="141" stroke="#d9701e" stroke-width="0.9"/><line x1="207" y1="135" x2="202" y2="141" stroke="#d9701e" stroke-width="0.9"/><line x1="213" y1="135" x2="208" y2="141" stroke="#d9701e" stroke-width="0.9"/><line x1="219" y1="135" x2="214" y2="141" stroke="#d9701e" stroke-width="0.9"/><line x1="225" y1="135" x2="220" y2="141" stroke="#d9701e" stroke-width="0.9"/><line x1="231" y1="135" x2="226" y2="141" stroke="#d9701e" stroke-width="0.9"/><line x1="237" y1="135" x2="232" y2="141" stroke="#d9701e" stroke-width="0.9"/><line x1="243" y1="135" x2="238" y2="141" stroke="#d9701e" stroke-width="0.9"/><line x1="249" y1="135" x2="244" y2="141" stroke="#d9701e" stroke-width="0.9"/><circle cx="76" cy="38" r="7" fill="#cfdcf0" stroke="#1d4e89" stroke-width="1.2"/><line x1="57" y1="39" x2="57" y2="135" stroke="#555" stroke-width="0.9"/><line x1="53" y1="39" x2="61" y2="39" stroke="#555" stroke-width="0.9"/><line x1="53" y1="135" x2="61" y2="135" stroke="#555" stroke-width="0.9"/><text x="53" y="91" font-size="9.5" text-anchor="end" fill="#1e1e1e">1.6 m</text><text x="165" y="151" font-size="12" text-anchor="middle" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">A</tspan></text><text x="255" y="151" font-size="12" text-anchor="middle" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">B</tspan></text><text x="210" y="163" font-size="9.5" text-anchor="middle" fill="#d9701e">あらい面 1.5 m</text><text x="117" y="115" font-size="9.5" text-anchor="end" fill="#1e1e1e">なめらか</text><text x="303" y="115" font-size="9.5" text-anchor="start" fill="#1e1e1e">なめらか</text></svg>
+<div class="solx"><b>解</b>　(1) 力学的エネルギー保存より $\dfrac12mv^2=mg\times1.6$、$v=\sqrt{2\times9.8\times1.6}=\boldsymbol{5.6\ \mathrm{m/s}}$<br>
+(2) AB 間で動摩擦力がする仕事は $-0.40mg\times1.5$。$mgh-mg\times1.6=-0.40mg\times1.5$ より $h=1.6-0.60=\boldsymbol{1.0\ \mathrm{m}}$<br>
+(3) 止まるまでに AB 上をすべる道のりの合計を $s$ とすると、$0-mg\times1.6=-0.40mg\times s$ より $s=4.0\ \mathrm{m}$。$4.0=1.5\ (\mathrm{A\to B})+1.5\ (\mathrm{B\to A})+1.0$ なので、<b>A から B の向きに $1.0\ \mathrm{m}$ の点</b>（B の手前 $0.5\ \mathrm{m}$）で止まる。</div>
+</div>
+<div class="box chk">
+(1) 大きさ $10\ \mathrm{N}$ の一定の力を、移動の向きと $60^\circ$ をなす向きに加えながら、物体を $5.0\ \mathrm{m}$ 動かした。この力がした仕事を求めよ。<br>
+(2) 高さ $10\ \mathrm{m}$ の所から質量 $0.50\ \mathrm{kg}$ の小球を静かに落とした。地面に達する直前の運動エネルギーと速さを求めよ（重力加速度の大きさ $9.8\ \mathrm{m/s^2}$、空気抵抗は無視）。<br>
+(3) 長さ $0.40\ \mathrm{m}$ の糸の先におもりをつけ、糸が鉛直と $60^\circ$ をなす位置から静かに放した。最下点での速さを求めよ（重力加速度の大きさ $9.8\ \mathrm{m/s^2}$）。<br>
+(4) 一定の速さ $20\ \mathrm{m/s}$ で走る自動車が、進む向きと逆向きに大きさ $1.5\times10^3\ \mathrm{N}$ の抵抗力を受けている。エンジン（駆動力）の仕事率を求めよ。
+</div>
+<div class="box aim">
+・「速さ」と「高さ（位置）」の関係だけを問う問題は、運動方程式よりも<b>エネルギー</b>で解く。時間を問われたら運動方程式・等加速度の式。<br>
+・保存則を使う前に、仕事をする力を書き出して「保存力だけか」を確認する。垂直抗力・張力は（面や支点が動かなければ）仕事をしない。<br>
+・摩擦があるときは「力学的エネルギーの変化＝非保存力の仕事」の1式で済む。<br>
+・ばねの位置エネルギーの $x$ は<b>自然長からの</b>伸び・縮み。
+</div>
+<h3 class="deep">講義5　鉛直につるしたばねとエネルギー</h3>
+<p>天井からつるした軽いばね（ばね定数 $k$）の下端に質量 $m$ のおもりをつけ、ばねが<b>自然長の位置</b>でおもりを静かに放す（重力加速度の大きさ $g$）。</p>
+<div class="box lect">
+自然長の位置を重力の位置エネルギーの基準とし、下向きに伸び $x$ をとる。おもりの運動エネルギーを $K$ とすると、力学的エネルギー保存より $K+(-mgx)+\dfrac12kx^2=0$、すなわち $K=mgx-\dfrac12kx^2$。<br>
+・最も下がる点（$K=0$）：$x=\dfrac{2mg}{k}$。これは、つりあいの位置の伸び $x_0=\dfrac{mg}{k}$ の<b>ちょうど2倍</b>である。<br>
+・$K$ は $x=\dfrac{mg}{k}$（つりあいの位置）で最大になり、$K_\text{max}=\dfrac{m^2g^2}{2k}$ より最大の速さは $g\sqrt{\dfrac mk}$。<br>
+おもりは、つりあいの位置を中心に上下に $\dfrac{mg}{k}$ ずつ振動する。これが第6章の<b>単振動</b>で、「振動の中心で速さ最大、両端で速さ $0$」というエネルギーの見方はそのまま使える。
+</div>
+<div class="box warn">
+・物体を手でゆっくり持ち上げるとき、手の仕事と重力の仕事を混同する。手の仕事は $+mgh$、重力の仕事は $-mgh$ で、合計は $0$（運動エネルギーは変化しない）。<br>
+・摩擦がある区間で力学的エネルギー保存則を使ってしまう。<br>
+・往復運動の動摩擦力の仕事を、変位で計算する（正しくは道のり）。<br>
+・位置エネルギーの基準を途中で変える。1つの問題では基準を1つに固定する。
+</div>
+<div class="box ans">
+(1) $10\times5.0\times\cos60^\circ=25\ \mathrm{J}$<br>
+(2) $K=mgh=0.50\times9.8\times10=49\ \mathrm{J}$、$v=\sqrt{2gh}=\sqrt{196}=14\ \mathrm{m/s}$<br>
+(3) 下がる高さは $0.40\times(1-\cos60^\circ)=0.20\ \mathrm{m}$。$v=\sqrt{2\times9.8\times0.20}\fallingdotseq2.0\ \mathrm{m/s}$<br>
+(4) 等速なので駆動力は抵抗力とつりあい $1.5\times10^3\ \mathrm{N}$。$P=Fv=1.5\times10^3\times20=3.0\times10^4\ \mathrm{W}$
+</div>
+<!--CH 4-->
+<div class="box point">
+・<b>運動量</b> $\vec p=m\vec v$（ベクトル）、<b>力積</b> $\vec F\Delta t$。運動量の変化＝受けた力積：$m\vec v'-m\vec v=\vec F\Delta t$<br>
+・<b>運動量保存則</b>：物体どうしが内力だけを及ぼし合うとき（外力の力積が $0$）、運動量の和は一定<br>
+・<b>反発係数</b> $e=-\dfrac{v_1'-v_2'}{v_1-v_2}$（$0\leqq e\leqq1$）。$e=1$（弾性衝突）なら運動エネルギーも保存、$e<1$ なら減少<br>
+・<b>重心</b> $x_G=\dfrac{m_1x_1+m_2x_2}{m_1+m_2}$。内力だけがはたらくとき、重心の速度は一定（はじめ静止なら重心は動かない）
+</div>
+<h3>講義1　運動量と力積</h3>
+<div class="box lect">
+運動方程式 $m\dfrac{\vec v'-\vec v}{\Delta t}=\vec F$ の両辺に $\Delta t$ を掛けると、$m\vec v'-m\vec v=\vec F\Delta t$。左辺は<b>運動量</b> $m\vec v$ の変化、右辺 $\vec F\Delta t$ を<b>力積</b>という（単位 $\mathrm{N\cdot s}=\mathrm{kg\cdot m/s}$）。<br>
+<div class="two"><div>衝突のように力が短い時間に大きく変化するときは、$F$-$t$ グラフの面積が力積で、それを接触時間で割ったものが<b>平均の力</b> $\bar F$。同じ運動量の変化でも、接触時間を長くすれば平均の力は小さくなる（クッション、エアバッグ、ひざを曲げる着地）。<br>
+運動量も力積もベクトルなので、一直線上では正の向きを決め、符号で向きを表す。</div><div><svg class="fig" width="290" height="128" viewBox="0 0 290 128" xmlns="http://www.w3.org/2000/svg"><line x1="35" y1="112" x2="239" y2="112" stroke="#555" stroke-width="1.1"/><polygon points="245,112 239,114.6 239,109.4" fill="#555"/><line x1="35" y1="112" x2="35" y2="22" stroke="#555" stroke-width="1.1"/><polygon points="35,16 37.6,22 32.4,22" fill="#555"/><text x="31" y="125" font-size="11" text-anchor="end" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">O</tspan></text><text x="247" y="126" font-size="11" text-anchor="end" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">t</tspan></text><text x="41" y="24" font-size="11" text-anchor="start" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">F</tspan></text><polygon points="85,112 87,111.8 89,111.1 91,110 93,108.5 95,106.6 97,104.4 99,101.7 101,98.8 103,95.5 105,92 107,88.3 109,84.4 111,80.3 113,76.2 115,72 117,67.8 119,63.7 121,59.6 123,55.7 125,52 127,48.5 129,45.2 131,42.3 133,39.6 135,37.4 137,35.5 139,34 141,32.9 143,32.2 145,32 147,32.2 149,32.9 151,34 153,35.5 155,37.4 157,39.6 159,42.3 161,45.2 163,48.5 165,52 167,55.7 169,59.6 171,63.7 173,67.8 175,72 177,76.2 179,80.3 181,84.4 183,88.3 185,92 187,95.5 189,98.8 191,101.7 193,104.4 195,106.6 197,108.5 199,110 201,111.1 203,111.8 205,112 205,112 85,112" fill="#dfe8f5" stroke="none" stroke-width="0"/><polyline points="85,112 87,111.8 89,111.1 91,110 93,108.5 95,106.6 97,104.4 99,101.7 101,98.8 103,95.5 105,92 107,88.3 109,84.4 111,80.3 113,76.2 115,72 117,67.8 119,63.7 121,59.6 123,55.7 125,52 127,48.5 129,45.2 131,42.3 133,39.6 135,37.4 137,35.5 139,34 141,32.9 143,32.2 145,32 147,32.2 149,32.9 151,34 153,35.5 155,37.4 157,39.6 159,42.3 161,45.2 163,48.5 165,52 167,55.7 169,59.6 171,63.7 173,67.8 175,72 177,76.2 179,80.3 181,84.4 183,88.3 185,92 187,95.5 189,98.8 191,101.7 193,104.4 195,106.6 197,108.5 199,110 201,111.1 203,111.8 205,112" fill="none" stroke="#1d4e89" stroke-width="2.2"/><rect x="85" y="72" width="120" height="40" fill="none" stroke="#d9701e" stroke-width="1" stroke-dasharray="4,3"/><text x="31" y="76" font-size="12" text-anchor="end" fill="#d9701e" font-family="Liberation Serif,DejaVu Serif,serif" font-style="italic" text-decoration="overline">F</text><text x="85" y="126" font-size="11" text-anchor="middle" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">t</tspan><tspan dy="3.5" font-size="0.78em"><tspan>1</tspan></tspan><tspan dy="-3.5"> </tspan></text><text x="205" y="126" font-size="11" text-anchor="middle" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">t</tspan><tspan dy="3.5" font-size="0.78em"><tspan>2</tspan></tspan><tspan dy="-3.5"> </tspan></text><text x="145" y="98" font-size="9.5" text-anchor="middle" fill="#1d4e89">面積＝力積</text><text x="211" y="58" font-size="9" text-anchor="start" fill="#d9701e">同じ面積の長方形</text><text x="211" y="70" font-size="9" text-anchor="start" fill="#d9701e">（平均の力）</text></svg></div></div>
+</div>
+<div class="box ex">
+速さ $20\ \mathrm{m/s}$ で飛んできた質量 $0.15\ \mathrm{kg}$ のボールを、バットで逆向きに速さ $30\ \mathrm{m/s}$ で打ち返した。(1) ボールが受けた力積の大きさと向きを求めよ。(2) 接触時間が $0.010\ \mathrm{s}$ のとき、バットがボールに及ぼした平均の力の大きさを求めよ。
+<div class="solx"><b>解</b>　打ち返した向きを正とする。<br>
+(1) $0.15\times30-0.15\times(-20)=4.5+3.0=\boldsymbol{7.5\ \mathrm{N\cdot s}}$、<b>打ち返した向き</b>。　(2) $\bar F=\dfrac{7.5}{0.010}=\boldsymbol{7.5\times10^2\ \mathrm{N}}$</div>
+</div>
+<h3>講義2　運動量保存則</h3>
+<div class="box lect">
+物体 A と B が衝突し、A が B から力 $\vec F$ を受けるとき、作用反作用の法則より B は A から $-\vec F$ を受ける。接触時間 $\Delta t$ は共通なので、A は力積 $\vec F\Delta t$、B は $-\vec F\Delta t$ を受け、運動量の変化は打ち消し合う：<br>
+　$m_A\vec v_A+m_B\vec v_B=m_A\vec v_A'+m_B\vec v_B'$（<b>運動量保存則</b>）<br>
+重力や摩擦力などの外力がはたらいていても、衝突・分裂のようなごく短い時間では外力の力積は無視できるので、<b>衝突の直前と直後</b>の間で使える。合体・分裂も同じ。静止していた物体が2つに分裂すると $0=m_1\vec v_1+m_2\vec v_2$ で、2つは逆向きに、質量に反比例する速さで飛ぶ。
+</div>
+<div class="box ex">
+なめらかな水平面上で、右向きに速さ $3.0\ \mathrm{m/s}$ で進む質量 $2.0\ \mathrm{kg}$ の台車 A が、静止している質量 $1.0\ \mathrm{kg}$ の台車 B に衝突し、一体となって動いた。(1) 衝突後の速さを求めよ。(2) 衝突で失われた運動エネルギーを求めよ。
+<div class="solx"><b>解</b>　(1) $2.0\times3.0=(2.0+1.0)V$ より $V=\boldsymbol{2.0\ \mathrm{m/s}}$<br>
+(2) 衝突前 $\dfrac12\times2.0\times3.0^2=9.0\ \mathrm{J}$、衝突後 $\dfrac12\times3.0\times2.0^2=6.0\ \mathrm{J}$。失われたのは $\boldsymbol{3.0\ \mathrm{J}}$（熱や音になる）。</div>
+</div>
+<h3>講義3　反発係数（はね返り係数）</h3>
+<div class="box lect">
+床や壁に垂直にぶつかってはね返るとき、はね返る速さ $v'$ と当たる速さ $v$ の比 $e=\dfrac{v'}{v}$ を<b>反発係数</b>という。2物体の衝突では、<b>遠ざかる速さと近づく速さの比</b>：$e=-\dfrac{v_1'-v_2'}{v_1-v_2}$（相対速度の向きが逆になるのでマイナスをつける）。$e=1$ を<b>弾性衝突</b>、$0\leqq e<1$ を非弾性衝突（特に $e=0$ は一体となる完全非弾性衝突）という。<br>
+一直線上の衝突は、「運動量保存」と「反発係数」の2式を連立すれば衝突後の速度が決まる。失われる運動エネルギーを計算すると $\dfrac{m_1m_2}{2(m_1+m_2)}(1-e^2)(v_1-v_2)^2$ となり、$0$ になるのは $e=1$ のときだけである。<br>
+高さ $h$ から落とした小球が床ではね返ると、速さが $e$ 倍になり、高さは速さの2乗に比例するので $h'=e^2h$ まで上がる。
+</div>
+<div class="box ex">
+一直線上で、右向きに速さ $3.0\ \mathrm{m/s}$ で進む質量 $2.0\ \mathrm{kg}$ の小球 A と、左向きに速さ $3.0\ \mathrm{m/s}$ で進む質量 $1.0\ \mathrm{kg}$ の小球 B が正面衝突した。反発係数を $0.50$ として、衝突後の A、B の速度と、失われた運動エネルギーを求めよ。
+<div class="solx"><b>解</b>　右向きを正とし、衝突後の速度を $v_A'$、$v_B'$ とする。<br>
+運動量保存：$2.0\times3.0+1.0\times(-3.0)=2.0v_A'+1.0v_B'$　…①　　反発係数：$v_B'-v_A'=0.50\times\{3.0-(-3.0)\}=3.0$　…②<br>
+②を①に代入して $3.0=3.0v_A'+3.0$。よって $\boldsymbol{v_A'=0}$（A は静止）、$\boldsymbol{v_B'=3.0\ \mathrm{m/s}}$（右向き）。<br>
+運動エネルギーは、衝突前 $9.0+4.5=13.5\ \mathrm{J}$、衝突後 $4.5\ \mathrm{J}$ なので、$\boldsymbol{9.0\ \mathrm{J}}$ 失われた。</div>
+</div>
+<h3>講義4　平面内の衝突</h3>
+<div class="box lect">
+平面内の衝突では、運動量保存を <b>$x$ 成分・$y$ 成分のそれぞれ</b>で立てる（運動量ベクトルの和を作図してもよい）。なめらかな面に斜めに衝突するときは、反発係数は<b>面に垂直な成分</b>だけに使い、面に平行な成分は変わらない。
+<svg class="fig" width="470" height="160" viewBox="0 0 470 160" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="80" r="10" fill="#cfdcf0" stroke="#1d4e89" stroke-width="1.2"/><text x="40" y="84" font-size="11" text-anchor="middle" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">A</tspan></text><line x1="52" y1="80" x2="93" y2="80" stroke="#c0392b" stroke-width="2"/><polygon points="100,80 93,83.2 93,76.8" fill="#c0392b"/><text x="76" y="72" font-size="12" text-anchor="middle" fill="#c0392b" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">v</tspan></text><circle cx="122" cy="80" r="10" fill="#eee" stroke="#555" stroke-width="1.2"/><text x="122" y="84" font-size="11" text-anchor="middle" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">B</tspan></text><text x="80" y="152" font-size="9.5" text-anchor="middle" fill="#1e1e1e">衝突前（B は静止）</text><line x1="170" y1="80" x2="315" y2="80" stroke="#999" stroke-width="0.8" stroke-dasharray="3,2"/><line x1="190" y1="80" x2="266.4" y2="35.9" stroke="#c0392b" stroke-width="2"/><polygon points="272.5,32.4 268,38.6 264.8,33.1" fill="#c0392b"/><text x="275.5" y="30.4" font-size="12" text-anchor="start" fill="#c0392b" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">v</tspan><tspan dy="3.5" font-size="0.78em"><tspan font-style="italic">A</tspan></tspan><tspan dy="-3.5"> </tspan></text><line x1="190" y1="80" x2="214" y2="121.6" stroke="#c0392b" stroke-width="2"/><polygon points="217.5,127.6 211.2,123.2 216.8,120" fill="#c0392b"/><text x="221.5" y="133.6" font-size="12" text-anchor="start" fill="#c0392b" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">v</tspan><tspan dy="3.5" font-size="0.78em"><tspan font-style="italic">B</tspan></tspan><tspan dy="-3.5"> </tspan></text><path d="M220,80 A30,30 0 0 0 216,65" fill="none" stroke="#555" stroke-width="1"/><text x="223" y="74" font-size="9.5" text-anchor="start" fill="#1e1e1e">30°</text><path d="M201,99.1 A22,22 0 0 0 212,80" fill="none" stroke="#555" stroke-width="1"/><text x="214" y="96" font-size="9.5" text-anchor="start" fill="#1e1e1e">60°</text><text x="230" y="152" font-size="9.5" text-anchor="middle" fill="#1e1e1e">衝突後</text><line x1="330" y1="110" x2="433" y2="110" stroke="#1d4e89" stroke-width="1.8"/><polygon points="440,110 433,113.2 433,106.8" fill="#1d4e89"/><line x1="330" y1="110" x2="406.4" y2="65.9" stroke="#c0392b" stroke-width="1.8"/><polygon points="412.5,62.4 408,68.6 404.8,63.1" fill="#c0392b"/><line x1="412.5" y1="62.4" x2="436.5" y2="103.9" stroke="#c0392b" stroke-width="1.8"/><polygon points="440,110 433.7,105.5 439.3,102.3" fill="#c0392b"/><polyline points="406.4,65.9 409.9,71.9 416,68.4" fill="none" stroke="#555" stroke-width="0.9"/><text x="385" y="125" font-size="12" text-anchor="middle" fill="#1d4e89" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">m</tspan><tspan font-style="italic">v</tspan></text><text x="365.2" y="80.2" font-size="12" text-anchor="end" fill="#c0392b" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">m</tspan><tspan font-style="italic">v</tspan><tspan dy="3.5" font-size="0.78em"><tspan font-style="italic">A</tspan></tspan><tspan dy="-3.5"> </tspan></text><text x="432.2" y="82.2" font-size="12" text-anchor="start" fill="#c0392b" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">m</tspan><tspan font-style="italic">v</tspan><tspan dy="3.5" font-size="0.78em"><tspan font-style="italic">B</tspan></tspan><tspan dy="-3.5"> </tspan></text><text x="385" y="152" font-size="9.5" text-anchor="middle" fill="#1e1e1e">運動量の和（ベクトル）</text></svg>
+</div>
+<div class="box ex">
+なめらかな水平面上で、速さ $v$ で進む小球 A が、静止している同じ質量の小球 B に衝突した。衝突後、A はもとの進行方向から $30^\circ$、B は反対側に $60^\circ$ の向きに進んだ（上図）。衝突後の A、B の速さを $v$ で表し、この衝突が弾性衝突であることを示せ。
+<div class="solx"><b>解</b>　もとの進行方向に $x$ 軸、垂直に $y$ 軸をとる。質量を $m$ とする。<br>
+$x$：$mv=mv_A\cos30^\circ+mv_B\cos60^\circ$　　$y$：$0=mv_A\sin30^\circ-mv_B\sin60^\circ$<br>
+$y$ の式から $v_A=\sqrt3v_B$。$x$ の式に代入して $v=\dfrac32v_B+\dfrac12v_B=2v_B$。よって $\boldsymbol{v_B=\dfrac v2}$、$\boldsymbol{v_A=\dfrac{\sqrt3}{2}v}$。<br>
+衝突後の運動エネルギーは $\dfrac12m\left(\dfrac34v^2+\dfrac14v^2\right)=\dfrac12mv^2$ で衝突前と等しいので、弾性衝突である。運動量の三角形が直角三角形になり、三平方の定理 $v^2=v_A^2+v_B^2$ がそのままエネルギー保存を表している。</div>
+</div>
+<div class="box chk">
+(1) なめらかな水平面上で静止していた質量 $0.50\ \mathrm{kg}$ の物体に、水平に $4.0\ \mathrm{N}$ の力を $3.0\ \mathrm{s}$ 間加えた。物体の速さを求めよ。<br>
+(2) 静止していた質量 $3.0\ \mathrm{kg}$ の物体が、内部の力で $1.0\ \mathrm{kg}$ と $2.0\ \mathrm{kg}$ に分裂し、$1.0\ \mathrm{kg}$ の部分が速さ $6.0\ \mathrm{m/s}$ で動き出した。$2.0\ \mathrm{kg}$ の部分の速度を求めよ。<br>
+(3) 高さ $2.0\ \mathrm{m}$ から静かに落とした小球が、水平な床ではね返って高さ $0.50\ \mathrm{m}$ まで上がった。床と小球の間の反発係数を求めよ。<br>
+(4) 一直線上で、速さ $6.0\ \mathrm{m/s}$ で進む質量 $1.0\ \mathrm{kg}$ の小球 A が、静止している質量 $2.0\ \mathrm{kg}$ の小球 B に弾性衝突（$e=1$）した。衝突後の A、B の速度を求めよ。
+</div>
+<div class="box aim">
+・衝突・分裂・合体は<b>運動量保存</b>（＋必要なら反発係数）。運動エネルギーの保存は、弾性衝突でしか使えない。<br>
+・衝突後の速度は<b>符号つき</b>で未知数にし、答えの符号で向きを判断する。<br>
+・衝突のあとに斜面を上る・ばねを縮めるなどの運動が続くときは、「衝突の瞬間は運動量」「その後はエネルギー」と<b>段階を分ける</b>。<br>
+・静止した $m_2$ に $m_1$ が弾性衝突すると $v_1'=\dfrac{m_1-m_2}{m_1+m_2}v_1$、$v_2'=\dfrac{2m_1}{m_1+m_2}v_1$。等質量なら速度が入れかわる。
+</div>
+<h3 class="deep">講義5　重心の運動 ― ボートの上を歩く人</h3>
+<p>2物体の重心の位置は $x_G=\dfrac{m_1x_1+m_2x_2}{m_1+m_2}$、重心の速度は $v_G=\dfrac{m_1v_1+m_2v_2}{m_1+m_2}$（運動量の和÷全質量）。したがって、<b>運動量が保存されるとき重心は等速度で動き</b>、はじめ静止していれば重心は動かない。</p>
+<div class="box lect">
+静かな水面に浮かぶ質量 $100\ \mathrm{kg}$ のボートの上で、質量 $50\ \mathrm{kg}$ の人が、ボートに対して前方へ $3.0\ \mathrm{m}$ 歩いた。水の抵抗を無視すると、ボートはどれだけ動くか。<br>
+人とボートには水平方向の外力がなく、はじめ静止しているので、重心は動かない。岸に対する人の変位を $X$、ボートの変位を $Y$（前方を正）とすると、$50X+100Y=0$。人はボートに対して $3.0\ \mathrm{m}$ 動いたので $X-Y=3.0$。よって $Y=-1.0\ \mathrm{m}$（<b>後方へ $1.0\ \mathrm{m}$</b>）、$X=2.0\ \mathrm{m}$。<br>
+人の歩く速さが途中で変わっても、最後に止まれば結果は同じ。「重心が動かない」という1つの事実だけで決まるのが、この考え方の強みである。
+</div>
+<div class="box warn">
+・衝突の前後で運動エネルギーも保存されると決めつける（$e<1$ では減少する）。<br>
+・反発係数の式で、分母と分子の順序を入れかえて符号を誤る。「衝突後の相対速度 $=-e\times$ 衝突前の相対速度」、つまり $v_1'-v_2'=-e(v_1-v_2)$ と覚えると確実。<br>
+・はね返りで、運動量の変化を速さのまま $mv'-mv$ と計算する（向きが逆なので、大きさは $mv'+mv$）。<br>
+・平面内の衝突で、速さ（大きさ）のまま運動量保存の式を立てる。
+</div>
+<div class="box ans">
+(1) $0.50v-0=4.0\times3.0$ より $v=24\ \mathrm{m/s}$<br>
+(2) $0=1.0\times6.0+2.0v$ より $v=-3.0\ \mathrm{m/s}$。$1.0\ \mathrm{kg}$ の部分と逆向きに $3.0\ \mathrm{m/s}$<br>
+(3) $h'=e^2h$ より $e=\sqrt{\frac{0.50}{2.0}}=0.50$<br>
+(4) $1.0\times6.0=1.0v_A'+2.0v_B'$、$v_B'-v_A'=6.0$ より $v_A'=-2.0\ \mathrm{m/s}$（はね返って逆向きに $2.0\ \mathrm{m/s}$）、$v_B'=4.0\ \mathrm{m/s}$
+</div>
+<!--CH 5-->
+<div class="box point">
+・<b>等速円運動</b>（半径 $r$、角速度 $\omega$）：速さ $v=r\omega$、周期 $T=\dfrac{2\pi r}{v}=\dfrac{2\pi}{\omega}$<br>
+・加速度は<b>中心向き</b>で大きさ $a=r\omega^2=\dfrac{v^2}{r}$。運動方程式は $m\dfrac{v^2}{r}=F$（$F$：中心向きの合力＝<b>向心力</b>）<br>
+・加速度 $\vec a$ で動く観測者から見ると、物体に<b>慣性力</b> $-m\vec a$ がはたらいて見える。一緒に回る観測者から見た慣性力が<b>遠心力</b> $mr\omega^2$<br>
+・<b>鉛直面内の円運動</b>：速さは力学的エネルギー保存、張力（垂直抗力）は中心方向の運動方程式で求める。<b>張力が $0$ になる所で糸がたるむ</b>
+</div>
+<h3>講義1　等速円運動の速度と加速度</h3>
+<div class="box lect">
+半径 $r$ の円周上を一定の速さ $v$ で回る運動が<b>等速円運動</b>。$1\ \mathrm{s}$ あたりに回る角（ラジアン）を<b>角速度</b> $\omega\ [\mathrm{rad/s}]$ とすると、時間 $t$ で回る角は $\omega t$、進む弧の長さは $r\omega t$ なので $v=r\omega$。<br>
+<div class="two"><div>速さは一定でも速度の<b>向きが変わる</b>ので、加速度がある。短い時間 $\Delta t$ に速度ベクトルは大きさ $v$ のまま角 $\Delta\theta=\omega\Delta t$ だけ回る。速度の変化 $\Delta\vec v$ は頂角 $\Delta\theta$ の二等辺三角形の底辺なので、大きさは $v\Delta\theta$、向きは<b>中心向き</b>。よって加速度の大きさは<br>
+$a=\dfrac{v\Delta\theta}{\Delta t}=v\omega=r\omega^2=\dfrac{v^2}{r}$</div><div><svg class="fig" width="360" height="168" viewBox="0 0 360 168" xmlns="http://www.w3.org/2000/svg"><circle cx="80" cy="92" r="62" fill="none" stroke="#999" stroke-width="1" stroke-dasharray="4,3"/><circle cx="80" cy="92" r="2.2" fill="#555" stroke="#555" stroke-width="1.2"/><text x="76" y="106" font-size="11" text-anchor="end" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">O</tspan></text><line x1="80" y1="92" x2="115.6" y2="41.2" stroke="#555" stroke-width="0.9"/><line x1="80" y1="92" x2="74.6" y2="30.2" stroke="#555" stroke-width="0.9"/><path d="M89.2,78.9 A16,16 0 0 0 78.6,76.1" fill="none" stroke="#555" stroke-width="1"/><text x="82" y="72" font-size="10.5" text-anchor="middle" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>Δ</tspan><tspan font-style="italic">θ</tspan></text><circle cx="115.6" cy="41.2" r="3" fill="#1d4e89" stroke="#1d4e89" stroke-width="1.2"/><line x1="115.6" y1="41.2" x2="78.7" y2="15.4" stroke="#1d4e89" stroke-width="1.8"/><polygon points="73,11.4 80.5,12.8 76.9,18" fill="#1d4e89"/><text x="79" y="8.4" font-size="12" text-anchor="start" fill="#1d4e89" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">v</tspan></text><circle cx="74.6" cy="30.2" r="3" fill="#1d4e89" stroke="#1d4e89" stroke-width="1.2"/><line x1="74.6" y1="30.2" x2="29.8" y2="34.2" stroke="#1d4e89" stroke-width="1.8"/><polygon points="22.8,34.8 29.5,31 30,37.3" fill="#1d4e89"/><text x="18.8" y="31.8" font-size="12" text-anchor="end" fill="#1d4e89" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">v</tspan><tspan>′</tspan></text><text x="120.6" y="53.2" font-size="11" text-anchor="start" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">P</tspan></text><text x="68.6" y="43.2" font-size="11" text-anchor="end" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">Q</tspan></text><text x="109.4" y="84.2" font-size="11" text-anchor="start" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">r</tspan></text><line x1="250" y1="120" x2="186.1" y2="75.3" stroke="#1d4e89" stroke-width="1.8"/><polygon points="180.4,71.2 187.9,72.6 184.3,77.9" fill="#1d4e89"/><line x1="250" y1="120" x2="172.3" y2="126.8" stroke="#1d4e89" stroke-width="1.8"/><polygon points="165.3,127.4 172,123.6 172.6,130" fill="#1d4e89"/><line x1="180.4" y1="71.2" x2="167.1" y2="120.6" stroke="#c0392b" stroke-width="2"/><polygon points="165.3,127.4 164,119.8 170.2,121.5" fill="#c0392b"/><text x="184.4" y="73.2" font-size="12" text-anchor="start" fill="#1d4e89" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">v</tspan></text><text x="161.3" y="129.4" font-size="12" text-anchor="end" fill="#1d4e89" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">v</tspan><tspan>′</tspan></text><text x="172.8" y="92.3" font-size="12" text-anchor="middle" fill="#c0392b" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>Δ</tspan><tspan font-style="italic">v</tspan></text><path d="M232,107.4 A22,22 0 0 0 228.1,121.9" fill="none" stroke="#555" stroke-width="1"/><text x="244" y="94" font-size="10.5" text-anchor="middle" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>Δ</tspan><tspan font-style="italic">θ</tspan></text><text x="285" y="138" font-size="9.5" text-anchor="middle" fill="#c0392b">Δv の向き：中心 O 向き</text><text x="285" y="151" font-size="9.5" text-anchor="middle" fill="#c0392b">大きさ ≒ vΔθ</text></svg></div></div>
+</div>
+<div class="box ex">
+なめらかな水平面上で、長さ $0.40\ \mathrm{m}$ の糸の一端を固定し、他端につけた質量 $0.20\ \mathrm{kg}$ の小球を角速度 $5.0\ \mathrm{rad/s}$ で等速円運動させた。小球の (1) 速さ　(2) 加速度の大きさ　(3) 糸の張力の大きさ $S$　(4) 周期 を求めよ（$\pi=3.14$）。
+<div class="solx"><b>解</b>　(1) $v=r\omega=0.40\times5.0=\boldsymbol{2.0\ \mathrm{m/s}}$　(2) $a=r\omega^2=0.40\times5.0^2=\boldsymbol{10\ \mathrm{m/s^2}}$（中心向き）<br>
+(3) 張力が向心力なので $S=ma=0.20\times10=\boldsymbol{2.0\ \mathrm{N}}$　(4) $T=\dfrac{2\pi}{\omega}=\dfrac{2\times3.14}{5.0}\fallingdotseq\boldsymbol{1.3\ \mathrm{s}}$</div>
+</div>
+<h3>講義2　向心力 ― 円運動をさせている力</h3>
+<div class="box lect">
+<div class="two"><div>等速円運動する物体には、中心向きの加速度を生じさせる<b>中心向きの合力</b>（<b>向心力</b>）がはたらいている。向心力は新しい種類の力ではなく、張力・重力・垂直抗力・摩擦力・万有引力などの合力の中心方向成分である。<br>
+<b>解き方</b>　①円の中心と半径を確かめる　②力を<b>中心方向</b>と<b>それに垂直な方向</b>（円錐振り子なら鉛直方向）に分解する　③中心方向は $m\dfrac{v^2}{r}$（または $mr\omega^2$）＝（中心向きの力）、垂直方向はつりあい。</div><div><svg class="fig" width="250" height="188" viewBox="0 0 250 188" xmlns="http://www.w3.org/2000/svg"><line x1="100" y1="18" x2="180" y2="18" stroke="#555" stroke-width="1.6"/><line x1="100" y1="18" x2="104.2" y2="13.8" stroke="#555" stroke-width="0.8"/><line x1="108" y1="18" x2="112.2" y2="13.8" stroke="#555" stroke-width="0.8"/><line x1="116" y1="18" x2="120.2" y2="13.8" stroke="#555" stroke-width="0.8"/><line x1="124" y1="18" x2="128.2" y2="13.8" stroke="#555" stroke-width="0.8"/><line x1="132" y1="18" x2="136.2" y2="13.8" stroke="#555" stroke-width="0.8"/><line x1="140" y1="18" x2="144.2" y2="13.8" stroke="#555" stroke-width="0.8"/><line x1="148" y1="18" x2="152.2" y2="13.8" stroke="#555" stroke-width="0.8"/><line x1="156" y1="18" x2="160.2" y2="13.8" stroke="#555" stroke-width="0.8"/><line x1="164" y1="18" x2="168.2" y2="13.8" stroke="#555" stroke-width="0.8"/><line x1="172" y1="18" x2="176.2" y2="13.8" stroke="#555" stroke-width="0.8"/><line x1="180" y1="18" x2="184.2" y2="13.8" stroke="#555" stroke-width="0.8"/><ellipse cx="140" cy="120.4" rx="71.7" ry="13" fill="none" stroke="#999" stroke-width="1" stroke-dasharray="4,3"/><line x1="140" y1="18" x2="140" y2="126.4" stroke="#555" stroke-width="0.8" stroke-dasharray="3,2"/><line x1="140" y1="18" x2="211.7" y2="120.4" stroke="#999" stroke-width="1.3"/><line x1="140" y1="120.4" x2="211.7" y2="120.4" stroke="#555" stroke-width="0.8" stroke-dasharray="2,2"/><circle cx="211.7" cy="120.4" r="7" fill="#e8eef8" stroke="#555" stroke-width="1.2"/><line x1="211.7" y1="120.4" x2="174.4" y2="67.1" stroke="#c0392b" stroke-width="2"/><polygon points="170.4,61.4 177,65.3 171.8,69" fill="#c0392b"/><line x1="211.7" y1="120.4" x2="211.7" y2="172.4" stroke="#c0392b" stroke-width="2"/><polygon points="211.7,179.4 208.5,172.4 214.9,172.4" fill="#c0392b"/><line x1="211.7" y1="120.4" x2="177.4" y2="120.4" stroke="#c0392b" stroke-width="1.2" stroke-dasharray="3,2"/><polygon points="170.4,120.4 177.4,117.2 177.4,123.6" fill="#c0392b"/><line x1="170.4" y1="61.4" x2="170.4" y2="120.4" stroke="#c0392b" stroke-width="0.7" stroke-dasharray="2,2"/><text x="167.4" y="64.4" font-size="12" text-anchor="end" fill="#c0392b" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">T</tspan></text><text x="217.7" y="177.4" font-size="12" text-anchor="start" fill="#c0392b" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">m</tspan><tspan font-style="italic">g</tspan></text><text x="168.4" y="134.4" font-size="10.5" text-anchor="middle" fill="#c0392b" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">T</tspan><tspan>sin</tspan><tspan font-style="italic">θ</tspan></text><path d="M140,44 A26,26 0 0 0 154.9,39.3" fill="none" stroke="#555" stroke-width="1"/><text x="148" y="56" font-size="11" text-anchor="start" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">θ</tspan></text><text x="181.8" y="69.2" font-size="12" text-anchor="start" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">L</tspan></text><text x="64.3" y="124.4" font-size="10.5" text-anchor="end" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">r</tspan><tspan> </tspan><tspan>=</tspan><tspan> </tspan><tspan font-style="italic">L</tspan><tspan>sin</tspan><tspan font-style="italic">θ</tspan></text></svg></div></div>
+</div>
+<div class="box ex">
+長さ $0.50\ \mathrm{m}$ の糸に質量 $0.10\ \mathrm{kg}$ のおもりをつけ、糸が鉛直と $60^\circ$ をなすようにして、おもりを水平面内で等速円運動させた（<b>円錐振り子</b>）。重力加速度の大きさを $9.8\ \mathrm{m/s^2}$ とする。<br>
+(1) 糸の張力の大きさ $S$　(2) 角速度と周期　(3) おもりの速さ を求めよ。
+<div class="solx"><b>解</b>　半径は $r=L\sin60^\circ$。<br>
+(1) 鉛直方向のつりあい $S\cos60^\circ=mg$ より $S=2mg=1.96\fallingdotseq\boldsymbol{2.0\ \mathrm{N}}$<br>
+(2) 中心方向 $S\sin60^\circ=mL\sin60^\circ\cdot\omega^2$ より $\omega^2=\dfrac{S}{mL}=\dfrac{g}{L\cos60^\circ}=\dfrac{9.8}{0.25}=39.2$、$\omega\fallingdotseq\boldsymbol{6.3\ \mathrm{rad/s}}$。周期 $\dfrac{2\pi}{\omega}=2\pi\sqrt{\dfrac{L\cos\theta}{g}}\fallingdotseq\boldsymbol{1.0\ \mathrm{s}}$<br>
+(3) $v=r\omega=0.50\times\dfrac{\sqrt3}{2}\times6.26\fallingdotseq\boldsymbol{2.7\ \mathrm{m/s}}$</div>
+</div>
+<h3>講義3　慣性力</h3>
+<div class="box lect">
+<div class="two"><div>加速度 $\vec a$ で加速する電車の中の人から見ると、運動の法則はそのままでは成り立たない（急発進すると、つり革は後ろに傾くのに、後ろへ引く物体は見当たらない）。そこで電車内の観測者は、物体に<b>慣性力</b> $-m\vec a$（加速度と逆向き、大きさ $ma$）がはたらくと考える。こうすれば、電車内でも運動の法則が使える。慣性力は相手のない見かけの力で、反作用はない。</div><div><svg class="fig" width="265" height="145" viewBox="0 0 265 145" xmlns="http://www.w3.org/2000/svg"><rect x="15" y="28" width="230" height="92" fill="#f6f6f6" stroke="#555" stroke-width="1.2"/><circle cx="55" cy="128" r="8" fill="#ddd" stroke="#555" stroke-width="1.2"/><circle cx="205" cy="128" r="8" fill="#ddd" stroke="#555" stroke-width="1.2"/><line x1="5" y1="136" x2="260" y2="136" stroke="#555" stroke-width="1.4"/><line x1="150" y1="16" x2="198" y2="16" stroke="#2e8b57" stroke-width="2"/><polygon points="205,16 198,19.2 198,12.8" fill="#2e8b57"/><text x="212" y="20" font-size="12" text-anchor="start" fill="#2e8b57" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">a</tspan></text><text x="146" y="20" font-size="9.5" text-anchor="end" fill="#2e8b57">電車の加速度</text><line x1="130" y1="28" x2="130" y2="95" stroke="#555" stroke-width="0.7" stroke-dasharray="2,2"/><line x1="130" y1="28" x2="108.8" y2="86.3" stroke="#999" stroke-width="1.3"/><circle cx="108.8" cy="86.3" r="6" fill="#e8eef8" stroke="#555" stroke-width="1.2"/><line x1="108.8" y1="86.3" x2="123.1" y2="46.8" stroke="#c0392b" stroke-width="1.8"/><polygon points="125.5,40.3 126.2,47.9 120.1,45.7" fill="#c0392b"/><text x="129.5" y="56.3" font-size="12" text-anchor="start" fill="#c0392b" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">T</tspan></text><line x1="108.8" y1="86.3" x2="108.8" y2="125.3" stroke="#c0392b" stroke-width="1.8"/><polygon points="108.8,132.3 105.6,125.3 112,125.3" fill="#c0392b"/><text x="113.8" y="130.3" font-size="11.5" text-anchor="start" fill="#c0392b" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">m</tspan><tspan font-style="italic">g</tspan></text><line x1="108.8" y1="86.3" x2="93.1" y2="86.3" stroke="#d9701e" stroke-width="1.8"/><polygon points="86.1,86.3 93.1,83.1 93.1,89.5" fill="#d9701e"/><text x="82.1" y="90.3" font-size="11.5" text-anchor="end" fill="#d9701e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">m</tspan><tspan font-style="italic">a</tspan></text><text x="82.1" y="104.3" font-size="9.5" text-anchor="end" fill="#d9701e">慣性力</text><path d="M130,48 A20,20 0 0 1 123.2,46.8" fill="none" stroke="#555" stroke-width="1"/><text x="120" y="60" font-size="10.5" text-anchor="end" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">θ</tspan></text></svg></div></div>
+物体と一緒に回る観測者から見ると物体は静止しているので、向心力とつりあう外向きの慣性力 $mr\omega^2=m\dfrac{v^2}{r}$ を考える。これが<b>遠心力</b>である。<br>
+<b>地上（静止した観測者）で考えるなら慣性力は描かない。加速する観測者で考えるなら必ず描く</b>。どちらで解いても結果は同じになる。
+</div>
+<div class="box ex">
+水平な線路上を一定の加速度 $1.96\ \mathrm{m/s^2}$ で加速している電車の天井から、質量 $0.50\ \mathrm{kg}$ のおもりを糸でつるしたところ、糸は鉛直から角 $\theta$ 傾いて電車に対して静止した。重力加速度の大きさを $9.8\ \mathrm{m/s^2}$ とする。<br>
+(1) 糸が傾く向きと $\tan\theta$ を求めよ。　(2) 糸の張力の大きさ $S$ を求めよ。
+<div class="solx"><b>解</b>　電車内で考えると、おもりには重力 $mg$、張力 $S$、慣性力 $ma$（後ろ向き）がはたらいてつりあう。<br>
+(1) 糸は<b>後方（加速度と逆向き）</b>に傾く。$\tan\theta=\dfrac{ma}{mg}=\dfrac{1.96}{9.8}=\boldsymbol{0.20}$<br>
+(2) $S=m\sqrt{g^2+a^2}=0.50\times\sqrt{9.8^2+1.96^2}\fallingdotseq\boldsymbol{5.0\ \mathrm{N}}$<br>
+地上で考えれば、張力の水平成分がおもりを加速させている：$S\sin\theta=ma$、$S\cos\theta=mg$。同じ結果になる。</div>
+</div>
+<h3>講義4　鉛直面内の円運動</h3>
+<div class="box lect">
+<div class="two"><div>糸につけた小球を鉛直面内で回すと、高さによって速さが変わる。それでも各瞬間の中心方向には $m\dfrac{v^2}{r}=$（中心向きの力）が成り立つ。<br>
+最下点で速さ $v_0$、最下点から角 $\theta$ 回った点で速さ $v$ とする。張力は運動の向きと垂直で仕事をしないので<br>
+エネルギー：$\dfrac12mv^2=\dfrac12mv_0^2-mgr(1-\cos\theta)$<br>
+中心方向：$m\dfrac{v^2}{r}=S-mg\cos\theta$</div><div><svg class="fig" width="300" height="180" viewBox="0 0 300 180" xmlns="http://www.w3.org/2000/svg"><circle cx="105" cy="80" r="66" fill="none" stroke="#999" stroke-width="1.2"/><circle cx="105" cy="80" r="2.2" fill="#555" stroke="#555" stroke-width="1.2"/><text x="100" y="84" font-size="11" text-anchor="end" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">O</tspan></text><line x1="105" y1="80" x2="155.6" y2="122.4" stroke="#999" stroke-width="1.2"/><line x1="105" y1="80" x2="105" y2="146" stroke="#555" stroke-width="0.8" stroke-dasharray="3,2"/><path d="M105,96 A16,16 0 0 0 117.3,90.3" fill="none" stroke="#555" stroke-width="1"/><text x="114" y="106" font-size="11" text-anchor="start" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">θ</tspan></text><circle cx="155.6" cy="122.4" r="6" fill="#e8eef8" stroke="#555" stroke-width="1.2"/><line x1="155.6" y1="122.4" x2="130.3" y2="101.2" stroke="#c0392b" stroke-width="2"/><polygon points="124.9,96.7 132.3,98.8 128.2,103.7" fill="#c0392b"/><text x="120.9" y="98.7" font-size="12" text-anchor="end" fill="#c0392b" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">T</tspan></text><line x1="155.6" y1="122.4" x2="155.6" y2="161.4" stroke="#c0392b" stroke-width="2"/><polygon points="155.6,168.4 152.4,161.4 158.8,161.4" fill="#c0392b"/><text x="160.6" y="168.4" font-size="11.5" text-anchor="start" fill="#c0392b" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">m</tspan><tspan font-style="italic">g</tspan></text><line x1="155.6" y1="122.4" x2="172.8" y2="136.9" stroke="#d9701e" stroke-width="1.3" stroke-dasharray="3,2"/><polygon points="178.2,141.4 170.8,139.4 174.9,134.5" fill="#d9701e"/><line x1="178.2" y1="141.4" x2="155.6" y2="168.4" stroke="#d9701e" stroke-width="0.7" stroke-dasharray="2,2"/><text x="183.2" y="143.4" font-size="10.5" text-anchor="start" fill="#d9701e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">m</tspan><tspan font-style="italic">g</tspan><tspan>cos</tspan><tspan font-style="italic">θ</tspan></text><line x1="155.6" y1="122.4" x2="174.2" y2="100.2" stroke="#1d4e89" stroke-width="1.8"/><polygon points="178.7,94.8 176.7,102.3 171.7,98.2" fill="#1d4e89"/><text x="174.7" y="96.8" font-size="12" text-anchor="end" fill="#1d4e89" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">v</tspan></text><circle cx="105" cy="146" r="3" fill="#1d4e89" stroke="#1d4e89" stroke-width="1.2"/><line x1="105" y1="146" x2="134" y2="146" stroke="#1d4e89" stroke-width="1.8"/><polygon points="141,146 134,149.2 134,142.8" fill="#1d4e89"/><text x="123" y="162" font-size="12" text-anchor="middle" fill="#1d4e89" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">v</tspan><tspan dy="3.5" font-size="0.78em"><tspan>0</tspan></tspan><tspan dy="-3.5"> </tspan></text><line x1="163.6" y1="122.4" x2="235" y2="122.4" stroke="#555" stroke-width="0.7" stroke-dasharray="2,2"/><line x1="108" y1="146" x2="235" y2="146" stroke="#555" stroke-width="0.7" stroke-dasharray="2,2"/><line x1="228" y1="134.2" x2="228" y2="127.4" stroke="#555" stroke-width="0.9"/><polygon points="228,122.4 230.2,127.4 225.8,127.4" fill="#555"/><line x1="228" y1="134.2" x2="228" y2="141" stroke="#555" stroke-width="0.9"/><polygon points="228,146 225.8,141 230.2,141" fill="#555"/><text x="232" y="138.2" font-size="10.5" text-anchor="start" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">r</tspan><tspan>(</tspan><tspan>1</tspan><tspan>−</tspan><tspan>cos</tspan><tspan font-style="italic">θ</tspan><tspan>)</tspan></text></svg></div></div>
+2式から $S=\dfrac{mv_0^2}{r}+mg(3\cos\theta-2)$。$S$ は高い所ほど小さく、最高点（$\theta=180^\circ$）で最小値 $\dfrac{mv_0^2}{r}-5mg$ をとる。糸がたるまずに1回転する条件は、最高点で $S\geqq0$、すなわち $v_0\geqq\sqrt{5gr}$。このとき最高点の速さは $\sqrt{gr}$ 以上で、「最高点で速さ $0$」ではない。
+</div>
+<div class="box ex">
+長さ $r$ の糸の一端を固定し、他端につけた質量 $m$ の小球に、最下点で水平に速さ $v_0=\sqrt{3gr}$ を与えた（重力加速度の大きさ $g$）。(1) 小球は1回転できるか。(2) 糸がたるむ位置の、最下点からの高さと、そのときの速さを求めよ。
+<div class="solx"><b>解</b>　(1) $\sqrt{3gr}<\sqrt{5gr}$ なので<b>1回転できない</b>。<br>
+(2) $S=\dfrac{m\cdot3gr}{r}+mg(3\cos\theta-2)=mg(1+3\cos\theta)=0$ より $\cos\theta=-\dfrac13$。高さは $r(1-\cos\theta)=\boldsymbol{\dfrac43r}$。<br>
+速さは $v^2=3gr-2g\cdot\dfrac43r=\dfrac{gr}{3}$ より $\boldsymbol{v=\sqrt{\dfrac{gr}{3}}}$。糸がたるんだあと、小球は放物運動をする。</div>
+</div>
+<div class="box chk">
+(1) 半径 $50\ \mathrm{m}$ の水平なカーブを、質量 $1.0\times10^3\ \mathrm{kg}$ の自動車が速さ $10\ \mathrm{m/s}$ で走る。必要な向心力の大きさを求めよ。これを路面からの静止摩擦力だけでまかなうには、静止摩擦係数はいくら以上必要か（重力加速度の大きさ $9.8\ \mathrm{m/s^2}$）。<br>
+(2) 半径 $0.30\ \mathrm{m}$ の円周上を周期 $2.0\ \mathrm{s}$ で等速円運動する物体の角速度と速さを求めよ（$\pi=3.14$）。<br>
+(3) 鉛直下向きに加速度 $2.0\ \mathrm{m/s^2}$ で動き出したエレベーターの中で、質量 $1.0\ \mathrm{kg}$ のおもりをばねばかりにつるした。ばねばかりが示す力の大きさを、エレベーター内の観測者の立場で求めよ（重力加速度の大きさ $9.8\ \mathrm{m/s^2}$）。<br>
+(4) 長さ $0.40\ \mathrm{m}$ の糸につけた質量 $0.10\ \mathrm{kg}$ の小球が鉛直面内で円運動し、最高点を速さ $3.0\ \mathrm{m/s}$ で通過した。最高点での糸の張力の大きさを求めよ（重力加速度の大きさ $9.8\ \mathrm{m/s^2}$）。
+</div>
+<div class="box aim">
+・円運動は「<b>中心方向の運動方程式</b>」と「<b>エネルギー保存</b>」の2本立て。速さはエネルギーで、力（張力・垂直抗力）は運動方程式で求める。<br>
+・「糸がたるむ」「面から離れる」条件は、張力・垂直抗力 $=0$。軽い棒につけた場合や管の中を動く場合は押す力もはたらくので、最高点で速さが $0$ より大きければ1回転できる。<br>
+・慣性力を使うかどうかは、<b>どの観測者で考えるか</b>を先に決めてから。
+</div>
+<h3 class="deep">講義5　回転台の上の物体 ― 遠心力で考える</h3>
+<p>水平な円板（回転台）の中心から距離 $r$ の位置に小物体をのせ、円板を角速度 $\omega$ で回転させる。物体と円板の間の静止摩擦係数を $\mu$、重力加速度の大きさを $g$ とする。</p>
+<div class="box lect">
+円板と一緒に回る観測者から見ると、物体は静止していて、外向きの遠心力 $mr\omega^2$ と中心向きの静止摩擦力 $f$ がつりあう：$f=mr\omega^2$。すべらない条件は $f\leqq\mu mg$ より $\omega\leqq\sqrt{\dfrac{\mu g}{r}}$。例えば $r=0.20\ \mathrm{m}$、$\mu=0.50$、$g=9.8\ \mathrm{m/s^2}$ なら $\omega\leqq\sqrt{24.5}\fallingdotseq4.9\ \mathrm{rad/s}$。中心から遠い物体ほど、小さい角速度ですべり出す。<br>
+地上から見れば「静止摩擦力が向心力となって物体を円運動させている」と説明され、式は同じになる。地球の自転も同じで、地表の物体は自転による遠心力を受けるため、重力（万有引力と遠心力の合力）は万有引力よりわずかに小さく、赤道で最も小さい。
+</div>
+<div class="box warn">
+・向心力を、重力や張力とは別の「もう1つの力」として図に描き加える。<br>
+・地上から見て解いているのに遠心力も描く（向心力と遠心力を両方描くと合力が $0$ になり、円運動しないことになる）。<br>
+・円錐振り子の半径を糸の長さ $L$ としてしまう。半径は $L\sin\theta$。<br>
+・角速度 $\omega$ と回転数 $n$（$1\ \mathrm{s}$ あたりの回転数）の混同。$\omega=2\pi n$。
+</div>
+<div class="box ans">
+(1) $\frac{mv^2}{r}=\frac{1.0\times10^3\times10^2}{50}=2.0\times10^3\ \mathrm{N}$。$\mu mg\geqq\frac{mv^2}{r}$ より $\mu\geqq\frac{v^2}{rg}=\frac{100}{50\times9.8}\fallingdotseq0.20$<br>
+(2) $\omega=\frac{2\pi}{2.0}=\pi\fallingdotseq3.1\ \mathrm{rad/s}$、$v=r\omega=0.30\pi\fallingdotseq0.94\ \mathrm{m/s}$<br>
+(3) 慣性力は上向きに $ma$。つりあいより $F+ma=mg$、$F=1.0\times(9.8-2.0)=7.8\ \mathrm{N}$<br>
+(4) 最高点では張力も重力も下向き（中心向き）：$m\frac{v^2}{r}=S+mg$ より $S=\frac{0.10\times3.0^2}{0.40}-0.10\times9.8=2.25-0.98\fallingdotseq1.3\ \mathrm{N}$
+</div>
+<!--CH 6-->
+<div class="box point">
+・<b>単振動</b>は等速円運動の正射影：$x=A\sin\omega t$、$v=A\omega\cos\omega t$、$a=-A\omega^2\sin\omega t=-\omega^2x$（$\omega t$ を<b>位相</b>という）<br>
+・物体にはたらく力が $F=-Kx$（<b>復元力</b>）の形なら単振動し、$\omega=\sqrt{\dfrac Km}$、周期 $T=2\pi\sqrt{\dfrac mK}$（振幅によらない）<br>
+・<b>ばね振り子</b> $T=2\pi\sqrt{\dfrac mk}$（鉛直につるしても同じ。振動の中心はつりあいの位置）、<b>単振り子</b> $T=2\pi\sqrt{\dfrac Lg}$（振れが小さいとき）<br>
+・<b>単振動のエネルギー</b> $\dfrac12mv^2+\dfrac12Kx^2=\dfrac12KA^2$（一定）。振動の中心で速さ最大 $A\omega$、両端で速さ $0$
+</div>
+<h3>講義1　単振動と等速円運動</h3>
+<div class="box lect">
+半径 $A$ の円周上を角速度 $\omega$ で等速円運動する点 P を、円の中心を通る直線（$x$ 軸）に正射影すると、その影は $x=-A$ と $x=A$ の間を往復する。この運動が<b>単振動</b>で、$A$ を<b>振幅</b>、$\omega$ を<b>角振動数</b>、P が1周する時間 $T=\dfrac{2\pi}{\omega}$ を<b>周期</b>、$f=\dfrac1T$ を<b>振動数</b>という。
+<svg class="fig" width="430" height="180" viewBox="0 0 430 180" xmlns="http://www.w3.org/2000/svg"><circle cx="68" cy="88" r="52" fill="none" stroke="#999" stroke-width="1.1" stroke-dasharray="4,3"/><circle cx="68" cy="88" r="2" fill="#555" stroke="#555" stroke-width="1.2"/><line x1="68" y1="88" x2="107.8" y2="54.6" stroke="#555" stroke-width="1"/><circle cx="107.8" cy="54.6" r="4" fill="#1d4e89" stroke="#1d4e89" stroke-width="1.2"/><path d="M82,88 A14,14 0 0 0 78.7,79" fill="none" stroke="#555" stroke-width="1"/><text x="85" y="84" font-size="10.5" text-anchor="start" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">ω</tspan><tspan font-style="italic">t</tspan></text><line x1="68" y1="24" x2="68" y2="152" stroke="#555" stroke-width="0.8"/><line x1="8" y1="88" x2="128" y2="88" stroke="#555" stroke-width="0.6" stroke-dasharray="2,2"/><circle cx="68" cy="54.6" r="3.2" fill="#c0392b" stroke="#c0392b" stroke-width="1.2"/><line x1="107.8" y1="54.6" x2="68" y2="54.6" stroke="#c0392b" stroke-width="0.8" stroke-dasharray="2,2"/><text x="62" y="20" font-size="9.5" text-anchor="middle" fill="#c0392b">正射影</text><text x="83.9" y="67" font-size="11" text-anchor="end" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">A</tspan></text><line x1="150" y1="88" x2="404" y2="88" stroke="#555" stroke-width="1.1"/><polygon points="410,88 404,90.6 404,85.4" fill="#555"/><line x1="150" y1="150" x2="150" y2="26" stroke="#555" stroke-width="1.1"/><polygon points="150,20 152.6,26 147.4,26" fill="#555"/><text x="146" y="101" font-size="11" text-anchor="end" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">O</tspan></text><text x="412" y="102" font-size="11" text-anchor="end" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">t</tspan></text><text x="156" y="28" font-size="11" text-anchor="start" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">x</tspan></text><polyline points="150,88 152,84.6 154,81.1 156,77.7 158,74.4 160,71.1 162,67.9 164,64.8 166,61.8 168,58.8 170,56.1 172,53.4 174,50.9 176,48.6 178,46.4 180,44.5 182,42.7 184,41.1 186,39.7 188,38.5 190,37.6 192,36.9 194,36.3 196,36.1 198,36 200,36.2 202,36.6 204,37.2 206,38 208,39.1 210,40.4 212,41.9 214,43.6 216,45.4 218,47.5 220,49.7 222,52.2 224,54.7 226,57.4 228,60.3 230,63.3 232,66.3 234,69.5 236,72.8 238,76.1 240,79.4 242,82.8 244,86.3 246,89.7 248,93.2 250,96.6 252,99.9 254,103.2 256,106.5 258,109.7 260,112.7 262,115.7 264,118.6 266,121.3 268,123.8 270,126.3 272,128.5 274,130.6 276,132.4 278,134.1 280,135.6 282,136.9 284,138 286,138.8 288,139.4 290,139.8 292,140 294,139.9 296,139.7 298,139.1 300,138.4 302,137.5 304,136.3 306,134.9 308,133.3 310,131.5 312,129.6 314,127.4 316,125.1 318,122.6 320,119.9 322,117.2 324,114.2 326,111.2 328,108.1 330,104.9 332,101.6 334,98.3 336,94.9 338,91.4 340,88 342,84.6 344,81.1 346,77.7 348,74.4 350,71.1 352,67.9 354,64.8 356,61.8 358,58.8 360,56.1 362,53.4 364,50.9 366,48.6 368,46.4 370,44.5 372,42.7 374,41.1 376,39.7 378,38.5 380,37.6 382,36.9 384,36.3 386,36.1 388,36 390,36.2" fill="none" stroke="#1d4e89" stroke-width="2.2"/><line x1="111.8" y1="54.6" x2="171.1" y2="54.6" stroke="#c0392b" stroke-width="0.8" stroke-dasharray="2,2"/><circle cx="171.1" cy="54.6" r="3.2" fill="#c0392b" stroke="#c0392b" stroke-width="1.2"/><line x1="150" y1="36" x2="197.5" y2="36" stroke="#555" stroke-width="0.7" stroke-dasharray="2,2"/><text x="146" y="40" font-size="11" text-anchor="end" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">A</tspan></text><line x1="150" y1="140" x2="292.5" y2="140" stroke="#555" stroke-width="0.7" stroke-dasharray="2,2"/><text x="146" y="144" font-size="11" text-anchor="end" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>−</tspan><tspan font-style="italic">A</tspan></text><text x="340" y="102" font-size="11" text-anchor="middle" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">T</tspan></text><text x="245" y="102" font-size="10.5" text-anchor="middle" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">T</tspan><tspan>/</tspan><tspan>2</tspan></text><text x="348" y="40" font-size="11.5" text-anchor="start" fill="#1d4e89" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">x</tspan><tspan> </tspan><tspan>=</tspan><tspan> </tspan><tspan font-style="italic">A</tspan><tspan>sin</tspan><tspan font-style="italic">ω</tspan><tspan font-style="italic">t</tspan></text></svg>
+時刻 $0$ に影が中心にあり、正の向きに動き出すとすると $x=A\sin\omega t$。P の速度（大きさ $A\omega$、接線方向）と加速度（大きさ $A\omega^2$、中心向き）の $x$ 成分をとると $v=A\omega\cos\omega t$、$a=-A\omega^2\sin\omega t=-\omega^2x$。<b>加速度は変位に比例し、常に振動の中心を向く</b>。また $\sin^2+\cos^2=1$ より $v^2=\omega^2(A^2-x^2)$ で、速さは中心で最大 $A\omega$、両端で $0$ になる。
+</div>
+<div class="box ex">
+振幅 $0.10\ \mathrm{m}$、周期 $2.0\ \mathrm{s}$ で単振動する物体がある（$\pi=3.14$）。(1) 角振動数を求めよ。(2) 速さの最大値と、加速度の大きさの最大値を求めよ。(3) 変位が $0.050\ \mathrm{m}$ のときの速さを求めよ。
+<div class="solx"><b>解</b>　(1) $\omega=\dfrac{2\pi}{2.0}=\pi\fallingdotseq\boldsymbol{3.1\ \mathrm{rad/s}}$<br>
+(2) $A\omega=0.10\pi\fallingdotseq\boldsymbol{0.31\ \mathrm{m/s}}$、$A\omega^2=0.10\pi^2\fallingdotseq\boldsymbol{0.99\ \mathrm{m/s^2}}$<br>
+(3) $v=\omega\sqrt{A^2-x^2}=\pi\sqrt{0.10^2-0.050^2}=\pi\times0.0866\fallingdotseq\boldsymbol{0.27\ \mathrm{m/s}}$</div>
+</div>
+<h3>講義2　復元力と周期 ― ばね振り子</h3>
+<div class="box lect">
+運動方程式 $ma=F$ で、力が $F=-Kx$（$K$ は正の定数）の形なら $a=-\dfrac Kmx$。これを単振動の $a=-\omega^2x$ と比べて、$\omega=\sqrt{\dfrac Km}$、$T=2\pi\sqrt{\dfrac mK}$。このように変位に比例し、中心を向く力を<b>復元力</b>という。周期は振幅によらない（<b>等時性</b>）。<br>
+水平なばね振り子（ばね定数 $k$）では $F=-kx$ なので $T=2\pi\sqrt{\dfrac mk}$。<br>
+鉛直につるしたばね振り子では、つりあいの位置でばねは $x_0=\dfrac{mg}{k}$ 伸びている。そこから下向きに $x$ ずれたときの合力は $mg-k(x_0+x)=-kx$。重力はつりあいの位置をずらすだけで、<b>周期は水平の場合と同じ</b>、振動の中心は<b>つりあいの位置</b>である。
+</div>
+<div class="box ex">
+ばね定数 $10\ \mathrm{N/m}$ の軽いばねを天井からつるし、下端に質量 $0.40\ \mathrm{kg}$ のおもりをつけた。重力加速度の大きさを $9.8\ \mathrm{m/s^2}$、$\pi=3.14$ とする。<br>
+(1) つりあいの位置でのばねの伸びを求めよ。(2) おもりをつりあいの位置からさらに $0.10\ \mathrm{m}$ 引き下げて静かに放した。振動の周期を求めよ。(3) 速さの最大値と、加速度の大きさの最大値を求めよ。
+<div class="solx"><b>解</b>　(1) $x_0=\dfrac{0.40\times9.8}{10}=0.392\fallingdotseq\boldsymbol{0.39\ \mathrm{m}}$　(2) $T=2\pi\sqrt{\dfrac{0.40}{10}}=2\pi\times0.20\fallingdotseq\boldsymbol{1.3\ \mathrm{s}}$<br>
+(3) $\omega=\sqrt{\dfrac{10}{0.40}}=5.0\ \mathrm{rad/s}$、振幅 $0.10\ \mathrm{m}$ なので、$A\omega=\boldsymbol{0.50\ \mathrm{m/s}}$、$A\omega^2=\boldsymbol{2.5\ \mathrm{m/s^2}}$</div>
+</div>
+<h3>講義3　単振り子</h3>
+<div class="box lect">
+<div class="two"><div>長さ $L$ の糸におもりをつけて振らせる。糸が鉛直と角 $\theta$ をなすとき、重力の、軌道（円弧）に沿った成分 $mg\sin\theta$ がおもりを最下点へ戻す力になる（張力は軌道に垂直）。最下点からの弧の長さを $x\ (=L\theta)$ とすると、$\theta$ が小さいとき $\sin\theta\fallingdotseq\theta=\dfrac xL$ なので、<br>
+$F=-mg\sin\theta\fallingdotseq-\dfrac{mg}{L}x$<br>
+$K=\dfrac{mg}{L}$ の単振動とみなせて、$T=2\pi\sqrt{\dfrac{m}{mg/L}}=2\pi\sqrt{\dfrac Lg}$。<br>
+周期は<b>おもりの質量にも振幅にもよらず</b>、糸の長さと重力加速度だけで決まる（振り子の等時性）。</div><div><svg class="fig" width="290" height="240" viewBox="0 0 290 240" xmlns="http://www.w3.org/2000/svg"><line x1="80" y1="16" x2="160" y2="16" stroke="#555" stroke-width="1.6"/><line x1="80" y1="16" x2="84.2" y2="11.8" stroke="#555" stroke-width="0.8"/><line x1="88" y1="16" x2="92.2" y2="11.8" stroke="#555" stroke-width="0.8"/><line x1="96" y1="16" x2="100.2" y2="11.8" stroke="#555" stroke-width="0.8"/><line x1="104" y1="16" x2="108.2" y2="11.8" stroke="#555" stroke-width="0.8"/><line x1="112" y1="16" x2="116.2" y2="11.8" stroke="#555" stroke-width="0.8"/><line x1="120" y1="16" x2="124.2" y2="11.8" stroke="#555" stroke-width="0.8"/><line x1="128" y1="16" x2="132.2" y2="11.8" stroke="#555" stroke-width="0.8"/><line x1="136" y1="16" x2="140.2" y2="11.8" stroke="#555" stroke-width="0.8"/><line x1="144" y1="16" x2="148.2" y2="11.8" stroke="#555" stroke-width="0.8"/><line x1="152" y1="16" x2="156.2" y2="11.8" stroke="#555" stroke-width="0.8"/><line x1="160" y1="16" x2="164.2" y2="11.8" stroke="#555" stroke-width="0.8"/><line x1="120" y1="16" x2="120" y2="156" stroke="#555" stroke-width="0.8" stroke-dasharray="3,2"/><line x1="120" y1="16" x2="173.7" y2="136.6" stroke="#999" stroke-width="1.3"/><polyline points="120,148 121.2,148 122.3,148 123.5,148 124.6,147.9 125.8,147.9 126.9,147.8 128.1,147.8 129.2,147.7 130.4,147.6 131.5,147.5 132.7,147.4 133.8,147.3 134.9,147.2 136.1,147 137.2,146.9 138.4,146.7 139.5,146.6 140.6,146.4 141.8,146.2 142.9,146 144.1,145.8 145.2,145.6 146.3,145.4 147.4,145.1 148.6,144.9 149.7,144.6 150.8,144.4 151.9,144.1 153.1,143.8 154.2,143.5 155.3,143.2 156.4,142.9 157.5,142.6 158.6,142.2 159.7,141.9 160.8,141.5 161.9,141.2 163,140.8 164.1,140.4 165.1,140 166.2,139.6 167.3,139.2 168.4,138.8 169.4,138.4 170.5,138 171.6,137.5 172.6,137.1 173.7,136.6" fill="none" stroke="#d9701e" stroke-width="1.2" stroke-dasharray="3,2"/><text x="116" y="170" font-size="11.5" text-anchor="end" fill="#d9701e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">x</tspan></text><text x="116" y="183" font-size="9" text-anchor="end" fill="#d9701e">（弧の長さ）</text><circle cx="173.7" cy="136.6" r="7" fill="#e8eef8" stroke="#555" stroke-width="1.2"/><line x1="173.7" y1="136.6" x2="173.7" y2="209.6" stroke="#c0392b" stroke-width="2"/><polygon points="173.7,216.6 170.5,209.6 176.9,209.6" fill="#c0392b"/><text x="178.7" y="216.6" font-size="11.5" text-anchor="start" fill="#c0392b" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">m</tspan><tspan font-style="italic">g</tspan></text><line x1="173.7" y1="136.6" x2="200.6" y2="197" stroke="#d9701e" stroke-width="1.2" stroke-dasharray="3,2"/><polygon points="203.4,203.4 197.6,198.3 203.5,195.7" fill="#d9701e"/><line x1="173.7" y1="136.6" x2="150.4" y2="147" stroke="#c0392b" stroke-width="2"/><polygon points="144,149.8 149.1,144.1 151.7,149.9" fill="#c0392b"/><line x1="203.4" y1="203.4" x2="173.7" y2="216.6" stroke="#d9701e" stroke-width="0.7" stroke-dasharray="2,2"/><line x1="144" y1="149.8" x2="173.7" y2="216.6" stroke="#d9701e" stroke-width="0.7" stroke-dasharray="2,2"/><text x="116" y="153.8" font-size="10.5" text-anchor="end" fill="#c0392b" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">m</tspan><tspan font-style="italic">g</tspan><tspan>sin</tspan><tspan font-style="italic">θ</tspan></text><text x="207.4" y="207.4" font-size="10.5" text-anchor="start" fill="#d9701e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">m</tspan><tspan font-style="italic">g</tspan><tspan>cos</tspan><tspan font-style="italic">θ</tspan></text><line x1="173.7" y1="136.6" x2="155.4" y2="95.5" stroke="#c0392b" stroke-width="1.8"/><polygon points="152.5,89.1 158.3,94.2 152.5,96.8" fill="#c0392b"/><text x="159.5" y="93.1" font-size="12" text-anchor="start" fill="#c0392b" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">T</tspan></text><path d="M120,46 A30,30 0 0 0 132.2,43.4" fill="none" stroke="#555" stroke-width="1"/><text x="127" y="60" font-size="11" text-anchor="start" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">θ</tspan></text><text x="138.8" y="76.3" font-size="12" text-anchor="end" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">L</tspan></text></svg></div></div>
+</div>
+<div class="box ex">
+(1) 周期 $2.0\ \mathrm{s}$ の単振り子の長さを求めよ（重力加速度の大きさ $9.8\ \mathrm{m/s^2}$、$\pi=3.14$）。(2) この振り子を、重力加速度の大きさが地球の $\dfrac16$ の月面で振らせると、周期はいくらになるか（$\sqrt6=2.45$）。
+<div class="solx"><b>解</b>　(1) $L=\dfrac{gT^2}{4\pi^2}=\dfrac{9.8\times2.0^2}{4\times3.14^2}\fallingdotseq\boldsymbol{0.99\ \mathrm{m}}$　(2) $T$ は $\dfrac1{\sqrt g}$ に比例するので $\sqrt6$ 倍、$2.0\times2.45\fallingdotseq\boldsymbol{4.9\ \mathrm{s}}$</div>
+</div>
+<h3>講義4　単振動のエネルギー</h3>
+<div class="box lect">
+復元力 $F=-Kx$ は保存力で、振動の中心を基準とした位置エネルギー $\dfrac12Kx^2$ をもつ（$F$-$x$ グラフの三角形の面積）。よって $\dfrac12mv^2+\dfrac12Kx^2=\dfrac12KA^2$（一定）。中心で $\dfrac12mv_\text{max}^2=\dfrac12KA^2$ より $v_\text{max}=A\sqrt{\dfrac Km}=A\omega$（講義1と一致）。<br>
+鉛直ばね振り子では、$x$ を<b>つりあいの位置からの変位</b>にとれば、重力とばねの位置エネルギーの和は $\dfrac12k(x_0+x)^2-mgx=\dfrac12kx^2+\dfrac12kx_0^2$（$kx_0=mg$ を使った）となり、定数を除いて $\dfrac12kx^2$ とまとめられる。
+</div>
+<div class="box ex">
+なめらかな水平面上で、ばね定数 $50\ \mathrm{N/m}$ のばねにつけた質量 $0.50\ \mathrm{kg}$ の物体が、振幅 $0.20\ \mathrm{m}$ で単振動している。(1) 力学的エネルギー　(2) 速さの最大値　(3) 変位が $0.10\ \mathrm{m}$ のときの速さ を求めよ。
+<div class="solx"><b>解</b>　(1) $\dfrac12\times50\times0.20^2=\boldsymbol{1.0\ \mathrm{J}}$　(2) $\dfrac12\times0.50v^2=1.0$ より $v=\boldsymbol{2.0\ \mathrm{m/s}}$（$A\omega=0.20\times\sqrt{100}=2.0$ と一致）<br>
+(3) $\dfrac12\times0.50v^2=1.0-\dfrac12\times50\times0.10^2=0.75$ より $v^2=3.0$、$v\fallingdotseq\boldsymbol{1.7\ \mathrm{m/s}}$</div>
+</div>
+<div class="box chk">
+(1) 変位が $x=0.30\sin4.0t\ [\mathrm{m}]$（$t$ の単位は $\mathrm{s}$）で表される単振動の、振幅・角振動数・周期・速さの最大値を求めよ（$\pi=3.14$）。<br>
+(2) ばね振り子の周期が $T$ であった。おもりの質量を4倍にすると、周期はいくらになるか。<br>
+(3) 長さ $0.98\ \mathrm{m}$ の単振り子の周期を求めよ（重力加速度の大きさ $9.8\ \mathrm{m/s^2}$、$\pi=3.14$）。<br>
+(4) ばね定数 $20\ \mathrm{N/m}$ の軽いばねに質量 $0.20\ \mathrm{kg}$ のおもりをつるした。つりあいの位置でのばねの伸びと、上下に振動させたときの周期を求めよ（重力加速度の大きさ $9.8\ \mathrm{m/s^2}$、$\pi=3.14$）。
+</div>
+<div class="box aim">
+・「単振動する」と言える根拠は、合力が $F=-K(x-x_c)$ の形に書けること。このとき<b>振動の中心は $x=x_c$</b>（合力 $0$ の位置）、<b>周期は $2\pi\sqrt{m/K}$</b>。この2つを最初に求めるのが定石。<br>
+・速さと位置の関係はエネルギー保存か $v^2=\omega^2(A^2-x^2)$。時刻が関わるなら $x=A\sin(\omega t+\phi)$ の式や、円運動の回転角で考える（中心→端は $\dfrac T4$、端→反対の端は $\dfrac T2$）。
+</div>
+<h3 class="deep">講義5　あらい面の上のばね振り子</h3>
+<p>摩擦があると振動は減衰する。しかし動摩擦力の大きさが一定なら、半周期ごとに区切れば<b>単振動の一部</b>として正確に扱える。</p>
+<div class="box lect">
+あらい水平面上で、ばね定数 $k$ のばねにつけた質量 $m$ の物体を考える（動摩擦係数 $\mu'$、重力加速度の大きさ $g$）。自然長の位置を $x=0$ とし、$x=A\ (A>0)$ まで引いて放すと物体が動き出したとする。左向きに動いている間、動摩擦力 $\mu'mg$ は右向きなので、合力は<br>
+　$F=-kx+\mu'mg=-k\left(x-\dfrac{\mu'mg}{k}\right)$<br>
+これは $x_c=\dfrac{\mu'mg}{k}$ を中心とする単振動（周期 $2\pi\sqrt{\dfrac mk}$）の式である。したがって物体は、中心 $x_c$ に関して $A$ と対称な点 $x=2x_c-A$ まで達して一瞬止まり、そこまでの時間は半周期 $\pi\sqrt{\dfrac mk}$。<br>
+右向きに戻るときは摩擦力の向きが逆になり、中心は $-x_c$ に移る。こうして<b>折り返すたびに振幅は $2x_c=\dfrac{2\mu'mg}{k}$ ずつ減り、半周期は変わらない</b>。折り返し点で、ばねの力の大きさ $k|x|$ が最大摩擦力以下になれば、物体はそこで止まったままになる。
+</div>
+<div class="box warn">
+・鉛直ばね振り子の周期に $g$ が入ると考える。$g$ が変えるのは振動の中心（つりあいの位置）だけ。<br>
+・単振り子の周期におもりの質量が入ると考える。<br>
+・角振動数 $\omega$ と振動数 $f$ の混同。$\omega=2\pi f$。<br>
+・鉛直ばね振り子のエネルギーで、自然長からの伸びを使ったのに重力の位置エネルギーを入れ忘れる。
+</div>
+<div class="box ans">
+(1) 振幅 $0.30\ \mathrm{m}$、角振動数 $4.0\ \mathrm{rad/s}$、周期 $\frac{2\pi}{4.0}\fallingdotseq1.6\ \mathrm{s}$、速さの最大値 $0.30\times4.0=1.2\ \mathrm{m/s}$<br>
+(2) $T\propto\sqrt m$ より $2T$<br>
+(3) $2\pi\sqrt{\frac{0.98}{9.8}}=2\pi\sqrt{0.10}\fallingdotseq2.0\ \mathrm{s}$<br>
+(4) 伸び $\frac{0.20\times9.8}{20}=0.098\ \mathrm{m}$、周期 $2\pi\sqrt{\frac{0.20}{20}}=0.20\pi\fallingdotseq0.63\ \mathrm{s}$
+</div>
+<!--CH 7-->
+<div class="box point">
+・<b>ケプラーの法則</b>：①惑星は太陽を1つの焦点とするだ円軌道を描く　②面積速度は一定　③公転周期 $T$ の2乗は長半径 $a$ の3乗に比例する $\dfrac{T^2}{a^3}=$ 一定<br>
+・<b>万有引力の法則</b> $F=G\dfrac{Mm}{r^2}$（$G=6.67\times10^{-11}\ \mathrm{N\cdot m^2/kg^2}$）。地表では $mg=G\dfrac{Mm}{R^2}$ より $GM=gR^2$<br>
+・<b>万有引力による位置エネルギー</b> $U=-G\dfrac{Mm}{r}$（無限遠を基準）<br>
+・円軌道は $m\dfrac{v^2}{r}=G\dfrac{Mm}{r^2}$。<b>第1宇宙速度</b> $\sqrt{gR}\fallingdotseq7.9\ \mathrm{km/s}$、<b>第2宇宙速度（脱出速度）</b> $\sqrt{2gR}\fallingdotseq11.2\ \mathrm{km/s}$
+</div>
+<h3>講義1　ケプラーの法則</h3>
+<div class="box lect">
+ケプラーは、ティコ・ブラーエが残した惑星の観測記録を分析し、惑星の運動について3つの法則を見いだした。<br>
+<b>第1法則</b>　惑星は太陽を1つの焦点とするだ円軌道を描く。太陽に最も近い点を近日点、最も遠い点を遠日点という。長軸の半分が<b>長半径</b> $a$ で、近日点距離 $r_1$、遠日点距離 $r_2$ なら $a=\dfrac{r_1+r_2}{2}$。<br>
+<b>第2法則</b>　太陽と惑星を結ぶ線分が単位時間に掃く面積（<b>面積速度</b>）は一定。近日点・遠日点では速度が線分に垂直なので面積速度は $\dfrac12rv$ と書け、$\dfrac12r_1v_1=\dfrac12r_2v_2$。<b>太陽に近いほど速い</b>。<br>
+<b>第3法則</b>　$\dfrac{T^2}{a^3}$ はすべての惑星で同じ値になる。
+<svg class="fig" width="400" height="200" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg"><ellipse cx="168" cy="100" rx="128" ry="93.9" fill="none" stroke="#999" stroke-width="1.3"/><polygon points="255,100 274.6,151.9 276.9,149.3 279.1,146.6 281.2,143.8 283.3,140.8 285.2,137.7 287.1,134.4 288.8,131 290.4,127.5 291.8,123.8 293,120 294.1,116.2 294.9,112.2 295.5,108.2 295.9,104.1 296,100 295.9,95.9 295.5,91.8 294.9,87.8 294.1,83.8 293,80 291.8,76.2 290.4,72.5 288.8,69 287.1,65.6 285.2,62.3 283.3,59.2 281.2,56.2 279.1,53.4 276.9,50.7 274.6,48.1" fill="#fde3cc" stroke="#555" stroke-width="0.8"/><polygon points="255,100 41,88.3 40.9,89.1 40.8,89.8 40.6,90.6 40.5,91.4 40.4,92.2 40.4,93 40.3,93.7 40.2,94.5 40.2,95.3 40.1,96.1 40.1,96.9 40,97.7 40,98.4 40,99.2 40,100 40,100.8 40,101.6 40,102.3 40.1,103.1 40.1,103.9 40.2,104.7 40.2,105.5 40.3,106.3 40.4,107 40.4,107.8 40.5,108.6 40.6,109.4 40.8,110.2 40.9,110.9 41,111.7" fill="#dfe8f5" stroke="#555" stroke-width="0.8"/><circle cx="255" cy="100" r="7" fill="#f6c35b" stroke="#d9701e" stroke-width="1.2"/><text x="251" y="122" font-size="9.5" text-anchor="end" fill="#1e1e1e">太陽</text><circle cx="168" cy="100" r="1.8" fill="#555" stroke="#555" stroke-width="1.2"/><text x="300" y="78" font-size="9.5" text-anchor="start" fill="#1e1e1e">近日点</text><text x="300" y="91" font-size="9.5" text-anchor="start" fill="#1e1e1e">（速い）</text><text x="36" y="78" font-size="9.5" text-anchor="end" fill="#1e1e1e">遠日点</text><text x="36" y="91" font-size="9.5" text-anchor="end" fill="#1e1e1e">（遅い）</text><line x1="40" y1="203.9" x2="168" y2="203.9" stroke="#555" stroke-width="0.8"/><text x="104" y="215.9" font-size="11.5" text-anchor="middle" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">a</tspan></text><line x1="40" y1="199.9" x2="40" y2="207.9" stroke="#555" stroke-width="0.8"/><line x1="168" y1="199.9" x2="168" y2="207.9" stroke="#555" stroke-width="0.8"/><text x="148" y="142" font-size="9.5" text-anchor="middle" fill="#1d4e89">同じ時間に掃く面積は等しい</text></svg>
+</div>
+<div class="box ex">
+ある小惑星が太陽のまわりをだ円軌道で回っており、近日点距離は $2.0\ \mathrm{AU}$、遠日点距離は $6.0\ \mathrm{AU}$ である（$1\ \mathrm{AU}$ は地球の公転軌道半径。地球の軌道は円とみなす）。(1) この小惑星の公転周期は何年か。(2) 近日点での速さは、遠日点での速さの何倍か。
+<div class="solx"><b>解</b>　(1) 長半径は $a=\dfrac{2.0+6.0}{2}=4.0\ \mathrm{AU}$。地球（$a=1\ \mathrm{AU}$、$T=1$ 年）と比べて $\dfrac{T^2}{4.0^3}=\dfrac{1^2}{1^3}$、$T=\sqrt{64}=\boldsymbol{8.0}$ <b>年</b><br>
+(2) 第2法則より $2.0\times v_1=6.0\times v_2$、$\dfrac{v_1}{v_2}=\boldsymbol{3.0}$ <b>倍</b></div>
+</div>
+<h3>講義2　万有引力の法則と重力</h3>
+<div class="box lect">
+ニュートンは、惑星が半径 $r$、周期 $T$ の円軌道を回るとして、向心力を $mr\left(\dfrac{2\pi}{T}\right)^2=\dfrac{4\pi^2mr}{T^2}$ と表した。第3法則 $T^2=kr^3$（$k$ は一定）を代入すると $\dfrac{4\pi^2}{k}\cdot\dfrac{m}{r^2}$ となり、向心力は<b>惑星の質量に比例し、距離の2乗に反比例</b>する。作用反作用を考えれば太陽の質量 $M$ にも比例するはずで、$F=G\dfrac{Mm}{r^2}$。これがあらゆる物体の間にはたらく<b>万有引力</b>である。逆にこの法則から、円軌道では $T^2=\dfrac{4\pi^2}{GM}r^3$ となり、第3法則の比例定数は<b>中心天体の質量だけ</b>で決まることがわかる。<br>
+地表の物体が受ける重力は、ほぼ地球からの万有引力に等しい（自転による遠心力の影響は小さい）。地球の半径を $R$、質量を $M$ とすると $mg=G\dfrac{Mm}{R^2}$、すなわち $GM=gR^2$。$G$ や $M$ が与えられなくても $g$ と $R$ で表せる。地表から高さ $h$ の所では $g'=\dfrac{GM}{(R+h)^2}=g\left(\dfrac{R}{R+h}\right)^2$。
+</div>
+<div class="box ex">
+地球の半径を $6.4\times10^6\ \mathrm{m}$、地表での重力加速度の大きさを $9.8\ \mathrm{m/s^2}$、万有引力定数を $6.67\times10^{-11}\ \mathrm{N\cdot m^2/kg^2}$ とする。(1) 地球の質量を求めよ。(2) 地表から高さ $R$（地球の半径）の所での重力加速度の大きさは、地表の何倍か。
+<div class="solx"><b>解</b>　(1) $M=\dfrac{gR^2}{G}=\dfrac{9.8\times(6.4\times10^6)^2}{6.67\times10^{-11}}\fallingdotseq\boldsymbol{6.0\times10^{24}\ \mathrm{kg}}$<br>
+(2) 中心からの距離が $2R$ なので $\left(\dfrac{R}{2R}\right)^2=\boldsymbol{\dfrac14}$ <b>倍</b></div>
+</div>
+<h3>講義3　人工衛星と第1宇宙速度</h3>
+<div class="box lect">
+地球のまわりを半径 $r$ の円軌道で回る人工衛星では、万有引力が向心力になる：$m\dfrac{v^2}{r}=G\dfrac{Mm}{r^2}$ より $v=\sqrt{\dfrac{GM}{r}}=\sqrt{\dfrac{gR^2}{r}}$。<b>軌道半径が大きいほど遅く</b>、周期 $T=\dfrac{2\pi r}{v}$ は $r^{\frac32}$ に比例して長くなる。<br>
+地表すれすれ（$r=R$、空気抵抗は無視）を回る速さ $v_1=\sqrt{gR}$ を<b>第1宇宙速度</b>という。<b>静止衛星</b>は赤道上空を、地球の自転と同じ向き・同じ周期（約1日）で回るので、地上からは静止して見える。
+</div>
+<div class="box ex">
+地球の半径を $R=6.4\times10^6\ \mathrm{m}$、地表での重力加速度の大きさを $g=9.8\ \mathrm{m/s^2}$ とする。(1) 第1宇宙速度と、その速さで地表すれすれを回る衛星の周期を求めよ。(2) 静止衛星の軌道半径を求めよ。ただし静止衛星の周期を $8.6\times10^4\ \mathrm{s}$ とする。
+<div class="solx"><b>解</b>　(1) $v_1=\sqrt{gR}=\sqrt{9.8\times6.4\times10^6}\fallingdotseq\boldsymbol{7.9\times10^3\ \mathrm{m/s}}$、$T=\dfrac{2\pi R}{v_1}\fallingdotseq\boldsymbol{5.1\times10^3\ \mathrm{s}}$（<b>約85分</b>）<br>
+(2) $mr\left(\dfrac{2\pi}{T}\right)^2=\dfrac{GMm}{r^2}$ と $GM=gR^2$ より $r^3=\dfrac{gR^2T^2}{4\pi^2}$。数値を入れて $r\fallingdotseq\boldsymbol{4.2\times10^7\ \mathrm{m}}$（地球の半径の約6.6倍）</div>
+</div>
+<h3>講義4　万有引力による位置エネルギーと脱出速度</h3>
+<div class="box lect">
+<div class="two"><div>万有引力は保存力なので位置エネルギーが定義できる。遠ざかるほど力はいくらでも小さくなるので、<b>無限遠を基準</b>にとる。距離 $r$ の点から無限遠まで物体を動かす間に万有引力がする仕事は、$F$-$r$ グラフの面積に負号をつけた $\displaystyle-\int_r^\infty G\frac{Mm}{x^2}dx=-G\frac{Mm}{r}$。よって $U=-G\dfrac{Mm}{r}$（常に負で、遠いほど大きい）。</div><div><svg class="fig" width="350" height="142" viewBox="0 0 350 142" xmlns="http://www.w3.org/2000/svg"><line x1="35" y1="125" x2="329" y2="125" stroke="#555" stroke-width="1.1"/><polygon points="335,125 329,127.6 329,122.4" fill="#555"/><line x1="35" y1="125" x2="35" y2="19" stroke="#555" stroke-width="1.1"/><polygon points="35,13 37.6,19 32.4,19" fill="#555"/><text x="31" y="138" font-size="11" text-anchor="end" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">O</tspan></text><text x="41" y="21" font-size="11" text-anchor="start" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">F</tspan></text><text x="335" y="140" font-size="9.5" text-anchor="end" fill="#1e1e1e">中心からの距離</text><polygon points="155,104 158,105 161,105.9 164,106.8 167,107.6 170,108.4 173,109.1 176,109.8 179,110.4 182,111 185,111.6 188,112.1 191,112.6 194,113 197,113.5 200,113.9 203,114.3 206,114.7 209,115 212,115.3 215,115.7 218,116 221,116.3 224,116.5 227,116.8 230,117 233,117.3 236,117.5 239,117.7 242,117.9 245,118.1 248,118.3 251,118.5 254,118.7 257,118.9 260,119 263,119.2 266,119.3 269,119.5 272,119.6 275,119.7 278,119.9 281,120 284,120.1 287,120.2 290,120.3 293,120.5 296,120.6 299,120.7 302,120.8 305,120.9 308,120.9 311,121 314,121.1 317,121.2 320,121.3 323,121.4 326,121.4 329,121.5 332,121.6 335,121.6 338,121.7 341,121.8 344,121.8 347,121.9 350,122 353,122 356,122.1 359,122.1 362,122.2 365,122.2 365,125 155,125" fill="#fde3cc" stroke="none" stroke-width="0"/><polyline points="90,25 93,35.1 96,43.7 99,51.1 102,57.6 105,63.3 108,68.2 111,72.6 114,76.5 117,80 120,83.1 123,85.9 126,88.5 129,90.8 132,92.8 135,94.8 138,96.5 141,98.1 144,99.5 147,100.9 150,102.1 153,103.3 156,104.3 159,105.3 162,106.2 165,107.1 168,107.9 171,108.6 174,109.3 177,110 180,110.6 183,111.2 186,111.7 189,112.2 192,112.7 195,113.2 198,113.6 201,114 204,114.4 207,114.8 210,115.1 213,115.5 216,115.8 219,116.1 222,116.3 225,116.6 228,116.9 231,117.1 234,117.4 237,117.6 240,117.8 243,118 246,118.2 249,118.4 252,118.6 255,118.8 258,118.9 261,119.1 264,119.2 267,119.4 270,119.5 273,119.7 276,119.8 279,119.9 282,120 285,120.2 288,120.3 291,120.4 294,120.5 297,120.6 300,120.7 303,120.8 306,120.9 309,121 312,121.1 315,121.1 318,121.2 321,121.3 324,121.4 327,121.5 330,121.5 333,121.6 336,121.7 339,121.7 342,121.8 345,121.9 348,121.9 351,122 354,122 357,122.1 360,122.1 363,122.2" fill="none" stroke="#1d4e89" stroke-width="2.2"/><line x1="90" y1="125" x2="90" y2="25" stroke="#555" stroke-width="0.8" stroke-dasharray="3,2"/><text x="90" y="139" font-size="11" text-anchor="middle" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">R</tspan></text><line x1="155" y1="125" x2="155" y2="104" stroke="#555" stroke-width="0.8" stroke-dasharray="3,2"/><text x="155" y="139" font-size="11" text-anchor="middle" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">r</tspan></text><text x="102" y="39" font-size="11" text-anchor="start" fill="#1d4e89" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">F</tspan><tspan> </tspan><tspan>=</tspan><tspan> </tspan><tspan font-style="italic">G</tspan><tspan font-style="italic">M</tspan><tspan font-style="italic">m</tspan><tspan>/</tspan><tspan font-style="italic">r</tspan><tspan dy="-4.5" font-size="0.78em"><tspan>2</tspan></tspan><tspan dy="4.5"> </tspan></text><text x="255" y="73" font-size="9.5" text-anchor="middle" fill="#d9701e">色の部分の面積</text><text x="255" y="86" font-size="9.5" text-anchor="middle" fill="#d9701e">＝ <tspan font-family="Liberation Serif,DejaVu Serif,serif" font-size="10.6"><tspan font-style="italic">G</tspan><tspan font-style="italic">M</tspan><tspan font-style="italic">m</tspan><tspan>/</tspan><tspan font-style="italic">r</tspan></tspan>（<tspan font-family="Liberation Serif,DejaVu Serif,serif" font-size="10.6"><tspan font-style="italic">r</tspan></tspan> から無限遠まで）</text></svg></div></div>
+力学的エネルギー保存 $\dfrac12mv^2-G\dfrac{Mm}{r}=$ 一定。地表から打ち上げた物体が無限遠まで行く（地球の引力圏から脱出する）には、無限遠で運動エネルギーが $0$ 以上であればよく、$\dfrac12mv_0^2-G\dfrac{Mm}{R}\geqq0$、すなわち $v_0\geqq\sqrt{\dfrac{2GM}{R}}=\sqrt{2gR}\fallingdotseq11.2\ \mathrm{km/s}$（<b>第2宇宙速度</b>）。<br>
+地表付近で使う $mgh$ は、$U$ の差 $GMm\left(\dfrac1R-\dfrac1{R+h}\right)=\dfrac{GMmh}{R(R+h)}$ で $h$ が $R$ よりずっと小さいときの近似である。
+</div>
+<div class="box ex">
+地表から鉛直上向きに、第1宇宙速度と同じ速さ $v_0=\sqrt{gR}$ で物体を打ち上げた（空気抵抗と地球の自転は無視、$g$：地表での重力加速度の大きさ、$R$：地球の半径）。物体は地表から最大でどれだけの高さまで上がるか。
+<div class="solx"><b>解</b>　最高点の、地球の中心からの距離を $r$ とすると、$\dfrac12m\cdot gR-\dfrac{GMm}{R}=-\dfrac{GMm}{r}$。$GM=gR^2$ を代入して $\dfrac12gR-gR=-\dfrac{gR^2}{r}$、$r=2R$。よって高さは $\boldsymbol{R}$。<br>
+$mgh$ を使うと $h=\dfrac{v_0^2}{2g}=\dfrac R2$ となり誤り。高い所では重力が弱くなるからである。</div>
+</div>
+<div class="box chk">
+(1) 質量 $1.0\ \mathrm{kg}$ の2つの小物体が $1.0\ \mathrm{m}$ 離れているとき、互いに及ぼし合う万有引力の大きさを求めよ（$G=6.67\times10^{-11}\ \mathrm{N\cdot m^2/kg^2}$）。<br>
+(2) 地表から高さ $R$（地球の半径）の円軌道を回る人工衛星の速さは、第1宇宙速度 $v_1$ の何倍か。$v_1=7.9\ \mathrm{km/s}$ として値も求めよ。<br>
+(3) 同じ惑星のまわりを円軌道で回る2つの衛星で、軌道半径が2倍の衛星の公転周期は何倍か。<br>
+(4) 質量が地球の $\dfrac19$、半径が地球の $\dfrac12$ の惑星の表面での重力加速度の大きさは、地球の何倍か。
+</div>
+<div class="box aim">
+・$r$ は<b>中心からの距離</b>。「地表から高さ $h$」なら $r=R+h$。<br>
+・$G$ や $M$ が与えられていなければ $GM=gR^2$ で消す。<br>
+・円軌道は「向心力＝万有引力」。だ円軌道は「第2法則（近日点・遠日点で $rv$ が一定）」＋「力学的エネルギー保存」の連立。<br>
+・円軌道の力学的エネルギーは $\dfrac12m\dfrac{GM}{r}-\dfrac{GMm}{r}=-\dfrac{GMm}{2r}$。軌道半径が大きいほど、速さは小さいがエネルギーは大きい。
+</div>
+<h3 class="deep">講義5　だ円軌道への乗りかえ</h3>
+<p>地表すれすれの円軌道を回る衛星（大気の影響は無視）を、ある点 P で接線方向に加速し、遠地点 Q が地球の中心から $3R$ のだ円軌道に移したい。加速直後の速さ $v_P$ を求めよう。</p>
+<div class="box lect">
+P（中心から $R$、近地点）と Q（中心から $3R$）では、速度は中心と結ぶ線分に垂直である。<br>
+第2法則：$\dfrac12Rv_P=\dfrac12\cdot3R\cdot v_Q$　…①　　力学的エネルギー保存：$\dfrac12mv_P^2-\dfrac{GMm}{R}=\dfrac12mv_Q^2-\dfrac{GMm}{3R}$　…②<br>
+①より $v_Q=\dfrac{v_P}{3}$。②に代入して $\dfrac12v_P^2\cdot\dfrac89=\dfrac{2GM}{3R}$、$v_P=\sqrt{\dfrac{3GM}{2R}}=\sqrt{\dfrac32gR}$。数値は $\sqrt{1.5\times9.8\times6.4\times10^6}\fallingdotseq9.7\ \mathrm{km/s}$ で、第1宇宙速度 $7.9\ \mathrm{km/s}$ と第2宇宙速度 $11.2\ \mathrm{km/s}$ の間にある。遠地点での速さは $\dfrac{v_P}{3}\fallingdotseq3.2\ \mathrm{km/s}$。<br>
+一般に、地表すれすれで水平に打ち出すとき、速さが $v_1$ なら円軌道、$v_1$ と $v_2$ の間ならだ円軌道、$v_2$ 以上なら地球に戻ってこない。
+</div>
+<div class="box warn">
+・$r$ に地表からの高さを入れてしまう。<br>
+・万有引力の位置エネルギーを正の値 $G\dfrac{Mm}{r}$ とする（負である）。また、高い所の問題に $mgh$ を使う。<br>
+・静止衛星の周期を「24」のまま式に入れる（秒に直す）。静止衛星はどの地点の上空でもよいと考える（赤道上空だけ）。<br>
+・第2法則の $\dfrac12rv$ を、近日点・遠日点以外でも使う（速度が線分に垂直な点でしか使えない）。
+</div>
+<div class="box ans">
+(1) $6.67\times10^{-11}\times\frac{1.0\times1.0}{1.0^2}\fallingdotseq6.7\times10^{-11}\ \mathrm{N}$<br>
+(2) $v=\sqrt{\frac{GM}{2R}}=\frac{v_1}{\sqrt2}$ より $\frac{1}{\sqrt2}\fallingdotseq0.71$ 倍、$\frac{7.9}{\sqrt2}\fallingdotseq5.6\ \mathrm{km/s}$<br>
+(3) $T\propto r^{\frac32}$ より $2\sqrt2\fallingdotseq2.8$ 倍<br>
+(4) $g=\frac{GM}{R^2}$ より $\frac19\div\left(\frac12\right)^2=\frac49\fallingdotseq0.44$ 倍
+</div>
+<!--CH 8-->
+<div class="box point">
+・<b>力のモーメント</b> $M=Fl$（$l$：回転軸から力の作用線までの距離＝<b>腕の長さ</b>）。$M=FL\sin\theta$ とも書ける。ふつう反時計回りを正とする<br>
+・剛体のつりあいの条件：①<b>力のつりあい</b>（合力 $=\vec 0$）　②<b>任意の点のまわりの力のモーメントの和 $=0$</b><br>
+・<b>重心</b> $x_G=\dfrac{m_1x_1+m_2x_2+\cdots}{m_1+m_2+\cdots}$。物体の重力は、すべて重心にはたらくと考えてよい<br>
+・<b>偶力</b>：大きさが等しく逆向きで、作用線が異なる2力。モーメントは $Fd$（$d$：作用線間の距離）で、どの点のまわりでも同じ<br>
+・倒れる直前には、垂直抗力（と摩擦力）の作用点は<b>回転の軸となる辺</b>に移る
+</div>
+<h3>講義1　力のモーメント</h3>
+<div class="box lect">
+大きさがあり、力を加えても変形しない理想的な物体を<b>剛体</b>という。剛体に力を加えると、平行移動だけでなく回転も起こる。回転させるはたらきは、力の大きさ $F$ と、回転軸 O から<b>力の作用線</b>までの距離 $l$（<b>腕の長さ</b>）の積 $M=Fl$ で表され、これを<b>力のモーメント</b>（単位 $\mathrm{N\cdot m}$）という。<br>
+O から作用点 P までの距離を $L$、力と OP の延長のなす角を $\theta$ とすると、$l=L\sin\theta$、$M=FL\sin\theta$。これは、力を OP に垂直な成分 $F\sin\theta$ と平行な成分に分け、平行な成分は回転に寄与しないと見ても同じである。力を作用線上で移動させても、モーメントは変わらない。
+<svg class="fig" width="390" height="170" viewBox="0 0 390 170" xmlns="http://www.w3.org/2000/svg"><line x1="90" y1="62" x2="324" y2="62" stroke="#c9d4e6" stroke-width="6"/><polygon points="98,62 90,76 106,76" fill="#ddd" stroke="#555" stroke-width="1"/><circle cx="98" cy="62" r="2.5" fill="#555" stroke="#555" stroke-width="1.2"/><line x1="318" y1="62" x2="372.6" y2="30.5" stroke="#c0392b" stroke-width="2.2"/><polygon points="378.6,27 374.2,33.3 371,27.7" fill="#c0392b"/><text x="382.6" y="31" font-size="12.5" text-anchor="start" fill="#c0392b" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">F</tspan></text><line x1="153" y1="157.3" x2="395.9" y2="17" stroke="#c0392b" stroke-width="0.8" stroke-dasharray="4,3"/><line x1="98" y1="62" x2="153" y2="157.3" stroke="#1d4e89" stroke-width="1.6"/><polyline points="149.5,151.2 155.6,147.7 159.1,153.8" fill="none" stroke="#555" stroke-width="0.9"/><text x="119.5" y="105.6" font-size="12.5" text-anchor="end" fill="#1d4e89" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">l</tspan></text><text x="115.5" y="123.6" font-size="9.5" text-anchor="end" fill="#1d4e89">腕の長さ</text><text x="115.5" y="137.6" font-size="11" text-anchor="end" fill="#1d4e89" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">l</tspan><tspan> </tspan><tspan>=</tspan><tspan> </tspan><tspan font-style="italic">L</tspan><tspan>sin</tspan><tspan font-style="italic">θ</tspan></text><text x="201.6" y="147.3" font-size="9.5" text-anchor="start" fill="#c0392b">作用線</text><path d="M340,62 A22,22 0 0 0 337.1,51" fill="none" stroke="#555" stroke-width="1"/><text x="343" y="58" font-size="11" text-anchor="start" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">θ</tspan></text><line x1="318" y1="62" x2="358" y2="62" stroke="#555" stroke-width="0.7" stroke-dasharray="2,2"/><text x="92" y="56" font-size="11" text-anchor="end" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">O</tspan></text><text x="316" y="78" font-size="11" text-anchor="middle" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">P</tspan></text><text x="208" y="54" font-size="12" text-anchor="middle" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">L</tspan></text></svg>
+</div>
+<div class="box ex">
+長さ $1.2\ \mathrm{m}$、質量 $3.0\ \mathrm{kg}$ の一様な棒 AB を、A 端から $0.40\ \mathrm{m}$ の点 C で支える。A 端に質量 $M$ のおもりをつるすと、棒は水平につりあった。重力加速度の大きさを $9.8\ \mathrm{m/s^2}$ とする。(1) $M$ を求めよ。(2) 支点が棒を支える力の大きさを求めよ。
+<div class="solx"><b>解</b>　棒の重心は中点で、A から $0.60\ \mathrm{m}$、C から $0.20\ \mathrm{m}$（B 側）。<br>
+(1) C のまわりのモーメントのつりあい：$Mg\times0.40=3.0g\times0.20$ より $M=\boldsymbol{1.5\ \mathrm{kg}}$<br>
+(2) 鉛直方向のつりあい：$N=(1.5+3.0)\times9.8=44.1\fallingdotseq\boldsymbol{44\ \mathrm{N}}$</div>
+</div>
+<h3>講義2　剛体のつりあい ― はしごの問題</h3>
+<div class="box lect">
+<div class="two"><div>剛体が静止し続ける条件は、①合力が $0$（並進しない）　②どの点のまわりでもモーメントの和が $0$（回転しない）。①が成り立つとき、②は1つの点で成り立てば他のどの点でも成り立つ。そこで、<b>未知の力が多く通る点</b>をモーメントの中心に選ぶと計算が楽になる（その点を通る力のモーメントは $0$）。<br>
+また、平行でない3つの力だけでつりあう剛体では、3力の作用線は1点で交わる。</div><div><svg class="fig" width="320" height="196" viewBox="0 0 320 196" xmlns="http://www.w3.org/2000/svg"><line x1="30" y1="172" x2="230" y2="172" stroke="#555" stroke-width="1.6"/><line x1="30" y1="172" x2="34.2" y2="176.2" stroke="#555" stroke-width="0.8"/><line x1="38" y1="172" x2="42.2" y2="176.2" stroke="#555" stroke-width="0.8"/><line x1="46" y1="172" x2="50.2" y2="176.2" stroke="#555" stroke-width="0.8"/><line x1="54" y1="172" x2="58.2" y2="176.2" stroke="#555" stroke-width="0.8"/><line x1="62" y1="172" x2="66.2" y2="176.2" stroke="#555" stroke-width="0.8"/><line x1="70" y1="172" x2="74.2" y2="176.2" stroke="#555" stroke-width="0.8"/><line x1="78" y1="172" x2="82.2" y2="176.2" stroke="#555" stroke-width="0.8"/><line x1="86" y1="172" x2="90.2" y2="176.2" stroke="#555" stroke-width="0.8"/><line x1="94" y1="172" x2="98.2" y2="176.2" stroke="#555" stroke-width="0.8"/><line x1="102" y1="172" x2="106.2" y2="176.2" stroke="#555" stroke-width="0.8"/><line x1="110" y1="172" x2="114.2" y2="176.2" stroke="#555" stroke-width="0.8"/><line x1="118" y1="172" x2="122.2" y2="176.2" stroke="#555" stroke-width="0.8"/><line x1="126" y1="172" x2="130.2" y2="176.2" stroke="#555" stroke-width="0.8"/><line x1="134" y1="172" x2="138.2" y2="176.2" stroke="#555" stroke-width="0.8"/><line x1="142" y1="172" x2="146.2" y2="176.2" stroke="#555" stroke-width="0.8"/><line x1="150" y1="172" x2="154.2" y2="176.2" stroke="#555" stroke-width="0.8"/><line x1="158" y1="172" x2="162.2" y2="176.2" stroke="#555" stroke-width="0.8"/><line x1="166" y1="172" x2="170.2" y2="176.2" stroke="#555" stroke-width="0.8"/><line x1="174" y1="172" x2="178.2" y2="176.2" stroke="#555" stroke-width="0.8"/><line x1="182" y1="172" x2="186.2" y2="176.2" stroke="#555" stroke-width="0.8"/><line x1="190" y1="172" x2="194.2" y2="176.2" stroke="#555" stroke-width="0.8"/><line x1="198" y1="172" x2="202.2" y2="176.2" stroke="#555" stroke-width="0.8"/><line x1="206" y1="172" x2="210.2" y2="176.2" stroke="#555" stroke-width="0.8"/><line x1="214" y1="172" x2="218.2" y2="176.2" stroke="#555" stroke-width="0.8"/><line x1="222" y1="172" x2="226.2" y2="176.2" stroke="#555" stroke-width="0.8"/><line x1="230" y1="172" x2="234.2" y2="176.2" stroke="#555" stroke-width="0.8"/><line x1="230" y1="172" x2="230" y2="10" stroke="#555" stroke-width="1.6"/><line x1="230" y1="172" x2="234.2" y2="167.8" stroke="#555" stroke-width="0.8"/><line x1="230" y1="164" x2="234.2" y2="159.8" stroke="#555" stroke-width="0.8"/><line x1="230" y1="156" x2="234.2" y2="151.8" stroke="#555" stroke-width="0.8"/><line x1="230" y1="148" x2="234.2" y2="143.8" stroke="#555" stroke-width="0.8"/><line x1="230" y1="140" x2="234.2" y2="135.8" stroke="#555" stroke-width="0.8"/><line x1="230" y1="132" x2="234.2" y2="127.8" stroke="#555" stroke-width="0.8"/><line x1="230" y1="124" x2="234.2" y2="119.8" stroke="#555" stroke-width="0.8"/><line x1="230" y1="116" x2="234.2" y2="111.8" stroke="#555" stroke-width="0.8"/><line x1="230" y1="108" x2="234.2" y2="103.8" stroke="#555" stroke-width="0.8"/><line x1="230" y1="100" x2="234.2" y2="95.8" stroke="#555" stroke-width="0.8"/><line x1="230" y1="92" x2="234.2" y2="87.8" stroke="#555" stroke-width="0.8"/><line x1="230" y1="84" x2="234.2" y2="79.8" stroke="#555" stroke-width="0.8"/><line x1="230" y1="76" x2="234.2" y2="71.8" stroke="#555" stroke-width="0.8"/><line x1="230" y1="68" x2="234.2" y2="63.8" stroke="#555" stroke-width="0.8"/><line x1="230" y1="60" x2="234.2" y2="55.8" stroke="#555" stroke-width="0.8"/><line x1="230" y1="52" x2="234.2" y2="47.8" stroke="#555" stroke-width="0.8"/><line x1="230" y1="44" x2="234.2" y2="39.8" stroke="#555" stroke-width="0.8"/><line x1="230" y1="36" x2="234.2" y2="31.8" stroke="#555" stroke-width="0.8"/><line x1="230" y1="28" x2="234.2" y2="23.8" stroke="#555" stroke-width="0.8"/><line x1="230" y1="20" x2="234.2" y2="15.8" stroke="#555" stroke-width="0.8"/><line x1="230" y1="12" x2="234.2" y2="7.8" stroke="#555" stroke-width="0.8"/><line x1="133.6" y1="172" x2="230" y2="34.4" stroke="#8a6d3b" stroke-width="4.5"/><line x1="133.6" y1="172" x2="133.6" y2="117" stroke="#c0392b" stroke-width="2"/><polygon points="133.6,110 136.8,117 130.4,117" fill="#c0392b"/><text x="129.6" y="116" font-size="12" text-anchor="end" fill="#c0392b" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">N</tspan><tspan dy="3.5" font-size="0.78em"><tspan>1</tspan></tspan><tspan dy="-3.5"> </tspan></text><line x1="133.6" y1="170" x2="154.3" y2="170" stroke="#c0392b" stroke-width="2"/><polygon points="161.3,170 154.3,173.2 154.3,166.8" fill="#c0392b"/><text x="147.5" y="190" font-size="12" text-anchor="middle" fill="#c0392b" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">f</tspan></text><line x1="181.8" y1="103.2" x2="181.8" y2="158.2" stroke="#c0392b" stroke-width="2"/><polygon points="181.8,165.2 178.6,158.2 185,158.2" fill="#c0392b"/><text x="186.8" y="163.2" font-size="12" text-anchor="start" fill="#c0392b" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">m</tspan><tspan font-style="italic">g</tspan></text><line x1="230" y1="34.4" x2="209.3" y2="34.4" stroke="#c0392b" stroke-width="2"/><polygon points="202.3,34.4 209.3,31.2 209.3,37.6" fill="#c0392b"/><text x="198.3" y="38.4" font-size="12" text-anchor="end" fill="#c0392b" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">N</tspan><tspan dy="3.5" font-size="0.78em"><tspan>2</tspan></tspan><tspan dy="-3.5"> </tspan></text><circle cx="181.8" cy="103.2" r="2.5" fill="#555" stroke="#555" stroke-width="1.2"/><path d="M163.6,172 A30,30 0 0 0 150.8,147.4" fill="none" stroke="#555" stroke-width="1"/><text x="167.6" y="162" font-size="11" text-anchor="start" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">θ</tspan></text><text x="236" y="40" font-size="9.5" text-anchor="start" fill="#1e1e1e">なめらかな壁</text><text x="40" y="190" font-size="9.5" text-anchor="start" fill="#1e1e1e">あらい床</text><text x="147.7" y="137.6" font-size="10.5" text-anchor="end" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">L</tspan><tspan>/</tspan><tspan>2</tspan></text></svg></div></div>
+</div>
+<div class="box ex">
+長さ $L$、質量 $m$ の一様なはしごを、なめらかな鉛直の壁とあらい水平な床の間に、床と角 $\theta$ をなすように立てかけた。床との間の静止摩擦係数を $\mu$、重力加速度の大きさを $g$ とする。(1) 壁がはしごを押す力 $N_2$ を求めよ。(2) はしごがすべらないための条件を $\theta$ で表せ。(3) $\mu=0.50$ のとき、$\theta$ が何度以上なら立てかけておけるか。
+<div class="solx"><b>解</b>　床からの垂直抗力を $N_1$、摩擦力を $f$（壁向き）とする。鉛直：$N_1=mg$、水平：$f=N_2$。<br>
+はしごの下端のまわりのモーメント：$N_2\times L\sin\theta=mg\times\dfrac L2\cos\theta$<br>
+(1) $\boldsymbol{N_2=\dfrac{mg}{2\tan\theta}}$　(2) $f\leqq\mu N_1$ より $\dfrac{mg}{2\tan\theta}\leqq\mu mg$、$\boldsymbol{\tan\theta\geqq\dfrac1{2\mu}}$　(3) $\tan\theta\geqq1$ より $\boldsymbol{45^\circ}$ <b>以上</b></div>
+</div>
+<h3>講義3　重心</h3>
+<div class="box lect">
+<div class="two"><div>物体の各部分にはたらく重力の合力の作用点が<b>重心</b>である。棒にとりつけた質点では、「全体の重力 $(m_1+m_2+\cdots)g$ が $x_G$ にはたらくとしたモーメント」が「各部分のモーメントの和」に等しいという条件から $x_G=\dfrac{m_1x_1+m_2x_2+\cdots}{m_1+m_2+\cdots}$（$y$ 座標も同様）。一様な物体は対称の中心に重心がある。<br>
+物体の一部を<b>くりぬいた</b>ときは、「全体」＝「残り」＋「くりぬいた部分」と考えて残りの重心を求める。</div><div><svg class="fig" width="190" height="170" viewBox="0 0 190 170" xmlns="http://www.w3.org/2000/svg"><circle cx="95" cy="85" r="66" fill="#dfe8f5" stroke="#555" stroke-width="1.4"/><circle cx="128" cy="85" r="33" fill="#fff" stroke="#555" stroke-width="1.1" stroke-dasharray="4,3"/><line x1="19" y1="85" x2="171" y2="85" stroke="#555" stroke-width="0.7" stroke-dasharray="2,2"/><circle cx="95" cy="85" r="2.4" fill="#555" stroke="#555" stroke-width="1.2"/><text x="96" y="79" font-size="11" text-anchor="middle" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">O</tspan></text><circle cx="84" cy="85" r="3.4" fill="#c0392b" stroke="#c0392b" stroke-width="1.2"/><text x="82" y="101" font-size="11.5" text-anchor="middle" fill="#c0392b" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">G</tspan></text><circle cx="128" cy="85" r="2" fill="#555" stroke="#555" stroke-width="1.2"/><line x1="95" y1="85" x2="52.6" y2="135.6" stroke="#555" stroke-width="0.8"/><text x="67.8" y="114.3" font-size="11" text-anchor="end" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">R</tspan></text><text x="128" y="46" font-size="10.5" text-anchor="middle" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">R</tspan><tspan>/</tspan><tspan>2</tspan></text><text x="128" y="97" font-size="9" text-anchor="middle" fill="#1e1e1e">くりぬく</text></svg></div></div>
+</div>
+<div class="box ex">
+半径 $R$ の一様な円板から、上図のように半径 $\dfrac R2$ の円板（中心は元の中心 O から $\dfrac R2$ の位置）をくりぬいた。残りの部分の重心 G の位置を求めよ。
+<div class="solx"><b>解</b>　質量は面積に比例するので、全体 $4m$、くりぬく部分 $m$、残り $3m$ とおける。O を原点、くりぬいた円の中心の向きを $x$ 軸の正とすると、全体の重心は O なので<br>
+$4m\times0=3m\times x_G+m\times\dfrac R2$　より　$x_G=-\dfrac R6$。<b>O から、くりぬいた側と反対向きに $\dfrac R6$</b> の点。</div>
+</div>
+<h3>講義4　偶力と、倒れる・すべるの判定</h3>
+<div class="box lect">
+<div class="two"><div>大きさが等しく逆向きの2力が同じ作用線上にないとき、その組を<b>偶力</b>という。合力は $0$ なので平行移動は起こさないが回転させるはたらきがあり、モーメントは（どの点のまわりでも）$Fd$（$d$：作用線間の距離）。偶力は1つの力ではつりあわせられない（ハンドルや蛇口を回す力）。<br>
+床の上の直方体を横から押すとき、<b>すべり出す</b>か<b>倒れる</b>かは、それぞれが起こる力の大きさを求めて、小さい方が先に起こる。倒れる直前には、床からの垂直抗力と摩擦力の作用点が回転の軸となる辺 Q に移る。</div><div><svg class="fig" width="290" height="175" viewBox="0 0 290 175" xmlns="http://www.w3.org/2000/svg"><line x1="20" y1="150" x2="280" y2="150" stroke="#555" stroke-width="1.6"/><line x1="20" y1="150" x2="24.2" y2="154.2" stroke="#555" stroke-width="0.8"/><line x1="28" y1="150" x2="32.2" y2="154.2" stroke="#555" stroke-width="0.8"/><line x1="36" y1="150" x2="40.2" y2="154.2" stroke="#555" stroke-width="0.8"/><line x1="44" y1="150" x2="48.2" y2="154.2" stroke="#555" stroke-width="0.8"/><line x1="52" y1="150" x2="56.2" y2="154.2" stroke="#555" stroke-width="0.8"/><line x1="60" y1="150" x2="64.2" y2="154.2" stroke="#555" stroke-width="0.8"/><line x1="68" y1="150" x2="72.2" y2="154.2" stroke="#555" stroke-width="0.8"/><line x1="76" y1="150" x2="80.2" y2="154.2" stroke="#555" stroke-width="0.8"/><line x1="84" y1="150" x2="88.2" y2="154.2" stroke="#555" stroke-width="0.8"/><line x1="92" y1="150" x2="96.2" y2="154.2" stroke="#555" stroke-width="0.8"/><line x1="100" y1="150" x2="104.2" y2="154.2" stroke="#555" stroke-width="0.8"/><line x1="108" y1="150" x2="112.2" y2="154.2" stroke="#555" stroke-width="0.8"/><line x1="116" y1="150" x2="120.2" y2="154.2" stroke="#555" stroke-width="0.8"/><line x1="124" y1="150" x2="128.2" y2="154.2" stroke="#555" stroke-width="0.8"/><line x1="132" y1="150" x2="136.2" y2="154.2" stroke="#555" stroke-width="0.8"/><line x1="140" y1="150" x2="144.2" y2="154.2" stroke="#555" stroke-width="0.8"/><line x1="148" y1="150" x2="152.2" y2="154.2" stroke="#555" stroke-width="0.8"/><line x1="156" y1="150" x2="160.2" y2="154.2" stroke="#555" stroke-width="0.8"/><line x1="164" y1="150" x2="168.2" y2="154.2" stroke="#555" stroke-width="0.8"/><line x1="172" y1="150" x2="176.2" y2="154.2" stroke="#555" stroke-width="0.8"/><line x1="180" y1="150" x2="184.2" y2="154.2" stroke="#555" stroke-width="0.8"/><line x1="188" y1="150" x2="192.2" y2="154.2" stroke="#555" stroke-width="0.8"/><line x1="196" y1="150" x2="200.2" y2="154.2" stroke="#555" stroke-width="0.8"/><line x1="204" y1="150" x2="208.2" y2="154.2" stroke="#555" stroke-width="0.8"/><line x1="212" y1="150" x2="216.2" y2="154.2" stroke="#555" stroke-width="0.8"/><line x1="220" y1="150" x2="224.2" y2="154.2" stroke="#555" stroke-width="0.8"/><line x1="228" y1="150" x2="232.2" y2="154.2" stroke="#555" stroke-width="0.8"/><line x1="236" y1="150" x2="240.2" y2="154.2" stroke="#555" stroke-width="0.8"/><line x1="244" y1="150" x2="248.2" y2="154.2" stroke="#555" stroke-width="0.8"/><line x1="252" y1="150" x2="256.2" y2="154.2" stroke="#555" stroke-width="0.8"/><line x1="260" y1="150" x2="264.2" y2="154.2" stroke="#555" stroke-width="0.8"/><line x1="268" y1="150" x2="272.2" y2="154.2" stroke="#555" stroke-width="0.8"/><line x1="276" y1="150" x2="280.2" y2="154.2" stroke="#555" stroke-width="0.8"/><rect x="110" y="26" width="62" height="124" fill="#e8eef8" stroke="#555" stroke-width="1.3"/><line x1="60" y1="26" x2="103" y2="26" stroke="#c0392b" stroke-width="2"/><polygon points="110,26 103,29.2 103,22.8" fill="#c0392b"/><text x="56" y="30" font-size="12" text-anchor="end" fill="#c0392b" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">F</tspan></text><line x1="141" y1="88" x2="141" y2="131" stroke="#c0392b" stroke-width="2"/><polygon points="141,138 137.8,131 144.2,131" fill="#c0392b"/><text x="146" y="136" font-size="11.5" text-anchor="start" fill="#c0392b" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">m</tspan><tspan font-style="italic">g</tspan></text><circle cx="141" cy="88" r="2.4" fill="#555" stroke="#555" stroke-width="1.2"/><line x1="175" y1="150" x2="175" y2="107" stroke="#c0392b" stroke-width="2"/><polygon points="175,100 178.2,107 171.8,107" fill="#c0392b"/><text x="180" y="110" font-size="12" text-anchor="start" fill="#c0392b" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">N</tspan></text><line x1="175" y1="154" x2="136" y2="154" stroke="#c0392b" stroke-width="2"/><polygon points="129,154 136,150.8 136,157.2" fill="#c0392b"/><text x="126" y="168" font-size="12" text-anchor="middle" fill="#c0392b" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">f</tspan></text><circle cx="172" cy="150" r="3" fill="#d9701e" stroke="#d9701e" stroke-width="1.2"/><text x="182" y="164" font-size="9.5" text-anchor="start" fill="#d9701e">Q（回転の軸）</text><line x1="110" y1="16" x2="172" y2="16" stroke="#555" stroke-width="0.8"/><text x="141" y="12" font-size="11.5" text-anchor="middle" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">a</tspan></text><line x1="212" y1="26" x2="212" y2="150" stroke="#555" stroke-width="0.8"/><text x="216" y="88" font-size="11.5" text-anchor="start" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">b</tspan></text><line x1="208" y1="26" x2="216" y2="26" stroke="#555" stroke-width="0.8"/><line x1="141" y1="88" x2="172" y2="88" stroke="#555" stroke-width="0.6" stroke-dasharray="2,2"/><text x="156.5" y="84" font-size="10" text-anchor="middle" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">a</tspan><tspan>/</tspan><tspan>2</tspan></text></svg></div></div>
+</div>
+<div class="box ex">
+幅 $a=0.40\ \mathrm{m}$、高さ $b=0.80\ \mathrm{m}$、質量 $m$ の一様な直方体をあらい水平な床に置き、上面の左端を水平右向きに力 $F$ で押す（静止摩擦係数 $\mu$、重力加速度の大きさ $g$）。(1) すべらないとすると、倒れはじめるときの $F$ はいくらか。(2) すべるより先に倒れるための $\mu$ の条件を求めよ。
+<div class="solx"><b>解</b>　(1) 倒れる直前、垂直抗力 $N$ と摩擦力 $f$ は右下の辺 Q にはたらく。Q のまわりのモーメント：$F\times b=mg\times\dfrac a2$ より $F=\dfrac{mga}{2b}=\boldsymbol{\dfrac{mg}{4}}$<br>
+(2) このとき必要な静止摩擦力は $f=F=\dfrac{mg}4$。これが最大摩擦力 $\mu mg$ より小さければすべらずに倒れるので、$\boldsymbol{\mu>0.25}$。</div>
+</div>
+<div class="box chk">
+(1) 長さ $0.25\ \mathrm{m}$ のスパナの柄の端に、柄に垂直に $40\ \mathrm{N}$ の力を加えた。ボルトのまわりの力のモーメントを求めよ。力の向きを柄と $30^\circ$ にすると、モーメントはいくらか。<br>
+(2) 長さ $0.60\ \mathrm{m}$ の軽い棒の両端に、質量 $2.0\ \mathrm{kg}$ と $4.0\ \mathrm{kg}$ の小さなおもりをつけた。重心は $2.0\ \mathrm{kg}$ のおもりから何 $\mathrm{m}$ の位置か。<br>
+(3) 長さ $L$、重さ $W$ の一様な棒を、両端 A、B で下から支えて水平に保つ。A から $\dfrac L4$ の点に重さ $W$ のおもりをのせたとき、A、B が棒を支える力の大きさを求めよ。<br>
+(4) ハンドルに大きさ $5.0\ \mathrm{N}$ の偶力（作用線の間隔 $0.30\ \mathrm{m}$）を加えた。偶力のモーメントを求めよ。
+</div>
+<div class="box aim">
+・剛体の問題は「水平・鉛直の力のつりあい」＋「モーメントのつりあい」の3式が基本。<b>モーメントの中心は未知の力が集まる点</b>に選ぶ。<br>
+・モーメントは「力×腕の長さ」。腕の長さは、回転軸から作用線に下ろした<b>垂線</b>の長さ。斜めの力は分解してもよい。<br>
+・「倒れる」は作用点が端に移ったときのモーメント、「すべる」は最大摩擦力。両方の条件を求めて比べる。
+</div>
+<h3 class="deep">講義5　斜面上の直方体 ― すべるか、倒れるか</h3>
+<p>あらい板の上に、幅 $a$、高さ $b$ の一様な直方体を置き、板の傾き $\theta$ をゆっくり大きくしていく（静止摩擦係数 $\mu$）。</p>
+<div class="box lect">
+<b>すべる条件</b>　斜面方向の重力の成分 $mg\sin\theta$ が最大摩擦力 $\mu mg\cos\theta$ を超える：$\tan\theta>\mu$。<br>
+<b>倒れる条件</b>　重心を通る鉛直線（重力の作用線）が、底面の下側の辺より外にはみ出すと、垂直抗力をその辺に移しても重力のモーメントを打ち消せず、直方体は倒れる。重心は底面の中央から高さ $\dfrac b2$ の所にあり、重力の作用線は斜面に沿って下側へ $\dfrac b2\tan\theta$ ずれた点で底面と交わるので、はみ出す条件は $\dfrac b2\tan\theta>\dfrac a2$、すなわち $\tan\theta>\dfrac ab$。<br>
+したがって、$\theta$ を大きくしていくと、$\mu<\dfrac ab$ なら先にすべり、$\mu>\dfrac ab$ なら先に倒れる。背の高い（$b$ が大きい）物体ほど倒れやすく、重心が低く底面が広いほど安定である。
+</div>
+<div class="box warn">
+・腕の長さを「回転軸から作用点までの距離」としてしまう（作用線までの<b>垂直な</b>距離）。<br>
+・垂直抗力の作用点を、いつも底面の中央と考える。横から押すと作用点は移動し、倒れる直前には端に来る。<br>
+・時計回り・反時計回りの符号を混同する。式を立てる前に正の向きを決める。<br>
+・重心を求めるとき、質量でなく長さや個数で平均してしまう。
+</div>
+<div class="box ans">
+(1) $40\times0.25=10\ \mathrm{N\cdot m}$、$40\times0.25\times\sin30^\circ=5.0\ \mathrm{N\cdot m}$<br>
+(2) $\frac{2.0\times0+4.0\times0.60}{2.0+4.0}=0.40\ \mathrm{m}$<br>
+(3) B のまわり：$N_A\times L=W\times\frac L2+W\times\frac{3L}4$ より $N_A=\frac54W$。鉛直のつりあいから $N_B=2W-\frac54W=\frac34W$<br>
+(4) $5.0\times0.30=1.5\ \mathrm{N\cdot m}$
+</div>
+<!--CH 9-->
+<div class="box point">
+・<b>熱量</b> $Q=mc\Delta T=C\Delta T$（$c$：比熱 $[\mathrm{J/(g\cdot K)}]$、$C=mc$：熱容量 $[\mathrm{J/K}]$）。熱平衡になるまで、高温物体が失う熱量＝低温物体が得る熱量<br>
+・<b>絶対温度</b> $T\ [\mathrm K]=t\ [^\circ\mathrm C]+273$。<b>ボイル・シャルルの法則</b> $\dfrac{pV}{T}=$ 一定、<b>状態方程式</b> $pV=nRT$（$R=8.31\ \mathrm{J/(mol\cdot K)}$）<br>
+・<b>気体分子運動論</b>：$p=\dfrac{Nm\overline{v^2}}{3V}$。状態方程式と比べて $\dfrac12m\overline{v^2}=\dfrac32kT$（$k=\dfrac{R}{N_A}$：ボルツマン定数）<br>
+・単原子分子理想気体の<b>内部エネルギー</b> $U=\dfrac32nRT$（温度だけで決まる）
+</div>
+<h3>講義1　熱と温度・熱量の保存</h3>
+<div class="box lect">
+物質をつくる原子・分子は、絶えず不規則に運動している（<b>熱運動</b>）。<b>温度</b>は熱運動の激しさを表す量で、熱運動が最も穏やかになる限界の温度（約 $-273^\circ\mathrm C$）を $0\ \mathrm K$ とする目盛りが<b>絶対温度</b>（単位 $\mathrm K$）。温度差 $1\ \mathrm K$ と $1^\circ\mathrm C$ は等しい。<br>
+温度の異なる物体を接触させると、高温側から低温側へエネルギーが移り、やがて同じ温度（<b>熱平衡</b>）になる。この移動するエネルギーが<b>熱</b>で、その量が<b>熱量</b> $[\mathrm J]$。物体の温度を $1\ \mathrm K$ 上げる熱量が<b>熱容量</b> $C\ [\mathrm{J/K}]$、物質 $1\ \mathrm g$ の温度を $1\ \mathrm K$ 上げる熱量が<b>比熱</b> $c\ [\mathrm{J/(g\cdot K)}]$ で、$Q=mc\Delta T$。<br>
+外部との熱の出入りがなければ、<b>高温物体が失った熱量＝低温物体が得た熱量</b>（熱量の保存）。融解・沸騰などの状態変化の間は、温度が一定のまま<b>潜熱</b>（融解熱・蒸発熱）を吸収する。
+</div>
+<div class="box ex">
+熱容量 $84\ \mathrm{J/K}$ の容器に $20^\circ\mathrm C$ の水 $100\ \mathrm g$ を入れ、$80^\circ\mathrm C$ に熱した質量 $100\ \mathrm g$ の金属球を入れたところ、全体が $25^\circ\mathrm C$ になった。水の比熱を $4.2\ \mathrm{J/(g\cdot K)}$ とし、外部との熱の出入りはないものとして、金属の比熱を求めよ。
+<div class="solx"><b>解</b>　水と容器が得た熱量は $(100\times4.2+84)\times(25-20)=2520\ \mathrm J$。金属が失った熱量は $100\times c\times(80-25)=5500c$。<br>
+両者が等しいので $c=\dfrac{2520}{5500}\fallingdotseq\boldsymbol{0.46\ \mathrm{J/(g\cdot K)}}$</div>
+</div>
+<h3>講義2　気体の法則と状態方程式</h3>
+<div class="box lect">
+一定量の気体について、<b>ボイルの法則</b>（温度一定で $pV=$ 一定）と<b>シャルルの法則</b>（圧力一定で $\dfrac VT=$ 一定）をまとめると<b>ボイル・シャルルの法則</b> $\dfrac{pV}{T}=$ 一定。この一定値は物質量 $n$ に比例し、$1\ \mathrm{mol}$ あたりの値が<b>気体定数</b> $R=8.31\ \mathrm{J/(mol\cdot K)}$ である。よって $pV=nRT$（<b>理想気体の状態方程式</b>）。実在の気体も、高温・低圧ではこの式によく従う。<br>
+状態方程式に数値を入れるときは、$p\ [\mathrm{Pa}]$、$V\ [\mathrm{m^3}]$、$T\ [\mathrm K]$ にそろえる（$1\ \mathrm L=1\times10^{-3}\ \mathrm{m^3}$）。
+</div>
+<div class="box ex">
+$27^\circ\mathrm C$、$1.0\times10^5\ \mathrm{Pa}$ で体積 $6.0\ \mathrm L$ の理想気体がある。(1) この気体を $127^\circ\mathrm C$、$2.0\times10^5\ \mathrm{Pa}$ にすると、体積は何 $\mathrm L$ になるか。(2) 気体の物質量を求めよ（$R=8.31\ \mathrm{J/(mol\cdot K)}$）。
+<div class="solx"><b>解</b>　(1) $\dfrac{1.0\times10^5\times6.0}{300}=\dfrac{2.0\times10^5\times V}{400}$ より $V=\boldsymbol{4.0\ \mathrm L}$（比をとる式なので $\mathrm L$ のままでよい）<br>
+(2) $n=\dfrac{pV}{RT}=\dfrac{1.0\times10^5\times6.0\times10^{-3}}{8.31\times300}\fallingdotseq\boldsymbol{0.24\ \mathrm{mol}}$</div>
+</div>
+<h3>講義3　気体分子運動論 ― 圧力の正体</h3>
+<div class="box lect">
+<div class="two"><div>気体の圧力は、多数の分子が壁に衝突して与える力積の平均である。1辺 $L$ の立方体容器に質量 $m$ の分子が $N$ 個入っているとし、分子どうしの衝突は無視、壁との衝突は弾性衝突とする。<br>
+① 速度の $x$ 成分が $v_x$ の分子が壁 S に衝突すると、運動量の $x$ 成分は $mv_x$ から $-mv_x$ に変わり、壁は力積 $2mv_x$ を受ける。<br>
+② この分子は $x$ 方向に $2L$ 進むごとに S に1回衝突するので、時間 $t$ の間に $\dfrac{v_xt}{2L}$ 回衝突する。</div><div><svg class="fig" width="330" height="180" viewBox="0 0 330 180" xmlns="http://www.w3.org/2000/svg"><rect x="40" y="20" width="130" height="130" fill="#fafbfd" stroke="#555" stroke-width="1.4"/><rect x="167" y="20" width="6" height="130" fill="#fde3cc" stroke="#d9701e" stroke-width="1"/><text x="178" y="32" font-size="9.5" text-anchor="start" fill="#d9701e">壁S（面積 <tspan font-family="Liberation Serif,DejaVu Serif,serif" font-size="10.6"><tspan font-style="italic">L</tspan><tspan dy="-4.5" font-size="0.78em"><tspan>2</tspan></tspan><tspan dy="4.5"> </tspan></tspan>）</text><line x1="80" y1="112" x2="170" y2="72" stroke="#999" stroke-width="1" stroke-dasharray="3,2"/><line x1="170" y1="72" x2="92" y2="34" stroke="#999" stroke-width="1" stroke-dasharray="3,2"/><circle cx="80" cy="112" r="5" fill="#cfdcf0" stroke="#1d4e89" stroke-width="1.2"/><line x1="80" y1="112" x2="115.6" y2="96.2" stroke="#1d4e89" stroke-width="1.8"/><polygon points="122,93.3 116.9,99.1 114.3,93.2" fill="#1d4e89"/><text x="118" y="87.3" font-size="12" text-anchor="end" fill="#1d4e89" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">v</tspan></text><line x1="80" y1="112" x2="115" y2="112" stroke="#d9701e" stroke-width="1.4" stroke-dasharray="3,2"/><polygon points="122,112 115,115.2 115,108.8" fill="#d9701e"/><text x="125" y="124" font-size="11.5" text-anchor="start" fill="#d9701e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">v</tspan><tspan dy="3.5" font-size="0.78em"><tspan font-style="italic">x</tspan></tspan><tspan dy="-3.5"> </tspan></text><text x="182" y="90" font-size="9.5" text-anchor="start" fill="#1e1e1e">衝突前の運動量の <tspan font-family="Liberation Serif,DejaVu Serif,serif" font-size="10.6"><tspan font-style="italic">x</tspan></tspan> 成分</text><line x1="192" y1="102" x2="225" y2="102" stroke="#1d4e89" stroke-width="1.6"/><polygon points="232,102 225,105.2 225,98.8" fill="#1d4e89"/><text x="236" y="106" font-size="11" text-anchor="start" fill="#1d4e89" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">m</tspan><tspan font-style="italic">v</tspan><tspan dy="3.5" font-size="0.78em"><tspan font-style="italic">x</tspan></tspan><tspan dy="-3.5"> </tspan></text><text x="182" y="124" font-size="9.5" text-anchor="start" fill="#1e1e1e">衝突後</text><line x1="232" y1="136" x2="199" y2="136" stroke="#1d4e89" stroke-width="1.6"/><polygon points="192,136 199,132.8 199,139.2" fill="#1d4e89"/><text x="236" y="140" font-size="11" text-anchor="start" fill="#1d4e89" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>−</tspan><tspan font-style="italic">m</tspan><tspan font-style="italic">v</tspan><tspan dy="3.5" font-size="0.78em"><tspan font-style="italic">x</tspan></tspan><tspan dy="-3.5"> </tspan></text><line x1="40" y1="160" x2="170" y2="160" stroke="#555" stroke-width="0.8"/><text x="105" y="172" font-size="11.5" text-anchor="middle" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">L</tspan></text></svg></div></div>
+壁が受ける力積は $2mv_x\times\dfrac{v_xt}{2L}=\dfrac{mv_x^2}{L}t$、平均の力は $\dfrac{mv_x^2}{L}$。<br>
+③ $N$ 個について平均をとる。分子の運動はどの向きも同等なので $\overline{v_x^2}=\overline{v_y^2}=\overline{v_z^2}=\dfrac13\overline{v^2}$。力の合計 $\dfrac{Nm\overline{v^2}}{3L}$ を面積 $L^2$ で割って $p=\dfrac{Nm\overline{v^2}}{3L^3}=\dfrac{Nm\overline{v^2}}{3V}$。<br>
+これを状態方程式 $pV=nRT=\dfrac{N}{N_A}RT$ と比べると、$\dfrac12m\overline{v^2}=\dfrac32\cdot\dfrac{R}{N_A}T=\dfrac32kT$。分子の平均運動エネルギーは<b>絶対温度に比例</b>し、気体の種類によらない。また、<b>二乗平均速度</b>は $\sqrt{\overline{v^2}}=\sqrt{\dfrac{3RT}{M}}$（$M$：モル質量 $[\mathrm{kg/mol}]$）。
+</div>
+<div class="box ex">
+$27^\circ\mathrm C$ の気体について、$R=8.31\ \mathrm{J/(mol\cdot K)}$、ボルツマン定数 $k=1.38\times10^{-23}\ \mathrm{J/K}$ とする。(1) ヘリウム（モル質量 $4.0\times10^{-3}\ \mathrm{kg/mol}$）分子の二乗平均速度を求めよ。(2) 窒素（モル質量 $2.8\times10^{-2}\ \mathrm{kg/mol}$）分子の二乗平均速度を求めよ。(3) 分子1個の平均運動エネルギーを求めよ。
+<div class="solx"><b>解</b>　(1) $\sqrt{\dfrac{3\times8.31\times300}{4.0\times10^{-3}}}\fallingdotseq\boldsymbol{1.4\times10^3\ \mathrm{m/s}}$<br>
+(2) モル質量が7倍なので $\dfrac1{\sqrt7}$ 倍：$\dfrac{1367}{\sqrt7}\fallingdotseq\boldsymbol{5.2\times10^2\ \mathrm{m/s}}$<br>
+(3) $\dfrac32kT=\dfrac32\times1.38\times10^{-23}\times300\fallingdotseq\boldsymbol{6.2\times10^{-21}\ \mathrm J}$（ヘリウムでも窒素でも同じ）</div>
+</div>
+<h3>講義4　内部エネルギー</h3>
+<div class="box lect">
+物体内の分子の運動エネルギーと、分子間の力による位置エネルギーの総和を<b>内部エネルギー</b>という。理想気体では分子間の力を無視するので、内部エネルギーは分子の運動エネルギーの和である。単原子分子（He、Ne、Ar など）では分子1個の平均運動エネルギーが $\dfrac32kT$ なので、$n\ \mathrm{mol}$（$nN_A$ 個）では $U=nN_A\times\dfrac32kT=\dfrac32nRT$。<br>
+<b>理想気体の内部エネルギーは温度だけで決まり</b>、圧力や体積にはよらない。温度が $\Delta T$ 変化すると $\Delta U=\dfrac32nR\Delta T$（単原子分子）。二原子分子では回転の運動エネルギーも加わり、常温では $U=\dfrac52nRT$ となる。
+</div>
+<div class="box ex">
+単原子分子理想気体 $2.0\ \mathrm{mol}$ の温度が $300\ \mathrm K$ から $400\ \mathrm K$ に上がった。内部エネルギーの増加を求めよ（$R=8.31\ \mathrm{J/(mol\cdot K)}$）。
+<div class="solx"><b>解</b>　$\Delta U=\dfrac32nR\Delta T=\dfrac32\times2.0\times8.31\times100\fallingdotseq\boldsymbol{2.5\times10^3\ \mathrm J}$</div>
+</div>
+<div class="box chk">
+(1) 比熱 $0.39\ \mathrm{J/(g\cdot K)}$ の銅 $200\ \mathrm g$ の熱容量を求めよ。また、この銅の温度を $20\ \mathrm K$ 上げるのに必要な熱量を求めよ。<br>
+(2) $0^\circ\mathrm C$ の氷 $50\ \mathrm g$ をすべて $0^\circ\mathrm C$ の水にするのに必要な熱量を求めよ（氷の融解熱 $334\ \mathrm{J/g}$）。<br>
+(3) 一定量の理想気体の体積を一定に保ったまま、温度を $27^\circ\mathrm C$ から $87^\circ\mathrm C$ にすると、圧力は何倍になるか。<br>
+(4) 気体の絶対温度を2倍にすると、分子の二乗平均速度は何倍になるか。
+</div>
+<div class="box aim">
+・状態方程式は「<b>状態ごとに1本</b>」立てる。変化の前後で物質量が同じならボイル・シャルルの法則で比をとると速い（比なら体積は $\mathrm L$ のままでよいが、温度は必ず $\mathrm K$）。<br>
+・ピストンで閉じこめた気体は「<b>ピストンの力のつりあい</b>」で圧力を、つないだ容器は「<b>物質量の和の保存</b>」で扱う。<br>
+・分子運動論の導出（壁が受ける力積 → 衝突回数 → 平均の力 → 圧力）は、記述や空欄補充で頻出。流れを自分で再現できるようにしておく。
+</div>
+<h3 class="deep">講義5　2つの容器をつなぐ ― 内部エネルギーの保存</h3>
+<p>断熱材で囲まれた容器 A（体積 $V$）と B（体積 $2V$）が、コックのついた細い管でつながれている。A には圧力 $p_0$・温度 $T_0$、B には圧力 $4p_0$・温度 $2T_0$ の同じ単原子分子理想気体が入っている。コックを開いて十分に時間がたったときの温度と圧力を求めよう。</p>
+<div class="box lect">
+物質量は $n_A=\dfrac{p_0V}{RT_0}$、$n_B=\dfrac{4p_0\cdot2V}{R\cdot2T_0}=4n_A$。<br>
+全体は断熱されていて容器の体積も変わらないので、気体は外部と熱も仕事もやりとりしない。よって<b>内部エネルギーの和が保存</b>される：<br>
+　$\dfrac32n_ART_0+\dfrac32n_BR\cdot2T_0=\dfrac32(n_A+n_B)RT$　より　$T=\dfrac{n_AT_0+2n_BT_0}{n_A+n_B}=\dfrac{1+8}{5}T_0=\dfrac95T_0$<br>
+圧力は状態方程式 $p\cdot3V=(n_A+n_B)RT=5n_AR\cdot\dfrac95T_0=9p_0V$ より $p=3p_0$。<br>
+実は単原子分子では $U=\dfrac32nRT=\dfrac32pV$ なので、内部エネルギーの保存は $\dfrac32(p_0V+4p_0\cdot2V)=\dfrac32p\cdot3V$ と書け、ただちに $p=3p_0$ が得られる。
+</div>
+<div class="box warn">
+・状態方程式に摂氏温度を代入する。<br>
+・体積を $\mathrm L$ のまま $R=8.31\ \mathrm{J/(mol\cdot K)}$ と組み合わせる（$\mathrm{Pa}$ と $\mathrm{m^3}$ の積が $\mathrm J$）。<br>
+・熱容量（物体全体）と比熱（$1\ \mathrm g$ あたり）を混同する。<br>
+・二乗平均速度が絶対温度に比例するとしてしまう。比例するのは $\overline{v^2}$（平均運動エネルギー）で、$\sqrt{\overline{v^2}}$ は $\sqrt T$ に比例する。
+</div>
+<div class="box ans">
+(1) $C=0.39\times200=78\ \mathrm{J/K}$、$Q=78\times20=1560\fallingdotseq1.6\times10^3\ \mathrm J$<br>
+(2) $50\times334=16700\fallingdotseq1.7\times10^4\ \mathrm J$<br>
+(3) 体積一定なら $p\propto T$。$\frac{273+87}{273+27}=\frac{360}{300}=1.2$ 倍<br>
+(4) $\sqrt{\overline{v^2}}\propto\sqrt T$ より $\sqrt2\fallingdotseq1.4$ 倍
+</div>
+<!--CH 10-->
+<div class="box point">
+・<b>熱力学第1法則</b> $\Delta U=Q+W$（$Q$：気体が吸収した熱量、$W$：気体が外部から<b>された</b>仕事）。気体が外部に<b>した</b>仕事 $W'=-W$ を使えば $Q=\Delta U+W'$<br>
+・気体がする仕事は、圧力一定なら $W'=p\Delta V$、一般には <b>$p$-$V$ グラフの面積</b><br>
+・単原子分子理想気体：定積モル比熱 $C_V=\dfrac32R$、定圧モル比熱 $C_p=\dfrac52R$。<b>マイヤーの関係</b> $C_p=C_V+R$<br>
+・定積 $W=0$、定圧 $W'=nR\Delta T$、等温 $\Delta U=0$、断熱 $Q=0$。<b>熱効率</b> $e=\dfrac{W'}{Q_\text{in}}=1-\dfrac{Q_\text{out}}{Q_\text{in}}$
+</div>
+<h3>講義1　気体がする仕事と熱力学第1法則</h3>
+<div class="box lect">
+<div class="two"><div>断面積 $S$ のピストンを、気体が圧力 $p$ で押しながら $\Delta x$ 動かすとき、気体がする仕事は $W'=pS\Delta x=p\Delta V$。圧力が変わる場合は、短い区間ごとの $p\Delta V$ を足し合わせる。つまり <b>$p$-$V$ グラフと $V$ 軸の間の面積</b>が仕事になる（膨張なら $W'>0$、圧縮なら $W'<0$）。同じ始めと終わりの状態でも、途中の経路が違えば仕事も違う。</div><div><svg class="fig" width="285" height="145" viewBox="0 0 285 145" xmlns="http://www.w3.org/2000/svg"><line x1="35" y1="128" x2="259" y2="128" stroke="#555" stroke-width="1.1"/><polygon points="265,128 259,130.6 259,125.4" fill="#555"/><line x1="35" y1="128" x2="35" y2="19" stroke="#555" stroke-width="1.1"/><polygon points="35,13 37.6,19 32.4,19" fill="#555"/><text x="31" y="141" font-size="11" text-anchor="end" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">O</tspan></text><text x="267" y="142" font-size="11" text-anchor="end" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">V</tspan></text><text x="41" y="21" font-size="11" text-anchor="start" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">p</tspan></text><polygon points="85,25.8 88,29.7 91,33.4 94,36.9 97,40.2 100,43.2 103,46.1 106,48.9 109,51.5 112,54 115,56.3 118,58.6 121,60.7 124,62.7 127,64.7 130,66.5 133,68.3 136,70 139,71.6 142,73.2 145,74.7 148,76.1 151,77.5 154,78.8 157,80.1 160,81.3 163,82.5 166,83.7 169,84.8 172,85.9 175,86.9 178,87.9 181,88.9 184,89.8 187,90.7 190,91.6 193,92.4 196,93.3 199,94.1 202,94.9 205,95.6 208,96.4 211,97.1 214,97.8 217,98.5 220,99.1 223,99.8 226,100.4 229,101 232,101.6 235,102.2 235,128 85,128" fill="#dfe8f5" stroke="none" stroke-width="0"/><polyline points="85,25.8 88,29.7 91,33.4 94,36.9 97,40.2 100,43.2 103,46.1 106,48.9 109,51.5 112,54 115,56.3 118,58.6 121,60.7 124,62.7 127,64.7 130,66.5 133,68.3 136,70 139,71.6 142,73.2 145,74.7 148,76.1 151,77.5 154,78.8 157,80.1 160,81.3 163,82.5 166,83.7 169,84.8 172,85.9 175,86.9 178,87.9 181,88.9 184,89.8 187,90.7 190,91.6 193,92.4 196,93.3 199,94.1 202,94.9 205,95.6 208,96.4 211,97.1 214,97.8 217,98.5 220,99.1 223,99.8 226,100.4 229,101 232,101.6 235,102.2" fill="none" stroke="#1d4e89" stroke-width="2.2"/><rect x="150" y="77" width="12" height="51" fill="#fde3cc" stroke="#d9701e" stroke-width="0.8"/><text x="156" y="71" font-size="10.5" text-anchor="middle" fill="#d9701e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">p</tspan><tspan>Δ</tspan><tspan font-style="italic">V</tspan></text><circle cx="85" cy="25.8" r="3" fill="#1d4e89" stroke="#1d4e89" stroke-width="1.2"/><text x="81" y="21.8" font-size="11.5" text-anchor="end" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">A</tspan></text><circle cx="235" cy="102.2" r="3" fill="#1d4e89" stroke="#1d4e89" stroke-width="1.2"/><text x="239" y="98.2" font-size="11.5" text-anchor="start" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">B</tspan></text><line x1="85" y1="128" x2="85" y2="25.8" stroke="#555" stroke-width="0.7" stroke-dasharray="2,2"/><line x1="235" y1="128" x2="235" y2="102.2" stroke="#555" stroke-width="0.7" stroke-dasharray="2,2"/><text x="200" y="114" font-size="9.5" text-anchor="middle" fill="#1d4e89">面積＝気体がした仕事</text><text x="85" y="142" font-size="11" text-anchor="middle" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">V</tspan><tspan dy="3.5" font-size="0.78em"><tspan>1</tspan></tspan><tspan dy="-3.5"> </tspan></text><text x="235" y="142" font-size="11" text-anchor="middle" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">V</tspan><tspan dy="3.5" font-size="0.78em"><tspan>2</tspan></tspan><tspan dy="-3.5"> </tspan></text></svg></div></div>
+気体の内部エネルギーは、熱を吸収するか、仕事をされると増える。熱まで含めたエネルギー保存則が<b>熱力学第1法則</b> $\Delta U=Q+W$。$Q$ は吸収が正（放出なら負）、$W$ はされた仕事が正。気体がした仕事 $W'$ で書けば $Q=\Delta U+W'$（吸収した熱が、内部エネルギーの増加と外部への仕事に分けられる）。
+</div>
+<div class="box ex">
+単原子分子理想気体が、$p$-$V$ グラフ上で状態 A（$1.0\times10^5\ \mathrm{Pa}$、$2.0\times10^{-3}\ \mathrm{m^3}$）から状態 B（$3.0\times10^5\ \mathrm{Pa}$、$4.0\times10^{-3}\ \mathrm{m^3}$）まで直線的に変化した。(1) 気体がした仕事　(2) 内部エネルギーの変化　(3) 気体が吸収した熱量 を求めよ。
+<div class="solx"><b>解</b>　(1) 台形の面積：$\dfrac{(1.0+3.0)\times10^5}{2}\times2.0\times10^{-3}=\boldsymbol{4.0\times10^2\ \mathrm J}$<br>
+(2) $U=\dfrac32nRT=\dfrac32pV$ より $\Delta U=\dfrac32(p_BV_B-p_AV_A)=\dfrac32\times(1200-200)=\boldsymbol{1.5\times10^3\ \mathrm J}$（増加）<br>
+(3) $Q=\Delta U+W'=1500+400=\boldsymbol{1.9\times10^3\ \mathrm J}$</div>
+</div>
+<h3>講義2　定積変化・定圧変化とモル比熱</h3>
+<div class="box lect">
+$1\ \mathrm{mol}$ の気体の温度を $1\ \mathrm K$ 上げる熱量を<b>モル比熱</b>という。どのように加熱するかで値が異なる。<br>
+<b>定積変化</b>：体積一定なので $W=0$、$Q=\Delta U$。単原子分子では $\Delta U=\dfrac32nR\Delta T$ なので、<b>定積モル比熱</b> $C_V=\dfrac32R$。<br>
+<b>定圧変化</b>：状態方程式より $W'=p\Delta V=nR\Delta T$。$Q=\Delta U+W'=\dfrac32nR\Delta T+nR\Delta T=\dfrac52nR\Delta T$ で、<b>定圧モル比熱</b> $C_p=\dfrac52R$。定圧では膨張して外部に仕事をする分だけ余分に熱が必要で、$C_p=C_V+R$（<b>マイヤーの関係</b>。二原子分子など、他の理想気体でも成り立つ）。<br>
+理想気体の $\Delta U$ は温度だけで決まるから、<b>どんな変化でも $\Delta U=nC_V\Delta T$</b> で計算できる。
+</div>
+<div class="box ex">
+単原子分子理想気体 $1.00\ \mathrm{mol}$ を、圧力一定のまま $300\ \mathrm K$ から $400\ \mathrm K$ まで加熱した（$R=8.31\ \mathrm{J/(mol\cdot K)}$）。(1) 気体がした仕事　(2) 内部エネルギーの増加　(3) 吸収した熱量 を求めよ。また、体積一定で同じだけ温度を上げるときに吸収する熱量を求めよ。
+<div class="solx"><b>解</b>　(1) $W'=nR\Delta T=1.00\times8.31\times100=\boldsymbol{831\ \mathrm J}$　(2) $\Delta U=\dfrac32nR\Delta T\fallingdotseq\boldsymbol{1.25\times10^3\ \mathrm J}$<br>
+(3) $Q=\dfrac52nR\Delta T\fallingdotseq\boldsymbol{2.08\times10^3\ \mathrm J}$。体積一定なら $Q=\Delta U\fallingdotseq\boldsymbol{1.25\times10^3\ \mathrm J}$</div>
+</div>
+<h3>講義3　等温変化と断熱変化</h3>
+<div class="box lect">
+<div class="two"><div><b>等温変化</b>：温度一定なので $\Delta U=0$、$Q=W'$。膨張するとき、吸収した熱をすべて外部への仕事に変える。$p$-$V$ グラフは双曲線（$pV=$ 一定）。<br>
+<b>断熱変化</b>：熱の出入りがない（$Q=0$）ので $\Delta U=W$。断熱圧縮（$W>0$）では温度が上がり、断熱膨張（気体が仕事をする）では温度が下がる。自転車の空気入れが熱くなる、上昇した空気が膨張して冷え雲ができる、などがその例。</div><div><svg class="fig" width="285" height="145" viewBox="0 0 285 145" xmlns="http://www.w3.org/2000/svg"><line x1="35" y1="128" x2="259" y2="128" stroke="#555" stroke-width="1.1"/><polygon points="265,128 259,130.6 259,125.4" fill="#555"/><line x1="35" y1="128" x2="35" y2="16" stroke="#555" stroke-width="1.1"/><polygon points="35,10 37.6,16 32.4,16" fill="#555"/><text x="31" y="141" font-size="11" text-anchor="end" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">O</tspan></text><text x="267" y="142" font-size="11" text-anchor="end" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">V</tspan></text><text x="41" y="18" font-size="11" text-anchor="start" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">p</tspan></text><polyline points="85,23 88,28.9 91,34.2 94,39 97,43.3 100,47.2 103,50.8 106,54.1 109,57.1 112,59.8 115,62.4 118,64.7 121,67 124,69 127,70.9 130,72.7 133,74.4 136,76 139,77.5 142,78.9 145,80.3 148,81.5 151,82.7 154,83.9 157,85 160,86 163,87 166,87.9 169,88.8 172,89.7 175,90.5 178,91.3 181,92 184,92.8 187,93.5 190,94.1 193,94.8 196,95.4 199,96 202,96.6 205,97.1 208,97.7 211,98.2 214,98.7 217,99.2 220,99.6 223,100.1 226,100.5 229,100.9 232,101.4 235,101.8 238,102.1 241,102.5 244,102.9 247,103.2 250,103.6 253,103.9" fill="none" stroke="#1d4e89" stroke-width="2.2"/><polyline points="85,23 88,32.7 91,41.1 94,48.3 97,54.6 100,60.2 103,65.1 106,69.5 109,73.4 112,76.9 115,80 118,82.9 121,85.5 124,87.8 127,90 130,92 133,93.8 136,95.5 139,97 142,98.5 145,99.8 148,101 151,102.2 154,103.3 157,104.3 160,105.2 163,106.1 166,106.9 169,107.7 172,108.4 175,109.1 178,109.8 181,110.4 184,111 187,111.5 190,112.1 193,112.6 196,113 199,113.5 202,113.9 205,114.3 208,114.7 211,115.1 214,115.5 217,115.8 220,116.1 223,116.5 226,116.8 229,117 232,117.3 235,117.6 238,117.8 241,118.1 244,118.3 247,118.5 250,118.8 253,119" fill="none" stroke="#c0392b" stroke-width="2.2"/><circle cx="85" cy="23" r="3" fill="#555" stroke="#555" stroke-width="1.2"/><text x="185" y="85" font-size="9.5" text-anchor="start" fill="#1d4e89">等温変化（<tspan font-family="Liberation Serif,DejaVu Serif,serif" font-size="10.6"><tspan font-style="italic">p</tspan><tspan font-style="italic">V</tspan></tspan> ＝ 一定）</text><text x="165" y="122.6" font-size="9.5" text-anchor="start" fill="#c0392b">断熱変化</text><text x="100" y="19" font-size="9.5" text-anchor="start" fill="#1e1e1e">同じ状態から膨張</text></svg></div></div>
+断熱変化のグラフは等温変化より傾きが急になる。同じ状態から同じだけ膨張させると、断熱では温度も下がる分、圧力がより大きく下がるからである（単原子分子では $pV^{\frac53}=$ 一定が成り立つ：<b>ポアソンの法則</b>）。
+</div>
+<div class="box ex">
+(1) 単原子分子理想気体 $0.20\ \mathrm{mol}$ を断熱的に圧縮したところ、外部から $300\ \mathrm J$ の仕事をされた。内部エネルギーの変化と温度の変化を求めよ（$R=8.31\ \mathrm{J/(mol\cdot K)}$）。(2) 理想気体が等温変化で膨張し、外部に $500\ \mathrm J$ の仕事をした。気体が吸収した熱量を求めよ。
+<div class="solx"><b>解</b>　(1) $Q=0$ より $\Delta U=W=\boldsymbol{300\ \mathrm J}$（増加）。$\dfrac32\times0.20\times8.31\times\Delta T=300$ より $\Delta T\fallingdotseq\boldsymbol{1.2\times10^2\ \mathrm K}$（上昇）<br>
+(2) $\Delta U=0$ より $Q=W'=\boldsymbol{500\ \mathrm J}$</div>
+</div>
+<h3>講義4　熱機関と熱効率</h3>
+<div class="box lect">
+<div class="two"><div>熱を受け取って仕事をし、もとの状態に戻ることをくり返す装置が<b>熱機関</b>（ガソリンエンジン、蒸気機関など）。1サイクルでもとに戻るので $\Delta U=0$。第1法則より、<b>正味の仕事 $W'$ ＝吸収した熱量 $Q_\text{in}$ － 放出した熱量 $Q_\text{out}$</b>。$p$-$V$ グラフでは、サイクルが囲む面積が正味の仕事（時計回りなら正）である。<br>
+<b>熱効率</b> $e=\dfrac{W'}{Q_\text{in}}=\dfrac{Q_\text{in}-Q_\text{out}}{Q_\text{in}}$。熱機関は必ず低温側へ熱を捨てるので、$e<1$。</div><div><svg class="fig" width="270" height="160" viewBox="0 0 270 160" xmlns="http://www.w3.org/2000/svg"><line x1="40" y1="140" x2="236.5" y2="140" stroke="#555" stroke-width="1.1"/><polygon points="242.5,140 236.5,142.6 236.5,137.4" fill="#555"/><line x1="40" y1="140" x2="40" y2="16" stroke="#555" stroke-width="1.1"/><polygon points="40,10 42.6,16 37.4,16" fill="#555"/><text x="36" y="153" font-size="11" text-anchor="end" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">O</tspan></text><text x="244.5" y="154" font-size="11" text-anchor="end" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">V</tspan></text><text x="46" y="18" font-size="11" text-anchor="start" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">p</tspan></text><polygon points="115,90 115,40 190,40 190,90" fill="#fde3cc" stroke="none" stroke-width="0"/><line x1="115" y1="90" x2="115" y2="40" stroke="#1d4e89" stroke-width="2.2"/><line x1="115" y1="71" x2="115" y2="66" stroke="#1d4e89" stroke-width="2.2"/><polygon points="115,58 118.8,66 111.2,66" fill="#1d4e89"/><line x1="115" y1="40" x2="190" y2="40" stroke="#1d4e89" stroke-width="2.2"/><line x1="146.5" y1="40" x2="151.5" y2="40" stroke="#1d4e89" stroke-width="2.2"/><polygon points="159.5,40 151.5,43.8 151.5,36.2" fill="#1d4e89"/><line x1="190" y1="40" x2="190" y2="90" stroke="#1d4e89" stroke-width="2.2"/><line x1="190" y1="59" x2="190" y2="64" stroke="#1d4e89" stroke-width="2.2"/><polygon points="190,72 186.2,64 193.8,64" fill="#1d4e89"/><line x1="190" y1="90" x2="115" y2="90" stroke="#1d4e89" stroke-width="2.2"/><line x1="158.5" y1="90" x2="153.5" y2="90" stroke="#1d4e89" stroke-width="2.2"/><polygon points="145.5,90 153.5,86.2 153.5,93.8" fill="#1d4e89"/><circle cx="115" cy="90" r="3" fill="#1d4e89" stroke="#1d4e89" stroke-width="1.2"/><text x="109" y="104" font-size="12" text-anchor="end" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">A</tspan></text><circle cx="115" cy="40" r="3" fill="#1d4e89" stroke="#1d4e89" stroke-width="1.2"/><text x="109" y="35" font-size="12" text-anchor="end" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">B</tspan></text><circle cx="190" cy="40" r="3" fill="#1d4e89" stroke="#1d4e89" stroke-width="1.2"/><text x="196" y="35" font-size="12" text-anchor="start" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">C</tspan></text><circle cx="190" cy="90" r="3" fill="#1d4e89" stroke="#1d4e89" stroke-width="1.2"/><text x="196" y="104" font-size="12" text-anchor="start" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">D</tspan></text><line x1="115" y1="140" x2="115" y2="90" stroke="#555" stroke-width="0.7" stroke-dasharray="2,2"/><text x="115" y="154" font-size="11" text-anchor="middle" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">V</tspan><tspan dy="3.5" font-size="0.78em"><tspan>0</tspan></tspan><tspan dy="-3.5"> </tspan></text><line x1="190" y1="140" x2="190" y2="90" stroke="#555" stroke-width="0.7" stroke-dasharray="2,2"/><text x="190" y="154" font-size="11" text-anchor="middle" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>2</tspan><tspan font-style="italic">V</tspan><tspan dy="3.5" font-size="0.78em"><tspan>0</tspan></tspan><tspan dy="-3.5"> </tspan></text><line x1="40" y1="90" x2="115" y2="90" stroke="#555" stroke-width="0.7" stroke-dasharray="2,2"/><text x="36" y="94" font-size="11" text-anchor="end" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">p</tspan><tspan dy="3.5" font-size="0.78em"><tspan>0</tspan></tspan><tspan dy="-3.5"> </tspan></text><line x1="40" y1="40" x2="115" y2="40" stroke="#555" stroke-width="0.7" stroke-dasharray="2,2"/><text x="36" y="44" font-size="11" text-anchor="end" fill="#1e1e1e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan>2</tspan><tspan font-style="italic">p</tspan><tspan dy="3.5" font-size="0.78em"><tspan>0</tspan></tspan><tspan dy="-3.5"> </tspan></text><text x="152.5" y="69" font-size="12" text-anchor="middle" fill="#d9701e" font-family="Liberation Serif,DejaVu Serif,serif"><tspan font-style="italic">W</tspan><tspan>′</tspan></text></svg></div></div>
+<b>計算の手順</b>　①各頂点の温度を状態方程式で求める　②各過程の $Q$ を、定積なら $nC_V\Delta T$、定圧なら $nC_p\Delta T$ で求める　③ $Q>0$ の過程の和が $Q_\text{in}$。
+</div>
+<div class="box ex">
+単原子分子理想気体を、上図のように A→B（定積）→C（定圧）→D（定積）→A（定圧）と変化させる。A の温度を $T_0$ とし、$p_0V_0=nRT_0$ とする。(1) B、C、D の温度を求めよ。(2) 各過程で気体が吸収した熱量を $p_0V_0$ で表せ。(3) このサイクルの熱効率を求めよ。
+<div class="solx"><b>解</b>　(1) $T=\dfrac{pV}{nR}$ より $\boldsymbol{T_B=2T_0}$、$\boldsymbol{T_C=4T_0}$、$\boldsymbol{T_D=2T_0}$<br>
+(2) A→B：$\dfrac32nR(2T_0-T_0)=\boldsymbol{\dfrac32p_0V_0}$　B→C：$\dfrac52nR(4T_0-2T_0)=\boldsymbol{5p_0V_0}$<br>
+C→D：$\dfrac32nR(2T_0-4T_0)=\boldsymbol{-3p_0V_0}$（放出）　D→A：$\dfrac52nR(T_0-2T_0)=\boldsymbol{-\dfrac52p_0V_0}$（放出）<br>
+(3) $Q_\text{in}=\dfrac32p_0V_0+5p_0V_0=\dfrac{13}{2}p_0V_0$。正味の仕事は長方形の面積 $p_0V_0$（$Q_\text{in}-Q_\text{out}=\dfrac{13}2p_0V_0-\dfrac{11}2p_0V_0$ と一致）。$e=\dfrac{p_0V_0}{\frac{13}{2}p_0V_0}=\dfrac2{13}\fallingdotseq\boldsymbol{0.15}$</div>
+</div>
+<div class="box chk">
+(1) 圧力 $2.0\times10^5\ \mathrm{Pa}$ を一定に保ったまま、気体の体積が $3.0\times10^{-3}\ \mathrm{m^3}$ 増加した。気体がした仕事を求めよ。<br>
+(2) 気体に $500\ \mathrm J$ の熱を与えたところ、気体は外部に $200\ \mathrm J$ の仕事をした。内部エネルギーの変化を求めよ。<br>
+(3) 単原子分子理想気体 $2.0\ \mathrm{mol}$ の温度を、体積一定で $50\ \mathrm K$ 上げるのに必要な熱量を求めよ（$R=8.31\ \mathrm{J/(mol\cdot K)}$）。<br>
+(4) 熱効率 $25\ \%$ の熱機関が、1サイクルで $800\ \mathrm J$ の仕事をする。1サイクルで高温熱源から吸収する熱量と、低温熱源に放出する熱量を求めよ。
+</div>
+<div class="box aim">
+・第1法則は<b>符号の約束</b>が命。問題文が「された仕事」か「した仕事」かを確かめ、過程ごとに $Q$、$W'$、$\Delta U$ を表にまとめて解く。<br>
+・$\Delta U$ は温度だけで決まるので<b>経路によらず $nC_V\Delta T$</b>。$Q$ と $W$ は経路による。<br>
+・サイクルの効率は、まず各頂点の温度（または $pV$）を出し、<b>熱を吸収する過程だけ</b>を $Q_\text{in}$ に足す。<br>
+・$p$-$V$ グラフでは、面積が仕事。$pV$ が大きい点（グラフの右上）ほど高温。
+</div>
+<h3 class="deep">講義5　熱力学第2法則と熱効率の限界</h3>
+<p>第1法則（エネルギー保存）に反しない変化でも、実際には自然に起こらないものがある。</p>
+<div class="box lect">
+熱は自然には低温の物体から高温の物体へ移らない。摩擦で熱が発生することは自然に起こるが、その熱が自然に集まって物体を動かすことはない。このように<b>一方向にしか自然に進まない変化</b>を<b>不可逆変化</b>といい、その方向性を述べたものが<b>熱力学第2法則</b>である。その表現の1つが「熱源から受け取った熱を<b>すべて</b>仕事に変えて、もとの状態に戻る熱機関はつくれない」（熱効率 $1$ の熱機関は不可能）。<br>
+理論上の最大の熱効率は、高温熱源と低温熱源の絶対温度 $T_1$、$T_2$ だけで決まり、$e_\text{max}=1-\dfrac{T_2}{T_1}$（カルノーの理想的な熱機関、発展）。例えば $600\ \mathrm K$ と $300\ \mathrm K$ の間ではたらく熱機関の熱効率は $50\ \%$ を超えられない。<br>
+もう1つの例が真空への<b>断熱自由膨張</b>である。断熱容器の仕切りを外して気体を真空中へ広げると、$Q=0$、気体は何も押さないので $W=0$、よって $\Delta U=0$ で、理想気体の温度は変わらない。広がった気体が、自然にもとの側へ集まることはない。
+</div>
+<div class="box warn">
+・$\Delta U=Q+W$ の $W$ を「気体がした仕事」と取り違える（符号が逆になる）。<br>
+・等温変化で「温度が変わらないから $Q=0$」とする。$Q=0$ は断熱変化。等温変化では $\Delta U=0$。<br>
+・定圧変化の熱量に $C_V$ を使う。<br>
+・熱効率の分母を「正味の熱」や「吸収と放出の合計」にする。分母は<b>吸収した熱量だけ</b>。
+</div>
+<div class="box ans">
+(1) $W'=p\Delta V=2.0\times10^5\times3.0\times10^{-3}=6.0\times10^2\ \mathrm J$<br>
+(2) $\Delta U=Q-W'=500-200=300\ \mathrm J$（増加）<br>
+(3) $Q=nC_V\Delta T=2.0\times\frac32\times8.31\times50\fallingdotseq1.2\times10^3\ \mathrm J$<br>
+(4) $Q_\text{in}=\frac{800}{0.25}=3.2\times10^3\ \mathrm J$、$Q_\text{out}=3200-800=2.4\times10^3\ \mathrm J$
+</div>
