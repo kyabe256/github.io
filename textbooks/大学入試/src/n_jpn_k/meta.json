@@ -1,0 +1,101 @@
+{
+ "subject": "国語",
+ "math": false,
+ "color": "#1f6b4a",
+ "color2": "#3f9b72",
+ "subcolor": "#eaf6ef",
+ "parts": [
+  {
+   "title": "第1部 現代文",
+   "sub": "評論・小説・記述・共通テスト",
+   "chapters": [
+    {
+     "no": 1,
+     "title": "評論の読み方"
+    },
+    {
+     "no": 2,
+     "title": "評論の設問"
+    },
+    {
+     "no": 3,
+     "title": "小説の読み方"
+    },
+    {
+     "no": 4,
+     "title": "小説の設問"
+    },
+    {
+     "no": 5,
+     "title": "記述問題の書き方"
+    },
+    {
+     "no": 6,
+     "title": "共通テスト現代文"
+    },
+    {
+     "no": 7,
+     "title": "評論キーワードと語彙・漢字"
+    }
+   ]
+  },
+  {
+   "title": "第2部 古文",
+   "sub": "文法・和歌・古文常識・読解",
+   "chapters": [
+    {
+     "no": 8,
+     "title": "用言の活用"
+    },
+    {
+     "no": 9,
+     "title": "助動詞①（時制・推量）"
+    },
+    {
+     "no": 10,
+     "title": "助動詞②（打消・使役・受身ほか）"
+    },
+    {
+     "no": 11,
+     "title": "助詞と敬語"
+    },
+    {
+     "no": 12,
+     "title": "和歌の修辞"
+    },
+    {
+     "no": 13,
+     "title": "古文常識と読解"
+    },
+    {
+     "no": 14,
+     "title": "古文の設問"
+    }
+   ]
+  },
+  {
+   "title": "第3部 漢文",
+   "sub": "句法・読解・漢詩",
+   "chapters": [
+    {
+     "no": 15,
+     "title": "漢文の基本と句法①"
+    },
+    {
+     "no": 16,
+     "title": "句法②"
+    },
+    {
+     "no": 17,
+     "title": "漢文の読解と漢詩"
+    }
+   ]
+  }
+ ],
+ "intro_html": "<h3>この3冊の使い分け</h3><table class='l w'><tr><th>本</th><th>役割</th><th>使うタイミング</th></tr><tr><td><b>教科書（講義編）</b></td><td>現代文の読み方・古典文法・句法を体系的に理解する</td><td>単元の学習・復習の最初</td></tr><tr><td><b>参考書（解法・整理編）</b></td><td>「こう出たらこう解く」の解法カードで、設問と解き方を結びつける</td><td>問題演習の前後、直前期の総整理</td></tr><tr><td><b>問題集（演習編）</b></td><td>オリジナル文章による読解・文法・記述の演習で実戦力をつける</td><td>講義を読んだ後、くり返し</td></tr></table><p>3冊とも<b>章番号が共通</b>です。古文・漢文の本文は古典作品から、現代文の本文はこの本のための書き下ろしです。</p>",
+ "extra_css": ".kobun { background:#fbfaf3; border-left:4px solid #b08d57; padding:2mm 4mm; margin:2mm 0; font-size:10.6pt; line-height:1.9; } .kanbun { font-size:13pt; letter-spacing:.08em; background:#fbfaf3; border:1px solid #ddd; border-radius:4px; padding:2mm 4mm; margin:2mm 0; line-height:2.1; } .kanbun sub { font-size:9pt; color:#c0392b; vertical-align:-0.4em; margin:0 1px; text-shadow:0.3px 0 0 currentColor; } .kanbun sup { font-size:7.5pt; color:#1f5fa8; vertical-align:0.6em; } .bun { background:#f7f7f7; border-left:4px solid #999; padding:2mm 3.5mm; margin:2mm 0; line-height:1.85; text-indent:1em; } .waka { font-size:11.5pt; letter-spacing:.1em; background:#fbfaf3; padding:1.5mm 4mm; margin:1.5mm 0; }",
+ "kind": "教科書",
+ "title": "大学入試 国語 教科書（講義編）",
+ "cover_title": "現代文・古文・漢文<br>入試国語の講義",
+ "cover_sub": "共通テストから国公立二次・難関私大まで<br>「本文の根拠」で解く読み方を17章で"
+}
