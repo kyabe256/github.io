@@ -1,0 +1,87 @@
+{
+ "subject": "地理",
+ "math": true,
+ "color": "#2f6b4f",
+ "color2": "#5aa07c",
+ "subcolor": "#e9f5ee",
+ "parts": [
+  {
+   "title": "第1部 系統地理",
+   "sub": "",
+   "chapters": [
+    {
+     "no": 1,
+     "title": "地図と地理情報システム"
+    },
+    {
+     "no": 2,
+     "title": "地形"
+    },
+    {
+     "no": 3,
+     "title": "気候"
+    },
+    {
+     "no": 4,
+     "title": "環境問題と防災"
+    },
+    {
+     "no": 5,
+     "title": "農林水産業"
+    },
+    {
+     "no": 6,
+     "title": "資源・エネルギーと工業"
+    },
+    {
+     "no": 7,
+     "title": "交通・通信・貿易と第3次産業"
+    },
+    {
+     "no": 8,
+     "title": "人口"
+    },
+    {
+     "no": 9,
+     "title": "村落と都市"
+    },
+    {
+     "no": 10,
+     "title": "生活文化・民族・宗教"
+    },
+    {
+     "no": 11,
+     "title": "国家と国家群"
+    }
+   ]
+  },
+  {
+   "title": "第2部 地誌",
+   "sub": "",
+   "chapters": [
+    {
+     "no": 12,
+     "title": "アジア"
+    },
+    {
+     "no": 13,
+     "title": "ヨーロッパ・ロシア・アフリカ"
+    },
+    {
+     "no": 14,
+     "title": "南北アメリカ・オセアニア"
+    },
+    {
+     "no": 15,
+     "title": "日本"
+    }
+   ]
+  }
+ ],
+ "intro_html": "<h3>この3冊の使い分け</h3><table class='l w'><tr><th>本</th><th>役割</th><th>使うタイミング</th></tr><tr><td><b>教科書（講義編）</b></td><td>地理総合・地理探究の入試範囲を体系的に理解する</td><td>単元の学習・復習の最初</td></tr><tr><td><b>参考書（解法・整理編）</b></td><td>「こう出たらこう解く」の解法カードで、設問と解き方・知識を結びつける</td><td>問題演習の前後、直前期の総整理</td></tr><tr><td><b>問題集（演習編）</b></td><td>A基本・B標準・C発展の演習で実戦力をつける</td><td>講義を読んだ後、くり返し</td></tr></table><p>3冊とも<b>章番号が共通</b>です（全15章）。</p>",
+ "kind": "参考書",
+ "title": "大学入試 地理 参考書（解法・整理編）",
+ "cover_title": "地理総合・地理探究<br>入試地理 解法の整理",
+ "cover_sub": "「こう出たら → こう解く」<br>入試に必要な解法と知識を、カードで一目に",
+ "extra_css": ".bun { background:#f7f7f7; border-left:4px solid #999; padding:2mm 3.5mm; margin:2mm 0; line-height:1.8; } .shiryo { background:#fbfaf3; border-left:4px solid #b08d57; padding:2mm 3.5mm; margin:2mm 0; line-height:1.8; }"
+}
