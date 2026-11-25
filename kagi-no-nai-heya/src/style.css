@@ -206,7 +206,7 @@ button:focus-visible,.card:focus-visible,[tabindex]:focus-visible{outline:3px so
 #res .rank{font-family:var(--f-disp);font-size:230px;line-height:1;font-weight:800;color:var(--gold);text-shadow:0 0 60px #e3b54a66;animation:cpop .7s .3s both}#res .rank.B{color:var(--blue);text-shadow:0 0 60px #5a9bff66}#res .rank.C{color:var(--dim);text-shadow:none}
 #res table{border-collapse:collapse;font-size:21px;margin:6px auto 18px}#res td{padding:5px 22px;border-bottom:1px solid var(--line);text-align:left}#res td:last-child{text-align:right;font-family:var(--f-mono);color:var(--gold)}
 #res p{margin:0 0 14px;max-width:900px;font-size:21px;line-height:1.7;color:#cfd4e0}
-#title{position:absolute;inset:0;z-index:80;display:flex;flex-direction:column;justify-content:flex-end;padding:0 110px 96px;background:linear-gradient(90deg,#05070cf2 0%,#05070cb3 46%,#05070c40 100%)}
+#title{position:absolute;inset:0;z-index:44;display:flex;flex-direction:column;justify-content:flex-end;padding:0 110px 96px;background:linear-gradient(90deg,#05070cf2 0%,#05070cb3 46%,#05070c40 100%)}
 #title .k{font-size:21px;letter-spacing:.5em;color:var(--gold);margin-bottom:14px}
 #title h1{margin:0;font-family:var(--f-disp);font-size:150px;font-weight:800;letter-spacing:.08em;line-height:1.05;text-shadow:0 6px 30px #000}
 #title h1 em{font-style:normal;color:var(--blue);text-shadow:0 0 40px #5a9bff99}
@@ -236,3 +236,19 @@ button:focus-visible,.card:focus-visible,[tabindex]:focus-visible{outline:3px so
 #stage.lite .slot-in{animation-duration:.2s}#stage.lite #tel::after{display:none}
 .bub b.h,.call b.h{display:block}
 #intr .guide{background:#0a0c13e6;border-left:6px solid var(--gold);padding:8px 16px;font-size:19px;color:#f4e6bf}
+
+/* save mark, case select, code */
+#saved{position:absolute;right:28px;top:84px;z-index:21;font-size:15px;color:var(--green);background:#0a0c13cc;border:1px solid #58c98a66;padding:3px 12px;opacity:0;pointer-events:none}#saved.go{animation:savedk 1.8s both}@keyframes savedk{0%{opacity:0}15%,70%{opacity:1}100%{opacity:0}}
+#sel .ov-b{gap:0}
+#sel .chs{width:400px;border-right:1px solid var(--line);overflow-y:auto;padding:10px}
+#sel .chs button{display:grid;grid-template-columns:86px 1fr auto;align-items:center;width:100%;text-align:left;padding:12px 14px;font-size:21px;font-weight:700;border:1px solid #0000;margin-bottom:3px}#sel .chs button b{font-family:var(--f-disp);color:var(--gold);font-size:18px}#sel .chs button small{font-family:var(--f-mono);color:var(--dim);font-size:15px}
+#sel .chs button:hover{background:var(--panel)}#sel .chs button.on{background:var(--panel2);border-color:var(--gold)}
+#sel .cs{flex:1;display:grid;grid-template-columns:1fr 1fr;grid-auto-rows:min-content;gap:12px;padding:16px 22px;overflow-y:auto;align-content:start}
+.ct{display:grid;grid-template-columns:86px 1fr;grid-template-rows:auto auto;column-gap:10px;text-align:left;background:var(--panel);border:1px solid var(--line);padding:12px 16px;position:relative;min-height:92px;transition:transform .12s,border-color .12s}.ct:hover{transform:translateY(-3px);border-color:var(--gold)}
+.ct u{grid-row:1/3;text-decoration:none;font-family:var(--f-disp);font-size:38px;font-weight:800;color:var(--gold);align-self:center}.ct b{font-family:var(--f-disp);font-size:26px;letter-spacing:.04em}.ct small{font-size:15px;color:var(--dim)}
+.ct.on{border-color:var(--gold);background:var(--panel2);box-shadow:inset 6px 0 0 var(--gold)}.ct.na{opacity:.42}.ct.na u{color:var(--dim)}
+.ct .rk{position:absolute;right:14px;top:10px;font-style:normal;font-family:var(--f-disp);font-size:40px;font-weight:800;color:var(--gold)}.ct .rk.B{color:var(--blue)}.ct .rk.C{color:var(--dim)}
+#sel .foot{display:flex;justify-content:space-between;align-items:center;padding:14px 30px;border-top:1px solid var(--line);font-size:22px;min-height:84px}#sel .foot .bt{display:flex;gap:12px}
+#code .ov-b{display:block;overflow-y:auto;padding:22px 60px;font-size:20px;line-height:1.6}#code textarea{width:100%;max-width:1300px;background:var(--panel);color:var(--fg);border:1px solid var(--line);font-family:var(--f-mono);font-size:15px;padding:10px;-webkit-user-select:text;user-select:text}
+#code p{margin:10px 0}
+#sel{background:#070910}#intr .hd b{font-size:22px}
