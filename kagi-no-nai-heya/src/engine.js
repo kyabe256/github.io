@@ -9,7 +9,7 @@ for (const k in SC3) SC3[k](); // fills ANCH
 const SAVE = 'kagi-no-nai-heya-1', OPT = 'kagi-no-nai-heya-opt';
 const stage = $('#stage'), world = $('#world'), bg = $('#bg'), cast = $('#cast'), dlg = $('#dlg'), hud = $('#hud'), bar = $('#bar');
 let G = null, mode = 'title', busy = false, FAST = false, talkId = null, typingNow = false, telWho = null, curBg = null, zone = null, LOG = [];
-let O = { speed: 26, voice: 1, bgm: .4, se: .7, auto: 0 };
+let O = { speed: 26, voice: 1, bgm: .4, se: .7, auto: 0, q: 'auto' }, lite = false;
 try { Object.assign(O, JSON.parse(localStorage.getItem(OPT) || '{}')); } catch (e) {}
 const saveOpt = () => { try { localStorage.setItem(OPT, JSON.stringify(O)); } catch (e) {} };
 const newG = () => ({ v: 1, day: 1, loc: 'genkan', ev: [], evNew: {}, facts: [], hyp: [], links: [], pos: {}, seen: {}, tk: {}, flags: {}, notes: {}, intr: { A: { open: [], done: [], g: 5, clear: 0, n: 0 }, B: { open: [], done: [], g: 5, clear: 0, n: 0 }, C: { open: [], done: [], g: 5, clear: 0, n: 0 } }, miss: 0, brk: 0, hints: 0, wrongRep: 0, rep: {}, sup: {}, hintOn: 0, phase: 'op', score: null });
@@ -17,6 +17,9 @@ const save = () => { if (!G || G.phase === 'op') return; try { localStorage.setI
 const load = () => { try { const g = JSON.parse(localStorage.getItem(SAVE) || 'null'); return g && g.v === 1 ? g : null; } catch (e) { return null; } };
 const has = id => G.ev.includes(id) || G.facts.includes(id) || G.hyp.includes(id);
 
+/* --- drawing load: 'lite' drops filters and most ambient motion; 'auto' picks it for touch or weak devices and switches to it when frames run slow --- */
+function setLite(v){ lite = !!v; stage.classList.toggle('lite', lite); AudioSys.setLite(lite); }
+function initQuality(){ const touch = (navigator.maxTouchPoints || 0) > 0 && matchMedia('(pointer:coarse)').matches, weak = (navigator.hardwareConcurrency || 8) <= 4 || (navigator.deviceMemory || 8) < 4, calm = matchMedia('(prefers-reduced-motion:reduce)').matches; setLite(O.q === 'lite' || (O.q !== 'high' && (touch || weak || calm))); }
 /* --- fit the stage to the window --- */
 function fit(){ const b = $('#fitbox'), s = Math.min(b.clientWidth / 1600, b.clientHeight / 900); stage.style.setProperty('--s', s); stage.style.transform = `translate(-50%,-50%) scale(${s})`; }
 addEventListener('resize', fit); fit(); stage.addEventListener('scroll', () => { stage.scrollTop = 0; stage.scrollLeft = 0; });
@@ -38,9 +41,15 @@ function setSpeaker(who, e){
   for (const g of $$(`.ch[data-id="${who}"]`)){ applyExpr(g, e); const si = g.closest('.slot-in'); const a = { u: 'jump', a: 'shake', d: 'droop', t: 'shiver', s: 'hop' }[e]; if (si && a){ si.classList.remove('jump', 'shake', 'droop', 'shiver', 'hop'); void si.offsetWidth; si.classList.add(a); } }
   if (e === 'a'){ stage.classList.remove('shake'); void stage.offsetWidth; stage.classList.add('shake'); }
 }
+let lastTs = 0, slow = 0, frames = 0, odd = 0;
 function tick(ts){
+  requestAnimationFrame(tick);
+  const dt = ts - lastTs; lastTs = ts;
+  if (O.q === 'auto' && !lite && dt < 1000 && mode !== 'title'){ frames++; if (dt > 42) slow++; if (frames >= 150){ if (slow > 45){ setLite(true); toast('<b>動き</b>重いので、軽い表示に切り替えた'); } frames = slow = 0; } }
+  odd = (odd + 1) % 3; if (lite && odd) return; // about 20 updates a second in light mode
   const t = ts / 1000, lvl = AudioSys.level(), sp = AudioSys.speaking();
   for (const g of $$('.ch')){
+    if (g.closest('[hidden]')) continue;
     const ph = g._ph ?? (g._ph = Math.random() * 6); if (!g._nb) g._nb = t + 1 + Math.random() * 3;
     if (t > g._nb){ g.classList.add('blink'); g._nb = t + 2 + Math.random() * 4; setTimeout(() => g.classList.remove('blink'), 130); }
     const talk = g.dataset.id === talkId; let open = 0;
@@ -53,14 +62,13 @@ function tick(ts){
     if (head) head.style.transform = `translateY(${hy.toFixed(2)}px) rotate(${hr.toFixed(2)}deg)`;
     if (hb) hb.style.transform = `translateY(${hy.toFixed(2)}px) rotate(${(hr * 1.6).toFixed(2)}deg)`;
   }
-  requestAnimationFrame(tick);
 }
 requestAnimationFrame(tick);
 
 /* --- camera (animated viewBox keeps the art sharp at any zoom) --- */
 let camCur = [800, 450, 1], camRaf = 0, camHold = false;
 function applyCam(){ const [x, y, z] = camCur, w = 1600 / z, h = 900 / z, vx = Math.max(0, Math.min(1600 - w, x - w / 2)), vy = Math.max(0, Math.min(900 - h, y - h / 2)); bg.setAttribute('viewBox', `${vx.toFixed(1)} ${vy.toFixed(1)} ${w.toFixed(1)} ${h.toFixed(1)}`); }
-function cam(x, y, z, ms = 700){ cancelAnimationFrame(camRaf); world.classList.toggle('drift', z === 1); if (FAST || !ms){ camCur = [x, y, z]; applyCam(); return Promise.resolve(); }
+function cam(x, y, z, ms = 700){ cancelAnimationFrame(camRaf); world.classList.toggle('drift', z === 1); if (lite) ms = Math.min(ms, 380); if (FAST || !ms){ camCur = [x, y, z]; applyCam(); return Promise.resolve(); }
   return new Promise(res => { const from = camCur.slice(), to = [x, y, z], t0 = performance.now(); const step = now => { const k = Math.min(1, (now - t0) / ms), e = k < .5 ? 4 * k * k * k : 1 - Math.pow(-2 * k + 2, 3) / 2; camCur = from.map((v, i) => v + (to[i] - v) * e); applyCam(); if (k < 1) camRaf = requestAnimationFrame(step); else res(); }; camRaf = requestAnimationFrame(step); }); }
 function setBg(name){ if (curBg === name) return; curBg = name; bg.innerHTML = SC3[name](); const r = RIM[name] || ['#fff5', -4]; stage.style.setProperty('--rim', r[0]); stage.style.setProperty('--rimx', r[1] + 'px'); camCur = [800, 450, 1]; applyCam(); }
 async function fadeTo(fn){ const f = $('#fade'); f.classList.add('on'); await sleep(300); await fn(); await sleep(60); f.classList.remove('on'); await sleep(260); }
@@ -83,7 +91,7 @@ async function say(who, e, text){
   const nar = who === '*', c = CHARS[who];
   if (!nar && who !== telWho) showChar(who);
   talkId = nar ? null : who; setSpeaker(who, e);
-  if (!camHold && !FAST){ const sl = nar ? null : cast.querySelector(`.slot[data-id="${who}"]`), off = !sl ? 0 : sl.classList.contains('p-left') ? -70 : sl.classList.contains('p-center') ? 0 : 70; cam(800 + off, 440, sl ? 1.06 : 1.02, 900); }
+  if (!camHold && !FAST && !lite){ const sl = nar ? null : cast.querySelector(`.slot[data-id="${who}"]`), off = !sl ? 0 : sl.classList.contains('p-left') ? -70 : sl.classList.contains('p-center') ? 0 : 70; cam(800 + off, 440, sl ? 1.06 : 1.02, 900); }
   dlg.hidden = false; dlg.classList.toggle('narr', nar); dlg.classList.remove('wait'); dlg.style.setProperty('--aff', AFF[who] || '#97a0b4');
   $('.nm b', dlg).textContent = nar ? '' : c.name; $('.nm span', dlg).textContent = nar ? '' : (c.role || '');
   const tx = $('.tx', dlg); tx.textContent = ''; LOG.push([nar ? '' : c.name, text]); if (LOG.length > 400) LOG.shift();
@@ -174,7 +182,7 @@ function openIns(sel){ AudioSys.sfx('select'); const ov = el('div', 'ov'); ov.id
   ov.innerHTML = `<div class="ov-h"><h2>証拠<small>ホイールか＋で拡大。つかんで動かす。裏返す。気づいた所を押す。</small></h2><div class="r"><button class="x">閉じる</button></div></div><div class="ov-b"><div class="list"></div><div class="view"><div class="sheet"></div><div class="ctl"><button data-z="-1" aria-label="縮小">−</button><button data-z="1" aria-label="拡大">＋</button><button data-z="0" class="w">戻す</button><button class="w" id="flip">裏返す</button></div><div class="zl"></div></div><div class="info"></div></div>`;
   stage.appendChild(ov); const list = $('.list', ov), view = $('.view', ov), sheet = $('.sheet', ov), info = $('.info', ov); let V = { z: 1, x: 0, y: 0, face: 0 }, vidTimer = 0;
   const apply = () => { sheet.style.transform = `translate(${V.x - 380 * V.z}px,${V.y}px) scale(${V.z})`; $('.zl', ov).textContent = '倍率 ' + V.z.toFixed(1); };
-  const zoomAt = (nz, px, py) => { nz = Math.max(.6, Math.min(5, nz)); const r = view.getBoundingClientRect(), s = r.width / view.offsetWidth, cx = px == null ? view.offsetWidth / 2 : (px - r.left) / s, cy = py == null ? view.offsetHeight / 2 : (py - r.top) / s; const ox = cx - view.offsetWidth / 2 - V.x, oy = cy - 40 - V.y; V.x -= ox * (nz / V.z - 1); V.y -= oy * (nz / V.z - 1); V.z = nz; apply(); };
+  const zoomAt = (nz, px, py) => { nz = Math.max(.6, Math.min(lite ? 2.8 : 3.2, nz)); const r = view.getBoundingClientRect(), s = r.width / view.offsetWidth, cx = px == null ? view.offsetWidth / 2 : (px - r.left) / s, cy = py == null ? view.offsetHeight / 2 : (py - r.top) / s; const ox = cx - view.offsetWidth / 2 - V.x, oy = cy - 40 - V.y; V.x -= ox * (nz / V.z - 1); V.y -= oy * (nz / V.z - 1); V.z = nz; apply(); };
   const renderInfo = () => { const E = EV[insCur], fs = factsOf(insCur).filter(f => G.facts.includes(f)), nt = G.notes[insCur] || []; info.innerHTML = `<h3>${E.n}</h3><p>${E.d}</p><h4>ここから分かった事</h4>` + (fs.length ? fs.map(f => `<div class="fc" style="--c:${CATC[FACTS[f].c]}">${FACTS[f].t}</div>`).join('') : '<p>まだ、何もない。</p>') + (nt.length ? '<h4>気づき</h4>' + nt.map(t => `<div class="nt">${t}</div>`).join('') : '') + (G.hintOn ? `<h4>ヒント</h4><p>この証拠に残る事実：あと${factsOf(insCur).filter(f => !G.facts.includes(f)).length}つ</p>` : ''); };
   const markGot = () => { for (const h of $$('.h', sheet)) if (h.dataset.f && G.facts.includes(h.dataset.f)) h.classList.add('got'); };
   const show = id => { insCur = id; delete G.evNew[id]; clearInterval(vidTimer); const E = EV[id]; V = { z: 1, x: 0, y: 0, face: 0 };
@@ -333,6 +341,7 @@ function openLog(){ const ov = el('div', 'ov'); ov.id = 'log'; ov.innerHTML = `<
 function openSet(){ AudioSys.sfx('select'); const ov = el('div', 'ov'); ov.id = 'set'; const seg = (k, opts, cur) => `<div class="seg" data-k="${k}">${opts.map(o => `<button data-v="${o[0]}" class="${String(cur) === String(o[0]) ? 'on' : ''}">${o[1]}</button>`).join('')}</div>`;
   ov.innerHTML = `<div class="ov-h"><h2>設定</h2><div class="r"><button class="x">閉じる</button></div></div><div class="ov-b">
   <div class="sr"><label>ヒント<small>入にすると、探す場所や筋の手がかりが出る。使うたびに評価が下がる。</small></label>${seg('hint', [[0, '切'], [1, '入']], G ? G.hintOn : 0)}</div>
+  <div class="sr"><label>動き<small>音が途切れる時や、動きが重い時は「軽い」にする。</small></label>${seg('q', [['auto', '自動'], ['high', 'なめらか'], ['lite', '軽い']], O.q)}</div>
   <div class="sr"><label>声</label>${seg('voice', [[1, '入'], [0, '切']], O.voice)}</div>
   <div class="sr"><label for="s-bgm">音楽の大きさ</label><input id="s-bgm" type="range" min="0" max="1" step=".05" value="${O.bgm}"></div>
   <div class="sr"><label for="s-se">効果音の大きさ</label><input id="s-se" type="range" min="0" max="1" step=".05" value="${O.se}"></div>
@@ -341,7 +350,7 @@ function openSet(){ AudioSys.sfx('select'); const ov = el('div', 'ov'); ov.id = 
   <div class="sr"><label>記録<small>これまでの会話を読み返す。</small></label><div class="seg"><button id="s-log">開く</button></div></div>
   <div class="sr"><label>声と音について</label><div class="seg"><button id="s-cred">クレジットを見る</button></div></div>
   <div class="sr"><label>タイトルへ戻る<small>進み具合は、自動で保存されている。</small></label><div class="seg"><button id="s-title">戻る</button></div></div></div>`; stage.appendChild(ov);
-  for (const s of $$('.seg[data-k]', ov)) for (const b of $$('button', s)) b.onclick = () => { const k = s.dataset.k, v = +b.dataset.v; if (k === 'hint'){ if (G){ G.hintOn = v; save(); refreshHud(); } } else { O[k] = v; saveOpt(); applyOpt(); } for (const x of $$('button', s)) x.classList.toggle('on', x === b); AudioSys.sfx('tick'); };
+  for (const s of $$('.seg[data-k]', ov)) for (const b of $$('button', s)) b.onclick = () => { const k = s.dataset.k, v = k === 'q' ? b.dataset.v : +b.dataset.v; if (k === 'hint'){ if (G){ G.hintOn = v; save(); refreshHud(); } } else { O[k] = v; saveOpt(); applyOpt(); if (k === 'q') initQuality(); } for (const x of $$('button', s)) x.classList.toggle('on', x === b); AudioSys.sfx('tick'); };
   $('#s-bgm', ov).oninput = e => { O.bgm = +e.target.value; saveOpt(); applyOpt(); }; $('#s-se', ov).oninput = e => { O.se = +e.target.value; saveOpt(); applyOpt(); AudioSys.sfx('tick'); };
   $('#s-full', ov).onclick = () => { try { (document.fullscreenElement ? document.exitFullscreen() : document.documentElement.requestFullscreen()).catch(() => toast('この画面では、全画面にできない', 1)); } catch (e) { toast('この画面では、全画面にできない', 1); } };
   $('#s-log', ov).onclick = openLog; $('#s-cred', ov).onclick = openCred; $('#s-title', ov).onclick = () => { if (busy && mode !== 'intr') { toast('会話が終わってから戻る', 1); return; } save(); ov.remove(); showTitle(); };
@@ -359,4 +368,5 @@ $('#t-ev').onclick = () => { if (!busy || mode === 'intr') openIns(); }; $('#t-b
 $('#a-map').onclick = openMap; $('#a-rep').onclick = () => { if (!busy && mode === 'free') openReport(); };
 window.__g = { get G(){ return G; }, get mode(){ return mode; }, get busy(){ return busy; }, fast(v){ FAST = v; dlgTools(); }, hs(){ const L = LOCS[G.loc]; return activeHs().map(h => { const r = hsRect(L, h), pt = bg.createSVGPoint(); pt.x = r[0] + r[2] / 2; pt.y = r[1] + r[3] / 2; const q = pt.matrixTransform(bg.getScreenCTM()); return { id: h.id, x: q.x, y: q.y, seen: !!G.seen[h.id], enter: h.enter || null, desk: !!h.desk }; }); }, advance: onAdvance };
 if (window.claude && window.claude.hot && window.claude.hot.snapshot) try { window.claude.hot.snapshot(() => ({})); } catch (e) {}
+initQuality();
 showTitle();

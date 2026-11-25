@@ -6,7 +6,7 @@ OUT = os.path.join(H, '..', 'dist3') if os.path.basename(H) == 'v3' else os.path
 rd = lambda p: open(p, encoding='utf-8').read()
 vi = os.path.join(H, 'vi.json'); idx = rd(vi) if os.path.exists(vi) else '{}'
 cr = os.path.join(H, 'credit.txt'); credit = rd(cr).strip() if os.path.exists(cr) else 'VOICEVOX'
-js = '\n'.join([rd(os.path.join(V2, 'chars.js')), rd(os.path.join(V2, 'parse.js')), rd(os.path.join(V2, 'audio.js')), rd(os.path.join(H, 'scenes3.js')), rd(os.path.join(H, 'data.js')),
+js = '\n'.join([rd(os.path.join(V2, 'chars.js')), rd(os.path.join(V2, 'parse.js')), rd(os.path.join(H, 'audio3.js')), rd(os.path.join(H, 'scenes3.js')), rd(os.path.join(H, 'data.js')),
   'const STORY_TXT = ' + json.dumps(rd(os.path.join(H, 'story.txt')), ensure_ascii=False) + ';', 'const VIDX = ' + idx + ';', 'const CREDIT = ' + json.dumps(credit, ensure_ascii=False) + ';', rd(os.path.join(H, 'engine.js'))])
 js = js.replace('</script>', '<\\/script>')
 page = rd(os.path.join(H, 'page.html')).replace('/*CSS*/', rd(os.path.join(H, 'style.css'))).replace('/*JS*/', js)
