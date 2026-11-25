@@ -22,7 +22,7 @@ for (const id of ids){
   for (const h in D.HYPS){ used.add(h); for (const alt of D.HYPS[h].need) for (const x of alt) if (!D.FACTS[x] && !D.HYPS[x]) err(`hyp ${h} needs ${x}`); }
   const I = D.INTR.A; if (!I) err('no interrogation'); else { if (!D.LOCS[I.at]) err('intr at ' + I.at); if (!who[I.foe]) err('foe ' + I.foe); if (I.miss.length !== 2) err('need 2 @miss'); if (S.intr) used.add('intr'); I.miss.forEach(m => used.add(m)); if (!I.need.length) err('no contradictions');
     for (const s in I.st){ const st = I.st[s]; used.add(s); used.add(st.p); if (!S[st.p].length) err(`${s}: no press line`); if (st.ok){ used.add(st.o); if (!S[st.o].length) err(`${s}: no objection lines`); if (!st.hint) err(`${s}: no hint`); for (const x of st.ok) if (!own(x)) err(`${s} ok ${x}`); for (const n of st.ans) if (!(n >= 0 && n < st.ph.length)) err(`${s} ans ${n}`); for (const x in st.near || {}){ used.add(st.near[x]); if (!own(x)) err(`${s} near ${x}`); } } } }
-  if (D.REPORT.length < 2) err('report needs 2+ fields'); for (const R of D.REPORT){ if (R.a === 'o-1') err('report field without *: ' + R.q); if (!R.sup.length) err('report field without support: ' + R.q); for (const x of R.sup) if (!own(x)) err(`report sup ${x}`); }
+  if (D.REPORT.length < 2) err('report needs 2+ fields'); if (D.REPORT[0] && D.REPORT[0].a === 'o-1') err('first report field must have *'); if (S.last) used.add('last'); for (const R of D.REPORT){ if (R.a === 'o-1'){ for (const o of R.opts){ const b = 'pick_' + R.k + '_' + o[0]; if (S[b]) used.add(b); else err('no block ' + b); } continue; } if (!R.sup.length) err('report field without support: ' + R.q); for (const x of R.sup) if (!own(x)) err(`report sup ${x}`); }
   for (const e of D.REL){ if (!who[e.a] || !who[e.b]) err(`rel ${e.a} ${e.b}`); if (e.need && !own(e.need)) err('rel need ' + e.need); }
   for (const b in S) if (!used.has(b) && !['x_near', 'x_break'].includes(b)) err('unused block ' + b);
   // solve it: what can a player reach?
@@ -39,7 +39,7 @@ for (const id of ids){
   for (const e in D.EV) if (!have.has(e)) err('evidence cannot be obtained: ' + e);
   for (const f in D.FACTS) if (!have.has(f)) err('fact cannot be obtained: ' + f);
   for (const h in D.HYPS) if (!have.has(h)) err('hypothesis cannot be formed: ' + h);
-  for (const R of D.REPORT) if (!R.sup.some(x => have.has(x))) err('no obtainable support for ' + R.q);
+  for (const R of D.REPORT) if (R.a !== 'o-1' && !R.sup.some(x => have.has(x))) err('no obtainable support for ' + R.q);
   console.log(`${id} ${bad ? bad + ' problems' : 'OK'} | ${D.title} | ev ${Object.keys(D.EV).length} facts ${Object.keys(D.FACTS).length} hyps ${Object.keys(D.HYPS).length} st ${I ? Object.keys(I.st).length : 0} rep ${D.REPORT.length}`);
 }
 console.log(total ? `${total} problems` : 'ALL OK', '| cases', ids.length, '| voiced lines', lines); process.exit(total ? 1 : 0);

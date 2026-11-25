@@ -253,3 +253,6 @@ button:focus-visible,.card:focus-visible,[tabindex]:focus-visible{outline:3px so
 #code p{margin:10px 0}
 #sel{background:#070910}#intr .hd b{font-size:22px}
 .paper tr.h.got td,.paper p.h.got,.bub.h.got{background:#e3b54a3d;box-shadow:inset 4px 0 0 #b8862a}.bub.me.h.got{background:#2f6fe0;box-shadow:inset 0 0 0 3px #e3b54a}
+
+.fr.open .sp{display:none}
+.fr.open h4::after{content:'正しい答えは、ない。決めるのは、あなた。';display:block;margin-top:8px;font-size:13px;font-weight:400;letter-spacing:0;line-height:1.5;opacity:.75}
