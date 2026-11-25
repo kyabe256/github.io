@@ -235,3 +235,4 @@ button:focus-visible,.card:focus-visible,[tabindex]:focus-visible{outline:3px so
 #stage.lite #brd svg.strings path{filter:none}#stage.lite #ins .face{box-shadow:none}
 #stage.lite .slot-in{animation-duration:.2s}#stage.lite #tel::after{display:none}
 .bub b.h,.call b.h{display:block}
+#intr .guide{background:#0a0c13e6;border-left:6px solid var(--gold);padding:8px 16px;font-size:19px;color:#f4e6bf}
