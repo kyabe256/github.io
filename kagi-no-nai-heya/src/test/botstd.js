@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 8767, SHOT = process.env.SHOT;
     const p = await b.newPage({ viewport: { width: 1600, height: 900 } }); let errs = 0;
     p.on('console', m => { if (m.type() === 'error' && !/404|Failed to load resource/.test(m.text())){ errs++; console.log(id, 'console.error', m.text().slice(0, 240)); } }); p.on('pageerror', e => { errs++; console.log(id, 'PAGEERR', e.message, (e.stack || '').split('\n').slice(1, 3).join(' | ')); });
     try {
-      await p.goto(`http://127.0.0.1:${PORT}/index.html`); await p.waitForTimeout(300);
+      await p.goto(`http://127.0.0.1:${PORT}/${process.env.PAGE || "index.html"}`); await p.waitForTimeout(300);
       const idle = () => p.waitForFunction(() => !__g.busy && !document.querySelector('#choice') && (__g.mode === 'free' || (__g.mode === 'intr' && !document.querySelector('#intr').hidden)), null, { timeout: 60000 });
       const G = () => p.evaluate(() => __g.G), cnt = async () => { const g = await G(); return g.ev.length + g.facts.length + g.hyp.length + Object.keys(g.tk).length + Object.keys(g.seen).length; };
       await p.evaluate(id => { __g.fast(true); __g.start(id, false); }, id); await p.waitForTimeout(400); await p.evaluate(() => __g.fast(true)); await p.mouse.click(800, 300); await idle();

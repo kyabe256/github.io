@@ -15,7 +15,7 @@
 @p drake 動くなら -> t_drake
 @p kane 電話を1本 -> t_kane
 @h screen -> s_screen
-@loc taishikan 大使との会談の部屋 bg=oval bgm=tension
+@loc taishikan 大使との会談の部屋 bg=oval flag=us bgm=tension
 @h phone -> s_phone
 @ev denwa 脅しの電話 | 紙 | アイダのスマホに来た電話を、FBIが記録した。
 %text 電話の記録 | 2月20日 23:10

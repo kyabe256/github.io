@@ -15,7 +15,7 @@
 @p galloway 立った理由 -> t_gallo
 @h shelf -> s_shelf
 @h desk -> s_kdesk
-@loc kikitori 聞き取りの部屋 bg=hearing bgm=tension
+@loc kikitori 聞き取りの部屋 bg=hearing flag=us bgm=tension
 @h dais -> s_dais
 @h mic -> s_mic
 @ev kujo 九条の調べの書類 | 紙 | 074の書類。警察庁の、正式の物。

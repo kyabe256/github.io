@@ -19,7 +19,7 @@
 @p park 帳簿を渡す手続き -> t_park
 @h board -> s_board
 @h cabinet -> s_cab
-@loc taishikan 大使との会談の部屋 bg=oval bgm=tension
+@loc taishikan 大使との会談の部屋 bg=oval flag=jp bgm=tension
 @h globe -> s_globe
 @ev shougen 38人の証言 | 紙 | 帰国のあと、1週間かけて聞いた。
 %table 証言のまとめ | 警視庁と特捜部 | 項目,中身,人数

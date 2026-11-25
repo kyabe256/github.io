@@ -3,7 +3,7 @@
 @where ワシントンと東京
 @lead 新しい大統領マッケイと、総理の藤堂が、電話で話す。部屋を開けるには、2つの国の同意が要る。
 @who mackay マッケイ 大統領 f58 x=1 hs=shortf
-@loc kantei 総理官邸の電話の部屋 bg=hearing
+@loc kantei 総理官邸の電話の部屋 bg=hearing flag=both
 @p todo 総理の答え -> t_todo
 @p mochizuki 同意の書類 -> t_mochi
 @p yuki 2つの議会 -> t_yuki

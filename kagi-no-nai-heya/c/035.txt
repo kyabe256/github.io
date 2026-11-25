@@ -10,7 +10,7 @@
 @p fisher 島の取材 -> t_fisher
 @h desk -> s_desk
 @h clocks -> s_clocks
-@loc kaigi 島の議員との会議の部屋 bg=hearing bgm=calm
+@loc kaigi 島の議員との会議の部屋 bg=hearing flag=us bgm=calm
 @p paea 知らされなかった契約 -> t_paea
 @p park 会ってしまった事 -> t_park
 @h screen -> s_screen
@@ -116,7 +116,7 @@ park.n: 島の議会が、騒いでいます。……ただ、その騒ぎの中
 ## s_screen
 *: 画面に、島の地図。さんごの島が、9つ。海の底を、1本のケーブルが通っている。
 ## s_flag
-*: 部屋のすみに、小さな旗。島の国の旗。パエアが、持ってきた物だ。
+*: 部屋の旗の下の机に、小さな旗が、もう1つ。島の国の旗。パエアが、持ってきた物だ。
 ## s_globe
 *: 役員の部屋の地球儀。太平洋の真ん中に、ピンが1本。
 ## end

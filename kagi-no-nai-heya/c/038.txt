@@ -14,12 +14,12 @@
 @h counter -> s_counter
 @h camera -> s_camera
 @h case -> s_case
-@loc gate 搭乗口の前 bg=hall bgm=tension
+@loc gate 搭乗口の前 bg=airport bgm=tension
 @p himuro 逮捕状 -> t_himuro
 @p fujimori かかってきた電話 -> t_fuji
 @p zeikan かばんの検査 -> t_zeikan
-@h lamp -> s_lamp
-@h ext -> s_ext
+@h seats -> s_lamp
+@h window -> s_ext
 @ev koukuuken 航空券の記録 | 紙 | 航空会社が出した。
 %table シアトル行き　22:40発 | 航空会社の記録 | 項目,中身,備考
 *f_three 買った券 | 3枚。藤森と、本社の者が2人 | 3枚とも、きょうの17時に、まとめて買っている
@@ -127,9 +127,9 @@ fujimori.n: 話します。全部。かばんも、開けます。鍵は、妻�
 zeikan.n: 税関です。かばんは、ご本人の同意があれば、ここで開けられます。
 zeikan.k: 奥さまが、番号を言ってくださいました。開けたのは、ご本人です。私は、立ち会っただけです。
 ## s_lamp
-*: 搭乗口の灯り。「搭乗は、22時10分から」。
+*: 搭乗口の前の、椅子。本社の2人が、すわっている。その間の席が、1つ、空いている。
 ## s_ext
-*: 搭乗口の横の、消火の道具。その陰に、トイレの入口。藤森は、ここから、電話をした。
+*: 窓の外に、シアトル行きの機体。窓の手前の柱の陰に、手洗いの入口。藤森は、ここから、電話をした。
 ## end
 dunn.d: ……私は、言われた事をしただけだ。「社長を、今夜のうちに、シアトルへ」。
 dunn.n: 指示は、CEOの部屋から来た。理由は、聞いていない。聞かない事になっている。

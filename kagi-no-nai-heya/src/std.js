@@ -46,7 +46,7 @@ function parseStd(txt){
     if (raw[0] === '@'){ const s1 = raw.indexOf(' '), cmd = s1 < 0 ? raw : raw.slice(0, s1), rest = s1 < 0 ? '' : raw.slice(s1 + 1).trim(); st = cmd === '@st' ? st : null; if (cmd !== '@ev') { ev = null; doc = null; }
       if (cmd === '@when') D.when = rest; else if (cmd === '@where') D.where = rest; else if (cmd === '@lead') D.lead = rest;
       else if (cmd === '@who'){ const p = rest.split(/\s+/); D.chars[p[0]] = autoLook(p[0], p[1], (p[2] || '').replace(/_/g, ' '), p[3] || 'm40', kvs(p.slice(4))); }
-      else if (cmd === '@loc'){ const p = rest.split(/\s+/), o = kvs(p.slice(2)); loc = D.LOCS[p[0]] = { n: p[1].replace(/_/g, '　'), g: '', bg: o.bg, bgm: o.bgm || 'invest', people: [], hs: [] }; if (!D.start) D.start = p[0]; }
+      else if (cmd === '@loc'){ const p = rest.split(/\s+/), o = kvs(p.slice(2)); loc = D.LOCS[p[0]] = { n: p[1].replace(/_/g, '　'), g: '', bg: o.bg, flag: o.flag || null, bgm: o.bgm || 'invest', people: [], hs: [] }; if (!D.start) D.start = p[0]; }
       else if (cmd === '@p'){ const [l, r] = rest.split('->').map(x => x.trim()), p = l.split(/\s+/), rr = r.split(/\s+/), o = kvs(rr.slice(1)); let P = loc.people.find(x => x.id === p[0]); if (!P) loc.people.push(P = { id: p[0], tp: [] }); P.tp.push({ l: p.slice(1).join(' '), b: rr[0], need: o.if || null }); }
       else if (cmd === '@h'){ const [l, r] = rest.split('->').map(x => x.trim()); loc.hs.push({ id: r.split(/\s+/)[0], a: l }); }
       else if (cmd === '@ev'){ const p = sp(rest), h = p[0].split(/\s+/); ev = D.EV[h[0]] = { n: h.slice(1).join(' '), k: p[1] || '紙', d: p[2] || '', docs: [], faces: [] }; doc = null; }

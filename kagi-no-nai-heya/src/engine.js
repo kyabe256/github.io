@@ -101,7 +101,13 @@ let camCur = [800, 450, 1], camRaf = 0, camHold = false;
 function applyCam(){ const [x, y, z] = camCur, w = 1600 / z, h = 900 / z, vx = Math.max(0, Math.min(1600 - w, x - w / 2)), vy = Math.max(0, Math.min(900 - h, y - h / 2)); bg.setAttribute('viewBox', `${vx.toFixed(1)} ${vy.toFixed(1)} ${w.toFixed(1)} ${h.toFixed(1)}`); }
 function cam(x, y, z, ms = 700){ cancelAnimationFrame(camRaf); world.classList.toggle('drift', z === 1); if (lite) ms = Math.min(ms, 380); if (FAST || !ms){ camCur = [x, y, z]; applyCam(); return Promise.resolve(); }
   return new Promise(res => { const from = camCur.slice(), to = [x, y, z], t0 = performance.now(); const step = now => { const k = Math.min(1, (now - t0) / ms), e = k < .5 ? 4 * k * k * k : 1 - Math.pow(-2 * k + 2, 3) / 2; camCur = from.map((v, i) => v + (to[i] - v) * e); applyCam(); if (k < 1) camRaf = requestAnimationFrame(step); else res(); }; camRaf = requestAnimationFrame(step); }); }
-function setBg(name){ if (curBg === name) return; curBg = name; bg.innerHTML = SC3[name](); const r = RIM[name] || ['#fff5', -4]; stage.style.setProperty('--rim', r[0]); stage.style.setProperty('--rimx', r[1] + 'px'); camCur = [800, 450, 1]; applyCam(); }
+let curFlag = null;
+function flagMode(name){ if (name !== 'hearing' && name !== 'oval') return null; if (X011() || !G) return null; const L = (LOCS[G.loc] && LOCS[G.loc].bg === name) ? LOCS[G.loc] : Object.values(LOCS).find(l => l.bg === name); if (!L) return 'none'; if (L.flag) return L.flag;
+  const t = L.n, us = /大統領|ホワイトハウス|上院|議会|議員|FBI|CIA|ラングレー|アメリカ|委員長/.test(t), jp = /総理|官邸|官房|警察庁|総監|国会|特捜|警備局/.test(t); if (us && jp) return 'both'; if (us) return 'us'; if (jp) return 'jp';
+  if ((L.hs || []).some(h => h.a === 'flag')) return /東京|日本|千葉|霞が関/.test((META && META.where) || '') ? 'jp' : 'us'; return 'none'; }
+const bgSame = name => curBg === name && curFlag === flagMode(name);
+function setBg(name){ const fm = flagMode(name); if (curBg === name && curFlag === fm) return; curBg = name; curFlag = fm; bg.innerHTML = SC3[name]();
+  if (fm){ const g = bg.querySelector('.o-flag'); if (g) g.innerHTML = name === 'hearing' ? (fm === 'none' ? '' : fm === 'both' ? flag3(250, 200, false, 400) + flag3(335, 212, true, 388) : flag3(290, 200, fm === 'jp', 400)) : (fm === 'none' ? '' : fm === 'both' ? flag3(1130, 200, false, 400) + flag3(1220, 220, true, 380) : flag3(1175, 210, fm === 'jp', 390)); } const r = RIM[name] || ['#fff5', -4]; stage.style.setProperty('--rim', r[0]); stage.style.setProperty('--rimx', r[1] + 'px'); camCur = [800, 450, 1]; applyCam(); }
 async function fadeTo(fn){ const f = $('#fade'); f.classList.add('on'); await sleep(300); await fn(); await sleep(60); f.classList.remove('on'); await sleep(260); }
 
 /* --- toast, card --- */
@@ -141,7 +147,7 @@ async function play(id){
   hud.hidden = true; bar.hidden = true;
   for (const ln of blk){
     if (ln.cmd){ const a = ln.a;
-      if (ln.cmd === 'bg'){ if (curBg !== a[0]) await fadeTo(() => { setBg(a[0]); hideChar('all'); }); }
+      if (ln.cmd === 'bg'){ if (!bgSame(a[0])) await fadeTo(() => { setBg(a[0]); hideChar('all'); }); }
       else if (ln.cmd === 'bgm') AudioSys.bgm(a[0]);
       else if (ln.cmd === 'sfx') AudioSys.sfx(a[0]);
       else if (ln.cmd === 'card'){ dlg.hidden = true; const [x, y] = a.join(' ').split('｜'); await card(x, y); }
@@ -327,7 +333,7 @@ function pick(title, kinds = ['ev', 'fact', 'hyp']){ return new Promise(res => {
 let IT = null;
 async function cutin(txt, ok){ const c = el('div', ok ? 'ok' : '', `<b>${txt}</b>`); c.id = 'cutin'; stage.appendChild(c); AudioSys.sfx(ok ? 'cutin' : 'shock'); await sleep(900); c.remove(); }
 async function interrogate(key){ const D = INTR[key], S = G.intr[key]; mode = 'intr'; hud.hidden = true; bar.hidden = true;
-  if (curBg !== D.bg) await fadeTo(() => { setBg(D.bg); hideChar('all'); });
+  if (!bgSame(D.bg)) await fadeTo(() => { setBg(D.bg); hideChar('all'); });
   AudioSys.bgm('battle'); showChar(D.foe, 'foe'); S.g = 5;
   if (!S.n){ if (D.intro) await play(D.intro); S.open = D.open.slice(); for (const id of S.open) await play(id); } S.n++;
   endDlg(); showChar(D.foe, 'foe'); IT = { key, sel: null }; drawIntr(); save(); }
