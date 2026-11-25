@@ -1,0 +1,233 @@
+# FILE 009 夜明けの突入
+@intro ニュージャージーの住宅に、ドーンの「管理人」がいる。夜明け前、家は静かだ。合図を出すのは、翼。
+@next FILE 010「夜明けの頭」につづく
+@end S ボーモント「誰も撃たず、誰も撃たれず。総監、これが一番いい朝です」
+@end A 千早「電源、入ったまま写せました！　今度は、画面も撮りました！」
+@end B グラント「総監、次は扉を全部、先に開けます」
+@meta have=tejou
+@view tsubasa 翼 | 物を見て、筋を通す
+@view mendes メンデス | 人に聞く。足で稼ぐ
+@view chihaya 千早 | 機械と記録を読む
+@char kale name=ケイル role=ドーンの「管理人」。31歳 sex=m skin=#f0cdb2 hair=#5a4a3a hs=messy eye=#6a8aa0 es=half tilt=5 jaw=1 brow=2.4 beard=stubble fit=hoodie:#4a4a52 pose=hands v=M,1.06,1.00,0.98,0.80
+@char emily name=エミリー role=ケイルの妻 sex=f skin=#f8dcc8 hair=#c89a5a hs=long eye=#5a9a7a es=soft tilt=5 jaw=0 brow=1.8 fit=shirt:#e8d8c8:#fff pose=stand v=F,0.96,0.99,1.00,0.85
+@ev tejou 伯父の手錠 | 錠 | 父の兄が警視庁で30年使った手錠。
+@ev buhin 道具の部品 | 部 | ケイルのパソコンに、ドーンの道具の元になった部品。電源が入ったまま、全部写した。
+@ev kata 名前のつけ方 | 型 | 部品の名前のつけ方は、数年前に流出した、ある国の情報機関の古い道具と同じ。
+@ev ue ケイルの話 | 上 | ケイルは道具を作っていない。「上」から渡された。上とは会った事がない。月に1度、ドラガンと声だけで話す。
+@ev rokuon 地下の録音 | 録 | 地下の機械に、ドラガンとの通話が全部録音されている。ケイルが、自分を守るために残した。
+@ev kyaku 「客」 | 客 | 録音の中で、ドラガンは「客」の話をする。金ではなく、「特定の病院を止めてくれ」と頼む者がいる。
+@ev shonichi 客の注文 | 初 | 4月の録音。ドラガンの声。「客の注文だ。総監の初日に、目に見える形で」。
+
+@place c1 start=study need=buhin,kata,ue,rokuon,kyaku,shonichi
+@loc study ケイルの書斎 bg=study people=kale,ortega enter=grantmiss:miss
+@hs kpc chihaya 222,144,132,96 ついたままのパソコン -> t_kpc
+@hs tana tsubasa 466,46,140,202 本棚 -> t_tana
+@hs chika tsubasa 36,84,92,190 奥の扉 -> t_chika
+@talk kale mendes 道具は、誰が作ったんだ -> t_t_kale1
+@talk kale mendes 「上」とは、誰だ -> t_t_kale2
+@loc basement 地下の部屋 bg=basement cond=f:chika
+@hs rokuon chihaya 214,114,212,152 回っている機械 -> t_rokuon
+@hs tape2 tsubasa 466,86,138,178 日付のついた棚 -> [rokuon]t_tape t_tape0 | done=shonichi
+
+@battle b1 foe=kale title=ケイルの口を開かせろ bg=study miss=b1_miss,b1_miss2 end=b1_end
+@ph b1_c1 ev kata b1_o1 | あの道具は、ただの犯罪の道具ではない。どこから来たか。「証拠」。
+@ph b1_c2 ev rokuon b1_o2 | ケイルは「上」を信じていなかった。その印がある。「証拠」。
+@ph b1_c3 ev kyaku b1_o3 | 東京の病院は、金で選ばれたのか。「証拠」。
+@ph b1_c4 obs eyes b1_o4 | 「観察」。ケイルは、話しながら、どこかを見ている。 | eyes:目:84,92,90,38 | mouth:口:106,140,52,26 | wrist:手:80,282,92,50
+@ph b1_c5 view mendes b1_o5 | 家族を守る話は、人と話してきた仲間に。「視点」。
+@ph b1_c6 ded 2 b1_o6 | 「推理」。客の注文を、正しく言おう。 | できるだけ高い身代金を取れ | アメリカの病院を先に止めろ | 総監の初日に、目に見える形で
+
+@flow miss
+ play t_miss
+ ask グラントに、何と言う？ | 安全を先に見たんですね -> t_miss_a | あの扉を、いま一緒に見ましょう -> t_miss_b | すぐ言ってくれて、助かります -> t_miss_c
+ play t_miss_after
+@flow main
+ cp
+ play t_intro
+ ask ボーモントに、どう答える？ | 合図を出す -> t_go | もう少しだけ待つ -> t_wait
+ play t_entry
+ banner FILE 009 | 夜明けの突入
+ cp
+ inv c1
+ cp
+ play t_pre
+ battle b1
+ ask ケイルを、どうする？ | 証人にする。家族ごと守る -> t_end_a | 録音を使って、ドラガンを動かす -> t_end_b
+ play t_end2
+
+## t_intro
+@bg njhouse
+@bgm tension
+@card 5月20日（木）5:58｜ニュージャージー州　住宅地
+@tel beaumont
+beaumont.n: 全隊、配置よし。……総監、いつでも行けます。
+beaumont.n: 中に、熱が3つ。大人が2つ。小さいのが1つ。……子どもがいます。
+beaumont.k: 合図をください。待てと言われれば、何時間でも待てます。
+
+## t_go
+tsubasa.k: 行ってください。子どもの部屋は、最後に。静かに。
+## t_wait
+tsubasa.k: 30秒だけ、待ってください。……2階の灯りが、消えてからに。
+@obj mado glow
+beaumont.n: 了解。……消えました。行きます。
+
+## t_entry
+@tel off
+@sfx door
+@obj van shake
+*: ――ドン！　玄関の扉が、内側へ倒れる。
+*: ――黒い影が6つ、音もなく廊下へ流れこむ。
+@tel ortega
+ortega.k: 入ります。……1階、よし。2階、よし。
+ortega.n: 確保。男1名。武器なし。……女性と子どもは、寝室で無事です。
+@tel off
+
+## t_miss
+@show grant center
+@bgm calm
+grant.d: 総監。……すみません、私です。
+grant.d: 書斎の奥の扉を、物置だと判断して、後回しにしました。熱が映らなかったので。
+grant.d: まだ、開けていません。
+
+## t_miss_a
+tsubasa.n: 安全を先に見たんですね。それは、正しい順番です。
+## t_miss_b
+tsubasa.n: あの扉を、いま一緒に見ましょう。
+## t_miss_c
+tsubasa.s: すぐ言ってくれて、助かります。
+
+## t_miss_after
+@sfx door
+@obj chika open
+@show emily left
+emily.t: ……撃たないで。私です。エミリー・ケイル。
+emily.d: 夫を、守りたいんです。あの扉の下に、機械があります。夫が、全部録ってきた物が。
+@hide all
+@bgm invest
+@flag chika
+*: 「移動」に、地下の部屋が増えた。
+
+## t_kpc
+@show chihaya center
+chihaya.k: 電源、入ったままです。……触りません。このまま、中身を写します。今度は、画面も先に撮りました。
+chihaya.n: ありました。ドーンの道具の、元になった部品です。
+@get buhin
+chihaya.u: ……総監。部品の名前のつけ方が、変です。3文字と、数字4けた。
+chihaya.n: 何年か前に流出した、どこかの国の情報機関の道具と、同じつけ方です。
+@hide chihaya
+@get kata
+
+## t_tana
+*: 本棚に、プログラムの本と、家族の写真。写真の中の子どもは、3歳くらい。クレヨンの絵が、はさんである。
+
+## t_chika
+*: 書斎の奥の扉。床に、何度も開け閉めした跡がある。物置にしては、よく使われている。
+
+## t_t_kale1
+kale.d: 作ってない。おれは、配ってただけだ。
+kale.n: 道具は、上から来た。完成した物が、ある朝、届いてた。おれは説明書を書いて、下請けに貸した。
+## t_t_kale2
+kale.t: 知らない。会った事がない。顔も、名前も。
+kale.n: 月に1度、ドラガンと話す。声だけだ。金の話と、次の標的の話。……それだけだ。
+@get ue
+
+## t_rokuon
+@obj rokuon glow
+@show chihaya center
+chihaya.u: 録音機です。……古い型ですけど、回ってます。いまも。
+chihaya.k: ドラガンとの通話、全部入ってます。2年分。日付の札つきで。
+@hide chihaya
+@get rokuon
+
+## t_tape0
+*: 棚に、日付の札。……何が入っているのか、まず機械を確かめたい。
+
+## t_tape
+@obj rokuon spin
+*: 3月の札を取って、機械にかける。ドラガンの声。「今度は、金じゃない。客がいる。特定の病院を、止めてほしいそうだ」。
+@get kyaku
+*: 4月の札。「客の注文だ。総監の初日に、目に見える形で。……画面の隅に、あいさつを入れておけ」。
+@get shonichi
+
+## t_pre
+@hide all
+@bg study
+@bgm tension
+@card 5月20日（木）7:10｜ケイルの書斎
+@show kale center
+kale.d: ……弁護士を呼んでくれ。それまで、何も話さない。
+kale.t: おれは、ただの管理人だ。
+
+## b1_c1
+kale.n: おれは管理人だ。道具を配って、金を数えただけだ。
+## b1_o1
+tsubasa.k: あなたが配った道具の部品は、ある国の情報機関の道具と、同じ名前のつけ方です。
+tsubasa.k: ただの犯罪の道具じゃない。国が作った物です。
+kale.u: ……国？
+
+## b1_c2
+kale.t: 知らない。上から渡された物だ。おれは、上を信じて、言われたとおりに。
+## b1_o2
+tsubasa.k: あなたは、ドラガンとの通話を、2年分、全部録音していました。
+tsubasa.k: 信じている相手の声は、録りません。あなたは、いつか切られると分かっていた。
+kale.d: ……。
+
+## b1_c3
+kale.n: ……東京の病院？　あれは、ただの標的の1つだ。金になる所を選んだだけだ。
+## b1_o3
+tsubasa.k: 3月の録音で、ドラガンは言っています。「今度は、金じゃない。客がいる」。
+tsubasa.k: 東京の病院は、金で選ばれたんじゃない。誰かの注文です。
+kale.t: ……聞いたのか。あれを。
+
+## b1_c4
+kale.t: 客の事は、知らない。本当だ。……おれは、何も。
+## b1_o4
+tsubasa.k: さっきから、本棚ばかり見ていますね。
+tsubasa.k: 家族の写真が、あそこにある。……話せば、家族が危ない。そう思っている。
+kale.u: ……！
+
+## b1_c5
+kale.d: ……ドラガンは、裏切った者の家を知ってる。おれが話せば、エミリーと、あの子が。
+## b1_o5
+mendes.n: ケイル。証人保護って制度がある。名前も、家も、変える。家族ごとだ。
+mendes.n: おれにも子どもがいる。……奥さんは、あんたを守るために、あの扉を自分で開けて出てきたぞ。
+kale.d: エミリーが……。
+
+## b1_c6
+kale.d: ……分かった。4月の注文は、変だった。金の話が、1つもなかった。
+## b1_o6
+tsubasa.k: 「総監の初日に、目に見える形で」。
+tsubasa.k: 客は、私の就任の朝に合わせて、病院を止めさせた。
+
+## b1_end
+@bgm truth
+kale.d: ……そうだ。画面の隅の「ようこそ、総監」も、注文だ。おれが、入れた。
+kale.n: 客が誰かは、ドラガンしか知らない。……あいつは来週、休暇を取る。インド洋の島だ。毎年、同じホテルに。
+@hide all
+
+## b1_miss
+kale.t: ……弁護士を呼んでくれ。
+## b1_miss2
+kale.n: それが、何だって言うんだ。
+
+## t_end_a
+tsubasa.k: ケイルさん。証人になってください。家族は、きょうから、こちらで守ります。
+@show emily center
+emily.d: ……ありがとう。あの子には、まだ、何も分からないの。
+## t_end_b
+tsubasa.k: 録音を使います。ドラガンに、あなたが捕まった事を、まだ知らせません。
+@show mendes center
+mendes.k: 休暇は、予定どおりに取らせる。……島で、待つわけですね。
+
+## t_end2
+@hide all
+@bg njhouse
+@bgm calm
+@card 5月20日（木）8:30｜住宅地
+@show chihaya left
+chihaya.s: 総監！　今回は、電源を落とす前の画面、ちゃんと撮りました。3枚も！
+@show mendes right
+mendes.k: ……総監。「初日に、目に見える形で」。あなたが総監になる日を、前もって知っていた者がいる。
+@hide all
+@bgm tension
+*: 就任の日は、発表の3日前まで、両国の政府の中でしか知られていなかった。

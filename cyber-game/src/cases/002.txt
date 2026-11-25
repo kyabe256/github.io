@@ -1,0 +1,351 @@
+# FILE 002 母の病院
+@intro 夕方の総監室に、母から電話。「ハニー、うちの病院が止まったの」。ワシントンの小児病院へ飛ぶ。
+@next FILE 003「交渉人」につづく
+@end S マーガレット「よくやったわ、ハニー。パンケーキ、5枚にしてあげる」
+@end A リード「いい仕事でした、総監。支局の者も、そう言っています」
+@end B メンデス「総監、次は私ももっと歩きます。靴、買い替えときますよ」
+@view tsubasa 翼 | 物を見て、筋を通す
+@view mendes メンデス | 人に聞く。足で稼ぐ
+@view rosen ローゼン | 数字と記録を読む
+@char rosen name=ローゼン role=FBIの会計担当の捜査官 sex=f skin=#f2d0bb hair=#a8683a hs=wavy eye=#4a9a5a es=soft tilt=-3 jaw=0 brow=1.8 gl=round fit=suit:#3d4a44:#f3efe8 pose=tablet
+@char cruz name=クルス role=夜勤の看護師 sex=f skin=#d8a882 hair=#2a1e1a hs=pony eye=#8a5a2a es=round tilt=5 jaw=0 brow=1.9 blush=1 fit=shirt:#f0a8b8:#fff lan=1 pose=stand v=F,1.02,1.01,1.00,0.80
+@char bates name=ベイツ role=聖ルカ小児病院の情報部長 sex=m skin=#f2d2ba hair=#8a7a6a hs=thin eye=#5a7a8a es=soft tilt=6 jaw=1 brow=2.4 gl=round wr=1 fit=suit:#5a5a66:#f4f7fb:#3a5a7a pose=stand v=M,1.10,1.02,1.02,0.90
+@ev ransom 薬の機械の赤い画面 | 脅 | 聖ルカ小児病院。要求は20ビットコイン。およそ300万ドル。署名は「ドーン」。
+@ev mail 偽の「勤務表」のメール | 信 | 夜中の2時すぎ、クルスに届いた。開いても何も出なかった。1時間たたずに、全部止まった。
+@ev sender メールの送り主 | 元 | 偽のメールは、病院の本物のアドレスから来た。持ち主は、3年前に辞めた職員。
+@ev backup 壊されたバックアップ | 壊 | バックアップは4日前から少しずつ壊れていた。気づいたのは、きのう。
+@ev hoken 保険の契約書 | 保 | サイバー保険の上限は300万ドル。要求の20ビットコインと、同じ額。病院は上限を外に言った事がない。
+@ev gyousha 業者の管理画面の記録 | 業 | 病院のメールは外の業者に預けている。4日前の夜、その管理画面から、誰かが入った。
+@ev belta お金の行き先 | 金 | ローゼンが間違えて追った財布は、ドーンの別の財布と取引していた。その先は、取引所「ベルタ」の入金口。
+@ev douji 入られた時刻 | 時 | 業者の管理画面に入られたのは、ワシントンの4月11日9時31分。東京の時間で22時31分。東京の病院と同じ分。
+
+@place c1 start=ward need=ransom,mail,sender,backup,hoken,gyousha
+@loc ward ナースステーション bg=ward people=margaret,cruz
+@hs kusuri tsubasa 424,106,124,162 薬の機械 -> w_kusuri
+@hs chart any 164,194,146,48 紙のカルテ -> w_chart
+@hs e any 208,40,208,62 子どもたちの絵 -> w_e
+@talk cruz mendes ゆうべ、何がありましたか -> w_t_cruz
+@talk margaret tsubasa 子どもたちは、大丈夫？ -> w_t_mom
+@loc itroom 病院の情報部 bg=itroom people=bates
+@hs mail rosen 244,168,112,86 メールの機械 -> w_mail
+@hs tape tsubasa 494,62,124,190 バックアップの棚 -> w_tape
+@hs keiyaku rosen 400,208,66,44 保険の契約書 -> w_keiyaku
+@talk bates mendes 古いアドレスは、なぜ残っていたんですか -> w_t_bates1
+@talk bates mendes メールの機械は、誰が見ているんですか -> w_t_bates2
+
+@place c2 start=fbi need=belta,douji,f:pittari
+@loc fbi FBIワシントン支局 bg=fbi people=reed,hamilton enter=rosenmiss:miss
+@hs pc2 rosen 392,176,104,82 ローゼンの画面 -> w_belta
+@hs wb tsubasa 244,42,184,116 ホワイトボード -> w_wb | f=pittari
+@talk hamilton tsubasa 入られた時刻は、分かりましたか -> w_t_ham
+@talk reed mendes 理事会は、どう動いていますか -> w_t_reed
+
+@battle b1 foe=cruz title=クルスの思いこみをほどけ bg=ward miss=b1_miss,b1_miss2 end=b1_end
+@ph b1_c1 ev sender b1_o1 | あのメールは、どこから来たのか。「証拠」。
+@ph b1_c2 ded 0 b1_o2 | 「推理」。おかしいと思えなかったのは、誰のせいか。 | 3年前に辞めた人のアドレスを、病院が消していなかった | クルスさんが、疲れていたから | メールの題が、上手だったから
+@ph b1_c3 ev backup b1_o3 | 相手は、いつから中にいたのか。「証拠」。
+@ph b1_c4 view mendes b1_o4 | ここは理屈ではない。「視点」で、人の話を聞いてきた仲間に代わろう。
+@battle b2 foe=bates title=「払うしかない」を崩せ bg=rijikai miss=b2_miss,b2_miss2 end=b2_end
+@ph b2_c1 ev hoken b2_o1 | 要求の額と、同じ数字が書いてある紙がある。「証拠」。
+@ph b2_c2 ev gyousha b2_o2 | バックアップが壊れ始めた日に、何があったか。「証拠」。
+@ph b2_c3 ev douji b2_o3 | この病院だけの話ではない。時刻を見よう。「証拠」。
+@ph b2_c4 ded 1 b2_o4 | 「推理」。払ったあとに、何が残るか。 | ドーンは、金を受け取れば必ず約束を守る | 上限を教えた者が、病院の近くにいる。払っても、その者は残る | 保険会社が、全部払ってくれる
+
+@flow miss
+ play w_miss
+ ask ローゼンに、何と言う？ | 半日で気づいて、すぐ言ってくれた -> w_miss_a | 間違えた先を、一緒に見ましょう -> w_miss_b | すぐ言ってくれて、ありがとう -> w_miss_c
+ play w_miss_after
+@flow main
+ cp
+ play in_tokyo
+ ask 鳴っているスマホを、どうする？ | 電話に出る -> in_call
+ banner FILE 002 | 母の病院
+ cp
+ play w_arrive
+ inv c1
+ cp
+ bg ward
+ play w_pre1
+ ask 翼は、どうする？ | クルスさん、少しだけ聞いてください -> w_pre1b
+ battle b1
+ cp
+ play w_fbi
+ inv c2
+ cp
+ play w_pre2
+ battle b2
+ ask 病院を、どうする？ | 払わない。CISAと72時間で戻す -> w_end_a | 払わない。交渉を引き延ばして、その間に戻す -> w_end_b
+ play w_end2
+ play w_hook
+
+## in_tokyo
+@bg soukan
+@bgm calm
+@card 4月14日（水）18:10｜霞が関　総監室
+@show yuki left
+yuki.n: 総監、きょうの決裁は、これで最後です。おつかれさまでした。
+yuki.s: あ、それと。お父さまから伝言です。「晩めしは、さば」だそうです。
+@sfx phone
+@obj keitai shake
+*: 机の上で、自分のスマホがふるえている。画面には「Mom」。
+
+## in_call
+@tel margaret
+margaret.t: ハニー？　ごめんね、仕事中に。……うちの病院が、止まったの。
+margaret.n: カルテも、薬の機械も、全部。画面が真っ赤で、お金を払えって書いてある。
+margaret.k: 子どもたちは大丈夫。紙で回してる。……でも、長くは、もたないわ。
+@tel off
+@bgm tension
+tsubasa.k: すぐ行きます。結城さん、ワシントン行き、いちばん早い便をお願いします。
+yuki.u: えっ、いまからですか。……はい、取ります。
+yuki.n: さばは、私からお父さまに謝っておきますね。
+
+## w_arrive
+@hide all
+@bg ward
+@bgm invest
+@card 4月15日（木）5:40｜ワシントン　聖ルカ小児病院
+@show margaret center
+margaret.s: 来たのね。……顔色が悪いわ。飛行機で、ちゃんと寝た？
+margaret.n: まあ、あとでいいわ。見て。これが、うちのナースステーションの、いま。
+@show reed left
+reed.n: FBIワシントン支局のリードです、総監。病院の中は、うちの者が押さえました。
+reed.k: 要求は20ビットコイン。およそ300万ドルです。署名は、東京と同じ。「ドーン」。
+@show mendes right
+mendes.n: 総監、こっちでは私が足を使います。ローゼンには、数字と記録を読んでもらう。
+@hide all
+*: この事件の「視点」は、翼、メンデス、ローゼン。メンデスは人に聞く。ローゼンは数字と記録を読む。
+
+## w_kusuri
+@obj kusuri glow
+*: 薬の払い出しの機械。画面は赤い。「20 BTC」。引き出しは、どれも開かない。
+@get ransom
+
+## w_chart
+@obj chart hop
+*: 紙のカルテの山。どの紙にも、手書きの時刻と名前。夜の間に、看護師たちが全部書き起こした。
+@show margaret center
+margaret.n: 新生児の部屋は、紙で回せる。私が決めたの。
+margaret.s: 機械がなくたって、子どもは診られるのよ。昔は、みんなそうだったんだから。
+@hide margaret
+
+## w_e
+*: 壁に、子どもたちの絵。ぞう、ふね、おはな。すみに「かんごしさん　ありがとう」と書いてある。
+
+## w_t_cruz
+cruz.d: ……私なんです。夜中の2時すぎに、メールが来て。「来月の勤務表」って。
+cruz.d: 開いたら、何も出なくて。変だなと思って、閉じました。
+cruz.d: そのあと、1時間もしないうちに、全部止まって。……私が、開けたから。
+@get mail
+
+## w_t_mom
+margaret.n: いまのところ、誰も急変してない。薬は鍵の棚から手で出して、2人で確かめてる。
+margaret.k: でもね、ハニー。理事会は、もう払う話をしてるわ。「300万ドルで子どもが守れるなら」って。
+
+## w_mail
+@obj mail on
+@show rosen center
+rosen.n: 偽の勤務表のメール、ありました。送り主は……あら。病院の本物のアドレスですね。
+rosen.k: 持ち主は、3年前に辞めた事務の職員です。辞めたのに、アドレスだけ生きてます。
+@hide rosen
+@get sender
+
+## w_tape
+@obj tape shake
+*: バックアップの棚。赤い印のついた物が、いくつもある。
+@show bates center
+bates.t: そ、それが……4日前から、少しずつ壊れていまして。気づいたのは、きのうなんです。
+@hide bates
+@get backup
+
+## w_keiyaku
+@obj keiyaku hop
+@show rosen center
+rosen.n: サイバー保険の契約書ですね。払われる上限は……300万ドル。
+rosen.k: 総監。20ビットコインは、きょうの値で、ほぼ300万ドルです。ぴったりですよ、これ。
+@hide rosen
+@get hoken
+
+## w_t_bates1
+bates.t: 消す係が、決まっていなかったんです。人事は「情報部がやる」と言って。
+bates.d: うちは「人事から言われたら消す」と……。結局、誰も消していませんでした。
+
+## w_t_bates2
+bates.n: メールは、外の業者に預けています。管理の画面は、業者の物でして。
+bates.n: 4日前の夜、その画面から、誰かが入っています。業者は「うちの者ではない」と言っています。
+@get gyousha
+
+## w_pre1
+@hide all
+@bgm calm
+@show cruz center
+cruz.d: 看護師長。……私、辞めます。辞めて、責任を取ります。
+@show margaret left
+margaret.t: ナタリー……。
+
+## w_pre1b
+tsubasa.n: クルスさん。辞める前に、少しだけ聞いてください。
+tsubasa.n: 物を、順に見せます。
+
+## b1_c1
+cruz.d: 私がメールを開けたから、病院が止まったんです。
+## b1_o1
+tsubasa.k: あのメールは、病院の本物のアドレスから来ています。
+tsubasa.k: にせ物の印は、どこにもなかった。見分けられた人は、この病院に1人もいません。
+cruz.u: 本物の、アドレス……。
+
+## b1_c2
+cruz.t: でも……おかしいって、思うべきでした。
+## b1_o2
+tsubasa.k: アドレスの持ち主は、3年前に辞めた人です。
+tsubasa.k: 消さなかったのは、病院の側です。あなたじゃない。
+cruz.d: ……。
+
+## b1_c3
+cruz.d: それでも。私が開けなければ、あの人たちは入れなかった。
+## b1_o3
+tsubasa.k: バックアップは、4日前から壊されていました。
+tsubasa.k: あなたがメールを開ける4日前に、相手はもう中にいたんです。メールは、最後の合図にすぎません。
+cruz.u: 4日前、から……？
+
+## b1_c4
+cruz.t: じゃあ……私は、どうしていれば、よかったんですか。
+## b1_o4
+mendes.n: どうもしなくていい。あんたは夜勤で、子ども28人を見てた。それで十分だ。
+mendes.s: それとな。止まったあと、最初に紙のカルテを書き始めたのは、あんただって聞いたぞ。看護師長から。
+cruz.d: ……っ。
+
+## b1_end
+@bgm truth
+margaret.s: ナタリー。辞表は受け取らないわよ。……今夜も夜勤、入れる？
+cruz.d: ……はい。入ります。
+margaret.n: よろしい。……ありがとう、ハニー。
+@hide all
+
+## b1_miss
+cruz.d: ……それは、私のした事と、関係がありません。
+## b1_miss2
+cruz.d: 慰めは、いいんです。
+
+## w_fbi
+@bg fbi
+@bgm invest
+@card 4月15日（木）11:00｜FBIワシントン支局
+@show reed center
+reed.n: 総監、ここが支局です。机は、好きな所をどうぞ。
+@hide all
+
+## w_miss
+@show rosen center
+@bgm calm
+rosen.d: 総監。……すみません、私です。
+rosen.d: ドーンの財布の住所を、1文字、写し間違えました。半日、違う財布を追っていました。
+rosen.d: 数字の人間が、数字を間違えたんです。
+
+## w_miss_a
+tsubasa.s: 半日で気づいて、すぐ言ってくれた。それで十分です。
+## w_miss_b
+tsubasa.s: 間違えた先に、何があったか。一緒に見ましょう。
+## w_miss_c
+tsubasa.s: すぐ言ってくれて、ありがとうございます。助かります。
+
+## w_miss_after
+@show hamilton left
+hamilton.n: ……待ってください、ローゼン。その「違う財布」、動きがありますよ。
+rosen.u: え？
+@hide all
+@bgm invest
+
+## w_belta
+@obj pc2 on
+@show rosen center
+rosen.k: 間違えた財布、見直しました。……ドーンの別の財布と、取引しています。
+rosen.n: 偶然、仲間の財布に当たったんです。お金の先は、1つの入金口。取引所「ベルタ」です。
+@hide rosen
+@get belta
+
+## w_wb
+@obj wb glow
+*: ホワイトボードに、数字を2つ並べて書く。要求は20ビットコイン。保険の上限は300万ドル。同じ額だ。
+*: 病院は、保険の上限を、外に言った事がない。
+
+## w_t_ham
+hamilton.n: 業者の管理画面に入られた時刻が出ました。ワシントンの11日、朝9時31分です。
+hamilton.k: 東京の時間に直すと、11日の22時31分。……総監。東京の病院が開けられたのと、同じ分です。
+@get douji
+
+## w_t_reed
+reed.n: 理事会は、午後に決を採ります。払う方に傾いています。
+reed.k: FBIは勧めません。ですが、止める権限もありません。止めたいなら、理事を納得させる物が要ります。
+
+## w_pre2
+@hide all
+@bg rijikai
+@bgm tension
+@card 15:00｜聖ルカ小児病院　理事会の部屋
+@show bates center
+bates.t: 総監。理事会は、払うと決めかけています。
+bates.t: ここは子どもの病院です。ほかに、道がありません。
+
+## b2_c1
+bates.t: 相手は、金が欲しいだけです。払えば終わります。
+## b2_o1
+tsubasa.k: 要求は20ビットコイン。この病院の保険の上限と、同じ額です。
+tsubasa.k: 相手は、この病院がいくらまで払えるかを、初めから知っていた。
+bates.u: な……なぜ、それを。
+
+## b2_c2
+bates.t: 知っていたとしても、です。バックアップが壊れている以上、払うしかない。
+## b2_o2
+tsubasa.k: 4日前、メールの業者の管理画面から、誰かが入っています。バックアップが壊れ始めたのも、同じ4日前です。
+tsubasa.k: 壊れたんじゃない。壊されたんです。「払うしかない」と思わせるために、4日かけて。
+bates.d: 4日も、前から……。
+
+## b2_c3
+bates.t: ……では、うちの病院だけが、運悪く狙われたと。
+## b2_o3
+tsubasa.k: 入られたのは、東京の病院と同じ分です。2つの病院は、同じ夜に開けられた。
+tsubasa.k: 運じゃありません。選ばれたんです。
+bates.u: 東京と……同じ。
+
+## b2_c4
+bates.d: 選ばれた……。なら総監。払ったら、どうなるんです。
+## b2_o4
+tsubasa.k: 上限を知る事ができたのは、病院と、保険会社と、その間に立つ人だけです。
+tsubasa.k: 払っても、教えた者は残ります。次も、同じ額を取られる。
+
+## b2_end
+@bgm truth
+bates.d: ……理事には、私から話します。
+bates.n: 払わずに戻す道を、聞かせてください。
+
+## b2_miss
+bates.t: 総監、それでは理事は動きません。
+## b2_miss2
+bates.t: 時間がないんです。子どもたちの話をしているんですよ。
+
+## w_end_a
+tsubasa.k: 払いません。CISAと一緒に、72時間で戻します。その間は、紙で。
+## w_end_b
+tsubasa.k: 払いません。交渉は引き延ばします。その間に、CISAと戻します。
+
+## w_end2
+@hide all
+@bg ward
+@bgm calm
+@card 4月15日（木）19:30｜ナースステーション
+@show margaret center
+margaret.s: 72時間ね。紙なら、うちの子たちはもう慣れたわ。ナタリーなんか、字がきれいになったって。
+@show reed left
+reed.n: 総監。理事会が、交渉の専門の会社を雇ったそうです。「パラディン・リスク」。腕はいい、と聞いています。
+@show mendes right
+mendes.k: ……腕がいい、ね。
+@hide reed
+@hide mendes
+margaret.s: ハニー。朝になったら、パンケーキ焼くから。3枚。……4枚にする？
+
+## w_hook
+@hide all
+@bgm tension
+*: 2つの病院は、同じ夜、同じ分に開けられた。
+*: 誰かが、時計を合わせている。

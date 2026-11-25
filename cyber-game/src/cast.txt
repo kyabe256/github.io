@@ -1,0 +1,38 @@
+// shared cast: voices are base(M/F), pitch, formant, speed, intonation
+@view tsubasa 翼 | 物を見て、筋を通す
+@view onodera 小野寺 | 人に聞く。足で稼ぐ
+@view chihaya 千早 | 機械と記録を読む
+@voice tsubasa M,1.34,1.05,1.04,1.10
+@voice kohei M,0.84,0.95,0.90,0.85
+@voice takano M,0.94,0.98,1.02,0.55
+@voice yuki F,0.96,0.99,1.16,1.00
+@voice oconnor F,0.76,0.93,0.96,0.90
+@voice kane F,0.80,0.95,0.88,1.10
+@voice chihaya F,1.10,1.035,1.20,1.25
+@voice hayase M,1.14,1.02,1.18,0.95
+@voice onodera M,0.92,0.96,0.93,1.05
+@voice onizuka M,0.78,0.92,1.00,1.15
+@voice kanri M,1.26,1.06,1.00,0.90
+@voice furukawa M,0.88,0.97,0.90,0.75
+@voice shiraishi M,1.00,1.00,0.84,1.05
+@voice kiryu F,0.88,0.965,1.14,0.85
+@voice miyashita M,1.02,0.99,0.84,0.90
+@voice sawaguchi M,1.18,1.03,1.06,0.80
+@voice mendes M,0.86,0.95,0.96,1.05
+@voice rosen F,0.83,0.945,1.02,0.90
+@voice hori M,1.06,1.01,1.00,1.05
+@voice kacho M,0.93,0.97,0.95,0.95
+@voice news F,1.00,1.00,1.06,0.90
+@char margaret name=マーガレット role=翼の母。聖ルカ小児病院の看護師長 sex=f skin=#f6d6c2 hair=#c8a070 hs=shortf eye=#4a8ac2 es=soft tilt=5 jaw=0 brow=1.8 fit=shirt:#bfe0e8:#fff lan=1 pose=stand sm=1 v=F,0.80,0.94,0.98,1.10
+@char reed name=リード role=FBIワシントン支局長 sex=f skin=#c89a78 hair=#2a2220 hs=bob eye=#7a5a3a es=cool tilt=-3 jaw=0 brow=1.8 fit=suit:#3a3f58:#f4f7fb pin=1 pose=cross v=F,0.84,0.95,0.94,0.80
+@char hamilton name=ハミルトン role=FBIサイバー部長 sex=m skin=#f0cdb2 hair=#6a5a48 hs=neat eye=#4a7a9a es=cool tilt=-2 jaw=1 brow=2.4 gl=rect fit=suit:#44506a:#f4f7fb:#8a2a3a pose=tablet v=M,1.04,1.00,1.10,0.75
+@char shapiro name=シャピロ role=司法省のサイバー担当の検事 sex=m skin=#f4d4bc hair=#3a2e28 hs=messy eye=#5a8a6a es=round tilt=2 jaw=0 brow=2.2 fit=suit:#2e3440:#f4f7fb:#3a5a9a pose=chin v=M,1.20,1.03,1.14,1.00
+@char weiss name=ワイス role=FBI法務顧問 sex=m skin=#f0d0b8 hair=#c4c4c4 hs=thin eye=#6a7a8a es=narrow tilt=4 jaw=1 brow=2.4 browc=#aaaaaa gl=round wr=1 fit=suit:#4a4a52:#f4f7fb:#5a4a3a pose=stand v=M,0.96,0.99,0.86,0.80
+@char nair name=ナイル role=CIAデジタル本部長 sex=f skin=#c08a62 hair=#1e1a22 hs=long eye=#8a5a2a es=cool tilt=-4 jaw=0 brow=1.9 fit=suit:#2a3a3a:#e8f0ee pose=cross v=F,0.90,0.97,1.18,0.90
+@char park name=パーク role=CIAの分析官 sex=f skin=#f6d8c0 hair=#2a2a34 hs=shortf eye=#5a6a8a es=half tilt=0 jaw=0 brow=1.8 fit=suit:#3a4458:#f4f7fb lan=1 pose=tablet v=F,0.92,0.98,1.04,0.70
+@char okafor name=オカフォー role=NSAから出向の分析官 sex=m skin=#8a5e42 hair=#1a1614 hs=buzz eye=#6a4a2a es=soft tilt=3 jaw=1 brow=2.8 gl=round fit=shirt:#d8e0ea:#fff lan=1 pose=stand v=M,0.90,0.96,0.90,0.85
+@char maki name=槙 role=警察庁サイバー特別捜査部長 sex=m skin=#eec8a6 hair=#2a2c32 hs=slick eye=#4a6a5a es=cool tilt=-5 jaw=1 brow=2.8 fit=suit:#30364a:#f4f7fb:#2a5a4a pose=cross v=M,0.98,0.98,1.06,1.00
+@char nonomura name=野々村 role=東京の新聞の記者 sex=f skin=#f8dcc6 hair=#3a2a22 hs=wavy eye=#8a4a3a es=round tilt=-2 jaw=0 brow=1.9 fit=coat:#8a7a5a:#f4f0e6 pose=tablet v=F,0.94,0.98,1.12,1.10
+@char beaumont name=ボーモント role=HRT司令官 sex=m skin=#e8c0a0 hair=#4a4038 hs=buzz eye=#5a7a8a es=narrow tilt=-4 jaw=2 brow=3 wide=1 fit=work:#2e3a2e:#fff:HRT patchc=#f2c230 pose=cross v=M,0.80,0.93,0.94,0.70
+@char ortega name=オルテガ role=FBIのSWAT班長 sex=m skin=#c89a70 hair=#1e1a18 hs=buzz eye=#7a5a3a es=cool tilt=-6 jaw=2 brow=3 wide=1 fit=work:#1d2b4a:#fff:SWAT patchc=#f2c230 pose=stand v=M,0.90,0.95,1.10,0.70
+@char grant name=グラント role=HRTの隊員 sex=m skin=#f0cdb0 hair=#8a6a40 hs=buzz eye=#4a7aa0 es=soft tilt=2 jaw=1 brow=2.6 fit=work:#2e3a2e:#fff:HRT patchc=#f2c230 pose=stand v=M,1.08,1.00,1.04,0.80
