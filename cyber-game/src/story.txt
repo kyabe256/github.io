@@ -1,0 +1,615 @@
+## pro_shop
+@bg kouhei
+@bgm home
+@card 4月12日（月）6:30｜神田　食堂「こうへい」
+@show kohei center
+kohei.n: 食え。卵は甘いほうだ。
+kohei.n: ……上着はそれだけか。きょうは風が冷たいぞ。
+*: 画面の光っている所をタップして、店の中を見てみよう。
+
+## pro_tv
+news.n: きょうから、日米統合サイバー捜査総監の翼氏が、霞が関に登庁します。
+news.n: 20歳。FBI、CIA、警察庁の長を1人で兼ねるのは、世界で初めてです。
+kohei.s: ……テレビのお前は、少し太って見えるな。
+
+## pro_miso
+*: 豆腐とわかめの味噌汁。湯気が立っている。
+kohei.n: 冷めるぞ。話はあとだ。
+
+## pro_tsutsumi
+@obj tsutsumi open
+@sfx get
+kohei.k: 兄貴の手錠だ。警視庁で30年使った。
+kohei.n: お前が持ってろ。使わずに済むなら、それが一番いい。
+@get tejou
+
+## pro_takano
+@sfx door
+@show takano right
+takano.n: おはようございます、総監。警護課の鷹野です。
+takano.n: 車は表に回してあります。7時30分に出ます。
+kohei.n: 行ってこい。……晩めしは、取っておく。
+
+## pro_brief
+@hide all
+@bg kaigi
+@bgm calm
+@card 8:00｜霞が関　警察庁20階　会議室
+@show yuki left
+yuki.n: 秘書官の結城です。日米合同ブリーフィング、画面はもうつながっています。
+@obj screenL on
+oconnor.n: FBI副長官のオコナーです。今夜、全米で病院が3つ、ランサムウェアで止まりました。
+@obj screenR on
+kane.s: CIAのケインです。おはようございます、総監。ラングレーは夜ですが、紅茶はいれてあります。
+@show chihaya right
+chihaya.s: 技官の千早です。24です。総監より4つ上です。
+chihaya.t: ……すみません、いま言う事じゃなかったです。
+@sfx phone
+yuki.u: 総監、警視庁の早瀬課長からです。スピーカーにします。
+@bgm tension
+@tel hayase
+hayase.k: 早瀬です。文京区の東都医科大学病院のシステムが、けさ6時に全部止まりました。
+hayase.k: 画面に身代金の要求。それと、地下2階のサーバー室で、男性が1人亡くなっています。
+hayase.k: 扉は、中から閉まっていました。
+@tel off
+
+## pro_go
+tsubasa.k: 現場へ行きます。千早さん、小野寺さん、一緒に来てください。
+@hide yuki
+@show onodera left
+onodera.n: 承知しました。足で稼ぐのは、私の仕事です。
+chihaya.s: はいっ。機械は、私が見ます。
+
+## c1_arrive
+@hide all
+@bg rouka
+@bgm invest
+@card 9:40｜東都医科大学病院　地下2階
+@show onizuka center
+onizuka.k: 総監ご本人ですか。捜査一課の鬼塚です。
+onizuka.n: 人が死んだら一課です。サイバーかどうかは、そのあとで決めます。
+@show hayase left
+hayase.n: 扉は電子錠です。記録では、ゆうべ22時14分に、情報システム部長の三浦さんの職員証で入っています。
+hayase.n: そのあと、誰も入っていません。出た記録もありません。
+@show kanri right
+kanri.t: けさ6時に、扉が開かなくなりました。消防の人に、横の壁を外してもらったんです。
+onizuka.n: 部長はモニターの前で倒れていました。外傷なし。持病は心臓。
+onizuka.k: 病死でしょう。だが、決めるのは見てからだ。
+@get nyutai
+@hide all
+*: 「調べる」で物を見る。「話す」で人に聞く。「移動」で場所を変える。
+*: 「視点」で、小野寺と千早に代わる。人が変わると、見える物と聞ける話が変わる。
+
+## c1_door
+@show furukawa center
+furukawa.n: 科捜研の古川です。触りません。写真が先です。
+furukawa.k: この錠は、分解すれば、何回開いたかが分かります。1日ください。
+@hide furukawa
+
+## c1_kabe
+*: 消防が外した壁の板。ここから中に入れる。扉そのものは、いまも閉じたままだ。
+
+## c1_jihanki
+@obj jihanki blink
+*: 廊下の突き当たりの自販機。缶コーヒーの列が、1本ぶん減っている。
+
+## c1_reader
+@show chihaya center
+chihaya.k: 入退室の機械ですね。……あれ。記録が、ゆうべの23時40分で終わってます。
+chihaya.t: そのあとは真っ白です。止まったのか、消されたのか、まだ分かりません。
+@hide chihaya
+
+## c1_t_kanri_hito
+kanri.d: 部長は、毎晩、最後まで残る人でした。
+kanri.d: 心臓の薬は、いつも更衣室のロッカーです。サーバー室は、飲食も私物も禁止なので。
+*: 「移動」に、更衣室が増えた。
+
+## c1_t_kanri_tobira
+kanri.n: 扉は去年、新しい電子錠に替えました。中の非常ボタンも、同じ機械につながっています。
+kanri.t: 機械が止まると……中からも、開きません。
+
+## c1_t_onizuka
+onizuka.n: 病死です。争った跡がない。
+onizuka.n: ただ、机の缶コーヒーは気に入りません。サーバー室は、飲食禁止のはずだ。
+
+## c1_t_hayase
+hayase.n: 要求は50ビットコイン。いまの値で7億円ちょっと。期限は48時間です。
+hayase.k: 署名は「ドーン」。世界で、病院ばかりを狙う集団です。
+
+## c1_monitor
+*: 赤い画面。「あなたの病院は暗号化された。50BTC」。残り時間の数字が、1秒ずつ減っていく。
+@get ransom
+
+## c1_coffee
+*: 飲みかけの缶コーヒー。廊下の自販機と同じ銘柄。まだ半分残っている。
+@get coffee
+
+## c1_chair
+@obj chair fall
+@sfx thud
+*: 椅子の脚が1本、曲がっている。扉の内側、取っ手のまわりに、新しい傷がいくつもある。
+@get kizu
+
+## c1_phone
+@obj phone lift
+@show chihaya center
+chihaya.n: 内線、つながりません。……電話の機械ごと、止まってます。0時ちょうどから。
+@hide chihaya
+@get phone
+
+## c1_rack
+@show chihaya center
+chihaya.k: 暗号化は、全部いっぺんじゃないです。順番に止められてます。
+chihaya.n: 順番は、持ち帰って見ます。
+@hide chihaya
+
+## c1_tape
+@show onodera center
+onodera.d: モニターの前。キーボードに手を伸ばした形で、倒れていたそうです。
+onodera.n: 最後まで、何かを打っていたんですね。
+@hide onodera
+
+## c1_locker
+@obj locker open
+@sfx door
+*: 三浦のロッカー。上着と、薬の瓶。「発作の時に1錠」と書いてある。瓶は、ほとんど減っていない。
+@get kusuri
+
+## c1_locker_bench
+*: 長いすに、たたんだ新聞。きのうの夕刊だ。
+
+## c1_prebattle
+@hide all
+@show onizuka center
+@bgm tension
+onizuka.n: 総監。そろそろ、まとめましょう。
+onizuka.k: 持病の発作。争った跡なし。入った記録は本人だけ。
+onizuka.k: ……病死です。事件じゃない。
+
+## c1_prebattle2
+tsubasa.k: 待ってください。それでは、筋が通りません。
+onizuka.s: ほう。なら、聞かせてもらいましょうか。
+onizuka.k: 一課は、物でしか動きませんよ。
+*: 「追及」が始まる。相手の言い分を聞いて、4つの手から選ぶ。
+*: 「証拠」は物を出す。「推理」は答えを言う。「視点」は仲間に代わる。「観察」は相手の動きを見る。
+
+## b1_c1
+onizuka.k: 持病の発作だ。病死で終わりです。
+## b1_o1
+tsubasa.k: 薬は、更衣室のロッカーにありました。ほとんど減っていません。
+tsubasa.k: 発作の人が、薬を取りに行かなかった。なぜです。
+onizuka.u: ……。
+
+## b1_c2
+onizuka.n: 取りに行く間もなく、倒れたんでしょう。
+## b1_o2
+tsubasa.k: 椅子の脚が曲がり、扉の内側は傷だらけです。
+tsubasa.k: 倒れる前に、この人は、扉を開けようとしていた。
+onizuka.t: 椅子で、扉を……。
+
+## b1_c3
+onizuka.k: だが、管理者は言った。扉が止まったのは、けさ6時だ。夜中は開いたはずです。
+## b1_o3
+chihaya.k: 6時は「気づいた時刻」です。止まった時刻じゃありません。
+chihaya.n: 入退室の記録は、23時40分で切れてます。夜中に何が止まったかは、まだ誰も見てません。
+onizuka.t: ……むう。
+
+## b1_c4
+onizuka.n: 開かないなら、電話で助けを呼べばいい。あの部屋には内線がある。
+## b1_o4
+tsubasa.k: 内線は、0時ちょうどに切れています。
+tsubasa.k: 電話の機械ごと、止められていた。
+onizuka.u: 電話まで……。
+
+## b1_c5
+onizuka.k: ……なら総監。あの部屋で、何が起きたと言うんです。
+## b1_o5
+tsubasa.k: 三浦さんは、あの部屋に閉じこめられていた。
+tsubasa.k: 病気で死んだんじゃない。出られなくて、死んだんです。
+
+## b1_end
+@bgm truth
+onizuka.d: ……分かりました。事件です。
+onizuka.k: 一課とサイバー、合同でやりましょう。
+onizuka.n: ただし総監。閉じこめたのが「人」なのか「機械」なのか。そこは、まだ分かりませんよ。
+
+## b1_miss
+onizuka.n: それは、いまの話と関係がありませんな。
+## b1_miss2
+onizuka.s: 総監。物で話してください。
+
+## c2_kasouken
+@hide all
+@bg kasouken
+@bgm calm
+@card 4月13日（火）10:00｜警視庁　科捜研
+@show shiraishi center
+shiraishi.n: 分かった事と、分からない事を、分けて言います。飴、どうぞ。
+@show furukawa left
+furukawa.k: 錠前の回数計は、記録より2回多く回っています。
+furukawa.n: 最後の2回は、ゆうべ22時14分のあとです。
+@get counter
+@show kiryu right
+kiryu.n: 缶コーヒーの飲み口からは、三浦さんのDNAだけです。急ぎで、けさ出ました。
+shiraishi.n: 分からないのは、その2回を誰が回したか。なぜ記録にないか。
+@hide all
+@show onizuka center
+@bgm tension
+onizuka.k: 2回。入って、出た。……誰かがいたんですよ、総監。
+onizuka.a: 閉じこめたのは「人」だ。殺しの線で行きます。
+@hide all
+@bgm invest
+
+## c2_t_furukawa
+furukawa.n: 錠前は、開いた回数を覚えています。誰が開けたかは、覚えていません。
+furukawa.k: ただ、2回の間は短い。回り方の跡で分かります。せいぜい、数分です。
+
+## c2_t_kiryu
+kiryu.n: 解剖の結果が来ました。心臓の発作。外傷なし。
+kiryu.n: 亡くなったのは、朝5時20分ごろです。
+@get kaibou
+
+## c2_t_miyashita
+miyashita.n: 缶の中身は、1つずつ消していきます。毒の有無は、1週間ください。
+miyashita.n: いまのところ、何も出ていません。
+
+## c2_gear
+@obj gear spin
+*: 分解された錠前。小さな歯車の数字が、記録より2つ進んでいる。
+
+## c2_candy
+@obj candy shake
+@show shiraishi center
+shiraishi.s: どうぞ。考える時は、甘い物です。
+@hide shiraishi
+
+## c2_miss
+@show chihaya center
+@bgm calm
+chihaya.d: 総監、すみません、私です。
+chihaya.d: 病院のサーバーの写しを取る時に、電源を落とす前の画面を、撮り忘れました。
+chihaya.d: 画面の時刻が、どこまで本当か……もう、分かりません。
+
+## c2_miss_a
+tsubasa.s: すぐ言ってくれて、助かりました。次の手を、一緒に考えましょう。
+## c2_miss_b
+tsubasa.s: 大丈夫です。時刻は、ほかの機械にも残ります。
+## c2_miss_c
+tsubasa.s: 千早さんが、一番早く言ってくれた。それが大事です。
+
+## c2_miss_after
+@show sawaguchi left
+sawaguchi.n: 落とす直前の、ネットワークの機械の記録は、私が取ってあります。
+sawaguchi.n: 時刻は、そっちに残っています。
+@show mendes right
+mendes.s: 千早、自分で言えたな。それでいい。
+chihaya.s: ……はいっ。取り返します。
+@hide all
+@bgm invest
+
+## c2_nwlog
+@obj logscroll on
+@show chihaya center
+chihaya.k: 沢口さんの記録、読めました。順番が出ます。
+chihaya.n: 22時31分、外から侵入。23時40分、入退室の記録の機械が止まる。
+chihaya.n: 0時ちょうど、電話。0時5分、扉の制御。……扉は、0時5分から開きません。
+@show sawaguchi left
+sawaguchi.k: 総監、ここです。記録の機械と扉の間が、25分、空いてます。
+@hide all
+@get nwlog
+
+## c2_sousa
+@show sawaguchi center
+sawaguchi.n: サーバーの写しから、画面の操作の記録が出ました。
+sawaguchi.d: 0時10分から、朝5時20分まで。三浦さんは1人で、暗号化を手で止めようとしていました。
+@show chihaya right
+chihaya.d: ……止められた機械が、3つあります。全部、病棟の機械です。
+@hide all
+@get sousa
+
+## c2_sousa_early
+@show sawaguchi center
+sawaguchi.n: こっちの解析は、まだ途中です。先に、千早の読んでいる記録を。
+@hide sawaguchi
+
+## c2_t_mendes
+mendes.n: 総監、段取りはこうです。侵入の入口は、うちとFBIで追います。
+mendes.n: 密室のほうは、総監の目で。
+
+## c2_clock
+*: 東京とワシントンの時計。13時間ずれて、同じ速さで進んでいる。
+
+## c2_jihanki
+@show onodera center
+onodera.n: 自販機の会社に、売上の記録を出してもらいました。
+@obj jihanki drop
+@sfx thud
+onodera.k: ゆうべ、この機械で売れたのは1本だけ。23時42分。缶コーヒーです。
+@hide onodera
+@get jihanki
+
+## c2_t_kanri
+kanri.d: 部長は、毎晩23時半すぎに、コーヒーを買いに出るんです。1分で戻ります。
+kanri.d: 「夜中の1本が、おれの残業代だ」って。
+
+## c2_door
+*: 廊下からサーバー室の扉まで、歩いて20歩。自販機は突き当たり。往復で、1分とかからない。
+
+## c2_think
+@hide all
+@bgm truth
+*: 物はそろった。起きた事を、時刻の順に並べる。
+
+## c2_think_ok
+@sfx correct
+*: 時刻が、1本につながった。
+
+## c2_q_wrong
+*: ……違う。物と時刻を、もう1度見る。
+
+## c2_prebattle
+@bg kasouken
+@show onizuka center
+@bgm tension
+onizuka.k: 総監。殺しの線で、病院の関係者を全員、洗っています。
+onizuka.k: 2回多い。誰かが入って、出た。それが全部です。
+
+## b2_c1
+onizuka.k: 回数計は2回多い。誰かが入って、出たんです。殺しですよ。
+## b2_o1
+tsubasa.k: 23時42分、廊下の自販機で、缶コーヒーが1本売れています。
+tsubasa.k: 出て、戻った。それで2回です。回したのは、三浦さん本人です。
+onizuka.u: 本人が……。
+
+## b2_c2
+onizuka.n: 本人なら、職員証の記録が残るはずだ。記録には、ありません。
+## b2_o2
+tsubasa.k: 記録の機械は、23時40分に止められていました。
+tsubasa.k: その2分後の出入りは、どこにも残りません。
+onizuka.t: 先に、記録を……。
+
+## b2_c3
+onizuka.k: なら、なぜ逃げなかった。0時5分まで、扉は開いたんだ。
+## b2_o3
+tsubasa.k: 気づいていなかったんです。コーヒーを買って戻り、席に着いた。
+tsubasa.k: 0時に電話が切れ、0時5分に扉が閉じた。気づいた時には、もう出られなかった。
+onizuka.d: ……。
+
+## b2_c4
+onizuka.n: ……それで、朝までの5時間。部長は、何をしていたんです。
+## b2_o4
+tsubasa.k: 止めようとしていました。0時10分から5時20分まで、1人で。
+tsubasa.k: 病棟の機械を3つ、守っています。
+onizuka.d: 5時間、1人で……。
+
+## b2_end
+@bgm truth
+onizuka.d: ……殺しじゃない。
+onizuka.k: だが、殺されたのと同じだ。閉じこめたのは、機械を止めたやつらです。
+onizuka.k: 総監。入口を開けたやつを、挙げましょう。
+
+## b2_miss
+onizuka.n: それでは、2回の説明になりませんな。
+## b2_miss2
+onizuka.s: 総監。一課を納得させるには、物が要ります。
+
+## c3_brief
+@hide all
+@bg tokumei
+@bgm invest
+@card 4月15日（木）9:00｜特命班の部屋
+@show mendes center
+mendes.n: 総監、入口が分かりました。医療機器メーカー「メディコア・ジャパン」の、保守用の遠隔接続です。
+mendes.k: 22時31分に入ったのは、保守担当の堀健吾のアカウント。接続元は、海外です。
+@get remote
+@obj screenT on
+rosen.n: ワシントンのローゼンです。総監、お金のほうは、私が追います。
+@show onodera left
+onodera.n: 堀さんには、私が会ってきましょうか。……いえ。総監も、ご一緒に。
+
+## c3_maker
+@hide all
+@bg maker
+@card 11:00｜メディコア・ジャパン　保守部
+@show hori center
+hori.t: 堀です。……あの夜は、家で寝ていました。接続なんか、していません。
+hori.t: アカウントを、盗まれたんです。私も、被害者ですよ。
+@hide all
+
+## c3_pc
+@obj pc on
+@show chihaya center
+chihaya.n: 保守用のパソコンです。電源の記録を見ます。……あの夜は、1度も起動していません。
+chihaya.k: 堀さんの手では、つないでいない。そこは本当です。
+@hide chihaya
+@get pc
+
+## c3_nidan
+@obj server blink
+@show chihaya center
+chihaya.k: 保守のアカウントの、設定の記録です。……あれ。
+chihaya.u: 堀さんのアカウントだけ、二段階の確認が外されてます。1月12日。この部屋の、堀さんの席のパソコンからです。
+@hide chihaya
+@get nidan
+
+## c3_token
+@obj cabinet open
+*: 確認用の小さな機械の棚。堀の分は、いまも棚にある。貸し出しの帳面に、持ち出しの記録はない。
+
+## c3_window
+*: 窓の外を、雲が流れていく。向かいのビルに、病院の看板が見える。
+
+## c3_t_kacho
+kacho.n: 堀は、まじめな男です。ただ、去年は元気がなかった。借金があると聞きました。
+kacho.n: それが1月の半ばに、急に明るくなりましてね。「全部返した」と。
+@get hensai
+
+## c3_t_hori_nidan
+hori.t: ……外しました。夜中の呼び出しのたびに、あの機械を取りに来るのが、面倒で。
+hori.t: それだけです。売ってなんか、いません。
+
+## c3_t_hori_kane
+@obj tell on
+hori.n: 金には、困っていません。
+*: 堀の右手が、左の手首の上に動いた。
+
+## c3_t_hori_miura
+hori.d: 三浦部長には、点検のたびに、お世話になりました。……いい人でした。
+
+## c3_t_rosen1
+rosen.n: 総監、見つけました。ダークウェブに、1月13日の出品です。
+rosen.n: 「東京の大学病院。保守の入口。0.3ビットコイン」。買い手がついたのは、1月14日。
+@get darkweb
+
+## c3_t_rosen2
+rosen.k: 送金が1件、合いました。0.3ビットコインは、日本の取引所の口座へ。
+rosen.k: 1月15日に、円で出金。口座の名義は、堀健吾です。
+@get okane
+
+## c3_t_rosen0
+rosen.n: 出品をさがしています。総監、手がかりを1つください。日付があると、早いです。
+
+## c3_t_rosen1b
+rosen.n: 買い手に払われた0.3ビットコインの行き先を、追っています。受け取った人の暮らしに、変わった事はありませんか。
+
+## c3_t_sawaguchi
+sawaguchi.n: 総監、ドーンがあの入口を使ったのは、買ってから3か月後です。
+sawaguchi.k: 3か月、中を静かに見ていた事になります。
+
+## c3_prebattle
+@hide all
+@bg maker
+@bgm tension
+@show hori center
+hori.t: まだ、何か。……私は被害者だと、言ったはずです。
+
+## b3_c1
+hori.t: アカウントは盗まれたんです。私は、何もしていない。
+## b3_o1
+tsubasa.k: 1月12日。あなたのアカウントだけ、二段階の確認が外されています。
+tsubasa.k: 外したのは、あなたの席のパソコンです。
+hori.u: そ、それは……面倒だったからです！
+
+## b3_c2
+hori.t: 外しただけだ。売ってなどいない。出品なんて、知りません。
+## b3_o2
+tsubasa.k: 出品は1月13日。確認を外した、次の日です。
+tsubasa.k: 盗んだ者が、あなたの外す日を、前もって知っていた事になります。
+hori.t: ぐ、偶然だ……。
+
+## b3_c3
+hori.n: 偶然です。だいたい、金には困っていない。売る理由が、ありません。
+## b3_o3
+tsubasa.k: 「金」と言うたびに、手首を隠しますね。
+hori.u: ……！
+
+## b3_c4
+hori.t: これは……癖です。借金なんか、ありません。
+## b3_o4
+onodera.n: 課長さんに伺いました。去年は、借金で元気がなかった。
+onodera.n: それが1月の半ばに、「全部返した」と。
+onodera.k: 人は、ログより正直です。
+hori.t: か、返したのは……親に、借りて……。
+
+## b3_c5
+hori.t: 親に借りたんです。調べれば分かる。
+## b3_o5
+tsubasa.k: 調べました。0.3ビットコインは、日本の取引所の、あなたの名義の口座に入っています。
+tsubasa.k: 1月15日に、円で出金。返済の日と、同じです。
+hori.u: ……あ……。
+
+## b3_c6
+hori.d: ……。
+## b3_o6
+tsubasa.k: 堀さん。病院の入口を売ったのは、あなたです。
+
+## b3_break
+@bgm truth
+hori.d: ……病院が止まるなんて、思わなかった。
+hori.d: 入口が1つ開くだけだと。誰かが、中をのぞくだけだと。
+hori.d: 人が、死ぬなんて……。
+
+## b3_calm
+tsubasa.k: 三浦さんは5時間、1人で止めようとしました。あなたが開けた入口を。
+tsubasa.k: その5時間を、法廷で聞いてください。
+
+## b3_angry
+@sfx shock
+tsubasa.a: 「思わなかった」で、済むか！
+tsubasa.a: あなたが開けた扉の向こうに、1100人の患者がいた。
+tsubasa.a: 三浦さんはその扉を、5時間、1人で押さえていたんだ！
+@show onizuka right
+onizuka.k: ……。
+*: 鬼塚が、黙って姿勢を正した。堀は、顔を上げられない。
+
+## b3_arrest_q
+@show onizuka right
+onizuka.n: 総監。手錠は。
+
+## b3_arrest_self
+tsubasa.k: 自分でかけます。
+@obj tejou close
+@sfx cuff
+*: 伯父の手錠が、小さな音を立てて閉じた。
+onizuka.k: 14時6分。不正アクセス禁止法違反の疑いで、逮捕。
+
+## b3_arrest_oni
+tsubasa.n: 鬼塚課長、お願いします。
+@sfx cuff
+onizuka.k: 14時6分。不正アクセス禁止法違反の疑いで、逮捕。
+
+## b3_last
+hori.d: ……三浦部長には、点検のたびに、缶コーヒーをおごってもらいました。
+hori.d: 廊下の、あの自販機です。
+@hide all
+
+## b3_miss
+hori.t: そ、それが何だと言うんです。
+## b3_miss2
+hori.n: 関係のない話は、やめてください。
+
+## ep_hospital
+@hide all
+@bg rouka
+@bgm calm
+@card 4月15日（木）21:00｜東都医科大学病院
+@show hayase left
+hayase.n: 総監。身代金の期限が過ぎました。病院を、どうしますか。
+
+## ep_a
+tsubasa.k: 払いません。3日前のバックアップから、戻しましょう。
+## ep_b
+tsubasa.k: 払いません。交渉で時間を稼ぎながら、バックアップから戻します。
+
+## ep_hospital2
+hayase.n: 承知しました。失われた3日分は、紙のカルテから、職員が手で打ち直すそうです。
+@show kanri right
+kanri.d: ……部長が守った3つの機械は、病棟の点滴の機械でした。
+kanri.d: あれが止まらなかったので、あの夜、病棟では誰も急変していません。
+@hide all
+
+## ep_shop
+@bg kouhei
+@obj night on
+@bgm home
+@card 23:10｜神田　食堂「こうへい」
+@show kohei center
+kohei.n: 食ったか。
+kohei.n: ……手錠、使ったのか。
+kohei.s: そうか。なら、味噌汁はもう1杯だ。
+@hide all
+
+## ep_hook
+@bg tokumei
+@bgm tension
+@card 4月16日（金）8:00｜特命班の部屋
+@show sawaguchi left
+sawaguchi.k: 総監、1つだけ。身代金の画面の、右下の隅です。拡大します。
+@obj ransomzoom on
+@sfx shock
+*: 小さな字で、こう書いてある。「ようこそ、総監」。
+@show chihaya right
+chihaya.u: ……これ、総監あてです。最初から。
+@show mendes center
+mendes.k: 続きがありそうだな、総監。
+@hide all
