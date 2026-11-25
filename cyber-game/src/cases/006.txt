@@ -1,0 +1,188 @@
+# FILE 006 サーバーの国
+@intro ドーンのサーバーがある国は、協力を断った。「サーバーは見つからない」。だが、画面の向こうの男は、何かを言おうとしている。
+@next FILE 007「金の川」につづく
+@end S パーク「総監。……あの人の目を読めた人は、ラングレーにもいません」
+@end A ハミルトン「番号から住所まで、1日でした。総監、次の一手を」
+@end B オカフォー「総監、次は棚に入れる前に、必ず声をかけます」
+@view tsubasa 翼 | 物を見て、筋を通す
+@view park パーク | 外国の事を調べる
+@view okafor オカフォー | 記録と映像を読む
+@char kane name=ケイン role=CIA副長官 sex=f skin=#f4d6c4 hair=#d8d4cc hs=shortf eye=#5aa07a es=soft tilt=5 jaw=0 brow=1.6 sm=1 wr=1 fit=suit:#5b4a5e:#f6efe6 pin=1 pose=stand
+@char mikhailov name=ミハイロフ role=東欧の国の警察のサイバー課長 sex=m skin=#f0d0b8 hair=#6a6a70 hs=slick eye=#5a8aa0 es=half tilt=5 jaw=2 brow=3 wr=1 remote=1 fit=suit:#4a5a4a:#e8ece8:#5a2a2a pin=1 pose=stand v=M,0.88,0.95,0.90,0.60
+@ev kotowari 断りの書類 | 断 | 条約で頼んだサーバーの記録の提出を、東欧の国は断った。理由は「サーバーは見つからない」。
+@ev cia 使えない情報 | 外 | CIAは、そのサーバーの中を見ている。だが外国の情報として集めた物は、法廷では使えない。
+@ev denki 電気代の支払い | 電 | データセンターの電気代を払っているのは「ヴェルナ電力商会」。大統領の甥の会社。公開の記録にある。
+@ev bango 映った番号 | 番 | テレビ会議の最後、ミハイロフが紙を一瞬カメラに映した。書いてあったのは「R-17 / C-09」。
+
+@place c1 start=langley need=cia,denki,f:kaigi
+@loc langley CIA_ラングレー bg=langley people=nair,kane
+@hs map park 120,40,400,170 壁の地図 -> s_map
+@talk nair tsubasa サーバーの中を、見ているんですか -> s_t_nair
+@talk kane tsubasa あの国の事を、教えてください -> s_t_kane
+@loc fbi FBI本部の一室 bg=fbi people=hamilton,shapiro
+@hs pc2 okafor 392,176,104,82 公開の記録 -> s_denki
+@hs wb tsubasa 244,42,184,116 ホワイトボード -> s_wb
+@talk shapiro tsubasa もう1度、会議を開けますか -> s_t_shap | f=kaigi
+
+@battle b1 foe=mikhailov title=ミハイロフの本当の言葉を読め bg=hq miss=b1_miss,b1_miss2 end=b1_end
+@ph b1_c1 ev denki b1_o1 | 「見つからない」のか、「探せない」のか。金の出どころを見せよう。「証拠」。
+@ph b1_c2 obs eyes b1_o2 | 「観察」。彼は、こちらを見ていない時がある。 | eyes:目:282,142,98,36 | brow:まゆ:282,122,98,18 | hair:かみ:262,40,140,76
+@ph b1_c3 view okafor b1_o3 | 会議の最後に、何かが映った。「視点」で、映像を読む仲間に代わろう。
+@ph b1_c4 ded 0 b1_o4 | 「推理」。あの番号は、何の番号か。 | データセンターの、棚と段の番号 | 彼の家の電話番号 | 大統領の口座の番号
+
+@flow miss
+ play s_miss
+ ask オカフォーに、何と言う？ | 決まりを守ったんですね -> s_miss_a | 棚の中を、一緒に見ましょう -> s_miss_b | すぐ言ってくれて、助かります -> s_miss_c
+ play s_miss_after
+@flow main
+ cp
+ play s_intro
+ banner FILE 006 | サーバーの国
+ cp
+ inv c1
+ cp
+ flowx miss
+ play s_pre
+ battle b1
+ ask 番号を、どう使う？ | 先に、ミハイロフと家族を逃がす手配をする -> s_end_a | すぐ使う。サーバーの住所を割り出す -> s_end_b | 使わない。数か月かけて、別の道を探す -> s_end_c
+ play s_end2
+
+## s_intro
+@bg hq
+@bgm invest
+@card 5月10日（月）9:00｜ワシントン　FBI本部
+@show weiss left
+weiss.n: 総監。条約で頼んでいたサーバーの記録ですが、東欧の国が断ってきました。
+weiss.n: 理由は1行です。「該当するサーバーは、見つからない」。
+@get kotowari
+@show nair right
+nair.k: 見つからない、ね。……総監。ラングレーに来てください。壁の地図を、お見せします。
+@hide all
+*: この事件の「視点」は、翼、パーク、オカフォー。パークは外国の事を調べる。オカフォーは記録と映像を読む。
+
+## s_map
+@obj map glow
+@show park center
+park.n: 赤い点が、ドーンのサーバーです。東欧の国の首都。川ぞいのデータセンター。
+park.k: 外国の事なので、調べました。……ここまでは、CIAの仕事です。
+@hide park
+
+## s_t_nair
+nair.k: 見ています。その国のサーバーなら、私たちは中まで。
+nair.n: ただし、法廷では使えません。外国の情報として集めた物ですから。……FBIは、自分の足で、同じ所まで来てください。
+@get cia
+
+## s_t_kane
+kane.s: 紅茶はいかが、総監。……あの国はね、小さいけれど、古い国ですよ。
+kane.n: 大統領の一族が、電気も、通信も、建物も持っています。警察も、一族には手を出せません。
+
+## s_denki
+@obj pc2 on
+@show okafor center
+okafor.n: 公開の記録を当たりました。データセンターの電気代を払っている会社です。
+okafor.k: 「ヴェルナ電力商会」。社長は……大統領の甥です。これは、誰でも見られる記録です。法廷に出せます。
+@hide okafor
+@get denki
+
+## s_wb
+*: ホワイトボードに書く。「見つからない」と「探せない」。あの国の警察は、どちらなのか。
+
+## s_t_shap
+shapiro.n: 開けます。向こうのサイバー課長、ミハイロフが出ると言っています。
+shapiro.t: ただ、同じ答えでしょうね。「見つからない」。……それでも、やりますか。
+
+## s_pre
+@hide all
+@bg hq
+@bgm tension
+@card 5月11日（火）10:00｜FBI本部　テレビ会議
+@obj wall on
+mikhailov.n: 東欧警察サイバー課の、ミハイロフです。……総監。お若い、ですな。
+mikhailov.n: お答えは、書面と同じです。
+
+## b1_c1
+mikhailov.n: 該当するサーバーは、わが国には、見つかりません。
+## b1_o1
+tsubasa.k: データセンターの電気代を払っているのは、ヴェルナ電力商会です。大統領の甥の会社。
+tsubasa.k: 「見つからない」のではなく、「探せない」のではありませんか。
+mikhailov.n: ……それは、民間の契約です。
+
+## b1_c2
+mikhailov.n: 民間の会社が、どこに電気を売ろうと、警察の知る事では、ありません。
+## b1_o2
+*: ミハイロフの目が、画面の外へ動いた。左へ。……3度目だ。
+*: 翼は、口には出さない。画面の外に、誰かがいる。この男は、見張られている。
+mikhailov.n: ……。
+
+## b1_c3
+mikhailov.n: 協力は、できません。……以上です。失礼する。
+## b1_o3
+okafor.k: 総監。切れる直前の0.4秒です。ミハイロフが、手元の紙を、カメラに向けました。
+okafor.n: 録画を起こします。……「R-17 / C-09」。
+@get bango
+
+## b1_c4
+mikhailov.n: ……以上です。失礼する。
+## b1_o4
+tsubasa.k: データセンターの、棚と段の番号です。17番の棚の、9段目。
+tsubasa.k: 彼は「探せない」。だから、探さなくていいように、場所を教えた。
+
+## b1_end
+@bgm truth
+@show park left
+park.d: ……記録に残らないやり方を、選んだんです。見張りの目の前で。
+park.n: 見つかれば、あの人は終わりです。家族も。
+@show hamilton right
+hamilton.k: 番号があれば、公開の住所まで割り出せます。1日ください。……使うかどうかは、総監が。
+
+## b1_miss
+mikhailov.n: ……質問の意味が、分かりかねます。
+## b1_miss2
+mikhailov.n: お答えできません。
+
+## s_miss
+@show okafor center
+@bgm calm
+okafor.d: 総監。……すみません、私です。
+okafor.d: きのうの会議の録画を、NSAの決まりの棚に入れてしまいました。特命班からは、見えない棚です。
+okafor.d: 出すには、書類が3枚要ります。早くて、あさってです。
+
+## s_miss_a
+tsubasa.n: 決まりを守ったんですね。責めません。
+## s_miss_b
+tsubasa.n: 棚の中で何が起きているか、一緒に見ましょう。
+## s_miss_c
+tsubasa.s: すぐ言ってくれて、助かります。
+
+## s_miss_after
+okafor.u: ……待ってください。あの棚は、入れた映像を、自動で分析にかけます。
+okafor.k: 文字が映っていれば、読める形に起こされているはずです。……会議を、もう1度見る必要がありますね。
+@hide all
+@bgm invest
+
+## s_end_a
+tsubasa.k: 番号は、まだ使いません。先に、ミハイロフさんと家族を、国の外へ出します。
+@show kane center
+kane.s: その手配なら、こちらでやりましょう。……法廷より少し広い世界の、仕事ですからね。
+## s_end_b
+tsubasa.k: すぐ使います。相手に気づかれる前に、住所を押さえます。
+@show park center
+park.t: ……分かりました。ミハイロフの身は、こちらで見張ります。間に合えば、ですが。
+## s_end_c
+tsubasa.k: 番号は使いません。彼を危なくしない道を、探します。
+@show shapiro center
+shapiro.t: 数か月かかりますよ。……でも、そういう決め方は、嫌いじゃありません。
+
+## s_end2
+@hide all
+@bg fbi
+@bgm calm
+@card 5月12日（水）16:00｜FBI本部の一室
+@show okafor left
+okafor.n: 総監。次からは、棚に入れる前に、声をかけます。
+@show hamilton right
+hamilton.k: それと、1つ。電気代を払っているヴェルナ電力商会ですが。
+hamilton.n: クラウドの大企業、ヘリオス社の、あの国での代理店です。
+@hide all
+@bgm tension
+*: ドーンのサーバーを守る国。その国の電気を持つ一族。その一族と組む、世界の大企業。

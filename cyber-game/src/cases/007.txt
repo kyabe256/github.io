@@ -1,0 +1,241 @@
+# FILE 007 金の川
+@intro 身代金は、足跡を消す仕組みの中へ消えた。だが、川には出口がある。翼のスマホに、差出人のない知らせが届く。
+@next FILE 008「下請け」につづく
+@end S 判事「見事な申し立てでした、総監。1行も、直す所がありません」
+@end A ローゼン「総監、13日が見えました。数字は、やっぱり嘘をつきません」
+@end B シャピロ「総監、次の申し立ては、出す前に必ずお見せします」
+@view tsubasa 翼 | 物を見て、筋を通す
+@view mendes メンデス | 人に聞く。足で稼ぐ
+@view rosen ローゼン | 数字と記録を読む
+@char rosen name=ローゼン role=FBIの会計担当の捜査官 sex=f skin=#f2d0bb hair=#a8683a hs=wavy eye=#4a9a5a es=soft tilt=-3 jaw=0 brow=1.8 gl=round fit=suit:#3d4a44:#f3efe8 pose=tablet
+@char ross name=ロス role=取引所ベルタの法務担当 sex=f skin=#d8a888 hair=#3a2a2a hs=bob eye=#3ab0a0 es=cool tilt=-2 jaw=0 brow=1.9 fit=suit:#1a2a4a:#e8f6f4 pin=1 pose=tablet v=F,0.90,0.97,1.10,0.85
+@char hanji name=判事 role=連邦の治安判事 sex=f skin=#f2d6c4 hair=#b8b4b0 hs=shortf eye=#6a7a9a es=narrow tilt=3 jaw=1 brow=2 wr=1 gl=round fit=suit:#1c1c22:#f4f4f4 pose=stand v=F,0.74,0.92,0.90,0.70
+@ev mixer 川の出口 | 川 | 身代金は、足跡を混ぜて消す仕組み（ミキサー）へ入った。だが出口の3割が、取引所ベルタの、同じ1つの入金口へ入っている。
+@ev mochi 入金口の持ち主 | 主 | ベルタの入金口の持ち主は、東欧の国の輸出入の会社「ドナウ貿易」。
+@ev jusho 会社の住所 | 住 | ドナウ貿易の登記の住所は、ドーンのサーバーがあるデータセンターと、同じ建物。
+@ev kiroku 入金口の記録 | 記 | ベルタが令状で出した、入金口の3か月分の記録。出所のはっきりした物。
+@ev juusan 毎月13日 | 13 | 入金口からは、毎月13日に、その月に受け取った額の2割が、同じ1つの口座へ出ていく。
+
+@place c1 start=belta need=mochi,jusho,kiroku,f:chobo1
+@loc belta 取引所ベルタ bg=belta people=ross
+@hs chart rosen 150,50,340,150 大きな画面 -> k_chart
+@hs nyukin tsubasa 414,188,102,82 会社の登記 -> k_toki
+@hs kiroku rosen 172,226,66,44 入金口の記録 -> k_kiroku
+@talk ross mendes あの入金口は、誰の物ですか -> k_t_ross1
+@talk ross tsubasa ベルタの帳簿は、1つですか -> k_t_ross2 | f=chobo1
+
+@battle b1 foe=hanji title=判事を納得させろ bg=rijikai miss=b1_miss,b1_miss2 end=b1_end
+@ph b1_c1 ev kiroku b1_o1 | 判事が欲しいのは、出所のはっきりした記録。「証拠」。
+@ph b1_c2 ev mixer b1_o2 | その金が、犯罪の金だと言える流れを見せよう。「証拠」。
+@ph b1_c3 ev jusho b1_o3 | 受け取った会社は、どこにあるか。「証拠」。
+@ph b1_c4 ev juusan b1_o4 | 金は、入金口からどこへ出ていくか。「証拠」。
+@ph b1_c5 ded 1 b1_o5 | 「推理」。令状で、何を求めるか。広すぎても、狭すぎてもいけない。 | ベルタの全部の客の記録 | 入金口の先の、毎月13日に金が出ていく口座の記録 | 創業者ストーンの、個人のサーバー
+
+@timeline t1 wrong=k_wrong title=入金口の3か月
+ ev 入金口から、2割が出ていく | 3月13日
+ ev 東京の病院が止まる | 4月12日
+ ev 入金口から、2割が出ていく | 4月13日
+ ev ワシントンの病院が止まる | 4月15日
+ ev ブレアの5％が、ベルタで換金される | 4月21日
+ ev 入金口から、2割が出ていく | 5月13日
+ q くり返し起きている動きは、何日？ | 毎月1日 | *毎月13日 | 毎月の末日
+ q その日、出ていくのは、受け取った額のどれだけ？ | 全部 | 半分 | *2割
+ hit 毎月13日、2割が同じ口座へ | 13日
+
+@flow miss
+ play k_miss
+ ask シャピロに、何と言う？ | 急いでくれたんですね -> k_miss_a | 判事の言葉を、もう1度教えてください -> k_miss_b | すぐ言ってくれて、助かります -> k_miss_c
+ play k_miss_after
+@flow main
+ cp
+ play k_intro
+ ask ゴーストの知らせを、どうする？ | 部下に見せる -> k_show | 自分の胸にしまう -> k_hide
+ banner FILE 007 | 金の川
+ cp
+ play k_arrive
+ inv c1
+ cp
+ flowx miss
+ play k_think
+ timeline t1
+ play k_think_ok
+ cp
+ play k_pre
+ battle b1
+ ask 入金口を、どうする？ | 凍結する。金の流れを止める -> k_end_a | 泳がせる。13日を待つ -> k_end_b | ロスを証人にする -> k_end_c
+ play k_end2
+
+## k_intro
+@bg fbi
+@bgm invest
+@card 5月14日（金）7:50｜FBIワシントン支局
+@show rosen center
+rosen.n: 総監、身代金の流れです。ドーンの財布から出たお金は、「ミキサー」に入ります。
+rosen.n: 何千人ものお金を混ぜて、足跡を消す仕組みです。ふつうは、そこで追えなくなります。
+rosen.k: ただ。002で、私が間違えて追った財布が、手がかりになりました。ミキサーの出口の3割が、ベルタの同じ入金口に入っています。
+@get mixer
+@hide all
+@sfx phone
+*: 翼の個人のスマホが、1度だけ鳴った。差出人は、ない。
+*: 「ベルタの帳簿は、2つある。客に見せる帳簿と、創業者だけが見る帳簿」。
+*: 「それと、総監。時差でつらい時は、温かい物を」。
+
+## k_show
+@show rosen center
+rosen.t: 差出人なし、送り元もたどれない、ですか。……総監、これは令状には書けません。
+rosen.n: 出所の分かる記録で、同じ物を、見つけ直しましょう。
+@hide all
+## k_hide
+*: 画面を消して、ポケットに戻す。誰の知らせか分からない物を、まだ、誰にも見せない。
+
+## k_arrive
+@hide all
+@bg belta
+@card 10:00｜ニューヨーク　取引所ベルタ
+@show ross center
+ross.n: 法務のロスです。令状は拝見しました。ベルタは、捜査に協力します。
+ross.s: うちは、まっとうな取引所ですから。隠す物は、ありません。
+@hide all
+
+## k_chart
+@obj chart glow
+@show rosen center
+rosen.n: 1日の取引が、小さな国の予算くらいあります。……この中から、1つの入金口を追うんです。
+rosen.s: 川は大きいほど、出口が目立つんですよ。
+@hide rosen
+
+## k_toki
+@obj nyukin on
+*: 入金口の持ち主「ドナウ貿易」の登記を出す。住所は、東欧の国の首都。川ぞいの、ビルの4階。
+*: ……006で見た、データセンターと同じ建物だ。
+@get jusho
+
+## k_kiroku
+@obj kiroku hop
+@show rosen center
+rosen.n: 入金口の3か月分の記録、令状で受け取りました。ベルタが正式に出した物です。
+rosen.k: これなら、どこに出しても「出所は？」と聞かれません。
+@hide rosen
+@get kiroku
+
+## k_t_ross1
+ross.n: 入金口は、お客さまの物です。うちは、場所を貸しているだけ。
+ross.n: 持ち主は、東欧の国の輸出入の会社です。「ドナウ貿易」。書類は、そろっています。
+@get mochi
+
+## k_t_ross2
+ross.u: 帳簿、ですか？　……1つです。もちろん。
+ross.n: 監査も毎年受けています。2つあるなんて話は、聞いた事がありません。
+*: ロスの目は、まっすぐだ。嘘をついている顔ではない。……この人は、知らない。
+
+## k_miss
+@bg fbi
+@show shapiro center
+@bgm calm
+shapiro.d: 総監。……すみません、私です。
+shapiro.d: 令状の申し立てに、あの差出人のない知らせを、理由として書いてしまいました。
+shapiro.d: 判事に、5分で却下されました。「匿名の一文で、扉は開けられない」と。
+
+## k_miss_a
+tsubasa.n: 急いでくれたんですね。分かります。
+## k_miss_b
+tsubasa.n: 判事の言葉を、もう1度、正確に教えてください。
+## k_miss_c
+tsubasa.s: すぐ言ってくれて、助かります。
+
+## k_miss_after
+shapiro.n: 判事は、こうも言いました。「出所の明らかな記録を、並べて持ってきなさい」。
+@show rosen left
+rosen.k: ……並べる。そうですね。3か月分を、日付の順に、並べ直してみます。
+@hide all
+
+## k_think
+@bgm truth
+*: 入金口の記録と、これまでの事件を、日付の順に並べる。
+
+## k_wrong
+*: ……違う。記録の日付を、もう1度見る。
+
+## k_think_ok
+@sfx correct
+@show rosen center
+rosen.u: 13日。毎月、13日です。受け取った額の、きっちり2割。行き先は、毎回同じ口座。
+rosen.s: 総監、癖が見えました。
+@hide rosen
+@get juusan
+
+## k_pre
+@hide all
+@bg rijikai
+@bgm tension
+@card 5月17日（月）11:00｜連邦裁判所　判事の部屋
+@show hanji center
+hanji.n: また来ましたか。……今度は、匿名の手紙ではないでしょうね。
+hanji.k: 私を納得させなさい、総監。扉を開けるのは、物だけです。
+
+## b1_c1
+hanji.n: 匿名の知らせでは、令状は出せません。出所は、どこです。
+## b1_o1
+tsubasa.k: ベルタが、令状に応じて正式に出した、入金口の3か月分の記録です。
+tsubasa.k: 出所は、ベルタ自身です。
+hanji.n: ……よろしい。続けて。
+
+## b1_c2
+hanji.n: 入金口に金が入った。それだけでは、犯罪の金とは言えません。
+## b1_o2
+tsubasa.k: ドーンの財布から出た身代金は、ミキサーに入ります。その出口の3割が、この1つの入金口に集まっています。
+tsubasa.k: 病院が払った金が、ここへ流れている。追跡の記録があります。
+hanji.n: ふむ。
+
+## b1_c3
+hanji.k: 受け取った会社は、ただの貿易会社かもしれません。
+## b1_o3
+tsubasa.k: ドナウ貿易の住所は、ドーンのサーバーがあるデータセンターと、同じ建物です。
+hanji.u: ……同じ建物。
+
+## b1_c4
+hanji.n: では、その金は、入金口からどこへ行くのです。
+## b1_o4
+tsubasa.k: 毎月13日に、その月に受け取った額の2割が、同じ1つの口座へ出ていきます。3か月、1度も欠かさず。
+tsubasa.k: 誰かへの、決まった支払いです。
+
+## b1_c5
+hanji.k: ……それで、総監。あなたは、私に何を求めるのですか。
+## b1_o5
+tsubasa.k: 入金口の先の、毎月13日に金が出ていく口座の記録です。それだけを。
+tsubasa.k: ベルタの客の全部でも、創業者の個人の物でもありません。
+
+## b1_end
+@bgm truth
+hanji.s: 20歳で、欲しい物を「それだけ」と言えるのは、珍しい。
+hanji.n: 令状を出します。13日の口座の記録まで。……創業者の個人のサーバーは、まだ理由が足りません。覚えておきなさい。
+@hide all
+
+## b1_miss
+hanji.n: それは、いまの問いの答えになっていません。
+## b1_miss2
+hanji.k: 総監。物で、話しなさい。
+
+## k_end_a
+tsubasa.k: 入金口を凍結します。病院の金を、これ以上流させません。
+@show rosen center
+rosen.t: 創業者のストーンに、気づかれますね。……でも、止まる金は、止まります。
+## k_end_b
+tsubasa.k: 泳がせます。次の13日に、金がどこへ着くかを見ます。
+@show rosen center
+rosen.k: 6月13日ですね。……暦に、赤丸をつけておきます。
+## k_end_c
+tsubasa.k: ロスさんに、証人になってもらいます。彼女は、何も知らされていない。
+@show mendes center
+mendes.n: 自分の会社に帳簿が2つあると知ったら、あの人は怒りますよ。……いい証人になる。
+
+## k_end2
+@hide all
+@bg fbi
+@bgm calm
+@card 5月17日（月）17:00｜FBIワシントン支局
+@show rosen center
+rosen.n: 総監。13日のお金が着く口座、銀行が分かりました。太平洋の、小さな島国の銀行です。
+@hide all
+@bgm tension
+*: 帳簿は2つある、と知らせてきたのは、誰なのか。なぜ、時差の事まで知っているのか。

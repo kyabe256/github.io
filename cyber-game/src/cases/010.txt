@@ -1,0 +1,218 @@
+# FILE 010 夜明けの頭
+@intro インド洋の島。休暇中のドラガンが捕まった。抵抗はしない。「引き渡しの前に、総監と話したい」。
+@next 第1章「身代金の章」完。第2章「完全密室の章」につづく
+@end S 耕平「……よくやった。きょうは、何も聞かん。食え」
+@end A メンデス「総監、第1章はここまでですね。……次は、もっと近い所の話になりそうです」
+@end B ローゼン「総監、次の目録は、3回読み上げます」
+@meta have=miura,shonichi,juusan
+@view tsubasa 翼 | 物を見て、筋を通す
+@view mendes メンデス | 人に聞く。足で稼ぐ
+@view rosen ローゼン | 数字と記録を読む
+@char rosen name=ローゼン role=FBIの会計担当の捜査官 sex=f skin=#f2d0bb hair=#a8683a hs=wavy eye=#4a9a5a es=soft tilt=-3 jaw=0 brow=1.8 gl=round fit=suit:#3d4a44:#f3efe8 pose=tablet
+@char dragan name=ドラガン role=ランサム集団「ドーン」の頭。37歳 sex=m skin=#f0cfb4 hair=#2a2a30 hs=slick eye=#8a9aa8 es=cool tilt=-6 jaw=1 brow=2.6 beard=goatee sm=1 fit=shirt:#f4f0e4:#fff pose=cross v=M,0.86,0.94,0.92,0.65
+@char shocho name=署長 role=島の国の警察 sex=m skin=#b07a50 hair=#1e1a18 hs=buzz eye=#6a4a2a es=soft tilt=4 jaw=2 brow=3 wide=1 fit=work:#3a6a8a:#fff:POLICE patchc=#ffffff pose=stand v=M,0.92,0.96,0.94,1.10
+@ev miura 三浦部長の5時間 | 5 | 東京の病院。三浦部長は、閉じこめられたあと5時間、1人で暗号化を止めようとして、亡くなった。
+@ev shonichi 客の注文 | 初 | ケイルの録音。ドラガンの声。「客の注文だ。総監の初日に、目に見える形で」。
+@ev juusan 毎月13日 | 13 | ベルタの入金口からは、毎月13日に、受け取った額の2割が、同じ1つの口座へ出ていく。
+@ev kami 紙の財布 | 紙 | ドラガンの鞄の中の、1枚の紙。口座を動かす鍵が、手で書いてある。
+@ev shinzoku 鍵で動く口座 | 族 | 紙の財布の鍵で動く口座は、毎月13日の金を受け取り、大統領の親族の会社へ送っていた。
+@ev senkyo 6月の選挙 | 選 | ドラガンの国は、6月に大統領の選挙を控えている。
+
+@place c1 start=resort need=kami,shinzoku,senkyo
+@loc resort リゾートのテラス bg=resort
+@hs laptop rosen 276,206,128,64 ノートパソコン -> o_laptop
+@hs kaban tsubasa 470,276,90,66 ドラガンの鞄 -> o_kaban
+@loc station 島の警察署 bg=station people=shocho enter=rosenmiss:miss
+@hs mokuroku rosen 240,218,66,44 持ち物の目録 -> o_mokuroku
+@hs nimotsu tsubasa 330,208,84,46 持ち物の箱 -> o_nimotsu
+@talk shocho mendes 引き渡しの手続きは -> o_t_shocho
+
+@battle b1 foe=dragan title=ドラガンの取引を見きわめろ bg=station miss=b1_miss,b1_miss2 end=b1_end
+@ph b1_c1 ev miura b1_o1 | 「戻る」と言えない物が、1つある。「証拠」。
+@ph b1_c2 ev shonichi b1_o2 | 東京の病院は、事故ではない。選ばれ方を見せよう。「証拠」。
+@ph b1_c3 ev juusan b1_o3 | ドラガンの取引の札を、こちらはもう知っている。「証拠」。
+@ph b1_c4 ev shinzoku b1_o4 | 数字だけではない。口座と、行き先がある。「証拠」。
+@ph b1_c5 obs mouth b1_o5 | 「観察」。「知らない」と言う時だけ、顔のどこかが動く。 | eyes:目:84,92,90,38 | mouth:口:106,140,52,26 | arms:腕:44,254,150,60
+@ph b1_c6 ded 0 b1_o6 | 「推理」。客とドラガンの間に立ったのは、誰か。 | 大統領府の者 | ケイル | ベルタの創業者
+
+@flow miss
+ play o_miss
+ ask ローゼンに、何と言う？ | 空港は、あわただしかったですからね -> o_miss_a | 書き忘れた物を、いま一緒に見ましょう -> o_miss_b | すぐ言ってくれて、助かります -> o_miss_c
+ play o_miss_after
+@flow main
+ cp
+ play o_intro
+ banner FILE 010 | 夜明けの頭
+ cp
+ inv c1
+ cp
+ play o_pre
+ battle b1
+ ask ドラガンを、どうする？ | 司法取引をする。大統領の事を話させる -> o_end_a | 取引なしで起訴する -> o_end_b | 送金の流れを、選挙の前に公表する -> o_end_c
+ play o_end2
+ play o_home
+
+## o_intro
+@bg resort
+@bgm calm
+@card 5月28日（金）10:20｜インド洋の島　リゾート
+@show shocho left
+shocho.s: ようこそ、総監。暑いでしょう。……アメリカからの依頼どおり、けさ、捕まえました。
+shocho.n: 抵抗は、ありません。朝食の途中でした。「卵を食べ終わっていいか」と聞かれましたよ。
+@show mendes right
+mendes.k: ……落ち着いたもんだ。
+shocho.n: それと、本人が言っています。「引き渡しの前に、総監と話したい」と。
+@hide all
+
+## o_laptop
+@obj laptop glow
+@show rosen center
+rosen.n: ノートパソコンです。島の国の決まりで、引き渡しまで数週間かかります。中は、まだ見られません。
+rosen.t: 待つしかない物は、待ちます。……ほかを、見ましょう。
+@hide rosen
+
+## o_kaban
+@obj kaban hop
+*: ドラガンの鞄。本が2冊、日焼け止め、サングラス。本の間に、紙が1枚はさんである。
+*: 手で書いた、長い文字の列。……口座を動かす「鍵」だ。紙の財布。
+@get kami
+
+## o_miss
+@show rosen center
+@bgm calm
+rosen.d: 総監。……すみません、私です。
+rosen.d: 空港で作った持ち物の目録に、あの紙を、書き忘れました。本の間の、1枚です。
+rosen.d: 目録にない物は、法廷で「あとから入れた」と言われます。
+
+## o_miss_a
+tsubasa.n: 空港は、あわただしかったですからね。
+## o_miss_b
+tsubasa.n: 書き忘れた物を、いま、署長の前で一緒に確かめましょう。
+## o_miss_c
+tsubasa.s: すぐ言ってくれて、助かります。
+
+## o_miss_after
+@show shocho left
+shocho.n: 心配いりません。鞄を開けた時の写真を、うちの署で撮ってあります。日付も、時刻も入っています。
+rosen.u: ……ありがとうございます。では、その紙の鍵で動く口座を、確かめさせてください。
+@hide all
+@bgm invest
+
+## o_mokuroku
+@obj mokuroku hop
+@show rosen center
+rosen.k: 紙の鍵で動く口座、たどれました。……毎月13日のお金が、着く口座です。007の。
+rosen.n: そこから先は、1つの会社へ送られています。社長は、大統領の、義理の弟です。
+@hide rosen
+@get shinzoku
+
+## o_nimotsu
+@obj nimotsu hop
+*: 持ち物の箱。旅券、ホテルの鍵、新聞。新聞の1面に、ドラガンの国の大統領の顔。「6月の選挙へ、支持を訴える」。
+@get senkyo
+
+## o_t_shocho
+shocho.n: 裁判所の手続きに、数週間かかります。小さな国ですから、判事が2人しかいないんです。
+shocho.t: ……けさから、ある国の大使館が、3回も電話をかけてきます。「手違いだ、放せ」と。
+shocho.s: 放しませんよ。卵を最後まで食べさせた礼は、もう済みましたからね。
+
+## o_pre
+@hide all
+@bg station
+@bgm tension
+@card 5月28日（金）14:00｜島の警察署
+@show dragan center
+dragan.s: 総監。お若い。写真より、ずっと。
+dragan.n: 座ってください。私は、逃げません。……話をしましょう。ビジネスの話を。
+
+## b1_c1
+dragan.s: これは、ビジネスです。病院が払えば、病院は戻る。誰も、傷つかない。
+## b1_o1
+tsubasa.k: 東京の病院で、人が1人死にました。三浦さん。58歳。
+tsubasa.k: 閉じこめられて、5時間、1人で病棟の機械を守って。……戻りません。
+dragan.n: ……あれは、事故です。
+
+## b1_c2
+dragan.n: 事故ですよ。うちは、人を殺さない。金にならないからです。
+## b1_o2
+tsubasa.k: あの病院は、金で選んだんじゃない。「総監の初日に、目に見える形で」。
+tsubasa.k: あなたの声です。ケイルの地下の録音にありました。
+dragan.n: ……ケイルは、録っていたのか。用心深い男だ。
+
+## b1_c3
+dragan.s: なら、取引です。私は、ある大統領の話ができる。あなたの知らない話を。
+## b1_o3
+tsubasa.k: 毎月13日。受け取った身代金の、2割。
+tsubasa.k: その話なら、もう知っています。
+dragan.u: ……。
+
+## b1_c4
+dragan.n: 数字を知っていても、証拠がないでしょう。あの口座は、誰の名前でもない。
+## b1_o4
+tsubasa.k: あなたの鞄の、紙の鍵で動く口座です。そこから、大統領の義理の弟の会社へ送られています。
+tsubasa.k: 証拠は、あなたが本にはさんで持ってきました。
+dragan.d: ……休暇に、仕事を持ってくるものじゃないな。
+
+## b1_c5
+dragan.n: ……客の名は、知らない。本当です。
+## b1_o5
+tsubasa.k: 「知らない」と言う時だけ、口の端が上がります。
+tsubasa.k: 名前は知らない。……でも、名前のほかに、知っている事がある。
+dragan.s: ……よく見ている。
+
+## b1_c6
+dragan.n: 私は、客と直接は話していない。間に、人が立った。
+## b1_o6
+tsubasa.k: 大統領府の者です。あなたを守り、2割を受け取る側が、客を取り次いだ。
+tsubasa.k: 客は、あなたではなく、あなたの国の大統領に、頼んだんです。
+
+## b1_end
+@bgm truth
+dragan.n: ……そのとおりです。注文は、大統領府の男が持ってきた。
+dragan.k: 総監。1つだけ、お礼に。その男は言いました。「客は、あの総監の国の言葉を話していた」と。
+dragan.s: 英語か、日本語か。……それは、聞いていません。あなたには、国が2つありますからね。
+@hide all
+
+## b1_miss
+dragan.s: 総監。それは、取引の役に立ちませんよ。
+## b1_miss2
+dragan.n: 話を、戻しましょう。
+
+## o_end_a
+tsubasa.k: 取引をします。大統領の事を、全部、法廷で話してください。
+@show mendes center
+mendes.n: 検事のシャピロが、条件を詰めます。……総監、選挙の前に間に合わせましょう。
+## o_end_b
+tsubasa.k: 取引はしません。病院を止めた罪で、起訴します。
+@show mendes center
+mendes.n: 大統領の線は、紙の鍵と、13日の記録で追えます。……あなたらしい決め方だ。
+## o_end_c
+tsubasa.k: 送金の流れを、公表します。選挙の前に。あの国の人たちが、決める事です。
+@show rosen center
+rosen.k: 数字は、全部そろえます。誰が読んでも分かる形に。
+
+## o_end2
+@hide all
+@bg airport
+@bgm calm
+@card 5月29日（土）18:00｜島の空港
+@show shocho left
+shocho.s: また来てください、総監。今度は、仕事ではなく。
+@show rosen right
+rosen.n: 総監。目録、3回読み上げました。今度は、1つも抜けていません。
+@hide all
+*: 飛行機が、夕日の中へ上がっていく。
+
+## o_home
+@bg kouhei
+@obj night on
+@bgm home
+@card 5月31日（月）23:00｜神田　食堂「こうへい」
+@show kohei center
+kohei.n: おう。……焼けたな。南のほうか。
+kohei.n: 食ったか。……飛行機のめしは、めしのうちに入らん。座れ。
+kohei.s: さば、取ってある。今度は、ちゃんと間に合ったな。
+@hide all
+@bgm tension
+*: 客は、翼の国の言葉を話す。英語か、日本語か。
+*: 就任の日を、前もって知っていた者。……近くに、いる。

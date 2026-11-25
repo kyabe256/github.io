@@ -1,0 +1,297 @@
+# FILE 008 下請け
+@intro 病院の入口を実際に開けた「下請け」。海外の者だと、誰もが思っていた。チャットの言葉が、妙に若い。
+@next FILE 009「夜明けの突入」につづく
+@end S 小野寺「総監。広瀬くんの親御さんが、深々と頭を下げてましたよ。……私も、下げ返しました」
+@end A 槙「うちの捜査で、ここまで来ました。総監、FBIに渡しましょう」
+@end B 沢口「総監、次は言葉を選びます。ログより先に、人を見ます」
+@char hirose name=広瀬 role=福岡の大学の情報学部2年。19歳 sex=m skin=#f6d6bc hair=#3a342e hs=messy eye=#6a8a5a es=half tilt=6 jaw=0 brow=2.2 gl=round fit=hoodie:#6a6a7a pose=pocket v=M,1.28,1.05,0.98,0.70
+@char keiji name=県警の刑事 role=福岡県警 sex=m skin=#e8bd98 hair=#3a3a3e hs=buzz eye=#5a5a4a es=soft tilt=3 jaw=2 brow=3 wide=1 fit=suit:#5a5248:#ece7dd:#3a4a3a pose=stand v=M,0.88,0.95,1.00,1.10
+@ev namae 下請けの名前 | 名 | 堀の供述。名簿を買った「下請け」のチャットの名前は「lv19」。
+@ev wakai チャットの言葉 | 若 | 「lv19」の日本語は、若い。「まじすか」「了解っす」。訳した文ではない。
+@ev jikoku チャットの時刻 | 刻 | 「lv19」が書きこむのは、平日の12時10分から12時50分と、16時30分より後だけ。
+@ev jikanwari 時間割 | 割 | 福岡の大学の情報学部2年。昼休みは12時10分から12時50分。4限は16時20分に終わる。
+@ev seki 席の記録 | 席 | 大学のネットワークの記録。「lv19」の書きこみは、PC教室のこの席から。使っていたのは、2年の広瀬悠真。
+@ev kokyakuA 「顧客A」 | 客 | 広瀬はゲームの中で「会社のセキュリティのテストの仕事」と誘われた。1回5万円分。標的の名前は「顧客A」と伏せられていた。
+@ev zenkiroku 取ってあった記録 | 全 | 広瀬は、自分の操作の記録を全部取ってあった。4月12日のニュースを見てから。自首するつもりだった。
+@ev nj 指示役の回線 | 線 | 記録の中に、指示を出していた者の接続の跡。アメリカ、ニュージャージー州の、住宅の回線。
+@ev rokuon 通話の録音 | 声 | 指示役の声が入った通話の録音。英語。アメリカの東海岸の訛りがある。
+
+@place c1 start=tokumei need=wakai,jikoku,jikanwari,seki
+@loc tokumei 特命班の部屋 bg=tokumei people=maki,sawaguchi
+@hs logs chihaya 46,76,228,148 チャットの記録 -> h_logs
+@hs sousa chihaya 286,76,178,148 書きこみの時刻 -> h_jikoku
+@talk maki tsubasa 下請けは、どこの者だと見ますか -> h_t_maki
+@loc lab2 福岡の大学_PC教室 bg=lab2 people=keiji
+@hs jikan tsubasa 330,44,250,100 黒板の時間割 -> h_jikan
+@hs seki2 chihaya 274,182,102,84 まん中の席 -> h_seki
+@talk keiji onodera この大学の学生について -> h_t_keiji
+
+@place c2 start=dorm need=kokyakuA,zenkiroku,nj,rokuon
+@loc dorm 広瀬の部屋 bg=dorm people=hirose enter=sawamiss:miss
+@hs hpc chihaya 372,174,116,90 広瀬のパソコン -> h_hpc
+@hs usb chihaya 486,220,56,32 机のUSB -> [zenkiroku]h_usb h_usb0 | done=nj
+@hs posterg any 54,44,102,122 ゲームのポスター -> h_poster
+@talk hirose onodera どうやって、誘われたの -> h_t_hirose1
+@talk hirose onodera いつ、病院だと知ったの -> h_t_hirose2
+@talk hirose tsubasa さっき出してくれた物を、聞かせてください -> h_t_hirose3
+
+@battle b1 foe=maki title=「下請けは海外」を崩せ bg=tokumei miss=b1_miss,b1_miss2 end=b1_end
+@ph b1_c1 ev wakai b1_o1 | チャットの日本語を、よく読もう。「証拠」。
+@ph b1_c2 ev jikoku b1_o2 | 書きこむ時刻に、癖がある。「証拠」。
+@ph b1_c3 ev jikanwari b1_o3 | その時刻と、ぴったり合う物を、福岡で見た。「証拠」。
+@ph b1_c4 ev seki b1_o4 | 書きこみは、どの席から出たか。「証拠」。
+@battle b2 foe=hirose title=広瀬の言葉を聞け bg=dorm miss=b2_miss,b2_miss2 end=b2_end
+@ph b2_c1 ev kokyakuA b2_o1 | 広瀬は、標的が何かを知らされていたか。「証拠」。
+@ph b2_c2 ded 1 b2_o2 | 「推理」。広瀬の責任を、正しい重さで言おう。 | 君は、何も悪くない | 君は入口を開けた。止めたのは、指示した者だ。重さは違う。でも、ゼロではない | 君が、三浦さんを殺した
+@ph b2_c3 ev zenkiroku b2_o3 | 逃げる人は、記録を消す。広瀬は、どうしていたか。「証拠」。
+@ph b2_c4 view onodera b2_o4 | ここから先は、人の話だ。「視点」で、人に聞く仲間に代わろう。
+
+@flow miss
+ play h_miss
+ ask 沢口に、何と言う？ | 三浦さんの事を、思ったんですね -> h_miss_a | 広瀬くんに、一緒に謝りましょう -> h_miss_b | すぐ言ってくれて、助かります -> h_miss_c
+ play h_miss_after
+@flow main
+ cp
+ play h_intro
+ banner FILE 008 | 下請け
+ cp
+ inv c1
+ cp
+ play h_pre1
+ battle b1
+ cp
+ play h_mid
+ inv c2
+ cp
+ play h_pre2
+ battle b2
+ ask 広瀬を、どうする？ | 家庭裁判所へ送る。記録を全部つけて -> h_end_a | 協力者として扱う。指示役を追うために -> h_end_b
+ play h_end2
+
+## h_intro
+@bg tokumei
+@bgm invest
+@card 5月17日（月）9:00｜特命班の部屋
+@show maki center
+maki.n: 総監、警察庁サイバー特別捜査部の槙です。堀の供述から、名簿を買った「下請け」の名前が出ました。
+maki.k: チャットの名前は「lv19」。ドーンの下で、実際に病院の入口を開ける役です。
+@get namae
+maki.n: まあ、海外の者でしょう。こういう下請けは、たいてい東欧か、東南アジアです。
+@hide all
+
+## h_logs
+@obj logscroll on
+@show chihaya center
+chihaya.n: 「lv19」のチャット、読みました。……日本語、うまいっていうか。
+chihaya.k: 「まじすか」「了解っす」「あざます」。総監、これ、訳した文じゃないです。私の後輩が、こう書きます。
+@hide chihaya
+@get wakai
+
+## h_jikoku
+@show chihaya center
+chihaya.n: 書きこみの時刻を並べました。平日の、12時10分から12時50分。それと、16時30分より後だけ。
+chihaya.t: 朝も、午後の早い時間も、1回もないんです。……何かに、縛られてる人の時間です。
+@hide chihaya
+@get jikoku
+
+## h_t_maki
+maki.n: 海外です。日本語は、翻訳の道具か、日本語のできる仲間を使っているんでしょう。
+maki.k: ただ、接続をたどると、最後は九州の大学のネットワークに出ます。踏み台にされたんだと思いますが。
+*: 「移動」に、福岡の大学が増えた。
+
+## h_jikan
+@obj jikan glow
+*: 黒板に、情報学部2年の時間割。昼休みは、12時10分から12時50分。4限は、16時20分に終わる。
+*: ……「lv19」が書きこむ時刻と、同じだ。
+@get jikanwari
+
+## h_seki
+@obj seki2 on
+@show chihaya center
+chihaya.k: 大学のネットワークの記録、出してもらいました。「lv19」の書きこみ、踏み台じゃないです。
+chihaya.u: この教室の、まん中の席から、じかに出てます。使ってたのは……2年の、広瀬悠真。19歳。
+@hide chihaya
+@get seki
+
+## h_t_keiji
+keiji.n: 広瀬ですか。目立たん、まじめな子ですよ。成績もよか。
+keiji.t: ただ、4月の半ばから、大学に出てきとらんとです。下宿に、こもっとるらしくて。
+
+## h_pre1
+@hide all
+@bg tokumei
+@bgm tension
+@show maki center
+maki.k: 総監。大学は踏み台です。本体は海外にいる。国際手配の準備を、進めさせてください。
+
+## b1_c1
+maki.n: 下請けは、海外の者です。経験から言って、まず間違いありません。
+## b1_o1
+tsubasa.k: 「まじすか」「了解っす」「あざます」。この日本語は、訳した物じゃありません。
+tsubasa.k: 日本で育った、若い人の書き方です。
+maki.n: ……日本語のできる仲間を、雇ったんでしょう。
+
+## b1_c2
+maki.k: 日本の若者を1人、通訳に使っている。それなら、説明がつきます。
+## b1_o2
+tsubasa.k: 書きこみは、平日の12時10分から12時50分と、16時30分より後だけです。
+tsubasa.k: 海外の本体が指示しているなら、こんな時刻には縛られません。
+maki.t: ……たしかに、妙な時刻ですが。
+
+## b1_c3
+maki.n: 仕事の合間に書いている。会社員か何かでしょう。
+## b1_o3
+tsubasa.k: 福岡の大学の、情報学部2年の時間割です。昼休みが12時10分から12時50分。4限が16時20分まで。
+tsubasa.k: 会社員じゃない。授業の合間に、書いているんです。
+maki.u: 時間割と……同じ。
+
+## b1_c4
+maki.t: しかし、大学のネットワークは、踏み台にされただけでは。
+## b1_o4
+tsubasa.k: 書きこみは、PC教室のまん中の席から、じかに出ています。踏み台じゃありません。
+tsubasa.k: その席を使っていたのは、2年の広瀬悠真。19歳です。
+
+## b1_end
+@bgm truth
+maki.d: ……19歳。
+maki.n: 国際手配は、取り下げます。総監。福岡へ、ご一緒します。
+@hide all
+
+## b1_miss
+maki.n: 総監、それでは海外の線は消えません。
+## b1_miss2
+maki.k: 根拠を、もう1つください。
+
+## h_mid
+@bg dorm
+@bgm calm
+@card 5月18日（火）15:00｜福岡　広瀬の部屋
+@show hirose center
+hirose.d: ……来ると、思ってました。
+@hide all
+
+## h_miss
+@show sawaguchi center
+sawaguchi.d: 総監。……すみません、私です。
+sawaguchi.d: 部屋に入ってすぐ、広瀬に言ってしまいました。「人が死んだんだぞ」と。
+sawaguchi.d: 三浦さんの、あの5時間の記録を読んだのは、私なんで。……抑えられませんでした。
+
+## h_miss_a
+tsubasa.n: 三浦さんの事を、思ったんですね。
+## h_miss_b
+tsubasa.n: 広瀬くんに、一緒に謝りましょう。言った事は、消えないので。
+## h_miss_c
+tsubasa.s: すぐ言ってくれて、助かります。
+
+## h_miss_after
+@show hirose left
+hirose.d: ……いいんです。本当の事、なんで。
+hirose.d: あの……これ。記録とは別に、取ってあった物があります。あとで、聞いてください。
+@hide all
+@bgm invest
+
+## h_hpc
+@obj hpc on
+@show chihaya center
+chihaya.n: パソコン、見せてもらいます。……え。操作の記録、全部取ってあります。1行も消してない。
+chihaya.k: 日付は、4月12日の夜から。ニュースを見た日からです。
+@hide chihaya
+@get zenkiroku
+
+## h_usb0
+@show chihaya center
+chihaya.n: USBですね。先に、パソコンのほうを見せてください。
+@hide chihaya
+
+## h_usb
+@obj usb hop
+@show chihaya center
+chihaya.k: USBに、記録の写しが入ってました。この中に、指示を出してた人の接続の跡があります。
+chihaya.u: アメリカです。ニュージャージー州の、ふつうの家の回線。
+@hide chihaya
+@get nj
+
+## h_poster
+*: ゲームのポスター。「QUEST」。広瀬は、このゲームの中で、声をかけられた。
+
+## h_t_hirose1
+hirose.d: ゲームの中です。同じチームの人に。「会社のセキュリティのテストの仕事がある」って。
+hirose.d: 1回、5万円分の暗号資産でした。相手の名前は、いつも「顧客A」とか「顧客B」で。
+hirose.d: ……テストだと、思ってたんです。本当に。
+@get kokyakuA
+
+## h_t_hirose2
+hirose.d: 4月12日の、夜のニュースです。「東京の病院で、システムが止まり、男性が1人」って。
+hirose.d: 日付と、時刻が。……おれが「顧客A」に入った夜でした。
+hirose.d: それから、寝てません。警察に行こうと思って、毎朝、玄関までは行くんです。
+
+## h_t_hirose3
+hirose.n: 通話の、録音です。指示してきた人の、声が入ってます。
+hirose.d: 最後の指示の時だけ、文字じゃなくて、声で来たんです。怖くなって、録りました。
+@get rokuon
+*: 英語の、男の声。早口で、言い回しに、アメリカの東海岸の訛りがある。
+
+## h_pre2
+@hide all
+@bg dorm
+@bgm calm
+@show hirose center
+hirose.d: ……おれ、人殺しですよね。
+
+## b2_c1
+hirose.d: 知らなかったんです。病院だなんて。
+## b2_o1
+tsubasa.k: 標的は「顧客A」と伏せられていました。指示にも、病院という言葉は1度も出ていません。
+tsubasa.k: 知らなかったのは、本当です。記録が、そう言っています。
+hirose.d: ……でも。
+
+## b2_c2
+hirose.d: でも、開けたのは、おれです。おれが、殺したんです。
+## b2_o2
+tsubasa.k: 君は、入口を開けた。病院を止めたのは、指示を出した者です。
+tsubasa.k: 重さは違います。……でも、ゼロではない。それは、君も分かっているはずです。
+hirose.d: ……はい。
+
+## b2_c3
+hirose.d: 自首する日を、決められなくて。……おれ、逃げてたんです。
+## b2_o3
+tsubasa.k: 逃げる人は、記録を消します。
+tsubasa.k: 君は、1行も消さずに、全部取ってあった。自分に不利な物まで。
+hirose.u: ……。
+
+## b2_c4
+hirose.d: ……親に、何て言えばいいか、分からないんです。
+## b2_o4
+onodera.n: 一緒に行くよ。私が。
+onodera.n: 親ってのはね、「やってしまった」より、「言いに来なかった」ほうが、こたえるんだ。……30年、刑事やって、それだけは分かってる。
+hirose.d: ……っ。
+
+## b2_end
+@bgm truth
+hirose.d: ……全部、話します。記録も、録音も、渡します。
+hirose.n: 指示してきた人を、捕まえてください。
+@hide all
+
+## b2_miss
+hirose.d: ……それは、いいんです。
+## b2_miss2
+hirose.d: 慰めてほしいんじゃ、ないんです。
+
+## h_end_a
+tsubasa.n: 家庭裁判所へ送ります。君が取ってあった記録を、全部つけて。
+## h_end_b
+tsubasa.n: 君を、協力者として扱います。指示役を追うのに、君の記録が要る。
+
+## h_end2
+@hide all
+@bg tokumei
+@bgm calm
+@card 5月19日（水）9:00｜特命班の部屋
+@show mendes center
+mendes.k: 総監。ニュージャージーの回線の持ち主、FBIで割りました。ジョナサン・ケイル。31歳。
+mendes.n: 録音の声と、訛りも合います。ドーンの「管理人」です。
+@show maki left
+maki.n: ここから先は、FBIの仕事ですね。……総監、飛行機を取ります。
+@hide all
+@bgm tension
+*: 19歳に入口を開けさせた男が、ニュージャージーの住宅にいる。

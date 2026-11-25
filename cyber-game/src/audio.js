@@ -1,6 +1,6 @@
 /* ---------- audio: voice pack, synth BGM, SFX ---------- */
 const AudioSys = (() => {
-  let ctx = null, master, bgmG, seG, voG, ana, anaBuf, pack = null, curV = null, bgmName = null, timer = null, nextT = 0, step = 0, noiseBuf;
+  let ctx = null, master, bgmG, seG, voG, ana, anaBuf, pack = null, packIdx = null, vmode = 'game', curV = null, bgmName = null, timer = null, nextT = 0, step = 0, noiseBuf;
   const vol = { bgm: 0.45, se: 0.7, voice: 1 };
   const fnv = s => { let h = 0x811c9dc5; const b = new TextEncoder().encode(s); for (const x of b){ h ^= x; h = Math.imul(h, 0x01000193) >>> 0; } return h.toString(16).padStart(8, '0'); };
   function init(){
@@ -12,20 +12,21 @@ const AudioSys = (() => {
     voG = ctx.createGain(); voG.gain.value = vol.voice * 1.5; ana = ctx.createAnalyser(); ana.fftSize = 512; anaBuf = new Uint8Array(ana.fftSize); voG.connect(ana); ana.connect(master);
     noiseBuf = ctx.createBuffer(1, ctx.sampleRate, ctx.sampleRate); const d = noiseBuf.getChannelData(0); for (let i = 0; i < d.length; i++) d[i] = Math.random() * 2 - 1;
   }
-  async function loadPack(){ try { const r = await fetch('voice.mp3'); if (!r.ok) throw 0; pack = await r.arrayBuffer(); } catch (e) { pack = null; } return !!pack; }
+  async function loadPack(url, idx){ pack = null; packIdx = idx || null; try { const r = await fetch(url); if (!r.ok) throw 0; pack = await r.arrayBuffer(); } catch (e) { pack = null; } return !!pack; }
+  function setMode(m){ vmode = m; stopVoice(); }
   function setVol(k, v){ vol[k] = v; if (!ctx) return; if (k === 'bgm') bgmG.gain.value = v; if (k === 'se') seG.gain.value = v; if (k === 'voice') voG.gain.value = v * 1.5; }
   function stopVoice(){ if (curV){ try { curV.onended = null; curV.stop(); } catch (e) {} curV = null; } if (window.speechSynthesis) try { speechSynthesis.cancel(); } catch (e) {} }
   const TTS = { tsubasa:[1.0,1.05], kohei:[0.6,0.9], onizuka:[0.5,1.0], chihaya:[1.6,1.2], yuki:[1.4,1.15], hori:[0.9,1.0] };
   function speak(who, text){ // resolves with duration in seconds (0 when there is no voice)
     stopVoice();
     return new Promise(res => {
-      if (!ctx || !vol.voice) return res(0);
-      const e = (typeof VOICE_INDEX !== 'undefined') && VOICE_INDEX[fnv(who + '|' + text)];
-      if (pack && e){
+      if (!ctx || !vol.voice || vmode === 'off') return res(0);
+      const e = packIdx && packIdx[fnv(who + '|' + text)];
+      if (pack && e && vmode === 'game'){
         const done = buf => { const s = ctx.createBufferSource(); s.buffer = buf; s.connect(voG); s.start(); curV = s; s.onended = () => { if (curV === s) curV = null; }; res(buf.duration); };
         try { const p = ctx.decodeAudioData(pack.slice(e[0], e[0] + e[1]), done, () => res(0)); if (p && p.catch) p.catch(() => {}); } catch (err) { res(0); }
-      } else if (!pack && window.speechSynthesis && /[ぁ-んァ-ヶ一-龠]/.test(text)){
-        try { const u = new SpeechSynthesisUtterance(text.replace(/[「」…]/g, '')); u.lang = 'ja-JP'; const t = TTS[who] || [1, 1]; u.pitch = t[0]; u.rate = t[1]; u.volume = vol.voice; speechSynthesis.speak(u); } catch (err) {}
+      } else if ((!pack || vmode === 'device') && window.speechSynthesis && /[ぁ-んァ-ヶ一-龠]/.test(text)){
+        try { const u = new SpeechSynthesisUtterance(text.replace(/[「」…]/g, '')); u.lang = 'ja-JP'; const t = TTS[who] || [(typeof CHARS !== 'undefined' && CHARS[who] && CHARS[who].sex === 'f') ? 1.3 : 0.8, 1]; u.pitch = t[0]; u.rate = t[1]; u.volume = vol.voice; speechSynthesis.speak(u); } catch (err) {}
         res(Math.min(9, 0.6 + text.length * 0.13));
       } else res(0);
     });
@@ -85,5 +86,5 @@ const AudioSys = (() => {
     cutin: t => { noise(seG, t, 0.25, 0.2, 2000); tone(seG, 'sawtooth', 300, t, 0.25, 0.14, { to: 1200, lp: 3000 }); }
   };
   function sfx(n){ if (!ctx || !SFX[n]) return; try { SFX[n](ctx.currentTime + 0.005); } catch (e) {} }
-  return { init, loadPack, speak, stopVoice, level, speaking, bgm, sfx, setVol, vol, get hasPack(){ return !!pack; }, get ok(){ return !!ctx; } };
+  return { init, loadPack, setMode, get mode(){ return vmode; }, speak, stopVoice, level, speaking, bgm, sfx, setVol, vol, get hasPack(){ return !!pack && vmode === 'game'; }, get ok(){ return !!ctx; } };
 })();

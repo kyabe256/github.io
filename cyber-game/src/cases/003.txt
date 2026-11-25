@@ -1,0 +1,267 @@
+# FILE 003 交渉人
+@intro 身代金を半分に下げてみせた、腕のいい交渉人。だが、相手の返事が、早すぎる。
+@next FILE 004「保険の約款」につづく
+@end S シャピロ「総監、これなら陪審に勝てます。1つも足す物がありません」
+@end A マーガレット「払わずに済んだのね。……ハニー、少し寝なさい」
+@end B ローゼン「総監、数字はまだ隠れています。次は、もっと早く見つけます」
+@view tsubasa 翼 | 物を見て、筋を通す
+@view mendes メンデス | 人に聞く。足で稼ぐ
+@view rosen ローゼン | 数字と記録を読む
+@char rosen name=ローゼン role=FBIの会計担当の捜査官 sex=f skin=#f2d0bb hair=#a8683a hs=wavy eye=#4a9a5a es=soft tilt=-3 jaw=0 brow=1.8 gl=round fit=suit:#3d4a44:#f3efe8 pose=tablet
+@char blair name=ブレア role=パラディン・リスク社の交渉担当 sex=m skin=#f0c8a6 hair=#c89a4a hs=slick eye=#3a9ad6 es=cool tilt=-4 jaw=1 brow=2.2 sm=1 fit=suit:#8a7a5a:#f4f7fb:#c23a4a pose=cross v=M,1.16,1.03,1.12,1.20
+@ev hayai 早すぎる返事 | 速 | 交渉のチャット。ドーンの返事は、毎回2分以内。夜中の3時でも同じ。
+@ev tesuryo 手数料の決まり | 料 | パラディン社は、病院が払った身代金の15％を、手数料で受け取る。
+@ev sanjunana 37件の実績 | 件 | ブレアがこの2年に扱った交渉は37件。相手は、37件ともドーン。
+@ev jougen 最初の要求の額 | 額 | 37件とも、ドーンの最初の要求は、その病院の保険の上限と同じ額だった。
+@ev gopa ブレアの財布 | 財 | ブレアの個人の財布に、ドーンの財布から毎回、身代金の5％が入っている。換金先は取引所ベルタ。
+@ev tsuwa 通話の記録 | 話 | 37件とも、要求が来る前の週に、ブレアは保険の仲介業者と電話している。
+@ev kesu 消そうとした跡 | 消 | ゆうべ、ブレアは会社のサーバーの記録を消そうとした。操作の跡が、全部残っている。
+
+@place c1 start=paladin need=hayai,tesuryo,sanjunana,f:kotowari,kesu,jougen,gopa,tsuwa
+@loc paladin パラディン・リスク社 bg=paladin people=blair
+@hs chat tsubasa 350,50,220,144 交渉のチャット -> n_chat
+@hs laptop rosen 410,184,100,80 机のパソコン -> n_laptop
+@hs sofa any 50,230,190,84 赤いソファ -> n_sofa
+@talk blair tsubasa チャットを、全部見せてください -> n_t_blair1 | f=kotowari
+@talk blair mendes どうやって、半分に下げたんですか -> n_t_blair2 | f=shippai
+@loc fbi FBIワシントン支局 bg=fbi people=shapiro,hamilton cond=f:shippai enter=mendesmiss:miss
+@hs wb tsubasa 244,42,184,116 ホワイトボード -> [sanjunana]n_wb n_wb0 | done=jougen
+@hs pc2 rosen 392,176,104,82 ローゼンの画面 -> [sanjunana]n_gopa n_gopa0 | done=gopa
+@talk shapiro tsubasa これで、逮捕できますか -> [!gopa]n_t_shap0 [!jougen]n_t_shap0 n_t_shap1 | rep=1
+
+@battle b1 foe=blair title=ブレアの芝居を崩せ bg=paladin miss=b1_miss,b1_miss2 end=b1_end
+@ph b1_c1 ev hayai b1_o1 | 相手の返事の速さが、おかしい。「証拠」。
+@ph b1_c2 ev sanjunana b1_o2 | この2年、ブレアの相手は誰だったか。「証拠」。
+@ph b1_c3 ev jougen b1_o3 | 37件の、最初の数字に注目。「証拠」。
+@ph b1_c4 ev tsuwa b1_o4 | ブレアは、要求の前に誰と話していたか。「証拠」。
+@ph b1_c5 obs eyes b1_o5 | 「観察」。笑顔は動かない。動いているのは、別の所だ。 | eyes:目:84,92,90,38 | mouth:口:106,140,52,26 | arms:腕:44,254,150,60
+@ph b1_c6 ev kesu b1_o6 | ゆうべ、ブレアが何をしたか。「証拠」。
+@ph b1_c7 ded 1 b1_o7 | 「推理」。ブレアは、ドーンの何なのか。正しく言おう。 | あなたは、ドーンの仲間です | あなたは、ドーンの客です。上限を売り、下げる芝居で、両方から金を取った | あなたが、ドーンの頭です
+
+@flow miss
+ play n_miss
+ ask メンデスに、何と言う？ | 相手を安心させたかったんですね -> n_miss_a | 言ってしまった物は、使いましょう -> n_miss_b | すぐ言ってくれて、助かります -> n_miss_c
+ play n_miss_after
+@flow main
+ cp
+ play n_intro
+ ask 母に、何と答える？ | まだ払わないで。交渉人に会ってくる -> n_intro2
+ banner FILE 003 | 交渉人
+ cp
+ play n_arrive
+ inv c1
+ cp
+ play n_pre
+ battle b1
+ ask 翼は、ブレアに何と言う？ | 静かに告げる -> n_calm | !鬼のように怒る -> n_angry
+ ask ブレアを、どうする？ | 逮捕する -> n_end_a | 司法取引で、証人にする -> n_end_b | 泳がせて、次の払いを見張る -> n_end_c
+ play n_end2
+
+## n_intro
+@bg ward
+@bgm calm
+@card 4月20日（火）8:20｜聖ルカ小児病院
+@show margaret center
+margaret.n: ハニー、聞いて。交渉の会社の人が、相手を10ビットコインまで下げたんですって。半分よ。
+margaret.t: 理事会は、それなら払うって。きょうの午後に決めるわ。
+margaret.k: ……ねえ。払うの？　それで、いいの？
+
+## n_intro2
+tsubasa.k: まだ払わないで。その交渉人に、会ってきます。
+margaret.s: そう言うと思った。……コート、着ていきなさい。
+
+## n_arrive
+@hide all
+@bg paladin
+@bgm invest
+@card 9:30｜パラディン・リスク社
+@show blair center
+blair.s: ようこそ、総監。ケヴィン・ブレアです。お会いできて光栄ですよ。
+blair.s: 20から10へ。300万ドルが、150万ドルです。病院の皆さんにも、喜んでいただけました。
+blair.n: 相手はプロです。こちらもプロでないと、話になりませんからね。
+@hide all
+
+## n_chat
+@obj chat glow
+*: 壁の画面に、交渉のチャット。病院の側の言葉と、ドーンの返事が、交互に並んでいる。
+*: ドーンの返事は、毎回2分以内だ。夜中の3時の返事も、1分40秒で来ている。
+@get hayai
+
+## n_laptop
+@obj laptop on
+@show rosen center
+rosen.n: 契約の紙が出てます。手数料は、病院が払った身代金の15％。……いい商売ですね。
+rosen.k: それと、実績の一覧。この2年で37件。……総監。相手の欄、37件とも「ドーン」です。
+@hide rosen
+@get tesuryo
+@get sanjunana
+
+## n_sofa
+*: 赤い革のソファ。客は、ここで「半分になりました」と聞かされる。
+
+## n_t_blair1
+blair.s: チャットを全部、ですか。お見せしたいのは山々ですが。
+blair.n: 会社の決まりでして。交渉の中身は、お客さまにも全部はお見せしていないんです。やり方は、商売の種ですから。
+
+## n_t_blair2
+blair.s: 腕、としか言いようがありませんね。相手の息づかいを読むんです。
+@show mendes left
+mendes.s: なるほど。……まあ、安心してください。FBIは、あなたを調べてるわけじゃないんで。
+blair.s: それは、ありがたい。
+*: 「移動」に、FBIワシントン支局が増えた。
+
+## n_miss
+@show mendes center
+@bgm calm
+mendes.d: 総監。……すみません、私です。
+mendes.d: ブレアに「FBIはあなたを調べていない」と言いました。口を軽くさせたくて。
+mendes.d: 嘘です。それに、相手に手の内を教えたのと同じだ。
+
+## n_miss_a
+tsubasa.s: 相手を安心させたかったんですね。分かります。
+## n_miss_b
+tsubasa.s: 言ってしまった物は、戻りません。使いましょう。
+## n_miss_c
+tsubasa.s: すぐ言ってくれて、助かります。
+
+## n_miss_after
+@show hamilton left
+hamilton.n: 総監、その事なんですが。ゆうべ、パラディン社のサーバーで、記録を消す操作がありました。
+hamilton.k: 操作したのは、ブレアのアカウントです。消そうとした跡が、全部残っています。
+@show mendes right
+mendes.u: ……安心して、掃除を始めたのか。
+@hide all
+@bgm invest
+@get kesu
+
+## n_wb0
+*: ホワイトボードは、まだ白い。並べる数字が、足りない。
+
+## n_wb
+@obj wb glow
+*: 37件の、ドーンの最初の要求の額を、ホワイトボードに並べる。隣に、それぞれの病院の保険の上限を書く。
+*: 37行とも、左と右が、同じ数字になった。
+@get jougen
+
+## n_gopa0
+@show rosen center
+rosen.n: 追う財布が、まだ決まりません。ブレアの扱った件の一覧があれば、早いんですが。
+@hide rosen
+
+## n_gopa
+@obj pc2 on
+@show rosen center
+rosen.k: ブレアの個人の財布、見つけました。ドーンの財布から、37回、入金があります。
+rosen.n: 額は毎回、身代金の5％。換金先は、取引所ベルタ。口座の名義は、実体のない会社です。
+@hide rosen
+@get gopa
+
+## n_t_shap0
+shapiro.n: 総監、それでは陪審に勝てません。もう1つください。数字の裏づけが、足りない。
+
+## n_t_shap1
+shapiro.n: 数字はそろいました。……あと1つ。「誰から上限を聞いたか」が要ります。
+shapiro.s: と思って、携帯会社に照会しておきました。37件とも、要求の前の週に、ブレアは保険の仲介業者と電話しています。
+@get tsuwa
+
+## n_pre
+@hide all
+@bg paladin
+@bgm tension
+@card 14:00｜パラディン・リスク社
+@show blair center
+blair.s: おや、総監。また、いらしたんですか。
+blair.n: 理事会は、もうすぐ決を採りますよ。150万ドル。皆さん、納得されています。
+
+## b1_c1
+blair.s: 私は病院の味方ですよ、総監。半分に下げたんですから。
+## b1_o1
+tsubasa.k: ドーンの返事は、毎回2分以内です。夜中の3時でも。
+tsubasa.k: 相手は、あなたの言葉を、画面の前で待っていた。まるで、台本があるみたいに。
+blair.n: ……相手も、急いでいるんでしょう。
+
+## b1_c2
+blair.s: 向こうも商売です。早く終わらせたいのは、お互いさまですよ。
+## b1_o2
+tsubasa.k: この2年、あなたが扱った交渉は37件。相手は、37件ともドーンです。
+tsubasa.k: ランサムの集団は、世界に何十もあります。
+blair.n: ドーンは大手ですから。重なる事もあります。
+
+## b1_c3
+blair.s: 偶然ですよ。大きな相手ほど、よく当たる。それだけの事です。
+## b1_o3
+tsubasa.k: 37件とも、最初の要求は、その病院の保険の上限と同じ額でした。
+tsubasa.k: 上限を知っている誰かが、37回、ドーンのそばにいた。
+blair.t: ……私は、上限など知りません。
+
+## b1_c4
+blair.n: 私は交渉人です。保険の中身を知る立場に、ありませんよ。
+## b1_o4
+tsubasa.k: 37件とも、要求が来る前の週に、あなたは保険の仲介業者と電話しています。
+blair.t: ……世間話です。業界の、付き合いで。
+
+## b1_c5
+blair.s: 電話くらい、誰でもするでしょう。……それで、何が言いたいんです。
+## b1_o5
+tsubasa.k: さっきから、机のパソコンばかり見ていますね。
+tsubasa.k: 見られたくない物が、あそこにある。
+blair.u: ……！
+
+## b1_c6
+blair.a: 何も、隠してなどいない！
+## b1_o6
+tsubasa.k: ゆうべ、あなたは会社のサーバーの記録を消そうとしました。操作の跡が、全部残っています。
+tsubasa.k: FBIが「調べていない」と言った、その夜にです。
+blair.u: あ、あれは……整理を……。
+
+## b1_c7
+blair.a: 私は、ドーンの仲間じゃない！　あんな連中と、一緒にしないでくれ！
+## b1_o7
+tsubasa.k: ええ。仲間じゃない。あなたは、ドーンの客です。
+tsubasa.k: 保険の上限を聞き出して、ドーンに売った。交渉で半分に下げてみせて、病院から15％、ドーンから5％。
+tsubasa.k: 両方から、取っていた。
+
+## b1_end
+@bgm truth
+blair.d: ……誰も、損はしていない。
+blair.d: 病院は半額で済んだ。保険は下りる。ドーンは金を得る。……全員が、少しずつ得をする仕組みなんだ。
+
+## b1_miss
+blair.s: 総監。お疲れのようですね。
+## b1_miss2
+blair.s: それが、私と何の関係があるんでしょう。
+
+## n_calm
+tsubasa.k: 損をしたのは、夜の間、紙でカルテを書いた看護師たちです。
+tsubasa.k: それと、あなたの台本どおりに、怖がらされた親たちです。
+## n_angry
+@sfx shock
+tsubasa.a: 子どもの病院だぞ！
+tsubasa.a: 薬の機械が止まった夜、看護師は2人1組で、手で薬を数えてたんだ。あんたの「仕組み」のために！
+*: ブレアの笑顔が、初めて消えた。
+
+## n_end_a
+tsubasa.k: ブレアさん。恐喝の共謀と、証拠を消そうとした疑いで、逮捕します。
+@obj tejou close
+@sfx cuff
+shapiro.n: 罪状は私が読みます。……14時42分。
+## n_end_b
+tsubasa.k: 取引をしましょう。ドーンの窓口を、全部話してください。
+shapiro.n: 条件は私が詰めます。総監、いい判断だと思います。
+## n_end_c
+tsubasa.k: きょうは、ここまでにします。……理事会には、払わないように伝えます。
+shapiro.t: 泳がせる、ですか。見張りは、24時間つけます。
+
+## n_end2
+@hide all
+@bg ward
+@bgm calm
+@card 4月20日（火）18:00｜聖ルカ小児病院
+@show margaret center
+margaret.s: 理事会、払わないって。CISAの人たちが、あと1日で戻すそうよ。
+margaret.n: ……交渉人の人、最初に会った時から、笑顔が動かなかったの。看護師は、ああいう顔を信じないのよ。
+@show rosen left
+rosen.k: 総監。ブレアに上限を教えていた仲介業者ですが。東京の、東都医科大学病院の保険も扱っています。
+@hide all
+@bgm tension
+*: 東京の病院の要求も、保険の上限と同じ額だった。上限は、東京でも漏れている。

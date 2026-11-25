@@ -1,0 +1,295 @@
+# FILE 005 二重の脅迫
+@intro 漏れた患者の記録を使って、プロ野球の投手が脅された。だが、その文は、ドーンの物ではなかった。
+@next FILE 006「サーバーの国」につづく
+@end S 久我「総監。次の登板、見に来てください。……あの子と一緒に」
+@end A 早瀬「穴は閉じました。総監、4000人の次は、出ません」
+@end B 千早「総監、次は口にチャックします。記者さんの前では、特に！」
+@char kuga name=久我 role=プロ野球の投手。背番号18 sex=m skin=#e8c09a hair=#2a2420 hs=buzz eye=#6a4a2a es=cool tilt=-3 jaw=2 brow=3 wide=1 fit=work:#1d3a6a:#fff:18 patchc=#ffffff pose=stand v=M,0.90,0.95,0.96,0.85
+@char bengoshi name=弁護士 role=久我の代理人 sex=f skin=#f8dcc8 hair=#2a2a34 hs=long eye=#5a6a8a es=cool tilt=-4 jaw=0 brow=1.9 gl=rect fit=suit:#2e3440:#f4f7fb pin=1 pose=tablet v=F,0.86,0.96,1.08,0.80
+@char shonen name=少年 role=17歳。高校2年 sex=m skin=#f6d4b8 hair=#2a2e36 hs=messy eye=#4a7a9a es=round tilt=4 jaw=0 brow=2.2 fit=shirt:#f4f4f4:#fff:#2a3a6a pose=stand v=M,1.42,1.07,1.06,1.10
+@ev bunmen 脅迫メールの文 | 文 | 「肩の手術の記録を出されたくなければ、1000万円」。日本語がとても自然。ドーンの文は、いつも機械で訳したような日本語。
+@ev kouza 書いていない物 | 空 | 脅迫メールには、金を受け取る口座も、財布も、期限も書いていない。
+@ev camera 店のカメラ | 映 | 大阪のネットカフェ。メールが送られた時刻、その席に、高校の制服の少年。
+@ev gimei 会員の名前 | 偽 | ネットカフェの会員の帳面。その席の客が書いた名前は「久我翔太」。投手本人の名前。
+@ev page 出ていない1ページ | 頁 | 少年がメールにつけた記録の中に、ドーンの漏えいサイトには出ていない1ページがある。
+@ev chokusetsu 取った先 | 直 | 少年は、漏えいサイトではなく、病院の検査の機械から、記録を直接取っていた。
+@ev ana 開いたままの入口 | 穴 | 病院の検査の機械に、ドーンが残した入口が、まだ1つ開いている。誰でも、そこから患者の記録を取れる。
+
+@place c1 start=ousetsu need=bunmen,kouza,camera,gimei,page
+@loc ousetsu 警視庁_応接室 bg=ousetsu people=kuga,bengoshi
+@hs tegami tsubasa 280,258,72,44 脅迫メールの写し -> d_tegami
+@talk bengoshi onodera メールに、払い方は書いてありましたか -> d_t_ben
+@talk kuga onodera 肩の事を、教えてください -> d_t_kuga
+@loc netcafe 大阪_ネットカフェ bg=netcafe
+@hs camera chihaya 278,12,74,40 店のカメラ -> d_camera
+@hs chobo onodera 560,200,72,56 会員の帳面 -> d_chobo
+@hs seki2 chihaya 222,116,150,160 送り主の席 -> d_seki
+
+@place c2 start=dorm need=chokusetsu,ana,f:wake
+@loc dorm 少年の部屋 bg=dorm people=shonen
+@hs hpc chihaya 372,174,116,90 少年のパソコン -> d_hpc
+@hs posterg any 54,44,102,122 壁のポスター -> d_poster
+@talk shonen onodera どうして、あんなメールを書いたの -> d_t_shonen | f=wake
+@loc kensa 病院の検査室 bg=kensa cond=chokusetsu
+@hs kensaki chihaya 54,84,164,194 検査の機械 -> d_kensaki
+@hs kensapc tsubasa 334,178,108,84 検査室の画面 -> d_kensapc
+
+@battle b1 foe=hayase title=「ドーンの脅迫」という見立てを崩せ bg=ousetsu miss=b1_miss,b1_miss2 end=b1_end
+@ph b1_c1 ev bunmen b1_o1 | メールの日本語を、ドーンの文と比べよう。「証拠」。
+@ph b1_c2 ev kouza b1_o2 | 金が目当てなら、必ず書く物がある。「証拠」。
+@ph b1_c3 ev gimei b1_o3 | 送り主は、ネットカフェで何と名乗ったか。「証拠」。
+@ph b1_c4 ded 2 b1_o4 | 「推理」。送り主は、どんな人か。 | ドーンの、日本にいる仲間 | 久我に金を貸している者 | 久我に怒っている、若いファン
+@battle b2 foe=shonen title=少年の言い分を聞け bg=dorm miss=b2_miss,b2_miss2 end=b2_end
+@ph b2_c1 view onodera b2_o1 | 久我の本当の気持ちを聞いてきた仲間がいる。「視点」。
+@ph b2_c2 ev page b2_o2 | 少年が取った記録には、ネットに出ていない物がまじっている。「証拠」。
+@ph b2_c3 ev ana b2_o3 | 少年が通った道は、まだ開いている。「証拠」。
+@ph b2_c4 ded 0 b2_o4 | 「推理」。少年に、本当の事を言おう。軽くも、重くもしない。 | 君がした事は脅迫だ。でも、君が見つけた穴で、次の4000人を守れる | 何もなかった事にしよう | 君は、ドーンの仲間だ
+
+@flow miss
+ play d_miss
+ ask 千早に、何と言う？ | 記者だと、知らなかったんですね -> d_miss_a | 言ってしまった先を、確かめましょう -> d_miss_b | すぐ言ってくれて、助かります -> d_miss_c
+ play d_miss_after
+@flow main
+ cp
+ play d_intro
+ banner FILE 005 | 二重の脅迫
+ cp
+ inv c1
+ cp
+ play d_pre1
+ battle b1
+ cp
+ play d_mid
+ flowx miss
+ inv c2
+ cp
+ play d_pre2
+ battle b2
+ ask 少年を、どうする？ | 家庭裁判所へ送る。決まりどおりに -> d_end_a | その前に、久我と少年を会わせる -> d_end_b
+ play d_end2
+
+## d_intro
+@bg ousetsu
+@bgm invest
+@card 5月3日（月）10:00｜警視庁　応接室
+@show bengoshi left
+bengoshi.n: 久我翔太の代理人です。きのう、本人にこのメールが届きました。
+bengoshi.k: 「肩の手術の記録を出されたくなければ、1000万円」。……東都医科大学病院の、本物の記録がついています。
+@show kuga right
+kuga.d: ……手術は去年の秋です。球団にも、言ってません。
+@show hayase center
+hayase.n: ドーンの漏えいサイトに、あの病院の患者4000人分が出ています。その中の1人を狙った、二重の脅迫でしょう。
+@hide all
+
+## d_tegami
+@obj tegami hop
+*: 脅迫メールの写し。「隠して投げてたんですね。ファンをだましてたんですね。記録を出されたくなければ、1000万円」。
+*: 日本語が、自然すぎる。ドーンの文は、いつも機械で訳したような、かたい日本語だった。
+@get bunmen
+
+## d_t_ben
+bengoshi.n: それが、妙なんです。口座も、暗号資産の財布も、書いていません。
+bengoshi.k: 期限もありません。「1000万円」とあるだけ。払いようが、ないんです。
+@get kouza
+
+## d_t_kuga
+kuga.d: 痛み止めを打って投げてました。……去年の秋から、球が5キロ落ちた。
+kuga.d: 「隠して投げてた」と言われたら、そのとおりです。だますつもりは、なかったんですけど。
+
+## d_camera
+@obj camera glow
+@show chihaya center
+chihaya.n: メールの出どころ、大阪のこの店でした。カメラの記録、もらいます。
+chihaya.u: ……え。送った時刻に座ってるの、制服の男の子です。高校生ですよ、これ。
+@hide chihaya
+@get camera
+
+## d_chobo
+@obj chobo hop
+@show onodera center
+onodera.n: 会員の帳面です。その席の客が書いた名前は……「久我翔太」。
+onodera.k: 偽名に、投手本人の名前を書いてる。……これは、金の欲しい人間のやる事じゃないですねえ。
+@hide onodera
+@get gimei
+
+## d_seki
+@obj pc2 on
+@show chihaya center
+chihaya.k: 席のパソコンに、送ったファイルの跡が残ってます。久我さんの記録、6ページ。
+chihaya.n: 沢口さんに照らしてもらいました。漏えいサイトに出てるのは5ページ。……1ページ、どこにも出てない物があります。
+@hide chihaya
+@get page
+
+## d_pre1
+@hide all
+@bg ousetsu
+@bgm tension
+@show hayase center
+hayase.k: 総監。ドーンの交渉サイトに、こちらから連絡を入れます。二重の脅迫には、まとめて当たるべきです。
+
+## b1_c1
+hayase.n: これはドーンの二重の脅迫です。記録の出どころが、ドーンなんですから。
+## b1_o1
+tsubasa.k: メールの日本語が、自然すぎます。ドーンの文は、いつも機械で訳したような日本語でした。
+tsubasa.k: 「だましてたんですね」。これは、日本語で怒っている人の文です。
+hayase.n: ……日本人の仲間がいる、という事でしょう。
+
+## b1_c2
+hayase.k: ドーンに、日本語のできる者が加わった。それだけの事です。
+## b1_o2
+tsubasa.k: メールには、口座も、財布も、期限も書いてありません。
+tsubasa.k: ドーンは、金の受け取り方を書き忘れる相手じゃない。この送り主は、金を受け取る気がないんです。
+hayase.t: 金が、目当てじゃない……。
+
+## b1_c3
+hayase.t: では、何が目当てなんです。1000万円と、書いてあるのに。
+## b1_o3
+tsubasa.k: 送り主は、ネットカフェの帳面に「久我翔太」と書いています。
+tsubasa.k: 相手の名前を、自分で名乗った。……言いたい事があるのは、金じゃなく、久我さんに対してです。
+hayase.u: 本人の名前を……。
+
+## b1_c4
+hayase.n: ……総監。送り主は、どんな人間だと見ますか。
+## b1_o4
+tsubasa.k: 久我さんに怒っている、若いファンです。カメラには、高校の制服が映っていました。
+tsubasa.k: 「隠して投げていたのか」。それを、本人にぶつけたかった。
+
+## b1_end
+@bgm truth
+hayase.d: ……高校生、ですか。
+hayase.n: ドーンへの連絡は、止めます。その子に、会いに行きましょう。
+@hide all
+
+## b1_miss
+hayase.n: 総監、それは脅迫の中身と、関係がありません。
+## b1_miss2
+hayase.t: ドーンではない、と言える物をください。
+
+## d_mid
+@bg tokumei
+@bgm calm
+@card 5月4日（火）9:00｜特命班の部屋
+@show sawaguchi left
+sawaguchi.n: 少年の身元、割れました。17歳。大阪の高校の2年です。保護者には、連絡済みです。
+@hide all
+
+## d_miss
+@show chihaya center
+chihaya.d: 総監。……すみません、私です。
+chihaya.d: きのう、ロビーで話しかけてきた人に、少年のネットの名前を言っちゃいました。雑談のつもりで。
+chihaya.d: その人、新聞の記者でした。野々村さんっていう……。
+
+## d_miss_a
+tsubasa.n: 記者だと、知らなかったんですね。
+## d_miss_b
+tsubasa.n: 言ってしまった先を、確かめましょう。まず、野々村さんに会います。
+## d_miss_c
+tsubasa.s: すぐ言ってくれて、助かります。
+
+## d_miss_after
+@show nonomura left
+nonomura.n: 野々村です。……先に言います。あの名前は、書きません。17歳ですから。
+nonomura.k: その代わり、というわけじゃないですけど。漏えいサイトの運営者の噂を、1つ。あそこの「お知らせ」は、いつも東京の朝9時に出るそうです。
+@show chihaya right
+chihaya.u: 東京の、朝……。
+@hide all
+@bgm invest
+
+## d_hpc
+@obj hpc on
+@show chihaya center
+chihaya.n: 少年のパソコン、見せてもらいます。……記録を取った先、漏えいサイトじゃないです。
+chihaya.k: 病院の、検査の機械に、直接つないでます。入口が、開いてたんです。
+@hide chihaya
+@get chokusetsu
+*: 「移動」に、病院の検査室が増えた。
+
+## d_poster
+*: ゲームのポスターの横に、背番号18のタオル。何度も洗って、色がうすくなっている。
+
+## d_t_shonen
+shonen.a: ……去年の秋から、球が遅くなったやろ。みんな「衰えた」って言うてた。
+shonen.d: おれは「ちがう、調子が悪いだけや」って、ずっと言い返してたのに。
+shonen.d: 記録見たら、手術してるやん。……黙ってたんかって。腹立って。
+
+## d_kensaki
+@obj kensaki glow
+@show chihaya center
+chihaya.k: ありました。検査の機械に、外から入れる入口が、1つ残ってます。ドーンが置いていった物です。
+chihaya.t: 病院を戻した時に、ここだけ見落としてます。……いまも、誰でも入れます。
+@hide chihaya
+@get ana
+
+## d_kensapc
+*: 検査室の画面に、古い記録の跡。ドーンの道具とは、名前のつけ方がちがう。もっと古い、別の誰かの道具だ。
+
+## d_pre2
+@hide all
+@bg dorm
+@bgm calm
+@card 5月4日（火）16:00｜少年の部屋
+@show shonen center
+shonen.a: ……警察やろ。逮捕しに来たん。
+
+## b2_c1
+shonen.a: 悪いのは久我やんか。隠して投げてたんやから。
+## b2_o1
+onodera.n: 久我さんに、聞いてきたよ。痛み止めを打って投げてたそうだ。
+onodera.n: 医者には止められた。でも「球場に来る子に、休みますとは言えなかった」って。
+shonen.u: ……。
+
+## b2_c2
+shonen.t: ……でも、記録はもうネットに出てる。おれが見たって、同じやろ。
+## b2_o2
+tsubasa.k: 君がメールにつけた6ページのうち、1ページは、ネットのどこにも出ていません。
+tsubasa.k: 君は、漏えいサイトから取ったんじゃない。病院の機械から、直接取った。
+shonen.u: な、なんで分かるん……。
+
+## b2_c3
+shonen.t: ……たまたま、開いてたんや。病院の機械が。入ってみたら、入れただけで。
+## b2_o3
+tsubasa.k: その入口は、ドーンが残した物です。いまも開いています。
+tsubasa.k: 君が通った道を、ほかの誰かも通れる。4000人の次が、出ます。
+shonen.d: ……おれ、そんなつもりや……。
+
+## b2_c4
+shonen.d: ……おれ、どうなるん。
+## b2_o4
+tsubasa.k: 君がした事は、脅迫です。そこは、変わりません。
+tsubasa.k: でも、君が見つけた穴のおかげで、次の4000人を守れます。……両方、本当です。
+
+## b2_end
+@bgm truth
+shonen.d: ……ごめんなさい。
+shonen.d: 18番、好きやっただけやねん。ずっと。
+@hide all
+
+## b2_miss
+shonen.a: 関係ないやろ、それ。
+## b2_miss2
+shonen.a: 大人は、すぐそうやって話そらす。
+
+## d_end_a
+tsubasa.n: 決まりどおり、家庭裁判所へ送ります。……君が穴を見つけた事も、ちゃんと書きます。
+## d_end_b
+tsubasa.n: その前に、会ってほしい人がいます。
+@bg ousetsu
+@show kuga center
+kuga.d: ……ごめんな。隠してて。
+kuga.n: 18番のタオル、まだ持っててくれるか。秋には、ちゃんと投げるから。
+@show shonen left
+shonen.d: ……はい。
+
+## d_end2
+@hide all
+@bg kensa
+@bgm calm
+@card 5月5日（水）11:00｜病院の検査室
+@show chihaya center
+chihaya.s: 入口、閉じました！　今度は、3回確かめました。
+@show sawaguchi left
+sawaguchi.k: 総監。検査の機械に、もう1つ跡があります。ドーンより前の、古い道具です。
+sawaguchi.n: 名前のつけ方が、どこかの国の役所みたいなんですよね。
+@hide all
+@bgm tension
+*: ドーンより前に、誰かが、この病院の中にいた。

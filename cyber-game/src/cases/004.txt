@@ -1,0 +1,315 @@
+# FILE 004 保険の約款
+@intro 保険会社から、病院の名簿と「払える上限」の表が漏れた。記録は、1人の部長を指している。
+@next FILE 005「二重の脅迫」につづく
+@end S 小野寺「総監。宇野さんの奥さんから、菓子折りが届いてますよ。……私あてに」
+@end A 早瀬「宇野さんに謝ってきました。総監、止めてくれて助かりました」
+@end B 千早「総監、次は更新の記録、最初に見ます！」
+@meta have=tejou
+@char uno name=宇野 role=あおば損保のサイバー保険の部長 sex=m skin=#f0cdb0 hair=#3a3a40 hs=neat eye=#5a6a7a es=half tilt=6 jaw=1 brow=2.4 gl=rect fit=shirt:#e4e8ee:#fff pose=stand v=M,1.04,1.00,0.94,0.75
+@char unowife name=宇野の妻 role=宇野の家族 sex=f skin=#f8dcc8 hair=#4a3a32 hs=bob eye=#7a5a4a es=soft tilt=4 jaw=0 brow=1.8 fit=shirt:#d8c8e0:#fff pose=stand v=F,0.92,0.98,1.02,0.90
+@ev tejou 伯父の手錠 | 錠 | 父の兄が警視庁で30年使った手錠。
+@ev kiroku3ji 共有フォルダの記録 | 記 | 4月2日の夜中3時4分、宇野のIDで、名簿のある共有フォルダに入った記録。
+@ev jougen7 上限の表 | 表 | あおば損保の名簿。病院ごとの「払える上限」が載っている。東都医科大学病院は7億円。001の要求と同じ額。
+@ev hotel ホテルの記録 | 宿 | 4月2日の夜、宇野は大阪のホテルにいた。部屋の鍵は、0時から朝6時まで動いていない。
+@ev shashin 画面の写真 | 写 | 宇野の妻が撮った写真。4月2日の3時1分、家のパソコンが勝手に動き、「保守ツールを更新しています」と出ている。
+@ev koushin 更新の記録 | 更 | 宇野のパソコンの保守の道具が、4月2日3時1分に更新された。その更新に、IDを抜き取る物がまぎれていた。
+@ev kengen 管理の権限の一覧 | 権 | その保守の道具に更新を出せるのは、管理の権限を持つ者だけ。一覧に、メディコア・ジャパンの堀健吾。
+@ev kuse 出品の文の癖 | 癖 | 売り主「アジャスター」の出品の文は、001の「保守の入口」の出品と、言い回しも句読点も同じ。
+@ev saifu 受け取りの財布 | 財 | 「アジャスター」が代金を受け取った財布は、堀が0.3ビットコインを受け取った財布と同じ。
+
+@place c1 start=aoba need=kiroku3ji,jougen7,hotel,shashin,koushin
+@loc aoba あおば損保 bg=aoba people=hayase
+@hs kyoyu chihaya 204,178,108,84 共有フォルダの画面 -> y_kyoyu
+@hs meibo tsubasa 322,220,66,44 名簿の表 -> y_meibo
+@hs cab onodera 34,94,104,182 書類の棚 -> y_cab
+@talk hayase tsubasa 宇野部長は、いまどこに -> y_t_hayase
+@loc home 宇野の家 bg=home people=uno,unowife cond=f:ie enter=onoderamiss:miss
+@hs homepc chihaya 394,176,104,82 家のパソコン -> [shashin]y_homepc y_homepc0 | done=koushin
+@hs photo any 268,48,74,62 家族の写真 -> y_photo
+@talk uno onodera 4月2日の夜は、どこにいましたか -> y_t_uno
+@talk unowife onodera あの夜、家で何かありませんでしたか -> y_t_wife
+
+@place c2 start=tokumei need=kengen,kuse,saifu
+@loc tokumei 特命班の部屋 bg=tokumei people=sawaguchi,mendes objs=screenT:on
+@hs logs chihaya 46,76,228,148 保守の道具の記録 -> y_kengen
+@talk sawaguchi any 「アジャスター」の出品について -> y_t_sawa
+@talk rosen tsubasa 代金の流れは、追えましたか -> y_t_rosen
+
+@battle b1 foe=hayase title=宇野への疑いを止めろ bg=aoba miss=b1_miss,b1_miss2 end=b1_end
+@ph b1_c1 ev hotel b1_o1 | その夜、宇野はどこにいたか。「証拠」。
+@ph b1_c2 ev shashin b1_o2 | 同じ時刻、宇野の家で起きていた事がある。「証拠」。
+@ph b1_c3 ded 0 b1_o3 | 「推理」。宇野のIDは、どうやって使われたか。 | 保守の道具の更新にまぎれて、IDが抜き取られた | 宇野の妻が、夫のIDで入った | 宇野が、ホテルから家のパソコンを動かした
+@battle b2 foe=hori title=「アジャスター」の名を言わせろ bg=interview miss=b2_miss,b2_miss2 end=b2_end
+@ph b2_c1 ev kengen b2_o1 | 堀が出入りできた場所は、病院だけではない。「証拠」。
+@ph b2_c2 ev koushin b2_o2 | 宇野のパソコンに、何が、いつ入ったか。「証拠」。
+@ph b2_c3 obs mouth b2_o3 | 「観察」。ある名前を言う時だけ、どこかが震える。 | eyes:目:84,92,90,38 | mouth:口:106,140,52,26 | wrist:手首:80,282,92,50
+@ph b2_c4 ev saifu b2_o4 | 「アジャスター」の代金は、どこに入ったか。「証拠」。
+@ph b2_c5 ded 2 b2_o5 | 「推理」。名簿は、何に使われたか。 | 保険会社を、ゆするため | 自分の保険料を、下げるため | どの病院がいくらまで払えるかを、ドーンの側に売るため
+
+@flow miss
+ play y_miss
+ ask 小野寺に、何と言う？ | 奥さんには、私からも話します -> y_miss_a | 言ってしまったなら、ちゃんと聞きましょう -> y_miss_b | すぐ言ってくれて、助かります -> y_miss_c
+ play y_miss_after
+@flow main
+ cp
+ play y_intro
+ banner FILE 004 | 保険の約款
+ cp
+ play y_arrive
+ inv c1
+ cp
+ play y_pre1
+ ask 翼は、どうする？ | 待ってください、早瀬課長 -> y_pre1b
+ battle b1
+ cp
+ play y_mid
+ inv c2
+ cp
+ play y_pre2
+ battle b2
+ ask 堀を、どうする？ | 証人にする。ドーンとの連絡の方法を話させる -> y_end_a | 名簿の件も、追って起訴する -> y_end_b
+ ask 宇野さんの事を、世間にどう伝える？ | 「宇野さんは被害者です」と、警察からはっきり言う -> y_uno_a | 発表は、会社に任せる -> y_uno_b
+ play y_end2
+
+## y_intro
+@bg tokumei
+@bgm invest
+@card 4月26日（月）9:00｜特命班の部屋
+@show sawaguchi left
+sawaguchi.n: 総監、ダークウェブに、また嫌な物が出ました。「あおば損保」の顧客の名簿です。
+sawaguchi.k: 病院ごとに、保険で払える上限の額がついてます。売り主の名前は「アジャスター」。
+@show hayase right
+hayase.n: あおば損保には、もう入りました。名簿のあるフォルダに入った記録は、1つだけです。
+hayase.k: サイバー保険の部長、宇野直人のID。4月2日の、夜中の3時。……本人は、いま会社を休んでいます。
+
+## y_arrive
+@hide all
+@bg aoba
+@card 10:30｜千代田区　あおば損保
+@show hayase center
+hayase.n: ここが宇野の部です。席は、あの窓ぎわ。……きょう、任意で話を聞くつもりです。
+@hide all
+
+## y_kyoyu
+@obj kyoyu on
+@show chihaya center
+chihaya.n: 共有フォルダの記録、出しました。4月2日の3時4分。宇野さんのIDで、名簿を全部開いてます。
+chihaya.t: ……きれいすぎるんですよね。迷わずに、まっすぐ名簿だけ。慣れた人の動きです。
+@hide chihaya
+@get kiroku3ji
+
+## y_meibo
+@obj meibo hop
+*: 名簿の表。病院の名前の横に、保険で払える上限の額。
+*: 東都医科大学病院は、7億円。……001で、ドーンが最初に要求した額と、同じだ。
+@get jougen7
+
+## y_cab
+@obj cab open
+@show onodera center
+onodera.n: 出張の届が出てきましたよ。宇野さん、4月1日から3日まで、大阪です。
+onodera.k: ホテルにも聞きました。2日の夜、部屋の鍵は、0時から朝6時まで動いてません。
+@hide onodera
+@get hotel
+
+## y_t_hayase
+hayase.n: 自宅です。疑われてから、会社に出てこられなくなって。
+hayase.t: ……正直、私は宇野だと思っています。IDが、そう言っているので。
+*: 「移動」に、宇野の家が増えた。
+@flag ie
+
+## y_miss
+@show onodera center
+@bgm calm
+onodera.d: 総監。……すみません、私です。
+onodera.d: 玄関先で、奥さんの前で言ってしまいました。「ご主人のIDで、名簿が盗まれた件で」と。
+onodera.d: 奥さん、何も聞かされていなかったんです。顔が、真っ白になって。
+
+## y_miss_a
+tsubasa.n: 奥さんには、私からも話します。一緒に行きましょう。
+## y_miss_b
+tsubasa.n: 言ってしまったなら、ちゃんと最後まで聞きましょう。奥さんの話も。
+## y_miss_c
+tsubasa.s: すぐ言ってくれて、助かります。
+
+## y_miss_after
+@show unowife left
+unowife.t: あの……いまのお話。夫が出張だった夜の事ですよね。4月の、2日。
+unowife.k: 私、あの夜の事、覚えています。……変な事が、あったので。
+@hide all
+@bgm invest
+
+## y_t_uno
+uno.d: 大阪です。ホテルで、寝ていました。……誰も、信じてくれませんが。
+uno.d: 20年、この会社で保険を売ってきました。お客さんの秘密を守るのが、仕事だったんです。
+
+## y_t_wife
+unowife.n: 夜中に目が覚めたら、夫の机のパソコンが、ひとりでに光っていたんです。
+unowife.k: 誰も触っていないのに、画面が動いて。怖くて、スマホで写真を撮りました。……これです。
+@obj sumaho hop
+@get shashin
+
+## y_homepc0
+@show chihaya center
+chihaya.n: 会社から持ち帰ってる仕事用のパソコンですね。……どこから見ましょう。手がかりが欲しいです。
+@hide chihaya
+
+## y_homepc
+@obj homepc on
+@show chihaya center
+chihaya.k: 写真と同じ時刻の記録、ありました。3時1分、保守の道具が更新されてます。
+chihaya.u: ……総監、これ。更新の中に、IDとパスワードを抜き取る物が、まぎれてます。
+chihaya.n: この保守の道具、どこかで見たんですよね。……あ。メディコアの、病院のやつです。
+@hide chihaya
+@get koushin
+
+## y_photo
+*: 棚の上に、家族の写真。宇野と、妻と、小学生くらいの娘。うしろに、大阪城。
+
+## y_pre1
+@hide all
+@bg aoba
+@bgm tension
+@card 15:00｜あおば損保
+@show hayase center
+hayase.k: 総監。宇野に、任意同行を求めます。
+hayase.n: 記録は、宇野のIDです。ほかに、入った者はいません。
+
+## y_pre1b
+tsubasa.k: 待ってください、早瀬課長。IDは、本人とは限りません。
+
+## b1_c1
+hayase.n: フォルダに入ったのは、宇野のIDです。本人でしょう。
+## b1_o1
+tsubasa.k: その時刻、宇野さんは大阪のホテルにいました。部屋の鍵は、朝まで動いていません。
+hayase.n: ……ホテルの部屋からでも、遠隔で入れますよ。
+
+## b1_c2
+hayase.k: ホテルから、自分のパソコンにつないで入った。それで説明がつきます。
+## b1_o2
+tsubasa.k: 同じ夜の3時1分、宇野さんの家のパソコンが、ひとりでに動いています。奥さんが写真を撮っていました。
+tsubasa.k: 画面には「保守ツールを更新しています」。本人が操作したなら、こんな画面は出ません。
+hayase.u: 更新……？
+
+## b1_c3
+hayase.t: ……では、誰が、どうやって宇野のIDを。
+## b1_o3
+tsubasa.k: 保守の道具の更新に、IDを抜き取る物がまぎれていました。
+tsubasa.k: 3時1分に抜き取り、3時4分に名簿を開いた。宇野さんは、盗まれた側です。
+
+## b1_end
+@bgm truth
+hayase.d: ……3分で、ですか。
+hayase.n: 宇野さんに、謝らないといけませんね。……私が行きます。
+@hide all
+
+## b1_miss
+hayase.n: 総監、それは宇野の話と、つながりません。
+## b1_miss2
+hayase.t: IDの記録を、くつがえせる物をください。
+
+## y_mid
+@bg tokumei
+@bgm invest
+@card 4月27日（火）9:00｜特命班の部屋
+@show chihaya center
+chihaya.k: 総監。あの保守の道具、調べ直します。更新を出せる人は、限られてるはずなんで。
+@hide all
+
+## y_kengen
+@obj logscroll on
+@show chihaya center
+chihaya.n: 出ました。あの道具に更新を出せるのは、「管理の権限」を持つ人だけです。全部で6人。
+chihaya.u: ……6人目。メディコア・ジャパン、保守担当、堀健吾。
+@hide chihaya
+@get kengen
+
+## y_t_sawa
+sawaguchi.n: 「アジャスター」の出品の文、読みこみました。癖があるんです。
+sawaguchi.k: 「。」のあとに必ず半角の空きが1つ。値段の書き方も。……001の「保守の入口」の出品と、同じ書き手です。
+@get kuse
+
+## y_t_rosen
+rosen.n: 総監、名簿の代金の流れ、追えました。受け取った財布に、見覚えがあります。
+rosen.k: 堀が、病院の入口の代金、0.3ビットコインを受け取った財布。同じ物です。
+@get saifu
+
+## y_pre2
+@hide all
+@bg interview
+@bgm tension
+@card 4月27日（火）14:00｜東京拘置所　接見室
+@show hori center
+hori.d: ……総監。全部、話しました。病院の入口を売った事は。
+hori.d: もう、話す事は、何もありません。
+
+## b2_c1
+hori.d: 私が売ったのは、病院の入口だけです。
+## b2_o1
+tsubasa.k: あなたは、保守の道具の「管理の権限」を持っていました。
+tsubasa.k: あの道具は、病院だけじゃない。あおば損保のパソコンにも入っています。
+hori.t: ……持っていた、だけです。
+
+## b2_c2
+hori.t: 権限があっただけで、使ってはいません。
+## b2_o2
+tsubasa.k: 4月2日の3時1分。宇野部長のパソコンに、保守の道具の更新が入りました。IDを抜き取る物と一緒に。
+tsubasa.k: 更新を出せるのは、6人だけです。
+hori.t: 6人も、いるじゃないですか……。
+
+## b2_c3
+hori.t: 私じゃない。……「アジャスター」なんて名前は、知りません。
+## b2_o3
+tsubasa.k: いま、その名前を言う時だけ、唇が震えました。
+tsubasa.k: 私は、まだその名前を、あなたに言っていません。
+hori.u: ……あ……。
+
+## b2_c4
+hori.t: な、名前は……取り調べで、誰かが言ったのを、聞いたんです。
+## b2_o4
+tsubasa.k: 「アジャスター」が名簿の代金を受け取った財布は、あなたが0.3ビットコインを受け取った財布と、同じです。
+hori.d: ……。
+
+## b2_c5
+hori.d: ……。
+## b2_o5
+tsubasa.k: 堀さん。あなたは名簿を盗んで、「どの病院が、いくらまで払えるか」を売った。
+tsubasa.k: 東都医科大学病院は7億円。三浦さんの病院の値段を決めたのも、あなたです。
+
+## b2_end
+@bgm truth
+hori.d: ……眠れないんです。あれから、1度も。
+hori.d: 三浦部長が死んだと聞いた夜から。目を閉じると、あの廊下の自販機が出てくる。
+hori.n: 総監。名簿に金を払ったのは、ドーンじゃありません。若い声でした。日本語の。……「下請け」だと、名乗っていました。
+
+## b2_miss
+hori.d: ……それは、もう話した事です。
+## b2_miss2
+hori.t: 関係が、ありません。
+
+## y_end_a
+tsubasa.k: 堀さん。「下請け」との連絡の方法を、全部話してください。証人として。
+hori.d: ……話します。それで、少しでも眠れるなら。
+## y_end_b
+tsubasa.k: 名簿の件も、起訴します。そのうえで、「下請け」の事を話してください。
+hori.d: ……はい。全部、話します。
+
+## y_uno_a
+tsubasa.k: 「宇野さんは被害者です」と、警察からはっきり言います。
+## y_uno_b
+tsubasa.n: 発表は会社に任せます。ただ、宇野さんには、私から直接伝えます。
+
+## y_end2
+@hide all
+@bg home
+@bgm calm
+@card 4月28日（水）19:00｜宇野の家
+@show uno center
+uno.s: ……あした、会社に行きます。20年分の机が、待っているので。
+@show unowife left
+unowife.s: 写真、撮っておいてよかった。怖がりも、役に立つんですね。
+@show onodera right
+onodera.s: 奥さん。あの写真がなかったら、私ら、まだ迷ってましたよ。
+@hide all
+@bgm tension
+*: 名簿を買ったのは、ドーンではなく「下請け」。若い声の、日本語を話す者。
