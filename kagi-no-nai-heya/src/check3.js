@@ -33,11 +33,12 @@ for (const id of ids){
     for (const e in D.EV) if (have.has(e)) for (const f of evFacts[e]) have.add(f);
     for (const h in D.HYPS) if (D.HYPS[h].need.some(a => a.every(x => have.has(x)))) have.add(h);
     grow = have.size > n; }
+  if (I){ const open = new Set(I.open), done = new Set(); let g2 = true; while (g2){ g2 = false; for (const s of [...open]){ const st = I.st[s]; if (!st.ok || done.has(s)) continue; if (st.ok.some(x => have.has(x))){ done.add(s); run(st.o); (st.opens || []).forEach(o => open.add(o)); g2 = true; for (const e in D.EV) if (have.has(e)) for (const f of evFacts[e]) have.add(f); for (const h in D.HYPS) if (D.HYPS[h].need.some(a => a.every(x => have.has(x)))) have.add(h); } } }
+    run(I.end); for (const e in D.EV) if (have.has(e)) for (const f of evFacts[e]) have.add(f); for (let k = 0; k < 4; k++) for (const h in D.HYPS) if (D.HYPS[h].need.some(a => a.every(x => have.has(x)))) have.add(h);
+    for (const s of I.need) if (!done.has(s)) err('interrogation stuck at ' + s); for (const s in I.st) if (!open.has(s)) err('statement never opens: ' + s); }
   for (const e in D.EV) if (!have.has(e)) err('evidence cannot be obtained: ' + e);
   for (const f in D.FACTS) if (!have.has(f)) err('fact cannot be obtained: ' + f);
   for (const h in D.HYPS) if (!have.has(h)) err('hypothesis cannot be formed: ' + h);
-  if (I){ const open = new Set(I.open), done = new Set(); let g2 = true; while (g2){ g2 = false; for (const s of [...open]){ const st = I.st[s]; if (!st.ok || done.has(s)) continue; if (st.ok.some(x => have.has(x))){ done.add(s); run(st.o); (st.opens || []).forEach(o => open.add(o)); g2 = true; for (const e in D.EV) if (have.has(e)) for (const f of evFacts[e]) have.add(f); for (const h in D.HYPS) if (D.HYPS[h].need.some(a => a.every(x => have.has(x)))) have.add(h); } } }
-    for (const s of I.need) if (!done.has(s)) err('interrogation stuck at ' + s); for (const s in I.st) if (!open.has(s)) err('statement never opens: ' + s); }
   for (const R of D.REPORT) if (!R.sup.some(x => have.has(x))) err('no obtainable support for ' + R.q);
   console.log(`${id} ${bad ? bad + ' problems' : 'OK'} | ${D.title} | ev ${Object.keys(D.EV).length} facts ${Object.keys(D.FACTS).length} hyps ${Object.keys(D.HYPS).length} st ${I ? Object.keys(I.st).length : 0} rep ${D.REPORT.length}`);
 }

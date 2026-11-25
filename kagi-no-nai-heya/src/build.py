@@ -14,7 +14,8 @@ for f in sorted(glob.glob(os.path.join(H, 'cases', '[0-9][0-9][0-9].txt'))):
     cid = os.path.basename(f)[:3]; txt = rd(f).rstrip('\n') + '\n'
     vj = os.path.join(H, 'cases', 'vi', cid + '.json')
     if os.path.exists(vj): txt += '@vidx ' + rd(vj).strip() + '\n'
-    open(os.path.join(OUT, 'c', cid + '.txt'), 'w', encoding='utf-8').write(txt); avail.append(cid)
+    open(os.path.join(OUT, 'c', cid + '.txt'), 'w', encoding='utf-8').write(txt)
+    if os.path.exists(vj) or os.environ.get('ALL'): avail.append(cid)  # a case is offered once its voices exist
 cl = json.loads(rd(os.path.join(H, 'caselist.json')))
 data = rd(os.path.join(H, 'data.js')); data = data[:data.index("if (typeof module !== 'undefined')")]
 case011 = 'function case011(){\n' + data + '\nreturn { FACTS, HYPS, EV, LOCS, INTR, REPORT, REL, LANES, MAPPOS, DAYS };\n}'
