@@ -277,7 +277,7 @@ async function runCase(id, resume){
   const r = $('#result'); r.innerHTML = `<div class="rbox"><div class="rf">FILE ${id}　${C.title}</div><div class="rs">解決</div><div class="rank rank-${rank}">${rank}</div><div class="rd">まちがい ${st.miss} 回　／　ヒント ${st.hints} 回</div><p class="rc">${C.end[rank] || ''}</p><p class="rn">${C.meta.next || ''}</p><button id="again" class="opt"><span>事件えらびへ</span></button><p class="credit">${CREDIT}</p></div>`; r.hidden = false;
   $('#again').onclick = () => location.reload();
 }
-const CREDIT = '声：Open JTalk と HTS voice "Mei"（MMDAgent Project Team）、"NIT ATR503 M001"（HTS Working Group）。どちらも © Nagoya Institute of Technology、CC BY 3.0。加工して使っています。物語と人物は架空です。';
+const CREDIT = '声のクレジット：VOICEVOX:玄野武宏、VOICEVOX:白上虎太郎、VOICEVOX:青山龍星、VOICEVOX:剣崎雌雄、VOICEVOX:雀松朱司、VOICEVOX:麒ヶ島宗麟、VOICEVOX:ちび式じい、VOICEVOX:栗田まろん、VOICEVOX:黒沢冴白、VOICEVOX:離途、VOICEVOX:満別花丸、VOICEVOX:†聖騎士 紅桜†、VOICEVOX:No.7、VOICEVOX:春日部つむぎ、VOICEVOX:波音リツ、VOICEVOX:後鬼、VOICEVOX:冥鳴ひまり、VOICEVOX:九州そら、VOICEVOX:東北イタコ、VOICEVOX:東北ずん子、VOICEVOX:WhiteCUL、VOICEVOX:中部つるぎ、VOICEVOX:琴詠ニア、VOICEVOX:四国めたん、VOICEVOX:雨晴はう。物語と人物は架空です。';
 /* --- title and case select --- */
 function boot(){
   requestAnimationFrame(tick); bg.innerHTML = SCENES.rouka(); curBg = 'rouka';
@@ -288,5 +288,6 @@ function boot(){
   const draw = () => { list.innerHTML = CASE_IDS.map(id => { const c = CASES[id], ok = open(id), cur = s.cur && s.cur.id === id; return `<button class="case${ok ? '' : ' locked'}" data-id="${id}" ${ok ? '' : 'disabled'}><span class="cn">FILE ${id}</span><b>${ok ? c.title : '？？？'}</b><small>${ok ? (c.meta.intro || '') : '前の事件を解くと開く'}</small>${cleared[id] ? `<i class="rk rk-${cleared[id]}">${cleared[id]}</i>` : ''}${cur ? '<em>つづきから</em>' : ''}</button>`; }).join('');
     list.querySelectorAll('.case').forEach(b => b.onclick = () => { const id = b.dataset.id; if (s.cur && s.cur.id === id) start(id, s.cur); else start(id, null); }); };
   $('#t-free').onchange = draw; draw();
+  $('#t-credit').onclick = () => modal(`<h2>声のクレジット</h2><div class="loglist"><p>このゲームの声は、VOICEVOX で作りました。</p><p>${CREDIT.replace('声のクレジット：', '')}</p></div>`);
 }
 boot();
