@@ -338,14 +338,18 @@ async function interrogate(key){ const D = INTR[key], S = G.intr[key]; mode = 'i
   if (!S.n){ if (D.intro) await play(D.intro); S.open = D.open.slice(); for (const id of S.open) await play(id); } S.n++;
   endDlg(); showChar(D.foe, 'foe'); IT = { key, sel: null }; drawIntr(); save(); }
 function drawIntr(){ const { key } = IT, D = INTR[key], S = G.intr[key], box = $('#intr'); hideChar('tsubasa'); setSpeaker('*'); box.hidden = false; hud.hidden = false; bar.hidden = true; mode = 'intr'; refreshHud();
-  box.innerHTML = `<div class="hd"><b>尋問　${D.title}</b><div class="gauge">信頼 ${[0, 1, 2, 3, 4].map(i => `<i class="${i < S.g ? '' : 'off'}"></i>`).join('')}</div></div>` + S.open.map((id, n) => { const st = D.st[id], br = S.done.includes(id); return `<div class="st${br ? ' broken' : ''}${IT.sel && IT.sel[0] === id ? ' cur' : ''}" data-id="${id}"><u>${n + 1}</u>${st.ph.map((p, i) => `<span data-i="${i}" class="${IT.sel && IT.sel[0] === id && IT.sel[1] === i ? 'on' : ''}">${p}</span>`).join('')}</div>`; }).join('') + `<div class="guide">${IT.sel ? '「ゆさぶる」で、くわしく聞く。食いちがう物を持っていれば「突きつける」。' : 'まず、証言の中の言葉を押して選ぶ。点線の区切りごとに選べる。'}</div><div class="ac"><button class="big alt" id="i-press">ゆさぶる</button><button class="big red" id="i-pres">突きつける</button>${G.hintOn ? '<button class="big alt" id="i-hint">ヒント</button>' : ''}<button class="big alt" id="i-back">退く</button></div>`;
-  for (const sp of $$('.st:not(.broken) span', box)) sp.onclick = () => { IT.sel = [sp.parentNode.dataset.id, +sp.dataset.i]; AudioSys.sfx('tick'); drawIntr(); };
+  box.innerHTML = `<div class="hd"><b>尋問　${D.title}</b><div class="gauge">信頼 ${[0, 1, 2, 3, 4].map(i => `<i class="${i < S.g ? '' : 'off'}"></i>`).join('')}</div></div>` + S.open.map((id, n) => { const st = D.st[id], br = S.done.includes(id); return `<div class="st${br ? ' broken' : ''}${IT.sel && IT.sel[0] === id ? ' cur' : ''}" data-id="${id}"><u>${n + 1}</u>${st.ph.map((p, i) => `<span data-i="${i}" class="${IT.sel && IT.sel[0] === id && IT.sel[1] === i ? 'on' : ''}">${p}</span>`).join('')}</div>`; }).join('') + `<div class="guide">${IT.msg ? IT.msg : IT.sel ?'「ゆさぶる」で、くわしく聞く。食いちがう物を持っていれば「突きつける」。' : 'まず、証言の中の言葉を押して選ぶ。点線の区切りごとに選べる。'}</div><div class="ac"><button class="big alt" id="i-press">ゆさぶる</button><button class="big red" id="i-pres">突きつける</button>${G.hintOn ? '<button class="big alt" id="i-hint">ヒント</button>' : ''}<button class="big alt" id="i-back">退く</button></div>`;
+  for (const sp of $$('.st:not(.broken) span', box)) sp.onclick = () => { IT.msg = null; IT.sel = [sp.parentNode.dataset.id, +sp.dataset.i]; AudioSys.sfx('tick'); drawIntr(); };
   $('#i-press').disabled = $('#i-pres').disabled = !IT.sel;
   $('#i-press').onclick = () => guard(async () => { const id = IT.sel[0]; box.hidden = true; hud.hidden = true; await play(id); await play(D.st[id].p); endDlg(); drawIntr(); });
   $('#i-pres').onclick = () => guard(() => present());
   $('#i-back').onclick = () => guard(async () => { AudioSys.sfx('back'); await leaveIntr(); });
   const hb = $('#i-hint'); if (hb) hb.onclick = () => { const id = S.open.find(x => !S.done.includes(x) && D.st[x].ans); if (id){ G.hints++; toast(`<b>ヒント</b>${D.st[id].hint}`); save(); } };
 }
+function nearMsg(st){ const hs = (st.ok || []).filter(x => HYPS[x]);
+  if (!hs.length) return '惜しい。近い物だが、決め手ではない。別の証拠か、事実カードを探す。';
+  if (hs.some(h => G.hyp.includes(h))) return '惜しい。決め手は、もう持っている。「突きつける」の右上の「仮説」から選ぶ。';
+  return '惜しい。カード1枚では崩せない。「退く」で戻り、ボードでカードを2枚つないで「仮説」を作る。カードが足りなければ、証拠の字を押して増やす。'; }
 async function leaveIntr(){ $('#intr').hidden = true; IT = null; hideChar('all'); await enterLoc(G.loc, true); }
 async function present(){ const { key, sel } = IT, D = INTR[key], S = G.intr[key], st = D.st[sel[0]], box = $('#intr');
   const item = await pick('突きつける物を選ぶ'); if (!item) return; box.hidden = true; hud.hidden = true;
@@ -353,8 +357,8 @@ async function present(){ const { key, sel } = IT, D = INTR[key], S = G.intr[key
   if (okItem && okPh){ await cutin('矛盾', 1); AudioSys.bgm('tension'); await play(st.o); S.done.push(sel[0]); if (st.opens) for (const n of st.opens){ S.open.push(n); endDlg(); await play(n); } IT.sel = null; save();
     if (D.need.every(x => S.done.includes(x))){ S.clear = 1; await play(D.end); endDlg(); $('#intr').hidden = true; IT = null; hideChar('all'); save(); if (!X011()){ G.flags.rep = 1; save(true); toast('<b>報告</b>推理レポートが書けるようになった'); await enterLoc(G.loc, true); return; } if (key === 'C'){ await ending(); return; } await triggers(); if (!G.flags.mid || G.loc !== 'soukan') await enterLoc(G.loc, true); return; }
     AudioSys.bgm('battle'); endDlg(); showChar(D.foe, 'foe'); drawIntr(); return; }
-  if (okItem && !okPh){ await play('x_near'); endDlg(); showChar(D.foe, 'foe'); drawIntr(); return; }
-  if (st.near && st.near[item]){ await play(st.near[item]); endDlg(); drawIntr(); return; }
+  if (okItem && !okPh){ await play('x_near'); endDlg(); showChar(D.foe, 'foe'); IT.msg = '物は合っている。突く言葉がちがう。証言の、別の区切りを選ぶ。'; drawIntr(); return; }
+  if (st.near && st.near[item]){ await play(st.near[item]); endDlg(); IT.msg = nearMsg(st); drawIntr(); return; }
   S.g--; G.miss++; AudioSys.sfx('damage'); stage.classList.remove('shake'); void stage.offsetWidth; stage.classList.add('shake'); await play(D.miss[G.miss % 2]); endDlg(); save();
   if (S.g <= 0){ G.brk++; await play('x_break'); endDlg(); await leaveIntr(); return; }
   drawIntr(); }
