@@ -1,0 +1,19 @@
+<title>三十三年目の雨</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@600;800&family=Zen+Kaku+Gothic+New:wght@500;700;900&display=swap">
+<style>/*CSS*/</style>
+<div id="app"><div id="stage">
+  <div id="scene" hidden><div class="lay" id="l-bg"></div><div class="lay" id="l-main"></div><div id="actors"></div><div class="lay" id="l-fore"></div><div id="light"></div></div>
+  <div id="drive" hidden><canvas id="dv"></canvas><div id="cabin"></div><div id="dv-map"></div><div id="dv-road"></div>
+    <div id="dv-panel" hidden></div>
+    <button id="dv-undo" class="big alt">1つ戻る</button><button id="dv-l" class="big" hidden>◀ 左へ寄る</button><button id="dv-go" class="big gold" hidden>進む</button><button id="dv-r" class="big" hidden>右へ寄る ▶</button></div>
+  <div id="hud"><div id="plate"></div><div class="hr"><button id="h-note" class="big">手帳</button><button id="h-brd" class="big">ボード</button><button id="h-set" class="big alt">設定</button></div><div id="saved" hidden>保存した</div></div>
+  <div id="walkui" hidden><button id="w-undo" class="big alt">1つ戻る</button><div class="mid"><button id="w-left" class="big arrow" aria-label="左へ歩く">◀</button><button id="w-act" class="big gold" hidden></button><button id="w-right" class="big arrow" aria-label="右へ歩く">▶</button></div></div>
+  <div id="menu" hidden></div>
+  <div id="dlg" hidden><div id="d-left" class="pt"></div><div id="d-right" class="pt"></div><div id="d-box"><div id="d-name"></div><div id="d-text"></div><div id="d-next" hidden>▼</div><div class="d-tools"><button id="d-auto" class="big alt">自動</button><button id="d-log" class="big alt">記録</button></div></div></div>
+  <div id="card" hidden></div><div id="cut" hidden></div>
+  <div id="title" hidden><div class="art"></div><div class="tt"><small>本格SF推理アドベンチャー</small><h1>三十三年目の雨</h1><p>1960　1993　2026</p></div><div class="tb"><button id="t-cont" class="big gold" hidden>続きから</button><button id="t-new" class="big">最初から</button><button id="t-how" class="big alt">遊び方</button></div><div class="note">この物語はフィクション。実在の人物、団体、土地とは関係がない。</div></div>
+  <div id="res" hidden></div>
+  <div id="modal" hidden></div><div id="toast" hidden></div><div id="fade" hidden></div>
+</div></div>
+<script>/*JS*/</script>
