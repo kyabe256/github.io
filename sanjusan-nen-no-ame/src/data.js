@@ -70,7 +70,7 @@ const NPC = [
   { id: 'iwao', s: 'police', e: 1993, x: 980, if: 'met_iwao', t: [['妙な事件', 'iwao93_file'], ['白骨を見せてもらう', 'iwao93_bones', 'ev:e_file'], ['記憶のない青年', 'iwao93_ren'], ['息子の事', 'iwao93_son'], ['別れを言う', 'iwao93_after', 'b2&!iwao_bye']] },
   { id: 'sayo25', s: 'inn', e: 1993, x: 700, first: 'sayo93_first', t: [['青年の荷物', 'sayo93_luggage'], ['近ごろ、変わった事', 'sayo93_bus'], ['泊まって、あしたにする', 'sayo93_stay', 'met_ren&!day9', 1]] },
   { id: 'ren', s: 'inn', e: 1993, x: 1560, if: '!accident', first: 'ren93_meet', set: 'met_ren', t: [['なぜ、ここへ来た', 'ren93_why'], ['腕を見せてもらう', 'ren93_arm'], ['2026年の事', 'ren93_home']] },
-  { id: 'ren', s: 'inn', e: 1993, x: 2090, if: 'accident', first: 'ren93_after', fk: 'ren_after', t: [] },
+  { id: 'ren', q: 'ren2', s: 'inn', e: 1993, x: 2090, if: 'accident', first: 'ren93_after', fk: 'ren_after', t: [] },
   { id: 'osamu38', s: 'clinic', e: 1993, x: 880, first: 'osamu93_first', t: [['きょうの、けが人', 'osamu93_after', 'accident']] },
   { id: 'seiji43', s: 'plant', e: 1993, x: 1720, first: 'seiji93_first', t: [['腕時計を見る', 'seiji93_watch']], battle: 'B2', bif: 'accident&!b2', bl: '事故の事を、問いただす' },
   { id: 'toki', s: 'mansion', e: 1993, x: 1480, first: 'toki93_first', t: [['このお屋敷の事', 'toki93_house'], ['昔の事', 'toki93_past']], battle: 'B6', bif: 'f:f_toki_pin&!b6', bl: 'どこから来たのかを、問いただす' },
