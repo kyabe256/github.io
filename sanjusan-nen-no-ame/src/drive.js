@@ -2,19 +2,19 @@
    One edge of the road graph is one stretch of road. The car cruises when "go" is on and stops by itself at the end. */
 const DRIVE = (() => {
   const SEG = 200, CAMH = 1000, DEPTH = 0.9, DRAWN = 90;
-  let cv, ctx, W = 800, H = 450, segs = [], pos = 0, speed = 0, go = false, laneX = 0, laneT = 0, kind = 'town', era = 2026, total = 0, raf = 0, last = 0, lite = false, fast = false, onEnd = null, onTick = null, running = false, wip = 0, t0 = 0, drops = [];
+  let cv, ctx, W = 800, H = 450, segs = [], pos = 0, speed = 0, go = false, laneX = 0, laneT = 0, kind = 'town', era = 2026, total = 0, raf = 0, last = 0, lite = false, fast = false, onEnd = null, onTick = null, running = false, wip = 0, t0 = 0, drops = [], assist = true, drift = 0, wheel = 0, roll = 0;
   const rr = (() => { let s = 7; return () => { s = (s * 1664525 + 1013904223) >>> 0; return s / 4294967296; }; })();
-  function build(E, dir, e, k2){ era = e; kind = E.kind; segs = []; const n = E.len, cur = new Array(n).fill(0), hil = new Array(n).fill(0);
+  function build(E, dir, e, turn){ era = e; drift = 0; kind = E.kind; segs = []; const n = E.len, cur = new Array(n).fill(0), hil = new Array(n).fill(0);
     for (const [a, b, c] of E.curve || []) for (let i = a; i < b; i++) cur[i] = c * Math.sin(Math.PI * (i - a) / (b - a));
     for (const [a, b, h] of E.hill || []) for (let i = a; i < b; i++) hil[i] = h * (1 - Math.cos(Math.PI * 2 * (i - a) / (b - a))) / 2;
-    let y = 0; for (let j = 0; j < n + DRAWN; j++){ const i = Math.min(n - 1, j), src = dir > 0 ? i : n - 1 - i, c = (dir > 0 ? 1 : -1) * cur[src]; y = hil[src] * 60; const sp = [];
+    let y = 0; for (let j = 0; j < n + DRAWN; j++){ const i = Math.min(n - 1, j), src = dir > 0 ? i : n - 1 - i, c = (dir > 0 ? 1 : -1) * cur[src] + (j < 15 ? (turn || 0) * 7.5 * Math.sin(Math.PI * (j + 1) / 16) : 0); y = hil[src] * 60; const sp = [];
       if (j < n){ const kd = E.kind, den = kd === 'deep' ? 1 : kd === 'forest' ? 2 : 3;
         if (kd === 'forest' || kd === 'deep' || kd === 'hill'){ if (j % den === 0) sp.push(['tree', -1.5 - rr() * 2.2, .8 + rr() * .7]); if ((j + 1) % den === 0) sp.push(['tree', 1.5 + rr() * 2.2, .8 + rr() * .7]); if (kd === 'deep' && j % 2) sp.push(['tree', (rr() > .5 ? 1 : -1) * (3.5 + rr() * 2), 1.2]); }
         if (kd === 'town'){ if (j % 7 === 2) sp.push(['house', -2.3 - rr(), 1]); if (j % 7 === 5) sp.push(['house', 2.3 + rr(), 1]); if (j % 6 === 0) sp.push(['pole', 1.35, 1]); if (e !== 1960 && j % 12 === 3) sp.push(['lamp', -1.3, 1]); }
         if (kd === 'fence'){ if (j % 2 === 0) sp.push(['post', 1.4, 1]); if (j % 9 === 4) sp.push(['pole', -1.4, 1]); if (e !== 1960 && j % 14 === 7) sp.push(['lamp', 1.3, 1]); if (j % 11 === 0) sp.push(['tree', -2.6 - rr() * 2, .9]); }
         if (kd === 'hill' && e !== 1960 && j % 13 === 6) sp.push(['lamp', -1.3, 1]);
         if (j === n - 4) sp.push(['sign', 1.5, 1]); }
-      segs.push({ c, y, sp, end: j >= n }); }
+      segs.push({ c, y, sp, end: j >= n, cross: j >= n && j < n + 4 }); }
     total = n * SEG; pos = 0; speed = 0; go = false; laneX = 0; laneT = 0; }
   const COL = () => era === 1960 ? { road: '#3a332a', road2: '#40382e', edge: null, grass: '#171a15', grass2: '#1b1f19', mid: null } : { road: '#23272b', road2: '#272b30', edge: '#aab3b4', grass: kind === 'town' || kind === 'fence' ? '#1b2022' : '#131a17', grass2: kind === 'town' || kind === 'fence' ? '#1f2527' : '#17201c', mid: kind === 'deep' ? null : '#c9b56a' };
   function sprite(type, x, y, s, fog){ const c = ctx; c.globalAlpha = Math.max(0, 1 - fog * .85);
@@ -27,29 +27,37 @@ const DRIVE = (() => {
     c.globalAlpha = 1; }
   function frame(now){ if (!running) return; raf = requestAnimationFrame(frame); const dt = Math.min(.05, (now - last) / 1000 || 0); last = now; if (lite && (t0 = (t0 + 1) % 2)) { step(dt); return; } step(dt); draw(now / 1000); }
   function step(dt){ const vmax = (fast ? 60000 : 1900), tgt = go ? vmax : 0; speed += Math.max(-vmax * 1.6 * dt, Math.min(vmax * .8 * dt, tgt - speed)); if (pos > total - 1400 && go) speed = Math.min(speed, Math.max(260, (total - pos) * 1.3));
-    pos += speed * dt; laneX += (laneT - laneX) * Math.min(1, dt * 2.2); wip += dt * (speed > 50 || true ? 1 : 0);
-    if (pos >= total){ pos = total; speed = 0; go = false; const f = onEnd; if (f){ onEnd = null; f(); } } if (onTick) onTick(pos / total, speed, curveNow()); }
+    const cvn = curveNow(), mv = speed / 1900; if (assist) drift += (0 - drift) * Math.min(1, dt * 2); else drift += (Math.max(-.95, Math.min(.95, -cvn * .3)) * mv - drift) * Math.min(1, dt * .9);
+    const eff = Math.max(-1, Math.min(1, laneT + drift)); if (Math.abs(laneX) > .9 && go) speed = Math.min(speed, 1100); pos += speed * dt; laneX += (eff - laneX) * Math.min(1, dt * 2.2);
+    wheel += (Math.max(-250, Math.min(250, cvn * 30 + (eff - laneX) * 80)) - wheel) * Math.min(1, dt * 5); roll += (Math.max(-.07, Math.min(.07, -cvn * .012 * mv - (eff - laneX) * .03)) - roll) * Math.min(1, dt * 4); wip += dt * (speed > 50 || true ? 1 : 0);
+    if (pos >= total){ pos = total; speed = 0; go = false; const f = onEnd; if (f){ onEnd = null; f(); } } if (onTick) onTick(pos / total, speed, wheel); }
   const curveNow = () => { const s = segs[Math.min(segs.length - 1, Math.floor(pos / SEG))]; return s ? s.c : 0; };
   function draw(t){ const c = ctx, C = COL(), base = Math.floor(pos / SEG), frac = (pos % SEG) / SEG, roadW = kind === 'deep' ? 820 : 1150;
-    const sky = c.createLinearGradient(0, 0, 0, H * .62); sky.addColorStop(0, '#0d1318'); sky.addColorStop(.7, '#26353a'); sky.addColorStop(1, '#4f6165'); c.fillStyle = sky; c.fillRect(0, 0, W, H);
+    c.save(); c.translate(W / 2, H * .6); c.rotate(roll); c.scale(1.08, 1.08); c.translate(-W / 2, -H * .6);
+    const sky = c.createLinearGradient(0, 0, 0, H * .62); sky.addColorStop(0, '#0d1318'); sky.addColorStop(.7, '#26353a'); sky.addColorStop(1, '#4f6165'); c.fillStyle = sky; c.fillRect(-60, -60, W + 120, H + 120);
     const bx = -((segs[base] ? segs[base].c : 0) * 40 + pos * .002) % 400; c.fillStyle = '#18242a'; c.beginPath(); c.moveTo(0, H * .6); for (let i = -1; i < 5; i++){ const x = bx + i * 400; c.lineTo(x + 120, H * .44); c.lineTo(x + 250, H * .52); c.lineTo(x + 400, H * .47); } c.lineTo(W, H * .6); c.fill();
     let x = 0, dx = -(segs[base] ? segs[base].c : 0) * frac, maxy = H; const camY = CAMH + (segs[base] ? segs[base].y + ((segs[base + 1] || segs[base]).y - segs[base].y) * frac : 0), camX = laneX * 330, P = [];
     for (let n = 0; n < DRAWN; n++){ const s = segs[base + n]; if (!s) break; const z1 = (n - frac) * SEG, z2 = (n + 1 - frac) * SEG; const p = (z, wx, wy) => { const sc = DEPTH / Math.max(z, 40); return [W / 2 + sc * (wx - camX) * W / 2, H * .56 - sc * (wy - camY) * W / 2, sc * roadW * W / 2, sc]; };
       const a = p(Math.max(z1, 60), x, s.y), s2 = segs[base + n + 1] || s; x += dx; dx += s.c; const b = p(z2, x, s2.y); P.push([a, b, s, base + n, n]); }
     for (const [a, b, s, idx, n] of P){ if (b[1] >= maxy) continue; const alt = Math.floor(idx / 3) % 2;
-      c.fillStyle = alt ? C.grass : C.grass2; c.fillRect(0, b[1], W, maxy - b[1] + 1);
+      c.fillStyle = alt ? C.grass : C.grass2; c.fillRect(-60, b[1], W + 120, maxy - b[1] + 1);
       c.fillStyle = alt ? C.road : C.road2; c.beginPath(); c.moveTo(a[0] - a[2], a[1]); c.lineTo(a[0] + a[2], a[1]); c.lineTo(b[0] + b[2], b[1]); c.lineTo(b[0] - b[2], b[1]); c.fill();
       if (C.edge){ c.fillStyle = C.edge; for (const sg of [-1, 1]){ c.beginPath(); c.moveTo(a[0] + sg * a[2] * .93, a[1]); c.lineTo(a[0] + sg * a[2] * .97, a[1]); c.lineTo(b[0] + sg * b[2] * .97, b[1]); c.lineTo(b[0] + sg * b[2] * .93, b[1]); c.fill(); } }
       if (C.mid && alt){ c.fillStyle = C.mid; c.beginPath(); c.moveTo(a[0] - a[2] * .02, a[1]); c.lineTo(a[0] + a[2] * .02, a[1]); c.lineTo(b[0] + b[2] * .02, b[1]); c.lineTo(b[0] - b[2] * .02, b[1]); c.fill(); }
-      if (s.end){ c.fillStyle = 'rgba(227,170,76,.35)'; c.beginPath(); c.moveTo(a[0] - a[2], a[1]); c.lineTo(a[0] + a[2], a[1]); c.lineTo(b[0] + b[2], b[1]); c.lineTo(b[0] - b[2], b[1]); c.fill(); }
+      if (s.cross){ c.fillStyle = C.road; c.fillRect(-60, b[1], W + 120, a[1] - b[1] + 1); if (C.edge){ c.fillStyle = C.edge; c.fillRect(-60, b[1], a[0] - a[2] + 60, Math.max(1, (a[1] - b[1]) * .08)); c.fillRect(a[0] + a[2], b[1], W, Math.max(1, (a[1] - b[1]) * .08)); } }
+      else if (s.end){ c.fillStyle = 'rgba(227,170,76,.35)'; c.beginPath(); c.moveTo(a[0] - a[2], a[1]); c.lineTo(a[0] + a[2], a[1]); c.lineTo(b[0] + b[2], b[1]); c.lineTo(b[0] - b[2], b[1]); c.fill(); }
       maxy = b[1]; }
     for (let i = P.length - 1; i >= 0; i--){ const [a, , s, , n] = P[i]; if (n < 1) continue; for (const [type, off, sc] of s.sp){ const sx = a[0] + off * a[2], k = a[3] * W / 2 * sc; if (sx < -400 || sx > W + 400) continue; sprite(type, sx, a[1], k, n / DRAWN); } }
+    c.restore();
     const fog = c.createLinearGradient(0, H * .36, 0, H * .7); fog.addColorStop(0, 'rgba(90,108,112,0)'); fog.addColorStop(.5, 'rgba(90,108,112,.5)'); fog.addColorStop(1, 'rgba(90,108,112,0)'); c.fillStyle = fog; c.fillRect(0, H * .3, W, H * .45);
     const hl = c.createRadialGradient(W / 2, H * 1.02, 20, W / 2, H * .9, W * .62); hl.addColorStop(0, era === 2026 ? 'rgba(225,240,255,.34)' : 'rgba(255,225,160,.3)'); hl.addColorStop(1, 'rgba(0,0,0,0)'); c.fillStyle = hl; c.fillRect(0, H * .5, W, H * .5);
     c.strokeStyle = 'rgba(210,228,232,.5)'; c.lineWidth = 1.2; c.beginPath(); const k = speed / 1900; for (let i = 0; i < (lite ? 40 : 90); i++){ const rx = (i * 97.3 + t * 300 * (1 + (i % 5) * .2)) % W, ry = (i * 53.7 + t * 900) % H, dxr = (rx - W / 2) * .06 * k; c.moveTo(rx, ry); c.lineTo(rx + dxr - 3, ry + 16 + k * 10); } c.stroke();
     // drops on the glass, cleared by the wiper
-    const ph = (wip % 2.4) / 2.4, ang = ph < .5 ? ph * 2 : 2 - ph * 2, th = -1.25 + ang * 2.5; if (drops.length < (lite ? 26 : 60) && rr() < .5) drops.push([rr() * W, rr() * H * .8, 2 + rr() * 4, 0]);
-    c.fillStyle = 'rgba(205,225,230,.42)'; for (let i = drops.length - 1; i >= 0; i--){ const d = drops[i]; d[3] += .016; d[1] += d[3] * .4; const a = Math.atan2(d[0] - W * .5, H * 1.05 - d[1]); if (Math.abs(a - th) < .11 || d[1] > H * .86){ drops.splice(i, 1); continue; } c.beginPath(); c.ellipse(d[0], d[1], d[2], d[2] * 1.3, 0, 0, 6.3); c.fill(); }
+    const ph = (wip % 2.2) / 2.2, ang = ph < .5 ? ph * 2 : 2 - ph * 2, th = -1.25 + ang * 2.5, kk = speed / 1900; if (drops.length < (lite ? 30 : 70) && rr() < .6) drops.push([rr() * W, rr() * H * .78, 2 + rr() * 4, 0, 0]);
+    c.fillStyle = 'rgba(205,225,230,.45)'; c.strokeStyle = 'rgba(205,225,230,.32)'; c.lineCap = 'round';
+    for (let i = drops.length - 1; i >= 0; i--){ const d = drops[i], ox = (d[0] - W / 2) / W; d[3] += .016; const vx = ox * kk * 5.5, vy = kk > .1 ? -kk * 2.6 : .5 + d[3] * .5; d[0] += vx; d[1] += vy; d[4] = Math.min(26, d[4] + Math.abs(vy) * .5);
+      const a = Math.atan2(d[0] - W * .5, H * 1.05 - d[1]); if (Math.abs(a - th) < .12 || d[1] > H * .86 || d[1] < -10 || d[0] < -10 || d[0] > W + 10){ drops.splice(i, 1); continue; }
+      c.lineWidth = d[2] * .9; c.beginPath(); c.moveTo(d[0], d[1]); c.lineTo(d[0] - vx * d[4] * .5, d[1] - vy * d[4] * .5); c.stroke(); c.beginPath(); c.ellipse(d[0], d[1], d[2], d[2] * 1.25, 0, 0, 6.3); c.fill(); }
     c.strokeStyle = '#07090a'; c.lineWidth = 7; c.lineCap = 'round'; for (const px of [W * .3, W * .72]){ c.beginPath(); c.moveTo(px, H * 1.02); c.lineTo(px + Math.sin(th) * H * .7, H * 1.02 - Math.cos(th) * H * .7); c.stroke(); }
   }
   /* the cabin: pillars, mirror, dashboard and wheel, drawn once per era as an overlay */
@@ -64,8 +72,8 @@ const DRIVE = (() => {
     return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="none">${s}</svg>`; }
   return {
     mount(canvas, isLite){ cv = canvas; lite = !!isLite; W = lite ? 640 : 800; H = lite ? 360 : 450; cv.width = W; cv.height = H; ctx = cv.getContext('2d'); },
-    start(E, dir, e, cb, tick){ build(E, dir, e); onEnd = cb; onTick = tick; drops = []; if (!running){ running = true; last = performance.now(); raf = requestAnimationFrame(frame); } draw(0); },
+    start(E, dir, e, cb, tick, turn){ build(E, dir, e, turn); onEnd = cb; onTick = tick; drops = []; if (!running){ running = true; last = performance.now(); raf = requestAnimationFrame(frame); } draw(0); },
     stop(){ running = false; cancelAnimationFrame(raf); onEnd = null; onTick = null; },
-    setGo(v){ go = !!v; }, get go(){ return go; }, setLane(v){ laneT = Math.max(-1, Math.min(1, v)); }, get lane(){ return laneT; }, setFast(v){ fast = !!v; }, setLite(v){ lite = !!v; }, get prog(){ return total ? pos / total : 0; }, get speed(){ return speed; }, cabin, redraw(){ if (ctx) draw(performance.now() / 1000); } };
+    setGo(v){ go = !!v; }, get go(){ return go; }, setLane(v){ laneT = Math.max(-1, Math.min(1, v)); }, get lane(){ return laneT; }, setFast(v){ fast = !!v; }, setAssist(v){ assist = !!v; }, get wheel(){ return wheel; }, get drift(){ return drift; }, setLite(v){ lite = !!v; }, get prog(){ return total ? pos / total : 0; }, get speed(){ return speed; }, cabin, redraw(){ if (ctx) draw(performance.now() / 1000); } };
 })();
 if (typeof module !== 'undefined') module.exports = { DRIVE };

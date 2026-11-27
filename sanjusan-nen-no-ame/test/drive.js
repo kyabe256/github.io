@@ -1,0 +1,15 @@
+// node test/drive.js : the fork offers left, straight, right and back; choosing one bends the road and turns the wheel; pictures in out/
+const { chromium } = require('playwright');
+(async () => { const b = await chromium.launch(), p = await b.newPage({ viewport: { width: 1600, height: 900 } }); let fails = 0; p.on('pageerror', e => { fails++; console.log('PAGEERR', e.message); });
+  const ok = (c, l, x = '') => { if (!c) fails++; console.log(c ? 'OK  ' : 'FAIL', l, x); };
+  await p.goto('http://127.0.0.1:8770/index.html'); await p.waitForFunction(() => window.__g, null, { timeout: 30000 }); await p.evaluate(() => __g.fast(true)); await p.click('#t-new'); await p.waitForFunction(() => __g.mode === 'drive' && !__g.busy && document.querySelector('#dlg').hidden && !!__g.G.seen.tut_drive, null, { timeout: 30000 });
+  await p.locator('#dv-panel .big', { hasText: '走り出す' }).click(); await p.waitForFunction(() => __g.dv.at === 'j1' && !document.querySelector('#dv-panel').hidden, null, { timeout: 30000 });
+  const opts = (await p.locator('#dv-panel .big').allInnerTexts()).map(t => t.split('\n')[0]); ok(['◀ 左折', '▲ 直進', '右折 ▶', '↩ 引き返す'].every(t => opts.includes(t)), 'the four-way offers left, straight, right and back', opts.join(' / '));
+  const names = await p.locator('#dv-panel .big small').allInnerTexts(); ok(/墓地/.test(names[0]) && /森の分かれ道/.test(names[1]) && /発電所|正門/.test(names[2]), 'left is the graveyard, straight is the forest, right is the plant', names.slice(0, 3).join(' | '));
+  await p.screenshot({ path: 'out/d-fork.png' }); await p.evaluate(() => __g.fast(false)); await p.locator('#dv-panel .big', { hasText: '左折' }).click();
+  let maxW = 0, minR = 0; for (let i = 0; i < 16; i++){ await p.waitForTimeout(150); const w = await p.evaluate(() => DRIVE.wheel); maxW = Math.min(maxW, w); if (i === 7) await p.screenshot({ path: 'out/d-turn.png' }); }
+  ok(maxW < -120, 'turning left swings the wheel hard to the left', 'wheel ' + maxW.toFixed(0) + ' deg'); const tr = await p.evaluate(() => document.querySelector('#dv-wheel').style.transform); ok(/rotate\(-?\d/.test(tr), 'the wheel on screen follows', tr);
+  await p.waitForTimeout(2500); const w2 = await p.evaluate(() => DRIVE.wheel); ok(Math.abs(w2) < 100, 'and comes back after the corner', 'wheel ' + w2.toFixed(0)); await p.screenshot({ path: 'out/d-road.png' });
+  // helper off: the car drifts on a bend, steering brings it back, the verge only slows it
+  await p.waitForFunction(() => __g.dv.at === 'grave' && !document.querySelector('#dv-panel').hidden, null, { timeout: 30000 }); await p.evaluate(() => { DRIVE.setAssist(false); }); await p.locator('#dv-panel .big', { hasText: '引き返す' }).click(); let d = 0; for (let i = 0; i < 20; i++){ await p.waitForTimeout(200); d = Math.max(d, Math.abs(await p.evaluate(() => DRIVE.drift))); } ok(d > .15, 'with the helper off the car drifts outward on bends', 'drift ' + d.toFixed(2)); ok(await p.evaluate(() => DRIVE.speed > 500), 'and it keeps running: no crash, no stop');
+  await p.evaluate(() => DRIVE.setAssist(true)); console.log('fails', fails); await b.close(); process.exit(fails ? 1 : 0); })();

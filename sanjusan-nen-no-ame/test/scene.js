@@ -1,6 +1,6 @@
 // node test/scene.js <out.png> scene:era[,scene:era...] [file] : whole panoramas, scaled to the page width
 const { chromium } = require('playwright'); const path = require('path'); const S = path.join(__dirname, '..', 'src');
-const A = require(S + '/scenes_a.js'); let SC = A.SC; try { Object.assign(global, A); const B = require(S + '/scenes_b.js'); SC = Object.assign(SC, B.SCB || {}); } catch (e) { if (!/Cannot find module/.test(e.message)) throw e; }
+const A = require(S + '/scenes_a.js'); let SC = A.SC; try { Object.assign(global, A); const B = require(S + '/scenes_b.js'); SC = Object.assign(SC, B.SCB || {}); global.SC = SC; require(S + '/scenes_c.js'); } catch (e) { if (!/Cannot find module/.test(e.message)) throw e; }
 (async () => { const out = process.argv[2], list = process.argv[3].split(','); let h = '<body style="margin:0;background:#000">';
   for (const it of list){ const [n, e] = it.split(':'), s = SC[n](+e), k = 1560 / s.w;
     h += `<div style="position:relative;width:1560px;height:${900 * k}px;overflow:hidden;margin-bottom:6px"><div style="transform:scale(${k});transform-origin:0 0;position:absolute;width:${s.w}px;height:900px">` +

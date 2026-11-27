@@ -3,18 +3,23 @@ const AudioSys = (() => {
   let ctx = null, master, ambG, seG, voG, bgmG, noiseBuf, curV = null, packs = {}, loading = {}, index = null, amb = null, ambNodes = [], eng = null, bgmName = null, bgmTimer = 0, nextT = 0, step = 0, lite = false, dripT = 0;
   const vol = { voice: 1, bgm: .5, se: .7 };
   const fnv = s => { let h = 0x811c9dc5; const b = new TextEncoder().encode(s); for (const x of b){ h ^= x; h = Math.imul(h, 0x01000193) >>> 0; } return h.toString(16).padStart(8, '0'); };
-  function init(){ if (ctx){ if (ctx.state === 'suspended') ctx.resume(); return; }
+  let htmlA = null, htmlOK = false, lastErr = '', packState = {};
+  /* iPad and iPhone: sound only starts inside a touch. Open the context there, play one silent sample, and ask for the "playback" audio session so the mute switch does not silence the game. */
+  function silentUrl(){ const n = 4000, b = new Uint8Array(44 + n), dv = new DataView(b.buffer), w = (o, s) => { for (let i = 0; i < s.length; i++) b[o + i] = s.charCodeAt(i); }; w(0, 'RIFF'); dv.setUint32(4, 36 + n, true); w(8, 'WAVEfmt '); dv.setUint32(16, 16, true); dv.setUint16(20, 1, true); dv.setUint16(22, 1, true); dv.setUint32(24, 8000, true); dv.setUint32(28, 8000, true); dv.setUint16(32, 1, true); dv.setUint16(34, 8, true); w(36, 'data'); dv.setUint32(40, n, true); b.fill(128, 44); let s = ''; for (const x of b) s += String.fromCharCode(x); return 'data:audio/wav;base64,' + btoa(s); }
+  function unlockHtml(){ if (htmlOK) return; try { if (navigator.audioSession){ navigator.audioSession.type = 'playback'; htmlOK = true; return; } } catch (e) {} try { if (!htmlA){ htmlA = new Audio(silentUrl()); htmlA.loop = true; htmlA.setAttribute('playsinline', ''); } const pr = htmlA.play(); if (pr && pr.then) pr.then(() => { htmlOK = true; }).catch(e => { lastErr = '無音の再生：' + e.name; }); } catch (e) { lastErr = '無音の再生：' + e.message; } }
+  function unlock(){ try { const b = ctx.createBuffer(1, 1, 22050), s = ctx.createBufferSource(); s.buffer = b; s.connect(ctx.destination); s.start(0); } catch (e) { lastErr = '出口：' + e.message; } try { if (ctx.state !== 'running'){ const pr = ctx.resume(); if (pr && pr.catch) pr.catch(e => { lastErr = '出口：' + e.name; }); } } catch (e) {} unlockHtml(); }
+  function init(){ if (ctx){ if (ctx.state !== 'running') unlock(); else unlockHtml(); return; }
     const AC = window.AudioContext || window.webkitAudioContext; if (!AC) return; try { ctx = new AC({ latencyHint: 'playback' }); } catch (e) { ctx = new AC(); }
     master = ctx.createGain(); master.gain.value = .9; try { const lim = ctx.createDynamicsCompressor(); lim.threshold.value = -8; lim.ratio.value = 10; master.connect(lim); lim.connect(ctx.destination); } catch (e) { master.connect(ctx.destination); }
     ambG = ctx.createGain(); ambG.gain.value = vol.se * .8; ambG.connect(master); seG = ctx.createGain(); seG.gain.value = vol.se; seG.connect(master); voG = ctx.createGain(); voG.gain.value = vol.voice * 1.2; voG.connect(master); bgmG = ctx.createGain(); bgmG.gain.value = vol.bgm; bgmG.connect(master);
     noiseBuf = ctx.createBuffer(1, ctx.sampleRate * 2, ctx.sampleRate); const d = noiseBuf.getChannelData(0); let b0 = 0; for (let i = 0; i < d.length; i++){ const w = Math.random() * 2 - 1; b0 = b0 * .6 + w * .4; d[i] = w * .6 + b0 * .4; }
-    if (amb) setAmb(amb, true); if (bgmName){ const n = bgmName; bgmName = null; bgm(n); } }
+    unlock(); if (amb) setAmb(amb, true); if (bgmName){ const n = bgmName; bgmName = null; bgm(n); } }
   function setVol(k, v){ vol[k] = v; if (!ctx) return; if (k === 'voice') voG.gain.value = v * 1.2; if (k === 'bgm') bgmG.gain.value = v; if (k === 'se'){ seG.gain.value = v; ambG.gain.value = v * .8; } }
   /* voice */
   function setIndex(ix){ index = ix; }
-  async function loadPack(p){ if (packs[p] || loading[p]) return loading[p]; loading[p] = (async () => { try { const r = await fetch('v/' + p + '.mp3'); if (!r.ok) throw 0; packs[p] = await r.arrayBuffer(); } catch (e) { packs[p] = null; } })(); return loading[p]; }
+  async function loadPack(p){ if (packs[p] || loading[p]) return loading[p]; packState[p] = 'loading'; loading[p] = (async () => { try { const r = await fetch('v/' + p + '.mp3'); if (!r.ok) throw 0; packs[p] = await r.arrayBuffer(); packState[p] = 'ok'; } catch (e) { packs[p] = null; packState[p] = 'fail'; loading[p] = null; delete packs[p]; } })(); return loading[p]; }
   function stopVoice(){ if (curV){ try { curV.onended = null; curV.stop(); } catch (e) {} curV = null; } }
-  function speak(who, text){ stopVoice(); return new Promise(async res => { if (!ctx || !vol.voice || !index) return res(0); const e = index[fnv(who + '|' + text)]; if (!e) return res(0); if (packs[e[0]] === undefined) await loadPack(e[0]); const pk = packs[e[0]]; if (!pk) return res(0);
+  function speak(who, text){ stopVoice(); return new Promise(async res => { if (!ctx || !vol.voice || !index) return res(0); if (ctx.state !== 'running') unlock(); const e = index[fnv(who + '|' + text)]; if (!e) return res(0); if (packs[e[0]] === undefined) await loadPack(e[0]); const pk = packs[e[0]]; if (!pk) return res(0);
       try { const done = buf => { stopVoice(); const s = ctx.createBufferSource(); s.buffer = buf; s.connect(voG); s.start(); curV = s; s.onended = () => { if (curV === s) curV = null; }; res(buf.duration); }; const p = ctx.decodeAudioData(pk.slice(e[1], e[1] + e[2]), done, () => res(0)); if (p && p.catch) p.catch(() => {}); } catch (err) { res(0); } }); }
   const speaking = () => !!curV;
   /* one-shot sounds */
@@ -51,5 +56,13 @@ const AudioSys = (() => {
       const ls = step % 64; for (const n of S.mel) if (n[0] === ls){ tone(bgmG, 'sine', hz(n[1]), t, sp * 9, S.bell, { att: .01 }); tone(bgmG, 'sine', hz(n[1] + 12), t, sp * 5, S.bell * .25); }
       nextT += sp; step++; } }
   function bgm(name){ if (name === bgmName) return; bgmName = SONGS[name] ? name : null; clearInterval(bgmTimer); bgmTimer = 0; if (!ctx || !bgmName) return; step = 0; nextT = ctx.currentTime + .15; bgmTimer = setInterval(sched, 120); }
-  return { init, setVol, vol, setIndex, loadPack, speak, stopVoice, speaking, sfx, setAmb, tickAmb, engine, bgm, setLite(v){ lite = !!v; }, get ok(){ return !!ctx; }, fnv };
+  const state = () => ({ ctx: ctx ? ctx.state : 'none', rate: ctx ? ctx.sampleRate : 0, packs: Object.assign({}, packState), html: htmlOK, err: lastErr });
+  async function test(kind, line){ init(); if (!ctx) return 'この端末では、音の出口が作れない'; if (ctx.state !== 'running'){ try { await ctx.resume(); } catch (e) {} } if (ctx.state !== 'running') return '出口が開かない（' + ctx.state + '）';
+    if (kind === 'beep'){ tone(seG, 'triangle', 660, ctx.currentTime + .02, .3, .3); tone(seG, 'triangle', 990, ctx.currentTime + .2, .4, .3); return '鳴らした'; }
+    if (kind === 'voice'){ const d = await speak('saku', line); return d > 0 ? `鳴らした（${d.toFixed(1)}秒）` : '声のデータが読めない'; }
+    if (kind === 'rain'){ const was = amb; setAmb('forest', true); setTimeout(() => setAmb(was, true), 3000); return '3秒、鳴らす'; }
+    if (kind === 'engine'){ const had = !!eng; engine(true, 1300); setTimeout(() => { if (!had) engine(false); else engine(true, 0); }, 3000); return '3秒、鳴らす'; } return ''; }
+  for (const ev of ['pointerdown', 'pointerup', 'touchend', 'click', 'keydown']) document.addEventListener(ev, () => { try { init(); } catch (e) {} }, { capture: true, passive: true });
+  document.addEventListener('visibilitychange', () => { if (!document.hidden && ctx && ctx.state !== 'running'){ try { ctx.resume(); } catch (e) {} } });
+  return { state, test, init, setVol, vol, setIndex, loadPack, speak, stopVoice, speaking, sfx, setAmb, tickAmb, engine, bgm, setLite(v){ lite = !!v; }, get ok(){ return !!ctx; }, fnv };
 })();

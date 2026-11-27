@@ -1,7 +1,7 @@
 /* ---------- backgrounds, part 2: rooms, the plant, the mansion, the drain tunnel ---------- */
 const SCB = (() => { const S = {};
   const st = `stroke="${SK.ink}" stroke-width="3"`, st2 = `stroke="${SK.ink}" stroke-width="2.2"`;
-  const room = (W, wall, floor, base = '#2a2420') => rect(0, 0, W, 900, wall) + rect(0, 742, W, 16, base, st2) + rect(0, 758, W, 142, floor) + hatch(0, 770, W, 120, Math.round(W / 60), '#000', .12, 40);
+  const room = (W, wall, floor, base = '#2a2420') => rect(0, 0, W, 900, wall) + rect(0, 742, W, 16, base, st2) + rect(0, 758, W, 142, floor) + '<!--R-->';
   const windowR = (x, y, w, h, night = 1) => rect(x, y, w, h, night ? '#1b2a33' : '#8fb0b8', st) + rain(w, x, 26, '#cfe1e3', .5, 60).replace('<path', `<path transform="translate(${x} ${y - 300}) scale(1 ${(h + 300) / 900})"`) + ln(`M${x + w / 2} ${y} v${h} M${x} ${y + h / 2} h${w}`, 4, '#3a3028') + rect(x - 8, y + h, w + 16, 12, '#3a3028', st2);
   const desk = (x, w, c = '#5a4632') => rect(x, 640, w, 18, c, st) + rect(x + 10, 658, 16, 100, c, st2) + rect(x + w - 26, 658, 16, 100, c, st2) + rect(x + 30, 658, w - 60, 46, mix(c, -18), st2);
   const mix = (c, d) => '#' + [1, 3, 5].map(i => Math.max(0, Math.min(255, parseInt(c.slice(i, i + 2), 16) + d)).toString(16).padStart(2, '0')).join('');

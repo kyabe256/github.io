@@ -5,7 +5,7 @@ const PORT = (() => {
   const r = n => Math.round(n * 10) / 10, P = (...a) => a.map(v => typeof v === 'number' ? r(v) : v).join(' ');
   const mixc = (a, b, t) => { const h = s => [1, 3, 5].map(i => parseInt(s.slice(i, i + 2), 16)), x = h(a), y = h(b); return '#' + x.map((v, i) => Math.round(v + (y[i] - v) * t).toString(16).padStart(2, '0')).join(''); };
   const EMO = { // eye opening, brow inner dy, brow outer dy, mouth kind
-    n: [1, 0, 0, 'flat'], k: [.82, 3.5, -1, 'firm'], d: [.74, -4.5, 2.5, 'down'], a: [.86, 7, -3.5, 'grit'], u: [1.28, -7, -6, 'open'], s: [.72, -1, 0, 'smile'], t: [.95, -5.5, 1, 'wavy'], c: [0, 0, 1, 'flat'] };
+    n: [1, 0, 0, 'flat'], k: [.82, 3.5, -1, 'firm'], d: [.74, -4.5, 2.5, 'down'], a: [.86, 7, -3.5, 'grit'], u: [1.28, -7, -6, 'open'], s: [.72, -1, 0, 'smile'], t: [.95, -5.5, 1, 'wavy'], c: [0, 0, 1, 'flat'], p: [1.06, -6.5, .5, 'wavy'], o: [1.38, -8, -7, 'open'], g: [.92, 6.5, -3, 'firm'] };
   function build(c, emo = 'n', o = {}){
     const E = EMO[emo] || EMO.n, male = c.sex !== 'f', age = c.age || 35, kid = age < 14, old = age >= 60, mid = age >= 42, cx = 300, tx = -9;
     const fw = (kid ? 73 : male ? 81 : 74) * (c.fw || 1), top = kid ? 126 : 110, eyeY = kid ? 240 : 230, chin = (kid ? 320 : male ? 331 : 322) + (c.long || 0), fh = chin - eyeY;
@@ -54,7 +54,10 @@ const PORT = (() => {
     const fold = (x1, y1, x2, y2, bend = 14, w = 1.8, op = .6) => L(P('M', x1, y1, 'Q', (x1 + x2) / 2 + bend, (y1 + y2) / 2, x2, y2), w, `opacity="${op}"`);
     let cloth = '', back = '';
     const base = (fill = col) => F(bodyOut + ' Z', fill, 2.8) + T(P('M', cx - sw - 34, shY + 92, 'L', cx - sw - 44, 760, 'L', cx - sw + 46, 760, 'C', cx - sw + 30, 640, cx - sw + 34, shY + 80, cx - sw + 52, shY + 8, 'C', cx - sw + 10, shY, cx - sw - 22, shY + 30, cx - sw - 34, shY + 92, 'Z'), '#000', .26)
-      + T(P('M', cx + sw - 60, shY - 14, 'C', cx + sw - 10, shY - 8, cx + sw + 16, shY + 10, cx + sw + 26, shY + 60, 'L', cx + sw + 12, shY + 54, 'C', cx + sw + 2, shY + 14, cx + sw - 20, shY - 2, cx + sw - 60, shY - 14, 'Z'), colH, .55) + armL + armR;
+      + T(P('M', cx + sw - 60, shY - 14, 'C', cx + sw - 10, shY - 8, cx + sw + 16, shY + 10, cx + sw + 26, shY + 60, 'L', cx + sw + 12, shY + 54, 'C', cx + sw + 2, shY + 14, cx + sw - 20, shY - 2, cx + sw - 60, shY - 14, 'Z'), colH, .55) + armL + armR
+      + fold(cx - sw + 34, shY + 104, cx - sw + 70, shY + 196, -11, 1.6, .45) + fold(cx - sw + 44, shY + 176, cx - sw + 84, shY + 262, -9, 1.4, .38) + fold(cx - sw + 6, shY + 150, cx - sw + 30, shY + 230, 8, 1.3, .35) + fold(cx + sw - 34, shY + 102, cx + sw - 72, shY + 196, 11, 1.6, .45) + fold(cx + sw - 46, shY + 174, cx + sw - 86, shY + 262, 9, 1.4, .38) + fold(cx + sw - 6, shY + 150, cx + sw - 30, shY + 230, -8, 1.3, .35)
+      + fold(cx - 86, shY + 96, cx - 108, shY + 190, 6, 1.2, .3) + fold(cx + 92, shY + 92, cx + 112, shY + 186, -6, 1.2, .3) + T(P('M', cx - sw + 60, shY + 196, 'q', 30, 30, 20, 70, 'q', -30, -24, -20, -70, 'Z'), '#000', .12) + T(P('M', cx + sw - 62, shY + 194, 'q', -30, 30, -20, 70, 'q', 30, -24, 20, -70, 'Z'), '#fff', .07)
+      + T(P('M', nbL[0] - 6, nbL[1] + 6, 'C', nbL[0] + 10, pit[1] + 18, nbR[0] - 12, pit[1] + 16, nbR[0] + 6, nbR[1] + 6, 'C', nbR[0] - 10, pit[1] + 34, nbL[0] + 10, pit[1] + 36, nbL[0] - 6, nbL[1] + 6, 'Z'), '#000', .16);
     if (K.t === 'suit' || K.t === 'uniform'){
       cloth = base() + shirt(false) + tie(K.tie || '#2a2f3a') + lapels(1, 1) + fold(cx - sw + 60, shY + 40, cx - sw + 90, shY + 150, -10) + fold(cx + sw - 62, shY + 36, cx + sw - 96, shY + 150, 10);
       if (K.t === 'uniform'){ cloth += F(P('M', cx - sw + 26, shY - 2, 'L', cx - sw + 92, shY - 30, 'L', cx - sw + 98, shY - 16, 'L', cx - sw + 34, shY + 14, 'Z'), colS, 2) + F(P('M', cx + sw - 26, shY - 4, 'L', cx + sw - 92, shY - 32, 'L', cx + sw - 98, shY - 18, 'L', cx + sw - 34, shY + 12, 'Z'), colS, 2)
@@ -122,6 +125,7 @@ const PORT = (() => {
     }
     if (H !== 'buzz') for (let i = 0; i < 7; i++) hairF += L(P('M', cx - 44 + i * 16, ht + 14 + Math.abs(i - 3) * 5, 'Q', cx - 58 + i * 20, ht + 44, cx - 62 + i * 22, hl + (H === 'back' || H === 'thin' ? -6 : 10)), 1.3, `stroke="${grey > .4 ? '#8d8580' : mixc(hairC, '#ffe9d6', .22)}" opacity=".85"`);
     const sheen = grey > .5 ? '#ffffff' : hairHi;
+    if (!o.plain && H !== 'buzz') hi += `<path d="${P('M', cx - 62, ht + 64, 'Q', cx + 2, ht + 46, cx + 70, ht + 66)}" fill="none" stroke="${sheen}" stroke-width="3" stroke-linecap="round" stroke-dasharray="6 10 18 8 4 12" opacity="${grey > .5 ? .5 : .3}"/>` + L(P('M', cx + hx - 4, eyeY - 34, 'q', 9, 16, 3, 34, 'M', cx - hx + 6, eyeY - 30, 'q', -7, 14, -2, 30, 'M', cx + 26, ht + 4, 'q', 10, -10, 22, -6), 1.3, `stroke="${hc}" opacity=".9"`);
     if (!o.plain && H !== 'buzz') hi += `<path d="${P('M', cx - 50, ht + 40, 'Q', cx + 4, ht + 20, cx + 60, ht + 42, 'Q', cx + 4, ht + 30, cx - 50, ht + 40, 'Z')}" fill="${sheen}" opacity="${grey > .5 ? .5 : .3}"/>`;
     hi = `<path d="${P('M', cx - 46, ht + 34, 'Q', cx + 4, ht + 12, cx + 58, ht + 36)}" fill="none" stroke="${sheen}" stroke-width="${o.wet ? 7 : 5}" stroke-linecap="round" stroke-dasharray="${o.wet ? '22 7 34 9 12 14' : '12 9 26 12 8 16'}" opacity="${grey > .5 ? .7 : .5}"/>` + (o.wet ? `<path d="${P('M', cx + 30, ht + 50, 'Q', cx + 54, ht + 44, cx + 70, ht + 66)}" fill="none" stroke="${sheen}" stroke-width="3" stroke-linecap="round" stroke-dasharray="10 8" opacity=".5"/>` : '');
     if (grey > .15 && grey <= .6 && H !== 'buzz') for (let i = 0; i < 7; i++) hi += L(P('M', cx - 54 + i * 18, ht + 30 + (i % 3) * 8, 'q', 6, 14, 2, 30), 1.3, 'stroke="#c9cdd0" opacity=".75"');
@@ -137,7 +141,7 @@ const PORT = (() => {
     const eye = (x, w, near) => { const op = E[0], y = eyeY + 2, hh = (kid ? 28 : male ? 21.5 : 25) * es * (old ? .84 : 1) * Math.min(op, 1.14), in_ = near ? x - w / 2 : x + w / 2, out = near ? x + w / 2 : x - w / 2, sgn = near ? 1 : -1, id = o.id + 'e' + (near ? 1 : 0);
       if (!op) return L(P('M', in_, y + 1, 'Q', x, y + 9, out, y - 2), 3.2) + L(P('M', out, y - 2, 'l', sgn * 6, -4), 2);
       const up = y - hh * .6, lo = y + hh * .4, shape = P('M', in_, y + 3, 'C', in_ + sgn * w * .2, up - 2, out - sgn * w * .28, up - 3 - ty * sgn, out, y - 3 - ty * sgn, 'C', out - sgn * w * .12, lo + 1, in_ + sgn * w * .3, lo + 3, in_, y + 3, 'Z');
-      const big = emo === 'u', irx = hh * (big ? .4 : .47), iry = hh * (big ? .47 : .57), ix = x + (c.gaze || -1), iy = y - hh * .08;
+      const big = emo === 'u' || emo === 'o', irx = hh * (big ? .4 : .47), iry = hh * (big ? .47 : .57), ix = x + (c.gaze || -1), iy = y - hh * .08;
       let s = `<clipPath id="${id}"><path d="${shape}"/></clipPath>` + T(shape, '#fffdfa');
       s += `<g clip-path="url(#${id})"><ellipse cx="${r(ix)}" cy="${r(iy)}" rx="${r(irx)}" ry="${r(iry)}" fill="url(#${o.id}ir)" stroke="${INK}" stroke-width="1.6"/><ellipse cx="${r(ix)}" cy="${r(iy - iry * .06)}" rx="${r(irx * .42)}" ry="${r(iry * .5)}" fill="#1c1216"/>`
         + `<ellipse cx="${r(ix)}" cy="${r(iy + iry * .62)}" rx="${r(irx * .62)}" ry="${r(iry * .26)}" fill="#fff" opacity=".28"/><rect x="${r(x - w)}" y="${r(up - 6)}" width="${r(w * 2)}" height="${r(hh * .3)}" fill="${INK}" opacity=".22"/>`
@@ -151,7 +155,7 @@ const PORT = (() => {
       return T(P('M', in_[0], in_[1] - th * .5, 'Q', x, by - th - 1 + (E[1] + E[2]) * .2, out[0], out[1], 'Q', x, by + th * .5 + (E[1] + E[2]) * .2, in_[0], in_[1] + th * .6, 'Z'), grey > .6 ? '#6b7078' : INK); };
     const eL = [nx - 38, 43 * es + (kid ? 2 : 0)], eR = [nx + 43, 51 * es + (kid ? 2 : 0)];
     let feat = eye(eL[0], eL[1], 0) + eye(eR[0], eR[1], 1) + brow(eL[0], eL[1], 0) + brow(eR[0], eR[1], 1);
-    if (emo === 'a' || emo === 'k') feat += L(P('M', nx - 3, eyeY - 20, 'l', 1, 9), 1.2, 'opacity=".6"') + L(P('M', nx + 5, eyeY - 21, 'l', -1, 9), 1.2, 'opacity=".6"');
+    if (emo === 'a' || emo === 'k' || emo === 'g') feat += L(P('M', nx - 3, eyeY - 20, 'l', 1, 9), 1.2, 'opacity=".6"') + L(P('M', nx + 5, eyeY - 21, 'l', -1, 9), 1.2, 'opacity=".6"');
     const nl = (kid ? 30 : male ? 42 : 38) * (c.nose || 1), ny = eyeY + nl; // nose: a small tip and a touch of shade
     feat += T(P('M', nx - 3, ny - 13, 'L', nx - 12, ny - 1, 'L', nx - 3, ny + 2, 'Z'), sh1, .5) + L(P('M', nx - 9, ny - 10, 'Q', nx - 14, ny - 3, nx - 8, ny), 2.1);
     if (!kid && male) feat += L(P('M', nx - 4, eyeY + 12, 'Q', nx - 6, eyeY + nl * .55, nx - 9, ny - 11), 1.1, 'opacity=".3"');
@@ -173,6 +177,13 @@ const PORT = (() => {
     if (c.mole) feat += `<circle cx="${r(eR[0] + 8)}" cy="${r(eyeY + 19)}" r="2.3" fill="${INK}"/>`;
     if (c.scar) feat += `<path d="${P('M', eR[0] + 10, eyeY - 36, 'L', eR[0] + 3, eyeY - 12)}" stroke="#b9837c" stroke-width="3" fill="none" stroke-linecap="round"/><path d="${P('M', eR[0] + 10, eyeY - 36, 'L', eR[0] + 3, eyeY - 12)}" stroke="#f3e9df" stroke-width="1.1" fill="none" stroke-linecap="round"/>`;
     if (c.band) feat += F(P('M', eR[0] - 8, eyeY - 44, 'l', 30, -3, 'l', 2, 18, 'l', -30, 3, 'Z'), '#f1efe9', 1.8);
+    const drop = (x, y, k = 1) => `<path d="M${r(x)} ${r(y)} q${r(-9 * k)} ${r(16 * k)} 0 ${r(24 * k)} q${r(9 * k)} ${r(-8 * k)} 0 ${r(-24 * k)} Z" fill="#bfe6f4" stroke="${INK}" stroke-width="1.6"/><path d="M${r(x - 2 * k)} ${r(y + 10 * k)} q-2 5 0 9" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/>`;
+    if (emo === 't' || emo === 'p') feat += drop(CR[0] - 8, eyeY - 52, 1);
+    if (emo === 'p') feat += drop(CL[0] + 22, eyeY - 30, .75) + L(P('M', eL[0] - 16, eyeY + 24, 'l', 6, 7, 'M', eL[0] - 6, eyeY + 25, 'l', 6, 7, 'M', eR[0] + 8, eyeY + 25, 'l', 6, 7, 'M', eR[0] + 18, eyeY + 24, 'l', 6, 7), 1.4, 'stroke="#e06a5a" opacity=".7"');
+    if (emo === 'o') feat += [0, 1, 2, 3, 4, 5].map(i => L(P('M', nx - 46 + i * 20, hl + 20, 'l', 0, 22 + (i % 2) * 12), 2, 'stroke="#6f8fb8" opacity=".75"')).join('') + T(P('M', eL[0] - 22, eyeY + 18, 'h', 44, 'v', 10, 'h', -44, 'Z'), '#6f8fb8', .14) + T(P('M', eR[0] - 26, eyeY + 18, 'h', 52, 'v', 10, 'h', -52, 'Z'), '#6f8fb8', .14);
+    if (emo === 'g') feat += L(P('M', eR[0] + 30, eyeY - 30, 'l', 10, -10, 'M', eR[0] + 36, eyeY - 20, 'l', 14, -4, 'M', eL[0] - 30, eyeY - 30, 'l', -9, -9), 2.4, 'stroke="#fff" opacity=".9"') + L(P('M', eR[0] + 30, eyeY - 30, 'l', 10, -10, 'M', eR[0] + 36, eyeY - 20, 'l', 14, -4, 'M', eL[0] - 30, eyeY - 30, 'l', -9, -9), 1, 'opacity=".5"');
+    if (emo === 'a') feat += L(P('M', CR[0] - 26, eyeY - 62, 'l', 10, 0, 'l', 0, 10, 'M', CR[0] - 12, eyeY - 62, 'l', -10, 0, 'M', CR[0] - 26, eyeY - 48, 'l', 0, -10, 'M', CR[0] - 12, eyeY - 48, 'l', 0, -10, 'l', -6, 0), 2.6, 'stroke="#d9503f"');
+    if (emo === 'd') feat += [0, 1, 2].map(i => L(P('M', eL[0] - 14 + i * 10, eyeY + 20, 'l', -3, 12), 1.2, 'stroke="#6f7fa0" opacity=".5"')).join('');
     let glasses = '';
     if (c.glasses){ const gy = eyeY + 1, gw = c.glasses === 'round' ? 25 : 28, gh = c.glasses === 'round' ? 22 : 17, rr = c.glasses === 'round' ? 20 : 6;
       glasses = `<rect x="${r(eL[0] - gw + 2)}" y="${r(gy - gh)}" width="${gw * 2 - 6}" height="${gh * 2}" rx="${rr}" fill="#dfe8ea" fill-opacity=".14" stroke="${INK}" stroke-width="2.6"/><rect x="${r(eR[0] - gw)}" y="${r(gy - gh)}" width="${gw * 2}" height="${gh * 2}" rx="${rr}" fill="#dfe8ea" fill-opacity=".14" stroke="${INK}" stroke-width="2.6"/>` + L(P('M', eL[0] + gw - 4, gy - 4, 'Q', nx + 1, gy - 9, eR[0] - gw, gy - 4), 2.4) + L(P('M', eR[0] + gw, gy - 6, 'L', ex + 8, gy - 4), 2.2) + `<path d="${P('M', eR[0] - 14, gy - gh + 5, 'l', 12, 0)}" stroke="#fff" stroke-width="2" opacity=".6"/>`; }

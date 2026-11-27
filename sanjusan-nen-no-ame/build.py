@@ -3,9 +3,9 @@ import os, re, json
 H = os.path.dirname(os.path.abspath(__file__)); S = os.path.join(H, 'src') if os.path.isdir(os.path.join(H, 'src')) else H; DIST = os.path.isdir(os.path.join(H, 'dist')); OUT = os.path.join(H, 'dist') if DIST else H
 rd = lambda f: open(os.path.join(S, f), encoding='utf-8').read()
 js = ''
-for f in ['chars.js', 'cast.js', 'scenes_a.js', 'scenes_b.js', 'art2.js', 'drive.js', 'data.js', 'audio.js']:
+for f in ['chars.js', 'cast.js', 'scenes_a.js', 'scenes_b.js', 'scenes_c.js', 'art2.js', 'art3.js', 'drive.js', 'data.js', 'audio.js']:
     js += re.sub(r'\nif \(typeof module[^\n]*', '', rd(f)) + '\n'
-js += 'const STORY_TXT = ' + json.dumps(rd('story.txt'), ensure_ascii=False) + ';\n'
+js += 'const STORY_TXT = ' + json.dumps(rd('story.txt') + '\n' + rd('story2.txt'), ensure_ascii=False) + ';\n'
 vi = os.path.join(S, 'vidx.json'); js += 'const VIDX = ' + (open(vi).read() if os.path.exists(vi) else 'null') + ';\n'
 js += rd('engine.js')
 page = rd('page.html').replace('/*CSS*/', rd('style.css')).replace('/*JS*/', js.replace('</script', '<\\/script'))

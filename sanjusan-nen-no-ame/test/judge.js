@@ -13,7 +13,19 @@ const { chromium } = require('playwright');
     ['B3', 1, '平成5年11月9日に子どもの三雲朔をかばった', true], ['B3', 1, '1993年、子供のころの私を', true], ['B3', 1, '1960年に灯を', false],
     ['B3', 2, '1999年', true], ['B3', 2, '平成11年', true], ['B3', 2, '1993年', false], ['B3', 2, '1960年か1999年か1993年', false],
     ['B1', 0, '蓮の車は登山口にある', true], ['B1', 0, '出張は7日の朝に書き足された', true], ['B1', 0, '出張はうそ', false],
-    ['B2', 1, 'やけどは三日月の形で、バルブのハンドル', true], ['B2', 1, 'ボイラーではない', false] ];
+    ['B2', 1, 'やけどは三日月の形で、バルブのハンドル', true], ['B2', 1, 'ボイラーではない', false],
+    ['B4', 0, '先生は昭和35年に雨穴の前で拾われた子だ', true], ['B4', 0, '養子。1960年', true], ['B4', 0, '多恵の実の子', false],
+    ['B4', 1, '俺とDNAが同じ、ふたごの弟', true], ['B4', 1, '三雲望。同一人物の型', true], ['B4', 1, '鷹取の子', false],
+    ['B4', 2, '1993年へ、息子に会いに行った', true], ['B4', 2, '33年前の蓮を手当てした', true], ['B4', 2, '学会に行った', false],
+    ['B5', 0, '上着のタグは2025年', true], ['B5', 0, '汐見蓮の社員証', true], ['B5', 0, '何もない', false],
+    ['B5', 2, '5日の夜、鷹取征二の車が宿の前に', true], ['B5', 2, '当主が11月5日に来た', true], ['B5', 2, '汐見修が来た', false],
+    ['B6', 0, '所長章の裏に2024年', true], ['B6', 0, '章は未来の物', true], ['B6', 0, '腕時計', false],
+    ['B6', 1, '鷹取玲の名前が彫ってある', true], ['B6', 1, '玲と同じ章', true], ['B6', 2, '所長', true], ['B6', 2, '医者', false],
+    ['B7', 0, 'のぞむ、5つ', true], ['B7', 0, '三雲望、五つ', true], ['B7', 0, '修、5つ', false],
+    ['B7', 1, '33年あとの三雲の家', true], ['B7', 1, '平成5年の、巌の家', true], ['B7', 1, '鷹取の屋敷', false],
+    ['B7', 2, '双子の兄', true], ['B7', 2, 'きょうだい', true], ['B7', 2, '父親', false],
+    ['B8', 0, '昭和35年で死ぬ。無縁仏になる', true], ['B8', 0, '1960年の老人として亡くなる', true], ['B8', 0, '東京へ逃げた', false],
+    ['B8', 1, 'あなたはトキになる', true], ['B8', 1, 'ばあやは玲本人', true], ['B8', 1, '無縁仏になる', false] ];
   for (const [bt, r, text, want] of T){ const got = await p.evaluate(([bt, r, text]) => __g.judgeText(text, BATTLE[bt].r[r]).ok, [bt, r, text]); if (got !== want){ fails++; console.log('FAIL', bt, r + 1, JSON.stringify(text), 'got', got, 'want', want, await p.evaluate(t => [...__g.conceptsIn(t)].join(','), text)); } }
   // every chip at once must never pass; random handfuls of chips almost never pass
   const shot = await p.evaluate(() => { const all = Object.values(WORDS).flatMap(g => Object.values(g).map(v => v[0])).join(''); let pass = 0, rounds = 0; for (const b in BATTLE) for (const R of BATTLE[b].r){ rounds++; if (__g.judgeText(all, R).ok) pass++; } let rnd = 0, tries = 0; const chips = Object.values(WORDS).flatMap(g => Object.values(g).map(v => v[0])); let s = 12345; const rr = () => { s = (s * 1664525 + 1013904223) >>> 0; return s / 4294967296; };

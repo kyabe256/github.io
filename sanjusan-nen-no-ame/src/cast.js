@@ -19,6 +19,9 @@ const CAST = {
   haru40:   { name: '朽木 ハル', role: '朽木屋 女将', sex: 'f', age: 40, hs: 'bun', hair: '#3a2a26', eye: '#8a5a30', cloth: { t: 'kimono', c: '#8a6a4a', apron: 1 } },
   soichiro45:{ name: '鷹取 宗一郎', role: '鷹取組 社長', sex: 'm', age: 45, hs: 'buzz', es: .88, tilt: 2.4, nose: 1.12, fw: 1, jaw: .75, beard: 'mustache', hair: '#231f2b', eye: '#4d5f78', cloth: { t: 'work', c: '#7a6a45', tag: '鷹取組' } },
   kid5:     { name: '三雲 朔', role: '5歳', sex: 'm', age: 5, hs: 'bowl', hair: '#2b2530', eye: '#5b4636', cloth: { t: 'knit', c: '#c9a04e' } },
+  toki74:   { name: 'トキ', role: '鷹取家のばあや', sex: 'f', age: 74, hs: 'bun', grey: .8, es: .9, tilt: 2.2, nose: 1.06, fw: .97, hair: '#231f2b', eye: '#4d5f78', cloth: { t: 'kimono', c: '#5a5560', apron: 1 } },
+  rei8:     { name: '鷹取 玲', role: '8歳', sex: 'f', age: 8, hs: 'bob', es: .95, tilt: 2, hair: '#231f2b', eye: '#4d5f78', cloth: { t: 'knit', c: '#d98aa0' } },
+  nozomu5:  { name: '男の子', role: '5つくらい', sex: 'm', age: 5, hs: 'bowl', hair: '#2b2530', eye: '#5b4636', cloth: { t: 'knit', c: '#5f8fb8' } },
   tae30:    { name: '汐見 多恵', role: '産婆', sex: 'f', age: 30, hs: 'shortf', tilt: -2, hair: '#33282a', eye: '#3f6b5a', cloth: { t: 'labcoat' } },
 };
 if (typeof module !== 'undefined') module.exports = { CAST };
