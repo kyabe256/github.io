@@ -3,7 +3,7 @@ const { chromium } = require('playwright');
 (async () => { const b = await chromium.launch(), p = await b.newPage({ viewport: { width: 1600, height: 900 } }); let fails = 0; p.on('pageerror', e => { fails++; console.log('PAGEERR', e.message); });
   const ok = (c, l, x = '') => { if (!c) fails++; console.log(c ? 'OK  ' : 'FAIL', l, x); };
   await p.goto('http://127.0.0.1:8770/index.html'); await p.waitForFunction(() => window.__g, null, { timeout: 30000 }); await p.evaluate(() => __g.fast(true)); await p.click('#t-new'); await p.waitForFunction(() => __g.mode === 'drive' && !__g.busy && document.querySelector('#dlg').hidden && !!__g.G.seen.tut_drive, null, { timeout: 30000 });
-  await p.locator('#dv-panel .big', { hasText: '走り出す' }).click(); await p.waitForFunction(() => __g.dv.at === 'j1' && !document.querySelector('#dv-panel').hidden, null, { timeout: 30000 });
+  await p.locator('#dv-panel .big', { hasText: '走り出す' }).first().click(); await p.waitForFunction(() => __g.dv.at === 'j1' && !document.querySelector('#dv-panel').hidden, null, { timeout: 30000 });
   const opts = (await p.locator('#dv-panel .big').allInnerTexts()).map(t => t.split('\n')[0]); ok(['◀ 左折', '▲ 直進', '右折 ▶', '↩ 引き返す'].every(t => opts.includes(t)), 'the four-way offers left, straight, right and back', opts.join(' / '));
   const names = await p.locator('#dv-panel .big small').allInnerTexts(); ok(/墓地/.test(names[0]) && /森の分かれ道/.test(names[1]) && /発電所|正門/.test(names[2]), 'left is the graveyard, straight is the forest, right is the plant', names.slice(0, 3).join(' | '));
   await p.screenshot({ path: 'out/d-fork.png' }); await p.evaluate(() => __g.fast(false)); await p.locator('#dv-panel .big', { hasText: '左折' }).click();
